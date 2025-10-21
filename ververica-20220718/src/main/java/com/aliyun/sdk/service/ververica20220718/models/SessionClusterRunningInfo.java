@@ -40,6 +40,10 @@ public class SessionClusterRunningInfo extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return lastUpdateTime
      */
@@ -65,6 +69,15 @@ public class SessionClusterRunningInfo extends TeaModel {
         private Long lastUpdateTime; 
         private java.util.List<String> referenceDeploymentIds; 
         private Long startedAt; 
+
+        private Builder() {
+        } 
+
+        private Builder(SessionClusterRunningInfo model) {
+            this.lastUpdateTime = model.lastUpdateTime;
+            this.referenceDeploymentIds = model.referenceDeploymentIds;
+            this.startedAt = model.startedAt;
+        } 
 
         /**
          * lastUpdateTime.

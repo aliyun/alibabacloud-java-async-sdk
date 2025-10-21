@@ -47,6 +47,10 @@ public class Variable extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return description
      */
@@ -80,6 +84,16 @@ public class Variable extends TeaModel {
         private String kind; 
         private String name; 
         private String value; 
+
+        private Builder() {
+        } 
+
+        private Builder(Variable model) {
+            this.description = model.description;
+            this.kind = model.kind;
+            this.name = model.name;
+            this.value = model.value;
+        } 
 
         /**
          * description.

@@ -36,6 +36,10 @@ public class SqlArtifact extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return additionalDependencies
      */
@@ -53,6 +57,14 @@ public class SqlArtifact extends TeaModel {
     public static final class Builder {
         private java.util.List<String> additionalDependencies; 
         private String sqlScript; 
+
+        private Builder() {
+        } 
+
+        private Builder(SqlArtifact model) {
+            this.additionalDependencies = model.additionalDependencies;
+            this.sqlScript = model.sqlScript;
+        } 
 
         /**
          * additionalDependencies.

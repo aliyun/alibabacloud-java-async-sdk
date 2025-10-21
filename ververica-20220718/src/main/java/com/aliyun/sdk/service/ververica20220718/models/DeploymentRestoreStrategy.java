@@ -44,6 +44,10 @@ public class DeploymentRestoreStrategy extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return allowNonRestoredState
      */
@@ -77,6 +81,16 @@ public class DeploymentRestoreStrategy extends TeaModel {
         private Long jobStartTimeInMs; 
         private String kind; 
         private String savepointId; 
+
+        private Builder() {
+        } 
+
+        private Builder(DeploymentRestoreStrategy model) {
+            this.allowNonRestoredState = model.allowNonRestoredState;
+            this.jobStartTimeInMs = model.jobStartTimeInMs;
+            this.kind = model.kind;
+            this.savepointId = model.savepointId;
+        } 
 
         /**
          * allowNonRestoredState.

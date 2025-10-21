@@ -40,6 +40,10 @@ public class LineageInfo extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return edges
      */
@@ -65,6 +69,15 @@ public class LineageInfo extends TeaModel {
         private Edge edges; 
         private java.util.List<JobInfo> jobInfos; 
         private java.util.List<Node> nodes; 
+
+        private Builder() {
+        } 
+
+        private Builder(LineageInfo model) {
+            this.edges = model.edges;
+            this.jobInfos = model.jobInfos;
+            this.nodes = model.nodes;
+        } 
 
         /**
          * edges.

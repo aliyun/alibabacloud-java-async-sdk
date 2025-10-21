@@ -40,6 +40,10 @@ public class DraftDeployParams extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return deploymentDraftId
      */
@@ -65,6 +69,15 @@ public class DraftDeployParams extends TeaModel {
         private String deploymentDraftId; 
         private BriefDeploymentTarget deploymentTarget; 
         private Boolean skipValidate; 
+
+        private Builder() {
+        } 
+
+        private Builder(DraftDeployParams model) {
+            this.deploymentDraftId = model.deploymentDraftId;
+            this.deploymentTarget = model.deploymentTarget;
+            this.skipValidate = model.skipValidate;
+        } 
 
         /**
          * deploymentDraftId.

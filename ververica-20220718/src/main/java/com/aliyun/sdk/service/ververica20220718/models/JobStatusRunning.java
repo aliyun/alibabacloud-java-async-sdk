@@ -36,6 +36,10 @@ public class JobStatusRunning extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return observedFlinkJobRestarts
      */
@@ -53,6 +57,14 @@ public class JobStatusRunning extends TeaModel {
     public static final class Builder {
         private Long observedFlinkJobRestarts; 
         private String observedFlinkJobStatus; 
+
+        private Builder() {
+        } 
+
+        private Builder(JobStatusRunning model) {
+            this.observedFlinkJobRestarts = model.observedFlinkJobRestarts;
+            this.observedFlinkJobStatus = model.observedFlinkJobStatus;
+        } 
 
         /**
          * observedFlinkJobRestarts.

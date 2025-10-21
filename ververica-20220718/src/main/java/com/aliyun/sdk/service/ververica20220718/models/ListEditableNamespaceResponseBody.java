@@ -52,6 +52,10 @@ public class ListEditableNamespaceResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return data
      */
@@ -101,6 +105,18 @@ public class ListEditableNamespaceResponseBody extends TeaModel {
         private String reason; 
         private String requestId; 
         private Boolean success; 
+
+        private Builder() {
+        } 
+
+        private Builder(ListEditableNamespaceResponseBody model) {
+            this.data = model.data;
+            this.httpCode = model.httpCode;
+            this.message = model.message;
+            this.reason = model.reason;
+            this.requestId = model.requestId;
+            this.success = model.success;
+        } 
 
         /**
          * data.
@@ -223,6 +239,16 @@ public class ListEditableNamespaceResponseBody extends TeaModel {
             private String pageIndex; 
             private String pageSize; 
             private String total; 
+
+            private Builder() {
+            } 
+
+            private Builder(Data model) {
+                this.editableNamespaces = model.editableNamespaces;
+                this.pageIndex = model.pageIndex;
+                this.pageSize = model.pageSize;
+                this.total = model.total;
+            } 
 
             /**
              * editableNamespaces.

@@ -33,6 +33,10 @@ public class StopJobRequestBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return stopStrategy
      */
@@ -42,6 +46,13 @@ public class StopJobRequestBody extends TeaModel {
 
     public static final class Builder {
         private String stopStrategy; 
+
+        private Builder() {
+        } 
+
+        private Builder(StopJobRequestBody model) {
+            this.stopStrategy = model.stopStrategy;
+        } 
 
         /**
          * <p>This parameter is required.</p>

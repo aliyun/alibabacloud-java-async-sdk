@@ -52,6 +52,10 @@ public class JobDiagnosis extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return diagnoseId
      */
@@ -101,6 +105,18 @@ public class JobDiagnosis extends TeaModel {
         private String riskLevel; 
         private JobDiagnosisSymptoms symptoms; 
         private String workspace; 
+
+        private Builder() {
+        } 
+
+        private Builder(JobDiagnosis model) {
+            this.diagnoseId = model.diagnoseId;
+            this.diagnoseTime = model.diagnoseTime;
+            this.namespace = model.namespace;
+            this.riskLevel = model.riskLevel;
+            this.symptoms = model.symptoms;
+            this.workspace = model.workspace;
+        } 
 
         /**
          * diagnoseId.

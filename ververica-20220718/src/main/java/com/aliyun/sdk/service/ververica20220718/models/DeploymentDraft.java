@@ -100,6 +100,10 @@ public class DeploymentDraft extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return artifact
      */
@@ -245,6 +249,30 @@ public class DeploymentDraft extends TeaModel {
         private String parentId; 
         private String referencedDeploymentId; 
         private String workspace; 
+
+        private Builder() {
+        } 
+
+        private Builder(DeploymentDraft model) {
+            this.artifact = model.artifact;
+            this.createdAt = model.createdAt;
+            this.creator = model.creator;
+            this.creatorName = model.creatorName;
+            this.deploymentDraftId = model.deploymentDraftId;
+            this.engineVersion = model.engineVersion;
+            this.executionMode = model.executionMode;
+            this.labels = model.labels;
+            this.localVariables = model.localVariables;
+            this.lock = model.lock;
+            this.modifiedAt = model.modifiedAt;
+            this.modifier = model.modifier;
+            this.modifierName = model.modifierName;
+            this.name = model.name;
+            this.namespace = model.namespace;
+            this.parentId = model.parentId;
+            this.referencedDeploymentId = model.referencedDeploymentId;
+            this.workspace = model.workspace;
+        } 
 
         /**
          * artifact.

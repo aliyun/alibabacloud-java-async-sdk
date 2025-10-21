@@ -48,6 +48,10 @@ public class UpdateUdfArtifactResult extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return collidingClasses
      */
@@ -89,6 +93,17 @@ public class UpdateUdfArtifactResult extends TeaModel {
         private java.util.List<UdfClass> missingClasses; 
         private UdfArtifact udfArtifact; 
         private Boolean updateSuccess; 
+
+        private Builder() {
+        } 
+
+        private Builder(UpdateUdfArtifactResult model) {
+            this.collidingClasses = model.collidingClasses;
+            this.message = model.message;
+            this.missingClasses = model.missingClasses;
+            this.udfArtifact = model.udfArtifact;
+            this.updateSuccess = model.updateSuccess;
+        } 
 
         /**
          * collidingClasses.

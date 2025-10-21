@@ -36,6 +36,10 @@ public class EngineVersionMetadataIndex extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return defaultEngineVersion
      */
@@ -53,6 +57,14 @@ public class EngineVersionMetadataIndex extends TeaModel {
     public static final class Builder {
         private String defaultEngineVersion; 
         private java.util.List<EngineVersionMetadata> engineVersionMetadata; 
+
+        private Builder() {
+        } 
+
+        private Builder(EngineVersionMetadataIndex model) {
+            this.defaultEngineVersion = model.defaultEngineVersion;
+            this.engineVersionMetadata = model.engineVersionMetadata;
+        } 
 
         /**
          * defaultEngineVersion.

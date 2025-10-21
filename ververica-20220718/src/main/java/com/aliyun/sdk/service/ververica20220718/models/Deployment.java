@@ -124,6 +124,10 @@ public class Deployment extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return artifact
      */
@@ -317,6 +321,36 @@ public class Deployment extends TeaModel {
         private String referencedDeploymentDraftId; 
         private StreamingResourceSetting streamingResourceSetting; 
         private String workspace; 
+
+        private Builder() {
+        } 
+
+        private Builder(Deployment model) {
+            this.artifact = model.artifact;
+            this.batchResourceSetting = model.batchResourceSetting;
+            this.createdAt = model.createdAt;
+            this.creator = model.creator;
+            this.creatorName = model.creatorName;
+            this.deploymentHasChanged = model.deploymentHasChanged;
+            this.deploymentId = model.deploymentId;
+            this.deploymentTarget = model.deploymentTarget;
+            this.description = model.description;
+            this.engineVersion = model.engineVersion;
+            this.executionMode = model.executionMode;
+            this.flinkConf = model.flinkConf;
+            this.jobSummary = model.jobSummary;
+            this.labels = model.labels;
+            this.localVariables = model.localVariables;
+            this.logging = model.logging;
+            this.modifiedAt = model.modifiedAt;
+            this.modifier = model.modifier;
+            this.modifierName = model.modifierName;
+            this.name = model.name;
+            this.namespace = model.namespace;
+            this.referencedDeploymentDraftId = model.referencedDeploymentDraftId;
+            this.streamingResourceSetting = model.streamingResourceSetting;
+            this.workspace = model.workspace;
+        } 
 
         /**
          * artifact.

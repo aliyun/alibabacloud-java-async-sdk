@@ -50,6 +50,10 @@ public class SqlStatementWithContext extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return additionalDependencies
      */
@@ -91,6 +95,17 @@ public class SqlStatementWithContext extends TeaModel {
         private java.util.Map<String, ?> flinkConfiguration; 
         private String statement; 
         private String versionName; 
+
+        private Builder() {
+        } 
+
+        private Builder(SqlStatementWithContext model) {
+            this.additionalDependencies = model.additionalDependencies;
+            this.batchMode = model.batchMode;
+            this.flinkConfiguration = model.flinkConfiguration;
+            this.statement = model.statement;
+            this.versionName = model.versionName;
+        } 
 
         /**
          * additionalDependencies.

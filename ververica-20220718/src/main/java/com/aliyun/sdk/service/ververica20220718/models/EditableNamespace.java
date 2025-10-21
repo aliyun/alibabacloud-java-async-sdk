@@ -40,6 +40,10 @@ public class EditableNamespace extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return namespace
      */
@@ -65,6 +69,15 @@ public class EditableNamespace extends TeaModel {
         private String namespace; 
         private String role; 
         private String workspaceId; 
+
+        private Builder() {
+        } 
+
+        private Builder(EditableNamespace model) {
+            this.namespace = model.namespace;
+            this.role = model.role;
+            this.workspaceId = model.workspaceId;
+        } 
 
         /**
          * Namespace.

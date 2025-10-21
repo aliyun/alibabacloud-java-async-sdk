@@ -40,6 +40,10 @@ public class DeleteUdfArtifactResult extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return deleteSuccess
      */
@@ -65,6 +69,15 @@ public class DeleteUdfArtifactResult extends TeaModel {
         private Boolean deleteSuccess; 
         private String message; 
         private java.util.List<UdfClass> referencedClasses; 
+
+        private Builder() {
+        } 
+
+        private Builder(DeleteUdfArtifactResult model) {
+            this.deleteSuccess = model.deleteSuccess;
+            this.message = model.message;
+            this.referencedClasses = model.referencedClasses;
+        } 
 
         /**
          * deleteSuccess.

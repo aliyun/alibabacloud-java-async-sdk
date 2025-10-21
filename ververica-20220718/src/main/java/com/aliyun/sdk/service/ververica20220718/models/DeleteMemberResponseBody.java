@@ -48,6 +48,10 @@ public class DeleteMemberResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return errorCode
      */
@@ -89,6 +93,17 @@ public class DeleteMemberResponseBody extends TeaModel {
         private Integer httpCode; 
         private String requestId; 
         private Boolean success; 
+
+        private Builder() {
+        } 
+
+        private Builder(DeleteMemberResponseBody model) {
+            this.errorCode = model.errorCode;
+            this.errorMessage = model.errorMessage;
+            this.httpCode = model.httpCode;
+            this.requestId = model.requestId;
+            this.success = model.success;
+        } 
 
         /**
          * <ul>

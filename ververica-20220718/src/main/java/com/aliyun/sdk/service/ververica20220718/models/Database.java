@@ -40,6 +40,10 @@ public class Database extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return comment
      */
@@ -65,6 +69,15 @@ public class Database extends TeaModel {
         private String comment; 
         private String name; 
         private java.util.Map<String, ?> properties; 
+
+        private Builder() {
+        } 
+
+        private Builder(Database model) {
+            this.comment = model.comment;
+            this.name = model.name;
+            this.properties = model.properties;
+        } 
 
         /**
          * comment.

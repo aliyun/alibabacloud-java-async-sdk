@@ -32,6 +32,10 @@ public class UpdateJobConfigParam extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return newFlinkConf
      */
@@ -41,6 +45,13 @@ public class UpdateJobConfigParam extends TeaModel {
 
     public static final class Builder {
         private java.util.Map<String, ?> newFlinkConf; 
+
+        private Builder() {
+        } 
+
+        private Builder(UpdateJobConfigParam model) {
+            this.newFlinkConf = model.newFlinkConf;
+        } 
 
         /**
          * newFlinkConf.

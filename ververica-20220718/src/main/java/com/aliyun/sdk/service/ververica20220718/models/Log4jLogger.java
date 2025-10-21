@@ -36,6 +36,10 @@ public class Log4jLogger extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return loggerLevel
      */
@@ -53,6 +57,14 @@ public class Log4jLogger extends TeaModel {
     public static final class Builder {
         private String loggerLevel; 
         private String loggerName; 
+
+        private Builder() {
+        } 
+
+        private Builder(Log4jLogger model) {
+            this.loggerLevel = model.loggerLevel;
+            this.loggerName = model.loggerName;
+        } 
 
         /**
          * loggerLevel.

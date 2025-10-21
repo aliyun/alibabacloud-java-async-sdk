@@ -60,6 +60,10 @@ public class Folder extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return createdAt
      */
@@ -125,6 +129,20 @@ public class Folder extends TeaModel {
         private String parentId; 
         private java.util.List<SubFolder> subFolder; 
         private String workspace; 
+
+        private Builder() {
+        } 
+
+        private Builder(Folder model) {
+            this.createdAt = model.createdAt;
+            this.folderId = model.folderId;
+            this.modifiedAt = model.modifiedAt;
+            this.name = model.name;
+            this.namespace = model.namespace;
+            this.parentId = model.parentId;
+            this.subFolder = model.subFolder;
+            this.workspace = model.workspace;
+        } 
 
         /**
          * createdAt.

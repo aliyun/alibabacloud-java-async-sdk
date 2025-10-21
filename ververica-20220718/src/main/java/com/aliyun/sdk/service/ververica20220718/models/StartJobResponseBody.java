@@ -56,6 +56,10 @@ public class StartJobResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return accessDeniedDetail
      */
@@ -113,6 +117,19 @@ public class StartJobResponseBody extends TeaModel {
         private Integer httpCode; 
         private String requestId; 
         private Boolean success; 
+
+        private Builder() {
+        } 
+
+        private Builder(StartJobResponseBody model) {
+            this.accessDeniedDetail = model.accessDeniedDetail;
+            this.data = model.data;
+            this.errorCode = model.errorCode;
+            this.errorMessage = model.errorMessage;
+            this.httpCode = model.httpCode;
+            this.requestId = model.requestId;
+            this.success = model.success;
+        } 
 
         /**
          * accessDeniedDetail.

@@ -40,6 +40,10 @@ public class TableMeta extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return catalogName
      */
@@ -65,6 +69,15 @@ public class TableMeta extends TeaModel {
         private String catalogName; 
         private String databaseName; 
         private String tableName; 
+
+        private Builder() {
+        } 
+
+        private Builder(TableMeta model) {
+            this.catalogName = model.catalogName;
+            this.databaseName = model.databaseName;
+            this.tableName = model.tableName;
+        } 
 
         /**
          * catalogName.

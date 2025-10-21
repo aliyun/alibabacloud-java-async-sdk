@@ -52,6 +52,10 @@ public class Property extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return defaultValue
      */
@@ -101,6 +105,18 @@ public class Property extends TeaModel {
         private String key; 
         private Boolean required; 
         private Boolean sensitive; 
+
+        private Builder() {
+        } 
+
+        private Builder(Property model) {
+            this.defaultValue = model.defaultValue;
+            this.definesFormat = model.definesFormat;
+            this.description = model.description;
+            this.key = model.key;
+            this.required = model.required;
+            this.sensitive = model.sensitive;
+        } 
 
         /**
          * defaultValue.

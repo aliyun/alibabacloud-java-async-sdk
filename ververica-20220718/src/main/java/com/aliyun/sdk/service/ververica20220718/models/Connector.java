@@ -76,6 +76,10 @@ public class Connector extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return creator
      */
@@ -173,6 +177,24 @@ public class Connector extends TeaModel {
         private Boolean source; 
         private java.util.List<String> supportedFormats; 
         private String type; 
+
+        private Builder() {
+        } 
+
+        private Builder(Connector model) {
+            this.creator = model.creator;
+            this.creatorName = model.creatorName;
+            this.dependencies = model.dependencies;
+            this.lookup = model.lookup;
+            this.modifier = model.modifier;
+            this.modifierName = model.modifierName;
+            this.name = model.name;
+            this.properties = model.properties;
+            this.sink = model.sink;
+            this.source = model.source;
+            this.supportedFormats = model.supportedFormats;
+            this.type = model.type;
+        } 
 
         /**
          * creator.

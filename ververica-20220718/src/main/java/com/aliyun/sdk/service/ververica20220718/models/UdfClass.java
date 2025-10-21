@@ -44,6 +44,10 @@ public class UdfClass extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return className
      */
@@ -77,6 +81,16 @@ public class UdfClass extends TeaModel {
         private String classType; 
         private java.util.List<String> functionNames; 
         private String udfArtifactName; 
+
+        private Builder() {
+        } 
+
+        private Builder(UdfClass model) {
+            this.className = model.className;
+            this.classType = model.classType;
+            this.functionNames = model.functionNames;
+            this.udfArtifactName = model.udfArtifactName;
+        } 
 
         /**
          * className.

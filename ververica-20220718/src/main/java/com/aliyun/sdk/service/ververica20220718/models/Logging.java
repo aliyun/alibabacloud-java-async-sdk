@@ -44,6 +44,10 @@ public class Logging extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return log4j2ConfigurationTemplate
      */
@@ -77,6 +81,16 @@ public class Logging extends TeaModel {
         private java.util.List<Log4jLogger> log4jLoggers; 
         private LogReservePolicy logReservePolicy; 
         private String loggingProfile; 
+
+        private Builder() {
+        } 
+
+        private Builder(Logging model) {
+            this.log4j2ConfigurationTemplate = model.log4j2ConfigurationTemplate;
+            this.log4jLoggers = model.log4jLoggers;
+            this.logReservePolicy = model.logReservePolicy;
+            this.loggingProfile = model.loggingProfile;
+        } 
 
         /**
          * log4j2ConfigurationTemplate.

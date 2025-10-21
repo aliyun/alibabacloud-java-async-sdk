@@ -36,6 +36,10 @@ public class ValidateStatementResult extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return errorDetails
      */
@@ -53,6 +57,14 @@ public class ValidateStatementResult extends TeaModel {
     public static final class Builder {
         private ValidationErrorDetails errorDetails; 
         private String validationResult; 
+
+        private Builder() {
+        } 
+
+        private Builder(ValidateStatementResult model) {
+            this.errorDetails = model.errorDetails;
+            this.validationResult = model.validationResult;
+        } 
 
         /**
          * errorDetails.

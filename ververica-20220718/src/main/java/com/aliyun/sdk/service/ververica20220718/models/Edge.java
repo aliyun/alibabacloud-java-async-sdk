@@ -36,6 +36,10 @@ public class Edge extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return columnLineage
      */
@@ -53,6 +57,14 @@ public class Edge extends TeaModel {
     public static final class Builder {
         private java.util.List<Relation> columnLineage; 
         private java.util.List<Relation> tableLineage; 
+
+        private Builder() {
+        } 
+
+        private Builder(Edge model) {
+            this.columnLineage = model.columnLineage;
+            this.tableLineage = model.tableLineage;
+        } 
 
         /**
          * columnLineage.

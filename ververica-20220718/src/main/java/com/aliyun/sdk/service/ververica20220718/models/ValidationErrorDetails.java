@@ -48,6 +48,10 @@ public class ValidationErrorDetails extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return columnNumber
      */
@@ -89,6 +93,17 @@ public class ValidationErrorDetails extends TeaModel {
         private String endLineNumber; 
         private String lineNumber; 
         private String message; 
+
+        private Builder() {
+        } 
+
+        private Builder(ValidationErrorDetails model) {
+            this.columnNumber = model.columnNumber;
+            this.endColumnNumber = model.endColumnNumber;
+            this.endLineNumber = model.endLineNumber;
+            this.lineNumber = model.lineNumber;
+            this.message = model.message;
+        } 
 
         /**
          * columnNumber.

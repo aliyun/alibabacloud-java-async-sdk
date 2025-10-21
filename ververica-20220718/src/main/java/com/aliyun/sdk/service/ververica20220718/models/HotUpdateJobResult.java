@@ -48,6 +48,10 @@ public class HotUpdateJobResult extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return hotUpdateParams
      */
@@ -89,6 +93,17 @@ public class HotUpdateJobResult extends TeaModel {
         private String jobId; 
         private HotUpdateJobStatus status; 
         private BriefResourceSetting targetResourceSetting; 
+
+        private Builder() {
+        } 
+
+        private Builder(HotUpdateJobResult model) {
+            this.hotUpdateParams = model.hotUpdateParams;
+            this.jobHotUpdateId = model.jobHotUpdateId;
+            this.jobId = model.jobId;
+            this.status = model.status;
+            this.targetResourceSetting = model.targetResourceSetting;
+        } 
 
         /**
          * hotUpdateParams.

@@ -68,6 +68,10 @@ public class LineageColumn extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return columnName
      */
@@ -149,6 +153,22 @@ public class LineageColumn extends TeaModel {
         private Long modifiedAt; 
         private String modifier; 
         private Boolean nullable; 
+
+        private Builder() {
+        } 
+
+        private Builder(LineageColumn model) {
+            this.columnName = model.columnName;
+            this.columnNativeType = model.columnNativeType;
+            this.columnType = model.columnType;
+            this.createdAt = model.createdAt;
+            this.creator = model.creator;
+            this.description = model.description;
+            this.id = model.id;
+            this.modifiedAt = model.modifiedAt;
+            this.modifier = model.modifier;
+            this.nullable = model.nullable;
+        } 
 
         /**
          * columnName.

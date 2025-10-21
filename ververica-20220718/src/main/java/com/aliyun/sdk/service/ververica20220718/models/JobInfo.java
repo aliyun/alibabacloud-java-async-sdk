@@ -36,6 +36,10 @@ public class JobInfo extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return id
      */
@@ -53,6 +57,14 @@ public class JobInfo extends TeaModel {
     public static final class Builder {
         private String id; 
         private java.util.Map<String, ?> properties; 
+
+        private Builder() {
+        } 
+
+        private Builder(JobInfo model) {
+            this.id = model.id;
+            this.properties = model.properties;
+        } 
 
         /**
          * id.

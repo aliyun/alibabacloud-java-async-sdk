@@ -36,6 +36,10 @@ public class ResourceSpec extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return cpu
      */
@@ -53,6 +57,14 @@ public class ResourceSpec extends TeaModel {
     public static final class Builder {
         private Double cpu; 
         private String memory; 
+
+        private Builder() {
+        } 
+
+        private Builder(ResourceSpec model) {
+            this.cpu = model.cpu;
+            this.memory = model.memory;
+        } 
 
         /**
          * cpu.

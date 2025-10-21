@@ -52,6 +52,10 @@ public class Node extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return catalogName
      */
@@ -101,6 +105,18 @@ public class Node extends TeaModel {
         private String id; 
         private Boolean isTemporary; 
         private java.util.List<LineageTable> tables; 
+
+        private Builder() {
+        } 
+
+        private Builder(Node model) {
+            this.catalogName = model.catalogName;
+            this.connector = model.connector;
+            this.databaseName = model.databaseName;
+            this.id = model.id;
+            this.isTemporary = model.isTemporary;
+            this.tables = model.tables;
+        } 
 
         /**
          * catalogName.

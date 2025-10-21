@@ -48,6 +48,10 @@ public class JobStartParameters extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return deploymentId
      */
@@ -89,6 +93,17 @@ public class JobStartParameters extends TeaModel {
         private java.util.List<LocalVariable> localVariables; 
         private String resourceQueueName; 
         private DeploymentRestoreStrategy restoreStrategy; 
+
+        private Builder() {
+        } 
+
+        private Builder(JobStartParameters model) {
+            this.deploymentId = model.deploymentId;
+            this.jobId = model.jobId;
+            this.localVariables = model.localVariables;
+            this.resourceQueueName = model.resourceQueueName;
+            this.restoreStrategy = model.restoreStrategy;
+        } 
 
         /**
          * deploymentId.

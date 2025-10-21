@@ -84,6 +84,10 @@ public class ScheduledPlanExecutedInfo extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return createdAt
      */
@@ -197,6 +201,26 @@ public class ScheduledPlanExecutedInfo extends TeaModel {
         private String originJobId; 
         private ScheduledPlanExecutedStatus status; 
         private String workspace; 
+
+        private Builder() {
+        } 
+
+        private Builder(ScheduledPlanExecutedInfo model) {
+            this.createdAt = model.createdAt;
+            this.creator = model.creator;
+            this.creatorName = model.creatorName;
+            this.deploymentId = model.deploymentId;
+            this.jobResourceUpgradingId = model.jobResourceUpgradingId;
+            this.modifiedAt = model.modifiedAt;
+            this.modifier = model.modifier;
+            this.modifierName = model.modifierName;
+            this.name = model.name;
+            this.namespace = model.namespace;
+            this.origin = model.origin;
+            this.originJobId = model.originJobId;
+            this.status = model.status;
+            this.workspace = model.workspace;
+        } 
 
         /**
          * createdAt.

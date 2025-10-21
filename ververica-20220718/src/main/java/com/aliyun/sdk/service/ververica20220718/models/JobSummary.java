@@ -52,6 +52,10 @@ public class JobSummary extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return cancelled
      */
@@ -101,6 +105,18 @@ public class JobSummary extends TeaModel {
         private Integer finished; 
         private Integer running; 
         private Integer starting; 
+
+        private Builder() {
+        } 
+
+        private Builder(JobSummary model) {
+            this.cancelled = model.cancelled;
+            this.cancelling = model.cancelling;
+            this.failed = model.failed;
+            this.finished = model.finished;
+            this.running = model.running;
+            this.starting = model.starting;
+        } 
 
         /**
          * cancelled.

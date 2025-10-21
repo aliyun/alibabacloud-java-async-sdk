@@ -48,6 +48,10 @@ public class JobStatus extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return currentJobStatus
      */
@@ -89,6 +93,17 @@ public class JobStatus extends TeaModel {
         private Integer healthScore; 
         private String riskLevel; 
         private JobStatusRunning running; 
+
+        private Builder() {
+        } 
+
+        private Builder(JobStatus model) {
+            this.currentJobStatus = model.currentJobStatus;
+            this.failure = model.failure;
+            this.healthScore = model.healthScore;
+            this.riskLevel = model.riskLevel;
+            this.running = model.running;
+        } 
 
         /**
          * currentJobStatus.

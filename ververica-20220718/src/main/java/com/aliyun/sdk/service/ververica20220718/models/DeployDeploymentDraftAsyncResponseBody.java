@@ -52,6 +52,10 @@ public class DeployDeploymentDraftAsyncResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return data
      */
@@ -101,6 +105,18 @@ public class DeployDeploymentDraftAsyncResponseBody extends TeaModel {
         private Integer httpCode; 
         private String requestId; 
         private Boolean success; 
+
+        private Builder() {
+        } 
+
+        private Builder(DeployDeploymentDraftAsyncResponseBody model) {
+            this.data = model.data;
+            this.errorCode = model.errorCode;
+            this.errorMessage = model.errorMessage;
+            this.httpCode = model.httpCode;
+            this.requestId = model.requestId;
+            this.success = model.success;
+        } 
 
         /**
          * data.
@@ -187,6 +203,13 @@ public class DeployDeploymentDraftAsyncResponseBody extends TeaModel {
 
         public static final class Builder {
             private String ticketId; 
+
+            private Builder() {
+            } 
+
+            private Builder(Data model) {
+                this.ticketId = model.ticketId;
+            } 
 
             /**
              * ticketId.

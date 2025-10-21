@@ -36,6 +36,10 @@ public class BriefDeploymentTarget extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return mode
      */
@@ -53,6 +57,14 @@ public class BriefDeploymentTarget extends TeaModel {
     public static final class Builder {
         private String mode; 
         private String name; 
+
+        private Builder() {
+        } 
+
+        private Builder(BriefDeploymentTarget model) {
+            this.mode = model.mode;
+            this.name = model.name;
+        } 
 
         /**
          * mode.

@@ -40,6 +40,10 @@ public class JobFailure extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return failedAt
      */
@@ -65,6 +69,15 @@ public class JobFailure extends TeaModel {
         private Long failedAt; 
         private String message; 
         private String reason; 
+
+        private Builder() {
+        } 
+
+        private Builder(JobFailure model) {
+            this.failedAt = model.failedAt;
+            this.message = model.message;
+            this.reason = model.reason;
+        } 
 
         /**
          * failedAt.

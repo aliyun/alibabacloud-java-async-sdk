@@ -40,6 +40,10 @@ public class BriefResourceSetting extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return batchResourceSetting
      */
@@ -65,6 +69,15 @@ public class BriefResourceSetting extends TeaModel {
         private BatchResourceSetting batchResourceSetting; 
         private java.util.Map<String, ?> flinkConf; 
         private StreamingResourceSetting streamingResourceSetting; 
+
+        private Builder() {
+        } 
+
+        private Builder(BriefResourceSetting model) {
+            this.batchResourceSetting = model.batchResourceSetting;
+            this.flinkConf = model.flinkConf;
+            this.streamingResourceSetting = model.streamingResourceSetting;
+        } 
 
         /**
          * batchResourceSetting.

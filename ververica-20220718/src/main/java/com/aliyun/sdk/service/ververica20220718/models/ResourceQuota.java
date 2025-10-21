@@ -20,11 +20,15 @@ public class ResourceQuota extends TeaModel {
     @com.aliyun.core.annotation.NameInMap("limit")
     private ResourceSpec limit;
 
+    @com.aliyun.core.annotation.NameInMap("request")
+    private ResourceSpec request;
+
     @com.aliyun.core.annotation.NameInMap("used")
     private ResourceSpec used;
 
     private ResourceQuota(Builder builder) {
         this.limit = builder.limit;
+        this.request = builder.request;
         this.used = builder.used;
     }
 
@@ -36,11 +40,22 @@ public class ResourceQuota extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return limit
      */
     public ResourceSpec getLimit() {
         return this.limit;
+    }
+
+    /**
+     * @return request
+     */
+    public ResourceSpec getRequest() {
+        return this.request;
     }
 
     /**
@@ -52,13 +67,31 @@ public class ResourceQuota extends TeaModel {
 
     public static final class Builder {
         private ResourceSpec limit; 
+        private ResourceSpec request; 
         private ResourceSpec used; 
+
+        private Builder() {
+        } 
+
+        private Builder(ResourceQuota model) {
+            this.limit = model.limit;
+            this.request = model.request;
+            this.used = model.used;
+        } 
 
         /**
          * limit.
          */
         public Builder limit(ResourceSpec limit) {
             this.limit = limit;
+            return this;
+        }
+
+        /**
+         * request.
+         */
+        public Builder request(ResourceSpec request) {
+            this.request = request;
             return this;
         }
 

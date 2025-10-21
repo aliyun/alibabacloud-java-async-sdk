@@ -48,6 +48,10 @@ public class AsyncDraftDeployResult extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return artifactValidationDetail
      */
@@ -89,6 +93,17 @@ public class AsyncDraftDeployResult extends TeaModel {
         private String message; 
         private Boolean success; 
         private String ticketStatus; 
+
+        private Builder() {
+        } 
+
+        private Builder(AsyncDraftDeployResult model) {
+            this.artifactValidationDetail = model.artifactValidationDetail;
+            this.deploymentId = model.deploymentId;
+            this.message = model.message;
+            this.success = model.success;
+            this.ticketStatus = model.ticketStatus;
+        } 
 
         /**
          * artifactValidationDetail.

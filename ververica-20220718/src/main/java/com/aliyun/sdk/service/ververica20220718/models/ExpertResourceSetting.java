@@ -36,6 +36,10 @@ public class ExpertResourceSetting extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return jobmanagerResourceSettingSpec
      */
@@ -53,6 +57,14 @@ public class ExpertResourceSetting extends TeaModel {
     public static final class Builder {
         private BasicResourceSettingSpec jobmanagerResourceSettingSpec; 
         private String resourcePlan; 
+
+        private Builder() {
+        } 
+
+        private Builder(ExpertResourceSetting model) {
+            this.jobmanagerResourceSettingSpec = model.jobmanagerResourceSettingSpec;
+            this.resourcePlan = model.resourcePlan;
+        } 
 
         /**
          * jobmanagerResourceSettingSpec.

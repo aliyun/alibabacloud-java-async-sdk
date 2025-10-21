@@ -64,6 +64,10 @@ public class GetEventsResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return data
      */
@@ -137,6 +141,21 @@ public class GetEventsResponseBody extends TeaModel {
         private String requestId; 
         private Boolean success; 
         private Integer totalSize; 
+
+        private Builder() {
+        } 
+
+        private Builder(GetEventsResponseBody model) {
+            this.data = model.data;
+            this.errorCode = model.errorCode;
+            this.errorMessage = model.errorMessage;
+            this.httpCode = model.httpCode;
+            this.pageIndex = model.pageIndex;
+            this.pageSize = model.pageSize;
+            this.requestId = model.requestId;
+            this.success = model.success;
+            this.totalSize = model.totalSize;
+        } 
 
         /**
          * data.

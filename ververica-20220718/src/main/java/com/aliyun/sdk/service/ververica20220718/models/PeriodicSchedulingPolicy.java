@@ -56,6 +56,10 @@ public class PeriodicSchedulingPolicy extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return isFinished
      */
@@ -113,6 +117,19 @@ public class PeriodicSchedulingPolicy extends TeaModel {
         private java.util.List<Integer> periodicSchedulingValues; 
         private Long periodicTriggerTime; 
         private BriefResourceSetting resourceSetting; 
+
+        private Builder() {
+        } 
+
+        private Builder(PeriodicSchedulingPolicy model) {
+            this.isFinished = model.isFinished;
+            this.onlyOnceTriggerTime = model.onlyOnceTriggerTime;
+            this.onlyOnceTriggerTimeIsExpired = model.onlyOnceTriggerTimeIsExpired;
+            this.periodicSchedulingLevel = model.periodicSchedulingLevel;
+            this.periodicSchedulingValues = model.periodicSchedulingValues;
+            this.periodicTriggerTime = model.periodicTriggerTime;
+            this.resourceSetting = model.resourceSetting;
+        } 
 
         /**
          * isFinished.

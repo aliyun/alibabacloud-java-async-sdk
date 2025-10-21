@@ -52,6 +52,10 @@ public class GenerateResourcePlanWithFlinkConfAsyncResponseBody extends TeaModel
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return data
      */
@@ -101,6 +105,18 @@ public class GenerateResourcePlanWithFlinkConfAsyncResponseBody extends TeaModel
         private Integer httpCode; 
         private String requestId; 
         private Boolean success; 
+
+        private Builder() {
+        } 
+
+        private Builder(GenerateResourcePlanWithFlinkConfAsyncResponseBody model) {
+            this.data = model.data;
+            this.errorCode = model.errorCode;
+            this.errorMessage = model.errorMessage;
+            this.httpCode = model.httpCode;
+            this.requestId = model.requestId;
+            this.success = model.success;
+        } 
 
         /**
          * <ul>
@@ -211,6 +227,13 @@ public class GenerateResourcePlanWithFlinkConfAsyncResponseBody extends TeaModel
 
         public static final class Builder {
             private String ticketId; 
+
+            private Builder() {
+            } 
+
+            private Builder(Data model) {
+                this.ticketId = model.ticketId;
+            } 
 
             /**
              * <p>The ID of the ticket for you to query the asynchronous generation result.</p>

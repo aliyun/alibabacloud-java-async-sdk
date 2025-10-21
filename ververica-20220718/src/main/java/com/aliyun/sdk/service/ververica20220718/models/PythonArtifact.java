@@ -52,6 +52,10 @@ public class PythonArtifact extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return additionalDependencies
      */
@@ -101,6 +105,18 @@ public class PythonArtifact extends TeaModel {
         private String entryModule; 
         private String mainArgs; 
         private String pythonArtifactUri; 
+
+        private Builder() {
+        } 
+
+        private Builder(PythonArtifact model) {
+            this.additionalDependencies = model.additionalDependencies;
+            this.additionalPythonArchives = model.additionalPythonArchives;
+            this.additionalPythonLibraries = model.additionalPythonLibraries;
+            this.entryModule = model.entryModule;
+            this.mainArgs = model.mainArgs;
+            this.pythonArtifactUri = model.pythonArtifactUri;
+        } 
 
         /**
          * additionalDependencies.

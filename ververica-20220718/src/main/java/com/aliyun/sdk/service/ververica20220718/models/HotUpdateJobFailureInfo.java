@@ -40,6 +40,10 @@ public class HotUpdateJobFailureInfo extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return failureSeverity
      */
@@ -65,6 +69,15 @@ public class HotUpdateJobFailureInfo extends TeaModel {
         private String failureSeverity; 
         private String message; 
         private String reason; 
+
+        private Builder() {
+        } 
+
+        private Builder(HotUpdateJobFailureInfo model) {
+            this.failureSeverity = model.failureSeverity;
+            this.message = model.message;
+            this.reason = model.reason;
+        } 
 
         /**
          * failureSeverity.

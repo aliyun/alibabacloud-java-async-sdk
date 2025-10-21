@@ -96,6 +96,10 @@ public class SessionCluster extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return basicResourceSetting
      */
@@ -233,6 +237,29 @@ public class SessionCluster extends TeaModel {
         private String sessionClusterId; 
         private SessionClusterStatus status; 
         private String workspace; 
+
+        private Builder() {
+        } 
+
+        private Builder(SessionCluster model) {
+            this.basicResourceSetting = model.basicResourceSetting;
+            this.createdAt = model.createdAt;
+            this.creator = model.creator;
+            this.creatorName = model.creatorName;
+            this.deploymentTargetName = model.deploymentTargetName;
+            this.engineVersion = model.engineVersion;
+            this.flinkConf = model.flinkConf;
+            this.labels = model.labels;
+            this.logging = model.logging;
+            this.modifiedAt = model.modifiedAt;
+            this.modifier = model.modifier;
+            this.modifierName = model.modifierName;
+            this.name = model.name;
+            this.namespace = model.namespace;
+            this.sessionClusterId = model.sessionClusterId;
+            this.status = model.status;
+            this.workspace = model.workspace;
+        } 
 
         /**
          * basicResourceSetting.

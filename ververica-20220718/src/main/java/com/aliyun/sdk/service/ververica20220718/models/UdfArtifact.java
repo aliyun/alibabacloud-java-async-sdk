@@ -64,6 +64,10 @@ public class UdfArtifact extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return artifactType
      */
@@ -137,6 +141,21 @@ public class UdfArtifact extends TeaModel {
         private String name; 
         private String namespace; 
         private java.util.List<UdfClass> udfClasses; 
+
+        private Builder() {
+        } 
+
+        private Builder(UdfArtifact model) {
+            this.artifactType = model.artifactType;
+            this.createdAt = model.createdAt;
+            this.creator = model.creator;
+            this.dependencyJarUris = model.dependencyJarUris;
+            this.jarUrl = model.jarUrl;
+            this.modifiedAt = model.modifiedAt;
+            this.name = model.name;
+            this.namespace = model.namespace;
+            this.udfClasses = model.udfClasses;
+        } 
 
         /**
          * artifactType.

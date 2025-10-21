@@ -42,6 +42,10 @@ public class EngineVersionMetadata extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return engineVersion
      */
@@ -67,6 +71,15 @@ public class EngineVersionMetadata extends TeaModel {
         private String engineVersion; 
         private EngineVersionSupportedFeatures features; 
         private String status; 
+
+        private Builder() {
+        } 
+
+        private Builder(EngineVersionMetadata model) {
+            this.engineVersion = model.engineVersion;
+            this.features = model.features;
+            this.status = model.status;
+        } 
 
         /**
          * <p>This parameter is required.</p>

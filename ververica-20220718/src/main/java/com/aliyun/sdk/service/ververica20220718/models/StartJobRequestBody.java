@@ -40,6 +40,10 @@ public class StartJobRequestBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return deploymentId
      */
@@ -65,6 +69,15 @@ public class StartJobRequestBody extends TeaModel {
         private String deploymentId; 
         private BriefResourceSetting resourceSettingSpec; 
         private DeploymentRestoreStrategy restoreStrategy; 
+
+        private Builder() {
+        } 
+
+        private Builder(StartJobRequestBody model) {
+            this.deploymentId = model.deploymentId;
+            this.resourceSettingSpec = model.resourceSettingSpec;
+            this.restoreStrategy = model.restoreStrategy;
+        } 
 
         /**
          * deploymentId.

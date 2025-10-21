@@ -40,6 +40,10 @@ public class BasicResourceSetting extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return jobmanagerResourceSettingSpec
      */
@@ -65,6 +69,15 @@ public class BasicResourceSetting extends TeaModel {
         private BasicResourceSettingSpec jobmanagerResourceSettingSpec; 
         private Long parallelism; 
         private BasicResourceSettingSpec taskmanagerResourceSettingSpec; 
+
+        private Builder() {
+        } 
+
+        private Builder(BasicResourceSetting model) {
+            this.jobmanagerResourceSettingSpec = model.jobmanagerResourceSettingSpec;
+            this.parallelism = model.parallelism;
+            this.taskmanagerResourceSettingSpec = model.taskmanagerResourceSettingSpec;
+        } 
 
         /**
          * jobmanagerResourceSettingSpec.

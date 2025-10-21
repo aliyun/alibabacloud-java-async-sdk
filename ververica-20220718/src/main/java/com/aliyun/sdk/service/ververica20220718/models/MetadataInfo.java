@@ -36,6 +36,10 @@ public class MetadataInfo extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return key
      */
@@ -53,6 +57,14 @@ public class MetadataInfo extends TeaModel {
     public static final class Builder {
         private String key; 
         private Boolean virtual; 
+
+        private Builder() {
+        } 
+
+        private Builder(MetadataInfo model) {
+            this.key = model.key;
+            this.virtual = model.virtual;
+        } 
 
         /**
          * key.

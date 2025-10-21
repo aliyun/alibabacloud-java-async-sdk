@@ -36,6 +36,10 @@ public class LogReservePolicy extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return expirationDays
      */
@@ -53,6 +57,14 @@ public class LogReservePolicy extends TeaModel {
     public static final class Builder {
         private Long expirationDays; 
         private Boolean openHistory; 
+
+        private Builder() {
+        } 
+
+        private Builder(LogReservePolicy model) {
+            this.expirationDays = model.expirationDays;
+            this.openHistory = model.openHistory;
+        } 
 
         /**
          * expirationDays.

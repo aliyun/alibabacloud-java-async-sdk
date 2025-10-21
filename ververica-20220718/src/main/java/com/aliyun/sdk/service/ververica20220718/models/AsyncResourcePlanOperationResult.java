@@ -40,6 +40,10 @@ public class AsyncResourcePlanOperationResult extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return message
      */
@@ -65,6 +69,15 @@ public class AsyncResourcePlanOperationResult extends TeaModel {
         private String message; 
         private String plan; 
         private String ticketStatus; 
+
+        private Builder() {
+        } 
+
+        private Builder(AsyncResourcePlanOperationResult model) {
+            this.message = model.message;
+            this.plan = model.plan;
+            this.ticketStatus = model.ticketStatus;
+        } 
 
         /**
          * message.

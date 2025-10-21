@@ -40,6 +40,10 @@ public class Schema extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return columns
      */
@@ -65,6 +69,15 @@ public class Schema extends TeaModel {
         private java.util.List<TableColumn> columns; 
         private PrimaryKey primaryKey; 
         private java.util.List<WatermarkSpec> watermarkSpecs; 
+
+        private Builder() {
+        } 
+
+        private Builder(Schema model) {
+            this.columns = model.columns;
+            this.primaryKey = model.primaryKey;
+            this.watermarkSpecs = model.watermarkSpecs;
+        } 
 
         /**
          * columns.

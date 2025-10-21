@@ -26,6 +26,12 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<ApplyScheduledPlanResponse> applyScheduledPlan(ApplyScheduledPlanRequest request);
 
     /**
+     * @param request the request parameters of CancelSqlPreview  CancelSqlPreviewRequest
+     * @return CancelSqlPreviewResponse
+     */
+    CompletableFuture<CancelSqlPreviewResponse> cancelSqlPreview(CancelSqlPreviewRequest request);
+
+    /**
      * @param request the request parameters of CreateDeployment  CreateDeploymentRequest
      * @return CreateDeploymentResponse
      */
@@ -42,6 +48,12 @@ public interface AsyncClient extends SdkAutoCloseable {
      * @return CreateDeploymentTargetResponse
      */
     CompletableFuture<CreateDeploymentTargetResponse> createDeploymentTarget(CreateDeploymentTargetRequest request);
+
+    /**
+     * @param request the request parameters of CreateDeploymentTargetV2  CreateDeploymentTargetV2Request
+     * @return CreateDeploymentTargetV2Response
+     */
+    CompletableFuture<CreateDeploymentTargetV2Response> createDeploymentTargetV2(CreateDeploymentTargetV2Request request);
 
     /**
      * @param request the request parameters of CreateFolder  CreateFolderRequest
@@ -174,6 +186,12 @@ public interface AsyncClient extends SdkAutoCloseable {
      * @return ExecuteSqlStatementResponse
      */
     CompletableFuture<ExecuteSqlStatementResponse> executeSqlStatement(ExecuteSqlStatementRequest request);
+
+    /**
+     * @param request the request parameters of FetchSqlPreviewResults  FetchSqlPreviewResultsRequest
+     * @return FetchSqlPreviewResultsResponse
+     */
+    CompletableFuture<FetchSqlPreviewResultsResponse> fetchSqlPreviewResults(FetchSqlPreviewResultsRequest request);
 
     /**
      * @param request the request parameters of FlinkApiProxy  FlinkApiProxyRequest
@@ -441,6 +459,12 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<StopSessionClusterResponse> stopSessionCluster(StopSessionClusterRequest request);
 
     /**
+     * @param request the request parameters of SubmitSqlPreview  SubmitSqlPreviewRequest
+     * @return SubmitSqlPreviewResponse
+     */
+    CompletableFuture<SubmitSqlPreviewResponse> submitSqlPreview(SubmitSqlPreviewRequest request);
+
+    /**
      * @param request the request parameters of UpdateDeployment  UpdateDeploymentRequest
      * @return UpdateDeploymentResponse
      */
@@ -457,6 +481,12 @@ public interface AsyncClient extends SdkAutoCloseable {
      * @return UpdateDeploymentTargetResponse
      */
     CompletableFuture<UpdateDeploymentTargetResponse> updateDeploymentTarget(UpdateDeploymentTargetRequest request);
+
+    /**
+     * @param request the request parameters of UpdateDeploymentTargetV2  UpdateDeploymentTargetV2Request
+     * @return UpdateDeploymentTargetV2Response
+     */
+    CompletableFuture<UpdateDeploymentTargetV2Response> updateDeploymentTargetV2(UpdateDeploymentTargetV2Request request);
 
     /**
      * @param request the request parameters of UpdateFolder  UpdateFolderRequest

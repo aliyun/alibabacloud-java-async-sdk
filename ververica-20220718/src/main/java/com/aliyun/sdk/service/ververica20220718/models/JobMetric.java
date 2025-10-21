@@ -36,6 +36,10 @@ public class JobMetric extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return totalCpu
      */
@@ -53,6 +57,14 @@ public class JobMetric extends TeaModel {
     public static final class Builder {
         private Double totalCpu; 
         private Long totalMemoryByte; 
+
+        private Builder() {
+        } 
+
+        private Builder(JobMetric model) {
+            this.totalCpu = model.totalCpu;
+            this.totalMemoryByte = model.totalMemoryByte;
+        } 
 
         /**
          * totalCpu.

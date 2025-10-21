@@ -40,6 +40,10 @@ public class SessionClusterStatus extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return currentSessionClusterStatus
      */
@@ -65,6 +69,15 @@ public class SessionClusterStatus extends TeaModel {
         private String currentSessionClusterStatus; 
         private SessionClusterFailureInfo failure; 
         private SessionClusterRunningInfo running; 
+
+        private Builder() {
+        } 
+
+        private Builder(SessionClusterStatus model) {
+            this.currentSessionClusterStatus = model.currentSessionClusterStatus;
+            this.failure = model.failure;
+            this.running = model.running;
+        } 
 
         /**
          * currentSessionClusterStatus.

@@ -60,6 +60,10 @@ public class Event extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return createdAt
      */
@@ -125,6 +129,20 @@ public class Event extends TeaModel {
         private String message; 
         private String namespace; 
         private String workspace; 
+
+        private Builder() {
+        } 
+
+        private Builder(Event model) {
+            this.createdAt = model.createdAt;
+            this.deploymentId = model.deploymentId;
+            this.eventId = model.eventId;
+            this.eventName = model.eventName;
+            this.jobId = model.jobId;
+            this.message = model.message;
+            this.namespace = model.namespace;
+            this.workspace = model.workspace;
+        } 
 
         /**
          * createdAt.

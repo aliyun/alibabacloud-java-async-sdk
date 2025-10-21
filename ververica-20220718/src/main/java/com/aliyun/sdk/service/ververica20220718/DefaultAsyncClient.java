@@ -58,6 +58,24 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
+     * @param request the request parameters of CancelSqlPreview  CancelSqlPreviewRequest
+     * @return CancelSqlPreviewResponse
+     */
+    @Override
+    public CompletableFuture<CancelSqlPreviewResponse> cancelSqlPreview(CancelSqlPreviewRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RESTFUL).setAction("CancelSqlPreview").setMethod(HttpMethod.DELETE).setPathRegex("/api/v2/namespaces/{namespace}/sql-preview/cancel").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(CancelSqlPreviewResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<CancelSqlPreviewResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
      * @param request the request parameters of CreateDeployment  CreateDeploymentRequest
      * @return CreateDeploymentResponse
      */
@@ -106,6 +124,24 @@ public final class DefaultAsyncClient implements AsyncClient {
             return this.handler.execute(params);
         } catch (Exception e) {
             CompletableFuture<CreateDeploymentTargetResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
+     * @param request the request parameters of CreateDeploymentTargetV2  CreateDeploymentTargetV2Request
+     * @return CreateDeploymentTargetV2Response
+     */
+    @Override
+    public CompletableFuture<CreateDeploymentTargetV2Response> createDeploymentTargetV2(CreateDeploymentTargetV2Request request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RESTFUL).setAction("CreateDeploymentTargetV2").setMethod(HttpMethod.POST).setPathRegex("/api/v2/namespaces/{namespace}/deployment-targets/support-elastic").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(CreateDeploymentTargetV2Response.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<CreateDeploymentTargetV2Response> future = new CompletableFuture<>();
             future.completeExceptionally(e);
             return future;
         }
@@ -502,6 +538,24 @@ public final class DefaultAsyncClient implements AsyncClient {
             return this.handler.execute(params);
         } catch (Exception e) {
             CompletableFuture<ExecuteSqlStatementResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
+     * @param request the request parameters of FetchSqlPreviewResults  FetchSqlPreviewResultsRequest
+     * @return FetchSqlPreviewResultsResponse
+     */
+    @Override
+    public CompletableFuture<FetchSqlPreviewResultsResponse> fetchSqlPreviewResults(FetchSqlPreviewResultsRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RESTFUL).setAction("FetchSqlPreviewResults").setMethod(HttpMethod.GET).setPathRegex("/api/v2/namespaces/{namespace}/sql-preview/fetchResults").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(FetchSqlPreviewResultsResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<FetchSqlPreviewResultsResponse> future = new CompletableFuture<>();
             future.completeExceptionally(e);
             return future;
         }
@@ -1301,6 +1355,24 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
+     * @param request the request parameters of SubmitSqlPreview  SubmitSqlPreviewRequest
+     * @return SubmitSqlPreviewResponse
+     */
+    @Override
+    public CompletableFuture<SubmitSqlPreviewResponse> submitSqlPreview(SubmitSqlPreviewRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RESTFUL).setAction("SubmitSqlPreview").setMethod(HttpMethod.POST).setPathRegex("/api/v2/namespaces/{namespace}/sql-preview/submit").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(SubmitSqlPreviewResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<SubmitSqlPreviewResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
      * @param request the request parameters of UpdateDeployment  UpdateDeploymentRequest
      * @return UpdateDeploymentResponse
      */
@@ -1349,6 +1421,24 @@ public final class DefaultAsyncClient implements AsyncClient {
             return this.handler.execute(params);
         } catch (Exception e) {
             CompletableFuture<UpdateDeploymentTargetResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
+     * @param request the request parameters of UpdateDeploymentTargetV2  UpdateDeploymentTargetV2Request
+     * @return UpdateDeploymentTargetV2Response
+     */
+    @Override
+    public CompletableFuture<UpdateDeploymentTargetV2Response> updateDeploymentTargetV2(UpdateDeploymentTargetV2Request request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RESTFUL).setAction("UpdateDeploymentTargetV2").setMethod(HttpMethod.PUT).setPathRegex("/api/v2/namespaces/{namespace}/deployment-targets/support-elastic/{deploymentTargetName}").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(UpdateDeploymentTargetV2Response.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<UpdateDeploymentTargetV2Response> future = new CompletableFuture<>();
             future.completeExceptionally(e);
             return future;
         }

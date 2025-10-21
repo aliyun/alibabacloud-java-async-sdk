@@ -52,6 +52,10 @@ public class JobDiagnosisSymptoms extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return autopilot
      */
@@ -101,6 +105,18 @@ public class JobDiagnosisSymptoms extends TeaModel {
         private java.util.List<JobDiagnosisSymptom> startup; 
         private java.util.List<JobDiagnosisSymptom> state; 
         private java.util.List<JobDiagnosisSymptom> troubleshooting; 
+
+        private Builder() {
+        } 
+
+        private Builder(JobDiagnosisSymptoms model) {
+            this.autopilot = model.autopilot;
+            this.others = model.others;
+            this.runtime = model.runtime;
+            this.startup = model.startup;
+            this.state = model.state;
+            this.troubleshooting = model.troubleshooting;
+        } 
 
         /**
          * autopilot.

@@ -36,6 +36,10 @@ public class SavepointStatus extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return failure
      */
@@ -53,6 +57,14 @@ public class SavepointStatus extends TeaModel {
     public static final class Builder {
         private SavepointFailure failure; 
         private String state; 
+
+        private Builder() {
+        } 
+
+        private Builder(SavepointStatus model) {
+            this.failure = model.failure;
+            this.state = model.state;
+        } 
 
         /**
          * failure.

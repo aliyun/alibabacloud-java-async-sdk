@@ -36,6 +36,10 @@ public class HotUpdateJobParams extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return rescaleJobParam
      */
@@ -53,6 +57,14 @@ public class HotUpdateJobParams extends TeaModel {
     public static final class Builder {
         private RescaleJobParam rescaleJobParam; 
         private UpdateJobConfigParam updateJobConfigParam; 
+
+        private Builder() {
+        } 
+
+        private Builder(HotUpdateJobParams model) {
+            this.rescaleJobParam = model.rescaleJobParam;
+            this.updateJobConfigParam = model.updateJobConfigParam;
+        } 
 
         /**
          * rescaleJobParam.

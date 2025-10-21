@@ -52,6 +52,10 @@ public class ErrorDetails extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return columnNumber
      */
@@ -101,6 +105,18 @@ public class ErrorDetails extends TeaModel {
         private java.util.List<String> invalidflinkConf; 
         private String lineNumber; 
         private String message; 
+
+        private Builder() {
+        } 
+
+        private Builder(ErrorDetails model) {
+            this.columnNumber = model.columnNumber;
+            this.endColumnNumber = model.endColumnNumber;
+            this.endLineNumber = model.endLineNumber;
+            this.invalidflinkConf = model.invalidflinkConf;
+            this.lineNumber = model.lineNumber;
+            this.message = model.message;
+        } 
 
         /**
          * columnNumber.

@@ -132,6 +132,10 @@ public class Job extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return artifact
      */
@@ -341,6 +345,38 @@ public class Job extends TeaModel {
         private StreamingResourceSetting streamingResourceSetting; 
         private java.util.Map<String, ?> userFlinkConf; 
         private String workspace; 
+
+        private Builder() {
+        } 
+
+        private Builder(Job model) {
+            this.artifact = model.artifact;
+            this.batchResourceSetting = model.batchResourceSetting;
+            this.createdAt = model.createdAt;
+            this.creator = model.creator;
+            this.creatorName = model.creatorName;
+            this.deploymentId = model.deploymentId;
+            this.deploymentName = model.deploymentName;
+            this.endTime = model.endTime;
+            this.engineVersion = model.engineVersion;
+            this.executionMode = model.executionMode;
+            this.flinkConf = model.flinkConf;
+            this.jobId = model.jobId;
+            this.localVariables = model.localVariables;
+            this.logging = model.logging;
+            this.metric = model.metric;
+            this.modifiedAt = model.modifiedAt;
+            this.modifier = model.modifier;
+            this.modifierName = model.modifierName;
+            this.namespace = model.namespace;
+            this.restoreStrategy = model.restoreStrategy;
+            this.sessionClusterName = model.sessionClusterName;
+            this.startTime = model.startTime;
+            this.status = model.status;
+            this.streamingResourceSetting = model.streamingResourceSetting;
+            this.userFlinkConf = model.userFlinkConf;
+            this.workspace = model.workspace;
+        } 
 
         /**
          * artifact.

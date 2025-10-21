@@ -36,6 +36,10 @@ public class BatchResourceSetting extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return basicResourceSetting
      */
@@ -53,6 +57,14 @@ public class BatchResourceSetting extends TeaModel {
     public static final class Builder {
         private BasicResourceSetting basicResourceSetting; 
         private Long maxSlot; 
+
+        private Builder() {
+        } 
+
+        private Builder(BatchResourceSetting model) {
+            this.basicResourceSetting = model.basicResourceSetting;
+            this.maxSlot = model.maxSlot;
+        } 
 
         /**
          * basicResourceSetting.

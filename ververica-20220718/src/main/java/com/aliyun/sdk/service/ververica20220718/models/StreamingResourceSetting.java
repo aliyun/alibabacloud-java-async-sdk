@@ -40,6 +40,10 @@ public class StreamingResourceSetting extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return basicResourceSetting
      */
@@ -65,6 +69,15 @@ public class StreamingResourceSetting extends TeaModel {
         private BasicResourceSetting basicResourceSetting; 
         private ExpertResourceSetting expertResourceSetting; 
         private String resourceSettingMode; 
+
+        private Builder() {
+        } 
+
+        private Builder(StreamingResourceSetting model) {
+            this.basicResourceSetting = model.basicResourceSetting;
+            this.expertResourceSetting = model.expertResourceSetting;
+            this.resourceSettingMode = model.resourceSettingMode;
+        } 
 
         /**
          * basicResourceSetting.

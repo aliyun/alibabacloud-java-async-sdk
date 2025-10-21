@@ -36,6 +36,10 @@ public class EngineVersionSupportedFeatures extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return supportNativeSavepoint
      */
@@ -53,6 +57,14 @@ public class EngineVersionSupportedFeatures extends TeaModel {
     public static final class Builder {
         private Boolean supportNativeSavepoint; 
         private Boolean useForSqlDeployments; 
+
+        private Builder() {
+        } 
+
+        private Builder(EngineVersionSupportedFeatures model) {
+            this.supportNativeSavepoint = model.supportNativeSavepoint;
+            this.useForSqlDeployments = model.useForSqlDeployments;
+        } 
 
         /**
          * supportNativeSavepoint.

@@ -23,9 +23,13 @@ public class WatermarkSpec extends TeaModel {
     @com.aliyun.core.annotation.NameInMap("watermarkExpression")
     private String watermarkExpression;
 
+    @com.aliyun.core.annotation.NameInMap("watermarkType")
+    private String watermarkType;
+
     private WatermarkSpec(Builder builder) {
         this.column = builder.column;
         this.watermarkExpression = builder.watermarkExpression;
+        this.watermarkType = builder.watermarkType;
     }
 
     public static Builder builder() {
@@ -34,6 +38,10 @@ public class WatermarkSpec extends TeaModel {
 
     public static WatermarkSpec create() {
         return builder().build();
+    }
+
+    public Builder toBuilder() {
+        return new Builder(this);
     }
 
     /**
@@ -50,9 +58,26 @@ public class WatermarkSpec extends TeaModel {
         return this.watermarkExpression;
     }
 
+    /**
+     * @return watermarkType
+     */
+    public String getWatermarkType() {
+        return this.watermarkType;
+    }
+
     public static final class Builder {
         private String column; 
         private String watermarkExpression; 
+        private String watermarkType; 
+
+        private Builder() {
+        } 
+
+        private Builder(WatermarkSpec model) {
+            this.column = model.column;
+            this.watermarkExpression = model.watermarkExpression;
+            this.watermarkType = model.watermarkType;
+        } 
 
         /**
          * column.
@@ -67,6 +92,14 @@ public class WatermarkSpec extends TeaModel {
          */
         public Builder watermarkExpression(String watermarkExpression) {
             this.watermarkExpression = watermarkExpression;
+            return this;
+        }
+
+        /**
+         * watermarkType.
+         */
+        public Builder watermarkType(String watermarkType) {
+            this.watermarkType = watermarkType;
             return this;
         }
 

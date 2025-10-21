@@ -40,6 +40,10 @@ public class DeploymentTarget extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return name
      */
@@ -65,6 +69,15 @@ public class DeploymentTarget extends TeaModel {
         private String name; 
         private String namespace; 
         private ResourceQuota quota; 
+
+        private Builder() {
+        } 
+
+        private Builder(DeploymentTarget model) {
+            this.name = model.name;
+            this.namespace = model.namespace;
+            this.quota = model.quota;
+        } 
 
         /**
          * name.

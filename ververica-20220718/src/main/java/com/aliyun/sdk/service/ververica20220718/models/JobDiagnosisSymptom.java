@@ -40,6 +40,10 @@ public class JobDiagnosisSymptom extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return description
      */
@@ -65,6 +69,15 @@ public class JobDiagnosisSymptom extends TeaModel {
         private String description; 
         private String name; 
         private String recommendation; 
+
+        private Builder() {
+        } 
+
+        private Builder(JobDiagnosisSymptom model) {
+            this.description = model.description;
+            this.name = model.name;
+            this.recommendation = model.recommendation;
+        } 
 
         /**
          * description.

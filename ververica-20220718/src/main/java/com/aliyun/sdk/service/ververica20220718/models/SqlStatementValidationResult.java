@@ -44,6 +44,10 @@ public class SqlStatementValidationResult extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return errorDetails
      */
@@ -77,6 +81,16 @@ public class SqlStatementValidationResult extends TeaModel {
         private String message; 
         private Boolean success; 
         private String validationResult; 
+
+        private Builder() {
+        } 
+
+        private Builder(SqlStatementValidationResult model) {
+            this.errorDetails = model.errorDetails;
+            this.message = model.message;
+            this.success = model.success;
+            this.validationResult = model.validationResult;
+        } 
 
         /**
          * errorDetails.

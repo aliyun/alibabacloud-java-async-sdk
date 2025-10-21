@@ -20,10 +20,14 @@ public class TableColumn extends TeaModel {
     @com.aliyun.core.annotation.NameInMap("expression")
     private String expression;
 
+    @com.aliyun.core.annotation.NameInMap("logicalType")
+    private String logicalType;
+
     @com.aliyun.core.annotation.NameInMap("metadataInfo")
     private MetadataInfo metadataInfo;
 
     @com.aliyun.core.annotation.NameInMap("name")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String name;
 
     @com.aliyun.core.annotation.NameInMap("nullable")
@@ -34,6 +38,7 @@ public class TableColumn extends TeaModel {
 
     private TableColumn(Builder builder) {
         this.expression = builder.expression;
+        this.logicalType = builder.logicalType;
         this.metadataInfo = builder.metadataInfo;
         this.name = builder.name;
         this.nullable = builder.nullable;
@@ -48,11 +53,22 @@ public class TableColumn extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return expression
      */
     public String getExpression() {
         return this.expression;
+    }
+
+    /**
+     * @return logicalType
+     */
+    public String getLogicalType() {
+        return this.logicalType;
     }
 
     /**
@@ -85,16 +101,37 @@ public class TableColumn extends TeaModel {
 
     public static final class Builder {
         private String expression; 
+        private String logicalType; 
         private MetadataInfo metadataInfo; 
         private String name; 
         private Boolean nullable; 
         private String type; 
+
+        private Builder() {
+        } 
+
+        private Builder(TableColumn model) {
+            this.expression = model.expression;
+            this.logicalType = model.logicalType;
+            this.metadataInfo = model.metadataInfo;
+            this.name = model.name;
+            this.nullable = model.nullable;
+            this.type = model.type;
+        } 
 
         /**
          * expression.
          */
         public Builder expression(String expression) {
             this.expression = expression;
+            return this;
+        }
+
+        /**
+         * logicalType.
+         */
+        public Builder logicalType(String logicalType) {
+            this.logicalType = logicalType;
             return this;
         }
 
@@ -107,7 +144,7 @@ public class TableColumn extends TeaModel {
         }
 
         /**
-         * name.
+         * <p>This parameter is required.</p>
          */
         public Builder name(String name) {
             this.name = name;

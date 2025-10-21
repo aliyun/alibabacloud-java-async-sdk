@@ -40,6 +40,10 @@ public class SubFolder extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return folderId
      */
@@ -65,6 +69,15 @@ public class SubFolder extends TeaModel {
         private String folderId; 
         private String name; 
         private String parentId; 
+
+        private Builder() {
+        } 
+
+        private Builder(SubFolder model) {
+            this.folderId = model.folderId;
+            this.name = model.name;
+            this.parentId = model.parentId;
+        } 
 
         /**
          * folderId.

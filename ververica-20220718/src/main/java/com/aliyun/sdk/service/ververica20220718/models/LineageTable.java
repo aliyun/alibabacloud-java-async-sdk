@@ -48,6 +48,10 @@ public class LineageTable extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return columns
      */
@@ -89,6 +93,17 @@ public class LineageTable extends TeaModel {
         private java.util.Map<String, ?> properties; 
         private String tableName; 
         private java.util.Map<String, ?> with; 
+
+        private Builder() {
+        } 
+
+        private Builder(LineageTable model) {
+            this.columns = model.columns;
+            this.id = model.id;
+            this.properties = model.properties;
+            this.tableName = model.tableName;
+            this.with = model.with;
+        } 
 
         /**
          * columns.

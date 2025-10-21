@@ -44,6 +44,10 @@ public class JarArtifact extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return additionalDependencies
      */
@@ -77,6 +81,16 @@ public class JarArtifact extends TeaModel {
         private String entryClass; 
         private String jarUri; 
         private String mainArgs; 
+
+        private Builder() {
+        } 
+
+        private Builder(JarArtifact model) {
+            this.additionalDependencies = model.additionalDependencies;
+            this.entryClass = model.entryClass;
+            this.jarUri = model.jarUri;
+            this.mainArgs = model.mainArgs;
+        } 
 
         /**
          * additionalDependencies.

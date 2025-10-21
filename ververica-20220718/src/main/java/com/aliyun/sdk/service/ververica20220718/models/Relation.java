@@ -40,6 +40,10 @@ public class Relation extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return destination
      */
@@ -65,6 +69,15 @@ public class Relation extends TeaModel {
         private String destination; 
         private String jobId; 
         private String source; 
+
+        private Builder() {
+        } 
+
+        private Builder(Relation model) {
+            this.destination = model.destination;
+            this.jobId = model.jobId;
+            this.source = model.source;
+        } 
 
         /**
          * destination.

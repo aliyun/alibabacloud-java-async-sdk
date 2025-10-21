@@ -76,6 +76,10 @@ public class Savepoint extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return createdAt
      */
@@ -173,6 +177,24 @@ public class Savepoint extends TeaModel {
         private String savepointOrigin; 
         private SavepointStatus status; 
         private Boolean stopWithDrainEnabled; 
+
+        private Builder() {
+        } 
+
+        private Builder(Savepoint model) {
+            this.createdAt = model.createdAt;
+            this.deploymentId = model.deploymentId;
+            this.description = model.description;
+            this.jobId = model.jobId;
+            this.modifiedAt = model.modifiedAt;
+            this.namespace = model.namespace;
+            this.nativeFormat = model.nativeFormat;
+            this.savepointId = model.savepointId;
+            this.savepointLocation = model.savepointLocation;
+            this.savepointOrigin = model.savepointOrigin;
+            this.status = model.status;
+            this.stopWithDrainEnabled = model.stopWithDrainEnabled;
+        } 
 
         /**
          * createdAt.

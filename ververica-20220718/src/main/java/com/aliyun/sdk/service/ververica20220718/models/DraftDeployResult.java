@@ -44,6 +44,10 @@ public class DraftDeployResult extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return artifactValidationDetail
      */
@@ -77,6 +81,16 @@ public class DraftDeployResult extends TeaModel {
         private String deploymentId; 
         private String message; 
         private Boolean success; 
+
+        private Builder() {
+        } 
+
+        private Builder(DraftDeployResult model) {
+            this.artifactValidationDetail = model.artifactValidationDetail;
+            this.deploymentId = model.deploymentId;
+            this.message = model.message;
+            this.success = model.success;
+        } 
 
         /**
          * artifactValidationDetail.

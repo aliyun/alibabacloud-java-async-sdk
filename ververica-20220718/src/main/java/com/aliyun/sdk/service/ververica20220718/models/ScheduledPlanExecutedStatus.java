@@ -36,6 +36,10 @@ public class ScheduledPlanExecutedStatus extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return restartType
      */
@@ -53,6 +57,14 @@ public class ScheduledPlanExecutedStatus extends TeaModel {
     public static final class Builder {
         private String restartType; 
         private String statusState; 
+
+        private Builder() {
+        } 
+
+        private Builder(ScheduledPlanExecutedStatus model) {
+            this.restartType = model.restartType;
+            this.statusState = model.statusState;
+        } 
 
         /**
          * restartType.

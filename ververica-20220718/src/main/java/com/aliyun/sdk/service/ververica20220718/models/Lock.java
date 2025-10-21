@@ -48,6 +48,10 @@ public class Lock extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return holderId
      */
@@ -89,6 +93,17 @@ public class Lock extends TeaModel {
         private String id; 
         private String namespace; 
         private String workspace; 
+
+        private Builder() {
+        } 
+
+        private Builder(Lock model) {
+            this.holderId = model.holderId;
+            this.holderName = model.holderName;
+            this.id = model.id;
+            this.namespace = model.namespace;
+            this.workspace = model.workspace;
+        } 
 
         /**
          * holderId.

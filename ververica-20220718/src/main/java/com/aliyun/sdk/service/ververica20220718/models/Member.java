@@ -37,6 +37,10 @@ public class Member extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return member
      */
@@ -54,6 +58,14 @@ public class Member extends TeaModel {
     public static final class Builder {
         private String member; 
         private String role; 
+
+        private Builder() {
+        } 
+
+        private Builder(Member model) {
+            this.member = model.member;
+            this.role = model.role;
+        } 
 
         /**
          * <p>This parameter is required.</p>

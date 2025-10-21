@@ -44,6 +44,10 @@ public class CreateUdfArtifactResult extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return collidingClasses
      */
@@ -77,6 +81,16 @@ public class CreateUdfArtifactResult extends TeaModel {
         private Boolean createSuccess; 
         private String message; 
         private UdfArtifact udfArtifact; 
+
+        private Builder() {
+        } 
+
+        private Builder(CreateUdfArtifactResult model) {
+            this.collidingClasses = model.collidingClasses;
+            this.createSuccess = model.createSuccess;
+            this.message = model.message;
+            this.udfArtifact = model.udfArtifact;
+        } 
 
         /**
          * collidingClasses.

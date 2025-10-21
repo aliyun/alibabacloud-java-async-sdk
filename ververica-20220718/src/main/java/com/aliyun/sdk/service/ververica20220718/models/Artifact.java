@@ -44,6 +44,10 @@ public class Artifact extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return jarArtifact
      */
@@ -77,6 +81,16 @@ public class Artifact extends TeaModel {
         private String kind; 
         private PythonArtifact pythonArtifact; 
         private SqlArtifact sqlArtifact; 
+
+        private Builder() {
+        } 
+
+        private Builder(Artifact model) {
+            this.jarArtifact = model.jarArtifact;
+            this.kind = model.kind;
+            this.pythonArtifact = model.pythonArtifact;
+            this.sqlArtifact = model.sqlArtifact;
+        } 
 
         /**
          * jarArtifact.

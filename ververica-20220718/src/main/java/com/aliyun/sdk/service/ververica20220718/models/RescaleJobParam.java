@@ -32,6 +32,10 @@ public class RescaleJobParam extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return jobParallelism
      */
@@ -41,6 +45,13 @@ public class RescaleJobParam extends TeaModel {
 
     public static final class Builder {
         private Long jobParallelism; 
+
+        private Builder() {
+        } 
+
+        private Builder(RescaleJobParam model) {
+            this.jobParallelism = model.jobParallelism;
+        } 
 
         /**
          * jobParallelism.

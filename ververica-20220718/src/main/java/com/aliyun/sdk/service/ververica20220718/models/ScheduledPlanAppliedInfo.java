@@ -68,6 +68,10 @@ public class ScheduledPlanAppliedInfo extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return deploymentId
      */
@@ -149,6 +153,22 @@ public class ScheduledPlanAppliedInfo extends TeaModel {
         private String scheduledPlanName; 
         private String statusState; 
         private String workspace; 
+
+        private Builder() {
+        } 
+
+        private Builder(ScheduledPlanAppliedInfo model) {
+            this.deploymentId = model.deploymentId;
+            this.expectedState = model.expectedState;
+            this.modifiedAt = model.modifiedAt;
+            this.modifier = model.modifier;
+            this.modifierName = model.modifierName;
+            this.namespace = model.namespace;
+            this.scheduledPlanId = model.scheduledPlanId;
+            this.scheduledPlanName = model.scheduledPlanName;
+            this.statusState = model.statusState;
+            this.workspace = model.workspace;
+        } 
 
         /**
          * deploymentId.

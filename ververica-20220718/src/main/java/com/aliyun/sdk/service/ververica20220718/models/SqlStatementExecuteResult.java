@@ -40,6 +40,10 @@ public class SqlStatementExecuteResult extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return errorDetails
      */
@@ -65,6 +69,15 @@ public class SqlStatementExecuteResult extends TeaModel {
         private ErrorDetails errorDetails; 
         private Boolean executeSuccess; 
         private String statement; 
+
+        private Builder() {
+        } 
+
+        private Builder(SqlStatementExecuteResult model) {
+            this.errorDetails = model.errorDetails;
+            this.executeSuccess = model.executeSuccess;
+            this.statement = model.statement;
+        } 
 
         /**
          * errorDetails.

@@ -17,13 +17,19 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>Catalog</p>
  */
 public class Catalog extends TeaModel {
+    @com.aliyun.core.annotation.NameInMap("extensionConf")
+    private java.util.Map<String, String> extensionConf;
+
     @com.aliyun.core.annotation.NameInMap("name")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String name;
 
     @com.aliyun.core.annotation.NameInMap("properties")
+    @com.aliyun.core.annotation.Validation(required = true)
     private java.util.Map<String, ?> properties;
 
     private Catalog(Builder builder) {
+        this.extensionConf = builder.extensionConf;
         this.name = builder.name;
         this.properties = builder.properties;
     }
@@ -34,6 +40,17 @@ public class Catalog extends TeaModel {
 
     public static Catalog create() {
         return builder().build();
+    }
+
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
+    /**
+     * @return extensionConf
+     */
+    public java.util.Map<String, String> getExtensionConf() {
+        return this.extensionConf;
     }
 
     /**
@@ -51,11 +68,29 @@ public class Catalog extends TeaModel {
     }
 
     public static final class Builder {
+        private java.util.Map<String, String> extensionConf; 
         private String name; 
         private java.util.Map<String, ?> properties; 
 
+        private Builder() {
+        } 
+
+        private Builder(Catalog model) {
+            this.extensionConf = model.extensionConf;
+            this.name = model.name;
+            this.properties = model.properties;
+        } 
+
         /**
-         * name.
+         * extensionConf.
+         */
+        public Builder extensionConf(java.util.Map<String, String> extensionConf) {
+            this.extensionConf = extensionConf;
+            return this;
+        }
+
+        /**
+         * <p>This parameter is required.</p>
          */
         public Builder name(String name) {
             this.name = name;
@@ -63,7 +98,7 @@ public class Catalog extends TeaModel {
         }
 
         /**
-         * properties.
+         * <p>This parameter is required.</p>
          */
         public Builder properties(java.util.Map<String, ?> properties) {
             this.properties = properties;

@@ -60,6 +60,10 @@ public class GetLineageInfoParams extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return depth
      */
@@ -125,6 +129,20 @@ public class GetLineageInfoParams extends TeaModel {
         private Boolean isTemporary; 
         private String namespace; 
         private String workspace; 
+
+        private Builder() {
+        } 
+
+        private Builder(GetLineageInfoParams model) {
+            this.depth = model.depth;
+            this.direction = model.direction;
+            this.id = model.id;
+            this.idType = model.idType;
+            this.isColumnLevel = model.isColumnLevel;
+            this.isTemporary = model.isTemporary;
+            this.namespace = model.namespace;
+            this.workspace = model.workspace;
+        } 
 
         /**
          * depth.
