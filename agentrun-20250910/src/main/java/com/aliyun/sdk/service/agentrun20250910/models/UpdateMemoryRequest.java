@@ -22,21 +22,29 @@ public class UpdateMemoryRequest extends Request {
     @com.aliyun.core.annotation.Validation(required = true)
     private String memoryName;
 
-    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.Body
     @com.aliyun.core.annotation.NameInMap("longTtl")
-    @com.aliyun.core.annotation.Validation(required = true)
     private Integer longTtl;
 
-    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("permanent")
+    private Boolean permanent;
+
+    @com.aliyun.core.annotation.Body
     @com.aliyun.core.annotation.NameInMap("shortTtl")
-    @com.aliyun.core.annotation.Validation(required = true)
     private Integer shortTtl;
+
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("strategy")
+    private java.util.List<String> strategy;
 
     private UpdateMemoryRequest(Builder builder) {
         super(builder);
         this.memoryName = builder.memoryName;
         this.longTtl = builder.longTtl;
+        this.permanent = builder.permanent;
         this.shortTtl = builder.shortTtl;
+        this.strategy = builder.strategy;
     }
 
     public static Builder builder() {
@@ -67,16 +75,32 @@ public class UpdateMemoryRequest extends Request {
     }
 
     /**
+     * @return permanent
+     */
+    public Boolean getPermanent() {
+        return this.permanent;
+    }
+
+    /**
      * @return shortTtl
      */
     public Integer getShortTtl() {
         return this.shortTtl;
     }
 
+    /**
+     * @return strategy
+     */
+    public java.util.List<String> getStrategy() {
+        return this.strategy;
+    }
+
     public static final class Builder extends Request.Builder<UpdateMemoryRequest, Builder> {
         private String memoryName; 
         private Integer longTtl; 
+        private Boolean permanent; 
         private Integer shortTtl; 
+        private java.util.List<String> strategy; 
 
         private Builder() {
             super();
@@ -86,7 +110,9 @@ public class UpdateMemoryRequest extends Request {
             super(request);
             this.memoryName = request.memoryName;
             this.longTtl = request.longTtl;
+            this.permanent = request.permanent;
             this.shortTtl = request.shortTtl;
+            this.strategy = request.strategy;
         } 
 
         /**
@@ -102,26 +128,38 @@ public class UpdateMemoryRequest extends Request {
         }
 
         /**
-         * <p>This parameter is required.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>365</p>
+         * longTtl.
          */
         public Builder longTtl(Integer longTtl) {
-            this.putQueryParameter("longTtl", longTtl);
+            this.putBodyParameter("longTtl", longTtl);
             this.longTtl = longTtl;
             return this;
         }
 
         /**
-         * <p>This parameter is required.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>30</p>
+         * permanent.
+         */
+        public Builder permanent(Boolean permanent) {
+            this.putBodyParameter("permanent", permanent);
+            this.permanent = permanent;
+            return this;
+        }
+
+        /**
+         * shortTtl.
          */
         public Builder shortTtl(Integer shortTtl) {
-            this.putQueryParameter("shortTtl", shortTtl);
+            this.putBodyParameter("shortTtl", shortTtl);
             this.shortTtl = shortTtl;
+            return this;
+        }
+
+        /**
+         * strategy.
+         */
+        public Builder strategy(java.util.List<String> strategy) {
+            this.putBodyParameter("strategy", strategy);
+            this.strategy = strategy;
             return this;
         }
 

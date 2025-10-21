@@ -119,6 +119,9 @@ public class GetMemoryResponseBody extends TeaModel {
      * <p>GetMemoryResponseBody</p>
      */
     public static class Data extends TeaModel {
+        @com.aliyun.core.annotation.NameInMap("cmsWorkspaceName")
+        private String cmsWorkspaceName;
+
         @com.aliyun.core.annotation.NameInMap("createTime")
         private Integer createTime;
 
@@ -128,14 +131,23 @@ public class GetMemoryResponseBody extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("name")
         private String name;
 
+        @com.aliyun.core.annotation.NameInMap("permanent")
+        private Boolean permanent;
+
         @com.aliyun.core.annotation.NameInMap("shortTtl")
         private Integer shortTtl;
 
+        @com.aliyun.core.annotation.NameInMap("strategy")
+        private java.util.List<String> strategy;
+
         private Data(Builder builder) {
+            this.cmsWorkspaceName = builder.cmsWorkspaceName;
             this.createTime = builder.createTime;
             this.longTtl = builder.longTtl;
             this.name = builder.name;
+            this.permanent = builder.permanent;
             this.shortTtl = builder.shortTtl;
+            this.strategy = builder.strategy;
         }
 
         public static Builder builder() {
@@ -144,6 +156,13 @@ public class GetMemoryResponseBody extends TeaModel {
 
         public static Data create() {
             return builder().build();
+        }
+
+        /**
+         * @return cmsWorkspaceName
+         */
+        public String getCmsWorkspaceName() {
+            return this.cmsWorkspaceName;
         }
 
         /**
@@ -168,27 +187,55 @@ public class GetMemoryResponseBody extends TeaModel {
         }
 
         /**
+         * @return permanent
+         */
+        public Boolean getPermanent() {
+            return this.permanent;
+        }
+
+        /**
          * @return shortTtl
          */
         public Integer getShortTtl() {
             return this.shortTtl;
         }
 
+        /**
+         * @return strategy
+         */
+        public java.util.List<String> getStrategy() {
+            return this.strategy;
+        }
+
         public static final class Builder {
+            private String cmsWorkspaceName; 
             private Integer createTime; 
             private Integer longTtl; 
             private String name; 
+            private Boolean permanent; 
             private Integer shortTtl; 
+            private java.util.List<String> strategy; 
 
             private Builder() {
             } 
 
             private Builder(Data model) {
+                this.cmsWorkspaceName = model.cmsWorkspaceName;
                 this.createTime = model.createTime;
                 this.longTtl = model.longTtl;
                 this.name = model.name;
+                this.permanent = model.permanent;
                 this.shortTtl = model.shortTtl;
+                this.strategy = model.strategy;
             } 
+
+            /**
+             * cmsWorkspaceName.
+             */
+            public Builder cmsWorkspaceName(String cmsWorkspaceName) {
+                this.cmsWorkspaceName = cmsWorkspaceName;
+                return this;
+            }
 
             /**
              * createTime.
@@ -215,10 +262,26 @@ public class GetMemoryResponseBody extends TeaModel {
             }
 
             /**
+             * permanent.
+             */
+            public Builder permanent(Boolean permanent) {
+                this.permanent = permanent;
+                return this;
+            }
+
+            /**
              * shortTtl.
              */
             public Builder shortTtl(Integer shortTtl) {
                 this.shortTtl = shortTtl;
+                return this;
+            }
+
+            /**
+             * strategy.
+             */
+            public Builder strategy(java.util.List<String> strategy) {
+                this.strategy = strategy;
                 return this;
             }
 

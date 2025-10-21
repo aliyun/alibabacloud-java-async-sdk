@@ -28,15 +28,25 @@ public class CreateMemoryRequest extends Request {
     private String name;
 
     @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("permanent")
+    private Boolean permanent;
+
+    @com.aliyun.core.annotation.Body
     @com.aliyun.core.annotation.NameInMap("shortTtl")
     @com.aliyun.core.annotation.Validation(required = true)
     private Integer shortTtl;
+
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("strategy")
+    private java.util.List<String> strategy;
 
     private CreateMemoryRequest(Builder builder) {
         super(builder);
         this.longTtl = builder.longTtl;
         this.name = builder.name;
+        this.permanent = builder.permanent;
         this.shortTtl = builder.shortTtl;
+        this.strategy = builder.strategy;
     }
 
     public static Builder builder() {
@@ -67,16 +77,32 @@ public class CreateMemoryRequest extends Request {
     }
 
     /**
+     * @return permanent
+     */
+    public Boolean getPermanent() {
+        return this.permanent;
+    }
+
+    /**
      * @return shortTtl
      */
     public Integer getShortTtl() {
         return this.shortTtl;
     }
 
+    /**
+     * @return strategy
+     */
+    public java.util.List<String> getStrategy() {
+        return this.strategy;
+    }
+
     public static final class Builder extends Request.Builder<CreateMemoryRequest, Builder> {
         private Integer longTtl; 
         private String name; 
+        private Boolean permanent; 
         private Integer shortTtl; 
+        private java.util.List<String> strategy; 
 
         private Builder() {
             super();
@@ -86,7 +112,9 @@ public class CreateMemoryRequest extends Request {
             super(request);
             this.longTtl = request.longTtl;
             this.name = request.name;
+            this.permanent = request.permanent;
             this.shortTtl = request.shortTtl;
+            this.strategy = request.strategy;
         } 
 
         /**
@@ -114,6 +142,15 @@ public class CreateMemoryRequest extends Request {
         }
 
         /**
+         * permanent.
+         */
+        public Builder permanent(Boolean permanent) {
+            this.putBodyParameter("permanent", permanent);
+            this.permanent = permanent;
+            return this;
+        }
+
+        /**
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -122,6 +159,15 @@ public class CreateMemoryRequest extends Request {
         public Builder shortTtl(Integer shortTtl) {
             this.putBodyParameter("shortTtl", shortTtl);
             this.shortTtl = shortTtl;
+            return this;
+        }
+
+        /**
+         * strategy.
+         */
+        public Builder strategy(java.util.List<String> strategy) {
+            this.putBodyParameter("strategy", strategy);
+            this.strategy = strategy;
             return this;
         }
 

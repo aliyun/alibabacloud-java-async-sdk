@@ -20,11 +20,15 @@ public class UpdateMemoryResponseBody extends TeaModel {
     @com.aliyun.core.annotation.NameInMap("code")
     private String code;
 
+    @com.aliyun.core.annotation.NameInMap("data")
+    private Data data;
+
     @com.aliyun.core.annotation.NameInMap("requestId")
     private String requestId;
 
     private UpdateMemoryResponseBody(Builder builder) {
         this.code = builder.code;
+        this.data = builder.data;
         this.requestId = builder.requestId;
     }
 
@@ -48,6 +52,13 @@ public class UpdateMemoryResponseBody extends TeaModel {
     }
 
     /**
+     * @return data
+     */
+    public Data getData() {
+        return this.data;
+    }
+
+    /**
      * @return requestId
      */
     public String getRequestId() {
@@ -56,6 +67,7 @@ public class UpdateMemoryResponseBody extends TeaModel {
 
     public static final class Builder {
         private String code; 
+        private Data data; 
         private String requestId; 
 
         private Builder() {
@@ -63,6 +75,7 @@ public class UpdateMemoryResponseBody extends TeaModel {
 
         private Builder(UpdateMemoryResponseBody model) {
             this.code = model.code;
+            this.data = model.data;
             this.requestId = model.requestId;
         } 
 
@@ -71,6 +84,14 @@ public class UpdateMemoryResponseBody extends TeaModel {
          */
         public Builder code(String code) {
             this.code = code;
+            return this;
+        }
+
+        /**
+         * data.
+         */
+        public Builder data(Data data) {
+            this.data = data;
             return this;
         }
 
@@ -91,4 +112,58 @@ public class UpdateMemoryResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link UpdateMemoryResponseBody} extends {@link TeaModel}
+     *
+     * <p>UpdateMemoryResponseBody</p>
+     */
+    public static class Data extends TeaModel {
+        @com.aliyun.core.annotation.NameInMap("cmsWorkspaceName")
+        private String cmsWorkspaceName;
+
+        private Data(Builder builder) {
+            this.cmsWorkspaceName = builder.cmsWorkspaceName;
+        }
+
+        public static Builder builder() {
+            return new Builder();
+        }
+
+        public static Data create() {
+            return builder().build();
+        }
+
+        /**
+         * @return cmsWorkspaceName
+         */
+        public String getCmsWorkspaceName() {
+            return this.cmsWorkspaceName;
+        }
+
+        public static final class Builder {
+            private String cmsWorkspaceName; 
+
+            private Builder() {
+            } 
+
+            private Builder(Data model) {
+                this.cmsWorkspaceName = model.cmsWorkspaceName;
+            } 
+
+            /**
+             * cmsWorkspaceName.
+             */
+            public Builder cmsWorkspaceName(String cmsWorkspaceName) {
+                this.cmsWorkspaceName = cmsWorkspaceName;
+                return this;
+            }
+
+            public Data build() {
+                return new Data(this);
+            } 
+
+        } 
+
+    }
 }
