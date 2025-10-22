@@ -434,8 +434,35 @@ public class QueryConversationDetailInfoResponseBody extends TeaModel {
      * <p>QueryConversationDetailInfoResponseBody</p>
      */
     public static class Data extends TeaModel {
+        @com.aliyun.core.annotation.NameInMap("CallId")
+        private String callId;
+
+        @com.aliyun.core.annotation.NameInMap("CallResult")
+        private String callResult;
+
+        @com.aliyun.core.annotation.NameInMap("CalledPhone")
+        private String calledPhone;
+
+        @com.aliyun.core.annotation.NameInMap("CallerPhone")
+        private String callerPhone;
+
         @com.aliyun.core.annotation.NameInMap("ConversationRecord")
         private String conversationRecord;
+
+        @com.aliyun.core.annotation.NameInMap("Duration")
+        private Long duration;
+
+        @com.aliyun.core.annotation.NameInMap("FailedReason")
+        private String failedReason;
+
+        @com.aliyun.core.annotation.NameInMap("HangupDirection")
+        private String hangupDirection;
+
+        @com.aliyun.core.annotation.NameInMap("MajorIntent")
+        private String majorIntent;
+
+        @com.aliyun.core.annotation.NameInMap("OutId")
+        private String outId;
 
         @com.aliyun.core.annotation.NameInMap("OutputTags")
         private java.util.List<OutputTags> outputTags;
@@ -446,14 +473,39 @@ public class QueryConversationDetailInfoResponseBody extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("RecordingFileDownloadUrl")
         private String recordingFileDownloadUrl;
 
+        @com.aliyun.core.annotation.NameInMap("ReleaseTime")
+        private Long releaseTime;
+
+        @com.aliyun.core.annotation.NameInMap("StartCallTime")
+        private Long startCallTime;
+
+        @com.aliyun.core.annotation.NameInMap("StatusCode")
+        private String statusCode;
+
+        @com.aliyun.core.annotation.NameInMap("StatusMsg")
+        private String statusMsg;
+
         @com.aliyun.core.annotation.NameInMap("Variables")
         private java.util.List<Variables> variables;
 
         private Data(Builder builder) {
+            this.callId = builder.callId;
+            this.callResult = builder.callResult;
+            this.calledPhone = builder.calledPhone;
+            this.callerPhone = builder.callerPhone;
             this.conversationRecord = builder.conversationRecord;
+            this.duration = builder.duration;
+            this.failedReason = builder.failedReason;
+            this.hangupDirection = builder.hangupDirection;
+            this.majorIntent = builder.majorIntent;
+            this.outId = builder.outId;
             this.outputTags = builder.outputTags;
             this.pickUpTime = builder.pickUpTime;
             this.recordingFileDownloadUrl = builder.recordingFileDownloadUrl;
+            this.releaseTime = builder.releaseTime;
+            this.startCallTime = builder.startCallTime;
+            this.statusCode = builder.statusCode;
+            this.statusMsg = builder.statusMsg;
             this.variables = builder.variables;
         }
 
@@ -466,10 +518,73 @@ public class QueryConversationDetailInfoResponseBody extends TeaModel {
         }
 
         /**
+         * @return callId
+         */
+        public String getCallId() {
+            return this.callId;
+        }
+
+        /**
+         * @return callResult
+         */
+        public String getCallResult() {
+            return this.callResult;
+        }
+
+        /**
+         * @return calledPhone
+         */
+        public String getCalledPhone() {
+            return this.calledPhone;
+        }
+
+        /**
+         * @return callerPhone
+         */
+        public String getCallerPhone() {
+            return this.callerPhone;
+        }
+
+        /**
          * @return conversationRecord
          */
         public String getConversationRecord() {
             return this.conversationRecord;
+        }
+
+        /**
+         * @return duration
+         */
+        public Long getDuration() {
+            return this.duration;
+        }
+
+        /**
+         * @return failedReason
+         */
+        public String getFailedReason() {
+            return this.failedReason;
+        }
+
+        /**
+         * @return hangupDirection
+         */
+        public String getHangupDirection() {
+            return this.hangupDirection;
+        }
+
+        /**
+         * @return majorIntent
+         */
+        public String getMajorIntent() {
+            return this.majorIntent;
+        }
+
+        /**
+         * @return outId
+         */
+        public String getOutId() {
+            return this.outId;
         }
 
         /**
@@ -494,6 +609,34 @@ public class QueryConversationDetailInfoResponseBody extends TeaModel {
         }
 
         /**
+         * @return releaseTime
+         */
+        public Long getReleaseTime() {
+            return this.releaseTime;
+        }
+
+        /**
+         * @return startCallTime
+         */
+        public Long getStartCallTime() {
+            return this.startCallTime;
+        }
+
+        /**
+         * @return statusCode
+         */
+        public String getStatusCode() {
+            return this.statusCode;
+        }
+
+        /**
+         * @return statusMsg
+         */
+        public String getStatusMsg() {
+            return this.statusMsg;
+        }
+
+        /**
          * @return variables
          */
         public java.util.List<Variables> getVariables() {
@@ -501,28 +644,126 @@ public class QueryConversationDetailInfoResponseBody extends TeaModel {
         }
 
         public static final class Builder {
+            private String callId; 
+            private String callResult; 
+            private String calledPhone; 
+            private String callerPhone; 
             private String conversationRecord; 
+            private Long duration; 
+            private String failedReason; 
+            private String hangupDirection; 
+            private String majorIntent; 
+            private String outId; 
             private java.util.List<OutputTags> outputTags; 
             private Long pickUpTime; 
             private String recordingFileDownloadUrl; 
+            private Long releaseTime; 
+            private Long startCallTime; 
+            private String statusCode; 
+            private String statusMsg; 
             private java.util.List<Variables> variables; 
 
             private Builder() {
             } 
 
             private Builder(Data model) {
+                this.callId = model.callId;
+                this.callResult = model.callResult;
+                this.calledPhone = model.calledPhone;
+                this.callerPhone = model.callerPhone;
                 this.conversationRecord = model.conversationRecord;
+                this.duration = model.duration;
+                this.failedReason = model.failedReason;
+                this.hangupDirection = model.hangupDirection;
+                this.majorIntent = model.majorIntent;
+                this.outId = model.outId;
                 this.outputTags = model.outputTags;
                 this.pickUpTime = model.pickUpTime;
                 this.recordingFileDownloadUrl = model.recordingFileDownloadUrl;
+                this.releaseTime = model.releaseTime;
+                this.startCallTime = model.startCallTime;
+                this.statusCode = model.statusCode;
+                this.statusMsg = model.statusMsg;
                 this.variables = model.variables;
             } 
+
+            /**
+             * CallId.
+             */
+            public Builder callId(String callId) {
+                this.callId = callId;
+                return this;
+            }
+
+            /**
+             * CallResult.
+             */
+            public Builder callResult(String callResult) {
+                this.callResult = callResult;
+                return this;
+            }
+
+            /**
+             * CalledPhone.
+             */
+            public Builder calledPhone(String calledPhone) {
+                this.calledPhone = calledPhone;
+                return this;
+            }
+
+            /**
+             * CallerPhone.
+             */
+            public Builder callerPhone(String callerPhone) {
+                this.callerPhone = callerPhone;
+                return this;
+            }
 
             /**
              * ConversationRecord.
              */
             public Builder conversationRecord(String conversationRecord) {
                 this.conversationRecord = conversationRecord;
+                return this;
+            }
+
+            /**
+             * Duration.
+             */
+            public Builder duration(Long duration) {
+                this.duration = duration;
+                return this;
+            }
+
+            /**
+             * FailedReason.
+             */
+            public Builder failedReason(String failedReason) {
+                this.failedReason = failedReason;
+                return this;
+            }
+
+            /**
+             * HangupDirection.
+             */
+            public Builder hangupDirection(String hangupDirection) {
+                this.hangupDirection = hangupDirection;
+                return this;
+            }
+
+            /**
+             * MajorIntent.
+             */
+            public Builder majorIntent(String majorIntent) {
+                this.majorIntent = majorIntent;
+                return this;
+            }
+
+            /**
+             * OutId.
+             */
+            public Builder outId(String outId) {
+                this.outId = outId;
                 return this;
             }
 
@@ -547,6 +788,38 @@ public class QueryConversationDetailInfoResponseBody extends TeaModel {
              */
             public Builder recordingFileDownloadUrl(String recordingFileDownloadUrl) {
                 this.recordingFileDownloadUrl = recordingFileDownloadUrl;
+                return this;
+            }
+
+            /**
+             * ReleaseTime.
+             */
+            public Builder releaseTime(Long releaseTime) {
+                this.releaseTime = releaseTime;
+                return this;
+            }
+
+            /**
+             * StartCallTime.
+             */
+            public Builder startCallTime(Long startCallTime) {
+                this.startCallTime = startCallTime;
+                return this;
+            }
+
+            /**
+             * StatusCode.
+             */
+            public Builder statusCode(String statusCode) {
+                this.statusCode = statusCode;
+                return this;
+            }
+
+            /**
+             * StatusMsg.
+             */
+            public Builder statusMsg(String statusMsg) {
+                this.statusMsg = statusMsg;
                 return this;
             }
 

@@ -50,6 +50,10 @@ public class QueryAiCallDetailPageRequest extends Request {
     private Long minConversationDuration;
 
     @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("OutId")
+    private String outId;
+
+    @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("OwnerId")
     private Long ownerId;
 
@@ -97,6 +101,7 @@ public class QueryAiCallDetailPageRequest extends Request {
         this.majorIntent = builder.majorIntent;
         this.maxConversationDuration = builder.maxConversationDuration;
         this.minConversationDuration = builder.minConversationDuration;
+        this.outId = builder.outId;
         this.ownerId = builder.ownerId;
         this.pageNo = builder.pageNo;
         this.pageSize = builder.pageSize;
@@ -178,6 +183,13 @@ public class QueryAiCallDetailPageRequest extends Request {
     }
 
     /**
+     * @return outId
+     */
+    public String getOutId() {
+        return this.outId;
+    }
+
+    /**
      * @return ownerId
      */
     public Long getOwnerId() {
@@ -249,6 +261,7 @@ public class QueryAiCallDetailPageRequest extends Request {
         private String majorIntent; 
         private Long maxConversationDuration; 
         private Long minConversationDuration; 
+        private String outId; 
         private Long ownerId; 
         private Long pageNo; 
         private Long pageSize; 
@@ -273,6 +286,7 @@ public class QueryAiCallDetailPageRequest extends Request {
             this.majorIntent = request.majorIntent;
             this.maxConversationDuration = request.maxConversationDuration;
             this.minConversationDuration = request.minConversationDuration;
+            this.outId = request.outId;
             this.ownerId = request.ownerId;
             this.pageNo = request.pageNo;
             this.pageSize = request.pageSize;
@@ -353,6 +367,15 @@ public class QueryAiCallDetailPageRequest extends Request {
         public Builder minConversationDuration(Long minConversationDuration) {
             this.putQueryParameter("MinConversationDuration", minConversationDuration);
             this.minConversationDuration = minConversationDuration;
+            return this;
+        }
+
+        /**
+         * OutId.
+         */
+        public Builder outId(String outId) {
+            this.putQueryParameter("OutId", outId);
+            this.outId = outId;
             return this;
         }
 

@@ -218,6 +218,9 @@ public class QueryAiCallDetailPageResponseBody extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("RecordingFilePath")
         private String recordingFilePath;
 
+        @com.aliyun.core.annotation.NameInMap("Status")
+        private Long status;
+
         @com.aliyun.core.annotation.NameInMap("TaskId")
         private String taskId;
 
@@ -235,6 +238,7 @@ public class QueryAiCallDetailPageResponseBody extends TeaModel {
             this.majorIntent = builder.majorIntent;
             this.options = builder.options;
             this.recordingFilePath = builder.recordingFilePath;
+            this.status = builder.status;
             this.taskId = builder.taskId;
         }
 
@@ -338,6 +342,13 @@ public class QueryAiCallDetailPageResponseBody extends TeaModel {
         }
 
         /**
+         * @return status
+         */
+        public Long getStatus() {
+            return this.status;
+        }
+
+        /**
          * @return taskId
          */
         public String getTaskId() {
@@ -358,6 +369,7 @@ public class QueryAiCallDetailPageResponseBody extends TeaModel {
             private String majorIntent; 
             private String options; 
             private String recordingFilePath; 
+            private Long status; 
             private String taskId; 
 
             private Builder() {
@@ -377,6 +389,7 @@ public class QueryAiCallDetailPageResponseBody extends TeaModel {
                 this.majorIntent = model.majorIntent;
                 this.options = model.options;
                 this.recordingFilePath = model.recordingFilePath;
+                this.status = model.status;
                 this.taskId = model.taskId;
             } 
 
@@ -481,6 +494,14 @@ public class QueryAiCallDetailPageResponseBody extends TeaModel {
              */
             public Builder recordingFilePath(String recordingFilePath) {
                 this.recordingFilePath = recordingFilePath;
+                return this;
+            }
+
+            /**
+             * Status.
+             */
+            public Builder status(Long status) {
+                this.status = status;
                 return this;
             }
 
