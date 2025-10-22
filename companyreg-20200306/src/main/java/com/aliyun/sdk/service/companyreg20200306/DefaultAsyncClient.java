@@ -367,6 +367,24 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
+     * @param request the request parameters of OperateCallCenterForPartner  OperateCallCenterForPartnerRequest
+     * @return OperateCallCenterForPartnerResponse
+     */
+    @Override
+    public CompletableFuture<OperateCallCenterForPartnerResponse> operateCallCenterForPartner(OperateCallCenterForPartnerRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RPC).setAction("OperateCallCenterForPartner").setMethod(HttpMethod.POST).setPathRegex("/").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(OperateCallCenterForPartnerResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<OperateCallCenterForPartnerResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
      * @param request the request parameters of OperateProduceForPartner  OperateProduceForPartnerRequest
      * @return OperateProduceForPartnerResponse
      */
@@ -541,6 +559,24 @@ public final class DefaultAsyncClient implements AsyncClient {
             return this.handler.execute(params);
         } catch (Exception e) {
             CompletableFuture<QueryUserNeedAuthResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
+     * @param request the request parameters of RecordCallCenterEventForPartner  RecordCallCenterEventForPartnerRequest
+     * @return RecordCallCenterEventForPartnerResponse
+     */
+    @Override
+    public CompletableFuture<RecordCallCenterEventForPartnerResponse> recordCallCenterEventForPartner(RecordCallCenterEventForPartnerRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RPC).setAction("RecordCallCenterEventForPartner").setMethod(HttpMethod.POST).setPathRegex("/").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(RecordCallCenterEventForPartnerResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<RecordCallCenterEventForPartnerResponse> future = new CompletableFuture<>();
             future.completeExceptionally(e);
             return future;
         }

@@ -110,6 +110,12 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<ListUserSolutionsResponse> listUserSolutions(ListUserSolutionsRequest request);
 
     /**
+     * @param request the request parameters of OperateCallCenterForPartner  OperateCallCenterForPartnerRequest
+     * @return OperateCallCenterForPartnerResponse
+     */
+    CompletableFuture<OperateCallCenterForPartnerResponse> operateCallCenterForPartner(OperateCallCenterForPartnerRequest request);
+
+    /**
      * @param request the request parameters of OperateProduceForPartner  OperateProduceForPartnerRequest
      * @return OperateProduceForPartnerResponse
      */
@@ -168,6 +174,12 @@ public interface AsyncClient extends SdkAutoCloseable {
      * @return QueryUserNeedAuthResponse
      */
     CompletableFuture<QueryUserNeedAuthResponse> queryUserNeedAuth(QueryUserNeedAuthRequest request);
+
+    /**
+     * @param request the request parameters of RecordCallCenterEventForPartner  RecordCallCenterEventForPartnerRequest
+     * @return RecordCallCenterEventForPartnerResponse
+     */
+    CompletableFuture<RecordCallCenterEventForPartnerResponse> recordCallCenterEventForPartner(RecordCallCenterEventForPartnerRequest request);
 
     /**
      * @param request the request parameters of RecordPostBack  RecordPostBackRequest
