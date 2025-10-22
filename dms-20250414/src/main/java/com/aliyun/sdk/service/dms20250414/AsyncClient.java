@@ -140,6 +140,12 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<GetDataLakeTableResponse> getDataLakeTable(GetDataLakeTableRequest request);
 
     /**
+     * @param request the request parameters of GetNotebookAndSubmitTask  GetNotebookAndSubmitTaskRequest
+     * @return GetNotebookAndSubmitTaskResponse
+     */
+    CompletableFuture<GetNotebookAndSubmitTaskResponse> getNotebookAndSubmitTask(GetNotebookAndSubmitTaskRequest request);
+
+    /**
      * @param request the request parameters of ListAirflows  ListAirflowsRequest
      * @return ListAirflowsResponse
      */
