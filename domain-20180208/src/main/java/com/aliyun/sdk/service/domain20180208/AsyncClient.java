@@ -32,6 +32,18 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<BatchIntrudeDomainsResponse> batchIntrudeDomains(BatchIntrudeDomainsRequest request);
 
     /**
+     * @param request the request parameters of BatchQueryPushStatus  BatchQueryPushStatusRequest
+     * @return BatchQueryPushStatusResponse
+     */
+    CompletableFuture<BatchQueryPushStatusResponse> batchQueryPushStatus(BatchQueryPushStatusRequest request);
+
+    /**
+     * @param request the request parameters of BatchRecallPush  BatchRecallPushRequest
+     * @return BatchRecallPushResponse
+     */
+    CompletableFuture<BatchRecallPushResponse> batchRecallPush(BatchRecallPushRequest request);
+
+    /**
      * @param request the request parameters of BidDomain  BidDomainRequest
      * @return BidDomainResponse
      */
@@ -48,6 +60,12 @@ public interface AsyncClient extends SdkAutoCloseable {
      * @return CheckDomainStatusResponse
      */
     CompletableFuture<CheckDomainStatusResponse> checkDomainStatus(CheckDomainStatusRequest request);
+
+    /**
+     * @param request the request parameters of CheckPushReceiver  CheckPushReceiverRequest
+     * @return CheckPushReceiverResponse
+     */
+    CompletableFuture<CheckPushReceiverResponse> checkPushReceiver(CheckPushReceiverRequest request);
 
     /**
      * @param request the request parameters of CheckSelectedDomainStatus  CheckSelectedDomainStatusRequest
@@ -96,6 +114,12 @@ public interface AsyncClient extends SdkAutoCloseable {
      * @return PurchaseIntlDomainResponse
      */
     CompletableFuture<PurchaseIntlDomainResponse> purchaseIntlDomain(PurchaseIntlDomainRequest request);
+
+    /**
+     * @param request the request parameters of PushDomains  PushDomainsRequest
+     * @return PushDomainsResponse
+     */
+    CompletableFuture<PushDomainsResponse> pushDomains(PushDomainsRequest request);
 
     /**
      * @param request the request parameters of QueryAuctionDetail  QueryAuctionDetailRequest
