@@ -84,6 +84,12 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<DeleteFolderResponse> deleteFolder(DeleteFolderRequest request);
 
     /**
+     * @param request the request parameters of DetailDocument  DetailDocumentRequest
+     * @return DetailDocumentResponse
+     */
+    CompletableFuture<DetailDocumentResponse> detailDocument(DetailDocumentRequest request);
+
+    /**
      * @param request the request parameters of EditProhibitedDevices  EditProhibitedDevicesRequest
      * @return EditProhibitedDevicesResponse
      */
