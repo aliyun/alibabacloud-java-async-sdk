@@ -20,6 +20,12 @@ public interface AsyncClient extends SdkAutoCloseable {
     }
 
     /**
+     * @param request the request parameters of ActiveInteractionCreate  ActiveInteractionCreateRequest
+     * @return ActiveInteractionCreateResponse
+     */
+    CompletableFuture<ActiveInteractionCreateResponse> activeInteractionCreate(ActiveInteractionCreateRequest request);
+
+    /**
      * @param request the request parameters of DeviceRegister  DeviceRegisterRequest
      * @return DeviceRegisterResponse
      */

@@ -40,6 +40,24 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
+     * @param request the request parameters of ActiveInteractionCreate  ActiveInteractionCreateRequest
+     * @return ActiveInteractionCreateResponse
+     */
+    @Override
+    public CompletableFuture<ActiveInteractionCreateResponse> activeInteractionCreate(ActiveInteractionCreateRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RESTFUL).setAction("ActiveInteractionCreate").setMethod(HttpMethod.POST).setPathRegex("/open/api/v1/active/interaction/create").setBodyType(BodyType.JSON).setBodyIsForm(true).setReqBodyType(BodyType.FORM).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(ActiveInteractionCreateResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<ActiveInteractionCreateResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
      * @param request the request parameters of DeviceRegister  DeviceRegisterRequest
      * @return DeviceRegisterResponse
      */
