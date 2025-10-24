@@ -123,6 +123,7 @@ public class DescribeDefenseRulesResponseBody extends TeaModel {
      */
     public static class Rules extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("ActionExternal")
+        @Deprecated
         private String actionExternal;
 
         @com.aliyun.core.annotation.NameInMap("Config")
@@ -138,12 +139,15 @@ public class DescribeDefenseRulesResponseBody extends TeaModel {
         private String defenseType;
 
         @com.aliyun.core.annotation.NameInMap("Description")
+        @Deprecated
         private String description;
 
         @com.aliyun.core.annotation.NameInMap("DetailRuleIds")
+        @Deprecated
         private String detailRuleIds;
 
         @com.aliyun.core.annotation.NameInMap("ExternalInfo")
+        @Deprecated
         private String externalInfo;
 
         @com.aliyun.core.annotation.NameInMap("GmtCreate")
@@ -162,6 +166,7 @@ public class DescribeDefenseRulesResponseBody extends TeaModel {
         private String ruleName;
 
         @com.aliyun.core.annotation.NameInMap("RuleType")
+        @Deprecated
         private String ruleType;
 
         @com.aliyun.core.annotation.NameInMap("Status")

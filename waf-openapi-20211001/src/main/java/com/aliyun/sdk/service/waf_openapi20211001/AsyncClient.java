@@ -113,10 +113,22 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<CreateMajorProtectionBlackIpResponse> createMajorProtectionBlackIp(CreateMajorProtectionBlackIpRequest request);
 
     /**
+     * @param request the request parameters of CreateMajorProtectionBlackIpV2  CreateMajorProtectionBlackIpV2Request
+     * @return CreateMajorProtectionBlackIpV2Response
+     */
+    CompletableFuture<CreateMajorProtectionBlackIpV2Response> createMajorProtectionBlackIpV2(CreateMajorProtectionBlackIpV2Request request);
+
+    /**
      * @param request the request parameters of CreateMemberAccounts  CreateMemberAccountsRequest
      * @return CreateMemberAccountsResponse
      */
     CompletableFuture<CreateMemberAccountsResponse> createMemberAccounts(CreateMemberAccountsRequest request);
+
+    /**
+     * @param request the request parameters of CreatePocFunction  CreatePocFunctionRequest
+     * @return CreatePocFunctionResponse
+     */
+    CompletableFuture<CreatePocFunctionResponse> createPocFunction(CreatePocFunctionRequest request);
 
     /**
      * @param request the request parameters of CreatePostpaidInstance  CreatePostpaidInstanceRequest
@@ -339,6 +351,18 @@ public interface AsyncClient extends SdkAutoCloseable {
      * @return DescribeCertsResponse
      */
     CompletableFuture<DescribeCertsResponse> describeCerts(DescribeCertsRequest request);
+
+    /**
+     * @param request the request parameters of DescribeChargeModule  DescribeChargeModuleRequest
+     * @return DescribeChargeModuleResponse
+     */
+    CompletableFuture<DescribeChargeModuleResponse> describeChargeModule(DescribeChargeModuleRequest request);
+
+    /**
+     * @param request the request parameters of DescribeChargeResult  DescribeChargeResultRequest
+     * @return DescribeChargeResultResponse
+     */
+    CompletableFuture<DescribeChargeResultResponse> describeChargeResult(DescribeChargeResultRequest request);
 
     /**
      * @param request the request parameters of DescribeCloudResourceAccessPortDetails  DescribeCloudResourceAccessPortDetailsRequest
@@ -695,6 +719,12 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<DescribePeakTrendResponse> describePeakTrend(DescribePeakTrendRequest request);
 
     /**
+     * @param request the request parameters of DescribePocFunctions  DescribePocFunctionsRequest
+     * @return DescribePocFunctionsResponse
+     */
+    CompletableFuture<DescribePocFunctionsResponse> describePocFunctions(DescribePocFunctionsRequest request);
+
+    /**
      * @param request the request parameters of DescribeProductInstances  DescribeProductInstancesRequest
      * @return DescribeProductInstancesResponse
      */
@@ -957,6 +987,12 @@ public interface AsyncClient extends SdkAutoCloseable {
      * @return DescribeUserWafLogStatusResponse
      */
     CompletableFuture<DescribeUserWafLogStatusResponse> describeUserWafLogStatus(DescribeUserWafLogStatusRequest request);
+
+    /**
+     * @param request the request parameters of DescribeVerifyContent  DescribeVerifyContentRequest
+     * @return DescribeVerifyContentResponse
+     */
+    CompletableFuture<DescribeVerifyContentResponse> describeVerifyContent(DescribeVerifyContentRequest request);
 
     /**
      * @param request the request parameters of DescribeVisitTopIp  DescribeVisitTopIpRequest
@@ -1230,5 +1266,11 @@ public interface AsyncClient extends SdkAutoCloseable {
      * @return UntagResourcesResponse
      */
     CompletableFuture<UntagResourcesResponse> untagResources(UntagResourcesRequest request);
+
+    /**
+     * @param request the request parameters of VerifyDomainOwner  VerifyDomainOwnerRequest
+     * @return VerifyDomainOwnerResponse
+     */
+    CompletableFuture<VerifyDomainOwnerResponse> verifyDomainOwner(VerifyDomainOwnerRequest request);
 
 }
