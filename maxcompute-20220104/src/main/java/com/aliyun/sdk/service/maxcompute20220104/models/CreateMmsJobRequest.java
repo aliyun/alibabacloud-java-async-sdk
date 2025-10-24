@@ -36,6 +36,14 @@ public class CreateMmsJobRequest extends Request {
     private String dstSchemaName;
 
     @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("enableDataMigration")
+    private Boolean enableDataMigration;
+
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("enableSchemaMigration")
+    private Boolean enableSchemaMigration;
+
+    @com.aliyun.core.annotation.Body
     @com.aliyun.core.annotation.NameInMap("enableVerification")
     private Boolean enableVerification;
 
@@ -105,6 +113,8 @@ public class CreateMmsJobRequest extends Request {
         this.columnMapping = builder.columnMapping;
         this.dstDbName = builder.dstDbName;
         this.dstSchemaName = builder.dstSchemaName;
+        this.enableDataMigration = builder.enableDataMigration;
+        this.enableSchemaMigration = builder.enableSchemaMigration;
         this.enableVerification = builder.enableVerification;
         this.eta = builder.eta;
         this.increment = builder.increment;
@@ -162,6 +172,20 @@ public class CreateMmsJobRequest extends Request {
      */
     public String getDstSchemaName() {
         return this.dstSchemaName;
+    }
+
+    /**
+     * @return enableDataMigration
+     */
+    public Boolean getEnableDataMigration() {
+        return this.enableDataMigration;
+    }
+
+    /**
+     * @return enableSchemaMigration
+     */
+    public Boolean getEnableSchemaMigration() {
+        return this.enableSchemaMigration;
     }
 
     /**
@@ -281,6 +305,8 @@ public class CreateMmsJobRequest extends Request {
         private java.util.Map<String, String> columnMapping; 
         private String dstDbName; 
         private String dstSchemaName; 
+        private Boolean enableDataMigration; 
+        private Boolean enableSchemaMigration; 
         private Boolean enableVerification; 
         private String eta; 
         private Boolean increment; 
@@ -308,6 +334,8 @@ public class CreateMmsJobRequest extends Request {
             this.columnMapping = request.columnMapping;
             this.dstDbName = request.dstDbName;
             this.dstSchemaName = request.dstSchemaName;
+            this.enableDataMigration = request.enableDataMigration;
+            this.enableSchemaMigration = request.enableSchemaMigration;
             this.enableVerification = request.enableVerification;
             this.eta = request.eta;
             this.increment = request.increment;
@@ -360,6 +388,24 @@ public class CreateMmsJobRequest extends Request {
         public Builder dstSchemaName(String dstSchemaName) {
             this.putBodyParameter("dstSchemaName", dstSchemaName);
             this.dstSchemaName = dstSchemaName;
+            return this;
+        }
+
+        /**
+         * enableDataMigration.
+         */
+        public Builder enableDataMigration(Boolean enableDataMigration) {
+            this.putBodyParameter("enableDataMigration", enableDataMigration);
+            this.enableDataMigration = enableDataMigration;
+            return this;
+        }
+
+        /**
+         * enableSchemaMigration.
+         */
+        public Builder enableSchemaMigration(Boolean enableSchemaMigration) {
+            this.putBodyParameter("enableSchemaMigration", enableSchemaMigration);
+            this.enableSchemaMigration = enableSchemaMigration;
             return this;
         }
 

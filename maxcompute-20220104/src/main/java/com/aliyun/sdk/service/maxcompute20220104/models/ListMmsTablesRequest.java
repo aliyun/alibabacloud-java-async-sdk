@@ -35,6 +35,18 @@ public class ListMmsTablesRequest extends Request {
     private String dbName;
 
     @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("dstName")
+    private String dstName;
+
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("dstProjectName")
+    private String dstProjectName;
+
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("dstSchemaName")
+    private String dstSchemaName;
+
+    @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("hasPartitions")
     private Boolean hasPartitions;
 
@@ -76,6 +88,9 @@ public class ListMmsTablesRequest extends Request {
         this.sourceId = builder.sourceId;
         this.dbId = builder.dbId;
         this.dbName = builder.dbName;
+        this.dstName = builder.dstName;
+        this.dstProjectName = builder.dstProjectName;
+        this.dstSchemaName = builder.dstSchemaName;
         this.hasPartitions = builder.hasPartitions;
         this.lastDdlTimeEnd = builder.lastDdlTimeEnd;
         this.lastDdlTimeStart = builder.lastDdlTimeStart;
@@ -126,6 +141,27 @@ public class ListMmsTablesRequest extends Request {
      */
     public String getDbName() {
         return this.dbName;
+    }
+
+    /**
+     * @return dstName
+     */
+    public String getDstName() {
+        return this.dstName;
+    }
+
+    /**
+     * @return dstProjectName
+     */
+    public String getDstProjectName() {
+        return this.dstProjectName;
+    }
+
+    /**
+     * @return dstSchemaName
+     */
+    public String getDstSchemaName() {
+        return this.dstSchemaName;
     }
 
     /**
@@ -196,6 +232,9 @@ public class ListMmsTablesRequest extends Request {
         private Long sourceId; 
         private Long dbId; 
         private String dbName; 
+        private String dstName; 
+        private String dstProjectName; 
+        private String dstSchemaName; 
         private Boolean hasPartitions; 
         private String lastDdlTimeEnd; 
         private String lastDdlTimeStart; 
@@ -216,6 +255,9 @@ public class ListMmsTablesRequest extends Request {
             this.sourceId = request.sourceId;
             this.dbId = request.dbId;
             this.dbName = request.dbName;
+            this.dstName = request.dstName;
+            this.dstProjectName = request.dstProjectName;
+            this.dstSchemaName = request.dstSchemaName;
             this.hasPartitions = request.hasPartitions;
             this.lastDdlTimeEnd = request.lastDdlTimeEnd;
             this.lastDdlTimeStart = request.lastDdlTimeStart;
@@ -263,6 +305,33 @@ public class ListMmsTablesRequest extends Request {
         public Builder dbName(String dbName) {
             this.putQueryParameter("dbName", dbName);
             this.dbName = dbName;
+            return this;
+        }
+
+        /**
+         * dstName.
+         */
+        public Builder dstName(String dstName) {
+            this.putQueryParameter("dstName", dstName);
+            this.dstName = dstName;
+            return this;
+        }
+
+        /**
+         * dstProjectName.
+         */
+        public Builder dstProjectName(String dstProjectName) {
+            this.putQueryParameter("dstProjectName", dstProjectName);
+            this.dstProjectName = dstProjectName;
+            return this;
+        }
+
+        /**
+         * dstSchemaName.
+         */
+        public Builder dstSchemaName(String dstSchemaName) {
+            this.putQueryParameter("dstSchemaName", dstSchemaName);
+            this.dstSchemaName = dstSchemaName;
             return this;
         }
 

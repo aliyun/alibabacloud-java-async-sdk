@@ -55,6 +55,10 @@ public class ListMmsPartitionsRequest extends Request {
     private java.util.List<String> status;
 
     @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("tableId")
+    private Long tableId;
+
+    @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("tableName")
     private String tableName;
 
@@ -77,6 +81,7 @@ public class ListMmsPartitionsRequest extends Request {
         this.pageNum = builder.pageNum;
         this.pageSize = builder.pageSize;
         this.status = builder.status;
+        this.tableId = builder.tableId;
         this.tableName = builder.tableName;
         this.updated = builder.updated;
         this.value = builder.value;
@@ -159,6 +164,13 @@ public class ListMmsPartitionsRequest extends Request {
     }
 
     /**
+     * @return tableId
+     */
+    public Long getTableId() {
+        return this.tableId;
+    }
+
+    /**
      * @return tableName
      */
     public String getTableName() {
@@ -189,6 +201,7 @@ public class ListMmsPartitionsRequest extends Request {
         private Integer pageNum; 
         private Integer pageSize; 
         private java.util.List<String> status; 
+        private Long tableId; 
         private String tableName; 
         private Boolean updated; 
         private String value; 
@@ -208,6 +221,7 @@ public class ListMmsPartitionsRequest extends Request {
             this.pageNum = request.pageNum;
             this.pageSize = request.pageSize;
             this.status = request.status;
+            this.tableId = request.tableId;
             this.tableName = request.tableName;
             this.updated = request.updated;
             this.value = request.value;
@@ -295,6 +309,15 @@ public class ListMmsPartitionsRequest extends Request {
             String statusShrink = shrink(status, "status", "json");
             this.putQueryParameter("status", statusShrink);
             this.status = status;
+            return this;
+        }
+
+        /**
+         * tableId.
+         */
+        public Builder tableId(Long tableId) {
+            this.putQueryParameter("tableId", tableId);
+            this.tableId = tableId;
             return this;
         }
 

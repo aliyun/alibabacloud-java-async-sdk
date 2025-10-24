@@ -95,11 +95,23 @@ public class ListMmsPartitionsResponseBody extends TeaModel {
      * <p>ListMmsPartitionsResponseBody</p>
      */
     public static class ObjectList extends TeaModel {
-        @com.aliyun.core.annotation.NameInMap("DbId")
+        @com.aliyun.core.annotation.NameInMap("dbId")
         private Long dbId;
 
         @com.aliyun.core.annotation.NameInMap("dbName")
         private String dbName;
+
+        @com.aliyun.core.annotation.NameInMap("dstProjectName")
+        private String dstProjectName;
+
+        @com.aliyun.core.annotation.NameInMap("dstSchemaName")
+        private String dstSchemaName;
+
+        @com.aliyun.core.annotation.NameInMap("dstTableName")
+        private String dstTableName;
+
+        @com.aliyun.core.annotation.NameInMap("dstValue")
+        private String dstValue;
 
         @com.aliyun.core.annotation.NameInMap("id")
         private Long id;
@@ -137,6 +149,10 @@ public class ListMmsPartitionsResponseBody extends TeaModel {
         private ObjectList(Builder builder) {
             this.dbId = builder.dbId;
             this.dbName = builder.dbName;
+            this.dstProjectName = builder.dstProjectName;
+            this.dstSchemaName = builder.dstSchemaName;
+            this.dstTableName = builder.dstTableName;
+            this.dstValue = builder.dstValue;
             this.id = builder.id;
             this.lastDdlTime = builder.lastDdlTime;
             this.numRows = builder.numRows;
@@ -170,6 +186,34 @@ public class ListMmsPartitionsResponseBody extends TeaModel {
          */
         public String getDbName() {
             return this.dbName;
+        }
+
+        /**
+         * @return dstProjectName
+         */
+        public String getDstProjectName() {
+            return this.dstProjectName;
+        }
+
+        /**
+         * @return dstSchemaName
+         */
+        public String getDstSchemaName() {
+            return this.dstSchemaName;
+        }
+
+        /**
+         * @return dstTableName
+         */
+        public String getDstTableName() {
+            return this.dstTableName;
+        }
+
+        /**
+         * @return dstValue
+         */
+        public String getDstValue() {
+            return this.dstValue;
         }
 
         /**
@@ -252,6 +296,10 @@ public class ListMmsPartitionsResponseBody extends TeaModel {
         public static final class Builder {
             private Long dbId; 
             private String dbName; 
+            private String dstProjectName; 
+            private String dstSchemaName; 
+            private String dstTableName; 
+            private String dstValue; 
             private Long id; 
             private String lastDdlTime; 
             private Long numRows; 
@@ -270,6 +318,10 @@ public class ListMmsPartitionsResponseBody extends TeaModel {
             private Builder(ObjectList model) {
                 this.dbId = model.dbId;
                 this.dbName = model.dbName;
+                this.dstProjectName = model.dstProjectName;
+                this.dstSchemaName = model.dstSchemaName;
+                this.dstTableName = model.dstTableName;
+                this.dstValue = model.dstValue;
                 this.id = model.id;
                 this.lastDdlTime = model.lastDdlTime;
                 this.numRows = model.numRows;
@@ -284,7 +336,7 @@ public class ListMmsPartitionsResponseBody extends TeaModel {
             } 
 
             /**
-             * DbId.
+             * dbId.
              */
             public Builder dbId(Long dbId) {
                 this.dbId = dbId;
@@ -296,6 +348,38 @@ public class ListMmsPartitionsResponseBody extends TeaModel {
              */
             public Builder dbName(String dbName) {
                 this.dbName = dbName;
+                return this;
+            }
+
+            /**
+             * dstProjectName.
+             */
+            public Builder dstProjectName(String dstProjectName) {
+                this.dstProjectName = dstProjectName;
+                return this;
+            }
+
+            /**
+             * dstSchemaName.
+             */
+            public Builder dstSchemaName(String dstSchemaName) {
+                this.dstSchemaName = dstSchemaName;
+                return this;
+            }
+
+            /**
+             * dstTableName.
+             */
+            public Builder dstTableName(String dstTableName) {
+                this.dstTableName = dstTableName;
+                return this;
+            }
+
+            /**
+             * dstValue.
+             */
+            public Builder dstValue(String dstValue) {
+                this.dstValue = dstValue;
                 return this;
             }
 

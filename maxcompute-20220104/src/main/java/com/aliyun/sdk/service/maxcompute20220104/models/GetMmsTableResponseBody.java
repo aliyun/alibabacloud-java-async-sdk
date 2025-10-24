@@ -494,6 +494,15 @@ public class GetMmsTableResponseBody extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("dbName")
         private String dbName;
 
+        @com.aliyun.core.annotation.NameInMap("dstName")
+        private String dstName;
+
+        @com.aliyun.core.annotation.NameInMap("dstProjectName")
+        private String dstProjectName;
+
+        @com.aliyun.core.annotation.NameInMap("dstSchemaName")
+        private String dstSchemaName;
+
         @com.aliyun.core.annotation.NameInMap("extra")
         private String extra;
 
@@ -563,6 +572,9 @@ public class GetMmsTableResponseBody extends TeaModel {
         private Data(Builder builder) {
             this.dbId = builder.dbId;
             this.dbName = builder.dbName;
+            this.dstName = builder.dstName;
+            this.dstProjectName = builder.dstProjectName;
+            this.dstSchemaName = builder.dstSchemaName;
             this.extra = builder.extra;
             this.hasPartitions = builder.hasPartitions;
             this.id = builder.id;
@@ -607,6 +619,27 @@ public class GetMmsTableResponseBody extends TeaModel {
          */
         public String getDbName() {
             return this.dbName;
+        }
+
+        /**
+         * @return dstName
+         */
+        public String getDstName() {
+            return this.dstName;
+        }
+
+        /**
+         * @return dstProjectName
+         */
+        public String getDstProjectName() {
+            return this.dstProjectName;
+        }
+
+        /**
+         * @return dstSchemaName
+         */
+        public String getDstSchemaName() {
+            return this.dstSchemaName;
         }
 
         /**
@@ -766,6 +799,9 @@ public class GetMmsTableResponseBody extends TeaModel {
         public static final class Builder {
             private Long dbId; 
             private String dbName; 
+            private String dstName; 
+            private String dstProjectName; 
+            private String dstSchemaName; 
             private String extra; 
             private Boolean hasPartitions; 
             private Long id; 
@@ -795,6 +831,9 @@ public class GetMmsTableResponseBody extends TeaModel {
             private Builder(Data model) {
                 this.dbId = model.dbId;
                 this.dbName = model.dbName;
+                this.dstName = model.dstName;
+                this.dstProjectName = model.dstProjectName;
+                this.dstSchemaName = model.dstSchemaName;
                 this.extra = model.extra;
                 this.hasPartitions = model.hasPartitions;
                 this.id = model.id;
@@ -832,6 +871,30 @@ public class GetMmsTableResponseBody extends TeaModel {
              */
             public Builder dbName(String dbName) {
                 this.dbName = dbName;
+                return this;
+            }
+
+            /**
+             * dstName.
+             */
+            public Builder dstName(String dstName) {
+                this.dstName = dstName;
+                return this;
+            }
+
+            /**
+             * dstProjectName.
+             */
+            public Builder dstProjectName(String dstProjectName) {
+                this.dstProjectName = dstProjectName;
+                return this;
+            }
+
+            /**
+             * dstSchemaName.
+             */
+            public Builder dstSchemaName(String dstSchemaName) {
+                this.dstSchemaName = dstSchemaName;
                 return this;
             }
 

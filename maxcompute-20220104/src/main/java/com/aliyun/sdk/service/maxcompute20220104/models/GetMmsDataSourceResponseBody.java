@@ -350,6 +350,12 @@ public class GetMmsDataSourceResponseBody extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("dbNum")
         private Integer dbNum;
 
+        @com.aliyun.core.annotation.NameInMap("dstProject")
+        private String dstProject;
+
+        @com.aliyun.core.annotation.NameInMap("dstProjects")
+        private java.util.List<String> dstProjects;
+
         @com.aliyun.core.annotation.NameInMap("errMsg")
         private String errMsg;
 
@@ -409,6 +415,8 @@ public class GetMmsDataSourceResponseBody extends TeaModel {
             this.config = builder.config;
             this.createTime = builder.createTime;
             this.dbNum = builder.dbNum;
+            this.dstProject = builder.dstProject;
+            this.dstProjects = builder.dstProjects;
             this.errMsg = builder.errMsg;
             this.id = builder.id;
             this.lastUpdateTime = builder.lastUpdateTime;
@@ -463,6 +471,20 @@ public class GetMmsDataSourceResponseBody extends TeaModel {
          */
         public Integer getDbNum() {
             return this.dbNum;
+        }
+
+        /**
+         * @return dstProject
+         */
+        public String getDstProject() {
+            return this.dstProject;
+        }
+
+        /**
+         * @return dstProjects
+         */
+        public java.util.List<String> getDstProjects() {
+            return this.dstProjects;
         }
 
         /**
@@ -596,6 +618,8 @@ public class GetMmsDataSourceResponseBody extends TeaModel {
             private java.util.List<Config> config; 
             private String createTime; 
             private Integer dbNum; 
+            private String dstProject; 
+            private java.util.List<String> dstProjects; 
             private String errMsg; 
             private Long id; 
             private String lastUpdateTime; 
@@ -623,6 +647,8 @@ public class GetMmsDataSourceResponseBody extends TeaModel {
                 this.config = model.config;
                 this.createTime = model.createTime;
                 this.dbNum = model.dbNum;
+                this.dstProject = model.dstProject;
+                this.dstProjects = model.dstProjects;
                 this.errMsg = model.errMsg;
                 this.id = model.id;
                 this.lastUpdateTime = model.lastUpdateTime;
@@ -672,6 +698,22 @@ public class GetMmsDataSourceResponseBody extends TeaModel {
              */
             public Builder dbNum(Integer dbNum) {
                 this.dbNum = dbNum;
+                return this;
+            }
+
+            /**
+             * dstProject.
+             */
+            public Builder dstProject(String dstProject) {
+                this.dstProject = dstProject;
+                return this;
+            }
+
+            /**
+             * dstProjects.
+             */
+            public Builder dstProjects(java.util.List<String> dstProjects) {
+                this.dstProjects = dstProjects;
                 return this;
             }
 

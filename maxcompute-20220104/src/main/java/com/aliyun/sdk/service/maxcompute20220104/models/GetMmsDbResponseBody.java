@@ -98,6 +98,12 @@ public class GetMmsDbResponseBody extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("description")
         private String description;
 
+        @com.aliyun.core.annotation.NameInMap("dstName")
+        private String dstName;
+
+        @com.aliyun.core.annotation.NameInMap("dstProjectName")
+        private String dstProjectName;
+
         @com.aliyun.core.annotation.NameInMap("extra")
         private String extra;
 
@@ -163,6 +169,8 @@ public class GetMmsDbResponseBody extends TeaModel {
 
         private Data(Builder builder) {
             this.description = builder.description;
+            this.dstName = builder.dstName;
+            this.dstProjectName = builder.dstProjectName;
             this.extra = builder.extra;
             this.id = builder.id;
             this.lastDdlTime = builder.lastDdlTime;
@@ -199,6 +207,20 @@ public class GetMmsDbResponseBody extends TeaModel {
          */
         public String getDescription() {
             return this.description;
+        }
+
+        /**
+         * @return dstName
+         */
+        public String getDstName() {
+            return this.dstName;
+        }
+
+        /**
+         * @return dstProjectName
+         */
+        public String getDstProjectName() {
+            return this.dstProjectName;
         }
 
         /**
@@ -350,6 +372,8 @@ public class GetMmsDbResponseBody extends TeaModel {
 
         public static final class Builder {
             private String description; 
+            private String dstName; 
+            private String dstProjectName; 
             private String extra; 
             private Long id; 
             private String lastDdlTime; 
@@ -377,6 +401,8 @@ public class GetMmsDbResponseBody extends TeaModel {
 
             private Builder(Data model) {
                 this.description = model.description;
+                this.dstName = model.dstName;
+                this.dstProjectName = model.dstProjectName;
                 this.extra = model.extra;
                 this.id = model.id;
                 this.lastDdlTime = model.lastDdlTime;
@@ -405,6 +431,22 @@ public class GetMmsDbResponseBody extends TeaModel {
              */
             public Builder description(String description) {
                 this.description = description;
+                return this;
+            }
+
+            /**
+             * dstName.
+             */
+            public Builder dstName(String dstName) {
+                this.dstName = dstName;
+                return this;
+            }
+
+            /**
+             * dstProjectName.
+             */
+            public Builder dstProjectName(String dstProjectName) {
+                this.dstProjectName = dstProjectName;
                 return this;
             }
 

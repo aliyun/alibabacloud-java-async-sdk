@@ -448,6 +448,12 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<QueryQuotaResponse> queryQuota(QueryQuotaRequest request);
 
     /**
+     * @param request the request parameters of QueryQuotaMetric  QueryQuotaMetricRequest
+     * @return QueryQuotaMetricResponse
+     */
+    CompletableFuture<QueryQuotaMetricResponse> queryQuotaMetric(QueryQuotaMetricRequest request);
+
+    /**
      * @param request the request parameters of QueryStorageMetric  QueryStorageMetricRequest
      * @return QueryStorageMetricResponse
      */
