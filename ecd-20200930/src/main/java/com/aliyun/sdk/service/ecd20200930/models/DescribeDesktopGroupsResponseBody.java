@@ -342,6 +342,9 @@ public class DescribeDesktopGroupsResponseBody extends TeaModel {
      * <p>DescribeDesktopGroupsResponseBody</p>
      */
     public static class DesktopGroups extends TeaModel {
+        @com.aliyun.core.annotation.NameInMap("AccountType")
+        private String accountType;
+
         @com.aliyun.core.annotation.NameInMap("BindAmount")
         private Long bindAmount;
 
@@ -386,6 +389,9 @@ public class DescribeDesktopGroupsResponseBody extends TeaModel {
 
         @com.aliyun.core.annotation.NameInMap("EndUserCount")
         private Integer endUserCount;
+
+        @com.aliyun.core.annotation.NameInMap("EntraDomainName")
+        private String entraDomainName;
 
         @com.aliyun.core.annotation.NameInMap("ExpiredTime")
         private String expiredTime;
@@ -508,6 +514,7 @@ public class DescribeDesktopGroupsResponseBody extends TeaModel {
         private String volumeEncryptionKey;
 
         private DesktopGroups(Builder builder) {
+            this.accountType = builder.accountType;
             this.bindAmount = builder.bindAmount;
             this.buyDesktopsCount = builder.buyDesktopsCount;
             this.comments = builder.comments;
@@ -523,6 +530,7 @@ public class DescribeDesktopGroupsResponseBody extends TeaModel {
             this.desktopGroupName = builder.desktopGroupName;
             this.desktopType = builder.desktopType;
             this.endUserCount = builder.endUserCount;
+            this.entraDomainName = builder.entraDomainName;
             this.expiredTime = builder.expiredTime;
             this.expiredTimes = builder.expiredTimes;
             this.gpuCount = builder.gpuCount;
@@ -571,6 +579,13 @@ public class DescribeDesktopGroupsResponseBody extends TeaModel {
 
         public static DesktopGroups create() {
             return builder().build();
+        }
+
+        /**
+         * @return accountType
+         */
+        public String getAccountType() {
+            return this.accountType;
         }
 
         /**
@@ -676,6 +691,13 @@ public class DescribeDesktopGroupsResponseBody extends TeaModel {
          */
         public Integer getEndUserCount() {
             return this.endUserCount;
+        }
+
+        /**
+         * @return entraDomainName
+         */
+        public String getEntraDomainName() {
+            return this.entraDomainName;
         }
 
         /**
@@ -959,6 +981,7 @@ public class DescribeDesktopGroupsResponseBody extends TeaModel {
         }
 
         public static final class Builder {
+            private String accountType; 
             private Long bindAmount; 
             private Integer buyDesktopsCount; 
             private String comments; 
@@ -974,6 +997,7 @@ public class DescribeDesktopGroupsResponseBody extends TeaModel {
             private String desktopGroupName; 
             private String desktopType; 
             private Integer endUserCount; 
+            private String entraDomainName; 
             private String expiredTime; 
             private java.util.List<String> expiredTimes; 
             private Float gpuCount; 
@@ -1019,6 +1043,7 @@ public class DescribeDesktopGroupsResponseBody extends TeaModel {
             } 
 
             private Builder(DesktopGroups model) {
+                this.accountType = model.accountType;
                 this.bindAmount = model.bindAmount;
                 this.buyDesktopsCount = model.buyDesktopsCount;
                 this.comments = model.comments;
@@ -1034,6 +1059,7 @@ public class DescribeDesktopGroupsResponseBody extends TeaModel {
                 this.desktopGroupName = model.desktopGroupName;
                 this.desktopType = model.desktopType;
                 this.endUserCount = model.endUserCount;
+                this.entraDomainName = model.entraDomainName;
                 this.expiredTime = model.expiredTime;
                 this.expiredTimes = model.expiredTimes;
                 this.gpuCount = model.gpuCount;
@@ -1075,6 +1101,14 @@ public class DescribeDesktopGroupsResponseBody extends TeaModel {
                 this.volumeEncryptionEnabled = model.volumeEncryptionEnabled;
                 this.volumeEncryptionKey = model.volumeEncryptionKey;
             } 
+
+            /**
+             * AccountType.
+             */
+            public Builder accountType(String accountType) {
+                this.accountType = accountType;
+                return this;
+            }
 
             /**
              * <p>The number of concurrent sessions allowed for each cloud computer within the multi-session many-to-many share.</p>
@@ -1241,6 +1275,14 @@ public class DescribeDesktopGroupsResponseBody extends TeaModel {
              */
             public Builder endUserCount(Integer endUserCount) {
                 this.endUserCount = endUserCount;
+                return this;
+            }
+
+            /**
+             * EntraDomainName.
+             */
+            public Builder entraDomainName(String entraDomainName) {
+                this.entraDomainName = entraDomainName;
                 return this;
             }
 

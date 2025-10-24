@@ -18,6 +18,14 @@ import com.aliyun.sdk.gateway.pop.models.*;
  */
 public class CreateSimpleOfficeSiteRequest extends Request {
     @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("AccountType")
+    private String accountType;
+
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("AuthorityHost")
+    private String authorityHost;
+
+    @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("Bandwidth")
     private Integer bandwidth;
 
@@ -34,12 +42,24 @@ public class CreateSimpleOfficeSiteRequest extends Request {
     private String cidrBlock;
 
     @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ClientId")
+    private String clientId;
+
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ClientSecret")
+    private String clientSecret;
+
+    @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("CloudBoxOfficeSite")
     private Boolean cloudBoxOfficeSite;
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("DesktopAccessType")
     private String desktopAccessType;
+
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("DomainName")
+    private String domainName;
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("EnableAdminAccess")
@@ -63,6 +83,10 @@ public class CreateSimpleOfficeSiteRequest extends Request {
     private String regionId;
 
     @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("TenantId")
+    private String tenantId;
+
+    @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("VSwitchId")
     private java.util.List<String> vSwitchId;
 
@@ -76,17 +100,23 @@ public class CreateSimpleOfficeSiteRequest extends Request {
 
     private CreateSimpleOfficeSiteRequest(Builder builder) {
         super(builder);
+        this.accountType = builder.accountType;
+        this.authorityHost = builder.authorityHost;
         this.bandwidth = builder.bandwidth;
         this.cenId = builder.cenId;
         this.cenOwnerId = builder.cenOwnerId;
         this.cidrBlock = builder.cidrBlock;
+        this.clientId = builder.clientId;
+        this.clientSecret = builder.clientSecret;
         this.cloudBoxOfficeSite = builder.cloudBoxOfficeSite;
         this.desktopAccessType = builder.desktopAccessType;
+        this.domainName = builder.domainName;
         this.enableAdminAccess = builder.enableAdminAccess;
         this.enableInternetAccess = builder.enableInternetAccess;
         this.needVerifyZeroDevice = builder.needVerifyZeroDevice;
         this.officeSiteName = builder.officeSiteName;
         this.regionId = builder.regionId;
+        this.tenantId = builder.tenantId;
         this.vSwitchId = builder.vSwitchId;
         this.verifyCode = builder.verifyCode;
         this.vpcType = builder.vpcType;
@@ -103,6 +133,20 @@ public class CreateSimpleOfficeSiteRequest extends Request {
 @Override
     public Builder toBuilder() {
         return new Builder(this);
+    }
+
+    /**
+     * @return accountType
+     */
+    public String getAccountType() {
+        return this.accountType;
+    }
+
+    /**
+     * @return authorityHost
+     */
+    public String getAuthorityHost() {
+        return this.authorityHost;
     }
 
     /**
@@ -134,6 +178,20 @@ public class CreateSimpleOfficeSiteRequest extends Request {
     }
 
     /**
+     * @return clientId
+     */
+    public String getClientId() {
+        return this.clientId;
+    }
+
+    /**
+     * @return clientSecret
+     */
+    public String getClientSecret() {
+        return this.clientSecret;
+    }
+
+    /**
      * @return cloudBoxOfficeSite
      */
     public Boolean getCloudBoxOfficeSite() {
@@ -145,6 +203,13 @@ public class CreateSimpleOfficeSiteRequest extends Request {
      */
     public String getDesktopAccessType() {
         return this.desktopAccessType;
+    }
+
+    /**
+     * @return domainName
+     */
+    public String getDomainName() {
+        return this.domainName;
     }
 
     /**
@@ -183,6 +248,13 @@ public class CreateSimpleOfficeSiteRequest extends Request {
     }
 
     /**
+     * @return tenantId
+     */
+    public String getTenantId() {
+        return this.tenantId;
+    }
+
+    /**
      * @return vSwitchId
      */
     public java.util.List<String> getVSwitchId() {
@@ -204,17 +276,23 @@ public class CreateSimpleOfficeSiteRequest extends Request {
     }
 
     public static final class Builder extends Request.Builder<CreateSimpleOfficeSiteRequest, Builder> {
+        private String accountType; 
+        private String authorityHost; 
         private Integer bandwidth; 
         private String cenId; 
         private Long cenOwnerId; 
         private String cidrBlock; 
+        private String clientId; 
+        private String clientSecret; 
         private Boolean cloudBoxOfficeSite; 
         private String desktopAccessType; 
+        private String domainName; 
         private Boolean enableAdminAccess; 
         private Boolean enableInternetAccess; 
         private Boolean needVerifyZeroDevice; 
         private String officeSiteName; 
         private String regionId; 
+        private String tenantId; 
         private java.util.List<String> vSwitchId; 
         private String verifyCode; 
         private String vpcType; 
@@ -225,21 +303,45 @@ public class CreateSimpleOfficeSiteRequest extends Request {
 
         private Builder(CreateSimpleOfficeSiteRequest request) {
             super(request);
+            this.accountType = request.accountType;
+            this.authorityHost = request.authorityHost;
             this.bandwidth = request.bandwidth;
             this.cenId = request.cenId;
             this.cenOwnerId = request.cenOwnerId;
             this.cidrBlock = request.cidrBlock;
+            this.clientId = request.clientId;
+            this.clientSecret = request.clientSecret;
             this.cloudBoxOfficeSite = request.cloudBoxOfficeSite;
             this.desktopAccessType = request.desktopAccessType;
+            this.domainName = request.domainName;
             this.enableAdminAccess = request.enableAdminAccess;
             this.enableInternetAccess = request.enableInternetAccess;
             this.needVerifyZeroDevice = request.needVerifyZeroDevice;
             this.officeSiteName = request.officeSiteName;
             this.regionId = request.regionId;
+            this.tenantId = request.tenantId;
             this.vSwitchId = request.vSwitchId;
             this.verifyCode = request.verifyCode;
             this.vpcType = request.vpcType;
         } 
+
+        /**
+         * AccountType.
+         */
+        public Builder accountType(String accountType) {
+            this.putQueryParameter("AccountType", accountType);
+            this.accountType = accountType;
+            return this;
+        }
+
+        /**
+         * AuthorityHost.
+         */
+        public Builder authorityHost(String authorityHost) {
+            this.putQueryParameter("AuthorityHost", authorityHost);
+            this.authorityHost = authorityHost;
+            return this;
+        }
 
         /**
          * <p>The maximum public bandwidth. Value range: 10 to 200. Unit: Mbit/s. This parameter is available if you set <code>EnableInternetAccess</code> to <code>true</code>.</p>
@@ -302,6 +404,24 @@ public class CreateSimpleOfficeSiteRequest extends Request {
         }
 
         /**
+         * ClientId.
+         */
+        public Builder clientId(String clientId) {
+            this.putQueryParameter("ClientId", clientId);
+            this.clientId = clientId;
+            return this;
+        }
+
+        /**
+         * ClientSecret.
+         */
+        public Builder clientSecret(String clientSecret) {
+            this.putQueryParameter("ClientSecret", clientSecret);
+            this.clientSecret = clientSecret;
+            return this;
+        }
+
+        /**
          * <p>Specifies whether to create a CloudBox-based office network.</p>
          * <p>Valid values:</p>
          * <ul>
@@ -341,6 +461,15 @@ public class CreateSimpleOfficeSiteRequest extends Request {
         public Builder desktopAccessType(String desktopAccessType) {
             this.putQueryParameter("DesktopAccessType", desktopAccessType);
             this.desktopAccessType = desktopAccessType;
+            return this;
+        }
+
+        /**
+         * DomainName.
+         */
+        public Builder domainName(String domainName) {
+            this.putQueryParameter("DomainName", domainName);
+            this.domainName = domainName;
             return this;
         }
 
@@ -423,6 +552,15 @@ public class CreateSimpleOfficeSiteRequest extends Request {
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);
             this.regionId = regionId;
+            return this;
+        }
+
+        /**
+         * TenantId.
+         */
+        public Builder tenantId(String tenantId) {
+            this.putQueryParameter("TenantId", tenantId);
+            this.tenantId = tenantId;
             return this;
         }
 

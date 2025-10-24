@@ -563,8 +563,14 @@ public class DescribeOfficeSitesResponseBody extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("AcceleratorId")
         private String acceleratorId;
 
+        @com.aliyun.core.annotation.NameInMap("AccountType")
+        private String accountType;
+
         @com.aliyun.core.annotation.NameInMap("AdHostname")
         private String adHostname;
+
+        @com.aliyun.core.annotation.NameInMap("AuthorityHost")
+        private String authorityHost;
 
         @com.aliyun.core.annotation.NameInMap("BackupDCHostname")
         private String backupDCHostname;
@@ -583,6 +589,12 @@ public class DescribeOfficeSitesResponseBody extends TeaModel {
 
         @com.aliyun.core.annotation.NameInMap("CidrBlock")
         private String cidrBlock;
+
+        @com.aliyun.core.annotation.NameInMap("ClientId")
+        private String clientId;
+
+        @com.aliyun.core.annotation.NameInMap("ClientSecret")
+        private String clientSecret;
 
         @com.aliyun.core.annotation.NameInMap("CloudBoxOfficeSite")
         private Boolean cloudBoxOfficeSite;
@@ -710,6 +722,9 @@ public class DescribeOfficeSitesResponseBody extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("SubnetMode")
         private String subnetMode;
 
+        @com.aliyun.core.annotation.NameInMap("TenantId")
+        private String tenantId;
+
         @com.aliyun.core.annotation.NameInMap("TotalEdsCount")
         private Long totalEdsCount;
 
@@ -734,13 +749,17 @@ public class DescribeOfficeSitesResponseBody extends TeaModel {
         private OfficeSites(Builder builder) {
             this.ADConnectors = builder.ADConnectors;
             this.acceleratorId = builder.acceleratorId;
+            this.accountType = builder.accountType;
             this.adHostname = builder.adHostname;
+            this.authorityHost = builder.authorityHost;
             this.backupDCHostname = builder.backupDCHostname;
             this.backupDns = builder.backupDns;
             this.bandwidth = builder.bandwidth;
             this.cenAttachStatus = builder.cenAttachStatus;
             this.cenId = builder.cenId;
             this.cidrBlock = builder.cidrBlock;
+            this.clientId = builder.clientId;
+            this.clientSecret = builder.clientSecret;
             this.cloudBoxOfficeSite = builder.cloudBoxOfficeSite;
             this.creationTime = builder.creationTime;
             this.customAccessPoint = builder.customAccessPoint;
@@ -783,6 +802,7 @@ public class DescribeOfficeSitesResponseBody extends TeaModel {
             this.subDnsAddress = builder.subDnsAddress;
             this.subDomainName = builder.subDomainName;
             this.subnetMode = builder.subnetMode;
+            this.tenantId = builder.tenantId;
             this.totalEdsCount = builder.totalEdsCount;
             this.totalEdsCountForGroup = builder.totalEdsCountForGroup;
             this.totalResourceAmount = builder.totalResourceAmount;
@@ -815,10 +835,24 @@ public class DescribeOfficeSitesResponseBody extends TeaModel {
         }
 
         /**
+         * @return accountType
+         */
+        public String getAccountType() {
+            return this.accountType;
+        }
+
+        /**
          * @return adHostname
          */
         public String getAdHostname() {
             return this.adHostname;
+        }
+
+        /**
+         * @return authorityHost
+         */
+        public String getAuthorityHost() {
+            return this.authorityHost;
         }
 
         /**
@@ -861,6 +895,20 @@ public class DescribeOfficeSitesResponseBody extends TeaModel {
          */
         public String getCidrBlock() {
             return this.cidrBlock;
+        }
+
+        /**
+         * @return clientId
+         */
+        public String getClientId() {
+            return this.clientId;
+        }
+
+        /**
+         * @return clientSecret
+         */
+        public String getClientSecret() {
+            return this.clientSecret;
         }
 
         /**
@@ -1158,6 +1206,13 @@ public class DescribeOfficeSitesResponseBody extends TeaModel {
         }
 
         /**
+         * @return tenantId
+         */
+        public String getTenantId() {
+            return this.tenantId;
+        }
+
+        /**
          * @return totalEdsCount
          */
         public Long getTotalEdsCount() {
@@ -1209,13 +1264,17 @@ public class DescribeOfficeSitesResponseBody extends TeaModel {
         public static final class Builder {
             private java.util.List<ADConnectors> ADConnectors; 
             private String acceleratorId; 
+            private String accountType; 
             private String adHostname; 
+            private String authorityHost; 
             private String backupDCHostname; 
             private String backupDns; 
             private Integer bandwidth; 
             private String cenAttachStatus; 
             private String cenId; 
             private String cidrBlock; 
+            private String clientId; 
+            private String clientSecret; 
             private Boolean cloudBoxOfficeSite; 
             private String creationTime; 
             private String customAccessPoint; 
@@ -1258,6 +1317,7 @@ public class DescribeOfficeSitesResponseBody extends TeaModel {
             private java.util.List<String> subDnsAddress; 
             private String subDomainName; 
             private String subnetMode; 
+            private String tenantId; 
             private Long totalEdsCount; 
             private Long totalEdsCountForGroup; 
             private Long totalResourceAmount; 
@@ -1272,13 +1332,17 @@ public class DescribeOfficeSitesResponseBody extends TeaModel {
             private Builder(OfficeSites model) {
                 this.ADConnectors = model.ADConnectors;
                 this.acceleratorId = model.acceleratorId;
+                this.accountType = model.accountType;
                 this.adHostname = model.adHostname;
+                this.authorityHost = model.authorityHost;
                 this.backupDCHostname = model.backupDCHostname;
                 this.backupDns = model.backupDns;
                 this.bandwidth = model.bandwidth;
                 this.cenAttachStatus = model.cenAttachStatus;
                 this.cenId = model.cenId;
                 this.cidrBlock = model.cidrBlock;
+                this.clientId = model.clientId;
+                this.clientSecret = model.clientSecret;
                 this.cloudBoxOfficeSite = model.cloudBoxOfficeSite;
                 this.creationTime = model.creationTime;
                 this.customAccessPoint = model.customAccessPoint;
@@ -1321,6 +1385,7 @@ public class DescribeOfficeSitesResponseBody extends TeaModel {
                 this.subDnsAddress = model.subDnsAddress;
                 this.subDomainName = model.subDomainName;
                 this.subnetMode = model.subnetMode;
+                this.tenantId = model.tenantId;
                 this.totalEdsCount = model.totalEdsCount;
                 this.totalEdsCountForGroup = model.totalEdsCountForGroup;
                 this.totalResourceAmount = model.totalResourceAmount;
@@ -1350,6 +1415,14 @@ public class DescribeOfficeSitesResponseBody extends TeaModel {
             }
 
             /**
+             * AccountType.
+             */
+            public Builder accountType(String accountType) {
+                this.accountType = accountType;
+                return this;
+            }
+
+            /**
              * <p>The hostname of the domain controller. The hostname must comply with the hostname naming convention of Windows.</p>
              * 
              * <strong>example:</strong>
@@ -1357,6 +1430,14 @@ public class DescribeOfficeSitesResponseBody extends TeaModel {
              */
             public Builder adHostname(String adHostname) {
                 this.adHostname = adHostname;
+                return this;
+            }
+
+            /**
+             * AuthorityHost.
+             */
+            public Builder authorityHost(String authorityHost) {
+                this.authorityHost = authorityHost;
                 return this;
             }
 
@@ -1423,6 +1504,22 @@ public class DescribeOfficeSitesResponseBody extends TeaModel {
              */
             public Builder cidrBlock(String cidrBlock) {
                 this.cidrBlock = cidrBlock;
+                return this;
+            }
+
+            /**
+             * ClientId.
+             */
+            public Builder clientId(String clientId) {
+                this.clientId = clientId;
+                return this;
+            }
+
+            /**
+             * ClientSecret.
+             */
+            public Builder clientSecret(String clientSecret) {
+                this.clientSecret = clientSecret;
                 return this;
             }
 
@@ -1926,6 +2023,14 @@ public class DescribeOfficeSitesResponseBody extends TeaModel {
              */
             public Builder subnetMode(String subnetMode) {
                 this.subnetMode = subnetMode;
+                return this;
+            }
+
+            /**
+             * TenantId.
+             */
+            public Builder tenantId(String tenantId) {
+                this.tenantId = tenantId;
                 return this;
             }
 

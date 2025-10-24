@@ -18,8 +18,24 @@ import com.aliyun.sdk.gateway.pop.models.*;
  */
 public class ModifyOfficeSiteAttributeRequest extends Request {
     @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("AuthorityHost")
+    private String authorityHost;
+
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ClientId")
+    private String clientId;
+
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ClientSecret")
+    private String clientSecret;
+
+    @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("DesktopAccessType")
     private String desktopAccessType;
+
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("DomainName")
+    private String domainName;
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("EnableAdminAccess")
@@ -47,15 +63,24 @@ public class ModifyOfficeSiteAttributeRequest extends Request {
     @com.aliyun.core.annotation.Validation(required = true)
     private String regionId;
 
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("TenantId")
+    private String tenantId;
+
     private ModifyOfficeSiteAttributeRequest(Builder builder) {
         super(builder);
+        this.authorityHost = builder.authorityHost;
+        this.clientId = builder.clientId;
+        this.clientSecret = builder.clientSecret;
         this.desktopAccessType = builder.desktopAccessType;
+        this.domainName = builder.domainName;
         this.enableAdminAccess = builder.enableAdminAccess;
         this.needVerifyLoginRisk = builder.needVerifyLoginRisk;
         this.needVerifyZeroDevice = builder.needVerifyZeroDevice;
         this.officeSiteId = builder.officeSiteId;
         this.officeSiteName = builder.officeSiteName;
         this.regionId = builder.regionId;
+        this.tenantId = builder.tenantId;
     }
 
     public static Builder builder() {
@@ -72,10 +97,38 @@ public class ModifyOfficeSiteAttributeRequest extends Request {
     }
 
     /**
+     * @return authorityHost
+     */
+    public String getAuthorityHost() {
+        return this.authorityHost;
+    }
+
+    /**
+     * @return clientId
+     */
+    public String getClientId() {
+        return this.clientId;
+    }
+
+    /**
+     * @return clientSecret
+     */
+    public String getClientSecret() {
+        return this.clientSecret;
+    }
+
+    /**
      * @return desktopAccessType
      */
     public String getDesktopAccessType() {
         return this.desktopAccessType;
+    }
+
+    /**
+     * @return domainName
+     */
+    public String getDomainName() {
+        return this.domainName;
     }
 
     /**
@@ -120,14 +173,26 @@ public class ModifyOfficeSiteAttributeRequest extends Request {
         return this.regionId;
     }
 
+    /**
+     * @return tenantId
+     */
+    public String getTenantId() {
+        return this.tenantId;
+    }
+
     public static final class Builder extends Request.Builder<ModifyOfficeSiteAttributeRequest, Builder> {
+        private String authorityHost; 
+        private String clientId; 
+        private String clientSecret; 
         private String desktopAccessType; 
+        private String domainName; 
         private Boolean enableAdminAccess; 
         private Boolean needVerifyLoginRisk; 
         private Boolean needVerifyZeroDevice; 
         private String officeSiteId; 
         private String officeSiteName; 
         private String regionId; 
+        private String tenantId; 
 
         private Builder() {
             super();
@@ -135,14 +200,46 @@ public class ModifyOfficeSiteAttributeRequest extends Request {
 
         private Builder(ModifyOfficeSiteAttributeRequest request) {
             super(request);
+            this.authorityHost = request.authorityHost;
+            this.clientId = request.clientId;
+            this.clientSecret = request.clientSecret;
             this.desktopAccessType = request.desktopAccessType;
+            this.domainName = request.domainName;
             this.enableAdminAccess = request.enableAdminAccess;
             this.needVerifyLoginRisk = request.needVerifyLoginRisk;
             this.needVerifyZeroDevice = request.needVerifyZeroDevice;
             this.officeSiteId = request.officeSiteId;
             this.officeSiteName = request.officeSiteName;
             this.regionId = request.regionId;
+            this.tenantId = request.tenantId;
         } 
+
+        /**
+         * AuthorityHost.
+         */
+        public Builder authorityHost(String authorityHost) {
+            this.putQueryParameter("AuthorityHost", authorityHost);
+            this.authorityHost = authorityHost;
+            return this;
+        }
+
+        /**
+         * ClientId.
+         */
+        public Builder clientId(String clientId) {
+            this.putQueryParameter("ClientId", clientId);
+            this.clientId = clientId;
+            return this;
+        }
+
+        /**
+         * ClientSecret.
+         */
+        public Builder clientSecret(String clientSecret) {
+            this.putQueryParameter("ClientSecret", clientSecret);
+            this.clientSecret = clientSecret;
+            return this;
+        }
 
         /**
          * <p>The method to connect to cloud computers from Alibaba Cloud Workspace clients.</p>
@@ -162,6 +259,15 @@ public class ModifyOfficeSiteAttributeRequest extends Request {
         public Builder desktopAccessType(String desktopAccessType) {
             this.putQueryParameter("DesktopAccessType", desktopAccessType);
             this.desktopAccessType = desktopAccessType;
+            return this;
+        }
+
+        /**
+         * DomainName.
+         */
+        public Builder domainName(String domainName) {
+            this.putQueryParameter("DomainName", domainName);
+            this.domainName = domainName;
             return this;
         }
 
@@ -241,6 +347,15 @@ public class ModifyOfficeSiteAttributeRequest extends Request {
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);
             this.regionId = regionId;
+            return this;
+        }
+
+        /**
+         * TenantId.
+         */
+        public Builder tenantId(String tenantId) {
+            this.putQueryParameter("TenantId", tenantId);
+            this.tenantId = tenantId;
             return this;
         }
 

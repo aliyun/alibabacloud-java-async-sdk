@@ -904,6 +904,12 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<DescribeFotaTasksResponse> describeFotaTasks(DescribeFotaTasksRequest request);
 
     /**
+     * @param request the request parameters of DescribeGlobalDesktopRecords  DescribeGlobalDesktopRecordsRequest
+     * @return DescribeGlobalDesktopRecordsResponse
+     */
+    CompletableFuture<DescribeGlobalDesktopRecordsResponse> describeGlobalDesktopRecords(DescribeGlobalDesktopRecordsRequest request);
+
+    /**
      * @param request the request parameters of DescribeGuestApplications  DescribeGuestApplicationsRequest
      * @return DescribeGuestApplicationsResponse
      */

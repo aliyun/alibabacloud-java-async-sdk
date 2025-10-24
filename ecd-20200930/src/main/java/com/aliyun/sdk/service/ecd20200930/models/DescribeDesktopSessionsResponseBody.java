@@ -314,6 +314,9 @@ public class DescribeDesktopSessionsResponseBody extends TeaModel {
      * <p>DescribeDesktopSessionsResponseBody</p>
      */
     public static class Sessions extends TeaModel {
+        @com.aliyun.core.annotation.NameInMap("AccountType")
+        private String accountType;
+
         @com.aliyun.core.annotation.NameInMap("ClientIp")
         private String clientIp;
 
@@ -328,6 +331,9 @@ public class DescribeDesktopSessionsResponseBody extends TeaModel {
 
         @com.aliyun.core.annotation.NameInMap("DesktopName")
         private String desktopName;
+
+        @com.aliyun.core.annotation.NameInMap("DirectoryType")
+        private String directoryType;
 
         @com.aliyun.core.annotation.NameInMap("EndUserApplyCoordinateTime")
         private Long endUserApplyCoordinateTime;
@@ -378,11 +384,13 @@ public class DescribeDesktopSessionsResponseBody extends TeaModel {
         private Long totalConnectionTime;
 
         private Sessions(Builder builder) {
+            this.accountType = builder.accountType;
             this.clientIp = builder.clientIp;
             this.clientOS = builder.clientOS;
             this.clientVersion = builder.clientVersion;
             this.desktopId = builder.desktopId;
             this.desktopName = builder.desktopName;
+            this.directoryType = builder.directoryType;
             this.endUserApplyCoordinateTime = builder.endUserApplyCoordinateTime;
             this.endUserId = builder.endUserId;
             this.latestConnectionTime = builder.latestConnectionTime;
@@ -407,6 +415,13 @@ public class DescribeDesktopSessionsResponseBody extends TeaModel {
 
         public static Sessions create() {
             return builder().build();
+        }
+
+        /**
+         * @return accountType
+         */
+        public String getAccountType() {
+            return this.accountType;
         }
 
         /**
@@ -442,6 +457,13 @@ public class DescribeDesktopSessionsResponseBody extends TeaModel {
          */
         public String getDesktopName() {
             return this.desktopName;
+        }
+
+        /**
+         * @return directoryType
+         */
+        public String getDirectoryType() {
+            return this.directoryType;
         }
 
         /**
@@ -557,11 +579,13 @@ public class DescribeDesktopSessionsResponseBody extends TeaModel {
         }
 
         public static final class Builder {
+            private String accountType; 
             private String clientIp; 
             private String clientOS; 
             private String clientVersion; 
             private String desktopId; 
             private String desktopName; 
+            private String directoryType; 
             private Long endUserApplyCoordinateTime; 
             private String endUserId; 
             private Long latestConnectionTime; 
@@ -583,11 +607,13 @@ public class DescribeDesktopSessionsResponseBody extends TeaModel {
             } 
 
             private Builder(Sessions model) {
+                this.accountType = model.accountType;
                 this.clientIp = model.clientIp;
                 this.clientOS = model.clientOS;
                 this.clientVersion = model.clientVersion;
                 this.desktopId = model.desktopId;
                 this.desktopName = model.desktopName;
+                this.directoryType = model.directoryType;
                 this.endUserApplyCoordinateTime = model.endUserApplyCoordinateTime;
                 this.endUserId = model.endUserId;
                 this.latestConnectionTime = model.latestConnectionTime;
@@ -605,6 +631,14 @@ public class DescribeDesktopSessionsResponseBody extends TeaModel {
                 this.terminalInfo = model.terminalInfo;
                 this.totalConnectionTime = model.totalConnectionTime;
             } 
+
+            /**
+             * AccountType.
+             */
+            public Builder accountType(String accountType) {
+                this.accountType = accountType;
+                return this;
+            }
 
             /**
              * <p>The IP address of the client.</p>
@@ -658,6 +692,14 @@ public class DescribeDesktopSessionsResponseBody extends TeaModel {
              */
             public Builder desktopName(String desktopName) {
                 this.desktopName = desktopName;
+                return this;
+            }
+
+            /**
+             * DirectoryType.
+             */
+            public Builder directoryType(String directoryType) {
+                this.directoryType = directoryType;
                 return this;
             }
 

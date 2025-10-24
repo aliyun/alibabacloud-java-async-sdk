@@ -1297,6 +1297,9 @@ public class DescribeDesktopsResponseBody extends TeaModel {
      * <p>DescribeDesktopsResponseBody</p>
      */
     public static class Desktops extends TeaModel {
+        @com.aliyun.core.annotation.NameInMap("AccountType")
+        private String accountType;
+
         @com.aliyun.core.annotation.NameInMap("BindAmount")
         private Integer bindAmount;
 
@@ -1362,6 +1365,9 @@ public class DescribeDesktopsResponseBody extends TeaModel {
 
         @com.aliyun.core.annotation.NameInMap("EndUserIds")
         private java.util.List<String> endUserIds;
+
+        @com.aliyun.core.annotation.NameInMap("EntraDomainName")
+        private String entraDomainName;
 
         @com.aliyun.core.annotation.NameInMap("ExpiredTime")
         private String expiredTime;
@@ -1496,6 +1502,7 @@ public class DescribeDesktopsResponseBody extends TeaModel {
         private String zoneType;
 
         private Desktops(Builder builder) {
+            this.accountType = builder.accountType;
             this.bindAmount = builder.bindAmount;
             this.bundleId = builder.bundleId;
             this.bundleName = builder.bundleName;
@@ -1518,6 +1525,7 @@ public class DescribeDesktopsResponseBody extends TeaModel {
             this.downgradeQuota = builder.downgradeQuota;
             this.downgradedTimes = builder.downgradedTimes;
             this.endUserIds = builder.endUserIds;
+            this.entraDomainName = builder.entraDomainName;
             this.expiredTime = builder.expiredTime;
             this.fotaUpdate = builder.fotaUpdate;
             this.gpuCategory = builder.gpuCategory;
@@ -1570,6 +1578,13 @@ public class DescribeDesktopsResponseBody extends TeaModel {
 
         public static Desktops create() {
             return builder().build();
+        }
+
+        /**
+         * @return accountType
+         */
+        public String getAccountType() {
+            return this.accountType;
         }
 
         /**
@@ -1724,6 +1739,13 @@ public class DescribeDesktopsResponseBody extends TeaModel {
          */
         public java.util.List<String> getEndUserIds() {
             return this.endUserIds;
+        }
+
+        /**
+         * @return entraDomainName
+         */
+        public String getEntraDomainName() {
+            return this.entraDomainName;
         }
 
         /**
@@ -2035,6 +2057,7 @@ public class DescribeDesktopsResponseBody extends TeaModel {
         }
 
         public static final class Builder {
+            private String accountType; 
             private Integer bindAmount; 
             private String bundleId; 
             private String bundleName; 
@@ -2057,6 +2080,7 @@ public class DescribeDesktopsResponseBody extends TeaModel {
             private Long downgradeQuota; 
             private Long downgradedTimes; 
             private java.util.List<String> endUserIds; 
+            private String entraDomainName; 
             private String expiredTime; 
             private FotaUpdate fotaUpdate; 
             private Long gpuCategory; 
@@ -2106,6 +2130,7 @@ public class DescribeDesktopsResponseBody extends TeaModel {
             } 
 
             private Builder(Desktops model) {
+                this.accountType = model.accountType;
                 this.bindAmount = model.bindAmount;
                 this.bundleId = model.bundleId;
                 this.bundleName = model.bundleName;
@@ -2128,6 +2153,7 @@ public class DescribeDesktopsResponseBody extends TeaModel {
                 this.downgradeQuota = model.downgradeQuota;
                 this.downgradedTimes = model.downgradedTimes;
                 this.endUserIds = model.endUserIds;
+                this.entraDomainName = model.entraDomainName;
                 this.expiredTime = model.expiredTime;
                 this.fotaUpdate = model.fotaUpdate;
                 this.gpuCategory = model.gpuCategory;
@@ -2173,6 +2199,14 @@ public class DescribeDesktopsResponseBody extends TeaModel {
                 this.volumeEncryptionKey = model.volumeEncryptionKey;
                 this.zoneType = model.zoneType;
             } 
+
+            /**
+             * AccountType.
+             */
+            public Builder accountType(String accountType) {
+                this.accountType = accountType;
+                return this;
+            }
 
             /**
              * <p>The number of concurrent sessions of each cloud computer in a multi-session cloud computer pool.</p>
@@ -2435,6 +2469,14 @@ public class DescribeDesktopsResponseBody extends TeaModel {
              */
             public Builder endUserIds(java.util.List<String> endUserIds) {
                 this.endUserIds = endUserIds;
+                return this;
+            }
+
+            /**
+             * EntraDomainName.
+             */
+            public Builder entraDomainName(String entraDomainName) {
+                this.entraDomainName = entraDomainName;
                 return this;
             }
 
