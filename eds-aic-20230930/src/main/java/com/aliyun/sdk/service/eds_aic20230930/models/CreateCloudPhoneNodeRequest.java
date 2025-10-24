@@ -121,6 +121,10 @@ public class CreateCloudPhoneNodeRequest extends Request {
     private Integer streamMode;
 
     @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("SwapSize")
+    private Integer swapSize;
+
+    @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("Tag")
     private java.util.List<Tag> tag;
 
@@ -163,6 +167,7 @@ public class CreateCloudPhoneNodeRequest extends Request {
         this.serverShareDataVolume = builder.serverShareDataVolume;
         this.serverType = builder.serverType;
         this.streamMode = builder.streamMode;
+        this.swapSize = builder.swapSize;
         this.tag = builder.tag;
         this.upBandwidthLimit = builder.upBandwidthLimit;
         this.useTemplate = builder.useTemplate;
@@ -358,6 +363,13 @@ public class CreateCloudPhoneNodeRequest extends Request {
     }
 
     /**
+     * @return swapSize
+     */
+    public Integer getSwapSize() {
+        return this.swapSize;
+    }
+
+    /**
      * @return tag
      */
     public java.util.List<Tag> getTag() {
@@ -411,6 +423,7 @@ public class CreateCloudPhoneNodeRequest extends Request {
         private Integer serverShareDataVolume; 
         private String serverType; 
         private Integer streamMode; 
+        private Integer swapSize; 
         private java.util.List<Tag> tag; 
         private Integer upBandwidthLimit; 
         private String useTemplate; 
@@ -447,6 +460,7 @@ public class CreateCloudPhoneNodeRequest extends Request {
             this.serverShareDataVolume = request.serverShareDataVolume;
             this.serverType = request.serverType;
             this.streamMode = request.streamMode;
+            this.swapSize = request.swapSize;
             this.tag = request.tag;
             this.upBandwidthLimit = request.upBandwidthLimit;
             this.useTemplate = request.useTemplate;
@@ -755,6 +769,15 @@ public class CreateCloudPhoneNodeRequest extends Request {
         public Builder streamMode(Integer streamMode) {
             this.putQueryParameter("StreamMode", streamMode);
             this.streamMode = streamMode;
+            return this;
+        }
+
+        /**
+         * SwapSize.
+         */
+        public Builder swapSize(Integer swapSize) {
+            this.putQueryParameter("SwapSize", swapSize);
+            this.swapSize = swapSize;
             return this;
         }
 

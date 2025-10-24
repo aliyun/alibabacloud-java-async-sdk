@@ -50,6 +50,14 @@ public class ChangeCloudPhoneNodeRequest extends Request {
     private String promotionId;
 
     @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ShareDataVolume")
+    private Integer shareDataVolume;
+
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("SwapSize")
+    private Integer swapSize;
+
+    @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("UpBandwidthLimit")
     private Integer upBandwidthLimit;
 
@@ -63,6 +71,8 @@ public class ChangeCloudPhoneNodeRequest extends Request {
         this.phoneCount = builder.phoneCount;
         this.phoneDataVolume = builder.phoneDataVolume;
         this.promotionId = builder.promotionId;
+        this.shareDataVolume = builder.shareDataVolume;
+        this.swapSize = builder.swapSize;
         this.upBandwidthLimit = builder.upBandwidthLimit;
     }
 
@@ -136,6 +146,20 @@ public class ChangeCloudPhoneNodeRequest extends Request {
     }
 
     /**
+     * @return shareDataVolume
+     */
+    public Integer getShareDataVolume() {
+        return this.shareDataVolume;
+    }
+
+    /**
+     * @return swapSize
+     */
+    public Integer getSwapSize() {
+        return this.swapSize;
+    }
+
+    /**
      * @return upBandwidthLimit
      */
     public Integer getUpBandwidthLimit() {
@@ -151,6 +175,8 @@ public class ChangeCloudPhoneNodeRequest extends Request {
         private Integer phoneCount; 
         private Integer phoneDataVolume; 
         private String promotionId; 
+        private Integer shareDataVolume; 
+        private Integer swapSize; 
         private Integer upBandwidthLimit; 
 
         private Builder() {
@@ -167,6 +193,8 @@ public class ChangeCloudPhoneNodeRequest extends Request {
             this.phoneCount = request.phoneCount;
             this.phoneDataVolume = request.phoneDataVolume;
             this.promotionId = request.promotionId;
+            this.shareDataVolume = request.shareDataVolume;
+            this.swapSize = request.swapSize;
             this.upBandwidthLimit = request.upBandwidthLimit;
         } 
 
@@ -239,6 +267,24 @@ public class ChangeCloudPhoneNodeRequest extends Request {
         public Builder promotionId(String promotionId) {
             this.putQueryParameter("PromotionId", promotionId);
             this.promotionId = promotionId;
+            return this;
+        }
+
+        /**
+         * ShareDataVolume.
+         */
+        public Builder shareDataVolume(Integer shareDataVolume) {
+            this.putQueryParameter("ShareDataVolume", shareDataVolume);
+            this.shareDataVolume = shareDataVolume;
+            return this;
+        }
+
+        /**
+         * SwapSize.
+         */
+        public Builder swapSize(Integer swapSize) {
+            this.putQueryParameter("SwapSize", swapSize);
+            this.swapSize = swapSize;
             return this;
         }
 

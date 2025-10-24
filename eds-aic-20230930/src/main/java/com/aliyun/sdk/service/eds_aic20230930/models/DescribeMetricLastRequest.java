@@ -25,6 +25,10 @@ public class DescribeMetricLastRequest extends Request {
     @com.aliyun.core.annotation.NameInMap("EndTime")
     private String endTime;
 
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("InstanceIds")
+    private java.util.List<String> instanceIds;
+
     @com.aliyun.core.annotation.Body
     @com.aliyun.core.annotation.NameInMap("Length")
     private String length;
@@ -50,6 +54,7 @@ public class DescribeMetricLastRequest extends Request {
         super(builder);
         this.androidInstanceIds = builder.androidInstanceIds;
         this.endTime = builder.endTime;
+        this.instanceIds = builder.instanceIds;
         this.length = builder.length;
         this.metricNames = builder.metricNames;
         this.nextToken = builder.nextToken;
@@ -82,6 +87,13 @@ public class DescribeMetricLastRequest extends Request {
      */
     public String getEndTime() {
         return this.endTime;
+    }
+
+    /**
+     * @return instanceIds
+     */
+    public java.util.List<String> getInstanceIds() {
+        return this.instanceIds;
     }
 
     /**
@@ -122,6 +134,7 @@ public class DescribeMetricLastRequest extends Request {
     public static final class Builder extends Request.Builder<DescribeMetricLastRequest, Builder> {
         private java.util.List<String> androidInstanceIds; 
         private String endTime; 
+        private java.util.List<String> instanceIds; 
         private String length; 
         private java.util.List<String> metricNames; 
         private String nextToken; 
@@ -136,6 +149,7 @@ public class DescribeMetricLastRequest extends Request {
             super(request);
             this.androidInstanceIds = request.androidInstanceIds;
             this.endTime = request.endTime;
+            this.instanceIds = request.instanceIds;
             this.length = request.length;
             this.metricNames = request.metricNames;
             this.nextToken = request.nextToken;
@@ -158,6 +172,15 @@ public class DescribeMetricLastRequest extends Request {
         public Builder endTime(String endTime) {
             this.putBodyParameter("EndTime", endTime);
             this.endTime = endTime;
+            return this;
+        }
+
+        /**
+         * InstanceIds.
+         */
+        public Builder instanceIds(java.util.List<String> instanceIds) {
+            this.putQueryParameter("InstanceIds", instanceIds);
+            this.instanceIds = instanceIds;
             return this;
         }
 

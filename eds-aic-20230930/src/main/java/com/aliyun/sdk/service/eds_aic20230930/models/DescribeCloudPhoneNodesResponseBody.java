@@ -534,6 +534,9 @@ public class DescribeCloudPhoneNodesResponseBody extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Status")
         private String status;
 
+        @com.aliyun.core.annotation.NameInMap("SwapSize")
+        private Integer swapSize;
+
         @com.aliyun.core.annotation.NameInMap("VSwitchId")
         private String vSwitchId;
 
@@ -562,6 +565,7 @@ public class DescribeCloudPhoneNodesResponseBody extends TeaModel {
             this.serverType = builder.serverType;
             this.shareDataVolume = builder.shareDataVolume;
             this.status = builder.status;
+            this.swapSize = builder.swapSize;
             this.vSwitchId = builder.vSwitchId;
         }
 
@@ -742,6 +746,13 @@ public class DescribeCloudPhoneNodesResponseBody extends TeaModel {
         }
 
         /**
+         * @return swapSize
+         */
+        public Integer getSwapSize() {
+            return this.swapSize;
+        }
+
+        /**
          * @return vSwitchId
          */
         public String getVSwitchId() {
@@ -773,6 +784,7 @@ public class DescribeCloudPhoneNodesResponseBody extends TeaModel {
             private String serverType; 
             private Integer shareDataVolume; 
             private String status; 
+            private Integer swapSize; 
             private String vSwitchId; 
 
             private Builder() {
@@ -803,6 +815,7 @@ public class DescribeCloudPhoneNodesResponseBody extends TeaModel {
                 this.serverType = model.serverType;
                 this.shareDataVolume = model.shareDataVolume;
                 this.status = model.status;
+                this.swapSize = model.swapSize;
                 this.vSwitchId = model.vSwitchId;
             } 
 
@@ -1043,6 +1056,14 @@ public class DescribeCloudPhoneNodesResponseBody extends TeaModel {
              */
             public Builder status(String status) {
                 this.status = status;
+                return this;
+            }
+
+            /**
+             * SwapSize.
+             */
+            public Builder swapSize(Integer swapSize) {
+                this.swapSize = swapSize;
                 return this;
             }
 

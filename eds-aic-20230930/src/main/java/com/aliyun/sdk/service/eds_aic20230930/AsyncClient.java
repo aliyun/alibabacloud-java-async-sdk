@@ -245,6 +245,12 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<DescribeBackupFilesResponse> describeBackupFiles(DescribeBackupFilesRequest request);
 
     /**
+     * @param request the request parameters of DescribeBuckets  DescribeBucketsRequest
+     * @return DescribeBucketsResponse
+     */
+    CompletableFuture<DescribeBucketsResponse> describeBuckets(DescribeBucketsRequest request);
+
+    /**
      * @param request the request parameters of DescribeCloudPhoneNodes  DescribeCloudPhoneNodesRequest
      * @return DescribeCloudPhoneNodesResponse
      */
@@ -411,6 +417,12 @@ public interface AsyncClient extends SdkAutoCloseable {
      * @return InstallMonitorAgentResponse
      */
     CompletableFuture<InstallMonitorAgentResponse> installMonitorAgent(InstallMonitorAgentRequest request);
+
+    /**
+     * @param request the request parameters of InstanceHealer  InstanceHealerRequest
+     * @return InstanceHealerResponse
+     */
+    CompletableFuture<InstanceHealerResponse> instanceHealer(InstanceHealerRequest request);
 
     /**
      * @param request the request parameters of ListPolicyGroups  ListPolicyGroupsRequest
