@@ -26,6 +26,12 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<ApproveOperationResponse> approveOperation(ApproveOperationRequest request);
 
     /**
+     * @param request the request parameters of ChangeNodeGroup  ChangeNodeGroupRequest
+     * @return ChangeNodeGroupResponse
+     */
+    CompletableFuture<ChangeNodeGroupResponse> changeNodeGroup(ChangeNodeGroupRequest request);
+
+    /**
      * @param request the request parameters of ChangeResourceGroup  ChangeResourceGroupRequest
      * @return ChangeResourceGroupResponse
      */
@@ -179,6 +185,18 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<ExtendClusterResponse> extendCluster(ExtendClusterRequest request);
 
     /**
+     * @param request the request parameters of GetHyperNode  GetHyperNodeRequest
+     * @return GetHyperNodeResponse
+     */
+    CompletableFuture<GetHyperNodeResponse> getHyperNode(GetHyperNodeRequest request);
+
+    /**
+     * @param request the request parameters of ListClusterHyperNodes  ListClusterHyperNodesRequest
+     * @return ListClusterHyperNodesResponse
+     */
+    CompletableFuture<ListClusterHyperNodesResponse> listClusterHyperNodes(ListClusterHyperNodesRequest request);
+
+    /**
      * @param request the request parameters of ListClusterNodes  ListClusterNodesRequest
      * @return ListClusterNodesResponse
      */
@@ -197,10 +215,22 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<ListDiagnosticResultsResponse> listDiagnosticResults(ListDiagnosticResultsRequest request);
 
     /**
+     * @param request the request parameters of ListFreeHyperNodes  ListFreeHyperNodesRequest
+     * @return ListFreeHyperNodesResponse
+     */
+    CompletableFuture<ListFreeHyperNodesResponse> listFreeHyperNodes(ListFreeHyperNodesRequest request);
+
+    /**
      * @param request the request parameters of ListFreeNodes  ListFreeNodesRequest
      * @return ListFreeNodesResponse
      */
     CompletableFuture<ListFreeNodesResponse> listFreeNodes(ListFreeNodesRequest request);
+
+    /**
+     * @param request the request parameters of ListHyperNodes  ListHyperNodesRequest
+     * @return ListHyperNodesResponse
+     */
+    CompletableFuture<ListHyperNodesResponse> listHyperNodes(ListHyperNodesRequest request);
 
     /**
      * @param request the request parameters of ListImages  ListImagesRequest
@@ -264,6 +294,12 @@ public interface AsyncClient extends SdkAutoCloseable {
      * @return ReimageNodesResponse
      */
     CompletableFuture<ReimageNodesResponse> reimageNodes(ReimageNodesRequest request);
+
+    /**
+     * @param request the request parameters of ReportNodesStatus  ReportNodesStatusRequest
+     * @return ReportNodesStatusResponse
+     */
+    CompletableFuture<ReportNodesStatusResponse> reportNodesStatus(ReportNodesStatusRequest request);
 
     /**
      * @param request the request parameters of RunCommand  RunCommandRequest

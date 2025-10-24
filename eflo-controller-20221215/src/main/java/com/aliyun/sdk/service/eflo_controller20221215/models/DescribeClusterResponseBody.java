@@ -62,11 +62,17 @@ public class DescribeClusterResponseBody extends TeaModel {
     @com.aliyun.core.annotation.NameInMap("ResourceGroupId")
     private String resourceGroupId;
 
+    @com.aliyun.core.annotation.NameInMap("SecurityGroupId")
+    private String securityGroupId;
+
     @com.aliyun.core.annotation.NameInMap("TaskId")
     private String taskId;
 
     @com.aliyun.core.annotation.NameInMap("UpdateTime")
     private String updateTime;
+
+    @com.aliyun.core.annotation.NameInMap("VSwitchId")
+    private String vSwitchId;
 
     @com.aliyun.core.annotation.NameInMap("VpcId")
     private String vpcId;
@@ -87,8 +93,10 @@ public class DescribeClusterResponseBody extends TeaModel {
         this.operatingState = builder.operatingState;
         this.requestId = builder.requestId;
         this.resourceGroupId = builder.resourceGroupId;
+        this.securityGroupId = builder.securityGroupId;
         this.taskId = builder.taskId;
         this.updateTime = builder.updateTime;
+        this.vSwitchId = builder.vSwitchId;
         this.vpcId = builder.vpcId;
     }
 
@@ -210,6 +218,13 @@ public class DescribeClusterResponseBody extends TeaModel {
     }
 
     /**
+     * @return securityGroupId
+     */
+    public String getSecurityGroupId() {
+        return this.securityGroupId;
+    }
+
+    /**
      * @return taskId
      */
     public String getTaskId() {
@@ -221,6 +236,13 @@ public class DescribeClusterResponseBody extends TeaModel {
      */
     public String getUpdateTime() {
         return this.updateTime;
+    }
+
+    /**
+     * @return vSwitchId
+     */
+    public String getVSwitchId() {
+        return this.vSwitchId;
     }
 
     /**
@@ -246,8 +268,10 @@ public class DescribeClusterResponseBody extends TeaModel {
         private String operatingState; 
         private String requestId; 
         private String resourceGroupId; 
+        private String securityGroupId; 
         private String taskId; 
         private String updateTime; 
+        private String vSwitchId; 
         private String vpcId; 
 
         private Builder() {
@@ -269,8 +293,10 @@ public class DescribeClusterResponseBody extends TeaModel {
             this.operatingState = model.operatingState;
             this.requestId = model.requestId;
             this.resourceGroupId = model.resourceGroupId;
+            this.securityGroupId = model.securityGroupId;
             this.taskId = model.taskId;
             this.updateTime = model.updateTime;
+            this.vSwitchId = model.vSwitchId;
             this.vpcId = model.vpcId;
         } 
 
@@ -434,6 +460,14 @@ public class DescribeClusterResponseBody extends TeaModel {
         }
 
         /**
+         * SecurityGroupId.
+         */
+        public Builder securityGroupId(String securityGroupId) {
+            this.securityGroupId = securityGroupId;
+            return this;
+        }
+
+        /**
          * <p>The job ID.</p>
          * 
          * <strong>example:</strong>
@@ -452,6 +486,14 @@ public class DescribeClusterResponseBody extends TeaModel {
          */
         public Builder updateTime(String updateTime) {
             this.updateTime = updateTime;
+            return this;
+        }
+
+        /**
+         * VSwitchId.
+         */
+        public Builder vSwitchId(String vSwitchId) {
+            this.vSwitchId = vSwitchId;
             return this;
         }
 

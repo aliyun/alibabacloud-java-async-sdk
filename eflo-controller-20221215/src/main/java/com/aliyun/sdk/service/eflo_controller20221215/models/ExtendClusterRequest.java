@@ -828,6 +828,9 @@ public class ExtendClusterRequest extends Request {
      * <p>ExtendClusterRequest</p>
      */
     public static class DataDisk extends TeaModel {
+        @com.aliyun.core.annotation.NameInMap("BurstingEnabled")
+        private Boolean burstingEnabled;
+
         @com.aliyun.core.annotation.NameInMap("Category")
         private String category;
 
@@ -837,13 +840,18 @@ public class ExtendClusterRequest extends Request {
         @com.aliyun.core.annotation.NameInMap("PerformanceLevel")
         private String performanceLevel;
 
+        @com.aliyun.core.annotation.NameInMap("ProvisionedIops")
+        private Long provisionedIops;
+
         @com.aliyun.core.annotation.NameInMap("Size")
         private Integer size;
 
         private DataDisk(Builder builder) {
+            this.burstingEnabled = builder.burstingEnabled;
             this.category = builder.category;
             this.deleteWithNode = builder.deleteWithNode;
             this.performanceLevel = builder.performanceLevel;
+            this.provisionedIops = builder.provisionedIops;
             this.size = builder.size;
         }
 
@@ -853,6 +861,13 @@ public class ExtendClusterRequest extends Request {
 
         public static DataDisk create() {
             return builder().build();
+        }
+
+        /**
+         * @return burstingEnabled
+         */
+        public Boolean getBurstingEnabled() {
+            return this.burstingEnabled;
         }
 
         /**
@@ -877,6 +892,13 @@ public class ExtendClusterRequest extends Request {
         }
 
         /**
+         * @return provisionedIops
+         */
+        public Long getProvisionedIops() {
+            return this.provisionedIops;
+        }
+
+        /**
          * @return size
          */
         public Integer getSize() {
@@ -884,20 +906,32 @@ public class ExtendClusterRequest extends Request {
         }
 
         public static final class Builder {
+            private Boolean burstingEnabled; 
             private String category; 
             private Boolean deleteWithNode; 
             private String performanceLevel; 
+            private Long provisionedIops; 
             private Integer size; 
 
             private Builder() {
             } 
 
             private Builder(DataDisk model) {
+                this.burstingEnabled = model.burstingEnabled;
                 this.category = model.category;
                 this.deleteWithNode = model.deleteWithNode;
                 this.performanceLevel = model.performanceLevel;
+                this.provisionedIops = model.provisionedIops;
                 this.size = model.size;
             } 
+
+            /**
+             * BurstingEnabled.
+             */
+            public Builder burstingEnabled(Boolean burstingEnabled) {
+                this.burstingEnabled = burstingEnabled;
+                return this;
+            }
 
             /**
              * Category.
@@ -920,6 +954,14 @@ public class ExtendClusterRequest extends Request {
              */
             public Builder performanceLevel(String performanceLevel) {
                 this.performanceLevel = performanceLevel;
+                return this;
+            }
+
+            /**
+             * ProvisionedIops.
+             */
+            public Builder provisionedIops(Long provisionedIops) {
+                this.provisionedIops = provisionedIops;
                 return this;
             }
 
@@ -1188,6 +1230,9 @@ public class ExtendClusterRequest extends Request {
      * <p>ExtendClusterRequest</p>
      */
     public static class NodesDataDisk extends TeaModel {
+        @com.aliyun.core.annotation.NameInMap("BurstingEnabled")
+        private Boolean burstingEnabled;
+
         @com.aliyun.core.annotation.NameInMap("Category")
         private String category;
 
@@ -1197,13 +1242,18 @@ public class ExtendClusterRequest extends Request {
         @com.aliyun.core.annotation.NameInMap("PerformanceLevel")
         private String performanceLevel;
 
+        @com.aliyun.core.annotation.NameInMap("ProvisionedIops")
+        private Long provisionedIops;
+
         @com.aliyun.core.annotation.NameInMap("Size")
         private Integer size;
 
         private NodesDataDisk(Builder builder) {
+            this.burstingEnabled = builder.burstingEnabled;
             this.category = builder.category;
             this.deleteWithNode = builder.deleteWithNode;
             this.performanceLevel = builder.performanceLevel;
+            this.provisionedIops = builder.provisionedIops;
             this.size = builder.size;
         }
 
@@ -1213,6 +1263,13 @@ public class ExtendClusterRequest extends Request {
 
         public static NodesDataDisk create() {
             return builder().build();
+        }
+
+        /**
+         * @return burstingEnabled
+         */
+        public Boolean getBurstingEnabled() {
+            return this.burstingEnabled;
         }
 
         /**
@@ -1237,6 +1294,13 @@ public class ExtendClusterRequest extends Request {
         }
 
         /**
+         * @return provisionedIops
+         */
+        public Long getProvisionedIops() {
+            return this.provisionedIops;
+        }
+
+        /**
          * @return size
          */
         public Integer getSize() {
@@ -1244,20 +1308,32 @@ public class ExtendClusterRequest extends Request {
         }
 
         public static final class Builder {
+            private Boolean burstingEnabled; 
             private String category; 
             private Boolean deleteWithNode; 
             private String performanceLevel; 
+            private Long provisionedIops; 
             private Integer size; 
 
             private Builder() {
             } 
 
             private Builder(NodesDataDisk model) {
+                this.burstingEnabled = model.burstingEnabled;
                 this.category = model.category;
                 this.deleteWithNode = model.deleteWithNode;
                 this.performanceLevel = model.performanceLevel;
+                this.provisionedIops = model.provisionedIops;
                 this.size = model.size;
             } 
+
+            /**
+             * BurstingEnabled.
+             */
+            public Builder burstingEnabled(Boolean burstingEnabled) {
+                this.burstingEnabled = burstingEnabled;
+                return this;
+            }
 
             /**
              * <p>Type</p>
@@ -1289,6 +1365,14 @@ public class ExtendClusterRequest extends Request {
              */
             public Builder performanceLevel(String performanceLevel) {
                 this.performanceLevel = performanceLevel;
+                return this;
+            }
+
+            /**
+             * ProvisionedIops.
+             */
+            public Builder provisionedIops(Long provisionedIops) {
+                this.provisionedIops = provisionedIops;
                 return this;
             }
 

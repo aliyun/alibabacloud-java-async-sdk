@@ -173,9 +173,11 @@ public class TagResourcesRequest extends Request {
      */
     public static class Tag extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Key")
+        @com.aliyun.core.annotation.Validation(maxLength = 128)
         private String key;
 
         @com.aliyun.core.annotation.NameInMap("Value")
+        @com.aliyun.core.annotation.Validation(maxLength = 256)
         private String value;
 
         private Tag(Builder builder) {
