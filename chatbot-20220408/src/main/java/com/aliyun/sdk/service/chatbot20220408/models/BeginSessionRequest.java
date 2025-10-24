@@ -25,15 +25,25 @@ public class BeginSessionRequest extends Request {
     @com.aliyun.core.annotation.NameInMap("AgentKey")
     private String agentKey;
 
-    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.Body
     @com.aliyun.core.annotation.NameInMap("InstanceId")
     private String instanceId;
+
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("SandBox")
+    private Boolean sandBox;
+
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("VendorParam")
+    private String vendorParam;
 
     private BeginSessionRequest(Builder builder) {
         super(builder);
         this.regionId = builder.regionId;
         this.agentKey = builder.agentKey;
         this.instanceId = builder.instanceId;
+        this.sandBox = builder.sandBox;
+        this.vendorParam = builder.vendorParam;
     }
 
     public static Builder builder() {
@@ -70,10 +80,26 @@ public class BeginSessionRequest extends Request {
         return this.instanceId;
     }
 
+    /**
+     * @return sandBox
+     */
+    public Boolean getSandBox() {
+        return this.sandBox;
+    }
+
+    /**
+     * @return vendorParam
+     */
+    public String getVendorParam() {
+        return this.vendorParam;
+    }
+
     public static final class Builder extends Request.Builder<BeginSessionRequest, Builder> {
         private String regionId; 
         private String agentKey; 
         private String instanceId; 
+        private Boolean sandBox; 
+        private String vendorParam; 
 
         private Builder() {
             super();
@@ -84,6 +110,8 @@ public class BeginSessionRequest extends Request {
             this.regionId = request.regionId;
             this.agentKey = request.agentKey;
             this.instanceId = request.instanceId;
+            this.sandBox = request.sandBox;
+            this.vendorParam = request.vendorParam;
         } 
 
         /**
@@ -108,8 +136,26 @@ public class BeginSessionRequest extends Request {
          * InstanceId.
          */
         public Builder instanceId(String instanceId) {
-            this.putQueryParameter("InstanceId", instanceId);
+            this.putBodyParameter("InstanceId", instanceId);
             this.instanceId = instanceId;
+            return this;
+        }
+
+        /**
+         * SandBox.
+         */
+        public Builder sandBox(Boolean sandBox) {
+            this.putBodyParameter("SandBox", sandBox);
+            this.sandBox = sandBox;
+            return this;
+        }
+
+        /**
+         * VendorParam.
+         */
+        public Builder vendorParam(String vendorParam) {
+            this.putBodyParameter("VendorParam", vendorParam);
+            this.vendorParam = vendorParam;
             return this;
         }
 

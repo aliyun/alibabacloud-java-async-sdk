@@ -47,6 +47,10 @@ public class CreateFaqRequest extends Request {
     private String startDate;
 
     @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("TagIdList")
+    private java.util.List<Long> tagIdList;
+
+    @com.aliyun.core.annotation.Body
     @com.aliyun.core.annotation.NameInMap("Title")
     @com.aliyun.core.annotation.Validation(required = true)
     private String title;
@@ -60,6 +64,7 @@ public class CreateFaqRequest extends Request {
         this.solutionContent = builder.solutionContent;
         this.solutionType = builder.solutionType;
         this.startDate = builder.startDate;
+        this.tagIdList = builder.tagIdList;
         this.title = builder.title;
     }
 
@@ -126,6 +131,13 @@ public class CreateFaqRequest extends Request {
     }
 
     /**
+     * @return tagIdList
+     */
+    public java.util.List<Long> getTagIdList() {
+        return this.tagIdList;
+    }
+
+    /**
      * @return title
      */
     public String getTitle() {
@@ -140,6 +152,7 @@ public class CreateFaqRequest extends Request {
         private String solutionContent; 
         private Integer solutionType; 
         private String startDate; 
+        private java.util.List<Long> tagIdList; 
         private String title; 
 
         private Builder() {
@@ -155,6 +168,7 @@ public class CreateFaqRequest extends Request {
             this.solutionContent = request.solutionContent;
             this.solutionType = request.solutionType;
             this.startDate = request.startDate;
+            this.tagIdList = request.tagIdList;
             this.title = request.title;
         } 
 
@@ -221,6 +235,16 @@ public class CreateFaqRequest extends Request {
         public Builder startDate(String startDate) {
             this.putBodyParameter("StartDate", startDate);
             this.startDate = startDate;
+            return this;
+        }
+
+        /**
+         * TagIdList.
+         */
+        public Builder tagIdList(java.util.List<Long> tagIdList) {
+            String tagIdListShrink = shrink(tagIdList, "TagIdList", "json");
+            this.putBodyParameter("TagIdList", tagIdListShrink);
+            this.tagIdList = tagIdList;
             return this;
         }
 

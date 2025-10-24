@@ -44,6 +44,10 @@ public class UpdateSolutionRequest extends Request {
     @com.aliyun.core.annotation.Validation(required = true)
     private Long solutionId;
 
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("TagIdList")
+    private java.util.List<Long> tagIdList;
+
     private UpdateSolutionRequest(Builder builder) {
         super(builder);
         this.regionId = builder.regionId;
@@ -52,6 +56,7 @@ public class UpdateSolutionRequest extends Request {
         this.contentType = builder.contentType;
         this.perspectiveCodes = builder.perspectiveCodes;
         this.solutionId = builder.solutionId;
+        this.tagIdList = builder.tagIdList;
     }
 
     public static Builder builder() {
@@ -109,6 +114,13 @@ public class UpdateSolutionRequest extends Request {
         return this.solutionId;
     }
 
+    /**
+     * @return tagIdList
+     */
+    public java.util.List<Long> getTagIdList() {
+        return this.tagIdList;
+    }
+
     public static final class Builder extends Request.Builder<UpdateSolutionRequest, Builder> {
         private String regionId; 
         private String agentKey; 
@@ -116,6 +128,7 @@ public class UpdateSolutionRequest extends Request {
         private Integer contentType; 
         private java.util.List<String> perspectiveCodes; 
         private Long solutionId; 
+        private java.util.List<Long> tagIdList; 
 
         private Builder() {
             super();
@@ -129,6 +142,7 @@ public class UpdateSolutionRequest extends Request {
             this.contentType = request.contentType;
             this.perspectiveCodes = request.perspectiveCodes;
             this.solutionId = request.solutionId;
+            this.tagIdList = request.tagIdList;
         } 
 
         /**
@@ -185,6 +199,16 @@ public class UpdateSolutionRequest extends Request {
         public Builder solutionId(Long solutionId) {
             this.putBodyParameter("SolutionId", solutionId);
             this.solutionId = solutionId;
+            return this;
+        }
+
+        /**
+         * TagIdList.
+         */
+        public Builder tagIdList(java.util.List<Long> tagIdList) {
+            String tagIdListShrink = shrink(tagIdList, "TagIdList", "json");
+            this.putBodyParameter("TagIdList", tagIdListShrink);
+            this.tagIdList = tagIdList;
             return this;
         }
 

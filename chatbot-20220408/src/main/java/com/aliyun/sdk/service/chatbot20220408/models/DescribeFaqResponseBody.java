@@ -59,6 +59,9 @@ public class DescribeFaqResponseBody extends TeaModel {
     @com.aliyun.core.annotation.NameInMap("Status")
     private Integer status;
 
+    @com.aliyun.core.annotation.NameInMap("TagIdList")
+    private java.util.List<Long> tagIdList;
+
     @com.aliyun.core.annotation.NameInMap("Title")
     private String title;
 
@@ -77,6 +80,7 @@ public class DescribeFaqResponseBody extends TeaModel {
         this.solutions = builder.solutions;
         this.startDate = builder.startDate;
         this.status = builder.status;
+        this.tagIdList = builder.tagIdList;
         this.title = builder.title;
     }
 
@@ -191,6 +195,13 @@ public class DescribeFaqResponseBody extends TeaModel {
     }
 
     /**
+     * @return tagIdList
+     */
+    public java.util.List<Long> getTagIdList() {
+        return this.tagIdList;
+    }
+
+    /**
      * @return title
      */
     public String getTitle() {
@@ -212,6 +223,7 @@ public class DescribeFaqResponseBody extends TeaModel {
         private java.util.List<Solutions> solutions; 
         private String startDate; 
         private Integer status; 
+        private java.util.List<Long> tagIdList; 
         private String title; 
 
         private Builder() {
@@ -232,6 +244,7 @@ public class DescribeFaqResponseBody extends TeaModel {
             this.solutions = model.solutions;
             this.startDate = model.startDate;
             this.status = model.status;
+            this.tagIdList = model.tagIdList;
             this.title = model.title;
         } 
 
@@ -344,6 +357,14 @@ public class DescribeFaqResponseBody extends TeaModel {
          */
         public Builder status(Integer status) {
             this.status = status;
+            return this;
+        }
+
+        /**
+         * TagIdList.
+         */
+        public Builder tagIdList(java.util.List<Long> tagIdList) {
+            this.tagIdList = tagIdList;
             return this;
         }
 

@@ -44,6 +44,10 @@ public class CreateSolutionRequest extends Request {
     @com.aliyun.core.annotation.Validation(required = true)
     private java.util.List<String> perspectiveCodes;
 
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("TagIdList")
+    private java.util.List<Long> tagIdList;
+
     private CreateSolutionRequest(Builder builder) {
         super(builder);
         this.regionId = builder.regionId;
@@ -52,6 +56,7 @@ public class CreateSolutionRequest extends Request {
         this.contentType = builder.contentType;
         this.knowledgeId = builder.knowledgeId;
         this.perspectiveCodes = builder.perspectiveCodes;
+        this.tagIdList = builder.tagIdList;
     }
 
     public static Builder builder() {
@@ -109,6 +114,13 @@ public class CreateSolutionRequest extends Request {
         return this.perspectiveCodes;
     }
 
+    /**
+     * @return tagIdList
+     */
+    public java.util.List<Long> getTagIdList() {
+        return this.tagIdList;
+    }
+
     public static final class Builder extends Request.Builder<CreateSolutionRequest, Builder> {
         private String regionId; 
         private String agentKey; 
@@ -116,6 +128,7 @@ public class CreateSolutionRequest extends Request {
         private Integer contentType; 
         private Long knowledgeId; 
         private java.util.List<String> perspectiveCodes; 
+        private java.util.List<Long> tagIdList; 
 
         private Builder() {
             super();
@@ -129,6 +142,7 @@ public class CreateSolutionRequest extends Request {
             this.contentType = request.contentType;
             this.knowledgeId = request.knowledgeId;
             this.perspectiveCodes = request.perspectiveCodes;
+            this.tagIdList = request.tagIdList;
         } 
 
         /**
@@ -185,6 +199,16 @@ public class CreateSolutionRequest extends Request {
         public Builder perspectiveCodes(java.util.List<String> perspectiveCodes) {
             this.putQueryParameter("PerspectiveCodes", perspectiveCodes);
             this.perspectiveCodes = perspectiveCodes;
+            return this;
+        }
+
+        /**
+         * TagIdList.
+         */
+        public Builder tagIdList(java.util.List<Long> tagIdList) {
+            String tagIdListShrink = shrink(tagIdList, "TagIdList", "json");
+            this.putBodyParameter("TagIdList", tagIdListShrink);
+            this.tagIdList = tagIdList;
             return this;
         }
 

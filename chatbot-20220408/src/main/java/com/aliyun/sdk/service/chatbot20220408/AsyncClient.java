@@ -146,6 +146,18 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<CreateSolutionResponse> createSolution(CreateSolutionRequest request);
 
     /**
+     * @param request the request parameters of CreateTag  CreateTagRequest
+     * @return CreateTagResponse
+     */
+    CompletableFuture<CreateTagResponse> createTag(CreateTagRequest request);
+
+    /**
+     * @param request the request parameters of CreateTagGroup  CreateTagGroupRequest
+     * @return CreateTagGroupResponse
+     */
+    CompletableFuture<CreateTagGroupResponse> createTagGroup(CreateTagGroupRequest request);
+
+    /**
      * @param request the request parameters of CreateUserSay  CreateUserSayRequest
      * @return CreateUserSayResponse
      */
@@ -224,6 +236,18 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<DeleteSolutionResponse> deleteSolution(DeleteSolutionRequest request);
 
     /**
+     * @param request the request parameters of DeleteTag  DeleteTagRequest
+     * @return DeleteTagResponse
+     */
+    CompletableFuture<DeleteTagResponse> deleteTag(DeleteTagRequest request);
+
+    /**
+     * @param request the request parameters of DeleteTagGroup  DeleteTagGroupRequest
+     * @return DeleteTagGroupResponse
+     */
+    CompletableFuture<DeleteTagGroupResponse> deleteTagGroup(DeleteTagGroupRequest request);
+
+    /**
      * @param request the request parameters of DeleteUserSay  DeleteUserSayRequest
      * @return DeleteUserSayResponse
      */
@@ -270,6 +294,18 @@ public interface AsyncClient extends SdkAutoCloseable {
      * @return DescribePerspectiveResponse
      */
     CompletableFuture<DescribePerspectiveResponse> describePerspective(DescribePerspectiveRequest request);
+
+    /**
+     * @param request the request parameters of DescribeTag  DescribeTagRequest
+     * @return DescribeTagResponse
+     */
+    CompletableFuture<DescribeTagResponse> describeTag(DescribeTagRequest request);
+
+    /**
+     * @param request the request parameters of DescribeTagGroup  DescribeTagGroupRequest
+     * @return DescribeTagGroupResponse
+     */
+    CompletableFuture<DescribeTagGroupResponse> describeTagGroup(DescribeTagGroupRequest request);
 
     /**
      * @param request the request parameters of Feedback  FeedbackRequest
@@ -398,6 +434,18 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<ListSolutionResponse> listSolution(ListSolutionRequest request);
 
     /**
+     * @param request the request parameters of ListTag  ListTagRequest
+     * @return ListTagResponse
+     */
+    CompletableFuture<ListTagResponse> listTag(ListTagRequest request);
+
+    /**
+     * @param request the request parameters of ListTagGroup  ListTagGroupRequest
+     * @return ListTagGroupResponse
+     */
+    CompletableFuture<ListTagGroupResponse> listTagGroup(ListTagGroupRequest request);
+
+    /**
      * @param request the request parameters of ListTongyiChatHistorys  ListTongyiChatHistorysRequest
      * @return ListTongyiChatHistorysResponse
      */
@@ -522,6 +570,18 @@ public interface AsyncClient extends SdkAutoCloseable {
      * @return UpdateSolutionResponse
      */
     CompletableFuture<UpdateSolutionResponse> updateSolution(UpdateSolutionRequest request);
+
+    /**
+     * @param request the request parameters of UpdateTag  UpdateTagRequest
+     * @return UpdateTagResponse
+     */
+    CompletableFuture<UpdateTagResponse> updateTag(UpdateTagRequest request);
+
+    /**
+     * @param request the request parameters of UpdateTagGroup  UpdateTagGroupRequest
+     * @return UpdateTagGroupResponse
+     */
+    CompletableFuture<UpdateTagGroupResponse> updateTagGroup(UpdateTagGroupRequest request);
 
     /**
      * @param request the request parameters of UpdateUserSay  UpdateUserSayRequest
