@@ -249,7 +249,7 @@ public class EnrichRequest extends Request {
         }
 
         /**
-         * <p>language code(refer to ISO_639), defaults to the buyer&quot;s account configuration</p>
+         * <p>language code, defaults to the buyer&quot;s account configuration</p>
          * 
          * <strong>example:</strong>
          * <p>en_US</p>
@@ -278,7 +278,6 @@ public class EnrichRequest extends Request {
         private String arrivalAirport;
 
         @com.aliyun.core.annotation.NameInMap("arrival_city")
-        @com.aliyun.core.annotation.Validation(required = true)
         private String arrivalCity;
 
         @com.aliyun.core.annotation.NameInMap("cabin")
@@ -291,7 +290,6 @@ public class EnrichRequest extends Request {
         private String departureAirport;
 
         @com.aliyun.core.annotation.NameInMap("departure_city")
-        @com.aliyun.core.annotation.Validation(required = true)
         private String departureCity;
 
         @com.aliyun.core.annotation.NameInMap("departure_time")
@@ -402,7 +400,7 @@ public class EnrichRequest extends Request {
             } 
 
             /**
-             * <p>arrival airport code (capitalized)</p>
+             * <p>arrival airport code</p>
              * 
              * <strong>example:</strong>
              * <p>MFM</p>
@@ -413,8 +411,7 @@ public class EnrichRequest extends Request {
             }
 
             /**
-             * <p>arrival city code (capitalized)</p>
-             * <p>This parameter is required.</p>
+             * <p>arrival city code</p>
              * 
              * <strong>example:</strong>
              * <p>MFM</p>
@@ -447,7 +444,7 @@ public class EnrichRequest extends Request {
             }
 
             /**
-             * <p>departure airport code (capitalized)</p>
+             * <p>departure airport code</p>
              * 
              * <strong>example:</strong>
              * <p>PVG</p>
@@ -458,8 +455,7 @@ public class EnrichRequest extends Request {
             }
 
             /**
-             * <p>departure city code (capitalized)</p>
-             * <p>This parameter is required.</p>
+             * <p>departure city code</p>
              * 
              * <strong>example:</strong>
              * <p>SHA</p>
@@ -583,7 +579,7 @@ public class EnrichRequest extends Request {
             } 
 
             /**
-             * <p>arrival city code (capitalized)</p>
+             * <p>arrival city code</p>
              * <p>This parameter is required.</p>
              * 
              * <strong>example:</strong>
@@ -595,7 +591,7 @@ public class EnrichRequest extends Request {
             }
 
             /**
-             * <p>departure city code (capitalized)</p>
+             * <p>departure city code</p>
              * <p>This parameter is required.</p>
              * 
              * <strong>example:</strong>

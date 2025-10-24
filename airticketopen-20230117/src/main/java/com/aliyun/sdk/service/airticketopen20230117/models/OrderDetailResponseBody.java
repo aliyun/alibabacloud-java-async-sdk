@@ -2968,6 +2968,156 @@ public class OrderDetailResponseBody extends TeaModel {
      *
      * <p>OrderDetailResponseBody</p>
      */
+    public static class IssueTimeInfo extends TeaModel {
+        @com.aliyun.core.annotation.NameInMap("issue_ticket_type")
+        private Integer issueTicketType;
+
+        @com.aliyun.core.annotation.NameInMap("issue_time_limit")
+        private Integer issueTimeLimit;
+
+        private IssueTimeInfo(Builder builder) {
+            this.issueTicketType = builder.issueTicketType;
+            this.issueTimeLimit = builder.issueTimeLimit;
+        }
+
+        public static Builder builder() {
+            return new Builder();
+        }
+
+        public static IssueTimeInfo create() {
+            return builder().build();
+        }
+
+        /**
+         * @return issueTicketType
+         */
+        public Integer getIssueTicketType() {
+            return this.issueTicketType;
+        }
+
+        /**
+         * @return issueTimeLimit
+         */
+        public Integer getIssueTimeLimit() {
+            return this.issueTimeLimit;
+        }
+
+        public static final class Builder {
+            private Integer issueTicketType; 
+            private Integer issueTimeLimit; 
+
+            private Builder() {
+            } 
+
+            private Builder(IssueTimeInfo model) {
+                this.issueTicketType = model.issueTicketType;
+                this.issueTimeLimit = model.issueTimeLimit;
+            } 
+
+            /**
+             * issue_ticket_type.
+             */
+            public Builder issueTicketType(Integer issueTicketType) {
+                this.issueTicketType = issueTicketType;
+                return this;
+            }
+
+            /**
+             * issue_time_limit.
+             */
+            public Builder issueTimeLimit(Integer issueTimeLimit) {
+                this.issueTimeLimit = issueTimeLimit;
+                return this;
+            }
+
+            public IssueTimeInfo build() {
+                return new IssueTimeInfo(this);
+            } 
+
+        } 
+
+    }
+    /**
+     * 
+     * {@link OrderDetailResponseBody} extends {@link TeaModel}
+     *
+     * <p>OrderDetailResponseBody</p>
+     */
+    public static class SolutionAttribute extends TeaModel {
+        @com.aliyun.core.annotation.NameInMap("issue_time_info")
+        private IssueTimeInfo issueTimeInfo;
+
+        @com.aliyun.core.annotation.NameInMap("supply_source_type")
+        private String supplySourceType;
+
+        private SolutionAttribute(Builder builder) {
+            this.issueTimeInfo = builder.issueTimeInfo;
+            this.supplySourceType = builder.supplySourceType;
+        }
+
+        public static Builder builder() {
+            return new Builder();
+        }
+
+        public static SolutionAttribute create() {
+            return builder().build();
+        }
+
+        /**
+         * @return issueTimeInfo
+         */
+        public IssueTimeInfo getIssueTimeInfo() {
+            return this.issueTimeInfo;
+        }
+
+        /**
+         * @return supplySourceType
+         */
+        public String getSupplySourceType() {
+            return this.supplySourceType;
+        }
+
+        public static final class Builder {
+            private IssueTimeInfo issueTimeInfo; 
+            private String supplySourceType; 
+
+            private Builder() {
+            } 
+
+            private Builder(SolutionAttribute model) {
+                this.issueTimeInfo = model.issueTimeInfo;
+                this.supplySourceType = model.supplySourceType;
+            } 
+
+            /**
+             * issue_time_info.
+             */
+            public Builder issueTimeInfo(IssueTimeInfo issueTimeInfo) {
+                this.issueTimeInfo = issueTimeInfo;
+                return this;
+            }
+
+            /**
+             * supply_source_type.
+             */
+            public Builder supplySourceType(String supplySourceType) {
+                this.supplySourceType = supplySourceType;
+                return this;
+            }
+
+            public SolutionAttribute build() {
+                return new SolutionAttribute(this);
+            } 
+
+        } 
+
+    }
+    /**
+     * 
+     * {@link OrderDetailResponseBody} extends {@link TeaModel}
+     *
+     * <p>OrderDetailResponseBody</p>
+     */
     public static class Solution extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("adult_price")
         private Double adultPrice;
@@ -3005,6 +3155,9 @@ public class OrderDetailResponseBody extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("segment_refund_change_rule_mapping_list")
         private java.util.List<SegmentRefundChangeRuleMappingList> segmentRefundChangeRuleMappingList;
 
+        @com.aliyun.core.annotation.NameInMap("solution_attribute")
+        private SolutionAttribute solutionAttribute;
+
         @com.aliyun.core.annotation.NameInMap("solution_id")
         private String solutionId;
 
@@ -3021,6 +3174,7 @@ public class OrderDetailResponseBody extends TeaModel {
             this.segmentBaggageCheckInInfoList = builder.segmentBaggageCheckInInfoList;
             this.segmentBaggageMappingList = builder.segmentBaggageMappingList;
             this.segmentRefundChangeRuleMappingList = builder.segmentRefundChangeRuleMappingList;
+            this.solutionAttribute = builder.solutionAttribute;
             this.solutionId = builder.solutionId;
         }
 
@@ -3117,6 +3271,13 @@ public class OrderDetailResponseBody extends TeaModel {
         }
 
         /**
+         * @return solutionAttribute
+         */
+        public SolutionAttribute getSolutionAttribute() {
+            return this.solutionAttribute;
+        }
+
+        /**
          * @return solutionId
          */
         public String getSolutionId() {
@@ -3136,6 +3297,7 @@ public class OrderDetailResponseBody extends TeaModel {
             private java.util.List<SegmentBaggageCheckInInfoList> segmentBaggageCheckInInfoList; 
             private java.util.List<SegmentBaggageMappingList> segmentBaggageMappingList; 
             private java.util.List<SegmentRefundChangeRuleMappingList> segmentRefundChangeRuleMappingList; 
+            private SolutionAttribute solutionAttribute; 
             private String solutionId; 
 
             private Builder() {
@@ -3154,6 +3316,7 @@ public class OrderDetailResponseBody extends TeaModel {
                 this.segmentBaggageCheckInInfoList = model.segmentBaggageCheckInInfoList;
                 this.segmentBaggageMappingList = model.segmentBaggageMappingList;
                 this.segmentRefundChangeRuleMappingList = model.segmentRefundChangeRuleMappingList;
+                this.solutionAttribute = model.solutionAttribute;
                 this.solutionId = model.solutionId;
             } 
 
@@ -3274,6 +3437,14 @@ public class OrderDetailResponseBody extends TeaModel {
              */
             public Builder segmentRefundChangeRuleMappingList(java.util.List<SegmentRefundChangeRuleMappingList> segmentRefundChangeRuleMappingList) {
                 this.segmentRefundChangeRuleMappingList = segmentRefundChangeRuleMappingList;
+                return this;
+            }
+
+            /**
+             * solution_attribute.
+             */
+            public Builder solutionAttribute(SolutionAttribute solutionAttribute) {
+                this.solutionAttribute = solutionAttribute;
                 return this;
             }
 

@@ -1094,11 +1094,90 @@ public class SearchResponseBody extends TeaModel {
      *
      * <p>SearchResponseBody</p>
      */
+    public static class IssueTimeInfo extends TeaModel {
+        @com.aliyun.core.annotation.NameInMap("issue_ticket_type")
+        private Integer issueTicketType;
+
+        @com.aliyun.core.annotation.NameInMap("issue_time_limit")
+        private Integer issueTimeLimit;
+
+        private IssueTimeInfo(Builder builder) {
+            this.issueTicketType = builder.issueTicketType;
+            this.issueTimeLimit = builder.issueTimeLimit;
+        }
+
+        public static Builder builder() {
+            return new Builder();
+        }
+
+        public static IssueTimeInfo create() {
+            return builder().build();
+        }
+
+        /**
+         * @return issueTicketType
+         */
+        public Integer getIssueTicketType() {
+            return this.issueTicketType;
+        }
+
+        /**
+         * @return issueTimeLimit
+         */
+        public Integer getIssueTimeLimit() {
+            return this.issueTimeLimit;
+        }
+
+        public static final class Builder {
+            private Integer issueTicketType; 
+            private Integer issueTimeLimit; 
+
+            private Builder() {
+            } 
+
+            private Builder(IssueTimeInfo model) {
+                this.issueTicketType = model.issueTicketType;
+                this.issueTimeLimit = model.issueTimeLimit;
+            } 
+
+            /**
+             * issue_ticket_type.
+             */
+            public Builder issueTicketType(Integer issueTicketType) {
+                this.issueTicketType = issueTicketType;
+                return this;
+            }
+
+            /**
+             * issue_time_limit.
+             */
+            public Builder issueTimeLimit(Integer issueTimeLimit) {
+                this.issueTimeLimit = issueTimeLimit;
+                return this;
+            }
+
+            public IssueTimeInfo build() {
+                return new IssueTimeInfo(this);
+            } 
+
+        } 
+
+    }
+    /**
+     * 
+     * {@link SearchResponseBody} extends {@link TeaModel}
+     *
+     * <p>SearchResponseBody</p>
+     */
     public static class SolutionAttribute extends TeaModel {
+        @com.aliyun.core.annotation.NameInMap("issue_time_info")
+        private IssueTimeInfo issueTimeInfo;
+
         @com.aliyun.core.annotation.NameInMap("supply_source_type")
         private String supplySourceType;
 
         private SolutionAttribute(Builder builder) {
+            this.issueTimeInfo = builder.issueTimeInfo;
             this.supplySourceType = builder.supplySourceType;
         }
 
@@ -1111,6 +1190,13 @@ public class SearchResponseBody extends TeaModel {
         }
 
         /**
+         * @return issueTimeInfo
+         */
+        public IssueTimeInfo getIssueTimeInfo() {
+            return this.issueTimeInfo;
+        }
+
+        /**
          * @return supplySourceType
          */
         public String getSupplySourceType() {
@@ -1118,14 +1204,24 @@ public class SearchResponseBody extends TeaModel {
         }
 
         public static final class Builder {
+            private IssueTimeInfo issueTimeInfo; 
             private String supplySourceType; 
 
             private Builder() {
             } 
 
             private Builder(SolutionAttribute model) {
+                this.issueTimeInfo = model.issueTimeInfo;
                 this.supplySourceType = model.supplySourceType;
             } 
+
+            /**
+             * issue_time_info.
+             */
+            public Builder issueTimeInfo(IssueTimeInfo issueTimeInfo) {
+                this.issueTimeInfo = issueTimeInfo;
+                return this;
+            }
 
             /**
              * <p>supply source: 1;2;3</p>
@@ -1173,12 +1269,6 @@ public class SearchResponseBody extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("journey_list")
         private java.util.List<JourneyList> journeyList;
 
-        @com.aliyun.core.annotation.NameInMap("product_type_description")
-        private String productTypeDescription;
-
-        @com.aliyun.core.annotation.NameInMap("refund_ticket_coupon_description")
-        private String refundTicketCouponDescription;
-
         @com.aliyun.core.annotation.NameInMap("segment_baggage_check_in_info_list")
         private java.util.List<SegmentBaggageCheckInInfoList> segmentBaggageCheckInInfoList;
 
@@ -1202,8 +1292,6 @@ public class SearchResponseBody extends TeaModel {
             this.infantPrice = builder.infantPrice;
             this.infantTax = builder.infantTax;
             this.journeyList = builder.journeyList;
-            this.productTypeDescription = builder.productTypeDescription;
-            this.refundTicketCouponDescription = builder.refundTicketCouponDescription;
             this.segmentBaggageCheckInInfoList = builder.segmentBaggageCheckInInfoList;
             this.segmentBaggageMappingList = builder.segmentBaggageMappingList;
             this.segmentRefundChangeRuleMappingList = builder.segmentRefundChangeRuleMappingList;
@@ -1269,20 +1357,6 @@ public class SearchResponseBody extends TeaModel {
         }
 
         /**
-         * @return productTypeDescription
-         */
-        public String getProductTypeDescription() {
-            return this.productTypeDescription;
-        }
-
-        /**
-         * @return refundTicketCouponDescription
-         */
-        public String getRefundTicketCouponDescription() {
-            return this.refundTicketCouponDescription;
-        }
-
-        /**
          * @return segmentBaggageCheckInInfoList
          */
         public java.util.List<SegmentBaggageCheckInInfoList> getSegmentBaggageCheckInInfoList() {
@@ -1325,8 +1399,6 @@ public class SearchResponseBody extends TeaModel {
             private Double infantPrice; 
             private Double infantTax; 
             private java.util.List<JourneyList> journeyList; 
-            private String productTypeDescription; 
-            private String refundTicketCouponDescription; 
             private java.util.List<SegmentBaggageCheckInInfoList> segmentBaggageCheckInInfoList; 
             private java.util.List<SegmentBaggageMappingList> segmentBaggageMappingList; 
             private java.util.List<SegmentRefundChangeRuleMappingList> segmentRefundChangeRuleMappingList; 
@@ -1344,8 +1416,6 @@ public class SearchResponseBody extends TeaModel {
                 this.infantPrice = model.infantPrice;
                 this.infantTax = model.infantTax;
                 this.journeyList = model.journeyList;
-                this.productTypeDescription = model.productTypeDescription;
-                this.refundTicketCouponDescription = model.refundTicketCouponDescription;
                 this.segmentBaggageCheckInInfoList = model.segmentBaggageCheckInInfoList;
                 this.segmentBaggageMappingList = model.segmentBaggageMappingList;
                 this.segmentRefundChangeRuleMappingList = model.segmentRefundChangeRuleMappingList;
@@ -1424,28 +1494,6 @@ public class SearchResponseBody extends TeaModel {
              */
             public Builder journeyList(java.util.List<JourneyList> journeyList) {
                 this.journeyList = journeyList;
-                return this;
-            }
-
-            /**
-             * <p>product type description</p>
-             * 
-             * <strong>example:</strong>
-             * <p>&quot;&quot;</p>
-             */
-            public Builder productTypeDescription(String productTypeDescription) {
-                this.productTypeDescription = productTypeDescription;
-                return this;
-            }
-
-            /**
-             * <p>refund airline coupon description</p>
-             * 
-             * <strong>example:</strong>
-             * <p>&quot;&quot;</p>
-             */
-            public Builder refundTicketCouponDescription(String refundTicketCouponDescription) {
-                this.refundTicketCouponDescription = refundTicketCouponDescription;
                 return this;
             }
 

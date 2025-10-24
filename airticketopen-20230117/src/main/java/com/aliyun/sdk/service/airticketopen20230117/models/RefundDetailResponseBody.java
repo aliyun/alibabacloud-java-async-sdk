@@ -132,7 +132,10 @@ public class RefundDetailResponseBody extends TeaModel {
         } 
 
         /**
-         * RequestId.
+         * <p>RequestId</p>
+         * 
+         * <strong>example:</strong>
+         * <p>51593418-8C73-5E47-8BA8-3F1D4A00CC0B</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -605,7 +608,7 @@ public class RefundDetailResponseBody extends TeaModel {
             }
 
             /**
-             * <p>first name</p>
+             * <p>last name</p>
              * 
              * <strong>example:</strong>
              * <p>ZHANG</p>
@@ -1211,7 +1214,7 @@ public class RefundDetailResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>arrival airport code (capitalized)</p>
+             * <p>arrival airport code</p>
              * 
              * <strong>example:</strong>
              * <p>MFM</p>
@@ -1222,7 +1225,7 @@ public class RefundDetailResponseBody extends TeaModel {
             }
 
             /**
-             * <p>arrival city code (capitalized)</p>
+             * <p>arrival city code</p>
              * 
              * <strong>example:</strong>
              * <p>MFM</p>
@@ -1244,7 +1247,7 @@ public class RefundDetailResponseBody extends TeaModel {
             }
 
             /**
-             * <p>arrival time in string format (yyyy-MM-dd HH:mm:ss)</p>
+             * <p>arrival time (yyyy-MM-dd HH:mm:ss)</p>
              * 
              * <strong>example:</strong>
              * <p>2023-03-10 10:40:00</p>
@@ -1266,7 +1269,7 @@ public class RefundDetailResponseBody extends TeaModel {
             }
 
             /**
-             * <p>RBD</p>
+             * <p>carbin</p>
              * 
              * <strong>example:</strong>
              * <p>V</p>
@@ -1299,7 +1302,7 @@ public class RefundDetailResponseBody extends TeaModel {
             }
 
             /**
-             * <p>departure airport code (capitalized)</p>
+             * <p>departure airport code</p>
              * 
              * <strong>example:</strong>
              * <p>PVG</p>
@@ -1310,7 +1313,7 @@ public class RefundDetailResponseBody extends TeaModel {
             }
 
             /**
-             * <p>departure city code (capitalized)</p>
+             * <p>departure city code</p>
              * 
              * <strong>example:</strong>
              * <p>SHA</p>
@@ -1332,7 +1335,7 @@ public class RefundDetailResponseBody extends TeaModel {
             }
 
             /**
-             * <p>departure time in string format (yyyy-MM-dd HH:mm:ss)</p>
+             * <p>departure time (yyyy-MM-dd HH:mm:ss)</p>
              * 
              * <strong>example:</strong>
              * <p>2023-03-10 07:55:00</p>
@@ -1420,7 +1423,7 @@ public class RefundDetailResponseBody extends TeaModel {
             }
 
             /**
-             * <p>segment ID format: flight no.+departure airport[IATA airport code]+arrival airport[IATA airport code]+departure time(MMdd)</p>
+             * <p>segment ID: flight no.+departure airport+arrival airport+departure time(MMdd)</p>
              * 
              * <strong>example:</strong>
              * <p>HO1295-PVG-MFM-20230310</p>
@@ -1512,7 +1515,7 @@ public class RefundDetailResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>segment list</p>
+             * <p>segment list info</p>
              */
             public Builder segmentList(java.util.List<SegmentList> segmentList) {
                 this.segmentList = segmentList;
@@ -1520,7 +1523,7 @@ public class RefundDetailResponseBody extends TeaModel {
             }
 
             /**
-             * <p>number of transfer</p>
+             * <p>transfer count</p>
              * 
              * <strong>example:</strong>
              * <p>0</p>

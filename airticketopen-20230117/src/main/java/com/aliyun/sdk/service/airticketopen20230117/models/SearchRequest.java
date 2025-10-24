@@ -278,14 +278,12 @@ public class SearchRequest extends Request {
         private java.util.List<String> arrivalAirportList;
 
         @com.aliyun.core.annotation.NameInMap("arrival_city")
-        @com.aliyun.core.annotation.Validation(required = true)
         private String arrivalCity;
 
         @com.aliyun.core.annotation.NameInMap("departure_airport_list")
         private java.util.List<String> departureAirportList;
 
         @com.aliyun.core.annotation.NameInMap("departure_city")
-        @com.aliyun.core.annotation.Validation(required = true)
         private String departureCity;
 
         @com.aliyun.core.annotation.NameInMap("departure_date")
@@ -374,7 +372,6 @@ public class SearchRequest extends Request {
 
             /**
              * <p>arrival city code</p>
-             * <p>This parameter is required.</p>
              * 
              * <strong>example:</strong>
              * <p>MFM</p>
@@ -397,7 +394,6 @@ public class SearchRequest extends Request {
 
             /**
              * <p>departure city code</p>
-             * <p>This parameter is required.</p>
              * 
              * <strong>example:</strong>
              * <p>SHA</p>
@@ -493,6 +489,9 @@ public class SearchRequest extends Request {
 
             /**
              * <p>excluded airlines list</p>
+             * 
+             * <strong>example:</strong>
+             * <p>7C</p>
              */
             public Builder airlineExcludedList(java.util.List<String> airlineExcludedList) {
                 this.airlineExcludedList = airlineExcludedList;
@@ -501,6 +500,9 @@ public class SearchRequest extends Request {
 
             /**
              * <p>preferred airlines list</p>
+             * 
+             * <strong>example:</strong>
+             * <p>FD</p>
              */
             public Builder airlinePreferList(java.util.List<String> airlinePreferList) {
                 this.airlinePreferList = airlinePreferList;
