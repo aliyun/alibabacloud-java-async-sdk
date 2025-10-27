@@ -241,6 +241,12 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<ModifyAppPolicyResponse> modifyAppPolicy(ModifyAppPolicyRequest request);
 
     /**
+     * @param request the request parameters of ModifyBrowserInstanceGroup  ModifyBrowserInstanceGroupRequest
+     * @return ModifyBrowserInstanceGroupResponse
+     */
+    CompletableFuture<ModifyBrowserInstanceGroupResponse> modifyBrowserInstanceGroup(ModifyBrowserInstanceGroupRequest request);
+
+    /**
      * @param request the request parameters of ModifyNodePoolAmount  ModifyNodePoolAmountRequest
      * @return ModifyNodePoolAmountResponse
      */

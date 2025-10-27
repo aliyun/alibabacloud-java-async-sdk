@@ -78,6 +78,10 @@ public class CreateWuyingServerRequest extends Request {
     @com.aliyun.core.annotation.NameInMap("PromotionId")
     private String promotionId;
 
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("SavingPlanId")
+    private String savingPlanId;
+
     @com.aliyun.core.annotation.Body
     @com.aliyun.core.annotation.NameInMap("ServerInstanceType")
     private String serverInstanceType;
@@ -127,6 +131,7 @@ public class CreateWuyingServerRequest extends Request {
         this.period = builder.period;
         this.periodUnit = builder.periodUnit;
         this.promotionId = builder.promotionId;
+        this.savingPlanId = builder.savingPlanId;
         this.serverInstanceType = builder.serverInstanceType;
         this.serverPortRange = builder.serverPortRange;
         this.systemDiskCategory = builder.systemDiskCategory;
@@ -256,6 +261,13 @@ public class CreateWuyingServerRequest extends Request {
     }
 
     /**
+     * @return savingPlanId
+     */
+    public String getSavingPlanId() {
+        return this.savingPlanId;
+    }
+
+    /**
      * @return serverInstanceType
      */
     public String getServerInstanceType() {
@@ -327,6 +339,7 @@ public class CreateWuyingServerRequest extends Request {
         private Integer period; 
         private String periodUnit; 
         private String promotionId; 
+        private String savingPlanId; 
         private String serverInstanceType; 
         private String serverPortRange; 
         private String systemDiskCategory; 
@@ -357,6 +370,7 @@ public class CreateWuyingServerRequest extends Request {
             this.period = request.period;
             this.periodUnit = request.periodUnit;
             this.promotionId = request.promotionId;
+            this.savingPlanId = request.savingPlanId;
             this.serverInstanceType = request.serverInstanceType;
             this.serverPortRange = request.serverPortRange;
             this.systemDiskCategory = request.systemDiskCategory;
@@ -499,6 +513,15 @@ public class CreateWuyingServerRequest extends Request {
         public Builder promotionId(String promotionId) {
             this.putBodyParameter("PromotionId", promotionId);
             this.promotionId = promotionId;
+            return this;
+        }
+
+        /**
+         * SavingPlanId.
+         */
+        public Builder savingPlanId(String savingPlanId) {
+            this.putQueryParameter("SavingPlanId", savingPlanId);
+            this.savingPlanId = savingPlanId;
             return this;
         }
 
