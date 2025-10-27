@@ -18,6 +18,10 @@ import com.aliyun.sdk.gateway.pop.models.*;
  */
 public class KillProcessRequest extends Request {
     @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ComputingGroupId")
+    private String computingGroupId;
+
+    @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("DBInstanceId")
     @com.aliyun.core.annotation.Validation(required = true)
     private String DBInstanceId;
@@ -32,6 +36,7 @@ public class KillProcessRequest extends Request {
 
     private KillProcessRequest(Builder builder) {
         super(builder);
+        this.computingGroupId = builder.computingGroupId;
         this.DBInstanceId = builder.DBInstanceId;
         this.initialQueryId = builder.initialQueryId;
         this.regionId = builder.regionId;
@@ -48,6 +53,13 @@ public class KillProcessRequest extends Request {
 @Override
     public Builder toBuilder() {
         return new Builder(this);
+    }
+
+    /**
+     * @return computingGroupId
+     */
+    public String getComputingGroupId() {
+        return this.computingGroupId;
     }
 
     /**
@@ -72,6 +84,7 @@ public class KillProcessRequest extends Request {
     }
 
     public static final class Builder extends Request.Builder<KillProcessRequest, Builder> {
+        private String computingGroupId; 
         private String DBInstanceId; 
         private String initialQueryId; 
         private String regionId; 
@@ -82,10 +95,20 @@ public class KillProcessRequest extends Request {
 
         private Builder(KillProcessRequest request) {
             super(request);
+            this.computingGroupId = request.computingGroupId;
             this.DBInstanceId = request.DBInstanceId;
             this.initialQueryId = request.initialQueryId;
             this.regionId = request.regionId;
         } 
+
+        /**
+         * ComputingGroupId.
+         */
+        public Builder computingGroupId(String computingGroupId) {
+            this.putQueryParameter("ComputingGroupId", computingGroupId);
+            this.computingGroupId = computingGroupId;
+            return this;
+        }
 
         /**
          * <p>The cluster ID.</p>

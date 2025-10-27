@@ -18,6 +18,10 @@ import com.aliyun.sdk.gateway.pop.models.*;
  */
 public class ModifyDBInstanceConnectionStringRequest extends Request {
     @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ComputingGroupId")
+    private String computingGroupId;
+
+    @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("ConnectionString")
     private String connectionString;
 
@@ -44,6 +48,7 @@ public class ModifyDBInstanceConnectionStringRequest extends Request {
 
     private ModifyDBInstanceConnectionStringRequest(Builder builder) {
         super(builder);
+        this.computingGroupId = builder.computingGroupId;
         this.connectionString = builder.connectionString;
         this.connectionStringPrefix = builder.connectionStringPrefix;
         this.DBInstanceId = builder.DBInstanceId;
@@ -63,6 +68,13 @@ public class ModifyDBInstanceConnectionStringRequest extends Request {
 @Override
     public Builder toBuilder() {
         return new Builder(this);
+    }
+
+    /**
+     * @return computingGroupId
+     */
+    public String getComputingGroupId() {
+        return this.computingGroupId;
     }
 
     /**
@@ -108,6 +120,7 @@ public class ModifyDBInstanceConnectionStringRequest extends Request {
     }
 
     public static final class Builder extends Request.Builder<ModifyDBInstanceConnectionStringRequest, Builder> {
+        private String computingGroupId; 
         private String connectionString; 
         private String connectionStringPrefix; 
         private String DBInstanceId; 
@@ -121,6 +134,7 @@ public class ModifyDBInstanceConnectionStringRequest extends Request {
 
         private Builder(ModifyDBInstanceConnectionStringRequest request) {
             super(request);
+            this.computingGroupId = request.computingGroupId;
             this.connectionString = request.connectionString;
             this.connectionStringPrefix = request.connectionStringPrefix;
             this.DBInstanceId = request.DBInstanceId;
@@ -128,6 +142,15 @@ public class ModifyDBInstanceConnectionStringRequest extends Request {
             this.disablePorts = request.disablePorts;
             this.regionId = request.regionId;
         } 
+
+        /**
+         * ComputingGroupId.
+         */
+        public Builder computingGroupId(String computingGroupId) {
+            this.putQueryParameter("ComputingGroupId", computingGroupId);
+            this.computingGroupId = computingGroupId;
+            return this;
+        }
 
         /**
          * <p>The endpoint of the cluster.</p>

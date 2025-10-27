@@ -18,13 +18,17 @@ import com.aliyun.sdk.gateway.pop.models.*;
  */
 public class ModifyDBInstanceClassRequest extends Request {
     @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ComputingGroupId")
+    private String computingGroupId;
+
+    @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("DBInstanceId")
     @com.aliyun.core.annotation.Validation(required = true)
     private String DBInstanceId;
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("NodeCount")
-    @com.aliyun.core.annotation.Validation(maximum = 64, minimum = 2)
+    @com.aliyun.core.annotation.Validation(maximum = 64, minimum = 1)
     private Integer nodeCount;
 
     @com.aliyun.core.annotation.Query
@@ -59,6 +63,7 @@ public class ModifyDBInstanceClassRequest extends Request {
 
     private ModifyDBInstanceClassRequest(Builder builder) {
         super(builder);
+        this.computingGroupId = builder.computingGroupId;
         this.DBInstanceId = builder.DBInstanceId;
         this.nodeCount = builder.nodeCount;
         this.nodeScaleMax = builder.nodeScaleMax;
@@ -81,6 +86,13 @@ public class ModifyDBInstanceClassRequest extends Request {
 @Override
     public Builder toBuilder() {
         return new Builder(this);
+    }
+
+    /**
+     * @return computingGroupId
+     */
+    public String getComputingGroupId() {
+        return this.computingGroupId;
     }
 
     /**
@@ -147,6 +159,7 @@ public class ModifyDBInstanceClassRequest extends Request {
     }
 
     public static final class Builder extends Request.Builder<ModifyDBInstanceClassRequest, Builder> {
+        private String computingGroupId; 
         private String DBInstanceId; 
         private Integer nodeCount; 
         private Integer nodeScaleMax; 
@@ -163,6 +176,7 @@ public class ModifyDBInstanceClassRequest extends Request {
 
         private Builder(ModifyDBInstanceClassRequest request) {
             super(request);
+            this.computingGroupId = request.computingGroupId;
             this.DBInstanceId = request.DBInstanceId;
             this.nodeCount = request.nodeCount;
             this.nodeScaleMax = request.nodeScaleMax;
@@ -173,6 +187,15 @@ public class ModifyDBInstanceClassRequest extends Request {
             this.storageQuota = request.storageQuota;
             this.storageType = request.storageType;
         } 
+
+        /**
+         * ComputingGroupId.
+         */
+        public Builder computingGroupId(String computingGroupId) {
+            this.putQueryParameter("ComputingGroupId", computingGroupId);
+            this.computingGroupId = computingGroupId;
+            return this;
+        }
 
         /**
          * <p>The cluster ID.</p>

@@ -18,6 +18,10 @@ import com.aliyun.sdk.gateway.pop.models.*;
  */
 public class DescribeProcessListRequest extends Request {
     @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ComputingGroupId")
+    private String computingGroupId;
+
+    @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("DBInstanceId")
     @com.aliyun.core.annotation.Validation(required = true)
     private String DBInstanceId;
@@ -56,6 +60,7 @@ public class DescribeProcessListRequest extends Request {
 
     private DescribeProcessListRequest(Builder builder) {
         super(builder);
+        this.computingGroupId = builder.computingGroupId;
         this.DBInstanceId = builder.DBInstanceId;
         this.initialQueryId = builder.initialQueryId;
         this.initialUser = builder.initialUser;
@@ -78,6 +83,13 @@ public class DescribeProcessListRequest extends Request {
 @Override
     public Builder toBuilder() {
         return new Builder(this);
+    }
+
+    /**
+     * @return computingGroupId
+     */
+    public String getComputingGroupId() {
+        return this.computingGroupId;
     }
 
     /**
@@ -144,6 +156,7 @@ public class DescribeProcessListRequest extends Request {
     }
 
     public static final class Builder extends Request.Builder<DescribeProcessListRequest, Builder> {
+        private String computingGroupId; 
         private String DBInstanceId; 
         private String initialQueryId; 
         private String initialUser; 
@@ -160,6 +173,7 @@ public class DescribeProcessListRequest extends Request {
 
         private Builder(DescribeProcessListRequest request) {
             super(request);
+            this.computingGroupId = request.computingGroupId;
             this.DBInstanceId = request.DBInstanceId;
             this.initialQueryId = request.initialQueryId;
             this.initialUser = request.initialUser;
@@ -170,6 +184,15 @@ public class DescribeProcessListRequest extends Request {
             this.queryOrder = request.queryOrder;
             this.regionId = request.regionId;
         } 
+
+        /**
+         * ComputingGroupId.
+         */
+        public Builder computingGroupId(String computingGroupId) {
+            this.putQueryParameter("ComputingGroupId", computingGroupId);
+            this.computingGroupId = computingGroupId;
+            return this;
+        }
 
         /**
          * <p>The cluster ID.</p>

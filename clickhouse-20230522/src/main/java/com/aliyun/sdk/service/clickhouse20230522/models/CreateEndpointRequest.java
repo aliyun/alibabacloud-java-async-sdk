@@ -18,6 +18,10 @@ import com.aliyun.sdk.gateway.pop.models.*;
  */
 public class CreateEndpointRequest extends Request {
     @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ComputingGroupId")
+    private String computingGroupId;
+
+    @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("ConnectionPrefix")
     private String connectionPrefix;
 
@@ -37,6 +41,7 @@ public class CreateEndpointRequest extends Request {
 
     private CreateEndpointRequest(Builder builder) {
         super(builder);
+        this.computingGroupId = builder.computingGroupId;
         this.connectionPrefix = builder.connectionPrefix;
         this.DBInstanceId = builder.DBInstanceId;
         this.DBInstanceNetType = builder.DBInstanceNetType;
@@ -54,6 +59,13 @@ public class CreateEndpointRequest extends Request {
 @Override
     public Builder toBuilder() {
         return new Builder(this);
+    }
+
+    /**
+     * @return computingGroupId
+     */
+    public String getComputingGroupId() {
+        return this.computingGroupId;
     }
 
     /**
@@ -85,6 +97,7 @@ public class CreateEndpointRequest extends Request {
     }
 
     public static final class Builder extends Request.Builder<CreateEndpointRequest, Builder> {
+        private String computingGroupId; 
         private String connectionPrefix; 
         private String DBInstanceId; 
         private String DBInstanceNetType; 
@@ -96,11 +109,21 @@ public class CreateEndpointRequest extends Request {
 
         private Builder(CreateEndpointRequest request) {
             super(request);
+            this.computingGroupId = request.computingGroupId;
             this.connectionPrefix = request.connectionPrefix;
             this.DBInstanceId = request.DBInstanceId;
             this.DBInstanceNetType = request.DBInstanceNetType;
             this.regionId = request.regionId;
         } 
+
+        /**
+         * ComputingGroupId.
+         */
+        public Builder computingGroupId(String computingGroupId) {
+            this.putQueryParameter("ComputingGroupId", computingGroupId);
+            this.computingGroupId = computingGroupId;
+            return this;
+        }
 
         /**
          * <p>The prefix of the new endpoint. The prefix of the ConnectionString parameter.</p>

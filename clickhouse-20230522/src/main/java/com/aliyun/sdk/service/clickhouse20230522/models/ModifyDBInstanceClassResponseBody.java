@@ -98,6 +98,9 @@ public class ModifyDBInstanceClassResponseBody extends TeaModel {
      * <p>ModifyDBInstanceClassResponseBody</p>
      */
     public static class Data extends TeaModel {
+        @com.aliyun.core.annotation.NameInMap("ComputingGroupId")
+        private String computingGroupId;
+
         @com.aliyun.core.annotation.NameInMap("DBInstanceID")
         private Long DBInstanceID;
 
@@ -114,6 +117,7 @@ public class ModifyDBInstanceClassResponseBody extends TeaModel {
         private Long taskId;
 
         private Data(Builder builder) {
+            this.computingGroupId = builder.computingGroupId;
             this.DBInstanceID = builder.DBInstanceID;
             this.DBInstanceName = builder.DBInstanceName;
             this.scaleMax = builder.scaleMax;
@@ -127,6 +131,13 @@ public class ModifyDBInstanceClassResponseBody extends TeaModel {
 
         public static Data create() {
             return builder().build();
+        }
+
+        /**
+         * @return computingGroupId
+         */
+        public String getComputingGroupId() {
+            return this.computingGroupId;
         }
 
         /**
@@ -165,6 +176,7 @@ public class ModifyDBInstanceClassResponseBody extends TeaModel {
         }
 
         public static final class Builder {
+            private String computingGroupId; 
             private Long DBInstanceID; 
             private String DBInstanceName; 
             private Long scaleMax; 
@@ -175,12 +187,21 @@ public class ModifyDBInstanceClassResponseBody extends TeaModel {
             } 
 
             private Builder(Data model) {
+                this.computingGroupId = model.computingGroupId;
                 this.DBInstanceID = model.DBInstanceID;
                 this.DBInstanceName = model.DBInstanceName;
                 this.scaleMax = model.scaleMax;
                 this.scaleMin = model.scaleMin;
                 this.taskId = model.taskId;
             } 
+
+            /**
+             * ComputingGroupId.
+             */
+            public Builder computingGroupId(String computingGroupId) {
+                this.computingGroupId = computingGroupId;
+                return this;
+            }
 
             /**
              * <p>The cluster ID.</p>

@@ -18,6 +18,10 @@ import com.aliyun.sdk.gateway.pop.models.*;
  */
 public class DescribeSlowLogRecordsRequest extends Request {
     @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ComputingGroupId")
+    private String computingGroupId;
+
+    @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("DBInstanceId")
     @com.aliyun.core.annotation.Validation(required = true)
     private String DBInstanceId;
@@ -48,6 +52,7 @@ public class DescribeSlowLogRecordsRequest extends Request {
 
     private DescribeSlowLogRecordsRequest(Builder builder) {
         super(builder);
+        this.computingGroupId = builder.computingGroupId;
         this.DBInstanceId = builder.DBInstanceId;
         this.endTime = builder.endTime;
         this.pageNumber = builder.pageNumber;
@@ -68,6 +73,13 @@ public class DescribeSlowLogRecordsRequest extends Request {
 @Override
     public Builder toBuilder() {
         return new Builder(this);
+    }
+
+    /**
+     * @return computingGroupId
+     */
+    public String getComputingGroupId() {
+        return this.computingGroupId;
     }
 
     /**
@@ -120,6 +132,7 @@ public class DescribeSlowLogRecordsRequest extends Request {
     }
 
     public static final class Builder extends Request.Builder<DescribeSlowLogRecordsRequest, Builder> {
+        private String computingGroupId; 
         private String DBInstanceId; 
         private String endTime; 
         private Integer pageNumber; 
@@ -134,6 +147,7 @@ public class DescribeSlowLogRecordsRequest extends Request {
 
         private Builder(DescribeSlowLogRecordsRequest request) {
             super(request);
+            this.computingGroupId = request.computingGroupId;
             this.DBInstanceId = request.DBInstanceId;
             this.endTime = request.endTime;
             this.pageNumber = request.pageNumber;
@@ -142,6 +156,15 @@ public class DescribeSlowLogRecordsRequest extends Request {
             this.regionId = request.regionId;
             this.startTime = request.startTime;
         } 
+
+        /**
+         * ComputingGroupId.
+         */
+        public Builder computingGroupId(String computingGroupId) {
+            this.putQueryParameter("ComputingGroupId", computingGroupId);
+            this.computingGroupId = computingGroupId;
+            return this;
+        }
 
         /**
          * <p>The cluster ID.</p>

@@ -20,6 +20,12 @@ public interface AsyncClient extends SdkAutoCloseable {
     }
 
     /**
+     * @param request the request parameters of ChangeResourceGroup  ChangeResourceGroupRequest
+     * @return ChangeResourceGroupResponse
+     */
+    CompletableFuture<ChangeResourceGroupResponse> changeResourceGroup(ChangeResourceGroupRequest request);
+
+    /**
      * @param request the request parameters of CreateAccount  CreateAccountRequest
      * @return CreateAccountResponse
      */
