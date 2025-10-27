@@ -282,6 +282,24 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
+     * @param request the request parameters of CreatePrivateDnsEndpoint  CreatePrivateDnsEndpointRequest
+     * @return CreatePrivateDnsEndpointResponse
+     */
+    @Override
+    public CompletableFuture<CreatePrivateDnsEndpointResponse> createPrivateDnsEndpoint(CreatePrivateDnsEndpointRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RPC).setAction("CreatePrivateDnsEndpoint").setMethod(HttpMethod.POST).setPathRegex("/").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(CreatePrivateDnsEndpointResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<CreatePrivateDnsEndpointResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
      * @param request the request parameters of CreateSecurityProxy  CreateSecurityProxyRequest
      * @return CreateSecurityProxyResponse
      */
@@ -2164,6 +2182,24 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
+     * @param request the request parameters of DescribePostpayUserVpcStatus  DescribePostpayUserVpcStatusRequest
+     * @return DescribePostpayUserVpcStatusResponse
+     */
+    @Override
+    public CompletableFuture<DescribePostpayUserVpcStatusResponse> describePostpayUserVpcStatus(DescribePostpayUserVpcStatusRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RPC).setAction("DescribePostpayUserVpcStatus").setMethod(HttpMethod.GET).setPathRegex("/").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(DescribePostpayUserVpcStatusResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<DescribePostpayUserVpcStatusResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
      * @param request the request parameters of DescribePrefixLists  DescribePrefixListsRequest
      * @return DescribePrefixListsResponse
      */
@@ -2367,6 +2403,24 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
+     * @param request the request parameters of DescribeSecurityProxy  DescribeSecurityProxyRequest
+     * @return DescribeSecurityProxyResponse
+     */
+    @Override
+    public CompletableFuture<DescribeSecurityProxyResponse> describeSecurityProxy(DescribeSecurityProxyRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RPC).setAction("DescribeSecurityProxy").setMethod(HttpMethod.POST).setPathRegex("/").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(DescribeSecurityProxyResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<DescribeSecurityProxyResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
      * @param request the request parameters of DescribeSignatureLibVersion  DescribeSignatureLibVersionRequest
      * @return DescribeSignatureLibVersionResponse
      */
@@ -2397,6 +2451,24 @@ public final class DefaultAsyncClient implements AsyncClient {
             return this.handler.execute(params);
         } catch (Exception e) {
             CompletableFuture<DescribeSlsAnalyzeOpenStatusResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
+     * @param request the request parameters of DescribeThreatIntelligenceSwitch  DescribeThreatIntelligenceSwitchRequest
+     * @return DescribeThreatIntelligenceSwitchResponse
+     */
+    @Override
+    public CompletableFuture<DescribeThreatIntelligenceSwitchResponse> describeThreatIntelligenceSwitch(DescribeThreatIntelligenceSwitchRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RPC).setAction("DescribeThreatIntelligenceSwitch").setMethod(HttpMethod.POST).setPathRegex("/").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(DescribeThreatIntelligenceSwitchResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<DescribeThreatIntelligenceSwitchResponse> future = new CompletableFuture<>();
             future.completeExceptionally(e);
             return future;
         }
@@ -2910,6 +2982,42 @@ public final class DefaultAsyncClient implements AsyncClient {
             return this.handler.execute(params);
         } catch (Exception e) {
             CompletableFuture<EnableSdlProtectedAssetResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
+     * @param request the request parameters of GetTlsInspectCertificateDownloadUrl  GetTlsInspectCertificateDownloadUrlRequest
+     * @return GetTlsInspectCertificateDownloadUrlResponse
+     */
+    @Override
+    public CompletableFuture<GetTlsInspectCertificateDownloadUrlResponse> getTlsInspectCertificateDownloadUrl(GetTlsInspectCertificateDownloadUrlRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RPC).setAction("GetTlsInspectCertificateDownloadUrl").setMethod(HttpMethod.POST).setPathRegex("/").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(GetTlsInspectCertificateDownloadUrlResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<GetTlsInspectCertificateDownloadUrlResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
+     * @param request the request parameters of ListTlsInspectCACertificates  ListTlsInspectCACertificatesRequest
+     * @return ListTlsInspectCACertificatesResponse
+     */
+    @Override
+    public CompletableFuture<ListTlsInspectCACertificatesResponse> listTlsInspectCACertificates(ListTlsInspectCACertificatesRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RPC).setAction("ListTlsInspectCACertificates").setMethod(HttpMethod.POST).setPathRegex("/").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(ListTlsInspectCACertificatesResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<ListTlsInspectCACertificatesResponse> future = new CompletableFuture<>();
             future.completeExceptionally(e);
             return future;
         }
@@ -3792,6 +3900,42 @@ public final class DefaultAsyncClient implements AsyncClient {
             return this.handler.execute(params);
         } catch (Exception e) {
             CompletableFuture<UpdatePostpayUserInternetStatusResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
+     * @param request the request parameters of UpdatePostpayUserNatStatus  UpdatePostpayUserNatStatusRequest
+     * @return UpdatePostpayUserNatStatusResponse
+     */
+    @Override
+    public CompletableFuture<UpdatePostpayUserNatStatusResponse> updatePostpayUserNatStatus(UpdatePostpayUserNatStatusRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RPC).setAction("UpdatePostpayUserNatStatus").setMethod(HttpMethod.POST).setPathRegex("/").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(UpdatePostpayUserNatStatusResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<UpdatePostpayUserNatStatusResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
+     * @param request the request parameters of UpdatePostpayUserVpcStatus  UpdatePostpayUserVpcStatusRequest
+     * @return UpdatePostpayUserVpcStatusResponse
+     */
+    @Override
+    public CompletableFuture<UpdatePostpayUserVpcStatusResponse> updatePostpayUserVpcStatus(UpdatePostpayUserVpcStatusRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RPC).setAction("UpdatePostpayUserVpcStatus").setMethod(HttpMethod.POST).setPathRegex("/").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(UpdatePostpayUserVpcStatusResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<UpdatePostpayUserVpcStatusResponse> future = new CompletableFuture<>();
             future.completeExceptionally(e);
             return future;
         }

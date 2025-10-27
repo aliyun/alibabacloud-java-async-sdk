@@ -115,6 +115,12 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<CreateNatFirewallPreCheckResponse> createNatFirewallPreCheck(CreateNatFirewallPreCheckRequest request);
 
     /**
+     * @param request the request parameters of CreatePrivateDnsEndpoint  CreatePrivateDnsEndpointRequest
+     * @return CreatePrivateDnsEndpointResponse
+     */
+    CompletableFuture<CreatePrivateDnsEndpointResponse> createPrivateDnsEndpoint(CreatePrivateDnsEndpointRequest request);
+
+    /**
      * @param request the request parameters of CreateSecurityProxy  CreateSecurityProxyRequest
      * @return CreateSecurityProxyResponse
      */
@@ -809,6 +815,12 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<DescribePostpayUserNatStatusResponse> describePostpayUserNatStatus(DescribePostpayUserNatStatusRequest request);
 
     /**
+     * @param request the request parameters of DescribePostpayUserVpcStatus  DescribePostpayUserVpcStatusRequest
+     * @return DescribePostpayUserVpcStatusResponse
+     */
+    CompletableFuture<DescribePostpayUserVpcStatusResponse> describePostpayUserVpcStatus(DescribePostpayUserVpcStatusRequest request);
+
+    /**
      * @param request the request parameters of DescribePrefixLists  DescribePrefixListsRequest
      * @return DescribePrefixListsResponse
      */
@@ -880,6 +892,12 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<DescribeSecurityModeResponse> describeSecurityMode(DescribeSecurityModeRequest request);
 
     /**
+     * @param request the request parameters of DescribeSecurityProxy  DescribeSecurityProxyRequest
+     * @return DescribeSecurityProxyResponse
+     */
+    CompletableFuture<DescribeSecurityProxyResponse> describeSecurityProxy(DescribeSecurityProxyRequest request);
+
+    /**
      * @param request the request parameters of DescribeSignatureLibVersion  DescribeSignatureLibVersionRequest
      * @return DescribeSignatureLibVersionResponse
      */
@@ -890,6 +908,12 @@ public interface AsyncClient extends SdkAutoCloseable {
      * @return DescribeSlsAnalyzeOpenStatusResponse
      */
     CompletableFuture<DescribeSlsAnalyzeOpenStatusResponse> describeSlsAnalyzeOpenStatus(DescribeSlsAnalyzeOpenStatusRequest request);
+
+    /**
+     * @param request the request parameters of DescribeThreatIntelligenceSwitch  DescribeThreatIntelligenceSwitchRequest
+     * @return DescribeThreatIntelligenceSwitchResponse
+     */
+    CompletableFuture<DescribeThreatIntelligenceSwitchResponse> describeThreatIntelligenceSwitch(DescribeThreatIntelligenceSwitchRequest request);
 
     /**
      * @param request the request parameters of DescribeTrFirewallPolicyBackUpAssociationList  DescribeTrFirewallPolicyBackUpAssociationListRequest
@@ -1091,6 +1115,18 @@ public interface AsyncClient extends SdkAutoCloseable {
      * @return EnableSdlProtectedAssetResponse
      */
     CompletableFuture<EnableSdlProtectedAssetResponse> enableSdlProtectedAsset(EnableSdlProtectedAssetRequest request);
+
+    /**
+     * @param request the request parameters of GetTlsInspectCertificateDownloadUrl  GetTlsInspectCertificateDownloadUrlRequest
+     * @return GetTlsInspectCertificateDownloadUrlResponse
+     */
+    CompletableFuture<GetTlsInspectCertificateDownloadUrlResponse> getTlsInspectCertificateDownloadUrl(GetTlsInspectCertificateDownloadUrlRequest request);
+
+    /**
+     * @param request the request parameters of ListTlsInspectCACertificates  ListTlsInspectCACertificatesRequest
+     * @return ListTlsInspectCACertificatesResponse
+     */
+    CompletableFuture<ListTlsInspectCACertificatesResponse> listTlsInspectCACertificates(ListTlsInspectCACertificatesRequest request);
 
     /**
      * <b>description</b> :
@@ -1445,6 +1481,18 @@ public interface AsyncClient extends SdkAutoCloseable {
      * @return UpdatePostpayUserInternetStatusResponse
      */
     CompletableFuture<UpdatePostpayUserInternetStatusResponse> updatePostpayUserInternetStatus(UpdatePostpayUserInternetStatusRequest request);
+
+    /**
+     * @param request the request parameters of UpdatePostpayUserNatStatus  UpdatePostpayUserNatStatusRequest
+     * @return UpdatePostpayUserNatStatusResponse
+     */
+    CompletableFuture<UpdatePostpayUserNatStatusResponse> updatePostpayUserNatStatus(UpdatePostpayUserNatStatusRequest request);
+
+    /**
+     * @param request the request parameters of UpdatePostpayUserVpcStatus  UpdatePostpayUserVpcStatusRequest
+     * @return UpdatePostpayUserVpcStatusResponse
+     */
+    CompletableFuture<UpdatePostpayUserVpcStatusResponse> updatePostpayUserVpcStatus(UpdatePostpayUserVpcStatusRequest request);
 
     /**
      * @param request the request parameters of UpdateSecurityProxy  UpdateSecurityProxyRequest
