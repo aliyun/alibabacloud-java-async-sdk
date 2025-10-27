@@ -73,6 +73,10 @@ public class CreateAppGroupRequest extends Request {
     private String namespaceSource;
 
     @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("NotificationPolicyName")
+    private String notificationPolicyName;
+
+    @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("RegionId")
     private String regionId;
 
@@ -95,6 +99,7 @@ public class CreateAppGroupRequest extends Request {
         this.namespace = builder.namespace;
         this.namespaceName = builder.namespaceName;
         this.namespaceSource = builder.namespaceSource;
+        this.notificationPolicyName = builder.notificationPolicyName;
         this.regionId = builder.regionId;
         this.scheduleBusyWorkers = builder.scheduleBusyWorkers;
     }
@@ -204,6 +209,13 @@ public class CreateAppGroupRequest extends Request {
     }
 
     /**
+     * @return notificationPolicyName
+     */
+    public String getNotificationPolicyName() {
+        return this.notificationPolicyName;
+    }
+
+    /**
      * @return regionId
      */
     public String getRegionId() {
@@ -231,6 +243,7 @@ public class CreateAppGroupRequest extends Request {
         private String namespace; 
         private String namespaceName; 
         private String namespaceSource; 
+        private String notificationPolicyName; 
         private String regionId; 
         private Boolean scheduleBusyWorkers; 
 
@@ -253,6 +266,7 @@ public class CreateAppGroupRequest extends Request {
             this.namespace = request.namespace;
             this.namespaceName = request.namespaceName;
             this.namespaceSource = request.namespaceSource;
+            this.notificationPolicyName = request.notificationPolicyName;
             this.regionId = request.regionId;
             this.scheduleBusyWorkers = request.scheduleBusyWorkers;
         } 
@@ -421,6 +435,15 @@ public class CreateAppGroupRequest extends Request {
         public Builder namespaceSource(String namespaceSource) {
             this.putQueryParameter("NamespaceSource", namespaceSource);
             this.namespaceSource = namespaceSource;
+            return this;
+        }
+
+        /**
+         * NotificationPolicyName.
+         */
+        public Builder notificationPolicyName(String notificationPolicyName) {
+            this.putQueryParameter("NotificationPolicyName", notificationPolicyName);
+            this.notificationPolicyName = notificationPolicyName;
             return this;
         }
 

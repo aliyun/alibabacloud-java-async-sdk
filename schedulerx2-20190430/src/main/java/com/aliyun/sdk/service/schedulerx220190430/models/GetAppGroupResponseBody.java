@@ -204,6 +204,9 @@ public class GetAppGroupResponseBody extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Namespace")
         private String namespace;
 
+        @com.aliyun.core.annotation.NameInMap("NotificationPolicyName")
+        private String notificationPolicyName;
+
         private Data(Builder builder) {
             this.appKey = builder.appKey;
             this.appName = builder.appName;
@@ -215,6 +218,7 @@ public class GetAppGroupResponseBody extends TeaModel {
             this.monitorConfigJson = builder.monitorConfigJson;
             this.monitorContactsJson = builder.monitorContactsJson;
             this.namespace = builder.namespace;
+            this.notificationPolicyName = builder.notificationPolicyName;
         }
 
         public static Builder builder() {
@@ -295,6 +299,13 @@ public class GetAppGroupResponseBody extends TeaModel {
             return this.namespace;
         }
 
+        /**
+         * @return notificationPolicyName
+         */
+        public String getNotificationPolicyName() {
+            return this.notificationPolicyName;
+        }
+
         public static final class Builder {
             private String appKey; 
             private String appName; 
@@ -306,6 +317,7 @@ public class GetAppGroupResponseBody extends TeaModel {
             private String monitorConfigJson; 
             private String monitorContactsJson; 
             private String namespace; 
+            private String notificationPolicyName; 
 
             private Builder() {
             } 
@@ -321,6 +333,7 @@ public class GetAppGroupResponseBody extends TeaModel {
                 this.monitorConfigJson = model.monitorConfigJson;
                 this.monitorContactsJson = model.monitorContactsJson;
                 this.namespace = model.namespace;
+                this.notificationPolicyName = model.notificationPolicyName;
             } 
 
             /**
@@ -436,6 +449,14 @@ public class GetAppGroupResponseBody extends TeaModel {
              */
             public Builder namespace(String namespace) {
                 this.namespace = namespace;
+                return this;
+            }
+
+            /**
+             * NotificationPolicyName.
+             */
+            public Builder notificationPolicyName(String notificationPolicyName) {
+                this.notificationPolicyName = notificationPolicyName;
                 return this;
             }
 

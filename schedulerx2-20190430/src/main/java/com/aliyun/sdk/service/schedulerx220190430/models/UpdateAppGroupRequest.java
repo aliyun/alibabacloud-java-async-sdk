@@ -48,6 +48,10 @@ public class UpdateAppGroupRequest extends Request {
     private String namespace;
 
     @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("NotificationPolicyName")
+    private String notificationPolicyName;
+
+    @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("RegionId")
     @com.aliyun.core.annotation.Validation(required = true)
     private String regionId;
@@ -61,6 +65,7 @@ public class UpdateAppGroupRequest extends Request {
         this.monitorConfigJson = builder.monitorConfigJson;
         this.monitorContactsJson = builder.monitorContactsJson;
         this.namespace = builder.namespace;
+        this.notificationPolicyName = builder.notificationPolicyName;
         this.regionId = builder.regionId;
     }
 
@@ -127,6 +132,13 @@ public class UpdateAppGroupRequest extends Request {
     }
 
     /**
+     * @return notificationPolicyName
+     */
+    public String getNotificationPolicyName() {
+        return this.notificationPolicyName;
+    }
+
+    /**
      * @return regionId
      */
     public String getRegionId() {
@@ -141,6 +153,7 @@ public class UpdateAppGroupRequest extends Request {
         private String monitorConfigJson; 
         private String monitorContactsJson; 
         private String namespace; 
+        private String notificationPolicyName; 
         private String regionId; 
 
         private Builder() {
@@ -156,6 +169,7 @@ public class UpdateAppGroupRequest extends Request {
             this.monitorConfigJson = request.monitorConfigJson;
             this.monitorContactsJson = request.monitorContactsJson;
             this.namespace = request.namespace;
+            this.notificationPolicyName = request.notificationPolicyName;
             this.regionId = request.regionId;
         } 
 
@@ -246,6 +260,15 @@ public class UpdateAppGroupRequest extends Request {
         public Builder namespace(String namespace) {
             this.putQueryParameter("Namespace", namespace);
             this.namespace = namespace;
+            return this;
+        }
+
+        /**
+         * NotificationPolicyName.
+         */
+        public Builder notificationPolicyName(String notificationPolicyName) {
+            this.putQueryParameter("NotificationPolicyName", notificationPolicyName);
+            this.notificationPolicyName = notificationPolicyName;
             return this;
         }
 
