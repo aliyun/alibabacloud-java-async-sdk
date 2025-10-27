@@ -18,6 +18,10 @@ import com.aliyun.sdk.gateway.pop.models.*;
  */
 public class GetDocParserResultRequest extends Request {
     @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ExcludeFields")
+    private java.util.List<String> excludeFields;
+
+    @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("Id")
     private String id;
 
@@ -31,6 +35,7 @@ public class GetDocParserResultRequest extends Request {
 
     private GetDocParserResultRequest(Builder builder) {
         super(builder);
+        this.excludeFields = builder.excludeFields;
         this.id = builder.id;
         this.layoutNum = builder.layoutNum;
         this.layoutStepSize = builder.layoutStepSize;
@@ -47,6 +52,13 @@ public class GetDocParserResultRequest extends Request {
 @Override
     public Builder toBuilder() {
         return new Builder(this);
+    }
+
+    /**
+     * @return excludeFields
+     */
+    public java.util.List<String> getExcludeFields() {
+        return this.excludeFields;
     }
 
     /**
@@ -71,6 +83,7 @@ public class GetDocParserResultRequest extends Request {
     }
 
     public static final class Builder extends Request.Builder<GetDocParserResultRequest, Builder> {
+        private java.util.List<String> excludeFields; 
         private String id; 
         private Integer layoutNum; 
         private Integer layoutStepSize; 
@@ -81,10 +94,21 @@ public class GetDocParserResultRequest extends Request {
 
         private Builder(GetDocParserResultRequest request) {
             super(request);
+            this.excludeFields = request.excludeFields;
             this.id = request.id;
             this.layoutNum = request.layoutNum;
             this.layoutStepSize = request.layoutStepSize;
         } 
+
+        /**
+         * ExcludeFields.
+         */
+        public Builder excludeFields(java.util.List<String> excludeFields) {
+            String excludeFieldsShrink = shrink(excludeFields, "ExcludeFields", "simple");
+            this.putQueryParameter("ExcludeFields", excludeFieldsShrink);
+            this.excludeFields = excludeFields;
+            return this;
+        }
 
         /**
          * Id.
