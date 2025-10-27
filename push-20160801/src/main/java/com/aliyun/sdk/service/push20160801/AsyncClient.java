@@ -94,6 +94,12 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<MassPushResponse> massPush(MassPushRequest request);
 
     /**
+     * @param request the request parameters of MassPushV2  MassPushV2Request
+     * @return MassPushV2Response
+     */
+    CompletableFuture<MassPushV2Response> massPushV2(MassPushV2Request request);
+
+    /**
      * @param request the request parameters of Push  PushRequest
      * @return PushResponse
      */
@@ -122,6 +128,12 @@ public interface AsyncClient extends SdkAutoCloseable {
      * @return PushNoticeToiOSResponse
      */
     CompletableFuture<PushNoticeToiOSResponse> pushNoticeToiOS(PushNoticeToiOSRequest request);
+
+    /**
+     * @param request the request parameters of PushV2  PushV2Request
+     * @return PushV2Response
+     */
+    CompletableFuture<PushV2Response> pushV2(PushV2Request request);
 
     /**
      * @param request the request parameters of QueryAliases  QueryAliasesRequest

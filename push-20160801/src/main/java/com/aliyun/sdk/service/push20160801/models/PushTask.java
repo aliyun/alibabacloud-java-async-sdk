@@ -473,6 +473,9 @@ public class PushTask extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Importance")
         private Integer importance;
 
+        @com.aliyun.core.annotation.NameInMap("LiveNotificationPayload")
+        private String liveNotificationPayload;
+
         @com.aliyun.core.annotation.NameInMap("ReceiptId")
         private String receiptId;
 
@@ -482,6 +485,7 @@ public class PushTask extends TeaModel {
         private Huawei(Builder builder) {
             this.category = builder.category;
             this.importance = builder.importance;
+            this.liveNotificationPayload = builder.liveNotificationPayload;
             this.receiptId = builder.receiptId;
             this.urgency = builder.urgency;
         }
@@ -509,6 +513,13 @@ public class PushTask extends TeaModel {
         }
 
         /**
+         * @return liveNotificationPayload
+         */
+        public String getLiveNotificationPayload() {
+            return this.liveNotificationPayload;
+        }
+
+        /**
          * @return receiptId
          */
         public String getReceiptId() {
@@ -525,6 +536,7 @@ public class PushTask extends TeaModel {
         public static final class Builder {
             private String category; 
             private Integer importance; 
+            private String liveNotificationPayload; 
             private String receiptId; 
             private String urgency; 
 
@@ -534,6 +546,7 @@ public class PushTask extends TeaModel {
             private Builder(Huawei model) {
                 this.category = model.category;
                 this.importance = model.importance;
+                this.liveNotificationPayload = model.liveNotificationPayload;
                 this.receiptId = model.receiptId;
                 this.urgency = model.urgency;
             } 
@@ -551,6 +564,14 @@ public class PushTask extends TeaModel {
              */
             public Builder importance(Integer importance) {
                 this.importance = importance;
+                return this;
+            }
+
+            /**
+             * LiveNotificationPayload.
+             */
+            public Builder liveNotificationPayload(String liveNotificationPayload) {
+                this.liveNotificationPayload = liveNotificationPayload;
                 return this;
             }
 
@@ -583,6 +604,60 @@ public class PushTask extends TeaModel {
      *
      * <p>PushTask</p>
      */
+    public static class Meizu extends TeaModel {
+        @com.aliyun.core.annotation.NameInMap("NoticeMsgType")
+        private Integer noticeMsgType;
+
+        private Meizu(Builder builder) {
+            this.noticeMsgType = builder.noticeMsgType;
+        }
+
+        public static Builder builder() {
+            return new Builder();
+        }
+
+        public static Meizu create() {
+            return builder().build();
+        }
+
+        /**
+         * @return noticeMsgType
+         */
+        public Integer getNoticeMsgType() {
+            return this.noticeMsgType;
+        }
+
+        public static final class Builder {
+            private Integer noticeMsgType; 
+
+            private Builder() {
+            } 
+
+            private Builder(Meizu model) {
+                this.noticeMsgType = model.noticeMsgType;
+            } 
+
+            /**
+             * NoticeMsgType.
+             */
+            public Builder noticeMsgType(Integer noticeMsgType) {
+                this.noticeMsgType = noticeMsgType;
+                return this;
+            }
+
+            public Meizu build() {
+                return new Meizu(this);
+            } 
+
+        } 
+
+    }
+    /**
+     * 
+     * {@link PushTask} extends {@link TeaModel}
+     *
+     * <p>PushTask</p>
+     */
     public static class Oppo extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Category")
         private String category;
@@ -590,9 +665,21 @@ public class PushTask extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("NotifyLevel")
         private Long notifyLevel;
 
+        @com.aliyun.core.annotation.NameInMap("PrivateContentParameters")
+        private String privateContentParameters;
+
+        @com.aliyun.core.annotation.NameInMap("PrivateMsgTemplateId")
+        private String privateMsgTemplateId;
+
+        @com.aliyun.core.annotation.NameInMap("PrivateTitleParameters")
+        private String privateTitleParameters;
+
         private Oppo(Builder builder) {
             this.category = builder.category;
             this.notifyLevel = builder.notifyLevel;
+            this.privateContentParameters = builder.privateContentParameters;
+            this.privateMsgTemplateId = builder.privateMsgTemplateId;
+            this.privateTitleParameters = builder.privateTitleParameters;
         }
 
         public static Builder builder() {
@@ -617,9 +704,33 @@ public class PushTask extends TeaModel {
             return this.notifyLevel;
         }
 
+        /**
+         * @return privateContentParameters
+         */
+        public String getPrivateContentParameters() {
+            return this.privateContentParameters;
+        }
+
+        /**
+         * @return privateMsgTemplateId
+         */
+        public String getPrivateMsgTemplateId() {
+            return this.privateMsgTemplateId;
+        }
+
+        /**
+         * @return privateTitleParameters
+         */
+        public String getPrivateTitleParameters() {
+            return this.privateTitleParameters;
+        }
+
         public static final class Builder {
             private String category; 
             private Long notifyLevel; 
+            private String privateContentParameters; 
+            private String privateMsgTemplateId; 
+            private String privateTitleParameters; 
 
             private Builder() {
             } 
@@ -627,6 +738,9 @@ public class PushTask extends TeaModel {
             private Builder(Oppo model) {
                 this.category = model.category;
                 this.notifyLevel = model.notifyLevel;
+                this.privateContentParameters = model.privateContentParameters;
+                this.privateMsgTemplateId = model.privateMsgTemplateId;
+                this.privateTitleParameters = model.privateTitleParameters;
             } 
 
             /**
@@ -642,6 +756,30 @@ public class PushTask extends TeaModel {
              */
             public Builder notifyLevel(Long notifyLevel) {
                 this.notifyLevel = notifyLevel;
+                return this;
+            }
+
+            /**
+             * PrivateContentParameters.
+             */
+            public Builder privateContentParameters(String privateContentParameters) {
+                this.privateContentParameters = privateContentParameters;
+                return this;
+            }
+
+            /**
+             * PrivateMsgTemplateId.
+             */
+            public Builder privateMsgTemplateId(String privateMsgTemplateId) {
+                this.privateMsgTemplateId = privateMsgTemplateId;
+                return this;
+            }
+
+            /**
+             * PrivateTitleParameters.
+             */
+            public Builder privateTitleParameters(String privateTitleParameters) {
+                this.privateTitleParameters = privateTitleParameters;
                 return this;
             }
 
@@ -818,6 +956,9 @@ public class PushTask extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Huawei")
         private Huawei huawei;
 
+        @com.aliyun.core.annotation.NameInMap("Meizu")
+        private Meizu meizu;
+
         @com.aliyun.core.annotation.NameInMap("Oppo")
         private Oppo oppo;
 
@@ -831,6 +972,7 @@ public class PushTask extends TeaModel {
             this.accs = builder.accs;
             this.honor = builder.honor;
             this.huawei = builder.huawei;
+            this.meizu = builder.meizu;
             this.oppo = builder.oppo;
             this.vivo = builder.vivo;
             this.xiaomi = builder.xiaomi;
@@ -866,6 +1008,13 @@ public class PushTask extends TeaModel {
         }
 
         /**
+         * @return meizu
+         */
+        public Meizu getMeizu() {
+            return this.meizu;
+        }
+
+        /**
          * @return oppo
          */
         public Oppo getOppo() {
@@ -890,6 +1039,7 @@ public class PushTask extends TeaModel {
             private Accs accs; 
             private Honor honor; 
             private Huawei huawei; 
+            private Meizu meizu; 
             private Oppo oppo; 
             private Vivo vivo; 
             private Xiaomi xiaomi; 
@@ -901,6 +1051,7 @@ public class PushTask extends TeaModel {
                 this.accs = model.accs;
                 this.honor = model.honor;
                 this.huawei = model.huawei;
+                this.meizu = model.meizu;
                 this.oppo = model.oppo;
                 this.vivo = model.vivo;
                 this.xiaomi = model.xiaomi;
@@ -927,6 +1078,14 @@ public class PushTask extends TeaModel {
              */
             public Builder huawei(Huawei huawei) {
                 this.huawei = huawei;
+                return this;
+            }
+
+            /**
+             * Meizu.
+             */
+            public Builder meizu(Meizu meizu) {
+                this.meizu = meizu;
                 return this;
             }
 
@@ -1343,6 +1502,9 @@ public class PushTask extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("InboxContent")
         private java.util.List<String> inboxContent;
 
+        @com.aliyun.core.annotation.NameInMap("LiveViewPayload")
+        private String liveViewPayload;
+
         @com.aliyun.core.annotation.NameInMap("NotifyId")
         private Integer notifyId;
 
@@ -1371,6 +1533,7 @@ public class PushTask extends TeaModel {
             this.extensionPush = builder.extensionPush;
             this.imageUrl = builder.imageUrl;
             this.inboxContent = builder.inboxContent;
+            this.liveViewPayload = builder.liveViewPayload;
             this.notifyId = builder.notifyId;
             this.receiptId = builder.receiptId;
             this.renderStyle = builder.renderStyle;
@@ -1451,6 +1614,13 @@ public class PushTask extends TeaModel {
         }
 
         /**
+         * @return liveViewPayload
+         */
+        public String getLiveViewPayload() {
+            return this.liveViewPayload;
+        }
+
+        /**
          * @return notifyId
          */
         public Integer getNotifyId() {
@@ -1502,6 +1672,7 @@ public class PushTask extends TeaModel {
             private Boolean extensionPush; 
             private String imageUrl; 
             private java.util.List<String> inboxContent; 
+            private String liveViewPayload; 
             private Integer notifyId; 
             private String receiptId; 
             private String renderStyle; 
@@ -1522,6 +1693,7 @@ public class PushTask extends TeaModel {
                 this.extensionPush = model.extensionPush;
                 this.imageUrl = model.imageUrl;
                 this.inboxContent = model.inboxContent;
+                this.liveViewPayload = model.liveViewPayload;
                 this.notifyId = model.notifyId;
                 this.receiptId = model.receiptId;
                 this.renderStyle = model.renderStyle;
@@ -1599,6 +1771,14 @@ public class PushTask extends TeaModel {
              */
             public Builder inboxContent(java.util.List<String> inboxContent) {
                 this.inboxContent = inboxContent;
+                return this;
+            }
+
+            /**
+             * LiveViewPayload.
+             */
+            public Builder liveViewPayload(String liveViewPayload) {
+                this.liveViewPayload = liveViewPayload;
                 return this;
             }
 

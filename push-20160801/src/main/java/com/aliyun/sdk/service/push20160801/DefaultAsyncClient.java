@@ -313,6 +313,24 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
+     * @param request the request parameters of MassPushV2  MassPushV2Request
+     * @return MassPushV2Response
+     */
+    @Override
+    public CompletableFuture<MassPushV2Response> massPushV2(MassPushV2Request request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RPC).setAction("MassPushV2").setMethod(HttpMethod.POST).setPathRegex("/").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(MassPushV2Response.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<MassPushV2Response> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
      * @param request the request parameters of Push  PushRequest
      * @return PushResponse
      */
@@ -397,6 +415,24 @@ public final class DefaultAsyncClient implements AsyncClient {
             return this.handler.execute(params);
         } catch (Exception e) {
             CompletableFuture<PushNoticeToiOSResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
+     * @param request the request parameters of PushV2  PushV2Request
+     * @return PushV2Response
+     */
+    @Override
+    public CompletableFuture<PushV2Response> pushV2(PushV2Request request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RPC).setAction("PushV2").setMethod(HttpMethod.POST).setPathRegex("/").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(PushV2Response.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<PushV2Response> future = new CompletableFuture<>();
             future.completeExceptionally(e);
             return future;
         }
