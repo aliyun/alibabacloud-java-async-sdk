@@ -161,6 +161,12 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<CreateApsSlsADBJobResponse> createApsSlsADBJob(CreateApsSlsADBJobRequest request);
 
     /**
+     * @param request the request parameters of CreateApsWebhook  CreateApsWebhookRequest
+     * @return CreateApsWebhookResponse
+     */
+    CompletableFuture<CreateApsWebhookResponse> createApsWebhook(CreateApsWebhookRequest request);
+
+    /**
      * @param request the request parameters of CreateBackup  CreateBackupRequest
      * @return CreateBackupResponse
      */
@@ -198,6 +204,12 @@ public interface AsyncClient extends SdkAutoCloseable {
      * @return CreateLakeStorageResponse
      */
     CompletableFuture<CreateLakeStorageResponse> createLakeStorage(CreateLakeStorageRequest request);
+
+    /**
+     * @param request the request parameters of CreateMaterializedViewRecommend  CreateMaterializedViewRecommendRequest
+     * @return CreateMaterializedViewRecommendResponse
+     */
+    CompletableFuture<CreateMaterializedViewRecommendResponse> createMaterializedViewRecommend(CreateMaterializedViewRecommendRequest request);
 
     /**
      * <b>description</b> :
@@ -263,6 +275,12 @@ public interface AsyncClient extends SdkAutoCloseable {
      * @return DeleteApsJobResponse
      */
     CompletableFuture<DeleteApsJobResponse> deleteApsJob(DeleteApsJobRequest request);
+
+    /**
+     * @param request the request parameters of DeleteApsWebhook  DeleteApsWebhookRequest
+     * @return DeleteApsWebhookResponse
+     */
+    CompletableFuture<DeleteApsWebhookResponse> deleteApsWebhook(DeleteApsWebhookRequest request);
 
     /**
      * <b>description</b> :
@@ -1553,6 +1571,12 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<ListApsOptimizationTasksResponse> listApsOptimizationTasks(ListApsOptimizationTasksRequest request);
 
     /**
+     * @param request the request parameters of ListApsWebhook  ListApsWebhookRequest
+     * @return ListApsWebhookResponse
+     */
+    CompletableFuture<ListApsWebhookResponse> listApsWebhook(ListApsWebhookRequest request);
+
+    /**
      * @param request the request parameters of ListLakeStorages  ListLakeStoragesRequest
      * @return ListLakeStoragesResponse
      */
@@ -1823,6 +1847,18 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<ModifyLakeCacheSizeResponse> modifyLakeCacheSize(ModifyLakeCacheSizeRequest request);
 
     /**
+     * @param request the request parameters of ModifyMaterializedView  ModifyMaterializedViewRequest
+     * @return ModifyMaterializedViewResponse
+     */
+    CompletableFuture<ModifyMaterializedViewResponse> modifyMaterializedView(ModifyMaterializedViewRequest request);
+
+    /**
+     * @param request the request parameters of ModifyMaterializedViewRecommend  ModifyMaterializedViewRecommendRequest
+     * @return ModifyMaterializedViewRecommendResponse
+     */
+    CompletableFuture<ModifyMaterializedViewRecommendResponse> modifyMaterializedViewRecommend(ModifyMaterializedViewRecommendRequest request);
+
+    /**
      * @param request the request parameters of ModifyPerformanceView  ModifyPerformanceViewRequest
      * @return ModifyPerformanceViewResponse
      */
@@ -1976,6 +2012,12 @@ public interface AsyncClient extends SdkAutoCloseable {
      * @return UnbindDBResourceGroupWithUserResponse
      */
     CompletableFuture<UnbindDBResourceGroupWithUserResponse> unbindDBResourceGroupWithUser(UnbindDBResourceGroupWithUserRequest request);
+
+    /**
+     * @param request the request parameters of UpdateApsWebhook  UpdateApsWebhookRequest
+     * @return UpdateApsWebhookResponse
+     */
+    CompletableFuture<UpdateApsWebhookResponse> updateApsWebhook(UpdateApsWebhookRequest request);
 
     /**
      * @param request the request parameters of UpdateLakeStorage  UpdateLakeStorageRequest

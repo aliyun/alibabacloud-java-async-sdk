@@ -584,6 +584,273 @@ public class ModifyDBResourceGroupRequest extends Request {
      *
      * <p>ModifyDBResourceGroupRequest</p>
      */
+    public static class ImageSelector extends TeaModel {
+        @com.aliyun.core.annotation.NameInMap("Image")
+        private String image;
+
+        @com.aliyun.core.annotation.NameInMap("InferenceEngine")
+        private String inferenceEngine;
+
+        @com.aliyun.core.annotation.NameInMap("LlmModel")
+        private String llmModel;
+
+        private ImageSelector(Builder builder) {
+            this.image = builder.image;
+            this.inferenceEngine = builder.inferenceEngine;
+            this.llmModel = builder.llmModel;
+        }
+
+        public static Builder builder() {
+            return new Builder();
+        }
+
+        public static ImageSelector create() {
+            return builder().build();
+        }
+
+        /**
+         * @return image
+         */
+        public String getImage() {
+            return this.image;
+        }
+
+        /**
+         * @return inferenceEngine
+         */
+        public String getInferenceEngine() {
+            return this.inferenceEngine;
+        }
+
+        /**
+         * @return llmModel
+         */
+        public String getLlmModel() {
+            return this.llmModel;
+        }
+
+        public static final class Builder {
+            private String image; 
+            private String inferenceEngine; 
+            private String llmModel; 
+
+            private Builder() {
+            } 
+
+            private Builder(ImageSelector model) {
+                this.image = model.image;
+                this.inferenceEngine = model.inferenceEngine;
+                this.llmModel = model.llmModel;
+            } 
+
+            /**
+             * Image.
+             */
+            public Builder image(String image) {
+                this.image = image;
+                return this;
+            }
+
+            /**
+             * InferenceEngine.
+             */
+            public Builder inferenceEngine(String inferenceEngine) {
+                this.inferenceEngine = inferenceEngine;
+                return this;
+            }
+
+            /**
+             * LlmModel.
+             */
+            public Builder llmModel(String llmModel) {
+                this.llmModel = llmModel;
+                return this;
+            }
+
+            public ImageSelector build() {
+                return new ImageSelector(this);
+            } 
+
+        } 
+
+    }
+    /**
+     * 
+     * {@link ModifyDBResourceGroupRequest} extends {@link TeaModel}
+     *
+     * <p>ModifyDBResourceGroupRequest</p>
+     */
+    public static class AppConfig extends TeaModel {
+        @com.aliyun.core.annotation.NameInMap("AppName")
+        private String appName;
+
+        @com.aliyun.core.annotation.NameInMap("AppType")
+        private String appType;
+
+        @com.aliyun.core.annotation.NameInMap("ImageSelector")
+        private ImageSelector imageSelector;
+
+        private AppConfig(Builder builder) {
+            this.appName = builder.appName;
+            this.appType = builder.appType;
+            this.imageSelector = builder.imageSelector;
+        }
+
+        public static Builder builder() {
+            return new Builder();
+        }
+
+        public static AppConfig create() {
+            return builder().build();
+        }
+
+        /**
+         * @return appName
+         */
+        public String getAppName() {
+            return this.appName;
+        }
+
+        /**
+         * @return appType
+         */
+        public String getAppType() {
+            return this.appType;
+        }
+
+        /**
+         * @return imageSelector
+         */
+        public ImageSelector getImageSelector() {
+            return this.imageSelector;
+        }
+
+        public static final class Builder {
+            private String appName; 
+            private String appType; 
+            private ImageSelector imageSelector; 
+
+            private Builder() {
+            } 
+
+            private Builder(AppConfig model) {
+                this.appName = model.appName;
+                this.appType = model.appType;
+                this.imageSelector = model.imageSelector;
+            } 
+
+            /**
+             * AppName.
+             */
+            public Builder appName(String appName) {
+                this.appName = appName;
+                return this;
+            }
+
+            /**
+             * AppType.
+             */
+            public Builder appType(String appType) {
+                this.appType = appType;
+                return this;
+            }
+
+            /**
+             * ImageSelector.
+             */
+            public Builder imageSelector(ImageSelector imageSelector) {
+                this.imageSelector = imageSelector;
+                return this;
+            }
+
+            public AppConfig build() {
+                return new AppConfig(this);
+            } 
+
+        } 
+
+    }
+    /**
+     * 
+     * {@link ModifyDBResourceGroupRequest} extends {@link TeaModel}
+     *
+     * <p>ModifyDBResourceGroupRequest</p>
+     */
+    public static class StorageMounts extends TeaModel {
+        @com.aliyun.core.annotation.NameInMap("MountPath")
+        private String mountPath;
+
+        @com.aliyun.core.annotation.NameInMap("StorageId")
+        private Long storageId;
+
+        private StorageMounts(Builder builder) {
+            this.mountPath = builder.mountPath;
+            this.storageId = builder.storageId;
+        }
+
+        public static Builder builder() {
+            return new Builder();
+        }
+
+        public static StorageMounts create() {
+            return builder().build();
+        }
+
+        /**
+         * @return mountPath
+         */
+        public String getMountPath() {
+            return this.mountPath;
+        }
+
+        /**
+         * @return storageId
+         */
+        public Long getStorageId() {
+            return this.storageId;
+        }
+
+        public static final class Builder {
+            private String mountPath; 
+            private Long storageId; 
+
+            private Builder() {
+            } 
+
+            private Builder(StorageMounts model) {
+                this.mountPath = model.mountPath;
+                this.storageId = model.storageId;
+            } 
+
+            /**
+             * MountPath.
+             */
+            public Builder mountPath(String mountPath) {
+                this.mountPath = mountPath;
+                return this;
+            }
+
+            /**
+             * StorageId.
+             */
+            public Builder storageId(Long storageId) {
+                this.storageId = storageId;
+                return this;
+            }
+
+            public StorageMounts build() {
+                return new StorageMounts(this);
+            } 
+
+        } 
+
+    }
+    /**
+     * 
+     * {@link ModifyDBResourceGroupRequest} extends {@link TeaModel}
+     *
+     * <p>ModifyDBResourceGroupRequest</p>
+     */
     public static class WorkerGroups extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("AllocateUnit")
         private String allocateUnit;
@@ -772,6 +1039,9 @@ public class ModifyDBResourceGroupRequest extends Request {
      * <p>ModifyDBResourceGroupRequest</p>
      */
     public static class RayConfig extends TeaModel {
+        @com.aliyun.core.annotation.NameInMap("AppConfig")
+        private AppConfig appConfig;
+
         @com.aliyun.core.annotation.NameInMap("Category")
         private String category;
 
@@ -790,16 +1060,21 @@ public class ModifyDBResourceGroupRequest extends Request {
         @com.aliyun.core.annotation.NameInMap("HeadSpecType")
         private String headSpecType;
 
+        @com.aliyun.core.annotation.NameInMap("StorageMounts")
+        private java.util.List<StorageMounts> storageMounts;
+
         @com.aliyun.core.annotation.NameInMap("WorkerGroups")
         private java.util.List<WorkerGroups> workerGroups;
 
         private RayConfig(Builder builder) {
+            this.appConfig = builder.appConfig;
             this.category = builder.category;
             this.enableUserEni = builder.enableUserEni;
             this.headAllocateUnit = builder.headAllocateUnit;
             this.headDiskCapacity = builder.headDiskCapacity;
             this.headSpec = builder.headSpec;
             this.headSpecType = builder.headSpecType;
+            this.storageMounts = builder.storageMounts;
             this.workerGroups = builder.workerGroups;
         }
 
@@ -809,6 +1084,13 @@ public class ModifyDBResourceGroupRequest extends Request {
 
         public static RayConfig create() {
             return builder().build();
+        }
+
+        /**
+         * @return appConfig
+         */
+        public AppConfig getAppConfig() {
+            return this.appConfig;
         }
 
         /**
@@ -854,6 +1136,13 @@ public class ModifyDBResourceGroupRequest extends Request {
         }
 
         /**
+         * @return storageMounts
+         */
+        public java.util.List<StorageMounts> getStorageMounts() {
+            return this.storageMounts;
+        }
+
+        /**
          * @return workerGroups
          */
         public java.util.List<WorkerGroups> getWorkerGroups() {
@@ -861,26 +1150,38 @@ public class ModifyDBResourceGroupRequest extends Request {
         }
 
         public static final class Builder {
+            private AppConfig appConfig; 
             private String category; 
             private Boolean enableUserEni; 
             private String headAllocateUnit; 
             private String headDiskCapacity; 
             private String headSpec; 
             private String headSpecType; 
+            private java.util.List<StorageMounts> storageMounts; 
             private java.util.List<WorkerGroups> workerGroups; 
 
             private Builder() {
             } 
 
             private Builder(RayConfig model) {
+                this.appConfig = model.appConfig;
                 this.category = model.category;
                 this.enableUserEni = model.enableUserEni;
                 this.headAllocateUnit = model.headAllocateUnit;
                 this.headDiskCapacity = model.headDiskCapacity;
                 this.headSpec = model.headSpec;
                 this.headSpecType = model.headSpecType;
+                this.storageMounts = model.storageMounts;
                 this.workerGroups = model.workerGroups;
             } 
+
+            /**
+             * AppConfig.
+             */
+            public Builder appConfig(AppConfig appConfig) {
+                this.appConfig = appConfig;
+                return this;
+            }
 
             /**
              * Category.
@@ -927,6 +1228,14 @@ public class ModifyDBResourceGroupRequest extends Request {
              */
             public Builder headSpecType(String headSpecType) {
                 this.headSpecType = headSpecType;
+                return this;
+            }
+
+            /**
+             * StorageMounts.
+             */
+            public Builder storageMounts(java.util.List<StorageMounts> storageMounts) {
+                this.storageMounts = storageMounts;
                 return this;
             }
 
