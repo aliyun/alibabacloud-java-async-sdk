@@ -143,6 +143,10 @@ public class CreateCenterPolicyRequest extends Request {
     private String endUserGroupCoordinate;
 
     @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ExternalDrive")
+    private String externalDrive;
+
+    @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("FileMigrate")
     private String fileMigrate;
 
@@ -518,6 +522,7 @@ public class CreateCenterPolicyRequest extends Request {
         this.enableSessionRateLimiting = builder.enableSessionRateLimiting;
         this.endUserApplyAdminCoordinate = builder.endUserApplyAdminCoordinate;
         this.endUserGroupCoordinate = builder.endUserGroupCoordinate;
+        this.externalDrive = builder.externalDrive;
         this.fileMigrate = builder.fileMigrate;
         this.fileTransferAddress = builder.fileTransferAddress;
         this.fileTransferSpeed = builder.fileTransferSpeed;
@@ -833,6 +838,13 @@ public class CreateCenterPolicyRequest extends Request {
      */
     public String getEndUserGroupCoordinate() {
         return this.endUserGroupCoordinate;
+    }
+
+    /**
+     * @return externalDrive
+     */
+    public String getExternalDrive() {
+        return this.externalDrive;
     }
 
     /**
@@ -1462,6 +1474,7 @@ public class CreateCenterPolicyRequest extends Request {
         private String enableSessionRateLimiting; 
         private String endUserApplyAdminCoordinate; 
         private String endUserGroupCoordinate; 
+        private String externalDrive; 
         private String fileMigrate; 
         private String fileTransferAddress; 
         private String fileTransferSpeed; 
@@ -1585,6 +1598,7 @@ public class CreateCenterPolicyRequest extends Request {
             this.enableSessionRateLimiting = request.enableSessionRateLimiting;
             this.endUserApplyAdminCoordinate = request.endUserApplyAdminCoordinate;
             this.endUserGroupCoordinate = request.endUserGroupCoordinate;
+            this.externalDrive = request.externalDrive;
             this.fileMigrate = request.fileMigrate;
             this.fileTransferAddress = request.fileTransferAddress;
             this.fileTransferSpeed = request.fileTransferSpeed;
@@ -2085,6 +2099,15 @@ public class CreateCenterPolicyRequest extends Request {
         public Builder endUserGroupCoordinate(String endUserGroupCoordinate) {
             this.putQueryParameter("EndUserGroupCoordinate", endUserGroupCoordinate);
             this.endUserGroupCoordinate = endUserGroupCoordinate;
+            return this;
+        }
+
+        /**
+         * ExternalDrive.
+         */
+        public Builder externalDrive(String externalDrive) {
+            this.putQueryParameter("ExternalDrive", externalDrive);
+            this.externalDrive = externalDrive;
             return this;
         }
 

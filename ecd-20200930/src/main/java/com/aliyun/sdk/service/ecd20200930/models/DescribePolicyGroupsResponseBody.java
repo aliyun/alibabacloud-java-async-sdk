@@ -1487,6 +1487,9 @@ public class DescribePolicyGroupsResponseBody extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("EndUserGroupCoordinate")
         private String endUserGroupCoordinate;
 
+        @com.aliyun.core.annotation.NameInMap("ExternalDrive")
+        private String externalDrive;
+
         @com.aliyun.core.annotation.NameInMap("FileMigrate")
         private String fileMigrate;
 
@@ -1784,6 +1787,7 @@ public class DescribePolicyGroupsResponseBody extends TeaModel {
             this.edsCount = builder.edsCount;
             this.endUserApplyAdminCoordinate = builder.endUserApplyAdminCoordinate;
             this.endUserGroupCoordinate = builder.endUserGroupCoordinate;
+            this.externalDrive = builder.externalDrive;
             this.fileMigrate = builder.fileMigrate;
             this.fileTransfer = builder.fileTransfer;
             this.fileTransferAddress = builder.fileTransferAddress;
@@ -2084,6 +2088,13 @@ public class DescribePolicyGroupsResponseBody extends TeaModel {
          */
         public String getEndUserGroupCoordinate() {
             return this.endUserGroupCoordinate;
+        }
+
+        /**
+         * @return externalDrive
+         */
+        public String getExternalDrive() {
+            return this.externalDrive;
         }
 
         /**
@@ -2739,6 +2750,7 @@ public class DescribePolicyGroupsResponseBody extends TeaModel {
             private Integer edsCount; 
             private String endUserApplyAdminCoordinate; 
             private String endUserGroupCoordinate; 
+            private String externalDrive; 
             private String fileMigrate; 
             private String fileTransfer; 
             private String fileTransferAddress; 
@@ -2862,6 +2874,7 @@ public class DescribePolicyGroupsResponseBody extends TeaModel {
                 this.edsCount = model.edsCount;
                 this.endUserApplyAdminCoordinate = model.endUserApplyAdminCoordinate;
                 this.endUserGroupCoordinate = model.endUserGroupCoordinate;
+                this.externalDrive = model.externalDrive;
                 this.fileMigrate = model.fileMigrate;
                 this.fileTransfer = model.fileTransfer;
                 this.fileTransferAddress = model.fileTransferAddress;
@@ -3293,6 +3306,14 @@ public class DescribePolicyGroupsResponseBody extends TeaModel {
              */
             public Builder endUserGroupCoordinate(String endUserGroupCoordinate) {
                 this.endUserGroupCoordinate = endUserGroupCoordinate;
+                return this;
+            }
+
+            /**
+             * ExternalDrive.
+             */
+            public Builder externalDrive(String externalDrive) {
+                this.externalDrive = externalDrive;
                 return this;
             }
 
