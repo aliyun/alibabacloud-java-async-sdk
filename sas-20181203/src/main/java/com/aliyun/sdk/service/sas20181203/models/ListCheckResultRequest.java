@@ -67,6 +67,10 @@ public class ListCheckResultRequest extends Request {
     private java.util.List<Long> requirementIds;
 
     @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ResourceDirectoryAccountId")
+    private Long resourceDirectoryAccountId;
+
+    @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("RiskLevels")
     private java.util.List<String> riskLevels;
 
@@ -108,6 +112,7 @@ public class ListCheckResultRequest extends Request {
         this.pageSize = builder.pageSize;
         this.regionId = builder.regionId;
         this.requirementIds = builder.requirementIds;
+        this.resourceDirectoryAccountId = builder.resourceDirectoryAccountId;
         this.riskLevels = builder.riskLevels;
         this.sortTypes = builder.sortTypes;
         this.standardIds = builder.standardIds;
@@ -215,6 +220,13 @@ public class ListCheckResultRequest extends Request {
     }
 
     /**
+     * @return resourceDirectoryAccountId
+     */
+    public Long getResourceDirectoryAccountId() {
+        return this.resourceDirectoryAccountId;
+    }
+
+    /**
      * @return riskLevels
      */
     public java.util.List<String> getRiskLevels() {
@@ -276,6 +288,7 @@ public class ListCheckResultRequest extends Request {
         private Integer pageSize; 
         private String regionId; 
         private java.util.List<Long> requirementIds; 
+        private Long resourceDirectoryAccountId; 
         private java.util.List<String> riskLevels; 
         private java.util.List<String> sortTypes; 
         private java.util.List<Long> standardIds; 
@@ -302,6 +315,7 @@ public class ListCheckResultRequest extends Request {
             this.pageSize = request.pageSize;
             this.regionId = request.regionId;
             this.requirementIds = request.requirementIds;
+            this.resourceDirectoryAccountId = request.resourceDirectoryAccountId;
             this.riskLevels = request.riskLevels;
             this.sortTypes = request.sortTypes;
             this.standardIds = request.standardIds;
@@ -474,6 +488,18 @@ public class ListCheckResultRequest extends Request {
         public Builder requirementIds(java.util.List<Long> requirementIds) {
             this.putQueryParameter("RequirementIds", requirementIds);
             this.requirementIds = requirementIds;
+            return this;
+        }
+
+        /**
+         * <p>The Alibaba Cloud account ID of the member in the resource directory.</p>
+         * <blockquote>
+         * <p> You can call the <a href="~~DescribeMonitorAccounts~~">DescribeMonitorAccounts</a> operation to obtain the IDs.</p>
+         * </blockquote>
+         */
+        public Builder resourceDirectoryAccountId(Long resourceDirectoryAccountId) {
+            this.putQueryParameter("ResourceDirectoryAccountId", resourceDirectoryAccountId);
+            this.resourceDirectoryAccountId = resourceDirectoryAccountId;
             return this;
         }
 

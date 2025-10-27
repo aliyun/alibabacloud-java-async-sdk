@@ -23,6 +23,10 @@ public class GetVulStatisticsRequest extends Request {
     private String groupIdList;
 
     @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ResourceDirectoryAccountId")
+    private Long resourceDirectoryAccountId;
+
+    @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("SourceIp")
     private String sourceIp;
 
@@ -34,6 +38,7 @@ public class GetVulStatisticsRequest extends Request {
     private GetVulStatisticsRequest(Builder builder) {
         super(builder);
         this.groupIdList = builder.groupIdList;
+        this.resourceDirectoryAccountId = builder.resourceDirectoryAccountId;
         this.sourceIp = builder.sourceIp;
         this.typeList = builder.typeList;
     }
@@ -59,6 +64,13 @@ public class GetVulStatisticsRequest extends Request {
     }
 
     /**
+     * @return resourceDirectoryAccountId
+     */
+    public Long getResourceDirectoryAccountId() {
+        return this.resourceDirectoryAccountId;
+    }
+
+    /**
      * @return sourceIp
      */
     public String getSourceIp() {
@@ -74,6 +86,7 @@ public class GetVulStatisticsRequest extends Request {
 
     public static final class Builder extends Request.Builder<GetVulStatisticsRequest, Builder> {
         private String groupIdList; 
+        private Long resourceDirectoryAccountId; 
         private String sourceIp; 
         private String typeList; 
 
@@ -84,6 +97,7 @@ public class GetVulStatisticsRequest extends Request {
         private Builder(GetVulStatisticsRequest request) {
             super(request);
             this.groupIdList = request.groupIdList;
+            this.resourceDirectoryAccountId = request.resourceDirectoryAccountId;
             this.sourceIp = request.sourceIp;
             this.typeList = request.typeList;
         } 
@@ -101,6 +115,21 @@ public class GetVulStatisticsRequest extends Request {
         public Builder groupIdList(String groupIdList) {
             this.putQueryParameter("GroupIdList", groupIdList);
             this.groupIdList = groupIdList;
+            return this;
+        }
+
+        /**
+         * <p>The Alibaba Cloud account ID of the member in the resource directory.</p>
+         * <blockquote>
+         * <p> You can call the <a href="~~DescribeMonitorAccounts~~">DescribeMonitorAccounts</a> operation to obtain the IDs.</p>
+         * </blockquote>
+         * 
+         * <strong>example:</strong>
+         * <p>1232428423234****</p>
+         */
+        public Builder resourceDirectoryAccountId(Long resourceDirectoryAccountId) {
+            this.putQueryParameter("ResourceDirectoryAccountId", resourceDirectoryAccountId);
+            this.resourceDirectoryAccountId = resourceDirectoryAccountId;
             return this;
         }
 
