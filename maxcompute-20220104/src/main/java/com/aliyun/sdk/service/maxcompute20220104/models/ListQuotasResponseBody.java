@@ -796,6 +796,9 @@ public class ListQuotasResponseBody extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("adhocSlot")
         private Long adhocSlot;
 
+        @com.aliyun.core.annotation.NameInMap("autoScaleCPULimit")
+        private Long autoScaleCPULimit;
+
         @com.aliyun.core.annotation.NameInMap("elasticReservedCU")
         private Long elasticReservedCU;
 
@@ -809,9 +812,15 @@ public class ListQuotasResponseBody extends TeaModel {
         @com.aliyun.core.annotation.Validation(required = true)
         private Long maxCU;
 
+        @com.aliyun.core.annotation.NameInMap("maxGu")
+        private Long maxGu;
+
         @com.aliyun.core.annotation.NameInMap("minCU")
         @com.aliyun.core.annotation.Validation(required = true)
         private Long minCU;
+
+        @com.aliyun.core.annotation.NameInMap("minGu")
+        private Long minGu;
 
         @com.aliyun.core.annotation.NameInMap("schedulerType")
         private String schedulerType;
@@ -824,11 +833,14 @@ public class ListQuotasResponseBody extends TeaModel {
 
         private Parameter(Builder builder) {
             this.adhocSlot = builder.adhocSlot;
+            this.autoScaleCPULimit = builder.autoScaleCPULimit;
             this.elasticReservedCU = builder.elasticReservedCU;
             this.enablePriority = builder.enablePriority;
             this.forceReservedMin = builder.forceReservedMin;
             this.maxCU = builder.maxCU;
+            this.maxGu = builder.maxGu;
             this.minCU = builder.minCU;
+            this.minGu = builder.minGu;
             this.schedulerType = builder.schedulerType;
             this.singleJobCULimit = builder.singleJobCULimit;
             this.slotNum = builder.slotNum;
@@ -847,6 +859,13 @@ public class ListQuotasResponseBody extends TeaModel {
          */
         public Long getAdhocSlot() {
             return this.adhocSlot;
+        }
+
+        /**
+         * @return autoScaleCPULimit
+         */
+        public Long getAutoScaleCPULimit() {
+            return this.autoScaleCPULimit;
         }
 
         /**
@@ -878,10 +897,24 @@ public class ListQuotasResponseBody extends TeaModel {
         }
 
         /**
+         * @return maxGu
+         */
+        public Long getMaxGu() {
+            return this.maxGu;
+        }
+
+        /**
          * @return minCU
          */
         public Long getMinCU() {
             return this.minCU;
+        }
+
+        /**
+         * @return minGu
+         */
+        public Long getMinGu() {
+            return this.minGu;
         }
 
         /**
@@ -907,11 +940,14 @@ public class ListQuotasResponseBody extends TeaModel {
 
         public static final class Builder {
             private Long adhocSlot; 
+            private Long autoScaleCPULimit; 
             private Long elasticReservedCU; 
             private Boolean enablePriority; 
             private Boolean forceReservedMin; 
             private Long maxCU; 
+            private Long maxGu; 
             private Long minCU; 
+            private Long minGu; 
             private String schedulerType; 
             private Long singleJobCULimit; 
             private Long slotNum; 
@@ -921,11 +957,14 @@ public class ListQuotasResponseBody extends TeaModel {
 
             private Builder(Parameter model) {
                 this.adhocSlot = model.adhocSlot;
+                this.autoScaleCPULimit = model.autoScaleCPULimit;
                 this.elasticReservedCU = model.elasticReservedCU;
                 this.enablePriority = model.enablePriority;
                 this.forceReservedMin = model.forceReservedMin;
                 this.maxCU = model.maxCU;
+                this.maxGu = model.maxGu;
                 this.minCU = model.minCU;
+                this.minGu = model.minGu;
                 this.schedulerType = model.schedulerType;
                 this.singleJobCULimit = model.singleJobCULimit;
                 this.slotNum = model.slotNum;
@@ -936,6 +975,14 @@ public class ListQuotasResponseBody extends TeaModel {
              */
             public Builder adhocSlot(Long adhocSlot) {
                 this.adhocSlot = adhocSlot;
+                return this;
+            }
+
+            /**
+             * autoScaleCPULimit.
+             */
+            public Builder autoScaleCPULimit(Long autoScaleCPULimit) {
+                this.autoScaleCPULimit = autoScaleCPULimit;
                 return this;
             }
 
@@ -972,10 +1019,26 @@ public class ListQuotasResponseBody extends TeaModel {
             }
 
             /**
+             * maxGu.
+             */
+            public Builder maxGu(Long maxGu) {
+                this.maxGu = maxGu;
+                return this;
+            }
+
+            /**
              * <p>This parameter is required.</p>
              */
             public Builder minCU(Long minCU) {
                 this.minCU = minCU;
+                return this;
+            }
+
+            /**
+             * minGu.
+             */
+            public Builder minGu(Long minGu) {
+                this.minGu = minGu;
                 return this;
             }
 
@@ -2965,6 +3028,9 @@ public class ListQuotasResponseBody extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("adhocSlot")
         private Long adhocSlot;
 
+        @com.aliyun.core.annotation.NameInMap("autoScaleCPULimit")
+        private Long autoScaleCPULimit;
+
         @com.aliyun.core.annotation.NameInMap("elasticReservedCU")
         private Long elasticReservedCU;
 
@@ -2999,6 +3065,7 @@ public class ListQuotasResponseBody extends TeaModel {
 
         private SubQuotaInfoListParameter(Builder builder) {
             this.adhocSlot = builder.adhocSlot;
+            this.autoScaleCPULimit = builder.autoScaleCPULimit;
             this.elasticReservedCU = builder.elasticReservedCU;
             this.enablePriority = builder.enablePriority;
             this.forceReservedMin = builder.forceReservedMin;
@@ -3024,6 +3091,13 @@ public class ListQuotasResponseBody extends TeaModel {
          */
         public Long getAdhocSlot() {
             return this.adhocSlot;
+        }
+
+        /**
+         * @return autoScaleCPULimit
+         */
+        public Long getAutoScaleCPULimit() {
+            return this.autoScaleCPULimit;
         }
 
         /**
@@ -3098,6 +3172,7 @@ public class ListQuotasResponseBody extends TeaModel {
 
         public static final class Builder {
             private Long adhocSlot; 
+            private Long autoScaleCPULimit; 
             private Long elasticReservedCU; 
             private Boolean enablePriority; 
             private Boolean forceReservedMin; 
@@ -3114,6 +3189,7 @@ public class ListQuotasResponseBody extends TeaModel {
 
             private Builder(SubQuotaInfoListParameter model) {
                 this.adhocSlot = model.adhocSlot;
+                this.autoScaleCPULimit = model.autoScaleCPULimit;
                 this.elasticReservedCU = model.elasticReservedCU;
                 this.enablePriority = model.enablePriority;
                 this.forceReservedMin = model.forceReservedMin;
@@ -3131,6 +3207,14 @@ public class ListQuotasResponseBody extends TeaModel {
              */
             public Builder adhocSlot(Long adhocSlot) {
                 this.adhocSlot = adhocSlot;
+                return this;
+            }
+
+            /**
+             * autoScaleCPULimit.
+             */
+            public Builder autoScaleCPULimit(Long autoScaleCPULimit) {
+                this.autoScaleCPULimit = autoScaleCPULimit;
                 return this;
             }
 
