@@ -31,12 +31,20 @@ public class ListExecutionsRequest extends Request {
     private Integer limit;
 
     @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("MapRunName")
+    private String mapRunName;
+
+    @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("MetadataOnly")
     private Boolean metadataOnly;
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("NextToken")
     private String nextToken;
+
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Qualifier")
+    private String qualifier;
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("StartedTimeBegin")
@@ -55,8 +63,10 @@ public class ListExecutionsRequest extends Request {
         this.executionNamePrefix = builder.executionNamePrefix;
         this.flowName = builder.flowName;
         this.limit = builder.limit;
+        this.mapRunName = builder.mapRunName;
         this.metadataOnly = builder.metadataOnly;
         this.nextToken = builder.nextToken;
+        this.qualifier = builder.qualifier;
         this.startedTimeBegin = builder.startedTimeBegin;
         this.startedTimeEnd = builder.startedTimeEnd;
         this.status = builder.status;
@@ -70,7 +80,7 @@ public class ListExecutionsRequest extends Request {
         return builder().build();
     }
 
-    @Override
+@Override
     public Builder toBuilder() {
         return new Builder(this);
     }
@@ -97,6 +107,13 @@ public class ListExecutionsRequest extends Request {
     }
 
     /**
+     * @return mapRunName
+     */
+    public String getMapRunName() {
+        return this.mapRunName;
+    }
+
+    /**
      * @return metadataOnly
      */
     public Boolean getMetadataOnly() {
@@ -108,6 +125,13 @@ public class ListExecutionsRequest extends Request {
      */
     public String getNextToken() {
         return this.nextToken;
+    }
+
+    /**
+     * @return qualifier
+     */
+    public String getQualifier() {
+        return this.qualifier;
     }
 
     /**
@@ -135,8 +159,10 @@ public class ListExecutionsRequest extends Request {
         private String executionNamePrefix; 
         private String flowName; 
         private Integer limit; 
+        private String mapRunName; 
         private Boolean metadataOnly; 
         private String nextToken; 
+        private String qualifier; 
         private String startedTimeBegin; 
         private String startedTimeEnd; 
         private String status; 
@@ -150,8 +176,10 @@ public class ListExecutionsRequest extends Request {
             this.executionNamePrefix = request.executionNamePrefix;
             this.flowName = request.flowName;
             this.limit = request.limit;
+            this.mapRunName = request.mapRunName;
             this.metadataOnly = request.metadataOnly;
             this.nextToken = request.nextToken;
+            this.qualifier = request.qualifier;
             this.startedTimeBegin = request.startedTimeBegin;
             this.startedTimeEnd = request.startedTimeEnd;
             this.status = request.status;
@@ -201,6 +229,15 @@ public class ListExecutionsRequest extends Request {
         }
 
         /**
+         * MapRunName.
+         */
+        public Builder mapRunName(String mapRunName) {
+            this.putQueryParameter("MapRunName", mapRunName);
+            this.mapRunName = mapRunName;
+            return this;
+        }
+
+        /**
          * MetadataOnly.
          */
         public Builder metadataOnly(Boolean metadataOnly) {
@@ -218,6 +255,15 @@ public class ListExecutionsRequest extends Request {
         public Builder nextToken(String nextToken) {
             this.putQueryParameter("NextToken", nextToken);
             this.nextToken = nextToken;
+            return this;
+        }
+
+        /**
+         * Qualifier.
+         */
+        public Builder qualifier(String qualifier) {
+            this.putQueryParameter("Qualifier", qualifier);
+            this.qualifier = qualifier;
             return this;
         }
 

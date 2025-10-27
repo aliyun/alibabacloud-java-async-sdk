@@ -18,12 +18,17 @@ import com.aliyun.sdk.gateway.pop.models.*;
  */
 public class DescribeFlowRequest extends Request {
     @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("FlowVersion")
+    private String flowVersion;
+
+    @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("Name")
     @com.aliyun.core.annotation.Validation(required = true)
     private String name;
 
     private DescribeFlowRequest(Builder builder) {
         super(builder);
+        this.flowVersion = builder.flowVersion;
         this.name = builder.name;
     }
 
@@ -35,9 +40,16 @@ public class DescribeFlowRequest extends Request {
         return builder().build();
     }
 
-    @Override
+@Override
     public Builder toBuilder() {
         return new Builder(this);
+    }
+
+    /**
+     * @return flowVersion
+     */
+    public String getFlowVersion() {
+        return this.flowVersion;
     }
 
     /**
@@ -48,6 +60,7 @@ public class DescribeFlowRequest extends Request {
     }
 
     public static final class Builder extends Request.Builder<DescribeFlowRequest, Builder> {
+        private String flowVersion; 
         private String name; 
 
         private Builder() {
@@ -56,8 +69,18 @@ public class DescribeFlowRequest extends Request {
 
         private Builder(DescribeFlowRequest request) {
             super(request);
+            this.flowVersion = request.flowVersion;
             this.name = request.name;
         } 
+
+        /**
+         * FlowVersion.
+         */
+        public Builder flowVersion(String flowVersion) {
+            this.putQueryParameter("FlowVersion", flowVersion);
+            this.flowVersion = flowVersion;
+            return this;
+        }
 
         /**
          * <p>The name of the flow.</p>

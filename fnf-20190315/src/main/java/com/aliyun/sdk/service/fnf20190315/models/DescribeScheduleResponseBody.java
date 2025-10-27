@@ -64,6 +64,10 @@ public class DescribeScheduleResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return createdTime
      */
@@ -137,6 +141,21 @@ public class DescribeScheduleResponseBody extends TeaModel {
         private String requestId; 
         private String scheduleId; 
         private String scheduleName; 
+
+        private Builder() {
+        } 
+
+        private Builder(DescribeScheduleResponseBody model) {
+            this.createdTime = model.createdTime;
+            this.cronExpression = model.cronExpression;
+            this.description = model.description;
+            this.enable = model.enable;
+            this.lastModifiedTime = model.lastModifiedTime;
+            this.payload = model.payload;
+            this.requestId = model.requestId;
+            this.scheduleId = model.scheduleId;
+            this.scheduleName = model.scheduleName;
+        } 
 
         /**
          * <p>The time when the time-based schedule was created.</p>

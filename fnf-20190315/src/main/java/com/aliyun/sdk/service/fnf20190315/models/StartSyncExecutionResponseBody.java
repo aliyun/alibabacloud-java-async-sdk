@@ -17,6 +17,9 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>StartSyncExecutionResponseBody</p>
  */
 public class StartSyncExecutionResponseBody extends TeaModel {
+    @com.aliyun.core.annotation.NameInMap("Environment")
+    private Environment environment;
+
     @com.aliyun.core.annotation.NameInMap("ErrorCode")
     private String errorCode;
 
@@ -45,6 +48,7 @@ public class StartSyncExecutionResponseBody extends TeaModel {
     private String stoppedTime;
 
     private StartSyncExecutionResponseBody(Builder builder) {
+        this.environment = builder.environment;
         this.errorCode = builder.errorCode;
         this.errorMessage = builder.errorMessage;
         this.flowName = builder.flowName;
@@ -62,6 +66,17 @@ public class StartSyncExecutionResponseBody extends TeaModel {
 
     public static StartSyncExecutionResponseBody create() {
         return builder().build();
+    }
+
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
+    /**
+     * @return environment
+     */
+    public Environment getEnvironment() {
+        return this.environment;
     }
 
     /**
@@ -128,6 +143,7 @@ public class StartSyncExecutionResponseBody extends TeaModel {
     }
 
     public static final class Builder {
+        private Environment environment; 
         private String errorCode; 
         private String errorMessage; 
         private String flowName; 
@@ -137,6 +153,30 @@ public class StartSyncExecutionResponseBody extends TeaModel {
         private String startedTime; 
         private String status; 
         private String stoppedTime; 
+
+        private Builder() {
+        } 
+
+        private Builder(StartSyncExecutionResponseBody model) {
+            this.environment = model.environment;
+            this.errorCode = model.errorCode;
+            this.errorMessage = model.errorMessage;
+            this.flowName = model.flowName;
+            this.name = model.name;
+            this.output = model.output;
+            this.requestId = model.requestId;
+            this.startedTime = model.startedTime;
+            this.status = model.status;
+            this.stoppedTime = model.stoppedTime;
+        } 
+
+        /**
+         * Environment.
+         */
+        public Builder environment(Environment environment) {
+            this.environment = environment;
+            return this;
+        }
 
         /**
          * <p>The error code that is returned if the execution failed.</p>
@@ -251,4 +291,136 @@ public class StartSyncExecutionResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link StartSyncExecutionResponseBody} extends {@link TeaModel}
+     *
+     * <p>StartSyncExecutionResponseBody</p>
+     */
+    public static class Variables extends TeaModel {
+        @com.aliyun.core.annotation.NameInMap("Name")
+        private String name;
+
+        @com.aliyun.core.annotation.NameInMap("Value")
+        private String value;
+
+        private Variables(Builder builder) {
+            this.name = builder.name;
+            this.value = builder.value;
+        }
+
+        public static Builder builder() {
+            return new Builder();
+        }
+
+        public static Variables create() {
+            return builder().build();
+        }
+
+        /**
+         * @return name
+         */
+        public String getName() {
+            return this.name;
+        }
+
+        /**
+         * @return value
+         */
+        public String getValue() {
+            return this.value;
+        }
+
+        public static final class Builder {
+            private String name; 
+            private String value; 
+
+            private Builder() {
+            } 
+
+            private Builder(Variables model) {
+                this.name = model.name;
+                this.value = model.value;
+            } 
+
+            /**
+             * <p>The name of the execution.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>my_exec_name:{UUID}</p>
+             */
+            public Builder name(String name) {
+                this.name = name;
+                return this;
+            }
+
+            /**
+             * Value.
+             */
+            public Builder value(String value) {
+                this.value = value;
+                return this;
+            }
+
+            public Variables build() {
+                return new Variables(this);
+            } 
+
+        } 
+
+    }
+    /**
+     * 
+     * {@link StartSyncExecutionResponseBody} extends {@link TeaModel}
+     *
+     * <p>StartSyncExecutionResponseBody</p>
+     */
+    public static class Environment extends TeaModel {
+        @com.aliyun.core.annotation.NameInMap("Variables")
+        private java.util.List<Variables> variables;
+
+        private Environment(Builder builder) {
+            this.variables = builder.variables;
+        }
+
+        public static Builder builder() {
+            return new Builder();
+        }
+
+        public static Environment create() {
+            return builder().build();
+        }
+
+        /**
+         * @return variables
+         */
+        public java.util.List<Variables> getVariables() {
+            return this.variables;
+        }
+
+        public static final class Builder {
+            private java.util.List<Variables> variables; 
+
+            private Builder() {
+            } 
+
+            private Builder(Environment model) {
+                this.variables = model.variables;
+            } 
+
+            /**
+             * Variables.
+             */
+            public Builder variables(java.util.List<Variables> variables) {
+                this.variables = variables;
+                return this;
+            }
+
+            public Environment build() {
+                return new Environment(this);
+            } 
+
+        } 
+
+    }
 }

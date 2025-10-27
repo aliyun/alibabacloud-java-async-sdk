@@ -34,12 +34,17 @@ public class StartExecutionRequest extends Request {
     @com.aliyun.core.annotation.NameInMap("Input")
     private String input;
 
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("Qualifier")
+    private String qualifier;
+
     private StartExecutionRequest(Builder builder) {
         super(builder);
         this.callbackFnFTaskToken = builder.callbackFnFTaskToken;
         this.executionName = builder.executionName;
         this.flowName = builder.flowName;
         this.input = builder.input;
+        this.qualifier = builder.qualifier;
     }
 
     public static Builder builder() {
@@ -50,7 +55,7 @@ public class StartExecutionRequest extends Request {
         return builder().build();
     }
 
-    @Override
+@Override
     public Builder toBuilder() {
         return new Builder(this);
     }
@@ -83,11 +88,19 @@ public class StartExecutionRequest extends Request {
         return this.input;
     }
 
+    /**
+     * @return qualifier
+     */
+    public String getQualifier() {
+        return this.qualifier;
+    }
+
     public static final class Builder extends Request.Builder<StartExecutionRequest, Builder> {
         private String callbackFnFTaskToken; 
         private String executionName; 
         private String flowName; 
         private String input; 
+        private String qualifier; 
 
         private Builder() {
             super();
@@ -99,6 +112,7 @@ public class StartExecutionRequest extends Request {
             this.executionName = request.executionName;
             this.flowName = request.flowName;
             this.input = request.input;
+            this.qualifier = request.qualifier;
         } 
 
         /**
@@ -153,6 +167,15 @@ public class StartExecutionRequest extends Request {
         public Builder input(String input) {
             this.putBodyParameter("Input", input);
             this.input = input;
+            return this;
+        }
+
+        /**
+         * Qualifier.
+         */
+        public Builder qualifier(String qualifier) {
+            this.putBodyParameter("Qualifier", qualifier);
+            this.qualifier = qualifier;
             return this;
         }
 

@@ -30,11 +30,16 @@ public class StartSyncExecutionRequest extends Request {
     @com.aliyun.core.annotation.NameInMap("Input")
     private String input;
 
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("Qualifier")
+    private String qualifier;
+
     private StartSyncExecutionRequest(Builder builder) {
         super(builder);
         this.executionName = builder.executionName;
         this.flowName = builder.flowName;
         this.input = builder.input;
+        this.qualifier = builder.qualifier;
     }
 
     public static Builder builder() {
@@ -45,7 +50,7 @@ public class StartSyncExecutionRequest extends Request {
         return builder().build();
     }
 
-    @Override
+@Override
     public Builder toBuilder() {
         return new Builder(this);
     }
@@ -71,10 +76,18 @@ public class StartSyncExecutionRequest extends Request {
         return this.input;
     }
 
+    /**
+     * @return qualifier
+     */
+    public String getQualifier() {
+        return this.qualifier;
+    }
+
     public static final class Builder extends Request.Builder<StartSyncExecutionRequest, Builder> {
         private String executionName; 
         private String flowName; 
         private String input; 
+        private String qualifier; 
 
         private Builder() {
             super();
@@ -85,6 +98,7 @@ public class StartSyncExecutionRequest extends Request {
             this.executionName = request.executionName;
             this.flowName = request.flowName;
             this.input = request.input;
+            this.qualifier = request.qualifier;
         } 
 
         /**
@@ -128,6 +142,15 @@ public class StartSyncExecutionRequest extends Request {
         public Builder input(String input) {
             this.putBodyParameter("Input", input);
             this.input = input;
+            return this;
+        }
+
+        /**
+         * Qualifier.
+         */
+        public Builder qualifier(String qualifier) {
+            this.putBodyParameter("Qualifier", qualifier);
+            this.qualifier = qualifier;
             return this;
         }
 

@@ -26,6 +26,9 @@ public class UpdateFlowResponseBody extends TeaModel {
     @com.aliyun.core.annotation.NameInMap("Description")
     private String description;
 
+    @com.aliyun.core.annotation.NameInMap("Environment")
+    private Environment environment;
+
     @com.aliyun.core.annotation.NameInMap("ExternalStorageLocation")
     private String externalStorageLocation;
 
@@ -51,6 +54,7 @@ public class UpdateFlowResponseBody extends TeaModel {
         this.createdTime = builder.createdTime;
         this.definition = builder.definition;
         this.description = builder.description;
+        this.environment = builder.environment;
         this.externalStorageLocation = builder.externalStorageLocation;
         this.id = builder.id;
         this.lastModifiedTime = builder.lastModifiedTime;
@@ -66,6 +70,10 @@ public class UpdateFlowResponseBody extends TeaModel {
 
     public static UpdateFlowResponseBody create() {
         return builder().build();
+    }
+
+    public Builder toBuilder() {
+        return new Builder(this);
     }
 
     /**
@@ -87,6 +95,13 @@ public class UpdateFlowResponseBody extends TeaModel {
      */
     public String getDescription() {
         return this.description;
+    }
+
+    /**
+     * @return environment
+     */
+    public Environment getEnvironment() {
+        return this.environment;
     }
 
     /**
@@ -142,6 +157,7 @@ public class UpdateFlowResponseBody extends TeaModel {
         private String createdTime; 
         private String definition; 
         private String description; 
+        private Environment environment; 
         private String externalStorageLocation; 
         private String id; 
         private String lastModifiedTime; 
@@ -149,6 +165,23 @@ public class UpdateFlowResponseBody extends TeaModel {
         private String requestId; 
         private String roleArn; 
         private String type; 
+
+        private Builder() {
+        } 
+
+        private Builder(UpdateFlowResponseBody model) {
+            this.createdTime = model.createdTime;
+            this.definition = model.definition;
+            this.description = model.description;
+            this.environment = model.environment;
+            this.externalStorageLocation = model.externalStorageLocation;
+            this.id = model.id;
+            this.lastModifiedTime = model.lastModifiedTime;
+            this.name = model.name;
+            this.requestId = model.requestId;
+            this.roleArn = model.roleArn;
+            this.type = model.type;
+        } 
 
         /**
          * <p>The time when the flow was created.</p>
@@ -180,6 +213,14 @@ public class UpdateFlowResponseBody extends TeaModel {
          */
         public Builder description(String description) {
             this.description = description;
+            return this;
+        }
+
+        /**
+         * Environment.
+         */
+        public Builder environment(Environment environment) {
+            this.environment = environment;
             return this;
         }
 
@@ -266,4 +307,160 @@ public class UpdateFlowResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link UpdateFlowResponseBody} extends {@link TeaModel}
+     *
+     * <p>UpdateFlowResponseBody</p>
+     */
+    public static class Variables extends TeaModel {
+        @com.aliyun.core.annotation.NameInMap("Description")
+        private String description;
+
+        @com.aliyun.core.annotation.NameInMap("Name")
+        private String name;
+
+        @com.aliyun.core.annotation.NameInMap("Value")
+        private String value;
+
+        private Variables(Builder builder) {
+            this.description = builder.description;
+            this.name = builder.name;
+            this.value = builder.value;
+        }
+
+        public static Builder builder() {
+            return new Builder();
+        }
+
+        public static Variables create() {
+            return builder().build();
+        }
+
+        /**
+         * @return description
+         */
+        public String getDescription() {
+            return this.description;
+        }
+
+        /**
+         * @return name
+         */
+        public String getName() {
+            return this.name;
+        }
+
+        /**
+         * @return value
+         */
+        public String getValue() {
+            return this.value;
+        }
+
+        public static final class Builder {
+            private String description; 
+            private String name; 
+            private String value; 
+
+            private Builder() {
+            } 
+
+            private Builder(Variables model) {
+                this.description = model.description;
+                this.name = model.name;
+                this.value = model.value;
+            } 
+
+            /**
+             * <p>The description of the flow.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>test definition</p>
+             */
+            public Builder description(String description) {
+                this.description = description;
+                return this;
+            }
+
+            /**
+             * <p>The name of the flow.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>flow</p>
+             */
+            public Builder name(String name) {
+                this.name = name;
+                return this;
+            }
+
+            /**
+             * Value.
+             */
+            public Builder value(String value) {
+                this.value = value;
+                return this;
+            }
+
+            public Variables build() {
+                return new Variables(this);
+            } 
+
+        } 
+
+    }
+    /**
+     * 
+     * {@link UpdateFlowResponseBody} extends {@link TeaModel}
+     *
+     * <p>UpdateFlowResponseBody</p>
+     */
+    public static class Environment extends TeaModel {
+        @com.aliyun.core.annotation.NameInMap("Variables")
+        private java.util.List<Variables> variables;
+
+        private Environment(Builder builder) {
+            this.variables = builder.variables;
+        }
+
+        public static Builder builder() {
+            return new Builder();
+        }
+
+        public static Environment create() {
+            return builder().build();
+        }
+
+        /**
+         * @return variables
+         */
+        public java.util.List<Variables> getVariables() {
+            return this.variables;
+        }
+
+        public static final class Builder {
+            private java.util.List<Variables> variables; 
+
+            private Builder() {
+            } 
+
+            private Builder(Environment model) {
+                this.variables = model.variables;
+            } 
+
+            /**
+             * Variables.
+             */
+            public Builder variables(java.util.List<Variables> variables) {
+                this.variables = variables;
+                return this;
+            }
+
+            public Environment build() {
+                return new Environment(this);
+            } 
+
+        } 
+
+    }
 }

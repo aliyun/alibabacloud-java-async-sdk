@@ -64,6 +64,10 @@ public class StartExecutionResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return flowDefinition
      */
@@ -137,6 +141,21 @@ public class StartExecutionResponseBody extends TeaModel {
         private String startedTime; 
         private String status; 
         private String stoppedTime; 
+
+        private Builder() {
+        } 
+
+        private Builder(StartExecutionResponseBody model) {
+            this.flowDefinition = model.flowDefinition;
+            this.flowName = model.flowName;
+            this.input = model.input;
+            this.name = model.name;
+            this.output = model.output;
+            this.requestId = model.requestId;
+            this.startedTime = model.startedTime;
+            this.status = model.status;
+            this.stoppedTime = model.stoppedTime;
+        } 
 
         /**
          * <p>The definition of the flow.</p>

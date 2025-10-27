@@ -46,7 +46,7 @@ public class ListSchedulesRequest extends Request {
         return builder().build();
     }
 
-    @Override
+@Override
     public Builder toBuilder() {
         return new Builder(this);
     }
@@ -108,7 +108,7 @@ public class ListSchedulesRequest extends Request {
         }
 
         /**
-         * <p>The number of schedules to be queried. Valid values: 1 to 1000.</p>
+         * <p>The number of schedules that you want to query. Valid values: 1 to 1000.</p>
          * 
          * <strong>example:</strong>
          * <p>1</p>

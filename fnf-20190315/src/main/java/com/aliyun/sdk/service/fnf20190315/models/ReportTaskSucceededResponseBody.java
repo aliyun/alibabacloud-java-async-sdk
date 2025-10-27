@@ -36,6 +36,10 @@ public class ReportTaskSucceededResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return eventId
      */
@@ -53,6 +57,14 @@ public class ReportTaskSucceededResponseBody extends TeaModel {
     public static final class Builder {
         private Long eventId; 
         private String requestId; 
+
+        private Builder() {
+        } 
+
+        private Builder(ReportTaskSucceededResponseBody model) {
+            this.eventId = model.eventId;
+            this.requestId = model.requestId;
+        } 
 
         /**
          * <p>The ID of the event.</p>

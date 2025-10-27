@@ -33,6 +33,12 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<CreateFlowResponse> createFlow(CreateFlowRequest request);
 
     /**
+     * @param request the request parameters of CreateFlowAlias  CreateFlowAliasRequest
+     * @return CreateFlowAliasResponse
+     */
+    CompletableFuture<CreateFlowAliasResponse> createFlowAlias(CreateFlowAliasRequest request);
+
+    /**
      * @param request the request parameters of CreateSchedule  CreateScheduleRequest
      * @return CreateScheduleResponse
      */
@@ -47,6 +53,18 @@ public interface AsyncClient extends SdkAutoCloseable {
      * @return DeleteFlowResponse
      */
     CompletableFuture<DeleteFlowResponse> deleteFlow(DeleteFlowRequest request);
+
+    /**
+     * @param request the request parameters of DeleteFlowAlias  DeleteFlowAliasRequest
+     * @return DeleteFlowAliasResponse
+     */
+    CompletableFuture<DeleteFlowAliasResponse> deleteFlowAlias(DeleteFlowAliasRequest request);
+
+    /**
+     * @param request the request parameters of DeleteFlowVersion  DeleteFlowVersionRequest
+     * @return DeleteFlowVersionResponse
+     */
+    CompletableFuture<DeleteFlowVersionResponse> deleteFlowVersion(DeleteFlowVersionRequest request);
 
     /**
      * @param request the request parameters of DeleteSchedule  DeleteScheduleRequest
@@ -65,6 +83,18 @@ public interface AsyncClient extends SdkAutoCloseable {
      * @return DescribeFlowResponse
      */
     CompletableFuture<DescribeFlowResponse> describeFlow(DescribeFlowRequest request);
+
+    /**
+     * @param request the request parameters of DescribeFlowAlias  DescribeFlowAliasRequest
+     * @return DescribeFlowAliasResponse
+     */
+    CompletableFuture<DescribeFlowAliasResponse> describeFlowAlias(DescribeFlowAliasRequest request);
+
+    /**
+     * @param request the request parameters of DescribeMapRun  DescribeMapRunRequest
+     * @return DescribeMapRunResponse
+     */
+    CompletableFuture<DescribeMapRunResponse> describeMapRun(DescribeMapRunRequest request);
 
     /**
      * @param request the request parameters of DescribeRegions  DescribeRegionsRequest
@@ -95,6 +125,18 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<ListExecutionsResponse> listExecutions(ListExecutionsRequest request);
 
     /**
+     * @param request the request parameters of ListFlowAliases  ListFlowAliasesRequest
+     * @return ListFlowAliasesResponse
+     */
+    CompletableFuture<ListFlowAliasesResponse> listFlowAliases(ListFlowAliasesRequest request);
+
+    /**
+     * @param request the request parameters of ListFlowVersions  ListFlowVersionsRequest
+     * @return ListFlowVersionsResponse
+     */
+    CompletableFuture<ListFlowVersionsResponse> listFlowVersions(ListFlowVersionsRequest request);
+
+    /**
      * @param request the request parameters of ListFlows  ListFlowsRequest
      * @return ListFlowsResponse
      */
@@ -105,6 +147,12 @@ public interface AsyncClient extends SdkAutoCloseable {
      * @return ListSchedulesResponse
      */
     CompletableFuture<ListSchedulesResponse> listSchedules(ListSchedulesRequest request);
+
+    /**
+     * @param request the request parameters of PublishFlowVersion  PublishFlowVersionRequest
+     * @return PublishFlowVersionResponse
+     */
+    CompletableFuture<PublishFlowVersionResponse> publishFlowVersion(PublishFlowVersionRequest request);
 
     /**
      * <b>description</b> :
@@ -168,6 +216,18 @@ public interface AsyncClient extends SdkAutoCloseable {
      * @return UpdateFlowResponse
      */
     CompletableFuture<UpdateFlowResponse> updateFlow(UpdateFlowRequest request);
+
+    /**
+     * @param request the request parameters of UpdateFlowAlias  UpdateFlowAliasRequest
+     * @return UpdateFlowAliasResponse
+     */
+    CompletableFuture<UpdateFlowAliasResponse> updateFlowAlias(UpdateFlowAliasRequest request);
+
+    /**
+     * @param request the request parameters of UpdateMapRun  UpdateMapRunRequest
+     * @return UpdateMapRunResponse
+     */
+    CompletableFuture<UpdateMapRunResponse> updateMapRun(UpdateMapRunRequest request);
 
     /**
      * @param request the request parameters of UpdateSchedule  UpdateScheduleRequest

@@ -68,6 +68,10 @@ public class StopExecutionResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return flowDefinition
      */
@@ -150,6 +154,22 @@ public class StopExecutionResponseBody extends TeaModel {
         private String status; 
         private String stoppedTime; 
 
+        private Builder() {
+        } 
+
+        private Builder(StopExecutionResponseBody model) {
+            this.flowDefinition = model.flowDefinition;
+            this.flowName = model.flowName;
+            this.input = model.input;
+            this.name = model.name;
+            this.output = model.output;
+            this.requestId = model.requestId;
+            this.roleArn = model.roleArn;
+            this.startedTime = model.startedTime;
+            this.status = model.status;
+            this.stoppedTime = model.stoppedTime;
+        } 
+
         /**
          * <p>The definition of the flow.</p>
          * 
@@ -217,9 +237,9 @@ public class StopExecutionResponseBody extends TeaModel {
         }
 
         /**
-         * <p>执行的角色权限配置。若流程定义中的RoleArn在执行期间发生变更，系统将记录并返回执行初始时刻的RoleArn的快照。</p>
+         * <p>The Alibaba Cloud resource name (ARN) of the role that executed the flow. If the RoleArn in the flow definition is changed during the execution of the flow, the system records and returns a snapshot of the original RoleArn.</p>
          * <blockquote>
-         * <p>如果您的流程在执行时未配置执行角色，则该字段不会出现。</p>
+         * <p> If you do not specify the RoleArn parameter in the request parameters, the response parameters do not contain the RoleArn parameter.</p>
          * </blockquote>
          * 
          * <strong>example:</strong>

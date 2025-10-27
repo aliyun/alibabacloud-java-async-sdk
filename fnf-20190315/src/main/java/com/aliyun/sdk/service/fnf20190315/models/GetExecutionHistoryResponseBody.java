@@ -40,6 +40,10 @@ public class GetExecutionHistoryResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return events
      */
@@ -65,6 +69,15 @@ public class GetExecutionHistoryResponseBody extends TeaModel {
         private java.util.List<Events> events; 
         private String nextToken; 
         private String requestId; 
+
+        private Builder() {
+        } 
+
+        private Builder(GetExecutionHistoryResponseBody model) {
+            this.events = model.events;
+            this.nextToken = model.nextToken;
+            this.requestId = model.requestId;
+        } 
 
         /**
          * <p>The events.</p>
@@ -193,6 +206,18 @@ public class GetExecutionHistoryResponseBody extends TeaModel {
             private String stepName; 
             private String time; 
             private String type; 
+
+            private Builder() {
+            } 
+
+            private Builder(Events model) {
+                this.eventDetail = model.eventDetail;
+                this.eventId = model.eventId;
+                this.scheduleEventId = model.scheduleEventId;
+                this.stepName = model.stepName;
+                this.time = model.time;
+                this.type = model.type;
+            } 
 
             /**
              * <p>The details about the execution step.</p>

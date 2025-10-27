@@ -40,6 +40,10 @@ public class ListSchedulesResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return nextToken
      */
@@ -65,6 +69,15 @@ public class ListSchedulesResponseBody extends TeaModel {
         private String nextToken; 
         private String requestId; 
         private java.util.List<Schedules> schedules; 
+
+        private Builder() {
+        } 
+
+        private Builder(ListSchedulesResponseBody model) {
+            this.nextToken = model.nextToken;
+            this.requestId = model.requestId;
+            this.schedules = model.schedules;
+        } 
 
         /**
          * <p>The token for the next query.</p>
@@ -217,6 +230,20 @@ public class ListSchedulesResponseBody extends TeaModel {
             private String payload; 
             private String scheduleId; 
             private String scheduleName; 
+
+            private Builder() {
+            } 
+
+            private Builder(Schedules model) {
+                this.createdTime = model.createdTime;
+                this.cronExpression = model.cronExpression;
+                this.description = model.description;
+                this.enable = model.enable;
+                this.lastModifiedTime = model.lastModifiedTime;
+                this.payload = model.payload;
+                this.scheduleId = model.scheduleId;
+                this.scheduleName = model.scheduleName;
+            } 
 
             /**
              * <p>The time when the time-based schedule was created.</p>
