@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.captcha20230305.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -41,6 +46,10 @@ public class VerifyIntelligentCaptchaResponseBody extends TeaModel {
 
     public static VerifyIntelligentCaptchaResponseBody create() {
         return builder().build();
+    }
+
+    public Builder toBuilder() {
+        return new Builder(this);
     }
 
     /**
@@ -84,6 +93,17 @@ public class VerifyIntelligentCaptchaResponseBody extends TeaModel {
         private String requestId; 
         private Result result; 
         private Boolean success; 
+
+        private Builder() {
+        } 
+
+        private Builder(VerifyIntelligentCaptchaResponseBody model) {
+            this.code = model.code;
+            this.message = model.message;
+            this.requestId = model.requestId;
+            this.result = model.result;
+            this.success = model.success;
+        } 
 
         /**
          * Code.
@@ -141,6 +161,9 @@ public class VerifyIntelligentCaptchaResponseBody extends TeaModel {
      * <p>VerifyIntelligentCaptchaResponseBody</p>
      */
     public static class Result extends TeaModel {
+        @com.aliyun.core.annotation.NameInMap("CertifyId")
+        private String certifyId;
+
         @com.aliyun.core.annotation.NameInMap("VerifyCode")
         private String verifyCode;
 
@@ -148,6 +171,7 @@ public class VerifyIntelligentCaptchaResponseBody extends TeaModel {
         private Boolean verifyResult;
 
         private Result(Builder builder) {
+            this.certifyId = builder.certifyId;
             this.verifyCode = builder.verifyCode;
             this.verifyResult = builder.verifyResult;
         }
@@ -158,6 +182,13 @@ public class VerifyIntelligentCaptchaResponseBody extends TeaModel {
 
         public static Result create() {
             return builder().build();
+        }
+
+        /**
+         * @return certifyId
+         */
+        public String getCertifyId() {
+            return this.certifyId;
         }
 
         /**
@@ -175,8 +206,26 @@ public class VerifyIntelligentCaptchaResponseBody extends TeaModel {
         }
 
         public static final class Builder {
+            private String certifyId; 
             private String verifyCode; 
             private Boolean verifyResult; 
+
+            private Builder() {
+            } 
+
+            private Builder(Result model) {
+                this.certifyId = model.certifyId;
+                this.verifyCode = model.verifyCode;
+                this.verifyResult = model.verifyResult;
+            } 
+
+            /**
+             * CertifyId.
+             */
+            public Builder certifyId(String certifyId) {
+                this.certifyId = certifyId;
+                return this;
+            }
 
             /**
              * VerifyCode.
