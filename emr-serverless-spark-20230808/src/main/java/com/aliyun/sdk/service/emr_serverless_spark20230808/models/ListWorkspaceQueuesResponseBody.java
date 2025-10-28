@@ -344,6 +344,9 @@ public class ListWorkspaceQueuesResponseBody extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("paymentType")
         private String paymentType;
 
+        @com.aliyun.core.annotation.NameInMap("preheat")
+        private Boolean preheat;
+
         @com.aliyun.core.annotation.NameInMap("properties")
         private String properties;
 
@@ -376,6 +379,7 @@ public class ListWorkspaceQueuesResponseBody extends TeaModel {
             this.maxResource = builder.maxResource;
             this.minResource = builder.minResource;
             this.paymentType = builder.paymentType;
+            this.preheat = builder.preheat;
             this.properties = builder.properties;
             this.queueName = builder.queueName;
             this.queueScope = builder.queueScope;
@@ -444,6 +448,13 @@ public class ListWorkspaceQueuesResponseBody extends TeaModel {
         }
 
         /**
+         * @return preheat
+         */
+        public Boolean getPreheat() {
+            return this.preheat;
+        }
+
+        /**
          * @return properties
          */
         public String getProperties() {
@@ -507,6 +518,7 @@ public class ListWorkspaceQueuesResponseBody extends TeaModel {
             private String maxResource; 
             private String minResource; 
             private String paymentType; 
+            private Boolean preheat; 
             private String properties; 
             private String queueName; 
             private String queueScope; 
@@ -527,6 +539,7 @@ public class ListWorkspaceQueuesResponseBody extends TeaModel {
                 this.maxResource = model.maxResource;
                 this.minResource = model.minResource;
                 this.paymentType = model.paymentType;
+                this.preheat = model.preheat;
                 this.properties = model.properties;
                 this.queueName = model.queueName;
                 this.queueScope = model.queueScope;
@@ -609,6 +622,14 @@ public class ListWorkspaceQueuesResponseBody extends TeaModel {
              */
             public Builder paymentType(String paymentType) {
                 this.paymentType = paymentType;
+                return this;
+            }
+
+            /**
+             * preheat.
+             */
+            public Builder preheat(Boolean preheat) {
+                this.preheat = preheat;
                 return this;
             }
 

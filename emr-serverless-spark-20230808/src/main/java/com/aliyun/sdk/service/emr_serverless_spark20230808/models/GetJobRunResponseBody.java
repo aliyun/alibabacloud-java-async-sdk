@@ -266,6 +266,9 @@ public class GetJobRunResponseBody extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("name")
         private String name;
 
+        @com.aliyun.core.annotation.NameInMap("notebookAccessUrl")
+        private String notebookAccessUrl;
+
         @com.aliyun.core.annotation.NameInMap("releaseVersion")
         private String releaseVersion;
 
@@ -305,6 +308,7 @@ public class GetJobRunResponseBody extends TeaModel {
             this.jobRunId = builder.jobRunId;
             this.log = builder.log;
             this.name = builder.name;
+            this.notebookAccessUrl = builder.notebookAccessUrl;
             this.releaseVersion = builder.releaseVersion;
             this.resourceOwnerId = builder.resourceOwnerId;
             this.resourceQueueId = builder.resourceQueueId;
@@ -402,6 +406,13 @@ public class GetJobRunResponseBody extends TeaModel {
         }
 
         /**
+         * @return notebookAccessUrl
+         */
+        public String getNotebookAccessUrl() {
+            return this.notebookAccessUrl;
+        }
+
+        /**
          * @return releaseVersion
          */
         public String getReleaseVersion() {
@@ -476,6 +487,7 @@ public class GetJobRunResponseBody extends TeaModel {
             private String jobRunId; 
             private RunLog log; 
             private String name; 
+            private String notebookAccessUrl; 
             private String releaseVersion; 
             private String resourceOwnerId; 
             private String resourceQueueId; 
@@ -501,6 +513,7 @@ public class GetJobRunResponseBody extends TeaModel {
                 this.jobRunId = model.jobRunId;
                 this.log = model.log;
                 this.name = model.name;
+                this.notebookAccessUrl = model.notebookAccessUrl;
                 this.releaseVersion = model.releaseVersion;
                 this.resourceOwnerId = model.resourceOwnerId;
                 this.resourceQueueId = model.resourceQueueId;
@@ -626,6 +639,14 @@ public class GetJobRunResponseBody extends TeaModel {
              */
             public Builder name(String name) {
                 this.name = name;
+                return this;
+            }
+
+            /**
+             * notebookAccessUrl.
+             */
+            public Builder notebookAccessUrl(String notebookAccessUrl) {
+                this.notebookAccessUrl = notebookAccessUrl;
                 return this;
             }
 

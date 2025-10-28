@@ -347,6 +347,9 @@ public class ListJobRunsResponseBody extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("releaseVersion")
         private String releaseVersion;
 
+        @com.aliyun.core.annotation.NameInMap("resourceQueueId")
+        private String resourceQueueId;
+
         @com.aliyun.core.annotation.NameInMap("state")
         private String state;
 
@@ -383,6 +386,7 @@ public class ListJobRunsResponseBody extends TeaModel {
             this.mbSeconds = builder.mbSeconds;
             this.name = builder.name;
             this.releaseVersion = builder.releaseVersion;
+            this.resourceQueueId = builder.resourceQueueId;
             this.state = builder.state;
             this.stateChangeReason = builder.stateChangeReason;
             this.submitTime = builder.submitTime;
@@ -499,6 +503,13 @@ public class ListJobRunsResponseBody extends TeaModel {
         }
 
         /**
+         * @return resourceQueueId
+         */
+        public String getResourceQueueId() {
+            return this.resourceQueueId;
+        }
+
+        /**
          * @return state
          */
         public String getState() {
@@ -562,6 +573,7 @@ public class ListJobRunsResponseBody extends TeaModel {
             private Long mbSeconds; 
             private String name; 
             private String releaseVersion; 
+            private String resourceQueueId; 
             private String state; 
             private StateChangeReason stateChangeReason; 
             private Long submitTime; 
@@ -588,6 +600,7 @@ public class ListJobRunsResponseBody extends TeaModel {
                 this.mbSeconds = model.mbSeconds;
                 this.name = model.name;
                 this.releaseVersion = model.releaseVersion;
+                this.resourceQueueId = model.resourceQueueId;
                 this.state = model.state;
                 this.stateChangeReason = model.stateChangeReason;
                 this.submitTime = model.submitTime;
@@ -742,6 +755,14 @@ public class ListJobRunsResponseBody extends TeaModel {
              */
             public Builder releaseVersion(String releaseVersion) {
                 this.releaseVersion = releaseVersion;
+                return this;
+            }
+
+            /**
+             * resourceQueueId.
+             */
+            public Builder resourceQueueId(String resourceQueueId) {
+                this.resourceQueueId = resourceQueueId;
                 return this;
             }
 

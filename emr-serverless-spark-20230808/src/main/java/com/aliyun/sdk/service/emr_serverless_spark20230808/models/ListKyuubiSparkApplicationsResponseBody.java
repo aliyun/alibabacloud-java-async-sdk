@@ -185,6 +185,9 @@ public class ListKyuubiSparkApplicationsResponseBody extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("exitReason")
         private String exitReason;
 
+        @com.aliyun.core.annotation.NameInMap("kyuubiServiceId")
+        private String kyuubiServiceId;
+
         @com.aliyun.core.annotation.NameInMap("latestSqlStatementStatus")
         private String latestSqlStatementStatus;
 
@@ -193,6 +196,9 @@ public class ListKyuubiSparkApplicationsResponseBody extends TeaModel {
 
         @com.aliyun.core.annotation.NameInMap("resourceQueueId")
         private String resourceQueueId;
+
+        @com.aliyun.core.annotation.NameInMap("runLog")
+        private RunLog runLog;
 
         @com.aliyun.core.annotation.NameInMap("startTime")
         private String startTime;
@@ -212,9 +218,11 @@ public class ListKyuubiSparkApplicationsResponseBody extends TeaModel {
             this.cuHours = builder.cuHours;
             this.endTime = builder.endTime;
             this.exitReason = builder.exitReason;
+            this.kyuubiServiceId = builder.kyuubiServiceId;
             this.latestSqlStatementStatus = builder.latestSqlStatementStatus;
             this.mbSeconds = builder.mbSeconds;
             this.resourceQueueId = builder.resourceQueueId;
+            this.runLog = builder.runLog;
             this.startTime = builder.startTime;
             this.state = builder.state;
             this.vcoreSeconds = builder.vcoreSeconds;
@@ -265,6 +273,13 @@ public class ListKyuubiSparkApplicationsResponseBody extends TeaModel {
         }
 
         /**
+         * @return kyuubiServiceId
+         */
+        public String getKyuubiServiceId() {
+            return this.kyuubiServiceId;
+        }
+
+        /**
          * @return latestSqlStatementStatus
          */
         public String getLatestSqlStatementStatus() {
@@ -283,6 +298,13 @@ public class ListKyuubiSparkApplicationsResponseBody extends TeaModel {
          */
         public String getResourceQueueId() {
             return this.resourceQueueId;
+        }
+
+        /**
+         * @return runLog
+         */
+        public RunLog getRunLog() {
+            return this.runLog;
         }
 
         /**
@@ -319,9 +341,11 @@ public class ListKyuubiSparkApplicationsResponseBody extends TeaModel {
             private Double cuHours; 
             private String endTime; 
             private String exitReason; 
+            private String kyuubiServiceId; 
             private String latestSqlStatementStatus; 
             private Long mbSeconds; 
             private String resourceQueueId; 
+            private RunLog runLog; 
             private String startTime; 
             private String state; 
             private Long vcoreSeconds; 
@@ -336,9 +360,11 @@ public class ListKyuubiSparkApplicationsResponseBody extends TeaModel {
                 this.cuHours = model.cuHours;
                 this.endTime = model.endTime;
                 this.exitReason = model.exitReason;
+                this.kyuubiServiceId = model.kyuubiServiceId;
                 this.latestSqlStatementStatus = model.latestSqlStatementStatus;
                 this.mbSeconds = model.mbSeconds;
                 this.resourceQueueId = model.resourceQueueId;
+                this.runLog = model.runLog;
                 this.startTime = model.startTime;
                 this.state = model.state;
                 this.vcoreSeconds = model.vcoreSeconds;
@@ -398,6 +424,14 @@ public class ListKyuubiSparkApplicationsResponseBody extends TeaModel {
             }
 
             /**
+             * kyuubiServiceId.
+             */
+            public Builder kyuubiServiceId(String kyuubiServiceId) {
+                this.kyuubiServiceId = kyuubiServiceId;
+                return this;
+            }
+
+            /**
              * latestSqlStatementStatus.
              */
             public Builder latestSqlStatementStatus(String latestSqlStatementStatus) {
@@ -424,6 +458,14 @@ public class ListKyuubiSparkApplicationsResponseBody extends TeaModel {
              */
             public Builder resourceQueueId(String resourceQueueId) {
                 this.resourceQueueId = resourceQueueId;
+                return this;
+            }
+
+            /**
+             * runLog.
+             */
+            public Builder runLog(RunLog runLog) {
+                this.runLog = runLog;
                 return this;
             }
 

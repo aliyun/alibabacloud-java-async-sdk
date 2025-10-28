@@ -176,8 +176,12 @@ public class EditWorkspaceQueueRequest extends Request {
         @com.aliyun.core.annotation.NameInMap("cu")
         private Long cu;
 
+        @com.aliyun.core.annotation.NameInMap("maxCu")
+        private Long maxCu;
+
         private ResourceSpec(Builder builder) {
             this.cu = builder.cu;
+            this.maxCu = builder.maxCu;
         }
 
         public static Builder builder() {
@@ -195,14 +199,23 @@ public class EditWorkspaceQueueRequest extends Request {
             return this.cu;
         }
 
+        /**
+         * @return maxCu
+         */
+        public Long getMaxCu() {
+            return this.maxCu;
+        }
+
         public static final class Builder {
             private Long cu; 
+            private Long maxCu; 
 
             private Builder() {
             } 
 
             private Builder(ResourceSpec model) {
                 this.cu = model.cu;
+                this.maxCu = model.maxCu;
             } 
 
             /**
@@ -210,6 +223,14 @@ public class EditWorkspaceQueueRequest extends Request {
              */
             public Builder cu(Long cu) {
                 this.cu = cu;
+                return this;
+            }
+
+            /**
+             * maxCu.
+             */
+            public Builder maxCu(Long maxCu) {
+                this.maxCu = maxCu;
                 return this;
             }
 
