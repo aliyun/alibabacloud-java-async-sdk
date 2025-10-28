@@ -1075,6 +1075,12 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<DescribeRouteTableListResponse> describeRouteTableList(DescribeRouteTableListRequest request);
 
     /**
+     * @param request the request parameters of DescribeSecurityGroupAttribute  DescribeSecurityGroupAttributeRequest
+     * @return DescribeSecurityGroupAttributeResponse
+     */
+    CompletableFuture<DescribeSecurityGroupAttributeResponse> describeSecurityGroupAttribute(DescribeSecurityGroupAttributeRequest request);
+
+    /**
      * <b>description</b> :
      * <p>  This is a central operation and can be called only by using services in the China (Shanghai) region.</p>
      * <ul>
