@@ -55,6 +55,10 @@ public class DescribeImageListRequest extends Request {
     @com.aliyun.core.annotation.NameInMap("Status")
     private String status;
 
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("SystemType")
+    private String systemType;
+
     private DescribeImageListRequest(Builder builder) {
         super(builder);
         this.imageBizTags = builder.imageBizTags;
@@ -66,6 +70,7 @@ public class DescribeImageListRequest extends Request {
         this.maxResults = builder.maxResults;
         this.nextToken = builder.nextToken;
         this.status = builder.status;
+        this.systemType = builder.systemType;
     }
 
     public static Builder builder() {
@@ -144,6 +149,13 @@ public class DescribeImageListRequest extends Request {
         return this.status;
     }
 
+    /**
+     * @return systemType
+     */
+    public String getSystemType() {
+        return this.systemType;
+    }
+
     public static final class Builder extends Request.Builder<DescribeImageListRequest, Builder> {
         private java.util.List<ImageBizTags> imageBizTags; 
         private String imageId; 
@@ -154,6 +166,7 @@ public class DescribeImageListRequest extends Request {
         private Integer maxResults; 
         private String nextToken; 
         private String status; 
+        private String systemType; 
 
         private Builder() {
             super();
@@ -170,6 +183,7 @@ public class DescribeImageListRequest extends Request {
             this.maxResults = request.maxResults;
             this.nextToken = request.nextToken;
             this.status = request.status;
+            this.systemType = request.systemType;
         } 
 
         /**
@@ -285,6 +299,15 @@ public class DescribeImageListRequest extends Request {
         public Builder status(String status) {
             this.putBodyParameter("Status", status);
             this.status = status;
+            return this;
+        }
+
+        /**
+         * SystemType.
+         */
+        public Builder systemType(String systemType) {
+            this.putQueryParameter("SystemType", systemType);
+            this.systemType = systemType;
             return this;
         }
 
