@@ -90,6 +90,10 @@ public class PreviewStackRequest extends Request {
     @com.aliyun.core.annotation.NameInMap("TimeoutInMinutes")
     private Long timeoutInMinutes;
 
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("UsePreviousParameters")
+    private Boolean usePreviousParameters;
+
     private PreviewStackRequest(Builder builder) {
         super(builder);
         this.clientToken = builder.clientToken;
@@ -110,6 +114,7 @@ public class PreviewStackRequest extends Request {
         this.templateURL = builder.templateURL;
         this.templateVersion = builder.templateVersion;
         this.timeoutInMinutes = builder.timeoutInMinutes;
+        this.usePreviousParameters = builder.usePreviousParameters;
     }
 
     public static Builder builder() {
@@ -251,6 +256,13 @@ public class PreviewStackRequest extends Request {
         return this.timeoutInMinutes;
     }
 
+    /**
+     * @return usePreviousParameters
+     */
+    public Boolean getUsePreviousParameters() {
+        return this.usePreviousParameters;
+    }
+
     public static final class Builder extends Request.Builder<PreviewStackRequest, Builder> {
         private String clientToken; 
         private Boolean disableRollback; 
@@ -270,6 +282,7 @@ public class PreviewStackRequest extends Request {
         private String templateURL; 
         private String templateVersion; 
         private Long timeoutInMinutes; 
+        private Boolean usePreviousParameters; 
 
         private Builder() {
             super();
@@ -295,6 +308,7 @@ public class PreviewStackRequest extends Request {
             this.templateURL = request.templateURL;
             this.templateVersion = request.templateVersion;
             this.timeoutInMinutes = request.timeoutInMinutes;
+            this.usePreviousParameters = request.usePreviousParameters;
         } 
 
         /**
@@ -544,6 +558,15 @@ public class PreviewStackRequest extends Request {
         public Builder timeoutInMinutes(Long timeoutInMinutes) {
             this.putQueryParameter("TimeoutInMinutes", timeoutInMinutes);
             this.timeoutInMinutes = timeoutInMinutes;
+            return this;
+        }
+
+        /**
+         * UsePreviousParameters.
+         */
+        public Builder usePreviousParameters(Boolean usePreviousParameters) {
+            this.putQueryParameter("UsePreviousParameters", usePreviousParameters);
+            this.usePreviousParameters = usePreviousParameters;
             return this;
         }
 

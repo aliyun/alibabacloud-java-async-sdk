@@ -257,6 +257,18 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<DetectStackResourceDriftResponse> detectStackResourceDrift(DetectStackResourceDriftRequest request);
 
     /**
+     * @param request the request parameters of EnableServiceAccess  EnableServiceAccessRequest
+     * @return EnableServiceAccessResponse
+     */
+    CompletableFuture<EnableServiceAccessResponse> enableServiceAccess(EnableServiceAccessRequest request);
+
+    /**
+     * @param request the request parameters of EnableServices  EnableServicesRequest
+     * @return EnableServicesResponse
+     */
+    CompletableFuture<EnableServicesResponse> enableServices(EnableServicesRequest request);
+
+    /**
      * <b>description</b> :
      * <p>In this example, the change set whose ID is <code>1f6521a4-05af-4975-afe9-bc4b45ad****</code> is executed. The change set is created in the <code>China (Hangzhou)</code> region.</p>
      * 
@@ -335,6 +347,12 @@ public interface AsyncClient extends SdkAutoCloseable {
      * @return GetResourceTypeTemplateResponse
      */
     CompletableFuture<GetResourceTypeTemplateResponse> getResourceTypeTemplate(GetResourceTypeTemplateRequest request);
+
+    /**
+     * @param request the request parameters of GetServiceAccess  GetServiceAccessRequest
+     * @return GetServiceAccessResponse
+     */
+    CompletableFuture<GetServiceAccessResponse> getServiceAccess(GetServiceAccessRequest request);
 
     /**
      * <b>description</b> :
@@ -660,6 +678,12 @@ public interface AsyncClient extends SdkAutoCloseable {
      * @return ListStacksResponse
      */
     CompletableFuture<ListStacksResponse> listStacks(ListStacksRequest request);
+
+    /**
+     * @param request the request parameters of ListSummaries  ListSummariesRequest
+     * @return ListSummariesResponse
+     */
+    CompletableFuture<ListSummariesResponse> listSummaries(ListSummariesRequest request);
 
     /**
      * <b>description</b> :
