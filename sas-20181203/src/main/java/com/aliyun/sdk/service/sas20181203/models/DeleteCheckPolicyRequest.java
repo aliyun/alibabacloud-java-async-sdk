@@ -75,6 +75,7 @@ public class DeleteCheckPolicyRequest extends Request {
         } 
 
         /**
+         * <p>Array of policies to delete</p>
          * <p>This parameter is required.</p>
          */
         public Builder policyIds(java.util.List<Long> policyIds) {
@@ -84,6 +85,12 @@ public class DeleteCheckPolicyRequest extends Request {
         }
 
         /**
+         * <p>Policy type for custom check rule:</p>
+         * <ul>
+         * <li><strong>STANDARD</strong>: Standard-level policy</li>
+         * <li><strong>REQUIREMENT</strong>: Requirement-level policy</li>
+         * <li><strong>SECTION</strong>: Section-level policy</li>
+         * </ul>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>

@@ -67,7 +67,7 @@ public class DeleteCheckPolicyResponseBody extends TeaModel {
         } 
 
         /**
-         * Policys.
+         * <p>List of deleted policy details.</p>
          */
         public Builder policys(java.util.List<Policys> policys) {
             this.policys = policys;
@@ -75,7 +75,10 @@ public class DeleteCheckPolicyResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * <p>The unique ID of the request, which is used to locate and troubleshoot issues.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>F8B6F758-BCD4-597A-8A2C-DA5A552C****</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -154,7 +157,10 @@ public class DeleteCheckPolicyResponseBody extends TeaModel {
             } 
 
             /**
-             * PolicyId.
+             * <p>Deleted policy ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1000000000001</p>
              */
             public Builder policyId(Long policyId) {
                 this.policyId = policyId;
@@ -162,7 +168,10 @@ public class DeleteCheckPolicyResponseBody extends TeaModel {
             }
 
             /**
-             * PolicyShowName.
+             * <p>The name of the custom policy.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>testPolicyName</p>
              */
             public Builder policyShowName(String policyShowName) {
                 this.policyShowName = policyShowName;
@@ -170,7 +179,15 @@ public class DeleteCheckPolicyResponseBody extends TeaModel {
             }
 
             /**
-             * PolicyType.
+             * <p>Policy type for custom check rule:</p>
+             * <ul>
+             * <li><strong>STANDARD</strong>: Standard-level policy</li>
+             * <li><strong>REQUIREMENT</strong>: Requirement-level policy</li>
+             * <li><strong>SECTION</strong>: Section-level policy</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>STANDARD</p>
              */
             public Builder policyType(String policyType) {
                 this.policyType = policyType;

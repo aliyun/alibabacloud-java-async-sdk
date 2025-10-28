@@ -26,6 +26,10 @@ public class DescribeCheckWarningDetailRequest extends Request {
     private Long checkWarningId;
 
     @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ContainerName")
+    private String containerName;
+
+    @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("Lang")
     private String lang;
 
@@ -45,6 +49,7 @@ public class DescribeCheckWarningDetailRequest extends Request {
         super(builder);
         this.checkId = builder.checkId;
         this.checkWarningId = builder.checkWarningId;
+        this.containerName = builder.containerName;
         this.lang = builder.lang;
         this.resourceDirectoryAccountId = builder.resourceDirectoryAccountId;
         this.sourceIp = builder.sourceIp;
@@ -79,6 +84,13 @@ public class DescribeCheckWarningDetailRequest extends Request {
     }
 
     /**
+     * @return containerName
+     */
+    public String getContainerName() {
+        return this.containerName;
+    }
+
+    /**
      * @return lang
      */
     public String getLang() {
@@ -109,6 +121,7 @@ public class DescribeCheckWarningDetailRequest extends Request {
     public static final class Builder extends Request.Builder<DescribeCheckWarningDetailRequest, Builder> {
         private String checkId; 
         private Long checkWarningId; 
+        private String containerName; 
         private String lang; 
         private Long resourceDirectoryAccountId; 
         private String sourceIp; 
@@ -122,6 +135,7 @@ public class DescribeCheckWarningDetailRequest extends Request {
             super(request);
             this.checkId = request.checkId;
             this.checkWarningId = request.checkWarningId;
+            this.containerName = request.containerName;
             this.lang = request.lang;
             this.resourceDirectoryAccountId = request.resourceDirectoryAccountId;
             this.sourceIp = request.sourceIp;
@@ -155,6 +169,15 @@ public class DescribeCheckWarningDetailRequest extends Request {
         public Builder checkWarningId(Long checkWarningId) {
             this.putQueryParameter("CheckWarningId", checkWarningId);
             this.checkWarningId = checkWarningId;
+            return this;
+        }
+
+        /**
+         * ContainerName.
+         */
+        public Builder containerName(String containerName) {
+            this.putQueryParameter("ContainerName", containerName);
+            this.containerName = containerName;
             return this;
         }
 
