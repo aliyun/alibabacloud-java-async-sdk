@@ -1,25 +1,30 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.edas20170801.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link InsertRoleRequest} extends {@link RequestModel}
  *
  * <p>InsertRoleRequest</p>
  */
 public class InsertRoleRequest extends Request {
-    @Query
-    @NameInMap("ActionData")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ActionData")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String actionData;
 
-    @Query
-    @NameInMap("RoleName")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("RoleName")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String roleName;
 
     private InsertRoleRequest(Builder builder) {
@@ -36,7 +41,7 @@ public class InsertRoleRequest extends Request {
         return builder().build();
     }
 
-    @Override
+@Override
     public Builder toBuilder() {
         return new Builder(this);
     }
@@ -70,7 +75,11 @@ public class InsertRoleRequest extends Request {
         } 
 
         /**
-         * The set of permissions to be granted to the role. The value is in the format of `Permission group ID 1:Permission serial number 1;...;Permission group ID n:Permission serial number n`. Example: `1:1;1:2;2:1;2:2`. For more information about permission groups and permission serial numbers, see [ListAuthority](~~149409~~).
+         * <p>The set of permissions to be granted to the role. The value is in the format of <code>Permission group ID 1:Permission serial number 1;...;Permission group ID n:Permission serial number n</code>. Example: <code>1:1;1:2;2:1;2:2</code>. For more information about permission groups and permission serial numbers, see <a href="https://help.aliyun.com/document_detail/149409.html">ListAuthority</a>.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>15:1;14:2</p>
          */
         public Builder actionData(String actionData) {
             this.putQueryParameter("ActionData", actionData);
@@ -79,7 +88,11 @@ public class InsertRoleRequest extends Request {
         }
 
         /**
-         * The name of the role.
+         * <p>The name of the role.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>testrole</p>
          */
         public Builder roleName(String roleName) {
             this.putQueryParameter("RoleName", roleName);

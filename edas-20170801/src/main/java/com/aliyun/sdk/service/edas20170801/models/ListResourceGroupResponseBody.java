@@ -1,27 +1,32 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.edas20170801.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ListResourceGroupResponseBody} extends {@link TeaModel}
  *
  * <p>ListResourceGroupResponseBody</p>
  */
 public class ListResourceGroupResponseBody extends TeaModel {
-    @NameInMap("Code")
+    @com.aliyun.core.annotation.NameInMap("Code")
     private Integer code;
 
-    @NameInMap("Message")
+    @com.aliyun.core.annotation.NameInMap("Message")
     private String message;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("ResourceGroupList")
+    @com.aliyun.core.annotation.NameInMap("ResourceGroupList")
     private ResourceGroupList resourceGroupList;
 
     private ListResourceGroupResponseBody(Builder builder) {
@@ -37,6 +42,10 @@ public class ListResourceGroupResponseBody extends TeaModel {
 
     public static ListResourceGroupResponseBody create() {
         return builder().build();
+    }
+
+    public Builder toBuilder() {
+        return new Builder(this);
     }
 
     /**
@@ -73,8 +82,21 @@ public class ListResourceGroupResponseBody extends TeaModel {
         private String requestId; 
         private ResourceGroupList resourceGroupList; 
 
+        private Builder() {
+        } 
+
+        private Builder(ListResourceGroupResponseBody model) {
+            this.code = model.code;
+            this.message = model.message;
+            this.requestId = model.requestId;
+            this.resourceGroupList = model.resourceGroupList;
+        } 
+
         /**
-         * The HTTP status code that is returned.
+         * <p>The HTTP status code that is returned.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>200</p>
          */
         public Builder code(Integer code) {
             this.code = code;
@@ -82,7 +104,10 @@ public class ListResourceGroupResponseBody extends TeaModel {
         }
 
         /**
-         * The additional information that is returned.
+         * <p>The additional information that is returned.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>success</p>
          */
         public Builder message(String message) {
             this.message = message;
@@ -90,7 +115,10 @@ public class ListResourceGroupResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the request.
+         * <p>The ID of the request.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>b197-40ab-9155-****</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -98,7 +126,7 @@ public class ListResourceGroupResponseBody extends TeaModel {
         }
 
         /**
-         * For more information about how to define a resource group, see ResGroupEntity.
+         * <p>For more information about how to define a resource group, see ResGroupEntity.</p>
          */
         public Builder resourceGroupList(ResourceGroupList resourceGroupList) {
             this.resourceGroupList = resourceGroupList;
@@ -111,41 +139,47 @@ public class ListResourceGroupResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link ListResourceGroupResponseBody} extends {@link TeaModel}
+     *
+     * <p>ListResourceGroupResponseBody</p>
+     */
     public static class SlbEntity extends TeaModel {
-        @NameInMap("Address")
+        @com.aliyun.core.annotation.NameInMap("Address")
         private String address;
 
-        @NameInMap("AddressType")
+        @com.aliyun.core.annotation.NameInMap("AddressType")
         private String addressType;
 
-        @NameInMap("Expired")
+        @com.aliyun.core.annotation.NameInMap("Expired")
         private Boolean expired;
 
-        @NameInMap("GroupId")
+        @com.aliyun.core.annotation.NameInMap("GroupId")
         private Integer groupId;
 
-        @NameInMap("NetworkType")
+        @com.aliyun.core.annotation.NameInMap("NetworkType")
         private String networkType;
 
-        @NameInMap("RegionId")
+        @com.aliyun.core.annotation.NameInMap("RegionId")
         private String regionId;
 
-        @NameInMap("SlbId")
+        @com.aliyun.core.annotation.NameInMap("SlbId")
         private String slbId;
 
-        @NameInMap("SlbName")
+        @com.aliyun.core.annotation.NameInMap("SlbName")
         private String slbName;
 
-        @NameInMap("SlbStatus")
+        @com.aliyun.core.annotation.NameInMap("SlbStatus")
         private String slbStatus;
 
-        @NameInMap("UserId")
+        @com.aliyun.core.annotation.NameInMap("UserId")
         private String userId;
 
-        @NameInMap("VpcId")
+        @com.aliyun.core.annotation.NameInMap("VpcId")
         private String vpcId;
 
-        @NameInMap("VswitchId")
+        @com.aliyun.core.annotation.NameInMap("VswitchId")
         private String vswitchId;
 
         private SlbEntity(Builder builder) {
@@ -269,8 +303,29 @@ public class ListResourceGroupResponseBody extends TeaModel {
             private String vpcId; 
             private String vswitchId; 
 
+            private Builder() {
+            } 
+
+            private Builder(SlbEntity model) {
+                this.address = model.address;
+                this.addressType = model.addressType;
+                this.expired = model.expired;
+                this.groupId = model.groupId;
+                this.networkType = model.networkType;
+                this.regionId = model.regionId;
+                this.slbId = model.slbId;
+                this.slbName = model.slbName;
+                this.slbStatus = model.slbStatus;
+                this.userId = model.userId;
+                this.vpcId = model.vpcId;
+                this.vswitchId = model.vswitchId;
+            } 
+
             /**
-             * The IP address of the SLB instance.
+             * <p>The IP address of the SLB instance.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>192.168.xxx.xx</p>
              */
             public Builder address(String address) {
                 this.address = address;
@@ -278,11 +333,14 @@ public class ListResourceGroupResponseBody extends TeaModel {
             }
 
             /**
-             * The type of the IP address of the SLB instance. Valid values:
-             * <p>
+             * <p>The type of the IP address of the SLB instance. Valid values:</p>
+             * <ul>
+             * <li>Internet: Users can connect to the SLB instance over the Internet.</li>
+             * <li>Intranet: Users can connect to the SLB instance over the internal network.</li>
+             * </ul>
              * 
-             * *   Internet: Users can connect to the SLB instance over the Internet.
-             * *   Intranet: Users can connect to the SLB instance over the internal network.
+             * <strong>example:</strong>
+             * <p>Intranet</p>
              */
             public Builder addressType(String addressType) {
                 this.addressType = addressType;
@@ -290,11 +348,14 @@ public class ListResourceGroupResponseBody extends TeaModel {
             }
 
             /**
-             * Indicates whether the SLB instance has expired. Valid values:
-             * <p>
+             * <p>Indicates whether the SLB instance has expired. Valid values:</p>
+             * <ul>
+             * <li>true: The SLB instance has expired.</li>
+             * <li>false: The SLB instance has not expired.</li>
+             * </ul>
              * 
-             * *   true: The SLB instance has expired.
-             * *   false: The SLB instance has not expired.
+             * <strong>example:</strong>
+             * <p>true</p>
              */
             public Builder expired(Boolean expired) {
                 this.expired = expired;
@@ -302,7 +363,10 @@ public class ListResourceGroupResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the group to which the SLB instance belongs.
+             * <p>The ID of the group to which the SLB instance belongs.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>64189****</p>
              */
             public Builder groupId(Integer groupId) {
                 this.groupId = groupId;
@@ -310,11 +374,14 @@ public class ListResourceGroupResponseBody extends TeaModel {
             }
 
             /**
-             * The network type of the SLB instance. Valid values:
-             * <p>
+             * <p>The network type of the SLB instance. Valid values:</p>
+             * <ul>
+             * <li>Classic network</li>
+             * <li>VPC</li>
+             * </ul>
              * 
-             * *   Classic network
-             * *   VPC
+             * <strong>example:</strong>
+             * <p>vpc</p>
              */
             public Builder networkType(String networkType) {
                 this.networkType = networkType;
@@ -322,7 +389,10 @@ public class ListResourceGroupResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the region.
+             * <p>The ID of the region.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>cn-beijing</p>
              */
             public Builder regionId(String regionId) {
                 this.regionId = regionId;
@@ -330,7 +400,10 @@ public class ListResourceGroupResponseBody extends TeaModel {
             }
 
             /**
-             * The unique ID of the SLB instance.
+             * <p>The unique ID of the SLB instance.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>lb-2zebf1fpbpkc7dnro****</p>
              */
             public Builder slbId(String slbId) {
                 this.slbId = slbId;
@@ -338,7 +411,10 @@ public class ListResourceGroupResponseBody extends TeaModel {
             }
 
             /**
-             * The name of the SLB instance.
+             * <p>The name of the SLB instance.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>a9315af59b4cd11e9a18c00163e1****</p>
              */
             public Builder slbName(String slbName) {
                 this.slbName = slbName;
@@ -346,7 +422,10 @@ public class ListResourceGroupResponseBody extends TeaModel {
             }
 
             /**
-             * The status of the SLB instance.
+             * <p>The status of the SLB instance.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>active</p>
              */
             public Builder slbStatus(String slbStatus) {
                 this.slbStatus = slbStatus;
@@ -354,7 +433,10 @@ public class ListResourceGroupResponseBody extends TeaModel {
             }
 
             /**
-             * The UID of the Alibaba Cloud account.
+             * <p>The UID of the Alibaba Cloud account.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>****@aliyun.com</p>
              */
             public Builder userId(String userId) {
                 this.userId = userId;
@@ -362,7 +444,10 @@ public class ListResourceGroupResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the VPC.
+             * <p>The ID of the VPC.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>vpc-m5e666n89m2bx8jar****</p>
              */
             public Builder vpcId(String vpcId) {
                 this.vpcId = vpcId;
@@ -370,7 +455,10 @@ public class ListResourceGroupResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the vSwitch.
+             * <p>The ID of the vSwitch.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>vsw-mktkxkhah14****</p>
              */
             public Builder vswitchId(String vswitchId) {
                 this.vswitchId = vswitchId;
@@ -384,9 +472,15 @@ public class ListResourceGroupResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link ListResourceGroupResponseBody} extends {@link TeaModel}
+     *
+     * <p>ListResourceGroupResponseBody</p>
+     */
     public static class SlbList extends TeaModel {
-        @NameInMap("SlbEntity")
-        private java.util.List < SlbEntity> slbEntity;
+        @com.aliyun.core.annotation.NameInMap("SlbEntity")
+        private java.util.List<SlbEntity> slbEntity;
 
         private SlbList(Builder builder) {
             this.slbEntity = builder.slbEntity;
@@ -403,17 +497,24 @@ public class ListResourceGroupResponseBody extends TeaModel {
         /**
          * @return slbEntity
          */
-        public java.util.List < SlbEntity> getSlbEntity() {
+        public java.util.List<SlbEntity> getSlbEntity() {
             return this.slbEntity;
         }
 
         public static final class Builder {
-            private java.util.List < SlbEntity> slbEntity; 
+            private java.util.List<SlbEntity> slbEntity; 
+
+            private Builder() {
+            } 
+
+            private Builder(SlbList model) {
+                this.slbEntity = model.slbEntity;
+            } 
 
             /**
              * SlbEntity.
              */
-            public Builder slbEntity(java.util.List < SlbEntity> slbEntity) {
+            public Builder slbEntity(java.util.List<SlbEntity> slbEntity) {
                 this.slbEntity = slbEntity;
                 return this;
             }
@@ -425,56 +526,62 @@ public class ListResourceGroupResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link ListResourceGroupResponseBody} extends {@link TeaModel}
+     *
+     * <p>ListResourceGroupResponseBody</p>
+     */
     public static class EcuEntity extends TeaModel {
-        @NameInMap("AvailableCpu")
+        @com.aliyun.core.annotation.NameInMap("AvailableCpu")
         private Integer availableCpu;
 
-        @NameInMap("AvailableMem")
+        @com.aliyun.core.annotation.NameInMap("AvailableMem")
         private Integer availableMem;
 
-        @NameInMap("Cpu")
+        @com.aliyun.core.annotation.NameInMap("Cpu")
         private Integer cpu;
 
-        @NameInMap("CreateTime")
+        @com.aliyun.core.annotation.NameInMap("CreateTime")
         private Long createTime;
 
-        @NameInMap("DockerEnv")
+        @com.aliyun.core.annotation.NameInMap("DockerEnv")
         private Boolean dockerEnv;
 
-        @NameInMap("EcuId")
+        @com.aliyun.core.annotation.NameInMap("EcuId")
         private String ecuId;
 
-        @NameInMap("HeartbeatTime")
+        @com.aliyun.core.annotation.NameInMap("HeartbeatTime")
         private Long heartbeatTime;
 
-        @NameInMap("InstanceId")
+        @com.aliyun.core.annotation.NameInMap("InstanceId")
         private String instanceId;
 
-        @NameInMap("IpAddr")
+        @com.aliyun.core.annotation.NameInMap("IpAddr")
         private String ipAddr;
 
-        @NameInMap("Mem")
+        @com.aliyun.core.annotation.NameInMap("Mem")
         private Integer mem;
 
-        @NameInMap("Name")
+        @com.aliyun.core.annotation.NameInMap("Name")
         private String name;
 
-        @NameInMap("Online")
+        @com.aliyun.core.annotation.NameInMap("Online")
         private Boolean online;
 
-        @NameInMap("RegionId")
+        @com.aliyun.core.annotation.NameInMap("RegionId")
         private String regionId;
 
-        @NameInMap("UpdateTime")
+        @com.aliyun.core.annotation.NameInMap("UpdateTime")
         private Long updateTime;
 
-        @NameInMap("UserId")
+        @com.aliyun.core.annotation.NameInMap("UserId")
         private String userId;
 
-        @NameInMap("VpcId")
+        @com.aliyun.core.annotation.NameInMap("VpcId")
         private String vpcId;
 
-        @NameInMap("ZoneId")
+        @com.aliyun.core.annotation.NameInMap("ZoneId")
         private String zoneId;
 
         private EcuEntity(Builder builder) {
@@ -643,8 +750,34 @@ public class ListResourceGroupResponseBody extends TeaModel {
             private String vpcId; 
             private String zoneId; 
 
+            private Builder() {
+            } 
+
+            private Builder(EcuEntity model) {
+                this.availableCpu = model.availableCpu;
+                this.availableMem = model.availableMem;
+                this.cpu = model.cpu;
+                this.createTime = model.createTime;
+                this.dockerEnv = model.dockerEnv;
+                this.ecuId = model.ecuId;
+                this.heartbeatTime = model.heartbeatTime;
+                this.instanceId = model.instanceId;
+                this.ipAddr = model.ipAddr;
+                this.mem = model.mem;
+                this.name = model.name;
+                this.online = model.online;
+                this.regionId = model.regionId;
+                this.updateTime = model.updateTime;
+                this.userId = model.userId;
+                this.vpcId = model.vpcId;
+                this.zoneId = model.zoneId;
+            } 
+
             /**
-             * The number of available CPUs.
+             * <p>The number of available CPUs.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder availableCpu(Integer availableCpu) {
                 this.availableCpu = availableCpu;
@@ -652,7 +785,10 @@ public class ListResourceGroupResponseBody extends TeaModel {
             }
 
             /**
-             * The size of the available memory.
+             * <p>The size of the available memory.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>200</p>
              */
             public Builder availableMem(Integer availableMem) {
                 this.availableMem = availableMem;
@@ -660,7 +796,10 @@ public class ListResourceGroupResponseBody extends TeaModel {
             }
 
             /**
-             * The total number of CPU cores.
+             * <p>The total number of CPU cores.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2</p>
              */
             public Builder cpu(Integer cpu) {
                 this.cpu = cpu;
@@ -668,7 +807,10 @@ public class ListResourceGroupResponseBody extends TeaModel {
             }
 
             /**
-             * The time when the ECU was created. This value is a UNIX timestamp representing the number of milliseconds that have elapsed since the epoch time January 1, 1970, 00:00:00 UTC.
+             * <p>The time when the ECU was created. This value is a UNIX timestamp representing the number of milliseconds that have elapsed since the epoch time January 1, 1970, 00:00:00 UTC.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1557890594376</p>
              */
             public Builder createTime(Long createTime) {
                 this.createTime = createTime;
@@ -676,11 +818,14 @@ public class ListResourceGroupResponseBody extends TeaModel {
             }
 
             /**
-             * Indicates whether Docker is installed. Valid values:
-             * <p>
+             * <p>Indicates whether Docker is installed. Valid values:</p>
+             * <ul>
+             * <li>true: Docker is installed.</li>
+             * <li>false: Docker is not installed.</li>
+             * </ul>
              * 
-             * *   true: Docker is installed.
-             * *   false: Docker is not installed.
+             * <strong>example:</strong>
+             * <p>true</p>
              */
             public Builder dockerEnv(Boolean dockerEnv) {
                 this.dockerEnv = dockerEnv;
@@ -688,7 +833,10 @@ public class ListResourceGroupResponseBody extends TeaModel {
             }
 
             /**
-             * The unique ID of the elastic compute unit (ECU). You can run the `dmidecode` command on the ECS instance to query the ECU ID.
+             * <p>The unique ID of the elastic compute unit (ECU). You can run the <code>dmidecode</code> command on the ECS instance to query the ECU ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>0de2ebdb-9490-4fc4-be41***************</p>
              */
             public Builder ecuId(String ecuId) {
                 this.ecuId = ecuId;
@@ -696,7 +844,10 @@ public class ListResourceGroupResponseBody extends TeaModel {
             }
 
             /**
-             * The time when the last heartbeat detection was performed. This value is a UNIX timestamp representing the number of milliseconds that have elapsed since the epoch time January 1, 1970, 00:00:00 UTC.
+             * <p>The time when the last heartbeat detection was performed. This value is a UNIX timestamp representing the number of milliseconds that have elapsed since the epoch time January 1, 1970, 00:00:00 UTC.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1573281040819</p>
              */
             public Builder heartbeatTime(Long heartbeatTime) {
                 this.heartbeatTime = heartbeatTime;
@@ -704,7 +855,10 @@ public class ListResourceGroupResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the instance.
+             * <p>The ID of the instance.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>i-2zej4i2jdf*********</p>
              */
             public Builder instanceId(String instanceId) {
                 this.instanceId = instanceId;
@@ -712,7 +866,10 @@ public class ListResourceGroupResponseBody extends TeaModel {
             }
 
             /**
-             * The private IP address of the ECU.
+             * <p>The private IP address of the ECU.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>192.168.xxx.xx</p>
              */
             public Builder ipAddr(String ipAddr) {
                 this.ipAddr = ipAddr;
@@ -720,7 +877,10 @@ public class ListResourceGroupResponseBody extends TeaModel {
             }
 
             /**
-             * The total size of memory. Unit: MB.
+             * <p>The total size of memory. Unit: MB.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>200</p>
              */
             public Builder mem(Integer mem) {
                 this.mem = mem;
@@ -728,7 +888,10 @@ public class ListResourceGroupResponseBody extends TeaModel {
             }
 
             /**
-             * The name of the ECU.
+             * <p>The name of the ECU.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>test</p>
              */
             public Builder name(String name) {
                 this.name = name;
@@ -736,11 +899,14 @@ public class ListResourceGroupResponseBody extends TeaModel {
             }
 
             /**
-             * Indicates whether the ECU is online. Valid values:
-             * <p>
+             * <p>Indicates whether the ECU is online. Valid values:</p>
+             * <ul>
+             * <li>true: The ECU is online.</li>
+             * <li>false: The ECU is offline.</li>
+             * </ul>
              * 
-             * *   true: The ECU is online.
-             * *   false: The ECU is offline.
+             * <strong>example:</strong>
+             * <p>true</p>
              */
             public Builder online(Boolean online) {
                 this.online = online;
@@ -748,7 +914,10 @@ public class ListResourceGroupResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the region.
+             * <p>The ID of the region.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>cn-beijing</p>
              */
             public Builder regionId(String regionId) {
                 this.regionId = regionId;
@@ -756,7 +925,10 @@ public class ListResourceGroupResponseBody extends TeaModel {
             }
 
             /**
-             * The time when the ECU was updated. This value is a UNIX timestamp representing the number of milliseconds that have elapsed since the epoch time January 1, 1970, 00:00:00 UTC.
+             * <p>The time when the ECU was updated. This value is a UNIX timestamp representing the number of milliseconds that have elapsed since the epoch time January 1, 1970, 00:00:00 UTC.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1573281040827</p>
              */
             public Builder updateTime(Long updateTime) {
                 this.updateTime = updateTime;
@@ -764,7 +936,10 @@ public class ListResourceGroupResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the user associated with the ECU.
+             * <p>The ID of the user associated with the ECU.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>edas_****_test@aliyun-****.com</p>
              */
             public Builder userId(String userId) {
                 this.userId = userId;
@@ -772,7 +947,10 @@ public class ListResourceGroupResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the VPC.
+             * <p>The ID of the VPC.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>vpc-2ze1ram356umxs598****</p>
              */
             public Builder vpcId(String vpcId) {
                 this.vpcId = vpcId;
@@ -780,7 +958,10 @@ public class ListResourceGroupResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the zone.
+             * <p>The ID of the zone.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>cn-beijing-b</p>
              */
             public Builder zoneId(String zoneId) {
                 this.zoneId = zoneId;
@@ -794,32 +975,38 @@ public class ListResourceGroupResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link ListResourceGroupResponseBody} extends {@link TeaModel}
+     *
+     * <p>ListResourceGroupResponseBody</p>
+     */
     public static class VpcEntity extends TeaModel {
-        @NameInMap("Cidrblock")
+        @com.aliyun.core.annotation.NameInMap("Cidrblock")
         private String cidrblock;
 
-        @NameInMap("Description")
+        @com.aliyun.core.annotation.NameInMap("Description")
         private String description;
 
-        @NameInMap("EcsNum")
+        @com.aliyun.core.annotation.NameInMap("EcsNum")
         private Integer ecsNum;
 
-        @NameInMap("Expired")
+        @com.aliyun.core.annotation.NameInMap("Expired")
         private Boolean expired;
 
-        @NameInMap("RegionId")
+        @com.aliyun.core.annotation.NameInMap("RegionId")
         private String regionId;
 
-        @NameInMap("Status")
+        @com.aliyun.core.annotation.NameInMap("Status")
         private String status;
 
-        @NameInMap("UserId")
+        @com.aliyun.core.annotation.NameInMap("UserId")
         private String userId;
 
-        @NameInMap("VpcId")
+        @com.aliyun.core.annotation.NameInMap("VpcId")
         private String vpcId;
 
-        @NameInMap("VpcName")
+        @com.aliyun.core.annotation.NameInMap("VpcName")
         private String vpcName;
 
         private VpcEntity(Builder builder) {
@@ -916,8 +1103,26 @@ public class ListResourceGroupResponseBody extends TeaModel {
             private String vpcId; 
             private String vpcName; 
 
+            private Builder() {
+            } 
+
+            private Builder(VpcEntity model) {
+                this.cidrblock = model.cidrblock;
+                this.description = model.description;
+                this.ecsNum = model.ecsNum;
+                this.expired = model.expired;
+                this.regionId = model.regionId;
+                this.status = model.status;
+                this.userId = model.userId;
+                this.vpcId = model.vpcId;
+                this.vpcName = model.vpcName;
+            } 
+
             /**
-             * The IPv4 CIDR block of the vSwitch.
+             * <p>The IPv4 CIDR block of the vSwitch.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>192.168.xx.xxx</p>
              */
             public Builder cidrblock(String cidrblock) {
                 this.cidrblock = cidrblock;
@@ -925,7 +1130,10 @@ public class ListResourceGroupResponseBody extends TeaModel {
             }
 
             /**
-             * The description of the VPC.
+             * <p>The description of the VPC.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>&quot;&quot;</p>
              */
             public Builder description(String description) {
                 this.description = description;
@@ -933,7 +1141,10 @@ public class ListResourceGroupResponseBody extends TeaModel {
             }
 
             /**
-             * The number of ECS instances that run in the VPC.
+             * <p>The number of ECS instances that run in the VPC.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder ecsNum(Integer ecsNum) {
                 this.ecsNum = ecsNum;
@@ -941,11 +1152,14 @@ public class ListResourceGroupResponseBody extends TeaModel {
             }
 
             /**
-             * Indicates whether the VPC has expired. Valid values:
-             * <p>
+             * <p>Indicates whether the VPC has expired. Valid values:</p>
+             * <ul>
+             * <li>true: The VPC has expired.</li>
+             * <li>false: The VPC has not expired.</li>
+             * </ul>
              * 
-             * *   true: The VPC has expired.
-             * *   false: The VPC has not expired.
+             * <strong>example:</strong>
+             * <p>true</p>
              */
             public Builder expired(Boolean expired) {
                 this.expired = expired;
@@ -953,7 +1167,10 @@ public class ListResourceGroupResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the region.
+             * <p>The ID of the region.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>cn-qingdao</p>
              */
             public Builder regionId(String regionId) {
                 this.regionId = regionId;
@@ -961,7 +1178,10 @@ public class ListResourceGroupResponseBody extends TeaModel {
             }
 
             /**
-             * The status of the VPC.
+             * <p>The status of the VPC.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Running</p>
              */
             public Builder status(String status) {
                 this.status = status;
@@ -969,7 +1189,10 @@ public class ListResourceGroupResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the user.
+             * <p>The ID of the user.</p>
+             * 
+             * <strong>example:</strong>
+             * <p><strong><strong><em>common</em></strong></strong>@aliyun.com</p>
              */
             public Builder userId(String userId) {
                 this.userId = userId;
@@ -977,7 +1200,10 @@ public class ListResourceGroupResponseBody extends TeaModel {
             }
 
             /**
-             * The unique ID of the VPC.
+             * <p>The unique ID of the VPC.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>vpc-bp13evu42t1er****</p>
              */
             public Builder vpcId(String vpcId) {
                 this.vpcId = vpcId;
@@ -985,7 +1211,10 @@ public class ListResourceGroupResponseBody extends TeaModel {
             }
 
             /**
-             * The name of the VPC.
+             * <p>The name of the VPC.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>test</p>
              */
             public Builder vpcName(String vpcName) {
                 this.vpcName = vpcName;
@@ -999,68 +1228,74 @@ public class ListResourceGroupResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link ListResourceGroupResponseBody} extends {@link TeaModel}
+     *
+     * <p>ListResourceGroupResponseBody</p>
+     */
     public static class EcsEntity extends TeaModel {
-        @NameInMap("Cpu")
+        @com.aliyun.core.annotation.NameInMap("Cpu")
         private Integer cpu;
 
-        @NameInMap("Description")
+        @com.aliyun.core.annotation.NameInMap("Description")
         private String description;
 
-        @NameInMap("EcuEntity")
+        @com.aliyun.core.annotation.NameInMap("EcuEntity")
         private EcuEntity ecuEntity;
 
-        @NameInMap("Eip")
+        @com.aliyun.core.annotation.NameInMap("Eip")
         private String eip;
 
-        @NameInMap("Expired")
+        @com.aliyun.core.annotation.NameInMap("Expired")
         private Boolean expired;
 
-        @NameInMap("GroupId")
+        @com.aliyun.core.annotation.NameInMap("GroupId")
         private String groupId;
 
-        @NameInMap("HostName")
+        @com.aliyun.core.annotation.NameInMap("HostName")
         private String hostName;
 
-        @NameInMap("InnerIp")
+        @com.aliyun.core.annotation.NameInMap("InnerIp")
         private String innerIp;
 
-        @NameInMap("InstanceId")
+        @com.aliyun.core.annotation.NameInMap("InstanceId")
         private String instanceId;
 
-        @NameInMap("InstanceName")
+        @com.aliyun.core.annotation.NameInMap("InstanceName")
         private String instanceName;
 
-        @NameInMap("Mem")
+        @com.aliyun.core.annotation.NameInMap("Mem")
         private Integer mem;
 
-        @NameInMap("PrivateIp")
+        @com.aliyun.core.annotation.NameInMap("PrivateIp")
         private String privateIp;
 
-        @NameInMap("PublicIp")
+        @com.aliyun.core.annotation.NameInMap("PublicIp")
         private String publicIp;
 
-        @NameInMap("RegionId")
+        @com.aliyun.core.annotation.NameInMap("RegionId")
         private String regionId;
 
-        @NameInMap("SerialNum")
+        @com.aliyun.core.annotation.NameInMap("SerialNum")
         private String serialNum;
 
-        @NameInMap("SgId")
+        @com.aliyun.core.annotation.NameInMap("SgId")
         private String sgId;
 
-        @NameInMap("Status")
+        @com.aliyun.core.annotation.NameInMap("Status")
         private String status;
 
-        @NameInMap("UserId")
+        @com.aliyun.core.annotation.NameInMap("UserId")
         private String userId;
 
-        @NameInMap("VpcEntity")
+        @com.aliyun.core.annotation.NameInMap("VpcEntity")
         private VpcEntity vpcEntity;
 
-        @NameInMap("VpcId")
+        @com.aliyun.core.annotation.NameInMap("VpcId")
         private String vpcId;
 
-        @NameInMap("ZoneId")
+        @com.aliyun.core.annotation.NameInMap("ZoneId")
         private String zoneId;
 
         private EcsEntity(Builder builder) {
@@ -1265,8 +1500,38 @@ public class ListResourceGroupResponseBody extends TeaModel {
             private String vpcId; 
             private String zoneId; 
 
+            private Builder() {
+            } 
+
+            private Builder(EcsEntity model) {
+                this.cpu = model.cpu;
+                this.description = model.description;
+                this.ecuEntity = model.ecuEntity;
+                this.eip = model.eip;
+                this.expired = model.expired;
+                this.groupId = model.groupId;
+                this.hostName = model.hostName;
+                this.innerIp = model.innerIp;
+                this.instanceId = model.instanceId;
+                this.instanceName = model.instanceName;
+                this.mem = model.mem;
+                this.privateIp = model.privateIp;
+                this.publicIp = model.publicIp;
+                this.regionId = model.regionId;
+                this.serialNum = model.serialNum;
+                this.sgId = model.sgId;
+                this.status = model.status;
+                this.userId = model.userId;
+                this.vpcEntity = model.vpcEntity;
+                this.vpcId = model.vpcId;
+                this.zoneId = model.zoneId;
+            } 
+
             /**
-             * The total number of CPU cores.
+             * <p>The total number of CPU cores.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2</p>
              */
             public Builder cpu(Integer cpu) {
                 this.cpu = cpu;
@@ -1274,7 +1539,10 @@ public class ListResourceGroupResponseBody extends TeaModel {
             }
 
             /**
-             * The description of the ECS instance.
+             * <p>The description of the ECS instance.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>test</p>
              */
             public Builder description(String description) {
                 this.description = description;
@@ -1282,7 +1550,7 @@ public class ListResourceGroupResponseBody extends TeaModel {
             }
 
             /**
-             * The elastic compute unit (ECU) that corresponds to the ECS instance.
+             * <p>The elastic compute unit (ECU) that corresponds to the ECS instance.</p>
              */
             public Builder ecuEntity(EcuEntity ecuEntity) {
                 this.ecuEntity = ecuEntity;
@@ -1290,7 +1558,10 @@ public class ListResourceGroupResponseBody extends TeaModel {
             }
 
             /**
-             * The elastic IP address (EIP).
+             * <p>The elastic IP address (EIP).</p>
+             * 
+             * <strong>example:</strong>
+             * <p>192.168.xxx.xx</p>
              */
             public Builder eip(String eip) {
                 this.eip = eip;
@@ -1298,11 +1569,14 @@ public class ListResourceGroupResponseBody extends TeaModel {
             }
 
             /**
-             * Indicates whether the ECS instance has expired. Valid values:
-             * <p>
+             * <p>Indicates whether the ECS instance has expired. Valid values:</p>
+             * <ul>
+             * <li>true: The ECS instance has expired.</li>
+             * <li>false: The ECS instance has not expired.</li>
+             * </ul>
              * 
-             * *   true: The ECS instance has expired.
-             * *   false: The ECS instance has not expired.
+             * <strong>example:</strong>
+             * <p>true</p>
              */
             public Builder expired(Boolean expired) {
                 this.expired = expired;
@@ -1310,7 +1584,10 @@ public class ListResourceGroupResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the resource group in Enterprise Distributed Application Service (EDAS).
+             * <p>The ID of the resource group in Enterprise Distributed Application Service (EDAS).</p>
+             * 
+             * <strong>example:</strong>
+             * <p>64189****</p>
              */
             public Builder groupId(String groupId) {
                 this.groupId = groupId;
@@ -1318,7 +1595,10 @@ public class ListResourceGroupResponseBody extends TeaModel {
             }
 
             /**
-             * The name of the host.
+             * <p>The name of the host.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>iZm5e853hvvrodnvqus****</p>
              */
             public Builder hostName(String hostName) {
                 this.hostName = hostName;
@@ -1326,7 +1606,10 @@ public class ListResourceGroupResponseBody extends TeaModel {
             }
 
             /**
-             * The private IP address.
+             * <p>The private IP address.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>192.168.xx.xxx</p>
              */
             public Builder innerIp(String innerIp) {
                 this.innerIp = innerIp;
@@ -1334,7 +1617,10 @@ public class ListResourceGroupResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the ECS instance.
+             * <p>The ID of the ECS instance.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>i-m5e853hvvrodnvqu****</p>
              */
             public Builder instanceId(String instanceId) {
                 this.instanceId = instanceId;
@@ -1342,7 +1628,10 @@ public class ListResourceGroupResponseBody extends TeaModel {
             }
 
             /**
-             * The name of the ECS instance.
+             * <p>The name of the ECS instance.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>betabjmixcoud_01</p>
              */
             public Builder instanceName(String instanceName) {
                 this.instanceName = instanceName;
@@ -1350,7 +1639,10 @@ public class ListResourceGroupResponseBody extends TeaModel {
             }
 
             /**
-             * The total size of memory. Unit: MB.
+             * <p>The total size of memory. Unit: MB.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder mem(Integer mem) {
                 this.mem = mem;
@@ -1358,7 +1650,10 @@ public class ListResourceGroupResponseBody extends TeaModel {
             }
 
             /**
-             * The private IP address of the ECS instance.
+             * <p>The private IP address of the ECS instance.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>192.168.xx.xxx</p>
              */
             public Builder privateIp(String privateIp) {
                 this.privateIp = privateIp;
@@ -1366,7 +1661,10 @@ public class ListResourceGroupResponseBody extends TeaModel {
             }
 
             /**
-             * The public IP address.
+             * <p>The public IP address.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>192.168.xx.xxx</p>
              */
             public Builder publicIp(String publicIp) {
                 this.publicIp = publicIp;
@@ -1374,7 +1672,10 @@ public class ListResourceGroupResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the region.
+             * <p>The ID of the region.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>ch-hangzhou</p>
              */
             public Builder regionId(String regionId) {
                 this.regionId = regionId;
@@ -1382,7 +1683,10 @@ public class ListResourceGroupResponseBody extends TeaModel {
             }
 
             /**
-             * The serial number of the ECS instance.
+             * <p>The serial number of the ECS instance.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>98b480b8-458b-4ff3-84b9-cf7097c5****</p>
              */
             public Builder serialNum(String serialNum) {
                 this.serialNum = serialNum;
@@ -1390,7 +1694,10 @@ public class ListResourceGroupResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the security group.
+             * <p>The ID of the security group.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>sg-m5eajgzn6b8sg9mv****</p>
              */
             public Builder sgId(String sgId) {
                 this.sgId = sgId;
@@ -1398,14 +1705,17 @@ public class ListResourceGroupResponseBody extends TeaModel {
             }
 
             /**
-             * The status of the ECS instance. Valid values:
-             * <p>
+             * <p>The status of the ECS instance. Valid values:</p>
+             * <ul>
+             * <li>Pending: The ECS instance is being created.</li>
+             * <li>Running: The ECS instance is running.</li>
+             * <li>Starting: The ECS instance is being started.</li>
+             * <li>Stopping: The ECS instance is being stopped.</li>
+             * <li>Stopped: The ECS instance is stopped.</li>
+             * </ul>
              * 
-             * *   Pending: The ECS instance is being created.
-             * *   Running: The ECS instance is running.
-             * *   Starting: The ECS instance is being started.
-             * *   Stopping: The ECS instance is being stopped.
-             * *   Stopped: The ECS instance is stopped.
+             * <strong>example:</strong>
+             * <p>Running</p>
              */
             public Builder status(String status) {
                 this.status = status;
@@ -1413,7 +1723,10 @@ public class ListResourceGroupResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the user account.
+             * <p>The ID of the user account.</p>
+             * 
+             * <strong>example:</strong>
+             * <p><strong><strong><em>common</em></strong></strong>@aliyun.com</p>
              */
             public Builder userId(String userId) {
                 this.userId = userId;
@@ -1421,7 +1734,7 @@ public class ListResourceGroupResponseBody extends TeaModel {
             }
 
             /**
-             * The VPCs.
+             * <p>The VPCs.</p>
              */
             public Builder vpcEntity(VpcEntity vpcEntity) {
                 this.vpcEntity = vpcEntity;
@@ -1429,7 +1742,10 @@ public class ListResourceGroupResponseBody extends TeaModel {
             }
 
             /**
-             * The unique ID of the virtual private cloud (VPC).
+             * <p>The unique ID of the virtual private cloud (VPC).</p>
+             * 
+             * <strong>example:</strong>
+             * <p>vpc-bp13evu4aayj2t1er****</p>
              */
             public Builder vpcId(String vpcId) {
                 this.vpcId = vpcId;
@@ -1437,7 +1753,10 @@ public class ListResourceGroupResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the zone.
+             * <p>The ID of the zone.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>cn-qingdao-h</p>
              */
             public Builder zoneId(String zoneId) {
                 this.zoneId = zoneId;
@@ -1451,9 +1770,15 @@ public class ListResourceGroupResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link ListResourceGroupResponseBody} extends {@link TeaModel}
+     *
+     * <p>ListResourceGroupResponseBody</p>
+     */
     public static class EcsList extends TeaModel {
-        @NameInMap("EcsEntity")
-        private java.util.List < EcsEntity> ecsEntity;
+        @com.aliyun.core.annotation.NameInMap("EcsEntity")
+        private java.util.List<EcsEntity> ecsEntity;
 
         private EcsList(Builder builder) {
             this.ecsEntity = builder.ecsEntity;
@@ -1470,17 +1795,24 @@ public class ListResourceGroupResponseBody extends TeaModel {
         /**
          * @return ecsEntity
          */
-        public java.util.List < EcsEntity> getEcsEntity() {
+        public java.util.List<EcsEntity> getEcsEntity() {
             return this.ecsEntity;
         }
 
         public static final class Builder {
-            private java.util.List < EcsEntity> ecsEntity; 
+            private java.util.List<EcsEntity> ecsEntity; 
+
+            private Builder() {
+            } 
+
+            private Builder(EcsList model) {
+                this.ecsEntity = model.ecsEntity;
+            } 
 
             /**
              * EcsEntity.
              */
-            public Builder ecsEntity(java.util.List < EcsEntity> ecsEntity) {
+            public Builder ecsEntity(java.util.List<EcsEntity> ecsEntity) {
                 this.ecsEntity = ecsEntity;
                 return this;
             }
@@ -1492,32 +1824,38 @@ public class ListResourceGroupResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link ListResourceGroupResponseBody} extends {@link TeaModel}
+     *
+     * <p>ListResourceGroupResponseBody</p>
+     */
     public static class ResGroupEntity extends TeaModel {
-        @NameInMap("AdminUserId")
+        @com.aliyun.core.annotation.NameInMap("AdminUserId")
         private String adminUserId;
 
-        @NameInMap("CreateTime")
+        @com.aliyun.core.annotation.NameInMap("CreateTime")
         private Long createTime;
 
-        @NameInMap("Description")
+        @com.aliyun.core.annotation.NameInMap("Description")
         private String description;
 
-        @NameInMap("Id")
+        @com.aliyun.core.annotation.NameInMap("Id")
         private Long id;
 
-        @NameInMap("Name")
+        @com.aliyun.core.annotation.NameInMap("Name")
         private String name;
 
-        @NameInMap("RegionId")
+        @com.aliyun.core.annotation.NameInMap("RegionId")
         private String regionId;
 
-        @NameInMap("SlbList")
+        @com.aliyun.core.annotation.NameInMap("SlbList")
         private SlbList slbList;
 
-        @NameInMap("UpdateTime")
+        @com.aliyun.core.annotation.NameInMap("UpdateTime")
         private Long updateTime;
 
-        @NameInMap("ecsList")
+        @com.aliyun.core.annotation.NameInMap("ecsList")
         private EcsList ecsList;
 
         private ResGroupEntity(Builder builder) {
@@ -1614,8 +1952,26 @@ public class ListResourceGroupResponseBody extends TeaModel {
             private Long updateTime; 
             private EcsList ecsList; 
 
+            private Builder() {
+            } 
+
+            private Builder(ResGroupEntity model) {
+                this.adminUserId = model.adminUserId;
+                this.createTime = model.createTime;
+                this.description = model.description;
+                this.id = model.id;
+                this.name = model.name;
+                this.regionId = model.regionId;
+                this.slbList = model.slbList;
+                this.updateTime = model.updateTime;
+                this.ecsList = model.ecsList;
+            } 
+
             /**
-             * The UID of the Alibaba Cloud account.
+             * <p>The UID of the Alibaba Cloud account.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>****@aliyun.com</p>
              */
             public Builder adminUserId(String adminUserId) {
                 this.adminUserId = adminUserId;
@@ -1623,7 +1979,10 @@ public class ListResourceGroupResponseBody extends TeaModel {
             }
 
             /**
-             * The time when the resource group was created. This value is a UNIX timestamp representing the number of milliseconds that have elapsed since the epoch time January 1, 1970, 00:00:00 UTC.
+             * <p>The time when the resource group was created. This value is a UNIX timestamp representing the number of milliseconds that have elapsed since the epoch time January 1, 1970, 00:00:00 UTC.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1557890594376</p>
              */
             public Builder createTime(Long createTime) {
                 this.createTime = createTime;
@@ -1631,7 +1990,10 @@ public class ListResourceGroupResponseBody extends TeaModel {
             }
 
             /**
-             * The description of the resource group.
+             * <p>The description of the resource group.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>QqLZDA3pBZ</p>
              */
             public Builder description(String description) {
                 this.description = description;
@@ -1639,7 +2001,10 @@ public class ListResourceGroupResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the resource group.
+             * <p>The ID of the resource group.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>8592</p>
              */
             public Builder id(Long id) {
                 this.id = id;
@@ -1647,7 +2012,10 @@ public class ListResourceGroupResponseBody extends TeaModel {
             }
 
             /**
-             * The name of the resource group.
+             * <p>The name of the resource group.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>TIa2LGixyD</p>
              */
             public Builder name(String name) {
                 this.name = name;
@@ -1655,7 +2023,10 @@ public class ListResourceGroupResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the region where the resource group belongs.
+             * <p>The ID of the region where the resource group belongs.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>cn-qingdao</p>
              */
             public Builder regionId(String regionId) {
                 this.regionId = regionId;
@@ -1663,7 +2034,7 @@ public class ListResourceGroupResponseBody extends TeaModel {
             }
 
             /**
-             * The Server Load Balancer (SLB) instances.
+             * <p>The Server Load Balancer (SLB) instances.</p>
              */
             public Builder slbList(SlbList slbList) {
                 this.slbList = slbList;
@@ -1671,7 +2042,10 @@ public class ListResourceGroupResponseBody extends TeaModel {
             }
 
             /**
-             * The time when the resource group was updated. This value is a UNIX timestamp representing the number of milliseconds that have elapsed since the epoch time January 1, 1970, 00:00:00 UTC.
+             * <p>The time when the resource group was updated. This value is a UNIX timestamp representing the number of milliseconds that have elapsed since the epoch time January 1, 1970, 00:00:00 UTC.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1573281040827</p>
              */
             public Builder updateTime(Long updateTime) {
                 this.updateTime = updateTime;
@@ -1679,7 +2053,7 @@ public class ListResourceGroupResponseBody extends TeaModel {
             }
 
             /**
-             * The Elastic Compute Service (ECS) instances.
+             * <p>The Elastic Compute Service (ECS) instances.</p>
              */
             public Builder ecsList(EcsList ecsList) {
                 this.ecsList = ecsList;
@@ -1693,9 +2067,15 @@ public class ListResourceGroupResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link ListResourceGroupResponseBody} extends {@link TeaModel}
+     *
+     * <p>ListResourceGroupResponseBody</p>
+     */
     public static class ResourceGroupList extends TeaModel {
-        @NameInMap("ResGroupEntity")
-        private java.util.List < ResGroupEntity> resGroupEntity;
+        @com.aliyun.core.annotation.NameInMap("ResGroupEntity")
+        private java.util.List<ResGroupEntity> resGroupEntity;
 
         private ResourceGroupList(Builder builder) {
             this.resGroupEntity = builder.resGroupEntity;
@@ -1712,17 +2092,24 @@ public class ListResourceGroupResponseBody extends TeaModel {
         /**
          * @return resGroupEntity
          */
-        public java.util.List < ResGroupEntity> getResGroupEntity() {
+        public java.util.List<ResGroupEntity> getResGroupEntity() {
             return this.resGroupEntity;
         }
 
         public static final class Builder {
-            private java.util.List < ResGroupEntity> resGroupEntity; 
+            private java.util.List<ResGroupEntity> resGroupEntity; 
+
+            private Builder() {
+            } 
+
+            private Builder(ResourceGroupList model) {
+                this.resGroupEntity = model.resGroupEntity;
+            } 
 
             /**
              * ResGroupEntity.
              */
-            public Builder resGroupEntity(java.util.List < ResGroupEntity> resGroupEntity) {
+            public Builder resGroupEntity(java.util.List<ResGroupEntity> resGroupEntity) {
                 this.resGroupEntity = resGroupEntity;
                 return this;
             }

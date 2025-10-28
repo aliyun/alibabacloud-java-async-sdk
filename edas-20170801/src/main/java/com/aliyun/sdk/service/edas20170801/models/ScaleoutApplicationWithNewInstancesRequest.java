@@ -1,68 +1,73 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.edas20170801.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ScaleoutApplicationWithNewInstancesRequest} extends {@link RequestModel}
  *
  * <p>ScaleoutApplicationWithNewInstancesRequest</p>
  */
 public class ScaleoutApplicationWithNewInstancesRequest extends Request {
-    @Query
-    @NameInMap("AppId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("AppId")
     private String appId;
 
-    @Query
-    @NameInMap("AutoRenew")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("AutoRenew")
     private Boolean autoRenew;
 
-    @Query
-    @NameInMap("AutoRenewPeriod")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("AutoRenewPeriod")
     private Integer autoRenewPeriod;
 
-    @Query
-    @NameInMap("ClusterId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ClusterId")
     private String clusterId;
 
-    @Query
-    @NameInMap("GroupId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("GroupId")
     private String groupId;
 
-    @Query
-    @NameInMap("InstanceChargePeriod")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("InstanceChargePeriod")
     private Integer instanceChargePeriod;
 
-    @Query
-    @NameInMap("InstanceChargePeriodUnit")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("InstanceChargePeriodUnit")
     private String instanceChargePeriodUnit;
 
-    @Query
-    @NameInMap("InstanceChargeType")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("InstanceChargeType")
     private String instanceChargeType;
 
-    @Query
-    @NameInMap("ScalingNum")
-    @Validation(required = true, maximum = 100, minimum = 1)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ScalingNum")
+    @com.aliyun.core.annotation.Validation(required = true, maximum = 100, minimum = 1)
     private Integer scalingNum;
 
-    @Query
-    @NameInMap("ScalingPolicy")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ScalingPolicy")
     private String scalingPolicy;
 
-    @Query
-    @NameInMap("TemplateId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("TemplateId")
     private String templateId;
 
-    @Query
-    @NameInMap("TemplateInstanceId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("TemplateInstanceId")
     private String templateInstanceId;
 
-    @Query
-    @NameInMap("TemplateVersion")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("TemplateVersion")
     private String templateVersion;
 
     private ScaleoutApplicationWithNewInstancesRequest(Builder builder) {
@@ -90,7 +95,7 @@ public class ScaleoutApplicationWithNewInstancesRequest extends Request {
         return builder().build();
     }
 
-    @Override
+@Override
     public Builder toBuilder() {
         return new Builder(this);
     }
@@ -223,7 +228,10 @@ public class ScaleoutApplicationWithNewInstancesRequest extends Request {
         } 
 
         /**
-         * The ID of the application that you want to scale out. You can call the ListApplication operation to query the application ID. For more information, see [ListApplication](~~149390~~).
+         * <p>The ID of the application that you want to scale out. You can call the ListApplication operation to query the application ID. For more information, see <a href="https://help.aliyun.com/document_detail/149390.html">ListApplication</a>.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>e370c17f-*****-3df0721a327</p>
          */
         public Builder appId(String appId) {
             this.putQueryParameter("AppId", appId);
@@ -232,11 +240,14 @@ public class ScaleoutApplicationWithNewInstancesRequest extends Request {
         }
 
         /**
-         * Specifies whether to enable auto-renewal. This parameter takes effect only when the InstanceChargeType parameter is set to PrePaid. Valid values:
-         * <p>
+         * <p>Specifies whether to enable auto-renewal. This parameter takes effect only when the InstanceChargeType parameter is set to PrePaid. Valid values:</p>
+         * <ul>
+         * <li>true: enables auto-renewal.</li>
+         * <li>false: does not enable auto-renewal. This is the default value.</li>
+         * </ul>
          * 
-         * *   true: enables auto-renewal.
-         * *   false: does not enable auto-renewal. This is the default value.
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder autoRenew(Boolean autoRenew) {
             this.putQueryParameter("AutoRenew", autoRenew);
@@ -245,13 +256,15 @@ public class ScaleoutApplicationWithNewInstancesRequest extends Request {
         }
 
         /**
-         * The auto-renewal period. Valid values:
-         * <p>
+         * <p>The auto-renewal period. Valid values:</p>
+         * <ul>
+         * <li>If the InstanceChargePeriodUnit parameter is set to Week, the valid values of the AutoRenewPeriod parameter are 1, 2, and 3.</li>
+         * <li>If the InstanceChargePeriodUnit parameter is set to Month, the valid values of the AutoRenewPeriod parameter are 1, 2, 3, 6, 12, 24, 36, 48, and 60.</li>
+         * </ul>
+         * <p>Default value: 1.</p>
          * 
-         * *   If the InstanceChargePeriodUnit parameter is set to Week, the valid values of the AutoRenewPeriod parameter are 1, 2, and 3.
-         * *   If the InstanceChargePeriodUnit parameter is set to Month, the valid values of the AutoRenewPeriod parameter are 1, 2, 3, 6, 12, 24, 36, 48, and 60.
-         * 
-         * Default value: 1.
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder autoRenewPeriod(Integer autoRenewPeriod) {
             this.putQueryParameter("AutoRenewPeriod", autoRenewPeriod);
@@ -260,7 +273,10 @@ public class ScaleoutApplicationWithNewInstancesRequest extends Request {
         }
 
         /**
-         * The ID of the cluster to which you want to add ECS instances. If the application and application instance group for the scale-out are specified, this parameter is ignored.
+         * <p>The ID of the cluster to which you want to add ECS instances. If the application and application instance group for the scale-out are specified, this parameter is ignored.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>e37**********-33df0721a327</p>
          */
         public Builder clusterId(String clusterId) {
             this.putQueryParameter("ClusterId", clusterId);
@@ -269,7 +285,10 @@ public class ScaleoutApplicationWithNewInstancesRequest extends Request {
         }
 
         /**
-         * The ID of the instance group that you want to scale out. You can call the ListDeployGroup operation to query the group ID. For more information, see [ListDeployGroup](~~62077~~).
+         * <p>The ID of the instance group that you want to scale out. You can call the ListDeployGroup operation to query the group ID. For more information, see <a href="https://help.aliyun.com/document_detail/62077.html">ListDeployGroup</a>.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>e37**********-33df0721a327</p>
          */
         public Builder groupId(String groupId) {
             this.putQueryParameter("GroupId", groupId);
@@ -278,11 +297,14 @@ public class ScaleoutApplicationWithNewInstancesRequest extends Request {
         }
 
         /**
-         * The duration of the subscription. The unit of the subscription duration is specified by the InstanceChargePeriodUnit parameter. This parameter takes effect only when the InstanceChargeType parameter is set to PrePaid.
-         * <p>
+         * <p>The duration of the subscription. The unit of the subscription duration is specified by the InstanceChargePeriodUnit parameter. This parameter takes effect only when the InstanceChargeType parameter is set to PrePaid.</p>
+         * <ul>
+         * <li>If the InstanceChargePeriodUnit parameter is set to Week, the valid values of the InstanceChargePeriod parameter are 1, 2, 3, and 4.</li>
+         * <li>If the InstanceChargePeriodUnit parameter is set to Month, the valid values of the InstanceChargePeriod parameter are 1, 2, 3, 4, 5, 6, 7, 8, 9, 12, 24, 36, 48, and 60.</li>
+         * </ul>
          * 
-         * *   If the InstanceChargePeriodUnit parameter is set to Week, the valid values of the InstanceChargePeriod parameter are 1, 2, 3, and 4.
-         * *   If the InstanceChargePeriodUnit parameter is set to Month, the valid values of the InstanceChargePeriod parameter are 1, 2, 3, 4, 5, 6, 7, 8, 9, 12, 24, 36, 48, and 60.
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder instanceChargePeriod(Integer instanceChargePeriod) {
             this.putQueryParameter("InstanceChargePeriod", instanceChargePeriod);
@@ -291,11 +313,14 @@ public class ScaleoutApplicationWithNewInstancesRequest extends Request {
         }
 
         /**
-         * The unit of the subscription period. Valid values:
-         * <p>
+         * <p>The unit of the subscription period. Valid values:</p>
+         * <ul>
+         * <li>Week: billed on a weekly basis.</li>
+         * <li>Month: billed on a monthly basis. This is the default value.</li>
+         * </ul>
          * 
-         * *   Week: billed on a weekly basis.
-         * *   Month: billed on a monthly basis. This is the default value.
+         * <strong>example:</strong>
+         * <p>Month</p>
          */
         public Builder instanceChargePeriodUnit(String instanceChargePeriodUnit) {
             this.putQueryParameter("InstanceChargePeriodUnit", instanceChargePeriodUnit);
@@ -304,11 +329,14 @@ public class ScaleoutApplicationWithNewInstancesRequest extends Request {
         }
 
         /**
-         * The billing method of the instance. Valid values:
-         * <p>
+         * <p>The billing method of the instance. Valid values:</p>
+         * <ul>
+         * <li>PrePaid: subscription.</li>
+         * <li>PostPaid: pay-as-you-go. This is the default value.</li>
+         * </ul>
          * 
-         * *   PrePaid: subscription.
-         * *   PostPaid: pay-as-you-go. This is the default value.
+         * <strong>example:</strong>
+         * <p>PrePaid</p>
          */
         public Builder instanceChargeType(String instanceChargeType) {
             this.putQueryParameter("InstanceChargeType", instanceChargeType);
@@ -317,7 +345,11 @@ public class ScaleoutApplicationWithNewInstancesRequest extends Request {
         }
 
         /**
-         * The number of instances to be added for the scale-out.
+         * <p>The number of instances to be added for the scale-out.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2</p>
          */
         public Builder scalingNum(Integer scalingNum) {
             this.putQueryParameter("ScalingNum", scalingNum);
@@ -326,13 +358,15 @@ public class ScaleoutApplicationWithNewInstancesRequest extends Request {
         }
 
         /**
-         * The instance reclaim mode of the scaling group. Valid values:
-         * <p>
+         * <p>The instance reclaim mode of the scaling group. Valid values:</p>
+         * <ul>
+         * <li>recycle: economical mode</li>
+         * <li>release: release mode</li>
+         * </ul>
+         * <p>For more information about how to remove instances from a specified scaling group, see <a href="https://help.aliyun.com/document_detail/25955.html">RemoveInstances</a>.</p>
          * 
-         * *   recycle: economical mode
-         * *   release: release mode
-         * 
-         * For more information about how to remove instances from a specified scaling group, see [RemoveInstances](~~25955~~).
+         * <strong>example:</strong>
+         * <p>release</p>
          */
         public Builder scalingPolicy(String scalingPolicy) {
             this.putQueryParameter("ScalingPolicy", scalingPolicy);
@@ -341,7 +375,10 @@ public class ScaleoutApplicationWithNewInstancesRequest extends Request {
         }
 
         /**
-         * The ID of the ECS instance launch template. You can call the DescribeLaunchTemplates operation to query the launch template ID. For more information, see [DescribeLaunchTemplates](~~73759~~).
+         * <p>The ID of the ECS instance launch template. You can call the DescribeLaunchTemplates operation to query the launch template ID. For more information, see <a href="https://help.aliyun.com/document_detail/73759.html">DescribeLaunchTemplates</a>.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>lt-****hy9s2</p>
          */
         public Builder templateId(String templateId) {
             this.putQueryParameter("TemplateId", templateId);
@@ -350,7 +387,10 @@ public class ScaleoutApplicationWithNewInstancesRequest extends Request {
         }
 
         /**
-         * The ID of the existing ECS instance used for the scale-out. If this parameter is specified, the specifications and configurations of the specified ECS instance are used as a template to purchase new instances.
+         * <p>The ID of the existing ECS instance used for the scale-out. If this parameter is specified, the specifications and configurations of the specified ECS instance are used as a template to purchase new instances.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>i-28wt4****</p>
          */
         public Builder templateInstanceId(String templateInstanceId) {
             this.putQueryParameter("TemplateInstanceId", templateInstanceId);
@@ -359,10 +399,13 @@ public class ScaleoutApplicationWithNewInstancesRequest extends Request {
         }
 
         /**
-         * The version of the ECS instance launch template. You can call the DescribeLaunchTemplateVersions operation to query the launch template version. For more information, see [DescribeLaunchTemplateVersions](~~73761~~).
-         * <p>
+         * <p>The version of the ECS instance launch template. You can call the DescribeLaunchTemplateVersions operation to query the launch template version. For more information, see <a href="https://help.aliyun.com/document_detail/73761.html">DescribeLaunchTemplateVersions</a>.</p>
+         * <blockquote>
+         * <p>If you set this parameter to <code>-1</code>, the default launch template version is used.</p>
+         * </blockquote>
          * 
-         * > If you set this parameter to `-1`, the default launch template version is used.
+         * <strong>example:</strong>
+         * <p>-1</p>
          */
         public Builder templateVersion(String templateVersion) {
             this.putQueryParameter("TemplateVersion", templateVersion);

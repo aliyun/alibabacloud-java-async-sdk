@@ -1,27 +1,32 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.edas20170801.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ListSlbResponseBody} extends {@link TeaModel}
  *
  * <p>ListSlbResponseBody</p>
  */
 public class ListSlbResponseBody extends TeaModel {
-    @NameInMap("Code")
+    @com.aliyun.core.annotation.NameInMap("Code")
     private Integer code;
 
-    @NameInMap("Message")
+    @com.aliyun.core.annotation.NameInMap("Message")
     private String message;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("SlbList")
+    @com.aliyun.core.annotation.NameInMap("SlbList")
     private SlbList slbList;
 
     private ListSlbResponseBody(Builder builder) {
@@ -37,6 +42,10 @@ public class ListSlbResponseBody extends TeaModel {
 
     public static ListSlbResponseBody create() {
         return builder().build();
+    }
+
+    public Builder toBuilder() {
+        return new Builder(this);
     }
 
     /**
@@ -73,8 +82,21 @@ public class ListSlbResponseBody extends TeaModel {
         private String requestId; 
         private SlbList slbList; 
 
+        private Builder() {
+        } 
+
+        private Builder(ListSlbResponseBody model) {
+            this.code = model.code;
+            this.message = model.message;
+            this.requestId = model.requestId;
+            this.slbList = model.slbList;
+        } 
+
         /**
-         * The HTTP status code that is returned.
+         * <p>The HTTP status code that is returned.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>200</p>
          */
         public Builder code(Integer code) {
             this.code = code;
@@ -82,7 +104,10 @@ public class ListSlbResponseBody extends TeaModel {
         }
 
         /**
-         * The additional information that is returned.
+         * <p>The additional information that is returned.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>success</p>
          */
         public Builder message(String message) {
             this.message = message;
@@ -90,7 +115,10 @@ public class ListSlbResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the request.
+         * <p>The ID of the request.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>b197-40ab-9155-7ca7</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -98,7 +126,7 @@ public class ListSlbResponseBody extends TeaModel {
         }
 
         /**
-         * The list of SLB instances.
+         * <p>The list of SLB instances.</p>
          */
         public Builder slbList(SlbList slbList) {
             this.slbList = slbList;
@@ -111,47 +139,53 @@ public class ListSlbResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link ListSlbResponseBody} extends {@link TeaModel}
+     *
+     * <p>ListSlbResponseBody</p>
+     */
     public static class SlbEntity extends TeaModel {
-        @NameInMap("Address")
+        @com.aliyun.core.annotation.NameInMap("Address")
         private String address;
 
-        @NameInMap("AddressType")
+        @com.aliyun.core.annotation.NameInMap("AddressType")
         private String addressType;
 
-        @NameInMap("Expired")
+        @com.aliyun.core.annotation.NameInMap("Expired")
         private Boolean expired;
 
-        @NameInMap("GroupId")
+        @com.aliyun.core.annotation.NameInMap("GroupId")
         private Integer groupId;
 
-        @NameInMap("NetworkType")
+        @com.aliyun.core.annotation.NameInMap("NetworkType")
         private String networkType;
 
-        @NameInMap("RegionId")
+        @com.aliyun.core.annotation.NameInMap("RegionId")
         private String regionId;
 
-        @NameInMap("Reusable")
+        @com.aliyun.core.annotation.NameInMap("Reusable")
         private Boolean reusable;
 
-        @NameInMap("SlbId")
+        @com.aliyun.core.annotation.NameInMap("SlbId")
         private String slbId;
 
-        @NameInMap("SlbName")
+        @com.aliyun.core.annotation.NameInMap("SlbName")
         private String slbName;
 
-        @NameInMap("SlbStatus")
+        @com.aliyun.core.annotation.NameInMap("SlbStatus")
         private String slbStatus;
 
-        @NameInMap("Tags")
+        @com.aliyun.core.annotation.NameInMap("Tags")
         private String tags;
 
-        @NameInMap("UserId")
+        @com.aliyun.core.annotation.NameInMap("UserId")
         private String userId;
 
-        @NameInMap("VpcId")
+        @com.aliyun.core.annotation.NameInMap("VpcId")
         private String vpcId;
 
-        @NameInMap("VswitchId")
+        @com.aliyun.core.annotation.NameInMap("VswitchId")
         private String vswitchId;
 
         private SlbEntity(Builder builder) {
@@ -293,8 +327,31 @@ public class ListSlbResponseBody extends TeaModel {
             private String vpcId; 
             private String vswitchId; 
 
+            private Builder() {
+            } 
+
+            private Builder(SlbEntity model) {
+                this.address = model.address;
+                this.addressType = model.addressType;
+                this.expired = model.expired;
+                this.groupId = model.groupId;
+                this.networkType = model.networkType;
+                this.regionId = model.regionId;
+                this.reusable = model.reusable;
+                this.slbId = model.slbId;
+                this.slbName = model.slbName;
+                this.slbStatus = model.slbStatus;
+                this.tags = model.tags;
+                this.userId = model.userId;
+                this.vpcId = model.vpcId;
+                this.vswitchId = model.vswitchId;
+            } 
+
             /**
-             * The IP address of the SLB instance.
+             * <p>The IP address of the SLB instance.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>39.176.XX.XX</p>
              */
             public Builder address(String address) {
                 this.address = address;
@@ -302,11 +359,14 @@ public class ListSlbResponseBody extends TeaModel {
             }
 
             /**
-             * The type of the IP addresses. Valid values:
-             * <p>
+             * <p>The type of the IP addresses. Valid values:</p>
+             * <ul>
+             * <li>internet: Users can connect to the SLB instance over the Internet.</li>
+             * <li>intranet: Users can connect to the SLB instance over the internal network.</li>
+             * </ul>
              * 
-             * *   internet: Users can connect to the SLB instance over the Internet.
-             * *   intranet: Users can connect to the SLB instance over the internal network.
+             * <strong>example:</strong>
+             * <p>internet</p>
              */
             public Builder addressType(String addressType) {
                 this.addressType = addressType;
@@ -314,11 +374,14 @@ public class ListSlbResponseBody extends TeaModel {
             }
 
             /**
-             * Indicates whether the SLB instance has expired. Valid values:
-             * <p>
+             * <p>Indicates whether the SLB instance has expired. Valid values:</p>
+             * <ul>
+             * <li>true: The SLB instance has expired.</li>
+             * <li>false: The SLB instance has not expired.</li>
+             * </ul>
              * 
-             * *   true: The SLB instance has expired.
-             * *   false: The SLB instance has not expired.
+             * <strong>example:</strong>
+             * <p>false</p>
              */
             public Builder expired(Boolean expired) {
                 this.expired = expired;
@@ -326,7 +389,10 @@ public class ListSlbResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the resource group in Enterprise Distributed Application Service (EDAS).
+             * <p>The ID of the resource group in Enterprise Distributed Application Service (EDAS).</p>
+             * 
+             * <strong>example:</strong>
+             * <p>0</p>
              */
             public Builder groupId(Integer groupId) {
                 this.groupId = groupId;
@@ -334,7 +400,10 @@ public class ListSlbResponseBody extends TeaModel {
             }
 
             /**
-             * The type of the network.
+             * <p>The type of the network.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>classic</p>
              */
             public Builder networkType(String networkType) {
                 this.networkType = networkType;
@@ -342,7 +411,10 @@ public class ListSlbResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the region.
+             * <p>The ID of the region.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>cn-beijing</p>
              */
             public Builder regionId(String regionId) {
                 this.regionId = regionId;
@@ -350,11 +422,14 @@ public class ListSlbResponseBody extends TeaModel {
             }
 
             /**
-             * Indicates whether Kubernetes applications can be reused. Valid values:
-             * <p>
+             * <p>Indicates whether Kubernetes applications can be reused. Valid values:</p>
+             * <ul>
+             * <li>true: Kubernetes applications can be reused.</li>
+             * <li>false: Kubernetes applications cannot be reused.</li>
+             * </ul>
              * 
-             * *   true: Kubernetes applications can be reused.
-             * *   false: Kubernetes applications cannot be reused.
+             * <strong>example:</strong>
+             * <p>true</p>
              */
             public Builder reusable(Boolean reusable) {
                 this.reusable = reusable;
@@ -362,7 +437,10 @@ public class ListSlbResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the SLB instance.
+             * <p>The ID of the SLB instance.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>lb-2ze055t3xv7s8****</p>
              */
             public Builder slbId(String slbId) {
                 this.slbId = slbId;
@@ -370,7 +448,10 @@ public class ListSlbResponseBody extends TeaModel {
             }
 
             /**
-             * The name of the SLB instance.
+             * <p>The name of the SLB instance.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>adce</p>
              */
             public Builder slbName(String slbName) {
                 this.slbName = slbName;
@@ -378,7 +459,10 @@ public class ListSlbResponseBody extends TeaModel {
             }
 
             /**
-             * The status of the SLB instance.
+             * <p>The status of the SLB instance.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>active</p>
              */
             public Builder slbStatus(String slbStatus) {
                 this.slbStatus = slbStatus;
@@ -386,7 +470,10 @@ public class ListSlbResponseBody extends TeaModel {
             }
 
             /**
-             * The tag of the SLB instance.
+             * <p>The tag of the SLB instance.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>[{&quot;tagKey&quot;:&quot;tag&quot;,&quot;tagValue&quot;:&quot;value&quot;}]</p>
              */
             public Builder tags(String tags) {
                 this.tags = tags;
@@ -394,7 +481,10 @@ public class ListSlbResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the user.
+             * <p>The ID of the user.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>edas_****_*<em>st@aliyun-</em>***.com</p>
              */
             public Builder userId(String userId) {
                 this.userId = userId;
@@ -402,7 +492,10 @@ public class ListSlbResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the VPC.
+             * <p>The ID of the VPC.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>vpc-bp1f90rfybszjogyw****</p>
              */
             public Builder vpcId(String vpcId) {
                 this.vpcId = vpcId;
@@ -410,7 +503,10 @@ public class ListSlbResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the vSwitch in the VPC.
+             * <p>The ID of the vSwitch in the VPC.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>vsw-bp156w1gpbv0o50hs****</p>
              */
             public Builder vswitchId(String vswitchId) {
                 this.vswitchId = vswitchId;
@@ -424,9 +520,15 @@ public class ListSlbResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link ListSlbResponseBody} extends {@link TeaModel}
+     *
+     * <p>ListSlbResponseBody</p>
+     */
     public static class SlbList extends TeaModel {
-        @NameInMap("SlbEntity")
-        private java.util.List < SlbEntity> slbEntity;
+        @com.aliyun.core.annotation.NameInMap("SlbEntity")
+        private java.util.List<SlbEntity> slbEntity;
 
         private SlbList(Builder builder) {
             this.slbEntity = builder.slbEntity;
@@ -443,17 +545,24 @@ public class ListSlbResponseBody extends TeaModel {
         /**
          * @return slbEntity
          */
-        public java.util.List < SlbEntity> getSlbEntity() {
+        public java.util.List<SlbEntity> getSlbEntity() {
             return this.slbEntity;
         }
 
         public static final class Builder {
-            private java.util.List < SlbEntity> slbEntity; 
+            private java.util.List<SlbEntity> slbEntity; 
+
+            private Builder() {
+            } 
+
+            private Builder(SlbList model) {
+                this.slbEntity = model.slbEntity;
+            } 
 
             /**
              * SlbEntity.
              */
-            public Builder slbEntity(java.util.List < SlbEntity> slbEntity) {
+            public Builder slbEntity(java.util.List<SlbEntity> slbEntity) {
                 this.slbEntity = slbEntity;
                 return this;
             }

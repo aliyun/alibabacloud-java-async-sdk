@@ -1,27 +1,32 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.edas20170801.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link GetSecureTokenResponseBody} extends {@link TeaModel}
  *
  * <p>GetSecureTokenResponseBody</p>
  */
 public class GetSecureTokenResponseBody extends TeaModel {
-    @NameInMap("Code")
+    @com.aliyun.core.annotation.NameInMap("Code")
     private Integer code;
 
-    @NameInMap("Message")
+    @com.aliyun.core.annotation.NameInMap("Message")
     private String message;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("SecureToken")
+    @com.aliyun.core.annotation.NameInMap("SecureToken")
     private SecureToken secureToken;
 
     private GetSecureTokenResponseBody(Builder builder) {
@@ -37,6 +42,10 @@ public class GetSecureTokenResponseBody extends TeaModel {
 
     public static GetSecureTokenResponseBody create() {
         return builder().build();
+    }
+
+    public Builder toBuilder() {
+        return new Builder(this);
     }
 
     /**
@@ -73,8 +82,21 @@ public class GetSecureTokenResponseBody extends TeaModel {
         private String requestId; 
         private SecureToken secureToken; 
 
+        private Builder() {
+        } 
+
+        private Builder(GetSecureTokenResponseBody model) {
+            this.code = model.code;
+            this.message = model.message;
+            this.requestId = model.requestId;
+            this.secureToken = model.secureToken;
+        } 
+
         /**
-         * The HTTP status code that is returned.
+         * <p>The HTTP status code that is returned.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>200</p>
          */
         public Builder code(Integer code) {
             this.code = code;
@@ -82,7 +104,10 @@ public class GetSecureTokenResponseBody extends TeaModel {
         }
 
         /**
-         * The message returned for the request.
+         * <p>The message returned for the request.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>success</p>
          */
         public Builder message(String message) {
             this.message = message;
@@ -90,7 +115,10 @@ public class GetSecureTokenResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the request.
+         * <p>The ID of the request.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>D16979DC-4D42-*************</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -98,7 +126,7 @@ public class GetSecureTokenResponseBody extends TeaModel {
         }
 
         /**
-         * The returned security token.
+         * <p>The returned security token.</p>
          */
         public Builder secureToken(SecureToken secureToken) {
             this.secureToken = secureToken;
@@ -111,50 +139,56 @@ public class GetSecureTokenResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link GetSecureTokenResponseBody} extends {@link TeaModel}
+     *
+     * <p>GetSecureTokenResponseBody</p>
+     */
     public static class SecureToken extends TeaModel {
-        @NameInMap("AccessKey")
+        @com.aliyun.core.annotation.NameInMap("AccessKey")
         private String accessKey;
 
-        @NameInMap("AddressServerHost")
+        @com.aliyun.core.annotation.NameInMap("AddressServerHost")
         private String addressServerHost;
 
-        @NameInMap("BelongRegion")
+        @com.aliyun.core.annotation.NameInMap("BelongRegion")
         private String belongRegion;
 
-        @NameInMap("Description")
+        @com.aliyun.core.annotation.NameInMap("Description")
         private String description;
 
-        @NameInMap("EdasId")
+        @com.aliyun.core.annotation.NameInMap("EdasId")
         private String edasId;
 
-        @NameInMap("Id")
+        @com.aliyun.core.annotation.NameInMap("Id")
         private Long id;
 
-        @NameInMap("MseInstanceId")
+        @com.aliyun.core.annotation.NameInMap("MseInstanceId")
         private String mseInstanceId;
 
-        @NameInMap("MseInternetAddress")
+        @com.aliyun.core.annotation.NameInMap("MseInternetAddress")
         private String mseInternetAddress;
 
-        @NameInMap("MseIntranetAddress")
+        @com.aliyun.core.annotation.NameInMap("MseIntranetAddress")
         private String mseIntranetAddress;
 
-        @NameInMap("MseRegistryType")
+        @com.aliyun.core.annotation.NameInMap("MseRegistryType")
         private String mseRegistryType;
 
-        @NameInMap("RegionId")
+        @com.aliyun.core.annotation.NameInMap("RegionId")
         private String regionId;
 
-        @NameInMap("RegionName")
+        @com.aliyun.core.annotation.NameInMap("RegionName")
         private String regionName;
 
-        @NameInMap("SecretKey")
+        @com.aliyun.core.annotation.NameInMap("SecretKey")
         private String secretKey;
 
-        @NameInMap("TenantId")
+        @com.aliyun.core.annotation.NameInMap("TenantId")
         private String tenantId;
 
-        @NameInMap("UserId")
+        @com.aliyun.core.annotation.NameInMap("UserId")
         private String userId;
 
         private SecureToken(Builder builder) {
@@ -305,8 +339,32 @@ public class GetSecureTokenResponseBody extends TeaModel {
             private String tenantId; 
             private String userId; 
 
+            private Builder() {
+            } 
+
+            private Builder(SecureToken model) {
+                this.accessKey = model.accessKey;
+                this.addressServerHost = model.addressServerHost;
+                this.belongRegion = model.belongRegion;
+                this.description = model.description;
+                this.edasId = model.edasId;
+                this.id = model.id;
+                this.mseInstanceId = model.mseInstanceId;
+                this.mseInternetAddress = model.mseInternetAddress;
+                this.mseIntranetAddress = model.mseIntranetAddress;
+                this.mseRegistryType = model.mseRegistryType;
+                this.regionId = model.regionId;
+                this.regionName = model.regionName;
+                this.secretKey = model.secretKey;
+                this.tenantId = model.tenantId;
+                this.userId = model.userId;
+            } 
+
             /**
-             * The AccessKey ID used in the namespace.
+             * <p>The AccessKey ID used in the namespace.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>f676f1**************</p>
              */
             public Builder accessKey(String accessKey) {
                 this.accessKey = accessKey;
@@ -314,7 +372,10 @@ public class GetSecureTokenResponseBody extends TeaModel {
             }
 
             /**
-             * The address of Address Server associated with the namespace.
+             * <p>The address of Address Server associated with the namespace.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>addr-<strong><strong>-</strong></strong>.edas.aliyun.com</p>
              */
             public Builder addressServerHost(String addressServerHost) {
                 this.addressServerHost = addressServerHost;
@@ -322,7 +383,10 @@ public class GetSecureTokenResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the region.
+             * <p>The ID of the region.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>cn-shenzhen</p>
              */
             public Builder belongRegion(String belongRegion) {
                 this.belongRegion = belongRegion;
@@ -330,7 +394,10 @@ public class GetSecureTokenResponseBody extends TeaModel {
             }
 
             /**
-             * The description of the namespace.
+             * <p>The description of the namespace.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>”“</p>
              */
             public Builder description(String description) {
                 this.description = description;
@@ -338,7 +405,10 @@ public class GetSecureTokenResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the Alibaba Cloud account that activated Enterprise Distributed Application Service (EDAS).
+             * <p>The ID of the Alibaba Cloud account that activated Enterprise Distributed Application Service (EDAS).</p>
+             * 
+             * <strong>example:</strong>
+             * <p>11727458********</p>
              */
             public Builder edasId(String edasId) {
                 this.edasId = edasId;
@@ -346,7 +416,10 @@ public class GetSecureTokenResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the security token.
+             * <p>The ID of the security token.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>7279</p>
              */
             public Builder id(Long id) {
                 this.id = id;
@@ -354,7 +427,10 @@ public class GetSecureTokenResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the MSE instance.
+             * <p>The ID of the MSE instance.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>mse_prepaid_public_cn-tl32p******</p>
              */
             public Builder mseInstanceId(String mseInstanceId) {
                 this.mseInstanceId = mseInstanceId;
@@ -362,7 +438,10 @@ public class GetSecureTokenResponseBody extends TeaModel {
             }
 
             /**
-             * The public endpoint of the MSE registry.
+             * <p>The public endpoint of the MSE registry.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>mse-aa2******-p.nacos-ans.mse.aliyuncs.com</p>
              */
             public Builder mseInternetAddress(String mseInternetAddress) {
                 this.mseInternetAddress = mseInternetAddress;
@@ -370,7 +449,10 @@ public class GetSecureTokenResponseBody extends TeaModel {
             }
 
             /**
-             * The private endpoint of the MSE registry.
+             * <p>The private endpoint of the MSE registry.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>mse-72******-nacos-ans.mse.aliyuncs.com</p>
              */
             public Builder mseIntranetAddress(String mseIntranetAddress) {
                 this.mseIntranetAddress = mseIntranetAddress;
@@ -378,11 +460,14 @@ public class GetSecureTokenResponseBody extends TeaModel {
             }
 
             /**
-             * The type of the Microservices Engine (MSE) registry.
-             * <p>
+             * <p>The type of the Microservices Engine (MSE) registry.</p>
+             * <ul>
+             * <li>default: the shared registry of EDAS</li>
+             * <li>exclusive_mse: MSE Nacos registry</li>
+             * </ul>
              * 
-             * *   default: the shared registry of EDAS
-             * *   exclusive_mse: MSE Nacos registry
+             * <strong>example:</strong>
+             * <p>exclusive_mse</p>
              */
             public Builder mseRegistryType(String mseRegistryType) {
                 this.mseRegistryType = mseRegistryType;
@@ -390,7 +475,10 @@ public class GetSecureTokenResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the region where the namespace resides.
+             * <p>The ID of the region where the namespace resides.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>cn-shenzhen:x*******</p>
              */
             public Builder regionId(String regionId) {
                 this.regionId = regionId;
@@ -398,7 +486,10 @@ public class GetSecureTokenResponseBody extends TeaModel {
             }
 
             /**
-             * The name of the region where the namespace resides.
+             * <p>The name of the region where the namespace resides.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>x******</p>
              */
             public Builder regionName(String regionName) {
                 this.regionName = regionName;
@@ -406,7 +497,10 @@ public class GetSecureTokenResponseBody extends TeaModel {
             }
 
             /**
-             * The AccessKey secret used in the namespace.
+             * <p>The AccessKey secret used in the namespace.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>gOSgbgR2R*************</p>
              */
             public Builder secretKey(String secretKey) {
                 this.secretKey = secretKey;
@@ -414,7 +508,10 @@ public class GetSecureTokenResponseBody extends TeaModel {
             }
 
             /**
-             * The tenant ID of the namespace.
+             * <p>The tenant ID of the namespace.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>401b7bc8-9441-4693-<strong><strong>-</strong></strong>********</p>
              */
             public Builder tenantId(String tenantId) {
                 this.tenantId = tenantId;
@@ -422,7 +519,10 @@ public class GetSecureTokenResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the user.
+             * <p>The ID of the user.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>edas_com***_****@<em><em><strong><strong>-</strong></strong></em>.</em>**</p>
              */
             public Builder userId(String userId) {
                 this.userId = userId;

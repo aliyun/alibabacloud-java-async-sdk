@@ -1,27 +1,32 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.edas20170801.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DeleteUserDefineRegionResponseBody} extends {@link TeaModel}
  *
  * <p>DeleteUserDefineRegionResponseBody</p>
  */
 public class DeleteUserDefineRegionResponseBody extends TeaModel {
-    @NameInMap("Code")
+    @com.aliyun.core.annotation.NameInMap("Code")
     private Integer code;
 
-    @NameInMap("Message")
+    @com.aliyun.core.annotation.NameInMap("Message")
     private String message;
 
-    @NameInMap("RegionDefine")
+    @com.aliyun.core.annotation.NameInMap("RegionDefine")
     private RegionDefine regionDefine;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
     private DeleteUserDefineRegionResponseBody(Builder builder) {
@@ -37,6 +42,10 @@ public class DeleteUserDefineRegionResponseBody extends TeaModel {
 
     public static DeleteUserDefineRegionResponseBody create() {
         return builder().build();
+    }
+
+    public Builder toBuilder() {
+        return new Builder(this);
     }
 
     /**
@@ -73,8 +82,21 @@ public class DeleteUserDefineRegionResponseBody extends TeaModel {
         private RegionDefine regionDefine; 
         private String requestId; 
 
+        private Builder() {
+        } 
+
+        private Builder(DeleteUserDefineRegionResponseBody model) {
+            this.code = model.code;
+            this.message = model.message;
+            this.regionDefine = model.regionDefine;
+            this.requestId = model.requestId;
+        } 
+
         /**
-         * The HTTP status code that is returned.
+         * <p>The HTTP status code that is returned.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>200</p>
          */
         public Builder code(Integer code) {
             this.code = code;
@@ -82,7 +104,10 @@ public class DeleteUserDefineRegionResponseBody extends TeaModel {
         }
 
         /**
-         * The additional information that is returned.
+         * <p>The additional information that is returned.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>success</p>
          */
         public Builder message(String message) {
             this.message = message;
@@ -90,7 +115,7 @@ public class DeleteUserDefineRegionResponseBody extends TeaModel {
         }
 
         /**
-         * The custom namespace.
+         * <p>The custom namespace.</p>
          */
         public Builder regionDefine(RegionDefine regionDefine) {
             this.regionDefine = regionDefine;
@@ -98,7 +123,10 @@ public class DeleteUserDefineRegionResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the request.
+         * <p>The ID of the request.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1234-1sda-321d-****</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -111,23 +139,29 @@ public class DeleteUserDefineRegionResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link DeleteUserDefineRegionResponseBody} extends {@link TeaModel}
+     *
+     * <p>DeleteUserDefineRegionResponseBody</p>
+     */
     public static class RegionDefine extends TeaModel {
-        @NameInMap("BelongRegion")
+        @com.aliyun.core.annotation.NameInMap("BelongRegion")
         private String belongRegion;
 
-        @NameInMap("Description")
+        @com.aliyun.core.annotation.NameInMap("Description")
         private String description;
 
-        @NameInMap("Id")
+        @com.aliyun.core.annotation.NameInMap("Id")
         private Long id;
 
-        @NameInMap("RegionId")
+        @com.aliyun.core.annotation.NameInMap("RegionId")
         private String regionId;
 
-        @NameInMap("RegionName")
+        @com.aliyun.core.annotation.NameInMap("RegionName")
         private String regionName;
 
-        @NameInMap("UserId")
+        @com.aliyun.core.annotation.NameInMap("UserId")
         private String userId;
 
         private RegionDefine(Builder builder) {
@@ -197,8 +231,23 @@ public class DeleteUserDefineRegionResponseBody extends TeaModel {
             private String regionName; 
             private String userId; 
 
+            private Builder() {
+            } 
+
+            private Builder(RegionDefine model) {
+                this.belongRegion = model.belongRegion;
+                this.description = model.description;
+                this.id = model.id;
+                this.regionId = model.regionId;
+                this.regionName = model.regionName;
+                this.userId = model.userId;
+            } 
+
             /**
-             * The ID of the region to which the custom namespace belongs.
+             * <p>The ID of the region to which the custom namespace belongs.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>cn-beijing</p>
              */
             public Builder belongRegion(String belongRegion) {
                 this.belongRegion = belongRegion;
@@ -206,7 +255,10 @@ public class DeleteUserDefineRegionResponseBody extends TeaModel {
             }
 
             /**
-             * The description of the custom namespace.
+             * <p>The description of the custom namespace.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>logic region</p>
              */
             public Builder description(String description) {
                 this.description = description;
@@ -214,7 +266,10 @@ public class DeleteUserDefineRegionResponseBody extends TeaModel {
             }
 
             /**
-             * The unique identifier of the custom namespace.
+             * <p>The unique identifier of the custom namespace.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>8848</p>
              */
             public Builder id(Long id) {
                 this.id = id;
@@ -222,7 +277,10 @@ public class DeleteUserDefineRegionResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the custom namespace. The ID cannot be changed after the custom namespace is created. The format is `region ID:custom namespace ID`.
+             * <p>The ID of the custom namespace. The ID cannot be changed after the custom namespace is created. The format is <code>region ID:custom namespace ID</code>.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>cn-beijing:test</p>
              */
             public Builder regionId(String regionId) {
                 this.regionId = regionId;
@@ -230,7 +288,10 @@ public class DeleteUserDefineRegionResponseBody extends TeaModel {
             }
 
             /**
-             * The name of the custom namespace.
+             * <p>The name of the custom namespace.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>test_region</p>
              */
             public Builder regionName(String regionName) {
                 this.regionName = regionName;
@@ -238,7 +299,10 @@ public class DeleteUserDefineRegionResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the Alibaba Cloud account to which the custom namespace belongs.
+             * <p>The ID of the Alibaba Cloud account to which the custom namespace belongs.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>11727****22398</p>
              */
             public Builder userId(String userId) {
                 this.userId = userId;

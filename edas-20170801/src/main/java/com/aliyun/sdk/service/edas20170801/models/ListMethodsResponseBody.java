@@ -1,27 +1,32 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.edas20170801.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ListMethodsResponseBody} extends {@link TeaModel}
  *
  * <p>ListMethodsResponseBody</p>
  */
 public class ListMethodsResponseBody extends TeaModel {
-    @NameInMap("Code")
+    @com.aliyun.core.annotation.NameInMap("Code")
     private Integer code;
 
-    @NameInMap("Message")
+    @com.aliyun.core.annotation.NameInMap("Message")
     private String message;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("ServiceMethodList")
+    @com.aliyun.core.annotation.NameInMap("ServiceMethodList")
     private ServiceMethodList serviceMethodList;
 
     private ListMethodsResponseBody(Builder builder) {
@@ -37,6 +42,10 @@ public class ListMethodsResponseBody extends TeaModel {
 
     public static ListMethodsResponseBody create() {
         return builder().build();
+    }
+
+    public Builder toBuilder() {
+        return new Builder(this);
     }
 
     /**
@@ -73,8 +82,21 @@ public class ListMethodsResponseBody extends TeaModel {
         private String requestId; 
         private ServiceMethodList serviceMethodList; 
 
+        private Builder() {
+        } 
+
+        private Builder(ListMethodsResponseBody model) {
+            this.code = model.code;
+            this.message = model.message;
+            this.requestId = model.requestId;
+            this.serviceMethodList = model.serviceMethodList;
+        } 
+
         /**
-         * The HTTP status code that is returned.
+         * <p>The HTTP status code that is returned.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>200</p>
          */
         public Builder code(Integer code) {
             this.code = code;
@@ -82,7 +104,10 @@ public class ListMethodsResponseBody extends TeaModel {
         }
 
         /**
-         * The returned message that indicates whether the request is successful.
+         * <p>The returned message that indicates whether the request is successful.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>success</p>
          */
         public Builder message(String message) {
             this.message = message;
@@ -90,7 +115,10 @@ public class ListMethodsResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the request.
+         * <p>The ID of the request.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>69AD2AA7-DB47-449B-941B-B14409DF****</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -98,7 +126,7 @@ public class ListMethodsResponseBody extends TeaModel {
         }
 
         /**
-         * The information about service methods.
+         * <p>The information about service methods.</p>
          */
         public Builder serviceMethodList(ServiceMethodList serviceMethodList) {
             this.serviceMethodList = serviceMethodList;
@@ -111,9 +139,15 @@ public class ListMethodsResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link ListMethodsResponseBody} extends {@link TeaModel}
+     *
+     * <p>ListMethodsResponseBody</p>
+     */
     public static class InputParams extends TeaModel {
-        @NameInMap("InputParam")
-        private java.util.List < String > inputParam;
+        @com.aliyun.core.annotation.NameInMap("InputParam")
+        private java.util.List<String> inputParam;
 
         private InputParams(Builder builder) {
             this.inputParam = builder.inputParam;
@@ -130,17 +164,24 @@ public class ListMethodsResponseBody extends TeaModel {
         /**
          * @return inputParam
          */
-        public java.util.List < String > getInputParam() {
+        public java.util.List<String> getInputParam() {
             return this.inputParam;
         }
 
         public static final class Builder {
-            private java.util.List < String > inputParam; 
+            private java.util.List<String> inputParam; 
+
+            private Builder() {
+            } 
+
+            private Builder(InputParams model) {
+                this.inputParam = model.inputParam;
+            } 
 
             /**
              * InputParam.
              */
-            public Builder inputParam(java.util.List < String > inputParam) {
+            public Builder inputParam(java.util.List<String> inputParam) {
                 this.inputParam = inputParam;
                 return this;
             }
@@ -152,9 +193,15 @@ public class ListMethodsResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link ListMethodsResponseBody} extends {@link TeaModel}
+     *
+     * <p>ListMethodsResponseBody</p>
+     */
     public static class ParamTypes extends TeaModel {
-        @NameInMap("ParamType")
-        private java.util.List < String > paramType;
+        @com.aliyun.core.annotation.NameInMap("ParamType")
+        private java.util.List<String> paramType;
 
         private ParamTypes(Builder builder) {
             this.paramType = builder.paramType;
@@ -171,17 +218,24 @@ public class ListMethodsResponseBody extends TeaModel {
         /**
          * @return paramType
          */
-        public java.util.List < String > getParamType() {
+        public java.util.List<String> getParamType() {
             return this.paramType;
         }
 
         public static final class Builder {
-            private java.util.List < String > paramType; 
+            private java.util.List<String> paramType; 
+
+            private Builder() {
+            } 
+
+            private Builder(ParamTypes model) {
+                this.paramType = model.paramType;
+            } 
 
             /**
              * ParamType.
              */
-            public Builder paramType(java.util.List < String > paramType) {
+            public Builder paramType(java.util.List<String> paramType) {
                 this.paramType = paramType;
                 return this;
             }
@@ -193,23 +247,29 @@ public class ListMethodsResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link ListMethodsResponseBody} extends {@link TeaModel}
+     *
+     * <p>ListMethodsResponseBody</p>
+     */
     public static class ServiceMethod extends TeaModel {
-        @NameInMap("AppName")
+        @com.aliyun.core.annotation.NameInMap("AppName")
         private String appName;
 
-        @NameInMap("InputParams")
+        @com.aliyun.core.annotation.NameInMap("InputParams")
         private InputParams inputParams;
 
-        @NameInMap("MethodName")
+        @com.aliyun.core.annotation.NameInMap("MethodName")
         private String methodName;
 
-        @NameInMap("Output")
+        @com.aliyun.core.annotation.NameInMap("Output")
         private String output;
 
-        @NameInMap("ParamTypes")
+        @com.aliyun.core.annotation.NameInMap("ParamTypes")
         private ParamTypes paramTypes;
 
-        @NameInMap("ServiceName")
+        @com.aliyun.core.annotation.NameInMap("ServiceName")
         private String serviceName;
 
         private ServiceMethod(Builder builder) {
@@ -279,8 +339,23 @@ public class ListMethodsResponseBody extends TeaModel {
             private ParamTypes paramTypes; 
             private String serviceName; 
 
+            private Builder() {
+            } 
+
+            private Builder(ServiceMethod model) {
+                this.appName = model.appName;
+                this.inputParams = model.inputParams;
+                this.methodName = model.methodName;
+                this.output = model.output;
+                this.paramTypes = model.paramTypes;
+                this.serviceName = model.serviceName;
+            } 
+
             /**
-             * The name of the application.
+             * <p>The name of the application.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>App</p>
              */
             public Builder appName(String appName) {
                 this.appName = appName;
@@ -296,7 +371,10 @@ public class ListMethodsResponseBody extends TeaModel {
             }
 
             /**
-             * The name of the service method.
+             * <p>The name of the service method.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>echo</p>
              */
             public Builder methodName(String methodName) {
                 this.methodName = methodName;
@@ -304,7 +382,10 @@ public class ListMethodsResponseBody extends TeaModel {
             }
 
             /**
-             * The return type of the service method.
+             * <p>The return type of the service method.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>java.lang.string</p>
              */
             public Builder output(String output) {
                 this.output = output;
@@ -320,7 +401,10 @@ public class ListMethodsResponseBody extends TeaModel {
             }
 
             /**
-             * The name of the service.
+             * <p>The name of the service.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>com.alibaba.edas.demo.EchoService</p>
              */
             public Builder serviceName(String serviceName) {
                 this.serviceName = serviceName;
@@ -334,9 +418,15 @@ public class ListMethodsResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link ListMethodsResponseBody} extends {@link TeaModel}
+     *
+     * <p>ListMethodsResponseBody</p>
+     */
     public static class ServiceMethodList extends TeaModel {
-        @NameInMap("ServiceMethod")
-        private java.util.List < ServiceMethod> serviceMethod;
+        @com.aliyun.core.annotation.NameInMap("ServiceMethod")
+        private java.util.List<ServiceMethod> serviceMethod;
 
         private ServiceMethodList(Builder builder) {
             this.serviceMethod = builder.serviceMethod;
@@ -353,17 +443,24 @@ public class ListMethodsResponseBody extends TeaModel {
         /**
          * @return serviceMethod
          */
-        public java.util.List < ServiceMethod> getServiceMethod() {
+        public java.util.List<ServiceMethod> getServiceMethod() {
             return this.serviceMethod;
         }
 
         public static final class Builder {
-            private java.util.List < ServiceMethod> serviceMethod; 
+            private java.util.List<ServiceMethod> serviceMethod; 
+
+            private Builder() {
+            } 
+
+            private Builder(ServiceMethodList model) {
+                this.serviceMethod = model.serviceMethod;
+            } 
 
             /**
              * ServiceMethod.
              */
-            public Builder serviceMethod(java.util.List < ServiceMethod> serviceMethod) {
+            public Builder serviceMethod(java.util.List<ServiceMethod> serviceMethod) {
                 this.serviceMethod = serviceMethod;
                 return this;
             }

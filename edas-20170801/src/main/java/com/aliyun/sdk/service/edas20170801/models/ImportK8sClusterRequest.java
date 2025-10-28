@@ -1,32 +1,37 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.edas20170801.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ImportK8sClusterRequest} extends {@link RequestModel}
  *
  * <p>ImportK8sClusterRequest</p>
  */
 public class ImportK8sClusterRequest extends Request {
-    @Query
-    @NameInMap("ClusterId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ClusterId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String clusterId;
 
-    @Query
-    @NameInMap("EnableAsm")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("EnableAsm")
     private Boolean enableAsm;
 
-    @Query
-    @NameInMap("Mode")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Mode")
     private Integer mode;
 
-    @Query
-    @NameInMap("NamespaceId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("NamespaceId")
     private String namespaceId;
 
     private ImportK8sClusterRequest(Builder builder) {
@@ -45,7 +50,7 @@ public class ImportK8sClusterRequest extends Request {
         return builder().build();
     }
 
-    @Override
+@Override
     public Builder toBuilder() {
         return new Builder(this);
     }
@@ -97,7 +102,11 @@ public class ImportK8sClusterRequest extends Request {
         } 
 
         /**
-         * The ID of the ACK cluster or serverless Kubernetes cluster. You can obtain the cluster ID by calling the GetK8sCluster operation. For more information, see [GetK8sCluster](~~181437~~).
+         * <p>The ID of the ACK cluster or serverless Kubernetes cluster. You can obtain the cluster ID by calling the GetK8sCluster operation. For more information, see <a href="https://help.aliyun.com/document_detail/181437.html">GetK8sCluster</a>.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>9c28bbb9-****-44b3-b953-54ef8a2d0be2</p>
          */
         public Builder clusterId(String clusterId) {
             this.putQueryParameter("ClusterId", clusterId);
@@ -106,11 +115,14 @@ public class ImportK8sClusterRequest extends Request {
         }
 
         /**
-         * Specifies whether to enable the integration with Alibaba Cloud Service Mesh (ASM). Valid values:
-         * <p>
+         * <p>Specifies whether to enable the integration with Alibaba Cloud Service Mesh (ASM). Valid values:</p>
+         * <ul>
+         * <li>true: Enables the integration with ASM.</li>
+         * <li>false: Disables the integration with ASM.</li>
+         * </ul>
          * 
-         * *   true: Enables the integration with ASM.
-         * *   false: Disables the integration with ASM.
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder enableAsm(Boolean enableAsm) {
             this.putQueryParameter("EnableAsm", enableAsm);
@@ -119,7 +131,10 @@ public class ImportK8sClusterRequest extends Request {
         }
 
         /**
-         * You can ignore this parameter.
+         * <p>You can ignore this parameter.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder mode(Integer mode) {
             this.putQueryParameter("Mode", mode);
@@ -128,7 +143,10 @@ public class ImportK8sClusterRequest extends Request {
         }
 
         /**
-         * The ID of the namespace. It is in the format of `Region ID:Identifier of the microservices namespace`. Example: `cn-hangzhou:doc`.
+         * <p>The ID of the namespace. It is in the format of <code>Region ID:Identifier of the microservices namespace</code>. Example: <code>cn-hangzhou:doc</code>.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-beijing:doc</p>
          */
         public Builder namespaceId(String namespaceId) {
             this.putQueryParameter("NamespaceId", namespaceId);

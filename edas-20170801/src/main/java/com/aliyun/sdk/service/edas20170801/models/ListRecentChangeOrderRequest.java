@@ -1,20 +1,25 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.edas20170801.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ListRecentChangeOrderRequest} extends {@link RequestModel}
  *
  * <p>ListRecentChangeOrderRequest</p>
  */
 public class ListRecentChangeOrderRequest extends Request {
-    @Query
-    @NameInMap("AppId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("AppId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String appId;
 
     private ListRecentChangeOrderRequest(Builder builder) {
@@ -30,7 +35,7 @@ public class ListRecentChangeOrderRequest extends Request {
         return builder().build();
     }
 
-    @Override
+@Override
     public Builder toBuilder() {
         return new Builder(this);
     }
@@ -55,7 +60,11 @@ public class ListRecentChangeOrderRequest extends Request {
         } 
 
         /**
-         * The ID of the application.
+         * <p>The ID of the application.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>3616cdca-4f92-4413-<strong><strong>-</strong></strong>********</p>
          */
         public Builder appId(String appId) {
             this.putQueryParameter("AppId", appId);

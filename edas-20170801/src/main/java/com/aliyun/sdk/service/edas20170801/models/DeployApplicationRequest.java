@@ -1,79 +1,84 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.edas20170801.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DeployApplicationRequest} extends {@link RequestModel}
  *
  * <p>DeployApplicationRequest</p>
  */
 public class DeployApplicationRequest extends Request {
-    @Query
-    @NameInMap("AppEnv")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("AppEnv")
     private String appEnv;
 
-    @Query
-    @NameInMap("AppId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("AppId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String appId;
 
-    @Query
-    @NameInMap("Batch")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Batch")
     private Integer batch;
 
-    @Query
-    @NameInMap("BatchWaitTime")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("BatchWaitTime")
     private Integer batchWaitTime;
 
-    @Query
-    @NameInMap("BuildPackId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("BuildPackId")
     private Long buildPackId;
 
-    @Query
-    @NameInMap("ComponentIds")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ComponentIds")
     private String componentIds;
 
-    @Query
-    @NameInMap("DeployType")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("DeployType")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String deployType;
 
-    @Query
-    @NameInMap("Desc")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Desc")
     private String desc;
 
-    @Query
-    @NameInMap("Gray")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Gray")
     private Boolean gray;
 
-    @Query
-    @NameInMap("GroupId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("GroupId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String groupId;
 
-    @Query
-    @NameInMap("ImageUrl")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ImageUrl")
     private String imageUrl;
 
-    @Query
-    @NameInMap("PackageVersion")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("PackageVersion")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String packageVersion;
 
-    @Query
-    @NameInMap("ReleaseType")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ReleaseType")
     private Long releaseType;
 
-    @Query
-    @NameInMap("TrafficControlStrategy")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("TrafficControlStrategy")
     private String trafficControlStrategy;
 
-    @Query
-    @NameInMap("WarUrl")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("WarUrl")
     private String warUrl;
 
     private DeployApplicationRequest(Builder builder) {
@@ -103,7 +108,7 @@ public class DeployApplicationRequest extends Request {
         return builder().build();
     }
 
-    @Override
+@Override
     public Builder toBuilder() {
         return new Builder(this);
     }
@@ -254,7 +259,10 @@ public class DeployApplicationRequest extends Request {
         } 
 
         /**
-         * The environment variables of the application. Specify each environment variable by using two key-value pairs. Example: `{"name":"x","value":"y"},{"name":"x2","value":"y2"}`. The `keys` of the two key-value pairs are `name` and `value`.
+         * <p>The environment variables of the application. Specify each environment variable by using two key-value pairs. Example: <code>{&quot;name&quot;:&quot;x&quot;,&quot;value&quot;:&quot;y&quot;},{&quot;name&quot;:&quot;x2&quot;,&quot;value&quot;:&quot;y2&quot;}</code>. The <code>keys</code> of the two key-value pairs are <code>name</code> and <code>value</code>.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>[{&quot;name&quot;:&quot;env_name_1&quot;, &quot;value&quot;:&quot;env_value_1&quot;}, {&quot;name&quot;:&quot;env_name_2&quot;,&quot;value&quot;:&quot;env_value_2&quot;}]</p>
          */
         public Builder appEnv(String appEnv) {
             this.putQueryParameter("AppEnv", appEnv);
@@ -263,7 +271,11 @@ public class DeployApplicationRequest extends Request {
         }
 
         /**
-         * The ID of the application. You can call the ListApplication operation to query the application ID. For more information, see [ListApplication](~~423162~~).
+         * <p>The ID of the application. You can call the ListApplication operation to query the application ID. For more information, see <a href="https://help.aliyun.com/document_detail/423162.html">ListApplication</a>.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>3616cdca-********************</p>
          */
         public Builder appId(String appId) {
             this.putQueryParameter("AppId", appId);
@@ -272,11 +284,14 @@ public class DeployApplicationRequest extends Request {
         }
 
         /**
-         * The number of batches per instance group.
-         * <p>
+         * <p>The number of batches per instance group.</p>
+         * <ul>
+         * <li>If you specify an ID when you set the GroupId parameter, the application is deployed to the specified instance group. The minimum number of batches that can be specified is 1. The maximum number of batches is the maximum number of ECS instances in the Normal state in the instance group. The actual value falls in the range of [1, specified number]. The specified number of batches equals the number of ECS instances in the specified instance group.</li>
+         * <li>If you set the GroupId parameter to all, the application is deployed to all instance groups. The minimum number of batches that can be specified is 1. The maximum number of batches is the number of ECS instances in the instance group that has the largest number of ECS instances in the Normal state.</li>
+         * </ul>
          * 
-         * *   If you specify an ID when you set the GroupId parameter, the application is deployed to the specified instance group. The minimum number of batches that can be specified is 1. The maximum number of batches is the maximum number of ECS instances in the Normal state in the instance group. The actual value falls in the range of \[1, specified number]. The specified number of batches equals the number of ECS instances in the specified instance group.
-         * *   If you set the GroupId parameter to all, the application is deployed to all instance groups. The minimum number of batches that can be specified is 1. The maximum number of batches is the number of ECS instances in the instance group that has the largest number of ECS instances in the Normal state.
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder batch(Integer batch) {
             this.putQueryParameter("Batch", batch);
@@ -285,13 +300,15 @@ public class DeployApplicationRequest extends Request {
         }
 
         /**
-         * The wait time between deployment batches for the application. Unit: minutes.
-         * <p>
+         * <p>The wait time between deployment batches for the application. Unit: minutes.</p>
+         * <ul>
+         * <li>Default value: 0. If no wait time between deployment batches is needed, set this parameter to 0.</li>
+         * <li>Maximum value: 5.</li>
+         * </ul>
+         * <p>If many deployment batches are needed, we recommend that you specify a small value for this parameter. Otherwise, the application deployment is time-consuming.</p>
          * 
-         * *   Default value: 0. If no wait time between deployment batches is needed, set this parameter to 0.
-         * *   Maximum value: 5.
-         * 
-         * If many deployment batches are needed, we recommend that you specify a small value for this parameter. Otherwise, the application deployment is time-consuming.
+         * <strong>example:</strong>
+         * <p>0</p>
          */
         public Builder batchWaitTime(Integer batchWaitTime) {
             this.putQueryParameter("BatchWaitTime", batchWaitTime);
@@ -300,16 +317,19 @@ public class DeployApplicationRequest extends Request {
         }
 
         /**
-         * The build package number of EDAS Container.
-         * <p>
+         * <p>The build package number of EDAS Container.</p>
+         * <ul>
+         * <li>You do not need to set the parameter if you do not need to change the EDAS Container version during the deployment.</li>
+         * <li>Set the parameter if you need to update the EDAS Container version of the application during the deployment.</li>
+         * </ul>
+         * <p>You can query the build package number by using one of the following methods:</p>
+         * <ul>
+         * <li>Call the ListBuildPack operation. For more information, see <a href="https://help.aliyun.com/document_detail/149391.html">ListBuildPack</a>.</li>
+         * <li>Obtain the value in the <strong>Build package number</strong> column of the <a href="https://help.aliyun.com/document_detail/92614.html">Release notes for EDAS Container</a> topic. For example, <code>59</code> indicates <code>EDAS Container 3.5.8</code>.</li>
+         * </ul>
          * 
-         * *   You do not need to set the parameter if you do not need to change the EDAS Container version during the deployment.
-         * *   Set the parameter if you need to update the EDAS Container version of the application during the deployment.
-         * 
-         * You can query the build package number by using one of the following methods:
-         * 
-         * *   Call the ListBuildPack operation. For more information, see [ListBuildPack](~~149391~~).
-         * *   Obtain the value in the **Build package number** column of the [Release notes for EDAS Container](~~92614~~) topic. For example, `59` indicates `EDAS Container 3.5.8`.
+         * <strong>example:</strong>
+         * <p>59</p>
          */
         public Builder buildPackId(Long buildPackId) {
             this.putQueryParameter("BuildPackId", buildPackId);
@@ -318,20 +338,22 @@ public class DeployApplicationRequest extends Request {
         }
 
         /**
-         * The IDs of the components used by the application. The parameter is not applicable to High-Speed Framework (HSF) applications. You can call the ListComponents operation to query the component IDs. For more information, see [ListComponents](~~423223~~).
-         * <p>
+         * <p>The IDs of the components used by the application. The parameter is not applicable to High-Speed Framework (HSF) applications. You can call the ListComponents operation to query the component IDs. For more information, see <a href="https://help.aliyun.com/document_detail/423223.html">ListComponents</a>.</p>
+         * <ul>
+         * <li>If you have specified the component IDs when you create the application, you do not need to set the parameter when you deploy the application.</li>
+         * <li>Set the parameter if you need to update the component versions for the application during the deployment.</li>
+         * </ul>
+         * <p>Valid values for common application components:</p>
+         * <ul>
+         * <li>4: Apache Tomcat 7.0.91</li>
+         * <li>7: Apache Tomcat 8.5.42</li>
+         * <li>5: OpenJDK 1.8.x</li>
+         * <li>6: OpenJDK 1.7.x</li>
+         * </ul>
+         * <p>For more information, see the Common application parameters section of the <a href="https://help.aliyun.com/document_detail/423185.html">InsertApplication</a> topic.</p>
          * 
-         * *   If you have specified the component IDs when you create the application, you do not need to set the parameter when you deploy the application.
-         * *   Set the parameter if you need to update the component versions for the application during the deployment.
-         * 
-         * Valid values for common application components:
-         * 
-         * *   4: Apache Tomcat 7.0.91
-         * *   7: Apache Tomcat 8.5.42
-         * *   5: OpenJDK 1.8.x
-         * *   6: OpenJDK 1.7.x
-         * 
-         * For more information, see the Common application parameters section of the [InsertApplication](~~423185~~) topic.
+         * <strong>example:</strong>
+         * <p>7</p>
          */
         public Builder componentIds(String componentIds) {
             this.putQueryParameter("ComponentIds", componentIds);
@@ -340,7 +362,11 @@ public class DeployApplicationRequest extends Request {
         }
 
         /**
-         * The deployment mode of the application. Valid values: `url` and `image`. The image value is deprecated. You can deploy an application to a Swarm cluster only by using an image.``
+         * <p>The deployment mode of the application. Valid values: <code>url</code> and <code>image</code>. The image value is deprecated. You can deploy an application to a Swarm cluster only by using an image.``</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>URL</p>
          */
         public Builder deployType(String deployType) {
             this.putQueryParameter("DeployType", deployType);
@@ -349,7 +375,10 @@ public class DeployApplicationRequest extends Request {
         }
 
         /**
-         * The description of the application deployment.
+         * <p>The description of the application deployment.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Deploy by edas pop api</p>
          */
         public Builder desc(String desc) {
             this.putQueryParameter("Desc", desc);
@@ -358,16 +387,21 @@ public class DeployApplicationRequest extends Request {
         }
 
         /**
-         * Specifies whether canary release is selected as the deployment method. Valid values:
-         * <p>
+         * <p>Specifies whether canary release is selected as the deployment method. Valid values:</p>
+         * <ul>
+         * <li><p>true: Canary release is selected.</p>
+         * <ul>
+         * <li>To implement a canary release, specify the GroupId parameter, which specifies the ID of the instance group for the canary release.</li>
+         * <li>Canary release can be selected as the deployment method for only one batch.</li>
+         * <li>After the canary release is complete, the application is released in regular mode. The Batch parameter specifies the number of batches.</li>
+         * </ul>
+         * </li>
+         * <li><p>false: Single-batch release or phased release is selected.</p>
+         * </li>
+         * </ul>
          * 
-         * *   true: Canary release is selected.
-         * 
-         *     *   To implement a canary release, specify the GroupId parameter, which specifies the ID of the instance group for the canary release.
-         *     *   Canary release can be selected as the deployment method for only one batch.
-         *     *   After the canary release is complete, the application is released in regular mode. The Batch parameter specifies the number of batches.
-         * 
-         * *   false: Single-batch release or phased release is selected.
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder gray(Boolean gray) {
             this.putQueryParameter("Gray", gray);
@@ -376,10 +410,12 @@ public class DeployApplicationRequest extends Request {
         }
 
         /**
-         * The ID of the instance group to which the application is deployed. You can call the ListDeployGroup operation to query the ID of the instance group. For more information, see [ListDeployGroup](~~423184~~).
-         * <p>
+         * <p>The ID of the instance group to which the application is deployed. You can call the ListDeployGroup operation to query the ID of the instance group. For more information, see <a href="https://help.aliyun.com/document_detail/423184.html">ListDeployGroup</a>.</p>
+         * <p>Set the parameter to <code>all</code> if you want to deploy the application to all instance groups.</p>
+         * <p>This parameter is required.</p>
          * 
-         * Set the parameter to `all` if you want to deploy the application to all instance groups.
+         * <strong>example:</strong>
+         * <p>all</p>
          */
         public Builder groupId(String groupId) {
             this.putQueryParameter("GroupId", groupId);
@@ -388,7 +424,10 @@ public class DeployApplicationRequest extends Request {
         }
 
         /**
-         * The URL of the application image that is used to deploy the application in a Swarm cluster. We recommend that you use an image that is stored in Alibaba Cloud Container Registry. This parameter is deprecated.
+         * <p>The URL of the application image that is used to deploy the application in a Swarm cluster. We recommend that you use an image that is stored in Alibaba Cloud Container Registry. This parameter is deprecated.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>registry.cn-hangzhou.aliyuncs.com/mw/testapp:latest</p>
          */
         public Builder imageUrl(String imageUrl) {
             this.putQueryParameter("ImageUrl", imageUrl);
@@ -397,7 +436,11 @@ public class DeployApplicationRequest extends Request {
         }
 
         /**
-         * The version of the application deployment package. The value can be up to 64 characters in length. We recommend that you use a timestamp.
+         * <p>The version of the application deployment package. The value can be up to 64 characters in length. We recommend that you use a timestamp.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1.0</p>
          */
         public Builder packageVersion(String packageVersion) {
             this.putQueryParameter("PackageVersion", packageVersion);
@@ -406,11 +449,14 @@ public class DeployApplicationRequest extends Request {
         }
 
         /**
-         * The mode in which the deployment batches are triggered. Valid values:
-         * <p>
+         * <p>The mode in which the deployment batches are triggered. Valid values:</p>
+         * <ul>
+         * <li>0: automatic.</li>
+         * <li>1: You must manually trigger the next batch. You can manually click <strong>Proceed to Next Batch</strong> in the console or call the ContinuePipeline operation to proceed to the next batch. We recommend that you choose the automatic mode when you call an API operation to deploy the application. For more information, see <a href="https://help.aliyun.com/document_detail/126990.html">ContinuePipeline</a>.</li>
+         * </ul>
          * 
-         * *   0: automatic.
-         * *   1: You must manually trigger the next batch. You can manually click **Proceed to Next Batch** in the console or call the ContinuePipeline operation to proceed to the next batch. We recommend that you choose the automatic mode when you call an API operation to deploy the application. For more information, see [ContinuePipeline](~~126990~~).
+         * <strong>example:</strong>
+         * <p>0</p>
          */
         public Builder releaseType(Long releaseType) {
             this.putQueryParameter("ReleaseType", releaseType);
@@ -419,7 +465,10 @@ public class DeployApplicationRequest extends Request {
         }
 
         /**
-         * The canary release policy. For more information about canary release policies, see [DeployK8sApplication](~~423212~~).
+         * <p>The canary release policy. For more information about canary release policies, see <a href="https://help.aliyun.com/document_detail/423212.html">DeployK8sApplication</a>.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>{&quot;http&quot;:{&quot;rules&quot;:[{&quot;conditionType&quot;:&quot;percent&quot;,&quot;percent&quot;:10}]}}</p>
          */
         public Builder trafficControlStrategy(String trafficControlStrategy) {
             this.putQueryParameter("TrafficControlStrategy", trafficControlStrategy);
@@ -428,7 +477,10 @@ public class DeployApplicationRequest extends Request {
         }
 
         /**
-         * The URL of the application deployment package. The package can be a WAR or JAR package. This parameter is required if you set the **DeployType** parameter to `url`. We recommend that you specify the URL of an application deployment package that is stored in an Object Storage Service (OSS) bucket.
+         * <p>The URL of the application deployment package. The package can be a WAR or JAR package. This parameter is required if you set the <strong>DeployType</strong> parameter to <code>url</code>. We recommend that you specify the URL of an application deployment package that is stored in an Object Storage Service (OSS) bucket.</p>
+         * 
+         * <strong>example:</strong>
+         * <p><a href="https://edas.oss-cn-hangzhou.aliyuncs.com/demo/hello-edas.war">https://edas.oss-cn-hangzhou.aliyuncs.com/demo/hello-edas.war</a></p>
          */
         public Builder warUrl(String warUrl) {
             this.putQueryParameter("WarUrl", warUrl);

@@ -1,27 +1,32 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.edas20170801.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DeleteClusterResponseBody} extends {@link TeaModel}
  *
  * <p>DeleteClusterResponseBody</p>
  */
 public class DeleteClusterResponseBody extends TeaModel {
-    @NameInMap("Code")
+    @com.aliyun.core.annotation.NameInMap("Code")
     private Integer code;
 
-    @NameInMap("Data")
+    @com.aliyun.core.annotation.NameInMap("Data")
     private Boolean data;
 
-    @NameInMap("Message")
+    @com.aliyun.core.annotation.NameInMap("Message")
     private String message;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
     private DeleteClusterResponseBody(Builder builder) {
@@ -37,6 +42,10 @@ public class DeleteClusterResponseBody extends TeaModel {
 
     public static DeleteClusterResponseBody create() {
         return builder().build();
+    }
+
+    public Builder toBuilder() {
+        return new Builder(this);
     }
 
     /**
@@ -73,8 +82,21 @@ public class DeleteClusterResponseBody extends TeaModel {
         private String message; 
         private String requestId; 
 
+        private Builder() {
+        } 
+
+        private Builder(DeleteClusterResponseBody model) {
+            this.code = model.code;
+            this.data = model.data;
+            this.message = model.message;
+            this.requestId = model.requestId;
+        } 
+
         /**
-         * The HTTP status code that is returned.
+         * <p>The HTTP status code that is returned.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>200</p>
          */
         public Builder code(Integer code) {
             this.code = code;
@@ -82,11 +104,14 @@ public class DeleteClusterResponseBody extends TeaModel {
         }
 
         /**
-         * Indicates whether the cluster is deleted. Valid values:
-         * <p>
+         * <p>Indicates whether the cluster is deleted. Valid values:</p>
+         * <ul>
+         * <li>true: The cluster is deleted.</li>
+         * <li>false: The cluster is not deleted.</li>
+         * </ul>
          * 
-         * *   true: The cluster is deleted.
-         * *   false: The cluster is not deleted.
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder data(Boolean data) {
             this.data = data;
@@ -94,7 +119,10 @@ public class DeleteClusterResponseBody extends TeaModel {
         }
 
         /**
-         * The additional information that is returned.
+         * <p>The additional information that is returned.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>success</p>
          */
         public Builder message(String message) {
             this.message = message;
@@ -102,7 +130,10 @@ public class DeleteClusterResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the request.
+         * <p>The ID of the request.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>856D4438-<strong><strong>-4EA9-</strong></strong>-894628C0434E</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;

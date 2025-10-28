@@ -1,27 +1,32 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.edas20170801.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ListVpcResponseBody} extends {@link TeaModel}
  *
  * <p>ListVpcResponseBody</p>
  */
 public class ListVpcResponseBody extends TeaModel {
-    @NameInMap("Code")
+    @com.aliyun.core.annotation.NameInMap("Code")
     private Integer code;
 
-    @NameInMap("Message")
+    @com.aliyun.core.annotation.NameInMap("Message")
     private String message;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("VpcList")
+    @com.aliyun.core.annotation.NameInMap("VpcList")
     private VpcList vpcList;
 
     private ListVpcResponseBody(Builder builder) {
@@ -37,6 +42,10 @@ public class ListVpcResponseBody extends TeaModel {
 
     public static ListVpcResponseBody create() {
         return builder().build();
+    }
+
+    public Builder toBuilder() {
+        return new Builder(this);
     }
 
     /**
@@ -73,8 +82,21 @@ public class ListVpcResponseBody extends TeaModel {
         private String requestId; 
         private VpcList vpcList; 
 
+        private Builder() {
+        } 
+
+        private Builder(ListVpcResponseBody model) {
+            this.code = model.code;
+            this.message = model.message;
+            this.requestId = model.requestId;
+            this.vpcList = model.vpcList;
+        } 
+
         /**
-         * The ID of the request.
+         * <p>The ID of the request.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>200</p>
          */
         public Builder code(Integer code) {
             this.code = code;
@@ -82,7 +104,10 @@ public class ListVpcResponseBody extends TeaModel {
         }
 
         /**
-         * The information about VPCs.
+         * <p>The information about VPCs.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>success</p>
          */
         public Builder message(String message) {
             this.message = message;
@@ -90,7 +115,10 @@ public class ListVpcResponseBody extends TeaModel {
         }
 
         /**
-         * The name of the VPC.
+         * <p>The name of the VPC.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>b197-40ab-9155-7ca7</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -98,10 +126,11 @@ public class ListVpcResponseBody extends TeaModel {
         }
 
         /**
-         * Indicates whether the VPC is available. Valid values:
-         * <p>
-         * - true: The VPC is available.
-         * - false: The VPC is unavailable.
+         * <p>Indicates whether the VPC is available. Valid values:</p>
+         * <ul>
+         * <li>true: The VPC is available.</li>
+         * <li>false: The VPC is unavailable.</li>
+         * </ul>
          */
         public Builder vpcList(VpcList vpcList) {
             this.vpcList = vpcList;
@@ -114,23 +143,29 @@ public class ListVpcResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link ListVpcResponseBody} extends {@link TeaModel}
+     *
+     * <p>ListVpcResponseBody</p>
+     */
     public static class VpcEntity extends TeaModel {
-        @NameInMap("EcsNum")
+        @com.aliyun.core.annotation.NameInMap("EcsNum")
         private Integer ecsNum;
 
-        @NameInMap("Expired")
+        @com.aliyun.core.annotation.NameInMap("Expired")
         private Boolean expired;
 
-        @NameInMap("RegionId")
+        @com.aliyun.core.annotation.NameInMap("RegionId")
         private String regionId;
 
-        @NameInMap("UserId")
+        @com.aliyun.core.annotation.NameInMap("UserId")
         private String userId;
 
-        @NameInMap("VpcId")
+        @com.aliyun.core.annotation.NameInMap("VpcId")
         private String vpcId;
 
-        @NameInMap("VpcName")
+        @com.aliyun.core.annotation.NameInMap("VpcName")
         private String vpcName;
 
         private VpcEntity(Builder builder) {
@@ -200,8 +235,23 @@ public class ListVpcResponseBody extends TeaModel {
             private String vpcId; 
             private String vpcName; 
 
+            private Builder() {
+            } 
+
+            private Builder(VpcEntity model) {
+                this.ecsNum = model.ecsNum;
+                this.expired = model.expired;
+                this.regionId = model.regionId;
+                this.userId = model.userId;
+                this.vpcId = model.vpcId;
+                this.vpcName = model.vpcName;
+            } 
+
             /**
-             * This operation uses only common request headers. For more information, see [Common parameters for API calls](~~123488~~).
+             * <p>This operation uses only common request headers. For more information, see <a href="https://help.aliyun.com/document_detail/123488.html">Common parameters for API calls</a>.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>0</p>
              */
             public Builder ecsNum(Integer ecsNum) {
                 this.ecsNum = ecsNum;
@@ -209,7 +259,10 @@ public class ListVpcResponseBody extends TeaModel {
             }
 
             /**
-             * The region ID of the VPC.
+             * <p>The region ID of the VPC.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>false</p>
              */
             public Builder expired(Boolean expired) {
                 this.expired = expired;
@@ -217,7 +270,10 @@ public class ListVpcResponseBody extends TeaModel {
             }
 
             /**
-             * No request parameters.
+             * <p>No request parameters.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>cn-shenzhen</p>
              */
             public Builder regionId(String regionId) {
                 this.regionId = regionId;
@@ -225,9 +281,11 @@ public class ListVpcResponseBody extends TeaModel {
             }
 
             /**
-             * GET /pop/v5/vpc_list HTTP/1.1
-             * <p>
-             * Common request headers
+             * <p>GET /pop/v5/vpc_list HTTP/1.1
+             * Common request headers</p>
+             * 
+             * <strong>example:</strong>
+             * <p>edas_****_test@aliyun-****.com</p>
              */
             public Builder userId(String userId) {
                 this.userId = userId;
@@ -235,7 +293,10 @@ public class ListVpcResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the Alibaba Cloud account to which the VPC belongs.
+             * <p>The ID of the Alibaba Cloud account to which the VPC belongs.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>vpc-wz9pcq3jofczwpujq****</p>
              */
             public Builder vpcId(String vpcId) {
                 this.vpcId = vpcId;
@@ -243,7 +304,10 @@ public class ListVpcResponseBody extends TeaModel {
             }
 
             /**
-             * The number of ECS instances associated with the VPC.
+             * <p>The number of ECS instances associated with the VPC.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>edas-default-vpc4</p>
              */
             public Builder vpcName(String vpcName) {
                 this.vpcName = vpcName;
@@ -257,9 +321,15 @@ public class ListVpcResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link ListVpcResponseBody} extends {@link TeaModel}
+     *
+     * <p>ListVpcResponseBody</p>
+     */
     public static class VpcList extends TeaModel {
-        @NameInMap("VpcEntity")
-        private java.util.List < VpcEntity> vpcEntity;
+        @com.aliyun.core.annotation.NameInMap("VpcEntity")
+        private java.util.List<VpcEntity> vpcEntity;
 
         private VpcList(Builder builder) {
             this.vpcEntity = builder.vpcEntity;
@@ -276,17 +346,24 @@ public class ListVpcResponseBody extends TeaModel {
         /**
          * @return vpcEntity
          */
-        public java.util.List < VpcEntity> getVpcEntity() {
+        public java.util.List<VpcEntity> getVpcEntity() {
             return this.vpcEntity;
         }
 
         public static final class Builder {
-            private java.util.List < VpcEntity> vpcEntity; 
+            private java.util.List<VpcEntity> vpcEntity; 
+
+            private Builder() {
+            } 
+
+            private Builder(VpcList model) {
+                this.vpcEntity = model.vpcEntity;
+            } 
 
             /**
              * VpcEntity.
              */
-            public Builder vpcEntity(java.util.List < VpcEntity> vpcEntity) {
+            public Builder vpcEntity(java.util.List<VpcEntity> vpcEntity) {
                 this.vpcEntity = vpcEntity;
                 return this;
             }

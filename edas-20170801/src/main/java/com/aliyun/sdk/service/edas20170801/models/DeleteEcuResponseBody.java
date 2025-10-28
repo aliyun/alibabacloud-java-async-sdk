@@ -1,27 +1,32 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.edas20170801.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DeleteEcuResponseBody} extends {@link TeaModel}
  *
  * <p>DeleteEcuResponseBody</p>
  */
 public class DeleteEcuResponseBody extends TeaModel {
-    @NameInMap("Code")
+    @com.aliyun.core.annotation.NameInMap("Code")
     private Integer code;
 
-    @NameInMap("Data")
+    @com.aliyun.core.annotation.NameInMap("Data")
     private String data;
 
-    @NameInMap("Message")
+    @com.aliyun.core.annotation.NameInMap("Message")
     private String message;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
     private DeleteEcuResponseBody(Builder builder) {
@@ -37,6 +42,10 @@ public class DeleteEcuResponseBody extends TeaModel {
 
     public static DeleteEcuResponseBody create() {
         return builder().build();
+    }
+
+    public Builder toBuilder() {
+        return new Builder(this);
     }
 
     /**
@@ -73,8 +82,21 @@ public class DeleteEcuResponseBody extends TeaModel {
         private String message; 
         private String requestId; 
 
+        private Builder() {
+        } 
+
+        private Builder(DeleteEcuResponseBody model) {
+            this.code = model.code;
+            this.data = model.data;
+            this.message = model.message;
+            this.requestId = model.requestId;
+        } 
+
         /**
-         * The HTTP status code that is returned.
+         * <p>The HTTP status code that is returned.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>200</p>
          */
         public Builder code(Integer code) {
             this.code = code;
@@ -82,7 +104,10 @@ public class DeleteEcuResponseBody extends TeaModel {
         }
 
         /**
-         * The returned data that indicates whether the ECU is deleted. A value of `OK` indicates that the ECU is deleted.
+         * <p>The returned data that indicates whether the ECU is deleted. A value of <code>OK</code> indicates that the ECU is deleted.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>OK</p>
          */
         public Builder data(String data) {
             this.data = data;
@@ -90,7 +115,10 @@ public class DeleteEcuResponseBody extends TeaModel {
         }
 
         /**
-         * The additional information that is returned.
+         * <p>The additional information that is returned.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>success</p>
          */
         public Builder message(String message) {
             this.message = message;
@@ -98,7 +126,10 @@ public class DeleteEcuResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the request.
+         * <p>The ID of the request.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>fb08fd29-b197-40ab-<strong><strong>-</strong></strong></p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;

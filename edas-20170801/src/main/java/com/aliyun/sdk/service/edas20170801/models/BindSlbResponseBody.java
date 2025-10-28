@@ -1,27 +1,32 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.edas20170801.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link BindSlbResponseBody} extends {@link TeaModel}
  *
  * <p>BindSlbResponseBody</p>
  */
 public class BindSlbResponseBody extends TeaModel {
-    @NameInMap("Code")
+    @com.aliyun.core.annotation.NameInMap("Code")
     private Integer code;
 
-    @NameInMap("Data")
+    @com.aliyun.core.annotation.NameInMap("Data")
     private Data data;
 
-    @NameInMap("Message")
+    @com.aliyun.core.annotation.NameInMap("Message")
     private String message;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
     private BindSlbResponseBody(Builder builder) {
@@ -37,6 +42,10 @@ public class BindSlbResponseBody extends TeaModel {
 
     public static BindSlbResponseBody create() {
         return builder().build();
+    }
+
+    public Builder toBuilder() {
+        return new Builder(this);
     }
 
     /**
@@ -73,8 +82,21 @@ public class BindSlbResponseBody extends TeaModel {
         private String message; 
         private String requestId; 
 
+        private Builder() {
+        } 
+
+        private Builder(BindSlbResponseBody model) {
+            this.code = model.code;
+            this.data = model.data;
+            this.message = model.message;
+            this.requestId = model.requestId;
+        } 
+
         /**
-         * The HTTP status code that is returned.
+         * <p>The HTTP status code that is returned.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>200</p>
          */
         public Builder code(Integer code) {
             this.code = code;
@@ -82,7 +104,7 @@ public class BindSlbResponseBody extends TeaModel {
         }
 
         /**
-         * The data that is returned.
+         * <p>The data that is returned.</p>
          */
         public Builder data(Data data) {
             this.data = data;
@@ -90,7 +112,10 @@ public class BindSlbResponseBody extends TeaModel {
         }
 
         /**
-         * The additional information that is returned.
+         * <p>The additional information that is returned.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>bind slb success</p>
          */
         public Builder message(String message) {
             this.message = message;
@@ -98,7 +123,10 @@ public class BindSlbResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the request.
+         * <p>The ID of the request.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>23DR4FDXXXXXXXXXX</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -111,32 +139,38 @@ public class BindSlbResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link BindSlbResponseBody} extends {@link TeaModel}
+     *
+     * <p>BindSlbResponseBody</p>
+     */
     public static class Data extends TeaModel {
-        @NameInMap("ExtSlbId")
+        @com.aliyun.core.annotation.NameInMap("ExtSlbId")
         private String extSlbId;
 
-        @NameInMap("ExtSlbIp")
+        @com.aliyun.core.annotation.NameInMap("ExtSlbIp")
         private String extSlbIp;
 
-        @NameInMap("ExtSlbName")
+        @com.aliyun.core.annotation.NameInMap("ExtSlbName")
         private String extSlbName;
 
-        @NameInMap("ExtVServerGroupId")
+        @com.aliyun.core.annotation.NameInMap("ExtVServerGroupId")
         private String extVServerGroupId;
 
-        @NameInMap("SlbId")
+        @com.aliyun.core.annotation.NameInMap("SlbId")
         private String slbId;
 
-        @NameInMap("SlbIp")
+        @com.aliyun.core.annotation.NameInMap("SlbIp")
         private String slbIp;
 
-        @NameInMap("SlbName")
+        @com.aliyun.core.annotation.NameInMap("SlbName")
         private String slbName;
 
-        @NameInMap("SlbPort")
+        @com.aliyun.core.annotation.NameInMap("SlbPort")
         private Integer slbPort;
 
-        @NameInMap("VServerGroupId")
+        @com.aliyun.core.annotation.NameInMap("VServerGroupId")
         private String vServerGroupId;
 
         private Data(Builder builder) {
@@ -233,8 +267,26 @@ public class BindSlbResponseBody extends TeaModel {
             private Integer slbPort; 
             private String vServerGroupId; 
 
+            private Builder() {
+            } 
+
+            private Builder(Data model) {
+                this.extSlbId = model.extSlbId;
+                this.extSlbIp = model.extSlbIp;
+                this.extSlbName = model.extSlbName;
+                this.extVServerGroupId = model.extVServerGroupId;
+                this.slbId = model.slbId;
+                this.slbIp = model.slbIp;
+                this.slbName = model.slbName;
+                this.slbPort = model.slbPort;
+                this.vServerGroupId = model.vServerGroupId;
+            } 
+
             /**
-             * The ID of the Internet-facing SLB instance.
+             * <p>The ID of the Internet-facing SLB instance.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>“”</p>
              */
             public Builder extSlbId(String extSlbId) {
                 this.extSlbId = extSlbId;
@@ -242,7 +294,10 @@ public class BindSlbResponseBody extends TeaModel {
             }
 
             /**
-             * The IP address of the Internet-facing SLB instance.
+             * <p>The IP address of the Internet-facing SLB instance.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>“”</p>
              */
             public Builder extSlbIp(String extSlbIp) {
                 this.extSlbIp = extSlbIp;
@@ -250,7 +305,10 @@ public class BindSlbResponseBody extends TeaModel {
             }
 
             /**
-             * The name of the Internet-facing SLB instance.
+             * <p>The name of the Internet-facing SLB instance.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>“”</p>
              */
             public Builder extSlbName(String extSlbName) {
                 this.extSlbName = extSlbName;
@@ -258,7 +316,10 @@ public class BindSlbResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the vServer group for the Internet-facing SLB instance.
+             * <p>The ID of the vServer group for the Internet-facing SLB instance.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>“”</p>
              */
             public Builder extVServerGroupId(String extVServerGroupId) {
                 this.extVServerGroupId = extVServerGroupId;
@@ -266,7 +327,10 @@ public class BindSlbResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the internal-facing SLB instance.
+             * <p>The ID of the internal-facing SLB instance.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>lb-wz96ph63r************</p>
              */
             public Builder slbId(String slbId) {
                 this.slbId = slbId;
@@ -274,7 +338,10 @@ public class BindSlbResponseBody extends TeaModel {
             }
 
             /**
-             * The IP address of the internal-facing SLB instance.
+             * <p>The IP address of the internal-facing SLB instance.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>192.16*.<em>.</em></p>
              */
             public Builder slbIp(String slbIp) {
                 this.slbIp = slbIp;
@@ -282,7 +349,10 @@ public class BindSlbResponseBody extends TeaModel {
             }
 
             /**
-             * The name of the internal-facing SLB instance.
+             * <p>The name of the internal-facing SLB instance.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>test**********</p>
              */
             public Builder slbName(String slbName) {
                 this.slbName = slbName;
@@ -290,7 +360,10 @@ public class BindSlbResponseBody extends TeaModel {
             }
 
             /**
-             * The listener port for the SLB instance.
+             * <p>The listener port for the SLB instance.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>80</p>
              */
             public Builder slbPort(Integer slbPort) {
                 this.slbPort = slbPort;
@@ -298,7 +371,10 @@ public class BindSlbResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the vServer group for the internal-facing SLB instance.
+             * <p>The ID of the vServer group for the internal-facing SLB instance.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>“”</p>
              */
             public Builder vServerGroupId(String vServerGroupId) {
                 this.vServerGroupId = vServerGroupId;

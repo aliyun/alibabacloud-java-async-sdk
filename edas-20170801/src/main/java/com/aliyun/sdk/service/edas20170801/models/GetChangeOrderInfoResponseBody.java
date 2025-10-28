@@ -1,27 +1,32 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.edas20170801.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link GetChangeOrderInfoResponseBody} extends {@link TeaModel}
  *
  * <p>GetChangeOrderInfoResponseBody</p>
  */
 public class GetChangeOrderInfoResponseBody extends TeaModel {
-    @NameInMap("Code")
+    @com.aliyun.core.annotation.NameInMap("Code")
     private Integer code;
 
-    @NameInMap("Message")
+    @com.aliyun.core.annotation.NameInMap("Message")
     private String message;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("changeOrderInfo")
+    @com.aliyun.core.annotation.NameInMap("changeOrderInfo")
     private ChangeOrderInfo changeOrderInfo;
 
     private GetChangeOrderInfoResponseBody(Builder builder) {
@@ -37,6 +42,10 @@ public class GetChangeOrderInfoResponseBody extends TeaModel {
 
     public static GetChangeOrderInfoResponseBody create() {
         return builder().build();
+    }
+
+    public Builder toBuilder() {
+        return new Builder(this);
     }
 
     /**
@@ -73,8 +82,21 @@ public class GetChangeOrderInfoResponseBody extends TeaModel {
         private String requestId; 
         private ChangeOrderInfo changeOrderInfo; 
 
+        private Builder() {
+        } 
+
+        private Builder(GetChangeOrderInfoResponseBody model) {
+            this.code = model.code;
+            this.message = model.message;
+            this.requestId = model.requestId;
+            this.changeOrderInfo = model.changeOrderInfo;
+        } 
+
         /**
-         * The HTTP status code that is returned.
+         * <p>The HTTP status code that is returned.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>200</p>
          */
         public Builder code(Integer code) {
             this.code = code;
@@ -82,7 +104,10 @@ public class GetChangeOrderInfoResponseBody extends TeaModel {
         }
 
         /**
-         * The additional information that is returned.
+         * <p>The additional information that is returned.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>success</p>
          */
         public Builder message(String message) {
             this.message = message;
@@ -90,7 +115,10 @@ public class GetChangeOrderInfoResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the request.
+         * <p>The ID of the request.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>4JFR-FV9F***************</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -98,7 +126,7 @@ public class GetChangeOrderInfoResponseBody extends TeaModel {
         }
 
         /**
-         * The details about the change process.
+         * <p>The details about the change process.</p>
          */
         public Builder changeOrderInfo(ChangeOrderInfo changeOrderInfo) {
             this.changeOrderInfo = changeOrderInfo;
@@ -111,32 +139,38 @@ public class GetChangeOrderInfoResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link GetChangeOrderInfoResponseBody} extends {@link TeaModel}
+     *
+     * <p>GetChangeOrderInfoResponseBody</p>
+     */
     public static class TaskInfoDTO extends TeaModel {
-        @NameInMap("RetryType")
+        @com.aliyun.core.annotation.NameInMap("RetryType")
         private Integer retryType;
 
-        @NameInMap("ShowManualIgnorance")
+        @com.aliyun.core.annotation.NameInMap("ShowManualIgnorance")
         private Boolean showManualIgnorance;
 
-        @NameInMap("TaskErrorCode")
+        @com.aliyun.core.annotation.NameInMap("TaskErrorCode")
         private String taskErrorCode;
 
-        @NameInMap("TaskErrorIgnorance")
+        @com.aliyun.core.annotation.NameInMap("TaskErrorIgnorance")
         private Integer taskErrorIgnorance;
 
-        @NameInMap("TaskErrorMessage")
+        @com.aliyun.core.annotation.NameInMap("TaskErrorMessage")
         private String taskErrorMessage;
 
-        @NameInMap("TaskId")
+        @com.aliyun.core.annotation.NameInMap("TaskId")
         private String taskId;
 
-        @NameInMap("TaskMessage")
+        @com.aliyun.core.annotation.NameInMap("TaskMessage")
         private String taskMessage;
 
-        @NameInMap("TaskName")
+        @com.aliyun.core.annotation.NameInMap("TaskName")
         private String taskName;
 
-        @NameInMap("TaskStatus")
+        @com.aliyun.core.annotation.NameInMap("TaskStatus")
         private String taskStatus;
 
         private TaskInfoDTO(Builder builder) {
@@ -233,8 +267,26 @@ public class GetChangeOrderInfoResponseBody extends TeaModel {
             private String taskName; 
             private String taskStatus; 
 
+            private Builder() {
+            } 
+
+            private Builder(TaskInfoDTO model) {
+                this.retryType = model.retryType;
+                this.showManualIgnorance = model.showManualIgnorance;
+                this.taskErrorCode = model.taskErrorCode;
+                this.taskErrorIgnorance = model.taskErrorIgnorance;
+                this.taskErrorMessage = model.taskErrorMessage;
+                this.taskId = model.taskId;
+                this.taskMessage = model.taskMessage;
+                this.taskName = model.taskName;
+                this.taskStatus = model.taskStatus;
+            } 
+
             /**
-             * The type of the retry policy. Value 0 indicates no retry, value 1 indicates automatic retry, and value 2 indicates manual retry.
+             * <p>The type of the retry policy. Value 0 indicates no retry, value 1 indicates automatic retry, and value 2 indicates manual retry.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>0</p>
              */
             public Builder retryType(Integer retryType) {
                 this.retryType = retryType;
@@ -242,11 +294,14 @@ public class GetChangeOrderInfoResponseBody extends TeaModel {
             }
 
             /**
-             * Indicates whether errors that occur in the change process are ignored. Valid values:``
-             * <p>
+             * <p>Indicates whether errors that occur in the change process are ignored. Valid values:``</p>
+             * <ul>
+             * <li>true: Errors that occur in the change process are ignored. This parameter can be set to true only when URL health checks are performed.</li>
+             * <li>false: Errors that occur in the change process are not ignored.</li>
+             * </ul>
              * 
-             * *   true: Errors that occur in the change process are ignored. This parameter can be set to true only when URL health checks are performed.
-             * *   false: Errors that occur in the change process are not ignored.
+             * <strong>example:</strong>
+             * <p>false</p>
              */
             public Builder showManualIgnorance(Boolean showManualIgnorance) {
                 this.showManualIgnorance = showManualIgnorance;
@@ -254,7 +309,10 @@ public class GetChangeOrderInfoResponseBody extends TeaModel {
             }
 
             /**
-             * Error codes
+             * <p>Error codes</p>
+             * 
+             * <strong>example:</strong>
+             * <p>400</p>
              */
             public Builder taskErrorCode(String taskErrorCode) {
                 this.taskErrorCode = taskErrorCode;
@@ -262,11 +320,14 @@ public class GetChangeOrderInfoResponseBody extends TeaModel {
             }
 
             /**
-             * Indicates whether the task is error-tolerant. If the task can tolerate errors, the errors that occur in the change process are ignored and the next task is executed.
-             * <p>
+             * <p>Indicates whether the task is error-tolerant. If the task can tolerate errors, the errors that occur in the change process are ignored and the next task is executed.</p>
+             * <ul>
+             * <li>0: The task is not error-tolerant.</li>
+             * <li>1: The task is error-tolerant.</li>
+             * </ul>
              * 
-             * *   0: The task is not error-tolerant.
-             * *   1: The task is error-tolerant.
+             * <strong>example:</strong>
+             * <p>0</p>
              */
             public Builder taskErrorIgnorance(Integer taskErrorIgnorance) {
                 this.taskErrorIgnorance = taskErrorIgnorance;
@@ -274,7 +335,10 @@ public class GetChangeOrderInfoResponseBody extends TeaModel {
             }
 
             /**
-             * The error message for the task.
+             * <p>The error message for the task.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>400</p>
              */
             public Builder taskErrorMessage(String taskErrorMessage) {
                 this.taskErrorMessage = taskErrorMessage;
@@ -282,7 +346,10 @@ public class GetChangeOrderInfoResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the task.
+             * <p>The ID of the task.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>d6d3b934-90a1-4ae8-8cbd-2446003d****</p>
              */
             public Builder taskId(String taskId) {
                 this.taskId = taskId;
@@ -290,7 +357,10 @@ public class GetChangeOrderInfoResponseBody extends TeaModel {
             }
 
             /**
-             * Task information
+             * <p>Task information</p>
+             * 
+             * <strong>example:</strong>
+             * <p>[CALLBACK] 2020-03-11 15:28:44.781  requestId: c952ab99-8c5b-4ff1-9412-ae3bf9b1****, message: success</p>
              */
             public Builder taskMessage(String taskMessage) {
                 this.taskMessage = taskMessage;
@@ -298,7 +368,10 @@ public class GetChangeOrderInfoResponseBody extends TeaModel {
             }
 
             /**
-             * The name of the task.
+             * <p>The name of the task.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Build Image</p>
              */
             public Builder taskName(String taskName) {
                 this.taskName = taskName;
@@ -306,17 +379,20 @@ public class GetChangeOrderInfoResponseBody extends TeaModel {
             }
 
             /**
-             * The state of the task. Valid values:
-             * <p>
+             * <p>The state of the task. Valid values:</p>
+             * <ul>
+             * <li>0: ready</li>
+             * <li>1: in progress</li>
+             * <li>2: successful</li>
+             * <li>3: failed</li>
+             * <li>6: terminated</li>
+             * <li>8: wait for manual confirmation to trigger the next batch during a manual phased release</li>
+             * <li>9: wait to trigger the next batch during an automatic phased release</li>
+             * <li>10: failed due to a system exception</li>
+             * </ul>
              * 
-             * *   0: ready
-             * *   1: in progress
-             * *   2: successful
-             * *   3: failed
-             * *   6: terminated
-             * *   8: wait for manual confirmation to trigger the next batch during a manual phased release
-             * *   9: wait to trigger the next batch during an automatic phased release
-             * *   10: failed due to a system exception
+             * <strong>example:</strong>
+             * <p>2</p>
              */
             public Builder taskStatus(String taskStatus) {
                 this.taskStatus = taskStatus;
@@ -330,9 +406,15 @@ public class GetChangeOrderInfoResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link GetChangeOrderInfoResponseBody} extends {@link TeaModel}
+     *
+     * <p>GetChangeOrderInfoResponseBody</p>
+     */
     public static class TaskList extends TeaModel {
-        @NameInMap("TaskInfoDTO")
-        private java.util.List < TaskInfoDTO> taskInfoDTO;
+        @com.aliyun.core.annotation.NameInMap("TaskInfoDTO")
+        private java.util.List<TaskInfoDTO> taskInfoDTO;
 
         private TaskList(Builder builder) {
             this.taskInfoDTO = builder.taskInfoDTO;
@@ -349,17 +431,24 @@ public class GetChangeOrderInfoResponseBody extends TeaModel {
         /**
          * @return taskInfoDTO
          */
-        public java.util.List < TaskInfoDTO> getTaskInfoDTO() {
+        public java.util.List<TaskInfoDTO> getTaskInfoDTO() {
             return this.taskInfoDTO;
         }
 
         public static final class Builder {
-            private java.util.List < TaskInfoDTO> taskInfoDTO; 
+            private java.util.List<TaskInfoDTO> taskInfoDTO; 
+
+            private Builder() {
+            } 
+
+            private Builder(TaskList model) {
+                this.taskInfoDTO = model.taskInfoDTO;
+            } 
 
             /**
              * TaskInfoDTO.
              */
-            public Builder taskInfoDTO(java.util.List < TaskInfoDTO> taskInfoDTO) {
+            public Builder taskInfoDTO(java.util.List<TaskInfoDTO> taskInfoDTO) {
                 this.taskInfoDTO = taskInfoDTO;
                 return this;
             }
@@ -371,17 +460,23 @@ public class GetChangeOrderInfoResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link GetChangeOrderInfoResponseBody} extends {@link TeaModel}
+     *
+     * <p>GetChangeOrderInfoResponseBody</p>
+     */
     public static class StageDetailDTO extends TeaModel {
-        @NameInMap("StageId")
+        @com.aliyun.core.annotation.NameInMap("StageId")
         private String stageId;
 
-        @NameInMap("StageName")
+        @com.aliyun.core.annotation.NameInMap("StageName")
         private String stageName;
 
-        @NameInMap("StageStatus")
+        @com.aliyun.core.annotation.NameInMap("StageStatus")
         private Integer stageStatus;
 
-        @NameInMap("TaskList")
+        @com.aliyun.core.annotation.NameInMap("TaskList")
         private TaskList taskList;
 
         private StageDetailDTO(Builder builder) {
@@ -433,8 +528,21 @@ public class GetChangeOrderInfoResponseBody extends TeaModel {
             private Integer stageStatus; 
             private TaskList taskList; 
 
+            private Builder() {
+            } 
+
+            private Builder(StageDetailDTO model) {
+                this.stageId = model.stageId;
+                this.stageName = model.stageName;
+                this.stageStatus = model.stageStatus;
+                this.taskList = model.taskList;
+            } 
+
             /**
-             * The ID of the stage.
+             * <p>The ID of the stage.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>d7561440-10a6-452f-8a90-62f6e7ec****</p>
              */
             public Builder stageId(String stageId) {
                 this.stageId = stageId;
@@ -442,7 +550,10 @@ public class GetChangeOrderInfoResponseBody extends TeaModel {
             }
 
             /**
-             * The name of the stage.
+             * <p>The name of the stage.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Process Start</p>
              */
             public Builder stageName(String stageName) {
                 this.stageName = stageName;
@@ -450,17 +561,20 @@ public class GetChangeOrderInfoResponseBody extends TeaModel {
             }
 
             /**
-             * The status of the stage. Valid values:
-             * <p>
+             * <p>The status of the stage. Valid values:</p>
+             * <ul>
+             * <li>0: ready</li>
+             * <li>1: in progress</li>
+             * <li>2: successful</li>
+             * <li>3: failed</li>
+             * <li>6: terminated</li>
+             * <li>8: wait for manual confirmation to trigger the next batch during a manual phased release</li>
+             * <li>9: wait to trigger the next batch during an automatic phased release</li>
+             * <li>10: failed due to a system exception</li>
+             * </ul>
              * 
-             * *   0: ready
-             * *   1: in progress
-             * *   2: successful
-             * *   3: failed
-             * *   6: terminated
-             * *   8: wait for manual confirmation to trigger the next batch during a manual phased release
-             * *   9: wait to trigger the next batch during an automatic phased release
-             * *   10: failed due to a system exception
+             * <strong>example:</strong>
+             * <p>2</p>
              */
             public Builder stageStatus(Integer stageStatus) {
                 this.stageStatus = stageStatus;
@@ -468,7 +582,7 @@ public class GetChangeOrderInfoResponseBody extends TeaModel {
             }
 
             /**
-             * The information about the task.
+             * <p>The information about the task.</p>
              */
             public Builder taskList(TaskList taskList) {
                 this.taskList = taskList;
@@ -482,9 +596,15 @@ public class GetChangeOrderInfoResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link GetChangeOrderInfoResponseBody} extends {@link TeaModel}
+     *
+     * <p>GetChangeOrderInfoResponseBody</p>
+     */
     public static class StageDetailList extends TeaModel {
-        @NameInMap("StageDetailDTO")
-        private java.util.List < StageDetailDTO> stageDetailDTO;
+        @com.aliyun.core.annotation.NameInMap("StageDetailDTO")
+        private java.util.List<StageDetailDTO> stageDetailDTO;
 
         private StageDetailList(Builder builder) {
             this.stageDetailDTO = builder.stageDetailDTO;
@@ -501,17 +621,24 @@ public class GetChangeOrderInfoResponseBody extends TeaModel {
         /**
          * @return stageDetailDTO
          */
-        public java.util.List < StageDetailDTO> getStageDetailDTO() {
+        public java.util.List<StageDetailDTO> getStageDetailDTO() {
             return this.stageDetailDTO;
         }
 
         public static final class Builder {
-            private java.util.List < StageDetailDTO> stageDetailDTO; 
+            private java.util.List<StageDetailDTO> stageDetailDTO; 
+
+            private Builder() {
+            } 
+
+            private Builder(StageDetailList model) {
+                this.stageDetailDTO = model.stageDetailDTO;
+            } 
 
             /**
              * StageDetailDTO.
              */
-            public Builder stageDetailDTO(java.util.List < StageDetailDTO> stageDetailDTO) {
+            public Builder stageDetailDTO(java.util.List<StageDetailDTO> stageDetailDTO) {
                 this.stageDetailDTO = stageDetailDTO;
                 return this;
             }
@@ -523,23 +650,29 @@ public class GetChangeOrderInfoResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link GetChangeOrderInfoResponseBody} extends {@link TeaModel}
+     *
+     * <p>GetChangeOrderInfoResponseBody</p>
+     */
     public static class InstanceStageDTO extends TeaModel {
-        @NameInMap("FinishTime")
+        @com.aliyun.core.annotation.NameInMap("FinishTime")
         private String finishTime;
 
-        @NameInMap("StageId")
+        @com.aliyun.core.annotation.NameInMap("StageId")
         private String stageId;
 
-        @NameInMap("StageMessage")
+        @com.aliyun.core.annotation.NameInMap("StageMessage")
         private String stageMessage;
 
-        @NameInMap("StageName")
+        @com.aliyun.core.annotation.NameInMap("StageName")
         private String stageName;
 
-        @NameInMap("StartTime")
+        @com.aliyun.core.annotation.NameInMap("StartTime")
         private String startTime;
 
-        @NameInMap("Status")
+        @com.aliyun.core.annotation.NameInMap("Status")
         private Integer status;
 
         private InstanceStageDTO(Builder builder) {
@@ -609,8 +742,23 @@ public class GetChangeOrderInfoResponseBody extends TeaModel {
             private String startTime; 
             private Integer status; 
 
+            private Builder() {
+            } 
+
+            private Builder(InstanceStageDTO model) {
+                this.finishTime = model.finishTime;
+                this.stageId = model.stageId;
+                this.stageMessage = model.stageMessage;
+                this.stageName = model.stageName;
+                this.startTime = model.startTime;
+                this.status = model.status;
+            } 
+
             /**
-             * The time when the execution stopped.
+             * <p>The time when the execution stopped.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2020-03-11T07:28:52Z</p>
              */
             public Builder finishTime(String finishTime) {
                 this.finishTime = finishTime;
@@ -618,7 +766,10 @@ public class GetChangeOrderInfoResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the stage.
+             * <p>The ID of the stage.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>5dd4c0f2-d81a-406f-<strong><strong>-</strong></strong>********</p>
              */
             public Builder stageId(String stageId) {
                 this.stageId = stageId;
@@ -626,7 +777,10 @@ public class GetChangeOrderInfoResponseBody extends TeaModel {
             }
 
             /**
-             * The information about the stage.
+             * <p>The information about the stage.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Pulling image &quot;registry-vpc.cn-hangzhou.aliyuncs.com****-user/1172745****_shared_repo:428084d6-265f-<strong><strong>-911a-7eb0d2c3</strong></strong>_15839117****\</p>
              */
             public Builder stageMessage(String stageMessage) {
                 this.stageMessage = stageMessage;
@@ -634,7 +788,10 @@ public class GetChangeOrderInfoResponseBody extends TeaModel {
             }
 
             /**
-             * The name of the stage.
+             * <p>The name of the stage.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>scale out</p>
              */
             public Builder stageName(String stageName) {
                 this.stageName = stageName;
@@ -642,7 +799,10 @@ public class GetChangeOrderInfoResponseBody extends TeaModel {
             }
 
             /**
-             * The time when the execution was started.
+             * <p>The time when the execution was started.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2020-03-11T07:28:49Z</p>
              */
             public Builder startTime(String startTime) {
                 this.startTime = startTime;
@@ -650,17 +810,20 @@ public class GetChangeOrderInfoResponseBody extends TeaModel {
             }
 
             /**
-             * The state of the stage. Valid values:
-             * <p>
+             * <p>The state of the stage. Valid values:</p>
+             * <ul>
+             * <li>0: ready</li>
+             * <li>1: in progress</li>
+             * <li>2: successful</li>
+             * <li>3: failed</li>
+             * <li>6: terminated</li>
+             * <li>8: wait for manual confirmation to trigger the next batch during a manual phased release</li>
+             * <li>9: wait to trigger the next batch during an automatic phased release</li>
+             * <li>10: failed due to a system exception</li>
+             * </ul>
              * 
-             * *   0: ready
-             * *   1: in progress
-             * *   2: successful
-             * *   3: failed
-             * *   6: terminated
-             * *   8: wait for manual confirmation to trigger the next batch during a manual phased release
-             * *   9: wait to trigger the next batch during an automatic phased release
-             * *   10: failed due to a system exception
+             * <strong>example:</strong>
+             * <p>2</p>
              */
             public Builder status(Integer status) {
                 this.status = status;
@@ -674,9 +837,15 @@ public class GetChangeOrderInfoResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link GetChangeOrderInfoResponseBody} extends {@link TeaModel}
+     *
+     * <p>GetChangeOrderInfoResponseBody</p>
+     */
     public static class InstanceStageDTOList extends TeaModel {
-        @NameInMap("InstanceStageDTO")
-        private java.util.List < InstanceStageDTO> instanceStageDTO;
+        @com.aliyun.core.annotation.NameInMap("InstanceStageDTO")
+        private java.util.List<InstanceStageDTO> instanceStageDTO;
 
         private InstanceStageDTOList(Builder builder) {
             this.instanceStageDTO = builder.instanceStageDTO;
@@ -693,17 +862,24 @@ public class GetChangeOrderInfoResponseBody extends TeaModel {
         /**
          * @return instanceStageDTO
          */
-        public java.util.List < InstanceStageDTO> getInstanceStageDTO() {
+        public java.util.List<InstanceStageDTO> getInstanceStageDTO() {
             return this.instanceStageDTO;
         }
 
         public static final class Builder {
-            private java.util.List < InstanceStageDTO> instanceStageDTO; 
+            private java.util.List<InstanceStageDTO> instanceStageDTO; 
+
+            private Builder() {
+            } 
+
+            private Builder(InstanceStageDTOList model) {
+                this.instanceStageDTO = model.instanceStageDTO;
+            } 
 
             /**
              * InstanceStageDTO.
              */
-            public Builder instanceStageDTO(java.util.List < InstanceStageDTO> instanceStageDTO) {
+            public Builder instanceStageDTO(java.util.List<InstanceStageDTO> instanceStageDTO) {
                 this.instanceStageDTO = instanceStageDTO;
                 return this;
             }
@@ -715,23 +891,29 @@ public class GetChangeOrderInfoResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link GetChangeOrderInfoResponseBody} extends {@link TeaModel}
+     *
+     * <p>GetChangeOrderInfoResponseBody</p>
+     */
     public static class InstanceDTO extends TeaModel {
-        @NameInMap("InstanceIp")
+        @com.aliyun.core.annotation.NameInMap("InstanceIp")
         private String instanceIp;
 
-        @NameInMap("InstanceName")
+        @com.aliyun.core.annotation.NameInMap("InstanceName")
         private String instanceName;
 
-        @NameInMap("InstanceStageDTOList")
+        @com.aliyun.core.annotation.NameInMap("InstanceStageDTOList")
         private InstanceStageDTOList instanceStageDTOList;
 
-        @NameInMap("PodName")
+        @com.aliyun.core.annotation.NameInMap("PodName")
         private String podName;
 
-        @NameInMap("PodStatus")
+        @com.aliyun.core.annotation.NameInMap("PodStatus")
         private String podStatus;
 
-        @NameInMap("Status")
+        @com.aliyun.core.annotation.NameInMap("Status")
         private Integer status;
 
         private InstanceDTO(Builder builder) {
@@ -801,8 +983,23 @@ public class GetChangeOrderInfoResponseBody extends TeaModel {
             private String podStatus; 
             private Integer status; 
 
+            private Builder() {
+            } 
+
+            private Builder(InstanceDTO model) {
+                this.instanceIp = model.instanceIp;
+                this.instanceName = model.instanceName;
+                this.instanceStageDTOList = model.instanceStageDTOList;
+                this.podName = model.podName;
+                this.podStatus = model.podStatus;
+                this.status = model.status;
+            } 
+
             /**
-             * The IP address of the ECS instance.
+             * <p>The IP address of the ECS instance.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>47.XX.XX.12 (Public)<br><em><strong>.</strong>.</em>.*** (*******)</p>
              */
             public Builder instanceIp(String instanceIp) {
                 this.instanceIp = instanceIp;
@@ -810,7 +1007,10 @@ public class GetChangeOrderInfoResponseBody extends TeaModel {
             }
 
             /**
-             * The name of the ECS instance.
+             * <p>The name of the ECS instance.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>EDAS-scaled</p>
              */
             public Builder instanceName(String instanceName) {
                 this.instanceName = instanceName;
@@ -818,7 +1018,7 @@ public class GetChangeOrderInfoResponseBody extends TeaModel {
             }
 
             /**
-             * The results of the task executed on the ECS instance in each stage.
+             * <p>The results of the task executed on the ECS instance in each stage.</p>
              */
             public Builder instanceStageDTOList(InstanceStageDTOList instanceStageDTOList) {
                 this.instanceStageDTOList = instanceStageDTOList;
@@ -826,7 +1026,10 @@ public class GetChangeOrderInfoResponseBody extends TeaModel {
             }
 
             /**
-             * The name of the node.
+             * <p>The name of the node.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>canary-test</p>
              */
             public Builder podName(String podName) {
                 this.podName = podName;
@@ -834,7 +1037,10 @@ public class GetChangeOrderInfoResponseBody extends TeaModel {
             }
 
             /**
-             * The state of the pod.
+             * <p>The state of the pod.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>In progress</p>
              */
             public Builder podStatus(String podStatus) {
                 this.podStatus = podStatus;
@@ -842,17 +1048,20 @@ public class GetChangeOrderInfoResponseBody extends TeaModel {
             }
 
             /**
-             * The running state. Valid values:
-             * <p>
+             * <p>The running state. Valid values:</p>
+             * <ul>
+             * <li>0: ready</li>
+             * <li>1: in progress</li>
+             * <li>2: successful</li>
+             * <li>3: failed</li>
+             * <li>6: terminated</li>
+             * <li>8: wait for manual confirmation to trigger the next batch during a manual phased release</li>
+             * <li>9: wait to trigger the next batch during an automatic phased release</li>
+             * <li>10: failed due to a system exception</li>
+             * </ul>
              * 
-             * *   0: ready
-             * *   1: in progress
-             * *   2: successful
-             * *   3: failed
-             * *   6: terminated
-             * *   8: wait for manual confirmation to trigger the next batch during a manual phased release
-             * *   9: wait to trigger the next batch during an automatic phased release
-             * *   10: failed due to a system exception
+             * <strong>example:</strong>
+             * <p>2</p>
              */
             public Builder status(Integer status) {
                 this.status = status;
@@ -866,9 +1075,15 @@ public class GetChangeOrderInfoResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link GetChangeOrderInfoResponseBody} extends {@link TeaModel}
+     *
+     * <p>GetChangeOrderInfoResponseBody</p>
+     */
     public static class InstanceDTOList extends TeaModel {
-        @NameInMap("InstanceDTO")
-        private java.util.List < InstanceDTO> instanceDTO;
+        @com.aliyun.core.annotation.NameInMap("InstanceDTO")
+        private java.util.List<InstanceDTO> instanceDTO;
 
         private InstanceDTOList(Builder builder) {
             this.instanceDTO = builder.instanceDTO;
@@ -885,17 +1100,24 @@ public class GetChangeOrderInfoResponseBody extends TeaModel {
         /**
          * @return instanceDTO
          */
-        public java.util.List < InstanceDTO> getInstanceDTO() {
+        public java.util.List<InstanceDTO> getInstanceDTO() {
             return this.instanceDTO;
         }
 
         public static final class Builder {
-            private java.util.List < InstanceDTO> instanceDTO; 
+            private java.util.List<InstanceDTO> instanceDTO; 
+
+            private Builder() {
+            } 
+
+            private Builder(InstanceDTOList model) {
+                this.instanceDTO = model.instanceDTO;
+            } 
 
             /**
              * InstanceDTO.
              */
-            public Builder instanceDTO(java.util.List < InstanceDTO> instanceDTO) {
+            public Builder instanceDTO(java.util.List<InstanceDTO> instanceDTO) {
                 this.instanceDTO = instanceDTO;
                 return this;
             }
@@ -907,17 +1129,23 @@ public class GetChangeOrderInfoResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link GetChangeOrderInfoResponseBody} extends {@link TeaModel}
+     *
+     * <p>GetChangeOrderInfoResponseBody</p>
+     */
     public static class ServiceStage extends TeaModel {
-        @NameInMap("Message")
+        @com.aliyun.core.annotation.NameInMap("Message")
         private String message;
 
-        @NameInMap("StageId")
+        @com.aliyun.core.annotation.NameInMap("StageId")
         private String stageId;
 
-        @NameInMap("StageName")
+        @com.aliyun.core.annotation.NameInMap("StageName")
         private String stageName;
 
-        @NameInMap("Status")
+        @com.aliyun.core.annotation.NameInMap("Status")
         private Integer status;
 
         private ServiceStage(Builder builder) {
@@ -969,8 +1197,21 @@ public class GetChangeOrderInfoResponseBody extends TeaModel {
             private String stageName; 
             private Integer status; 
 
+            private Builder() {
+            } 
+
+            private Builder(ServiceStage model) {
+                this.message = model.message;
+                this.stageId = model.stageId;
+                this.stageName = model.stageName;
+                this.status = model.status;
+            } 
+
             /**
-             * The execution result in the stage.
+             * <p>The execution result in the stage.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Success</p>
              */
             public Builder message(String message) {
                 this.message = message;
@@ -978,7 +1219,10 @@ public class GetChangeOrderInfoResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the stage.
+             * <p>The ID of the stage.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>358a143f-09a0-45e0-<strong><strong>-</strong></strong>********</p>
              */
             public Builder stageId(String stageId) {
                 this.stageId = stageId;
@@ -986,7 +1230,10 @@ public class GetChangeOrderInfoResponseBody extends TeaModel {
             }
 
             /**
-             * Phase Name
+             * <p>Phase Name</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Enable Tengine</p>
              */
             public Builder stageName(String stageName) {
                 this.stageName = stageName;
@@ -994,17 +1241,20 @@ public class GetChangeOrderInfoResponseBody extends TeaModel {
             }
 
             /**
-             * The running state. Valid values:
-             * <p>
+             * <p>The running state. Valid values:</p>
+             * <ul>
+             * <li>0: ready</li>
+             * <li>1: in progress</li>
+             * <li>2: successful</li>
+             * <li>3: failed</li>
+             * <li>6: terminated</li>
+             * <li>8: wait for manual confirmation to trigger the next batch during a manual phased release</li>
+             * <li>9: wait to trigger the next batch during an automatic phased release</li>
+             * <li>10: failed due to a system exception</li>
+             * </ul>
              * 
-             * *   0: ready
-             * *   1: in progress
-             * *   2: successful
-             * *   3: failed
-             * *   6: terminated
-             * *   8: wait for manual confirmation to trigger the next batch during a manual phased release
-             * *   9: wait to trigger the next batch during an automatic phased release
-             * *   10: failed due to a system exception
+             * <strong>example:</strong>
+             * <p>2</p>
              */
             public Builder status(Integer status) {
                 this.status = status;
@@ -1018,11 +1268,17 @@ public class GetChangeOrderInfoResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link GetChangeOrderInfoResponseBody} extends {@link TeaModel}
+     *
+     * <p>GetChangeOrderInfoResponseBody</p>
+     */
     public static class StageResultDTO extends TeaModel {
-        @NameInMap("InstanceDTOList")
+        @com.aliyun.core.annotation.NameInMap("InstanceDTOList")
         private InstanceDTOList instanceDTOList;
 
-        @NameInMap("ServiceStage")
+        @com.aliyun.core.annotation.NameInMap("ServiceStage")
         private ServiceStage serviceStage;
 
         private StageResultDTO(Builder builder) {
@@ -1056,8 +1312,16 @@ public class GetChangeOrderInfoResponseBody extends TeaModel {
             private InstanceDTOList instanceDTOList; 
             private ServiceStage serviceStage; 
 
+            private Builder() {
+            } 
+
+            private Builder(StageResultDTO model) {
+                this.instanceDTOList = model.instanceDTOList;
+                this.serviceStage = model.serviceStage;
+            } 
+
             /**
-             * The results of the task executed on each Elastic Compute Service (ECS) instance in each stage.
+             * <p>The results of the task executed on each Elastic Compute Service (ECS) instance in each stage.</p>
              */
             public Builder instanceDTOList(InstanceDTOList instanceDTOList) {
                 this.instanceDTOList = instanceDTOList;
@@ -1065,7 +1329,7 @@ public class GetChangeOrderInfoResponseBody extends TeaModel {
             }
 
             /**
-             * The results of tasks executed in each service-oriented stage.
+             * <p>The results of tasks executed in each service-oriented stage.</p>
              */
             public Builder serviceStage(ServiceStage serviceStage) {
                 this.serviceStage = serviceStage;
@@ -1079,17 +1343,23 @@ public class GetChangeOrderInfoResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link GetChangeOrderInfoResponseBody} extends {@link TeaModel}
+     *
+     * <p>GetChangeOrderInfoResponseBody</p>
+     */
     public static class StageInfoDTO extends TeaModel {
-        @NameInMap("StageId")
+        @com.aliyun.core.annotation.NameInMap("StageId")
         private String stageId;
 
-        @NameInMap("StageName")
+        @com.aliyun.core.annotation.NameInMap("StageName")
         private String stageName;
 
-        @NameInMap("StageResultDTO")
+        @com.aliyun.core.annotation.NameInMap("StageResultDTO")
         private StageResultDTO stageResultDTO;
 
-        @NameInMap("Status")
+        @com.aliyun.core.annotation.NameInMap("Status")
         private Integer status;
 
         private StageInfoDTO(Builder builder) {
@@ -1141,8 +1411,21 @@ public class GetChangeOrderInfoResponseBody extends TeaModel {
             private StageResultDTO stageResultDTO; 
             private Integer status; 
 
+            private Builder() {
+            } 
+
+            private Builder(StageInfoDTO model) {
+                this.stageId = model.stageId;
+                this.stageName = model.stageName;
+                this.stageResultDTO = model.stageResultDTO;
+                this.status = model.status;
+            } 
+
             /**
-             * The ID of the stage.
+             * <p>The ID of the stage.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>358a143f-09a0-45e0-<strong><strong>-</strong></strong>********@<strong><em>*******</em>***</strong></p>
              */
             public Builder stageId(String stageId) {
                 this.stageId = stageId;
@@ -1150,7 +1433,10 @@ public class GetChangeOrderInfoResponseBody extends TeaModel {
             }
 
             /**
-             * The name of the stage.
+             * <p>The name of the stage.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Scale Out</p>
              */
             public Builder stageName(String stageName) {
                 this.stageName = stageName;
@@ -1158,7 +1444,7 @@ public class GetChangeOrderInfoResponseBody extends TeaModel {
             }
 
             /**
-             * The results of the task executed in the stage.
+             * <p>The results of the task executed in the stage.</p>
              */
             public Builder stageResultDTO(StageResultDTO stageResultDTO) {
                 this.stageResultDTO = stageResultDTO;
@@ -1166,17 +1452,20 @@ public class GetChangeOrderInfoResponseBody extends TeaModel {
             }
 
             /**
-             * The state of the stage. Valid values:
-             * <p>
+             * <p>The state of the stage. Valid values:</p>
+             * <ul>
+             * <li>0: ready</li>
+             * <li>1: in progress</li>
+             * <li>2: successful</li>
+             * <li>3: failed</li>
+             * <li>6: terminated</li>
+             * <li>8: wait for manual confirmation to trigger the next batch during a manual phased release</li>
+             * <li>9: wait to trigger the next batch during an automatic phased release</li>
+             * <li>10: failed due to a system exception</li>
+             * </ul>
              * 
-             * *   0: ready
-             * *   1: in progress
-             * *   2: successful
-             * *   3: failed
-             * *   6: terminated
-             * *   8: wait for manual confirmation to trigger the next batch during a manual phased release
-             * *   9: wait to trigger the next batch during an automatic phased release
-             * *   10: failed due to a system exception
+             * <strong>example:</strong>
+             * <p>2</p>
              */
             public Builder status(Integer status) {
                 this.status = status;
@@ -1190,9 +1479,15 @@ public class GetChangeOrderInfoResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link GetChangeOrderInfoResponseBody} extends {@link TeaModel}
+     *
+     * <p>GetChangeOrderInfoResponseBody</p>
+     */
     public static class StageList extends TeaModel {
-        @NameInMap("StageInfoDTO")
-        private java.util.List < StageInfoDTO> stageInfoDTO;
+        @com.aliyun.core.annotation.NameInMap("StageInfoDTO")
+        private java.util.List<StageInfoDTO> stageInfoDTO;
 
         private StageList(Builder builder) {
             this.stageInfoDTO = builder.stageInfoDTO;
@@ -1209,17 +1504,24 @@ public class GetChangeOrderInfoResponseBody extends TeaModel {
         /**
          * @return stageInfoDTO
          */
-        public java.util.List < StageInfoDTO> getStageInfoDTO() {
+        public java.util.List<StageInfoDTO> getStageInfoDTO() {
             return this.stageInfoDTO;
         }
 
         public static final class Builder {
-            private java.util.List < StageInfoDTO> stageInfoDTO; 
+            private java.util.List<StageInfoDTO> stageInfoDTO; 
+
+            private Builder() {
+            } 
+
+            private Builder(StageList model) {
+                this.stageInfoDTO = model.stageInfoDTO;
+            } 
 
             /**
              * StageInfoDTO.
              */
-            public Builder stageInfoDTO(java.util.List < StageInfoDTO> stageInfoDTO) {
+            public Builder stageInfoDTO(java.util.List<StageInfoDTO> stageInfoDTO) {
                 this.stageInfoDTO = stageInfoDTO;
                 return this;
             }
@@ -1231,26 +1533,32 @@ public class GetChangeOrderInfoResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link GetChangeOrderInfoResponseBody} extends {@link TeaModel}
+     *
+     * <p>GetChangeOrderInfoResponseBody</p>
+     */
     public static class PipelineInfo extends TeaModel {
-        @NameInMap("PipelineId")
+        @com.aliyun.core.annotation.NameInMap("PipelineId")
         private String pipelineId;
 
-        @NameInMap("PipelineName")
+        @com.aliyun.core.annotation.NameInMap("PipelineName")
         private String pipelineName;
 
-        @NameInMap("PipelineStatus")
+        @com.aliyun.core.annotation.NameInMap("PipelineStatus")
         private Integer pipelineStatus;
 
-        @NameInMap("StageDetailList")
+        @com.aliyun.core.annotation.NameInMap("StageDetailList")
         private StageDetailList stageDetailList;
 
-        @NameInMap("StageList")
+        @com.aliyun.core.annotation.NameInMap("StageList")
         private StageList stageList;
 
-        @NameInMap("StartTime")
+        @com.aliyun.core.annotation.NameInMap("StartTime")
         private String startTime;
 
-        @NameInMap("UpdateTime")
+        @com.aliyun.core.annotation.NameInMap("UpdateTime")
         private String updateTime;
 
         private PipelineInfo(Builder builder) {
@@ -1329,8 +1637,24 @@ public class GetChangeOrderInfoResponseBody extends TeaModel {
             private String startTime; 
             private String updateTime; 
 
+            private Builder() {
+            } 
+
+            private Builder(PipelineInfo model) {
+                this.pipelineId = model.pipelineId;
+                this.pipelineName = model.pipelineName;
+                this.pipelineStatus = model.pipelineStatus;
+                this.stageDetailList = model.stageDetailList;
+                this.stageList = model.stageList;
+                this.startTime = model.startTime;
+                this.updateTime = model.updateTime;
+            } 
+
             /**
-             * The ID of each batch for the change during the phased release.
+             * <p>The ID of each batch for the change during the phased release.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>4c4ee320-5e47-4a48-<strong><strong>-</strong></strong>********</p>
              */
             public Builder pipelineId(String pipelineId) {
                 this.pipelineId = pipelineId;
@@ -1338,7 +1662,10 @@ public class GetChangeOrderInfoResponseBody extends TeaModel {
             }
 
             /**
-             * The name of the batch.
+             * <p>The name of the batch.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Batch: 1</p>
              */
             public Builder pipelineName(String pipelineName) {
                 this.pipelineName = pipelineName;
@@ -1346,17 +1673,20 @@ public class GetChangeOrderInfoResponseBody extends TeaModel {
             }
 
             /**
-             * The state of the change task. Valid values:
-             * <p>
+             * <p>The state of the change task. Valid values:</p>
+             * <ul>
+             * <li>0: ready</li>
+             * <li>1: in progress</li>
+             * <li>2: successful</li>
+             * <li>3: failed</li>
+             * <li>6: terminated</li>
+             * <li>8: wait for manual confirmation to trigger the next batch during a manual phased release</li>
+             * <li>9: wait to trigger the next batch during an automatic phased release</li>
+             * <li>10: failed due to a system exception</li>
+             * </ul>
              * 
-             * *   0: ready
-             * *   1: in progress
-             * *   2: successful
-             * *   3: failed
-             * *   6: terminated
-             * *   8: wait for manual confirmation to trigger the next batch during a manual phased release
-             * *   9: wait to trigger the next batch during an automatic phased release
-             * *   10: failed due to a system exception
+             * <strong>example:</strong>
+             * <p>2</p>
              */
             public Builder pipelineStatus(Integer pipelineStatus) {
                 this.pipelineStatus = pipelineStatus;
@@ -1364,7 +1694,7 @@ public class GetChangeOrderInfoResponseBody extends TeaModel {
             }
 
             /**
-             * The execution results in each stage.
+             * <p>The execution results in each stage.</p>
              */
             public Builder stageDetailList(StageDetailList stageDetailList) {
                 this.stageDetailList = stageDetailList;
@@ -1372,7 +1702,7 @@ public class GetChangeOrderInfoResponseBody extends TeaModel {
             }
 
             /**
-             * The stages of the change process.
+             * <p>The stages of the change process.</p>
              */
             public Builder stageList(StageList stageList) {
                 this.stageList = stageList;
@@ -1380,7 +1710,10 @@ public class GetChangeOrderInfoResponseBody extends TeaModel {
             }
 
             /**
-             * The time when the change task was created. This value is a UNIX timestamp representing the number of milliseconds that have elapsed since January 1, 1970, 00:00:00 UTC.
+             * <p>The time when the change task was created. This value is a UNIX timestamp representing the number of milliseconds that have elapsed since January 1, 1970, 00:00:00 UTC.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1583911702158</p>
              */
             public Builder startTime(String startTime) {
                 this.startTime = startTime;
@@ -1388,7 +1721,10 @@ public class GetChangeOrderInfoResponseBody extends TeaModel {
             }
 
             /**
-             * The time when the change task was updated. This value is a UNIX timestamp representing the number of milliseconds that have elapsed since January 1, 1970, 00:00:00 UTC.
+             * <p>The time when the change task was updated. This value is a UNIX timestamp representing the number of milliseconds that have elapsed since January 1, 1970, 00:00:00 UTC.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1583911743633</p>
              */
             public Builder updateTime(String updateTime) {
                 this.updateTime = updateTime;
@@ -1402,9 +1738,15 @@ public class GetChangeOrderInfoResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link GetChangeOrderInfoResponseBody} extends {@link TeaModel}
+     *
+     * <p>GetChangeOrderInfoResponseBody</p>
+     */
     public static class PipelineInfoList extends TeaModel {
-        @NameInMap("PipelineInfo")
-        private java.util.List < PipelineInfo> pipelineInfo;
+        @com.aliyun.core.annotation.NameInMap("PipelineInfo")
+        private java.util.List<PipelineInfo> pipelineInfo;
 
         private PipelineInfoList(Builder builder) {
             this.pipelineInfo = builder.pipelineInfo;
@@ -1421,17 +1763,24 @@ public class GetChangeOrderInfoResponseBody extends TeaModel {
         /**
          * @return pipelineInfo
          */
-        public java.util.List < PipelineInfo> getPipelineInfo() {
+        public java.util.List<PipelineInfo> getPipelineInfo() {
             return this.pipelineInfo;
         }
 
         public static final class Builder {
-            private java.util.List < PipelineInfo> pipelineInfo; 
+            private java.util.List<PipelineInfo> pipelineInfo; 
+
+            private Builder() {
+            } 
+
+            private Builder(PipelineInfoList model) {
+                this.pipelineInfo = model.pipelineInfo;
+            } 
 
             /**
              * PipelineInfo.
              */
-            public Builder pipelineInfo(java.util.List < PipelineInfo> pipelineInfo) {
+            public Builder pipelineInfo(java.util.List<PipelineInfo> pipelineInfo) {
                 this.pipelineInfo = pipelineInfo;
                 return this;
             }
@@ -1443,9 +1792,15 @@ public class GetChangeOrderInfoResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link GetChangeOrderInfoResponseBody} extends {@link TeaModel}
+     *
+     * <p>GetChangeOrderInfoResponseBody</p>
+     */
     public static class Targets extends TeaModel {
-        @NameInMap("Items")
-        private java.util.List < String > items;
+        @com.aliyun.core.annotation.NameInMap("Items")
+        private java.util.List<String> items;
 
         private Targets(Builder builder) {
             this.items = builder.items;
@@ -1462,17 +1817,24 @@ public class GetChangeOrderInfoResponseBody extends TeaModel {
         /**
          * @return items
          */
-        public java.util.List < String > getItems() {
+        public java.util.List<String> getItems() {
             return this.items;
         }
 
         public static final class Builder {
-            private java.util.List < String > items; 
+            private java.util.List<String> items; 
+
+            private Builder() {
+            } 
+
+            private Builder(Targets model) {
+                this.items = model.items;
+            } 
 
             /**
              * Items.
              */
-            public Builder items(java.util.List < String > items) {
+            public Builder items(java.util.List<String> items) {
                 this.items = items;
                 return this;
             }
@@ -1484,14 +1846,20 @@ public class GetChangeOrderInfoResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link GetChangeOrderInfoResponseBody} extends {@link TeaModel}
+     *
+     * <p>GetChangeOrderInfoResponseBody</p>
+     */
     public static class TrafficControl extends TeaModel {
-        @NameInMap("Routes")
+        @com.aliyun.core.annotation.NameInMap("Routes")
         private String routes;
 
-        @NameInMap("Rules")
+        @com.aliyun.core.annotation.NameInMap("Rules")
         private String rules;
 
-        @NameInMap("Tips")
+        @com.aliyun.core.annotation.NameInMap("Tips")
         private String tips;
 
         private TrafficControl(Builder builder) {
@@ -1534,8 +1902,20 @@ public class GetChangeOrderInfoResponseBody extends TeaModel {
             private String rules; 
             private String tips; 
 
+            private Builder() {
+            } 
+
+            private Builder(TrafficControl model) {
+                this.routes = model.routes;
+                this.rules = model.rules;
+                this.tips = model.tips;
+            } 
+
             /**
-             * The route forwarding policy.
+             * <p>The route forwarding policy.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>[{&quot;app&quot;:&quot;9c8247da-91b6-42bb-8f99-92a0b9c6f****&quot;,&quot;type&quot;:&quot;GROUP&quot;}]</p>
              */
             public Builder routes(String routes) {
                 this.routes = routes;
@@ -1543,7 +1923,10 @@ public class GetChangeOrderInfoResponseBody extends TeaModel {
             }
 
             /**
-             * The traffic routing rules.
+             * <p>The traffic routing rules.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>[{&quot;conditionType&quot;:&quot;content&quot;,&quot;conditions&quot;:[{&quot;key&quot;:&quot;name&quot;,&quot;operator&quot;:&quot;EQ&quot;,&quot;strategy&quot;:&quot;PARAM&quot;,&quot;values&quot;:[&quot;jim&quot;]},{&quot;key&quot;:&quot;name&quot;,&quot;operator&quot;:&quot;EQ&quot;,&quot;strategy&quot;:&quot;COOKIE&quot;,&quot;values&quot;:[&quot;jim&quot;]}],&quot;percent&quot;:100,&quot;protocol&quot;:&quot;SPRINGCLOUD&quot;,&quot;triggerPolicy&quot;:&quot;AND&quot;}]</p>
              */
             public Builder rules(String rules) {
                 this.rules = rules;
@@ -1551,7 +1934,10 @@ public class GetChangeOrderInfoResponseBody extends TeaModel {
             }
 
             /**
-             * The description of throttling rules.
+             * <p>The description of throttling rules.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>This canary release batch is complete, and the user has confirmed to proceed to the next batch.</p>
              */
             public Builder tips(String tips) {
                 this.tips = tips;
@@ -1565,44 +1951,50 @@ public class GetChangeOrderInfoResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link GetChangeOrderInfoResponseBody} extends {@link TeaModel}
+     *
+     * <p>GetChangeOrderInfoResponseBody</p>
+     */
     public static class ChangeOrderInfo extends TeaModel {
-        @NameInMap("BatchCount")
+        @com.aliyun.core.annotation.NameInMap("BatchCount")
         private Integer batchCount;
 
-        @NameInMap("BatchType")
+        @com.aliyun.core.annotation.NameInMap("BatchType")
         private String batchType;
 
-        @NameInMap("ChangeOrderDescription")
+        @com.aliyun.core.annotation.NameInMap("ChangeOrderDescription")
         private String changeOrderDescription;
 
-        @NameInMap("ChangeOrderId")
+        @com.aliyun.core.annotation.NameInMap("ChangeOrderId")
         private String changeOrderId;
 
-        @NameInMap("CoType")
+        @com.aliyun.core.annotation.NameInMap("CoType")
         private String coType;
 
-        @NameInMap("CreateTime")
+        @com.aliyun.core.annotation.NameInMap("CreateTime")
         private String createTime;
 
-        @NameInMap("CreateUserId")
+        @com.aliyun.core.annotation.NameInMap("CreateUserId")
         private String createUserId;
 
-        @NameInMap("Desc")
+        @com.aliyun.core.annotation.NameInMap("Desc")
         private String desc;
 
-        @NameInMap("PipelineInfoList")
+        @com.aliyun.core.annotation.NameInMap("PipelineInfoList")
         private PipelineInfoList pipelineInfoList;
 
-        @NameInMap("Status")
+        @com.aliyun.core.annotation.NameInMap("Status")
         private Integer status;
 
-        @NameInMap("SupportRollback")
+        @com.aliyun.core.annotation.NameInMap("SupportRollback")
         private Boolean supportRollback;
 
-        @NameInMap("Targets")
+        @com.aliyun.core.annotation.NameInMap("Targets")
         private Targets targets;
 
-        @NameInMap("TrafficControl")
+        @com.aliyun.core.annotation.NameInMap("TrafficControl")
         private TrafficControl trafficControl;
 
         private ChangeOrderInfo(Builder builder) {
@@ -1735,8 +2127,30 @@ public class GetChangeOrderInfoResponseBody extends TeaModel {
             private Targets targets; 
             private TrafficControl trafficControl; 
 
+            private Builder() {
+            } 
+
+            private Builder(ChangeOrderInfo model) {
+                this.batchCount = model.batchCount;
+                this.batchType = model.batchType;
+                this.changeOrderDescription = model.changeOrderDescription;
+                this.changeOrderId = model.changeOrderId;
+                this.coType = model.coType;
+                this.createTime = model.createTime;
+                this.createUserId = model.createUserId;
+                this.desc = model.desc;
+                this.pipelineInfoList = model.pipelineInfoList;
+                this.status = model.status;
+                this.supportRollback = model.supportRollback;
+                this.targets = model.targets;
+                this.trafficControl = model.trafficControl;
+            } 
+
             /**
-             * The number of batches for the change.
+             * <p>The number of batches for the change.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder batchCount(Integer batchCount) {
                 this.batchCount = batchCount;
@@ -1744,11 +2158,14 @@ public class GetChangeOrderInfoResponseBody extends TeaModel {
             }
 
             /**
-             * Indicates whether the change for the next batch is automatically or manually triggered when phased release is performed. Valid values:
-             * <p>
+             * <p>Indicates whether the change for the next batch is automatically or manually triggered when phased release is performed. Valid values:</p>
+             * <ul>
+             * <li>Automatic: The change for the next batch is automatically triggered.</li>
+             * <li>Manual: The change for the next batch is manually triggered.</li>
+             * </ul>
              * 
-             * *   Automatic: The change for the next batch is automatically triggered.
-             * *   Manual: The change for the next batch is manually triggered.
+             * <strong>example:</strong>
+             * <p>Automatic</p>
              */
             public Builder batchType(String batchType) {
                 this.batchType = batchType;
@@ -1756,7 +2173,10 @@ public class GetChangeOrderInfoResponseBody extends TeaModel {
             }
 
             /**
-             * The description of the change process.
+             * <p>The description of the change process.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Application scale-out</p>
              */
             public Builder changeOrderDescription(String changeOrderDescription) {
                 this.changeOrderDescription = changeOrderDescription;
@@ -1764,7 +2184,10 @@ public class GetChangeOrderInfoResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the change process.
+             * <p>The ID of the change process.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1074f3e2-e974-4a0e-<strong><strong>-</strong></strong>********</p>
              */
             public Builder changeOrderId(String changeOrderId) {
                 this.changeOrderId = changeOrderId;
@@ -1772,7 +2195,10 @@ public class GetChangeOrderInfoResponseBody extends TeaModel {
             }
 
             /**
-             * The type of the change process.
+             * <p>The type of the change process.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Application Scale Out</p>
              */
             public Builder coType(String coType) {
                 this.coType = coType;
@@ -1780,7 +2206,10 @@ public class GetChangeOrderInfoResponseBody extends TeaModel {
             }
 
             /**
-             * The time when the change process is created.
+             * <p>The time when the change process is created.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2019-11-13 14:23:46</p>
              */
             public Builder createTime(String createTime) {
                 this.createTime = createTime;
@@ -1788,7 +2217,10 @@ public class GetChangeOrderInfoResponseBody extends TeaModel {
             }
 
             /**
-             * The person in charge of the change process.
+             * <p>The person in charge of the change process.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>edas_com***_****@<em><em><strong><strong>-</strong></strong></em>.</em>**</p>
              */
             public Builder createUserId(String createUserId) {
                 this.createUserId = createUserId;
@@ -1796,7 +2228,10 @@ public class GetChangeOrderInfoResponseBody extends TeaModel {
             }
 
             /**
-             * The description of the change process.
+             * <p>The description of the change process.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>IP of Scale-Out Instance: 47.107.XX.XX</p>
              */
             public Builder desc(String desc) {
                 this.desc = desc;
@@ -1804,7 +2239,7 @@ public class GetChangeOrderInfoResponseBody extends TeaModel {
             }
 
             /**
-             * The information about the batches of the change task.
+             * <p>The information about the batches of the change task.</p>
              */
             public Builder pipelineInfoList(PipelineInfoList pipelineInfoList) {
                 this.pipelineInfoList = pipelineInfoList;
@@ -1812,18 +2247,21 @@ public class GetChangeOrderInfoResponseBody extends TeaModel {
             }
 
             /**
-             * The state of the change process. Valid values:
-             * <p>
+             * <p>The state of the change process. Valid values:</p>
+             * <ul>
+             * <li>0: ready</li>
+             * <li>1: in progress</li>
+             * <li>2: successful</li>
+             * <li>3: failed</li>
+             * <li>6: terminated</li>
+             * <li>7: partially executed</li>
+             * <li>8: wait for manual confirmation to trigger the next batch during a manual phased release</li>
+             * <li>9: wait to trigger the next batch during an automatic phased release</li>
+             * <li>10: failed due to a system exception</li>
+             * </ul>
              * 
-             * *   0: ready
-             * *   1: in progress
-             * *   2: successful
-             * *   3: failed
-             * *   6: terminated
-             * *   7: partially executed
-             * *   8: wait for manual confirmation to trigger the next batch during a manual phased release
-             * *   9: wait to trigger the next batch during an automatic phased release
-             * *   10: failed due to a system exception
+             * <strong>example:</strong>
+             * <p>2</p>
              */
             public Builder status(Integer status) {
                 this.status = status;
@@ -1831,11 +2269,14 @@ public class GetChangeOrderInfoResponseBody extends TeaModel {
             }
 
             /**
-             * Indicates whether rollbacks are allowed. Valid values:
-             * <p>
+             * <p>Indicates whether rollbacks are allowed. Valid values:</p>
+             * <ul>
+             * <li>true: Rollbacks are allowed.</li>
+             * <li>false: Rollbacks are not allowed.</li>
+             * </ul>
              * 
-             * *   true: Rollbacks are allowed.
-             * *   false: Rollbacks are not allowed.
+             * <strong>example:</strong>
+             * <p>false</p>
              */
             public Builder supportRollback(Boolean supportRollback) {
                 this.supportRollback = supportRollback;
@@ -1851,7 +2292,7 @@ public class GetChangeOrderInfoResponseBody extends TeaModel {
             }
 
             /**
-             * The throttling rules.
+             * <p>The throttling rules.</p>
              */
             public Builder trafficControl(TrafficControl trafficControl) {
                 this.trafficControl = trafficControl;

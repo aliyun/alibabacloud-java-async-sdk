@@ -1,27 +1,32 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.edas20170801.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link UpdateApplicationBaseInfoResponseBody} extends {@link TeaModel}
  *
  * <p>UpdateApplicationBaseInfoResponseBody</p>
  */
 public class UpdateApplicationBaseInfoResponseBody extends TeaModel {
-    @NameInMap("Applcation")
+    @com.aliyun.core.annotation.NameInMap("Applcation")
     private Applcation applcation;
 
-    @NameInMap("Code")
+    @com.aliyun.core.annotation.NameInMap("Code")
     private Integer code;
 
-    @NameInMap("Message")
+    @com.aliyun.core.annotation.NameInMap("Message")
     private String message;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
     private UpdateApplicationBaseInfoResponseBody(Builder builder) {
@@ -37,6 +42,10 @@ public class UpdateApplicationBaseInfoResponseBody extends TeaModel {
 
     public static UpdateApplicationBaseInfoResponseBody create() {
         return builder().build();
+    }
+
+    public Builder toBuilder() {
+        return new Builder(this);
     }
 
     /**
@@ -73,8 +82,18 @@ public class UpdateApplicationBaseInfoResponseBody extends TeaModel {
         private String message; 
         private String requestId; 
 
+        private Builder() {
+        } 
+
+        private Builder(UpdateApplicationBaseInfoResponseBody model) {
+            this.applcation = model.applcation;
+            this.code = model.code;
+            this.message = model.message;
+            this.requestId = model.requestId;
+        } 
+
         /**
-         * The applications that you want to modify.
+         * <p>The applications that you want to modify.</p>
          */
         public Builder applcation(Applcation applcation) {
             this.applcation = applcation;
@@ -82,7 +101,10 @@ public class UpdateApplicationBaseInfoResponseBody extends TeaModel {
         }
 
         /**
-         * The HTTP status code that is returned.
+         * <p>The HTTP status code that is returned.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>200</p>
          */
         public Builder code(Integer code) {
             this.code = code;
@@ -90,7 +112,10 @@ public class UpdateApplicationBaseInfoResponseBody extends TeaModel {
         }
 
         /**
-         * The message that is returned.
+         * <p>The message that is returned.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>success</p>
          */
         public Builder message(String message) {
             this.message = message;
@@ -98,7 +123,10 @@ public class UpdateApplicationBaseInfoResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the request.
+         * <p>The ID of the request.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>D16979DC-4D42-**************</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -111,80 +139,86 @@ public class UpdateApplicationBaseInfoResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link UpdateApplicationBaseInfoResponseBody} extends {@link TeaModel}
+     *
+     * <p>UpdateApplicationBaseInfoResponseBody</p>
+     */
     public static class Applcation extends TeaModel {
-        @NameInMap("AppId")
+        @com.aliyun.core.annotation.NameInMap("AppId")
         private String appId;
 
-        @NameInMap("ApplicationType")
+        @com.aliyun.core.annotation.NameInMap("ApplicationType")
         private String applicationType;
 
-        @NameInMap("BuildPackageId")
+        @com.aliyun.core.annotation.NameInMap("BuildPackageId")
         private Long buildPackageId;
 
-        @NameInMap("ClusterId")
+        @com.aliyun.core.annotation.NameInMap("ClusterId")
         private String clusterId;
 
-        @NameInMap("ClusterType")
+        @com.aliyun.core.annotation.NameInMap("ClusterType")
         private Integer clusterType;
 
-        @NameInMap("Cpu")
+        @com.aliyun.core.annotation.NameInMap("Cpu")
         private Integer cpu;
 
-        @NameInMap("CreateTime")
+        @com.aliyun.core.annotation.NameInMap("CreateTime")
         private Long createTime;
 
-        @NameInMap("Description")
+        @com.aliyun.core.annotation.NameInMap("Description")
         private String description;
 
-        @NameInMap("Dockerize")
+        @com.aliyun.core.annotation.NameInMap("Dockerize")
         private Boolean dockerize;
 
-        @NameInMap("ExtSlbId")
+        @com.aliyun.core.annotation.NameInMap("ExtSlbId")
         private String extSlbId;
 
-        @NameInMap("ExtSlbIp")
+        @com.aliyun.core.annotation.NameInMap("ExtSlbIp")
         private String extSlbIp;
 
-        @NameInMap("ExtSlbName")
+        @com.aliyun.core.annotation.NameInMap("ExtSlbName")
         private String extSlbName;
 
-        @NameInMap("HealthCheckUrl")
+        @com.aliyun.core.annotation.NameInMap("HealthCheckUrl")
         private String healthCheckUrl;
 
-        @NameInMap("InstanceCount")
+        @com.aliyun.core.annotation.NameInMap("InstanceCount")
         private Integer instanceCount;
 
-        @NameInMap("Memory")
+        @com.aliyun.core.annotation.NameInMap("Memory")
         private Integer memory;
 
-        @NameInMap("Name")
+        @com.aliyun.core.annotation.NameInMap("Name")
         private String name;
 
-        @NameInMap("Owner")
+        @com.aliyun.core.annotation.NameInMap("Owner")
         private String owner;
 
-        @NameInMap("Port")
+        @com.aliyun.core.annotation.NameInMap("Port")
         private Integer port;
 
-        @NameInMap("RegionId")
+        @com.aliyun.core.annotation.NameInMap("RegionId")
         private String regionId;
 
-        @NameInMap("RunningInstanceCount")
+        @com.aliyun.core.annotation.NameInMap("RunningInstanceCount")
         private Integer runningInstanceCount;
 
-        @NameInMap("SlbId")
+        @com.aliyun.core.annotation.NameInMap("SlbId")
         private String slbId;
 
-        @NameInMap("SlbIp")
+        @com.aliyun.core.annotation.NameInMap("SlbIp")
         private String slbIp;
 
-        @NameInMap("SlbName")
+        @com.aliyun.core.annotation.NameInMap("SlbName")
         private String slbName;
 
-        @NameInMap("SlbPort")
+        @com.aliyun.core.annotation.NameInMap("SlbPort")
         private Integer slbPort;
 
-        @NameInMap("UserId")
+        @com.aliyun.core.annotation.NameInMap("UserId")
         private String userId;
 
         private Applcation(Builder builder) {
@@ -425,8 +459,42 @@ public class UpdateApplicationBaseInfoResponseBody extends TeaModel {
             private Integer slbPort; 
             private String userId; 
 
+            private Builder() {
+            } 
+
+            private Builder(Applcation model) {
+                this.appId = model.appId;
+                this.applicationType = model.applicationType;
+                this.buildPackageId = model.buildPackageId;
+                this.clusterId = model.clusterId;
+                this.clusterType = model.clusterType;
+                this.cpu = model.cpu;
+                this.createTime = model.createTime;
+                this.description = model.description;
+                this.dockerize = model.dockerize;
+                this.extSlbId = model.extSlbId;
+                this.extSlbIp = model.extSlbIp;
+                this.extSlbName = model.extSlbName;
+                this.healthCheckUrl = model.healthCheckUrl;
+                this.instanceCount = model.instanceCount;
+                this.memory = model.memory;
+                this.name = model.name;
+                this.owner = model.owner;
+                this.port = model.port;
+                this.regionId = model.regionId;
+                this.runningInstanceCount = model.runningInstanceCount;
+                this.slbId = model.slbId;
+                this.slbIp = model.slbIp;
+                this.slbName = model.slbName;
+                this.slbPort = model.slbPort;
+                this.userId = model.userId;
+            } 
+
             /**
-             * The ID of the application.
+             * <p>The ID of the application.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>c627c157-560d-43ff-<strong><strong>-</strong></strong>********</p>
              */
             public Builder appId(String appId) {
                 this.appId = appId;
@@ -434,13 +502,16 @@ public class UpdateApplicationBaseInfoResponseBody extends TeaModel {
             }
 
             /**
-             * The deployment type of the application. Valid values:
-             * <p>
+             * <p>The deployment type of the application. Valid values:</p>
+             * <ul>
+             * <li>War: The application is deployed by using a WAR package.</li>
+             * <li>FatJar: The application is deployed by using a JAR package.</li>
+             * <li>Image: The application is deployed by using an image.</li>
+             * <li>If this parameter is empty, the application is not deployed.</li>
+             * </ul>
              * 
-             * *   War: The application is deployed by using a WAR package.
-             * *   FatJar: The application is deployed by using a JAR package.
-             * *   Image: The application is deployed by using an image.
-             * *   If this parameter is empty, the application is not deployed.
+             * <strong>example:</strong>
+             * <p>FatJar</p>
              */
             public Builder applicationType(String applicationType) {
                 this.applicationType = applicationType;
@@ -448,7 +519,10 @@ public class UpdateApplicationBaseInfoResponseBody extends TeaModel {
             }
 
             /**
-             * The build package number of Enterprise Distributed Application Service (EDAS) Container.
+             * <p>The build package number of Enterprise Distributed Application Service (EDAS) Container.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>58</p>
              */
             public Builder buildPackageId(Long buildPackageId) {
                 this.buildPackageId = buildPackageId;
@@ -456,7 +530,10 @@ public class UpdateApplicationBaseInfoResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the cluster.
+             * <p>The ID of the cluster.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>d7730a49-629a-47bd-<strong><strong>-f45eb01f</strong></strong></p>
              */
             public Builder clusterId(String clusterId) {
                 this.clusterId = clusterId;
@@ -464,15 +541,18 @@ public class UpdateApplicationBaseInfoResponseBody extends TeaModel {
             }
 
             /**
-             * The type of the cluster. Valid values:
-             * <p>
+             * <p>The type of the cluster. Valid values:</p>
+             * <ul>
+             * <li>0: normal Docker cluster</li>
+             * <li>1: Swarm cluster</li>
+             * <li>2: ECS cluster</li>
+             * <li>3: self-managed Kubernetes cluster in EDAS</li>
+             * <li>4: cluster in which Pandora automatically registers applications</li>
+             * <li>5: Container Service for Kubernetes (ACK) clusters</li>
+             * </ul>
              * 
-             * *   0: normal Docker cluster
-             * *   1: Swarm cluster
-             * *   2: ECS cluster
-             * *   3: self-managed Kubernetes cluster in EDAS
-             * *   4: cluster in which Pandora automatically registers applications
-             * *   5: Container Service for Kubernetes (ACK) clusters
+             * <strong>example:</strong>
+             * <p>2</p>
              */
             public Builder clusterType(Integer clusterType) {
                 this.clusterType = clusterType;
@@ -480,7 +560,10 @@ public class UpdateApplicationBaseInfoResponseBody extends TeaModel {
             }
 
             /**
-             * The number of CPU cores.
+             * <p>The number of CPU cores.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>0</p>
              */
             public Builder cpu(Integer cpu) {
                 this.cpu = cpu;
@@ -488,7 +571,10 @@ public class UpdateApplicationBaseInfoResponseBody extends TeaModel {
             }
 
             /**
-             * The time when the application was created. This value is a UNIX timestamp representing the number of milliseconds that have elapsed since January 1, 1970, 00:00:00 UTC.
+             * <p>The time when the application was created. This value is a UNIX timestamp representing the number of milliseconds that have elapsed since January 1, 1970, 00:00:00 UTC.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1577259573911</p>
              */
             public Builder createTime(Long createTime) {
                 this.createTime = createTime;
@@ -496,7 +582,10 @@ public class UpdateApplicationBaseInfoResponseBody extends TeaModel {
             }
 
             /**
-             * The description of the application.
+             * <p>The description of the application.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>test</p>
              */
             public Builder description(String description) {
                 this.description = description;
@@ -504,7 +593,10 @@ public class UpdateApplicationBaseInfoResponseBody extends TeaModel {
             }
 
             /**
-             * Indicates whether the application is a Docker application.
+             * <p>Indicates whether the application is a Docker application.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>false</p>
              */
             public Builder dockerize(Boolean dockerize) {
                 this.dockerize = dockerize;
@@ -512,7 +604,10 @@ public class UpdateApplicationBaseInfoResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the Internet-facing SLB instance.
+             * <p>The ID of the Internet-facing SLB instance.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>ace93*******</p>
              */
             public Builder extSlbId(String extSlbId) {
                 this.extSlbId = extSlbId;
@@ -520,7 +615,10 @@ public class UpdateApplicationBaseInfoResponseBody extends TeaModel {
             }
 
             /**
-             * The IP address of the Internet-facing Server Load Balancer (SLB) instance.
+             * <p>The IP address of the Internet-facing Server Load Balancer (SLB) instance.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>39.97.XX.XX</p>
              */
             public Builder extSlbIp(String extSlbIp) {
                 this.extSlbIp = extSlbIp;
@@ -528,7 +626,10 @@ public class UpdateApplicationBaseInfoResponseBody extends TeaModel {
             }
 
             /**
-             * The name of the Internet-facing SLB instance.
+             * <p>The name of the Internet-facing SLB instance.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>test</p>
              */
             public Builder extSlbName(String extSlbName) {
                 this.extSlbName = extSlbName;
@@ -536,7 +637,10 @@ public class UpdateApplicationBaseInfoResponseBody extends TeaModel {
             }
 
             /**
-             * The health check URL.
+             * <p>The health check URL.</p>
+             * 
+             * <strong>example:</strong>
+             * <p><a href="http://127.0.XX.XX:8080/_etc.html">http://127.0.XX.XX:8080/_etc.html</a></p>
              */
             public Builder healthCheckUrl(String healthCheckUrl) {
                 this.healthCheckUrl = healthCheckUrl;
@@ -544,7 +648,10 @@ public class UpdateApplicationBaseInfoResponseBody extends TeaModel {
             }
 
             /**
-             * The number of application instances.
+             * <p>The number of application instances.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder instanceCount(Integer instanceCount) {
                 this.instanceCount = instanceCount;
@@ -552,7 +659,10 @@ public class UpdateApplicationBaseInfoResponseBody extends TeaModel {
             }
 
             /**
-             * The size of memory configured for an application instance. Unit: MB.
+             * <p>The size of memory configured for an application instance. Unit: MB.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>0</p>
              */
             public Builder memory(Integer memory) {
                 this.memory = memory;
@@ -560,7 +670,10 @@ public class UpdateApplicationBaseInfoResponseBody extends TeaModel {
             }
 
             /**
-             * The name of the application.
+             * <p>The name of the application.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>test</p>
              */
             public Builder name(String name) {
                 this.name = name;
@@ -568,7 +681,10 @@ public class UpdateApplicationBaseInfoResponseBody extends TeaModel {
             }
 
             /**
-             * The owner of the application.
+             * <p>The owner of the application.</p>
+             * 
+             * <strong>example:</strong>
+             * <p><a href="mailto:test@aliyun_XXX.com">test@aliyun_XXX.com</a></p>
              */
             public Builder owner(String owner) {
                 this.owner = owner;
@@ -576,7 +692,10 @@ public class UpdateApplicationBaseInfoResponseBody extends TeaModel {
             }
 
             /**
-             * The port used by the application.
+             * <p>The port used by the application.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>8080</p>
              */
             public Builder port(Integer port) {
                 this.port = port;
@@ -584,7 +703,10 @@ public class UpdateApplicationBaseInfoResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the region.
+             * <p>The ID of the region.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>cn-beijing:****</p>
              */
             public Builder regionId(String regionId) {
                 this.regionId = regionId;
@@ -592,7 +714,10 @@ public class UpdateApplicationBaseInfoResponseBody extends TeaModel {
             }
 
             /**
-             * The number of running application instances.
+             * <p>The number of running application instances.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder runningInstanceCount(Integer runningInstanceCount) {
                 this.runningInstanceCount = runningInstanceCount;
@@ -600,7 +725,10 @@ public class UpdateApplicationBaseInfoResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the internal-facing SLB instance.
+             * <p>The ID of the internal-facing SLB instance.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>a3d4*******</p>
              */
             public Builder slbId(String slbId) {
                 this.slbId = slbId;
@@ -608,7 +736,10 @@ public class UpdateApplicationBaseInfoResponseBody extends TeaModel {
             }
 
             /**
-             * The IP address of the internal-facing SLB instance.
+             * <p>The IP address of the internal-facing SLB instance.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>192.168.XX.XX</p>
              */
             public Builder slbIp(String slbIp) {
                 this.slbIp = slbIp;
@@ -616,7 +747,10 @@ public class UpdateApplicationBaseInfoResponseBody extends TeaModel {
             }
 
             /**
-             * The name of the internal-facing SLB instance.
+             * <p>The name of the internal-facing SLB instance.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>test</p>
              */
             public Builder slbName(String slbName) {
                 this.slbName = slbName;
@@ -624,7 +758,10 @@ public class UpdateApplicationBaseInfoResponseBody extends TeaModel {
             }
 
             /**
-             * The port used by the internal-facing SLB instance.
+             * <p>The port used by the internal-facing SLB instance.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>80</p>
              */
             public Builder slbPort(Integer slbPort) {
                 this.slbPort = slbPort;
@@ -632,7 +769,10 @@ public class UpdateApplicationBaseInfoResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the Alibaba Cloud account.
+             * <p>The ID of the Alibaba Cloud account.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>edas_com***@****.***</p>
              */
             public Builder userId(String userId) {
                 this.userId = userId;

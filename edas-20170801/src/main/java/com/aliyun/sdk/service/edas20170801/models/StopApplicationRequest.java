@@ -1,24 +1,29 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.edas20170801.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link StopApplicationRequest} extends {@link RequestModel}
  *
  * <p>StopApplicationRequest</p>
  */
 public class StopApplicationRequest extends Request {
-    @Query
-    @NameInMap("AppId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("AppId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String appId;
 
-    @Query
-    @NameInMap("EccInfo")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("EccInfo")
     private String eccInfo;
 
     private StopApplicationRequest(Builder builder) {
@@ -35,7 +40,7 @@ public class StopApplicationRequest extends Request {
         return builder().build();
     }
 
-    @Override
+@Override
     public Builder toBuilder() {
         return new Builder(this);
     }
@@ -69,7 +74,11 @@ public class StopApplicationRequest extends Request {
         } 
 
         /**
-         * The ID of the application. You can call the ListApplication operation to query the application ID. For more information, see [ListApplication](~~149390~~).
+         * <p>The ID of the application. You can call the ListApplication operation to query the application ID. For more information, see <a href="https://help.aliyun.com/document_detail/149390.html">ListApplication</a>.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>c627c157-560d*******</p>
          */
         public Builder appId(String appId) {
             this.putQueryParameter("AppId", appId);
@@ -78,11 +87,14 @@ public class StopApplicationRequest extends Request {
         }
 
         /**
-         * The ID of the elastic compute container (ECC) that corresponds to the Elastic Compute Service (ECS) instance on which you want to stop the application. You can call the QueryApplicationStatus operation to query the ECC ID. For more information, see [QueryApplicationStatus](~~149394~~).
-         * <p>
+         * <p>The ID of the elastic compute container (ECC) that corresponds to the Elastic Compute Service (ECS) instance on which you want to stop the application. You can call the QueryApplicationStatus operation to query the ECC ID. For more information, see <a href="https://help.aliyun.com/document_detail/149394.html">QueryApplicationStatus</a>.</p>
+         * <ul>
+         * <li>If you want to stop the application on multiple ECS instances, separate the ECC IDs with commas (,).</li>
+         * <li>If you leave this parameter empty, the application will be stopped on all ECS instances.</li>
+         * </ul>
          * 
-         * *   If you want to stop the application on multiple ECS instances, separate the ECC IDs with commas (,).
-         * *   If you leave this parameter empty, the application will be stopped on all ECS instances.
+         * <strong>example:</strong>
+         * <p>74ee9166-<strong><strong>1f6-bcb60e5b</strong></strong></p>
          */
         public Builder eccInfo(String eccInfo) {
             this.putQueryParameter("EccInfo", eccInfo);

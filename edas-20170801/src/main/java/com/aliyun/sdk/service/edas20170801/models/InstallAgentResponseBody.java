@@ -1,27 +1,32 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.edas20170801.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link InstallAgentResponseBody} extends {@link TeaModel}
  *
  * <p>InstallAgentResponseBody</p>
  */
 public class InstallAgentResponseBody extends TeaModel {
-    @NameInMap("Code")
+    @com.aliyun.core.annotation.NameInMap("Code")
     private Integer code;
 
-    @NameInMap("ExecutionResultList")
+    @com.aliyun.core.annotation.NameInMap("ExecutionResultList")
     private ExecutionResultList executionResultList;
 
-    @NameInMap("Message")
+    @com.aliyun.core.annotation.NameInMap("Message")
     private String message;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
     private InstallAgentResponseBody(Builder builder) {
@@ -37,6 +42,10 @@ public class InstallAgentResponseBody extends TeaModel {
 
     public static InstallAgentResponseBody create() {
         return builder().build();
+    }
+
+    public Builder toBuilder() {
+        return new Builder(this);
     }
 
     /**
@@ -73,8 +82,21 @@ public class InstallAgentResponseBody extends TeaModel {
         private String message; 
         private String requestId; 
 
+        private Builder() {
+        } 
+
+        private Builder(InstallAgentResponseBody model) {
+            this.code = model.code;
+            this.executionResultList = model.executionResultList;
+            this.message = model.message;
+            this.requestId = model.requestId;
+        } 
+
         /**
-         * The HTTP status code that is returned.
+         * <p>The HTTP status code that is returned.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>200</p>
          */
         public Builder code(Integer code) {
             this.code = code;
@@ -82,7 +104,7 @@ public class InstallAgentResponseBody extends TeaModel {
         }
 
         /**
-         * The execution result.
+         * <p>The execution result.</p>
          */
         public Builder executionResultList(ExecutionResultList executionResultList) {
             this.executionResultList = executionResultList;
@@ -90,7 +112,10 @@ public class InstallAgentResponseBody extends TeaModel {
         }
 
         /**
-         * The message that is returned.
+         * <p>The message that is returned.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>success</p>
          */
         public Builder message(String message) {
             this.message = message;
@@ -98,7 +123,10 @@ public class InstallAgentResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the request.
+         * <p>The ID of the request.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>b197-40ab-9155-7ca7</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -111,20 +139,26 @@ public class InstallAgentResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link InstallAgentResponseBody} extends {@link TeaModel}
+     *
+     * <p>InstallAgentResponseBody</p>
+     */
     public static class ExecutionResult extends TeaModel {
-        @NameInMap("FinishedTime")
+        @com.aliyun.core.annotation.NameInMap("FinishedTime")
         private String finishedTime;
 
-        @NameInMap("InstanceId")
+        @com.aliyun.core.annotation.NameInMap("InstanceId")
         private String instanceId;
 
-        @NameInMap("InvokeRecordStatus")
+        @com.aliyun.core.annotation.NameInMap("InvokeRecordStatus")
         private String invokeRecordStatus;
 
-        @NameInMap("Status")
+        @com.aliyun.core.annotation.NameInMap("Status")
         private String status;
 
-        @NameInMap("Success")
+        @com.aliyun.core.annotation.NameInMap("Success")
         private Boolean success;
 
         private ExecutionResult(Builder builder) {
@@ -185,8 +219,22 @@ public class InstallAgentResponseBody extends TeaModel {
             private String status; 
             private Boolean success; 
 
+            private Builder() {
+            } 
+
+            private Builder(ExecutionResult model) {
+                this.finishedTime = model.finishedTime;
+                this.instanceId = model.instanceId;
+                this.invokeRecordStatus = model.invokeRecordStatus;
+                this.status = model.status;
+                this.success = model.success;
+            } 
+
             /**
-             * The time when the installation was complete.
+             * <p>The time when the installation was complete.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>20**-11-10T07:02:17Z</p>
              */
             public Builder finishedTime(String finishedTime) {
                 this.finishedTime = finishedTime;
@@ -194,7 +242,10 @@ public class InstallAgentResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the instance.
+             * <p>The ID of the instance.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>i-2ze7s2v0b789k*******</p>
              */
             public Builder instanceId(String instanceId) {
                 this.instanceId = instanceId;
@@ -202,7 +253,10 @@ public class InstallAgentResponseBody extends TeaModel {
             }
 
             /**
-             * The state of the installation.
+             * <p>The state of the installation.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Finished</p>
              */
             public Builder invokeRecordStatus(String invokeRecordStatus) {
                 this.invokeRecordStatus = invokeRecordStatus;
@@ -210,7 +264,10 @@ public class InstallAgentResponseBody extends TeaModel {
             }
 
             /**
-             * The state of the installation command.
+             * <p>The state of the installation command.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>OK</p>
              */
             public Builder status(String status) {
                 this.status = status;
@@ -218,7 +275,10 @@ public class InstallAgentResponseBody extends TeaModel {
             }
 
             /**
-             * Indicates whether the installation was successful.
+             * <p>Indicates whether the installation was successful.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>true</p>
              */
             public Builder success(Boolean success) {
                 this.success = success;
@@ -232,9 +292,15 @@ public class InstallAgentResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link InstallAgentResponseBody} extends {@link TeaModel}
+     *
+     * <p>InstallAgentResponseBody</p>
+     */
     public static class ExecutionResultList extends TeaModel {
-        @NameInMap("ExecutionResult")
-        private java.util.List < ExecutionResult> executionResult;
+        @com.aliyun.core.annotation.NameInMap("ExecutionResult")
+        private java.util.List<ExecutionResult> executionResult;
 
         private ExecutionResultList(Builder builder) {
             this.executionResult = builder.executionResult;
@@ -251,17 +317,24 @@ public class InstallAgentResponseBody extends TeaModel {
         /**
          * @return executionResult
          */
-        public java.util.List < ExecutionResult> getExecutionResult() {
+        public java.util.List<ExecutionResult> getExecutionResult() {
             return this.executionResult;
         }
 
         public static final class Builder {
-            private java.util.List < ExecutionResult> executionResult; 
+            private java.util.List<ExecutionResult> executionResult; 
+
+            private Builder() {
+            } 
+
+            private Builder(ExecutionResultList model) {
+                this.executionResult = model.executionResult;
+            } 
 
             /**
              * ExecutionResult.
              */
-            public Builder executionResult(java.util.List < ExecutionResult> executionResult) {
+            public Builder executionResult(java.util.List<ExecutionResult> executionResult) {
                 this.executionResult = executionResult;
                 return this;
             }

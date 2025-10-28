@@ -1,25 +1,30 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.edas20170801.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link AuthorizeApplicationRequest} extends {@link RequestModel}
  *
  * <p>AuthorizeApplicationRequest</p>
  */
 public class AuthorizeApplicationRequest extends Request {
-    @Query
-    @NameInMap("AppIds")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("AppIds")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String appIds;
 
-    @Query
-    @NameInMap("TargetUserId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("TargetUserId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String targetUserId;
 
     private AuthorizeApplicationRequest(Builder builder) {
@@ -36,7 +41,7 @@ public class AuthorizeApplicationRequest extends Request {
         return builder().build();
     }
 
-    @Override
+@Override
     public Builder toBuilder() {
         return new Builder(this);
     }
@@ -70,7 +75,11 @@ public class AuthorizeApplicationRequest extends Request {
         } 
 
         /**
-         * The ID of the application. You can specify multiple IDs. Separate multiple IDs with semicolons (;). If you leave this parameter empty, the permissions on the application are revoked.
+         * <p>The ID of the application. You can specify multiple IDs. Separate multiple IDs with semicolons (;). If you leave this parameter empty, the permissions on the application are revoked.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>5fdf50e8-<em><strong><strong>;696-</strong></strong></em>*</p>
          */
         public Builder appIds(String appIds) {
             this.putQueryParameter("AppIds", appIds);
@@ -79,7 +88,11 @@ public class AuthorizeApplicationRequest extends Request {
         }
 
         /**
-         * The ID of the RAM user to be authorized. The value of the parameter is in the `sub-account name@primary account UID` format.
+         * <p>The ID of the RAM user to be authorized. The value of the parameter is in the <code>sub-account name@primary account UID</code> format.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>test@133434434****</p>
          */
         public Builder targetUserId(String targetUserId) {
             this.putQueryParameter("TargetUserId", targetUserId);

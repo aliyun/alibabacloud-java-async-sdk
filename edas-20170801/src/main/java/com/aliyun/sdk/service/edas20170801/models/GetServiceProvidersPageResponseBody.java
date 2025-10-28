@@ -1,27 +1,32 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.edas20170801.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link GetServiceProvidersPageResponseBody} extends {@link TeaModel}
  *
  * <p>GetServiceProvidersPageResponseBody</p>
  */
 public class GetServiceProvidersPageResponseBody extends TeaModel {
-    @NameInMap("Code")
+    @com.aliyun.core.annotation.NameInMap("Code")
     private Integer code;
 
-    @NameInMap("Data")
+    @com.aliyun.core.annotation.NameInMap("Data")
     private Data data;
 
-    @NameInMap("Message")
+    @com.aliyun.core.annotation.NameInMap("Message")
     private String message;
 
-    @NameInMap("Success")
+    @com.aliyun.core.annotation.NameInMap("Success")
     private Boolean success;
 
     private GetServiceProvidersPageResponseBody(Builder builder) {
@@ -37,6 +42,10 @@ public class GetServiceProvidersPageResponseBody extends TeaModel {
 
     public static GetServiceProvidersPageResponseBody create() {
         return builder().build();
+    }
+
+    public Builder toBuilder() {
+        return new Builder(this);
     }
 
     /**
@@ -73,8 +82,21 @@ public class GetServiceProvidersPageResponseBody extends TeaModel {
         private String message; 
         private Boolean success; 
 
+        private Builder() {
+        } 
+
+        private Builder(GetServiceProvidersPageResponseBody model) {
+            this.code = model.code;
+            this.data = model.data;
+            this.message = model.message;
+            this.success = model.success;
+        } 
+
         /**
-         * The HTTP status code that is returned.
+         * <p>The HTTP status code that is returned.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>200</p>
          */
         public Builder code(Integer code) {
             this.code = code;
@@ -82,7 +104,7 @@ public class GetServiceProvidersPageResponseBody extends TeaModel {
         }
 
         /**
-         * The data structure.
+         * <p>The data structure.</p>
          */
         public Builder data(Data data) {
             this.data = data;
@@ -90,7 +112,10 @@ public class GetServiceProvidersPageResponseBody extends TeaModel {
         }
 
         /**
-         * The message returned for the request.
+         * <p>The message returned for the request.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>success</p>
          */
         public Builder message(String message) {
             this.message = message;
@@ -98,7 +123,10 @@ public class GetServiceProvidersPageResponseBody extends TeaModel {
         }
 
         /**
-         * Indicates whether the request is successful.
+         * <p>Indicates whether the request is successful.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder success(Boolean success) {
             this.success = success;
@@ -111,20 +139,26 @@ public class GetServiceProvidersPageResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link GetServiceProvidersPageResponseBody} extends {@link TeaModel}
+     *
+     * <p>GetServiceProvidersPageResponseBody</p>
+     */
     public static class Content extends TeaModel {
-        @NameInMap("Iannotations")
+        @com.aliyun.core.annotation.NameInMap("Iannotations")
         private String iannotations;
 
-        @NameInMap("Ip")
+        @com.aliyun.core.annotation.NameInMap("Ip")
         private String ip;
 
-        @NameInMap("Port")
+        @com.aliyun.core.annotation.NameInMap("Port")
         private String port;
 
-        @NameInMap("SerializeType")
+        @com.aliyun.core.annotation.NameInMap("SerializeType")
         private String serializeType;
 
-        @NameInMap("Timeout")
+        @com.aliyun.core.annotation.NameInMap("Timeout")
         private String timeout;
 
         private Content(Builder builder) {
@@ -185,8 +219,22 @@ public class GetServiceProvidersPageResponseBody extends TeaModel {
             private String serializeType; 
             private String timeout; 
 
+            private Builder() {
+            } 
+
+            private Builder(Content model) {
+                this.iannotations = model.iannotations;
+                this.ip = model.ip;
+                this.port = model.port;
+                this.serializeType = model.serializeType;
+                this.timeout = model.timeout;
+            } 
+
             /**
-             * The remarks of the service provider.
+             * <p>The remarks of the service provider.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>172.178.XX.XX</p>
              */
             public Builder iannotations(String iannotations) {
                 this.iannotations = iannotations;
@@ -194,7 +242,10 @@ public class GetServiceProvidersPageResponseBody extends TeaModel {
             }
 
             /**
-             * The IP address of the service provider.
+             * <p>The IP address of the service provider.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>10.20.XX.XX</p>
              */
             public Builder ip(String ip) {
                 this.ip = ip;
@@ -202,7 +253,10 @@ public class GetServiceProvidersPageResponseBody extends TeaModel {
             }
 
             /**
-             * The port number of the service provider.
+             * <p>The port number of the service provider.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>12345</p>
              */
             public Builder port(String port) {
                 this.port = port;
@@ -210,7 +264,10 @@ public class GetServiceProvidersPageResponseBody extends TeaModel {
             }
 
             /**
-             * The serialization type.
+             * <p>The serialization type.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>hessian2</p>
              */
             public Builder serializeType(String serializeType) {
                 this.serializeType = serializeType;
@@ -218,7 +275,10 @@ public class GetServiceProvidersPageResponseBody extends TeaModel {
             }
 
             /**
-             * The service timeout period.
+             * <p>The service timeout period.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1000</p>
              */
             public Builder timeout(String timeout) {
                 this.timeout = timeout;
@@ -232,17 +292,23 @@ public class GetServiceProvidersPageResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link GetServiceProvidersPageResponseBody} extends {@link TeaModel}
+     *
+     * <p>GetServiceProvidersPageResponseBody</p>
+     */
     public static class Data extends TeaModel {
-        @NameInMap("Content")
-        private java.util.List < Content> content;
+        @com.aliyun.core.annotation.NameInMap("Content")
+        private java.util.List<Content> content;
 
-        @NameInMap("Size")
+        @com.aliyun.core.annotation.NameInMap("Size")
         private Integer size;
 
-        @NameInMap("TotalElements")
+        @com.aliyun.core.annotation.NameInMap("TotalElements")
         private Integer totalElements;
 
-        @NameInMap("TotalPages")
+        @com.aliyun.core.annotation.NameInMap("TotalPages")
         private Integer totalPages;
 
         private Data(Builder builder) {
@@ -263,7 +329,7 @@ public class GetServiceProvidersPageResponseBody extends TeaModel {
         /**
          * @return content
          */
-        public java.util.List < Content> getContent() {
+        public java.util.List<Content> getContent() {
             return this.content;
         }
 
@@ -289,21 +355,34 @@ public class GetServiceProvidersPageResponseBody extends TeaModel {
         }
 
         public static final class Builder {
-            private java.util.List < Content> content; 
+            private java.util.List<Content> content; 
             private Integer size; 
             private Integer totalElements; 
             private Integer totalPages; 
 
+            private Builder() {
+            } 
+
+            private Builder(Data model) {
+                this.content = model.content;
+                this.size = model.size;
+                this.totalElements = model.totalElements;
+                this.totalPages = model.totalPages;
+            } 
+
             /**
-             * The data array returned.
+             * <p>The data array returned.</p>
              */
-            public Builder content(java.util.List < Content> content) {
+            public Builder content(java.util.List<Content> content) {
                 this.content = content;
                 return this;
             }
 
             /**
-             * The number of entries returned per page.
+             * <p>The number of entries returned per page.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>5</p>
              */
             public Builder size(Integer size) {
                 this.size = size;
@@ -311,7 +390,10 @@ public class GetServiceProvidersPageResponseBody extends TeaModel {
             }
 
             /**
-             * The total number of returned entries.
+             * <p>The total number of returned entries.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder totalElements(Integer totalElements) {
                 this.totalElements = totalElements;
@@ -319,7 +401,10 @@ public class GetServiceProvidersPageResponseBody extends TeaModel {
             }
 
             /**
-             * The total number of returned pages.
+             * <p>The total number of returned pages.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder totalPages(Integer totalPages) {
                 this.totalPages = totalPages;

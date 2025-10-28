@@ -1,38 +1,43 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.edas20170801.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link UntagResourcesRequest} extends {@link RequestModel}
  *
  * <p>UntagResourcesRequest</p>
  */
 public class UntagResourcesRequest extends Request {
-    @Query
-    @NameInMap("DeleteAll")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("DeleteAll")
     private Boolean deleteAll;
 
-    @Query
-    @NameInMap("ResourceIds")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ResourceIds")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String resourceIds;
 
-    @Query
-    @NameInMap("ResourceRegionId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ResourceRegionId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String resourceRegionId;
 
-    @Query
-    @NameInMap("ResourceType")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ResourceType")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String resourceType;
 
-    @Query
-    @NameInMap("TagKeys")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("TagKeys")
     private String tagKeys;
 
     private UntagResourcesRequest(Builder builder) {
@@ -52,7 +57,7 @@ public class UntagResourcesRequest extends Request {
         return builder().build();
     }
 
-    @Override
+@Override
     public Builder toBuilder() {
         return new Builder(this);
     }
@@ -113,13 +118,17 @@ public class UntagResourcesRequest extends Request {
         } 
 
         /**
-         * Specifies whether to remove all existing tags from the specified resources. Default value: false. Valid values:
-         * <p>
+         * <p>Specifies whether to remove all existing tags from the specified resources. Default value: false. Valid values:</p>
+         * <ul>
+         * <li><strong>true</strong>: removes all existing tags from the specified resources.</li>
+         * <li><strong>false</strong>: does not remove all existing tags from the specified resources.</li>
+         * </ul>
+         * <blockquote>
+         * <p>All existing tags of a resource are removed only if the <strong>tagKeys</strong> parameter is left empty and the <strong>DeleteAll</strong> parameter is set to true.</p>
+         * </blockquote>
          * 
-         * *   **true**: removes all existing tags from the specified resources.
-         * *   **false**: does not remove all existing tags from the specified resources.
-         * 
-         * > All existing tags of a resource are removed only if the **tagKeys** parameter is left empty and the **DeleteAll** parameter is set to true.
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder deleteAll(Boolean deleteAll) {
             this.putQueryParameter("DeleteAll", deleteAll);
@@ -128,7 +137,11 @@ public class UntagResourcesRequest extends Request {
         }
 
         /**
-         * The IDs of the resources from which you want to remove tags. You can specify up to 20 IDs.
+         * <p>The IDs of the resources from which you want to remove tags. You can specify up to 20 IDs.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>[&quot;f5ad6ff7-xxxx-xxxx-xxxx-2axxxx82xxxx&quot;]</p>
          */
         public Builder resourceIds(String resourceIds) {
             this.putQueryParameter("ResourceIds", resourceIds);
@@ -137,7 +150,11 @@ public class UntagResourcesRequest extends Request {
         }
 
         /**
-         * The region in which the resource resides.
+         * <p>The region in which the resource resides.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-beijing</p>
          */
         public Builder resourceRegionId(String resourceRegionId) {
             this.putQueryParameter("ResourceRegionId", resourceRegionId);
@@ -146,11 +163,15 @@ public class UntagResourcesRequest extends Request {
         }
 
         /**
-         * The type of the resource. Valid values:
-         * <p>
+         * <p>The type of the resource. Valid values:</p>
+         * <ul>
+         * <li><strong>application</strong>: Enterprise Distributed Application Service (EDAS) application</li>
+         * <li><strong>cluster</strong>: EDAS cluster</li>
+         * </ul>
+         * <p>This parameter is required.</p>
          * 
-         * *   **application**: Enterprise Distributed Application Service (EDAS) application
-         * *   **cluster**: EDAS cluster
+         * <strong>example:</strong>
+         * <p>application</p>
          */
         public Builder resourceType(String resourceType) {
             this.putQueryParameter("ResourceType", resourceType);
@@ -159,7 +180,10 @@ public class UntagResourcesRequest extends Request {
         }
 
         /**
-         * The tags that you want to remove. You can specify up to 20 tags. Set this parameter to a JSON array.
+         * <p>The tags that you want to remove. You can specify up to 20 tags. Set this parameter to a JSON array.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>[&quot;tagKey1&quot;,&quot;tagKey2&quot;]</p>
          */
         public Builder tagKeys(String tagKeys) {
             this.putQueryParameter("TagKeys", tagKeys);

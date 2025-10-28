@@ -1,45 +1,50 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.edas20170801.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link InsertOrUpdateRegionRequest} extends {@link RequestModel}
  *
  * <p>InsertOrUpdateRegionRequest</p>
  */
 public class InsertOrUpdateRegionRequest extends Request {
-    @Query
-    @NameInMap("DebugEnable")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("DebugEnable")
     private Boolean debugEnable;
 
-    @Query
-    @NameInMap("Description")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Description")
     private String description;
 
-    @Query
-    @NameInMap("Id")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Id")
     private Long id;
 
-    @Query
-    @NameInMap("MseInstanceId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("MseInstanceId")
     private String mseInstanceId;
 
-    @Query
-    @NameInMap("RegionName")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("RegionName")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String regionName;
 
-    @Query
-    @NameInMap("RegionTag")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("RegionTag")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String regionTag;
 
-    @Query
-    @NameInMap("RegistryType")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("RegistryType")
     private String registryType;
 
     private InsertOrUpdateRegionRequest(Builder builder) {
@@ -61,7 +66,7 @@ public class InsertOrUpdateRegionRequest extends Request {
         return builder().build();
     }
 
-    @Override
+@Override
     public Builder toBuilder() {
         return new Builder(this);
     }
@@ -140,11 +145,14 @@ public class InsertOrUpdateRegionRequest extends Request {
         } 
 
         /**
-         * Specifies whether to enable remote debugging. Valid values:
-         * <p>
+         * <p>Specifies whether to enable remote debugging. Valid values:</p>
+         * <ul>
+         * <li>true: enables remote debugging.</li>
+         * <li>false: disables remote debugging.</li>
+         * </ul>
          * 
-         * *   true: enables remote debugging.
-         * *   false: disables remote debugging.
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder debugEnable(Boolean debugEnable) {
             this.putQueryParameter("DebugEnable", debugEnable);
@@ -153,7 +161,10 @@ public class InsertOrUpdateRegionRequest extends Request {
         }
 
         /**
-         * The description of the namespace. The description can be up to 128 characters in length.
+         * <p>The description of the namespace. The description can be up to 128 characters in length.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>test</p>
          */
         public Builder description(String description) {
             this.putQueryParameter("Description", description);
@@ -162,7 +173,10 @@ public class InsertOrUpdateRegionRequest extends Request {
         }
 
         /**
-         * Specifies whether to create or modify the namespace. If this parameter is left empty or is set to 0, the namespace is created. Otherwise, the namespace is modified.
+         * <p>Specifies whether to create or modify the namespace. If this parameter is left empty or is set to 0, the namespace is created. Otherwise, the namespace is modified.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>0</p>
          */
         public Builder id(Long id) {
             this.putQueryParameter("Id", id);
@@ -171,7 +185,10 @@ public class InsertOrUpdateRegionRequest extends Request {
         }
 
         /**
-         * The ID of the MSE registry.
+         * <p>The ID of the MSE registry.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>mse_prepaid_public_cn-tl32n******</p>
          */
         public Builder mseInstanceId(String mseInstanceId) {
             this.putQueryParameter("MseInstanceId", mseInstanceId);
@@ -180,7 +197,11 @@ public class InsertOrUpdateRegionRequest extends Request {
         }
 
         /**
-         * The name of the namespace. The name can be up to 63 characters in length.
+         * <p>The name of the namespace. The name can be up to 63 characters in length.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>test_region</p>
          */
         public Builder regionName(String regionName) {
             this.putQueryParameter("RegionName", regionName);
@@ -189,11 +210,15 @@ public class InsertOrUpdateRegionRequest extends Request {
         }
 
         /**
-         * The ID of the namespace.
-         * <p>
+         * <p>The ID of the namespace.</p>
+         * <ul>
+         * <li>The ID of a custom namespace is in the <code>Region ID:Namespace identifier</code> format. Example: cn-beijing:tdy218.</li>
+         * <li>The ID of the default namespace is in the <code>region ID</code> format. Example: cn-beijing.</li>
+         * </ul>
+         * <p>This parameter is required.</p>
          * 
-         * *   The ID of a custom namespace is in the `Region ID:Namespace identifier` format. Example: cn-beijing:tdy218.
-         * *   The ID of the default namespace is in the `region ID` format. Example: cn-beijing.
+         * <strong>example:</strong>
+         * <p>cn-beijing:test</p>
          */
         public Builder regionTag(String regionTag) {
             this.putQueryParameter("RegionTag", regionTag);
@@ -202,11 +227,14 @@ public class InsertOrUpdateRegionRequest extends Request {
         }
 
         /**
-         * The type of the registry.
-         * <p>
+         * <p>The type of the registry.</p>
+         * <ul>
+         * <li>default: the shared registry of Enterprise Distributed Application Service (EDAS)</li>
+         * <li>exclusive_mse: a Microservices Engine (MSE) registry</li>
+         * </ul>
          * 
-         * *   default: the shared registry of Enterprise Distributed Application Service (EDAS)
-         * *   exclusive_mse: a Microservices Engine (MSE) registry
+         * <strong>example:</strong>
+         * <p>default</p>
          */
         public Builder registryType(String registryType) {
             this.putQueryParameter("RegistryType", registryType);

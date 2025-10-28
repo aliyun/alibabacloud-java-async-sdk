@@ -1,28 +1,33 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.edas20170801.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link GetK8sServicesResponseBody} extends {@link TeaModel}
  *
  * <p>GetK8sServicesResponseBody</p>
  */
 public class GetK8sServicesResponseBody extends TeaModel {
-    @NameInMap("Code")
+    @com.aliyun.core.annotation.NameInMap("Code")
     private Integer code;
 
-    @NameInMap("Message")
+    @com.aliyun.core.annotation.NameInMap("Message")
     private String message;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("Services")
-    private java.util.List < Services> services;
+    @com.aliyun.core.annotation.NameInMap("Services")
+    private java.util.List<Services> services;
 
     private GetK8sServicesResponseBody(Builder builder) {
         this.code = builder.code;
@@ -37,6 +42,10 @@ public class GetK8sServicesResponseBody extends TeaModel {
 
     public static GetK8sServicesResponseBody create() {
         return builder().build();
+    }
+
+    public Builder toBuilder() {
+        return new Builder(this);
     }
 
     /**
@@ -63,7 +72,7 @@ public class GetK8sServicesResponseBody extends TeaModel {
     /**
      * @return services
      */
-    public java.util.List < Services> getServices() {
+    public java.util.List<Services> getServices() {
         return this.services;
     }
 
@@ -71,10 +80,23 @@ public class GetK8sServicesResponseBody extends TeaModel {
         private Integer code; 
         private String message; 
         private String requestId; 
-        private java.util.List < Services> services; 
+        private java.util.List<Services> services; 
+
+        private Builder() {
+        } 
+
+        private Builder(GetK8sServicesResponseBody model) {
+            this.code = model.code;
+            this.message = model.message;
+            this.requestId = model.requestId;
+            this.services = model.services;
+        } 
 
         /**
-         * The ID of the change process.
+         * <p>The ID of the change process.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>200</p>
          */
         public Builder code(Integer code) {
             this.code = code;
@@ -82,7 +104,10 @@ public class GetK8sServicesResponseBody extends TeaModel {
         }
 
         /**
-         * The additional information that is returned.
+         * <p>The additional information that is returned.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>success</p>
          */
         public Builder message(String message) {
             this.message = message;
@@ -90,7 +115,10 @@ public class GetK8sServicesResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the request.
+         * <p>The ID of the request.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>4823-bhjf-23u4-eiufh</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -98,9 +126,9 @@ public class GetK8sServicesResponseBody extends TeaModel {
         }
 
         /**
-         * The list of services in the Kubernetes cluster.
+         * <p>The list of services in the Kubernetes cluster.</p>
          */
-        public Builder services(java.util.List < Services> services) {
+        public Builder services(java.util.List<Services> services) {
             this.services = services;
             return this;
         }
@@ -111,17 +139,23 @@ public class GetK8sServicesResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link GetK8sServicesResponseBody} extends {@link TeaModel}
+     *
+     * <p>GetK8sServicesResponseBody</p>
+     */
     public static class ServicePorts extends TeaModel {
-        @NameInMap("NodePort")
+        @com.aliyun.core.annotation.NameInMap("NodePort")
         private Integer nodePort;
 
-        @NameInMap("Port")
+        @com.aliyun.core.annotation.NameInMap("Port")
         private Integer port;
 
-        @NameInMap("Protocol")
+        @com.aliyun.core.annotation.NameInMap("Protocol")
         private String protocol;
 
-        @NameInMap("TargetPort")
+        @com.aliyun.core.annotation.NameInMap("TargetPort")
         private String targetPort;
 
         private ServicePorts(Builder builder) {
@@ -173,8 +207,21 @@ public class GetK8sServicesResponseBody extends TeaModel {
             private String protocol; 
             private String targetPort; 
 
+            private Builder() {
+            } 
+
+            private Builder(ServicePorts model) {
+                this.nodePort = model.nodePort;
+                this.port = model.port;
+                this.protocol = model.protocol;
+                this.targetPort = model.targetPort;
+            } 
+
             /**
-             * The port of the node.
+             * <p>The port of the node.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>0</p>
              */
             public Builder nodePort(Integer nodePort) {
                 this.nodePort = nodePort;
@@ -182,7 +229,10 @@ public class GetK8sServicesResponseBody extends TeaModel {
             }
 
             /**
-             * The frontend service port.
+             * <p>The frontend service port.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>80</p>
              */
             public Builder port(Integer port) {
                 this.port = port;
@@ -190,7 +240,10 @@ public class GetK8sServicesResponseBody extends TeaModel {
             }
 
             /**
-             * The protocol of the service.
+             * <p>The protocol of the service.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>TCP</p>
              */
             public Builder protocol(String protocol) {
                 this.protocol = protocol;
@@ -198,7 +251,10 @@ public class GetK8sServicesResponseBody extends TeaModel {
             }
 
             /**
-             * The backend container port.
+             * <p>The backend container port.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>8080</p>
              */
             public Builder targetPort(String targetPort) {
                 this.targetPort = targetPort;
@@ -212,17 +268,23 @@ public class GetK8sServicesResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link GetK8sServicesResponseBody} extends {@link TeaModel}
+     *
+     * <p>GetK8sServicesResponseBody</p>
+     */
     public static class Services extends TeaModel {
-        @NameInMap("ClusterIP")
+        @com.aliyun.core.annotation.NameInMap("ClusterIP")
         private String clusterIP;
 
-        @NameInMap("Name")
+        @com.aliyun.core.annotation.NameInMap("Name")
         private String name;
 
-        @NameInMap("ServicePorts")
-        private java.util.List < ServicePorts> servicePorts;
+        @com.aliyun.core.annotation.NameInMap("ServicePorts")
+        private java.util.List<ServicePorts> servicePorts;
 
-        @NameInMap("Type")
+        @com.aliyun.core.annotation.NameInMap("Type")
         private String type;
 
         private Services(Builder builder) {
@@ -257,7 +319,7 @@ public class GetK8sServicesResponseBody extends TeaModel {
         /**
          * @return servicePorts
          */
-        public java.util.List < ServicePorts> getServicePorts() {
+        public java.util.List<ServicePorts> getServicePorts() {
             return this.servicePorts;
         }
 
@@ -271,11 +333,24 @@ public class GetK8sServicesResponseBody extends TeaModel {
         public static final class Builder {
             private String clusterIP; 
             private String name; 
-            private java.util.List < ServicePorts> servicePorts; 
+            private java.util.List<ServicePorts> servicePorts; 
             private String type; 
 
+            private Builder() {
+            } 
+
+            private Builder(Services model) {
+                this.clusterIP = model.clusterIP;
+                this.name = model.name;
+                this.servicePorts = model.servicePorts;
+                this.type = model.type;
+            } 
+
             /**
-             * The IP address of the service in the Kubernetes cluster.
+             * <p>The IP address of the service in the Kubernetes cluster.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>104.23.xx.xx</p>
              */
             public Builder clusterIP(String clusterIP) {
                 this.clusterIP = clusterIP;
@@ -283,7 +358,10 @@ public class GetK8sServicesResponseBody extends TeaModel {
             }
 
             /**
-             * The name of the service.
+             * <p>The name of the service.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>service-http</p>
              */
             public Builder name(String name) {
                 this.name = name;
@@ -291,15 +369,18 @@ public class GetK8sServicesResponseBody extends TeaModel {
             }
 
             /**
-             * The mapping of service ports.
+             * <p>The mapping of service ports.</p>
              */
-            public Builder servicePorts(java.util.List < ServicePorts> servicePorts) {
+            public Builder servicePorts(java.util.List<ServicePorts> servicePorts) {
                 this.servicePorts = servicePorts;
                 return this;
             }
 
             /**
-             * The type of the service.
+             * <p>The type of the service.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>ClusterIP</p>
              */
             public Builder type(String type) {
                 this.type = type;

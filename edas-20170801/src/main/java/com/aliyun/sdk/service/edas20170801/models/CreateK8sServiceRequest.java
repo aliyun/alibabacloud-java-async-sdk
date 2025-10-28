@@ -1,39 +1,44 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.edas20170801.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link CreateK8sServiceRequest} extends {@link RequestModel}
  *
  * <p>CreateK8sServiceRequest</p>
  */
 public class CreateK8sServiceRequest extends Request {
-    @Query
-    @NameInMap("AppId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("AppId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String appId;
 
-    @Query
-    @NameInMap("ExternalTrafficPolicy")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ExternalTrafficPolicy")
     private String externalTrafficPolicy;
 
-    @Query
-    @NameInMap("Name")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Name")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String name;
 
-    @Query
-    @NameInMap("ServicePorts")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ServicePorts")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String servicePorts;
 
-    @Query
-    @NameInMap("Type")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Type")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String type;
 
     private CreateK8sServiceRequest(Builder builder) {
@@ -53,7 +58,7 @@ public class CreateK8sServiceRequest extends Request {
         return builder().build();
     }
 
-    @Override
+@Override
     public Builder toBuilder() {
         return new Builder(this);
     }
@@ -114,7 +119,11 @@ public class CreateK8sServiceRequest extends Request {
         } 
 
         /**
-         * The application ID.
+         * <p>The application ID.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>5a166fbd-<strong><strong>-</strong></strong>-a286-781659d9f54c</p>
          */
         public Builder appId(String appId) {
             this.putQueryParameter("AppId", appId);
@@ -123,13 +132,15 @@ public class CreateK8sServiceRequest extends Request {
         }
 
         /**
-         * The policy used for external traffic management. Valid values:
-         * <p>
+         * <p>The policy used for external traffic management. Valid values:</p>
+         * <ul>
+         * <li>Local: The network traffic can be routed to pods on the node where the Service is deployed.</li>
+         * <li>Cluster: The network traffic can be routed to pods on other nodes in the cluster.</li>
+         * </ul>
+         * <p>Default value: Local.</p>
          * 
-         * *   Local: The network traffic can be routed to pods on the node where the Service is deployed.
-         * *   Cluster: The network traffic can be routed to pods on other nodes in the cluster.
-         * 
-         * Default value: Local.
+         * <strong>example:</strong>
+         * <p>Local</p>
          */
         public Builder externalTrafficPolicy(String externalTrafficPolicy) {
             this.putQueryParameter("ExternalTrafficPolicy", externalTrafficPolicy);
@@ -138,7 +149,11 @@ public class CreateK8sServiceRequest extends Request {
         }
 
         /**
-         * The name of the Kubernetes Service.
+         * <p>The name of the Kubernetes Service.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>service-http</p>
          */
         public Builder name(String name) {
             this.putQueryParameter("Name", name);
@@ -147,14 +162,17 @@ public class CreateK8sServiceRequest extends Request {
         }
 
         /**
-         * The port mapping of the Kubernetes Service. Set this parameter to a JSON array. The following parameters are included in the configurations:
-         * <p>
+         * <p>The port mapping of the Kubernetes Service. Set this parameter to a JSON array. The following parameters are included in the configurations:</p>
+         * <ul>
+         * <li><strong>protocol</strong>: the protocol used by the Service. Valid values: TCP and UDP. This parameter is mandatory.</li>
+         * <li><strong>port</strong>: the frontend service port. Valid values: 1 to 65535. This parameter is mandatory.</li>
+         * <li><strong>targetPort</strong>: the backend container port. Valid values: 1 to 65535. This parameter is mandatory.</li>
+         * </ul>
+         * <p>Example: <code>[{&quot;protocol&quot;: &quot;TCP&quot;, &quot;port&quot;: 80, &quot;targetPort&quot;: 8080},{&quot;protocol&quot;: &quot;TCP&quot;, &quot;port&quot;: 81, &quot;targetPort&quot;: 8081}]</code></p>
+         * <p>This parameter is required.</p>
          * 
-         * *   **protocol**: the protocol used by the Service. Valid values: TCP and UDP. This parameter is mandatory.
-         * *   **port**: the frontend service port. Valid values: 1 to 65535. This parameter is mandatory.
-         * *   **targetPort**: the backend container port. Valid values: 1 to 65535. This parameter is mandatory.
-         * 
-         * Example: `[{"protocol": "TCP", "port": 80, "targetPort": 8080},{"protocol": "TCP", "port": 81, "targetPort": 8081}]`
+         * <strong>example:</strong>
+         * <p>[{&quot;protocol&quot;:&quot;TCP&quot;,&quot;port&quot;:80,&quot;targetPort&quot;:8080}]</p>
          */
         public Builder servicePorts(String servicePorts) {
             this.putQueryParameter("ServicePorts", servicePorts);
@@ -163,7 +181,11 @@ public class CreateK8sServiceRequest extends Request {
         }
 
         /**
-         * The type of the Kubernetes Service. Set the value to ClusterIP.
+         * <p>The type of the Kubernetes Service. Set the value to ClusterIP.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>ClusterIP</p>
          */
         public Builder type(String type) {
             this.putQueryParameter("Type", type);

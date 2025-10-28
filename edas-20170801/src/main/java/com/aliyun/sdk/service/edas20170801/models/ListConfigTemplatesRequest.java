@@ -1,31 +1,36 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.edas20170801.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ListConfigTemplatesRequest} extends {@link RequestModel}
  *
  * <p>ListConfigTemplatesRequest</p>
  */
 public class ListConfigTemplatesRequest extends Request {
-    @Query
-    @NameInMap("CurrentPage")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("CurrentPage")
     private Long currentPage;
 
-    @Query
-    @NameInMap("Id")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Id")
     private Long id;
 
-    @Query
-    @NameInMap("Name")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Name")
     private String name;
 
-    @Query
-    @NameInMap("PageSize")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("PageSize")
     private Long pageSize;
 
     private ListConfigTemplatesRequest(Builder builder) {
@@ -44,7 +49,7 @@ public class ListConfigTemplatesRequest extends Request {
         return builder().build();
     }
 
-    @Override
+@Override
     public Builder toBuilder() {
         return new Builder(this);
     }
@@ -96,7 +101,10 @@ public class ListConfigTemplatesRequest extends Request {
         } 
 
         /**
-         * The number of the page to return. Pages start from Page 1.
+         * <p>The number of the page to return. Pages start from Page 1.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder currentPage(Long currentPage) {
             this.putQueryParameter("CurrentPage", currentPage);
@@ -105,7 +113,10 @@ public class ListConfigTemplatesRequest extends Request {
         }
 
         /**
-         * The ID of the configuration template.
+         * <p>The ID of the configuration template.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>3d84efaf-37d9-49fb-a3a8-b38d5c******</p>
          */
         public Builder id(Long id) {
             this.putQueryParameter("Id", id);
@@ -114,7 +125,10 @@ public class ListConfigTemplatesRequest extends Request {
         }
 
         /**
-         * The name of the configuration template.
+         * <p>The name of the configuration template.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>config-tmpl-1</p>
          */
         public Builder name(String name) {
             this.putQueryParameter("Name", name);
@@ -123,7 +137,10 @@ public class ListConfigTemplatesRequest extends Request {
         }
 
         /**
-         * The number of entries to return on each page.
+         * <p>The number of entries to return on each page.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10</p>
          */
         public Builder pageSize(Long pageSize) {
             this.putQueryParameter("PageSize", pageSize);

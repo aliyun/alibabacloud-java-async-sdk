@@ -1,27 +1,32 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.edas20170801.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ListK8sNamespacesResponseBody} extends {@link TeaModel}
  *
  * <p>ListK8sNamespacesResponseBody</p>
  */
 public class ListK8sNamespacesResponseBody extends TeaModel {
-    @NameInMap("Code")
+    @com.aliyun.core.annotation.NameInMap("Code")
     private Integer code;
 
-    @NameInMap("Data")
-    private java.util.List < Data> data;
+    @com.aliyun.core.annotation.NameInMap("Data")
+    private java.util.List<Data> data;
 
-    @NameInMap("Message")
+    @com.aliyun.core.annotation.NameInMap("Message")
     private String message;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
     private ListK8sNamespacesResponseBody(Builder builder) {
@@ -39,6 +44,10 @@ public class ListK8sNamespacesResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return code
      */
@@ -49,7 +58,7 @@ public class ListK8sNamespacesResponseBody extends TeaModel {
     /**
      * @return data
      */
-    public java.util.List < Data> getData() {
+    public java.util.List<Data> getData() {
         return this.data;
     }
 
@@ -69,12 +78,25 @@ public class ListK8sNamespacesResponseBody extends TeaModel {
 
     public static final class Builder {
         private Integer code; 
-        private java.util.List < Data> data; 
+        private java.util.List<Data> data; 
         private String message; 
         private String requestId; 
 
+        private Builder() {
+        } 
+
+        private Builder(ListK8sNamespacesResponseBody model) {
+            this.code = model.code;
+            this.data = model.data;
+            this.message = model.message;
+            this.requestId = model.requestId;
+        } 
+
         /**
-         * The HTTP status code that is returned.
+         * <p>The HTTP status code that is returned.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>200</p>
          */
         public Builder code(Integer code) {
             this.code = code;
@@ -82,15 +104,18 @@ public class ListK8sNamespacesResponseBody extends TeaModel {
         }
 
         /**
-         * The data that is returned.
+         * <p>The data that is returned.</p>
          */
-        public Builder data(java.util.List < Data> data) {
+        public Builder data(java.util.List<Data> data) {
             this.data = data;
             return this;
         }
 
         /**
-         * The message returned for the request.
+         * <p>The message returned for the request.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>success</p>
          */
         public Builder message(String message) {
             this.message = message;
@@ -98,7 +123,10 @@ public class ListK8sNamespacesResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the request.
+         * <p>The ID of the request.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>57F146F6-3C94-<strong><strong>-</strong></strong>-A66EF4B9*****</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -111,8 +139,14 @@ public class ListK8sNamespacesResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link ListK8sNamespacesResponseBody} extends {@link TeaModel}
+     *
+     * <p>ListK8sNamespacesResponseBody</p>
+     */
     public static class Data extends TeaModel {
-        @NameInMap("Namespace")
+        @com.aliyun.core.annotation.NameInMap("Namespace")
         private String namespace;
 
         private Data(Builder builder) {
@@ -137,8 +171,18 @@ public class ListK8sNamespacesResponseBody extends TeaModel {
         public static final class Builder {
             private String namespace; 
 
+            private Builder() {
+            } 
+
+            private Builder(Data model) {
+                this.namespace = model.namespace;
+            } 
+
             /**
-             * The namespaces of the Kubernetes cluster.
+             * <p>The namespaces of the Kubernetes cluster.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>development</p>
              */
             public Builder namespace(String namespace) {
                 this.namespace = namespace;

@@ -1,105 +1,110 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.edas20170801.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link AppConfig} extends {@link TeaModel}
  *
  * <p>AppConfig</p>
  */
 public class AppConfig extends TeaModel {
-    @NameInMap("Command")
+    @com.aliyun.core.annotation.NameInMap("Command")
     private String command;
 
-    @NameInMap("CommandArgs")
-    private java.util.List < String > commandArgs;
+    @com.aliyun.core.annotation.NameInMap("CommandArgs")
+    private java.util.List<String> commandArgs;
 
-    @NameInMap("ConfigMountDescs")
-    private java.util.List < ConfigMountDescs> configMountDescs;
+    @com.aliyun.core.annotation.NameInMap("ConfigMountDescs")
+    private java.util.List<ConfigMountDescs> configMountDescs;
 
-    @NameInMap("DeployAcrossNodes")
+    @com.aliyun.core.annotation.NameInMap("DeployAcrossNodes")
     private Boolean deployAcrossNodes;
 
-    @NameInMap("DeployAcrossZones")
+    @com.aliyun.core.annotation.NameInMap("DeployAcrossZones")
     private Boolean deployAcrossZones;
 
-    @NameInMap("EmptyDirs")
-    private java.util.List < EmptyDirs> emptyDirs;
+    @com.aliyun.core.annotation.NameInMap("EmptyDirs")
+    private java.util.List<EmptyDirs> emptyDirs;
 
-    @NameInMap("EnableAhas")
+    @com.aliyun.core.annotation.NameInMap("EnableAhas")
     private Boolean enableAhas;
 
-    @NameInMap("EnvFroms")
-    private java.util.List < EnvFroms> envFroms;
+    @com.aliyun.core.annotation.NameInMap("EnvFroms")
+    private java.util.List<EnvFroms> envFroms;
 
-    @NameInMap("Envs")
-    private java.util.List < Envs> envs;
+    @com.aliyun.core.annotation.NameInMap("Envs")
+    private java.util.List<Envs> envs;
 
-    @NameInMap("ImageConfig")
+    @com.aliyun.core.annotation.NameInMap("ImageConfig")
     private ImageConfig imageConfig;
 
-    @NameInMap("IsMultilingualApp")
+    @com.aliyun.core.annotation.NameInMap("IsMultilingualApp")
     private Boolean isMultilingualApp;
 
-    @NameInMap("JavaStartUpConfig")
+    @com.aliyun.core.annotation.NameInMap("JavaStartUpConfig")
     private String javaStartUpConfig;
 
-    @NameInMap("LimitCpu")
+    @com.aliyun.core.annotation.NameInMap("LimitCpu")
     private String limitCpu;
 
-    @NameInMap("LimitMem")
+    @com.aliyun.core.annotation.NameInMap("LimitMem")
     private String limitMem;
 
-    @NameInMap("Liveness")
+    @com.aliyun.core.annotation.NameInMap("Liveness")
     private String liveness;
 
-    @NameInMap("LocalVolumes")
-    private java.util.List < LocalVolumes> localVolumes;
+    @com.aliyun.core.annotation.NameInMap("LocalVolumes")
+    private java.util.List<LocalVolumes> localVolumes;
 
-    @NameInMap("NasId")
+    @com.aliyun.core.annotation.NameInMap("NasId")
     private String nasId;
 
-    @NameInMap("NasMountDescs")
-    private java.util.List < NasMountDescs> nasMountDescs;
+    @com.aliyun.core.annotation.NameInMap("NasMountDescs")
+    private java.util.List<NasMountDescs> nasMountDescs;
 
-    @NameInMap("NasStorageType")
+    @com.aliyun.core.annotation.NameInMap("NasStorageType")
     private String nasStorageType;
 
-    @NameInMap("PackageConfig")
+    @com.aliyun.core.annotation.NameInMap("PackageConfig")
     private PackageConfig packageConfig;
 
-    @NameInMap("PostStart")
+    @com.aliyun.core.annotation.NameInMap("PostStart")
     private String postStart;
 
-    @NameInMap("PreStop")
+    @com.aliyun.core.annotation.NameInMap("PreStop")
     private String preStop;
 
-    @NameInMap("PvcMountDescs")
-    private java.util.List < PvcMountDescs> pvcMountDescs;
+    @com.aliyun.core.annotation.NameInMap("PvcMountDescs")
+    private java.util.List<PvcMountDescs> pvcMountDescs;
 
-    @NameInMap("Readiness")
+    @com.aliyun.core.annotation.NameInMap("Readiness")
     private String readiness;
 
-    @NameInMap("Replicas")
+    @com.aliyun.core.annotation.NameInMap("Replicas")
     private Long replicas;
 
-    @NameInMap("RequestCpu")
+    @com.aliyun.core.annotation.NameInMap("RequestCpu")
     private String requestCpu;
 
-    @NameInMap("RequestMem")
+    @com.aliyun.core.annotation.NameInMap("RequestMem")
     private String requestMem;
 
-    @NameInMap("RuntimeClassName")
+    @com.aliyun.core.annotation.NameInMap("RuntimeClassName")
     private String runtimeClassName;
 
-    @NameInMap("SlsConfigs")
-    private java.util.List < SlsConfigs> slsConfigs;
+    @com.aliyun.core.annotation.NameInMap("SlsConfigs")
+    private java.util.List<SlsConfigs> slsConfigs;
 
-    @NameInMap("WebContainerConfig")
+    @com.aliyun.core.annotation.NameInMap("WebContainerConfig")
     private WebContainerConfig webContainerConfig;
 
     private AppConfig(Builder builder) {
@@ -143,6 +148,10 @@ public class AppConfig extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return command
      */
@@ -153,14 +162,14 @@ public class AppConfig extends TeaModel {
     /**
      * @return commandArgs
      */
-    public java.util.List < String > getCommandArgs() {
+    public java.util.List<String> getCommandArgs() {
         return this.commandArgs;
     }
 
     /**
      * @return configMountDescs
      */
-    public java.util.List < ConfigMountDescs> getConfigMountDescs() {
+    public java.util.List<ConfigMountDescs> getConfigMountDescs() {
         return this.configMountDescs;
     }
 
@@ -181,7 +190,7 @@ public class AppConfig extends TeaModel {
     /**
      * @return emptyDirs
      */
-    public java.util.List < EmptyDirs> getEmptyDirs() {
+    public java.util.List<EmptyDirs> getEmptyDirs() {
         return this.emptyDirs;
     }
 
@@ -195,14 +204,14 @@ public class AppConfig extends TeaModel {
     /**
      * @return envFroms
      */
-    public java.util.List < EnvFroms> getEnvFroms() {
+    public java.util.List<EnvFroms> getEnvFroms() {
         return this.envFroms;
     }
 
     /**
      * @return envs
      */
-    public java.util.List < Envs> getEnvs() {
+    public java.util.List<Envs> getEnvs() {
         return this.envs;
     }
 
@@ -251,7 +260,7 @@ public class AppConfig extends TeaModel {
     /**
      * @return localVolumes
      */
-    public java.util.List < LocalVolumes> getLocalVolumes() {
+    public java.util.List<LocalVolumes> getLocalVolumes() {
         return this.localVolumes;
     }
 
@@ -265,7 +274,7 @@ public class AppConfig extends TeaModel {
     /**
      * @return nasMountDescs
      */
-    public java.util.List < NasMountDescs> getNasMountDescs() {
+    public java.util.List<NasMountDescs> getNasMountDescs() {
         return this.nasMountDescs;
     }
 
@@ -300,7 +309,7 @@ public class AppConfig extends TeaModel {
     /**
      * @return pvcMountDescs
      */
-    public java.util.List < PvcMountDescs> getPvcMountDescs() {
+    public java.util.List<PvcMountDescs> getPvcMountDescs() {
         return this.pvcMountDescs;
     }
 
@@ -342,7 +351,7 @@ public class AppConfig extends TeaModel {
     /**
      * @return slsConfigs
      */
-    public java.util.List < SlsConfigs> getSlsConfigs() {
+    public java.util.List<SlsConfigs> getSlsConfigs() {
         return this.slsConfigs;
     }
 
@@ -355,35 +364,71 @@ public class AppConfig extends TeaModel {
 
     public static final class Builder {
         private String command; 
-        private java.util.List < String > commandArgs; 
-        private java.util.List < ConfigMountDescs> configMountDescs; 
+        private java.util.List<String> commandArgs; 
+        private java.util.List<ConfigMountDescs> configMountDescs; 
         private Boolean deployAcrossNodes; 
         private Boolean deployAcrossZones; 
-        private java.util.List < EmptyDirs> emptyDirs; 
+        private java.util.List<EmptyDirs> emptyDirs; 
         private Boolean enableAhas; 
-        private java.util.List < EnvFroms> envFroms; 
-        private java.util.List < Envs> envs; 
+        private java.util.List<EnvFroms> envFroms; 
+        private java.util.List<Envs> envs; 
         private ImageConfig imageConfig; 
         private Boolean isMultilingualApp; 
         private String javaStartUpConfig; 
         private String limitCpu; 
         private String limitMem; 
         private String liveness; 
-        private java.util.List < LocalVolumes> localVolumes; 
+        private java.util.List<LocalVolumes> localVolumes; 
         private String nasId; 
-        private java.util.List < NasMountDescs> nasMountDescs; 
+        private java.util.List<NasMountDescs> nasMountDescs; 
         private String nasStorageType; 
         private PackageConfig packageConfig; 
         private String postStart; 
         private String preStop; 
-        private java.util.List < PvcMountDescs> pvcMountDescs; 
+        private java.util.List<PvcMountDescs> pvcMountDescs; 
         private String readiness; 
         private Long replicas; 
         private String requestCpu; 
         private String requestMem; 
         private String runtimeClassName; 
-        private java.util.List < SlsConfigs> slsConfigs; 
+        private java.util.List<SlsConfigs> slsConfigs; 
         private WebContainerConfig webContainerConfig; 
+
+        private Builder() {
+        } 
+
+        private Builder(AppConfig model) {
+            this.command = model.command;
+            this.commandArgs = model.commandArgs;
+            this.configMountDescs = model.configMountDescs;
+            this.deployAcrossNodes = model.deployAcrossNodes;
+            this.deployAcrossZones = model.deployAcrossZones;
+            this.emptyDirs = model.emptyDirs;
+            this.enableAhas = model.enableAhas;
+            this.envFroms = model.envFroms;
+            this.envs = model.envs;
+            this.imageConfig = model.imageConfig;
+            this.isMultilingualApp = model.isMultilingualApp;
+            this.javaStartUpConfig = model.javaStartUpConfig;
+            this.limitCpu = model.limitCpu;
+            this.limitMem = model.limitMem;
+            this.liveness = model.liveness;
+            this.localVolumes = model.localVolumes;
+            this.nasId = model.nasId;
+            this.nasMountDescs = model.nasMountDescs;
+            this.nasStorageType = model.nasStorageType;
+            this.packageConfig = model.packageConfig;
+            this.postStart = model.postStart;
+            this.preStop = model.preStop;
+            this.pvcMountDescs = model.pvcMountDescs;
+            this.readiness = model.readiness;
+            this.replicas = model.replicas;
+            this.requestCpu = model.requestCpu;
+            this.requestMem = model.requestMem;
+            this.runtimeClassName = model.runtimeClassName;
+            this.slsConfigs = model.slsConfigs;
+            this.webContainerConfig = model.webContainerConfig;
+        } 
 
         /**
          * Command.
@@ -396,7 +441,7 @@ public class AppConfig extends TeaModel {
         /**
          * CommandArgs.
          */
-        public Builder commandArgs(java.util.List < String > commandArgs) {
+        public Builder commandArgs(java.util.List<String> commandArgs) {
             this.commandArgs = commandArgs;
             return this;
         }
@@ -404,7 +449,7 @@ public class AppConfig extends TeaModel {
         /**
          * ConfigMountDescs.
          */
-        public Builder configMountDescs(java.util.List < ConfigMountDescs> configMountDescs) {
+        public Builder configMountDescs(java.util.List<ConfigMountDescs> configMountDescs) {
             this.configMountDescs = configMountDescs;
             return this;
         }
@@ -428,7 +473,7 @@ public class AppConfig extends TeaModel {
         /**
          * EmptyDirs.
          */
-        public Builder emptyDirs(java.util.List < EmptyDirs> emptyDirs) {
+        public Builder emptyDirs(java.util.List<EmptyDirs> emptyDirs) {
             this.emptyDirs = emptyDirs;
             return this;
         }
@@ -444,7 +489,7 @@ public class AppConfig extends TeaModel {
         /**
          * EnvFroms.
          */
-        public Builder envFroms(java.util.List < EnvFroms> envFroms) {
+        public Builder envFroms(java.util.List<EnvFroms> envFroms) {
             this.envFroms = envFroms;
             return this;
         }
@@ -452,7 +497,7 @@ public class AppConfig extends TeaModel {
         /**
          * Envs.
          */
-        public Builder envs(java.util.List < Envs> envs) {
+        public Builder envs(java.util.List<Envs> envs) {
             this.envs = envs;
             return this;
         }
@@ -508,7 +553,7 @@ public class AppConfig extends TeaModel {
         /**
          * LocalVolumes.
          */
-        public Builder localVolumes(java.util.List < LocalVolumes> localVolumes) {
+        public Builder localVolumes(java.util.List<LocalVolumes> localVolumes) {
             this.localVolumes = localVolumes;
             return this;
         }
@@ -524,7 +569,7 @@ public class AppConfig extends TeaModel {
         /**
          * NasMountDescs.
          */
-        public Builder nasMountDescs(java.util.List < NasMountDescs> nasMountDescs) {
+        public Builder nasMountDescs(java.util.List<NasMountDescs> nasMountDescs) {
             this.nasMountDescs = nasMountDescs;
             return this;
         }
@@ -564,7 +609,7 @@ public class AppConfig extends TeaModel {
         /**
          * PvcMountDescs.
          */
-        public Builder pvcMountDescs(java.util.List < PvcMountDescs> pvcMountDescs) {
+        public Builder pvcMountDescs(java.util.List<PvcMountDescs> pvcMountDescs) {
             this.pvcMountDescs = pvcMountDescs;
             return this;
         }
@@ -612,7 +657,7 @@ public class AppConfig extends TeaModel {
         /**
          * SlsConfigs.
          */
-        public Builder slsConfigs(java.util.List < SlsConfigs> slsConfigs) {
+        public Builder slsConfigs(java.util.List<SlsConfigs> slsConfigs) {
             this.slsConfigs = slsConfigs;
             return this;
         }
@@ -631,11 +676,17 @@ public class AppConfig extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link AppConfig} extends {@link TeaModel}
+     *
+     * <p>AppConfig</p>
+     */
     public static class MountItems extends TeaModel {
-        @NameInMap("Key")
+        @com.aliyun.core.annotation.NameInMap("Key")
         private String key;
 
-        @NameInMap("Path")
+        @com.aliyun.core.annotation.NameInMap("Path")
         private String path;
 
         private MountItems(Builder builder) {
@@ -669,6 +720,14 @@ public class AppConfig extends TeaModel {
             private String key; 
             private String path; 
 
+            private Builder() {
+            } 
+
+            private Builder(MountItems model) {
+                this.key = model.key;
+                this.path = model.path;
+            } 
+
             /**
              * Key.
              */
@@ -692,17 +751,23 @@ public class AppConfig extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link AppConfig} extends {@link TeaModel}
+     *
+     * <p>AppConfig</p>
+     */
     public static class ConfigMountDescs extends TeaModel {
-        @NameInMap("MountItems")
-        private java.util.List < MountItems> mountItems;
+        @com.aliyun.core.annotation.NameInMap("MountItems")
+        private java.util.List<MountItems> mountItems;
 
-        @NameInMap("MountPath")
+        @com.aliyun.core.annotation.NameInMap("MountPath")
         private String mountPath;
 
-        @NameInMap("Name")
+        @com.aliyun.core.annotation.NameInMap("Name")
         private String name;
 
-        @NameInMap("Type")
+        @com.aliyun.core.annotation.NameInMap("Type")
         private String type;
 
         private ConfigMountDescs(Builder builder) {
@@ -723,7 +788,7 @@ public class AppConfig extends TeaModel {
         /**
          * @return mountItems
          */
-        public java.util.List < MountItems> getMountItems() {
+        public java.util.List<MountItems> getMountItems() {
             return this.mountItems;
         }
 
@@ -749,15 +814,25 @@ public class AppConfig extends TeaModel {
         }
 
         public static final class Builder {
-            private java.util.List < MountItems> mountItems; 
+            private java.util.List<MountItems> mountItems; 
             private String mountPath; 
             private String name; 
             private String type; 
 
+            private Builder() {
+            } 
+
+            private Builder(ConfigMountDescs model) {
+                this.mountItems = model.mountItems;
+                this.mountPath = model.mountPath;
+                this.name = model.name;
+                this.type = model.type;
+            } 
+
             /**
              * MountItems.
              */
-            public Builder mountItems(java.util.List < MountItems> mountItems) {
+            public Builder mountItems(java.util.List<MountItems> mountItems) {
                 this.mountItems = mountItems;
                 return this;
             }
@@ -793,17 +868,23 @@ public class AppConfig extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link AppConfig} extends {@link TeaModel}
+     *
+     * <p>AppConfig</p>
+     */
     public static class EmptyDirs extends TeaModel {
-        @NameInMap("MountPath")
+        @com.aliyun.core.annotation.NameInMap("MountPath")
         private String mountPath;
 
-        @NameInMap("Name")
+        @com.aliyun.core.annotation.NameInMap("Name")
         private String name;
 
-        @NameInMap("ReadOnly")
+        @com.aliyun.core.annotation.NameInMap("ReadOnly")
         private Boolean readOnly;
 
-        @NameInMap("SubPathExpr")
+        @com.aliyun.core.annotation.NameInMap("SubPathExpr")
         private String subPathExpr;
 
         private EmptyDirs(Builder builder) {
@@ -855,6 +936,16 @@ public class AppConfig extends TeaModel {
             private Boolean readOnly; 
             private String subPathExpr; 
 
+            private Builder() {
+            } 
+
+            private Builder(EmptyDirs model) {
+                this.mountPath = model.mountPath;
+                this.name = model.name;
+                this.readOnly = model.readOnly;
+                this.subPathExpr = model.subPathExpr;
+            } 
+
             /**
              * MountPath.
              */
@@ -894,11 +985,17 @@ public class AppConfig extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link AppConfig} extends {@link TeaModel}
+     *
+     * <p>AppConfig</p>
+     */
     public static class EnvFroms extends TeaModel {
-        @NameInMap("ConfigMapRef")
+        @com.aliyun.core.annotation.NameInMap("ConfigMapRef")
         private String configMapRef;
 
-        @NameInMap("SecretRef")
+        @com.aliyun.core.annotation.NameInMap("SecretRef")
         private String secretRef;
 
         private EnvFroms(Builder builder) {
@@ -932,6 +1029,14 @@ public class AppConfig extends TeaModel {
             private String configMapRef; 
             private String secretRef; 
 
+            private Builder() {
+            } 
+
+            private Builder(EnvFroms model) {
+                this.configMapRef = model.configMapRef;
+                this.secretRef = model.secretRef;
+            } 
+
             /**
              * ConfigMapRef.
              */
@@ -955,14 +1060,20 @@ public class AppConfig extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link AppConfig} extends {@link TeaModel}
+     *
+     * <p>AppConfig</p>
+     */
     public static class Envs extends TeaModel {
-        @NameInMap("Name")
+        @com.aliyun.core.annotation.NameInMap("Name")
         private String name;
 
-        @NameInMap("Value")
+        @com.aliyun.core.annotation.NameInMap("Value")
         private String value;
 
-        @NameInMap("ValueFrom")
+        @com.aliyun.core.annotation.NameInMap("ValueFrom")
         private String valueFrom;
 
         private Envs(Builder builder) {
@@ -1005,6 +1116,15 @@ public class AppConfig extends TeaModel {
             private String value; 
             private String valueFrom; 
 
+            private Builder() {
+            } 
+
+            private Builder(Envs model) {
+                this.name = model.name;
+                this.value = model.value;
+                this.valueFrom = model.valueFrom;
+            } 
+
             /**
              * Name.
              */
@@ -1036,17 +1156,23 @@ public class AppConfig extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link AppConfig} extends {@link TeaModel}
+     *
+     * <p>AppConfig</p>
+     */
     public static class ImageConfig extends TeaModel {
-        @NameInMap("ContainerRegistryId")
+        @com.aliyun.core.annotation.NameInMap("ContainerRegistryId")
         private String containerRegistryId;
 
-        @NameInMap("CrInstanceId")
+        @com.aliyun.core.annotation.NameInMap("CrInstanceId")
         private String crInstanceId;
 
-        @NameInMap("CrRegionId")
+        @com.aliyun.core.annotation.NameInMap("CrRegionId")
         private String crRegionId;
 
-        @NameInMap("ImageUrl")
+        @com.aliyun.core.annotation.NameInMap("ImageUrl")
         private String imageUrl;
 
         private ImageConfig(Builder builder) {
@@ -1098,6 +1224,16 @@ public class AppConfig extends TeaModel {
             private String crRegionId; 
             private String imageUrl; 
 
+            private Builder() {
+            } 
+
+            private Builder(ImageConfig model) {
+                this.containerRegistryId = model.containerRegistryId;
+                this.crInstanceId = model.crInstanceId;
+                this.crRegionId = model.crRegionId;
+                this.imageUrl = model.imageUrl;
+            } 
+
             /**
              * ContainerRegistryId.
              */
@@ -1137,20 +1273,26 @@ public class AppConfig extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link AppConfig} extends {@link TeaModel}
+     *
+     * <p>AppConfig</p>
+     */
     public static class LocalVolumes extends TeaModel {
-        @NameInMap("MountPath")
+        @com.aliyun.core.annotation.NameInMap("MountPath")
         private String mountPath;
 
-        @NameInMap("Name")
+        @com.aliyun.core.annotation.NameInMap("Name")
         private String name;
 
-        @NameInMap("NodePath")
+        @com.aliyun.core.annotation.NameInMap("NodePath")
         private String nodePath;
 
-        @NameInMap("OpsAuth")
+        @com.aliyun.core.annotation.NameInMap("OpsAuth")
         private Long opsAuth;
 
-        @NameInMap("Type")
+        @com.aliyun.core.annotation.NameInMap("Type")
         private String type;
 
         private LocalVolumes(Builder builder) {
@@ -1211,6 +1353,17 @@ public class AppConfig extends TeaModel {
             private Long opsAuth; 
             private String type; 
 
+            private Builder() {
+            } 
+
+            private Builder(LocalVolumes model) {
+                this.mountPath = model.mountPath;
+                this.name = model.name;
+                this.nodePath = model.nodePath;
+                this.opsAuth = model.opsAuth;
+                this.type = model.type;
+            } 
+
             /**
              * MountPath.
              */
@@ -1258,11 +1411,17 @@ public class AppConfig extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link AppConfig} extends {@link TeaModel}
+     *
+     * <p>AppConfig</p>
+     */
     public static class NasMountDescs extends TeaModel {
-        @NameInMap("MountPath")
+        @com.aliyun.core.annotation.NameInMap("MountPath")
         private String mountPath;
 
-        @NameInMap("NasPath")
+        @com.aliyun.core.annotation.NameInMap("NasPath")
         private String nasPath;
 
         private NasMountDescs(Builder builder) {
@@ -1296,6 +1455,14 @@ public class AppConfig extends TeaModel {
             private String mountPath; 
             private String nasPath; 
 
+            private Builder() {
+            } 
+
+            private Builder(NasMountDescs model) {
+                this.mountPath = model.mountPath;
+                this.nasPath = model.nasPath;
+            } 
+
             /**
              * MountPath.
              */
@@ -1319,32 +1486,38 @@ public class AppConfig extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link AppConfig} extends {@link TeaModel}
+     *
+     * <p>AppConfig</p>
+     */
     public static class PackageConfig extends TeaModel {
-        @NameInMap("EdasContainerVersion")
+        @com.aliyun.core.annotation.NameInMap("EdasContainerVersion")
         private String edasContainerVersion;
 
-        @NameInMap("Jdk")
+        @com.aliyun.core.annotation.NameInMap("Jdk")
         private String jdk;
 
-        @NameInMap("PackageType")
+        @com.aliyun.core.annotation.NameInMap("PackageType")
         private String packageType;
 
-        @NameInMap("PackageUrl")
+        @com.aliyun.core.annotation.NameInMap("PackageUrl")
         private String packageUrl;
 
-        @NameInMap("PackageVersion")
+        @com.aliyun.core.annotation.NameInMap("PackageVersion")
         private String packageVersion;
 
-        @NameInMap("Timezone")
+        @com.aliyun.core.annotation.NameInMap("Timezone")
         private String timezone;
 
-        @NameInMap("UriEncoding")
+        @com.aliyun.core.annotation.NameInMap("UriEncoding")
         private String uriEncoding;
 
-        @NameInMap("UseBodyEncoding")
+        @com.aliyun.core.annotation.NameInMap("UseBodyEncoding")
         private Boolean useBodyEncoding;
 
-        @NameInMap("WebContainer")
+        @com.aliyun.core.annotation.NameInMap("WebContainer")
         private String webContainer;
 
         private PackageConfig(Builder builder) {
@@ -1441,6 +1614,21 @@ public class AppConfig extends TeaModel {
             private Boolean useBodyEncoding; 
             private String webContainer; 
 
+            private Builder() {
+            } 
+
+            private Builder(PackageConfig model) {
+                this.edasContainerVersion = model.edasContainerVersion;
+                this.jdk = model.jdk;
+                this.packageType = model.packageType;
+                this.packageUrl = model.packageUrl;
+                this.packageVersion = model.packageVersion;
+                this.timezone = model.timezone;
+                this.uriEncoding = model.uriEncoding;
+                this.useBodyEncoding = model.useBodyEncoding;
+                this.webContainer = model.webContainer;
+            } 
+
             /**
              * EdasContainerVersion.
              */
@@ -1520,14 +1708,20 @@ public class AppConfig extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link AppConfig} extends {@link TeaModel}
+     *
+     * <p>AppConfig</p>
+     */
     public static class MountPaths extends TeaModel {
-        @NameInMap("MountPath")
+        @com.aliyun.core.annotation.NameInMap("MountPath")
         private String mountPath;
 
-        @NameInMap("ReadOnly")
+        @com.aliyun.core.annotation.NameInMap("ReadOnly")
         private Boolean readOnly;
 
-        @NameInMap("SubPathExpr")
+        @com.aliyun.core.annotation.NameInMap("SubPathExpr")
         private String subPathExpr;
 
         private MountPaths(Builder builder) {
@@ -1570,6 +1764,15 @@ public class AppConfig extends TeaModel {
             private Boolean readOnly; 
             private String subPathExpr; 
 
+            private Builder() {
+            } 
+
+            private Builder(MountPaths model) {
+                this.mountPath = model.mountPath;
+                this.readOnly = model.readOnly;
+                this.subPathExpr = model.subPathExpr;
+            } 
+
             /**
              * MountPath.
              */
@@ -1601,11 +1804,17 @@ public class AppConfig extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link AppConfig} extends {@link TeaModel}
+     *
+     * <p>AppConfig</p>
+     */
     public static class PvcMountDescs extends TeaModel {
-        @NameInMap("MountPaths")
-        private java.util.List < MountPaths> mountPaths;
+        @com.aliyun.core.annotation.NameInMap("MountPaths")
+        private java.util.List<MountPaths> mountPaths;
 
-        @NameInMap("PvcName")
+        @com.aliyun.core.annotation.NameInMap("PvcName")
         private String pvcName;
 
         private PvcMountDescs(Builder builder) {
@@ -1624,7 +1833,7 @@ public class AppConfig extends TeaModel {
         /**
          * @return mountPaths
          */
-        public java.util.List < MountPaths> getMountPaths() {
+        public java.util.List<MountPaths> getMountPaths() {
             return this.mountPaths;
         }
 
@@ -1636,13 +1845,21 @@ public class AppConfig extends TeaModel {
         }
 
         public static final class Builder {
-            private java.util.List < MountPaths> mountPaths; 
+            private java.util.List<MountPaths> mountPaths; 
             private String pvcName; 
+
+            private Builder() {
+            } 
+
+            private Builder(PvcMountDescs model) {
+                this.mountPaths = model.mountPaths;
+                this.pvcName = model.pvcName;
+            } 
 
             /**
              * MountPaths.
              */
-            public Builder mountPaths(java.util.List < MountPaths> mountPaths) {
+            public Builder mountPaths(java.util.List<MountPaths> mountPaths) {
                 this.mountPaths = mountPaths;
                 return this;
             }
@@ -1662,17 +1879,23 @@ public class AppConfig extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link AppConfig} extends {@link TeaModel}
+     *
+     * <p>AppConfig</p>
+     */
     public static class SlsConfigs extends TeaModel {
-        @NameInMap("LogDir")
+        @com.aliyun.core.annotation.NameInMap("LogDir")
         private String logDir;
 
-        @NameInMap("Logstore")
+        @com.aliyun.core.annotation.NameInMap("Logstore")
         private String logstore;
 
-        @NameInMap("Project")
+        @com.aliyun.core.annotation.NameInMap("Project")
         private String project;
 
-        @NameInMap("Type")
+        @com.aliyun.core.annotation.NameInMap("Type")
         private String type;
 
         private SlsConfigs(Builder builder) {
@@ -1724,6 +1947,16 @@ public class AppConfig extends TeaModel {
             private String project; 
             private String type; 
 
+            private Builder() {
+            } 
+
+            private Builder(SlsConfigs model) {
+                this.logDir = model.logDir;
+                this.logstore = model.logstore;
+                this.project = model.project;
+                this.type = model.type;
+            } 
+
             /**
              * LogDir.
              */
@@ -1763,35 +1996,41 @@ public class AppConfig extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link AppConfig} extends {@link TeaModel}
+     *
+     * <p>AppConfig</p>
+     */
     public static class WebContainerConfig extends TeaModel {
-        @NameInMap("ConnectorType")
+        @com.aliyun.core.annotation.NameInMap("ConnectorType")
         private String connectorType;
 
-        @NameInMap("ContextInputType")
+        @com.aliyun.core.annotation.NameInMap("ContextInputType")
         private String contextInputType;
 
-        @NameInMap("ContextPath")
+        @com.aliyun.core.annotation.NameInMap("ContextPath")
         private String contextPath;
 
-        @NameInMap("HttpPort")
+        @com.aliyun.core.annotation.NameInMap("HttpPort")
         private Long httpPort;
 
-        @NameInMap("MaxThreads")
+        @com.aliyun.core.annotation.NameInMap("MaxThreads")
         private Long maxThreads;
 
-        @NameInMap("ServerXml")
+        @com.aliyun.core.annotation.NameInMap("ServerXml")
         private String serverXml;
 
-        @NameInMap("UriEncoding")
+        @com.aliyun.core.annotation.NameInMap("UriEncoding")
         private String uriEncoding;
 
-        @NameInMap("UseAdvancedServerXml")
+        @com.aliyun.core.annotation.NameInMap("UseAdvancedServerXml")
         private Boolean useAdvancedServerXml;
 
-        @NameInMap("UseBodyEncoding")
+        @com.aliyun.core.annotation.NameInMap("UseBodyEncoding")
         private Boolean useBodyEncoding;
 
-        @NameInMap("UseDefaultConfig")
+        @com.aliyun.core.annotation.NameInMap("UseDefaultConfig")
         private Boolean useDefaultConfig;
 
         private WebContainerConfig(Builder builder) {
@@ -1896,6 +2135,22 @@ public class AppConfig extends TeaModel {
             private Boolean useAdvancedServerXml; 
             private Boolean useBodyEncoding; 
             private Boolean useDefaultConfig; 
+
+            private Builder() {
+            } 
+
+            private Builder(WebContainerConfig model) {
+                this.connectorType = model.connectorType;
+                this.contextInputType = model.contextInputType;
+                this.contextPath = model.contextPath;
+                this.httpPort = model.httpPort;
+                this.maxThreads = model.maxThreads;
+                this.serverXml = model.serverXml;
+                this.uriEncoding = model.uriEncoding;
+                this.useAdvancedServerXml = model.useAdvancedServerXml;
+                this.useBodyEncoding = model.useBodyEncoding;
+                this.useDefaultConfig = model.useDefaultConfig;
+            } 
 
             /**
              * ConnectorType.

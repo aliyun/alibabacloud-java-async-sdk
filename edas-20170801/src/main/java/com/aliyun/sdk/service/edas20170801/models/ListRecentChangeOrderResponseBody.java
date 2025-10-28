@@ -1,27 +1,32 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.edas20170801.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ListRecentChangeOrderResponseBody} extends {@link TeaModel}
  *
  * <p>ListRecentChangeOrderResponseBody</p>
  */
 public class ListRecentChangeOrderResponseBody extends TeaModel {
-    @NameInMap("ChangeOrderList")
+    @com.aliyun.core.annotation.NameInMap("ChangeOrderList")
     private ChangeOrderList changeOrderList;
 
-    @NameInMap("Code")
+    @com.aliyun.core.annotation.NameInMap("Code")
     private Integer code;
 
-    @NameInMap("Message")
+    @com.aliyun.core.annotation.NameInMap("Message")
     private String message;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
     private ListRecentChangeOrderResponseBody(Builder builder) {
@@ -37,6 +42,10 @@ public class ListRecentChangeOrderResponseBody extends TeaModel {
 
     public static ListRecentChangeOrderResponseBody create() {
         return builder().build();
+    }
+
+    public Builder toBuilder() {
+        return new Builder(this);
     }
 
     /**
@@ -73,8 +82,18 @@ public class ListRecentChangeOrderResponseBody extends TeaModel {
         private String message; 
         private String requestId; 
 
+        private Builder() {
+        } 
+
+        private Builder(ListRecentChangeOrderResponseBody model) {
+            this.changeOrderList = model.changeOrderList;
+            this.code = model.code;
+            this.message = model.message;
+            this.requestId = model.requestId;
+        } 
+
         /**
-         * The information about change processes.
+         * <p>The information about change processes.</p>
          */
         public Builder changeOrderList(ChangeOrderList changeOrderList) {
             this.changeOrderList = changeOrderList;
@@ -82,7 +101,10 @@ public class ListRecentChangeOrderResponseBody extends TeaModel {
         }
 
         /**
-         * The HTTP status code that is returned.
+         * <p>The HTTP status code that is returned.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>200</p>
          */
         public Builder code(Integer code) {
             this.code = code;
@@ -90,7 +112,10 @@ public class ListRecentChangeOrderResponseBody extends TeaModel {
         }
 
         /**
-         * The additional information that is returned.
+         * <p>The additional information that is returned.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>success</p>
          */
         public Builder message(String message) {
             this.message = message;
@@ -98,7 +123,10 @@ public class ListRecentChangeOrderResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the request.
+         * <p>The ID of the request.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>D16979DC-4D42-************</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -111,47 +139,53 @@ public class ListRecentChangeOrderResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link ListRecentChangeOrderResponseBody} extends {@link TeaModel}
+     *
+     * <p>ListRecentChangeOrderResponseBody</p>
+     */
     public static class ChangeOrder extends TeaModel {
-        @NameInMap("AppId")
+        @com.aliyun.core.annotation.NameInMap("AppId")
         private String appId;
 
-        @NameInMap("BatchCount")
+        @com.aliyun.core.annotation.NameInMap("BatchCount")
         private Integer batchCount;
 
-        @NameInMap("BatchType")
+        @com.aliyun.core.annotation.NameInMap("BatchType")
         private String batchType;
 
-        @NameInMap("ChangeOrderDescription")
+        @com.aliyun.core.annotation.NameInMap("ChangeOrderDescription")
         private String changeOrderDescription;
 
-        @NameInMap("ChangeOrderId")
+        @com.aliyun.core.annotation.NameInMap("ChangeOrderId")
         private String changeOrderId;
 
-        @NameInMap("CoType")
+        @com.aliyun.core.annotation.NameInMap("CoType")
         private String coType;
 
-        @NameInMap("CoTypeCode")
+        @com.aliyun.core.annotation.NameInMap("CoTypeCode")
         private String coTypeCode;
 
-        @NameInMap("CreateTime")
+        @com.aliyun.core.annotation.NameInMap("CreateTime")
         private String createTime;
 
-        @NameInMap("CreateUserId")
+        @com.aliyun.core.annotation.NameInMap("CreateUserId")
         private String createUserId;
 
-        @NameInMap("FinishTime")
+        @com.aliyun.core.annotation.NameInMap("FinishTime")
         private String finishTime;
 
-        @NameInMap("GroupId")
+        @com.aliyun.core.annotation.NameInMap("GroupId")
         private String groupId;
 
-        @NameInMap("Source")
+        @com.aliyun.core.annotation.NameInMap("Source")
         private String source;
 
-        @NameInMap("Status")
+        @com.aliyun.core.annotation.NameInMap("Status")
         private Integer status;
 
-        @NameInMap("UserId")
+        @com.aliyun.core.annotation.NameInMap("UserId")
         private String userId;
 
         private ChangeOrder(Builder builder) {
@@ -293,8 +327,31 @@ public class ListRecentChangeOrderResponseBody extends TeaModel {
             private Integer status; 
             private String userId; 
 
+            private Builder() {
+            } 
+
+            private Builder(ChangeOrder model) {
+                this.appId = model.appId;
+                this.batchCount = model.batchCount;
+                this.batchType = model.batchType;
+                this.changeOrderDescription = model.changeOrderDescription;
+                this.changeOrderId = model.changeOrderId;
+                this.coType = model.coType;
+                this.coTypeCode = model.coTypeCode;
+                this.createTime = model.createTime;
+                this.createUserId = model.createUserId;
+                this.finishTime = model.finishTime;
+                this.groupId = model.groupId;
+                this.source = model.source;
+                this.status = model.status;
+                this.userId = model.userId;
+            } 
+
             /**
-             * The ID of the application.
+             * <p>The ID of the application.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>3616cdca-4f92-4413-<strong><strong>-</strong></strong>********</p>
              */
             public Builder appId(String appId) {
                 this.appId = appId;
@@ -302,7 +359,10 @@ public class ListRecentChangeOrderResponseBody extends TeaModel {
             }
 
             /**
-             * The number of batches for the change. Valid values: 1 to 5.
+             * <p>The number of batches for the change. Valid values: 1 to 5.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder batchCount(Integer batchCount) {
                 this.batchCount = batchCount;
@@ -310,11 +370,14 @@ public class ListRecentChangeOrderResponseBody extends TeaModel {
             }
 
             /**
-             * The way in which the next batch is triggered during a phased release. Valid values:
-             * <p>
+             * <p>The way in which the next batch is triggered during a phased release. Valid values:</p>
+             * <ul>
+             * <li>Automatic</li>
+             * <li>Manual</li>
+             * </ul>
              * 
-             * *   Automatic
-             * *   Manual
+             * <strong>example:</strong>
+             * <p>Automatic</p>
              */
             public Builder batchType(String batchType) {
                 this.batchType = batchType;
@@ -322,7 +385,10 @@ public class ListRecentChangeOrderResponseBody extends TeaModel {
             }
 
             /**
-             * The description of the change process.
+             * <p>The description of the change process.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Version: 2020-05-14 20:02:33 | Deployment Package: hsf-pandora-boot-provider-1.0.jar | Deploy to: all groups</p>
              */
             public Builder changeOrderDescription(String changeOrderDescription) {
                 this.changeOrderDescription = changeOrderDescription;
@@ -330,7 +396,10 @@ public class ListRecentChangeOrderResponseBody extends TeaModel {
             }
 
             /**
-             * The unique ID of the change process.
+             * <p>The unique ID of the change process.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1074f3e2-e974-4a0e-<strong><strong>-</strong></strong>********</p>
              */
             public Builder changeOrderId(String changeOrderId) {
                 this.changeOrderId = changeOrderId;
@@ -338,7 +407,10 @@ public class ListRecentChangeOrderResponseBody extends TeaModel {
             }
 
             /**
-             * The type of the change process.
+             * <p>The type of the change process.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Application Scale Out</p>
              */
             public Builder coType(String coType) {
                 this.coType = coType;
@@ -346,7 +418,10 @@ public class ListRecentChangeOrderResponseBody extends TeaModel {
             }
 
             /**
-             * The type of the change process.
+             * <p>The type of the change process.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>CoDeploy</p>
              */
             public Builder coTypeCode(String coTypeCode) {
                 this.coTypeCode = coTypeCode;
@@ -354,7 +429,10 @@ public class ListRecentChangeOrderResponseBody extends TeaModel {
             }
 
             /**
-             * The time when the change process was created.
+             * <p>The time when the change process was created.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2019-11-13 14:23:46</p>
              */
             public Builder createTime(String createTime) {
                 this.createTime = createTime;
@@ -362,7 +440,10 @@ public class ListRecentChangeOrderResponseBody extends TeaModel {
             }
 
             /**
-             * The user who created the change process.
+             * <p>The user who created the change process.</p>
+             * 
+             * <strong>example:</strong>
+             * <p><a href="mailto:edas_test1@aliyun-test.com">edas_test1@aliyun-test.com</a></p>
              */
             public Builder createUserId(String createUserId) {
                 this.createUserId = createUserId;
@@ -370,7 +451,10 @@ public class ListRecentChangeOrderResponseBody extends TeaModel {
             }
 
             /**
-             * The time when the change process ended.
+             * <p>The time when the change process ended.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2019-11-13 14:24:02</p>
              */
             public Builder finishTime(String finishTime) {
                 this.finishTime = finishTime;
@@ -378,7 +462,10 @@ public class ListRecentChangeOrderResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the application instance group on which the change was performed.
+             * <p>The ID of the application instance group on which the change was performed.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>8123db90-880f-486f-<strong><strong>-</strong></strong>********</p>
              */
             public Builder groupId(String groupId) {
                 this.groupId = groupId;
@@ -386,11 +473,14 @@ public class ListRecentChangeOrderResponseBody extends TeaModel {
             }
 
             /**
-             * The source of the change. Valid values:
-             * <p>
+             * <p>The source of the change. Valid values:</p>
+             * <ul>
+             * <li>console: the Enterprise Distributed Application Service (EDAS) console</li>
+             * <li>pop: the POP API or tool</li>
+             * </ul>
              * 
-             * *   console: the Enterprise Distributed Application Service (EDAS) console
-             * *   pop: the POP API or tool
+             * <strong>example:</strong>
+             * <p>pop</p>
              */
             public Builder source(String source) {
                 this.source = source;
@@ -398,17 +488,20 @@ public class ListRecentChangeOrderResponseBody extends TeaModel {
             }
 
             /**
-             * The state of the change process. Valid values:
-             * <p>
+             * <p>The state of the change process. Valid values:</p>
+             * <ul>
+             * <li>0: ready to start execution</li>
+             * <li>1: in progress</li>
+             * <li>2: successful</li>
+             * <li>3: failed</li>
+             * <li>6: terminated</li>
+             * <li>8: waiting for manual confirmation (You can see the state when you manually confirm the execution of the next batch of the change.)</li>
+             * <li>9: waiting for automatic execution</li>
+             * <li>10: failed due to a system error</li>
+             * </ul>
              * 
-             * *   0: ready to start execution
-             * *   1: in progress
-             * *   2: successful
-             * *   3: failed
-             * *   6: terminated
-             * *   8: waiting for manual confirmation (You can see the state when you manually confirm the execution of the next batch of the change.)
-             * *   9: waiting for automatic execution
-             * *   10: failed due to a system error
+             * <strong>example:</strong>
+             * <p>2</p>
              */
             public Builder status(Integer status) {
                 this.status = status;
@@ -416,7 +509,10 @@ public class ListRecentChangeOrderResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the user who created the change process.
+             * <p>The ID of the user who created the change process.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1432536****</p>
              */
             public Builder userId(String userId) {
                 this.userId = userId;
@@ -430,9 +526,15 @@ public class ListRecentChangeOrderResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link ListRecentChangeOrderResponseBody} extends {@link TeaModel}
+     *
+     * <p>ListRecentChangeOrderResponseBody</p>
+     */
     public static class ChangeOrderList extends TeaModel {
-        @NameInMap("ChangeOrder")
-        private java.util.List < ChangeOrder> changeOrder;
+        @com.aliyun.core.annotation.NameInMap("ChangeOrder")
+        private java.util.List<ChangeOrder> changeOrder;
 
         private ChangeOrderList(Builder builder) {
             this.changeOrder = builder.changeOrder;
@@ -449,17 +551,24 @@ public class ListRecentChangeOrderResponseBody extends TeaModel {
         /**
          * @return changeOrder
          */
-        public java.util.List < ChangeOrder> getChangeOrder() {
+        public java.util.List<ChangeOrder> getChangeOrder() {
             return this.changeOrder;
         }
 
         public static final class Builder {
-            private java.util.List < ChangeOrder> changeOrder; 
+            private java.util.List<ChangeOrder> changeOrder; 
+
+            private Builder() {
+            } 
+
+            private Builder(ChangeOrderList model) {
+                this.changeOrder = model.changeOrder;
+            } 
 
             /**
              * ChangeOrder.
              */
-            public Builder changeOrder(java.util.List < ChangeOrder> changeOrder) {
+            public Builder changeOrder(java.util.List<ChangeOrder> changeOrder) {
                 this.changeOrder = changeOrder;
                 return this;
             }

@@ -1,20 +1,25 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.edas20170801.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link AbortChangeOrderRequest} extends {@link RequestModel}
  *
  * <p>AbortChangeOrderRequest</p>
  */
 public class AbortChangeOrderRequest extends Request {
-    @Query
-    @NameInMap("ChangeOrderId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ChangeOrderId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String changeOrderId;
 
     private AbortChangeOrderRequest(Builder builder) {
@@ -30,7 +35,7 @@ public class AbortChangeOrderRequest extends Request {
         return builder().build();
     }
 
-    @Override
+@Override
     public Builder toBuilder() {
         return new Builder(this);
     }
@@ -55,7 +60,11 @@ public class AbortChangeOrderRequest extends Request {
         } 
 
         /**
-         * The ID of the change process. You can call the [GetChangeOrderInfo](~~62072~~) operation to query the change process ID.
+         * <p>The ID of the change process. You can call the <a href="https://help.aliyun.com/document_detail/62072.html">GetChangeOrderInfo</a> operation to query the change process ID.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>4f038ddf-b27b-<strong><strong>-</strong></strong>-88e44375****</p>
          */
         public Builder changeOrderId(String changeOrderId) {
             this.putQueryParameter("ChangeOrderId", changeOrderId);

@@ -1,357 +1,362 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.edas20170801.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link InsertK8sApplicationRequest} extends {@link RequestModel}
  *
  * <p>InsertK8sApplicationRequest</p>
  */
 public class InsertK8sApplicationRequest extends Request {
-    @Query
-    @NameInMap("Annotations")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Annotations")
     private String annotations;
 
-    @Query
-    @NameInMap("AppConfig")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("AppConfig")
     private String appConfig;
 
-    @Query
-    @NameInMap("AppName")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("AppName")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String appName;
 
-    @Query
-    @NameInMap("AppTemplateName")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("AppTemplateName")
     private String appTemplateName;
 
-    @Query
-    @NameInMap("ApplicationDescription")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ApplicationDescription")
     private String applicationDescription;
 
-    @Query
-    @NameInMap("BuildPackId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("BuildPackId")
     private String buildPackId;
 
-    @Query
-    @NameInMap("ClusterId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ClusterId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String clusterId;
 
-    @Query
-    @NameInMap("Command")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Command")
     private String command;
 
-    @Query
-    @NameInMap("CommandArgs")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("CommandArgs")
     private String commandArgs;
 
-    @Query
-    @NameInMap("ConfigMountDescs")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ConfigMountDescs")
     private String configMountDescs;
 
-    @Query
-    @NameInMap("ContainerRegistryId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ContainerRegistryId")
     private String containerRegistryId;
 
-    @Query
-    @NameInMap("CsClusterId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("CsClusterId")
     private String csClusterId;
 
-    @Query
-    @NameInMap("CustomAffinity")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("CustomAffinity")
     private String customAffinity;
 
-    @Query
-    @NameInMap("CustomAgentVersion")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("CustomAgentVersion")
     private String customAgentVersion;
 
-    @Query
-    @NameInMap("CustomTolerations")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("CustomTolerations")
     private String customTolerations;
 
-    @Query
-    @NameInMap("DeployAcrossNodes")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("DeployAcrossNodes")
     private String deployAcrossNodes;
 
-    @Query
-    @NameInMap("DeployAcrossZones")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("DeployAcrossZones")
     private String deployAcrossZones;
 
-    @Query
-    @NameInMap("EdasContainerVersion")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("EdasContainerVersion")
     private String edasContainerVersion;
 
-    @Query
-    @NameInMap("EmptyDirs")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("EmptyDirs")
     private String emptyDirs;
 
-    @Query
-    @NameInMap("EnableAhas")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("EnableAhas")
     private Boolean enableAhas;
 
-    @Query
-    @NameInMap("EnableAsm")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("EnableAsm")
     private Boolean enableAsm;
 
-    @Query
-    @NameInMap("EnableEmptyPushReject")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("EnableEmptyPushReject")
     private Boolean enableEmptyPushReject;
 
-    @Query
-    @NameInMap("EnableLosslessRule")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("EnableLosslessRule")
     private Boolean enableLosslessRule;
 
-    @Query
-    @NameInMap("EnvFroms")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("EnvFroms")
     private String envFroms;
 
-    @Query
-    @NameInMap("Envs")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Envs")
     private String envs;
 
-    @Query
-    @NameInMap("FeatureConfig")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("FeatureConfig")
     private String featureConfig;
 
-    @Query
-    @NameInMap("ImagePlatforms")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ImagePlatforms")
     private String imagePlatforms;
 
-    @Query
-    @NameInMap("ImageUrl")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ImageUrl")
     private String imageUrl;
 
-    @Query
-    @NameInMap("InitContainers")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("InitContainers")
     private String initContainers;
 
-    @Query
-    @NameInMap("InternetSlbId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("InternetSlbId")
     private String internetSlbId;
 
-    @Query
-    @NameInMap("InternetSlbPort")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("InternetSlbPort")
     private Integer internetSlbPort;
 
-    @Query
-    @NameInMap("InternetSlbProtocol")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("InternetSlbProtocol")
     private String internetSlbProtocol;
 
-    @Query
-    @NameInMap("InternetTargetPort")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("InternetTargetPort")
     private Integer internetTargetPort;
 
-    @Query
-    @NameInMap("IntranetSlbId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("IntranetSlbId")
     private String intranetSlbId;
 
-    @Query
-    @NameInMap("IntranetSlbPort")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("IntranetSlbPort")
     private Integer intranetSlbPort;
 
-    @Query
-    @NameInMap("IntranetSlbProtocol")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("IntranetSlbProtocol")
     private String intranetSlbProtocol;
 
-    @Query
-    @NameInMap("IntranetTargetPort")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("IntranetTargetPort")
     private Integer intranetTargetPort;
 
-    @Query
-    @NameInMap("IsMultilingualApp")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("IsMultilingualApp")
     private Boolean isMultilingualApp;
 
-    @Query
-    @NameInMap("JDK")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("JDK")
     private String JDK;
 
-    @Query
-    @NameInMap("JavaStartUpConfig")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("JavaStartUpConfig")
     private String javaStartUpConfig;
 
-    @Query
-    @NameInMap("Labels")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Labels")
     private String labels;
 
-    @Query
-    @NameInMap("LimitCpu")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("LimitCpu")
     private Integer limitCpu;
 
-    @Query
-    @NameInMap("LimitEphemeralStorage")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("LimitEphemeralStorage")
     private Integer limitEphemeralStorage;
 
-    @Query
-    @NameInMap("LimitMem")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("LimitMem")
     private Integer limitMem;
 
-    @Query
-    @NameInMap("LimitmCpu")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("LimitmCpu")
     private Integer limitmCpu;
 
-    @Query
-    @NameInMap("Liveness")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Liveness")
     private String liveness;
 
-    @Query
-    @NameInMap("LocalVolume")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("LocalVolume")
     private String localVolume;
 
-    @Query
-    @NameInMap("LogicalRegionId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("LogicalRegionId")
     private String logicalRegionId;
 
-    @Query
-    @NameInMap("LosslessRuleAligned")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("LosslessRuleAligned")
     private Boolean losslessRuleAligned;
 
-    @Query
-    @NameInMap("LosslessRuleDelayTime")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("LosslessRuleDelayTime")
     private Integer losslessRuleDelayTime;
 
-    @Query
-    @NameInMap("LosslessRuleFuncType")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("LosslessRuleFuncType")
     private Integer losslessRuleFuncType;
 
-    @Query
-    @NameInMap("LosslessRuleRelated")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("LosslessRuleRelated")
     private Boolean losslessRuleRelated;
 
-    @Query
-    @NameInMap("LosslessRuleWarmupTime")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("LosslessRuleWarmupTime")
     private Integer losslessRuleWarmupTime;
 
-    @Query
-    @NameInMap("MountDescs")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("MountDescs")
     private String mountDescs;
 
-    @Query
-    @NameInMap("Namespace")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Namespace")
     private String namespace;
 
-    @Query
-    @NameInMap("NasId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("NasId")
     private String nasId;
 
-    @Query
-    @NameInMap("PackageType")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("PackageType")
     private String packageType;
 
-    @Query
-    @NameInMap("PackageUrl")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("PackageUrl")
     private String packageUrl;
 
-    @Query
-    @NameInMap("PackageVersion")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("PackageVersion")
     private String packageVersion;
 
-    @Query
-    @NameInMap("PostStart")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("PostStart")
     private String postStart;
 
-    @Query
-    @NameInMap("PreStop")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("PreStop")
     private String preStop;
 
-    @Query
-    @NameInMap("PvcMountDescs")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("PvcMountDescs")
     private String pvcMountDescs;
 
-    @Query
-    @NameInMap("Readiness")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Readiness")
     private String readiness;
 
-    @Query
-    @NameInMap("Replicas")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Replicas")
     private Integer replicas;
 
-    @Query
-    @NameInMap("RepoId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("RepoId")
     private String repoId;
 
-    @Query
-    @NameInMap("RequestsCpu")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("RequestsCpu")
     private Integer requestsCpu;
 
-    @Query
-    @NameInMap("RequestsEphemeralStorage")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("RequestsEphemeralStorage")
     private Integer requestsEphemeralStorage;
 
-    @Query
-    @NameInMap("RequestsMem")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("RequestsMem")
     private Integer requestsMem;
 
-    @Query
-    @NameInMap("RequestsmCpu")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("RequestsmCpu")
     private Integer requestsmCpu;
 
-    @Query
-    @NameInMap("ResourceGroupId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ResourceGroupId")
     private String resourceGroupId;
 
-    @Query
-    @NameInMap("RuntimeClassName")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("RuntimeClassName")
     private String runtimeClassName;
 
-    @Query
-    @NameInMap("SecretName")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("SecretName")
     private String secretName;
 
-    @Query
-    @NameInMap("ServiceConfigs")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ServiceConfigs")
     private String serviceConfigs;
 
-    @Query
-    @NameInMap("Sidecars")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Sidecars")
     private String sidecars;
 
-    @Query
-    @NameInMap("SlsConfigs")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("SlsConfigs")
     private String slsConfigs;
 
-    @Query
-    @NameInMap("Startup")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Startup")
     private String startup;
 
-    @Query
-    @NameInMap("StorageType")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("StorageType")
     private String storageType;
 
-    @Query
-    @NameInMap("TerminateGracePeriod")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("TerminateGracePeriod")
     private Integer terminateGracePeriod;
 
-    @Query
-    @NameInMap("Timeout")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Timeout")
     private Integer timeout;
 
-    @Query
-    @NameInMap("UriEncoding")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("UriEncoding")
     private String uriEncoding;
 
-    @Query
-    @NameInMap("UseBodyEncoding")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("UseBodyEncoding")
     private Boolean useBodyEncoding;
 
-    @Query
-    @NameInMap("UserBaseImageUrl")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("UserBaseImageUrl")
     private String userBaseImageUrl;
 
-    @Query
-    @NameInMap("WebContainer")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("WebContainer")
     private String webContainer;
 
-    @Query
-    @NameInMap("WebContainerConfig")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("WebContainerConfig")
     private String webContainerConfig;
 
-    @Query
-    @NameInMap("WorkloadType")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("WorkloadType")
     private String workloadType;
 
     private InsertK8sApplicationRequest(Builder builder) {
@@ -451,7 +456,7 @@ public class InsertK8sApplicationRequest extends Request {
         return builder().build();
     }
 
-    @Override
+@Override
     public Builder toBuilder() {
         return new Builder(this);
     }
@@ -1232,7 +1237,10 @@ public class InsertK8sApplicationRequest extends Request {
         } 
 
         /**
-         * The annotation of an application pod.
+         * <p>The annotation of an application pod.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>{&quot;annotation-name-1&quot;:&quot;annotation-value-1&quot;,&quot;annotation-name-2&quot;:&quot;annotation-value-2&quot;}</p>
          */
         public Builder annotations(String annotations) {
             this.putQueryParameter("Annotations", annotations);
@@ -1241,7 +1249,10 @@ public class InsertK8sApplicationRequest extends Request {
         }
 
         /**
-         * The application configuration when the application template is used. Set this parameter to a JSON array.
+         * <p>The application configuration when the application template is used. Set this parameter to a JSON array.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>{}</p>
          */
         public Builder appConfig(String appConfig) {
             this.putQueryParameter("AppConfig", appConfig);
@@ -1250,7 +1261,11 @@ public class InsertK8sApplicationRequest extends Request {
         }
 
         /**
-         * The name of the application. The name must start with a letter, and can contain digits, letters, and hyphens (-). It can be up to 36 characters in length.
+         * <p>The name of the application. The name must start with a letter, and can contain digits, letters, and hyphens (-). It can be up to 36 characters in length.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>doc-test</p>
          */
         public Builder appName(String appName) {
             this.putQueryParameter("AppName", appName);
@@ -1259,7 +1274,10 @@ public class InsertK8sApplicationRequest extends Request {
         }
 
         /**
-         * The name of the template used to create the application. If you specify an application template when you create an application, the application template and the AppConfig parameter are used to configure the application. Other configurations are ignored.
+         * <p>The name of the template used to create the application. If you specify an application template when you create an application, the application template and the AppConfig parameter are used to configure the application. Other configurations are ignored.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>app-template001</p>
          */
         public Builder appTemplateName(String appTemplateName) {
             this.putQueryParameter("AppTemplateName", appTemplateName);
@@ -1268,7 +1286,10 @@ public class InsertK8sApplicationRequest extends Request {
         }
 
         /**
-         * The description of the application.
+         * <p>The description of the application.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Application in the production environment</p>
          */
         public Builder applicationDescription(String applicationDescription) {
             this.putQueryParameter("ApplicationDescription", applicationDescription);
@@ -1277,7 +1298,10 @@ public class InsertK8sApplicationRequest extends Request {
         }
 
         /**
-         * The version of `EDAS Container`. The value of this parameter conflicts with that of the `EdasContainerVersion` parameter. We recommend that you use the `EdasContainerVersion` parameter.
+         * <p>The version of <code>EDAS Container</code>. The value of this parameter conflicts with that of the <code>EdasContainerVersion</code> parameter. We recommend that you use the <code>EdasContainerVersion</code> parameter.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>-1</p>
          */
         public Builder buildPackId(String buildPackId) {
             this.putQueryParameter("BuildPackId", buildPackId);
@@ -1286,7 +1310,11 @@ public class InsertK8sApplicationRequest extends Request {
         }
 
         /**
-         * The ID of the cluster. You can call the ListCluster operation to query the cluster ID. For more information, see [ListCluster](~~154995~~).
+         * <p>The ID of the cluster. You can call the ListCluster operation to query the cluster ID. For more information, see <a href="https://help.aliyun.com/document_detail/154995.html">ListCluster</a>.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>c9cd****</p>
          */
         public Builder clusterId(String clusterId) {
             this.putQueryParameter("ClusterId", clusterId);
@@ -1295,7 +1323,10 @@ public class InsertK8sApplicationRequest extends Request {
         }
 
         /**
-         * The application startup command. If you specify this parameter, the value of this parameter will replace the startup command in the image.
+         * <p>The application startup command. If you specify this parameter, the value of this parameter will replace the startup command in the image.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>ls</p>
          */
         public Builder command(String command) {
             this.putQueryParameter("Command", command);
@@ -1304,7 +1335,10 @@ public class InsertK8sApplicationRequest extends Request {
         }
 
         /**
-         * The arguments in the command. The parameter value is a JSON array of strings. An example is `[{"argument":"-c"},{"argument":"test"}]`, where `-c` and `test` are two arguments that can be set.
+         * <p>The arguments in the command. The parameter value is a JSON array of strings. An example is <code>[{&quot;argument&quot;:&quot;-c&quot;},{&quot;argument&quot;:&quot;test&quot;}]</code>, where <code>-c</code> and <code>test</code> are two arguments that can be set.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>[{&quot;argument&quot;:&quot;-lh&quot;}]</p>
          */
         public Builder commandArgs(String commandArgs) {
             this.putQueryParameter("CommandArgs", commandArgs);
@@ -1313,12 +1347,15 @@ public class InsertK8sApplicationRequest extends Request {
         }
 
         /**
-         * The configuration for mounting a Kubernetes ConfigMap or Secret to a directory in an elastic container instance. The following parameters are included in the configuration:
-         * <p>
+         * <p>The configuration for mounting a Kubernetes ConfigMap or Secret to a directory in an elastic container instance. The following parameters are included in the configuration:</p>
+         * <ul>
+         * <li>name: the name of the Kubernetes ConfigMap or Secret.</li>
+         * <li>type: the type of the API object that you want to mount. You can mount a Kubernetes ConfigMap or Secret.</li>
+         * <li>mountPath: the mount path. The mount path must be an absolute path that starts with a forward slash (/).</li>
+         * </ul>
          * 
-         * *   name: the name of the Kubernetes ConfigMap or Secret.
-         * *   type: the type of the API object that you want to mount. You can mount a Kubernetes ConfigMap or Secret.
-         * *   mountPath: the mount path. The mount path must be an absolute path that starts with a forward slash (/).
+         * <strong>example:</strong>
+         * <p>[{&quot;name&quot;:&quot;nginx-config&quot;,&quot;type&quot;:&quot;ConfigMap&quot;,&quot;mountPath&quot;:&quot;/etc/nginx&quot;},{&quot;name&quot;:&quot;tls-secret&quot;,&quot;type&quot;:&quot;secret&quot;,&quot;mountPath&quot;:&quot;/etc/ssh&quot;}]</p>
          */
         public Builder configMountDescs(String configMountDescs) {
             this.putQueryParameter("ConfigMountDescs", configMountDescs);
@@ -1327,7 +1364,10 @@ public class InsertK8sApplicationRequest extends Request {
         }
 
         /**
-         * The ID of the repository used to build the image repository. If this parameter is left empty, the default repository provided by EDAS is used. Only the default repository provided by EDAS is supported.
+         * <p>The ID of the repository used to build the image repository. If this parameter is left empty, the default repository provided by EDAS is used. Only the default repository provided by EDAS is supported.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Leave empty</p>
          */
         public Builder containerRegistryId(String containerRegistryId) {
             this.putQueryParameter("ContainerRegistryId", containerRegistryId);
@@ -1336,7 +1376,10 @@ public class InsertK8sApplicationRequest extends Request {
         }
 
         /**
-         * The ID of the cluster. This parameter is required only when you create the application in a cluster that has not been imported.
+         * <p>The ID of the cluster. This parameter is required only when you create the application in a cluster that has not been imported.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>abcdefg</p>
          */
         public Builder csClusterId(String csClusterId) {
             this.putQueryParameter("CsClusterId", csClusterId);
@@ -1345,7 +1388,10 @@ public class InsertK8sApplicationRequest extends Request {
         }
 
         /**
-         * The custom affinity.
+         * <p>The custom affinity.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>demo</p>
          */
         public Builder customAffinity(String customAffinity) {
             this.putQueryParameter("CustomAffinity", customAffinity);
@@ -1363,7 +1409,10 @@ public class InsertK8sApplicationRequest extends Request {
         }
 
         /**
-         * The custom tolerances.
+         * <p>The custom tolerances.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>demo</p>
          */
         public Builder customTolerations(String customTolerations) {
             this.putQueryParameter("CustomTolerations", customTolerations);
@@ -1372,7 +1421,10 @@ public class InsertK8sApplicationRequest extends Request {
         }
 
         /**
-         * Specifies whether to distribute application instances across nodes. Value `true` indicates that application instances are distributed across nodes. Other values indicate that application instances are not distributed across nodes.
+         * <p>Specifies whether to distribute application instances across nodes. Value <code>true</code> indicates that application instances are distributed across nodes. Other values indicate that application instances are not distributed across nodes.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder deployAcrossNodes(String deployAcrossNodes) {
             this.putQueryParameter("DeployAcrossNodes", deployAcrossNodes);
@@ -1381,7 +1433,10 @@ public class InsertK8sApplicationRequest extends Request {
         }
 
         /**
-         * Specifies whether to distribute application instances across zones. Value `true` indicates that application instances are distributed across zones. Other values indicate that application instances are not distributed across zones.
+         * <p>Specifies whether to distribute application instances across zones. Value <code>true</code> indicates that application instances are distributed across zones. Other values indicate that application instances are not distributed across zones.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder deployAcrossZones(String deployAcrossZones) {
             this.putQueryParameter("DeployAcrossZones", deployAcrossZones);
@@ -1390,10 +1445,13 @@ public class InsertK8sApplicationRequest extends Request {
         }
 
         /**
-         * The version of `EDAS Container` on which the deployment package of the application depends.
-         * <p>
+         * <p>The version of <code>EDAS Container</code> on which the deployment package of the application depends.</p>
+         * <blockquote>
+         * <p>This parameter is unavailable if you deploy applications by using images.</p>
+         * </blockquote>
          * 
-         * > This parameter is unavailable if you deploy applications by using images.
+         * <strong>example:</strong>
+         * <p>3.5.9</p>
          */
         public Builder edasContainerVersion(String edasContainerVersion) {
             this.putQueryParameter("EdasContainerVersion", edasContainerVersion);
@@ -1402,12 +1460,15 @@ public class InsertK8sApplicationRequest extends Request {
         }
 
         /**
-         * The configuration for mounting a Kubernetes emptyDir volume to a directory in an elastic container instance. The following parameters are included in the configuration:
-         * <p>
+         * <p>The configuration for mounting a Kubernetes emptyDir volume to a directory in an elastic container instance. The following parameters are included in the configuration:</p>
+         * <ul>
+         * <li>mountPath: The mount path in the container. This parameter is required.</li>
+         * <li>readOnly: (Optional) The mount mode. Value true indicates the read-only mode. Value false indicates the read and write mode. Default value: false.</li>
+         * <li>subPathExpr: (Optional) The regular expression that is used to match the subdirectory.</li>
+         * </ul>
          * 
-         * *   mountPath: The mount path in the container. This parameter is required.
-         * *   readOnly: (Optional) The mount mode. Value true indicates the read-only mode. Value false indicates the read and write mode. Default value: false.
-         * *   subPathExpr: (Optional) The regular expression that is used to match the subdirectory.
+         * <strong>example:</strong>
+         * <p>[{&quot;mountPath&quot;:&quot;/app-log&quot;,&quot;subPathExpr&quot;:&quot;$(POD_IP)&quot;},{&quot;readOnly&quot;:true,&quot;mountPath&quot;:&quot;/etc/nginx&quot;}]</p>
          */
         public Builder emptyDirs(String emptyDirs) {
             this.putQueryParameter("EmptyDirs", emptyDirs);
@@ -1416,11 +1477,14 @@ public class InsertK8sApplicationRequest extends Request {
         }
 
         /**
-         * Specifies whether to enable access to Application High Availability Service (AHAS). Valid values:
-         * <p>
+         * <p>Specifies whether to enable access to Application High Availability Service (AHAS). Valid values:</p>
+         * <ul>
+         * <li>true: enables access to AHAS.</li>
+         * <li>false: does not enable access to AHAS.</li>
+         * </ul>
          * 
-         * *   true: enables access to AHAS.
-         * *   false: does not enable access to AHAS.
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder enableAhas(Boolean enableAhas) {
             this.putQueryParameter("EnableAhas", enableAhas);
@@ -1429,7 +1493,10 @@ public class InsertK8sApplicationRequest extends Request {
         }
 
         /**
-         * Specifies whether to activate Alibaba Cloud Service Mesh (ASM). Set this parameter to true only when you create the application in a cluster that has not been imported and you need to use ASM.
+         * <p>Specifies whether to activate Alibaba Cloud Service Mesh (ASM). Set this parameter to true only when you create the application in a cluster that has not been imported and you need to use ASM.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>false</p>
          */
         public Builder enableAsm(Boolean enableAsm) {
             this.putQueryParameter("EnableAsm", enableAsm);
@@ -1438,11 +1505,14 @@ public class InsertK8sApplicationRequest extends Request {
         }
 
         /**
-         * Specifies whether to enable the empty list protection feature. Valid values:
-         * <p>
+         * <p>Specifies whether to enable the empty list protection feature. Valid values:</p>
+         * <ul>
+         * <li>true: enables the empty list protection feature.</li>
+         * <li>false: disables the empty list protection feature.</li>
+         * </ul>
          * 
-         * *   true: enables the empty list protection feature.
-         * *   false: disables the empty list protection feature.
+         * <strong>example:</strong>
+         * <p>false</p>
          */
         public Builder enableEmptyPushReject(Boolean enableEmptyPushReject) {
             this.putQueryParameter("EnableEmptyPushReject", enableEmptyPushReject);
@@ -1451,11 +1521,14 @@ public class InsertK8sApplicationRequest extends Request {
         }
 
         /**
-         * Specifies whether to enable graceful start rules. Valid values:
-         * <p>
+         * <p>Specifies whether to enable graceful start rules. Valid values:</p>
+         * <ul>
+         * <li>true: enables graceful start rules.</li>
+         * <li>false: disables graceful start rules.</li>
+         * </ul>
          * 
-         * *   true: enables graceful start rules.
-         * *   false: disables graceful start rules.
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder enableLosslessRule(Boolean enableLosslessRule) {
             this.putQueryParameter("EnableLosslessRule", enableLosslessRule);
@@ -1464,18 +1537,23 @@ public class InsertK8sApplicationRequest extends Request {
         }
 
         /**
-         * The Kubernetes environment variables that are configured in EnvFrom mode. A ConfigMap or Secret is mounted to a directory. Each key corresponds to a file in the directory, and the content of the file is the value of the key.
-         * <p>
+         * <p>The Kubernetes environment variables that are configured in EnvFrom mode. A ConfigMap or Secret is mounted to a directory. Each key corresponds to a file in the directory, and the content of the file is the value of the key.</p>
+         * <p>The following parameters are included in the configuration:</p>
+         * <ul>
+         * <li><p>configMapRef: the ConfigMap that is referenced. The following parameter is contained:</p>
+         * <ul>
+         * <li>name: the name of the ConfigMap.</li>
+         * </ul>
+         * </li>
+         * <li><p>secretRef: the Secret that is referenced. The following parameter is contained:</p>
+         * <ul>
+         * <li>name: the name of the Secret.</li>
+         * </ul>
+         * </li>
+         * </ul>
          * 
-         * The following parameters are included in the configuration:
-         * 
-         * *   configMapRef: the ConfigMap that is referenced. The following parameter is contained:
-         * 
-         *     *   name: the name of the ConfigMap.
-         * 
-         * *   secretRef: the Secret that is referenced. The following parameter is contained:
-         * 
-         *     *   name: the name of the Secret.
+         * <strong>example:</strong>
+         * <p>[{&quot;name&quot;:&quot;appname&quot;,&quot;valueFrom&quot;:{&quot;configMapKeyRef&quot;:{&quot;name&quot;:&quot;appconf&quot;,&quot;key&quot;:&quot;name&quot;}}}]</p>
          */
         public Builder envFroms(String envFroms) {
             this.putQueryParameter("EnvFroms", envFroms);
@@ -1484,20 +1562,18 @@ public class InsertK8sApplicationRequest extends Request {
         }
 
         /**
-         * The environment variables that are used to deploy the application. The value must be a JSON array. Valid values: regular environment variables, Kubernetes ConfigMap environment variables, or Kubernetes Secret environment variables. Specify regular environment variables in the following format:
-         * <p>
+         * <p>The environment variables that are used to deploy the application. The value must be a JSON array. Valid values: regular environment variables, Kubernetes ConfigMap environment variables, or Kubernetes Secret environment variables. Specify regular environment variables in the following format:</p>
+         * <p><code>{&quot;name&quot;:&quot;x&quot;, &quot;value&quot;: &quot;y&quot;}</code></p>
+         * <p>Specify Kubernetes ConfigMap environment variables in the following format to reference values from ConfigMaps:</p>
+         * <p><code>{ &quot;name&quot;: &quot;x2&quot;, &quot;valueFrom&quot;: { &quot;configMapKeyRef&quot;: { &quot;name&quot;: &quot;my-config&quot;, &quot;key&quot;: &quot;y2&quot; } } }</code></p>
+         * <p>Specify Kubernetes Secret environment variables in the following format to reference values from Secrets:</p>
+         * <p><code>{ &quot;name&quot;: &quot;x3&quot;, &quot;valueFrom&quot;: { &quot;secretKeyRef&quot;: { &quot;name&quot;: &quot;my-secret&quot;, &quot;key&quot;: &quot;y3&quot; } } }</code></p>
+         * <blockquote>
+         * <p> If you want to cancel this configuration, set this parameter to an empty JSON array in the format of &quot;[]&quot;.</p>
+         * </blockquote>
          * 
-         * `{"name":"x", "value": "y"}`
-         * 
-         * Specify Kubernetes ConfigMap environment variables in the following format to reference values from ConfigMaps:
-         * 
-         * `{ "name": "x2", "valueFrom": { "configMapKeyRef": { "name": "my-config", "key": "y2" } } }`
-         * 
-         * Specify Kubernetes Secret environment variables in the following format to reference values from Secrets:
-         * 
-         * `{ "name": "x3", "valueFrom": { "secretKeyRef": { "name": "my-secret", "key": "y3" } } }`
-         * 
-         * >  If you want to cancel this configuration, set this parameter to an empty JSON array in the format of "\[]".
+         * <strong>example:</strong>
+         * <p>[{&quot;name&quot;:&quot;x1&quot;,&quot;value&quot;:&quot;y1&quot;},{&quot;name&quot;:&quot;x2&quot;,&quot;valueFrom&quot;:{&quot;configMapKeyRef&quot;:{&quot;name&quot;:&quot;my-config&quot;,&quot;key&quot;:&quot;y2&quot;}}},{&quot;name&quot;:&quot;x3&quot;,&quot;valueFrom&quot;:{&quot;secretKeyRef&quot;:{&quot;name&quot;:&quot;my-secret&quot;,&quot;key&quot;:&quot;y3&quot;}}}]</p>
          */
         public Builder envs(String envs) {
             this.putQueryParameter("Envs", envs);
@@ -1515,7 +1591,13 @@ public class InsertK8sApplicationRequest extends Request {
         }
 
         /**
-         * ImagePlatforms.
+         * <p>Mirror the target platform architecture, which is effective when deployed using war or jar. Enter an example:</p>
+         * <ul>
+         * <li>Specify x86 64 architecture: Linux/amd64</li>
+         * <li>Specify ARM 64 architecture: Linux/arm64</li>
+         * <li>Specify the construction of dual architecture images: Linux/amd64, Linux/arm64</li>
+         * <li>Do not input: default schema</li>
+         * </ul>
          */
         public Builder imagePlatforms(String imagePlatforms) {
             this.putQueryParameter("ImagePlatforms", imagePlatforms);
@@ -1524,7 +1606,10 @@ public class InsertK8sApplicationRequest extends Request {
         }
 
         /**
-         * The URL of the image. This parameter is required if you set the `PackageType` parameter to `Image`.
+         * <p>The URL of the image. This parameter is required if you set the <code>PackageType</code> parameter to <code>Image</code>.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>registry.cn-beijing.aliyuncs.com/<strong><strong>_test/</strong></strong>-cons****:1.0</p>
          */
         public Builder imageUrl(String imageUrl) {
             this.putQueryParameter("ImageUrl", imageUrl);
@@ -1533,7 +1618,14 @@ public class InsertK8sApplicationRequest extends Request {
         }
 
         /**
-         * InitContainers.
+         * <p>Set the initialization container for the application Pod. Support setting the format YAML for container configuration, which is the value of Init container YAML configured with base64 encoding.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>[
+         *       {
+         *             &quot;yamlEncoded&quot;: &quot;Y29tbWFuZDoKICAtIHNsZWVwCiAgLSAnNjAnCmltYWdlOiAnYnVzeWJveDpsYXRlc3QnCm5hbWU6IGluaXQtYnVzeWJveAo=&quot;
+         *       }
+         * ]</p>
          */
         public Builder initContainers(String initContainers) {
             this.putQueryParameter("InitContainers", initContainers);
@@ -1542,7 +1634,10 @@ public class InsertK8sApplicationRequest extends Request {
         }
 
         /**
-         * The ID of the Internet-facing SLB instance. If you do not specify this parameter, EDAS automatically purchases a new SLB instance for you.
+         * <p>The ID of the Internet-facing SLB instance. If you do not specify this parameter, EDAS automatically purchases a new SLB instance for you.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>a3d4********</p>
          */
         public Builder internetSlbId(String internetSlbId) {
             this.putQueryParameter("InternetSlbId", internetSlbId);
@@ -1551,7 +1646,10 @@ public class InsertK8sApplicationRequest extends Request {
         }
 
         /**
-         * The frontend port of the Internet-facing SLB instance. Valid values: 1 to 65535.
+         * <p>The frontend port of the Internet-facing SLB instance. Valid values: 1 to 65535.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>80</p>
          */
         public Builder internetSlbPort(Integer internetSlbPort) {
             this.putQueryParameter("InternetSlbPort", internetSlbPort);
@@ -1560,7 +1658,10 @@ public class InsertK8sApplicationRequest extends Request {
         }
 
         /**
-         * The protocol used by the Internet-facing SLB instance. Valid values: TCP, HTTP, and HTTPS.
+         * <p>The protocol used by the Internet-facing SLB instance. Valid values: TCP, HTTP, and HTTPS.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>TCP</p>
          */
         public Builder internetSlbProtocol(String internetSlbProtocol) {
             this.putQueryParameter("InternetSlbProtocol", internetSlbProtocol);
@@ -1569,7 +1670,10 @@ public class InsertK8sApplicationRequest extends Request {
         }
 
         /**
-         * The backend port of the internal-facing SLB instance. This port also serves as the service port of the application. Valid values: 1 to 65535.
+         * <p>The backend port of the internal-facing SLB instance. This port also serves as the service port of the application. Valid values: 1 to 65535.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>8080</p>
          */
         public Builder internetTargetPort(Integer internetTargetPort) {
             this.putQueryParameter("InternetTargetPort", internetTargetPort);
@@ -1578,7 +1682,10 @@ public class InsertK8sApplicationRequest extends Request {
         }
 
         /**
-         * The ID of the internal-facing SLB instance. If you do not specify this parameter, Enterprise Distributed Application Service (EDAS) automatically purchases a new SLB instance for you.
+         * <p>The ID of the internal-facing SLB instance. If you do not specify this parameter, Enterprise Distributed Application Service (EDAS) automatically purchases a new SLB instance for you.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>ae93********</p>
          */
         public Builder intranetSlbId(String intranetSlbId) {
             this.putQueryParameter("IntranetSlbId", intranetSlbId);
@@ -1587,7 +1694,10 @@ public class InsertK8sApplicationRequest extends Request {
         }
 
         /**
-         * The frontend port of the internal-facing SLB instance. Valid values: 1 to 65535.
+         * <p>The frontend port of the internal-facing SLB instance. Valid values: 1 to 65535.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>80</p>
          */
         public Builder intranetSlbPort(Integer intranetSlbPort) {
             this.putQueryParameter("IntranetSlbPort", intranetSlbPort);
@@ -1596,7 +1706,10 @@ public class InsertK8sApplicationRequest extends Request {
         }
 
         /**
-         * The protocol used by the internal-facing SLB instance. Valid values: TCP, HTTP, and HTTPS.
+         * <p>The protocol used by the internal-facing SLB instance. Valid values: TCP, HTTP, and HTTPS.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>TCP</p>
          */
         public Builder intranetSlbProtocol(String intranetSlbProtocol) {
             this.putQueryParameter("IntranetSlbProtocol", intranetSlbProtocol);
@@ -1605,7 +1718,10 @@ public class InsertK8sApplicationRequest extends Request {
         }
 
         /**
-         * The backend port of the internal-facing Server Load Balancer (SLB) instance. This port also serves as the service port of the application. Valid values: 1 to 65535.
+         * <p>The backend port of the internal-facing Server Load Balancer (SLB) instance. This port also serves as the service port of the application. Valid values: 1 to 65535.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>80</p>
          */
         public Builder intranetTargetPort(Integer intranetTargetPort) {
             this.putQueryParameter("IntranetTargetPort", intranetTargetPort);
@@ -1614,7 +1730,10 @@ public class InsertK8sApplicationRequest extends Request {
         }
 
         /**
-         * Specifies whether the application is a multi-language application.
+         * <p>Specifies whether the application is a multi-language application.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder isMultilingualApp(Boolean isMultilingualApp) {
             this.putQueryParameter("IsMultilingualApp", isMultilingualApp);
@@ -1623,7 +1742,10 @@ public class InsertK8sApplicationRequest extends Request {
         }
 
         /**
-         * The version of the Java Development Kit (JDK) on which the deployment package of the application depends. Valid values: Open JDK 7 and Open JDK 8. This parameter is unavailable if you deploy applications by using images.
+         * <p>The version of the Java Development Kit (JDK) on which the deployment package of the application depends. Valid values: Open JDK 7 and Open JDK 8. This parameter is unavailable if you deploy applications by using images.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Open JDK 8</p>
          */
         public Builder JDK(String JDK) {
             this.putQueryParameter("JDK", JDK);
@@ -1632,13 +1754,16 @@ public class InsertK8sApplicationRequest extends Request {
         }
 
         /**
-         * The configuration of Java startup parameters for a Java application. These startup parameters involve the memory, application, garbage collection (GC) policy, tools, service registration and discovery, and custom configurations. Appropriate parameter settings help reduce the GC overheads, shorten the server response time, and improve the throughput. Set this parameter to a JSON string. In the example, original indicates the configuration value, and startup indicates a startup parameter. The system automatically concatenates all startup values as the settings of Java startup parameters for the application. To delete this configuration, leave the parameter value empty by entering `""` or `"{}"`. The following parameters are included in the configuration:
-         * <p>
+         * <p>The configuration of Java startup parameters for a Java application. These startup parameters involve the memory, application, garbage collection (GC) policy, tools, service registration and discovery, and custom configurations. Appropriate parameter settings help reduce the GC overheads, shorten the server response time, and improve the throughput. Set this parameter to a JSON string. In the example, original indicates the configuration value, and startup indicates a startup parameter. The system automatically concatenates all startup values as the settings of Java startup parameters for the application. To delete this configuration, leave the parameter value empty by entering <code>&quot;&quot;</code> or <code>&quot;{}&quot;</code>. The following parameters are included in the configuration:</p>
+         * <ul>
+         * <li>InitialHeapSize: the initial size of the heap memory.</li>
+         * <li>MaxHeapSize: the maximum size of the heap memory.</li>
+         * <li>CustomParams: the custom parameters, such as JVM -D parameters.</li>
+         * <li>Other parameters: You can view the JSON structure submitted by the frontend.</li>
+         * </ul>
          * 
-         * *   InitialHeapSize: the initial size of the heap memory.
-         * *   MaxHeapSize: the maximum size of the heap memory.
-         * *   CustomParams: the custom parameters, such as JVM -D parameters.
-         * *   Other parameters: You can view the JSON structure submitted by the frontend.
+         * <strong>example:</strong>
+         * <p>{&quot;InitialHeapSize&quot;:{&quot;original&quot;:512,&quot;startup&quot;:&quot;-Xms512m&quot;},&quot;MaxHeapSize&quot;:{&quot;original&quot;:1024,&quot;startup&quot;:&quot;-Xmx1024m&quot;},&quot;CustomParams&quot;:{&quot;original&quot;:&quot;-Dcustom.property.sample=false&quot;,&quot;startup&quot;:&quot;-Dcustom.property.sample=false&quot;}}</p>
          */
         public Builder javaStartUpConfig(String javaStartUpConfig) {
             this.putQueryParameter("JavaStartUpConfig", javaStartUpConfig);
@@ -1647,7 +1772,10 @@ public class InsertK8sApplicationRequest extends Request {
         }
 
         /**
-         * The label of an application pod.
+         * <p>The label of an application pod.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>{&quot;label-name-1&quot;:&quot;label-value-1&quot;,&quot;label-name-2&quot;:&quot;label-value-2&quot;}</p>
          */
         public Builder labels(String labels) {
             this.putQueryParameter("Labels", labels);
@@ -1656,7 +1784,10 @@ public class InsertK8sApplicationRequest extends Request {
         }
 
         /**
-         * The maximum number of CPU cores allowed for each application instance when the application is running. Unit: cores. If the LimitmCpu parameter is specified, you can ignore this parameter.
+         * <p>The maximum number of CPU cores allowed for each application instance when the application is running. Unit: cores. If the LimitmCpu parameter is specified, you can ignore this parameter.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>4</p>
          */
         public Builder limitCpu(Integer limitCpu) {
             this.putQueryParameter("LimitCpu", limitCpu);
@@ -1665,7 +1796,10 @@ public class InsertK8sApplicationRequest extends Request {
         }
 
         /**
-         * The maximum size of space required by ephemeral storage. Unit: GB. Value 0 indicates that no limit is set on the space size.
+         * <p>The maximum size of space required by ephemeral storage. Unit: GB. Value 0 indicates that no limit is set on the space size.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>4</p>
          */
         public Builder limitEphemeralStorage(Integer limitEphemeralStorage) {
             this.putQueryParameter("LimitEphemeralStorage", limitEphemeralStorage);
@@ -1674,7 +1808,10 @@ public class InsertK8sApplicationRequest extends Request {
         }
 
         /**
-         * The maximum size of memory allowed for each application instance when the application is running. Unit: MB. The value of LimitMem must be greater than that of RequestsMem.
+         * <p>The maximum size of memory allowed for each application instance when the application is running. Unit: MB. The value of LimitMem must be greater than that of RequestsMem.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2</p>
          */
         public Builder limitMem(Integer limitMem) {
             this.putQueryParameter("LimitMem", limitMem);
@@ -1683,7 +1820,10 @@ public class InsertK8sApplicationRequest extends Request {
         }
 
         /**
-         * The maximum number of CPU cores allowed for each application instance when the application is running. Unit: millicores. Value 0 indicates that no limit is set on CPU cores.
+         * <p>The maximum number of CPU cores allowed for each application instance when the application is running. Unit: millicores. Value 0 indicates that no limit is set on CPU cores.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1000</p>
          */
         public Builder limitmCpu(Integer limitmCpu) {
             this.putQueryParameter("LimitmCpu", limitmCpu);
@@ -1692,10 +1832,11 @@ public class InsertK8sApplicationRequest extends Request {
         }
 
         /**
-         * The configuration for the liveness check on the container. Example: `{"failureThreshold": 3,"initialDelaySeconds": 5,"successThreshold": 1,"timeoutSeconds": 1,"tcpSocket":{"host":"", "port":8080}}`.
-         * <p>
+         * <p>The configuration for the liveness check on the container. Example: <code>{&quot;failureThreshold&quot;: 3,&quot;initialDelaySeconds&quot;: 5,&quot;successThreshold&quot;: 1,&quot;timeoutSeconds&quot;: 1,&quot;tcpSocket&quot;:{&quot;host&quot;:&quot;&quot;, &quot;port&quot;:8080}}</code>.</p>
+         * <p>If you want to cancel this configuration, leave the parameter value empty by entering <code>&quot;&quot;</code> or <code>{}</code>. If you do not specify this parameter, this configuration is ignored.</p>
          * 
-         * If you want to cancel this configuration, leave the parameter value empty by entering `""` or `{}`. If you do not specify this parameter, this configuration is ignored.
+         * <strong>example:</strong>
+         * <p>{&quot;failureThreshold&quot;: 3,&quot;initialDelaySeconds&quot;: 5,&quot;successThreshold&quot;: 1,&quot;timeoutSeconds&quot;: 1,&quot;tcpSocket&quot;:{&quot;host&quot;:&quot;&quot;, &quot;port&quot;:8080}}</p>
          */
         public Builder liveness(String liveness) {
             this.putQueryParameter("Liveness", liveness);
@@ -1704,12 +1845,15 @@ public class InsertK8sApplicationRequest extends Request {
         }
 
         /**
-         * The configurations that are used when the host files are mounted to the container on which the application is running. Example: `\[{"type":"","nodePath":"/localfiles","mountPath":"/app/files"},{"type":"Directory","nodePath":"/mnt","mountPath":"/app/storage"}\]`. Description:
-         * <p>
+         * <p>The configurations that are used when the host files are mounted to the container on which the application is running. Example: <code>[{&quot;type&quot;:&quot;&quot;,&quot;nodePath&quot;:&quot;/localfiles&quot;,&quot;mountPath&quot;:&quot;/app/files&quot;},{&quot;type&quot;:&quot;Directory&quot;,&quot;nodePath&quot;:&quot;/mnt&quot;,&quot;mountPath&quot;:&quot;/app/storage&quot;}\]</code>. Description:</p>
+         * <ul>
+         * <li><code>nodePath</code>: the host path.</li>
+         * <li><code>mountPath</code>: the path in the container.</li>
+         * <li><code>type</code>: the mounting type.</li>
+         * </ul>
          * 
-         * *   `nodePath`: the host path.
-         * *   `mountPath`: the path in the container.
-         * *   `type`: the mounting type.
+         * <strong>example:</strong>
+         * <p>[{&quot;type&quot;:&quot;&quot;,&quot;nodePath&quot;:&quot;/localfiles&quot;,&quot;mountPath&quot;:&quot;/app/files&quot;},{&quot;type&quot;:&quot;Directory&quot;,&quot;nodePath&quot;:&quot;/mnt&quot;,&quot;mountPath&quot;:&quot;/app/storage&quot;}]</p>
          */
         public Builder localVolume(String localVolume) {
             this.putQueryParameter("LocalVolume", localVolume);
@@ -1718,7 +1862,10 @@ public class InsertK8sApplicationRequest extends Request {
         }
 
         /**
-         * The ID of the EDAS namespace. This parameter is required for a non-default namespace.
+         * <p>The ID of the EDAS namespace. This parameter is required for a non-default namespace.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-shenzhen:beta****</p>
          */
         public Builder logicalRegionId(String logicalRegionId) {
             this.putQueryParameter("LogicalRegionId", logicalRegionId);
@@ -1727,16 +1874,18 @@ public class InsertK8sApplicationRequest extends Request {
         }
 
         /**
-         * Specifies whether to enable the graceful rolling deployment mode and ensure that the service is registered before the readiness check. Valid values:
-         * <p>
+         * <p>Specifies whether to enable the graceful rolling deployment mode and ensure that the service is registered before the readiness check. Valid values:</p>
+         * <ul>
+         * <li><p>true: provides port 55199 and the /health path for the health check in a non-intrusive manner. When the service is registered, the system returns HTTP 200 status code. Otherwise, the system returns HTTP 500 status code.</p>
+         * <p>**</p>
+         * <p><strong>Note</strong>If you set both the <code>LosslessRuleRelated</code> parameter and this parameter to <code>true</code>, the operation checks whether the service prefetching is complete.</p>
+         * </li>
+         * <li><p>false: does not check whether the service is registered.</p>
+         * </li>
+         * </ul>
          * 
-         * *   true: provides port 55199 and the /health path for the health check in a non-intrusive manner. When the service is registered, the system returns HTTP 200 status code. Otherwise, the system returns HTTP 500 status code.
-         * 
-         *     **
-         * 
-         *     **Note**If you set both the `LosslessRuleRelated` parameter and this parameter to `true`, the operation checks whether the service prefetching is complete.
-         * 
-         * *   false: does not check whether the service is registered.
+         * <strong>example:</strong>
+         * <p>false</p>
          */
         public Builder losslessRuleAligned(Boolean losslessRuleAligned) {
             this.putQueryParameter("LosslessRuleAligned", losslessRuleAligned);
@@ -1745,7 +1894,10 @@ public class InsertK8sApplicationRequest extends Request {
         }
 
         /**
-         * The delay of service registration. Valid values: 0 to 86400. Unit: seconds.
+         * <p>The delay of service registration. Valid values: 0 to 86400. Unit: seconds.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>0</p>
          */
         public Builder losslessRuleDelayTime(Integer losslessRuleDelayTime) {
             this.putQueryParameter("LosslessRuleDelayTime", losslessRuleDelayTime);
@@ -1754,7 +1906,10 @@ public class InsertK8sApplicationRequest extends Request {
         }
 
         /**
-         * The number of prefetching curves. Valid values: 0 to 20. The default value is 2, which is suitable for common prefetching scenarios. This value indicates that the received traffic of the provider during prefetching is displayed as a quadratic curve.
+         * <p>The number of prefetching curves. Valid values: 0 to 20. The default value is 2, which is suitable for common prefetching scenarios. This value indicates that the received traffic of the provider during prefetching is displayed as a quadratic curve.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2</p>
          */
         public Builder losslessRuleFuncType(Integer losslessRuleFuncType) {
             this.putQueryParameter("LosslessRuleFuncType", losslessRuleFuncType);
@@ -1763,11 +1918,14 @@ public class InsertK8sApplicationRequest extends Request {
         }
 
         /**
-         * Specifies whether to enable the graceful rolling deployment mode and ensure that the service prefetching is complete before the readiness check. Valid values:
-         * <p>
+         * <p>Specifies whether to enable the graceful rolling deployment mode and ensure that the service prefetching is complete before the readiness check. Valid values:</p>
+         * <ul>
+         * <li>true: provides port 55199 and the /health path for the health check in a non-intrusive manner. When the service prefetching is complete, the system returns HTTP 200 status code. Otherwise, the system returns HTTP 500 status code.</li>
+         * <li>false: does not check whether the service prefetching is complete.</li>
+         * </ul>
          * 
-         * *   true: provides port 55199 and the /health path for the health check in a non-intrusive manner. When the service prefetching is complete, the system returns HTTP 200 status code. Otherwise, the system returns HTTP 500 status code.
-         * *   false: does not check whether the service prefetching is complete.
+         * <strong>example:</strong>
+         * <p>false</p>
          */
         public Builder losslessRuleRelated(Boolean losslessRuleRelated) {
             this.putQueryParameter("LosslessRuleRelated", losslessRuleRelated);
@@ -1776,7 +1934,10 @@ public class InsertK8sApplicationRequest extends Request {
         }
 
         /**
-         * The service prefetching duration. Valid values: 0 to 86400. Unit: seconds.
+         * <p>The service prefetching duration. Valid values: 0 to 86400. Unit: seconds.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>120</p>
          */
         public Builder losslessRuleWarmupTime(Integer losslessRuleWarmupTime) {
             this.putQueryParameter("LosslessRuleWarmupTime", losslessRuleWarmupTime);
@@ -1785,7 +1946,10 @@ public class InsertK8sApplicationRequest extends Request {
         }
 
         /**
-         * The description of the NAS mounting configuration. Set this parameter to a serialized JSON string. Example: `\[{"nasPath": "/k8s","mountPath": "/mnt"},{"nasPath": "/files","mountPath": "/app/files"}\]`. The `nasPath` parameter specifies the file storage path, and the `mountPath` parameter specifies the path to mount the file system to the container where the application is running.
+         * <p>The description of the NAS mounting configuration. Set this parameter to a serialized JSON string. Example: <code>[{&quot;nasPath&quot;: &quot;/k8s&quot;,&quot;mountPath&quot;: &quot;/mnt&quot;},{&quot;nasPath&quot;: &quot;/files&quot;,&quot;mountPath&quot;: &quot;/app/files&quot;}\]</code>. The <code>nasPath</code> parameter specifies the file storage path, and the <code>mountPath</code> parameter specifies the path to mount the file system to the container where the application is running.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>[{&quot;nasPath&quot;: &quot;/k8s&quot;,&quot;mountPath&quot;: &quot;/mnt&quot;},{&quot;nasPath&quot;: &quot;/files&quot;,&quot;mountPath&quot;: &quot;/app/files&quot;}]</p>
          */
         public Builder mountDescs(String mountDescs) {
             this.putQueryParameter("MountDescs", mountDescs);
@@ -1794,7 +1958,10 @@ public class InsertK8sApplicationRequest extends Request {
         }
 
         /**
-         * The namespace of the Kubernetes cluster. This parameter specifies the Kubernetes namespace in which your application is deployed. By default, the default namespace is used.
+         * <p>The namespace of the Kubernetes cluster. This parameter specifies the Kubernetes namespace in which your application is deployed. By default, the default namespace is used.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>default</p>
          */
         public Builder namespace(String namespace) {
             this.putQueryParameter("Namespace", namespace);
@@ -1803,7 +1970,10 @@ public class InsertK8sApplicationRequest extends Request {
         }
 
         /**
-         * The ID of the Network Attached Storage (NAS) file system that you want to mount to the application. If you do not specify this parameter but specify the MountDescs parameter, a NAS file system is automatically purchased and mounted to the vSwitch in the VPC.
+         * <p>The ID of the Network Attached Storage (NAS) file system that you want to mount to the application. If you do not specify this parameter but specify the MountDescs parameter, a NAS file system is automatically purchased and mounted to the vSwitch in the VPC.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>dfs23****</p>
          */
         public Builder nasId(String nasId) {
             this.putQueryParameter("NasId", nasId);
@@ -1812,7 +1982,10 @@ public class InsertK8sApplicationRequest extends Request {
         }
 
         /**
-         * The type of the deployment package. Valid values: FatJar, WAR, and Image.
+         * <p>The type of the deployment package. Valid values: FatJar, WAR, and Image.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>WAR</p>
          */
         public Builder packageType(String packageType) {
             this.putQueryParameter("PackageType", packageType);
@@ -1821,10 +1994,13 @@ public class InsertK8sApplicationRequest extends Request {
         }
 
         /**
-         * The URL of the deployment package. This parameter is required if you use a FatJar or WAR package to deploy the application.
-         * <p>
+         * <p>The URL of the deployment package. This parameter is required if you use a FatJar or WAR package to deploy the application.</p>
+         * <blockquote>
+         * <p>The version of EDAS SDK for Java or Python must be V2.44.0 or later.</p>
+         * </blockquote>
          * 
-         * > The version of EDAS SDK for Java or Python must be V2.44.0 or later.
+         * <strong>example:</strong>
+         * <p><a href="https://e***.oss-cn-beijing.aliyuncs.com/s***-1.0-SNAPSHOT-spring-boot.jar">https://e***.oss-cn-beijing.aliyuncs.com/s***-1.0-SNAPSHOT-spring-boot.jar</a></p>
          */
         public Builder packageUrl(String packageUrl) {
             this.putQueryParameter("PackageUrl", packageUrl);
@@ -1833,10 +2009,13 @@ public class InsertK8sApplicationRequest extends Request {
         }
 
         /**
-         * The version of the deployment package. This parameter is required if you use a FatJar or WAR package to deploy the application. You must specify a version.
-         * <p>
+         * <p>The version of the deployment package. This parameter is required if you use a FatJar or WAR package to deploy the application. You must specify a version.</p>
+         * <blockquote>
+         * <p>The version of EDAS SDK for Java or Python must be V2.44.0 or later.</p>
+         * </blockquote>
          * 
-         * > The version of EDAS SDK for Java or Python must be V2.44.0 or later.
+         * <strong>example:</strong>
+         * <p>20200720</p>
          */
         public Builder packageVersion(String packageVersion) {
             this.putQueryParameter("PackageVersion", packageVersion);
@@ -1845,10 +2024,11 @@ public class InsertK8sApplicationRequest extends Request {
         }
 
         /**
-         * The post-start script. Example: `{"exec":{"command":\["cat","/etc/group"\]}}`.
-         * <p>
+         * <p>The post-start script. Example: <code>{&quot;exec&quot;:{&quot;command&quot;:[&quot;cat&quot;,&quot;/etc/group&quot;\]}}</code>.</p>
+         * <p>If you want to cancel this configuration, leave this parameter empty by setting it to <code>&quot;&quot;</code> or <code>{}</code>. If you do not specify this parameter, this configuration is ignored.</p>
          * 
-         * If you want to cancel this configuration, leave this parameter empty by setting it to `""` or `{}`. If you do not specify this parameter, this configuration is ignored.
+         * <strong>example:</strong>
+         * <p>{&quot;exec&quot;:{&quot;command&quot;:[&quot;ls&quot;,&quot;/&quot;]}}&quot;</p>
          */
         public Builder postStart(String postStart) {
             this.putQueryParameter("PostStart", postStart);
@@ -1857,10 +2037,11 @@ public class InsertK8sApplicationRequest extends Request {
         }
 
         /**
-         * The pre-stop script. Example: `{"tcpSocket":{"host":"", "port":8080}}`.
-         * <p>
+         * <p>The pre-stop script. Example: <code>{&quot;tcpSocket&quot;:{&quot;host&quot;:&quot;&quot;, &quot;port&quot;:8080}}</code>.</p>
+         * <p>If you want to cancel this configuration, leave this parameter empty by setting it to <code>&quot;&quot;</code> or <code>{}</code>. If you do not specify this parameter, this configuration is ignored.</p>
          * 
-         * If you want to cancel this configuration, leave this parameter empty by setting it to `""` or `{}`. If you do not specify this parameter, this configuration is ignored.
+         * <strong>example:</strong>
+         * <p>{&quot;exec&quot;:{&quot;command&quot;:[&quot;ls&quot;,&quot;/&quot;]}}&quot;</p>
          */
         public Builder preStop(String preStop) {
             this.putQueryParameter("PreStop", preStop);
@@ -1869,15 +2050,20 @@ public class InsertK8sApplicationRequest extends Request {
         }
 
         /**
-         * The configuration for mounting a Kubernetes PersistentVolumeClaim (PVC) volume to a directory in an elastic container instance. The following parameters are included in the configuration:
-         * <p>
+         * <p>The configuration for mounting a Kubernetes PersistentVolumeClaim (PVC) volume to a directory in an elastic container instance. The following parameters are included in the configuration:</p>
+         * <ul>
+         * <li><p>pvcName: the name of the PVC volume. Make sure that the PVC volume is an existing volume and is in the Bound state.</p>
+         * </li>
+         * <li><p>mountPaths: the directory to which you want to mount the PVC volume. You can configure multiple directories. You can set the following two parameters for each mount directory:</p>
+         * <ul>
+         * <li>mountPath: the mount path. The mount path must be an absolute path that starts with a forward slash (/).</li>
+         * <li>readOnly: the mount mode. Value true indicates the read-only mode. Value false indicates the read and write mode. Default value: false.</li>
+         * </ul>
+         * </li>
+         * </ul>
          * 
-         * *   pvcName: the name of the PVC volume. Make sure that the PVC volume is an existing volume and is in the Bound state.
-         * 
-         * *   mountPaths: the directory to which you want to mount the PVC volume. You can configure multiple directories. You can set the following two parameters for each mount directory:
-         * 
-         *     *   mountPath: the mount path. The mount path must be an absolute path that starts with a forward slash (/).
-         *     *   readOnly: the mount mode. Value true indicates the read-only mode. Value false indicates the read and write mode. Default value: false.
+         * <strong>example:</strong>
+         * <p>[{&quot;pvcName&quot;:&quot;nas-pvc-1&quot;,&quot;mountPaths&quot;:[{&quot;mountPath&quot;:&quot;/usr/share/nginx/data&quot;},{&quot;mountPath&quot;:&quot;/usr/share/nginx/html&quot;,&quot;readOnly&quot;:true}]}]</p>
          */
         public Builder pvcMountDescs(String pvcMountDescs) {
             this.putQueryParameter("PvcMountDescs", pvcMountDescs);
@@ -1886,10 +2072,11 @@ public class InsertK8sApplicationRequest extends Request {
         }
 
         /**
-         * The configuration for the readiness check on the container. If the check fails, the traffic that passes through the Kubernetes Service is not transmitted to the container. Example: \`{"failureThreshold": 3,"initialDelaySeconds": 5,"successThreshold": 1,"timeoutSeconds": 1,"httpGet": {"path": "/consumer","port": 8080,"scheme": "HTTP","httpHeaders": \\[{"name": "test","value": "testvalue"}\\]}}\`.``
-         * <p>
+         * <p>The configuration for the readiness check on the container. If the check fails, the traffic that passes through the Kubernetes Service is not transmitted to the container. Example: `{&quot;failureThreshold&quot;: 3,&quot;initialDelaySeconds&quot;: 5,&quot;successThreshold&quot;: 1,&quot;timeoutSeconds&quot;: 1,&quot;httpGet&quot;: {&quot;path&quot;: &quot;/consumer&quot;,&quot;port&quot;: 8080,&quot;scheme&quot;: &quot;HTTP&quot;,&quot;httpHeaders&quot;: [{&quot;name&quot;: &quot;test&quot;,&quot;value&quot;: &quot;testvalue&quot;}\]}}`.``</p>
+         * <p>If you want to cancel this configuration, leave the parameter value empty by entering <code>&quot;&quot;</code> or <code>{}</code>. If you do not specify this parameter, this configuration is ignored.</p>
          * 
-         * If you want to cancel this configuration, leave the parameter value empty by entering `""` or `{}`. If you do not specify this parameter, this configuration is ignored.
+         * <strong>example:</strong>
+         * <p>{&quot;failureThreshold&quot;: 3,&quot;initialDelaySeconds&quot;: 5,&quot;successThreshold&quot;: 1,&quot;timeoutSeconds&quot;: 1,&quot;httpGet&quot;: {&quot;path&quot;: &quot;/consumer&quot;,&quot;port&quot;: 8080,&quot;scheme&quot;: &quot;HTTP&quot;,&quot;httpHeaders&quot;: [{&quot;name&quot;: &quot;test&quot;,&quot;value&quot;: &quot;testvalue&quot;}]}}</p>
          */
         public Builder readiness(String readiness) {
             this.putQueryParameter("Readiness", readiness);
@@ -1898,7 +2085,10 @@ public class InsertK8sApplicationRequest extends Request {
         }
 
         /**
-         * The number of application instances.
+         * <p>The number of application instances.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>4</p>
          */
         public Builder replicas(Integer replicas) {
             this.putQueryParameter("Replicas", replicas);
@@ -1907,7 +2097,10 @@ public class InsertK8sApplicationRequest extends Request {
         }
 
         /**
-         * The ID of the image repository.
+         * <p>The ID of the image repository.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>ced********</p>
          */
         public Builder repoId(String repoId) {
             this.putQueryParameter("RepoId", repoId);
@@ -1916,7 +2109,10 @@ public class InsertK8sApplicationRequest extends Request {
         }
 
         /**
-         * The maximum number of CPU cores allowed for each application instance when the application is created. Unit: cores. Value 0 indicates that no limit is set on CPU cores. If the RequestsmCpu parameter is specified, the value of the RequestsmCpu parameter is used. You can ignore this parameter.
+         * <p>The maximum number of CPU cores allowed for each application instance when the application is created. Unit: cores. Value 0 indicates that no limit is set on CPU cores. If the RequestsmCpu parameter is specified, the value of the RequestsmCpu parameter is used. You can ignore this parameter.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>0</p>
          */
         public Builder requestsCpu(Integer requestsCpu) {
             this.putQueryParameter("RequestsCpu", requestsCpu);
@@ -1925,7 +2121,10 @@ public class InsertK8sApplicationRequest extends Request {
         }
 
         /**
-         * The minimum size of space required by ephemeral storage. Unit: GB. Value 0 indicates that no limit is set on the space size.
+         * <p>The minimum size of space required by ephemeral storage. Unit: GB. Value 0 indicates that no limit is set on the space size.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2</p>
          */
         public Builder requestsEphemeralStorage(Integer requestsEphemeralStorage) {
             this.putQueryParameter("RequestsEphemeralStorage", requestsEphemeralStorage);
@@ -1934,7 +2133,10 @@ public class InsertK8sApplicationRequest extends Request {
         }
 
         /**
-         * The maximum size of memory allowed for each application instance when the application is created. Unit: MB. Value 0 indicates that no limit is set on the memory size. The value of RequestsMem cannot be greater than that of LimitMem.
+         * <p>The maximum size of memory allowed for each application instance when the application is created. Unit: MB. Value 0 indicates that no limit is set on the memory size. The value of RequestsMem cannot be greater than that of LimitMem.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>0</p>
          */
         public Builder requestsMem(Integer requestsMem) {
             this.putQueryParameter("RequestsMem", requestsMem);
@@ -1943,7 +2145,10 @@ public class InsertK8sApplicationRequest extends Request {
         }
 
         /**
-         * The maximum number of CPU cores allowed for each application instance when the application is created. Unit: millicores.
+         * <p>The maximum number of CPU cores allowed for each application instance when the application is created. Unit: millicores.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>500</p>
          */
         public Builder requestsmCpu(Integer requestsmCpu) {
             this.putQueryParameter("RequestsmCpu", requestsmCpu);
@@ -1952,7 +2157,10 @@ public class InsertK8sApplicationRequest extends Request {
         }
 
         /**
-         * The ID of the resource group.
+         * <p>The ID of the resource group.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>461</p>
          */
         public Builder resourceGroupId(String resourceGroupId) {
             this.putQueryParameter("ResourceGroupId", resourceGroupId);
@@ -1961,7 +2169,10 @@ public class InsertK8sApplicationRequest extends Request {
         }
 
         /**
-         * The type of the container runtime. This parameter is applicable only to clusters that use sandboxed containers.
+         * <p>The type of the container runtime. This parameter is applicable only to clusters that use sandboxed containers.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>runc</p>
          */
         public Builder runtimeClassName(String runtimeClassName) {
             this.putQueryParameter("RuntimeClassName", runtimeClassName);
@@ -1970,7 +2181,10 @@ public class InsertK8sApplicationRequest extends Request {
         }
 
         /**
-         * The name of the credential that is used to pull the images specified by the user. You must configure the Secret.
+         * <p>The name of the credential that is used to pull the images specified by the user. You must configure the Secret.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>edas-app-01-image-secret</p>
          */
         public Builder secretName(String secretName) {
             this.putQueryParameter("SecretName", secretName);
@@ -1979,7 +2193,10 @@ public class InsertK8sApplicationRequest extends Request {
         }
 
         /**
-         * The configurations of services in a Kubernetes cluster.
+         * <p>The configurations of services in a Kubernetes cluster.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>[{&quot;name&quot;: &quot;test-svc-create&quot;,&quot;serviceType&quot;:&quot;ClusterIP&quot;,&quot;portMappings&quot;:[{&quot;servicePort&quot;: {&quot;targetPort&quot;:8080,&quot;port&quot;:80,&quot;protocol&quot;:&quot;TCP&quot;}}]}]</p>
          */
         public Builder serviceConfigs(String serviceConfigs) {
             this.putQueryParameter("ServiceConfigs", serviceConfigs);
@@ -1988,7 +2205,10 @@ public class InsertK8sApplicationRequest extends Request {
         }
 
         /**
-         * Sidecars.
+         * <p>Set up a Sidecar container for the application Pod. Support setting the format YAML for container configuration, which is the value of Sidecar container YAML configured with base64 encoding.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>[{&quot;yamlEncoded&quot;:&quot;Y29tbWFuZDoKICAtIHRhaWwKICAtICctZicKICAtIC9kZXYvbnVsbAppbWFnZTogJ2J1c3lib3g6bGF0ZXN0JwpuYW1lOiBidXN5Ym94Cg==&quot;}]</p>
          */
         public Builder sidecars(String sidecars) {
             this.putQueryParameter("Sidecars", sidecars);
@@ -1997,20 +2217,27 @@ public class InsertK8sApplicationRequest extends Request {
         }
 
         /**
-         * The Logstore configuration. To delete this configuration, leave the parameter value empty by entering `""` or `"{}"`.
-         * <p>
+         * <p>The Logstore configuration. To delete this configuration, leave the parameter value empty by entering <code>&quot;&quot;</code> or <code>&quot;{}&quot;</code>.</p>
+         * <ul>
+         * <li><p>The following parameters are included in the configuration:</p>
+         * <ul>
+         * <li><p>type: the collection type. Set this parameter to file to specify the file type. Set this parameter to stdout to specify the standard output type.</p>
+         * </li>
+         * <li><p>logstore: the name of the Logstore. Make sure that the name of the Logstore is unique in the cluster. The name must comply with the following rules:</p>
+         * <ul>
+         * <li>The name can contain only lowercase letters, digits, hyphens (-), and underscores (_).</li>
+         * <li>The name must start and end with a lowercase letter or a digit.</li>
+         * <li>The name must be 3 to 63 characters in length. If you leave this parameter empty, the system automatically generates a name.</li>
+         * </ul>
+         * </li>
+         * <li><p>LogDir: If the standard output type is used, the collection path is stdout.log. If the file type is used, the collection path is the path of the collected file. Wildcards (*) are supported. The collection path must match the following regular expression: <code>^/(.+)/(.*)^/$</code>.</p>
+         * </li>
+         * </ul>
+         * </li>
+         * </ul>
          * 
-         * *   The following parameters are included in the configuration:
-         * 
-         *     *   type: the collection type. Set this parameter to file to specify the file type. Set this parameter to stdout to specify the standard output type.
-         * 
-         *     *   logstore: the name of the Logstore. Make sure that the name of the Logstore is unique in the cluster. The name must comply with the following rules:
-         * 
-         *         *   The name can contain only lowercase letters, digits, hyphens (-), and underscores (\_).
-         *         *   The name must start and end with a lowercase letter or a digit.
-         *         *   The name must be 3 to 63 characters in length. If you leave this parameter empty, the system automatically generates a name.
-         * 
-         *     *   LogDir: If the standard output type is used, the collection path is stdout.log. If the file type is used, the collection path is the path of the collected file. Wildcards (\*) are supported. The collection path must match the following regular expression: `^/(.+)/(.*)^/$`.
+         * <strong>example:</strong>
+         * <p>[{&quot;logstore&quot;:&quot;thisisanotherfilelog&quot;,&quot;type&quot;:&quot;file&quot;,&quot;logDir&quot;:&quot;/var/log/<em>&quot;},{&quot;logstore&quot;:&quot;&quot;,&quot;type&quot;:&quot;stdout&quot;,&quot;logDir&quot;:&quot;stdout.log&quot;},{&quot;logstore&quot;:&quot;thisisafilelog&quot;,&quot;type&quot;:&quot;file&quot;,&quot;logDir&quot;:&quot;/tmp/log/</em>&quot;}]</p>
          */
         public Builder slsConfigs(String slsConfigs) {
             this.putQueryParameter("SlsConfigs", slsConfigs);
@@ -2019,7 +2246,11 @@ public class InsertK8sApplicationRequest extends Request {
         }
 
         /**
-         * Startup.
+         * <p>The startup probe can be used to detect the viability of slow start containers, avoiding them from being killed before startup. The format is as follows: {&quot;FailureThreshold&quot;: 3, &quot;initialDelaySeconds&quot;: 5, &quot;SuccessThreshold&quot;: 1, &quot;timeoutSeconds&quot;: 1, &quot;https Get&quot;: {&quot;path&quot;: &quot;/consumer&quot;, &quot;port&quot;: 8080, &quot;scheme&quot;: &quot;HTTP&quot;, &quot;https Headers&quot;: [{&quot;name&quot;: &quot;test&quot;, &quot;value&quot;: &quot;testvalue&quot;}]}.</p>
+         * <p>If set to &quot;&quot; or {}, it means delete, and if not set, it means ignore.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>{&quot;failureThreshold&quot;: 3,&quot;initialDelaySeconds&quot;: 5,&quot;successThreshold&quot;: 1,&quot;timeoutSeconds&quot;: 1,&quot;tcpSocket&quot;:{&quot;host&quot;:&quot;&quot;, &quot;port&quot;:8080}}</p>
          */
         public Builder startup(String startup) {
             this.putQueryParameter("Startup", startup);
@@ -2028,13 +2259,15 @@ public class InsertK8sApplicationRequest extends Request {
         }
 
         /**
-         * The storage type of the NAS file system.
-         * <p>
+         * <p>The storage type of the NAS file system.</p>
+         * <ul>
+         * <li>Valid values for General-purpose NAS file systems: Capacity and Performance.</li>
+         * <li>Valid values for Extreme NAS file systems: Standard and Advance.</li>
+         * </ul>
+         * <p>You can set this parameter only to Performance.</p>
          * 
-         * *   Valid values for General-purpose NAS file systems: Capacity and Performance.
-         * *   Valid values for Extreme NAS file systems: Standard and Advance.
-         * 
-         * You can set this parameter only to Performance.
+         * <strong>example:</strong>
+         * <p>Performance</p>
          */
         public Builder storageType(String storageType) {
             this.putQueryParameter("StorageType", storageType);
@@ -2043,7 +2276,10 @@ public class InsertK8sApplicationRequest extends Request {
         }
 
         /**
-         * TerminateGracePeriod.
+         * <p>Set the grace stop timeout for the application. Unit: seconds.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>120</p>
          */
         public Builder terminateGracePeriod(Integer terminateGracePeriod) {
             this.putQueryParameter("TerminateGracePeriod", terminateGracePeriod);
@@ -2052,7 +2288,10 @@ public class InsertK8sApplicationRequest extends Request {
         }
 
         /**
-         * The timeout period of the change process. Valid values: 1 to 1800. Unit: seconds. If you do not specify this Unidentifiedparameter, the default value 1800 is used.
+         * <p>The timeout period of the change process. Valid values: 1 to 1800. Unit: seconds. If you do not specify this Unidentifiedparameter, the default value 1800 is used.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>60</p>
          */
         public Builder timeout(Integer timeout) {
             this.putQueryParameter("Timeout", timeout);
@@ -2061,10 +2300,13 @@ public class InsertK8sApplicationRequest extends Request {
         }
 
         /**
-         * The URI encoding scheme. Valid values: ISO-8859-1, GBK, GB2312, and UTF-8.
-         * <p>
+         * <p>The URI encoding scheme. Valid values: ISO-8859-1, GBK, GB2312, and UTF-8.</p>
+         * <blockquote>
+         * <p>If you do not specify this parameter in the application configurations, the default URI encoding scheme in the Tomcat container is applied.</p>
+         * </blockquote>
          * 
-         * > If you do not specify this parameter in the application configurations, the default URI encoding scheme in the Tomcat container is applied.
+         * <strong>example:</strong>
+         * <p>GBK</p>
          */
         public Builder uriEncoding(String uriEncoding) {
             this.putQueryParameter("UriEncoding", uriEncoding);
@@ -2073,10 +2315,13 @@ public class InsertK8sApplicationRequest extends Request {
         }
 
         /**
-         * Specifies whether to use the encoding scheme specified in the request body for URI query parameters.
-         * <p>
+         * <p>Specifies whether to use the encoding scheme specified in the request body for URI query parameters.</p>
+         * <blockquote>
+         * <p>If this parameter is not specified in application configuration, the default value false is applied.</p>
+         * </blockquote>
          * 
-         * > If this parameter is not specified in application configuration, the default value false is applied.
+         * <strong>example:</strong>
+         * <p>false</p>
          */
         public Builder useBodyEncoding(Boolean useBodyEncoding) {
             this.putQueryParameter("UseBodyEncoding", useBodyEncoding);
@@ -2085,7 +2330,10 @@ public class InsertK8sApplicationRequest extends Request {
         }
 
         /**
-         * UserBaseImageUrl.
+         * <p>When using custom JDK runtime, it is necessary to configure the basic image address. The address needs to be publicly accessible, and the EDAS server will pull the image to build the application image.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>openjdk:8u302</p>
          */
         public Builder userBaseImageUrl(String userBaseImageUrl) {
             this.putQueryParameter("UserBaseImageUrl", userBaseImageUrl);
@@ -2094,7 +2342,10 @@ public class InsertK8sApplicationRequest extends Request {
         }
 
         /**
-         * The version of the Tomcat container on which the deployment package of the application depends. This parameter is applicable to Spring Cloud and Dubbo applications that you deploy by using WAR packages. This parameter is unavailable if you deploy applications by using images.
+         * <p>The version of the Tomcat container on which the deployment package of the application depends. This parameter is applicable to Spring Cloud and Dubbo applications that you deploy by using WAR packages. This parameter is unavailable if you deploy applications by using images.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>apache-tomcat-7.0.91</p>
          */
         public Builder webContainer(String webContainer) {
             this.putQueryParameter("WebContainer", webContainer);
@@ -2103,34 +2354,37 @@ public class InsertK8sApplicationRequest extends Request {
         }
 
         /**
-         * The configuration of the Tomcat container. If you want to cancel this configuration, set this parameter to "" or "{}". The following parameters are included in the configuration:
-         * <p>
+         * <p>The configuration of the Tomcat container. If you want to cancel this configuration, set this parameter to &quot;&quot; or &quot;{}&quot;. The following parameters are included in the configuration:</p>
+         * <ul>
+         * <li><p>useDefaultConfig: specifies whether to use the default configuration. Value true indicates that the default configuration is used. Value false indicates that the custom configuration is used. If the default configuration is used, the following parameters do not take effect:</p>
+         * </li>
+         * <li><p>contextInputType: the type of the access path for the application. Valid values:</p>
+         * <ul>
+         * <li>war: The access path is the name of the WAR package. You do not need to specify a custom path.</li>
+         * <li>root: The access path for the application is <code>/</code>. You do not need to specify a custom path.</li>
+         * <li>custom: If you select this option, you must specify a custom path for the contextPath parameter.</li>
+         * </ul>
+         * </li>
+         * <li><p>contextPath: the custom access path for the application. This parameter is required only when you set the contextInputType parameter to custom.</p>
+         * </li>
+         * <li><p>httpPort: the port number. The port number ranges from 1024 to 65535. Though the admin permissions are configured for the container, the root permissions are required to perform operations on ports whose number is less than 1024. Enter a value that ranges from 1024 to 65535 because the container has only the admin permissions. If you do not configure this parameter, the default port number 8080 is used.</p>
+         * </li>
+         * <li><p>maxThreads: the maximum number of connections in the connection pool. Default value: 400.</p>
+         * <p>**</p>
+         * <p><strong>Note</strong>This parameter significantly affects application performance. We recommend that you consult with technical support before you set this parameter.</p>
+         * </li>
+         * <li><p>uriEncoding: the URI encoding scheme in the Tomcat container. Valid values: UTF-8, ISO-8859-1, GBK, and GB2312. If you do not specify this parameter, the default value ISO-8859-1 is used.</p>
+         * </li>
+         * <li><p>useBodyEncoding: specifies whether to use the encoding scheme specified in the request body for URI query parameters.</p>
+         * </li>
+         * <li><p>useAdvancedServerXml: specifies whether to use advanced configurations to customize the server.xml file. If the preceding parameter types and specific parameters cannot meet your requirements, you can use advanced configurations to customize the server.xml file of Tomcat.</p>
+         * </li>
+         * <li><p>serverXml: the content of the server.xml file customized by using advanced configurations. This parameter takes effect only when you set the useAdvancedServerXml parameter to true.</p>
+         * </li>
+         * </ul>
          * 
-         * *   useDefaultConfig: specifies whether to use the default configuration. Value true indicates that the default configuration is used. Value false indicates that the custom configuration is used. If the default configuration is used, the following parameters do not take effect:
-         * 
-         * *   contextInputType: the type of the access path for the application. Valid values:
-         * 
-         *     *   war: The access path is the name of the WAR package. You do not need to specify a custom path.
-         *     *   root: The access path for the application is `/`. You do not need to specify a custom path.
-         *     *   custom: If you select this option, you must specify a custom path for the contextPath parameter.
-         * 
-         * *   contextPath: the custom access path for the application. This parameter is required only when you set the contextInputType parameter to custom.
-         * 
-         * *   httpPort: the port number. The port number ranges from 1024 to 65535. Though the admin permissions are configured for the container, the root permissions are required to perform operations on ports whose number is less than 1024. Enter a value that ranges from 1024 to 65535 because the container has only the admin permissions. If you do not configure this parameter, the default port number 8080 is used.
-         * 
-         * *   maxThreads: the maximum number of connections in the connection pool. Default value: 400.
-         * 
-         *     **
-         * 
-         *     **Note**This parameter significantly affects application performance. We recommend that you consult with technical support before you set this parameter.
-         * 
-         * *   uriEncoding: the URI encoding scheme in the Tomcat container. Valid values: UTF-8, ISO-8859-1, GBK, and GB2312. If you do not specify this parameter, the default value ISO-8859-1 is used.
-         * 
-         * *   useBodyEncoding: specifies whether to use the encoding scheme specified in the request body for URI query parameters.
-         * 
-         * *   useAdvancedServerXml: specifies whether to use advanced configurations to customize the server.xml file. If the preceding parameter types and specific parameters cannot meet your requirements, you can use advanced configurations to customize the server.xml file of Tomcat.
-         * 
-         * *   serverXml: the content of the server.xml file customized by using advanced configurations. This parameter takes effect only when you set the useAdvancedServerXml parameter to true.
+         * <strong>example:</strong>
+         * <p>{&quot;useDefaultConfig&quot;:false,&quot;contextInputType&quot;:&quot;custom&quot;,&quot;contextPath&quot;:&quot;hello&quot;,&quot;httpPort&quot;:8088,&quot;maxThreads&quot;:400,&quot;uriEncoding&quot;:&quot;UTF-8&quot;,&quot;useBodyEncoding&quot;:true,&quot;useAdvancedServerXml&quot;:false}</p>
          */
         public Builder webContainerConfig(String webContainerConfig) {
             this.putQueryParameter("WebContainerConfig", webContainerConfig);
@@ -2139,7 +2393,10 @@ public class InsertK8sApplicationRequest extends Request {
         }
 
         /**
-         * WorkloadType.
+         * <p>The type of Workload when creating an application is currently only supported for the Deployment type.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Deployment</p>
          */
         public Builder workloadType(String workloadType) {
             this.putQueryParameter("WorkloadType", workloadType);

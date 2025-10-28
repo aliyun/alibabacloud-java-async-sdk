@@ -1,29 +1,34 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.edas20170801.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ScaleK8sApplicationRequest} extends {@link RequestModel}
  *
  * <p>ScaleK8sApplicationRequest</p>
  */
 public class ScaleK8sApplicationRequest extends Request {
-    @Query
-    @NameInMap("AppId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("AppId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String appId;
 
-    @Query
-    @NameInMap("Replicas")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Replicas")
+    @com.aliyun.core.annotation.Validation(required = true)
     private Integer replicas;
 
-    @Query
-    @NameInMap("Timeout")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Timeout")
     private Integer timeout;
 
     private ScaleK8sApplicationRequest(Builder builder) {
@@ -41,7 +46,7 @@ public class ScaleK8sApplicationRequest extends Request {
         return builder().build();
     }
 
-    @Override
+@Override
     public Builder toBuilder() {
         return new Builder(this);
     }
@@ -84,7 +89,11 @@ public class ScaleK8sApplicationRequest extends Request {
         } 
 
         /**
-         * The ID of the application. You can call the ListApplication operation to query the application ID. For more information, see [ListApplication](~~149390~~).
+         * <p>The ID of the application. You can call the ListApplication operation to query the application ID. For more information, see <a href="https://help.aliyun.com/document_detail/149390.html">ListApplication</a>.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>23bf94d9-<strong><strong>-4994-</strong></strong>-616a827aa777</p>
          */
         public Builder appId(String appId) {
             this.putQueryParameter("AppId", appId);
@@ -93,7 +102,11 @@ public class ScaleK8sApplicationRequest extends Request {
         }
 
         /**
-         * The expected number of application instances after the scale-out or scale-in. The minimum number is 0.
+         * <p>The expected number of application instances after the scale-out or scale-in. The minimum number is 0.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2</p>
          */
         public Builder replicas(Integer replicas) {
             this.putQueryParameter("Replicas", replicas);
@@ -102,7 +115,10 @@ public class ScaleK8sApplicationRequest extends Request {
         }
 
         /**
-         * The timeout period of the change process. Unit: seconds.
+         * <p>The timeout period of the change process. Unit: seconds.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>60</p>
          */
         public Builder timeout(Integer timeout) {
             this.putQueryParameter("Timeout", timeout);

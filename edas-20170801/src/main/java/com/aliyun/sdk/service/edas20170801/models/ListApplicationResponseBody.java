@@ -1,27 +1,32 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.edas20170801.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ListApplicationResponseBody} extends {@link TeaModel}
  *
  * <p>ListApplicationResponseBody</p>
  */
 public class ListApplicationResponseBody extends TeaModel {
-    @NameInMap("ApplicationList")
+    @com.aliyun.core.annotation.NameInMap("ApplicationList")
     private ApplicationList applicationList;
 
-    @NameInMap("Code")
+    @com.aliyun.core.annotation.NameInMap("Code")
     private Integer code;
 
-    @NameInMap("Message")
+    @com.aliyun.core.annotation.NameInMap("Message")
     private String message;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
     private ListApplicationResponseBody(Builder builder) {
@@ -37,6 +42,10 @@ public class ListApplicationResponseBody extends TeaModel {
 
     public static ListApplicationResponseBody create() {
         return builder().build();
+    }
+
+    public Builder toBuilder() {
+        return new Builder(this);
     }
 
     /**
@@ -73,8 +82,18 @@ public class ListApplicationResponseBody extends TeaModel {
         private String message; 
         private String requestId; 
 
+        private Builder() {
+        } 
+
+        private Builder(ListApplicationResponseBody model) {
+            this.applicationList = model.applicationList;
+            this.code = model.code;
+            this.message = model.message;
+            this.requestId = model.requestId;
+        } 
+
         /**
-         * The information about applications.
+         * <p>The information about applications.</p>
          */
         public Builder applicationList(ApplicationList applicationList) {
             this.applicationList = applicationList;
@@ -82,7 +101,10 @@ public class ListApplicationResponseBody extends TeaModel {
         }
 
         /**
-         * The HTTP status code that is returned.
+         * <p>The HTTP status code that is returned.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>200</p>
          */
         public Builder code(Integer code) {
             this.code = code;
@@ -90,7 +112,10 @@ public class ListApplicationResponseBody extends TeaModel {
         }
 
         /**
-         * The message that is returned.
+         * <p>The message that is returned.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>success</p>
          */
         public Builder message(String message) {
             this.message = message;
@@ -98,7 +123,10 @@ public class ListApplicationResponseBody extends TeaModel {
         }
 
         /**
-         * The request ID.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>5d6fa0bc-cc3**********</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -111,65 +139,71 @@ public class ListApplicationResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link ListApplicationResponseBody} extends {@link TeaModel}
+     *
+     * <p>ListApplicationResponseBody</p>
+     */
     public static class Application extends TeaModel {
-        @NameInMap("AppId")
+        @com.aliyun.core.annotation.NameInMap("AppId")
         private String appId;
 
-        @NameInMap("ApplicationType")
+        @com.aliyun.core.annotation.NameInMap("ApplicationType")
         private String applicationType;
 
-        @NameInMap("BuildPackageId")
+        @com.aliyun.core.annotation.NameInMap("BuildPackageId")
         private Long buildPackageId;
 
-        @NameInMap("ClusterId")
+        @com.aliyun.core.annotation.NameInMap("ClusterId")
         private String clusterId;
 
-        @NameInMap("ClusterType")
+        @com.aliyun.core.annotation.NameInMap("ClusterType")
         private Integer clusterType;
 
-        @NameInMap("CreateTime")
+        @com.aliyun.core.annotation.NameInMap("CreateTime")
         private Long createTime;
 
-        @NameInMap("ExtSlbIp")
+        @com.aliyun.core.annotation.NameInMap("ExtSlbIp")
         private String extSlbIp;
 
-        @NameInMap("ExtSlbListenerPort")
+        @com.aliyun.core.annotation.NameInMap("ExtSlbListenerPort")
         private Integer extSlbListenerPort;
 
-        @NameInMap("Instances")
+        @com.aliyun.core.annotation.NameInMap("Instances")
         private Integer instances;
 
-        @NameInMap("K8sNamespace")
+        @com.aliyun.core.annotation.NameInMap("K8sNamespace")
         private String k8sNamespace;
 
-        @NameInMap("Name")
+        @com.aliyun.core.annotation.NameInMap("Name")
         private String name;
 
-        @NameInMap("NamespaceId")
+        @com.aliyun.core.annotation.NameInMap("NamespaceId")
         private String namespaceId;
 
-        @NameInMap("Port")
+        @com.aliyun.core.annotation.NameInMap("Port")
         private Integer port;
 
-        @NameInMap("RegionId")
+        @com.aliyun.core.annotation.NameInMap("RegionId")
         private String regionId;
 
-        @NameInMap("ResourceGroupId")
+        @com.aliyun.core.annotation.NameInMap("ResourceGroupId")
         private String resourceGroupId;
 
-        @NameInMap("RunningInstanceCount")
+        @com.aliyun.core.annotation.NameInMap("RunningInstanceCount")
         private Integer runningInstanceCount;
 
-        @NameInMap("SlbIp")
+        @com.aliyun.core.annotation.NameInMap("SlbIp")
         private String slbIp;
 
-        @NameInMap("SlbListenerPort")
+        @com.aliyun.core.annotation.NameInMap("SlbListenerPort")
         private Integer slbListenerPort;
 
-        @NameInMap("SlbPort")
+        @com.aliyun.core.annotation.NameInMap("SlbPort")
         private Integer slbPort;
 
-        @NameInMap("State")
+        @com.aliyun.core.annotation.NameInMap("State")
         private String state;
 
         private Application(Builder builder) {
@@ -365,8 +399,37 @@ public class ListApplicationResponseBody extends TeaModel {
             private Integer slbPort; 
             private String state; 
 
+            private Builder() {
+            } 
+
+            private Builder(Application model) {
+                this.appId = model.appId;
+                this.applicationType = model.applicationType;
+                this.buildPackageId = model.buildPackageId;
+                this.clusterId = model.clusterId;
+                this.clusterType = model.clusterType;
+                this.createTime = model.createTime;
+                this.extSlbIp = model.extSlbIp;
+                this.extSlbListenerPort = model.extSlbListenerPort;
+                this.instances = model.instances;
+                this.k8sNamespace = model.k8sNamespace;
+                this.name = model.name;
+                this.namespaceId = model.namespaceId;
+                this.port = model.port;
+                this.regionId = model.regionId;
+                this.resourceGroupId = model.resourceGroupId;
+                this.runningInstanceCount = model.runningInstanceCount;
+                this.slbIp = model.slbIp;
+                this.slbListenerPort = model.slbListenerPort;
+                this.slbPort = model.slbPort;
+                this.state = model.state;
+            } 
+
             /**
-             * The ID of the application.
+             * <p>The ID of the application.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>00ee517d-dd7d-4d4e-<strong><strong>-</strong></strong>********</p>
              */
             public Builder appId(String appId) {
                 this.appId = appId;
@@ -374,13 +437,16 @@ public class ListApplicationResponseBody extends TeaModel {
             }
 
             /**
-             * The deployment type of the application. Valid values:
-             * <p>
+             * <p>The deployment type of the application. Valid values:</p>
+             * <ul>
+             * <li>War: The application is deployed by using a WAR package.</li>
+             * <li>FatJar: The application is deployed by using a JAR package.</li>
+             * <li>Image: The application is deployed by using an image.</li>
+             * <li>If this parameter is empty, the application is not deployed.</li>
+             * </ul>
              * 
-             * *   War: The application is deployed by using a WAR package.
-             * *   FatJar: The application is deployed by using a JAR package.
-             * *   Image: The application is deployed by using an image.
-             * *   If this parameter is empty, the application is not deployed.
+             * <strong>example:</strong>
+             * <p>FatJar</p>
              */
             public Builder applicationType(String applicationType) {
                 this.applicationType = applicationType;
@@ -388,7 +454,10 @@ public class ListApplicationResponseBody extends TeaModel {
             }
 
             /**
-             * The build package number of Enterprise Distributed Application Service (EDAS) Container.
+             * <p>The build package number of Enterprise Distributed Application Service (EDAS) Container.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>58</p>
              */
             public Builder buildPackageId(Long buildPackageId) {
                 this.buildPackageId = buildPackageId;
@@ -396,7 +465,10 @@ public class ListApplicationResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the cluster.
+             * <p>The ID of the cluster.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>c37aec2a-bcca-4ec1-<strong><strong>-</strong></strong>********</p>
              */
             public Builder clusterId(String clusterId) {
                 this.clusterId = clusterId;
@@ -404,12 +476,15 @@ public class ListApplicationResponseBody extends TeaModel {
             }
 
             /**
-             * The type of the cluster in which the application is deployed. Valid values:
-             * <p>
+             * <p>The type of the cluster in which the application is deployed. Valid values:</p>
+             * <ul>
+             * <li><strong>2</strong>: Elastic Compute Service (ECS) cluster</li>
+             * <li><strong>3</strong>: self-managed Kubernetes cluster in EDAS</li>
+             * <li><strong>5</strong>: Container Service for Kubernetes (ACK) cluster</li>
+             * </ul>
              * 
-             * *   **2**: Elastic Compute Service (ECS) cluster
-             * *   **3**: self-managed Kubernetes cluster in EDAS
-             * *   **5**: Container Service for Kubernetes (ACK) cluster
+             * <strong>example:</strong>
+             * <p>2</p>
              */
             public Builder clusterType(Integer clusterType) {
                 this.clusterType = clusterType;
@@ -417,7 +492,10 @@ public class ListApplicationResponseBody extends TeaModel {
             }
 
             /**
-             * The time when the application was created.
+             * <p>The time when the application was created.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1664208000000</p>
              */
             public Builder createTime(Long createTime) {
                 this.createTime = createTime;
@@ -425,7 +503,10 @@ public class ListApplicationResponseBody extends TeaModel {
             }
 
             /**
-             * The IP address of the Internet-facing SLB instance.
+             * <p>The IP address of the Internet-facing SLB instance.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>100.100.70.***</p>
              */
             public Builder extSlbIp(String extSlbIp) {
                 this.extSlbIp = extSlbIp;
@@ -433,7 +514,10 @@ public class ListApplicationResponseBody extends TeaModel {
             }
 
             /**
-             * The listener port of the Internet-facing SLB instance.
+             * <p>The listener port of the Internet-facing SLB instance.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>8080</p>
              */
             public Builder extSlbListenerPort(Integer extSlbListenerPort) {
                 this.extSlbListenerPort = extSlbListenerPort;
@@ -441,7 +525,10 @@ public class ListApplicationResponseBody extends TeaModel {
             }
 
             /**
-             * The number of application instances.
+             * <p>The number of application instances.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>5</p>
              */
             public Builder instances(Integer instances) {
                 this.instances = instances;
@@ -449,7 +536,10 @@ public class ListApplicationResponseBody extends TeaModel {
             }
 
             /**
-             * The namespace of the Kubernetes cluster.
+             * <p>The namespace of the Kubernetes cluster.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>default</p>
              */
             public Builder k8sNamespace(String k8sNamespace) {
                 this.k8sNamespace = k8sNamespace;
@@ -457,7 +547,10 @@ public class ListApplicationResponseBody extends TeaModel {
             }
 
             /**
-             * The name of the application.
+             * <p>The name of the application.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>doc-test-consumer</p>
              */
             public Builder name(String name) {
                 this.name = name;
@@ -465,7 +558,10 @@ public class ListApplicationResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the microservices namespace.
+             * <p>The ID of the microservices namespace.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>cn-hangzhou:test</p>
              */
             public Builder namespaceId(String namespaceId) {
                 this.namespaceId = namespaceId;
@@ -473,7 +569,10 @@ public class ListApplicationResponseBody extends TeaModel {
             }
 
             /**
-             * The service port of the application.
+             * <p>The service port of the application.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>8080</p>
              */
             public Builder port(Integer port) {
                 this.port = port;
@@ -481,7 +580,10 @@ public class ListApplicationResponseBody extends TeaModel {
             }
 
             /**
-             * The region ID of the application.
+             * <p>The region ID of the application.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>cn-beijing:docTes</p>
              */
             public Builder regionId(String regionId) {
                 this.regionId = regionId;
@@ -489,7 +591,10 @@ public class ListApplicationResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the resource group.
+             * <p>The ID of the resource group.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>rg-aek24j4s4b*****</p>
              */
             public Builder resourceGroupId(String resourceGroupId) {
                 this.resourceGroupId = resourceGroupId;
@@ -497,7 +602,10 @@ public class ListApplicationResponseBody extends TeaModel {
             }
 
             /**
-             * The number of running application instances.
+             * <p>The number of running application instances.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>0</p>
              */
             public Builder runningInstanceCount(Integer runningInstanceCount) {
                 this.runningInstanceCount = runningInstanceCount;
@@ -505,7 +613,10 @@ public class ListApplicationResponseBody extends TeaModel {
             }
 
             /**
-             * The IP address of the internal-facing Server Load Balancer (SLB) instance.
+             * <p>The IP address of the internal-facing Server Load Balancer (SLB) instance.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>192.168.0.***</p>
              */
             public Builder slbIp(String slbIp) {
                 this.slbIp = slbIp;
@@ -513,7 +624,10 @@ public class ListApplicationResponseBody extends TeaModel {
             }
 
             /**
-             * The listener port of the internal-facing SLB instance.
+             * <p>The listener port of the internal-facing SLB instance.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>8088</p>
              */
             public Builder slbListenerPort(Integer slbListenerPort) {
                 this.slbListenerPort = slbListenerPort;
@@ -521,7 +635,10 @@ public class ListApplicationResponseBody extends TeaModel {
             }
 
             /**
-             * The port of the internal-facing SLB instance.
+             * <p>The port of the internal-facing SLB instance.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>80</p>
              */
             public Builder slbPort(Integer slbPort) {
                 this.slbPort = slbPort;
@@ -529,13 +646,16 @@ public class ListApplicationResponseBody extends TeaModel {
             }
 
             /**
-             * The state of the application. Valid values:
-             * <p>
+             * <p>The state of the application. Valid values:</p>
+             * <ul>
+             * <li>RUNNING: The application is running.</li>
+             * <li>STOPPED: The application is stopped.</li>
+             * <li>DEPLOYING: The application is being deployed.</li>
+             * <li>DELETING: The application is being deleted.</li>
+             * </ul>
              * 
-             * *   RUNNING: The application is running.
-             * *   STOPPED: The application is stopped.
-             * *   DEPLOYING: The application is being deployed.
-             * *   DELETING: The application is being deleted.
+             * <strong>example:</strong>
+             * <p>RUNNING</p>
              */
             public Builder state(String state) {
                 this.state = state;
@@ -549,9 +669,15 @@ public class ListApplicationResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link ListApplicationResponseBody} extends {@link TeaModel}
+     *
+     * <p>ListApplicationResponseBody</p>
+     */
     public static class ApplicationList extends TeaModel {
-        @NameInMap("Application")
-        private java.util.List < Application> application;
+        @com.aliyun.core.annotation.NameInMap("Application")
+        private java.util.List<Application> application;
 
         private ApplicationList(Builder builder) {
             this.application = builder.application;
@@ -568,17 +694,24 @@ public class ListApplicationResponseBody extends TeaModel {
         /**
          * @return application
          */
-        public java.util.List < Application> getApplication() {
+        public java.util.List<Application> getApplication() {
             return this.application;
         }
 
         public static final class Builder {
-            private java.util.List < Application> application; 
+            private java.util.List<Application> application; 
+
+            private Builder() {
+            } 
+
+            private Builder(ApplicationList model) {
+                this.application = model.application;
+            } 
 
             /**
              * Application.
              */
-            public Builder application(java.util.List < Application> application) {
+            public Builder application(java.util.List<Application> application) {
                 this.application = application;
                 return this;
             }

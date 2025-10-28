@@ -1,27 +1,32 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.edas20170801.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeAppInstanceListResponseBody} extends {@link TeaModel}
  *
  * <p>DescribeAppInstanceListResponseBody</p>
  */
 public class DescribeAppInstanceListResponseBody extends TeaModel {
-    @NameInMap("Code")
+    @com.aliyun.core.annotation.NameInMap("Code")
     private Integer code;
 
-    @NameInMap("InstanceList")
-    private java.util.List < InstanceList> instanceList;
+    @com.aliyun.core.annotation.NameInMap("InstanceList")
+    private java.util.List<InstanceList> instanceList;
 
-    @NameInMap("Message")
+    @com.aliyun.core.annotation.NameInMap("Message")
     private String message;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
     private DescribeAppInstanceListResponseBody(Builder builder) {
@@ -39,6 +44,10 @@ public class DescribeAppInstanceListResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return code
      */
@@ -49,7 +58,7 @@ public class DescribeAppInstanceListResponseBody extends TeaModel {
     /**
      * @return instanceList
      */
-    public java.util.List < InstanceList> getInstanceList() {
+    public java.util.List<InstanceList> getInstanceList() {
         return this.instanceList;
     }
 
@@ -69,12 +78,25 @@ public class DescribeAppInstanceListResponseBody extends TeaModel {
 
     public static final class Builder {
         private Integer code; 
-        private java.util.List < InstanceList> instanceList; 
+        private java.util.List<InstanceList> instanceList; 
         private String message; 
         private String requestId; 
 
+        private Builder() {
+        } 
+
+        private Builder(DescribeAppInstanceListResponseBody model) {
+            this.code = model.code;
+            this.instanceList = model.instanceList;
+            this.message = model.message;
+            this.requestId = model.requestId;
+        } 
+
         /**
-         * The HTTP status code that is returned.
+         * <p>The HTTP status code that is returned.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>200</p>
          */
         public Builder code(Integer code) {
             this.code = code;
@@ -82,15 +104,18 @@ public class DescribeAppInstanceListResponseBody extends TeaModel {
         }
 
         /**
-         * The application instances.
+         * <p>The application instances.</p>
          */
-        public Builder instanceList(java.util.List < InstanceList> instanceList) {
+        public Builder instanceList(java.util.List<InstanceList> instanceList) {
             this.instanceList = instanceList;
             return this;
         }
 
         /**
-         * The message that is returned.
+         * <p>The message that is returned.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>success</p>
          */
         public Builder message(String message) {
             this.message = message;
@@ -98,7 +123,10 @@ public class DescribeAppInstanceListResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the request.
+         * <p>The ID of the request.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>03FD1520-0FD6-436A-<strong><strong>-265318D7</strong></strong></p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -111,29 +139,35 @@ public class DescribeAppInstanceListResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link DescribeAppInstanceListResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeAppInstanceListResponseBody</p>
+     */
     public static class InstanceList extends TeaModel {
-        @NameInMap("AppId")
+        @com.aliyun.core.annotation.NameInMap("AppId")
         private String appId;
 
-        @NameInMap("Canary")
+        @com.aliyun.core.annotation.NameInMap("Canary")
         private Boolean canary;
 
-        @NameInMap("GroupId")
+        @com.aliyun.core.annotation.NameInMap("GroupId")
         private String groupId;
 
-        @NameInMap("GroupName")
+        @com.aliyun.core.annotation.NameInMap("GroupName")
         private String groupName;
 
-        @NameInMap("NodeLabels")
+        @com.aliyun.core.annotation.NameInMap("NodeLabels")
         private String nodeLabels;
 
-        @NameInMap("NodeName")
+        @com.aliyun.core.annotation.NameInMap("NodeName")
         private String nodeName;
 
-        @NameInMap("PodRaw")
+        @com.aliyun.core.annotation.NameInMap("PodRaw")
         private String podRaw;
 
-        @NameInMap("Version")
+        @com.aliyun.core.annotation.NameInMap("Version")
         private String version;
 
         private InstanceList(Builder builder) {
@@ -221,8 +255,25 @@ public class DescribeAppInstanceListResponseBody extends TeaModel {
             private String podRaw; 
             private String version; 
 
+            private Builder() {
+            } 
+
+            private Builder(InstanceList model) {
+                this.appId = model.appId;
+                this.canary = model.canary;
+                this.groupId = model.groupId;
+                this.groupName = model.groupName;
+                this.nodeLabels = model.nodeLabels;
+                this.nodeName = model.nodeName;
+                this.podRaw = model.podRaw;
+                this.version = model.version;
+            } 
+
             /**
-             * The ID of the application.
+             * <p>The ID of the application.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>93fdd228-*****-ed2ae98de18d</p>
              */
             public Builder appId(String appId) {
                 this.appId = appId;
@@ -230,11 +281,14 @@ public class DescribeAppInstanceListResponseBody extends TeaModel {
             }
 
             /**
-             * Indicates whether the application was released in canary release mode.
-             * <p>
+             * <p>Indicates whether the application was released in canary release mode.</p>
+             * <ul>
+             * <li><code>true</code>: The application was released in canary release mode.</li>
+             * <li><code>false</code>: The application was not released in canary release mode</li>
+             * </ul>
              * 
-             * *   `true`: The application was released in canary release mode.
-             * *   `false`: The application was not released in canary release mode
+             * <strong>example:</strong>
+             * <p>false</p>
              */
             public Builder canary(Boolean canary) {
                 this.canary = canary;
@@ -242,7 +296,10 @@ public class DescribeAppInstanceListResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the instance group to which the application is deployed.
+             * <p>The ID of the instance group to which the application is deployed.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>93fdd228-*****-ed2ae98de18d</p>
              */
             public Builder groupId(String groupId) {
                 this.groupId = groupId;
@@ -250,7 +307,10 @@ public class DescribeAppInstanceListResponseBody extends TeaModel {
             }
 
             /**
-             * The name of the instance group to which the application is deployed.
+             * <p>The name of the instance group to which the application is deployed.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>_DEFAULT_GROUP</p>
              */
             public Builder groupName(String groupName) {
                 this.groupName = groupName;
@@ -258,7 +318,10 @@ public class DescribeAppInstanceListResponseBody extends TeaModel {
             }
 
             /**
-             * The labels of the node. The value is a JSON string.
+             * <p>The labels of the node. The value is a JSON string.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>{&quot;alibabacloud.com/nodepool-id&quot;:&quot;np0<em>5b9377fa907&quot;,&quot;beta.kubernetes.io/arch&quot;:&quot;amd64&quot;,&quot;beta.kubernetes.io/instance-type&quot;:&quot;ecs.</em>&quot;,&quot;beta.kubernetes.io/os&quot;:&quot;linux&quot;,&quot;failure-domain.beta.kubernetes.io/region&quot;:&quot;cn-hangzhou&quot;,&quot;failure-domain.beta.kubernetes.io/zone&quot;:&quot;cn-hangzhou-b&quot;,&quot;kubernetes.io/arch&quot;:&quot;amd64&quot;,&quot;kubernetes.io/hostname&quot;:&quot;cn-hangzhou*&quot;,&quot;kubernetes.io/os&quot;:&quot;linux&quot;,&quot;node.kubernetes.io/instance-type&quot;:&quot;ecs.*&quot;,&quot;topology.diskplugin.csi.alibabacloud.com/zone&quot;:&quot;cn-hangzhou-b&quot;,&quot;topology.kubernetes.io/region&quot;:&quot;cn-hangzhou&quot;,&quot;topology.kubernetes.io/zone&quot;:&quot;cn-hangzhou-b&quot;}</p>
              */
             public Builder nodeLabels(String nodeLabels) {
                 this.nodeLabels = nodeLabels;
@@ -266,7 +329,10 @@ public class DescribeAppInstanceListResponseBody extends TeaModel {
             }
 
             /**
-             * The name of the node.
+             * <p>The name of the node.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>cn-hangzhou.192.168.0.*</p>
              */
             public Builder nodeName(String nodeName) {
                 this.nodeName = nodeName;
@@ -274,7 +340,10 @@ public class DescribeAppInstanceListResponseBody extends TeaModel {
             }
 
             /**
-             * The information about the pod. The value is a JSON string.
+             * <p>The information about the pod. The value is a JSON string.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>{&quot;metadata&quot;:{&quot;name&quot;:&quot;oambuild-group-1-<em>4xthz&quot;,&quot;generateName&quot;:&quot;oambuild-group-<em>96-&quot;,&quot;namespace&quot;:&quot;default&quot;,&quot;selfLink&quot;:&quot;/api/v1/namespaces/default/pods/oambuild-grou</em>96-4xthz&quot;,&quot;uid&quot;:&quot;7a23399c-<em>fe7ff4018&quot;,&quot;resourceVersion&quot;:&quot;969614830&quot;,&quot;creationTimestamp&quot;:&quot;2021-04-06T11:38:46Z&quot;,&quot;labels&quot;:{&quot;ARMSApmAppId&quot;:&quot;</em>&quot;,&quot;ARMSApmLicenseKey&quot;:&quot;</em>&quot;...</p>
              */
             public Builder podRaw(String podRaw) {
                 this.podRaw = podRaw;
@@ -282,7 +351,10 @@ public class DescribeAppInstanceListResponseBody extends TeaModel {
             }
 
             /**
-             * The deployment package version of the node.
+             * <p>The deployment package version of the node.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2021-04-06 19:37:42</p>
              */
             public Builder version(String version) {
                 this.version = version;

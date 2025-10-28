@@ -1,27 +1,32 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.edas20170801.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link InsertClusterResponseBody} extends {@link TeaModel}
  *
  * <p>InsertClusterResponseBody</p>
  */
 public class InsertClusterResponseBody extends TeaModel {
-    @NameInMap("Cluster")
+    @com.aliyun.core.annotation.NameInMap("Cluster")
     private Cluster cluster;
 
-    @NameInMap("Code")
+    @com.aliyun.core.annotation.NameInMap("Code")
     private Integer code;
 
-    @NameInMap("Message")
+    @com.aliyun.core.annotation.NameInMap("Message")
     private String message;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
     private InsertClusterResponseBody(Builder builder) {
@@ -37,6 +42,10 @@ public class InsertClusterResponseBody extends TeaModel {
 
     public static InsertClusterResponseBody create() {
         return builder().build();
+    }
+
+    public Builder toBuilder() {
+        return new Builder(this);
     }
 
     /**
@@ -73,8 +82,18 @@ public class InsertClusterResponseBody extends TeaModel {
         private String message; 
         private String requestId; 
 
+        private Builder() {
+        } 
+
+        private Builder(InsertClusterResponseBody model) {
+            this.cluster = model.cluster;
+            this.code = model.code;
+            this.message = model.message;
+            this.requestId = model.requestId;
+        } 
+
         /**
-         * The information about the cluster that was created.
+         * <p>The information about the cluster that was created.</p>
          */
         public Builder cluster(Cluster cluster) {
             this.cluster = cluster;
@@ -82,7 +101,10 @@ public class InsertClusterResponseBody extends TeaModel {
         }
 
         /**
-         * The HTTP status code that is returned.
+         * <p>The HTTP status code that is returned.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>200</p>
          */
         public Builder code(Integer code) {
             this.code = code;
@@ -90,7 +112,10 @@ public class InsertClusterResponseBody extends TeaModel {
         }
 
         /**
-         * The additional information that is returned.
+         * <p>The additional information that is returned.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>success</p>
          */
         public Builder message(String message) {
             this.message = message;
@@ -98,7 +123,10 @@ public class InsertClusterResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the request.
+         * <p>The ID of the request.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>b197-40ab-9155-****</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -111,29 +139,35 @@ public class InsertClusterResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link InsertClusterResponseBody} extends {@link TeaModel}
+     *
+     * <p>InsertClusterResponseBody</p>
+     */
     public static class Cluster extends TeaModel {
-        @NameInMap("ClusterId")
+        @com.aliyun.core.annotation.NameInMap("ClusterId")
         private String clusterId;
 
-        @NameInMap("ClusterName")
+        @com.aliyun.core.annotation.NameInMap("ClusterName")
         private String clusterName;
 
-        @NameInMap("ClusterType")
+        @com.aliyun.core.annotation.NameInMap("ClusterType")
         private Integer clusterType;
 
-        @NameInMap("IaasProvider")
+        @com.aliyun.core.annotation.NameInMap("IaasProvider")
         private String iaasProvider;
 
-        @NameInMap("NetworkMode")
+        @com.aliyun.core.annotation.NameInMap("NetworkMode")
         private Integer networkMode;
 
-        @NameInMap("OversoldFactor")
+        @com.aliyun.core.annotation.NameInMap("OversoldFactor")
         private Integer oversoldFactor;
 
-        @NameInMap("RegionId")
+        @com.aliyun.core.annotation.NameInMap("RegionId")
         private String regionId;
 
-        @NameInMap("VpcId")
+        @com.aliyun.core.annotation.NameInMap("VpcId")
         private String vpcId;
 
         private Cluster(Builder builder) {
@@ -221,8 +255,25 @@ public class InsertClusterResponseBody extends TeaModel {
             private String regionId; 
             private String vpcId; 
 
+            private Builder() {
+            } 
+
+            private Builder(Cluster model) {
+                this.clusterId = model.clusterId;
+                this.clusterName = model.clusterName;
+                this.clusterType = model.clusterType;
+                this.iaasProvider = model.iaasProvider;
+                this.networkMode = model.networkMode;
+                this.oversoldFactor = model.oversoldFactor;
+                this.regionId = model.regionId;
+                this.vpcId = model.vpcId;
+            } 
+
             /**
-             * The ID of cluster.
+             * <p>The ID of cluster.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>8705ad13-5d86-47fc-b68f-257b59ed****</p>
              */
             public Builder clusterId(String clusterId) {
                 this.clusterId = clusterId;
@@ -230,7 +281,10 @@ public class InsertClusterResponseBody extends TeaModel {
             }
 
             /**
-             * The name of the cluster.
+             * <p>The name of the cluster.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>****_product_test2</p>
              */
             public Builder clusterName(String clusterName) {
                 this.clusterName = clusterName;
@@ -238,12 +292,15 @@ public class InsertClusterResponseBody extends TeaModel {
             }
 
             /**
-             * The type of the cluster. Valid values:
-             * <p>
+             * <p>The type of the cluster. Valid values:</p>
+             * <ul>
+             * <li>2: ECS cluster</li>
+             * <li>3: self-managed Kubernetes cluster in EDAS</li>
+             * <li>5: Kubernetes cluster</li>
+             * </ul>
              * 
-             * *   2: ECS cluster
-             * *   3: self-managed Kubernetes cluster in EDAS
-             * *   5: Kubernetes cluster
+             * <strong>example:</strong>
+             * <p>2</p>
              */
             public Builder clusterType(Integer clusterType) {
                 this.clusterType = clusterType;
@@ -251,7 +308,10 @@ public class InsertClusterResponseBody extends TeaModel {
             }
 
             /**
-             * The provider of the IaaS resources that are used in the cluster.
+             * <p>The provider of the IaaS resources that are used in the cluster.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>ALIYUN</p>
              */
             public Builder iaasProvider(String iaasProvider) {
                 this.iaasProvider = iaasProvider;
@@ -259,11 +319,14 @@ public class InsertClusterResponseBody extends TeaModel {
             }
 
             /**
-             * The network type of the cluster. Valid values:
-             * <p>
+             * <p>The network type of the cluster. Valid values:</p>
+             * <ul>
+             * <li>1: classic network</li>
+             * <li>2. VPC</li>
+             * </ul>
              * 
-             * *   1: classic network
-             * *   2\. VPC
+             * <strong>example:</strong>
+             * <p>2</p>
              */
             public Builder networkMode(Integer networkMode) {
                 this.networkMode = networkMode;
@@ -271,12 +334,15 @@ public class InsertClusterResponseBody extends TeaModel {
             }
 
             /**
-             * **This parameter is deprecated.** The CPU overcommit ratio supported by the Docker cluster. Valid values:
-             * <p>
+             * <p><strong>This parameter is deprecated.</strong> The CPU overcommit ratio supported by the Docker cluster. Valid values:</p>
+             * <ul>
+             * <li>2: 1:2, which means that resources are overcommitted by 1:2.</li>
+             * <li>4: 1:4, which means that resources are overcommitted by 1:4.</li>
+             * <li>8: 1:8, which means that resources are overcommitted by 1:8.</li>
+             * </ul>
              * 
-             * *   2: 1:2, which means that resources are overcommitted by 1:2.
-             * *   4: 1:4, which means that resources are overcommitted by 1:4.
-             * *   8: 1:8, which means that resources are overcommitted by 1:8.
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder oversoldFactor(Integer oversoldFactor) {
                 this.oversoldFactor = oversoldFactor;
@@ -284,7 +350,10 @@ public class InsertClusterResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the region in which the cluster resides.
+             * <p>The ID of the region in which the cluster resides.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>cn-beijing</p>
              */
             public Builder regionId(String regionId) {
                 this.regionId = regionId;
@@ -292,7 +361,10 @@ public class InsertClusterResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the VPC.
+             * <p>The ID of the VPC.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>vpc-2zef6ob8mrlzv8x3q****</p>
              */
             public Builder vpcId(String vpcId) {
                 this.vpcId = vpcId;

@@ -1,30 +1,35 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.edas20170801.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link SynchronizeResourceResponseBody} extends {@link TeaModel}
  *
  * <p>SynchronizeResourceResponseBody</p>
  */
 public class SynchronizeResourceResponseBody extends TeaModel {
-    @NameInMap("Code")
+    @com.aliyun.core.annotation.NameInMap("Code")
     private Integer code;
 
-    @NameInMap("Data")
+    @com.aliyun.core.annotation.NameInMap("Data")
     private String data;
 
-    @NameInMap("Message")
+    @com.aliyun.core.annotation.NameInMap("Message")
     private String message;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("Success")
+    @com.aliyun.core.annotation.NameInMap("Success")
     private Boolean success;
 
     private SynchronizeResourceResponseBody(Builder builder) {
@@ -41,6 +46,10 @@ public class SynchronizeResourceResponseBody extends TeaModel {
 
     public static SynchronizeResourceResponseBody create() {
         return builder().build();
+    }
+
+    public Builder toBuilder() {
+        return new Builder(this);
     }
 
     /**
@@ -85,8 +94,22 @@ public class SynchronizeResourceResponseBody extends TeaModel {
         private String requestId; 
         private Boolean success; 
 
+        private Builder() {
+        } 
+
+        private Builder(SynchronizeResourceResponseBody model) {
+            this.code = model.code;
+            this.data = model.data;
+            this.message = model.message;
+            this.requestId = model.requestId;
+            this.success = model.success;
+        } 
+
         /**
-         * The HTTP status code that is returned.
+         * <p>The HTTP status code that is returned.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>200</p>
          */
         public Builder code(Integer code) {
             this.code = code;
@@ -94,7 +117,10 @@ public class SynchronizeResourceResponseBody extends TeaModel {
         }
 
         /**
-         * The data returned for the request.
+         * <p>The data returned for the request.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>PopSyncResource success</p>
          */
         public Builder data(String data) {
             this.data = data;
@@ -102,7 +128,10 @@ public class SynchronizeResourceResponseBody extends TeaModel {
         }
 
         /**
-         * The message that is returned.
+         * <p>The message that is returned.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>success</p>
          */
         public Builder message(String message) {
             this.message = message;
@@ -110,7 +139,10 @@ public class SynchronizeResourceResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the request.
+         * <p>The ID of the request.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>F8DFGED-K98***************</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -118,11 +150,14 @@ public class SynchronizeResourceResponseBody extends TeaModel {
         }
 
         /**
-         * Indicates whether the resources are synchronized. Valid values:
-         * <p>
+         * <p>Indicates whether the resources are synchronized. Valid values:</p>
+         * <ul>
+         * <li><strong>true</strong>: The resources are synchronized.</li>
+         * <li><strong>false</strong>: The resources fail to be synchronized.</li>
+         * </ul>
          * 
-         * *   **true**: The resources are synchronized.
-         * *   **false**: The resources fail to be synchronized.
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder success(Boolean success) {
             this.success = success;

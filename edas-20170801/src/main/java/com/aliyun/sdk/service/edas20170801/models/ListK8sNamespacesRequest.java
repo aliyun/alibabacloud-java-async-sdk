@@ -1,19 +1,24 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.edas20170801.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ListK8sNamespacesRequest} extends {@link RequestModel}
  *
  * <p>ListK8sNamespacesRequest</p>
  */
 public class ListK8sNamespacesRequest extends Request {
-    @Query
-    @NameInMap("ClusterId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ClusterId")
     private String clusterId;
 
     private ListK8sNamespacesRequest(Builder builder) {
@@ -29,7 +34,7 @@ public class ListK8sNamespacesRequest extends Request {
         return builder().build();
     }
 
-    @Override
+@Override
     public Builder toBuilder() {
         return new Builder(this);
     }
@@ -54,7 +59,10 @@ public class ListK8sNamespacesRequest extends Request {
         } 
 
         /**
-         * The ID of the cluster in Enterprise Distributed Application Service (EDAS).
+         * <p>The ID of the cluster in Enterprise Distributed Application Service (EDAS).</p>
+         * 
+         * <strong>example:</strong>
+         * <p>5b2b4ab4-efbc-4a81-9c45-xxxxxxxxxxxxx</p>
          */
         public Builder clusterId(String clusterId) {
             this.putQueryParameter("ClusterId", clusterId);

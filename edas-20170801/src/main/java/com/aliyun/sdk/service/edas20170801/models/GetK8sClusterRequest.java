@@ -1,39 +1,44 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.edas20170801.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link GetK8sClusterRequest} extends {@link RequestModel}
  *
  * <p>GetK8sClusterRequest</p>
  */
 public class GetK8sClusterRequest extends Request {
-    @Query
-    @NameInMap("ClusterType")
-    @Validation(maximum = 99)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ClusterType")
+    @com.aliyun.core.annotation.Validation(maximum = 99)
     private Integer clusterType;
 
-    @Query
-    @NameInMap("CurrentPage")
-    @Validation(maximum = 9999)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("CurrentPage")
+    @com.aliyun.core.annotation.Validation(maximum = 9999)
     private Integer currentPage;
 
-    @Query
-    @NameInMap("PageSize")
-    @Validation(maximum = 9999, minimum = 1)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("PageSize")
+    @com.aliyun.core.annotation.Validation(maximum = 9999, minimum = 1)
     private Integer pageSize;
 
-    @Query
-    @NameInMap("RegionTag")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("RegionTag")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String regionTag;
 
-    @Query
-    @NameInMap("SubClusterType")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("SubClusterType")
     private String subClusterType;
 
     private GetK8sClusterRequest(Builder builder) {
@@ -53,7 +58,7 @@ public class GetK8sClusterRequest extends Request {
         return builder().build();
     }
 
-    @Override
+@Override
     public Builder toBuilder() {
         return new Builder(this);
     }
@@ -114,11 +119,14 @@ public class GetK8sClusterRequest extends Request {
         } 
 
         /**
-         * The type of the Kubernetes cluster. Valid values:
-         * <p>
+         * <p>The type of the Kubernetes cluster. Valid values:</p>
+         * <ul>
+         * <li>5: ACK cluster</li>
+         * <li>7: self-managed Kubernetes cluster</li>
+         * </ul>
          * 
-         * *   5: ACK cluster
-         * *   7: self-managed Kubernetes cluster
+         * <strong>example:</strong>
+         * <p>5</p>
          */
         public Builder clusterType(Integer clusterType) {
             this.putQueryParameter("ClusterType", clusterType);
@@ -127,7 +135,10 @@ public class GetK8sClusterRequest extends Request {
         }
 
         /**
-         * The number of the page to return. Default value: 1.
+         * <p>The number of the page to return. Default value: 1.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder currentPage(Integer currentPage) {
             this.putQueryParameter("CurrentPage", currentPage);
@@ -136,7 +147,10 @@ public class GetK8sClusterRequest extends Request {
         }
 
         /**
-         * The number of entries to return on each page. Default value: 1000.
+         * <p>The number of entries to return on each page. Default value: 1000.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10</p>
          */
         public Builder pageSize(Integer pageSize) {
             this.putQueryParameter("PageSize", pageSize);
@@ -145,7 +159,11 @@ public class GetK8sClusterRequest extends Request {
         }
 
         /**
-         * The ID of the region.
+         * <p>The ID of the region.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-hangzhou</p>
          */
         public Builder regionTag(String regionTag) {
             this.putQueryParameter("RegionTag", regionTag);
@@ -154,11 +172,14 @@ public class GetK8sClusterRequest extends Request {
         }
 
         /**
-         * The subtype of the cluster. Valid values:
-         * <p>
+         * <p>The subtype of the cluster. Valid values:</p>
+         * <ul>
+         * <li>Ask: Serverless Kubernetes cluster</li>
+         * <li>ManagedKubernetes: ACK cluster</li>
+         * </ul>
          * 
-         * *   Ask: Serverless Kubernetes cluster
-         * *   ManagedKubernetes: ACK cluster
+         * <strong>example:</strong>
+         * <p>Ask</p>
          */
         public Builder subClusterType(String subClusterType) {
             this.putQueryParameter("SubClusterType", subClusterType);

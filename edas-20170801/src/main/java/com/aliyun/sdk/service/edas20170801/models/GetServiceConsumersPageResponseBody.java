@@ -1,27 +1,32 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.edas20170801.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link GetServiceConsumersPageResponseBody} extends {@link TeaModel}
  *
  * <p>GetServiceConsumersPageResponseBody</p>
  */
 public class GetServiceConsumersPageResponseBody extends TeaModel {
-    @NameInMap("Code")
+    @com.aliyun.core.annotation.NameInMap("Code")
     private Integer code;
 
-    @NameInMap("Data")
+    @com.aliyun.core.annotation.NameInMap("Data")
     private Data data;
 
-    @NameInMap("Message")
+    @com.aliyun.core.annotation.NameInMap("Message")
     private String message;
 
-    @NameInMap("Success")
+    @com.aliyun.core.annotation.NameInMap("Success")
     private Boolean success;
 
     private GetServiceConsumersPageResponseBody(Builder builder) {
@@ -37,6 +42,10 @@ public class GetServiceConsumersPageResponseBody extends TeaModel {
 
     public static GetServiceConsumersPageResponseBody create() {
         return builder().build();
+    }
+
+    public Builder toBuilder() {
+        return new Builder(this);
     }
 
     /**
@@ -73,8 +82,21 @@ public class GetServiceConsumersPageResponseBody extends TeaModel {
         private String message; 
         private Boolean success; 
 
+        private Builder() {
+        } 
+
+        private Builder(GetServiceConsumersPageResponseBody model) {
+            this.code = model.code;
+            this.data = model.data;
+            this.message = model.message;
+            this.success = model.success;
+        } 
+
         /**
-         * The HTTP status code that is returned.
+         * <p>The HTTP status code that is returned.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>200</p>
          */
         public Builder code(Integer code) {
             this.code = code;
@@ -82,7 +104,7 @@ public class GetServiceConsumersPageResponseBody extends TeaModel {
         }
 
         /**
-         * The data that is returned.
+         * <p>The data that is returned.</p>
          */
         public Builder data(Data data) {
             this.data = data;
@@ -90,7 +112,10 @@ public class GetServiceConsumersPageResponseBody extends TeaModel {
         }
 
         /**
-         * The message that is returned for the request.
+         * <p>The message that is returned for the request.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>success</p>
          */
         public Builder message(String message) {
             this.message = message;
@@ -98,7 +123,10 @@ public class GetServiceConsumersPageResponseBody extends TeaModel {
         }
 
         /**
-         * Indicates whether the request is successful.
+         * <p>Indicates whether the request is successful.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder success(Boolean success) {
             this.success = success;
@@ -111,14 +139,20 @@ public class GetServiceConsumersPageResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link GetServiceConsumersPageResponseBody} extends {@link TeaModel}
+     *
+     * <p>GetServiceConsumersPageResponseBody</p>
+     */
     public static class Content extends TeaModel {
-        @NameInMap("EdasAppName")
+        @com.aliyun.core.annotation.NameInMap("EdasAppName")
         private String edasAppName;
 
-        @NameInMap("EdassAppId")
+        @com.aliyun.core.annotation.NameInMap("EdassAppId")
         private String edassAppId;
 
-        @NameInMap("Ip")
+        @com.aliyun.core.annotation.NameInMap("Ip")
         private String ip;
 
         private Content(Builder builder) {
@@ -161,8 +195,20 @@ public class GetServiceConsumersPageResponseBody extends TeaModel {
             private String edassAppId; 
             private String ip; 
 
+            private Builder() {
+            } 
+
+            private Builder(Content model) {
+                this.edasAppName = model.edasAppName;
+                this.edassAppId = model.edassAppId;
+                this.ip = model.ip;
+            } 
+
             /**
-             * The name of the service consumer.
+             * <p>The name of the service consumer.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>k8s-lq-cartservice</p>
              */
             public Builder edasAppName(String edasAppName) {
                 this.edasAppName = edasAppName;
@@ -170,7 +216,10 @@ public class GetServiceConsumersPageResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the service consumer.
+             * <p>The ID of the service consumer.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>efbda488-7b33-432f-a40d-<strong><strong>0047</strong></strong></p>
              */
             public Builder edassAppId(String edassAppId) {
                 this.edassAppId = edassAppId;
@@ -178,7 +227,10 @@ public class GetServiceConsumersPageResponseBody extends TeaModel {
             }
 
             /**
-             * The IP address of the service consumer.
+             * <p>The IP address of the service consumer.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>10.20.x.xx</p>
              */
             public Builder ip(String ip) {
                 this.ip = ip;
@@ -192,17 +244,23 @@ public class GetServiceConsumersPageResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link GetServiceConsumersPageResponseBody} extends {@link TeaModel}
+     *
+     * <p>GetServiceConsumersPageResponseBody</p>
+     */
     public static class Data extends TeaModel {
-        @NameInMap("Content")
-        private java.util.List < Content> content;
+        @com.aliyun.core.annotation.NameInMap("Content")
+        private java.util.List<Content> content;
 
-        @NameInMap("Size")
+        @com.aliyun.core.annotation.NameInMap("Size")
         private Integer size;
 
-        @NameInMap("TotalElements")
+        @com.aliyun.core.annotation.NameInMap("TotalElements")
         private Integer totalElements;
 
-        @NameInMap("TotalPages")
+        @com.aliyun.core.annotation.NameInMap("TotalPages")
         private Integer totalPages;
 
         private Data(Builder builder) {
@@ -223,7 +281,7 @@ public class GetServiceConsumersPageResponseBody extends TeaModel {
         /**
          * @return content
          */
-        public java.util.List < Content> getContent() {
+        public java.util.List<Content> getContent() {
             return this.content;
         }
 
@@ -249,21 +307,34 @@ public class GetServiceConsumersPageResponseBody extends TeaModel {
         }
 
         public static final class Builder {
-            private java.util.List < Content> content; 
+            private java.util.List<Content> content; 
             private Integer size; 
             private Integer totalElements; 
             private Integer totalPages; 
 
+            private Builder() {
+            } 
+
+            private Builder(Data model) {
+                this.content = model.content;
+                this.size = model.size;
+                this.totalElements = model.totalElements;
+                this.totalPages = model.totalPages;
+            } 
+
             /**
-             * The data array that is returned.
+             * <p>The data array that is returned.</p>
              */
-            public Builder content(java.util.List < Content> content) {
+            public Builder content(java.util.List<Content> content) {
                 this.content = content;
                 return this;
             }
 
             /**
-             * The number of entries to return on each page.
+             * <p>The number of entries to return on each page.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>5</p>
              */
             public Builder size(Integer size) {
                 this.size = size;
@@ -271,7 +342,10 @@ public class GetServiceConsumersPageResponseBody extends TeaModel {
             }
 
             /**
-             * The total number of returned entries.
+             * <p>The total number of returned entries.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>3</p>
              */
             public Builder totalElements(Integer totalElements) {
                 this.totalElements = totalElements;
@@ -279,7 +353,10 @@ public class GetServiceConsumersPageResponseBody extends TeaModel {
             }
 
             /**
-             * The total number of returned pages.
+             * <p>The total number of returned pages.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder totalPages(Integer totalPages) {
                 this.totalPages = totalPages;

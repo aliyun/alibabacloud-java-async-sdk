@@ -1,47 +1,52 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.edas20170801.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link CreateK8sSecretRequest} extends {@link RequestModel}
  *
  * <p>CreateK8sSecretRequest</p>
  */
 public class CreateK8sSecretRequest extends Request {
-    @Body
-    @NameInMap("Base64Encoded")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("Base64Encoded")
     private Boolean base64Encoded;
 
-    @Body
-    @NameInMap("CertId")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("CertId")
     private String certId;
 
-    @Body
-    @NameInMap("CertRegionId")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("CertRegionId")
     private String certRegionId;
 
-    @Body
-    @NameInMap("ClusterId")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("ClusterId")
     private String clusterId;
 
-    @Body
-    @NameInMap("Data")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("Data")
     private String data;
 
-    @Body
-    @NameInMap("Name")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("Name")
     private String name;
 
-    @Body
-    @NameInMap("Namespace")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("Namespace")
     private String namespace;
 
-    @Body
-    @NameInMap("Type")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("Type")
     private String type;
 
     private CreateK8sSecretRequest(Builder builder) {
@@ -64,7 +69,7 @@ public class CreateK8sSecretRequest extends Request {
         return builder().build();
     }
 
-    @Override
+@Override
     public Builder toBuilder() {
         return new Builder(this);
     }
@@ -152,7 +157,10 @@ public class CreateK8sSecretRequest extends Request {
         } 
 
         /**
-         * Specifies whether the data has been encoded in Base64. Valid values: true and false.
+         * <p>Specifies whether the data has been encoded in Base64. Valid values: true and false.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder base64Encoded(Boolean base64Encoded) {
             this.putBodyParameter("Base64Encoded", base64Encoded);
@@ -161,7 +169,10 @@ public class CreateK8sSecretRequest extends Request {
         }
 
         /**
-         * The certificate ID provided by Alibaba Cloud Certificate Management Service.
+         * <p>The certificate ID provided by Alibaba Cloud Certificate Management Service.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>6651483</p>
          */
         public Builder certId(String certId) {
             this.putBodyParameter("CertId", certId);
@@ -170,7 +181,10 @@ public class CreateK8sSecretRequest extends Request {
         }
 
         /**
-         * The region in which the certificate is stored.
+         * <p>The region in which the certificate is stored.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-hangzhou</p>
          */
         public Builder certRegionId(String certRegionId) {
             this.putBodyParameter("CertRegionId", certRegionId);
@@ -179,7 +193,10 @@ public class CreateK8sSecretRequest extends Request {
         }
 
         /**
-         * The cluster ID.
+         * <p>The cluster ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>712082c3-<strong><strong>-</strong></strong>-9217-a947b5cde6ee</p>
          */
         public Builder clusterId(String clusterId) {
             this.putBodyParameter("ClusterId", clusterId);
@@ -188,11 +205,14 @@ public class CreateK8sSecretRequest extends Request {
         }
 
         /**
-         * The data of the Secret. The value must be a JSON array that contains the following information:
-         * <p>
+         * <p>The data of the Secret. The value must be a JSON array that contains the following information:</p>
+         * <ul>
+         * <li>Key: Secret key</li>
+         * <li>Value: Secret value</li>
+         * </ul>
          * 
-         * *   Key: Secret key
-         * *   Value: Secret value
+         * <strong>example:</strong>
+         * <p>[{&quot;Key&quot;:&quot;name&quot;,&quot;Value&quot;:&quot;william&quot;},{&quot;Key&quot;:&quot;age&quot;,&quot;Value&quot;:&quot;12&quot;}]</p>
          */
         public Builder data(String data) {
             this.putBodyParameter("Data", data);
@@ -201,7 +221,10 @@ public class CreateK8sSecretRequest extends Request {
         }
 
         /**
-         * The name of the Secret. The name must start with a letter, and can contain digits, letters, and hyphens (-). It can be up to 63 characters in length.
+         * <p>The name of the Secret. The name must start with a letter, and can contain digits, letters, and hyphens (-). It can be up to 63 characters in length.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>my-secret</p>
          */
         public Builder name(String name) {
             this.putBodyParameter("Name", name);
@@ -210,7 +233,10 @@ public class CreateK8sSecretRequest extends Request {
         }
 
         /**
-         * The namespace of the Kubernetes cluster.
+         * <p>The namespace of the Kubernetes cluster.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>default</p>
          */
         public Builder namespace(String namespace) {
             this.putBodyParameter("Namespace", namespace);
@@ -219,11 +245,14 @@ public class CreateK8sSecretRequest extends Request {
         }
 
         /**
-         * The Secret type. Valid values:
-         * <p>
+         * <p>The Secret type. Valid values:</p>
+         * <ul>
+         * <li>Opaque: user-defined data</li>
+         * <li>kubernetes.io/tls: Transport Layer Security (TLS) certificate</li>
+         * </ul>
          * 
-         * *   Opaque: user-defined data
-         * *   kubernetes.io/tls: Transport Layer Security (TLS) certificate
+         * <strong>example:</strong>
+         * <p>Opaque</p>
          */
         public Builder type(String type) {
             this.putBodyParameter("Type", type);

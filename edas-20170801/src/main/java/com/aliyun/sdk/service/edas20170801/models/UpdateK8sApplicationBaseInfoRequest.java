@@ -1,36 +1,41 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.edas20170801.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link UpdateK8sApplicationBaseInfoRequest} extends {@link RequestModel}
  *
  * <p>UpdateK8sApplicationBaseInfoRequest</p>
  */
 public class UpdateK8sApplicationBaseInfoRequest extends Request {
-    @Query
-    @NameInMap("AppId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("AppId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String appId;
 
-    @Query
-    @NameInMap("Description")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Description")
     private String description;
 
-    @Query
-    @NameInMap("Email")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Email")
     private String email;
 
-    @Query
-    @NameInMap("Owner")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Owner")
     private String owner;
 
-    @Query
-    @NameInMap("PhoneNumber")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("PhoneNumber")
     private String phoneNumber;
 
     private UpdateK8sApplicationBaseInfoRequest(Builder builder) {
@@ -50,7 +55,7 @@ public class UpdateK8sApplicationBaseInfoRequest extends Request {
         return builder().build();
     }
 
-    @Override
+@Override
     public Builder toBuilder() {
         return new Builder(this);
     }
@@ -111,7 +116,11 @@ public class UpdateK8sApplicationBaseInfoRequest extends Request {
         } 
 
         /**
-         * The ID of the application that you want to modify.
+         * <p>The ID of the application that you want to modify.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>4f038ddf-b27b-<strong><strong>-</strong></strong>-88e44375****</p>
          */
         public Builder appId(String appId) {
             this.putQueryParameter("AppId", appId);
@@ -120,7 +129,10 @@ public class UpdateK8sApplicationBaseInfoRequest extends Request {
         }
 
         /**
-         * The description of the application. The description can be up to 256 characters in length.
+         * <p>The description of the application. The description can be up to 256 characters in length.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>app for pre-production</p>
          */
         public Builder description(String description) {
             this.putQueryParameter("Description", description);
@@ -129,7 +141,10 @@ public class UpdateK8sApplicationBaseInfoRequest extends Request {
         }
 
         /**
-         * The email address of the application owner.
+         * <p>The email address of the application owner.</p>
+         * 
+         * <strong>example:</strong>
+         * <p><a href="mailto:mymail@example.com">mymail@example.com</a></p>
          */
         public Builder email(String email) {
             this.putQueryParameter("Email", email);
@@ -138,7 +153,10 @@ public class UpdateK8sApplicationBaseInfoRequest extends Request {
         }
 
         /**
-         * The owner of the application. The value can be up to 128 characters in length.
+         * <p>The owner of the application. The value can be up to 128 characters in length.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Tom</p>
          */
         public Builder owner(String owner) {
             this.putQueryParameter("Owner", owner);
@@ -147,7 +165,10 @@ public class UpdateK8sApplicationBaseInfoRequest extends Request {
         }
 
         /**
-         * The phone number of the application owner.
+         * <p>The phone number of the application owner.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1361234xxxx</p>
          */
         public Builder phoneNumber(String phoneNumber) {
             this.putQueryParameter("PhoneNumber", phoneNumber);

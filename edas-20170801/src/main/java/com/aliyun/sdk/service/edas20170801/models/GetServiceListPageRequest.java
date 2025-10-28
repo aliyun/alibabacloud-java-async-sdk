@@ -1,51 +1,56 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.edas20170801.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link GetServiceListPageRequest} extends {@link RequestModel}
  *
  * <p>GetServiceListPageRequest</p>
  */
 public class GetServiceListPageRequest extends Request {
-    @Query
-    @NameInMap("namespace")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("namespace")
     private String namespace;
 
-    @Query
-    @NameInMap("origin")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("origin")
     private String origin;
 
-    @Query
-    @NameInMap("page")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("page")
     private Integer page;
 
-    @Query
-    @NameInMap("region")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("region")
     private String region;
 
-    @Query
-    @NameInMap("searchType")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("searchType")
     private String searchType;
 
-    @Query
-    @NameInMap("searchValue")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("searchValue")
     private String searchValue;
 
-    @Query
-    @NameInMap("serviceType")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("serviceType")
     private String serviceType;
 
-    @Query
-    @NameInMap("side")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("side")
     private String side;
 
-    @Query
-    @NameInMap("size")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("size")
     private Integer size;
 
     private GetServiceListPageRequest(Builder builder) {
@@ -69,7 +74,7 @@ public class GetServiceListPageRequest extends Request {
         return builder().build();
     }
 
-    @Override
+@Override
     public Builder toBuilder() {
         return new Builder(this);
     }
@@ -166,7 +171,10 @@ public class GetServiceListPageRequest extends Request {
         } 
 
         /**
-         * The namespace.
+         * <p>The namespace.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-hangzhou:doc-test</p>
          */
         public Builder namespace(String namespace) {
             this.putQueryParameter("namespace", namespace);
@@ -175,11 +183,14 @@ public class GetServiceListPageRequest extends Request {
         }
 
         /**
-         * The source of the data. Valid values:
-         * <p>
+         * <p>The source of the data. Valid values:</p>
+         * <ul>
+         * <li><code>agent</code>: Use this value if you use the service query feature of the latest version to pass the query result.</li>
+         * <li><code>registry</code>: Use this value if you use the service query feature of the earlier version to pass the query result.</li>
+         * </ul>
          * 
-         * *   `agent`: Use this value if you use the service query feature of the latest version to pass the query result.
-         * *   `registry`: Use this value if you use the service query feature of the earlier version to pass the query result.
+         * <strong>example:</strong>
+         * <p>Agent</p>
          */
         public Builder origin(String origin) {
             this.putQueryParameter("origin", origin);
@@ -188,7 +199,10 @@ public class GetServiceListPageRequest extends Request {
         }
 
         /**
-         * The number of the page to return. Pages start from Page 0.
+         * <p>The number of the page to return. Pages start from Page 0.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>0</p>
          */
         public Builder page(Integer page) {
             this.putQueryParameter("page", page);
@@ -197,7 +211,10 @@ public class GetServiceListPageRequest extends Request {
         }
 
         /**
-         * The ID of the region.
+         * <p>The ID of the region.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-hangzhou</p>
          */
         public Builder region(String region) {
             this.putQueryParameter("region", region);
@@ -206,12 +223,15 @@ public class GetServiceListPageRequest extends Request {
         }
 
         /**
-         * The type of the service. Valid values:
-         * <p>
+         * <p>The type of the service. Valid values:</p>
+         * <ul>
+         * <li><code>app</code>: searches by application.</li>
+         * <li><code>service</code>: searches by service.</li>
+         * <li><code>providerIp</code>: searches by IP address.</li>
+         * </ul>
          * 
-         * *   `app`: searches by application.
-         * *   `service`: searches by service.
-         * *   `providerIp`: searches by IP address.
+         * <strong>example:</strong>
+         * <p>App</p>
          */
         public Builder searchType(String searchType) {
             this.putQueryParameter("searchType", searchType);
@@ -220,12 +240,15 @@ public class GetServiceListPageRequest extends Request {
         }
 
         /**
-         * The keyword used for the search.
-         * <p>
+         * <p>The keyword used for the search.</p>
+         * <ul>
+         * <li>Set this parameter to the ID of the application if you set the searchType parameter to app.``</li>
+         * <li>Set this parameter to the name of the service if you set the serachType parameter to service.``</li>
+         * <li>Set this parameter to the IP address of the application if you set the searchType parameter to providerIp.</li>
+         * </ul>
          * 
-         * *   Set this parameter to the ID of the application if you set the searchType parameter to app.``
-         * *   Set this parameter to the name of the service if you set the serachType parameter to service.``
-         * *   Set this parameter to the IP address of the application if you set the searchType parameter to providerIp.
+         * <strong>example:</strong>
+         * <p>com.alibaba.edas.HelloService</p>
          */
         public Builder searchValue(String searchValue) {
             this.putQueryParameter("searchValue", searchValue);
@@ -234,13 +257,16 @@ public class GetServiceListPageRequest extends Request {
         }
 
         /**
-         * The type of the service. Valid values:
-         * <p>
+         * <p>The type of the service. Valid values:</p>
+         * <ul>
+         * <li><code>dubbo</code></li>
+         * <li><code>springCloud</code></li>
+         * <li><code>hsf</code></li>
+         * <li><code>istio</code></li>
+         * </ul>
          * 
-         * *   `dubbo`
-         * *   `springCloud`
-         * *   `hsf`
-         * *   `istio`
+         * <strong>example:</strong>
+         * <p>SpringCloud</p>
          */
         public Builder serviceType(String serviceType) {
             this.putQueryParameter("serviceType", serviceType);
@@ -249,11 +275,14 @@ public class GetServiceListPageRequest extends Request {
         }
 
         /**
-         * Specifies the provider side or the consumer side. Valid values:
-         * <p>
+         * <p>Specifies the provider side or the consumer side. Valid values:</p>
+         * <ul>
+         * <li>provider</li>
+         * <li>consumer</li>
+         * </ul>
          * 
-         * *   provider
-         * *   consumer
+         * <strong>example:</strong>
+         * <p>provider</p>
          */
         public Builder side(String side) {
             this.putQueryParameter("side", side);
@@ -262,7 +291,10 @@ public class GetServiceListPageRequest extends Request {
         }
 
         /**
-         * The number of entries to return on each page.
+         * <p>The number of entries to return on each page.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10</p>
          */
         public Builder size(Integer size) {
             this.putQueryParameter("size", size);

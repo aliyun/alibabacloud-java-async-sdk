@@ -1,27 +1,32 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.edas20170801.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ListHistoryDeployVersionResponseBody} extends {@link TeaModel}
  *
  * <p>ListHistoryDeployVersionResponseBody</p>
  */
 public class ListHistoryDeployVersionResponseBody extends TeaModel {
-    @NameInMap("Code")
+    @com.aliyun.core.annotation.NameInMap("Code")
     private Integer code;
 
-    @NameInMap("Message")
+    @com.aliyun.core.annotation.NameInMap("Message")
     private String message;
 
-    @NameInMap("PackageVersionList")
+    @com.aliyun.core.annotation.NameInMap("PackageVersionList")
     private PackageVersionList packageVersionList;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
     private ListHistoryDeployVersionResponseBody(Builder builder) {
@@ -37,6 +42,10 @@ public class ListHistoryDeployVersionResponseBody extends TeaModel {
 
     public static ListHistoryDeployVersionResponseBody create() {
         return builder().build();
+    }
+
+    public Builder toBuilder() {
+        return new Builder(this);
     }
 
     /**
@@ -73,8 +82,21 @@ public class ListHistoryDeployVersionResponseBody extends TeaModel {
         private PackageVersionList packageVersionList; 
         private String requestId; 
 
+        private Builder() {
+        } 
+
+        private Builder(ListHistoryDeployVersionResponseBody model) {
+            this.code = model.code;
+            this.message = model.message;
+            this.packageVersionList = model.packageVersionList;
+            this.requestId = model.requestId;
+        } 
+
         /**
-         * The HTTP status code that is returned.
+         * <p>The HTTP status code that is returned.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>200</p>
          */
         public Builder code(Integer code) {
             this.code = code;
@@ -82,7 +104,10 @@ public class ListHistoryDeployVersionResponseBody extends TeaModel {
         }
 
         /**
-         * The additional information that is returned.
+         * <p>The additional information that is returned.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>success</p>
          */
         public Builder message(String message) {
             this.message = message;
@@ -90,7 +115,7 @@ public class ListHistoryDeployVersionResponseBody extends TeaModel {
         }
 
         /**
-         * The information about historical deployment packages.
+         * <p>The information about historical deployment packages.</p>
          */
         public Builder packageVersionList(PackageVersionList packageVersionList) {
             this.packageVersionList = packageVersionList;
@@ -98,7 +123,10 @@ public class ListHistoryDeployVersionResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the request.
+         * <p>The ID of the request.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>D16979DC-4D42-************</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -111,32 +139,38 @@ public class ListHistoryDeployVersionResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link ListHistoryDeployVersionResponseBody} extends {@link TeaModel}
+     *
+     * <p>ListHistoryDeployVersionResponseBody</p>
+     */
     public static class PackageVersion extends TeaModel {
-        @NameInMap("AppId")
+        @com.aliyun.core.annotation.NameInMap("AppId")
         private String appId;
 
-        @NameInMap("CreateTime")
+        @com.aliyun.core.annotation.NameInMap("CreateTime")
         private Long createTime;
 
-        @NameInMap("Description")
+        @com.aliyun.core.annotation.NameInMap("Description")
         private String description;
 
-        @NameInMap("Id")
+        @com.aliyun.core.annotation.NameInMap("Id")
         private String id;
 
-        @NameInMap("PackageVersion")
+        @com.aliyun.core.annotation.NameInMap("PackageVersion")
         private String packageVersion;
 
-        @NameInMap("PublicUrl")
+        @com.aliyun.core.annotation.NameInMap("PublicUrl")
         private String publicUrl;
 
-        @NameInMap("Type")
+        @com.aliyun.core.annotation.NameInMap("Type")
         private String type;
 
-        @NameInMap("UpdateTime")
+        @com.aliyun.core.annotation.NameInMap("UpdateTime")
         private Long updateTime;
 
-        @NameInMap("WarUrl")
+        @com.aliyun.core.annotation.NameInMap("WarUrl")
         private String warUrl;
 
         private PackageVersion(Builder builder) {
@@ -233,8 +267,26 @@ public class ListHistoryDeployVersionResponseBody extends TeaModel {
             private Long updateTime; 
             private String warUrl; 
 
+            private Builder() {
+            } 
+
+            private Builder(PackageVersion model) {
+                this.appId = model.appId;
+                this.createTime = model.createTime;
+                this.description = model.description;
+                this.id = model.id;
+                this.packageVersion = model.packageVersion;
+                this.publicUrl = model.publicUrl;
+                this.type = model.type;
+                this.updateTime = model.updateTime;
+                this.warUrl = model.warUrl;
+            } 
+
             /**
-             * The ID of the application.
+             * <p>The ID of the application.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>3616cdca-4f92-4413-<strong><strong>-</strong></strong>********</p>
              */
             public Builder appId(String appId) {
                 this.appId = appId;
@@ -242,7 +294,10 @@ public class ListHistoryDeployVersionResponseBody extends TeaModel {
             }
 
             /**
-             * The time when the deployment package was created. This value is a UNIX timestamp representing the number of milliseconds that have elapsed since January 1, 1970, 00:00:00 UTC.
+             * <p>The time when the deployment package was created. This value is a UNIX timestamp representing the number of milliseconds that have elapsed since January 1, 1970, 00:00:00 UTC.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1573627440892</p>
              */
             public Builder createTime(Long createTime) {
                 this.createTime = createTime;
@@ -250,7 +305,10 @@ public class ListHistoryDeployVersionResponseBody extends TeaModel {
             }
 
             /**
-             * The description of the deployment package.
+             * <p>The description of the deployment package.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>deploy</p>
              */
             public Builder description(String description) {
                 this.description = description;
@@ -258,7 +316,10 @@ public class ListHistoryDeployVersionResponseBody extends TeaModel {
             }
 
             /**
-             * The unique ID of the deployment package.
+             * <p>The unique ID of the deployment package.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>441beb18-da42-44dc-<strong><strong>-</strong></strong>********</p>
              */
             public Builder id(String id) {
                 this.id = id;
@@ -266,7 +327,10 @@ public class ListHistoryDeployVersionResponseBody extends TeaModel {
             }
 
             /**
-             * The version of the application that was released by using the deployment package. This version can be used to call the RollbackApplication operation.
+             * <p>The version of the application that was released by using the deployment package. This version can be used to call the RollbackApplication operation.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1.0</p>
              */
             public Builder packageVersion(String packageVersion) {
                 this.packageVersion = packageVersion;
@@ -274,7 +338,7 @@ public class ListHistoryDeployVersionResponseBody extends TeaModel {
             }
 
             /**
-             * The URL of the deployment package.
+             * <p>The URL of the deployment package.</p>
              */
             public Builder publicUrl(String publicUrl) {
                 this.publicUrl = publicUrl;
@@ -282,11 +346,14 @@ public class ListHistoryDeployVersionResponseBody extends TeaModel {
             }
 
             /**
-             * The deployment mode of the application. Valid values:
-             * <p>
+             * <p>The deployment mode of the application. Valid values:</p>
+             * <ul>
+             * <li>url: The application is deployed by using a JAR or WAR package.</li>
+             * <li>image: The application is deployed by using an image.</li>
+             * </ul>
              * 
-             * *   url: The application is deployed by using a JAR or WAR package.
-             * *   image: The application is deployed by using an image.
+             * <strong>example:</strong>
+             * <p>url</p>
              */
             public Builder type(String type) {
                 this.type = type;
@@ -294,7 +361,10 @@ public class ListHistoryDeployVersionResponseBody extends TeaModel {
             }
 
             /**
-             * The time when the deployment package was last modified. This value is a UNIX timestamp representing the number of milliseconds that have elapsed since January 1, 1970, 00:00:00 UTC.
+             * <p>The time when the deployment package was last modified. This value is a UNIX timestamp representing the number of milliseconds that have elapsed since January 1, 1970, 00:00:00 UTC.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1573627440892</p>
              */
             public Builder updateTime(Long updateTime) {
                 this.updateTime = updateTime;
@@ -302,7 +372,7 @@ public class ListHistoryDeployVersionResponseBody extends TeaModel {
             }
 
             /**
-             * The URL of the deployment package.
+             * <p>The URL of the deployment package.</p>
              */
             public Builder warUrl(String warUrl) {
                 this.warUrl = warUrl;
@@ -316,9 +386,15 @@ public class ListHistoryDeployVersionResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link ListHistoryDeployVersionResponseBody} extends {@link TeaModel}
+     *
+     * <p>ListHistoryDeployVersionResponseBody</p>
+     */
     public static class PackageVersionList extends TeaModel {
-        @NameInMap("PackageVersion")
-        private java.util.List < PackageVersion> packageVersion;
+        @com.aliyun.core.annotation.NameInMap("PackageVersion")
+        private java.util.List<PackageVersion> packageVersion;
 
         private PackageVersionList(Builder builder) {
             this.packageVersion = builder.packageVersion;
@@ -335,17 +411,27 @@ public class ListHistoryDeployVersionResponseBody extends TeaModel {
         /**
          * @return packageVersion
          */
-        public java.util.List < PackageVersion> getPackageVersion() {
+        public java.util.List<PackageVersion> getPackageVersion() {
             return this.packageVersion;
         }
 
         public static final class Builder {
-            private java.util.List < PackageVersion> packageVersion; 
+            private java.util.List<PackageVersion> packageVersion; 
+
+            private Builder() {
+            } 
+
+            private Builder(PackageVersionList model) {
+                this.packageVersion = model.packageVersion;
+            } 
 
             /**
-             * The version of the application that was released by using the deployment package. This version can be used to call the RollbackApplication operation.
+             * <p>The version of the application that was released by using the deployment package. This version can be used to call the RollbackApplication operation.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1.0</p>
              */
-            public Builder packageVersion(java.util.List < PackageVersion> packageVersion) {
+            public Builder packageVersion(java.util.List<PackageVersion> packageVersion) {
                 this.packageVersion = packageVersion;
                 return this;
             }

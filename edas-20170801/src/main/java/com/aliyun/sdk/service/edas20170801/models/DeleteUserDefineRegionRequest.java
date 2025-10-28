@@ -1,23 +1,28 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.edas20170801.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DeleteUserDefineRegionRequest} extends {@link RequestModel}
  *
  * <p>DeleteUserDefineRegionRequest</p>
  */
 public class DeleteUserDefineRegionRequest extends Request {
-    @Query
-    @NameInMap("Id")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Id")
     private Long id;
 
-    @Query
-    @NameInMap("RegionTag")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("RegionTag")
     private String regionTag;
 
     private DeleteUserDefineRegionRequest(Builder builder) {
@@ -34,7 +39,7 @@ public class DeleteUserDefineRegionRequest extends Request {
         return builder().build();
     }
 
-    @Override
+@Override
     public Builder toBuilder() {
         return new Builder(this);
     }
@@ -68,7 +73,10 @@ public class DeleteUserDefineRegionRequest extends Request {
         } 
 
         /**
-         * The unique ID of the custom namespace. You can call the ListUserDefineRegion operation to query the ID. For more information, see [ListUserDefineRegion](~~149377~~).
+         * <p>The unique ID of the custom namespace. You can call the ListUserDefineRegion operation to query the ID. For more information, see <a href="https://help.aliyun.com/document_detail/149377.html">ListUserDefineRegion</a>.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2564</p>
          */
         public Builder id(Long id) {
             this.putQueryParameter("Id", id);
@@ -77,7 +85,10 @@ public class DeleteUserDefineRegionRequest extends Request {
         }
 
         /**
-         * The tag of the custom namespace.
+         * <p>The tag of the custom namespace.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>regiontag</p>
          */
         public Builder regionTag(String regionTag) {
             this.putQueryParameter("RegionTag", regionTag);

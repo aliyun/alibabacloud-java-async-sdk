@@ -1,137 +1,142 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.edas20170801.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ModifyScalingRuleRequest} extends {@link RequestModel}
  *
  * <p>ModifyScalingRuleRequest</p>
  */
 public class ModifyScalingRuleRequest extends Request {
-    @Query
-    @NameInMap("AcceptEULA")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("AcceptEULA")
     private Boolean acceptEULA;
 
-    @Query
-    @NameInMap("AppId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("AppId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String appId;
 
-    @Query
-    @NameInMap("GroupId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("GroupId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String groupId;
 
-    @Query
-    @NameInMap("InCondition")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("InCondition")
     private String inCondition;
 
-    @Query
-    @NameInMap("InCpu")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("InCpu")
     private Integer inCpu;
 
-    @Query
-    @NameInMap("InDuration")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("InDuration")
     private Integer inDuration;
 
-    @Query
-    @NameInMap("InEnable")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("InEnable")
     private Boolean inEnable;
 
-    @Query
-    @NameInMap("InInstanceNum")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("InInstanceNum")
     private Integer inInstanceNum;
 
-    @Query
-    @NameInMap("InLoad")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("InLoad")
     private Integer inLoad;
 
-    @Query
-    @NameInMap("InRT")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("InRT")
     private Integer inRT;
 
-    @Query
-    @NameInMap("InStep")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("InStep")
     private Integer inStep;
 
-    @Query
-    @NameInMap("KeyPairName")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("KeyPairName")
     private String keyPairName;
 
-    @Query
-    @NameInMap("MultiAzPolicy")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("MultiAzPolicy")
     private String multiAzPolicy;
 
-    @Query
-    @NameInMap("OutCPU")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("OutCPU")
     private Integer outCPU;
 
-    @Query
-    @NameInMap("OutCondition")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("OutCondition")
     private String outCondition;
 
-    @Query
-    @NameInMap("OutDuration")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("OutDuration")
     private Integer outDuration;
 
-    @Query
-    @NameInMap("OutEnable")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("OutEnable")
     private Boolean outEnable;
 
-    @Query
-    @NameInMap("OutInstanceNum")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("OutInstanceNum")
     private Integer outInstanceNum;
 
-    @Query
-    @NameInMap("OutLoad")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("OutLoad")
     private Integer outLoad;
 
-    @Query
-    @NameInMap("OutRT")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("OutRT")
     private Integer outRT;
 
-    @Query
-    @NameInMap("OutStep")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("OutStep")
     private Integer outStep;
 
-    @Query
-    @NameInMap("Password")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Password")
     private String password;
 
-    @Query
-    @NameInMap("ResourceFrom")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ResourceFrom")
     private String resourceFrom;
 
-    @Query
-    @NameInMap("ScalingPolicy")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ScalingPolicy")
     private String scalingPolicy;
 
-    @Query
-    @NameInMap("TemplateId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("TemplateId")
     private String templateId;
 
-    @Query
-    @NameInMap("TemplateInstanceId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("TemplateInstanceId")
     private String templateInstanceId;
 
-    @Query
-    @NameInMap("TemplateInstanceName")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("TemplateInstanceName")
     private String templateInstanceName;
 
-    @Query
-    @NameInMap("TemplateVersion")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("TemplateVersion")
     private Integer templateVersion;
 
-    @Query
-    @NameInMap("VSwitchIds")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("VSwitchIds")
     private String vSwitchIds;
 
-    @Query
-    @NameInMap("VpcId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("VpcId")
     private String vpcId;
 
     private ModifyScalingRuleRequest(Builder builder) {
@@ -176,7 +181,7 @@ public class ModifyScalingRuleRequest extends Request {
         return builder().build();
     }
 
-    @Override
+@Override
     public Builder toBuilder() {
         return new Builder(this);
     }
@@ -462,7 +467,10 @@ public class ModifyScalingRuleRequest extends Request {
         } 
 
         /**
-         * Set the value to true if scale-outs are allowed.
+         * <p>Set the value to true if scale-outs are allowed.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder acceptEULA(Boolean acceptEULA) {
             this.putQueryParameter("AcceptEULA", acceptEULA);
@@ -471,7 +479,11 @@ public class ModifyScalingRuleRequest extends Request {
         }
 
         /**
-         * The ID of the application.
+         * <p>The ID of the application.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>74ee****-db65-4322-a1f6-bcb60e5b****</p>
          */
         public Builder appId(String appId) {
             this.putQueryParameter("AppId", appId);
@@ -480,7 +492,11 @@ public class ModifyScalingRuleRequest extends Request {
         }
 
         /**
-         * The ID of the instance group to which the application is deployed.
+         * <p>The ID of the instance group to which the application is deployed.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>8123db90-880f-486f-<strong><strong>-</strong></strong>********</p>
          */
         public Builder groupId(String groupId) {
             this.putQueryParameter("GroupId", groupId);
@@ -489,11 +505,14 @@ public class ModifyScalingRuleRequest extends Request {
         }
 
         /**
-         * The relationship among the conditions that trigger a scale-in.
-         * <p>
+         * <p>The relationship among the conditions that trigger a scale-in.</p>
+         * <ul>
+         * <li>OR: one of the conditions</li>
+         * <li>AND: all conditions</li>
+         * </ul>
          * 
-         * *   OR: one of the conditions
-         * *   AND: all conditions
+         * <strong>example:</strong>
+         * <p>&quot;OR&quot;</p>
          */
         public Builder inCondition(String inCondition) {
             this.putQueryParameter("InCondition", inCondition);
@@ -502,7 +521,10 @@ public class ModifyScalingRuleRequest extends Request {
         }
 
         /**
-         * The CPU utilization that triggers a scale-in.
+         * <p>The CPU utilization that triggers a scale-in.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>50</p>
          */
         public Builder inCpu(Integer inCpu) {
             this.putQueryParameter("InCpu", inCpu);
@@ -511,7 +533,10 @@ public class ModifyScalingRuleRequest extends Request {
         }
 
         /**
-         * The duration in which the metric threshold is exceeded. Unit: minutes.
+         * <p>The duration in which the metric threshold is exceeded. Unit: minutes.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>50</p>
          */
         public Builder inDuration(Integer inDuration) {
             this.putQueryParameter("InDuration", inDuration);
@@ -520,11 +545,14 @@ public class ModifyScalingRuleRequest extends Request {
         }
 
         /**
-         * Specifies whether to allow scale-ins.
-         * <p>
+         * <p>Specifies whether to allow scale-ins.</p>
+         * <ul>
+         * <li>true: allows scale-ins.</li>
+         * <li>false: does not allow scale-ins.</li>
+         * </ul>
          * 
-         * *   true: allows scale-ins.
-         * *   false: does not allow scale-ins.
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder inEnable(Boolean inEnable) {
             this.putQueryParameter("InEnable", inEnable);
@@ -533,7 +561,10 @@ public class ModifyScalingRuleRequest extends Request {
         }
 
         /**
-         * The minimum number of instances that must be retained in each group when a scale-in is performed.
+         * <p>The minimum number of instances that must be retained in each group when a scale-in is performed.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>3</p>
          */
         public Builder inInstanceNum(Integer inInstanceNum) {
             this.putQueryParameter("InInstanceNum", inInstanceNum);
@@ -542,7 +573,10 @@ public class ModifyScalingRuleRequest extends Request {
         }
 
         /**
-         * The system load that triggers a scale-in.
+         * <p>The system load that triggers a scale-in.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>50</p>
          */
         public Builder inLoad(Integer inLoad) {
             this.putQueryParameter("InLoad", inLoad);
@@ -551,7 +585,10 @@ public class ModifyScalingRuleRequest extends Request {
         }
 
         /**
-         * The minimum service latency that triggers a scale-in. The lower limit is 0. Unit: milliseconds.
+         * <p>The minimum service latency that triggers a scale-in. The lower limit is 0. Unit: milliseconds.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>50</p>
          */
         public Builder inRT(Integer inRT) {
             this.putQueryParameter("InRT", inRT);
@@ -560,7 +597,10 @@ public class ModifyScalingRuleRequest extends Request {
         }
 
         /**
-         * The number of instances that are removed during each scale-in.
+         * <p>The number of instances that are removed during each scale-in.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder inStep(Integer inStep) {
             this.putQueryParameter("InStep", inStep);
@@ -569,7 +609,10 @@ public class ModifyScalingRuleRequest extends Request {
         }
 
         /**
-         * The key pair that is used to log on to the instance. This parameter takes effect only if you choose to create instances based on the specifications of an existing instance during a scale-out.
+         * <p>The key pair that is used to log on to the instance. This parameter takes effect only if you choose to create instances based on the specifications of an existing instance during a scale-out.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>&quot;tdy218&quot;</p>
          */
         public Builder keyPairName(String keyPairName) {
             this.putQueryParameter("KeyPairName", keyPairName);
@@ -578,11 +621,14 @@ public class ModifyScalingRuleRequest extends Request {
         }
 
         /**
-         * The multi-zone scaling policy. Valid values:
-         * <p>
+         * <p>The multi-zone scaling policy. Valid values:</p>
+         * <ul>
+         * <li>PRIORITY: The vSwitch that is first selected has the highest priority.</li>
+         * <li>BALANCE: This policy evenly distributes instances across zones in which the vSwitches reside.</li>
+         * </ul>
          * 
-         * *   PRIORITY: The vSwitch that is first selected has the highest priority.
-         * *   BALANCE: This policy evenly distributes instances across zones in which the vSwitches reside.
+         * <strong>example:</strong>
+         * <p>&quot;PRIORITY&quot;</p>
          */
         public Builder multiAzPolicy(String multiAzPolicy) {
             this.putQueryParameter("MultiAzPolicy", multiAzPolicy);
@@ -591,7 +637,10 @@ public class ModifyScalingRuleRequest extends Request {
         }
 
         /**
-         * The CPU utilization that triggers a scale-out.
+         * <p>The CPU utilization that triggers a scale-out.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>50</p>
          */
         public Builder outCPU(Integer outCPU) {
             this.putQueryParameter("OutCPU", outCPU);
@@ -600,11 +649,14 @@ public class ModifyScalingRuleRequest extends Request {
         }
 
         /**
-         * The relationship among the conditions that trigger a scale-out.
-         * <p>
+         * <p>The relationship among the conditions that trigger a scale-out.</p>
+         * <ul>
+         * <li>OR: one of the conditions</li>
+         * <li>AND: all conditions</li>
+         * </ul>
          * 
-         * *   OR: one of the conditions
-         * *   AND: all conditions
+         * <strong>example:</strong>
+         * <p>&quot;OR&quot;</p>
          */
         public Builder outCondition(String outCondition) {
             this.putQueryParameter("OutCondition", outCondition);
@@ -613,7 +665,10 @@ public class ModifyScalingRuleRequest extends Request {
         }
 
         /**
-         * The duration in which the metric threshold is exceeded. Unit: minutes.
+         * <p>The duration in which the metric threshold is exceeded. Unit: minutes.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>50</p>
          */
         public Builder outDuration(Integer outDuration) {
             this.putQueryParameter("OutDuration", outDuration);
@@ -622,7 +677,10 @@ public class ModifyScalingRuleRequest extends Request {
         }
 
         /**
-         * Specifies whether to allow scale-outs.
+         * <p>Specifies whether to allow scale-outs.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder outEnable(Boolean outEnable) {
             this.putQueryParameter("OutEnable", outEnable);
@@ -631,7 +689,10 @@ public class ModifyScalingRuleRequest extends Request {
         }
 
         /**
-         * The maximum number of instances in each group when a scale-out is performed.
+         * <p>The maximum number of instances in each group when a scale-out is performed.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10</p>
          */
         public Builder outInstanceNum(Integer outInstanceNum) {
             this.putQueryParameter("OutInstanceNum", outInstanceNum);
@@ -640,7 +701,10 @@ public class ModifyScalingRuleRequest extends Request {
         }
 
         /**
-         * The system load that triggers a scale-out.
+         * <p>The system load that triggers a scale-out.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>50</p>
          */
         public Builder outLoad(Integer outLoad) {
             this.putQueryParameter("OutLoad", outLoad);
@@ -649,7 +713,10 @@ public class ModifyScalingRuleRequest extends Request {
         }
 
         /**
-         * The minimum service latency that triggers a scale-out. The lower limit is 0. Unit: milliseconds.
+         * <p>The minimum service latency that triggers a scale-out. The lower limit is 0. Unit: milliseconds.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>0</p>
          */
         public Builder outRT(Integer outRT) {
             this.putQueryParameter("OutRT", outRT);
@@ -658,7 +725,10 @@ public class ModifyScalingRuleRequest extends Request {
         }
 
         /**
-         * The number of instances that are added during each scale-out.
+         * <p>The number of instances that are added during each scale-out.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>0</p>
          */
         public Builder outStep(Integer outStep) {
             this.putQueryParameter("OutStep", outStep);
@@ -667,7 +737,10 @@ public class ModifyScalingRuleRequest extends Request {
         }
 
         /**
-         * The password that is used to log on to the instance. This parameter takes effect only if you choose to create instances based on the specifications of an existing instance during a scale-out.
+         * <p>The password that is used to log on to the instance. This parameter takes effect only if you choose to create instances based on the specifications of an existing instance during a scale-out.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>&quot;Pwd*****&quot;</p>
          */
         public Builder password(String password) {
             this.putQueryParameter("Password", password);
@@ -676,13 +749,15 @@ public class ModifyScalingRuleRequest extends Request {
         }
 
         /**
-         * The source of the instance to be added during a scale-out. Valid values:
-         * <p>
+         * <p>The source of the instance to be added during a scale-out. Valid values:</p>
+         * <ul>
+         * <li>NEW: elastic resources</li>
+         * <li>AVAILABLE: existing resources If you prefer existing resources to elastic resources, set this parameter to AVAILABLE_FIRST.</li>
+         * </ul>
+         * <p>If you set this parameter to NEW or AVAILABLE_FIRST, you must specify the auto-scaling parameters. If you set this parameter to NEW, instances are created based on a launch template or the specifications of an existing instance.</p>
          * 
-         * *   NEW: elastic resources
-         * *   AVAILABLE: existing resources If you prefer existing resources to elastic resources, set this parameter to AVAILABLE_FIRST.
-         * 
-         * If you set this parameter to NEW or AVAILABLE_FIRST, you must specify the auto-scaling parameters. If you set this parameter to NEW, instances are created based on a launch template or the specifications of an existing instance.
+         * <strong>example:</strong>
+         * <p>&quot;AVAILABLE&quot;</p>
          */
         public Builder resourceFrom(String resourceFrom) {
             this.putQueryParameter("ResourceFrom", resourceFrom);
@@ -691,11 +766,14 @@ public class ModifyScalingRuleRequest extends Request {
         }
 
         /**
-         * The instance handling mode during a scale-in. Valid values:
-         * <p>
+         * <p>The instance handling mode during a scale-in. Valid values:</p>
+         * <ul>
+         * <li>release: When a scale-in is performed, instances that are no longer used are released.</li>
+         * <li>recycle: When a scale-in is performed, instances that are no longer used are stopped and reclaimed.</li>
+         * </ul>
          * 
-         * *   release: When a scale-in is performed, instances that are no longer used are released.
-         * *   recycle: When a scale-in is performed, instances that are no longer used are stopped and reclaimed.
+         * <strong>example:</strong>
+         * <p>&quot;release&quot;</p>
          */
         public Builder scalingPolicy(String scalingPolicy) {
             this.putQueryParameter("ScalingPolicy", scalingPolicy);
@@ -704,7 +782,10 @@ public class ModifyScalingRuleRequest extends Request {
         }
 
         /**
-         * The ID of the launch template that is used to create instances during a scale-out. This parameter takes effect only if you set the OutEnable parameter to true. This parameter takes precedence over the TemplateInstanceId parameter.
+         * <p>The ID of the launch template that is used to create instances during a scale-out. This parameter takes effect only if you set the OutEnable parameter to true. This parameter takes precedence over the TemplateInstanceId parameter.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>&quot;lt-wz9hkhn8wp*****&quot;</p>
          */
         public Builder templateId(String templateId) {
             this.putQueryParameter("TemplateId", templateId);
@@ -713,7 +794,10 @@ public class ModifyScalingRuleRequest extends Request {
         }
 
         /**
-         * The ID of the instance whose specifications are used to create instances during a scale-out. This parameter is valid only when you set the OutEnable parameter to true.
+         * <p>The ID of the instance whose specifications are used to create instances during a scale-out. This parameter is valid only when you set the OutEnable parameter to true.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>&quot;1&quot;</p>
          */
         public Builder templateInstanceId(String templateInstanceId) {
             this.putQueryParameter("TemplateInstanceId", templateInstanceId);
@@ -722,7 +806,10 @@ public class ModifyScalingRuleRequest extends Request {
         }
 
         /**
-         * The name of the instance whose specifications are used to create instances during a scale-out. This parameter takes effect only if you specify the TemplateInstanceId parameter.
+         * <p>The name of the instance whose specifications are used to create instances during a scale-out. This parameter takes effect only if you specify the TemplateInstanceId parameter.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>&quot;tpl-tdy218&quot;</p>
          */
         public Builder templateInstanceName(String templateInstanceName) {
             this.putQueryParameter("TemplateInstanceName", templateInstanceName);
@@ -731,7 +818,10 @@ public class ModifyScalingRuleRequest extends Request {
         }
 
         /**
-         * The version of the launch template that is used to create instances during a scale-out. This parameter takes effect only if you set the OutEnable parameter to true. To use the default template version, set this parameter to `-1`. Otherwise, set this parameter to the version that you want to use.
+         * <p>The version of the launch template that is used to create instances during a scale-out. This parameter takes effect only if you set the OutEnable parameter to true. To use the default template version, set this parameter to <code>-1</code>. Otherwise, set this parameter to the version that you want to use.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>-1</p>
          */
         public Builder templateVersion(Integer templateVersion) {
             this.putQueryParameter("TemplateVersion", templateVersion);
@@ -740,7 +830,10 @@ public class ModifyScalingRuleRequest extends Request {
         }
 
         /**
-         * The IDs of the vSwitches that are associated with the VPC. Separate multiple IDs with commas (,).
+         * <p>The IDs of the vSwitches that are associated with the VPC. Separate multiple IDs with commas (,).</p>
+         * 
+         * <strong>example:</strong>
+         * <p>&quot;vsw-bp1ldxs3d4fd*****&quot;</p>
          */
         public Builder vSwitchIds(String vSwitchIds) {
             this.putQueryParameter("VSwitchIds", vSwitchIds);
@@ -749,7 +842,10 @@ public class ModifyScalingRuleRequest extends Request {
         }
 
         /**
-         * The ID of the virtual private cloud (VPC) that is associated with the instances created based on a launch template or the specifications of an existing instance.
+         * <p>The ID of the virtual private cloud (VPC) that is associated with the instances created based on a launch template or the specifications of an existing instance.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>&quot;vpc-bp1j55oz3bg*****&quot;</p>
          */
         public Builder vpcId(String vpcId) {
             this.putQueryParameter("VpcId", vpcId);

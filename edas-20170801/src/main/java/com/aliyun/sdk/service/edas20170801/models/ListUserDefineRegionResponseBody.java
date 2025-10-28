@@ -1,27 +1,32 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.edas20170801.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ListUserDefineRegionResponseBody} extends {@link TeaModel}
  *
  * <p>ListUserDefineRegionResponseBody</p>
  */
 public class ListUserDefineRegionResponseBody extends TeaModel {
-    @NameInMap("Code")
+    @com.aliyun.core.annotation.NameInMap("Code")
     private Integer code;
 
-    @NameInMap("Message")
+    @com.aliyun.core.annotation.NameInMap("Message")
     private String message;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("UserDefineRegionList")
+    @com.aliyun.core.annotation.NameInMap("UserDefineRegionList")
     private UserDefineRegionList userDefineRegionList;
 
     private ListUserDefineRegionResponseBody(Builder builder) {
@@ -37,6 +42,10 @@ public class ListUserDefineRegionResponseBody extends TeaModel {
 
     public static ListUserDefineRegionResponseBody create() {
         return builder().build();
+    }
+
+    public Builder toBuilder() {
+        return new Builder(this);
     }
 
     /**
@@ -73,8 +82,21 @@ public class ListUserDefineRegionResponseBody extends TeaModel {
         private String requestId; 
         private UserDefineRegionList userDefineRegionList; 
 
+        private Builder() {
+        } 
+
+        private Builder(ListUserDefineRegionResponseBody model) {
+            this.code = model.code;
+            this.message = model.message;
+            this.requestId = model.requestId;
+            this.userDefineRegionList = model.userDefineRegionList;
+        } 
+
         /**
-         * The HTTP status code that is returned.
+         * <p>The HTTP status code that is returned.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>200</p>
          */
         public Builder code(Integer code) {
             this.code = code;
@@ -82,7 +104,10 @@ public class ListUserDefineRegionResponseBody extends TeaModel {
         }
 
         /**
-         * The additional information that is returned.
+         * <p>The additional information that is returned.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>success</p>
          */
         public Builder message(String message) {
             this.message = message;
@@ -90,7 +115,10 @@ public class ListUserDefineRegionResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the request.
+         * <p>The ID of the request.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>b197-40ab-9155-****</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -98,7 +126,7 @@ public class ListUserDefineRegionResponseBody extends TeaModel {
         }
 
         /**
-         * The namespaces.
+         * <p>The namespaces.</p>
          */
         public Builder userDefineRegionList(UserDefineRegionList userDefineRegionList) {
             this.userDefineRegionList = userDefineRegionList;
@@ -111,32 +139,38 @@ public class ListUserDefineRegionResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link ListUserDefineRegionResponseBody} extends {@link TeaModel}
+     *
+     * <p>ListUserDefineRegionResponseBody</p>
+     */
     public static class UserDefineRegionEntity extends TeaModel {
-        @NameInMap("BelongRegion")
+        @com.aliyun.core.annotation.NameInMap("BelongRegion")
         private String belongRegion;
 
-        @NameInMap("DebugEnable")
+        @com.aliyun.core.annotation.NameInMap("DebugEnable")
         private Boolean debugEnable;
 
-        @NameInMap("Description")
+        @com.aliyun.core.annotation.NameInMap("Description")
         private String description;
 
-        @NameInMap("Id")
+        @com.aliyun.core.annotation.NameInMap("Id")
         private Long id;
 
-        @NameInMap("MseInstanceId")
+        @com.aliyun.core.annotation.NameInMap("MseInstanceId")
         private String mseInstanceId;
 
-        @NameInMap("RegionId")
+        @com.aliyun.core.annotation.NameInMap("RegionId")
         private String regionId;
 
-        @NameInMap("RegionName")
+        @com.aliyun.core.annotation.NameInMap("RegionName")
         private String regionName;
 
-        @NameInMap("RegistryType")
+        @com.aliyun.core.annotation.NameInMap("RegistryType")
         private String registryType;
 
-        @NameInMap("UserId")
+        @com.aliyun.core.annotation.NameInMap("UserId")
         private String userId;
 
         private UserDefineRegionEntity(Builder builder) {
@@ -233,8 +267,26 @@ public class ListUserDefineRegionResponseBody extends TeaModel {
             private String registryType; 
             private String userId; 
 
+            private Builder() {
+            } 
+
+            private Builder(UserDefineRegionEntity model) {
+                this.belongRegion = model.belongRegion;
+                this.debugEnable = model.debugEnable;
+                this.description = model.description;
+                this.id = model.id;
+                this.mseInstanceId = model.mseInstanceId;
+                this.regionId = model.regionId;
+                this.regionName = model.regionName;
+                this.registryType = model.registryType;
+                this.userId = model.userId;
+            } 
+
             /**
-             * The ID of the region to which the namespace belongs.
+             * <p>The ID of the region to which the namespace belongs.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>cn-shenzhen</p>
              */
             public Builder belongRegion(String belongRegion) {
                 this.belongRegion = belongRegion;
@@ -242,7 +294,10 @@ public class ListUserDefineRegionResponseBody extends TeaModel {
             }
 
             /**
-             * Indicates whether remote debugging is allowed.
+             * <p>Indicates whether remote debugging is allowed.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>false</p>
              */
             public Builder debugEnable(Boolean debugEnable) {
                 this.debugEnable = debugEnable;
@@ -250,7 +305,10 @@ public class ListUserDefineRegionResponseBody extends TeaModel {
             }
 
             /**
-             * The description of the namespace.
+             * <p>The description of the namespace.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>betaappManager</p>
              */
             public Builder description(String description) {
                 this.description = description;
@@ -258,7 +316,10 @@ public class ListUserDefineRegionResponseBody extends TeaModel {
             }
 
             /**
-             * The unique identifier of the namespace.
+             * <p>The unique identifier of the namespace.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1330</p>
              */
             public Builder id(Long id) {
                 this.id = id;
@@ -266,11 +327,14 @@ public class ListUserDefineRegionResponseBody extends TeaModel {
             }
 
             /**
-             * The type of the registry. Valid values:
-             * <p>
+             * <p>The type of the registry. Valid values:</p>
+             * <ul>
+             * <li>default: shared service registry of Enterprise Distributed Application Service (EDAS)</li>
+             * <li>exclusive_mse: Microservices Engine (MSE) Nacos registry</li>
+             * </ul>
              * 
-             * *   default: shared service registry of Enterprise Distributed Application Service (EDAS)
-             * *   exclusive_mse: Microservices Engine (MSE) Nacos registry
+             * <strong>example:</strong>
+             * <p>default: EDAS</p>
              */
             public Builder mseInstanceId(String mseInstanceId) {
                 this.mseInstanceId = mseInstanceId;
@@ -278,10 +342,13 @@ public class ListUserDefineRegionResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the namespace.
-             * <p>
+             * <p>The ID of the namespace.</p>
+             * <blockquote>
+             * <p>The ID cannot be changed after the namespace is created. The ID is in the <code>Physical region ID:Logical region identifier</code> format .</p>
+             * </blockquote>
              * 
-             * > The ID cannot be changed after the namespace is created. The ID is in the `Physical region ID:Logical region identifier` format .
+             * <strong>example:</strong>
+             * <p>cn-shenzhen:betaappManager</p>
              */
             public Builder regionId(String regionId) {
                 this.regionId = regionId;
@@ -289,7 +356,10 @@ public class ListUserDefineRegionResponseBody extends TeaModel {
             }
 
             /**
-             * The name of the namespace.
+             * <p>The name of the namespace.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>betaappManager</p>
              */
             public Builder regionName(String regionName) {
                 this.regionName = regionName;
@@ -297,7 +367,10 @@ public class ListUserDefineRegionResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the MSE instance.
+             * <p>The ID of the MSE instance.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>mse_prepaid_public_cn-tl32n******</p>
              */
             public Builder registryType(String registryType) {
                 this.registryType = registryType;
@@ -305,7 +378,10 @@ public class ListUserDefineRegionResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the Alibaba Cloud account to which the namespace belongs.
+             * <p>The ID of the Alibaba Cloud account to which the namespace belongs.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>edas_****_test@aliyun-****.com</p>
              */
             public Builder userId(String userId) {
                 this.userId = userId;
@@ -319,9 +395,15 @@ public class ListUserDefineRegionResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link ListUserDefineRegionResponseBody} extends {@link TeaModel}
+     *
+     * <p>ListUserDefineRegionResponseBody</p>
+     */
     public static class UserDefineRegionList extends TeaModel {
-        @NameInMap("UserDefineRegionEntity")
-        private java.util.List < UserDefineRegionEntity> userDefineRegionEntity;
+        @com.aliyun.core.annotation.NameInMap("UserDefineRegionEntity")
+        private java.util.List<UserDefineRegionEntity> userDefineRegionEntity;
 
         private UserDefineRegionList(Builder builder) {
             this.userDefineRegionEntity = builder.userDefineRegionEntity;
@@ -338,17 +420,24 @@ public class ListUserDefineRegionResponseBody extends TeaModel {
         /**
          * @return userDefineRegionEntity
          */
-        public java.util.List < UserDefineRegionEntity> getUserDefineRegionEntity() {
+        public java.util.List<UserDefineRegionEntity> getUserDefineRegionEntity() {
             return this.userDefineRegionEntity;
         }
 
         public static final class Builder {
-            private java.util.List < UserDefineRegionEntity> userDefineRegionEntity; 
+            private java.util.List<UserDefineRegionEntity> userDefineRegionEntity; 
+
+            private Builder() {
+            } 
+
+            private Builder(UserDefineRegionList model) {
+                this.userDefineRegionEntity = model.userDefineRegionEntity;
+            } 
 
             /**
              * UserDefineRegionEntity.
              */
-            public Builder userDefineRegionEntity(java.util.List < UserDefineRegionEntity> userDefineRegionEntity) {
+            public Builder userDefineRegionEntity(java.util.List<UserDefineRegionEntity> userDefineRegionEntity) {
                 this.userDefineRegionEntity = userDefineRegionEntity;
                 return this;
             }

@@ -1,27 +1,32 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.edas20170801.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ListSlbRequest} extends {@link RequestModel}
  *
  * <p>ListSlbRequest</p>
  */
 public class ListSlbRequest extends Request {
-    @Query
-    @NameInMap("AddressType")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("AddressType")
     private String addressType;
 
-    @Query
-    @NameInMap("SlbType")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("SlbType")
     private String slbType;
 
-    @Query
-    @NameInMap("VpcId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("VpcId")
     private String vpcId;
 
     private ListSlbRequest(Builder builder) {
@@ -39,7 +44,7 @@ public class ListSlbRequest extends Request {
         return builder().build();
     }
 
-    @Override
+@Override
     public Builder toBuilder() {
         return new Builder(this);
     }
@@ -82,11 +87,14 @@ public class ListSlbRequest extends Request {
         } 
 
         /**
-         * The type of the IP addresses. Valid values:
-         * <p>
+         * <p>The type of the IP addresses. Valid values:</p>
+         * <ul>
+         * <li>Internet: Users can connect to the SLB instance over the Internet.</li>
+         * <li>Intranet: Users can connect to the SLB instance over the internal network.</li>
+         * </ul>
          * 
-         * *   Internet: Users can connect to the SLB instance over the Internet.
-         * *   Intranet: Users can connect to the SLB instance over the internal network.
+         * <strong>example:</strong>
+         * <p>internet</p>
          */
         public Builder addressType(String addressType) {
             this.putQueryParameter("AddressType", addressType);
@@ -95,11 +103,14 @@ public class ListSlbRequest extends Request {
         }
 
         /**
-         * The type of the SLB instance. Valid values:
-         * <p>
+         * <p>The type of the SLB instance. Valid values:</p>
+         * <ul>
+         * <li>clb: Classic Load Balancer (CLB)</li>
+         * <li>alb: Application Load Balancer (ALB)</li>
+         * </ul>
          * 
-         * *   clb: Classic Load Balancer (CLB)
-         * *   alb: Application Load Balancer (ALB)
+         * <strong>example:</strong>
+         * <p>clb</p>
          */
         public Builder slbType(String slbType) {
             this.putQueryParameter("SlbType", slbType);
@@ -108,7 +119,10 @@ public class ListSlbRequest extends Request {
         }
 
         /**
-         * The ID of the virtual private cloud (VPC).
+         * <p>The ID of the virtual private cloud (VPC).</p>
+         * 
+         * <strong>example:</strong>
+         * <p>vpc-bp1f90rfybszjogyw****</p>
          */
         public Builder vpcId(String vpcId) {
             this.putQueryParameter("VpcId", vpcId);

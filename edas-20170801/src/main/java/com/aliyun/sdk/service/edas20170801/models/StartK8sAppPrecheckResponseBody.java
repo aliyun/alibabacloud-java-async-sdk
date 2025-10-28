@@ -1,27 +1,32 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.edas20170801.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link StartK8sAppPrecheckResponseBody} extends {@link TeaModel}
  *
  * <p>StartK8sAppPrecheckResponseBody</p>
  */
 public class StartK8sAppPrecheckResponseBody extends TeaModel {
-    @NameInMap("Code")
+    @com.aliyun.core.annotation.NameInMap("Code")
     private Integer code;
 
-    @NameInMap("Data")
+    @com.aliyun.core.annotation.NameInMap("Data")
     private Data data;
 
-    @NameInMap("Message")
+    @com.aliyun.core.annotation.NameInMap("Message")
     private String message;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
     private StartK8sAppPrecheckResponseBody(Builder builder) {
@@ -37,6 +42,10 @@ public class StartK8sAppPrecheckResponseBody extends TeaModel {
 
     public static StartK8sAppPrecheckResponseBody create() {
         return builder().build();
+    }
+
+    public Builder toBuilder() {
+        return new Builder(this);
     }
 
     /**
@@ -73,8 +82,21 @@ public class StartK8sAppPrecheckResponseBody extends TeaModel {
         private String message; 
         private String requestId; 
 
+        private Builder() {
+        } 
+
+        private Builder(StartK8sAppPrecheckResponseBody model) {
+            this.code = model.code;
+            this.data = model.data;
+            this.message = model.message;
+            this.requestId = model.requestId;
+        } 
+
         /**
-         * The HTTP status code.
+         * <p>The HTTP status code.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>200</p>
          */
         public Builder code(Integer code) {
             this.code = code;
@@ -82,7 +104,7 @@ public class StartK8sAppPrecheckResponseBody extends TeaModel {
         }
 
         /**
-         * The returned data.
+         * <p>The returned data.</p>
          */
         public Builder data(Data data) {
             this.data = data;
@@ -90,7 +112,10 @@ public class StartK8sAppPrecheckResponseBody extends TeaModel {
         }
 
         /**
-         * The returned message.
+         * <p>The returned message.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>success</p>
          */
         public Builder message(String message) {
             this.message = message;
@@ -98,7 +123,10 @@ public class StartK8sAppPrecheckResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the request.
+         * <p>The ID of the request.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>7638276F-<strong><strong>-</strong></strong>-884F-54CC0BC84A8D</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -111,9 +139,15 @@ public class StartK8sAppPrecheckResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link StartK8sAppPrecheckResponseBody} extends {@link TeaModel}
+     *
+     * <p>StartK8sAppPrecheckResponseBody</p>
+     */
     public static class Data extends TeaModel {
-        @NameInMap("Jobs")
-        private java.util.List < String > jobs;
+        @com.aliyun.core.annotation.NameInMap("Jobs")
+        private java.util.List<String> jobs;
 
         private Data(Builder builder) {
             this.jobs = builder.jobs;
@@ -130,17 +164,24 @@ public class StartK8sAppPrecheckResponseBody extends TeaModel {
         /**
          * @return jobs
          */
-        public java.util.List < String > getJobs() {
+        public java.util.List<String> getJobs() {
             return this.jobs;
         }
 
         public static final class Builder {
-            private java.util.List < String > jobs; 
+            private java.util.List<String> jobs; 
+
+            private Builder() {
+            } 
+
+            private Builder(Data model) {
+                this.jobs = model.jobs;
+            } 
 
             /**
-             * The jobs and the details about the jobs.
+             * <p>The jobs and the details about the jobs.</p>
              */
-            public Builder jobs(java.util.List < String > jobs) {
+            public Builder jobs(java.util.List<String> jobs) {
                 this.jobs = jobs;
                 return this;
             }

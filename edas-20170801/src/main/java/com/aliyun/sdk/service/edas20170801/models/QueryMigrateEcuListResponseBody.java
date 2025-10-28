@@ -1,27 +1,32 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.edas20170801.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link QueryMigrateEcuListResponseBody} extends {@link TeaModel}
  *
  * <p>QueryMigrateEcuListResponseBody</p>
  */
 public class QueryMigrateEcuListResponseBody extends TeaModel {
-    @NameInMap("Code")
+    @com.aliyun.core.annotation.NameInMap("Code")
     private Integer code;
 
-    @NameInMap("EcuEntityList")
+    @com.aliyun.core.annotation.NameInMap("EcuEntityList")
     private EcuEntityList ecuEntityList;
 
-    @NameInMap("Message")
+    @com.aliyun.core.annotation.NameInMap("Message")
     private String message;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
     private QueryMigrateEcuListResponseBody(Builder builder) {
@@ -37,6 +42,10 @@ public class QueryMigrateEcuListResponseBody extends TeaModel {
 
     public static QueryMigrateEcuListResponseBody create() {
         return builder().build();
+    }
+
+    public Builder toBuilder() {
+        return new Builder(this);
     }
 
     /**
@@ -73,8 +82,21 @@ public class QueryMigrateEcuListResponseBody extends TeaModel {
         private String message; 
         private String requestId; 
 
+        private Builder() {
+        } 
+
+        private Builder(QueryMigrateEcuListResponseBody model) {
+            this.code = model.code;
+            this.ecuEntityList = model.ecuEntityList;
+            this.message = model.message;
+            this.requestId = model.requestId;
+        } 
+
         /**
-         * The HTTP status code that is returned.
+         * <p>The HTTP status code that is returned.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>200</p>
          */
         public Builder code(Integer code) {
             this.code = code;
@@ -82,7 +104,7 @@ public class QueryMigrateEcuListResponseBody extends TeaModel {
         }
 
         /**
-         * The information about ECUs that can be migrated.
+         * <p>The information about ECUs that can be migrated.</p>
          */
         public Builder ecuEntityList(EcuEntityList ecuEntityList) {
             this.ecuEntityList = ecuEntityList;
@@ -90,7 +112,10 @@ public class QueryMigrateEcuListResponseBody extends TeaModel {
         }
 
         /**
-         * The additional information that is returned.
+         * <p>The additional information that is returned.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>success</p>
          */
         public Builder message(String message) {
             this.message = message;
@@ -98,7 +123,10 @@ public class QueryMigrateEcuListResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the request.
+         * <p>The ID of the request.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>b197-40ab-9155-7ca7</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -111,56 +139,62 @@ public class QueryMigrateEcuListResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link QueryMigrateEcuListResponseBody} extends {@link TeaModel}
+     *
+     * <p>QueryMigrateEcuListResponseBody</p>
+     */
     public static class EcuEntity extends TeaModel {
-        @NameInMap("AvailableCpu")
+        @com.aliyun.core.annotation.NameInMap("AvailableCpu")
         private Integer availableCpu;
 
-        @NameInMap("AvailableMem")
+        @com.aliyun.core.annotation.NameInMap("AvailableMem")
         private Integer availableMem;
 
-        @NameInMap("Cpu")
+        @com.aliyun.core.annotation.NameInMap("Cpu")
         private Integer cpu;
 
-        @NameInMap("CreateTime")
+        @com.aliyun.core.annotation.NameInMap("CreateTime")
         private Long createTime;
 
-        @NameInMap("DockerEnv")
+        @com.aliyun.core.annotation.NameInMap("DockerEnv")
         private Boolean dockerEnv;
 
-        @NameInMap("EcuId")
+        @com.aliyun.core.annotation.NameInMap("EcuId")
         private String ecuId;
 
-        @NameInMap("HeartbeatTime")
+        @com.aliyun.core.annotation.NameInMap("HeartbeatTime")
         private Long heartbeatTime;
 
-        @NameInMap("InstanceId")
+        @com.aliyun.core.annotation.NameInMap("InstanceId")
         private String instanceId;
 
-        @NameInMap("IpAddr")
+        @com.aliyun.core.annotation.NameInMap("IpAddr")
         private String ipAddr;
 
-        @NameInMap("Mem")
+        @com.aliyun.core.annotation.NameInMap("Mem")
         private Integer mem;
 
-        @NameInMap("Name")
+        @com.aliyun.core.annotation.NameInMap("Name")
         private String name;
 
-        @NameInMap("Online")
+        @com.aliyun.core.annotation.NameInMap("Online")
         private Boolean online;
 
-        @NameInMap("RegionId")
+        @com.aliyun.core.annotation.NameInMap("RegionId")
         private String regionId;
 
-        @NameInMap("UpdateTime")
+        @com.aliyun.core.annotation.NameInMap("UpdateTime")
         private Long updateTime;
 
-        @NameInMap("UserId")
+        @com.aliyun.core.annotation.NameInMap("UserId")
         private String userId;
 
-        @NameInMap("VpcId")
+        @com.aliyun.core.annotation.NameInMap("VpcId")
         private String vpcId;
 
-        @NameInMap("ZoneId")
+        @com.aliyun.core.annotation.NameInMap("ZoneId")
         private String zoneId;
 
         private EcuEntity(Builder builder) {
@@ -329,8 +363,34 @@ public class QueryMigrateEcuListResponseBody extends TeaModel {
             private String vpcId; 
             private String zoneId; 
 
+            private Builder() {
+            } 
+
+            private Builder(EcuEntity model) {
+                this.availableCpu = model.availableCpu;
+                this.availableMem = model.availableMem;
+                this.cpu = model.cpu;
+                this.createTime = model.createTime;
+                this.dockerEnv = model.dockerEnv;
+                this.ecuId = model.ecuId;
+                this.heartbeatTime = model.heartbeatTime;
+                this.instanceId = model.instanceId;
+                this.ipAddr = model.ipAddr;
+                this.mem = model.mem;
+                this.name = model.name;
+                this.online = model.online;
+                this.regionId = model.regionId;
+                this.updateTime = model.updateTime;
+                this.userId = model.userId;
+                this.vpcId = model.vpcId;
+                this.zoneId = model.zoneId;
+            } 
+
             /**
-             * The number of available CPUs. Unit: cores.
+             * <p>The number of available CPUs. Unit: cores.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2</p>
              */
             public Builder availableCpu(Integer availableCpu) {
                 this.availableCpu = availableCpu;
@@ -338,7 +398,10 @@ public class QueryMigrateEcuListResponseBody extends TeaModel {
             }
 
             /**
-             * The size of available memory. Unit: MB.
+             * <p>The size of available memory. Unit: MB.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2048</p>
              */
             public Builder availableMem(Integer availableMem) {
                 this.availableMem = availableMem;
@@ -346,7 +409,10 @@ public class QueryMigrateEcuListResponseBody extends TeaModel {
             }
 
             /**
-             * The CPU quota set by the system. Unit: cores. The value 0 indicates that no quota is set by the system.
+             * <p>The CPU quota set by the system. Unit: cores. The value 0 indicates that no quota is set by the system.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>0</p>
              */
             public Builder cpu(Integer cpu) {
                 this.cpu = cpu;
@@ -354,7 +420,10 @@ public class QueryMigrateEcuListResponseBody extends TeaModel {
             }
 
             /**
-             * The time when the ECU was created. This value is a UNIX timestamp representing the number of milliseconds that have elapsed since the epoch time January 1, 1970, 00:00:00 UTC.
+             * <p>The time when the ECU was created. This value is a UNIX timestamp representing the number of milliseconds that have elapsed since the epoch time January 1, 1970, 00:00:00 UTC.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1573281041101</p>
              */
             public Builder createTime(Long createTime) {
                 this.createTime = createTime;
@@ -362,11 +431,14 @@ public class QueryMigrateEcuListResponseBody extends TeaModel {
             }
 
             /**
-             * Indicates whether Docker is installed. Valid values:
-             * <p>
+             * <p>Indicates whether Docker is installed. Valid values:</p>
+             * <ul>
+             * <li>true: Docker is installed.</li>
+             * <li>false: Docker is not installed.</li>
+             * </ul>
              * 
-             * *   true: Docker is installed.
-             * *   false: Docker is not installed.
+             * <strong>example:</strong>
+             * <p>false</p>
              */
             public Builder dockerEnv(Boolean dockerEnv) {
                 this.dockerEnv = dockerEnv;
@@ -374,7 +446,10 @@ public class QueryMigrateEcuListResponseBody extends TeaModel {
             }
 
             /**
-             * The unique ID of the ECU. To query the ID, you can run the `dmidecode` command on the ECS instance that corresponds to the ECU.
+             * <p>The unique ID of the ECU. To query the ID, you can run the <code>dmidecode</code> command on the ECS instance that corresponds to the ECU.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>70ed3f59-b476-49aa-<strong><strong>-</strong></strong>********</p>
              */
             public Builder ecuId(String ecuId) {
                 this.ecuId = ecuId;
@@ -382,7 +457,10 @@ public class QueryMigrateEcuListResponseBody extends TeaModel {
             }
 
             /**
-             * The time when the last heartbeat detection was performed. This value is a UNIX timestamp representing the number of milliseconds that have elapsed since the epoch time January 1, 1970, 00:00:00 UTC.
+             * <p>The time when the last heartbeat detection was performed. This value is a UNIX timestamp representing the number of milliseconds that have elapsed since the epoch time January 1, 1970, 00:00:00 UTC.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1573281041101</p>
              */
             public Builder heartbeatTime(Long heartbeatTime) {
                 this.heartbeatTime = heartbeatTime;
@@ -390,7 +468,10 @@ public class QueryMigrateEcuListResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the ECU.
+             * <p>The ID of the ECU.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>i-2zej4i2jd***********</p>
              */
             public Builder instanceId(String instanceId) {
                 this.instanceId = instanceId;
@@ -398,7 +479,10 @@ public class QueryMigrateEcuListResponseBody extends TeaModel {
             }
 
             /**
-             * The private IP address of the ECU.
+             * <p>The private IP address of the ECU.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>192.168.0.150</p>
              */
             public Builder ipAddr(String ipAddr) {
                 this.ipAddr = ipAddr;
@@ -406,7 +490,10 @@ public class QueryMigrateEcuListResponseBody extends TeaModel {
             }
 
             /**
-             * The total size of memory.
+             * <p>The total size of memory.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>0</p>
              */
             public Builder mem(Integer mem) {
                 this.mem = mem;
@@ -414,7 +501,10 @@ public class QueryMigrateEcuListResponseBody extends TeaModel {
             }
 
             /**
-             * The name of the ECU.
+             * <p>The name of the ECU.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>product_test003</p>
              */
             public Builder name(String name) {
                 this.name = name;
@@ -422,11 +512,14 @@ public class QueryMigrateEcuListResponseBody extends TeaModel {
             }
 
             /**
-             * Indicates whether the ECU is online. Valid values:
-             * <p>
+             * <p>Indicates whether the ECU is online. Valid values:</p>
+             * <ul>
+             * <li>true: The ECU is online.</li>
+             * <li>false: The ECU is offline.</li>
+             * </ul>
              * 
-             * *   true: The ECU is online.
-             * *   false: The ECU is offline.
+             * <strong>example:</strong>
+             * <p>true</p>
              */
             public Builder online(Boolean online) {
                 this.online = online;
@@ -434,7 +527,10 @@ public class QueryMigrateEcuListResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the region where the ECU resides.
+             * <p>The ID of the region where the ECU resides.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>cn-beijing</p>
              */
             public Builder regionId(String regionId) {
                 this.regionId = regionId;
@@ -442,7 +538,10 @@ public class QueryMigrateEcuListResponseBody extends TeaModel {
             }
 
             /**
-             * The time when the ECU was updated. This value is a UNIX timestamp representing the number of milliseconds that have elapsed since the epoch time January 1, 1970, 00:00:00 UTC.
+             * <p>The time when the ECU was updated. This value is a UNIX timestamp representing the number of milliseconds that have elapsed since the epoch time January 1, 1970, 00:00:00 UTC.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1573281041109</p>
              */
             public Builder updateTime(Long updateTime) {
                 this.updateTime = updateTime;
@@ -450,7 +549,10 @@ public class QueryMigrateEcuListResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the Alibaba Cloud account to which the ECU belongs.
+             * <p>The ID of the Alibaba Cloud account to which the ECU belongs.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>edas_com***_****@<em><em><strong><strong>-</strong></strong></em>.</em>**</p>
              */
             public Builder userId(String userId) {
                 this.userId = userId;
@@ -458,7 +560,10 @@ public class QueryMigrateEcuListResponseBody extends TeaModel {
             }
 
             /**
-             * VPC ID
+             * <p>VPC ID</p>
+             * 
+             * <strong>example:</strong>
+             * <p>vpc-2zef6ob8m************</p>
              */
             public Builder vpcId(String vpcId) {
                 this.vpcId = vpcId;
@@ -466,7 +571,10 @@ public class QueryMigrateEcuListResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the zone where the ECU resides.
+             * <p>The ID of the zone where the ECU resides.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>cn-bei****-*</p>
              */
             public Builder zoneId(String zoneId) {
                 this.zoneId = zoneId;
@@ -480,9 +588,15 @@ public class QueryMigrateEcuListResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link QueryMigrateEcuListResponseBody} extends {@link TeaModel}
+     *
+     * <p>QueryMigrateEcuListResponseBody</p>
+     */
     public static class EcuEntityList extends TeaModel {
-        @NameInMap("EcuEntity")
-        private java.util.List < EcuEntity> ecuEntity;
+        @com.aliyun.core.annotation.NameInMap("EcuEntity")
+        private java.util.List<EcuEntity> ecuEntity;
 
         private EcuEntityList(Builder builder) {
             this.ecuEntity = builder.ecuEntity;
@@ -499,17 +613,24 @@ public class QueryMigrateEcuListResponseBody extends TeaModel {
         /**
          * @return ecuEntity
          */
-        public java.util.List < EcuEntity> getEcuEntity() {
+        public java.util.List<EcuEntity> getEcuEntity() {
             return this.ecuEntity;
         }
 
         public static final class Builder {
-            private java.util.List < EcuEntity> ecuEntity; 
+            private java.util.List<EcuEntity> ecuEntity; 
+
+            private Builder() {
+            } 
+
+            private Builder(EcuEntityList model) {
+                this.ecuEntity = model.ecuEntity;
+            } 
 
             /**
              * EcuEntity.
              */
-            public Builder ecuEntity(java.util.List < EcuEntity> ecuEntity) {
+            public Builder ecuEntity(java.util.List<EcuEntity> ecuEntity) {
                 this.ecuEntity = ecuEntity;
                 return this;
             }

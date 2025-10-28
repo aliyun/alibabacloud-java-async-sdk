@@ -1,27 +1,32 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.edas20170801.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link GetServiceDetailResponseBody} extends {@link TeaModel}
  *
  * <p>GetServiceDetailResponseBody</p>
  */
 public class GetServiceDetailResponseBody extends TeaModel {
-    @NameInMap("Code")
+    @com.aliyun.core.annotation.NameInMap("Code")
     private Integer code;
 
-    @NameInMap("Data")
+    @com.aliyun.core.annotation.NameInMap("Data")
     private Data data;
 
-    @NameInMap("Message")
+    @com.aliyun.core.annotation.NameInMap("Message")
     private String message;
 
-    @NameInMap("Success")
+    @com.aliyun.core.annotation.NameInMap("Success")
     private Boolean success;
 
     private GetServiceDetailResponseBody(Builder builder) {
@@ -37,6 +42,10 @@ public class GetServiceDetailResponseBody extends TeaModel {
 
     public static GetServiceDetailResponseBody create() {
         return builder().build();
+    }
+
+    public Builder toBuilder() {
+        return new Builder(this);
     }
 
     /**
@@ -73,8 +82,21 @@ public class GetServiceDetailResponseBody extends TeaModel {
         private String message; 
         private Boolean success; 
 
+        private Builder() {
+        } 
+
+        private Builder(GetServiceDetailResponseBody model) {
+            this.code = model.code;
+            this.data = model.data;
+            this.message = model.message;
+            this.success = model.success;
+        } 
+
         /**
-         * The HTTP status code returned.
+         * <p>The HTTP status code returned.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>200</p>
          */
         public Builder code(Integer code) {
             this.code = code;
@@ -82,7 +104,7 @@ public class GetServiceDetailResponseBody extends TeaModel {
         }
 
         /**
-         * The data structure.
+         * <p>The data structure.</p>
          */
         public Builder data(Data data) {
             this.data = data;
@@ -90,7 +112,10 @@ public class GetServiceDetailResponseBody extends TeaModel {
         }
 
         /**
-         * The message returned for the request.
+         * <p>The message returned for the request.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>success</p>
          */
         public Builder message(String message) {
             this.message = message;
@@ -98,7 +123,10 @@ public class GetServiceDetailResponseBody extends TeaModel {
         }
 
         /**
-         * Indicates whether the call was successful.
+         * <p>Indicates whether the call was successful.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder success(Boolean success) {
             this.success = success;
@@ -111,11 +139,17 @@ public class GetServiceDetailResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link GetServiceDetailResponseBody} extends {@link TeaModel}
+     *
+     * <p>GetServiceDetailResponseBody</p>
+     */
     public static class ReturnDefinition extends TeaModel {
-        @NameInMap("Id")
+        @com.aliyun.core.annotation.NameInMap("Id")
         private String id;
 
-        @NameInMap("Type")
+        @com.aliyun.core.annotation.NameInMap("Type")
         private String type;
 
         private ReturnDefinition(Builder builder) {
@@ -149,8 +183,19 @@ public class GetServiceDetailResponseBody extends TeaModel {
             private String id; 
             private String type; 
 
+            private Builder() {
+            } 
+
+            private Builder(ReturnDefinition model) {
+                this.id = model.id;
+                this.type = model.type;
+            } 
+
             /**
-             * The ID of the return value.
+             * <p>The ID of the return value.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder id(String id) {
                 this.id = id;
@@ -158,7 +203,10 @@ public class GetServiceDetailResponseBody extends TeaModel {
             }
 
             /**
-             * The type of the response.
+             * <p>The type of the response.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>foo</p>
              */
             public Builder type(String type) {
                 this.type = type;
@@ -172,41 +220,47 @@ public class GetServiceDetailResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link GetServiceDetailResponseBody} extends {@link TeaModel}
+     *
+     * <p>GetServiceDetailResponseBody</p>
+     */
     public static class Methods extends TeaModel {
-        @NameInMap("MethodController")
+        @com.aliyun.core.annotation.NameInMap("MethodController")
         private String methodController;
 
-        @NameInMap("Name")
+        @com.aliyun.core.annotation.NameInMap("Name")
         private String name;
 
-        @NameInMap("NameDetail")
+        @com.aliyun.core.annotation.NameInMap("NameDetail")
         private String nameDetail;
 
-        @NameInMap("ParameterDefinitions")
+        @com.aliyun.core.annotation.NameInMap("ParameterDefinitions")
         private String parameterDefinitions;
 
-        @NameInMap("ParameterDetails")
+        @com.aliyun.core.annotation.NameInMap("ParameterDetails")
         private String parameterDetails;
 
-        @NameInMap("ParameterNames")
+        @com.aliyun.core.annotation.NameInMap("ParameterNames")
         private String parameterNames;
 
-        @NameInMap("ParameterTypes")
+        @com.aliyun.core.annotation.NameInMap("ParameterTypes")
         private String parameterTypes;
 
-        @NameInMap("Paths")
+        @com.aliyun.core.annotation.NameInMap("Paths")
         private String paths;
 
-        @NameInMap("RequestMethods")
+        @com.aliyun.core.annotation.NameInMap("RequestMethods")
         private String requestMethods;
 
-        @NameInMap("ReturnDefinition")
+        @com.aliyun.core.annotation.NameInMap("ReturnDefinition")
         private ReturnDefinition returnDefinition;
 
-        @NameInMap("ReturnDetails")
+        @com.aliyun.core.annotation.NameInMap("ReturnDetails")
         private String returnDetails;
 
-        @NameInMap("ReturnType")
+        @com.aliyun.core.annotation.NameInMap("ReturnType")
         private String returnType;
 
         private Methods(Builder builder) {
@@ -330,8 +384,29 @@ public class GetServiceDetailResponseBody extends TeaModel {
             private String returnDetails; 
             private String returnType; 
 
+            private Builder() {
+            } 
+
+            private Builder(Methods model) {
+                this.methodController = model.methodController;
+                this.name = model.name;
+                this.nameDetail = model.nameDetail;
+                this.parameterDefinitions = model.parameterDefinitions;
+                this.parameterDetails = model.parameterDetails;
+                this.parameterNames = model.parameterNames;
+                this.parameterTypes = model.parameterTypes;
+                this.paths = model.paths;
+                this.requestMethods = model.requestMethods;
+                this.returnDefinition = model.returnDefinition;
+                this.returnDetails = model.returnDetails;
+                this.returnType = model.returnType;
+            } 
+
             /**
-             * The controllers.
+             * <p>The controllers.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>com.aliware.edas.DemoController</p>
              */
             public Builder methodController(String methodController) {
                 this.methodController = methodController;
@@ -339,7 +414,10 @@ public class GetServiceDetailResponseBody extends TeaModel {
             }
 
             /**
-             * The name of the service.
+             * <p>The name of the service.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>feign2</p>
              */
             public Builder name(String name) {
                 this.name = name;
@@ -347,7 +425,10 @@ public class GetServiceDetailResponseBody extends TeaModel {
             }
 
             /**
-             * The specific name.
+             * <p>The specific name.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>test</p>
              */
             public Builder nameDetail(String nameDetail) {
                 this.nameDetail = nameDetail;
@@ -355,7 +436,10 @@ public class GetServiceDetailResponseBody extends TeaModel {
             }
 
             /**
-             * The parameter definitions.
+             * <p>The parameter definitions.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>[{&quot;description&quot;:&quot;&quot;,&quot;name&quot;:&quot;arg0&quot;,&quot;type&quot;:&quot;java.lang.String&quot;}]</p>
              */
             public Builder parameterDefinitions(String parameterDefinitions) {
                 this.parameterDefinitions = parameterDefinitions;
@@ -363,7 +447,10 @@ public class GetServiceDetailResponseBody extends TeaModel {
             }
 
             /**
-             * The parameter details.
+             * <p>The parameter details.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>{}</p>
              */
             public Builder parameterDetails(String parameterDetails) {
                 this.parameterDetails = parameterDetails;
@@ -371,7 +458,10 @@ public class GetServiceDetailResponseBody extends TeaModel {
             }
 
             /**
-             * The parameter names.
+             * <p>The parameter names.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>test</p>
              */
             public Builder parameterNames(String parameterNames) {
                 this.parameterNames = parameterNames;
@@ -379,7 +469,10 @@ public class GetServiceDetailResponseBody extends TeaModel {
             }
 
             /**
-             * The parameter types.
+             * <p>The parameter types.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>[&quot;java.lang.String&quot;]</p>
              */
             public Builder parameterTypes(String parameterTypes) {
                 this.parameterTypes = parameterTypes;
@@ -387,7 +480,10 @@ public class GetServiceDetailResponseBody extends TeaModel {
             }
 
             /**
-             * The method paths.
+             * <p>The method paths.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>[&quot;/consumer-echo/feign/{str}&quot;]</p>
              */
             public Builder paths(String paths) {
                 this.paths = paths;
@@ -395,7 +491,10 @@ public class GetServiceDetailResponseBody extends TeaModel {
             }
 
             /**
-             * The request methods.
+             * <p>The request methods.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>GET</p>
              */
             public Builder requestMethods(String requestMethods) {
                 this.requestMethods = requestMethods;
@@ -403,7 +502,7 @@ public class GetServiceDetailResponseBody extends TeaModel {
             }
 
             /**
-             * The definition of the value returned by the method.
+             * <p>The definition of the value returned by the method.</p>
              */
             public Builder returnDefinition(ReturnDefinition returnDefinition) {
                 this.returnDefinition = returnDefinition;
@@ -411,7 +510,10 @@ public class GetServiceDetailResponseBody extends TeaModel {
             }
 
             /**
-             * The response details.
+             * <p>The response details.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>test</p>
              */
             public Builder returnDetails(String returnDetails) {
                 this.returnDetails = returnDetails;
@@ -419,7 +521,10 @@ public class GetServiceDetailResponseBody extends TeaModel {
             }
 
             /**
-             * The type of the response.
+             * <p>The type of the response.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>java.lang.String</p>
              */
             public Builder returnType(String returnType) {
                 this.returnType = returnType;
@@ -433,35 +538,41 @@ public class GetServiceDetailResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link GetServiceDetailResponseBody} extends {@link TeaModel}
+     *
+     * <p>GetServiceDetailResponseBody</p>
+     */
     public static class Data extends TeaModel {
-        @NameInMap("DubboApplicationName")
+        @com.aliyun.core.annotation.NameInMap("DubboApplicationName")
         private String dubboApplicationName;
 
-        @NameInMap("EdasAppName")
+        @com.aliyun.core.annotation.NameInMap("EdasAppName")
         private String edasAppName;
 
-        @NameInMap("Group")
+        @com.aliyun.core.annotation.NameInMap("Group")
         private String group;
 
-        @NameInMap("Metadata")
+        @com.aliyun.core.annotation.NameInMap("Metadata")
         private String metadata;
 
-        @NameInMap("Methods")
-        private java.util.List < Methods> methods;
+        @com.aliyun.core.annotation.NameInMap("Methods")
+        private java.util.List<Methods> methods;
 
-        @NameInMap("RegistryType")
+        @com.aliyun.core.annotation.NameInMap("RegistryType")
         private String registryType;
 
-        @NameInMap("ServiceName")
+        @com.aliyun.core.annotation.NameInMap("ServiceName")
         private String serviceName;
 
-        @NameInMap("ServiceType")
+        @com.aliyun.core.annotation.NameInMap("ServiceType")
         private String serviceType;
 
-        @NameInMap("SpringApplicationName")
+        @com.aliyun.core.annotation.NameInMap("SpringApplicationName")
         private String springApplicationName;
 
-        @NameInMap("Version")
+        @com.aliyun.core.annotation.NameInMap("Version")
         private String version;
 
         private Data(Builder builder) {
@@ -516,7 +627,7 @@ public class GetServiceDetailResponseBody extends TeaModel {
         /**
          * @return methods
          */
-        public java.util.List < Methods> getMethods() {
+        public java.util.List<Methods> getMethods() {
             return this.methods;
         }
 
@@ -560,15 +671,34 @@ public class GetServiceDetailResponseBody extends TeaModel {
             private String edasAppName; 
             private String group; 
             private String metadata; 
-            private java.util.List < Methods> methods; 
+            private java.util.List<Methods> methods; 
             private String registryType; 
             private String serviceName; 
             private String serviceType; 
             private String springApplicationName; 
             private String version; 
 
+            private Builder() {
+            } 
+
+            private Builder(Data model) {
+                this.dubboApplicationName = model.dubboApplicationName;
+                this.edasAppName = model.edasAppName;
+                this.group = model.group;
+                this.metadata = model.metadata;
+                this.methods = model.methods;
+                this.registryType = model.registryType;
+                this.serviceName = model.serviceName;
+                this.serviceType = model.serviceType;
+                this.springApplicationName = model.springApplicationName;
+                this.version = model.version;
+            } 
+
             /**
-             * The name of the Dubbo application.
+             * <p>The name of the Dubbo application.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>cartservice</p>
              */
             public Builder dubboApplicationName(String dubboApplicationName) {
                 this.dubboApplicationName = dubboApplicationName;
@@ -576,7 +706,10 @@ public class GetServiceDetailResponseBody extends TeaModel {
             }
 
             /**
-             * The name of the Enterprise Distributed Application Service (EDAS) application.
+             * <p>The name of the Enterprise Distributed Application Service (EDAS) application.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>test123</p>
              */
             public Builder edasAppName(String edasAppName) {
                 this.edasAppName = edasAppName;
@@ -584,7 +717,10 @@ public class GetServiceDetailResponseBody extends TeaModel {
             }
 
             /**
-             * The group.
+             * <p>The group.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>dubbo</p>
              */
             public Builder group(String group) {
                 this.group = group;
@@ -592,7 +728,10 @@ public class GetServiceDetailResponseBody extends TeaModel {
             }
 
             /**
-             * The metadata.
+             * <p>The metadata.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>{}</p>
              */
             public Builder metadata(String metadata) {
                 this.metadata = metadata;
@@ -600,15 +739,18 @@ public class GetServiceDetailResponseBody extends TeaModel {
             }
 
             /**
-             * The methods.
+             * <p>The methods.</p>
              */
-            public Builder methods(java.util.List < Methods> methods) {
+            public Builder methods(java.util.List<Methods> methods) {
                 this.methods = methods;
                 return this;
             }
 
             /**
-             * The type of the service registry.
+             * <p>The type of the service registry.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>agent</p>
              */
             public Builder registryType(String registryType) {
                 this.registryType = registryType;
@@ -616,7 +758,10 @@ public class GetServiceDetailResponseBody extends TeaModel {
             }
 
             /**
-             * The name of the service.
+             * <p>The name of the service.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>edas.service.consumer</p>
              */
             public Builder serviceName(String serviceName) {
                 this.serviceName = serviceName;
@@ -624,7 +769,10 @@ public class GetServiceDetailResponseBody extends TeaModel {
             }
 
             /**
-             * The type of the service.
+             * <p>The type of the service.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>springCloud</p>
              */
             public Builder serviceType(String serviceType) {
                 this.serviceType = serviceType;
@@ -632,7 +780,10 @@ public class GetServiceDetailResponseBody extends TeaModel {
             }
 
             /**
-             * The name of the Spring application.
+             * <p>The name of the Spring application.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>edas.service.consumer</p>
              */
             public Builder springApplicationName(String springApplicationName) {
                 this.springApplicationName = springApplicationName;
@@ -640,7 +791,10 @@ public class GetServiceDetailResponseBody extends TeaModel {
             }
 
             /**
-             * The version number.
+             * <p>The version number.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1.0.0</p>
              */
             public Builder version(String version) {
                 this.version = version;

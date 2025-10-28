@@ -1,30 +1,35 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.edas20170801.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link TransformClusterMemberRequest} extends {@link RequestModel}
  *
  * <p>TransformClusterMemberRequest</p>
  */
 public class TransformClusterMemberRequest extends Request {
-    @Query
-    @NameInMap("InstanceIds")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("InstanceIds")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String instanceIds;
 
-    @Query
-    @NameInMap("Password")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Password")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String password;
 
-    @Query
-    @NameInMap("TargetClusterId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("TargetClusterId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String targetClusterId;
 
     private TransformClusterMemberRequest(Builder builder) {
@@ -42,7 +47,7 @@ public class TransformClusterMemberRequest extends Request {
         return builder().build();
     }
 
-    @Override
+@Override
     public Builder toBuilder() {
         return new Builder(this);
     }
@@ -85,11 +90,15 @@ public class TransformClusterMemberRequest extends Request {
         } 
 
         /**
-         * The ID of the instance that you want to import or migrate. Separate multiple IDs with commas (,).
-         * <p>
+         * <p>The ID of the instance that you want to import or migrate. Separate multiple IDs with commas (,).</p>
+         * <ul>
+         * <li>An instance may not belong to a cluster, but an instance can belong to only one cluster at most.</li>
+         * <li>The ECS instances and the destination cluster must be in the same virtual private cloud (VPC).</li>
+         * </ul>
+         * <p>This parameter is required.</p>
          * 
-         * *   An instance may not belong to a cluster, but an instance can belong to only one cluster at most.
-         * *   The ECS instances and the destination cluster must be in the same virtual private cloud (VPC).
+         * <strong>example:</strong>
+         * <p>i-2ze7s2v0b789k60p****</p>
          */
         public Builder instanceIds(String instanceIds) {
             this.putQueryParameter("InstanceIds", instanceIds);
@@ -98,7 +107,11 @@ public class TransformClusterMemberRequest extends Request {
         }
 
         /**
-         * The logon password of the ECS instance that you want to import or migrate to the cluster.
+         * <p>The logon password of the ECS instance that you want to import or migrate to the cluster.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Hello****</p>
          */
         public Builder password(String password) {
             this.putQueryParameter("Password", password);
@@ -107,7 +120,11 @@ public class TransformClusterMemberRequest extends Request {
         }
 
         /**
-         * The ID of the destination cluster.
+         * <p>The ID of the destination cluster.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>b3e3f77b-462e-<strong><strong>-</strong></strong>-bec8727a****</p>
          */
         public Builder targetClusterId(String targetClusterId) {
             this.putQueryParameter("TargetClusterId", targetClusterId);

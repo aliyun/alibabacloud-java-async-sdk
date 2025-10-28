@@ -1,27 +1,32 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.edas20170801.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ListClusterMembersResponseBody} extends {@link TeaModel}
  *
  * <p>ListClusterMembersResponseBody</p>
  */
 public class ListClusterMembersResponseBody extends TeaModel {
-    @NameInMap("ClusterMemberPage")
+    @com.aliyun.core.annotation.NameInMap("ClusterMemberPage")
     private ClusterMemberPage clusterMemberPage;
 
-    @NameInMap("Code")
+    @com.aliyun.core.annotation.NameInMap("Code")
     private Integer code;
 
-    @NameInMap("Message")
+    @com.aliyun.core.annotation.NameInMap("Message")
     private String message;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
     private ListClusterMembersResponseBody(Builder builder) {
@@ -37,6 +42,10 @@ public class ListClusterMembersResponseBody extends TeaModel {
 
     public static ListClusterMembersResponseBody create() {
         return builder().build();
+    }
+
+    public Builder toBuilder() {
+        return new Builder(this);
     }
 
     /**
@@ -73,8 +82,18 @@ public class ListClusterMembersResponseBody extends TeaModel {
         private String message; 
         private String requestId; 
 
+        private Builder() {
+        } 
+
+        private Builder(ListClusterMembersResponseBody model) {
+            this.clusterMemberPage = model.clusterMemberPage;
+            this.code = model.code;
+            this.message = model.message;
+            this.requestId = model.requestId;
+        } 
+
         /**
-         * The information about the ECS instances in the cluster.
+         * <p>The information about the ECS instances in the cluster.</p>
          */
         public Builder clusterMemberPage(ClusterMemberPage clusterMemberPage) {
             this.clusterMemberPage = clusterMemberPage;
@@ -82,7 +101,10 @@ public class ListClusterMembersResponseBody extends TeaModel {
         }
 
         /**
-         * The HTTP status code that is returned.
+         * <p>The HTTP status code that is returned.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>200</p>
          */
         public Builder code(Integer code) {
             this.code = code;
@@ -90,7 +112,10 @@ public class ListClusterMembersResponseBody extends TeaModel {
         }
 
         /**
-         * The message that is returned.
+         * <p>The message that is returned.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>success</p>
          */
         public Builder message(String message) {
             this.message = message;
@@ -98,7 +123,10 @@ public class ListClusterMembersResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the request.
+         * <p>The ID of the request.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>b197-40ab-9155-****</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -111,29 +139,35 @@ public class ListClusterMembersResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link ListClusterMembersResponseBody} extends {@link TeaModel}
+     *
+     * <p>ListClusterMembersResponseBody</p>
+     */
     public static class ClusterMember extends TeaModel {
-        @NameInMap("ClusterId")
+        @com.aliyun.core.annotation.NameInMap("ClusterId")
         private String clusterId;
 
-        @NameInMap("ClusterMemberId")
+        @com.aliyun.core.annotation.NameInMap("ClusterMemberId")
         private String clusterMemberId;
 
-        @NameInMap("CreateTime")
+        @com.aliyun.core.annotation.NameInMap("CreateTime")
         private Long createTime;
 
-        @NameInMap("EcsId")
+        @com.aliyun.core.annotation.NameInMap("EcsId")
         private String ecsId;
 
-        @NameInMap("EcuId")
+        @com.aliyun.core.annotation.NameInMap("EcuId")
         private String ecuId;
 
-        @NameInMap("PrivateIp")
+        @com.aliyun.core.annotation.NameInMap("PrivateIp")
         private String privateIp;
 
-        @NameInMap("Status")
+        @com.aliyun.core.annotation.NameInMap("Status")
         private Integer status;
 
-        @NameInMap("UpdateTime")
+        @com.aliyun.core.annotation.NameInMap("UpdateTime")
         private Long updateTime;
 
         private ClusterMember(Builder builder) {
@@ -221,8 +255,25 @@ public class ListClusterMembersResponseBody extends TeaModel {
             private Integer status; 
             private Long updateTime; 
 
+            private Builder() {
+            } 
+
+            private Builder(ClusterMember model) {
+                this.clusterId = model.clusterId;
+                this.clusterMemberId = model.clusterMemberId;
+                this.createTime = model.createTime;
+                this.ecsId = model.ecsId;
+                this.ecuId = model.ecuId;
+                this.privateIp = model.privateIp;
+                this.status = model.status;
+                this.updateTime = model.updateTime;
+            } 
+
             /**
-             * The ID of the cluster.
+             * <p>The ID of the cluster.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>52984524-6d48-4bbd-85f2-a34b0e5b****</p>
              */
             public Builder clusterId(String clusterId) {
                 this.clusterId = clusterId;
@@ -230,7 +281,10 @@ public class ListClusterMembersResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the ECS instance in the cluster.
+             * <p>The ID of the ECS instance in the cluster.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>adb03eeb-3adf-4d7e-afe1-03d1ad45****</p>
              */
             public Builder clusterMemberId(String clusterMemberId) {
                 this.clusterMemberId = clusterMemberId;
@@ -238,7 +292,10 @@ public class ListClusterMembersResponseBody extends TeaModel {
             }
 
             /**
-             * The timestamp when the ECS instance was created. This value is a UNIX timestamp representing the number of milliseconds that have elapsed since the epoch time January 1, 1970, 00:00:00 UTC.
+             * <p>The timestamp when the ECS instance was created. This value is a UNIX timestamp representing the number of milliseconds that have elapsed since the epoch time January 1, 1970, 00:00:00 UTC.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1573281038175</p>
              */
             public Builder createTime(Long createTime) {
                 this.createTime = createTime;
@@ -246,7 +303,10 @@ public class ListClusterMembersResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the ECS instance.
+             * <p>The ID of the ECS instance.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>i-2zej4i2jdf3ntwhj****</p>
              */
             public Builder ecsId(String ecsId) {
                 this.ecsId = ecsId;
@@ -254,7 +314,10 @@ public class ListClusterMembersResponseBody extends TeaModel {
             }
 
             /**
-             * The unique ID of the elastic compute unit (ECU). You can run the `dmidecode` command on the ECS instance to query the ECU ID.
+             * <p>The unique ID of the elastic compute unit (ECU). You can run the <code>dmidecode</code> command on the ECS instance to query the ECU ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>70ed3f59-b476-49aa-be09-9e6c375d****</p>
              */
             public Builder ecuId(String ecuId) {
                 this.ecuId = ecuId;
@@ -262,7 +325,10 @@ public class ListClusterMembersResponseBody extends TeaModel {
             }
 
             /**
-             * The private IP address for the ECS instance.
+             * <p>The private IP address for the ECS instance.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>172.16.XX.XX</p>
              */
             public Builder privateIp(String privateIp) {
                 this.privateIp = privateIp;
@@ -270,13 +336,16 @@ public class ListClusterMembersResponseBody extends TeaModel {
             }
 
             /**
-             * The state of the ECS instance. Valid values:
-             * <p>
+             * <p>The state of the ECS instance. Valid values:</p>
+             * <ul>
+             * <li>1: The instance is running.</li>
+             * <li>0: The instance is being converted.</li>
+             * <li>-1: The instance fails to be converted.</li>
+             * <li>-2: The instance is offline.</li>
+             * </ul>
              * 
-             * *   1: The instance is running.
-             * *   0: The instance is being converted.
-             * *   \-1: The instance fails to be converted.
-             * *   \-2: The instance is offline.
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder status(Integer status) {
                 this.status = status;
@@ -284,7 +353,10 @@ public class ListClusterMembersResponseBody extends TeaModel {
             }
 
             /**
-             * The timestamp when the ECS instance was updated. This value is a UNIX timestamp representing the number of milliseconds that have elapsed since January 1, 1970, 00:00:00 UTC.
+             * <p>The timestamp when the ECS instance was updated. This value is a UNIX timestamp representing the number of milliseconds that have elapsed since January 1, 1970, 00:00:00 UTC.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1573281041113</p>
              */
             public Builder updateTime(Long updateTime) {
                 this.updateTime = updateTime;
@@ -298,9 +370,15 @@ public class ListClusterMembersResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link ListClusterMembersResponseBody} extends {@link TeaModel}
+     *
+     * <p>ListClusterMembersResponseBody</p>
+     */
     public static class ClusterMemberList extends TeaModel {
-        @NameInMap("ClusterMember")
-        private java.util.List < ClusterMember> clusterMember;
+        @com.aliyun.core.annotation.NameInMap("ClusterMember")
+        private java.util.List<ClusterMember> clusterMember;
 
         private ClusterMemberList(Builder builder) {
             this.clusterMember = builder.clusterMember;
@@ -317,17 +395,24 @@ public class ListClusterMembersResponseBody extends TeaModel {
         /**
          * @return clusterMember
          */
-        public java.util.List < ClusterMember> getClusterMember() {
+        public java.util.List<ClusterMember> getClusterMember() {
             return this.clusterMember;
         }
 
         public static final class Builder {
-            private java.util.List < ClusterMember> clusterMember; 
+            private java.util.List<ClusterMember> clusterMember; 
+
+            private Builder() {
+            } 
+
+            private Builder(ClusterMemberList model) {
+                this.clusterMember = model.clusterMember;
+            } 
 
             /**
              * ClusterMember.
              */
-            public Builder clusterMember(java.util.List < ClusterMember> clusterMember) {
+            public Builder clusterMember(java.util.List<ClusterMember> clusterMember) {
                 this.clusterMember = clusterMember;
                 return this;
             }
@@ -339,17 +424,23 @@ public class ListClusterMembersResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link ListClusterMembersResponseBody} extends {@link TeaModel}
+     *
+     * <p>ListClusterMembersResponseBody</p>
+     */
     public static class ClusterMemberPage extends TeaModel {
-        @NameInMap("ClusterMemberList")
+        @com.aliyun.core.annotation.NameInMap("ClusterMemberList")
         private ClusterMemberList clusterMemberList;
 
-        @NameInMap("CurrentPage")
+        @com.aliyun.core.annotation.NameInMap("CurrentPage")
         private Integer currentPage;
 
-        @NameInMap("PageSize")
+        @com.aliyun.core.annotation.NameInMap("PageSize")
         private Integer pageSize;
 
-        @NameInMap("TotalSize")
+        @com.aliyun.core.annotation.NameInMap("TotalSize")
         private Integer totalSize;
 
         private ClusterMemberPage(Builder builder) {
@@ -401,8 +492,18 @@ public class ListClusterMembersResponseBody extends TeaModel {
             private Integer pageSize; 
             private Integer totalSize; 
 
+            private Builder() {
+            } 
+
+            private Builder(ClusterMemberPage model) {
+                this.clusterMemberList = model.clusterMemberList;
+                this.currentPage = model.currentPage;
+                this.pageSize = model.pageSize;
+                this.totalSize = model.totalSize;
+            } 
+
             /**
-             * The list of ECS instances in the cluster.
+             * <p>The list of ECS instances in the cluster.</p>
              */
             public Builder clusterMemberList(ClusterMemberList clusterMemberList) {
                 this.clusterMemberList = clusterMemberList;
@@ -410,7 +511,10 @@ public class ListClusterMembersResponseBody extends TeaModel {
             }
 
             /**
-             * The page number of the returned page. If this parameter is not returned, the first page is returned.
+             * <p>The page number of the returned page. If this parameter is not returned, the first page is returned.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder currentPage(Integer currentPage) {
                 this.currentPage = currentPage;
@@ -418,7 +522,10 @@ public class ListClusterMembersResponseBody extends TeaModel {
             }
 
             /**
-             * The number of ECS instances returned per page.
+             * <p>The number of ECS instances returned per page.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>10</p>
              */
             public Builder pageSize(Integer pageSize) {
                 this.pageSize = pageSize;
@@ -426,7 +533,10 @@ public class ListClusterMembersResponseBody extends TeaModel {
             }
 
             /**
-             * The total number of pages returned when all ECS instances are returned based on the specified PageSize parameter.
+             * <p>The total number of pages returned when all ECS instances are returned based on the specified PageSize parameter.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>5</p>
              */
             public Builder totalSize(Integer totalSize) {
                 this.totalSize = totalSize;

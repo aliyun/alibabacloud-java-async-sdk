@@ -1,27 +1,32 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.edas20170801.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link QueryRegionConfigResponseBody} extends {@link TeaModel}
  *
  * <p>QueryRegionConfigResponseBody</p>
  */
 public class QueryRegionConfigResponseBody extends TeaModel {
-    @NameInMap("Code")
+    @com.aliyun.core.annotation.NameInMap("Code")
     private Integer code;
 
-    @NameInMap("Message")
+    @com.aliyun.core.annotation.NameInMap("Message")
     private String message;
 
-    @NameInMap("RegionConfig")
+    @com.aliyun.core.annotation.NameInMap("RegionConfig")
     private RegionConfig regionConfig;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
     private QueryRegionConfigResponseBody(Builder builder) {
@@ -37,6 +42,10 @@ public class QueryRegionConfigResponseBody extends TeaModel {
 
     public static QueryRegionConfigResponseBody create() {
         return builder().build();
+    }
+
+    public Builder toBuilder() {
+        return new Builder(this);
     }
 
     /**
@@ -73,8 +82,21 @@ public class QueryRegionConfigResponseBody extends TeaModel {
         private RegionConfig regionConfig; 
         private String requestId; 
 
+        private Builder() {
+        } 
+
+        private Builder(QueryRegionConfigResponseBody model) {
+            this.code = model.code;
+            this.message = model.message;
+            this.regionConfig = model.regionConfig;
+            this.requestId = model.requestId;
+        } 
+
         /**
-         * The HTTP status code that is returned.
+         * <p>The HTTP status code that is returned.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>200</p>
          */
         public Builder code(Integer code) {
             this.code = code;
@@ -82,7 +104,10 @@ public class QueryRegionConfigResponseBody extends TeaModel {
         }
 
         /**
-         * The additional information that is returned.
+         * <p>The additional information that is returned.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>success</p>
          */
         public Builder message(String message) {
             this.message = message;
@@ -90,7 +115,7 @@ public class QueryRegionConfigResponseBody extends TeaModel {
         }
 
         /**
-         * The information about region configurations.
+         * <p>The information about region configurations.</p>
          */
         public Builder regionConfig(RegionConfig regionConfig) {
             this.regionConfig = regionConfig;
@@ -98,7 +123,10 @@ public class QueryRegionConfigResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the request.
+         * <p>The ID of the request.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>b197-40ab-9155-7ca7</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -111,17 +139,23 @@ public class QueryRegionConfigResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link QueryRegionConfigResponseBody} extends {@link TeaModel}
+     *
+     * <p>QueryRegionConfigResponseBody</p>
+     */
     public static class FileServerConfig extends TeaModel {
-        @NameInMap("Bucket")
+        @com.aliyun.core.annotation.NameInMap("Bucket")
         private String bucket;
 
-        @NameInMap("InternalUrl")
+        @com.aliyun.core.annotation.NameInMap("InternalUrl")
         private String internalUrl;
 
-        @NameInMap("PublicUrl")
+        @com.aliyun.core.annotation.NameInMap("PublicUrl")
         private String publicUrl;
 
-        @NameInMap("VpcUrl")
+        @com.aliyun.core.annotation.NameInMap("VpcUrl")
         private String vpcUrl;
 
         private FileServerConfig(Builder builder) {
@@ -173,8 +207,21 @@ public class QueryRegionConfigResponseBody extends TeaModel {
             private String publicUrl; 
             private String vpcUrl; 
 
+            private Builder() {
+            } 
+
+            private Builder(FileServerConfig model) {
+                this.bucket = model.bucket;
+                this.internalUrl = model.internalUrl;
+                this.publicUrl = model.publicUrl;
+                this.vpcUrl = model.vpcUrl;
+            } 
+
             /**
-             * The Object Storage Service (OSS) bucket of the file server.
+             * <p>The Object Storage Service (OSS) bucket of the file server.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>edas-bj</p>
              */
             public Builder bucket(String bucket) {
                 this.bucket = bucket;
@@ -182,7 +229,10 @@ public class QueryRegionConfigResponseBody extends TeaModel {
             }
 
             /**
-             * The internal endpoint of the file server.
+             * <p>The internal endpoint of the file server.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>oss-cn-beijing-****.aliyuncs.com</p>
              */
             public Builder internalUrl(String internalUrl) {
                 this.internalUrl = internalUrl;
@@ -190,7 +240,10 @@ public class QueryRegionConfigResponseBody extends TeaModel {
             }
 
             /**
-             * The public endpoint of the file server.
+             * <p>The public endpoint of the file server.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>oss-cn-beijing.aliyuncs.com</p>
              */
             public Builder publicUrl(String publicUrl) {
                 this.publicUrl = publicUrl;
@@ -198,7 +251,10 @@ public class QueryRegionConfigResponseBody extends TeaModel {
             }
 
             /**
-             * The virtual private cloud (VPC) endpoint of the file server.
+             * <p>The virtual private cloud (VPC) endpoint of the file server.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>v*****-oss-cn-beijing.aliyuncs.com</p>
              */
             public Builder vpcUrl(String vpcUrl) {
                 this.vpcUrl = vpcUrl;
@@ -212,32 +268,38 @@ public class QueryRegionConfigResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link QueryRegionConfigResponseBody} extends {@link TeaModel}
+     *
+     * <p>QueryRegionConfigResponseBody</p>
+     */
     public static class RegionConfig extends TeaModel {
-        @NameInMap("AddressServerHost")
+        @com.aliyun.core.annotation.NameInMap("AddressServerHost")
         private String addressServerHost;
 
-        @NameInMap("AgentInstallScript")
+        @com.aliyun.core.annotation.NameInMap("AgentInstallScript")
         private String agentInstallScript;
 
-        @NameInMap("FileServerConfig")
+        @com.aliyun.core.annotation.NameInMap("FileServerConfig")
         private FileServerConfig fileServerConfig;
 
-        @NameInMap("FileServerType")
+        @com.aliyun.core.annotation.NameInMap("FileServerType")
         private String fileServerType;
 
-        @NameInMap("Id")
+        @com.aliyun.core.annotation.NameInMap("Id")
         private String id;
 
-        @NameInMap("ImageId")
+        @com.aliyun.core.annotation.NameInMap("ImageId")
         private String imageId;
 
-        @NameInMap("Name")
+        @com.aliyun.core.annotation.NameInMap("Name")
         private String name;
 
-        @NameInMap("No")
+        @com.aliyun.core.annotation.NameInMap("No")
         private Integer no;
 
-        @NameInMap("Tag")
+        @com.aliyun.core.annotation.NameInMap("Tag")
         private String tag;
 
         private RegionConfig(Builder builder) {
@@ -334,8 +396,26 @@ public class QueryRegionConfigResponseBody extends TeaModel {
             private Integer no; 
             private String tag; 
 
+            private Builder() {
+            } 
+
+            private Builder(RegionConfig model) {
+                this.addressServerHost = model.addressServerHost;
+                this.agentInstallScript = model.agentInstallScript;
+                this.fileServerConfig = model.fileServerConfig;
+                this.fileServerType = model.fileServerType;
+                this.id = model.id;
+                this.imageId = model.imageId;
+                this.name = model.name;
+                this.no = model.no;
+                this.tag = model.tag;
+            } 
+
             /**
-             * The domain name of Address Server.
+             * <p>The domain name of Address Server.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>****.edas.aliyun.com</p>
              */
             public Builder addressServerHost(String addressServerHost) {
                 this.addressServerHost = addressServerHost;
@@ -343,7 +423,10 @@ public class QueryRegionConfigResponseBody extends TeaModel {
             }
 
             /**
-             * The installation path of the script for EDAS Agent.
+             * <p>The installation path of the script for EDAS Agent.</p>
+             * 
+             * <strong>example:</strong>
+             * <p><a href="http://edas-qd.oss-cn-****-internal.aliyuncs.com/****sh">http://edas-qd.oss-cn-****-internal.aliyuncs.com/****sh</a></p>
              */
             public Builder agentInstallScript(String agentInstallScript) {
                 this.agentInstallScript = agentInstallScript;
@@ -351,7 +434,7 @@ public class QueryRegionConfigResponseBody extends TeaModel {
             }
 
             /**
-             * The information about the file server.
+             * <p>The information about the file server.</p>
              */
             public Builder fileServerConfig(FileServerConfig fileServerConfig) {
                 this.fileServerConfig = fileServerConfig;
@@ -359,7 +442,10 @@ public class QueryRegionConfigResponseBody extends TeaModel {
             }
 
             /**
-             * The type of the file server.
+             * <p>The type of the file server.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>oss</p>
              */
             public Builder fileServerType(String fileServerType) {
                 this.fileServerType = fileServerType;
@@ -367,7 +453,10 @@ public class QueryRegionConfigResponseBody extends TeaModel {
             }
 
             /**
-             * The configured ID of the region.
+             * <p>The configured ID of the region.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>cn-beijing</p>
              */
             public Builder id(String id) {
                 this.id = id;
@@ -375,7 +464,10 @@ public class QueryRegionConfigResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the official image.
+             * <p>The ID of the official image.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>m-2zea4hx8f9zxqah2****</p>
              */
             public Builder imageId(String imageId) {
                 this.imageId = imageId;
@@ -383,7 +475,10 @@ public class QueryRegionConfigResponseBody extends TeaModel {
             }
 
             /**
-             * The configured name of the region.
+             * <p>The configured name of the region.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>China (Beijing)</p>
              */
             public Builder name(String name) {
                 this.name = name;
@@ -391,7 +486,10 @@ public class QueryRegionConfigResponseBody extends TeaModel {
             }
 
             /**
-             * The serial number of the region. This parameter is deprecated.
+             * <p>The serial number of the region. This parameter is deprecated.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder no(Integer no) {
                 this.no = no;
@@ -399,7 +497,10 @@ public class QueryRegionConfigResponseBody extends TeaModel {
             }
 
             /**
-             * The tag of the region. The value is fixed to `ALIYUN_SHARE`.
+             * <p>The tag of the region. The value is fixed to <code>ALIYUN_SHARE</code>.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>ALIYUN_SHARE</p>
              */
             public Builder tag(String tag) {
                 this.tag = tag;

@@ -1,27 +1,32 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.edas20170801.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link GetK8sClusterResponseBody} extends {@link TeaModel}
  *
  * <p>GetK8sClusterResponseBody</p>
  */
 public class GetK8sClusterResponseBody extends TeaModel {
-    @NameInMap("ClusterPage")
+    @com.aliyun.core.annotation.NameInMap("ClusterPage")
     private ClusterPage clusterPage;
 
-    @NameInMap("Code")
+    @com.aliyun.core.annotation.NameInMap("Code")
     private Integer code;
 
-    @NameInMap("Message")
+    @com.aliyun.core.annotation.NameInMap("Message")
     private String message;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
     private GetK8sClusterResponseBody(Builder builder) {
@@ -37,6 +42,10 @@ public class GetK8sClusterResponseBody extends TeaModel {
 
     public static GetK8sClusterResponseBody create() {
         return builder().build();
+    }
+
+    public Builder toBuilder() {
+        return new Builder(this);
     }
 
     /**
@@ -73,8 +82,18 @@ public class GetK8sClusterResponseBody extends TeaModel {
         private String message; 
         private String requestId; 
 
+        private Builder() {
+        } 
+
+        private Builder(GetK8sClusterResponseBody model) {
+            this.clusterPage = model.clusterPage;
+            this.code = model.code;
+            this.message = model.message;
+            this.requestId = model.requestId;
+        } 
+
         /**
-         * The cluster data that is returned by page.
+         * <p>The cluster data that is returned by page.</p>
          */
         public Builder clusterPage(ClusterPage clusterPage) {
             this.clusterPage = clusterPage;
@@ -82,7 +101,10 @@ public class GetK8sClusterResponseBody extends TeaModel {
         }
 
         /**
-         * The HTTP status code that is returned.
+         * <p>The HTTP status code that is returned.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>200</p>
          */
         public Builder code(Integer code) {
             this.code = code;
@@ -90,7 +112,10 @@ public class GetK8sClusterResponseBody extends TeaModel {
         }
 
         /**
-         * The additional information that is returned.
+         * <p>The additional information that is returned.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>success</p>
          */
         public Builder message(String message) {
             this.message = message;
@@ -98,7 +123,10 @@ public class GetK8sClusterResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the request.
+         * <p>The ID of the request.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>C3CE915C-0C83-4AA5-8D66-E8BEED62939E</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -111,56 +139,62 @@ public class GetK8sClusterResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link GetK8sClusterResponseBody} extends {@link TeaModel}
+     *
+     * <p>GetK8sClusterResponseBody</p>
+     */
     public static class Cluster extends TeaModel {
-        @NameInMap("ClusterId")
+        @com.aliyun.core.annotation.NameInMap("ClusterId")
         private String clusterId;
 
-        @NameInMap("ClusterImportStatus")
+        @com.aliyun.core.annotation.NameInMap("ClusterImportStatus")
         private Integer clusterImportStatus;
 
-        @NameInMap("ClusterName")
+        @com.aliyun.core.annotation.NameInMap("ClusterName")
         private String clusterName;
 
-        @NameInMap("ClusterStatus")
+        @com.aliyun.core.annotation.NameInMap("ClusterStatus")
         private Integer clusterStatus;
 
-        @NameInMap("ClusterType")
+        @com.aliyun.core.annotation.NameInMap("ClusterType")
         private Integer clusterType;
 
-        @NameInMap("Cpu")
+        @com.aliyun.core.annotation.NameInMap("Cpu")
         private Integer cpu;
 
-        @NameInMap("CsClusterId")
+        @com.aliyun.core.annotation.NameInMap("CsClusterId")
         private String csClusterId;
 
-        @NameInMap("CsClusterStatus")
+        @com.aliyun.core.annotation.NameInMap("CsClusterStatus")
         private String csClusterStatus;
 
-        @NameInMap("Description")
+        @com.aliyun.core.annotation.NameInMap("Description")
         private String description;
 
-        @NameInMap("Mem")
+        @com.aliyun.core.annotation.NameInMap("Mem")
         private Integer mem;
 
-        @NameInMap("NetworkMode")
+        @com.aliyun.core.annotation.NameInMap("NetworkMode")
         private Integer networkMode;
 
-        @NameInMap("NodeNum")
+        @com.aliyun.core.annotation.NameInMap("NodeNum")
         private Integer nodeNum;
 
-        @NameInMap("RegionId")
+        @com.aliyun.core.annotation.NameInMap("RegionId")
         private String regionId;
 
-        @NameInMap("SubClusterType")
+        @com.aliyun.core.annotation.NameInMap("SubClusterType")
         private String subClusterType;
 
-        @NameInMap("SubNetCidr")
+        @com.aliyun.core.annotation.NameInMap("SubNetCidr")
         private String subNetCidr;
 
-        @NameInMap("VpcId")
+        @com.aliyun.core.annotation.NameInMap("VpcId")
         private String vpcId;
 
-        @NameInMap("VswitchId")
+        @com.aliyun.core.annotation.NameInMap("VswitchId")
         private String vswitchId;
 
         private Cluster(Builder builder) {
@@ -329,8 +363,34 @@ public class GetK8sClusterResponseBody extends TeaModel {
             private String vpcId; 
             private String vswitchId; 
 
+            private Builder() {
+            } 
+
+            private Builder(Cluster model) {
+                this.clusterId = model.clusterId;
+                this.clusterImportStatus = model.clusterImportStatus;
+                this.clusterName = model.clusterName;
+                this.clusterStatus = model.clusterStatus;
+                this.clusterType = model.clusterType;
+                this.cpu = model.cpu;
+                this.csClusterId = model.csClusterId;
+                this.csClusterStatus = model.csClusterStatus;
+                this.description = model.description;
+                this.mem = model.mem;
+                this.networkMode = model.networkMode;
+                this.nodeNum = model.nodeNum;
+                this.regionId = model.regionId;
+                this.subClusterType = model.subClusterType;
+                this.subNetCidr = model.subNetCidr;
+                this.vpcId = model.vpcId;
+                this.vswitchId = model.vswitchId;
+            } 
+
             /**
-             * The ID of the cluster.
+             * <p>The ID of the cluster.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>81453e4b-4df0-4592-<strong><strong>-b835a2ee</strong></strong></p>
              */
             public Builder clusterId(String clusterId) {
                 this.clusterId = clusterId;
@@ -338,14 +398,17 @@ public class GetK8sClusterResponseBody extends TeaModel {
             }
 
             /**
-             * The import state of the cluster. Valid values:
-             * <p>
+             * <p>The import state of the cluster. Valid values:</p>
+             * <ul>
+             * <li>0: The cluster is not imported.</li>
+             * <li>1: The cluster is imported.</li>
+             * <li>2: The cluster fails to be imported.</li>
+             * <li>3: The cluster is being imported.</li>
+             * <li>4: The cluster is deleted.</li>
+             * </ul>
              * 
-             * *   0: The cluster is not imported.
-             * *   1: The cluster is imported.
-             * *   2: The cluster fails to be imported.
-             * *   3: The cluster is being imported.
-             * *   4: The cluster is deleted.
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder clusterImportStatus(Integer clusterImportStatus) {
                 this.clusterImportStatus = clusterImportStatus;
@@ -353,7 +416,10 @@ public class GetK8sClusterResponseBody extends TeaModel {
             }
 
             /**
-             * The name of the cluster.
+             * <p>The name of the cluster.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>test</p>
              */
             public Builder clusterName(String clusterName) {
                 this.clusterName = clusterName;
@@ -361,12 +427,15 @@ public class GetK8sClusterResponseBody extends TeaModel {
             }
 
             /**
-             * The status of the cluster. Valid values:
-             * <p>
+             * <p>The status of the cluster. Valid values:</p>
+             * <ul>
+             * <li>1: The cluster runs as expected.</li>
+             * <li>2: The cluster does not run as expected.</li>
+             * <li>3: The cluster is offline.</li>
+             * </ul>
              * 
-             * *   1: The cluster runs as expected.
-             * *   2: The cluster does not run as expected.
-             * *   3: The cluster is offline.
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder clusterStatus(Integer clusterStatus) {
                 this.clusterStatus = clusterStatus;
@@ -374,11 +443,14 @@ public class GetK8sClusterResponseBody extends TeaModel {
             }
 
             /**
-             * The type of the cluster. Valid values:
-             * <p>
+             * <p>The type of the cluster. Valid values:</p>
+             * <ul>
+             * <li>2: Elastic Compute Service (ECS) cluster</li>
+             * <li>5: ACK cluster or Serverless Kubernetes cluster</li>
+             * </ul>
              * 
-             * *   2: Elastic Compute Service (ECS) cluster
-             * *   5: ACK cluster or Serverless Kubernetes cluster
+             * <strong>example:</strong>
+             * <p>5</p>
              */
             public Builder clusterType(Integer clusterType) {
                 this.clusterType = clusterType;
@@ -386,7 +458,10 @@ public class GetK8sClusterResponseBody extends TeaModel {
             }
 
             /**
-             * The total number of CPU cores.
+             * <p>The total number of CPU cores.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>4</p>
              */
             public Builder cpu(Integer cpu) {
                 this.cpu = cpu;
@@ -394,7 +469,10 @@ public class GetK8sClusterResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the ACK cluster.
+             * <p>The ID of the ACK cluster.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2ce62869f4d4466b920312315f05****</p>
              */
             public Builder csClusterId(String csClusterId) {
                 this.csClusterId = csClusterId;
@@ -402,19 +480,22 @@ public class GetK8sClusterResponseBody extends TeaModel {
             }
 
             /**
-             * The state of the ACK cluster. Valid values:
-             * <p>
+             * <p>The state of the ACK cluster. Valid values:</p>
+             * <ul>
+             * <li>initial: The cluster is being initialized.</li>
+             * <li>failed: The cluster fails to be created.</li>
+             * <li>running: The cluster is running.</li>
+             * <li>updating: The cluster is being updated.</li>
+             * <li>scaling: The cluster is being scaled out.</li>
+             * <li>removing: Nodes are being removed from the cluster.</li>
+             * <li>upgrading: The cluster is being upgraded.</li>
+             * <li>deleting: The cluster is being deleted.</li>
+             * <li>delete_failed: The cluster fails to be deleted.</li>
+             * <li>deleted: The cluster is deleted. The deleted cluster is invisible to users.</li>
+             * </ul>
              * 
-             * *   initial: The cluster is being initialized.
-             * *   failed: The cluster fails to be created.
-             * *   running: The cluster is running.
-             * *   updating: The cluster is being updated.
-             * *   scaling: The cluster is being scaled out.
-             * *   removing: Nodes are being removed from the cluster.
-             * *   upgrading: The cluster is being upgraded.
-             * *   deleting: The cluster is being deleted.
-             * *   delete_failed: The cluster fails to be deleted.
-             * *   deleted: The cluster is deleted. The deleted cluster is invisible to users.
+             * <strong>example:</strong>
+             * <p>running</p>
              */
             public Builder csClusterStatus(String csClusterStatus) {
                 this.csClusterStatus = csClusterStatus;
@@ -422,7 +503,10 @@ public class GetK8sClusterResponseBody extends TeaModel {
             }
 
             /**
-             * The description of the cluster.
+             * <p>The description of the cluster.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>test</p>
              */
             public Builder description(String description) {
                 this.description = description;
@@ -430,7 +514,10 @@ public class GetK8sClusterResponseBody extends TeaModel {
             }
 
             /**
-             * The total size of memory. Unit: MB.
+             * <p>The total size of memory. Unit: MB.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2048</p>
              */
             public Builder mem(Integer mem) {
                 this.mem = mem;
@@ -438,11 +525,14 @@ public class GetK8sClusterResponseBody extends TeaModel {
             }
 
             /**
-             * The network type of the cluster. Valid values:
-             * <p>
+             * <p>The network type of the cluster. Valid values:</p>
+             * <ul>
+             * <li>1: classic network</li>
+             * <li>2: VPC</li>
+             * </ul>
              * 
-             * *   1: classic network
-             * *   2: VPC
+             * <strong>example:</strong>
+             * <p>2</p>
              */
             public Builder networkMode(Integer networkMode) {
                 this.networkMode = networkMode;
@@ -450,7 +540,10 @@ public class GetK8sClusterResponseBody extends TeaModel {
             }
 
             /**
-             * The number of nodes.
+             * <p>The number of nodes.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>4</p>
              */
             public Builder nodeNum(Integer nodeNum) {
                 this.nodeNum = nodeNum;
@@ -458,7 +551,10 @@ public class GetK8sClusterResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the namespace.
+             * <p>The ID of the namespace.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>test</p>
              */
             public Builder regionId(String regionId) {
                 this.regionId = regionId;
@@ -466,11 +562,14 @@ public class GetK8sClusterResponseBody extends TeaModel {
             }
 
             /**
-             * The subtype of the cluster. Valid values:
-             * <p>
+             * <p>The subtype of the cluster. Valid values:</p>
+             * <ul>
+             * <li>Ask: Serverless Kubernetes cluster</li>
+             * <li>ManagedKubernetes: ACK cluster</li>
+             * </ul>
              * 
-             * *   Ask: Serverless Kubernetes cluster
-             * *   ManagedKubernetes: ACK cluster
+             * <strong>example:</strong>
+             * <p>Ask</p>
              */
             public Builder subClusterType(String subClusterType) {
                 this.subClusterType = subClusterType;
@@ -478,7 +577,10 @@ public class GetK8sClusterResponseBody extends TeaModel {
             }
 
             /**
-             * The CIDR block of the subnet.
+             * <p>The CIDR block of the subnet.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>172.20.0.0/16</p>
              */
             public Builder subNetCidr(String subNetCidr) {
                 this.subNetCidr = subNetCidr;
@@ -486,7 +588,10 @@ public class GetK8sClusterResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the virtual private cloud (VPC).
+             * <p>The ID of the virtual private cloud (VPC).</p>
+             * 
+             * <strong>example:</strong>
+             * <p>vpc-<strong>z1mlwpbjx3e9m</strong></p>
              */
             public Builder vpcId(String vpcId) {
                 this.vpcId = vpcId;
@@ -494,7 +599,10 @@ public class GetK8sClusterResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the vSwitch.
+             * <p>The ID of the vSwitch.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>vsw-bp1uf97<strong><strong>xjxgip</strong></strong></p>
              */
             public Builder vswitchId(String vswitchId) {
                 this.vswitchId = vswitchId;
@@ -508,9 +616,15 @@ public class GetK8sClusterResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link GetK8sClusterResponseBody} extends {@link TeaModel}
+     *
+     * <p>GetK8sClusterResponseBody</p>
+     */
     public static class ClusterList extends TeaModel {
-        @NameInMap("Cluster")
-        private java.util.List < Cluster> cluster;
+        @com.aliyun.core.annotation.NameInMap("Cluster")
+        private java.util.List<Cluster> cluster;
 
         private ClusterList(Builder builder) {
             this.cluster = builder.cluster;
@@ -527,17 +641,24 @@ public class GetK8sClusterResponseBody extends TeaModel {
         /**
          * @return cluster
          */
-        public java.util.List < Cluster> getCluster() {
+        public java.util.List<Cluster> getCluster() {
             return this.cluster;
         }
 
         public static final class Builder {
-            private java.util.List < Cluster> cluster; 
+            private java.util.List<Cluster> cluster; 
+
+            private Builder() {
+            } 
+
+            private Builder(ClusterList model) {
+                this.cluster = model.cluster;
+            } 
 
             /**
              * Cluster.
              */
-            public Builder cluster(java.util.List < Cluster> cluster) {
+            public Builder cluster(java.util.List<Cluster> cluster) {
                 this.cluster = cluster;
                 return this;
             }
@@ -549,17 +670,23 @@ public class GetK8sClusterResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link GetK8sClusterResponseBody} extends {@link TeaModel}
+     *
+     * <p>GetK8sClusterResponseBody</p>
+     */
     public static class ClusterPage extends TeaModel {
-        @NameInMap("ClusterList")
+        @com.aliyun.core.annotation.NameInMap("ClusterList")
         private ClusterList clusterList;
 
-        @NameInMap("CurrentPage")
+        @com.aliyun.core.annotation.NameInMap("CurrentPage")
         private Integer currentPage;
 
-        @NameInMap("PageSize")
+        @com.aliyun.core.annotation.NameInMap("PageSize")
         private Integer pageSize;
 
-        @NameInMap("TotalSize")
+        @com.aliyun.core.annotation.NameInMap("TotalSize")
         private Integer totalSize;
 
         private ClusterPage(Builder builder) {
@@ -611,8 +738,18 @@ public class GetK8sClusterResponseBody extends TeaModel {
             private Integer pageSize; 
             private Integer totalSize; 
 
+            private Builder() {
+            } 
+
+            private Builder(ClusterPage model) {
+                this.clusterList = model.clusterList;
+                this.currentPage = model.currentPage;
+                this.pageSize = model.pageSize;
+                this.totalSize = model.totalSize;
+            } 
+
             /**
-             * The list of clusters.
+             * <p>The list of clusters.</p>
              */
             public Builder clusterList(ClusterList clusterList) {
                 this.clusterList = clusterList;
@@ -620,7 +757,10 @@ public class GetK8sClusterResponseBody extends TeaModel {
             }
 
             /**
-             * The number of the returned page. Default value: 1.
+             * <p>The number of the returned page. Default value: 1.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder currentPage(Integer currentPage) {
                 this.currentPage = currentPage;
@@ -628,7 +768,10 @@ public class GetK8sClusterResponseBody extends TeaModel {
             }
 
             /**
-             * The number of entries returned per page. Default value: 1000.
+             * <p>The number of entries returned per page. Default value: 1000.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>10</p>
              */
             public Builder pageSize(Integer pageSize) {
                 this.pageSize = pageSize;
@@ -636,7 +779,10 @@ public class GetK8sClusterResponseBody extends TeaModel {
             }
 
             /**
-             * The total number of pages that are returned.
+             * <p>The total number of pages that are returned.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>5</p>
              */
             public Builder totalSize(Integer totalSize) {
                 this.totalSize = totalSize;

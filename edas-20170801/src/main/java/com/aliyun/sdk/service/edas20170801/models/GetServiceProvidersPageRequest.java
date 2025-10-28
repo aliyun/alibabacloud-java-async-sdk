@@ -1,71 +1,76 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.edas20170801.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link GetServiceProvidersPageRequest} extends {@link RequestModel}
  *
  * <p>GetServiceProvidersPageRequest</p>
  */
 public class GetServiceProvidersPageRequest extends Request {
-    @Query
-    @NameInMap("appId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("appId")
     private String appId;
 
-    @Query
-    @NameInMap("group")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("group")
     private String group;
 
-    @Query
-    @NameInMap("ip")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ip")
     private String ip;
 
-    @Query
-    @NameInMap("namespace")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("namespace")
     private String namespace;
 
-    @Query
-    @NameInMap("origin")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("origin")
     private String origin;
 
-    @Query
-    @NameInMap("page")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("page")
     private Integer page;
 
-    @Query
-    @NameInMap("region")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("region")
     private String region;
 
-    @Query
-    @NameInMap("registryType")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("registryType")
     private String registryType;
 
-    @Query
-    @NameInMap("serviceId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("serviceId")
     private String serviceId;
 
-    @Query
-    @NameInMap("serviceName")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("serviceName")
     private String serviceName;
 
-    @Query
-    @NameInMap("serviceType")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("serviceType")
     private String serviceType;
 
-    @Query
-    @NameInMap("serviceVersion")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("serviceVersion")
     private String serviceVersion;
 
-    @Query
-    @NameInMap("size")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("size")
     private Integer size;
 
-    @Query
-    @NameInMap("source")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("source")
     private String source;
 
     private GetServiceProvidersPageRequest(Builder builder) {
@@ -94,7 +99,7 @@ public class GetServiceProvidersPageRequest extends Request {
         return builder().build();
     }
 
-    @Override
+@Override
     public Builder toBuilder() {
         return new Builder(this);
     }
@@ -236,7 +241,10 @@ public class GetServiceProvidersPageRequest extends Request {
         } 
 
         /**
-         * The ID of the application.
+         * <p>The ID of the application.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>efbda488-7b33-432f-a40d-<strong><strong>0047</strong></strong></p>
          */
         public Builder appId(String appId) {
             this.putQueryParameter("appId", appId);
@@ -245,7 +253,10 @@ public class GetServiceProvidersPageRequest extends Request {
         }
 
         /**
-         * The group to which the service belongs.
+         * <p>The group to which the service belongs.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>DUBBO</p>
          */
         public Builder group(String group) {
             this.putQueryParameter("group", group);
@@ -254,7 +265,10 @@ public class GetServiceProvidersPageRequest extends Request {
         }
 
         /**
-         * The IP address of the service provider. Fuzzy searches are supported.
+         * <p>The IP address of the service provider. Fuzzy searches are supported.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10.20.x.xx</p>
          */
         public Builder ip(String ip) {
             this.putQueryParameter("ip", ip);
@@ -263,7 +277,10 @@ public class GetServiceProvidersPageRequest extends Request {
         }
 
         /**
-         * The ID of the namespace.
+         * <p>The ID of the namespace.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-hangzhou:doc-test</p>
          */
         public Builder namespace(String namespace) {
             this.putQueryParameter("namespace", namespace);
@@ -272,11 +289,14 @@ public class GetServiceProvidersPageRequest extends Request {
         }
 
         /**
-         * The source of data. Valid values:
-         * <p>
+         * <p>The source of data. Valid values:</p>
+         * <ul>
+         * <li>agent: Use this value if you use the service query feature of the latest version to pass the query result.</li>
+         * <li>registry: Use this value if you use the service query feature of the earlier version to pass the query result.</li>
+         * </ul>
          * 
-         * *   agent: Use this value if you use the service query feature of the latest version to pass the query result.
-         * *   registry: Use this value if you use the service query feature of the earlier version to pass the query result.
+         * <strong>example:</strong>
+         * <p>agent</p>
          */
         public Builder origin(String origin) {
             this.putQueryParameter("origin", origin);
@@ -285,7 +305,10 @@ public class GetServiceProvidersPageRequest extends Request {
         }
 
         /**
-         * The number of the page to return. Pages start from Page 0.
+         * <p>The number of the page to return. Pages start from Page 0.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>0</p>
          */
         public Builder page(Integer page) {
             this.putQueryParameter("page", page);
@@ -294,7 +317,10 @@ public class GetServiceProvidersPageRequest extends Request {
         }
 
         /**
-         * The ID of the region.
+         * <p>The ID of the region.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-hangzhou</p>
          */
         public Builder region(String region) {
             this.putQueryParameter("region", region);
@@ -303,7 +329,10 @@ public class GetServiceProvidersPageRequest extends Request {
         }
 
         /**
-         * The type of the service registry. This parameter is deprecated. You can ignore it.
+         * <p>The type of the service registry. This parameter is deprecated. You can ignore it.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>nacos</p>
          */
         public Builder registryType(String registryType) {
             this.putQueryParameter("registryType", registryType);
@@ -312,7 +341,10 @@ public class GetServiceProvidersPageRequest extends Request {
         }
 
         /**
-         * The ID of the service. This parameter is deprecated. You can ignore it.
+         * <p>The ID of the service. This parameter is deprecated. You can ignore it.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>com.alibabacloud.hipstershop.CartService</p>
          */
         public Builder serviceId(String serviceId) {
             this.putQueryParameter("serviceId", serviceId);
@@ -321,7 +353,10 @@ public class GetServiceProvidersPageRequest extends Request {
         }
 
         /**
-         * The name of the service.
+         * <p>The name of the service.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>com.alibabacloud.hipstershop.CartService</p>
          */
         public Builder serviceName(String serviceName) {
             this.putQueryParameter("serviceName", serviceName);
@@ -330,12 +365,15 @@ public class GetServiceProvidersPageRequest extends Request {
         }
 
         /**
-         * The type of the service. Valid values:
-         * <p>
+         * <p>The type of the service. Valid values:</p>
+         * <ul>
+         * <li>dubbo: Dubbo service</li>
+         * <li>springCloud: Spring Cloud service</li>
+         * <li>hsf: High-speed Service Framework (HSF) service</li>
+         * </ul>
          * 
-         * *   dubbo: Dubbo service
-         * *   springCloud: Spring Cloud service
-         * *   hsf: High-speed Service Framework (HSF) service
+         * <strong>example:</strong>
+         * <p>dubbo</p>
          */
         public Builder serviceType(String serviceType) {
             this.putQueryParameter("serviceType", serviceType);
@@ -344,7 +382,10 @@ public class GetServiceProvidersPageRequest extends Request {
         }
 
         /**
-         * The version of the service.
+         * <p>The version of the service.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1.0.0</p>
          */
         public Builder serviceVersion(String serviceVersion) {
             this.putQueryParameter("serviceVersion", serviceVersion);
@@ -353,7 +394,10 @@ public class GetServiceProvidersPageRequest extends Request {
         }
 
         /**
-         * The number of entries to return on each page.
+         * <p>The number of entries to return on each page.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10</p>
          */
         public Builder size(Integer size) {
             this.putQueryParameter("size", size);
@@ -362,7 +406,10 @@ public class GetServiceProvidersPageRequest extends Request {
         }
 
         /**
-         * The source of the service. Set the value to edas.
+         * <p>The source of the service. Set the value to edas.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>edas</p>
          */
         public Builder source(String source) {
             this.putQueryParameter("source", source);

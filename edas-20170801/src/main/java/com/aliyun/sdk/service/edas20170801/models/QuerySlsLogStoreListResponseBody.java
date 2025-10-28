@@ -1,30 +1,35 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.edas20170801.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link QuerySlsLogStoreListResponseBody} extends {@link TeaModel}
  *
  * <p>QuerySlsLogStoreListResponseBody</p>
  */
 public class QuerySlsLogStoreListResponseBody extends TeaModel {
-    @NameInMap("Code")
+    @com.aliyun.core.annotation.NameInMap("Code")
     private Integer code;
 
-    @NameInMap("Message")
+    @com.aliyun.core.annotation.NameInMap("Message")
     private String message;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("Result")
-    private java.util.List < Result> result;
+    @com.aliyun.core.annotation.NameInMap("Result")
+    private java.util.List<Result> result;
 
-    @NameInMap("TotalSize")
+    @com.aliyun.core.annotation.NameInMap("TotalSize")
     private Integer totalSize;
 
     private QuerySlsLogStoreListResponseBody(Builder builder) {
@@ -41,6 +46,10 @@ public class QuerySlsLogStoreListResponseBody extends TeaModel {
 
     public static QuerySlsLogStoreListResponseBody create() {
         return builder().build();
+    }
+
+    public Builder toBuilder() {
+        return new Builder(this);
     }
 
     /**
@@ -67,7 +76,7 @@ public class QuerySlsLogStoreListResponseBody extends TeaModel {
     /**
      * @return result
      */
-    public java.util.List < Result> getResult() {
+    public java.util.List<Result> getResult() {
         return this.result;
     }
 
@@ -82,11 +91,25 @@ public class QuerySlsLogStoreListResponseBody extends TeaModel {
         private Integer code; 
         private String message; 
         private String requestId; 
-        private java.util.List < Result> result; 
+        private java.util.List<Result> result; 
         private Integer totalSize; 
 
+        private Builder() {
+        } 
+
+        private Builder(QuerySlsLogStoreListResponseBody model) {
+            this.code = model.code;
+            this.message = model.message;
+            this.requestId = model.requestId;
+            this.result = model.result;
+            this.totalSize = model.totalSize;
+        } 
+
         /**
-         * The HTTP status code that is returned.
+         * <p>The HTTP status code that is returned.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>200</p>
          */
         public Builder code(Integer code) {
             this.code = code;
@@ -94,7 +117,10 @@ public class QuerySlsLogStoreListResponseBody extends TeaModel {
         }
 
         /**
-         * The message that is returned.
+         * <p>The message that is returned.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>success</p>
          */
         public Builder message(String message) {
             this.message = message;
@@ -102,7 +128,10 @@ public class QuerySlsLogStoreListResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the request.
+         * <p>The ID of the request.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>d6834ee9-5045-*************</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -110,15 +139,18 @@ public class QuerySlsLogStoreListResponseBody extends TeaModel {
         }
 
         /**
-         * The configurations of Log Service for the application.
+         * <p>The configurations of Log Service for the application.</p>
          */
-        public Builder result(java.util.List < Result> result) {
+        public Builder result(java.util.List<Result> result) {
             this.result = result;
             return this;
         }
 
         /**
-         * The number of log sources configured for the application.
+         * <p>The number of log sources configured for the application.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder totalSize(Integer totalSize) {
             this.totalSize = totalSize;
@@ -131,23 +163,29 @@ public class QuerySlsLogStoreListResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link QuerySlsLogStoreListResponseBody} extends {@link TeaModel}
+     *
+     * <p>QuerySlsLogStoreListResponseBody</p>
+     */
     public static class Result extends TeaModel {
-        @NameInMap("ConsumerSide")
+        @com.aliyun.core.annotation.NameInMap("ConsumerSide")
         private String consumerSide;
 
-        @NameInMap("CreateTime")
+        @com.aliyun.core.annotation.NameInMap("CreateTime")
         private String createTime;
 
-        @NameInMap("Link")
+        @com.aliyun.core.annotation.NameInMap("Link")
         private String link;
 
-        @NameInMap("Logstore")
+        @com.aliyun.core.annotation.NameInMap("Logstore")
         private String logstore;
 
-        @NameInMap("Project")
+        @com.aliyun.core.annotation.NameInMap("Project")
         private String project;
 
-        @NameInMap("Source")
+        @com.aliyun.core.annotation.NameInMap("Source")
         private String source;
 
         private Result(Builder builder) {
@@ -217,8 +255,23 @@ public class QuerySlsLogStoreListResponseBody extends TeaModel {
             private String project; 
             private String source; 
 
+            private Builder() {
+            } 
+
+            private Builder(Result model) {
+                this.consumerSide = model.consumerSide;
+                this.createTime = model.createTime;
+                this.link = model.link;
+                this.logstore = model.logstore;
+                this.project = model.project;
+                this.source = model.source;
+            } 
+
             /**
-             * The type of the logging service.
+             * <p>The type of the logging service.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Log Service</p>
              */
             public Builder consumerSide(String consumerSide) {
                 this.consumerSide = consumerSide;
@@ -226,7 +279,10 @@ public class QuerySlsLogStoreListResponseBody extends TeaModel {
             }
 
             /**
-             * The time when the logging service was created.
+             * <p>The time when the logging service was created.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2020-05-18 22:08:46</p>
              */
             public Builder createTime(String createTime) {
                 this.createTime = createTime;
@@ -234,7 +290,7 @@ public class QuerySlsLogStoreListResponseBody extends TeaModel {
             }
 
             /**
-             * The URL of the logging service.
+             * <p>The URL of the logging service.</p>
              */
             public Builder link(String link) {
                 this.link = link;
@@ -242,7 +298,10 @@ public class QuerySlsLogStoreListResponseBody extends TeaModel {
             }
 
             /**
-             * The name of the Logstore.
+             * <p>The name of the Logstore.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>thisisatestlogstore</p>
              */
             public Builder logstore(String logstore) {
                 this.logstore = logstore;
@@ -250,7 +309,10 @@ public class QuerySlsLogStoreListResponseBody extends TeaModel {
             }
 
             /**
-             * The name of the project.
+             * <p>The name of the project.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>k8s-log-c846f28edbd1d4c6aa9d78c0e********</p>
              */
             public Builder project(String project) {
                 this.project = project;
@@ -258,11 +320,14 @@ public class QuerySlsLogStoreListResponseBody extends TeaModel {
             }
 
             /**
-             * The source of logs. Valid values:
-             * <p>
+             * <p>The source of logs. Valid values:</p>
+             * <ul>
+             * <li>Standard output: stdout.log</li>
+             * <li>File log: the directory that stores logs</li>
+             * </ul>
              * 
-             * *   Standard output: stdout.log
-             * *   File log: the directory that stores logs
+             * <strong>example:</strong>
+             * <p>/var/log/*</p>
              */
             public Builder source(String source) {
                 this.source = source;

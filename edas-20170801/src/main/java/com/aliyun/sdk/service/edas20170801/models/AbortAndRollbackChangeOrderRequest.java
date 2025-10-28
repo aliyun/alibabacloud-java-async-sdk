@@ -1,20 +1,25 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.edas20170801.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link AbortAndRollbackChangeOrderRequest} extends {@link RequestModel}
  *
  * <p>AbortAndRollbackChangeOrderRequest</p>
  */
 public class AbortAndRollbackChangeOrderRequest extends Request {
-    @Query
-    @NameInMap("ChangeOrderId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ChangeOrderId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String changeOrderId;
 
     private AbortAndRollbackChangeOrderRequest(Builder builder) {
@@ -30,7 +35,7 @@ public class AbortAndRollbackChangeOrderRequest extends Request {
         return builder().build();
     }
 
-    @Override
+@Override
     public Builder toBuilder() {
         return new Builder(this);
     }
@@ -55,7 +60,11 @@ public class AbortAndRollbackChangeOrderRequest extends Request {
         } 
 
         /**
-         * The ID of the change process.
+         * <p>The ID of the change process.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>6b55106c-c7f2-40f7-a1d4-092870*****</p>
          */
         public Builder changeOrderId(String changeOrderId) {
             this.putQueryParameter("ChangeOrderId", changeOrderId);

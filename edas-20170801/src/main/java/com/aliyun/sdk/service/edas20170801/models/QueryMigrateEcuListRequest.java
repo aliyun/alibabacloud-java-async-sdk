@@ -1,19 +1,24 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.edas20170801.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link QueryMigrateEcuListRequest} extends {@link RequestModel}
  *
  * <p>QueryMigrateEcuListRequest</p>
  */
 public class QueryMigrateEcuListRequest extends Request {
-    @Query
-    @NameInMap("LogicalRegionId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("LogicalRegionId")
     private String logicalRegionId;
 
     private QueryMigrateEcuListRequest(Builder builder) {
@@ -29,7 +34,7 @@ public class QueryMigrateEcuListRequest extends Request {
         return builder().build();
     }
 
-    @Override
+@Override
     public Builder toBuilder() {
         return new Builder(this);
     }
@@ -54,11 +59,14 @@ public class QueryMigrateEcuListRequest extends Request {
         } 
 
         /**
-         * The ID of the namespace.
-         * <p>
+         * <p>The ID of the namespace.</p>
+         * <ul>
+         * <li>The ID of a custom namespace is in the <code>region ID:namespace identifier</code> format. Example: <code>cn-beijing:test</code>.</li>
+         * <li>The ID of the default namespace is in the <code>region ID</code> format. Example: <code>cn-beijing</code>.</li>
+         * </ul>
          * 
-         * *   The ID of a custom namespace is in the `region ID:namespace identifier` format. Example: `cn-beijing:test`.
-         * *   The ID of the default namespace is in the `region ID` format. Example: `cn-beijing`.
+         * <strong>example:</strong>
+         * <p>cn-hangzhou or cn-hangzhou:test</p>
          */
         public Builder logicalRegionId(String logicalRegionId) {
             this.putQueryParameter("LogicalRegionId", logicalRegionId);

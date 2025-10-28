@@ -1,31 +1,36 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.edas20170801.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link CreateConfigTemplateRequest} extends {@link RequestModel}
  *
  * <p>CreateConfigTemplateRequest</p>
  */
 public class CreateConfigTemplateRequest extends Request {
-    @Body
-    @NameInMap("Content")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("Content")
     private String content;
 
-    @Body
-    @NameInMap("Description")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("Description")
     private String description;
 
-    @Body
-    @NameInMap("Format")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("Format")
     private String format;
 
-    @Body
-    @NameInMap("Name")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("Name")
     private String name;
 
     private CreateConfigTemplateRequest(Builder builder) {
@@ -44,7 +49,7 @@ public class CreateConfigTemplateRequest extends Request {
         return builder().build();
     }
 
-    @Override
+@Override
     public Builder toBuilder() {
         return new Builder(this);
     }
@@ -96,7 +101,10 @@ public class CreateConfigTemplateRequest extends Request {
         } 
 
         /**
-         * The content of the configuration template. The value must be in the format that is specified by the Format parameter.
+         * <p>The content of the configuration template. The value must be in the format that is specified by the Format parameter.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>[{&quot;Key&quot;:&quot;name&quot;,&quot;Value&quot;:&quot;william&quot;},{&quot;Key&quot;:&quot;age&quot;,&quot;Value&quot;:&quot;12&quot;}]</p>
          */
         public Builder content(String content) {
             this.putBodyParameter("Content", content);
@@ -105,7 +113,10 @@ public class CreateConfigTemplateRequest extends Request {
         }
 
         /**
-         * The description of the configuration template. The description can be up to 255 characters in length.
+         * <p>The description of the configuration template. The description can be up to 255 characters in length.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>My configuration template</p>
          */
         public Builder description(String description) {
             this.putBodyParameter("Description", description);
@@ -114,15 +125,18 @@ public class CreateConfigTemplateRequest extends Request {
         }
 
         /**
-         * The data format of the configuration template. Valid values:
-         * <p>
+         * <p>The data format of the configuration template. Valid values:</p>
+         * <ul>
+         * <li>JSON: JSON format</li>
+         * <li>XML: XML format</li>
+         * <li>YAML: YAML format</li>
+         * <li>Properties: .properties format</li>
+         * <li>KeyValue: key-value pairs</li>
+         * <li>Custom: custom format</li>
+         * </ul>
          * 
-         * *   JSON: JSON format
-         * *   XML: XML format
-         * *   YAML: YAML format
-         * *   Properties: .properties format
-         * *   KeyValue: key-value pairs
-         * *   Custom: custom format
+         * <strong>example:</strong>
+         * <p>JSON</p>
          */
         public Builder format(String format) {
             this.putBodyParameter("Format", format);
@@ -131,7 +145,10 @@ public class CreateConfigTemplateRequest extends Request {
         }
 
         /**
-         * The name of the configuration template. The name can be up to 64 characters in length.
+         * <p>The name of the configuration template. The name can be up to 64 characters in length.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>my-template</p>
          */
         public Builder name(String name) {
             this.putBodyParameter("Name", name);

@@ -1,27 +1,32 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.edas20170801.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ListScaleOutEcuResponseBody} extends {@link TeaModel}
  *
  * <p>ListScaleOutEcuResponseBody</p>
  */
 public class ListScaleOutEcuResponseBody extends TeaModel {
-    @NameInMap("Code")
+    @com.aliyun.core.annotation.NameInMap("Code")
     private Integer code;
 
-    @NameInMap("EcuInfoList")
+    @com.aliyun.core.annotation.NameInMap("EcuInfoList")
     private EcuInfoList ecuInfoList;
 
-    @NameInMap("Message")
+    @com.aliyun.core.annotation.NameInMap("Message")
     private String message;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
     private ListScaleOutEcuResponseBody(Builder builder) {
@@ -37,6 +42,10 @@ public class ListScaleOutEcuResponseBody extends TeaModel {
 
     public static ListScaleOutEcuResponseBody create() {
         return builder().build();
+    }
+
+    public Builder toBuilder() {
+        return new Builder(this);
     }
 
     /**
@@ -73,8 +82,21 @@ public class ListScaleOutEcuResponseBody extends TeaModel {
         private String message; 
         private String requestId; 
 
+        private Builder() {
+        } 
+
+        private Builder(ListScaleOutEcuResponseBody model) {
+            this.code = model.code;
+            this.ecuInfoList = model.ecuInfoList;
+            this.message = model.message;
+            this.requestId = model.requestId;
+        } 
+
         /**
-         * The HTTP status code that is returned.
+         * <p>The HTTP status code that is returned.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>200</p>
          */
         public Builder code(Integer code) {
             this.code = code;
@@ -82,7 +104,7 @@ public class ListScaleOutEcuResponseBody extends TeaModel {
         }
 
         /**
-         * The ECUs.
+         * <p>The ECUs.</p>
          */
         public Builder ecuInfoList(EcuInfoList ecuInfoList) {
             this.ecuInfoList = ecuInfoList;
@@ -90,7 +112,10 @@ public class ListScaleOutEcuResponseBody extends TeaModel {
         }
 
         /**
-         * The additional information that is returned.
+         * <p>The additional information that is returned.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>success</p>
          */
         public Builder message(String message) {
             this.message = message;
@@ -98,7 +123,10 @@ public class ListScaleOutEcuResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the request.
+         * <p>The ID of the request.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>AF860D6C-ACE3-4429-9D54-3BD15A******</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -111,50 +139,56 @@ public class ListScaleOutEcuResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link ListScaleOutEcuResponseBody} extends {@link TeaModel}
+     *
+     * <p>ListScaleOutEcuResponseBody</p>
+     */
     public static class EcuInfo extends TeaModel {
-        @NameInMap("AvailableCpu")
+        @com.aliyun.core.annotation.NameInMap("AvailableCpu")
         private Integer availableCpu;
 
-        @NameInMap("AvailableMem")
+        @com.aliyun.core.annotation.NameInMap("AvailableMem")
         private Integer availableMem;
 
-        @NameInMap("CreateTime")
+        @com.aliyun.core.annotation.NameInMap("CreateTime")
         private Long createTime;
 
-        @NameInMap("DockerEnv")
+        @com.aliyun.core.annotation.NameInMap("DockerEnv")
         private Boolean dockerEnv;
 
-        @NameInMap("EcuId")
+        @com.aliyun.core.annotation.NameInMap("EcuId")
         private String ecuId;
 
-        @NameInMap("HeartbeatTime")
+        @com.aliyun.core.annotation.NameInMap("HeartbeatTime")
         private Long heartbeatTime;
 
-        @NameInMap("InstanceId")
+        @com.aliyun.core.annotation.NameInMap("InstanceId")
         private String instanceId;
 
-        @NameInMap("IpAddr")
+        @com.aliyun.core.annotation.NameInMap("IpAddr")
         private String ipAddr;
 
-        @NameInMap("Name")
+        @com.aliyun.core.annotation.NameInMap("Name")
         private String name;
 
-        @NameInMap("Online")
+        @com.aliyun.core.annotation.NameInMap("Online")
         private Boolean online;
 
-        @NameInMap("RegionId")
+        @com.aliyun.core.annotation.NameInMap("RegionId")
         private String regionId;
 
-        @NameInMap("UpdateTime")
+        @com.aliyun.core.annotation.NameInMap("UpdateTime")
         private Long updateTime;
 
-        @NameInMap("UserId")
+        @com.aliyun.core.annotation.NameInMap("UserId")
         private String userId;
 
-        @NameInMap("VpcId")
+        @com.aliyun.core.annotation.NameInMap("VpcId")
         private String vpcId;
 
-        @NameInMap("ZoneId")
+        @com.aliyun.core.annotation.NameInMap("ZoneId")
         private String zoneId;
 
         private EcuInfo(Builder builder) {
@@ -305,8 +339,32 @@ public class ListScaleOutEcuResponseBody extends TeaModel {
             private String vpcId; 
             private String zoneId; 
 
+            private Builder() {
+            } 
+
+            private Builder(EcuInfo model) {
+                this.availableCpu = model.availableCpu;
+                this.availableMem = model.availableMem;
+                this.createTime = model.createTime;
+                this.dockerEnv = model.dockerEnv;
+                this.ecuId = model.ecuId;
+                this.heartbeatTime = model.heartbeatTime;
+                this.instanceId = model.instanceId;
+                this.ipAddr = model.ipAddr;
+                this.name = model.name;
+                this.online = model.online;
+                this.regionId = model.regionId;
+                this.updateTime = model.updateTime;
+                this.userId = model.userId;
+                this.vpcId = model.vpcId;
+                this.zoneId = model.zoneId;
+            } 
+
             /**
-             * The number of available CPU cores for the ECU.
+             * <p>The number of available CPU cores for the ECU.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2</p>
              */
             public Builder availableCpu(Integer availableCpu) {
                 this.availableCpu = availableCpu;
@@ -314,7 +372,10 @@ public class ListScaleOutEcuResponseBody extends TeaModel {
             }
 
             /**
-             * The size of available memory for the ECU. Unit: MB.
+             * <p>The size of available memory for the ECU. Unit: MB.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>111</p>
              */
             public Builder availableMem(Integer availableMem) {
                 this.availableMem = availableMem;
@@ -322,7 +383,10 @@ public class ListScaleOutEcuResponseBody extends TeaModel {
             }
 
             /**
-             * The time when the ECU was created. This value is a UNIX timestamp representing the number of milliseconds that have elapsed since the epoch time January 1, 1970, 00:00:00 UTC.
+             * <p>The time when the ECU was created. This value is a UNIX timestamp representing the number of milliseconds that have elapsed since the epoch time January 1, 1970, 00:00:00 UTC.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1573281040819</p>
              */
             public Builder createTime(Long createTime) {
                 this.createTime = createTime;
@@ -330,11 +394,14 @@ public class ListScaleOutEcuResponseBody extends TeaModel {
             }
 
             /**
-             * Indicates whether Docker is installed. Valid values:
-             * <p>
+             * <p>Indicates whether Docker is installed. Valid values:</p>
+             * <ul>
+             * <li>true: Docker is installed.</li>
+             * <li>false: Docker is not installed.</li>
+             * </ul>
              * 
-             * *   true: Docker is installed.
-             * *   false: Docker is not installed.
+             * <strong>example:</strong>
+             * <p>false</p>
              */
             public Builder dockerEnv(Boolean dockerEnv) {
                 this.dockerEnv = dockerEnv;
@@ -342,7 +409,10 @@ public class ListScaleOutEcuResponseBody extends TeaModel {
             }
 
             /**
-             * The unique ID of the ECU. To query the ID, you can run the `dmidecode` command on the ECS instance that corresponds to the ECU.
+             * <p>The unique ID of the ECU. To query the ID, you can run the <code>dmidecode</code> command on the ECS instance that corresponds to the ECU.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>0de2ebdb-9490-4fc4-be41***************</p>
              */
             public Builder ecuId(String ecuId) {
                 this.ecuId = ecuId;
@@ -350,7 +420,10 @@ public class ListScaleOutEcuResponseBody extends TeaModel {
             }
 
             /**
-             * The time when the last heartbeat detection was performed. This value is a UNIX timestamp representing the number of milliseconds that have elapsed since the epoch time January 1, 1970, 00:00:00 UTC.
+             * <p>The time when the last heartbeat detection was performed. This value is a UNIX timestamp representing the number of milliseconds that have elapsed since the epoch time January 1, 1970, 00:00:00 UTC.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1573281040819</p>
              */
             public Builder heartbeatTime(Long heartbeatTime) {
                 this.heartbeatTime = heartbeatTime;
@@ -358,7 +431,10 @@ public class ListScaleOutEcuResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the ECU.
+             * <p>The ID of the ECU.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>i-2zej4i2jdf*********</p>
              */
             public Builder instanceId(String instanceId) {
                 this.instanceId = instanceId;
@@ -366,7 +442,10 @@ public class ListScaleOutEcuResponseBody extends TeaModel {
             }
 
             /**
-             * The private IP address of the ECU.
+             * <p>The private IP address of the ECU.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>192.168.XX.XX</p>
              */
             public Builder ipAddr(String ipAddr) {
                 this.ipAddr = ipAddr;
@@ -374,7 +453,10 @@ public class ListScaleOutEcuResponseBody extends TeaModel {
             }
 
             /**
-             * The name of the ECU.
+             * <p>The name of the ECU.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>test</p>
              */
             public Builder name(String name) {
                 this.name = name;
@@ -382,11 +464,14 @@ public class ListScaleOutEcuResponseBody extends TeaModel {
             }
 
             /**
-             * Indicates whether the ECU is online. If the ECU is online, its corresponding ECS instance is managed in EDAS. Valid values:
-             * <p>
+             * <p>Indicates whether the ECU is online. If the ECU is online, its corresponding ECS instance is managed in EDAS. Valid values:</p>
+             * <ul>
+             * <li>true: The ECU is online.</li>
+             * <li>false: The ECU is offline.</li>
+             * </ul>
              * 
-             * *   true: The ECU is online.
-             * *   false: The ECU is offline.
+             * <strong>example:</strong>
+             * <p>true</p>
              */
             public Builder online(Boolean online) {
                 this.online = online;
@@ -394,7 +479,10 @@ public class ListScaleOutEcuResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the region where the ECU is located.
+             * <p>The ID of the region where the ECU is located.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>cn-beijing</p>
              */
             public Builder regionId(String regionId) {
                 this.regionId = regionId;
@@ -402,7 +490,10 @@ public class ListScaleOutEcuResponseBody extends TeaModel {
             }
 
             /**
-             * The time when the ECU was last updated. This value is a UNIX timestamp representing the number of milliseconds that have elapsed since the epoch time January 1, 1970, 00:00:00 UTC.
+             * <p>The time when the ECU was last updated. This value is a UNIX timestamp representing the number of milliseconds that have elapsed since the epoch time January 1, 1970, 00:00:00 UTC.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1573281040827</p>
              */
             public Builder updateTime(Long updateTime) {
                 this.updateTime = updateTime;
@@ -410,7 +501,10 @@ public class ListScaleOutEcuResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the Alibaba Cloud account to which the ECU belongs.
+             * <p>The ID of the Alibaba Cloud account to which the ECU belongs.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1172<strong><strong>6608</strong></strong></p>
              */
             public Builder userId(String userId) {
                 this.userId = userId;
@@ -418,7 +512,10 @@ public class ListScaleOutEcuResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the virtual private cloud (VPC) where the ECU is located.
+             * <p>The ID of the virtual private cloud (VPC) where the ECU is located.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>vpc-2zef6ob8**********</p>
              */
             public Builder vpcId(String vpcId) {
                 this.vpcId = vpcId;
@@ -426,7 +523,10 @@ public class ListScaleOutEcuResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the zone where the ECU resides.
+             * <p>The ID of the zone where the ECU resides.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>cn-beijing-h</p>
              */
             public Builder zoneId(String zoneId) {
                 this.zoneId = zoneId;
@@ -440,9 +540,15 @@ public class ListScaleOutEcuResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link ListScaleOutEcuResponseBody} extends {@link TeaModel}
+     *
+     * <p>ListScaleOutEcuResponseBody</p>
+     */
     public static class EcuInfoList extends TeaModel {
-        @NameInMap("EcuInfo")
-        private java.util.List < EcuInfo> ecuInfo;
+        @com.aliyun.core.annotation.NameInMap("EcuInfo")
+        private java.util.List<EcuInfo> ecuInfo;
 
         private EcuInfoList(Builder builder) {
             this.ecuInfo = builder.ecuInfo;
@@ -459,17 +565,24 @@ public class ListScaleOutEcuResponseBody extends TeaModel {
         /**
          * @return ecuInfo
          */
-        public java.util.List < EcuInfo> getEcuInfo() {
+        public java.util.List<EcuInfo> getEcuInfo() {
             return this.ecuInfo;
         }
 
         public static final class Builder {
-            private java.util.List < EcuInfo> ecuInfo; 
+            private java.util.List<EcuInfo> ecuInfo; 
+
+            private Builder() {
+            } 
+
+            private Builder(EcuInfoList model) {
+                this.ecuInfo = model.ecuInfo;
+            } 
 
             /**
              * EcuInfo.
              */
-            public Builder ecuInfo(java.util.List < EcuInfo> ecuInfo) {
+            public Builder ecuInfo(java.util.List<EcuInfo> ecuInfo) {
                 this.ecuInfo = ecuInfo;
                 return this;
             }

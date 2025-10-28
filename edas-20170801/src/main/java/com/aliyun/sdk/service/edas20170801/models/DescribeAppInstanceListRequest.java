@@ -1,24 +1,29 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.edas20170801.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeAppInstanceListRequest} extends {@link RequestModel}
  *
  * <p>DescribeAppInstanceListRequest</p>
  */
 public class DescribeAppInstanceListRequest extends Request {
-    @Query
-    @NameInMap("AppId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("AppId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String appId;
 
-    @Query
-    @NameInMap("WithNodeInfo")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("WithNodeInfo")
     private Boolean withNodeInfo;
 
     private DescribeAppInstanceListRequest(Builder builder) {
@@ -35,7 +40,7 @@ public class DescribeAppInstanceListRequest extends Request {
         return builder().build();
     }
 
-    @Override
+@Override
     public Builder toBuilder() {
         return new Builder(this);
     }
@@ -69,7 +74,11 @@ public class DescribeAppInstanceListRequest extends Request {
         } 
 
         /**
-         * The ID of the application. You can call the ListApplication operation to query the ID of the application. For more information, see [ListApplication](~~149390~~).
+         * <p>The ID of the application. You can call the ListApplication operation to query the ID of the application. For more information, see <a href="https://help.aliyun.com/document_detail/149390.html">ListApplication</a>.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>93fdd228-*****-ed2ae98de18d</p>
          */
         public Builder appId(String appId) {
             this.putQueryParameter("AppId", appId);
@@ -78,11 +87,14 @@ public class DescribeAppInstanceListRequest extends Request {
         }
 
         /**
-         * Specifies whether to return the information about the node in which the pod resides.
-         * <p>
+         * <p>Specifies whether to return the information about the node in which the pod resides.</p>
+         * <ul>
+         * <li><code>true</code>: returns the information about the node in which the pod resides</li>
+         * <li><code>false</code>: does not return the information about the node in which the pod resides</li>
+         * </ul>
          * 
-         * *   `true`: returns the information about the node in which the pod resides
-         * *   `false`: does not return the information about the node in which the pod resides
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder withNodeInfo(Boolean withNodeInfo) {
             this.putQueryParameter("WithNodeInfo", withNodeInfo);

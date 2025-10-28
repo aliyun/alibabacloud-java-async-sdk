@@ -1,34 +1,39 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.edas20170801.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link UnbindSlbRequest} extends {@link RequestModel}
  *
  * <p>UnbindSlbRequest</p>
  */
 public class UnbindSlbRequest extends Request {
-    @Query
-    @NameInMap("AppId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("AppId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String appId;
 
-    @Query
-    @NameInMap("DeleteListener")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("DeleteListener")
     private String deleteListener;
 
-    @Query
-    @NameInMap("SlbId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("SlbId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String slbId;
 
-    @Query
-    @NameInMap("Type")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Type")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String type;
 
     private UnbindSlbRequest(Builder builder) {
@@ -47,7 +52,7 @@ public class UnbindSlbRequest extends Request {
         return builder().build();
     }
 
-    @Override
+@Override
     public Builder toBuilder() {
         return new Builder(this);
     }
@@ -99,7 +104,11 @@ public class UnbindSlbRequest extends Request {
         } 
 
         /**
-         * The ID of the application.
+         * <p>The ID of the application.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>c627c157-560d-********************</p>
          */
         public Builder appId(String appId) {
             this.putQueryParameter("AppId", appId);
@@ -108,11 +117,14 @@ public class UnbindSlbRequest extends Request {
         }
 
         /**
-         * Specifies whether to remove the configured listeners. Valid values:
-         * <p>
+         * <p>Specifies whether to remove the configured listeners. Valid values:</p>
+         * <ul>
+         * <li>true: removes the configured listeners.</li>
+         * <li>false: does not remove the configured listeners.</li>
+         * </ul>
          * 
-         * *   true: removes the configured listeners.
-         * *   false: does not remove the configured listeners.
+         * <strong>example:</strong>
+         * <p>false</p>
          */
         public Builder deleteListener(String deleteListener) {
             this.putQueryParameter("DeleteListener", deleteListener);
@@ -121,7 +133,11 @@ public class UnbindSlbRequest extends Request {
         }
 
         /**
-         * The ID of the SLB instance.
+         * <p>The ID of the SLB instance.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>lb-wz9vo49****************</p>
          */
         public Builder slbId(String slbId) {
             this.putQueryParameter("SlbId", slbId);
@@ -130,11 +146,15 @@ public class UnbindSlbRequest extends Request {
         }
 
         /**
-         * The network type of the SLB instance. Valid values:
-         * <p>
+         * <p>The network type of the SLB instance. Valid values:</p>
+         * <ul>
+         * <li><strong>internet</strong>: Internet-facing SLB instance</li>
+         * <li><strong>intranet</strong>: internal-facing SLB instance</li>
+         * </ul>
+         * <p>This parameter is required.</p>
          * 
-         * *   **internet**: Internet-facing SLB instance
-         * *   **intranet**: internal-facing SLB instance
+         * <strong>example:</strong>
+         * <p>internet</p>
          */
         public Builder type(String type) {
             this.putQueryParameter("Type", type);

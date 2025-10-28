@@ -1,24 +1,29 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.edas20170801.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link MigrateEcuRequest} extends {@link RequestModel}
  *
  * <p>MigrateEcuRequest</p>
  */
 public class MigrateEcuRequest extends Request {
-    @Query
-    @NameInMap("InstanceIds")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("InstanceIds")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String instanceIds;
 
-    @Query
-    @NameInMap("LogicalRegionId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("LogicalRegionId")
     private String logicalRegionId;
 
     private MigrateEcuRequest(Builder builder) {
@@ -35,7 +40,7 @@ public class MigrateEcuRequest extends Request {
         return builder().build();
     }
 
-    @Override
+@Override
     public Builder toBuilder() {
         return new Builder(this);
     }
@@ -69,7 +74,11 @@ public class MigrateEcuRequest extends Request {
         } 
 
         /**
-         * The ID of the ECS instance. Separate multiple IDs with commas (,).
+         * <p>The ID of the ECS instance. Separate multiple IDs with commas (,).</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>i-2zej4i2jdf3ntwhj****</p>
          */
         public Builder instanceIds(String instanceIds) {
             this.putQueryParameter("InstanceIds", instanceIds);
@@ -78,11 +87,14 @@ public class MigrateEcuRequest extends Request {
         }
 
         /**
-         * The ID of the custom namespace.
-         * <p>
+         * <p>The ID of the custom namespace.</p>
+         * <ul>
+         * <li>The ID of a custom namespace is in the <code>region ID:custom namespace ID</code> format. Example: cn-beijing:tdy218.</li>
+         * <li>The ID of the default namespace is in the <code>region ID</code> format. Example: cn-beijing.</li>
+         * </ul>
          * 
-         * *   The ID of a custom namespace is in the `region ID:custom namespace ID` format. Example: cn-beijing:tdy218.
-         * *   The ID of the default namespace is in the `region ID` format. Example: cn-beijing.
+         * <strong>example:</strong>
+         * <p>cn-hangzhou:test_region</p>
          */
         public Builder logicalRegionId(String logicalRegionId) {
             this.putQueryParameter("LogicalRegionId", logicalRegionId);

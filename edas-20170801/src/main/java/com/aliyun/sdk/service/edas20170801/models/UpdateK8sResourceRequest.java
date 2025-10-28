@@ -1,27 +1,32 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.edas20170801.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link UpdateK8sResourceRequest} extends {@link RequestModel}
  *
  * <p>UpdateK8sResourceRequest</p>
  */
 public class UpdateK8sResourceRequest extends Request {
-    @Body
-    @NameInMap("ClusterId")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("ClusterId")
     private String clusterId;
 
-    @Body
-    @NameInMap("Namespace")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("Namespace")
     private String namespace;
 
-    @Body
-    @NameInMap("ResourceContent")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("ResourceContent")
     private String resourceContent;
 
     private UpdateK8sResourceRequest(Builder builder) {
@@ -39,7 +44,7 @@ public class UpdateK8sResourceRequest extends Request {
         return builder().build();
     }
 
-    @Override
+@Override
     public Builder toBuilder() {
         return new Builder(this);
     }
@@ -82,7 +87,10 @@ public class UpdateK8sResourceRequest extends Request {
         } 
 
         /**
-         * The ID of the cluster.
+         * <p>The ID of the cluster.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2e7059e9-2d********5e8ecac64ff</p>
          */
         public Builder clusterId(String clusterId) {
             this.putBodyParameter("ClusterId", clusterId);
@@ -91,7 +99,10 @@ public class UpdateK8sResourceRequest extends Request {
         }
 
         /**
-         * The ID of the namespace to which the Kubernetes resource belongs.
+         * <p>The ID of the namespace to which the Kubernetes resource belongs.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>app-namespace</p>
          */
         public Builder namespace(String namespace) {
             this.putBodyParameter("Namespace", namespace);
@@ -100,7 +111,10 @@ public class UpdateK8sResourceRequest extends Request {
         }
 
         /**
-         * The description of the resource in the YAML format.
+         * <p>The description of the resource in the YAML format.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>apiVersion: apps/v1 kind: Deployment metadata:   name: demo-app   namespace: app-namespace spec:   replicas: 3   selector:     matchLabels:       cluster: abc   template: # create pods using pod definition in this template     metadata:       labels:         cluster: abc     spec:       containers:       - image: registry-vpc.cn-hangzhou.aliyuncs.com/edas-demo-image/consumer:1.0         imagePullPolicy: Always         name: test-container         ports:         - containerPort: 80         env:         - name: foo           value: bar</p>
          */
         public Builder resourceContent(String resourceContent) {
             this.putBodyParameter("ResourceContent", resourceContent);

@@ -1,27 +1,32 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.edas20170801.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link QueryMigrateRegionListResponseBody} extends {@link TeaModel}
  *
  * <p>QueryMigrateRegionListResponseBody</p>
  */
 public class QueryMigrateRegionListResponseBody extends TeaModel {
-    @NameInMap("Code")
+    @com.aliyun.core.annotation.NameInMap("Code")
     private Integer code;
 
-    @NameInMap("Message")
+    @com.aliyun.core.annotation.NameInMap("Message")
     private String message;
 
-    @NameInMap("RegionEntityList")
+    @com.aliyun.core.annotation.NameInMap("RegionEntityList")
     private RegionEntityList regionEntityList;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
     private QueryMigrateRegionListResponseBody(Builder builder) {
@@ -37,6 +42,10 @@ public class QueryMigrateRegionListResponseBody extends TeaModel {
 
     public static QueryMigrateRegionListResponseBody create() {
         return builder().build();
+    }
+
+    public Builder toBuilder() {
+        return new Builder(this);
     }
 
     /**
@@ -73,8 +82,21 @@ public class QueryMigrateRegionListResponseBody extends TeaModel {
         private RegionEntityList regionEntityList; 
         private String requestId; 
 
+        private Builder() {
+        } 
+
+        private Builder(QueryMigrateRegionListResponseBody model) {
+            this.code = model.code;
+            this.message = model.message;
+            this.regionEntityList = model.regionEntityList;
+            this.requestId = model.requestId;
+        } 
+
         /**
-         * The HTTP status code that is returned.
+         * <p>The HTTP status code that is returned.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>200</p>
          */
         public Builder code(Integer code) {
             this.code = code;
@@ -82,7 +104,10 @@ public class QueryMigrateRegionListResponseBody extends TeaModel {
         }
 
         /**
-         * The message that is returned.
+         * <p>The message that is returned.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>success</p>
          */
         public Builder message(String message) {
             this.message = message;
@@ -90,7 +115,7 @@ public class QueryMigrateRegionListResponseBody extends TeaModel {
         }
 
         /**
-         * The namespaces.
+         * <p>The namespaces.</p>
          */
         public Builder regionEntityList(RegionEntityList regionEntityList) {
             this.regionEntityList = regionEntityList;
@@ -98,7 +123,10 @@ public class QueryMigrateRegionListResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the request.
+         * <p>The ID of the request.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>b197-40ab-9155-7ca7</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -111,11 +139,17 @@ public class QueryMigrateRegionListResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link QueryMigrateRegionListResponseBody} extends {@link TeaModel}
+     *
+     * <p>QueryMigrateRegionListResponseBody</p>
+     */
     public static class RegionEntity extends TeaModel {
-        @NameInMap("RegionName")
+        @com.aliyun.core.annotation.NameInMap("RegionName")
         private String regionName;
 
-        @NameInMap("RegionNo")
+        @com.aliyun.core.annotation.NameInMap("RegionNo")
         private String regionNo;
 
         private RegionEntity(Builder builder) {
@@ -149,8 +183,19 @@ public class QueryMigrateRegionListResponseBody extends TeaModel {
             private String regionName; 
             private String regionNo; 
 
+            private Builder() {
+            } 
+
+            private Builder(RegionEntity model) {
+                this.regionName = model.regionName;
+                this.regionNo = model.regionNo;
+            } 
+
             /**
-             * The name of the namespace.
+             * <p>The name of the namespace.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Beta</p>
              */
             public Builder regionName(String regionName) {
                 this.regionName = regionName;
@@ -158,7 +203,10 @@ public class QueryMigrateRegionListResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the namespace.
+             * <p>The ID of the namespace.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>cn-beijing:beta</p>
              */
             public Builder regionNo(String regionNo) {
                 this.regionNo = regionNo;
@@ -172,9 +220,15 @@ public class QueryMigrateRegionListResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link QueryMigrateRegionListResponseBody} extends {@link TeaModel}
+     *
+     * <p>QueryMigrateRegionListResponseBody</p>
+     */
     public static class RegionEntityList extends TeaModel {
-        @NameInMap("RegionEntity")
-        private java.util.List < RegionEntity> regionEntity;
+        @com.aliyun.core.annotation.NameInMap("RegionEntity")
+        private java.util.List<RegionEntity> regionEntity;
 
         private RegionEntityList(Builder builder) {
             this.regionEntity = builder.regionEntity;
@@ -191,17 +245,24 @@ public class QueryMigrateRegionListResponseBody extends TeaModel {
         /**
          * @return regionEntity
          */
-        public java.util.List < RegionEntity> getRegionEntity() {
+        public java.util.List<RegionEntity> getRegionEntity() {
             return this.regionEntity;
         }
 
         public static final class Builder {
-            private java.util.List < RegionEntity> regionEntity; 
+            private java.util.List<RegionEntity> regionEntity; 
+
+            private Builder() {
+            } 
+
+            private Builder(RegionEntityList model) {
+                this.regionEntity = model.regionEntity;
+            } 
 
             /**
              * RegionEntity.
              */
-            public Builder regionEntity(java.util.List < RegionEntity> regionEntity) {
+            public Builder regionEntity(java.util.List<RegionEntity> regionEntity) {
                 this.regionEntity = regionEntity;
                 return this;
             }

@@ -1,24 +1,29 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.edas20170801.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ListEcsNotInClusterRequest} extends {@link RequestModel}
  *
  * <p>ListEcsNotInClusterRequest</p>
  */
 public class ListEcsNotInClusterRequest extends Request {
-    @Query
-    @NameInMap("NetworkMode")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("NetworkMode")
+    @com.aliyun.core.annotation.Validation(required = true)
     private Integer networkMode;
 
-    @Query
-    @NameInMap("VpcId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("VpcId")
     private String vpcId;
 
     private ListEcsNotInClusterRequest(Builder builder) {
@@ -35,7 +40,7 @@ public class ListEcsNotInClusterRequest extends Request {
         return builder().build();
     }
 
-    @Override
+@Override
     public Builder toBuilder() {
         return new Builder(this);
     }
@@ -69,11 +74,15 @@ public class ListEcsNotInClusterRequest extends Request {
         } 
 
         /**
-         * The network type. Valid values:
-         * <p>
+         * <p>The network type. Valid values:</p>
+         * <ul>
+         * <li>1: classic network</li>
+         * <li>2: virtual private cloud (VPC)</li>
+         * </ul>
+         * <p>This parameter is required.</p>
          * 
-         * *   1: classic network
-         * *   2: virtual private cloud (VPC)
+         * <strong>example:</strong>
+         * <p>2</p>
          */
         public Builder networkMode(Integer networkMode) {
             this.putQueryParameter("NetworkMode", networkMode);
@@ -82,7 +91,10 @@ public class ListEcsNotInClusterRequest extends Request {
         }
 
         /**
-         * The ID of the VPC. This parameter is required if the NetworkMode parameter is set to 2.
+         * <p>The ID of the VPC. This parameter is required if the NetworkMode parameter is set to 2.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>vpc-2zef6ob8****v8x3q46kp</p>
          */
         public Builder vpcId(String vpcId) {
             this.putQueryParameter("VpcId", vpcId);

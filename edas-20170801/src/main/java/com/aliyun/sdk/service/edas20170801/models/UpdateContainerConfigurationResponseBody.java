@@ -1,27 +1,32 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.edas20170801.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link UpdateContainerConfigurationResponseBody} extends {@link TeaModel}
  *
  * <p>UpdateContainerConfigurationResponseBody</p>
  */
 public class UpdateContainerConfigurationResponseBody extends TeaModel {
-    @NameInMap("Code")
+    @com.aliyun.core.annotation.NameInMap("Code")
     private Integer code;
 
-    @NameInMap("ContainerConfiguration")
+    @com.aliyun.core.annotation.NameInMap("ContainerConfiguration")
     private ContainerConfiguration containerConfiguration;
 
-    @NameInMap("Message")
+    @com.aliyun.core.annotation.NameInMap("Message")
     private String message;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
     private UpdateContainerConfigurationResponseBody(Builder builder) {
@@ -37,6 +42,10 @@ public class UpdateContainerConfigurationResponseBody extends TeaModel {
 
     public static UpdateContainerConfigurationResponseBody create() {
         return builder().build();
+    }
+
+    public Builder toBuilder() {
+        return new Builder(this);
     }
 
     /**
@@ -73,8 +82,21 @@ public class UpdateContainerConfigurationResponseBody extends TeaModel {
         private String message; 
         private String requestId; 
 
+        private Builder() {
+        } 
+
+        private Builder(UpdateContainerConfigurationResponseBody model) {
+            this.code = model.code;
+            this.containerConfiguration = model.containerConfiguration;
+            this.message = model.message;
+            this.requestId = model.requestId;
+        } 
+
         /**
-         * The HTTP status code that is returned.
+         * <p>The HTTP status code that is returned.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>200</p>
          */
         public Builder code(Integer code) {
             this.code = code;
@@ -82,7 +104,7 @@ public class UpdateContainerConfigurationResponseBody extends TeaModel {
         }
 
         /**
-         * The configuration of the Tomcat container.
+         * <p>The configuration of the Tomcat container.</p>
          */
         public Builder containerConfiguration(ContainerConfiguration containerConfiguration) {
             this.containerConfiguration = containerConfiguration;
@@ -90,7 +112,10 @@ public class UpdateContainerConfigurationResponseBody extends TeaModel {
         }
 
         /**
-         * The additional information that is returned.
+         * <p>The additional information that is returned.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>success</p>
          */
         public Builder message(String message) {
             this.message = message;
@@ -98,7 +123,10 @@ public class UpdateContainerConfigurationResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the request.
+         * <p>The ID of the request.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>D16979DC-4D42-***************</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -111,20 +139,26 @@ public class UpdateContainerConfigurationResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link UpdateContainerConfigurationResponseBody} extends {@link TeaModel}
+     *
+     * <p>UpdateContainerConfigurationResponseBody</p>
+     */
     public static class ContainerConfiguration extends TeaModel {
-        @NameInMap("ContextPath")
+        @com.aliyun.core.annotation.NameInMap("ContextPath")
         private String contextPath;
 
-        @NameInMap("HttpPort")
+        @com.aliyun.core.annotation.NameInMap("HttpPort")
         private Integer httpPort;
 
-        @NameInMap("MaxThreads")
+        @com.aliyun.core.annotation.NameInMap("MaxThreads")
         private Integer maxThreads;
 
-        @NameInMap("URIEncoding")
+        @com.aliyun.core.annotation.NameInMap("URIEncoding")
         private String URIEncoding;
 
-        @NameInMap("UseBodyEncoding")
+        @com.aliyun.core.annotation.NameInMap("UseBodyEncoding")
         private Boolean useBodyEncoding;
 
         private ContainerConfiguration(Builder builder) {
@@ -185,8 +219,22 @@ public class UpdateContainerConfigurationResponseBody extends TeaModel {
             private String URIEncoding; 
             private Boolean useBodyEncoding; 
 
+            private Builder() {
+            } 
+
+            private Builder(ContainerConfiguration model) {
+                this.contextPath = model.contextPath;
+                this.httpPort = model.httpPort;
+                this.maxThreads = model.maxThreads;
+                this.URIEncoding = model.URIEncoding;
+                this.useBodyEncoding = model.useBodyEncoding;
+            } 
+
             /**
-             * The context path of the Tomcat container.
+             * <p>The context path of the Tomcat container.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>/</p>
              */
             public Builder contextPath(String contextPath) {
                 this.contextPath = contextPath;
@@ -194,7 +242,10 @@ public class UpdateContainerConfigurationResponseBody extends TeaModel {
             }
 
             /**
-             * The application port number for the Tomcat container.
+             * <p>The application port number for the Tomcat container.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>8080</p>
              */
             public Builder httpPort(Integer httpPort) {
                 this.httpPort = httpPort;
@@ -202,7 +253,10 @@ public class UpdateContainerConfigurationResponseBody extends TeaModel {
             }
 
             /**
-             * The maximum number of threads.
+             * <p>The maximum number of threads.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>20</p>
              */
             public Builder maxThreads(Integer maxThreads) {
                 this.maxThreads = maxThreads;
@@ -210,7 +264,10 @@ public class UpdateContainerConfigurationResponseBody extends TeaModel {
             }
 
             /**
-             * The URI encoding scheme. Valid values: ISO-8859-1, GBK, GB2312, and UTF-8.
+             * <p>The URI encoding scheme. Valid values: ISO-8859-1, GBK, GB2312, and UTF-8.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>ISO-8859-1</p>
              */
             public Builder URIEncoding(String URIEncoding) {
                 this.URIEncoding = URIEncoding;
@@ -218,7 +275,10 @@ public class UpdateContainerConfigurationResponseBody extends TeaModel {
             }
 
             /**
-             * Indicates whether useBodyEncodingForURI is enabled.
+             * <p>Indicates whether useBodyEncodingForURI is enabled.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>true</p>
              */
             public Builder useBodyEncoding(Boolean useBodyEncoding) {
                 this.useBodyEncoding = useBodyEncoding;

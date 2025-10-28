@@ -1,19 +1,24 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.edas20170801.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ListUserDefineRegionRequest} extends {@link RequestModel}
  *
  * <p>ListUserDefineRegionRequest</p>
  */
 public class ListUserDefineRegionRequest extends Request {
-    @Query
-    @NameInMap("DebugEnable")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("DebugEnable")
     private Boolean debugEnable;
 
     private ListUserDefineRegionRequest(Builder builder) {
@@ -29,7 +34,7 @@ public class ListUserDefineRegionRequest extends Request {
         return builder().build();
     }
 
-    @Override
+@Override
     public Builder toBuilder() {
         return new Builder(this);
     }
@@ -54,7 +59,10 @@ public class ListUserDefineRegionRequest extends Request {
         } 
 
         /**
-         * Specifies whether remote debugging is allowed.
+         * <p>Specifies whether remote debugging is allowed.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>false</p>
          */
         public Builder debugEnable(Boolean debugEnable) {
             this.putQueryParameter("DebugEnable", debugEnable);

@@ -1,31 +1,36 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.edas20170801.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link CreateK8sConfigMapRequest} extends {@link RequestModel}
  *
  * <p>CreateK8sConfigMapRequest</p>
  */
 public class CreateK8sConfigMapRequest extends Request {
-    @Body
-    @NameInMap("ClusterId")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("ClusterId")
     private String clusterId;
 
-    @Body
-    @NameInMap("Data")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("Data")
     private String data;
 
-    @Body
-    @NameInMap("Name")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("Name")
     private String name;
 
-    @Body
-    @NameInMap("Namespace")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("Namespace")
     private String namespace;
 
     private CreateK8sConfigMapRequest(Builder builder) {
@@ -44,7 +49,7 @@ public class CreateK8sConfigMapRequest extends Request {
         return builder().build();
     }
 
-    @Override
+@Override
     public Builder toBuilder() {
         return new Builder(this);
     }
@@ -96,7 +101,10 @@ public class CreateK8sConfigMapRequest extends Request {
         } 
 
         /**
-         * The ID of the Kubernetes cluster.
+         * <p>The ID of the Kubernetes cluster.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>b07c8192-****-adf4f7447720</p>
          */
         public Builder clusterId(String clusterId) {
             this.putBodyParameter("ClusterId", clusterId);
@@ -105,7 +113,10 @@ public class CreateK8sConfigMapRequest extends Request {
         }
 
         /**
-         * The data of the ConfigMap. The value must be a JSON array string.
+         * <p>The data of the ConfigMap. The value must be a JSON array string.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>[{&quot;Key&quot;:&quot;name&quot;,&quot;Value&quot;:&quot;william&quot;},{&quot;Key&quot;:&quot;age&quot;,&quot;Value&quot;:&quot;12&quot;}]</p>
          */
         public Builder data(String data) {
             this.putBodyParameter("Data", data);
@@ -114,7 +125,10 @@ public class CreateK8sConfigMapRequest extends Request {
         }
 
         /**
-         * The name of the ConfigMap. The name must start with a letter, and can contain digits, letters, and hyphens (-). It can be up to 63 characters in length.
+         * <p>The name of the ConfigMap. The name must start with a letter, and can contain digits, letters, and hyphens (-). It can be up to 63 characters in length.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>my-configmap</p>
          */
         public Builder name(String name) {
             this.putBodyParameter("Name", name);
@@ -123,7 +137,10 @@ public class CreateK8sConfigMapRequest extends Request {
         }
 
         /**
-         * The namespace of the Kubernetes cluster.
+         * <p>The namespace of the Kubernetes cluster.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>default</p>
          */
         public Builder namespace(String namespace) {
             this.putBodyParameter("Namespace", namespace);

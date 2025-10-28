@@ -1,29 +1,34 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.edas20170801.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link InstallAgentRequest} extends {@link RequestModel}
  *
  * <p>InstallAgentRequest</p>
  */
 public class InstallAgentRequest extends Request {
-    @Query
-    @NameInMap("ClusterId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ClusterId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String clusterId;
 
-    @Query
-    @NameInMap("DoAsync")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("DoAsync")
     private Boolean doAsync;
 
-    @Query
-    @NameInMap("InstanceIds")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("InstanceIds")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String instanceIds;
 
     private InstallAgentRequest(Builder builder) {
@@ -41,7 +46,7 @@ public class InstallAgentRequest extends Request {
         return builder().build();
     }
 
-    @Override
+@Override
     public Builder toBuilder() {
         return new Builder(this);
     }
@@ -84,7 +89,11 @@ public class InstallAgentRequest extends Request {
         } 
 
         /**
-         * The ID of the cluster.
+         * <p>The ID of the cluster.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>b3e3f77b-462e-<strong><strong>-</strong></strong>-bec8727a4dc8</p>
          */
         public Builder clusterId(String clusterId) {
             this.putQueryParameter("ClusterId", clusterId);
@@ -93,7 +102,10 @@ public class InstallAgentRequest extends Request {
         }
 
         /**
-         * This parameter is discontinued.
+         * <p>This parameter is discontinued.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder doAsync(Boolean doAsync) {
             this.putQueryParameter("DoAsync", doAsync);
@@ -102,7 +114,11 @@ public class InstallAgentRequest extends Request {
         }
 
         /**
-         * The ID of the ECS instance. Separate multiple IDs with commas (,). Example: instanceId1,instanceId2.
+         * <p>The ID of the ECS instance. Separate multiple IDs with commas (,). Example: instanceId1,instanceId2.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2ze7s2v0b789k60pk1af</p>
          */
         public Builder instanceIds(String instanceIds) {
             this.putQueryParameter("InstanceIds", instanceIds);

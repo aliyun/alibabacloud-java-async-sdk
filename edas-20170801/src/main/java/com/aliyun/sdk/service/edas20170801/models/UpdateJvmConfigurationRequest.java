@@ -1,40 +1,45 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.edas20170801.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link UpdateJvmConfigurationRequest} extends {@link RequestModel}
  *
  * <p>UpdateJvmConfigurationRequest</p>
  */
 public class UpdateJvmConfigurationRequest extends Request {
-    @Query
-    @NameInMap("AppId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("AppId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String appId;
 
-    @Query
-    @NameInMap("GroupId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("GroupId")
     private String groupId;
 
-    @Query
-    @NameInMap("MaxHeapSize")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("MaxHeapSize")
     private Integer maxHeapSize;
 
-    @Query
-    @NameInMap("MaxPermSize")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("MaxPermSize")
     private Integer maxPermSize;
 
-    @Query
-    @NameInMap("MinHeapSize")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("MinHeapSize")
     private Integer minHeapSize;
 
-    @Query
-    @NameInMap("Options")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Options")
     private String options;
 
     private UpdateJvmConfigurationRequest(Builder builder) {
@@ -55,7 +60,7 @@ public class UpdateJvmConfigurationRequest extends Request {
         return builder().build();
     }
 
-    @Override
+@Override
     public Builder toBuilder() {
         return new Builder(this);
     }
@@ -125,7 +130,11 @@ public class UpdateJvmConfigurationRequest extends Request {
         } 
 
         /**
-         * The ID of the application.
+         * <p>The ID of the application.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>c627c157-560d-*************</p>
          */
         public Builder appId(String appId) {
             this.putQueryParameter("AppId", appId);
@@ -134,14 +143,18 @@ public class UpdateJvmConfigurationRequest extends Request {
         }
 
         /**
-         * The ID of the instance group where the application is deployed. You can call the ListDeployGroup operation to query the group ID. For more information, see [ListDeployGroup](~~62077~~).
-         * <p>
+         * <p>The ID of the instance group where the application is deployed. You can call the ListDeployGroup operation to query the group ID. For more information, see <a href="https://help.aliyun.com/document_detail/62077.html">ListDeployGroup</a>.</p>
+         * <blockquote>
+         * </blockquote>
+         * <ul>
+         * <li><p>To configure the JVM parameters for an instance group, set this parameter to a specific ID.</p>
+         * </li>
+         * <li><p>To configure the JVM parameters for an application, leave this parameter empty.</p>
+         * </li>
+         * </ul>
          * 
-         * > 
-         * 
-         * *   To configure the JVM parameters for an instance group, set this parameter to a specific ID.
-         * 
-         * *   To configure the JVM parameters for an application, leave this parameter empty.
+         * <strong>example:</strong>
+         * <p>0afc726e-077e-4357-98b2-db9f7145****</p>
          */
         public Builder groupId(String groupId) {
             this.putQueryParameter("GroupId", groupId);
@@ -150,14 +163,18 @@ public class UpdateJvmConfigurationRequest extends Request {
         }
 
         /**
-         * The maximum size of the heap memory. Unit: MB.
-         * <p>
+         * <p>The maximum size of the heap memory. Unit: MB.</p>
+         * <blockquote>
+         * </blockquote>
+         * <ul>
+         * <li><p>If this parameter is not specified in the group configuration, the value specified in the application configuration is used.</p>
+         * </li>
+         * <li><p>If this parameter is not specified in the application configuration, the default value is used.</p>
+         * </li>
+         * </ul>
          * 
-         * > 
-         * 
-         * *   If this parameter is not specified in the group configuration, the value specified in the application configuration is used.
-         * 
-         * *   If this parameter is not specified in the application configuration, the default value is used.
+         * <strong>example:</strong>
+         * <p>500</p>
          */
         public Builder maxHeapSize(Integer maxHeapSize) {
             this.putQueryParameter("MaxHeapSize", maxHeapSize);
@@ -166,14 +183,18 @@ public class UpdateJvmConfigurationRequest extends Request {
         }
 
         /**
-         * The size of the permanent generation heap memory. Unit: MB.
-         * <p>
+         * <p>The size of the permanent generation heap memory. Unit: MB.</p>
+         * <blockquote>
+         * </blockquote>
+         * <ul>
+         * <li><p>If this parameter is not specified in the group configuration, the value specified in the application configuration is used.</p>
+         * </li>
+         * <li><p>If this parameter is not specified in the application configuration, the default value is used.</p>
+         * </li>
+         * </ul>
          * 
-         * > 
-         * 
-         * *   If this parameter is not specified in the group configuration, the value specified in the application configuration is used.
-         * 
-         * *   If this parameter is not specified in the application configuration, the default value is used.
+         * <strong>example:</strong>
+         * <p>1000</p>
          */
         public Builder maxPermSize(Integer maxPermSize) {
             this.putQueryParameter("MaxPermSize", maxPermSize);
@@ -182,14 +203,18 @@ public class UpdateJvmConfigurationRequest extends Request {
         }
 
         /**
-         * The initial size of the heap memory. Unit: MB.
-         * <p>
+         * <p>The initial size of the heap memory. Unit: MB.</p>
+         * <blockquote>
+         * </blockquote>
+         * <ul>
+         * <li><p>If this parameter is not specified in the group configuration, the value specified in the application configuration is used.</p>
+         * </li>
+         * <li><p>If this parameter is not specified in the application configuration, the default value is used.</p>
+         * </li>
+         * </ul>
          * 
-         * > 
-         * 
-         * *   If this parameter is not specified in the group configuration, the value specified in the application configuration is used.
-         * 
-         * *   If this parameter is not specified in the application configuration, the default value is used.
+         * <strong>example:</strong>
+         * <p>500</p>
          */
         public Builder minHeapSize(Integer minHeapSize) {
             this.putQueryParameter("MinHeapSize", minHeapSize);
@@ -198,14 +223,18 @@ public class UpdateJvmConfigurationRequest extends Request {
         }
 
         /**
-         * The custom JVM parameters.
-         * <p>
+         * <p>The custom JVM parameters.</p>
+         * <blockquote>
+         * </blockquote>
+         * <ul>
+         * <li><p>If this parameter is not specified in the group configuration, the value specified in the application configuration is used.</p>
+         * </li>
+         * <li><p>If this parameter is not specified in the application configuration, the default value is used.</p>
+         * </li>
+         * </ul>
          * 
-         * > 
-         * 
-         * *   If this parameter is not specified in the group configuration, the value specified in the application configuration is used.
-         * 
-         * *   If this parameter is not specified in the application configuration, the default value is used.
+         * <strong>example:</strong>
+         * <p>-Dproperty=value</p>
          */
         public Builder options(String options) {
             this.putQueryParameter("Options", options);

@@ -1,27 +1,32 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.edas20170801.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link InsertOrUpdateRegionResponseBody} extends {@link TeaModel}
  *
  * <p>InsertOrUpdateRegionResponseBody</p>
  */
 public class InsertOrUpdateRegionResponseBody extends TeaModel {
-    @NameInMap("Code")
+    @com.aliyun.core.annotation.NameInMap("Code")
     private Integer code;
 
-    @NameInMap("Message")
+    @com.aliyun.core.annotation.NameInMap("Message")
     private String message;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("UserDefineRegionEntity")
+    @com.aliyun.core.annotation.NameInMap("UserDefineRegionEntity")
     private UserDefineRegionEntity userDefineRegionEntity;
 
     private InsertOrUpdateRegionResponseBody(Builder builder) {
@@ -37,6 +42,10 @@ public class InsertOrUpdateRegionResponseBody extends TeaModel {
 
     public static InsertOrUpdateRegionResponseBody create() {
         return builder().build();
+    }
+
+    public Builder toBuilder() {
+        return new Builder(this);
     }
 
     /**
@@ -73,8 +82,21 @@ public class InsertOrUpdateRegionResponseBody extends TeaModel {
         private String requestId; 
         private UserDefineRegionEntity userDefineRegionEntity; 
 
+        private Builder() {
+        } 
+
+        private Builder(InsertOrUpdateRegionResponseBody model) {
+            this.code = model.code;
+            this.message = model.message;
+            this.requestId = model.requestId;
+            this.userDefineRegionEntity = model.userDefineRegionEntity;
+        } 
+
         /**
-         * The HTTP status code that is returned.
+         * <p>The HTTP status code that is returned.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>200</p>
          */
         public Builder code(Integer code) {
             this.code = code;
@@ -82,7 +104,10 @@ public class InsertOrUpdateRegionResponseBody extends TeaModel {
         }
 
         /**
-         * The additional information that is returned.
+         * <p>The additional information that is returned.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>success</p>
          */
         public Builder message(String message) {
             this.message = message;
@@ -90,7 +115,10 @@ public class InsertOrUpdateRegionResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the request.
+         * <p>The ID of the request.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>37793352-C568-4A5A-BF69-4DC853******</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -98,7 +126,7 @@ public class InsertOrUpdateRegionResponseBody extends TeaModel {
         }
 
         /**
-         * The information about the custom namespace.
+         * <p>The information about the custom namespace.</p>
          */
         public Builder userDefineRegionEntity(UserDefineRegionEntity userDefineRegionEntity) {
             this.userDefineRegionEntity = userDefineRegionEntity;
@@ -111,26 +139,32 @@ public class InsertOrUpdateRegionResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link InsertOrUpdateRegionResponseBody} extends {@link TeaModel}
+     *
+     * <p>InsertOrUpdateRegionResponseBody</p>
+     */
     public static class UserDefineRegionEntity extends TeaModel {
-        @NameInMap("BelongRegion")
+        @com.aliyun.core.annotation.NameInMap("BelongRegion")
         private String belongRegion;
 
-        @NameInMap("DebugEnable")
+        @com.aliyun.core.annotation.NameInMap("DebugEnable")
         private Boolean debugEnable;
 
-        @NameInMap("Description")
+        @com.aliyun.core.annotation.NameInMap("Description")
         private String description;
 
-        @NameInMap("Id")
+        @com.aliyun.core.annotation.NameInMap("Id")
         private Long id;
 
-        @NameInMap("RegionId")
+        @com.aliyun.core.annotation.NameInMap("RegionId")
         private String regionId;
 
-        @NameInMap("RegionName")
+        @com.aliyun.core.annotation.NameInMap("RegionName")
         private String regionName;
 
-        @NameInMap("UserId")
+        @com.aliyun.core.annotation.NameInMap("UserId")
         private String userId;
 
         private UserDefineRegionEntity(Builder builder) {
@@ -209,8 +243,24 @@ public class InsertOrUpdateRegionResponseBody extends TeaModel {
             private String regionName; 
             private String userId; 
 
+            private Builder() {
+            } 
+
+            private Builder(UserDefineRegionEntity model) {
+                this.belongRegion = model.belongRegion;
+                this.debugEnable = model.debugEnable;
+                this.description = model.description;
+                this.id = model.id;
+                this.regionId = model.regionId;
+                this.regionName = model.regionName;
+                this.userId = model.userId;
+            } 
+
             /**
-             * The ID of the region to which the namespace belongs.
+             * <p>The ID of the region to which the namespace belongs.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>cn-beijing</p>
              */
             public Builder belongRegion(String belongRegion) {
                 this.belongRegion = belongRegion;
@@ -218,11 +268,14 @@ public class InsertOrUpdateRegionResponseBody extends TeaModel {
             }
 
             /**
-             * Indicates whether remote debugging is enabled. Valid values:
-             * <p>
+             * <p>Indicates whether remote debugging is enabled. Valid values:</p>
+             * <ul>
+             * <li>true: Remote debugging is enabled.</li>
+             * <li>false: Remote debugging is disabled.</li>
+             * </ul>
              * 
-             * *   true: Remote debugging is enabled.
-             * *   false: Remote debugging is disabled.
+             * <strong>example:</strong>
+             * <p>false</p>
              */
             public Builder debugEnable(Boolean debugEnable) {
                 this.debugEnable = debugEnable;
@@ -230,7 +283,10 @@ public class InsertOrUpdateRegionResponseBody extends TeaModel {
             }
 
             /**
-             * The description of the namespace.
+             * <p>The description of the namespace.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Logical region</p>
              */
             public Builder description(String description) {
                 this.description = description;
@@ -238,7 +294,10 @@ public class InsertOrUpdateRegionResponseBody extends TeaModel {
             }
 
             /**
-             * Indicates whether the namespace is created or modified. If this parameter is left empty or 0 is returned, the namespace is created. Otherwise, the namespace is modified.
+             * <p>Indicates whether the namespace is created or modified. If this parameter is left empty or 0 is returned, the namespace is created. Otherwise, the namespace is modified.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>15160</p>
              */
             public Builder id(Long id) {
                 this.id = id;
@@ -246,11 +305,14 @@ public class InsertOrUpdateRegionResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the namespace.
-             * <p>
+             * <p>The ID of the namespace.</p>
+             * <ul>
+             * <li>The ID of a custom namespace is in the <code>region ID:namespace identifier</code> format. Example: cn-beijing:tdy218.</li>
+             * <li>The ID of the default namespace is in the <code>region ID</code> format. Example: cn-beijing.</li>
+             * </ul>
              * 
-             * *   The ID of a custom namespace is in the `region ID:namespace identifier` format. Example: cn-beijing:tdy218.
-             * *   The ID of the default namespace is in the `region ID` format. Example: cn-beijing.
+             * <strong>example:</strong>
+             * <p>cn-beijing:test</p>
              */
             public Builder regionId(String regionId) {
                 this.regionId = regionId;
@@ -258,7 +320,10 @@ public class InsertOrUpdateRegionResponseBody extends TeaModel {
             }
 
             /**
-             * The name of the namespace.
+             * <p>The name of the namespace.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>test_region</p>
              */
             public Builder regionName(String regionName) {
                 this.regionName = regionName;
@@ -266,7 +331,10 @@ public class InsertOrUpdateRegionResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the Alibaba Cloud account to which the custom namespace belongs.
+             * <p>The ID of the Alibaba Cloud account to which the custom namespace belongs.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>edas_****_test@aliyun-****.com</p>
              */
             public Builder userId(String userId) {
                 this.userId = userId;

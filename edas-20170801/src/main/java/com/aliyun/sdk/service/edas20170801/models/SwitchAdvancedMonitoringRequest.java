@@ -1,24 +1,29 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.edas20170801.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link SwitchAdvancedMonitoringRequest} extends {@link RequestModel}
  *
  * <p>SwitchAdvancedMonitoringRequest</p>
  */
 public class SwitchAdvancedMonitoringRequest extends Request {
-    @Query
-    @NameInMap("AppId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("AppId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String appId;
 
-    @Query
-    @NameInMap("EnableAdvancedMonitoring")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("EnableAdvancedMonitoring")
     private Boolean enableAdvancedMonitoring;
 
     private SwitchAdvancedMonitoringRequest(Builder builder) {
@@ -35,7 +40,7 @@ public class SwitchAdvancedMonitoringRequest extends Request {
         return builder().build();
     }
 
-    @Override
+@Override
     public Builder toBuilder() {
         return new Builder(this);
     }
@@ -69,7 +74,11 @@ public class SwitchAdvancedMonitoringRequest extends Request {
         } 
 
         /**
-         * The ID of the application for which you want to query or configure the advanced application monitoring feature.
+         * <p>The ID of the application for which you want to query or configure the advanced application monitoring feature.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>9e224bc6-a646-4484-<strong><strong>-e617b7e7</strong></strong></p>
          */
         public Builder appId(String appId) {
             this.putQueryParameter("AppId", appId);
@@ -78,13 +87,15 @@ public class SwitchAdvancedMonitoringRequest extends Request {
         }
 
         /**
-         * Specifies whether to enable the advanced application monitoring feature. Valid values:
-         * <p>
+         * <p>Specifies whether to enable the advanced application monitoring feature. Valid values:</p>
+         * <ul>
+         * <li>true: enables the advanced application monitoring feature.</li>
+         * <li>false: disables the advanced application monitoring feature.</li>
+         * </ul>
+         * <p>If you call this operation to query the status of the advanced application monitoring feature, you do not need to specify this parameter.</p>
          * 
-         * *   true: enables the advanced application monitoring feature.
-         * *   false: disables the advanced application monitoring feature.
-         * 
-         * If you call this operation to query the status of the advanced application monitoring feature, you do not need to specify this parameter.
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder enableAdvancedMonitoring(Boolean enableAdvancedMonitoring) {
             this.putQueryParameter("EnableAdvancedMonitoring", enableAdvancedMonitoring);

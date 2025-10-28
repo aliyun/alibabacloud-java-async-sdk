@@ -1,23 +1,28 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.edas20170801.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ListClusterRequest} extends {@link RequestModel}
  *
  * <p>ListClusterRequest</p>
  */
 public class ListClusterRequest extends Request {
-    @Query
-    @NameInMap("LogicalRegionId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("LogicalRegionId")
     private String logicalRegionId;
 
-    @Query
-    @NameInMap("ResourceGroupId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ResourceGroupId")
     private String resourceGroupId;
 
     private ListClusterRequest(Builder builder) {
@@ -34,7 +39,7 @@ public class ListClusterRequest extends Request {
         return builder().build();
     }
 
-    @Override
+@Override
     public Builder toBuilder() {
         return new Builder(this);
     }
@@ -68,11 +73,14 @@ public class ListClusterRequest extends Request {
         } 
 
         /**
-         * The ID of the namespace. You can call the ListUserDefineRegion operation to query the namespace ID. For more information, see [ListUserDefineRegion](~~149377~~).
-         * <p>
+         * <p>The ID of the namespace. You can call the ListUserDefineRegion operation to query the namespace ID. For more information, see <a href="https://help.aliyun.com/document_detail/149377.html">ListUserDefineRegion</a>.</p>
+         * <ul>
+         * <li>If this parameter is left empty, the clusters in the default namespace are queried.</li>
+         * <li>If this parameter is specified, the clusters in the specified namespace are queried.</li>
+         * </ul>
          * 
-         * *   If this parameter is left empty, the clusters in the default namespace are queried.
-         * *   If this parameter is specified, the clusters in the specified namespace are queried.
+         * <strong>example:</strong>
+         * <p>cn-beijing:test</p>
          */
         public Builder logicalRegionId(String logicalRegionId) {
             this.putQueryParameter("LogicalRegionId", logicalRegionId);
@@ -81,11 +89,14 @@ public class ListClusterRequest extends Request {
         }
 
         /**
-         * The ID of the resource group. You can call the ListResourceGroup operation to query the resource group ID. For more information, see [ListResourceGroup](~~62055~~).
-         * <p>
+         * <p>The ID of the resource group. You can call the ListResourceGroup operation to query the resource group ID. For more information, see <a href="https://help.aliyun.com/document_detail/62055.html">ListResourceGroup</a>.</p>
+         * <ul>
+         * <li>If this parameter is left empty, the clusters in the default resource group are queried.</li>
+         * <li>If this parameter is specified, the clusters in the specified resource group are queried.</li>
+         * </ul>
          * 
-         * *   If this parameter is left empty, the clusters in the default resource group are queried.
-         * *   If this parameter is specified, the clusters in the specified resource group are queried.
+         * <strong>example:</strong>
+         * <p>461</p>
          */
         public Builder resourceGroupId(String resourceGroupId) {
             this.putQueryParameter("ResourceGroupId", resourceGroupId);

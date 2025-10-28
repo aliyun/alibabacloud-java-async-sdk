@@ -1,27 +1,32 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.edas20170801.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link SwitchAdvancedMonitoringResponseBody} extends {@link TeaModel}
  *
  * <p>SwitchAdvancedMonitoringResponseBody</p>
  */
 public class SwitchAdvancedMonitoringResponseBody extends TeaModel {
-    @NameInMap("AdvancedMonitoringEnabled")
+    @com.aliyun.core.annotation.NameInMap("AdvancedMonitoringEnabled")
     private Boolean advancedMonitoringEnabled;
 
-    @NameInMap("Code")
+    @com.aliyun.core.annotation.NameInMap("Code")
     private Integer code;
 
-    @NameInMap("Message")
+    @com.aliyun.core.annotation.NameInMap("Message")
     private String message;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
     private SwitchAdvancedMonitoringResponseBody(Builder builder) {
@@ -37,6 +42,10 @@ public class SwitchAdvancedMonitoringResponseBody extends TeaModel {
 
     public static SwitchAdvancedMonitoringResponseBody create() {
         return builder().build();
+    }
+
+    public Builder toBuilder() {
+        return new Builder(this);
     }
 
     /**
@@ -73,12 +82,25 @@ public class SwitchAdvancedMonitoringResponseBody extends TeaModel {
         private String message; 
         private String requestId; 
 
+        private Builder() {
+        } 
+
+        private Builder(SwitchAdvancedMonitoringResponseBody model) {
+            this.advancedMonitoringEnabled = model.advancedMonitoringEnabled;
+            this.code = model.code;
+            this.message = model.message;
+            this.requestId = model.requestId;
+        } 
+
         /**
-         * Indicates whether the advanced application monitoring feature is enabled. Valid values:
-         * <p>
+         * <p>Indicates whether the advanced application monitoring feature is enabled. Valid values:</p>
+         * <ul>
+         * <li>true: The advanced application monitoring feature is enabled.</li>
+         * <li>false: The advanced application monitoring feature is disabled.</li>
+         * </ul>
          * 
-         * *   true: The advanced application monitoring feature is enabled.
-         * *   false: The advanced application monitoring feature is disabled.
+         * <strong>example:</strong>
+         * <p>false</p>
          */
         public Builder advancedMonitoringEnabled(Boolean advancedMonitoringEnabled) {
             this.advancedMonitoringEnabled = advancedMonitoringEnabled;
@@ -86,7 +108,10 @@ public class SwitchAdvancedMonitoringResponseBody extends TeaModel {
         }
 
         /**
-         * The HTTP status code that is returned.
+         * <p>The HTTP status code that is returned.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>200</p>
          */
         public Builder code(Integer code) {
             this.code = code;
@@ -94,7 +119,10 @@ public class SwitchAdvancedMonitoringResponseBody extends TeaModel {
         }
 
         /**
-         * The additional information that is returned.
+         * <p>The additional information that is returned.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>The advanced monitoring status is disabled already for application which app_id is 9e224bc6-a646-4484-ae31-e617b7e7****</p>
          */
         public Builder message(String message) {
             this.message = message;
@@ -102,7 +130,10 @@ public class SwitchAdvancedMonitoringResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the request.
+         * <p>The ID of the request.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>577AED12-32D8-40B6-991F-17D7A601****</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;

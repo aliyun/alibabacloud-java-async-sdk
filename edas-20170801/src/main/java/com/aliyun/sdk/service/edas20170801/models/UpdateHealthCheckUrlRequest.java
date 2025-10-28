@@ -1,24 +1,29 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.edas20170801.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link UpdateHealthCheckUrlRequest} extends {@link RequestModel}
  *
  * <p>UpdateHealthCheckUrlRequest</p>
  */
 public class UpdateHealthCheckUrlRequest extends Request {
-    @Query
-    @NameInMap("AppId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("AppId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String appId;
 
-    @Query
-    @NameInMap("hcURL")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("hcURL")
     private String hcURL;
 
     private UpdateHealthCheckUrlRequest(Builder builder) {
@@ -35,7 +40,7 @@ public class UpdateHealthCheckUrlRequest extends Request {
         return builder().build();
     }
 
-    @Override
+@Override
     public Builder toBuilder() {
         return new Builder(this);
     }
@@ -69,7 +74,11 @@ public class UpdateHealthCheckUrlRequest extends Request {
         } 
 
         /**
-         * The ID of the application.
+         * <p>The ID of the application.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>c627c157-560d-43ff-***************</p>
          */
         public Builder appId(String appId) {
             this.putQueryParameter("AppId", appId);
@@ -78,7 +87,10 @@ public class UpdateHealthCheckUrlRequest extends Request {
         }
 
         /**
-         * The health check URL of the application. The URL must start with `http://`, and can be up to 255 characters in length. Example: `http://127.0.0.1:8080/_ehc.html`. If this parameter is not specified, the health check URL of the application is not changed.
+         * <p>The health check URL of the application. The URL must start with <code>http://</code>, and can be up to 255 characters in length. Example: <code>http://127.0.0.1:8080/_ehc.html</code>. If this parameter is not specified, the health check URL of the application is not changed.</p>
+         * 
+         * <strong>example:</strong>
+         * <p><a href="http://127.0.0.1:8080/_ehc.html">http://127.0.0.1:8080/_ehc.html</a></p>
          */
         public Builder hcURL(String hcURL) {
             this.putQueryParameter("hcURL", hcURL);

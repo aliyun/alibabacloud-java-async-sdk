@@ -1,43 +1,48 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.edas20170801.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ListK8sConfigMapsRequest} extends {@link RequestModel}
  *
  * <p>ListK8sConfigMapsRequest</p>
  */
 public class ListK8sConfigMapsRequest extends Request {
-    @Query
-    @NameInMap("ClusterId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ClusterId")
     private String clusterId;
 
-    @Query
-    @NameInMap("Condition")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Condition")
     private String condition;
 
-    @Query
-    @NameInMap("Namespace")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Namespace")
     private String namespace;
 
-    @Query
-    @NameInMap("PageNo")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("PageNo")
     private Integer pageNo;
 
-    @Query
-    @NameInMap("PageSize")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("PageSize")
     private Integer pageSize;
 
-    @Query
-    @NameInMap("RegionId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("RegionId")
     private String regionId;
 
-    @Query
-    @NameInMap("ShowRelatedApps")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ShowRelatedApps")
     private Boolean showRelatedApps;
 
     private ListK8sConfigMapsRequest(Builder builder) {
@@ -59,7 +64,7 @@ public class ListK8sConfigMapsRequest extends Request {
         return builder().build();
     }
 
-    @Override
+@Override
     public Builder toBuilder() {
         return new Builder(this);
     }
@@ -138,7 +143,10 @@ public class ListK8sConfigMapsRequest extends Request {
         } 
 
         /**
-         * The ID of the cluster.
+         * <p>The ID of the cluster.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>c0830281-366c-41b6-80fb-542e76******</p>
          */
         public Builder clusterId(String clusterId) {
             this.putQueryParameter("ClusterId", clusterId);
@@ -147,7 +155,10 @@ public class ListK8sConfigMapsRequest extends Request {
         }
 
         /**
-         * The filter conditions. Set this parameter to a JSON string in the format of {"field":"Name", "pattern":"configmap-"}.
+         * <p>The filter conditions. Set this parameter to a JSON string in the format of {&quot;field&quot;:&quot;Name&quot;, &quot;pattern&quot;:&quot;configmap-&quot;}.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>{&quot;field&quot;:&quot;Name&quot;, &quot;pattern&quot;:&quot;configmap-&quot;}</p>
          */
         public Builder condition(String condition) {
             this.putQueryParameter("Condition", condition);
@@ -156,7 +167,10 @@ public class ListK8sConfigMapsRequest extends Request {
         }
 
         /**
-         * The namespace of the Kubernetes cluster.
+         * <p>The namespace of the Kubernetes cluster.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>default</p>
          */
         public Builder namespace(String namespace) {
             this.putQueryParameter("Namespace", namespace);
@@ -165,7 +179,10 @@ public class ListK8sConfigMapsRequest extends Request {
         }
 
         /**
-         * The number of the page to return. Pages start from Page 0.
+         * <p>The number of the page to return. Pages start from Page 0.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>0</p>
          */
         public Builder pageNo(Integer pageNo) {
             this.putQueryParameter("PageNo", pageNo);
@@ -174,7 +191,10 @@ public class ListK8sConfigMapsRequest extends Request {
         }
 
         /**
-         * The number of entries to return on each page.
+         * <p>The number of entries to return on each page.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>50</p>
          */
         public Builder pageSize(Integer pageSize) {
             this.putQueryParameter("PageSize", pageSize);
@@ -183,7 +203,10 @@ public class ListK8sConfigMapsRequest extends Request {
         }
 
         /**
-         * The ID of the region.
+         * <p>The ID of the region.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-hangzhou</p>
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);
@@ -192,7 +215,10 @@ public class ListK8sConfigMapsRequest extends Request {
         }
 
         /**
-         * Specifies whether to return a list of applications that use a ConfigMap. Valid values: true and false.
+         * <p>Specifies whether to return a list of applications that use a ConfigMap. Valid values: true and false.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder showRelatedApps(Boolean showRelatedApps) {
             this.putQueryParameter("ShowRelatedApps", showRelatedApps);

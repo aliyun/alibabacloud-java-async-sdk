@@ -1,33 +1,38 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.edas20170801.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link QuerySlsLogStoreListRequest} extends {@link RequestModel}
  *
  * <p>QuerySlsLogStoreListRequest</p>
  */
 public class QuerySlsLogStoreListRequest extends Request {
-    @Query
-    @NameInMap("AppId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("AppId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String appId;
 
-    @Query
-    @NameInMap("CurrentPage")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("CurrentPage")
     private Integer currentPage;
 
-    @Query
-    @NameInMap("PageSize")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("PageSize")
     private Integer pageSize;
 
-    @Query
-    @NameInMap("Type")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Type")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String type;
 
     private QuerySlsLogStoreListRequest(Builder builder) {
@@ -46,7 +51,7 @@ public class QuerySlsLogStoreListRequest extends Request {
         return builder().build();
     }
 
-    @Override
+@Override
     public Builder toBuilder() {
         return new Builder(this);
     }
@@ -98,7 +103,11 @@ public class QuerySlsLogStoreListRequest extends Request {
         } 
 
         /**
-         * The ID of the application.
+         * <p>The ID of the application.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>af58edcf-f7eb-<strong><strong>-</strong></strong>-db4e425f****</p>
          */
         public Builder appId(String appId) {
             this.putQueryParameter("AppId", appId);
@@ -107,7 +116,10 @@ public class QuerySlsLogStoreListRequest extends Request {
         }
 
         /**
-         * The number of the page to return. Pages start from Page 1.
+         * <p>The number of the page to return. Pages start from Page 1.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder currentPage(Integer currentPage) {
             this.putQueryParameter("CurrentPage", currentPage);
@@ -116,7 +128,10 @@ public class QuerySlsLogStoreListRequest extends Request {
         }
 
         /**
-         * The number of entries to return on each page.
+         * <p>The number of entries to return on each page.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1000</p>
          */
         public Builder pageSize(Integer pageSize) {
             this.putQueryParameter("PageSize", pageSize);
@@ -125,11 +140,15 @@ public class QuerySlsLogStoreListRequest extends Request {
         }
 
         /**
-         * The type of data that is collected by Log Service. Valid values:
-         * <p>
+         * <p>The type of data that is collected by Log Service. Valid values:</p>
+         * <ul>
+         * <li>file: the file type</li>
+         * <li>stdout: the standard output type</li>
+         * </ul>
+         * <p>This parameter is required.</p>
          * 
-         * *   file: the file type
-         * *   stdout: the standard output type
+         * <strong>example:</strong>
+         * <p>file</p>
          */
         public Builder type(String type) {
             this.putQueryParameter("Type", type);

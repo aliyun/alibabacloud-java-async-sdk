@@ -1,27 +1,32 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.edas20170801.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ListEcsNotInClusterResponseBody} extends {@link TeaModel}
  *
  * <p>ListEcsNotInClusterResponseBody</p>
  */
 public class ListEcsNotInClusterResponseBody extends TeaModel {
-    @NameInMap("Code")
+    @com.aliyun.core.annotation.NameInMap("Code")
     private Integer code;
 
-    @NameInMap("EcsEntityList")
+    @com.aliyun.core.annotation.NameInMap("EcsEntityList")
     private EcsEntityList ecsEntityList;
 
-    @NameInMap("Message")
+    @com.aliyun.core.annotation.NameInMap("Message")
     private String message;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
     private ListEcsNotInClusterResponseBody(Builder builder) {
@@ -37,6 +42,10 @@ public class ListEcsNotInClusterResponseBody extends TeaModel {
 
     public static ListEcsNotInClusterResponseBody create() {
         return builder().build();
+    }
+
+    public Builder toBuilder() {
+        return new Builder(this);
     }
 
     /**
@@ -73,8 +82,21 @@ public class ListEcsNotInClusterResponseBody extends TeaModel {
         private String message; 
         private String requestId; 
 
+        private Builder() {
+        } 
+
+        private Builder(ListEcsNotInClusterResponseBody model) {
+            this.code = model.code;
+            this.ecsEntityList = model.ecsEntityList;
+            this.message = model.message;
+            this.requestId = model.requestId;
+        } 
+
         /**
-         * The HTTP status code that is returned.
+         * <p>The HTTP status code that is returned.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>200</p>
          */
         public Builder code(Integer code) {
             this.code = code;
@@ -82,7 +104,7 @@ public class ListEcsNotInClusterResponseBody extends TeaModel {
         }
 
         /**
-         * The information about ECS instances.
+         * <p>The information about ECS instances.</p>
          */
         public Builder ecsEntityList(EcsEntityList ecsEntityList) {
             this.ecsEntityList = ecsEntityList;
@@ -90,7 +112,10 @@ public class ListEcsNotInClusterResponseBody extends TeaModel {
         }
 
         /**
-         * The message that is returned.
+         * <p>The message that is returned.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>success</p>
          */
         public Builder message(String message) {
             this.message = message;
@@ -98,7 +123,10 @@ public class ListEcsNotInClusterResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the request.
+         * <p>The ID of the request.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>b197-40ab-9155-****</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -111,44 +139,50 @@ public class ListEcsNotInClusterResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link ListEcsNotInClusterResponseBody} extends {@link TeaModel}
+     *
+     * <p>ListEcsNotInClusterResponseBody</p>
+     */
     public static class EcsEntity extends TeaModel {
-        @NameInMap("Cpu")
+        @com.aliyun.core.annotation.NameInMap("Cpu")
         private Integer cpu;
 
-        @NameInMap("Eip")
+        @com.aliyun.core.annotation.NameInMap("Eip")
         private String eip;
 
-        @NameInMap("Expired")
+        @com.aliyun.core.annotation.NameInMap("Expired")
         private Boolean expired;
 
-        @NameInMap("InnerIp")
+        @com.aliyun.core.annotation.NameInMap("InnerIp")
         private String innerIp;
 
-        @NameInMap("InstanceId")
+        @com.aliyun.core.annotation.NameInMap("InstanceId")
         private String instanceId;
 
-        @NameInMap("InstanceName")
+        @com.aliyun.core.annotation.NameInMap("InstanceName")
         private String instanceName;
 
-        @NameInMap("Mem")
+        @com.aliyun.core.annotation.NameInMap("Mem")
         private Integer mem;
 
-        @NameInMap("PrivateIp")
+        @com.aliyun.core.annotation.NameInMap("PrivateIp")
         private String privateIp;
 
-        @NameInMap("PublicIp")
+        @com.aliyun.core.annotation.NameInMap("PublicIp")
         private String publicIp;
 
-        @NameInMap("RegionId")
+        @com.aliyun.core.annotation.NameInMap("RegionId")
         private String regionId;
 
-        @NameInMap("Status")
+        @com.aliyun.core.annotation.NameInMap("Status")
         private String status;
 
-        @NameInMap("VpcId")
+        @com.aliyun.core.annotation.NameInMap("VpcId")
         private String vpcId;
 
-        @NameInMap("VpcName")
+        @com.aliyun.core.annotation.NameInMap("VpcName")
         private String vpcName;
 
         private EcsEntity(Builder builder) {
@@ -281,8 +315,30 @@ public class ListEcsNotInClusterResponseBody extends TeaModel {
             private String vpcId; 
             private String vpcName; 
 
+            private Builder() {
+            } 
+
+            private Builder(EcsEntity model) {
+                this.cpu = model.cpu;
+                this.eip = model.eip;
+                this.expired = model.expired;
+                this.innerIp = model.innerIp;
+                this.instanceId = model.instanceId;
+                this.instanceName = model.instanceName;
+                this.mem = model.mem;
+                this.privateIp = model.privateIp;
+                this.publicIp = model.publicIp;
+                this.regionId = model.regionId;
+                this.status = model.status;
+                this.vpcId = model.vpcId;
+                this.vpcName = model.vpcName;
+            } 
+
             /**
-             * The number of CPU cores.
+             * <p>The number of CPU cores.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2</p>
              */
             public Builder cpu(Integer cpu) {
                 this.cpu = cpu;
@@ -290,7 +346,10 @@ public class ListEcsNotInClusterResponseBody extends TeaModel {
             }
 
             /**
-             * The elastic IP address (EIP) associated with the ECS instance.
+             * <p>The elastic IP address (EIP) associated with the ECS instance.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>139.30.xxx.xx</p>
              */
             public Builder eip(String eip) {
                 this.eip = eip;
@@ -298,11 +357,14 @@ public class ListEcsNotInClusterResponseBody extends TeaModel {
             }
 
             /**
-             * Indicates whether the ECS instance has expired. Valid values:
-             * <p>
+             * <p>Indicates whether the ECS instance has expired. Valid values:</p>
+             * <ul>
+             * <li><strong>true</strong>: The ECS instance has expired.</li>
+             * <li><strong>false</strong>: The ECS instance has not expired.</li>
+             * </ul>
              * 
-             * *   **true**: The ECS instance has expired.
-             * *   **false**: The ECS instance has not expired.
+             * <strong>example:</strong>
+             * <p>false</p>
              */
             public Builder expired(Boolean expired) {
                 this.expired = expired;
@@ -310,7 +372,10 @@ public class ListEcsNotInClusterResponseBody extends TeaModel {
             }
 
             /**
-             * The private IP address of the ECS instance.
+             * <p>The private IP address of the ECS instance.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>192.168.20.113</p>
              */
             public Builder innerIp(String innerIp) {
                 this.innerIp = innerIp;
@@ -318,7 +383,10 @@ public class ListEcsNotInClusterResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the ECS instance.
+             * <p>The ID of the ECS instance.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>i-2ze7s2v0b***********</p>
              */
             public Builder instanceId(String instanceId) {
                 this.instanceId = instanceId;
@@ -326,7 +394,10 @@ public class ListEcsNotInClusterResponseBody extends TeaModel {
             }
 
             /**
-             * The name of the ECS instance.
+             * <p>The name of the ECS instance.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>worker-k8s-for-cs-c9dfa009a5e7c4faab2010b87cae4****</p>
              */
             public Builder instanceName(String instanceName) {
                 this.instanceName = instanceName;
@@ -334,7 +405,10 @@ public class ListEcsNotInClusterResponseBody extends TeaModel {
             }
 
             /**
-             * The size of memory. Unit: bytes.
+             * <p>The size of memory. Unit: bytes.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>4096</p>
              */
             public Builder mem(Integer mem) {
                 this.mem = mem;
@@ -342,7 +416,10 @@ public class ListEcsNotInClusterResponseBody extends TeaModel {
             }
 
             /**
-             * The private IP address of the ECS instance.
+             * <p>The private IP address of the ECS instance.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>192.168.<em>.</em>*</p>
              */
             public Builder privateIp(String privateIp) {
                 this.privateIp = privateIp;
@@ -350,7 +427,10 @@ public class ListEcsNotInClusterResponseBody extends TeaModel {
             }
 
             /**
-             * The public IP address of the ECS instance.
+             * <p>The public IP address of the ECS instance.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>131.30.xxx.xx</p>
              */
             public Builder publicIp(String publicIp) {
                 this.publicIp = publicIp;
@@ -358,7 +438,10 @@ public class ListEcsNotInClusterResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the region where the ECS instance is located.
+             * <p>The ID of the region where the ECS instance is located.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>cn-beijing</p>
              */
             public Builder regionId(String regionId) {
                 this.regionId = regionId;
@@ -366,14 +449,17 @@ public class ListEcsNotInClusterResponseBody extends TeaModel {
             }
 
             /**
-             * The status of the ECS instance. Valid values:
-             * <p>
+             * <p>The status of the ECS instance. Valid values:</p>
+             * <ul>
+             * <li><strong>Pending</strong>: The ECS instance is being created.</li>
+             * <li><strong>Running</strong>: The ECS instance is running.</li>
+             * <li><strong>Starting</strong>: The ECS instance is being started.</li>
+             * <li><strong>Stopping</strong>: The ECS instance is being stopped.</li>
+             * <li><strong>Stopped</strong>: The ECS instance is stopped.</li>
+             * </ul>
              * 
-             * *   **Pending**: The ECS instance is being created.
-             * *   **Running**: The ECS instance is running.
-             * *   **Starting**: The ECS instance is being started.
-             * *   **Stopping**: The ECS instance is being stopped.
-             * *   **Stopped**: The ECS instance is stopped.
+             * <strong>example:</strong>
+             * <p>Running</p>
              */
             public Builder status(String status) {
                 this.status = status;
@@ -381,7 +467,10 @@ public class ListEcsNotInClusterResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the VPC.
+             * <p>The ID of the VPC.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>vpc-2zef6ob8mrlzv8x3q****</p>
              */
             public Builder vpcId(String vpcId) {
                 this.vpcId = vpcId;
@@ -389,7 +478,10 @@ public class ListEcsNotInClusterResponseBody extends TeaModel {
             }
 
             /**
-             * The name of the VPC.
+             * <p>The name of the VPC.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>test</p>
              */
             public Builder vpcName(String vpcName) {
                 this.vpcName = vpcName;
@@ -403,9 +495,15 @@ public class ListEcsNotInClusterResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link ListEcsNotInClusterResponseBody} extends {@link TeaModel}
+     *
+     * <p>ListEcsNotInClusterResponseBody</p>
+     */
     public static class EcsEntityList extends TeaModel {
-        @NameInMap("EcsEntity")
-        private java.util.List < EcsEntity> ecsEntity;
+        @com.aliyun.core.annotation.NameInMap("EcsEntity")
+        private java.util.List<EcsEntity> ecsEntity;
 
         private EcsEntityList(Builder builder) {
             this.ecsEntity = builder.ecsEntity;
@@ -422,17 +520,24 @@ public class ListEcsNotInClusterResponseBody extends TeaModel {
         /**
          * @return ecsEntity
          */
-        public java.util.List < EcsEntity> getEcsEntity() {
+        public java.util.List<EcsEntity> getEcsEntity() {
             return this.ecsEntity;
         }
 
         public static final class Builder {
-            private java.util.List < EcsEntity> ecsEntity; 
+            private java.util.List<EcsEntity> ecsEntity; 
+
+            private Builder() {
+            } 
+
+            private Builder(EcsEntityList model) {
+                this.ecsEntity = model.ecsEntity;
+            } 
 
             /**
              * EcsEntity.
              */
-            public Builder ecsEntity(java.util.List < EcsEntity> ecsEntity) {
+            public Builder ecsEntity(java.util.List<EcsEntity> ecsEntity) {
                 this.ecsEntity = ecsEntity;
                 return this;
             }

@@ -1,47 +1,52 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.edas20170801.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link CreateApplicationScalingRuleRequest} extends {@link RequestModel}
  *
  * <p>CreateApplicationScalingRuleRequest</p>
  */
 public class CreateApplicationScalingRuleRequest extends Request {
-    @Query
-    @NameInMap("AppId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("AppId")
     private String appId;
 
-    @Query
-    @NameInMap("ScalingBehaviour")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ScalingBehaviour")
     private String scalingBehaviour;
 
-    @Query
-    @NameInMap("ScalingRuleEnable")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ScalingRuleEnable")
     private Boolean scalingRuleEnable;
 
-    @Query
-    @NameInMap("ScalingRuleMetric")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ScalingRuleMetric")
     private String scalingRuleMetric;
 
-    @Query
-    @NameInMap("ScalingRuleName")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ScalingRuleName")
     private String scalingRuleName;
 
-    @Query
-    @NameInMap("ScalingRuleTimer")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ScalingRuleTimer")
     private String scalingRuleTimer;
 
-    @Query
-    @NameInMap("ScalingRuleTrigger")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ScalingRuleTrigger")
     private String scalingRuleTrigger;
 
-    @Query
-    @NameInMap("ScalingRuleType")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ScalingRuleType")
     private String scalingRuleType;
 
     private CreateApplicationScalingRuleRequest(Builder builder) {
@@ -64,7 +69,7 @@ public class CreateApplicationScalingRuleRequest extends Request {
         return builder().build();
     }
 
-    @Override
+@Override
     public Builder toBuilder() {
         return new Builder(this);
     }
@@ -152,7 +157,10 @@ public class CreateApplicationScalingRuleRequest extends Request {
         } 
 
         /**
-         * The ID of the application. You can call the ListApplication operation to query the application ID. For more information, see [ListApplicationlink](~~149390~~).
+         * <p>The ID of the application. You can call the ListApplication operation to query the application ID. For more information, see <a href="https://help.aliyun.com/document_detail/149390.html">ListApplicationlink</a>.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>78194c76-3dca-418e-a263-cccd1ab4****</p>
          */
         public Builder appId(String appId) {
             this.putQueryParameter("AppId", appId);
@@ -161,7 +169,33 @@ public class CreateApplicationScalingRuleRequest extends Request {
         }
 
         /**
-         * Configure custom elastic behavior, refer to the example for specific data structure.
+         * <p>Configure custom elastic behavior, refer to the example for specific data structure.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>{
+         *       &quot;scaleUp&quot;: {
+         *             &quot;stabilizationWindowSeconds&quot;: &quot;0&quot;,
+         *             &quot;selectPolicy&quot;: &quot;Max&quot;,
+         *             &quot;policies&quot;: [
+         *                   {
+         *                         &quot;type&quot;: &quot;Pods&quot;,
+         *                         &quot;value&quot;: 5,
+         *                         &quot;periodSeconds&quot;: 15
+         *                   }
+         *             ]
+         *       },
+         *       &quot;scaleDown&quot;: {
+         *             &quot;stabilizationWindowSeconds&quot;: &quot;300&quot;,
+         *             &quot;selectPolicy&quot;: &quot;Max&quot;,
+         *             &quot;policies&quot;: [
+         *                   {
+         *                         &quot;type&quot;: &quot;Percent&quot;,
+         *                         &quot;value&quot;: 200,
+         *                         &quot;periodSeconds&quot;: 15
+         *                   }
+         *             ]
+         *       }
+         * }</p>
          */
         public Builder scalingBehaviour(String scalingBehaviour) {
             this.putQueryParameter("ScalingBehaviour", scalingBehaviour);
@@ -170,11 +204,14 @@ public class CreateApplicationScalingRuleRequest extends Request {
         }
 
         /**
-         * Specifies whether to enable the auto scaling policy. Valid values:
-         * <p>
+         * <p>Specifies whether to enable the auto scaling policy. Valid values:</p>
+         * <ul>
+         * <li><strong>true</strong>: enables the auto scaling policy.</li>
+         * <li><strong>false</strong>: disables the auto scaling policy.</li>
+         * </ul>
          * 
-         * *   **true**: enables the auto scaling policy.
-         * *   **false**: disables the auto scaling policy.
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder scalingRuleEnable(Boolean scalingRuleEnable) {
             this.putQueryParameter("ScalingRuleEnable", scalingRuleEnable);
@@ -183,7 +220,10 @@ public class CreateApplicationScalingRuleRequest extends Request {
         }
 
         /**
-         * This parameter is deprecated.
+         * <p>This parameter is deprecated.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder scalingRuleMetric(String scalingRuleMetric) {
             this.putQueryParameter("ScalingRuleMetric", scalingRuleMetric);
@@ -192,7 +232,10 @@ public class CreateApplicationScalingRuleRequest extends Request {
         }
 
         /**
-         * The name of the auto scaling policy. The name must start with a lowercase letter, and can contain lowercase letters, digits, and hyphens (-). The name must be 1 to 32 characters in length.
+         * <p>The name of the auto scaling policy. The name must start with a lowercase letter, and can contain lowercase letters, digits, and hyphens (-). The name must be 1 to 32 characters in length.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cpu-trigger</p>
          */
         public Builder scalingRuleName(String scalingRuleName) {
             this.putQueryParameter("ScalingRuleName", scalingRuleName);
@@ -201,7 +244,10 @@ public class CreateApplicationScalingRuleRequest extends Request {
         }
 
         /**
-         * This parameter is deprecated.
+         * <p>This parameter is deprecated.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder scalingRuleTimer(String scalingRuleTimer) {
             this.putQueryParameter("ScalingRuleTimer", scalingRuleTimer);
@@ -210,7 +256,10 @@ public class CreateApplicationScalingRuleRequest extends Request {
         }
 
         /**
-         * The trigger policy for the auto scaling policy. Set the value in the JSON format by using the ScalingRuleTriggerDTO class. For more information, see Additional information about request parameters.
+         * <p>The trigger policy for the auto scaling policy. Set the value in the JSON format by using the ScalingRuleTriggerDTO class. For more information, see Additional information about request parameters.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>ScalingRuleTriggerDTO{......}</p>
          */
         public Builder scalingRuleTrigger(String scalingRuleTrigger) {
             this.putQueryParameter("ScalingRuleTrigger", scalingRuleTrigger);
@@ -219,7 +268,10 @@ public class CreateApplicationScalingRuleRequest extends Request {
         }
 
         /**
-         * The type of the auto scaling policy. Set the value to **trigger**.
+         * <p>The type of the auto scaling policy. Set the value to <strong>trigger</strong>.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>trigger</p>
          */
         public Builder scalingRuleType(String scalingRuleType) {
             this.putQueryParameter("ScalingRuleType", scalingRuleType);

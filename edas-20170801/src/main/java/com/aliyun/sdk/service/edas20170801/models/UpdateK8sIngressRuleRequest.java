@@ -1,39 +1,44 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.edas20170801.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link UpdateK8sIngressRuleRequest} extends {@link RequestModel}
  *
  * <p>UpdateK8sIngressRuleRequest</p>
  */
 public class UpdateK8sIngressRuleRequest extends Request {
-    @Query
-    @NameInMap("Annotations")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Annotations")
     private String annotations;
 
-    @Query
-    @NameInMap("ClusterId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ClusterId")
     private String clusterId;
 
-    @Query
-    @NameInMap("IngressConf")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("IngressConf")
     private String ingressConf;
 
-    @Query
-    @NameInMap("Labels")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Labels")
     private String labels;
 
-    @Query
-    @NameInMap("Name")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Name")
     private String name;
 
-    @Query
-    @NameInMap("Namespace")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Namespace")
     private String namespace;
 
     private UpdateK8sIngressRuleRequest(Builder builder) {
@@ -54,7 +59,7 @@ public class UpdateK8sIngressRuleRequest extends Request {
         return builder().build();
     }
 
-    @Override
+@Override
     public Builder toBuilder() {
         return new Builder(this);
     }
@@ -124,7 +129,10 @@ public class UpdateK8sIngressRuleRequest extends Request {
         } 
 
         /**
-         * The annotations.
+         * <p>The annotations.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>{&quot;nginx.ingress.kubernetes.io/ssl-redirect&quot;:&quot;true&quot;,&quot;nginx.ingress.kubernetes.io/configuration-snippet&quot;:&quot;set $test value&quot;}</p>
          */
         public Builder annotations(String annotations) {
             this.putQueryParameter("Annotations", annotations);
@@ -133,7 +141,10 @@ public class UpdateK8sIngressRuleRequest extends Request {
         }
 
         /**
-         * The ID of the Kubernetes cluster.
+         * <p>The ID of the Kubernetes cluster.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>5b2b4ab4-efbc-4a81-9c45-xxxxxxxxxxxxx</p>
          */
         public Builder clusterId(String clusterId) {
             this.putQueryParameter("ClusterId", clusterId);
@@ -142,37 +153,39 @@ public class UpdateK8sIngressRuleRequest extends Request {
         }
 
         /**
-         * The routing rules of the Ingress. Set this parameter to a JSON string in the following format:
-         * <p>
-         * 
+         * <p>The routing rules of the Ingress. Set this parameter to a JSON string in the following format:</p>
+         * <pre><code>{
+         *   &quot;rules&quot;: [
          *     {
-         *       "rules": [
+         *       &quot;host&quot;: &quot;abc.com&quot;,
+         *       &quot;secretName&quot;: &quot;tls-secret&quot;,
+         *       &quot;paths&quot;: [
          *         {
-         *           "host": "abc.com",
-         *           "secretName": "tls-secret",
-         *           "paths": [
-         *             {
-         *               "path": "/path",
-         *               "backend": {
-         *                 "servicePort": 80,
-         *                 "serviceName": "xxx"
-         *               }
-         *             }
-         *           ]
+         *           &quot;path&quot;: &quot;/path&quot;,
+         *           &quot;backend&quot;: {
+         *             &quot;servicePort&quot;: 80,
+         *             &quot;serviceName&quot;: &quot;xxx&quot;
+         *           }
          *         }
          *       ]
          *     }
+         *   ]
+         * }
+         * </code></pre>
+         * <p>Parameter description:</p>
+         * <ul>
+         * <li>rules: the list of routing rules.</li>
+         * <li>host: the domain name to be accessed.</li>
+         * <li>secretName: the name of the Secret that stores the information about the Transport Layer Security (TLS) certificate. The certificate is required if you need to use the HTTPS protocol.</li>
+         * <li>paths: the list of paths to be accessed.</li>
+         * <li>path: the path to be accessed.</li>
+         * <li>backend: the configuration of the backend service. You can specify a service that is created in the Enterprise Distributed Application Service (EDAS) console.</li>
+         * <li>serviceName: the name of the backend service.</li>
+         * <li>servicePort: the port of the backend service.</li>
+         * </ul>
          * 
-         * Parameter description:
-         * 
-         * *   rules: the list of routing rules.
-         * *   host: the domain name to be accessed.
-         * *   secretName: the name of the Secret that stores the information about the Transport Layer Security (TLS) certificate. The certificate is required if you need to use the HTTPS protocol.
-         * *   paths: the list of paths to be accessed.
-         * *   path: the path to be accessed.
-         * *   backend: the configuration of the backend service. You can specify a service that is created in the Enterprise Distributed Application Service (EDAS) console.
-         * *   serviceName: the name of the backend service.
-         * *   servicePort: the port of the backend service.
+         * <strong>example:</strong>
+         * <p>{&quot;rules&quot;:[{&quot;host&quot;:&quot;abc.com&quot;,&quot;secretName&quot;:&quot;tls-secret&quot;,&quot;paths&quot;:[{&quot;path&quot;:&quot;/path&quot;,&quot;backend&quot;:{&quot;servicePort&quot;:80,&quot;serviceName&quot;:&quot;xxx&quot;}}]}]}</p>
          */
         public Builder ingressConf(String ingressConf) {
             this.putQueryParameter("IngressConf", ingressConf);
@@ -181,7 +194,10 @@ public class UpdateK8sIngressRuleRequest extends Request {
         }
 
         /**
-         * The labels.
+         * <p>The labels.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>{&quot;test-label&quot;:&quot;test-label-value&quot;}</p>
          */
         public Builder labels(String labels) {
             this.putQueryParameter("Labels", labels);
@@ -190,7 +206,10 @@ public class UpdateK8sIngressRuleRequest extends Request {
         }
 
         /**
-         * The name of the Ingress. The name can contain lowercase letters, digits, and hyphens (-). It must start with a lowercase letter but cannot end with a hyphen (-). The name can be up to 63 characters in length.
+         * <p>The name of the Ingress. The name can contain lowercase letters, digits, and hyphens (-). It must start with a lowercase letter but cannot end with a hyphen (-). The name can be up to 63 characters in length.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>my-ingress-rule</p>
          */
         public Builder name(String name) {
             this.putQueryParameter("Name", name);
@@ -199,7 +218,10 @@ public class UpdateK8sIngressRuleRequest extends Request {
         }
 
         /**
-         * The namespace of the Kubernetes cluster.
+         * <p>The namespace of the Kubernetes cluster.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>default</p>
          */
         public Builder namespace(String namespace) {
             this.putQueryParameter("Namespace", namespace);

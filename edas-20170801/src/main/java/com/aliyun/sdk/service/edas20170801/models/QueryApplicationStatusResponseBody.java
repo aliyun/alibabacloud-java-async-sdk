@@ -1,27 +1,32 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.edas20170801.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link QueryApplicationStatusResponseBody} extends {@link TeaModel}
  *
  * <p>QueryApplicationStatusResponseBody</p>
  */
 public class QueryApplicationStatusResponseBody extends TeaModel {
-    @NameInMap("AppInfo")
+    @com.aliyun.core.annotation.NameInMap("AppInfo")
     private AppInfo appInfo;
 
-    @NameInMap("Code")
+    @com.aliyun.core.annotation.NameInMap("Code")
     private Integer code;
 
-    @NameInMap("Message")
+    @com.aliyun.core.annotation.NameInMap("Message")
     private String message;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
     private QueryApplicationStatusResponseBody(Builder builder) {
@@ -37,6 +42,10 @@ public class QueryApplicationStatusResponseBody extends TeaModel {
 
     public static QueryApplicationStatusResponseBody create() {
         return builder().build();
+    }
+
+    public Builder toBuilder() {
+        return new Builder(this);
     }
 
     /**
@@ -73,8 +82,18 @@ public class QueryApplicationStatusResponseBody extends TeaModel {
         private String message; 
         private String requestId; 
 
+        private Builder() {
+        } 
+
+        private Builder(QueryApplicationStatusResponseBody model) {
+            this.appInfo = model.appInfo;
+            this.code = model.code;
+            this.message = model.message;
+            this.requestId = model.requestId;
+        } 
+
         /**
-         * The information about the application.
+         * <p>The information about the application.</p>
          */
         public Builder appInfo(AppInfo appInfo) {
             this.appInfo = appInfo;
@@ -82,7 +101,10 @@ public class QueryApplicationStatusResponseBody extends TeaModel {
         }
 
         /**
-         * The HTTP status code that is returned.
+         * <p>The HTTP status code that is returned.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>200</p>
          */
         public Builder code(Integer code) {
             this.code = code;
@@ -90,7 +112,10 @@ public class QueryApplicationStatusResponseBody extends TeaModel {
         }
 
         /**
-         * The additional information that is returned.
+         * <p>The additional information that is returned.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>success</p>
          */
         public Builder message(String message) {
             this.message = message;
@@ -98,7 +123,10 @@ public class QueryApplicationStatusResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the request.
+         * <p>The ID of the request.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>D16979DC-4D42-********</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -111,59 +139,65 @@ public class QueryApplicationStatusResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link QueryApplicationStatusResponseBody} extends {@link TeaModel}
+     *
+     * <p>QueryApplicationStatusResponseBody</p>
+     */
     public static class Application extends TeaModel {
-        @NameInMap("ApplicationId")
+        @com.aliyun.core.annotation.NameInMap("ApplicationId")
         private String applicationId;
 
-        @NameInMap("BuildPackageId")
+        @com.aliyun.core.annotation.NameInMap("BuildPackageId")
         private Integer buildPackageId;
 
-        @NameInMap("ClusterId")
+        @com.aliyun.core.annotation.NameInMap("ClusterId")
         private String clusterId;
 
-        @NameInMap("Cpu")
+        @com.aliyun.core.annotation.NameInMap("Cpu")
         private Integer cpu;
 
-        @NameInMap("CreateTime")
+        @com.aliyun.core.annotation.NameInMap("CreateTime")
         private Long createTime;
 
-        @NameInMap("Dockerize")
+        @com.aliyun.core.annotation.NameInMap("Dockerize")
         private Boolean dockerize;
 
-        @NameInMap("Email")
+        @com.aliyun.core.annotation.NameInMap("Email")
         private String email;
 
-        @NameInMap("HealthCheckUrl")
+        @com.aliyun.core.annotation.NameInMap("HealthCheckUrl")
         private String healthCheckUrl;
 
-        @NameInMap("InstanceCount")
+        @com.aliyun.core.annotation.NameInMap("InstanceCount")
         private Integer instanceCount;
 
-        @NameInMap("LaunchTime")
+        @com.aliyun.core.annotation.NameInMap("LaunchTime")
         private Long launchTime;
 
-        @NameInMap("Memory")
+        @com.aliyun.core.annotation.NameInMap("Memory")
         private Integer memory;
 
-        @NameInMap("Name")
+        @com.aliyun.core.annotation.NameInMap("Name")
         private String name;
 
-        @NameInMap("Owner")
+        @com.aliyun.core.annotation.NameInMap("Owner")
         private String owner;
 
-        @NameInMap("Phone")
+        @com.aliyun.core.annotation.NameInMap("Phone")
         private String phone;
 
-        @NameInMap("Port")
+        @com.aliyun.core.annotation.NameInMap("Port")
         private Integer port;
 
-        @NameInMap("RegionId")
+        @com.aliyun.core.annotation.NameInMap("RegionId")
         private String regionId;
 
-        @NameInMap("RunningInstanceCount")
+        @com.aliyun.core.annotation.NameInMap("RunningInstanceCount")
         private Integer runningInstanceCount;
 
-        @NameInMap("UserId")
+        @com.aliyun.core.annotation.NameInMap("UserId")
         private String userId;
 
         private Application(Builder builder) {
@@ -341,8 +375,35 @@ public class QueryApplicationStatusResponseBody extends TeaModel {
             private Integer runningInstanceCount; 
             private String userId; 
 
+            private Builder() {
+            } 
+
+            private Builder(Application model) {
+                this.applicationId = model.applicationId;
+                this.buildPackageId = model.buildPackageId;
+                this.clusterId = model.clusterId;
+                this.cpu = model.cpu;
+                this.createTime = model.createTime;
+                this.dockerize = model.dockerize;
+                this.email = model.email;
+                this.healthCheckUrl = model.healthCheckUrl;
+                this.instanceCount = model.instanceCount;
+                this.launchTime = model.launchTime;
+                this.memory = model.memory;
+                this.name = model.name;
+                this.owner = model.owner;
+                this.phone = model.phone;
+                this.port = model.port;
+                this.regionId = model.regionId;
+                this.runningInstanceCount = model.runningInstanceCount;
+                this.userId = model.userId;
+            } 
+
             /**
-             * The ID of the application.
+             * <p>The ID of the application.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>3616cdca-4f92-4413-<strong><strong>-</strong></strong>********</p>
              */
             public Builder applicationId(String applicationId) {
                 this.applicationId = applicationId;
@@ -350,7 +411,10 @@ public class QueryApplicationStatusResponseBody extends TeaModel {
             }
 
             /**
-             * The build package number of Enterprise Distributed Application Service (EDAS) Container.
+             * <p>The build package number of Enterprise Distributed Application Service (EDAS) Container.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>0</p>
              */
             public Builder buildPackageId(Integer buildPackageId) {
                 this.buildPackageId = buildPackageId;
@@ -358,7 +422,10 @@ public class QueryApplicationStatusResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the cluster.
+             * <p>The ID of the cluster.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>0d247b93-8d62-4e34-<strong><strong>-</strong></strong>********</p>
              */
             public Builder clusterId(String clusterId) {
                 this.clusterId = clusterId;
@@ -366,7 +433,10 @@ public class QueryApplicationStatusResponseBody extends TeaModel {
             }
 
             /**
-             * The number of CPU cores used by the application.
+             * <p>The number of CPU cores used by the application.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>0</p>
              */
             public Builder cpu(Integer cpu) {
                 this.cpu = cpu;
@@ -374,7 +444,10 @@ public class QueryApplicationStatusResponseBody extends TeaModel {
             }
 
             /**
-             * The time when the application was created. This value is a UNIX timestamp representing the number of milliseconds that have elapsed since January 1, 1970, 00:00:00 UTC.
+             * <p>The time when the application was created. This value is a UNIX timestamp representing the number of milliseconds that have elapsed since January 1, 1970, 00:00:00 UTC.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1573626207270</p>
              */
             public Builder createTime(Long createTime) {
                 this.createTime = createTime;
@@ -382,7 +455,10 @@ public class QueryApplicationStatusResponseBody extends TeaModel {
             }
 
             /**
-             * Indicates whether the application is a Docker application.
+             * <p>Indicates whether the application is a Docker application.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>false</p>
              */
             public Builder dockerize(Boolean dockerize) {
                 this.dockerize = dockerize;
@@ -390,7 +466,10 @@ public class QueryApplicationStatusResponseBody extends TeaModel {
             }
 
             /**
-             * The email address of the user who created the application.
+             * <p>The email address of the user who created the application.</p>
+             * 
+             * <strong>example:</strong>
+             * <p><a href="mailto:1234567@qq.com">1234567@qq.com</a></p>
              */
             public Builder email(String email) {
                 this.email = email;
@@ -398,7 +477,10 @@ public class QueryApplicationStatusResponseBody extends TeaModel {
             }
 
             /**
-             * The health check URL.
+             * <p>The health check URL.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>“”</p>
              */
             public Builder healthCheckUrl(String healthCheckUrl) {
                 this.healthCheckUrl = healthCheckUrl;
@@ -406,7 +488,10 @@ public class QueryApplicationStatusResponseBody extends TeaModel {
             }
 
             /**
-             * The number of application instances.
+             * <p>The number of application instances.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder instanceCount(Integer instanceCount) {
                 this.instanceCount = instanceCount;
@@ -414,7 +499,10 @@ public class QueryApplicationStatusResponseBody extends TeaModel {
             }
 
             /**
-             * The time when the application was launched. This value is a UNIX timestamp representing the number of milliseconds that have elapsed since January 1, 1970, 00:00:00 UTC.
+             * <p>The time when the application was launched. This value is a UNIX timestamp representing the number of milliseconds that have elapsed since January 1, 1970, 00:00:00 UTC.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>0</p>
              */
             public Builder launchTime(Long launchTime) {
                 this.launchTime = launchTime;
@@ -422,7 +510,10 @@ public class QueryApplicationStatusResponseBody extends TeaModel {
             }
 
             /**
-             * The memory size.
+             * <p>The memory size.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>0</p>
              */
             public Builder memory(Integer memory) {
                 this.memory = memory;
@@ -430,7 +521,10 @@ public class QueryApplicationStatusResponseBody extends TeaModel {
             }
 
             /**
-             * The name of the application.
+             * <p>The name of the application.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>EDAS-scaled-cluster:default cluster</p>
              */
             public Builder name(String name) {
                 this.name = name;
@@ -438,7 +532,10 @@ public class QueryApplicationStatusResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the user who created the application.
+             * <p>The ID of the user who created the application.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>edas_com***_****@<em><em><strong><strong>-</strong></strong></em>.</em>**</p>
              */
             public Builder owner(String owner) {
                 this.owner = owner;
@@ -446,7 +543,10 @@ public class QueryApplicationStatusResponseBody extends TeaModel {
             }
 
             /**
-             * The mobile number of the user who created the application.
+             * <p>The mobile number of the user who created the application.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1886666****</p>
              */
             public Builder phone(String phone) {
                 this.phone = phone;
@@ -454,7 +554,10 @@ public class QueryApplicationStatusResponseBody extends TeaModel {
             }
 
             /**
-             * The port used by the application.
+             * <p>The port used by the application.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>8080</p>
              */
             public Builder port(Integer port) {
                 this.port = port;
@@ -462,7 +565,10 @@ public class QueryApplicationStatusResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the namespace.
+             * <p>The ID of the namespace.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>cn-shenzhen:test</p>
              */
             public Builder regionId(String regionId) {
                 this.regionId = regionId;
@@ -470,7 +576,10 @@ public class QueryApplicationStatusResponseBody extends TeaModel {
             }
 
             /**
-             * The number of application instances that are running.
+             * <p>The number of application instances that are running.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder runningInstanceCount(Integer runningInstanceCount) {
                 this.runningInstanceCount = runningInstanceCount;
@@ -478,7 +587,10 @@ public class QueryApplicationStatusResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the Alibaba Cloud account.
+             * <p>The ID of the Alibaba Cloud account.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>edas_com***_****@<em><em><strong><strong>-</strong></strong></em>.</em>**</p>
              */
             public Builder userId(String userId) {
                 this.userId = userId;
@@ -492,23 +604,29 @@ public class QueryApplicationStatusResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link QueryApplicationStatusResponseBody} extends {@link TeaModel}
+     *
+     * <p>QueryApplicationStatusResponseBody</p>
+     */
     public static class DeployRecord extends TeaModel {
-        @NameInMap("CreateTime")
+        @com.aliyun.core.annotation.NameInMap("CreateTime")
         private Long createTime;
 
-        @NameInMap("DeployRecordId")
+        @com.aliyun.core.annotation.NameInMap("DeployRecordId")
         private String deployRecordId;
 
-        @NameInMap("EccId")
+        @com.aliyun.core.annotation.NameInMap("EccId")
         private String eccId;
 
-        @NameInMap("EcuId")
+        @com.aliyun.core.annotation.NameInMap("EcuId")
         private String ecuId;
 
-        @NameInMap("PackageMd5")
+        @com.aliyun.core.annotation.NameInMap("PackageMd5")
         private String packageMd5;
 
-        @NameInMap("PackageVersionId")
+        @com.aliyun.core.annotation.NameInMap("PackageVersionId")
         private String packageVersionId;
 
         private DeployRecord(Builder builder) {
@@ -578,8 +696,23 @@ public class QueryApplicationStatusResponseBody extends TeaModel {
             private String packageMd5; 
             private String packageVersionId; 
 
+            private Builder() {
+            } 
+
+            private Builder(DeployRecord model) {
+                this.createTime = model.createTime;
+                this.deployRecordId = model.deployRecordId;
+                this.eccId = model.eccId;
+                this.ecuId = model.ecuId;
+                this.packageMd5 = model.packageMd5;
+                this.packageVersionId = model.packageVersionId;
+            } 
+
             /**
-             * The time when the deployment record was created. This value is a UNIX timestamp representing the number of milliseconds that have elapsed since January 1, 1970, 00:00:00 UTC.
+             * <p>The time when the deployment record was created. This value is a UNIX timestamp representing the number of milliseconds that have elapsed since January 1, 1970, 00:00:00 UTC.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1573626226691</p>
              */
             public Builder createTime(Long createTime) {
                 this.createTime = createTime;
@@ -587,7 +720,10 @@ public class QueryApplicationStatusResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the deployment record.
+             * <p>The ID of the deployment record.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>bbc6c0d5-d792-4907-<strong><strong>-</strong></strong>********</p>
              */
             public Builder deployRecordId(String deployRecordId) {
                 this.deployRecordId = deployRecordId;
@@ -595,7 +731,10 @@ public class QueryApplicationStatusResponseBody extends TeaModel {
             }
 
             /**
-             * The unique ID of the ECC.
+             * <p>The unique ID of the ECC.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>0cf49a6c-95a8-4aa8-<strong><strong>-</strong></strong>********</p>
              */
             public Builder eccId(String eccId) {
                 this.eccId = eccId;
@@ -603,7 +742,10 @@ public class QueryApplicationStatusResponseBody extends TeaModel {
             }
 
             /**
-             * The unique ID of the ECU.
+             * <p>The unique ID of the ECU.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>07bd417a-b863-477d-<strong><strong>-</strong></strong>********</p>
              */
             public Builder ecuId(String ecuId) {
                 this.ecuId = ecuId;
@@ -611,7 +753,10 @@ public class QueryApplicationStatusResponseBody extends TeaModel {
             }
 
             /**
-             * The MD5 hash value of the deployment package.
+             * <p>The MD5 hash value of the deployment package.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>d0db5bcb442e492104d0f00e10a03dd9</p>
              */
             public Builder packageMd5(String packageMd5) {
                 this.packageMd5 = packageMd5;
@@ -619,7 +764,10 @@ public class QueryApplicationStatusResponseBody extends TeaModel {
             }
 
             /**
-             * The version of the deployment package that was used to deploy an application in the instance group.
+             * <p>The version of the deployment package that was used to deploy an application in the instance group.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>441beb18-da42-44dc-<strong><strong>-</strong></strong>********</p>
              */
             public Builder packageVersionId(String packageVersionId) {
                 this.packageVersionId = packageVersionId;
@@ -633,9 +781,15 @@ public class QueryApplicationStatusResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link QueryApplicationStatusResponseBody} extends {@link TeaModel}
+     *
+     * <p>QueryApplicationStatusResponseBody</p>
+     */
     public static class DeployRecordList extends TeaModel {
-        @NameInMap("DeployRecord")
-        private java.util.List < DeployRecord> deployRecord;
+        @com.aliyun.core.annotation.NameInMap("DeployRecord")
+        private java.util.List<DeployRecord> deployRecord;
 
         private DeployRecordList(Builder builder) {
             this.deployRecord = builder.deployRecord;
@@ -652,17 +806,24 @@ public class QueryApplicationStatusResponseBody extends TeaModel {
         /**
          * @return deployRecord
          */
-        public java.util.List < DeployRecord> getDeployRecord() {
+        public java.util.List<DeployRecord> getDeployRecord() {
             return this.deployRecord;
         }
 
         public static final class Builder {
-            private java.util.List < DeployRecord> deployRecord; 
+            private java.util.List<DeployRecord> deployRecord; 
+
+            private Builder() {
+            } 
+
+            private Builder(DeployRecordList model) {
+                this.deployRecord = model.deployRecord;
+            } 
 
             /**
              * DeployRecord.
              */
-            public Builder deployRecord(java.util.List < DeployRecord> deployRecord) {
+            public Builder deployRecord(java.util.List<DeployRecord> deployRecord) {
                 this.deployRecord = deployRecord;
                 return this;
             }
@@ -674,38 +835,44 @@ public class QueryApplicationStatusResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link QueryApplicationStatusResponseBody} extends {@link TeaModel}
+     *
+     * <p>QueryApplicationStatusResponseBody</p>
+     */
     public static class Ecc extends TeaModel {
-        @NameInMap("AppId")
+        @com.aliyun.core.annotation.NameInMap("AppId")
         private String appId;
 
-        @NameInMap("AppState")
+        @com.aliyun.core.annotation.NameInMap("AppState")
         private Integer appState;
 
-        @NameInMap("ContainerStatus")
+        @com.aliyun.core.annotation.NameInMap("ContainerStatus")
         private String containerStatus;
 
-        @NameInMap("CreateTime")
+        @com.aliyun.core.annotation.NameInMap("CreateTime")
         private Long createTime;
 
-        @NameInMap("EccId")
+        @com.aliyun.core.annotation.NameInMap("EccId")
         private String eccId;
 
-        @NameInMap("EcuId")
+        @com.aliyun.core.annotation.NameInMap("EcuId")
         private String ecuId;
 
-        @NameInMap("GroupId")
+        @com.aliyun.core.annotation.NameInMap("GroupId")
         private String groupId;
 
-        @NameInMap("Ip")
+        @com.aliyun.core.annotation.NameInMap("Ip")
         private String ip;
 
-        @NameInMap("TaskState")
+        @com.aliyun.core.annotation.NameInMap("TaskState")
         private Integer taskState;
 
-        @NameInMap("UpdateTime")
+        @com.aliyun.core.annotation.NameInMap("UpdateTime")
         private Long updateTime;
 
-        @NameInMap("VpcId")
+        @com.aliyun.core.annotation.NameInMap("VpcId")
         private String vpcId;
 
         private Ecc(Builder builder) {
@@ -820,8 +987,28 @@ public class QueryApplicationStatusResponseBody extends TeaModel {
             private Long updateTime; 
             private String vpcId; 
 
+            private Builder() {
+            } 
+
+            private Builder(Ecc model) {
+                this.appId = model.appId;
+                this.appState = model.appState;
+                this.containerStatus = model.containerStatus;
+                this.createTime = model.createTime;
+                this.eccId = model.eccId;
+                this.ecuId = model.ecuId;
+                this.groupId = model.groupId;
+                this.ip = model.ip;
+                this.taskState = model.taskState;
+                this.updateTime = model.updateTime;
+                this.vpcId = model.vpcId;
+            } 
+
             /**
-             * The ID of the application.
+             * <p>The ID of the application.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>3616cdca-4f92-4413-<strong><strong>-</strong></strong>********</p>
              */
             public Builder appId(String appId) {
                 this.appId = appId;
@@ -829,13 +1016,16 @@ public class QueryApplicationStatusResponseBody extends TeaModel {
             }
 
             /**
-             * The status of the application instance. Valid values:
-             * <p>
+             * <p>The status of the application instance. Valid values:</p>
+             * <ul>
+             * <li>0: AGENT_OFF: indicates that the agent is offline.</li>
+             * <li>1: STOPPED: indicates that the application is stopped.</li>
+             * <li>3: RUNNING_BUT_URL_FAILED: indicates that the health check failed.</li>
+             * <li>7: RUNNING: indicates that the application is running.</li>
+             * </ul>
              * 
-             * *   0: AGENT_OFF: indicates that the agent is offline.
-             * *   1: STOPPED: indicates that the application is stopped.
-             * *   3: RUNNING_BUT_URL_FAILED: indicates that the health check failed.
-             * *   7: RUNNING: indicates that the application is running.
+             * <strong>example:</strong>
+             * <p>7</p>
              */
             public Builder appState(Integer appState) {
                 this.appState = appState;
@@ -843,7 +1033,10 @@ public class QueryApplicationStatusResponseBody extends TeaModel {
             }
 
             /**
-             * The status of the container.
+             * <p>The status of the container.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>“”</p>
              */
             public Builder containerStatus(String containerStatus) {
                 this.containerStatus = containerStatus;
@@ -851,7 +1044,10 @@ public class QueryApplicationStatusResponseBody extends TeaModel {
             }
 
             /**
-             * The time when the ECC was created. This value is a UNIX timestamp representing the number of milliseconds that have elapsed since January 1, 1970, 00:00:00 UTC.
+             * <p>The time when the ECC was created. This value is a UNIX timestamp representing the number of milliseconds that have elapsed since January 1, 1970, 00:00:00 UTC.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1573626226691</p>
              */
             public Builder createTime(Long createTime) {
                 this.createTime = createTime;
@@ -859,7 +1055,10 @@ public class QueryApplicationStatusResponseBody extends TeaModel {
             }
 
             /**
-             * The unique ID of the ECC.
+             * <p>The unique ID of the ECC.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>0cf49a6c-95a8-4aa8-<strong><strong>-</strong></strong>********</p>
              */
             public Builder eccId(String eccId) {
                 this.eccId = eccId;
@@ -867,7 +1066,10 @@ public class QueryApplicationStatusResponseBody extends TeaModel {
             }
 
             /**
-             * The unique ID of the ECU.
+             * <p>The unique ID of the ECU.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>07bd417a-b863-477d-<strong><strong>-</strong></strong>********</p>
              */
             public Builder ecuId(String ecuId) {
                 this.ecuId = ecuId;
@@ -875,7 +1077,10 @@ public class QueryApplicationStatusResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the instance group.
+             * <p>The ID of the instance group.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>8123db90-880f-486f-<strong><strong>-</strong></strong>********</p>
              */
             public Builder groupId(String groupId) {
                 this.groupId = groupId;
@@ -883,7 +1088,10 @@ public class QueryApplicationStatusResponseBody extends TeaModel {
             }
 
             /**
-             * The private IP address of the ECU.
+             * <p>The private IP address of the ECU.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>172.16.<em>.</em>**</p>
              */
             public Builder ip(String ip) {
                 this.ip = ip;
@@ -891,13 +1099,16 @@ public class QueryApplicationStatusResponseBody extends TeaModel {
             }
 
             /**
-             * The state of the latest task initiated on the application instance. Valid values:
-             * <p>
+             * <p>The state of the latest task initiated on the application instance. Valid values:</p>
+             * <ul>
+             * <li>0: UNKNOWN: indicates that the state of the latest task is unknown.</li>
+             * <li>1: PROCESSING: indicates that the latest task is being processed.</li>
+             * <li>2: SUCCESS: indicates that the latest task is executed.</li>
+             * <li>3: FAILED: indicates that the latest task failed.</li>
+             * </ul>
              * 
-             * *   0: UNKNOWN: indicates that the state of the latest task is unknown.
-             * *   1: PROCESSING: indicates that the latest task is being processed.
-             * *   2: SUCCESS: indicates that the latest task is executed.
-             * *   3: FAILED: indicates that the latest task failed.
+             * <strong>example:</strong>
+             * <p>3</p>
              */
             public Builder taskState(Integer taskState) {
                 this.taskState = taskState;
@@ -905,7 +1116,10 @@ public class QueryApplicationStatusResponseBody extends TeaModel {
             }
 
             /**
-             * The time when the ECC was last modified. This value is a UNIX timestamp representing the number of milliseconds that have elapsed since January 1, 1970, 00:00:00 UTC.
+             * <p>The time when the ECC was last modified. This value is a UNIX timestamp representing the number of milliseconds that have elapsed since January 1, 1970, 00:00:00 UTC.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1573635952012</p>
              */
             public Builder updateTime(Long updateTime) {
                 this.updateTime = updateTime;
@@ -913,7 +1127,10 @@ public class QueryApplicationStatusResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the VPC.
+             * <p>The ID of the VPC.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>vpc-wz9b246zg************</p>
              */
             public Builder vpcId(String vpcId) {
                 this.vpcId = vpcId;
@@ -927,9 +1144,15 @@ public class QueryApplicationStatusResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link QueryApplicationStatusResponseBody} extends {@link TeaModel}
+     *
+     * <p>QueryApplicationStatusResponseBody</p>
+     */
     public static class EccList extends TeaModel {
-        @NameInMap("Ecc")
-        private java.util.List < Ecc> ecc;
+        @com.aliyun.core.annotation.NameInMap("Ecc")
+        private java.util.List<Ecc> ecc;
 
         private EccList(Builder builder) {
             this.ecc = builder.ecc;
@@ -946,17 +1169,24 @@ public class QueryApplicationStatusResponseBody extends TeaModel {
         /**
          * @return ecc
          */
-        public java.util.List < Ecc> getEcc() {
+        public java.util.List<Ecc> getEcc() {
             return this.ecc;
         }
 
         public static final class Builder {
-            private java.util.List < Ecc> ecc; 
+            private java.util.List<Ecc> ecc; 
+
+            private Builder() {
+            } 
+
+            private Builder(EccList model) {
+                this.ecc = model.ecc;
+            } 
 
             /**
              * Ecc.
              */
-            public Builder ecc(java.util.List < Ecc> ecc) {
+            public Builder ecc(java.util.List<Ecc> ecc) {
                 this.ecc = ecc;
                 return this;
             }
@@ -968,53 +1198,59 @@ public class QueryApplicationStatusResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link QueryApplicationStatusResponseBody} extends {@link TeaModel}
+     *
+     * <p>QueryApplicationStatusResponseBody</p>
+     */
     public static class Ecu extends TeaModel {
-        @NameInMap("AvailableCpu")
+        @com.aliyun.core.annotation.NameInMap("AvailableCpu")
         private Integer availableCpu;
 
-        @NameInMap("AvailableMem")
+        @com.aliyun.core.annotation.NameInMap("AvailableMem")
         private Integer availableMem;
 
-        @NameInMap("CreateTime")
+        @com.aliyun.core.annotation.NameInMap("CreateTime")
         private Long createTime;
 
-        @NameInMap("DockerEnv")
+        @com.aliyun.core.annotation.NameInMap("DockerEnv")
         private Boolean dockerEnv;
 
-        @NameInMap("EcuId")
+        @com.aliyun.core.annotation.NameInMap("EcuId")
         private String ecuId;
 
-        @NameInMap("GroupId")
+        @com.aliyun.core.annotation.NameInMap("GroupId")
         private String groupId;
 
-        @NameInMap("HeartbeatTime")
+        @com.aliyun.core.annotation.NameInMap("HeartbeatTime")
         private Long heartbeatTime;
 
-        @NameInMap("InstanceId")
+        @com.aliyun.core.annotation.NameInMap("InstanceId")
         private String instanceId;
 
-        @NameInMap("IpAddr")
+        @com.aliyun.core.annotation.NameInMap("IpAddr")
         private String ipAddr;
 
-        @NameInMap("Name")
+        @com.aliyun.core.annotation.NameInMap("Name")
         private String name;
 
-        @NameInMap("Online")
+        @com.aliyun.core.annotation.NameInMap("Online")
         private Boolean online;
 
-        @NameInMap("RegionId")
+        @com.aliyun.core.annotation.NameInMap("RegionId")
         private String regionId;
 
-        @NameInMap("UpdateTime")
+        @com.aliyun.core.annotation.NameInMap("UpdateTime")
         private Long updateTime;
 
-        @NameInMap("UserId")
+        @com.aliyun.core.annotation.NameInMap("UserId")
         private String userId;
 
-        @NameInMap("VpcId")
+        @com.aliyun.core.annotation.NameInMap("VpcId")
         private String vpcId;
 
-        @NameInMap("ZoneId")
+        @com.aliyun.core.annotation.NameInMap("ZoneId")
         private String zoneId;
 
         private Ecu(Builder builder) {
@@ -1174,8 +1410,33 @@ public class QueryApplicationStatusResponseBody extends TeaModel {
             private String vpcId; 
             private String zoneId; 
 
+            private Builder() {
+            } 
+
+            private Builder(Ecu model) {
+                this.availableCpu = model.availableCpu;
+                this.availableMem = model.availableMem;
+                this.createTime = model.createTime;
+                this.dockerEnv = model.dockerEnv;
+                this.ecuId = model.ecuId;
+                this.groupId = model.groupId;
+                this.heartbeatTime = model.heartbeatTime;
+                this.instanceId = model.instanceId;
+                this.ipAddr = model.ipAddr;
+                this.name = model.name;
+                this.online = model.online;
+                this.regionId = model.regionId;
+                this.updateTime = model.updateTime;
+                this.userId = model.userId;
+                this.vpcId = model.vpcId;
+                this.zoneId = model.zoneId;
+            } 
+
             /**
-             * The number of available CPU cores.
+             * <p>The number of available CPU cores.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>0</p>
              */
             public Builder availableCpu(Integer availableCpu) {
                 this.availableCpu = availableCpu;
@@ -1183,7 +1444,10 @@ public class QueryApplicationStatusResponseBody extends TeaModel {
             }
 
             /**
-             * The size of the available memory.
+             * <p>The size of the available memory.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>0</p>
              */
             public Builder availableMem(Integer availableMem) {
                 this.availableMem = availableMem;
@@ -1191,7 +1455,10 @@ public class QueryApplicationStatusResponseBody extends TeaModel {
             }
 
             /**
-             * The time when the ECU was created. This value is a UNIX timestamp representing the number of milliseconds that have elapsed since January 1, 1970, 00:00:00 UTC.
+             * <p>The time when the ECU was created. This value is a UNIX timestamp representing the number of milliseconds that have elapsed since January 1, 1970, 00:00:00 UTC.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1573626207270</p>
              */
             public Builder createTime(Long createTime) {
                 this.createTime = createTime;
@@ -1199,7 +1466,10 @@ public class QueryApplicationStatusResponseBody extends TeaModel {
             }
 
             /**
-             * Indicates whether Docker is installed.
+             * <p>Indicates whether Docker is installed.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>false</p>
              */
             public Builder dockerEnv(Boolean dockerEnv) {
                 this.dockerEnv = dockerEnv;
@@ -1207,7 +1477,10 @@ public class QueryApplicationStatusResponseBody extends TeaModel {
             }
 
             /**
-             * The unique ID of the ECU. You can run the `dmidecode` command on the ECS instance to query the ECU ID.
+             * <p>The unique ID of the ECU. You can run the <code>dmidecode</code> command on the ECS instance to query the ECU ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>07bd417a-b863-477d-<strong><strong>-</strong></strong>********</p>
              */
             public Builder ecuId(String ecuId) {
                 this.ecuId = ecuId;
@@ -1215,7 +1488,10 @@ public class QueryApplicationStatusResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the group.
+             * <p>The ID of the group.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>8123db90-880f-486f-<strong><strong>-</strong></strong>********</p>
              */
             public Builder groupId(String groupId) {
                 this.groupId = groupId;
@@ -1223,7 +1499,10 @@ public class QueryApplicationStatusResponseBody extends TeaModel {
             }
 
             /**
-             * The time when the last heartbeat detection was performed. This value is a UNIX timestamp representing the number of milliseconds that have elapsed since January 1, 1970, 00:00:00 UTC.
+             * <p>The time when the last heartbeat detection was performed. This value is a UNIX timestamp representing the number of milliseconds that have elapsed since January 1, 1970, 00:00:00 UTC.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1573635952012</p>
              */
             public Builder heartbeatTime(Long heartbeatTime) {
                 this.heartbeatTime = heartbeatTime;
@@ -1231,7 +1510,10 @@ public class QueryApplicationStatusResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the instance.
+             * <p>The ID of the instance.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>i-wz9fp1ljg***********</p>
              */
             public Builder instanceId(String instanceId) {
                 this.instanceId = instanceId;
@@ -1239,7 +1521,10 @@ public class QueryApplicationStatusResponseBody extends TeaModel {
             }
 
             /**
-             * The private IP address of the ECU.
+             * <p>The private IP address of the ECU.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>172.16.<em>.</em>*</p>
              */
             public Builder ipAddr(String ipAddr) {
                 this.ipAddr = ipAddr;
@@ -1247,7 +1532,10 @@ public class QueryApplicationStatusResponseBody extends TeaModel {
             }
 
             /**
-             * The name of the ECU.
+             * <p>The name of the ECU.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>EDAS-scaled-cluster: default cluster</p>
              */
             public Builder name(String name) {
                 this.name = name;
@@ -1255,7 +1543,10 @@ public class QueryApplicationStatusResponseBody extends TeaModel {
             }
 
             /**
-             * Indicates whether the ECU is online.
+             * <p>Indicates whether the ECU is online.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>true</p>
              */
             public Builder online(Boolean online) {
                 this.online = online;
@@ -1263,7 +1554,10 @@ public class QueryApplicationStatusResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the region.
+             * <p>The ID of the region.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>cn-shen****-*</p>
              */
             public Builder regionId(String regionId) {
                 this.regionId = regionId;
@@ -1271,7 +1565,10 @@ public class QueryApplicationStatusResponseBody extends TeaModel {
             }
 
             /**
-             * The time when the ECU was last modified. This value is a UNIX timestamp representing the number of milliseconds that have elapsed since January 1, 1970, 00:00:00 UTC.
+             * <p>The time when the ECU was last modified. This value is a UNIX timestamp representing the number of milliseconds that have elapsed since January 1, 1970, 00:00:00 UTC.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1573635952012</p>
              */
             public Builder updateTime(Long updateTime) {
                 this.updateTime = updateTime;
@@ -1279,7 +1576,10 @@ public class QueryApplicationStatusResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the user associated with the ECU.
+             * <p>The ID of the user associated with the ECU.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>edas_com***_****@<em><em><strong><strong>-</strong></strong></em>.</em>**</p>
              */
             public Builder userId(String userId) {
                 this.userId = userId;
@@ -1287,7 +1587,10 @@ public class QueryApplicationStatusResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the virtual private cloud (VPC).
+             * <p>The ID of the virtual private cloud (VPC).</p>
+             * 
+             * <strong>example:</strong>
+             * <p>vpc-wz9b246zg************</p>
              */
             public Builder vpcId(String vpcId) {
                 this.vpcId = vpcId;
@@ -1295,7 +1598,10 @@ public class QueryApplicationStatusResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the zone.
+             * <p>The ID of the zone.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>cn-shen****-*</p>
              */
             public Builder zoneId(String zoneId) {
                 this.zoneId = zoneId;
@@ -1309,9 +1615,15 @@ public class QueryApplicationStatusResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link QueryApplicationStatusResponseBody} extends {@link TeaModel}
+     *
+     * <p>QueryApplicationStatusResponseBody</p>
+     */
     public static class EcuList extends TeaModel {
-        @NameInMap("Ecu")
-        private java.util.List < Ecu> ecu;
+        @com.aliyun.core.annotation.NameInMap("Ecu")
+        private java.util.List<Ecu> ecu;
 
         private EcuList(Builder builder) {
             this.ecu = builder.ecu;
@@ -1328,17 +1640,24 @@ public class QueryApplicationStatusResponseBody extends TeaModel {
         /**
          * @return ecu
          */
-        public java.util.List < Ecu> getEcu() {
+        public java.util.List<Ecu> getEcu() {
             return this.ecu;
         }
 
         public static final class Builder {
-            private java.util.List < Ecu> ecu; 
+            private java.util.List<Ecu> ecu; 
+
+            private Builder() {
+            } 
+
+            private Builder(EcuList model) {
+                this.ecu = model.ecu;
+            } 
 
             /**
              * Ecu.
              */
-            public Builder ecu(java.util.List < Ecu> ecu) {
+            public Builder ecu(java.util.List<Ecu> ecu) {
                 this.ecu = ecu;
                 return this;
             }
@@ -1350,32 +1669,38 @@ public class QueryApplicationStatusResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link QueryApplicationStatusResponseBody} extends {@link TeaModel}
+     *
+     * <p>QueryApplicationStatusResponseBody</p>
+     */
     public static class Group extends TeaModel {
-        @NameInMap("AppId")
+        @com.aliyun.core.annotation.NameInMap("AppId")
         private String appId;
 
-        @NameInMap("AppVersionId")
+        @com.aliyun.core.annotation.NameInMap("AppVersionId")
         private String appVersionId;
 
-        @NameInMap("ClusterId")
+        @com.aliyun.core.annotation.NameInMap("ClusterId")
         private String clusterId;
 
-        @NameInMap("CreateTime")
+        @com.aliyun.core.annotation.NameInMap("CreateTime")
         private Long createTime;
 
-        @NameInMap("GroupId")
+        @com.aliyun.core.annotation.NameInMap("GroupId")
         private String groupId;
 
-        @NameInMap("GroupName")
+        @com.aliyun.core.annotation.NameInMap("GroupName")
         private String groupName;
 
-        @NameInMap("GroupType")
+        @com.aliyun.core.annotation.NameInMap("GroupType")
         private Integer groupType;
 
-        @NameInMap("PackageVersionId")
+        @com.aliyun.core.annotation.NameInMap("PackageVersionId")
         private String packageVersionId;
 
-        @NameInMap("UpdateTime")
+        @com.aliyun.core.annotation.NameInMap("UpdateTime")
         private Long updateTime;
 
         private Group(Builder builder) {
@@ -1472,8 +1797,26 @@ public class QueryApplicationStatusResponseBody extends TeaModel {
             private String packageVersionId; 
             private Long updateTime; 
 
+            private Builder() {
+            } 
+
+            private Builder(Group model) {
+                this.appId = model.appId;
+                this.appVersionId = model.appVersionId;
+                this.clusterId = model.clusterId;
+                this.createTime = model.createTime;
+                this.groupId = model.groupId;
+                this.groupName = model.groupName;
+                this.groupType = model.groupType;
+                this.packageVersionId = model.packageVersionId;
+                this.updateTime = model.updateTime;
+            } 
+
             /**
-             * The ID of the application.
+             * <p>The ID of the application.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>3616cdca-4f92-4413-<strong><strong>-</strong></strong>********</p>
              */
             public Builder appId(String appId) {
                 this.appId = appId;
@@ -1481,7 +1824,10 @@ public class QueryApplicationStatusResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the change process for application deployment in the instance group.
+             * <p>The ID of the change process for application deployment in the instance group.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>changeorder_a**_*******_**</p>
              */
             public Builder appVersionId(String appVersionId) {
                 this.appVersionId = appVersionId;
@@ -1489,7 +1835,10 @@ public class QueryApplicationStatusResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the cluster.
+             * <p>The ID of the cluster.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>0d247b93-8d62-4e34-<strong><strong>-</strong></strong>********</p>
              */
             public Builder clusterId(String clusterId) {
                 this.clusterId = clusterId;
@@ -1497,7 +1846,10 @@ public class QueryApplicationStatusResponseBody extends TeaModel {
             }
 
             /**
-             * The time when the instance group was created. This value is a UNIX timestamp representing the number of milliseconds that have elapsed since January 1, 1970, 00:00:00 UTC.
+             * <p>The time when the instance group was created. This value is a UNIX timestamp representing the number of milliseconds that have elapsed since January 1, 1970, 00:00:00 UTC.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1573626155185</p>
              */
             public Builder createTime(Long createTime) {
                 this.createTime = createTime;
@@ -1505,7 +1857,10 @@ public class QueryApplicationStatusResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the instance group.
+             * <p>The ID of the instance group.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>8123db90-880f-486f-<strong><strong>-</strong></strong>********</p>
              */
             public Builder groupId(String groupId) {
                 this.groupId = groupId;
@@ -1513,7 +1868,10 @@ public class QueryApplicationStatusResponseBody extends TeaModel {
             }
 
             /**
-             * The name of the instance group.
+             * <p>The name of the instance group.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>_DEFAULT_GROUP</p>
              */
             public Builder groupName(String groupName) {
                 this.groupName = groupName;
@@ -1521,12 +1879,15 @@ public class QueryApplicationStatusResponseBody extends TeaModel {
             }
 
             /**
-             * The type of the instance group. Valid values:
-             * <p>
+             * <p>The type of the instance group. Valid values:</p>
+             * <ul>
+             * <li>0: default group</li>
+             * <li>1: self-managed group</li>
+             * <li>2: canary release group</li>
+             * </ul>
              * 
-             * *   0: default group
-             * *   1: self-managed group
-             * *   2: canary release group
+             * <strong>example:</strong>
+             * <p>0</p>
              */
             public Builder groupType(Integer groupType) {
                 this.groupType = groupType;
@@ -1534,7 +1895,10 @@ public class QueryApplicationStatusResponseBody extends TeaModel {
             }
 
             /**
-             * The version of the deployment package that was used to deploy an application in the instance group.
+             * <p>The version of the deployment package that was used to deploy an application in the instance group.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>441beb18-da42-44dc-<strong><strong>-</strong></strong>********</p>
              */
             public Builder packageVersionId(String packageVersionId) {
                 this.packageVersionId = packageVersionId;
@@ -1542,7 +1906,10 @@ public class QueryApplicationStatusResponseBody extends TeaModel {
             }
 
             /**
-             * The time when the instance group was last modified. This value is a UNIX timestamp representing the number of milliseconds that have elapsed since January 1, 1970, 00:00:00 UTC.
+             * <p>The time when the instance group was last modified. This value is a UNIX timestamp representing the number of milliseconds that have elapsed since January 1, 1970, 00:00:00 UTC.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1573627441388</p>
              */
             public Builder updateTime(Long updateTime) {
                 this.updateTime = updateTime;
@@ -1556,9 +1923,15 @@ public class QueryApplicationStatusResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link QueryApplicationStatusResponseBody} extends {@link TeaModel}
+     *
+     * <p>QueryApplicationStatusResponseBody</p>
+     */
     public static class GroupList extends TeaModel {
-        @NameInMap("Group")
-        private java.util.List < Group> group;
+        @com.aliyun.core.annotation.NameInMap("Group")
+        private java.util.List<Group> group;
 
         private GroupList(Builder builder) {
             this.group = builder.group;
@@ -1575,17 +1948,24 @@ public class QueryApplicationStatusResponseBody extends TeaModel {
         /**
          * @return group
          */
-        public java.util.List < Group> getGroup() {
+        public java.util.List<Group> getGroup() {
             return this.group;
         }
 
         public static final class Builder {
-            private java.util.List < Group> group; 
+            private java.util.List<Group> group; 
+
+            private Builder() {
+            } 
+
+            private Builder(GroupList model) {
+                this.group = model.group;
+            } 
 
             /**
              * Group.
              */
-            public Builder group(java.util.List < Group> group) {
+            public Builder group(java.util.List<Group> group) {
                 this.group = group;
                 return this;
             }
@@ -1597,20 +1977,26 @@ public class QueryApplicationStatusResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link QueryApplicationStatusResponseBody} extends {@link TeaModel}
+     *
+     * <p>QueryApplicationStatusResponseBody</p>
+     */
     public static class AppInfo extends TeaModel {
-        @NameInMap("Application")
+        @com.aliyun.core.annotation.NameInMap("Application")
         private Application application;
 
-        @NameInMap("DeployRecordList")
+        @com.aliyun.core.annotation.NameInMap("DeployRecordList")
         private DeployRecordList deployRecordList;
 
-        @NameInMap("EccList")
+        @com.aliyun.core.annotation.NameInMap("EccList")
         private EccList eccList;
 
-        @NameInMap("EcuList")
+        @com.aliyun.core.annotation.NameInMap("EcuList")
         private EcuList ecuList;
 
-        @NameInMap("GroupList")
+        @com.aliyun.core.annotation.NameInMap("GroupList")
         private GroupList groupList;
 
         private AppInfo(Builder builder) {
@@ -1671,8 +2057,19 @@ public class QueryApplicationStatusResponseBody extends TeaModel {
             private EcuList ecuList; 
             private GroupList groupList; 
 
+            private Builder() {
+            } 
+
+            private Builder(AppInfo model) {
+                this.application = model.application;
+                this.deployRecordList = model.deployRecordList;
+                this.eccList = model.eccList;
+                this.ecuList = model.ecuList;
+                this.groupList = model.groupList;
+            } 
+
             /**
-             * The basic information about the application.
+             * <p>The basic information about the application.</p>
              */
             public Builder application(Application application) {
                 this.application = application;
@@ -1680,7 +2077,7 @@ public class QueryApplicationStatusResponseBody extends TeaModel {
             }
 
             /**
-             * The information about deployment records.
+             * <p>The information about deployment records.</p>
              */
             public Builder deployRecordList(DeployRecordList deployRecordList) {
                 this.deployRecordList = deployRecordList;
@@ -1688,7 +2085,7 @@ public class QueryApplicationStatusResponseBody extends TeaModel {
             }
 
             /**
-             * The information about elastic compute containers (ECCs).
+             * <p>The information about elastic compute containers (ECCs).</p>
              */
             public Builder eccList(EccList eccList) {
                 this.eccList = eccList;
@@ -1696,7 +2093,7 @@ public class QueryApplicationStatusResponseBody extends TeaModel {
             }
 
             /**
-             * The information about elastic compute units (ECUs).
+             * <p>The information about elastic compute units (ECUs).</p>
              */
             public Builder ecuList(EcuList ecuList) {
                 this.ecuList = ecuList;
@@ -1704,7 +2101,7 @@ public class QueryApplicationStatusResponseBody extends TeaModel {
             }
 
             /**
-             * The information about the instance groups.
+             * <p>The information about the instance groups.</p>
              */
             public Builder groupList(GroupList groupList) {
                 this.groupList = groupList;

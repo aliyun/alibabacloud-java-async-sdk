@@ -1,24 +1,29 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.edas20170801.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DeleteK8sApplicationRequest} extends {@link RequestModel}
  *
  * <p>DeleteK8sApplicationRequest</p>
  */
 public class DeleteK8sApplicationRequest extends Request {
-    @Query
-    @NameInMap("AppId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("AppId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String appId;
 
-    @Query
-    @NameInMap("Force")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Force")
     private Boolean force;
 
     private DeleteK8sApplicationRequest(Builder builder) {
@@ -35,7 +40,7 @@ public class DeleteK8sApplicationRequest extends Request {
         return builder().build();
     }
 
-    @Override
+@Override
     public Builder toBuilder() {
         return new Builder(this);
     }
@@ -69,7 +74,11 @@ public class DeleteK8sApplicationRequest extends Request {
         } 
 
         /**
-         * The ID of the application that you want to delete. You can call the ListApplication operation to query the application ID.
+         * <p>The ID of the application that you want to delete. You can call the ListApplication operation to query the application ID.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>dbac7e3c-****-49bc-b6de-ffc550018b45</p>
          */
         public Builder appId(String appId) {
             this.putQueryParameter("AppId", appId);
@@ -78,7 +87,10 @@ public class DeleteK8sApplicationRequest extends Request {
         }
 
         /**
-         * Specifies whether to forcibly delete the application and disable application deletion protection.
+         * <p>Specifies whether to forcibly delete the application and disable application deletion protection.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder force(Boolean force) {
             this.putQueryParameter("Force", force);

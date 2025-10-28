@@ -1,27 +1,32 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.edas20170801.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ListConvertableEcuResponseBody} extends {@link TeaModel}
  *
  * <p>ListConvertableEcuResponseBody</p>
  */
 public class ListConvertableEcuResponseBody extends TeaModel {
-    @NameInMap("Code")
+    @com.aliyun.core.annotation.NameInMap("Code")
     private Integer code;
 
-    @NameInMap("InstanceList")
+    @com.aliyun.core.annotation.NameInMap("InstanceList")
     private InstanceList instanceList;
 
-    @NameInMap("Message")
+    @com.aliyun.core.annotation.NameInMap("Message")
     private String message;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
     private ListConvertableEcuResponseBody(Builder builder) {
@@ -37,6 +42,10 @@ public class ListConvertableEcuResponseBody extends TeaModel {
 
     public static ListConvertableEcuResponseBody create() {
         return builder().build();
+    }
+
+    public Builder toBuilder() {
+        return new Builder(this);
     }
 
     /**
@@ -73,8 +82,21 @@ public class ListConvertableEcuResponseBody extends TeaModel {
         private String message; 
         private String requestId; 
 
+        private Builder() {
+        } 
+
+        private Builder(ListConvertableEcuResponseBody model) {
+            this.code = model.code;
+            this.instanceList = model.instanceList;
+            this.message = model.message;
+            this.requestId = model.requestId;
+        } 
+
         /**
-         * The HTTP status code that is returned.
+         * <p>The HTTP status code that is returned.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>200</p>
          */
         public Builder code(Integer code) {
             this.code = code;
@@ -82,7 +104,7 @@ public class ListConvertableEcuResponseBody extends TeaModel {
         }
 
         /**
-         * The ECS instances that can be imported to the cluster.
+         * <p>The ECS instances that can be imported to the cluster.</p>
          */
         public Builder instanceList(InstanceList instanceList) {
             this.instanceList = instanceList;
@@ -90,7 +112,10 @@ public class ListConvertableEcuResponseBody extends TeaModel {
         }
 
         /**
-         * The additional information that is returned.
+         * <p>The additional information that is returned.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>success</p>
          */
         public Builder message(String message) {
             this.message = message;
@@ -98,7 +123,10 @@ public class ListConvertableEcuResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the request.
+         * <p>The ID of the request.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>b197-40ab-9155-7ca7</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -111,47 +139,53 @@ public class ListConvertableEcuResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link ListConvertableEcuResponseBody} extends {@link TeaModel}
+     *
+     * <p>ListConvertableEcuResponseBody</p>
+     */
     public static class Instance extends TeaModel {
-        @NameInMap("Cpu")
+        @com.aliyun.core.annotation.NameInMap("Cpu")
         private Integer cpu;
 
-        @NameInMap("EcuId")
+        @com.aliyun.core.annotation.NameInMap("EcuId")
         private String ecuId;
 
-        @NameInMap("Eip")
+        @com.aliyun.core.annotation.NameInMap("Eip")
         private String eip;
 
-        @NameInMap("Expired")
+        @com.aliyun.core.annotation.NameInMap("Expired")
         private Boolean expired;
 
-        @NameInMap("InnerIp")
+        @com.aliyun.core.annotation.NameInMap("InnerIp")
         private String innerIp;
 
-        @NameInMap("InstanceId")
+        @com.aliyun.core.annotation.NameInMap("InstanceId")
         private String instanceId;
 
-        @NameInMap("InstanceName")
+        @com.aliyun.core.annotation.NameInMap("InstanceName")
         private String instanceName;
 
-        @NameInMap("Mem")
+        @com.aliyun.core.annotation.NameInMap("Mem")
         private Integer mem;
 
-        @NameInMap("PrivateIp")
+        @com.aliyun.core.annotation.NameInMap("PrivateIp")
         private String privateIp;
 
-        @NameInMap("PublicIp")
+        @com.aliyun.core.annotation.NameInMap("PublicIp")
         private String publicIp;
 
-        @NameInMap("RegionId")
+        @com.aliyun.core.annotation.NameInMap("RegionId")
         private String regionId;
 
-        @NameInMap("Status")
+        @com.aliyun.core.annotation.NameInMap("Status")
         private String status;
 
-        @NameInMap("VpcId")
+        @com.aliyun.core.annotation.NameInMap("VpcId")
         private String vpcId;
 
-        @NameInMap("VpcName")
+        @com.aliyun.core.annotation.NameInMap("VpcName")
         private String vpcName;
 
         private Instance(Builder builder) {
@@ -293,8 +327,31 @@ public class ListConvertableEcuResponseBody extends TeaModel {
             private String vpcId; 
             private String vpcName; 
 
+            private Builder() {
+            } 
+
+            private Builder(Instance model) {
+                this.cpu = model.cpu;
+                this.ecuId = model.ecuId;
+                this.eip = model.eip;
+                this.expired = model.expired;
+                this.innerIp = model.innerIp;
+                this.instanceId = model.instanceId;
+                this.instanceName = model.instanceName;
+                this.mem = model.mem;
+                this.privateIp = model.privateIp;
+                this.publicIp = model.publicIp;
+                this.regionId = model.regionId;
+                this.status = model.status;
+                this.vpcId = model.vpcId;
+                this.vpcName = model.vpcName;
+            } 
+
             /**
-             * The number of CPU cores of the ECS instance.
+             * <p>The number of CPU cores of the ECS instance.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2</p>
              */
             public Builder cpu(Integer cpu) {
                 this.cpu = cpu;
@@ -302,7 +359,10 @@ public class ListConvertableEcuResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the elastic compute units (ECU).
+             * <p>The ID of the elastic compute units (ECU).</p>
+             * 
+             * <strong>example:</strong>
+             * <p>b197-40ab-9155-7ca7</p>
              */
             public Builder ecuId(String ecuId) {
                 this.ecuId = ecuId;
@@ -310,7 +370,10 @@ public class ListConvertableEcuResponseBody extends TeaModel {
             }
 
             /**
-             * The elastic IP address (EIP) associated with the ECS instance. The EIP can be changed.
+             * <p>The elastic IP address (EIP) associated with the ECS instance. The EIP can be changed.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>13.xx.xxx.xx</p>
              */
             public Builder eip(String eip) {
                 this.eip = eip;
@@ -318,7 +381,10 @@ public class ListConvertableEcuResponseBody extends TeaModel {
             }
 
             /**
-             * Indicates whether the ECS instance has expired.
+             * <p>Indicates whether the ECS instance has expired.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>false</p>
              */
             public Builder expired(Boolean expired) {
                 this.expired = expired;
@@ -326,7 +392,10 @@ public class ListConvertableEcuResponseBody extends TeaModel {
             }
 
             /**
-             * The private IP address of the ECS instance. This parameter is valid only when the ECS instance is deployed in a VPC.
+             * <p>The private IP address of the ECS instance. This parameter is valid only when the ECS instance is deployed in a VPC.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>192.168.13.xx</p>
              */
             public Builder innerIp(String innerIp) {
                 this.innerIp = innerIp;
@@ -334,7 +403,10 @@ public class ListConvertableEcuResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the ECS instance.
+             * <p>The ID of the ECS instance.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>i-2ze7s2v0b***********</p>
              */
             public Builder instanceId(String instanceId) {
                 this.instanceId = instanceId;
@@ -342,7 +414,10 @@ public class ListConvertableEcuResponseBody extends TeaModel {
             }
 
             /**
-             * The name of the ECS instance.
+             * <p>The name of the ECS instance.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>worker-k8s</p>
              */
             public Builder instanceName(String instanceName) {
                 this.instanceName = instanceName;
@@ -350,7 +425,10 @@ public class ListConvertableEcuResponseBody extends TeaModel {
             }
 
             /**
-             * The size of memory for the ECS instance.
+             * <p>The size of memory for the ECS instance.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>4096</p>
              */
             public Builder mem(Integer mem) {
                 this.mem = mem;
@@ -358,7 +436,10 @@ public class ListConvertableEcuResponseBody extends TeaModel {
             }
 
             /**
-             * The private IP address of the ECS instance. This parameter is valid only when the ECS instance is deployed in a VPC.
+             * <p>The private IP address of the ECS instance. This parameter is valid only when the ECS instance is deployed in a VPC.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>192.XX.XX.123</p>
              */
             public Builder privateIp(String privateIp) {
                 this.privateIp = privateIp;
@@ -366,7 +447,10 @@ public class ListConvertableEcuResponseBody extends TeaModel {
             }
 
             /**
-             * The public IP address of the ECS instance. This IP address can be used only by the ECS instance.
+             * <p>The public IP address of the ECS instance. This IP address can be used only by the ECS instance.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>13.xx.xx.xxx</p>
              */
             public Builder publicIp(String publicIp) {
                 this.publicIp = publicIp;
@@ -374,7 +458,10 @@ public class ListConvertableEcuResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the region where the ECS instance is located.
+             * <p>The ID of the region where the ECS instance is located.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>cn-beijing</p>
              */
             public Builder regionId(String regionId) {
                 this.regionId = regionId;
@@ -382,14 +469,17 @@ public class ListConvertableEcuResponseBody extends TeaModel {
             }
 
             /**
-             * The state of the instance. Valid values:
-             * <p>
+             * <p>The state of the instance. Valid values:</p>
+             * <ul>
+             * <li>Pending: The instance is being created.</li>
+             * <li>Running: The instance is running.</li>
+             * <li>Starting: The instance is being started.</li>
+             * <li>Stopping: The instance is being stopped.</li>
+             * <li>Stopped: The instance is stopped.</li>
+             * </ul>
              * 
-             * *   Pending: The instance is being created.
-             * *   Running: The instance is running.
-             * *   Starting: The instance is being started.
-             * *   Stopping: The instance is being stopped.
-             * *   Stopped: The instance is stopped.
+             * <strong>example:</strong>
+             * <p>Running</p>
              */
             public Builder status(String status) {
                 this.status = status;
@@ -397,7 +487,10 @@ public class ListConvertableEcuResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the virtual private cloud (VPC).
+             * <p>The ID of the virtual private cloud (VPC).</p>
+             * 
+             * <strong>example:</strong>
+             * <p>vpc-2zef6ob8m************</p>
              */
             public Builder vpcId(String vpcId) {
                 this.vpcId = vpcId;
@@ -405,7 +498,10 @@ public class ListConvertableEcuResponseBody extends TeaModel {
             }
 
             /**
-             * The name of the VPC.
+             * <p>The name of the VPC.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>jianwei-test</p>
              */
             public Builder vpcName(String vpcName) {
                 this.vpcName = vpcName;
@@ -419,9 +515,15 @@ public class ListConvertableEcuResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link ListConvertableEcuResponseBody} extends {@link TeaModel}
+     *
+     * <p>ListConvertableEcuResponseBody</p>
+     */
     public static class InstanceList extends TeaModel {
-        @NameInMap("Instance")
-        private java.util.List < Instance> instance;
+        @com.aliyun.core.annotation.NameInMap("Instance")
+        private java.util.List<Instance> instance;
 
         private InstanceList(Builder builder) {
             this.instance = builder.instance;
@@ -438,17 +540,24 @@ public class ListConvertableEcuResponseBody extends TeaModel {
         /**
          * @return instance
          */
-        public java.util.List < Instance> getInstance() {
+        public java.util.List<Instance> getInstance() {
             return this.instance;
         }
 
         public static final class Builder {
-            private java.util.List < Instance> instance; 
+            private java.util.List<Instance> instance; 
+
+            private Builder() {
+            } 
+
+            private Builder(InstanceList model) {
+                this.instance = model.instance;
+            } 
 
             /**
              * Instance.
              */
-            public Builder instance(java.util.List < Instance> instance) {
+            public Builder instance(java.util.List<Instance> instance) {
                 this.instance = instance;
                 return this;
             }

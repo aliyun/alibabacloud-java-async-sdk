@@ -1,24 +1,29 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.edas20170801.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link RetryChangeOrderTaskRequest} extends {@link RequestModel}
  *
  * <p>RetryChangeOrderTaskRequest</p>
  */
 public class RetryChangeOrderTaskRequest extends Request {
-    @Query
-    @NameInMap("RetryStatus")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("RetryStatus")
     private Boolean retryStatus;
 
-    @Query
-    @NameInMap("TaskId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("TaskId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String taskId;
 
     private RetryChangeOrderTaskRequest(Builder builder) {
@@ -35,7 +40,7 @@ public class RetryChangeOrderTaskRequest extends Request {
         return builder().build();
     }
 
-    @Override
+@Override
     public Builder toBuilder() {
         return new Builder(this);
     }
@@ -69,7 +74,10 @@ public class RetryChangeOrderTaskRequest extends Request {
         } 
 
         /**
-         * The retry status.
+         * <p>The retry status.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder retryStatus(Boolean retryStatus) {
             this.putQueryParameter("RetryStatus", retryStatus);
@@ -78,7 +86,11 @@ public class RetryChangeOrderTaskRequest extends Request {
         }
 
         /**
-         * The ID of the process.
+         * <p>The ID of the process.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>823-bhjf-23u4-eiuf*</p>
          */
         public Builder taskId(String taskId) {
             this.putQueryParameter("TaskId", taskId);

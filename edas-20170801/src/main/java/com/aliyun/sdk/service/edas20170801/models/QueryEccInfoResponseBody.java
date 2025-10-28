@@ -1,27 +1,32 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.edas20170801.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link QueryEccInfoResponseBody} extends {@link TeaModel}
  *
  * <p>QueryEccInfoResponseBody</p>
  */
 public class QueryEccInfoResponseBody extends TeaModel {
-    @NameInMap("Code")
+    @com.aliyun.core.annotation.NameInMap("Code")
     private Integer code;
 
-    @NameInMap("EccInfo")
+    @com.aliyun.core.annotation.NameInMap("EccInfo")
     private EccInfo eccInfo;
 
-    @NameInMap("Message")
+    @com.aliyun.core.annotation.NameInMap("Message")
     private String message;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
     private QueryEccInfoResponseBody(Builder builder) {
@@ -37,6 +42,10 @@ public class QueryEccInfoResponseBody extends TeaModel {
 
     public static QueryEccInfoResponseBody create() {
         return builder().build();
+    }
+
+    public Builder toBuilder() {
+        return new Builder(this);
     }
 
     /**
@@ -73,8 +82,21 @@ public class QueryEccInfoResponseBody extends TeaModel {
         private String message; 
         private String requestId; 
 
+        private Builder() {
+        } 
+
+        private Builder(QueryEccInfoResponseBody model) {
+            this.code = model.code;
+            this.eccInfo = model.eccInfo;
+            this.message = model.message;
+            this.requestId = model.requestId;
+        } 
+
         /**
-         * The HTTP status code that is returned.
+         * <p>The HTTP status code that is returned.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>200</p>
          */
         public Builder code(Integer code) {
             this.code = code;
@@ -82,7 +104,7 @@ public class QueryEccInfoResponseBody extends TeaModel {
         }
 
         /**
-         * The information about the ECC.
+         * <p>The information about the ECC.</p>
          */
         public Builder eccInfo(EccInfo eccInfo) {
             this.eccInfo = eccInfo;
@@ -90,7 +112,10 @@ public class QueryEccInfoResponseBody extends TeaModel {
         }
 
         /**
-         * The additional information that is returned.
+         * <p>The additional information that is returned.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>success</p>
          */
         public Builder message(String message) {
             this.message = message;
@@ -98,7 +123,10 @@ public class QueryEccInfoResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the request.
+         * <p>The ID of the request.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>b197-40ab-9155-****</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -111,29 +139,35 @@ public class QueryEccInfoResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link QueryEccInfoResponseBody} extends {@link TeaModel}
+     *
+     * <p>QueryEccInfoResponseBody</p>
+     */
     public static class EccInfo extends TeaModel {
-        @NameInMap("AppId")
+        @com.aliyun.core.annotation.NameInMap("AppId")
         private String appId;
 
-        @NameInMap("EccId")
+        @com.aliyun.core.annotation.NameInMap("EccId")
         private String eccId;
 
-        @NameInMap("EcuId")
+        @com.aliyun.core.annotation.NameInMap("EcuId")
         private String ecuId;
 
-        @NameInMap("GroupId")
+        @com.aliyun.core.annotation.NameInMap("GroupId")
         private String groupId;
 
-        @NameInMap("GroupName")
+        @com.aliyun.core.annotation.NameInMap("GroupName")
         private String groupName;
 
-        @NameInMap("PackageMd5")
+        @com.aliyun.core.annotation.NameInMap("PackageMd5")
         private String packageMd5;
 
-        @NameInMap("PackageVersion")
+        @com.aliyun.core.annotation.NameInMap("PackageVersion")
         private String packageVersion;
 
-        @NameInMap("VpcId")
+        @com.aliyun.core.annotation.NameInMap("VpcId")
         private String vpcId;
 
         private EccInfo(Builder builder) {
@@ -221,8 +255,25 @@ public class QueryEccInfoResponseBody extends TeaModel {
             private String packageVersion; 
             private String vpcId; 
 
+            private Builder() {
+            } 
+
+            private Builder(EccInfo model) {
+                this.appId = model.appId;
+                this.eccId = model.eccId;
+                this.ecuId = model.ecuId;
+                this.groupId = model.groupId;
+                this.groupName = model.groupName;
+                this.packageMd5 = model.packageMd5;
+                this.packageVersion = model.packageVersion;
+                this.vpcId = model.vpcId;
+            } 
+
             /**
-             * The ID of the application.
+             * <p>The ID of the application.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>e809****-43d7-4c6b-8e01-b0d9d1db****</p>
              */
             public Builder appId(String appId) {
                 this.appId = appId;
@@ -230,7 +281,10 @@ public class QueryEccInfoResponseBody extends TeaModel {
             }
 
             /**
-             * ECC ID
+             * <p>ECC ID</p>
+             * 
+             * <strong>example:</strong>
+             * <p>a5b9****-40b4-4d7b-9c2a-55d6c1c0****</p>
              */
             public Builder eccId(String eccId) {
                 this.eccId = eccId;
@@ -238,7 +292,10 @@ public class QueryEccInfoResponseBody extends TeaModel {
             }
 
             /**
-             * ECU ID
+             * <p>ECU ID</p>
+             * 
+             * <strong>example:</strong>
+             * <p>0d4e****-6d87-401f-ba81-13df9877****</p>
              */
             public Builder ecuId(String ecuId) {
                 this.ecuId = ecuId;
@@ -246,7 +303,10 @@ public class QueryEccInfoResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the ECC group.
+             * <p>The ID of the ECC group.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>57cd****-2d3b-496f-bcce-646d0a4d****</p>
              */
             public Builder groupId(String groupId) {
                 this.groupId = groupId;
@@ -254,7 +314,10 @@ public class QueryEccInfoResponseBody extends TeaModel {
             }
 
             /**
-             * The name of the ECC group.
+             * <p>The name of the ECC group.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>_DEFAULT_GROUP</p>
              */
             public Builder groupName(String groupName) {
                 this.groupName = groupName;
@@ -262,7 +325,10 @@ public class QueryEccInfoResponseBody extends TeaModel {
             }
 
             /**
-             * The MD5 hash value of the deployment package version.
+             * <p>The MD5 hash value of the deployment package version.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>bab6<strong><strong>7a090e41ca9445c9b3cd</strong></strong></p>
              */
             public Builder packageMd5(String packageMd5) {
                 this.packageMd5 = packageMd5;
@@ -270,7 +336,10 @@ public class QueryEccInfoResponseBody extends TeaModel {
             }
 
             /**
-             * The version of the deployment package.
+             * <p>The version of the deployment package.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>20210209.153400</p>
              */
             public Builder packageVersion(String packageVersion) {
                 this.packageVersion = packageVersion;
@@ -278,7 +347,10 @@ public class QueryEccInfoResponseBody extends TeaModel {
             }
 
             /**
-             * VPC ID
+             * <p>VPC ID</p>
+             * 
+             * <strong>example:</strong>
+             * <p>vpc-23727****</p>
              */
             public Builder vpcId(String vpcId) {
                 this.vpcId = vpcId;

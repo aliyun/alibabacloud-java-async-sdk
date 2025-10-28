@@ -1,33 +1,38 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.edas20170801.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link AbortAndRollbackChangeOrderResponseBody} extends {@link TeaModel}
  *
  * <p>AbortAndRollbackChangeOrderResponseBody</p>
  */
 public class AbortAndRollbackChangeOrderResponseBody extends TeaModel {
-    @NameInMap("Code")
+    @com.aliyun.core.annotation.NameInMap("Code")
     private Integer code;
 
-    @NameInMap("Data")
+    @com.aliyun.core.annotation.NameInMap("Data")
     private Data data;
 
-    @NameInMap("ErrorCode")
+    @com.aliyun.core.annotation.NameInMap("ErrorCode")
     private String errorCode;
 
-    @NameInMap("Message")
+    @com.aliyun.core.annotation.NameInMap("Message")
     private String message;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("TraceId")
+    @com.aliyun.core.annotation.NameInMap("TraceId")
     private String traceId;
 
     private AbortAndRollbackChangeOrderResponseBody(Builder builder) {
@@ -45,6 +50,10 @@ public class AbortAndRollbackChangeOrderResponseBody extends TeaModel {
 
     public static AbortAndRollbackChangeOrderResponseBody create() {
         return builder().build();
+    }
+
+    public Builder toBuilder() {
+        return new Builder(this);
     }
 
     /**
@@ -97,8 +106,23 @@ public class AbortAndRollbackChangeOrderResponseBody extends TeaModel {
         private String requestId; 
         private String traceId; 
 
+        private Builder() {
+        } 
+
+        private Builder(AbortAndRollbackChangeOrderResponseBody model) {
+            this.code = model.code;
+            this.data = model.data;
+            this.errorCode = model.errorCode;
+            this.message = model.message;
+            this.requestId = model.requestId;
+            this.traceId = model.traceId;
+        } 
+
         /**
-         * The HTTP status code that is returned.
+         * <p>The HTTP status code that is returned.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>200</p>
          */
         public Builder code(Integer code) {
             this.code = code;
@@ -106,7 +130,7 @@ public class AbortAndRollbackChangeOrderResponseBody extends TeaModel {
         }
 
         /**
-         * The information about the change process.
+         * <p>The information about the change process.</p>
          */
         public Builder data(Data data) {
             this.data = data;
@@ -114,7 +138,10 @@ public class AbortAndRollbackChangeOrderResponseBody extends TeaModel {
         }
 
         /**
-         * The error code that is returned.
+         * <p>The error code that is returned.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>success</p>
          */
         public Builder errorCode(String errorCode) {
             this.errorCode = errorCode;
@@ -122,7 +149,10 @@ public class AbortAndRollbackChangeOrderResponseBody extends TeaModel {
         }
 
         /**
-         * The additional information that is returned.
+         * <p>The additional information that is returned.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>success</p>
          */
         public Builder message(String message) {
             this.message = message;
@@ -130,7 +160,10 @@ public class AbortAndRollbackChangeOrderResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the request.
+         * <p>The ID of the request.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>81E0B333-2871-<strong><strong>-</strong></strong>-B8F5FF43****</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -138,7 +171,10 @@ public class AbortAndRollbackChangeOrderResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the trace.
+         * <p>The ID of the trace.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>210f07bf1640239405712621******</p>
          */
         public Builder traceId(String traceId) {
             this.traceId = traceId;
@@ -151,8 +187,14 @@ public class AbortAndRollbackChangeOrderResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link AbortAndRollbackChangeOrderResponseBody} extends {@link TeaModel}
+     *
+     * <p>AbortAndRollbackChangeOrderResponseBody</p>
+     */
     public static class Data extends TeaModel {
-        @NameInMap("ChangeOrderId")
+        @com.aliyun.core.annotation.NameInMap("ChangeOrderId")
         private String changeOrderId;
 
         private Data(Builder builder) {
@@ -177,8 +219,18 @@ public class AbortAndRollbackChangeOrderResponseBody extends TeaModel {
         public static final class Builder {
             private String changeOrderId; 
 
+            private Builder() {
+            } 
+
+            private Builder(Data model) {
+                this.changeOrderId = model.changeOrderId;
+            } 
+
             /**
-             * The ID of the change process.
+             * <p>The ID of the change process.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>4f40e616-cdcd-4250-a018-efd459******</p>
              */
             public Builder changeOrderId(String changeOrderId) {
                 this.changeOrderId = changeOrderId;

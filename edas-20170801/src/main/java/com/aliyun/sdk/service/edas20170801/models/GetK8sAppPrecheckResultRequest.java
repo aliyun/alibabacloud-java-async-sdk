@@ -1,30 +1,35 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.edas20170801.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link GetK8sAppPrecheckResultRequest} extends {@link RequestModel}
  *
  * <p>GetK8sAppPrecheckResultRequest</p>
  */
 public class GetK8sAppPrecheckResultRequest extends Request {
-    @Query
-    @NameInMap("AppName")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("AppName")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String appName;
 
-    @Query
-    @NameInMap("ClusterId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ClusterId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String clusterId;
 
-    @Query
-    @NameInMap("Namespace")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Namespace")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String namespace;
 
     private GetK8sAppPrecheckResultRequest(Builder builder) {
@@ -42,7 +47,7 @@ public class GetK8sAppPrecheckResultRequest extends Request {
         return builder().build();
     }
 
-    @Override
+@Override
     public Builder toBuilder() {
         return new Builder(this);
     }
@@ -85,7 +90,11 @@ public class GetK8sAppPrecheckResultRequest extends Request {
         } 
 
         /**
-         * The name of the application.
+         * <p>The name of the application.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>testapp</p>
          */
         public Builder appName(String appName) {
             this.putQueryParameter("AppName", appName);
@@ -94,7 +103,11 @@ public class GetK8sAppPrecheckResultRequest extends Request {
         }
 
         /**
-         * The ID of the cluster in Enterprise Distributed Application Service (EDAS).
+         * <p>The ID of the cluster in Enterprise Distributed Application Service (EDAS).</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>c37aec2a-bcca-4ec1-<strong><strong>-</strong></strong>********</p>
          */
         public Builder clusterId(String clusterId) {
             this.putQueryParameter("ClusterId", clusterId);
@@ -103,7 +116,11 @@ public class GetK8sAppPrecheckResultRequest extends Request {
         }
 
         /**
-         * The namespace of the Kubernetes cluster.
+         * <p>The namespace of the Kubernetes cluster.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>default</p>
          */
         public Builder namespace(String namespace) {
             this.putQueryParameter("Namespace", namespace);

@@ -1,27 +1,32 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.edas20170801.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ListK8sIngressRulesResponseBody} extends {@link TeaModel}
  *
  * <p>ListK8sIngressRulesResponseBody</p>
  */
 public class ListK8sIngressRulesResponseBody extends TeaModel {
-    @NameInMap("Code")
+    @com.aliyun.core.annotation.NameInMap("Code")
     private Integer code;
 
-    @NameInMap("Data")
-    private java.util.List < Data> data;
+    @com.aliyun.core.annotation.NameInMap("Data")
+    private java.util.List<Data> data;
 
-    @NameInMap("Message")
+    @com.aliyun.core.annotation.NameInMap("Message")
     private String message;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
     private ListK8sIngressRulesResponseBody(Builder builder) {
@@ -39,6 +44,10 @@ public class ListK8sIngressRulesResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return code
      */
@@ -49,7 +58,7 @@ public class ListK8sIngressRulesResponseBody extends TeaModel {
     /**
      * @return data
      */
-    public java.util.List < Data> getData() {
+    public java.util.List<Data> getData() {
         return this.data;
     }
 
@@ -69,12 +78,25 @@ public class ListK8sIngressRulesResponseBody extends TeaModel {
 
     public static final class Builder {
         private Integer code; 
-        private java.util.List < Data> data; 
+        private java.util.List<Data> data; 
         private String message; 
         private String requestId; 
 
+        private Builder() {
+        } 
+
+        private Builder(ListK8sIngressRulesResponseBody model) {
+            this.code = model.code;
+            this.data = model.data;
+            this.message = model.message;
+            this.requestId = model.requestId;
+        } 
+
         /**
-         * The HTTP status code that is returned.
+         * <p>The HTTP status code that is returned.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>200</p>
          */
         public Builder code(Integer code) {
             this.code = code;
@@ -82,15 +104,18 @@ public class ListK8sIngressRulesResponseBody extends TeaModel {
         }
 
         /**
-         * The response data.
+         * <p>The response data.</p>
          */
-        public Builder data(java.util.List < Data> data) {
+        public Builder data(java.util.List<Data> data) {
             this.data = data;
             return this;
         }
 
         /**
-         * The message that is returned.
+         * <p>The message that is returned.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>success</p>
          */
         public Builder message(String message) {
             this.message = message;
@@ -98,7 +123,10 @@ public class ListK8sIngressRulesResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the request.
+         * <p>The ID of the request.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>5C1C9DE7-88FF-4B56-A47B-3DBBCEB******</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -111,11 +139,17 @@ public class ListK8sIngressRulesResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link ListK8sIngressRulesResponseBody} extends {@link TeaModel}
+     *
+     * <p>ListK8sIngressRulesResponseBody</p>
+     */
     public static class Backend extends TeaModel {
-        @NameInMap("ServiceName")
+        @com.aliyun.core.annotation.NameInMap("ServiceName")
         private String serviceName;
 
-        @NameInMap("ServicePort")
+        @com.aliyun.core.annotation.NameInMap("ServicePort")
         private String servicePort;
 
         private Backend(Builder builder) {
@@ -149,8 +183,19 @@ public class ListK8sIngressRulesResponseBody extends TeaModel {
             private String serviceName; 
             private String servicePort; 
 
+            private Builder() {
+            } 
+
+            private Builder(Backend model) {
+                this.serviceName = model.serviceName;
+                this.servicePort = model.servicePort;
+            } 
+
             /**
-             * The name of the backend Service.
+             * <p>The name of the backend Service.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>http-service</p>
              */
             public Builder serviceName(String serviceName) {
                 this.serviceName = serviceName;
@@ -158,7 +203,10 @@ public class ListK8sIngressRulesResponseBody extends TeaModel {
             }
 
             /**
-             * The port of the backend Service.
+             * <p>The port of the backend Service.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>8080</p>
              */
             public Builder servicePort(String servicePort) {
                 this.servicePort = servicePort;
@@ -172,26 +220,32 @@ public class ListK8sIngressRulesResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link ListK8sIngressRulesResponseBody} extends {@link TeaModel}
+     *
+     * <p>ListK8sIngressRulesResponseBody</p>
+     */
     public static class Paths extends TeaModel {
-        @NameInMap("AppId")
+        @com.aliyun.core.annotation.NameInMap("AppId")
         private String appId;
 
-        @NameInMap("AppName")
+        @com.aliyun.core.annotation.NameInMap("AppName")
         private String appName;
 
-        @NameInMap("Backend")
+        @com.aliyun.core.annotation.NameInMap("Backend")
         private Backend backend;
 
-        @NameInMap("CollectRate")
+        @com.aliyun.core.annotation.NameInMap("CollectRate")
         private Integer collectRate;
 
-        @NameInMap("Path")
+        @com.aliyun.core.annotation.NameInMap("Path")
         private String path;
 
-        @NameInMap("PathType")
+        @com.aliyun.core.annotation.NameInMap("PathType")
         private String pathType;
 
-        @NameInMap("Status")
+        @com.aliyun.core.annotation.NameInMap("Status")
         private String status;
 
         private Paths(Builder builder) {
@@ -270,8 +324,24 @@ public class ListK8sIngressRulesResponseBody extends TeaModel {
             private String pathType; 
             private String status; 
 
+            private Builder() {
+            } 
+
+            private Builder(Paths model) {
+                this.appId = model.appId;
+                this.appName = model.appName;
+                this.backend = model.backend;
+                this.collectRate = model.collectRate;
+                this.path = model.path;
+                this.pathType = model.pathType;
+                this.status = model.status;
+            } 
+
             /**
-             * The ID of the EDAS application.
+             * <p>The ID of the EDAS application.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>43d30ba5-c568-460c-8080-d447ed1a****</p>
              */
             public Builder appId(String appId) {
                 this.appId = appId;
@@ -279,7 +349,10 @@ public class ListK8sIngressRulesResponseBody extends TeaModel {
             }
 
             /**
-             * The name of the EDAS application.
+             * <p>The name of the EDAS application.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>my-app</p>
              */
             public Builder appName(String appName) {
                 this.appName = appName;
@@ -287,7 +360,7 @@ public class ListK8sIngressRulesResponseBody extends TeaModel {
             }
 
             /**
-             * The configurations of the backend Service.
+             * <p>The configurations of the backend Service.</p>
              */
             public Builder backend(Backend backend) {
                 this.backend = backend;
@@ -295,7 +368,10 @@ public class ListK8sIngressRulesResponseBody extends TeaModel {
             }
 
             /**
-             * The collection rate that is set based on the trace query feature. You can add a trace ID to a gateway to use the trace query feature of EDAS.
+             * <p>The collection rate that is set based on the trace query feature. You can add a trace ID to a gateway to use the trace query feature of EDAS.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>100</p>
              */
             public Builder collectRate(Integer collectRate) {
                 this.collectRate = collectRate;
@@ -303,7 +379,10 @@ public class ListK8sIngressRulesResponseBody extends TeaModel {
             }
 
             /**
-             * The path to be accessed.
+             * <p>The path to be accessed.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>/foo/bar</p>
              */
             public Builder path(String path) {
                 this.path = path;
@@ -311,12 +390,15 @@ public class ListK8sIngressRulesResponseBody extends TeaModel {
             }
 
             /**
-             * The path type that determines how a path is matched.
-             * <p>
+             * <p>The path type that determines how a path is matched.</p>
+             * <ul>
+             * <li>ImplementationSpecific (default)</li>
+             * <li>Exact</li>
+             * <li>Prefix</li>
+             * </ul>
              * 
-             * *   ImplementationSpecific (default)
-             * *   Exact
-             * *   Prefix
+             * <strong>example:</strong>
+             * <p>ImplementationSpecific</p>
              */
             public Builder pathType(String pathType) {
                 this.pathType = pathType;
@@ -324,14 +406,17 @@ public class ListK8sIngressRulesResponseBody extends TeaModel {
             }
 
             /**
-             * The state of the Ingress. Valid values:
-             * <p>
+             * <p>The state of the Ingress. Valid values:</p>
+             * <ul>
+             * <li><strong>Normal</strong>: The Ingress works as expected.</li>
+             * <li><strong>ServiceNotFound</strong>: The backend Service does not exist.</li>
+             * <li><strong>InvalidServicePort</strong>: The Service port is invalid.</li>
+             * <li><strong>NotManagedService</strong>: The Service is not managed by EDAS.</li>
+             * <li><strong>Unknown</strong>: An unknown error occurred.</li>
+             * </ul>
              * 
-             * *   **Normal**: The Ingress works as expected.
-             * *   **ServiceNotFound**: The backend Service does not exist.
-             * *   **InvalidServicePort**: The Service port is invalid.
-             * *   **NotManagedService**: The Service is not managed by EDAS.
-             * *   **Unknown**: An unknown error occurred.
+             * <strong>example:</strong>
+             * <p>Normal</p>
              */
             public Builder status(String status) {
                 this.status = status;
@@ -345,17 +430,23 @@ public class ListK8sIngressRulesResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link ListK8sIngressRulesResponseBody} extends {@link TeaModel}
+     *
+     * <p>ListK8sIngressRulesResponseBody</p>
+     */
     public static class Rules extends TeaModel {
-        @NameInMap("EnableTls")
+        @com.aliyun.core.annotation.NameInMap("EnableTls")
         private Boolean enableTls;
 
-        @NameInMap("Host")
+        @com.aliyun.core.annotation.NameInMap("Host")
         private String host;
 
-        @NameInMap("Paths")
-        private java.util.List < Paths> paths;
+        @com.aliyun.core.annotation.NameInMap("Paths")
+        private java.util.List<Paths> paths;
 
-        @NameInMap("SecretName")
+        @com.aliyun.core.annotation.NameInMap("SecretName")
         private String secretName;
 
         private Rules(Builder builder) {
@@ -390,7 +481,7 @@ public class ListK8sIngressRulesResponseBody extends TeaModel {
         /**
          * @return paths
          */
-        public java.util.List < Paths> getPaths() {
+        public java.util.List<Paths> getPaths() {
             return this.paths;
         }
 
@@ -404,15 +495,28 @@ public class ListK8sIngressRulesResponseBody extends TeaModel {
         public static final class Builder {
             private Boolean enableTls; 
             private String host; 
-            private java.util.List < Paths> paths; 
+            private java.util.List<Paths> paths; 
             private String secretName; 
 
+            private Builder() {
+            } 
+
+            private Builder(Rules model) {
+                this.enableTls = model.enableTls;
+                this.host = model.host;
+                this.paths = model.paths;
+                this.secretName = model.secretName;
+            } 
+
             /**
-             * Indicates whether TLS is enabled. Valid values:
-             * <p>
+             * <p>Indicates whether TLS is enabled. Valid values:</p>
+             * <ul>
+             * <li>true</li>
+             * <li>false</li>
+             * </ul>
              * 
-             * *   true
-             * *   false
+             * <strong>example:</strong>
+             * <p>false</p>
              */
             public Builder enableTls(Boolean enableTls) {
                 this.enableTls = enableTls;
@@ -420,7 +524,10 @@ public class ListK8sIngressRulesResponseBody extends TeaModel {
             }
 
             /**
-             * The domain name to be accessed.
+             * <p>The domain name to be accessed.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>example.com</p>
              */
             public Builder host(String host) {
                 this.host = host;
@@ -428,15 +535,18 @@ public class ListK8sIngressRulesResponseBody extends TeaModel {
             }
 
             /**
-             * The paths to be accessed.
+             * <p>The paths to be accessed.</p>
              */
-            public Builder paths(java.util.List < Paths> paths) {
+            public Builder paths(java.util.List<Paths> paths) {
                 this.paths = paths;
                 return this;
             }
 
             /**
-             * The name of the Secret that stores the Transport Layer Security (TLS) certificate.
+             * <p>The name of the Secret that stores the Transport Layer Security (TLS) certificate.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>my-secret</p>
              */
             public Builder secretName(String secretName) {
                 this.secretName = secretName;
@@ -450,50 +560,56 @@ public class ListK8sIngressRulesResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link ListK8sIngressRulesResponseBody} extends {@link TeaModel}
+     *
+     * <p>ListK8sIngressRulesResponseBody</p>
+     */
     public static class IngressConfs extends TeaModel {
-        @NameInMap("AlbId")
+        @com.aliyun.core.annotation.NameInMap("AlbId")
         private String albId;
 
-        @NameInMap("Annotations")
+        @com.aliyun.core.annotation.NameInMap("Annotations")
         private String annotations;
 
-        @NameInMap("CreationTime")
+        @com.aliyun.core.annotation.NameInMap("CreationTime")
         private String creationTime;
 
-        @NameInMap("DashboardUrl")
+        @com.aliyun.core.annotation.NameInMap("DashboardUrl")
         private String dashboardUrl;
 
-        @NameInMap("Endpoint")
+        @com.aliyun.core.annotation.NameInMap("Endpoint")
         private String endpoint;
 
-        @NameInMap("IngressType")
+        @com.aliyun.core.annotation.NameInMap("IngressType")
         private String ingressType;
 
-        @NameInMap("Labels")
+        @com.aliyun.core.annotation.NameInMap("Labels")
         private String labels;
 
-        @NameInMap("MseGatewayId")
+        @com.aliyun.core.annotation.NameInMap("MseGatewayId")
         private String mseGatewayId;
 
-        @NameInMap("MseGatewayName")
+        @com.aliyun.core.annotation.NameInMap("MseGatewayName")
         private String mseGatewayName;
 
-        @NameInMap("Name")
+        @com.aliyun.core.annotation.NameInMap("Name")
         private String name;
 
-        @NameInMap("Namespace")
+        @com.aliyun.core.annotation.NameInMap("Namespace")
         private String namespace;
 
-        @NameInMap("OfficalBasicUrl")
+        @com.aliyun.core.annotation.NameInMap("OfficalBasicUrl")
         private String officalBasicUrl;
 
-        @NameInMap("OfficalRequestUrl")
+        @com.aliyun.core.annotation.NameInMap("OfficalRequestUrl")
         private String officalRequestUrl;
 
-        @NameInMap("Rules")
-        private java.util.List < Rules> rules;
+        @com.aliyun.core.annotation.NameInMap("Rules")
+        private java.util.List<Rules> rules;
 
-        @NameInMap("SslRedirect")
+        @com.aliyun.core.annotation.NameInMap("SslRedirect")
         private Boolean sslRedirect;
 
         private IngressConfs(Builder builder) {
@@ -616,7 +732,7 @@ public class ListK8sIngressRulesResponseBody extends TeaModel {
         /**
          * @return rules
          */
-        public java.util.List < Rules> getRules() {
+        public java.util.List<Rules> getRules() {
             return this.rules;
         }
 
@@ -641,11 +757,35 @@ public class ListK8sIngressRulesResponseBody extends TeaModel {
             private String namespace; 
             private String officalBasicUrl; 
             private String officalRequestUrl; 
-            private java.util.List < Rules> rules; 
+            private java.util.List<Rules> rules; 
             private Boolean sslRedirect; 
 
+            private Builder() {
+            } 
+
+            private Builder(IngressConfs model) {
+                this.albId = model.albId;
+                this.annotations = model.annotations;
+                this.creationTime = model.creationTime;
+                this.dashboardUrl = model.dashboardUrl;
+                this.endpoint = model.endpoint;
+                this.ingressType = model.ingressType;
+                this.labels = model.labels;
+                this.mseGatewayId = model.mseGatewayId;
+                this.mseGatewayName = model.mseGatewayName;
+                this.name = model.name;
+                this.namespace = model.namespace;
+                this.officalBasicUrl = model.officalBasicUrl;
+                this.officalRequestUrl = model.officalRequestUrl;
+                this.rules = model.rules;
+                this.sslRedirect = model.sslRedirect;
+            } 
+
             /**
-             * The ID of the ALB instance.
+             * <p>The ID of the ALB instance.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>alb-5sde0tq62r********</p>
              */
             public Builder albId(String albId) {
                 this.albId = albId;
@@ -653,7 +793,10 @@ public class ListK8sIngressRulesResponseBody extends TeaModel {
             }
 
             /**
-             * The annotations.
+             * <p>The annotations.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>{&quot;test-annotation&quot;:&quot;test-annotation-value&quot;}</p>
              */
             public Builder annotations(String annotations) {
                 this.annotations = annotations;
@@ -661,7 +804,10 @@ public class ListK8sIngressRulesResponseBody extends TeaModel {
             }
 
             /**
-             * The time when the Ingress was created.
+             * <p>The time when the Ingress was created.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2021-04-27 20:16:52</p>
              */
             public Builder creationTime(String creationTime) {
                 this.creationTime = creationTime;
@@ -669,7 +815,10 @@ public class ListK8sIngressRulesResponseBody extends TeaModel {
             }
 
             /**
-             * The monitoring URL of the Ingress.
+             * <p>The monitoring URL of the Ingress.</p>
+             * 
+             * <strong>example:</strong>
+             * <p><a href="http://grafana.console.aliyun.com/d/10xxxx/ingress">http://grafana.console.aliyun.com/d/10xxxx/ingress</a></p>
              */
             public Builder dashboardUrl(String dashboardUrl) {
                 this.dashboardUrl = dashboardUrl;
@@ -677,7 +826,10 @@ public class ListK8sIngressRulesResponseBody extends TeaModel {
             }
 
             /**
-             * The IP address of the Ingress.
+             * <p>The IP address of the Ingress.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>47.11x.xx.xx</p>
              */
             public Builder endpoint(String endpoint) {
                 this.endpoint = endpoint;
@@ -685,13 +837,15 @@ public class ListK8sIngressRulesResponseBody extends TeaModel {
             }
 
             /**
-             * The Ingress type. Valid values:
-             * <p>
+             * <p>The Ingress type. Valid values:</p>
+             * <ul>
+             * <li><strong>NginxIngress</strong>: NGINX Ingress controller</li>
+             * <li><strong>AlbIngress</strong>: ALB Ingress controller</li>
+             * </ul>
+             * <p>Default value: NginxIngress.</p>
              * 
-             * *   **NginxIngress**: NGINX Ingress controller
-             * *   **AlbIngress**: ALB Ingress controller
-             * 
-             * Default value: NginxIngress.
+             * <strong>example:</strong>
+             * <p>NginxIngress</p>
              */
             public Builder ingressType(String ingressType) {
                 this.ingressType = ingressType;
@@ -699,7 +853,10 @@ public class ListK8sIngressRulesResponseBody extends TeaModel {
             }
 
             /**
-             * The tags.
+             * <p>The tags.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>{&quot;test-label&quot;: &quot;test-labels&quot;}</p>
              */
             public Builder labels(String labels) {
                 this.labels = labels;
@@ -707,7 +864,10 @@ public class ListK8sIngressRulesResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the MSE gateway.
+             * <p>The ID of the MSE gateway.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>gw-xxxxxxxx</p>
              */
             public Builder mseGatewayId(String mseGatewayId) {
                 this.mseGatewayId = mseGatewayId;
@@ -715,7 +875,10 @@ public class ListK8sIngressRulesResponseBody extends TeaModel {
             }
 
             /**
-             * The name of the MSE gateway.
+             * <p>The name of the MSE gateway.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>gw-test-name</p>
              */
             public Builder mseGatewayName(String mseGatewayName) {
                 this.mseGatewayName = mseGatewayName;
@@ -723,7 +886,10 @@ public class ListK8sIngressRulesResponseBody extends TeaModel {
             }
 
             /**
-             * The Ingress name.
+             * <p>The Ingress name.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>my-ingress</p>
              */
             public Builder name(String name) {
                 this.name = name;
@@ -731,7 +897,10 @@ public class ListK8sIngressRulesResponseBody extends TeaModel {
             }
 
             /**
-             * The Kubernetes namespace to which the Ingress belongs.
+             * <p>The Kubernetes namespace to which the Ingress belongs.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>default</p>
              */
             public Builder namespace(String namespace) {
                 this.namespace = namespace;
@@ -739,7 +908,10 @@ public class ListK8sIngressRulesResponseBody extends TeaModel {
             }
 
             /**
-             * The URL used for basic monitoring of the open source version.
+             * <p>The URL used for basic monitoring of the open source version.</p>
+             * 
+             * <strong>example:</strong>
+             * <p><a href="https://g.console.aliyun.com/d/xxxxxx/nginx-ingress-dashboard-official">https://g.console.aliyun.com/d/xxxxxx/nginx-ingress-dashboard-official</a></p>
              */
             public Builder officalBasicUrl(String officalBasicUrl) {
                 this.officalBasicUrl = officalBasicUrl;
@@ -747,7 +919,10 @@ public class ListK8sIngressRulesResponseBody extends TeaModel {
             }
 
             /**
-             * The URL used for request performance monitoring of the open source version.
+             * <p>The URL used for request performance monitoring of the open source version.</p>
+             * 
+             * <strong>example:</strong>
+             * <p><a href="https://g.console.aliyun.com/d/xxxxxx/request-handling-performance-official">https://g.console.aliyun.com/d/xxxxxx/request-handling-performance-official</a></p>
              */
             public Builder officalRequestUrl(String officalRequestUrl) {
                 this.officalRequestUrl = officalRequestUrl;
@@ -755,19 +930,22 @@ public class ListK8sIngressRulesResponseBody extends TeaModel {
             }
 
             /**
-             * The routing rules.
+             * <p>The routing rules.</p>
              */
-            public Builder rules(java.util.List < Rules> rules) {
+            public Builder rules(java.util.List<Rules> rules) {
                 this.rules = rules;
                 return this;
             }
 
             /**
-             * Indicates whether SSL redirection is enabled. Valid values:
-             * <p>
+             * <p>Indicates whether SSL redirection is enabled. Valid values:</p>
+             * <ul>
+             * <li>true</li>
+             * <li>false</li>
+             * </ul>
              * 
-             * *   true
-             * *   false
+             * <strong>example:</strong>
+             * <p>true</p>
              */
             public Builder sslRedirect(Boolean sslRedirect) {
                 this.sslRedirect = sslRedirect;
@@ -781,17 +959,23 @@ public class ListK8sIngressRulesResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link ListK8sIngressRulesResponseBody} extends {@link TeaModel}
+     *
+     * <p>ListK8sIngressRulesResponseBody</p>
+     */
     public static class Data extends TeaModel {
-        @NameInMap("ClusterId")
+        @com.aliyun.core.annotation.NameInMap("ClusterId")
         private String clusterId;
 
-        @NameInMap("ClusterName")
+        @com.aliyun.core.annotation.NameInMap("ClusterName")
         private String clusterName;
 
-        @NameInMap("IngressConfs")
-        private java.util.List < IngressConfs> ingressConfs;
+        @com.aliyun.core.annotation.NameInMap("IngressConfs")
+        private java.util.List<IngressConfs> ingressConfs;
 
-        @NameInMap("RegionId")
+        @com.aliyun.core.annotation.NameInMap("RegionId")
         private String regionId;
 
         private Data(Builder builder) {
@@ -826,7 +1010,7 @@ public class ListK8sIngressRulesResponseBody extends TeaModel {
         /**
          * @return ingressConfs
          */
-        public java.util.List < IngressConfs> getIngressConfs() {
+        public java.util.List<IngressConfs> getIngressConfs() {
             return this.ingressConfs;
         }
 
@@ -840,11 +1024,24 @@ public class ListK8sIngressRulesResponseBody extends TeaModel {
         public static final class Builder {
             private String clusterId; 
             private String clusterName; 
-            private java.util.List < IngressConfs> ingressConfs; 
+            private java.util.List<IngressConfs> ingressConfs; 
             private String regionId; 
 
+            private Builder() {
+            } 
+
+            private Builder(Data model) {
+                this.clusterId = model.clusterId;
+                this.clusterName = model.clusterName;
+                this.ingressConfs = model.ingressConfs;
+                this.regionId = model.regionId;
+            } 
+
             /**
-             * The cluster ID.
+             * <p>The cluster ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>5b2b4ab4-efbc-4a81-9c45-a5942881****</p>
              */
             public Builder clusterId(String clusterId) {
                 this.clusterId = clusterId;
@@ -852,7 +1049,10 @@ public class ListK8sIngressRulesResponseBody extends TeaModel {
             }
 
             /**
-             * The cluster name.
+             * <p>The cluster name.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>my-dev-cluster</p>
              */
             public Builder clusterName(String clusterName) {
                 this.clusterName = clusterName;
@@ -860,15 +1060,18 @@ public class ListK8sIngressRulesResponseBody extends TeaModel {
             }
 
             /**
-             * The Ingresses.
+             * <p>The Ingresses.</p>
              */
-            public Builder ingressConfs(java.util.List < IngressConfs> ingressConfs) {
+            public Builder ingressConfs(java.util.List<IngressConfs> ingressConfs) {
                 this.ingressConfs = ingressConfs;
                 return this;
             }
 
             /**
-             * The ID of the Alibaba Cloud region.
+             * <p>The ID of the Alibaba Cloud region.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>cn-hangzhou</p>
              */
             public Builder regionId(String regionId) {
                 this.regionId = regionId;

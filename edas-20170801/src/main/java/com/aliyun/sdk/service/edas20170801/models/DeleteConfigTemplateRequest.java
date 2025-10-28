@@ -1,19 +1,24 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.edas20170801.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DeleteConfigTemplateRequest} extends {@link RequestModel}
  *
  * <p>DeleteConfigTemplateRequest</p>
  */
 public class DeleteConfigTemplateRequest extends Request {
-    @Query
-    @NameInMap("Id")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Id")
     private Long id;
 
     private DeleteConfigTemplateRequest(Builder builder) {
@@ -29,7 +34,7 @@ public class DeleteConfigTemplateRequest extends Request {
         return builder().build();
     }
 
-    @Override
+@Override
     public Builder toBuilder() {
         return new Builder(this);
     }
@@ -54,7 +59,10 @@ public class DeleteConfigTemplateRequest extends Request {
         } 
 
         /**
-         * The ID of the configuration template.
+         * <p>The ID of the configuration template.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>555</p>
          */
         public Builder id(Long id) {
             this.putQueryParameter("Id", id);

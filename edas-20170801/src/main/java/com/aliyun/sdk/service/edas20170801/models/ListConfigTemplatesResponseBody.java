@@ -1,27 +1,32 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.edas20170801.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ListConfigTemplatesResponseBody} extends {@link TeaModel}
  *
  * <p>ListConfigTemplatesResponseBody</p>
  */
 public class ListConfigTemplatesResponseBody extends TeaModel {
-    @NameInMap("Code")
+    @com.aliyun.core.annotation.NameInMap("Code")
     private Integer code;
 
-    @NameInMap("Data")
+    @com.aliyun.core.annotation.NameInMap("Data")
     private Data data;
 
-    @NameInMap("Message")
+    @com.aliyun.core.annotation.NameInMap("Message")
     private String message;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
     private ListConfigTemplatesResponseBody(Builder builder) {
@@ -37,6 +42,10 @@ public class ListConfigTemplatesResponseBody extends TeaModel {
 
     public static ListConfigTemplatesResponseBody create() {
         return builder().build();
+    }
+
+    public Builder toBuilder() {
+        return new Builder(this);
     }
 
     /**
@@ -73,8 +82,21 @@ public class ListConfigTemplatesResponseBody extends TeaModel {
         private String message; 
         private String requestId; 
 
+        private Builder() {
+        } 
+
+        private Builder(ListConfigTemplatesResponseBody model) {
+            this.code = model.code;
+            this.data = model.data;
+            this.message = model.message;
+            this.requestId = model.requestId;
+        } 
+
         /**
-         * The HTTP status code that is returned.
+         * <p>The HTTP status code that is returned.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>200</p>
          */
         public Builder code(Integer code) {
             this.code = code;
@@ -82,7 +104,7 @@ public class ListConfigTemplatesResponseBody extends TeaModel {
         }
 
         /**
-         * The result of the request.
+         * <p>The result of the request.</p>
          */
         public Builder data(Data data) {
             this.data = data;
@@ -90,7 +112,10 @@ public class ListConfigTemplatesResponseBody extends TeaModel {
         }
 
         /**
-         * The additional information that is returned.
+         * <p>The additional information that is returned.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>success</p>
          */
         public Builder message(String message) {
             this.message = message;
@@ -98,7 +123,10 @@ public class ListConfigTemplatesResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the request.
+         * <p>The ID of the request.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>4D9F-DR94-FD****************</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -111,26 +139,32 @@ public class ListConfigTemplatesResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link ListConfigTemplatesResponseBody} extends {@link TeaModel}
+     *
+     * <p>ListConfigTemplatesResponseBody</p>
+     */
     public static class Result extends TeaModel {
-        @NameInMap("Content")
+        @com.aliyun.core.annotation.NameInMap("Content")
         private String content;
 
-        @NameInMap("Description")
+        @com.aliyun.core.annotation.NameInMap("Description")
         private String description;
 
-        @NameInMap("Format")
+        @com.aliyun.core.annotation.NameInMap("Format")
         private String format;
 
-        @NameInMap("GmtCreate")
+        @com.aliyun.core.annotation.NameInMap("GmtCreate")
         private Long gmtCreate;
 
-        @NameInMap("GmtModified")
+        @com.aliyun.core.annotation.NameInMap("GmtModified")
         private Long gmtModified;
 
-        @NameInMap("Id")
+        @com.aliyun.core.annotation.NameInMap("Id")
         private String id;
 
-        @NameInMap("Name")
+        @com.aliyun.core.annotation.NameInMap("Name")
         private String name;
 
         private Result(Builder builder) {
@@ -209,8 +243,24 @@ public class ListConfigTemplatesResponseBody extends TeaModel {
             private String id; 
             private String name; 
 
+            private Builder() {
+            } 
+
+            private Builder(Result model) {
+                this.content = model.content;
+                this.description = model.description;
+                this.format = model.format;
+                this.gmtCreate = model.gmtCreate;
+                this.gmtModified = model.gmtModified;
+                this.id = model.id;
+                this.name = model.name;
+            } 
+
             /**
-             * The content of the configuration template.
+             * <p>The content of the configuration template.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>{&quot;name&quot;:&quot;William&quot;}</p>
              */
             public Builder content(String content) {
                 this.content = content;
@@ -218,7 +268,10 @@ public class ListConfigTemplatesResponseBody extends TeaModel {
             }
 
             /**
-             * The description of the configuration template.
+             * <p>The description of the configuration template.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Test configuration template</p>
              */
             public Builder description(String description) {
                 this.description = description;
@@ -226,7 +279,10 @@ public class ListConfigTemplatesResponseBody extends TeaModel {
             }
 
             /**
-             * The data format of the configuration template.
+             * <p>The data format of the configuration template.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>JSON</p>
              */
             public Builder format(String format) {
                 this.format = format;
@@ -234,7 +290,10 @@ public class ListConfigTemplatesResponseBody extends TeaModel {
             }
 
             /**
-             * The time when the configuration template was created.
+             * <p>The time when the configuration template was created.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1638171689626</p>
              */
             public Builder gmtCreate(Long gmtCreate) {
                 this.gmtCreate = gmtCreate;
@@ -242,7 +301,10 @@ public class ListConfigTemplatesResponseBody extends TeaModel {
             }
 
             /**
-             * The time when the configuration template was updated.
+             * <p>The time when the configuration template was updated.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1638171689626</p>
              */
             public Builder gmtModified(Long gmtModified) {
                 this.gmtModified = gmtModified;
@@ -250,7 +312,10 @@ public class ListConfigTemplatesResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the configuration template.
+             * <p>The ID of the configuration template.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>3d84efaf-37d9-49fb-a3a8-b38d5c2b460c</p>
              */
             public Builder id(String id) {
                 this.id = id;
@@ -258,7 +323,10 @@ public class ListConfigTemplatesResponseBody extends TeaModel {
             }
 
             /**
-             * The name of the configuration template.
+             * <p>The name of the configuration template.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>config-tmpl-1</p>
              */
             public Builder name(String name) {
                 this.name = name;
@@ -272,17 +340,23 @@ public class ListConfigTemplatesResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link ListConfigTemplatesResponseBody} extends {@link TeaModel}
+     *
+     * <p>ListConfigTemplatesResponseBody</p>
+     */
     public static class Data extends TeaModel {
-        @NameInMap("CurrentPage")
+        @com.aliyun.core.annotation.NameInMap("CurrentPage")
         private Integer currentPage;
 
-        @NameInMap("PageSize")
+        @com.aliyun.core.annotation.NameInMap("PageSize")
         private Integer pageSize;
 
-        @NameInMap("Result")
-        private java.util.List < Result> result;
+        @com.aliyun.core.annotation.NameInMap("Result")
+        private java.util.List<Result> result;
 
-        @NameInMap("TotalSize")
+        @com.aliyun.core.annotation.NameInMap("TotalSize")
         private Long totalSize;
 
         private Data(Builder builder) {
@@ -317,7 +391,7 @@ public class ListConfigTemplatesResponseBody extends TeaModel {
         /**
          * @return result
          */
-        public java.util.List < Result> getResult() {
+        public java.util.List<Result> getResult() {
             return this.result;
         }
 
@@ -331,11 +405,24 @@ public class ListConfigTemplatesResponseBody extends TeaModel {
         public static final class Builder {
             private Integer currentPage; 
             private Integer pageSize; 
-            private java.util.List < Result> result; 
+            private java.util.List<Result> result; 
             private Long totalSize; 
 
+            private Builder() {
+            } 
+
+            private Builder(Data model) {
+                this.currentPage = model.currentPage;
+                this.pageSize = model.pageSize;
+                this.result = model.result;
+                this.totalSize = model.totalSize;
+            } 
+
             /**
-             * The page number of the returned page.
+             * <p>The page number of the returned page.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder currentPage(Integer currentPage) {
                 this.currentPage = currentPage;
@@ -343,7 +430,10 @@ public class ListConfigTemplatesResponseBody extends TeaModel {
             }
 
             /**
-             * The number of entries returned per page.
+             * <p>The number of entries returned per page.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>10</p>
              */
             public Builder pageSize(Integer pageSize) {
                 this.pageSize = pageSize;
@@ -351,15 +441,18 @@ public class ListConfigTemplatesResponseBody extends TeaModel {
             }
 
             /**
-             * The configuration templates.
+             * <p>The configuration templates.</p>
              */
-            public Builder result(java.util.List < Result> result) {
+            public Builder result(java.util.List<Result> result) {
                 this.result = result;
                 return this;
             }
 
             /**
-             * The total number of configuration templates.
+             * <p>The total number of configuration templates.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>100</p>
              */
             public Builder totalSize(Long totalSize) {
                 this.totalSize = totalSize;

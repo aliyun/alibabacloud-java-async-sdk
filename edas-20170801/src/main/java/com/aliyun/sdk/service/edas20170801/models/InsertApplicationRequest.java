@@ -1,108 +1,109 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.edas20170801.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link InsertApplicationRequest} extends {@link RequestModel}
  *
  * <p>InsertApplicationRequest</p>
  */
 public class InsertApplicationRequest extends Request {
-    @Query
-    @NameInMap("ApplicationName")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ApplicationName")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String applicationName;
 
-    @Query
-    @NameInMap("BuildPackId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("BuildPackId")
     private Integer buildPackId;
 
-    @Query
-    @NameInMap("ClusterId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ClusterId")
     private String clusterId;
 
-    @Query
-    @NameInMap("ComponentIds")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ComponentIds")
     private String componentIds;
 
-    @Query
-    @NameInMap("Cpu")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Cpu")
     private Integer cpu;
 
-    @Query
-    @NameInMap("Description")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Description")
     private String description;
 
-    @Query
-    @NameInMap("EcuInfo")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("EcuInfo")
     private String ecuInfo;
 
-    @Query
-    @NameInMap("EnablePortCheck")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("EnablePortCheck")
     private Boolean enablePortCheck;
 
-    @Query
-    @NameInMap("EnableUrlCheck")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("EnableUrlCheck")
     private Boolean enableUrlCheck;
 
-    @Query
-    @NameInMap("HealthCheckURL")
-    private String healthCheckURL;
-
-    @Query
-    @NameInMap("HealthCheckUrl")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("HealthCheckUrl")
     private String healthCheckUrl;
 
-    @Query
-    @NameInMap("Hooks")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Hooks")
     private String hooks;
 
-    @Query
-    @NameInMap("Jdk")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Jdk")
     private String jdk;
 
-    @Query
-    @NameInMap("JvmOptions")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("JvmOptions")
     private String jvmOptions;
 
-    @Query
-    @NameInMap("LogicalRegionId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("LogicalRegionId")
     private String logicalRegionId;
 
-    @Query
-    @NameInMap("MaxHeapSize")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("MaxHeapSize")
     private Integer maxHeapSize;
 
-    @Query
-    @NameInMap("MaxPermSize")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("MaxPermSize")
     private Integer maxPermSize;
 
-    @Query
-    @NameInMap("Mem")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Mem")
     private Integer mem;
 
-    @Query
-    @NameInMap("MinHeapSize")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("MinHeapSize")
     private Integer minHeapSize;
 
-    @Query
-    @NameInMap("PackageType")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("PackageType")
     private String packageType;
 
-    @Query
-    @NameInMap("ReservedPortStr")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ReservedPortStr")
     private String reservedPortStr;
 
-    @Query
-    @NameInMap("ResourceGroupId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ResourceGroupId")
     private String resourceGroupId;
 
-    @Query
-    @NameInMap("WebContainer")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("WebContainer")
     private String webContainer;
 
     private InsertApplicationRequest(Builder builder) {
@@ -116,7 +117,6 @@ public class InsertApplicationRequest extends Request {
         this.ecuInfo = builder.ecuInfo;
         this.enablePortCheck = builder.enablePortCheck;
         this.enableUrlCheck = builder.enableUrlCheck;
-        this.healthCheckURL = builder.healthCheckURL;
         this.healthCheckUrl = builder.healthCheckUrl;
         this.hooks = builder.hooks;
         this.jdk = builder.jdk;
@@ -140,7 +140,7 @@ public class InsertApplicationRequest extends Request {
         return builder().build();
     }
 
-    @Override
+@Override
     public Builder toBuilder() {
         return new Builder(this);
     }
@@ -206,13 +206,6 @@ public class InsertApplicationRequest extends Request {
      */
     public Boolean getEnableUrlCheck() {
         return this.enableUrlCheck;
-    }
-
-    /**
-     * @return healthCheckURL
-     */
-    public String getHealthCheckURL() {
-        return this.healthCheckURL;
     }
 
     /**
@@ -316,7 +309,6 @@ public class InsertApplicationRequest extends Request {
         private String ecuInfo; 
         private Boolean enablePortCheck; 
         private Boolean enableUrlCheck; 
-        private String healthCheckURL; 
         private String healthCheckUrl; 
         private String hooks; 
         private String jdk; 
@@ -346,7 +338,6 @@ public class InsertApplicationRequest extends Request {
             this.ecuInfo = request.ecuInfo;
             this.enablePortCheck = request.enablePortCheck;
             this.enableUrlCheck = request.enableUrlCheck;
-            this.healthCheckURL = request.healthCheckURL;
             this.healthCheckUrl = request.healthCheckUrl;
             this.hooks = request.hooks;
             this.jdk = request.jdk;
@@ -363,7 +354,11 @@ public class InsertApplicationRequest extends Request {
         } 
 
         /**
-         * The name of the application. The name can contain only digits, letters, hyphens (-), and underscores (\_) and must start with a letter. The name can be up to 36 characters in length.
+         * <p>The name of the application. The name can contain only digits, letters, hyphens (-), and underscores (_) and must start with a letter. The name can be up to 36 characters in length.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>hello-edas-test-1</p>
          */
         public Builder applicationName(String applicationName) {
             this.putQueryParameter("ApplicationName", applicationName);
@@ -372,11 +367,14 @@ public class InsertApplicationRequest extends Request {
         }
 
         /**
-         * The build package number of EDAS Container. This parameter is required if you create a High-Speed Service Framework (HSF) application. You can query the build package number by using one of the following methods:
-         * <p>
+         * <p>The build package number of EDAS Container. This parameter is required if you create a High-Speed Service Framework (HSF) application. You can query the build package number by using one of the following methods:</p>
+         * <ul>
+         * <li>Call the ListBuildPack operation. For more information, see <a href="https://help.aliyun.com/document_detail/149391.html">ListBuildPack</a>.</li>
+         * <li>Obtain the value in the <strong>Build package number</strong> column of the <a href="https://help.aliyun.com/document_detail/92614.html">Release notes for EDAS Container</a> topic.</li>
+         * </ul>
          * 
-         * *   Call the ListBuildPack operation. For more information, see [ListBuildPack](~~149391~~).
-         * *   Obtain the value in the **Build package number** column of the [Release notes for EDAS Container](~~92614~~) topic.
+         * <strong>example:</strong>
+         * <p>59</p>
          */
         public Builder buildPackId(Integer buildPackId) {
             this.putQueryParameter("BuildPackId", buildPackId);
@@ -385,7 +383,10 @@ public class InsertApplicationRequest extends Request {
         }
 
         /**
-         * The ID of the ECS cluster in which you want to create the application. If you specify an ID, the application is created in the specified ECS cluster. If you leave this parameter empty, the application is created in the default cluster. We recommend that you specify this parameter.
+         * <p>The ID of the ECS cluster in which you want to create the application. If you specify an ID, the application is created in the specified ECS cluster. If you leave this parameter empty, the application is created in the default cluster. We recommend that you specify this parameter.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>13136119-f384-4f50-b76e-xxxxxxxxxxx</p>
          */
         public Builder clusterId(String clusterId) {
             this.putQueryParameter("ClusterId", clusterId);
@@ -394,19 +395,19 @@ public class InsertApplicationRequest extends Request {
         }
 
         /**
-         * The ID of the application component. You can call the ListComponents operation to query the component IDs. For more information, see [ListComponents](~~97502~~).
-         * <p>
+         * <p>The ID of the application component. You can call the ListComponents operation to query the component IDs. For more information, see <a href="https://help.aliyun.com/document_detail/97502.html">ListComponents</a>.</p>
+         * <p>This parameter is required if the application runs in Apache Tomcat or in a standard Java application runtime environment. The Apache Tomcat application runtime environment is applicable to Dubbo applications that are deployed by using WAR packages. A standard Java application runtime environment is applicable to Spring Boot or Spring Cloud applications that are deployed by using JAR packages.</p>
+         * <p>Valid values for common application components:</p>
+         * <ul>
+         * <li>4: Apache Tomcat 7.0.91</li>
+         * <li>7: Apache Tomcat 8.5.42</li>
+         * <li>5: OpenJDK 1.8.x</li>
+         * <li>6: OpenJDK 1.7.x</li>
+         * </ul>
+         * <p>This parameter is available only for Java SDK 2.57.3 or later, or Python SDK 2.57.3 or later. Assume that you use an SDK that is not provided by EDAS, for example, aliyun-python-sdk-core, aliyun-java-sdk-core, and Alibaba Cloud CLI. In this case, you can directly specify this parameter.</p>
          * 
-         * This parameter is required if the application runs in Apache Tomcat or in a standard Java application runtime environment. The Apache Tomcat application runtime environment is applicable to Dubbo applications that are deployed by using WAR packages. A standard Java application runtime environment is applicable to Spring Boot or Spring Cloud applications that are deployed by using JAR packages.
-         * 
-         * Valid values for common application components:
-         * 
-         * *   4: Apache Tomcat 7.0.91
-         * *   7: Apache Tomcat 8.5.42
-         * *   5: OpenJDK 1.8.x
-         * *   6: OpenJDK 1.7.x
-         * 
-         * This parameter is available only for Java SDK 2.57.3 or later, or Python SDK 2.57.3 or later. Assume that you use an SDK that is not provided by EDAS, for example, aliyun-python-sdk-core, aliyun-java-sdk-core, and Alibaba Cloud CLI. In this case, you can directly specify this parameter.
+         * <strong>example:</strong>
+         * <p>7</p>
          */
         public Builder componentIds(String componentIds) {
             this.putQueryParameter("ComponentIds", componentIds);
@@ -415,7 +416,10 @@ public class InsertApplicationRequest extends Request {
         }
 
         /**
-         * The number of CPU cores that can be used by the application container in a Swarm cluster. \*\*This parameter is deprecated.\*\*
+         * <p>The number of CPU cores that can be used by the application container in a Swarm cluster. **This parameter is deprecated.**</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2</p>
          */
         public Builder cpu(Integer cpu) {
             this.putQueryParameter("Cpu", cpu);
@@ -424,7 +428,10 @@ public class InsertApplicationRequest extends Request {
         }
 
         /**
-         * The description of the application.
+         * <p>The description of the application.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>create by edas pop api</p>
          */
         public Builder description(String description) {
             this.putQueryParameter("Description", description);
@@ -433,7 +440,10 @@ public class InsertApplicationRequest extends Request {
         }
 
         /**
-         * The value of `ecu_id` of the ECS instance to be added during scale-out. The ECU ID is the unique identity for an ECS instance that is imported to EDAS. Separate multiple values of `ecu_id` with commas (,). You can call the ListScaleOutEcu operation to query the value of `ecu_id`. For more information, see [ListScaleOutEcu](~~149371~~).
+         * <p>The value of <code>ecu_id</code> of the ECS instance to be added during scale-out. The ECU ID is the unique identity for an ECS instance that is imported to EDAS. Separate multiple values of <code>ecu_id</code> with commas (,). You can call the ListScaleOutEcu operation to query the value of <code>ecu_id</code>. For more information, see <a href="https://help.aliyun.com/document_detail/149371.html">ListScaleOutEcu</a>.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>07bd417a-b863-477d-<strong><strong>-</strong></strong>********</p>
          */
         public Builder ecuInfo(String ecuInfo) {
             this.putQueryParameter("EcuInfo", ecuInfo);
@@ -442,11 +452,14 @@ public class InsertApplicationRequest extends Request {
         }
 
         /**
-         * Specifies whether to enable the port health check. Valid values:
-         * <p>
+         * <p>Specifies whether to enable the port health check. Valid values:</p>
+         * <ul>
+         * <li><strong>true</strong>: enable the port health check.</li>
+         * <li><strong>false</strong>: does not enable the port health check.</li>
+         * </ul>
          * 
-         * *   **true**: enable the port health check.
-         * *   **false**: does not enable the port health check.
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder enablePortCheck(Boolean enablePortCheck) {
             this.putQueryParameter("EnablePortCheck", enablePortCheck);
@@ -455,11 +468,14 @@ public class InsertApplicationRequest extends Request {
         }
 
         /**
-         * Specifies whether to enable the URL health check. Valid values:
-         * <p>
+         * <p>Specifies whether to enable the URL health check. Valid values:</p>
+         * <ul>
+         * <li><strong>true</strong>: enables the URL health check.</li>
+         * <li><strong>false</strong>: does not enable the URL health check.</li>
+         * </ul>
          * 
-         * *   **true**: enables the URL health check.
-         * *   **false**: does not enable the URL health check.
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder enableUrlCheck(Boolean enableUrlCheck) {
             this.putQueryParameter("EnableUrlCheck", enableUrlCheck);
@@ -468,16 +484,10 @@ public class InsertApplicationRequest extends Request {
         }
 
         /**
-         * The health check URL of the application.
-         */
-        public Builder healthCheckURL(String healthCheckURL) {
-            this.putQueryParameter("HealthCheckURL", healthCheckURL);
-            this.healthCheckURL = healthCheckURL;
-            return this;
-        }
-
-        /**
-         * The health check URL of the application. This parameter is equivalent to the HealthCheckURL parameter.
+         * <p>The health check URL of the application. This parameter is equivalent to the HealthCheckURL parameter.</p>
+         * 
+         * <strong>example:</strong>
+         * <p><a href="http://127.0.0.1:8080/_ehc.html">http://127.0.0.1:8080/_ehc.html</a></p>
          */
         public Builder healthCheckUrl(String healthCheckUrl) {
             this.putQueryParameter("HealthCheckUrl", healthCheckUrl);
@@ -486,7 +496,10 @@ public class InsertApplicationRequest extends Request {
         }
 
         /**
-         * The script to mount. Set the value in the JSON format. Example: `[{"ignoreFail":false,"name":"postprepareInstanceEnvironmentOnScaleOut","script":"ls"},{"ignoreFail":true,"name":"postdeleteInstanceDataOnScaleIn","script":""},{"ignoreFail":true,"name":"prestartInstance","script":""},{"ignoreFail":true,"name":"poststartInstance","script":""},{"ignoreFail":true,"name":"prestopInstance","script":""},{"ignoreFail":true,"name":"poststopInstance","script":""}]`
+         * <p>The script to mount. Set the value in the JSON format. Example: <code>[{&quot;ignoreFail&quot;:false,&quot;name&quot;:&quot;postprepareInstanceEnvironmentOnScaleOut&quot;,&quot;script&quot;:&quot;ls&quot;},{&quot;ignoreFail&quot;:true,&quot;name&quot;:&quot;postdeleteInstanceDataOnScaleIn&quot;,&quot;script&quot;:&quot;&quot;},{&quot;ignoreFail&quot;:true,&quot;name&quot;:&quot;prestartInstance&quot;,&quot;script&quot;:&quot;&quot;},{&quot;ignoreFail&quot;:true,&quot;name&quot;:&quot;poststartInstance&quot;,&quot;script&quot;:&quot;&quot;},{&quot;ignoreFail&quot;:true,&quot;name&quot;:&quot;prestopInstance&quot;,&quot;script&quot;:&quot;&quot;},{&quot;ignoreFail&quot;:true,&quot;name&quot;:&quot;poststopInstance&quot;,&quot;script&quot;:&quot;&quot;}]</code></p>
+         * 
+         * <strong>example:</strong>
+         * <p>[{&quot;ignoreFail&quot;:false,&quot;name&quot;:&quot;postprepareInstanceEnvironmentOnScaleOut&quot;,&quot;script&quot;:&quot;ls&quot;}]</p>
          */
         public Builder hooks(String hooks) {
             this.putQueryParameter("Hooks", hooks);
@@ -495,7 +508,10 @@ public class InsertApplicationRequest extends Request {
         }
 
         /**
-         * The version of the Java Development Kit (JDK) used to deploy the application. **This parameter is deprecated.
+         * <p>The version of the Java Development Kit (JDK) used to deploy the application. **This parameter is deprecated.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>8</p>
          */
         public Builder jdk(String jdk) {
             this.putQueryParameter("Jdk", jdk);
@@ -504,7 +520,10 @@ public class InsertApplicationRequest extends Request {
         }
 
         /**
-         * The custom parameters.
+         * <p>The custom parameters.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>-Dproperty=value</p>
          */
         public Builder jvmOptions(String jvmOptions) {
             this.putQueryParameter("JvmOptions", jvmOptions);
@@ -513,11 +532,14 @@ public class InsertApplicationRequest extends Request {
         }
 
         /**
-         * The ID of the microservices namespace. To query the ID of a microservices namespace, you can choose **Resource Management** > **Microservice Namespaces** in the left-side navigation pane of the EDAS console or call the ListUserDefineRegion operation. For more information, see [ListUserDefineRegion](~~149377~~).
-         * <p>
+         * <p>The ID of the microservices namespace. To query the ID of a microservices namespace, you can choose <strong>Resource Management</strong> &gt; <strong>Microservice Namespaces</strong> in the left-side navigation pane of the EDAS console or call the ListUserDefineRegion operation. For more information, see <a href="https://help.aliyun.com/document_detail/149377.html">ListUserDefineRegion</a>.</p>
+         * <ul>
+         * <li>This parameter is required if the cluster you specify is not deployed in the default microservices namespace. Otherwise, the message <code>application regionId is different with cluster regionId!</code> appears.</li>
+         * <li>If the cluster you specify is deployed in the default microservices namespace, you do not need to specify this parameter. Set this parameter to the ID of the microservices namespace in which the cluster you specify is deployed.</li>
+         * </ul>
          * 
-         * *   This parameter is required if the cluster you specify is not deployed in the default microservices namespace. Otherwise, the message `application regionId is different with cluster regionId!` appears.
-         * *   If the cluster you specify is deployed in the default microservices namespace, you do not need to specify this parameter. Set this parameter to the ID of the microservices namespace in which the cluster you specify is deployed.
+         * <strong>example:</strong>
+         * <p>cn-beijing:prod</p>
          */
         public Builder logicalRegionId(String logicalRegionId) {
             this.putQueryParameter("LogicalRegionId", logicalRegionId);
@@ -526,7 +548,10 @@ public class InsertApplicationRequest extends Request {
         }
 
         /**
-         * The maximum size of the heap memory. Unit: MB.
+         * <p>The maximum size of the heap memory. Unit: MB.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1000</p>
          */
         public Builder maxHeapSize(Integer maxHeapSize) {
             this.putQueryParameter("MaxHeapSize", maxHeapSize);
@@ -535,7 +560,10 @@ public class InsertApplicationRequest extends Request {
         }
 
         /**
-         * The size of the permanent generation heap memory. Unit: MB.
+         * <p>The size of the permanent generation heap memory. Unit: MB.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>200</p>
          */
         public Builder maxPermSize(Integer maxPermSize) {
             this.putQueryParameter("MaxPermSize", maxPermSize);
@@ -544,7 +572,10 @@ public class InsertApplicationRequest extends Request {
         }
 
         /**
-         * The memory size that can be used by the application container in a Swarm cluster. \*\*This parameter is deprecated.\*\*
+         * <p>The memory size that can be used by the application container in a Swarm cluster. **This parameter is deprecated.**</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2048</p>
          */
         public Builder mem(Integer mem) {
             this.putQueryParameter("Mem", mem);
@@ -553,7 +584,10 @@ public class InsertApplicationRequest extends Request {
         }
 
         /**
-         * The initial size of the heap memory. Unit: MB.
+         * <p>The initial size of the heap memory. Unit: MB.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>500</p>
          */
         public Builder minHeapSize(Integer minHeapSize) {
             this.putQueryParameter("MinHeapSize", minHeapSize);
@@ -562,7 +596,10 @@ public class InsertApplicationRequest extends Request {
         }
 
         /**
-         * The type of the application deployment package. Valid values: war and jar.
+         * <p>The type of the application deployment package. Valid values: war and jar.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>war</p>
          */
         public Builder packageType(String packageType) {
             this.putQueryParameter("PackageType", packageType);
@@ -571,7 +608,10 @@ public class InsertApplicationRequest extends Request {
         }
 
         /**
-         * The reserved port for the application. \*\*This parameter is deprecated.\*\*
+         * <p>The reserved port for the application. This parameter is deprecated.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>8090</p>
          */
         public Builder reservedPortStr(String reservedPortStr) {
             this.putQueryParameter("ReservedPortStr", reservedPortStr);
@@ -580,7 +620,10 @@ public class InsertApplicationRequest extends Request {
         }
 
         /**
-         * The ID of the resource group.
+         * <p>The ID of the resource group.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>rg-aek24j4s4b*****</p>
          */
         public Builder resourceGroupId(String resourceGroupId) {
             this.putQueryParameter("ResourceGroupId", resourceGroupId);
@@ -589,7 +632,10 @@ public class InsertApplicationRequest extends Request {
         }
 
         /**
-         * The version of Apache Tomcat. **This parameter is deprecated.
+         * <p>The version of Apache Tomcat. **This parameter is deprecated.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>4</p>
          */
         public Builder webContainer(String webContainer) {
             this.putQueryParameter("WebContainer", webContainer);

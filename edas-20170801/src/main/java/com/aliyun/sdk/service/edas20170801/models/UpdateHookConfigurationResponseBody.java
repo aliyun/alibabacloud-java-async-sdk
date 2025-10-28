@@ -1,27 +1,32 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.edas20170801.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link UpdateHookConfigurationResponseBody} extends {@link TeaModel}
  *
  * <p>UpdateHookConfigurationResponseBody</p>
  */
 public class UpdateHookConfigurationResponseBody extends TeaModel {
-    @NameInMap("Code")
+    @com.aliyun.core.annotation.NameInMap("Code")
     private Integer code;
 
-    @NameInMap("HooksConfiguration")
-    private java.util.List < HooksConfiguration> hooksConfiguration;
+    @com.aliyun.core.annotation.NameInMap("HooksConfiguration")
+    private java.util.List<HooksConfiguration> hooksConfiguration;
 
-    @NameInMap("Message")
+    @com.aliyun.core.annotation.NameInMap("Message")
     private String message;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
     private UpdateHookConfigurationResponseBody(Builder builder) {
@@ -39,6 +44,10 @@ public class UpdateHookConfigurationResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return code
      */
@@ -49,7 +58,7 @@ public class UpdateHookConfigurationResponseBody extends TeaModel {
     /**
      * @return hooksConfiguration
      */
-    public java.util.List < HooksConfiguration> getHooksConfiguration() {
+    public java.util.List<HooksConfiguration> getHooksConfiguration() {
         return this.hooksConfiguration;
     }
 
@@ -69,12 +78,25 @@ public class UpdateHookConfigurationResponseBody extends TeaModel {
 
     public static final class Builder {
         private Integer code; 
-        private java.util.List < HooksConfiguration> hooksConfiguration; 
+        private java.util.List<HooksConfiguration> hooksConfiguration; 
         private String message; 
         private String requestId; 
 
+        private Builder() {
+        } 
+
+        private Builder(UpdateHookConfigurationResponseBody model) {
+            this.code = model.code;
+            this.hooksConfiguration = model.hooksConfiguration;
+            this.message = model.message;
+            this.requestId = model.requestId;
+        } 
+
         /**
-         * The HTTP status code that is returned.
+         * <p>The HTTP status code that is returned.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>200</p>
          */
         public Builder code(Integer code) {
             this.code = code;
@@ -82,15 +104,18 @@ public class UpdateHookConfigurationResponseBody extends TeaModel {
         }
 
         /**
-         * The information about the mounted script.
+         * <p>The information about the mounted script.</p>
          */
-        public Builder hooksConfiguration(java.util.List < HooksConfiguration> hooksConfiguration) {
+        public Builder hooksConfiguration(java.util.List<HooksConfiguration> hooksConfiguration) {
             this.hooksConfiguration = hooksConfiguration;
             return this;
         }
 
         /**
-         * The message that is returned.
+         * <p>The message that is returned.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>success</p>
          */
         public Builder message(String message) {
             this.message = message;
@@ -98,7 +123,10 @@ public class UpdateHookConfigurationResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the request.
+         * <p>The ID of the request.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>d498****-1dd8ec229862</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -111,14 +139,20 @@ public class UpdateHookConfigurationResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link UpdateHookConfigurationResponseBody} extends {@link TeaModel}
+     *
+     * <p>UpdateHookConfigurationResponseBody</p>
+     */
     public static class HooksConfiguration extends TeaModel {
-        @NameInMap("IgnoreFail")
+        @com.aliyun.core.annotation.NameInMap("IgnoreFail")
         private Boolean ignoreFail;
 
-        @NameInMap("Name")
+        @com.aliyun.core.annotation.NameInMap("Name")
         private String name;
 
-        @NameInMap("Script")
+        @com.aliyun.core.annotation.NameInMap("Script")
         private String script;
 
         private HooksConfiguration(Builder builder) {
@@ -161,12 +195,24 @@ public class UpdateHookConfigurationResponseBody extends TeaModel {
             private String name; 
             private String script; 
 
+            private Builder() {
+            } 
+
+            private Builder(HooksConfiguration model) {
+                this.ignoreFail = model.ignoreFail;
+                this.name = model.name;
+                this.script = model.script;
+            } 
+
             /**
-             * Indicates whether a mount failure is ignored. Valid values:
-             * <p>
+             * <p>Indicates whether a mount failure is ignored. Valid values:</p>
+             * <ul>
+             * <li><strong>true</strong>: A mount failure is ignored.</li>
+             * <li><strong>false</strong>: A mount failure is not ignored.</li>
+             * </ul>
              * 
-             * *   **true**: A mount failure is ignored.
-             * *   **false**: A mount failure is not ignored.
+             * <strong>example:</strong>
+             * <p>true</p>
              */
             public Builder ignoreFail(Boolean ignoreFail) {
                 this.ignoreFail = ignoreFail;
@@ -174,7 +220,10 @@ public class UpdateHookConfigurationResponseBody extends TeaModel {
             }
 
             /**
-             * The name of the mounted script.
+             * <p>The name of the mounted script.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>postprepareInstanceEnvironmentOnScaleOut</p>
              */
             public Builder name(String name) {
                 this.name = name;
@@ -182,7 +231,10 @@ public class UpdateHookConfigurationResponseBody extends TeaModel {
             }
 
             /**
-             * The content of the mounted script.
+             * <p>The content of the mounted script.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>ls</p>
              */
             public Builder script(String script) {
                 this.script = script;

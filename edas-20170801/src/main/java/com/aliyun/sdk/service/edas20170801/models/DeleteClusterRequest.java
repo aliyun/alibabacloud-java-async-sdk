@@ -1,24 +1,29 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.edas20170801.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DeleteClusterRequest} extends {@link RequestModel}
  *
  * <p>DeleteClusterRequest</p>
  */
 public class DeleteClusterRequest extends Request {
-    @Query
-    @NameInMap("ClusterId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ClusterId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String clusterId;
 
-    @Query
-    @NameInMap("Mode")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Mode")
     private Integer mode;
 
     private DeleteClusterRequest(Builder builder) {
@@ -35,7 +40,7 @@ public class DeleteClusterRequest extends Request {
         return builder().build();
     }
 
-    @Override
+@Override
     public Builder toBuilder() {
         return new Builder(this);
     }
@@ -69,7 +74,11 @@ public class DeleteClusterRequest extends Request {
         } 
 
         /**
-         * The ID of the cluster.
+         * <p>The ID of the cluster.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>8b96ade0-0a07-****-af9d-5ed83640d076</p>
          */
         public Builder clusterId(String clusterId) {
             this.putQueryParameter("ClusterId", clusterId);
@@ -78,11 +87,14 @@ public class DeleteClusterRequest extends Request {
         }
 
         /**
-         * The type of the cluster ID. Valid values:
-         * <p>
+         * <p>The type of the cluster ID. Valid values:</p>
+         * <ul>
+         * <li>0: specifies the ID of the cluster in Enterprise Distributed Application Service (EDAS).</li>
+         * <li>1: specifies the ID of the ACK cluster.</li>
+         * </ul>
          * 
-         * *   0: specifies the ID of the cluster in Enterprise Distributed Application Service (EDAS).
-         * *   1: specifies the ID of the ACK cluster.
+         * <strong>example:</strong>
+         * <p>0</p>
          */
         public Builder mode(Integer mode) {
             this.putQueryParameter("Mode", mode);

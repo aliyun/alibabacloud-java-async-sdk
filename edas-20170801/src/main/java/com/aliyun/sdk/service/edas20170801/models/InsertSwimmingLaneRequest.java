@@ -1,48 +1,53 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.edas20170801.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link InsertSwimmingLaneRequest} extends {@link RequestModel}
  *
  * <p>InsertSwimmingLaneRequest</p>
  */
 public class InsertSwimmingLaneRequest extends Request {
-    @Query
-    @NameInMap("AppInfos")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("AppInfos")
     private String appInfos;
 
-    @Query
-    @NameInMap("EnableRules")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("EnableRules")
     private Boolean enableRules;
 
-    @Query
-    @NameInMap("EntryRules")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("EntryRules")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String entryRules;
 
-    @Query
-    @NameInMap("GroupId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("GroupId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private Long groupId;
 
-    @Query
-    @NameInMap("LogicalRegionId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("LogicalRegionId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String logicalRegionId;
 
-    @Query
-    @NameInMap("Name")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Name")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String name;
 
-    @Query
-    @NameInMap("Tag")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Tag")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String tag;
 
     private InsertSwimmingLaneRequest(Builder builder) {
@@ -64,7 +69,7 @@ public class InsertSwimmingLaneRequest extends Request {
         return builder().build();
     }
 
-    @Override
+@Override
     public Builder toBuilder() {
         return new Builder(this);
     }
@@ -143,7 +148,10 @@ public class InsertSwimmingLaneRequest extends Request {
         } 
 
         /**
-         * The information about applications related to the lane.
+         * <p>The information about applications related to the lane.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>[{&quot;appId&quot;:&quot;f72deaac-26ba-429a-948d-5fa47c4a****&quot;},{&quot;appId&quot;:&quot;5049d2c8-f997-4fc9-92a2-153506a6****&quot;}]</p>
          */
         public Builder appInfos(String appInfos) {
             this.putQueryParameter("AppInfos", appInfos);
@@ -152,7 +160,10 @@ public class InsertSwimmingLaneRequest extends Request {
         }
 
         /**
-         * Specifies whether to enable the throttling rule.
+         * <p>Specifies whether to enable the throttling rule.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder enableRules(Boolean enableRules) {
             this.putQueryParameter("EnableRules", enableRules);
@@ -161,7 +172,11 @@ public class InsertSwimmingLaneRequest extends Request {
         }
 
         /**
-         * The throttling conditions.
+         * <p>The throttling conditions.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>[{&quot;priority&quot;:1,&quot;path&quot;:&quot;/traffic&quot;,&quot;condition&quot;:&quot;AND&quot;,&quot;restItems&quot;:[{&quot;type&quot;:&quot;header&quot;,&quot;name&quot;:&quot;testheader&quot;,&quot;value&quot;:&quot;testvalue&quot;,&quot;cond&quot;:&quot;==&quot;,&quot;operator&quot;:&quot;rawvalue&quot;}]}]</p>
          */
         public Builder entryRules(String entryRules) {
             this.putQueryParameter("EntryRules", entryRules);
@@ -170,7 +185,11 @@ public class InsertSwimmingLaneRequest extends Request {
         }
 
         /**
-         * The ID of the lane group.
+         * <p>The ID of the lane group.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>95</p>
          */
         public Builder groupId(Long groupId) {
             this.putQueryParameter("GroupId", groupId);
@@ -179,7 +198,11 @@ public class InsertSwimmingLaneRequest extends Request {
         }
 
         /**
-         * The ID of the custom namespace. The ID is in the `physical region ID:custom namespace identifier` format. Example: `cn-hangzhou:test`.
+         * <p>The ID of the custom namespace. The ID is in the <code>physical region ID:custom namespace identifier</code> format. Example: <code>cn-hangzhou:test</code>.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-beijing:test</p>
          */
         public Builder logicalRegionId(String logicalRegionId) {
             this.putQueryParameter("LogicalRegionId", logicalRegionId);
@@ -188,7 +211,11 @@ public class InsertSwimmingLaneRequest extends Request {
         }
 
         /**
-         * The name of the lane.
+         * <p>The name of the lane.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>test1</p>
          */
         public Builder name(String name) {
             this.putQueryParameter("Name", name);
@@ -197,7 +224,11 @@ public class InsertSwimmingLaneRequest extends Request {
         }
 
         /**
-         * The tag.
+         * <p>The tag.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>tag</p>
          */
         public Builder tag(String tag) {
             this.putQueryParameter("Tag", tag);

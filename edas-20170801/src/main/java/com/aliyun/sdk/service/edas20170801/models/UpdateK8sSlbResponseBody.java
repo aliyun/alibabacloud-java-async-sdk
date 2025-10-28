@@ -1,27 +1,32 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.edas20170801.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link UpdateK8sSlbResponseBody} extends {@link TeaModel}
  *
  * <p>UpdateK8sSlbResponseBody</p>
  */
 public class UpdateK8sSlbResponseBody extends TeaModel {
-    @NameInMap("ChangeOrderId")
+    @com.aliyun.core.annotation.NameInMap("ChangeOrderId")
     private String changeOrderId;
 
-    @NameInMap("Code")
+    @com.aliyun.core.annotation.NameInMap("Code")
     private Integer code;
 
-    @NameInMap("Message")
+    @com.aliyun.core.annotation.NameInMap("Message")
     private String message;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
     private UpdateK8sSlbResponseBody(Builder builder) {
@@ -37,6 +42,10 @@ public class UpdateK8sSlbResponseBody extends TeaModel {
 
     public static UpdateK8sSlbResponseBody create() {
         return builder().build();
+    }
+
+    public Builder toBuilder() {
+        return new Builder(this);
     }
 
     /**
@@ -73,8 +82,21 @@ public class UpdateK8sSlbResponseBody extends TeaModel {
         private String message; 
         private String requestId; 
 
+        private Builder() {
+        } 
+
+        private Builder(UpdateK8sSlbResponseBody model) {
+            this.changeOrderId = model.changeOrderId;
+            this.code = model.code;
+            this.message = model.message;
+            this.requestId = model.requestId;
+        } 
+
         /**
-         * The ID of the change process.
+         * <p>The ID of the change process.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>9a1dcdee-<strong><strong>-</strong></strong>-ad37-cbf9dc91fba9</p>
          */
         public Builder changeOrderId(String changeOrderId) {
             this.changeOrderId = changeOrderId;
@@ -82,7 +104,10 @@ public class UpdateK8sSlbResponseBody extends TeaModel {
         }
 
         /**
-         * The HTTP status code that is returned.
+         * <p>The HTTP status code that is returned.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>200</p>
          */
         public Builder code(Integer code) {
             this.code = code;
@@ -90,7 +115,10 @@ public class UpdateK8sSlbResponseBody extends TeaModel {
         }
 
         /**
-         * The message that is returned.
+         * <p>The message that is returned.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>success</p>
          */
         public Builder message(String message) {
             this.message = message;
@@ -98,7 +126,10 @@ public class UpdateK8sSlbResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the request.
+         * <p>The ID of the request.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>4823-bhjf-23u4-eiufh</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;

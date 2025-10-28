@@ -1,44 +1,49 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.edas20170801.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link UpdateContainerConfigurationRequest} extends {@link RequestModel}
  *
  * <p>UpdateContainerConfigurationRequest</p>
  */
 public class UpdateContainerConfigurationRequest extends Request {
-    @Query
-    @NameInMap("AppId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("AppId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String appId;
 
-    @Query
-    @NameInMap("ContextPath")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ContextPath")
     private String contextPath;
 
-    @Query
-    @NameInMap("GroupId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("GroupId")
     private String groupId;
 
-    @Query
-    @NameInMap("HttpPort")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("HttpPort")
     private Integer httpPort;
 
-    @Query
-    @NameInMap("MaxThreads")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("MaxThreads")
     private Integer maxThreads;
 
-    @Query
-    @NameInMap("URIEncoding")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("URIEncoding")
     private String URIEncoding;
 
-    @Query
-    @NameInMap("UseBodyEncoding")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("UseBodyEncoding")
     private Boolean useBodyEncoding;
 
     private UpdateContainerConfigurationRequest(Builder builder) {
@@ -60,7 +65,7 @@ public class UpdateContainerConfigurationRequest extends Request {
         return builder().build();
     }
 
-    @Override
+@Override
     public Builder toBuilder() {
         return new Builder(this);
     }
@@ -139,7 +144,11 @@ public class UpdateContainerConfigurationRequest extends Request {
         } 
 
         /**
-         * The ID of the application.
+         * <p>The ID of the application.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>c627c157-560d-43ff-************</p>
          */
         public Builder appId(String appId) {
             this.putQueryParameter("AppId", appId);
@@ -148,11 +157,14 @@ public class UpdateContainerConfigurationRequest extends Request {
         }
 
         /**
-         * The context path of the Tomcat container. The context path can be an empty string, a null WAR package name, a root directory, or other custom non-empty strings. It can contain letters, digits, hyphens (-), and underscores (\_). Take note of the following items:
-         * <p>
+         * <p>The context path of the Tomcat container. The context path can be an empty string, a null WAR package name, a root directory, or other custom non-empty strings. It can contain letters, digits, hyphens (-), and underscores (_). Take note of the following items:</p>
+         * <ul>
+         * <li>If this parameter is not specified when you configure the application instance group, the configuration of the application is applied.</li>
+         * <li>If this parameter is not specified when you configure the Tomcat container for an application, the root directory <code>/</code> is used.</li>
+         * </ul>
          * 
-         * *   If this parameter is not specified when you configure the application instance group, the configuration of the application is applied.
-         * *   If this parameter is not specified when you configure the Tomcat container for an application, the root directory `/` is used.
+         * <strong>example:</strong>
+         * <p>/</p>
          */
         public Builder contextPath(String contextPath) {
             this.putQueryParameter("ContextPath", contextPath);
@@ -161,11 +173,14 @@ public class UpdateContainerConfigurationRequest extends Request {
         }
 
         /**
-         * The ID of the application instance group.
-         * <p>
+         * <p>The ID of the application instance group.</p>
+         * <ul>
+         * <li>If an ID is specified, this operation configures the Tomcat container for the specified application instance group.</li>
+         * <li>If you set this parameter to &quot;&quot;, this operation configures the Tomcat container for the application.</li>
+         * </ul>
          * 
-         * *   If an ID is specified, this operation configures the Tomcat container for the specified application instance group.
-         * *   If you set this parameter to "", this operation configures the Tomcat container for the application.
+         * <strong>example:</strong>
+         * <p>8123db90-880f-**************</p>
          */
         public Builder groupId(String groupId) {
             this.putQueryParameter("GroupId", groupId);
@@ -174,11 +189,14 @@ public class UpdateContainerConfigurationRequest extends Request {
         }
 
         /**
-         * The application port number for the Tomcat container. Take note of the following items:
-         * <p>
+         * <p>The application port number for the Tomcat container. Take note of the following items:</p>
+         * <ul>
+         * <li>If this parameter is not specified when you configure the application instance group, the configuration of the application is applied.</li>
+         * <li>If this parameter is not specified when you configure the application, the default port 8080 is applied.</li>
+         * </ul>
          * 
-         * *   If this parameter is not specified when you configure the application instance group, the configuration of the application is applied.
-         * *   If this parameter is not specified when you configure the application, the default port 8080 is applied.
+         * <strong>example:</strong>
+         * <p>8080</p>
          */
         public Builder httpPort(Integer httpPort) {
             this.putQueryParameter("HttpPort", httpPort);
@@ -187,11 +205,14 @@ public class UpdateContainerConfigurationRequest extends Request {
         }
 
         /**
-         * The maximum number of threads. Take note of the following items:
-         * <p>
+         * <p>The maximum number of threads. Take note of the following items:</p>
+         * <ul>
+         * <li>If this parameter is not specified when you configure the application instance group, the configuration of the application is applied.</li>
+         * <li>If this parameter is not specified when you configure the application, the default value 250 is applied.</li>
+         * </ul>
          * 
-         * *   If this parameter is not specified when you configure the application instance group, the configuration of the application is applied.
-         * *   If this parameter is not specified when you configure the application, the default value 250 is applied.
+         * <strong>example:</strong>
+         * <p>20</p>
          */
         public Builder maxThreads(Integer maxThreads) {
             this.putQueryParameter("MaxThreads", maxThreads);
@@ -200,11 +221,14 @@ public class UpdateContainerConfigurationRequest extends Request {
         }
 
         /**
-         * The uniform resource identifier (URI) encoding scheme. Valid values: ISO-8859-1, GBK, GB2312, and UTF-8. Take note of the following items:
-         * <p>
+         * <p>The uniform resource identifier (URI) encoding scheme. Valid values: ISO-8859-1, GBK, GB2312, and UTF-8. Take note of the following items:</p>
+         * <ul>
+         * <li>If this parameter is not specified when you configure the application instance group, the configuration of the application is applied.</li>
+         * <li>If this parameter is not specified when you configure the application, the default URI encoding scheme in the Tomcat container is applied.</li>
+         * </ul>
          * 
-         * *   If this parameter is not specified when you configure the application instance group, the configuration of the application is applied.
-         * *   If this parameter is not specified when you configure the application, the default URI encoding scheme in the Tomcat container is applied.
+         * <strong>example:</strong>
+         * <p>ISO-8859-1</p>
          */
         public Builder URIEncoding(String URIEncoding) {
             this.putQueryParameter("URIEncoding", URIEncoding);
@@ -213,11 +237,14 @@ public class UpdateContainerConfigurationRequest extends Request {
         }
 
         /**
-         * Specifies whether to use the encoding scheme specified in the request body for URI query parameters. Take note of the following items:
-         * <p>
+         * <p>Specifies whether to use the encoding scheme specified in the request body for URI query parameters. Take note of the following items:</p>
+         * <ul>
+         * <li>If this parameter is not specified when you configure the application instance group, the configuration of the application is applied.</li>
+         * <li>If this parameter is not specified when you configure the application, the default value false is applied.</li>
+         * </ul>
          * 
-         * *   If this parameter is not specified when you configure the application instance group, the configuration of the application is applied.
-         * *   If this parameter is not specified when you configure the application, the default value false is applied.
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder useBodyEncoding(Boolean useBodyEncoding) {
             this.putQueryParameter("UseBodyEncoding", useBodyEncoding);

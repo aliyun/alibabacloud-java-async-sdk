@@ -1,46 +1,51 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.edas20170801.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link InsertClusterRequest} extends {@link RequestModel}
  *
  * <p>InsertClusterRequest</p>
  */
 public class InsertClusterRequest extends Request {
-    @Query
-    @NameInMap("ClusterName")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ClusterName")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String clusterName;
 
-    @Query
-    @NameInMap("ClusterType")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ClusterType")
+    @com.aliyun.core.annotation.Validation(required = true)
     private Integer clusterType;
 
-    @Query
-    @NameInMap("IaasProvider")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("IaasProvider")
     private String iaasProvider;
 
-    @Query
-    @NameInMap("LogicalRegionId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("LogicalRegionId")
     private String logicalRegionId;
 
-    @Query
-    @NameInMap("NetworkMode")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("NetworkMode")
+    @com.aliyun.core.annotation.Validation(required = true)
     private Integer networkMode;
 
-    @Query
-    @NameInMap("OversoldFactor")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("OversoldFactor")
     private Integer oversoldFactor;
 
-    @Query
-    @NameInMap("VpcId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("VpcId")
     private String vpcId;
 
     private InsertClusterRequest(Builder builder) {
@@ -62,7 +67,7 @@ public class InsertClusterRequest extends Request {
         return builder().build();
     }
 
-    @Override
+@Override
     public Builder toBuilder() {
         return new Builder(this);
     }
@@ -141,7 +146,11 @@ public class InsertClusterRequest extends Request {
         } 
 
         /**
-         * The name of the cluster.
+         * <p>The name of the cluster.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>****_product_test2</p>
          */
         public Builder clusterName(String clusterName) {
             this.putQueryParameter("ClusterName", clusterName);
@@ -150,12 +159,16 @@ public class InsertClusterRequest extends Request {
         }
 
         /**
-         * The type of the cluster. Valid values:
-         * <p>
+         * <p>The type of the cluster. Valid values:</p>
+         * <ul>
+         * <li>2: Elastic Compute Service (ECS) cluster</li>
+         * <li>3: self-managed Kubernetes cluster in Enterprise Distributed Application Service (EDAS)</li>
+         * <li>5: Kubernetes cluster</li>
+         * </ul>
+         * <p>This parameter is required.</p>
          * 
-         * *   2: Elastic Compute Service (ECS) cluster
-         * *   3: self-managed Kubernetes cluster in Enterprise Distributed Application Service (EDAS)
-         * *   5: Kubernetes cluster
+         * <strong>example:</strong>
+         * <p>2</p>
          */
         public Builder clusterType(Integer clusterType) {
             this.putQueryParameter("ClusterType", clusterType);
@@ -164,10 +177,11 @@ public class InsertClusterRequest extends Request {
         }
 
         /**
-         * The provider of Infrastructure as a Service (IaaS) resources that are used in the cluster.
-         * <p>
+         * <p>The provider of Infrastructure as a Service (IaaS) resources that are used in the cluster.</p>
+         * <p>When you use Alibaba Cloud, set the value to <code>ALIYUN</code>. The value is case-sensitive.</p>
          * 
-         * When you use Alibaba Cloud, set the value to `ALIYUN`. The value is case-sensitive.
+         * <strong>example:</strong>
+         * <p>ALIYUN</p>
          */
         public Builder iaasProvider(String iaasProvider) {
             this.putQueryParameter("IaasProvider", iaasProvider);
@@ -176,7 +190,10 @@ public class InsertClusterRequest extends Request {
         }
 
         /**
-         * The ID of the custom namespace. The ID is in the `physical region ID:custom namespace identifier` format. Example: `cn-hangzhou:test`.
+         * <p>The ID of the custom namespace. The ID is in the <code>physical region ID:custom namespace identifier</code> format. Example: <code>cn-hangzhou:test</code>.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-beijing:td****</p>
          */
         public Builder logicalRegionId(String logicalRegionId) {
             this.putQueryParameter("LogicalRegionId", logicalRegionId);
@@ -185,11 +202,15 @@ public class InsertClusterRequest extends Request {
         }
 
         /**
-         * The network type of the cluster. Valid values:
-         * <p>
+         * <p>The network type of the cluster. Valid values:</p>
+         * <ul>
+         * <li>1: classic network</li>
+         * <li>2: virtual private cloud (VPC)</li>
+         * </ul>
+         * <p>This parameter is required.</p>
          * 
-         * *   1: classic network
-         * *   2: virtual private cloud (VPC)
+         * <strong>example:</strong>
+         * <p>2</p>
          */
         public Builder networkMode(Integer networkMode) {
             this.putQueryParameter("NetworkMode", networkMode);
@@ -198,12 +219,15 @@ public class InsertClusterRequest extends Request {
         }
 
         /**
-         * **This parameter is deprecated.** The CPU overcommit ratio supported by a Docker cluster. Valid values:
-         * <p>
+         * <p><strong>This parameter is deprecated.</strong> The CPU overcommit ratio supported by a Docker cluster. Valid values:</p>
+         * <ul>
+         * <li>2: 1:2, which means that resources are overcommitted by 1:2.</li>
+         * <li>4: 1:4, which means that resources are overcommitted by 1:4.</li>
+         * <li>8: 1:8, which means that resources are overcommitted by 1:8.</li>
+         * </ul>
          * 
-         * *   2: 1:2, which means that resources are overcommitted by 1:2.
-         * *   4: 1:4, which means that resources are overcommitted by 1:4.
-         * *   8: 1:8, which means that resources are overcommitted by 1:8.
+         * <strong>example:</strong>
+         * <p>2</p>
          */
         public Builder oversoldFactor(Integer oversoldFactor) {
             this.putQueryParameter("OversoldFactor", oversoldFactor);
@@ -212,7 +236,10 @@ public class InsertClusterRequest extends Request {
         }
 
         /**
-         * The ID of the VPC. This parameter is required if you set the NetworkMode parameter to 2.
+         * <p>The ID of the VPC. This parameter is required if you set the NetworkMode parameter to 2.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>vpc-2zef6ob8mrlzv8x3q****</p>
          */
         public Builder vpcId(String vpcId) {
             this.putQueryParameter("VpcId", vpcId);

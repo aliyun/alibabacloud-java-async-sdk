@@ -1,27 +1,32 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.edas20170801.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ListK8sSecretsResponseBody} extends {@link TeaModel}
  *
  * <p>ListK8sSecretsResponseBody</p>
  */
 public class ListK8sSecretsResponseBody extends TeaModel {
-    @NameInMap("Code")
+    @com.aliyun.core.annotation.NameInMap("Code")
     private Integer code;
 
-    @NameInMap("Message")
+    @com.aliyun.core.annotation.NameInMap("Message")
     private String message;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("Result")
+    @com.aliyun.core.annotation.NameInMap("Result")
     private Result result;
 
     private ListK8sSecretsResponseBody(Builder builder) {
@@ -37,6 +42,10 @@ public class ListK8sSecretsResponseBody extends TeaModel {
 
     public static ListK8sSecretsResponseBody create() {
         return builder().build();
+    }
+
+    public Builder toBuilder() {
+        return new Builder(this);
     }
 
     /**
@@ -73,8 +82,21 @@ public class ListK8sSecretsResponseBody extends TeaModel {
         private String requestId; 
         private Result result; 
 
+        private Builder() {
+        } 
+
+        private Builder(ListK8sSecretsResponseBody model) {
+            this.code = model.code;
+            this.message = model.message;
+            this.requestId = model.requestId;
+            this.result = model.result;
+        } 
+
         /**
-         * The HTTP status code that is returned.
+         * <p>The HTTP status code that is returned.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>200</p>
          */
         public Builder code(Integer code) {
             this.code = code;
@@ -82,7 +104,10 @@ public class ListK8sSecretsResponseBody extends TeaModel {
         }
 
         /**
-         * The additional information that is returned.
+         * <p>The additional information that is returned.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>success</p>
          */
         public Builder message(String message) {
             this.message = message;
@@ -90,7 +115,10 @@ public class ListK8sSecretsResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the request.
+         * <p>The ID of the request.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>b197-40ab-9155-****</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -98,7 +126,7 @@ public class ListK8sSecretsResponseBody extends TeaModel {
         }
 
         /**
-         * The returned query results of Kubernetes Secrets.
+         * <p>The returned query results of Kubernetes Secrets.</p>
          */
         public Builder result(Result result) {
             this.result = result;
@@ -111,20 +139,26 @@ public class ListK8sSecretsResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link ListK8sSecretsResponseBody} extends {@link TeaModel}
+     *
+     * <p>ListK8sSecretsResponseBody</p>
+     */
     public static class CertDetail extends TeaModel {
-        @NameInMap("DomainNames")
-        private java.util.List < String > domainNames;
+        @com.aliyun.core.annotation.NameInMap("DomainNames")
+        private java.util.List<String> domainNames;
 
-        @NameInMap("EndTime")
+        @com.aliyun.core.annotation.NameInMap("EndTime")
         private String endTime;
 
-        @NameInMap("Issuer")
+        @com.aliyun.core.annotation.NameInMap("Issuer")
         private String issuer;
 
-        @NameInMap("StartTime")
+        @com.aliyun.core.annotation.NameInMap("StartTime")
         private String startTime;
 
-        @NameInMap("Status")
+        @com.aliyun.core.annotation.NameInMap("Status")
         private String status;
 
         private CertDetail(Builder builder) {
@@ -146,7 +180,7 @@ public class ListK8sSecretsResponseBody extends TeaModel {
         /**
          * @return domainNames
          */
-        public java.util.List < String > getDomainNames() {
+        public java.util.List<String> getDomainNames() {
             return this.domainNames;
         }
 
@@ -179,22 +213,36 @@ public class ListK8sSecretsResponseBody extends TeaModel {
         }
 
         public static final class Builder {
-            private java.util.List < String > domainNames; 
+            private java.util.List<String> domainNames; 
             private String endTime; 
             private String issuer; 
             private String startTime; 
             private String status; 
 
+            private Builder() {
+            } 
+
+            private Builder(CertDetail model) {
+                this.domainNames = model.domainNames;
+                this.endTime = model.endTime;
+                this.issuer = model.issuer;
+                this.startTime = model.startTime;
+                this.status = model.status;
+            } 
+
             /**
-             * Domain names that are associated with the SSL certificate.
+             * <p>Domain names that are associated with the SSL certificate.</p>
              */
-            public Builder domainNames(java.util.List < String > domainNames) {
+            public Builder domainNames(java.util.List<String> domainNames) {
                 this.domainNames = domainNames;
                 return this;
             }
 
             /**
-             * The time when the SSL certificate expired.
+             * <p>The time when the SSL certificate expired.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2022-02-22T02:32:41Z</p>
              */
             public Builder endTime(String endTime) {
                 this.endTime = endTime;
@@ -202,7 +250,10 @@ public class ListK8sSecretsResponseBody extends TeaModel {
             }
 
             /**
-             * The certificate authority (CA) that issued the SSL certificate.
+             * <p>The certificate authority (CA) that issued the SSL certificate.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>CN=GlobalSign Root CA, OU=Root CA, O=GlobalSign nv-sa, C=BE</p>
              */
             public Builder issuer(String issuer) {
                 this.issuer = issuer;
@@ -210,7 +261,10 @@ public class ListK8sSecretsResponseBody extends TeaModel {
             }
 
             /**
-             * The time when the SSL certificate started to take effect.
+             * <p>The time when the SSL certificate started to take effect.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2022-01-02T22:40:00Z</p>
              */
             public Builder startTime(String startTime) {
                 this.startTime = startTime;
@@ -218,14 +272,17 @@ public class ListK8sSecretsResponseBody extends TeaModel {
             }
 
             /**
-             * The state of the SSL certificate. Valid values:
-             * <p>
+             * <p>The state of the SSL certificate. Valid values:</p>
+             * <ul>
+             * <li>normal: The SSL certificate is valid.</li>
+             * <li>invalid: The SSL certificate is invalid.</li>
+             * <li>expired: The SSL certificate has expired.</li>
+             * <li>not_yet_valid: The SSL certificate is currently invalid.</li>
+             * <li>about_to_expire: The SSL certificate is about to expire.</li>
+             * </ul>
              * 
-             * *   normal: The SSL certificate is valid.
-             * *   invalid: The SSL certificate is invalid.
-             * *   expired: The SSL certificate has expired.
-             * *   not_yet_valid: The SSL certificate is currently invalid.
-             * *   about_to_expire: The SSL certificate is about to expire.
+             * <strong>example:</strong>
+             * <p>normal</p>
              */
             public Builder status(String status) {
                 this.status = status;
@@ -239,11 +296,17 @@ public class ListK8sSecretsResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link ListK8sSecretsResponseBody} extends {@link TeaModel}
+     *
+     * <p>ListK8sSecretsResponseBody</p>
+     */
     public static class Data extends TeaModel {
-        @NameInMap("Key")
+        @com.aliyun.core.annotation.NameInMap("Key")
         private String key;
 
-        @NameInMap("Value")
+        @com.aliyun.core.annotation.NameInMap("Value")
         private String value;
 
         private Data(Builder builder) {
@@ -277,8 +340,19 @@ public class ListK8sSecretsResponseBody extends TeaModel {
             private String key; 
             private String value; 
 
+            private Builder() {
+            } 
+
+            private Builder(Data model) {
+                this.key = model.key;
+                this.value = model.value;
+            } 
+
             /**
-             * The user-defined key of the Kubernetes Secret.
+             * <p>The user-defined key of the Kubernetes Secret.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>name</p>
              */
             public Builder key(String key) {
                 this.key = key;
@@ -286,7 +360,10 @@ public class ListK8sSecretsResponseBody extends TeaModel {
             }
 
             /**
-             * The user-defined value of the Kubernetes Secret.
+             * <p>The user-defined value of the Kubernetes Secret.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>william</p>
              */
             public Builder value(String value) {
                 this.value = value;
@@ -300,11 +377,17 @@ public class ListK8sSecretsResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link ListK8sSecretsResponseBody} extends {@link TeaModel}
+     *
+     * <p>ListK8sSecretsResponseBody</p>
+     */
     public static class RelatedApps extends TeaModel {
-        @NameInMap("AppId")
+        @com.aliyun.core.annotation.NameInMap("AppId")
         private String appId;
 
-        @NameInMap("AppName")
+        @com.aliyun.core.annotation.NameInMap("AppName")
         private String appName;
 
         private RelatedApps(Builder builder) {
@@ -338,8 +421,19 @@ public class ListK8sSecretsResponseBody extends TeaModel {
             private String appId; 
             private String appName; 
 
+            private Builder() {
+            } 
+
+            private Builder(RelatedApps model) {
+                this.appId = model.appId;
+                this.appName = model.appName;
+            } 
+
             /**
-             * The ID of the application.
+             * <p>The ID of the application.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>b08eeb18-8946-410c-a1ea-dbbc********</p>
              */
             public Builder appId(String appId) {
                 this.appId = appId;
@@ -347,7 +441,10 @@ public class ListK8sSecretsResponseBody extends TeaModel {
             }
 
             /**
-             * The name of the application.
+             * <p>The name of the application.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>my-app</p>
              */
             public Builder appName(String appName) {
                 this.appName = appName;
@@ -361,11 +458,17 @@ public class ListK8sSecretsResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link ListK8sSecretsResponseBody} extends {@link TeaModel}
+     *
+     * <p>ListK8sSecretsResponseBody</p>
+     */
     public static class RelatedIngressRulesRelatedApps extends TeaModel {
-        @NameInMap("AppId")
+        @com.aliyun.core.annotation.NameInMap("AppId")
         private String appId;
 
-        @NameInMap("AppName")
+        @com.aliyun.core.annotation.NameInMap("AppName")
         private String appName;
 
         private RelatedIngressRulesRelatedApps(Builder builder) {
@@ -399,8 +502,19 @@ public class ListK8sSecretsResponseBody extends TeaModel {
             private String appId; 
             private String appName; 
 
+            private Builder() {
+            } 
+
+            private Builder(RelatedIngressRulesRelatedApps model) {
+                this.appId = model.appId;
+                this.appName = model.appName;
+            } 
+
             /**
-             * The ID of the application.
+             * <p>The ID of the application.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>6dc74432-5a35-4e68-8aaa-3700********</p>
              */
             public Builder appId(String appId) {
                 this.appId = appId;
@@ -408,7 +522,10 @@ public class ListK8sSecretsResponseBody extends TeaModel {
             }
 
             /**
-             * The name of the EDAS application.
+             * <p>The name of the EDAS application.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>app-test</p>
              */
             public Builder appName(String appName) {
                 this.appName = appName;
@@ -422,15 +539,21 @@ public class ListK8sSecretsResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link ListK8sSecretsResponseBody} extends {@link TeaModel}
+     *
+     * <p>ListK8sSecretsResponseBody</p>
+     */
     public static class RelatedIngressRules extends TeaModel {
-        @NameInMap("Name")
+        @com.aliyun.core.annotation.NameInMap("Name")
         private String name;
 
-        @NameInMap("Namespace")
+        @com.aliyun.core.annotation.NameInMap("Namespace")
         private String namespace;
 
-        @NameInMap("RelatedApps")
-        private java.util.List < RelatedIngressRulesRelatedApps> relatedApps;
+        @com.aliyun.core.annotation.NameInMap("RelatedApps")
+        private java.util.List<RelatedIngressRulesRelatedApps> relatedApps;
 
         private RelatedIngressRules(Builder builder) {
             this.name = builder.name;
@@ -463,17 +586,29 @@ public class ListK8sSecretsResponseBody extends TeaModel {
         /**
          * @return relatedApps
          */
-        public java.util.List < RelatedIngressRulesRelatedApps> getRelatedApps() {
+        public java.util.List<RelatedIngressRulesRelatedApps> getRelatedApps() {
             return this.relatedApps;
         }
 
         public static final class Builder {
             private String name; 
             private String namespace; 
-            private java.util.List < RelatedIngressRulesRelatedApps> relatedApps; 
+            private java.util.List<RelatedIngressRulesRelatedApps> relatedApps; 
+
+            private Builder() {
+            } 
+
+            private Builder(RelatedIngressRules model) {
+                this.name = model.name;
+                this.namespace = model.namespace;
+                this.relatedApps = model.relatedApps;
+            } 
 
             /**
-             * The name of the rule in the Ingress.
+             * <p>The name of the rule in the Ingress.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>testrulename</p>
              */
             public Builder name(String name) {
                 this.name = name;
@@ -481,7 +616,10 @@ public class ListK8sSecretsResponseBody extends TeaModel {
             }
 
             /**
-             * The namespaces of the Kubernetes cluster.
+             * <p>The namespaces of the Kubernetes cluster.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>default</p>
              */
             public Builder namespace(String namespace) {
                 this.namespace = namespace;
@@ -489,9 +627,9 @@ public class ListK8sSecretsResponseBody extends TeaModel {
             }
 
             /**
-             * Aplications that are associated with the Ingress.
+             * <p>Aplications that are associated with the Ingress.</p>
              */
-            public Builder relatedApps(java.util.List < RelatedIngressRulesRelatedApps> relatedApps) {
+            public Builder relatedApps(java.util.List<RelatedIngressRulesRelatedApps> relatedApps) {
                 this.relatedApps = relatedApps;
                 return this;
             }
@@ -503,44 +641,50 @@ public class ListK8sSecretsResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link ListK8sSecretsResponseBody} extends {@link TeaModel}
+     *
+     * <p>ListK8sSecretsResponseBody</p>
+     */
     public static class Secrets extends TeaModel {
-        @NameInMap("Base64Encoded")
+        @com.aliyun.core.annotation.NameInMap("Base64Encoded")
         private Boolean base64Encoded;
 
-        @NameInMap("CertDetail")
+        @com.aliyun.core.annotation.NameInMap("CertDetail")
         private CertDetail certDetail;
 
-        @NameInMap("CertId")
+        @com.aliyun.core.annotation.NameInMap("CertId")
         private String certId;
 
-        @NameInMap("CertRegionId")
+        @com.aliyun.core.annotation.NameInMap("CertRegionId")
         private String certRegionId;
 
-        @NameInMap("ClusterId")
+        @com.aliyun.core.annotation.NameInMap("ClusterId")
         private String clusterId;
 
-        @NameInMap("ClusterName")
+        @com.aliyun.core.annotation.NameInMap("ClusterName")
         private String clusterName;
 
-        @NameInMap("CreationTime")
+        @com.aliyun.core.annotation.NameInMap("CreationTime")
         private String creationTime;
 
-        @NameInMap("Data")
-        private java.util.List < Data> data;
+        @com.aliyun.core.annotation.NameInMap("Data")
+        private java.util.List<Data> data;
 
-        @NameInMap("Name")
+        @com.aliyun.core.annotation.NameInMap("Name")
         private String name;
 
-        @NameInMap("Namespace")
+        @com.aliyun.core.annotation.NameInMap("Namespace")
         private String namespace;
 
-        @NameInMap("RelatedApps")
-        private java.util.List < RelatedApps> relatedApps;
+        @com.aliyun.core.annotation.NameInMap("RelatedApps")
+        private java.util.List<RelatedApps> relatedApps;
 
-        @NameInMap("RelatedIngressRules")
-        private java.util.List < RelatedIngressRules> relatedIngressRules;
+        @com.aliyun.core.annotation.NameInMap("RelatedIngressRules")
+        private java.util.List<RelatedIngressRules> relatedIngressRules;
 
-        @NameInMap("Type")
+        @com.aliyun.core.annotation.NameInMap("Type")
         private String type;
 
         private Secrets(Builder builder) {
@@ -619,7 +763,7 @@ public class ListK8sSecretsResponseBody extends TeaModel {
         /**
          * @return data
          */
-        public java.util.List < Data> getData() {
+        public java.util.List<Data> getData() {
             return this.data;
         }
 
@@ -640,14 +784,14 @@ public class ListK8sSecretsResponseBody extends TeaModel {
         /**
          * @return relatedApps
          */
-        public java.util.List < RelatedApps> getRelatedApps() {
+        public java.util.List<RelatedApps> getRelatedApps() {
             return this.relatedApps;
         }
 
         /**
          * @return relatedIngressRules
          */
-        public java.util.List < RelatedIngressRules> getRelatedIngressRules() {
+        public java.util.List<RelatedIngressRules> getRelatedIngressRules() {
             return this.relatedIngressRules;
         }
 
@@ -666,19 +810,41 @@ public class ListK8sSecretsResponseBody extends TeaModel {
             private String clusterId; 
             private String clusterName; 
             private String creationTime; 
-            private java.util.List < Data> data; 
+            private java.util.List<Data> data; 
             private String name; 
             private String namespace; 
-            private java.util.List < RelatedApps> relatedApps; 
-            private java.util.List < RelatedIngressRules> relatedIngressRules; 
+            private java.util.List<RelatedApps> relatedApps; 
+            private java.util.List<RelatedIngressRules> relatedIngressRules; 
             private String type; 
 
+            private Builder() {
+            } 
+
+            private Builder(Secrets model) {
+                this.base64Encoded = model.base64Encoded;
+                this.certDetail = model.certDetail;
+                this.certId = model.certId;
+                this.certRegionId = model.certRegionId;
+                this.clusterId = model.clusterId;
+                this.clusterName = model.clusterName;
+                this.creationTime = model.creationTime;
+                this.data = model.data;
+                this.name = model.name;
+                this.namespace = model.namespace;
+                this.relatedApps = model.relatedApps;
+                this.relatedIngressRules = model.relatedIngressRules;
+                this.type = model.type;
+            } 
+
             /**
-             * Indicates whether the data is Base64-encoded. Valid values:
-             * <p>
+             * <p>Indicates whether the data is Base64-encoded. Valid values:</p>
+             * <ul>
+             * <li>true: The data is Base64-encoded.</li>
+             * <li>false: The data is not Base64-encoded.</li>
+             * </ul>
              * 
-             * *   true: The data is Base64-encoded.
-             * *   false: The data is not Base64-encoded.
+             * <strong>example:</strong>
+             * <p>false</p>
              */
             public Builder base64Encoded(Boolean base64Encoded) {
                 this.base64Encoded = base64Encoded;
@@ -686,7 +852,7 @@ public class ListK8sSecretsResponseBody extends TeaModel {
             }
 
             /**
-             * The details of the Secure Sockets Layer (SSL) certificate.
+             * <p>The details of the Secure Sockets Layer (SSL) certificate.</p>
              */
             public Builder certDetail(CertDetail certDetail) {
                 this.certDetail = certDetail;
@@ -694,7 +860,10 @@ public class ListK8sSecretsResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the certificate provided by Alibaba Cloud Certificate Management Service.
+             * <p>The ID of the certificate provided by Alibaba Cloud Certificate Management Service.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>123456</p>
              */
             public Builder certId(String certId) {
                 this.certId = certId;
@@ -702,7 +871,10 @@ public class ListK8sSecretsResponseBody extends TeaModel {
             }
 
             /**
-             * The region in which the certificate is stored.
+             * <p>The region in which the certificate is stored.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>cn-hangzhou</p>
              */
             public Builder certRegionId(String certRegionId) {
                 this.certRegionId = certRegionId;
@@ -710,7 +882,10 @@ public class ListK8sSecretsResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the cluster in Enterprise Distributed Application Service (EDAS).
+             * <p>The ID of the cluster in Enterprise Distributed Application Service (EDAS).</p>
+             * 
+             * <strong>example:</strong>
+             * <p>4472a6d3-f01d-4087-85a7-3dc52********</p>
              */
             public Builder clusterId(String clusterId) {
                 this.clusterId = clusterId;
@@ -718,7 +893,10 @@ public class ListK8sSecretsResponseBody extends TeaModel {
             }
 
             /**
-             * The name of the cluster.
+             * <p>The name of the cluster.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>test-cluster</p>
              */
             public Builder clusterName(String clusterName) {
                 this.clusterName = clusterName;
@@ -726,7 +904,10 @@ public class ListK8sSecretsResponseBody extends TeaModel {
             }
 
             /**
-             * The time when the Secret was created. The time follows the ISO 8601 standard in the *yyyy-MM-dd*T*hh:mm:ss*Z format. The time is displayed in UTC.
+             * <p>The time when the Secret was created. The time follows the ISO 8601 standard in the <em>yyyy-MM-dd</em>T<em>hh:mm:ss</em>Z format. The time is displayed in UTC.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2022-05-26T02:57:02Z</p>
              */
             public Builder creationTime(String creationTime) {
                 this.creationTime = creationTime;
@@ -734,15 +915,18 @@ public class ListK8sSecretsResponseBody extends TeaModel {
             }
 
             /**
-             * The data of the Kubernetes Secret.
+             * <p>The data of the Kubernetes Secret.</p>
              */
-            public Builder data(java.util.List < Data> data) {
+            public Builder data(java.util.List<Data> data) {
                 this.data = data;
                 return this;
             }
 
             /**
-             * The name of the Secret. The name must start with a letter, and can contain digits, letters, and hyphens (-). It can be up to 63 characters in length.
+             * <p>The name of the Secret. The name must start with a letter, and can contain digits, letters, and hyphens (-). It can be up to 63 characters in length.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>my-secret</p>
              */
             public Builder name(String name) {
                 this.name = name;
@@ -750,7 +934,10 @@ public class ListK8sSecretsResponseBody extends TeaModel {
             }
 
             /**
-             * The namespace of the Kubernetes cluster.
+             * <p>The namespace of the Kubernetes cluster.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>default</p>
              */
             public Builder namespace(String namespace) {
                 this.namespace = namespace;
@@ -758,27 +945,30 @@ public class ListK8sSecretsResponseBody extends TeaModel {
             }
 
             /**
-             * Applications that use the Secret.
+             * <p>Applications that use the Secret.</p>
              */
-            public Builder relatedApps(java.util.List < RelatedApps> relatedApps) {
+            public Builder relatedApps(java.util.List<RelatedApps> relatedApps) {
                 this.relatedApps = relatedApps;
                 return this;
             }
 
             /**
-             * Rules in the Ingress that is associated with the Secret.
+             * <p>Rules in the Ingress that is associated with the Secret.</p>
              */
-            public Builder relatedIngressRules(java.util.List < RelatedIngressRules> relatedIngressRules) {
+            public Builder relatedIngressRules(java.util.List<RelatedIngressRules> relatedIngressRules) {
                 this.relatedIngressRules = relatedIngressRules;
                 return this;
             }
 
             /**
-             * The type of the Secret. Valid values:
-             * <p>
+             * <p>The type of the Secret. Valid values:</p>
+             * <ul>
+             * <li>Opaque: user-defined data</li>
+             * <li>kubernetes.io/tls: Transport Layer Security (TLS) certificate</li>
+             * </ul>
              * 
-             * *   Opaque: user-defined data
-             * *   kubernetes.io/tls: Transport Layer Security (TLS) certificate
+             * <strong>example:</strong>
+             * <p>Opaque</p>
              */
             public Builder type(String type) {
                 this.type = type;
@@ -792,11 +982,17 @@ public class ListK8sSecretsResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link ListK8sSecretsResponseBody} extends {@link TeaModel}
+     *
+     * <p>ListK8sSecretsResponseBody</p>
+     */
     public static class Result extends TeaModel {
-        @NameInMap("Secrets")
-        private java.util.List < Secrets> secrets;
+        @com.aliyun.core.annotation.NameInMap("Secrets")
+        private java.util.List<Secrets> secrets;
 
-        @NameInMap("Total")
+        @com.aliyun.core.annotation.NameInMap("Total")
         private Integer total;
 
         private Result(Builder builder) {
@@ -815,7 +1011,7 @@ public class ListK8sSecretsResponseBody extends TeaModel {
         /**
          * @return secrets
          */
-        public java.util.List < Secrets> getSecrets() {
+        public java.util.List<Secrets> getSecrets() {
             return this.secrets;
         }
 
@@ -827,19 +1023,30 @@ public class ListK8sSecretsResponseBody extends TeaModel {
         }
 
         public static final class Builder {
-            private java.util.List < Secrets> secrets; 
+            private java.util.List<Secrets> secrets; 
             private Integer total; 
 
+            private Builder() {
+            } 
+
+            private Builder(Result model) {
+                this.secrets = model.secrets;
+                this.total = model.total;
+            } 
+
             /**
-             * The information about Kubernetes Secrets.
+             * <p>The information about Kubernetes Secrets.</p>
              */
-            public Builder secrets(java.util.List < Secrets> secrets) {
+            public Builder secrets(java.util.List<Secrets> secrets) {
                 this.secrets = secrets;
                 return this;
             }
 
             /**
-             * The total number of entries that are returned.
+             * <p>The total number of entries that are returned.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>6</p>
              */
             public Builder total(Integer total) {
                 this.total = total;

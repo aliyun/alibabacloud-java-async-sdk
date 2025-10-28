@@ -1,33 +1,38 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.edas20170801.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link GetServiceMethodPageResponseBody} extends {@link TeaModel}
  *
  * <p>GetServiceMethodPageResponseBody</p>
  */
 public class GetServiceMethodPageResponseBody extends TeaModel {
-    @NameInMap("Code")
+    @com.aliyun.core.annotation.NameInMap("Code")
     private String code;
 
-    @NameInMap("Data")
+    @com.aliyun.core.annotation.NameInMap("Data")
     private Data data;
 
-    @NameInMap("HttpCode")
+    @com.aliyun.core.annotation.NameInMap("HttpCode")
     private String httpCode;
 
-    @NameInMap("Message")
+    @com.aliyun.core.annotation.NameInMap("Message")
     private String message;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("Success")
+    @com.aliyun.core.annotation.NameInMap("Success")
     private Boolean success;
 
     private GetServiceMethodPageResponseBody(Builder builder) {
@@ -45,6 +50,10 @@ public class GetServiceMethodPageResponseBody extends TeaModel {
 
     public static GetServiceMethodPageResponseBody create() {
         return builder().build();
+    }
+
+    public Builder toBuilder() {
+        return new Builder(this);
     }
 
     /**
@@ -97,8 +106,23 @@ public class GetServiceMethodPageResponseBody extends TeaModel {
         private String requestId; 
         private Boolean success; 
 
+        private Builder() {
+        } 
+
+        private Builder(GetServiceMethodPageResponseBody model) {
+            this.code = model.code;
+            this.data = model.data;
+            this.httpCode = model.httpCode;
+            this.message = model.message;
+            this.requestId = model.requestId;
+            this.success = model.success;
+        } 
+
         /**
-         * The HTTP status code that is returned.
+         * <p>The HTTP status code that is returned.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>200</p>
          */
         public Builder code(String code) {
             this.code = code;
@@ -106,7 +130,7 @@ public class GetServiceMethodPageResponseBody extends TeaModel {
         }
 
         /**
-         * The data that is returned.
+         * <p>The data that is returned.</p>
          */
         public Builder data(Data data) {
             this.data = data;
@@ -114,7 +138,10 @@ public class GetServiceMethodPageResponseBody extends TeaModel {
         }
 
         /**
-         * The HTTP status code that is returned.
+         * <p>The HTTP status code that is returned.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>200</p>
          */
         public Builder httpCode(String httpCode) {
             this.httpCode = httpCode;
@@ -122,7 +149,10 @@ public class GetServiceMethodPageResponseBody extends TeaModel {
         }
 
         /**
-         * The additional information that is returned.
+         * <p>The additional information that is returned.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>success</p>
          */
         public Builder message(String message) {
             this.message = message;
@@ -130,7 +160,10 @@ public class GetServiceMethodPageResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the request.
+         * <p>The ID of the request.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>BDC0C0FE-D63B-4FC8-<strong><strong>-4081C57E</strong></strong></p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -138,7 +171,10 @@ public class GetServiceMethodPageResponseBody extends TeaModel {
         }
 
         /**
-         * Indicates whether the request is successful.
+         * <p>Indicates whether the request is successful.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder success(Boolean success) {
             this.success = success;
@@ -151,11 +187,17 @@ public class GetServiceMethodPageResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link GetServiceMethodPageResponseBody} extends {@link TeaModel}
+     *
+     * <p>GetServiceMethodPageResponseBody</p>
+     */
     public static class ReturnDefinition extends TeaModel {
-        @NameInMap("Id")
+        @com.aliyun.core.annotation.NameInMap("Id")
         private String id;
 
-        @NameInMap("Type")
+        @com.aliyun.core.annotation.NameInMap("Type")
         private String type;
 
         private ReturnDefinition(Builder builder) {
@@ -189,8 +231,19 @@ public class GetServiceMethodPageResponseBody extends TeaModel {
             private String id; 
             private String type; 
 
+            private Builder() {
+            } 
+
+            private Builder(ReturnDefinition model) {
+                this.id = model.id;
+                this.type = model.type;
+            } 
+
             /**
-             * The ID of the return value.
+             * <p>The ID of the return value.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder id(String id) {
                 this.id = id;
@@ -198,7 +251,10 @@ public class GetServiceMethodPageResponseBody extends TeaModel {
             }
 
             /**
-             * The data format of the response.
+             * <p>The data format of the response.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>java.lang.String</p>
              */
             public Builder type(String type) {
                 this.type = type;
@@ -212,41 +268,47 @@ public class GetServiceMethodPageResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link GetServiceMethodPageResponseBody} extends {@link TeaModel}
+     *
+     * <p>GetServiceMethodPageResponseBody</p>
+     */
     public static class Result extends TeaModel {
-        @NameInMap("MethodController")
+        @com.aliyun.core.annotation.NameInMap("MethodController")
         private String methodController;
 
-        @NameInMap("Name")
+        @com.aliyun.core.annotation.NameInMap("Name")
         private String name;
 
-        @NameInMap("NameDetail")
+        @com.aliyun.core.annotation.NameInMap("NameDetail")
         private String nameDetail;
 
-        @NameInMap("ParameterDefinitions")
+        @com.aliyun.core.annotation.NameInMap("ParameterDefinitions")
         private String parameterDefinitions;
 
-        @NameInMap("ParameterDetails")
+        @com.aliyun.core.annotation.NameInMap("ParameterDetails")
         private String parameterDetails;
 
-        @NameInMap("ParameterNames")
+        @com.aliyun.core.annotation.NameInMap("ParameterNames")
         private String parameterNames;
 
-        @NameInMap("ParameterTypes")
+        @com.aliyun.core.annotation.NameInMap("ParameterTypes")
         private String parameterTypes;
 
-        @NameInMap("Paths")
+        @com.aliyun.core.annotation.NameInMap("Paths")
         private String paths;
 
-        @NameInMap("RequestMethods")
+        @com.aliyun.core.annotation.NameInMap("RequestMethods")
         private String requestMethods;
 
-        @NameInMap("ReturnDefinition")
+        @com.aliyun.core.annotation.NameInMap("ReturnDefinition")
         private ReturnDefinition returnDefinition;
 
-        @NameInMap("ReturnDetails")
+        @com.aliyun.core.annotation.NameInMap("ReturnDetails")
         private String returnDetails;
 
-        @NameInMap("ReturnType")
+        @com.aliyun.core.annotation.NameInMap("ReturnType")
         private String returnType;
 
         private Result(Builder builder) {
@@ -370,8 +432,29 @@ public class GetServiceMethodPageResponseBody extends TeaModel {
             private String returnDetails; 
             private String returnType; 
 
+            private Builder() {
+            } 
+
+            private Builder(Result model) {
+                this.methodController = model.methodController;
+                this.name = model.name;
+                this.nameDetail = model.nameDetail;
+                this.parameterDefinitions = model.parameterDefinitions;
+                this.parameterDetails = model.parameterDetails;
+                this.parameterNames = model.parameterNames;
+                this.parameterTypes = model.parameterTypes;
+                this.paths = model.paths;
+                this.requestMethods = model.requestMethods;
+                this.returnDefinition = model.returnDefinition;
+                this.returnDetails = model.returnDetails;
+                this.returnType = model.returnType;
+            } 
+
             /**
-             * The method.
+             * <p>The method.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>com.aliware.edas.EchoController</p>
              */
             public Builder methodController(String methodController) {
                 this.methodController = methodController;
@@ -379,7 +462,10 @@ public class GetServiceMethodPageResponseBody extends TeaModel {
             }
 
             /**
-             * The name of the method.
+             * <p>The name of the method.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>echo</p>
              */
             public Builder name(String name) {
                 this.name = name;
@@ -387,7 +473,10 @@ public class GetServiceMethodPageResponseBody extends TeaModel {
             }
 
             /**
-             * The details of the method.
+             * <p>The details of the method.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>name</p>
              */
             public Builder nameDetail(String nameDetail) {
                 this.nameDetail = nameDetail;
@@ -395,7 +484,10 @@ public class GetServiceMethodPageResponseBody extends TeaModel {
             }
 
             /**
-             * The definition of the parameter.
+             * <p>The definition of the parameter.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>[{&quot;description&quot;:&quot;&quot;,&quot;name&quot;:&quot;arg0&quot;,&quot;type&quot;:&quot;java.lang.String&quot;}]</p>
              */
             public Builder parameterDefinitions(String parameterDefinitions) {
                 this.parameterDefinitions = parameterDefinitions;
@@ -403,7 +495,10 @@ public class GetServiceMethodPageResponseBody extends TeaModel {
             }
 
             /**
-             * The details of the parameters.
+             * <p>The details of the parameters.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>{}</p>
              */
             public Builder parameterDetails(String parameterDetails) {
                 this.parameterDetails = parameterDetails;
@@ -411,7 +506,10 @@ public class GetServiceMethodPageResponseBody extends TeaModel {
             }
 
             /**
-             * The name of the parameter.
+             * <p>The name of the parameter.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>echo</p>
              */
             public Builder parameterNames(String parameterNames) {
                 this.parameterNames = parameterNames;
@@ -419,7 +517,10 @@ public class GetServiceMethodPageResponseBody extends TeaModel {
             }
 
             /**
-             * The data type of the parameter.
+             * <p>The data type of the parameter.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>java.lang.String</p>
              */
             public Builder parameterTypes(String parameterTypes) {
                 this.parameterTypes = parameterTypes;
@@ -427,7 +528,10 @@ public class GetServiceMethodPageResponseBody extends TeaModel {
             }
 
             /**
-             * The method path.
+             * <p>The method path.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>/consumer/alive</p>
              */
             public Builder paths(String paths) {
                 this.paths = paths;
@@ -435,7 +539,10 @@ public class GetServiceMethodPageResponseBody extends TeaModel {
             }
 
             /**
-             * The request method.
+             * <p>The request method.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>GET</p>
              */
             public Builder requestMethods(String requestMethods) {
                 this.requestMethods = requestMethods;
@@ -443,7 +550,7 @@ public class GetServiceMethodPageResponseBody extends TeaModel {
             }
 
             /**
-             * The return value.
+             * <p>The return value.</p>
              */
             public Builder returnDefinition(ReturnDefinition returnDefinition) {
                 this.returnDefinition = returnDefinition;
@@ -451,7 +558,10 @@ public class GetServiceMethodPageResponseBody extends TeaModel {
             }
 
             /**
-             * The details of the response.
+             * <p>The details of the response.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>java.lang.String</p>
              */
             public Builder returnDetails(String returnDetails) {
                 this.returnDetails = returnDetails;
@@ -459,7 +569,10 @@ public class GetServiceMethodPageResponseBody extends TeaModel {
             }
 
             /**
-             * The data format of the response.
+             * <p>The data format of the response.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>java.lang.String</p>
              */
             public Builder returnType(String returnType) {
                 this.returnType = returnType;
@@ -473,17 +586,23 @@ public class GetServiceMethodPageResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link GetServiceMethodPageResponseBody} extends {@link TeaModel}
+     *
+     * <p>GetServiceMethodPageResponseBody</p>
+     */
     public static class Data extends TeaModel {
-        @NameInMap("PageNumber")
+        @com.aliyun.core.annotation.NameInMap("PageNumber")
         private Integer pageNumber;
 
-        @NameInMap("PageSize")
+        @com.aliyun.core.annotation.NameInMap("PageSize")
         private Integer pageSize;
 
-        @NameInMap("Result")
-        private java.util.List < Result> result;
+        @com.aliyun.core.annotation.NameInMap("Result")
+        private java.util.List<Result> result;
 
-        @NameInMap("TotalSize")
+        @com.aliyun.core.annotation.NameInMap("TotalSize")
         private Integer totalSize;
 
         private Data(Builder builder) {
@@ -518,7 +637,7 @@ public class GetServiceMethodPageResponseBody extends TeaModel {
         /**
          * @return result
          */
-        public java.util.List < Result> getResult() {
+        public java.util.List<Result> getResult() {
             return this.result;
         }
 
@@ -532,11 +651,24 @@ public class GetServiceMethodPageResponseBody extends TeaModel {
         public static final class Builder {
             private Integer pageNumber; 
             private Integer pageSize; 
-            private java.util.List < Result> result; 
+            private java.util.List<Result> result; 
             private Integer totalSize; 
 
+            private Builder() {
+            } 
+
+            private Builder(Data model) {
+                this.pageNumber = model.pageNumber;
+                this.pageSize = model.pageSize;
+                this.result = model.result;
+                this.totalSize = model.totalSize;
+            } 
+
             /**
-             * The page number of the returned page.
+             * <p>The page number of the returned page.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder pageNumber(Integer pageNumber) {
                 this.pageNumber = pageNumber;
@@ -544,7 +676,10 @@ public class GetServiceMethodPageResponseBody extends TeaModel {
             }
 
             /**
-             * The number of entries returned per page.
+             * <p>The number of entries returned per page.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>10</p>
              */
             public Builder pageSize(Integer pageSize) {
                 this.pageSize = pageSize;
@@ -552,15 +687,18 @@ public class GetServiceMethodPageResponseBody extends TeaModel {
             }
 
             /**
-             * The data about the method.
+             * <p>The data about the method.</p>
              */
-            public Builder result(java.util.List < Result> result) {
+            public Builder result(java.util.List<Result> result) {
                 this.result = result;
                 return this;
             }
 
             /**
-             * The total number of entries.
+             * <p>The total number of entries.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>6</p>
              */
             public Builder totalSize(Integer totalSize) {
                 this.totalSize = totalSize;

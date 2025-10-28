@@ -1,32 +1,37 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.edas20170801.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link UpdateApplicationBaseInfoRequest} extends {@link RequestModel}
  *
  * <p>UpdateApplicationBaseInfoRequest</p>
  */
 public class UpdateApplicationBaseInfoRequest extends Request {
-    @Query
-    @NameInMap("AppId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("AppId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String appId;
 
-    @Query
-    @NameInMap("AppName")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("AppName")
     private String appName;
 
-    @Query
-    @NameInMap("Desc")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Desc")
     private String desc;
 
-    @Query
-    @NameInMap("Owner")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Owner")
     private String owner;
 
     private UpdateApplicationBaseInfoRequest(Builder builder) {
@@ -45,7 +50,7 @@ public class UpdateApplicationBaseInfoRequest extends Request {
         return builder().build();
     }
 
-    @Override
+@Override
     public Builder toBuilder() {
         return new Builder(this);
     }
@@ -97,7 +102,11 @@ public class UpdateApplicationBaseInfoRequest extends Request {
         } 
 
         /**
-         * The ID of the application.
+         * <p>The ID of the application.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>c627c157-560d-43ff-<strong><strong>-</strong></strong>********</p>
          */
         public Builder appId(String appId) {
             this.putQueryParameter("AppId", appId);
@@ -106,7 +115,10 @@ public class UpdateApplicationBaseInfoRequest extends Request {
         }
 
         /**
-         * The name of the application. The name must start with a letter, and can contain letters, digits, underscores (\_), and hyphens (-). The name can be up to 36 characters in length.
+         * <p>The name of the application. The name must start with a letter, and can contain letters, digits, underscores (_), and hyphens (-). The name can be up to 36 characters in length.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>hello-edas</p>
          */
         public Builder appName(String appName) {
             this.putQueryParameter("AppName", appName);
@@ -115,7 +127,10 @@ public class UpdateApplicationBaseInfoRequest extends Request {
         }
 
         /**
-         * The description of the application. The description can be up to 256 characters in length.
+         * <p>The description of the application. The description can be up to 256 characters in length.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Test application</p>
          */
         public Builder desc(String desc) {
             this.putQueryParameter("Desc", desc);
@@ -124,7 +139,10 @@ public class UpdateApplicationBaseInfoRequest extends Request {
         }
 
         /**
-         * The owner of the application. The value can be up to 127 characters in length.
+         * <p>The owner of the application. The value can be up to 127 characters in length.</p>
+         * 
+         * <strong>example:</strong>
+         * <p><a href="mailto:test@aliyun_xxx.com">test@aliyun_xxx.com</a></p>
          */
         public Builder owner(String owner) {
             this.putQueryParameter("Owner", owner);

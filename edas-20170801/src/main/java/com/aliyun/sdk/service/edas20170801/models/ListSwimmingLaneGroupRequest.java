@@ -1,24 +1,29 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.edas20170801.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ListSwimmingLaneGroupRequest} extends {@link RequestModel}
  *
  * <p>ListSwimmingLaneGroupRequest</p>
  */
 public class ListSwimmingLaneGroupRequest extends Request {
-    @Query
-    @NameInMap("GroupId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("GroupId")
     private Long groupId;
 
-    @Query
-    @NameInMap("LogicalRegionId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("LogicalRegionId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String logicalRegionId;
 
     private ListSwimmingLaneGroupRequest(Builder builder) {
@@ -35,7 +40,7 @@ public class ListSwimmingLaneGroupRequest extends Request {
         return builder().build();
     }
 
-    @Override
+@Override
     public Builder toBuilder() {
         return new Builder(this);
     }
@@ -69,7 +74,10 @@ public class ListSwimmingLaneGroupRequest extends Request {
         } 
 
         /**
-         * The ID of the lane group.
+         * <p>The ID of the lane group.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>0</p>
          */
         public Builder groupId(Long groupId) {
             this.putQueryParameter("GroupId", groupId);
@@ -78,11 +86,12 @@ public class ListSwimmingLaneGroupRequest extends Request {
         }
 
         /**
-         * The ID of the namespace.
-         * <p>
+         * <p>The ID of the namespace.</p>
+         * <p>The ID of a custom namespace is in the region ID:namespace identifier format. Example: cn-beijing:test.<br>The ID of the default namespace is in the region ID format. Example: cn-beijing.</p>
+         * <p>This parameter is required.</p>
          * 
-         * The ID of a custom namespace is in the region ID:namespace identifier format. Example: cn-beijing:test.\
-         * The ID of the default namespace is in the region ID format. Example: cn-beijing.
+         * <strong>example:</strong>
+         * <p>cn-shenzhen:publish</p>
          */
         public Builder logicalRegionId(String logicalRegionId) {
             this.putQueryParameter("LogicalRegionId", logicalRegionId);

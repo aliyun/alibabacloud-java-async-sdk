@@ -1,27 +1,32 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.edas20170801.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link GetContainerConfigurationResponseBody} extends {@link TeaModel}
  *
  * <p>GetContainerConfigurationResponseBody</p>
  */
 public class GetContainerConfigurationResponseBody extends TeaModel {
-    @NameInMap("Code")
+    @com.aliyun.core.annotation.NameInMap("Code")
     private Integer code;
 
-    @NameInMap("ContainerConfiguration")
+    @com.aliyun.core.annotation.NameInMap("ContainerConfiguration")
     private ContainerConfiguration containerConfiguration;
 
-    @NameInMap("Message")
+    @com.aliyun.core.annotation.NameInMap("Message")
     private String message;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
     private GetContainerConfigurationResponseBody(Builder builder) {
@@ -37,6 +42,10 @@ public class GetContainerConfigurationResponseBody extends TeaModel {
 
     public static GetContainerConfigurationResponseBody create() {
         return builder().build();
+    }
+
+    public Builder toBuilder() {
+        return new Builder(this);
     }
 
     /**
@@ -73,8 +82,21 @@ public class GetContainerConfigurationResponseBody extends TeaModel {
         private String message; 
         private String requestId; 
 
+        private Builder() {
+        } 
+
+        private Builder(GetContainerConfigurationResponseBody model) {
+            this.code = model.code;
+            this.containerConfiguration = model.containerConfiguration;
+            this.message = model.message;
+            this.requestId = model.requestId;
+        } 
+
         /**
-         * The HTTP status code that is returned.
+         * <p>The HTTP status code that is returned.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>200</p>
          */
         public Builder code(Integer code) {
             this.code = code;
@@ -82,7 +104,7 @@ public class GetContainerConfigurationResponseBody extends TeaModel {
         }
 
         /**
-         * The Tomcat configuration.
+         * <p>The Tomcat configuration.</p>
          */
         public Builder containerConfiguration(ContainerConfiguration containerConfiguration) {
             this.containerConfiguration = containerConfiguration;
@@ -90,7 +112,10 @@ public class GetContainerConfigurationResponseBody extends TeaModel {
         }
 
         /**
-         * The message returned for the request.
+         * <p>The message returned for the request.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>success</p>
          */
         public Builder message(String message) {
             this.message = message;
@@ -98,7 +123,10 @@ public class GetContainerConfigurationResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the request.
+         * <p>The ID of the request.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>34F8-FDG9-*****************</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -111,20 +139,26 @@ public class GetContainerConfigurationResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link GetContainerConfigurationResponseBody} extends {@link TeaModel}
+     *
+     * <p>GetContainerConfigurationResponseBody</p>
+     */
     public static class ContainerConfiguration extends TeaModel {
-        @NameInMap("ContextPath")
+        @com.aliyun.core.annotation.NameInMap("ContextPath")
         private String contextPath;
 
-        @NameInMap("HttpPort")
+        @com.aliyun.core.annotation.NameInMap("HttpPort")
         private Integer httpPort;
 
-        @NameInMap("MaxThreads")
+        @com.aliyun.core.annotation.NameInMap("MaxThreads")
         private Integer maxThreads;
 
-        @NameInMap("URIEncoding")
+        @com.aliyun.core.annotation.NameInMap("URIEncoding")
         private String URIEncoding;
 
-        @NameInMap("UseBodyEncoding")
+        @com.aliyun.core.annotation.NameInMap("UseBodyEncoding")
         private Boolean useBodyEncoding;
 
         private ContainerConfiguration(Builder builder) {
@@ -185,8 +219,22 @@ public class GetContainerConfigurationResponseBody extends TeaModel {
             private String URIEncoding; 
             private Boolean useBodyEncoding; 
 
+            private Builder() {
+            } 
+
+            private Builder(ContainerConfiguration model) {
+                this.contextPath = model.contextPath;
+                this.httpPort = model.httpPort;
+                this.maxThreads = model.maxThreads;
+                this.URIEncoding = model.URIEncoding;
+                this.useBodyEncoding = model.useBodyEncoding;
+            } 
+
             /**
-             * The context path of the Tomcat container.
+             * <p>The context path of the Tomcat container.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>/</p>
              */
             public Builder contextPath(String contextPath) {
                 this.contextPath = contextPath;
@@ -194,7 +242,10 @@ public class GetContainerConfigurationResponseBody extends TeaModel {
             }
 
             /**
-             * The application port number for the Tomcat container. The value specified in the application configuration is returned.
+             * <p>The application port number for the Tomcat container. The value specified in the application configuration is returned.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>8080</p>
              */
             public Builder httpPort(Integer httpPort) {
                 this.httpPort = httpPort;
@@ -202,11 +253,14 @@ public class GetContainerConfigurationResponseBody extends TeaModel {
             }
 
             /**
-             * The maximum number of threads in the Tomcat container.
-             * <p>
+             * <p>The maximum number of threads in the Tomcat container.</p>
+             * <ul>
+             * <li>If no instance group is specified, the configuration of the application is returned.</li>
+             * <li>If no application is specified, the default configuration is returned.</li>
+             * </ul>
              * 
-             * *   If no instance group is specified, the configuration of the application is returned.
-             * *   If no application is specified, the default configuration is returned.
+             * <strong>example:</strong>
+             * <p>400</p>
              */
             public Builder maxThreads(Integer maxThreads) {
                 this.maxThreads = maxThreads;
@@ -214,11 +268,14 @@ public class GetContainerConfigurationResponseBody extends TeaModel {
             }
 
             /**
-             * The Uniform Resource Identifier (URI) encoding scheme. Valid values: ISO-8859-1, GBK, GB2312, and UTF-8.
-             * <p>
+             * <p>The Uniform Resource Identifier (URI) encoding scheme. Valid values: ISO-8859-1, GBK, GB2312, and UTF-8.</p>
+             * <ul>
+             * <li>If no instance group is specified, the configuration of the application is returned.</li>
+             * <li>If no application is specified, the default configuration is returned.</li>
+             * </ul>
              * 
-             * *   If no instance group is specified, the configuration of the application is returned.
-             * *   If no application is specified, the default configuration is returned.
+             * <strong>example:</strong>
+             * <p>ISO-8859-1</p>
              */
             public Builder URIEncoding(String URIEncoding) {
                 this.URIEncoding = URIEncoding;
@@ -226,11 +283,14 @@ public class GetContainerConfigurationResponseBody extends TeaModel {
             }
 
             /**
-             * Indicates whether useBodyEncodingForURI is enabled in the Tomcat container.
-             * <p>
+             * <p>Indicates whether useBodyEncodingForURI is enabled in the Tomcat container.</p>
+             * <ul>
+             * <li>If no instance group is specified, the configuration of the application is returned.</li>
+             * <li>If no application is specified, the default configuration is returned.</li>
+             * </ul>
              * 
-             * *   If no instance group is specified, the configuration of the application is returned.
-             * *   If no application is specified, the default configuration is returned.
+             * <strong>example:</strong>
+             * <p>true</p>
              */
             public Builder useBodyEncoding(Boolean useBodyEncoding) {
                 this.useBodyEncoding = useBodyEncoding;

@@ -1,35 +1,40 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.edas20170801.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link InsertSwimmingLaneGroupRequest} extends {@link RequestModel}
  *
  * <p>InsertSwimmingLaneGroupRequest</p>
  */
 public class InsertSwimmingLaneGroupRequest extends Request {
-    @Query
-    @NameInMap("AppIds")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("AppIds")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String appIds;
 
-    @Query
-    @NameInMap("EntryApp")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("EntryApp")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String entryApp;
 
-    @Query
-    @NameInMap("LogicalRegionId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("LogicalRegionId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String logicalRegionId;
 
-    @Query
-    @NameInMap("Name")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Name")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String name;
 
     private InsertSwimmingLaneGroupRequest(Builder builder) {
@@ -48,7 +53,7 @@ public class InsertSwimmingLaneGroupRequest extends Request {
         return builder().build();
     }
 
-    @Override
+@Override
     public Builder toBuilder() {
         return new Builder(this);
     }
@@ -100,7 +105,11 @@ public class InsertSwimmingLaneGroupRequest extends Request {
         } 
 
         /**
-         * IDs of all applications that are related to the lane group. Separate multiple applications with commas (,).
+         * <p>IDs of all applications that are related to the lane group. Separate multiple applications with commas (,).</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>bdb251cc-02a6-48dd-891b-2ab21b25****,ee33ed0c-fddc-47b5-9f63-e1ccc4be****</p>
          */
         public Builder appIds(String appIds) {
             this.putQueryParameter("AppIds", appIds);
@@ -109,7 +118,11 @@ public class InsertSwimmingLaneGroupRequest extends Request {
         }
 
         /**
-         * The ingress application. The application is in the EDAS:{application ID} format.
+         * <p>The ingress application. The application is in the EDAS:{application ID} format.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>EDAS:5cc89013-9232-4b36-b3eb-ff89b3d2****</p>
          */
         public Builder entryApp(String entryApp) {
             this.putQueryParameter("EntryApp", entryApp);
@@ -118,7 +131,11 @@ public class InsertSwimmingLaneGroupRequest extends Request {
         }
 
         /**
-         * The ID of the custom namespace. The ID is in the physical region ID:custom namespace identifier format. Example: cn-hangzhou:test.
+         * <p>The ID of the custom namespace. The ID is in the physical region ID:custom namespace identifier format. Example: cn-hangzhou:test.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-hangzhou:test</p>
          */
         public Builder logicalRegionId(String logicalRegionId) {
             this.putQueryParameter("LogicalRegionId", logicalRegionId);
@@ -127,7 +144,11 @@ public class InsertSwimmingLaneGroupRequest extends Request {
         }
 
         /**
-         * The name of the lane group.
+         * <p>The name of the lane group.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>test</p>
          */
         public Builder name(String name) {
             this.putQueryParameter("Name", name);

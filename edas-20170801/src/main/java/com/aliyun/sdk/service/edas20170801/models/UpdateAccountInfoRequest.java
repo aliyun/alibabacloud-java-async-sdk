@@ -1,27 +1,32 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.edas20170801.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link UpdateAccountInfoRequest} extends {@link RequestModel}
  *
  * <p>UpdateAccountInfoRequest</p>
  */
 public class UpdateAccountInfoRequest extends Request {
-    @Query
-    @NameInMap("Email")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Email")
     private String email;
 
-    @Query
-    @NameInMap("Name")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Name")
     private String name;
 
-    @Query
-    @NameInMap("Telephone")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Telephone")
     private String telephone;
 
     private UpdateAccountInfoRequest(Builder builder) {
@@ -39,7 +44,7 @@ public class UpdateAccountInfoRequest extends Request {
         return builder().build();
     }
 
-    @Override
+@Override
     public Builder toBuilder() {
         return new Builder(this);
     }
@@ -82,7 +87,10 @@ public class UpdateAccountInfoRequest extends Request {
         } 
 
         /**
-         * The email address of the account.
+         * <p>The email address of the account.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1321234****@alibaba-inc.com</p>
          */
         public Builder email(String email) {
             this.putQueryParameter("Email", email);
@@ -91,7 +99,10 @@ public class UpdateAccountInfoRequest extends Request {
         }
 
         /**
-         * The name of the account.
+         * <p>The name of the account.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>edas-test</p>
          */
         public Builder name(String name) {
             this.putQueryParameter("Name", name);
@@ -100,7 +111,10 @@ public class UpdateAccountInfoRequest extends Request {
         }
 
         /**
-         * The contact information of the account.
+         * <p>The contact information of the account.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1321234****</p>
          */
         public Builder telephone(String telephone) {
             this.putQueryParameter("Telephone", telephone);

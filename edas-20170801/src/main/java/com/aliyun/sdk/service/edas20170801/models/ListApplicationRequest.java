@@ -1,47 +1,52 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.edas20170801.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ListApplicationRequest} extends {@link RequestModel}
  *
  * <p>ListApplicationRequest</p>
  */
 public class ListApplicationRequest extends Request {
-    @Query
-    @NameInMap("AppIds")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("AppIds")
     private String appIds;
 
-    @Query
-    @NameInMap("AppName")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("AppName")
     private String appName;
 
-    @Query
-    @NameInMap("ClusterId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ClusterId")
     private String clusterId;
 
-    @Query
-    @NameInMap("CurrentPage")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("CurrentPage")
     private Integer currentPage;
 
-    @Query
-    @NameInMap("LogicalRegionId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("LogicalRegionId")
     private String logicalRegionId;
 
-    @Query
-    @NameInMap("LogicalRegionIdFilter")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("LogicalRegionIdFilter")
     private String logicalRegionIdFilter;
 
-    @Query
-    @NameInMap("PageSize")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("PageSize")
     private Integer pageSize;
 
-    @Query
-    @NameInMap("ResourceGroupId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ResourceGroupId")
     private String resourceGroupId;
 
     private ListApplicationRequest(Builder builder) {
@@ -64,7 +69,7 @@ public class ListApplicationRequest extends Request {
         return builder().build();
     }
 
-    @Override
+@Override
     public Builder toBuilder() {
         return new Builder(this);
     }
@@ -152,7 +157,13 @@ public class ListApplicationRequest extends Request {
         } 
 
         /**
-         * The application IDs.
+         * <p>The application IDs.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>[
+         *       &quot;5657d271-<strong><strong>-4f03-9bb2-431f942886bb&quot;,
+         *       &quot;5657d271-</strong></strong>-4f03-9bb2-431f942bbddd&quot;
+         * ]</p>
          */
         public Builder appIds(String appIds) {
             this.putQueryParameter("AppIds", appIds);
@@ -161,7 +172,10 @@ public class ListApplicationRequest extends Request {
         }
 
         /**
-         * The name of the application. Specify this parameter if you want to filter applications by application name.
+         * <p>The name of the application. Specify this parameter if you want to filter applications by application name.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>testapp</p>
          */
         public Builder appName(String appName) {
             this.putQueryParameter("AppName", appName);
@@ -170,7 +184,10 @@ public class ListApplicationRequest extends Request {
         }
 
         /**
-         * The cluster ID. Specify this parameter if you want to filter applications by cluster.
+         * <p>The cluster ID. Specify this parameter if you want to filter applications by cluster.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>c37aec2a-bcca-4ec1-<strong><strong>-</strong></strong>********</p>
          */
         public Builder clusterId(String clusterId) {
             this.putQueryParameter("ClusterId", clusterId);
@@ -179,7 +196,10 @@ public class ListApplicationRequest extends Request {
         }
 
         /**
-         * CurrentPage.
+         * <p>The page number. Default value: 1.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder currentPage(Integer currentPage) {
             this.putQueryParameter("CurrentPage", currentPage);
@@ -188,7 +208,10 @@ public class ListApplicationRequest extends Request {
         }
 
         /**
-         * The namespace ID. Specify this parameter if you want to filter applications by namespace.
+         * <p>The namespace ID. Specify this parameter if you want to filter applications by namespace.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-beijing:test</p>
          */
         public Builder logicalRegionId(String logicalRegionId) {
             this.putQueryParameter("LogicalRegionId", logicalRegionId);
@@ -197,7 +220,10 @@ public class ListApplicationRequest extends Request {
         }
 
         /**
-         * The ID of the namespace that you use in the exact search to filter applications.
+         * <p>The ID of the namespace that you use in the exact search to filter applications.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-beijing:test</p>
          */
         public Builder logicalRegionIdFilter(String logicalRegionIdFilter) {
             this.putQueryParameter("LogicalRegionIdFilter", logicalRegionIdFilter);
@@ -206,7 +232,10 @@ public class ListApplicationRequest extends Request {
         }
 
         /**
-         * PageSize.
+         * <p>The number of entries per page.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>20</p>
          */
         public Builder pageSize(Integer pageSize) {
             this.putQueryParameter("PageSize", pageSize);
@@ -215,7 +244,10 @@ public class ListApplicationRequest extends Request {
         }
 
         /**
-         * The ID of the resource group. Specify this parameter if you want to filter applications by resource group.
+         * <p>The ID of the resource group. Specify this parameter if you want to filter applications by resource group.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>rg-aek24j4s4b*****</p>
          */
         public Builder resourceGroupId(String resourceGroupId) {
             this.putQueryParameter("ResourceGroupId", resourceGroupId);

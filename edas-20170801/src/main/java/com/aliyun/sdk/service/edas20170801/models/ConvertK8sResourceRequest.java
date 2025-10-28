@@ -1,35 +1,40 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.edas20170801.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ConvertK8sResourceRequest} extends {@link RequestModel}
  *
  * <p>ConvertK8sResourceRequest</p>
  */
 public class ConvertK8sResourceRequest extends Request {
-    @Query
-    @NameInMap("ClusterId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ClusterId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String clusterId;
 
-    @Query
-    @NameInMap("Namespace")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Namespace")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String namespace;
 
-    @Query
-    @NameInMap("ResourceName")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ResourceName")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String resourceName;
 
-    @Query
-    @NameInMap("ResourceType")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ResourceType")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String resourceType;
 
     private ConvertK8sResourceRequest(Builder builder) {
@@ -48,7 +53,7 @@ public class ConvertK8sResourceRequest extends Request {
         return builder().build();
     }
 
-    @Override
+@Override
     public Builder toBuilder() {
         return new Builder(this);
     }
@@ -100,7 +105,11 @@ public class ConvertK8sResourceRequest extends Request {
         } 
 
         /**
-         * The ID of the cluster. You can call the ListCluster operation to query the cluster ID. For more information, see [ListCluster](~~154995~~).
+         * <p>The ID of the cluster. You can call the ListCluster operation to query the cluster ID. For more information, see <a href="https://help.aliyun.com/document_detail/154995.html">ListCluster</a>.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>b07c8192-****-adf4f7447720</p>
          */
         public Builder clusterId(String clusterId) {
             this.putQueryParameter("ClusterId", clusterId);
@@ -109,7 +118,11 @@ public class ConvertK8sResourceRequest extends Request {
         }
 
         /**
-         * The namespace.
+         * <p>The namespace.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>default</p>
          */
         public Builder namespace(String namespace) {
             this.putQueryParameter("Namespace", namespace);
@@ -118,7 +131,11 @@ public class ConvertK8sResourceRequest extends Request {
         }
 
         /**
-         * The name of the resource.
+         * <p>The name of the resource.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>deployment-to-convert</p>
          */
         public Builder resourceName(String resourceName) {
             this.putQueryParameter("ResourceName", resourceName);
@@ -127,7 +144,11 @@ public class ConvertK8sResourceRequest extends Request {
         }
 
         /**
-         * The type of the resource that is used. Set the value to deployment.
+         * <p>The type of the resource that is used. Set the value to deployment.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>deployment</p>
          */
         public Builder resourceType(String resourceType) {
             this.putQueryParameter("ResourceType", resourceType);

@@ -1,20 +1,25 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.edas20170801.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link InsertServiceGroupRequest} extends {@link RequestModel}
  *
  * <p>InsertServiceGroupRequest</p>
  */
 public class InsertServiceGroupRequest extends Request {
-    @Query
-    @NameInMap("GroupName")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("GroupName")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String groupName;
 
     private InsertServiceGroupRequest(Builder builder) {
@@ -30,7 +35,7 @@ public class InsertServiceGroupRequest extends Request {
         return builder().build();
     }
 
-    @Override
+@Override
     public Builder toBuilder() {
         return new Builder(this);
     }
@@ -55,7 +60,11 @@ public class InsertServiceGroupRequest extends Request {
         } 
 
         /**
-         * The name of the service group that you want to create.
+         * <p>The name of the service group that you want to create.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>edas-test-group</p>
          */
         public Builder groupName(String groupName) {
             this.putQueryParameter("GroupName", groupName);

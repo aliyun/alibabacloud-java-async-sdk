@@ -1,44 +1,49 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.edas20170801.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link BindSlbRequest} extends {@link RequestModel}
  *
  * <p>BindSlbRequest</p>
  */
 public class BindSlbRequest extends Request {
-    @Query
-    @NameInMap("AppId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("AppId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String appId;
 
-    @Query
-    @NameInMap("ListenerPort")
-    @Validation(maximum = 65535)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ListenerPort")
+    @com.aliyun.core.annotation.Validation(maximum = 65535)
     private Integer listenerPort;
 
-    @Query
-    @NameInMap("SlbId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("SlbId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String slbId;
 
-    @Query
-    @NameInMap("SlbIp")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("SlbIp")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String slbIp;
 
-    @Query
-    @NameInMap("Type")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Type")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String type;
 
-    @Query
-    @NameInMap("VServerGroupId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("VServerGroupId")
     private String vServerGroupId;
 
     private BindSlbRequest(Builder builder) {
@@ -59,7 +64,7 @@ public class BindSlbRequest extends Request {
         return builder().build();
     }
 
-    @Override
+@Override
     public Builder toBuilder() {
         return new Builder(this);
     }
@@ -129,7 +134,11 @@ public class BindSlbRequest extends Request {
         } 
 
         /**
-         * The ID of the EDAS application.
+         * <p>The ID of the EDAS application.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>3616cdca-*********</p>
          */
         public Builder appId(String appId) {
             this.putQueryParameter("AppId", appId);
@@ -138,7 +147,10 @@ public class BindSlbRequest extends Request {
         }
 
         /**
-         * The listener port for the SLB instance.
+         * <p>The listener port for the SLB instance.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>80</p>
          */
         public Builder listenerPort(Integer listenerPort) {
             this.putQueryParameter("ListenerPort", listenerPort);
@@ -147,7 +159,11 @@ public class BindSlbRequest extends Request {
         }
 
         /**
-         * The ID of the SLB instance.
+         * <p>The ID of the SLB instance.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>lb-wz96ph63r************</p>
          */
         public Builder slbId(String slbId) {
             this.putQueryParameter("SlbId", slbId);
@@ -156,7 +172,11 @@ public class BindSlbRequest extends Request {
         }
 
         /**
-         * The IP address of the SLB instance.
+         * <p>The IP address of the SLB instance.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>192.16*.<em>.</em></p>
          */
         public Builder slbIp(String slbIp) {
             this.putQueryParameter("SlbIp", slbIp);
@@ -165,11 +185,15 @@ public class BindSlbRequest extends Request {
         }
 
         /**
-         * The type of the SLB instance. Valid values:
-         * <p>
+         * <p>The type of the SLB instance. Valid values:</p>
+         * <ul>
+         * <li>internet: Internet-facing SLB instance</li>
+         * <li>intranet: internal-facing SLB instance</li>
+         * </ul>
+         * <p>This parameter is required.</p>
          * 
-         * *   internet: Internet-facing SLB instance
-         * *   intranet: internal-facing SLB instance
+         * <strong>example:</strong>
+         * <p>intranet</p>
          */
         public Builder type(String type) {
             this.putQueryParameter("Type", type);
@@ -178,7 +202,10 @@ public class BindSlbRequest extends Request {
         }
 
         /**
-         * The ID of the vServer group for the internal-facing SLB instance.
+         * <p>The ID of the vServer group for the internal-facing SLB instance.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>rsp-cige6******</p>
          */
         public Builder vServerGroupId(String vServerGroupId) {
             this.putQueryParameter("VServerGroupId", vServerGroupId);

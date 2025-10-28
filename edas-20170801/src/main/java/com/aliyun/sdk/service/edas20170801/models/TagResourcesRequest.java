@@ -1,35 +1,40 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.edas20170801.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link TagResourcesRequest} extends {@link RequestModel}
  *
  * <p>TagResourcesRequest</p>
  */
 public class TagResourcesRequest extends Request {
-    @Query
-    @NameInMap("ResourceIds")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ResourceIds")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String resourceIds;
 
-    @Query
-    @NameInMap("ResourceRegionId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ResourceRegionId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String resourceRegionId;
 
-    @Query
-    @NameInMap("ResourceType")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ResourceType")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String resourceType;
 
-    @Query
-    @NameInMap("Tags")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Tags")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String tags;
 
     private TagResourcesRequest(Builder builder) {
@@ -48,7 +53,7 @@ public class TagResourcesRequest extends Request {
         return builder().build();
     }
 
-    @Override
+@Override
     public Builder toBuilder() {
         return new Builder(this);
     }
@@ -100,7 +105,11 @@ public class TagResourcesRequest extends Request {
         } 
 
         /**
-         * The IDs of the resources. You can specify up to 20 IDs in the format of a JSON array.
+         * <p>The IDs of the resources. You can specify up to 20 IDs in the format of a JSON array.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>[&quot;000e5836-xxxx-xxxx-xxxx-0d6ab2ac4877&quot;]</p>
          */
         public Builder resourceIds(String resourceIds) {
             this.putQueryParameter("ResourceIds", resourceIds);
@@ -109,7 +118,11 @@ public class TagResourcesRequest extends Request {
         }
 
         /**
-         * The region in which the resource resides.
+         * <p>The region in which the resource resides.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-hangzhou</p>
          */
         public Builder resourceRegionId(String resourceRegionId) {
             this.putQueryParameter("ResourceRegionId", resourceRegionId);
@@ -118,11 +131,15 @@ public class TagResourcesRequest extends Request {
         }
 
         /**
-         * The type of the resource. Valid values:
-         * <p>
+         * <p>The type of the resource. Valid values:</p>
+         * <ul>
+         * <li><strong>application</strong>: Enterprise Distributed Application Service (EDAS) application</li>
+         * <li><strong>cluster</strong>: EDAS cluster</li>
+         * </ul>
+         * <p>This parameter is required.</p>
          * 
-         * *   **application**: Enterprise Distributed Application Service (EDAS) application
-         * *   **cluster**: EDAS cluster
+         * <strong>example:</strong>
+         * <p>application</p>
          */
         public Builder resourceType(String resourceType) {
             this.putQueryParameter("ResourceType", resourceType);
@@ -131,13 +148,17 @@ public class TagResourcesRequest extends Request {
         }
 
         /**
-         * The key-value pairs. When you set this parameter, take note of the following limits:
-         * <p>
+         * <p>The key-value pairs. When you set this parameter, take note of the following limits:</p>
+         * <ul>
+         * <li>You can add up to 20 tags to a resource.</li>
+         * <li>The tag key cannot start with <strong>aliyun</strong> or <strong>acs:</strong>. It cannot contain <strong>http://</strong> or <strong>https://</strong>.</li>
+         * <li>The tag key or tag value can be up to 128 characters in length, and can contain letters, digits, hyphens (-), commas (,), asterisks (*), forward slashes (/), question marks (?), and colons (:).</li>
+         * <li>Set this parameter to a JSON array.</li>
+         * </ul>
+         * <p>This parameter is required.</p>
          * 
-         * *   You can add up to 20 tags to a resource.
-         * *   The tag key cannot start with **aliyun** or **acs:**. It cannot contain **http://** or **https://**.
-         * *   The tag key or tag value can be up to 128 characters in length, and can contain letters, digits, hyphens (-), commas (,), asterisks (\*), forward slashes (/), question marks (?), and colons (:).
-         * *   Set this parameter to a JSON array.
+         * <strong>example:</strong>
+         * <p>[{&quot;key&quot;:&quot;key1&quot;,&quot;value&quot;:&quot;v1&quot;},{&quot;key&quot;:&quot;key2&quot;,&quot;value&quot;:&quot;v2&quot;}]</p>
          */
         public Builder tags(String tags) {
             this.putQueryParameter("Tags", tags);

@@ -1,27 +1,32 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.edas20170801.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link InsertDeployGroupResponseBody} extends {@link TeaModel}
  *
  * <p>InsertDeployGroupResponseBody</p>
  */
 public class InsertDeployGroupResponseBody extends TeaModel {
-    @NameInMap("Code")
+    @com.aliyun.core.annotation.NameInMap("Code")
     private Integer code;
 
-    @NameInMap("DeployGroupEntity")
+    @com.aliyun.core.annotation.NameInMap("DeployGroupEntity")
     private DeployGroupEntity deployGroupEntity;
 
-    @NameInMap("Message")
+    @com.aliyun.core.annotation.NameInMap("Message")
     private String message;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
     private InsertDeployGroupResponseBody(Builder builder) {
@@ -37,6 +42,10 @@ public class InsertDeployGroupResponseBody extends TeaModel {
 
     public static InsertDeployGroupResponseBody create() {
         return builder().build();
+    }
+
+    public Builder toBuilder() {
+        return new Builder(this);
     }
 
     /**
@@ -73,8 +82,21 @@ public class InsertDeployGroupResponseBody extends TeaModel {
         private String message; 
         private String requestId; 
 
+        private Builder() {
+        } 
+
+        private Builder(InsertDeployGroupResponseBody model) {
+            this.code = model.code;
+            this.deployGroupEntity = model.deployGroupEntity;
+            this.message = model.message;
+            this.requestId = model.requestId;
+        } 
+
         /**
-         * The HTTP status code that is returned.
+         * <p>The HTTP status code that is returned.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>200</p>
          */
         public Builder code(Integer code) {
             this.code = code;
@@ -82,7 +104,7 @@ public class InsertDeployGroupResponseBody extends TeaModel {
         }
 
         /**
-         * The information about the instance group.
+         * <p>The information about the instance group.</p>
          */
         public Builder deployGroupEntity(DeployGroupEntity deployGroupEntity) {
             this.deployGroupEntity = deployGroupEntity;
@@ -90,7 +112,10 @@ public class InsertDeployGroupResponseBody extends TeaModel {
         }
 
         /**
-         * The additional information that is returned.
+         * <p>The additional information that is returned.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>success</p>
          */
         public Builder message(String message) {
             this.message = message;
@@ -98,7 +123,10 @@ public class InsertDeployGroupResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the request.
+         * <p>The ID of the request.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>3RD9-D3FRE****************</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -111,32 +139,38 @@ public class InsertDeployGroupResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link InsertDeployGroupResponseBody} extends {@link TeaModel}
+     *
+     * <p>InsertDeployGroupResponseBody</p>
+     */
     public static class DeployGroupEntity extends TeaModel {
-        @NameInMap("AppId")
+        @com.aliyun.core.annotation.NameInMap("AppId")
         private String appId;
 
-        @NameInMap("AppVersionId")
+        @com.aliyun.core.annotation.NameInMap("AppVersionId")
         private String appVersionId;
 
-        @NameInMap("ClusterId")
+        @com.aliyun.core.annotation.NameInMap("ClusterId")
         private String clusterId;
 
-        @NameInMap("CreateTime")
+        @com.aliyun.core.annotation.NameInMap("CreateTime")
         private Long createTime;
 
-        @NameInMap("GroupName")
+        @com.aliyun.core.annotation.NameInMap("GroupName")
         private String groupName;
 
-        @NameInMap("GroupType")
+        @com.aliyun.core.annotation.NameInMap("GroupType")
         private Integer groupType;
 
-        @NameInMap("Id")
+        @com.aliyun.core.annotation.NameInMap("Id")
         private String id;
 
-        @NameInMap("PackageVersionId")
+        @com.aliyun.core.annotation.NameInMap("PackageVersionId")
         private String packageVersionId;
 
-        @NameInMap("UpdateTime")
+        @com.aliyun.core.annotation.NameInMap("UpdateTime")
         private Long updateTime;
 
         private DeployGroupEntity(Builder builder) {
@@ -233,8 +267,26 @@ public class InsertDeployGroupResponseBody extends TeaModel {
             private String packageVersionId; 
             private Long updateTime; 
 
+            private Builder() {
+            } 
+
+            private Builder(DeployGroupEntity model) {
+                this.appId = model.appId;
+                this.appVersionId = model.appVersionId;
+                this.clusterId = model.clusterId;
+                this.createTime = model.createTime;
+                this.groupName = model.groupName;
+                this.groupType = model.groupType;
+                this.id = model.id;
+                this.packageVersionId = model.packageVersionId;
+                this.updateTime = model.updateTime;
+            } 
+
             /**
-             * The ID of the application.
+             * <p>The ID of the application.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>3616cdca-4f92-4413-***********</p>
              */
             public Builder appId(String appId) {
                 this.appId = appId;
@@ -242,11 +294,14 @@ public class InsertDeployGroupResponseBody extends TeaModel {
             }
 
             /**
-             * The version of the deployment package for the application.
-             * <p>
+             * <p>The version of the deployment package for the application.</p>
+             * <ul>
+             * <li>If the application is deployed, a string of random numbers is returned.</li>
+             * <li>If the application is not deployed, the return value is empty.</li>
+             * </ul>
              * 
-             * *   If the application is deployed, a string of random numbers is returned.
-             * *   If the application is not deployed, the return value is empty.
+             * <strong>example:</strong>
+             * <p><strong><strong>f4c50-16ee-a02b-667</strong></strong>*</p>
              */
             public Builder appVersionId(String appVersionId) {
                 this.appVersionId = appVersionId;
@@ -254,7 +309,10 @@ public class InsertDeployGroupResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the cluster.
+             * <p>The ID of the cluster.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>0d247b93-8d62-4e34***********</p>
              */
             public Builder clusterId(String clusterId) {
                 this.clusterId = clusterId;
@@ -262,7 +320,10 @@ public class InsertDeployGroupResponseBody extends TeaModel {
             }
 
             /**
-             * The time when the instance group was created. This value is a UNIX timestamp representing the number of milliseconds that have elapsed since January 1, 1970, 00:00:00 UTC.
+             * <p>The time when the instance group was created. This value is a UNIX timestamp representing the number of milliseconds that have elapsed since January 1, 1970, 00:00:00 UTC.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1573627695779</p>
              */
             public Builder createTime(Long createTime) {
                 this.createTime = createTime;
@@ -270,7 +331,10 @@ public class InsertDeployGroupResponseBody extends TeaModel {
             }
 
             /**
-             * The name of the instance group.
+             * <p>The name of the instance group.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>test</p>
              */
             public Builder groupName(String groupName) {
                 this.groupName = groupName;
@@ -278,12 +342,15 @@ public class InsertDeployGroupResponseBody extends TeaModel {
             }
 
             /**
-             * The type of the instance group. Valid values:
-             * <p>
+             * <p>The type of the instance group. Valid values:</p>
+             * <ul>
+             * <li>0: the default group.</li>
+             * <li>1: a group for which canary traffic management is not enabled.</li>
+             * <li>2: a group for which canary traffic management is enabled.</li>
+             * </ul>
              * 
-             * *   0: the default group.
-             * *   1: a group for which canary traffic management is not enabled.
-             * *   2: a group for which canary traffic management is enabled.
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder groupType(Integer groupType) {
                 this.groupType = groupType;
@@ -291,7 +358,10 @@ public class InsertDeployGroupResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the instance group.
+             * <p>The ID of the instance group.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>577f4c50-16ee-43d8-a02b-667*********</p>
              */
             public Builder id(String id) {
                 this.id = id;
@@ -299,11 +369,14 @@ public class InsertDeployGroupResponseBody extends TeaModel {
             }
 
             /**
-             * The version of the deployment package that was used to deploy an application in the instance group.
-             * <p>
+             * <p>The version of the deployment package that was used to deploy an application in the instance group.</p>
+             * <ul>
+             * <li>If an application is deployed in the instance group, a string of random numbers is returned.</li>
+             * <li>If no application is deployed in the instance group, the return value is empty.</li>
+             * </ul>
              * 
-             * *   If an application is deployed in the instance group, a string of random numbers is returned.
-             * *   If no application is deployed in the instance group, the return value is empty.
+             * <strong>example:</strong>
+             * <p><strong><strong>7b93-8d62-4e34</strong></strong>*******</p>
              */
             public Builder packageVersionId(String packageVersionId) {
                 this.packageVersionId = packageVersionId;
@@ -311,7 +384,10 @@ public class InsertDeployGroupResponseBody extends TeaModel {
             }
 
             /**
-             * The time when the instance group was last modified. This value is a UNIX timestamp representing the number of milliseconds that have elapsed since January 1, 1970, 00:00:00 UTC.
+             * <p>The time when the instance group was last modified. This value is a UNIX timestamp representing the number of milliseconds that have elapsed since January 1, 1970, 00:00:00 UTC.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1573627695779</p>
              */
             public Builder updateTime(Long updateTime) {
                 this.updateTime = updateTime;

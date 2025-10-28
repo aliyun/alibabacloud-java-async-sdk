@@ -1,27 +1,32 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.edas20170801.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ListPublishedServicesResponseBody} extends {@link TeaModel}
  *
  * <p>ListPublishedServicesResponseBody</p>
  */
 public class ListPublishedServicesResponseBody extends TeaModel {
-    @NameInMap("Code")
+    @com.aliyun.core.annotation.NameInMap("Code")
     private Integer code;
 
-    @NameInMap("Message")
+    @com.aliyun.core.annotation.NameInMap("Message")
     private String message;
 
-    @NameInMap("PublishedServicesList")
+    @com.aliyun.core.annotation.NameInMap("PublishedServicesList")
     private PublishedServicesList publishedServicesList;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
     private ListPublishedServicesResponseBody(Builder builder) {
@@ -37,6 +42,10 @@ public class ListPublishedServicesResponseBody extends TeaModel {
 
     public static ListPublishedServicesResponseBody create() {
         return builder().build();
+    }
+
+    public Builder toBuilder() {
+        return new Builder(this);
     }
 
     /**
@@ -73,8 +82,21 @@ public class ListPublishedServicesResponseBody extends TeaModel {
         private PublishedServicesList publishedServicesList; 
         private String requestId; 
 
+        private Builder() {
+        } 
+
+        private Builder(ListPublishedServicesResponseBody model) {
+            this.code = model.code;
+            this.message = model.message;
+            this.publishedServicesList = model.publishedServicesList;
+            this.requestId = model.requestId;
+        } 
+
         /**
-         * The HTTP status code that is returned.
+         * <p>The HTTP status code that is returned.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>200</p>
          */
         public Builder code(Integer code) {
             this.code = code;
@@ -82,7 +104,10 @@ public class ListPublishedServicesResponseBody extends TeaModel {
         }
 
         /**
-         * The message that is returned.
+         * <p>The message that is returned.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>success</p>
          */
         public Builder message(String message) {
             this.message = message;
@@ -90,7 +115,7 @@ public class ListPublishedServicesResponseBody extends TeaModel {
         }
 
         /**
-         * The published services.
+         * <p>The published services.</p>
          */
         public Builder publishedServicesList(PublishedServicesList publishedServicesList) {
             this.publishedServicesList = publishedServicesList;
@@ -98,7 +123,10 @@ public class ListPublishedServicesResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the request.
+         * <p>The ID of the request.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1D6FC-4307-4583-BA6F-215F3857E****</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -111,9 +139,15 @@ public class ListPublishedServicesResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link ListPublishedServicesResponseBody} extends {@link TeaModel}
+     *
+     * <p>ListPublishedServicesResponseBody</p>
+     */
     public static class Groups extends TeaModel {
-        @NameInMap("group")
-        private java.util.List < String > group;
+        @com.aliyun.core.annotation.NameInMap("group")
+        private java.util.List<String> group;
 
         private Groups(Builder builder) {
             this.group = builder.group;
@@ -130,17 +164,24 @@ public class ListPublishedServicesResponseBody extends TeaModel {
         /**
          * @return group
          */
-        public java.util.List < String > getGroup() {
+        public java.util.List<String> getGroup() {
             return this.group;
         }
 
         public static final class Builder {
-            private java.util.List < String > group; 
+            private java.util.List<String> group; 
+
+            private Builder() {
+            } 
+
+            private Builder(Groups model) {
+                this.group = model.group;
+            } 
 
             /**
              * group.
              */
-            public Builder group(java.util.List < String > group) {
+            public Builder group(java.util.List<String> group) {
                 this.group = group;
                 return this;
             }
@@ -152,9 +193,15 @@ public class ListPublishedServicesResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link ListPublishedServicesResponseBody} extends {@link TeaModel}
+     *
+     * <p>ListPublishedServicesResponseBody</p>
+     */
     public static class Ips extends TeaModel {
-        @NameInMap("ip")
-        private java.util.List < String > ip;
+        @com.aliyun.core.annotation.NameInMap("ip")
+        private java.util.List<String> ip;
 
         private Ips(Builder builder) {
             this.ip = builder.ip;
@@ -171,17 +218,24 @@ public class ListPublishedServicesResponseBody extends TeaModel {
         /**
          * @return ip
          */
-        public java.util.List < String > getIp() {
+        public java.util.List<String> getIp() {
             return this.ip;
         }
 
         public static final class Builder {
-            private java.util.List < String > ip; 
+            private java.util.List<String> ip; 
+
+            private Builder() {
+            } 
+
+            private Builder(Ips model) {
+                this.ip = model.ip;
+            } 
 
             /**
              * ip.
              */
-            public Builder ip(java.util.List < String > ip) {
+            public Builder ip(java.util.List<String> ip) {
                 this.ip = ip;
                 return this;
             }
@@ -193,29 +247,35 @@ public class ListPublishedServicesResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link ListPublishedServicesResponseBody} extends {@link TeaModel}
+     *
+     * <p>ListPublishedServicesResponseBody</p>
+     */
     public static class ListPublishedServices extends TeaModel {
-        @NameInMap("AppId")
+        @com.aliyun.core.annotation.NameInMap("AppId")
         private String appId;
 
-        @NameInMap("DockerApplication")
+        @com.aliyun.core.annotation.NameInMap("DockerApplication")
         private Boolean dockerApplication;
 
-        @NameInMap("Group2Ip")
+        @com.aliyun.core.annotation.NameInMap("Group2Ip")
         private String group2Ip;
 
-        @NameInMap("Groups")
+        @com.aliyun.core.annotation.NameInMap("Groups")
         private Groups groups;
 
-        @NameInMap("Ips")
+        @com.aliyun.core.annotation.NameInMap("Ips")
         private Ips ips;
 
-        @NameInMap("Name")
+        @com.aliyun.core.annotation.NameInMap("Name")
         private String name;
 
-        @NameInMap("Type")
+        @com.aliyun.core.annotation.NameInMap("Type")
         private String type;
 
-        @NameInMap("Version")
+        @com.aliyun.core.annotation.NameInMap("Version")
         private String version;
 
         private ListPublishedServices(Builder builder) {
@@ -303,8 +363,25 @@ public class ListPublishedServicesResponseBody extends TeaModel {
             private String type; 
             private String version; 
 
+            private Builder() {
+            } 
+
+            private Builder(ListPublishedServices model) {
+                this.appId = model.appId;
+                this.dockerApplication = model.dockerApplication;
+                this.group2Ip = model.group2Ip;
+                this.groups = model.groups;
+                this.ips = model.ips;
+                this.name = model.name;
+                this.type = model.type;
+                this.version = model.version;
+            } 
+
             /**
-             * The ID of the application.
+             * <p>The ID of the application.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>ECD1D6FC-4307-4583-BA6F-215F3857E****</p>
              */
             public Builder appId(String appId) {
                 this.appId = appId;
@@ -312,11 +389,14 @@ public class ListPublishedServicesResponseBody extends TeaModel {
             }
 
             /**
-             * Indicates whether the application runs in a Docker container. Valid values:
-             * <p>
+             * <p>Indicates whether the application runs in a Docker container. Valid values:</p>
+             * <ul>
+             * <li>true: The application runs in a Docker container.</li>
+             * <li>false: The application does not run in a Docker container.</li>
+             * </ul>
              * 
-             * *   true: The application runs in a Docker container.
-             * *   false: The application does not run in a Docker container.
+             * <strong>example:</strong>
+             * <p>false</p>
              */
             public Builder dockerApplication(Boolean dockerApplication) {
                 this.dockerApplication = dockerApplication;
@@ -324,7 +404,10 @@ public class ListPublishedServicesResponseBody extends TeaModel {
             }
 
             /**
-             * A reserved parameter.
+             * <p>A reserved parameter.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>&quot;&quot;</p>
              */
             public Builder group2Ip(String group2Ip) {
                 this.group2Ip = group2Ip;
@@ -348,7 +431,10 @@ public class ListPublishedServicesResponseBody extends TeaModel {
             }
 
             /**
-             * The name of the published service.
+             * <p>The name of the published service.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>providers:com.****</p>
              */
             public Builder name(String name) {
                 this.name = name;
@@ -356,7 +442,10 @@ public class ListPublishedServicesResponseBody extends TeaModel {
             }
 
             /**
-             * The type of the published service.
+             * <p>The type of the published service.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>RESTful</p>
              */
             public Builder type(String type) {
                 this.type = type;
@@ -364,7 +453,10 @@ public class ListPublishedServicesResponseBody extends TeaModel {
             }
 
             /**
-             * The version of the published services.
+             * <p>The version of the published services.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>--</p>
              */
             public Builder version(String version) {
                 this.version = version;
@@ -378,9 +470,15 @@ public class ListPublishedServicesResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link ListPublishedServicesResponseBody} extends {@link TeaModel}
+     *
+     * <p>ListPublishedServicesResponseBody</p>
+     */
     public static class PublishedServicesList extends TeaModel {
-        @NameInMap("ListPublishedServices")
-        private java.util.List < ListPublishedServices> listPublishedServices;
+        @com.aliyun.core.annotation.NameInMap("ListPublishedServices")
+        private java.util.List<ListPublishedServices> listPublishedServices;
 
         private PublishedServicesList(Builder builder) {
             this.listPublishedServices = builder.listPublishedServices;
@@ -397,17 +495,24 @@ public class ListPublishedServicesResponseBody extends TeaModel {
         /**
          * @return listPublishedServices
          */
-        public java.util.List < ListPublishedServices> getListPublishedServices() {
+        public java.util.List<ListPublishedServices> getListPublishedServices() {
             return this.listPublishedServices;
         }
 
         public static final class Builder {
-            private java.util.List < ListPublishedServices> listPublishedServices; 
+            private java.util.List<ListPublishedServices> listPublishedServices; 
+
+            private Builder() {
+            } 
+
+            private Builder(PublishedServicesList model) {
+                this.listPublishedServices = model.listPublishedServices;
+            } 
 
             /**
              * ListPublishedServices.
              */
-            public Builder listPublishedServices(java.util.List < ListPublishedServices> listPublishedServices) {
+            public Builder listPublishedServices(java.util.List<ListPublishedServices> listPublishedServices) {
                 this.listPublishedServices = listPublishedServices;
                 return this;
             }

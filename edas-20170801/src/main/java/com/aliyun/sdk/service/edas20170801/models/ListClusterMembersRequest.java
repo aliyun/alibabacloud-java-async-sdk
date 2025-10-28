@@ -1,32 +1,37 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.edas20170801.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ListClusterMembersRequest} extends {@link RequestModel}
  *
  * <p>ListClusterMembersRequest</p>
  */
 public class ListClusterMembersRequest extends Request {
-    @Query
-    @NameInMap("ClusterId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ClusterId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String clusterId;
 
-    @Query
-    @NameInMap("CurrentPage")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("CurrentPage")
     private Integer currentPage;
 
-    @Query
-    @NameInMap("EcsList")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("EcsList")
     private String ecsList;
 
-    @Query
-    @NameInMap("PageSize")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("PageSize")
     private Integer pageSize;
 
     private ListClusterMembersRequest(Builder builder) {
@@ -45,7 +50,7 @@ public class ListClusterMembersRequest extends Request {
         return builder().build();
     }
 
-    @Override
+@Override
     public Builder toBuilder() {
         return new Builder(this);
     }
@@ -97,7 +102,11 @@ public class ListClusterMembersRequest extends Request {
         } 
 
         /**
-         * The ID of the cluster. You can call the ListCluster operation to query the cluster ID. For more information, see [ListCluster](~~154995~~).
+         * <p>The ID of the cluster. You can call the ListCluster operation to query the cluster ID. For more information, see <a href="https://help.aliyun.com/document_detail/154995.html">ListCluster</a>.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>52984524-6d48-4bbd-85f2-a34b0e5b****</p>
          */
         public Builder clusterId(String clusterId) {
             this.putQueryParameter("ClusterId", clusterId);
@@ -106,7 +115,10 @@ public class ListClusterMembersRequest extends Request {
         }
 
         /**
-         * The number of the page to return. If you do not specify this parameter, the first page is returned.
+         * <p>The number of the page to return. If you do not specify this parameter, the first page is returned.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder currentPage(Integer currentPage) {
             this.putQueryParameter("CurrentPage", currentPage);
@@ -115,7 +127,10 @@ public class ListClusterMembersRequest extends Request {
         }
 
         /**
-         * The number of ECS instances.
+         * <p>The number of ECS instances.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder ecsList(String ecsList) {
             this.putQueryParameter("EcsList", ecsList);
@@ -124,7 +139,10 @@ public class ListClusterMembersRequest extends Request {
         }
 
         /**
-         * The number of ECS instances to return on each page. If you do not specify this parameter, all ECS instances in the specified cluster are returned on one page.
+         * <p>The number of ECS instances to return on each page. If you do not specify this parameter, all ECS instances in the specified cluster are returned on one page.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>50</p>
          */
         public Builder pageSize(Integer pageSize) {
             this.putQueryParameter("PageSize", pageSize);

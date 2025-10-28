@@ -1,27 +1,32 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.edas20170801.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link GetServiceListPageResponseBody} extends {@link TeaModel}
  *
  * <p>GetServiceListPageResponseBody</p>
  */
 public class GetServiceListPageResponseBody extends TeaModel {
-    @NameInMap("Code")
+    @com.aliyun.core.annotation.NameInMap("Code")
     private Integer code;
 
-    @NameInMap("Data")
+    @com.aliyun.core.annotation.NameInMap("Data")
     private Data data;
 
-    @NameInMap("Message")
+    @com.aliyun.core.annotation.NameInMap("Message")
     private String message;
 
-    @NameInMap("Success")
+    @com.aliyun.core.annotation.NameInMap("Success")
     private Boolean success;
 
     private GetServiceListPageResponseBody(Builder builder) {
@@ -37,6 +42,10 @@ public class GetServiceListPageResponseBody extends TeaModel {
 
     public static GetServiceListPageResponseBody create() {
         return builder().build();
+    }
+
+    public Builder toBuilder() {
+        return new Builder(this);
     }
 
     /**
@@ -73,8 +82,21 @@ public class GetServiceListPageResponseBody extends TeaModel {
         private String message; 
         private Boolean success; 
 
+        private Builder() {
+        } 
+
+        private Builder(GetServiceListPageResponseBody model) {
+            this.code = model.code;
+            this.data = model.data;
+            this.message = model.message;
+            this.success = model.success;
+        } 
+
         /**
-         * The HTTP status code that is returned.
+         * <p>The HTTP status code that is returned.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>200</p>
          */
         public Builder code(Integer code) {
             this.code = code;
@@ -82,7 +104,7 @@ public class GetServiceListPageResponseBody extends TeaModel {
         }
 
         /**
-         * The returned data.
+         * <p>The returned data.</p>
          */
         public Builder data(Data data) {
             this.data = data;
@@ -90,7 +112,10 @@ public class GetServiceListPageResponseBody extends TeaModel {
         }
 
         /**
-         * The message that is returned for the request.
+         * <p>The message that is returned for the request.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>success</p>
          */
         public Builder message(String message) {
             this.message = message;
@@ -98,7 +123,10 @@ public class GetServiceListPageResponseBody extends TeaModel {
         }
 
         /**
-         * Indicates whether the request is successful.
+         * <p>Indicates whether the request is successful.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder success(Boolean success) {
             this.success = success;
@@ -111,29 +139,35 @@ public class GetServiceListPageResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link GetServiceListPageResponseBody} extends {@link TeaModel}
+     *
+     * <p>GetServiceListPageResponseBody</p>
+     */
     public static class Content extends TeaModel {
-        @NameInMap("EdasAppId")
+        @com.aliyun.core.annotation.NameInMap("EdasAppId")
         private String edasAppId;
 
-        @NameInMap("EdasAppName")
+        @com.aliyun.core.annotation.NameInMap("EdasAppName")
         private String edasAppName;
 
-        @NameInMap("Group")
+        @com.aliyun.core.annotation.NameInMap("Group")
         private String group;
 
-        @NameInMap("InstanceNum")
+        @com.aliyun.core.annotation.NameInMap("InstanceNum")
         private Integer instanceNum;
 
-        @NameInMap("RegisterType")
+        @com.aliyun.core.annotation.NameInMap("RegisterType")
         private String registerType;
 
-        @NameInMap("ServiceId")
+        @com.aliyun.core.annotation.NameInMap("ServiceId")
         private String serviceId;
 
-        @NameInMap("ServiceName")
+        @com.aliyun.core.annotation.NameInMap("ServiceName")
         private String serviceName;
 
-        @NameInMap("Version")
+        @com.aliyun.core.annotation.NameInMap("Version")
         private String version;
 
         private Content(Builder builder) {
@@ -221,8 +255,25 @@ public class GetServiceListPageResponseBody extends TeaModel {
             private String serviceName; 
             private String version; 
 
+            private Builder() {
+            } 
+
+            private Builder(Content model) {
+                this.edasAppId = model.edasAppId;
+                this.edasAppName = model.edasAppName;
+                this.group = model.group;
+                this.instanceNum = model.instanceNum;
+                this.registerType = model.registerType;
+                this.serviceId = model.serviceId;
+                this.serviceName = model.serviceName;
+                this.version = model.version;
+            } 
+
             /**
-             * The ID of the application.
+             * <p>The ID of the application.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>efbda488-7b33-432f-<strong><strong>-36530047</strong></strong></p>
              */
             public Builder edasAppId(String edasAppId) {
                 this.edasAppId = edasAppId;
@@ -230,7 +281,10 @@ public class GetServiceListPageResponseBody extends TeaModel {
             }
 
             /**
-             * The name of the application.
+             * <p>The name of the application.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>k8s-lq-cartservice</p>
              */
             public Builder edasAppName(String edasAppName) {
                 this.edasAppName = edasAppName;
@@ -238,7 +292,10 @@ public class GetServiceListPageResponseBody extends TeaModel {
             }
 
             /**
-             * The service group.
+             * <p>The service group.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>DUBBO</p>
              */
             public Builder group(String group) {
                 this.group = group;
@@ -246,7 +303,10 @@ public class GetServiceListPageResponseBody extends TeaModel {
             }
 
             /**
-             * The number of instances.
+             * <p>The number of instances.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder instanceNum(Integer instanceNum) {
                 this.instanceNum = instanceNum;
@@ -254,7 +314,10 @@ public class GetServiceListPageResponseBody extends TeaModel {
             }
 
             /**
-             * The type of the service registry.
+             * <p>The type of the service registry.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>xx</p>
              */
             public Builder registerType(String registerType) {
                 this.registerType = registerType;
@@ -262,7 +325,10 @@ public class GetServiceListPageResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the service.
+             * <p>The ID of the service.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>xx</p>
              */
             public Builder serviceId(String serviceId) {
                 this.serviceId = serviceId;
@@ -270,7 +336,10 @@ public class GetServiceListPageResponseBody extends TeaModel {
             }
 
             /**
-             * The name of the service.
+             * <p>The name of the service.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>com.alibabacloud.hipstershop.CartService</p>
              */
             public Builder serviceName(String serviceName) {
                 this.serviceName = serviceName;
@@ -278,7 +347,10 @@ public class GetServiceListPageResponseBody extends TeaModel {
             }
 
             /**
-             * The version number.
+             * <p>The version number.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1.0.0</p>
              */
             public Builder version(String version) {
                 this.version = version;
@@ -292,17 +364,23 @@ public class GetServiceListPageResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link GetServiceListPageResponseBody} extends {@link TeaModel}
+     *
+     * <p>GetServiceListPageResponseBody</p>
+     */
     public static class Data extends TeaModel {
-        @NameInMap("Content")
-        private java.util.List < Content> content;
+        @com.aliyun.core.annotation.NameInMap("Content")
+        private java.util.List<Content> content;
 
-        @NameInMap("Size")
+        @com.aliyun.core.annotation.NameInMap("Size")
         private Integer size;
 
-        @NameInMap("TotalElements")
+        @com.aliyun.core.annotation.NameInMap("TotalElements")
         private Integer totalElements;
 
-        @NameInMap("TotalPages")
+        @com.aliyun.core.annotation.NameInMap("TotalPages")
         private Integer totalPages;
 
         private Data(Builder builder) {
@@ -323,7 +401,7 @@ public class GetServiceListPageResponseBody extends TeaModel {
         /**
          * @return content
          */
-        public java.util.List < Content> getContent() {
+        public java.util.List<Content> getContent() {
             return this.content;
         }
 
@@ -349,21 +427,34 @@ public class GetServiceListPageResponseBody extends TeaModel {
         }
 
         public static final class Builder {
-            private java.util.List < Content> content; 
+            private java.util.List<Content> content; 
             private Integer size; 
             private Integer totalElements; 
             private Integer totalPages; 
 
+            private Builder() {
+            } 
+
+            private Builder(Data model) {
+                this.content = model.content;
+                this.size = model.size;
+                this.totalElements = model.totalElements;
+                this.totalPages = model.totalPages;
+            } 
+
             /**
-             * The data array that is returned.
+             * <p>The data array that is returned.</p>
              */
-            public Builder content(java.util.List < Content> content) {
+            public Builder content(java.util.List<Content> content) {
                 this.content = content;
                 return this;
             }
 
             /**
-             * The number of entries returned per page.
+             * <p>The number of entries returned per page.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>8</p>
              */
             public Builder size(Integer size) {
                 this.size = size;
@@ -371,7 +462,10 @@ public class GetServiceListPageResponseBody extends TeaModel {
             }
 
             /**
-             * The total number of returned entries.
+             * <p>The total number of returned entries.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>6</p>
              */
             public Builder totalElements(Integer totalElements) {
                 this.totalElements = totalElements;
@@ -379,7 +473,10 @@ public class GetServiceListPageResponseBody extends TeaModel {
             }
 
             /**
-             * The total number of returned pages.
+             * <p>The total number of returned pages.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder totalPages(Integer totalPages) {
                 this.totalPages = totalPages;

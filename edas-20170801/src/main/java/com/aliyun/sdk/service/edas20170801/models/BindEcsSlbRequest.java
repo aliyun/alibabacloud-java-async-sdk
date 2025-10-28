@@ -1,55 +1,60 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.edas20170801.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link BindEcsSlbRequest} extends {@link RequestModel}
  *
  * <p>BindEcsSlbRequest</p>
  */
 public class BindEcsSlbRequest extends Request {
-    @Query
-    @NameInMap("AppId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("AppId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String appId;
 
-    @Query
-    @NameInMap("DeployGroupId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("DeployGroupId")
     private String deployGroupId;
 
-    @Query
-    @NameInMap("ListenerHealthCheckUrl")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ListenerHealthCheckUrl")
     private String listenerHealthCheckUrl;
 
-    @Query
-    @NameInMap("ListenerPort")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ListenerPort")
+    @com.aliyun.core.annotation.Validation(required = true)
     private Integer listenerPort;
 
-    @Query
-    @NameInMap("ListenerProtocol")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ListenerProtocol")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String listenerProtocol;
 
-    @Query
-    @NameInMap("SlbId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("SlbId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String slbId;
 
-    @Query
-    @NameInMap("VForwardingUrlRule")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("VForwardingUrlRule")
     private String vForwardingUrlRule;
 
-    @Query
-    @NameInMap("VServerGroupId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("VServerGroupId")
     private String vServerGroupId;
 
-    @Query
-    @NameInMap("VServerGroupName")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("VServerGroupName")
     private String vServerGroupName;
 
     private BindEcsSlbRequest(Builder builder) {
@@ -73,7 +78,7 @@ public class BindEcsSlbRequest extends Request {
         return builder().build();
     }
 
-    @Override
+@Override
     public Builder toBuilder() {
         return new Builder(this);
     }
@@ -170,7 +175,11 @@ public class BindEcsSlbRequest extends Request {
         } 
 
         /**
-         * The ID of the application. You can query the application ID by calling the ListApplication operation. For more information, see [ListApplication](~~149390~~).
+         * <p>The ID of the application. You can query the application ID by calling the ListApplication operation. For more information, see <a href="https://help.aliyun.com/document_detail/149390.html">ListApplication</a>.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>93fdd228-*****-ed2ae98de18d</p>
          */
         public Builder appId(String appId) {
             this.putQueryParameter("AppId", appId);
@@ -179,7 +188,10 @@ public class BindEcsSlbRequest extends Request {
         }
 
         /**
-         * The ID of the instance group whose application you want to bind. You can call the ListDeployGroup operation to query the group ID. For more information, see [ListDeployGroup](~~62077~~).
+         * <p>The ID of the instance group whose application you want to bind. You can call the ListDeployGroup operation to query the group ID. For more information, see <a href="https://help.aliyun.com/document_detail/62077.html">ListDeployGroup</a>.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>577f4c50-16ee-43d8-<strong><strong>-</strong></strong></p>
          */
         public Builder deployGroupId(String deployGroupId) {
             this.putQueryParameter("DeployGroupId", deployGroupId);
@@ -188,7 +200,10 @@ public class BindEcsSlbRequest extends Request {
         }
 
         /**
-         * The health check URL.
+         * <p>The health check URL.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>/_ehc.html</p>
          */
         public Builder listenerHealthCheckUrl(String listenerHealthCheckUrl) {
             this.putQueryParameter("ListenerHealthCheckUrl", listenerHealthCheckUrl);
@@ -197,7 +212,11 @@ public class BindEcsSlbRequest extends Request {
         }
 
         /**
-         * The listener port for the SLB instance.
+         * <p>The listener port for the SLB instance.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>80</p>
          */
         public Builder listenerPort(Integer listenerPort) {
             this.putQueryParameter("ListenerPort", listenerPort);
@@ -206,7 +225,11 @@ public class BindEcsSlbRequest extends Request {
         }
 
         /**
-         * The listener protocol for the SLB instance.
+         * <p>The listener protocol for the SLB instance.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>tcp</p>
          */
         public Builder listenerProtocol(String listenerProtocol) {
             this.putQueryParameter("ListenerProtocol", listenerProtocol);
@@ -215,7 +238,11 @@ public class BindEcsSlbRequest extends Request {
         }
 
         /**
-         * The ID of the SLB instance.
+         * <p>The ID of the SLB instance.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>lb-uf6j54m3a****cj01jx8</p>
          */
         public Builder slbId(String slbId) {
             this.putQueryParameter("SlbId", slbId);
@@ -224,7 +251,10 @@ public class BindEcsSlbRequest extends Request {
         }
 
         /**
-         * The forwarding rule of the SLB listener.
+         * <p>The forwarding rule of the SLB listener.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>example.com/forwarding</p>
          */
         public Builder vForwardingUrlRule(String vForwardingUrlRule) {
             this.putQueryParameter("VForwardingUrlRule", vForwardingUrlRule);
@@ -233,7 +263,10 @@ public class BindEcsSlbRequest extends Request {
         }
 
         /**
-         * The ID of the vServer group for the SLB instance.
+         * <p>The ID of the vServer group for the SLB instance.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>rsp-2ze<strong><strong>6l</strong></strong>*</p>
          */
         public Builder vServerGroupId(String vServerGroupId) {
             this.putQueryParameter("VServerGroupId", vServerGroupId);
@@ -242,7 +275,7 @@ public class BindEcsSlbRequest extends Request {
         }
 
         /**
-         * The name of the vServer group.
+         * <p>The name of the vServer group.</p>
          */
         public Builder vServerGroupName(String vServerGroupName) {
             this.putQueryParameter("VServerGroupName", vServerGroupName);

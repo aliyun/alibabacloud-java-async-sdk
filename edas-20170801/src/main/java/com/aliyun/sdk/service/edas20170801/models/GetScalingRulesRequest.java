@@ -1,29 +1,34 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.edas20170801.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link GetScalingRulesRequest} extends {@link RequestModel}
  *
  * <p>GetScalingRulesRequest</p>
  */
 public class GetScalingRulesRequest extends Request {
-    @Query
-    @NameInMap("AppId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("AppId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String appId;
 
-    @Query
-    @NameInMap("GroupId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("GroupId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String groupId;
 
-    @Query
-    @NameInMap("Mode")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Mode")
     private String mode;
 
     private GetScalingRulesRequest(Builder builder) {
@@ -41,7 +46,7 @@ public class GetScalingRulesRequest extends Request {
         return builder().build();
     }
 
-    @Override
+@Override
     public Builder toBuilder() {
         return new Builder(this);
     }
@@ -84,7 +89,11 @@ public class GetScalingRulesRequest extends Request {
         } 
 
         /**
-         * The ID of the application.
+         * <p>The ID of the application.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>33e39be9-3e5f-*********</p>
          */
         public Builder appId(String appId) {
             this.putQueryParameter("AppId", appId);
@@ -93,7 +102,11 @@ public class GetScalingRulesRequest extends Request {
         }
 
         /**
-         * The ID of the instance group to which the application is deployed.
+         * <p>The ID of the instance group to which the application is deployed.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>d8bb9d60-9**************</p>
          */
         public Builder groupId(String groupId) {
             this.putQueryParameter("GroupId", groupId);
@@ -102,11 +115,14 @@ public class GetScalingRulesRequest extends Request {
         }
 
         /**
-         * The type of the scaling rule. You can leave this parameter empty. Valid values:
-         * <p>
+         * <p>The type of the scaling rule. You can leave this parameter empty. Valid values:</p>
+         * <ul>
+         * <li>SCALE_IN: scale-in rules</li>
+         * <li>SCALE_OUT: scale-out rules</li>
+         * </ul>
          * 
-         * *   SCALE_IN: scale-in rules
-         * *   SCALE_OUT: scale-out rules
+         * <strong>example:</strong>
+         * <p>SCALE_IN</p>
          */
         public Builder mode(String mode) {
             this.putQueryParameter("Mode", mode);

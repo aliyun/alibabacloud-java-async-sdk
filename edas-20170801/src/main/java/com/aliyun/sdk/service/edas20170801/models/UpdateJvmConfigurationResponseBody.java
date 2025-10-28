@@ -1,27 +1,32 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.edas20170801.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link UpdateJvmConfigurationResponseBody} extends {@link TeaModel}
  *
  * <p>UpdateJvmConfigurationResponseBody</p>
  */
 public class UpdateJvmConfigurationResponseBody extends TeaModel {
-    @NameInMap("Code")
+    @com.aliyun.core.annotation.NameInMap("Code")
     private Integer code;
 
-    @NameInMap("JvmConfiguration")
+    @com.aliyun.core.annotation.NameInMap("JvmConfiguration")
     private JvmConfiguration jvmConfiguration;
 
-    @NameInMap("Message")
+    @com.aliyun.core.annotation.NameInMap("Message")
     private String message;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
     private UpdateJvmConfigurationResponseBody(Builder builder) {
@@ -37,6 +42,10 @@ public class UpdateJvmConfigurationResponseBody extends TeaModel {
 
     public static UpdateJvmConfigurationResponseBody create() {
         return builder().build();
+    }
+
+    public Builder toBuilder() {
+        return new Builder(this);
     }
 
     /**
@@ -73,8 +82,21 @@ public class UpdateJvmConfigurationResponseBody extends TeaModel {
         private String message; 
         private String requestId; 
 
+        private Builder() {
+        } 
+
+        private Builder(UpdateJvmConfigurationResponseBody model) {
+            this.code = model.code;
+            this.jvmConfiguration = model.jvmConfiguration;
+            this.message = model.message;
+            this.requestId = model.requestId;
+        } 
+
         /**
-         * The HTTP status code that is returned.
+         * <p>The HTTP status code that is returned.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>200</p>
          */
         public Builder code(Integer code) {
             this.code = code;
@@ -82,7 +104,7 @@ public class UpdateJvmConfigurationResponseBody extends TeaModel {
         }
 
         /**
-         * The settings of the JVM parameters.
+         * <p>The settings of the JVM parameters.</p>
          */
         public Builder jvmConfiguration(JvmConfiguration jvmConfiguration) {
             this.jvmConfiguration = jvmConfiguration;
@@ -90,7 +112,10 @@ public class UpdateJvmConfigurationResponseBody extends TeaModel {
         }
 
         /**
-         * The additional information that is returned.
+         * <p>The additional information that is returned.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>success</p>
          */
         public Builder message(String message) {
             this.message = message;
@@ -98,7 +123,10 @@ public class UpdateJvmConfigurationResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the request.
+         * <p>The ID of the request.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>D16979DC-4D42-********************</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -111,17 +139,23 @@ public class UpdateJvmConfigurationResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link UpdateJvmConfigurationResponseBody} extends {@link TeaModel}
+     *
+     * <p>UpdateJvmConfigurationResponseBody</p>
+     */
     public static class JvmConfiguration extends TeaModel {
-        @NameInMap("MaxHeapSize")
+        @com.aliyun.core.annotation.NameInMap("MaxHeapSize")
         private Integer maxHeapSize;
 
-        @NameInMap("MaxPermSize")
+        @com.aliyun.core.annotation.NameInMap("MaxPermSize")
         private Integer maxPermSize;
 
-        @NameInMap("MinHeapSize")
+        @com.aliyun.core.annotation.NameInMap("MinHeapSize")
         private Integer minHeapSize;
 
-        @NameInMap("Options")
+        @com.aliyun.core.annotation.NameInMap("Options")
         private String options;
 
         private JvmConfiguration(Builder builder) {
@@ -173,8 +207,21 @@ public class UpdateJvmConfigurationResponseBody extends TeaModel {
             private Integer minHeapSize; 
             private String options; 
 
+            private Builder() {
+            } 
+
+            private Builder(JvmConfiguration model) {
+                this.maxHeapSize = model.maxHeapSize;
+                this.maxPermSize = model.maxPermSize;
+                this.minHeapSize = model.minHeapSize;
+                this.options = model.options;
+            } 
+
             /**
-             * The maximum size of the heap memory. Unit: MB.
+             * <p>The maximum size of the heap memory. Unit: MB.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>500</p>
              */
             public Builder maxHeapSize(Integer maxHeapSize) {
                 this.maxHeapSize = maxHeapSize;
@@ -182,7 +229,10 @@ public class UpdateJvmConfigurationResponseBody extends TeaModel {
             }
 
             /**
-             * The size of the permanent generation heap memory. Unit: MB.
+             * <p>The size of the permanent generation heap memory. Unit: MB.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1000</p>
              */
             public Builder maxPermSize(Integer maxPermSize) {
                 this.maxPermSize = maxPermSize;
@@ -190,7 +240,10 @@ public class UpdateJvmConfigurationResponseBody extends TeaModel {
             }
 
             /**
-             * The initial size of the heap memory. Unit: MB.
+             * <p>The initial size of the heap memory. Unit: MB.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>500</p>
              */
             public Builder minHeapSize(Integer minHeapSize) {
                 this.minHeapSize = minHeapSize;
@@ -198,7 +251,10 @@ public class UpdateJvmConfigurationResponseBody extends TeaModel {
             }
 
             /**
-             * The optional parameters.
+             * <p>The optional parameters.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>”“</p>
              */
             public Builder options(String options) {
                 this.options = options;

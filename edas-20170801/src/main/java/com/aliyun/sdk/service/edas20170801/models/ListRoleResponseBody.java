@@ -1,27 +1,32 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.edas20170801.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ListRoleResponseBody} extends {@link TeaModel}
  *
  * <p>ListRoleResponseBody</p>
  */
 public class ListRoleResponseBody extends TeaModel {
-    @NameInMap("Code")
+    @com.aliyun.core.annotation.NameInMap("Code")
     private Integer code;
 
-    @NameInMap("Message")
+    @com.aliyun.core.annotation.NameInMap("Message")
     private String message;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("RoleList")
+    @com.aliyun.core.annotation.NameInMap("RoleList")
     private RoleList roleList;
 
     private ListRoleResponseBody(Builder builder) {
@@ -37,6 +42,10 @@ public class ListRoleResponseBody extends TeaModel {
 
     public static ListRoleResponseBody create() {
         return builder().build();
+    }
+
+    public Builder toBuilder() {
+        return new Builder(this);
     }
 
     /**
@@ -73,8 +82,21 @@ public class ListRoleResponseBody extends TeaModel {
         private String requestId; 
         private RoleList roleList; 
 
+        private Builder() {
+        } 
+
+        private Builder(ListRoleResponseBody model) {
+            this.code = model.code;
+            this.message = model.message;
+            this.requestId = model.requestId;
+            this.roleList = model.roleList;
+        } 
+
         /**
-         * The HTTP status code that is returned.
+         * <p>The HTTP status code that is returned.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>200</p>
          */
         public Builder code(Integer code) {
             this.code = code;
@@ -82,7 +104,10 @@ public class ListRoleResponseBody extends TeaModel {
         }
 
         /**
-         * The additional information that is returned.
+         * <p>The additional information that is returned.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>success</p>
          */
         public Builder message(String message) {
             this.message = message;
@@ -90,7 +115,10 @@ public class ListRoleResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the request.
+         * <p>The ID of the request.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>57609587-DFA2-41EC-<strong><strong>-</strong></strong>*****</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -98,7 +126,7 @@ public class ListRoleResponseBody extends TeaModel {
         }
 
         /**
-         * The roles.
+         * <p>The roles.</p>
          */
         public Builder roleList(RoleList roleList) {
             this.roleList = roleList;
@@ -111,17 +139,23 @@ public class ListRoleResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link ListRoleResponseBody} extends {@link TeaModel}
+     *
+     * <p>ListRoleResponseBody</p>
+     */
     public static class Action extends TeaModel {
-        @NameInMap("Code")
+        @com.aliyun.core.annotation.NameInMap("Code")
         private String code;
 
-        @NameInMap("Description")
+        @com.aliyun.core.annotation.NameInMap("Description")
         private String description;
 
-        @NameInMap("GroupId")
+        @com.aliyun.core.annotation.NameInMap("GroupId")
         private String groupId;
 
-        @NameInMap("Name")
+        @com.aliyun.core.annotation.NameInMap("Name")
         private String name;
 
         private Action(Builder builder) {
@@ -173,8 +207,21 @@ public class ListRoleResponseBody extends TeaModel {
             private String groupId; 
             private String name; 
 
+            private Builder() {
+            } 
+
+            private Builder(Action model) {
+                this.code = model.code;
+                this.description = model.description;
+                this.groupId = model.groupId;
+                this.name = model.name;
+            } 
+
             /**
-             * The serial number of the permission that is granted to the role.
+             * <p>The serial number of the permission that is granted to the role.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder code(String code) {
                 this.code = code;
@@ -182,7 +229,10 @@ public class ListRoleResponseBody extends TeaModel {
             }
 
             /**
-             * The description of the permission to be granted to the role.
+             * <p>The description of the permission to be granted to the role.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Operations in operation records</p>
              */
             public Builder description(String description) {
                 this.description = description;
@@ -190,7 +240,10 @@ public class ListRoleResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the permission group to which the permission that is granted to the role belongs.
+             * <p>The ID of the permission group to which the permission that is granted to the role belongs.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>31</p>
              */
             public Builder groupId(String groupId) {
                 this.groupId = groupId;
@@ -198,7 +251,10 @@ public class ListRoleResponseBody extends TeaModel {
             }
 
             /**
-             * The name of the permission to be granted to the role.
+             * <p>The name of the permission to be granted to the role.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Operation records</p>
              */
             public Builder name(String name) {
                 this.name = name;
@@ -212,9 +268,15 @@ public class ListRoleResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link ListRoleResponseBody} extends {@link TeaModel}
+     *
+     * <p>ListRoleResponseBody</p>
+     */
     public static class ActionList extends TeaModel {
-        @NameInMap("Action")
-        private java.util.List < Action> action;
+        @com.aliyun.core.annotation.NameInMap("Action")
+        private java.util.List<Action> action;
 
         private ActionList(Builder builder) {
             this.action = builder.action;
@@ -231,17 +293,24 @@ public class ListRoleResponseBody extends TeaModel {
         /**
          * @return action
          */
-        public java.util.List < Action> getAction() {
+        public java.util.List<Action> getAction() {
             return this.action;
         }
 
         public static final class Builder {
-            private java.util.List < Action> action; 
+            private java.util.List<Action> action; 
+
+            private Builder() {
+            } 
+
+            private Builder(ActionList model) {
+                this.action = model.action;
+            } 
 
             /**
              * Action.
              */
-            public Builder action(java.util.List < Action> action) {
+            public Builder action(java.util.List<Action> action) {
                 this.action = action;
                 return this;
             }
@@ -253,23 +322,29 @@ public class ListRoleResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link ListRoleResponseBody} extends {@link TeaModel}
+     *
+     * <p>ListRoleResponseBody</p>
+     */
     public static class Role extends TeaModel {
-        @NameInMap("AdminUserId")
+        @com.aliyun.core.annotation.NameInMap("AdminUserId")
         private String adminUserId;
 
-        @NameInMap("CreateTime")
+        @com.aliyun.core.annotation.NameInMap("CreateTime")
         private Long createTime;
 
-        @NameInMap("Id")
+        @com.aliyun.core.annotation.NameInMap("Id")
         private Integer id;
 
-        @NameInMap("IsDefault")
+        @com.aliyun.core.annotation.NameInMap("IsDefault")
         private Boolean isDefault;
 
-        @NameInMap("Name")
+        @com.aliyun.core.annotation.NameInMap("Name")
         private String name;
 
-        @NameInMap("UpdateTime")
+        @com.aliyun.core.annotation.NameInMap("UpdateTime")
         private Long updateTime;
 
         private Role(Builder builder) {
@@ -339,8 +414,23 @@ public class ListRoleResponseBody extends TeaModel {
             private String name; 
             private Long updateTime; 
 
+            private Builder() {
+            } 
+
+            private Builder(Role model) {
+                this.adminUserId = model.adminUserId;
+                this.createTime = model.createTime;
+                this.id = model.id;
+                this.isDefault = model.isDefault;
+                this.name = model.name;
+                this.updateTime = model.updateTime;
+            } 
+
             /**
-             * The ID of the Alibaba Cloud account.
+             * <p>The ID of the Alibaba Cloud account.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>test**@aliyun.com</p>
              */
             public Builder adminUserId(String adminUserId) {
                 this.adminUserId = adminUserId;
@@ -348,7 +438,10 @@ public class ListRoleResponseBody extends TeaModel {
             }
 
             /**
-             * The timestamp when the role was created. This value is a UNIX timestamp representing the number of milliseconds that have elapsed since January 1, 1970, 00:00:00 UTC.
+             * <p>The timestamp when the role was created. This value is a UNIX timestamp representing the number of milliseconds that have elapsed since January 1, 1970, 00:00:00 UTC.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1542717260156</p>
              */
             public Builder createTime(Long createTime) {
                 this.createTime = createTime;
@@ -356,7 +449,10 @@ public class ListRoleResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the role.
+             * <p>The ID of the role.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder id(Integer id) {
                 this.id = id;
@@ -364,7 +460,10 @@ public class ListRoleResponseBody extends TeaModel {
             }
 
             /**
-             * Indicates whether the role is a default role.
+             * <p>Indicates whether the role is a default role.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>false</p>
              */
             public Builder isDefault(Boolean isDefault) {
                 this.isDefault = isDefault;
@@ -372,7 +471,10 @@ public class ListRoleResponseBody extends TeaModel {
             }
 
             /**
-             * The name of the role.
+             * <p>The name of the role.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Super Admin(All privileges)</p>
              */
             public Builder name(String name) {
                 this.name = name;
@@ -380,7 +482,10 @@ public class ListRoleResponseBody extends TeaModel {
             }
 
             /**
-             * The timestamp when the role was last modified. This value is a UNIX timestamp representing the number of milliseconds that have elapsed since January 1, 1970, 00:00:00 UTC.
+             * <p>The timestamp when the role was last modified. This value is a UNIX timestamp representing the number of milliseconds that have elapsed since January 1, 1970, 00:00:00 UTC.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1542717260156</p>
              */
             public Builder updateTime(Long updateTime) {
                 this.updateTime = updateTime;
@@ -394,11 +499,17 @@ public class ListRoleResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link ListRoleResponseBody} extends {@link TeaModel}
+     *
+     * <p>ListRoleResponseBody</p>
+     */
     public static class RoleItem extends TeaModel {
-        @NameInMap("ActionList")
+        @com.aliyun.core.annotation.NameInMap("ActionList")
         private ActionList actionList;
 
-        @NameInMap("Role")
+        @com.aliyun.core.annotation.NameInMap("Role")
         private Role role;
 
         private RoleItem(Builder builder) {
@@ -432,8 +543,16 @@ public class ListRoleResponseBody extends TeaModel {
             private ActionList actionList; 
             private Role role; 
 
+            private Builder() {
+            } 
+
+            private Builder(RoleItem model) {
+                this.actionList = model.actionList;
+                this.role = model.role;
+            } 
+
             /**
-             * The set of permissions to be granted to the role.
+             * <p>The set of permissions to be granted to the role.</p>
              */
             public Builder actionList(ActionList actionList) {
                 this.actionList = actionList;
@@ -441,7 +560,7 @@ public class ListRoleResponseBody extends TeaModel {
             }
 
             /**
-             * The roles.
+             * <p>The roles.</p>
              */
             public Builder role(Role role) {
                 this.role = role;
@@ -455,9 +574,15 @@ public class ListRoleResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link ListRoleResponseBody} extends {@link TeaModel}
+     *
+     * <p>ListRoleResponseBody</p>
+     */
     public static class RoleList extends TeaModel {
-        @NameInMap("RoleItem")
-        private java.util.List < RoleItem> roleItem;
+        @com.aliyun.core.annotation.NameInMap("RoleItem")
+        private java.util.List<RoleItem> roleItem;
 
         private RoleList(Builder builder) {
             this.roleItem = builder.roleItem;
@@ -474,17 +599,24 @@ public class ListRoleResponseBody extends TeaModel {
         /**
          * @return roleItem
          */
-        public java.util.List < RoleItem> getRoleItem() {
+        public java.util.List<RoleItem> getRoleItem() {
             return this.roleItem;
         }
 
         public static final class Builder {
-            private java.util.List < RoleItem> roleItem; 
+            private java.util.List<RoleItem> roleItem; 
+
+            private Builder() {
+            } 
+
+            private Builder(RoleList model) {
+                this.roleItem = model.roleItem;
+            } 
 
             /**
              * RoleItem.
              */
-            public Builder roleItem(java.util.List < RoleItem> roleItem) {
+            public Builder roleItem(java.util.List<RoleItem> roleItem) {
                 this.roleItem = roleItem;
                 return this;
             }

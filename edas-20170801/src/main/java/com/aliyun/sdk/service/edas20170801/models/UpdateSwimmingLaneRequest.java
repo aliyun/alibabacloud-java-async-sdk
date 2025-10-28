@@ -1,37 +1,42 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.edas20170801.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link UpdateSwimmingLaneRequest} extends {@link RequestModel}
  *
  * <p>UpdateSwimmingLaneRequest</p>
  */
 public class UpdateSwimmingLaneRequest extends Request {
-    @Query
-    @NameInMap("AppInfos")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("AppInfos")
     private String appInfos;
 
-    @Query
-    @NameInMap("EnableRules")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("EnableRules")
+    @com.aliyun.core.annotation.Validation(required = true)
     private Boolean enableRules;
 
-    @Query
-    @NameInMap("EntryRules")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("EntryRules")
     private String entryRules;
 
-    @Query
-    @NameInMap("LaneId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("LaneId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private Long laneId;
 
-    @Query
-    @NameInMap("Name")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Name")
     private String name;
 
     private UpdateSwimmingLaneRequest(Builder builder) {
@@ -51,7 +56,7 @@ public class UpdateSwimmingLaneRequest extends Request {
         return builder().build();
     }
 
-    @Override
+@Override
     public Builder toBuilder() {
         return new Builder(this);
     }
@@ -112,7 +117,10 @@ public class UpdateSwimmingLaneRequest extends Request {
         } 
 
         /**
-         * The list of applications that are related to the lane.
+         * <p>The list of applications that are related to the lane.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>[{&quot;appId&quot;:&quot;8e7689af-6ddd-4676-8ee6-5fbecdf2****&quot;},{&quot;appId&quot;:&quot;f72deaac-26ba-429a-948d-5fa47c4a****&quot;},{&quot;appId&quot;:&quot;99a2d4b5-99a5-4e25-a964-1bd03a17****&quot;}]</p>
          */
         public Builder appInfos(String appInfos) {
             this.putQueryParameter("AppInfos", appInfos);
@@ -121,7 +129,11 @@ public class UpdateSwimmingLaneRequest extends Request {
         }
 
         /**
-         * Specifies whether to enable the throttling rule.
+         * <p>Specifies whether to enable the throttling rule.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder enableRules(Boolean enableRules) {
             this.putQueryParameter("EnableRules", enableRules);
@@ -130,7 +142,10 @@ public class UpdateSwimmingLaneRequest extends Request {
         }
 
         /**
-         * The configuration of the throttling rule.
+         * <p>The configuration of the throttling rule.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>[{&quot;priority&quot;:1,&quot;path&quot;:&quot;/traffictest&quot;,&quot;condition&quot;:&quot;AND&quot;,&quot;restItems&quot;:[{&quot;type&quot;:&quot;header&quot;,&quot;name&quot;:&quot;testheader&quot;,&quot;value&quot;:&quot;testheadervalue&quot;,&quot;cond&quot;:&quot;==&quot;,&quot;operator&quot;:&quot;rawvalue&quot;}]}]</p>
          */
         public Builder entryRules(String entryRules) {
             this.putQueryParameter("EntryRules", entryRules);
@@ -139,7 +154,11 @@ public class UpdateSwimmingLaneRequest extends Request {
         }
 
         /**
-         * The ID of the lane.
+         * <p>The ID of the lane.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>224</p>
          */
         public Builder laneId(Long laneId) {
             this.putQueryParameter("LaneId", laneId);
@@ -148,7 +167,10 @@ public class UpdateSwimmingLaneRequest extends Request {
         }
 
         /**
-         * The name of the lane.
+         * <p>The name of the lane.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>test-swimlane</p>
          */
         public Builder name(String name) {
             this.putQueryParameter("Name", name);

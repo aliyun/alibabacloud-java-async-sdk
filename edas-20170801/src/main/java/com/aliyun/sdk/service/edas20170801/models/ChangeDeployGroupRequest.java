@@ -1,34 +1,39 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.edas20170801.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ChangeDeployGroupRequest} extends {@link RequestModel}
  *
  * <p>ChangeDeployGroupRequest</p>
  */
 public class ChangeDeployGroupRequest extends Request {
-    @Query
-    @NameInMap("AppId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("AppId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String appId;
 
-    @Query
-    @NameInMap("EccInfo")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("EccInfo")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String eccInfo;
 
-    @Query
-    @NameInMap("ForceStatus")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ForceStatus")
     private Boolean forceStatus;
 
-    @Query
-    @NameInMap("GroupName")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("GroupName")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String groupName;
 
     private ChangeDeployGroupRequest(Builder builder) {
@@ -47,7 +52,7 @@ public class ChangeDeployGroupRequest extends Request {
         return builder().build();
     }
 
-    @Override
+@Override
     public Builder toBuilder() {
         return new Builder(this);
     }
@@ -99,7 +104,11 @@ public class ChangeDeployGroupRequest extends Request {
         } 
 
         /**
-         * The ID of the application.
+         * <p>The ID of the application.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>3616cdca-4f92-**********</p>
          */
         public Builder appId(String appId) {
             this.putQueryParameter("AppId", appId);
@@ -108,10 +117,14 @@ public class ChangeDeployGroupRequest extends Request {
         }
 
         /**
-         * The ID of the elastic compute component (ECC) that corresponds to the ECS instance for which you want to change the application instance group. You can call the ListApplicationEcc operation to query the ECC ID. For more information, see [ListApplicationEcc](~~199277~~).
-         * <p>
+         * <p>The ID of the elastic compute component (ECC) that corresponds to the ECS instance for which you want to change the application instance group. You can call the ListApplicationEcc operation to query the ECC ID. For more information, see <a href="https://help.aliyun.com/document_detail/199277.html">ListApplicationEcc</a>.</p>
+         * <blockquote>
+         * <p>You can change the application instance group for only one ECS instance at a time.</p>
+         * </blockquote>
+         * <p>This parameter is required.</p>
          * 
-         * > You can change the application instance group for only one ECS instance at a time.
+         * <strong>example:</strong>
+         * <p>0cf49a6c-95a8-4aa8******</p>
          */
         public Builder eccInfo(String eccInfo) {
             this.putQueryParameter("EccInfo", eccInfo);
@@ -120,7 +133,10 @@ public class ChangeDeployGroupRequest extends Request {
         }
 
         /**
-         * Specifies whether to forcibly change the application instance group if the deployment package version of the ECC is different from that of the application instance group.
+         * <p>Specifies whether to forcibly change the application instance group if the deployment package version of the ECC is different from that of the application instance group.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder forceStatus(Boolean forceStatus) {
             this.putQueryParameter("ForceStatus", forceStatus);
@@ -129,7 +145,11 @@ public class ChangeDeployGroupRequest extends Request {
         }
 
         /**
-         * The name of the application instance group. Examples: group_a and group_b. The parameter value for the default application instance group is `_DEFAULT_GROUP`. The name can be up to 64 characters in length.
+         * <p>The name of the application instance group. Examples: group_a and group_b. The parameter value for the default application instance group is <code>_DEFAULT_GROUP</code>. The name can be up to 64 characters in length.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>test</p>
          */
         public Builder groupName(String groupName) {
             this.putQueryParameter("GroupName", groupName);

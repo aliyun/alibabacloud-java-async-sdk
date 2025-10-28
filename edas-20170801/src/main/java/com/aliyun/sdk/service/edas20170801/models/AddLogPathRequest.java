@@ -1,25 +1,30 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.edas20170801.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link AddLogPathRequest} extends {@link RequestModel}
  *
  * <p>AddLogPathRequest</p>
  */
 public class AddLogPathRequest extends Request {
-    @Body
-    @NameInMap("AppId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("AppId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String appId;
 
-    @Body
-    @NameInMap("Path")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("Path")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String path;
 
     private AddLogPathRequest(Builder builder) {
@@ -36,7 +41,7 @@ public class AddLogPathRequest extends Request {
         return builder().build();
     }
 
-    @Override
+@Override
     public Builder toBuilder() {
         return new Builder(this);
     }
@@ -70,7 +75,11 @@ public class AddLogPathRequest extends Request {
         } 
 
         /**
-         * The ID of the application. You can call the ListApplication operation to query the application ID. For more information, see [ListApplication](~~149390~~).
+         * <p>The ID of the application. You can call the ListApplication operation to query the application ID. For more information, see <a href="https://help.aliyun.com/document_detail/149390.html">ListApplication</a>.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>3616cdca-4f92-4413**********</p>
          */
         public Builder appId(String appId) {
             this.putBodyParameter("AppId", appId);
@@ -79,14 +88,18 @@ public class AddLogPathRequest extends Request {
         }
 
         /**
-         * The absolute path of the log directory that you want to add. The value must start and end with a forward slash (`/`) and must contain `/log` or `/logs`. The following directories are the default log directories in Enterprise Distributed Application Service (EDAS):
-         * <p>
+         * <p>The absolute path of the log directory that you want to add. The value must start and end with a forward slash (<code>/</code>) and must contain <code>/log</code> or <code>/logs</code>. The following directories are the default log directories in Enterprise Distributed Application Service (EDAS):</p>
+         * <ul>
+         * <li>/home/admin/edas-container/logs/</li>
+         * <li>/home/admin/taobao-tomcat-7.0.59/logs/</li>
+         * <li>/home/admin/taobao-tomcat-production-7.0.59.3/logs/</li>
+         * <li>/home/admin/taobao-tomcat-production-7.0.70/logs/</li>
+         * <li>/home/admin/edas-agent/logs/</li>
+         * </ul>
+         * <p>This parameter is required.</p>
          * 
-         * *   /home/admin/edas-container/logs/
-         * *   /home/admin/taobao-tomcat-7.0.59/logs/
-         * *   /home/admin/taobao-tomcat-production-7.0.59.3/logs/
-         * *   /home/admin/taobao-tomcat-production-7.0.70/logs/
-         * *   /home/admin/edas-agent/logs/
+         * <strong>example:</strong>
+         * <p>/temp/log/</p>
          */
         public Builder path(String path) {
             this.putBodyParameter("Path", path);

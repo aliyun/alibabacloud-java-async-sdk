@@ -1,24 +1,29 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.edas20170801.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link GetK8sApplicationRequest} extends {@link RequestModel}
  *
  * <p>GetK8sApplicationRequest</p>
  */
 public class GetK8sApplicationRequest extends Request {
-    @Query
-    @NameInMap("AppId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("AppId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String appId;
 
-    @Query
-    @NameInMap("From")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("From")
     private String from;
 
     private GetK8sApplicationRequest(Builder builder) {
@@ -35,7 +40,7 @@ public class GetK8sApplicationRequest extends Request {
         return builder().build();
     }
 
-    @Override
+@Override
     public Builder toBuilder() {
         return new Builder(this);
     }
@@ -69,7 +74,11 @@ public class GetK8sApplicationRequest extends Request {
         } 
 
         /**
-         * The ID of the application. You can call the ListApplication operation to query the application ID. For more information, see [ListApplication](~~149390~~).
+         * <p>The ID of the application. You can call the ListApplication operation to query the application ID. For more information, see <a href="https://help.aliyun.com/document_detail/149390.html">ListApplication</a>.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>5a166fbd-<strong><strong>-4f98-a286-781659d9</strong></strong></p>
          */
         public Builder appId(String appId) {
             this.putQueryParameter("AppId", appId);
@@ -78,11 +87,14 @@ public class GetK8sApplicationRequest extends Request {
         }
 
         /**
-         * The source from which data is queried.
-         * <p>
+         * <p>The source from which data is queried.</p>
+         * <ul>
+         * <li>If you leave this parameter empty, a common query is performed.</li>
+         * <li>If you set the value to deploy, you query application information from the deployment page.</li>
+         * </ul>
          * 
-         * *   If you leave this parameter empty, a common query is performed.
-         * *   If you set the value to deploy, you query application information from the deployment page.
+         * <strong>example:</strong>
+         * <p>deploy</p>
          */
         public Builder from(String from) {
             this.putQueryParameter("From", from);

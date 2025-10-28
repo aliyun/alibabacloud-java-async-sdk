@@ -81,6 +81,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         this.handler.close();
     }
 
+    /**
+     * @param request the request parameters of AbortAndRollbackChangeOrder  AbortAndRollbackChangeOrderRequest
+     * @return AbortAndRollbackChangeOrderResponse
+     */
     @Override
     public CompletableFuture<AbortAndRollbackChangeOrderResponse> abortAndRollbackChangeOrder(AbortAndRollbackChangeOrderRequest request) {
         try {
@@ -95,6 +99,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of AbortChangeOrder  AbortChangeOrderRequest
+     * @return AbortChangeOrderResponse
+     */
     @Override
     public CompletableFuture<AbortChangeOrderResponse> abortChangeOrder(AbortChangeOrderRequest request) {
         try {
@@ -109,6 +117,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of AddLogPath  AddLogPathRequest
+     * @return AddLogPathResponse
+     */
     @Override
     public CompletableFuture<AddLogPathResponse> addLogPath(AddLogPathRequest request) {
         try {
@@ -123,6 +135,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of AuthorizeApplication  AuthorizeApplicationRequest
+     * @return AuthorizeApplicationResponse
+     */
     @Override
     public CompletableFuture<AuthorizeApplicationResponse> authorizeApplication(AuthorizeApplicationRequest request) {
         try {
@@ -137,6 +153,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of AuthorizeResourceGroup  AuthorizeResourceGroupRequest
+     * @return AuthorizeResourceGroupResponse
+     */
     @Override
     public CompletableFuture<AuthorizeResourceGroupResponse> authorizeResourceGroup(AuthorizeResourceGroupRequest request) {
         try {
@@ -151,6 +171,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of AuthorizeRole  AuthorizeRoleRequest
+     * @return AuthorizeRoleResponse
+     */
     @Override
     public CompletableFuture<AuthorizeRoleResponse> authorizeRole(AuthorizeRoleRequest request) {
         try {
@@ -165,6 +189,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of BindEcsSlb  BindEcsSlbRequest
+     * @return BindEcsSlbResponse
+     */
     @Override
     public CompletableFuture<BindEcsSlbResponse> bindEcsSlb(BindEcsSlbRequest request) {
         try {
@@ -179,6 +207,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of BindK8sSlb  BindK8sSlbRequest
+     * @return BindK8sSlbResponse
+     */
     @Override
     public CompletableFuture<BindK8sSlbResponse> bindK8sSlb(BindK8sSlbRequest request) {
         try {
@@ -193,6 +225,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of BindSlb  BindSlbRequest
+     * @return BindSlbResponse
+     */
     @Override
     public CompletableFuture<BindSlbResponse> bindSlb(BindSlbRequest request) {
         try {
@@ -207,6 +243,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of ChangeDeployGroup  ChangeDeployGroupRequest
+     * @return ChangeDeployGroupResponse
+     */
     @Override
     public CompletableFuture<ChangeDeployGroupResponse> changeDeployGroup(ChangeDeployGroupRequest request) {
         try {
@@ -221,6 +261,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of ContinuePipeline  ContinuePipelineRequest
+     * @return ContinuePipelineResponse
+     */
     @Override
     public CompletableFuture<ContinuePipelineResponse> continuePipeline(ContinuePipelineRequest request) {
         try {
@@ -235,6 +279,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of ConvertK8sResource  ConvertK8sResourceRequest
+     * @return ConvertK8sResourceResponse
+     */
     @Override
     public CompletableFuture<ConvertK8sResourceResponse> convertK8sResource(ConvertK8sResourceRequest request) {
         try {
@@ -249,6 +297,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of CreateApplicationScalingRule  CreateApplicationScalingRuleRequest
+     * @return CreateApplicationScalingRuleResponse
+     */
     @Override
     public CompletableFuture<CreateApplicationScalingRuleResponse> createApplicationScalingRule(CreateApplicationScalingRuleRequest request) {
         try {
@@ -263,6 +315,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of CreateConfigTemplate  CreateConfigTemplateRequest
+     * @return CreateConfigTemplateResponse
+     */
     @Override
     public CompletableFuture<CreateConfigTemplateResponse> createConfigTemplate(CreateConfigTemplateRequest request) {
         try {
@@ -278,9 +334,12 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
-      * ## Description
-      * You must call the CreateIDCImportCommand operation first to generate a command used to import hybrid cloud ECS instances to a hybrid cloud ECS cluster. Then, run this command on the instances to import the instances to the cluster.
-      *
+     * <b>description</b> :
+     * <h2>Description</h2>
+     * <p>You must call the CreateIDCImportCommand operation first to generate a command used to import hybrid cloud ECS instances to a hybrid cloud ECS cluster. Then, run this command on the instances to import the instances to the cluster.</p>
+     * 
+     * @param request the request parameters of CreateIDCImportCommand  CreateIDCImportCommandRequest
+     * @return CreateIDCImportCommandResponse
      */
     @Override
     public CompletableFuture<CreateIDCImportCommandResponse> createIDCImportCommand(CreateIDCImportCommandRequest request) {
@@ -296,6 +355,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of CreateK8sConfigMap  CreateK8sConfigMapRequest
+     * @return CreateK8sConfigMapResponse
+     */
     @Override
     public CompletableFuture<CreateK8sConfigMapResponse> createK8sConfigMap(CreateK8sConfigMapRequest request) {
         try {
@@ -310,6 +373,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of CreateK8sIngressRule  CreateK8sIngressRuleRequest
+     * @return CreateK8sIngressRuleResponse
+     */
     @Override
     public CompletableFuture<CreateK8sIngressRuleResponse> createK8sIngressRule(CreateK8sIngressRuleRequest request) {
         try {
@@ -324,6 +391,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of CreateK8sSecret  CreateK8sSecretRequest
+     * @return CreateK8sSecretResponse
+     */
     @Override
     public CompletableFuture<CreateK8sSecretResponse> createK8sSecret(CreateK8sSecretRequest request) {
         try {
@@ -338,6 +409,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of CreateK8sService  CreateK8sServiceRequest
+     * @return CreateK8sServiceResponse
+     */
     @Override
     public CompletableFuture<CreateK8sServiceResponse> createK8sService(CreateK8sServiceRequest request) {
         try {
@@ -352,6 +427,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of DeleteApplication  DeleteApplicationRequest
+     * @return DeleteApplicationResponse
+     */
     @Override
     public CompletableFuture<DeleteApplicationResponse> deleteApplication(DeleteApplicationRequest request) {
         try {
@@ -366,6 +445,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of DeleteApplicationScalingRule  DeleteApplicationScalingRuleRequest
+     * @return DeleteApplicationScalingRuleResponse
+     */
     @Override
     public CompletableFuture<DeleteApplicationScalingRuleResponse> deleteApplicationScalingRule(DeleteApplicationScalingRuleRequest request) {
         try {
@@ -380,6 +463,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of DeleteCluster  DeleteClusterRequest
+     * @return DeleteClusterResponse
+     */
     @Override
     public CompletableFuture<DeleteClusterResponse> deleteCluster(DeleteClusterRequest request) {
         try {
@@ -394,6 +481,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of DeleteClusterMember  DeleteClusterMemberRequest
+     * @return DeleteClusterMemberResponse
+     */
     @Override
     public CompletableFuture<DeleteClusterMemberResponse> deleteClusterMember(DeleteClusterMemberRequest request) {
         try {
@@ -408,6 +499,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of DeleteConfigTemplate  DeleteConfigTemplateRequest
+     * @return DeleteConfigTemplateResponse
+     */
     @Override
     public CompletableFuture<DeleteConfigTemplateResponse> deleteConfigTemplate(DeleteConfigTemplateRequest request) {
         try {
@@ -422,6 +517,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of DeleteDeployGroup  DeleteDeployGroupRequest
+     * @return DeleteDeployGroupResponse
+     */
     @Override
     public CompletableFuture<DeleteDeployGroupResponse> deleteDeployGroup(DeleteDeployGroupRequest request) {
         try {
@@ -436,6 +535,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of DeleteEcu  DeleteEcuRequest
+     * @return DeleteEcuResponse
+     */
     @Override
     public CompletableFuture<DeleteEcuResponse> deleteEcu(DeleteEcuRequest request) {
         try {
@@ -450,6 +553,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of DeleteK8sApplication  DeleteK8sApplicationRequest
+     * @return DeleteK8sApplicationResponse
+     */
     @Override
     public CompletableFuture<DeleteK8sApplicationResponse> deleteK8sApplication(DeleteK8sApplicationRequest request) {
         try {
@@ -464,6 +571,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of DeleteK8sConfigMap  DeleteK8sConfigMapRequest
+     * @return DeleteK8sConfigMapResponse
+     */
     @Override
     public CompletableFuture<DeleteK8sConfigMapResponse> deleteK8sConfigMap(DeleteK8sConfigMapRequest request) {
         try {
@@ -478,6 +589,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of DeleteK8sIngressRule  DeleteK8sIngressRuleRequest
+     * @return DeleteK8sIngressRuleResponse
+     */
     @Override
     public CompletableFuture<DeleteK8sIngressRuleResponse> deleteK8sIngressRule(DeleteK8sIngressRuleRequest request) {
         try {
@@ -492,6 +607,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of DeleteK8sSecret  DeleteK8sSecretRequest
+     * @return DeleteK8sSecretResponse
+     */
     @Override
     public CompletableFuture<DeleteK8sSecretResponse> deleteK8sSecret(DeleteK8sSecretRequest request) {
         try {
@@ -506,6 +625,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of DeleteK8sService  DeleteK8sServiceRequest
+     * @return DeleteK8sServiceResponse
+     */
     @Override
     public CompletableFuture<DeleteK8sServiceResponse> deleteK8sService(DeleteK8sServiceRequest request) {
         try {
@@ -520,6 +643,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of DeleteLogPath  DeleteLogPathRequest
+     * @return DeleteLogPathResponse
+     */
     @Override
     public CompletableFuture<DeleteLogPathResponse> deleteLogPath(DeleteLogPathRequest request) {
         try {
@@ -534,6 +661,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of DeleteRole  DeleteRoleRequest
+     * @return DeleteRoleResponse
+     */
     @Override
     public CompletableFuture<DeleteRoleResponse> deleteRole(DeleteRoleRequest request) {
         try {
@@ -548,6 +679,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of DeleteServiceGroup  DeleteServiceGroupRequest
+     * @return DeleteServiceGroupResponse
+     */
     @Override
     public CompletableFuture<DeleteServiceGroupResponse> deleteServiceGroup(DeleteServiceGroupRequest request) {
         try {
@@ -562,6 +697,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of DeleteSwimmingLane  DeleteSwimmingLaneRequest
+     * @return DeleteSwimmingLaneResponse
+     */
     @Override
     public CompletableFuture<DeleteSwimmingLaneResponse> deleteSwimmingLane(DeleteSwimmingLaneRequest request) {
         try {
@@ -576,6 +715,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of DeleteUserDefineRegion  DeleteUserDefineRegionRequest
+     * @return DeleteUserDefineRegionResponse
+     */
     @Override
     public CompletableFuture<DeleteUserDefineRegionResponse> deleteUserDefineRegion(DeleteUserDefineRegionRequest request) {
         try {
@@ -591,8 +734,13 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
-      * > To deploy an application in a Container Service for Kubernetes (ACK) cluster that is imported into Enterprise Distributed Application Service (EDAS), call the DeployK8sApplication operation provided by EDAS. For more information, see [](~~149420~~)DeployK8sApplication.
-      *
+     * <b>description</b> :
+     * <blockquote>
+     * <p>To deploy an application in a Container Service for Kubernetes (ACK) cluster that is imported into Enterprise Distributed Application Service (EDAS), call the DeployK8sApplication operation provided by EDAS. For more information, see <a href="~~149420~~"></a>DeployK8sApplication.</p>
+     * </blockquote>
+     * 
+     * @param request the request parameters of DeployApplication  DeployApplicationRequest
+     * @return DeployApplicationResponse
      */
     @Override
     public CompletableFuture<DeployApplicationResponse> deployApplication(DeployApplicationRequest request) {
@@ -608,6 +756,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of DeployK8sApplication  DeployK8sApplicationRequest
+     * @return DeployK8sApplicationResponse
+     */
     @Override
     public CompletableFuture<DeployK8sApplicationResponse> deployK8sApplication(DeployK8sApplicationRequest request) {
         try {
@@ -622,6 +774,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of DescribeAppInstanceList  DescribeAppInstanceListRequest
+     * @return DescribeAppInstanceListResponse
+     */
     @Override
     public CompletableFuture<DescribeAppInstanceListResponse> describeAppInstanceList(DescribeAppInstanceListRequest request) {
         try {
@@ -636,6 +792,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of DescribeApplicationScalingRules  DescribeApplicationScalingRulesRequest
+     * @return DescribeApplicationScalingRulesResponse
+     */
     @Override
     public CompletableFuture<DescribeApplicationScalingRulesResponse> describeApplicationScalingRules(DescribeApplicationScalingRulesRequest request) {
         try {
@@ -650,6 +810,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of DisableApplicationScalingRule  DisableApplicationScalingRuleRequest
+     * @return DisableApplicationScalingRuleResponse
+     */
     @Override
     public CompletableFuture<DisableApplicationScalingRuleResponse> disableApplicationScalingRule(DisableApplicationScalingRuleRequest request) {
         try {
@@ -664,6 +828,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of EnableApplicationScalingRule  EnableApplicationScalingRuleRequest
+     * @return EnableApplicationScalingRuleResponse
+     */
     @Override
     public CompletableFuture<EnableApplicationScalingRuleResponse> enableApplicationScalingRule(EnableApplicationScalingRuleRequest request) {
         try {
@@ -678,6 +846,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of GetAppDeployment  GetAppDeploymentRequest
+     * @return GetAppDeploymentResponse
+     */
     @Override
     public CompletableFuture<GetAppDeploymentResponse> getAppDeployment(GetAppDeploymentRequest request) {
         try {
@@ -692,6 +864,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of GetApplication  GetApplicationRequest
+     * @return GetApplicationResponse
+     */
     @Override
     public CompletableFuture<GetApplicationResponse> getApplication(GetApplicationRequest request) {
         try {
@@ -706,6 +882,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of GetChangeOrderInfo  GetChangeOrderInfoRequest
+     * @return GetChangeOrderInfoResponse
+     */
     @Override
     public CompletableFuture<GetChangeOrderInfoResponse> getChangeOrderInfo(GetChangeOrderInfoRequest request) {
         try {
@@ -720,6 +900,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of GetCluster  GetClusterRequest
+     * @return GetClusterResponse
+     */
     @Override
     public CompletableFuture<GetClusterResponse> getCluster(GetClusterRequest request) {
         try {
@@ -734,6 +918,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of GetContainerConfiguration  GetContainerConfigurationRequest
+     * @return GetContainerConfigurationResponse
+     */
     @Override
     public CompletableFuture<GetContainerConfigurationResponse> getContainerConfiguration(GetContainerConfigurationRequest request) {
         try {
@@ -748,6 +936,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of GetJavaStartUpConfig  GetJavaStartUpConfigRequest
+     * @return GetJavaStartUpConfigResponse
+     */
     @Override
     public CompletableFuture<GetJavaStartUpConfigResponse> getJavaStartUpConfig(GetJavaStartUpConfigRequest request) {
         try {
@@ -762,6 +954,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of GetJvmConfiguration  GetJvmConfigurationRequest
+     * @return GetJvmConfigurationResponse
+     */
     @Override
     public CompletableFuture<GetJvmConfigurationResponse> getJvmConfiguration(GetJvmConfigurationRequest request) {
         try {
@@ -776,6 +972,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of GetK8sAppPrecheckResult  GetK8sAppPrecheckResultRequest
+     * @return GetK8sAppPrecheckResultResponse
+     */
     @Override
     public CompletableFuture<GetK8sAppPrecheckResultResponse> getK8sAppPrecheckResult(GetK8sAppPrecheckResultRequest request) {
         try {
@@ -790,6 +990,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of GetK8sApplication  GetK8sApplicationRequest
+     * @return GetK8sApplicationResponse
+     */
     @Override
     public CompletableFuture<GetK8sApplicationResponse> getK8sApplication(GetK8sApplicationRequest request) {
         try {
@@ -804,6 +1008,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of GetK8sCluster  GetK8sClusterRequest
+     * @return GetK8sClusterResponse
+     */
     @Override
     public CompletableFuture<GetK8sClusterResponse> getK8sCluster(GetK8sClusterRequest request) {
         try {
@@ -818,6 +1026,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of GetK8sServices  GetK8sServicesRequest
+     * @return GetK8sServicesResponse
+     */
     @Override
     public CompletableFuture<GetK8sServicesResponse> getK8sServices(GetK8sServicesRequest request) {
         try {
@@ -832,6 +1044,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of GetPackageStorageCredential  GetPackageStorageCredentialRequest
+     * @return GetPackageStorageCredentialResponse
+     */
     @Override
     public CompletableFuture<GetPackageStorageCredentialResponse> getPackageStorageCredential(GetPackageStorageCredentialRequest request) {
         try {
@@ -846,6 +1062,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of GetScalingRules  GetScalingRulesRequest
+     * @return GetScalingRulesResponse
+     */
     @Override
     public CompletableFuture<GetScalingRulesResponse> getScalingRules(GetScalingRulesRequest request) {
         try {
@@ -860,6 +1080,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of GetSecureToken  GetSecureTokenRequest
+     * @return GetSecureTokenResponse
+     */
     @Override
     public CompletableFuture<GetSecureTokenResponse> getSecureToken(GetSecureTokenRequest request) {
         try {
@@ -874,6 +1098,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of GetServiceConsumersPage  GetServiceConsumersPageRequest
+     * @return GetServiceConsumersPageResponse
+     */
     @Override
     public CompletableFuture<GetServiceConsumersPageResponse> getServiceConsumersPage(GetServiceConsumersPageRequest request) {
         try {
@@ -888,6 +1116,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of GetServiceDetail  GetServiceDetailRequest
+     * @return GetServiceDetailResponse
+     */
     @Override
     public CompletableFuture<GetServiceDetailResponse> getServiceDetail(GetServiceDetailRequest request) {
         try {
@@ -902,6 +1134,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of GetServiceListPage  GetServiceListPageRequest
+     * @return GetServiceListPageResponse
+     */
     @Override
     public CompletableFuture<GetServiceListPageResponse> getServiceListPage(GetServiceListPageRequest request) {
         try {
@@ -916,6 +1152,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of GetServiceMethodPage  GetServiceMethodPageRequest
+     * @return GetServiceMethodPageResponse
+     */
     @Override
     public CompletableFuture<GetServiceMethodPageResponse> getServiceMethodPage(GetServiceMethodPageRequest request) {
         try {
@@ -930,6 +1170,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of GetServiceProvidersPage  GetServiceProvidersPageRequest
+     * @return GetServiceProvidersPageResponse
+     */
     @Override
     public CompletableFuture<GetServiceProvidersPageResponse> getServiceProvidersPage(GetServiceProvidersPageRequest request) {
         try {
@@ -945,8 +1189,11 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
-      * ***
-      *
+     * <b>description</b> :
+     * <p>**</p>
+     * 
+     * @param request the request parameters of GetWebContainerConfig  GetWebContainerConfigRequest
+     * @return GetWebContainerConfigResponse
      */
     @Override
     public CompletableFuture<GetWebContainerConfigResponse> getWebContainerConfig(GetWebContainerConfigRequest request) {
@@ -962,6 +1209,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of ImportK8sCluster  ImportK8sClusterRequest
+     * @return ImportK8sClusterResponse
+     */
     @Override
     public CompletableFuture<ImportK8sClusterResponse> importK8sCluster(ImportK8sClusterRequest request) {
         try {
@@ -977,8 +1228,13 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
-      * > To create an application in a Kubernetes cluster, call the InsertK8sApplication operation provided by Enterprise Distributed Application Service (EDAS).
-      *
+     * <b>description</b> :
+     * <blockquote>
+     * <p>To create an application in a Kubernetes cluster, call the InsertK8sApplication operation provided by Enterprise Distributed Application Service (EDAS).</p>
+     * </blockquote>
+     * 
+     * @param request the request parameters of InsertApplication  InsertApplicationRequest
+     * @return InsertApplicationResponse
      */
     @Override
     public CompletableFuture<InsertApplicationResponse> insertApplication(InsertApplicationRequest request) {
@@ -994,6 +1250,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of InsertCluster  InsertClusterRequest
+     * @return InsertClusterResponse
+     */
     @Override
     public CompletableFuture<InsertClusterResponse> insertCluster(InsertClusterRequest request) {
         try {
@@ -1009,10 +1269,15 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
-      * ##
-      * If you call this operation to import an ECS instance, the operating system of the ECS instance is reinstalled. After the operating system is reinstalled, all original data of the ECS instance is deleted. In addition, you must set a logon password for the ECS instance. Make sure that no important data exists on the ECS instance that you want to import or data has been backed up for the ECS instance.
-      * > We recommend that you call the InstallAgent operation instead of this operation. For more information, see [InstallAgent](~~127023~~).
-      *
+     * <b>description</b> :
+     * <h2></h2>
+     * <p>If you call this operation to import an ECS instance, the operating system of the ECS instance is reinstalled. After the operating system is reinstalled, all original data of the ECS instance is deleted. In addition, you must set a logon password for the ECS instance. Make sure that no important data exists on the ECS instance that you want to import or data has been backed up for the ECS instance.</p>
+     * <blockquote>
+     * <p>We recommend that you call the InstallAgent operation instead of this operation. For more information, see <a href="https://help.aliyun.com/document_detail/127023.html">InstallAgent</a>.</p>
+     * </blockquote>
+     * 
+     * @param request the request parameters of InsertClusterMember  InsertClusterMemberRequest
+     * @return InsertClusterMemberResponse
      */
     @Override
     public CompletableFuture<InsertClusterMemberResponse> insertClusterMember(InsertClusterMemberRequest request) {
@@ -1028,6 +1293,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of InsertDeployGroup  InsertDeployGroupRequest
+     * @return InsertDeployGroupResponse
+     */
     @Override
     public CompletableFuture<InsertDeployGroupResponse> insertDeployGroup(InsertDeployGroupRequest request) {
         try {
@@ -1042,6 +1311,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of InsertK8sApplication  InsertK8sApplicationRequest
+     * @return InsertK8sApplicationResponse
+     */
     @Override
     public CompletableFuture<InsertK8sApplicationResponse> insertK8sApplication(InsertK8sApplicationRequest request) {
         try {
@@ -1056,6 +1329,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of InsertOrUpdateRegion  InsertOrUpdateRegionRequest
+     * @return InsertOrUpdateRegionResponse
+     */
     @Override
     public CompletableFuture<InsertOrUpdateRegionResponse> insertOrUpdateRegion(InsertOrUpdateRegionRequest request) {
         try {
@@ -1070,6 +1347,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of InsertRole  InsertRoleRequest
+     * @return InsertRoleResponse
+     */
     @Override
     public CompletableFuture<InsertRoleResponse> insertRole(InsertRoleRequest request) {
         try {
@@ -1084,6 +1365,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of InsertServiceGroup  InsertServiceGroupRequest
+     * @return InsertServiceGroupResponse
+     */
     @Override
     public CompletableFuture<InsertServiceGroupResponse> insertServiceGroup(InsertServiceGroupRequest request) {
         try {
@@ -1098,6 +1383,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of InsertSwimmingLane  InsertSwimmingLaneRequest
+     * @return InsertSwimmingLaneResponse
+     */
     @Override
     public CompletableFuture<InsertSwimmingLaneResponse> insertSwimmingLane(InsertSwimmingLaneRequest request) {
         try {
@@ -1112,6 +1401,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of InsertSwimmingLaneGroup  InsertSwimmingLaneGroupRequest
+     * @return InsertSwimmingLaneGroupResponse
+     */
     @Override
     public CompletableFuture<InsertSwimmingLaneGroupResponse> insertSwimmingLaneGroup(InsertSwimmingLaneGroupRequest request) {
         try {
@@ -1127,8 +1420,11 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
-      * If you call this operation to import an ECS instance into EDAS, the operating system of the ECS instance is not reinstalled. We recommend that you call this operation to import ECS instances into EDAS.
-      *
+     * <b>description</b> :
+     * <p>If you call this operation to import an ECS instance into EDAS, the operating system of the ECS instance is not reinstalled. We recommend that you call this operation to import ECS instances into EDAS.</p>
+     * 
+     * @param request the request parameters of InstallAgent  InstallAgentRequest
+     * @return InstallAgentResponse
      */
     @Override
     public CompletableFuture<InstallAgentResponse> installAgent(InstallAgentRequest request) {
@@ -1144,6 +1440,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of ListAliyunRegion  ListAliyunRegionRequest
+     * @return ListAliyunRegionResponse
+     */
     @Override
     public CompletableFuture<ListAliyunRegionResponse> listAliyunRegion(ListAliyunRegionRequest request) {
         try {
@@ -1158,6 +1458,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of ListApplication  ListApplicationRequest
+     * @return ListApplicationResponse
+     */
     @Override
     public CompletableFuture<ListApplicationResponse> listApplication(ListApplicationRequest request) {
         try {
@@ -1172,6 +1476,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of ListApplicationEcu  ListApplicationEcuRequest
+     * @return ListApplicationEcuResponse
+     */
     @Override
     public CompletableFuture<ListApplicationEcuResponse> listApplicationEcu(ListApplicationEcuRequest request) {
         try {
@@ -1186,6 +1494,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of ListAuthority  ListAuthorityRequest
+     * @return ListAuthorityResponse
+     */
     @Override
     public CompletableFuture<ListAuthorityResponse> listAuthority(ListAuthorityRequest request) {
         try {
@@ -1200,6 +1512,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of ListBuildPack  ListBuildPackRequest
+     * @return ListBuildPackResponse
+     */
     @Override
     public CompletableFuture<ListBuildPackResponse> listBuildPack(ListBuildPackRequest request) {
         try {
@@ -1214,6 +1530,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of ListCluster  ListClusterRequest
+     * @return ListClusterResponse
+     */
     @Override
     public CompletableFuture<ListClusterResponse> listCluster(ListClusterRequest request) {
         try {
@@ -1228,6 +1548,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of ListClusterMembers  ListClusterMembersRequest
+     * @return ListClusterMembersResponse
+     */
     @Override
     public CompletableFuture<ListClusterMembersResponse> listClusterMembers(ListClusterMembersRequest request) {
         try {
@@ -1242,6 +1566,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of ListComponents  ListComponentsRequest
+     * @return ListComponentsResponse
+     */
     @Override
     public CompletableFuture<ListComponentsResponse> listComponents(ListComponentsRequest request) {
         try {
@@ -1256,6 +1584,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of ListConfigTemplates  ListConfigTemplatesRequest
+     * @return ListConfigTemplatesResponse
+     */
     @Override
     public CompletableFuture<ListConfigTemplatesResponse> listConfigTemplates(ListConfigTemplatesRequest request) {
         try {
@@ -1270,6 +1602,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of ListConsumedServices  ListConsumedServicesRequest
+     * @return ListConsumedServicesResponse
+     */
     @Override
     public CompletableFuture<ListConsumedServicesResponse> listConsumedServices(ListConsumedServicesRequest request) {
         try {
@@ -1284,6 +1620,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of ListConvertableEcu  ListConvertableEcuRequest
+     * @return ListConvertableEcuResponse
+     */
     @Override
     public CompletableFuture<ListConvertableEcuResponse> listConvertableEcu(ListConvertableEcuRequest request) {
         try {
@@ -1298,6 +1638,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of ListDeployGroup  ListDeployGroupRequest
+     * @return ListDeployGroupResponse
+     */
     @Override
     public CompletableFuture<ListDeployGroupResponse> listDeployGroup(ListDeployGroupRequest request) {
         try {
@@ -1312,6 +1656,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of ListEcsNotInCluster  ListEcsNotInClusterRequest
+     * @return ListEcsNotInClusterResponse
+     */
     @Override
     public CompletableFuture<ListEcsNotInClusterResponse> listEcsNotInCluster(ListEcsNotInClusterRequest request) {
         try {
@@ -1327,11 +1675,16 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
-      * ## Terms
-      * *   **Namespace**: the logical concept that is used to isolate resources such as clusters, ECS instances, and applications, and microservices published in EDAS. This concept involves the default namespace and custom namespaces. Each region has a default namespace and supports multiple custom namespaces. By default, only the default namespace is available. You do not need to create a custom namespace if you do not want to isolate resources and microservices.
-      * *   **Elastic compute unit (ECU)**: After an ECS instance is imported to a cluster, the instance becomes an ECU.
-      * *   **Elastic compute container (ECC)**: After you deploy an application to an ECU in a cluster, the ECU becomes an ECC.
-      *
+     * <b>description</b> :
+     * <h2>Terms</h2>
+     * <ul>
+     * <li><strong>Namespace</strong>: the logical concept that is used to isolate resources such as clusters, ECS instances, and applications, and microservices published in EDAS. This concept involves the default namespace and custom namespaces. Each region has a default namespace and supports multiple custom namespaces. By default, only the default namespace is available. You do not need to create a custom namespace if you do not want to isolate resources and microservices.</li>
+     * <li><strong>Elastic compute unit (ECU)</strong>: After an ECS instance is imported to a cluster, the instance becomes an ECU.</li>
+     * <li><strong>Elastic compute container (ECC)</strong>: After you deploy an application to an ECU in a cluster, the ECU becomes an ECC.</li>
+     * </ul>
+     * 
+     * @param request the request parameters of ListEcuByRegion  ListEcuByRegionRequest
+     * @return ListEcuByRegionResponse
      */
     @Override
     public CompletableFuture<ListEcuByRegionResponse> listEcuByRegion(ListEcuByRegionRequest request) {
@@ -1347,6 +1700,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of ListHistoryDeployVersion  ListHistoryDeployVersionRequest
+     * @return ListHistoryDeployVersionResponse
+     */
     @Override
     public CompletableFuture<ListHistoryDeployVersionResponse> listHistoryDeployVersion(ListHistoryDeployVersionRequest request) {
         try {
@@ -1361,6 +1718,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of ListK8sConfigMaps  ListK8sConfigMapsRequest
+     * @return ListK8sConfigMapsResponse
+     */
     @Override
     public CompletableFuture<ListK8sConfigMapsResponse> listK8sConfigMaps(ListK8sConfigMapsRequest request) {
         try {
@@ -1375,6 +1736,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of ListK8sIngressRules  ListK8sIngressRulesRequest
+     * @return ListK8sIngressRulesResponse
+     */
     @Override
     public CompletableFuture<ListK8sIngressRulesResponse> listK8sIngressRules(ListK8sIngressRulesRequest request) {
         try {
@@ -1389,6 +1754,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of ListK8sNamespaces  ListK8sNamespacesRequest
+     * @return ListK8sNamespacesResponse
+     */
     @Override
     public CompletableFuture<ListK8sNamespacesResponse> listK8sNamespaces(ListK8sNamespacesRequest request) {
         try {
@@ -1403,6 +1772,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of ListK8sSecrets  ListK8sSecretsRequest
+     * @return ListK8sSecretsResponse
+     */
     @Override
     public CompletableFuture<ListK8sSecretsResponse> listK8sSecrets(ListK8sSecretsRequest request) {
         try {
@@ -1417,6 +1790,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of ListMethods  ListMethodsRequest
+     * @return ListMethodsResponse
+     */
     @Override
     public CompletableFuture<ListMethodsResponse> listMethods(ListMethodsRequest request) {
         try {
@@ -1431,6 +1808,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of ListPublishedServices  ListPublishedServicesRequest
+     * @return ListPublishedServicesResponse
+     */
     @Override
     public CompletableFuture<ListPublishedServicesResponse> listPublishedServices(ListPublishedServicesRequest request) {
         try {
@@ -1445,6 +1826,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of ListRecentChangeOrder  ListRecentChangeOrderRequest
+     * @return ListRecentChangeOrderResponse
+     */
     @Override
     public CompletableFuture<ListRecentChangeOrderResponse> listRecentChangeOrder(ListRecentChangeOrderRequest request) {
         try {
@@ -1459,6 +1844,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of ListResourceGroup  ListResourceGroupRequest
+     * @return ListResourceGroupResponse
+     */
     @Override
     public CompletableFuture<ListResourceGroupResponse> listResourceGroup(ListResourceGroupRequest request) {
         try {
@@ -1473,6 +1862,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of ListRole  ListRoleRequest
+     * @return ListRoleResponse
+     */
     @Override
     public CompletableFuture<ListRoleResponse> listRole(ListRoleRequest request) {
         try {
@@ -1488,11 +1881,16 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
-      * ## Terms
-      * *   **Namespace**: the logical concept that is used to isolate resources such as clusters, ECS instances, and applications, and microservices published in EDAS. This concept involves the default namespace and custom namespaces. Each region has a default namespace and supports multiple custom namespaces. By default, only the default namespace is available. You do not need to create a custom namespace if you do not want to isolate resources and microservices.
-      * *   **Elastic compute unit (ECU)**: After an ECS instance is imported to a cluster, the instance becomes an ECU.
-      * *   **Elastic compute container (ECC)**: After you deploy an application to an ECU in a cluster, the ECU becomes an ECC.
-      *
+     * <b>description</b> :
+     * <h2>Terms</h2>
+     * <ul>
+     * <li><strong>Namespace</strong>: the logical concept that is used to isolate resources such as clusters, ECS instances, and applications, and microservices published in EDAS. This concept involves the default namespace and custom namespaces. Each region has a default namespace and supports multiple custom namespaces. By default, only the default namespace is available. You do not need to create a custom namespace if you do not want to isolate resources and microservices.</li>
+     * <li><strong>Elastic compute unit (ECU)</strong>: After an ECS instance is imported to a cluster, the instance becomes an ECU.</li>
+     * <li><strong>Elastic compute container (ECC)</strong>: After you deploy an application to an ECU in a cluster, the ECU becomes an ECC.</li>
+     * </ul>
+     * 
+     * @param request the request parameters of ListScaleOutEcu  ListScaleOutEcuRequest
+     * @return ListScaleOutEcuResponse
      */
     @Override
     public CompletableFuture<ListScaleOutEcuResponse> listScaleOutEcu(ListScaleOutEcuRequest request) {
@@ -1508,6 +1906,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of ListServiceGroups  ListServiceGroupsRequest
+     * @return ListServiceGroupsResponse
+     */
     @Override
     public CompletableFuture<ListServiceGroupsResponse> listServiceGroups(ListServiceGroupsRequest request) {
         try {
@@ -1522,6 +1924,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of ListSlb  ListSlbRequest
+     * @return ListSlbResponse
+     */
     @Override
     public CompletableFuture<ListSlbResponse> listSlb(ListSlbRequest request) {
         try {
@@ -1536,6 +1942,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of ListSubAccount  ListSubAccountRequest
+     * @return ListSubAccountResponse
+     */
     @Override
     public CompletableFuture<ListSubAccountResponse> listSubAccount(ListSubAccountRequest request) {
         try {
@@ -1550,6 +1960,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of ListSwimmingLane  ListSwimmingLaneRequest
+     * @return ListSwimmingLaneResponse
+     */
     @Override
     public CompletableFuture<ListSwimmingLaneResponse> listSwimmingLane(ListSwimmingLaneRequest request) {
         try {
@@ -1564,6 +1978,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of ListSwimmingLaneGroup  ListSwimmingLaneGroupRequest
+     * @return ListSwimmingLaneGroupResponse
+     */
     @Override
     public CompletableFuture<ListSwimmingLaneGroupResponse> listSwimmingLaneGroup(ListSwimmingLaneGroupRequest request) {
         try {
@@ -1578,6 +1996,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of ListTagResources  ListTagResourcesRequest
+     * @return ListTagResourcesResponse
+     */
     @Override
     public CompletableFuture<ListTagResourcesResponse> listTagResources(ListTagResourcesRequest request) {
         try {
@@ -1592,6 +2014,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of ListUserDefineRegion  ListUserDefineRegionRequest
+     * @return ListUserDefineRegionResponse
+     */
     @Override
     public CompletableFuture<ListUserDefineRegionResponse> listUserDefineRegion(ListUserDefineRegionRequest request) {
         try {
@@ -1606,6 +2032,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of ListVpc  ListVpcRequest
+     * @return ListVpcResponse
+     */
     @Override
     public CompletableFuture<ListVpcResponse> listVpc(ListVpcRequest request) {
         try {
@@ -1621,14 +2051,19 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
-      * ## Limits
-      * We recommend that you do not call this operation. Instead, we recommend that you call the TransformClusterMember operation. For more information, see [TransformClusterMember](~~71514~~).
-      * When you call this operation to import an Elastic Compute Service (ECS) instance, the operating system of the ECS instance is reinstalled. After the operating system is reinstalled, all data of the ECS instance is deleted. You must set a logon password for the ECS instance. Make sure that no important data exists on or data has been backed up for the ECS instance that you want to import.
-      * ## Terms
-      * *   **Namespace**: the logical concept that is used to isolate resources and microservices in Enterprise Distributed Application Service (EDAS). The resources include clusters, ECS instances, and applications. You can use a default or custom namespace. Each region has a default namespace and supports multiple custom namespaces. By default, only the default namespace is available. You do not need to create a custom namespace if you do not want to isolate resources or microservices.
-      * *   **ECU**: After an ECS instance is imported to a cluster, the instance becomes an ECU.
-      * *   **Elastic compute container (ECC)**: After you deploy an application to an ECU in a cluster, the ECU becomes an ECC.
-      *
+     * <b>description</b> :
+     * <h2>Limits</h2>
+     * <p>We recommend that you do not call this operation. Instead, we recommend that you call the TransformClusterMember operation. For more information, see <a href="https://help.aliyun.com/document_detail/71514.html">TransformClusterMember</a>.
+     * When you call this operation to import an Elastic Compute Service (ECS) instance, the operating system of the ECS instance is reinstalled. After the operating system is reinstalled, all data of the ECS instance is deleted. You must set a logon password for the ECS instance. Make sure that no important data exists on or data has been backed up for the ECS instance that you want to import.</p>
+     * <h2>Terms</h2>
+     * <ul>
+     * <li><strong>Namespace</strong>: the logical concept that is used to isolate resources and microservices in Enterprise Distributed Application Service (EDAS). The resources include clusters, ECS instances, and applications. You can use a default or custom namespace. Each region has a default namespace and supports multiple custom namespaces. By default, only the default namespace is available. You do not need to create a custom namespace if you do not want to isolate resources or microservices.</li>
+     * <li><strong>ECU</strong>: After an ECS instance is imported to a cluster, the instance becomes an ECU.</li>
+     * <li><strong>Elastic compute container (ECC)</strong>: After you deploy an application to an ECU in a cluster, the ECU becomes an ECC.</li>
+     * </ul>
+     * 
+     * @param request the request parameters of MigrateEcu  MigrateEcuRequest
+     * @return MigrateEcuResponse
      */
     @Override
     public CompletableFuture<MigrateEcuResponse> migrateEcu(MigrateEcuRequest request) {
@@ -1644,6 +2079,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of ModifyScalingRule  ModifyScalingRuleRequest
+     * @return ModifyScalingRuleResponse
+     */
     @Override
     public CompletableFuture<ModifyScalingRuleResponse> modifyScalingRule(ModifyScalingRuleRequest request) {
         try {
@@ -1658,6 +2097,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of QueryApplicationStatus  QueryApplicationStatusRequest
+     * @return QueryApplicationStatusResponse
+     */
     @Override
     public CompletableFuture<QueryApplicationStatusResponse> queryApplicationStatus(QueryApplicationStatusRequest request) {
         try {
@@ -1672,6 +2115,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of QueryEccInfo  QueryEccInfoRequest
+     * @return QueryEccInfoResponse
+     */
     @Override
     public CompletableFuture<QueryEccInfoResponse> queryEccInfo(QueryEccInfoRequest request) {
         try {
@@ -1686,6 +2133,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of QueryMigrateEcuList  QueryMigrateEcuListRequest
+     * @return QueryMigrateEcuListResponse
+     */
     @Override
     public CompletableFuture<QueryMigrateEcuListResponse> queryMigrateEcuList(QueryMigrateEcuListRequest request) {
         try {
@@ -1700,6 +2151,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of QueryMigrateRegionList  QueryMigrateRegionListRequest
+     * @return QueryMigrateRegionListResponse
+     */
     @Override
     public CompletableFuture<QueryMigrateRegionListResponse> queryMigrateRegionList(QueryMigrateRegionListRequest request) {
         try {
@@ -1714,6 +2169,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of QueryRegionConfig  QueryRegionConfigRequest
+     * @return QueryRegionConfigResponse
+     */
     @Override
     public CompletableFuture<QueryRegionConfigResponse> queryRegionConfig(QueryRegionConfigRequest request) {
         try {
@@ -1728,6 +2187,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of QuerySlsLogStoreList  QuerySlsLogStoreListRequest
+     * @return QuerySlsLogStoreListResponse
+     */
     @Override
     public CompletableFuture<QuerySlsLogStoreListResponse> querySlsLogStoreList(QuerySlsLogStoreListRequest request) {
         try {
@@ -1742,6 +2205,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of ResetApplication  ResetApplicationRequest
+     * @return ResetApplicationResponse
+     */
     @Override
     public CompletableFuture<ResetApplicationResponse> resetApplication(ResetApplicationRequest request) {
         try {
@@ -1756,6 +2223,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of RestartApplication  RestartApplicationRequest
+     * @return RestartApplicationResponse
+     */
     @Override
     public CompletableFuture<RestartApplicationResponse> restartApplication(RestartApplicationRequest request) {
         try {
@@ -1770,6 +2241,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of RestartK8sApplication  RestartK8sApplicationRequest
+     * @return RestartK8sApplicationResponse
+     */
     @Override
     public CompletableFuture<RestartK8sApplicationResponse> restartK8sApplication(RestartK8sApplicationRequest request) {
         try {
@@ -1784,6 +2259,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of RetryChangeOrderTask  RetryChangeOrderTaskRequest
+     * @return RetryChangeOrderTaskResponse
+     */
     @Override
     public CompletableFuture<RetryChangeOrderTaskResponse> retryChangeOrderTask(RetryChangeOrderTaskRequest request) {
         try {
@@ -1798,6 +2277,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of RollbackApplication  RollbackApplicationRequest
+     * @return RollbackApplicationResponse
+     */
     @Override
     public CompletableFuture<RollbackApplicationResponse> rollbackApplication(RollbackApplicationRequest request) {
         try {
@@ -1812,6 +2295,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of RollbackChangeOrder  RollbackChangeOrderRequest
+     * @return RollbackChangeOrderResponse
+     */
     @Override
     public CompletableFuture<RollbackChangeOrderResponse> rollbackChangeOrder(RollbackChangeOrderRequest request) {
         try {
@@ -1826,6 +2313,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of ScaleInApplication  ScaleInApplicationRequest
+     * @return ScaleInApplicationResponse
+     */
     @Override
     public CompletableFuture<ScaleInApplicationResponse> scaleInApplication(ScaleInApplicationRequest request) {
         try {
@@ -1840,6 +2331,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of ScaleK8sApplication  ScaleK8sApplicationRequest
+     * @return ScaleK8sApplicationResponse
+     */
     @Override
     public CompletableFuture<ScaleK8sApplicationResponse> scaleK8sApplication(ScaleK8sApplicationRequest request) {
         try {
@@ -1854,6 +2349,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of ScaleOutApplication  ScaleOutApplicationRequest
+     * @return ScaleOutApplicationResponse
+     */
     @Override
     public CompletableFuture<ScaleOutApplicationResponse> scaleOutApplication(ScaleOutApplicationRequest request) {
         try {
@@ -1869,9 +2368,12 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
-      * ## Limits
-      * Assume that the auto scaling feature is configured and enabled for an application. When an auto scale-in is triggered for the application, the ECS instances that are purchased by calling this operation are removed first.
-      *
+     * <b>description</b> :
+     * <h2>Limits</h2>
+     * <p>Assume that the auto scaling feature is configured and enabled for an application. When an auto scale-in is triggered for the application, the ECS instances that are purchased by calling this operation are removed first.</p>
+     * 
+     * @param request the request parameters of ScaleoutApplicationWithNewInstances  ScaleoutApplicationWithNewInstancesRequest
+     * @return ScaleoutApplicationWithNewInstancesResponse
      */
     @Override
     public CompletableFuture<ScaleoutApplicationWithNewInstancesResponse> scaleoutApplicationWithNewInstances(ScaleoutApplicationWithNewInstancesRequest request) {
@@ -1887,6 +2389,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of StartApplication  StartApplicationRequest
+     * @return StartApplicationResponse
+     */
     @Override
     public CompletableFuture<StartApplicationResponse> startApplication(StartApplicationRequest request) {
         try {
@@ -1901,6 +2407,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of StartK8sAppPrecheck  StartK8sAppPrecheckRequest
+     * @return StartK8sAppPrecheckResponse
+     */
     @Override
     public CompletableFuture<StartK8sAppPrecheckResponse> startK8sAppPrecheck(StartK8sAppPrecheckRequest request) {
         try {
@@ -1915,6 +2425,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of StartK8sApplication  StartK8sApplicationRequest
+     * @return StartK8sApplicationResponse
+     */
     @Override
     public CompletableFuture<StartK8sApplicationResponse> startK8sApplication(StartK8sApplicationRequest request) {
         try {
@@ -1929,6 +2443,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of StopApplication  StopApplicationRequest
+     * @return StopApplicationResponse
+     */
     @Override
     public CompletableFuture<StopApplicationResponse> stopApplication(StopApplicationRequest request) {
         try {
@@ -1943,6 +2461,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of StopK8sApplication  StopK8sApplicationRequest
+     * @return StopK8sApplicationResponse
+     */
     @Override
     public CompletableFuture<StopK8sApplicationResponse> stopK8sApplication(StopK8sApplicationRequest request) {
         try {
@@ -1958,8 +2480,11 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
-      * To call the SwitchAdvancedMonitoring operation, you must make sure that the version of Enterprise Distributed Application Service (EDAS) SDK for Java or Python is 3.15.2 or later.
-      *
+     * <b>description</b> :
+     * <p>To call the SwitchAdvancedMonitoring operation, you must make sure that the version of Enterprise Distributed Application Service (EDAS) SDK for Java or Python is 3.15.2 or later.</p>
+     * 
+     * @param request the request parameters of SwitchAdvancedMonitoring  SwitchAdvancedMonitoringRequest
+     * @return SwitchAdvancedMonitoringResponse
      */
     @Override
     public CompletableFuture<SwitchAdvancedMonitoringResponse> switchAdvancedMonitoring(SwitchAdvancedMonitoringRequest request) {
@@ -1976,8 +2501,11 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
-      * If you call this operation to synchronize ECS resource information, all instance data is synchronized from ECS. If you have more than 100 ECS instances, we recommend that you do not frequently call this operation.
-      *
+     * <b>description</b> :
+     * <p>If you call this operation to synchronize ECS resource information, all instance data is synchronized from ECS. If you have more than 100 ECS instances, we recommend that you do not frequently call this operation.</p>
+     * 
+     * @param request the request parameters of SynchronizeResource  SynchronizeResourceRequest
+     * @return SynchronizeResourceResponse
      */
     @Override
     public CompletableFuture<SynchronizeResourceResponse> synchronizeResource(SynchronizeResourceRequest request) {
@@ -1993,6 +2521,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of TagResources  TagResourcesRequest
+     * @return TagResourcesResponse
+     */
     @Override
     public CompletableFuture<TagResourcesResponse> tagResources(TagResourcesRequest request) {
         try {
@@ -2008,9 +2540,12 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
-      * ## Limits
-      * When you call this operation to import an ECS instance, the operating system of the ECS instance is reinstalled. After the operating system is reinstalled, all data of the ECS instance is deleted. You must set a logon password for the ECS instance. Make sure that no important data exists on or data has been backed up for the ECS instance that you want to import.
-      *
+     * <b>description</b> :
+     * <h2>Limits</h2>
+     * <p>When you call this operation to import an ECS instance, the operating system of the ECS instance is reinstalled. After the operating system is reinstalled, all data of the ECS instance is deleted. You must set a logon password for the ECS instance. Make sure that no important data exists on or data has been backed up for the ECS instance that you want to import.</p>
+     * 
+     * @param request the request parameters of TransformClusterMember  TransformClusterMemberRequest
+     * @return TransformClusterMemberResponse
      */
     @Override
     public CompletableFuture<TransformClusterMemberResponse> transformClusterMember(TransformClusterMemberRequest request) {
@@ -2026,6 +2561,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of UnbindK8sSlb  UnbindK8sSlbRequest
+     * @return UnbindK8sSlbResponse
+     */
     @Override
     public CompletableFuture<UnbindK8sSlbResponse> unbindK8sSlb(UnbindK8sSlbRequest request) {
         try {
@@ -2040,6 +2579,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of UnbindSlb  UnbindSlbRequest
+     * @return UnbindSlbResponse
+     */
     @Override
     public CompletableFuture<UnbindSlbResponse> unbindSlb(UnbindSlbRequest request) {
         try {
@@ -2054,6 +2597,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of UntagResources  UntagResourcesRequest
+     * @return UntagResourcesResponse
+     */
     @Override
     public CompletableFuture<UntagResourcesResponse> untagResources(UntagResourcesRequest request) {
         try {
@@ -2068,6 +2615,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of UpdateAccountInfo  UpdateAccountInfoRequest
+     * @return UpdateAccountInfoResponse
+     */
     @Override
     public CompletableFuture<UpdateAccountInfoResponse> updateAccountInfo(UpdateAccountInfoRequest request) {
         try {
@@ -2082,6 +2633,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of UpdateApplicationBaseInfo  UpdateApplicationBaseInfoRequest
+     * @return UpdateApplicationBaseInfoResponse
+     */
     @Override
     public CompletableFuture<UpdateApplicationBaseInfoResponse> updateApplicationBaseInfo(UpdateApplicationBaseInfoRequest request) {
         try {
@@ -2096,6 +2651,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of UpdateApplicationScalingRule  UpdateApplicationScalingRuleRequest
+     * @return UpdateApplicationScalingRuleResponse
+     */
     @Override
     public CompletableFuture<UpdateApplicationScalingRuleResponse> updateApplicationScalingRule(UpdateApplicationScalingRuleRequest request) {
         try {
@@ -2110,6 +2669,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of UpdateConfigTemplate  UpdateConfigTemplateRequest
+     * @return UpdateConfigTemplateResponse
+     */
     @Override
     public CompletableFuture<UpdateConfigTemplateResponse> updateConfigTemplate(UpdateConfigTemplateRequest request) {
         try {
@@ -2124,6 +2687,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of UpdateContainer  UpdateContainerRequest
+     * @return UpdateContainerResponse
+     */
     @Override
     public CompletableFuture<UpdateContainerResponse> updateContainer(UpdateContainerRequest request) {
         try {
@@ -2138,6 +2705,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of UpdateContainerConfiguration  UpdateContainerConfigurationRequest
+     * @return UpdateContainerConfigurationResponse
+     */
     @Override
     public CompletableFuture<UpdateContainerConfigurationResponse> updateContainerConfiguration(UpdateContainerConfigurationRequest request) {
         try {
@@ -2152,6 +2723,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of UpdateHealthCheckUrl  UpdateHealthCheckUrlRequest
+     * @return UpdateHealthCheckUrlResponse
+     */
     @Override
     public CompletableFuture<UpdateHealthCheckUrlResponse> updateHealthCheckUrl(UpdateHealthCheckUrlRequest request) {
         try {
@@ -2166,6 +2741,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of UpdateHookConfiguration  UpdateHookConfigurationRequest
+     * @return UpdateHookConfigurationResponse
+     */
     @Override
     public CompletableFuture<UpdateHookConfigurationResponse> updateHookConfiguration(UpdateHookConfigurationRequest request) {
         try {
@@ -2180,6 +2759,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of UpdateJvmConfiguration  UpdateJvmConfigurationRequest
+     * @return UpdateJvmConfigurationResponse
+     */
     @Override
     public CompletableFuture<UpdateJvmConfigurationResponse> updateJvmConfiguration(UpdateJvmConfigurationRequest request) {
         try {
@@ -2194,6 +2777,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of UpdateK8sApplicationBaseInfo  UpdateK8sApplicationBaseInfoRequest
+     * @return UpdateK8sApplicationBaseInfoResponse
+     */
     @Override
     public CompletableFuture<UpdateK8sApplicationBaseInfoResponse> updateK8sApplicationBaseInfo(UpdateK8sApplicationBaseInfoRequest request) {
         try {
@@ -2208,6 +2795,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of UpdateK8sApplicationConfig  UpdateK8sApplicationConfigRequest
+     * @return UpdateK8sApplicationConfigResponse
+     */
     @Override
     public CompletableFuture<UpdateK8sApplicationConfigResponse> updateK8sApplicationConfig(UpdateK8sApplicationConfigRequest request) {
         try {
@@ -2222,6 +2813,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of UpdateK8sConfigMap  UpdateK8sConfigMapRequest
+     * @return UpdateK8sConfigMapResponse
+     */
     @Override
     public CompletableFuture<UpdateK8sConfigMapResponse> updateK8sConfigMap(UpdateK8sConfigMapRequest request) {
         try {
@@ -2236,6 +2831,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of UpdateK8sIngressRule  UpdateK8sIngressRuleRequest
+     * @return UpdateK8sIngressRuleResponse
+     */
     @Override
     public CompletableFuture<UpdateK8sIngressRuleResponse> updateK8sIngressRule(UpdateK8sIngressRuleRequest request) {
         try {
@@ -2251,8 +2850,13 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
-      * > You can update only Deployments.
-      *
+     * <b>description</b> :
+     * <blockquote>
+     * <p>You can update only Deployments.</p>
+     * </blockquote>
+     * 
+     * @param request the request parameters of UpdateK8sResource  UpdateK8sResourceRequest
+     * @return UpdateK8sResourceResponse
      */
     @Override
     public CompletableFuture<UpdateK8sResourceResponse> updateK8sResource(UpdateK8sResourceRequest request) {
@@ -2268,6 +2872,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of UpdateK8sSecret  UpdateK8sSecretRequest
+     * @return UpdateK8sSecretResponse
+     */
     @Override
     public CompletableFuture<UpdateK8sSecretResponse> updateK8sSecret(UpdateK8sSecretRequest request) {
         try {
@@ -2282,6 +2890,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of UpdateK8sService  UpdateK8sServiceRequest
+     * @return UpdateK8sServiceResponse
+     */
     @Override
     public CompletableFuture<UpdateK8sServiceResponse> updateK8sService(UpdateK8sServiceRequest request) {
         try {
@@ -2296,6 +2908,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of UpdateK8sSlb  UpdateK8sSlbRequest
+     * @return UpdateK8sSlbResponse
+     */
     @Override
     public CompletableFuture<UpdateK8sSlbResponse> updateK8sSlb(UpdateK8sSlbRequest request) {
         try {
@@ -2310,6 +2926,28 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of UpdateLocalitySetting  UpdateLocalitySettingRequest
+     * @return UpdateLocalitySettingResponse
+     */
+    @Override
+    public CompletableFuture<UpdateLocalitySettingResponse> updateLocalitySetting(UpdateLocalitySettingRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RESTFUL).setAction("UpdateLocalitySetting").setMethod(HttpMethod.POST).setPathRegex("/pop/sp/applications/locality/setting").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(UpdateLocalitySettingResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<UpdateLocalitySettingResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
+     * @param request the request parameters of UpdateRole  UpdateRoleRequest
+     * @return UpdateRoleResponse
+     */
     @Override
     public CompletableFuture<UpdateRoleResponse> updateRole(UpdateRoleRequest request) {
         try {
@@ -2324,6 +2962,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of UpdateSlsLogStore  UpdateSlsLogStoreRequest
+     * @return UpdateSlsLogStoreResponse
+     */
     @Override
     public CompletableFuture<UpdateSlsLogStoreResponse> updateSlsLogStore(UpdateSlsLogStoreRequest request) {
         try {
@@ -2338,6 +2980,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of UpdateSwimmingLane  UpdateSwimmingLaneRequest
+     * @return UpdateSwimmingLaneResponse
+     */
     @Override
     public CompletableFuture<UpdateSwimmingLaneResponse> updateSwimmingLane(UpdateSwimmingLaneRequest request) {
         try {
@@ -2352,6 +2998,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of UpdateSwimmingLaneGroup  UpdateSwimmingLaneGroupRequest
+     * @return UpdateSwimmingLaneGroupResponse
+     */
     @Override
     public CompletableFuture<UpdateSwimmingLaneGroupResponse> updateSwimmingLaneGroup(UpdateSwimmingLaneGroupRequest request) {
         try {

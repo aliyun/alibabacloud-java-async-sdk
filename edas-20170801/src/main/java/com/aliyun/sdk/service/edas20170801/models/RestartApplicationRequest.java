@@ -1,24 +1,29 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.edas20170801.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link RestartApplicationRequest} extends {@link RequestModel}
  *
  * <p>RestartApplicationRequest</p>
  */
 public class RestartApplicationRequest extends Request {
-    @Query
-    @NameInMap("AppId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("AppId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String appId;
 
-    @Query
-    @NameInMap("EccInfo")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("EccInfo")
     private String eccInfo;
 
     private RestartApplicationRequest(Builder builder) {
@@ -35,7 +40,7 @@ public class RestartApplicationRequest extends Request {
         return builder().build();
     }
 
-    @Override
+@Override
     public Builder toBuilder() {
         return new Builder(this);
     }
@@ -69,7 +74,11 @@ public class RestartApplicationRequest extends Request {
         } 
 
         /**
-         * The ID of the application. You can call the ListApplication operation to query the application ID. For more information, see [ListApplication](~~149390~~).
+         * <p>The ID of the application. You can call the ListApplication operation to query the application ID. For more information, see <a href="https://help.aliyun.com/document_detail/149390.html">ListApplication</a>.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>c627c157-560d*******</p>
          */
         public Builder appId(String appId) {
             this.putQueryParameter("AppId", appId);
@@ -78,11 +87,14 @@ public class RestartApplicationRequest extends Request {
         }
 
         /**
-         * The ID of the elastic compute container (ECC) that corresponds to the ECS instance on which you want to restart the application. You can call the QueryApplicationStatus operation to query the ECC ID. For more information, see [QueryApplicationStatus](~~149394~~).
-         * <p>
+         * <p>The ID of the elastic compute container (ECC) that corresponds to the ECS instance on which you want to restart the application. You can call the QueryApplicationStatus operation to query the ECC ID. For more information, see <a href="https://help.aliyun.com/document_detail/149394.html">QueryApplicationStatus</a>.</p>
+         * <ul>
+         * <li>Separate multiple ECC IDs with commas (,).</li>
+         * <li>If you leave this parameter empty, the application will be restarted on all the ECS instances deployed with the application.</li>
+         * </ul>
          * 
-         * *   Separate multiple ECC IDs with commas (,).
-         * *   If you leave this parameter empty, the application will be restarted on all the ECS instances deployed with the application.
+         * <strong>example:</strong>
+         * <p>006c0ea5-5f8d-4398-af1e-**********</p>
          */
         public Builder eccInfo(String eccInfo) {
             this.putQueryParameter("EccInfo", eccInfo);

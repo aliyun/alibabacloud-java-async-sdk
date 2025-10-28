@@ -1,27 +1,32 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.edas20170801.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link GetK8sApplicationResponseBody} extends {@link TeaModel}
  *
  * <p>GetK8sApplicationResponseBody</p>
  */
 public class GetK8sApplicationResponseBody extends TeaModel {
-    @NameInMap("Applcation")
+    @com.aliyun.core.annotation.NameInMap("Applcation")
     private Applcation applcation;
 
-    @NameInMap("Code")
+    @com.aliyun.core.annotation.NameInMap("Code")
     private Integer code;
 
-    @NameInMap("Message")
+    @com.aliyun.core.annotation.NameInMap("Message")
     private String message;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
     private GetK8sApplicationResponseBody(Builder builder) {
@@ -37,6 +42,10 @@ public class GetK8sApplicationResponseBody extends TeaModel {
 
     public static GetK8sApplicationResponseBody create() {
         return builder().build();
+    }
+
+    public Builder toBuilder() {
+        return new Builder(this);
     }
 
     /**
@@ -73,8 +82,18 @@ public class GetK8sApplicationResponseBody extends TeaModel {
         private String message; 
         private String requestId; 
 
+        private Builder() {
+        } 
+
+        private Builder(GetK8sApplicationResponseBody model) {
+            this.applcation = model.applcation;
+            this.code = model.code;
+            this.message = model.message;
+            this.requestId = model.requestId;
+        } 
+
         /**
-         * The information about the application.
+         * <p>The information about the application.</p>
          */
         public Builder applcation(Applcation applcation) {
             this.applcation = applcation;
@@ -82,7 +101,10 @@ public class GetK8sApplicationResponseBody extends TeaModel {
         }
 
         /**
-         * The HTTP status code that is returned.
+         * <p>The HTTP status code that is returned.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>200</p>
          */
         public Builder code(Integer code) {
             this.code = code;
@@ -90,7 +112,10 @@ public class GetK8sApplicationResponseBody extends TeaModel {
         }
 
         /**
-         * The additional information that is returned.
+         * <p>The additional information that is returned.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>success</p>
          */
         public Builder message(String message) {
             this.message = message;
@@ -98,7 +123,10 @@ public class GetK8sApplicationResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the request.
+         * <p>The ID of the request.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1053-08e4-47a5-b2ab-5c0323de7b5a</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -111,9 +139,15 @@ public class GetK8sApplicationResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link GetK8sApplicationResponseBody} extends {@link TeaModel}
+     *
+     * <p>GetK8sApplicationResponseBody</p>
+     */
     public static class CmdArgs extends TeaModel {
-        @NameInMap("CmdArg")
-        private java.util.List < String > cmdArg;
+        @com.aliyun.core.annotation.NameInMap("CmdArg")
+        private java.util.List<String> cmdArg;
 
         private CmdArgs(Builder builder) {
             this.cmdArg = builder.cmdArg;
@@ -130,17 +164,24 @@ public class GetK8sApplicationResponseBody extends TeaModel {
         /**
          * @return cmdArg
          */
-        public java.util.List < String > getCmdArg() {
+        public java.util.List<String> getCmdArg() {
             return this.cmdArg;
         }
 
         public static final class Builder {
-            private java.util.List < String > cmdArg; 
+            private java.util.List<String> cmdArg; 
+
+            private Builder() {
+            } 
+
+            private Builder(CmdArgs model) {
+                this.cmdArg = model.cmdArg;
+            } 
 
             /**
              * CmdArg.
              */
-            public Builder cmdArg(java.util.List < String > cmdArg) {
+            public Builder cmdArg(java.util.List<String> cmdArg) {
                 this.cmdArg = cmdArg;
                 return this;
             }
@@ -152,11 +193,17 @@ public class GetK8sApplicationResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link GetK8sApplicationResponseBody} extends {@link TeaModel}
+     *
+     * <p>GetK8sApplicationResponseBody</p>
+     */
     public static class Env extends TeaModel {
-        @NameInMap("Name")
+        @com.aliyun.core.annotation.NameInMap("Name")
         private String name;
 
-        @NameInMap("Value")
+        @com.aliyun.core.annotation.NameInMap("Value")
         private String value;
 
         private Env(Builder builder) {
@@ -190,8 +237,19 @@ public class GetK8sApplicationResponseBody extends TeaModel {
             private String name; 
             private String value; 
 
+            private Builder() {
+            } 
+
+            private Builder(Env model) {
+                this.name = model.name;
+                this.value = model.value;
+            } 
+
             /**
-             * The name of the environment variable.
+             * <p>The name of the environment variable.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>CATALINA_OPTS</p>
              */
             public Builder name(String name) {
                 this.name = name;
@@ -199,7 +257,10 @@ public class GetK8sApplicationResponseBody extends TeaModel {
             }
 
             /**
-             * The value of the environment variable.
+             * <p>The value of the environment variable.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>-Xmx 1024m -Dhsf.default.tid=false $(EDAS_CATALINA_OPTS)</p>
              */
             public Builder value(String value) {
                 this.value = value;
@@ -213,9 +274,15 @@ public class GetK8sApplicationResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link GetK8sApplicationResponseBody} extends {@link TeaModel}
+     *
+     * <p>GetK8sApplicationResponseBody</p>
+     */
     public static class EnvList extends TeaModel {
-        @NameInMap("Env")
-        private java.util.List < Env> env;
+        @com.aliyun.core.annotation.NameInMap("Env")
+        private java.util.List<Env> env;
 
         private EnvList(Builder builder) {
             this.env = builder.env;
@@ -232,17 +299,24 @@ public class GetK8sApplicationResponseBody extends TeaModel {
         /**
          * @return env
          */
-        public java.util.List < Env> getEnv() {
+        public java.util.List<Env> getEnv() {
             return this.env;
         }
 
         public static final class Builder {
-            private java.util.List < Env> env; 
+            private java.util.List<Env> env; 
+
+            private Builder() {
+            } 
+
+            private Builder(EnvList model) {
+                this.env = model.env;
+            } 
 
             /**
              * Env.
              */
-            public Builder env(java.util.List < Env> env) {
+            public Builder env(java.util.List<Env> env) {
                 this.env = env;
                 return this;
             }
@@ -254,110 +328,116 @@ public class GetK8sApplicationResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link GetK8sApplicationResponseBody} extends {@link TeaModel}
+     *
+     * <p>GetK8sApplicationResponseBody</p>
+     */
     public static class App extends TeaModel {
-        @NameInMap("Annotations")
+        @com.aliyun.core.annotation.NameInMap("Annotations")
         private String annotations;
 
-        @NameInMap("AppId")
+        @com.aliyun.core.annotation.NameInMap("AppId")
         private String appId;
 
-        @NameInMap("ApplicationName")
+        @com.aliyun.core.annotation.NameInMap("ApplicationName")
         private String applicationName;
 
-        @NameInMap("ApplicationType")
+        @com.aliyun.core.annotation.NameInMap("ApplicationType")
         private String applicationType;
 
-        @NameInMap("BuildpackId")
+        @com.aliyun.core.annotation.NameInMap("BuildpackId")
         private Integer buildpackId;
 
-        @NameInMap("ClusterId")
+        @com.aliyun.core.annotation.NameInMap("ClusterId")
         private String clusterId;
 
-        @NameInMap("Cmd")
+        @com.aliyun.core.annotation.NameInMap("Cmd")
         private String cmd;
 
-        @NameInMap("CmdArgs")
+        @com.aliyun.core.annotation.NameInMap("CmdArgs")
         private CmdArgs cmdArgs;
 
-        @NameInMap("CsClusterId")
+        @com.aliyun.core.annotation.NameInMap("CsClusterId")
         private String csClusterId;
 
-        @NameInMap("DeployType")
+        @com.aliyun.core.annotation.NameInMap("DeployType")
         private String deployType;
 
-        @NameInMap("DevelopType")
+        @com.aliyun.core.annotation.NameInMap("DevelopType")
         private String developType;
 
-        @NameInMap("EdasContainerVersion")
+        @com.aliyun.core.annotation.NameInMap("EdasContainerVersion")
         private String edasContainerVersion;
 
-        @NameInMap("EnableEmptyPushReject")
+        @com.aliyun.core.annotation.NameInMap("EnableEmptyPushReject")
         private Boolean enableEmptyPushReject;
 
-        @NameInMap("EnableLosslessRule")
+        @com.aliyun.core.annotation.NameInMap("EnableLosslessRule")
         private Boolean enableLosslessRule;
 
-        @NameInMap("EnvList")
+        @com.aliyun.core.annotation.NameInMap("EnvList")
         private EnvList envList;
 
-        @NameInMap("FeatureAnnotations")
+        @com.aliyun.core.annotation.NameInMap("FeatureAnnotations")
         private String featureAnnotations;
 
-        @NameInMap("Instances")
+        @com.aliyun.core.annotation.NameInMap("Instances")
         private Integer instances;
 
-        @NameInMap("InstancesBeforeScaling")
+        @com.aliyun.core.annotation.NameInMap("InstancesBeforeScaling")
         private Integer instancesBeforeScaling;
 
-        @NameInMap("K8sNamespace")
+        @com.aliyun.core.annotation.NameInMap("K8sNamespace")
         private String k8sNamespace;
 
-        @NameInMap("Labels")
+        @com.aliyun.core.annotation.NameInMap("Labels")
         private String labels;
 
-        @NameInMap("LimitCpuM")
+        @com.aliyun.core.annotation.NameInMap("LimitCpuM")
         private Integer limitCpuM;
 
-        @NameInMap("LimitEphemeralStorage")
+        @com.aliyun.core.annotation.NameInMap("LimitEphemeralStorage")
         private String limitEphemeralStorage;
 
-        @NameInMap("LimitMem")
+        @com.aliyun.core.annotation.NameInMap("LimitMem")
         private Integer limitMem;
 
-        @NameInMap("LosslessRuleAligned")
+        @com.aliyun.core.annotation.NameInMap("LosslessRuleAligned")
         private Boolean losslessRuleAligned;
 
-        @NameInMap("LosslessRuleDelayTime")
+        @com.aliyun.core.annotation.NameInMap("LosslessRuleDelayTime")
         private Integer losslessRuleDelayTime;
 
-        @NameInMap("LosslessRuleFuncType")
+        @com.aliyun.core.annotation.NameInMap("LosslessRuleFuncType")
         private Integer losslessRuleFuncType;
 
-        @NameInMap("LosslessRuleRelated")
+        @com.aliyun.core.annotation.NameInMap("LosslessRuleRelated")
         private Boolean losslessRuleRelated;
 
-        @NameInMap("LosslessRuleWarmupTime")
+        @com.aliyun.core.annotation.NameInMap("LosslessRuleWarmupTime")
         private Integer losslessRuleWarmupTime;
 
-        @NameInMap("RegionId")
+        @com.aliyun.core.annotation.NameInMap("RegionId")
         private String regionId;
 
-        @NameInMap("RequestCpuM")
+        @com.aliyun.core.annotation.NameInMap("RequestCpuM")
         private Integer requestCpuM;
 
-        @NameInMap("RequestEphemeralStorage")
+        @com.aliyun.core.annotation.NameInMap("RequestEphemeralStorage")
         private String requestEphemeralStorage;
 
-        @NameInMap("RequestMem")
+        @com.aliyun.core.annotation.NameInMap("RequestMem")
         private Integer requestMem;
 
-        @NameInMap("SlbInfo")
+        @com.aliyun.core.annotation.NameInMap("SlbInfo")
         private String slbInfo;
 
-        @NameInMap("TomcatVersion")
+        @com.aliyun.core.annotation.NameInMap("TomcatVersion")
         private String tomcatVersion;
 
-        @NameInMap("WorkloadType")
+        @com.aliyun.core.annotation.NameInMap("WorkloadType")
         private String workloadType;
 
         private App(Builder builder) {
@@ -688,8 +768,52 @@ public class GetK8sApplicationResponseBody extends TeaModel {
             private String tomcatVersion; 
             private String workloadType; 
 
+            private Builder() {
+            } 
+
+            private Builder(App model) {
+                this.annotations = model.annotations;
+                this.appId = model.appId;
+                this.applicationName = model.applicationName;
+                this.applicationType = model.applicationType;
+                this.buildpackId = model.buildpackId;
+                this.clusterId = model.clusterId;
+                this.cmd = model.cmd;
+                this.cmdArgs = model.cmdArgs;
+                this.csClusterId = model.csClusterId;
+                this.deployType = model.deployType;
+                this.developType = model.developType;
+                this.edasContainerVersion = model.edasContainerVersion;
+                this.enableEmptyPushReject = model.enableEmptyPushReject;
+                this.enableLosslessRule = model.enableLosslessRule;
+                this.envList = model.envList;
+                this.featureAnnotations = model.featureAnnotations;
+                this.instances = model.instances;
+                this.instancesBeforeScaling = model.instancesBeforeScaling;
+                this.k8sNamespace = model.k8sNamespace;
+                this.labels = model.labels;
+                this.limitCpuM = model.limitCpuM;
+                this.limitEphemeralStorage = model.limitEphemeralStorage;
+                this.limitMem = model.limitMem;
+                this.losslessRuleAligned = model.losslessRuleAligned;
+                this.losslessRuleDelayTime = model.losslessRuleDelayTime;
+                this.losslessRuleFuncType = model.losslessRuleFuncType;
+                this.losslessRuleRelated = model.losslessRuleRelated;
+                this.losslessRuleWarmupTime = model.losslessRuleWarmupTime;
+                this.regionId = model.regionId;
+                this.requestCpuM = model.requestCpuM;
+                this.requestEphemeralStorage = model.requestEphemeralStorage;
+                this.requestMem = model.requestMem;
+                this.slbInfo = model.slbInfo;
+                this.tomcatVersion = model.tomcatVersion;
+                this.workloadType = model.workloadType;
+            } 
+
             /**
-             * The annotation of an application pod.
+             * <p>The annotation of an application pod.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>{&quot;test-annokey&quot;:&quot;test-annovalue&quot;}</p>
              */
             public Builder annotations(String annotations) {
                 this.annotations = annotations;
@@ -697,7 +821,10 @@ public class GetK8sApplicationResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the application. You can call the ListApplication operation to query the application ID. For more information, see [ListApplication](~~149390~~).
+             * <p>The ID of the application. You can call the ListApplication operation to query the application ID. For more information, see <a href="https://help.aliyun.com/document_detail/149390.html">ListApplication</a>.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>00ee517d-dd7d-4d4e-<strong><strong>-</strong></strong></p>
              */
             public Builder appId(String appId) {
                 this.appId = appId;
@@ -705,7 +832,10 @@ public class GetK8sApplicationResponseBody extends TeaModel {
             }
 
             /**
-             * The name of the application.
+             * <p>The name of the application.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>test</p>
              */
             public Builder applicationName(String applicationName) {
                 this.applicationName = applicationName;
@@ -713,7 +843,10 @@ public class GetK8sApplicationResponseBody extends TeaModel {
             }
 
             /**
-             * The type of the application.
+             * <p>The type of the application.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>War</p>
              */
             public Builder applicationType(String applicationType) {
                 this.applicationType = applicationType;
@@ -721,7 +854,10 @@ public class GetK8sApplicationResponseBody extends TeaModel {
             }
 
             /**
-             * The build package number of Enterprise Distributed Application Service (EDAS) Container.
+             * <p>The build package number of Enterprise Distributed Application Service (EDAS) Container.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>57</p>
              */
             public Builder buildpackId(Integer buildpackId) {
                 this.buildpackId = buildpackId;
@@ -729,7 +865,10 @@ public class GetK8sApplicationResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the cluster.
+             * <p>The ID of the cluster.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>c37aec2a-bcca-4ec1-<strong><strong>-</strong></strong></p>
              */
             public Builder clusterId(String clusterId) {
                 this.clusterId = clusterId;
@@ -737,7 +876,10 @@ public class GetK8sApplicationResponseBody extends TeaModel {
             }
 
             /**
-             * The startup command.
+             * <p>The startup command.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>ls</p>
              */
             public Builder cmd(String cmd) {
                 this.cmd = cmd;
@@ -745,7 +887,7 @@ public class GetK8sApplicationResponseBody extends TeaModel {
             }
 
             /**
-             * The list of commands.
+             * <p>The list of commands.</p>
              */
             public Builder cmdArgs(CmdArgs cmdArgs) {
                 this.cmdArgs = cmdArgs;
@@ -753,7 +895,10 @@ public class GetK8sApplicationResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the cluster to which the container belongs.
+             * <p>The ID of the cluster to which the container belongs.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>c383bc813c1974e<strong><strong>451b50c0c8</strong></strong></p>
              */
             public Builder csClusterId(String csClusterId) {
                 this.csClusterId = csClusterId;
@@ -761,7 +906,10 @@ public class GetK8sApplicationResponseBody extends TeaModel {
             }
 
             /**
-             * The deployment type of the application. Example: Image.
+             * <p>The deployment type of the application. Example: Image.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Image</p>
              */
             public Builder deployType(String deployType) {
                 this.deployType = deployType;
@@ -769,12 +917,15 @@ public class GetK8sApplicationResponseBody extends TeaModel {
             }
 
             /**
-             * The application type. Valid values:
-             * <p>
+             * <p>The application type. Valid values:</p>
+             * <ul>
+             * <li>General: native Java application</li>
+             * <li>Pandora: Pandora application</li>
+             * <li>Multilingual: multilingual application</li>
+             * </ul>
              * 
-             * *   General: native Java application
-             * *   Pandora: Pandora application
-             * *   Multilingual: multilingual application
+             * <strong>example:</strong>
+             * <p>General</p>
              */
             public Builder developType(String developType) {
                 this.developType = developType;
@@ -782,7 +933,10 @@ public class GetK8sApplicationResponseBody extends TeaModel {
             }
 
             /**
-             * The version of EDAS Container.
+             * <p>The version of EDAS Container.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>3.60.0</p>
              */
             public Builder edasContainerVersion(String edasContainerVersion) {
                 this.edasContainerVersion = edasContainerVersion;
@@ -790,7 +944,10 @@ public class GetK8sApplicationResponseBody extends TeaModel {
             }
 
             /**
-             * Indicates whether the Empty List Protection feature is enabled for the application.
+             * <p>Indicates whether the Empty List Protection feature is enabled for the application.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>true</p>
              */
             public Builder enableEmptyPushReject(Boolean enableEmptyPushReject) {
                 this.enableEmptyPushReject = enableEmptyPushReject;
@@ -798,7 +955,10 @@ public class GetK8sApplicationResponseBody extends TeaModel {
             }
 
             /**
-             * Indicates whether the Graceful Release feature is enabled for the application.
+             * <p>Indicates whether the Graceful Release feature is enabled for the application.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>true</p>
              */
             public Builder enableLosslessRule(Boolean enableLosslessRule) {
                 this.enableLosslessRule = enableLosslessRule;
@@ -806,7 +966,7 @@ public class GetK8sApplicationResponseBody extends TeaModel {
             }
 
             /**
-             * The list of environment variables.
+             * <p>The list of environment variables.</p>
              */
             public Builder envList(EnvList envList) {
                 this.envList = envList;
@@ -814,13 +974,16 @@ public class GetK8sApplicationResponseBody extends TeaModel {
             }
 
             /**
-             * The feature annotations. Possible values:
-             * <p>
+             * <p>The feature annotations. Possible values:</p>
+             * <ul>
+             * <li>base.combination.edas: enables EDAS integrated management solution.</li>
+             * <li>base.combination.arms: enables ARMS monitoring.</li>
+             * <li>base.combination.mse: enables MSE microservices governance.</li>
+             * <li>base.combination.none: enables lifecycle management.</li>
+             * </ul>
              * 
-             * *   base.combination.edas: enables EDAS integrated management solution.
-             * *   base.combination.arms: enables ARMS monitoring.
-             * *   base.combination.mse: enables MSE microservices governance.
-             * *   base.combination.none: enables lifecycle management.
+             * <strong>example:</strong>
+             * <p>base.combination.edas</p>
              */
             public Builder featureAnnotations(String featureAnnotations) {
                 this.featureAnnotations = featureAnnotations;
@@ -828,7 +991,10 @@ public class GetK8sApplicationResponseBody extends TeaModel {
             }
 
             /**
-             * The number of application instances.
+             * <p>The number of application instances.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>4</p>
              */
             public Builder instances(Integer instances) {
                 this.instances = instances;
@@ -836,7 +1002,10 @@ public class GetK8sApplicationResponseBody extends TeaModel {
             }
 
             /**
-             * The number of application instances before the last auto scaling operation.
+             * <p>The number of application instances before the last auto scaling operation.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>10</p>
              */
             public Builder instancesBeforeScaling(Integer instancesBeforeScaling) {
                 this.instancesBeforeScaling = instancesBeforeScaling;
@@ -844,7 +1013,10 @@ public class GetK8sApplicationResponseBody extends TeaModel {
             }
 
             /**
-             * The namespace of the Kubernetes cluster.
+             * <p>The namespace of the Kubernetes cluster.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>default</p>
              */
             public Builder k8sNamespace(String k8sNamespace) {
                 this.k8sNamespace = k8sNamespace;
@@ -852,7 +1024,10 @@ public class GetK8sApplicationResponseBody extends TeaModel {
             }
 
             /**
-             * The label of an application pod.
+             * <p>The label of an application pod.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>{&quot;test-labelkey&quot;:&quot;test-labelvalue&quot;}</p>
              */
             public Builder labels(String labels) {
                 this.labels = labels;
@@ -860,7 +1035,10 @@ public class GetK8sApplicationResponseBody extends TeaModel {
             }
 
             /**
-             * The maximum number of CPU cores allowed. Unit: millicores. 1,000 millicores equal one CPU core.
+             * <p>The maximum number of CPU cores allowed. Unit: millicores. 1,000 millicores equal one CPU core.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1000</p>
              */
             public Builder limitCpuM(Integer limitCpuM) {
                 this.limitCpuM = limitCpuM;
@@ -868,7 +1046,10 @@ public class GetK8sApplicationResponseBody extends TeaModel {
             }
 
             /**
-             * The maximum size of space required by ephemeral storage. Unit: GB. Value 0 indicates that no limit is set on the space size.
+             * <p>The maximum size of space required by ephemeral storage. Unit: GB. Value 0 indicates that no limit is set on the space size.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>4</p>
              */
             public Builder limitEphemeralStorage(String limitEphemeralStorage) {
                 this.limitEphemeralStorage = limitEphemeralStorage;
@@ -876,7 +1057,10 @@ public class GetK8sApplicationResponseBody extends TeaModel {
             }
 
             /**
-             * The maximum size of the memory allowed. Unit: MiB.
+             * <p>The maximum size of the memory allowed. Unit: MiB.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1024</p>
              */
             public Builder limitMem(Integer limitMem) {
                 this.limitMem = limitMem;
@@ -884,7 +1068,10 @@ public class GetK8sApplicationResponseBody extends TeaModel {
             }
 
             /**
-             * Indicates whether the Graceful Rolling Release and Configure Complete Service Registration before Readiness Probing feature is enabled for the application.
+             * <p>Indicates whether the Graceful Rolling Release and Configure Complete Service Registration before Readiness Probing feature is enabled for the application.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>true</p>
              */
             public Builder losslessRuleAligned(Boolean losslessRuleAligned) {
                 this.losslessRuleAligned = losslessRuleAligned;
@@ -892,7 +1079,10 @@ public class GetK8sApplicationResponseBody extends TeaModel {
             }
 
             /**
-             * The delay of service registration. Unit: seconds.
+             * <p>The delay of service registration. Unit: seconds.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>120</p>
              */
             public Builder losslessRuleDelayTime(Integer losslessRuleDelayTime) {
                 this.losslessRuleDelayTime = losslessRuleDelayTime;
@@ -900,7 +1090,10 @@ public class GetK8sApplicationResponseBody extends TeaModel {
             }
 
             /**
-             * The number of prefetching curves.
+             * <p>The number of prefetching curves.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2</p>
              */
             public Builder losslessRuleFuncType(Integer losslessRuleFuncType) {
                 this.losslessRuleFuncType = losslessRuleFuncType;
@@ -908,7 +1101,10 @@ public class GetK8sApplicationResponseBody extends TeaModel {
             }
 
             /**
-             * Indicates whether the Graceful Rolling Release and Configure Complete Service Prefetching before Readiness Probing feature is enabled for the application.
+             * <p>Indicates whether the Graceful Rolling Release and Configure Complete Service Prefetching before Readiness Probing feature is enabled for the application.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>true</p>
              */
             public Builder losslessRuleRelated(Boolean losslessRuleRelated) {
                 this.losslessRuleRelated = losslessRuleRelated;
@@ -916,7 +1112,10 @@ public class GetK8sApplicationResponseBody extends TeaModel {
             }
 
             /**
-             * The service prefetching duration. Unit: seconds.
+             * <p>The service prefetching duration. Unit: seconds.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>120</p>
              */
             public Builder losslessRuleWarmupTime(Integer losslessRuleWarmupTime) {
                 this.losslessRuleWarmupTime = losslessRuleWarmupTime;
@@ -924,7 +1123,10 @@ public class GetK8sApplicationResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the region.
+             * <p>The ID of the region.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>cn-hangzhou</p>
              */
             public Builder regionId(String regionId) {
                 this.regionId = regionId;
@@ -932,7 +1134,10 @@ public class GetK8sApplicationResponseBody extends TeaModel {
             }
 
             /**
-             * The number of requested CPU cores. Unit: millicores. 1,000 millicores equal one CPU core.
+             * <p>The number of requested CPU cores. Unit: millicores. 1,000 millicores equal one CPU core.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1000</p>
              */
             public Builder requestCpuM(Integer requestCpuM) {
                 this.requestCpuM = requestCpuM;
@@ -940,7 +1145,10 @@ public class GetK8sApplicationResponseBody extends TeaModel {
             }
 
             /**
-             * The size of space reserved for ephemeral storage resources. Unit: GB. Value 0 indicates that no limit is set on the space size.
+             * <p>The size of space reserved for ephemeral storage resources. Unit: GB. Value 0 indicates that no limit is set on the space size.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2</p>
              */
             public Builder requestEphemeralStorage(String requestEphemeralStorage) {
                 this.requestEphemeralStorage = requestEphemeralStorage;
@@ -948,7 +1156,10 @@ public class GetK8sApplicationResponseBody extends TeaModel {
             }
 
             /**
-             * The size of the reserved memory. Unit: MiB.
+             * <p>The size of the reserved memory. Unit: MiB.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1024</p>
              */
             public Builder requestMem(Integer requestMem) {
                 this.requestMem = requestMem;
@@ -956,7 +1167,33 @@ public class GetK8sApplicationResponseBody extends TeaModel {
             }
 
             /**
-             * The configuration information about the Server Load Balancer (SLB).
+             * <p>The configuration information about the Server Load Balancer (SLB).</p>
+             * 
+             * <strong>example:</strong>
+             * <p>[
+             *   {
+             *     &quot;addressType&quot;: &quot;intranet&quot;,
+             *     &quot;externalTrafficPolicy&quot;: &quot;Local&quot;,
+             *     &quot;ip&quot;: &quot;192.168.254.<em><strong>&quot;,
+             *     &quot;name&quot;: &quot;intranet-testapp&quot;,
+             *     &quot;portMappings&quot;: [
+             *       {
+             *         &quot;loadBalancerProtocol&quot;: &quot;TCP&quot;,
+             *         &quot;servicePort&quot;: {
+             *           &quot;port&quot;: 8080,
+             *           &quot;protocol&quot;: &quot;TCP&quot;,
+             *           &quot;targetPort&quot;: 18081,
+             *           &quot;vServerGroupName&quot;: &quot;k8s/31414/intranet-testapp/default/cc90e0c9508a44667bdae2e83d3</strong></em><em><strong>&quot;
+             *         }
+             *       }
+             *     ],
+             *     &quot;scheduler&quot;: &quot;rr&quot;,
+             *     &quot;serviceType&quot;: &quot;LoadBalancer&quot;,
+             *     &quot;slbId&quot;: &quot;lb-bp1ikoh3nrpgqsm</strong></em>***&quot;,
+             *     &quot;source&quot;: &quot;create&quot;,
+             *     &quot;specification&quot;: &quot;slb.s3.large&quot;
+             *   }
+             * ]</p>
              */
             public Builder slbInfo(String slbInfo) {
                 this.slbInfo = slbInfo;
@@ -964,7 +1201,10 @@ public class GetK8sApplicationResponseBody extends TeaModel {
             }
 
             /**
-             * The version of Apache Tomcat.
+             * <p>The version of Apache Tomcat.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>8.5.55</p>
              */
             public Builder tomcatVersion(String tomcatVersion) {
                 this.tomcatVersion = tomcatVersion;
@@ -972,7 +1212,10 @@ public class GetK8sApplicationResponseBody extends TeaModel {
             }
 
             /**
-             * The workload type. Valid values: Deployment and StatefulSet. If you do not specify this parameter, Deployment is used.
+             * <p>The workload type. Valid values: Deployment and StatefulSet. If you do not specify this parameter, Deployment is used.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Deployment</p>
              */
             public Builder workloadType(String workloadType) {
                 this.workloadType = workloadType;
@@ -986,59 +1229,65 @@ public class GetK8sApplicationResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link GetK8sApplicationResponseBody} extends {@link TeaModel}
+     *
+     * <p>GetK8sApplicationResponseBody</p>
+     */
     public static class Conf extends TeaModel {
-        @NameInMap("Affinity")
+        @com.aliyun.core.annotation.NameInMap("Affinity")
         private String affinity;
 
-        @NameInMap("AhasEnabled")
+        @com.aliyun.core.annotation.NameInMap("AhasEnabled")
         private Boolean ahasEnabled;
 
-        @NameInMap("DeployAcrossNodes")
+        @com.aliyun.core.annotation.NameInMap("DeployAcrossNodes")
         private String deployAcrossNodes;
 
-        @NameInMap("DeployAcrossZones")
+        @com.aliyun.core.annotation.NameInMap("DeployAcrossZones")
         private String deployAcrossZones;
 
-        @NameInMap("JarStartArgs")
+        @com.aliyun.core.annotation.NameInMap("JarStartArgs")
         private String jarStartArgs;
 
-        @NameInMap("JarStartOptions")
+        @com.aliyun.core.annotation.NameInMap("JarStartOptions")
         private String jarStartOptions;
 
-        @NameInMap("K8sCmd")
+        @com.aliyun.core.annotation.NameInMap("K8sCmd")
         private String k8sCmd;
 
-        @NameInMap("K8sCmdArgs")
+        @com.aliyun.core.annotation.NameInMap("K8sCmdArgs")
         private String k8sCmdArgs;
 
-        @NameInMap("K8sLocalvolumeInfo")
+        @com.aliyun.core.annotation.NameInMap("K8sLocalvolumeInfo")
         private String k8sLocalvolumeInfo;
 
-        @NameInMap("K8sNasInfo")
+        @com.aliyun.core.annotation.NameInMap("K8sNasInfo")
         private String k8sNasInfo;
 
-        @NameInMap("K8sVolumeInfo")
+        @com.aliyun.core.annotation.NameInMap("K8sVolumeInfo")
         private String k8sVolumeInfo;
 
-        @NameInMap("Liveness")
+        @com.aliyun.core.annotation.NameInMap("Liveness")
         private String liveness;
 
-        @NameInMap("PostStart")
+        @com.aliyun.core.annotation.NameInMap("PostStart")
         private String postStart;
 
-        @NameInMap("PreStop")
+        @com.aliyun.core.annotation.NameInMap("PreStop")
         private String preStop;
 
-        @NameInMap("Readiness")
+        @com.aliyun.core.annotation.NameInMap("Readiness")
         private String readiness;
 
-        @NameInMap("RuntimeClassName")
+        @com.aliyun.core.annotation.NameInMap("RuntimeClassName")
         private String runtimeClassName;
 
-        @NameInMap("Tolerations")
+        @com.aliyun.core.annotation.NameInMap("Tolerations")
         private String tolerations;
 
-        @NameInMap("UserBaseImageUrl")
+        @com.aliyun.core.annotation.NameInMap("UserBaseImageUrl")
         private String userBaseImageUrl;
 
         private Conf(Builder builder) {
@@ -1216,8 +1465,35 @@ public class GetK8sApplicationResponseBody extends TeaModel {
             private String tolerations; 
             private String userBaseImageUrl; 
 
+            private Builder() {
+            } 
+
+            private Builder(Conf model) {
+                this.affinity = model.affinity;
+                this.ahasEnabled = model.ahasEnabled;
+                this.deployAcrossNodes = model.deployAcrossNodes;
+                this.deployAcrossZones = model.deployAcrossZones;
+                this.jarStartArgs = model.jarStartArgs;
+                this.jarStartOptions = model.jarStartOptions;
+                this.k8sCmd = model.k8sCmd;
+                this.k8sCmdArgs = model.k8sCmdArgs;
+                this.k8sLocalvolumeInfo = model.k8sLocalvolumeInfo;
+                this.k8sNasInfo = model.k8sNasInfo;
+                this.k8sVolumeInfo = model.k8sVolumeInfo;
+                this.liveness = model.liveness;
+                this.postStart = model.postStart;
+                this.preStop = model.preStop;
+                this.readiness = model.readiness;
+                this.runtimeClassName = model.runtimeClassName;
+                this.tolerations = model.tolerations;
+                this.userBaseImageUrl = model.userBaseImageUrl;
+            } 
+
             /**
-             * The affinity configuration of the pod.
+             * <p>The affinity configuration of the pod.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>&quot;{&quot;nodeAffinity&quot;:{&quot;requiredDuringSchedulingIgnoredDuringExecution&quot;:{&quot;nodeSelectorTerms&quot;:[{&quot;matchExpressions&quot;:[{&quot;key&quot;:&quot;beta.kubernetes.io/arch&quot;,&quot;operator&quot;:&quot;NotIn&quot;,&quot;values&quot;:[&quot;arm64&quot;,&quot;arm32&quot;]}]}]},&quot;preferredDuringSchedulingIgnoredDuringExecution&quot;:[{&quot;weight&quot;:5,&quot;preference&quot;:{&quot;matchExpressions&quot;:[{&quot;key&quot;:&quot;kubernetes.io/os&quot;,&quot;operator&quot;:&quot;In&quot;,&quot;values&quot;:[&quot;linux&quot;]}]}}]},&quot;podAffinity&quot;:{&quot;requiredDuringSchedulingIgnoredDuringExecution&quot;:[{&quot;labelSelector&quot;:{&quot;matchExpressions&quot;:[{&quot;key&quot;:&quot;edas.oam.acname&quot;,&quot;operator&quot;:&quot;NotIn&quot;,&quot;values&quot;:[&quot;edas-test-app&quot;]}]},&quot;namespaces&quot;:[&quot;default&quot;],&quot;topologyKey&quot;:&quot;kubernetes.io/hostname&quot;}]},&quot;podAntiAffinity&quot;:{&quot;preferredDuringSchedulingIgnoredDuringExecution&quot;:[{&quot;weight&quot;:15,&quot;podAffinityTerm&quot;:{&quot;labelSelector&quot;:{&quot;matchExpressions&quot;:[{&quot;key&quot;:&quot;edas.oam.acname&quot;,&quot;operator&quot;:&quot;In&quot;,&quot;values&quot;:[&quot;edas-test-app-2&quot;]}]},&quot;namespaces&quot;:[&quot;default&quot;],&quot;topologyKey&quot;:&quot;failure-domain.beta.kubernetes.io/zone&quot;}}]}}&quot;</p>
              */
             public Builder affinity(String affinity) {
                 this.affinity = affinity;
@@ -1225,7 +1501,10 @@ public class GetK8sApplicationResponseBody extends TeaModel {
             }
 
             /**
-             * Indicates whether the application is connected to Application High Availability Service (AHAS).
+             * <p>Indicates whether the application is connected to Application High Availability Service (AHAS).</p>
+             * 
+             * <strong>example:</strong>
+             * <p>true</p>
              */
             public Builder ahasEnabled(Boolean ahasEnabled) {
                 this.ahasEnabled = ahasEnabled;
@@ -1233,11 +1512,14 @@ public class GetK8sApplicationResponseBody extends TeaModel {
             }
 
             /**
-             * Indicates whether the application instances are deployed across nodes.
-             * <p>
+             * <p>Indicates whether the application instances are deployed across nodes.</p>
+             * <ul>
+             * <li>Value <code>true</code> indicates that the application instances are deployed across nodes.</li>
+             * <li>Other values indicate that the application instances are not deployed across nodes.</li>
+             * </ul>
              * 
-             * *   Value `true` indicates that the application instances are deployed across nodes.
-             * *   Other values indicate that the application instances are not deployed across nodes.
+             * <strong>example:</strong>
+             * <p>true</p>
              */
             public Builder deployAcrossNodes(String deployAcrossNodes) {
                 this.deployAcrossNodes = deployAcrossNodes;
@@ -1245,11 +1527,14 @@ public class GetK8sApplicationResponseBody extends TeaModel {
             }
 
             /**
-             * Indicates whether the application instances are deployed across zones.
-             * <p>
+             * <p>Indicates whether the application instances are deployed across zones.</p>
+             * <ul>
+             * <li>Value <code>true</code> indicates that the application instances are deployed across zones.</li>
+             * <li>Other values indicate that the application instances are not deployed across zones.</li>
+             * </ul>
              * 
-             * *   Value `true` indicates that the application instances are deployed across zones.
-             * *   Other values indicate that the application instances are not deployed across zones.
+             * <strong>example:</strong>
+             * <p>true</p>
              */
             public Builder deployAcrossZones(String deployAcrossZones) {
                 this.deployAcrossZones = deployAcrossZones;
@@ -1257,7 +1542,10 @@ public class GetK8sApplicationResponseBody extends TeaModel {
             }
 
             /**
-             * The startup parameters for a JAR application. This parameter is deprecated.
+             * <p>The startup parameters for a JAR application. This parameter is deprecated.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>-lh</p>
              */
             public Builder jarStartArgs(String jarStartArgs) {
                 this.jarStartArgs = jarStartArgs;
@@ -1265,7 +1553,10 @@ public class GetK8sApplicationResponseBody extends TeaModel {
             }
 
             /**
-             * The startup options for a JAR application. This parameter is deprecated.
+             * <p>The startup options for a JAR application. This parameter is deprecated.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>-h</p>
              */
             public Builder jarStartOptions(String jarStartOptions) {
                 this.jarStartOptions = jarStartOptions;
@@ -1273,7 +1564,10 @@ public class GetK8sApplicationResponseBody extends TeaModel {
             }
 
             /**
-             * The startup command.
+             * <p>The startup command.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>ls</p>
              */
             public Builder k8sCmd(String k8sCmd) {
                 this.k8sCmd = k8sCmd;
@@ -1281,7 +1575,10 @@ public class GetK8sApplicationResponseBody extends TeaModel {
             }
 
             /**
-             * The parameters of the startup command.
+             * <p>The parameters of the startup command.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>-lh</p>
              */
             public Builder k8sCmdArgs(String k8sCmdArgs) {
                 this.k8sCmdArgs = k8sCmdArgs;
@@ -1289,7 +1586,10 @@ public class GetK8sApplicationResponseBody extends TeaModel {
             }
 
             /**
-             * The information about the local storage.
+             * <p>The information about the local storage.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>[{&quot;type&quot;:&quot;&quot;,&quot;nodePath&quot;:&quot;/mnt/&quot;,&quot;mountPath&quot;:&quot;/mnt/&quot;}]</p>
              */
             public Builder k8sLocalvolumeInfo(String k8sLocalvolumeInfo) {
                 this.k8sLocalvolumeInfo = k8sLocalvolumeInfo;
@@ -1297,7 +1597,10 @@ public class GetK8sApplicationResponseBody extends TeaModel {
             }
 
             /**
-             * The information about the Apsara File Storage NAS (NAS) storage.
+             * <p>The information about the File Storage NAS (NAS) storage.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>[{&quot;nasPath&quot;:&quot;/mnt/&quot;,&quot;mountPath&quot;:&quot;/mnt/&quot;}]</p>
              */
             public Builder k8sNasInfo(String k8sNasInfo) {
                 this.k8sNasInfo = k8sNasInfo;
@@ -1305,7 +1608,10 @@ public class GetK8sApplicationResponseBody extends TeaModel {
             }
 
             /**
-             * The information about the storage.
+             * <p>The information about the storage.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>&quot;{&quot;hostPaths&quot;:&quot;[]&quot;,&quot;emptyDirs&quot;:&quot;[]&quot;}&quot;</p>
              */
             public Builder k8sVolumeInfo(String k8sVolumeInfo) {
                 this.k8sVolumeInfo = k8sVolumeInfo;
@@ -1313,7 +1619,10 @@ public class GetK8sApplicationResponseBody extends TeaModel {
             }
 
             /**
-             * The information about the liveness check on the container.
+             * <p>The information about the liveness check on the container.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>{&quot;failureThreshold&quot;: 3,&quot;initialDelaySeconds&quot;: 5,&quot;successThreshold&quot;: 1,&quot;timeoutSeconds&quot;: 1,&quot;tcpSocket&quot;:{&quot;host&quot;:&quot;&quot;, &quot;port&quot;:8080}}</p>
              */
             public Builder liveness(String liveness) {
                 this.liveness = liveness;
@@ -1321,7 +1630,10 @@ public class GetK8sApplicationResponseBody extends TeaModel {
             }
 
             /**
-             * The script executed after the container is started.
+             * <p>The script executed after the container is started.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>{&quot;exec&quot;:{&quot;command&quot;:[&quot;ls&quot;,&quot;/&quot;]}}&quot;</p>
              */
             public Builder postStart(String postStart) {
                 this.postStart = postStart;
@@ -1329,7 +1641,10 @@ public class GetK8sApplicationResponseBody extends TeaModel {
             }
 
             /**
-             * The script executed before the container is stopped.
+             * <p>The script executed before the container is stopped.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>{&quot;exec&quot;:{&quot;command&quot;:[&quot;ls&quot;,&quot;/&quot;]}}&quot;</p>
              */
             public Builder preStop(String preStop) {
                 this.preStop = preStop;
@@ -1337,7 +1652,10 @@ public class GetK8sApplicationResponseBody extends TeaModel {
             }
 
             /**
-             * The information about the readiness check on the container.
+             * <p>The information about the readiness check on the container.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>{&quot;failureThreshold&quot;: 3,&quot;initialDelaySeconds&quot;: 5,&quot;successThreshold&quot;: 1,&quot;timeoutSeconds&quot;: 1,&quot;httpGet&quot;: {&quot;path&quot;: &quot;/consumer&quot;,&quot;port&quot;: 8080,&quot;scheme&quot;: &quot;HTTP&quot;,&quot;httpHeaders&quot;: [{&quot;name&quot;: &quot;test&quot;,&quot;value&quot;: &quot;testvalue&quot;}]}}</p>
              */
             public Builder readiness(String readiness) {
                 this.readiness = readiness;
@@ -1345,7 +1663,10 @@ public class GetK8sApplicationResponseBody extends TeaModel {
             }
 
             /**
-             * The type of the container runtime. This parameter is applicable only to clusters that use sandboxed containers.
+             * <p>The type of the container runtime. This parameter is applicable only to clusters that use sandboxed containers.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>runc</p>
              */
             public Builder runtimeClassName(String runtimeClassName) {
                 this.runtimeClassName = runtimeClassName;
@@ -1353,7 +1674,10 @@ public class GetK8sApplicationResponseBody extends TeaModel {
             }
 
             /**
-             * The scheduling tolerance configuration of the pod.
+             * <p>The scheduling tolerance configuration of the pod.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>&quot;[{&quot;key&quot;:&quot;edas-taint-key2&quot;,&quot;operator&quot;:&quot;Exists&quot;,&quot;effect&quot;:&quot;NoExecute&quot;,&quot;tolerationSeconds&quot;:50},{&quot;key&quot;:&quot;edas-taint-key&quot;,&quot;operator&quot;:&quot;Equal&quot;,&quot;value&quot;:&quot;edas-taint-value&quot;,&quot;effect&quot;:&quot;PreferNoSchedule&quot;}]&quot;</p>
              */
             public Builder tolerations(String tolerations) {
                 this.tolerations = tolerations;
@@ -1361,7 +1685,10 @@ public class GetK8sApplicationResponseBody extends TeaModel {
             }
 
             /**
-             * The URL of the base image. If you use a custom Java Development Kit (JDK) runtime, you must specify this parameter.
+             * <p>The URL of the base image. If you use a custom Java Development Kit (JDK) runtime, you must specify this parameter.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>openjdk:8u302</p>
              */
             public Builder userBaseImageUrl(String userBaseImageUrl) {
                 this.userBaseImageUrl = userBaseImageUrl;
@@ -1375,14 +1702,20 @@ public class GetK8sApplicationResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link GetK8sApplicationResponseBody} extends {@link TeaModel}
+     *
+     * <p>GetK8sApplicationResponseBody</p>
+     */
     public static class Components extends TeaModel {
-        @NameInMap("ComponentId")
+        @com.aliyun.core.annotation.NameInMap("ComponentId")
         private String componentId;
 
-        @NameInMap("ComponentKey")
+        @com.aliyun.core.annotation.NameInMap("ComponentKey")
         private String componentKey;
 
-        @NameInMap("Type")
+        @com.aliyun.core.annotation.NameInMap("Type")
         private String type;
 
         private Components(Builder builder) {
@@ -1425,8 +1758,20 @@ public class GetK8sApplicationResponseBody extends TeaModel {
             private String componentKey; 
             private String type; 
 
+            private Builder() {
+            } 
+
+            private Builder(Components model) {
+                this.componentId = model.componentId;
+                this.componentKey = model.componentKey;
+                this.type = model.type;
+            } 
+
             /**
-             * The component ID.
+             * <p>The component ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>5</p>
              */
             public Builder componentId(String componentId) {
                 this.componentId = componentId;
@@ -1434,7 +1779,10 @@ public class GetK8sApplicationResponseBody extends TeaModel {
             }
 
             /**
-             * The keyword that is included in the component name.
+             * <p>The keyword that is included in the component name.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Open JDK 8</p>
              */
             public Builder componentKey(String componentKey) {
                 this.componentKey = componentKey;
@@ -1442,7 +1790,10 @@ public class GetK8sApplicationResponseBody extends TeaModel {
             }
 
             /**
-             * The component type. Valid values:
+             * <p>The component type. Valid values:</p>
+             * 
+             * <strong>example:</strong>
+             * <p>JDK</p>
              */
             public Builder type(String type) {
                 this.type = type;
@@ -1456,9 +1807,15 @@ public class GetK8sApplicationResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link GetK8sApplicationResponseBody} extends {@link TeaModel}
+     *
+     * <p>GetK8sApplicationResponseBody</p>
+     */
     public static class DeployGroupComponents extends TeaModel {
-        @NameInMap("Components")
-        private java.util.List < Components> components;
+        @com.aliyun.core.annotation.NameInMap("Components")
+        private java.util.List<Components> components;
 
         private DeployGroupComponents(Builder builder) {
             this.components = builder.components;
@@ -1475,17 +1832,24 @@ public class GetK8sApplicationResponseBody extends TeaModel {
         /**
          * @return components
          */
-        public java.util.List < Components> getComponents() {
+        public java.util.List<Components> getComponents() {
             return this.components;
         }
 
         public static final class Builder {
-            private java.util.List < Components> components; 
+            private java.util.List<Components> components; 
+
+            private Builder() {
+            } 
+
+            private Builder(DeployGroupComponents model) {
+                this.components = model.components;
+            } 
 
             /**
              * Components.
              */
-            public Builder components(java.util.List < Components> components) {
+            public Builder components(java.util.List<Components> components) {
                 this.components = components;
                 return this;
             }
@@ -1497,14 +1861,20 @@ public class GetK8sApplicationResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link GetK8sApplicationResponseBody} extends {@link TeaModel}
+     *
+     * <p>GetK8sApplicationResponseBody</p>
+     */
     public static class DeployGroup extends TeaModel {
-        @NameInMap("Components")
+        @com.aliyun.core.annotation.NameInMap("Components")
         private DeployGroupComponents components;
 
-        @NameInMap("Env")
+        @com.aliyun.core.annotation.NameInMap("Env")
         private String env;
 
-        @NameInMap("EnvFrom")
+        @com.aliyun.core.annotation.NameInMap("EnvFrom")
         private String envFrom;
 
         private DeployGroup(Builder builder) {
@@ -1547,8 +1917,17 @@ public class GetK8sApplicationResponseBody extends TeaModel {
             private String env; 
             private String envFrom; 
 
+            private Builder() {
+            } 
+
+            private Builder(DeployGroup model) {
+                this.components = model.components;
+                this.env = model.env;
+                this.envFrom = model.envFrom;
+            } 
+
             /**
-             * The information about the component.
+             * <p>The information about the component.</p>
              */
             public Builder components(DeployGroupComponents components) {
                 this.components = components;
@@ -1556,7 +1935,10 @@ public class GetK8sApplicationResponseBody extends TeaModel {
             }
 
             /**
-             * The environment variable. This parameter is different from the EnvList parameter. This parameter specifies the referenced configuration of the ConfigMap or Secret.
+             * <p>The environment variable. This parameter is different from the EnvList parameter. This parameter specifies the referenced configuration of the ConfigMap or Secret.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>&quot;[&quot;{&quot;name&quot;:&quot;test1&quot;,&quot;valueFrom&quot;:{&quot;configMapKeyRef&quot;:{&quot;name&quot;:&quot;edas-demo-configmap&quot;,&quot;key&quot;:&quot;key1&quot;}}}&quot;,&quot;{&quot;name&quot;:&quot;k2&quot;,&quot;value&quot;:&quot;v2&quot;}&quot;,&quot;{&quot;name&quot;:&quot;s1&quot;,&quot;valueFrom&quot;:{&quot;secretKeyRef&quot;:{&quot;name&quot;:&quot;edas-demo-secret&quot;,&quot;key&quot;:&quot;k1&quot;}}}&quot;]&quot;</p>
              */
             public Builder env(String env) {
                 this.env = env;
@@ -1564,7 +1946,10 @@ public class GetK8sApplicationResponseBody extends TeaModel {
             }
 
             /**
-             * The source of the environment variable.
+             * <p>The source of the environment variable.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>[{&quot;configMapRef&quot;:{&quot;name&quot;:&quot;test-cm&quot;}}]</p>
              */
             public Builder envFrom(String envFrom) {
                 this.envFrom = envFrom;
@@ -1578,9 +1963,15 @@ public class GetK8sApplicationResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link GetK8sApplicationResponseBody} extends {@link TeaModel}
+     *
+     * <p>GetK8sApplicationResponseBody</p>
+     */
     public static class DeployGroups extends TeaModel {
-        @NameInMap("DeployGroup")
-        private java.util.List < DeployGroup> deployGroup;
+        @com.aliyun.core.annotation.NameInMap("DeployGroup")
+        private java.util.List<DeployGroup> deployGroup;
 
         private DeployGroups(Builder builder) {
             this.deployGroup = builder.deployGroup;
@@ -1597,17 +1988,24 @@ public class GetK8sApplicationResponseBody extends TeaModel {
         /**
          * @return deployGroup
          */
-        public java.util.List < DeployGroup> getDeployGroup() {
+        public java.util.List<DeployGroup> getDeployGroup() {
             return this.deployGroup;
         }
 
         public static final class Builder {
-            private java.util.List < DeployGroup> deployGroup; 
+            private java.util.List<DeployGroup> deployGroup; 
+
+            private Builder() {
+            } 
+
+            private Builder(DeployGroups model) {
+                this.deployGroup = model.deployGroup;
+            } 
 
             /**
              * DeployGroup.
              */
-            public Builder deployGroup(java.util.List < DeployGroup> deployGroup) {
+            public Builder deployGroup(java.util.List<DeployGroup> deployGroup) {
                 this.deployGroup = deployGroup;
                 return this;
             }
@@ -1619,26 +2017,32 @@ public class GetK8sApplicationResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link GetK8sApplicationResponseBody} extends {@link TeaModel}
+     *
+     * <p>GetK8sApplicationResponseBody</p>
+     */
     public static class ImageInfo extends TeaModel {
-        @NameInMap("ImageUrl")
+        @com.aliyun.core.annotation.NameInMap("ImageUrl")
         private String imageUrl;
 
-        @NameInMap("RegionId")
+        @com.aliyun.core.annotation.NameInMap("RegionId")
         private String regionId;
 
-        @NameInMap("RepoId")
+        @com.aliyun.core.annotation.NameInMap("RepoId")
         private String repoId;
 
-        @NameInMap("RepoName")
+        @com.aliyun.core.annotation.NameInMap("RepoName")
         private String repoName;
 
-        @NameInMap("RepoNamespace")
+        @com.aliyun.core.annotation.NameInMap("RepoNamespace")
         private String repoNamespace;
 
-        @NameInMap("RepoOriginType")
+        @com.aliyun.core.annotation.NameInMap("RepoOriginType")
         private String repoOriginType;
 
-        @NameInMap("Tag")
+        @com.aliyun.core.annotation.NameInMap("Tag")
         private String tag;
 
         private ImageInfo(Builder builder) {
@@ -1717,8 +2121,21 @@ public class GetK8sApplicationResponseBody extends TeaModel {
             private String repoOriginType; 
             private String tag; 
 
+            private Builder() {
+            } 
+
+            private Builder(ImageInfo model) {
+                this.imageUrl = model.imageUrl;
+                this.regionId = model.regionId;
+                this.repoId = model.repoId;
+                this.repoName = model.repoName;
+                this.repoNamespace = model.repoNamespace;
+                this.repoOriginType = model.repoOriginType;
+                this.tag = model.tag;
+            } 
+
             /**
-             * The URL of the image.
+             * <p>The URL of the image.</p>
              */
             public Builder imageUrl(String imageUrl) {
                 this.imageUrl = imageUrl;
@@ -1726,7 +2143,10 @@ public class GetK8sApplicationResponseBody extends TeaModel {
             }
 
             /**
-             * The region ID of the image repository.
+             * <p>The region ID of the image repository.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>cn-beijing</p>
              */
             public Builder regionId(String regionId) {
                 this.regionId = regionId;
@@ -1734,7 +2154,10 @@ public class GetK8sApplicationResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the image repository.
+             * <p>The ID of the image repository.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>cn-hangzhou</p>
              */
             public Builder repoId(String repoId) {
                 this.repoId = repoId;
@@ -1742,7 +2165,10 @@ public class GetK8sApplicationResponseBody extends TeaModel {
             }
 
             /**
-             * The name of the image repository.
+             * <p>The name of the image repository.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>131****067006888_shared_repo</p>
              */
             public Builder repoName(String repoName) {
                 this.repoName = repoName;
@@ -1750,7 +2176,10 @@ public class GetK8sApplicationResponseBody extends TeaModel {
             }
 
             /**
-             * The namespace to which the image repository belongs.
+             * <p>The namespace to which the image repository belongs.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>edas-server****-user</p>
              */
             public Builder repoNamespace(String repoNamespace) {
                 this.repoNamespace = repoNamespace;
@@ -1758,7 +2187,10 @@ public class GetK8sApplicationResponseBody extends TeaModel {
             }
 
             /**
-             * The source type of the image repository.
+             * <p>The source type of the image repository.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>ALI_HUB</p>
              */
             public Builder repoOriginType(String repoOriginType) {
                 this.repoOriginType = repoOriginType;
@@ -1766,7 +2198,10 @@ public class GetK8sApplicationResponseBody extends TeaModel {
             }
 
             /**
-             * The tag of the image.
+             * <p>The tag of the image.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>5a166fbd-9d76-4f98-****-781659d9f54c_1572485443282</p>
              */
             public Builder tag(String tag) {
                 this.tag = tag;
@@ -1780,14 +2215,20 @@ public class GetK8sApplicationResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link GetK8sApplicationResponseBody} extends {@link TeaModel}
+     *
+     * <p>GetK8sApplicationResponseBody</p>
+     */
     public static class LatestVersion extends TeaModel {
-        @NameInMap("PackageVersion")
+        @com.aliyun.core.annotation.NameInMap("PackageVersion")
         private String packageVersion;
 
-        @NameInMap("Url")
+        @com.aliyun.core.annotation.NameInMap("Url")
         private String url;
 
-        @NameInMap("WarUrl")
+        @com.aliyun.core.annotation.NameInMap("WarUrl")
         private String warUrl;
 
         private LatestVersion(Builder builder) {
@@ -1830,8 +2271,20 @@ public class GetK8sApplicationResponseBody extends TeaModel {
             private String url; 
             private String warUrl; 
 
+            private Builder() {
+            } 
+
+            private Builder(LatestVersion model) {
+                this.packageVersion = model.packageVersion;
+                this.url = model.url;
+                this.warUrl = model.warUrl;
+            } 
+
             /**
-             * The version of the deployment package.
+             * <p>The version of the deployment package.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>20200720</p>
              */
             public Builder packageVersion(String packageVersion) {
                 this.packageVersion = packageVersion;
@@ -1839,7 +2292,10 @@ public class GetK8sApplicationResponseBody extends TeaModel {
             }
 
             /**
-             * The URL of the deployment package. This parameter is required if you use a FatJar or WAR package to deploy the application.
+             * <p>The URL of the deployment package. This parameter is required if you use a FatJar or WAR package to deploy the application.</p>
+             * 
+             * <strong>example:</strong>
+             * <p><a href="https://e***.oss-cn-beijing.aliyuncs.com/s***-1.0-SNAPSHOT-spring-boot.jar">https://e***.oss-cn-beijing.aliyuncs.com/s***-1.0-SNAPSHOT-spring-boot.jar</a></p>
              */
             public Builder url(String url) {
                 this.url = url;
@@ -1847,7 +2303,10 @@ public class GetK8sApplicationResponseBody extends TeaModel {
             }
 
             /**
-             * The URL of the deployment package. This parameter is required if you use a FatJar or WAR package to deploy the application.
+             * <p>The URL of the deployment package. This parameter is required if you use a FatJar or WAR package to deploy the application.</p>
+             * 
+             * <strong>example:</strong>
+             * <p><a href="https://e***.oss-cn-beijing.aliyuncs.com/s***-1.0-SNAPSHOT-spring-boot.jar">https://e***.oss-cn-beijing.aliyuncs.com/s***-1.0-SNAPSHOT-spring-boot.jar</a></p>
              */
             public Builder warUrl(String warUrl) {
                 this.warUrl = warUrl;
@@ -1861,23 +2320,29 @@ public class GetK8sApplicationResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link GetK8sApplicationResponseBody} extends {@link TeaModel}
+     *
+     * <p>GetK8sApplicationResponseBody</p>
+     */
     public static class Applcation extends TeaModel {
-        @NameInMap("App")
+        @com.aliyun.core.annotation.NameInMap("App")
         private App app;
 
-        @NameInMap("AppId")
+        @com.aliyun.core.annotation.NameInMap("AppId")
         private String appId;
 
-        @NameInMap("Conf")
+        @com.aliyun.core.annotation.NameInMap("Conf")
         private Conf conf;
 
-        @NameInMap("DeployGroups")
+        @com.aliyun.core.annotation.NameInMap("DeployGroups")
         private DeployGroups deployGroups;
 
-        @NameInMap("ImageInfo")
+        @com.aliyun.core.annotation.NameInMap("ImageInfo")
         private ImageInfo imageInfo;
 
-        @NameInMap("LatestVersion")
+        @com.aliyun.core.annotation.NameInMap("LatestVersion")
         private LatestVersion latestVersion;
 
         private Applcation(Builder builder) {
@@ -1947,8 +2412,20 @@ public class GetK8sApplicationResponseBody extends TeaModel {
             private ImageInfo imageInfo; 
             private LatestVersion latestVersion; 
 
+            private Builder() {
+            } 
+
+            private Builder(Applcation model) {
+                this.app = model.app;
+                this.appId = model.appId;
+                this.conf = model.conf;
+                this.deployGroups = model.deployGroups;
+                this.imageInfo = model.imageInfo;
+                this.latestVersion = model.latestVersion;
+            } 
+
             /**
-             * The basic information about the application.
+             * <p>The basic information about the application.</p>
              */
             public Builder app(App app) {
                 this.app = app;
@@ -1956,7 +2433,10 @@ public class GetK8sApplicationResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the application. You can call the ListApplication operation to query the application ID. For more information, see [ListApplication](~~149390~~).
+             * <p>The ID of the application. You can call the ListApplication operation to query the application ID. For more information, see <a href="https://help.aliyun.com/document_detail/149390.html">ListApplication</a>.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>a5281053-<strong><strong>-47a5-b2ab-5c0323de</strong></strong></p>
              */
             public Builder appId(String appId) {
                 this.appId = appId;
@@ -1964,7 +2444,7 @@ public class GetK8sApplicationResponseBody extends TeaModel {
             }
 
             /**
-             * The configurations.
+             * <p>The configurations.</p>
              */
             public Builder conf(Conf conf) {
                 this.conf = conf;
@@ -1972,7 +2452,7 @@ public class GetK8sApplicationResponseBody extends TeaModel {
             }
 
             /**
-             * The information about the instance group in which the application is deployed.
+             * <p>The information about the instance group in which the application is deployed.</p>
              */
             public Builder deployGroups(DeployGroups deployGroups) {
                 this.deployGroups = deployGroups;
@@ -1980,7 +2460,7 @@ public class GetK8sApplicationResponseBody extends TeaModel {
             }
 
             /**
-             * The information about the image.
+             * <p>The information about the image.</p>
              */
             public Builder imageInfo(ImageInfo imageInfo) {
                 this.imageInfo = imageInfo;
@@ -1988,7 +2468,7 @@ public class GetK8sApplicationResponseBody extends TeaModel {
             }
 
             /**
-             * The information about the latest version.
+             * <p>The information about the latest version.</p>
              */
             public Builder latestVersion(LatestVersion latestVersion) {
                 this.latestVersion = latestVersion;

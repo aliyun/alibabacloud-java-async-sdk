@@ -1,31 +1,36 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.edas20170801.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ListK8sIngressRulesRequest} extends {@link RequestModel}
  *
  * <p>ListK8sIngressRulesRequest</p>
  */
 public class ListK8sIngressRulesRequest extends Request {
-    @Query
-    @NameInMap("ClusterId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ClusterId")
     private String clusterId;
 
-    @Query
-    @NameInMap("Condition")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Condition")
     private String condition;
 
-    @Query
-    @NameInMap("Namespace")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Namespace")
     private String namespace;
 
-    @Query
-    @NameInMap("RegionId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("RegionId")
     private String regionId;
 
     private ListK8sIngressRulesRequest(Builder builder) {
@@ -44,7 +49,7 @@ public class ListK8sIngressRulesRequest extends Request {
         return builder().build();
     }
 
-    @Override
+@Override
     public Builder toBuilder() {
         return new Builder(this);
     }
@@ -96,7 +101,10 @@ public class ListK8sIngressRulesRequest extends Request {
         } 
 
         /**
-         * The cluster ID.
+         * <p>The cluster ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>5b2b4ab4-efbc-4a81-9c45-xxxxxxxxxxxxx</p>
          */
         public Builder clusterId(String clusterId) {
             this.putQueryParameter("ClusterId", clusterId);
@@ -105,13 +113,15 @@ public class ListK8sIngressRulesRequest extends Request {
         }
 
         /**
-         * The filter conditions. Set the value to a JSON string in the format of {"field":"Name", "pattern":"my-"}, where:
-         * <p>
+         * <p>The filter conditions. Set the value to a JSON string in the format of {&quot;field&quot;:&quot;Name&quot;, &quot;pattern&quot;:&quot;my-&quot;}, where:</p>
+         * <ul>
+         * <li>field: the parameter to be matched. Valid values: Name and ClusterName.</li>
+         * <li>pattern: the content to be matched.</li>
+         * </ul>
+         * <p>For example, a value of {&quot;field&quot;:&quot;Name&quot;, &quot;pattern&quot;:&quot;my-&quot;} indicates that the specified filter conditions match the routing rules whose names start with my-.</p>
          * 
-         * *   field: the parameter to be matched. Valid values: Name and ClusterName.
-         * *   pattern: the content to be matched.
-         * 
-         * For example, a value of {"field":"Name", "pattern":"my-"} indicates that the specified filter conditions match the routing rules whose names start with my-.
+         * <strong>example:</strong>
+         * <p>{&quot;field&quot;:&quot;Name&quot;, &quot;pattern&quot;:&quot;my-&quot;}</p>
          */
         public Builder condition(String condition) {
             this.putQueryParameter("Condition", condition);
@@ -120,7 +130,10 @@ public class ListK8sIngressRulesRequest extends Request {
         }
 
         /**
-         * The namespace of the Kubernetes cluster.
+         * <p>The namespace of the Kubernetes cluster.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>default</p>
          */
         public Builder namespace(String namespace) {
             this.putQueryParameter("Namespace", namespace);
@@ -129,7 +142,10 @@ public class ListK8sIngressRulesRequest extends Request {
         }
 
         /**
-         * The ID of the region where the cluster resides.
+         * <p>The ID of the region where the cluster resides.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-hangzhou</p>
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);

@@ -1,20 +1,25 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.edas20170801.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link CreateIDCImportCommandRequest} extends {@link RequestModel}
  *
  * <p>CreateIDCImportCommandRequest</p>
  */
 public class CreateIDCImportCommandRequest extends Request {
-    @Body
-    @NameInMap("ClusterId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("ClusterId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String clusterId;
 
     private CreateIDCImportCommandRequest(Builder builder) {
@@ -30,7 +35,7 @@ public class CreateIDCImportCommandRequest extends Request {
         return builder().build();
     }
 
-    @Override
+@Override
     public Builder toBuilder() {
         return new Builder(this);
     }
@@ -55,7 +60,11 @@ public class CreateIDCImportCommandRequest extends Request {
         } 
 
         /**
-         * The cluster ID. You can call the ListCluster operation to query the cluster ID. For more information, see [ListCluster](~~154995~~).
+         * <p>The cluster ID. You can call the ListCluster operation to query the cluster ID. For more information, see <a href="https://help.aliyun.com/document_detail/154995.html">ListCluster</a>.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>7246cxxx-53xx-xxxx-xxxx-xxxxxxxx</p>
          */
         public Builder clusterId(String clusterId) {
             this.putBodyParameter("ClusterId", clusterId);

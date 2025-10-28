@@ -1,24 +1,29 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.edas20170801.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link GetJvmConfigurationRequest} extends {@link RequestModel}
  *
  * <p>GetJvmConfigurationRequest</p>
  */
 public class GetJvmConfigurationRequest extends Request {
-    @Query
-    @NameInMap("AppId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("AppId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String appId;
 
-    @Query
-    @NameInMap("GroupId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("GroupId")
     private String groupId;
 
     private GetJvmConfigurationRequest(Builder builder) {
@@ -35,7 +40,7 @@ public class GetJvmConfigurationRequest extends Request {
         return builder().build();
     }
 
-    @Override
+@Override
     public Builder toBuilder() {
         return new Builder(this);
     }
@@ -69,7 +74,11 @@ public class GetJvmConfigurationRequest extends Request {
         } 
 
         /**
-         * The ID of the application.
+         * <p>The ID of the application.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>3616cdca-4f92-4***************</p>
          */
         public Builder appId(String appId) {
             this.putQueryParameter("AppId", appId);
@@ -78,11 +87,14 @@ public class GetJvmConfigurationRequest extends Request {
         }
 
         /**
-         * The ID of the instance group.
-         * <p>
+         * <p>The ID of the instance group.</p>
+         * <ul>
+         * <li>If an ID is specified, this operation queries the JVM configuration information of the instance group.</li>
+         * <li>If an ID is not specified, this operation queries the JVM configuration information of the application.</li>
+         * </ul>
          * 
-         * *   If an ID is specified, this operation queries the JVM configuration information of the instance group.
-         * *   If an ID is not specified, this operation queries the JVM configuration information of the application.
+         * <strong>example:</strong>
+         * <p>8123db90-880f-48**************</p>
          */
         public Builder groupId(String groupId) {
             this.putQueryParameter("GroupId", groupId);

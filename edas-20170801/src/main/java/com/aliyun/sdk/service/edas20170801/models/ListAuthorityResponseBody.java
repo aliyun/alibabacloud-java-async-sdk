@@ -1,27 +1,32 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.edas20170801.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ListAuthorityResponseBody} extends {@link TeaModel}
  *
  * <p>ListAuthorityResponseBody</p>
  */
 public class ListAuthorityResponseBody extends TeaModel {
-    @NameInMap("AuthorityList")
+    @com.aliyun.core.annotation.NameInMap("AuthorityList")
     private AuthorityList authorityList;
 
-    @NameInMap("Code")
+    @com.aliyun.core.annotation.NameInMap("Code")
     private Integer code;
 
-    @NameInMap("Message")
+    @com.aliyun.core.annotation.NameInMap("Message")
     private String message;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
     private ListAuthorityResponseBody(Builder builder) {
@@ -37,6 +42,10 @@ public class ListAuthorityResponseBody extends TeaModel {
 
     public static ListAuthorityResponseBody create() {
         return builder().build();
+    }
+
+    public Builder toBuilder() {
+        return new Builder(this);
     }
 
     /**
@@ -73,8 +82,18 @@ public class ListAuthorityResponseBody extends TeaModel {
         private String message; 
         private String requestId; 
 
+        private Builder() {
+        } 
+
+        private Builder(ListAuthorityResponseBody model) {
+            this.authorityList = model.authorityList;
+            this.code = model.code;
+            this.message = model.message;
+            this.requestId = model.requestId;
+        } 
+
         /**
-         * The permissions.
+         * <p>The permissions.</p>
          */
         public Builder authorityList(AuthorityList authorityList) {
             this.authorityList = authorityList;
@@ -82,7 +101,10 @@ public class ListAuthorityResponseBody extends TeaModel {
         }
 
         /**
-         * The HTTP status code that is returned.
+         * <p>The HTTP status code that is returned.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>200</p>
          */
         public Builder code(Integer code) {
             this.code = code;
@@ -90,7 +112,10 @@ public class ListAuthorityResponseBody extends TeaModel {
         }
 
         /**
-         * The additional information that is returned.
+         * <p>The additional information that is returned.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>success</p>
          */
         public Builder message(String message) {
             this.message = message;
@@ -98,7 +123,10 @@ public class ListAuthorityResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the request.
+         * <p>The ID of the request.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>57609587-DFA2-41EC-<strong><strong>-</strong></strong>*****</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -111,17 +139,23 @@ public class ListAuthorityResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link ListAuthorityResponseBody} extends {@link TeaModel}
+     *
+     * <p>ListAuthorityResponseBody</p>
+     */
     public static class Action extends TeaModel {
-        @NameInMap("Code")
+        @com.aliyun.core.annotation.NameInMap("Code")
         private String code;
 
-        @NameInMap("Description")
+        @com.aliyun.core.annotation.NameInMap("Description")
         private String description;
 
-        @NameInMap("GroupId")
+        @com.aliyun.core.annotation.NameInMap("GroupId")
         private String groupId;
 
-        @NameInMap("Name")
+        @com.aliyun.core.annotation.NameInMap("Name")
         private String name;
 
         private Action(Builder builder) {
@@ -173,8 +207,21 @@ public class ListAuthorityResponseBody extends TeaModel {
             private String groupId; 
             private String name; 
 
+            private Builder() {
+            } 
+
+            private Builder(Action model) {
+                this.code = model.code;
+                this.description = model.description;
+                this.groupId = model.groupId;
+                this.name = model.name;
+            } 
+
             /**
-             * The code of the permission.
+             * <p>The code of the permission.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder code(String code) {
                 this.code = code;
@@ -182,7 +229,10 @@ public class ListAuthorityResponseBody extends TeaModel {
             }
 
             /**
-             * The description of the permission.
+             * <p>The description of the permission.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Create an application</p>
              */
             public Builder description(String description) {
                 this.description = description;
@@ -190,7 +240,10 @@ public class ListAuthorityResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the permission group.
+             * <p>The ID of the permission group.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder groupId(String groupId) {
                 this.groupId = groupId;
@@ -198,7 +251,10 @@ public class ListAuthorityResponseBody extends TeaModel {
             }
 
             /**
-             * The name of the permission.
+             * <p>The name of the permission.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Create an application</p>
              */
             public Builder name(String name) {
                 this.name = name;
@@ -212,9 +268,15 @@ public class ListAuthorityResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link ListAuthorityResponseBody} extends {@link TeaModel}
+     *
+     * <p>ListAuthorityResponseBody</p>
+     */
     public static class ActionList extends TeaModel {
-        @NameInMap("Action")
-        private java.util.List < Action> action;
+        @com.aliyun.core.annotation.NameInMap("Action")
+        private java.util.List<Action> action;
 
         private ActionList(Builder builder) {
             this.action = builder.action;
@@ -231,17 +293,24 @@ public class ListAuthorityResponseBody extends TeaModel {
         /**
          * @return action
          */
-        public java.util.List < Action> getAction() {
+        public java.util.List<Action> getAction() {
             return this.action;
         }
 
         public static final class Builder {
-            private java.util.List < Action> action; 
+            private java.util.List<Action> action; 
+
+            private Builder() {
+            } 
+
+            private Builder(ActionList model) {
+                this.action = model.action;
+            } 
 
             /**
              * Action.
              */
-            public Builder action(java.util.List < Action> action) {
+            public Builder action(java.util.List<Action> action) {
                 this.action = action;
                 return this;
             }
@@ -253,17 +322,23 @@ public class ListAuthorityResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link ListAuthorityResponseBody} extends {@link TeaModel}
+     *
+     * <p>ListAuthorityResponseBody</p>
+     */
     public static class Authority extends TeaModel {
-        @NameInMap("ActionList")
+        @com.aliyun.core.annotation.NameInMap("ActionList")
         private ActionList actionList;
 
-        @NameInMap("Description")
+        @com.aliyun.core.annotation.NameInMap("Description")
         private String description;
 
-        @NameInMap("GroupId")
+        @com.aliyun.core.annotation.NameInMap("GroupId")
         private String groupId;
 
-        @NameInMap("Name")
+        @com.aliyun.core.annotation.NameInMap("Name")
         private String name;
 
         private Authority(Builder builder) {
@@ -315,8 +390,18 @@ public class ListAuthorityResponseBody extends TeaModel {
             private String groupId; 
             private String name; 
 
+            private Builder() {
+            } 
+
+            private Builder(Authority model) {
+                this.actionList = model.actionList;
+                this.description = model.description;
+                this.groupId = model.groupId;
+                this.name = model.name;
+            } 
+
             /**
-             * The set of permissions.
+             * <p>The set of permissions.</p>
              */
             public Builder actionList(ActionList actionList) {
                 this.actionList = actionList;
@@ -324,7 +409,10 @@ public class ListAuthorityResponseBody extends TeaModel {
             }
 
             /**
-             * The description of the permission group.
+             * <p>The description of the permission group.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Operations on applications</p>
              */
             public Builder description(String description) {
                 this.description = description;
@@ -332,7 +420,10 @@ public class ListAuthorityResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the permission group.
+             * <p>The ID of the permission group.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder groupId(String groupId) {
                 this.groupId = groupId;
@@ -340,7 +431,10 @@ public class ListAuthorityResponseBody extends TeaModel {
             }
 
             /**
-             * The name of the permission group.
+             * <p>The name of the permission group.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Application management</p>
              */
             public Builder name(String name) {
                 this.name = name;
@@ -354,9 +448,15 @@ public class ListAuthorityResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link ListAuthorityResponseBody} extends {@link TeaModel}
+     *
+     * <p>ListAuthorityResponseBody</p>
+     */
     public static class AuthorityList extends TeaModel {
-        @NameInMap("Authority")
-        private java.util.List < Authority> authority;
+        @com.aliyun.core.annotation.NameInMap("Authority")
+        private java.util.List<Authority> authority;
 
         private AuthorityList(Builder builder) {
             this.authority = builder.authority;
@@ -373,17 +473,24 @@ public class ListAuthorityResponseBody extends TeaModel {
         /**
          * @return authority
          */
-        public java.util.List < Authority> getAuthority() {
+        public java.util.List<Authority> getAuthority() {
             return this.authority;
         }
 
         public static final class Builder {
-            private java.util.List < Authority> authority; 
+            private java.util.List<Authority> authority; 
+
+            private Builder() {
+            } 
+
+            private Builder(AuthorityList model) {
+                this.authority = model.authority;
+            } 
 
             /**
              * Authority.
              */
-            public Builder authority(java.util.List < Authority> authority) {
+            public Builder authority(java.util.List<Authority> authority) {
                 this.authority = authority;
                 return this;
             }

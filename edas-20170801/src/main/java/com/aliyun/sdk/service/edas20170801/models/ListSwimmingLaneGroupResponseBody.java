@@ -1,27 +1,32 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.edas20170801.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ListSwimmingLaneGroupResponseBody} extends {@link TeaModel}
  *
  * <p>ListSwimmingLaneGroupResponseBody</p>
  */
 public class ListSwimmingLaneGroupResponseBody extends TeaModel {
-    @NameInMap("Code")
+    @com.aliyun.core.annotation.NameInMap("Code")
     private Integer code;
 
-    @NameInMap("Data")
-    private java.util.List < Data> data;
+    @com.aliyun.core.annotation.NameInMap("Data")
+    private java.util.List<Data> data;
 
-    @NameInMap("Message")
+    @com.aliyun.core.annotation.NameInMap("Message")
     private String message;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
     private ListSwimmingLaneGroupResponseBody(Builder builder) {
@@ -39,6 +44,10 @@ public class ListSwimmingLaneGroupResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return code
      */
@@ -49,7 +58,7 @@ public class ListSwimmingLaneGroupResponseBody extends TeaModel {
     /**
      * @return data
      */
-    public java.util.List < Data> getData() {
+    public java.util.List<Data> getData() {
         return this.data;
     }
 
@@ -69,12 +78,25 @@ public class ListSwimmingLaneGroupResponseBody extends TeaModel {
 
     public static final class Builder {
         private Integer code; 
-        private java.util.List < Data> data; 
+        private java.util.List<Data> data; 
         private String message; 
         private String requestId; 
 
+        private Builder() {
+        } 
+
+        private Builder(ListSwimmingLaneGroupResponseBody model) {
+            this.code = model.code;
+            this.data = model.data;
+            this.message = model.message;
+            this.requestId = model.requestId;
+        } 
+
         /**
-         * The HTTP status code that is returned.
+         * <p>The HTTP status code that is returned.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>200</p>
          */
         public Builder code(Integer code) {
             this.code = code;
@@ -82,15 +104,18 @@ public class ListSwimmingLaneGroupResponseBody extends TeaModel {
         }
 
         /**
-         * The data of the lane group.
+         * <p>The data of the lane group.</p>
          */
-        public Builder data(java.util.List < Data> data) {
+        public Builder data(java.util.List<Data> data) {
             this.data = data;
             return this;
         }
 
         /**
-         * The additional information that is returned.
+         * <p>The additional information that is returned.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>success</p>
          */
         public Builder message(String message) {
             this.message = message;
@@ -98,7 +123,10 @@ public class ListSwimmingLaneGroupResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the request.
+         * <p>The ID of the request.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>BF238E37-671A-5045-B49A-0B29C166****</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -111,11 +139,17 @@ public class ListSwimmingLaneGroupResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link ListSwimmingLaneGroupResponseBody} extends {@link TeaModel}
+     *
+     * <p>ListSwimmingLaneGroupResponseBody</p>
+     */
     public static class ApplicationList extends TeaModel {
-        @NameInMap("AppId")
+        @com.aliyun.core.annotation.NameInMap("AppId")
         private String appId;
 
-        @NameInMap("AppName")
+        @com.aliyun.core.annotation.NameInMap("AppName")
         private String appName;
 
         private ApplicationList(Builder builder) {
@@ -149,8 +183,19 @@ public class ListSwimmingLaneGroupResponseBody extends TeaModel {
             private String appId; 
             private String appName; 
 
+            private Builder() {
+            } 
+
+            private Builder(ApplicationList model) {
+                this.appId = model.appId;
+                this.appName = model.appName;
+            } 
+
             /**
-             * The ID of the application.
+             * <p>The ID of the application.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>406073bf-afc2-4142-b3d7-629a0308****</p>
              */
             public Builder appId(String appId) {
                 this.appId = appId;
@@ -158,7 +203,10 @@ public class ListSwimmingLaneGroupResponseBody extends TeaModel {
             }
 
             /**
-             * The name of the application.
+             * <p>The name of the application.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>java-app</p>
              */
             public Builder appName(String appName) {
                 this.appName = appName;
@@ -172,14 +220,20 @@ public class ListSwimmingLaneGroupResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link ListSwimmingLaneGroupResponseBody} extends {@link TeaModel}
+     *
+     * <p>ListSwimmingLaneGroupResponseBody</p>
+     */
     public static class EntryApplication extends TeaModel {
-        @NameInMap("AppId")
+        @com.aliyun.core.annotation.NameInMap("AppId")
         private String appId;
 
-        @NameInMap("AppName")
+        @com.aliyun.core.annotation.NameInMap("AppName")
         private String appName;
 
-        @NameInMap("Source")
+        @com.aliyun.core.annotation.NameInMap("Source")
         private String source;
 
         private EntryApplication(Builder builder) {
@@ -222,8 +276,20 @@ public class ListSwimmingLaneGroupResponseBody extends TeaModel {
             private String appName; 
             private String source; 
 
+            private Builder() {
+            } 
+
+            private Builder(EntryApplication model) {
+                this.appId = model.appId;
+                this.appName = model.appName;
+                this.source = model.source;
+            } 
+
             /**
-             * The ID of the application.
+             * <p>The ID of the application.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>406073bf-afc2-4142-b3d7-629a0308****</p>
              */
             public Builder appId(String appId) {
                 this.appId = appId;
@@ -231,7 +297,10 @@ public class ListSwimmingLaneGroupResponseBody extends TeaModel {
             }
 
             /**
-             * The name of the application.
+             * <p>The name of the application.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>java-app</p>
              */
             public Builder appName(String appName) {
                 this.appName = appName;
@@ -239,7 +308,10 @@ public class ListSwimmingLaneGroupResponseBody extends TeaModel {
             }
 
             /**
-             * The data source. Set the value to EDAS.
+             * <p>The data source. Set the value to EDAS.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>EDAS</p>
              */
             public Builder source(String source) {
                 this.source = source;
@@ -253,20 +325,26 @@ public class ListSwimmingLaneGroupResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link ListSwimmingLaneGroupResponseBody} extends {@link TeaModel}
+     *
+     * <p>ListSwimmingLaneGroupResponseBody</p>
+     */
     public static class Data extends TeaModel {
-        @NameInMap("ApplicationList")
-        private java.util.List < ApplicationList> applicationList;
+        @com.aliyun.core.annotation.NameInMap("ApplicationList")
+        private java.util.List<ApplicationList> applicationList;
 
-        @NameInMap("EntryApplication")
+        @com.aliyun.core.annotation.NameInMap("EntryApplication")
         private EntryApplication entryApplication;
 
-        @NameInMap("Id")
+        @com.aliyun.core.annotation.NameInMap("Id")
         private Long id;
 
-        @NameInMap("Name")
+        @com.aliyun.core.annotation.NameInMap("Name")
         private String name;
 
-        @NameInMap("NamespaceId")
+        @com.aliyun.core.annotation.NameInMap("NamespaceId")
         private String namespaceId;
 
         private Data(Builder builder) {
@@ -288,7 +366,7 @@ public class ListSwimmingLaneGroupResponseBody extends TeaModel {
         /**
          * @return applicationList
          */
-        public java.util.List < ApplicationList> getApplicationList() {
+        public java.util.List<ApplicationList> getApplicationList() {
             return this.applicationList;
         }
 
@@ -321,22 +399,33 @@ public class ListSwimmingLaneGroupResponseBody extends TeaModel {
         }
 
         public static final class Builder {
-            private java.util.List < ApplicationList> applicationList; 
+            private java.util.List<ApplicationList> applicationList; 
             private EntryApplication entryApplication; 
             private Long id; 
             private String name; 
             private String namespaceId; 
 
+            private Builder() {
+            } 
+
+            private Builder(Data model) {
+                this.applicationList = model.applicationList;
+                this.entryApplication = model.entryApplication;
+                this.id = model.id;
+                this.name = model.name;
+                this.namespaceId = model.namespaceId;
+            } 
+
             /**
-             * The applications that are related to the lane group.
+             * <p>The applications that are related to the lane group.</p>
              */
-            public Builder applicationList(java.util.List < ApplicationList> applicationList) {
+            public Builder applicationList(java.util.List<ApplicationList> applicationList) {
                 this.applicationList = applicationList;
                 return this;
             }
 
             /**
-             * The information about the Enterprise Distributed Application Service (EDAS) ingress gateway.
+             * <p>The information about the Enterprise Distributed Application Service (EDAS) ingress gateway.</p>
              */
             public Builder entryApplication(EntryApplication entryApplication) {
                 this.entryApplication = entryApplication;
@@ -344,7 +433,10 @@ public class ListSwimmingLaneGroupResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the lane group.
+             * <p>The ID of the lane group.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>257</p>
              */
             public Builder id(Long id) {
                 this.id = id;
@@ -352,7 +444,10 @@ public class ListSwimmingLaneGroupResponseBody extends TeaModel {
             }
 
             /**
-             * The name of the lane group.
+             * <p>The name of the lane group.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>name</p>
              */
             public Builder name(String name) {
                 this.name = name;
@@ -360,7 +455,10 @@ public class ListSwimmingLaneGroupResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the microservices namespace.
+             * <p>The ID of the microservices namespace.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>cn-shanghai:daily</p>
              */
             public Builder namespaceId(String namespaceId) {
                 this.namespaceId = namespaceId;

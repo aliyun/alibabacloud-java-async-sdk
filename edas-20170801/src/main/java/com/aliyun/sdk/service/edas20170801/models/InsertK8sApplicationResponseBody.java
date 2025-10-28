@@ -1,27 +1,32 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.edas20170801.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link InsertK8sApplicationResponseBody} extends {@link TeaModel}
  *
  * <p>InsertK8sApplicationResponseBody</p>
  */
 public class InsertK8sApplicationResponseBody extends TeaModel {
-    @NameInMap("ApplicationInfo")
+    @com.aliyun.core.annotation.NameInMap("ApplicationInfo")
     private ApplicationInfo applicationInfo;
 
-    @NameInMap("Code")
+    @com.aliyun.core.annotation.NameInMap("Code")
     private Integer code;
 
-    @NameInMap("Message")
+    @com.aliyun.core.annotation.NameInMap("Message")
     private String message;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
     private InsertK8sApplicationResponseBody(Builder builder) {
@@ -37,6 +42,10 @@ public class InsertK8sApplicationResponseBody extends TeaModel {
 
     public static InsertK8sApplicationResponseBody create() {
         return builder().build();
+    }
+
+    public Builder toBuilder() {
+        return new Builder(this);
     }
 
     /**
@@ -73,8 +82,18 @@ public class InsertK8sApplicationResponseBody extends TeaModel {
         private String message; 
         private String requestId; 
 
+        private Builder() {
+        } 
+
+        private Builder(InsertK8sApplicationResponseBody model) {
+            this.applicationInfo = model.applicationInfo;
+            this.code = model.code;
+            this.message = model.message;
+            this.requestId = model.requestId;
+        } 
+
         /**
-         * The details of the application.
+         * <p>The details of the application.</p>
          */
         public Builder applicationInfo(ApplicationInfo applicationInfo) {
             this.applicationInfo = applicationInfo;
@@ -82,7 +101,10 @@ public class InsertK8sApplicationResponseBody extends TeaModel {
         }
 
         /**
-         * The HTTP status code that is returned.
+         * <p>The HTTP status code that is returned.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>200</p>
          */
         public Builder code(Integer code) {
             this.code = code;
@@ -90,7 +112,10 @@ public class InsertK8sApplicationResponseBody extends TeaModel {
         }
 
         /**
-         * The additional information that is returned.
+         * <p>The additional information that is returned.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>success</p>
          */
         public Builder message(String message) {
             this.message = message;
@@ -98,7 +123,10 @@ public class InsertK8sApplicationResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the request.
+         * <p>The ID of the request.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>b197-40ab-9155-****</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -111,32 +139,38 @@ public class InsertK8sApplicationResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link InsertK8sApplicationResponseBody} extends {@link TeaModel}
+     *
+     * <p>InsertK8sApplicationResponseBody</p>
+     */
     public static class ApplicationInfo extends TeaModel {
-        @NameInMap("AppId")
+        @com.aliyun.core.annotation.NameInMap("AppId")
         private String appId;
 
-        @NameInMap("AppName")
+        @com.aliyun.core.annotation.NameInMap("AppName")
         private String appName;
 
-        @NameInMap("ChangeOrderId")
+        @com.aliyun.core.annotation.NameInMap("ChangeOrderId")
         private String changeOrderId;
 
-        @NameInMap("ClusterType")
+        @com.aliyun.core.annotation.NameInMap("ClusterType")
         private Integer clusterType;
 
-        @NameInMap("Dockerize")
+        @com.aliyun.core.annotation.NameInMap("Dockerize")
         private Boolean dockerize;
 
-        @NameInMap("EdasId")
+        @com.aliyun.core.annotation.NameInMap("EdasId")
         private String edasId;
 
-        @NameInMap("Owner")
+        @com.aliyun.core.annotation.NameInMap("Owner")
         private String owner;
 
-        @NameInMap("RegionId")
+        @com.aliyun.core.annotation.NameInMap("RegionId")
         private String regionId;
 
-        @NameInMap("UserId")
+        @com.aliyun.core.annotation.NameInMap("UserId")
         private String userId;
 
         private ApplicationInfo(Builder builder) {
@@ -233,8 +267,26 @@ public class InsertK8sApplicationResponseBody extends TeaModel {
             private String regionId; 
             private String userId; 
 
+            private Builder() {
+            } 
+
+            private Builder(ApplicationInfo model) {
+                this.appId = model.appId;
+                this.appName = model.appName;
+                this.changeOrderId = model.changeOrderId;
+                this.clusterType = model.clusterType;
+                this.dockerize = model.dockerize;
+                this.edasId = model.edasId;
+                this.owner = model.owner;
+                this.regionId = model.regionId;
+                this.userId = model.userId;
+            } 
+
             /**
-             * The ID of the application. You can call the ListApplication operation to query the application ID. For more information, see [ListApplication](~~149390~~).
+             * <p>The ID of the application. You can call the ListApplication operation to query the application ID. For more information, see <a href="https://help.aliyun.com/document_detail/149390.html">ListApplication</a>.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>e83acea6-<strong><strong>-47e1-96ae-c0e95377</strong></strong></p>
              */
             public Builder appId(String appId) {
                 this.appId = appId;
@@ -242,7 +294,10 @@ public class InsertK8sApplicationResponseBody extends TeaModel {
             }
 
             /**
-             * The name of the application.
+             * <p>The name of the application.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>test</p>
              */
             public Builder appName(String appName) {
                 this.appName = appName;
@@ -250,7 +305,10 @@ public class InsertK8sApplicationResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the change process. You can call the GetChangeOrderInfo operation to query the change process ID. For more information, see [GetChangeOrderInfo](~~62072~~).
+             * <p>The ID of the change process. You can call the GetChangeOrderInfo operation to query the change process ID. For more information, see <a href="https://help.aliyun.com/document_detail/62072.html">GetChangeOrderInfo</a>.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>cd65b247-****-475b-ad4b-7039040d625c</p>
              */
             public Builder changeOrderId(String changeOrderId) {
                 this.changeOrderId = changeOrderId;
@@ -258,15 +316,18 @@ public class InsertK8sApplicationResponseBody extends TeaModel {
             }
 
             /**
-             * The type of the cluster. Valid values:
-             * <p>
+             * <p>The type of the cluster. Valid values:</p>
+             * <ul>
+             * <li>0: regular Docker cluster</li>
+             * <li>1: Swarm cluster (discontinued)</li>
+             * <li>2: Elastic Compute Service (ECS) cluster</li>
+             * <li>3: self-managed Kubernetes cluster in EDAS (discontinued)</li>
+             * <li>4: cluster in which Pandora automatically registers applications</li>
+             * <li>5: ACK cluster and serverless Kubernetes cluster</li>
+             * </ul>
              * 
-             * *   0: regular Docker cluster
-             * *   1: Swarm cluster (discontinued)
-             * *   2: Elastic Compute Service (ECS) cluster
-             * *   3: self-managed Kubernetes cluster in EDAS (discontinued)
-             * *   4: cluster in which Pandora automatically registers applications
-             * *   5: ACK cluster and serverless Kubernetes cluster
+             * <strong>example:</strong>
+             * <p>5</p>
              */
             public Builder clusterType(Integer clusterType) {
                 this.clusterType = clusterType;
@@ -274,11 +335,14 @@ public class InsertK8sApplicationResponseBody extends TeaModel {
             }
 
             /**
-             * Indicates whether the application is a Docker application.
-             * <p>
+             * <p>Indicates whether the application is a Docker application.</p>
+             * <ul>
+             * <li>true: The application is a Docker application.</li>
+             * <li>false: The application is not a Docker application.</li>
+             * </ul>
              * 
-             * *   true: The application is a Docker application.
-             * *   false: The application is not a Docker application.
+             * <strong>example:</strong>
+             * <p>true</p>
              */
             public Builder dockerize(Boolean dockerize) {
                 this.dockerize = dockerize;
@@ -286,7 +350,10 @@ public class InsertK8sApplicationResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the user to which the application belongs. This ID is generated by EDAS.
+             * <p>The ID of the user to which the application belongs. This ID is generated by EDAS.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1172<strong><strong>6608</strong></strong></p>
              */
             public Builder edasId(String edasId) {
                 this.edasId = edasId;
@@ -294,7 +361,10 @@ public class InsertK8sApplicationResponseBody extends TeaModel {
             }
 
             /**
-             * The owner of the application.
+             * <p>The owner of the application.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>zp</p>
              */
             public Builder owner(String owner) {
                 this.owner = owner;
@@ -302,7 +372,10 @@ public class InsertK8sApplicationResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the region.
+             * <p>The ID of the region.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>cn-beijing</p>
              */
             public Builder regionId(String regionId) {
                 this.regionId = regionId;
@@ -310,7 +383,10 @@ public class InsertK8sApplicationResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the Alibaba Cloud account to which the application belongs.
+             * <p>The ID of the Alibaba Cloud account to which the application belongs.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>edas_test****@aliyun****.com</p>
              */
             public Builder userId(String userId) {
                 this.userId = userId;
