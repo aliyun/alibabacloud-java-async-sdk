@@ -31,6 +31,10 @@ public class UnbindRequest extends Request {
     private String appInstanceId;
 
     @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("AppInstancePersistentId")
+    private String appInstancePersistentId;
+
+    @com.aliyun.core.annotation.Body
     @com.aliyun.core.annotation.NameInMap("ClientId")
     private String clientId;
 
@@ -78,6 +82,7 @@ public class UnbindRequest extends Request {
         this.appId = builder.appId;
         this.appInstanceGroupId = builder.appInstanceGroupId;
         this.appInstanceId = builder.appInstanceId;
+        this.appInstancePersistentId = builder.appInstancePersistentId;
         this.clientId = builder.clientId;
         this.clientIp = builder.clientIp;
         this.clientOS = builder.clientOS;
@@ -122,6 +127,13 @@ public class UnbindRequest extends Request {
      */
     public String getAppInstanceId() {
         return this.appInstanceId;
+    }
+
+    /**
+     * @return appInstancePersistentId
+     */
+    public String getAppInstancePersistentId() {
+        return this.appInstancePersistentId;
     }
 
     /**
@@ -198,6 +210,7 @@ public class UnbindRequest extends Request {
         private String appId; 
         private String appInstanceGroupId; 
         private String appInstanceId; 
+        private String appInstancePersistentId; 
         private String clientId; 
         private String clientIp; 
         private String clientOS; 
@@ -218,6 +231,7 @@ public class UnbindRequest extends Request {
             this.appId = request.appId;
             this.appInstanceGroupId = request.appInstanceGroupId;
             this.appInstanceId = request.appInstanceId;
+            this.appInstancePersistentId = request.appInstancePersistentId;
             this.clientId = request.clientId;
             this.clientIp = request.clientIp;
             this.clientOS = request.clientOS;
@@ -257,6 +271,15 @@ public class UnbindRequest extends Request {
         public Builder appInstanceId(String appInstanceId) {
             this.putBodyParameter("AppInstanceId", appInstanceId);
             this.appInstanceId = appInstanceId;
+            return this;
+        }
+
+        /**
+         * AppInstancePersistentId.
+         */
+        public Builder appInstancePersistentId(String appInstancePersistentId) {
+            this.putBodyParameter("AppInstancePersistentId", appInstancePersistentId);
+            this.appInstancePersistentId = appInstancePersistentId;
             return this;
         }
 
