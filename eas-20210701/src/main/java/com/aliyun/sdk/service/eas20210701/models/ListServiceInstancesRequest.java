@@ -56,6 +56,10 @@ public class ListServiceInstancesRequest extends Request {
     private Boolean isSpot;
 
     @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("MemberType")
+    private String memberType;
+
+    @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("Order")
     private String order;
 
@@ -90,6 +94,7 @@ public class ListServiceInstancesRequest extends Request {
         this.instanceStatus = builder.instanceStatus;
         this.instanceType = builder.instanceType;
         this.isSpot = builder.isSpot;
+        this.memberType = builder.memberType;
         this.order = builder.order;
         this.pageNumber = builder.pageNumber;
         this.pageSize = builder.pageSize;
@@ -175,6 +180,13 @@ public class ListServiceInstancesRequest extends Request {
     }
 
     /**
+     * @return memberType
+     */
+    public String getMemberType() {
+        return this.memberType;
+    }
+
+    /**
      * @return order
      */
     public String getOrder() {
@@ -226,6 +238,7 @@ public class ListServiceInstancesRequest extends Request {
         private String instanceStatus; 
         private String instanceType; 
         private Boolean isSpot; 
+        private String memberType; 
         private String order; 
         private Integer pageNumber; 
         private Integer pageSize; 
@@ -248,6 +261,7 @@ public class ListServiceInstancesRequest extends Request {
             this.instanceStatus = request.instanceStatus;
             this.instanceType = request.instanceType;
             this.isSpot = request.isSpot;
+            this.memberType = request.memberType;
             this.order = request.order;
             this.pageNumber = request.pageNumber;
             this.pageSize = request.pageSize;
@@ -363,6 +377,15 @@ public class ListServiceInstancesRequest extends Request {
         public Builder isSpot(Boolean isSpot) {
             this.putQueryParameter("IsSpot", isSpot);
             this.isSpot = isSpot;
+            return this;
+        }
+
+        /**
+         * MemberType.
+         */
+        public Builder memberType(String memberType) {
+            this.putQueryParameter("MemberType", memberType);
+            this.memberType = memberType;
             return this;
         }
 

@@ -194,6 +194,9 @@ public class ListGatewayResponseBody extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("IntranetDomain")
         private String intranetDomain;
 
+        @com.aliyun.core.annotation.NameInMap("IntranetEnabled")
+        private Boolean intranetEnabled;
+
         @com.aliyun.core.annotation.NameInMap("IsDefault")
         private Boolean isDefault;
 
@@ -218,6 +221,7 @@ public class ListGatewayResponseBody extends TeaModel {
             this.internetDomain = builder.internetDomain;
             this.internetEnabled = builder.internetEnabled;
             this.intranetDomain = builder.intranetDomain;
+            this.intranetEnabled = builder.intranetEnabled;
             this.isDefault = builder.isDefault;
             this.replicas = builder.replicas;
             this.SSLRedirectionEnabled = builder.SSLRedirectionEnabled;
@@ -290,6 +294,13 @@ public class ListGatewayResponseBody extends TeaModel {
         }
 
         /**
+         * @return intranetEnabled
+         */
+        public Boolean getIntranetEnabled() {
+            return this.intranetEnabled;
+        }
+
+        /**
          * @return isDefault
          */
         public Boolean getIsDefault() {
@@ -333,6 +344,7 @@ public class ListGatewayResponseBody extends TeaModel {
             private String internetDomain; 
             private Boolean internetEnabled; 
             private String intranetDomain; 
+            private Boolean intranetEnabled; 
             private Boolean isDefault; 
             private Integer replicas; 
             private Boolean SSLRedirectionEnabled; 
@@ -351,6 +363,7 @@ public class ListGatewayResponseBody extends TeaModel {
                 this.internetDomain = model.internetDomain;
                 this.internetEnabled = model.internetEnabled;
                 this.intranetDomain = model.intranetDomain;
+                this.intranetEnabled = model.intranetEnabled;
                 this.isDefault = model.isDefault;
                 this.replicas = model.replicas;
                 this.SSLRedirectionEnabled = model.SSLRedirectionEnabled;
@@ -447,6 +460,14 @@ public class ListGatewayResponseBody extends TeaModel {
              */
             public Builder intranetDomain(String intranetDomain) {
                 this.intranetDomain = intranetDomain;
+                return this;
+            }
+
+            /**
+             * IntranetEnabled.
+             */
+            public Builder intranetEnabled(Boolean intranetEnabled) {
+                this.intranetEnabled = intranetEnabled;
                 return this;
             }
 

@@ -18,12 +18,20 @@ import com.aliyun.sdk.gateway.pop.models.*;
  */
 public class ListVirtualResourceRequest extends Request {
     @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Order")
+    private String order;
+
+    @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("PageNumber")
     private Integer pageNumber;
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("PageSize")
     private Integer pageSize;
+
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Sort")
+    private String sort;
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("VirtualResourceId")
@@ -35,8 +43,10 @@ public class ListVirtualResourceRequest extends Request {
 
     private ListVirtualResourceRequest(Builder builder) {
         super(builder);
+        this.order = builder.order;
         this.pageNumber = builder.pageNumber;
         this.pageSize = builder.pageSize;
+        this.sort = builder.sort;
         this.virtualResourceId = builder.virtualResourceId;
         this.virtualResourceName = builder.virtualResourceName;
     }
@@ -55,6 +65,13 @@ public class ListVirtualResourceRequest extends Request {
     }
 
     /**
+     * @return order
+     */
+    public String getOrder() {
+        return this.order;
+    }
+
+    /**
      * @return pageNumber
      */
     public Integer getPageNumber() {
@@ -66,6 +83,13 @@ public class ListVirtualResourceRequest extends Request {
      */
     public Integer getPageSize() {
         return this.pageSize;
+    }
+
+    /**
+     * @return sort
+     */
+    public String getSort() {
+        return this.sort;
     }
 
     /**
@@ -83,8 +107,10 @@ public class ListVirtualResourceRequest extends Request {
     }
 
     public static final class Builder extends Request.Builder<ListVirtualResourceRequest, Builder> {
+        private String order; 
         private Integer pageNumber; 
         private Integer pageSize; 
+        private String sort; 
         private String virtualResourceId; 
         private String virtualResourceName; 
 
@@ -94,11 +120,22 @@ public class ListVirtualResourceRequest extends Request {
 
         private Builder(ListVirtualResourceRequest request) {
             super(request);
+            this.order = request.order;
             this.pageNumber = request.pageNumber;
             this.pageSize = request.pageSize;
+            this.sort = request.sort;
             this.virtualResourceId = request.virtualResourceId;
             this.virtualResourceName = request.virtualResourceName;
         } 
+
+        /**
+         * Order.
+         */
+        public Builder order(String order) {
+            this.putQueryParameter("Order", order);
+            this.order = order;
+            return this;
+        }
 
         /**
          * <p>The page number. Pages start from page 1. Default value: 1.</p>
@@ -121,6 +158,15 @@ public class ListVirtualResourceRequest extends Request {
         public Builder pageSize(Integer pageSize) {
             this.putQueryParameter("PageSize", pageSize);
             this.pageSize = pageSize;
+            return this;
+        }
+
+        /**
+         * Sort.
+         */
+        public Builder sort(String sort) {
+            this.putQueryParameter("Sort", sort);
+            this.sort = sort;
             return this;
         }
 

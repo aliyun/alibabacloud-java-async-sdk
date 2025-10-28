@@ -55,6 +55,14 @@ public class UpdateGatewayRequest extends Request {
     @com.aliyun.core.annotation.NameInMap("Replicas")
     private Integer replicas;
 
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("VSwitchIds")
+    private java.util.List<String> vSwitchIds;
+
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("VpcId")
+    private String vpcId;
+
     private UpdateGatewayRequest(Builder builder) {
         super(builder);
         this.gatewayId = builder.gatewayId;
@@ -66,6 +74,8 @@ public class UpdateGatewayRequest extends Request {
         this.isDefault = builder.isDefault;
         this.name = builder.name;
         this.replicas = builder.replicas;
+        this.vSwitchIds = builder.vSwitchIds;
+        this.vpcId = builder.vpcId;
     }
 
     public static Builder builder() {
@@ -144,6 +154,20 @@ public class UpdateGatewayRequest extends Request {
         return this.replicas;
     }
 
+    /**
+     * @return vSwitchIds
+     */
+    public java.util.List<String> getVSwitchIds() {
+        return this.vSwitchIds;
+    }
+
+    /**
+     * @return vpcId
+     */
+    public String getVpcId() {
+        return this.vpcId;
+    }
+
     public static final class Builder extends Request.Builder<UpdateGatewayRequest, Builder> {
         private String gatewayId; 
         private String clusterId; 
@@ -154,6 +178,8 @@ public class UpdateGatewayRequest extends Request {
         private Boolean isDefault; 
         private String name; 
         private Integer replicas; 
+        private java.util.List<String> vSwitchIds; 
+        private String vpcId; 
 
         private Builder() {
             super();
@@ -170,6 +196,8 @@ public class UpdateGatewayRequest extends Request {
             this.isDefault = request.isDefault;
             this.name = request.name;
             this.replicas = request.replicas;
+            this.vSwitchIds = request.vSwitchIds;
+            this.vpcId = request.vpcId;
         } 
 
         /**
@@ -295,6 +323,24 @@ public class UpdateGatewayRequest extends Request {
         public Builder replicas(Integer replicas) {
             this.putBodyParameter("Replicas", replicas);
             this.replicas = replicas;
+            return this;
+        }
+
+        /**
+         * VSwitchIds.
+         */
+        public Builder vSwitchIds(java.util.List<String> vSwitchIds) {
+            this.putBodyParameter("VSwitchIds", vSwitchIds);
+            this.vSwitchIds = vSwitchIds;
+            return this;
+        }
+
+        /**
+         * VpcId.
+         */
+        public Builder vpcId(String vpcId) {
+            this.putBodyParameter("VpcId", vpcId);
+            this.vpcId = vpcId;
             return this;
         }
 

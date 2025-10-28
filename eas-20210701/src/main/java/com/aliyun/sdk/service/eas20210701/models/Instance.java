@@ -44,6 +44,9 @@ public class Instance extends TeaModel {
     @com.aliyun.core.annotation.NameInMap("InstanceType")
     private String instanceType;
 
+    @com.aliyun.core.annotation.NameInMap("IsLatest")
+    private Boolean isLatest;
+
     @com.aliyun.core.annotation.NameInMap("IsSpot")
     private Boolean isSpot;
 
@@ -106,6 +109,7 @@ public class Instance extends TeaModel {
         this.instanceName = builder.instanceName;
         this.instancePort = builder.instancePort;
         this.instanceType = builder.instanceType;
+        this.isLatest = builder.isLatest;
         this.isSpot = builder.isSpot;
         this.isolated = builder.isolated;
         this.lastState = builder.lastState;
@@ -198,6 +202,13 @@ public class Instance extends TeaModel {
      */
     public String getInstanceType() {
         return this.instanceType;
+    }
+
+    /**
+     * @return isLatest
+     */
+    public Boolean getIsLatest() {
+        return this.isLatest;
     }
 
     /**
@@ -329,6 +340,7 @@ public class Instance extends TeaModel {
         private String instanceName; 
         private Integer instancePort; 
         private String instanceType; 
+        private Boolean isLatest; 
         private Boolean isSpot; 
         private Boolean isolated; 
         private java.util.List<java.util.Map<String, ?>> lastState; 
@@ -360,6 +372,7 @@ public class Instance extends TeaModel {
             this.instanceName = model.instanceName;
             this.instancePort = model.instancePort;
             this.instanceType = model.instanceType;
+            this.isLatest = model.isLatest;
             this.isSpot = model.isSpot;
             this.isolated = model.isolated;
             this.lastState = model.lastState;
@@ -448,6 +461,14 @@ public class Instance extends TeaModel {
          */
         public Builder instanceType(String instanceType) {
             this.instanceType = instanceType;
+            return this;
+        }
+
+        /**
+         * IsLatest.
+         */
+        public Builder isLatest(Boolean isLatest) {
+            this.isLatest = isLatest;
             return this;
         }
 

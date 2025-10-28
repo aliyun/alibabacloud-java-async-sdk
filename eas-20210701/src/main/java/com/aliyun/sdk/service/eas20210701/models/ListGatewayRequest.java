@@ -18,12 +18,28 @@ import com.aliyun.sdk.gateway.pop.models.*;
  */
 public class ListGatewayRequest extends Request {
     @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ChargeType")
+    private String chargeType;
+
+    @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("GatewayId")
     private String gatewayId;
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("GatewayName")
     private String gatewayName;
+
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("GatewayType")
+    private String gatewayType;
+
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("InternetEnabled")
+    private Boolean internetEnabled;
+
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Order")
+    private String order;
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("PageNumber")
@@ -37,13 +53,27 @@ public class ListGatewayRequest extends Request {
     @com.aliyun.core.annotation.NameInMap("ResourceName")
     private String resourceName;
 
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Sort")
+    private String sort;
+
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Status")
+    private String status;
+
     private ListGatewayRequest(Builder builder) {
         super(builder);
+        this.chargeType = builder.chargeType;
         this.gatewayId = builder.gatewayId;
         this.gatewayName = builder.gatewayName;
+        this.gatewayType = builder.gatewayType;
+        this.internetEnabled = builder.internetEnabled;
+        this.order = builder.order;
         this.pageNumber = builder.pageNumber;
         this.pageSize = builder.pageSize;
         this.resourceName = builder.resourceName;
+        this.sort = builder.sort;
+        this.status = builder.status;
     }
 
     public static Builder builder() {
@@ -60,6 +90,13 @@ public class ListGatewayRequest extends Request {
     }
 
     /**
+     * @return chargeType
+     */
+    public String getChargeType() {
+        return this.chargeType;
+    }
+
+    /**
      * @return gatewayId
      */
     public String getGatewayId() {
@@ -71,6 +108,27 @@ public class ListGatewayRequest extends Request {
      */
     public String getGatewayName() {
         return this.gatewayName;
+    }
+
+    /**
+     * @return gatewayType
+     */
+    public String getGatewayType() {
+        return this.gatewayType;
+    }
+
+    /**
+     * @return internetEnabled
+     */
+    public Boolean getInternetEnabled() {
+        return this.internetEnabled;
+    }
+
+    /**
+     * @return order
+     */
+    public String getOrder() {
+        return this.order;
     }
 
     /**
@@ -94,12 +152,32 @@ public class ListGatewayRequest extends Request {
         return this.resourceName;
     }
 
+    /**
+     * @return sort
+     */
+    public String getSort() {
+        return this.sort;
+    }
+
+    /**
+     * @return status
+     */
+    public String getStatus() {
+        return this.status;
+    }
+
     public static final class Builder extends Request.Builder<ListGatewayRequest, Builder> {
+        private String chargeType; 
         private String gatewayId; 
         private String gatewayName; 
+        private String gatewayType; 
+        private Boolean internetEnabled; 
+        private String order; 
         private Integer pageNumber; 
         private Integer pageSize; 
         private String resourceName; 
+        private String sort; 
+        private String status; 
 
         private Builder() {
             super();
@@ -107,12 +185,27 @@ public class ListGatewayRequest extends Request {
 
         private Builder(ListGatewayRequest request) {
             super(request);
+            this.chargeType = request.chargeType;
             this.gatewayId = request.gatewayId;
             this.gatewayName = request.gatewayName;
+            this.gatewayType = request.gatewayType;
+            this.internetEnabled = request.internetEnabled;
+            this.order = request.order;
             this.pageNumber = request.pageNumber;
             this.pageSize = request.pageSize;
             this.resourceName = request.resourceName;
+            this.sort = request.sort;
+            this.status = request.status;
         } 
+
+        /**
+         * ChargeType.
+         */
+        public Builder chargeType(String chargeType) {
+            this.putQueryParameter("ChargeType", chargeType);
+            this.chargeType = chargeType;
+            return this;
+        }
 
         /**
          * <p>The private gateway ID. To obtain the private gateway ID, see the private_gateway_id parameter in the response parameters of the ListResources operation.</p>
@@ -135,6 +228,33 @@ public class ListGatewayRequest extends Request {
         public Builder gatewayName(String gatewayName) {
             this.putQueryParameter("GatewayName", gatewayName);
             this.gatewayName = gatewayName;
+            return this;
+        }
+
+        /**
+         * GatewayType.
+         */
+        public Builder gatewayType(String gatewayType) {
+            this.putQueryParameter("GatewayType", gatewayType);
+            this.gatewayType = gatewayType;
+            return this;
+        }
+
+        /**
+         * InternetEnabled.
+         */
+        public Builder internetEnabled(Boolean internetEnabled) {
+            this.putQueryParameter("InternetEnabled", internetEnabled);
+            this.internetEnabled = internetEnabled;
+            return this;
+        }
+
+        /**
+         * Order.
+         */
+        public Builder order(String order) {
+            this.putQueryParameter("Order", order);
+            this.order = order;
             return this;
         }
 
@@ -171,6 +291,24 @@ public class ListGatewayRequest extends Request {
         public Builder resourceName(String resourceName) {
             this.putQueryParameter("ResourceName", resourceName);
             this.resourceName = resourceName;
+            return this;
+        }
+
+        /**
+         * Sort.
+         */
+        public Builder sort(String sort) {
+            this.putQueryParameter("Sort", sort);
+            this.sort = sort;
+            return this;
+        }
+
+        /**
+         * Status.
+         */
+        public Builder status(String status) {
+            this.putQueryParameter("Status", status);
+            this.status = status;
             return this;
         }
 

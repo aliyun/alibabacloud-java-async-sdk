@@ -28,6 +28,10 @@ public class UpdateServiceRequest extends Request {
     private String serviceName;
 
     @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("MemberToUpdate")
+    private String memberToUpdate;
+
+    @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("UpdateType")
     private String updateType;
 
@@ -39,6 +43,7 @@ public class UpdateServiceRequest extends Request {
         super(builder);
         this.clusterId = builder.clusterId;
         this.serviceName = builder.serviceName;
+        this.memberToUpdate = builder.memberToUpdate;
         this.updateType = builder.updateType;
         this.body = builder.body;
     }
@@ -71,6 +76,13 @@ public class UpdateServiceRequest extends Request {
     }
 
     /**
+     * @return memberToUpdate
+     */
+    public String getMemberToUpdate() {
+        return this.memberToUpdate;
+    }
+
+    /**
      * @return updateType
      */
     public String getUpdateType() {
@@ -87,6 +99,7 @@ public class UpdateServiceRequest extends Request {
     public static final class Builder extends Request.Builder<UpdateServiceRequest, Builder> {
         private String clusterId; 
         private String serviceName; 
+        private String memberToUpdate; 
         private String updateType; 
         private String body; 
 
@@ -98,6 +111,7 @@ public class UpdateServiceRequest extends Request {
             super(request);
             this.clusterId = request.clusterId;
             this.serviceName = request.serviceName;
+            this.memberToUpdate = request.memberToUpdate;
             this.updateType = request.updateType;
             this.body = request.body;
         } 
@@ -125,6 +139,15 @@ public class UpdateServiceRequest extends Request {
         public Builder serviceName(String serviceName) {
             this.putPathParameter("ServiceName", serviceName);
             this.serviceName = serviceName;
+            return this;
+        }
+
+        /**
+         * MemberToUpdate.
+         */
+        public Builder memberToUpdate(String memberToUpdate) {
+            this.putQueryParameter("MemberToUpdate", memberToUpdate);
+            this.memberToUpdate = memberToUpdate;
             return this;
         }
 

@@ -38,8 +38,11 @@ public class CreateGatewayRequest extends Request {
     private Boolean enableIntranet;
 
     @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("GatewayType")
+    private String gatewayType;
+
+    @com.aliyun.core.annotation.Body
     @com.aliyun.core.annotation.NameInMap("InstanceType")
-    @com.aliyun.core.annotation.Validation(required = true)
     private String instanceType;
 
     @com.aliyun.core.annotation.Body
@@ -57,6 +60,7 @@ public class CreateGatewayRequest extends Request {
         this.chargeType = builder.chargeType;
         this.enableInternet = builder.enableInternet;
         this.enableIntranet = builder.enableIntranet;
+        this.gatewayType = builder.gatewayType;
         this.instanceType = builder.instanceType;
         this.name = builder.name;
         this.replicas = builder.replicas;
@@ -111,6 +115,13 @@ public class CreateGatewayRequest extends Request {
     }
 
     /**
+     * @return gatewayType
+     */
+    public String getGatewayType() {
+        return this.gatewayType;
+    }
+
+    /**
      * @return instanceType
      */
     public String getInstanceType() {
@@ -137,6 +148,7 @@ public class CreateGatewayRequest extends Request {
         private String chargeType; 
         private Boolean enableInternet; 
         private Boolean enableIntranet; 
+        private String gatewayType; 
         private String instanceType; 
         private String name; 
         private Integer replicas; 
@@ -152,6 +164,7 @@ public class CreateGatewayRequest extends Request {
             this.chargeType = request.chargeType;
             this.enableInternet = request.enableInternet;
             this.enableIntranet = request.enableIntranet;
+            this.gatewayType = request.gatewayType;
             this.instanceType = request.instanceType;
             this.name = request.name;
             this.replicas = request.replicas;
@@ -233,6 +246,15 @@ public class CreateGatewayRequest extends Request {
         }
 
         /**
+         * GatewayType.
+         */
+        public Builder gatewayType(String gatewayType) {
+            this.putBodyParameter("GatewayType", gatewayType);
+            this.gatewayType = gatewayType;
+            return this;
+        }
+
+        /**
          * <p>The instance type used by the private gateway. Valid values:</p>
          * <ul>
          * <li>2c4g</li>
@@ -240,7 +262,6 @@ public class CreateGatewayRequest extends Request {
          * <li>8c16g</li>
          * <li>16c32g</li>
          * </ul>
-         * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
          * <p>ecs.c6.4xlarge</p>

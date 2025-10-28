@@ -33,12 +33,32 @@ public class ListResourceInstanceWorkerRequest extends Request {
     private String instanceName;
 
     @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Order")
+    private String order;
+
+    @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("PageNumber")
     private Integer pageNumber;
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("PageSize")
     private Integer pageSize;
+
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Ready")
+    private Boolean ready;
+
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ServiceName")
+    private String serviceName;
+
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Sort")
+    private String sort;
+
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Status")
+    private String status;
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("WorkerName")
@@ -49,8 +69,13 @@ public class ListResourceInstanceWorkerRequest extends Request {
         this.clusterId = builder.clusterId;
         this.resourceId = builder.resourceId;
         this.instanceName = builder.instanceName;
+        this.order = builder.order;
         this.pageNumber = builder.pageNumber;
         this.pageSize = builder.pageSize;
+        this.ready = builder.ready;
+        this.serviceName = builder.serviceName;
+        this.sort = builder.sort;
+        this.status = builder.status;
         this.workerName = builder.workerName;
     }
 
@@ -89,6 +114,13 @@ public class ListResourceInstanceWorkerRequest extends Request {
     }
 
     /**
+     * @return order
+     */
+    public String getOrder() {
+        return this.order;
+    }
+
+    /**
      * @return pageNumber
      */
     public Integer getPageNumber() {
@@ -103,6 +135,34 @@ public class ListResourceInstanceWorkerRequest extends Request {
     }
 
     /**
+     * @return ready
+     */
+    public Boolean getReady() {
+        return this.ready;
+    }
+
+    /**
+     * @return serviceName
+     */
+    public String getServiceName() {
+        return this.serviceName;
+    }
+
+    /**
+     * @return sort
+     */
+    public String getSort() {
+        return this.sort;
+    }
+
+    /**
+     * @return status
+     */
+    public String getStatus() {
+        return this.status;
+    }
+
+    /**
      * @return workerName
      */
     public String getWorkerName() {
@@ -113,8 +173,13 @@ public class ListResourceInstanceWorkerRequest extends Request {
         private String clusterId; 
         private String resourceId; 
         private String instanceName; 
+        private String order; 
         private Integer pageNumber; 
         private Integer pageSize; 
+        private Boolean ready; 
+        private String serviceName; 
+        private String sort; 
+        private String status; 
         private String workerName; 
 
         private Builder() {
@@ -126,8 +191,13 @@ public class ListResourceInstanceWorkerRequest extends Request {
             this.clusterId = request.clusterId;
             this.resourceId = request.resourceId;
             this.instanceName = request.instanceName;
+            this.order = request.order;
             this.pageNumber = request.pageNumber;
             this.pageSize = request.pageSize;
+            this.ready = request.ready;
+            this.serviceName = request.serviceName;
+            this.sort = request.sort;
+            this.status = request.status;
             this.workerName = request.workerName;
         } 
 
@@ -171,6 +241,15 @@ public class ListResourceInstanceWorkerRequest extends Request {
         }
 
         /**
+         * Order.
+         */
+        public Builder order(String order) {
+            this.putQueryParameter("Order", order);
+            this.order = order;
+            return this;
+        }
+
+        /**
          * <p>The page number. Pages start from page 1. Default value: 1.</p>
          * 
          * <strong>example:</strong>
@@ -191,6 +270,42 @@ public class ListResourceInstanceWorkerRequest extends Request {
         public Builder pageSize(Integer pageSize) {
             this.putQueryParameter("PageSize", pageSize);
             this.pageSize = pageSize;
+            return this;
+        }
+
+        /**
+         * Ready.
+         */
+        public Builder ready(Boolean ready) {
+            this.putQueryParameter("Ready", ready);
+            this.ready = ready;
+            return this;
+        }
+
+        /**
+         * ServiceName.
+         */
+        public Builder serviceName(String serviceName) {
+            this.putQueryParameter("ServiceName", serviceName);
+            this.serviceName = serviceName;
+            return this;
+        }
+
+        /**
+         * Sort.
+         */
+        public Builder sort(String sort) {
+            this.putQueryParameter("Sort", sort);
+            this.sort = sort;
+            return this;
+        }
+
+        /**
+         * Status.
+         */
+        public Builder status(String status) {
+            this.putQueryParameter("Status", status);
+            this.status = status;
             return this;
         }
 

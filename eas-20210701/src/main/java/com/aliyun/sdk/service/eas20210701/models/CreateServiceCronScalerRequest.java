@@ -173,10 +173,14 @@ public class CreateServiceCronScalerRequest extends Request {
         @com.aliyun.core.annotation.Validation(required = true)
         private Integer targetSize;
 
+        @com.aliyun.core.annotation.NameInMap("TimeZone")
+        private String timeZone;
+
         private ScaleJobs(Builder builder) {
             this.name = builder.name;
             this.schedule = builder.schedule;
             this.targetSize = builder.targetSize;
+            this.timeZone = builder.timeZone;
         }
 
         public static Builder builder() {
@@ -208,10 +212,18 @@ public class CreateServiceCronScalerRequest extends Request {
             return this.targetSize;
         }
 
+        /**
+         * @return timeZone
+         */
+        public String getTimeZone() {
+            return this.timeZone;
+        }
+
         public static final class Builder {
             private String name; 
             private String schedule; 
             private Integer targetSize; 
+            private String timeZone; 
 
             private Builder() {
             } 
@@ -220,6 +232,7 @@ public class CreateServiceCronScalerRequest extends Request {
                 this.name = model.name;
                 this.schedule = model.schedule;
                 this.targetSize = model.targetSize;
+                this.timeZone = model.timeZone;
             } 
 
             /**
@@ -254,6 +267,14 @@ public class CreateServiceCronScalerRequest extends Request {
              */
             public Builder targetSize(Integer targetSize) {
                 this.targetSize = targetSize;
+                return this;
+            }
+
+            /**
+             * TimeZone.
+             */
+            public Builder timeZone(String timeZone) {
+                this.timeZone = timeZone;
                 return this;
             }
 

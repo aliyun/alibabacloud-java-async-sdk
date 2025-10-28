@@ -111,6 +111,10 @@ public class ListServicesRequest extends Request {
     private String sort;
 
     @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("TrafficState")
+    private String trafficState;
+
+    @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("WorkspaceId")
     private String workspaceId;
 
@@ -139,6 +143,7 @@ public class ListServicesRequest extends Request {
         this.serviceType = builder.serviceType;
         this.serviceUid = builder.serviceUid;
         this.sort = builder.sort;
+        this.trafficState = builder.trafficState;
         this.workspaceId = builder.workspaceId;
     }
 
@@ -317,6 +322,13 @@ public class ListServicesRequest extends Request {
     }
 
     /**
+     * @return trafficState
+     */
+    public String getTrafficState() {
+        return this.trafficState;
+    }
+
+    /**
      * @return workspaceId
      */
     public String getWorkspaceId() {
@@ -347,6 +359,7 @@ public class ListServicesRequest extends Request {
         private String serviceType; 
         private String serviceUid; 
         private String sort; 
+        private String trafficState; 
         private String workspaceId; 
 
         private Builder() {
@@ -378,6 +391,7 @@ public class ListServicesRequest extends Request {
             this.serviceType = request.serviceType;
             this.serviceUid = request.serviceUid;
             this.sort = request.sort;
+            this.trafficState = request.trafficState;
             this.workspaceId = request.workspaceId;
         } 
 
@@ -811,6 +825,15 @@ public class ListServicesRequest extends Request {
         public Builder sort(String sort) {
             this.putQueryParameter("Sort", sort);
             this.sort = sort;
+            return this;
+        }
+
+        /**
+         * TrafficState.
+         */
+        public Builder trafficState(String trafficState) {
+            this.putQueryParameter("TrafficState", trafficState);
+            this.trafficState = trafficState;
             return this;
         }
 

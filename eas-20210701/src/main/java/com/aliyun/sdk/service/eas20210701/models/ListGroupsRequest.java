@@ -22,6 +22,10 @@ public class ListGroupsRequest extends Request {
     private String filter;
 
     @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Order")
+    private String order;
+
+    @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("PageNumber")
     private String pageNumber;
 
@@ -30,14 +34,25 @@ public class ListGroupsRequest extends Request {
     private String pageSize;
 
     @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Sort")
+    private String sort;
+
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("TrafficMode")
+    private String trafficMode;
+
+    @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("WorkspaceId")
     private String workspaceId;
 
     private ListGroupsRequest(Builder builder) {
         super(builder);
         this.filter = builder.filter;
+        this.order = builder.order;
         this.pageNumber = builder.pageNumber;
         this.pageSize = builder.pageSize;
+        this.sort = builder.sort;
+        this.trafficMode = builder.trafficMode;
         this.workspaceId = builder.workspaceId;
     }
 
@@ -62,6 +77,13 @@ public class ListGroupsRequest extends Request {
     }
 
     /**
+     * @return order
+     */
+    public String getOrder() {
+        return this.order;
+    }
+
+    /**
      * @return pageNumber
      */
     public String getPageNumber() {
@@ -76,6 +98,20 @@ public class ListGroupsRequest extends Request {
     }
 
     /**
+     * @return sort
+     */
+    public String getSort() {
+        return this.sort;
+    }
+
+    /**
+     * @return trafficMode
+     */
+    public String getTrafficMode() {
+        return this.trafficMode;
+    }
+
+    /**
      * @return workspaceId
      */
     public String getWorkspaceId() {
@@ -84,8 +120,11 @@ public class ListGroupsRequest extends Request {
 
     public static final class Builder extends Request.Builder<ListGroupsRequest, Builder> {
         private String filter; 
+        private String order; 
         private String pageNumber; 
         private String pageSize; 
+        private String sort; 
+        private String trafficMode; 
         private String workspaceId; 
 
         private Builder() {
@@ -95,8 +134,11 @@ public class ListGroupsRequest extends Request {
         private Builder(ListGroupsRequest request) {
             super(request);
             this.filter = request.filter;
+            this.order = request.order;
             this.pageNumber = request.pageNumber;
             this.pageSize = request.pageSize;
+            this.sort = request.sort;
+            this.trafficMode = request.trafficMode;
             this.workspaceId = request.workspaceId;
         } 
 
@@ -109,6 +151,15 @@ public class ListGroupsRequest extends Request {
         public Builder filter(String filter) {
             this.putQueryParameter("Filter", filter);
             this.filter = filter;
+            return this;
+        }
+
+        /**
+         * Order.
+         */
+        public Builder order(String order) {
+            this.putQueryParameter("Order", order);
+            this.order = order;
             return this;
         }
 
@@ -133,6 +184,24 @@ public class ListGroupsRequest extends Request {
         public Builder pageSize(String pageSize) {
             this.putQueryParameter("PageSize", pageSize);
             this.pageSize = pageSize;
+            return this;
+        }
+
+        /**
+         * Sort.
+         */
+        public Builder sort(String sort) {
+            this.putQueryParameter("Sort", sort);
+            this.sort = sort;
+            return this;
+        }
+
+        /**
+         * TrafficMode.
+         */
+        public Builder trafficMode(String trafficMode) {
+            this.putQueryParameter("TrafficMode", trafficMode);
+            this.trafficMode = trafficMode;
             return this;
         }
 

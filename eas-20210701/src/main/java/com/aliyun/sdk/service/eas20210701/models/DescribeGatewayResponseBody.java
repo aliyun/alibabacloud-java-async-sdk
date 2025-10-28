@@ -47,6 +47,9 @@ public class DescribeGatewayResponseBody extends TeaModel {
     @com.aliyun.core.annotation.NameInMap("IntranetDomain")
     private String intranetDomain;
 
+    @com.aliyun.core.annotation.NameInMap("IntranetEnabled")
+    private Boolean intranetEnabled;
+
     @com.aliyun.core.annotation.NameInMap("IsDefault")
     private Boolean isDefault;
 
@@ -76,6 +79,7 @@ public class DescribeGatewayResponseBody extends TeaModel {
         this.internetEnabled = builder.internetEnabled;
         this.internetStatus = builder.internetStatus;
         this.intranetDomain = builder.intranetDomain;
+        this.intranetEnabled = builder.intranetEnabled;
         this.isDefault = builder.isDefault;
         this.replicas = builder.replicas;
         this.requestId = builder.requestId;
@@ -167,6 +171,13 @@ public class DescribeGatewayResponseBody extends TeaModel {
     }
 
     /**
+     * @return intranetEnabled
+     */
+    public Boolean getIntranetEnabled() {
+        return this.intranetEnabled;
+    }
+
+    /**
      * @return isDefault
      */
     public Boolean getIsDefault() {
@@ -219,6 +230,7 @@ public class DescribeGatewayResponseBody extends TeaModel {
         private Boolean internetEnabled; 
         private String internetStatus; 
         private String intranetDomain; 
+        private Boolean intranetEnabled; 
         private Boolean isDefault; 
         private Integer replicas; 
         private String requestId; 
@@ -240,6 +252,7 @@ public class DescribeGatewayResponseBody extends TeaModel {
             this.internetEnabled = model.internetEnabled;
             this.internetStatus = model.internetStatus;
             this.intranetDomain = model.intranetDomain;
+            this.intranetEnabled = model.intranetEnabled;
             this.isDefault = model.isDefault;
             this.replicas = model.replicas;
             this.requestId = model.requestId;
@@ -367,6 +380,14 @@ public class DescribeGatewayResponseBody extends TeaModel {
          */
         public Builder intranetDomain(String intranetDomain) {
             this.intranetDomain = intranetDomain;
+            return this;
+        }
+
+        /**
+         * IntranetEnabled.
+         */
+        public Builder intranetEnabled(Boolean intranetEnabled) {
+            this.intranetEnabled = intranetEnabled;
             return this;
         }
 
