@@ -54,6 +54,10 @@ public class ListWorkspacesRequest extends Request {
     private String status;
 
     @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("UserId")
+    private String userId;
+
+    @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("Verbose")
     private Boolean verbose;
 
@@ -76,6 +80,7 @@ public class ListWorkspacesRequest extends Request {
         this.resourceGroupId = builder.resourceGroupId;
         this.sortBy = builder.sortBy;
         this.status = builder.status;
+        this.userId = builder.userId;
         this.verbose = builder.verbose;
         this.workspaceIds = builder.workspaceIds;
         this.workspaceName = builder.workspaceName;
@@ -158,6 +163,13 @@ public class ListWorkspacesRequest extends Request {
     }
 
     /**
+     * @return userId
+     */
+    public String getUserId() {
+        return this.userId;
+    }
+
+    /**
      * @return verbose
      */
     public Boolean getVerbose() {
@@ -188,6 +200,7 @@ public class ListWorkspacesRequest extends Request {
         private String resourceGroupId; 
         private String sortBy; 
         private String status; 
+        private String userId; 
         private Boolean verbose; 
         private String workspaceIds; 
         private String workspaceName; 
@@ -207,6 +220,7 @@ public class ListWorkspacesRequest extends Request {
             this.resourceGroupId = request.resourceGroupId;
             this.sortBy = request.sortBy;
             this.status = request.status;
+            this.userId = request.userId;
             this.verbose = request.verbose;
             this.workspaceIds = request.workspaceIds;
             this.workspaceName = request.workspaceName;
@@ -337,6 +351,15 @@ public class ListWorkspacesRequest extends Request {
         public Builder status(String status) {
             this.putQueryParameter("Status", status);
             this.status = status;
+            return this;
+        }
+
+        /**
+         * UserId.
+         */
+        public Builder userId(String userId) {
+            this.putQueryParameter("UserId", userId);
+            this.userId = userId;
             return this;
         }
 
