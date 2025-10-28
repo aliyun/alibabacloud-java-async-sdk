@@ -145,6 +145,240 @@ public class ImageModerationResponseBody extends TeaModel {
      *
      * <p>ImageModerationResponseBody</p>
      */
+    public static class AIGC extends TeaModel {
+        @com.aliyun.core.annotation.NameInMap("ContentProducer")
+        private String contentProducer;
+
+        @com.aliyun.core.annotation.NameInMap("ContentPropagator")
+        private String contentPropagator;
+
+        @com.aliyun.core.annotation.NameInMap("Label")
+        private String label;
+
+        @com.aliyun.core.annotation.NameInMap("ProduceID")
+        private String produceID;
+
+        @com.aliyun.core.annotation.NameInMap("PropagateID")
+        private String propagateID;
+
+        @com.aliyun.core.annotation.NameInMap("ReservedCode1")
+        private String reservedCode1;
+
+        @com.aliyun.core.annotation.NameInMap("ReservedCode2")
+        private String reservedCode2;
+
+        private AIGC(Builder builder) {
+            this.contentProducer = builder.contentProducer;
+            this.contentPropagator = builder.contentPropagator;
+            this.label = builder.label;
+            this.produceID = builder.produceID;
+            this.propagateID = builder.propagateID;
+            this.reservedCode1 = builder.reservedCode1;
+            this.reservedCode2 = builder.reservedCode2;
+        }
+
+        public static Builder builder() {
+            return new Builder();
+        }
+
+        public static AIGC create() {
+            return builder().build();
+        }
+
+        /**
+         * @return contentProducer
+         */
+        public String getContentProducer() {
+            return this.contentProducer;
+        }
+
+        /**
+         * @return contentPropagator
+         */
+        public String getContentPropagator() {
+            return this.contentPropagator;
+        }
+
+        /**
+         * @return label
+         */
+        public String getLabel() {
+            return this.label;
+        }
+
+        /**
+         * @return produceID
+         */
+        public String getProduceID() {
+            return this.produceID;
+        }
+
+        /**
+         * @return propagateID
+         */
+        public String getPropagateID() {
+            return this.propagateID;
+        }
+
+        /**
+         * @return reservedCode1
+         */
+        public String getReservedCode1() {
+            return this.reservedCode1;
+        }
+
+        /**
+         * @return reservedCode2
+         */
+        public String getReservedCode2() {
+            return this.reservedCode2;
+        }
+
+        public static final class Builder {
+            private String contentProducer; 
+            private String contentPropagator; 
+            private String label; 
+            private String produceID; 
+            private String propagateID; 
+            private String reservedCode1; 
+            private String reservedCode2; 
+
+            private Builder() {
+            } 
+
+            private Builder(AIGC model) {
+                this.contentProducer = model.contentProducer;
+                this.contentPropagator = model.contentPropagator;
+                this.label = model.label;
+                this.produceID = model.produceID;
+                this.propagateID = model.propagateID;
+                this.reservedCode1 = model.reservedCode1;
+                this.reservedCode2 = model.reservedCode2;
+            } 
+
+            /**
+             * ContentProducer.
+             */
+            public Builder contentProducer(String contentProducer) {
+                this.contentProducer = contentProducer;
+                return this;
+            }
+
+            /**
+             * ContentPropagator.
+             */
+            public Builder contentPropagator(String contentPropagator) {
+                this.contentPropagator = contentPropagator;
+                return this;
+            }
+
+            /**
+             * Label.
+             */
+            public Builder label(String label) {
+                this.label = label;
+                return this;
+            }
+
+            /**
+             * ProduceID.
+             */
+            public Builder produceID(String produceID) {
+                this.produceID = produceID;
+                return this;
+            }
+
+            /**
+             * PropagateID.
+             */
+            public Builder propagateID(String propagateID) {
+                this.propagateID = propagateID;
+                return this;
+            }
+
+            /**
+             * ReservedCode1.
+             */
+            public Builder reservedCode1(String reservedCode1) {
+                this.reservedCode1 = reservedCode1;
+                return this;
+            }
+
+            /**
+             * ReservedCode2.
+             */
+            public Builder reservedCode2(String reservedCode2) {
+                this.reservedCode2 = reservedCode2;
+                return this;
+            }
+
+            public AIGC build() {
+                return new AIGC(this);
+            } 
+
+        } 
+
+    }
+    /**
+     * 
+     * {@link ImageModerationResponseBody} extends {@link TeaModel}
+     *
+     * <p>ImageModerationResponseBody</p>
+     */
+    public static class AigcData extends TeaModel {
+        @com.aliyun.core.annotation.NameInMap("AIGC")
+        private AIGC AIGC;
+
+        private AigcData(Builder builder) {
+            this.AIGC = builder.AIGC;
+        }
+
+        public static Builder builder() {
+            return new Builder();
+        }
+
+        public static AigcData create() {
+            return builder().build();
+        }
+
+        /**
+         * @return AIGC
+         */
+        public AIGC getAIGC() {
+            return this.AIGC;
+        }
+
+        public static final class Builder {
+            private AIGC AIGC; 
+
+            private Builder() {
+            } 
+
+            private Builder(AigcData model) {
+                this.AIGC = model.AIGC;
+            } 
+
+            /**
+             * AIGC.
+             */
+            public Builder AIGC(AIGC AIGC) {
+                this.AIGC = AIGC;
+                return this;
+            }
+
+            public AigcData build() {
+                return new AigcData(this);
+            } 
+
+        } 
+
+    }
+    /**
+     * 
+     * {@link ImageModerationResponseBody} extends {@link TeaModel}
+     *
+     * <p>ImageModerationResponseBody</p>
+     */
     public static class CustomImage extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("ImageId")
         private String imageId;
@@ -2629,6 +2863,9 @@ public class ImageModerationResponseBody extends TeaModel {
      * <p>ImageModerationResponseBody</p>
      */
     public static class Ext extends TeaModel {
+        @com.aliyun.core.annotation.NameInMap("AigcData")
+        private AigcData aigcData;
+
         @com.aliyun.core.annotation.NameInMap("CustomImage")
         private java.util.List<CustomImage> customImage;
 
@@ -2654,6 +2891,7 @@ public class ImageModerationResponseBody extends TeaModel {
         private VlContent vlContent;
 
         private Ext(Builder builder) {
+            this.aigcData = builder.aigcData;
             this.customImage = builder.customImage;
             this.faceData = builder.faceData;
             this.logoData = builder.logoData;
@@ -2670,6 +2908,13 @@ public class ImageModerationResponseBody extends TeaModel {
 
         public static Ext create() {
             return builder().build();
+        }
+
+        /**
+         * @return aigcData
+         */
+        public AigcData getAigcData() {
+            return this.aigcData;
         }
 
         /**
@@ -2729,6 +2974,7 @@ public class ImageModerationResponseBody extends TeaModel {
         }
 
         public static final class Builder {
+            private AigcData aigcData; 
             private java.util.List<CustomImage> customImage; 
             private java.util.List<FaceData> faceData; 
             private java.util.List<LogoData> logoData; 
@@ -2742,6 +2988,7 @@ public class ImageModerationResponseBody extends TeaModel {
             } 
 
             private Builder(Ext model) {
+                this.aigcData = model.aigcData;
                 this.customImage = model.customImage;
                 this.faceData = model.faceData;
                 this.logoData = model.logoData;
@@ -2751,6 +2998,14 @@ public class ImageModerationResponseBody extends TeaModel {
                 this.textInImage = model.textInImage;
                 this.vlContent = model.vlContent;
             } 
+
+            /**
+             * AigcData.
+             */
+            public Builder aigcData(AigcData aigcData) {
+                this.aigcData = aigcData;
+                return this;
+            }
 
             /**
              * <p>If a custom image library is hit, information about the hit custom image library is returned.</p>
