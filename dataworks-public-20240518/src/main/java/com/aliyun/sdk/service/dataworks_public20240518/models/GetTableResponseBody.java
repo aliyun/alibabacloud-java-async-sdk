@@ -80,7 +80,10 @@ public class GetTableResponseBody extends TeaModel {
         } 
 
         /**
-         * RequestId.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>7B3435F4-2D91-XXX</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -88,7 +91,10 @@ public class GetTableResponseBody extends TeaModel {
         }
 
         /**
-         * Success.
+         * <p>Indicates whether the request succeeded.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder success(Boolean success) {
             this.success = success;
@@ -96,7 +102,7 @@ public class GetTableResponseBody extends TeaModel {
         }
 
         /**
-         * Table.
+         * <p>Detailed information about the table.</p>
          */
         public Builder table(Table table) {
             this.table = table;

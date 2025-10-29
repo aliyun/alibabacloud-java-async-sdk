@@ -139,7 +139,10 @@ public class SubmitFileRequest extends Request {
         }
 
         /**
-         * Comment.
+         * <p>The description of the submission.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Submit a task for the first time</p>
          */
         public Builder comment(String comment) {
             this.putBodyParameter("Comment", comment);
@@ -148,6 +151,7 @@ public class SubmitFileRequest extends Request {
         }
 
         /**
+         * <p>The file ID. You can call the <a href="https://help.aliyun.com/document_detail/173942.html">ListFiles</a> operation to obtain the ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -160,7 +164,10 @@ public class SubmitFileRequest extends Request {
         }
 
         /**
-         * ProjectId.
+         * <p>The DataWorks workspace ID. You can log on to the DataWorks console and go to the Workspace page to query the ID. You must specify either this parameter or the ProjectIdentifier parameter to identify the DataWorks workspace when you call this operation.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>100001</p>
          */
         public Builder projectId(Long projectId) {
             this.putBodyParameter("ProjectId", projectId);
@@ -169,7 +176,10 @@ public class SubmitFileRequest extends Request {
         }
 
         /**
-         * ProjectIdentifier.
+         * <p>The name of the DataWorks workspace. You can log on to the DataWorks console and go to the Workspace page to query the workspace name. You must specify either this parameter or the ProjectId parameter to identify the DataWorks workspace when you call this operation.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>dw_project</p>
          */
         public Builder projectIdentifier(String projectIdentifier) {
             this.putBodyParameter("ProjectIdentifier", projectIdentifier);
@@ -178,7 +188,14 @@ public class SubmitFileRequest extends Request {
         }
 
         /**
-         * SkipAllDeployFileExtensions.
+         * <p>Whether to skip the pre-deployment check after the file is submitted:</p>
+         * <ul>
+         * <li>false: Do not skip. After the file is submitted, the system automatically triggers the pre-deployment check. The file becomes available for deployment only after the check is passed.</li>
+         * <li>true: Skip. After the file is submitted, the system does not trigger the pre-deployment check. The file can proceed directly to deployment.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>false</p>
          */
         public Builder skipAllDeployFileExtensions(Boolean skipAllDeployFileExtensions) {
             this.putBodyParameter("SkipAllDeployFileExtensions", skipAllDeployFileExtensions);

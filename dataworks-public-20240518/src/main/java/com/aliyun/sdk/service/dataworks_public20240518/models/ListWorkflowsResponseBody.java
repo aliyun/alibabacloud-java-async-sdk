@@ -673,7 +673,7 @@ public class ListWorkflowsResponseBody extends TeaModel {
             }
 
             /**
-             * Tags.
+             * <p>The task tag.</p>
              */
             public Builder tags(java.util.List<Tags> tags) {
                 this.tags = tags;

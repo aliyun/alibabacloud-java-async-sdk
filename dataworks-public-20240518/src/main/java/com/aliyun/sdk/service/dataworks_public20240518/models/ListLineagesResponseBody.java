@@ -80,7 +80,7 @@ public class ListLineagesResponseBody extends TeaModel {
         } 
 
         /**
-         * PagingInfo.
+         * <p>The pagination result.</p>
          */
         public Builder pagingInfo(PagingInfo pagingInfo) {
             this.pagingInfo = pagingInfo;
@@ -88,7 +88,10 @@ public class ListLineagesResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>0000-ABCD-EFG****</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -96,7 +99,10 @@ public class ListLineagesResponseBody extends TeaModel {
         }
 
         /**
-         * Success.
+         * <p>Indicates whether the request was successful.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder success(Boolean success) {
             this.success = success;
@@ -175,7 +181,7 @@ public class ListLineagesResponseBody extends TeaModel {
             } 
 
             /**
-             * DstEntity.
+             * <p>The destination entity.</p>
              */
             public Builder dstEntity(LineageEntity dstEntity) {
                 this.dstEntity = dstEntity;
@@ -183,7 +189,7 @@ public class ListLineagesResponseBody extends TeaModel {
             }
 
             /**
-             * Relationships.
+             * <p>The lineage details.</p>
              */
             public Builder relationships(java.util.List<LineageRelationship> relationships) {
                 this.relationships = relationships;
@@ -191,7 +197,7 @@ public class ListLineagesResponseBody extends TeaModel {
             }
 
             /**
-             * SrcEntity.
+             * <p>The source entity.</p>
              */
             public Builder srcEntity(LineageEntity srcEntity) {
                 this.srcEntity = srcEntity;
@@ -284,7 +290,7 @@ public class ListLineagesResponseBody extends TeaModel {
             } 
 
             /**
-             * Lineages.
+             * <p>The lineage information list.</p>
              */
             public Builder lineages(java.util.List<Lineages> lineages) {
                 this.lineages = lineages;
@@ -292,7 +298,10 @@ public class ListLineagesResponseBody extends TeaModel {
             }
 
             /**
-             * PageNumber.
+             * <p>The requested page number for pagination.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder pageNumber(Integer pageNumber) {
                 this.pageNumber = pageNumber;
@@ -300,7 +309,10 @@ public class ListLineagesResponseBody extends TeaModel {
             }
 
             /**
-             * PageSize.
+             * <p>The page size. Default value: 10.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>10</p>
              */
             public Builder pageSize(Integer pageSize) {
                 this.pageSize = pageSize;
@@ -308,7 +320,10 @@ public class ListLineagesResponseBody extends TeaModel {
             }
 
             /**
-             * TotalCount.
+             * <p>Total record count.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>12</p>
              */
             public Builder totalCount(Long totalCount) {
                 this.totalCount = totalCount;

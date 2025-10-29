@@ -119,7 +119,10 @@ public class CreateUdfFileResponseBody extends TeaModel {
         } 
 
         /**
-         * Data.
+         * <p>The file ID after successful creation.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>100000002</p>
          */
         public Builder data(Long data) {
             this.data = data;
@@ -127,7 +130,10 @@ public class CreateUdfFileResponseBody extends TeaModel {
         }
 
         /**
-         * ErrorCode.
+         * <p>The error code.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Invalid.Tenant.ConnectionNotExists</p>
          */
         public Builder errorCode(String errorCode) {
             this.errorCode = errorCode;
@@ -135,7 +141,10 @@ public class CreateUdfFileResponseBody extends TeaModel {
         }
 
         /**
-         * ErrorMessage.
+         * <p>The error message.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>The connection does not exist.</p>
          */
         public Builder errorMessage(String errorMessage) {
             this.errorMessage = errorMessage;
@@ -143,7 +152,10 @@ public class CreateUdfFileResponseBody extends TeaModel {
         }
 
         /**
-         * HttpStatusCode.
+         * <p>The HTTP status code.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>200</p>
          */
         public Builder httpStatusCode(Integer httpStatusCode) {
             this.httpStatusCode = httpStatusCode;
@@ -151,7 +163,10 @@ public class CreateUdfFileResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * <p>The unique ID for this request. Use this ID for troubleshooting if an error occurs.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>0000-ABCD-EFG****</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -159,7 +174,14 @@ public class CreateUdfFileResponseBody extends TeaModel {
         }
 
         /**
-         * Success.
+         * <p>Indicates whether the request succeeded.</p>
+         * <ul>
+         * <li>true</li>
+         * <li>false</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder success(Boolean success) {
             this.success = success;

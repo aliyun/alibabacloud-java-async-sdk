@@ -67,7 +67,7 @@ public class ListDeploymentPackagesResponseBody extends TeaModel {
         } 
 
         /**
-         * Data.
+         * <p>The list of deployment packages that meet the query conditions.</p>
          */
         public Builder data(Data data) {
             this.data = data;
@@ -75,7 +75,10 @@ public class ListDeploymentPackagesResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>952795279527ab****</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -219,7 +222,10 @@ public class ListDeploymentPackagesResponseBody extends TeaModel {
             } 
 
             /**
-             * CreateTime.
+             * <p>The timestamp when the deployment package was created.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1593877765000</p>
              */
             public Builder createTime(Long createTime) {
                 this.createTime = createTime;
@@ -227,7 +233,10 @@ public class ListDeploymentPackagesResponseBody extends TeaModel {
             }
 
             /**
-             * Creator.
+             * <p>The Alibaba Cloud account ID of the deployment package creator.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2003****</p>
              */
             public Builder creator(String creator) {
                 this.creator = creator;
@@ -235,7 +244,10 @@ public class ListDeploymentPackagesResponseBody extends TeaModel {
             }
 
             /**
-             * ErrorMessage.
+             * <p>When the deployment package fails to execute, this parameter is used to record the error message.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>OK</p>
              */
             public Builder errorMessage(String errorMessage) {
                 this.errorMessage = errorMessage;
@@ -243,7 +255,10 @@ public class ListDeploymentPackagesResponseBody extends TeaModel {
             }
 
             /**
-             * ExecuteTime.
+             * <p>The timestamp when the deployment package was executed.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1593877765000</p>
              */
             public Builder executeTime(Long executeTime) {
                 this.executeTime = executeTime;
@@ -251,7 +266,10 @@ public class ListDeploymentPackagesResponseBody extends TeaModel {
             }
 
             /**
-             * Executor.
+             * <p>The Alibaba Cloud account ID of the deployment package executor.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2003****</p>
              */
             public Builder executor(String executor) {
                 this.executor = executor;
@@ -259,7 +277,10 @@ public class ListDeploymentPackagesResponseBody extends TeaModel {
             }
 
             /**
-             * Id.
+             * <p>The ID of the deployment package. You can use this ID to call the <a href="https://help.aliyun.com/document_detail/173950.html">GetDeployment</a> operation to get the deployment package details.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>11111</p>
              */
             public Builder id(Long id) {
                 this.id = id;
@@ -267,7 +288,10 @@ public class ListDeploymentPackagesResponseBody extends TeaModel {
             }
 
             /**
-             * Name.
+             * <p>The name of the deployment package.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>auto_created</p>
              */
             public Builder name(String name) {
                 this.name = name;
@@ -275,7 +299,16 @@ public class ListDeploymentPackagesResponseBody extends TeaModel {
             }
 
             /**
-             * Status.
+             * <p>The status of the deployment package. Valid values:</p>
+             * <ul>
+             * <li>0: It is ready.</li>
+             * <li>1: It was successfully deployed.</li>
+             * <li>2: It failed to be deployed.</li>
+             * <li>6: It was rejected.</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder status(Integer status) {
                 this.status = status;
@@ -368,7 +401,7 @@ public class ListDeploymentPackagesResponseBody extends TeaModel {
             } 
 
             /**
-             * Deployments.
+             * <p>The returned list of deployment packages.</p>
              */
             public Builder deployments(java.util.List<Deployments> deployments) {
                 this.deployments = deployments;
@@ -376,7 +409,10 @@ public class ListDeploymentPackagesResponseBody extends TeaModel {
             }
 
             /**
-             * PageNumber.
+             * <p>The page number.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder pageNumber(Long pageNumber) {
                 this.pageNumber = pageNumber;
@@ -384,7 +420,10 @@ public class ListDeploymentPackagesResponseBody extends TeaModel {
             }
 
             /**
-             * PageSize.
+             * <p>The number of records per page.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>10</p>
              */
             public Builder pageSize(Long pageSize) {
                 this.pageSize = pageSize;
@@ -392,7 +431,10 @@ public class ListDeploymentPackagesResponseBody extends TeaModel {
             }
 
             /**
-             * TotalCount.
+             * <p>The total number of records that meet the conditions.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>20</p>
              */
             public Builder totalCount(Long totalCount) {
                 this.totalCount = totalCount;

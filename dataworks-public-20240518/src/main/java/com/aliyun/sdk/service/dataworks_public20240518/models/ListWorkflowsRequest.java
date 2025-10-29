@@ -300,7 +300,7 @@ public class ListWorkflowsRequest extends Request {
         }
 
         /**
-         * <p>The trigger type. Valid values:</p>
+         * <p>The trigger type.</p>
          * <ul>
          * <li>Scheduler</li>
          * <li>Manual</li>

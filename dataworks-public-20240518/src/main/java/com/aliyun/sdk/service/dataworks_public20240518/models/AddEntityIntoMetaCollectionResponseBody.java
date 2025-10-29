@@ -54,7 +54,7 @@ public class AddEntityIntoMetaCollectionResponseBody extends TeaModel {
         } 
 
         /**
-         * <p>Id of the request</p>
+         * <p>The request ID.</p>
          * 
          * <strong>example:</strong>
          * <p>C99E2BE6-9DEA-5C2E-8F51-1DDCFEADE490</p>

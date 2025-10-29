@@ -114,6 +114,7 @@ public class UpdateComponentRequest extends Request {
         }
 
         /**
+         * <p>The component ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>

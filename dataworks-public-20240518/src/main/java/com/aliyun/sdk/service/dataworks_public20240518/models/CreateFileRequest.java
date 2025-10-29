@@ -546,7 +546,12 @@ public class CreateFileRequest extends Request {
         }
 
         /**
-         * AdvancedSettings.
+         * <p>The advanced settings of the node.</p>
+         * <p>This parameter corresponds to the Advanced Settings section in the right-side navigation pane on the configuration tab of EMR Spark Streaming and EMR Streaming SQL nodes in the <a href="https://workbench.data.aliyun.com/console">DataWorks console</a>.</p>
+         * <p>Only EMR Spark Streaming and EMR Streaming SQL nodes support this parameter. The value must be in the JSON format.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>{&quot;queue&quot;:&quot;default&quot;,&quot;SPARK_CONF&quot;:&quot;--conf spark.driver.memory=2g&quot;}</p>
          */
         public Builder advancedSettings(String advancedSettings) {
             this.putBodyParameter("AdvancedSettings", advancedSettings);
@@ -555,7 +560,10 @@ public class CreateFileRequest extends Request {
         }
 
         /**
-         * ApplyScheduleImmediately.
+         * <p>Specifies whether to apply the scheduling configuration immediately after the file is published.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder applyScheduleImmediately(Boolean applyScheduleImmediately) {
             this.putBodyParameter("ApplyScheduleImmediately", applyScheduleImmediately);
@@ -564,7 +572,15 @@ public class CreateFileRequest extends Request {
         }
 
         /**
-         * AutoParsing.
+         * <p>Specifies whether to enable automatic parsing for the file. Valid values:</p>
+         * <ul>
+         * <li>true</li>
+         * <li>false</li>
+         * </ul>
+         * <p>This parameter corresponds to the Analyze Code setting in Properties &gt; Dependencies for data development nodes in the <a href="https://workbench.data.aliyun.com/console">DataWorks console</a>.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder autoParsing(Boolean autoParsing) {
             this.putBodyParameter("AutoParsing", autoParsing);
@@ -573,7 +589,11 @@ public class CreateFileRequest extends Request {
         }
 
         /**
-         * AutoRerunIntervalMillis.
+         * <p>The interval at which the node is automatically rerun after a failure. Unit: milliseconds. Maximum value: 1800000 milliseconds (30 minutes).</p>
+         * <p>This parameter corresponds to the Rerun interval parameter in Properties &gt; Schedule &gt; Auto Rerun upon Failure for data development nodes in the <a href="https://workbench.data.aliyun.com/console">DataWorks console</a>. In the console, the unit of the rerun interval is minutes. Convert the time unit when you call this operation.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>120000</p>
          */
         public Builder autoRerunIntervalMillis(Integer autoRerunIntervalMillis) {
             this.putBodyParameter("AutoRerunIntervalMillis", autoRerunIntervalMillis);
@@ -582,7 +602,10 @@ public class CreateFileRequest extends Request {
         }
 
         /**
-         * AutoRerunTimes.
+         * <p>The number of automatic reruns after an error occurs. Maximum value: 10.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>3</p>
          */
         public Builder autoRerunTimes(Integer autoRerunTimes) {
             this.putBodyParameter("AutoRerunTimes", autoRerunTimes);
@@ -591,7 +614,11 @@ public class CreateFileRequest extends Request {
         }
 
         /**
-         * ConnectionName.
+         * <p>The data source used when the task published from the file is run.</p>
+         * <p>You can call the <a href="https://help.aliyun.com/document_detail/211432.html">UpdateDataSource</a> operation to query the available data sources in the workspace.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>odps_source</p>
          */
         public Builder connectionName(String connectionName) {
             this.putBodyParameter("ConnectionName", connectionName);
@@ -600,7 +627,10 @@ public class CreateFileRequest extends Request {
         }
 
         /**
-         * Content.
+         * <p>The file code content. Different code types (fileType) have different code formats. In Operation Center, you can find a task of the corresponding type, right-click it, and select View Code to view the specific code format.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>SHOW TABLES;</p>
          */
         public Builder content(String content) {
             this.putBodyParameter("Content", content);
@@ -609,7 +639,14 @@ public class CreateFileRequest extends Request {
         }
 
         /**
-         * CreateFolderIfNotExists.
+         * <p>Specifies whether to automatically create the directory specified by FileFolderPath if the directory does not exist. Valid values:</p>
+         * <ul>
+         * <li>true: If the directory does not exist, automatically create it.</li>
+         * <li>false: If the directory does not exist, the call fails.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>false</p>
          */
         public Builder createFolderIfNotExists(Boolean createFolderIfNotExists) {
             this.putBodyParameter("CreateFolderIfNotExists", createFolderIfNotExists);
@@ -618,7 +655,25 @@ public class CreateFileRequest extends Request {
         }
 
         /**
-         * CronExpress.
+         * <p>The cron expression for scheduled execution. This parameter corresponds to the Cron Expression setting in Scheduling &gt; Scheduling Time for Data Studio tasks in the <a href="https://workbench.data.aliyun.com/console">DataWorks console</a>. After you configure Scheduling Cycle and Scheduled Time, DataWorks automatically generates a cron expression.</p>
+         * <p>Examples:</p>
+         * <ul>
+         * <li>Scheduled at 05:30 every day: <code>00 30 05 * * ?</code></li>
+         * <li>Scheduled at the 15th minute of every hour: <code>00 15 00-23/1 * * ?</code></li>
+         * <li>Scheduled every 10 minutes: <code>00 00/10 * * * ?</code></li>
+         * <li>Scheduled every 10 minutes between 08:00 and 17:00 every day: <code>00 00-59/10 8-17 * * * ?</code></li>
+         * <li>Scheduled at 00:20 on the 1st day of every month: <code>00 20 00 1 * ?</code></li>
+         * <li>Scheduled every 3 months starting from 00:10 on January 1: <code>00 10 00 1 1-12/3 ?</code></li>
+         * <li>Scheduled at 00:05 on every Tuesday and Friday: <code>00 05 00 * * 2,5</code></li>
+         * </ul>
+         * <p>Due to the rules of the DataWorks scheduling system, cron expressions have the following restrictions:</p>
+         * <ul>
+         * <li>The minimum scheduling interval is 5 minutes.</li>
+         * <li>The earliest scheduling time each day is 00:05.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>00 05 00 * * ?</p>
          */
         public Builder cronExpress(String cronExpress) {
             this.putBodyParameter("CronExpress", cronExpress);
@@ -627,7 +682,11 @@ public class CreateFileRequest extends Request {
         }
 
         /**
-         * CycleType.
+         * <p>The type of scheduling cycle. Valid values: NOT_DAY (minute, hour) and DAY (day, week, month).</p>
+         * <p>This parameter corresponds to the Scheduling Cycle setting in Scheduling &gt; Scheduling Time for Data Studio tasks in the <a href="https://workbench.data.aliyun.com/console">DataWorks console</a>.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>DAY</p>
          */
         public Builder cycleType(String cycleType) {
             this.putBodyParameter("CycleType", cycleType);
@@ -636,7 +695,11 @@ public class CreateFileRequest extends Request {
         }
 
         /**
-         * DependentNodeIdList.
+         * <p>The IDs of the nodes on which the current node depends. This parameter takes effect only when the DependentType parameter is set to USER_DEFINE. Separate multiple node IDs with commas (,).</p>
+         * <p>This parameter corresponds to the Other Nodes option in Properties &gt; Dependencies &gt; Cross-cycle Dependency (Original Previous-cycle Dependency) for data development nodes in the <a href="https://workbench.data.aliyun.com/console">DataWorks console</a>.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>abc</p>
          */
         public Builder dependentNodeIdList(String dependentNodeIdList) {
             this.putBodyParameter("DependentNodeIdList", dependentNodeIdList);
@@ -645,7 +708,18 @@ public class CreateFileRequest extends Request {
         }
 
         /**
-         * DependentType.
+         * <p>The dependency mode on the previous cycle. Valid values:</p>
+         * <ul>
+         * <li>SELF: Depends on the current node.</li>
+         * <li>CHILD: Depends on the child nodes.</li>
+         * <li>USER_DEFINE: Depends on other nodes.</li>
+         * <li>NONE: No dependencies. Does not depend on the previous cycle.</li>
+         * <li>USER_DEFINE_AND_SELF: Depends on both the current node and other nodes in the previous cycle.</li>
+         * <li>CHILD_AND_SELF: Depends on both the current node and its child nodes in the previous cycle.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>NONE</p>
          */
         public Builder dependentType(String dependentType) {
             this.putBodyParameter("DependentType", dependentType);
@@ -654,7 +728,11 @@ public class CreateFileRequest extends Request {
         }
 
         /**
-         * EndEffectDate.
+         * <p>The timestamp (in milliseconds) when automatic scheduling stops.</p>
+         * <p>This parameter corresponds to the end time of Effective Period in Scheduling &gt; Scheduling Time for Data Studio tasks in the <a href="https://workbench.data.aliyun.com/console">DataWorks console</a>.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1671694850000</p>
          */
         public Builder endEffectDate(Long endEffectDate) {
             this.putBodyParameter("EndEffectDate", endEffectDate);
@@ -663,7 +741,10 @@ public class CreateFileRequest extends Request {
         }
 
         /**
-         * FileDescription.
+         * <p>The description of the file.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>test</p>
          */
         public Builder fileDescription(String fileDescription) {
             this.putBodyParameter("FileDescription", fileDescription);
@@ -672,7 +753,10 @@ public class CreateFileRequest extends Request {
         }
 
         /**
-         * FileFolderPath.
+         * <p>The file path.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Business_process/First_Business_Process/MaxCompute/Folder_1/Folder_2</p>
          */
         public Builder fileFolderPath(String fileFolderPath) {
             this.putBodyParameter("FileFolderPath", fileFolderPath);
@@ -681,6 +765,7 @@ public class CreateFileRequest extends Request {
         }
 
         /**
+         * <p>The file name.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -693,6 +778,7 @@ public class CreateFileRequest extends Request {
         }
 
         /**
+         * <p>The code type of the file. Different file types have different code. For more information, see <a href="https://help.aliyun.com/document_detail/600169.html">DataWorks node types</a>. You can call the <a href="https://help.aliyun.com/document_detail/212428.html">ListFileType</a> operation to query the code types of files.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -705,7 +791,14 @@ public class CreateFileRequest extends Request {
         }
 
         /**
-         * IgnoreParentSkipRunningProperty.
+         * <p>Specifies whether to inherit the dry-run status from the previous cycle. Valid values:</p>
+         * <ul>
+         * <li>true: Inherit the dry-run status from the previous cycle.</li>
+         * <li>false: Do not inherit the dry-run status from the previous cycle.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>false</p>
          */
         public Builder ignoreParentSkipRunningProperty(Boolean ignoreParentSkipRunningProperty) {
             this.putBodyParameter("IgnoreParentSkipRunningProperty", ignoreParentSkipRunningProperty);
@@ -714,7 +807,10 @@ public class CreateFileRequest extends Request {
         }
 
         /**
-         * ImageId.
+         * <p>The custom image ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>m-bp1h4b5a8ogkbll2f3tr</p>
          */
         public Builder imageId(String imageId) {
             this.putBodyParameter("ImageId", imageId);
@@ -723,7 +819,11 @@ public class CreateFileRequest extends Request {
         }
 
         /**
-         * InputList.
+         * <p>The output names of the ancestor nodes on which the current node depends. Separate multiple output names with commas (,).</p>
+         * <p>This parameter corresponds to the Output Name of Ancestor Node setting in Properties &gt; Dependencies for data development nodes in the <a href="https://workbench.data.aliyun.com/console">DataWorks console</a>.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>project_root,project.file1,project.001_out</p>
          */
         public Builder inputList(String inputList) {
             this.putBodyParameter("InputList", inputList);
@@ -732,7 +832,11 @@ public class CreateFileRequest extends Request {
         }
 
         /**
-         * InputParameters.
+         * <p>The input context parameters of the node. The value must be in the JSON format. For more information about the parameter structure, see the InputContextParameterList parameter in the response parameters of the <a href="https://help.aliyun.com/document_detail/173954.html">GetFile</a> operation.</p>
+         * <p>This parameter corresponds to the Input Parameters setting in Properties &gt; Input and Output Parameters for data development nodes in the <a href="https://workbench.data.aliyun.com/console">DataWorks console</a>.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>[{&quot;ValueSource&quot;: &quot;project_001.first_node:bizdate_param&quot;,&quot;ParameterName&quot;: &quot;bizdate_input&quot;}]</p>
          */
         public Builder inputParameters(String inputParameters) {
             this.putBodyParameter("InputParameters", inputParameters);
@@ -741,7 +845,11 @@ public class CreateFileRequest extends Request {
         }
 
         /**
-         * OutputParameters.
+         * <p>The output context parameters of the node. The value must be in the JSON format. For more information about the parameter structure, see the OutputContextParameterList parameter in the response parameters of the <a href="https://help.aliyun.com/document_detail/173954.html">GetFile</a> operation.</p>
+         * <p>This parameter corresponds to the Output Parameters setting in Properties &gt; Input and Output Parameters for data development nodes in the <a href="https://workbench.data.aliyun.com/console">DataWorks console</a>.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>[{&quot;Type&quot;: 1,&quot;Value&quot;: &quot;${bizdate}&quot;,&quot;ParameterName&quot;: &quot;bizdate_param&quot;}]</p>
          */
         public Builder outputParameters(String outputParameters) {
             this.putBodyParameter("OutputParameters", outputParameters);
@@ -750,7 +858,10 @@ public class CreateFileRequest extends Request {
         }
 
         /**
-         * Owner.
+         * <p>The Alibaba Cloud account ID of the file owner. If this parameter is not specified, the Alibaba Cloud account ID of the caller is used by default.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1000000000001</p>
          */
         public Builder owner(String owner) {
             this.putBodyParameter("Owner", owner);
@@ -759,7 +870,11 @@ public class CreateFileRequest extends Request {
         }
 
         /**
-         * ParaValue.
+         * <p>The scheduling parameters of the node. Separate multiple parameters with spaces.</p>
+         * <p>This parameter corresponds to the Scheduling Parameter setting in Properties for data development nodes in the <a href="https://workbench.data.aliyun.com/console">DataWorks console</a>. For more information, see <a href="https://help.aliyun.com/document_detail/137548.html">Scheduling parameters</a>.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>a=x b=y</p>
          */
         public Builder paraValue(String paraValue) {
             this.putBodyParameter("ParaValue", paraValue);
@@ -768,7 +883,10 @@ public class CreateFileRequest extends Request {
         }
 
         /**
-         * ProjectId.
+         * <p>The DataWorks workspace ID. To obtain the workspace ID, log on to the <a href="https://workbench.data.aliyun.com/console">DataWorks console</a> and navigate to the workspace configuration page. You must configure either this parameter or the ProjectIdentifier parameter to determine the DataWorks workspace to which the operation is applied.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10000</p>
          */
         public Builder projectId(Long projectId) {
             this.putBodyParameter("ProjectId", projectId);
@@ -777,7 +895,11 @@ public class CreateFileRequest extends Request {
         }
 
         /**
-         * ProjectIdentifier.
+         * <p>The DataWorks workspace name. To obtain the workspace name, log on to the <a href="https://workbench.data.aliyun.com/console">DataWorks console</a> and navigate to the workspace configuration page.</p>
+         * <p>You must specify either this parameter or ProjectId to identify the target DataWorks workspace for this API call.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>dw_project</p>
          */
         public Builder projectIdentifier(String projectIdentifier) {
             this.putBodyParameter("ProjectIdentifier", projectIdentifier);
@@ -786,7 +908,16 @@ public class CreateFileRequest extends Request {
         }
 
         /**
-         * RerunMode.
+         * <p>The rerun policy. Valid values:</p>
+         * <ul>
+         * <li>ALL_ALLOWED: Reruns are allowed regardless of whether the task succeeds or fails.</li>
+         * <li>FAILURE_ALLOWED: Reruns are allowed only when the task fails.</li>
+         * <li>ALL_DENIED: Reruns are not allowed regardless of whether the task succeeds or fails.</li>
+         * </ul>
+         * <p>This parameter corresponds to the Support for Rerun setting in Scheduling &gt; Scheduling Policies for Data Studio tasks in the <a href="https://workbench.data.aliyun.com/console">DataWorks console</a>.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>ALL_ALLOWED</p>
          */
         public Builder rerunMode(String rerunMode) {
             this.putBodyParameter("RerunMode", rerunMode);
@@ -795,7 +926,10 @@ public class CreateFileRequest extends Request {
         }
 
         /**
-         * ResourceGroupId.
+         * <p>This parameter is deprecated.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>375827434852437</p>
          */
         public Builder resourceGroupId(Long resourceGroupId) {
             this.putBodyParameter("ResourceGroupId", resourceGroupId);
@@ -804,7 +938,7 @@ public class CreateFileRequest extends Request {
         }
 
         /**
-         * <p>The resource group for the task deployed from the file. You can log on to the <a href="https://workbench.data.aliyun.com/console">DataWorks console</a> and go to the workspace configuration page. In the left-side navigation pane, click <strong>Resource Group</strong> to obtain the ID of the resource group associated with the current workspace.</p>
+         * <p>The resource group for the task published from the file. To obtain the ID, log on to the <a href="https://workbench.data.aliyun.com/console">DataWorks console</a>, navigate to the workspace configuration page, and click Resource Groups in the left-side navigation pane to view the IDs of resource groups bound to the current workspace.</p>
          * 
          * <strong>example:</strong>
          * <p>S_res_group_559_1613715566828</p>
@@ -816,7 +950,16 @@ public class CreateFileRequest extends Request {
         }
 
         /**
-         * SchedulerType.
+         * <p>The scheduling type. Valid values:</p>
+         * <ul>
+         * <li>NORMAL: Normal scheduled task.</li>
+         * <li>MANUAL: Manually triggered node. Not scheduled for daily execution. Corresponds to nodes in manually triggered workflows.</li>
+         * <li>PAUSE: Paused task.</li>
+         * <li>SKIP: Dry-run task. Scheduled for daily execution but is directly marked as successful when scheduling starts.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>NORMAL</p>
          */
         public Builder schedulerType(String schedulerType) {
             this.putBodyParameter("SchedulerType", schedulerType);
@@ -825,7 +968,11 @@ public class CreateFileRequest extends Request {
         }
 
         /**
-         * StartEffectDate.
+         * <p>The timestamp (in milliseconds) when automatic scheduling starts.</p>
+         * <p>This parameter corresponds to the start time of Effective Period in Scheduling &gt; Scheduling Time for Data Studio tasks in the <a href="https://workbench.data.aliyun.com/console">DataWorks console</a>.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1671608450000</p>
          */
         public Builder startEffectDate(Long startEffectDate) {
             this.putBodyParameter("StartEffectDate", startEffectDate);
@@ -834,7 +981,11 @@ public class CreateFileRequest extends Request {
         }
 
         /**
-         * StartImmediately.
+         * <p>Specifies whether to immediately run the node after the node is deployed.</p>
+         * <p>This parameter corresponds to the Start Method setting in Settings &gt; Schedule in the right-side navigation pane on the configuration tab of EMR Spark Streaming and EMR Streaming SQL nodes in the <a href="https://workbench.data.aliyun.com/console">DataWorks console</a>.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder startImmediately(Boolean startImmediately) {
             this.putBodyParameter("StartImmediately", startImmediately);
@@ -843,7 +994,15 @@ public class CreateFileRequest extends Request {
         }
 
         /**
-         * Stop.
+         * <p>Specifies whether to skip execution. Valid values:</p>
+         * <ul>
+         * <li>true</li>
+         * <li>false</li>
+         * </ul>
+         * <p>This parameter corresponds to the Skip Execution option in Properties &gt; Schedule &gt; Recurrence for data development nodes in the <a href="https://workbench.data.aliyun.com/console">DataWorks console</a>.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>false</p>
          */
         public Builder stop(Boolean stop) {
             this.putBodyParameter("Stop", stop);
@@ -852,7 +1011,10 @@ public class CreateFileRequest extends Request {
         }
 
         /**
-         * Timeout.
+         * <p>The timeout settings for scheduling configuration.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder timeout(Integer timeout) {
             this.putBodyParameter("Timeout", timeout);

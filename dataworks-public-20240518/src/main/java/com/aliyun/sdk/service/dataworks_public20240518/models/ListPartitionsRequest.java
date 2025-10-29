@@ -154,7 +154,10 @@ public class ListPartitionsRequest extends Request {
         }
 
         /**
-         * Name.
+         * <p>The partition name.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>ds=20250101</p>
          */
         public Builder name(String name) {
             this.putQueryParameter("Name", name);
@@ -163,7 +166,14 @@ public class ListPartitionsRequest extends Request {
         }
 
         /**
-         * Order.
+         * <p>The sort order. Default: Asc. Valid values:</p>
+         * <ul>
+         * <li>Asc: Ascending order.</li>
+         * <li>Desc: Descending order.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>Asc</p>
          */
         public Builder order(String order) {
             this.putQueryParameter("Order", order);
@@ -172,7 +182,10 @@ public class ListPartitionsRequest extends Request {
         }
 
         /**
-         * PageNumber.
+         * <p>The page number. Default: 1.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder pageNumber(Integer pageNumber) {
             this.putQueryParameter("PageNumber", pageNumber);
@@ -181,7 +194,10 @@ public class ListPartitionsRequest extends Request {
         }
 
         /**
-         * PageSize.
+         * <p>The number of entries per page. Default: 10. Maximum: 100.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10</p>
          */
         public Builder pageSize(Integer pageSize) {
             this.putQueryParameter("PageSize", pageSize);
@@ -190,7 +206,17 @@ public class ListPartitionsRequest extends Request {
         }
 
         /**
-         * SortBy.
+         * <p>The sort field. Default value: CreateTime. Valid values:</p>
+         * <ul>
+         * <li>CreateTime: Creation time. Supported only for MaxCompute tables.</li>
+         * <li>ModifyTime: Modification time. Supported only for MaxCompute tables.</li>
+         * <li>Name: Name. Used for HMS-type tables.</li>
+         * <li>RecordCount: Record count. Supported only for MaxCompute tables.</li>
+         * <li>DataSize: Storage size. Supported only for MaxCompute tables.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>CreateTime</p>
          */
         public Builder sortBy(String sortBy) {
             this.putQueryParameter("SortBy", sortBy);
@@ -199,7 +225,7 @@ public class ListPartitionsRequest extends Request {
         }
 
         /**
-         * <p>The ID of the table to which the partitions belong. You can call the ListTables operation to query the ID. For more information, see <a href="https://help.aliyun.com/document_detail/2880092.html">Concepts related to metadata entities</a>.</p>
+         * <p>The ID of the data table.You can refer to the ListTables API response and <a href="https://help.aliyun.com/document_detail/2880092.html">Concepts related to metadata entities</a>.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>

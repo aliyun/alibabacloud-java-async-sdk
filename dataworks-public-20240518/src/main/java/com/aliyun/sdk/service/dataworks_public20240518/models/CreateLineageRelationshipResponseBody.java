@@ -91,7 +91,10 @@ public class CreateLineageRelationshipResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * <p>The request ID. The unique identifier of a request.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>C99E2BE6-9DEA-5C2E-8F51-1DDCFEADE490</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -99,7 +102,10 @@ public class CreateLineageRelationshipResponseBody extends TeaModel {
         }
 
         /**
-         * Success.
+         * <p>Indicates whether the request was successful.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder success(Boolean success) {
             this.success = success;

@@ -80,7 +80,7 @@ public class GetCatalogResponseBody extends TeaModel {
         } 
 
         /**
-         * Catalog.
+         * <p>Catalog information.</p>
          */
         public Builder catalog(Catalog catalog) {
             this.catalog = catalog;
@@ -88,7 +88,10 @@ public class GetCatalogResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1AFAE64E-D1BE-432B-A9****</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -96,7 +99,10 @@ public class GetCatalogResponseBody extends TeaModel {
         }
 
         /**
-         * Success.
+         * <p>Indicates whether the request was successful.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder success(Boolean success) {
             this.success = success;

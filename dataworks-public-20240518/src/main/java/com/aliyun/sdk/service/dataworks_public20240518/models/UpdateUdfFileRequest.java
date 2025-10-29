@@ -240,6 +240,7 @@ public class UpdateUdfFileRequest extends Request {
         }
 
         /**
+         * <p>The class name where the function is defined, corresponding to the class name field in the Create Function form.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -252,7 +253,10 @@ public class UpdateUdfFileRequest extends Request {
         }
 
         /**
-         * CmdDescription.
+         * <p>The command format for invoking the function, corresponding to the command format field in the Create Function form.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>StringConcat(String... substrs)</p>
          */
         public Builder cmdDescription(String cmdDescription) {
             this.putBodyParameter("CmdDescription", cmdDescription);
@@ -261,7 +265,10 @@ public class UpdateUdfFileRequest extends Request {
         }
 
         /**
-         * Example.
+         * <p>An example demonstrating how to call the function, corresponding to the example field in the Create Function form.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>StringConcat(&quot;a&quot;, &quot;b&quot;, &quot;c&quot;)</p>
          */
         public Builder example(String example) {
             this.putBodyParameter("Example", example);
@@ -270,7 +277,10 @@ public class UpdateUdfFileRequest extends Request {
         }
 
         /**
-         * FileFolderPath.
+         * <p>The path to the folder containing the function file.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Business_process/First_Business_Process/function/string_processing_function</p>
          */
         public Builder fileFolderPath(String fileFolderPath) {
             this.putBodyParameter("FileFolderPath", fileFolderPath);
@@ -279,6 +289,7 @@ public class UpdateUdfFileRequest extends Request {
         }
 
         /**
+         * <p>The file ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -291,6 +302,7 @@ public class UpdateUdfFileRequest extends Request {
         }
 
         /**
+         * <p>The function category, corresponding to the function type field in the Create Function form. Valid values: MATH (mathematical functions), AGGREGATE (aggregate functions), STRING (string processing functions), DATE (date processing functions), ANALYTIC (window functions), and OTHER (other functions).</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -303,7 +315,16 @@ public class UpdateUdfFileRequest extends Request {
         }
 
         /**
-         * ParameterDescription.
+         * <p>The function parameter description, corresponding to the parameter description field in the Create Function form.</p>
+         * <p>Valid values:</p>
+         * <ul>
+         * <li>ALL_ALLOWD</li>
+         * <li>FAILURE_ALLOWED</li>
+         * <li>ALL_DENIED</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>List of strings to be connected</p>
          */
         public Builder parameterDescription(String parameterDescription) {
             this.putBodyParameter("ParameterDescription", parameterDescription);
@@ -312,7 +333,10 @@ public class UpdateUdfFileRequest extends Request {
         }
 
         /**
-         * ProjectId.
+         * <p>The DataWorks workspace ID. To find this, click the wrench icon in the upper-right corner and navigate to the workspace management page.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10000</p>
          */
         public Builder projectId(Long projectId) {
             this.putBodyParameter("ProjectId", projectId);
@@ -321,7 +345,11 @@ public class UpdateUdfFileRequest extends Request {
         }
 
         /**
-         * ProjectIdentifier.
+         * <p>The unique identifier of the DataWorks workspace, which is the identifier at the top of the Data Studio page where you switch workspaces.</p>
+         * <p>Either this parameter or ProjectId must be specified to identify the target DataWorks workspace for this API call.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>dw_project</p>
          */
         public Builder projectIdentifier(String projectIdentifier) {
             this.putBodyParameter("ProjectIdentifier", projectIdentifier);
@@ -330,6 +358,7 @@ public class UpdateUdfFileRequest extends Request {
         }
 
         /**
+         * <p>A comma-separated list of resource names referenced by the function, corresponding to the resource list field in the Create Function form.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -342,7 +371,10 @@ public class UpdateUdfFileRequest extends Request {
         }
 
         /**
-         * ReturnValue.
+         * <p>The return value description, corresponding to the return value field in the Create Function form.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>New strings generated by concatenating all strings before and after the input order</p>
          */
         public Builder returnValue(String returnValue) {
             this.putBodyParameter("ReturnValue", returnValue);
@@ -351,7 +383,10 @@ public class UpdateUdfFileRequest extends Request {
         }
 
         /**
-         * UdfDescription.
+         * <p>The function purpose description, corresponding to the description field in the Create Function form.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Concatenate several strings to generate a new string</p>
          */
         public Builder udfDescription(String udfDescription) {
             this.putBodyParameter("UdfDescription", udfDescription);

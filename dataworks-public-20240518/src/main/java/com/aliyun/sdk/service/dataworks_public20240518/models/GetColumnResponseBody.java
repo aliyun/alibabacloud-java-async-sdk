@@ -80,7 +80,7 @@ public class GetColumnResponseBody extends TeaModel {
         } 
 
         /**
-         * Column.
+         * <p>The columns in the table.</p>
          */
         public Builder column(Column column) {
             this.column = column;
@@ -88,7 +88,10 @@ public class GetColumnResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>D1E2E5BC-xxxx-xxxx-xxxx-xxxxxx</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -96,7 +99,10 @@ public class GetColumnResponseBody extends TeaModel {
         }
 
         /**
-         * Success.
+         * <p>Indicates whether the request succeeded.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder success(Boolean success) {
             this.success = success;

@@ -181,7 +181,10 @@ public class ListEntitiesInMetaCollectionRequest extends Request {
         }
 
         /**
-         * EntityDescription.
+         * <p>The description specified when the entity was added to the collection. Supports fuzzy matching. Valid only for the album type.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>test</p>
          */
         public Builder entityDescription(String entityDescription) {
             this.putQueryParameter("EntityDescription", entityDescription);
@@ -190,7 +193,10 @@ public class ListEntitiesInMetaCollectionRequest extends Request {
         }
 
         /**
-         * EntityName.
+         * <p>The entity name. Supports fuzzy matching.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>test1</p>
          */
         public Builder entityName(String entityName) {
             this.putQueryParameter("EntityName", entityName);
@@ -199,7 +205,10 @@ public class ListEntitiesInMetaCollectionRequest extends Request {
         }
 
         /**
-         * EntityType.
+         * <p>The entity type.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>dlf-table</p>
          */
         public Builder entityType(String entityType) {
             this.putQueryParameter("EntityType", entityType);
@@ -221,7 +230,14 @@ public class ListEntitiesInMetaCollectionRequest extends Request {
         }
 
         /**
-         * Order.
+         * <p>The sort order. Valid values:</p>
+         * <ul>
+         * <li>Asc (default): ascending order.</li>
+         * <li>Desc</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>Asc</p>
          */
         public Builder order(String order) {
             this.putQueryParameter("Order", order);
@@ -230,7 +246,10 @@ public class ListEntitiesInMetaCollectionRequest extends Request {
         }
 
         /**
-         * PageNumber.
+         * <p>The page number. Default value: 1.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder pageNumber(Integer pageNumber) {
             this.putQueryParameter("PageNumber", pageNumber);
@@ -239,7 +258,10 @@ public class ListEntitiesInMetaCollectionRequest extends Request {
         }
 
         /**
-         * PageSize.
+         * <p>The number of records per page. Default value: 10. Maximum value: 100.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10</p>
          */
         public Builder pageSize(Integer pageSize) {
             this.putQueryParameter("PageSize", pageSize);
@@ -248,7 +270,14 @@ public class ListEntitiesInMetaCollectionRequest extends Request {
         }
 
         /**
-         * SortBy.
+         * <p>The sort field. Valid values:</p>
+         * <ul>
+         * <li>Name (default)</li>
+         * <li>CreateTime</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>Name</p>
          */
         public Builder sortBy(String sortBy) {
             this.putQueryParameter("SortBy", sortBy);

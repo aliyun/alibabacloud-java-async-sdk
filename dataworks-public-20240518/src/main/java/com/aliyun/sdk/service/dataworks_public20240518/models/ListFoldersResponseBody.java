@@ -119,7 +119,7 @@ public class ListFoldersResponseBody extends TeaModel {
         } 
 
         /**
-         * Data.
+         * <p>The list of folders that meet the conditions.</p>
          */
         public Builder data(Data data) {
             this.data = data;
@@ -127,7 +127,10 @@ public class ListFoldersResponseBody extends TeaModel {
         }
 
         /**
-         * ErrorCode.
+         * <p>The error code.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Invalid.Tenant.ConnectionNotExists</p>
          */
         public Builder errorCode(String errorCode) {
             this.errorCode = errorCode;
@@ -135,7 +138,10 @@ public class ListFoldersResponseBody extends TeaModel {
         }
 
         /**
-         * ErrorMessage.
+         * <p>The error message</p>
+         * 
+         * <strong>example:</strong>
+         * <p>The connection does not exist.</p>
          */
         public Builder errorMessage(String errorMessage) {
             this.errorMessage = errorMessage;
@@ -143,7 +149,10 @@ public class ListFoldersResponseBody extends TeaModel {
         }
 
         /**
-         * HttpStatusCode.
+         * <p>The HTTP status code.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>200</p>
          */
         public Builder httpStatusCode(Integer httpStatusCode) {
             this.httpStatusCode = httpStatusCode;
@@ -151,7 +160,10 @@ public class ListFoldersResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * <p>The request ID. Used to troubleshoot errors.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>0000-ABCD-****</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -159,7 +171,14 @@ public class ListFoldersResponseBody extends TeaModel {
         }
 
         /**
-         * Success.
+         * <p>Indicates whether the request was successful. Valid values:</p>
+         * <ul>
+         * <li>true: success.</li>
+         * <li>false: failure.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder success(Boolean success) {
             this.success = success;
@@ -225,7 +244,10 @@ public class ListFoldersResponseBody extends TeaModel {
             } 
 
             /**
-             * FolderId.
+             * <p>The folder ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2735c2****</p>
              */
             public Builder folderId(String folderId) {
                 this.folderId = folderId;
@@ -233,7 +255,10 @@ public class ListFoldersResponseBody extends TeaModel {
             }
 
             /**
-             * FolderPath.
+             * <p>The folder path.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Business_process/my_first_business_process/MaxCompute/ods_layer</p>
              */
             public Builder folderPath(String folderPath) {
                 this.folderPath = folderPath;
@@ -326,7 +351,7 @@ public class ListFoldersResponseBody extends TeaModel {
             } 
 
             /**
-             * Folders.
+             * <p>The list of folders.</p>
              */
             public Builder folders(java.util.List<Folders> folders) {
                 this.folders = folders;
@@ -334,7 +359,10 @@ public class ListFoldersResponseBody extends TeaModel {
             }
 
             /**
-             * PageNumber.
+             * <p>The current page number.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder pageNumber(Integer pageNumber) {
                 this.pageNumber = pageNumber;
@@ -342,7 +370,10 @@ public class ListFoldersResponseBody extends TeaModel {
             }
 
             /**
-             * PageSize.
+             * <p>The number of records on the current page.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>10</p>
              */
             public Builder pageSize(Integer pageSize) {
                 this.pageSize = pageSize;
@@ -350,7 +381,10 @@ public class ListFoldersResponseBody extends TeaModel {
             }
 
             /**
-             * TotalCount.
+             * <p>The total number of records that meet the query conditions.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>13</p>
              */
             public Builder totalCount(Integer totalCount) {
                 this.totalCount = totalCount;

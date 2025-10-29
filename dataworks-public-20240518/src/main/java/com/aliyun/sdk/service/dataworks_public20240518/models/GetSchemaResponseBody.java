@@ -80,7 +80,10 @@ public class GetSchemaResponseBody extends TeaModel {
         } 
 
         /**
-         * RequestId.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>A89B5D9D-74EA-XXXXXX</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -88,7 +91,7 @@ public class GetSchemaResponseBody extends TeaModel {
         }
 
         /**
-         * Schema.
+         * <p>The schema information.</p>
          */
         public Builder schema(Schema schema) {
             this.schema = schema;
@@ -96,7 +99,10 @@ public class GetSchemaResponseBody extends TeaModel {
         }
 
         /**
-         * Success.
+         * <p>Indicates whether the request was successful.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder success(Boolean success) {
             this.success = success;

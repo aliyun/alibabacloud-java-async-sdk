@@ -67,7 +67,7 @@ public class GetLineageRelationshipResponseBody extends TeaModel {
         } 
 
         /**
-         * LineageRelationship.
+         * <p>The lineage structure.</p>
          */
         public Builder lineageRelationship(LineageRelationship lineageRelationship) {
             this.lineageRelationship = lineageRelationship;
@@ -75,7 +75,10 @@ public class GetLineageRelationshipResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>58D5334A-B013-430E</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;

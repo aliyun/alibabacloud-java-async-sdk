@@ -124,7 +124,15 @@ public class UpdateIDEEventResultRequest extends Request {
         }
 
         /**
-         * CheckResult.
+         * <p>The check status of the extension for this extension point event. Valid values:</p>
+         * <ul>
+         * <li>OK: The extension passed the check for this event.</li>
+         * <li>FAIL: The extension failed the check for this event. You need to review and resolve the error promptly to avoid affecting subsequent program execution.</li>
+         * <li>WARN: The extension passed the check for this event, but with warnings.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>OK</p>
          */
         public Builder checkResult(String checkResult) {
             this.putBodyParameter("CheckResult", checkResult);
@@ -133,7 +141,10 @@ public class UpdateIDEEventResultRequest extends Request {
         }
 
         /**
-         * CheckResultTip.
+         * <p>A summary of the check result for this extension point event. This message is displayed on your current development page. When the check fails or has warnings, you can use this summary to quickly identify the cause.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Succeeded</p>
          */
         public Builder checkResultTip(String checkResultTip) {
             this.putBodyParameter("CheckResultTip", checkResultTip);
@@ -142,7 +153,10 @@ public class UpdateIDEEventResultRequest extends Request {
         }
 
         /**
-         * ExtensionCode.
+         * <p>The unique identifier of the extension. You can obtain the identifier from the Extensions tab on Open Platform in the <a href="https://workbench.data.aliyun.com/console">DataWorks console</a>.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>8abcb91f-d266-4073-b907-2ed670378ed1</p>
          */
         public Builder extensionCode(String extensionCode) {
             this.putBodyParameter("ExtensionCode", extensionCode);
@@ -151,7 +165,7 @@ public class UpdateIDEEventResultRequest extends Request {
         }
 
         /**
-         * <p>扩展点消息UUID</p>
+         * <p>The OpenEvent message ID from DataWorks. When an extension point event is triggered, you can obtain the message ID from the event message.</p>
          * 
          * <strong>example:</strong>
          * <p>8abcb91f-d266-4073-b907-2ed670378ed1</p>

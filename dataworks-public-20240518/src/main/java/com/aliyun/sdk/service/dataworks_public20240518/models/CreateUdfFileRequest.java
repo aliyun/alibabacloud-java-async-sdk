@@ -255,6 +255,7 @@ public class CreateUdfFileRequest extends Request {
         }
 
         /**
+         * <p>The class name where the function is defined, corresponding to the class name field in the Create Function form.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -267,7 +268,10 @@ public class CreateUdfFileRequest extends Request {
         }
 
         /**
-         * CmdDescription.
+         * <p>The command format for invoking the function, corresponding to the command format field in the Create Function form.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>StringConcat(String... substrs)</p>
          */
         public Builder cmdDescription(String cmdDescription) {
             this.putBodyParameter("CmdDescription", cmdDescription);
@@ -276,7 +280,14 @@ public class CreateUdfFileRequest extends Request {
         }
 
         /**
-         * CreateFolderIfNotExists.
+         * <p>Specifies whether to automatically create the directory if the specified path (FileFolderPath) does not exist. Valid values:</p>
+         * <ul>
+         * <li>true: Automatically creates the directory if it does not exist.</li>
+         * <li>false: The call fails if the directory does not exist.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>false</p>
          */
         public Builder createFolderIfNotExists(Boolean createFolderIfNotExists) {
             this.putBodyParameter("CreateFolderIfNotExists", createFolderIfNotExists);
@@ -285,7 +296,10 @@ public class CreateUdfFileRequest extends Request {
         }
 
         /**
-         * Example.
+         * <p>An example demonstrating how to call the function, corresponding to the example field in the Create Function form.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>StringConcat(&quot;a&quot;, &quot;b&quot;, &quot;c&quot;)</p>
          */
         public Builder example(String example) {
             this.putBodyParameter("Example", example);
@@ -294,6 +308,7 @@ public class CreateUdfFileRequest extends Request {
         }
 
         /**
+         * <p>The path to the folder containing the function file.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -306,6 +321,7 @@ public class CreateUdfFileRequest extends Request {
         }
 
         /**
+         * <p>The function name.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -318,6 +334,7 @@ public class CreateUdfFileRequest extends Request {
         }
 
         /**
+         * <p>The function category, corresponding to the function type field in the Create Function form. Valid values: MATH (mathematical functions), AGGREGATE (aggregate functions), STRING (string processing functions), DATE (date processing functions), ANALYTIC (window functions), and OTHER (other functions).</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -330,7 +347,10 @@ public class CreateUdfFileRequest extends Request {
         }
 
         /**
-         * ParameterDescription.
+         * <p>The function parameter description, corresponding to the parameter description field in the Create Function form.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>List of strings to be connected</p>
          */
         public Builder parameterDescription(String parameterDescription) {
             this.putBodyParameter("ParameterDescription", parameterDescription);
@@ -339,7 +359,10 @@ public class CreateUdfFileRequest extends Request {
         }
 
         /**
-         * ProjectId.
+         * <p>The DataWorks workspace ID. To find this, click the wrench icon in the upper-right corner and navigate to the workspace management page.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10000</p>
          */
         public Builder projectId(Long projectId) {
             this.putBodyParameter("ProjectId", projectId);
@@ -348,7 +371,10 @@ public class CreateUdfFileRequest extends Request {
         }
 
         /**
-         * ProjectIdentifier.
+         * <p>The unique identifier of the DataWorks workspace, which is the identifier at the top of the Data Studio page where you switch workspaces.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>dw_project</p>
          */
         public Builder projectIdentifier(String projectIdentifier) {
             this.putBodyParameter("ProjectIdentifier", projectIdentifier);
@@ -357,6 +383,7 @@ public class CreateUdfFileRequest extends Request {
         }
 
         /**
+         * <p>A comma-separated list of resource names referenced by the function, corresponding to the resource list field in the Create Function form.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -369,7 +396,10 @@ public class CreateUdfFileRequest extends Request {
         }
 
         /**
-         * ReturnValue.
+         * <p>The return value description, corresponding to the return value field in the Create Function form.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>New strings generated by concatenating all strings before and after the input order</p>
          */
         public Builder returnValue(String returnValue) {
             this.putBodyParameter("ReturnValue", returnValue);
@@ -378,7 +408,10 @@ public class CreateUdfFileRequest extends Request {
         }
 
         /**
-         * UdfDescription.
+         * <p>The function purpose description, corresponding to the description field in the Create Function form.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Concatenate several strings to generate a new string</p>
          */
         public Builder udfDescription(String udfDescription) {
             this.putBodyParameter("UdfDescription", udfDescription);

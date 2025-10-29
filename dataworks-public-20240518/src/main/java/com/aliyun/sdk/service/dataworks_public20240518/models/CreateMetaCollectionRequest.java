@@ -126,7 +126,10 @@ public class CreateMetaCollectionRequest extends Request {
         }
 
         /**
-         * Description.
+         * <p>The collection description.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>test comment</p>
          */
         public Builder description(String description) {
             this.putQueryParameter("Description", description);
@@ -135,6 +138,7 @@ public class CreateMetaCollectionRequest extends Request {
         }
 
         /**
+         * <p>The ID of the collection.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -147,7 +151,7 @@ public class CreateMetaCollectionRequest extends Request {
         }
 
         /**
-         * <p>The ID of the collection of an ancestor node.</p>
+         * <p>The parent collection ID.</p>
          * 
          * <strong>example:</strong>
          * <p>category.123</p>
@@ -159,6 +163,12 @@ public class CreateMetaCollectionRequest extends Request {
         }
 
         /**
+         * <p>The collection name.</p>
+         * <ul>
+         * <li>Category</li>
+         * <li>Album</li>
+         * <li>AlbumCategory: Album subcategory.</li>
+         * </ul>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>

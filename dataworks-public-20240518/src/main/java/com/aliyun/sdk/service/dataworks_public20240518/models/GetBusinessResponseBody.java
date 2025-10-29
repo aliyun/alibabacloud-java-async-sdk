@@ -119,7 +119,7 @@ public class GetBusinessResponseBody extends TeaModel {
         } 
 
         /**
-         * Data.
+         * <p>Details of the workflow.</p>
          */
         public Builder data(Data data) {
             this.data = data;
@@ -127,7 +127,10 @@ public class GetBusinessResponseBody extends TeaModel {
         }
 
         /**
-         * ErrorCode.
+         * <p>The error code.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Invalid.Tenant.ConnectionNotExists</p>
          */
         public Builder errorCode(String errorCode) {
             this.errorCode = errorCode;
@@ -135,7 +138,10 @@ public class GetBusinessResponseBody extends TeaModel {
         }
 
         /**
-         * ErrorMessage.
+         * <p>The error message.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>The connection does not exist.</p>
          */
         public Builder errorMessage(String errorMessage) {
             this.errorMessage = errorMessage;
@@ -143,7 +149,10 @@ public class GetBusinessResponseBody extends TeaModel {
         }
 
         /**
-         * HttpStatusCode.
+         * <p>The HTTP status code.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>200</p>
          */
         public Builder httpStatusCode(Integer httpStatusCode) {
             this.httpStatusCode = httpStatusCode;
@@ -151,7 +160,10 @@ public class GetBusinessResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * <p>The request ID. Used for troubleshooting when an error occurs.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>0000-ABCD-EFG****</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -159,7 +171,14 @@ public class GetBusinessResponseBody extends TeaModel {
         }
 
         /**
-         * Success.
+         * <p>Indicates whether the call was successful. Valid values:</p>
+         * <ul>
+         * <li>true: success.</li>
+         * <li>false: failure.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder success(Boolean success) {
             this.success = success;
@@ -277,7 +296,10 @@ public class GetBusinessResponseBody extends TeaModel {
             } 
 
             /**
-             * BusinessId.
+             * <p>The workflow ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1000001</p>
              */
             public Builder businessId(Long businessId) {
                 this.businessId = businessId;
@@ -285,7 +307,10 @@ public class GetBusinessResponseBody extends TeaModel {
             }
 
             /**
-             * BusinessName.
+             * <p>The name of the workflow. Workflow names must be unique within the same workspace.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>The first business process</p>
              */
             public Builder businessName(String businessName) {
                 this.businessName = businessName;
@@ -293,7 +318,10 @@ public class GetBusinessResponseBody extends TeaModel {
             }
 
             /**
-             * Description.
+             * <p>The description of the workflow.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>This is my first business process.</p>
              */
             public Builder description(String description) {
                 this.description = description;
@@ -301,7 +329,10 @@ public class GetBusinessResponseBody extends TeaModel {
             }
 
             /**
-             * Owner.
+             * <p>The Alibaba Cloud account ID of the workflow owner.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>20000****</p>
              */
             public Builder owner(String owner) {
                 this.owner = owner;
@@ -309,7 +340,10 @@ public class GetBusinessResponseBody extends TeaModel {
             }
 
             /**
-             * ProjectId.
+             * <p>The ID of the workspace where the workflow resides.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>10000</p>
              */
             public Builder projectId(String projectId) {
                 this.projectId = projectId;
@@ -317,7 +351,10 @@ public class GetBusinessResponseBody extends TeaModel {
             }
 
             /**
-             * UseType.
+             * <p>The functional module to which the workflow belongs. Valid values: NORMAL (Data Studio) and MANUAL_BIZ (Manually Triggered Workflow)</p>
+             * 
+             * <strong>example:</strong>
+             * <p>NORMAL</p>
              */
             public Builder useType(String useType) {
                 this.useType = useType;

@@ -67,7 +67,7 @@ public class GetMetaCollectionResponseBody extends TeaModel {
         } 
 
         /**
-         * <p>The information about the collection.</p>
+         * <p>The collection details.</p>
          */
         public Builder metaCollection(MetaCollection metaCollection) {
             this.metaCollection = metaCollection;
@@ -75,7 +75,7 @@ public class GetMetaCollectionResponseBody extends TeaModel {
         }
 
         /**
-         * <p>Id of the request</p>
+         * <p>The request ID.</p>
          * 
          * <strong>example:</strong>
          * <p>1AFAE64E-D1BE-432B-A9****</p>
@@ -235,7 +235,7 @@ public class GetMetaCollectionResponseBody extends TeaModel {
             } 
 
             /**
-             * Administrators.
+             * <p>The list of administrator IDs. Valid only for the album type. The IDs must belong to users in the same tenant. Multiple IDs can be specified.</p>
              */
             public Builder administrators(java.util.List<Long> administrators) {
                 this.administrators = administrators;
@@ -243,7 +243,10 @@ public class GetMetaCollectionResponseBody extends TeaModel {
             }
 
             /**
-             * CreateTime.
+             * <p>The creation time in milliseconds.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1668568601000</p>
              */
             public Builder createTime(Long createTime) {
                 this.createTime = createTime;
@@ -251,7 +254,10 @@ public class GetMetaCollectionResponseBody extends TeaModel {
             }
 
             /**
-             * CreateUser.
+             * <p>The ID of the creator.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>456789</p>
              */
             public Builder createUser(String createUser) {
                 this.createUser = createUser;
@@ -259,7 +265,10 @@ public class GetMetaCollectionResponseBody extends TeaModel {
             }
 
             /**
-             * Description.
+             * <p>The collection description.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>test</p>
              */
             public Builder description(String description) {
                 this.description = description;
@@ -278,7 +287,10 @@ public class GetMetaCollectionResponseBody extends TeaModel {
             }
 
             /**
-             * ModifyTime.
+             * <p>The last modified time in milliseconds.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1668568601000</p>
              */
             public Builder modifyTime(Long modifyTime) {
                 this.modifyTime = modifyTime;
@@ -286,7 +298,10 @@ public class GetMetaCollectionResponseBody extends TeaModel {
             }
 
             /**
-             * Name.
+             * <p>The collection name.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>test_category</p>
              */
             public Builder name(String name) {
                 this.name = name;
@@ -294,7 +309,7 @@ public class GetMetaCollectionResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The ID of the collection of the ancestor node. This parameter can be left empty.</p>
+             * <p>The parent collection ID. This parameter can be empty.</p>
              * 
              * <strong>example:</strong>
              * <p>category.12</p>
@@ -305,7 +320,15 @@ public class GetMetaCollectionResponseBody extends TeaModel {
             }
 
             /**
-             * Type.
+             * <p>The collection type. Valid values:</p>
+             * <ul>
+             * <li>Category</li>
+             * <li>Album</li>
+             * <li>AlbumCategory: Album subcategory.</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>Category</p>
              */
             public Builder type(String type) {
                 this.type = type;

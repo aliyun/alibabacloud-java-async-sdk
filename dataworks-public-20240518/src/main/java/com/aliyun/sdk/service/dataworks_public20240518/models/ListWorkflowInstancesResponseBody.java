@@ -200,6 +200,9 @@ public class ListWorkflowInstancesResponseBody extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Name")
         private String name;
 
+        @com.aliyun.core.annotation.NameInMap("Owner")
+        private String owner;
+
         @com.aliyun.core.annotation.NameInMap("ProjectId")
         private Long projectId;
 
@@ -221,6 +224,9 @@ public class ListWorkflowInstancesResponseBody extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("WorkflowParameters")
         private String workflowParameters;
 
+        @com.aliyun.core.annotation.NameInMap("WorkflowTaskInstanceId")
+        private Long workflowTaskInstanceId;
+
         private WorkflowInstances(Builder builder) {
             this.bizDate = builder.bizDate;
             this.createTime = builder.createTime;
@@ -231,6 +237,7 @@ public class ListWorkflowInstancesResponseBody extends TeaModel {
             this.modifyTime = builder.modifyTime;
             this.modifyUser = builder.modifyUser;
             this.name = builder.name;
+            this.owner = builder.owner;
             this.projectId = builder.projectId;
             this.startedTime = builder.startedTime;
             this.status = builder.status;
@@ -238,6 +245,7 @@ public class ListWorkflowInstancesResponseBody extends TeaModel {
             this.type = builder.type;
             this.workflowId = builder.workflowId;
             this.workflowParameters = builder.workflowParameters;
+            this.workflowTaskInstanceId = builder.workflowTaskInstanceId;
         }
 
         public static Builder builder() {
@@ -312,6 +320,13 @@ public class ListWorkflowInstancesResponseBody extends TeaModel {
         }
 
         /**
+         * @return owner
+         */
+        public String getOwner() {
+            return this.owner;
+        }
+
+        /**
          * @return projectId
          */
         public Long getProjectId() {
@@ -360,6 +375,13 @@ public class ListWorkflowInstancesResponseBody extends TeaModel {
             return this.workflowParameters;
         }
 
+        /**
+         * @return workflowTaskInstanceId
+         */
+        public Long getWorkflowTaskInstanceId() {
+            return this.workflowTaskInstanceId;
+        }
+
         public static final class Builder {
             private Long bizDate; 
             private Long createTime; 
@@ -370,6 +392,7 @@ public class ListWorkflowInstancesResponseBody extends TeaModel {
             private Long modifyTime; 
             private String modifyUser; 
             private String name; 
+            private String owner; 
             private Long projectId; 
             private Long startedTime; 
             private String status; 
@@ -377,6 +400,7 @@ public class ListWorkflowInstancesResponseBody extends TeaModel {
             private String type; 
             private Long workflowId; 
             private String workflowParameters; 
+            private Long workflowTaskInstanceId; 
 
             private Builder() {
             } 
@@ -391,6 +415,7 @@ public class ListWorkflowInstancesResponseBody extends TeaModel {
                 this.modifyTime = model.modifyTime;
                 this.modifyUser = model.modifyUser;
                 this.name = model.name;
+                this.owner = model.owner;
                 this.projectId = model.projectId;
                 this.startedTime = model.startedTime;
                 this.status = model.status;
@@ -398,6 +423,7 @@ public class ListWorkflowInstancesResponseBody extends TeaModel {
                 this.type = model.type;
                 this.workflowId = model.workflowId;
                 this.workflowParameters = model.workflowParameters;
+                this.workflowTaskInstanceId = model.workflowTaskInstanceId;
             } 
 
             /**
@@ -501,6 +527,14 @@ public class ListWorkflowInstancesResponseBody extends TeaModel {
             }
 
             /**
+             * Owner.
+             */
+            public Builder owner(String owner) {
+                this.owner = owner;
+                return this;
+            }
+
+            /**
              * <p>The workspace ID.</p>
              * 
              * <strong>example:</strong>
@@ -544,7 +578,7 @@ public class ListWorkflowInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * Tags.
+             * <p>The task tag.</p>
              */
             public Builder tags(java.util.List<Tags> tags) {
                 this.tags = tags;
@@ -571,10 +605,18 @@ public class ListWorkflowInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * WorkflowParameters.
+             * <p>The workflow parameters.</p>
              */
             public Builder workflowParameters(String workflowParameters) {
                 this.workflowParameters = workflowParameters;
+                return this;
+            }
+
+            /**
+             * WorkflowTaskInstanceId.
+             */
+            public Builder workflowTaskInstanceId(Long workflowTaskInstanceId) {
+                this.workflowTaskInstanceId = workflowTaskInstanceId;
                 return this;
             }
 

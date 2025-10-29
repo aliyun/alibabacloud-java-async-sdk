@@ -67,7 +67,7 @@ public class GetComponentResponseBody extends TeaModel {
         } 
 
         /**
-         * Component.
+         * <p>JSON serialization of the component module.</p>
          */
         public Builder component(Component component) {
             this.component = component;
@@ -235,7 +235,10 @@ public class GetComponentResponseBody extends TeaModel {
             } 
 
             /**
-             * ComponentId.
+             * <p>The ID of the dataset acceleration component. For information on how to obtain the component ID, see <a href="https://help.aliyun.com/document_detail/2979566.html">ListComponents</a>.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>43cd873b-235c-44f8-be07-e4d4cf7e73b0</p>
              */
             public Builder componentId(String componentId) {
                 this.componentId = componentId;
@@ -243,6 +246,7 @@ public class GetComponentResponseBody extends TeaModel {
             }
 
             /**
+             * <p>The creation time.</p>
              * <p>Use the UTC time format: yyyy-MM-ddTHH:mm:ss.SSSZ</p>
              * 
              * <strong>example:</strong>
@@ -254,7 +258,10 @@ public class GetComponentResponseBody extends TeaModel {
             }
 
             /**
-             * Description.
+             * <p>The description.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>None</p>
              */
             public Builder description(String description) {
                 this.description = description;
@@ -262,6 +269,7 @@ public class GetComponentResponseBody extends TeaModel {
             }
 
             /**
+             * <p>The modification time (millisecond-level timestamp).</p>
              * <p>Use the UTC time format: yyyy-MM-ddTHH:mm:ss.SSSZ</p>
              * 
              * <strong>example:</strong>
@@ -273,7 +281,10 @@ public class GetComponentResponseBody extends TeaModel {
             }
 
             /**
-             * Name.
+             * <p>Parameter</p>
+             * 
+             * <strong>example:</strong>
+             * <p>dim_whse_epet_warehouse_jz_storage_stock_lot_relation_id</p>
              */
             public Builder name(String name) {
                 this.name = name;
@@ -281,7 +292,10 @@ public class GetComponentResponseBody extends TeaModel {
             }
 
             /**
-             * Owner.
+             * <p>The ID of the task owner.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>207316543660665792</p>
              */
             public Builder owner(String owner) {
                 this.owner = owner;
@@ -289,7 +303,10 @@ public class GetComponentResponseBody extends TeaModel {
             }
 
             /**
-             * ProjectId.
+             * <p>The DataWorks workspace ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>64623</p>
              */
             public Builder projectId(Long projectId) {
                 this.projectId = projectId;
@@ -297,7 +314,10 @@ public class GetComponentResponseBody extends TeaModel {
             }
 
             /**
-             * RegionId.
+             * <p>The region ID, such as ap-southeast-1. The region ID is automatically parsed from your endpoint.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>cn-hangzhou</p>
              */
             public Builder regionId(String regionId) {
                 this.regionId = regionId;
@@ -305,7 +325,47 @@ public class GetComponentResponseBody extends TeaModel {
             }
 
             /**
-             * Spec.
+             * <p>The FlowSpec information for this workflow. For more information, see <a href="https://github.com/aliyun/alibabacloud-dataworks-tool-dflow/">FlowSpec</a>.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>{
+             *     &quot;kind&quot;: &quot;Component&quot;,
+             *     &quot;name&quot;: &quot;com1&quot;,
+             *     &quot;spec&quot;: {
+             *         &quot;components&quot;: [
+             *             {
+             *                 &quot;name&quot;: &quot;test11&quot;,
+             *                 &quot;id&quot;: &quot;8196828925037*****&quot;,
+             *                 &quot;owner&quot;: &quot;054664&quot;,
+             *                 &quot;description&quot;: &quot;&quot;,
+             *                 &quot;script&quot;: {
+             *                     &quot;language&quot;: &quot;odps-sql&quot;,
+             *                     &quot;path&quot;: &quot;test11&quot;,
+             *                     &quot;content&quot;: &quot;select &quot;@@{bizdate}&quot;, &quot;@@{my_input_table}&quot;&quot;,
+             *                     &quot;runtime&quot;: {
+             *                         &quot;command&quot;: &quot;SQL_COMPONENT&quot;
+             *                     }
+             *                 },
+             *                 &quot;inputs&quot;: [
+             *                     {
+             *                         &quot;name&quot;: &quot;bizdate&quot;,
+             *                         &quot;type&quot;: &quot;string&quot;
+             *                     },
+             *                     {
+             *                         &quot;name&quot;: &quot;my_input_table&quot;,
+             *                         &quot;type&quot;: &quot;string&quot;
+             *                     }
+             *                 ],
+             *                 &quot;outputs&quot;: [
+             *                     {
+             *                         &quot;name&quot;: &quot;my_output_table1&quot;,
+             *                         &quot;type&quot;: &quot;string&quot;
+             *                     }
+             *                 ]
+             *             }
+             *         ]
+             *     }
+             * }</p>
              */
             public Builder spec(String spec) {
                 this.spec = spec;

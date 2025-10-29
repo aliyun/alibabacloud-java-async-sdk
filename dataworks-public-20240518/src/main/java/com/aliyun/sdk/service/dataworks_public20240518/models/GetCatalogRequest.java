@@ -83,13 +83,13 @@ public class GetCatalogRequest extends Request {
         }
 
         /**
-         * <p>Data catalog entity ID. Currently, only DLF and StarRocks types are supported. You can refer to the response of the ListCatalogs operation and <a href="https://help.aliyun.com/document_detail/2880092.html">the description of metadata entity concepts.</a></p>
+         * <p>The catalog entity ID. Currently supports dlf and starrocks types. You can refer to the results returned by the ListCatalogs operation and the <a href="https://help.aliyun.com/document_detail/2880092.html">Concepts related to metadata entities</a>.</p>
          * <ul>
          * <li>For the DLF type, the format is <code>dlf-catalog::catalog_id</code>.</li>
          * <li>For the StarRocks type, the format is <code>starrocks-catalog:(instance_id|encoded_jdbc_url):catalog_name</code>.</li>
          * </ul>
          * <blockquote>
-         * <p> Parameter descriptions:<br><code>catalog_id</code>: The DLF catalog ID.<br><code>instance_id</code>: The instance ID, required for the data source registered in instance mode.<br><code>encoded_jdbc_url</code>: The JDBC connection string that has been URL encoded, required for the data source registered via a connection string.<br><code>catalog_name</code>: The name of the StarRocks catalog.</p>
+         * <p><br><code>catalog_id</code>: The ID of the DLF catalog.<br><code>instance_id</code>: The instance ID, required if the data source is registered in instance mode.<br><code>encoded_jdbc_url</code>: The URL-encoded JDBC connection string. Required if the data source is registered in connection string mode.<br><code>catalog_name</code>: The name of the StarRocks catalog.</p>
          * </blockquote>
          * <p>This parameter is required.</p>
          * 

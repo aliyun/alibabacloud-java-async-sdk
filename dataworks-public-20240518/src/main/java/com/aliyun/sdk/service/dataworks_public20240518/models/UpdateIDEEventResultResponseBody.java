@@ -54,7 +54,10 @@ public class UpdateIDEEventResultResponseBody extends TeaModel {
         } 
 
         /**
-         * RequestId.
+         * <p>The request ID. Used for troubleshooting errors.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>8abcb91f-d266-4073-b907-2ed670378ed1</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;

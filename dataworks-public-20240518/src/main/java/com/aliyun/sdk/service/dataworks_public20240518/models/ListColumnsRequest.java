@@ -168,7 +168,10 @@ public class ListColumnsRequest extends Request {
         }
 
         /**
-         * Comment.
+         * <p>The comment. Fuzzy match is supported.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>test comment</p>
          */
         public Builder comment(String comment) {
             this.putQueryParameter("Comment", comment);
@@ -177,7 +180,10 @@ public class ListColumnsRequest extends Request {
         }
 
         /**
-         * Name.
+         * <p>The name. Fuzzy match is supported.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>test_table</p>
          */
         public Builder name(String name) {
             this.putQueryParameter("Name", name);
@@ -186,7 +192,14 @@ public class ListColumnsRequest extends Request {
         }
 
         /**
-         * Order.
+         * <p>The sort order. Default value: Asc. Valid values:</p>
+         * <ul>
+         * <li>Asc</li>
+         * <li>Desc</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>Asc</p>
          */
         public Builder order(String order) {
             this.putQueryParameter("Order", order);
@@ -195,7 +208,10 @@ public class ListColumnsRequest extends Request {
         }
 
         /**
-         * PageNumber.
+         * <p>The page number. Default value: 1.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder pageNumber(Integer pageNumber) {
             this.putQueryParameter("PageNumber", pageNumber);
@@ -204,7 +220,10 @@ public class ListColumnsRequest extends Request {
         }
 
         /**
-         * PageSize.
+         * <p>The number of records per page. Default value: 10. Maximum value: 100.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10</p>
          */
         public Builder pageSize(Integer pageSize) {
             this.putQueryParameter("PageSize", pageSize);
@@ -213,7 +232,14 @@ public class ListColumnsRequest extends Request {
         }
 
         /**
-         * SortBy.
+         * <p>The sort field. Default value: Position. Valid values:</p>
+         * <ul>
+         * <li>Name</li>
+         * <li>Position</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>Position</p>
          */
         public Builder sortBy(String sortBy) {
             this.putQueryParameter("SortBy", sortBy);
@@ -222,7 +248,7 @@ public class ListColumnsRequest extends Request {
         }
 
         /**
-         * <p>The ID of the table to which the columns belong. You can call the ListTables operation to query the ID. For more information, see <a href="https://help.aliyun.com/document_detail/2880092.html">Concepts related to metadata entities</a>.</p>
+         * <p>The table ID. You can refer to the return result of the ListTables operation. and the <a href="https://help.aliyun.com/document_detail/2880092.html">Concepts related to metadata entities</a>.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>

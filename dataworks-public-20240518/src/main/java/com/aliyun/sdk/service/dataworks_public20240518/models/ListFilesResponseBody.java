@@ -119,7 +119,7 @@ public class ListFilesResponseBody extends TeaModel {
         } 
 
         /**
-         * Data.
+         * <p>The response details.</p>
          */
         public Builder data(Data data) {
             this.data = data;
@@ -127,7 +127,10 @@ public class ListFilesResponseBody extends TeaModel {
         }
 
         /**
-         * ErrorCode.
+         * <p>The error code.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Invalid.Tenant.ConnectionNotExists</p>
          */
         public Builder errorCode(String errorCode) {
             this.errorCode = errorCode;
@@ -135,7 +138,10 @@ public class ListFilesResponseBody extends TeaModel {
         }
 
         /**
-         * ErrorMessage.
+         * <p>The error message.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>The connection does not exist.</p>
          */
         public Builder errorMessage(String errorMessage) {
             this.errorMessage = errorMessage;
@@ -143,7 +149,10 @@ public class ListFilesResponseBody extends TeaModel {
         }
 
         /**
-         * HttpStatusCode.
+         * <p>The HTTP status code.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>200</p>
          */
         public Builder httpStatusCode(Integer httpStatusCode) {
             this.httpStatusCode = httpStatusCode;
@@ -151,7 +160,10 @@ public class ListFilesResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * <p>The request ID. Use this ID to troubleshoot issues.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>0000-ABCD-****</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -159,7 +171,14 @@ public class ListFilesResponseBody extends TeaModel {
         }
 
         /**
-         * Success.
+         * <p>Indicates whether the call succeeded. Valid values:</p>
+         * <ul>
+         * <li>true</li>
+         * <li>false</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder success(Boolean success) {
             this.success = success;
@@ -485,7 +504,10 @@ public class ListFilesResponseBody extends TeaModel {
             } 
 
             /**
-             * AbsoluteFolderPath.
+             * <p>The path to the folder where the file is located.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Business_process/my_first_business_process/MaxCompute/ods_layer</p>
              */
             public Builder absoluteFolderPath(String absoluteFolderPath) {
                 this.absoluteFolderPath = absoluteFolderPath;
@@ -493,7 +515,15 @@ public class ListFilesResponseBody extends TeaModel {
             }
 
             /**
-             * AutoParsing.
+             * <p>Specifies whether automatic parsing is enabled for the file. Valid values:</p>
+             * <ul>
+             * <li>true: The file automatically parses code.</li>
+             * <li>false: The file does not automatically parse code.</li>
+             * </ul>
+             * <p>This parameter corresponds to Analyze Code when you set Dependencies to Same Cycle in the scheduling configuration of a Data Studio task in the <a href="https://workbench.data.aliyun.com/console">DataWorks console</a>.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>true</p>
              */
             public Builder autoParsing(Boolean autoParsing) {
                 this.autoParsing = autoParsing;
@@ -501,7 +531,10 @@ public class ListFilesResponseBody extends TeaModel {
             }
 
             /**
-             * BizId.
+             * <p>The ID of the workflow to which the file belongs. This parameter is deprecated. Use the BusinessId parameter instead.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>300000</p>
              */
             public Builder bizId(Long bizId) {
                 this.bizId = bizId;
@@ -509,7 +542,10 @@ public class ListFilesResponseBody extends TeaModel {
             }
 
             /**
-             * BusinessId.
+             * <p>The ID of the workflow to which the file belongs.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>300000</p>
              */
             public Builder businessId(Long businessId) {
                 this.businessId = businessId;
@@ -517,7 +553,10 @@ public class ListFilesResponseBody extends TeaModel {
             }
 
             /**
-             * CommitStatus.
+             * <p>The current commit status of the file. Valid values: 0 (the latest code is not committed) and 1 (the latest code is committed).</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder commitStatus(Integer commitStatus) {
                 this.commitStatus = commitStatus;
@@ -525,7 +564,10 @@ public class ListFilesResponseBody extends TeaModel {
             }
 
             /**
-             * ConnectionName.
+             * <p>The data source name used by the task.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>odps_source</p>
              */
             public Builder connectionName(String connectionName) {
                 this.connectionName = connectionName;
@@ -533,7 +575,10 @@ public class ListFilesResponseBody extends TeaModel {
             }
 
             /**
-             * Content.
+             * <p>This parameter is deprecated. You can call the <a href="https://help.aliyun.com/document_detail/173954.html">GetFile</a> operation to query this information.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>SHOW TABLES;</p>
              */
             public Builder content(String content) {
                 this.content = content;
@@ -541,7 +586,10 @@ public class ListFilesResponseBody extends TeaModel {
             }
 
             /**
-             * CreateTime.
+             * <p>The timestamp (in milliseconds) when the file was created.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1593950832000</p>
              */
             public Builder createTime(Long createTime) {
                 this.createTime = createTime;
@@ -549,7 +597,10 @@ public class ListFilesResponseBody extends TeaModel {
             }
 
             /**
-             * CreateUser.
+             * <p>The Alibaba Cloud account ID of the file creator.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>382762****</p>
              */
             public Builder createUser(String createUser) {
                 this.createUser = createUser;
@@ -557,7 +608,10 @@ public class ListFilesResponseBody extends TeaModel {
             }
 
             /**
-             * CurrentVersion.
+             * <p>The latest version of the file.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2</p>
              */
             public Builder currentVersion(Integer currentVersion) {
                 this.currentVersion = currentVersion;
@@ -565,7 +619,10 @@ public class ListFilesResponseBody extends TeaModel {
             }
 
             /**
-             * FileDescription.
+             * <p>The description of the file.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>my test datastudio file</p>
              */
             public Builder fileDescription(String fileDescription) {
                 this.fileDescription = fileDescription;
@@ -573,7 +630,10 @@ public class ListFilesResponseBody extends TeaModel {
             }
 
             /**
-             * FileFolderId.
+             * <p>The ID of the folder where the file is located.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2735c2****</p>
              */
             public Builder fileFolderId(String fileFolderId) {
                 this.fileFolderId = fileFolderId;
@@ -581,7 +641,10 @@ public class ListFilesResponseBody extends TeaModel {
             }
 
             /**
-             * FileId.
+             * <p>The file ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>10000001</p>
              */
             public Builder fileId(Long fileId) {
                 this.fileId = fileId;
@@ -589,7 +652,10 @@ public class ListFilesResponseBody extends TeaModel {
             }
 
             /**
-             * FileName.
+             * <p>The file name.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>ods_user_info_d</p>
              */
             public Builder fileName(String fileName) {
                 this.fileName = fileName;
@@ -597,7 +663,10 @@ public class ListFilesResponseBody extends TeaModel {
             }
 
             /**
-             * FileType.
+             * <p>The file type. Different file types have different code. For more information, see <a href="https://help.aliyun.com/document_detail/600169.html">DataWorks node types</a>.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>10</p>
              */
             public Builder fileType(Integer fileType) {
                 this.fileType = fileType;
@@ -605,7 +674,11 @@ public class ListFilesResponseBody extends TeaModel {
             }
 
             /**
-             * IsMaxCompute.
+             * <p>If the current file is a MaxCompute resource file, this parameter specifies whether the resource file needs to be uploaded to MaxCompute.</p>
+             * <p>You only need to configure this parameter when the file is a MaxCompute resource file.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>false</p>
              */
             public Builder isMaxCompute(Boolean isMaxCompute) {
                 this.isMaxCompute = isMaxCompute;
@@ -613,7 +686,10 @@ public class ListFilesResponseBody extends TeaModel {
             }
 
             /**
-             * LastEditTime.
+             * <p>The timestamp (in milliseconds) when the file was last modified.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1593950832000</p>
              */
             public Builder lastEditTime(Long lastEditTime) {
                 this.lastEditTime = lastEditTime;
@@ -621,7 +697,10 @@ public class ListFilesResponseBody extends TeaModel {
             }
 
             /**
-             * LastEditUser.
+             * <p>The Alibaba Cloud account ID of the user who last updated the file.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>382762****</p>
              */
             public Builder lastEditUser(String lastEditUser) {
                 this.lastEditUser = lastEditUser;
@@ -629,7 +708,10 @@ public class ListFilesResponseBody extends TeaModel {
             }
 
             /**
-             * NodeId.
+             * <p>The ID of the scheduling task generated in the scheduling system after the file is committed.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>300001</p>
              */
             public Builder nodeId(Long nodeId) {
                 this.nodeId = nodeId;
@@ -637,7 +719,10 @@ public class ListFilesResponseBody extends TeaModel {
             }
 
             /**
-             * Owner.
+             * <p>The Alibaba Cloud account ID of the file owner.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>3872572****</p>
              */
             public Builder owner(String owner) {
                 this.owner = owner;
@@ -645,7 +730,10 @@ public class ListFilesResponseBody extends TeaModel {
             }
 
             /**
-             * ParentId.
+             * <p>If the current file is an internal file of a combined node, this parameter specifies the ID of the corresponding combined node file.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>-1</p>
              */
             public Builder parentId(Long parentId) {
                 this.parentId = parentId;
@@ -653,7 +741,18 @@ public class ListFilesResponseBody extends TeaModel {
             }
 
             /**
-             * UseType.
+             * <p>The functional module to which the file belongs. Valid values:</p>
+             * <ul>
+             * <li>NORMAL: Data Studio</li>
+             * <li>MANUAL: Manually triggered node</li>
+             * <li>MANUAL_BIZ: Manually triggered workflow</li>
+             * <li>SKIP: Dry-run scheduling in Data Studio</li>
+             * <li>ADHOCQUERY: Ad hoc query</li>
+             * <li>COMPONENT: Component management</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>NORMAL</p>
              */
             public Builder useType(String useType) {
                 this.useType = useType;
@@ -746,7 +845,7 @@ public class ListFilesResponseBody extends TeaModel {
             } 
 
             /**
-             * Files.
+             * <p>The file details.</p>
              */
             public Builder files(java.util.List<Files> files) {
                 this.files = files;
@@ -754,7 +853,10 @@ public class ListFilesResponseBody extends TeaModel {
             }
 
             /**
-             * PageNumber.
+             * <p>The page number.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder pageNumber(Integer pageNumber) {
                 this.pageNumber = pageNumber;
@@ -762,7 +864,10 @@ public class ListFilesResponseBody extends TeaModel {
             }
 
             /**
-             * PageSize.
+             * <p>The number of entries per page.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>10</p>
              */
             public Builder pageSize(Integer pageSize) {
                 this.pageSize = pageSize;
@@ -770,7 +875,10 @@ public class ListFilesResponseBody extends TeaModel {
             }
 
             /**
-             * TotalCount.
+             * <p>The total number of entries returned.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>13</p>
              */
             public Builder totalCount(Integer totalCount) {
                 this.totalCount = totalCount;

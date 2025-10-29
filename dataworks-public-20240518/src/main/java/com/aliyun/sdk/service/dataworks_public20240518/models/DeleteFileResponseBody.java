@@ -119,7 +119,11 @@ public class DeleteFileResponseBody extends TeaModel {
         } 
 
         /**
-         * DeploymentId.
+         * <p>If the file has already been submitted, the DeleteFile operation also triggers an asynchronous deletion process in the scheduling system. You must use the DeploymentId returned by the DeleteFile operation to call GetDeployment and poll the status of the triggered asynchronous deletion process.</p>
+         * <p>If this field is empty, the file has been deleted and no further polling is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1000000001</p>
          */
         public Builder deploymentId(Long deploymentId) {
             this.deploymentId = deploymentId;
@@ -127,7 +131,10 @@ public class DeleteFileResponseBody extends TeaModel {
         }
 
         /**
-         * ErrorCode.
+         * <p>The error code.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Invalid.Tenant.ConnectionNotExists</p>
          */
         public Builder errorCode(String errorCode) {
             this.errorCode = errorCode;
@@ -135,7 +142,10 @@ public class DeleteFileResponseBody extends TeaModel {
         }
 
         /**
-         * ErrorMessage.
+         * <p>The error message.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>The connection does not exist.</p>
          */
         public Builder errorMessage(String errorMessage) {
             this.errorMessage = errorMessage;
@@ -143,7 +153,10 @@ public class DeleteFileResponseBody extends TeaModel {
         }
 
         /**
-         * HttpStatusCode.
+         * <p>The HTTP status code.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>200</p>
          */
         public Builder httpStatusCode(Integer httpStatusCode) {
             this.httpStatusCode = httpStatusCode;
@@ -151,7 +164,10 @@ public class DeleteFileResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * <p>The request ID. Used for troubleshooting when an error occurs.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>0000-ABCD-EFG****</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -159,7 +175,14 @@ public class DeleteFileResponseBody extends TeaModel {
         }
 
         /**
-         * Success.
+         * <p>Indicates whether the call was successful. Valid values:</p>
+         * <ul>
+         * <li>true: success.</li>
+         * <li>false: failure.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder success(Boolean success) {
             this.success = success;

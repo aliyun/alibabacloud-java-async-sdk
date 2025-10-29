@@ -119,7 +119,7 @@ public class GetDeploymentPackageResponseBody extends TeaModel {
         } 
 
         /**
-         * Data.
+         * <p>The deployment package details.</p>
          */
         public Builder data(Data data) {
             this.data = data;
@@ -127,7 +127,10 @@ public class GetDeploymentPackageResponseBody extends TeaModel {
         }
 
         /**
-         * ErrorCode.
+         * <p>The error code.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Invalid.Tenant.ConnectionNotExists</p>
          */
         public Builder errorCode(String errorCode) {
             this.errorCode = errorCode;
@@ -135,7 +138,10 @@ public class GetDeploymentPackageResponseBody extends TeaModel {
         }
 
         /**
-         * ErrorMessage.
+         * <p>The error message.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>You have no permission.</p>
          */
         public Builder errorMessage(String errorMessage) {
             this.errorMessage = errorMessage;
@@ -143,7 +149,10 @@ public class GetDeploymentPackageResponseBody extends TeaModel {
         }
 
         /**
-         * HttpStatusCode.
+         * <p>The HTTP status code.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>200</p>
          */
         public Builder httpStatusCode(Integer httpStatusCode) {
             this.httpStatusCode = httpStatusCode;
@@ -151,7 +160,10 @@ public class GetDeploymentPackageResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * <p>The request ID. Use this ID to locate logs and troubleshoot issues.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>0bc1ec92159376****</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -159,7 +171,14 @@ public class GetDeploymentPackageResponseBody extends TeaModel {
         }
 
         /**
-         * Success.
+         * <p>Indicates whether the call succeeded. Valid values:</p>
+         * <ul>
+         * <li><strong>true</strong></li>
+         * <li><strong>false</strong></li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder success(Boolean success) {
             this.success = success;
@@ -238,7 +257,10 @@ public class GetDeploymentPackageResponseBody extends TeaModel {
             } 
 
             /**
-             * FileId.
+             * <p>The file ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>5076****</p>
              */
             public Builder fileId(Long fileId) {
                 this.fileId = fileId;
@@ -246,7 +268,10 @@ public class GetDeploymentPackageResponseBody extends TeaModel {
             }
 
             /**
-             * FileVersion.
+             * <p>The file version.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>7</p>
              */
             public Builder fileVersion(Long fileVersion) {
                 this.fileVersion = fileVersion;
@@ -254,7 +279,18 @@ public class GetDeploymentPackageResponseBody extends TeaModel {
             }
 
             /**
-             * Status.
+             * <ul>
+             * <li>UNPUBLISHED(0)</li>
+             * <li>SUCCESS(1)</li>
+             * <li>ERROR(2)</li>
+             * <li>CLONED(3)</li>
+             * <li>DEPLOY_ERROR(4)</li>
+             * <li>CLONING(5)</li>
+             * <li>REJECT(6)</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder status(Integer status) {
                 this.status = status;
@@ -425,7 +461,14 @@ public class GetDeploymentPackageResponseBody extends TeaModel {
             } 
 
             /**
-             * CheckingStatus.
+             * <p>The validation status of nodes in the deployment package. For packages deployed to the development environment (toEnviroment=1), you can only proceed to deploy to production if the package Status is 1 (succeeded) and CheckingStatus is empty (validation complete).</p>
+             * <ul>
+             * <li>7: Validation failed</li>
+             * <li>8: Validation in progress</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>7</p>
              */
             public Builder checkingStatus(Integer checkingStatus) {
                 this.checkingStatus = checkingStatus;
@@ -433,7 +476,10 @@ public class GetDeploymentPackageResponseBody extends TeaModel {
             }
 
             /**
-             * CreateTime.
+             * <p>The timestamp (in milliseconds) when the deployment package was created.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1593877765000</p>
              */
             public Builder createTime(Long createTime) {
                 this.createTime = createTime;
@@ -441,7 +487,10 @@ public class GetDeploymentPackageResponseBody extends TeaModel {
             }
 
             /**
-             * CreatorId.
+             * <p>The Alibaba Cloud account ID of the user who created the deployment package.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>20030****</p>
              */
             public Builder creatorId(String creatorId) {
                 this.creatorId = creatorId;
@@ -449,7 +498,10 @@ public class GetDeploymentPackageResponseBody extends TeaModel {
             }
 
             /**
-             * ErrorMessage.
+             * <p>The detailed error message when the deployment package fails (status is 2).</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Success</p>
              */
             public Builder errorMessage(String errorMessage) {
                 this.errorMessage = errorMessage;
@@ -457,7 +509,10 @@ public class GetDeploymentPackageResponseBody extends TeaModel {
             }
 
             /**
-             * ExecuteTime.
+             * <p>The timestamp (in milliseconds) when the deployment started.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1593877765000</p>
              */
             public Builder executeTime(Long executeTime) {
                 this.executeTime = executeTime;
@@ -465,7 +520,10 @@ public class GetDeploymentPackageResponseBody extends TeaModel {
             }
 
             /**
-             * FromEnvironment.
+             * <p>The environment where the deployment is executed. Valid values: 0 (local) and 1 (development).</p>
+             * 
+             * <strong>example:</strong>
+             * <p>0</p>
              */
             public Builder fromEnvironment(Integer fromEnvironment) {
                 this.fromEnvironment = fromEnvironment;
@@ -473,7 +531,10 @@ public class GetDeploymentPackageResponseBody extends TeaModel {
             }
 
             /**
-             * HandlerId.
+             * <p>The Alibaba Cloud account ID of the user who executed the deployment.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2003****</p>
              */
             public Builder handlerId(String handlerId) {
                 this.handlerId = handlerId;
@@ -481,7 +542,10 @@ public class GetDeploymentPackageResponseBody extends TeaModel {
             }
 
             /**
-             * Name.
+             * <p>The deployment package name, displayed on the Deploy Center &gt; Deployment Packages page.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>ods_user_info_d-2020-07-04_20030****</p>
              */
             public Builder name(String name) {
                 this.name = name;
@@ -489,7 +553,10 @@ public class GetDeploymentPackageResponseBody extends TeaModel {
             }
 
             /**
-             * Status.
+             * <p>The current status of the deployment package. Valid values: 0 (ready), 1 (succeeded), and 2 (failed).</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder status(Integer status) {
                 this.status = status;
@@ -497,7 +564,10 @@ public class GetDeploymentPackageResponseBody extends TeaModel {
             }
 
             /**
-             * ToEnvironment.
+             * <p>The target environment for the deployment. Valid values: 1 (development) and 2 (production).</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder toEnvironment(Integer toEnvironment) {
                 this.toEnvironment = toEnvironment;
@@ -564,7 +634,7 @@ public class GetDeploymentPackageResponseBody extends TeaModel {
             } 
 
             /**
-             * DeployedItems.
+             * <p>The deployment item details.</p>
              */
             public Builder deployedItems(java.util.List<DeployedItems> deployedItems) {
                 this.deployedItems = deployedItems;
@@ -572,7 +642,7 @@ public class GetDeploymentPackageResponseBody extends TeaModel {
             }
 
             /**
-             * Deployment.
+             * <p>The deployment package details.</p>
              */
             public Builder deployment(Deployment deployment) {
                 this.deployment = deployment;

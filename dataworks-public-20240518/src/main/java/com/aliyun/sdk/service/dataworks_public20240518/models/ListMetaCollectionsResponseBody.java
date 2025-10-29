@@ -67,7 +67,7 @@ public class ListMetaCollectionsResponseBody extends TeaModel {
         } 
 
         /**
-         * <p>The data.</p>
+         * <p>Pagination information.</p>
          */
         public Builder data(Data data) {
             this.data = data;
@@ -75,7 +75,7 @@ public class ListMetaCollectionsResponseBody extends TeaModel {
         }
 
         /**
-         * <p>Id of the request</p>
+         * <p>The request ID.</p>
          * 
          * <strong>example:</strong>
          * <p>E25887B7-579C-54A5-9C4F-83A0DE367DDE</p>
@@ -235,7 +235,7 @@ public class ListMetaCollectionsResponseBody extends TeaModel {
             } 
 
             /**
-             * Administrators.
+             * <p>The list of administrator IDs. Supported only for album types. Administrators must be users within the same tenant. Multiple administrators can be specified.</p>
              */
             public Builder administrators(java.util.List<String> administrators) {
                 this.administrators = administrators;
@@ -243,7 +243,7 @@ public class ListMetaCollectionsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The time when the collection was created. The value is a UNIX timestamp. Unit: milliseconds.</p>
+             * <p>The creation time in milliseconds (timestamp).</p>
              * 
              * <strong>example:</strong>
              * <p>1668568601000</p>
@@ -254,7 +254,10 @@ public class ListMetaCollectionsResponseBody extends TeaModel {
             }
 
             /**
-             * CreateUser.
+             * <p>The creator user ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>456789</p>
              */
             public Builder createUser(String createUser) {
                 this.createUser = createUser;
@@ -262,7 +265,7 @@ public class ListMetaCollectionsResponseBody extends TeaModel {
             }
 
             /**
-             * Description.
+             * <p>The collection description.</p>
              */
             public Builder description(String description) {
                 this.description = description;
@@ -270,7 +273,7 @@ public class ListMetaCollectionsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The ID of the collection.</p>
+             * <p>The collection name.</p>
              * 
              * <strong>example:</strong>
              * <p>category.123</p>
@@ -281,7 +284,7 @@ public class ListMetaCollectionsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The time when the collection was modified. The value is a UNIX timestamp. Unit: milliseconds.</p>
+             * <p>The modification time in milliseconds (timestamp).</p>
              * 
              * <strong>example:</strong>
              * <p>1668568601000</p>
@@ -292,7 +295,10 @@ public class ListMetaCollectionsResponseBody extends TeaModel {
             }
 
             /**
-             * Name.
+             * <p>The collection name.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>test_category</p>
              */
             public Builder name(String name) {
                 this.name = name;
@@ -300,7 +306,7 @@ public class ListMetaCollectionsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The ID of the collection of the ancestor node. This parameter can be left empty.</p>
+             * <p>The ID of the parent collection. Can be empty.</p>
              * 
              * <strong>example:</strong>
              * <p>category.1</p>
@@ -311,7 +317,15 @@ public class ListMetaCollectionsResponseBody extends TeaModel {
             }
 
             /**
-             * Type.
+             * <p>The collection type. Valid values:</p>
+             * <ul>
+             * <li>Category</li>
+             * <li>Album</li>
+             * <li>AlbumCategory: Album subcategory</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>Category</p>
              */
             public Builder type(String type) {
                 this.type = type;
@@ -404,7 +418,7 @@ public class ListMetaCollectionsResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The collections.</p>
+             * <p>The list of collections.</p>
              */
             public Builder metaCollections(java.util.List<MetaCollections> metaCollections) {
                 this.metaCollections = metaCollections;
@@ -412,7 +426,10 @@ public class ListMetaCollectionsResponseBody extends TeaModel {
             }
 
             /**
-             * PageNumber.
+             * <p>The page number.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder pageNumber(Integer pageNumber) {
                 this.pageNumber = pageNumber;
@@ -420,7 +437,10 @@ public class ListMetaCollectionsResponseBody extends TeaModel {
             }
 
             /**
-             * PageSize.
+             * <p>The number of entries per page.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>10</p>
              */
             public Builder pageSize(Integer pageSize) {
                 this.pageSize = pageSize;
@@ -428,7 +448,10 @@ public class ListMetaCollectionsResponseBody extends TeaModel {
             }
 
             /**
-             * TotalCount.
+             * <p>The total number of records.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>10</p>
              */
             public Builder totalCount(Integer totalCount) {
                 this.totalCount = totalCount;

@@ -97,7 +97,10 @@ public class UpdateColumnBusinessMetadataRequest extends Request {
         }
 
         /**
-         * Description.
+         * <p>The field business description.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>test description</p>
          */
         public Builder description(String description) {
             this.putBodyParameter("Description", description);
@@ -106,7 +109,7 @@ public class UpdateColumnBusinessMetadataRequest extends Request {
         }
 
         /**
-         * <p>The column ID. You can call the ListColumns operation to query the ID. For more information, see <a href="https://help.aliyun.com/document_detail/2880092.html">Concepts related to metadata entities</a>.</p>
+         * <p>The field ID. You can refer to the response from the ListColumns operation. You can also refer to the <a href="https://help.aliyun.com/document_detail/2880092.html">Concepts related to metadata entities</a>.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>

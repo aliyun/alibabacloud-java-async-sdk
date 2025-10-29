@@ -112,7 +112,7 @@ public class AddEntityIntoMetaCollectionRequest extends Request {
         }
 
         /**
-         * <p>The entity ID. Currently, entities can only be tables. You can call the ListTables operation to query the ID.</p>
+         * <p>The entity ID. Currently, only table entities are supported. You can call the ListTables operation to obtain the ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -125,7 +125,7 @@ public class AddEntityIntoMetaCollectionRequest extends Request {
         }
 
         /**
-         * <p>The collection ID. You can call the ListMetaCollections operation to query the ID.</p>
+         * <p>The collection ID. You can refer to the return result of the ListMetaCollections operation.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -138,7 +138,10 @@ public class AddEntityIntoMetaCollectionRequest extends Request {
         }
 
         /**
-         * Remark.
+         * <p>Remarks added when adding the entity to a collection. This parameter is currently valid only for album collections.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>test</p>
          */
         public Builder remark(String remark) {
             this.putQueryParameter("Remark", remark);

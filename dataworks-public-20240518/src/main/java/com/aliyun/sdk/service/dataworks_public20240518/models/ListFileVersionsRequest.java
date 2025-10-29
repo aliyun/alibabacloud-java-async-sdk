@@ -140,6 +140,7 @@ public class ListFileVersionsRequest extends Request {
         }
 
         /**
+         * <p>The file ID. You can call <a href="https://help.aliyun.com/document_detail/173942.html">ListFiles</a> to query the file ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -152,7 +153,10 @@ public class ListFileVersionsRequest extends Request {
         }
 
         /**
-         * PageNumber.
+         * <p>The page number for pagination.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder pageNumber(Integer pageNumber) {
             this.putBodyParameter("PageNumber", pageNumber);
@@ -161,7 +165,10 @@ public class ListFileVersionsRequest extends Request {
         }
 
         /**
-         * PageSize.
+         * <p>The number of entries per page. Default value: 10. Maximum value: 100.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10</p>
          */
         public Builder pageSize(Integer pageSize) {
             this.putBodyParameter("PageSize", pageSize);
@@ -170,7 +177,10 @@ public class ListFileVersionsRequest extends Request {
         }
 
         /**
-         * ProjectId.
+         * <p>The DataWorks workspace ID. To find this, click the wrench icon in the upper-right corner and navigate to the workspace management page.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>100001</p>
          */
         public Builder projectId(Long projectId) {
             this.putBodyParameter("ProjectId", projectId);
@@ -179,7 +189,11 @@ public class ListFileVersionsRequest extends Request {
         }
 
         /**
-         * ProjectIdentifier.
+         * <p>The unique identifier of the DataWorks workspace, which is the identifier at the top of the Data Studio page where you switch workspaces.</p>
+         * <p>Either this parameter or ProjectId must be specified to identify the target DataWorks workspace for this API call.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>dw_project</p>
          */
         public Builder projectIdentifier(String projectIdentifier) {
             this.putBodyParameter("ProjectIdentifier", projectIdentifier);

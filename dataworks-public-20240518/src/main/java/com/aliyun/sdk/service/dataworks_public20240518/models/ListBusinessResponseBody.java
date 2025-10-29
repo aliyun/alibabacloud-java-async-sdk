@@ -119,7 +119,7 @@ public class ListBusinessResponseBody extends TeaModel {
         } 
 
         /**
-         * Data.
+         * <p>Details of workflows.</p>
          */
         public Builder data(Data data) {
             this.data = data;
@@ -127,7 +127,10 @@ public class ListBusinessResponseBody extends TeaModel {
         }
 
         /**
-         * ErrorCode.
+         * <p>The error code.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Invalid.Tenant.ConnectionNotExists</p>
          */
         public Builder errorCode(String errorCode) {
             this.errorCode = errorCode;
@@ -135,7 +138,10 @@ public class ListBusinessResponseBody extends TeaModel {
         }
 
         /**
-         * ErrorMessage.
+         * <p>The error message.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>The connection does not exist.</p>
          */
         public Builder errorMessage(String errorMessage) {
             this.errorMessage = errorMessage;
@@ -143,7 +149,10 @@ public class ListBusinessResponseBody extends TeaModel {
         }
 
         /**
-         * HttpStatusCode.
+         * <p>The HTTP status code.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>200</p>
          */
         public Builder httpStatusCode(Integer httpStatusCode) {
             this.httpStatusCode = httpStatusCode;
@@ -151,7 +160,10 @@ public class ListBusinessResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * <p>The request ID. Used for troubleshooting when an error occurs.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>0000-ABCD-EFG****</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -159,7 +171,10 @@ public class ListBusinessResponseBody extends TeaModel {
         }
 
         /**
-         * Success.
+         * <p>Indicates whether the request was successful.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder success(Boolean success) {
             this.success = success;
@@ -277,7 +292,10 @@ public class ListBusinessResponseBody extends TeaModel {
             } 
 
             /**
-             * BusinessId.
+             * <p>The workflow ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>3000001</p>
              */
             public Builder businessId(Long businessId) {
                 this.businessId = businessId;
@@ -285,7 +303,10 @@ public class ListBusinessResponseBody extends TeaModel {
             }
 
             /**
-             * BusinessName.
+             * <p>The name of the workflow.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>test</p>
              */
             public Builder businessName(String businessName) {
                 this.businessName = businessName;
@@ -293,7 +314,10 @@ public class ListBusinessResponseBody extends TeaModel {
             }
 
             /**
-             * Description.
+             * <p>The description of the workflow.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>test</p>
              */
             public Builder description(String description) {
                 this.description = description;
@@ -301,7 +325,10 @@ public class ListBusinessResponseBody extends TeaModel {
             }
 
             /**
-             * Owner.
+             * <p>The owner of the workflow.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>34824327****</p>
              */
             public Builder owner(String owner) {
                 this.owner = owner;
@@ -309,7 +336,10 @@ public class ListBusinessResponseBody extends TeaModel {
             }
 
             /**
-             * ProjectId.
+             * <p>The ID of the workspace to which the workflow belongs.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>10000</p>
              */
             public Builder projectId(Long projectId) {
                 this.projectId = projectId;
@@ -317,7 +347,10 @@ public class ListBusinessResponseBody extends TeaModel {
             }
 
             /**
-             * UseType.
+             * <p>The module to which the workflow belongs. Valid values: NORMAL (Data Studio) and MANUAL_BIZ (Manually Triggered Workflow).</p>
+             * 
+             * <strong>example:</strong>
+             * <p>NORMAL</p>
              */
             public Builder useType(String useType) {
                 this.useType = useType;
@@ -410,7 +443,7 @@ public class ListBusinessResponseBody extends TeaModel {
             } 
 
             /**
-             * Business.
+             * <p>Information about the workflow list.</p>
              */
             public Builder business(java.util.List<Business> business) {
                 this.business = business;
@@ -418,7 +451,10 @@ public class ListBusinessResponseBody extends TeaModel {
             }
 
             /**
-             * PageNumber.
+             * <p>The current page number.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder pageNumber(Integer pageNumber) {
                 this.pageNumber = pageNumber;
@@ -426,7 +462,10 @@ public class ListBusinessResponseBody extends TeaModel {
             }
 
             /**
-             * PageSize.
+             * <p>The number of records on the current page.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>10</p>
              */
             public Builder pageSize(Integer pageSize) {
                 this.pageSize = pageSize;
@@ -434,7 +473,10 @@ public class ListBusinessResponseBody extends TeaModel {
             }
 
             /**
-             * TotalCount.
+             * <p>The total number of records that meet the query conditions.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>13</p>
              */
             public Builder totalCount(Integer totalCount) {
                 this.totalCount = totalCount;

@@ -703,6 +703,11 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<GetColumnResponse> getColumn(GetColumnRequest request);
 
     /**
+     * <b>description</b> :
+     * <ol>
+     * <li>This API operation is available for all DataWorks editions.</li>
+     * </ol>
+     * 
      * @param request the request parameters of GetComponent  GetComponentRequest
      * @return GetComponentResponse
      */
@@ -901,6 +906,12 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<GetNodeResponse> getNode(GetNodeRequest request);
 
     /**
+     * <b>description</b> :
+     * <ol>
+     * <li>This API operation is available for all DataWorks editions.</li>
+     * <li>This operation supports MaxCompute and HMS (EMR cluster) tables only.</li>
+     * </ol>
+     * 
      * @param request the request parameters of GetPartition  GetPartitionRequest
      * @return GetPartitionResponse
      */
@@ -1095,6 +1106,9 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<ListColumnsResponse> listColumns(ListColumnsRequest request);
 
     /**
+     * <b>description</b> :
+     * <p>This API operation is available for all DataWorks editions.</p>
+     * 
      * @param request the request parameters of ListComponents  ListComponentsRequest
      * @return ListComponentsResponse
      */

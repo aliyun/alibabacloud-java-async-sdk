@@ -108,7 +108,7 @@ public class BatchUpdateTasksRequest extends Request {
         }
 
         /**
-         * <p>The tasks.</p>
+         * <p>The list of tasks.</p>
          */
         public Builder tasks(java.util.List<Tasks> tasks) {
             String tasksShrink = shrink(tasks, "Tasks", "json");
@@ -164,7 +164,7 @@ public class BatchUpdateTasksRequest extends Request {
             } 
 
             /**
-             * <p>The name of the data source.</p>
+             * <p>The data source name.</p>
              * 
              * <strong>example:</strong>
              * <p>odps_test</p>
@@ -258,7 +258,7 @@ public class BatchUpdateTasksRequest extends Request {
             }
 
             /**
-             * <p>The ID of the image configured for task running.</p>
+             * <p>The image ID used in the task runtime configuration.</p>
              * 
              * <strong>example:</strong>
              * <p>i-xxxxxx</p>
@@ -269,7 +269,7 @@ public class BatchUpdateTasksRequest extends Request {
             }
 
             /**
-             * <p>The ID of the resource group for scheduling configured for task running.</p>
+             * <p>The identifier of the scheduling resource group used in the task runtime configuration.</p>
              * 
              * <strong>example:</strong>
              * <p>S_res_group_524258031846018_1684XXXXXXXXX</p>
@@ -461,7 +461,7 @@ public class BatchUpdateTasksRequest extends Request {
             } 
 
             /**
-             * <p>The CRON expression. This parameter takes effect only if the Type parameter is set to Scheduler.</p>
+             * <p>The cron expression. Takes effect when type=Scheduler.</p>
              * 
              * <strong>example:</strong>
              * <p>00 00 00 * * ?</p>
@@ -472,7 +472,7 @@ public class BatchUpdateTasksRequest extends Request {
             }
 
             /**
-             * <p>The end time of the time range during which the task is periodically scheduled. This parameter takes effect only if the Type parameter is set to Scheduler. The value of this parameter is in the <code>yyyy-mm-dd hh:mm:ss</code>.</p>
+             * <p>The expiration time of periodic triggering. Takes effect only when type is set to Scheduler. The value of this parameter is in the<code>yyyy-mm-dd hh:mm:ss</code> format.</p>
              * 
              * <strong>example:</strong>
              * <p>9999-01-01 00:00:00</p>
@@ -499,7 +499,7 @@ public class BatchUpdateTasksRequest extends Request {
             }
 
             /**
-             * <p>The start time of the time range during which the task is periodically scheduled. This parameter takes effect only if the Type parameter is set to Scheduler. The value of this parameter is in the <code>yyyy-mm-dd hh:mm:ss</code>.</p>
+             * <p>The time when periodic triggering takes effect. This parameter takes effect only if the Type parameter is set to Scheduler. The value of this parameter is in the <code>yyyy-mm-dd hh:mm:ss</code> format.</p>
              * 
              * <strong>example:</strong>
              * <p>1970-01-01 00:00:00</p>
@@ -512,8 +512,8 @@ public class BatchUpdateTasksRequest extends Request {
             /**
              * <p>The trigger type. Valid values:</p>
              * <ul>
-             * <li>Scheduler: scheduling cycle-based trigger</li>
-             * <li>Manual: manual trigger</li>
+             * <li>Scheduler: periodically triggered</li>
+             * <li>Manual</li>
              * </ul>
              * 
              * <strong>example:</strong>
@@ -728,7 +728,7 @@ public class BatchUpdateTasksRequest extends Request {
             } 
 
             /**
-             * <p>The information about the associated data source.</p>
+             * <p>Associated data source information.</p>
              */
             public Builder dataSource(DataSource dataSource) {
                 this.dataSource = dataSource;
@@ -747,10 +747,10 @@ public class BatchUpdateTasksRequest extends Request {
             }
 
             /**
-             * <p>The environment of the workspace. Valid values:</p>
+             * <p>The project environment.</p>
              * <ul>
-             * <li>Prod: production environment</li>
-             * <li>Dev: development environment</li>
+             * <li>Prod: Production</li>
+             * <li>Dev: Development</li>
              * </ul>
              * 
              * <strong>example:</strong>
@@ -796,7 +796,7 @@ public class BatchUpdateTasksRequest extends Request {
             }
 
             /**
-             * <p>The rerun interval. Unit: seconds.</p>
+             * <p>The retry interval in seconds.</p>
              * 
              * <strong>example:</strong>
              * <p>60</p>
@@ -809,9 +809,9 @@ public class BatchUpdateTasksRequest extends Request {
             /**
              * <p>The rerun mode. Valid values:</p>
              * <ul>
-             * <li>AllDenied: The task cannot be rerun regardless of whether the task is successfully run or fails to run.</li>
-             * <li>FailureAllowed: The task can be rerun only after it fails to run.</li>
-             * <li>AllAllowed: The task can be rerun regardless of whether the task is successfully run or fails to run.</li>
+             * <li>AllDenied: The task cannot be rerun.</li>
+             * <li>FailureAllowed: The task can be rerun only after it fails.</li>
+             * <li>AllAllowed: The task can always be rerun.</li>
              * </ul>
              * 
              * <strong>example:</strong>
@@ -823,7 +823,7 @@ public class BatchUpdateTasksRequest extends Request {
             }
 
             /**
-             * <p>The number of times that the task is rerun. This parameter takes effect only if the RerunMode parameter is set to AllAllowed or FailureAllowed.</p>
+             * <p>The number of retry attempts. Takes effect when the task is configured to allow reruns.</p>
              * 
              * <strong>example:</strong>
              * <p>3</p>
@@ -834,7 +834,7 @@ public class BatchUpdateTasksRequest extends Request {
             }
 
             /**
-             * <p>The configurations of the runtime environment, such as the resource group information.</p>
+             * <p>Runtime environment configurations, such as resource group information.</p>
              */
             public Builder runtimeResource(RuntimeResource runtimeResource) {
                 this.runtimeResource = runtimeResource;
@@ -842,7 +842,7 @@ public class BatchUpdateTasksRequest extends Request {
             }
 
             /**
-             * <p>The tags.</p>
+             * <p>The list of task tags.</p>
              */
             public Builder tags(java.util.List<Tags> tags) {
                 this.tags = tags;
@@ -850,7 +850,7 @@ public class BatchUpdateTasksRequest extends Request {
             }
 
             /**
-             * <p>The timeout period of task running. Unit: seconds.</p>
+             * <p>The task execution timeout in seconds. The value should be greater than 3600.</p>
              * 
              * <strong>example:</strong>
              * <p>3600</p>
@@ -861,7 +861,7 @@ public class BatchUpdateTasksRequest extends Request {
             }
 
             /**
-             * <p>The trigger method.</p>
+             * <p>The task trigger configurations.</p>
              */
             public Builder trigger(Trigger trigger) {
                 this.trigger = trigger;

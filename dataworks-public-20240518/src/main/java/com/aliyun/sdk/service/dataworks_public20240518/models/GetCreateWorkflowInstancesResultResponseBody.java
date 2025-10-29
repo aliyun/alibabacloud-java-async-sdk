@@ -107,10 +107,14 @@ public class GetCreateWorkflowInstancesResultResponseBody extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("WorkflowInstanceIds")
         private java.util.List<Long> workflowInstanceIds;
 
+        @com.aliyun.core.annotation.NameInMap("WorkflowTaskInstanceIds")
+        private java.util.List<Long> workflowTaskInstanceIds;
+
         private Result(Builder builder) {
             this.failureMessage = builder.failureMessage;
             this.status = builder.status;
             this.workflowInstanceIds = builder.workflowInstanceIds;
+            this.workflowTaskInstanceIds = builder.workflowTaskInstanceIds;
         }
 
         public static Builder builder() {
@@ -142,10 +146,18 @@ public class GetCreateWorkflowInstancesResultResponseBody extends TeaModel {
             return this.workflowInstanceIds;
         }
 
+        /**
+         * @return workflowTaskInstanceIds
+         */
+        public java.util.List<Long> getWorkflowTaskInstanceIds() {
+            return this.workflowTaskInstanceIds;
+        }
+
         public static final class Builder {
             private String failureMessage; 
             private String status; 
             private java.util.List<Long> workflowInstanceIds; 
+            private java.util.List<Long> workflowTaskInstanceIds; 
 
             private Builder() {
             } 
@@ -154,6 +166,7 @@ public class GetCreateWorkflowInstancesResultResponseBody extends TeaModel {
                 this.failureMessage = model.failureMessage;
                 this.status = model.status;
                 this.workflowInstanceIds = model.workflowInstanceIds;
+                this.workflowTaskInstanceIds = model.workflowTaskInstanceIds;
             } 
 
             /**
@@ -188,6 +201,14 @@ public class GetCreateWorkflowInstancesResultResponseBody extends TeaModel {
              */
             public Builder workflowInstanceIds(java.util.List<Long> workflowInstanceIds) {
                 this.workflowInstanceIds = workflowInstanceIds;
+                return this;
+            }
+
+            /**
+             * WorkflowTaskInstanceIds.
+             */
+            public Builder workflowTaskInstanceIds(java.util.List<Long> workflowTaskInstanceIds) {
+                this.workflowTaskInstanceIds = workflowTaskInstanceIds;
                 return this;
             }
 

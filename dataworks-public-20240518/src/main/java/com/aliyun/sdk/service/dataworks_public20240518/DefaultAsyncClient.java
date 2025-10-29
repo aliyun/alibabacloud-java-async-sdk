@@ -1684,6 +1684,11 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
+     * <b>description</b> :
+     * <ol>
+     * <li>This API operation is available for all DataWorks editions.</li>
+     * </ol>
+     * 
      * @param request the request parameters of GetComponent  GetComponentRequest
      * @return GetComponentResponse
      */
@@ -2194,6 +2199,12 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
+     * <b>description</b> :
+     * <ol>
+     * <li>This API operation is available for all DataWorks editions.</li>
+     * <li>This operation supports MaxCompute and HMS (EMR cluster) tables only.</li>
+     * </ol>
+     * 
      * @param request the request parameters of GetPartition  GetPartitionRequest
      * @return GetPartitionResponse
      */
@@ -2676,6 +2687,9 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
+     * <b>description</b> :
+     * <p>This API operation is available for all DataWorks editions.</p>
+     * 
      * @param request the request parameters of ListComponents  ListComponentsRequest
      * @return ListComponentsResponse
      */

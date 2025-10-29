@@ -110,7 +110,7 @@ public class CreateLineageRelationshipRequest extends Request {
         }
 
         /**
-         * DstEntity.
+         * <p>The destination entity.</p>
          */
         public Builder dstEntity(LineageEntity dstEntity) {
             String dstEntityShrink = shrink(dstEntity, "DstEntity", "json");
@@ -120,7 +120,7 @@ public class CreateLineageRelationshipRequest extends Request {
         }
 
         /**
-         * SrcEntity.
+         * <p>The source entity.</p>
          */
         public Builder srcEntity(LineageEntity srcEntity) {
             String srcEntityShrink = shrink(srcEntity, "SrcEntity", "json");

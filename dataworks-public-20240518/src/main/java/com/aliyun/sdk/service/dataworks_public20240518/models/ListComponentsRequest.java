@@ -126,7 +126,10 @@ public class ListComponentsRequest extends Request {
         }
 
         /**
-         * Name.
+         * <p>The name of the data source.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>xm_create_test</p>
          */
         public Builder name(String name) {
             this.putQueryParameter("Name", name);
@@ -135,7 +138,10 @@ public class ListComponentsRequest extends Request {
         }
 
         /**
-         * PageNumber.
+         * <p>The page number for pagination.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder pageNumber(Integer pageNumber) {
             this.putQueryParameter("PageNumber", pageNumber);
@@ -144,7 +150,10 @@ public class ListComponentsRequest extends Request {
         }
 
         /**
-         * PageSize.
+         * <p>The number of entries per page. Default value: 10. Maximum value: 100.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1000</p>
          */
         public Builder pageSize(Integer pageSize) {
             this.putQueryParameter("PageSize", pageSize);
@@ -153,7 +162,10 @@ public class ListComponentsRequest extends Request {
         }
 
         /**
-         * ProjectId.
+         * <p>The ID of the workspace associated with the data source. You can call the <a href="https://help.aliyun.com/document_detail/178393.html">ListProjects</a> operation to obtain the workspace ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>100001</p>
          */
         public Builder projectId(Long projectId) {
             this.putQueryParameter("ProjectId", projectId);

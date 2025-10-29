@@ -119,7 +119,7 @@ public class ListFileVersionsResponseBody extends TeaModel {
         } 
 
         /**
-         * Data.
+         * <p>The list of file versions.</p>
          */
         public Builder data(Data data) {
             this.data = data;
@@ -127,7 +127,10 @@ public class ListFileVersionsResponseBody extends TeaModel {
         }
 
         /**
-         * ErrorCode.
+         * <p>The error code.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Invalid.Tenant.ConnectionNotExists</p>
          */
         public Builder errorCode(String errorCode) {
             this.errorCode = errorCode;
@@ -135,7 +138,10 @@ public class ListFileVersionsResponseBody extends TeaModel {
         }
 
         /**
-         * ErrorMessage.
+         * <p>The error message.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>The connection does not exist.</p>
          */
         public Builder errorMessage(String errorMessage) {
             this.errorMessage = errorMessage;
@@ -143,7 +149,10 @@ public class ListFileVersionsResponseBody extends TeaModel {
         }
 
         /**
-         * HttpStatusCode.
+         * <p>The HTTP status code.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>200</p>
          */
         public Builder httpStatusCode(Integer httpStatusCode) {
             this.httpStatusCode = httpStatusCode;
@@ -151,7 +160,10 @@ public class ListFileVersionsResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>0000-ABCD-EFG****</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -159,7 +171,14 @@ public class ListFileVersionsResponseBody extends TeaModel {
         }
 
         /**
-         * Success.
+         * <p>Indicates whether the call succeeded. Valid values:</p>
+         * <ul>
+         * <li>true</li>
+         * <li>false</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder success(Boolean success) {
             this.success = success;
@@ -368,7 +387,10 @@ public class ListFileVersionsResponseBody extends TeaModel {
             } 
 
             /**
-             * ChangeType.
+             * <p>The change type for this file version. Valid values: CREATE, UPDATE, and DELETE.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>UPDATE</p>
              */
             public Builder changeType(String changeType) {
                 this.changeType = changeType;
@@ -376,7 +398,10 @@ public class ListFileVersionsResponseBody extends TeaModel {
             }
 
             /**
-             * Comment.
+             * <p>The description of this file version.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Second version submission</p>
              */
             public Builder comment(String comment) {
                 this.comment = comment;
@@ -384,7 +409,10 @@ public class ListFileVersionsResponseBody extends TeaModel {
             }
 
             /**
-             * CommitTime.
+             * <p>The timestamp (in milliseconds) when the file version was created.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1593881265000</p>
              */
             public Builder commitTime(Long commitTime) {
                 this.commitTime = commitTime;
@@ -392,7 +420,10 @@ public class ListFileVersionsResponseBody extends TeaModel {
             }
 
             /**
-             * CommitUser.
+             * <p>The Alibaba Cloud account ID of the user who created this file version.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>73842342****</p>
              */
             public Builder commitUser(String commitUser) {
                 this.commitUser = commitUser;
@@ -400,7 +431,10 @@ public class ListFileVersionsResponseBody extends TeaModel {
             }
 
             /**
-             * FileContent.
+             * <p>The file code for this version.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>SHOW TABLES;</p>
              */
             public Builder fileContent(String fileContent) {
                 this.fileContent = fileContent;
@@ -408,7 +442,10 @@ public class ListFileVersionsResponseBody extends TeaModel {
             }
 
             /**
-             * FileName.
+             * <p>The file name for this file version.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>ods_user_info_d</p>
              */
             public Builder fileName(String fileName) {
                 this.fileName = fileName;
@@ -416,7 +453,10 @@ public class ListFileVersionsResponseBody extends TeaModel {
             }
 
             /**
-             * FilePropertyContent.
+             * <p>The text information for this file version.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>{&quot;fileName&quot;:&quot;ods_user_info_d&quot;,&quot;fileType&quot;:10}</p>
              */
             public Builder filePropertyContent(String filePropertyContent) {
                 this.filePropertyContent = filePropertyContent;
@@ -424,7 +464,10 @@ public class ListFileVersionsResponseBody extends TeaModel {
             }
 
             /**
-             * FileVersion.
+             * <p>The file version.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2</p>
              */
             public Builder fileVersion(Integer fileVersion) {
                 this.fileVersion = fileVersion;
@@ -432,7 +475,14 @@ public class ListFileVersionsResponseBody extends TeaModel {
             }
 
             /**
-             * IsCurrentProd.
+             * <p>Indicates whether this file version is the latest version in the production environment.</p>
+             * <ul>
+             * <li>true</li>
+             * <li>false</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>false</p>
              */
             public Builder isCurrentProd(Boolean isCurrentProd) {
                 this.isCurrentProd = isCurrentProd;
@@ -440,7 +490,10 @@ public class ListFileVersionsResponseBody extends TeaModel {
             }
 
             /**
-             * NodeContent.
+             * <p>The scheduling configuration for this file version.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>{&quot;cycleType&quot;:0,&quot;cronExpress&quot;:&quot;00 05 00 * * ?&quot;}</p>
              */
             public Builder nodeContent(String nodeContent) {
                 this.nodeContent = nodeContent;
@@ -448,7 +501,10 @@ public class ListFileVersionsResponseBody extends TeaModel {
             }
 
             /**
-             * NodeId.
+             * <p>The scheduling task ID associated with this file version.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1234</p>
              */
             public Builder nodeId(Long nodeId) {
                 this.nodeId = nodeId;
@@ -456,7 +512,10 @@ public class ListFileVersionsResponseBody extends TeaModel {
             }
 
             /**
-             * Status.
+             * <p>The current status of the file version. Valid values: COMMITTING (committing), COMMITTED or CHECK_OK (committed), PACKAGED (ready for deployment), DEPLOYING (deploying), DEPLOYED (deployed), and CANCELLED (deployment canceled).</p>
+             * 
+             * <strong>example:</strong>
+             * <p>COMMITTED</p>
              */
             public Builder status(String status) {
                 this.status = status;
@@ -464,7 +523,10 @@ public class ListFileVersionsResponseBody extends TeaModel {
             }
 
             /**
-             * UseType.
+             * <p>The functional module to which the file belongs. Valid values: NORMAL (Data Studio), MANUAL (manual task), MANUAL_BIZ (manual workflow), SKIP (dry-run scheduling in Data Studio), ADHOCQUERY (ad hoc query), and COMPONENT (component management).</p>
+             * 
+             * <strong>example:</strong>
+             * <p>NORMAL</p>
              */
             public Builder useType(String useType) {
                 this.useType = useType;
@@ -557,7 +619,7 @@ public class ListFileVersionsResponseBody extends TeaModel {
             } 
 
             /**
-             * FileVersions.
+             * <p>The list of file version details.</p>
              */
             public Builder fileVersions(java.util.List<FileVersions> fileVersions) {
                 this.fileVersions = fileVersions;
@@ -565,7 +627,10 @@ public class ListFileVersionsResponseBody extends TeaModel {
             }
 
             /**
-             * PageNumber.
+             * <p>The current page number.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder pageNumber(Integer pageNumber) {
                 this.pageNumber = pageNumber;
@@ -573,7 +638,10 @@ public class ListFileVersionsResponseBody extends TeaModel {
             }
 
             /**
-             * PageSize.
+             * <p>The number of entries on the current page.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>10</p>
              */
             public Builder pageSize(Integer pageSize) {
                 this.pageSize = pageSize;
@@ -581,7 +649,10 @@ public class ListFileVersionsResponseBody extends TeaModel {
             }
 
             /**
-             * TotalCount.
+             * <p>The total number of entries returned.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>13</p>
              */
             public Builder totalCount(Integer totalCount) {
                 this.totalCount = totalCount;

@@ -232,7 +232,10 @@ public class ListDeploymentPackagesRequest extends Request {
         }
 
         /**
-         * Creator.
+         * <p>The Alibaba Cloud account ID of the deployment package creator.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>110755000425****</p>
          */
         public Builder creator(String creator) {
             this.putBodyParameter("Creator", creator);
@@ -241,7 +244,10 @@ public class ListDeploymentPackagesRequest extends Request {
         }
 
         /**
-         * EndCreateTime.
+         * <p>The maximum millisecond timestamp for when the deployment package was created.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1593877765000</p>
          */
         public Builder endCreateTime(Long endCreateTime) {
             this.putBodyParameter("EndCreateTime", endCreateTime);
@@ -250,7 +256,10 @@ public class ListDeploymentPackagesRequest extends Request {
         }
 
         /**
-         * EndExecuteTime.
+         * <p>The maximum millisecond timestamp for when the deployment package started executing.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1593877765000</p>
          */
         public Builder endExecuteTime(Long endExecuteTime) {
             this.putBodyParameter("EndExecuteTime", endExecuteTime);
@@ -259,7 +268,10 @@ public class ListDeploymentPackagesRequest extends Request {
         }
 
         /**
-         * Executor.
+         * <p>The Alibaba Cloud account ID of the deployment package executor.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2003****</p>
          */
         public Builder executor(String executor) {
             this.putBodyParameter("Executor", executor);
@@ -268,7 +280,10 @@ public class ListDeploymentPackagesRequest extends Request {
         }
 
         /**
-         * Keyword.
+         * <p>The keyword in the deployment package name. DataWorks supports fuzzy matching, meaning you can enter a keyword to query for deployment packages that contain it.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>abc</p>
          */
         public Builder keyword(String keyword) {
             this.putBodyParameter("Keyword", keyword);
@@ -277,7 +292,10 @@ public class ListDeploymentPackagesRequest extends Request {
         }
 
         /**
-         * PageNumber.
+         * <p>The page number.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder pageNumber(Integer pageNumber) {
             this.putBodyParameter("PageNumber", pageNumber);
@@ -286,7 +304,10 @@ public class ListDeploymentPackagesRequest extends Request {
         }
 
         /**
-         * PageSize.
+         * <p>The number of records per page. Default value: 10. Maximum value: 100.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10</p>
          */
         public Builder pageSize(Integer pageSize) {
             this.putBodyParameter("PageSize", pageSize);
@@ -295,7 +316,10 @@ public class ListDeploymentPackagesRequest extends Request {
         }
 
         /**
-         * ProjectId.
+         * <p>The DataWorks workspace ID. You can log on to the DataWorks console and go to the workspace configuration page to query the ID. You must configure either this parameter or the ProjectIdentifier parameter to determine the DataWorks workspace to which the operation is applied.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10003</p>
          */
         public Builder projectId(Long projectId) {
             this.putBodyParameter("ProjectId", projectId);
@@ -304,7 +328,10 @@ public class ListDeploymentPackagesRequest extends Request {
         }
 
         /**
-         * ProjectIdentifier.
+         * <p>The unique identifier of the DataWorks workspace, which is the identifier at the top of the Data Studio page where you switch workspaces. Either this parameter or ProjectId must be specified to determine which DataWorks workspace this API call operates on.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>dw_project</p>
          */
         public Builder projectIdentifier(String projectIdentifier) {
             this.putBodyParameter("ProjectIdentifier", projectIdentifier);
@@ -313,7 +340,16 @@ public class ListDeploymentPackagesRequest extends Request {
         }
 
         /**
-         * Status.
+         * <p>The status of the deployment package. Valid values:</p>
+         * <ul>
+         * <li>0: It is ready.</li>
+         * <li>1: It was successfully deployed.</li>
+         * <li>2: It failed to be deployed.</li>
+         * <li>6: It was rejected.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder status(Integer status) {
             this.putBodyParameter("Status", status);

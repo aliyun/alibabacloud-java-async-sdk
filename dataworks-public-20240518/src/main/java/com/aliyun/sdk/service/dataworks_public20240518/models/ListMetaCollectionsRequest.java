@@ -209,7 +209,10 @@ public class ListMetaCollectionsRequest extends Request {
         }
 
         /**
-         * Administrator.
+         * <p>The administrator ID. Valid only for album types. Default: The current user ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>12345</p>
          */
         public Builder administrator(String administrator) {
             this.putQueryParameter("Administrator", administrator);
@@ -218,7 +221,10 @@ public class ListMetaCollectionsRequest extends Request {
         }
 
         /**
-         * CreateUser.
+         * <p>The creator user ID. Valid only for album types. Default: The current user ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>123456</p>
          */
         public Builder createUser(String createUser) {
             this.putQueryParameter("CreateUser", createUser);
@@ -227,7 +233,7 @@ public class ListMetaCollectionsRequest extends Request {
         }
 
         /**
-         * Description.
+         * <p>The collection description. Supports fuzzy matching.</p>
          */
         public Builder description(String description) {
             this.putQueryParameter("Description", description);
@@ -236,7 +242,10 @@ public class ListMetaCollectionsRequest extends Request {
         }
 
         /**
-         * Name.
+         * <p>The collection name. Supports fuzzy matching.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>test</p>
          */
         public Builder name(String name) {
             this.putQueryParameter("Name", name);
@@ -245,7 +254,14 @@ public class ListMetaCollectionsRequest extends Request {
         }
 
         /**
-         * Order.
+         * <p>The sort order. Valid values:</p>
+         * <ul>
+         * <li>Asc (default): Ascending order</li>
+         * <li>Desc</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>Asc</p>
          */
         public Builder order(String order) {
             this.putQueryParameter("Order", order);
@@ -254,7 +270,10 @@ public class ListMetaCollectionsRequest extends Request {
         }
 
         /**
-         * PageNumber.
+         * <p>The page number. Default: 1.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder pageNumber(Integer pageNumber) {
             this.putQueryParameter("PageNumber", pageNumber);
@@ -263,7 +282,10 @@ public class ListMetaCollectionsRequest extends Request {
         }
 
         /**
-         * PageSize.
+         * <p>The number of entries per page. Default: 10. Maximum: 100.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10</p>
          */
         public Builder pageSize(Integer pageSize) {
             this.putQueryParameter("PageSize", pageSize);
@@ -272,7 +294,7 @@ public class ListMetaCollectionsRequest extends Request {
         }
 
         /**
-         * <p>The ID of the collection of an ancestor node.</p>
+         * <p>The ID of the parent collection.</p>
          * 
          * <strong>example:</strong>
          * <p>category.123</p>
@@ -284,7 +306,17 @@ public class ListMetaCollectionsRequest extends Request {
         }
 
         /**
-         * SortBy.
+         * <p>The sort field. Valid values:</p>
+         * <ul>
+         * <li>Id (default)</li>
+         * <li>Name</li>
+         * <li>CreateUser: Creator ID</li>
+         * <li>CreateTime: Creation time</li>
+         * <li>ModifyTime: Modification time</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>Name</p>
          */
         public Builder sortBy(String sortBy) {
             this.putQueryParameter("SortBy", sortBy);
@@ -293,11 +325,11 @@ public class ListMetaCollectionsRequest extends Request {
         }
 
         /**
-         * <p>The type of the collection. Valid values:</p>
+         * <p>The collection type. Valid values:</p>
          * <ul>
          * <li>Category</li>
          * <li>Album</li>
-         * <li>AlbumCategory</li>
+         * <li>AlbumCategory: Album subcategory</li>
          * </ul>
          * <p>This parameter is required.</p>
          * 

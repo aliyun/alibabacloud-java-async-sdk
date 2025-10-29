@@ -80,7 +80,7 @@ public class GetPartitionResponseBody extends TeaModel {
         } 
 
         /**
-         * Partition.
+         * <p>Partition details.</p>
          */
         public Builder partition(Partition partition) {
             this.partition = partition;
@@ -88,7 +88,10 @@ public class GetPartitionResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>D1E2E5BC-xxxx-xxxx-xxxx-xxxxxx</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -96,7 +99,10 @@ public class GetPartitionResponseBody extends TeaModel {
         }
 
         /**
-         * Success.
+         * <p>Indicates whether the request was successful.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder success(Boolean success) {
             this.success = success;

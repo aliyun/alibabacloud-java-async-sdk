@@ -128,7 +128,10 @@ public class ListPipelineRunItemsRequest extends Request {
         }
 
         /**
-         * PageNumber.
+         * <p>The page number, for pagination.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder pageNumber(Integer pageNumber) {
             this.putQueryParameter("PageNumber", pageNumber);
@@ -137,7 +140,10 @@ public class ListPipelineRunItemsRequest extends Request {
         }
 
         /**
-         * PageSize.
+         * <p>The number of entries per page. The number of entries per page. Default: 10. Maximum: 100.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10</p>
          */
         public Builder pageSize(Integer pageSize) {
             this.putQueryParameter("PageSize", pageSize);
@@ -146,6 +152,7 @@ public class ListPipelineRunItemsRequest extends Request {
         }
 
         /**
+         * <p>The workflow task ID. To obtain the ID, see <a href="https://help.aliyun.com/document_detail/438042.html">ListPipelineRuns</a>.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -158,6 +165,7 @@ public class ListPipelineRunItemsRequest extends Request {
         }
 
         /**
+         * <p>The ID of the DataWorks workspace. You can obtain the workspace ID from the workspace configuration page in the DataWorks console.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>

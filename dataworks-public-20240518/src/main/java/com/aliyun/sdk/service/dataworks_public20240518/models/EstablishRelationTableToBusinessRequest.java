@@ -140,6 +140,7 @@ public class EstablishRelationTableToBusinessRequest extends Request {
         }
 
         /**
+         * <p>The workflow ID. You can call the <a href="https://help.aliyun.com/document_detail/173945.html">ListBusiness</a> operation to obtain the workflow ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -152,7 +153,10 @@ public class EstablishRelationTableToBusinessRequest extends Request {
         }
 
         /**
-         * FolderId.
+         * <p>The ID of the folder. You can call the <a href="https://help.aliyun.com/document_detail/173952.html">GetFolder</a> or <a href="https://help.aliyun.com/document_detail/173955.html">ListFolders</a> operation to obtain the folder ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2eb6f9****</p>
          */
         public Builder folderId(String folderId) {
             this.putBodyParameter("FolderId", folderId);
@@ -161,7 +165,10 @@ public class EstablishRelationTableToBusinessRequest extends Request {
         }
 
         /**
-         * ProjectId.
+         * <p>The ID of the DataWorks workspace. You can click the wrench icon in the top-right corner to access the workspace management page and view the ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10000</p>
          */
         public Builder projectId(Long projectId) {
             this.putBodyParameter("ProjectId", projectId);
@@ -170,7 +177,11 @@ public class EstablishRelationTableToBusinessRequest extends Request {
         }
 
         /**
-         * ProjectIdentifier.
+         * <p>The unique identifier of the DataWorks workspace. This is the identifier shown in the workspace switcher at the top of the Data Studio page.</p>
+         * <p>Either this parameter or ProjectId must be specified to determine which DataWorks workspace this API call operates on.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>dw</p>
          */
         public Builder projectIdentifier(String projectIdentifier) {
             this.putBodyParameter("ProjectIdentifier", projectIdentifier);
@@ -179,6 +190,7 @@ public class EstablishRelationTableToBusinessRequest extends Request {
         }
 
         /**
+         * <p>The UUID of the table. You can call the <a href="https://help.aliyun.com/document_detail/173919.html">SearchMetaTables</a> operation to obtain the table UUID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>

@@ -140,7 +140,10 @@ public class ListBusinessRequest extends Request {
         }
 
         /**
-         * Keyword.
+         * <p>The keyword, used for fuzzy match of workflow names.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>my</p>
          */
         public Builder keyword(String keyword) {
             this.putBodyParameter("Keyword", keyword);
@@ -149,6 +152,7 @@ public class ListBusinessRequest extends Request {
         }
 
         /**
+         * <p>The requested page number, used for pagination.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -161,6 +165,7 @@ public class ListBusinessRequest extends Request {
         }
 
         /**
+         * <p>The number of records per page. Default: 10. Maximum: 100.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -173,7 +178,10 @@ public class ListBusinessRequest extends Request {
         }
 
         /**
-         * ProjectId.
+         * <p>The DataWorks workspace ID. You can log on to the DataWorks console and go to the Workspace page to query the ID. You must specify either this parameter or the ProjectIdentifier parameter to identify the DataWorks workspace when you call this operation.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10000</p>
          */
         public Builder projectId(Long projectId) {
             this.putBodyParameter("ProjectId", projectId);
@@ -182,7 +190,10 @@ public class ListBusinessRequest extends Request {
         }
 
         /**
-         * ProjectIdentifier.
+         * <p>The name of the DataWorks workspace. You can log on to the DataWorks console and go to the Workspace page to query the workspace name. You must specify either this parameter or the ProjectId parameter to identify the DataWorks workspace when you call this operation.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>dw_project</p>
          */
         public Builder projectIdentifier(String projectIdentifier) {
             this.putBodyParameter("ProjectIdentifier", projectIdentifier);

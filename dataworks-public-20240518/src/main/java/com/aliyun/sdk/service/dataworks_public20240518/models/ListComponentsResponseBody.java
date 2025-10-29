@@ -67,7 +67,7 @@ public class ListComponentsResponseBody extends TeaModel {
         } 
 
         /**
-         * PagingInfo.
+         * <p>The pagination information.</p>
          */
         public Builder pagingInfo(PagingInfo pagingInfo) {
             this.pagingInfo = pagingInfo;
@@ -75,7 +75,10 @@ public class ListComponentsResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * <p>The request ID. Use this ID for troubleshooting.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>952795279527ab****</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -167,7 +170,7 @@ public class ListComponentsResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>输入参数的默认值</p>
+             * <p>The default value of the variable.</p>
              * 
              * <strong>example:</strong>
              * <p>mdb.shard.2x.2xlarge.d</p>
@@ -178,7 +181,7 @@ public class ListComponentsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>输入参数的描述信息</p>
+             * <p>The parameter description.</p>
              * 
              * <strong>example:</strong>
              * <p>None</p>
@@ -189,7 +192,7 @@ public class ListComponentsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>输入参数的名称</p>
+             * <p>The parameter name.</p>
              * 
              * <strong>example:</strong>
              * <p>auto_updateAlertRule_test_bULIRo</p>
@@ -200,7 +203,7 @@ public class ListComponentsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>输入参数的数据类型</p>
+             * <p>The parameter type.</p>
              * 
              * <strong>example:</strong>
              * <p>string</p>
@@ -296,7 +299,7 @@ public class ListComponentsResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>输出参数的默认值</p>
+             * <p>The default value.</p>
              * 
              * <strong>example:</strong>
              * <p>32000</p>
@@ -307,7 +310,7 @@ public class ListComponentsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>输出参数的描述信息</p>
+             * <p>The parameter description.</p>
              * 
              * <strong>example:</strong>
              * <p>zdy</p>
@@ -318,7 +321,7 @@ public class ListComponentsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>输出参数的名称</p>
+             * <p>The parameter name.</p>
              * 
              * <strong>example:</strong>
              * <p>auto_updateAlertRule_test_bULIRo</p>
@@ -329,7 +332,7 @@ public class ListComponentsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>输出参数的数据类型</p>
+             * <p>The parameter type.</p>
              * 
              * <strong>example:</strong>
              * <p>string</p>
@@ -386,7 +389,7 @@ public class ListComponentsResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>脚本所属类型</p>
+             * <p>The command.</p>
              * 
              * <strong>example:</strong>
              * <p>SQL_COMPONENT</p>
@@ -480,7 +483,7 @@ public class ListComponentsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>脚本路径</p>
+             * <p>The script path.</p>
              * 
              * <strong>example:</strong>
              * <p>/</p>
@@ -491,7 +494,7 @@ public class ListComponentsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>脚本的运行时信息</p>
+             * <p>The runtime.</p>
              */
             public Builder runtime(Runtime runtime) {
                 this.runtime = runtime;
@@ -662,7 +665,10 @@ public class ListComponentsResponseBody extends TeaModel {
             } 
 
             /**
-             * ComponentId.
+             * <p>The component ID. This parameter can be used in requests to query, modify, or delete director components.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>12312313123</p>
              */
             public Builder componentId(String componentId) {
                 this.componentId = componentId;
@@ -670,6 +676,7 @@ public class ListComponentsResponseBody extends TeaModel {
             }
 
             /**
+             * <p>The creation time.</p>
              * <p>Use the UTC time format: yyyy-MM-ddTHH:mm:ss.SSSZ</p>
              * 
              * <strong>example:</strong>
@@ -681,7 +688,7 @@ public class ListComponentsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>对组件的描述</p>
+             * <p>The description.</p>
              * 
              * <strong>example:</strong>
              * <p>vpc peering management_staging</p>
@@ -692,7 +699,7 @@ public class ListComponentsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>组件的输入参数列表</p>
+             * <p>The input parameters.</p>
              */
             public Builder inputs(java.util.List<Inputs> inputs) {
                 this.inputs = inputs;
@@ -700,6 +707,7 @@ public class ListComponentsResponseBody extends TeaModel {
             }
 
             /**
+             * <p>The timestamp when the publishing process was modified.</p>
              * <p>Use the UTC time format: yyyy-MM-ddTHH:mm:ss.SSSZ</p>
              * 
              * <strong>example:</strong>
@@ -711,7 +719,7 @@ public class ListComponentsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>代表资源名称的资源属性字段</p>
+             * <p>The resource name.</p>
              * 
              * <strong>example:</strong>
              * <p>auto_updateAlertRule_test_lJd81f</p>
@@ -722,7 +730,7 @@ public class ListComponentsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>组件的输出参数列表</p>
+             * <p>The output parameters.</p>
              */
             public Builder outputs(java.util.List<Outputs> outputs) {
                 this.outputs = outputs;
@@ -730,7 +738,7 @@ public class ListComponentsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>组件责任人</p>
+             * <p>The owner.</p>
              * 
              * <strong>example:</strong>
              * <p>252675537980665607</p>
@@ -741,7 +749,10 @@ public class ListComponentsResponseBody extends TeaModel {
             }
 
             /**
-             * ProjectId.
+             * <p>The DataWorks workspace ID. To obtain the workspace ID, log on to the DataWorks console and navigate to the workspace configuration page. You must specify either this parameter or ProjectIdentifier to identify the target DataWorks workspace for this API call.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>199925</p>
              */
             public Builder projectId(Long projectId) {
                 this.projectId = projectId;
@@ -749,7 +760,7 @@ public class ListComponentsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>工作流的脚本信息</p>
+             * <p>The script information.</p>
              */
             public Builder script(Script script) {
                 this.script = script;
@@ -842,7 +853,7 @@ public class ListComponentsResponseBody extends TeaModel {
             } 
 
             /**
-             * Components.
+             * <p>The UID of the user who created the dataset acceleration component. In Alibaba Cloud, this is the RAM user ID (or the Alibaba Cloud account ID if created by the account itself).</p>
              */
             public Builder components(java.util.List<Components> components) {
                 this.components = components;
@@ -850,7 +861,10 @@ public class ListComponentsResponseBody extends TeaModel {
             }
 
             /**
-             * PageNumber.
+             * <p>The page number.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder pageNumber(Integer pageNumber) {
                 this.pageNumber = pageNumber;
@@ -858,7 +872,10 @@ public class ListComponentsResponseBody extends TeaModel {
             }
 
             /**
-             * PageSize.
+             * <p>The number of entries per page.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>10</p>
              */
             public Builder pageSize(Integer pageSize) {
                 this.pageSize = pageSize;
@@ -866,7 +883,10 @@ public class ListComponentsResponseBody extends TeaModel {
             }
 
             /**
-             * TotalCount.
+             * <p>The total number of entries.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>100</p>
              */
             public Builder totalCount(Integer totalCount) {
                 this.totalCount = totalCount;

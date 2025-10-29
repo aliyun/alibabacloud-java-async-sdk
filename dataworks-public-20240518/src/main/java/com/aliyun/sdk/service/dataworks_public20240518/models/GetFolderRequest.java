@@ -124,7 +124,10 @@ public class GetFolderRequest extends Request {
         }
 
         /**
-         * FolderId.
+         * <p>The folder ID. Either this parameter or FolderPath must be specified. You can call the <a href="https://help.aliyun.com/document_detail/173955.html">ListFolders</a> operation to obtain the folder ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>273****</p>
          */
         public Builder folderId(String folderId) {
             this.putBodyParameter("FolderId", folderId);
@@ -133,7 +136,10 @@ public class GetFolderRequest extends Request {
         }
 
         /**
-         * FolderPath.
+         * <p>The folder path. Either this parameter or FolderId must be specified. You can call the <a href="https://help.aliyun.com/document_detail/173955.html">ListFolders</a> operation to obtain the folder path.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Business_process/my_first_business_process/MaxCompute/ods_layer</p>
          */
         public Builder folderPath(String folderPath) {
             this.putBodyParameter("FolderPath", folderPath);
@@ -142,7 +148,10 @@ public class GetFolderRequest extends Request {
         }
 
         /**
-         * ProjectId.
+         * <p>The ID of the DataWorks workspace. You can obtain the workspace ID from the workspace configuration page in the DataWorks console. Either this parameter or ProjectIdentifier must be specified to determine which DataWorks workspace this API call operates on.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1000011</p>
          */
         public Builder projectId(Long projectId) {
             this.putBodyParameter("ProjectId", projectId);
@@ -151,7 +160,10 @@ public class GetFolderRequest extends Request {
         }
 
         /**
-         * ProjectIdentifier.
+         * <p>The name of the DataWorks workspace. You can obtain the workspace name from the workspace configuration page in the DataWorks console. Either this parameter or ProjectId must be specified to determine which DataWorks workspace this API call operates on.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>dw_project</p>
          */
         public Builder projectIdentifier(String projectIdentifier) {
             this.putBodyParameter("ProjectIdentifier", projectIdentifier);

@@ -67,7 +67,7 @@ public class ListEntitiesInMetaCollectionResponseBody extends TeaModel {
         } 
 
         /**
-         * <p>The pagination information.</p>
+         * <p>The pagination result.</p>
          */
         public Builder pagingInfo(PagingInfo pagingInfo) {
             this.pagingInfo = pagingInfo;
@@ -75,7 +75,7 @@ public class ListEntitiesInMetaCollectionResponseBody extends TeaModel {
         }
 
         /**
-         * <p>Id of the request</p>
+         * <p>The request ID.</p>
          * 
          * <strong>example:</strong>
          * <p>F05080B0-CCE6-5D22-B284-34A51C5D4E28</p>
@@ -209,7 +209,10 @@ public class ListEntitiesInMetaCollectionResponseBody extends TeaModel {
             } 
 
             /**
-             * Comment.
+             * <p>The entity comment.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>test</p>
              */
             public Builder comment(String comment) {
                 this.comment = comment;
@@ -217,7 +220,10 @@ public class ListEntitiesInMetaCollectionResponseBody extends TeaModel {
             }
 
             /**
-             * CreateTime.
+             * <p>The creation time in milliseconds.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1737078994080</p>
              */
             public Builder createTime(Long createTime) {
                 this.createTime = createTime;
@@ -225,7 +231,10 @@ public class ListEntitiesInMetaCollectionResponseBody extends TeaModel {
             }
 
             /**
-             * Description.
+             * <p>The description specified when the entity was added to the collection. Valid only for albums.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>test</p>
              */
             public Builder description(String description) {
                 this.description = description;
@@ -233,7 +242,7 @@ public class ListEntitiesInMetaCollectionResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The entity ID. Entities can only be tables. This parameter is left empty if the entity is deleted.</p>
+             * <p>The ID of the entity. Currently, only the Table type is supported. If the entity is deleted, this field is empty.</p>
              * 
              * <strong>example:</strong>
              * <p>dlf-table:123456789:test_catalog:test_database::test_table</p>
@@ -244,7 +253,10 @@ public class ListEntitiesInMetaCollectionResponseBody extends TeaModel {
             }
 
             /**
-             * ModifyTime.
+             * <p>The last modified time in milliseconds.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1737078994080</p>
              */
             public Builder modifyTime(Long modifyTime) {
                 this.modifyTime = modifyTime;
@@ -252,7 +264,10 @@ public class ListEntitiesInMetaCollectionResponseBody extends TeaModel {
             }
 
             /**
-             * Name.
+             * <p>The entity name.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>test_table</p>
              */
             public Builder name(String name) {
                 this.name = name;
@@ -260,7 +275,7 @@ public class ListEntitiesInMetaCollectionResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The type of the entity.</p>
+             * <p>The entity type.</p>
              * 
              * <strong>example:</strong>
              * <p>dlf-table</p>
@@ -356,7 +371,7 @@ public class ListEntitiesInMetaCollectionResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The entities in the collection.</p>
+             * <p>The list of entities in the collection.</p>
              */
             public Builder entities(java.util.List<Entities> entities) {
                 this.entities = entities;
@@ -364,7 +379,10 @@ public class ListEntitiesInMetaCollectionResponseBody extends TeaModel {
             }
 
             /**
-             * PageNumber.
+             * <p>The current page number.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder pageNumber(Integer pageNumber) {
                 this.pageNumber = pageNumber;
@@ -372,7 +390,10 @@ public class ListEntitiesInMetaCollectionResponseBody extends TeaModel {
             }
 
             /**
-             * PageSize.
+             * <p>The number of records per page.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder pageSize(Integer pageSize) {
                 this.pageSize = pageSize;
@@ -380,7 +401,10 @@ public class ListEntitiesInMetaCollectionResponseBody extends TeaModel {
             }
 
             /**
-             * TotalCount.
+             * <p>The total number of records.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>100</p>
              */
             public Builder totalCount(Integer totalCount) {
                 this.totalCount = totalCount;
