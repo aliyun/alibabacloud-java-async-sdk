@@ -44,6 +44,12 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<ChangeDomainDkimRecordResponse> changeDomainDkimRecord(ChangeDomainDkimRecordRequest request);
 
     /**
+     * @param request the request parameters of CheckDisposable  CheckDisposableRequest
+     * @return CheckDisposableResponse
+     */
+    CompletableFuture<CheckDisposableResponse> checkDisposable(CheckDisposableRequest request);
+
+    /**
      * @param request the request parameters of CheckDomain  CheckDomainRequest
      * @return CheckDomainResponse
      */
@@ -54,6 +60,48 @@ public interface AsyncClient extends SdkAutoCloseable {
      * @return CheckReplyToMailAddressResponse
      */
     CompletableFuture<CheckReplyToMailAddressResponse> checkReplyToMailAddress(CheckReplyToMailAddressRequest request);
+
+    /**
+     * @param request the request parameters of ConfigSetCancelRelationFromAddress  ConfigSetCancelRelationFromAddressRequest
+     * @return ConfigSetCancelRelationFromAddressResponse
+     */
+    CompletableFuture<ConfigSetCancelRelationFromAddressResponse> configSetCancelRelationFromAddress(ConfigSetCancelRelationFromAddressRequest request);
+
+    /**
+     * @param request the request parameters of ConfigSetCreate  ConfigSetCreateRequest
+     * @return ConfigSetCreateResponse
+     */
+    CompletableFuture<ConfigSetCreateResponse> configSetCreate(ConfigSetCreateRequest request);
+
+    /**
+     * @param request the request parameters of ConfigSetDelete  ConfigSetDeleteRequest
+     * @return ConfigSetDeleteResponse
+     */
+    CompletableFuture<ConfigSetDeleteResponse> configSetDelete(ConfigSetDeleteRequest request);
+
+    /**
+     * @param request the request parameters of ConfigSetDetail  ConfigSetDetailRequest
+     * @return ConfigSetDetailResponse
+     */
+    CompletableFuture<ConfigSetDetailResponse> configSetDetail(ConfigSetDetailRequest request);
+
+    /**
+     * @param request the request parameters of ConfigSetList  ConfigSetListRequest
+     * @return ConfigSetListResponse
+     */
+    CompletableFuture<ConfigSetListResponse> configSetList(ConfigSetListRequest request);
+
+    /**
+     * @param request the request parameters of ConfigSetRelationFromAddress  ConfigSetRelationFromAddressRequest
+     * @return ConfigSetRelationFromAddressResponse
+     */
+    CompletableFuture<ConfigSetRelationFromAddressResponse> configSetRelationFromAddress(ConfigSetRelationFromAddressRequest request);
+
+    /**
+     * @param request the request parameters of ConfigSetUpdate  ConfigSetUpdateRequest
+     * @return ConfigSetUpdateResponse
+     */
+    CompletableFuture<ConfigSetUpdateResponse> configSetUpdate(ConfigSetUpdateRequest request);
 
     /**
      * @param request the request parameters of CreateDomain  CreateDomainRequest
@@ -176,6 +224,12 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<DeleteTagResponse> deleteTag(DeleteTagRequest request);
 
     /**
+     * @param request the request parameters of DeleteValidateFile  DeleteValidateFileRequest
+     * @return DeleteValidateFileResponse
+     */
+    CompletableFuture<DeleteValidateFileResponse> deleteValidateFile(DeleteValidateFileRequest request);
+
+    /**
      * @param request the request parameters of DescAccountSummary  DescAccountSummaryRequest
      * @return DescAccountSummaryResponse
      */
@@ -186,6 +240,12 @@ public interface AsyncClient extends SdkAutoCloseable {
      * @return DescDomainResponse
      */
     CompletableFuture<DescDomainResponse> descDomain(DescDomainRequest request);
+
+    /**
+     * @param request the request parameters of DescTemplate  DescTemplateRequest
+     * @return DescTemplateResponse
+     */
+    CompletableFuture<DescTemplateResponse> descTemplate(DescTemplateRequest request);
 
     /**
      * @param request the request parameters of GetDedicatedIpWarmUpDetail  GetDedicatedIpWarmUpDetailRequest
@@ -234,6 +294,24 @@ public interface AsyncClient extends SdkAutoCloseable {
      * @return GetUserResponse
      */
     CompletableFuture<GetUserResponse> getUser(GetUserRequest request);
+
+    /**
+     * @param request the request parameters of GetValidateFile  GetValidateFileRequest
+     * @return GetValidateFileResponse
+     */
+    CompletableFuture<GetValidateFileResponse> getValidateFile(GetValidateFileRequest request);
+
+    /**
+     * @param request the request parameters of GetValidateFileStatus  GetValidateFileStatusRequest
+     * @return GetValidateFileStatusResponse
+     */
+    CompletableFuture<GetValidateFileStatusResponse> getValidateFileStatus(GetValidateFileStatusRequest request);
+
+    /**
+     * @param request the request parameters of GetValidationQuota  GetValidationQuotaRequest
+     * @return GetValidationQuotaResponse
+     */
+    CompletableFuture<GetValidationQuotaResponse> getValidationQuota(GetValidationQuotaRequest request);
 
     /**
      * @param request the request parameters of ListBlockSending  ListBlockSendingRequest
@@ -311,6 +389,12 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<QueryTaskByParamResponse> queryTaskByParam(QueryTaskByParamRequest request);
 
     /**
+     * @param request the request parameters of QueryTemplateByParam  QueryTemplateByParamRequest
+     * @return QueryTemplateByParamResponse
+     */
+    CompletableFuture<QueryTemplateByParamResponse> queryTemplateByParam(QueryTemplateByParamRequest request);
+
+    /**
      * @param request the request parameters of RemoveUserSuppression  RemoveUserSuppressionRequest
      * @return RemoveUserSuppressionResponse
      */
@@ -363,5 +447,11 @@ public interface AsyncClient extends SdkAutoCloseable {
      * @return UpdateUserResponse
      */
     CompletableFuture<UpdateUserResponse> updateUser(UpdateUserRequest request);
+
+    /**
+     * @param request the request parameters of ValidateEmail  ValidateEmailRequest
+     * @return ValidateEmailResponse
+     */
+    CompletableFuture<ValidateEmailResponse> validateEmail(ValidateEmailRequest request);
 
 }

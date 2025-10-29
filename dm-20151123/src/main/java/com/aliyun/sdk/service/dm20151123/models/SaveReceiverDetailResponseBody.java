@@ -149,8 +149,12 @@ public class SaveReceiverDetailResponseBody extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Email")
         private String email;
 
+        @com.aliyun.core.annotation.NameInMap("ErrMessage")
+        private String errMessage;
+
         private Detail(Builder builder) {
             this.email = builder.email;
+            this.errMessage = builder.errMessage;
         }
 
         public static Builder builder() {
@@ -168,14 +172,23 @@ public class SaveReceiverDetailResponseBody extends TeaModel {
             return this.email;
         }
 
+        /**
+         * @return errMessage
+         */
+        public String getErrMessage() {
+            return this.errMessage;
+        }
+
         public static final class Builder {
             private String email; 
+            private String errMessage; 
 
             private Builder() {
             } 
 
             private Builder(Detail model) {
                 this.email = model.email;
+                this.errMessage = model.errMessage;
             } 
 
             /**
@@ -186,6 +199,14 @@ public class SaveReceiverDetailResponseBody extends TeaModel {
              */
             public Builder email(String email) {
                 this.email = email;
+                return this;
+            }
+
+            /**
+             * ErrMessage.
+             */
+            public Builder errMessage(String errMessage) {
+                this.errMessage = errMessage;
                 return this;
             }
 

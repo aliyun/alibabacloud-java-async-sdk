@@ -61,6 +61,10 @@ public class SendTestByTemplateRequest extends Request {
     private Integer templateId;
 
     @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("TemplateParams")
+    private String templateParams;
+
+    @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("UserName")
     private String userName;
 
@@ -76,6 +80,7 @@ public class SendTestByTemplateRequest extends Request {
         this.resourceOwnerAccount = builder.resourceOwnerAccount;
         this.resourceOwnerId = builder.resourceOwnerId;
         this.templateId = builder.templateId;
+        this.templateParams = builder.templateParams;
         this.userName = builder.userName;
     }
 
@@ -163,6 +168,13 @@ public class SendTestByTemplateRequest extends Request {
     }
 
     /**
+     * @return templateParams
+     */
+    public String getTemplateParams() {
+        return this.templateParams;
+    }
+
+    /**
      * @return userName
      */
     public String getUserName() {
@@ -180,6 +192,7 @@ public class SendTestByTemplateRequest extends Request {
         private String resourceOwnerAccount; 
         private Long resourceOwnerId; 
         private Integer templateId; 
+        private String templateParams; 
         private String userName; 
 
         private Builder() {
@@ -198,6 +211,7 @@ public class SendTestByTemplateRequest extends Request {
             this.resourceOwnerAccount = request.resourceOwnerAccount;
             this.resourceOwnerId = request.resourceOwnerId;
             this.templateId = request.templateId;
+            this.templateParams = request.templateParams;
             this.userName = request.userName;
         } 
 
@@ -312,6 +326,15 @@ public class SendTestByTemplateRequest extends Request {
         public Builder templateId(Integer templateId) {
             this.putQueryParameter("TemplateId", templateId);
             this.templateId = templateId;
+            return this;
+        }
+
+        /**
+         * TemplateParams.
+         */
+        public Builder templateParams(String templateParams) {
+            this.putQueryParameter("TemplateParams", templateParams);
+            this.templateParams = templateParams;
             return this;
         }
 

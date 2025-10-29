@@ -18,8 +18,11 @@ import com.aliyun.sdk.gateway.pop.models.*;
  */
 public class SaveReceiverDetailRequest extends Request {
     @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("CustomDetail")
+    private String customDetail;
+
+    @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("Detail")
-    @com.aliyun.core.annotation.Validation(required = true)
     private String detail;
 
     @com.aliyun.core.annotation.Query
@@ -41,6 +44,7 @@ public class SaveReceiverDetailRequest extends Request {
 
     private SaveReceiverDetailRequest(Builder builder) {
         super(builder);
+        this.customDetail = builder.customDetail;
         this.detail = builder.detail;
         this.ownerId = builder.ownerId;
         this.receiverId = builder.receiverId;
@@ -59,6 +63,13 @@ public class SaveReceiverDetailRequest extends Request {
 @Override
     public Builder toBuilder() {
         return new Builder(this);
+    }
+
+    /**
+     * @return customDetail
+     */
+    public String getCustomDetail() {
+        return this.customDetail;
     }
 
     /**
@@ -97,6 +108,7 @@ public class SaveReceiverDetailRequest extends Request {
     }
 
     public static final class Builder extends Request.Builder<SaveReceiverDetailRequest, Builder> {
+        private String customDetail; 
         private String detail; 
         private Long ownerId; 
         private String receiverId; 
@@ -109,6 +121,7 @@ public class SaveReceiverDetailRequest extends Request {
 
         private Builder(SaveReceiverDetailRequest request) {
             super(request);
+            this.customDetail = request.customDetail;
             this.detail = request.detail;
             this.ownerId = request.ownerId;
             this.receiverId = request.receiverId;
@@ -117,11 +130,19 @@ public class SaveReceiverDetailRequest extends Request {
         } 
 
         /**
+         * CustomDetail.
+         */
+        public Builder customDetail(String customDetail) {
+            this.putQueryParameter("CustomDetail", customDetail);
+            this.customDetail = customDetail;
+            return this;
+        }
+
+        /**
          * <p>Content, supports uploading multiple recipients at once, with a limit of 500 records per upload. Each record is separated by {} and commas, example:</p>
          * <p>[{ },{ },{ }...], the format within {} is as follows:</p>
          * <p>[{&quot;b&quot;:&quot;birthday&quot;,&quot;e&quot;:&quot;<a href="mailto:xxx@example.net">xxx@example.net</a>&quot;,&quot;g&quot;:&quot;gender&quot;,&quot;m&quot;:&quot;mobile&quot;,&quot;n&quot;:&quot;nickname&quot;,&quot;u&quot;:&quot;name&quot;}], when passing values, pass it as a string, not a list.</p>
          * <p>If a duplicate recipient address is inserted, it will return &quot;ErrorCount&quot;: 1</p>
-         * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
          * <p>[{&quot;b&quot;:&quot;birthday&quot;,&quot;e&quot;:&quot;<a href="mailto:xxx@alibaba-inc.com">xxx@alibaba-inc.com</a>&quot;,&quot;g&quot;:&quot;gender&quot;,&quot;m&quot;:&quot;mobile&quot;,&quot;n&quot;:&quot;nickname&quot;,&quot;u&quot;:&quot;name&quot;}]</p>
