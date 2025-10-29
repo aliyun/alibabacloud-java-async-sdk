@@ -203,6 +203,9 @@ public class DescribeAuditLogRecordsResponseBody extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("ExecuteTime")
         private String executeTime;
 
+        @com.aliyun.core.annotation.NameInMap("ExecuteTimestamp")
+        private Long executeTimestamp;
+
         @com.aliyun.core.annotation.NameInMap("HostAddress")
         private String hostAddress;
 
@@ -228,6 +231,7 @@ public class DescribeAuditLogRecordsResponseBody extends TeaModel {
             this.connId = builder.connId;
             this.DBName = builder.DBName;
             this.executeTime = builder.executeTime;
+            this.executeTimestamp = builder.executeTimestamp;
             this.hostAddress = builder.hostAddress;
             this.processID = builder.processID;
             this.SQLText = builder.SQLText;
@@ -264,6 +268,13 @@ public class DescribeAuditLogRecordsResponseBody extends TeaModel {
          */
         public String getExecuteTime() {
             return this.executeTime;
+        }
+
+        /**
+         * @return executeTimestamp
+         */
+        public Long getExecuteTimestamp() {
+            return this.executeTimestamp;
         }
 
         /**
@@ -319,6 +330,7 @@ public class DescribeAuditLogRecordsResponseBody extends TeaModel {
             private String connId; 
             private String DBName; 
             private String executeTime; 
+            private Long executeTimestamp; 
             private String hostAddress; 
             private String processID; 
             private String SQLText; 
@@ -334,6 +346,7 @@ public class DescribeAuditLogRecordsResponseBody extends TeaModel {
                 this.connId = model.connId;
                 this.DBName = model.DBName;
                 this.executeTime = model.executeTime;
+                this.executeTimestamp = model.executeTimestamp;
                 this.hostAddress = model.hostAddress;
                 this.processID = model.processID;
                 this.SQLText = model.SQLText;
@@ -373,6 +386,14 @@ public class DescribeAuditLogRecordsResponseBody extends TeaModel {
              */
             public Builder executeTime(String executeTime) {
                 this.executeTime = executeTime;
+                return this;
+            }
+
+            /**
+             * ExecuteTimestamp.
+             */
+            public Builder executeTimestamp(Long executeTimestamp) {
+                this.executeTimestamp = executeTimestamp;
                 return this;
             }
 

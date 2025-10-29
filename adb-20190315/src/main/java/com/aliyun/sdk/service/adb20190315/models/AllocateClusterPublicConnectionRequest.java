@@ -147,8 +147,7 @@ public class AllocateClusterPublicConnectionRequest extends Request {
         }
 
         /**
-         * <p>The ID of the AnalyticDB for MySQL Data Warehouse Edition (V3.0) cluster.</p>
-         * <p>You can call the <a href="https://help.aliyun.com/document_detail/129857.html">DescribeDBClusters</a> operation to query the cluster IDs of all AnalyticDB for MySQL Data Warehouse Edition (V3.0) clusters within a specific region.</p>
+         * <p>The Data Warehouse Edition Cluster ID of AnalyticDB for MySQL. You can call the <a href="https://help.aliyun.com/document_detail/129857.html">DescribeDBClusters</a> operation to retrieve all Data Warehouse Edition cluster IDs within the specified region.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
