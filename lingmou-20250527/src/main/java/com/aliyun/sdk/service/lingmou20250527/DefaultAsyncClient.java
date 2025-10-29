@@ -58,6 +58,42 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
+     * @param request the request parameters of CreateBackgroundPic  CreateBackgroundPicRequest
+     * @return CreateBackgroundPicResponse
+     */
+    @Override
+    public CompletableFuture<CreateBackgroundPicResponse> createBackgroundPic(CreateBackgroundPicRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RESTFUL).setAction("CreateBackgroundPic").setMethod(HttpMethod.POST).setPathRegex("/openapi/chat/createBackgroundPic").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(CreateBackgroundPicResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<CreateBackgroundPicResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
+     * @param request the request parameters of CreateChatConfig  CreateChatConfigRequest
+     * @return CreateChatConfigResponse
+     */
+    @Override
+    public CompletableFuture<CreateChatConfigResponse> createChatConfig(CreateChatConfigRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RESTFUL).setAction("CreateChatConfig").setMethod(HttpMethod.POST).setPathRegex("/openapi/chat/createChatConfig").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(CreateChatConfigResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<CreateChatConfigResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
      * @param request the request parameters of CreateChatSession  CreateChatSessionRequest
      * @return CreateChatSessionResponse
      */
@@ -70,6 +106,42 @@ public final class DefaultAsyncClient implements AsyncClient {
             return this.handler.execute(params);
         } catch (Exception e) {
             CompletableFuture<CreateChatSessionResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
+     * @param request the request parameters of CreateNoTrainPicAvatar  CreateNoTrainPicAvatarRequest
+     * @return CreateNoTrainPicAvatarResponse
+     */
+    @Override
+    public CompletableFuture<CreateNoTrainPicAvatarResponse> createNoTrainPicAvatar(CreateNoTrainPicAvatarRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RESTFUL).setAction("CreateNoTrainPicAvatar").setMethod(HttpMethod.POST).setPathRegex("/openapi/chat/createNoTrainPicAvatar").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(CreateNoTrainPicAvatarResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<CreateNoTrainPicAvatarResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
+     * @param request the request parameters of GetUploadPolicy  GetUploadPolicyRequest
+     * @return GetUploadPolicyResponse
+     */
+    @Override
+    public CompletableFuture<GetUploadPolicyResponse> getUploadPolicy(GetUploadPolicyRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RESTFUL).setAction("GetUploadPolicy").setMethod(HttpMethod.GET).setPathRegex("/openapi/chat/getUploadPolicy").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(GetUploadPolicyResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<GetUploadPolicyResponse> future = new CompletableFuture<>();
             future.completeExceptionally(e);
             return future;
         }
