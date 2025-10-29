@@ -335,6 +335,9 @@ public class ListMcpServersResponseBody extends TeaModel {
      * <p>ListMcpServersResponseBody</p>
      */
     public static class Items extends TeaModel {
+        @com.aliyun.core.annotation.NameInMap("apiId")
+        private String apiId;
+
         @com.aliyun.core.annotation.NameInMap("assembledSources")
         private java.util.List<AssembledSources> assembledSources;
 
@@ -396,6 +399,7 @@ public class ListMcpServersResponseBody extends TeaModel {
         private String type;
 
         private Items(Builder builder) {
+            this.apiId = builder.apiId;
             this.assembledSources = builder.assembledSources;
             this.backend = builder.backend;
             this.createFromType = builder.createFromType;
@@ -424,6 +428,13 @@ public class ListMcpServersResponseBody extends TeaModel {
 
         public static Items create() {
             return builder().build();
+        }
+
+        /**
+         * @return apiId
+         */
+        public String getApiId() {
+            return this.apiId;
         }
 
         /**
@@ -567,6 +578,7 @@ public class ListMcpServersResponseBody extends TeaModel {
         }
 
         public static final class Builder {
+            private String apiId; 
             private java.util.List<AssembledSources> assembledSources; 
             private Backend backend; 
             private String createFromType; 
@@ -592,6 +604,7 @@ public class ListMcpServersResponseBody extends TeaModel {
             } 
 
             private Builder(Items model) {
+                this.apiId = model.apiId;
                 this.assembledSources = model.assembledSources;
                 this.backend = model.backend;
                 this.createFromType = model.createFromType;
@@ -613,6 +626,14 @@ public class ListMcpServersResponseBody extends TeaModel {
                 this.routeId = model.routeId;
                 this.type = model.type;
             } 
+
+            /**
+             * apiId.
+             */
+            public Builder apiId(String apiId) {
+                this.apiId = apiId;
+                return this;
+            }
 
             /**
              * assembledSources.

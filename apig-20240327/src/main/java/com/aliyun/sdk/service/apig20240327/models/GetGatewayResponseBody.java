@@ -348,6 +348,12 @@ public class GetGatewayResponseBody extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("gatewayDefault")
         private Boolean gatewayDefault;
 
+        @com.aliyun.core.annotation.NameInMap("ipv4Addresses")
+        private java.util.List<String> ipv4Addresses;
+
+        @com.aliyun.core.annotation.NameInMap("ipv6Addresses")
+        private java.util.List<String> ipv6Addresses;
+
         @com.aliyun.core.annotation.NameInMap("loadBalancerId")
         private String loadBalancerId;
 
@@ -368,6 +374,8 @@ public class GetGatewayResponseBody extends TeaModel {
             this.addressIpVersion = builder.addressIpVersion;
             this.addressType = builder.addressType;
             this.gatewayDefault = builder.gatewayDefault;
+            this.ipv4Addresses = builder.ipv4Addresses;
+            this.ipv6Addresses = builder.ipv6Addresses;
             this.loadBalancerId = builder.loadBalancerId;
             this.mode = builder.mode;
             this.ports = builder.ports;
@@ -412,6 +420,20 @@ public class GetGatewayResponseBody extends TeaModel {
         }
 
         /**
+         * @return ipv4Addresses
+         */
+        public java.util.List<String> getIpv4Addresses() {
+            return this.ipv4Addresses;
+        }
+
+        /**
+         * @return ipv6Addresses
+         */
+        public java.util.List<String> getIpv6Addresses() {
+            return this.ipv6Addresses;
+        }
+
+        /**
          * @return loadBalancerId
          */
         public String getLoadBalancerId() {
@@ -451,6 +473,8 @@ public class GetGatewayResponseBody extends TeaModel {
             private String addressIpVersion; 
             private String addressType; 
             private Boolean gatewayDefault; 
+            private java.util.List<String> ipv4Addresses; 
+            private java.util.List<String> ipv6Addresses; 
             private String loadBalancerId; 
             private String mode; 
             private java.util.List<Ports> ports; 
@@ -465,6 +489,8 @@ public class GetGatewayResponseBody extends TeaModel {
                 this.addressIpVersion = model.addressIpVersion;
                 this.addressType = model.addressType;
                 this.gatewayDefault = model.gatewayDefault;
+                this.ipv4Addresses = model.ipv4Addresses;
+                this.ipv6Addresses = model.ipv6Addresses;
                 this.loadBalancerId = model.loadBalancerId;
                 this.mode = model.mode;
                 this.ports = model.ports;
@@ -521,6 +547,22 @@ public class GetGatewayResponseBody extends TeaModel {
              */
             public Builder gatewayDefault(Boolean gatewayDefault) {
                 this.gatewayDefault = gatewayDefault;
+                return this;
+            }
+
+            /**
+             * ipv4Addresses.
+             */
+            public Builder ipv4Addresses(java.util.List<String> ipv4Addresses) {
+                this.ipv4Addresses = ipv4Addresses;
+                return this;
+            }
+
+            /**
+             * ipv6Addresses.
+             */
+            public Builder ipv6Addresses(java.util.List<String> ipv6Addresses) {
+                this.ipv6Addresses = ipv6Addresses;
                 return this;
             }
 
