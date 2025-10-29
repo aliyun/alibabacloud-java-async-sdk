@@ -22,6 +22,10 @@ public class CreateShareRequest extends Request {
     private String comment;
 
     @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("enableWrite")
+    private Boolean enableWrite;
+
+    @com.aliyun.core.annotation.Body
     @com.aliyun.core.annotation.NameInMap("shareName")
     @com.aliyun.core.annotation.Validation(required = true)
     private String shareName;
@@ -29,6 +33,7 @@ public class CreateShareRequest extends Request {
     private CreateShareRequest(Builder builder) {
         super(builder);
         this.comment = builder.comment;
+        this.enableWrite = builder.enableWrite;
         this.shareName = builder.shareName;
     }
 
@@ -53,6 +58,13 @@ public class CreateShareRequest extends Request {
     }
 
     /**
+     * @return enableWrite
+     */
+    public Boolean getEnableWrite() {
+        return this.enableWrite;
+    }
+
+    /**
      * @return shareName
      */
     public String getShareName() {
@@ -61,6 +73,7 @@ public class CreateShareRequest extends Request {
 
     public static final class Builder extends Request.Builder<CreateShareRequest, Builder> {
         private String comment; 
+        private Boolean enableWrite; 
         private String shareName; 
 
         private Builder() {
@@ -70,6 +83,7 @@ public class CreateShareRequest extends Request {
         private Builder(CreateShareRequest request) {
             super(request);
             this.comment = request.comment;
+            this.enableWrite = request.enableWrite;
             this.shareName = request.shareName;
         } 
 
@@ -79,6 +93,15 @@ public class CreateShareRequest extends Request {
         public Builder comment(String comment) {
             this.putBodyParameter("comment", comment);
             this.comment = comment;
+            return this;
+        }
+
+        /**
+         * enableWrite.
+         */
+        public Builder enableWrite(Boolean enableWrite) {
+            this.putBodyParameter("enableWrite", enableWrite);
+            this.enableWrite = enableWrite;
             return this;
         }
 

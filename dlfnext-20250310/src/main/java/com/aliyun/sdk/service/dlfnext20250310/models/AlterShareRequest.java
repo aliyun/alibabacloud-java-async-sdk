@@ -26,6 +26,10 @@ public class AlterShareRequest extends Request {
     private String comment;
 
     @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("enableWrite")
+    private Boolean enableWrite;
+
+    @com.aliyun.core.annotation.Body
     @com.aliyun.core.annotation.NameInMap("shareName")
     private String shareName;
 
@@ -33,6 +37,7 @@ public class AlterShareRequest extends Request {
         super(builder);
         this.share = builder.share;
         this.comment = builder.comment;
+        this.enableWrite = builder.enableWrite;
         this.shareName = builder.shareName;
     }
 
@@ -64,6 +69,13 @@ public class AlterShareRequest extends Request {
     }
 
     /**
+     * @return enableWrite
+     */
+    public Boolean getEnableWrite() {
+        return this.enableWrite;
+    }
+
+    /**
      * @return shareName
      */
     public String getShareName() {
@@ -73,6 +85,7 @@ public class AlterShareRequest extends Request {
     public static final class Builder extends Request.Builder<AlterShareRequest, Builder> {
         private String share; 
         private String comment; 
+        private Boolean enableWrite; 
         private String shareName; 
 
         private Builder() {
@@ -83,6 +96,7 @@ public class AlterShareRequest extends Request {
             super(request);
             this.share = request.share;
             this.comment = request.comment;
+            this.enableWrite = request.enableWrite;
             this.shareName = request.shareName;
         } 
 
@@ -101,6 +115,15 @@ public class AlterShareRequest extends Request {
         public Builder comment(String comment) {
             this.putBodyParameter("comment", comment);
             this.comment = comment;
+            return this;
+        }
+
+        /**
+         * enableWrite.
+         */
+        public Builder enableWrite(Boolean enableWrite) {
+            this.putBodyParameter("enableWrite", enableWrite);
+            this.enableWrite = enableWrite;
             return this;
         }
 

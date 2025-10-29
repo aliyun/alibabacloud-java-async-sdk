@@ -56,6 +56,9 @@ public class CatalogSummary extends TeaModel {
     @com.aliyun.core.annotation.NameInMap("totalFileSizeInBytes")
     private MoMValues totalFileSizeInBytes;
 
+    @com.aliyun.core.annotation.NameInMap("totalMetaSizeInBytes")
+    private MoMValues totalMetaSizeInBytes;
+
     private CatalogSummary(Builder builder) {
         this.apiVisitCountMonthly = builder.apiVisitCountMonthly;
         this.databaseCount = builder.databaseCount;
@@ -70,6 +73,7 @@ public class CatalogSummary extends TeaModel {
         this.throughputMonthly = builder.throughputMonthly;
         this.totalFileCount = builder.totalFileCount;
         this.totalFileSizeInBytes = builder.totalFileSizeInBytes;
+        this.totalMetaSizeInBytes = builder.totalMetaSizeInBytes;
     }
 
     public static Builder builder() {
@@ -175,6 +179,13 @@ public class CatalogSummary extends TeaModel {
         return this.totalFileSizeInBytes;
     }
 
+    /**
+     * @return totalMetaSizeInBytes
+     */
+    public MoMValues getTotalMetaSizeInBytes() {
+        return this.totalMetaSizeInBytes;
+    }
+
     public static final class Builder {
         private Long apiVisitCountMonthly; 
         private MoMValues databaseCount; 
@@ -189,6 +200,7 @@ public class CatalogSummary extends TeaModel {
         private Long throughputMonthly; 
         private MoMValues totalFileCount; 
         private MoMValues totalFileSizeInBytes; 
+        private MoMValues totalMetaSizeInBytes; 
 
         private Builder() {
         } 
@@ -207,6 +219,7 @@ public class CatalogSummary extends TeaModel {
             this.throughputMonthly = model.throughputMonthly;
             this.totalFileCount = model.totalFileCount;
             this.totalFileSizeInBytes = model.totalFileSizeInBytes;
+            this.totalMetaSizeInBytes = model.totalMetaSizeInBytes;
         } 
 
         /**
@@ -310,6 +323,14 @@ public class CatalogSummary extends TeaModel {
          */
         public Builder totalFileSizeInBytes(MoMValues totalFileSizeInBytes) {
             this.totalFileSizeInBytes = totalFileSizeInBytes;
+            return this;
+        }
+
+        /**
+         * totalMetaSizeInBytes.
+         */
+        public Builder totalMetaSizeInBytes(MoMValues totalMetaSizeInBytes) {
+            this.totalMetaSizeInBytes = totalMetaSizeInBytes;
             return this;
         }
 

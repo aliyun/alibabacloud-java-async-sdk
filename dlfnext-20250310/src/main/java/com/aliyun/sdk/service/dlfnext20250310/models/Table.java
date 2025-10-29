@@ -23,6 +23,9 @@ public class Table extends TeaModel {
     @com.aliyun.core.annotation.NameInMap("createdBy")
     private String createdBy;
 
+    @com.aliyun.core.annotation.NameInMap("icebergTableMetadata")
+    private IcebergTableMetadata icebergTableMetadata;
+
     @com.aliyun.core.annotation.NameInMap("id")
     private String id;
 
@@ -53,6 +56,9 @@ public class Table extends TeaModel {
     @com.aliyun.core.annotation.NameInMap("storageClass")
     private String storageClass;
 
+    @com.aliyun.core.annotation.NameInMap("type")
+    private String type;
+
     @com.aliyun.core.annotation.NameInMap("updatedAt")
     private Long updatedAt;
 
@@ -62,6 +68,7 @@ public class Table extends TeaModel {
     private Table(Builder builder) {
         this.createdAt = builder.createdAt;
         this.createdBy = builder.createdBy;
+        this.icebergTableMetadata = builder.icebergTableMetadata;
         this.id = builder.id;
         this.isExternal = builder.isExternal;
         this.name = builder.name;
@@ -72,6 +79,7 @@ public class Table extends TeaModel {
         this.storageAction = builder.storageAction;
         this.storageActionTimestamp = builder.storageActionTimestamp;
         this.storageClass = builder.storageClass;
+        this.type = builder.type;
         this.updatedAt = builder.updatedAt;
         this.updatedBy = builder.updatedBy;
     }
@@ -100,6 +108,13 @@ public class Table extends TeaModel {
      */
     public String getCreatedBy() {
         return this.createdBy;
+    }
+
+    /**
+     * @return icebergTableMetadata
+     */
+    public IcebergTableMetadata getIcebergTableMetadata() {
+        return this.icebergTableMetadata;
     }
 
     /**
@@ -173,6 +188,13 @@ public class Table extends TeaModel {
     }
 
     /**
+     * @return type
+     */
+    public String getType() {
+        return this.type;
+    }
+
+    /**
      * @return updatedAt
      */
     public Long getUpdatedAt() {
@@ -189,6 +211,7 @@ public class Table extends TeaModel {
     public static final class Builder {
         private Long createdAt; 
         private String createdBy; 
+        private IcebergTableMetadata icebergTableMetadata; 
         private String id; 
         private Boolean isExternal; 
         private String name; 
@@ -199,6 +222,7 @@ public class Table extends TeaModel {
         private String storageAction; 
         private Long storageActionTimestamp; 
         private String storageClass; 
+        private String type; 
         private Long updatedAt; 
         private String updatedBy; 
 
@@ -208,6 +232,7 @@ public class Table extends TeaModel {
         private Builder(Table model) {
             this.createdAt = model.createdAt;
             this.createdBy = model.createdBy;
+            this.icebergTableMetadata = model.icebergTableMetadata;
             this.id = model.id;
             this.isExternal = model.isExternal;
             this.name = model.name;
@@ -218,6 +243,7 @@ public class Table extends TeaModel {
             this.storageAction = model.storageAction;
             this.storageActionTimestamp = model.storageActionTimestamp;
             this.storageClass = model.storageClass;
+            this.type = model.type;
             this.updatedAt = model.updatedAt;
             this.updatedBy = model.updatedBy;
         } 
@@ -235,6 +261,14 @@ public class Table extends TeaModel {
          */
         public Builder createdBy(String createdBy) {
             this.createdBy = createdBy;
+            return this;
+        }
+
+        /**
+         * icebergTableMetadata.
+         */
+        public Builder icebergTableMetadata(IcebergTableMetadata icebergTableMetadata) {
+            this.icebergTableMetadata = icebergTableMetadata;
             return this;
         }
 
@@ -315,6 +349,14 @@ public class Table extends TeaModel {
          */
         public Builder storageClass(String storageClass) {
             this.storageClass = storageClass;
+            return this;
+        }
+
+        /**
+         * type.
+         */
+        public Builder type(String type) {
+            this.type = type;
             return this;
         }
 

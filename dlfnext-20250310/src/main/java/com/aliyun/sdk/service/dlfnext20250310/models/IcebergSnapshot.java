@@ -23,11 +23,17 @@ public class IcebergSnapshot extends TeaModel {
     @com.aliyun.core.annotation.NameInMap("id")
     private Long id;
 
+    @com.aliyun.core.annotation.NameInMap("idString")
+    private String idString;
+
     @com.aliyun.core.annotation.NameInMap("operation")
     private String operation;
 
     @com.aliyun.core.annotation.NameInMap("parentId")
     private Long parentId;
+
+    @com.aliyun.core.annotation.NameInMap("parentIdString")
+    private String parentIdString;
 
     @com.aliyun.core.annotation.NameInMap("schemaId")
     private Long schemaId;
@@ -44,8 +50,10 @@ public class IcebergSnapshot extends TeaModel {
     private IcebergSnapshot(Builder builder) {
         this.addedRows = builder.addedRows;
         this.id = builder.id;
+        this.idString = builder.idString;
         this.operation = builder.operation;
         this.parentId = builder.parentId;
+        this.parentIdString = builder.parentIdString;
         this.schemaId = builder.schemaId;
         this.sequenceNumber = builder.sequenceNumber;
         this.summary = builder.summary;
@@ -79,6 +87,13 @@ public class IcebergSnapshot extends TeaModel {
     }
 
     /**
+     * @return idString
+     */
+    public String getIdString() {
+        return this.idString;
+    }
+
+    /**
      * @return operation
      */
     public String getOperation() {
@@ -90,6 +105,13 @@ public class IcebergSnapshot extends TeaModel {
      */
     public Long getParentId() {
         return this.parentId;
+    }
+
+    /**
+     * @return parentIdString
+     */
+    public String getParentIdString() {
+        return this.parentIdString;
     }
 
     /**
@@ -123,8 +145,10 @@ public class IcebergSnapshot extends TeaModel {
     public static final class Builder {
         private Long addedRows; 
         private Long id; 
+        private String idString; 
         private String operation; 
         private Long parentId; 
+        private String parentIdString; 
         private Long schemaId; 
         private Long sequenceNumber; 
         private java.util.Map<String, String> summary; 
@@ -136,8 +160,10 @@ public class IcebergSnapshot extends TeaModel {
         private Builder(IcebergSnapshot model) {
             this.addedRows = model.addedRows;
             this.id = model.id;
+            this.idString = model.idString;
             this.operation = model.operation;
             this.parentId = model.parentId;
+            this.parentIdString = model.parentIdString;
             this.schemaId = model.schemaId;
             this.sequenceNumber = model.sequenceNumber;
             this.summary = model.summary;
@@ -161,6 +187,14 @@ public class IcebergSnapshot extends TeaModel {
         }
 
         /**
+         * idString.
+         */
+        public Builder idString(String idString) {
+            this.idString = idString;
+            return this;
+        }
+
+        /**
          * operation.
          */
         public Builder operation(String operation) {
@@ -173,6 +207,14 @@ public class IcebergSnapshot extends TeaModel {
          */
         public Builder parentId(Long parentId) {
             this.parentId = parentId;
+            return this;
+        }
+
+        /**
+         * parentIdString.
+         */
+        public Builder parentIdString(String parentIdString) {
+            this.parentIdString = parentIdString;
             return this;
         }
 

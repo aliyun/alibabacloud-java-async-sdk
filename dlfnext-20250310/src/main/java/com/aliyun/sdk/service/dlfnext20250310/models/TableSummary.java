@@ -65,6 +65,9 @@ public class TableSummary extends TeaModel {
     @com.aliyun.core.annotation.NameInMap("totalFileSizeInBytes")
     private Long totalFileSizeInBytes;
 
+    @com.aliyun.core.annotation.NameInMap("totalMetaSizeInBytes")
+    private Long totalMetaSizeInBytes;
+
     @com.aliyun.core.annotation.NameInMap("updatedAt")
     private Long updatedAt;
 
@@ -85,6 +88,7 @@ public class TableSummary extends TeaModel {
         this.tableName = builder.tableName;
         this.totalFileCount = builder.totalFileCount;
         this.totalFileSizeInBytes = builder.totalFileSizeInBytes;
+        this.totalMetaSizeInBytes = builder.totalMetaSizeInBytes;
         this.updatedAt = builder.updatedAt;
     }
 
@@ -213,6 +217,13 @@ public class TableSummary extends TeaModel {
     }
 
     /**
+     * @return totalMetaSizeInBytes
+     */
+    public Long getTotalMetaSizeInBytes() {
+        return this.totalMetaSizeInBytes;
+    }
+
+    /**
      * @return updatedAt
      */
     public Long getUpdatedAt() {
@@ -236,6 +247,7 @@ public class TableSummary extends TeaModel {
         private String tableName; 
         private Long totalFileCount; 
         private Long totalFileSizeInBytes; 
+        private Long totalMetaSizeInBytes; 
         private Long updatedAt; 
 
         private Builder() {
@@ -258,6 +270,7 @@ public class TableSummary extends TeaModel {
             this.tableName = model.tableName;
             this.totalFileCount = model.totalFileCount;
             this.totalFileSizeInBytes = model.totalFileSizeInBytes;
+            this.totalMetaSizeInBytes = model.totalMetaSizeInBytes;
             this.updatedAt = model.updatedAt;
         } 
 
@@ -386,6 +399,14 @@ public class TableSummary extends TeaModel {
          */
         public Builder totalFileSizeInBytes(Long totalFileSizeInBytes) {
             this.totalFileSizeInBytes = totalFileSizeInBytes;
+            return this;
+        }
+
+        /**
+         * totalMetaSizeInBytes.
+         */
+        public Builder totalMetaSizeInBytes(Long totalMetaSizeInBytes) {
+            this.totalMetaSizeInBytes = totalMetaSizeInBytes;
             return this;
         }
 

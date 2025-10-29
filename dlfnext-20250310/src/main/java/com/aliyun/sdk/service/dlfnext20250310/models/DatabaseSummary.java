@@ -53,6 +53,9 @@ public class DatabaseSummary extends TeaModel {
     @com.aliyun.core.annotation.NameInMap("totalFileSizeInBytes")
     private Long totalFileSizeInBytes;
 
+    @com.aliyun.core.annotation.NameInMap("totalMetaSizeInBytes")
+    private Long totalMetaSizeInBytes;
+
     private DatabaseSummary(Builder builder) {
         this.createdAt = builder.createdAt;
         this.databaseName = builder.databaseName;
@@ -66,6 +69,7 @@ public class DatabaseSummary extends TeaModel {
         this.tableCount = builder.tableCount;
         this.totalFileCount = builder.totalFileCount;
         this.totalFileSizeInBytes = builder.totalFileSizeInBytes;
+        this.totalMetaSizeInBytes = builder.totalMetaSizeInBytes;
     }
 
     public static Builder builder() {
@@ -164,6 +168,13 @@ public class DatabaseSummary extends TeaModel {
         return this.totalFileSizeInBytes;
     }
 
+    /**
+     * @return totalMetaSizeInBytes
+     */
+    public Long getTotalMetaSizeInBytes() {
+        return this.totalMetaSizeInBytes;
+    }
+
     public static final class Builder {
         private Long createdAt; 
         private String databaseName; 
@@ -177,6 +188,7 @@ public class DatabaseSummary extends TeaModel {
         private Long tableCount; 
         private Long totalFileCount; 
         private Long totalFileSizeInBytes; 
+        private Long totalMetaSizeInBytes; 
 
         private Builder() {
         } 
@@ -194,6 +206,7 @@ public class DatabaseSummary extends TeaModel {
             this.tableCount = model.tableCount;
             this.totalFileCount = model.totalFileCount;
             this.totalFileSizeInBytes = model.totalFileSizeInBytes;
+            this.totalMetaSizeInBytes = model.totalMetaSizeInBytes;
         } 
 
         /**
@@ -289,6 +302,14 @@ public class DatabaseSummary extends TeaModel {
          */
         public Builder totalFileSizeInBytes(Long totalFileSizeInBytes) {
             this.totalFileSizeInBytes = totalFileSizeInBytes;
+            return this;
+        }
+
+        /**
+         * totalMetaSizeInBytes.
+         */
+        public Builder totalMetaSizeInBytes(Long totalMetaSizeInBytes) {
+            this.totalMetaSizeInBytes = totalMetaSizeInBytes;
             return this;
         }
 

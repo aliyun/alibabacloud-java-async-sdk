@@ -12,34 +12,28 @@ import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
  * 
- * {@link Share} extends {@link TeaModel}
+ * {@link View} extends {@link TeaModel}
  *
- * <p>Share</p>
+ * <p>View</p>
  */
-public class Share extends TeaModel {
-    @com.aliyun.core.annotation.NameInMap("comment")
-    private String comment;
-
+public class View extends TeaModel {
     @com.aliyun.core.annotation.NameInMap("createdAt")
     private Long createdAt;
 
     @com.aliyun.core.annotation.NameInMap("createdBy")
     private String createdBy;
 
-    @com.aliyun.core.annotation.NameInMap("enableWrite")
-    private Boolean enableWrite;
+    @com.aliyun.core.annotation.NameInMap("id")
+    private String id;
+
+    @com.aliyun.core.annotation.NameInMap("name")
+    private String name;
 
     @com.aliyun.core.annotation.NameInMap("owner")
     private String owner;
 
-    @com.aliyun.core.annotation.NameInMap("providerTenantId")
-    private Long providerTenantId;
-
-    @com.aliyun.core.annotation.NameInMap("shareId")
-    private String shareId;
-
-    @com.aliyun.core.annotation.NameInMap("shareName")
-    private String shareName;
+    @com.aliyun.core.annotation.NameInMap("schema")
+    private ViewSchema schema;
 
     @com.aliyun.core.annotation.NameInMap("updatedAt")
     private Long updatedAt;
@@ -47,15 +41,13 @@ public class Share extends TeaModel {
     @com.aliyun.core.annotation.NameInMap("updatedBy")
     private String updatedBy;
 
-    private Share(Builder builder) {
-        this.comment = builder.comment;
+    private View(Builder builder) {
         this.createdAt = builder.createdAt;
         this.createdBy = builder.createdBy;
-        this.enableWrite = builder.enableWrite;
+        this.id = builder.id;
+        this.name = builder.name;
         this.owner = builder.owner;
-        this.providerTenantId = builder.providerTenantId;
-        this.shareId = builder.shareId;
-        this.shareName = builder.shareName;
+        this.schema = builder.schema;
         this.updatedAt = builder.updatedAt;
         this.updatedBy = builder.updatedBy;
     }
@@ -64,19 +56,12 @@ public class Share extends TeaModel {
         return new Builder();
     }
 
-    public static Share create() {
+    public static View create() {
         return builder().build();
     }
 
     public Builder toBuilder() {
         return new Builder(this);
-    }
-
-    /**
-     * @return comment
-     */
-    public String getComment() {
-        return this.comment;
     }
 
     /**
@@ -94,10 +79,17 @@ public class Share extends TeaModel {
     }
 
     /**
-     * @return enableWrite
+     * @return id
      */
-    public Boolean getEnableWrite() {
-        return this.enableWrite;
+    public String getId() {
+        return this.id;
+    }
+
+    /**
+     * @return name
+     */
+    public String getName() {
+        return this.name;
     }
 
     /**
@@ -108,24 +100,10 @@ public class Share extends TeaModel {
     }
 
     /**
-     * @return providerTenantId
+     * @return schema
      */
-    public Long getProviderTenantId() {
-        return this.providerTenantId;
-    }
-
-    /**
-     * @return shareId
-     */
-    public String getShareId() {
-        return this.shareId;
-    }
-
-    /**
-     * @return shareName
-     */
-    public String getShareName() {
-        return this.shareName;
+    public ViewSchema getSchema() {
+        return this.schema;
     }
 
     /**
@@ -143,40 +121,28 @@ public class Share extends TeaModel {
     }
 
     public static final class Builder {
-        private String comment; 
         private Long createdAt; 
         private String createdBy; 
-        private Boolean enableWrite; 
+        private String id; 
+        private String name; 
         private String owner; 
-        private Long providerTenantId; 
-        private String shareId; 
-        private String shareName; 
+        private ViewSchema schema; 
         private Long updatedAt; 
         private String updatedBy; 
 
         private Builder() {
         } 
 
-        private Builder(Share model) {
-            this.comment = model.comment;
+        private Builder(View model) {
             this.createdAt = model.createdAt;
             this.createdBy = model.createdBy;
-            this.enableWrite = model.enableWrite;
+            this.id = model.id;
+            this.name = model.name;
             this.owner = model.owner;
-            this.providerTenantId = model.providerTenantId;
-            this.shareId = model.shareId;
-            this.shareName = model.shareName;
+            this.schema = model.schema;
             this.updatedAt = model.updatedAt;
             this.updatedBy = model.updatedBy;
         } 
-
-        /**
-         * comment.
-         */
-        public Builder comment(String comment) {
-            this.comment = comment;
-            return this;
-        }
 
         /**
          * createdAt.
@@ -195,10 +161,18 @@ public class Share extends TeaModel {
         }
 
         /**
-         * enableWrite.
+         * id.
          */
-        public Builder enableWrite(Boolean enableWrite) {
-            this.enableWrite = enableWrite;
+        public Builder id(String id) {
+            this.id = id;
+            return this;
+        }
+
+        /**
+         * name.
+         */
+        public Builder name(String name) {
+            this.name = name;
             return this;
         }
 
@@ -211,26 +185,10 @@ public class Share extends TeaModel {
         }
 
         /**
-         * providerTenantId.
+         * schema.
          */
-        public Builder providerTenantId(Long providerTenantId) {
-            this.providerTenantId = providerTenantId;
-            return this;
-        }
-
-        /**
-         * shareId.
-         */
-        public Builder shareId(String shareId) {
-            this.shareId = shareId;
-            return this;
-        }
-
-        /**
-         * shareName.
-         */
-        public Builder shareName(String shareName) {
-            this.shareName = shareName;
+        public Builder schema(ViewSchema schema) {
+            this.schema = schema;
             return this;
         }
 
@@ -250,8 +208,8 @@ public class Share extends TeaModel {
             return this;
         }
 
-        public Share build() {
-            return new Share(this);
+        public View build() {
+            return new View(this);
         } 
 
     } 

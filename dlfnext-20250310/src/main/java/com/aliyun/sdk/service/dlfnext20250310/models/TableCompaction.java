@@ -24,9 +24,14 @@ public class TableCompaction extends TeaModel {
     private Double cuUsage;
 
     @com.aliyun.core.annotation.NameInMap("lastCompactedFileTime")
+    @Deprecated
     private Long lastCompactedFileTime;
 
+    @com.aliyun.core.annotation.NameInMap("latencyFileEarliestTime")
+    private Long latencyFileEarliestTime;
+
     @com.aliyun.core.annotation.NameInMap("maxLevel0FileCount")
+    @Deprecated
     private String maxLevel0FileCount;
 
     @com.aliyun.core.annotation.NameInMap("tableId")
@@ -36,6 +41,7 @@ public class TableCompaction extends TeaModel {
         this.catalogId = builder.catalogId;
         this.cuUsage = builder.cuUsage;
         this.lastCompactedFileTime = builder.lastCompactedFileTime;
+        this.latencyFileEarliestTime = builder.latencyFileEarliestTime;
         this.maxLevel0FileCount = builder.maxLevel0FileCount;
         this.tableId = builder.tableId;
     }
@@ -74,6 +80,13 @@ public class TableCompaction extends TeaModel {
     }
 
     /**
+     * @return latencyFileEarliestTime
+     */
+    public Long getLatencyFileEarliestTime() {
+        return this.latencyFileEarliestTime;
+    }
+
+    /**
      * @return maxLevel0FileCount
      */
     public String getMaxLevel0FileCount() {
@@ -91,6 +104,7 @@ public class TableCompaction extends TeaModel {
         private String catalogId; 
         private Double cuUsage; 
         private Long lastCompactedFileTime; 
+        private Long latencyFileEarliestTime; 
         private String maxLevel0FileCount; 
         private String tableId; 
 
@@ -101,6 +115,7 @@ public class TableCompaction extends TeaModel {
             this.catalogId = model.catalogId;
             this.cuUsage = model.cuUsage;
             this.lastCompactedFileTime = model.lastCompactedFileTime;
+            this.latencyFileEarliestTime = model.latencyFileEarliestTime;
             this.maxLevel0FileCount = model.maxLevel0FileCount;
             this.tableId = model.tableId;
         } 
@@ -126,6 +141,14 @@ public class TableCompaction extends TeaModel {
          */
         public Builder lastCompactedFileTime(Long lastCompactedFileTime) {
             this.lastCompactedFileTime = lastCompactedFileTime;
+            return this;
+        }
+
+        /**
+         * latencyFileEarliestTime.
+         */
+        public Builder latencyFileEarliestTime(Long latencyFileEarliestTime) {
+            this.latencyFileEarliestTime = latencyFileEarliestTime;
             return this;
         }
 

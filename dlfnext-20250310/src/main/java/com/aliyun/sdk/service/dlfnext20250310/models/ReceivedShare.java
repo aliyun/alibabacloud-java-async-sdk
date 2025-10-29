@@ -29,6 +29,9 @@ public class ReceivedShare extends TeaModel {
     @com.aliyun.core.annotation.NameInMap("createdBy")
     private String createdBy;
 
+    @com.aliyun.core.annotation.NameInMap("enableWrite")
+    private Boolean enableWrite;
+
     @com.aliyun.core.annotation.NameInMap("owner")
     private String owner;
 
@@ -52,6 +55,7 @@ public class ReceivedShare extends TeaModel {
         this.comment = builder.comment;
         this.createdAt = builder.createdAt;
         this.createdBy = builder.createdBy;
+        this.enableWrite = builder.enableWrite;
         this.owner = builder.owner;
         this.providerTenantId = builder.providerTenantId;
         this.shareId = builder.shareId;
@@ -101,6 +105,13 @@ public class ReceivedShare extends TeaModel {
     }
 
     /**
+     * @return enableWrite
+     */
+    public Boolean getEnableWrite() {
+        return this.enableWrite;
+    }
+
+    /**
      * @return owner
      */
     public String getOwner() {
@@ -147,6 +158,7 @@ public class ReceivedShare extends TeaModel {
         private String comment; 
         private Long createdAt; 
         private String createdBy; 
+        private Boolean enableWrite; 
         private String owner; 
         private Long providerTenantId; 
         private String shareId; 
@@ -162,6 +174,7 @@ public class ReceivedShare extends TeaModel {
             this.comment = model.comment;
             this.createdAt = model.createdAt;
             this.createdBy = model.createdBy;
+            this.enableWrite = model.enableWrite;
             this.owner = model.owner;
             this.providerTenantId = model.providerTenantId;
             this.shareId = model.shareId;
@@ -199,6 +212,14 @@ public class ReceivedShare extends TeaModel {
          */
         public Builder createdBy(String createdBy) {
             this.createdBy = createdBy;
+            return this;
+        }
+
+        /**
+         * enableWrite.
+         */
+        public Builder enableWrite(Boolean enableWrite) {
+            this.enableWrite = enableWrite;
             return this;
         }
 

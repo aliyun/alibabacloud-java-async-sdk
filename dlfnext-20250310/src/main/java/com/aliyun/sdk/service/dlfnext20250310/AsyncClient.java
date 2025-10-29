@@ -236,6 +236,12 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<GetTableResponse> getTable(GetTableRequest request);
 
     /**
+     * @param request the request parameters of GetTableCompaction  GetTableCompactionRequest
+     * @return GetTableCompactionResponse
+     */
+    CompletableFuture<GetTableCompactionResponse> getTableCompaction(GetTableCompactionRequest request);
+
+    /**
      * @param request the request parameters of GetTableSnapshot  GetTableSnapshotRequest
      * @return GetTableSnapshotResponse
      */
@@ -246,6 +252,12 @@ public interface AsyncClient extends SdkAutoCloseable {
      * @return GetTableSummaryResponse
      */
     CompletableFuture<GetTableSummaryResponse> getTableSummary(GetTableSummaryRequest request);
+
+    /**
+     * @param request the request parameters of GetTableToken  GetTableTokenRequest
+     * @return GetTableTokenResponse
+     */
+    CompletableFuture<GetTableTokenResponse> getTableToken(GetTableTokenRequest request);
 
     /**
      * @param request the request parameters of GetUser  GetUserRequest
@@ -300,6 +312,12 @@ public interface AsyncClient extends SdkAutoCloseable {
      * @return ListPartitionSummariesResponse
      */
     CompletableFuture<ListPartitionSummariesResponse> listPartitionSummaries(ListPartitionSummariesRequest request);
+
+    /**
+     * @param request the request parameters of ListPartitions  ListPartitionsRequest
+     * @return ListPartitionsResponse
+     */
+    CompletableFuture<ListPartitionsResponse> listPartitions(ListPartitionsRequest request);
 
     /**
      * @param request the request parameters of ListPermissions  ListPermissionsRequest

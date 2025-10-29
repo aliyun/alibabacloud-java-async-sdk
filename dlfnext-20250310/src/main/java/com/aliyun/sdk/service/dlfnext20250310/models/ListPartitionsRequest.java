@@ -12,52 +12,50 @@ import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
  * 
- * {@link ListTableDetailsRequest} extends {@link RequestModel}
+ * {@link ListPartitionsRequest} extends {@link RequestModel}
  *
- * <p>ListTableDetailsRequest</p>
+ * <p>ListPartitionsRequest</p>
  */
-public class ListTableDetailsRequest extends Request {
+public class ListPartitionsRequest extends Request {
     @com.aliyun.core.annotation.Path
     @com.aliyun.core.annotation.NameInMap("catalogId")
-    @com.aliyun.core.annotation.Validation(required = true)
     private String catalogId;
 
     @com.aliyun.core.annotation.Path
     @com.aliyun.core.annotation.NameInMap("database")
-    @com.aliyun.core.annotation.Validation(required = true)
     private String database;
+
+    @com.aliyun.core.annotation.Path
+    @com.aliyun.core.annotation.NameInMap("table")
+    private String table;
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("maxResults")
-    private Integer maxResults;
+    private Long maxResults;
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("pageToken")
     private String pageToken;
 
     @com.aliyun.core.annotation.Query
-    @com.aliyun.core.annotation.NameInMap("tableNamePattern")
-    private String tableNamePattern;
+    @com.aliyun.core.annotation.NameInMap("partitionNamePattern")
+    private String partitionNamePattern;
 
-    @com.aliyun.core.annotation.Query
-    @com.aliyun.core.annotation.NameInMap("type")
-    private String type;
-
-    private ListTableDetailsRequest(Builder builder) {
+    private ListPartitionsRequest(Builder builder) {
         super(builder);
         this.catalogId = builder.catalogId;
         this.database = builder.database;
+        this.table = builder.table;
         this.maxResults = builder.maxResults;
         this.pageToken = builder.pageToken;
-        this.tableNamePattern = builder.tableNamePattern;
-        this.type = builder.type;
+        this.partitionNamePattern = builder.partitionNamePattern;
     }
 
     public static Builder builder() {
         return new Builder();
     }
 
-    public static ListTableDetailsRequest create() {
+    public static ListPartitionsRequest create() {
         return builder().build();
     }
 
@@ -81,9 +79,16 @@ public class ListTableDetailsRequest extends Request {
     }
 
     /**
+     * @return table
+     */
+    public String getTable() {
+        return this.table;
+    }
+
+    /**
      * @return maxResults
      */
-    public Integer getMaxResults() {
+    public Long getMaxResults() {
         return this.maxResults;
     }
 
@@ -95,46 +100,36 @@ public class ListTableDetailsRequest extends Request {
     }
 
     /**
-     * @return tableNamePattern
+     * @return partitionNamePattern
      */
-    public String getTableNamePattern() {
-        return this.tableNamePattern;
+    public String getPartitionNamePattern() {
+        return this.partitionNamePattern;
     }
 
-    /**
-     * @return type
-     */
-    public String getType() {
-        return this.type;
-    }
-
-    public static final class Builder extends Request.Builder<ListTableDetailsRequest, Builder> {
+    public static final class Builder extends Request.Builder<ListPartitionsRequest, Builder> {
         private String catalogId; 
         private String database; 
-        private Integer maxResults; 
+        private String table; 
+        private Long maxResults; 
         private String pageToken; 
-        private String tableNamePattern; 
-        private String type; 
+        private String partitionNamePattern; 
 
         private Builder() {
             super();
         } 
 
-        private Builder(ListTableDetailsRequest request) {
+        private Builder(ListPartitionsRequest request) {
             super(request);
             this.catalogId = request.catalogId;
             this.database = request.database;
+            this.table = request.table;
             this.maxResults = request.maxResults;
             this.pageToken = request.pageToken;
-            this.tableNamePattern = request.tableNamePattern;
-            this.type = request.type;
+            this.partitionNamePattern = request.partitionNamePattern;
         } 
 
         /**
-         * <p>This parameter is required.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>clg-paimon-xxx</p>
+         * catalogId.
          */
         public Builder catalogId(String catalogId) {
             this.putPathParameter("catalogId", catalogId);
@@ -143,10 +138,7 @@ public class ListTableDetailsRequest extends Request {
         }
 
         /**
-         * <p>This parameter is required.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>database_name</p>
+         * database.
          */
         public Builder database(String database) {
             this.putPathParameter("database", database);
@@ -155,9 +147,18 @@ public class ListTableDetailsRequest extends Request {
         }
 
         /**
+         * table.
+         */
+        public Builder table(String table) {
+            this.putPathParameter("table", table);
+            this.table = table;
+            return this;
+        }
+
+        /**
          * maxResults.
          */
-        public Builder maxResults(Integer maxResults) {
+        public Builder maxResults(Long maxResults) {
             this.putQueryParameter("maxResults", maxResults);
             this.maxResults = maxResults;
             return this;
@@ -173,26 +174,17 @@ public class ListTableDetailsRequest extends Request {
         }
 
         /**
-         * tableNamePattern.
+         * partitionNamePattern.
          */
-        public Builder tableNamePattern(String tableNamePattern) {
-            this.putQueryParameter("tableNamePattern", tableNamePattern);
-            this.tableNamePattern = tableNamePattern;
-            return this;
-        }
-
-        /**
-         * type.
-         */
-        public Builder type(String type) {
-            this.putQueryParameter("type", type);
-            this.type = type;
+        public Builder partitionNamePattern(String partitionNamePattern) {
+            this.putQueryParameter("partitionNamePattern", partitionNamePattern);
+            this.partitionNamePattern = partitionNamePattern;
             return this;
         }
 
         @Override
-        public ListTableDetailsRequest build() {
-            return new ListTableDetailsRequest(this);
+        public ListPartitionsRequest build() {
+            return new ListPartitionsRequest(this);
         } 
 
     } 

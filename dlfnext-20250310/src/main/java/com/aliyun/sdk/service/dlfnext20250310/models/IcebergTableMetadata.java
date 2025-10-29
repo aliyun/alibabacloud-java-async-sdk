@@ -23,6 +23,9 @@ public class IcebergTableMetadata extends TeaModel {
     @com.aliyun.core.annotation.NameInMap("fields")
     private java.util.List<IcebergNestedField> fields;
 
+    @com.aliyun.core.annotation.NameInMap("identifierFieldIds")
+    private java.util.List<Integer> identifierFieldIds;
+
     @com.aliyun.core.annotation.NameInMap("partitionFields")
     private java.util.List<IcebergPartitionField> partitionFields;
 
@@ -32,6 +35,7 @@ public class IcebergTableMetadata extends TeaModel {
     private IcebergTableMetadata(Builder builder) {
         this.currentSnapshot = builder.currentSnapshot;
         this.fields = builder.fields;
+        this.identifierFieldIds = builder.identifierFieldIds;
         this.partitionFields = builder.partitionFields;
         this.properties = builder.properties;
     }
@@ -63,6 +67,13 @@ public class IcebergTableMetadata extends TeaModel {
     }
 
     /**
+     * @return identifierFieldIds
+     */
+    public java.util.List<Integer> getIdentifierFieldIds() {
+        return this.identifierFieldIds;
+    }
+
+    /**
      * @return partitionFields
      */
     public java.util.List<IcebergPartitionField> getPartitionFields() {
@@ -79,6 +90,7 @@ public class IcebergTableMetadata extends TeaModel {
     public static final class Builder {
         private IcebergSnapshot currentSnapshot; 
         private java.util.List<IcebergNestedField> fields; 
+        private java.util.List<Integer> identifierFieldIds; 
         private java.util.List<IcebergPartitionField> partitionFields; 
         private java.util.Map<String, String> properties; 
 
@@ -88,6 +100,7 @@ public class IcebergTableMetadata extends TeaModel {
         private Builder(IcebergTableMetadata model) {
             this.currentSnapshot = model.currentSnapshot;
             this.fields = model.fields;
+            this.identifierFieldIds = model.identifierFieldIds;
             this.partitionFields = model.partitionFields;
             this.properties = model.properties;
         } 
@@ -105,6 +118,14 @@ public class IcebergTableMetadata extends TeaModel {
          */
         public Builder fields(java.util.List<IcebergNestedField> fields) {
             this.fields = fields;
+            return this;
+        }
+
+        /**
+         * identifierFieldIds.
+         */
+        public Builder identifierFieldIds(java.util.List<Integer> identifierFieldIds) {
+            this.identifierFieldIds = identifierFieldIds;
             return this;
         }
 

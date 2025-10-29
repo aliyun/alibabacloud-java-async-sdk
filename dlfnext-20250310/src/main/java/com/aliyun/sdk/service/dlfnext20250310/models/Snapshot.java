@@ -44,17 +44,29 @@ public class Snapshot extends TeaModel {
     @com.aliyun.core.annotation.NameInMap("id")
     private Long id;
 
+    @com.aliyun.core.annotation.NameInMap("idString")
+    private String idString;
+
     @com.aliyun.core.annotation.NameInMap("indexManifest")
     private String indexManifest;
 
     @com.aliyun.core.annotation.NameInMap("logOffsets")
     private java.util.Map<String, Long> logOffsets;
 
+    @com.aliyun.core.annotation.NameInMap("parentIdString")
+    private String parentIdString;
+
     @com.aliyun.core.annotation.NameInMap("schemaId")
     private Long schemaId;
 
+    @com.aliyun.core.annotation.NameInMap("sequenceNumber")
+    private Long sequenceNumber;
+
     @com.aliyun.core.annotation.NameInMap("statistics")
     private String statistics;
+
+    @com.aliyun.core.annotation.NameInMap("summary")
+    private java.util.Map<String, String> summary;
 
     @com.aliyun.core.annotation.NameInMap("timeMillis")
     private Long timeMillis;
@@ -78,10 +90,14 @@ public class Snapshot extends TeaModel {
         this.deltaManifestList = builder.deltaManifestList;
         this.deltaRecordCount = builder.deltaRecordCount;
         this.id = builder.id;
+        this.idString = builder.idString;
         this.indexManifest = builder.indexManifest;
         this.logOffsets = builder.logOffsets;
+        this.parentIdString = builder.parentIdString;
         this.schemaId = builder.schemaId;
+        this.sequenceNumber = builder.sequenceNumber;
         this.statistics = builder.statistics;
+        this.summary = builder.summary;
         this.timeMillis = builder.timeMillis;
         this.totalRecordCount = builder.totalRecordCount;
         this.version = builder.version;
@@ -164,6 +180,13 @@ public class Snapshot extends TeaModel {
     }
 
     /**
+     * @return idString
+     */
+    public String getIdString() {
+        return this.idString;
+    }
+
+    /**
      * @return indexManifest
      */
     public String getIndexManifest() {
@@ -178,6 +201,13 @@ public class Snapshot extends TeaModel {
     }
 
     /**
+     * @return parentIdString
+     */
+    public String getParentIdString() {
+        return this.parentIdString;
+    }
+
+    /**
      * @return schemaId
      */
     public Long getSchemaId() {
@@ -185,10 +215,24 @@ public class Snapshot extends TeaModel {
     }
 
     /**
+     * @return sequenceNumber
+     */
+    public Long getSequenceNumber() {
+        return this.sequenceNumber;
+    }
+
+    /**
      * @return statistics
      */
     public String getStatistics() {
         return this.statistics;
+    }
+
+    /**
+     * @return summary
+     */
+    public java.util.Map<String, String> getSummary() {
+        return this.summary;
     }
 
     /**
@@ -229,10 +273,14 @@ public class Snapshot extends TeaModel {
         private String deltaManifestList; 
         private Long deltaRecordCount; 
         private Long id; 
+        private String idString; 
         private String indexManifest; 
         private java.util.Map<String, Long> logOffsets; 
+        private String parentIdString; 
         private Long schemaId; 
+        private Long sequenceNumber; 
         private String statistics; 
+        private java.util.Map<String, String> summary; 
         private Long timeMillis; 
         private Long totalRecordCount; 
         private Integer version; 
@@ -251,10 +299,14 @@ public class Snapshot extends TeaModel {
             this.deltaManifestList = model.deltaManifestList;
             this.deltaRecordCount = model.deltaRecordCount;
             this.id = model.id;
+            this.idString = model.idString;
             this.indexManifest = model.indexManifest;
             this.logOffsets = model.logOffsets;
+            this.parentIdString = model.parentIdString;
             this.schemaId = model.schemaId;
+            this.sequenceNumber = model.sequenceNumber;
             this.statistics = model.statistics;
+            this.summary = model.summary;
             this.timeMillis = model.timeMillis;
             this.totalRecordCount = model.totalRecordCount;
             this.version = model.version;
@@ -334,6 +386,14 @@ public class Snapshot extends TeaModel {
         }
 
         /**
+         * idString.
+         */
+        public Builder idString(String idString) {
+            this.idString = idString;
+            return this;
+        }
+
+        /**
          * indexManifest.
          */
         public Builder indexManifest(String indexManifest) {
@@ -350,6 +410,14 @@ public class Snapshot extends TeaModel {
         }
 
         /**
+         * parentIdString.
+         */
+        public Builder parentIdString(String parentIdString) {
+            this.parentIdString = parentIdString;
+            return this;
+        }
+
+        /**
          * schemaId.
          */
         public Builder schemaId(Long schemaId) {
@@ -358,10 +426,26 @@ public class Snapshot extends TeaModel {
         }
 
         /**
+         * sequenceNumber.
+         */
+        public Builder sequenceNumber(Long sequenceNumber) {
+            this.sequenceNumber = sequenceNumber;
+            return this;
+        }
+
+        /**
          * statistics.
          */
         public Builder statistics(String statistics) {
             this.statistics = statistics;
+            return this;
+        }
+
+        /**
+         * summary.
+         */
+        public Builder summary(java.util.Map<String, String> summary) {
+            this.summary = summary;
             return this;
         }
 
