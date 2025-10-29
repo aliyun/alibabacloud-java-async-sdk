@@ -119,6 +119,9 @@ public class DescribeLiveStreamTranscodeInfoResponseBody extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("BitrateWithSource")
         private java.util.Map<String, ?> bitrateWithSource;
 
+        @com.aliyun.core.annotation.NameInMap("DeInterlaced")
+        private Boolean deInterlaced;
+
         @com.aliyun.core.annotation.NameInMap("ExtWithSource")
         private java.util.Map<String, ?> extWithSource;
 
@@ -160,6 +163,7 @@ public class DescribeLiveStreamTranscodeInfoResponseBody extends TeaModel {
             this.audioRate = builder.audioRate;
             this.bframes = builder.bframes;
             this.bitrateWithSource = builder.bitrateWithSource;
+            this.deInterlaced = builder.deInterlaced;
             this.extWithSource = builder.extWithSource;
             this.FPS = builder.FPS;
             this.fpsWithSource = builder.fpsWithSource;
@@ -228,6 +232,13 @@ public class DescribeLiveStreamTranscodeInfoResponseBody extends TeaModel {
          */
         public java.util.Map<String, ?> getBitrateWithSource() {
             return this.bitrateWithSource;
+        }
+
+        /**
+         * @return deInterlaced
+         */
+        public Boolean getDeInterlaced() {
+            return this.deInterlaced;
         }
 
         /**
@@ -315,6 +326,7 @@ public class DescribeLiveStreamTranscodeInfoResponseBody extends TeaModel {
             private Integer audioRate; 
             private String bframes; 
             private java.util.Map<String, ?> bitrateWithSource; 
+            private Boolean deInterlaced; 
             private java.util.Map<String, ?> extWithSource; 
             private Integer FPS; 
             private java.util.Map<String, ?> fpsWithSource; 
@@ -338,6 +350,7 @@ public class DescribeLiveStreamTranscodeInfoResponseBody extends TeaModel {
                 this.audioRate = model.audioRate;
                 this.bframes = model.bframes;
                 this.bitrateWithSource = model.bitrateWithSource;
+                this.deInterlaced = model.deInterlaced;
                 this.extWithSource = model.extWithSource;
                 this.FPS = model.FPS;
                 this.fpsWithSource = model.fpsWithSource;
@@ -438,6 +451,14 @@ public class DescribeLiveStreamTranscodeInfoResponseBody extends TeaModel {
              */
             public Builder bitrateWithSource(java.util.Map<String, ?> bitrateWithSource) {
                 this.bitrateWithSource = bitrateWithSource;
+                return this;
+            }
+
+            /**
+             * DeInterlaced.
+             */
+            public Builder deInterlaced(Boolean deInterlaced) {
+                this.deInterlaced = deInterlaced;
                 return this;
             }
 

@@ -47,6 +47,10 @@ public class AddCustomLiveStreamTranscodeRequest extends Request {
     private String bitrateWithSource;
 
     @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("DeInterlaced")
+    private Boolean deInterlaced;
+
+    @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("Domain")
     @com.aliyun.core.annotation.Validation(required = true)
     private String domain;
@@ -134,6 +138,7 @@ public class AddCustomLiveStreamTranscodeRequest extends Request {
         this.audioProfile = builder.audioProfile;
         this.audioRate = builder.audioRate;
         this.bitrateWithSource = builder.bitrateWithSource;
+        this.deInterlaced = builder.deInterlaced;
         this.domain = builder.domain;
         this.encryptParameters = builder.encryptParameters;
         this.extWithSource = builder.extWithSource;
@@ -215,6 +220,13 @@ public class AddCustomLiveStreamTranscodeRequest extends Request {
      */
     public String getBitrateWithSource() {
         return this.bitrateWithSource;
+    }
+
+    /**
+     * @return deInterlaced
+     */
+    public Boolean getDeInterlaced() {
+        return this.deInterlaced;
     }
 
     /**
@@ -358,6 +370,7 @@ public class AddCustomLiveStreamTranscodeRequest extends Request {
         private String audioProfile; 
         private Integer audioRate; 
         private String bitrateWithSource; 
+        private Boolean deInterlaced; 
         private String domain; 
         private String encryptParameters; 
         private String extWithSource; 
@@ -391,6 +404,7 @@ public class AddCustomLiveStreamTranscodeRequest extends Request {
             this.audioProfile = request.audioProfile;
             this.audioRate = request.audioRate;
             this.bitrateWithSource = request.bitrateWithSource;
+            this.deInterlaced = request.deInterlaced;
             this.domain = request.domain;
             this.encryptParameters = request.encryptParameters;
             this.extWithSource = request.extWithSource;
@@ -516,6 +530,15 @@ public class AddCustomLiveStreamTranscodeRequest extends Request {
         public Builder bitrateWithSource(String bitrateWithSource) {
             this.putQueryParameter("BitrateWithSource", bitrateWithSource);
             this.bitrateWithSource = bitrateWithSource;
+            return this;
+        }
+
+        /**
+         * DeInterlaced.
+         */
+        public Builder deInterlaced(Boolean deInterlaced) {
+            this.putQueryParameter("DeInterlaced", deInterlaced);
+            this.deInterlaced = deInterlaced;
             return this;
         }
 

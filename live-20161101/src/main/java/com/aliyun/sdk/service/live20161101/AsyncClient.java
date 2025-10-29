@@ -4113,6 +4113,22 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<PublishLiveStagingConfigToProductionResponse> publishLiveStagingConfigToProduction(PublishLiveStagingConfigToProductionRequest request);
 
     /**
+     * <b>description</b> :
+     * <h2>请求说明</h2>
+     * <ul>
+     * <li>该接口允许用户为一个或多个指定的直播流设置新的录制文件存储期限。</li>
+     * <li><code>Tag</code> 字段必须符合格式 <code>[0-9]+days</code>，表示直播结束后录制内容将被保存的天数。</li>
+     * <li>如果对某个流的存储时间修改失败，错误信息会被记录在返回结果中。对于失败的情况，调用方应重试最多3次；如果超过重试次数仍失败，则视为最终失败。</li>
+     * <li>为了支持未来可能的需求变化（如更长的存储周期），请确保您的系统能够处理不同的时间段值。</li>
+     * <li>成功执行后，供应商会通过异步回调的方式通知调用方所有操作的结果。若回调失败，将按照1小时、2小时、4小时的时间间隔尝试重新发送，直至成功或达到最大重试次数。</li>
+     * </ul>
+     * 
+     * @param request the request parameters of PutRecordStorageLifeCycle  PutRecordStorageLifeCycleRequest
+     * @return PutRecordStorageLifeCycleResponse
+     */
+    CompletableFuture<PutRecordStorageLifeCycleResponse> putRecordStorageLifeCycle(PutRecordStorageLifeCycleRequest request);
+
+    /**
      * @param request the request parameters of QueryLiveDomainMultiStreamList  QueryLiveDomainMultiStreamListRequest
      * @return QueryLiveDomainMultiStreamListResponse
      */
