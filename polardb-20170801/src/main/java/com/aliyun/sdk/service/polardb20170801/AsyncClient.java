@@ -38,6 +38,12 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<AddFirewallRulesResponse> addFirewallRules(AddFirewallRulesRequest request);
 
     /**
+     * @param request the request parameters of AddPolarFsQuota  AddPolarFsQuotaRequest
+     * @return AddPolarFsQuotaResponse
+     */
+    CompletableFuture<AddPolarFsQuotaResponse> addPolarFsQuota(AddPolarFsQuotaRequest request);
+
+    /**
      * @param request the request parameters of AddSQLRateLimitingRules  AddSQLRateLimitingRulesRequest
      * @return AddSQLRateLimitingRulesResponse
      */
@@ -60,6 +66,12 @@ public interface AsyncClient extends SdkAutoCloseable {
      * @return CancelCronJobPolicyServerlessResponse
      */
     CompletableFuture<CancelCronJobPolicyServerlessResponse> cancelCronJobPolicyServerless(CancelCronJobPolicyServerlessRequest request);
+
+    /**
+     * @param request the request parameters of CancelPolarFsFileQuota  CancelPolarFsFileQuotaRequest
+     * @return CancelPolarFsFileQuotaResponse
+     */
+    CompletableFuture<CancelPolarFsFileQuotaResponse> cancelPolarFsFileQuota(CancelPolarFsFileQuotaRequest request);
 
     /**
      * @param request the request parameters of CancelScheduleTasks  CancelScheduleTasksRequest
@@ -510,6 +522,12 @@ public interface AsyncClient extends SdkAutoCloseable {
      * @return DeleteParameterGroupResponse
      */
     CompletableFuture<DeleteParameterGroupResponse> deleteParameterGroup(DeleteParameterGroupRequest request);
+
+    /**
+     * @param request the request parameters of DeletePolarFsQuota  DeletePolarFsQuotaRequest
+     * @return DeletePolarFsQuotaResponse
+     */
+    CompletableFuture<DeletePolarFsQuotaResponse> deletePolarFsQuota(DeletePolarFsQuotaRequest request);
 
     /**
      * @param request the request parameters of DeleteSQLRateLimitingRules  DeleteSQLRateLimitingRulesRequest
@@ -1115,6 +1133,18 @@ public interface AsyncClient extends SdkAutoCloseable {
      * @return DescribePendingMaintenanceActionsResponse
      */
     CompletableFuture<DescribePendingMaintenanceActionsResponse> describePendingMaintenanceActions(DescribePendingMaintenanceActionsRequest request);
+
+    /**
+     * @param request the request parameters of DescribePolarFsAttribute  DescribePolarFsAttributeRequest
+     * @return DescribePolarFsAttributeResponse
+     */
+    CompletableFuture<DescribePolarFsAttributeResponse> describePolarFsAttribute(DescribePolarFsAttributeRequest request);
+
+    /**
+     * @param request the request parameters of DescribePolarFsQuota  DescribePolarFsQuotaRequest
+     * @return DescribePolarFsQuotaResponse
+     */
+    CompletableFuture<DescribePolarFsQuotaResponse> describePolarFsQuota(DescribePolarFsQuotaRequest request);
 
     /**
      * @param request the request parameters of DescribePolarSQLCollectorPolicy  DescribePolarSQLCollectorPolicyRequest
@@ -1855,6 +1885,12 @@ public interface AsyncClient extends SdkAutoCloseable {
      * @return RevokeAccountPrivilegeZonalResponse
      */
     CompletableFuture<RevokeAccountPrivilegeZonalResponse> revokeAccountPrivilegeZonal(RevokeAccountPrivilegeZonalRequest request);
+
+    /**
+     * @param request the request parameters of SetPolarFsFileQuota  SetPolarFsFileQuotaRequest
+     * @return SetPolarFsFileQuotaResponse
+     */
+    CompletableFuture<SetPolarFsFileQuotaResponse> setPolarFsFileQuota(SetPolarFsFileQuotaRequest request);
 
     /**
      * @param request the request parameters of SwitchOverGlobalDatabaseNetwork  SwitchOverGlobalDatabaseNetworkRequest

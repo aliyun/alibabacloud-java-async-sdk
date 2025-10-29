@@ -167,6 +167,9 @@ public class DescribeDBClusterAttributeResponseBody extends TeaModel {
     @com.aliyun.core.annotation.NameInMap("SQLSize")
     private Long SQLSize;
 
+    @com.aliyun.core.annotation.NameInMap("SearchClusterStatus")
+    private String searchClusterStatus;
+
     @com.aliyun.core.annotation.NameInMap("SearchCompressStorageUsed")
     private Long searchCompressStorageUsed;
 
@@ -272,6 +275,7 @@ public class DescribeDBClusterAttributeResponseBody extends TeaModel {
         this.restoreType = builder.restoreType;
         this.rowCompression = builder.rowCompression;
         this.SQLSize = builder.SQLSize;
+        this.searchClusterStatus = builder.searchClusterStatus;
         this.searchCompressStorageUsed = builder.searchCompressStorageUsed;
         this.searchStorageUsed = builder.searchStorageUsed;
         this.serverlessType = builder.serverlessType;
@@ -655,6 +659,13 @@ public class DescribeDBClusterAttributeResponseBody extends TeaModel {
     }
 
     /**
+     * @return searchClusterStatus
+     */
+    public String getSearchClusterStatus() {
+        return this.searchClusterStatus;
+    }
+
+    /**
      * @return searchCompressStorageUsed
      */
     public Long getSearchCompressStorageUsed() {
@@ -831,6 +842,7 @@ public class DescribeDBClusterAttributeResponseBody extends TeaModel {
         private String restoreType; 
         private String rowCompression; 
         private Long SQLSize; 
+        private String searchClusterStatus; 
         private Long searchCompressStorageUsed; 
         private Long searchStorageUsed; 
         private String serverlessType; 
@@ -904,6 +916,7 @@ public class DescribeDBClusterAttributeResponseBody extends TeaModel {
             this.restoreType = model.restoreType;
             this.rowCompression = model.rowCompression;
             this.SQLSize = model.SQLSize;
+            this.searchClusterStatus = model.searchClusterStatus;
             this.searchCompressStorageUsed = model.searchCompressStorageUsed;
             this.searchStorageUsed = model.searchStorageUsed;
             this.serverlessType = model.serverlessType;
@@ -1578,6 +1591,14 @@ public class DescribeDBClusterAttributeResponseBody extends TeaModel {
          */
         public Builder SQLSize(Long SQLSize) {
             this.SQLSize = SQLSize;
+            return this;
+        }
+
+        /**
+         * SearchClusterStatus.
+         */
+        public Builder searchClusterStatus(String searchClusterStatus) {
+            this.searchClusterStatus = searchClusterStatus;
             return this;
         }
 
