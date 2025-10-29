@@ -377,8 +377,14 @@ public class GetJobResponseBody extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("jobId")
         private String jobId;
 
+        @com.aliyun.core.annotation.NameInMap("logFile")
+        private java.util.Map<String, ?> logFile;
+
         @com.aliyun.core.annotation.NameInMap("output")
         private String output;
+
+        @com.aliyun.core.annotation.NameInMap("outputJsonPlan")
+        private Object outputJsonPlan;
 
         @com.aliyun.core.annotation.NameInMap("parameters")
         private java.util.Map<String, String> parameters;
@@ -408,7 +414,9 @@ public class GetJobResponseBody extends TeaModel {
             this.executeType = builder.executeType;
             this.isPassAssertCheck = builder.isPassAssertCheck;
             this.jobId = builder.jobId;
+            this.logFile = builder.logFile;
             this.output = builder.output;
+            this.outputJsonPlan = builder.outputJsonPlan;
             this.parameters = builder.parameters;
             this.status = builder.status;
             this.statusDetail = builder.statusDetail;
@@ -489,10 +497,24 @@ public class GetJobResponseBody extends TeaModel {
         }
 
         /**
+         * @return logFile
+         */
+        public java.util.Map<String, ?> getLogFile() {
+            return this.logFile;
+        }
+
+        /**
          * @return output
          */
         public String getOutput() {
             return this.output;
+        }
+
+        /**
+         * @return outputJsonPlan
+         */
+        public Object getOutputJsonPlan() {
+            return this.outputJsonPlan;
         }
 
         /**
@@ -547,7 +569,9 @@ public class GetJobResponseBody extends TeaModel {
             private String executeType; 
             private Boolean isPassAssertCheck; 
             private String jobId; 
+            private java.util.Map<String, ?> logFile; 
             private String output; 
+            private Object outputJsonPlan; 
             private java.util.Map<String, String> parameters; 
             private String status; 
             private java.util.Map<String, JobStatusDetailValue> statusDetail; 
@@ -568,7 +592,9 @@ public class GetJobResponseBody extends TeaModel {
                 this.executeType = model.executeType;
                 this.isPassAssertCheck = model.isPassAssertCheck;
                 this.jobId = model.jobId;
+                this.logFile = model.logFile;
                 this.output = model.output;
+                this.outputJsonPlan = model.outputJsonPlan;
                 this.parameters = model.parameters;
                 this.status = model.status;
                 this.statusDetail = model.statusDetail;
@@ -650,10 +676,26 @@ public class GetJobResponseBody extends TeaModel {
             }
 
             /**
+             * logFile.
+             */
+            public Builder logFile(java.util.Map<String, ?> logFile) {
+                this.logFile = logFile;
+                return this;
+            }
+
+            /**
              * output.
              */
             public Builder output(String output) {
                 this.output = output;
+                return this;
+            }
+
+            /**
+             * outputJsonPlan.
+             */
+            public Builder outputJsonPlan(Object outputJsonPlan) {
+                this.outputJsonPlan = outputJsonPlan;
                 return this;
             }
 

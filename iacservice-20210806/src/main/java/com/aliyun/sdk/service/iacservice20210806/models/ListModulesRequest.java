@@ -26,6 +26,10 @@ public class ListModulesRequest extends Request {
     private String keyword;
 
     @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("moduleName")
+    private String moduleName;
+
+    @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("pageNumber")
     private Integer pageNumber;
 
@@ -46,6 +50,7 @@ public class ListModulesRequest extends Request {
         super(builder);
         this.groupId = builder.groupId;
         this.keyword = builder.keyword;
+        this.moduleName = builder.moduleName;
         this.pageNumber = builder.pageNumber;
         this.pageSize = builder.pageSize;
         this.projectId = builder.projectId;
@@ -80,6 +85,13 @@ public class ListModulesRequest extends Request {
     }
 
     /**
+     * @return moduleName
+     */
+    public String getModuleName() {
+        return this.moduleName;
+    }
+
+    /**
      * @return pageNumber
      */
     public Integer getPageNumber() {
@@ -110,6 +122,7 @@ public class ListModulesRequest extends Request {
     public static final class Builder extends Request.Builder<ListModulesRequest, Builder> {
         private String groupId; 
         private String keyword; 
+        private String moduleName; 
         private Integer pageNumber; 
         private Integer pageSize; 
         private String projectId; 
@@ -123,6 +136,7 @@ public class ListModulesRequest extends Request {
             super(request);
             this.groupId = request.groupId;
             this.keyword = request.keyword;
+            this.moduleName = request.moduleName;
             this.pageNumber = request.pageNumber;
             this.pageSize = request.pageSize;
             this.projectId = request.projectId;
@@ -144,6 +158,15 @@ public class ListModulesRequest extends Request {
         public Builder keyword(String keyword) {
             this.putQueryParameter("keyword", keyword);
             this.keyword = keyword;
+            return this;
+        }
+
+        /**
+         * moduleName.
+         */
+        public Builder moduleName(String moduleName) {
+            this.putQueryParameter("moduleName", moduleName);
+            this.moduleName = moduleName;
             return this;
         }
 
