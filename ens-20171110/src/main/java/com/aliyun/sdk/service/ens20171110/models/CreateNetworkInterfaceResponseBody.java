@@ -67,7 +67,7 @@ public class CreateNetworkInterfaceResponseBody extends TeaModel {
         } 
 
         /**
-         * NetworkInterfaceIds.
+         * <p>A list of ENI IDs.</p>
          */
         public Builder networkInterfaceIds(java.util.List<String> networkInterfaceIds) {
             this.networkInterfaceIds = networkInterfaceIds;
@@ -75,7 +75,10 @@ public class CreateNetworkInterfaceResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * <p>Request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>F3B261DD-3858-4D3C-877D-303ADF374600</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;

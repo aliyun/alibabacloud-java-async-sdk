@@ -59,7 +59,7 @@ public class BatchEventRebootInstanceRequest extends Request {
         } 
 
         /**
-         * EventInfos.
+         * <p>The details of events.</p>
          */
         public Builder eventInfos(java.util.List<EventInfos> eventInfos) {
             String eventInfosShrink = shrink(eventInfos, "EventInfos", "json");
@@ -154,7 +154,10 @@ public class BatchEventRebootInstanceRequest extends Request {
             } 
 
             /**
-             * EventId.
+             * <p>The ID of the system event.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>e-4452cec5a8f8eb9b2879a054207687d6</p>
              */
             public Builder eventId(String eventId) {
                 this.eventId = eventId;
@@ -162,7 +165,14 @@ public class BatchEventRebootInstanceRequest extends Request {
             }
 
             /**
-             * OpsType.
+             * <p>The type of the O&amp;M task.</p>
+             * <ul>
+             * <li>immediate</li>
+             * <li>scheduled</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>immediate</p>
              */
             public Builder opsType(String opsType) {
                 this.opsType = opsType;
@@ -170,7 +180,10 @@ public class BatchEventRebootInstanceRequest extends Request {
             }
 
             /**
-             * PlanTime.
+             * <p>The execution time of the reservation. The timestamp is measured in milliseconds. If the OpsType parameter is set to scheduled, this parameter is required.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1742452232000</p>
              */
             public Builder planTime(Long planTime) {
                 this.planTime = planTime;
@@ -178,7 +191,10 @@ public class BatchEventRebootInstanceRequest extends Request {
             }
 
             /**
-             * ResourceId.
+             * <p>A client ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>n-54hi3ffi63zrjt4wzx9mepeyh</p>
              */
             public Builder resourceId(String resourceId) {
                 this.resourceId = resourceId;

@@ -93,7 +93,10 @@ public class DescribeNASAvailableResourceInfoResponseBody extends TeaModel {
         } 
 
         /**
-         * Code.
+         * <p>The returned service code. A value of 0 indicates that the operation was successful.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>0</p>
          */
         public Builder code(String code) {
             this.code = code;
@@ -101,7 +104,10 @@ public class DescribeNASAvailableResourceInfoResponseBody extends TeaModel {
         }
 
         /**
-         * Message.
+         * <p>The error message.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>you are not authorized to this workspace, or workspace not exists.</p>
          */
         public Builder message(String message) {
             this.message = message;
@@ -109,7 +115,7 @@ public class DescribeNASAvailableResourceInfoResponseBody extends TeaModel {
         }
 
         /**
-         * NasAvailableResourceInfo.
+         * <p>The information of available NAS resources.</p>
          */
         public Builder nasAvailableResourceInfo(java.util.List<NasAvailableResourceInfo> nasAvailableResourceInfo) {
             this.nasAvailableResourceInfo = nasAvailableResourceInfo;
@@ -117,7 +123,10 @@ public class DescribeNASAvailableResourceInfoResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * <p>Request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>AAE90880-4970-4D81-A534-A6C0F3631F74</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -261,7 +270,7 @@ public class DescribeNASAvailableResourceInfoResponseBody extends TeaModel {
             } 
 
             /**
-             * Ability.
+             * <p>The product supported by the edge node.</p>
              */
             public Builder ability(java.util.List<String> ability) {
                 this.ability = ability;
@@ -269,7 +278,10 @@ public class DescribeNASAvailableResourceInfoResponseBody extends TeaModel {
             }
 
             /**
-             * Area.
+             * <p>The region to which the ENS node belongs.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>SouthWestChina</p>
              */
             public Builder area(String area) {
                 this.area = area;
@@ -277,7 +289,10 @@ public class DescribeNASAvailableResourceInfoResponseBody extends TeaModel {
             }
 
             /**
-             * EnName.
+             * <p>The English name.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>cn-chenzhou-telecom_unicom_cmcc</p>
              */
             public Builder enName(String enName) {
                 this.enName = enName;
@@ -285,7 +300,10 @@ public class DescribeNASAvailableResourceInfoResponseBody extends TeaModel {
             }
 
             /**
-             * EnsRegionId.
+             * <p>The ID of the ENS node.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>cn-chenzhou-telecom_unicom_cmcc</p>
              */
             public Builder ensRegionId(String ensRegionId) {
                 this.ensRegionId = ensRegionId;
@@ -293,7 +311,7 @@ public class DescribeNASAvailableResourceInfoResponseBody extends TeaModel {
             }
 
             /**
-             * EnsRegionName.
+             * <p>The name of the ENS node.</p>
              */
             public Builder ensRegionName(String ensRegionName) {
                 this.ensRegionName = ensRegionName;
@@ -301,7 +319,10 @@ public class DescribeNASAvailableResourceInfoResponseBody extends TeaModel {
             }
 
             /**
-             * NasAvailableAmount.
+             * <p>the number of available NAS resources.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder nasAvailableAmount(Integer nasAvailableAmount) {
                 this.nasAvailableAmount = nasAvailableAmount;
@@ -309,7 +330,10 @@ public class DescribeNASAvailableResourceInfoResponseBody extends TeaModel {
             }
 
             /**
-             * NasAvailableStorgeType.
+             * <p>The types of available NAS resources.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>capacity</p>
              */
             public Builder nasAvailableStorgeType(String nasAvailableStorgeType) {
                 this.nasAvailableStorgeType = nasAvailableStorgeType;
@@ -317,7 +341,7 @@ public class DescribeNASAvailableResourceInfoResponseBody extends TeaModel {
             }
 
             /**
-             * Province.
+             * <p>The province to which the ENS node belongs.</p>
              */
             public Builder province(String province) {
                 this.province = province;

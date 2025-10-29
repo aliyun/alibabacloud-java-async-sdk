@@ -67,7 +67,10 @@ public class ImportImageResponseBody extends TeaModel {
         } 
 
         /**
-         * ImageId.
+         * <p>Image ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>m-5wn1dh*******b48f440ntvad</p>
          */
         public Builder imageId(String imageId) {
             this.imageId = imageId;
@@ -75,7 +78,7 @@ public class ImportImageResponseBody extends TeaModel {
         }
 
         /**
-         * <p>Id of the request</p>
+         * <p>ID of the request</p>
          * 
          * <strong>example:</strong>
          * <p>CEF72CEB-54B6-4AE8-B225-F876FF7BA984</p>

@@ -322,6 +322,12 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
+     * <b>description</b> :
+     * <h2><a href="#"></a>Request description</h2>
+     * <ul>
+     * <li>This O\&amp;M operation is supported only by the Instance:SystemUpgrade.Migrate event.</li>
+     * </ul>
+     * 
      * @param request the request parameters of BatchEventMigrateInstance  BatchEventMigrateInstanceRequest
      * @return BatchEventMigrateInstanceResponse
      */
@@ -341,15 +347,7 @@ public final class DefaultAsyncClient implements AsyncClient {
 
     /**
      * <b>description</b> :
-     * <h2>请求说明</h2>
-     * <ul>
-     * <li><code>Action</code> 参数固定为 <code>BatchEventRebootInstance</code>。</li>
-     * <li><code>Version</code> 参数固定为 <code>2017-11-10</code>。</li>
-     * <li><code>EventInfos</code> 是一个数组，每个元素包含需要重启实例的信息，包括事件ID、资源ID、操作类型（立即执行或预约执行）以及可选的计划时间戳（毫秒）。</li>
-     * <li>如果选择预约执行，则必须提供 <code>PlanTime</code> 字段的时间戳。</li>
-     * <li>返回结果中，<code>Results</code> 数组包含了每个请求的结果信息，包括消息、资源ID、事件ID和状态码。</li>
-     * <li>错误情况下，返回相应的错误代码和消息。</li>
-     * </ul>
+     * <p>  This O\&amp;M operation supports only the following event types: Instance:SystemMaintenance.Reboot (instance reboot due to system problems)</p>
      * 
      * @param request the request parameters of BatchEventRebootInstance  BatchEventRebootInstanceRequest
      * @return BatchEventRebootInstanceResponse
@@ -369,6 +367,11 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
+     * <b>description</b> :
+     * <ul>
+     * <li>This operation currently only supports event types: Instance:SystemFailure.Redeploy (redeploy instance due to system issues), Instance:SystemMaintenance.Redeploy (redeploy instance due to system maintenance)</li>
+     * </ul>
+     * 
      * @param request the request parameters of BatchEventRedeployInstance  BatchEventRedeployInstanceRequest
      * @return BatchEventRedeployInstanceResponse
      */
@@ -1136,6 +1139,24 @@ public final class DefaultAsyncClient implements AsyncClient {
             return this.handler.execute(params);
         } catch (Exception e) {
             CompletableFuture<CreateVSwitchResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
+     * @param request the request parameters of DeleteAICPublicKey  DeleteAICPublicKeyRequest
+     * @return DeleteAICPublicKeyResponse
+     */
+    @Override
+    public CompletableFuture<DeleteAICPublicKeyResponse> deleteAICPublicKey(DeleteAICPublicKeyRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RPC).setAction("DeleteAICPublicKey").setMethod(HttpMethod.POST).setPathRegex("/").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(DeleteAICPublicKeyResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<DeleteAICPublicKeyResponse> future = new CompletableFuture<>();
             future.completeExceptionally(e);
             return future;
         }
@@ -2565,6 +2586,9 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
+     * <b>description</b> :
+     * <p>  You must specify an event type to query. You can query multiple event types at the same time.</p>
+     * 
      * @param request the request parameters of DescribeHistoryEvents  DescribeHistoryEventsRequest
      * @return DescribeHistoryEventsResponse
      */
@@ -2655,6 +2679,13 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
+     * <b>description</b> :
+     * <p>  You can call this operation up to 800 times per second per account.</p>
+     * <ul>
+     * <li>You can call this operation up to 100 times per second per user.</li>
+     * <li>You can specify multiple request parameters to filter query results. Specified request parameters have logical AND relations. Only the specified parameters are included in the filter conditions. However, if InstanceIds is set to an empty JSON array, this parameter is regarded as a valid filter condition and an empty result is returned.</li>
+     * </ul>
+     * 
      * @param request the request parameters of DescribeInstanceBandwidthDetail  DescribeInstanceBandwidthDetailRequest
      * @return DescribeInstanceBandwidthDetailResponse
      */
@@ -3349,6 +3380,24 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
+     * @param request the request parameters of DescribeSDGSharedDisks  DescribeSDGSharedDisksRequest
+     * @return DescribeSDGSharedDisksResponse
+     */
+    @Override
+    public CompletableFuture<DescribeSDGSharedDisksResponse> describeSDGSharedDisks(DescribeSDGSharedDisksRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RPC).setAction("DescribeSDGSharedDisks").setMethod(HttpMethod.POST).setPathRegex("/").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(DescribeSDGSharedDisksResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<DescribeSDGSharedDisksResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
      * @param request the request parameters of DescribeSDGs  DescribeSDGsRequest
      * @return DescribeSDGsResponse
      */
@@ -3730,6 +3779,9 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
+     * <b>description</b> :
+     * <p>  This O\&amp;M operation is supported only by the Instance:SystemUpgrade.Migrate event.</p>
+     * 
      * @param request the request parameters of EventMigrateInstance  EventMigrateInstanceRequest
      * @return EventMigrateInstanceResponse
      */
@@ -3749,13 +3801,7 @@ public final class DefaultAsyncClient implements AsyncClient {
 
     /**
      * <b>description</b> :
-     * <h2>请求说明</h2>
-     * <ul>
-     * <li>该API用于触发一个实例的重启事件。</li>
-     * <li><code>OpsType</code>参数可选，若不提供，默认为<code>scheduled</code>（预约执行）。</li>
-     * <li>当选择<code>scheduled</code>时，必须提供<code>PlanTime</code>参数，格式为时间戳（毫秒）。</li>
-     * <li>如果需要立即执行重启，请设置<code>OpsType</code>为<code>immediate</code>。</li>
-     * </ul>
+     * <p>  This O\&amp;M operation supports only the Instance:SystemMaintenance.Reboot event</p>
      * 
      * @param request the request parameters of EventRebootInstance  EventRebootInstanceRequest
      * @return EventRebootInstanceResponse
@@ -3775,6 +3821,9 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
+     * <b>description</b> :
+     * <p>  This O\&amp;M operation supports only the following event types: Instance:SystemFailure.Redeploy (instance redeployment due to system problems) and Instance:SystemMaintenance.Redeploy (instance redeployment due to system maintenance).</p>
+     * 
      * @param request the request parameters of EventRedeployInstance  EventRedeployInstanceRequest
      * @return EventRedeployInstanceResponse
      */
@@ -4063,6 +4112,42 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
+     * @param request the request parameters of ListAICPublicKeyDeliveries  ListAICPublicKeyDeliveriesRequest
+     * @return ListAICPublicKeyDeliveriesResponse
+     */
+    @Override
+    public CompletableFuture<ListAICPublicKeyDeliveriesResponse> listAICPublicKeyDeliveries(ListAICPublicKeyDeliveriesRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RPC).setAction("ListAICPublicKeyDeliveries").setMethod(HttpMethod.POST).setPathRegex("/").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(ListAICPublicKeyDeliveriesResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<ListAICPublicKeyDeliveriesResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
+     * @param request the request parameters of ListAICPublicKeys  ListAICPublicKeysRequest
+     * @return ListAICPublicKeysResponse
+     */
+    @Override
+    public CompletableFuture<ListAICPublicKeysResponse> listAICPublicKeys(ListAICPublicKeysRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RPC).setAction("ListAICPublicKeys").setMethod(HttpMethod.POST).setPathRegex("/").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(ListAICPublicKeysResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<ListAICPublicKeysResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
      * @param request the request parameters of ListApplications  ListApplicationsRequest
      * @return ListApplicationsResponse
      */
@@ -4147,6 +4232,24 @@ public final class DefaultAsyncClient implements AsyncClient {
             return this.handler.execute(params);
         } catch (Exception e) {
             CompletableFuture<ListTagResourcesResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
+     * @param request the request parameters of ManageAICLogin  ManageAICLoginRequest
+     * @return ManageAICLoginResponse
+     */
+    @Override
+    public CompletableFuture<ManageAICLoginResponse> manageAICLogin(ManageAICLoginRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RPC).setAction("ManageAICLogin").setMethod(HttpMethod.POST).setPathRegex("/").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(ManageAICLoginResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<ManageAICLoginResponse> future = new CompletableFuture<>();
             future.completeExceptionally(e);
             return future;
         }
@@ -4340,6 +4443,13 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
+     * <b>description</b> :
+     * <p>  If an instance is in the Starting state, you cannot reset the password of the instance.</p>
+     * <ul>
+     * <li>If the instance is in the Running state, you cannot change the password of the instance.</li>
+     * <li>After resetting the password, you must restart the instance in the ENS console or call the RebootInstance operation to apply the change. The restart operation within the instance does not apply the change.</li>
+     * </ul>
+     * 
      * @param request the request parameters of ModifyInstanceBootConfiguration  ModifyInstanceBootConfigurationRequest
      * @return ModifyInstanceBootConfigurationResponse
      */
@@ -5439,6 +5549,24 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
+     * @param request the request parameters of ShareAICImage  ShareAICImageRequest
+     * @return ShareAICImageResponse
+     */
+    @Override
+    public CompletableFuture<ShareAICImageResponse> shareAICImage(ShareAICImageRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RPC).setAction("ShareAICImage").setMethod(HttpMethod.POST).setPathRegex("/").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(ShareAICImageResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<ShareAICImageResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
      * @param request the request parameters of StartEpnInstance  StartEpnInstanceRequest
      * @return StartEpnInstanceResponse
      */
@@ -5840,6 +5968,24 @@ public final class DefaultAsyncClient implements AsyncClient {
             return this.handler.execute(params);
         } catch (Exception e) {
             CompletableFuture<UpgradeApplicationResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
+     * @param request the request parameters of UploadAICPublicKey  UploadAICPublicKeyRequest
+     * @return UploadAICPublicKeyResponse
+     */
+    @Override
+    public CompletableFuture<UploadAICPublicKeyResponse> uploadAICPublicKey(UploadAICPublicKeyRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RPC).setAction("UploadAICPublicKey").setMethod(HttpMethod.POST).setPathRegex("/").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(UploadAICPublicKeyResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<UploadAICPublicKeyResponse> future = new CompletableFuture<>();
             future.completeExceptionally(e);
             return future;
         }

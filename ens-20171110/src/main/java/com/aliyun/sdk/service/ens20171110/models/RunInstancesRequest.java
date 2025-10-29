@@ -19,7 +19,7 @@ import com.aliyun.sdk.gateway.pop.models.*;
 public class RunInstancesRequest extends Request {
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("Amount")
-    @com.aliyun.core.annotation.Validation(required = true, maximum = 100, minimum = 1)
+    @com.aliyun.core.annotation.Validation(maximum = 100, minimum = 1)
     private Long amount;
 
     @com.aliyun.core.annotation.Query
@@ -68,7 +68,6 @@ public class RunInstancesRequest extends Request {
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("InstanceChargeType")
-    @com.aliyun.core.annotation.Validation(required = true)
     private String instanceChargeType;
 
     @com.aliyun.core.annotation.Query
@@ -77,7 +76,6 @@ public class RunInstancesRequest extends Request {
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("InstanceType")
-    @com.aliyun.core.annotation.Validation(required = true)
     private String instanceType;
 
     @com.aliyun.core.annotation.Query
@@ -86,7 +84,6 @@ public class RunInstancesRequest extends Request {
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("InternetMaxBandwidthOut")
-    @com.aliyun.core.annotation.Validation(required = true)
     private Long internetMaxBandwidthOut;
 
     @com.aliyun.core.annotation.Query
@@ -101,6 +98,18 @@ public class RunInstancesRequest extends Request {
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("KeyPairName")
     private String keyPairName;
+
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("LaunchTemplateId")
+    private String launchTemplateId;
+
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("LaunchTemplateName")
+    private String launchTemplateName;
+
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("LaunchTemplateVersion")
+    private Integer launchTemplateVersion;
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("NetDistrictCode")
@@ -136,7 +145,6 @@ public class RunInstancesRequest extends Request {
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("ScheduleAreaLevel")
-    @com.aliyun.core.annotation.Validation(required = true)
     private String scheduleAreaLevel;
 
     @com.aliyun.core.annotation.Query
@@ -201,6 +209,9 @@ public class RunInstancesRequest extends Request {
         this.ipType = builder.ipType;
         this.ipv6AddressCount = builder.ipv6AddressCount;
         this.keyPairName = builder.keyPairName;
+        this.launchTemplateId = builder.launchTemplateId;
+        this.launchTemplateName = builder.launchTemplateName;
+        this.launchTemplateVersion = builder.launchTemplateVersion;
         this.netDistrictCode = builder.netDistrictCode;
         this.netWorkId = builder.netWorkId;
         this.password = builder.password;
@@ -376,6 +387,27 @@ public class RunInstancesRequest extends Request {
     }
 
     /**
+     * @return launchTemplateId
+     */
+    public String getLaunchTemplateId() {
+        return this.launchTemplateId;
+    }
+
+    /**
+     * @return launchTemplateName
+     */
+    public String getLaunchTemplateName() {
+        return this.launchTemplateName;
+    }
+
+    /**
+     * @return launchTemplateVersion
+     */
+    public Integer getLaunchTemplateVersion() {
+        return this.launchTemplateVersion;
+    }
+
+    /**
      * @return netDistrictCode
      */
     public String getNetDistrictCode() {
@@ -529,6 +561,9 @@ public class RunInstancesRequest extends Request {
         private String ipType; 
         private Long ipv6AddressCount; 
         private String keyPairName; 
+        private String launchTemplateId; 
+        private String launchTemplateName; 
+        private Integer launchTemplateVersion; 
         private String netDistrictCode; 
         private String netWorkId; 
         private String password; 
@@ -575,6 +610,9 @@ public class RunInstancesRequest extends Request {
             this.ipType = request.ipType;
             this.ipv6AddressCount = request.ipv6AddressCount;
             this.keyPairName = request.keyPairName;
+            this.launchTemplateId = request.launchTemplateId;
+            this.launchTemplateName = request.launchTemplateName;
+            this.launchTemplateVersion = request.launchTemplateVersion;
             this.netDistrictCode = request.netDistrictCode;
             this.netWorkId = request.netWorkId;
             this.password = request.password;
@@ -598,7 +636,6 @@ public class RunInstancesRequest extends Request {
 
         /**
          * <p>The number of instances that you want to create. Valid values: 1 to 100.</p>
-         * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
          * <p>1</p>
@@ -768,7 +805,6 @@ public class RunInstancesRequest extends Request {
          * <li><strong>PrePaid</strong>: subscription.</li>
          * <li><strong>PostPaid:</strong> pay-as-you-go.</li>
          * </ul>
-         * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
          * <p>PostPaid</p>
@@ -794,7 +830,6 @@ public class RunInstancesRequest extends Request {
 
         /**
          * <p>The instance type.</p>
-         * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
          * <p>ens.sn1.small</p>
@@ -826,7 +861,6 @@ public class RunInstancesRequest extends Request {
 
         /**
          * <p>The maximum public bandwidth. If the value of this parameter is greater than 0, a public IP address is assigned to the instance.</p>
-         * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
          * <p>1</p>
@@ -876,6 +910,33 @@ public class RunInstancesRequest extends Request {
         public Builder keyPairName(String keyPairName) {
             this.putQueryParameter("KeyPairName", keyPairName);
             this.keyPairName = keyPairName;
+            return this;
+        }
+
+        /**
+         * LaunchTemplateId.
+         */
+        public Builder launchTemplateId(String launchTemplateId) {
+            this.putQueryParameter("LaunchTemplateId", launchTemplateId);
+            this.launchTemplateId = launchTemplateId;
+            return this;
+        }
+
+        /**
+         * LaunchTemplateName.
+         */
+        public Builder launchTemplateName(String launchTemplateName) {
+            this.putQueryParameter("LaunchTemplateName", launchTemplateName);
+            this.launchTemplateName = launchTemplateName;
+            return this;
+        }
+
+        /**
+         * LaunchTemplateVersion.
+         */
+        public Builder launchTemplateVersion(Integer launchTemplateVersion) {
+            this.putQueryParameter("LaunchTemplateVersion", launchTemplateVersion);
+            this.launchTemplateVersion = launchTemplateVersion;
             return this;
         }
 
@@ -1010,7 +1071,6 @@ public class RunInstancesRequest extends Request {
          * <li><strong>Small</strong>: city</li>
          * <li><strong>Region</strong>: node</li>
          * </ul>
-         * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
          * <p>Region</p>

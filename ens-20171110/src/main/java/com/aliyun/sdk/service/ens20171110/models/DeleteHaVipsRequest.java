@@ -60,6 +60,7 @@ public class DeleteHaVipsRequest extends Request {
         } 
 
         /**
+         * <p>The IDs of high-availability virtual IP addresses (HAVIPs).</p>
          * <p>This parameter is required.</p>
          */
         public Builder haVipIds(java.util.List<String> haVipIds) {

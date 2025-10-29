@@ -132,7 +132,10 @@ public class CreateHaVipRequest extends Request {
         }
 
         /**
-         * Description.
+         * <p>The description of the HAVIP.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>testDescription</p>
          */
         public Builder description(String description) {
             this.putQueryParameter("Description", description);
@@ -141,7 +144,10 @@ public class CreateHaVipRequest extends Request {
         }
 
         /**
-         * IpAddress.
+         * <p>The IP address of the HAVIP.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>120.24.243.91</p>
          */
         public Builder ipAddress(String ipAddress) {
             this.putQueryParameter("IpAddress", ipAddress);
@@ -150,7 +156,10 @@ public class CreateHaVipRequest extends Request {
         }
 
         /**
-         * Name.
+         * <p>The name of the HAVIP.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>yourName</p>
          */
         public Builder name(String name) {
             this.putQueryParameter("Name", name);
@@ -159,7 +168,10 @@ public class CreateHaVipRequest extends Request {
         }
 
         /**
-         * VSwitchId.
+         * <p>The vSwitch ID of the HAVIP.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>vsw-5****</p>
          */
         public Builder vSwitchId(String vSwitchId) {
             this.putQueryParameter("VSwitchId", vSwitchId);

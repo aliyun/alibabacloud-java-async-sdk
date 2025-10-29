@@ -106,7 +106,7 @@ public class DescribeHistoryEventsResponseBody extends TeaModel {
         } 
 
         /**
-         * Events.
+         * <p>The queried events.</p>
          */
         public Builder events(java.util.List<Events> events) {
             this.events = events;
@@ -114,7 +114,10 @@ public class DescribeHistoryEventsResponseBody extends TeaModel {
         }
 
         /**
-         * PageNumber.
+         * <p>The page number. Pages start from page 1. Default value: 1.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder pageNumber(Integer pageNumber) {
             this.pageNumber = pageNumber;
@@ -122,7 +125,10 @@ public class DescribeHistoryEventsResponseBody extends TeaModel {
         }
 
         /**
-         * PageSize.
+         * <p>The number of entries per page.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10</p>
          */
         public Builder pageSize(Integer pageSize) {
             this.pageSize = pageSize;
@@ -130,7 +136,10 @@ public class DescribeHistoryEventsResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * <p>Request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>5359599C-F656-57BD-8A0D-329A2FD511A6</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -138,7 +147,10 @@ public class DescribeHistoryEventsResponseBody extends TeaModel {
         }
 
         /**
-         * TotalCount.
+         * <p>The total number of entries returned.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>30</p>
          */
         public Builder totalCount(Integer totalCount) {
             this.totalCount = totalCount;
@@ -295,7 +307,10 @@ public class DescribeHistoryEventsResponseBody extends TeaModel {
             } 
 
             /**
-             * EventId.
+             * <p>The ID of the event.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>e-d71ff150945b9c02eb6ebc0016328468</p>
              */
             public Builder eventId(String eventId) {
                 this.eventId = eventId;
@@ -303,7 +318,15 @@ public class DescribeHistoryEventsResponseBody extends TeaModel {
             }
 
             /**
-             * EventLevel.
+             * <p>The level of the specific event. Valid values:</p>
+             * <ul>
+             * <li>CRITICAL</li>
+             * <li>WARN</li>
+             * <li>INFO</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>WARN</p>
              */
             public Builder eventLevel(String eventLevel) {
                 this.eventLevel = eventLevel;
@@ -311,7 +334,19 @@ public class DescribeHistoryEventsResponseBody extends TeaModel {
             }
 
             /**
-             * EventStatus.
+             * <p>The status of the event. Valid values:</p>
+             * <ul>
+             * <li>Inquiring</li>
+             * <li>Scheduled</li>
+             * <li>Executing</li>
+             * <li>Executed</li>
+             * <li>Failed</li>
+             * <li>Canceled</li>
+             * <li>Avoided</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>Inquiring</p>
              */
             public Builder eventStatus(String eventStatus) {
                 this.eventStatus = eventStatus;
@@ -319,7 +354,21 @@ public class DescribeHistoryEventsResponseBody extends TeaModel {
             }
 
             /**
-             * EventType.
+             * <p>The type of the event. Description:</p>
+             * <ul>
+             * <li>Instance:SystemFailure.Redeploy: The instance is redeployed due to system issues.</li>
+             * <li>Instance:SystemFailure.Reboot: The instance is restarted due to a system error.</li>
+             * <li>Instance:RegionNetworkDown: The node network is interrupted.</li>
+             * <li>Disk:Stalled: The disk performance is impaired.</li>
+             * <li>EnsRegion:NetworkMigration: The instance is migrated due to a system error.</li>
+             * <li>IP:SafeRisk: IP alerts.</li>
+             * <li>IP:SafeBan: IP blocking.</li>
+             * <li>Instance:SystemUpgrade.Migrate: The instance needs to be migrated due to underlying upgrades.</li>
+             * <li>Instance:SystemMaintenance.Redeploy: The instance is redeployed due to system maintenance.</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>Instance:SystemFailure.Reboot</p>
              */
             public Builder eventType(String eventType) {
                 this.eventType = eventType;
@@ -327,7 +376,10 @@ public class DescribeHistoryEventsResponseBody extends TeaModel {
             }
 
             /**
-             * ExtendedAttribute.
+             * <p>The extended attributes.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>{}</p>
              */
             public Builder extendedAttribute(String extendedAttribute) {
                 this.extendedAttribute = extendedAttribute;
@@ -335,7 +387,10 @@ public class DescribeHistoryEventsResponseBody extends TeaModel {
             }
 
             /**
-             * NotBefore.
+             * <p>The scheduled execution time of the event in milliseconds.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1715578245000</p>
              */
             public Builder notBefore(Long notBefore) {
                 this.notBefore = notBefore;
@@ -343,7 +398,10 @@ public class DescribeHistoryEventsResponseBody extends TeaModel {
             }
 
             /**
-             * PublishTime.
+             * <p>The release time in milliseconds.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1715578245000</p>
              */
             public Builder publishTime(Long publishTime) {
                 this.publishTime = publishTime;
@@ -351,7 +409,7 @@ public class DescribeHistoryEventsResponseBody extends TeaModel {
             }
 
             /**
-             * Reason.
+             * <p>The event cause.</p>
              */
             public Builder reason(String reason) {
                 this.reason = reason;
@@ -359,7 +417,10 @@ public class DescribeHistoryEventsResponseBody extends TeaModel {
             }
 
             /**
-             * ResourceId.
+             * <p>The ID of the associated resources.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>i-55qi8m11rr53c4i964md8a00l</p>
              */
             public Builder resourceId(String resourceId) {
                 this.resourceId = resourceId;

@@ -364,6 +364,9 @@ public class DescribeEnsEipAddressesResponseBody extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("EnsRegionId")
         private String ensRegionId;
 
+        @com.aliyun.core.annotation.NameInMap("IcmpReplyEnabled")
+        private Boolean icmpReplyEnabled;
+
         @com.aliyun.core.annotation.NameInMap("InstanceId")
         private String instanceId;
 
@@ -401,6 +404,7 @@ public class DescribeEnsEipAddressesResponseBody extends TeaModel {
             this.chargeType = builder.chargeType;
             this.description = builder.description;
             this.ensRegionId = builder.ensRegionId;
+            this.icmpReplyEnabled = builder.icmpReplyEnabled;
             this.instanceId = builder.instanceId;
             this.instanceType = builder.instanceType;
             this.internetChargeType = builder.internetChargeType;
@@ -461,6 +465,13 @@ public class DescribeEnsEipAddressesResponseBody extends TeaModel {
          */
         public String getEnsRegionId() {
             return this.ensRegionId;
+        }
+
+        /**
+         * @return icmpReplyEnabled
+         */
+        public Boolean getIcmpReplyEnabled() {
+            return this.icmpReplyEnabled;
         }
 
         /**
@@ -540,6 +551,7 @@ public class DescribeEnsEipAddressesResponseBody extends TeaModel {
             private String chargeType; 
             private String description; 
             private String ensRegionId; 
+            private Boolean icmpReplyEnabled; 
             private String instanceId; 
             private String instanceType; 
             private String internetChargeType; 
@@ -561,6 +573,7 @@ public class DescribeEnsEipAddressesResponseBody extends TeaModel {
                 this.chargeType = model.chargeType;
                 this.description = model.description;
                 this.ensRegionId = model.ensRegionId;
+                this.icmpReplyEnabled = model.icmpReplyEnabled;
                 this.instanceId = model.instanceId;
                 this.instanceType = model.instanceType;
                 this.internetChargeType = model.internetChargeType;
@@ -618,6 +631,14 @@ public class DescribeEnsEipAddressesResponseBody extends TeaModel {
              */
             public Builder ensRegionId(String ensRegionId) {
                 this.ensRegionId = ensRegionId;
+                return this;
+            }
+
+            /**
+             * IcmpReplyEnabled.
+             */
+            public Builder icmpReplyEnabled(Boolean icmpReplyEnabled) {
+                this.icmpReplyEnabled = icmpReplyEnabled;
                 return this;
             }
 

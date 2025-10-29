@@ -67,7 +67,7 @@ public class CreateHaVipResponseBody extends TeaModel {
         } 
 
         /**
-         * HaVipIds.
+         * <p>The IDs of the HAVIPs.</p>
          */
         public Builder haVipIds(java.util.List<String> haVipIds) {
             this.haVipIds = haVipIds;
@@ -75,7 +75,10 @@ public class CreateHaVipResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * <p>Request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>AAE90880-4970-4D81-A534-A6C0F3631F74</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;

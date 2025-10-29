@@ -232,6 +232,11 @@ public class ImportImageRequest extends Request {
         } 
 
         /**
+         * <p>System architecture. Allowed values:</br></p>
+         * <ul>
+         * <li>x86_64.</br></li>
+         * </ul>
+         * <p>Currently, only x86_64 is supported.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -244,6 +249,8 @@ public class ImportImageRequest extends Request {
         }
 
         /**
+         * <p><code>Image Type</code>
+         * ens_vm: ens virtual machine image (default)</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -256,7 +263,7 @@ public class ImportImageRequest extends Request {
         }
 
         /**
-         * DiskDeviceMapping.
+         * <p>List of custom image information being created.</p>
          */
         public Builder diskDeviceMapping(java.util.List<DiskDeviceMapping> diskDeviceMapping) {
             String diskDeviceMappingShrink = shrink(diskDeviceMapping, "DiskDeviceMapping", "json");
@@ -266,6 +273,9 @@ public class ImportImageRequest extends Request {
         }
 
         /**
+         * <p>Image format. Allowed values:</br>
+         * qcow2.</br>
+         * Currently, only qcow2 is supported.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -278,7 +288,11 @@ public class ImportImageRequest extends Request {
         }
 
         /**
+         * <p>Image name. The length should be [2, 128] English or Chinese characters. It must start with a letter (uppercase or lowercase) or a Chinese character, and cannot start with http:// or https://. It can contain numbers, colons (:), underscores (_), or hyphens (-).</p>
          * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>镜像名称</p>
          */
         public Builder imageName(String imageName) {
             this.putQueryParameter("ImageName", imageName);
@@ -296,7 +310,10 @@ public class ImportImageRequest extends Request {
         }
 
         /**
-         * OSSBucket.
+         * <p>The OSS Bucket where the image file is located.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>tmp-hybrid</p>
          */
         public Builder OSSBucket(String OSSBucket) {
             this.putQueryParameter("OSSBucket", OSSBucket);
@@ -305,7 +322,10 @@ public class ImportImageRequest extends Request {
         }
 
         /**
-         * OSSObject.
+         * <p>The name of the image file.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>image-test</p>
          */
         public Builder OSSObject(String OSSObject) {
             this.putQueryParameter("OSSObject", OSSObject);
@@ -314,7 +334,10 @@ public class ImportImageRequest extends Request {
         }
 
         /**
-         * OSSRegion.
+         * <p>The Region where the image is located. Currently, only cn-beijing is supported.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-beijing</p>
          */
         public Builder OSSRegion(String OSSRegion) {
             this.putQueryParameter("OSSRegion", OSSRegion);
@@ -323,6 +346,12 @@ public class ImportImageRequest extends Request {
         }
 
         /**
+         * <p>Operating system platform type. Allowed values:</p>
+         * <ul>
+         * <li>windows.</li>
+         * <li>linux.</li>
+         * </ul>
+         * <p>Currently, only linux is supported.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -335,7 +364,10 @@ public class ImportImageRequest extends Request {
         }
 
         /**
-         * OSVersion.
+         * <p>Operating system distribution version</p>
+         * 
+         * <strong>example:</strong>
+         * <p>6.8</p>
          */
         public Builder OSVersion(String OSVersion) {
             this.putQueryParameter("OSVersion", OSVersion);
@@ -344,7 +376,14 @@ public class ImportImageRequest extends Request {
         }
 
         /**
-         * Platform.
+         * <p>Operating system distribution. Allowed values:</p>
+         * <ul>
+         * <li>centos</li>
+         * <li>ubuntu</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>centos</p>
          */
         public Builder platform(String platform) {
             this.putQueryParameter("Platform", platform);
@@ -353,7 +392,13 @@ public class ImportImageRequest extends Request {
         }
 
         /**
-         * TargetOSSRegionId.
+         * <p>The target OSS region where the image will be stored.</br></p>
+         * <blockquote>
+         * <p>Currently, only cn-beijing and ap-southeast-1 are supported.</p>
+         * </blockquote>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-beijing</p>
          */
         public Builder targetOSSRegionId(String targetOSSRegionId) {
             this.putQueryParameter("TargetOSSRegionId", targetOSSRegionId);
@@ -434,7 +479,10 @@ public class ImportImageRequest extends Request {
             } 
 
             /**
-             * OSSBucket.
+             * <p>The OSS Bucket where the image is stored.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>www-cn</p>
              */
             public Builder OSSBucket(String OSSBucket) {
                 this.OSSBucket = OSSBucket;
@@ -442,7 +490,10 @@ public class ImportImageRequest extends Request {
             }
 
             /**
-             * OSSObject.
+             * <p>The filename (key) of the image file after it is uploaded to the OSS Bucket.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>image-bucket</p>
              */
             public Builder OSSObject(String OSSObject) {
                 this.OSSObject = OSSObject;
@@ -450,7 +501,10 @@ public class ImportImageRequest extends Request {
             }
 
             /**
-             * OSSRegion.
+             * <p>The Region where the image is located.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>cn-beijing</p>
              */
             public Builder OSSRegion(String OSSRegion) {
                 this.OSSRegion = OSSRegion;

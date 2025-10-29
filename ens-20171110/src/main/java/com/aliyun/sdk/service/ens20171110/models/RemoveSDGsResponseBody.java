@@ -67,7 +67,7 @@ public class RemoveSDGsResponseBody extends TeaModel {
         } 
 
         /**
-         * Data.
+         * <p>The returned data.</p>
          */
         public Builder data(Data data) {
             this.data = data;
@@ -144,7 +144,10 @@ public class RemoveSDGsResponseBody extends TeaModel {
             } 
 
             /**
-             * ErrMessage.
+             * <p>The error message returned if the call failed.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>sdg not found</p>
              */
             public Builder errMessage(String errMessage) {
                 this.errMessage = errMessage;
@@ -152,7 +155,10 @@ public class RemoveSDGsResponseBody extends TeaModel {
             }
 
             /**
-             * InstanceId.
+             * <p>The instance ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>aic-xxxxx-0</p>
              */
             public Builder instanceId(String instanceId) {
                 this.instanceId = instanceId;
@@ -232,7 +238,10 @@ public class RemoveSDGsResponseBody extends TeaModel {
             } 
 
             /**
-             * FailedCount.
+             * <p>The number of failed tasks.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>0</p>
              */
             public Builder failedCount(Long failedCount) {
                 this.failedCount = failedCount;
@@ -240,7 +249,7 @@ public class RemoveSDGsResponseBody extends TeaModel {
             }
 
             /**
-             * FailedItems.
+             * <p>Details about failed tasks.</p>
              */
             public Builder failedItems(java.util.List<FailedItems> failedItems) {
                 this.failedItems = failedItems;
@@ -248,7 +257,10 @@ public class RemoveSDGsResponseBody extends TeaModel {
             }
 
             /**
-             * SuccessCount.
+             * <p>The number of successful tasks.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder successCount(Long successCount) {
                 this.successCount = successCount;
@@ -328,7 +340,10 @@ public class RemoveSDGsResponseBody extends TeaModel {
             } 
 
             /**
-             * Message.
+             * <p>The response message. Success is returned for a successful request.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>success</p>
              */
             public Builder message(String message) {
                 this.message = message;
@@ -336,7 +351,7 @@ public class RemoveSDGsResponseBody extends TeaModel {
             }
 
             /**
-             * Result.
+             * <p>The execution result of the synchronization request.</p>
              */
             public Builder result(Result result) {
                 this.result = result;
@@ -344,7 +359,14 @@ public class RemoveSDGsResponseBody extends TeaModel {
             }
 
             /**
-             * Success.
+             * <p>Indicates whether all tasks are successful. Valid values:</p>
+             * <ul>
+             * <li><strong>true</strong>: All tasks are successful.</li>
+             * <li><strong>false</strong>: Failed tasks exist.</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>true</p>
              */
             public Builder success(Boolean success) {
                 this.success = success;

@@ -67,7 +67,10 @@ public class BatchEventRedeployInstanceResponseBody extends TeaModel {
         } 
 
         /**
-         * RequestId.
+         * <p>Request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>125B04C7-3D0D-4245-AF96-14E3758E3F06</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -75,7 +78,7 @@ public class BatchEventRedeployInstanceResponseBody extends TeaModel {
         }
 
         /**
-         * Results.
+         * <p>List of results.</p>
          */
         public Builder results(java.util.List<Results> results) {
             this.results = results;
@@ -167,7 +170,10 @@ public class BatchEventRedeployInstanceResponseBody extends TeaModel {
             } 
 
             /**
-             * Code.
+             * <p>Status code.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>200</p>
              */
             public Builder code(Integer code) {
                 this.code = code;
@@ -175,7 +181,10 @@ public class BatchEventRedeployInstanceResponseBody extends TeaModel {
             }
 
             /**
-             * EventId.
+             * <p>System event ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>e-d71ff150945b9c02eb6ebc0016328468</p>
              */
             public Builder eventId(String eventId) {
                 this.eventId = eventId;
@@ -183,7 +192,10 @@ public class BatchEventRedeployInstanceResponseBody extends TeaModel {
             }
 
             /**
-             * Message.
+             * <p>Operational message, when code=200, the message is &quot;successful&quot;.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>success</p>
              */
             public Builder message(String message) {
                 this.message = message;
@@ -191,7 +203,10 @@ public class BatchEventRedeployInstanceResponseBody extends TeaModel {
             }
 
             /**
-             * ResourceId.
+             * <p>Resource ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>i-55qi8m11rr53c4i964md8a00l</p>
              */
             public Builder resourceId(String resourceId) {
                 this.resourceId = resourceId;

@@ -103,7 +103,10 @@ public class ModifyInstanceBootConfigurationRequest extends Request {
         } 
 
         /**
-         * BootSet.
+         * <p>The startup method.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>legacy</p>
          */
         public Builder bootSet(String bootSet) {
             this.putQueryParameter("BootSet", bootSet);
@@ -112,6 +115,7 @@ public class ModifyInstanceBootConfigurationRequest extends Request {
         }
 
         /**
+         * <p>The startup type.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -124,7 +128,10 @@ public class ModifyInstanceBootConfigurationRequest extends Request {
         }
 
         /**
-         * DiskSet.
+         * <p>Specifies whether the startup depends on the disk.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>on</p>
          */
         public Builder diskSet(String diskSet) {
             this.putQueryParameter("DiskSet", diskSet);
@@ -133,6 +140,7 @@ public class ModifyInstanceBootConfigurationRequest extends Request {
         }
 
         /**
+         * <p>The ID of the instance for which you want to modify the configuration. You can specify only one ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>

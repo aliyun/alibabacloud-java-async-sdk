@@ -22,6 +22,10 @@ public class DescribeSDGDeploymentStatusRequest extends Request {
     private String deploymentType;
 
     @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("DiskIds")
+    private java.util.List<String> diskIds;
+
+    @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("InstanceIds")
     private java.util.List<String> instanceIds;
 
@@ -50,6 +54,7 @@ public class DescribeSDGDeploymentStatusRequest extends Request {
     private DescribeSDGDeploymentStatusRequest(Builder builder) {
         super(builder);
         this.deploymentType = builder.deploymentType;
+        this.diskIds = builder.diskIds;
         this.instanceIds = builder.instanceIds;
         this.pageNumber = builder.pageNumber;
         this.pageSize = builder.pageSize;
@@ -76,6 +81,13 @@ public class DescribeSDGDeploymentStatusRequest extends Request {
      */
     public String getDeploymentType() {
         return this.deploymentType;
+    }
+
+    /**
+     * @return diskIds
+     */
+    public java.util.List<String> getDiskIds() {
+        return this.diskIds;
     }
 
     /**
@@ -122,6 +134,7 @@ public class DescribeSDGDeploymentStatusRequest extends Request {
 
     public static final class Builder extends Request.Builder<DescribeSDGDeploymentStatusRequest, Builder> {
         private String deploymentType; 
+        private java.util.List<String> diskIds; 
         private java.util.List<String> instanceIds; 
         private Integer pageNumber; 
         private Integer pageSize; 
@@ -136,6 +149,7 @@ public class DescribeSDGDeploymentStatusRequest extends Request {
         private Builder(DescribeSDGDeploymentStatusRequest request) {
             super(request);
             this.deploymentType = request.deploymentType;
+            this.diskIds = request.diskIds;
             this.instanceIds = request.instanceIds;
             this.pageNumber = request.pageNumber;
             this.pageSize = request.pageSize;
@@ -153,6 +167,16 @@ public class DescribeSDGDeploymentStatusRequest extends Request {
         public Builder deploymentType(String deploymentType) {
             this.putQueryParameter("DeploymentType", deploymentType);
             this.deploymentType = deploymentType;
+            return this;
+        }
+
+        /**
+         * DiskIds.
+         */
+        public Builder diskIds(java.util.List<String> diskIds) {
+            String diskIdsShrink = shrink(diskIds, "DiskIds", "json");
+            this.putQueryParameter("DiskIds", diskIdsShrink);
+            this.diskIds = diskIds;
             return this;
         }
 

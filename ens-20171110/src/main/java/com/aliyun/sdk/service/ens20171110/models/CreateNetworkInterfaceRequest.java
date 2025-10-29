@@ -104,7 +104,10 @@ public class CreateNetworkInterfaceRequest extends Request {
         } 
 
         /**
-         * Description.
+         * <p>Description of the ENI.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>example</p>
          */
         public Builder description(String description) {
             this.putQueryParameter("Description", description);
@@ -113,7 +116,10 @@ public class CreateNetworkInterfaceRequest extends Request {
         }
 
         /**
-         * Name.
+         * <p>ENI name.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>name</p>
          */
         public Builder name(String name) {
             this.putQueryParameter("Name", name);
@@ -122,6 +128,7 @@ public class CreateNetworkInterfaceRequest extends Request {
         }
 
         /**
+         * <p>Security group ID.</p>
          * <p>This parameter is required.</p>
          */
         public Builder securityGroupIds(java.util.List<String> securityGroupIds) {
@@ -132,7 +139,10 @@ public class CreateNetworkInterfaceRequest extends Request {
         }
 
         /**
-         * VSwitchId.
+         * <p>vSwitch ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>vsw-5****</p>
          */
         public Builder vSwitchId(String vSwitchId) {
             this.putQueryParameter("VSwitchId", vSwitchId);

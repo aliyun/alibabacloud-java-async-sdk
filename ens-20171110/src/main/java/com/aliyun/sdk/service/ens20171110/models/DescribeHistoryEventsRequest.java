@@ -130,7 +130,7 @@ public class DescribeHistoryEventsRequest extends Request {
         } 
 
         /**
-         * EventLevels.
+         * <p>The levels of the event-triggered alerts.</p>
          */
         public Builder eventLevels(java.util.List<String> eventLevels) {
             String eventLevelsShrink = shrink(eventLevels, "EventLevels", "simple");
@@ -140,7 +140,7 @@ public class DescribeHistoryEventsRequest extends Request {
         }
 
         /**
-         * EventStatus.
+         * <p>Event status list.</p>
          */
         public Builder eventStatus(java.util.List<String> eventStatus) {
             String eventStatusShrink = shrink(eventStatus, "EventStatus", "simple");
@@ -150,6 +150,7 @@ public class DescribeHistoryEventsRequest extends Request {
         }
 
         /**
+         * <p>The list of event types.</p>
          * <p>This parameter is required.</p>
          */
         public Builder eventTypes(java.util.List<String> eventTypes) {
@@ -160,7 +161,10 @@ public class DescribeHistoryEventsRequest extends Request {
         }
 
         /**
-         * PageNumber.
+         * <p>The page number. Pages start from page 1. Default value: 1.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder pageNumber(Integer pageNumber) {
             this.putQueryParameter("PageNumber", pageNumber);
@@ -169,7 +173,10 @@ public class DescribeHistoryEventsRequest extends Request {
         }
 
         /**
-         * PageSize.
+         * <p>The number of entries per page.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10</p>
          */
         public Builder pageSize(Integer pageSize) {
             this.putQueryParameter("PageSize", pageSize);
@@ -178,7 +185,7 @@ public class DescribeHistoryEventsRequest extends Request {
         }
 
         /**
-         * ResourceIds.
+         * <p>The IDs of resources.</p>
          */
         public Builder resourceIds(java.util.List<String> resourceIds) {
             String resourceIdsShrink = shrink(resourceIds, "ResourceIds", "simple");

@@ -59,7 +59,7 @@ public class BatchEventRedeployInstanceRequest extends Request {
         } 
 
         /**
-         * EventInfos.
+         * <p>List of events.</p>
          */
         public Builder eventInfos(java.util.List<EventInfos> eventInfos) {
             String eventInfosShrink = shrink(eventInfos, "EventInfos", "json");
@@ -154,7 +154,10 @@ public class BatchEventRedeployInstanceRequest extends Request {
             } 
 
             /**
-             * EventId.
+             * <p>System event ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>e-d71ff150945b9c02eb6ebc0016328468</p>
              */
             public Builder eventId(String eventId) {
                 this.eventId = eventId;
@@ -162,7 +165,14 @@ public class BatchEventRedeployInstanceRequest extends Request {
             }
 
             /**
-             * OpsType.
+             * <p>Operation type, value range:</p>
+             * <ul>
+             * <li>immediate: Execute immediately.</li>
+             * <li>scheduled: Scheduled execution.</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>1742452232000</p>
              */
             public Builder opsType(String opsType) {
                 this.opsType = opsType;
@@ -170,7 +180,10 @@ public class BatchEventRedeployInstanceRequest extends Request {
             }
 
             /**
-             * PlanTime.
+             * <p>Scheduled execution time, in timestamp, unit is milliseconds. This field is required when OpsType=scheduled.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>immediate</p>
              */
             public Builder planTime(Long planTime) {
                 this.planTime = planTime;
@@ -178,7 +191,10 @@ public class BatchEventRedeployInstanceRequest extends Request {
             }
 
             /**
-             * ResourceId.
+             * <p>Resource ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>i-55qi8m11rr53c4i964md8a00l</p>
              */
             public Builder resourceId(String resourceId) {
                 this.resourceId = resourceId;

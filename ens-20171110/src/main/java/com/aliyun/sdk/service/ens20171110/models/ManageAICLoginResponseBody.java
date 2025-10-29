@@ -12,15 +12,15 @@ import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
  * 
- * {@link DeleteNetworkInterfacesResponseBody} extends {@link TeaModel}
+ * {@link ManageAICLoginResponseBody} extends {@link TeaModel}
  *
- * <p>DeleteNetworkInterfacesResponseBody</p>
+ * <p>ManageAICLoginResponseBody</p>
  */
-public class DeleteNetworkInterfacesResponseBody extends TeaModel {
+public class ManageAICLoginResponseBody extends TeaModel {
     @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    private DeleteNetworkInterfacesResponseBody(Builder builder) {
+    private ManageAICLoginResponseBody(Builder builder) {
         this.requestId = builder.requestId;
     }
 
@@ -28,7 +28,7 @@ public class DeleteNetworkInterfacesResponseBody extends TeaModel {
         return new Builder();
     }
 
-    public static DeleteNetworkInterfacesResponseBody create() {
+    public static ManageAICLoginResponseBody create() {
         return builder().build();
     }
 
@@ -49,23 +49,23 @@ public class DeleteNetworkInterfacesResponseBody extends TeaModel {
         private Builder() {
         } 
 
-        private Builder(DeleteNetworkInterfacesResponseBody model) {
+        private Builder(ManageAICLoginResponseBody model) {
             this.requestId = model.requestId;
         } 
 
         /**
-         * <p>The request ID.</p>
+         * <p>Id of the request</p>
          * 
          * <strong>example:</strong>
-         * <p>125B04C7-3D0D-4245-AF96-14E3758E3F06</p>
+         * <p>F3B261DD-3858-4D3C-877D-303ADF374600</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
             return this;
         }
 
-        public DeleteNetworkInterfacesResponseBody build() {
-            return new DeleteNetworkInterfacesResponseBody(this);
+        public ManageAICLoginResponseBody build() {
+            return new ManageAICLoginResponseBody(this);
         } 
 
     } 

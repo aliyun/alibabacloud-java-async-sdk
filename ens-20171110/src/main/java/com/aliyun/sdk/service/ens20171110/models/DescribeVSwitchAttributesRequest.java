@@ -60,6 +60,7 @@ public class DescribeVSwitchAttributesRequest extends Request {
         } 
 
         /**
+         * <p>The ID of the VSwitch.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>

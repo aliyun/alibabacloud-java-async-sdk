@@ -46,6 +46,10 @@ public class DescribeEnsEipAddressesRequest extends Request {
     private java.util.List<String> ensRegionIds;
 
     @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("IcmpReplyEnabled")
+    private Boolean icmpReplyEnabled;
+
+    @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("PageNumber")
     private Integer pageNumber;
 
@@ -67,6 +71,7 @@ public class DescribeEnsEipAddressesRequest extends Request {
         this.eipName = builder.eipName;
         this.ensRegionId = builder.ensRegionId;
         this.ensRegionIds = builder.ensRegionIds;
+        this.icmpReplyEnabled = builder.icmpReplyEnabled;
         this.pageNumber = builder.pageNumber;
         this.pageSize = builder.pageSize;
         this.standby = builder.standby;
@@ -135,6 +140,13 @@ public class DescribeEnsEipAddressesRequest extends Request {
     }
 
     /**
+     * @return icmpReplyEnabled
+     */
+    public Boolean getIcmpReplyEnabled() {
+        return this.icmpReplyEnabled;
+    }
+
+    /**
      * @return pageNumber
      */
     public Integer getPageNumber() {
@@ -163,6 +175,7 @@ public class DescribeEnsEipAddressesRequest extends Request {
         private String eipName; 
         private String ensRegionId; 
         private java.util.List<String> ensRegionIds; 
+        private Boolean icmpReplyEnabled; 
         private Integer pageNumber; 
         private Integer pageSize; 
         private String standby; 
@@ -180,6 +193,7 @@ public class DescribeEnsEipAddressesRequest extends Request {
             this.eipName = request.eipName;
             this.ensRegionId = request.ensRegionId;
             this.ensRegionIds = request.ensRegionIds;
+            this.icmpReplyEnabled = request.icmpReplyEnabled;
             this.pageNumber = request.pageNumber;
             this.pageSize = request.pageSize;
             this.standby = request.standby;
@@ -267,6 +281,15 @@ public class DescribeEnsEipAddressesRequest extends Request {
         public Builder ensRegionIds(java.util.List<String> ensRegionIds) {
             this.putQueryParameter("EnsRegionIds", ensRegionIds);
             this.ensRegionIds = ensRegionIds;
+            return this;
+        }
+
+        /**
+         * IcmpReplyEnabled.
+         */
+        public Builder icmpReplyEnabled(Boolean icmpReplyEnabled) {
+            this.putQueryParameter("IcmpReplyEnabled", icmpReplyEnabled);
+            this.icmpReplyEnabled = icmpReplyEnabled;
             return this;
         }
 

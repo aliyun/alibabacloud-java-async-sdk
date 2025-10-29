@@ -106,7 +106,7 @@ public class DescribeInstanceBandwidthDetailResponseBody extends TeaModel {
         } 
 
         /**
-         * Bandwidths.
+         * <p>Details about the maximum public bandwidth.</p>
          */
         public Builder bandwidths(java.util.List<Bandwidths> bandwidths) {
             this.bandwidths = bandwidths;
@@ -114,7 +114,10 @@ public class DescribeInstanceBandwidthDetailResponseBody extends TeaModel {
         }
 
         /**
-         * PageNumber.
+         * <p>The page number of the current page.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder pageNumber(Integer pageNumber) {
             this.pageNumber = pageNumber;
@@ -122,7 +125,10 @@ public class DescribeInstanceBandwidthDetailResponseBody extends TeaModel {
         }
 
         /**
-         * PageSize.
+         * <p>The number of records per page.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10</p>
          */
         public Builder pageSize(Integer pageSize) {
             this.pageSize = pageSize;
@@ -141,7 +147,10 @@ public class DescribeInstanceBandwidthDetailResponseBody extends TeaModel {
         }
 
         /**
-         * TotalCount.
+         * <p>The total number of entries.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder totalCount(Integer totalCount) {
             this.totalCount = totalCount;
@@ -324,7 +333,10 @@ public class DescribeInstanceBandwidthDetailResponseBody extends TeaModel {
             } 
 
             /**
-             * AliUid.
+             * <p>The user ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1972653484384661</p>
              */
             public Builder aliUid(Long aliUid) {
                 this.aliUid = aliUid;
@@ -332,7 +344,10 @@ public class DescribeInstanceBandwidthDetailResponseBody extends TeaModel {
             }
 
             /**
-             * BizTime.
+             * <p>The bandwidth service time. The data granularity is 5 minutes.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2024-01-11 00:00:00</p>
              */
             public Builder bizTime(String bizTime) {
                 this.bizTime = bizTime;
@@ -340,7 +355,10 @@ public class DescribeInstanceBandwidthDetailResponseBody extends TeaModel {
             }
 
             /**
-             * EnsRegionId.
+             * <p>The node ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>cn-yichang-2</p>
              */
             public Builder ensRegionId(String ensRegionId) {
                 this.ensRegionId = ensRegionId;
@@ -348,7 +366,10 @@ public class DescribeInstanceBandwidthDetailResponseBody extends TeaModel {
             }
 
             /**
-             * FlowType.
+             * <p>The type of the bandwidth. Valid values: 1, which indicates public network bandwidth. 2, which indicates internal network bandwidth.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder flowType(Integer flowType) {
                 this.flowType = flowType;
@@ -356,7 +377,10 @@ public class DescribeInstanceBandwidthDetailResponseBody extends TeaModel {
             }
 
             /**
-             * InstanceId.
+             * <p>The plan ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>i-6ecpqvkicnchxccozrpxxxx</p>
              */
             public Builder instanceId(String instanceId) {
                 this.instanceId = instanceId;
@@ -364,7 +388,10 @@ public class DescribeInstanceBandwidthDetailResponseBody extends TeaModel {
             }
 
             /**
-             * InstanceType.
+             * <p>The type of the instance, such as vm, eip, single_tenant, and nc.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>vm</p>
              */
             public Builder instanceType(String instanceType) {
                 this.instanceType = instanceType;
@@ -372,7 +399,10 @@ public class DescribeInstanceBandwidthDetailResponseBody extends TeaModel {
             }
 
             /**
-             * Ip.
+             * <p>null</p>
+             * 
+             * <strong>example:</strong>
+             * <p>203.107.***</p>
              */
             public Builder ip(String ip) {
                 this.ip = ip;
@@ -380,7 +410,10 @@ public class DescribeInstanceBandwidthDetailResponseBody extends TeaModel {
             }
 
             /**
-             * Isp.
+             * <p>The Internet service provider to which the IP address belongs.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>cmcc</p>
              */
             public Builder isp(String isp) {
                 this.isp = isp;
@@ -388,7 +421,10 @@ public class DescribeInstanceBandwidthDetailResponseBody extends TeaModel {
             }
 
             /**
-             * RxBw.
+             * <p>null</p>
+             * 
+             * <strong>example:</strong>
+             * <p>43795230</p>
              */
             public Builder rxBw(Long rxBw) {
                 this.rxBw = rxBw;
@@ -396,7 +432,10 @@ public class DescribeInstanceBandwidthDetailResponseBody extends TeaModel {
             }
 
             /**
-             * ServiceType.
+             * <p>The type of the service, such as vm, eip, esk, and meta.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>vm</p>
              */
             public Builder serviceType(String serviceType) {
                 this.serviceType = serviceType;
@@ -404,7 +443,10 @@ public class DescribeInstanceBandwidthDetailResponseBody extends TeaModel {
             }
 
             /**
-             * TxBw.
+             * <p>null</p>
+             * 
+             * <strong>example:</strong>
+             * <p>25415638</p>
              */
             public Builder txBw(Long txBw) {
                 this.txBw = txBw;

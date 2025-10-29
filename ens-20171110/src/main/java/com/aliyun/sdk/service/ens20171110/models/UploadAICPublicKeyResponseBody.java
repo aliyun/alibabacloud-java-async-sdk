@@ -12,15 +12,15 @@ import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
  * 
- * {@link DeleteNetworkInterfacesResponseBody} extends {@link TeaModel}
+ * {@link UploadAICPublicKeyResponseBody} extends {@link TeaModel}
  *
- * <p>DeleteNetworkInterfacesResponseBody</p>
+ * <p>UploadAICPublicKeyResponseBody</p>
  */
-public class DeleteNetworkInterfacesResponseBody extends TeaModel {
+public class UploadAICPublicKeyResponseBody extends TeaModel {
     @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    private DeleteNetworkInterfacesResponseBody(Builder builder) {
+    private UploadAICPublicKeyResponseBody(Builder builder) {
         this.requestId = builder.requestId;
     }
 
@@ -28,7 +28,7 @@ public class DeleteNetworkInterfacesResponseBody extends TeaModel {
         return new Builder();
     }
 
-    public static DeleteNetworkInterfacesResponseBody create() {
+    public static UploadAICPublicKeyResponseBody create() {
         return builder().build();
     }
 
@@ -49,12 +49,12 @@ public class DeleteNetworkInterfacesResponseBody extends TeaModel {
         private Builder() {
         } 
 
-        private Builder(DeleteNetworkInterfacesResponseBody model) {
+        private Builder(UploadAICPublicKeyResponseBody model) {
             this.requestId = model.requestId;
         } 
 
         /**
-         * <p>The request ID.</p>
+         * <p>Id of the request</p>
          * 
          * <strong>example:</strong>
          * <p>125B04C7-3D0D-4245-AF96-14E3758E3F06</p>
@@ -64,8 +64,8 @@ public class DeleteNetworkInterfacesResponseBody extends TeaModel {
             return this;
         }
 
-        public DeleteNetworkInterfacesResponseBody build() {
-            return new DeleteNetworkInterfacesResponseBody(this);
+        public UploadAICPublicKeyResponseBody build() {
+            return new UploadAICPublicKeyResponseBody(this);
         } 
 
     } 
