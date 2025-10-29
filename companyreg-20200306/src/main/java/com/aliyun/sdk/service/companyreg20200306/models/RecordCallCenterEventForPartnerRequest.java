@@ -46,6 +46,10 @@ public class RecordCallCenterEventForPartnerRequest extends Request {
     private String contactId;
 
     @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("EmployeeCode")
+    private String employeeCode;
+
+    @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("JobId")
     private String jobId;
 
@@ -61,6 +65,10 @@ public class RecordCallCenterEventForPartnerRequest extends Request {
     @com.aliyun.core.annotation.NameInMap("SkillType")
     private Integer skillType;
 
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("TenantId")
+    private String tenantId;
+
     private RecordCallCenterEventForPartnerRequest(Builder builder) {
         super(builder);
         this.bizId = builder.bizId;
@@ -70,10 +78,12 @@ public class RecordCallCenterEventForPartnerRequest extends Request {
         this.caller = builder.caller;
         this.connId = builder.connId;
         this.contactId = builder.contactId;
+        this.employeeCode = builder.employeeCode;
         this.jobId = builder.jobId;
         this.relatedId = builder.relatedId;
         this.secretMobile = builder.secretMobile;
         this.skillType = builder.skillType;
+        this.tenantId = builder.tenantId;
     }
 
     public static Builder builder() {
@@ -139,6 +149,13 @@ public class RecordCallCenterEventForPartnerRequest extends Request {
     }
 
     /**
+     * @return employeeCode
+     */
+    public String getEmployeeCode() {
+        return this.employeeCode;
+    }
+
+    /**
      * @return jobId
      */
     public String getJobId() {
@@ -166,6 +183,13 @@ public class RecordCallCenterEventForPartnerRequest extends Request {
         return this.skillType;
     }
 
+    /**
+     * @return tenantId
+     */
+    public String getTenantId() {
+        return this.tenantId;
+    }
+
     public static final class Builder extends Request.Builder<RecordCallCenterEventForPartnerRequest, Builder> {
         private String bizId; 
         private String bizType; 
@@ -174,10 +198,12 @@ public class RecordCallCenterEventForPartnerRequest extends Request {
         private String caller; 
         private String connId; 
         private String contactId; 
+        private String employeeCode; 
         private String jobId; 
         private Long relatedId; 
         private String secretMobile; 
         private Integer skillType; 
+        private String tenantId; 
 
         private Builder() {
             super();
@@ -192,10 +218,12 @@ public class RecordCallCenterEventForPartnerRequest extends Request {
             this.caller = request.caller;
             this.connId = request.connId;
             this.contactId = request.contactId;
+            this.employeeCode = request.employeeCode;
             this.jobId = request.jobId;
             this.relatedId = request.relatedId;
             this.secretMobile = request.secretMobile;
             this.skillType = request.skillType;
+            this.tenantId = request.tenantId;
         } 
 
         /**
@@ -262,6 +290,15 @@ public class RecordCallCenterEventForPartnerRequest extends Request {
         }
 
         /**
+         * EmployeeCode.
+         */
+        public Builder employeeCode(String employeeCode) {
+            this.putQueryParameter("EmployeeCode", employeeCode);
+            this.employeeCode = employeeCode;
+            return this;
+        }
+
+        /**
          * JobId.
          */
         public Builder jobId(String jobId) {
@@ -297,6 +334,15 @@ public class RecordCallCenterEventForPartnerRequest extends Request {
         public Builder skillType(Integer skillType) {
             this.putQueryParameter("SkillType", skillType);
             this.skillType = skillType;
+            return this;
+        }
+
+        /**
+         * TenantId.
+         */
+        public Builder tenantId(String tenantId) {
+            this.putQueryParameter("TenantId", tenantId);
+            this.tenantId = tenantId;
             return this;
         }
 
