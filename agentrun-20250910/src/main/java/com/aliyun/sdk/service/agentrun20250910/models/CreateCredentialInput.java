@@ -106,7 +106,10 @@ public class CreateCredentialInput extends TeaModel {
         } 
 
         /**
-         * config.
+         * <p>凭证的配置参数，以键值对形式存储</p>
+         * 
+         * <strong>example:</strong>
+         * <p>api_endpoint=<a href="https://api.example.com,timeout=30">https://api.example.com,timeout=30</a></p>
          */
         public Builder config(java.util.Map<String, String> config) {
             this.config = config;

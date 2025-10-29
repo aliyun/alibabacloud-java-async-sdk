@@ -126,6 +126,9 @@ public class HealthCheckConfiguration extends TeaModel {
 
         /**
          * <p>在将容器视为不健康之前，连续失败的健康检查次数</p>
+         * 
+         * <strong>example:</strong>
+         * <p>3</p>
          */
         public Builder failureThreshold(Integer failureThreshold) {
             this.failureThreshold = failureThreshold;
@@ -134,6 +137,9 @@ public class HealthCheckConfiguration extends TeaModel {
 
         /**
          * <p>用于健康检查的HTTP GET请求的URL地址</p>
+         * 
+         * <strong>example:</strong>
+         * <p>/ready</p>
          */
         public Builder httpGetUrl(String httpGetUrl) {
             this.httpGetUrl = httpGetUrl;
@@ -142,6 +148,9 @@ public class HealthCheckConfiguration extends TeaModel {
 
         /**
          * <p>在容器启动后，首次执行健康检查前的延迟时间（秒）</p>
+         * 
+         * <strong>example:</strong>
+         * <p>30</p>
          */
         public Builder initialDelaySeconds(Integer initialDelaySeconds) {
             this.initialDelaySeconds = initialDelaySeconds;
@@ -150,6 +159,9 @@ public class HealthCheckConfiguration extends TeaModel {
 
         /**
          * <p>执行健康检查的时间间隔（秒）</p>
+         * 
+         * <strong>example:</strong>
+         * <p>30</p>
          */
         public Builder periodSeconds(Integer periodSeconds) {
             this.periodSeconds = periodSeconds;
@@ -158,6 +170,9 @@ public class HealthCheckConfiguration extends TeaModel {
 
         /**
          * <p>在将容器视为健康之前，连续成功的健康检查次数</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder successThreshold(Integer successThreshold) {
             this.successThreshold = successThreshold;
@@ -166,6 +181,9 @@ public class HealthCheckConfiguration extends TeaModel {
 
         /**
          * <p>健康检查的超时时间（秒）</p>
+         * 
+         * <strong>example:</strong>
+         * <p>3</p>
          */
         public Builder timeoutSeconds(Integer timeoutSeconds) {
             this.timeoutSeconds = timeoutSeconds;

@@ -166,6 +166,9 @@ public class BrowserSessionOut extends TeaModel {
 
         /**
          * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>bs-1234567890abcdef</p>
          */
         public Builder sessionId(String sessionId) {
             this.sessionId = sessionId;
@@ -174,6 +177,9 @@ public class BrowserSessionOut extends TeaModel {
 
         /**
          * <p>会话空闲超时时间，单位为秒</p>
+         * 
+         * <strong>example:</strong>
+         * <p>3600</p>
          */
         public Builder sessionIdleTimeoutSeconds(Integer sessionIdleTimeoutSeconds) {
             this.sessionIdleTimeoutSeconds = sessionIdleTimeoutSeconds;

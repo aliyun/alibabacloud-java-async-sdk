@@ -81,6 +81,9 @@ public class ListBrowsersInput extends TeaModel {
 
         /**
          * <p>按浏览器名称过滤</p>
+         * 
+         * <strong>example:</strong>
+         * <p>my-browser</p>
          */
         public Builder browserName(String browserName) {
             this.browserName = browserName;

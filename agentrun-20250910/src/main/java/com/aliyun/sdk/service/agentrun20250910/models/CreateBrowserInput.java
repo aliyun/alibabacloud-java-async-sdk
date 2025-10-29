@@ -150,6 +150,9 @@ public class CreateBrowserInput extends TeaModel {
 
         /**
          * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>my-browser</p>
          */
         public Builder browserName(String browserName) {
             this.browserName = browserName;
@@ -159,6 +162,9 @@ public class CreateBrowserInput extends TeaModel {
         /**
          * <p>CPU资源配置（单位：核）</p>
          * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2.0</p>
          */
         public Builder cpu(Float cpu) {
             this.cpu = cpu;
@@ -192,6 +198,9 @@ public class CreateBrowserInput extends TeaModel {
         /**
          * <p>内存资源配置（单位：MB）</p>
          * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2048</p>
          */
         public Builder memory(Integer memory) {
             this.memory = memory;
@@ -208,6 +217,9 @@ public class CreateBrowserInput extends TeaModel {
 
         /**
          * <p>会话的空闲超时时间，单位为秒。实例没有会话请求后处于空闲状态，空闲态为闲置计费模式，超过此超时时间后会话自动过期，不可继续使用</p>
+         * 
+         * <strong>example:</strong>
+         * <p>3600</p>
          */
         public Builder sessionIdleTimeoutSeconds(Integer sessionIdleTimeoutSeconds) {
             this.sessionIdleTimeoutSeconds = sessionIdleTimeoutSeconds;

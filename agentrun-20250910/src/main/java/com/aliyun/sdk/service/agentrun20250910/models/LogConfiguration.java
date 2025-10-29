@@ -68,6 +68,9 @@ public class LogConfiguration extends TeaModel {
 
         /**
          * <p>SLS日志库名称</p>
+         * 
+         * <strong>example:</strong>
+         * <p>agent-runtime-logs</p>
          */
         public Builder logstore(String logstore) {
             this.logstore = logstore;
@@ -76,6 +79,9 @@ public class LogConfiguration extends TeaModel {
 
         /**
          * <p>SLS项目名称</p>
+         * 
+         * <strong>example:</strong>
+         * <p>agent-runtime-logs</p>
          */
         public Builder project(String project) {
             this.project = project;

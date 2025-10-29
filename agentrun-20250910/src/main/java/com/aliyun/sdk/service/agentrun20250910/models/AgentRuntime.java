@@ -342,6 +342,9 @@ public class AgentRuntime extends TeaModel {
 
         /**
          * <p>智能体运行时的全局唯一资源名称</p>
+         * 
+         * <strong>example:</strong>
+         * <p>acs:agentrun:cn-hangzhou:1760720386195983:runtimes/7a1b6d39-9f8f-4ce2-b9c9-6db1b0b9e169</p>
          */
         public Builder agentRuntimeArn(String agentRuntimeArn) {
             this.agentRuntimeArn = agentRuntimeArn;
@@ -350,6 +353,9 @@ public class AgentRuntime extends TeaModel {
 
         /**
          * <p>智能体运行时的唯一标识符</p>
+         * 
+         * <strong>example:</strong>
+         * <p>ar-1234567890abcdef</p>
          */
         public Builder agentRuntimeId(String agentRuntimeId) {
             this.agentRuntimeId = agentRuntimeId;
@@ -358,6 +364,9 @@ public class AgentRuntime extends TeaModel {
 
         /**
          * <p>智能体运行时的名称，用于标识和区分不同的运行时实例</p>
+         * 
+         * <strong>example:</strong>
+         * <p>my-agent-runtime</p>
          */
         public Builder agentRuntimeName(String agentRuntimeName) {
             this.agentRuntimeName = agentRuntimeName;
@@ -366,6 +375,9 @@ public class AgentRuntime extends TeaModel {
 
         /**
          * <p>智能体运行时的版本号，用于版本管理和回滚</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder agentRuntimeVersion(String agentRuntimeVersion) {
             this.agentRuntimeVersion = agentRuntimeVersion;
@@ -374,6 +386,9 @@ public class AgentRuntime extends TeaModel {
 
         /**
          * <p>智能体运行时的部署类型，支持Code（代码模式）和Container（容器模式）</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Code</p>
          */
         public Builder artifactType(String artifactType) {
             this.artifactType = artifactType;
@@ -382,6 +397,9 @@ public class AgentRuntime extends TeaModel {
 
         /**
          * <p>当artifactType为Code时的代码配置信息</p>
+         * 
+         * <strong>example:</strong>
+         * <p>{}</p>
          */
         public Builder codeConfiguration(CodeConfiguration codeConfiguration) {
             this.codeConfiguration = codeConfiguration;
@@ -390,6 +408,9 @@ public class AgentRuntime extends TeaModel {
 
         /**
          * <p>当artifactType为Container时的容器配置信息</p>
+         * 
+         * <strong>example:</strong>
+         * <p>{}</p>
          */
         public Builder containerConfiguration(ContainerConfiguration containerConfiguration) {
             this.containerConfiguration = containerConfiguration;
@@ -398,6 +419,9 @@ public class AgentRuntime extends TeaModel {
 
         /**
          * <p>智能体运行时分配的CPU资源，单位为核数</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2.0</p>
          */
         public Builder cpu(Float cpu) {
             this.cpu = cpu;
@@ -406,6 +430,9 @@ public class AgentRuntime extends TeaModel {
 
         /**
          * <p>智能体运行时的创建时间，采用ISO 8601格式</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2025-01-10T10:30:00Z</p>
          */
         public Builder createdAt(String createdAt) {
             this.createdAt = createdAt;
@@ -414,6 +441,9 @@ public class AgentRuntime extends TeaModel {
 
         /**
          * <p>智能体运行时的描述信息，说明该运行时的用途和功能</p>
+         * 
+         * <strong>example:</strong>
+         * <p>AI agent runtime for customer service automation</p>
          */
         public Builder description(String description) {
             this.description = description;
@@ -422,6 +452,9 @@ public class AgentRuntime extends TeaModel {
 
         /**
          * <p>智能体运行时的环境变量配置</p>
+         * 
+         * <strong>example:</strong>
+         * <p>ENV_VAR1=value1,ENV_VAR2=value2</p>
          */
         public Builder environmentVariables(java.util.Map<String, String> environmentVariables) {
             this.environmentVariables = environmentVariables;
@@ -430,6 +463,9 @@ public class AgentRuntime extends TeaModel {
 
         /**
          * <p>为智能体运行时提供访问云服务权限的执行角色ARN</p>
+         * 
+         * <strong>example:</strong>
+         * <p>acs:ram::1760720386195983:role/AgentRunExecutionRole</p>
          */
         public Builder executionRoleArn(String executionRoleArn) {
             this.executionRoleArn = executionRoleArn;
@@ -438,6 +474,9 @@ public class AgentRuntime extends TeaModel {
 
         /**
          * <p>智能体运行时的健康检查配置，用于监控运行时实例的健康状态</p>
+         * 
+         * <strong>example:</strong>
+         * <p>{}</p>
          */
         public Builder healthCheckConfiguration(HealthCheckConfiguration healthCheckConfiguration) {
             this.healthCheckConfiguration = healthCheckConfiguration;
@@ -446,6 +485,9 @@ public class AgentRuntime extends TeaModel {
 
         /**
          * <p>智能体运行时最后一次更新的时间，采用ISO 8601格式</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2025-01-10T11:45:00Z</p>
          */
         public Builder lastUpdatedAt(String lastUpdatedAt) {
             this.lastUpdatedAt = lastUpdatedAt;
@@ -454,6 +496,9 @@ public class AgentRuntime extends TeaModel {
 
         /**
          * <p>SLS（简单日志服务）配置</p>
+         * 
+         * <strong>example:</strong>
+         * <p>{}</p>
          */
         public Builder logConfiguration(LogConfiguration logConfiguration) {
             this.logConfiguration = logConfiguration;
@@ -462,6 +507,9 @@ public class AgentRuntime extends TeaModel {
 
         /**
          * <p>智能体运行时分配的内存资源，单位为MB</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2048</p>
          */
         public Builder memory(Integer memory) {
             this.memory = memory;
@@ -470,6 +518,9 @@ public class AgentRuntime extends TeaModel {
 
         /**
          * <p>智能体运行时的网络配置信息</p>
+         * 
+         * <strong>example:</strong>
+         * <p>{}</p>
          */
         public Builder networkConfiguration(NetworkConfiguration networkConfiguration) {
             this.networkConfiguration = networkConfiguration;
@@ -478,6 +529,9 @@ public class AgentRuntime extends TeaModel {
 
         /**
          * <p>智能体运行时监听的端口号</p>
+         * 
+         * <strong>example:</strong>
+         * <p>8080</p>
          */
         public Builder port(Integer port) {
             this.port = port;
@@ -486,6 +540,9 @@ public class AgentRuntime extends TeaModel {
 
         /**
          * <p>智能体运行时的通信协议配置</p>
+         * 
+         * <strong>example:</strong>
+         * <p>{}</p>
          */
         public Builder protocolConfiguration(ProtocolConfiguration protocolConfiguration) {
             this.protocolConfiguration = protocolConfiguration;
@@ -494,6 +551,9 @@ public class AgentRuntime extends TeaModel {
 
         /**
          * <p>每个运行时实例允许的最大并发会话数</p>
+         * 
+         * <strong>example:</strong>
+         * <p>100</p>
          */
         public Builder sessionConcurrencyLimitPerInstance(Integer sessionConcurrencyLimitPerInstance) {
             this.sessionConcurrencyLimitPerInstance = sessionConcurrencyLimitPerInstance;
@@ -502,6 +562,9 @@ public class AgentRuntime extends TeaModel {
 
         /**
          * <p>会话的空闲超时时间，单位为秒。实例没有会话请求后处于空闲状态，空闲态为闲置计费模式，超过此超时时间后会话自动过期，不可继续使用</p>
+         * 
+         * <strong>example:</strong>
+         * <p>3600</p>
          */
         public Builder sessionIdleTimeoutSeconds(Integer sessionIdleTimeoutSeconds) {
             this.sessionIdleTimeoutSeconds = sessionIdleTimeoutSeconds;
@@ -510,6 +573,9 @@ public class AgentRuntime extends TeaModel {
 
         /**
          * <p>智能体运行时的当前状态，如READY（就绪）、CREATING（创建中）、FAILED（失败）等</p>
+         * 
+         * <strong>example:</strong>
+         * <p>READY</p>
          */
         public Builder status(String status) {
             this.status = status;
@@ -518,6 +584,9 @@ public class AgentRuntime extends TeaModel {
 
         /**
          * <p>当前状态的原因说明（如适用）</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Runtime is ready for use</p>
          */
         public Builder statusReason(String statusReason) {
             this.statusReason = statusReason;

@@ -81,6 +81,9 @@ public class CodeInterpreterSessionConfig extends TeaModel {
 
         /**
          * <p>代码解释器会话的环境变量配置</p>
+         * 
+         * <strong>example:</strong>
+         * <p>PYTHONPATH=/app,DEBUG=true</p>
          */
         public Builder environment(java.util.Map<String, String> environment) {
             this.environment = environment;
@@ -89,6 +92,9 @@ public class CodeInterpreterSessionConfig extends TeaModel {
 
         /**
          * <p>代码解释器会话的超时时间，单位为秒</p>
+         * 
+         * <strong>example:</strong>
+         * <p>3600</p>
          */
         public Builder timeout(Integer timeout) {
             this.timeout = timeout;
@@ -97,6 +103,9 @@ public class CodeInterpreterSessionConfig extends TeaModel {
 
         /**
          * <p>代码解释器会话的工作目录路径</p>
+         * 
+         * <strong>example:</strong>
+         * <p>/app</p>
          */
         public Builder workingDirectory(String workingDirectory) {
             this.workingDirectory = workingDirectory;

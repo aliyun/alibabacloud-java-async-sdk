@@ -94,6 +94,9 @@ public class ListAgentRuntimesInput extends TeaModel {
 
         /**
          * <p>按名称过滤</p>
+         * 
+         * <strong>example:</strong>
+         * <p>my-agent-runtime</p>
          */
         public Builder agentRuntimeName(String agentRuntimeName) {
             this.agentRuntimeName = agentRuntimeName;
@@ -102,6 +105,9 @@ public class ListAgentRuntimesInput extends TeaModel {
 
         /**
          * <p>页码</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder pageNumber(Integer pageNumber) {
             this.pageNumber = pageNumber;
@@ -110,6 +116,9 @@ public class ListAgentRuntimesInput extends TeaModel {
 
         /**
          * <p>每页记录数</p>
+         * 
+         * <strong>example:</strong>
+         * <p>20</p>
          */
         public Builder pageSize(Integer pageSize) {
             this.pageSize = pageSize;
@@ -118,6 +127,9 @@ public class ListAgentRuntimesInput extends TeaModel {
 
         /**
          * <p>按状态过滤</p>
+         * 
+         * <strong>example:</strong>
+         * <p>READY,CREATING</p>
          */
         public Builder statuses(java.util.List<String> statuses) {
             this.statuses = statuses;

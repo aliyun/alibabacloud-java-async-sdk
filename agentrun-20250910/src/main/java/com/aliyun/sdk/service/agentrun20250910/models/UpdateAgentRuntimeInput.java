@@ -267,7 +267,10 @@ public class UpdateAgentRuntimeInput extends TeaModel {
         }
 
         /**
-         * codeConfiguration.
+         * <p>当artifactType为Code时的代码配置信息，包括代码源、入口文件等</p>
+         * 
+         * <strong>example:</strong>
+         * <p>{}</p>
          */
         public Builder codeConfiguration(CodeConfiguration codeConfiguration) {
             this.codeConfiguration = codeConfiguration;
@@ -275,7 +278,10 @@ public class UpdateAgentRuntimeInput extends TeaModel {
         }
 
         /**
-         * containerConfiguration.
+         * <p>当artifactType为Container时的容器配置信息，包括镜像地址、启动命令等</p>
+         * 
+         * <strong>example:</strong>
+         * <p>{}</p>
          */
         public Builder containerConfiguration(ContainerConfiguration containerConfiguration) {
             this.containerConfiguration = containerConfiguration;
@@ -284,6 +290,9 @@ public class UpdateAgentRuntimeInput extends TeaModel {
 
         /**
          * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1.0</p>
          */
         public Builder cpu(Float cpu) {
             this.cpu = cpu;
@@ -299,7 +308,10 @@ public class UpdateAgentRuntimeInput extends TeaModel {
         }
 
         /**
-         * environmentVariables.
+         * <p>智能体运行时的环境变量配置，用于在运行时传递配置参数</p>
+         * 
+         * <strong>example:</strong>
+         * <p>ENV_VAR1=value1,ENV_VAR2=value2</p>
          */
         public Builder environmentVariables(java.util.Map<String, String> environmentVariables) {
             this.environmentVariables = environmentVariables;
@@ -308,6 +320,9 @@ public class UpdateAgentRuntimeInput extends TeaModel {
 
         /**
          * <p>为智能体运行时提供访问云服务权限的执行角色ARN</p>
+         * 
+         * <strong>example:</strong>
+         * <p>acs:ram::1760720386195983:role/AgentRunExecutionRole</p>
          */
         public Builder executionRoleArn(String executionRoleArn) {
             this.executionRoleArn = executionRoleArn;
@@ -316,6 +331,9 @@ public class UpdateAgentRuntimeInput extends TeaModel {
 
         /**
          * <p>智能体运行时的健康检查配置，用于监控运行时实例的健康状态</p>
+         * 
+         * <strong>example:</strong>
+         * <p>{}</p>
          */
         public Builder healthCheckConfiguration(HealthCheckConfiguration healthCheckConfiguration) {
             this.healthCheckConfiguration = healthCheckConfiguration;
@@ -324,6 +342,9 @@ public class UpdateAgentRuntimeInput extends TeaModel {
 
         /**
          * <p>SLS（简单日志服务）配置</p>
+         * 
+         * <strong>example:</strong>
+         * <p>{}</p>
          */
         public Builder logConfiguration(LogConfiguration logConfiguration) {
             this.logConfiguration = logConfiguration;
@@ -339,7 +360,10 @@ public class UpdateAgentRuntimeInput extends TeaModel {
         }
 
         /**
-         * networkConfiguration.
+         * <p>智能体运行时的网络配置，包括VPC、安全组等网络访问设置</p>
+         * 
+         * <strong>example:</strong>
+         * <p>{}</p>
          */
         public Builder networkConfiguration(NetworkConfiguration networkConfiguration) {
             this.networkConfiguration = networkConfiguration;
@@ -355,7 +379,10 @@ public class UpdateAgentRuntimeInput extends TeaModel {
         }
 
         /**
-         * protocolConfiguration.
+         * <p>智能体运行时的通信协议配置，定义运行时如何与外部系统交互</p>
+         * 
+         * <strong>example:</strong>
+         * <p>{}</p>
          */
         public Builder protocolConfiguration(ProtocolConfiguration protocolConfiguration) {
             this.protocolConfiguration = protocolConfiguration;
@@ -364,6 +391,9 @@ public class UpdateAgentRuntimeInput extends TeaModel {
 
         /**
          * <p>每个运行时实例允许的最大并发会话数</p>
+         * 
+         * <strong>example:</strong>
+         * <p>100</p>
          */
         public Builder sessionConcurrencyLimitPerInstance(Integer sessionConcurrencyLimitPerInstance) {
             this.sessionConcurrencyLimitPerInstance = sessionConcurrencyLimitPerInstance;
@@ -372,6 +402,9 @@ public class UpdateAgentRuntimeInput extends TeaModel {
 
         /**
          * <p>会话的空闲超时时间，单位为秒。实例没有会话请求后处于空闲状态，空闲态为闲置计费模式，超过此超时时间后会话自动过期，不可继续使用</p>
+         * 
+         * <strong>example:</strong>
+         * <p>3600</p>
          */
         public Builder sessionIdleTimeoutSeconds(Integer sessionIdleTimeoutSeconds) {
             this.sessionIdleTimeoutSeconds = sessionIdleTimeoutSeconds;

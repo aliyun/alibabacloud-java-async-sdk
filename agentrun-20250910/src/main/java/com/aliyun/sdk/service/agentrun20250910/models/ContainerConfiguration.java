@@ -68,6 +68,9 @@ public class ContainerConfiguration extends TeaModel {
 
         /**
          * <p>在容器中运行的命令（例如：[&quot;python3&quot;, &quot;app.py&quot;]）</p>
+         * 
+         * <strong>example:</strong>
+         * <p>python3,app.py</p>
          */
         public Builder command(java.util.List<String> command) {
             this.command = command;

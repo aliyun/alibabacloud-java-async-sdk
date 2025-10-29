@@ -120,6 +120,9 @@ public class AgentRuntimeVersion extends TeaModel {
 
         /**
          * <p>智能体运行时的ARN</p>
+         * 
+         * <strong>example:</strong>
+         * <p>acs:agentrun:cn-hangzhou:1760720386195983:runtimes/7a1b6d39-9f8f-4ce2-b9c9-6db1b0b9e169</p>
          */
         public Builder agentRuntimeArn(String agentRuntimeArn) {
             this.agentRuntimeArn = agentRuntimeArn;
@@ -128,6 +131,9 @@ public class AgentRuntimeVersion extends TeaModel {
 
         /**
          * <p>智能体运行时的ID</p>
+         * 
+         * <strong>example:</strong>
+         * <p>ar-1234567890abcdef</p>
          */
         public Builder agentRuntimeId(String agentRuntimeId) {
             this.agentRuntimeId = agentRuntimeId;
@@ -136,6 +142,9 @@ public class AgentRuntimeVersion extends TeaModel {
 
         /**
          * <p>智能体运行时的名称</p>
+         * 
+         * <strong>example:</strong>
+         * <p>my-agent-runtime</p>
          */
         public Builder agentRuntimeName(String agentRuntimeName) {
             this.agentRuntimeName = agentRuntimeName;
@@ -144,6 +153,9 @@ public class AgentRuntimeVersion extends TeaModel {
 
         /**
          * <p>已发布版本的版本号</p>
+         * 
+         * <strong>example:</strong>
+         * <p>LATEST</p>
          */
         public Builder agentRuntimeVersion(String agentRuntimeVersion) {
             this.agentRuntimeVersion = agentRuntimeVersion;
@@ -152,6 +164,9 @@ public class AgentRuntimeVersion extends TeaModel {
 
         /**
          * <p>此版本的描述</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Initial release with basic functionality</p>
          */
         public Builder description(String description) {
             this.description = description;
@@ -160,6 +175,9 @@ public class AgentRuntimeVersion extends TeaModel {
 
         /**
          * <p>最后更新的时间戳</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2025-01-10T10:30:00Z</p>
          */
         public Builder lastUpdatedAt(String lastUpdatedAt) {
             this.lastUpdatedAt = lastUpdatedAt;

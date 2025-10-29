@@ -212,6 +212,9 @@ public class AgentRuntimeEndpoint extends TeaModel {
 
         /**
          * <p>智能体运行时端点的公网访问地址</p>
+         * 
+         * <strong>example:</strong>
+         * <p><a href="https://ar-1234567890abcdef.cn-hangzhou.agentrun.aliyuncs.com">https://ar-1234567890abcdef.cn-hangzhou.agentrun.aliyuncs.com</a></p>
          */
         public Builder endpointPublicUrl(String endpointPublicUrl) {
             this.endpointPublicUrl = endpointPublicUrl;

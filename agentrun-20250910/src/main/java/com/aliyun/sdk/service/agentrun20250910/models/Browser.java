@@ -288,6 +288,9 @@ public class Browser extends TeaModel {
 
         /**
          * <p>内存资源配置（单位：MB）</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2048</p>
          */
         public Builder memory(Integer memory) {
             this.memory = memory;
@@ -320,6 +323,9 @@ public class Browser extends TeaModel {
 
         /**
          * <p>当前状态的原因说明（如适用）</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Browser is ready for use</p>
          */
         public Builder statusReason(String statusReason) {
             this.statusReason = statusReason;

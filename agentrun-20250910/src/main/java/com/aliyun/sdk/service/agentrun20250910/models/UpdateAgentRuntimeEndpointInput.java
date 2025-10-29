@@ -110,6 +110,9 @@ public class UpdateAgentRuntimeEndpointInput extends TeaModel {
 
         /**
          * <p>智能体运行时端点的路由配置，支持多版本权重分配</p>
+         * 
+         * <strong>example:</strong>
+         * <p>{}</p>
          */
         public Builder routingConfiguration(RoutingConfiguration routingConfiguration) {
             this.routingConfiguration = routingConfiguration;
@@ -118,6 +121,9 @@ public class UpdateAgentRuntimeEndpointInput extends TeaModel {
 
         /**
          * <p>智能体运行时的目标版本</p>
+         * 
+         * <strong>example:</strong>
+         * <p>LATEST</p>
          */
         public Builder targetVersion(String targetVersion) {
             this.targetVersion = targetVersion;
