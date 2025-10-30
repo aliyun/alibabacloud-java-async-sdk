@@ -26,6 +26,12 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<AddApplicationAccountToUserResponse> addApplicationAccountToUser(AddApplicationAccountToUserRequest request);
 
     /**
+     * @param request the request parameters of AddCustomPrivacyPoliciesToBrand  AddCustomPrivacyPoliciesToBrandRequest
+     * @return AddCustomPrivacyPoliciesToBrandResponse
+     */
+    CompletableFuture<AddCustomPrivacyPoliciesToBrandResponse> addCustomPrivacyPoliciesToBrand(AddCustomPrivacyPoliciesToBrandRequest request);
+
+    /**
      * @param request the request parameters of AddUserToOrganizationalUnits  AddUserToOrganizationalUnitsRequest
      * @return AddUserToOrganizationalUnitsResponse
      */
@@ -96,6 +102,12 @@ public interface AsyncClient extends SdkAutoCloseable {
      * @return CreateConditionalAccessPolicyResponse
      */
     CompletableFuture<CreateConditionalAccessPolicyResponse> createConditionalAccessPolicy(CreateConditionalAccessPolicyRequest request);
+
+    /**
+     * @param request the request parameters of CreateCustomPrivacyPolicy  CreateCustomPrivacyPolicyRequest
+     * @return CreateCustomPrivacyPolicyResponse
+     */
+    CompletableFuture<CreateCustomPrivacyPolicyResponse> createCustomPrivacyPolicy(CreateCustomPrivacyPolicyRequest request);
 
     /**
      * @param request the request parameters of CreateDomain  CreateDomainRequest
@@ -198,6 +210,12 @@ public interface AsyncClient extends SdkAutoCloseable {
      * @return DeleteConditionalAccessPolicyResponse
      */
     CompletableFuture<DeleteConditionalAccessPolicyResponse> deleteConditionalAccessPolicy(DeleteConditionalAccessPolicyRequest request);
+
+    /**
+     * @param request the request parameters of DeleteCustomPrivacyPolicy  DeleteCustomPrivacyPolicyRequest
+     * @return DeleteCustomPrivacyPolicyResponse
+     */
+    CompletableFuture<DeleteCustomPrivacyPolicyResponse> deleteCustomPrivacyPolicy(DeleteCustomPrivacyPolicyRequest request);
 
     /**
      * @param request the request parameters of DeleteDomain  DeleteDomainRequest
@@ -329,6 +347,12 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<DisableConditionalAccessPolicyResponse> disableConditionalAccessPolicy(DisableConditionalAccessPolicyRequest request);
 
     /**
+     * @param request the request parameters of DisableCustomPrivacyPolicy  DisableCustomPrivacyPolicyRequest
+     * @return DisableCustomPrivacyPolicyResponse
+     */
+    CompletableFuture<DisableCustomPrivacyPolicyResponse> disableCustomPrivacyPolicy(DisableCustomPrivacyPolicyRequest request);
+
+    /**
      * @param request the request parameters of DisableDomainProxyToken  DisableDomainProxyTokenRequest
      * @return DisableDomainProxyTokenResponse
      */
@@ -422,6 +446,12 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<EnableConditionalAccessPolicyResponse> enableConditionalAccessPolicy(EnableConditionalAccessPolicyRequest request);
 
     /**
+     * @param request the request parameters of EnableCustomPrivacyPolicy  EnableCustomPrivacyPolicyRequest
+     * @return EnableCustomPrivacyPolicyResponse
+     */
+    CompletableFuture<EnableCustomPrivacyPolicyResponse> enableCustomPrivacyPolicy(EnableCustomPrivacyPolicyRequest request);
+
+    /**
      * @param request the request parameters of EnableDomainProxyToken  EnableDomainProxyTokenRequest
      * @return EnableDomainProxyTokenResponse
      */
@@ -513,6 +543,12 @@ public interface AsyncClient extends SdkAutoCloseable {
      * @return GetConditionalAccessPolicyResponse
      */
     CompletableFuture<GetConditionalAccessPolicyResponse> getConditionalAccessPolicy(GetConditionalAccessPolicyRequest request);
+
+    /**
+     * @param request the request parameters of GetCustomPrivacyPolicy  GetCustomPrivacyPolicyRequest
+     * @return GetCustomPrivacyPolicyResponse
+     */
+    CompletableFuture<GetCustomPrivacyPolicyResponse> getCustomPrivacyPolicy(GetCustomPrivacyPolicyRequest request);
 
     /**
      * @param request the request parameters of GetDomain  GetDomainRequest
@@ -755,6 +791,18 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<ListConditionalAccessPoliciesForUserResponse> listConditionalAccessPoliciesForUser(ListConditionalAccessPoliciesForUserRequest request);
 
     /**
+     * @param request the request parameters of ListCustomPrivacyPolicies  ListCustomPrivacyPoliciesRequest
+     * @return ListCustomPrivacyPoliciesResponse
+     */
+    CompletableFuture<ListCustomPrivacyPoliciesResponse> listCustomPrivacyPolicies(ListCustomPrivacyPoliciesRequest request);
+
+    /**
+     * @param request the request parameters of ListCustomPrivacyPoliciesForBrand  ListCustomPrivacyPoliciesForBrandRequest
+     * @return ListCustomPrivacyPoliciesForBrandResponse
+     */
+    CompletableFuture<ListCustomPrivacyPoliciesForBrandResponse> listCustomPrivacyPoliciesForBrand(ListCustomPrivacyPoliciesForBrandRequest request);
+
+    /**
      * @param request the request parameters of ListDomainProxyTokens  ListDomainProxyTokensRequest
      * @return ListDomainProxyTokensResponse
      */
@@ -921,6 +969,12 @@ public interface AsyncClient extends SdkAutoCloseable {
      * @return RemoveApplicationAccountFromUserResponse
      */
     CompletableFuture<RemoveApplicationAccountFromUserResponse> removeApplicationAccountFromUser(RemoveApplicationAccountFromUserRequest request);
+
+    /**
+     * @param request the request parameters of RemoveCustomPrivacyPoliciesFromBrand  RemoveCustomPrivacyPoliciesFromBrandRequest
+     * @return RemoveCustomPrivacyPoliciesFromBrandResponse
+     */
+    CompletableFuture<RemoveCustomPrivacyPoliciesFromBrandResponse> removeCustomPrivacyPoliciesFromBrand(RemoveCustomPrivacyPoliciesFromBrandRequest request);
 
     /**
      * @param request the request parameters of RemoveUserFromOrganizationalUnits  RemoveUserFromOrganizationalUnitsRequest
@@ -1110,6 +1164,12 @@ public interface AsyncClient extends SdkAutoCloseable {
      * @return UpdateConditionalAccessPolicyDescriptionResponse
      */
     CompletableFuture<UpdateConditionalAccessPolicyDescriptionResponse> updateConditionalAccessPolicyDescription(UpdateConditionalAccessPolicyDescriptionRequest request);
+
+    /**
+     * @param request the request parameters of UpdateCustomPrivacyPolicy  UpdateCustomPrivacyPolicyRequest
+     * @return UpdateCustomPrivacyPolicyResponse
+     */
+    CompletableFuture<UpdateCustomPrivacyPolicyResponse> updateCustomPrivacyPolicy(UpdateCustomPrivacyPolicyRequest request);
 
     /**
      * @param request the request parameters of UpdateDomainBrand  UpdateDomainBrandRequest
