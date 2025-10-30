@@ -494,7 +494,7 @@ public class QueryAxnExtensionBindFixedLineResponseBody extends TeaModel {
             }
 
             /**
-             * <p>接入商自有字段</p>
+             * <p>接入商自有字段，最大250字符长度</p>
              * 
              * <strong>example:</strong>
              * <p>12444</p>

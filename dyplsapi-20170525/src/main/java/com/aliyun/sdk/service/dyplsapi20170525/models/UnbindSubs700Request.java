@@ -12,24 +12,19 @@ import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
  * 
- * {@link DeleteAxnExtensionBindFixedLineRequest} extends {@link RequestModel}
+ * {@link UnbindSubs700Request} extends {@link RequestModel}
  *
- * <p>DeleteAxnExtensionBindFixedLineRequest</p>
+ * <p>UnbindSubs700Request</p>
  */
-public class DeleteAxnExtensionBindFixedLineRequest extends Request {
-    @com.aliyun.core.annotation.Query
-    @com.aliyun.core.annotation.NameInMap("AppId")
-    @com.aliyun.core.annotation.Validation(required = true)
-    private String appId;
-
-    @com.aliyun.core.annotation.Query
-    @com.aliyun.core.annotation.NameInMap("OrderId")
-    @com.aliyun.core.annotation.Validation(required = true)
-    private String orderId;
-
+public class UnbindSubs700Request extends Request {
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("OwnerId")
     private Long ownerId;
+
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("PoolKey")
+    @com.aliyun.core.annotation.Validation(required = true)
+    private String poolKey;
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("ResourceOwnerAccount")
@@ -40,31 +35,30 @@ public class DeleteAxnExtensionBindFixedLineRequest extends Request {
     private Long resourceOwnerId;
 
     @com.aliyun.core.annotation.Query
-    @com.aliyun.core.annotation.NameInMap("SubId")
+    @com.aliyun.core.annotation.NameInMap("SubsId")
     @com.aliyun.core.annotation.Validation(required = true)
-    private String subId;
+    private Long subsId;
 
     @com.aliyun.core.annotation.Query
-    @com.aliyun.core.annotation.NameInMap("Ts")
+    @com.aliyun.core.annotation.NameInMap("TelX")
     @com.aliyun.core.annotation.Validation(required = true)
-    private String ts;
+    private String telX;
 
-    private DeleteAxnExtensionBindFixedLineRequest(Builder builder) {
+    private UnbindSubs700Request(Builder builder) {
         super(builder);
-        this.appId = builder.appId;
-        this.orderId = builder.orderId;
         this.ownerId = builder.ownerId;
+        this.poolKey = builder.poolKey;
         this.resourceOwnerAccount = builder.resourceOwnerAccount;
         this.resourceOwnerId = builder.resourceOwnerId;
-        this.subId = builder.subId;
-        this.ts = builder.ts;
+        this.subsId = builder.subsId;
+        this.telX = builder.telX;
     }
 
     public static Builder builder() {
         return new Builder();
     }
 
-    public static DeleteAxnExtensionBindFixedLineRequest create() {
+    public static UnbindSubs700Request create() {
         return builder().build();
     }
 
@@ -74,24 +68,17 @@ public class DeleteAxnExtensionBindFixedLineRequest extends Request {
     }
 
     /**
-     * @return appId
-     */
-    public String getAppId() {
-        return this.appId;
-    }
-
-    /**
-     * @return orderId
-     */
-    public String getOrderId() {
-        return this.orderId;
-    }
-
-    /**
      * @return ownerId
      */
     public Long getOwnerId() {
         return this.ownerId;
+    }
+
+    /**
+     * @return poolKey
+     */
+    public String getPoolKey() {
+        return this.poolKey;
     }
 
     /**
@@ -109,68 +96,40 @@ public class DeleteAxnExtensionBindFixedLineRequest extends Request {
     }
 
     /**
-     * @return subId
+     * @return subsId
      */
-    public String getSubId() {
-        return this.subId;
+    public Long getSubsId() {
+        return this.subsId;
     }
 
     /**
-     * @return ts
+     * @return telX
      */
-    public String getTs() {
-        return this.ts;
+    public String getTelX() {
+        return this.telX;
     }
 
-    public static final class Builder extends Request.Builder<DeleteAxnExtensionBindFixedLineRequest, Builder> {
-        private String appId; 
-        private String orderId; 
+    public static final class Builder extends Request.Builder<UnbindSubs700Request, Builder> {
         private Long ownerId; 
+        private String poolKey; 
         private String resourceOwnerAccount; 
         private Long resourceOwnerId; 
-        private String subId; 
-        private String ts; 
+        private Long subsId; 
+        private String telX; 
 
         private Builder() {
             super();
         } 
 
-        private Builder(DeleteAxnExtensionBindFixedLineRequest request) {
+        private Builder(UnbindSubs700Request request) {
             super(request);
-            this.appId = request.appId;
-            this.orderId = request.orderId;
             this.ownerId = request.ownerId;
+            this.poolKey = request.poolKey;
             this.resourceOwnerAccount = request.resourceOwnerAccount;
             this.resourceOwnerId = request.resourceOwnerId;
-            this.subId = request.subId;
-            this.ts = request.ts;
+            this.subsId = request.subsId;
+            this.telX = request.telX;
         } 
-
-        /**
-         * <p>号池ID</p>
-         * <p>This parameter is required.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>alitest</p>
-         */
-        public Builder appId(String appId) {
-            this.putQueryParameter("AppId", appId);
-            this.appId = appId;
-            return this;
-        }
-
-        /**
-         * <p>消息请求唯一标识</p>
-         * <p>This parameter is required.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>12345dkwkd99d</p>
-         */
-        public Builder orderId(String orderId) {
-            this.putQueryParameter("OrderId", orderId);
-            this.orderId = orderId;
-            return this;
-        }
 
         /**
          * OwnerId.
@@ -178,6 +137,18 @@ public class DeleteAxnExtensionBindFixedLineRequest extends Request {
         public Builder ownerId(Long ownerId) {
             this.putQueryParameter("OwnerId", ownerId);
             this.ownerId = ownerId;
+            return this;
+        }
+
+        /**
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>FC10000016848****</p>
+         */
+        public Builder poolKey(String poolKey) {
+            this.putQueryParameter("PoolKey", poolKey);
+            this.poolKey = poolKey;
             return this;
         }
 
@@ -200,34 +171,32 @@ public class DeleteAxnExtensionBindFixedLineRequest extends Request {
         }
 
         /**
-         * <p>绑定id</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
-         * <p>GHX0534X202504221531579290029</p>
+         * <p>100000****</p>
          */
-        public Builder subId(String subId) {
-            this.putQueryParameter("SubId", subId);
-            this.subId = subId;
+        public Builder subsId(Long subsId) {
+            this.putQueryParameter("SubsId", subsId);
+            this.subsId = subsId;
             return this;
         }
 
         /**
-         * <p>格式yyyyMMddHHmmssSSS，时间采用北京时间，24小时制，精确至毫秒</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
-         * <p>20250421141723098</p>
+         * <p>700********0000</p>
          */
-        public Builder ts(String ts) {
-            this.putQueryParameter("Ts", ts);
-            this.ts = ts;
+        public Builder telX(String telX) {
+            this.putQueryParameter("TelX", telX);
+            this.telX = telX;
             return this;
         }
 
         @Override
-        public DeleteAxnExtensionBindFixedLineRequest build() {
-            return new DeleteAxnExtensionBindFixedLineRequest(this);
+        public UnbindSubs700Request build() {
+            return new UnbindSubs700Request(this);
         } 
 
     } 

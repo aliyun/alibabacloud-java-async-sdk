@@ -189,7 +189,7 @@ public class QueryAxbBindFixedLineRequest extends Request {
         } 
 
         /**
-         * <p>应用id</p>
+         * <p>号池ID。</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -202,7 +202,7 @@ public class QueryAxbBindFixedLineRequest extends Request {
         }
 
         /**
-         * <p>业务id，消息请求标识</p>
+         * <p>消息请求唯一标识。</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>

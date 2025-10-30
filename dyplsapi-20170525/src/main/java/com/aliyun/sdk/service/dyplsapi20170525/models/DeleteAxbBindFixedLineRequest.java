@@ -147,7 +147,7 @@ public class DeleteAxbBindFixedLineRequest extends Request {
         } 
 
         /**
-         * <p>应用id</p>
+         * <p>号池ID。</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -160,7 +160,7 @@ public class DeleteAxbBindFixedLineRequest extends Request {
         }
 
         /**
-         * <p>消息请求标识</p>
+         * <p>消息请求唯一标识。</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>

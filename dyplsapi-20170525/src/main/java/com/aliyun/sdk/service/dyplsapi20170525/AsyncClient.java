@@ -57,6 +57,12 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<BindAxbResponse> bindAxb(BindAxbRequest request);
 
     /**
+     * @param request the request parameters of BindAxb700  BindAxb700Request
+     * @return BindAxb700Response
+     */
+    CompletableFuture<BindAxb700Response> bindAxb700(BindAxb700Request request);
+
+    /**
      * @param request the request parameters of BindAxbFixedLine  BindAxbFixedLineRequest
      * @return BindAxbFixedLineResponse
      */
@@ -112,6 +118,12 @@ public interface AsyncClient extends SdkAutoCloseable {
      * @return BindBatchAxgResponse
      */
     CompletableFuture<BindBatchAxgResponse> bindBatchAxg(BindBatchAxgRequest request);
+
+    /**
+     * @param request the request parameters of BindGxb700  BindGxb700Request
+     * @return BindGxb700Response
+     */
+    CompletableFuture<BindGxb700Response> bindGxb700(BindGxb700Request request);
 
     /**
      * @param request the request parameters of BindXB  BindXBRequest
@@ -446,6 +458,12 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<UnBindXBResponse> unBindXB(UnBindXBRequest request);
 
     /**
+     * @param request the request parameters of UnbindSubs700  UnbindSubs700Request
+     * @return UnbindSubs700Response
+     */
+    CompletableFuture<UnbindSubs700Response> unbindSubs700(UnbindSubs700Request request);
+
+    /**
      * <b>description</b> :
      * <p>Before releasing a phone number, you must call the UnbindSubscription operation to unbind the phone number.</p>
      * 
@@ -482,6 +500,12 @@ public interface AsyncClient extends SdkAutoCloseable {
      * @return UpdateAxnExtensionBindFixedLineResponse
      */
     CompletableFuture<UpdateAxnExtensionBindFixedLineResponse> updateAxnExtensionBindFixedLine(UpdateAxnExtensionBindFixedLineRequest request);
+
+    /**
+     * @param request the request parameters of UpdateSubs700  UpdateSubs700Request
+     * @return UpdateSubs700Response
+     */
+    CompletableFuture<UpdateSubs700Response> updateSubs700(UpdateSubs700Request request);
 
     /**
      * <b>description</b> :

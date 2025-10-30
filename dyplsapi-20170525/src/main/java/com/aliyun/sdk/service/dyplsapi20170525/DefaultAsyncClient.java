@@ -125,6 +125,24 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
+     * @param request the request parameters of BindAxb700  BindAxb700Request
+     * @return BindAxb700Response
+     */
+    @Override
+    public CompletableFuture<BindAxb700Response> bindAxb700(BindAxb700Request request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RPC).setAction("BindAxb700").setMethod(HttpMethod.POST).setPathRegex("/").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(BindAxb700Response.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<BindAxb700Response> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
      * @param request the request parameters of BindAxbFixedLine  BindAxbFixedLineRequest
      * @return BindAxbFixedLineResponse
      */
@@ -260,6 +278,24 @@ public final class DefaultAsyncClient implements AsyncClient {
             return this.handler.execute(params);
         } catch (Exception e) {
             CompletableFuture<BindBatchAxgResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
+     * @param request the request parameters of BindGxb700  BindGxb700Request
+     * @return BindGxb700Response
+     */
+    @Override
+    public CompletableFuture<BindGxb700Response> bindGxb700(BindGxb700Request request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RPC).setAction("BindGxb700").setMethod(HttpMethod.POST).setPathRegex("/").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(BindGxb700Response.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<BindGxb700Response> future = new CompletableFuture<>();
             future.completeExceptionally(e);
             return future;
         }
@@ -1066,6 +1102,24 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
+     * @param request the request parameters of UnbindSubs700  UnbindSubs700Request
+     * @return UnbindSubs700Response
+     */
+    @Override
+    public CompletableFuture<UnbindSubs700Response> unbindSubs700(UnbindSubs700Request request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RPC).setAction("UnbindSubs700").setMethod(HttpMethod.POST).setPathRegex("/").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(UnbindSubs700Response.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<UnbindSubs700Response> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
      * <b>description</b> :
      * <p>Before releasing a phone number, you must call the UnbindSubscription operation to unbind the phone number.</p>
      * 
@@ -1158,6 +1212,24 @@ public final class DefaultAsyncClient implements AsyncClient {
             return this.handler.execute(params);
         } catch (Exception e) {
             CompletableFuture<UpdateAxnExtensionBindFixedLineResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
+     * @param request the request parameters of UpdateSubs700  UpdateSubs700Request
+     * @return UpdateSubs700Response
+     */
+    @Override
+    public CompletableFuture<UpdateSubs700Response> updateSubs700(UpdateSubs700Request request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RPC).setAction("UpdateSubs700").setMethod(HttpMethod.POST).setPathRegex("/").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(UpdateSubs700Response.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<UpdateSubs700Response> future = new CompletableFuture<>();
             future.completeExceptionally(e);
             return future;
         }

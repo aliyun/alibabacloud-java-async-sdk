@@ -285,7 +285,7 @@ public class UpdateAxnExtensionBindFixedLineRequest extends Request {
         }
 
         /**
-         * <p>业务id标识，由阿里云分配给客户侧</p>
+         * <p>号池ID</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -320,7 +320,7 @@ public class UpdateAxnExtensionBindFixedLineRequest extends Request {
         }
 
         /**
-         * <p>消息请求标识</p>
+         * <p>消息请求唯一标识。</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -342,7 +342,7 @@ public class UpdateAxnExtensionBindFixedLineRequest extends Request {
         }
 
         /**
-         * <p>接入商自有字段，最大100字符长度</p>
+         * <p>接入商自有字段，最大250字符长度</p>
          * 
          * <strong>example:</strong>
          * <p>1233</p>
