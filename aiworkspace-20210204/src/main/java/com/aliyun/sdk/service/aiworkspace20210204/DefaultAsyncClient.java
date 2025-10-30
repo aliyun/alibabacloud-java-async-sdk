@@ -29,8 +29,49 @@ public final class DefaultAsyncClient implements AsyncClient {
         this.handler = new TeaAsyncHandler(configuration);
         this.product = "AIWorkSpace";
         this.version = "2021-02-04";
-        this.endpointRule = "";
-        this.endpointMap = new java.util.HashMap<>();
+        this.endpointRule = "regional";
+        this.endpointMap = CommonUtil.buildMap(
+            new TeaPair("ap-northeast-2-pop", "aiworkspace.aliyuncs.com"),
+            new TeaPair("ap-southeast-2", "aiworkspace.aliyuncs.com"),
+            new TeaPair("ap-southeast-5", "aiworkspace-vpc.ap-southeast-5.aliyuncs.com"),
+            new TeaPair("cn-beijing-finance-1", "aiworkspace.aliyuncs.com"),
+            new TeaPair("cn-beijing-finance-pop", "aiworkspace.aliyuncs.com"),
+            new TeaPair("cn-beijing-gov-1", "aiworkspace.aliyuncs.com"),
+            new TeaPair("cn-beijing-nu16-b01", "aiworkspace.aliyuncs.com"),
+            new TeaPair("cn-edge-1", "aiworkspace.aliyuncs.com"),
+            new TeaPair("cn-fujian", "aiworkspace.aliyuncs.com"),
+            new TeaPair("cn-haidian-cm12-c01", "aiworkspace.aliyuncs.com"),
+            new TeaPair("cn-hangzhou-bj-b01", "aiworkspace.aliyuncs.com"),
+            new TeaPair("cn-hangzhou-finance", "aiworkspace.aliyuncs.com"),
+            new TeaPair("cn-hangzhou-internal-prod-1", "aiworkspace.aliyuncs.com"),
+            new TeaPair("cn-hangzhou-internal-test-1", "aiworkspace.aliyuncs.com"),
+            new TeaPair("cn-hangzhou-internal-test-2", "aiworkspace.aliyuncs.com"),
+            new TeaPair("cn-hangzhou-internal-test-3", "aiworkspace.aliyuncs.com"),
+            new TeaPair("cn-hangzhou-test-306", "aiworkspace.aliyuncs.com"),
+            new TeaPair("cn-hongkong-finance-pop", "aiworkspace.aliyuncs.com"),
+            new TeaPair("cn-huhehaote", "aiworkspace.aliyuncs.com"),
+            new TeaPair("cn-huhehaote-nebula-1", "aiworkspace.aliyuncs.com"),
+            new TeaPair("cn-qingdao", "aiworkspace.aliyuncs.com"),
+            new TeaPair("cn-qingdao-nebula", "aiworkspace.aliyuncs.com"),
+            new TeaPair("cn-shanghai-et15-b01", "aiworkspace.aliyuncs.com"),
+            new TeaPair("cn-shanghai-et2-b01", "aiworkspace.aliyuncs.com"),
+            new TeaPair("cn-shanghai-inner", "aiworkspace.aliyuncs.com"),
+            new TeaPair("cn-shanghai-internal-test-1", "aiworkspace.aliyuncs.com"),
+            new TeaPair("cn-shenzhen-finance-1", "aiworkspace.aliyuncs.com"),
+            new TeaPair("cn-shenzhen-inner", "aiworkspace.aliyuncs.com"),
+            new TeaPair("cn-shenzhen-st4-d01", "aiworkspace.aliyuncs.com"),
+            new TeaPair("cn-shenzhen-su18-b01", "aiworkspace.aliyuncs.com"),
+            new TeaPair("cn-wuhan", "aiworkspace.aliyuncs.com"),
+            new TeaPair("cn-yushanfang", "aiworkspace.aliyuncs.com"),
+            new TeaPair("cn-zhangbei", "aiworkspace.aliyuncs.com"),
+            new TeaPair("cn-zhangbei-na61-b01", "aiworkspace.aliyuncs.com"),
+            new TeaPair("cn-zhangjiakou-na62-a01", "aiworkspace.aliyuncs.com"),
+            new TeaPair("cn-zhengzhou-nebula-1", "aiworkspace.aliyuncs.com"),
+            new TeaPair("eu-west-1", "aiworkspace.aliyuncs.com"),
+            new TeaPair("eu-west-1-oxs", "aiworkspace.aliyuncs.com"),
+            new TeaPair("me-east-1", "aiworkspace.aliyuncs.com"),
+            new TeaPair("rus-west-1-pop", "aiworkspace.aliyuncs.com")
+        );
         this.REQUEST = TeaRequest.create().setProduct(product).setEndpointRule(endpointRule).setEndpointMap(endpointMap).setVersion(version);
     }
 
