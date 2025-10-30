@@ -74,6 +74,10 @@ public class CreateClientCertificateWithCsrRequest extends Request {
     private String parentIdentifier;
 
     @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ResourceGroupId")
+    private String resourceGroupId;
+
+    @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("SanType")
     private Integer sanType;
 
@@ -84,6 +88,10 @@ public class CreateClientCertificateWithCsrRequest extends Request {
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("State")
     private String state;
+
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Tags")
+    private java.util.List<Tags> tags;
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("Years")
@@ -105,9 +113,11 @@ public class CreateClientCertificateWithCsrRequest extends Request {
         this.organization = builder.organization;
         this.organizationUnit = builder.organizationUnit;
         this.parentIdentifier = builder.parentIdentifier;
+        this.resourceGroupId = builder.resourceGroupId;
         this.sanType = builder.sanType;
         this.sanValue = builder.sanValue;
         this.state = builder.state;
+        this.tags = builder.tags;
         this.years = builder.years;
     }
 
@@ -223,6 +233,13 @@ public class CreateClientCertificateWithCsrRequest extends Request {
     }
 
     /**
+     * @return resourceGroupId
+     */
+    public String getResourceGroupId() {
+        return this.resourceGroupId;
+    }
+
+    /**
      * @return sanType
      */
     public Integer getSanType() {
@@ -241,6 +258,13 @@ public class CreateClientCertificateWithCsrRequest extends Request {
      */
     public String getState() {
         return this.state;
+    }
+
+    /**
+     * @return tags
+     */
+    public java.util.List<Tags> getTags() {
+        return this.tags;
     }
 
     /**
@@ -265,9 +289,11 @@ public class CreateClientCertificateWithCsrRequest extends Request {
         private String organization; 
         private String organizationUnit; 
         private String parentIdentifier; 
+        private String resourceGroupId; 
         private Integer sanType; 
         private String sanValue; 
         private String state; 
+        private java.util.List<Tags> tags; 
         private Integer years; 
 
         private Builder() {
@@ -290,9 +316,11 @@ public class CreateClientCertificateWithCsrRequest extends Request {
             this.organization = request.organization;
             this.organizationUnit = request.organizationUnit;
             this.parentIdentifier = request.parentIdentifier;
+            this.resourceGroupId = request.resourceGroupId;
             this.sanType = request.sanType;
             this.sanValue = request.sanValue;
             this.state = request.state;
+            this.tags = request.tags;
             this.years = request.years;
         } 
 
@@ -511,6 +539,15 @@ public class CreateClientCertificateWithCsrRequest extends Request {
         }
 
         /**
+         * ResourceGroupId.
+         */
+        public Builder resourceGroupId(String resourceGroupId) {
+            this.putQueryParameter("ResourceGroupId", resourceGroupId);
+            this.resourceGroupId = resourceGroupId;
+            return this;
+        }
+
+        /**
          * <p>The type of the Subject Alternative Name (SAN) extension that is supported by the client certificate. Valid values:</p>
          * <ul>
          * <li><strong>1</strong>: an email address</li>
@@ -551,6 +588,15 @@ public class CreateClientCertificateWithCsrRequest extends Request {
         }
 
         /**
+         * Tags.
+         */
+        public Builder tags(java.util.List<Tags> tags) {
+            this.putQueryParameter("Tags", tags);
+            this.tags = tags;
+            return this;
+        }
+
+        /**
          * <p>The validity period of the client certificate. Unit: years.</p>
          * 
          * <strong>example:</strong>
@@ -569,4 +615,79 @@ public class CreateClientCertificateWithCsrRequest extends Request {
 
     } 
 
+    /**
+     * 
+     * {@link CreateClientCertificateWithCsrRequest} extends {@link TeaModel}
+     *
+     * <p>CreateClientCertificateWithCsrRequest</p>
+     */
+    public static class Tags extends TeaModel {
+        @com.aliyun.core.annotation.NameInMap("Key")
+        private String key;
+
+        @com.aliyun.core.annotation.NameInMap("Value")
+        private String value;
+
+        private Tags(Builder builder) {
+            this.key = builder.key;
+            this.value = builder.value;
+        }
+
+        public static Builder builder() {
+            return new Builder();
+        }
+
+        public static Tags create() {
+            return builder().build();
+        }
+
+        /**
+         * @return key
+         */
+        public String getKey() {
+            return this.key;
+        }
+
+        /**
+         * @return value
+         */
+        public String getValue() {
+            return this.value;
+        }
+
+        public static final class Builder {
+            private String key; 
+            private String value; 
+
+            private Builder() {
+            } 
+
+            private Builder(Tags model) {
+                this.key = model.key;
+                this.value = model.value;
+            } 
+
+            /**
+             * Key.
+             */
+            public Builder key(String key) {
+                this.key = key;
+                return this;
+            }
+
+            /**
+             * Value.
+             */
+            public Builder value(String value) {
+                this.value = value;
+                return this;
+            }
+
+            public Tags build() {
+                return new Tags(this);
+            } 
+
+        } 
+
+    }
 }

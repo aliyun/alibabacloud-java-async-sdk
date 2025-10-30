@@ -26,6 +26,10 @@ public class ListClientCertificateRequest extends Request {
     private String identifier;
 
     @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ResourceGroupId")
+    private String resourceGroupId;
+
+    @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("ShowSize")
     private Integer showSize;
 
@@ -33,6 +37,7 @@ public class ListClientCertificateRequest extends Request {
         super(builder);
         this.currentPage = builder.currentPage;
         this.identifier = builder.identifier;
+        this.resourceGroupId = builder.resourceGroupId;
         this.showSize = builder.showSize;
     }
 
@@ -64,6 +69,13 @@ public class ListClientCertificateRequest extends Request {
     }
 
     /**
+     * @return resourceGroupId
+     */
+    public String getResourceGroupId() {
+        return this.resourceGroupId;
+    }
+
+    /**
      * @return showSize
      */
     public Integer getShowSize() {
@@ -73,6 +85,7 @@ public class ListClientCertificateRequest extends Request {
     public static final class Builder extends Request.Builder<ListClientCertificateRequest, Builder> {
         private Integer currentPage; 
         private String identifier; 
+        private String resourceGroupId; 
         private Integer showSize; 
 
         private Builder() {
@@ -83,6 +96,7 @@ public class ListClientCertificateRequest extends Request {
             super(request);
             this.currentPage = request.currentPage;
             this.identifier = request.identifier;
+            this.resourceGroupId = request.resourceGroupId;
             this.showSize = request.showSize;
         } 
 
@@ -110,6 +124,15 @@ public class ListClientCertificateRequest extends Request {
         public Builder identifier(String identifier) {
             this.putQueryParameter("Identifier", identifier);
             this.identifier = identifier;
+            return this;
+        }
+
+        /**
+         * ResourceGroupId.
+         */
+        public Builder resourceGroupId(String resourceGroupId) {
+            this.putQueryParameter("ResourceGroupId", resourceGroupId);
+            this.resourceGroupId = resourceGroupId;
             return this;
         }
 

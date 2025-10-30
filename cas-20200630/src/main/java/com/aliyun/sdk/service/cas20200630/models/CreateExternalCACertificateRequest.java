@@ -27,17 +27,22 @@ public class CreateExternalCACertificateRequest extends Request {
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("Csr")
-    @com.aliyun.core.annotation.Validation(required = true)
     private String csr;
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("InstanceId")
-    @com.aliyun.core.annotation.Validation(required = true)
     private String instanceId;
 
     @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ResourceGroupId")
+    private String resourceGroupId;
+
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Tags")
+    private java.util.List<Tags> tags;
+
+    @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("Validity")
-    @com.aliyun.core.annotation.Validation(required = true)
     private String validity;
 
     private CreateExternalCACertificateRequest(Builder builder) {
@@ -46,6 +51,8 @@ public class CreateExternalCACertificateRequest extends Request {
         this.apiPassthrough = builder.apiPassthrough;
         this.csr = builder.csr;
         this.instanceId = builder.instanceId;
+        this.resourceGroupId = builder.resourceGroupId;
+        this.tags = builder.tags;
         this.validity = builder.validity;
     }
 
@@ -91,6 +98,20 @@ public class CreateExternalCACertificateRequest extends Request {
     }
 
     /**
+     * @return resourceGroupId
+     */
+    public String getResourceGroupId() {
+        return this.resourceGroupId;
+    }
+
+    /**
+     * @return tags
+     */
+    public java.util.List<Tags> getTags() {
+        return this.tags;
+    }
+
+    /**
      * @return validity
      */
     public String getValidity() {
@@ -102,6 +123,8 @@ public class CreateExternalCACertificateRequest extends Request {
         private ApiPassthrough apiPassthrough; 
         private String csr; 
         private String instanceId; 
+        private String resourceGroupId; 
+        private java.util.List<Tags> tags; 
         private String validity; 
 
         private Builder() {
@@ -114,6 +137,8 @@ public class CreateExternalCACertificateRequest extends Request {
             this.apiPassthrough = request.apiPassthrough;
             this.csr = request.csr;
             this.instanceId = request.instanceId;
+            this.resourceGroupId = request.resourceGroupId;
+            this.tags = request.tags;
             this.validity = request.validity;
         } 
 
@@ -137,14 +162,7 @@ public class CreateExternalCACertificateRequest extends Request {
         }
 
         /**
-         * <p>This parameter is required.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>-----BEGIN CERTIFICATE REQUEST-----
-         * MIIBczCCARgCAQAwgYoxFDASBgNVBAMMC2FsaXl1bi50ZXN0MQ0wCwYDVQQ
-         * ...
-         * vbIgMQIhAKHDWD6/WAMbtezAt4bysJ/BZIDz1jPWuUR5GV4TJ/mS
-         * -----END CERTIFICATE REQUEST-----</p>
+         * Csr.
          */
         public Builder csr(String csr) {
             this.putQueryParameter("Csr", csr);
@@ -153,10 +171,7 @@ public class CreateExternalCACertificateRequest extends Request {
         }
 
         /**
-         * <p>This parameter is required.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>cas_deposit-cn-1234abcd</p>
+         * InstanceId.
          */
         public Builder instanceId(String instanceId) {
             this.putQueryParameter("InstanceId", instanceId);
@@ -165,10 +180,25 @@ public class CreateExternalCACertificateRequest extends Request {
         }
 
         /**
-         * <p>This parameter is required.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>10y</p>
+         * ResourceGroupId.
+         */
+        public Builder resourceGroupId(String resourceGroupId) {
+            this.putQueryParameter("ResourceGroupId", resourceGroupId);
+            this.resourceGroupId = resourceGroupId;
+            return this;
+        }
+
+        /**
+         * Tags.
+         */
+        public Builder tags(java.util.List<Tags> tags) {
+            this.putQueryParameter("Tags", tags);
+            this.tags = tags;
+            return this;
+        }
+
+        /**
+         * Validity.
          */
         public Builder validity(String validity) {
             this.putQueryParameter("Validity", validity);
@@ -487,6 +517,81 @@ public class CreateExternalCACertificateRequest extends Request {
 
             public ApiPassthrough build() {
                 return new ApiPassthrough(this);
+            } 
+
+        } 
+
+    }
+    /**
+     * 
+     * {@link CreateExternalCACertificateRequest} extends {@link TeaModel}
+     *
+     * <p>CreateExternalCACertificateRequest</p>
+     */
+    public static class Tags extends TeaModel {
+        @com.aliyun.core.annotation.NameInMap("Key")
+        private String key;
+
+        @com.aliyun.core.annotation.NameInMap("Value")
+        private String value;
+
+        private Tags(Builder builder) {
+            this.key = builder.key;
+            this.value = builder.value;
+        }
+
+        public static Builder builder() {
+            return new Builder();
+        }
+
+        public static Tags create() {
+            return builder().build();
+        }
+
+        /**
+         * @return key
+         */
+        public String getKey() {
+            return this.key;
+        }
+
+        /**
+         * @return value
+         */
+        public String getValue() {
+            return this.value;
+        }
+
+        public static final class Builder {
+            private String key; 
+            private String value; 
+
+            private Builder() {
+            } 
+
+            private Builder(Tags model) {
+                this.key = model.key;
+                this.value = model.value;
+            } 
+
+            /**
+             * Key.
+             */
+            public Builder key(String key) {
+                this.key = key;
+                return this;
+            }
+
+            /**
+             * Value.
+             */
+            public Builder value(String value) {
+                this.value = value;
+                return this;
+            }
+
+            public Tags build() {
+                return new Tags(this);
             } 
 
         } 

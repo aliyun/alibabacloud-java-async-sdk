@@ -40,6 +40,14 @@ public class CreateCustomCertificateRequest extends Request {
     private String parentIdentifier;
 
     @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ResourceGroupId")
+    private String resourceGroupId;
+
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Tags")
+    private java.util.List<Tags> tags;
+
+    @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("Validity")
     @com.aliyun.core.annotation.Validation(required = true)
     private String validity;
@@ -51,6 +59,8 @@ public class CreateCustomCertificateRequest extends Request {
         this.enableCrl = builder.enableCrl;
         this.immediately = builder.immediately;
         this.parentIdentifier = builder.parentIdentifier;
+        this.resourceGroupId = builder.resourceGroupId;
+        this.tags = builder.tags;
         this.validity = builder.validity;
     }
 
@@ -103,6 +113,20 @@ public class CreateCustomCertificateRequest extends Request {
     }
 
     /**
+     * @return resourceGroupId
+     */
+    public String getResourceGroupId() {
+        return this.resourceGroupId;
+    }
+
+    /**
+     * @return tags
+     */
+    public java.util.List<Tags> getTags() {
+        return this.tags;
+    }
+
+    /**
      * @return validity
      */
     public String getValidity() {
@@ -115,6 +139,8 @@ public class CreateCustomCertificateRequest extends Request {
         private Long enableCrl; 
         private Integer immediately; 
         private String parentIdentifier; 
+        private String resourceGroupId; 
+        private java.util.List<Tags> tags; 
         private String validity; 
 
         private Builder() {
@@ -128,6 +154,8 @@ public class CreateCustomCertificateRequest extends Request {
             this.enableCrl = request.enableCrl;
             this.immediately = request.immediately;
             this.parentIdentifier = request.parentIdentifier;
+            this.resourceGroupId = request.resourceGroupId;
+            this.tags = request.tags;
             this.validity = request.validity;
         } 
 
@@ -202,6 +230,24 @@ public class CreateCustomCertificateRequest extends Request {
         public Builder parentIdentifier(String parentIdentifier) {
             this.putQueryParameter("ParentIdentifier", parentIdentifier);
             this.parentIdentifier = parentIdentifier;
+            return this;
+        }
+
+        /**
+         * ResourceGroupId.
+         */
+        public Builder resourceGroupId(String resourceGroupId) {
+            this.putQueryParameter("ResourceGroupId", resourceGroupId);
+            this.resourceGroupId = resourceGroupId;
+            return this;
+        }
+
+        /**
+         * Tags.
+         */
+        public Builder tags(java.util.List<Tags> tags) {
+            this.putQueryParameter("Tags", tags);
+            this.tags = tags;
             return this;
         }
 
@@ -1068,6 +1114,84 @@ public class CreateCustomCertificateRequest extends Request {
 
             public ApiPassthrough build() {
                 return new ApiPassthrough(this);
+            } 
+
+        } 
+
+    }
+    /**
+     * 
+     * {@link CreateCustomCertificateRequest} extends {@link TeaModel}
+     *
+     * <p>CreateCustomCertificateRequest</p>
+     */
+    public static class Tags extends TeaModel {
+        @com.aliyun.core.annotation.NameInMap("Key")
+        private String key;
+
+        @com.aliyun.core.annotation.NameInMap("Value")
+        private String value;
+
+        private Tags(Builder builder) {
+            this.key = builder.key;
+            this.value = builder.value;
+        }
+
+        public static Builder builder() {
+            return new Builder();
+        }
+
+        public static Tags create() {
+            return builder().build();
+        }
+
+        /**
+         * @return key
+         */
+        public String getKey() {
+            return this.key;
+        }
+
+        /**
+         * @return value
+         */
+        public String getValue() {
+            return this.value;
+        }
+
+        public static final class Builder {
+            private String key; 
+            private String value; 
+
+            private Builder() {
+            } 
+
+            private Builder(Tags model) {
+                this.key = model.key;
+                this.value = model.value;
+            } 
+
+            /**
+             * Key.
+             */
+            public Builder key(String key) {
+                this.key = key;
+                return this;
+            }
+
+            /**
+             * <p>Custom attribute value.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Aliyun</p>
+             */
+            public Builder value(String value) {
+                this.value = value;
+                return this;
+            }
+
+            public Tags build() {
+                return new Tags(this);
             } 
 
         } 

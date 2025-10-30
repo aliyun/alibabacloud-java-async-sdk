@@ -22,6 +22,10 @@ public class CreateSubCACertificateRequest extends Request {
     @com.aliyun.core.annotation.Validation(required = true)
     private String algorithm;
 
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("ClientToken")
+    private String clientToken;
+
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("CommonName")
     @com.aliyun.core.annotation.Validation(required = true)
@@ -60,7 +64,6 @@ public class CreateSubCACertificateRequest extends Request {
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("ParentIdentifier")
-    @com.aliyun.core.annotation.Validation(required = true)
     private String parentIdentifier;
 
     @com.aliyun.core.annotation.Query
@@ -68,9 +71,17 @@ public class CreateSubCACertificateRequest extends Request {
     private Integer pathLenConstraint;
 
     @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ResourceGroupId")
+    private String resourceGroupId;
+
+    @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("State")
     @com.aliyun.core.annotation.Validation(required = true)
     private String state;
+
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Tags")
+    private java.util.List<Tags> tags;
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("Years")
@@ -80,6 +91,7 @@ public class CreateSubCACertificateRequest extends Request {
     private CreateSubCACertificateRequest(Builder builder) {
         super(builder);
         this.algorithm = builder.algorithm;
+        this.clientToken = builder.clientToken;
         this.commonName = builder.commonName;
         this.countryCode = builder.countryCode;
         this.crlDay = builder.crlDay;
@@ -90,7 +102,9 @@ public class CreateSubCACertificateRequest extends Request {
         this.organizationUnit = builder.organizationUnit;
         this.parentIdentifier = builder.parentIdentifier;
         this.pathLenConstraint = builder.pathLenConstraint;
+        this.resourceGroupId = builder.resourceGroupId;
         this.state = builder.state;
+        this.tags = builder.tags;
         this.years = builder.years;
     }
 
@@ -112,6 +126,13 @@ public class CreateSubCACertificateRequest extends Request {
      */
     public String getAlgorithm() {
         return this.algorithm;
+    }
+
+    /**
+     * @return clientToken
+     */
+    public String getClientToken() {
+        return this.clientToken;
     }
 
     /**
@@ -185,10 +206,24 @@ public class CreateSubCACertificateRequest extends Request {
     }
 
     /**
+     * @return resourceGroupId
+     */
+    public String getResourceGroupId() {
+        return this.resourceGroupId;
+    }
+
+    /**
      * @return state
      */
     public String getState() {
         return this.state;
+    }
+
+    /**
+     * @return tags
+     */
+    public java.util.List<Tags> getTags() {
+        return this.tags;
     }
 
     /**
@@ -200,6 +235,7 @@ public class CreateSubCACertificateRequest extends Request {
 
     public static final class Builder extends Request.Builder<CreateSubCACertificateRequest, Builder> {
         private String algorithm; 
+        private String clientToken; 
         private String commonName; 
         private String countryCode; 
         private Integer crlDay; 
@@ -210,7 +246,9 @@ public class CreateSubCACertificateRequest extends Request {
         private String organizationUnit; 
         private String parentIdentifier; 
         private Integer pathLenConstraint; 
+        private String resourceGroupId; 
         private String state; 
+        private java.util.List<Tags> tags; 
         private Integer years; 
 
         private Builder() {
@@ -220,6 +258,7 @@ public class CreateSubCACertificateRequest extends Request {
         private Builder(CreateSubCACertificateRequest request) {
             super(request);
             this.algorithm = request.algorithm;
+            this.clientToken = request.clientToken;
             this.commonName = request.commonName;
             this.countryCode = request.countryCode;
             this.crlDay = request.crlDay;
@@ -230,7 +269,9 @@ public class CreateSubCACertificateRequest extends Request {
             this.organizationUnit = request.organizationUnit;
             this.parentIdentifier = request.parentIdentifier;
             this.pathLenConstraint = request.pathLenConstraint;
+            this.resourceGroupId = request.resourceGroupId;
             this.state = request.state;
+            this.tags = request.tags;
             this.years = request.years;
         } 
 
@@ -255,6 +296,15 @@ public class CreateSubCACertificateRequest extends Request {
         public Builder algorithm(String algorithm) {
             this.putQueryParameter("Algorithm", algorithm);
             this.algorithm = algorithm;
+            return this;
+        }
+
+        /**
+         * ClientToken.
+         */
+        public Builder clientToken(String clientToken) {
+            this.putBodyParameter("ClientToken", clientToken);
+            this.clientToken = clientToken;
             return this;
         }
 
@@ -365,7 +415,6 @@ public class CreateSubCACertificateRequest extends Request {
          * <blockquote>
          * <p>You can call the [DescribeCACertificateList] operation to query the unique identifiers of all CA certificates.</p>
          * </blockquote>
-         * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
          * <p>1a83bcbb89e562885e40aa0108f5****</p>
@@ -389,6 +438,15 @@ public class CreateSubCACertificateRequest extends Request {
         }
 
         /**
+         * ResourceGroupId.
+         */
+        public Builder resourceGroupId(String resourceGroupId) {
+            this.putQueryParameter("ResourceGroupId", resourceGroupId);
+            this.resourceGroupId = resourceGroupId;
+            return this;
+        }
+
+        /**
          * <p>The name of the province or state in which the organization is located. The value can contain letters.</p>
          * <p>This parameter is required.</p>
          * 
@@ -398,6 +456,15 @@ public class CreateSubCACertificateRequest extends Request {
         public Builder state(String state) {
             this.putQueryParameter("State", state);
             this.state = state;
+            return this;
+        }
+
+        /**
+         * Tags.
+         */
+        public Builder tags(java.util.List<Tags> tags) {
+            this.putQueryParameter("Tags", tags);
+            this.tags = tags;
             return this;
         }
 
@@ -425,4 +492,79 @@ public class CreateSubCACertificateRequest extends Request {
 
     } 
 
+    /**
+     * 
+     * {@link CreateSubCACertificateRequest} extends {@link TeaModel}
+     *
+     * <p>CreateSubCACertificateRequest</p>
+     */
+    public static class Tags extends TeaModel {
+        @com.aliyun.core.annotation.NameInMap("Key")
+        private String key;
+
+        @com.aliyun.core.annotation.NameInMap("Value")
+        private String value;
+
+        private Tags(Builder builder) {
+            this.key = builder.key;
+            this.value = builder.value;
+        }
+
+        public static Builder builder() {
+            return new Builder();
+        }
+
+        public static Tags create() {
+            return builder().build();
+        }
+
+        /**
+         * @return key
+         */
+        public String getKey() {
+            return this.key;
+        }
+
+        /**
+         * @return value
+         */
+        public String getValue() {
+            return this.value;
+        }
+
+        public static final class Builder {
+            private String key; 
+            private String value; 
+
+            private Builder() {
+            } 
+
+            private Builder(Tags model) {
+                this.key = model.key;
+                this.value = model.value;
+            } 
+
+            /**
+             * Key.
+             */
+            public Builder key(String key) {
+                this.key = key;
+                return this;
+            }
+
+            /**
+             * Value.
+             */
+            public Builder value(String value) {
+                this.value = value;
+                return this;
+            }
+
+            public Tags build() {
+                return new Tags(this);
+            } 
+
+        } 
+
+    }
 }

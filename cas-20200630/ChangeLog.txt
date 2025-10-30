@@ -1,3 +1,6 @@
+2025-10-30 Version: 1.0.12
+- Generated java-async 2020-06-30 for cas.
+
 2025-09-18 Version: 1.0.11
 - Generated java-async 2020-06-30 for cas.
 

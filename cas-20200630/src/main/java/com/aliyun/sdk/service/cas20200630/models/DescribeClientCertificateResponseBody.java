@@ -97,6 +97,81 @@ public class DescribeClientCertificateResponseBody extends TeaModel {
      *
      * <p>DescribeClientCertificateResponseBody</p>
      */
+    public static class Tags extends TeaModel {
+        @com.aliyun.core.annotation.NameInMap("TagKey")
+        private String tagKey;
+
+        @com.aliyun.core.annotation.NameInMap("TagValue")
+        private String tagValue;
+
+        private Tags(Builder builder) {
+            this.tagKey = builder.tagKey;
+            this.tagValue = builder.tagValue;
+        }
+
+        public static Builder builder() {
+            return new Builder();
+        }
+
+        public static Tags create() {
+            return builder().build();
+        }
+
+        /**
+         * @return tagKey
+         */
+        public String getTagKey() {
+            return this.tagKey;
+        }
+
+        /**
+         * @return tagValue
+         */
+        public String getTagValue() {
+            return this.tagValue;
+        }
+
+        public static final class Builder {
+            private String tagKey; 
+            private String tagValue; 
+
+            private Builder() {
+            } 
+
+            private Builder(Tags model) {
+                this.tagKey = model.tagKey;
+                this.tagValue = model.tagValue;
+            } 
+
+            /**
+             * TagKey.
+             */
+            public Builder tagKey(String tagKey) {
+                this.tagKey = tagKey;
+                return this;
+            }
+
+            /**
+             * TagValue.
+             */
+            public Builder tagValue(String tagValue) {
+                this.tagValue = tagValue;
+                return this;
+            }
+
+            public Tags build() {
+                return new Tags(this);
+            } 
+
+        } 
+
+    }
+    /**
+     * 
+     * {@link DescribeClientCertificateResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeClientCertificateResponseBody</p>
+     */
     public static class Certificate extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("AfterDate")
         private Long afterDate;
@@ -140,6 +215,9 @@ public class DescribeClientCertificateResponseBody extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("ParentIdentifier")
         private String parentIdentifier;
 
+        @com.aliyun.core.annotation.NameInMap("ResourceGroupId")
+        private String resourceGroupId;
+
         @com.aliyun.core.annotation.NameInMap("Sans")
         private String sans;
 
@@ -161,6 +239,9 @@ public class DescribeClientCertificateResponseBody extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("SubjectDN")
         private String subjectDN;
 
+        @com.aliyun.core.annotation.NameInMap("Tags")
+        private java.util.List<Tags> tags;
+
         @com.aliyun.core.annotation.NameInMap("X509Certificate")
         private String x509Certificate;
 
@@ -179,6 +260,7 @@ public class DescribeClientCertificateResponseBody extends TeaModel {
             this.organization = builder.organization;
             this.organizationUnit = builder.organizationUnit;
             this.parentIdentifier = builder.parentIdentifier;
+            this.resourceGroupId = builder.resourceGroupId;
             this.sans = builder.sans;
             this.serialNumber = builder.serialNumber;
             this.sha2 = builder.sha2;
@@ -186,6 +268,7 @@ public class DescribeClientCertificateResponseBody extends TeaModel {
             this.state = builder.state;
             this.status = builder.status;
             this.subjectDN = builder.subjectDN;
+            this.tags = builder.tags;
             this.x509Certificate = builder.x509Certificate;
         }
 
@@ -296,6 +379,13 @@ public class DescribeClientCertificateResponseBody extends TeaModel {
         }
 
         /**
+         * @return resourceGroupId
+         */
+        public String getResourceGroupId() {
+            return this.resourceGroupId;
+        }
+
+        /**
          * @return sans
          */
         public String getSans() {
@@ -345,6 +435,13 @@ public class DescribeClientCertificateResponseBody extends TeaModel {
         }
 
         /**
+         * @return tags
+         */
+        public java.util.List<Tags> getTags() {
+            return this.tags;
+        }
+
+        /**
          * @return x509Certificate
          */
         public String getX509Certificate() {
@@ -366,6 +463,7 @@ public class DescribeClientCertificateResponseBody extends TeaModel {
             private String organization; 
             private String organizationUnit; 
             private String parentIdentifier; 
+            private String resourceGroupId; 
             private String sans; 
             private String serialNumber; 
             private String sha2; 
@@ -373,6 +471,7 @@ public class DescribeClientCertificateResponseBody extends TeaModel {
             private String state; 
             private String status; 
             private String subjectDN; 
+            private java.util.List<Tags> tags; 
             private String x509Certificate; 
 
             private Builder() {
@@ -393,6 +492,7 @@ public class DescribeClientCertificateResponseBody extends TeaModel {
                 this.organization = model.organization;
                 this.organizationUnit = model.organizationUnit;
                 this.parentIdentifier = model.parentIdentifier;
+                this.resourceGroupId = model.resourceGroupId;
                 this.sans = model.sans;
                 this.serialNumber = model.serialNumber;
                 this.sha2 = model.sha2;
@@ -400,6 +500,7 @@ public class DescribeClientCertificateResponseBody extends TeaModel {
                 this.state = model.state;
                 this.status = model.status;
                 this.subjectDN = model.subjectDN;
+                this.tags = model.tags;
                 this.x509Certificate = model.x509Certificate;
             } 
 
@@ -568,6 +669,14 @@ public class DescribeClientCertificateResponseBody extends TeaModel {
             }
 
             /**
+             * ResourceGroupId.
+             */
+            public Builder resourceGroupId(String resourceGroupId) {
+                this.resourceGroupId = resourceGroupId;
+                return this;
+            }
+
+            /**
              * <p>The subject alternative name (SAN) extension of the certificate. The value indicates additional information, including the additional domain names or IP addresses that are associated with the certificate.</p>
              * <p>The value is a string that consists of JSON arrays. Each element in a JSON array is a JSON struct that corresponds to a SAN extension. A SAN extension struct contains the following parameters:</p>
              * <ul>
@@ -666,6 +775,14 @@ public class DescribeClientCertificateResponseBody extends TeaModel {
              */
             public Builder subjectDN(String subjectDN) {
                 this.subjectDN = subjectDN;
+                return this;
+            }
+
+            /**
+             * Tags.
+             */
+            public Builder tags(java.util.List<Tags> tags) {
+                this.tags = tags;
                 return this;
             }
 

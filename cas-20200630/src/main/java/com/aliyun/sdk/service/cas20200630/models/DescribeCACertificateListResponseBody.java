@@ -239,6 +239,9 @@ public class DescribeCACertificateListResponseBody extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("ParentIdentifier")
         private String parentIdentifier;
 
+        @com.aliyun.core.annotation.NameInMap("ResourceGroupId")
+        private String resourceGroupId;
+
         @com.aliyun.core.annotation.NameInMap("Sans")
         private String sans;
 
@@ -285,6 +288,7 @@ public class DescribeCACertificateListResponseBody extends TeaModel {
             this.organization = builder.organization;
             this.organizationUnit = builder.organizationUnit;
             this.parentIdentifier = builder.parentIdentifier;
+            this.resourceGroupId = builder.resourceGroupId;
             this.sans = builder.sans;
             this.serialNumber = builder.serialNumber;
             this.sha2 = builder.sha2;
@@ -411,6 +415,13 @@ public class DescribeCACertificateListResponseBody extends TeaModel {
         }
 
         /**
+         * @return resourceGroupId
+         */
+        public String getResourceGroupId() {
+            return this.resourceGroupId;
+        }
+
+        /**
          * @return sans
          */
         public String getSans() {
@@ -496,6 +507,7 @@ public class DescribeCACertificateListResponseBody extends TeaModel {
             private String organization; 
             private String organizationUnit; 
             private String parentIdentifier; 
+            private String resourceGroupId; 
             private String sans; 
             private String serialNumber; 
             private String sha2; 
@@ -526,6 +538,7 @@ public class DescribeCACertificateListResponseBody extends TeaModel {
                 this.organization = model.organization;
                 this.organizationUnit = model.organizationUnit;
                 this.parentIdentifier = model.parentIdentifier;
+                this.resourceGroupId = model.resourceGroupId;
                 this.sans = model.sans;
                 this.serialNumber = model.serialNumber;
                 this.sha2 = model.sha2;
@@ -710,6 +723,14 @@ public class DescribeCACertificateListResponseBody extends TeaModel {
              */
             public Builder parentIdentifier(String parentIdentifier) {
                 this.parentIdentifier = parentIdentifier;
+                return this;
+            }
+
+            /**
+             * ResourceGroupId.
+             */
+            public Builder resourceGroupId(String resourceGroupId) {
+                this.resourceGroupId = resourceGroupId;
                 return this;
             }
 

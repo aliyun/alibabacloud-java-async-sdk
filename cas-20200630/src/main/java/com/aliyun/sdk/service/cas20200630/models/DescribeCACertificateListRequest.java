@@ -38,6 +38,10 @@ public class DescribeCACertificateListRequest extends Request {
     private String issuerType;
 
     @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ResourceGroupId")
+    private String resourceGroupId;
+
+    @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("ShowSize")
     private Integer showSize;
 
@@ -52,6 +56,7 @@ public class DescribeCACertificateListRequest extends Request {
         this.currentPage = builder.currentPage;
         this.identifier = builder.identifier;
         this.issuerType = builder.issuerType;
+        this.resourceGroupId = builder.resourceGroupId;
         this.showSize = builder.showSize;
         this.validStatus = builder.validStatus;
     }
@@ -105,6 +110,13 @@ public class DescribeCACertificateListRequest extends Request {
     }
 
     /**
+     * @return resourceGroupId
+     */
+    public String getResourceGroupId() {
+        return this.resourceGroupId;
+    }
+
+    /**
      * @return showSize
      */
     public Integer getShowSize() {
@@ -124,6 +136,7 @@ public class DescribeCACertificateListRequest extends Request {
         private Integer currentPage; 
         private String identifier; 
         private String issuerType; 
+        private String resourceGroupId; 
         private Integer showSize; 
         private String validStatus; 
 
@@ -138,6 +151,7 @@ public class DescribeCACertificateListRequest extends Request {
             this.currentPage = request.currentPage;
             this.identifier = request.identifier;
             this.issuerType = request.issuerType;
+            this.resourceGroupId = request.resourceGroupId;
             this.showSize = request.showSize;
             this.validStatus = request.validStatus;
         } 
@@ -217,6 +231,15 @@ public class DescribeCACertificateListRequest extends Request {
         public Builder issuerType(String issuerType) {
             this.putQueryParameter("IssuerType", issuerType);
             this.issuerType = issuerType;
+            return this;
+        }
+
+        /**
+         * ResourceGroupId.
+         */
+        public Builder resourceGroupId(String resourceGroupId) {
+            this.putQueryParameter("ResourceGroupId", resourceGroupId);
+            this.resourceGroupId = resourceGroupId;
             return this;
         }
 
