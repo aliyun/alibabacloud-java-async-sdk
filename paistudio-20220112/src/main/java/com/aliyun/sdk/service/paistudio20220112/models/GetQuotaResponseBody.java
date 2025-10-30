@@ -32,6 +32,9 @@ public class GetQuotaResponseBody extends TeaModel {
     @com.aliyun.core.annotation.NameInMap("GmtModifiedTime")
     private String gmtModifiedTime;
 
+    @com.aliyun.core.annotation.NameInMap("HyperZones")
+    private java.util.List<String> hyperZones;
+
     @com.aliyun.core.annotation.NameInMap("Labels")
     private java.util.List<Label> labels;
 
@@ -80,6 +83,9 @@ public class GetQuotaResponseBody extends TeaModel {
     @com.aliyun.core.annotation.NameInMap("SubQuotas")
     private java.util.List<QuotaIdName> subQuotas;
 
+    @com.aliyun.core.annotation.NameInMap("Version")
+    private String version;
+
     @com.aliyun.core.annotation.NameInMap("Workspaces")
     private java.util.List<WorkspaceIdName> workspaces;
 
@@ -89,6 +95,7 @@ public class GetQuotaResponseBody extends TeaModel {
         this.description = builder.description;
         this.gmtCreatedTime = builder.gmtCreatedTime;
         this.gmtModifiedTime = builder.gmtModifiedTime;
+        this.hyperZones = builder.hyperZones;
         this.labels = builder.labels;
         this.latestOperationId = builder.latestOperationId;
         this.min = builder.min;
@@ -105,6 +112,7 @@ public class GetQuotaResponseBody extends TeaModel {
         this.resourceType = builder.resourceType;
         this.status = builder.status;
         this.subQuotas = builder.subQuotas;
+        this.version = builder.version;
         this.workspaces = builder.workspaces;
     }
 
@@ -153,6 +161,13 @@ public class GetQuotaResponseBody extends TeaModel {
      */
     public String getGmtModifiedTime() {
         return this.gmtModifiedTime;
+    }
+
+    /**
+     * @return hyperZones
+     */
+    public java.util.List<String> getHyperZones() {
+        return this.hyperZones;
     }
 
     /**
@@ -268,6 +283,13 @@ public class GetQuotaResponseBody extends TeaModel {
     }
 
     /**
+     * @return version
+     */
+    public String getVersion() {
+        return this.version;
+    }
+
+    /**
      * @return workspaces
      */
     public java.util.List<WorkspaceIdName> getWorkspaces() {
@@ -280,6 +302,7 @@ public class GetQuotaResponseBody extends TeaModel {
         private String description; 
         private String gmtCreatedTime; 
         private String gmtModifiedTime; 
+        private java.util.List<String> hyperZones; 
         private java.util.List<Label> labels; 
         private String latestOperationId; 
         private ResourceSpec min; 
@@ -296,6 +319,7 @@ public class GetQuotaResponseBody extends TeaModel {
         private String resourceType; 
         private String status; 
         private java.util.List<QuotaIdName> subQuotas; 
+        private String version; 
         private java.util.List<WorkspaceIdName> workspaces; 
 
         private Builder() {
@@ -307,6 +331,7 @@ public class GetQuotaResponseBody extends TeaModel {
             this.description = model.description;
             this.gmtCreatedTime = model.gmtCreatedTime;
             this.gmtModifiedTime = model.gmtModifiedTime;
+            this.hyperZones = model.hyperZones;
             this.labels = model.labels;
             this.latestOperationId = model.latestOperationId;
             this.min = model.min;
@@ -323,6 +348,7 @@ public class GetQuotaResponseBody extends TeaModel {
             this.resourceType = model.resourceType;
             this.status = model.status;
             this.subQuotas = model.subQuotas;
+            this.version = model.version;
             this.workspaces = model.workspaces;
         } 
 
@@ -363,6 +389,14 @@ public class GetQuotaResponseBody extends TeaModel {
          */
         public Builder gmtModifiedTime(String gmtModifiedTime) {
             this.gmtModifiedTime = gmtModifiedTime;
+            return this;
+        }
+
+        /**
+         * HyperZones.
+         */
+        public Builder hyperZones(java.util.List<String> hyperZones) {
+            this.hyperZones = hyperZones;
             return this;
         }
 
@@ -494,6 +528,14 @@ public class GetQuotaResponseBody extends TeaModel {
          */
         public Builder subQuotas(java.util.List<QuotaIdName> subQuotas) {
             this.subQuotas = subQuotas;
+            return this;
+        }
+
+        /**
+         * Version.
+         */
+        public Builder version(String version) {
+            this.version = version;
             return this;
         }
 

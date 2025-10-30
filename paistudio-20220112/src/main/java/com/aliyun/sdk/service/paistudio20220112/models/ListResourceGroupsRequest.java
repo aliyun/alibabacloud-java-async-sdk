@@ -61,6 +61,10 @@ public class ListResourceGroupsRequest extends Request {
     @com.aliyun.core.annotation.NameInMap("Status")
     private String status;
 
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Versions")
+    private String versions;
+
     private ListResourceGroupsRequest(Builder builder) {
         super(builder);
         this.computingResourceProvider = builder.computingResourceProvider;
@@ -74,6 +78,7 @@ public class ListResourceGroupsRequest extends Request {
         this.showAll = builder.showAll;
         this.sortBy = builder.sortBy;
         this.status = builder.status;
+        this.versions = builder.versions;
     }
 
     public static Builder builder() {
@@ -166,6 +171,13 @@ public class ListResourceGroupsRequest extends Request {
         return this.status;
     }
 
+    /**
+     * @return versions
+     */
+    public String getVersions() {
+        return this.versions;
+    }
+
     public static final class Builder extends Request.Builder<ListResourceGroupsRequest, Builder> {
         private String computingResourceProvider; 
         private Boolean hasResource; 
@@ -178,6 +190,7 @@ public class ListResourceGroupsRequest extends Request {
         private Boolean showAll; 
         private String sortBy; 
         private String status; 
+        private String versions; 
 
         private Builder() {
             super();
@@ -196,6 +209,7 @@ public class ListResourceGroupsRequest extends Request {
             this.showAll = request.showAll;
             this.sortBy = request.sortBy;
             this.status = request.status;
+            this.versions = request.versions;
         } 
 
         /**
@@ -294,6 +308,15 @@ public class ListResourceGroupsRequest extends Request {
         public Builder status(String status) {
             this.putQueryParameter("Status", status);
             this.status = status;
+            return this;
+        }
+
+        /**
+         * Versions.
+         */
+        public Builder versions(String versions) {
+            this.putQueryParameter("Versions", versions);
+            this.versions = versions;
             return this;
         }
 

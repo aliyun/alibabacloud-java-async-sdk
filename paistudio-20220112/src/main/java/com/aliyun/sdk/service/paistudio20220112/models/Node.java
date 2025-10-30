@@ -26,6 +26,9 @@ public class Node extends TeaModel {
     @com.aliyun.core.annotation.NameInMap("AllocatableMemory")
     private String allocatableMemory;
 
+    @com.aliyun.core.annotation.NameInMap("AncestorQuotaWorkloadNum")
+    private Long ancestorQuotaWorkloadNum;
+
     @com.aliyun.core.annotation.NameInMap("AvailabilityZone")
     private String availabilityZone;
 
@@ -37,6 +40,9 @@ public class Node extends TeaModel {
 
     @com.aliyun.core.annotation.NameInMap("CreatorId")
     private String creatorId;
+
+    @com.aliyun.core.annotation.NameInMap("DescendantQuotaWorkloadNum")
+    private Long descendantQuotaWorkloadNum;
 
     @com.aliyun.core.annotation.NameInMap("GPU")
     private String GPU;
@@ -113,6 +119,9 @@ public class Node extends TeaModel {
     @com.aliyun.core.annotation.NameInMap("ResourceGroupName")
     private String resourceGroupName;
 
+    @com.aliyun.core.annotation.NameInMap("SelfQuotaWorkloadNum")
+    private Long selfQuotaWorkloadNum;
+
     @com.aliyun.core.annotation.NameInMap("SystemReservedCPU")
     private String systemReservedCPU;
 
@@ -129,10 +138,12 @@ public class Node extends TeaModel {
         this.acceleratorType = builder.acceleratorType;
         this.allocatableCPU = builder.allocatableCPU;
         this.allocatableMemory = builder.allocatableMemory;
+        this.ancestorQuotaWorkloadNum = builder.ancestorQuotaWorkloadNum;
         this.availabilityZone = builder.availabilityZone;
         this.boundQuotas = builder.boundQuotas;
         this.CPU = builder.CPU;
         this.creatorId = builder.creatorId;
+        this.descendantQuotaWorkloadNum = builder.descendantQuotaWorkloadNum;
         this.GPU = builder.GPU;
         this.GPUMemory = builder.GPUMemory;
         this.GPUType = builder.GPUType;
@@ -158,6 +169,7 @@ public class Node extends TeaModel {
         this.requestMemory = builder.requestMemory;
         this.resourceGroupId = builder.resourceGroupId;
         this.resourceGroupName = builder.resourceGroupName;
+        this.selfQuotaWorkloadNum = builder.selfQuotaWorkloadNum;
         this.systemReservedCPU = builder.systemReservedCPU;
         this.systemReservedMemory = builder.systemReservedMemory;
         this.users = builder.users;
@@ -198,6 +210,13 @@ public class Node extends TeaModel {
     }
 
     /**
+     * @return ancestorQuotaWorkloadNum
+     */
+    public Long getAncestorQuotaWorkloadNum() {
+        return this.ancestorQuotaWorkloadNum;
+    }
+
+    /**
      * @return availabilityZone
      */
     public String getAvailabilityZone() {
@@ -223,6 +242,13 @@ public class Node extends TeaModel {
      */
     public String getCreatorId() {
         return this.creatorId;
+    }
+
+    /**
+     * @return descendantQuotaWorkloadNum
+     */
+    public Long getDescendantQuotaWorkloadNum() {
+        return this.descendantQuotaWorkloadNum;
     }
 
     /**
@@ -401,6 +427,13 @@ public class Node extends TeaModel {
     }
 
     /**
+     * @return selfQuotaWorkloadNum
+     */
+    public Long getSelfQuotaWorkloadNum() {
+        return this.selfQuotaWorkloadNum;
+    }
+
+    /**
      * @return systemReservedCPU
      */
     public String getSystemReservedCPU() {
@@ -432,10 +465,12 @@ public class Node extends TeaModel {
         private String acceleratorType; 
         private String allocatableCPU; 
         private String allocatableMemory; 
+        private Long ancestorQuotaWorkloadNum; 
         private String availabilityZone; 
         private java.util.List<QuotaIdName> boundQuotas; 
         private String CPU; 
         private String creatorId; 
+        private Long descendantQuotaWorkloadNum; 
         private String GPU; 
         private String GPUMemory; 
         private String GPUType; 
@@ -461,6 +496,7 @@ public class Node extends TeaModel {
         private String requestMemory; 
         private String resourceGroupId; 
         private String resourceGroupName; 
+        private Long selfQuotaWorkloadNum; 
         private String systemReservedCPU; 
         private String systemReservedMemory; 
         private java.util.List<UserInfo> users; 
@@ -473,10 +509,12 @@ public class Node extends TeaModel {
             this.acceleratorType = model.acceleratorType;
             this.allocatableCPU = model.allocatableCPU;
             this.allocatableMemory = model.allocatableMemory;
+            this.ancestorQuotaWorkloadNum = model.ancestorQuotaWorkloadNum;
             this.availabilityZone = model.availabilityZone;
             this.boundQuotas = model.boundQuotas;
             this.CPU = model.CPU;
             this.creatorId = model.creatorId;
+            this.descendantQuotaWorkloadNum = model.descendantQuotaWorkloadNum;
             this.GPU = model.GPU;
             this.GPUMemory = model.GPUMemory;
             this.GPUType = model.GPUType;
@@ -502,6 +540,7 @@ public class Node extends TeaModel {
             this.requestMemory = model.requestMemory;
             this.resourceGroupId = model.resourceGroupId;
             this.resourceGroupName = model.resourceGroupName;
+            this.selfQuotaWorkloadNum = model.selfQuotaWorkloadNum;
             this.systemReservedCPU = model.systemReservedCPU;
             this.systemReservedMemory = model.systemReservedMemory;
             this.users = model.users;
@@ -529,6 +568,14 @@ public class Node extends TeaModel {
          */
         public Builder allocatableMemory(String allocatableMemory) {
             this.allocatableMemory = allocatableMemory;
+            return this;
+        }
+
+        /**
+         * AncestorQuotaWorkloadNum.
+         */
+        public Builder ancestorQuotaWorkloadNum(Long ancestorQuotaWorkloadNum) {
+            this.ancestorQuotaWorkloadNum = ancestorQuotaWorkloadNum;
             return this;
         }
 
@@ -561,6 +608,14 @@ public class Node extends TeaModel {
          */
         public Builder creatorId(String creatorId) {
             this.creatorId = creatorId;
+            return this;
+        }
+
+        /**
+         * DescendantQuotaWorkloadNum.
+         */
+        public Builder descendantQuotaWorkloadNum(Long descendantQuotaWorkloadNum) {
+            this.descendantQuotaWorkloadNum = descendantQuotaWorkloadNum;
             return this;
         }
 
@@ -761,6 +816,14 @@ public class Node extends TeaModel {
          */
         public Builder resourceGroupName(String resourceGroupName) {
             this.resourceGroupName = resourceGroupName;
+            return this;
+        }
+
+        /**
+         * SelfQuotaWorkloadNum.
+         */
+        public Builder selfQuotaWorkloadNum(Long selfQuotaWorkloadNum) {
+            this.selfQuotaWorkloadNum = selfQuotaWorkloadNum;
             return this;
         }
 

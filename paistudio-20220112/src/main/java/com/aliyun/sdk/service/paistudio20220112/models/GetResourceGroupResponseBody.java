@@ -56,6 +56,9 @@ public class GetResourceGroupResponseBody extends TeaModel {
     @com.aliyun.core.annotation.NameInMap("UserVpc")
     private UserVpc userVpc;
 
+    @com.aliyun.core.annotation.NameInMap("Version")
+    private String version;
+
     @com.aliyun.core.annotation.NameInMap("WorkspaceID")
     private String workspaceID;
 
@@ -73,6 +76,7 @@ public class GetResourceGroupResponseBody extends TeaModel {
         this.supportRDMA = builder.supportRDMA;
         this.tags = builder.tags;
         this.userVpc = builder.userVpc;
+        this.version = builder.version;
         this.workspaceID = builder.workspaceID;
     }
 
@@ -180,6 +184,13 @@ public class GetResourceGroupResponseBody extends TeaModel {
     }
 
     /**
+     * @return version
+     */
+    public String getVersion() {
+        return this.version;
+    }
+
+    /**
      * @return workspaceID
      */
     public String getWorkspaceID() {
@@ -200,6 +211,7 @@ public class GetResourceGroupResponseBody extends TeaModel {
         private Boolean supportRDMA; 
         private java.util.List<Tags> tags; 
         private UserVpc userVpc; 
+        private String version; 
         private String workspaceID; 
 
         private Builder() {
@@ -219,6 +231,7 @@ public class GetResourceGroupResponseBody extends TeaModel {
             this.supportRDMA = model.supportRDMA;
             this.tags = model.tags;
             this.userVpc = model.userVpc;
+            this.version = model.version;
             this.workspaceID = model.workspaceID;
         } 
 
@@ -323,6 +336,14 @@ public class GetResourceGroupResponseBody extends TeaModel {
          */
         public Builder userVpc(UserVpc userVpc) {
             this.userVpc = userVpc;
+            return this;
+        }
+
+        /**
+         * Version.
+         */
+        public Builder version(String version) {
+            this.version = version;
             return this;
         }
 

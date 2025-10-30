@@ -70,6 +70,10 @@ public class ListQuotasRequest extends Request {
     private Boolean verbose;
 
     @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Versions")
+    private String versions;
+
+    @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("WorkspaceIds")
     private String workspaceIds;
 
@@ -92,6 +96,7 @@ public class ListQuotasRequest extends Request {
         this.sortBy = builder.sortBy;
         this.statuses = builder.statuses;
         this.verbose = builder.verbose;
+        this.versions = builder.versions;
         this.workspaceIds = builder.workspaceIds;
         this.workspaceName = builder.workspaceName;
     }
@@ -201,6 +206,13 @@ public class ListQuotasRequest extends Request {
     }
 
     /**
+     * @return versions
+     */
+    public String getVersions() {
+        return this.versions;
+    }
+
+    /**
      * @return workspaceIds
      */
     public String getWorkspaceIds() {
@@ -228,6 +240,7 @@ public class ListQuotasRequest extends Request {
         private String sortBy; 
         private String statuses; 
         private Boolean verbose; 
+        private String versions; 
         private String workspaceIds; 
         private String workspaceName; 
 
@@ -250,6 +263,7 @@ public class ListQuotasRequest extends Request {
             this.sortBy = request.sortBy;
             this.statuses = request.statuses;
             this.verbose = request.verbose;
+            this.versions = request.versions;
             this.workspaceIds = request.workspaceIds;
             this.workspaceName = request.workspaceName;
         } 
@@ -368,6 +382,15 @@ public class ListQuotasRequest extends Request {
         public Builder verbose(Boolean verbose) {
             this.putQueryParameter("Verbose", verbose);
             this.verbose = verbose;
+            return this;
+        }
+
+        /**
+         * Versions.
+         */
+        public Builder versions(String versions) {
+            this.putQueryParameter("Versions", versions);
+            this.versions = versions;
             return this;
         }
 

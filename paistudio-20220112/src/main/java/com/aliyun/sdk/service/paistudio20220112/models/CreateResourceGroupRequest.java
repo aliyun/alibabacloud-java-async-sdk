@@ -41,6 +41,10 @@ public class CreateResourceGroupRequest extends Request {
     @com.aliyun.core.annotation.NameInMap("UserVpc")
     private UserVpc userVpc;
 
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("Version")
+    private String version;
+
     private CreateResourceGroupRequest(Builder builder) {
         super(builder);
         this.computingResourceProvider = builder.computingResourceProvider;
@@ -49,6 +53,7 @@ public class CreateResourceGroupRequest extends Request {
         this.resourceType = builder.resourceType;
         this.tag = builder.tag;
         this.userVpc = builder.userVpc;
+        this.version = builder.version;
     }
 
     public static Builder builder() {
@@ -106,6 +111,13 @@ public class CreateResourceGroupRequest extends Request {
         return this.userVpc;
     }
 
+    /**
+     * @return version
+     */
+    public String getVersion() {
+        return this.version;
+    }
+
     public static final class Builder extends Request.Builder<CreateResourceGroupRequest, Builder> {
         private String computingResourceProvider; 
         private String description; 
@@ -113,6 +125,7 @@ public class CreateResourceGroupRequest extends Request {
         private String resourceType; 
         private java.util.List<Tag> tag; 
         private UserVpc userVpc; 
+        private String version; 
 
         private Builder() {
             super();
@@ -126,6 +139,7 @@ public class CreateResourceGroupRequest extends Request {
             this.resourceType = request.resourceType;
             this.tag = request.tag;
             this.userVpc = request.userVpc;
+            this.version = request.version;
         } 
 
         /**
@@ -179,6 +193,15 @@ public class CreateResourceGroupRequest extends Request {
         public Builder userVpc(UserVpc userVpc) {
             this.putBodyParameter("UserVpc", userVpc);
             this.userVpc = userVpc;
+            return this;
+        }
+
+        /**
+         * Version.
+         */
+        public Builder version(String version) {
+            this.putBodyParameter("Version", version);
+            this.version = version;
             return this;
         }
 

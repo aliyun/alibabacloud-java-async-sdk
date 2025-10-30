@@ -26,6 +26,10 @@ public class ListNodesRequest extends Request {
     private String availabilityZone;
 
     @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("CliqueID")
+    private String cliqueID;
+
+    @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("FilterByQuotaId")
     private String filterByQuotaId;
 
@@ -36,6 +40,10 @@ public class ListNodesRequest extends Request {
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("GPUType")
     private String GPUType;
+
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("HyperNode")
+    private String hyperNode;
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("HyperZone")
@@ -60,6 +68,10 @@ public class ListNodesRequest extends Request {
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("Order")
     private String order;
+
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("OrderInstanceIds")
+    private String orderInstanceIds;
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("OrderStatuses")
@@ -101,15 +113,18 @@ public class ListNodesRequest extends Request {
         super(builder);
         this.acceleratorType = builder.acceleratorType;
         this.availabilityZone = builder.availabilityZone;
+        this.cliqueID = builder.cliqueID;
         this.filterByQuotaId = builder.filterByQuotaId;
         this.filterByResourceGroupIds = builder.filterByResourceGroupIds;
         this.GPUType = builder.GPUType;
+        this.hyperNode = builder.hyperNode;
         this.hyperZone = builder.hyperZone;
         this.machineGroupIds = builder.machineGroupIds;
         this.nodeNames = builder.nodeNames;
         this.nodeStatuses = builder.nodeStatuses;
         this.nodeTypes = builder.nodeTypes;
         this.order = builder.order;
+        this.orderInstanceIds = builder.orderInstanceIds;
         this.orderStatuses = builder.orderStatuses;
         this.pageNumber = builder.pageNumber;
         this.pageSize = builder.pageSize;
@@ -149,6 +164,13 @@ public class ListNodesRequest extends Request {
     }
 
     /**
+     * @return cliqueID
+     */
+    public String getCliqueID() {
+        return this.cliqueID;
+    }
+
+    /**
      * @return filterByQuotaId
      */
     public String getFilterByQuotaId() {
@@ -167,6 +189,13 @@ public class ListNodesRequest extends Request {
      */
     public String getGPUType() {
         return this.GPUType;
+    }
+
+    /**
+     * @return hyperNode
+     */
+    public String getHyperNode() {
+        return this.hyperNode;
     }
 
     /**
@@ -209,6 +238,13 @@ public class ListNodesRequest extends Request {
      */
     public String getOrder() {
         return this.order;
+    }
+
+    /**
+     * @return orderInstanceIds
+     */
+    public String getOrderInstanceIds() {
+        return this.orderInstanceIds;
     }
 
     /**
@@ -277,15 +313,18 @@ public class ListNodesRequest extends Request {
     public static final class Builder extends Request.Builder<ListNodesRequest, Builder> {
         private String acceleratorType; 
         private String availabilityZone; 
+        private String cliqueID; 
         private String filterByQuotaId; 
         private String filterByResourceGroupIds; 
         private String GPUType; 
+        private String hyperNode; 
         private String hyperZone; 
         private String machineGroupIds; 
         private String nodeNames; 
         private String nodeStatuses; 
         private String nodeTypes; 
         private String order; 
+        private String orderInstanceIds; 
         private String orderStatuses; 
         private Integer pageNumber; 
         private Integer pageSize; 
@@ -304,15 +343,18 @@ public class ListNodesRequest extends Request {
             super(request);
             this.acceleratorType = request.acceleratorType;
             this.availabilityZone = request.availabilityZone;
+            this.cliqueID = request.cliqueID;
             this.filterByQuotaId = request.filterByQuotaId;
             this.filterByResourceGroupIds = request.filterByResourceGroupIds;
             this.GPUType = request.GPUType;
+            this.hyperNode = request.hyperNode;
             this.hyperZone = request.hyperZone;
             this.machineGroupIds = request.machineGroupIds;
             this.nodeNames = request.nodeNames;
             this.nodeStatuses = request.nodeStatuses;
             this.nodeTypes = request.nodeTypes;
             this.order = request.order;
+            this.orderInstanceIds = request.orderInstanceIds;
             this.orderStatuses = request.orderStatuses;
             this.pageNumber = request.pageNumber;
             this.pageSize = request.pageSize;
@@ -343,6 +385,15 @@ public class ListNodesRequest extends Request {
         }
 
         /**
+         * CliqueID.
+         */
+        public Builder cliqueID(String cliqueID) {
+            this.putQueryParameter("CliqueID", cliqueID);
+            this.cliqueID = cliqueID;
+            return this;
+        }
+
+        /**
          * FilterByQuotaId.
          */
         public Builder filterByQuotaId(String filterByQuotaId) {
@@ -366,6 +417,15 @@ public class ListNodesRequest extends Request {
         public Builder GPUType(String GPUType) {
             this.putQueryParameter("GPUType", GPUType);
             this.GPUType = GPUType;
+            return this;
+        }
+
+        /**
+         * HyperNode.
+         */
+        public Builder hyperNode(String hyperNode) {
+            this.putQueryParameter("HyperNode", hyperNode);
+            this.hyperNode = hyperNode;
             return this;
         }
 
@@ -420,6 +480,15 @@ public class ListNodesRequest extends Request {
         public Builder order(String order) {
             this.putQueryParameter("Order", order);
             this.order = order;
+            return this;
+        }
+
+        /**
+         * OrderInstanceIds.
+         */
+        public Builder orderInstanceIds(String orderInstanceIds) {
+            this.putQueryParameter("OrderInstanceIds", orderInstanceIds);
+            this.orderInstanceIds = orderInstanceIds;
             return this;
         }
 
