@@ -32,6 +32,10 @@ public class UpdateVpcEndpointZoneConnectionResourceAttributeResponseBody extend
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return requestId
      */
@@ -41,6 +45,13 @@ public class UpdateVpcEndpointZoneConnectionResourceAttributeResponseBody extend
 
     public static final class Builder {
         private String requestId; 
+
+        private Builder() {
+        } 
+
+        private Builder(UpdateVpcEndpointZoneConnectionResourceAttributeResponseBody model) {
+            this.requestId = model.requestId;
+        } 
 
         /**
          * <p>The request ID.</p>

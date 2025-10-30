@@ -48,6 +48,10 @@ public class ListVpcEndpointsResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return endpoints
      */
@@ -89,6 +93,17 @@ public class ListVpcEndpointsResponseBody extends TeaModel {
         private String nextToken; 
         private String requestId; 
         private Integer totalCount; 
+
+        private Builder() {
+        } 
+
+        private Builder(ListVpcEndpointsResponseBody model) {
+            this.endpoints = model.endpoints;
+            this.maxResults = model.maxResults;
+            this.nextToken = model.nextToken;
+            this.requestId = model.requestId;
+            this.totalCount = model.totalCount;
+        } 
 
         /**
          * <p>The information about the endpoints.</p>
@@ -195,6 +210,14 @@ public class ListVpcEndpointsResponseBody extends TeaModel {
         public static final class Builder {
             private String key; 
             private String value; 
+
+            private Builder() {
+            } 
+
+            private Builder(Tags model) {
+                this.key = model.key;
+                this.value = model.value;
+            } 
 
             /**
              * <p>The key of the tag added to the resource.</p>
@@ -485,8 +508,41 @@ public class ListVpcEndpointsResponseBody extends TeaModel {
             private String vpcId; 
             private Boolean zoneAffinityEnabled; 
 
+            private Builder() {
+            } 
+
+            private Builder(Endpoints model) {
+                this.addressIpVersion = model.addressIpVersion;
+                this.bandwidth = model.bandwidth;
+                this.connectionStatus = model.connectionStatus;
+                this.createTime = model.createTime;
+                this.endpointBusinessStatus = model.endpointBusinessStatus;
+                this.endpointDescription = model.endpointDescription;
+                this.endpointDomain = model.endpointDomain;
+                this.endpointId = model.endpointId;
+                this.endpointName = model.endpointName;
+                this.endpointStatus = model.endpointStatus;
+                this.endpointType = model.endpointType;
+                this.policyDocument = model.policyDocument;
+                this.regionId = model.regionId;
+                this.resourceGroupId = model.resourceGroupId;
+                this.resourceOwner = model.resourceOwner;
+                this.serviceId = model.serviceId;
+                this.serviceName = model.serviceName;
+                this.tags = model.tags;
+                this.vpcId = model.vpcId;
+                this.zoneAffinityEnabled = model.zoneAffinityEnabled;
+            } 
+
             /**
-             * AddressIpVersion.
+             * <p>The protocol. Valid values:</p>
+             * <ul>
+             * <li><strong>IPv4</strong></li>
+             * <li><strong>DualStack</strong></li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>IPv4</p>
              */
             public Builder addressIpVersion(String addressIpVersion) {
                 this.addressIpVersion = addressIpVersion;

@@ -48,6 +48,10 @@ public class ListVpcEndpointZonesResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return maxResults
      */
@@ -89,6 +93,17 @@ public class ListVpcEndpointZonesResponseBody extends TeaModel {
         private String requestId; 
         private Integer totalCount; 
         private java.util.List<Zones> zones; 
+
+        private Builder() {
+        } 
+
+        private Builder(ListVpcEndpointZonesResponseBody model) {
+            this.maxResults = model.maxResults;
+            this.nextToken = model.nextToken;
+            this.requestId = model.requestId;
+            this.totalCount = model.totalCount;
+            this.zones = model.zones;
+        } 
 
         /**
          * <p>The number of entries returned on each page.</p>
@@ -267,6 +282,20 @@ public class ListVpcEndpointZonesResponseBody extends TeaModel {
             private String zoneId; 
             private String zoneIpv6Address; 
             private String zoneStatus; 
+
+            private Builder() {
+            } 
+
+            private Builder(Zones model) {
+                this.eniId = model.eniId;
+                this.eniIp = model.eniIp;
+                this.regionId = model.regionId;
+                this.vSwitchId = model.vSwitchId;
+                this.zoneDomain = model.zoneDomain;
+                this.zoneId = model.zoneId;
+                this.zoneIpv6Address = model.zoneIpv6Address;
+                this.zoneStatus = model.zoneStatus;
+            } 
 
             /**
              * <p>The ID of the endpoint ENI.</p>

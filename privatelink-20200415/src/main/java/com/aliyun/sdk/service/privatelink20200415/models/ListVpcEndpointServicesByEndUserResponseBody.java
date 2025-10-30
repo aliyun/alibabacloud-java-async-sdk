@@ -48,6 +48,10 @@ public class ListVpcEndpointServicesByEndUserResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return maxResults
      */
@@ -89,6 +93,17 @@ public class ListVpcEndpointServicesByEndUserResponseBody extends TeaModel {
         private String requestId; 
         private java.util.List<Services> services; 
         private String totalCount; 
+
+        private Builder() {
+        } 
+
+        private Builder(ListVpcEndpointServicesByEndUserResponseBody model) {
+            this.maxResults = model.maxResults;
+            this.nextToken = model.nextToken;
+            this.requestId = model.requestId;
+            this.services = model.services;
+            this.totalCount = model.totalCount;
+        } 
 
         /**
          * <p>The number of entries returned per page.</p>
@@ -196,6 +211,14 @@ public class ListVpcEndpointServicesByEndUserResponseBody extends TeaModel {
             private String key; 
             private String value; 
 
+            private Builder() {
+            } 
+
+            private Builder(Tags model) {
+                this.key = model.key;
+                this.value = model.value;
+            } 
+
             /**
              * <p>The key of the tag.</p>
              * 
@@ -262,6 +285,9 @@ public class ListVpcEndpointServicesByEndUserResponseBody extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Tags")
         private java.util.List<Tags> tags;
 
+        @com.aliyun.core.annotation.NameInMap("ZoneAffinityEnabled")
+        private Boolean zoneAffinityEnabled;
+
         @com.aliyun.core.annotation.NameInMap("Zones")
         private java.util.List<String> zones;
 
@@ -276,6 +302,7 @@ public class ListVpcEndpointServicesByEndUserResponseBody extends TeaModel {
             this.serviceSupportIPv6 = builder.serviceSupportIPv6;
             this.serviceType = builder.serviceType;
             this.tags = builder.tags;
+            this.zoneAffinityEnabled = builder.zoneAffinityEnabled;
             this.zones = builder.zones;
         }
 
@@ -358,6 +385,13 @@ public class ListVpcEndpointServicesByEndUserResponseBody extends TeaModel {
         }
 
         /**
+         * @return zoneAffinityEnabled
+         */
+        public Boolean getZoneAffinityEnabled() {
+            return this.zoneAffinityEnabled;
+        }
+
+        /**
          * @return zones
          */
         public java.util.List<String> getZones() {
@@ -375,10 +409,36 @@ public class ListVpcEndpointServicesByEndUserResponseBody extends TeaModel {
             private Boolean serviceSupportIPv6; 
             private String serviceType; 
             private java.util.List<Tags> tags; 
+            private Boolean zoneAffinityEnabled; 
             private java.util.List<String> zones; 
 
+            private Builder() {
+            } 
+
+            private Builder(Services model) {
+                this.addressIpVersion = model.addressIpVersion;
+                this.payer = model.payer;
+                this.resourceGroupId = model.resourceGroupId;
+                this.serviceDomain = model.serviceDomain;
+                this.serviceId = model.serviceId;
+                this.serviceName = model.serviceName;
+                this.serviceResourceType = model.serviceResourceType;
+                this.serviceSupportIPv6 = model.serviceSupportIPv6;
+                this.serviceType = model.serviceType;
+                this.tags = model.tags;
+                this.zoneAffinityEnabled = model.zoneAffinityEnabled;
+                this.zones = model.zones;
+            } 
+
             /**
-             * AddressIpVersion.
+             * <p>The protocol. Valid values:</p>
+             * <ul>
+             * <li><strong>IPv4</strong></li>
+             * <li><strong>DualStack</strong></li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>IPv4</p>
              */
             public Builder addressIpVersion(String addressIpVersion) {
                 this.addressIpVersion = addressIpVersion;
@@ -492,6 +552,14 @@ public class ListVpcEndpointServicesByEndUserResponseBody extends TeaModel {
              */
             public Builder tags(java.util.List<Tags> tags) {
                 this.tags = tags;
+                return this;
+            }
+
+            /**
+             * ZoneAffinityEnabled.
+             */
+            public Builder zoneAffinityEnabled(Boolean zoneAffinityEnabled) {
+                this.zoneAffinityEnabled = zoneAffinityEnabled;
                 return this;
             }
 

@@ -51,6 +51,7 @@ public class CreateVpcEndpointServiceResponseBody extends TeaModel {
     private String serviceStatus;
 
     @com.aliyun.core.annotation.NameInMap("ServiceSupportIPv6")
+    @Deprecated
     private Boolean serviceSupportIPv6;
 
     @com.aliyun.core.annotation.NameInMap("ZoneAffinityEnabled")
@@ -78,6 +79,10 @@ public class CreateVpcEndpointServiceResponseBody extends TeaModel {
 
     public static CreateVpcEndpointServiceResponseBody create() {
         return builder().build();
+    }
+
+    public Builder toBuilder() {
+        return new Builder(this);
     }
 
     /**
@@ -186,8 +191,34 @@ public class CreateVpcEndpointServiceResponseBody extends TeaModel {
         private Boolean serviceSupportIPv6; 
         private Boolean zoneAffinityEnabled; 
 
+        private Builder() {
+        } 
+
+        private Builder(CreateVpcEndpointServiceResponseBody model) {
+            this.addressIpVersion = model.addressIpVersion;
+            this.autoAcceptEnabled = model.autoAcceptEnabled;
+            this.createTime = model.createTime;
+            this.requestId = model.requestId;
+            this.resourceGroupId = model.resourceGroupId;
+            this.serviceBusinessStatus = model.serviceBusinessStatus;
+            this.serviceDescription = model.serviceDescription;
+            this.serviceDomain = model.serviceDomain;
+            this.serviceId = model.serviceId;
+            this.serviceName = model.serviceName;
+            this.serviceStatus = model.serviceStatus;
+            this.serviceSupportIPv6 = model.serviceSupportIPv6;
+            this.zoneAffinityEnabled = model.zoneAffinityEnabled;
+        } 
+
         /**
-         * AddressIpVersion.
+         * <p>The protocol. Valid values:</p>
+         * <ul>
+         * <li><strong>IPv4</strong></li>
+         * <li><strong>DualStack</strong></li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>IPv4</p>
          */
         public Builder addressIpVersion(String addressIpVersion) {
             this.addressIpVersion = addressIpVersion;

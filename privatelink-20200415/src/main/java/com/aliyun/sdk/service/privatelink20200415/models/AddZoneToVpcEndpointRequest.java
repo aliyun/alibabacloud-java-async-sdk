@@ -73,7 +73,7 @@ public class AddZoneToVpcEndpointRequest extends Request {
         return builder().build();
     }
 
-    @Override
+@Override
     public Builder toBuilder() {
         return new Builder(this);
     }
@@ -203,7 +203,10 @@ public class AddZoneToVpcEndpointRequest extends Request {
         }
 
         /**
-         * Ipv6Address.
+         * <p>The IPv6 address of the endpoint ENI in the zone that you want to add.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2408:4005:3b6:<strong><strong>:6955:c3cb:34c:</strong></strong></p>
          */
         public Builder ipv6Address(String ipv6Address) {
             this.putQueryParameter("Ipv6Address", ipv6Address);

@@ -48,6 +48,10 @@ public class ListVpcEndpointConnectionsResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return connections
      */
@@ -89,6 +93,17 @@ public class ListVpcEndpointConnectionsResponseBody extends TeaModel {
         private String nextToken; 
         private String requestId; 
         private String totalCount; 
+
+        private Builder() {
+        } 
+
+        private Builder(ListVpcEndpointConnectionsResponseBody model) {
+            this.connections = model.connections;
+            this.maxResults = model.maxResults;
+            this.nextToken = model.nextToken;
+            this.requestId = model.requestId;
+            this.totalCount = model.totalCount;
+        } 
 
         /**
          * <p>The endpoint connections.</p>
@@ -267,6 +282,20 @@ public class ListVpcEndpointConnectionsResponseBody extends TeaModel {
             private String zoneDomain; 
             private String zoneId; 
             private String zoneStatus; 
+
+            private Builder() {
+            } 
+
+            private Builder(Zones model) {
+                this.eniId = model.eniId;
+                this.replacedEniId = model.replacedEniId;
+                this.replacedResourceId = model.replacedResourceId;
+                this.resourceId = model.resourceId;
+                this.vSwitchId = model.vSwitchId;
+                this.zoneDomain = model.zoneDomain;
+                this.zoneId = model.zoneId;
+                this.zoneStatus = model.zoneStatus;
+            } 
 
             /**
              * <p>The endpoint ENI ID.</p>
@@ -513,6 +542,22 @@ public class ListVpcEndpointConnectionsResponseBody extends TeaModel {
             private Boolean resourceOwner; 
             private String serviceId; 
             private java.util.List<Zones> zones; 
+
+            private Builder() {
+            } 
+
+            private Builder(Connections model) {
+                this.bandwidth = model.bandwidth;
+                this.connectionStatus = model.connectionStatus;
+                this.endpointId = model.endpointId;
+                this.endpointOwnerId = model.endpointOwnerId;
+                this.endpointVpcId = model.endpointVpcId;
+                this.modifiedTime = model.modifiedTime;
+                this.resourceGroupId = model.resourceGroupId;
+                this.resourceOwner = model.resourceOwner;
+                this.serviceId = model.serviceId;
+                this.zones = model.zones;
+            } 
 
             /**
              * <p>The bandwidth of the endpoint connection. Valid values: <strong>1024 to 10240</strong>. Unit: Mbit/s.</p>

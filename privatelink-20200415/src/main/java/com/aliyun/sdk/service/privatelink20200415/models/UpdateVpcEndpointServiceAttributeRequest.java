@@ -82,7 +82,7 @@ public class UpdateVpcEndpointServiceAttributeRequest extends Request {
         return builder().build();
     }
 
-    @Override
+@Override
     public Builder toBuilder() {
         return new Builder(this);
     }
@@ -188,7 +188,17 @@ public class UpdateVpcEndpointServiceAttributeRequest extends Request {
         } 
 
         /**
-         * AddressIpVersion.
+         * <p>The protocol. Valid values:</p>
+         * <ul>
+         * <li><strong>IPv4</strong></li>
+         * <li><strong>DualStack</strong></li>
+         * </ul>
+         * <blockquote>
+         * <p> You can set the protocol to DualStack only for endpoint services whose backend resource type is NLB.</p>
+         * </blockquote>
+         * 
+         * <strong>example:</strong>
+         * <p>IPv4</p>
          */
         public Builder addressIpVersion(String addressIpVersion) {
             this.putQueryParameter("AddressIpVersion", addressIpVersion);

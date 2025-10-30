@@ -44,6 +44,10 @@ public class ListVpcEndpointServiceResourcesResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return maxResults
      */
@@ -77,6 +81,16 @@ public class ListVpcEndpointServiceResourcesResponseBody extends TeaModel {
         private String nextToken; 
         private String requestId; 
         private java.util.List<Resources> resources; 
+
+        private Builder() {
+        } 
+
+        private Builder(ListVpcEndpointServiceResourcesResponseBody model) {
+            this.maxResults = model.maxResults;
+            this.nextToken = model.nextToken;
+            this.requestId = model.requestId;
+            this.resources = model.resources;
+        } 
 
         /**
          * <p>The number of entries returned on each page.</p>
@@ -280,6 +294,23 @@ public class ListVpcEndpointServiceResourcesResponseBody extends TeaModel {
             private String vSwitchId; 
             private String vpcId; 
             private String zoneId; 
+
+            private Builder() {
+            } 
+
+            private Builder(Resources model) {
+                this.autoAllocatedEnabled = model.autoAllocatedEnabled;
+                this.ip = model.ip;
+                this.regionId = model.regionId;
+                this.relatedDeprecatedEndpointCount = model.relatedDeprecatedEndpointCount;
+                this.relatedEndpointCount = model.relatedEndpointCount;
+                this.resourceId = model.resourceId;
+                this.resourceSupportIPv6 = model.resourceSupportIPv6;
+                this.resourceType = model.resourceType;
+                this.vSwitchId = model.vSwitchId;
+                this.vpcId = model.vpcId;
+                this.zoneId = model.zoneId;
+            } 
 
             /**
              * <p>Indicates whether automatic resource allocation is enabled. Valid values:</p>

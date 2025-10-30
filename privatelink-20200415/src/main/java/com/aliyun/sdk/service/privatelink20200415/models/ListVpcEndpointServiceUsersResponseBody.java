@@ -52,6 +52,10 @@ public class ListVpcEndpointServiceUsersResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return maxResults
      */
@@ -101,6 +105,18 @@ public class ListVpcEndpointServiceUsersResponseBody extends TeaModel {
         private String totalCount; 
         private java.util.List<UserARNs> userARNs; 
         private java.util.List<Users> users; 
+
+        private Builder() {
+        } 
+
+        private Builder(ListVpcEndpointServiceUsersResponseBody model) {
+            this.maxResults = model.maxResults;
+            this.nextToken = model.nextToken;
+            this.requestId = model.requestId;
+            this.totalCount = model.totalCount;
+            this.userARNs = model.userARNs;
+            this.users = model.users;
+        } 
 
         /**
          * <p>The number of entries returned on each page.</p>
@@ -204,6 +220,13 @@ public class ListVpcEndpointServiceUsersResponseBody extends TeaModel {
         public static final class Builder {
             private String userARN; 
 
+            private Builder() {
+            } 
+
+            private Builder(UserARNs model) {
+                this.userARN = model.userARN;
+            } 
+
             /**
              * <p>The whitelist in the format of ARN.</p>
              * 
@@ -253,6 +276,13 @@ public class ListVpcEndpointServiceUsersResponseBody extends TeaModel {
 
         public static final class Builder {
             private Long userId; 
+
+            private Builder() {
+            } 
+
+            private Builder(Users model) {
+                this.userId = model.userId;
+            } 
 
             /**
              * <p>The ID of the Alibaba Cloud account in the whitelist of the endpoint service.</p>

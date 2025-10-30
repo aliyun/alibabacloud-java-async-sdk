@@ -59,6 +59,9 @@ public class CreateVpcEndpointResponseBody extends TeaModel {
     @com.aliyun.core.annotation.NameInMap("VpcId")
     private String vpcId;
 
+    @com.aliyun.core.annotation.NameInMap("ZoneAffinityEnabled")
+    private Boolean zoneAffinityEnabled;
+
     private CreateVpcEndpointResponseBody(Builder builder) {
         this.addressIpVersion = builder.addressIpVersion;
         this.bandwidth = builder.bandwidth;
@@ -74,6 +77,7 @@ public class CreateVpcEndpointResponseBody extends TeaModel {
         this.serviceId = builder.serviceId;
         this.serviceName = builder.serviceName;
         this.vpcId = builder.vpcId;
+        this.zoneAffinityEnabled = builder.zoneAffinityEnabled;
     }
 
     public static Builder builder() {
@@ -82,6 +86,10 @@ public class CreateVpcEndpointResponseBody extends TeaModel {
 
     public static CreateVpcEndpointResponseBody create() {
         return builder().build();
+    }
+
+    public Builder toBuilder() {
+        return new Builder(this);
     }
 
     /**
@@ -182,6 +190,13 @@ public class CreateVpcEndpointResponseBody extends TeaModel {
         return this.vpcId;
     }
 
+    /**
+     * @return zoneAffinityEnabled
+     */
+    public Boolean getZoneAffinityEnabled() {
+        return this.zoneAffinityEnabled;
+    }
+
     public static final class Builder {
         private String addressIpVersion; 
         private Long bandwidth; 
@@ -197,9 +212,38 @@ public class CreateVpcEndpointResponseBody extends TeaModel {
         private String serviceId; 
         private String serviceName; 
         private String vpcId; 
+        private Boolean zoneAffinityEnabled; 
+
+        private Builder() {
+        } 
+
+        private Builder(CreateVpcEndpointResponseBody model) {
+            this.addressIpVersion = model.addressIpVersion;
+            this.bandwidth = model.bandwidth;
+            this.connectionStatus = model.connectionStatus;
+            this.createTime = model.createTime;
+            this.endpointBusinessStatus = model.endpointBusinessStatus;
+            this.endpointDescription = model.endpointDescription;
+            this.endpointDomain = model.endpointDomain;
+            this.endpointId = model.endpointId;
+            this.endpointName = model.endpointName;
+            this.endpointStatus = model.endpointStatus;
+            this.requestId = model.requestId;
+            this.serviceId = model.serviceId;
+            this.serviceName = model.serviceName;
+            this.vpcId = model.vpcId;
+            this.zoneAffinityEnabled = model.zoneAffinityEnabled;
+        } 
 
         /**
-         * AddressIpVersion.
+         * <p>The protocol. Valid values:</p>
+         * <ul>
+         * <li><strong>IPv4</strong> (default)</li>
+         * <li><strong>DualStack</strong></li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>IPv4</p>
          */
         public Builder addressIpVersion(String addressIpVersion) {
             this.addressIpVersion = addressIpVersion;
@@ -364,6 +408,14 @@ public class CreateVpcEndpointResponseBody extends TeaModel {
          */
         public Builder vpcId(String vpcId) {
             this.vpcId = vpcId;
+            return this;
+        }
+
+        /**
+         * ZoneAffinityEnabled.
+         */
+        public Builder zoneAffinityEnabled(Boolean zoneAffinityEnabled) {
+            this.zoneAffinityEnabled = zoneAffinityEnabled;
             return this;
         }
 

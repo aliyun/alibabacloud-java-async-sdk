@@ -48,6 +48,10 @@ public class ListVpcEndpointServicesResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return maxResults
      */
@@ -89,6 +93,17 @@ public class ListVpcEndpointServicesResponseBody extends TeaModel {
         private String requestId; 
         private java.util.List<Services> services; 
         private Integer totalCount; 
+
+        private Builder() {
+        } 
+
+        private Builder(ListVpcEndpointServicesResponseBody model) {
+            this.maxResults = model.maxResults;
+            this.nextToken = model.nextToken;
+            this.requestId = model.requestId;
+            this.services = model.services;
+            this.totalCount = model.totalCount;
+        } 
 
         /**
          * <p>The number of entries returned per page.</p>
@@ -195,6 +210,14 @@ public class ListVpcEndpointServicesResponseBody extends TeaModel {
         public static final class Builder {
             private String key; 
             private String value; 
+
+            private Builder() {
+            } 
+
+            private Builder(Tags model) {
+                this.key = model.key;
+                this.value = model.value;
+            } 
 
             /**
              * <p>The key of the tag added to the resource.</p>
@@ -486,8 +509,41 @@ public class ListVpcEndpointServicesResponseBody extends TeaModel {
             private java.util.List<Tags> tags; 
             private Boolean zoneAffinityEnabled; 
 
+            private Builder() {
+            } 
+
+            private Builder(Services model) {
+                this.addressIpVersion = model.addressIpVersion;
+                this.autoAcceptEnabled = model.autoAcceptEnabled;
+                this.connectBandwidth = model.connectBandwidth;
+                this.createTime = model.createTime;
+                this.maxBandwidth = model.maxBandwidth;
+                this.minBandwidth = model.minBandwidth;
+                this.payer = model.payer;
+                this.regionId = model.regionId;
+                this.resourceGroupId = model.resourceGroupId;
+                this.serviceBusinessStatus = model.serviceBusinessStatus;
+                this.serviceDescription = model.serviceDescription;
+                this.serviceDomain = model.serviceDomain;
+                this.serviceId = model.serviceId;
+                this.serviceName = model.serviceName;
+                this.serviceResourceType = model.serviceResourceType;
+                this.serviceStatus = model.serviceStatus;
+                this.serviceSupportIPv6 = model.serviceSupportIPv6;
+                this.serviceType = model.serviceType;
+                this.tags = model.tags;
+                this.zoneAffinityEnabled = model.zoneAffinityEnabled;
+            } 
+
             /**
-             * AddressIpVersion.
+             * <p>The protocol. Valid values:</p>
+             * <ul>
+             * <li><strong>IPv4</strong></li>
+             * <li><strong>DualStack</strong></li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>IPv4</p>
              */
             public Builder addressIpVersion(String addressIpVersion) {
                 this.addressIpVersion = addressIpVersion;

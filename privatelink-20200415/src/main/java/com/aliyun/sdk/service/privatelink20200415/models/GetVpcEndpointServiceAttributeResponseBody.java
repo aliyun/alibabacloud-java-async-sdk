@@ -113,6 +113,10 @@ public class GetVpcEndpointServiceAttributeResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return addressIpVersion
      */
@@ -283,8 +287,42 @@ public class GetVpcEndpointServiceAttributeResponseBody extends TeaModel {
         private Boolean zoneAffinityEnabled; 
         private java.util.List<String> zones; 
 
+        private Builder() {
+        } 
+
+        private Builder(GetVpcEndpointServiceAttributeResponseBody model) {
+            this.addressIpVersion = model.addressIpVersion;
+            this.autoAcceptEnabled = model.autoAcceptEnabled;
+            this.connectBandwidth = model.connectBandwidth;
+            this.createTime = model.createTime;
+            this.maxBandwidth = model.maxBandwidth;
+            this.minBandwidth = model.minBandwidth;
+            this.payer = model.payer;
+            this.regionId = model.regionId;
+            this.requestId = model.requestId;
+            this.resourceGroupId = model.resourceGroupId;
+            this.serviceBusinessStatus = model.serviceBusinessStatus;
+            this.serviceDescription = model.serviceDescription;
+            this.serviceDomain = model.serviceDomain;
+            this.serviceId = model.serviceId;
+            this.serviceName = model.serviceName;
+            this.serviceResourceType = model.serviceResourceType;
+            this.serviceStatus = model.serviceStatus;
+            this.serviceSupportIPv6 = model.serviceSupportIPv6;
+            this.serviceType = model.serviceType;
+            this.zoneAffinityEnabled = model.zoneAffinityEnabled;
+            this.zones = model.zones;
+        } 
+
         /**
-         * AddressIpVersion.
+         * <p>The protocol. Valid values:</p>
+         * <ul>
+         * <li><strong>IPv4</strong></li>
+         * <li><strong>DualStack</strong></li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>IPv4</p>
          */
         public Builder addressIpVersion(String addressIpVersion) {
             this.addressIpVersion = addressIpVersion;

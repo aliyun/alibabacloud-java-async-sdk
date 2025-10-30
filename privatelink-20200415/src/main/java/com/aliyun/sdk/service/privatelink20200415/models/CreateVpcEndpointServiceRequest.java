@@ -96,7 +96,7 @@ public class CreateVpcEndpointServiceRequest extends Request {
         return builder().build();
     }
 
-    @Override
+@Override
     public Builder toBuilder() {
         return new Builder(this);
     }
@@ -229,7 +229,17 @@ public class CreateVpcEndpointServiceRequest extends Request {
         } 
 
         /**
-         * AddressIpVersion.
+         * <p>The protocol. Valid values:</p>
+         * <ul>
+         * <li><strong>IPv4</strong> (default)</li>
+         * <li><strong>DualStack</strong></li>
+         * </ul>
+         * <blockquote>
+         * <p> You can set the protocol to DualStack only for endpoint services whose backend resource type is NLB. An endpoint service supports dual-stack only if its backend resources support dual-stack.</p>
+         * </blockquote>
+         * 
+         * <strong>example:</strong>
+         * <p>IPv4</p>
          */
         public Builder addressIpVersion(String addressIpVersion) {
             this.putQueryParameter("AddressIpVersion", addressIpVersion);
@@ -313,7 +323,7 @@ public class CreateVpcEndpointServiceRequest extends Request {
         }
 
         /**
-         * <p>The service resources of the endpoint service.</p>
+         * <p>The service resources of the endpoint service. You can create at most 10 resources. After the resource is created, you can continue to add service resources to the endpoint.</p>
          */
         public Builder resource(java.util.List<Resource> resource) {
             this.putQueryParameter("Resource", resource);
@@ -469,8 +479,17 @@ public class CreateVpcEndpointServiceRequest extends Request {
             private String resourceType; 
             private String zoneId; 
 
+            private Builder() {
+            } 
+
+            private Builder(Resource model) {
+                this.resourceId = model.resourceId;
+                this.resourceType = model.resourceType;
+                this.zoneId = model.zoneId;
+            } 
+
             /**
-             * <p>The ID of the service resource that is added to the endpoint service. You can specify up to 20 service resource IDs.</p>
+             * <p>The ID of the service resource that is added to the endpoint service.</p>
              * 
              * <strong>example:</strong>
              * <p>lb-hp32z1wp5peaoox2q****</p>
@@ -500,7 +519,7 @@ public class CreateVpcEndpointServiceRequest extends Request {
             }
 
             /**
-             * <p>The ID of the zone.</p>
+             * <p>The zone ID of the cluster.</p>
              * 
              * <strong>example:</strong>
              * <p>cn-huhehaote-a</p>
@@ -560,6 +579,14 @@ public class CreateVpcEndpointServiceRequest extends Request {
         public static final class Builder {
             private String key; 
             private String value; 
+
+            private Builder() {
+            } 
+
+            private Builder(Tag model) {
+                this.key = model.key;
+                this.value = model.value;
+            } 
 
             /**
              * <p>The key of the tag to add to the resource. You can specify up to 20 tag keys. The tag key cannot be an empty string.</p>

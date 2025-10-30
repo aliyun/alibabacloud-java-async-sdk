@@ -51,6 +51,10 @@ public class UpdateVpcEndpointAttributeRequest extends Request {
     @com.aliyun.core.annotation.Validation(required = true)
     private String regionId;
 
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ZoneAffinityEnabled")
+    private Boolean zoneAffinityEnabled;
+
     private UpdateVpcEndpointAttributeRequest(Builder builder) {
         super(builder);
         this.addressIpVersion = builder.addressIpVersion;
@@ -61,6 +65,7 @@ public class UpdateVpcEndpointAttributeRequest extends Request {
         this.endpointName = builder.endpointName;
         this.policyDocument = builder.policyDocument;
         this.regionId = builder.regionId;
+        this.zoneAffinityEnabled = builder.zoneAffinityEnabled;
     }
 
     public static Builder builder() {
@@ -71,7 +76,7 @@ public class UpdateVpcEndpointAttributeRequest extends Request {
         return builder().build();
     }
 
-    @Override
+@Override
     public Builder toBuilder() {
         return new Builder(this);
     }
@@ -132,6 +137,13 @@ public class UpdateVpcEndpointAttributeRequest extends Request {
         return this.regionId;
     }
 
+    /**
+     * @return zoneAffinityEnabled
+     */
+    public Boolean getZoneAffinityEnabled() {
+        return this.zoneAffinityEnabled;
+    }
+
     public static final class Builder extends Request.Builder<UpdateVpcEndpointAttributeRequest, Builder> {
         private String addressIpVersion; 
         private String clientToken; 
@@ -141,6 +153,7 @@ public class UpdateVpcEndpointAttributeRequest extends Request {
         private String endpointName; 
         private String policyDocument; 
         private String regionId; 
+        private Boolean zoneAffinityEnabled; 
 
         private Builder() {
             super();
@@ -156,10 +169,21 @@ public class UpdateVpcEndpointAttributeRequest extends Request {
             this.endpointName = request.endpointName;
             this.policyDocument = request.policyDocument;
             this.regionId = request.regionId;
+            this.zoneAffinityEnabled = request.zoneAffinityEnabled;
         } 
 
         /**
-         * AddressIpVersion.
+         * <p>The protocol. Valid values:</p>
+         * <ul>
+         * <li><strong>IPv4</strong></li>
+         * <li><strong>DualStack</strong></li>
+         * </ul>
+         * <blockquote>
+         * <p> An endpoint supports dual-stack only if its associated endpoint service and VPC support dual-stack.</p>
+         * </blockquote>
+         * 
+         * <strong>example:</strong>
+         * <p>IPv4</p>
          */
         public Builder addressIpVersion(String addressIpVersion) {
             this.putQueryParameter("AddressIpVersion", addressIpVersion);
@@ -254,6 +278,15 @@ public class UpdateVpcEndpointAttributeRequest extends Request {
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);
             this.regionId = regionId;
+            return this;
+        }
+
+        /**
+         * ZoneAffinityEnabled.
+         */
+        public Builder zoneAffinityEnabled(Boolean zoneAffinityEnabled) {
+            this.putQueryParameter("ZoneAffinityEnabled", zoneAffinityEnabled);
+            this.zoneAffinityEnabled = zoneAffinityEnabled;
             return this;
         }
 

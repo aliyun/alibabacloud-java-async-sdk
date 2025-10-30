@@ -48,6 +48,10 @@ public class ListVpcEndpointSecurityGroupsResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return maxResults
      */
@@ -89,6 +93,17 @@ public class ListVpcEndpointSecurityGroupsResponseBody extends TeaModel {
         private String requestId; 
         private java.util.List<SecurityGroups> securityGroups; 
         private Integer totalCount; 
+
+        private Builder() {
+        } 
+
+        private Builder(ListVpcEndpointSecurityGroupsResponseBody model) {
+            this.maxResults = model.maxResults;
+            this.nextToken = model.nextToken;
+            this.requestId = model.requestId;
+            this.securityGroups = model.securityGroups;
+            this.totalCount = model.totalCount;
+        } 
 
         /**
          * <p>The number of entries returned per page.</p>
@@ -195,6 +210,14 @@ public class ListVpcEndpointSecurityGroupsResponseBody extends TeaModel {
         public static final class Builder {
             private String securityGroupId; 
             private String securityGroupStatus; 
+
+            private Builder() {
+            } 
+
+            private Builder(SecurityGroups model) {
+                this.securityGroupId = model.securityGroupId;
+                this.securityGroupStatus = model.securityGroupStatus;
+            } 
 
             /**
              * <p>The ID of the security group that is associated with the endpoint.</p>

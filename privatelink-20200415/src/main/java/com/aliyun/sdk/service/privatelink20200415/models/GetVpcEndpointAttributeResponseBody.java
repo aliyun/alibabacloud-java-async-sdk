@@ -116,6 +116,10 @@ public class GetVpcEndpointAttributeResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return addressIpVersion
      */
@@ -293,6 +297,34 @@ public class GetVpcEndpointAttributeResponseBody extends TeaModel {
         private String vpcId; 
         private Boolean zoneAffinityEnabled; 
         private Long zonePrivateIpAddressCount; 
+
+        private Builder() {
+        } 
+
+        private Builder(GetVpcEndpointAttributeResponseBody model) {
+            this.addressIpVersion = model.addressIpVersion;
+            this.bandwidth = model.bandwidth;
+            this.connectionStatus = model.connectionStatus;
+            this.createTime = model.createTime;
+            this.endpointBusinessStatus = model.endpointBusinessStatus;
+            this.endpointDescription = model.endpointDescription;
+            this.endpointDomain = model.endpointDomain;
+            this.endpointId = model.endpointId;
+            this.endpointName = model.endpointName;
+            this.endpointStatus = model.endpointStatus;
+            this.endpointType = model.endpointType;
+            this.payer = model.payer;
+            this.policyDocument = model.policyDocument;
+            this.regionId = model.regionId;
+            this.requestId = model.requestId;
+            this.resourceGroupId = model.resourceGroupId;
+            this.resourceOwner = model.resourceOwner;
+            this.serviceId = model.serviceId;
+            this.serviceName = model.serviceName;
+            this.vpcId = model.vpcId;
+            this.zoneAffinityEnabled = model.zoneAffinityEnabled;
+            this.zonePrivateIpAddressCount = model.zonePrivateIpAddressCount;
+        } 
 
         /**
          * <p>The protocol. Valid values:</p>
