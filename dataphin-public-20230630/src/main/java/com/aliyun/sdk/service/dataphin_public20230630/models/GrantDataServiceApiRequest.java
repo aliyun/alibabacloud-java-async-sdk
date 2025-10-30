@@ -278,6 +278,12 @@ public class GrantDataServiceApiRequest extends Request {
         @com.aliyun.core.annotation.Validation(required = true)
         private Integer appId;
 
+        @com.aliyun.core.annotation.NameInMap("ApplyDev")
+        private Boolean applyDev;
+
+        @com.aliyun.core.annotation.NameInMap("ApplyProd")
+        private Boolean applyProd;
+
         @com.aliyun.core.annotation.NameInMap("DevFieldList")
         private java.util.List<DevFieldList> devFieldList;
 
@@ -295,6 +301,8 @@ public class GrantDataServiceApiRequest extends Request {
         private GrantCommand(Builder builder) {
             this.apiId = builder.apiId;
             this.appId = builder.appId;
+            this.applyDev = builder.applyDev;
+            this.applyProd = builder.applyProd;
             this.devFieldList = builder.devFieldList;
             this.expireDate = builder.expireDate;
             this.prodFieldList = builder.prodFieldList;
@@ -321,6 +329,20 @@ public class GrantDataServiceApiRequest extends Request {
          */
         public Integer getAppId() {
             return this.appId;
+        }
+
+        /**
+         * @return applyDev
+         */
+        public Boolean getApplyDev() {
+            return this.applyDev;
+        }
+
+        /**
+         * @return applyProd
+         */
+        public Boolean getApplyProd() {
+            return this.applyProd;
         }
 
         /**
@@ -354,6 +376,8 @@ public class GrantDataServiceApiRequest extends Request {
         public static final class Builder {
             private Long apiId; 
             private Integer appId; 
+            private Boolean applyDev; 
+            private Boolean applyProd; 
             private java.util.List<DevFieldList> devFieldList; 
             private String expireDate; 
             private java.util.List<ProdFieldList> prodFieldList; 
@@ -365,6 +389,8 @@ public class GrantDataServiceApiRequest extends Request {
             private Builder(GrantCommand model) {
                 this.apiId = model.apiId;
                 this.appId = model.appId;
+                this.applyDev = model.applyDev;
+                this.applyProd = model.applyProd;
                 this.devFieldList = model.devFieldList;
                 this.expireDate = model.expireDate;
                 this.prodFieldList = model.prodFieldList;
@@ -391,6 +417,22 @@ public class GrantDataServiceApiRequest extends Request {
              */
             public Builder appId(Integer appId) {
                 this.appId = appId;
+                return this;
+            }
+
+            /**
+             * ApplyDev.
+             */
+            public Builder applyDev(Boolean applyDev) {
+                this.applyDev = applyDev;
+                return this;
+            }
+
+            /**
+             * ApplyProd.
+             */
+            public Builder applyProd(Boolean applyProd) {
+                this.applyProd = applyProd;
                 return this;
             }
 

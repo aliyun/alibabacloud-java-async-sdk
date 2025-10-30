@@ -32,6 +32,12 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<AddProjectMemberResponse> addProjectMember(AddProjectMemberRequest request);
 
     /**
+     * @param request the request parameters of AddRegisterLineage  AddRegisterLineageRequest
+     * @return AddRegisterLineageResponse
+     */
+    CompletableFuture<AddRegisterLineageResponse> addRegisterLineage(AddRegisterLineageRequest request);
+
+    /**
      * @param request the request parameters of AddTenantMembers  AddTenantMembersRequest
      * @return AddTenantMembersResponse
      */
@@ -158,6 +164,18 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<CreateNodeSupplementResponse> createNodeSupplement(CreateNodeSupplementRequest request);
 
     /**
+     * @param request the request parameters of CreatePipeline  CreatePipelineRequest
+     * @return CreatePipelineResponse
+     */
+    CompletableFuture<CreatePipelineResponse> createPipeline(CreatePipelineRequest request);
+
+    /**
+     * @param request the request parameters of CreatePipelineByAsync  CreatePipelineByAsyncRequest
+     * @return CreatePipelineByAsyncResponse
+     */
+    CompletableFuture<CreatePipelineByAsyncResponse> createPipelineByAsync(CreatePipelineByAsyncRequest request);
+
+    /**
      * @param request the request parameters of CreatePipelineNode  CreatePipelineNodeRequest
      * @return CreatePipelineNodeResponse
      */
@@ -240,6 +258,12 @@ public interface AsyncClient extends SdkAutoCloseable {
      * @return DeleteDirectoryResponse
      */
     CompletableFuture<DeleteDirectoryResponse> deleteDirectory(DeleteDirectoryRequest request);
+
+    /**
+     * @param request the request parameters of DeleteRegisterLineage  DeleteRegisterLineageRequest
+     * @return DeleteRegisterLineageResponse
+     */
+    CompletableFuture<DeleteRegisterLineageResponse> deleteRegisterLineage(DeleteRegisterLineageRequest request);
 
     /**
      * @param request the request parameters of DeleteResource  DeleteResourceRequest
@@ -546,6 +570,18 @@ public interface AsyncClient extends SdkAutoCloseable {
      * @return GetPhysicalNodeOperationLogResponse
      */
     CompletableFuture<GetPhysicalNodeOperationLogResponse> getPhysicalNodeOperationLog(GetPhysicalNodeOperationLogRequest request);
+
+    /**
+     * @param request the request parameters of GetPipelineAsyncResult  GetPipelineAsyncResultRequest
+     * @return GetPipelineAsyncResultResponse
+     */
+    CompletableFuture<GetPipelineAsyncResultResponse> getPipelineAsyncResult(GetPipelineAsyncResultRequest request);
+
+    /**
+     * @param request the request parameters of GetPipelineById  GetPipelineByIdRequest
+     * @return GetPipelineByIdResponse
+     */
+    CompletableFuture<GetPipelineByIdResponse> getPipelineById(GetPipelineByIdRequest request);
 
     /**
      * @param request the request parameters of GetProject  GetProjectRequest
@@ -884,6 +920,18 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<OfflineBizEntityResponse> offlineBizEntity(OfflineBizEntityRequest request);
 
     /**
+     * @param request the request parameters of OfflinePipeline  OfflinePipelineRequest
+     * @return OfflinePipelineResponse
+     */
+    CompletableFuture<OfflinePipelineResponse> offlinePipeline(OfflinePipelineRequest request);
+
+    /**
+     * @param request the request parameters of OfflinePipelineByAsync  OfflinePipelineByAsyncRequest
+     * @return OfflinePipelineByAsyncResponse
+     */
+    CompletableFuture<OfflinePipelineByAsyncResponse> offlinePipelineByAsync(OfflinePipelineByAsyncRequest request);
+
+    /**
      * @param request the request parameters of OnlineBizEntity  OnlineBizEntityRequest
      * @return OnlineBizEntityResponse
      */
@@ -1050,6 +1098,18 @@ public interface AsyncClient extends SdkAutoCloseable {
      * @return UpdateFileNameResponse
      */
     CompletableFuture<UpdateFileNameResponse> updateFileName(UpdateFileNameRequest request);
+
+    /**
+     * @param request the request parameters of UpdatePipeline  UpdatePipelineRequest
+     * @return UpdatePipelineResponse
+     */
+    CompletableFuture<UpdatePipelineResponse> updatePipeline(UpdatePipelineRequest request);
+
+    /**
+     * @param request the request parameters of UpdatePipelineByAsync  UpdatePipelineByAsyncRequest
+     * @return UpdatePipelineByAsyncResponse
+     */
+    CompletableFuture<UpdatePipelineByAsyncResponse> updatePipelineByAsync(UpdatePipelineByAsyncRequest request);
 
     /**
      * @param request the request parameters of UpdateProjectMember  UpdateProjectMemberRequest
