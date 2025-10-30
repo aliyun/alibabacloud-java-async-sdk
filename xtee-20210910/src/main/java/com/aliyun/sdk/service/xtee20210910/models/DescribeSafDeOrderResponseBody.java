@@ -97,6 +97,102 @@ public class DescribeSafDeOrderResponseBody extends TeaModel {
      *
      * <p>DescribeSafDeOrderResponseBody</p>
      */
+    public static class Regions extends TeaModel {
+        @com.aliyun.core.annotation.NameInMap("expirationDate")
+        private Long expirationDate;
+
+        @com.aliyun.core.annotation.NameInMap("region")
+        private String region;
+
+        @com.aliyun.core.annotation.NameInMap("specification")
+        private Integer specification;
+
+        private Regions(Builder builder) {
+            this.expirationDate = builder.expirationDate;
+            this.region = builder.region;
+            this.specification = builder.specification;
+        }
+
+        public static Builder builder() {
+            return new Builder();
+        }
+
+        public static Regions create() {
+            return builder().build();
+        }
+
+        /**
+         * @return expirationDate
+         */
+        public Long getExpirationDate() {
+            return this.expirationDate;
+        }
+
+        /**
+         * @return region
+         */
+        public String getRegion() {
+            return this.region;
+        }
+
+        /**
+         * @return specification
+         */
+        public Integer getSpecification() {
+            return this.specification;
+        }
+
+        public static final class Builder {
+            private Long expirationDate; 
+            private String region; 
+            private Integer specification; 
+
+            private Builder() {
+            } 
+
+            private Builder(Regions model) {
+                this.expirationDate = model.expirationDate;
+                this.region = model.region;
+                this.specification = model.specification;
+            } 
+
+            /**
+             * expirationDate.
+             */
+            public Builder expirationDate(Long expirationDate) {
+                this.expirationDate = expirationDate;
+                return this;
+            }
+
+            /**
+             * region.
+             */
+            public Builder region(String region) {
+                this.region = region;
+                return this;
+            }
+
+            /**
+             * specification.
+             */
+            public Builder specification(Integer specification) {
+                this.specification = specification;
+                return this;
+            }
+
+            public Regions build() {
+                return new Regions(this);
+            } 
+
+        } 
+
+    }
+    /**
+     * 
+     * {@link DescribeSafDeOrderResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeSafDeOrderResponseBody</p>
+     */
     public static class ResultObject extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("expirationDate")
         private Long expirationDate;
@@ -104,9 +200,13 @@ public class DescribeSafDeOrderResponseBody extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("openUserType")
         private Integer openUserType;
 
+        @com.aliyun.core.annotation.NameInMap("regions")
+        private java.util.List<Regions> regions;
+
         private ResultObject(Builder builder) {
             this.expirationDate = builder.expirationDate;
             this.openUserType = builder.openUserType;
+            this.regions = builder.regions;
         }
 
         public static Builder builder() {
@@ -131,9 +231,17 @@ public class DescribeSafDeOrderResponseBody extends TeaModel {
             return this.openUserType;
         }
 
+        /**
+         * @return regions
+         */
+        public java.util.List<Regions> getRegions() {
+            return this.regions;
+        }
+
         public static final class Builder {
             private Long expirationDate; 
             private Integer openUserType; 
+            private java.util.List<Regions> regions; 
 
             private Builder() {
             } 
@@ -141,6 +249,7 @@ public class DescribeSafDeOrderResponseBody extends TeaModel {
             private Builder(ResultObject model) {
                 this.expirationDate = model.expirationDate;
                 this.openUserType = model.openUserType;
+                this.regions = model.regions;
             } 
 
             /**
@@ -166,6 +275,14 @@ public class DescribeSafDeOrderResponseBody extends TeaModel {
              */
             public Builder openUserType(Integer openUserType) {
                 this.openUserType = openUserType;
+                return this;
+            }
+
+            /**
+             * regions.
+             */
+            public Builder regions(java.util.List<Regions> regions) {
+                this.regions = regions;
                 return this;
             }
 
