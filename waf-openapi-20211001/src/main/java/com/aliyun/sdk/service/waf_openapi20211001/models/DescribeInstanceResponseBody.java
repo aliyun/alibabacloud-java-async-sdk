@@ -391,8 +391,17 @@ public class DescribeInstanceResponseBody extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("DlpTemplateMaxCount")
         private Long dlpTemplateMaxCount;
 
+        @com.aliyun.core.annotation.NameInMap("ElasticQps")
+        private Integer elasticQps;
+
         @com.aliyun.core.annotation.NameInMap("ExclusiveIp")
         private Boolean exclusiveIp;
+
+        @com.aliyun.core.annotation.NameInMap("ExtendQps")
+        private Integer extendQps;
+
+        @com.aliyun.core.annotation.NameInMap("FreeQps")
+        private Integer freeQps;
 
         @com.aliyun.core.annotation.NameInMap("Gslb")
         private Boolean gslb;
@@ -426,6 +435,9 @@ public class DescribeInstanceResponseBody extends TeaModel {
 
         @com.aliyun.core.annotation.NameInMap("MajorProtectionTemplateMaxCount")
         private Long majorProtectionTemplateMaxCount;
+
+        @com.aliyun.core.annotation.NameInMap("QpsBillingCap")
+        private Integer qpsBillingCap;
 
         @com.aliyun.core.annotation.NameInMap("Tamperproof")
         private Boolean tamperproof;
@@ -489,7 +501,10 @@ public class DescribeInstanceResponseBody extends TeaModel {
             this.dlp = builder.dlp;
             this.dlpRuleInTemplateMaxCount = builder.dlpRuleInTemplateMaxCount;
             this.dlpTemplateMaxCount = builder.dlpTemplateMaxCount;
+            this.elasticQps = builder.elasticQps;
             this.exclusiveIp = builder.exclusiveIp;
+            this.extendQps = builder.extendQps;
+            this.freeQps = builder.freeQps;
             this.gslb = builder.gslb;
             this.httpPorts = builder.httpPorts;
             this.httpsPorts = builder.httpsPorts;
@@ -501,6 +516,7 @@ public class DescribeInstanceResponseBody extends TeaModel {
             this.logService = builder.logService;
             this.majorProtection = builder.majorProtection;
             this.majorProtectionTemplateMaxCount = builder.majorProtectionTemplateMaxCount;
+            this.qpsBillingCap = builder.qpsBillingCap;
             this.tamperproof = builder.tamperproof;
             this.tamperproofRuleInTemplateMaxCount = builder.tamperproofRuleInTemplateMaxCount;
             this.tamperproofTemplateMaxCount = builder.tamperproofTemplateMaxCount;
@@ -719,10 +735,31 @@ public class DescribeInstanceResponseBody extends TeaModel {
         }
 
         /**
+         * @return elasticQps
+         */
+        public Integer getElasticQps() {
+            return this.elasticQps;
+        }
+
+        /**
          * @return exclusiveIp
          */
         public Boolean getExclusiveIp() {
             return this.exclusiveIp;
+        }
+
+        /**
+         * @return extendQps
+         */
+        public Integer getExtendQps() {
+            return this.extendQps;
+        }
+
+        /**
+         * @return freeQps
+         */
+        public Integer getFreeQps() {
+            return this.freeQps;
         }
 
         /**
@@ -800,6 +837,13 @@ public class DescribeInstanceResponseBody extends TeaModel {
          */
         public Long getMajorProtectionTemplateMaxCount() {
             return this.majorProtectionTemplateMaxCount;
+        }
+
+        /**
+         * @return qpsBillingCap
+         */
+        public Integer getQpsBillingCap() {
+            return this.qpsBillingCap;
         }
 
         /**
@@ -908,7 +952,10 @@ public class DescribeInstanceResponseBody extends TeaModel {
             private Boolean dlp; 
             private Long dlpRuleInTemplateMaxCount; 
             private Long dlpTemplateMaxCount; 
+            private Integer elasticQps; 
             private Boolean exclusiveIp; 
+            private Integer extendQps; 
+            private Integer freeQps; 
             private Boolean gslb; 
             private String httpPorts; 
             private String httpsPorts; 
@@ -920,6 +967,7 @@ public class DescribeInstanceResponseBody extends TeaModel {
             private Boolean logService; 
             private Boolean majorProtection; 
             private Long majorProtectionTemplateMaxCount; 
+            private Integer qpsBillingCap; 
             private Boolean tamperproof; 
             private Long tamperproofRuleInTemplateMaxCount; 
             private Long tamperproofTemplateMaxCount; 
@@ -964,7 +1012,10 @@ public class DescribeInstanceResponseBody extends TeaModel {
                 this.dlp = model.dlp;
                 this.dlpRuleInTemplateMaxCount = model.dlpRuleInTemplateMaxCount;
                 this.dlpTemplateMaxCount = model.dlpTemplateMaxCount;
+                this.elasticQps = model.elasticQps;
                 this.exclusiveIp = model.exclusiveIp;
+                this.extendQps = model.extendQps;
+                this.freeQps = model.freeQps;
                 this.gslb = model.gslb;
                 this.httpPorts = model.httpPorts;
                 this.httpsPorts = model.httpsPorts;
@@ -976,6 +1027,7 @@ public class DescribeInstanceResponseBody extends TeaModel {
                 this.logService = model.logService;
                 this.majorProtection = model.majorProtection;
                 this.majorProtectionTemplateMaxCount = model.majorProtectionTemplateMaxCount;
+                this.qpsBillingCap = model.qpsBillingCap;
                 this.tamperproof = model.tamperproof;
                 this.tamperproofRuleInTemplateMaxCount = model.tamperproofRuleInTemplateMaxCount;
                 this.tamperproofTemplateMaxCount = model.tamperproofTemplateMaxCount;
@@ -1330,6 +1382,14 @@ public class DescribeInstanceResponseBody extends TeaModel {
             }
 
             /**
+             * ElasticQps.
+             */
+            public Builder elasticQps(Integer elasticQps) {
+                this.elasticQps = elasticQps;
+                return this;
+            }
+
+            /**
              * <p>Indicates whether exclusive IP addresses are supported. Valid values:</p>
              * <ul>
              * <li><strong>true:</strong> Exclusive IP addresses are supported.</li>
@@ -1341,6 +1401,22 @@ public class DescribeInstanceResponseBody extends TeaModel {
              */
             public Builder exclusiveIp(Boolean exclusiveIp) {
                 this.exclusiveIp = exclusiveIp;
+                return this;
+            }
+
+            /**
+             * ExtendQps.
+             */
+            public Builder extendQps(Integer extendQps) {
+                this.extendQps = extendQps;
+                return this;
+            }
+
+            /**
+             * FreeQps.
+             */
+            public Builder freeQps(Integer freeQps) {
+                this.freeQps = freeQps;
                 return this;
             }
 
@@ -1482,6 +1558,14 @@ public class DescribeInstanceResponseBody extends TeaModel {
              */
             public Builder majorProtectionTemplateMaxCount(Long majorProtectionTemplateMaxCount) {
                 this.majorProtectionTemplateMaxCount = majorProtectionTemplateMaxCount;
+                return this;
+            }
+
+            /**
+             * QpsBillingCap.
+             */
+            public Builder qpsBillingCap(Integer qpsBillingCap) {
+                this.qpsBillingCap = qpsBillingCap;
                 return this;
             }
 
