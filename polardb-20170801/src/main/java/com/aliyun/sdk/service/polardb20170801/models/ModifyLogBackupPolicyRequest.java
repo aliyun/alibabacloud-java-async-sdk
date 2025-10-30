@@ -18,6 +18,10 @@ import com.aliyun.sdk.gateway.pop.models.*;
  */
 public class ModifyLogBackupPolicyRequest extends Request {
     @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("AdvancedLogPolicies")
+    private java.util.List<AdvancedLogPolicies> advancedLogPolicies;
+
+    @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("DBClusterId")
     @com.aliyun.core.annotation.Validation(required = true)
     private String DBClusterId;
@@ -52,6 +56,7 @@ public class ModifyLogBackupPolicyRequest extends Request {
 
     private ModifyLogBackupPolicyRequest(Builder builder) {
         super(builder);
+        this.advancedLogPolicies = builder.advancedLogPolicies;
         this.DBClusterId = builder.DBClusterId;
         this.logBackupAnotherRegionRegion = builder.logBackupAnotherRegionRegion;
         this.logBackupAnotherRegionRetentionPeriod = builder.logBackupAnotherRegionRetentionPeriod;
@@ -73,6 +78,13 @@ public class ModifyLogBackupPolicyRequest extends Request {
 @Override
     public Builder toBuilder() {
         return new Builder(this);
+    }
+
+    /**
+     * @return advancedLogPolicies
+     */
+    public java.util.List<AdvancedLogPolicies> getAdvancedLogPolicies() {
+        return this.advancedLogPolicies;
     }
 
     /**
@@ -132,6 +144,7 @@ public class ModifyLogBackupPolicyRequest extends Request {
     }
 
     public static final class Builder extends Request.Builder<ModifyLogBackupPolicyRequest, Builder> {
+        private java.util.List<AdvancedLogPolicies> advancedLogPolicies; 
         private String DBClusterId; 
         private String logBackupAnotherRegionRegion; 
         private String logBackupAnotherRegionRetentionPeriod; 
@@ -147,6 +160,7 @@ public class ModifyLogBackupPolicyRequest extends Request {
 
         private Builder(ModifyLogBackupPolicyRequest request) {
             super(request);
+            this.advancedLogPolicies = request.advancedLogPolicies;
             this.DBClusterId = request.DBClusterId;
             this.logBackupAnotherRegionRegion = request.logBackupAnotherRegionRegion;
             this.logBackupAnotherRegionRetentionPeriod = request.logBackupAnotherRegionRetentionPeriod;
@@ -156,6 +170,16 @@ public class ModifyLogBackupPolicyRequest extends Request {
             this.resourceOwnerAccount = request.resourceOwnerAccount;
             this.resourceOwnerId = request.resourceOwnerId;
         } 
+
+        /**
+         * AdvancedLogPolicies.
+         */
+        public Builder advancedLogPolicies(java.util.List<AdvancedLogPolicies> advancedLogPolicies) {
+            String advancedLogPoliciesShrink = shrink(advancedLogPolicies, "AdvancedLogPolicies", "json");
+            this.putQueryParameter("AdvancedLogPolicies", advancedLogPoliciesShrink);
+            this.advancedLogPolicies = advancedLogPolicies;
+            return this;
+        }
 
         /**
          * <p>The cluster ID.</p>
@@ -264,4 +288,226 @@ public class ModifyLogBackupPolicyRequest extends Request {
 
     } 
 
+    /**
+     * 
+     * {@link ModifyLogBackupPolicyRequest} extends {@link TeaModel}
+     *
+     * <p>ModifyLogBackupPolicyRequest</p>
+     */
+    public static class AdvancedLogPolicies extends TeaModel {
+        @com.aliyun.core.annotation.NameInMap("ActionType")
+        private String actionType;
+
+        @com.aliyun.core.annotation.NameInMap("DestRegion")
+        private String destRegion;
+
+        @com.aliyun.core.annotation.NameInMap("DestType")
+        private String destType;
+
+        @com.aliyun.core.annotation.NameInMap("EnableLogBackup")
+        private Integer enableLogBackup;
+
+        @com.aliyun.core.annotation.NameInMap("LogRetentionType")
+        private String logRetentionType;
+
+        @com.aliyun.core.annotation.NameInMap("LogRetentionValue")
+        private String logRetentionValue;
+
+        @com.aliyun.core.annotation.NameInMap("PolicyId")
+        private String policyId;
+
+        @com.aliyun.core.annotation.NameInMap("SrcRegion")
+        private String srcRegion;
+
+        @com.aliyun.core.annotation.NameInMap("SrcType")
+        private String srcType;
+
+        private AdvancedLogPolicies(Builder builder) {
+            this.actionType = builder.actionType;
+            this.destRegion = builder.destRegion;
+            this.destType = builder.destType;
+            this.enableLogBackup = builder.enableLogBackup;
+            this.logRetentionType = builder.logRetentionType;
+            this.logRetentionValue = builder.logRetentionValue;
+            this.policyId = builder.policyId;
+            this.srcRegion = builder.srcRegion;
+            this.srcType = builder.srcType;
+        }
+
+        public static Builder builder() {
+            return new Builder();
+        }
+
+        public static AdvancedLogPolicies create() {
+            return builder().build();
+        }
+
+        /**
+         * @return actionType
+         */
+        public String getActionType() {
+            return this.actionType;
+        }
+
+        /**
+         * @return destRegion
+         */
+        public String getDestRegion() {
+            return this.destRegion;
+        }
+
+        /**
+         * @return destType
+         */
+        public String getDestType() {
+            return this.destType;
+        }
+
+        /**
+         * @return enableLogBackup
+         */
+        public Integer getEnableLogBackup() {
+            return this.enableLogBackup;
+        }
+
+        /**
+         * @return logRetentionType
+         */
+        public String getLogRetentionType() {
+            return this.logRetentionType;
+        }
+
+        /**
+         * @return logRetentionValue
+         */
+        public String getLogRetentionValue() {
+            return this.logRetentionValue;
+        }
+
+        /**
+         * @return policyId
+         */
+        public String getPolicyId() {
+            return this.policyId;
+        }
+
+        /**
+         * @return srcRegion
+         */
+        public String getSrcRegion() {
+            return this.srcRegion;
+        }
+
+        /**
+         * @return srcType
+         */
+        public String getSrcType() {
+            return this.srcType;
+        }
+
+        public static final class Builder {
+            private String actionType; 
+            private String destRegion; 
+            private String destType; 
+            private Integer enableLogBackup; 
+            private String logRetentionType; 
+            private String logRetentionValue; 
+            private String policyId; 
+            private String srcRegion; 
+            private String srcType; 
+
+            private Builder() {
+            } 
+
+            private Builder(AdvancedLogPolicies model) {
+                this.actionType = model.actionType;
+                this.destRegion = model.destRegion;
+                this.destType = model.destType;
+                this.enableLogBackup = model.enableLogBackup;
+                this.logRetentionType = model.logRetentionType;
+                this.logRetentionValue = model.logRetentionValue;
+                this.policyId = model.policyId;
+                this.srcRegion = model.srcRegion;
+                this.srcType = model.srcType;
+            } 
+
+            /**
+             * ActionType.
+             */
+            public Builder actionType(String actionType) {
+                this.actionType = actionType;
+                return this;
+            }
+
+            /**
+             * DestRegion.
+             */
+            public Builder destRegion(String destRegion) {
+                this.destRegion = destRegion;
+                return this;
+            }
+
+            /**
+             * DestType.
+             */
+            public Builder destType(String destType) {
+                this.destType = destType;
+                return this;
+            }
+
+            /**
+             * EnableLogBackup.
+             */
+            public Builder enableLogBackup(Integer enableLogBackup) {
+                this.enableLogBackup = enableLogBackup;
+                return this;
+            }
+
+            /**
+             * LogRetentionType.
+             */
+            public Builder logRetentionType(String logRetentionType) {
+                this.logRetentionType = logRetentionType;
+                return this;
+            }
+
+            /**
+             * LogRetentionValue.
+             */
+            public Builder logRetentionValue(String logRetentionValue) {
+                this.logRetentionValue = logRetentionValue;
+                return this;
+            }
+
+            /**
+             * PolicyId.
+             */
+            public Builder policyId(String policyId) {
+                this.policyId = policyId;
+                return this;
+            }
+
+            /**
+             * SrcRegion.
+             */
+            public Builder srcRegion(String srcRegion) {
+                this.srcRegion = srcRegion;
+                return this;
+            }
+
+            /**
+             * SrcType.
+             */
+            public Builder srcType(String srcType) {
+                this.srcType = srcType;
+                return this;
+            }
+
+            public AdvancedLogPolicies build() {
+                return new AdvancedLogPolicies(this);
+            } 
+
+        } 
+
+    }
 }

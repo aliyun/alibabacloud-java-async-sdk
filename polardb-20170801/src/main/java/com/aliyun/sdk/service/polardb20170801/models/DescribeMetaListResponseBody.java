@@ -221,11 +221,15 @@ public class DescribeMetaListResponseBody extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Database")
         private String database;
 
+        @com.aliyun.core.annotation.NameInMap("Size")
+        private java.util.List<Long> size;
+
         @com.aliyun.core.annotation.NameInMap("Tables")
         private java.util.List<String> tables;
 
         private Items(Builder builder) {
             this.database = builder.database;
+            this.size = builder.size;
             this.tables = builder.tables;
         }
 
@@ -245,6 +249,13 @@ public class DescribeMetaListResponseBody extends TeaModel {
         }
 
         /**
+         * @return size
+         */
+        public java.util.List<Long> getSize() {
+            return this.size;
+        }
+
+        /**
          * @return tables
          */
         public java.util.List<String> getTables() {
@@ -253,6 +264,7 @@ public class DescribeMetaListResponseBody extends TeaModel {
 
         public static final class Builder {
             private String database; 
+            private java.util.List<Long> size; 
             private java.util.List<String> tables; 
 
             private Builder() {
@@ -260,6 +272,7 @@ public class DescribeMetaListResponseBody extends TeaModel {
 
             private Builder(Items model) {
                 this.database = model.database;
+                this.size = model.size;
                 this.tables = model.tables;
             } 
 
@@ -271,6 +284,14 @@ public class DescribeMetaListResponseBody extends TeaModel {
              */
             public Builder database(String database) {
                 this.database = database;
+                return this;
+            }
+
+            /**
+             * Size.
+             */
+            public Builder size(java.util.List<Long> size) {
+                this.size = size;
                 return this;
             }
 

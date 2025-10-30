@@ -767,6 +767,9 @@ public class DescribeAIDBClusterAttributeResponseBody extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("MemorySize")
         private String memorySize;
 
+        @com.aliyun.core.annotation.NameInMap("PublicIp")
+        private String publicIp;
+
         @com.aliyun.core.annotation.NameInMap("VNodeId")
         private String vNodeId;
 
@@ -789,6 +792,7 @@ public class DescribeAIDBClusterAttributeResponseBody extends TeaModel {
             this.GPU = builder.GPU;
             this.linkIP = builder.linkIP;
             this.memorySize = builder.memorySize;
+            this.publicIp = builder.publicIp;
             this.vNodeId = builder.vNodeId;
             this.VPCId = builder.VPCId;
             this.vSwitchId = builder.vSwitchId;
@@ -867,6 +871,13 @@ public class DescribeAIDBClusterAttributeResponseBody extends TeaModel {
         }
 
         /**
+         * @return publicIp
+         */
+        public String getPublicIp() {
+            return this.publicIp;
+        }
+
+        /**
          * @return vNodeId
          */
         public String getVNodeId() {
@@ -904,6 +915,7 @@ public class DescribeAIDBClusterAttributeResponseBody extends TeaModel {
             private String GPU; 
             private String linkIP; 
             private String memorySize; 
+            private String publicIp; 
             private String vNodeId; 
             private String VPCId; 
             private String vSwitchId; 
@@ -922,6 +934,7 @@ public class DescribeAIDBClusterAttributeResponseBody extends TeaModel {
                 this.GPU = model.GPU;
                 this.linkIP = model.linkIP;
                 this.memorySize = model.memorySize;
+                this.publicIp = model.publicIp;
                 this.vNodeId = model.vNodeId;
                 this.VPCId = model.VPCId;
                 this.vSwitchId = model.vSwitchId;
@@ -997,6 +1010,14 @@ public class DescribeAIDBClusterAttributeResponseBody extends TeaModel {
              */
             public Builder memorySize(String memorySize) {
                 this.memorySize = memorySize;
+                return this;
+            }
+
+            /**
+             * PublicIp.
+             */
+            public Builder publicIp(String publicIp) {
+                this.publicIp = publicIp;
                 return this;
             }
 
