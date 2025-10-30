@@ -586,9 +586,10 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
-     * @param request the request parameters of DetachApplication2Connector  DetachApplication2ConnectorRequest
+     * @deprecated OpenAPI DetachApplication2Connector is deprecated, please use csas::2023-01-20::ModifyForwardStrategy instead.  * @param request  the request parameters of DetachApplication2Connector  DetachApplication2ConnectorRequest
      * @return DetachApplication2ConnectorResponse
      */
+    @Deprecated
     @Override
     public CompletableFuture<DetachApplication2ConnectorResponse> detachApplication2Connector(DetachApplication2ConnectorRequest request) {
         try {
