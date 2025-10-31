@@ -212,6 +212,9 @@ public class ListIncidentsResponseBody extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("IncidentStatus")
         private Integer incidentStatus;
 
+        @com.aliyun.core.annotation.NameInMap("IncidentTags")
+        private String incidentTags;
+
         @com.aliyun.core.annotation.NameInMap("IncidentUuid")
         private String incidentUuid;
 
@@ -232,6 +235,7 @@ public class ListIncidentsResponseBody extends TeaModel {
             this.incidentName = builder.incidentName;
             this.incidentRemark = builder.incidentRemark;
             this.incidentStatus = builder.incidentStatus;
+            this.incidentTags = builder.incidentTags;
             this.incidentUuid = builder.incidentUuid;
             this.relateAlertCount = builder.relateAlertCount;
             this.relateAssetCount = builder.relateAssetCount;
@@ -276,6 +280,13 @@ public class ListIncidentsResponseBody extends TeaModel {
         }
 
         /**
+         * @return incidentTags
+         */
+        public String getIncidentTags() {
+            return this.incidentTags;
+        }
+
+        /**
          * @return incidentUuid
          */
         public String getIncidentUuid() {
@@ -315,6 +326,7 @@ public class ListIncidentsResponseBody extends TeaModel {
             private String incidentName; 
             private String incidentRemark; 
             private Integer incidentStatus; 
+            private String incidentTags; 
             private String incidentUuid; 
             private Integer relateAlertCount; 
             private Integer relateAssetCount; 
@@ -329,6 +341,7 @@ public class ListIncidentsResponseBody extends TeaModel {
                 this.incidentName = model.incidentName;
                 this.incidentRemark = model.incidentRemark;
                 this.incidentStatus = model.incidentStatus;
+                this.incidentTags = model.incidentTags;
                 this.incidentUuid = model.incidentUuid;
                 this.relateAlertCount = model.relateAlertCount;
                 this.relateAssetCount = model.relateAssetCount;
@@ -365,6 +378,14 @@ public class ListIncidentsResponseBody extends TeaModel {
              */
             public Builder incidentStatus(Integer incidentStatus) {
                 this.incidentStatus = incidentStatus;
+                return this;
+            }
+
+            /**
+             * IncidentTags.
+             */
+            public Builder incidentTags(String incidentTags) {
+                this.incidentTags = incidentTags;
                 return this;
             }
 

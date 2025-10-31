@@ -75,6 +75,14 @@ public class CreateDetectionRuleRequest extends Request {
     private String detectionRuleStatus;
 
     @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("DetectionRuleTemplateId")
+    private String detectionRuleTemplateId;
+
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("DetectionRuleTemplateVersion")
+    private String detectionRuleTemplateVersion;
+
+    @com.aliyun.core.annotation.Body
     @com.aliyun.core.annotation.NameInMap("DetectionRuleType")
     @com.aliyun.core.annotation.Validation(required = true)
     private String detectionRuleType;
@@ -159,6 +167,8 @@ public class CreateDetectionRuleRequest extends Request {
         this.detectionRuleDescription = builder.detectionRuleDescription;
         this.detectionRuleName = builder.detectionRuleName;
         this.detectionRuleStatus = builder.detectionRuleStatus;
+        this.detectionRuleTemplateId = builder.detectionRuleTemplateId;
+        this.detectionRuleTemplateVersion = builder.detectionRuleTemplateVersion;
         this.detectionRuleType = builder.detectionRuleType;
         this.entityMappings = builder.entityMappings;
         this.incidentAggregationExpression = builder.incidentAggregationExpression;
@@ -280,6 +290,20 @@ public class CreateDetectionRuleRequest extends Request {
      */
     public String getDetectionRuleStatus() {
         return this.detectionRuleStatus;
+    }
+
+    /**
+     * @return detectionRuleTemplateId
+     */
+    public String getDetectionRuleTemplateId() {
+        return this.detectionRuleTemplateId;
+    }
+
+    /**
+     * @return detectionRuleTemplateVersion
+     */
+    public String getDetectionRuleTemplateVersion() {
+        return this.detectionRuleTemplateVersion;
     }
 
     /**
@@ -415,6 +439,8 @@ public class CreateDetectionRuleRequest extends Request {
         private String detectionRuleDescription; 
         private String detectionRuleName; 
         private String detectionRuleStatus; 
+        private String detectionRuleTemplateId; 
+        private String detectionRuleTemplateVersion; 
         private String detectionRuleType; 
         private String entityMappings; 
         private String incidentAggregationExpression; 
@@ -452,6 +478,8 @@ public class CreateDetectionRuleRequest extends Request {
             this.detectionRuleDescription = request.detectionRuleDescription;
             this.detectionRuleName = request.detectionRuleName;
             this.detectionRuleStatus = request.detectionRuleStatus;
+            this.detectionRuleTemplateId = request.detectionRuleTemplateId;
+            this.detectionRuleTemplateVersion = request.detectionRuleTemplateVersion;
             this.detectionRuleType = request.detectionRuleType;
             this.entityMappings = request.entityMappings;
             this.incidentAggregationExpression = request.incidentAggregationExpression;
@@ -597,6 +625,24 @@ public class CreateDetectionRuleRequest extends Request {
         public Builder detectionRuleStatus(String detectionRuleStatus) {
             this.putBodyParameter("DetectionRuleStatus", detectionRuleStatus);
             this.detectionRuleStatus = detectionRuleStatus;
+            return this;
+        }
+
+        /**
+         * DetectionRuleTemplateId.
+         */
+        public Builder detectionRuleTemplateId(String detectionRuleTemplateId) {
+            this.putBodyParameter("DetectionRuleTemplateId", detectionRuleTemplateId);
+            this.detectionRuleTemplateId = detectionRuleTemplateId;
+            return this;
+        }
+
+        /**
+         * DetectionRuleTemplateVersion.
+         */
+        public Builder detectionRuleTemplateVersion(String detectionRuleTemplateVersion) {
+            this.putBodyParameter("DetectionRuleTemplateVersion", detectionRuleTemplateVersion);
+            this.detectionRuleTemplateVersion = detectionRuleTemplateVersion;
             return this;
         }
 
