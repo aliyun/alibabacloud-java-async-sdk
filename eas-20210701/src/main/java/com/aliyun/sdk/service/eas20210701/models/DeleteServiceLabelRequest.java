@@ -29,14 +29,19 @@ public class DeleteServiceLabelRequest extends Request {
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("Keys")
-    @com.aliyun.core.annotation.Validation(required = true)
+    @Deprecated
     private java.util.List<String> keys;
+
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("LabelKeys")
+    private java.util.List<String> labelKeys;
 
     private DeleteServiceLabelRequest(Builder builder) {
         super(builder);
         this.clusterId = builder.clusterId;
         this.serviceName = builder.serviceName;
         this.keys = builder.keys;
+        this.labelKeys = builder.labelKeys;
     }
 
     public static Builder builder() {
@@ -73,10 +78,18 @@ public class DeleteServiceLabelRequest extends Request {
         return this.keys;
     }
 
+    /**
+     * @return labelKeys
+     */
+    public java.util.List<String> getLabelKeys() {
+        return this.labelKeys;
+    }
+
     public static final class Builder extends Request.Builder<DeleteServiceLabelRequest, Builder> {
         private String clusterId; 
         private String serviceName; 
         private java.util.List<String> keys; 
+        private java.util.List<String> labelKeys; 
 
         private Builder() {
             super();
@@ -87,6 +100,7 @@ public class DeleteServiceLabelRequest extends Request {
             this.clusterId = request.clusterId;
             this.serviceName = request.serviceName;
             this.keys = request.keys;
+            this.labelKeys = request.labelKeys;
         } 
 
         /**
@@ -117,12 +131,21 @@ public class DeleteServiceLabelRequest extends Request {
 
         /**
          * <p>The service tags that you want to delete.</p>
-         * <p>This parameter is required.</p>
          */
         public Builder keys(java.util.List<String> keys) {
             String keysShrink = shrink(keys, "Keys", "simple");
             this.putQueryParameter("Keys", keysShrink);
             this.keys = keys;
+            return this;
+        }
+
+        /**
+         * LabelKeys.
+         */
+        public Builder labelKeys(java.util.List<String> labelKeys) {
+            String labelKeysShrink = shrink(labelKeys, "LabelKeys", "json");
+            this.putQueryParameter("LabelKeys", labelKeysShrink);
+            this.labelKeys = labelKeys;
             return this;
         }
 
