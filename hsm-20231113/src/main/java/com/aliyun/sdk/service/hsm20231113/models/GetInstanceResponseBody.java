@@ -98,6 +98,12 @@ public class GetInstanceResponseBody extends TeaModel {
      * <p>GetInstanceResponseBody</p>
      */
     public static class Instance extends TeaModel {
+        @com.aliyun.core.annotation.NameInMap("Certification")
+        private String certification;
+
+        @com.aliyun.core.annotation.NameInMap("CertificationUrl")
+        private String certificationUrl;
+
         @com.aliyun.core.annotation.NameInMap("ClusterId")
         private String clusterId;
 
@@ -159,6 +165,8 @@ public class GetInstanceResponseBody extends TeaModel {
         private String zoneId;
 
         private Instance(Builder builder) {
+            this.certification = builder.certification;
+            this.certificationUrl = builder.certificationUrl;
             this.clusterId = builder.clusterId;
             this.clusterName = builder.clusterName;
             this.createTime = builder.createTime;
@@ -187,6 +195,20 @@ public class GetInstanceResponseBody extends TeaModel {
 
         public static Instance create() {
             return builder().build();
+        }
+
+        /**
+         * @return certification
+         */
+        public String getCertification() {
+            return this.certification;
+        }
+
+        /**
+         * @return certificationUrl
+         */
+        public String getCertificationUrl() {
+            return this.certificationUrl;
         }
 
         /**
@@ -330,6 +352,8 @@ public class GetInstanceResponseBody extends TeaModel {
         }
 
         public static final class Builder {
+            private String certification; 
+            private String certificationUrl; 
             private String clusterId; 
             private String clusterName; 
             private Long createTime; 
@@ -355,6 +379,8 @@ public class GetInstanceResponseBody extends TeaModel {
             } 
 
             private Builder(Instance model) {
+                this.certification = model.certification;
+                this.certificationUrl = model.certificationUrl;
                 this.clusterId = model.clusterId;
                 this.clusterName = model.clusterName;
                 this.createTime = model.createTime;
@@ -376,6 +402,22 @@ public class GetInstanceResponseBody extends TeaModel {
                 this.whitelist = model.whitelist;
                 this.zoneId = model.zoneId;
             } 
+
+            /**
+             * Certification.
+             */
+            public Builder certification(String certification) {
+                this.certification = certification;
+                return this;
+            }
+
+            /**
+             * CertificationUrl.
+             */
+            public Builder certificationUrl(String certificationUrl) {
+                this.certificationUrl = certificationUrl;
+                return this;
+            }
 
             /**
              * <p>The ID of the cluster to which the HSM belongs.</p>
