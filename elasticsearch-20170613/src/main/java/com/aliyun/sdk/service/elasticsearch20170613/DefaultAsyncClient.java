@@ -2720,6 +2720,42 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
+     * @param request the request parameters of TurnOffZone  TurnOffZoneRequest
+     * @return TurnOffZoneResponse
+     */
+    @Override
+    public CompletableFuture<TurnOffZoneResponse> turnOffZone(TurnOffZoneRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RESTFUL).setAction("TurnOffZone").setMethod(HttpMethod.POST).setPathRegex("/openapi/instances/{instanceId}/actions/turnOff-zone").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(TurnOffZoneResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<TurnOffZoneResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
+     * @param request the request parameters of TurnOnZone  TurnOnZoneRequest
+     * @return TurnOnZoneResponse
+     */
+    @Override
+    public CompletableFuture<TurnOnZoneResponse> turnOnZone(TurnOnZoneRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RESTFUL).setAction("TurnOnZone").setMethod(HttpMethod.POST).setPathRegex("/openapi/instances/{instanceId}/actions/turnOn-zone").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(TurnOnZoneResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<TurnOnZoneResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
      * @param request the request parameters of UninstallKibanaPlugin  UninstallKibanaPluginRequest
      * @return UninstallKibanaPluginResponse
      */

@@ -679,6 +679,102 @@ public class DescribeInstanceResponseBody extends TeaModel {
      *
      * <p>DescribeInstanceResponseBody</p>
      */
+    public static class Endpoints extends TeaModel {
+        @com.aliyun.core.annotation.NameInMap("endpoint")
+        private String endpoint;
+
+        @com.aliyun.core.annotation.NameInMap("vswitchId")
+        private String vswitchId;
+
+        @com.aliyun.core.annotation.NameInMap("zoneId")
+        private String zoneId;
+
+        private Endpoints(Builder builder) {
+            this.endpoint = builder.endpoint;
+            this.vswitchId = builder.vswitchId;
+            this.zoneId = builder.zoneId;
+        }
+
+        public static Builder builder() {
+            return new Builder();
+        }
+
+        public static Endpoints create() {
+            return builder().build();
+        }
+
+        /**
+         * @return endpoint
+         */
+        public String getEndpoint() {
+            return this.endpoint;
+        }
+
+        /**
+         * @return vswitchId
+         */
+        public String getVswitchId() {
+            return this.vswitchId;
+        }
+
+        /**
+         * @return zoneId
+         */
+        public String getZoneId() {
+            return this.zoneId;
+        }
+
+        public static final class Builder {
+            private String endpoint; 
+            private String vswitchId; 
+            private String zoneId; 
+
+            private Builder() {
+            } 
+
+            private Builder(Endpoints model) {
+                this.endpoint = model.endpoint;
+                this.vswitchId = model.vswitchId;
+                this.zoneId = model.zoneId;
+            } 
+
+            /**
+             * endpoint.
+             */
+            public Builder endpoint(String endpoint) {
+                this.endpoint = endpoint;
+                return this;
+            }
+
+            /**
+             * vswitchId.
+             */
+            public Builder vswitchId(String vswitchId) {
+                this.vswitchId = vswitchId;
+                return this;
+            }
+
+            /**
+             * zoneId.
+             */
+            public Builder zoneId(String zoneId) {
+                this.zoneId = zoneId;
+                return this;
+            }
+
+            public Endpoints build() {
+                return new Endpoints(this);
+            } 
+
+        } 
+
+    }
+    /**
+     * 
+     * {@link DescribeInstanceResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeInstanceResponseBody</p>
+     */
     public static class IkHotDicts extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("fileSize")
         private Integer fileSize;
@@ -1916,6 +2012,9 @@ public class DescribeInstanceResponseBody extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("endTime")
         private Long endTime;
 
+        @com.aliyun.core.annotation.NameInMap("endpoints")
+        private java.util.List<Endpoints> endpoints;
+
         @com.aliyun.core.annotation.NameInMap("esConfig")
         private java.util.Map<String, ?> esConfig;
 
@@ -2055,6 +2154,7 @@ public class DescribeInstanceResponseBody extends TeaModel {
             this.enableKibanaPublicNetwork = builder.enableKibanaPublicNetwork;
             this.enablePublic = builder.enablePublic;
             this.endTime = builder.endTime;
+            this.endpoints = builder.endpoints;
             this.esConfig = builder.esConfig;
             this.esIPBlacklist = builder.esIPBlacklist;
             this.esIPWhitelist = builder.esIPWhitelist;
@@ -2209,6 +2309,13 @@ public class DescribeInstanceResponseBody extends TeaModel {
          */
         public Long getEndTime() {
             return this.endTime;
+        }
+
+        /**
+         * @return endpoints
+         */
+        public java.util.List<Endpoints> getEndpoints() {
+            return this.endpoints;
         }
 
         /**
@@ -2514,6 +2621,7 @@ public class DescribeInstanceResponseBody extends TeaModel {
             private Boolean enableKibanaPublicNetwork; 
             private Boolean enablePublic; 
             private Long endTime; 
+            private java.util.List<Endpoints> endpoints; 
             private java.util.Map<String, ?> esConfig; 
             private java.util.List<String> esIPBlacklist; 
             private java.util.List<String> esIPWhitelist; 
@@ -2575,6 +2683,7 @@ public class DescribeInstanceResponseBody extends TeaModel {
                 this.enableKibanaPublicNetwork = model.enableKibanaPublicNetwork;
                 this.enablePublic = model.enablePublic;
                 this.endTime = model.endTime;
+                this.endpoints = model.endpoints;
                 this.esConfig = model.esConfig;
                 this.esIPBlacklist = model.esIPBlacklist;
                 this.esIPWhitelist = model.esIPWhitelist;
@@ -2735,6 +2844,14 @@ public class DescribeInstanceResponseBody extends TeaModel {
              */
             public Builder endTime(Long endTime) {
                 this.endTime = endTime;
+                return this;
+            }
+
+            /**
+             * endpoints.
+             */
+            public Builder endpoints(java.util.List<Endpoints> endpoints) {
+                this.endpoints = endpoints;
                 return this;
             }
 

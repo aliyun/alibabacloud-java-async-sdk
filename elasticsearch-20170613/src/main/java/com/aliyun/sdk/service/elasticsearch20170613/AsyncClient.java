@@ -960,6 +960,18 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<TriggerNetworkResponse> triggerNetwork(TriggerNetworkRequest request);
 
     /**
+     * @param request the request parameters of TurnOffZone  TurnOffZoneRequest
+     * @return TurnOffZoneResponse
+     */
+    CompletableFuture<TurnOffZoneResponse> turnOffZone(TurnOffZoneRequest request);
+
+    /**
+     * @param request the request parameters of TurnOnZone  TurnOnZoneRequest
+     * @return TurnOnZoneResponse
+     */
+    CompletableFuture<TurnOnZoneResponse> turnOnZone(TurnOnZoneRequest request);
+
+    /**
      * @param request the request parameters of UninstallKibanaPlugin  UninstallKibanaPluginRequest
      * @return UninstallKibanaPluginResponse
      */
