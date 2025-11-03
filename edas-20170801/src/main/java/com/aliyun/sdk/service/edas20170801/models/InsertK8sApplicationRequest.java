@@ -308,6 +308,10 @@ public class InsertK8sApplicationRequest extends Request {
     private String secretName;
 
     @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("SecurityContext")
+    private String securityContext;
+
+    @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("ServiceConfigs")
     private String serviceConfigs;
 
@@ -433,6 +437,7 @@ public class InsertK8sApplicationRequest extends Request {
         this.resourceGroupId = builder.resourceGroupId;
         this.runtimeClassName = builder.runtimeClassName;
         this.secretName = builder.secretName;
+        this.securityContext = builder.securityContext;
         this.serviceConfigs = builder.serviceConfigs;
         this.sidecars = builder.sidecars;
         this.slsConfigs = builder.slsConfigs;
@@ -966,6 +971,13 @@ public class InsertK8sApplicationRequest extends Request {
     }
 
     /**
+     * @return securityContext
+     */
+    public String getSecurityContext() {
+        return this.securityContext;
+    }
+
+    /**
      * @return serviceConfigs
      */
     public String getServiceConfigs() {
@@ -1129,6 +1141,7 @@ public class InsertK8sApplicationRequest extends Request {
         private String resourceGroupId; 
         private String runtimeClassName; 
         private String secretName; 
+        private String securityContext; 
         private String serviceConfigs; 
         private String sidecars; 
         private String slsConfigs; 
@@ -1221,6 +1234,7 @@ public class InsertK8sApplicationRequest extends Request {
             this.resourceGroupId = request.resourceGroupId;
             this.runtimeClassName = request.runtimeClassName;
             this.secretName = request.secretName;
+            this.securityContext = request.securityContext;
             this.serviceConfigs = request.serviceConfigs;
             this.sidecars = request.sidecars;
             this.slsConfigs = request.slsConfigs;
@@ -2189,6 +2203,15 @@ public class InsertK8sApplicationRequest extends Request {
         public Builder secretName(String secretName) {
             this.putQueryParameter("SecretName", secretName);
             this.secretName = secretName;
+            return this;
+        }
+
+        /**
+         * SecurityContext.
+         */
+        public Builder securityContext(String securityContext) {
+            this.putQueryParameter("SecurityContext", securityContext);
+            this.securityContext = securityContext;
             return this;
         }
 

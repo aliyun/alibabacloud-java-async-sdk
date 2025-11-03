@@ -431,6 +431,9 @@ public class GetK8sApplicationResponseBody extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("RequestMem")
         private Integer requestMem;
 
+        @com.aliyun.core.annotation.NameInMap("SecurityContext")
+        private String securityContext;
+
         @com.aliyun.core.annotation.NameInMap("SlbInfo")
         private String slbInfo;
 
@@ -473,6 +476,7 @@ public class GetK8sApplicationResponseBody extends TeaModel {
             this.requestCpuM = builder.requestCpuM;
             this.requestEphemeralStorage = builder.requestEphemeralStorage;
             this.requestMem = builder.requestMem;
+            this.securityContext = builder.securityContext;
             this.slbInfo = builder.slbInfo;
             this.tomcatVersion = builder.tomcatVersion;
             this.workloadType = builder.workloadType;
@@ -711,6 +715,13 @@ public class GetK8sApplicationResponseBody extends TeaModel {
         }
 
         /**
+         * @return securityContext
+         */
+        public String getSecurityContext() {
+            return this.securityContext;
+        }
+
+        /**
          * @return slbInfo
          */
         public String getSlbInfo() {
@@ -764,6 +775,7 @@ public class GetK8sApplicationResponseBody extends TeaModel {
             private Integer requestCpuM; 
             private String requestEphemeralStorage; 
             private Integer requestMem; 
+            private String securityContext; 
             private String slbInfo; 
             private String tomcatVersion; 
             private String workloadType; 
@@ -804,6 +816,7 @@ public class GetK8sApplicationResponseBody extends TeaModel {
                 this.requestCpuM = model.requestCpuM;
                 this.requestEphemeralStorage = model.requestEphemeralStorage;
                 this.requestMem = model.requestMem;
+                this.securityContext = model.securityContext;
                 this.slbInfo = model.slbInfo;
                 this.tomcatVersion = model.tomcatVersion;
                 this.workloadType = model.workloadType;
@@ -1163,6 +1176,14 @@ public class GetK8sApplicationResponseBody extends TeaModel {
              */
             public Builder requestMem(Integer requestMem) {
                 this.requestMem = requestMem;
+                return this;
+            }
+
+            /**
+             * SecurityContext.
+             */
+            public Builder securityContext(String securityContext) {
+                this.securityContext = securityContext;
                 return this;
             }
 

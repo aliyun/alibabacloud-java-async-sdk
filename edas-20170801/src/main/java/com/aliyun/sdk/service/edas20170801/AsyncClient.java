@@ -269,6 +269,12 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<DescribeApplicationScalingRulesResponse> describeApplicationScalingRules(DescribeApplicationScalingRulesRequest request);
 
     /**
+     * @param request the request parameters of DescribeLocalitySetting  DescribeLocalitySettingRequest
+     * @return DescribeLocalitySettingResponse
+     */
+    CompletableFuture<DescribeLocalitySettingResponse> describeLocalitySetting(DescribeLocalitySettingRequest request);
+
+    /**
      * @param request the request parameters of DisableApplicationScalingRule  DisableApplicationScalingRuleRequest
      * @return DisableApplicationScalingRuleResponse
      */

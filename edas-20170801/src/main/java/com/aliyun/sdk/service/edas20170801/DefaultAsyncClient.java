@@ -811,6 +811,24 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
+     * @param request the request parameters of DescribeLocalitySetting  DescribeLocalitySettingRequest
+     * @return DescribeLocalitySettingResponse
+     */
+    @Override
+    public CompletableFuture<DescribeLocalitySettingResponse> describeLocalitySetting(DescribeLocalitySettingRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RESTFUL).setAction("DescribeLocalitySetting").setMethod(HttpMethod.GET).setPathRegex("/pop/sp/applications/locality/setting").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(DescribeLocalitySettingResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<DescribeLocalitySettingResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
      * @param request the request parameters of DisableApplicationScalingRule  DisableApplicationScalingRuleRequest
      * @return DisableApplicationScalingRuleResponse
      */

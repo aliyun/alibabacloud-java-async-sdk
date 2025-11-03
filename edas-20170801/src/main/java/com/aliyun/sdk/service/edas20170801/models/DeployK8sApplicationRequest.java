@@ -239,6 +239,10 @@ public class DeployK8sApplicationRequest extends Request {
     private String runtimeClassName;
 
     @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("SecurityContext")
+    private String securityContext;
+
+    @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("Sidecars")
     private String sidecars;
 
@@ -347,6 +351,7 @@ public class DeployK8sApplicationRequest extends Request {
         this.replicas = builder.replicas;
         this.requestsEphemeralStorage = builder.requestsEphemeralStorage;
         this.runtimeClassName = builder.runtimeClassName;
+        this.securityContext = builder.securityContext;
         this.sidecars = builder.sidecars;
         this.slsConfigs = builder.slsConfigs;
         this.startup = builder.startup;
@@ -761,6 +766,13 @@ public class DeployK8sApplicationRequest extends Request {
     }
 
     /**
+     * @return securityContext
+     */
+    public String getSecurityContext() {
+        return this.securityContext;
+    }
+
+    /**
      * @return sidecars
      */
     public String getSidecars() {
@@ -907,6 +919,7 @@ public class DeployK8sApplicationRequest extends Request {
         private Integer replicas; 
         private Integer requestsEphemeralStorage; 
         private String runtimeClassName; 
+        private String securityContext; 
         private String sidecars; 
         private String slsConfigs; 
         private String startup; 
@@ -982,6 +995,7 @@ public class DeployK8sApplicationRequest extends Request {
             this.replicas = request.replicas;
             this.requestsEphemeralStorage = request.requestsEphemeralStorage;
             this.runtimeClassName = request.runtimeClassName;
+            this.securityContext = request.securityContext;
             this.sidecars = request.sidecars;
             this.slsConfigs = request.slsConfigs;
             this.startup = request.startup;
@@ -1751,6 +1765,15 @@ public class DeployK8sApplicationRequest extends Request {
         public Builder runtimeClassName(String runtimeClassName) {
             this.putQueryParameter("RuntimeClassName", runtimeClassName);
             this.runtimeClassName = runtimeClassName;
+            return this;
+        }
+
+        /**
+         * SecurityContext.
+         */
+        public Builder securityContext(String securityContext) {
+            this.putQueryParameter("SecurityContext", securityContext);
+            this.securityContext = securityContext;
             return this;
         }
 
