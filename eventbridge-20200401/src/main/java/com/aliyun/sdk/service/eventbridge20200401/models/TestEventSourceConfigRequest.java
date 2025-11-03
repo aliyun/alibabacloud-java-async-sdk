@@ -82,6 +82,9 @@ public class TestEventSourceConfigRequest extends Request {
      * <p>TestEventSourceConfigRequest</p>
      */
     public static class SourceMySQLParameters extends TeaModel {
+        @com.aliyun.core.annotation.NameInMap("AllowedCIDRs")
+        private String allowedCIDRs;
+
         @com.aliyun.core.annotation.NameInMap("DatabaseName")
         private String databaseName;
 
@@ -116,6 +119,7 @@ public class TestEventSourceConfigRequest extends Request {
         private String vpcId;
 
         private SourceMySQLParameters(Builder builder) {
+            this.allowedCIDRs = builder.allowedCIDRs;
             this.databaseName = builder.databaseName;
             this.hostName = builder.hostName;
             this.networkType = builder.networkType;
@@ -135,6 +139,13 @@ public class TestEventSourceConfigRequest extends Request {
 
         public static SourceMySQLParameters create() {
             return builder().build();
+        }
+
+        /**
+         * @return allowedCIDRs
+         */
+        public String getAllowedCIDRs() {
+            return this.allowedCIDRs;
         }
 
         /**
@@ -215,6 +226,7 @@ public class TestEventSourceConfigRequest extends Request {
         }
 
         public static final class Builder {
+            private String allowedCIDRs; 
             private String databaseName; 
             private String hostName; 
             private String networkType; 
@@ -231,6 +243,7 @@ public class TestEventSourceConfigRequest extends Request {
             } 
 
             private Builder(SourceMySQLParameters model) {
+                this.allowedCIDRs = model.allowedCIDRs;
                 this.databaseName = model.databaseName;
                 this.hostName = model.hostName;
                 this.networkType = model.networkType;
@@ -243,6 +256,14 @@ public class TestEventSourceConfigRequest extends Request {
                 this.vSwitchIds = model.vSwitchIds;
                 this.vpcId = model.vpcId;
             } 
+
+            /**
+             * AllowedCIDRs.
+             */
+            public Builder allowedCIDRs(String allowedCIDRs) {
+                this.allowedCIDRs = allowedCIDRs;
+                return this;
+            }
 
             /**
              * <p>The database name.</p>

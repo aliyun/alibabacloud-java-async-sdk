@@ -2745,7 +2745,7 @@ public class UpdateEventStreamingRequest extends Request {
      *
      * <p>UpdateEventStreamingRequest</p>
      */
-    public static class DashVectorSchemaParameters extends TeaModel {
+    public static class Name extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Form")
         private String form;
 
@@ -2755,7 +2755,7 @@ public class UpdateEventStreamingRequest extends Request {
         @com.aliyun.core.annotation.NameInMap("Value")
         private String value;
 
-        private DashVectorSchemaParameters(Builder builder) {
+        private Name(Builder builder) {
             this.form = builder.form;
             this.template = builder.template;
             this.value = builder.value;
@@ -2765,7 +2765,7 @@ public class UpdateEventStreamingRequest extends Request {
             return new Builder();
         }
 
-        public static DashVectorSchemaParameters create() {
+        public static Name create() {
             return builder().build();
         }
 
@@ -2798,22 +2798,17 @@ public class UpdateEventStreamingRequest extends Request {
             private Builder() {
             } 
 
-            private Builder(DashVectorSchemaParameters model) {
+            private Builder(Name model) {
                 this.form = model.form;
                 this.template = model.template;
                 this.value = model.value;
             } 
 
             /**
-             * <p>The method that you want to use to transform events. Valid values:</p>
-             * <ul>
-             * <li>JSONPATH</li>
-             * <li>CONSTANT</li>
-             * <li>TEMPLATE</li>
-             * </ul>
+             * <p>The method that you want to use to transform events. Default value: CONSTANT.</p>
              * 
              * <strong>example:</strong>
-             * <p>TEMPLATE</p>
+             * <p>CONSTANT</p>
              */
             public Builder form(String form) {
                 this.form = form;
@@ -2821,21 +2816,10 @@ public class UpdateEventStreamingRequest extends Request {
             }
 
             /**
-             * <p>The schema template. This parameter is required only if you set Form to TEMPLATE. After the event content is transformed, the data must be an array in the JSON format. Each schema corresponds to a JSON object. The properties include only the name, type, and value fields. The value of the type field can be only of the INT, FLOAT, STRING, or BOOL type.</p>
+             * <p>The template based on which you want events to be transformed.</p>
              * 
              * <strong>example:</strong>
-             * <p>[
-             *   {
-             *     &quot;name&quot;: &quot;schema1&quot;,
-             *     &quot;type&quot;: &quot;INT&quot;,
-             *     &quot;value&quot;: &quot;${value1}&quot;
-             *   },
-             *   {
-             *     &quot;name&quot;: &quot;schema2&quot;,
-             *     &quot;type&quot;: &quot;FLOAT&quot;,
-             *     &quot;value&quot;: &quot;${value2}&quot;
-             *   }
-             * ]</p>
+             * <p>None</p>
              */
             public Builder template(String template) {
                 this.template = template;
@@ -2843,22 +2827,324 @@ public class UpdateEventStreamingRequest extends Request {
             }
 
             /**
-             * <ul>
-             * <li>If you set Form to CONSTANT, specify a constant.</li>
-             * <li>If you set Form to JSONPATH, specify a JSONPath rule.</li>
-             * <li>If you set Form to TEMPLATE, specify variables for the template.</li>
-             * </ul>
-             * <blockquote>
-             * <p> The value of this parameter cannot exceed 10,240 characters in length.</p>
-             * </blockquote>
+             * <p>The name of the topic on the Apache RocketMQ instance.</p>
              * 
              * <strong>example:</strong>
-             * <p>{
-             *   &quot;value1&quot;:&quot;v1&quot;,
-             *   &quot;value2&quot;:&quot;v2&quot;
-             * }</p>
+             * <p>Mytopic</p>
              */
             public Builder value(String value) {
+                this.value = value;
+                return this;
+            }
+
+            public Name build() {
+                return new Name(this);
+            } 
+
+        } 
+
+    }
+    /**
+     * 
+     * {@link UpdateEventStreamingRequest} extends {@link TeaModel}
+     *
+     * <p>UpdateEventStreamingRequest</p>
+     */
+    public static class Type extends TeaModel {
+        @com.aliyun.core.annotation.NameInMap("Form")
+        private String form;
+
+        @com.aliyun.core.annotation.NameInMap("Template")
+        private String template;
+
+        @com.aliyun.core.annotation.NameInMap("Value")
+        private String value;
+
+        private Type(Builder builder) {
+            this.form = builder.form;
+            this.template = builder.template;
+            this.value = builder.value;
+        }
+
+        public static Builder builder() {
+            return new Builder();
+        }
+
+        public static Type create() {
+            return builder().build();
+        }
+
+        /**
+         * @return form
+         */
+        public String getForm() {
+            return this.form;
+        }
+
+        /**
+         * @return template
+         */
+        public String getTemplate() {
+            return this.template;
+        }
+
+        /**
+         * @return value
+         */
+        public String getValue() {
+            return this.value;
+        }
+
+        public static final class Builder {
+            private String form; 
+            private String template; 
+            private String value; 
+
+            private Builder() {
+            } 
+
+            private Builder(Type model) {
+                this.form = model.form;
+                this.template = model.template;
+                this.value = model.value;
+            } 
+
+            /**
+             * <p>The method that you want to use to transform events. Default value: CONSTANT.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>CONSTANT</p>
+             */
+            public Builder form(String form) {
+                this.form = form;
+                return this;
+            }
+
+            /**
+             * <p>The template based on which you want events to be transformed.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>None</p>
+             */
+            public Builder template(String template) {
+                this.template = template;
+                return this;
+            }
+
+            /**
+             * <p>The name of the topic on the Apache RocketMQ instance.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Mytopic</p>
+             */
+            public Builder value(String value) {
+                this.value = value;
+                return this;
+            }
+
+            public Type build() {
+                return new Type(this);
+            } 
+
+        } 
+
+    }
+    /**
+     * 
+     * {@link UpdateEventStreamingRequest} extends {@link TeaModel}
+     *
+     * <p>UpdateEventStreamingRequest</p>
+     */
+    public static class DashVectorSchemaParametersValue extends TeaModel {
+        @com.aliyun.core.annotation.NameInMap("Form")
+        private String form;
+
+        @com.aliyun.core.annotation.NameInMap("Template")
+        private String template;
+
+        @com.aliyun.core.annotation.NameInMap("Value")
+        private String value;
+
+        private DashVectorSchemaParametersValue(Builder builder) {
+            this.form = builder.form;
+            this.template = builder.template;
+            this.value = builder.value;
+        }
+
+        public static Builder builder() {
+            return new Builder();
+        }
+
+        public static DashVectorSchemaParametersValue create() {
+            return builder().build();
+        }
+
+        /**
+         * @return form
+         */
+        public String getForm() {
+            return this.form;
+        }
+
+        /**
+         * @return template
+         */
+        public String getTemplate() {
+            return this.template;
+        }
+
+        /**
+         * @return value
+         */
+        public String getValue() {
+            return this.value;
+        }
+
+        public static final class Builder {
+            private String form; 
+            private String template; 
+            private String value; 
+
+            private Builder() {
+            } 
+
+            private Builder(DashVectorSchemaParametersValue model) {
+                this.form = model.form;
+                this.template = model.template;
+                this.value = model.value;
+            } 
+
+            /**
+             * <p>The method that you want to use to transform events. Default value: CONSTANT.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>CONSTANT</p>
+             */
+            public Builder form(String form) {
+                this.form = form;
+                return this;
+            }
+
+            /**
+             * <p>The template based on which you want events to be transformed.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>None</p>
+             */
+            public Builder template(String template) {
+                this.template = template;
+                return this;
+            }
+
+            /**
+             * <p>The name of the topic on the Apache RocketMQ instance.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Mytopic</p>
+             */
+            public Builder value(String value) {
+                this.value = value;
+                return this;
+            }
+
+            public DashVectorSchemaParametersValue build() {
+                return new DashVectorSchemaParametersValue(this);
+            } 
+
+        } 
+
+    }
+    /**
+     * 
+     * {@link UpdateEventStreamingRequest} extends {@link TeaModel}
+     *
+     * <p>UpdateEventStreamingRequest</p>
+     */
+    public static class DashVectorSchemaParameters extends TeaModel {
+        @com.aliyun.core.annotation.NameInMap("Name")
+        private Name name;
+
+        @com.aliyun.core.annotation.NameInMap("Type")
+        private Type type;
+
+        @com.aliyun.core.annotation.NameInMap("Value")
+        private DashVectorSchemaParametersValue value;
+
+        private DashVectorSchemaParameters(Builder builder) {
+            this.name = builder.name;
+            this.type = builder.type;
+            this.value = builder.value;
+        }
+
+        public static Builder builder() {
+            return new Builder();
+        }
+
+        public static DashVectorSchemaParameters create() {
+            return builder().build();
+        }
+
+        /**
+         * @return name
+         */
+        public Name getName() {
+            return this.name;
+        }
+
+        /**
+         * @return type
+         */
+        public Type getType() {
+            return this.type;
+        }
+
+        /**
+         * @return value
+         */
+        public DashVectorSchemaParametersValue getValue() {
+            return this.value;
+        }
+
+        public static final class Builder {
+            private Name name; 
+            private Type type; 
+            private DashVectorSchemaParametersValue value; 
+
+            private Builder() {
+            } 
+
+            private Builder(DashVectorSchemaParameters model) {
+                this.name = model.name;
+                this.type = model.type;
+                this.value = model.value;
+            } 
+
+            /**
+             * <p>The connector name.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>mongo-sink</p>
+             */
+            public Builder name(Name name) {
+                this.name = name;
+                return this;
+            }
+
+            /**
+             * Type.
+             */
+            public Builder type(Type type) {
+                this.type = type;
+                return this;
+            }
+
+            /**
+             * <p>The name of the topic on the Apache RocketMQ instance.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Mytopic</p>
+             */
+            public Builder value(DashVectorSchemaParametersValue value) {
                 this.value = value;
                 return this;
             }
@@ -3213,7 +3499,7 @@ public class UpdateEventStreamingRequest extends Request {
         private String collection;
 
         @com.aliyun.core.annotation.NameInMap("DashVectorSchemaParameters")
-        private DashVectorSchemaParameters dashVectorSchemaParameters;
+        private java.util.List<DashVectorSchemaParameters> dashVectorSchemaParameters;
 
         @com.aliyun.core.annotation.NameInMap("InstanceId")
         private String instanceId;
@@ -3270,7 +3556,7 @@ public class UpdateEventStreamingRequest extends Request {
         /**
          * @return dashVectorSchemaParameters
          */
-        public DashVectorSchemaParameters getDashVectorSchemaParameters() {
+        public java.util.List<DashVectorSchemaParameters> getDashVectorSchemaParameters() {
             return this.dashVectorSchemaParameters;
         }
 
@@ -3319,7 +3605,7 @@ public class UpdateEventStreamingRequest extends Request {
         public static final class Builder {
             private String apiKey; 
             private String collection; 
-            private DashVectorSchemaParameters dashVectorSchemaParameters; 
+            private java.util.List<DashVectorSchemaParameters> dashVectorSchemaParameters; 
             private String instanceId; 
             private String network; 
             private String operation; 
@@ -3367,7 +3653,7 @@ public class UpdateEventStreamingRequest extends Request {
             /**
              * <p>The parameters in the Schema field of the table when data is inserted into DashVector. After the event content is transformed, the data must be in JSON format.</p>
              */
-            public Builder dashVectorSchemaParameters(DashVectorSchemaParameters dashVectorSchemaParameters) {
+            public Builder dashVectorSchemaParameters(java.util.List<DashVectorSchemaParameters> dashVectorSchemaParameters) {
                 this.dashVectorSchemaParameters = dashVectorSchemaParameters;
                 return this;
             }
@@ -15393,6 +15679,9 @@ public class UpdateEventStreamingRequest extends Request {
         @com.aliyun.core.annotation.NameInMap("SinkApacheRocketMQCheckpointParameters")
         private SinkApacheRocketMQCheckpointParameters sinkApacheRocketMQCheckpointParameters;
 
+        @com.aliyun.core.annotation.NameInMap("SinkApiDestinationParameters")
+        private SinkApiDestinationParameters sinkApiDestinationParameters;
+
         @com.aliyun.core.annotation.NameInMap("SinkBaiLianParameters")
         private SinkBaiLianParameters sinkBaiLianParameters;
 
@@ -15419,6 +15708,9 @@ public class UpdateEventStreamingRequest extends Request {
 
         @com.aliyun.core.annotation.NameInMap("SinkFnfParameters")
         private SinkFnfParameters sinkFnfParameters;
+
+        @com.aliyun.core.annotation.NameInMap("SinkHttpsParameters")
+        private SinkHttpsParameters sinkHttpsParameters;
 
         @com.aliyun.core.annotation.NameInMap("SinkKafkaParameters")
         private SinkKafkaParameters sinkKafkaParameters;
@@ -15447,6 +15739,7 @@ public class UpdateEventStreamingRequest extends Request {
         private Sink(Builder builder) {
             this.sinkApacheKafkaParameters = builder.sinkApacheKafkaParameters;
             this.sinkApacheRocketMQCheckpointParameters = builder.sinkApacheRocketMQCheckpointParameters;
+            this.sinkApiDestinationParameters = builder.sinkApiDestinationParameters;
             this.sinkBaiLianParameters = builder.sinkBaiLianParameters;
             this.sinkCustomizedKafkaConnectorParameters = builder.sinkCustomizedKafkaConnectorParameters;
             this.sinkCustomizedKafkaParameters = builder.sinkCustomizedKafkaParameters;
@@ -15456,6 +15749,7 @@ public class UpdateEventStreamingRequest extends Request {
             this.sinkDorisParameters = builder.sinkDorisParameters;
             this.sinkFcParameters = builder.sinkFcParameters;
             this.sinkFnfParameters = builder.sinkFnfParameters;
+            this.sinkHttpsParameters = builder.sinkHttpsParameters;
             this.sinkKafkaParameters = builder.sinkKafkaParameters;
             this.sinkMNSParameters = builder.sinkMNSParameters;
             this.sinkOpenSourceRabbitMQParameters = builder.sinkOpenSourceRabbitMQParameters;
@@ -15486,6 +15780,13 @@ public class UpdateEventStreamingRequest extends Request {
          */
         public SinkApacheRocketMQCheckpointParameters getSinkApacheRocketMQCheckpointParameters() {
             return this.sinkApacheRocketMQCheckpointParameters;
+        }
+
+        /**
+         * @return sinkApiDestinationParameters
+         */
+        public SinkApiDestinationParameters getSinkApiDestinationParameters() {
+            return this.sinkApiDestinationParameters;
         }
 
         /**
@@ -15552,6 +15853,13 @@ public class UpdateEventStreamingRequest extends Request {
         }
 
         /**
+         * @return sinkHttpsParameters
+         */
+        public SinkHttpsParameters getSinkHttpsParameters() {
+            return this.sinkHttpsParameters;
+        }
+
+        /**
          * @return sinkKafkaParameters
          */
         public SinkKafkaParameters getSinkKafkaParameters() {
@@ -15610,6 +15918,7 @@ public class UpdateEventStreamingRequest extends Request {
         public static final class Builder {
             private SinkApacheKafkaParameters sinkApacheKafkaParameters; 
             private SinkApacheRocketMQCheckpointParameters sinkApacheRocketMQCheckpointParameters; 
+            private SinkApiDestinationParameters sinkApiDestinationParameters; 
             private SinkBaiLianParameters sinkBaiLianParameters; 
             private SinkCustomizedKafkaConnectorParameters sinkCustomizedKafkaConnectorParameters; 
             private SinkCustomizedKafkaParameters sinkCustomizedKafkaParameters; 
@@ -15619,6 +15928,7 @@ public class UpdateEventStreamingRequest extends Request {
             private SinkDorisParameters sinkDorisParameters; 
             private SinkFcParameters sinkFcParameters; 
             private SinkFnfParameters sinkFnfParameters; 
+            private SinkHttpsParameters sinkHttpsParameters; 
             private SinkKafkaParameters sinkKafkaParameters; 
             private SinkMNSParameters sinkMNSParameters; 
             private SinkOpenSourceRabbitMQParameters sinkOpenSourceRabbitMQParameters; 
@@ -15634,6 +15944,7 @@ public class UpdateEventStreamingRequest extends Request {
             private Builder(Sink model) {
                 this.sinkApacheKafkaParameters = model.sinkApacheKafkaParameters;
                 this.sinkApacheRocketMQCheckpointParameters = model.sinkApacheRocketMQCheckpointParameters;
+                this.sinkApiDestinationParameters = model.sinkApiDestinationParameters;
                 this.sinkBaiLianParameters = model.sinkBaiLianParameters;
                 this.sinkCustomizedKafkaConnectorParameters = model.sinkCustomizedKafkaConnectorParameters;
                 this.sinkCustomizedKafkaParameters = model.sinkCustomizedKafkaParameters;
@@ -15643,6 +15954,7 @@ public class UpdateEventStreamingRequest extends Request {
                 this.sinkDorisParameters = model.sinkDorisParameters;
                 this.sinkFcParameters = model.sinkFcParameters;
                 this.sinkFnfParameters = model.sinkFnfParameters;
+                this.sinkHttpsParameters = model.sinkHttpsParameters;
                 this.sinkKafkaParameters = model.sinkKafkaParameters;
                 this.sinkMNSParameters = model.sinkMNSParameters;
                 this.sinkOpenSourceRabbitMQParameters = model.sinkOpenSourceRabbitMQParameters;
@@ -15666,6 +15978,14 @@ public class UpdateEventStreamingRequest extends Request {
              */
             public Builder sinkApacheRocketMQCheckpointParameters(SinkApacheRocketMQCheckpointParameters sinkApacheRocketMQCheckpointParameters) {
                 this.sinkApacheRocketMQCheckpointParameters = sinkApacheRocketMQCheckpointParameters;
+                return this;
+            }
+
+            /**
+             * SinkApiDestinationParameters.
+             */
+            public Builder sinkApiDestinationParameters(SinkApiDestinationParameters sinkApiDestinationParameters) {
+                this.sinkApiDestinationParameters = sinkApiDestinationParameters;
                 return this;
             }
 
@@ -15738,6 +16058,14 @@ public class UpdateEventStreamingRequest extends Request {
              */
             public Builder sinkFnfParameters(SinkFnfParameters sinkFnfParameters) {
                 this.sinkFnfParameters = sinkFnfParameters;
+                return this;
+            }
+
+            /**
+             * SinkHttpsParameters.
+             */
+            public Builder sinkHttpsParameters(SinkHttpsParameters sinkHttpsParameters) {
+                this.sinkHttpsParameters = sinkHttpsParameters;
                 return this;
             }
 
@@ -19282,8 +19610,16 @@ public class UpdateEventStreamingRequest extends Request {
         @com.aliyun.core.annotation.NameInMap("Arn")
         private String arn;
 
+        @com.aliyun.core.annotation.NameInMap("BaiLianAgentTransformParameters")
+        private BaiLianAgentTransformParameters baiLianAgentTransformParameters;
+
+        @com.aliyun.core.annotation.NameInMap("DashScopeTransformParameters")
+        private DashScopeTransformParameters dashScopeTransformParameters;
+
         private Transforms(Builder builder) {
             this.arn = builder.arn;
+            this.baiLianAgentTransformParameters = builder.baiLianAgentTransformParameters;
+            this.dashScopeTransformParameters = builder.dashScopeTransformParameters;
         }
 
         public static Builder builder() {
@@ -19301,14 +19637,32 @@ public class UpdateEventStreamingRequest extends Request {
             return this.arn;
         }
 
+        /**
+         * @return baiLianAgentTransformParameters
+         */
+        public BaiLianAgentTransformParameters getBaiLianAgentTransformParameters() {
+            return this.baiLianAgentTransformParameters;
+        }
+
+        /**
+         * @return dashScopeTransformParameters
+         */
+        public DashScopeTransformParameters getDashScopeTransformParameters() {
+            return this.dashScopeTransformParameters;
+        }
+
         public static final class Builder {
             private String arn; 
+            private BaiLianAgentTransformParameters baiLianAgentTransformParameters; 
+            private DashScopeTransformParameters dashScopeTransformParameters; 
 
             private Builder() {
             } 
 
             private Builder(Transforms model) {
                 this.arn = model.arn;
+                this.baiLianAgentTransformParameters = model.baiLianAgentTransformParameters;
+                this.dashScopeTransformParameters = model.dashScopeTransformParameters;
             } 
 
             /**
@@ -19319,6 +19673,22 @@ public class UpdateEventStreamingRequest extends Request {
              */
             public Builder arn(String arn) {
                 this.arn = arn;
+                return this;
+            }
+
+            /**
+             * BaiLianAgentTransformParameters.
+             */
+            public Builder baiLianAgentTransformParameters(BaiLianAgentTransformParameters baiLianAgentTransformParameters) {
+                this.baiLianAgentTransformParameters = baiLianAgentTransformParameters;
+                return this;
+            }
+
+            /**
+             * DashScopeTransformParameters.
+             */
+            public Builder dashScopeTransformParameters(DashScopeTransformParameters dashScopeTransformParameters) {
+                this.dashScopeTransformParameters = dashScopeTransformParameters;
                 return this;
             }
 
