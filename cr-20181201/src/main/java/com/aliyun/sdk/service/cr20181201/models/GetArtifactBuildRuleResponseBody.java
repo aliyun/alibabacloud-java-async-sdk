@@ -145,7 +145,13 @@ public class GetArtifactBuildRuleResponseBody extends TeaModel {
         } 
 
         /**
-         * ArtifactType.
+         * <p>The type of the artifact. Valid values:</p>
+         * <ul>
+         * <li><code>ACCELERATED_IMAGE</code>: accelerated images.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>ACCELERATED_IMAGE</p>
          */
         public Builder artifactType(String artifactType) {
             this.artifactType = artifactType;
@@ -153,7 +159,10 @@ public class GetArtifactBuildRuleResponseBody extends TeaModel {
         }
 
         /**
-         * BuildRuleId.
+         * <p>The ID of the artifact building rule.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>crabr-o2670wqz2n70****</p>
          */
         public Builder buildRuleId(String buildRuleId) {
             this.buildRuleId = buildRuleId;
@@ -169,7 +178,14 @@ public class GetArtifactBuildRuleResponseBody extends TeaModel {
         }
 
         /**
-         * IsSuccess.
+         * <p>Indicates whether the API request is successful. Valid values:</p>
+         * <ul>
+         * <li><code>true</code>: The request is successful.</li>
+         * <li><code>false</code>: The request fails.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder isSuccess(Boolean isSuccess) {
             this.isSuccess = isSuccess;
@@ -177,7 +193,7 @@ public class GetArtifactBuildRuleResponseBody extends TeaModel {
         }
 
         /**
-         * Parameters.
+         * <p>Additional parameters.</p>
          */
         public Builder parameters(Parameters parameters) {
             this.parameters = parameters;
@@ -185,7 +201,10 @@ public class GetArtifactBuildRuleResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>7A3E98F6-296C-54AC-A612-B75E7777D4C1</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -193,7 +212,13 @@ public class GetArtifactBuildRuleResponseBody extends TeaModel {
         }
 
         /**
-         * ScopeId.
+         * <p>The ID of the effective range of the artifact building rule.</p>
+         * <ul>
+         * <li>The parameter value is the ID of the image repository.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>crr-8dz3aedjqlmk****</p>
          */
         public Builder scopeId(String scopeId) {
             this.scopeId = scopeId;
@@ -201,7 +226,13 @@ public class GetArtifactBuildRuleResponseBody extends TeaModel {
         }
 
         /**
-         * ScopeType.
+         * <p>The effective range of the artifact building rule. Valid values:</p>
+         * <ul>
+         * <li><code>REPOSITORY</code>: The artifact building rule is effective in the repository level.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>REPOSITORY</p>
          */
         public Builder scopeType(String scopeType) {
             this.scopeType = scopeType;
@@ -267,7 +298,10 @@ public class GetArtifactBuildRuleResponseBody extends TeaModel {
             } 
 
             /**
-             * ImageIndexOnly.
+             * <p>Indicates whether the index-only mode is enabled.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>false</p>
              */
             public Builder imageIndexOnly(Boolean imageIndexOnly) {
                 this.imageIndexOnly = imageIndexOnly;
@@ -275,7 +309,10 @@ public class GetArtifactBuildRuleResponseBody extends TeaModel {
             }
 
             /**
-             * PriorityFile.
+             * <p>The list of files that you want to prefetch when you use the image acceleration feature. Each entry contains the Base64-encoded absolute path of a file.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>L2hvbWUvdGVzdC8=</p>
              */
             public Builder priorityFile(String priorityFile) {
                 this.priorityFile = priorityFile;

@@ -249,6 +249,9 @@ public class ListArtifactSubscriptionRuleResponseBody extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("RuleId")
         private String ruleId;
 
+        @com.aliyun.core.annotation.NameInMap("SourceDomain")
+        private String sourceDomain;
+
         @com.aliyun.core.annotation.NameInMap("SourceNamespaceName")
         private String sourceNamespaceName;
 
@@ -274,6 +277,7 @@ public class ListArtifactSubscriptionRuleResponseBody extends TeaModel {
             this.platform = builder.platform;
             this.repoName = builder.repoName;
             this.ruleId = builder.ruleId;
+            this.sourceDomain = builder.sourceDomain;
             this.sourceNamespaceName = builder.sourceNamespaceName;
             this.sourceProvider = builder.sourceProvider;
             this.sourceRepoName = builder.sourceRepoName;
@@ -353,6 +357,13 @@ public class ListArtifactSubscriptionRuleResponseBody extends TeaModel {
         }
 
         /**
+         * @return sourceDomain
+         */
+        public String getSourceDomain() {
+            return this.sourceDomain;
+        }
+
+        /**
          * @return sourceNamespaceName
          */
         public String getSourceNamespaceName() {
@@ -397,6 +408,7 @@ public class ListArtifactSubscriptionRuleResponseBody extends TeaModel {
             private java.util.List<String> platform; 
             private String repoName; 
             private String ruleId; 
+            private String sourceDomain; 
             private String sourceNamespaceName; 
             private String sourceProvider; 
             private String sourceRepoName; 
@@ -416,6 +428,7 @@ public class ListArtifactSubscriptionRuleResponseBody extends TeaModel {
                 this.platform = model.platform;
                 this.repoName = model.repoName;
                 this.ruleId = model.ruleId;
+                this.sourceDomain = model.sourceDomain;
                 this.sourceNamespaceName = model.sourceNamespaceName;
                 this.sourceProvider = model.sourceProvider;
                 this.sourceRepoName = model.sourceRepoName;
@@ -516,6 +529,14 @@ public class ListArtifactSubscriptionRuleResponseBody extends TeaModel {
              */
             public Builder ruleId(String ruleId) {
                 this.ruleId = ruleId;
+                return this;
+            }
+
+            /**
+             * SourceDomain.
+             */
+            public Builder sourceDomain(String sourceDomain) {
+                this.sourceDomain = sourceDomain;
                 return this;
             }
 

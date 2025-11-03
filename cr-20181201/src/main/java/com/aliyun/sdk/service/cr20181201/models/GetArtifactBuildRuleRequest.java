@@ -139,7 +139,13 @@ public class GetArtifactBuildRuleRequest extends Request {
         }
 
         /**
-         * ArtifactType.
+         * <p>The type of the artifact.</p>
+         * <ul>
+         * <li><code>ACCELERATED_IMAGE</code>: accelerated images.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>ACCELERATED_IMAGE</p>
          */
         public Builder artifactType(String artifactType) {
             this.putQueryParameter("ArtifactType", artifactType);
@@ -148,7 +154,10 @@ public class GetArtifactBuildRuleRequest extends Request {
         }
 
         /**
-         * BuildRuleId.
+         * <p>The ID of the artifact building rule.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>crabr-o2670wqz2n70****</p>
          */
         public Builder buildRuleId(String buildRuleId) {
             this.putQueryParameter("BuildRuleId", buildRuleId);
@@ -157,6 +166,7 @@ public class GetArtifactBuildRuleRequest extends Request {
         }
 
         /**
+         * <p>The ID of the Container Registry instance.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -169,7 +179,13 @@ public class GetArtifactBuildRuleRequest extends Request {
         }
 
         /**
-         * ScopeId.
+         * <p>The ID of the effective range of the artifact building rule.</p>
+         * <ul>
+         * <li>Set the value to the ID of the image repository.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>crr-8dz3aedjqlmk****</p>
          */
         public Builder scopeId(String scopeId) {
             this.putQueryParameter("ScopeId", scopeId);
@@ -178,7 +194,13 @@ public class GetArtifactBuildRuleRequest extends Request {
         }
 
         /**
-         * ScopeType.
+         * <p>The effective range of the artifact building rule. Valid values:</p>
+         * <ul>
+         * <li><code>REPOSITORY</code>: The artifact building rule is effective in the repository level.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>REPOSITORY</p>
          */
         public Builder scopeType(String scopeType) {
             this.putQueryParameter("ScopeType", scopeType);

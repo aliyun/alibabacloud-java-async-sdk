@@ -53,6 +53,9 @@ public class GetArtifactSubscriptionRuleResponseBody extends TeaModel {
     @com.aliyun.core.annotation.NameInMap("RuleId")
     private String ruleId;
 
+    @com.aliyun.core.annotation.NameInMap("SourceDomain")
+    private String sourceDomain;
+
     @com.aliyun.core.annotation.NameInMap("SourceNamespaceName")
     private String sourceNamespaceName;
 
@@ -81,6 +84,7 @@ public class GetArtifactSubscriptionRuleResponseBody extends TeaModel {
         this.repoName = builder.repoName;
         this.requestId = builder.requestId;
         this.ruleId = builder.ruleId;
+        this.sourceDomain = builder.sourceDomain;
         this.sourceNamespaceName = builder.sourceNamespaceName;
         this.sourceProvider = builder.sourceProvider;
         this.sourceRepoName = builder.sourceRepoName;
@@ -185,6 +189,13 @@ public class GetArtifactSubscriptionRuleResponseBody extends TeaModel {
     }
 
     /**
+     * @return sourceDomain
+     */
+    public String getSourceDomain() {
+        return this.sourceDomain;
+    }
+
+    /**
      * @return sourceNamespaceName
      */
     public String getSourceNamespaceName() {
@@ -232,6 +243,7 @@ public class GetArtifactSubscriptionRuleResponseBody extends TeaModel {
         private String repoName; 
         private String requestId; 
         private String ruleId; 
+        private String sourceDomain; 
         private String sourceNamespaceName; 
         private String sourceProvider; 
         private String sourceRepoName; 
@@ -254,6 +266,7 @@ public class GetArtifactSubscriptionRuleResponseBody extends TeaModel {
             this.repoName = model.repoName;
             this.requestId = model.requestId;
             this.ruleId = model.ruleId;
+            this.sourceDomain = model.sourceDomain;
             this.sourceNamespaceName = model.sourceNamespaceName;
             this.sourceProvider = model.sourceProvider;
             this.sourceRepoName = model.sourceRepoName;
@@ -391,6 +404,14 @@ public class GetArtifactSubscriptionRuleResponseBody extends TeaModel {
          */
         public Builder ruleId(String ruleId) {
             this.ruleId = ruleId;
+            return this;
+        }
+
+        /**
+         * SourceDomain.
+         */
+        public Builder sourceDomain(String sourceDomain) {
+            this.sourceDomain = sourceDomain;
             return this;
         }
 

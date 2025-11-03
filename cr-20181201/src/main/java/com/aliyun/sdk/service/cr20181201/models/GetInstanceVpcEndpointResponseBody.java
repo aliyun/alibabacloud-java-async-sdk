@@ -181,7 +181,7 @@ public class GetInstanceVpcEndpointResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The VPCs that are added to the access control list.</p>
+         * <p>List of linked VPCs</p>
          */
         public Builder linkedVpcs(java.util.List<LinkedVpcs> linkedVpcs) {
             this.linkedVpcs = linkedVpcs;
@@ -347,7 +347,10 @@ public class GetInstanceVpcEndpointResponseBody extends TeaModel {
             }
 
             /**
-             * Issue.
+             * <p>The error message detected in the linked VPC access control.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>PRIVATE_ZONE_CONFLICT_AT_{private_zone_id}</p>
              */
             public Builder issue(String issue) {
                 this.issue = issue;
