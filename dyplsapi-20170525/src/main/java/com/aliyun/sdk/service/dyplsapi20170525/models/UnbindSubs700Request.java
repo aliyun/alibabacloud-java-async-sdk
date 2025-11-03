@@ -18,6 +18,14 @@ import com.aliyun.sdk.gateway.pop.models.*;
  */
 public class UnbindSubs700Request extends Request {
     @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("IndustrialId")
+    private String industrialId;
+
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("OrderId")
+    private String orderId;
+
+    @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("OwnerId")
     private Long ownerId;
 
@@ -46,6 +54,8 @@ public class UnbindSubs700Request extends Request {
 
     private UnbindSubs700Request(Builder builder) {
         super(builder);
+        this.industrialId = builder.industrialId;
+        this.orderId = builder.orderId;
         this.ownerId = builder.ownerId;
         this.poolKey = builder.poolKey;
         this.resourceOwnerAccount = builder.resourceOwnerAccount;
@@ -65,6 +75,20 @@ public class UnbindSubs700Request extends Request {
 @Override
     public Builder toBuilder() {
         return new Builder(this);
+    }
+
+    /**
+     * @return industrialId
+     */
+    public String getIndustrialId() {
+        return this.industrialId;
+    }
+
+    /**
+     * @return orderId
+     */
+    public String getOrderId() {
+        return this.orderId;
     }
 
     /**
@@ -110,6 +134,8 @@ public class UnbindSubs700Request extends Request {
     }
 
     public static final class Builder extends Request.Builder<UnbindSubs700Request, Builder> {
+        private String industrialId; 
+        private String orderId; 
         private Long ownerId; 
         private String poolKey; 
         private String resourceOwnerAccount; 
@@ -123,6 +149,8 @@ public class UnbindSubs700Request extends Request {
 
         private Builder(UnbindSubs700Request request) {
             super(request);
+            this.industrialId = request.industrialId;
+            this.orderId = request.orderId;
             this.ownerId = request.ownerId;
             this.poolKey = request.poolKey;
             this.resourceOwnerAccount = request.resourceOwnerAccount;
@@ -130,6 +158,24 @@ public class UnbindSubs700Request extends Request {
             this.subsId = request.subsId;
             this.telX = request.telX;
         } 
+
+        /**
+         * IndustrialId.
+         */
+        public Builder industrialId(String industrialId) {
+            this.putQueryParameter("IndustrialId", industrialId);
+            this.industrialId = industrialId;
+            return this;
+        }
+
+        /**
+         * OrderId.
+         */
+        public Builder orderId(String orderId) {
+            this.putQueryParameter("OrderId", orderId);
+            this.orderId = orderId;
+            return this;
+        }
 
         /**
          * OwnerId.
