@@ -413,6 +413,9 @@ public class ListConnectorsResponseBody extends TeaModel {
      * <p>ListConnectorsResponseBody</p>
      */
     public static class Connectors extends TeaModel {
+        @com.aliyun.core.annotation.NameInMap("AccelerateStatus")
+        private String accelerateStatus;
+
         @com.aliyun.core.annotation.NameInMap("Applications")
         private java.util.List<Applications> applications;
 
@@ -447,6 +450,7 @@ public class ListConnectorsResponseBody extends TeaModel {
         private UpgradeTime upgradeTime;
 
         private Connectors(Builder builder) {
+            this.accelerateStatus = builder.accelerateStatus;
             this.applications = builder.applications;
             this.clusterIP = builder.clusterIP;
             this.clusterPort = builder.clusterPort;
@@ -466,6 +470,13 @@ public class ListConnectorsResponseBody extends TeaModel {
 
         public static Connectors create() {
             return builder().build();
+        }
+
+        /**
+         * @return accelerateStatus
+         */
+        public String getAccelerateStatus() {
+            return this.accelerateStatus;
         }
 
         /**
@@ -546,6 +557,7 @@ public class ListConnectorsResponseBody extends TeaModel {
         }
 
         public static final class Builder {
+            private String accelerateStatus; 
             private java.util.List<Applications> applications; 
             private String clusterIP; 
             private String clusterPort; 
@@ -562,6 +574,7 @@ public class ListConnectorsResponseBody extends TeaModel {
             } 
 
             private Builder(Connectors model) {
+                this.accelerateStatus = model.accelerateStatus;
                 this.applications = model.applications;
                 this.clusterIP = model.clusterIP;
                 this.clusterPort = model.clusterPort;
@@ -574,6 +587,14 @@ public class ListConnectorsResponseBody extends TeaModel {
                 this.switchStatus = model.switchStatus;
                 this.upgradeTime = model.upgradeTime;
             } 
+
+            /**
+             * AccelerateStatus.
+             */
+            public Builder accelerateStatus(String accelerateStatus) {
+                this.accelerateStatus = accelerateStatus;
+                return this;
+            }
 
             /**
              * <p>Collection of associated internal network access applications.</p>

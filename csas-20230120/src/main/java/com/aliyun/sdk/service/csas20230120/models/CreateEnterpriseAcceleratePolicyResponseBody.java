@@ -17,10 +17,14 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>CreateEnterpriseAcceleratePolicyResponseBody</p>
  */
 public class CreateEnterpriseAcceleratePolicyResponseBody extends TeaModel {
+    @com.aliyun.core.annotation.NameInMap("EapId")
+    private String eapId;
+
     @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
     private CreateEnterpriseAcceleratePolicyResponseBody(Builder builder) {
+        this.eapId = builder.eapId;
         this.requestId = builder.requestId;
     }
 
@@ -37,6 +41,13 @@ public class CreateEnterpriseAcceleratePolicyResponseBody extends TeaModel {
     }
 
     /**
+     * @return eapId
+     */
+    public String getEapId() {
+        return this.eapId;
+    }
+
+    /**
      * @return requestId
      */
     public String getRequestId() {
@@ -44,14 +55,24 @@ public class CreateEnterpriseAcceleratePolicyResponseBody extends TeaModel {
     }
 
     public static final class Builder {
+        private String eapId; 
         private String requestId; 
 
         private Builder() {
         } 
 
         private Builder(CreateEnterpriseAcceleratePolicyResponseBody model) {
+            this.eapId = model.eapId;
             this.requestId = model.requestId;
         } 
+
+        /**
+         * EapId.
+         */
+        public Builder eapId(String eapId) {
+            this.eapId = eapId;
+            return this;
+        }
 
         /**
          * RequestId.
