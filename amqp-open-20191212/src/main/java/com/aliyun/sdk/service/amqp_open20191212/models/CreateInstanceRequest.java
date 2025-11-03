@@ -115,6 +115,10 @@ public class CreateInstanceRequest extends Request {
     private Boolean supportTracing;
 
     @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Tags")
+    private java.util.List<Tags> tags;
+
+    @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("TracingStorageTime")
     private Integer tracingStorageTime;
 
@@ -144,6 +148,7 @@ public class CreateInstanceRequest extends Request {
         this.storageSize = builder.storageSize;
         this.supportEip = builder.supportEip;
         this.supportTracing = builder.supportTracing;
+        this.tags = builder.tags;
         this.tracingStorageTime = builder.tracingStorageTime;
     }
 
@@ -329,6 +334,13 @@ public class CreateInstanceRequest extends Request {
     }
 
     /**
+     * @return tags
+     */
+    public java.util.List<Tags> getTags() {
+        return this.tags;
+    }
+
+    /**
      * @return tracingStorageTime
      */
     public Integer getTracingStorageTime() {
@@ -360,6 +372,7 @@ public class CreateInstanceRequest extends Request {
         private Integer storageSize; 
         private Boolean supportEip; 
         private Boolean supportTracing; 
+        private java.util.List<Tags> tags; 
         private Integer tracingStorageTime; 
 
         private Builder() {
@@ -392,6 +405,7 @@ public class CreateInstanceRequest extends Request {
             this.storageSize = request.storageSize;
             this.supportEip = request.supportEip;
             this.supportTracing = request.supportTracing;
+            this.tags = request.tags;
             this.tracingStorageTime = request.tracingStorageTime;
         } 
 
@@ -750,6 +764,16 @@ public class CreateInstanceRequest extends Request {
         }
 
         /**
+         * Tags.
+         */
+        public Builder tags(java.util.List<Tags> tags) {
+            String tagsShrink = shrink(tags, "Tags", "json");
+            this.putQueryParameter("Tags", tagsShrink);
+            this.tags = tags;
+            return this;
+        }
+
+        /**
          * <p>The retention period of messages. Unit: days. Valid values:</p>
          * <ul>
          * <li>3</li>
@@ -774,4 +798,79 @@ public class CreateInstanceRequest extends Request {
 
     } 
 
+    /**
+     * 
+     * {@link CreateInstanceRequest} extends {@link TeaModel}
+     *
+     * <p>CreateInstanceRequest</p>
+     */
+    public static class Tags extends TeaModel {
+        @com.aliyun.core.annotation.NameInMap("Key")
+        private String key;
+
+        @com.aliyun.core.annotation.NameInMap("Value")
+        private String value;
+
+        private Tags(Builder builder) {
+            this.key = builder.key;
+            this.value = builder.value;
+        }
+
+        public static Builder builder() {
+            return new Builder();
+        }
+
+        public static Tags create() {
+            return builder().build();
+        }
+
+        /**
+         * @return key
+         */
+        public String getKey() {
+            return this.key;
+        }
+
+        /**
+         * @return value
+         */
+        public String getValue() {
+            return this.value;
+        }
+
+        public static final class Builder {
+            private String key; 
+            private String value; 
+
+            private Builder() {
+            } 
+
+            private Builder(Tags model) {
+                this.key = model.key;
+                this.value = model.value;
+            } 
+
+            /**
+             * Key.
+             */
+            public Builder key(String key) {
+                this.key = key;
+                return this;
+            }
+
+            /**
+             * Value.
+             */
+            public Builder value(String value) {
+                this.value = value;
+                return this;
+            }
+
+            public Tags build() {
+                return new Tags(this);
+            } 
+
+        } 
+
+    }
 }
