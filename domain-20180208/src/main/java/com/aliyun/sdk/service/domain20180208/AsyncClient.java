@@ -235,4 +235,16 @@ public interface AsyncClient extends SdkAutoCloseable {
      */
     CompletableFuture<UpdatePartnerReservePriceResponse> updatePartnerReservePrice(UpdatePartnerReservePriceRequest request);
 
+    /**
+     * @param request the request parameters of WebsiteAddDnsRecord  WebsiteAddDnsRecordRequest
+     * @return WebsiteAddDnsRecordResponse
+     */
+    CompletableFuture<WebsiteAddDnsRecordResponse> websiteAddDnsRecord(WebsiteAddDnsRecordRequest request);
+
+    /**
+     * @param request the request parameters of WebsiteDeleteDnsRecord  WebsiteDeleteDnsRecordRequest
+     * @return WebsiteDeleteDnsRecordResponse
+     */
+    CompletableFuture<WebsiteDeleteDnsRecordResponse> websiteDeleteDnsRecord(WebsiteDeleteDnsRecordRequest request);
+
 }
