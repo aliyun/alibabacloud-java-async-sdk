@@ -50,6 +50,9 @@ public class HttpApiApiInfo extends TeaModel {
     @com.aliyun.core.annotation.NameInMap("ingressInfo")
     private IngressInfo ingressInfo;
 
+    @com.aliyun.core.annotation.NameInMap("modelCategory")
+    private String modelCategory;
+
     @com.aliyun.core.annotation.NameInMap("name")
     private String name;
 
@@ -77,6 +80,7 @@ public class HttpApiApiInfo extends TeaModel {
         this.gatewayId = builder.gatewayId;
         this.httpApiId = builder.httpApiId;
         this.ingressInfo = builder.ingressInfo;
+        this.modelCategory = builder.modelCategory;
         this.name = builder.name;
         this.protocols = builder.protocols;
         this.resourceGroupId = builder.resourceGroupId;
@@ -174,6 +178,13 @@ public class HttpApiApiInfo extends TeaModel {
     }
 
     /**
+     * @return modelCategory
+     */
+    public String getModelCategory() {
+        return this.modelCategory;
+    }
+
+    /**
      * @return name
      */
     public String getName() {
@@ -220,6 +231,7 @@ public class HttpApiApiInfo extends TeaModel {
         private String gatewayId; 
         private String httpApiId; 
         private IngressInfo ingressInfo; 
+        private String modelCategory; 
         private String name; 
         private java.util.List<String> protocols; 
         private String resourceGroupId; 
@@ -241,6 +253,7 @@ public class HttpApiApiInfo extends TeaModel {
             this.gatewayId = model.gatewayId;
             this.httpApiId = model.httpApiId;
             this.ingressInfo = model.ingressInfo;
+            this.modelCategory = model.modelCategory;
             this.name = model.name;
             this.protocols = model.protocols;
             this.resourceGroupId = model.resourceGroupId;
@@ -333,6 +346,14 @@ public class HttpApiApiInfo extends TeaModel {
          */
         public Builder ingressInfo(IngressInfo ingressInfo) {
             this.ingressInfo = ingressInfo;
+            return this;
+        }
+
+        /**
+         * modelCategory.
+         */
+        public Builder modelCategory(String modelCategory) {
+            this.modelCategory = modelCategory;
             return this;
         }
 

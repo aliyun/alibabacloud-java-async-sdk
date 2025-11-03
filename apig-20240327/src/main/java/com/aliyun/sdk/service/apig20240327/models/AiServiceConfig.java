@@ -17,6 +17,9 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>AiServiceConfig</p>
  */
 public class AiServiceConfig extends TeaModel {
+    @com.aliyun.core.annotation.NameInMap("ApiKeyGenerateMode")
+    private String apiKeyGenerateMode;
+
     @com.aliyun.core.annotation.NameInMap("address")
     private String address;
 
@@ -39,6 +42,7 @@ public class AiServiceConfig extends TeaModel {
     private String provider;
 
     private AiServiceConfig(Builder builder) {
+        this.apiKeyGenerateMode = builder.apiKeyGenerateMode;
         this.address = builder.address;
         this.apiKeys = builder.apiKeys;
         this.bedrockServiceConfig = builder.bedrockServiceConfig;
@@ -58,6 +62,13 @@ public class AiServiceConfig extends TeaModel {
 
     public Builder toBuilder() {
         return new Builder(this);
+    }
+
+    /**
+     * @return apiKeyGenerateMode
+     */
+    public String getApiKeyGenerateMode() {
+        return this.apiKeyGenerateMode;
     }
 
     /**
@@ -110,6 +121,7 @@ public class AiServiceConfig extends TeaModel {
     }
 
     public static final class Builder {
+        private String apiKeyGenerateMode; 
         private String address; 
         private java.util.List<String> apiKeys; 
         private BedrockServiceConfig bedrockServiceConfig; 
@@ -122,6 +134,7 @@ public class AiServiceConfig extends TeaModel {
         } 
 
         private Builder(AiServiceConfig model) {
+            this.apiKeyGenerateMode = model.apiKeyGenerateMode;
             this.address = model.address;
             this.apiKeys = model.apiKeys;
             this.bedrockServiceConfig = model.bedrockServiceConfig;
@@ -130,6 +143,14 @@ public class AiServiceConfig extends TeaModel {
             this.protocols = model.protocols;
             this.provider = model.provider;
         } 
+
+        /**
+         * ApiKeyGenerateMode.
+         */
+        public Builder apiKeyGenerateMode(String apiKeyGenerateMode) {
+            this.apiKeyGenerateMode = apiKeyGenerateMode;
+            return this;
+        }
 
         /**
          * address.

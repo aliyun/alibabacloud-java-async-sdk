@@ -20,6 +20,9 @@ public class HttpRoute extends TeaModel {
     @com.aliyun.core.annotation.NameInMap("backend")
     private Backend backend;
 
+    @com.aliyun.core.annotation.NameInMap("builtin")
+    private String builtin;
+
     @com.aliyun.core.annotation.NameInMap("createTimestamp")
     private Long createTimestamp;
 
@@ -55,6 +58,7 @@ public class HttpRoute extends TeaModel {
 
     private HttpRoute(Builder builder) {
         this.backend = builder.backend;
+        this.builtin = builder.builtin;
         this.createTimestamp = builder.createTimestamp;
         this.deployStatus = builder.deployStatus;
         this.description = builder.description;
@@ -85,6 +89,13 @@ public class HttpRoute extends TeaModel {
      */
     public Backend getBackend() {
         return this.backend;
+    }
+
+    /**
+     * @return builtin
+     */
+    public String getBuiltin() {
+        return this.builtin;
     }
 
     /**
@@ -166,6 +177,7 @@ public class HttpRoute extends TeaModel {
 
     public static final class Builder {
         private Backend backend; 
+        private String builtin; 
         private Long createTimestamp; 
         private String deployStatus; 
         private String description; 
@@ -183,6 +195,7 @@ public class HttpRoute extends TeaModel {
 
         private Builder(HttpRoute model) {
             this.backend = model.backend;
+            this.builtin = model.builtin;
             this.createTimestamp = model.createTimestamp;
             this.deployStatus = model.deployStatus;
             this.description = model.description;
@@ -201,6 +214,14 @@ public class HttpRoute extends TeaModel {
          */
         public Builder backend(Backend backend) {
             this.backend = backend;
+            return this;
+        }
+
+        /**
+         * builtin.
+         */
+        public Builder builtin(String builtin) {
+            this.builtin = builtin;
             return this;
         }
 
