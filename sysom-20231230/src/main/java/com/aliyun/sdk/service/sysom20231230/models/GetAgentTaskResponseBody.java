@@ -299,11 +299,15 @@ public class GetAgentTaskResponseBody extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("jobs")
         private java.util.List<Jobs> jobs;
 
+        @com.aliyun.core.annotation.NameInMap("status")
+        private String status;
+
         @com.aliyun.core.annotation.NameInMap("task_id")
         private String taskId;
 
         private Data(Builder builder) {
             this.jobs = builder.jobs;
+            this.status = builder.status;
             this.taskId = builder.taskId;
         }
 
@@ -323,6 +327,13 @@ public class GetAgentTaskResponseBody extends TeaModel {
         }
 
         /**
+         * @return status
+         */
+        public String getStatus() {
+            return this.status;
+        }
+
+        /**
          * @return taskId
          */
         public String getTaskId() {
@@ -331,6 +342,7 @@ public class GetAgentTaskResponseBody extends TeaModel {
 
         public static final class Builder {
             private java.util.List<Jobs> jobs; 
+            private String status; 
             private String taskId; 
 
             private Builder() {
@@ -338,6 +350,7 @@ public class GetAgentTaskResponseBody extends TeaModel {
 
             private Builder(Data model) {
                 this.jobs = model.jobs;
+                this.status = model.status;
                 this.taskId = model.taskId;
             } 
 
@@ -346,6 +359,14 @@ public class GetAgentTaskResponseBody extends TeaModel {
              */
             public Builder jobs(java.util.List<Jobs> jobs) {
                 this.jobs = jobs;
+                return this;
+            }
+
+            /**
+             * status.
+             */
+            public Builder status(String status) {
+                this.status = status;
                 return this;
             }
 

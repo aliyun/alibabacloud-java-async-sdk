@@ -32,6 +32,18 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<CheckInstanceSupportResponse> checkInstanceSupport(CheckInstanceSupportRequest request);
 
     /**
+     * @param request the request parameters of CreateAlertStrategy  CreateAlertStrategyRequest
+     * @return CreateAlertStrategyResponse
+     */
+    CompletableFuture<CreateAlertStrategyResponse> createAlertStrategy(CreateAlertStrategyRequest request);
+
+    /**
+     * @param request the request parameters of DeleteAlertStrategy  DeleteAlertStrategyRequest
+     * @return DeleteAlertStrategyResponse
+     */
+    CompletableFuture<DeleteAlertStrategyResponse> deleteAlertStrategy(DeleteAlertStrategyRequest request);
+
+    /**
      * @param request the request parameters of GenerateCopilotResponse  GenerateCopilotResponseRequest
      * @return GenerateCopilotResponseResponse
      */
@@ -68,6 +80,12 @@ public interface AsyncClient extends SdkAutoCloseable {
      * @return GetAgentTaskResponse
      */
     CompletableFuture<GetAgentTaskResponse> getAgentTask(GetAgentTaskRequest request);
+
+    /**
+     * @param request the request parameters of GetAlertStrategy  GetAlertStrategyRequest
+     * @return GetAlertStrategyResponse
+     */
+    CompletableFuture<GetAlertStrategyResponse> getAlertStrategy(GetAlertStrategyRequest request);
 
     /**
      * @param request the request parameters of GetCopilotHistory  GetCopilotHistoryRequest
@@ -214,6 +232,24 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<ListAgentsResponse> listAgents(ListAgentsRequest request);
 
     /**
+     * @param request the request parameters of ListAlertItems  ListAlertItemsRequest
+     * @return ListAlertItemsResponse
+     */
+    CompletableFuture<ListAlertItemsResponse> listAlertItems(ListAlertItemsRequest request);
+
+    /**
+     * @param request the request parameters of ListAlertStrategies  ListAlertStrategiesRequest
+     * @return ListAlertStrategiesResponse
+     */
+    CompletableFuture<ListAlertStrategiesResponse> listAlertStrategies(ListAlertStrategiesRequest request);
+
+    /**
+     * @param request the request parameters of ListAllInstances  ListAllInstancesRequest
+     * @return ListAllInstancesResponse
+     */
+    CompletableFuture<ListAllInstancesResponse> listAllInstances(ListAllInstancesRequest request);
+
+    /**
      * @param request the request parameters of ListClusterAgentInstallRecords  ListClusterAgentInstallRecordsRequest
      * @return ListClusterAgentInstallRecordsResponse
      */
@@ -302,6 +338,18 @@ public interface AsyncClient extends SdkAutoCloseable {
      * @return UninstallAgentForClusterResponse
      */
     CompletableFuture<UninstallAgentForClusterResponse> uninstallAgentForCluster(UninstallAgentForClusterRequest request);
+
+    /**
+     * @param request the request parameters of UpdateAlertEnabled  UpdateAlertEnabledRequest
+     * @return UpdateAlertEnabledResponse
+     */
+    CompletableFuture<UpdateAlertEnabledResponse> updateAlertEnabled(UpdateAlertEnabledRequest request);
+
+    /**
+     * @param request the request parameters of UpdateAlertStrategy  UpdateAlertStrategyRequest
+     * @return UpdateAlertStrategyResponse
+     */
+    CompletableFuture<UpdateAlertStrategyResponse> updateAlertStrategy(UpdateAlertStrategyRequest request);
 
     /**
      * @param request the request parameters of UpdateEventsAttention  UpdateEventsAttentionRequest

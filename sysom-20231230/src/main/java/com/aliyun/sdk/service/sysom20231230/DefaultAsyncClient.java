@@ -77,6 +77,42 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
+     * @param request the request parameters of CreateAlertStrategy  CreateAlertStrategyRequest
+     * @return CreateAlertStrategyResponse
+     */
+    @Override
+    public CompletableFuture<CreateAlertStrategyResponse> createAlertStrategy(CreateAlertStrategyRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RESTFUL).setAction("CreateAlertStrategy").setMethod(HttpMethod.POST).setPathRegex("/api/v1/alertPusher/alert/createStrategy").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(CreateAlertStrategyResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<CreateAlertStrategyResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
+     * @param request the request parameters of DeleteAlertStrategy  DeleteAlertStrategyRequest
+     * @return DeleteAlertStrategyResponse
+     */
+    @Override
+    public CompletableFuture<DeleteAlertStrategyResponse> deleteAlertStrategy(DeleteAlertStrategyRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RESTFUL).setAction("DeleteAlertStrategy").setMethod(HttpMethod.DELETE).setPathRegex("/api/v1/alertPusher/alert/deleteStrategy").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(DeleteAlertStrategyResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<DeleteAlertStrategyResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
      * @param request the request parameters of GenerateCopilotResponse  GenerateCopilotResponseRequest
      * @return GenerateCopilotResponseResponse
      */
@@ -189,6 +225,24 @@ public final class DefaultAsyncClient implements AsyncClient {
             return this.handler.execute(params);
         } catch (Exception e) {
             CompletableFuture<GetAgentTaskResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
+     * @param request the request parameters of GetAlertStrategy  GetAlertStrategyRequest
+     * @return GetAlertStrategyResponse
+     */
+    @Override
+    public CompletableFuture<GetAlertStrategyResponse> getAlertStrategy(GetAlertStrategyRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RESTFUL).setAction("GetAlertStrategy").setMethod(HttpMethod.GET).setPathRegex("/api/v1/alertPusher/alert/getStrategy").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(GetAlertStrategyResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<GetAlertStrategyResponse> future = new CompletableFuture<>();
             future.completeExceptionally(e);
             return future;
         }
@@ -627,6 +681,60 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
+     * @param request the request parameters of ListAlertItems  ListAlertItemsRequest
+     * @return ListAlertItemsResponse
+     */
+    @Override
+    public CompletableFuture<ListAlertItemsResponse> listAlertItems(ListAlertItemsRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RESTFUL).setAction("ListAlertItems").setMethod(HttpMethod.GET).setPathRegex("/api/v1/alertPusher/alert/listItems").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(ListAlertItemsResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<ListAlertItemsResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
+     * @param request the request parameters of ListAlertStrategies  ListAlertStrategiesRequest
+     * @return ListAlertStrategiesResponse
+     */
+    @Override
+    public CompletableFuture<ListAlertStrategiesResponse> listAlertStrategies(ListAlertStrategiesRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RESTFUL).setAction("ListAlertStrategies").setMethod(HttpMethod.GET).setPathRegex("/api/v1/alertPusher/alert/listStrategies").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(ListAlertStrategiesResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<ListAlertStrategiesResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
+     * @param request the request parameters of ListAllInstances  ListAllInstancesRequest
+     * @return ListAllInstancesResponse
+     */
+    @Override
+    public CompletableFuture<ListAllInstancesResponse> listAllInstances(ListAllInstancesRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RESTFUL).setAction("ListAllInstances").setMethod(HttpMethod.GET).setPathRegex("/api/v1/am/instance/listAllInstances").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(ListAllInstancesResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<ListAllInstancesResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
      * @param request the request parameters of ListClusterAgentInstallRecords  ListClusterAgentInstallRecordsRequest
      * @return ListClusterAgentInstallRecordsResponse
      */
@@ -891,6 +999,42 @@ public final class DefaultAsyncClient implements AsyncClient {
             return this.handler.execute(params);
         } catch (Exception e) {
             CompletableFuture<UninstallAgentForClusterResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
+     * @param request the request parameters of UpdateAlertEnabled  UpdateAlertEnabledRequest
+     * @return UpdateAlertEnabledResponse
+     */
+    @Override
+    public CompletableFuture<UpdateAlertEnabledResponse> updateAlertEnabled(UpdateAlertEnabledRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RESTFUL).setAction("UpdateAlertEnabled").setMethod(HttpMethod.POST).setPathRegex("/api/v1/alertPusher/alert/updateEnabled").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(UpdateAlertEnabledResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<UpdateAlertEnabledResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
+     * @param request the request parameters of UpdateAlertStrategy  UpdateAlertStrategyRequest
+     * @return UpdateAlertStrategyResponse
+     */
+    @Override
+    public CompletableFuture<UpdateAlertStrategyResponse> updateAlertStrategy(UpdateAlertStrategyRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RESTFUL).setAction("UpdateAlertStrategy").setMethod(HttpMethod.POST).setPathRegex("/api/v1/alertPusher/alert/updateStrategy").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(UpdateAlertStrategyResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<UpdateAlertStrategyResponse> future = new CompletableFuture<>();
             future.completeExceptionally(e);
             return future;
         }
