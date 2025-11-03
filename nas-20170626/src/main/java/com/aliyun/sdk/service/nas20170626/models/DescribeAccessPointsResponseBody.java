@@ -354,6 +354,81 @@ public class DescribeAccessPointsResponseBody extends TeaModel {
      *
      * <p>DescribeAccessPointsResponseBody</p>
      */
+    public static class Tags extends TeaModel {
+        @com.aliyun.core.annotation.NameInMap("Key")
+        private String key;
+
+        @com.aliyun.core.annotation.NameInMap("Value")
+        private String value;
+
+        private Tags(Builder builder) {
+            this.key = builder.key;
+            this.value = builder.value;
+        }
+
+        public static Builder builder() {
+            return new Builder();
+        }
+
+        public static Tags create() {
+            return builder().build();
+        }
+
+        /**
+         * @return key
+         */
+        public String getKey() {
+            return this.key;
+        }
+
+        /**
+         * @return value
+         */
+        public String getValue() {
+            return this.value;
+        }
+
+        public static final class Builder {
+            private String key; 
+            private String value; 
+
+            private Builder() {
+            } 
+
+            private Builder(Tags model) {
+                this.key = model.key;
+                this.value = model.value;
+            } 
+
+            /**
+             * Key.
+             */
+            public Builder key(String key) {
+                this.key = key;
+                return this;
+            }
+
+            /**
+             * Value.
+             */
+            public Builder value(String value) {
+                this.value = value;
+                return this;
+            }
+
+            public Tags build() {
+                return new Tags(this);
+            } 
+
+        } 
+
+    }
+    /**
+     * 
+     * {@link DescribeAccessPointsResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeAccessPointsResponseBody</p>
+     */
     public static class AccessPoints extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("ARN")
         private String ARN;
@@ -397,6 +472,9 @@ public class DescribeAccessPointsResponseBody extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Status")
         private String status;
 
+        @com.aliyun.core.annotation.NameInMap("Tags")
+        private java.util.List<Tags> tags;
+
         @com.aliyun.core.annotation.NameInMap("VSwitchId")
         private String vSwitchId;
 
@@ -418,6 +496,7 @@ public class DescribeAccessPointsResponseBody extends TeaModel {
             this.rootPathPermission = builder.rootPathPermission;
             this.rootPathStatus = builder.rootPathStatus;
             this.status = builder.status;
+            this.tags = builder.tags;
             this.vSwitchId = builder.vSwitchId;
             this.vpcId = builder.vpcId;
         }
@@ -529,6 +608,13 @@ public class DescribeAccessPointsResponseBody extends TeaModel {
         }
 
         /**
+         * @return tags
+         */
+        public java.util.List<Tags> getTags() {
+            return this.tags;
+        }
+
+        /**
          * @return vSwitchId
          */
         public String getVSwitchId() {
@@ -557,6 +643,7 @@ public class DescribeAccessPointsResponseBody extends TeaModel {
             private RootPathPermission rootPathPermission; 
             private String rootPathStatus; 
             private String status; 
+            private java.util.List<Tags> tags; 
             private String vSwitchId; 
             private String vpcId; 
 
@@ -578,6 +665,7 @@ public class DescribeAccessPointsResponseBody extends TeaModel {
                 this.rootPathPermission = model.rootPathPermission;
                 this.rootPathStatus = model.rootPathStatus;
                 this.status = model.status;
+                this.tags = model.tags;
                 this.vSwitchId = model.vSwitchId;
                 this.vpcId = model.vpcId;
             } 
@@ -743,6 +831,14 @@ public class DescribeAccessPointsResponseBody extends TeaModel {
              */
             public Builder status(String status) {
                 this.status = status;
+                return this;
+            }
+
+            /**
+             * Tags.
+             */
+            public Builder tags(java.util.List<Tags> tags) {
+                this.tags = tags;
                 return this;
             }
 

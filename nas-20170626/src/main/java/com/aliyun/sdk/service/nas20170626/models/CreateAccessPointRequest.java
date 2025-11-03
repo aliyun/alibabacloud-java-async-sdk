@@ -64,6 +64,10 @@ public class CreateAccessPointRequest extends Request {
     private String rootDirectory;
 
     @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Tag")
+    private java.util.List<Tag> tag;
+
+    @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("VpcId")
     @com.aliyun.core.annotation.Validation(required = true)
     private String vpcId;
@@ -86,6 +90,7 @@ public class CreateAccessPointRequest extends Request {
         this.posixSecondaryGroupIds = builder.posixSecondaryGroupIds;
         this.posixUserId = builder.posixUserId;
         this.rootDirectory = builder.rootDirectory;
+        this.tag = builder.tag;
         this.vpcId = builder.vpcId;
         this.vswId = builder.vswId;
     }
@@ -181,6 +186,13 @@ public class CreateAccessPointRequest extends Request {
     }
 
     /**
+     * @return tag
+     */
+    public java.util.List<Tag> getTag() {
+        return this.tag;
+    }
+
+    /**
      * @return vpcId
      */
     public String getVpcId() {
@@ -206,6 +218,7 @@ public class CreateAccessPointRequest extends Request {
         private String posixSecondaryGroupIds; 
         private Integer posixUserId; 
         private String rootDirectory; 
+        private java.util.List<Tag> tag; 
         private String vpcId; 
         private String vswId; 
 
@@ -226,6 +239,7 @@ public class CreateAccessPointRequest extends Request {
             this.posixSecondaryGroupIds = request.posixSecondaryGroupIds;
             this.posixUserId = request.posixUserId;
             this.rootDirectory = request.rootDirectory;
+            this.tag = request.tag;
             this.vpcId = request.vpcId;
             this.vswId = request.vswId;
         } 
@@ -377,6 +391,15 @@ public class CreateAccessPointRequest extends Request {
         }
 
         /**
+         * Tag.
+         */
+        public Builder tag(java.util.List<Tag> tag) {
+            this.putQueryParameter("Tag", tag);
+            this.tag = tag;
+            return this;
+        }
+
+        /**
          * <p>The VPC ID.</p>
          * <p>This parameter is required.</p>
          * 
@@ -409,4 +432,79 @@ public class CreateAccessPointRequest extends Request {
 
     } 
 
+    /**
+     * 
+     * {@link CreateAccessPointRequest} extends {@link TeaModel}
+     *
+     * <p>CreateAccessPointRequest</p>
+     */
+    public static class Tag extends TeaModel {
+        @com.aliyun.core.annotation.NameInMap("Key")
+        private String key;
+
+        @com.aliyun.core.annotation.NameInMap("Value")
+        private String value;
+
+        private Tag(Builder builder) {
+            this.key = builder.key;
+            this.value = builder.value;
+        }
+
+        public static Builder builder() {
+            return new Builder();
+        }
+
+        public static Tag create() {
+            return builder().build();
+        }
+
+        /**
+         * @return key
+         */
+        public String getKey() {
+            return this.key;
+        }
+
+        /**
+         * @return value
+         */
+        public String getValue() {
+            return this.value;
+        }
+
+        public static final class Builder {
+            private String key; 
+            private String value; 
+
+            private Builder() {
+            } 
+
+            private Builder(Tag model) {
+                this.key = model.key;
+                this.value = model.value;
+            } 
+
+            /**
+             * Key.
+             */
+            public Builder key(String key) {
+                this.key = key;
+                return this;
+            }
+
+            /**
+             * Value.
+             */
+            public Builder value(String value) {
+                this.value = value;
+                return this;
+            }
+
+            public Tag build() {
+                return new Tag(this);
+            } 
+
+        } 
+
+    }
 }
