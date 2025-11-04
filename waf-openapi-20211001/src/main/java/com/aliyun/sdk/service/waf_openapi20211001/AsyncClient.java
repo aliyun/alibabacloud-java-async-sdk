@@ -119,12 +119,6 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<CreateMajorProtectionBlackIpResponse> createMajorProtectionBlackIp(CreateMajorProtectionBlackIpRequest request);
 
     /**
-     * @param request the request parameters of CreateMajorProtectionBlackIpV2  CreateMajorProtectionBlackIpV2Request
-     * @return CreateMajorProtectionBlackIpV2Response
-     */
-    CompletableFuture<CreateMajorProtectionBlackIpV2Response> createMajorProtectionBlackIpV2(CreateMajorProtectionBlackIpV2Request request);
-
-    /**
      * @param request the request parameters of CreateMemberAccounts  CreateMemberAccountsRequest
      * @return CreateMemberAccountsResponse
      */
@@ -273,6 +267,12 @@ public interface AsyncClient extends SdkAutoCloseable {
      * @return DescribeApisecAssetTrendResponse
      */
     CompletableFuture<DescribeApisecAssetTrendResponse> describeApisecAssetTrend(DescribeApisecAssetTrendRequest request);
+
+    /**
+     * @param request the request parameters of DescribeApisecEventDetail  DescribeApisecEventDetailRequest
+     * @return DescribeApisecEventDetailResponse
+     */
+    CompletableFuture<DescribeApisecEventDetailResponse> describeApisecEventDetail(DescribeApisecEventDetailRequest request);
 
     /**
      * @param request the request parameters of DescribeApisecEventDomainStatistic  DescribeApisecEventDomainStatisticRequest

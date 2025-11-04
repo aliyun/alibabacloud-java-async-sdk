@@ -108,6 +108,7 @@ public class DescribeUserEventTrendResponseBody extends TeaModel {
         private Long eventMedium;
 
         @com.aliyun.core.annotation.NameInMap("TimeStamp")
+        @Deprecated
         private Long timeStamp;
 
         @com.aliyun.core.annotation.NameInMap("Timestamp")

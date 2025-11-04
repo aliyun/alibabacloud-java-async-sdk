@@ -27,6 +27,10 @@ public class ModifyApisecEventsRequest extends Request {
     private java.util.List<String> eventIds;
 
     @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("EventScope")
+    private String eventScope;
+
+    @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("InstanceId")
     @com.aliyun.core.annotation.Validation(required = true)
     private String instanceId;
@@ -52,6 +56,7 @@ public class ModifyApisecEventsRequest extends Request {
         super(builder);
         this.clusterId = builder.clusterId;
         this.eventIds = builder.eventIds;
+        this.eventScope = builder.eventScope;
         this.instanceId = builder.instanceId;
         this.note = builder.note;
         this.regionId = builder.regionId;
@@ -84,6 +89,13 @@ public class ModifyApisecEventsRequest extends Request {
      */
     public java.util.List<String> getEventIds() {
         return this.eventIds;
+    }
+
+    /**
+     * @return eventScope
+     */
+    public String getEventScope() {
+        return this.eventScope;
     }
 
     /**
@@ -124,6 +136,7 @@ public class ModifyApisecEventsRequest extends Request {
     public static final class Builder extends Request.Builder<ModifyApisecEventsRequest, Builder> {
         private String clusterId; 
         private java.util.List<String> eventIds; 
+        private String eventScope; 
         private String instanceId; 
         private String note; 
         private String regionId; 
@@ -138,6 +151,7 @@ public class ModifyApisecEventsRequest extends Request {
             super(request);
             this.clusterId = request.clusterId;
             this.eventIds = request.eventIds;
+            this.eventScope = request.eventScope;
             this.instanceId = request.instanceId;
             this.note = request.note;
             this.regionId = request.regionId;
@@ -167,6 +181,15 @@ public class ModifyApisecEventsRequest extends Request {
         public Builder eventIds(java.util.List<String> eventIds) {
             this.putQueryParameter("EventIds", eventIds);
             this.eventIds = eventIds;
+            return this;
+        }
+
+        /**
+         * EventScope.
+         */
+        public Builder eventScope(String eventScope) {
+            this.putQueryParameter("EventScope", eventScope);
+            this.eventScope = eventScope;
             return this;
         }
 

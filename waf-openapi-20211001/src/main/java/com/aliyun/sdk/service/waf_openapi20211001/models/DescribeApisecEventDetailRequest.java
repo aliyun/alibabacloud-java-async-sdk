@@ -12,19 +12,23 @@ import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
  * 
- * {@link DeleteApisecEventsRequest} extends {@link RequestModel}
+ * {@link DescribeApisecEventDetailRequest} extends {@link RequestModel}
  *
- * <p>DeleteApisecEventsRequest</p>
+ * <p>DescribeApisecEventDetailRequest</p>
  */
-public class DeleteApisecEventsRequest extends Request {
+public class DescribeApisecEventDetailRequest extends Request {
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("ClusterId")
     private String clusterId;
 
     @com.aliyun.core.annotation.Query
-    @com.aliyun.core.annotation.NameInMap("EventIds")
+    @com.aliyun.core.annotation.NameInMap("DetailType")
+    private String detailType;
+
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("EventId")
     @com.aliyun.core.annotation.Validation(required = true)
-    private java.util.List<String> eventIds;
+    private String eventId;
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("EventScope")
@@ -43,10 +47,11 @@ public class DeleteApisecEventsRequest extends Request {
     @com.aliyun.core.annotation.NameInMap("ResourceManagerResourceGroupId")
     private String resourceManagerResourceGroupId;
 
-    private DeleteApisecEventsRequest(Builder builder) {
+    private DescribeApisecEventDetailRequest(Builder builder) {
         super(builder);
         this.clusterId = builder.clusterId;
-        this.eventIds = builder.eventIds;
+        this.detailType = builder.detailType;
+        this.eventId = builder.eventId;
         this.eventScope = builder.eventScope;
         this.instanceId = builder.instanceId;
         this.regionId = builder.regionId;
@@ -57,7 +62,7 @@ public class DeleteApisecEventsRequest extends Request {
         return new Builder();
     }
 
-    public static DeleteApisecEventsRequest create() {
+    public static DescribeApisecEventDetailRequest create() {
         return builder().build();
     }
 
@@ -74,10 +79,17 @@ public class DeleteApisecEventsRequest extends Request {
     }
 
     /**
-     * @return eventIds
+     * @return detailType
      */
-    public java.util.List<String> getEventIds() {
-        return this.eventIds;
+    public String getDetailType() {
+        return this.detailType;
+    }
+
+    /**
+     * @return eventId
+     */
+    public String getEventId() {
+        return this.eventId;
     }
 
     /**
@@ -108,9 +120,10 @@ public class DeleteApisecEventsRequest extends Request {
         return this.resourceManagerResourceGroupId;
     }
 
-    public static final class Builder extends Request.Builder<DeleteApisecEventsRequest, Builder> {
+    public static final class Builder extends Request.Builder<DescribeApisecEventDetailRequest, Builder> {
         private String clusterId; 
-        private java.util.List<String> eventIds; 
+        private String detailType; 
+        private String eventId; 
         private String eventScope; 
         private String instanceId; 
         private String regionId; 
@@ -120,10 +133,11 @@ public class DeleteApisecEventsRequest extends Request {
             super();
         } 
 
-        private Builder(DeleteApisecEventsRequest request) {
+        private Builder(DescribeApisecEventDetailRequest request) {
             super(request);
             this.clusterId = request.clusterId;
-            this.eventIds = request.eventIds;
+            this.detailType = request.detailType;
+            this.eventId = request.eventId;
             this.eventScope = request.eventScope;
             this.instanceId = request.instanceId;
             this.regionId = request.regionId;
@@ -131,13 +145,7 @@ public class DeleteApisecEventsRequest extends Request {
         } 
 
         /**
-         * <p>The ID of the hybrid cloud cluster.</p>
-         * <blockquote>
-         * <p>For hybrid cloud scenarios only, you can call the <a href="https://help.aliyun.com/document_detail/2849376.html">DescribeHybridCloudClusters</a> operation to query the hybrid cloud clusters.</p>
-         * </blockquote>
-         * 
-         * <strong>example:</strong>
-         * <p>428</p>
+         * ClusterId.
          */
         public Builder clusterId(String clusterId) {
             this.putQueryParameter("ClusterId", clusterId);
@@ -146,12 +154,23 @@ public class DeleteApisecEventsRequest extends Request {
         }
 
         /**
-         * <p>The IDs of the security events.</p>
-         * <p>This parameter is required.</p>
+         * DetailType.
          */
-        public Builder eventIds(java.util.List<String> eventIds) {
-            this.putQueryParameter("EventIds", eventIds);
-            this.eventIds = eventIds;
+        public Builder detailType(String detailType) {
+            this.putQueryParameter("DetailType", detailType);
+            this.detailType = detailType;
+            return this;
+        }
+
+        /**
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>18ba94fea9***e66ba0557b7b91</p>
+         */
+        public Builder eventId(String eventId) {
+            this.putQueryParameter("EventId", eventId);
+            this.eventId = eventId;
             return this;
         }
 
@@ -165,14 +184,10 @@ public class DeleteApisecEventsRequest extends Request {
         }
 
         /**
-         * <p>The ID of the Web Application Firewall (WAF) instance.</p>
-         * <blockquote>
-         * <p> You can call the <a href="https://help.aliyun.com/document_detail/433756.html">DescribeInstance</a> operation to query the ID of the WAF instance.</p>
-         * </blockquote>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
-         * <p>waf_v3prepaid_public_cn-g4t*****</p>
+         * <p>waf_elasticity-cn-0xldbqtm005</p>
          */
         public Builder instanceId(String instanceId) {
             this.putQueryParameter("InstanceId", instanceId);
@@ -181,14 +196,7 @@ public class DeleteApisecEventsRequest extends Request {
         }
 
         /**
-         * <p>The region in which the WAF instance is deployed. Valid values:</p>
-         * <ul>
-         * <li><strong>cn-hangzhou</strong>: the Chinese mainland.</li>
-         * <li><strong>ap-southeast-1</strong>: outside the Chinese mainland.</li>
-         * </ul>
-         * 
-         * <strong>example:</strong>
-         * <p>cn-hangzhou</p>
+         * RegionId.
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);
@@ -197,10 +205,7 @@ public class DeleteApisecEventsRequest extends Request {
         }
 
         /**
-         * <p>阿里云资源组ID。</p>
-         * 
-         * <strong>example:</strong>
-         * <p>rg-acfm***q</p>
+         * ResourceManagerResourceGroupId.
          */
         public Builder resourceManagerResourceGroupId(String resourceManagerResourceGroupId) {
             this.putQueryParameter("ResourceManagerResourceGroupId", resourceManagerResourceGroupId);
@@ -209,8 +214,8 @@ public class DeleteApisecEventsRequest extends Request {
         }
 
         @Override
-        public DeleteApisecEventsRequest build() {
-            return new DeleteApisecEventsRequest(this);
+        public DescribeApisecEventDetailRequest build() {
+            return new DescribeApisecEventDetailRequest(this);
         } 
 
     } 

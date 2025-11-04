@@ -26,6 +26,10 @@ public class DescribeUserEventTypeRequest extends Request {
     private Long endTime;
 
     @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("EventScope")
+    private String eventScope;
+
+    @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("InstanceId")
     @com.aliyun.core.annotation.Validation(required = true)
     private String instanceId;
@@ -50,6 +54,7 @@ public class DescribeUserEventTypeRequest extends Request {
         super(builder);
         this.clusterId = builder.clusterId;
         this.endTime = builder.endTime;
+        this.eventScope = builder.eventScope;
         this.instanceId = builder.instanceId;
         this.regionId = builder.regionId;
         this.resourceManagerResourceGroupId = builder.resourceManagerResourceGroupId;
@@ -82,6 +87,13 @@ public class DescribeUserEventTypeRequest extends Request {
      */
     public Long getEndTime() {
         return this.endTime;
+    }
+
+    /**
+     * @return eventScope
+     */
+    public String getEventScope() {
+        return this.eventScope;
     }
 
     /**
@@ -122,6 +134,7 @@ public class DescribeUserEventTypeRequest extends Request {
     public static final class Builder extends Request.Builder<DescribeUserEventTypeRequest, Builder> {
         private String clusterId; 
         private Long endTime; 
+        private String eventScope; 
         private String instanceId; 
         private String regionId; 
         private String resourceManagerResourceGroupId; 
@@ -136,6 +149,7 @@ public class DescribeUserEventTypeRequest extends Request {
             super(request);
             this.clusterId = request.clusterId;
             this.endTime = request.endTime;
+            this.eventScope = request.eventScope;
             this.instanceId = request.instanceId;
             this.regionId = request.regionId;
             this.resourceManagerResourceGroupId = request.resourceManagerResourceGroupId;
@@ -167,6 +181,15 @@ public class DescribeUserEventTypeRequest extends Request {
         public Builder endTime(Long endTime) {
             this.putQueryParameter("EndTime", endTime);
             this.endTime = endTime;
+            return this;
+        }
+
+        /**
+         * EventScope.
+         */
+        public Builder eventScope(String eventScope) {
+            this.putQueryParameter("EventScope", eventScope);
+            this.eventScope = eventScope;
             return this;
         }
 

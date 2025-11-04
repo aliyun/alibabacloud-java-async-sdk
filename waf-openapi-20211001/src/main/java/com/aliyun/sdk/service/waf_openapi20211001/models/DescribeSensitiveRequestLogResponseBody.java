@@ -122,6 +122,9 @@ public class DescribeSensitiveRequestLogResponseBody extends TeaModel {
      * <p>DescribeSensitiveRequestLogResponseBody</p>
      */
     public static class Data extends TeaModel {
+        @com.aliyun.core.annotation.NameInMap("Account")
+        private String account;
+
         @com.aliyun.core.annotation.NameInMap("ApiFormat")
         private String apiFormat;
 
@@ -150,6 +153,7 @@ public class DescribeSensitiveRequestLogResponseBody extends TeaModel {
         private String traceId;
 
         private Data(Builder builder) {
+            this.account = builder.account;
             this.apiFormat = builder.apiFormat;
             this.apiId = builder.apiId;
             this.clientIP = builder.clientIP;
@@ -167,6 +171,13 @@ public class DescribeSensitiveRequestLogResponseBody extends TeaModel {
 
         public static Data create() {
             return builder().build();
+        }
+
+        /**
+         * @return account
+         */
+        public String getAccount() {
+            return this.account;
         }
 
         /**
@@ -233,6 +244,7 @@ public class DescribeSensitiveRequestLogResponseBody extends TeaModel {
         }
 
         public static final class Builder {
+            private String account; 
             private String apiFormat; 
             private String apiId; 
             private String clientIP; 
@@ -247,6 +259,7 @@ public class DescribeSensitiveRequestLogResponseBody extends TeaModel {
             } 
 
             private Builder(Data model) {
+                this.account = model.account;
                 this.apiFormat = model.apiFormat;
                 this.apiId = model.apiId;
                 this.clientIP = model.clientIP;
@@ -257,6 +270,14 @@ public class DescribeSensitiveRequestLogResponseBody extends TeaModel {
                 this.sensitiveList = model.sensitiveList;
                 this.traceId = model.traceId;
             } 
+
+            /**
+             * Account.
+             */
+            public Builder account(String account) {
+                this.account = account;
+                return this;
+            }
 
             /**
              * <p>The API.</p>

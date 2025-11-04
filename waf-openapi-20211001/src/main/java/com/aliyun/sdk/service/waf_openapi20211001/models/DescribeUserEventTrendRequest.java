@@ -22,6 +22,10 @@ public class DescribeUserEventTrendRequest extends Request {
     private String clusterId;
 
     @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("EventScope")
+    private String eventScope;
+
+    @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("InstanceId")
     @com.aliyun.core.annotation.Validation(required = true)
     private String instanceId;
@@ -37,6 +41,7 @@ public class DescribeUserEventTrendRequest extends Request {
     private DescribeUserEventTrendRequest(Builder builder) {
         super(builder);
         this.clusterId = builder.clusterId;
+        this.eventScope = builder.eventScope;
         this.instanceId = builder.instanceId;
         this.regionId = builder.regionId;
         this.resourceManagerResourceGroupId = builder.resourceManagerResourceGroupId;
@@ -63,6 +68,13 @@ public class DescribeUserEventTrendRequest extends Request {
     }
 
     /**
+     * @return eventScope
+     */
+    public String getEventScope() {
+        return this.eventScope;
+    }
+
+    /**
      * @return instanceId
      */
     public String getInstanceId() {
@@ -85,6 +97,7 @@ public class DescribeUserEventTrendRequest extends Request {
 
     public static final class Builder extends Request.Builder<DescribeUserEventTrendRequest, Builder> {
         private String clusterId; 
+        private String eventScope; 
         private String instanceId; 
         private String regionId; 
         private String resourceManagerResourceGroupId; 
@@ -96,6 +109,7 @@ public class DescribeUserEventTrendRequest extends Request {
         private Builder(DescribeUserEventTrendRequest request) {
             super(request);
             this.clusterId = request.clusterId;
+            this.eventScope = request.eventScope;
             this.instanceId = request.instanceId;
             this.regionId = request.regionId;
             this.resourceManagerResourceGroupId = request.resourceManagerResourceGroupId;
@@ -113,6 +127,15 @@ public class DescribeUserEventTrendRequest extends Request {
         public Builder clusterId(String clusterId) {
             this.putQueryParameter("ClusterId", clusterId);
             this.clusterId = clusterId;
+            return this;
+        }
+
+        /**
+         * EventScope.
+         */
+        public Builder eventScope(String eventScope) {
+            this.putQueryParameter("EventScope", eventScope);
+            this.eventScope = eventScope;
             return this;
         }
 

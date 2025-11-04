@@ -149,6 +149,9 @@ public class DescribeApisecEventsResponseBody extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("AttackIps")
         private java.util.List<String> attackIps;
 
+        @com.aliyun.core.annotation.NameInMap("AttackerList")
+        private java.util.List<String> attackerList;
+
         @com.aliyun.core.annotation.NameInMap("EndTs")
         private Long endTs;
 
@@ -204,6 +207,7 @@ public class DescribeApisecEventsResponseBody extends TeaModel {
             this.attackIp = builder.attackIp;
             this.attackIpInfo = builder.attackIpInfo;
             this.attackIps = builder.attackIps;
+            this.attackerList = builder.attackerList;
             this.endTs = builder.endTs;
             this.eventId = builder.eventId;
             this.eventInfo = builder.eventInfo;
@@ -290,6 +294,13 @@ public class DescribeApisecEventsResponseBody extends TeaModel {
          */
         public java.util.List<String> getAttackIps() {
             return this.attackIps;
+        }
+
+        /**
+         * @return attackerList
+         */
+        public java.util.List<String> getAttackerList() {
+            return this.attackerList;
         }
 
         /**
@@ -407,6 +418,7 @@ public class DescribeApisecEventsResponseBody extends TeaModel {
             private String attackIp; 
             private String attackIpInfo; 
             private java.util.List<String> attackIps; 
+            private java.util.List<String> attackerList; 
             private Long endTs; 
             private String eventId; 
             private String eventInfo; 
@@ -436,6 +448,7 @@ public class DescribeApisecEventsResponseBody extends TeaModel {
                 this.attackIp = model.attackIp;
                 this.attackIpInfo = model.attackIpInfo;
                 this.attackIps = model.attackIps;
+                this.attackerList = model.attackerList;
                 this.endTs = model.endTs;
                 this.eventId = model.eventId;
                 this.eventInfo = model.eventInfo;
@@ -558,6 +571,14 @@ public class DescribeApisecEventsResponseBody extends TeaModel {
              */
             public Builder attackIps(java.util.List<String> attackIps) {
                 this.attackIps = attackIps;
+                return this;
+            }
+
+            /**
+             * AttackerList.
+             */
+            public Builder attackerList(java.util.List<String> attackerList) {
+                this.attackerList = attackerList;
                 return this;
             }
 

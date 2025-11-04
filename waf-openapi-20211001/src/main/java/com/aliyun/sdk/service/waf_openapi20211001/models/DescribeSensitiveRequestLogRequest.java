@@ -18,6 +18,10 @@ import com.aliyun.sdk.gateway.pop.models.*;
  */
 public class DescribeSensitiveRequestLogRequest extends Request {
     @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Account")
+    private String account;
+
+    @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("ApiFormat")
     private String apiFormat;
 
@@ -73,6 +77,7 @@ public class DescribeSensitiveRequestLogRequest extends Request {
 
     private DescribeSensitiveRequestLogRequest(Builder builder) {
         super(builder);
+        this.account = builder.account;
         this.apiFormat = builder.apiFormat;
         this.clientIP = builder.clientIP;
         this.clusterId = builder.clusterId;
@@ -99,6 +104,13 @@ public class DescribeSensitiveRequestLogRequest extends Request {
 @Override
     public Builder toBuilder() {
         return new Builder(this);
+    }
+
+    /**
+     * @return account
+     */
+    public String getAccount() {
+        return this.account;
     }
 
     /**
@@ -193,6 +205,7 @@ public class DescribeSensitiveRequestLogRequest extends Request {
     }
 
     public static final class Builder extends Request.Builder<DescribeSensitiveRequestLogRequest, Builder> {
+        private String account; 
         private String apiFormat; 
         private String clientIP; 
         private String clusterId; 
@@ -213,6 +226,7 @@ public class DescribeSensitiveRequestLogRequest extends Request {
 
         private Builder(DescribeSensitiveRequestLogRequest request) {
             super(request);
+            this.account = request.account;
             this.apiFormat = request.apiFormat;
             this.clientIP = request.clientIP;
             this.clusterId = request.clusterId;
@@ -227,6 +241,15 @@ public class DescribeSensitiveRequestLogRequest extends Request {
             this.sensitiveData = request.sensitiveData;
             this.startTime = request.startTime;
         } 
+
+        /**
+         * Account.
+         */
+        public Builder account(String account) {
+            this.putQueryParameter("Account", account);
+            this.account = account;
+            return this;
+        }
 
         /**
          * <p>The API.</p>

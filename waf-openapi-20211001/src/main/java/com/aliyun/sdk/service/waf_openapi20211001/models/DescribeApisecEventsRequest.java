@@ -18,6 +18,10 @@ import com.aliyun.sdk.gateway.pop.models.*;
  */
 public class DescribeApisecEventsRequest extends Request {
     @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Account")
+    private String account;
+
+    @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("ApiFormat")
     private String apiFormat;
 
@@ -48,6 +52,10 @@ public class DescribeApisecEventsRequest extends Request {
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("EventLevel")
     private String eventLevel;
+
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("EventScope")
+    private String eventScope;
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("EventTag")
@@ -101,6 +109,7 @@ public class DescribeApisecEventsRequest extends Request {
 
     private DescribeApisecEventsRequest(Builder builder) {
         super(builder);
+        this.account = builder.account;
         this.apiFormat = builder.apiFormat;
         this.apiId = builder.apiId;
         this.apiTag = builder.apiTag;
@@ -109,6 +118,7 @@ public class DescribeApisecEventsRequest extends Request {
         this.endTs = builder.endTs;
         this.eventId = builder.eventId;
         this.eventLevel = builder.eventLevel;
+        this.eventScope = builder.eventScope;
         this.eventTag = builder.eventTag;
         this.instanceId = builder.instanceId;
         this.matchedHost = builder.matchedHost;
@@ -134,6 +144,13 @@ public class DescribeApisecEventsRequest extends Request {
 @Override
     public Builder toBuilder() {
         return new Builder(this);
+    }
+
+    /**
+     * @return account
+     */
+    public String getAccount() {
+        return this.account;
     }
 
     /**
@@ -190,6 +207,13 @@ public class DescribeApisecEventsRequest extends Request {
      */
     public String getEventLevel() {
         return this.eventLevel;
+    }
+
+    /**
+     * @return eventScope
+     */
+    public String getEventScope() {
+        return this.eventScope;
     }
 
     /**
@@ -277,6 +301,7 @@ public class DescribeApisecEventsRequest extends Request {
     }
 
     public static final class Builder extends Request.Builder<DescribeApisecEventsRequest, Builder> {
+        private String account; 
         private String apiFormat; 
         private String apiId; 
         private String apiTag; 
@@ -285,6 +310,7 @@ public class DescribeApisecEventsRequest extends Request {
         private Long endTs; 
         private String eventId; 
         private String eventLevel; 
+        private String eventScope; 
         private String eventTag; 
         private String instanceId; 
         private String matchedHost; 
@@ -304,6 +330,7 @@ public class DescribeApisecEventsRequest extends Request {
 
         private Builder(DescribeApisecEventsRequest request) {
             super(request);
+            this.account = request.account;
             this.apiFormat = request.apiFormat;
             this.apiId = request.apiId;
             this.apiTag = request.apiTag;
@@ -312,6 +339,7 @@ public class DescribeApisecEventsRequest extends Request {
             this.endTs = request.endTs;
             this.eventId = request.eventId;
             this.eventLevel = request.eventLevel;
+            this.eventScope = request.eventScope;
             this.eventTag = request.eventTag;
             this.instanceId = request.instanceId;
             this.matchedHost = request.matchedHost;
@@ -325,6 +353,15 @@ public class DescribeApisecEventsRequest extends Request {
             this.startTs = request.startTs;
             this.userStatus = request.userStatus;
         } 
+
+        /**
+         * Account.
+         */
+        public Builder account(String account) {
+            this.putQueryParameter("Account", account);
+            this.account = account;
+            return this;
+        }
 
         /**
          * <p>The API.</p>
@@ -430,6 +467,15 @@ public class DescribeApisecEventsRequest extends Request {
         public Builder eventLevel(String eventLevel) {
             this.putQueryParameter("EventLevel", eventLevel);
             this.eventLevel = eventLevel;
+            return this;
+        }
+
+        /**
+         * EventScope.
+         */
+        public Builder eventScope(String eventScope) {
+            this.putQueryParameter("EventScope", eventScope);
+            this.eventScope = eventScope;
             return this;
         }
 

@@ -98,6 +98,9 @@ public class DescribeApisecStatisticsResponseBody extends TeaModel {
      * <p>DescribeApisecStatisticsResponseBody</p>
      */
     public static class Data extends TeaModel {
+        @com.aliyun.core.annotation.NameInMap("Account")
+        private Long account;
+
         @com.aliyun.core.annotation.NameInMap("Actioned")
         private Long actioned;
 
@@ -156,6 +159,7 @@ public class DescribeApisecStatisticsResponseBody extends TeaModel {
         private Long total;
 
         private Data(Builder builder) {
+            this.account = builder.account;
             this.actioned = builder.actioned;
             this.api = builder.api;
             this.confirmed = builder.confirmed;
@@ -183,6 +187,13 @@ public class DescribeApisecStatisticsResponseBody extends TeaModel {
 
         public static Data create() {
             return builder().build();
+        }
+
+        /**
+         * @return account
+         */
+        public Long getAccount() {
+            return this.account;
         }
 
         /**
@@ -319,6 +330,7 @@ public class DescribeApisecStatisticsResponseBody extends TeaModel {
         }
 
         public static final class Builder {
+            private Long account; 
             private Long actioned; 
             private Long api; 
             private Long confirmed; 
@@ -343,6 +355,7 @@ public class DescribeApisecStatisticsResponseBody extends TeaModel {
             } 
 
             private Builder(Data model) {
+                this.account = model.account;
                 this.actioned = model.actioned;
                 this.api = model.api;
                 this.confirmed = model.confirmed;
@@ -363,6 +376,14 @@ public class DescribeApisecStatisticsResponseBody extends TeaModel {
                 this.todayTotal = model.todayTotal;
                 this.total = model.total;
             } 
+
+            /**
+             * Account.
+             */
+            public Builder account(Long account) {
+                this.account = account;
+                return this;
+            }
 
             /**
              * <p>The number of handled events.</p>

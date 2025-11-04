@@ -125,6 +125,9 @@ public class DescribeApisecApiResourcesResponseBody extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("AbnormalNum")
         private Long abnormalNum;
 
+        @com.aliyun.core.annotation.NameInMap("AccountEventNum")
+        private Long accountEventNum;
+
         @com.aliyun.core.annotation.NameInMap("AllCnt")
         private Long allCnt;
 
@@ -193,6 +196,7 @@ public class DescribeApisecApiResourcesResponseBody extends TeaModel {
 
         private Data(Builder builder) {
             this.abnormalNum = builder.abnormalNum;
+            this.accountEventNum = builder.accountEventNum;
             this.allCnt = builder.allCnt;
             this.apiFormat = builder.apiFormat;
             this.apiId = builder.apiId;
@@ -230,6 +234,13 @@ public class DescribeApisecApiResourcesResponseBody extends TeaModel {
          */
         public Long getAbnormalNum() {
             return this.abnormalNum;
+        }
+
+        /**
+         * @return accountEventNum
+         */
+        public Long getAccountEventNum() {
+            return this.accountEventNum;
         }
 
         /**
@@ -388,6 +399,7 @@ public class DescribeApisecApiResourcesResponseBody extends TeaModel {
 
         public static final class Builder {
             private Long abnormalNum; 
+            private Long accountEventNum; 
             private Long allCnt; 
             private String apiFormat; 
             private String apiId; 
@@ -416,6 +428,7 @@ public class DescribeApisecApiResourcesResponseBody extends TeaModel {
 
             private Builder(Data model) {
                 this.abnormalNum = model.abnormalNum;
+                this.accountEventNum = model.accountEventNum;
                 this.allCnt = model.allCnt;
                 this.apiFormat = model.apiFormat;
                 this.apiId = model.apiId;
@@ -448,6 +461,14 @@ public class DescribeApisecApiResourcesResponseBody extends TeaModel {
              */
             public Builder abnormalNum(Long abnormalNum) {
                 this.abnormalNum = abnormalNum;
+                return this;
+            }
+
+            /**
+             * AccountEventNum.
+             */
+            public Builder accountEventNum(Long accountEventNum) {
+                this.accountEventNum = accountEventNum;
                 return this;
             }
 

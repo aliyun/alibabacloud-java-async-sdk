@@ -356,24 +356,6 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
-     * @param request the request parameters of CreateMajorProtectionBlackIpV2  CreateMajorProtectionBlackIpV2Request
-     * @return CreateMajorProtectionBlackIpV2Response
-     */
-    @Override
-    public CompletableFuture<CreateMajorProtectionBlackIpV2Response> createMajorProtectionBlackIpV2(CreateMajorProtectionBlackIpV2Request request) {
-        try {
-            this.handler.validateRequestModel(request);
-            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RPC).setAction("CreateMajorProtectionBlackIpV2").setMethod(HttpMethod.POST).setPathRegex("/").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
-            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(CreateMajorProtectionBlackIpV2Response.create());
-            return this.handler.execute(params);
-        } catch (Exception e) {
-            CompletableFuture<CreateMajorProtectionBlackIpV2Response> future = new CompletableFuture<>();
-            future.completeExceptionally(e);
-            return future;
-        }
-    }
-
-    /**
      * @param request the request parameters of CreateMemberAccounts  CreateMemberAccountsRequest
      * @return CreateMemberAccountsResponse
      */
@@ -818,6 +800,24 @@ public final class DefaultAsyncClient implements AsyncClient {
             return this.handler.execute(params);
         } catch (Exception e) {
             CompletableFuture<DescribeApisecAssetTrendResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
+     * @param request the request parameters of DescribeApisecEventDetail  DescribeApisecEventDetailRequest
+     * @return DescribeApisecEventDetailResponse
+     */
+    @Override
+    public CompletableFuture<DescribeApisecEventDetailResponse> describeApisecEventDetail(DescribeApisecEventDetailRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RPC).setAction("DescribeApisecEventDetail").setMethod(HttpMethod.POST).setPathRegex("/").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(DescribeApisecEventDetailResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<DescribeApisecEventDetailResponse> future = new CompletableFuture<>();
             future.completeExceptionally(e);
             return future;
         }

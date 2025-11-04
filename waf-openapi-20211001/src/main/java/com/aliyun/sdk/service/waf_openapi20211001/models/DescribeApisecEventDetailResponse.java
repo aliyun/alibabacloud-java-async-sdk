@@ -12,11 +12,11 @@ import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
  * 
- * {@link CreateMajorProtectionBlackIpV2Response} extends {@link TeaModel}
+ * {@link DescribeApisecEventDetailResponse} extends {@link TeaModel}
  *
- * <p>CreateMajorProtectionBlackIpV2Response</p>
+ * <p>DescribeApisecEventDetailResponse</p>
  */
-public class CreateMajorProtectionBlackIpV2Response extends Response {
+public class DescribeApisecEventDetailResponse extends Response {
     @com.aliyun.core.annotation.NameInMap("headers")
     private java.util.Map<String, String> headers;
 
@@ -24,16 +24,16 @@ public class CreateMajorProtectionBlackIpV2Response extends Response {
     private Integer statusCode;
 
     @com.aliyun.core.annotation.NameInMap("body")
-    private CreateMajorProtectionBlackIpV2ResponseBody body;
+    private DescribeApisecEventDetailResponseBody body;
 
-    private CreateMajorProtectionBlackIpV2Response(BuilderImpl builder) {
+    private DescribeApisecEventDetailResponse(BuilderImpl builder) {
         super(builder);
         this.headers = builder.headers;
         this.statusCode = builder.statusCode;
         this.body = builder.body;
     }
 
-    public static CreateMajorProtectionBlackIpV2Response create() {
+    public static DescribeApisecEventDetailResponse create() {
         return new BuilderImpl().build();
     }
 
@@ -59,35 +59,35 @@ public class CreateMajorProtectionBlackIpV2Response extends Response {
     /**
      * @return body
      */
-    public CreateMajorProtectionBlackIpV2ResponseBody getBody() {
+    public DescribeApisecEventDetailResponseBody getBody() {
         return this.body;
     }
 
-    public interface Builder extends Response.Builder<CreateMajorProtectionBlackIpV2Response, Builder> {
+    public interface Builder extends Response.Builder<DescribeApisecEventDetailResponse, Builder> {
 
         Builder headers(java.util.Map<String, String> headers);
 
         Builder statusCode(Integer statusCode);
 
-        Builder body(CreateMajorProtectionBlackIpV2ResponseBody body);
+        Builder body(DescribeApisecEventDetailResponseBody body);
 
         @Override
-        CreateMajorProtectionBlackIpV2Response build();
+        DescribeApisecEventDetailResponse build();
 
     } 
 
     private static final class BuilderImpl
-            extends Response.BuilderImpl<CreateMajorProtectionBlackIpV2Response, Builder>
+            extends Response.BuilderImpl<DescribeApisecEventDetailResponse, Builder>
             implements Builder {
         private java.util.Map<String, String> headers; 
         private Integer statusCode; 
-        private CreateMajorProtectionBlackIpV2ResponseBody body; 
+        private DescribeApisecEventDetailResponseBody body; 
 
         private BuilderImpl() {
             super();
         } 
 
-        private BuilderImpl(CreateMajorProtectionBlackIpV2Response response) {
+        private BuilderImpl(DescribeApisecEventDetailResponse response) {
             super(response);
             this.headers = response.headers;
             this.statusCode = response.statusCode;
@@ -116,14 +116,14 @@ public class CreateMajorProtectionBlackIpV2Response extends Response {
          * body.
          */
         @Override
-        public Builder body(CreateMajorProtectionBlackIpV2ResponseBody body) {
+        public Builder body(DescribeApisecEventDetailResponseBody body) {
             this.body = body;
             return this;
         }
 
         @Override
-        public CreateMajorProtectionBlackIpV2Response build() {
-            return new CreateMajorProtectionBlackIpV2Response(this);
+        public DescribeApisecEventDetailResponse build() {
+            return new DescribeApisecEventDetailResponse(this);
         } 
 
     } 
