@@ -746,6 +746,14 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<GetDBInstanceConnectivityDiagnosisResponse> getDBInstanceConnectivityDiagnosis(GetDBInstanceConnectivityDiagnosisRequest request);
 
     /**
+     * @param request the request parameters of GetDasAgentSSE  GetDasAgentSSERequest
+     * @return GetDasAgentSSEResponse
+     */
+    CompletableFuture<GetDasAgentSSEResponse> getDasAgentSSE(GetDasAgentSSERequest request);
+
+    ResponseIterable<GetDasAgentSSEResponseBody> getDasAgentSSEWithResponseIterable(GetDasAgentSSERequest request);
+
+    /**
      * <b>description</b> :
      * <p>  For information about the database instances that support this operation, see <a href="https://help.aliyun.com/document_detail/190912.html">Overview of DAS Enterprise Edition</a>.</p>
      * <ul>

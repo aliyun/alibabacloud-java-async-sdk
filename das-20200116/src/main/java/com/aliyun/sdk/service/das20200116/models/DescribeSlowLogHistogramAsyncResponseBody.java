@@ -167,10 +167,14 @@ public class DescribeSlowLogHistogramAsyncResponseBody extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("InsRole")
         private String insRole;
 
+        @com.aliyun.core.annotation.NameInMap("TotalCount")
+        private Long totalCount;
+
         private InsItems(Builder builder) {
             this.count = builder.count;
             this.insId = builder.insId;
             this.insRole = builder.insRole;
+            this.totalCount = builder.totalCount;
         }
 
         public static Builder builder() {
@@ -202,10 +206,18 @@ public class DescribeSlowLogHistogramAsyncResponseBody extends TeaModel {
             return this.insRole;
         }
 
+        /**
+         * @return totalCount
+         */
+        public Long getTotalCount() {
+            return this.totalCount;
+        }
+
         public static final class Builder {
             private java.util.List<Long> count; 
             private String insId; 
             private String insRole; 
+            private Long totalCount; 
 
             private Builder() {
             } 
@@ -214,6 +226,7 @@ public class DescribeSlowLogHistogramAsyncResponseBody extends TeaModel {
                 this.count = model.count;
                 this.insId = model.insId;
                 this.insRole = model.insRole;
+                this.totalCount = model.totalCount;
             } 
 
             /**
@@ -240,6 +253,14 @@ public class DescribeSlowLogHistogramAsyncResponseBody extends TeaModel {
                 return this;
             }
 
+            /**
+             * TotalCount.
+             */
+            public Builder totalCount(Long totalCount) {
+                this.totalCount = totalCount;
+                return this;
+            }
+
             public InsItems build() {
                 return new InsItems(this);
             } 
@@ -260,13 +281,21 @@ public class DescribeSlowLogHistogramAsyncResponseBody extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("InsItems")
         private java.util.List<InsItems> insItems;
 
+        @com.aliyun.core.annotation.NameInMap("InsRole")
+        private String insRole;
+
         @com.aliyun.core.annotation.NameInMap("NodeId")
         private String nodeId;
+
+        @com.aliyun.core.annotation.NameInMap("TotalCount")
+        private Long totalCount;
 
         private Item(Builder builder) {
             this.count = builder.count;
             this.insItems = builder.insItems;
+            this.insRole = builder.insRole;
             this.nodeId = builder.nodeId;
+            this.totalCount = builder.totalCount;
         }
 
         public static Builder builder() {
@@ -292,16 +321,32 @@ public class DescribeSlowLogHistogramAsyncResponseBody extends TeaModel {
         }
 
         /**
+         * @return insRole
+         */
+        public String getInsRole() {
+            return this.insRole;
+        }
+
+        /**
          * @return nodeId
          */
         public String getNodeId() {
             return this.nodeId;
         }
 
+        /**
+         * @return totalCount
+         */
+        public Long getTotalCount() {
+            return this.totalCount;
+        }
+
         public static final class Builder {
             private java.util.List<Long> count; 
             private java.util.List<InsItems> insItems; 
+            private String insRole; 
             private String nodeId; 
+            private Long totalCount; 
 
             private Builder() {
             } 
@@ -309,7 +354,9 @@ public class DescribeSlowLogHistogramAsyncResponseBody extends TeaModel {
             private Builder(Item model) {
                 this.count = model.count;
                 this.insItems = model.insItems;
+                this.insRole = model.insRole;
                 this.nodeId = model.nodeId;
+                this.totalCount = model.totalCount;
             } 
 
             /**
@@ -329,10 +376,26 @@ public class DescribeSlowLogHistogramAsyncResponseBody extends TeaModel {
             }
 
             /**
+             * InsRole.
+             */
+            public Builder insRole(String insRole) {
+                this.insRole = insRole;
+                return this;
+            }
+
+            /**
              * NodeId.
              */
             public Builder nodeId(String nodeId) {
                 this.nodeId = nodeId;
+                return this;
+            }
+
+            /**
+             * TotalCount.
+             */
+            public Builder totalCount(Long totalCount) {
+                this.totalCount = totalCount;
                 return this;
             }
 
@@ -503,6 +566,9 @@ public class DescribeSlowLogHistogramAsyncResponseBody extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Total")
         private Long total;
 
+        @com.aliyun.core.annotation.NameInMap("TotalCount")
+        private Long totalCount;
+
         @com.aliyun.core.annotation.NameInMap("Ts")
         private java.util.List<Long> ts;
 
@@ -561,6 +627,7 @@ public class DescribeSlowLogHistogramAsyncResponseBody extends TeaModel {
             this.rt = builder.rt;
             this.scnt = builder.scnt;
             this.total = builder.total;
+            this.totalCount = builder.totalCount;
             this.ts = builder.ts;
             this.tsEnd = builder.tsEnd;
         }
@@ -931,6 +998,13 @@ public class DescribeSlowLogHistogramAsyncResponseBody extends TeaModel {
         }
 
         /**
+         * @return totalCount
+         */
+        public Long getTotalCount() {
+            return this.totalCount;
+        }
+
+        /**
          * @return ts
          */
         public java.util.List<Long> getTs() {
@@ -996,6 +1070,7 @@ public class DescribeSlowLogHistogramAsyncResponseBody extends TeaModel {
             private java.util.List<Double> rt; 
             private java.util.List<Long> scnt; 
             private Long total; 
+            private Long totalCount; 
             private java.util.List<Long> ts; 
             private java.util.List<Long> tsEnd; 
 
@@ -1054,6 +1129,7 @@ public class DescribeSlowLogHistogramAsyncResponseBody extends TeaModel {
                 this.rt = model.rt;
                 this.scnt = model.scnt;
                 this.total = model.total;
+                this.totalCount = model.totalCount;
                 this.ts = model.ts;
                 this.tsEnd = model.tsEnd;
             } 
@@ -1463,6 +1539,14 @@ public class DescribeSlowLogHistogramAsyncResponseBody extends TeaModel {
              */
             public Builder total(Long total) {
                 this.total = total;
+                return this;
+            }
+
+            /**
+             * TotalCount.
+             */
+            public Builder totalCount(Long totalCount) {
+                this.totalCount = totalCount;
                 return this;
             }
 

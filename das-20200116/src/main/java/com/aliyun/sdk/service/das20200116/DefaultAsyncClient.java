@@ -3,6 +3,7 @@ package com.aliyun.sdk.service.das20200116;
 
 import com.aliyun.core.http.*;
 import com.aliyun.sdk.service.das20200116.models.*;
+import darabonba.core.sse.SSEHttpResponseHandler;
 import darabonba.core.utils.*;
 import com.aliyun.sdk.gateway.pop.*;
 import darabonba.core.*;
@@ -1413,6 +1414,34 @@ public final class DefaultAsyncClient implements AsyncClient {
             future.completeExceptionally(e);
             return future;
         }
+    }
+
+    /**
+     * @param request the request parameters of GetDasAgentSSE  GetDasAgentSSERequest
+     * @return GetDasAgentSSEResponse
+     */
+    @Override
+    public CompletableFuture<GetDasAgentSSEResponse> getDasAgentSSE(GetDasAgentSSERequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RPC).setAction("GetDasAgentSSE").setMethod(HttpMethod.POST).setPathRegex("/getDasAgentSSE").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(GetDasAgentSSEResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<GetDasAgentSSEResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    @Override
+    public ResponseIterable<GetDasAgentSSEResponseBody> getDasAgentSSEWithResponseIterable(GetDasAgentSSERequest request) {
+        this.handler.validateRequestModel(request);
+        TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.SSE).setAction("GetDasAgentSSE").setMethod(HttpMethod.POST).setPathRegex("/getDasAgentSSE").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
+        GetDasAgentSSEResponseBodyIterator iterator = GetDasAgentSSEResponseBodyIterator.create();
+        ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withHttpResponseHandler(new SSEHttpResponseHandler(iterator));
+        this.handler.execute(params);
+        return new ResponseIterable<>(iterator);
     }
 
     /**
