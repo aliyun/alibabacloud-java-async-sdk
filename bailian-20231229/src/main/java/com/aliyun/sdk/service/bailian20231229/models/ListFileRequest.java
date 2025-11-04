@@ -131,6 +131,7 @@ public class ListFileRequest extends Request {
         } 
 
         /**
+         * <p>The ID of the workspace to which the category belongs. To view the workspace ID, click the Workspace Details icon in the upper-left corner on the <a href="https://bailian.console.alibabacloud.com/#/home">homepage</a> of the console.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -152,6 +153,7 @@ public class ListFileRequest extends Request {
         }
 
         /**
+         * <p>The category ID, which is the <code>CategoryId</code> returned by the <a href="~~AddCategory~~">AddCategory</a> operation. To view the category ID, click the ID icon next to the category name on the Unstructured Data tab of the <a href="https://bailian.console.alibabacloud.com/#/data-center">Data Management</a> page.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>

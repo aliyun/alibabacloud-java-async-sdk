@@ -142,6 +142,7 @@ public class ChangeParseSettingRequest extends Request {
         }
 
         /**
+         * <p>The ID of the workspace to which the category belongs. For more information, see <a href="https://help.aliyun.com/document_detail/2587495.html">Use workspaces</a>.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -154,6 +155,7 @@ public class ChangeParseSettingRequest extends Request {
         }
 
         /**
+         * <p>The category ID, which is the <code>CategoryId</code> returned by <strong>AddCategory</strong>. To view the category ID, click the ID icon next to the category name on the Unstructured Data tab of the <a href="https://bailian.console.alibabacloud.com/?tab=app#/data-center">Application Data</a> page.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -166,6 +168,7 @@ public class ChangeParseSettingRequest extends Request {
         }
 
         /**
+         * <p>The file type. Valid values: pdf, docx, and doc.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -178,6 +181,13 @@ public class ChangeParseSettingRequest extends Request {
         }
 
         /**
+         * <p>The parser code. Valid values:</p>
+         * <ul>
+         * <li>DOCMIND (Intelligent parsing)</li>
+         * <li>DOCMIND_DIGITAL (Digital parsing)</li>
+         * <li>DOCMIND_LLM_VERSION (LLM parsing)</li>
+         * <li>DASH_QWEN_VL_PARSER (Qwen VL parsing)</li>
+         * </ul>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -190,7 +200,7 @@ public class ChangeParseSettingRequest extends Request {
         }
 
         /**
-         * ParserConfig.
+         * <p>The parser configuration. Currently, this is available only for Qwen VL parsing.</p>
          */
         public Builder parserConfig(ParserConfig parserConfig) {
             String parserConfigShrink = shrink(parserConfig, "ParserConfig", "json");
@@ -259,7 +269,15 @@ public class ChangeParseSettingRequest extends Request {
             } 
 
             /**
-             * modelName.
+             * <p>The model name.</p>
+             * <p>Valid values:</p>
+             * <ul>
+             * <li>qwen-vl-max</li>
+             * <li>qwen-vl-plus</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>qwen-vl-max</p>
              */
             public Builder modelName(String modelName) {
                 this.modelName = modelName;
@@ -267,7 +285,7 @@ public class ChangeParseSettingRequest extends Request {
             }
 
             /**
-             * modelPrompt.
+             * <p>The prompt used for parsing.</p>
              */
             public Builder modelPrompt(String modelPrompt) {
                 this.modelPrompt = modelPrompt;

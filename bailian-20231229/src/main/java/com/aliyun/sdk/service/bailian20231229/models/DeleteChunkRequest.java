@@ -90,6 +90,7 @@ public class DeleteChunkRequest extends Request {
         } 
 
         /**
+         * <p>The ID of the workspace to which the knowledge base belongs. For more information, see <a href="https://help.aliyun.com/document_detail/2587495.html">How to use workspace</a>.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -102,6 +103,7 @@ public class DeleteChunkRequest extends Request {
         }
 
         /**
+         * <p>The list of text chunks to be deleted. You can specify up to 10 chunk IDs at a time.</p>
          * <p>This parameter is required.</p>
          */
         public Builder chunkIds(java.util.List<String> chunkIds) {
@@ -112,6 +114,7 @@ public class DeleteChunkRequest extends Request {
         }
 
         /**
+         * <p>The knowledge base ID, which is the <code>Data.Id</code> parameter returned by <strong>CreateIndex</strong>.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>

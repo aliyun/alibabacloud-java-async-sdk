@@ -98,6 +98,7 @@ public class GetAvailableParserTypesRequest extends Request {
         }
 
         /**
+         * <p>The ID of the workspace to which the file belongs. For more information, see <a href="https://help.aliyun.com/document_detail/2587495.html">Use workspaces</a>.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -110,6 +111,7 @@ public class GetAvailableParserTypesRequest extends Request {
         }
 
         /**
+         * <p>The file type. Valid values: pdf, docx, and doc.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>

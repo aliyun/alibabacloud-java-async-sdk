@@ -63,6 +63,12 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<ApplyFileUploadLeaseResponse> applyFileUploadLease(ApplyFileUploadLeaseRequest request);
 
     /**
+     * @param request the request parameters of ApplyTempStorageLease  ApplyTempStorageLeaseRequest
+     * @return ApplyTempStorageLeaseResponse
+     */
+    CompletableFuture<ApplyTempStorageLeaseResponse> applyTempStorageLease(ApplyTempStorageLeaseRequest request);
+
+    /**
      * @param request the request parameters of ChangeParseSetting  ChangeParseSettingRequest
      * @return ChangeParseSettingResponse
      */
@@ -76,11 +82,18 @@ public interface AsyncClient extends SdkAutoCloseable {
 
     /**
      * <b>description</b> :
-     * <ol>
-     * <li>You must first upload documents to <a href="https://bailian.console.aliyun.com/#/data-center">Data Management</a> and obtain the <code>FileId</code>. The documents are the knowledge source of the knowledge base. For more information, see <a href="https://www.alibabacloud.com/help/en/model-studio/user-guide/data-import-instructions">Import Data</a>.</li>
-     * <li>This operation only initializes a knowledge base creation job. You must also call the <a href="https://www.alibabacloud.com/help/en/model-studio/developer-reference/api-bailian-2023-12-29-submitindexjob">SubmitIndexJob</a> operation to complete the job.</li>
-     * <li>This interface is not idempotent.</li>
-     * </ol>
+     * <p>  <strong>Limits</strong>: This operation can create only knowledge base of the document search type. Data query and image Q\&amp;A types are not supported. Use the console instead.</p>
+     * <ul>
+     * <li><strong>Required permissions</strong><ul>
+     * <li><strong>RAM users</strong>: Must first obtain the <a href="https://help.aliyun.com/document_detail/2848578.html">API permissions</a> of Model Studio (such as the <code>AliyunBailianDataFullAccess</code> policy, which includes the sfm:CreateIndex permission required), and <a href="https://help.aliyun.com/document_detail/2851098.html">become member of a workspace</a>.</li>
+     * <li><strong>Alibaba Cloud account</strong>: Has the permission by default, and can call the operation directly.</li>
+     * </ul>
+     * </li>
+     * <li><strong>Call method</strong>: We recommend using the latest version of the <a href="https://api.alibabacloud.com/api-tools/sdk/bailian?version=2023-12-29">GenAI Service Platform SDK</a>. The SDK encapsulates complex signature computational logic to simplify the call process.</li>
+     * <li><strong>What to do next</strong>: This operation only initializes knowledge base creation job. After that, call <strong>SubmitIndexJob</strong> to complete the creation. Otherwise, you will get an empty knowledge base. For more information about the sample code, see <a href="https://help.aliyun.com/document_detail/2852772.html">Knowledge base API guide</a>.</li>
+     * <li><strong>Idempotence</strong>: This operation is not idempotent. If you call the operation for multiple times, you may create several knowledge bases with the same name. We recommend following a &quot;query first, then create&quot; logic.
+     * <strong>Rate limit:</strong> Rate limiting will be triggered if you call this operation frequently. Do not exceed 10 times per second. If limiting is triggered, try again later.</li>
+     * </ul>
      * 
      * @param request the request parameters of CreateIndex  CreateIndexRequest
      * @return CreateIndexResponse
@@ -118,6 +131,20 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<DeleteCategoryResponse> deleteCategory(DeleteCategoryRequest request);
 
     /**
+     * <b>description</b> :
+     * <ul>
+     * <li><strong>Warning</strong> After a text chunk is deleted, it cannot be restored. Proceed with caution.</li>
+     * <li><strong>Required permissions</strong>:<ul>
+     * <li><strong>RAM users</strong>: Must first obtain the <a href="https://help.aliyun.com/document_detail/2848578.html">API permissions</a> of Model Studio (such as the <code>AliyunBailianDataFullAccess</code> policy, which includes the sfm:DeleteChunk permission required), and <a href="https://help.aliyun.com/document_detail/2851098.html">become member of a workspace</a>.</li>
+     * <li><strong>Alibaba Cloud account</strong>: Has the permission by default, and can call the operation directly.</li>
+     * </ul>
+     * </li>
+     * <li><strong>Call method</strong>: We recommend using the latest version of the <a href="https://api.alibabacloud.com/api-tools/sdk/bailian?version=2023-12-29">GenAI Service Platform SDK</a>. The SDK encapsulates complex signature computational logic to simplify the call process.</li>
+     * <li><strong>Delay</strong>: The update takes effect immediately. During peak hours, the update may take place in seconds.</li>
+     * <li><strong>Idempotence</strong>: This operation is idempotent. If you perform a repeated operation on a chunk that has already been deleted, the interface returns a success.
+     * <strong>Rate limit:</strong> Rate limiting will be triggered if you call this operation frequently. Do not exceed 10 times per second. If limiting is triggered, try again later.</li>
+     * </ul>
+     * 
      * @param request the request parameters of DeleteChunk  DeleteChunkRequest
      * @return DeleteChunkResponse
      */
@@ -277,6 +304,14 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<ListChunksResponse> listChunks(ListChunksRequest request);
 
     /**
+     * <b>description</b> :
+     * <p>  If you are using a RAM user, you must first obtain the OpenAPI management permissions (namely sfm:ListFile) of Model Studio. For more information, see <a href="https://help.aliyun.com/document_detail/2848578.html">Grant OpenAPI permissions to a RAM user</a>. If you are using the Alibaba Cloud account, you do not need permissions. We recommend that you use <a href="https://api.alibabacloud.com/api-tools/sdk/bailian?version=2023-12-29">the latest version of the SDK</a> to call this operation.</p>
+     * <ul>
+     * <li>During a paged query, set <code>MaxResults</code> to specify the maximum number of entries to return. The return value of <code>NextToken</code> is a pagination token that can be used in the next call to retrieve a new page of results. When you query subsequent pages, set the <code>NextToken</code> parameter to the <code>NextToken</code> obtained in the last returned result. You can also set the <code>MaxResults</code> parameter to limit the number of entries to be returned. If no <code>NextToken</code> is returned, the result is completely returned and no more requests are required.</li>
+     * <li>This operation is idempotent.
+     * <strong>Throttling:</strong> Throttling will be triggered if you call this operation frequently. Do not exceed 5 times per second. If throttling is triggered, try again later.</li>
+     * </ul>
+     * 
      * @param request the request parameters of ListFile  ListFileRequest
      * @return ListFileResponse
      */
@@ -387,6 +422,20 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<UpdateAndPublishAgentSelectiveResponse> updateAndPublishAgentSelective(UpdateAndPublishAgentSelectiveRequest request);
 
     /**
+     * <b>description</b> :
+     * <p>  <strong>Limits</strong>: This operation supports only knowledge base of the document search type. Data query and image Q\&amp;A types are not supported.</p>
+     * <ul>
+     * <li><strong>Required permissions</strong>:<ul>
+     * <li><strong>RAM users</strong>: Must first obtain the <a href="https://help.aliyun.com/document_detail/2848578.html">API permissions</a> of Model Studio (such as the <code>AliyunBailianDataFullAccess</code> policy, which includes the sfm:UpdateChunk permission required), and <a href="https://help.aliyun.com/document_detail/2851098.html">become member of a workspace</a>.</li>
+     * <li><strong>Alibaba Cloud account</strong>: Has the permission by default, and can call the operation directly.</li>
+     * </ul>
+     * </li>
+     * <li><strong>Call method</strong>: We recommend using the latest version of the <a href="https://api.alibabacloud.com/api-tools/sdk/bailian?version=2023-12-29">GenAI Service Platform SDK</a>. The SDK encapsulates complex signature computational logic to simplify the call process.</li>
+     * <li><strong>Delay</strong>: The update takes effect immediately. During peak hours, the update may take place in seconds.</li>
+     * <li><strong>Idempotence</strong>: This operation is idempotent. If you perform a repeated operation on a chunk that has already been updated, the interface returns a success.
+     * <strong>Rate limit:</strong> Rate limiting will be triggered if you call this operation frequently. Do not exceed 10 times per second. If limiting is triggered, try again later.</li>
+     * </ul>
+     * 
      * @param request the request parameters of UpdateChunk  UpdateChunkRequest
      * @return UpdateChunkResponse
      */

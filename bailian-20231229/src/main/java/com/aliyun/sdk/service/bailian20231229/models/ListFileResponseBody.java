@@ -127,7 +127,7 @@ public class ListFileResponseBody extends TeaModel {
         }
 
         /**
-         * Data.
+         * <p>The returned data.</p>
          */
         public Builder data(Data data) {
             this.data = data;
@@ -335,7 +335,10 @@ public class ListFileResponseBody extends TeaModel {
             }
 
             /**
-             * FileId.
+             * <p>The document ID, which is the <code>FileId</code> parameter returned by the <a href="~~AddFile~~">AddFile</a> operation. To view the ID, click the icon next to the file name on the <a href="https://bailian.console.alibabacloud.com/#/data-center">Data Management</a> page.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>file_5ff599b3455a45db8c41b0054b361518_10098576</p>
              */
             public Builder fileId(String fileId) {
                 this.fileId = fileId;
@@ -489,7 +492,7 @@ public class ListFileResponseBody extends TeaModel {
             } 
 
             /**
-             * FileList.
+             * <p>The list of documents in the category.</p>
              */
             public Builder fileList(java.util.List<FileList> fileList) {
                 this.fileList = fileList;

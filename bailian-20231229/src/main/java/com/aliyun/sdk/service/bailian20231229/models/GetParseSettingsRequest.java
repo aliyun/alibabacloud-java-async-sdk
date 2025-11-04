@@ -96,7 +96,10 @@ public class GetParseSettingsRequest extends Request {
         }
 
         /**
-         * WorkspaceId.
+         * <p>The ID of the workspace to which the file belongs. For more information, see <a href="https://help.aliyun.com/document_detail/2587495.html">Use workspaces</a>.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>llm-3shx2gu255oqxxxx</p>
          */
         public Builder workspaceId(String workspaceId) {
             this.putPathParameter("WorkspaceId", workspaceId);
@@ -105,7 +108,10 @@ public class GetParseSettingsRequest extends Request {
         }
 
         /**
-         * CategoryId.
+         * <p>The category ID, which is the <code>CategoryId</code> returned by <strong>AddCategory</strong>. To view the category ID, click the ID icon next to the category name on the Unstructured Data tab of the <a href="https://bailian.console.alibabacloud.com/?tab=app#/data-center">Application Data</a> page.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cate_cdd11b1b79a74e8bbd675c356a91ee35xxxxxxxx</p>
          */
         public Builder categoryId(String categoryId) {
             this.putQueryParameter("CategoryId", categoryId);

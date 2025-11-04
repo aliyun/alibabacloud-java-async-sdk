@@ -149,6 +149,7 @@ public class UpdateChunkRequest extends Request {
         } 
 
         /**
+         * <p>The ID of the workspace to which the knowledge base belongs. For more information, see <a href="https://help.aliyun.com/document_detail/2587495.html">How to use workspace</a>.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -161,6 +162,7 @@ public class UpdateChunkRequest extends Request {
         }
 
         /**
+         * <p>The ID of the text chunk to be modified. You can find it in the Node.Metadata._id field returned by <strong>ListChunks</strong>.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -173,6 +175,7 @@ public class UpdateChunkRequest extends Request {
         }
 
         /**
+         * <p>The file ID, which is the <code>FileId</code> returned by <strong>AddFile</strong>. You can also go to the <a href="https://modelstudio.console.alibabacloud.com/?tab=app#/data-center">Application Data</a> page. Click the ID icon next to your file to get its ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -185,6 +188,12 @@ public class UpdateChunkRequest extends Request {
         }
 
         /**
+         * <p>Specifies whether this text chunk participates in knowledge base retrieval. Valid values:</p>
+         * <ul>
+         * <li>true</li>
+         * <li>false</li>
+         * </ul>
+         * <p>Default value: true.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -197,6 +206,7 @@ public class UpdateChunkRequest extends Request {
         }
 
         /**
+         * <p>The knowledge base ID, which is the <code>Data.Id</code> returned by <strong>CreateIndex</strong>. You can also get it on the <a href="https://modelstudio.console.alibabacloud.com/?tab=app#/knowledge-base">Knowledge Base</a> page.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -209,6 +219,7 @@ public class UpdateChunkRequest extends Request {
         }
 
         /**
+         * <p>The new content of the chunk. The content must be between 10 and 6,000 characters in length and cannot exceed the maximum chunk length set when the knowledge base was created.</p>
          * <p>This parameter is required.</p>
          */
         public Builder content(String content) {
@@ -218,7 +229,7 @@ public class UpdateChunkRequest extends Request {
         }
 
         /**
-         * title.
+         * <p>The new title of the chunk. The title must be 0 to 50 characters in length and can be an empty string. If you specify an empty string, the existing title is cleared. If you do not pass this parameter, the original title remains unchanged.</p>
          */
         public Builder title(String title) {
             this.putQueryParameter("title", title);

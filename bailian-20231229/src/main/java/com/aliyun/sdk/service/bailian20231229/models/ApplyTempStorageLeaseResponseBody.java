@@ -12,11 +12,11 @@ import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
  * 
- * {@link GetAvailableParserTypesResponseBody} extends {@link TeaModel}
+ * {@link ApplyTempStorageLeaseResponseBody} extends {@link TeaModel}
  *
- * <p>GetAvailableParserTypesResponseBody</p>
+ * <p>ApplyTempStorageLeaseResponseBody</p>
  */
-public class GetAvailableParserTypesResponseBody extends TeaModel {
+public class ApplyTempStorageLeaseResponseBody extends TeaModel {
     @com.aliyun.core.annotation.NameInMap("Code")
     private String code;
 
@@ -35,7 +35,7 @@ public class GetAvailableParserTypesResponseBody extends TeaModel {
     @com.aliyun.core.annotation.NameInMap("Success")
     private Boolean success;
 
-    private GetAvailableParserTypesResponseBody(Builder builder) {
+    private ApplyTempStorageLeaseResponseBody(Builder builder) {
         this.code = builder.code;
         this.data = builder.data;
         this.message = builder.message;
@@ -48,7 +48,7 @@ public class GetAvailableParserTypesResponseBody extends TeaModel {
         return new Builder();
     }
 
-    public static GetAvailableParserTypesResponseBody create() {
+    public static ApplyTempStorageLeaseResponseBody create() {
         return builder().build();
     }
 
@@ -109,7 +109,7 @@ public class GetAvailableParserTypesResponseBody extends TeaModel {
         private Builder() {
         } 
 
-        private Builder(GetAvailableParserTypesResponseBody model) {
+        private Builder(ApplyTempStorageLeaseResponseBody model) {
             this.code = model.code;
             this.data = model.data;
             this.message = model.message;
@@ -119,10 +119,7 @@ public class GetAvailableParserTypesResponseBody extends TeaModel {
         } 
 
         /**
-         * <p>The error code returned.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>DataCenter.Throttling</p>
+         * Code.
          */
         public Builder code(String code) {
             this.code = code;
@@ -130,7 +127,7 @@ public class GetAvailableParserTypesResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The data returned.</p>
+         * Data.
          */
         public Builder data(Data data) {
             this.data = data;
@@ -138,10 +135,7 @@ public class GetAvailableParserTypesResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The error message that is returned if the request failed.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>User not authorized to operate on the specified resource</p>
+         * Message.
          */
         public Builder message(String message) {
             this.message = message;
@@ -149,10 +143,7 @@ public class GetAvailableParserTypesResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The request ID.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>17204B98-7734-4F9A-8464-2446XXXXXXX</p>
+         * RequestId.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -160,10 +151,7 @@ public class GetAvailableParserTypesResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The HTTP status code returned.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>200</p>
+         * Status.
          */
         public Builder status(String status) {
             this.status = status;
@@ -171,105 +159,110 @@ public class GetAvailableParserTypesResponseBody extends TeaModel {
         }
 
         /**
-         * <p>Indicates whether the call is successful. Valid values:</p>
-         * <ul>
-         * <li>true</li>
-         * <li>false</li>
-         * </ul>
-         * 
-         * <strong>example:</strong>
-         * <p>true</p>
+         * Success.
          */
         public Builder success(Boolean success) {
             this.success = success;
             return this;
         }
 
-        public GetAvailableParserTypesResponseBody build() {
-            return new GetAvailableParserTypesResponseBody(this);
+        public ApplyTempStorageLeaseResponseBody build() {
+            return new ApplyTempStorageLeaseResponseBody(this);
         } 
 
     } 
 
     /**
      * 
-     * {@link GetAvailableParserTypesResponseBody} extends {@link TeaModel}
+     * {@link ApplyTempStorageLeaseResponseBody} extends {@link TeaModel}
      *
-     * <p>GetAvailableParserTypesResponseBody</p>
+     * <p>ApplyTempStorageLeaseResponseBody</p>
      */
-    public static class ParserList extends TeaModel {
-        @com.aliyun.core.annotation.NameInMap("DisplayName")
-        private String displayName;
+    public static class Param extends TeaModel {
+        @com.aliyun.core.annotation.NameInMap("Headers")
+        private Object headers;
 
-        @com.aliyun.core.annotation.NameInMap("Parser")
-        private String parser;
+        @com.aliyun.core.annotation.NameInMap("Method")
+        private String method;
 
-        private ParserList(Builder builder) {
-            this.displayName = builder.displayName;
-            this.parser = builder.parser;
+        @com.aliyun.core.annotation.NameInMap("Url")
+        private String url;
+
+        private Param(Builder builder) {
+            this.headers = builder.headers;
+            this.method = builder.method;
+            this.url = builder.url;
         }
 
         public static Builder builder() {
             return new Builder();
         }
 
-        public static ParserList create() {
+        public static Param create() {
             return builder().build();
         }
 
         /**
-         * @return displayName
+         * @return headers
          */
-        public String getDisplayName() {
-            return this.displayName;
+        public Object getHeaders() {
+            return this.headers;
         }
 
         /**
-         * @return parser
+         * @return method
          */
-        public String getParser() {
-            return this.parser;
+        public String getMethod() {
+            return this.method;
+        }
+
+        /**
+         * @return url
+         */
+        public String getUrl() {
+            return this.url;
         }
 
         public static final class Builder {
-            private String displayName; 
-            private String parser; 
+            private Object headers; 
+            private String method; 
+            private String url; 
 
             private Builder() {
             } 
 
-            private Builder(ParserList model) {
-                this.displayName = model.displayName;
-                this.parser = model.parser;
+            private Builder(Param model) {
+                this.headers = model.headers;
+                this.method = model.method;
+                this.url = model.url;
             } 
 
             /**
-             * <p>The display name of the parsing method.</p>
+             * Headers.
              */
-            public Builder displayName(String displayName) {
-                this.displayName = displayName;
+            public Builder headers(Object headers) {
+                this.headers = headers;
                 return this;
             }
 
             /**
-             * <p>The parser code. Valid values:</p>
-             * <ul>
-             * <li>DOCMIND (Intelligent parsing)</li>
-             * <li>DOCMIND_DIGITAL (Digital parsing)</li>
-             * <li>DOCMIND_LLM_VERSION (LLM parsing)</li>
-             * <li>DASH_QWEN_VL_PARSER (Qwen VL parsing)</li>
-             * </ul>
-             * 
-             * <strong>example:</strong>
-             * <p>DOCMIND</p>
+             * Method.
              */
-            public Builder parser(String parser) {
-                this.parser = parser;
+            public Builder method(String method) {
+                this.method = method;
                 return this;
             }
 
-            public ParserList build() {
-                return new ParserList(this);
+            /**
+             * Url.
+             */
+            public Builder url(String url) {
+                this.url = url;
+                return this;
+            }
+
+            public Param build() {
+                return new Param(this);
             } 
 
         } 
@@ -277,20 +270,20 @@ public class GetAvailableParserTypesResponseBody extends TeaModel {
     }
     /**
      * 
-     * {@link GetAvailableParserTypesResponseBody} extends {@link TeaModel}
+     * {@link ApplyTempStorageLeaseResponseBody} extends {@link TeaModel}
      *
-     * <p>GetAvailableParserTypesResponseBody</p>
+     * <p>ApplyTempStorageLeaseResponseBody</p>
      */
     public static class Data extends TeaModel {
-        @com.aliyun.core.annotation.NameInMap("FileType")
-        private String fileType;
+        @com.aliyun.core.annotation.NameInMap("Param")
+        private Param param;
 
-        @com.aliyun.core.annotation.NameInMap("ParserList")
-        private java.util.List<ParserList> parserList;
+        @com.aliyun.core.annotation.NameInMap("TempStorageLeaseId")
+        private String tempStorageLeaseId;
 
         private Data(Builder builder) {
-            this.fileType = builder.fileType;
-            this.parserList = builder.parserList;
+            this.param = builder.param;
+            this.tempStorageLeaseId = builder.tempStorageLeaseId;
         }
 
         public static Builder builder() {
@@ -302,47 +295,44 @@ public class GetAvailableParserTypesResponseBody extends TeaModel {
         }
 
         /**
-         * @return fileType
+         * @return param
          */
-        public String getFileType() {
-            return this.fileType;
+        public Param getParam() {
+            return this.param;
         }
 
         /**
-         * @return parserList
+         * @return tempStorageLeaseId
          */
-        public java.util.List<ParserList> getParserList() {
-            return this.parserList;
+        public String getTempStorageLeaseId() {
+            return this.tempStorageLeaseId;
         }
 
         public static final class Builder {
-            private String fileType; 
-            private java.util.List<ParserList> parserList; 
+            private Param param; 
+            private String tempStorageLeaseId; 
 
             private Builder() {
             } 
 
             private Builder(Data model) {
-                this.fileType = model.fileType;
-                this.parserList = model.parserList;
+                this.param = model.param;
+                this.tempStorageLeaseId = model.tempStorageLeaseId;
             } 
 
             /**
-             * <p>The file type, which is the same as the FileType in the input parameter.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>pdf</p>
+             * Param.
              */
-            public Builder fileType(String fileType) {
-                this.fileType = fileType;
+            public Builder param(Param param) {
+                this.param = param;
                 return this;
             }
 
             /**
-             * <p>The list of supported parsers</p>
+             * TempStorageLeaseId.
              */
-            public Builder parserList(java.util.List<ParserList> parserList) {
-                this.parserList = parserList;
+            public Builder tempStorageLeaseId(String tempStorageLeaseId) {
+                this.tempStorageLeaseId = tempStorageLeaseId;
                 return this;
             }
 

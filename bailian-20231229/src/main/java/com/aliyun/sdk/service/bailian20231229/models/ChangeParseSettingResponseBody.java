@@ -119,7 +119,10 @@ public class ChangeParseSettingResponseBody extends TeaModel {
         } 
 
         /**
-         * Code.
+         * <p>The status code.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>InvalidParameter</p>
          */
         public Builder code(String code) {
             this.code = code;
@@ -127,7 +130,7 @@ public class ChangeParseSettingResponseBody extends TeaModel {
         }
 
         /**
-         * Data.
+         * <p>The returned data fields.</p>
          */
         public Builder data(Data data) {
             this.data = data;
@@ -135,7 +138,10 @@ public class ChangeParseSettingResponseBody extends TeaModel {
         }
 
         /**
-         * Message.
+         * <p>The error message.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>User not authorized to operate on the specified resource.</p>
          */
         public Builder message(String message) {
             this.message = message;
@@ -143,7 +149,10 @@ public class ChangeParseSettingResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>7BA8ADD9-53D6-53F0-918F-A1E776AD230E</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -151,7 +160,10 @@ public class ChangeParseSettingResponseBody extends TeaModel {
         }
 
         /**
-         * Status.
+         * <p>The HTTP status code returned.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>200</p>
          */
         public Builder status(String status) {
             this.status = status;
@@ -159,7 +171,14 @@ public class ChangeParseSettingResponseBody extends TeaModel {
         }
 
         /**
-         * Success.
+         * <p>Indicates whether the call is successful. Valid values:</p>
+         * <ul>
+         * <li>true</li>
+         * <li>false</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder success(Boolean success) {
             this.success = success;
@@ -212,7 +231,10 @@ public class ChangeParseSettingResponseBody extends TeaModel {
             } 
 
             /**
-             * ChangeResult.
+             * <p>The result of the modification.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>true</p>
              */
             public Builder changeResult(Boolean changeResult) {
                 this.changeResult = changeResult;

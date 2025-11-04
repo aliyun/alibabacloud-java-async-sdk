@@ -119,7 +119,10 @@ public class GetParseSettingsResponseBody extends TeaModel {
         } 
 
         /**
-         * Code.
+         * <p>The status code.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>success</p>
          */
         public Builder code(String code) {
             this.code = code;
@@ -127,7 +130,7 @@ public class GetParseSettingsResponseBody extends TeaModel {
         }
 
         /**
-         * Data.
+         * <p>The returned data fields.</p>
          */
         public Builder data(java.util.List<Data> data) {
             this.data = data;
@@ -135,7 +138,10 @@ public class GetParseSettingsResponseBody extends TeaModel {
         }
 
         /**
-         * Message.
+         * <p>The error message.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>workspace id is null or invalid.</p>
          */
         public Builder message(String message) {
             this.message = message;
@@ -143,7 +149,10 @@ public class GetParseSettingsResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>35A267BF-xxxx-54DB-8394-AA3B0742D833</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -151,7 +160,10 @@ public class GetParseSettingsResponseBody extends TeaModel {
         }
 
         /**
-         * Status.
+         * <p>The HTTP status code returned.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>200</p>
          */
         public Builder status(String status) {
             this.status = status;
@@ -159,7 +171,14 @@ public class GetParseSettingsResponseBody extends TeaModel {
         }
 
         /**
-         * Success.
+         * <p>Indicates whether the call is successful. Valid values:</p>
+         * <ul>
+         * <li>true</li>
+         * <li>false</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>True</p>
          */
         public Builder success(Boolean success) {
             this.success = success;
@@ -225,7 +244,13 @@ public class GetParseSettingsResponseBody extends TeaModel {
             } 
 
             /**
-             * ModelName.
+             * <p>The model name.</p>
+             * 
+             * <strong>example:</strong>
+             * <ul>
+             * <li>qwen-vl-max</li>
+             * <li>qwen-vl-plus</li>
+             * </ul>
              */
             public Builder modelName(String modelName) {
                 this.modelName = modelName;
@@ -233,7 +258,13 @@ public class GetParseSettingsResponseBody extends TeaModel {
             }
 
             /**
-             * ModelPrompt.
+             * <p>The prompt used for parsing.</p>
+             * 
+             * <strong>example:</strong>
+             * <h1>Role</h1>
+             * <p>You are a professional image content annotator, skilled in identifying and describing the contents of images.  </p>
+             * <h1>Task Objective</h1>
+             * <p>Based on the input image, provide a detailed description of its contents.</p>
              */
             public Builder modelPrompt(String modelPrompt) {
                 this.modelPrompt = modelPrompt;
@@ -326,7 +357,10 @@ public class GetParseSettingsResponseBody extends TeaModel {
             } 
 
             /**
-             * FileType.
+             * <p>The file type. Valid values are: pdf, docx, doc, etc. All supported file types in the category are listed here.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>pdf</p>
              */
             public Builder fileType(String fileType) {
                 this.fileType = fileType;
@@ -334,7 +368,16 @@ public class GetParseSettingsResponseBody extends TeaModel {
             }
 
             /**
-             * Parser.
+             * <p>The parser used for files of the current type. Valid values:</p>
+             * <ul>
+             * <li>DOCMIND (Intelligent parsing)</li>
+             * <li>DOCMIND_DIGITAL (Digital parsing)</li>
+             * <li>DOCMIND_LLM_VERSION (LLM parsing)</li>
+             * <li>DASH_QWEN_VL_PARSER (Qwen VL parsing)</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>DOCMIND</p>
              */
             public Builder parser(String parser) {
                 this.parser = parser;
@@ -342,7 +385,7 @@ public class GetParseSettingsResponseBody extends TeaModel {
             }
 
             /**
-             * ParserConfig.
+             * <p>The parser configuration. Currently, this is available only for Qwen VL parsing.</p>
              */
             public Builder parserConfig(ParserConfig parserConfig) {
                 this.parserConfig = parserConfig;
@@ -350,7 +393,10 @@ public class GetParseSettingsResponseBody extends TeaModel {
             }
 
             /**
-             * ParserDisplayName.
+             * <p>The display name of the parsing method.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Digital parsing</p>
              */
             public Builder parserDisplayName(String parserDisplayName) {
                 this.parserDisplayName = parserDisplayName;
