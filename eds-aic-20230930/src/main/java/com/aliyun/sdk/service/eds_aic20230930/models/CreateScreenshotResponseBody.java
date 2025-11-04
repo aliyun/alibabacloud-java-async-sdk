@@ -101,11 +101,15 @@ public class CreateScreenshotResponseBody extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("AndroidInstanceId")
         private String androidInstanceId;
 
+        @com.aliyun.core.annotation.NameInMap("ScreenshotId")
+        private String screenshotId;
+
         @com.aliyun.core.annotation.NameInMap("TaskId")
         private String taskId;
 
         private Tasks(Builder builder) {
             this.androidInstanceId = builder.androidInstanceId;
+            this.screenshotId = builder.screenshotId;
             this.taskId = builder.taskId;
         }
 
@@ -125,6 +129,13 @@ public class CreateScreenshotResponseBody extends TeaModel {
         }
 
         /**
+         * @return screenshotId
+         */
+        public String getScreenshotId() {
+            return this.screenshotId;
+        }
+
+        /**
          * @return taskId
          */
         public String getTaskId() {
@@ -133,6 +144,7 @@ public class CreateScreenshotResponseBody extends TeaModel {
 
         public static final class Builder {
             private String androidInstanceId; 
+            private String screenshotId; 
             private String taskId; 
 
             private Builder() {
@@ -140,6 +152,7 @@ public class CreateScreenshotResponseBody extends TeaModel {
 
             private Builder(Tasks model) {
                 this.androidInstanceId = model.androidInstanceId;
+                this.screenshotId = model.screenshotId;
                 this.taskId = model.taskId;
             } 
 
@@ -151,6 +164,14 @@ public class CreateScreenshotResponseBody extends TeaModel {
              */
             public Builder androidInstanceId(String androidInstanceId) {
                 this.androidInstanceId = androidInstanceId;
+                return this;
+            }
+
+            /**
+             * ScreenshotId.
+             */
+            public Builder screenshotId(String screenshotId) {
+                this.screenshotId = screenshotId;
                 return this;
             }
 

@@ -145,6 +145,156 @@ public class DescribeAndroidInstanceGroupsResponseBody extends TeaModel {
      *
      * <p>DescribeAndroidInstanceGroupsResponseBody</p>
      */
+    public static class InstanceQosRule extends TeaModel {
+        @com.aliyun.core.annotation.NameInMap("InstanceId")
+        private String instanceId;
+
+        @com.aliyun.core.annotation.NameInMap("QosRuleId")
+        private String qosRuleId;
+
+        private InstanceQosRule(Builder builder) {
+            this.instanceId = builder.instanceId;
+            this.qosRuleId = builder.qosRuleId;
+        }
+
+        public static Builder builder() {
+            return new Builder();
+        }
+
+        public static InstanceQosRule create() {
+            return builder().build();
+        }
+
+        /**
+         * @return instanceId
+         */
+        public String getInstanceId() {
+            return this.instanceId;
+        }
+
+        /**
+         * @return qosRuleId
+         */
+        public String getQosRuleId() {
+            return this.qosRuleId;
+        }
+
+        public static final class Builder {
+            private String instanceId; 
+            private String qosRuleId; 
+
+            private Builder() {
+            } 
+
+            private Builder(InstanceQosRule model) {
+                this.instanceId = model.instanceId;
+                this.qosRuleId = model.qosRuleId;
+            } 
+
+            /**
+             * InstanceId.
+             */
+            public Builder instanceId(String instanceId) {
+                this.instanceId = instanceId;
+                return this;
+            }
+
+            /**
+             * QosRuleId.
+             */
+            public Builder qosRuleId(String qosRuleId) {
+                this.qosRuleId = qosRuleId;
+                return this;
+            }
+
+            public InstanceQosRule build() {
+                return new InstanceQosRule(this);
+            } 
+
+        } 
+
+    }
+    /**
+     * 
+     * {@link DescribeAndroidInstanceGroupsResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeAndroidInstanceGroupsResponseBody</p>
+     */
+    public static class BindQosRules extends TeaModel {
+        @com.aliyun.core.annotation.NameInMap("InstanceQosRule")
+        private java.util.List<InstanceQosRule> instanceQosRule;
+
+        @com.aliyun.core.annotation.NameInMap("totalCount")
+        private Integer totalCount;
+
+        private BindQosRules(Builder builder) {
+            this.instanceQosRule = builder.instanceQosRule;
+            this.totalCount = builder.totalCount;
+        }
+
+        public static Builder builder() {
+            return new Builder();
+        }
+
+        public static BindQosRules create() {
+            return builder().build();
+        }
+
+        /**
+         * @return instanceQosRule
+         */
+        public java.util.List<InstanceQosRule> getInstanceQosRule() {
+            return this.instanceQosRule;
+        }
+
+        /**
+         * @return totalCount
+         */
+        public Integer getTotalCount() {
+            return this.totalCount;
+        }
+
+        public static final class Builder {
+            private java.util.List<InstanceQosRule> instanceQosRule; 
+            private Integer totalCount; 
+
+            private Builder() {
+            } 
+
+            private Builder(BindQosRules model) {
+                this.instanceQosRule = model.instanceQosRule;
+                this.totalCount = model.totalCount;
+            } 
+
+            /**
+             * InstanceQosRule.
+             */
+            public Builder instanceQosRule(java.util.List<InstanceQosRule> instanceQosRule) {
+                this.instanceQosRule = instanceQosRule;
+                return this;
+            }
+
+            /**
+             * totalCount.
+             */
+            public Builder totalCount(Integer totalCount) {
+                this.totalCount = totalCount;
+                return this;
+            }
+
+            public BindQosRules build() {
+                return new BindQosRules(this);
+            } 
+
+        } 
+
+    }
+    /**
+     * 
+     * {@link DescribeAndroidInstanceGroupsResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeAndroidInstanceGroupsResponseBody</p>
+     */
     public static class Disks extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("DiskSize")
         private Integer diskSize;
@@ -320,6 +470,9 @@ public class DescribeAndroidInstanceGroupsResponseBody extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("BandwidthPackageType")
         private String bandwidthPackageType;
 
+        @com.aliyun.core.annotation.NameInMap("BindQosRules")
+        private BindQosRules bindQosRules;
+
         @com.aliyun.core.annotation.NameInMap("ChargeType")
         private String chargeType;
 
@@ -410,6 +563,9 @@ public class DescribeAndroidInstanceGroupsResponseBody extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("VSwitchId")
         private String vSwitchId;
 
+        @com.aliyun.core.annotation.NameInMap("ZoneId")
+        private String zoneId;
+
         private InstanceGroupModel(Builder builder) {
             this.appInstanceGroupId = builder.appInstanceGroupId;
             this.architectureType = builder.architectureType;
@@ -417,6 +573,7 @@ public class DescribeAndroidInstanceGroupsResponseBody extends TeaModel {
             this.bandwidthPackageId = builder.bandwidthPackageId;
             this.bandwidthPackageStatus = builder.bandwidthPackageStatus;
             this.bandwidthPackageType = builder.bandwidthPackageType;
+            this.bindQosRules = builder.bindQosRules;
             this.chargeType = builder.chargeType;
             this.cpu = builder.cpu;
             this.disks = builder.disks;
@@ -447,6 +604,7 @@ public class DescribeAndroidInstanceGroupsResponseBody extends TeaModel {
             this.systemVersion = builder.systemVersion;
             this.tags = builder.tags;
             this.vSwitchId = builder.vSwitchId;
+            this.zoneId = builder.zoneId;
         }
 
         public static Builder builder() {
@@ -497,6 +655,13 @@ public class DescribeAndroidInstanceGroupsResponseBody extends TeaModel {
          */
         public String getBandwidthPackageType() {
             return this.bandwidthPackageType;
+        }
+
+        /**
+         * @return bindQosRules
+         */
+        public BindQosRules getBindQosRules() {
+            return this.bindQosRules;
         }
 
         /**
@@ -709,6 +874,13 @@ public class DescribeAndroidInstanceGroupsResponseBody extends TeaModel {
             return this.vSwitchId;
         }
 
+        /**
+         * @return zoneId
+         */
+        public String getZoneId() {
+            return this.zoneId;
+        }
+
         public static final class Builder {
             private String appInstanceGroupId; 
             private String architectureType; 
@@ -716,6 +888,7 @@ public class DescribeAndroidInstanceGroupsResponseBody extends TeaModel {
             private String bandwidthPackageId; 
             private String bandwidthPackageStatus; 
             private String bandwidthPackageType; 
+            private BindQosRules bindQosRules; 
             private String chargeType; 
             private String cpu; 
             private java.util.List<Disks> disks; 
@@ -746,6 +919,7 @@ public class DescribeAndroidInstanceGroupsResponseBody extends TeaModel {
             private String systemVersion; 
             private java.util.List<Tags> tags; 
             private String vSwitchId; 
+            private String zoneId; 
 
             private Builder() {
             } 
@@ -757,6 +931,7 @@ public class DescribeAndroidInstanceGroupsResponseBody extends TeaModel {
                 this.bandwidthPackageId = model.bandwidthPackageId;
                 this.bandwidthPackageStatus = model.bandwidthPackageStatus;
                 this.bandwidthPackageType = model.bandwidthPackageType;
+                this.bindQosRules = model.bindQosRules;
                 this.chargeType = model.chargeType;
                 this.cpu = model.cpu;
                 this.disks = model.disks;
@@ -787,6 +962,7 @@ public class DescribeAndroidInstanceGroupsResponseBody extends TeaModel {
                 this.systemVersion = model.systemVersion;
                 this.tags = model.tags;
                 this.vSwitchId = model.vSwitchId;
+                this.zoneId = model.zoneId;
             } 
 
             /**
@@ -846,6 +1022,14 @@ public class DescribeAndroidInstanceGroupsResponseBody extends TeaModel {
              */
             public Builder bandwidthPackageType(String bandwidthPackageType) {
                 this.bandwidthPackageType = bandwidthPackageType;
+                return this;
+            }
+
+            /**
+             * BindQosRules.
+             */
+            public Builder bindQosRules(BindQosRules bindQosRules) {
+                this.bindQosRules = bindQosRules;
                 return this;
             }
 
@@ -1164,6 +1348,14 @@ public class DescribeAndroidInstanceGroupsResponseBody extends TeaModel {
              */
             public Builder vSwitchId(String vSwitchId) {
                 this.vSwitchId = vSwitchId;
+                return this;
+            }
+
+            /**
+             * ZoneId.
+             */
+            public Builder zoneId(String zoneId) {
+                this.zoneId = zoneId;
                 return this;
             }
 

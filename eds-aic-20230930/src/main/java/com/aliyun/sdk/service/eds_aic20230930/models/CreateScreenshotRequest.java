@@ -27,6 +27,10 @@ public class CreateScreenshotRequest extends Request {
     private String ossBucketName;
 
     @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ScreenshotId")
+    private String screenshotId;
+
+    @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("SkipCheckPolicyConfig")
     private String skipCheckPolicyConfig;
 
@@ -34,6 +38,7 @@ public class CreateScreenshotRequest extends Request {
         super(builder);
         this.androidInstanceIdList = builder.androidInstanceIdList;
         this.ossBucketName = builder.ossBucketName;
+        this.screenshotId = builder.screenshotId;
         this.skipCheckPolicyConfig = builder.skipCheckPolicyConfig;
     }
 
@@ -65,6 +70,13 @@ public class CreateScreenshotRequest extends Request {
     }
 
     /**
+     * @return screenshotId
+     */
+    public String getScreenshotId() {
+        return this.screenshotId;
+    }
+
+    /**
      * @return skipCheckPolicyConfig
      */
     public String getSkipCheckPolicyConfig() {
@@ -74,6 +86,7 @@ public class CreateScreenshotRequest extends Request {
     public static final class Builder extends Request.Builder<CreateScreenshotRequest, Builder> {
         private java.util.List<String> androidInstanceIdList; 
         private String ossBucketName; 
+        private String screenshotId; 
         private String skipCheckPolicyConfig; 
 
         private Builder() {
@@ -84,6 +97,7 @@ public class CreateScreenshotRequest extends Request {
             super(request);
             this.androidInstanceIdList = request.androidInstanceIdList;
             this.ossBucketName = request.ossBucketName;
+            this.screenshotId = request.screenshotId;
             this.skipCheckPolicyConfig = request.skipCheckPolicyConfig;
         } 
 
@@ -106,6 +120,15 @@ public class CreateScreenshotRequest extends Request {
         public Builder ossBucketName(String ossBucketName) {
             this.putQueryParameter("OssBucketName", ossBucketName);
             this.ossBucketName = ossBucketName;
+            return this;
+        }
+
+        /**
+         * ScreenshotId.
+         */
+        public Builder screenshotId(String screenshotId) {
+            this.putQueryParameter("ScreenshotId", screenshotId);
+            this.screenshotId = screenshotId;
             return this;
         }
 
