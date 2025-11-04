@@ -106,7 +106,10 @@ public class SearchMediaByHybridResponseBody extends TeaModel {
         } 
 
         /**
-         * Code.
+         * <p>The status code returned.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>200</p>
          */
         public Builder code(String code) {
             this.code = code;
@@ -114,7 +117,7 @@ public class SearchMediaByHybridResponseBody extends TeaModel {
         }
 
         /**
-         * MediaList.
+         * <p>The media assets that match the search query.</p>
          */
         public Builder mediaList(java.util.List<MediaList> mediaList) {
             this.mediaList = mediaList;
@@ -122,7 +125,10 @@ public class SearchMediaByHybridResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p><strong><strong><strong>3B-0E1A-586A-AC29-742247</strong></strong></strong></p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -130,7 +136,10 @@ public class SearchMediaByHybridResponseBody extends TeaModel {
         }
 
         /**
-         * Success.
+         * <p>Indicates whether the request was successful. Valid values: true and false.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder success(String success) {
             this.success = success;
@@ -138,7 +147,10 @@ public class SearchMediaByHybridResponseBody extends TeaModel {
         }
 
         /**
-         * Total.
+         * <p>The total number of media assets that match the search criteria.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>30</p>
          */
         public Builder total(Long total) {
             this.total = total;
@@ -217,7 +229,10 @@ public class SearchMediaByHybridResponseBody extends TeaModel {
             } 
 
             /**
-             * From.
+             * <p>The start time of the relevant clip.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2</p>
              */
             public Builder from(Double from) {
                 this.from = from;
@@ -225,7 +240,10 @@ public class SearchMediaByHybridResponseBody extends TeaModel {
             }
 
             /**
-             * Score.
+             * <p>The relevance score of the clip for the query.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>0.99</p>
              */
             public Builder score(Double score) {
                 this.score = score;
@@ -233,7 +251,10 @@ public class SearchMediaByHybridResponseBody extends TeaModel {
             }
 
             /**
-             * To.
+             * <p>The end time of the relevant clip.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>4</p>
              */
             public Builder to(Double to) {
                 this.to = to;
@@ -300,7 +321,7 @@ public class SearchMediaByHybridResponseBody extends TeaModel {
             } 
 
             /**
-             * ClipInfo.
+             * <p>The information about the relevant clips.</p>
              */
             public Builder clipInfo(java.util.List<ClipInfo> clipInfo) {
                 this.clipInfo = clipInfo;
@@ -308,7 +329,10 @@ public class SearchMediaByHybridResponseBody extends TeaModel {
             }
 
             /**
-             * MediaId.
+             * <p>The ID of the media asset.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>a18936e0e28771edb59ae6f6f47a****</p>
              */
             public Builder mediaId(String mediaId) {
                 this.mediaId = mediaId;

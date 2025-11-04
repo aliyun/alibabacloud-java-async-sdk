@@ -54,7 +54,10 @@ public class SendAIAgentTextResponseBody extends TeaModel {
         } 
 
         /**
-         * RequestId.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>DB488837-3****</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;

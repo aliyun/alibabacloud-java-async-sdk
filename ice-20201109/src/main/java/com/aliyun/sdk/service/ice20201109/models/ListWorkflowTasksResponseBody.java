@@ -107,7 +107,10 @@ public class ListWorkflowTasksResponseBody extends TeaModel {
         } 
 
         /**
-         * MaxResults.
+         * <p>The maximum number of entries returned in this response.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10</p>
          */
         public Builder maxResults(Integer maxResults) {
             this.maxResults = maxResults;
@@ -115,6 +118,7 @@ public class ListWorkflowTasksResponseBody extends TeaModel {
         }
 
         /**
+         * <p>A pagination token.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -126,7 +130,10 @@ public class ListWorkflowTasksResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * <p>The ID of the request.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>C0C02296-113C-5838-8FE9-8F3A32998DDC</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -134,7 +141,7 @@ public class ListWorkflowTasksResponseBody extends TeaModel {
         }
 
         /**
-         * TaskList.
+         * <p>The media workflow tasks.</p>
          */
         public Builder taskList(java.util.List<TaskList> taskList) {
             this.taskList = taskList;
@@ -142,7 +149,10 @@ public class ListWorkflowTasksResponseBody extends TeaModel {
         }
 
         /**
-         * TotalCount.
+         * <p>The total number of entries returned. By default, this parameter is not returned.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>4</p>
          */
         public Builder totalCount(Integer totalCount) {
             this.totalCount = totalCount;
@@ -273,7 +283,10 @@ public class ListWorkflowTasksResponseBody extends TeaModel {
             } 
 
             /**
-             * CreateTime.
+             * <p>The creation time of the workflow template.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2025-03-21T01:48:49Z</p>
              */
             public Builder createTime(String createTime) {
                 this.createTime = createTime;
@@ -281,7 +294,14 @@ public class ListWorkflowTasksResponseBody extends TeaModel {
             }
 
             /**
-             * MediaType.
+             * <p>The source of the media file. Valid values:</p>
+             * <ul>
+             * <li>OSS: an OSS object.</li>
+             * <li>Media: a media asset.</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>OSS</p>
              */
             public Builder mediaType(String mediaType) {
                 this.mediaType = mediaType;
@@ -289,7 +309,10 @@ public class ListWorkflowTasksResponseBody extends TeaModel {
             }
 
             /**
-             * ModifiedTime.
+             * <p>The last modification time of the workflow template.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2025-02-23 10:19:37 +0800</p>
              */
             public Builder modifiedTime(String modifiedTime) {
                 this.modifiedTime = modifiedTime;
@@ -297,7 +320,10 @@ public class ListWorkflowTasksResponseBody extends TeaModel {
             }
 
             /**
-             * Name.
+             * <p>The name of the workflow template.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>example-workflow-***</p>
              */
             public Builder name(String name) {
                 this.name = name;
@@ -305,7 +331,10 @@ public class ListWorkflowTasksResponseBody extends TeaModel {
             }
 
             /**
-             * Status.
+             * <p>The status of the workflow template.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Active</p>
              */
             public Builder status(String status) {
                 this.status = status;
@@ -313,7 +342,10 @@ public class ListWorkflowTasksResponseBody extends TeaModel {
             }
 
             /**
-             * Type.
+             * <p>The type of the workflow template.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Common</p>
              */
             public Builder type(String type) {
                 this.type = type;
@@ -321,7 +353,10 @@ public class ListWorkflowTasksResponseBody extends TeaModel {
             }
 
             /**
-             * WorkflowId.
+             * <p>The workflow ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p><strong><strong><strong>2491c84dce913da9fe65</strong></strong></strong></p>
              */
             public Builder workflowId(String workflowId) {
                 this.workflowId = workflowId;
@@ -453,7 +488,10 @@ public class ListWorkflowTasksResponseBody extends TeaModel {
             } 
 
             /**
-             * CreateTime.
+             * <p>The time the task was created. The time follows the ISO 8601 standard in the yyyy-MM-ddTHH:mm:ssZ format. The time is displayed in UTC.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2024-07-15T09:45:48Z</p>
              */
             public Builder createTime(String createTime) {
                 this.createTime = createTime;
@@ -461,7 +499,10 @@ public class ListWorkflowTasksResponseBody extends TeaModel {
             }
 
             /**
-             * FinishTime.
+             * <p>The time the task was completed. The time follows the ISO 8601 standard in the yyyy-MM-ddTHH:mm:ssZ format. The time is displayed in UTC.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2024-12-07T10:53:45Z</p>
              */
             public Builder finishTime(String finishTime) {
                 this.finishTime = finishTime;
@@ -469,7 +510,18 @@ public class ListWorkflowTasksResponseBody extends TeaModel {
             }
 
             /**
-             * Status.
+             * <p>The task state.</p>
+             * <p><strong>Valid values</strong>:</p>
+             * <ul>
+             * <li>Init: Initializing</li>
+             * <li>Failed</li>
+             * <li>Canceled</li>
+             * <li>Processing</li>
+             * <li>Succeed</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>Succeed</p>
              */
             public Builder status(String status) {
                 this.status = status;
@@ -477,7 +529,10 @@ public class ListWorkflowTasksResponseBody extends TeaModel {
             }
 
             /**
-             * TaskId.
+             * <p>The ID of the workflow task.</p>
+             * 
+             * <strong>example:</strong>
+             * <p><em><strong><strong>4c93d2f404f8345b16a965</strong></strong></em></p>
              */
             public Builder taskId(String taskId) {
                 this.taskId = taskId;
@@ -485,7 +540,10 @@ public class ListWorkflowTasksResponseBody extends TeaModel {
             }
 
             /**
-             * TaskInput.
+             * <p>The input data for the workflow task.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>{&quot;Type&quot;:&quot;Media&quot;,&quot;Media&quot;:&quot;<strong><strong>8b40884171efb0d9e7f7f458</strong></strong>&quot;}</p>
              */
             public Builder taskInput(String taskInput) {
                 this.taskInput = taskInput;
@@ -493,7 +551,10 @@ public class ListWorkflowTasksResponseBody extends TeaModel {
             }
 
             /**
-             * UserData.
+             * <p>The custom data that was passed when the task was submitted.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>{&quot;NotifyAddress&quot;:&quot;<a href="http://xx.xx.xxx%22%7D">http://xx.xx.xxx&quot;}</a></p>
              */
             public Builder userData(String userData) {
                 this.userData = userData;
@@ -501,7 +562,7 @@ public class ListWorkflowTasksResponseBody extends TeaModel {
             }
 
             /**
-             * Workflow.
+             * <p>The information about the workflow template.</p>
              */
             public Builder workflow(Workflow workflow) {
                 this.workflow = workflow;

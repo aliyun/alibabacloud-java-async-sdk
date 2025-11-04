@@ -115,7 +115,10 @@ public class QueryTraceM3u8JobListRequest extends Request {
         } 
 
         /**
-         * CreateTimeEnd.
+         * <p>The end of the creation time range for the query, in UNIX timestamp format.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1627357325</p>
          */
         public Builder createTimeEnd(Long createTimeEnd) {
             this.putQueryParameter("CreateTimeEnd", createTimeEnd);
@@ -124,7 +127,10 @@ public class QueryTraceM3u8JobListRequest extends Request {
         }
 
         /**
-         * CreateTimeStart.
+         * <p>The start of the creation time range for the query, in UNIX timestamp format.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1627357322</p>
          */
         public Builder createTimeStart(Long createTimeStart) {
             this.putQueryParameter("CreateTimeStart", createTimeStart);
@@ -133,7 +139,10 @@ public class QueryTraceM3u8JobListRequest extends Request {
         }
 
         /**
-         * JobId.
+         * <p>The job ID. You can obtain the value of this parameter from the response of the SubmitTraceM3u8Job operation.</p>
+         * 
+         * <strong>example:</strong>
+         * <p><strong><strong>20b48fb04483915d4f2cd8ac</strong></strong></p>
          */
         public Builder jobId(String jobId) {
             this.putQueryParameter("JobId", jobId);
@@ -142,7 +151,10 @@ public class QueryTraceM3u8JobListRequest extends Request {
         }
 
         /**
-         * PageNumber.
+         * <p>The page number.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>0</p>
          */
         public Builder pageNumber(Long pageNumber) {
             this.putQueryParameter("PageNumber", pageNumber);
@@ -151,7 +163,10 @@ public class QueryTraceM3u8JobListRequest extends Request {
         }
 
         /**
-         * PageSize.
+         * <p>The number of entries to return on each page.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10</p>
          */
         public Builder pageSize(Long pageSize) {
             this.putQueryParameter("PageSize", pageSize);

@@ -106,7 +106,10 @@ public class DescribePlayListResponseBody extends TeaModel {
         } 
 
         /**
-         * PageNum.
+         * <p>The page number.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder pageNum(Long pageNum) {
             this.pageNum = pageNum;
@@ -114,7 +117,10 @@ public class DescribePlayListResponseBody extends TeaModel {
         }
 
         /**
-         * PageSize.
+         * <p>The number of entries per page. Default value: 20. Valid values: 1 to 100.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10</p>
          */
         public Builder pageSize(Long pageSize) {
             this.pageSize = pageSize;
@@ -122,7 +128,7 @@ public class DescribePlayListResponseBody extends TeaModel {
         }
 
         /**
-         * PlayList.
+         * <p>The playback records.</p>
          */
         public Builder playList(java.util.List<PlayList> playList) {
             this.playList = playList;
@@ -130,7 +136,7 @@ public class DescribePlayListResponseBody extends TeaModel {
         }
 
         /**
-         * <p>Id</p>
+         * <p>The ID of the request.</p>
          * 
          * <strong>example:</strong>
          * <p>B960580D-26FA-5547-8AFC-3CDC812DBF27</p>
@@ -141,7 +147,10 @@ public class DescribePlayListResponseBody extends TeaModel {
         }
 
         /**
-         * TotalNum.
+         * <p>The total playback count.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>49</p>
          */
         public Builder totalNum(Long totalNum) {
             this.totalNum = totalNum;
@@ -311,7 +320,10 @@ public class DescribePlayListResponseBody extends TeaModel {
             } 
 
             /**
-             * FirstFrameDuration.
+             * <p>Time to first frame.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>200</p>
              */
             public Builder firstFrameDuration(String firstFrameDuration) {
                 this.firstFrameDuration = firstFrameDuration;
@@ -319,7 +331,10 @@ public class DescribePlayListResponseBody extends TeaModel {
             }
 
             /**
-             * PlayDuration.
+             * <p>The playback duration.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1000</p>
              */
             public Builder playDuration(String playDuration) {
                 this.playDuration = playDuration;
@@ -327,7 +342,10 @@ public class DescribePlayListResponseBody extends TeaModel {
             }
 
             /**
-             * PlayTs.
+             * <p>The timestamp when the playback started.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1675922209572</p>
              */
             public Builder playTs(String playTs) {
                 this.playTs = playTs;
@@ -335,7 +353,10 @@ public class DescribePlayListResponseBody extends TeaModel {
             }
 
             /**
-             * PlayType.
+             * <p>The playback type.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>vod</p>
              */
             public Builder playType(String playType) {
                 this.playType = playType;
@@ -343,7 +364,10 @@ public class DescribePlayListResponseBody extends TeaModel {
             }
 
             /**
-             * SessionId.
+             * <p>The ID of the player session.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>91488be2-8381-40c9-8494-e8afe22c4a2d</p>
              */
             public Builder sessionId(String sessionId) {
                 this.sessionId = sessionId;
@@ -351,7 +375,10 @@ public class DescribePlayListResponseBody extends TeaModel {
             }
 
             /**
-             * Status.
+             * <p>The playback status.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>complete</p>
              */
             public Builder status(String status) {
                 this.status = status;
@@ -359,7 +386,10 @@ public class DescribePlayListResponseBody extends TeaModel {
             }
 
             /**
-             * StuckDuration.
+             * <p>The stuttering duration.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>20</p>
              */
             public Builder stuckDuration(String stuckDuration) {
                 this.stuckDuration = stuckDuration;
@@ -367,7 +397,10 @@ public class DescribePlayListResponseBody extends TeaModel {
             }
 
             /**
-             * TraceId.
+             * <p>The TraceId of the player.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>0b736abf16724820210842673d9543</p>
              */
             public Builder traceId(String traceId) {
                 this.traceId = traceId;
@@ -375,7 +408,10 @@ public class DescribePlayListResponseBody extends TeaModel {
             }
 
             /**
-             * VideoDuration.
+             * <p>The duration of the video.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2000</p>
              */
             public Builder videoDuration(String videoDuration) {
                 this.videoDuration = videoDuration;
@@ -383,7 +419,10 @@ public class DescribePlayListResponseBody extends TeaModel {
             }
 
             /**
-             * VideoId.
+             * <p>The ID of the video.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>250314203f0171eebff17035d0b20102</p>
              */
             public Builder videoId(String videoId) {
                 this.videoId = videoId;

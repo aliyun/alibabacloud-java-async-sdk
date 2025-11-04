@@ -102,7 +102,10 @@ public class UpdateHotwordLibraryRequest extends Request {
         } 
 
         /**
-         * Description.
+         * <p>The description of the hotword library. It can be up to 200 characters in length.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>存放名人的词库</p>
          */
         public Builder description(String description) {
             this.putQueryParameter("Description", description);
@@ -111,6 +114,7 @@ public class UpdateHotwordLibraryRequest extends Request {
         }
 
         /**
+         * <p>The ID of the hotword library.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -123,7 +127,7 @@ public class UpdateHotwordLibraryRequest extends Request {
         }
 
         /**
-         * Hotwords.
+         * <p>The hotword list. You can add up to 300 hotword entries to a single library.</p>
          */
         public Builder hotwords(java.util.List<Hotword> hotwords) {
             String hotwordsShrink = shrink(hotwords, "Hotwords", "json");
@@ -133,7 +137,10 @@ public class UpdateHotwordLibraryRequest extends Request {
         }
 
         /**
-         * Name.
+         * <p>The name of the hotword library. It can be up to 100 characters in length.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>my_hotwords</p>
          */
         public Builder name(String name) {
             this.putQueryParameter("Name", name);

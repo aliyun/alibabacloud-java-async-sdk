@@ -175,6 +175,7 @@ public class DescribePlayListRequest extends Request {
         } 
 
         /**
+         * <p>The beginning of the time range to query. By default, the system queries data of the current day.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -187,6 +188,7 @@ public class DescribePlayListRequest extends Request {
         }
 
         /**
+         * <p>The end of the time range to query. The time range cannot exceed 24 hours.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -199,7 +201,16 @@ public class DescribePlayListRequest extends Request {
         }
 
         /**
-         * OrderName.
+         * <p>The criteria by which the sorting is performed. Valid values:</p>
+         * <ul>
+         * <li>FirstFrameDuration</li>
+         * <li>PlayDuration</li>
+         * <li>VideoDuration</li>
+         * <li>StuckDuration</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>FirstFrameDuration</p>
          */
         public Builder orderName(String orderName) {
             this.putQueryParameter("OrderName", orderName);
@@ -208,7 +219,14 @@ public class DescribePlayListRequest extends Request {
         }
 
         /**
-         * OrderType.
+         * <p>The sort order. Valid values:</p>
+         * <ul>
+         * <li>DESC: descending order.</li>
+         * <li>ASC: ascending order.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>DESC</p>
          */
         public Builder orderType(String orderType) {
             this.putQueryParameter("OrderType", orderType);
@@ -217,6 +235,7 @@ public class DescribePlayListRequest extends Request {
         }
 
         /**
+         * <p>The page number. Default value: 1.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -229,6 +248,7 @@ public class DescribePlayListRequest extends Request {
         }
 
         /**
+         * <p>The number of entries per page.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -241,7 +261,13 @@ public class DescribePlayListRequest extends Request {
         }
 
         /**
-         * PlayType.
+         * <p>The playback type. Valid value: </p>
+         * <ul>
+         * <li>vod</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>vod</p>
          */
         public Builder playType(String playType) {
             this.putQueryParameter("PlayType", playType);
@@ -250,7 +276,15 @@ public class DescribePlayListRequest extends Request {
         }
 
         /**
-         * Status.
+         * <p>The playback status. Valid values:</p>
+         * <ul>
+         * <li>complete</li>
+         * <li>playing</li>
+         * <li>unusual: A playback error occurs.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>complete</p>
          */
         public Builder status(String status) {
             this.putQueryParameter("Status", status);
@@ -259,7 +293,10 @@ public class DescribePlayListRequest extends Request {
         }
 
         /**
-         * TraceId.
+         * <p>The TraceId of the player.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>0bc5e70516766285805381012d271e</p>
          */
         public Builder traceId(String traceId) {
             this.putQueryParameter("TraceId", traceId);

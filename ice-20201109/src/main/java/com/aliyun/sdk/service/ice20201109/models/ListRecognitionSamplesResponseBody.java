@@ -106,7 +106,10 @@ public class ListRecognitionSamplesResponseBody extends TeaModel {
         } 
 
         /**
-         * PageNumber.
+         * <p>The page number.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder pageNumber(Integer pageNumber) {
             this.pageNumber = pageNumber;
@@ -114,7 +117,10 @@ public class ListRecognitionSamplesResponseBody extends TeaModel {
         }
 
         /**
-         * PageSize.
+         * <p>The number of entries per page.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>20</p>
          */
         public Builder pageSize(Integer pageSize) {
             this.pageSize = pageSize;
@@ -122,7 +128,10 @@ public class ListRecognitionSamplesResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * <p>The ID of the request.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>xxx-xxxx-xxxxx-xxxx</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -130,7 +139,7 @@ public class ListRecognitionSamplesResponseBody extends TeaModel {
         }
 
         /**
-         * Samples.
+         * <p>The samples.</p>
          */
         public Builder samples(Samples samples) {
             this.samples = samples;
@@ -138,7 +147,10 @@ public class ListRecognitionSamplesResponseBody extends TeaModel {
         }
 
         /**
-         * TotalCount.
+         * <p>The total number of samples.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>5</p>
          */
         public Builder totalCount(Long totalCount) {
             this.totalCount = totalCount;
@@ -204,7 +216,10 @@ public class ListRecognitionSamplesResponseBody extends TeaModel {
             } 
 
             /**
-             * ImageUrl.
+             * <p>The URL of the image sample.</p>
+             * 
+             * <strong>example:</strong>
+             * <p><a href="https://example.com/sample.png">https://example.com/sample.png</a></p>
              */
             public Builder imageUrl(String imageUrl) {
                 this.imageUrl = imageUrl;
@@ -212,7 +227,10 @@ public class ListRecognitionSamplesResponseBody extends TeaModel {
             }
 
             /**
-             * SampleId.
+             * <p>The sample ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>xxxxxxxxxxxxx</p>
              */
             public Builder sampleId(String sampleId) {
                 this.sampleId = sampleId;

@@ -89,6 +89,7 @@ public class DeleteAIAgentDialogueRequest extends Request {
         } 
 
         /**
+         * <p>The ID of the dialog that you want to delete.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -110,6 +111,7 @@ public class DeleteAIAgentDialogueRequest extends Request {
         }
 
         /**
+         * <p>The session ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>

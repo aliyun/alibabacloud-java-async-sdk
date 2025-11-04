@@ -145,7 +145,10 @@ public class SubmitTraceAbJobRequest extends Request {
         } 
 
         /**
-         * CipherBase64ed.
+         * <p>The key that is encoded by using the Base64 algorithm.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Qh6OdgIMcliQSI1fReOw****</p>
          */
         public Builder cipherBase64ed(String cipherBase64ed) {
             this.putQueryParameter("CipherBase64ed", cipherBase64ed);
@@ -154,6 +157,10 @@ public class SubmitTraceAbJobRequest extends Request {
         }
 
         /**
+         * <p>The source video file for A/B watermarking.</p>
+         * <blockquote>
+         * <p>OSS object or media asset must reside in the same region as the IMS service region. This API supports only videos that last at least 3 minutes. If the video is too short, the call may fail, or no output may be returned.</p>
+         * </blockquote>
          * <p>This parameter is required.</p>
          */
         public Builder input(Input input) {
@@ -164,7 +171,10 @@ public class SubmitTraceAbJobRequest extends Request {
         }
 
         /**
-         * Level.
+         * <p>The watermark level, which specifies the channel to embed watermarks. Valid values: 0 specifies the 0u channel, 1 specifies the 1uv channel, and 2 specifies the 2yuv channel.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>0</p>
          */
         public Builder level(Long level) {
             this.putQueryParameter("Level", level);
@@ -173,6 +183,7 @@ public class SubmitTraceAbJobRequest extends Request {
         }
 
         /**
+         * <p>The output directory path.</p>
          * <p>This parameter is required.</p>
          */
         public Builder output(Output output) {
@@ -183,7 +194,10 @@ public class SubmitTraceAbJobRequest extends Request {
         }
 
         /**
-         * StartTime.
+         * <p>The start point of watermark embedding. Unit: seconds.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>0</p>
          */
         public Builder startTime(Long startTime) {
             this.putQueryParameter("StartTime", startTime);
@@ -192,7 +206,10 @@ public class SubmitTraceAbJobRequest extends Request {
         }
 
         /**
-         * TotalTime.
+         * <p>The duration of the watermark embedding. Unit: seconds.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>360</p>
          */
         public Builder totalTime(Long totalTime) {
             this.putQueryParameter("TotalTime", totalTime);
@@ -201,7 +218,10 @@ public class SubmitTraceAbJobRequest extends Request {
         }
 
         /**
-         * UserData.
+         * <p>The custom data, which can be up to 1,024 bytes in size.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>123</p>
          */
         public Builder userData(String userData) {
             this.putQueryParameter("UserData", userData);
@@ -271,6 +291,10 @@ public class SubmitTraceAbJobRequest extends Request {
             } 
 
             /**
+             * <p>The source file. The file can be an OSS object or a media asset. You can specify the path of an OSS object in one of the following formats:</p>
+             * <p>1. oss://bucket/object</p>
+             * <p>2. http(s)://bucket.oss-[regionId].aliyuncs.com/object</p>
+             * <p>where bucket specifies an OSS bucket that resides in the same region as the job, and object specifies the object path in OSS.</p>
              * <p>This parameter is required.</p>
              * 
              * <strong>example:</strong>
@@ -282,6 +306,11 @@ public class SubmitTraceAbJobRequest extends Request {
             }
 
             /**
+             * <p>The type of the source file. Valid values:</p>
+             * <ol>
+             * <li>OSS: an OSS object.</li>
+             * <li>Media: a media asset.</li>
+             * </ol>
              * <p>This parameter is required.</p>
              * 
              * <strong>example:</strong>
@@ -354,6 +383,10 @@ public class SubmitTraceAbJobRequest extends Request {
             } 
 
             /**
+             * <p>The output file. The file can be an OSS object or a media asset. OSS URL formats:</p>
+             * <p>1. oss://bucket/dir/</p>
+             * <p>2. http(s)://bucket.oss-[regionId].aliyuncs.com/dir/</p>
+             * <p>In the URL, bucket specifies an OSS bucket that resides in the same region as the job, and dir specifies the object path in OSS.</p>
              * <p>This parameter is required.</p>
              * 
              * <strong>example:</strong>
@@ -365,6 +398,11 @@ public class SubmitTraceAbJobRequest extends Request {
             }
 
             /**
+             * <p>The type of the output file. Valid values:</p>
+             * <ul>
+             * <li>OSS: an OSS object.</li>
+             * <li>Media: a media asset.</li>
+             * </ul>
              * <p>This parameter is required.</p>
              * 
              * <strong>example:</strong>

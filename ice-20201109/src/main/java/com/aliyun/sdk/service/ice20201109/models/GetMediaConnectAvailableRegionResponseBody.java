@@ -93,7 +93,7 @@ public class GetMediaConnectAvailableRegionResponseBody extends TeaModel {
         } 
 
         /**
-         * Content.
+         * <p>The rsponse body.</p>
          */
         public Builder content(Content content) {
             this.content = content;
@@ -101,7 +101,10 @@ public class GetMediaConnectAvailableRegionResponseBody extends TeaModel {
         }
 
         /**
-         * Description.
+         * <p>The call description.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>OK</p>
          */
         public Builder description(String description) {
             this.description = description;
@@ -109,7 +112,10 @@ public class GetMediaConnectAvailableRegionResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * <p>The ID of the request.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>41CB9D4C-4650-5723-BA89-D6824F706ACB</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -117,7 +123,10 @@ public class GetMediaConnectAvailableRegionResponseBody extends TeaModel {
         }
 
         /**
-         * RetCode.
+         * <p>The returned error code. A value of 0 indicates the call is successful.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>0</p>
          */
         public Builder retCode(Integer retCode) {
             this.retCode = retCode;
@@ -183,7 +192,10 @@ public class GetMediaConnectAvailableRegionResponseBody extends TeaModel {
             } 
 
             /**
-             * DefaultRegion.
+             * <p>The default region. You can ignore the parameter.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>cn-shanghai</p>
              */
             public Builder defaultRegion(String defaultRegion) {
                 this.defaultRegion = defaultRegion;
@@ -191,7 +203,7 @@ public class GetMediaConnectAvailableRegionResponseBody extends TeaModel {
             }
 
             /**
-             * RegionList.
+             * <p>The supported regions.</p>
              */
             public Builder regionList(java.util.List<String> regionList) {
                 this.regionList = regionList;

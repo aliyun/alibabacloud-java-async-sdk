@@ -93,7 +93,7 @@ public class QueryTraceM3u8JobListResponseBody extends TeaModel {
         } 
 
         /**
-         * Data.
+         * <p>The data returned.</p>
          */
         public Builder data(java.util.List<Data> data) {
             this.data = data;
@@ -101,7 +101,10 @@ public class QueryTraceM3u8JobListResponseBody extends TeaModel {
         }
 
         /**
-         * Message.
+         * <p>The message returned.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>ok</p>
          */
         public Builder message(String message) {
             this.message = message;
@@ -109,7 +112,7 @@ public class QueryTraceM3u8JobListResponseBody extends TeaModel {
         }
 
         /**
-         * <p>Id of the request</p>
+         * <p>The ID of the request.</p>
          * 
          * <strong>example:</strong>
          * <p><strong><strong><strong>11-DB8D-4A9A-875B-275798</strong></strong></strong></p>
@@ -120,7 +123,10 @@ public class QueryTraceM3u8JobListResponseBody extends TeaModel {
         }
 
         /**
-         * StatusCode.
+         * <p>The status code.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>200</p>
          */
         public Builder statusCode(Long statusCode) {
             this.statusCode = statusCode;
@@ -186,7 +192,10 @@ public class QueryTraceM3u8JobListResponseBody extends TeaModel {
             } 
 
             /**
-             * Media.
+             * <p>The specific output information.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>oss://bucket/object</p>
              */
             public Builder media(String media) {
                 this.media = media;
@@ -194,7 +203,14 @@ public class QueryTraceM3u8JobListResponseBody extends TeaModel {
             }
 
             /**
-             * Type.
+             * <p>The type of the output file. Valid values:</p>
+             * <ul>
+             * <li>OSS: an OSS object.</li>
+             * <li>Media: a media asset.</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>OSS</p>
              */
             public Builder type(String type) {
                 this.type = type;
@@ -352,7 +368,10 @@ public class QueryTraceM3u8JobListResponseBody extends TeaModel {
             } 
 
             /**
-             * GmtCreate.
+             * <p>The creation time of the job.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1627357322</p>
              */
             public Builder gmtCreate(Long gmtCreate) {
                 this.gmtCreate = gmtCreate;
@@ -360,7 +379,10 @@ public class QueryTraceM3u8JobListResponseBody extends TeaModel {
             }
 
             /**
-             * GmtModified.
+             * <p>The last modification time of the job.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1627357322</p>
              */
             public Builder gmtModified(Long gmtModified) {
                 this.gmtModified = gmtModified;
@@ -368,7 +390,10 @@ public class QueryTraceM3u8JobListResponseBody extends TeaModel {
             }
 
             /**
-             * JobId.
+             * <p>The job ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p><strong><strong>d718e2ff4f018ccf419a7b71</strong></strong></p>
              */
             public Builder jobId(String jobId) {
                 this.jobId = jobId;
@@ -376,7 +401,7 @@ public class QueryTraceM3u8JobListResponseBody extends TeaModel {
             }
 
             /**
-             * Output.
+             * <p>The output video.</p>
              */
             public Builder output(Output output) {
                 this.output = output;
@@ -384,7 +409,10 @@ public class QueryTraceM3u8JobListResponseBody extends TeaModel {
             }
 
             /**
-             * Status.
+             * <p>The current status of the job.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>success</p>
              */
             public Builder status(String status) {
                 this.status = status;
@@ -392,7 +420,10 @@ public class QueryTraceM3u8JobListResponseBody extends TeaModel {
             }
 
             /**
-             * Trace.
+             * <p>The watermark information.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>test</p>
              */
             public Builder trace(String trace) {
                 this.trace = trace;
@@ -400,7 +431,10 @@ public class QueryTraceM3u8JobListResponseBody extends TeaModel {
             }
 
             /**
-             * TraceMediaId.
+             * <p>The media ID for the trace watermark.</p>
+             * 
+             * <strong>example:</strong>
+             * <p><strong><strong>437bd2b105d07b12a9a82</strong></strong></p>
              */
             public Builder traceMediaId(String traceMediaId) {
                 this.traceMediaId = traceMediaId;
@@ -408,7 +442,10 @@ public class QueryTraceM3u8JobListResponseBody extends TeaModel {
             }
 
             /**
-             * UserData.
+             * <p>The user-defined data.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>112</p>
              */
             public Builder userData(String userData) {
                 this.userData = userData;
@@ -416,7 +453,10 @@ public class QueryTraceM3u8JobListResponseBody extends TeaModel {
             }
 
             /**
-             * UserId.
+             * <p>The ID of the user who initiated the job.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1346693276****</p>
              */
             public Builder userId(Long userId) {
                 this.userId = userId;

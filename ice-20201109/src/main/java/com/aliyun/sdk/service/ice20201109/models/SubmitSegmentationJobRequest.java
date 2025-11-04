@@ -138,7 +138,10 @@ public class SubmitSegmentationJobRequest extends Request {
         }
 
         /**
-         * ClientToken.
+         * <p>The client token that is used to ensure the idempotence of the request.</p>
+         * 
+         * <strong>example:</strong>
+         * <p><strong><strong>12e8864746a0a398</strong></strong></p>
          */
         public Builder clientToken(String clientToken) {
             this.putQueryParameter("ClientToken", clientToken);
@@ -147,7 +150,17 @@ public class SubmitSegmentationJobRequest extends Request {
         }
 
         /**
-         * InputConfig.
+         * <p>The input configuration. For detailed parameters, see <a href="~~2874121#cc59ad3082jbx~~">InputConfig</a>.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>{
+         *     &quot;Type&quot;: &quot;OSS&quot;,
+         *     &quot;Media&quot;: &quot;<a href="http://test-bucket.oss-cn-shanghai.aliyuncs.com/test.mp4">http://test-bucket.oss-cn-shanghai.aliyuncs.com/test.mp4</a>&quot;
+         * }
+         * or {
+         *     &quot;Type&quot;: &quot;Media&quot;,
+         *     &quot;Media&quot;: &quot;ce49a020e****1ef81c1e6f6d5686302&quot;
+         * }</p>
          */
         public Builder inputConfig(String inputConfig) {
             this.putBodyParameter("InputConfig", inputConfig);
@@ -156,7 +169,19 @@ public class SubmitSegmentationJobRequest extends Request {
         }
 
         /**
-         * JobParams.
+         * <p>The task parameters. For details, see <a href="~~2874121#a60357f2d5iix~~">JobParams</a>.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>{
+         *     &quot;Mode&quot;: &quot;UserDefined&quot;,
+         *     &quot;Ranges&quot;: [{
+         *         &quot;In&quot;: 10,
+         *         &quot;Out&quot;: 20
+         *     }, {
+         *         &quot;In&quot;: 35,
+         *         &quot;Out&quot;: 50
+         *     }]
+         * }</p>
          */
         public Builder jobParams(String jobParams) {
             this.putQueryParameter("JobParams", jobParams);
@@ -165,7 +190,17 @@ public class SubmitSegmentationJobRequest extends Request {
         }
 
         /**
-         * OutputConfig.
+         * <p>The output configuration. For detailed parameters, see <a href="~~2874121#cef23186a8d6w~~">OutputConfig</a>.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>{
+         *     &quot;OutputMediaTarget&quot;: &quot;oss-object&quot;,
+         *     &quot;Bucket&quot;: &quot;test-bucket&quot;,
+         *     &quot;ObjectKey&quot;: &quot;path/to/test_{index}.mp4&quot;,
+         *     &quot;Width&quot;: 1920,
+         *     &quot;Height&quot;: 1080,
+         *     &quot;ExportAsNewMedia&quot;: false
+         * }</p>
          */
         public Builder outputConfig(String outputConfig) {
             this.putQueryParameter("OutputConfig", outputConfig);
@@ -174,7 +209,10 @@ public class SubmitSegmentationJobRequest extends Request {
         }
 
         /**
-         * UserData.
+         * <p>The user-defined data in the JSON format, which can be up to 512 bytes in length.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>{&quot;test&quot;: &quot;22&quot;}</p>
          */
         public Builder userData(String userData) {
             this.putQueryParameter("UserData", userData);

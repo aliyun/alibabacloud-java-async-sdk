@@ -129,7 +129,10 @@ public class QueryTraceAbJobListRequest extends Request {
         } 
 
         /**
-         * CreateTimeEnd.
+         * <p>The end of the creation time range for the query, in UNIX timestamp format.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1627357325</p>
          */
         public Builder createTimeEnd(Long createTimeEnd) {
             this.putQueryParameter("CreateTimeEnd", createTimeEnd);
@@ -138,7 +141,10 @@ public class QueryTraceAbJobListRequest extends Request {
         }
 
         /**
-         * CreateTimeStart.
+         * <p>The start of the creation time range for the query, in UNIX timestamp format.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1627357322</p>
          */
         public Builder createTimeStart(Long createTimeStart) {
             this.putQueryParameter("CreateTimeStart", createTimeStart);
@@ -147,7 +153,10 @@ public class QueryTraceAbJobListRequest extends Request {
         }
 
         /**
-         * JobId.
+         * <p>The job ID. You can obtain the value of this parameter from the response of the SubmitTraceAbJob operation.</p>
+         * 
+         * <strong>example:</strong>
+         * <p><strong><strong>d80e4e4044975745c14b</strong></strong></p>
          */
         public Builder jobId(String jobId) {
             this.putQueryParameter("JobId", jobId);
@@ -156,7 +165,10 @@ public class QueryTraceAbJobListRequest extends Request {
         }
 
         /**
-         * PageNumber.
+         * <p>The page number.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>0</p>
          */
         public Builder pageNumber(Long pageNumber) {
             this.putQueryParameter("PageNumber", pageNumber);
@@ -165,7 +177,10 @@ public class QueryTraceAbJobListRequest extends Request {
         }
 
         /**
-         * PageSize.
+         * <p>The number of entries to return on each page.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10</p>
          */
         public Builder pageSize(Long pageSize) {
             this.putQueryParameter("PageSize", pageSize);
@@ -174,7 +189,10 @@ public class QueryTraceAbJobListRequest extends Request {
         }
 
         /**
-         * TraceMediaId.
+         * <p>The media ID for the trace watermark. You can obtain this from the response of the SubmitTraceAbJob operation.</p>
+         * 
+         * <strong>example:</strong>
+         * <p><strong><strong>437bd2b51105d07b12a9</strong></strong></p>
          */
         public Builder traceMediaId(String traceMediaId) {
             this.putQueryParameter("TraceMediaId", traceMediaId);

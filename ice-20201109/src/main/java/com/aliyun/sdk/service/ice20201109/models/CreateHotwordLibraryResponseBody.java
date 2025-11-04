@@ -67,7 +67,10 @@ public class CreateHotwordLibraryResponseBody extends TeaModel {
         } 
 
         /**
-         * HotwordLibraryId.
+         * <p>The ID of the hotword library.</p>
+         * 
+         * <strong>example:</strong>
+         * <p><strong><strong>96e8864746a0b6f3</strong></strong></p>
          */
         public Builder hotwordLibraryId(String hotwordLibraryId) {
             this.hotwordLibraryId = hotwordLibraryId;
@@ -75,7 +78,7 @@ public class CreateHotwordLibraryResponseBody extends TeaModel {
         }
 
         /**
-         * <p>Id of the request</p>
+         * <p>The ID of the request.</p>
          * 
          * <strong>example:</strong>
          * <p>13cbb83e-043c-4728-ac35-*****</p>

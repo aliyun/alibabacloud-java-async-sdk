@@ -67,7 +67,10 @@ public class SetAIAgentVoiceprintResponseBody extends TeaModel {
         } 
 
         /**
-         * RequestId.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>550e8400********55440000</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -75,7 +78,10 @@ public class SetAIAgentVoiceprintResponseBody extends TeaModel {
         }
 
         /**
-         * VoiceprintId.
+         * <p>The ID of the registered voiceprint.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>vp_1699123456_8527</p>
          */
         public Builder voiceprintId(String voiceprintId) {
             this.voiceprintId = voiceprintId;

@@ -80,7 +80,10 @@ public class SubmitAvatarVideoJobResponseBody extends TeaModel {
         } 
 
         /**
-         * JobId.
+         * <p>The task ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p><strong><strong>20b48fb04483915d4f2cd8ac</strong></strong></p>
          */
         public Builder jobId(String jobId) {
             this.jobId = jobId;
@@ -88,7 +91,10 @@ public class SubmitAvatarVideoJobResponseBody extends TeaModel {
         }
 
         /**
-         * MediaId.
+         * <p>The media asset ID of the output file.</p>
+         * 
+         * <strong>example:</strong>
+         * <p><strong><strong><strong>70dcc471edaf00e6f6f4</strong></strong></strong></p>
          */
         public Builder mediaId(String mediaId) {
             this.mediaId = mediaId;
@@ -96,7 +102,7 @@ public class SubmitAvatarVideoJobResponseBody extends TeaModel {
         }
 
         /**
-         * <p>Id of the request</p>
+         * <p>The ID of the request.</p>
          * 
          * <strong>example:</strong>
          * <p><strong><strong><strong>11-DB8D-4A9A-875B-275798</strong></strong></strong></p>

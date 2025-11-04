@@ -93,7 +93,10 @@ public class CreateStreamToSearchLibResponseBody extends TeaModel {
         } 
 
         /**
-         * Code.
+         * <p>The status code returned.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>200</p>
          */
         public Builder code(String code) {
             this.code = code;
@@ -101,7 +104,10 @@ public class CreateStreamToSearchLibResponseBody extends TeaModel {
         }
 
         /**
-         * MediaId.
+         * <p>The ID of the media asset.</p>
+         * 
+         * <strong>example:</strong>
+         * <p><strong><strong>20b48fb04483915d4f2cd8ac</strong></strong></p>
          */
         public Builder mediaId(String mediaId) {
             this.mediaId = mediaId;
@@ -109,7 +115,7 @@ public class CreateStreamToSearchLibResponseBody extends TeaModel {
         }
 
         /**
-         * <p>Id of the request</p>
+         * <p>The ID of the request.</p>
          * 
          * <strong>example:</strong>
          * <p><strong><strong><strong>3B-0E1A-586A-AC29-742247</strong></strong></strong></p>
@@ -120,7 +126,14 @@ public class CreateStreamToSearchLibResponseBody extends TeaModel {
         }
 
         /**
-         * Success.
+         * <p>Indicates whether the request was successful. Valid values:</p>
+         * <ul>
+         * <li>true: succeeded.</li>
+         * <li>false: failed.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder success(String success) {
             this.success = success;

@@ -413,6 +413,11 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
+     * <b>description</b> :
+     * <h2><a href="#"></a></h2>
+     * <pre><code>
+     * </code></pre>
+     * 
      * @param request the request parameters of ClearAIAgentVoiceprint  ClearAIAgentVoiceprintRequest
      * @return ClearAIAgentVoiceprintResponse
      */
@@ -431,6 +436,9 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
+     * <b>description</b> :
+     * <p>  If a flow has two sources, you cannot disable Source Failover. Delete one of them before this operation.</p>
+     * 
      * @param request the request parameters of CloseMediaConnectFlowFailover  CloseMediaConnectFlowFailoverRequest
      * @return CloseMediaConnectFlowFailoverResponse
      */
@@ -870,6 +878,12 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
+     * <b>description</b> :
+     * <p>  This operation is supported only in the China (Beijing), China (Shanghai), China (Hangzhou), and China (Shenzhen) regions.</p>
+     * <ul>
+     * <li>You can call this operation up to 50 times per second per account. Requests that exceed this limit are dropped and you may experience service interruptions. For more information, see <a href="https://help.aliyun.com/zh/mps/developer-reference/qps-limits?spm=a2c4g.11186623.0.0.647e1081YGcerb">QPS limits</a>.</li>
+     * </ul>
+     * 
      * @param request the request parameters of CreateRecognitionEntity  CreateRecognitionEntityRequest
      * @return CreateRecognitionEntityResponse
      */
@@ -888,6 +902,13 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
+     * <b>description</b> :
+     * <p>  This operation is supported only in the China (Beijing), China (Shanghai), China (Hangzhou), and China (Shenzhen) regions.</p>
+     * <ul>
+     * <li>Workflow for using a custom recognition library: Create a library, create a custom object entity within the library, register sample images for the entity, create an analysis template that uses your custom library, and then submit an analysis task using the template.</li>
+     * <li>You can call this operation up to 50 times per second per account. Requests that exceed this limit are dropped and you may experience service interruptions. For more information, see <a href="https://help.aliyun.com/zh/mps/developer-reference/qps-limits?spm=a2c4g.11186623.0.0.647e1081YGcerb">QPS limits</a>.</li>
+     * </ul>
+     * 
      * @param request the request parameters of CreateRecognitionLib  CreateRecognitionLibRequest
      * @return CreateRecognitionLibResponse
      */
@@ -906,6 +927,12 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
+     * <b>description</b> :
+     * <p>  This operation is supported only in the China (Beijing), China (Shanghai), China (Hangzhou), and China (Shenzhen) regions.</p>
+     * <ul>
+     * <li>You can call this operation up to 50 times per second per account. Requests that exceed this limit are dropped and you may experience service interruptions. For more information, see <a href="https://help.aliyun.com/zh/mps/developer-reference/qps-limits?spm=a2c4g.11186623.0.0.647e1081YGcerb">QPS limits</a>.</li>
+     * </ul>
+     * 
      * @param request the request parameters of CreateRecognitionSample  CreateRecognitionSampleRequest
      * @return CreateRecognitionSampleResponse
      */
@@ -1344,6 +1371,14 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
+     * <b>description</b> :
+     * <h2><a href="#"></a></h2>
+     * <ul>
+     * <li>You can call this operation to delete a specified hotword library.</li>
+     * <li>The delete operation is irreversible.</li>
+     * <li>You can create up to 100 hotword libraries in an account.</li>
+     * </ul>
+     * 
      * @param request the request parameters of DeleteHotwordLibrary  DeleteHotwordLibraryRequest
      * @return DeleteHotwordLibraryResponse
      */
@@ -1790,6 +1825,12 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
+     * <b>description</b> :
+     * <p>  This operation is supported only in the China (Beijing), China (Shanghai), China (Hangzhou), and China (Shenzhen) regions.</p>
+     * <ul>
+     * <li>You can call this operation up to 50 times per second per account. Requests that exceed this limit are dropped and you may experience service interruptions. For more information, see <a href="https://help.aliyun.com/zh/mps/developer-reference/qps-limits?spm=a2c4g.11186623.0.0.647e1081YGcerb">QPS limits</a>.</li>
+     * </ul>
+     * 
      * @param request the request parameters of DeleteRecognitionEntity  DeleteRecognitionEntityRequest
      * @return DeleteRecognitionEntityResponse
      */
@@ -1808,6 +1849,12 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
+     * <b>description</b> :
+     * <p>  This operation is supported only in the China (Beijing), China (Shanghai), China (Hangzhou), and China (Shenzhen) regions.</p>
+     * <ul>
+     * <li>You can call this operation up to 50 times per second per account. Requests that exceed this limit are dropped and you may experience service interruptions. For more information, see <a href="https://help.aliyun.com/zh/mps/developer-reference/qps-limits?spm=a2c4g.11186623.0.0.647e1081YGcerb">QPS limits</a>.</li>
+     * </ul>
+     * 
      * @param request the request parameters of DeleteRecognitionLib  DeleteRecognitionLibRequest
      * @return DeleteRecognitionLibResponse
      */
@@ -1826,6 +1873,12 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
+     * <b>description</b> :
+     * <p>  This operation is supported only in the China (Beijing), China (Shanghai), China (Hangzhou), and China (Shenzhen) regions.</p>
+     * <ul>
+     * <li>You can call this operation up to 50 times per second per account. Requests that exceed this limit are dropped and you may experience service interruptions. For more information, see <a href="https://help.aliyun.com/zh/mps/developer-reference/qps-limits?spm=a2c4g.11186623.0.0.647e1081YGcerb">QPS limits</a>.</li>
+     * </ul>
+     * 
      * @param request the request parameters of DeleteRecognitionSample  DeleteRecognitionSampleRequest
      * @return DeleteRecognitionSampleResponse
      */
@@ -2298,6 +2351,24 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
+     * @param request the request parameters of GetAIWorkflowTask  GetAIWorkflowTaskRequest
+     * @return GetAIWorkflowTaskResponse
+     */
+    @Override
+    public CompletableFuture<GetAIWorkflowTaskResponse> getAIWorkflowTask(GetAIWorkflowTaskRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RPC).setAction("GetAIWorkflowTask").setMethod(HttpMethod.POST).setPathRegex("/").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(GetAIWorkflowTaskResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<GetAIWorkflowTaskResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
      * @param request the request parameters of GetAdInsertion  GetAdInsertionRequest
      * @return GetAdInsertionResponse
      */
@@ -2621,6 +2692,10 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
+     * <b>description</b> :
+     * <h2><a href="#"></a></h2>
+     * <p>You can call this operation to retrieve details of a specified hotword library based on the ID, including the library name, description, and content and attributes of all hotwords in it.</p>
+     * 
      * @param request the request parameters of GetHotwordLibrary  GetHotwordLibraryRequest
      * @return GetHotwordLibraryResponse
      */
@@ -3929,6 +4004,16 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
+     * <b>description</b> :
+     * <h2><a href="#"></a></h2>
+     * <ul>
+     * <li>You can call this operation to get information about all hotword libraries that you created.</li>
+     * <li>The API supports fuzzy search by <code>Name</code>, filtering by creation time range, and pagination.</li>
+     * <li>By default, the results are sorted by creation time in descending order. You can set <code>SortBy</code> to change the sorting order.</li>
+     * <li>The maximum number of entries returned for each request is 100. Default value: 10.</li>
+     * <li>Use <code>NextToken</code> for pagination.</li>
+     * </ul>
+     * 
      * @param request the request parameters of ListHotwordLibraries  ListHotwordLibrariesRequest
      * @return ListHotwordLibrariesResponse
      */
@@ -4394,6 +4479,12 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
+     * <b>description</b> :
+     * <p>  This operation is supported only in the China (Beijing), China (Shanghai), China (Hangzhou), and China (Shenzhen) regions.</p>
+     * <ul>
+     * <li>You can call this operation up to 50 times per second per account. Requests that exceed this limit are dropped and you may experience service interruptions. For more information, see <a href="https://help.aliyun.com/zh/mps/developer-reference/qps-limits?spm=a2c4g.11186623.0.0.647e1081YGcerb">QPS limits</a>.</li>
+     * </ul>
+     * 
      * @param request the request parameters of ListRecognitionEntities  ListRecognitionEntitiesRequest
      * @return ListRecognitionEntitiesResponse
      */
@@ -4412,6 +4503,12 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
+     * <b>description</b> :
+     * <p>  This operation is supported only in the China (Beijing), China (Shanghai), China (Hangzhou), and China (Shenzhen) regions.</p>
+     * <ul>
+     * <li>You can call this operation up to 50 times per second per account. Requests that exceed this limit are dropped and you may experience service interruptions. For more information, see <a href="https://help.aliyun.com/zh/mps/developer-reference/qps-limits?spm=a2c4g.11186623.0.0.647e1081YGcerb">QPS limits</a>.</li>
+     * </ul>
+     * 
      * @param request the request parameters of ListRecognitionLibs  ListRecognitionLibsRequest
      * @return ListRecognitionLibsResponse
      */
@@ -4738,6 +4835,9 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
+     * <b>description</b> :
+     * <p>This API only returns data from the last 90 days.</p>
+     * 
      * @param request the request parameters of ListWorkflowTasks  ListWorkflowTasksRequest
      * @return ListWorkflowTasksResponse
      */
@@ -4756,6 +4856,12 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
+     * <b>description</b> :
+     * <p>  Before this operation, you must add a source to the flow.</p>
+     * <ul>
+     * <li>After Source Failover is enabled, you can add an additional source. The input type of the two sources must be identical.</li>
+     * </ul>
+     * 
      * @param request the request parameters of OpenMediaConnectFlowFailover  OpenMediaConnectFlowFailoverRequest
      * @return OpenMediaConnectFlowFailoverResponse
      */
@@ -4792,6 +4898,9 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
+     * <b>description</b> :
+     * <p>  This operation is supported only in the China (Shanghai) and China (Beijing) regions.</p>
+     * 
      * @param request the request parameters of QueryCopyrightJobList  QueryCopyrightJobListRequest
      * @return QueryCopyrightJobListResponse
      */
@@ -4960,6 +5069,9 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
+     * <b>description</b> :
+     * <p>  This operation is supported only in the China (Shanghai) and China (Beijing) regions.</p>
+     * 
      * @param request the request parameters of QueryTraceAbJobList  QueryTraceAbJobListRequest
      * @return QueryTraceAbJobListResponse
      */
@@ -4978,6 +5090,9 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
+     * <b>description</b> :
+     * <p>This operation is supported only in the China (Shanghai) and China (Beijing) regions.</p>
+     * 
      * @param request the request parameters of QueryTraceExtractJob  QueryTraceExtractJobRequest
      * @return QueryTraceExtractJobResponse
      */
@@ -4996,6 +5111,12 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
+     * <b>description</b> :
+     * <p>  This operation is supported only in the China (Shanghai) and China (Beijing) regions.</p>
+     * <ul>
+     * <li>The M3U8 file with absolute paths generated by the SubmitTraceM3u8Job API has a signed URL with an authentication validity period of 24 hours, starting from the moment the job is completed. After the signature expires, the M3U8 file will become inaccessible. You must submit a new M3U8 generation job.</li>
+     * </ul>
+     * 
      * @param request the request parameters of QueryTraceM3u8JobList  QueryTraceM3u8JobListRequest
      * @return QueryTraceM3u8JobListResponse
      */
@@ -5558,6 +5679,27 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
+     * <b>description</b> :
+     * <p>  You must specify a workflow template. To create one, go to the <a href="https://ims.console.aliyun.com/ai-workflow/template">Intelligent Media Services (IMS)</a> console.</p>
+     * 
+     * @param request the request parameters of StartAIWorkflow  StartAIWorkflowRequest
+     * @return StartAIWorkflowResponse
+     */
+    @Override
+    public CompletableFuture<StartAIWorkflowResponse> startAIWorkflow(StartAIWorkflowRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RPC).setAction("StartAIWorkflow").setMethod(HttpMethod.POST).setPathRegex("/").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(StartAIWorkflowResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<StartAIWorkflowResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
      * @param request the request parameters of StartChannel  StartChannelRequest
      * @return StartChannelResponse
      */
@@ -5666,6 +5808,27 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
+     * <b>description</b> :
+     * <p>This operation is only used to stop workflow tasks in real-time scenarios such as live streaming and RTC. It cannot be used to stop tasks in offline scenarios.</p>
+     * 
+     * @param request the request parameters of StopAIWorkflowTask  StopAIWorkflowTaskRequest
+     * @return StopAIWorkflowTaskResponse
+     */
+    @Override
+    public CompletableFuture<StopAIWorkflowTaskResponse> stopAIWorkflowTask(StopAIWorkflowTaskRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RPC).setAction("StopAIWorkflowTask").setMethod(HttpMethod.POST).setPathRegex("/").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(StopAIWorkflowTaskResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<StopAIWorkflowTaskResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
      * @param request the request parameters of StopChannel  StopChannelRequest
      * @return StopChannelResponse
      */
@@ -5724,6 +5887,9 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
+     * <b>description</b> :
+     * <p>Call SubmitAIAgentVideoAuditTask to submit a video moderation task with configurations such as a video URL, frame-capturing policies, and review interval. The system returns a unique JobId for tracking. When the task is complete, the service will push the results, including the moderation status and AI-generated analysis, to the configured callback URL. Only OSS URLs are supported as input. The underlying multi-modal large language model (MLLM) only supports interaction via the non-streaming OpenAI protocol.</p>
+     * 
      * @param request the request parameters of SubmitAIAgentVideoAuditTask  SubmitAIAgentVideoAuditTaskRequest
      * @return SubmitAIAgentVideoAuditTaskResponse
      */
@@ -5796,6 +5962,13 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
+     * <b>description</b> :
+     * <ul>
+     * <li>The input supports only text or a human voice audio file in MP3 or WAV format.</li>
+     * <li>The output supports MP4 and WebM formats. For the MP4 format, the task produces two videos: one with the avatar on a green screen background and a separate alpha mask video. This is ideal for post-production. For the WebM format, the task produces a single video with a transparent alpha channel, suitable for direct web front-end display. Rendering WebM is slower due to encoding complexity.</li>
+     * <li>The final output includes sentence-level timestamps, which are useful for subsequent video editing.</li>
+     * </ul>
+     * 
      * @param request the request parameters of SubmitAvatarVideoJob  SubmitAvatarVideoJobRequest
      * @return SubmitAvatarVideoJobResponse
      */
@@ -5832,6 +6005,9 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
+     * <b>description</b> :
+     * <p>  This operation is supported only in the China (Shanghai) and China (Beijing) regions.</p>
+     * 
      * @param request the request parameters of SubmitCopyrightExtractJob  SubmitCopyrightExtractJobRequest
      * @return SubmitCopyrightExtractJobResponse
      */
@@ -5850,6 +6026,13 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
+     * <b>description</b> :
+     * <p>  You can call this operation to add a copyright watermark to a video that lasts at least 3 minutes. If the video is too short, the call may fail, or no output may be returned. To add a copyright watermark to a video shorter than 3 minutes, specify the Params parameter to change the algorithm.</p>
+     * <ul>
+     * <li>Each API call supports processing only one video.</li>
+     * <li>This API is supported only in the China (Shanghai) and China (Beijing) regions.</li>
+     * </ul>
+     * 
      * @param request the request parameters of SubmitCopyrightJob  SubmitCopyrightJobRequest
      * @return SubmitCopyrightJobResponse
      */
@@ -6241,6 +6424,30 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
+     * <b>description</b> :
+     * <p>  After a job is submitted, you can call <a href="https://help.aliyun.com/document_detail/2803751.html">ListBatchMediaProducingJob</a> to query submitted jobs, or <a href="https://help.aliyun.com/document_detail/2693269.html">GetBatchMediaProducingJob</a> to query the job status and results.</p>
+     * <ul>
+     * <li>The feature is in public preview and charges no fees.</li>
+     * </ul>
+     * 
+     * @param request the request parameters of SubmitSceneMediaSelectionJob  SubmitSceneMediaSelectionJobRequest
+     * @return SubmitSceneMediaSelectionJobResponse
+     */
+    @Override
+    public CompletableFuture<SubmitSceneMediaSelectionJobResponse> submitSceneMediaSelectionJob(SubmitSceneMediaSelectionJobRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RPC).setAction("SubmitSceneMediaSelectionJob").setMethod(HttpMethod.POST).setPathRegex("/").setBodyType(BodyType.JSON).setBodyIsForm(true).setReqBodyType(BodyType.FORM).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(SubmitSceneMediaSelectionJobResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<SubmitSceneMediaSelectionJobResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
      * @param request the request parameters of SubmitScreenMediaHighlightsJob  SubmitScreenMediaHighlightsJobRequest
      * @return SubmitScreenMediaHighlightsJobResponse
      */
@@ -6391,6 +6598,9 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
+     * <b>description</b> :
+     * <p>  This API supports only videos that last at least 3 minutes. If the video is too short, the call may fail, or no output may be returned.</p>
+     * 
      * @param request the request parameters of SubmitTraceAbJob  SubmitTraceAbJobRequest
      * @return SubmitTraceAbJobResponse
      */
@@ -6409,6 +6619,12 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
+     * <b>description</b> :
+     * <p>  This operation is supported only in the China (Shanghai) and China (Beijing) regions.</p>
+     * <ul>
+     * <li>The input video must be 3 minutes or longer. Jobs submitted with shorter videos will fail.</li>
+     * </ul>
+     * 
      * @param request the request parameters of SubmitTraceExtractJob  SubmitTraceExtractJobRequest
      * @return SubmitTraceExtractJobResponse
      */
@@ -6427,6 +6643,13 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
+     * <b>description</b> :
+     * <p>  Before you call this operation, you must call SubmitTraceAbJob to get the TraceMediaId from its response.</p>
+     * <ul>
+     * <li>This operation is supported only in the China (Shanghai) and China (Beijing) regions.</li>
+     * <li>The M3U8 file generated by this job has a signed URL with an authentication validity period of 24 hours, starting from the moment the job is completed. Once the signature expires, you will no longer be able to trace the watermark information using that specific M3U8 file. If you need to use it after expiration, you must call this API again to generate a new M3U8 file.</li>
+     * </ul>
+     * 
      * @param request the request parameters of SubmitTraceM3u8Job  SubmitTraceM3u8JobRequest
      * @return SubmitTraceM3u8JobResponse
      */
@@ -6671,6 +6894,16 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
+     * <b>description</b> :
+     * <h2><a href="#"></a></h2>
+     * <ul>
+     * <li>You can call this operation to modify a specified hotword library.</li>
+     * <li>The hotword library ID (<code>HotwordLibraryId</code>) is required to identify the library that requires modification.</li>
+     * <li>You can modify its name (<code>Name</code> ), description (<code>Description</code> ), and hotword list (<code>HotWords</code>).</li>
+     * <li>Each hotword in the list can also be modified, including its content (<code>Text</code>), weight (<code>Weight</code>), language (<code>Language</code>), and translation results (<code>TranspositionResultList</code>).</li>
+     * <li>A single account supports up to 100 hotword libraries, each containing a maximum of 300 hotword entries. In a library, the combination of <code>language</code> and <code>text</code> of an entry must be unique. The combination of <code>TranslatedText</code> and <code>TargetLanguage</code> in <code>TranspositionResultList</code> must also be unique.</li>
+     * </ul>
+     * 
      * @param request the request parameters of UpdateHotwordLibrary  UpdateHotwordLibraryRequest
      * @return UpdateHotwordLibraryResponse
      */

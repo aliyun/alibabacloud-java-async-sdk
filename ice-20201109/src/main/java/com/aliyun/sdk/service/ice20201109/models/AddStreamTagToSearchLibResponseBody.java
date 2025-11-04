@@ -93,7 +93,10 @@ public class AddStreamTagToSearchLibResponseBody extends TeaModel {
         } 
 
         /**
-         * Code.
+         * <p>The return code.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>200</p>
          */
         public Builder code(String code) {
             this.code = code;
@@ -101,7 +104,10 @@ public class AddStreamTagToSearchLibResponseBody extends TeaModel {
         }
 
         /**
-         * MediaId.
+         * <p>The ID of the media asset.</p>
+         * 
+         * <strong>example:</strong>
+         * <p><strong><strong>20b48fb04483915d4f2cd8ac</strong></strong></p>
          */
         public Builder mediaId(String mediaId) {
             this.mediaId = mediaId;
@@ -120,7 +126,14 @@ public class AddStreamTagToSearchLibResponseBody extends TeaModel {
         }
 
         /**
-         * Success.
+         * <p>Indicates whether the request is successful. Default value: true. Valid values:</p>
+         * <ul>
+         * <li>true</li>
+         * <li>false</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder success(String success) {
             this.success = success;

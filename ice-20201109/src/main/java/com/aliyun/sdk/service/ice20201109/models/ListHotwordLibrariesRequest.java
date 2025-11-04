@@ -171,7 +171,10 @@ public class ListHotwordLibrariesRequest extends Request {
         } 
 
         /**
-         * EndTime.
+         * <p>The end of the time range to query.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2020-12-26T04:11:10Z</p>
          */
         public Builder endTime(String endTime) {
             this.putQueryParameter("EndTime", endTime);
@@ -180,7 +183,11 @@ public class ListHotwordLibrariesRequest extends Request {
         }
 
         /**
-         * MaxResults.
+         * <p>The maximum number of entries to return.</p>
+         * <p>Default value: 10. Valid values: 1 to 100.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10</p>
          */
         public Builder maxResults(Integer maxResults) {
             this.putQueryParameter("MaxResults", maxResults);
@@ -189,7 +196,10 @@ public class ListHotwordLibrariesRequest extends Request {
         }
 
         /**
-         * Name.
+         * <p>The name of the hotword library.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>热词库使用名称</p>
          */
         public Builder name(String name) {
             this.putQueryParameter("Name", name);
@@ -198,7 +208,10 @@ public class ListHotwordLibrariesRequest extends Request {
         }
 
         /**
-         * NextToken.
+         * <p>The pagination token that is used in the next request to retrieve a new page of results.</p>
+         * 
+         * <strong>example:</strong>
+         * <p><strong><strong>73f33c91-d59383e8280b</strong></strong></p>
          */
         public Builder nextToken(String nextToken) {
             this.putQueryParameter("NextToken", nextToken);
@@ -207,7 +220,10 @@ public class ListHotwordLibrariesRequest extends Request {
         }
 
         /**
-         * PageNo.
+         * <p>The page number. Default value: 1.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder pageNo(Long pageNo) {
             this.putQueryParameter("PageNo", pageNo);
@@ -216,7 +232,10 @@ public class ListHotwordLibrariesRequest extends Request {
         }
 
         /**
-         * PageSize.
+         * <p>The number of entries per page. Default value: 10. Valid values: 1 to 100.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10</p>
          */
         public Builder pageSize(Long pageSize) {
             this.putQueryParameter("PageSize", pageSize);
@@ -225,7 +244,10 @@ public class ListHotwordLibrariesRequest extends Request {
         }
 
         /**
-         * SortBy.
+         * <p>The sorting order. By default, the query results are sorted by creation time in descending order.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>CreationTime:Desc</p>
          */
         public Builder sortBy(String sortBy) {
             this.putQueryParameter("SortBy", sortBy);
@@ -234,7 +256,10 @@ public class ListHotwordLibrariesRequest extends Request {
         }
 
         /**
-         * StartTime.
+         * <p>The beginning of the time range to query.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2020-12-26T04:11:10Z</p>
          */
         public Builder startTime(String startTime) {
             this.putQueryParameter("StartTime", startTime);
@@ -243,7 +268,15 @@ public class ListHotwordLibrariesRequest extends Request {
         }
 
         /**
-         * UsageScenario.
+         * <p>The usage scenario of the hotword library. Valid values:</p>
+         * <ul>
+         * <li>ASR: Automatic Speech Recognition</li>
+         * <li>StructuredMediaAssets: structured media analysis</li>
+         * <li>VideoTranslation: Video translation. This field cannot be modified after the hotword library is created.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>ASR</p>
          */
         public Builder usageScenario(String usageScenario) {
             this.putQueryParameter("UsageScenario", usageScenario);

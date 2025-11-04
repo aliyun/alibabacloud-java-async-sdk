@@ -67,7 +67,10 @@ public class SubmitSegmentationJobResponseBody extends TeaModel {
         } 
 
         /**
-         * JobId.
+         * <p>The task ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p><strong><strong>cdb3e74639973036bc84</strong></strong></p>
          */
         public Builder jobId(String jobId) {
             this.jobId = jobId;
@@ -75,7 +78,10 @@ public class SubmitSegmentationJobResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p><strong><strong><strong>3B-0E1A-586A-AC29-742247</strong></strong></strong></p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;

@@ -81,7 +81,7 @@ public class ListMediaConvertJobsResponseBody extends TeaModel {
         } 
 
         /**
-         * Jobs.
+         * <p>The tasks.</p>
          */
         public Builder jobs(java.util.List<MediaConvertJobWithoutDetail> jobs) {
             this.jobs = jobs;
@@ -89,6 +89,7 @@ public class ListMediaConvertJobsResponseBody extends TeaModel {
         }
 
         /**
+         * <p>Indicates the read position returned by the current call. An empty value means all data has been read.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -100,7 +101,7 @@ public class ListMediaConvertJobsResponseBody extends TeaModel {
         }
 
         /**
-         * <p>Id of the request</p>
+         * <p>The ID of the request.</p>
          * 
          * <strong>example:</strong>
          * <p><strong><strong><strong>11-DB8D-4A9A-875B-275798</strong></strong></strong></p>

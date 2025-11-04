@@ -132,6 +132,7 @@ public class SubmitAIAgentVideoAuditTaskRequest extends Request {
         } 
 
         /**
+         * <p>The ID of the AI agent.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -144,7 +145,10 @@ public class SubmitAIAgentVideoAuditTaskRequest extends Request {
         }
 
         /**
-         * AuditInterval.
+         * <p>The interval, in milliseconds, at which to submit captured frames to the AI agent. Valid values: 0 to 5000. Default value: 3000. If it is set to 0, all captured frames are sent to the model in a single batch request. Otherwise, frames are sent sequentially with the specified interval between each request.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>3000</p>
          */
         public Builder auditInterval(Integer auditInterval) {
             this.putQueryParameter("AuditInterval", auditInterval);
@@ -153,7 +157,10 @@ public class SubmitAIAgentVideoAuditTaskRequest extends Request {
         }
 
         /**
-         * CallbackConfig.
+         * <p>Callback configurations.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>{&quot;Url&quot;:&quot;<a href="https://yourcallback%22,%22Token%22:%22yourtoken%22%7D">https://yourcallback&quot;,&quot;Token&quot;:&quot;yourtoken&quot;}</a></p>
          */
         public Builder callbackConfig(CallbackConfig callbackConfig) {
             String callbackConfigShrink = shrink(callbackConfig, "CallbackConfig", "json");
@@ -163,6 +170,7 @@ public class SubmitAIAgentVideoAuditTaskRequest extends Request {
         }
 
         /**
+         * <p>An array of frame-capturing policies. Each policy defines a set of frames to be analyzed and will generate a separate result from the model.</p>
          * <p>This parameter is required.</p>
          */
         public Builder capturePolicies(java.util.List<CapturePolicies> capturePolicies) {
@@ -173,6 +181,7 @@ public class SubmitAIAgentVideoAuditTaskRequest extends Request {
         }
 
         /**
+         * <p>The details of the input file.</p>
          * <p>This parameter is required.</p>
          */
         public Builder input(Input input) {
@@ -183,7 +192,7 @@ public class SubmitAIAgentVideoAuditTaskRequest extends Request {
         }
 
         /**
-         * UserData.
+         * <p>The user-defined data.</p>
          */
         public Builder userData(String userData) {
             this.putQueryParameter("UserData", userData);
@@ -251,7 +260,10 @@ public class SubmitAIAgentVideoAuditTaskRequest extends Request {
             } 
 
             /**
-             * Token.
+             * <p>The authentication token for callback.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Bearer Token</p>
              */
             public Builder token(String token) {
                 this.token = token;
@@ -259,7 +271,10 @@ public class SubmitAIAgentVideoAuditTaskRequest extends Request {
             }
 
             /**
-             * Url.
+             * <p>The URL for receiving callback notifications.</p>
+             * 
+             * <strong>example:</strong>
+             * <p><a href="https://yourcallback">https://yourcallback</a></p>
              */
             public Builder url(String url) {
                 this.url = url;
@@ -352,7 +367,10 @@ public class SubmitAIAgentVideoAuditTaskRequest extends Request {
             } 
 
             /**
-             * Duration.
+             * <p>The duration over which to capture the specified number of frames. Unit: seconds.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>10</p>
              */
             public Builder duration(Integer duration) {
                 this.duration = duration;
@@ -360,7 +378,10 @@ public class SubmitAIAgentVideoAuditTaskRequest extends Request {
             }
 
             /**
-             * FrameCount.
+             * <p>The number of frames to capture.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2</p>
              */
             public Builder frameCount(Integer frameCount) {
                 this.frameCount = frameCount;
@@ -368,7 +389,7 @@ public class SubmitAIAgentVideoAuditTaskRequest extends Request {
             }
 
             /**
-             * Prompt.
+             * <p>The text prompt to send to the MLLM along with the captured frames.</p>
              */
             public Builder prompt(String prompt) {
                 this.prompt = prompt;
@@ -376,7 +397,10 @@ public class SubmitAIAgentVideoAuditTaskRequest extends Request {
             }
 
             /**
-             * StartTime.
+             * <p>The timestamp in the video at which to start capturing frames. Unit: seconds.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>0</p>
              */
             public Builder startTime(Integer startTime) {
                 this.startTime = startTime;
@@ -443,7 +467,11 @@ public class SubmitAIAgentVideoAuditTaskRequest extends Request {
             } 
 
             /**
-             * Media.
+             * <p>The OSS URL of the input file. Format:</p>
+             * <p>http(s)://{BucketName}.{Endpoint}/{ObjectName}</p>
+             * 
+             * <strong>example:</strong>
+             * <p><a href="http://my-bucket.cn-shanghai.aliyuncs.com/object-id.mp4">http://my-bucket.cn-shanghai.aliyuncs.com/object-id.mp4</a></p>
              */
             public Builder media(String media) {
                 this.media = media;
@@ -451,7 +479,13 @@ public class SubmitAIAgentVideoAuditTaskRequest extends Request {
             }
 
             /**
-             * Type.
+             * <p>The type of the input file. Valid values:</p>
+             * <ul>
+             * <li>OSS: an OSS object.</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>OSS</p>
              */
             public Builder type(String type) {
                 this.type = type;

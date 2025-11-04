@@ -67,7 +67,10 @@ public class SubmitAIAgentVideoAuditTaskResponseBody extends TeaModel {
         } 
 
         /**
-         * JobId.
+         * <p>The job ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p><strong><strong><strong><strong><strong>fb04483915d4f2</strong></strong></strong></strong></strong></p>
          */
         public Builder jobId(String jobId) {
             this.jobId = jobId;
@@ -75,7 +78,10 @@ public class SubmitAIAgentVideoAuditTaskResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>**********-586A-AC29-742247******</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;

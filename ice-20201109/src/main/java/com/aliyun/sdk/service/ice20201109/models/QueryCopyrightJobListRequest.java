@@ -129,7 +129,10 @@ public class QueryCopyrightJobListRequest extends Request {
         } 
 
         /**
-         * CreateTimeEnd.
+         * <p>The end of the creation time range for the query, in UNIX timestamp format.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1627357325</p>
          */
         public Builder createTimeEnd(Long createTimeEnd) {
             this.putQueryParameter("CreateTimeEnd", createTimeEnd);
@@ -138,7 +141,10 @@ public class QueryCopyrightJobListRequest extends Request {
         }
 
         /**
-         * CreateTimeStart.
+         * <p>The start of the creation time range for the query, in UNIX timestamp format.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1627357322</p>
          */
         public Builder createTimeStart(Long createTimeStart) {
             this.putQueryParameter("CreateTimeStart", createTimeStart);
@@ -147,7 +153,10 @@ public class QueryCopyrightJobListRequest extends Request {
         }
 
         /**
-         * JobId.
+         * <p>The job ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p><strong><strong>cdb3e74639973036bc84</strong></strong></p>
          */
         public Builder jobId(String jobId) {
             this.putQueryParameter("JobId", jobId);
@@ -156,7 +165,10 @@ public class QueryCopyrightJobListRequest extends Request {
         }
 
         /**
-         * Level.
+         * <p>The watermark level, indicating the color channel for embedding. 0: U. 1: UV. 2: YUV.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>0</p>
          */
         public Builder level(Long level) {
             this.putQueryParameter("Level", level);
@@ -165,7 +177,10 @@ public class QueryCopyrightJobListRequest extends Request {
         }
 
         /**
-         * PageNumber.
+         * <p>The page number.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>0</p>
          */
         public Builder pageNumber(Long pageNumber) {
             this.putQueryParameter("PageNumber", pageNumber);
@@ -174,7 +189,10 @@ public class QueryCopyrightJobListRequest extends Request {
         }
 
         /**
-         * PageSize.
+         * <p>The number of entries to return on each page.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10</p>
          */
         public Builder pageSize(Long pageSize) {
             this.putQueryParameter("PageSize", pageSize);

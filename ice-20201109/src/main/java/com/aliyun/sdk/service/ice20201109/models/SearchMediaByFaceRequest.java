@@ -22,6 +22,10 @@ public class SearchMediaByFaceRequest extends Request {
     private String regionId;
 
     @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("CustomFilters")
+    private String customFilters;
+
+    @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("EntityId")
     private String entityId;
 
@@ -55,9 +59,14 @@ public class SearchMediaByFaceRequest extends Request {
     @com.aliyun.core.annotation.NameInMap("SearchLibName")
     private String searchLibName;
 
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("UtcCreate")
+    private String utcCreate;
+
     private SearchMediaByFaceRequest(Builder builder) {
         super(builder);
         this.regionId = builder.regionId;
+        this.customFilters = builder.customFilters;
         this.entityId = builder.entityId;
         this.faceSearchToken = builder.faceSearchToken;
         this.mediaType = builder.mediaType;
@@ -66,6 +75,7 @@ public class SearchMediaByFaceRequest extends Request {
         this.pageSize = builder.pageSize;
         this.personImageUrl = builder.personImageUrl;
         this.searchLibName = builder.searchLibName;
+        this.utcCreate = builder.utcCreate;
     }
 
     public static Builder builder() {
@@ -86,6 +96,13 @@ public class SearchMediaByFaceRequest extends Request {
      */
     public String getRegionId() {
         return this.regionId;
+    }
+
+    /**
+     * @return customFilters
+     */
+    public String getCustomFilters() {
+        return this.customFilters;
     }
 
     /**
@@ -144,8 +161,16 @@ public class SearchMediaByFaceRequest extends Request {
         return this.searchLibName;
     }
 
+    /**
+     * @return utcCreate
+     */
+    public String getUtcCreate() {
+        return this.utcCreate;
+    }
+
     public static final class Builder extends Request.Builder<SearchMediaByFaceRequest, Builder> {
         private String regionId; 
+        private String customFilters; 
         private String entityId; 
         private String faceSearchToken; 
         private String mediaType; 
@@ -154,6 +179,7 @@ public class SearchMediaByFaceRequest extends Request {
         private Integer pageSize; 
         private String personImageUrl; 
         private String searchLibName; 
+        private String utcCreate; 
 
         private Builder() {
             super();
@@ -162,6 +188,7 @@ public class SearchMediaByFaceRequest extends Request {
         private Builder(SearchMediaByFaceRequest request) {
             super(request);
             this.regionId = request.regionId;
+            this.customFilters = request.customFilters;
             this.entityId = request.entityId;
             this.faceSearchToken = request.faceSearchToken;
             this.mediaType = request.mediaType;
@@ -170,6 +197,7 @@ public class SearchMediaByFaceRequest extends Request {
             this.pageSize = request.pageSize;
             this.personImageUrl = request.personImageUrl;
             this.searchLibName = request.searchLibName;
+            this.utcCreate = request.utcCreate;
         } 
 
         /**
@@ -178,6 +206,15 @@ public class SearchMediaByFaceRequest extends Request {
         public Builder regionId(String regionId) {
             this.putHostParameter("RegionId", regionId);
             this.regionId = regionId;
+            return this;
+        }
+
+        /**
+         * CustomFilters.
+         */
+        public Builder customFilters(String customFilters) {
+            this.putQueryParameter("CustomFilters", customFilters);
+            this.customFilters = customFilters;
             return this;
         }
 
@@ -277,6 +314,15 @@ public class SearchMediaByFaceRequest extends Request {
         public Builder searchLibName(String searchLibName) {
             this.putQueryParameter("SearchLibName", searchLibName);
             this.searchLibName = searchLibName;
+            return this;
+        }
+
+        /**
+         * UtcCreate.
+         */
+        public Builder utcCreate(String utcCreate) {
+            this.putQueryParameter("UtcCreate", utcCreate);
+            this.utcCreate = utcCreate;
             return this;
         }
 

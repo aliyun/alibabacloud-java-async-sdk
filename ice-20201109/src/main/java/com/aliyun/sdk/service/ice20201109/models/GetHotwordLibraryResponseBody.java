@@ -132,7 +132,10 @@ public class GetHotwordLibraryResponseBody extends TeaModel {
         } 
 
         /**
-         * CreationTime.
+         * <p>The time when the hotword library was created.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2020-12-23T13:33:49Z</p>
          */
         public Builder creationTime(String creationTime) {
             this.creationTime = creationTime;
@@ -140,7 +143,10 @@ public class GetHotwordLibraryResponseBody extends TeaModel {
         }
 
         /**
-         * Description.
+         * <p>The description of the hotword library.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>热词库描述</p>
          */
         public Builder description(String description) {
             this.description = description;
@@ -148,7 +154,10 @@ public class GetHotwordLibraryResponseBody extends TeaModel {
         }
 
         /**
-         * HotwordLibraryId.
+         * <p>The ID of the hotword library.</p>
+         * 
+         * <strong>example:</strong>
+         * <p><strong><strong>05512043f49f697f7425</strong></strong></p>
          */
         public Builder hotwordLibraryId(String hotwordLibraryId) {
             this.hotwordLibraryId = hotwordLibraryId;
@@ -156,7 +165,7 @@ public class GetHotwordLibraryResponseBody extends TeaModel {
         }
 
         /**
-         * Hotwords.
+         * <p>The hotword list.</p>
          */
         public Builder hotwords(java.util.List<Hotword> hotwords) {
             this.hotwords = hotwords;
@@ -164,7 +173,10 @@ public class GetHotwordLibraryResponseBody extends TeaModel {
         }
 
         /**
-         * Name.
+         * <p>The name of the hotword library.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>热词库名称</p>
          */
         public Builder name(String name) {
             this.name = name;
@@ -172,7 +184,7 @@ public class GetHotwordLibraryResponseBody extends TeaModel {
         }
 
         /**
-         * <p>Id of the request</p>
+         * <p>The ID of the request.</p>
          * 
          * <strong>example:</strong>
          * <p><strong><strong>12e8864746a0a398</strong></strong></p>
@@ -183,7 +195,10 @@ public class GetHotwordLibraryResponseBody extends TeaModel {
         }
 
         /**
-         * UsageScenario.
+         * <p>The usage scenario of the hotword library.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>ASR</p>
          */
         public Builder usageScenario(String usageScenario) {
             this.usageScenario = usageScenario;

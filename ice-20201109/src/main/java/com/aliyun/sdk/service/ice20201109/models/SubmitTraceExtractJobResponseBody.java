@@ -93,7 +93,7 @@ public class SubmitTraceExtractJobResponseBody extends TeaModel {
         } 
 
         /**
-         * Data.
+         * <p>The data returned.</p>
          */
         public Builder data(Data data) {
             this.data = data;
@@ -101,7 +101,10 @@ public class SubmitTraceExtractJobResponseBody extends TeaModel {
         }
 
         /**
-         * Message.
+         * <p>The message returned.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>ok</p>
          */
         public Builder message(String message) {
             this.message = message;
@@ -109,7 +112,7 @@ public class SubmitTraceExtractJobResponseBody extends TeaModel {
         }
 
         /**
-         * <p>Id of the request</p>
+         * <p>The ID of the request.</p>
          * 
          * <strong>example:</strong>
          * <p><strong><strong>63E8B7C7-4812-46AD-0FA56029AC86</strong></strong></p>
@@ -120,7 +123,10 @@ public class SubmitTraceExtractJobResponseBody extends TeaModel {
         }
 
         /**
-         * StatusCode.
+         * <p>The status code.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>200</p>
          */
         public Builder statusCode(Long statusCode) {
             this.statusCode = statusCode;
@@ -173,7 +179,10 @@ public class SubmitTraceExtractJobResponseBody extends TeaModel {
             } 
 
             /**
-             * JobId.
+             * <p>The job ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>bfb786c639894f4d80648792021e****</p>
              */
             public Builder jobId(String jobId) {
                 this.jobId = jobId;

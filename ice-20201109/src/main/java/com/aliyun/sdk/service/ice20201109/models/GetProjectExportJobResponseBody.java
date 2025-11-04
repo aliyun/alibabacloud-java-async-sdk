@@ -67,7 +67,7 @@ public class GetProjectExportJobResponseBody extends TeaModel {
         } 
 
         /**
-         * ProjectExportJob.
+         * <p>The project export task.</p>
          */
         public Builder projectExportJob(ProjectExportJob projectExportJob) {
             this.projectExportJob = projectExportJob;
@@ -75,7 +75,10 @@ public class GetProjectExportJobResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * <p>The ID of the request.</p>
+         * 
+         * <strong>example:</strong>
+         * <p><strong><strong>2876-6263-4B75-8F2C-CD0F7FCF</strong></strong></p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -141,7 +144,10 @@ public class GetProjectExportJobResponseBody extends TeaModel {
             } 
 
             /**
-             * ProjectUrl.
+             * <p>The URL of the exported project, which is typically a signed OSS URL. This field is returned when ExportType is AdobePremierePro.</p>
+             * 
+             * <strong>example:</strong>
+             * <p><a href="http://example-bucket.oss-cn-shanghai.aliyuncs.com/example_prefix/exported_project_1e8c39a502c3436c84f88290cd713bf3.zip?Expires=1750331685&">http://example-bucket.oss-cn-shanghai.aliyuncs.com/example_prefix/exported_project_1e8c39a502c3436c84f88290cd713bf3.zip?Expires=1750331685&amp;</a>....</p>
              */
             public Builder projectUrl(String projectUrl) {
                 this.projectUrl = projectUrl;
@@ -149,7 +155,10 @@ public class GetProjectExportJobResponseBody extends TeaModel {
             }
 
             /**
-             * Timeline.
+             * <p>The timeline of the online editing job. This field is returned when ExportType is BaseTimeline. For data structure, see <a href="https://help.aliyun.com/document_detail/198823.html">Timeline</a>.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>{&quot;VideoTracks&quot;:[{&quot;VideoTrackClips&quot;:[{&quot;Type&quot;:&quot;Video&quot;,&quot;MediaId&quot;:&quot;<strong><strong>4d7cf14dc7b83b0e801c</strong></strong>&quot;,&quot;MediaURL&quot;:&quot;<a href="https://test-bucket.oss-cn-shanghai.aliyuncs.com/test.mp4%22,%22TimelineIn%22:0.0,%22TimelineOut%22:5.0,%22In%22:0.0,%22Out%22:5.0,%22Speed%22:1.0,%22Duration%22:5.0,%22VirginDuration%22:13.334,%22Height%22:1.0,%22Width%22:1.0,%22X%22:0.0,%22Y%22:0.0%7D%5D%7D%5D%7D">https://test-bucket.oss-cn-shanghai.aliyuncs.com/test.mp4&quot;,&quot;TimelineIn&quot;:0.0,&quot;TimelineOut&quot;:5.0,&quot;In&quot;:0.0,&quot;Out&quot;:5.0,&quot;Speed&quot;:1.0,&quot;Duration&quot;:5.0,&quot;VirginDuration&quot;:13.334,&quot;Height&quot;:1.0,&quot;Width&quot;:1.0,&quot;X&quot;:0.0,&quot;Y&quot;:0.0}]}]}</a></p>
              */
             public Builder timeline(String timeline) {
                 this.timeline = timeline;
@@ -294,7 +303,13 @@ public class GetProjectExportJobResponseBody extends TeaModel {
             } 
 
             /**
-             * Code.
+             * <p>The error code for the failed export task.</p>
+             * <blockquote>
+             * <p>Notice: Use the error code for troubleshooting.</p>
+             * </blockquote>
+             * 
+             * <strong>example:</strong>
+             * <p>InvalidParameter</p>
              */
             public Builder code(String code) {
                 this.code = code;
@@ -302,7 +317,7 @@ public class GetProjectExportJobResponseBody extends TeaModel {
             }
 
             /**
-             * ExportResult.
+             * <p>The exported data.</p>
              */
             public Builder exportResult(ExportResult exportResult) {
                 this.exportResult = exportResult;
@@ -310,7 +325,14 @@ public class GetProjectExportJobResponseBody extends TeaModel {
             }
 
             /**
-             * ExportType.
+             * <p>The export type. Valid values:</p>
+             * <ul>
+             * <li><strong>BaseTimeline</strong>: exports the timeline.</li>
+             * <li><strong>AdobePremierePro</strong>: exports an Adobe Premiere Pro project.</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>BaseTimeline</p>
              */
             public Builder exportType(String exportType) {
                 this.exportType = exportType;
@@ -318,7 +340,10 @@ public class GetProjectExportJobResponseBody extends TeaModel {
             }
 
             /**
-             * JobId.
+             * <p>The ID of the project export task.</p>
+             * 
+             * <strong>example:</strong>
+             * <p><strong><strong>cdb3e74639973036bc84</strong></strong></p>
              */
             public Builder jobId(String jobId) {
                 this.jobId = jobId;
@@ -326,7 +351,13 @@ public class GetProjectExportJobResponseBody extends TeaModel {
             }
 
             /**
-             * Message.
+             * <p>The error message for the failed export task.</p>
+             * <blockquote>
+             * <p>Notice: Use the error message for troubleshooting.</p>
+             * </blockquote>
+             * 
+             * <strong>example:</strong>
+             * <p>The specified parameter is not valid.</p>
              */
             public Builder message(String message) {
                 this.message = message;
@@ -334,7 +365,10 @@ public class GetProjectExportJobResponseBody extends TeaModel {
             }
 
             /**
-             * ProjectId.
+             * <p>The ID of the online editing project.</p>
+             * 
+             * <strong>example:</strong>
+             * <p><strong><strong>fddd7748b58bf1d47e95</strong></strong></p>
              */
             public Builder projectId(String projectId) {
                 this.projectId = projectId;
@@ -342,7 +376,16 @@ public class GetProjectExportJobResponseBody extends TeaModel {
             }
 
             /**
-             * Status.
+             * <p>The status of the project export task. Valid values:</p>
+             * <ul>
+             * <li>Init: Initializing</li>
+             * <li>Processing</li>
+             * <li>Success</li>
+             * <li>Failed</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>Success</p>
              */
             public Builder status(String status) {
                 this.status = status;
@@ -350,7 +393,10 @@ public class GetProjectExportJobResponseBody extends TeaModel {
             }
 
             /**
-             * UserData.
+             * <p>The user-defined data in the JSON format.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>{&quot;NotifyAddress&quot;:&quot;<a href="http://xx.xx.xxx%22,%22Key%22:%22Valuexxx%22%7D">http://xx.xx.xxx&quot;,&quot;Key&quot;:&quot;Valuexxx&quot;}</a></p>
              */
             public Builder userData(String userData) {
                 this.userData = userData;

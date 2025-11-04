@@ -93,7 +93,10 @@ public class CloseStreamToSearchLibResponseBody extends TeaModel {
         } 
 
         /**
-         * Code.
+         * <p>The return code.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>200</p>
          */
         public Builder code(String code) {
             this.code = code;
@@ -101,7 +104,10 @@ public class CloseStreamToSearchLibResponseBody extends TeaModel {
         }
 
         /**
-         * MediaId.
+         * <p>The ID of the media asset.</p>
+         * 
+         * <strong>example:</strong>
+         * <p><strong><strong>c469e944b5a856828dc2</strong></strong></p>
          */
         public Builder mediaId(String mediaId) {
             this.mediaId = mediaId;
@@ -109,7 +115,7 @@ public class CloseStreamToSearchLibResponseBody extends TeaModel {
         }
 
         /**
-         * <p>Id of the request</p>
+         * <p>The ID of the request.</p>
          * 
          * <strong>example:</strong>
          * <p><strong><strong><strong>11-DB8D-4A9A-875B-275798</strong></strong></strong></p>
@@ -120,7 +126,14 @@ public class CloseStreamToSearchLibResponseBody extends TeaModel {
         }
 
         /**
-         * Success.
+         * <p>Indicates whether the request is successful. Valid values:</p>
+         * <ul>
+         * <li>true</li>
+         * <li>false</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder success(String success) {
             this.success = success;

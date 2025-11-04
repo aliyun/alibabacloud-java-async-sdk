@@ -80,7 +80,7 @@ public class CancelIProductionJobResponseBody extends TeaModel {
         } 
 
         /**
-         * AccessDeniedDetail.
+         * <p>The details about the access denial. This parameter is returned only if Resource Access Management (RAM) permission verification failed.</p>
          */
         public Builder accessDeniedDetail(AccessDeniedDetail accessDeniedDetail) {
             this.accessDeniedDetail = accessDeniedDetail;
@@ -88,7 +88,10 @@ public class CancelIProductionJobResponseBody extends TeaModel {
         }
 
         /**
-         * Message.
+         * <p>The message returned.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Success</p>
          */
         public Builder message(String message) {
             this.message = message;
@@ -96,7 +99,10 @@ public class CancelIProductionJobResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * <p>The ID of the request.</p>
+         * 
+         * <strong>example:</strong>
+         * <p><strong><strong><strong>11-DB8D-4A9A-875B-275798</strong></strong></strong></p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -227,7 +233,10 @@ public class CancelIProductionJobResponseBody extends TeaModel {
             } 
 
             /**
-             * AuthAction.
+             * <p>The operation that failed the permission check.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>ice:CancelIProductionJob</p>
              */
             public Builder authAction(String authAction) {
                 this.authAction = authAction;
@@ -235,7 +244,15 @@ public class CancelIProductionJobResponseBody extends TeaModel {
             }
 
             /**
-             * AuthPrincipalDisplayName.
+             * <p>The identity. Values:</p>
+             * <ul>
+             * <li>RAM user: a UID</li>
+             * <li>RAM role: RoleName:RoleSessionName</li>
+             * <li>Federated user: ProviderType/ProviderName</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p><strong><strong>4522705967</strong></strong></p>
              */
             public Builder authPrincipalDisplayName(String authPrincipalDisplayName) {
                 this.authPrincipalDisplayName = authPrincipalDisplayName;
@@ -243,7 +260,10 @@ public class CancelIProductionJobResponseBody extends TeaModel {
             }
 
             /**
-             * AuthPrincipalOwnerId.
+             * <p>The account to which the principal belongs.</p>
+             * 
+             * <strong>example:</strong>
+             * <p><strong><strong>82303720</strong></strong></p>
              */
             public Builder authPrincipalOwnerId(String authPrincipalOwnerId) {
                 this.authPrincipalOwnerId = authPrincipalOwnerId;
@@ -251,7 +271,15 @@ public class CancelIProductionJobResponseBody extends TeaModel {
             }
 
             /**
-             * AuthPrincipalType.
+             * <p>The type of identity that made the request. Valid values:</p>
+             * <ul>
+             * <li>SubUser: RAM user</li>
+             * <li>AssumedRoleUser: RAM role</li>
+             * <li>Federated: SSO federated user</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>SubUser</p>
              */
             public Builder authPrincipalType(String authPrincipalType) {
                 this.authPrincipalType = authPrincipalType;
@@ -259,7 +287,10 @@ public class CancelIProductionJobResponseBody extends TeaModel {
             }
 
             /**
-             * EncodedDiagnosticMessage.
+             * <p>The encoded diagnostic message.</p>
+             * 
+             * <strong>example:</strong>
+             * <p><strong><strong><strong>AAZ/h8jzNEODc5QUUyLUZCOTAtNUQyQy1BMEFBLUUzODQxODUx</strong></strong></strong>==</p>
              */
             public Builder encodedDiagnosticMessage(String encodedDiagnosticMessage) {
                 this.encodedDiagnosticMessage = encodedDiagnosticMessage;
@@ -267,7 +298,14 @@ public class CancelIProductionJobResponseBody extends TeaModel {
             }
 
             /**
-             * NoPermissionType.
+             * <p>The type of policy that resulted in the denial. Valid values:</p>
+             * <ul>
+             * <li><strong>ImplicitDeny</strong>: The resource holder has not configured a policy for the current user. By default, unauthorized operations are denied.</li>
+             * <li><strong>ExplicitDeny</strong>: The RAM policy configured by the resource holder explicitly denies the current user access to the corresponding resources.</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>ImplicitDeny</p>
              */
             public Builder noPermissionType(String noPermissionType) {
                 this.noPermissionType = noPermissionType;
@@ -275,7 +313,17 @@ public class CancelIProductionJobResponseBody extends TeaModel {
             }
 
             /**
-             * PolicyType.
+             * <p>The type of policy that triggered the permission failure.</p>
+             * <ul>
+             * <li><strong>ControlPolicy</strong>: control policy</li>
+             * <li><strong>SessionPolicy</strong>: an additional policy attached to a temporary token.</li>
+             * <li><strong>AssumeRolePolicy</strong>: the trust policy of a RAM role.</li>
+             * <li><strong>AccountLevelIdentityBasedPolicy</strong>: an identity-based policy at the account level (custom or system).</li>
+             * <li><strong>ResourceGroupLevelIdentityBasedPolicy</strong>: an identity-based policy scoped to a resource group.</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>AssumeRolePolicy</p>
              */
             public Builder policyType(String policyType) {
                 this.policyType = policyType;

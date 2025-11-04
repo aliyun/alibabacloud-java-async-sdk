@@ -194,7 +194,10 @@ public class GetStreamTagListRequest extends Request {
         }
 
         /**
-         * EndTime.
+         * <p>The end of the query time range, based on the tagging timestamp. Specify the time in the ISO 8601 standard in the yyyy-MM-ddTHH:mm:ssZ format. The time must be in UTC.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2017-12-22T08:00:00Z</p>
          */
         public Builder endTime(String endTime) {
             this.putQueryParameter("EndTime", endTime);
@@ -203,7 +206,10 @@ public class GetStreamTagListRequest extends Request {
         }
 
         /**
-         * MediaId.
+         * <p>The ID of the media asset.</p>
+         * 
+         * <strong>example:</strong>
+         * <p><strong><strong><strong>b48fb04483915d4f2cd8</strong></strong></strong></p>
          */
         public Builder mediaId(String mediaId) {
             this.putQueryParameter("MediaId", mediaId);
@@ -212,7 +218,10 @@ public class GetStreamTagListRequest extends Request {
         }
 
         /**
-         * Namespace.
+         * <p>The namespace.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>name-1</p>
          */
         public Builder namespace(String namespace) {
             this.putQueryParameter("Namespace", namespace);
@@ -221,7 +230,10 @@ public class GetStreamTagListRequest extends Request {
         }
 
         /**
-         * NextToken.
+         * <p>The pagination token that is used in the next request to retrieve a new page of results.</p>
+         * 
+         * <strong>example:</strong>
+         * <p><strong><strong>73f33c91-d59383e8280b</strong></strong></p>
          */
         public Builder nextToken(String nextToken) {
             this.putQueryParameter("NextToken", nextToken);
@@ -230,7 +242,10 @@ public class GetStreamTagListRequest extends Request {
         }
 
         /**
-         * PageNo.
+         * <p>The page number. Default value: 1.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder pageNo(Integer pageNo) {
             this.putQueryParameter("PageNo", pageNo);
@@ -239,7 +254,10 @@ public class GetStreamTagListRequest extends Request {
         }
 
         /**
-         * PageSize.
+         * <p>The number of entries per page. Valid values: 1 to 100. Default value: 10.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10</p>
          */
         public Builder pageSize(Integer pageSize) {
             this.putQueryParameter("PageSize", pageSize);
@@ -248,7 +266,10 @@ public class GetStreamTagListRequest extends Request {
         }
 
         /**
-         * SearchLibName.
+         * <p>The name of the search library.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Stream_xxx</p>
          */
         public Builder searchLibName(String searchLibName) {
             this.putQueryParameter("SearchLibName", searchLibName);
@@ -257,7 +278,14 @@ public class GetStreamTagListRequest extends Request {
         }
 
         /**
-         * SortBy.
+         * <p>The sorting order for the results. Valid values:</p>
+         * <ul>
+         * <li>StartTime:Desc (default): Sort by creation time in descending order.</li>
+         * <li>StartTime:Asc: Sort by creation time in ascending order.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>StartTime:Asc</p>
          */
         public Builder sortBy(String sortBy) {
             this.putQueryParameter("SortBy", sortBy);
@@ -266,7 +294,10 @@ public class GetStreamTagListRequest extends Request {
         }
 
         /**
-         * StartTime.
+         * <p>The start of the query time range, based on the tagging timestamp. Specify the time in the ISO 8601 standard in the yyyy-MM-ddTHH:mm:ssZ format. The time must be in UTC.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2025-04-23T02:26:00Z</p>
          */
         public Builder startTime(String startTime) {
             this.putQueryParameter("StartTime", startTime);

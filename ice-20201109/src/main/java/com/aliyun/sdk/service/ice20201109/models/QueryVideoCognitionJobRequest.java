@@ -88,7 +88,7 @@ public class QueryVideoCognitionJobRequest extends Request {
         } 
 
         /**
-         * IncludeResults.
+         * <p>Specifies whether to include the full algorithm results in the response.</p>
          */
         public Builder includeResults(IncludeResults includeResults) {
             String includeResultsShrink = shrink(includeResults, "IncludeResults", "json");
@@ -98,6 +98,7 @@ public class QueryVideoCognitionJobRequest extends Request {
         }
 
         /**
+         * <p>The ID of the task to query. It is returned when you call the <a href="https://help.aliyun.com/document_detail/478786.html">SubmitSmarttagJob</a> operation.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -110,7 +111,10 @@ public class QueryVideoCognitionJobRequest extends Request {
         }
 
         /**
-         * Params.
+         * <p>Additional request parameters, provided as a JSON string.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>{}</p>
          */
         public Builder params(String params) {
             this.putQueryParameter("Params", params);
@@ -191,7 +195,10 @@ public class QueryVideoCognitionJobRequest extends Request {
             } 
 
             /**
-             * NeedAsr.
+             * <p>Specifies whether to include Automatic Speech Recognition (ASR) results.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>true</p>
              */
             public Builder needAsr(Boolean needAsr) {
                 this.needAsr = needAsr;
@@ -199,7 +206,10 @@ public class QueryVideoCognitionJobRequest extends Request {
             }
 
             /**
-             * NeedOcr.
+             * <p>Specifies whether to include Optical Character Recognition (OCR) results.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>true</p>
              */
             public Builder needOcr(Boolean needOcr) {
                 this.needOcr = needOcr;
@@ -207,7 +217,10 @@ public class QueryVideoCognitionJobRequest extends Request {
             }
 
             /**
-             * NeedProcess.
+             * <p>Specifies whether to include the URL to the raw output of the algorithm.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>true</p>
              */
             public Builder needProcess(Boolean needProcess) {
                 this.needProcess = needProcess;

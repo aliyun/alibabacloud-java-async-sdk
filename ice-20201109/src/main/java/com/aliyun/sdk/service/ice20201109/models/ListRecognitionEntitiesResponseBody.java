@@ -106,7 +106,7 @@ public class ListRecognitionEntitiesResponseBody extends TeaModel {
         } 
 
         /**
-         * Entities.
+         * <p>The entities.</p>
          */
         public Builder entities(Entities entities) {
             this.entities = entities;
@@ -114,7 +114,10 @@ public class ListRecognitionEntitiesResponseBody extends TeaModel {
         }
 
         /**
-         * PageNumber.
+         * <p>The page number.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder pageNumber(Integer pageNumber) {
             this.pageNumber = pageNumber;
@@ -122,7 +125,10 @@ public class ListRecognitionEntitiesResponseBody extends TeaModel {
         }
 
         /**
-         * PageSize.
+         * <p>The number of entries per page.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10</p>
          */
         public Builder pageSize(Integer pageSize) {
             this.pageSize = pageSize;
@@ -130,7 +136,10 @@ public class ListRecognitionEntitiesResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * <p><strong>Request ID</strong></p>
+         * 
+         * <strong>example:</strong>
+         * <p><strong><strong><strong>11-DB8D-4A9A-875B-275798</strong></strong></strong></p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -138,7 +147,10 @@ public class ListRecognitionEntitiesResponseBody extends TeaModel {
         }
 
         /**
-         * TotalCount.
+         * <p>The total number of entries returned.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>100</p>
          */
         public Builder totalCount(Long totalCount) {
             this.totalCount = totalCount;
@@ -217,7 +229,10 @@ public class ListRecognitionEntitiesResponseBody extends TeaModel {
             } 
 
             /**
-             * EntityId.
+             * <p>The ID of the entity.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>**<strong><strong><strong><strong><strong><strong>544cb84754</strong></strong></strong></strong></strong></strong></p>
              */
             public Builder entityId(String entityId) {
                 this.entityId = entityId;
@@ -225,7 +240,10 @@ public class ListRecognitionEntitiesResponseBody extends TeaModel {
             }
 
             /**
-             * EntityInfo.
+             * <p>The additional information of the entity, in JSON format.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>{}</p>
              */
             public Builder entityInfo(String entityInfo) {
                 this.entityInfo = entityInfo;
@@ -233,7 +251,7 @@ public class ListRecognitionEntitiesResponseBody extends TeaModel {
             }
 
             /**
-             * EntityName.
+             * <p>The name of the entity.</p>
              */
             public Builder entityName(String entityName) {
                 this.entityName = entityName;

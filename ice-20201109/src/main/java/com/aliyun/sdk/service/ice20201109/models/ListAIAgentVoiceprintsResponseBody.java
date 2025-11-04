@@ -80,7 +80,10 @@ public class ListAIAgentVoiceprintsResponseBody extends TeaModel {
         } 
 
         /**
-         * RequestId.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p><strong><strong><strong>11-DB8D-4A9A-875B-275798</strong></strong></strong></p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -88,7 +91,10 @@ public class ListAIAgentVoiceprintsResponseBody extends TeaModel {
         }
 
         /**
-         * TotalCount.
+         * <p>The total number of voiceprints that match the query criteria.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2</p>
          */
         public Builder totalCount(Integer totalCount) {
             this.totalCount = totalCount;
@@ -96,7 +102,7 @@ public class ListAIAgentVoiceprintsResponseBody extends TeaModel {
         }
 
         /**
-         * Voiceprints.
+         * <p>The voiceprints.</p>
          */
         public Builder voiceprints(java.util.List<Voiceprints> voiceprints) {
             this.voiceprints = voiceprints;
@@ -175,7 +181,10 @@ public class ListAIAgentVoiceprintsResponseBody extends TeaModel {
             } 
 
             /**
-             * GmtCreate.
+             * <p>The creation time of the voiceprint.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2025-07-28T10:03:58.000+00:00</p>
              */
             public Builder gmtCreate(String gmtCreate) {
                 this.gmtCreate = gmtCreate;
@@ -183,7 +192,10 @@ public class ListAIAgentVoiceprintsResponseBody extends TeaModel {
             }
 
             /**
-             * GmtModified.
+             * <p>The last modification time of the voiceprint.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2025-07-28T10:03:58.000+00:00</p>
              */
             public Builder gmtModified(String gmtModified) {
                 this.gmtModified = gmtModified;
@@ -191,7 +203,10 @@ public class ListAIAgentVoiceprintsResponseBody extends TeaModel {
             }
 
             /**
-             * VoiceprintId.
+             * <p>The unique identifier for the voiceprint.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>vp_1699123456_8527</p>
              */
             public Builder voiceprintId(String voiceprintId) {
                 this.voiceprintId = voiceprintId;

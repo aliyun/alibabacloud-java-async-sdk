@@ -110,7 +110,10 @@ public class CreateStreamToSearchLibRequest extends Request {
         }
 
         /**
-         * Input.
+         * <p>The URL of the live stream to be ingested and analyzed.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>rtmp://xxx</p>
          */
         public Builder input(String input) {
             this.putQueryParameter("Input", input);
@@ -119,7 +122,10 @@ public class CreateStreamToSearchLibRequest extends Request {
         }
 
         /**
-         * Namespace.
+         * <p>The namespace.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>name-1</p>
          */
         public Builder namespace(String namespace) {
             this.putQueryParameter("Namespace", namespace);
@@ -128,7 +134,10 @@ public class CreateStreamToSearchLibRequest extends Request {
         }
 
         /**
-         * SearchLibName.
+         * <p>The search library.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Stream_xxx</p>
          */
         public Builder searchLibName(String searchLibName) {
             this.putQueryParameter("SearchLibName", searchLibName);

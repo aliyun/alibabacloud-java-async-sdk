@@ -83,6 +83,7 @@ public class GetProjectExportJobRequest extends Request {
         }
 
         /**
+         * <p>The ID of the project export task.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>

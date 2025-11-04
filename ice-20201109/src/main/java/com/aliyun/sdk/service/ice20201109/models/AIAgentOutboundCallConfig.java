@@ -26,6 +26,9 @@ public class AIAgentOutboundCallConfig extends TeaModel {
     @com.aliyun.core.annotation.NameInMap("EnableIntelligentSegment")
     private Boolean enableIntelligentSegment;
 
+    @com.aliyun.core.annotation.NameInMap("ExperimentalConfig")
+    private String experimentalConfig;
+
     @com.aliyun.core.annotation.NameInMap("Greeting")
     private String greeting;
 
@@ -48,6 +51,7 @@ public class AIAgentOutboundCallConfig extends TeaModel {
         this.ambientSoundConfig = builder.ambientSoundConfig;
         this.asrConfig = builder.asrConfig;
         this.enableIntelligentSegment = builder.enableIntelligentSegment;
+        this.experimentalConfig = builder.experimentalConfig;
         this.greeting = builder.greeting;
         this.greetingDelay = builder.greetingDelay;
         this.interruptConfig = builder.interruptConfig;
@@ -87,6 +91,13 @@ public class AIAgentOutboundCallConfig extends TeaModel {
      */
     public Boolean getEnableIntelligentSegment() {
         return this.enableIntelligentSegment;
+    }
+
+    /**
+     * @return experimentalConfig
+     */
+    public String getExperimentalConfig() {
+        return this.experimentalConfig;
     }
 
     /**
@@ -135,6 +146,7 @@ public class AIAgentOutboundCallConfig extends TeaModel {
         private AmbientSoundConfig ambientSoundConfig; 
         private AsrConfig asrConfig; 
         private Boolean enableIntelligentSegment; 
+        private String experimentalConfig; 
         private String greeting; 
         private Integer greetingDelay; 
         private InterruptConfig interruptConfig; 
@@ -149,6 +161,7 @@ public class AIAgentOutboundCallConfig extends TeaModel {
             this.ambientSoundConfig = model.ambientSoundConfig;
             this.asrConfig = model.asrConfig;
             this.enableIntelligentSegment = model.enableIntelligentSegment;
+            this.experimentalConfig = model.experimentalConfig;
             this.greeting = model.greeting;
             this.greetingDelay = model.greetingDelay;
             this.interruptConfig = model.interruptConfig;
@@ -178,6 +191,14 @@ public class AIAgentOutboundCallConfig extends TeaModel {
          */
         public Builder enableIntelligentSegment(Boolean enableIntelligentSegment) {
             this.enableIntelligentSegment = enableIntelligentSegment;
+            return this;
+        }
+
+        /**
+         * ExperimentalConfig.
+         */
+        public Builder experimentalConfig(String experimentalConfig) {
+            this.experimentalConfig = experimentalConfig;
             return this;
         }
 

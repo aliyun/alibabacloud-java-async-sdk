@@ -22,6 +22,10 @@ public class SearchMediaRequest extends Request {
     private String regionId;
 
     @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("CustomFilters")
+    private String customFilters;
+
+    @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("EntityId")
     private String entityId;
 
@@ -52,6 +56,7 @@ public class SearchMediaRequest extends Request {
     private SearchMediaRequest(Builder builder) {
         super(builder);
         this.regionId = builder.regionId;
+        this.customFilters = builder.customFilters;
         this.entityId = builder.entityId;
         this.match = builder.match;
         this.pageNo = builder.pageNo;
@@ -79,6 +84,13 @@ public class SearchMediaRequest extends Request {
      */
     public String getRegionId() {
         return this.regionId;
+    }
+
+    /**
+     * @return customFilters
+     */
+    public String getCustomFilters() {
+        return this.customFilters;
     }
 
     /**
@@ -132,6 +144,7 @@ public class SearchMediaRequest extends Request {
 
     public static final class Builder extends Request.Builder<SearchMediaRequest, Builder> {
         private String regionId; 
+        private String customFilters; 
         private String entityId; 
         private String match; 
         private Integer pageNo; 
@@ -147,6 +160,7 @@ public class SearchMediaRequest extends Request {
         private Builder(SearchMediaRequest request) {
             super(request);
             this.regionId = request.regionId;
+            this.customFilters = request.customFilters;
             this.entityId = request.entityId;
             this.match = request.match;
             this.pageNo = request.pageNo;
@@ -162,6 +176,15 @@ public class SearchMediaRequest extends Request {
         public Builder regionId(String regionId) {
             this.putHostParameter("RegionId", regionId);
             this.regionId = regionId;
+            return this;
+        }
+
+        /**
+         * CustomFilters.
+         */
+        public Builder customFilters(String customFilters) {
+            this.putQueryParameter("CustomFilters", customFilters);
+            this.customFilters = customFilters;
             return this;
         }
 

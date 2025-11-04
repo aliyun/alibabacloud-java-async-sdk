@@ -156,12 +156,20 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<CancelIProductionJobResponse> cancelIProductionJob(CancelIProductionJobRequest request);
 
     /**
+     * <b>description</b> :
+     * <h2><a href="#"></a></h2>
+     * <pre><code>
+     * </code></pre>
+     * 
      * @param request the request parameters of ClearAIAgentVoiceprint  ClearAIAgentVoiceprintRequest
      * @return ClearAIAgentVoiceprintResponse
      */
     CompletableFuture<ClearAIAgentVoiceprintResponse> clearAIAgentVoiceprint(ClearAIAgentVoiceprintRequest request);
 
     /**
+     * <b>description</b> :
+     * <p>  If a flow has two sources, you cannot disable Source Failover. Delete one of them before this operation.</p>
+     * 
      * @param request the request parameters of CloseMediaConnectFlowFailover  CloseMediaConnectFlowFailoverRequest
      * @return CloseMediaConnectFlowFailoverResponse
      */
@@ -337,18 +345,37 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<CreateProgramResponse> createProgram(CreateProgramRequest request);
 
     /**
+     * <b>description</b> :
+     * <p>  This operation is supported only in the China (Beijing), China (Shanghai), China (Hangzhou), and China (Shenzhen) regions.</p>
+     * <ul>
+     * <li>You can call this operation up to 50 times per second per account. Requests that exceed this limit are dropped and you may experience service interruptions. For more information, see <a href="https://help.aliyun.com/zh/mps/developer-reference/qps-limits?spm=a2c4g.11186623.0.0.647e1081YGcerb">QPS limits</a>.</li>
+     * </ul>
+     * 
      * @param request the request parameters of CreateRecognitionEntity  CreateRecognitionEntityRequest
      * @return CreateRecognitionEntityResponse
      */
     CompletableFuture<CreateRecognitionEntityResponse> createRecognitionEntity(CreateRecognitionEntityRequest request);
 
     /**
+     * <b>description</b> :
+     * <p>  This operation is supported only in the China (Beijing), China (Shanghai), China (Hangzhou), and China (Shenzhen) regions.</p>
+     * <ul>
+     * <li>Workflow for using a custom recognition library: Create a library, create a custom object entity within the library, register sample images for the entity, create an analysis template that uses your custom library, and then submit an analysis task using the template.</li>
+     * <li>You can call this operation up to 50 times per second per account. Requests that exceed this limit are dropped and you may experience service interruptions. For more information, see <a href="https://help.aliyun.com/zh/mps/developer-reference/qps-limits?spm=a2c4g.11186623.0.0.647e1081YGcerb">QPS limits</a>.</li>
+     * </ul>
+     * 
      * @param request the request parameters of CreateRecognitionLib  CreateRecognitionLibRequest
      * @return CreateRecognitionLibResponse
      */
     CompletableFuture<CreateRecognitionLibResponse> createRecognitionLib(CreateRecognitionLibRequest request);
 
     /**
+     * <b>description</b> :
+     * <p>  This operation is supported only in the China (Beijing), China (Shanghai), China (Hangzhou), and China (Shenzhen) regions.</p>
+     * <ul>
+     * <li>You can call this operation up to 50 times per second per account. Requests that exceed this limit are dropped and you may experience service interruptions. For more information, see <a href="https://help.aliyun.com/zh/mps/developer-reference/qps-limits?spm=a2c4g.11186623.0.0.647e1081YGcerb">QPS limits</a>.</li>
+     * </ul>
+     * 
      * @param request the request parameters of CreateRecognitionSample  CreateRecognitionSampleRequest
      * @return CreateRecognitionSampleResponse
      */
@@ -511,6 +538,14 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<DeleteEditingProjectsResponse> deleteEditingProjects(DeleteEditingProjectsRequest request);
 
     /**
+     * <b>description</b> :
+     * <h2><a href="#"></a></h2>
+     * <ul>
+     * <li>You can call this operation to delete a specified hotword library.</li>
+     * <li>The delete operation is irreversible.</li>
+     * <li>You can create up to 100 hotword libraries in an account.</li>
+     * </ul>
+     * 
      * @param request the request parameters of DeleteHotwordLibrary  DeleteHotwordLibraryRequest
      * @return DeleteHotwordLibraryResponse
      */
@@ -693,18 +728,36 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<DeleteProgramResponse> deleteProgram(DeleteProgramRequest request);
 
     /**
+     * <b>description</b> :
+     * <p>  This operation is supported only in the China (Beijing), China (Shanghai), China (Hangzhou), and China (Shenzhen) regions.</p>
+     * <ul>
+     * <li>You can call this operation up to 50 times per second per account. Requests that exceed this limit are dropped and you may experience service interruptions. For more information, see <a href="https://help.aliyun.com/zh/mps/developer-reference/qps-limits?spm=a2c4g.11186623.0.0.647e1081YGcerb">QPS limits</a>.</li>
+     * </ul>
+     * 
      * @param request the request parameters of DeleteRecognitionEntity  DeleteRecognitionEntityRequest
      * @return DeleteRecognitionEntityResponse
      */
     CompletableFuture<DeleteRecognitionEntityResponse> deleteRecognitionEntity(DeleteRecognitionEntityRequest request);
 
     /**
+     * <b>description</b> :
+     * <p>  This operation is supported only in the China (Beijing), China (Shanghai), China (Hangzhou), and China (Shenzhen) regions.</p>
+     * <ul>
+     * <li>You can call this operation up to 50 times per second per account. Requests that exceed this limit are dropped and you may experience service interruptions. For more information, see <a href="https://help.aliyun.com/zh/mps/developer-reference/qps-limits?spm=a2c4g.11186623.0.0.647e1081YGcerb">QPS limits</a>.</li>
+     * </ul>
+     * 
      * @param request the request parameters of DeleteRecognitionLib  DeleteRecognitionLibRequest
      * @return DeleteRecognitionLibResponse
      */
     CompletableFuture<DeleteRecognitionLibResponse> deleteRecognitionLib(DeleteRecognitionLibRequest request);
 
     /**
+     * <b>description</b> :
+     * <p>  This operation is supported only in the China (Beijing), China (Shanghai), China (Hangzhou), and China (Shenzhen) regions.</p>
+     * <ul>
+     * <li>You can call this operation up to 50 times per second per account. Requests that exceed this limit are dropped and you may experience service interruptions. For more information, see <a href="https://help.aliyun.com/zh/mps/developer-reference/qps-limits?spm=a2c4g.11186623.0.0.647e1081YGcerb">QPS limits</a>.</li>
+     * </ul>
+     * 
      * @param request the request parameters of DeleteRecognitionSample  DeleteRecognitionSampleRequest
      * @return DeleteRecognitionSampleResponse
      */
@@ -877,6 +930,12 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<GenerateMessageChatTokenResponse> generateMessageChatToken(GenerateMessageChatTokenRequest request);
 
     /**
+     * @param request the request parameters of GetAIWorkflowTask  GetAIWorkflowTaskRequest
+     * @return GetAIWorkflowTaskResponse
+     */
+    CompletableFuture<GetAIWorkflowTaskResponse> getAIWorkflowTask(GetAIWorkflowTaskRequest request);
+
+    /**
      * @param request the request parameters of GetAdInsertion  GetAdInsertionRequest
      * @return GetAdInsertionResponse
      */
@@ -1008,6 +1067,10 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<GetEventCallbackResponse> getEventCallback(GetEventCallbackRequest request);
 
     /**
+     * <b>description</b> :
+     * <h2><a href="#"></a></h2>
+     * <p>You can call this operation to retrieve details of a specified hotword library based on the ID, including the library name, description, and content and attributes of all hotwords in it.</p>
+     * 
      * @param request the request parameters of GetHotwordLibrary  GetHotwordLibraryRequest
      * @return GetHotwordLibraryResponse
      */
@@ -1488,6 +1551,16 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<ListEditingProjectsResponse> listEditingProjects(ListEditingProjectsRequest request);
 
     /**
+     * <b>description</b> :
+     * <h2><a href="#"></a></h2>
+     * <ul>
+     * <li>You can call this operation to get information about all hotword libraries that you created.</li>
+     * <li>The API supports fuzzy search by <code>Name</code>, filtering by creation time range, and pagination.</li>
+     * <li>By default, the results are sorted by creation time in descending order. You can set <code>SortBy</code> to change the sorting order.</li>
+     * <li>The maximum number of entries returned for each request is 100. Default value: 10.</li>
+     * <li>Use <code>NextToken</code> for pagination.</li>
+     * </ul>
+     * 
      * @param request the request parameters of ListHotwordLibraries  ListHotwordLibrariesRequest
      * @return ListHotwordLibrariesResponse
      */
@@ -1665,12 +1738,24 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<ListPublicMediaBasicInfosResponse> listPublicMediaBasicInfos(ListPublicMediaBasicInfosRequest request);
 
     /**
+     * <b>description</b> :
+     * <p>  This operation is supported only in the China (Beijing), China (Shanghai), China (Hangzhou), and China (Shenzhen) regions.</p>
+     * <ul>
+     * <li>You can call this operation up to 50 times per second per account. Requests that exceed this limit are dropped and you may experience service interruptions. For more information, see <a href="https://help.aliyun.com/zh/mps/developer-reference/qps-limits?spm=a2c4g.11186623.0.0.647e1081YGcerb">QPS limits</a>.</li>
+     * </ul>
+     * 
      * @param request the request parameters of ListRecognitionEntities  ListRecognitionEntitiesRequest
      * @return ListRecognitionEntitiesResponse
      */
     CompletableFuture<ListRecognitionEntitiesResponse> listRecognitionEntities(ListRecognitionEntitiesRequest request);
 
     /**
+     * <b>description</b> :
+     * <p>  This operation is supported only in the China (Beijing), China (Shanghai), China (Hangzhou), and China (Shenzhen) regions.</p>
+     * <ul>
+     * <li>You can call this operation up to 50 times per second per account. Requests that exceed this limit are dropped and you may experience service interruptions. For more information, see <a href="https://help.aliyun.com/zh/mps/developer-reference/qps-limits?spm=a2c4g.11186623.0.0.647e1081YGcerb">QPS limits</a>.</li>
+     * </ul>
+     * 
      * @param request the request parameters of ListRecognitionLibs  ListRecognitionLibsRequest
      * @return ListRecognitionLibsResponse
      */
@@ -1805,12 +1890,21 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<ListVodPackagingGroupsResponse> listVodPackagingGroups(ListVodPackagingGroupsRequest request);
 
     /**
+     * <b>description</b> :
+     * <p>This API only returns data from the last 90 days.</p>
+     * 
      * @param request the request parameters of ListWorkflowTasks  ListWorkflowTasksRequest
      * @return ListWorkflowTasksResponse
      */
     CompletableFuture<ListWorkflowTasksResponse> listWorkflowTasks(ListWorkflowTasksRequest request);
 
     /**
+     * <b>description</b> :
+     * <p>  Before this operation, you must add a source to the flow.</p>
+     * <ul>
+     * <li>After Source Failover is enabled, you can add an additional source. The input type of the two sources must be identical.</li>
+     * </ul>
+     * 
      * @param request the request parameters of OpenMediaConnectFlowFailover  OpenMediaConnectFlowFailoverRequest
      * @return OpenMediaConnectFlowFailoverResponse
      */
@@ -1823,6 +1917,9 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<QueryCopyrightExtractJobResponse> queryCopyrightExtractJob(QueryCopyrightExtractJobRequest request);
 
     /**
+     * <b>description</b> :
+     * <p>  This operation is supported only in the China (Shanghai) and China (Beijing) regions.</p>
+     * 
      * @param request the request parameters of QueryCopyrightJobList  QueryCopyrightJobListRequest
      * @return QueryCopyrightJobListResponse
      */
@@ -1883,18 +1980,30 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<QuerySmarttagJobResponse> querySmarttagJob(QuerySmarttagJobRequest request);
 
     /**
+     * <b>description</b> :
+     * <p>  This operation is supported only in the China (Shanghai) and China (Beijing) regions.</p>
+     * 
      * @param request the request parameters of QueryTraceAbJobList  QueryTraceAbJobListRequest
      * @return QueryTraceAbJobListResponse
      */
     CompletableFuture<QueryTraceAbJobListResponse> queryTraceAbJobList(QueryTraceAbJobListRequest request);
 
     /**
+     * <b>description</b> :
+     * <p>This operation is supported only in the China (Shanghai) and China (Beijing) regions.</p>
+     * 
      * @param request the request parameters of QueryTraceExtractJob  QueryTraceExtractJobRequest
      * @return QueryTraceExtractJobResponse
      */
     CompletableFuture<QueryTraceExtractJobResponse> queryTraceExtractJob(QueryTraceExtractJobRequest request);
 
     /**
+     * <b>description</b> :
+     * <p>  This operation is supported only in the China (Shanghai) and China (Beijing) regions.</p>
+     * <ul>
+     * <li>The M3U8 file with absolute paths generated by the SubmitTraceM3u8Job API has a signed URL with an authentication validity period of 24 hours, starting from the moment the job is completed. After the signature expires, the M3U8 file will become inaccessible. You must submit a new M3U8 generation job.</li>
+     * </ul>
+     * 
      * @param request the request parameters of QueryTraceM3u8JobList  QueryTraceM3u8JobListRequest
      * @return QueryTraceM3u8JobListResponse
      */
@@ -2109,6 +2218,15 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<StartAIAgentOutboundCallResponse> startAIAgentOutboundCall(StartAIAgentOutboundCallRequest request);
 
     /**
+     * <b>description</b> :
+     * <p>  You must specify a workflow template. To create one, go to the <a href="https://ims.console.aliyun.com/ai-workflow/template">Intelligent Media Services (IMS)</a> console.</p>
+     * 
+     * @param request the request parameters of StartAIWorkflow  StartAIWorkflowRequest
+     * @return StartAIWorkflowResponse
+     */
+    CompletableFuture<StartAIWorkflowResponse> startAIWorkflow(StartAIWorkflowRequest request);
+
+    /**
      * @param request the request parameters of StartChannel  StartChannelRequest
      * @return StartChannelResponse
      */
@@ -2157,6 +2275,15 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<StopAIAgentInstanceResponse> stopAIAgentInstance(StopAIAgentInstanceRequest request);
 
     /**
+     * <b>description</b> :
+     * <p>This operation is only used to stop workflow tasks in real-time scenarios such as live streaming and RTC. It cannot be used to stop tasks in offline scenarios.</p>
+     * 
+     * @param request the request parameters of StopAIWorkflowTask  StopAIWorkflowTaskRequest
+     * @return StopAIWorkflowTaskResponse
+     */
+    CompletableFuture<StopAIWorkflowTaskResponse> stopAIWorkflowTask(StopAIWorkflowTaskRequest request);
+
+    /**
      * @param request the request parameters of StopChannel  StopChannelRequest
      * @return StopChannelResponse
      */
@@ -2179,6 +2306,9 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<StopRtcRobotInstanceResponse> stopRtcRobotInstance(StopRtcRobotInstanceRequest request);
 
     /**
+     * <b>description</b> :
+     * <p>Call SubmitAIAgentVideoAuditTask to submit a video moderation task with configurations such as a video URL, frame-capturing policies, and review interval. The system returns a unique JobId for tracking. When the task is complete, the service will push the results, including the moderation status and AI-generated analysis, to the configured callback URL. Only OSS URLs are supported as input. The underlying multi-modal large language model (MLLM) only supports interaction via the non-streaming OpenAI protocol.</p>
+     * 
      * @param request the request parameters of SubmitAIAgentVideoAuditTask  SubmitAIAgentVideoAuditTaskRequest
      * @return SubmitAIAgentVideoAuditTaskResponse
      */
@@ -2203,6 +2333,13 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<SubmitAvatarTrainingJobResponse> submitAvatarTrainingJob(SubmitAvatarTrainingJobRequest request);
 
     /**
+     * <b>description</b> :
+     * <ul>
+     * <li>The input supports only text or a human voice audio file in MP3 or WAV format.</li>
+     * <li>The output supports MP4 and WebM formats. For the MP4 format, the task produces two videos: one with the avatar on a green screen background and a separate alpha mask video. This is ideal for post-production. For the WebM format, the task produces a single video with a transparent alpha channel, suitable for direct web front-end display. Rendering WebM is slower due to encoding complexity.</li>
+     * <li>The final output includes sentence-level timestamps, which are useful for subsequent video editing.</li>
+     * </ul>
+     * 
      * @param request the request parameters of SubmitAvatarVideoJob  SubmitAvatarVideoJobRequest
      * @return SubmitAvatarVideoJobResponse
      */
@@ -2215,12 +2352,22 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<SubmitBatchMediaProducingJobResponse> submitBatchMediaProducingJob(SubmitBatchMediaProducingJobRequest request);
 
     /**
+     * <b>description</b> :
+     * <p>  This operation is supported only in the China (Shanghai) and China (Beijing) regions.</p>
+     * 
      * @param request the request parameters of SubmitCopyrightExtractJob  SubmitCopyrightExtractJobRequest
      * @return SubmitCopyrightExtractJobResponse
      */
     CompletableFuture<SubmitCopyrightExtractJobResponse> submitCopyrightExtractJob(SubmitCopyrightExtractJobRequest request);
 
     /**
+     * <b>description</b> :
+     * <p>  You can call this operation to add a copyright watermark to a video that lasts at least 3 minutes. If the video is too short, the call may fail, or no output may be returned. To add a copyright watermark to a video shorter than 3 minutes, specify the Params parameter to change the algorithm.</p>
+     * <ul>
+     * <li>Each API call supports processing only one video.</li>
+     * <li>This API is supported only in the China (Shanghai) and China (Beijing) regions.</li>
+     * </ul>
+     * 
      * @param request the request parameters of SubmitCopyrightJob  SubmitCopyrightJobRequest
      * @return SubmitCopyrightJobResponse
      */
@@ -2396,6 +2543,18 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<SubmitProjectExportJobResponse> submitProjectExportJob(SubmitProjectExportJobRequest request);
 
     /**
+     * <b>description</b> :
+     * <p>  After a job is submitted, you can call <a href="https://help.aliyun.com/document_detail/2803751.html">ListBatchMediaProducingJob</a> to query submitted jobs, or <a href="https://help.aliyun.com/document_detail/2693269.html">GetBatchMediaProducingJob</a> to query the job status and results.</p>
+     * <ul>
+     * <li>The feature is in public preview and charges no fees.</li>
+     * </ul>
+     * 
+     * @param request the request parameters of SubmitSceneMediaSelectionJob  SubmitSceneMediaSelectionJobRequest
+     * @return SubmitSceneMediaSelectionJobResponse
+     */
+    CompletableFuture<SubmitSceneMediaSelectionJobResponse> submitSceneMediaSelectionJob(SubmitSceneMediaSelectionJobRequest request);
+
+    /**
      * @param request the request parameters of SubmitScreenMediaHighlightsJob  SubmitScreenMediaHighlightsJobRequest
      * @return SubmitScreenMediaHighlightsJobResponse
      */
@@ -2450,18 +2609,34 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<SubmitTextGenerateJobResponse> submitTextGenerateJob(SubmitTextGenerateJobRequest request);
 
     /**
+     * <b>description</b> :
+     * <p>  This API supports only videos that last at least 3 minutes. If the video is too short, the call may fail, or no output may be returned.</p>
+     * 
      * @param request the request parameters of SubmitTraceAbJob  SubmitTraceAbJobRequest
      * @return SubmitTraceAbJobResponse
      */
     CompletableFuture<SubmitTraceAbJobResponse> submitTraceAbJob(SubmitTraceAbJobRequest request);
 
     /**
+     * <b>description</b> :
+     * <p>  This operation is supported only in the China (Shanghai) and China (Beijing) regions.</p>
+     * <ul>
+     * <li>The input video must be 3 minutes or longer. Jobs submitted with shorter videos will fail.</li>
+     * </ul>
+     * 
      * @param request the request parameters of SubmitTraceExtractJob  SubmitTraceExtractJobRequest
      * @return SubmitTraceExtractJobResponse
      */
     CompletableFuture<SubmitTraceExtractJobResponse> submitTraceExtractJob(SubmitTraceExtractJobRequest request);
 
     /**
+     * <b>description</b> :
+     * <p>  Before you call this operation, you must call SubmitTraceAbJob to get the TraceMediaId from its response.</p>
+     * <ul>
+     * <li>This operation is supported only in the China (Shanghai) and China (Beijing) regions.</li>
+     * <li>The M3U8 file generated by this job has a signed URL with an authentication validity period of 24 hours, starting from the moment the job is completed. Once the signature expires, you will no longer be able to trace the watermark information using that specific M3U8 file. If you need to use it after expiration, you must call this API again to generate a new M3U8 file.</li>
+     * </ul>
+     * 
      * @param request the request parameters of SubmitTraceM3u8Job  SubmitTraceM3u8JobRequest
      * @return SubmitTraceM3u8JobResponse
      */
@@ -2550,6 +2725,16 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<UpdateEditingProjectResponse> updateEditingProject(UpdateEditingProjectRequest request);
 
     /**
+     * <b>description</b> :
+     * <h2><a href="#"></a></h2>
+     * <ul>
+     * <li>You can call this operation to modify a specified hotword library.</li>
+     * <li>The hotword library ID (<code>HotwordLibraryId</code>) is required to identify the library that requires modification.</li>
+     * <li>You can modify its name (<code>Name</code> ), description (<code>Description</code> ), and hotword list (<code>HotWords</code>).</li>
+     * <li>Each hotword in the list can also be modified, including its content (<code>Text</code>), weight (<code>Weight</code>), language (<code>Language</code>), and translation results (<code>TranspositionResultList</code>).</li>
+     * <li>A single account supports up to 100 hotword libraries, each containing a maximum of 300 hotword entries. In a library, the combination of <code>language</code> and <code>text</code> of an entry must be unique. The combination of <code>TranslatedText</code> and <code>TargetLanguage</code> in <code>TranspositionResultList</code> must also be unique.</li>
+     * </ul>
+     * 
      * @param request the request parameters of UpdateHotwordLibrary  UpdateHotwordLibraryRequest
      * @return UpdateHotwordLibraryResponse
      */

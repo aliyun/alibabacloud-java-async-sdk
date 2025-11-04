@@ -145,6 +145,14 @@ public class CreateRecognitionLibRequest extends Request {
         } 
 
         /**
+         * <p>The type of recognition algorithm. Valid values:</p>
+         * <ul>
+         * <li>landmark</li>
+         * <li>object</li>
+         * <li>logo</li>
+         * <li>face</li>
+         * <li>label</li>
+         * </ul>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -157,7 +165,7 @@ public class CreateRecognitionLibRequest extends Request {
         }
 
         /**
-         * LibDescription.
+         * <p>The description of the recognition library. Max length: 128 bytes.</p>
          */
         public Builder libDescription(String libDescription) {
             this.putQueryParameter("LibDescription", libDescription);
@@ -166,6 +174,7 @@ public class CreateRecognitionLibRequest extends Request {
         }
 
         /**
+         * <p>The name of the recognition library. Max length: 64 bytes.</p>
          * <p>This parameter is required.</p>
          */
         public Builder libName(String libName) {

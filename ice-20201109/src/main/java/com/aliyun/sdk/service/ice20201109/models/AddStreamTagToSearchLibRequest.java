@@ -124,7 +124,10 @@ public class AddStreamTagToSearchLibRequest extends Request {
         }
 
         /**
-         * MediaId.
+         * <p>The ID of the media asset.</p>
+         * 
+         * <strong>example:</strong>
+         * <p><strong><strong><strong>b48fb04483915d4f2cd8</strong></strong></strong></p>
          */
         public Builder mediaId(String mediaId) {
             this.putQueryParameter("MediaId", mediaId);
@@ -133,7 +136,10 @@ public class AddStreamTagToSearchLibRequest extends Request {
         }
 
         /**
-         * MsgBody.
+         * <p>The message body.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>{&quot;startTime&quot;:1657684600793,&quot;endTime&quot;:1657684600793,&quot;userData&quot;:&quot;{}&quot;}</p>
          */
         public Builder msgBody(String msgBody) {
             this.putQueryParameter("MsgBody", msgBody);
@@ -142,7 +148,10 @@ public class AddStreamTagToSearchLibRequest extends Request {
         }
 
         /**
-         * Namespace.
+         * <p>The namespace.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>name-1</p>
          */
         public Builder namespace(String namespace) {
             this.putQueryParameter("Namespace", namespace);
@@ -151,7 +160,10 @@ public class AddStreamTagToSearchLibRequest extends Request {
         }
 
         /**
-         * SearchLibName.
+         * <p>The search library.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Stream_xxx</p>
          */
         public Builder searchLibName(String searchLibName) {
             this.putQueryParameter("SearchLibName", searchLibName);

@@ -2441,6 +2441,9 @@ public class SearchMediaResponseBody extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("AiRoughData")
         private AiRoughData aiRoughData;
 
+        @com.aliyun.core.annotation.NameInMap("CustomFields")
+        private String customFields;
+
         @com.aliyun.core.annotation.NameInMap("FileInfoList")
         private java.util.List<FileInfoList> fileInfoList;
 
@@ -2456,6 +2459,7 @@ public class SearchMediaResponseBody extends TeaModel {
         private MediaInfoList(Builder builder) {
             this.aiData = builder.aiData;
             this.aiRoughData = builder.aiRoughData;
+            this.customFields = builder.customFields;
             this.fileInfoList = builder.fileInfoList;
             this.indexStatusList = builder.indexStatusList;
             this.mediaBasicInfo = builder.mediaBasicInfo;
@@ -2482,6 +2486,13 @@ public class SearchMediaResponseBody extends TeaModel {
          */
         public AiRoughData getAiRoughData() {
             return this.aiRoughData;
+        }
+
+        /**
+         * @return customFields
+         */
+        public String getCustomFields() {
+            return this.customFields;
         }
 
         /**
@@ -2515,6 +2526,7 @@ public class SearchMediaResponseBody extends TeaModel {
         public static final class Builder {
             private AiData aiData; 
             private AiRoughData aiRoughData; 
+            private String customFields; 
             private java.util.List<FileInfoList> fileInfoList; 
             private java.util.List<IndexStatusList> indexStatusList; 
             private MediaBasicInfo mediaBasicInfo; 
@@ -2526,6 +2538,7 @@ public class SearchMediaResponseBody extends TeaModel {
             private Builder(MediaInfoList model) {
                 this.aiData = model.aiData;
                 this.aiRoughData = model.aiRoughData;
+                this.customFields = model.customFields;
                 this.fileInfoList = model.fileInfoList;
                 this.indexStatusList = model.indexStatusList;
                 this.mediaBasicInfo = model.mediaBasicInfo;
@@ -2545,6 +2558,14 @@ public class SearchMediaResponseBody extends TeaModel {
              */
             public Builder aiRoughData(AiRoughData aiRoughData) {
                 this.aiRoughData = aiRoughData;
+                return this;
+            }
+
+            /**
+             * CustomFields.
+             */
+            public Builder customFields(String customFields) {
+                this.customFields = customFields;
                 return this;
             }
 

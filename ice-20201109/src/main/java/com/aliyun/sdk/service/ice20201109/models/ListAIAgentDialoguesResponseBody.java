@@ -67,7 +67,7 @@ public class ListAIAgentDialoguesResponseBody extends TeaModel {
         } 
 
         /**
-         * Dialogues.
+         * <p>The dialog records.</p>
          */
         public Builder dialogues(java.util.List<Dialogues> dialogues) {
             this.dialogues = dialogues;
@@ -75,7 +75,10 @@ public class ListAIAgentDialoguesResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>7B117AF5-***************</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -404,7 +407,10 @@ public class ListAIAgentDialoguesResponseBody extends TeaModel {
             }
 
             /**
-             * DialogueId.
+             * <p>The unique ID of the dialog.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>19de81b3b3d94abda22****</p>
              */
             public Builder dialogueId(String dialogueId) {
                 this.dialogueId = dialogueId;
@@ -428,7 +434,14 @@ public class ListAIAgentDialoguesResponseBody extends TeaModel {
             }
 
             /**
-             * Producer.
+             * <p>The speaker. Valid values: </p>
+             * <ul>
+             * <li>user</li>
+             * <li>agent</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>user</p>
              */
             public Builder producer(String producer) {
                 this.producer = producer;
@@ -436,7 +449,10 @@ public class ListAIAgentDialoguesResponseBody extends TeaModel {
             }
 
             /**
-             * ReasoningText.
+             * <p>The reasoning trace.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>I&quot;m thinking</p>
              */
             public Builder reasoningText(String reasoningText) {
                 this.reasoningText = reasoningText;
@@ -444,7 +460,10 @@ public class ListAIAgentDialoguesResponseBody extends TeaModel {
             }
 
             /**
-             * RoundId.
+             * <p>The ID of the conversational turn.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>f27f9b9be28642a88e18****</p>
              */
             public Builder roundId(String roundId) {
                 this.roundId = roundId;
@@ -452,7 +471,12 @@ public class ListAIAgentDialoguesResponseBody extends TeaModel {
             }
 
             /**
-             * Source.
+             * <p>The source of the message. Valid values:</p>
+             * <p>chat: messaging conversations.</p>
+             * <p>call: voice calls.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>chat</p>
              */
             public Builder source(String source) {
                 this.source = source;
@@ -460,7 +484,10 @@ public class ListAIAgentDialoguesResponseBody extends TeaModel {
             }
 
             /**
-             * Text.
+             * <p>The specific content.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Hello</p>
              */
             public Builder text(String text) {
                 this.text = text;
@@ -468,7 +495,10 @@ public class ListAIAgentDialoguesResponseBody extends TeaModel {
             }
 
             /**
-             * Time.
+             * <p>The UNIX timestamp, measured in milliseconds, which indicates the time when the message was generated.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1734511087000</p>
              */
             public Builder time(Long time) {
                 this.time = time;
@@ -476,7 +506,22 @@ public class ListAIAgentDialoguesResponseBody extends TeaModel {
             }
 
             /**
-             * Type.
+             * <p>The message type. Valid values:</p>
+             * <p>Voice calls:</p>
+             * <ol>
+             * <li>greeting: the welcome message.</li>
+             * <li>normal: the voice response.</li>
+             * <li>speech: the proactive message.</li>
+             * </ol>
+             * <p>Messaging conversations:</p>
+             * <ol>
+             * <li>normal: the text reply.</li>
+             * <li>announcement: the proactive text message.</li>
+             * <li>custom: the custom message.</li>
+             * </ol>
+             * 
+             * <strong>example:</strong>
+             * <p>announcement</p>
              */
             public Builder type(String type) {
                 this.type = type;

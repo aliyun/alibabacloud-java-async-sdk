@@ -54,7 +54,10 @@ public class DeleteAIAgentDialogueResponseBody extends TeaModel {
         } 
 
         /**
-         * RequestId.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>7B117AF5-2A1******</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;

@@ -129,7 +129,10 @@ public class SubmitAvatarVideoJobRequest extends Request {
         } 
 
         /**
-         * Description.
+         * <p>The task description. Max length: 128 bytes.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>test</p>
          */
         public Builder description(String description) {
             this.putQueryParameter("Description", description);
@@ -138,7 +141,10 @@ public class SubmitAvatarVideoJobRequest extends Request {
         }
 
         /**
-         * EditingConfig.
+         * <p>The avatar configurations, including the avatar ID, voice, and speech rate.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>{&quot;AvatarId&quot;:&quot;yunqiao&quot;}</p>
          */
         public Builder editingConfig(String editingConfig) {
             this.putQueryParameter("EditingConfig", editingConfig);
@@ -147,10 +153,13 @@ public class SubmitAvatarVideoJobRequest extends Request {
         }
 
         /**
-         * <p>The input configurations of the video rendering job for an avatar. You can specify text, the Object Storage Service (OSS) URL of an audio file, or the ID of a media asset. The audio file must be in the MP3 or WAV format.</p>
+         * <p>The input configurations of the video rendering task for an avatar. You can specify text, the Object Storage Service (OSS) URL of an audio file, or the ID of a media asset. The audio file must be in the MP3 or WAV format.</p>
          * <blockquote>
-         * <p> The text must be at least five words in length.</p>
+         * <p>Notice: The text must be at least five characters in length.</p>
          * </blockquote>
+         * 
+         * <strong>example:</strong>
+         * <p>{&quot;Text&quot;: &quot;To be, or not to be, that is the question.&quot;}</p>
          */
         public Builder inputConfig(String inputConfig) {
             this.putQueryParameter("InputConfig", inputConfig);
@@ -159,7 +168,10 @@ public class SubmitAvatarVideoJobRequest extends Request {
         }
 
         /**
-         * OutputConfig.
+         * <p>The output configurations, including the destination URL for the rendered video.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>{&quot;MediaURL&quot;:&quot;<a href="https://your-bucket.oss-cn-shanghai.aliyuncs.com/xxx.mp4%22%7D">https://your-bucket.oss-cn-shanghai.aliyuncs.com/xxx.mp4&quot;}</a></p>
          */
         public Builder outputConfig(String outputConfig) {
             this.putQueryParameter("OutputConfig", outputConfig);
@@ -168,7 +180,10 @@ public class SubmitAvatarVideoJobRequest extends Request {
         }
 
         /**
-         * Title.
+         * <p>The task name. Max length: 128 bytes.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>test</p>
          */
         public Builder title(String title) {
             this.putQueryParameter("Title", title);
@@ -177,7 +192,10 @@ public class SubmitAvatarVideoJobRequest extends Request {
         }
 
         /**
-         * UserData.
+         * <p>A user-defined JSON string for passing custom business information, such as environment details or task metadata.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>{&quot;user&quot;:&quot;data&quot;,&quot;env&quot;:&quot;prod&quot;}</p>
          */
         public Builder userData(String userData) {
             this.putQueryParameter("UserData", userData);

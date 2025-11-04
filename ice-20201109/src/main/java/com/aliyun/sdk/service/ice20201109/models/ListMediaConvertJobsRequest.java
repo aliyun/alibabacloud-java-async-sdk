@@ -143,7 +143,10 @@ public class ListMediaConvertJobsRequest extends Request {
         } 
 
         /**
-         * EndOfCreateTime.
+         * <p>The end of the time range to query. Specify the time in the ISO 8601 standard in the yyyy-MM-ddTHH:mm:ssZ format. The time must be in UTC.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2022-07-15T00:00:00Z</p>
          */
         public Builder endOfCreateTime(String endOfCreateTime) {
             this.putQueryParameter("EndOfCreateTime", endOfCreateTime);
@@ -152,7 +155,10 @@ public class ListMediaConvertJobsRequest extends Request {
         }
 
         /**
-         * JobId.
+         * <p>The task ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>88c6ca184c0e47098a5b665e2****</p>
          */
         public Builder jobId(String jobId) {
             this.putQueryParameter("JobId", jobId);
@@ -161,7 +167,10 @@ public class ListMediaConvertJobsRequest extends Request {
         }
 
         /**
-         * NextPageToken.
+         * <p>The pagination token that is used in the next request to retrieve a new page of results. You do not need to specify this parameter for the first request.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>ab4802364a2e49208c99efab82dfa8e8</p>
          */
         public Builder nextPageToken(String nextPageToken) {
             this.putQueryParameter("NextPageToken", nextPageToken);
@@ -170,7 +179,10 @@ public class ListMediaConvertJobsRequest extends Request {
         }
 
         /**
-         * OrderBy.
+         * <p>The sorting order. Valid values: CreateTimeDesc: sorts by create time in descending order. CreateTimeAsc: sorts by create time in ascending order.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>CreateTimeDesc</p>
          */
         public Builder orderBy(String orderBy) {
             this.putQueryParameter("OrderBy", orderBy);
@@ -179,7 +191,10 @@ public class ListMediaConvertJobsRequest extends Request {
         }
 
         /**
-         * PageSize.
+         * <p>The number of entries per page. Valid values: 0 to 100. Default value: 20.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10</p>
          */
         public Builder pageSize(Integer pageSize) {
             this.putQueryParameter("PageSize", pageSize);
@@ -188,7 +203,10 @@ public class ListMediaConvertJobsRequest extends Request {
         }
 
         /**
-         * StartOfCreateTime.
+         * <p>The beginning of the time range to query. Specify the time in the ISO 8601 standard in the yyyy-MM-ddTHH:mm:ssZ format. The time must be in UTC.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2022-07-01T00:00:00Z</p>
          */
         public Builder startOfCreateTime(String startOfCreateTime) {
             this.putQueryParameter("StartOfCreateTime", startOfCreateTime);
@@ -197,7 +215,16 @@ public class ListMediaConvertJobsRequest extends Request {
         }
 
         /**
-         * Status.
+         * <p>The task status.</p>
+         * <ul>
+         * <li>Inited: submitted</li>
+         * <li>Running</li>
+         * <li>Complete</li>
+         * <li>Error</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>Success</p>
          */
         public Builder status(String status) {
             this.putQueryParameter("Status", status);

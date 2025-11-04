@@ -106,7 +106,7 @@ public class ListHotwordLibrariesResponseBody extends TeaModel {
         } 
 
         /**
-         * HotwordLibraryList.
+         * <p>The hotword libraries.</p>
          */
         public Builder hotwordLibraryList(java.util.List<HotwordLibraryList> hotwordLibraryList) {
             this.hotwordLibraryList = hotwordLibraryList;
@@ -114,7 +114,10 @@ public class ListHotwordLibrariesResponseBody extends TeaModel {
         }
 
         /**
-         * MaxResults.
+         * <p>The maximum number of hotword libraries that can be returned.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10</p>
          */
         public Builder maxResults(Integer maxResults) {
             this.maxResults = maxResults;
@@ -122,7 +125,10 @@ public class ListHotwordLibrariesResponseBody extends TeaModel {
         }
 
         /**
-         * NextToken.
+         * <p>A pagination token that can be used in the next request to retrieve a new page of results. If it is empty, all results are returned.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>CBB6BC61D08</p>
          */
         public Builder nextToken(String nextToken) {
             this.nextToken = nextToken;
@@ -130,7 +136,10 @@ public class ListHotwordLibrariesResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * <p>The ID of the request.</p>
+         * 
+         * <strong>example:</strong>
+         * <p><strong><strong>9262E3DA-07FA-4862-FCBB6BC61D08</strong></strong>*</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -138,7 +147,10 @@ public class ListHotwordLibrariesResponseBody extends TeaModel {
         }
 
         /**
-         * TotalCount.
+         * <p>The total number of hotword libraries.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>20</p>
          */
         public Builder totalCount(Integer totalCount) {
             this.totalCount = totalCount;
@@ -256,7 +268,10 @@ public class ListHotwordLibrariesResponseBody extends TeaModel {
             } 
 
             /**
-             * CreationTime.
+             * <p>The time when the hotword library was created.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2017-01-11T12:00:00Z</p>
              */
             public Builder creationTime(String creationTime) {
                 this.creationTime = creationTime;
@@ -264,7 +279,7 @@ public class ListHotwordLibrariesResponseBody extends TeaModel {
             }
 
             /**
-             * Description.
+             * <p>The description of the hotword library. It can be up to 200 characters in length.</p>
              */
             public Builder description(String description) {
                 this.description = description;
@@ -272,7 +287,10 @@ public class ListHotwordLibrariesResponseBody extends TeaModel {
             }
 
             /**
-             * HotwordLibraryId.
+             * <p>The ID of the hotword library.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>a93b91141c0f422fa114af203f8b****</p>
              */
             public Builder hotwordLibraryId(String hotwordLibraryId) {
                 this.hotwordLibraryId = hotwordLibraryId;
@@ -280,7 +298,10 @@ public class ListHotwordLibrariesResponseBody extends TeaModel {
             }
 
             /**
-             * ModifiedTime.
+             * <p>The time when the hotword library was last modified.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2017-01-11T12:00:00Z</p>
              */
             public Builder modifiedTime(String modifiedTime) {
                 this.modifiedTime = modifiedTime;
@@ -288,7 +309,10 @@ public class ListHotwordLibrariesResponseBody extends TeaModel {
             }
 
             /**
-             * Name.
+             * <p>The name of the hotword library.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>my_hotwords</p>
              */
             public Builder name(String name) {
                 this.name = name;
@@ -296,7 +320,15 @@ public class ListHotwordLibrariesResponseBody extends TeaModel {
             }
 
             /**
-             * UsageScenario.
+             * <p>The usage scenario of the hotword library. Valid values:</p>
+             * <ul>
+             * <li>ASR: Automatic Speech Recognition</li>
+             * <li>StructuredMediaAssets: structured media analysis</li>
+             * <li>VideoTranslation: Video translation This field cannot be modified after the hotword library is created.</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>ASR</p>
              */
             public Builder usageScenario(String usageScenario) {
                 this.usageScenario = usageScenario;

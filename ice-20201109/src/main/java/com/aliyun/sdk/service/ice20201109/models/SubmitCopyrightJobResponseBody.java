@@ -93,7 +93,7 @@ public class SubmitCopyrightJobResponseBody extends TeaModel {
         } 
 
         /**
-         * Data.
+         * <p>The data returned.</p>
          */
         public Builder data(Data data) {
             this.data = data;
@@ -101,7 +101,10 @@ public class SubmitCopyrightJobResponseBody extends TeaModel {
         }
 
         /**
-         * Message.
+         * <p>The message returned.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>ok</p>
          */
         public Builder message(String message) {
             this.message = message;
@@ -109,7 +112,7 @@ public class SubmitCopyrightJobResponseBody extends TeaModel {
         }
 
         /**
-         * <p>Id of the request</p>
+         * <p>The ID of the request.</p>
          * 
          * <strong>example:</strong>
          * <p>FA258E67-09B8-4EAA-8F33-BA567834A2C3</p>
@@ -120,7 +123,10 @@ public class SubmitCopyrightJobResponseBody extends TeaModel {
         }
 
         /**
-         * StatusCode.
+         * <p>The status code.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>200</p>
          */
         public Builder statusCode(Long statusCode) {
             this.statusCode = statusCode;
@@ -173,7 +179,10 @@ public class SubmitCopyrightJobResponseBody extends TeaModel {
             } 
 
             /**
-             * JobId.
+             * <p>The job ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>bfb786c63****f4d80648792021eff90</p>
              */
             public Builder jobId(String jobId) {
                 this.jobId = jobId;

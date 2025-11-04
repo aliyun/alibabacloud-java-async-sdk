@@ -174,6 +174,14 @@ public class CreateRecognitionSampleRequest extends Request {
         } 
 
         /**
+         * <p>The type of recognition this sample is for.</p>
+         * <ul>
+         * <li>landmark</li>
+         * <li>object</li>
+         * <li>logo</li>
+         * <li>face</li>
+         * <li>label</li>
+         * </ul>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -186,6 +194,7 @@ public class CreateRecognitionSampleRequest extends Request {
         }
 
         /**
+         * <p>The ID of the specific entity within the library.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -198,7 +207,10 @@ public class CreateRecognitionSampleRequest extends Request {
         }
 
         /**
-         * ImageUrl.
+         * <p>The URL of the sample image.</p>
+         * 
+         * <strong>example:</strong>
+         * <p><a href="https://example.com/sample.png">https://example.com/sample.png</a></p>
          */
         public Builder imageUrl(String imageUrl) {
             this.putQueryParameter("ImageUrl", imageUrl);
@@ -207,7 +219,7 @@ public class CreateRecognitionSampleRequest extends Request {
         }
 
         /**
-         * LabelPrompt.
+         * <p>The custom text label.</p>
          */
         public Builder labelPrompt(String labelPrompt) {
             this.putQueryParameter("LabelPrompt", labelPrompt);
@@ -216,6 +228,7 @@ public class CreateRecognitionSampleRequest extends Request {
         }
 
         /**
+         * <p>The ID of the recognition library.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>

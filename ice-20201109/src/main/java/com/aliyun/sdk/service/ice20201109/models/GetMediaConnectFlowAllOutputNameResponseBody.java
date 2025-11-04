@@ -93,7 +93,7 @@ public class GetMediaConnectFlowAllOutputNameResponseBody extends TeaModel {
         } 
 
         /**
-         * Content.
+         * <p>The response body, as an array of strings.</p>
          */
         public Builder content(java.util.List<String> content) {
             this.content = content;
@@ -101,7 +101,10 @@ public class GetMediaConnectFlowAllOutputNameResponseBody extends TeaModel {
         }
 
         /**
-         * Description.
+         * <p>The call description.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>OK</p>
          */
         public Builder description(String description) {
             this.description = description;
@@ -109,7 +112,10 @@ public class GetMediaConnectFlowAllOutputNameResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>559E9828-245D-5CBA-9C7A-4E01453F091F</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -117,7 +123,10 @@ public class GetMediaConnectFlowAllOutputNameResponseBody extends TeaModel {
         }
 
         /**
-         * RetCode.
+         * <p>The returned error code. A value of 0 indicates the call is successful.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>0</p>
          */
         public Builder retCode(Integer retCode) {
             this.retCode = retCode;

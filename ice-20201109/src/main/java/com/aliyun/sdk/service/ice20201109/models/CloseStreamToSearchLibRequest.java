@@ -110,7 +110,10 @@ public class CloseStreamToSearchLibRequest extends Request {
         }
 
         /**
-         * MediaId.
+         * <p>The ID of the media asset.</p>
+         * 
+         * <strong>example:</strong>
+         * <p><strong><strong>20b48fb04483915d4f2cd8ac</strong></strong></p>
          */
         public Builder mediaId(String mediaId) {
             this.putQueryParameter("MediaId", mediaId);
@@ -119,7 +122,10 @@ public class CloseStreamToSearchLibRequest extends Request {
         }
 
         /**
-         * Namespace.
+         * <p>The namespace.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>name-1</p>
          */
         public Builder namespace(String namespace) {
             this.putQueryParameter("Namespace", namespace);
@@ -128,7 +134,10 @@ public class CloseStreamToSearchLibRequest extends Request {
         }
 
         /**
-         * SearchLibName.
+         * <p>The search library.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Stream_xxx</p>
          */
         public Builder searchLibName(String searchLibName) {
             this.putQueryParameter("SearchLibName", searchLibName);

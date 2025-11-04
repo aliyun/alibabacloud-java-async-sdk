@@ -119,7 +119,10 @@ public class GetStreamTagListResponseBody extends TeaModel {
         } 
 
         /**
-         * Code.
+         * <p>The return code.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>200</p>
          */
         public Builder code(String code) {
             this.code = code;
@@ -127,7 +130,10 @@ public class GetStreamTagListResponseBody extends TeaModel {
         }
 
         /**
-         * NextToken.
+         * <p>The pagination token that is used in the next request to retrieve a new page of results.</p>
+         * 
+         * <strong>example:</strong>
+         * <p><strong><strong>73f33c91-d59383e8280b</strong></strong></p>
          */
         public Builder nextToken(String nextToken) {
             this.nextToken = nextToken;
@@ -135,7 +141,7 @@ public class GetStreamTagListResponseBody extends TeaModel {
         }
 
         /**
-         * <p>Id of the request</p>
+         * <p>The ID of the request.</p>
          * 
          * <strong>example:</strong>
          * <p><strong><strong><strong>11-DB8D-4A9A-875B-275798</strong></strong></strong></p>
@@ -146,7 +152,7 @@ public class GetStreamTagListResponseBody extends TeaModel {
         }
 
         /**
-         * StreamTagList.
+         * <p>The tag information.</p>
          */
         public Builder streamTagList(java.util.List<StreamTagList> streamTagList) {
             this.streamTagList = streamTagList;
@@ -154,7 +160,14 @@ public class GetStreamTagListResponseBody extends TeaModel {
         }
 
         /**
-         * Success.
+         * <p>Indicates whether the request is successful. Valid values:</p>
+         * <ul>
+         * <li>true</li>
+         * <li>false</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder success(String success) {
             this.success = success;
@@ -162,7 +175,10 @@ public class GetStreamTagListResponseBody extends TeaModel {
         }
 
         /**
-         * Total.
+         * <p>The total number of entries that are returned.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>163</p>
          */
         public Builder total(Long total) {
             this.total = total;
@@ -241,7 +257,10 @@ public class GetStreamTagListResponseBody extends TeaModel {
             } 
 
             /**
-             * EndTime.
+             * <p>The end time. The time follows the ISO 8601 standard in the yyyy-MM-ddTHH:mm:ssZ format. The time is displayed in UTC.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2025-02-25T02:24:00Z</p>
              */
             public Builder endTime(String endTime) {
                 this.endTime = endTime;
@@ -249,7 +268,10 @@ public class GetStreamTagListResponseBody extends TeaModel {
             }
 
             /**
-             * StartTime.
+             * <p>The start time. The time follows the ISO 8601 standard in the yyyy-MM-ddTHH:mm:ssZ format. The time is displayed in UTC.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2025-04-26T16:00:00Z</p>
              */
             public Builder startTime(String startTime) {
                 this.startTime = startTime;
@@ -257,7 +279,10 @@ public class GetStreamTagListResponseBody extends TeaModel {
             }
 
             /**
-             * UserData.
+             * <p>The user-defined data.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>{&quot;result&quot;:&quot;xxx&quot;}</p>
              */
             public Builder userData(String userData) {
                 this.userData = userData;

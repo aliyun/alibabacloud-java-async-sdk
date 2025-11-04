@@ -146,6 +146,7 @@ public class ListAIAgentDialoguesRequest extends Request {
         } 
 
         /**
+         * <p>Specify the end of the time range to query using a UNIX timestamp accurate to milliseconds.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -158,7 +159,14 @@ public class ListAIAgentDialoguesRequest extends Request {
         }
 
         /**
-         * Order.
+         * <p>The sorting order. Valid values: </p>
+         * <ul>
+         * <li>DESC: descending order (default)</li>
+         * <li>ASC: ascending order</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>DESC</p>
          */
         public Builder order(String order) {
             this.putQueryParameter("Order", order);
@@ -167,7 +175,10 @@ public class ListAIAgentDialoguesRequest extends Request {
         }
 
         /**
-         * PageNumber.
+         * <p>The page number. Default value: 1.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder pageNumber(Long pageNumber) {
             this.putQueryParameter("PageNumber", pageNumber);
@@ -176,7 +187,10 @@ public class ListAIAgentDialoguesRequest extends Request {
         }
 
         /**
-         * PageSize.
+         * <p>The number of entries per page. Default value: 20. Valid values: 1 to 100.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>20</p>
          */
         public Builder pageSize(Integer pageSize) {
             this.putQueryParameter("PageSize", pageSize);
@@ -194,6 +208,7 @@ public class ListAIAgentDialoguesRequest extends Request {
         }
 
         /**
+         * <p>The session ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -206,6 +221,7 @@ public class ListAIAgentDialoguesRequest extends Request {
         }
 
         /**
+         * <p>Specify the start of the time range to query using a UNIX timestamp accurate to milliseconds.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>

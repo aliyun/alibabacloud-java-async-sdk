@@ -67,7 +67,7 @@ public class GetStorageListResponseBody extends TeaModel {
         } 
 
         /**
-         * <p>Id of the request</p>
+         * <p>The ID of the request.</p>
          * 
          * <strong>example:</strong>
          * <p><strong><strong><strong>73-8B78-5D86-A50C-49B96C</strong></strong></strong></p>
@@ -78,7 +78,7 @@ public class GetStorageListResponseBody extends TeaModel {
         }
 
         /**
-         * StorageInfoList.
+         * <p>The storage configurations.</p>
          */
         public Builder storageInfoList(java.util.List<StorageInfoList> storageInfoList) {
             this.storageInfoList = storageInfoList;
@@ -235,7 +235,10 @@ public class GetStorageListResponseBody extends TeaModel {
             } 
 
             /**
-             * AppId.
+             * <p>The application ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>app-****</p>
              */
             public Builder appId(String appId) {
                 this.appId = appId;
@@ -243,7 +246,10 @@ public class GetStorageListResponseBody extends TeaModel {
             }
 
             /**
-             * CreationTime.
+             * <p>The time when the configuration was created.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2024-06-06T01:55:07Z</p>
              */
             public Builder creationTime(String creationTime) {
                 this.creationTime = creationTime;
@@ -251,7 +257,10 @@ public class GetStorageListResponseBody extends TeaModel {
             }
 
             /**
-             * DefaultStorage.
+             * <p>Indicates whether it is the default storage location.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>true</p>
              */
             public Builder defaultStorage(Boolean defaultStorage) {
                 this.defaultStorage = defaultStorage;
@@ -259,7 +268,10 @@ public class GetStorageListResponseBody extends TeaModel {
             }
 
             /**
-             * EditingTempFileStorage.
+             * <p>Indicates whether temporary files created during editing processes are stored in this location.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>false</p>
              */
             public Builder editingTempFileStorage(Boolean editingTempFileStorage) {
                 this.editingTempFileStorage = editingTempFileStorage;
@@ -267,7 +279,10 @@ public class GetStorageListResponseBody extends TeaModel {
             }
 
             /**
-             * ModifiedTime.
+             * <p>The time when the configuration was last modified.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2024-06-06T03:07:07Z</p>
              */
             public Builder modifiedTime(String modifiedTime) {
                 this.modifiedTime = modifiedTime;
@@ -275,7 +290,10 @@ public class GetStorageListResponseBody extends TeaModel {
             }
 
             /**
-             * Path.
+             * <p>The file path.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>your-path/</p>
              */
             public Builder path(String path) {
                 this.path = path;
@@ -283,7 +301,10 @@ public class GetStorageListResponseBody extends TeaModel {
             }
 
             /**
-             * Status.
+             * <p>The OSS storage status.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Normal</p>
              */
             public Builder status(String status) {
                 this.status = status;
@@ -291,7 +312,10 @@ public class GetStorageListResponseBody extends TeaModel {
             }
 
             /**
-             * StorageLocation.
+             * <p>The bucket.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>your-bucket</p>
              */
             public Builder storageLocation(String storageLocation) {
                 this.storageLocation = storageLocation;
@@ -299,7 +323,10 @@ public class GetStorageListResponseBody extends TeaModel {
             }
 
             /**
-             * StorageType.
+             * <p>The storage type.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>vod_oss_bucket</p>
              */
             public Builder storageType(String storageType) {
                 this.storageType = storageType;

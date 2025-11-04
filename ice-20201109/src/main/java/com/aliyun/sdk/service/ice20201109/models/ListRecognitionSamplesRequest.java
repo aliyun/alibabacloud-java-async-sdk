@@ -176,6 +176,13 @@ public class ListRecognitionSamplesRequest extends Request {
         } 
 
         /**
+         * <p>The type of recognition algorithm. Valid values:</p>
+         * <ul>
+         * <li>landmark</li>
+         * <li>object</li>
+         * <li>logo</li>
+         * <li>face</li>
+         * </ul>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -188,6 +195,7 @@ public class ListRecognitionSamplesRequest extends Request {
         }
 
         /**
+         * <p>The ID of the entity.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -200,6 +208,7 @@ public class ListRecognitionSamplesRequest extends Request {
         }
 
         /**
+         * <p>The ID of the recognition library.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -230,6 +239,7 @@ public class ListRecognitionSamplesRequest extends Request {
         }
 
         /**
+         * <p>The page number.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -242,6 +252,7 @@ public class ListRecognitionSamplesRequest extends Request {
         }
 
         /**
+         * <p>The number of entries per page.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>

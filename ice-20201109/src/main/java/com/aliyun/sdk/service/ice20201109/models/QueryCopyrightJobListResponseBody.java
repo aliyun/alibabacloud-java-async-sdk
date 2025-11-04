@@ -93,7 +93,7 @@ public class QueryCopyrightJobListResponseBody extends TeaModel {
         } 
 
         /**
-         * Data.
+         * <p>The data returned.</p>
          */
         public Builder data(java.util.List<Data> data) {
             this.data = data;
@@ -101,7 +101,10 @@ public class QueryCopyrightJobListResponseBody extends TeaModel {
         }
 
         /**
-         * Message.
+         * <p>The message returned.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>ok</p>
          */
         public Builder message(String message) {
             this.message = message;
@@ -109,7 +112,7 @@ public class QueryCopyrightJobListResponseBody extends TeaModel {
         }
 
         /**
-         * <p>Id of the request</p>
+         * <p>The ID of the request.</p>
          * 
          * <strong>example:</strong>
          * <p><strong><strong><strong>36-3C1E-4417-BDB2-1E034F</strong></strong></strong></p>
@@ -120,7 +123,10 @@ public class QueryCopyrightJobListResponseBody extends TeaModel {
         }
 
         /**
-         * StatusCode.
+         * <p>The status code.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>200</p>
          */
         public Builder statusCode(Long statusCode) {
             this.statusCode = statusCode;
@@ -186,7 +192,10 @@ public class QueryCopyrightJobListResponseBody extends TeaModel {
             } 
 
             /**
-             * Media.
+             * <p>The specific input information.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>oss://bucket/object</p>
              */
             public Builder media(String media) {
                 this.media = media;
@@ -194,7 +203,14 @@ public class QueryCopyrightJobListResponseBody extends TeaModel {
             }
 
             /**
-             * Type.
+             * <p>The type of the input file. Valid values:</p>
+             * <ol>
+             * <li>OSS: an Object Storage Service (OSS) object.</li>
+             * <li>Media: a media asset.</li>
+             * </ol>
+             * 
+             * <strong>example:</strong>
+             * <p>OSS</p>
              */
             public Builder type(String type) {
                 this.type = type;
@@ -261,7 +277,10 @@ public class QueryCopyrightJobListResponseBody extends TeaModel {
             } 
 
             /**
-             * Media.
+             * <p>The specific output information.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>oss://bucket/object</p>
              */
             public Builder media(String media) {
                 this.media = media;
@@ -269,7 +288,14 @@ public class QueryCopyrightJobListResponseBody extends TeaModel {
             }
 
             /**
-             * Type.
+             * <p>The type of the output file. Valid values:</p>
+             * <ul>
+             * <li>OSS: an OSS object.</li>
+             * <li>Media: a media asset.</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>OSS</p>
              */
             public Builder type(String type) {
                 this.type = type;
@@ -453,7 +479,10 @@ public class QueryCopyrightJobListResponseBody extends TeaModel {
             } 
 
             /**
-             * GmtCreate.
+             * <p>The creation time of the job.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1627357322</p>
              */
             public Builder gmtCreate(Long gmtCreate) {
                 this.gmtCreate = gmtCreate;
@@ -461,7 +490,10 @@ public class QueryCopyrightJobListResponseBody extends TeaModel {
             }
 
             /**
-             * GmtModified.
+             * <p>The last modification time of the job.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1627357322</p>
              */
             public Builder gmtModified(Long gmtModified) {
                 this.gmtModified = gmtModified;
@@ -469,7 +501,7 @@ public class QueryCopyrightJobListResponseBody extends TeaModel {
             }
 
             /**
-             * Input.
+             * <p>Information about the input video for watermarking.</p>
              */
             public Builder input(Input input) {
                 this.input = input;
@@ -477,7 +509,10 @@ public class QueryCopyrightJobListResponseBody extends TeaModel {
             }
 
             /**
-             * JobId.
+             * <p>The job ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>bfb786c639894f4d80648792021****</p>
              */
             public Builder jobId(String jobId) {
                 this.jobId = jobId;
@@ -485,7 +520,10 @@ public class QueryCopyrightJobListResponseBody extends TeaModel {
             }
 
             /**
-             * Level.
+             * <p>The watermark level.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2</p>
              */
             public Builder level(Long level) {
                 this.level = level;
@@ -493,7 +531,10 @@ public class QueryCopyrightJobListResponseBody extends TeaModel {
             }
 
             /**
-             * Message.
+             * <p>The content of the embedded watermark.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>test</p>
              */
             public Builder message(String message) {
                 this.message = message;
@@ -501,7 +542,7 @@ public class QueryCopyrightJobListResponseBody extends TeaModel {
             }
 
             /**
-             * Output.
+             * <p>Information about the watermarked output video.</p>
              */
             public Builder output(Output output) {
                 this.output = output;
@@ -509,7 +550,10 @@ public class QueryCopyrightJobListResponseBody extends TeaModel {
             }
 
             /**
-             * Result.
+             * <p>The job result.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>{&quot;Code&quot;:&quot;success&quot;,&quot;Message&quot;:&quot;ok&quot;}</p>
              */
             public Builder result(String result) {
                 this.result = result;
@@ -517,7 +561,10 @@ public class QueryCopyrightJobListResponseBody extends TeaModel {
             }
 
             /**
-             * Status.
+             * <p>The status of the job.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>success</p>
              */
             public Builder status(String status) {
                 this.status = status;
@@ -525,7 +572,10 @@ public class QueryCopyrightJobListResponseBody extends TeaModel {
             }
 
             /**
-             * UserData.
+             * <p>The user-defined data.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>123</p>
              */
             public Builder userData(String userData) {
                 this.userData = userData;
@@ -533,7 +583,10 @@ public class QueryCopyrightJobListResponseBody extends TeaModel {
             }
 
             /**
-             * UserId.
+             * <p>The ID of the user who initiated the job.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1346693***</p>
              */
             public Builder userId(Long userId) {
                 this.userId = userId;

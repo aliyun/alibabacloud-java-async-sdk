@@ -67,7 +67,10 @@ public class SubmitProjectExportJobResponseBody extends TeaModel {
         } 
 
         /**
-         * JobId.
+         * <p>The ID of the project export task.</p>
+         * 
+         * <strong>example:</strong>
+         * <p><strong><strong>cdb3e74639973036bc84</strong></strong></p>
          */
         public Builder jobId(String jobId) {
             this.jobId = jobId;
@@ -75,7 +78,10 @@ public class SubmitProjectExportJobResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * <p>The ID of the request.</p>
+         * 
+         * <strong>example:</strong>
+         * <p><strong><strong><strong>11-DB8D-4A9A-875B-275798</strong></strong></strong></p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;

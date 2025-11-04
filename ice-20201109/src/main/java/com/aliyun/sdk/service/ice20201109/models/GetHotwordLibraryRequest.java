@@ -60,6 +60,7 @@ public class GetHotwordLibraryRequest extends Request {
         } 
 
         /**
+         * <p>The ID of the hotword library.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>

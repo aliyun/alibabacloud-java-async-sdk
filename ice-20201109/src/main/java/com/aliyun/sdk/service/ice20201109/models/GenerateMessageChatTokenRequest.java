@@ -103,6 +103,7 @@ public class GenerateMessageChatTokenRequest extends Request {
         } 
 
         /**
+         * <p>The ID of the AI agent.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -115,7 +116,10 @@ public class GenerateMessageChatTokenRequest extends Request {
         }
 
         /**
-         * Expire.
+         * <p>The validity period. Unit: seconds. Default value: 3600.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>3600</p>
          */
         public Builder expire(Integer expire) {
             this.putQueryParameter("Expire", expire);
@@ -124,7 +128,10 @@ public class GenerateMessageChatTokenRequest extends Request {
         }
 
         /**
-         * Role.
+         * <p>The role. A value of admin indicates that the user can perform management operations. This parameter is empty by default.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>user</p>
          */
         public Builder role(String role) {
             this.putQueryParameter("Role", role);
@@ -133,6 +140,7 @@ public class GenerateMessageChatTokenRequest extends Request {
         }
 
         /**
+         * <p>The ID of the user to sign in. It can be up to 64 characters in length and can contain only letters, digits, and underscores (_).</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>

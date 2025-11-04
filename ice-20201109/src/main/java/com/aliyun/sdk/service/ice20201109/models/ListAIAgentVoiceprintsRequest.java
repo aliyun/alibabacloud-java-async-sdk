@@ -87,7 +87,10 @@ public class ListAIAgentVoiceprintsRequest extends Request {
         } 
 
         /**
-         * PageNumber.
+         * <p>The page number.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder pageNumber(Integer pageNumber) {
             this.putQueryParameter("PageNumber", pageNumber);
@@ -96,7 +99,10 @@ public class ListAIAgentVoiceprintsRequest extends Request {
         }
 
         /**
-         * PageSize.
+         * <p>The number of entries per page. Value values: [1,100].</p>
+         * 
+         * <strong>example:</strong>
+         * <p>100</p>
          */
         public Builder pageSize(Integer pageSize) {
             this.putQueryParameter("PageSize", pageSize);
@@ -105,7 +111,10 @@ public class ListAIAgentVoiceprintsRequest extends Request {
         }
 
         /**
-         * VoiceprintId.
+         * <p>A unique identifier for the voiceprint. This parameter is optional. If provided, only the information for that ID is returned. If not specified, all voiceprints under the account are returned.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>vp_1699123456_8527</p>
          */
         public Builder voiceprintId(String voiceprintId) {
             this.putQueryParameter("VoiceprintId", voiceprintId);

@@ -22,6 +22,10 @@ public class SearchMediaByHybridRequest extends Request {
     private String regionId;
 
     @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("CustomFilters")
+    private String customFilters;
+
+    @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("MediaId")
     private String mediaId;
 
@@ -49,9 +53,14 @@ public class SearchMediaByHybridRequest extends Request {
     @com.aliyun.core.annotation.NameInMap("Text")
     private String text;
 
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("UtcCreate")
+    private String utcCreate;
+
     private SearchMediaByHybridRequest(Builder builder) {
         super(builder);
         this.regionId = builder.regionId;
+        this.customFilters = builder.customFilters;
         this.mediaId = builder.mediaId;
         this.mediaType = builder.mediaType;
         this.namespace = builder.namespace;
@@ -59,6 +68,7 @@ public class SearchMediaByHybridRequest extends Request {
         this.pageSize = builder.pageSize;
         this.searchLibName = builder.searchLibName;
         this.text = builder.text;
+        this.utcCreate = builder.utcCreate;
     }
 
     public static Builder builder() {
@@ -79,6 +89,13 @@ public class SearchMediaByHybridRequest extends Request {
      */
     public String getRegionId() {
         return this.regionId;
+    }
+
+    /**
+     * @return customFilters
+     */
+    public String getCustomFilters() {
+        return this.customFilters;
     }
 
     /**
@@ -130,8 +147,16 @@ public class SearchMediaByHybridRequest extends Request {
         return this.text;
     }
 
+    /**
+     * @return utcCreate
+     */
+    public String getUtcCreate() {
+        return this.utcCreate;
+    }
+
     public static final class Builder extends Request.Builder<SearchMediaByHybridRequest, Builder> {
         private String regionId; 
+        private String customFilters; 
         private String mediaId; 
         private String mediaType; 
         private String namespace; 
@@ -139,6 +164,7 @@ public class SearchMediaByHybridRequest extends Request {
         private Integer pageSize; 
         private String searchLibName; 
         private String text; 
+        private String utcCreate; 
 
         private Builder() {
             super();
@@ -147,6 +173,7 @@ public class SearchMediaByHybridRequest extends Request {
         private Builder(SearchMediaByHybridRequest request) {
             super(request);
             this.regionId = request.regionId;
+            this.customFilters = request.customFilters;
             this.mediaId = request.mediaId;
             this.mediaType = request.mediaType;
             this.namespace = request.namespace;
@@ -154,6 +181,7 @@ public class SearchMediaByHybridRequest extends Request {
             this.pageSize = request.pageSize;
             this.searchLibName = request.searchLibName;
             this.text = request.text;
+            this.utcCreate = request.utcCreate;
         } 
 
         /**
@@ -166,7 +194,16 @@ public class SearchMediaByHybridRequest extends Request {
         }
 
         /**
-         * <p>The ID of the media asset. The details of the media asset are returned.</p>
+         * CustomFilters.
+         */
+        public Builder customFilters(String customFilters) {
+            this.putQueryParameter("CustomFilters", customFilters);
+            this.customFilters = customFilters;
+            return this;
+        }
+
+        /**
+         * <p>The ID of the media asset. If provided, the details of the media asset are returned.</p>
          * 
          * <strong>example:</strong>
          * <p><strong><strong>c469e944b5a856828dc2</strong></strong></p>
@@ -178,7 +215,14 @@ public class SearchMediaByHybridRequest extends Request {
         }
 
         /**
-         * MediaType.
+         * <p>The type of media assets. Valid values:</p>
+         * <ul>
+         * <li>image</li>
+         * <li>video</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>video</p>
          */
         public Builder mediaType(String mediaType) {
             this.putQueryParameter("MediaType", mediaType);
@@ -187,7 +231,10 @@ public class SearchMediaByHybridRequest extends Request {
         }
 
         /**
-         * Namespace.
+         * <p>The namespace.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>name-1</p>
          */
         public Builder namespace(String namespace) {
             this.putQueryParameter("Namespace", namespace);
@@ -196,7 +243,10 @@ public class SearchMediaByHybridRequest extends Request {
         }
 
         /**
-         * PageNo.
+         * <p>The page number. Default value: 1.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder pageNo(Integer pageNo) {
             this.putQueryParameter("PageNo", pageNo);
@@ -205,7 +255,10 @@ public class SearchMediaByHybridRequest extends Request {
         }
 
         /**
-         * PageSize.
+         * <p>The number of entries per page. Valid values: 1 to 50. Default value: 10.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>20</p>
          */
         public Builder pageSize(Integer pageSize) {
             this.putQueryParameter("PageSize", pageSize);
@@ -214,7 +267,10 @@ public class SearchMediaByHybridRequest extends Request {
         }
 
         /**
-         * SearchLibName.
+         * <p>The name of the search library</p>
+         * 
+         * <strong>example:</strong>
+         * <p>test-1</p>
          */
         public Builder searchLibName(String searchLibName) {
             this.putQueryParameter("SearchLibName", searchLibName);
@@ -223,11 +279,23 @@ public class SearchMediaByHybridRequest extends Request {
         }
 
         /**
-         * Text.
+         * <p>The natural language search query.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Two pandas are fighting</p>
          */
         public Builder text(String text) {
             this.putQueryParameter("Text", text);
             this.text = text;
+            return this;
+        }
+
+        /**
+         * UtcCreate.
+         */
+        public Builder utcCreate(String utcCreate) {
+            this.putQueryParameter("UtcCreate", utcCreate);
+            this.utcCreate = utcCreate;
             return this;
         }
 

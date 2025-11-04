@@ -59,7 +59,10 @@ public class ClearAIAgentVoiceprintRequest extends Request {
         } 
 
         /**
-         * VoiceprintId.
+         * <p>The unique identifier for the voiceprint.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>vp_1699123456_8527</p>
          */
         public Builder voiceprintId(String voiceprintId) {
             this.putQueryParameter("VoiceprintId", voiceprintId);

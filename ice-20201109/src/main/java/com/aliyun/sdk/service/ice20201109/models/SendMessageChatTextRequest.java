@@ -148,6 +148,7 @@ public class SendMessageChatTextRequest extends Request {
         } 
 
         /**
+         * <p>The ID of the AI agent.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -160,7 +161,15 @@ public class SendMessageChatTextRequest extends Request {
         }
 
         /**
-         * Mode.
+         * <p>The mode of message sending. Valid values:</p>
+         * <ul>
+         * <li>online</li>
+         * <li>offline</li>
+         * </ul>
+         * <p>Default value: offline.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>online</p>
          */
         public Builder mode(String mode) {
             this.putQueryParameter("Mode", mode);
@@ -169,7 +178,10 @@ public class SendMessageChatTextRequest extends Request {
         }
 
         /**
-         * NeedArchiving.
+         * <p>Specifies whether to archive chat records. Default value: true.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder needArchiving(Boolean needArchiving) {
             this.putQueryParameter("NeedArchiving", needArchiving);
@@ -178,6 +190,7 @@ public class SendMessageChatTextRequest extends Request {
         }
 
         /**
+         * <p>The ID of the user who receives the message. The ID can be up to 64 bytes in length and can contain letters and digits.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -190,6 +203,7 @@ public class SendMessageChatTextRequest extends Request {
         }
 
         /**
+         * <p>The ID of the session.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -202,7 +216,11 @@ public class SendMessageChatTextRequest extends Request {
         }
 
         /**
+         * <p>The content of the message.</p>
          * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Hello</p>
          */
         public Builder text(String text) {
             this.putQueryParameter("Text", text);
@@ -211,6 +229,11 @@ public class SendMessageChatTextRequest extends Request {
         }
 
         /**
+         * <p>The type of the message. Valid values:</p>
+         * <ul>
+         * <li>announcement: notification.</li>
+         * <li>custom: custom message.</li>
+         * </ul>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>

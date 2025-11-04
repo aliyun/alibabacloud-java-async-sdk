@@ -93,7 +93,10 @@ public class OpenMediaConnectFlowFailoverResponseBody extends TeaModel {
         } 
 
         /**
-         * Content.
+         * <p>The response body.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>&quot;&quot;</p>
          */
         public Builder content(String content) {
             this.content = content;
@@ -101,7 +104,10 @@ public class OpenMediaConnectFlowFailoverResponseBody extends TeaModel {
         }
 
         /**
-         * Description.
+         * <p>The call description.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>OK</p>
          */
         public Builder description(String description) {
             this.description = description;
@@ -109,7 +115,10 @@ public class OpenMediaConnectFlowFailoverResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>11357BE8-4C54-58EA-890A-5AB646EDE4B2</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -117,7 +126,10 @@ public class OpenMediaConnectFlowFailoverResponseBody extends TeaModel {
         }
 
         /**
-         * RetCode.
+         * <p>The returned error code. A value of 0 indicates the call is successful.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>0</p>
          */
         public Builder retCode(Integer retCode) {
             this.retCode = retCode;

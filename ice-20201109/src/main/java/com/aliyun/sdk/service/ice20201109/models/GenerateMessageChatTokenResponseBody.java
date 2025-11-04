@@ -145,7 +145,10 @@ public class GenerateMessageChatTokenResponseBody extends TeaModel {
         } 
 
         /**
-         * AppId.
+         * <p>The AppID of the user.</p>
+         * 
+         * <strong>example:</strong>
+         * <hr>
          */
         public Builder appId(String appId) {
             this.appId = appId;
@@ -153,7 +156,10 @@ public class GenerateMessageChatTokenResponseBody extends TeaModel {
         }
 
         /**
-         * AppSign.
+         * <p>The application signature.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>H4sIAAAAAAAE******************</p>
          */
         public Builder appSign(String appSign) {
             this.appSign = appSign;
@@ -161,7 +167,10 @@ public class GenerateMessageChatTokenResponseBody extends TeaModel {
         }
 
         /**
-         * Nonce.
+         * <p>The nonce used to generate the token.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>AK-***********</p>
          */
         public Builder nonce(String nonce) {
             this.nonce = nonce;
@@ -169,7 +178,10 @@ public class GenerateMessageChatTokenResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>req_1234567890abcdef</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -177,7 +189,10 @@ public class GenerateMessageChatTokenResponseBody extends TeaModel {
         }
 
         /**
-         * Role.
+         * <p>The role used to generate the token.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>admin</p>
          */
         public Builder role(String role) {
             this.role = role;
@@ -185,7 +200,10 @@ public class GenerateMessageChatTokenResponseBody extends TeaModel {
         }
 
         /**
-         * TimeStamp.
+         * <p>The expiration time. Unit: seconds. Expiration time = Current time + Validity period.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1700000000</p>
          */
         public Builder timeStamp(Long timeStamp) {
             this.timeStamp = timeStamp;
@@ -193,7 +211,10 @@ public class GenerateMessageChatTokenResponseBody extends TeaModel {
         }
 
         /**
-         * Token.
+         * <p>The generated token.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>acet**********</p>
          */
         public Builder token(String token) {
             this.token = token;
@@ -201,7 +222,10 @@ public class GenerateMessageChatTokenResponseBody extends TeaModel {
         }
 
         /**
-         * UserId.
+         * <p>The ID of the user for joining the channel.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>YOURUSERID</p>
          */
         public Builder userId(String userId) {
             this.userId = userId;

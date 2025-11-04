@@ -110,7 +110,10 @@ public class GetStorageListRequest extends Request {
         }
 
         /**
-         * AppId.
+         * <p>The application ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>app-****</p>
          */
         public Builder appId(String appId) {
             this.putQueryParameter("AppId", appId);
@@ -119,7 +122,10 @@ public class GetStorageListRequest extends Request {
         }
 
         /**
-         * Status.
+         * <p>The OSS storage status.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Normal</p>
          */
         public Builder status(String status) {
             this.putQueryParameter("Status", status);
@@ -128,7 +134,10 @@ public class GetStorageListRequest extends Request {
         }
 
         /**
-         * StorageType.
+         * <p>The storage type.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>vod_oss_bucket</p>
          */
         public Builder storageType(String storageType) {
             this.putQueryParameter("StorageType", storageType);

@@ -80,7 +80,7 @@ public class SubmitTraceM3u8JobResponseBody extends TeaModel {
         } 
 
         /**
-         * Data.
+         * <p>The data returned.</p>
          */
         public Builder data(Data data) {
             this.data = data;
@@ -88,7 +88,10 @@ public class SubmitTraceM3u8JobResponseBody extends TeaModel {
         }
 
         /**
-         * Message.
+         * <p>The response message.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>ok</p>
          */
         public Builder message(String message) {
             this.message = message;
@@ -152,7 +155,10 @@ public class SubmitTraceM3u8JobResponseBody extends TeaModel {
             } 
 
             /**
-             * JobId.
+             * <p>The job ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>bfb786c639894f4d8064879202****</p>
              */
             public Builder jobId(String jobId) {
                 this.jobId = jobId;

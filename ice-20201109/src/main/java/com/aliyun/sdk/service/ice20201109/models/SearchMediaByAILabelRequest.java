@@ -22,6 +22,10 @@ public class SearchMediaByAILabelRequest extends Request {
     private String regionId;
 
     @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("CustomFilters")
+    private String customFilters;
+
+    @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("MatchingMode")
     private String matchingMode;
 
@@ -65,9 +69,14 @@ public class SearchMediaByAILabelRequest extends Request {
     @com.aliyun.core.annotation.NameInMap("Text")
     private String text;
 
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("UtcCreate")
+    private String utcCreate;
+
     private SearchMediaByAILabelRequest(Builder builder) {
         super(builder);
         this.regionId = builder.regionId;
+        this.customFilters = builder.customFilters;
         this.matchingMode = builder.matchingMode;
         this.mediaId = builder.mediaId;
         this.mediaType = builder.mediaType;
@@ -79,6 +88,7 @@ public class SearchMediaByAILabelRequest extends Request {
         this.sortBy = builder.sortBy;
         this.specificSearch = builder.specificSearch;
         this.text = builder.text;
+        this.utcCreate = builder.utcCreate;
     }
 
     public static Builder builder() {
@@ -99,6 +109,13 @@ public class SearchMediaByAILabelRequest extends Request {
      */
     public String getRegionId() {
         return this.regionId;
+    }
+
+    /**
+     * @return customFilters
+     */
+    public String getCustomFilters() {
+        return this.customFilters;
     }
 
     /**
@@ -178,8 +195,16 @@ public class SearchMediaByAILabelRequest extends Request {
         return this.text;
     }
 
+    /**
+     * @return utcCreate
+     */
+    public String getUtcCreate() {
+        return this.utcCreate;
+    }
+
     public static final class Builder extends Request.Builder<SearchMediaByAILabelRequest, Builder> {
         private String regionId; 
+        private String customFilters; 
         private String matchingMode; 
         private String mediaId; 
         private String mediaType; 
@@ -191,6 +216,7 @@ public class SearchMediaByAILabelRequest extends Request {
         private String sortBy; 
         private Boolean specificSearch; 
         private String text; 
+        private String utcCreate; 
 
         private Builder() {
             super();
@@ -199,6 +225,7 @@ public class SearchMediaByAILabelRequest extends Request {
         private Builder(SearchMediaByAILabelRequest request) {
             super(request);
             this.regionId = request.regionId;
+            this.customFilters = request.customFilters;
             this.matchingMode = request.matchingMode;
             this.mediaId = request.mediaId;
             this.mediaType = request.mediaType;
@@ -210,6 +237,7 @@ public class SearchMediaByAILabelRequest extends Request {
             this.sortBy = request.sortBy;
             this.specificSearch = request.specificSearch;
             this.text = request.text;
+            this.utcCreate = request.utcCreate;
         } 
 
         /**
@@ -218,6 +246,15 @@ public class SearchMediaByAILabelRequest extends Request {
         public Builder regionId(String regionId) {
             this.putHostParameter("RegionId", regionId);
             this.regionId = regionId;
+            return this;
+        }
+
+        /**
+         * CustomFilters.
+         */
+        public Builder customFilters(String customFilters) {
+            this.putQueryParameter("CustomFilters", customFilters);
+            this.customFilters = customFilters;
             return this;
         }
 
@@ -360,6 +397,15 @@ public class SearchMediaByAILabelRequest extends Request {
         public Builder text(String text) {
             this.putQueryParameter("Text", text);
             this.text = text;
+            return this;
+        }
+
+        /**
+         * UtcCreate.
+         */
+        public Builder utcCreate(String utcCreate) {
+            this.putQueryParameter("UtcCreate", utcCreate);
+            this.utcCreate = utcCreate;
             return this;
         }
 
