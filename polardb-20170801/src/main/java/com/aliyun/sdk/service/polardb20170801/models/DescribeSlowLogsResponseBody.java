@@ -278,6 +278,9 @@ public class DescribeSlowLogsResponseBody extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("MaxExecutionTime")
         private Long maxExecutionTime;
 
+        @com.aliyun.core.annotation.NameInMap("MaxExecutionTimeMs")
+        private String maxExecutionTimeMs;
+
         @com.aliyun.core.annotation.NameInMap("MaxLockTime")
         private Long maxLockTime;
 
@@ -313,6 +316,7 @@ public class DescribeSlowLogsResponseBody extends TeaModel {
             this.DBName = builder.DBName;
             this.DBNodeId = builder.DBNodeId;
             this.maxExecutionTime = builder.maxExecutionTime;
+            this.maxExecutionTimeMs = builder.maxExecutionTimeMs;
             this.maxLockTime = builder.maxLockTime;
             this.parseMaxRowCount = builder.parseMaxRowCount;
             this.parseTotalRowCounts = builder.parseTotalRowCounts;
@@ -359,6 +363,13 @@ public class DescribeSlowLogsResponseBody extends TeaModel {
          */
         public Long getMaxExecutionTime() {
             return this.maxExecutionTime;
+        }
+
+        /**
+         * @return maxExecutionTimeMs
+         */
+        public String getMaxExecutionTimeMs() {
+            return this.maxExecutionTimeMs;
         }
 
         /**
@@ -436,6 +447,7 @@ public class DescribeSlowLogsResponseBody extends TeaModel {
             private String DBName; 
             private String DBNodeId; 
             private Long maxExecutionTime; 
+            private String maxExecutionTimeMs; 
             private Long maxLockTime; 
             private Long parseMaxRowCount; 
             private Long parseTotalRowCounts; 
@@ -455,6 +467,7 @@ public class DescribeSlowLogsResponseBody extends TeaModel {
                 this.DBName = model.DBName;
                 this.DBNodeId = model.DBNodeId;
                 this.maxExecutionTime = model.maxExecutionTime;
+                this.maxExecutionTimeMs = model.maxExecutionTimeMs;
                 this.maxLockTime = model.maxLockTime;
                 this.parseMaxRowCount = model.parseMaxRowCount;
                 this.parseTotalRowCounts = model.parseTotalRowCounts;
@@ -508,6 +521,14 @@ public class DescribeSlowLogsResponseBody extends TeaModel {
              */
             public Builder maxExecutionTime(Long maxExecutionTime) {
                 this.maxExecutionTime = maxExecutionTime;
+                return this;
+            }
+
+            /**
+             * MaxExecutionTimeMs.
+             */
+            public Builder maxExecutionTimeMs(String maxExecutionTimeMs) {
+                this.maxExecutionTimeMs = maxExecutionTimeMs;
                 return this;
             }
 
