@@ -18,6 +18,10 @@ import com.aliyun.sdk.gateway.pop.models.*;
  */
 public class DescribeInstancesRequest extends Request {
     @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("EipAddresses")
+    private java.util.List<String> eipAddresses;
+
+    @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("EnsRegionId")
     private String ensRegionId;
 
@@ -99,6 +103,7 @@ public class DescribeInstancesRequest extends Request {
 
     private DescribeInstancesRequest(Builder builder) {
         super(builder);
+        this.eipAddresses = builder.eipAddresses;
         this.ensRegionId = builder.ensRegionId;
         this.ensRegionIds = builder.ensRegionIds;
         this.ensServiceId = builder.ensServiceId;
@@ -132,6 +137,13 @@ public class DescribeInstancesRequest extends Request {
 @Override
     public Builder toBuilder() {
         return new Builder(this);
+    }
+
+    /**
+     * @return eipAddresses
+     */
+    public java.util.List<String> getEipAddresses() {
+        return this.eipAddresses;
     }
 
     /**
@@ -275,6 +287,7 @@ public class DescribeInstancesRequest extends Request {
     }
 
     public static final class Builder extends Request.Builder<DescribeInstancesRequest, Builder> {
+        private java.util.List<String> eipAddresses; 
         private String ensRegionId; 
         private String ensRegionIds; 
         private String ensServiceId; 
@@ -302,6 +315,7 @@ public class DescribeInstancesRequest extends Request {
 
         private Builder(DescribeInstancesRequest request) {
             super(request);
+            this.eipAddresses = request.eipAddresses;
             this.ensRegionId = request.ensRegionId;
             this.ensRegionIds = request.ensRegionIds;
             this.ensServiceId = request.ensServiceId;
@@ -323,6 +337,16 @@ public class DescribeInstancesRequest extends Request {
             this.tags = request.tags;
             this.vSwitchId = request.vSwitchId;
         } 
+
+        /**
+         * EipAddresses.
+         */
+        public Builder eipAddresses(java.util.List<String> eipAddresses) {
+            String eipAddressesShrink = shrink(eipAddresses, "EipAddresses", "json");
+            this.putQueryParameter("EipAddresses", eipAddressesShrink);
+            this.eipAddresses = eipAddresses;
+            return this;
+        }
 
         /**
          * <p>The region ID.</p>
