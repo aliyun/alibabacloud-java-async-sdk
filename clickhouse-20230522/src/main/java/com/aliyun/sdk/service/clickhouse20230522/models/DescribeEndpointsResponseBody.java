@@ -189,6 +189,9 @@ public class DescribeEndpointsResponseBody extends TeaModel {
      * <p>DescribeEndpointsResponseBody</p>
      */
     public static class Endpoints extends TeaModel {
+        @com.aliyun.core.annotation.NameInMap("ComputingGroupId")
+        private String computingGroupId;
+
         @com.aliyun.core.annotation.NameInMap("ConnectionString")
         private String connectionString;
 
@@ -214,6 +217,7 @@ public class DescribeEndpointsResponseBody extends TeaModel {
         private String vpcInstanceId;
 
         private Endpoints(Builder builder) {
+            this.computingGroupId = builder.computingGroupId;
             this.connectionString = builder.connectionString;
             this.IPAddress = builder.IPAddress;
             this.netType = builder.netType;
@@ -230,6 +234,13 @@ public class DescribeEndpointsResponseBody extends TeaModel {
 
         public static Endpoints create() {
             return builder().build();
+        }
+
+        /**
+         * @return computingGroupId
+         */
+        public String getComputingGroupId() {
+            return this.computingGroupId;
         }
 
         /**
@@ -289,6 +300,7 @@ public class DescribeEndpointsResponseBody extends TeaModel {
         }
 
         public static final class Builder {
+            private String computingGroupId; 
             private String connectionString; 
             private String IPAddress; 
             private String netType; 
@@ -302,6 +314,7 @@ public class DescribeEndpointsResponseBody extends TeaModel {
             } 
 
             private Builder(Endpoints model) {
+                this.computingGroupId = model.computingGroupId;
                 this.connectionString = model.connectionString;
                 this.IPAddress = model.IPAddress;
                 this.netType = model.netType;
@@ -311,6 +324,14 @@ public class DescribeEndpointsResponseBody extends TeaModel {
                 this.vpcId = model.vpcId;
                 this.vpcInstanceId = model.vpcInstanceId;
             } 
+
+            /**
+             * ComputingGroupId.
+             */
+            public Builder computingGroupId(String computingGroupId) {
+                this.computingGroupId = computingGroupId;
+                return this;
+            }
 
             /**
              * <p>The endpoint of the cluster.</p>

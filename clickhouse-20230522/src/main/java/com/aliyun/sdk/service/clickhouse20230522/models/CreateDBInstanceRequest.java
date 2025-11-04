@@ -30,6 +30,10 @@ public class CreateDBInstanceRequest extends Request {
     private String DBInstanceDescription;
 
     @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("DBTimeZone")
+    private String DBTimeZone;
+
+    @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("DeploySchema")
     private String deploySchema;
 
@@ -106,6 +110,7 @@ public class CreateDBInstanceRequest extends Request {
         this.backupSetId = builder.backupSetId;
         this.clientToken = builder.clientToken;
         this.DBInstanceDescription = builder.DBInstanceDescription;
+        this.DBTimeZone = builder.DBTimeZone;
         this.deploySchema = builder.deploySchema;
         this.engine = builder.engine;
         this.engineVersion = builder.engineVersion;
@@ -157,6 +162,13 @@ public class CreateDBInstanceRequest extends Request {
      */
     public String getDBInstanceDescription() {
         return this.DBInstanceDescription;
+    }
+
+    /**
+     * @return DBTimeZone
+     */
+    public String getDBTimeZone() {
+        return this.DBTimeZone;
     }
 
     /**
@@ -282,6 +294,7 @@ public class CreateDBInstanceRequest extends Request {
         private String backupSetId; 
         private String clientToken; 
         private String DBInstanceDescription; 
+        private String DBTimeZone; 
         private String deploySchema; 
         private String engine; 
         private String engineVersion; 
@@ -309,6 +322,7 @@ public class CreateDBInstanceRequest extends Request {
             this.backupSetId = request.backupSetId;
             this.clientToken = request.clientToken;
             this.DBInstanceDescription = request.DBInstanceDescription;
+            this.DBTimeZone = request.DBTimeZone;
             this.deploySchema = request.deploySchema;
             this.engine = request.engine;
             this.engineVersion = request.engineVersion;
@@ -361,6 +375,15 @@ public class CreateDBInstanceRequest extends Request {
         public Builder DBInstanceDescription(String DBInstanceDescription) {
             this.putQueryParameter("DBInstanceDescription", DBInstanceDescription);
             this.DBInstanceDescription = DBInstanceDescription;
+            return this;
+        }
+
+        /**
+         * DBTimeZone.
+         */
+        public Builder DBTimeZone(String DBTimeZone) {
+            this.putQueryParameter("DBTimeZone", DBTimeZone);
+            this.DBTimeZone = DBTimeZone;
             return this;
         }
 
