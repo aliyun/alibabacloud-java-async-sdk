@@ -104,6 +104,12 @@ public class DescribeLiveRecordNotifyConfigResponseBody extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("NeedStatusNotify")
         private Boolean needStatusNotify;
 
+        @com.aliyun.core.annotation.NameInMap("NotifyAuthKey")
+        private String notifyAuthKey;
+
+        @com.aliyun.core.annotation.NameInMap("NotifyReqAuth")
+        private Boolean notifyReqAuth;
+
         @com.aliyun.core.annotation.NameInMap("NotifyUrl")
         private String notifyUrl;
 
@@ -113,6 +119,8 @@ public class DescribeLiveRecordNotifyConfigResponseBody extends TeaModel {
         private LiveRecordNotifyConfig(Builder builder) {
             this.domainName = builder.domainName;
             this.needStatusNotify = builder.needStatusNotify;
+            this.notifyAuthKey = builder.notifyAuthKey;
+            this.notifyReqAuth = builder.notifyReqAuth;
             this.notifyUrl = builder.notifyUrl;
             this.onDemandUrl = builder.onDemandUrl;
         }
@@ -140,6 +148,20 @@ public class DescribeLiveRecordNotifyConfigResponseBody extends TeaModel {
         }
 
         /**
+         * @return notifyAuthKey
+         */
+        public String getNotifyAuthKey() {
+            return this.notifyAuthKey;
+        }
+
+        /**
+         * @return notifyReqAuth
+         */
+        public Boolean getNotifyReqAuth() {
+            return this.notifyReqAuth;
+        }
+
+        /**
          * @return notifyUrl
          */
         public String getNotifyUrl() {
@@ -156,6 +178,8 @@ public class DescribeLiveRecordNotifyConfigResponseBody extends TeaModel {
         public static final class Builder {
             private String domainName; 
             private Boolean needStatusNotify; 
+            private String notifyAuthKey; 
+            private Boolean notifyReqAuth; 
             private String notifyUrl; 
             private String onDemandUrl; 
 
@@ -165,6 +189,8 @@ public class DescribeLiveRecordNotifyConfigResponseBody extends TeaModel {
             private Builder(LiveRecordNotifyConfig model) {
                 this.domainName = model.domainName;
                 this.needStatusNotify = model.needStatusNotify;
+                this.notifyAuthKey = model.notifyAuthKey;
+                this.notifyReqAuth = model.notifyReqAuth;
                 this.notifyUrl = model.notifyUrl;
                 this.onDemandUrl = model.onDemandUrl;
             } 
@@ -192,6 +218,22 @@ public class DescribeLiveRecordNotifyConfigResponseBody extends TeaModel {
              */
             public Builder needStatusNotify(Boolean needStatusNotify) {
                 this.needStatusNotify = needStatusNotify;
+                return this;
+            }
+
+            /**
+             * NotifyAuthKey.
+             */
+            public Builder notifyAuthKey(String notifyAuthKey) {
+                this.notifyAuthKey = notifyAuthKey;
+                return this;
+            }
+
+            /**
+             * NotifyReqAuth.
+             */
+            public Builder notifyReqAuth(Boolean notifyReqAuth) {
+                this.notifyReqAuth = notifyReqAuth;
                 return this;
             }
 

@@ -1,3 +1,6 @@
+2025-11-04 Version: 2.0.8
+- Generated java-async 2016-11-01 for live.
+
 2025-10-29 Version: 2.0.7
 - Generated java-async 2016-11-01 for live.
 

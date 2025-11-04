@@ -27,6 +27,15 @@ public class UpdateLiveRecordNotifyConfigRequest extends Request {
     private Boolean needStatusNotify;
 
     @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("NotifyAuthKey")
+    @com.aliyun.core.annotation.Validation(maxLength = 64, minLength = 16)
+    private String notifyAuthKey;
+
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("NotifyReqAuth")
+    private Boolean notifyReqAuth;
+
+    @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("NotifyUrl")
     @com.aliyun.core.annotation.Validation(required = true)
     private String notifyUrl;
@@ -47,6 +56,8 @@ public class UpdateLiveRecordNotifyConfigRequest extends Request {
         super(builder);
         this.domainName = builder.domainName;
         this.needStatusNotify = builder.needStatusNotify;
+        this.notifyAuthKey = builder.notifyAuthKey;
+        this.notifyReqAuth = builder.notifyReqAuth;
         this.notifyUrl = builder.notifyUrl;
         this.onDemandUrl = builder.onDemandUrl;
         this.ownerId = builder.ownerId;
@@ -81,6 +92,20 @@ public class UpdateLiveRecordNotifyConfigRequest extends Request {
     }
 
     /**
+     * @return notifyAuthKey
+     */
+    public String getNotifyAuthKey() {
+        return this.notifyAuthKey;
+    }
+
+    /**
+     * @return notifyReqAuth
+     */
+    public Boolean getNotifyReqAuth() {
+        return this.notifyReqAuth;
+    }
+
+    /**
      * @return notifyUrl
      */
     public String getNotifyUrl() {
@@ -111,6 +136,8 @@ public class UpdateLiveRecordNotifyConfigRequest extends Request {
     public static final class Builder extends Request.Builder<UpdateLiveRecordNotifyConfigRequest, Builder> {
         private String domainName; 
         private Boolean needStatusNotify; 
+        private String notifyAuthKey; 
+        private Boolean notifyReqAuth; 
         private String notifyUrl; 
         private String onDemandUrl; 
         private Long ownerId; 
@@ -124,6 +151,8 @@ public class UpdateLiveRecordNotifyConfigRequest extends Request {
             super(request);
             this.domainName = request.domainName;
             this.needStatusNotify = request.needStatusNotify;
+            this.notifyAuthKey = request.notifyAuthKey;
+            this.notifyReqAuth = request.notifyReqAuth;
             this.notifyUrl = request.notifyUrl;
             this.onDemandUrl = request.onDemandUrl;
             this.ownerId = request.ownerId;
@@ -156,6 +185,24 @@ public class UpdateLiveRecordNotifyConfigRequest extends Request {
         public Builder needStatusNotify(Boolean needStatusNotify) {
             this.putQueryParameter("NeedStatusNotify", needStatusNotify);
             this.needStatusNotify = needStatusNotify;
+            return this;
+        }
+
+        /**
+         * NotifyAuthKey.
+         */
+        public Builder notifyAuthKey(String notifyAuthKey) {
+            this.putQueryParameter("NotifyAuthKey", notifyAuthKey);
+            this.notifyAuthKey = notifyAuthKey;
+            return this;
+        }
+
+        /**
+         * NotifyReqAuth.
+         */
+        public Builder notifyReqAuth(Boolean notifyReqAuth) {
+            this.putQueryParameter("NotifyReqAuth", notifyReqAuth);
+            this.notifyReqAuth = notifyReqAuth;
             return this;
         }
 
