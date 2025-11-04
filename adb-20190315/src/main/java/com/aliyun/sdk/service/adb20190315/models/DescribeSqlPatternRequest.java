@@ -45,7 +45,6 @@ public class DescribeSqlPatternRequest extends Request {
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("StartTime")
-    @com.aliyun.core.annotation.Validation(required = true)
     private String startTime;
 
     @com.aliyun.core.annotation.Query
@@ -281,7 +280,6 @@ public class DescribeSqlPatternRequest extends Request {
          * <blockquote>
          * <p>Only data within the last 30 days can be queried.</p>
          * </blockquote>
-         * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
          * <p>2021-08-30</p>
