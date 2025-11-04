@@ -23,12 +23,16 @@ public class NodeSpec extends TeaModel {
     @com.aliyun.core.annotation.NameInMap("Count")
     private Long count;
 
+    @com.aliyun.core.annotation.NameInMap("HyperType")
+    private String hyperType;
+
     @com.aliyun.core.annotation.NameInMap("Type")
     private String type;
 
     private NodeSpec(Builder builder) {
         this.bindingPolicy = builder.bindingPolicy;
         this.count = builder.count;
+        this.hyperType = builder.hyperType;
         this.type = builder.type;
     }
 
@@ -59,6 +63,13 @@ public class NodeSpec extends TeaModel {
     }
 
     /**
+     * @return hyperType
+     */
+    public String getHyperType() {
+        return this.hyperType;
+    }
+
+    /**
      * @return type
      */
     public String getType() {
@@ -68,6 +79,7 @@ public class NodeSpec extends TeaModel {
     public static final class Builder {
         private BindingPolicy bindingPolicy; 
         private Long count; 
+        private String hyperType; 
         private String type; 
 
         private Builder() {
@@ -76,6 +88,7 @@ public class NodeSpec extends TeaModel {
         private Builder(NodeSpec model) {
             this.bindingPolicy = model.bindingPolicy;
             this.count = model.count;
+            this.hyperType = model.hyperType;
             this.type = model.type;
         } 
 
@@ -92,6 +105,14 @@ public class NodeSpec extends TeaModel {
          */
         public Builder count(Long count) {
             this.count = count;
+            return this;
+        }
+
+        /**
+         * HyperType.
+         */
+        public Builder hyperType(String hyperType) {
+            this.hyperType = hyperType;
             return this;
         }
 

@@ -109,6 +109,10 @@ public class ListNodesRequest extends Request {
     @com.aliyun.core.annotation.NameInMap("Verbose")
     private Boolean verbose;
 
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("WorkspaceId")
+    private String workspaceId;
+
     private ListNodesRequest(Builder builder) {
         super(builder);
         this.acceleratorType = builder.acceleratorType;
@@ -134,6 +138,7 @@ public class ListNodesRequest extends Request {
         this.resourceGroupIds = builder.resourceGroupIds;
         this.sortBy = builder.sortBy;
         this.verbose = builder.verbose;
+        this.workspaceId = builder.workspaceId;
     }
 
     public static Builder builder() {
@@ -310,6 +315,13 @@ public class ListNodesRequest extends Request {
         return this.verbose;
     }
 
+    /**
+     * @return workspaceId
+     */
+    public String getWorkspaceId() {
+        return this.workspaceId;
+    }
+
     public static final class Builder extends Request.Builder<ListNodesRequest, Builder> {
         private String acceleratorType; 
         private String availabilityZone; 
@@ -334,6 +346,7 @@ public class ListNodesRequest extends Request {
         private String resourceGroupIds; 
         private String sortBy; 
         private Boolean verbose; 
+        private String workspaceId; 
 
         private Builder() {
             super();
@@ -364,6 +377,7 @@ public class ListNodesRequest extends Request {
             this.resourceGroupIds = request.resourceGroupIds;
             this.sortBy = request.sortBy;
             this.verbose = request.verbose;
+            this.workspaceId = request.workspaceId;
         } 
 
         /**
@@ -570,6 +584,15 @@ public class ListNodesRequest extends Request {
         public Builder verbose(Boolean verbose) {
             this.putQueryParameter("Verbose", verbose);
             this.verbose = verbose;
+            return this;
+        }
+
+        /**
+         * WorkspaceId.
+         */
+        public Builder workspaceId(String workspaceId) {
+            this.putQueryParameter("WorkspaceId", workspaceId);
+            this.workspaceId = workspaceId;
             return this;
         }
 

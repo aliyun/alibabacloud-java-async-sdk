@@ -44,6 +44,12 @@ public class Node extends TeaModel {
     @com.aliyun.core.annotation.NameInMap("DescendantQuotaWorkloadNum")
     private Long descendantQuotaWorkloadNum;
 
+    @com.aliyun.core.annotation.NameInMap("DiskCapacity")
+    private Long diskCapacity;
+
+    @com.aliyun.core.annotation.NameInMap("DiskPL")
+    private String diskPL;
+
     @com.aliyun.core.annotation.NameInMap("GPU")
     private String GPU;
 
@@ -144,6 +150,8 @@ public class Node extends TeaModel {
         this.CPU = builder.CPU;
         this.creatorId = builder.creatorId;
         this.descendantQuotaWorkloadNum = builder.descendantQuotaWorkloadNum;
+        this.diskCapacity = builder.diskCapacity;
+        this.diskPL = builder.diskPL;
         this.GPU = builder.GPU;
         this.GPUMemory = builder.GPUMemory;
         this.GPUType = builder.GPUType;
@@ -249,6 +257,20 @@ public class Node extends TeaModel {
      */
     public Long getDescendantQuotaWorkloadNum() {
         return this.descendantQuotaWorkloadNum;
+    }
+
+    /**
+     * @return diskCapacity
+     */
+    public Long getDiskCapacity() {
+        return this.diskCapacity;
+    }
+
+    /**
+     * @return diskPL
+     */
+    public String getDiskPL() {
+        return this.diskPL;
     }
 
     /**
@@ -471,6 +493,8 @@ public class Node extends TeaModel {
         private String CPU; 
         private String creatorId; 
         private Long descendantQuotaWorkloadNum; 
+        private Long diskCapacity; 
+        private String diskPL; 
         private String GPU; 
         private String GPUMemory; 
         private String GPUType; 
@@ -515,6 +539,8 @@ public class Node extends TeaModel {
             this.CPU = model.CPU;
             this.creatorId = model.creatorId;
             this.descendantQuotaWorkloadNum = model.descendantQuotaWorkloadNum;
+            this.diskCapacity = model.diskCapacity;
+            this.diskPL = model.diskPL;
             this.GPU = model.GPU;
             this.GPUMemory = model.GPUMemory;
             this.GPUType = model.GPUType;
@@ -616,6 +642,22 @@ public class Node extends TeaModel {
          */
         public Builder descendantQuotaWorkloadNum(Long descendantQuotaWorkloadNum) {
             this.descendantQuotaWorkloadNum = descendantQuotaWorkloadNum;
+            return this;
+        }
+
+        /**
+         * DiskCapacity.
+         */
+        public Builder diskCapacity(Long diskCapacity) {
+            this.diskCapacity = diskCapacity;
+            return this;
+        }
+
+        /**
+         * DiskPL.
+         */
+        public Builder diskPL(String diskPL) {
+            this.diskPL = diskPL;
             return this;
         }
 
