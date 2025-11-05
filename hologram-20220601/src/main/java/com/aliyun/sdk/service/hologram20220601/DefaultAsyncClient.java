@@ -307,6 +307,60 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
+     * @param request the request parameters of GrantDatabasePermission  GrantDatabasePermissionRequest
+     * @return GrantDatabasePermissionResponse
+     */
+    @Override
+    public CompletableFuture<GrantDatabasePermissionResponse> grantDatabasePermission(GrantDatabasePermissionRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RESTFUL).setAction("GrantDatabasePermission").setMethod(HttpMethod.POST).setPathRegex("/api/v1/instances/{instanceId}/grantDatabasePermission").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(GrantDatabasePermissionResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<GrantDatabasePermissionResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
+     * @param request the request parameters of GrantSchemaPermission  GrantSchemaPermissionRequest
+     * @return GrantSchemaPermissionResponse
+     */
+    @Override
+    public CompletableFuture<GrantSchemaPermissionResponse> grantSchemaPermission(GrantSchemaPermissionRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RESTFUL).setAction("GrantSchemaPermission").setMethod(HttpMethod.POST).setPathRegex("/api/v1/instances/{instanceId}/grantSchemaPermission").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(GrantSchemaPermissionResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<GrantSchemaPermissionResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
+     * @param request the request parameters of GrantTablePermission  GrantTablePermissionRequest
+     * @return GrantTablePermissionResponse
+     */
+    @Override
+    public CompletableFuture<GrantTablePermissionResponse> grantTablePermission(GrantTablePermissionRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RESTFUL).setAction("GrantTablePermission").setMethod(HttpMethod.POST).setPathRegex("/api/v1/instances/{instanceId}/grantTablePermission").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(GrantTablePermissionResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<GrantTablePermissionResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
      * @param request the request parameters of ListBackupData  ListBackupDataRequest
      * @return ListBackupDataResponse
      */
@@ -319,6 +373,24 @@ public final class DefaultAsyncClient implements AsyncClient {
             return this.handler.execute(params);
         } catch (Exception e) {
             CompletableFuture<ListBackupDataResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
+     * @param request the request parameters of ListDatabases  ListDatabasesRequest
+     * @return ListDatabasesResponse
+     */
+    @Override
+    public CompletableFuture<ListDatabasesResponse> listDatabases(ListDatabasesRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RESTFUL).setAction("ListDatabases").setMethod(HttpMethod.GET).setPathRegex("/api/v1/instances/{instanceId}/listDatabases").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(ListDatabasesResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<ListDatabasesResponse> future = new CompletableFuture<>();
             future.completeExceptionally(e);
             return future;
         }
@@ -509,6 +581,60 @@ public final class DefaultAsyncClient implements AsyncClient {
             return this.handler.execute(params);
         } catch (Exception e) {
             CompletableFuture<ResumeInstanceResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
+     * @param request the request parameters of RevokeDatabasePermission  RevokeDatabasePermissionRequest
+     * @return RevokeDatabasePermissionResponse
+     */
+    @Override
+    public CompletableFuture<RevokeDatabasePermissionResponse> revokeDatabasePermission(RevokeDatabasePermissionRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RESTFUL).setAction("RevokeDatabasePermission").setMethod(HttpMethod.PUT).setPathRegex("/api/v1/instances/{instanceId}/revokeDatabasePermission").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(RevokeDatabasePermissionResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<RevokeDatabasePermissionResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
+     * @param request the request parameters of RevokeSchemaPermission  RevokeSchemaPermissionRequest
+     * @return RevokeSchemaPermissionResponse
+     */
+    @Override
+    public CompletableFuture<RevokeSchemaPermissionResponse> revokeSchemaPermission(RevokeSchemaPermissionRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RESTFUL).setAction("RevokeSchemaPermission").setMethod(HttpMethod.PUT).setPathRegex("/api/v1/instances/{instanceId}/revokeSchemaPermission").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(RevokeSchemaPermissionResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<RevokeSchemaPermissionResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
+     * @param request the request parameters of RevokeTablePermission  RevokeTablePermissionRequest
+     * @return RevokeTablePermissionResponse
+     */
+    @Override
+    public CompletableFuture<RevokeTablePermissionResponse> revokeTablePermission(RevokeTablePermissionRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RESTFUL).setAction("RevokeTablePermission").setMethod(HttpMethod.PUT).setPathRegex("/api/v1/instances/{instanceId}/revokeTablePermission").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(RevokeTablePermissionResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<RevokeTablePermissionResponse> future = new CompletableFuture<>();
             future.completeExceptionally(e);
             return future;
         }

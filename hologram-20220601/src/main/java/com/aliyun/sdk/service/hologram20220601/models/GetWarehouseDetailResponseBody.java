@@ -98,6 +98,15 @@ public class GetWarehouseDetailResponseBody extends TeaModel {
      * <p>GetWarehouseDetailResponseBody</p>
      */
     public static class WarehouseList extends TeaModel {
+        @com.aliyun.core.annotation.NameInMap("AutoScaleType")
+        private String autoScaleType;
+
+        @com.aliyun.core.annotation.NameInMap("ClusterCount")
+        private String clusterCount;
+
+        @com.aliyun.core.annotation.NameInMap("ClusterCpu")
+        private String clusterCpu;
+
         @com.aliyun.core.annotation.NameInMap("Cpu")
         private Long cpu;
 
@@ -107,8 +116,17 @@ public class GetWarehouseDetailResponseBody extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("ElasticCpu")
         private Long elasticCpu;
 
+        @com.aliyun.core.annotation.NameInMap("ElasticType")
+        private String elasticType;
+
         @com.aliyun.core.annotation.NameInMap("Id")
         private Long id;
+
+        @com.aliyun.core.annotation.NameInMap("InitClusterCount")
+        private String initClusterCount;
+
+        @com.aliyun.core.annotation.NameInMap("MaxClusterCount")
+        private String maxClusterCount;
 
         @com.aliyun.core.annotation.NameInMap("Mem")
         private Long mem;
@@ -126,10 +144,16 @@ public class GetWarehouseDetailResponseBody extends TeaModel {
         private String status;
 
         private WarehouseList(Builder builder) {
+            this.autoScaleType = builder.autoScaleType;
+            this.clusterCount = builder.clusterCount;
+            this.clusterCpu = builder.clusterCpu;
             this.cpu = builder.cpu;
             this.defaultWarehouse = builder.defaultWarehouse;
             this.elasticCpu = builder.elasticCpu;
+            this.elasticType = builder.elasticType;
             this.id = builder.id;
+            this.initClusterCount = builder.initClusterCount;
+            this.maxClusterCount = builder.maxClusterCount;
             this.mem = builder.mem;
             this.name = builder.name;
             this.nodeCount = builder.nodeCount;
@@ -143,6 +167,27 @@ public class GetWarehouseDetailResponseBody extends TeaModel {
 
         public static WarehouseList create() {
             return builder().build();
+        }
+
+        /**
+         * @return autoScaleType
+         */
+        public String getAutoScaleType() {
+            return this.autoScaleType;
+        }
+
+        /**
+         * @return clusterCount
+         */
+        public String getClusterCount() {
+            return this.clusterCount;
+        }
+
+        /**
+         * @return clusterCpu
+         */
+        public String getClusterCpu() {
+            return this.clusterCpu;
         }
 
         /**
@@ -167,10 +212,31 @@ public class GetWarehouseDetailResponseBody extends TeaModel {
         }
 
         /**
+         * @return elasticType
+         */
+        public String getElasticType() {
+            return this.elasticType;
+        }
+
+        /**
          * @return id
          */
         public Long getId() {
             return this.id;
+        }
+
+        /**
+         * @return initClusterCount
+         */
+        public String getInitClusterCount() {
+            return this.initClusterCount;
+        }
+
+        /**
+         * @return maxClusterCount
+         */
+        public String getMaxClusterCount() {
+            return this.maxClusterCount;
         }
 
         /**
@@ -209,10 +275,16 @@ public class GetWarehouseDetailResponseBody extends TeaModel {
         }
 
         public static final class Builder {
+            private String autoScaleType; 
+            private String clusterCount; 
+            private String clusterCpu; 
             private Long cpu; 
             private Boolean defaultWarehouse; 
             private Long elasticCpu; 
+            private String elasticType; 
             private Long id; 
+            private String initClusterCount; 
+            private String maxClusterCount; 
             private Long mem; 
             private String name; 
             private Long nodeCount; 
@@ -223,16 +295,46 @@ public class GetWarehouseDetailResponseBody extends TeaModel {
             } 
 
             private Builder(WarehouseList model) {
+                this.autoScaleType = model.autoScaleType;
+                this.clusterCount = model.clusterCount;
+                this.clusterCpu = model.clusterCpu;
                 this.cpu = model.cpu;
                 this.defaultWarehouse = model.defaultWarehouse;
                 this.elasticCpu = model.elasticCpu;
+                this.elasticType = model.elasticType;
                 this.id = model.id;
+                this.initClusterCount = model.initClusterCount;
+                this.maxClusterCount = model.maxClusterCount;
                 this.mem = model.mem;
                 this.name = model.name;
                 this.nodeCount = model.nodeCount;
                 this.rebalanceStatus = model.rebalanceStatus;
                 this.status = model.status;
             } 
+
+            /**
+             * AutoScaleType.
+             */
+            public Builder autoScaleType(String autoScaleType) {
+                this.autoScaleType = autoScaleType;
+                return this;
+            }
+
+            /**
+             * ClusterCount.
+             */
+            public Builder clusterCount(String clusterCount) {
+                this.clusterCount = clusterCount;
+                return this;
+            }
+
+            /**
+             * ClusterCpu.
+             */
+            public Builder clusterCpu(String clusterCpu) {
+                this.clusterCpu = clusterCpu;
+                return this;
+            }
 
             /**
              * <p>The number of CPU cores.</p>
@@ -262,6 +364,14 @@ public class GetWarehouseDetailResponseBody extends TeaModel {
             }
 
             /**
+             * ElasticType.
+             */
+            public Builder elasticType(String elasticType) {
+                this.elasticType = elasticType;
+                return this;
+            }
+
+            /**
              * <p>The ID.</p>
              * 
              * <strong>example:</strong>
@@ -269,6 +379,22 @@ public class GetWarehouseDetailResponseBody extends TeaModel {
              */
             public Builder id(Long id) {
                 this.id = id;
+                return this;
+            }
+
+            /**
+             * InitClusterCount.
+             */
+            public Builder initClusterCount(String initClusterCount) {
+                this.initClusterCount = initClusterCount;
+                return this;
+            }
+
+            /**
+             * MaxClusterCount.
+             */
+            public Builder maxClusterCount(String maxClusterCount) {
+                this.maxClusterCount = maxClusterCount;
                 return this;
             }
 
@@ -375,6 +501,9 @@ public class GetWarehouseDetailResponseBody extends TeaModel {
      * <p>GetWarehouseDetailResponseBody</p>
      */
     public static class WarehouseDetail extends TeaModel {
+        @com.aliyun.core.annotation.NameInMap("AutoElasticCpu")
+        private String autoElasticCpu;
+
         @com.aliyun.core.annotation.NameInMap("RemainingCpu")
         private String remainingCpu;
 
@@ -388,6 +517,7 @@ public class GetWarehouseDetailResponseBody extends TeaModel {
         private java.util.List<WarehouseList> warehouseList;
 
         private WarehouseDetail(Builder builder) {
+            this.autoElasticCpu = builder.autoElasticCpu;
             this.remainingCpu = builder.remainingCpu;
             this.reservedCpu = builder.reservedCpu;
             this.timedElasticCpu = builder.timedElasticCpu;
@@ -400,6 +530,13 @@ public class GetWarehouseDetailResponseBody extends TeaModel {
 
         public static WarehouseDetail create() {
             return builder().build();
+        }
+
+        /**
+         * @return autoElasticCpu
+         */
+        public String getAutoElasticCpu() {
+            return this.autoElasticCpu;
         }
 
         /**
@@ -431,6 +568,7 @@ public class GetWarehouseDetailResponseBody extends TeaModel {
         }
 
         public static final class Builder {
+            private String autoElasticCpu; 
             private String remainingCpu; 
             private String reservedCpu; 
             private String timedElasticCpu; 
@@ -440,11 +578,20 @@ public class GetWarehouseDetailResponseBody extends TeaModel {
             } 
 
             private Builder(WarehouseDetail model) {
+                this.autoElasticCpu = model.autoElasticCpu;
                 this.remainingCpu = model.remainingCpu;
                 this.reservedCpu = model.reservedCpu;
                 this.timedElasticCpu = model.timedElasticCpu;
                 this.warehouseList = model.warehouseList;
             } 
+
+            /**
+             * AutoElasticCpu.
+             */
+            public Builder autoElasticCpu(String autoElasticCpu) {
+                this.autoElasticCpu = autoElasticCpu;
+                return this;
+            }
 
             /**
              * <p>The remaining unallocated computing resources of the virtual warehouse instance.</p>

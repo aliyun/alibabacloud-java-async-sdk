@@ -131,10 +131,34 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<GetWarehouseDetailResponse> getWarehouseDetail(GetWarehouseDetailRequest request);
 
     /**
+     * @param request the request parameters of GrantDatabasePermission  GrantDatabasePermissionRequest
+     * @return GrantDatabasePermissionResponse
+     */
+    CompletableFuture<GrantDatabasePermissionResponse> grantDatabasePermission(GrantDatabasePermissionRequest request);
+
+    /**
+     * @param request the request parameters of GrantSchemaPermission  GrantSchemaPermissionRequest
+     * @return GrantSchemaPermissionResponse
+     */
+    CompletableFuture<GrantSchemaPermissionResponse> grantSchemaPermission(GrantSchemaPermissionRequest request);
+
+    /**
+     * @param request the request parameters of GrantTablePermission  GrantTablePermissionRequest
+     * @return GrantTablePermissionResponse
+     */
+    CompletableFuture<GrantTablePermissionResponse> grantTablePermission(GrantTablePermissionRequest request);
+
+    /**
      * @param request the request parameters of ListBackupData  ListBackupDataRequest
      * @return ListBackupDataResponse
      */
     CompletableFuture<ListBackupDataResponse> listBackupData(ListBackupDataRequest request);
+
+    /**
+     * @param request the request parameters of ListDatabases  ListDatabasesRequest
+     * @return ListDatabasesResponse
+     */
+    CompletableFuture<ListDatabasesResponse> listDatabases(ListDatabasesRequest request);
 
     /**
      * @param request the request parameters of ListInstances  ListInstancesRequest
@@ -205,6 +229,24 @@ public interface AsyncClient extends SdkAutoCloseable {
      * @return ResumeInstanceResponse
      */
     CompletableFuture<ResumeInstanceResponse> resumeInstance(ResumeInstanceRequest request);
+
+    /**
+     * @param request the request parameters of RevokeDatabasePermission  RevokeDatabasePermissionRequest
+     * @return RevokeDatabasePermissionResponse
+     */
+    CompletableFuture<RevokeDatabasePermissionResponse> revokeDatabasePermission(RevokeDatabasePermissionRequest request);
+
+    /**
+     * @param request the request parameters of RevokeSchemaPermission  RevokeSchemaPermissionRequest
+     * @return RevokeSchemaPermissionResponse
+     */
+    CompletableFuture<RevokeSchemaPermissionResponse> revokeSchemaPermission(RevokeSchemaPermissionRequest request);
+
+    /**
+     * @param request the request parameters of RevokeTablePermission  RevokeTablePermissionRequest
+     * @return RevokeTablePermissionResponse
+     */
+    CompletableFuture<RevokeTablePermissionResponse> revokeTablePermission(RevokeTablePermissionRequest request);
 
     /**
      * @param request the request parameters of ScaleHoloWarehouse  ScaleHoloWarehouseRequest

@@ -23,6 +23,10 @@ public class CreateHoloWarehouseRequest extends Request {
     private String instanceId;
 
     @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("clusterCount")
+    private Long clusterCount;
+
+    @com.aliyun.core.annotation.Body
     @com.aliyun.core.annotation.NameInMap("cpu")
     @com.aliyun.core.annotation.Validation(required = true)
     private String cpu;
@@ -35,6 +39,7 @@ public class CreateHoloWarehouseRequest extends Request {
     private CreateHoloWarehouseRequest(Builder builder) {
         super(builder);
         this.instanceId = builder.instanceId;
+        this.clusterCount = builder.clusterCount;
         this.cpu = builder.cpu;
         this.name = builder.name;
     }
@@ -60,6 +65,13 @@ public class CreateHoloWarehouseRequest extends Request {
     }
 
     /**
+     * @return clusterCount
+     */
+    public Long getClusterCount() {
+        return this.clusterCount;
+    }
+
+    /**
      * @return cpu
      */
     public String getCpu() {
@@ -75,6 +87,7 @@ public class CreateHoloWarehouseRequest extends Request {
 
     public static final class Builder extends Request.Builder<CreateHoloWarehouseRequest, Builder> {
         private String instanceId; 
+        private Long clusterCount; 
         private String cpu; 
         private String name; 
 
@@ -85,6 +98,7 @@ public class CreateHoloWarehouseRequest extends Request {
         private Builder(CreateHoloWarehouseRequest request) {
             super(request);
             this.instanceId = request.instanceId;
+            this.clusterCount = request.clusterCount;
             this.cpu = request.cpu;
             this.name = request.name;
         } 
@@ -99,6 +113,15 @@ public class CreateHoloWarehouseRequest extends Request {
         public Builder instanceId(String instanceId) {
             this.putPathParameter("instanceId", instanceId);
             this.instanceId = instanceId;
+            return this;
+        }
+
+        /**
+         * clusterCount.
+         */
+        public Builder clusterCount(Long clusterCount) {
+            this.putBodyParameter("clusterCount", clusterCount);
+            this.clusterCount = clusterCount;
             return this;
         }
 
