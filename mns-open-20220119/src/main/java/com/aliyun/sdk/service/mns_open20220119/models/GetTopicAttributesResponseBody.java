@@ -296,11 +296,17 @@ public class GetTopicAttributesResponseBody extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Tags")
         private java.util.List<Tags> tags;
 
+        @com.aliyun.core.annotation.NameInMap("TopicInnerUrl")
+        private String topicInnerUrl;
+
         @com.aliyun.core.annotation.NameInMap("TopicName")
         private String topicName;
 
         @com.aliyun.core.annotation.NameInMap("TopicType")
         private String topicType;
+
+        @com.aliyun.core.annotation.NameInMap("TopicUrl")
+        private String topicUrl;
 
         private Data(Builder builder) {
             this.createTime = builder.createTime;
@@ -310,8 +316,10 @@ public class GetTopicAttributesResponseBody extends TeaModel {
             this.messageCount = builder.messageCount;
             this.messageRetentionPeriod = builder.messageRetentionPeriod;
             this.tags = builder.tags;
+            this.topicInnerUrl = builder.topicInnerUrl;
             this.topicName = builder.topicName;
             this.topicType = builder.topicType;
+            this.topicUrl = builder.topicUrl;
         }
 
         public static Builder builder() {
@@ -372,6 +380,13 @@ public class GetTopicAttributesResponseBody extends TeaModel {
         }
 
         /**
+         * @return topicInnerUrl
+         */
+        public String getTopicInnerUrl() {
+            return this.topicInnerUrl;
+        }
+
+        /**
          * @return topicName
          */
         public String getTopicName() {
@@ -385,6 +400,13 @@ public class GetTopicAttributesResponseBody extends TeaModel {
             return this.topicType;
         }
 
+        /**
+         * @return topicUrl
+         */
+        public String getTopicUrl() {
+            return this.topicUrl;
+        }
+
         public static final class Builder {
             private Long createTime; 
             private Long lastModifyTime; 
@@ -393,8 +415,10 @@ public class GetTopicAttributesResponseBody extends TeaModel {
             private Long messageCount; 
             private Long messageRetentionPeriod; 
             private java.util.List<Tags> tags; 
+            private String topicInnerUrl; 
             private String topicName; 
             private String topicType; 
+            private String topicUrl; 
 
             private Builder() {
             } 
@@ -407,8 +431,10 @@ public class GetTopicAttributesResponseBody extends TeaModel {
                 this.messageCount = model.messageCount;
                 this.messageRetentionPeriod = model.messageRetentionPeriod;
                 this.tags = model.tags;
+                this.topicInnerUrl = model.topicInnerUrl;
                 this.topicName = model.topicName;
                 this.topicType = model.topicType;
+                this.topicUrl = model.topicUrl;
             } 
 
             /**
@@ -490,6 +516,14 @@ public class GetTopicAttributesResponseBody extends TeaModel {
             }
 
             /**
+             * TopicInnerUrl.
+             */
+            public Builder topicInnerUrl(String topicInnerUrl) {
+                this.topicInnerUrl = topicInnerUrl;
+                return this;
+            }
+
+            /**
              * <p>The name of the topic.</p>
              * 
              * <strong>example:</strong>
@@ -505,6 +539,14 @@ public class GetTopicAttributesResponseBody extends TeaModel {
              */
             public Builder topicType(String topicType) {
                 this.topicType = topicType;
+                return this;
+            }
+
+            /**
+             * TopicUrl.
+             */
+            public Builder topicUrl(String topicUrl) {
+                this.topicUrl = topicUrl;
                 return this;
             }
 
