@@ -18,12 +18,17 @@ import com.aliyun.sdk.gateway.pop.models.*;
  */
 public class CreateOriginProtectionRequest extends Request {
     @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("AutoConfirmIPList")
+    private String autoConfirmIPList;
+
+    @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("SiteId")
     @com.aliyun.core.annotation.Validation(required = true)
     private Long siteId;
 
     private CreateOriginProtectionRequest(Builder builder) {
         super(builder);
+        this.autoConfirmIPList = builder.autoConfirmIPList;
         this.siteId = builder.siteId;
     }
 
@@ -41,6 +46,13 @@ public class CreateOriginProtectionRequest extends Request {
     }
 
     /**
+     * @return autoConfirmIPList
+     */
+    public String getAutoConfirmIPList() {
+        return this.autoConfirmIPList;
+    }
+
+    /**
      * @return siteId
      */
     public Long getSiteId() {
@@ -48,6 +60,7 @@ public class CreateOriginProtectionRequest extends Request {
     }
 
     public static final class Builder extends Request.Builder<CreateOriginProtectionRequest, Builder> {
+        private String autoConfirmIPList; 
         private Long siteId; 
 
         private Builder() {
@@ -56,8 +69,18 @@ public class CreateOriginProtectionRequest extends Request {
 
         private Builder(CreateOriginProtectionRequest request) {
             super(request);
+            this.autoConfirmIPList = request.autoConfirmIPList;
             this.siteId = request.siteId;
         } 
+
+        /**
+         * AutoConfirmIPList.
+         */
+        public Builder autoConfirmIPList(String autoConfirmIPList) {
+            this.putQueryParameter("AutoConfirmIPList", autoConfirmIPList);
+            this.autoConfirmIPList = autoConfirmIPList;
+            return this;
+        }
 
         /**
          * <p>The website ID, which can be obtained by calling the <a href="https://help.aliyun.com/document_detail/2850189.html">ListSites</a> operation.</p>

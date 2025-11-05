@@ -314,7 +314,7 @@ public class ListTransportLayerApplicationsResponseBody extends TeaModel {
              * <p>Comment information for the rule.</p>
              * 
              * <strong>example:</strong>
-             * <p>测试</p>
+             * <p>test</p>
              */
             public Builder comment(String comment) {
                 this.comment = comment;

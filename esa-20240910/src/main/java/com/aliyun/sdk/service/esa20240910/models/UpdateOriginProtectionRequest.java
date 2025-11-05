@@ -18,6 +18,10 @@ import com.aliyun.sdk.gateway.pop.models.*;
  */
 public class UpdateOriginProtectionRequest extends Request {
     @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("AutoConfirmIPList")
+    private String autoConfirmIPList;
+
+    @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("OriginConverge")
     @com.aliyun.core.annotation.Validation(required = true)
     private String originConverge;
@@ -29,6 +33,7 @@ public class UpdateOriginProtectionRequest extends Request {
 
     private UpdateOriginProtectionRequest(Builder builder) {
         super(builder);
+        this.autoConfirmIPList = builder.autoConfirmIPList;
         this.originConverge = builder.originConverge;
         this.siteId = builder.siteId;
     }
@@ -47,6 +52,13 @@ public class UpdateOriginProtectionRequest extends Request {
     }
 
     /**
+     * @return autoConfirmIPList
+     */
+    public String getAutoConfirmIPList() {
+        return this.autoConfirmIPList;
+    }
+
+    /**
      * @return originConverge
      */
     public String getOriginConverge() {
@@ -61,6 +73,7 @@ public class UpdateOriginProtectionRequest extends Request {
     }
 
     public static final class Builder extends Request.Builder<UpdateOriginProtectionRequest, Builder> {
+        private String autoConfirmIPList; 
         private String originConverge; 
         private Long siteId; 
 
@@ -70,9 +83,19 @@ public class UpdateOriginProtectionRequest extends Request {
 
         private Builder(UpdateOriginProtectionRequest request) {
             super(request);
+            this.autoConfirmIPList = request.autoConfirmIPList;
             this.originConverge = request.originConverge;
             this.siteId = request.siteId;
         } 
+
+        /**
+         * AutoConfirmIPList.
+         */
+        public Builder autoConfirmIPList(String autoConfirmIPList) {
+            this.putQueryParameter("AutoConfirmIPList", autoConfirmIPList);
+            this.autoConfirmIPList = autoConfirmIPList;
+            return this;
+        }
 
         /**
          * <p>The IP convergence status.</p>

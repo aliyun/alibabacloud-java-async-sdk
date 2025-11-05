@@ -2434,6 +2434,24 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
+     * @param request the request parameters of GetApiSchemaUsage  GetApiSchemaUsageRequest
+     * @return GetApiSchemaUsageResponse
+     */
+    @Override
+    public CompletableFuture<GetApiSchemaUsageResponse> getApiSchemaUsage(GetApiSchemaUsageRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RPC).setAction("GetApiSchemaUsage").setMethod(HttpMethod.POST).setPathRegex("/").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(GetApiSchemaUsageResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<GetApiSchemaUsageResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
      * @param request the request parameters of GetCacheReserveSpecification  GetCacheReserveSpecificationRequest
      * @return GetCacheReserveSpecificationResponse
      */

@@ -878,6 +878,12 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<ExportRecordsResponse> exportRecords(ExportRecordsRequest request);
 
     /**
+     * @param request the request parameters of GetApiSchemaUsage  GetApiSchemaUsageRequest
+     * @return GetApiSchemaUsageResponse
+     */
+    CompletableFuture<GetApiSchemaUsageResponse> getApiSchemaUsage(GetApiSchemaUsageRequest request);
+
+    /**
      * @param request the request parameters of GetCacheReserveSpecification  GetCacheReserveSpecificationRequest
      * @return GetCacheReserveSpecificationResponse
      */
