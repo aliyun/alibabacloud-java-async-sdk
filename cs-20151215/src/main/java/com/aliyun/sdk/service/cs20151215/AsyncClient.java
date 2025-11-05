@@ -651,6 +651,12 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<ListOperationPlansResponse> listOperationPlans(ListOperationPlansRequest request);
 
     /**
+     * @param request the request parameters of ListOperationPlansForRegion  ListOperationPlansForRegionRequest
+     * @return ListOperationPlansForRegionResponse
+     */
+    CompletableFuture<ListOperationPlansForRegionResponse> listOperationPlansForRegion(ListOperationPlansForRegionRequest request);
+
+    /**
      * @param request the request parameters of ListTagResources  ListTagResourcesRequest
      * @return ListTagResourcesResponse
      */

@@ -1414,6 +1414,156 @@ public class DescribeClusterNodePoolsResponseBody extends TeaModel {
      *
      * <p>DescribeClusterNodePoolsResponseBody</p>
      */
+    public static class Config extends TeaModel {
+        @com.aliyun.core.annotation.NameInMap("custom_config")
+        private java.util.Map<String, String> customConfig;
+
+        private Config(Builder builder) {
+            this.customConfig = builder.customConfig;
+        }
+
+        public static Builder builder() {
+            return new Builder();
+        }
+
+        public static Config create() {
+            return builder().build();
+        }
+
+        /**
+         * @return customConfig
+         */
+        public java.util.Map<String, String> getCustomConfig() {
+            return this.customConfig;
+        }
+
+        public static final class Builder {
+            private java.util.Map<String, String> customConfig; 
+
+            private Builder() {
+            } 
+
+            private Builder(Config model) {
+                this.customConfig = model.customConfig;
+            } 
+
+            /**
+             * custom_config.
+             */
+            public Builder customConfig(java.util.Map<String, String> customConfig) {
+                this.customConfig = customConfig;
+                return this;
+            }
+
+            public Config build() {
+                return new Config(this);
+            } 
+
+        } 
+
+    }
+    /**
+     * 
+     * {@link DescribeClusterNodePoolsResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeClusterNodePoolsResponseBody</p>
+     */
+    public static class NodeComponents extends TeaModel {
+        @com.aliyun.core.annotation.NameInMap("config")
+        private Config config;
+
+        @com.aliyun.core.annotation.NameInMap("name")
+        private String name;
+
+        @com.aliyun.core.annotation.NameInMap("version")
+        private String version;
+
+        private NodeComponents(Builder builder) {
+            this.config = builder.config;
+            this.name = builder.name;
+            this.version = builder.version;
+        }
+
+        public static Builder builder() {
+            return new Builder();
+        }
+
+        public static NodeComponents create() {
+            return builder().build();
+        }
+
+        /**
+         * @return config
+         */
+        public Config getConfig() {
+            return this.config;
+        }
+
+        /**
+         * @return name
+         */
+        public String getName() {
+            return this.name;
+        }
+
+        /**
+         * @return version
+         */
+        public String getVersion() {
+            return this.version;
+        }
+
+        public static final class Builder {
+            private Config config; 
+            private String name; 
+            private String version; 
+
+            private Builder() {
+            } 
+
+            private Builder(NodeComponents model) {
+                this.config = model.config;
+                this.name = model.name;
+                this.version = model.version;
+            } 
+
+            /**
+             * config.
+             */
+            public Builder config(Config config) {
+                this.config = config;
+                return this;
+            }
+
+            /**
+             * name.
+             */
+            public Builder name(String name) {
+                this.name = name;
+                return this;
+            }
+
+            /**
+             * version.
+             */
+            public Builder version(String version) {
+                this.version = version;
+                return this;
+            }
+
+            public NodeComponents build() {
+                return new NodeComponents(this);
+            } 
+
+        } 
+
+    }
+    /**
+     * 
+     * {@link DescribeClusterNodePoolsResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeClusterNodePoolsResponseBody</p>
+     */
     public static class NodeOsConfig extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("hugepage")
         private Hugepage hugepage;
@@ -3622,6 +3772,9 @@ public class DescribeClusterNodePoolsResponseBody extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("max_nodes")
         private Long maxNodes;
 
+        @com.aliyun.core.annotation.NameInMap("node_components")
+        private java.util.List<NodeComponents> nodeComponents;
+
         @com.aliyun.core.annotation.NameInMap("node_config")
         private NodeConfig nodeConfig;
 
@@ -3645,6 +3798,7 @@ public class DescribeClusterNodePoolsResponseBody extends TeaModel {
             this.kubernetesConfig = builder.kubernetesConfig;
             this.management = builder.management;
             this.maxNodes = builder.maxNodes;
+            this.nodeComponents = builder.nodeComponents;
             this.nodeConfig = builder.nodeConfig;
             this.nodepoolInfo = builder.nodepoolInfo;
             this.scalingGroup = builder.scalingGroup;
@@ -3710,6 +3864,13 @@ public class DescribeClusterNodePoolsResponseBody extends TeaModel {
         }
 
         /**
+         * @return nodeComponents
+         */
+        public java.util.List<NodeComponents> getNodeComponents() {
+            return this.nodeComponents;
+        }
+
+        /**
          * @return nodeConfig
          */
         public NodeConfig getNodeConfig() {
@@ -3752,6 +3913,7 @@ public class DescribeClusterNodePoolsResponseBody extends TeaModel {
             private KubernetesConfig kubernetesConfig; 
             private Management management; 
             private Long maxNodes; 
+            private java.util.List<NodeComponents> nodeComponents; 
             private NodeConfig nodeConfig; 
             private NodepoolInfo nodepoolInfo; 
             private ScalingGroup scalingGroup; 
@@ -3769,6 +3931,7 @@ public class DescribeClusterNodePoolsResponseBody extends TeaModel {
                 this.kubernetesConfig = model.kubernetesConfig;
                 this.management = model.management;
                 this.maxNodes = model.maxNodes;
+                this.nodeComponents = model.nodeComponents;
                 this.nodeConfig = model.nodeConfig;
                 this.nodepoolInfo = model.nodepoolInfo;
                 this.scalingGroup = model.scalingGroup;
@@ -3840,6 +4003,14 @@ public class DescribeClusterNodePoolsResponseBody extends TeaModel {
              */
             public Builder maxNodes(Long maxNodes) {
                 this.maxNodes = maxNodes;
+                return this;
+            }
+
+            /**
+             * node_components.
+             */
+            public Builder nodeComponents(java.util.List<NodeComponents> nodeComponents) {
+                this.nodeComponents = nodeComponents;
                 return this;
             }
 

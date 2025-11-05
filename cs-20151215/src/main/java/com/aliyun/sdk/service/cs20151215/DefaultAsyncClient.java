@@ -1758,6 +1758,24 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
+     * @param request the request parameters of ListOperationPlansForRegion  ListOperationPlansForRegionRequest
+     * @return ListOperationPlansForRegionResponse
+     */
+    @Override
+    public CompletableFuture<ListOperationPlansForRegionResponse> listOperationPlansForRegion(ListOperationPlansForRegionRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RESTFUL).setAction("ListOperationPlansForRegion").setMethod(HttpMethod.GET).setPathRegex("/regions/{region_id}/operation/plans").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(ListOperationPlansForRegionResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<ListOperationPlansForRegionResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
      * @param request the request parameters of ListTagResources  ListTagResourcesRequest
      * @return ListTagResourcesResponse
      */

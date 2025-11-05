@@ -70,6 +70,10 @@ public class CreateClusterNodePoolRequest extends Request {
     private Long maxNodes;
 
     @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("node_components")
+    private java.util.List<NodeComponents> nodeComponents;
+
+    @com.aliyun.core.annotation.Body
     @com.aliyun.core.annotation.NameInMap("node_config")
     private NodeConfig nodeConfig;
 
@@ -99,6 +103,7 @@ public class CreateClusterNodePoolRequest extends Request {
         this.kubernetesConfig = builder.kubernetesConfig;
         this.management = builder.management;
         this.maxNodes = builder.maxNodes;
+        this.nodeComponents = builder.nodeComponents;
         this.nodeConfig = builder.nodeConfig;
         this.nodepoolInfo = builder.nodepoolInfo;
         this.scalingGroup = builder.scalingGroup;
@@ -203,6 +208,13 @@ public class CreateClusterNodePoolRequest extends Request {
     }
 
     /**
+     * @return nodeComponents
+     */
+    public java.util.List<NodeComponents> getNodeComponents() {
+        return this.nodeComponents;
+    }
+
+    /**
      * @return nodeConfig
      */
     public NodeConfig getNodeConfig() {
@@ -243,6 +255,7 @@ public class CreateClusterNodePoolRequest extends Request {
         private KubernetesConfig kubernetesConfig; 
         private Management management; 
         private Long maxNodes; 
+        private java.util.List<NodeComponents> nodeComponents; 
         private NodeConfig nodeConfig; 
         private NodepoolInfo nodepoolInfo; 
         private ScalingGroup scalingGroup; 
@@ -266,6 +279,7 @@ public class CreateClusterNodePoolRequest extends Request {
             this.kubernetesConfig = request.kubernetesConfig;
             this.management = request.management;
             this.maxNodes = request.maxNodes;
+            this.nodeComponents = request.nodeComponents;
             this.nodeConfig = request.nodeConfig;
             this.nodepoolInfo = request.nodepoolInfo;
             this.scalingGroup = request.scalingGroup;
@@ -411,6 +425,15 @@ public class CreateClusterNodePoolRequest extends Request {
         public Builder maxNodes(Long maxNodes) {
             this.putBodyParameter("max_nodes", maxNodes);
             this.maxNodes = maxNodes;
+            return this;
+        }
+
+        /**
+         * node_components.
+         */
+        public Builder nodeComponents(java.util.List<NodeComponents> nodeComponents) {
+            this.putBodyParameter("node_components", nodeComponents);
+            this.nodeComponents = nodeComponents;
             return this;
         }
 
@@ -1951,6 +1974,156 @@ public class CreateClusterNodePoolRequest extends Request {
 
             public Management build() {
                 return new Management(this);
+            } 
+
+        } 
+
+    }
+    /**
+     * 
+     * {@link CreateClusterNodePoolRequest} extends {@link TeaModel}
+     *
+     * <p>CreateClusterNodePoolRequest</p>
+     */
+    public static class Config extends TeaModel {
+        @com.aliyun.core.annotation.NameInMap("custom_config")
+        private java.util.Map<String, String> customConfig;
+
+        private Config(Builder builder) {
+            this.customConfig = builder.customConfig;
+        }
+
+        public static Builder builder() {
+            return new Builder();
+        }
+
+        public static Config create() {
+            return builder().build();
+        }
+
+        /**
+         * @return customConfig
+         */
+        public java.util.Map<String, String> getCustomConfig() {
+            return this.customConfig;
+        }
+
+        public static final class Builder {
+            private java.util.Map<String, String> customConfig; 
+
+            private Builder() {
+            } 
+
+            private Builder(Config model) {
+                this.customConfig = model.customConfig;
+            } 
+
+            /**
+             * custom_config.
+             */
+            public Builder customConfig(java.util.Map<String, String> customConfig) {
+                this.customConfig = customConfig;
+                return this;
+            }
+
+            public Config build() {
+                return new Config(this);
+            } 
+
+        } 
+
+    }
+    /**
+     * 
+     * {@link CreateClusterNodePoolRequest} extends {@link TeaModel}
+     *
+     * <p>CreateClusterNodePoolRequest</p>
+     */
+    public static class NodeComponents extends TeaModel {
+        @com.aliyun.core.annotation.NameInMap("config")
+        private Config config;
+
+        @com.aliyun.core.annotation.NameInMap("name")
+        private String name;
+
+        @com.aliyun.core.annotation.NameInMap("version")
+        private String version;
+
+        private NodeComponents(Builder builder) {
+            this.config = builder.config;
+            this.name = builder.name;
+            this.version = builder.version;
+        }
+
+        public static Builder builder() {
+            return new Builder();
+        }
+
+        public static NodeComponents create() {
+            return builder().build();
+        }
+
+        /**
+         * @return config
+         */
+        public Config getConfig() {
+            return this.config;
+        }
+
+        /**
+         * @return name
+         */
+        public String getName() {
+            return this.name;
+        }
+
+        /**
+         * @return version
+         */
+        public String getVersion() {
+            return this.version;
+        }
+
+        public static final class Builder {
+            private Config config; 
+            private String name; 
+            private String version; 
+
+            private Builder() {
+            } 
+
+            private Builder(NodeComponents model) {
+                this.config = model.config;
+                this.name = model.name;
+                this.version = model.version;
+            } 
+
+            /**
+             * config.
+             */
+            public Builder config(Config config) {
+                this.config = config;
+                return this;
+            }
+
+            /**
+             * name.
+             */
+            public Builder name(String name) {
+                this.name = name;
+                return this;
+            }
+
+            /**
+             * version.
+             */
+            public Builder version(String version) {
+                this.version = version;
+                return this;
+            }
+
+            public NodeComponents build() {
+                return new NodeComponents(this);
             } 
 
         } 
