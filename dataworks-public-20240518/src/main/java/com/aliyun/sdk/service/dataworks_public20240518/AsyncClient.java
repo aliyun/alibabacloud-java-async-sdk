@@ -1433,6 +1433,24 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<ListProjectsResponse> listProjects(ListProjectsRequest request);
 
     /**
+     * <b>description</b> :
+     * <ol>
+     * <li>This API operation is available for all DataWorks editions.</li>
+     * <li>**Make sure that the AliyunServiceRoleForDataWorks service-linked role is created before you call this operation.</li>
+     * </ol>
+     * 
+     * @param request the request parameters of ListResourceGroupAssociateProjects  ListResourceGroupAssociateProjectsRequest
+     * @return ListResourceGroupAssociateProjectsResponse
+     */
+    CompletableFuture<ListResourceGroupAssociateProjectsResponse> listResourceGroupAssociateProjects(ListResourceGroupAssociateProjectsRequest request);
+
+    /**
+     * @param request the request parameters of ListResourceGroupMetricData  ListResourceGroupMetricDataRequest
+     * @return ListResourceGroupMetricDataResponse
+     */
+    CompletableFuture<ListResourceGroupMetricDataResponse> listResourceGroupMetricData(ListResourceGroupMetricDataRequest request);
+
+    /**
      * @param request the request parameters of ListResourceGroups  ListResourceGroupsRequest
      * @return ListResourceGroupsResponse
      */

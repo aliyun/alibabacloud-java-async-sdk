@@ -144,7 +144,10 @@ public class ListWorkflowInstancesResponseBody extends TeaModel {
             } 
 
             /**
-             * Key.
+             * <p>The key of a tag.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>key1</p>
              */
             public Builder key(String key) {
                 this.key = key;
@@ -152,7 +155,10 @@ public class ListWorkflowInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * Value.
+             * <p>The value of a tag.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>value1</p>
              */
             public Builder value(String value) {
                 this.value = value;
@@ -586,7 +592,18 @@ public class ListWorkflowInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * Type.
+             * <p>The type of the workflow instance. Valid values:</p>
+             * <ul>
+             * <li>Normal: Scheduled execution</li>
+             * <li>Manual: Manually triggered node</li>
+             * <li>SmokeTest: Smoke test</li>
+             * <li>SupplementData: Data backfill</li>
+             * <li>ManualWorkflow: Manually triggered workflow</li>
+             * <li>TriggerWorkflow: Triggered Workflow</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>Normal</p>
              */
             public Builder type(String type) {
                 this.type = type;

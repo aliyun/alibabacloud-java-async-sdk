@@ -67,7 +67,7 @@ public class ListTaskInstancesResponseBody extends TeaModel {
         } 
 
         /**
-         * <p>The pagination details.</p>
+         * <p>The pagination information.</p>
          */
         public Builder pagingInfo(PagingInfo pagingInfo) {
             this.pagingInfo = pagingInfo;
@@ -1027,7 +1027,10 @@ public class ListTaskInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * ScriptParameters.
+             * <p>The script parameter list.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>para1=val1 para2=val2</p>
              */
             public Builder scriptParameters(String scriptParameters) {
                 this.scriptParameters = scriptParameters;
@@ -1157,7 +1160,10 @@ public class ListTaskInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * WaitingResourceTime.
+             * <p>The timestamp for when it started waiting for resources.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1710239005403</p>
              */
             public Builder waitingResourceTime(Long waitingResourceTime) {
                 this.waitingResourceTime = waitingResourceTime;
@@ -1165,7 +1171,10 @@ public class ListTaskInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * WaitingTriggerTime.
+             * <p>The timestamp for when it started waiting for the scheduled time.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1710239005403</p>
              */
             public Builder waitingTriggerTime(Long waitingTriggerTime) {
                 this.waitingTriggerTime = waitingTriggerTime;

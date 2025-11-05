@@ -487,7 +487,18 @@ public class ListTaskInstancesRequest extends Request {
         }
 
         /**
-         * Status.
+         * <p>The status of the task instance.</p>
+         * <ul>
+         * <li><code>NotRun</code>: Not started</li>
+         * <li><code>Running</code></li>
+         * <li><code>Failure</code></li>
+         * <li><code>Success</code></li>
+         * <li><code>WaitTime</code>: Awaiting scheduled time</li>
+         * <li><code>WaitResource</code>: Awaiting resources</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>Success</p>
          */
         public Builder status(String status) {
             this.putBodyParameter("Status", status);
@@ -601,11 +612,11 @@ public class ListTaskInstancesRequest extends Request {
         /**
          * <p>The type of the workflow instance. Valid values:</p>
          * <ul>
-         * <li>SmokeTest</li>
-         * <li>Manual</li>
-         * <li>SupplementData</li>
-         * <li>ManualWorkflow</li>
-         * <li>Normal</li>
+         * <li>SmokeTest: Testing</li>
+         * <li>Manual: Manually triggered node</li>
+         * <li>SupplementData: Data backfill</li>
+         * <li>ManualWorkflow: Manually triggered workflow</li>
+         * <li>Normal: Scheduled execution</li>
          * </ul>
          * 
          * <strong>example:</strong>

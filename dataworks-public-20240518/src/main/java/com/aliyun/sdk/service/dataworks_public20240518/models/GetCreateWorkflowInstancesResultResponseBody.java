@@ -78,7 +78,7 @@ public class GetCreateWorkflowInstancesResultResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The result of asynchronously creating a workflow instance.</p>
+         * <p>The creation result of the workflow instance.</p>
          */
         public Builder result(Result result) {
             this.result = result;
