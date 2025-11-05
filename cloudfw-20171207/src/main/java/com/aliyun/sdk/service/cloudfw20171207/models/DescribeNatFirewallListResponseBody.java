@@ -275,8 +275,17 @@ public class DescribeNatFirewallListResponseBody extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("ProxyName")
         private String proxyName;
 
+        @com.aliyun.core.annotation.NameInMap("ProxyNetworkInterfaceId")
+        private String proxyNetworkInterfaceId;
+
+        @com.aliyun.core.annotation.NameInMap("ProxyRouteTableId")
+        private String proxyRouteTableId;
+
         @com.aliyun.core.annotation.NameInMap("ProxyStatus")
         private String proxyStatus;
+
+        @com.aliyun.core.annotation.NameInMap("ProxyVSwitchId")
+        private String proxyVSwitchId;
 
         @com.aliyun.core.annotation.NameInMap("RegionId")
         private String regionId;
@@ -299,7 +308,10 @@ public class DescribeNatFirewallListResponseBody extends TeaModel {
             this.natRouteEntryList = builder.natRouteEntryList;
             this.proxyId = builder.proxyId;
             this.proxyName = builder.proxyName;
+            this.proxyNetworkInterfaceId = builder.proxyNetworkInterfaceId;
+            this.proxyRouteTableId = builder.proxyRouteTableId;
             this.proxyStatus = builder.proxyStatus;
+            this.proxyVSwitchId = builder.proxyVSwitchId;
             this.regionId = builder.regionId;
             this.strictMode = builder.strictMode;
             this.vpcId = builder.vpcId;
@@ -371,10 +383,31 @@ public class DescribeNatFirewallListResponseBody extends TeaModel {
         }
 
         /**
+         * @return proxyNetworkInterfaceId
+         */
+        public String getProxyNetworkInterfaceId() {
+            return this.proxyNetworkInterfaceId;
+        }
+
+        /**
+         * @return proxyRouteTableId
+         */
+        public String getProxyRouteTableId() {
+            return this.proxyRouteTableId;
+        }
+
+        /**
          * @return proxyStatus
          */
         public String getProxyStatus() {
             return this.proxyStatus;
+        }
+
+        /**
+         * @return proxyVSwitchId
+         */
+        public String getProxyVSwitchId() {
+            return this.proxyVSwitchId;
         }
 
         /**
@@ -414,7 +447,10 @@ public class DescribeNatFirewallListResponseBody extends TeaModel {
             private java.util.List<NatRouteEntryList> natRouteEntryList; 
             private String proxyId; 
             private String proxyName; 
+            private String proxyNetworkInterfaceId; 
+            private String proxyRouteTableId; 
             private String proxyStatus; 
+            private String proxyVSwitchId; 
             private String regionId; 
             private Integer strictMode; 
             private String vpcId; 
@@ -432,7 +468,10 @@ public class DescribeNatFirewallListResponseBody extends TeaModel {
                 this.natRouteEntryList = model.natRouteEntryList;
                 this.proxyId = model.proxyId;
                 this.proxyName = model.proxyName;
+                this.proxyNetworkInterfaceId = model.proxyNetworkInterfaceId;
+                this.proxyRouteTableId = model.proxyRouteTableId;
                 this.proxyStatus = model.proxyStatus;
+                this.proxyVSwitchId = model.proxyVSwitchId;
                 this.regionId = model.regionId;
                 this.strictMode = model.strictMode;
                 this.vpcId = model.vpcId;
@@ -528,6 +567,22 @@ public class DescribeNatFirewallListResponseBody extends TeaModel {
             }
 
             /**
+             * ProxyNetworkInterfaceId.
+             */
+            public Builder proxyNetworkInterfaceId(String proxyNetworkInterfaceId) {
+                this.proxyNetworkInterfaceId = proxyNetworkInterfaceId;
+                return this;
+            }
+
+            /**
+             * ProxyRouteTableId.
+             */
+            public Builder proxyRouteTableId(String proxyRouteTableId) {
+                this.proxyRouteTableId = proxyRouteTableId;
+                return this;
+            }
+
+            /**
              * <p>The status of the NAT firewall. Valid values:</p>
              * <ul>
              * <li>configuring</li>
@@ -544,6 +599,14 @@ public class DescribeNatFirewallListResponseBody extends TeaModel {
              */
             public Builder proxyStatus(String proxyStatus) {
                 this.proxyStatus = proxyStatus;
+                return this;
+            }
+
+            /**
+             * ProxyVSwitchId.
+             */
+            public Builder proxyVSwitchId(String proxyVSwitchId) {
+                this.proxyVSwitchId = proxyVSwitchId;
                 return this;
             }
 
