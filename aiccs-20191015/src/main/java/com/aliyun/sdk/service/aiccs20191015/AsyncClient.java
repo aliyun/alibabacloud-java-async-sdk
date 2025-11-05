@@ -614,6 +614,12 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<HotlineSessionQueryResponse> hotlineSessionQuery(HotlineSessionQueryRequest request);
 
     /**
+     * @param request the request parameters of ImportOneTaskPhoneNumber  ImportOneTaskPhoneNumberRequest
+     * @return ImportOneTaskPhoneNumberResponse
+     */
+    CompletableFuture<ImportOneTaskPhoneNumberResponse> importOneTaskPhoneNumber(ImportOneTaskPhoneNumberRequest request);
+
+    /**
      * @param request the request parameters of ImportTaskNumberDatas  ImportTaskNumberDatasRequest
      * @return ImportTaskNumberDatasResponse
      */

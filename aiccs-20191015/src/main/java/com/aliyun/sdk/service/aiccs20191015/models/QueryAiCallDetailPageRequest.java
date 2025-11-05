@@ -30,6 +30,10 @@ public class QueryAiCallDetailPageRequest extends Request {
     private String calledNumber;
 
     @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("DetailIds")
+    private java.util.List<Long> detailIds;
+
+    @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("EndCallingTime")
     private Long endCallingTime;
 
@@ -96,6 +100,7 @@ public class QueryAiCallDetailPageRequest extends Request {
         this.batchId = builder.batchId;
         this.callResult = builder.callResult;
         this.calledNumber = builder.calledNumber;
+        this.detailIds = builder.detailIds;
         this.endCallingTime = builder.endCallingTime;
         this.endImportedTime = builder.endImportedTime;
         this.majorIntent = builder.majorIntent;
@@ -145,6 +150,13 @@ public class QueryAiCallDetailPageRequest extends Request {
      */
     public String getCalledNumber() {
         return this.calledNumber;
+    }
+
+    /**
+     * @return detailIds
+     */
+    public java.util.List<Long> getDetailIds() {
+        return this.detailIds;
     }
 
     /**
@@ -256,6 +268,7 @@ public class QueryAiCallDetailPageRequest extends Request {
         private String batchId; 
         private String callResult; 
         private String calledNumber; 
+        private java.util.List<Long> detailIds; 
         private Long endCallingTime; 
         private Long endImportedTime; 
         private String majorIntent; 
@@ -281,6 +294,7 @@ public class QueryAiCallDetailPageRequest extends Request {
             this.batchId = request.batchId;
             this.callResult = request.callResult;
             this.calledNumber = request.calledNumber;
+            this.detailIds = request.detailIds;
             this.endCallingTime = request.endCallingTime;
             this.endImportedTime = request.endImportedTime;
             this.majorIntent = request.majorIntent;
@@ -322,6 +336,16 @@ public class QueryAiCallDetailPageRequest extends Request {
         public Builder calledNumber(String calledNumber) {
             this.putQueryParameter("CalledNumber", calledNumber);
             this.calledNumber = calledNumber;
+            return this;
+        }
+
+        /**
+         * DetailIds.
+         */
+        public Builder detailIds(java.util.List<Long> detailIds) {
+            String detailIdsShrink = shrink(detailIds, "DetailIds", "json");
+            this.putQueryParameter("DetailIds", detailIdsShrink);
+            this.detailIds = detailIds;
             return this;
         }
 
