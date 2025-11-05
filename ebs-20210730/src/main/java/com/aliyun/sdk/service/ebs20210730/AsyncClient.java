@@ -113,13 +113,14 @@ public interface AsyncClient extends SdkAutoCloseable {
 
     /**
      * <b>description</b> :
-     * <p>Async replication is a feature that protects data across regions by using the data replication capability of Elastic Block Storage (EBS). This feature can be used to asynchronously replicate data from a disk in one region to a disk in another region for disaster recovery purposes. You can use this feature to implement disaster recovery for critical business to protect data in your databases and improve business continuity.
-     * Currently, the async replication feature can asynchronously replicate data only between enhanced SSDs (ESSDs). The functionality of disks in replication pairs is limited. You are charged on a subscription basis for the bandwidth that is used by the async replication feature.
-     * Before you call this operation, take note of the following items:</p>
+     * <h2><a href="#"></a>Usage notes</h2>
+     * <p>Async replication is a feature that protects data across regions by using the data replication capability of Elastic Block Storage (EBS). This feature can be used to asynchronously replicate data from a disk in one region to a disk in another region for disaster recovery purposes. You can use this feature to implement disaster recovery for critical business to protect data in your databases and improve business continuity. You are charged on a subscription basis for the bandwidth that is used by the async replication feature.
+     * Currently, the async replication feature can asynchronously replicate data only between enhanced SSDs (ESSDs). The functionality of disks in replication pairs is limited.
+     * Take note of the following items:</p>
      * <ul>
      * <li>Make sure that the source disk (primary disk) from which to replicate data and the destination disk (secondary disk) to which to replicate data are created. You can call the <a href="https://help.aliyun.com/document_detail/25513.html">CreateDisk</a> operation to create disks.</li>
-     * <li>The secondary disk cannot reside the same region as the primary disk. The async replication feature is supported in the China (Hangzhou), China (Shanghai), China (Beijing), China (Shenzhen), China (Heyuan), China (Chengdu), China (Hong Kong), Singapore, US (Silicon Valley), and US (Virginia) regions.</li>
-     * <li>After you call this operation to create a replication pair, you must call the <a href="https://help.aliyun.com/document_detail/354205.html">StartDiskReplicaPair</a> operation to enable async replication to periodically replicate data from the primary disk to the secondary disk across regions.</li>
+     * <li>The secondary disk cannot reside in the same region as the primary disk. For information about the regions that support async replication, see <a href="https://help.aliyun.com/document_detail/314563.html">Overview</a>.</li>
+     * <li>After you call this operation to create a replication pair for the primary disk and the secondary disk, you must call the <a href="https://help.aliyun.com/document_detail/354205.html">StartDiskReplicaPair</a> operation to enable async replication to replicate data from the primary disk to the secondary disk cross regions on a periodic basis.</li>
      * </ul>
      * 
      * @param request the request parameters of CreateDiskReplicaPair  CreateDiskReplicaPairRequest
@@ -382,6 +383,12 @@ public interface AsyncClient extends SdkAutoCloseable {
      * @return GetReportResponse
      */
     CompletableFuture<GetReportResponse> getReport(GetReportRequest request);
+
+    /**
+     * @param request the request parameters of ListReplicaEdgeSupported  ListReplicaEdgeSupportedRequest
+     * @return ListReplicaEdgeSupportedResponse
+     */
+    CompletableFuture<ListReplicaEdgeSupportedResponse> listReplicaEdgeSupported(ListReplicaEdgeSupportedRequest request);
 
     /**
      * @param request the request parameters of ListReports  ListReportsRequest

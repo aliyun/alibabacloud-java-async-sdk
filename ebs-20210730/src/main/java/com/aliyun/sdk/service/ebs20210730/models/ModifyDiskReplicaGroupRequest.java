@@ -200,7 +200,10 @@ public class ModifyDiskReplicaGroupRequest extends Request {
         }
 
         /**
-         * EnableRtc.
+         * <p>Whether to enable replication time control.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder enableRtc(Boolean enableRtc) {
             this.putQueryParameter("EnableRtc", enableRtc);

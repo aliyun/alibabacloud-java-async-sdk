@@ -129,7 +129,10 @@ public class ListReportsRequest extends Request {
         } 
 
         /**
-         * AppId.
+         * <p>The ID of the application.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>app-xxx</p>
          */
         public Builder appId(String appId) {
             this.putQueryParameter("AppId", appId);

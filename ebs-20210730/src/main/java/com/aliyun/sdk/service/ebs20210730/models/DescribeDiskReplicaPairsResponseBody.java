@@ -152,7 +152,7 @@ public class DescribeDiskReplicaPairsResponseBody extends TeaModel {
         }
 
         /**
-         * <p>Details about the replication pairs.</p>
+         * <p>Details of the replication pairs.</p>
          */
         public Builder replicaPairs(java.util.List<ReplicaPairs> replicaPairs) {
             this.replicaPairs = replicaPairs;
@@ -727,7 +727,10 @@ public class DescribeDiskReplicaPairsResponseBody extends TeaModel {
             }
 
             /**
-             * EnableRtc.
+             * <p>Whether the replication time control is enabled. If the replication pair has been added to a replication group, it is consistent with the attributes of the replication group.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>false</p>
              */
             public Builder enableRtc(Boolean enableRtc) {
                 this.enableRtc = enableRtc;

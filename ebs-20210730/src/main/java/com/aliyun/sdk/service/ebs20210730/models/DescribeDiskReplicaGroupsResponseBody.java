@@ -612,7 +612,10 @@ public class DescribeDiskReplicaGroupsResponseBody extends TeaModel {
             }
 
             /**
-             * EnableRtc.
+             * <p>Indicates whether to enable replication time control.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>true</p>
              */
             public Builder enableRtc(Boolean enableRtc) {
                 this.enableRtc = enableRtc;
