@@ -18,7 +18,7 @@ import com.aliyun.sdk.gateway.pop.models.*;
  */
 public class DescribeCdnReportResponseBody extends TeaModel {
     @com.aliyun.core.annotation.NameInMap("Content")
-    private java.util.Map<String, ?> content;
+    private Content content;
 
     @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
@@ -43,7 +43,7 @@ public class DescribeCdnReportResponseBody extends TeaModel {
     /**
      * @return content
      */
-    public java.util.Map<String, ?> getContent() {
+    public Content getContent() {
         return this.content;
     }
 
@@ -55,7 +55,7 @@ public class DescribeCdnReportResponseBody extends TeaModel {
     }
 
     public static final class Builder {
-        private java.util.Map<String, ?> content; 
+        private Content content; 
         private String requestId; 
 
         private Builder() {
@@ -72,7 +72,7 @@ public class DescribeCdnReportResponseBody extends TeaModel {
          * <strong>example:</strong>
          * <p>&quot;data&quot;:[{&quot;deliver&quot;:{&quot;report&quot;:{&quot;title&quot;:&quot;TopUrlByAcc&quot;,&quot;format&quot;:&quot;table&quot;,&quot;shape&quot;:&quot;&quot;,&quot;header&quot;:[&quot;url&quot;,&quot;traf&quot;,&quot;traf_rate&quot;,&quot;acc&quot;,&quot;acc_rate&quot;]}},&quot;data&quot;:[{&quot;acc&quot;:440,&quot;acc_rate&quot;:&quot;0.200%&quot;,&quot;traf&quot;:22,&quot;url&quot;:&quot;<a href="http://demo.com%22,%22traf_rate%22:%220.100%%22%7D,%7B%22acc%22:440,%22acc_rate%22:%220.200%%22,%22traf%22:22,%22url%22:%22http://demo.com%22,%22traf_rate%22:%220.100%%22%7D%5D%7D%5D%7D%7D">http://demo.com&quot;,&quot;traf_rate&quot;:&quot;0.100%&quot;},{&quot;acc&quot;:440,&quot;acc_rate&quot;:&quot;0.200%&quot;,&quot;traf&quot;:22,&quot;url&quot;:&quot;http://demo.com&quot;,&quot;traf_rate&quot;:&quot;0.100%&quot;}]}]}}</a></p>
          */
-        public Builder content(java.util.Map<String, ?> content) {
+        public Builder content(Content content) {
             this.content = content;
             return this;
         }
@@ -94,4 +94,346 @@ public class DescribeCdnReportResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link DescribeCdnReportResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeCdnReportResponseBody</p>
+     */
+    public static class Report extends TeaModel {
+        @com.aliyun.core.annotation.NameInMap("format")
+        private String format;
+
+        @com.aliyun.core.annotation.NameInMap("header")
+        private java.util.List<String> header;
+
+        @com.aliyun.core.annotation.NameInMap("outLine")
+        private Long outLine;
+
+        @com.aliyun.core.annotation.NameInMap("outSize")
+        private Long outSize;
+
+        @com.aliyun.core.annotation.NameInMap("shape")
+        private String shape;
+
+        @com.aliyun.core.annotation.NameInMap("title")
+        private String title;
+
+        private Report(Builder builder) {
+            this.format = builder.format;
+            this.header = builder.header;
+            this.outLine = builder.outLine;
+            this.outSize = builder.outSize;
+            this.shape = builder.shape;
+            this.title = builder.title;
+        }
+
+        public static Builder builder() {
+            return new Builder();
+        }
+
+        public static Report create() {
+            return builder().build();
+        }
+
+        /**
+         * @return format
+         */
+        public String getFormat() {
+            return this.format;
+        }
+
+        /**
+         * @return header
+         */
+        public java.util.List<String> getHeader() {
+            return this.header;
+        }
+
+        /**
+         * @return outLine
+         */
+        public Long getOutLine() {
+            return this.outLine;
+        }
+
+        /**
+         * @return outSize
+         */
+        public Long getOutSize() {
+            return this.outSize;
+        }
+
+        /**
+         * @return shape
+         */
+        public String getShape() {
+            return this.shape;
+        }
+
+        /**
+         * @return title
+         */
+        public String getTitle() {
+            return this.title;
+        }
+
+        public static final class Builder {
+            private String format; 
+            private java.util.List<String> header; 
+            private Long outLine; 
+            private Long outSize; 
+            private String shape; 
+            private String title; 
+
+            private Builder() {
+            } 
+
+            private Builder(Report model) {
+                this.format = model.format;
+                this.header = model.header;
+                this.outLine = model.outLine;
+                this.outSize = model.outSize;
+                this.shape = model.shape;
+                this.title = model.title;
+            } 
+
+            /**
+             * format.
+             */
+            public Builder format(String format) {
+                this.format = format;
+                return this;
+            }
+
+            /**
+             * header.
+             */
+            public Builder header(java.util.List<String> header) {
+                this.header = header;
+                return this;
+            }
+
+            /**
+             * outLine.
+             */
+            public Builder outLine(Long outLine) {
+                this.outLine = outLine;
+                return this;
+            }
+
+            /**
+             * outSize.
+             */
+            public Builder outSize(Long outSize) {
+                this.outSize = outSize;
+                return this;
+            }
+
+            /**
+             * shape.
+             */
+            public Builder shape(String shape) {
+                this.shape = shape;
+                return this;
+            }
+
+            /**
+             * title.
+             */
+            public Builder title(String title) {
+                this.title = title;
+                return this;
+            }
+
+            public Report build() {
+                return new Report(this);
+            } 
+
+        } 
+
+    }
+    /**
+     * 
+     * {@link DescribeCdnReportResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeCdnReportResponseBody</p>
+     */
+    public static class Deliver extends TeaModel {
+        @com.aliyun.core.annotation.NameInMap("report")
+        private Report report;
+
+        private Deliver(Builder builder) {
+            this.report = builder.report;
+        }
+
+        public static Builder builder() {
+            return new Builder();
+        }
+
+        public static Deliver create() {
+            return builder().build();
+        }
+
+        /**
+         * @return report
+         */
+        public Report getReport() {
+            return this.report;
+        }
+
+        public static final class Builder {
+            private Report report; 
+
+            private Builder() {
+            } 
+
+            private Builder(Deliver model) {
+                this.report = model.report;
+            } 
+
+            /**
+             * report.
+             */
+            public Builder report(Report report) {
+                this.report = report;
+                return this;
+            }
+
+            public Deliver build() {
+                return new Deliver(this);
+            } 
+
+        } 
+
+    }
+    /**
+     * 
+     * {@link DescribeCdnReportResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeCdnReportResponseBody</p>
+     */
+    public static class Data extends TeaModel {
+        @com.aliyun.core.annotation.NameInMap("data")
+        private java.util.List<java.util.Map<String, String>> data;
+
+        @com.aliyun.core.annotation.NameInMap("deliver")
+        private Deliver deliver;
+
+        private Data(Builder builder) {
+            this.data = builder.data;
+            this.deliver = builder.deliver;
+        }
+
+        public static Builder builder() {
+            return new Builder();
+        }
+
+        public static Data create() {
+            return builder().build();
+        }
+
+        /**
+         * @return data
+         */
+        public java.util.List<java.util.Map<String, String>> getData() {
+            return this.data;
+        }
+
+        /**
+         * @return deliver
+         */
+        public Deliver getDeliver() {
+            return this.deliver;
+        }
+
+        public static final class Builder {
+            private java.util.List<java.util.Map<String, String>> data; 
+            private Deliver deliver; 
+
+            private Builder() {
+            } 
+
+            private Builder(Data model) {
+                this.data = model.data;
+                this.deliver = model.deliver;
+            } 
+
+            /**
+             * data.
+             */
+            public Builder data(java.util.List<java.util.Map<String, String>> data) {
+                this.data = data;
+                return this;
+            }
+
+            /**
+             * deliver.
+             */
+            public Builder deliver(Deliver deliver) {
+                this.deliver = deliver;
+                return this;
+            }
+
+            public Data build() {
+                return new Data(this);
+            } 
+
+        } 
+
+    }
+    /**
+     * 
+     * {@link DescribeCdnReportResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeCdnReportResponseBody</p>
+     */
+    public static class Content extends TeaModel {
+        @com.aliyun.core.annotation.NameInMap("data")
+        private java.util.List<Data> data;
+
+        private Content(Builder builder) {
+            this.data = builder.data;
+        }
+
+        public static Builder builder() {
+            return new Builder();
+        }
+
+        public static Content create() {
+            return builder().build();
+        }
+
+        /**
+         * @return data
+         */
+        public java.util.List<Data> getData() {
+            return this.data;
+        }
+
+        public static final class Builder {
+            private java.util.List<Data> data; 
+
+            private Builder() {
+            } 
+
+            private Builder(Content model) {
+                this.data = model.data;
+            } 
+
+            /**
+             * data.
+             */
+            public Builder data(java.util.List<Data> data) {
+                this.data = data;
+                return this;
+            }
+
+            public Content build() {
+                return new Content(this);
+            } 
+
+        } 
+
+    }
 }

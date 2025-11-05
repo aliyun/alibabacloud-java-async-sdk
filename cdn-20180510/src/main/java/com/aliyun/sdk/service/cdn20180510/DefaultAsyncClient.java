@@ -289,42 +289,6 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
-     * @param request the request parameters of CdnMigrateRegister  CdnMigrateRegisterRequest
-     * @return CdnMigrateRegisterResponse
-     */
-    @Override
-    public CompletableFuture<CdnMigrateRegisterResponse> cdnMigrateRegister(CdnMigrateRegisterRequest request) {
-        try {
-            this.handler.validateRequestModel(request);
-            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RPC).setAction("CdnMigrateRegister").setMethod(HttpMethod.POST).setPathRegex("/").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
-            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(CdnMigrateRegisterResponse.create());
-            return this.handler.execute(params);
-        } catch (Exception e) {
-            CompletableFuture<CdnMigrateRegisterResponse> future = new CompletableFuture<>();
-            future.completeExceptionally(e);
-            return future;
-        }
-    }
-
-    /**
-     * @param request the request parameters of ChangeCdnDomainToDcdn  ChangeCdnDomainToDcdnRequest
-     * @return ChangeCdnDomainToDcdnResponse
-     */
-    @Override
-    public CompletableFuture<ChangeCdnDomainToDcdnResponse> changeCdnDomainToDcdn(ChangeCdnDomainToDcdnRequest request) {
-        try {
-            this.handler.validateRequestModel(request);
-            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RPC).setAction("ChangeCdnDomainToDcdn").setMethod(HttpMethod.POST).setPathRegex("/").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
-            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(ChangeCdnDomainToDcdnResponse.create());
-            return this.handler.execute(params);
-        } catch (Exception e) {
-            CompletableFuture<ChangeCdnDomainToDcdnResponse> future = new CompletableFuture<>();
-            future.completeExceptionally(e);
-            return future;
-        }
-    }
-
-    /**
      * @param request the request parameters of CheckCdnDomainExist  CheckCdnDomainExistRequest
      * @return CheckCdnDomainExistResponse
      */
@@ -1124,29 +1088,6 @@ public final class DefaultAsyncClient implements AsyncClient {
             return this.handler.execute(params);
         } catch (Exception e) {
             CompletableFuture<DescribeCdnHttpsDomainListResponse> future = new CompletableFuture<>();
-            future.completeExceptionally(e);
-            return future;
-        }
-    }
-
-    /**
-     * <b>description</b> :
-     * <blockquote>
-     * <p> If a domain name is not transferred from Alibaba Cloud CDN to DCDN after it is registered in the routing center of DCDN, the registration information is retained for only one day.</p>
-     * </blockquote>
-     * 
-     * @param request the request parameters of DescribeCdnMigrateRegisterStatus  DescribeCdnMigrateRegisterStatusRequest
-     * @return DescribeCdnMigrateRegisterStatusResponse
-     */
-    @Override
-    public CompletableFuture<DescribeCdnMigrateRegisterStatusResponse> describeCdnMigrateRegisterStatus(DescribeCdnMigrateRegisterStatusRequest request) {
-        try {
-            this.handler.validateRequestModel(request);
-            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RPC).setAction("DescribeCdnMigrateRegisterStatus").setMethod(HttpMethod.POST).setPathRegex("/").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
-            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(DescribeCdnMigrateRegisterStatusResponse.create());
-            return this.handler.execute(params);
-        } catch (Exception e) {
-            CompletableFuture<DescribeCdnMigrateRegisterStatusResponse> future = new CompletableFuture<>();
             future.completeExceptionally(e);
             return future;
         }

@@ -137,18 +137,6 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<BatchUpdateCdnDomainResponse> batchUpdateCdnDomain(BatchUpdateCdnDomainRequest request);
 
     /**
-     * @param request the request parameters of CdnMigrateRegister  CdnMigrateRegisterRequest
-     * @return CdnMigrateRegisterResponse
-     */
-    CompletableFuture<CdnMigrateRegisterResponse> cdnMigrateRegister(CdnMigrateRegisterRequest request);
-
-    /**
-     * @param request the request parameters of ChangeCdnDomainToDcdn  ChangeCdnDomainToDcdnRequest
-     * @return ChangeCdnDomainToDcdnResponse
-     */
-    CompletableFuture<ChangeCdnDomainToDcdnResponse> changeCdnDomainToDcdn(ChangeCdnDomainToDcdnRequest request);
-
-    /**
      * @param request the request parameters of CheckCdnDomainExist  CheckCdnDomainExistRequest
      * @return CheckCdnDomainExistResponse
      */
@@ -520,17 +508,6 @@ public interface AsyncClient extends SdkAutoCloseable {
      * @return DescribeCdnHttpsDomainListResponse
      */
     CompletableFuture<DescribeCdnHttpsDomainListResponse> describeCdnHttpsDomainList(DescribeCdnHttpsDomainListRequest request);
-
-    /**
-     * <b>description</b> :
-     * <blockquote>
-     * <p> If a domain name is not transferred from Alibaba Cloud CDN to DCDN after it is registered in the routing center of DCDN, the registration information is retained for only one day.</p>
-     * </blockquote>
-     * 
-     * @param request the request parameters of DescribeCdnMigrateRegisterStatus  DescribeCdnMigrateRegisterStatusRequest
-     * @return DescribeCdnMigrateRegisterStatusResponse
-     */
-    CompletableFuture<DescribeCdnMigrateRegisterStatusResponse> describeCdnMigrateRegisterStatus(DescribeCdnMigrateRegisterStatusRequest request);
 
     /**
      * @param request the request parameters of DescribeCdnOrderCommodityCode  DescribeCdnOrderCommodityCodeRequest
