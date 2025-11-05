@@ -64,6 +64,10 @@ public class GetCustomerOrdersResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return code
      */
@@ -137,6 +141,21 @@ public class GetCustomerOrdersResponseBody extends TeaModel {
         private String requestId; 
         private Boolean success; 
         private Integer total; 
+
+        private Builder() {
+        } 
+
+        private Builder(GetCustomerOrdersResponseBody model) {
+            this.code = model.code;
+            this.data = model.data;
+            this.message = model.message;
+            this.msg = model.msg;
+            this.pageNo = model.pageNo;
+            this.pageSize = model.pageSize;
+            this.requestId = model.requestId;
+            this.success = model.success;
+            this.total = model.total;
+        } 
 
         /**
          * Code.
@@ -406,6 +425,26 @@ public class GetCustomerOrdersResponseBody extends TeaModel {
             private String productDetail; 
             private String productType; 
             private String timeToOrder; 
+
+            private Builder() {
+            } 
+
+            private Builder(Data model) {
+                this.customerAccount = model.customerAccount;
+                this.customerManager = model.customerManager;
+                this.customerNo = model.customerNo;
+                this.orderId = model.orderId;
+                this.orderSource = model.orderSource;
+                this.orderStatus = model.orderStatus;
+                this.orderType = model.orderType;
+                this.originalCost = model.originalCost;
+                this.paymentMethod = model.paymentMethod;
+                this.paymentTime = model.paymentTime;
+                this.pretaxCost = model.pretaxCost;
+                this.productDetail = model.productDetail;
+                this.productType = model.productType;
+                this.timeToOrder = model.timeToOrder;
+            } 
 
             /**
              * CustomerAccount.

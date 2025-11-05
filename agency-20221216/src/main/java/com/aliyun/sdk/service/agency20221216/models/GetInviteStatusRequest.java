@@ -35,7 +35,7 @@ public class GetInviteStatusRequest extends Request {
         return builder().build();
     }
 
-    @Override
+@Override
     public Builder toBuilder() {
         return new Builder(this);
     }
@@ -108,6 +108,13 @@ public class GetInviteStatusRequest extends Request {
 
         public static final class Builder {
             private Long inviteId; 
+
+            private Builder() {
+            } 
+
+            private Builder(InviteStatusList model) {
+                this.inviteId = model.inviteId;
+            } 
 
             /**
              * <p>Invitation ID, From interface InviteSubAccount</p>

@@ -44,6 +44,10 @@ public class ExportCustomerQuotaRecordResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return code
      */
@@ -77,6 +81,16 @@ public class ExportCustomerQuotaRecordResponseBody extends TeaModel {
         private Data data; 
         private String msg; 
         private String requestId; 
+
+        private Builder() {
+        } 
+
+        private Builder(ExportCustomerQuotaRecordResponseBody model) {
+            this.code = model.code;
+            this.data = model.data;
+            this.msg = model.msg;
+            this.requestId = model.requestId;
+        } 
 
         /**
          * <p>Code</p>
@@ -168,6 +182,14 @@ public class ExportCustomerQuotaRecordResponseBody extends TeaModel {
         public static final class Builder {
             private Integer cost; 
             private Long id; 
+
+            private Builder() {
+            } 
+
+            private Builder(Data model) {
+                this.cost = model.cost;
+                this.id = model.id;
+            } 
 
             /**
              * <p>Estimated duration, in minutes.</p>

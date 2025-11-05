@@ -48,6 +48,10 @@ public class InviteSubAccountResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return code
      */
@@ -89,6 +93,17 @@ public class InviteSubAccountResponseBody extends TeaModel {
         private String requestId; 
         private Results results; 
         private Boolean success; 
+
+        private Builder() {
+        } 
+
+        private Builder(InviteSubAccountResponseBody model) {
+            this.code = model.code;
+            this.message = model.message;
+            this.requestId = model.requestId;
+            this.results = model.results;
+            this.success = model.success;
+        } 
 
         /**
          * <p>Error Code: </br>
@@ -206,6 +221,15 @@ public class InviteSubAccountResponseBody extends TeaModel {
             private Long inviteId; 
             private String regUrl; 
 
+            private Builder() {
+            } 
+
+            private Builder(Result model) {
+                this.days = model.days;
+                this.inviteId = model.inviteId;
+                this.regUrl = model.regUrl;
+            } 
+
             /**
              * <p>Valid days of registration URL, count on daily basis.</p>
              * 
@@ -314,6 +338,16 @@ public class InviteSubAccountResponseBody extends TeaModel {
             private Result result; 
             private Boolean success; 
 
+            private Builder() {
+            } 
+
+            private Builder(ResultsResult model) {
+                this.code = model.code;
+                this.message = model.message;
+                this.result = model.result;
+                this.success = model.success;
+            } 
+
             /**
              * <p>Error Code, 200 OK</p>
              * 
@@ -393,6 +427,13 @@ public class InviteSubAccountResponseBody extends TeaModel {
 
         public static final class Builder {
             private java.util.List<ResultsResult> result; 
+
+            private Builder() {
+            } 
+
+            private Builder(Results model) {
+                this.result = model.result;
+            } 
 
             /**
              * <p>Returning Message of Invitation Results</p>

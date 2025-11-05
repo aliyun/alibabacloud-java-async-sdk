@@ -35,7 +35,7 @@ public class InviteSubAccountRequest extends Request {
         return builder().build();
     }
 
-    @Override
+@Override
     public Builder toBuilder() {
         return new Builder(this);
     }
@@ -211,6 +211,21 @@ public class InviteSubAccountRequest extends Request {
             private String remark; 
             private String subAccountType; 
             private String zeroCreditShutdownPolicy; 
+
+            private Builder() {
+            } 
+
+            private Builder(AccountInfoList model) {
+                this.accountNickname = model.accountNickname;
+                this.creditLine = model.creditLine;
+                this.customerBd = model.customerBd;
+                this.customerId = model.customerId;
+                this.emailAddress = model.emailAddress;
+                this.newBuyStatus = model.newBuyStatus;
+                this.remark = model.remark;
+                this.subAccountType = model.subAccountType;
+                this.zeroCreditShutdownPolicy = model.zeroCreditShutdownPolicy;
+            } 
 
             /**
              * <p>The name of Sub Account:</br></p>

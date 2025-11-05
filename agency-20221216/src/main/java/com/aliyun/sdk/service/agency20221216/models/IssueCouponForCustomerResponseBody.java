@@ -48,6 +48,10 @@ public class IssueCouponForCustomerResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return code
      */
@@ -89,6 +93,17 @@ public class IssueCouponForCustomerResponseBody extends TeaModel {
         private String requestId; 
         private Boolean success; 
         private Data data; 
+
+        private Builder() {
+        } 
+
+        private Builder(IssueCouponForCustomerResponseBody model) {
+            this.code = model.code;
+            this.message = model.message;
+            this.requestId = model.requestId;
+            this.success = model.success;
+            this.data = model.data;
+        } 
 
         /**
          * Code.
@@ -194,6 +209,15 @@ public class IssueCouponForCustomerResponseBody extends TeaModel {
             private Long couponTemplateId; 
             private String createTime; 
             private String uidlist; 
+
+            private Builder() {
+            } 
+
+            private Builder(Data model) {
+                this.couponTemplateId = model.couponTemplateId;
+                this.createTime = model.createTime;
+                this.uidlist = model.uidlist;
+            } 
 
             /**
              * CouponTemplateId.

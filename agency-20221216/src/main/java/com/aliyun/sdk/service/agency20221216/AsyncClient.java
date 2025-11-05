@@ -117,10 +117,22 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<ExportCustomerQuotaRecordResponse> exportCustomerQuotaRecord(ExportCustomerQuotaRecordRequest request);
 
     /**
+     * @param request the request parameters of ExportReversedDeductionHistory  ExportReversedDeductionHistoryRequest
+     * @return ExportReversedDeductionHistoryResponse
+     */
+    CompletableFuture<ExportReversedDeductionHistoryResponse> exportReversedDeductionHistory(ExportReversedDeductionHistoryRequest request);
+
+    /**
      * @param request the request parameters of GetAccountInfo  GetAccountInfoRequest
      * @return GetAccountInfoResponse
      */
     CompletableFuture<GetAccountInfoResponse> getAccountInfo(GetAccountInfoRequest request);
+
+    /**
+     * @param request the request parameters of GetCommissionableProducts  GetCommissionableProductsRequest
+     * @return GetCommissionableProductsResponse
+     */
+    CompletableFuture<GetCommissionableProductsResponse> getCommissionableProducts(GetCommissionableProductsRequest request);
 
     /**
      * @param request the request parameters of GetCouponTemplateDetail  GetCouponTemplateDetailRequest
@@ -199,6 +211,18 @@ public interface AsyncClient extends SdkAutoCloseable {
      * @return ListCouponUsageResponse
      */
     CompletableFuture<ListCouponUsageResponse> listCouponUsage(ListCouponUsageRequest request);
+
+    /**
+     * @param request the request parameters of ListExportTasks  ListExportTasksRequest
+     * @return ListExportTasksResponse
+     */
+    CompletableFuture<ListExportTasksResponse> listExportTasks(ListExportTasksRequest request);
+
+    /**
+     * @param request the request parameters of QueryReversedDeductionHistory  QueryReversedDeductionHistoryRequest
+     * @return QueryReversedDeductionHistoryResponse
+     */
+    CompletableFuture<QueryReversedDeductionHistoryResponse> queryReversedDeductionHistory(QueryReversedDeductionHistoryRequest request);
 
     /**
      * <b>description</b> :

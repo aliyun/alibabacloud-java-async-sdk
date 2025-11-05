@@ -52,6 +52,10 @@ public class GetAccountInfoResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return accountInfoList
      */
@@ -101,6 +105,18 @@ public class GetAccountInfoResponseBody extends TeaModel {
         private PageInfo pageInfo; 
         private String requestId; 
         private Boolean success; 
+
+        private Builder() {
+        } 
+
+        private Builder(GetAccountInfoResponseBody model) {
+            this.accountInfoList = model.accountInfoList;
+            this.code = model.code;
+            this.message = model.message;
+            this.pageInfo = model.pageInfo;
+            this.requestId = model.requestId;
+            this.success = model.success;
+        } 
 
         /**
          * <p>List of Account Information</p>
@@ -387,6 +403,28 @@ public class GetAccountInfoResponseBody extends TeaModel {
             private Integer subAccountType; 
             private Long uid; 
 
+            private Builder() {
+            } 
+
+            private Builder(AccountInfo model) {
+                this.accountNickname = model.accountNickname;
+                this.aliyunId = model.aliyunId;
+                this.associationSuccessTime = model.associationSuccessTime;
+                this.cid = model.cid;
+                this.customerAccountType = model.customerAccountType;
+                this.customerBd = model.customerBd;
+                this.customerEnterpriseCertified = model.customerEnterpriseCertified;
+                this.delayAmount = model.delayAmount;
+                this.delayStatus = model.delayStatus;
+                this.email = model.email;
+                this.mobile = model.mobile;
+                this.newBuyStatus = model.newBuyStatus;
+                this.registerCountryCode = model.registerCountryCode;
+                this.remark = model.remark;
+                this.subAccountType = model.subAccountType;
+                this.uid = model.uid;
+            } 
+
             /**
              * <p>The name of Sub Account.</p>
              * <ul>
@@ -623,6 +661,13 @@ public class GetAccountInfoResponseBody extends TeaModel {
         public static final class Builder {
             private java.util.List<AccountInfo> accountInfo; 
 
+            private Builder() {
+            } 
+
+            private Builder(AccountInfoList model) {
+                this.accountInfo = model.accountInfo;
+            } 
+
             /**
              * AccountInfo.
              */
@@ -693,6 +738,15 @@ public class GetAccountInfoResponseBody extends TeaModel {
             private Integer page; 
             private Integer pageSize; 
             private Integer total; 
+
+            private Builder() {
+            } 
+
+            private Builder(PageInfo model) {
+                this.page = model.page;
+                this.pageSize = model.pageSize;
+                this.total = model.total;
+            } 
 
             /**
              * <p>Pagination, current page.</p>

@@ -48,6 +48,10 @@ public class GetDailyBillResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return code
      */
@@ -89,6 +93,17 @@ public class GetDailyBillResponseBody extends TeaModel {
         private String message; 
         private String requestId; 
         private Boolean success; 
+
+        private Builder() {
+        } 
+
+        private Builder(GetDailyBillResponseBody model) {
+            this.code = model.code;
+            this.data = model.data;
+            this.message = model.message;
+            this.requestId = model.requestId;
+            this.success = model.success;
+        } 
 
         /**
          * <p>Result Code:</p>
@@ -234,6 +249,17 @@ public class GetDailyBillResponseBody extends TeaModel {
             private String billOwner; 
             private String billType; 
             private String spendingTime; 
+
+            private Builder() {
+            } 
+
+            private Builder(Data model) {
+                this.billLinkCSV = model.billLinkCSV;
+                this.billLinkXLSX = model.billLinkXLSX;
+                this.billOwner = model.billOwner;
+                this.billType = model.billType;
+                this.spendingTime = model.spendingTime;
+            } 
 
             /**
              * <p>The link to download CSV file, please use HTTP Protocol.</p>

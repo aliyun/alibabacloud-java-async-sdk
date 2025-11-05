@@ -48,6 +48,10 @@ public class ListCouponUsageResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return code
      */
@@ -89,6 +93,17 @@ public class ListCouponUsageResponseBody extends TeaModel {
         private String message; 
         private PageInfo pageInfo; 
         private String requestId; 
+
+        private Builder() {
+        } 
+
+        private Builder(ListCouponUsageResponseBody model) {
+            this.code = model.code;
+            this.data = model.data;
+            this.message = model.message;
+            this.pageInfo = model.pageInfo;
+            this.requestId = model.requestId;
+        } 
 
         /**
          * Code.
@@ -264,6 +279,21 @@ public class ListCouponUsageResponseBody extends TeaModel {
             private String status; 
             private Long uid; 
 
+            private Builder() {
+            } 
+
+            private Builder(Data model) {
+                this.account = model.account;
+                this.amount = model.amount;
+                this.balance = model.balance;
+                this.couponId = model.couponId;
+                this.couponTemplateId = model.couponTemplateId;
+                this.effDate = model.effDate;
+                this.publishDate = model.publishDate;
+                this.status = model.status;
+                this.uid = model.uid;
+            } 
+
             /**
              * Account.
              */
@@ -398,6 +428,15 @@ public class ListCouponUsageResponseBody extends TeaModel {
             private Integer page; 
             private Integer pageSize; 
             private Integer total; 
+
+            private Builder() {
+            } 
+
+            private Builder(PageInfo model) {
+                this.page = model.page;
+                this.pageSize = model.pageSize;
+                this.total = model.total;
+            } 
 
             /**
              * Page.

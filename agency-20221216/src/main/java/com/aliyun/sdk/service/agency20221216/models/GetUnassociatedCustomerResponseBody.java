@@ -52,6 +52,10 @@ public class GetUnassociatedCustomerResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return code
      */
@@ -101,6 +105,18 @@ public class GetUnassociatedCustomerResponseBody extends TeaModel {
         private PageInfo pageInfo; 
         private String requestId; 
         private Boolean success; 
+
+        private Builder() {
+        } 
+
+        private Builder(GetUnassociatedCustomerResponseBody model) {
+            this.code = model.code;
+            this.inviteInfoList = model.inviteInfoList;
+            this.message = model.message;
+            this.pageInfo = model.pageInfo;
+            this.requestId = model.requestId;
+            this.success = model.success;
+        } 
 
         /**
          * <p>Error Code, Candidate Value：</p>
@@ -252,6 +268,17 @@ public class GetUnassociatedCustomerResponseBody extends TeaModel {
             private Long inviteId; 
             private Integer status; 
 
+            private Builder() {
+            } 
+
+            private Builder(InviteInfo model) {
+                this.accountNickname = model.accountNickname;
+                this.email = model.email;
+                this.gmtCreate = model.gmtCreate;
+                this.inviteId = model.inviteId;
+                this.status = model.status;
+            } 
+
             /**
              * <p>The name of Customer who are to be invited.</p>
              * 
@@ -352,6 +379,13 @@ public class GetUnassociatedCustomerResponseBody extends TeaModel {
         public static final class Builder {
             private java.util.List<InviteInfo> inviteInfo; 
 
+            private Builder() {
+            } 
+
+            private Builder(InviteInfoList model) {
+                this.inviteInfo = model.inviteInfo;
+            } 
+
             /**
              * InviteInfo.
              */
@@ -422,6 +456,15 @@ public class GetUnassociatedCustomerResponseBody extends TeaModel {
             private Integer page; 
             private Integer pageSize; 
             private Integer total; 
+
+            private Builder() {
+            } 
+
+            private Builder(PageInfo model) {
+                this.page = model.page;
+                this.pageSize = model.pageSize;
+                this.total = model.total;
+            } 
 
             /**
              * <p>Pagination, current page.</p>

@@ -48,6 +48,10 @@ public class GetCreditInfoResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return code
      */
@@ -89,6 +93,17 @@ public class GetCreditInfoResponseBody extends TeaModel {
         private String message; 
         private String requestId; 
         private Boolean success; 
+
+        private Builder() {
+        } 
+
+        private Builder(GetCreditInfoResponseBody model) {
+            this.code = model.code;
+            this.data = model.data;
+            this.message = model.message;
+            this.requestId = model.requestId;
+            this.success = model.success;
+        } 
 
         /**
          * <p>Result Code:</p>
@@ -267,6 +282,20 @@ public class GetCreditInfoResponseBody extends TeaModel {
             private String outstandingBalance; 
             private String zeroCreditShutdownPolicy; 
             private String newBuyStatus; 
+
+            private Builder() {
+            } 
+
+            private Builder(Data model) {
+                this.accountStatus = model.accountStatus;
+                this.alarmThreshold = model.alarmThreshold;
+                this.availableCredit = model.availableCredit;
+                this.consumedUndeductedValue = model.consumedUndeductedValue;
+                this.creditLine = model.creditLine;
+                this.outstandingBalance = model.outstandingBalance;
+                this.zeroCreditShutdownPolicy = model.zeroCreditShutdownPolicy;
+                this.newBuyStatus = model.newBuyStatus;
+            } 
 
             /**
              * <p>The Credit Control status, Value Range:</br></p>

@@ -56,6 +56,10 @@ public class CouponApprovalStatusListResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return code
      */
@@ -113,6 +117,19 @@ public class CouponApprovalStatusListResponseBody extends TeaModel {
         private Integer pageSize; 
         private String requestId; 
         private Integer total; 
+
+        private Builder() {
+        } 
+
+        private Builder(CouponApprovalStatusListResponseBody model) {
+            this.code = model.code;
+            this.data = model.data;
+            this.message = model.message;
+            this.pageNo = model.pageNo;
+            this.pageSize = model.pageSize;
+            this.requestId = model.requestId;
+            this.total = model.total;
+        } 
 
         /**
          * Code.
@@ -279,6 +296,19 @@ public class CouponApprovalStatusListResponseBody extends TeaModel {
             private String templateName; 
             private Long templateStatus; 
             private String timeOfRequest; 
+
+            private Builder() {
+            } 
+
+            private Builder(Data model) {
+                this.issuerAccount = model.issuerAccount;
+                this.issuerUid = model.issuerUid;
+                this.note = model.note;
+                this.templateId = model.templateId;
+                this.templateName = model.templateName;
+                this.templateStatus = model.templateStatus;
+                this.timeOfRequest = model.timeOfRequest;
+            } 
 
             /**
              * IssuerAccount.

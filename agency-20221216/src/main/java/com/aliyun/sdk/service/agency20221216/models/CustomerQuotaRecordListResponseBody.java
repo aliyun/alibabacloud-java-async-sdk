@@ -56,6 +56,10 @@ public class CustomerQuotaRecordListResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return code
      */
@@ -113,6 +117,19 @@ public class CustomerQuotaRecordListResponseBody extends TeaModel {
         private Integer pageSize; 
         private String requestId; 
         private Integer total; 
+
+        private Builder() {
+        } 
+
+        private Builder(CustomerQuotaRecordListResponseBody model) {
+            this.code = model.code;
+            this.data = model.data;
+            this.msg = model.msg;
+            this.pageNo = model.pageNo;
+            this.pageSize = model.pageSize;
+            this.requestId = model.requestId;
+            this.total = model.total;
+        } 
 
         /**
          * <p>Status code of returning result, 200 means success.</p>
@@ -309,6 +326,20 @@ public class CustomerQuotaRecordListResponseBody extends TeaModel {
             private String updateAfterAmount; 
             private String updateAmount; 
             private String updateBeforeAmount; 
+
+            private Builder() {
+            } 
+
+            private Builder(Data model) {
+                this.operationSubmitType = model.operationSubmitType;
+                this.operationTime = model.operationTime;
+                this.operationTypeCode = model.operationTypeCode;
+                this.operationTypeDesc = model.operationTypeDesc;
+                this.operationUid = model.operationUid;
+                this.updateAfterAmount = model.updateAfterAmount;
+                this.updateAmount = model.updateAmount;
+                this.updateBeforeAmount = model.updateBeforeAmount;
+            } 
 
             /**
              * <p>The way to submit the quota adjustment operation. API/ACPN</p>

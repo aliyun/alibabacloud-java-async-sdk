@@ -56,6 +56,10 @@ public class QuotaListExportPagedResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return code
      */
@@ -113,6 +117,19 @@ public class QuotaListExportPagedResponseBody extends TeaModel {
         private Integer pageSize; 
         private String requestId; 
         private Integer total; 
+
+        private Builder() {
+        } 
+
+        private Builder(QuotaListExportPagedResponseBody model) {
+            this.code = model.code;
+            this.data = model.data;
+            this.msg = model.msg;
+            this.pageNo = model.pageNo;
+            this.pageSize = model.pageSize;
+            this.requestId = model.requestId;
+            this.total = model.total;
+        } 
 
         /**
          * <p>Status code of returning result, 200 means success.</p>
@@ -285,6 +302,18 @@ public class QuotaListExportPagedResponseBody extends TeaModel {
             private String status; 
             private String statusCode; 
             private String url; 
+
+            private Builder() {
+            } 
+
+            private Builder(Data model) {
+                this.createTime = model.createTime;
+                this.fileName = model.fileName;
+                this.message = model.message;
+                this.status = model.status;
+                this.statusCode = model.statusCode;
+                this.url = model.url;
+            } 
 
             /**
              * <p>Create Time</p>

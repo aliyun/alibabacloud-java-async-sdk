@@ -48,6 +48,10 @@ public class GetMonthlyBillResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return code
      */
@@ -89,6 +93,17 @@ public class GetMonthlyBillResponseBody extends TeaModel {
         private String message; 
         private String requestId; 
         private Boolean success; 
+
+        private Builder() {
+        } 
+
+        private Builder(GetMonthlyBillResponseBody model) {
+            this.code = model.code;
+            this.data = model.data;
+            this.message = model.message;
+            this.requestId = model.requestId;
+            this.success = model.success;
+        } 
 
         /**
          * <p>Result Code:</p>
@@ -269,6 +284,20 @@ public class GetMonthlyBillResponseBody extends TeaModel {
             private Boolean refundInvoiceFlag; 
             private String refundInvoiceLink; 
             private String spendingTime; 
+
+            private Builder() {
+            } 
+
+            private Builder(Data model) {
+                this.billLinkCSV = model.billLinkCSV;
+                this.billLinkXLSX = model.billLinkXLSX;
+                this.billOwner = model.billOwner;
+                this.billType = model.billType;
+                this.invoiceLink = model.invoiceLink;
+                this.refundInvoiceFlag = model.refundInvoiceFlag;
+                this.refundInvoiceLink = model.refundInvoiceLink;
+                this.spendingTime = model.spendingTime;
+            } 
 
             /**
              * <p>The link to download CSV file, please use HTTP Protocol.</p>

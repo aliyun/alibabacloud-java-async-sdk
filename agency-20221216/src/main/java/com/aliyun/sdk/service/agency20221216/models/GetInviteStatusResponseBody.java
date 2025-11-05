@@ -48,6 +48,10 @@ public class GetInviteStatusResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return code
      */
@@ -89,6 +93,17 @@ public class GetInviteStatusResponseBody extends TeaModel {
         private String message; 
         private String requestId; 
         private Boolean success; 
+
+        private Builder() {
+        } 
+
+        private Builder(GetInviteStatusResponseBody model) {
+            this.code = model.code;
+            this.data = model.data;
+            this.message = model.message;
+            this.requestId = model.requestId;
+            this.success = model.success;
+        } 
 
         /**
          * <p>Status Code. Error Code:</p>
@@ -255,6 +270,19 @@ public class GetInviteStatusResponseBody extends TeaModel {
             private String subAccountType; 
             private Long uid; 
 
+            private Builder() {
+            } 
+
+            private Builder(InviteStatusList model) {
+                this.associationSuccessTime = model.associationSuccessTime;
+                this.cid = model.cid;
+                this.gmtCreate = model.gmtCreate;
+                this.parentId = model.parentId;
+                this.status = model.status;
+                this.subAccountType = model.subAccountType;
+                this.uid = model.uid;
+            } 
+
             /**
              * <p>The time that Distribution Customer successfully associated with Distributor.</br>
              * This value will be empty if there is no existing association.</p>
@@ -419,6 +447,16 @@ public class GetInviteStatusResponseBody extends TeaModel {
             private String message; 
             private Boolean success; 
 
+            private Builder() {
+            } 
+
+            private Builder(InviteStatus model) {
+                this.code = model.code;
+                this.inviteStatusList = model.inviteStatusList;
+                this.message = model.message;
+                this.success = model.success;
+            } 
+
             /**
              * <p>Result Code. Value Range:</p>
              * <ul>
@@ -502,6 +540,13 @@ public class GetInviteStatusResponseBody extends TeaModel {
 
         public static final class Builder {
             private java.util.List<InviteStatus> inviteStatus; 
+
+            private Builder() {
+            } 
+
+            private Builder(Data model) {
+                this.inviteStatus = model.inviteStatus;
+            } 
 
             /**
              * InviteStatus.

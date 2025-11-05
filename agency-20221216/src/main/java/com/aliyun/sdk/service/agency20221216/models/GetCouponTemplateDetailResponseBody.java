@@ -48,6 +48,10 @@ public class GetCouponTemplateDetailResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return code
      */
@@ -89,6 +93,17 @@ public class GetCouponTemplateDetailResponseBody extends TeaModel {
         private String message; 
         private String requestId; 
         private Boolean success; 
+
+        private Builder() {
+        } 
+
+        private Builder(GetCouponTemplateDetailResponseBody model) {
+            this.code = model.code;
+            this.data = model.data;
+            this.message = model.message;
+            this.requestId = model.requestId;
+            this.success = model.success;
+        } 
 
         /**
          * Code.
@@ -311,6 +326,25 @@ public class GetCouponTemplateDetailResponseBody extends TeaModel {
             private String templateName; 
             private String validUntil; 
             private String validUntilType; 
+
+            private Builder() {
+            } 
+
+            private Builder(Data model) {
+                this.applicableProducts = model.applicableProducts;
+                this.costBearer = model.costBearer;
+                this.couponDescription = model.couponDescription;
+                this.createdTime = model.createdTime;
+                this.denomination = model.denomination;
+                this.limitPerPerson = model.limitPerPerson;
+                this.purchaseType = model.purchaseType;
+                this.reasonForApplication = model.reasonForApplication;
+                this.status = model.status;
+                this.templateId = model.templateId;
+                this.templateName = model.templateName;
+                this.validUntil = model.validUntil;
+                this.validUntilType = model.validUntilType;
+            } 
 
             /**
              * ApplicableProducts.
