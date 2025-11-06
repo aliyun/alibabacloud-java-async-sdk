@@ -236,6 +236,12 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<DeleteMcubeWhitelistResponse> deleteMcubeWhitelist(DeleteMcubeWhitelistRequest request);
 
     /**
+     * @param request the request parameters of DeleteMdsCubeTemplate  DeleteMdsCubeTemplateRequest
+     * @return DeleteMdsCubeTemplateResponse
+     */
+    CompletableFuture<DeleteMdsCubeTemplateResponse> deleteMdsCubeTemplate(DeleteMdsCubeTemplateRequest request);
+
+    /**
      * @param request the request parameters of DeleteMdsWhitelistContent  DeleteMdsWhitelistContentRequest
      * @return DeleteMdsWhitelistContentResponse
      */
