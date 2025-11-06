@@ -746,6 +746,9 @@ public class DescribeAIDBClusterAttributeResponseBody extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("CpuCores")
         private String cpuCores;
 
+        @com.aliyun.core.annotation.NameInMap("CreationTime")
+        private String creationTime;
+
         @com.aliyun.core.annotation.NameInMap("DBNodeClass")
         private String DBNodeClass;
 
@@ -785,6 +788,7 @@ public class DescribeAIDBClusterAttributeResponseBody extends TeaModel {
         private DBNodes(Builder builder) {
             this.childVolumes = builder.childVolumes;
             this.cpuCores = builder.cpuCores;
+            this.creationTime = builder.creationTime;
             this.DBNodeClass = builder.DBNodeClass;
             this.DBNodeDescription = builder.DBNodeDescription;
             this.DBNodeId = builder.DBNodeId;
@@ -819,6 +823,13 @@ public class DescribeAIDBClusterAttributeResponseBody extends TeaModel {
          */
         public String getCpuCores() {
             return this.cpuCores;
+        }
+
+        /**
+         * @return creationTime
+         */
+        public String getCreationTime() {
+            return this.creationTime;
         }
 
         /**
@@ -908,6 +919,7 @@ public class DescribeAIDBClusterAttributeResponseBody extends TeaModel {
         public static final class Builder {
             private java.util.List<ChildVolumes> childVolumes; 
             private String cpuCores; 
+            private String creationTime; 
             private String DBNodeClass; 
             private String DBNodeDescription; 
             private String DBNodeId; 
@@ -927,6 +939,7 @@ public class DescribeAIDBClusterAttributeResponseBody extends TeaModel {
             private Builder(DBNodes model) {
                 this.childVolumes = model.childVolumes;
                 this.cpuCores = model.cpuCores;
+                this.creationTime = model.creationTime;
                 this.DBNodeClass = model.DBNodeClass;
                 this.DBNodeDescription = model.DBNodeDescription;
                 this.DBNodeId = model.DBNodeId;
@@ -954,6 +967,14 @@ public class DescribeAIDBClusterAttributeResponseBody extends TeaModel {
              */
             public Builder cpuCores(String cpuCores) {
                 this.cpuCores = cpuCores;
+                return this;
+            }
+
+            /**
+             * CreationTime.
+             */
+            public Builder creationTime(String creationTime) {
+                this.creationTime = creationTime;
                 return this;
             }
 
