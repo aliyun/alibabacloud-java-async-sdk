@@ -292,8 +292,10 @@ public class EnrichRequest extends Request {
         @com.aliyun.core.annotation.NameInMap("departure_city")
         private String departureCity;
 
+        @com.aliyun.core.annotation.NameInMap("departure_date")
+        private String departureDate;
+
         @com.aliyun.core.annotation.NameInMap("departure_time")
-        @com.aliyun.core.annotation.Validation(required = true)
         private String departureTime;
 
         @com.aliyun.core.annotation.NameInMap("marketing_flight_no")
@@ -307,6 +309,7 @@ public class EnrichRequest extends Request {
             this.childCabin = builder.childCabin;
             this.departureAirport = builder.departureAirport;
             this.departureCity = builder.departureCity;
+            this.departureDate = builder.departureDate;
             this.departureTime = builder.departureTime;
             this.marketingFlightNo = builder.marketingFlightNo;
         }
@@ -362,6 +365,13 @@ public class EnrichRequest extends Request {
         }
 
         /**
+         * @return departureDate
+         */
+        public String getDepartureDate() {
+            return this.departureDate;
+        }
+
+        /**
          * @return departureTime
          */
         public String getDepartureTime() {
@@ -382,6 +392,7 @@ public class EnrichRequest extends Request {
             private String childCabin; 
             private String departureAirport; 
             private String departureCity; 
+            private String departureDate; 
             private String departureTime; 
             private String marketingFlightNo; 
 
@@ -395,6 +406,7 @@ public class EnrichRequest extends Request {
                 this.childCabin = model.childCabin;
                 this.departureAirport = model.departureAirport;
                 this.departureCity = model.departureCity;
+                this.departureDate = model.departureDate;
                 this.departureTime = model.departureTime;
                 this.marketingFlightNo = model.marketingFlightNo;
             } 
@@ -466,8 +478,15 @@ public class EnrichRequest extends Request {
             }
 
             /**
+             * departure_date.
+             */
+            public Builder departureDate(String departureDate) {
+                this.departureDate = departureDate;
+                return this;
+            }
+
+            /**
              * <p>departure time in string format (yyyy-MM-dd HH:mm:ss)</p>
-             * <p>This parameter is required.</p>
              * 
              * <strong>example:</strong>
              * <p>2023-03-10 07:55:00</p>
