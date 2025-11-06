@@ -62,6 +62,10 @@ public class ListMmsJobsRequest extends Request {
     @com.aliyun.core.annotation.NameInMap("stopped")
     private Long stopped;
 
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("timerId")
+    private Long timerId;
+
     private ListMmsJobsRequest(Builder builder) {
         super(builder);
         this.sorter = builder.sorter;
@@ -75,6 +79,7 @@ public class ListMmsJobsRequest extends Request {
         this.srcTableName = builder.srcTableName;
         this.status = builder.status;
         this.stopped = builder.stopped;
+        this.timerId = builder.timerId;
     }
 
     public static Builder builder() {
@@ -167,6 +172,13 @@ public class ListMmsJobsRequest extends Request {
         return this.stopped;
     }
 
+    /**
+     * @return timerId
+     */
+    public Long getTimerId() {
+        return this.timerId;
+    }
+
     public static final class Builder extends Request.Builder<ListMmsJobsRequest, Builder> {
         private Sorter sorter; 
         private Long sourceId; 
@@ -179,6 +191,7 @@ public class ListMmsJobsRequest extends Request {
         private String srcTableName; 
         private String status; 
         private Long stopped; 
+        private Long timerId; 
 
         private Builder() {
             super();
@@ -197,6 +210,7 @@ public class ListMmsJobsRequest extends Request {
             this.srcTableName = request.srcTableName;
             this.status = request.status;
             this.stopped = request.stopped;
+            this.timerId = request.timerId;
         } 
 
         /**
@@ -298,6 +312,15 @@ public class ListMmsJobsRequest extends Request {
         public Builder stopped(Long stopped) {
             this.putQueryParameter("stopped", stopped);
             this.stopped = stopped;
+            return this;
+        }
+
+        /**
+         * timerId.
+         */
+        public Builder timerId(Long timerId) {
+            this.putQueryParameter("timerId", timerId);
+            this.timerId = timerId;
             return this;
         }
 

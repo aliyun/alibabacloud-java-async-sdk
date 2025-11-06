@@ -26,10 +26,20 @@ public class GetProjectRequest extends Request {
     @com.aliyun.core.annotation.NameInMap("verbose")
     private Boolean verbose;
 
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("withQuotaProductType")
+    private Boolean withQuotaProductType;
+
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("withStorageTierInfo")
+    private Boolean withStorageTierInfo;
+
     private GetProjectRequest(Builder builder) {
         super(builder);
         this.projectName = builder.projectName;
         this.verbose = builder.verbose;
+        this.withQuotaProductType = builder.withQuotaProductType;
+        this.withStorageTierInfo = builder.withStorageTierInfo;
     }
 
     public static Builder builder() {
@@ -59,9 +69,25 @@ public class GetProjectRequest extends Request {
         return this.verbose;
     }
 
+    /**
+     * @return withQuotaProductType
+     */
+    public Boolean getWithQuotaProductType() {
+        return this.withQuotaProductType;
+    }
+
+    /**
+     * @return withStorageTierInfo
+     */
+    public Boolean getWithStorageTierInfo() {
+        return this.withStorageTierInfo;
+    }
+
     public static final class Builder extends Request.Builder<GetProjectRequest, Builder> {
         private String projectName; 
         private Boolean verbose; 
+        private Boolean withQuotaProductType; 
+        private Boolean withStorageTierInfo; 
 
         private Builder() {
             super();
@@ -71,6 +97,8 @@ public class GetProjectRequest extends Request {
             super(request);
             this.projectName = request.projectName;
             this.verbose = request.verbose;
+            this.withQuotaProductType = request.withQuotaProductType;
+            this.withStorageTierInfo = request.withStorageTierInfo;
         } 
 
         /**
@@ -95,6 +123,24 @@ public class GetProjectRequest extends Request {
         public Builder verbose(Boolean verbose) {
             this.putQueryParameter("verbose", verbose);
             this.verbose = verbose;
+            return this;
+        }
+
+        /**
+         * withQuotaProductType.
+         */
+        public Builder withQuotaProductType(Boolean withQuotaProductType) {
+            this.putQueryParameter("withQuotaProductType", withQuotaProductType);
+            this.withQuotaProductType = withQuotaProductType;
+            return this;
+        }
+
+        /**
+         * withStorageTierInfo.
+         */
+        public Builder withStorageTierInfo(Boolean withStorageTierInfo) {
+            this.putQueryParameter("withStorageTierInfo", withStorageTierInfo);
+            this.withStorageTierInfo = withStorageTierInfo;
             return this;
         }
 

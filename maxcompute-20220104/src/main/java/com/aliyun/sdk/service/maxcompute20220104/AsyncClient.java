@@ -100,6 +100,12 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<DeleteMmsJobResponse> deleteMmsJob(DeleteMmsJobRequest request);
 
     /**
+     * @param request the request parameters of DeleteProject  DeleteProjectRequest
+     * @return DeleteProjectResponse
+     */
+    CompletableFuture<DeleteProjectResponse> deleteProject(DeleteProjectRequest request);
+
+    /**
      * @param request the request parameters of DeleteQuotaPlan  DeleteQuotaPlanRequest
      * @return DeleteQuotaPlanResponse
      */
