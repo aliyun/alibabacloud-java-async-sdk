@@ -22,6 +22,10 @@ public class CreateQuotaRequest extends Request {
     private String allocateStrategy;
 
     @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("ClusterSpec")
+    private ClusterSpec clusterSpec;
+
+    @com.aliyun.core.annotation.Body
     @com.aliyun.core.annotation.NameInMap("Description")
     private String description;
 
@@ -60,6 +64,7 @@ public class CreateQuotaRequest extends Request {
     private CreateQuotaRequest(Builder builder) {
         super(builder);
         this.allocateStrategy = builder.allocateStrategy;
+        this.clusterSpec = builder.clusterSpec;
         this.description = builder.description;
         this.labels = builder.labels;
         this.min = builder.min;
@@ -89,6 +94,13 @@ public class CreateQuotaRequest extends Request {
      */
     public String getAllocateStrategy() {
         return this.allocateStrategy;
+    }
+
+    /**
+     * @return clusterSpec
+     */
+    public ClusterSpec getClusterSpec() {
+        return this.clusterSpec;
     }
 
     /**
@@ -156,6 +168,7 @@ public class CreateQuotaRequest extends Request {
 
     public static final class Builder extends Request.Builder<CreateQuotaRequest, Builder> {
         private String allocateStrategy; 
+        private ClusterSpec clusterSpec; 
         private String description; 
         private java.util.List<Label> labels; 
         private ResourceSpec min; 
@@ -173,6 +186,7 @@ public class CreateQuotaRequest extends Request {
         private Builder(CreateQuotaRequest request) {
             super(request);
             this.allocateStrategy = request.allocateStrategy;
+            this.clusterSpec = request.clusterSpec;
             this.description = request.description;
             this.labels = request.labels;
             this.min = request.min;
@@ -190,6 +204,15 @@ public class CreateQuotaRequest extends Request {
         public Builder allocateStrategy(String allocateStrategy) {
             this.putBodyParameter("AllocateStrategy", allocateStrategy);
             this.allocateStrategy = allocateStrategy;
+            return this;
+        }
+
+        /**
+         * ClusterSpec.
+         */
+        public Builder clusterSpec(ClusterSpec clusterSpec) {
+            this.putBodyParameter("ClusterSpec", clusterSpec);
+            this.clusterSpec = clusterSpec;
             return this;
         }
 

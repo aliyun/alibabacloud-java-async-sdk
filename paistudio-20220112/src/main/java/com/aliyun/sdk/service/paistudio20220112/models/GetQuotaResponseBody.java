@@ -50,6 +50,9 @@ public class GetQuotaResponseBody extends TeaModel {
     @com.aliyun.core.annotation.NameInMap("QueueStrategy")
     private String queueStrategy;
 
+    @com.aliyun.core.annotation.NameInMap("QuotaCluster")
+    private QuotaCluster quotaCluster;
+
     @com.aliyun.core.annotation.NameInMap("QuotaConfig")
     private QuotaConfig quotaConfig;
 
@@ -101,6 +104,7 @@ public class GetQuotaResponseBody extends TeaModel {
         this.min = builder.min;
         this.parentQuotaId = builder.parentQuotaId;
         this.queueStrategy = builder.queueStrategy;
+        this.quotaCluster = builder.quotaCluster;
         this.quotaConfig = builder.quotaConfig;
         this.quotaDetails = builder.quotaDetails;
         this.quotaId = builder.quotaId;
@@ -206,6 +210,13 @@ public class GetQuotaResponseBody extends TeaModel {
     }
 
     /**
+     * @return quotaCluster
+     */
+    public QuotaCluster getQuotaCluster() {
+        return this.quotaCluster;
+    }
+
+    /**
      * @return quotaConfig
      */
     public QuotaConfig getQuotaConfig() {
@@ -308,6 +319,7 @@ public class GetQuotaResponseBody extends TeaModel {
         private ResourceSpec min; 
         private String parentQuotaId; 
         private String queueStrategy; 
+        private QuotaCluster quotaCluster; 
         private QuotaConfig quotaConfig; 
         private QuotaDetails quotaDetails; 
         private String quotaId; 
@@ -337,6 +349,7 @@ public class GetQuotaResponseBody extends TeaModel {
             this.min = model.min;
             this.parentQuotaId = model.parentQuotaId;
             this.queueStrategy = model.queueStrategy;
+            this.quotaCluster = model.quotaCluster;
             this.quotaConfig = model.quotaConfig;
             this.quotaDetails = model.quotaDetails;
             this.quotaId = model.quotaId;
@@ -437,6 +450,14 @@ public class GetQuotaResponseBody extends TeaModel {
          */
         public Builder queueStrategy(String queueStrategy) {
             this.queueStrategy = queueStrategy;
+            return this;
+        }
+
+        /**
+         * QuotaCluster.
+         */
+        public Builder quotaCluster(QuotaCluster quotaCluster) {
+            this.quotaCluster = quotaCluster;
             return this;
         }
 

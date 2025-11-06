@@ -18,6 +18,10 @@ import com.aliyun.sdk.gateway.pop.models.*;
  */
 public class ListQuotasRequest extends Request {
     @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ClusterType")
+    private String clusterType;
+
+    @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("HasResource")
     private String hasResource;
 
@@ -83,6 +87,7 @@ public class ListQuotasRequest extends Request {
 
     private ListQuotasRequest(Builder builder) {
         super(builder);
+        this.clusterType = builder.clusterType;
         this.hasResource = builder.hasResource;
         this.labels = builder.labels;
         this.layoutMode = builder.layoutMode;
@@ -112,6 +117,13 @@ public class ListQuotasRequest extends Request {
 @Override
     public Builder toBuilder() {
         return new Builder(this);
+    }
+
+    /**
+     * @return clusterType
+     */
+    public String getClusterType() {
+        return this.clusterType;
     }
 
     /**
@@ -227,6 +239,7 @@ public class ListQuotasRequest extends Request {
     }
 
     public static final class Builder extends Request.Builder<ListQuotasRequest, Builder> {
+        private String clusterType; 
         private String hasResource; 
         private String labels; 
         private String layoutMode; 
@@ -250,6 +263,7 @@ public class ListQuotasRequest extends Request {
 
         private Builder(ListQuotasRequest request) {
             super(request);
+            this.clusterType = request.clusterType;
             this.hasResource = request.hasResource;
             this.labels = request.labels;
             this.layoutMode = request.layoutMode;
@@ -267,6 +281,15 @@ public class ListQuotasRequest extends Request {
             this.workspaceIds = request.workspaceIds;
             this.workspaceName = request.workspaceName;
         } 
+
+        /**
+         * ClusterType.
+         */
+        public Builder clusterType(String clusterType) {
+            this.putQueryParameter("ClusterType", clusterType);
+            this.clusterType = clusterType;
+            return this;
+        }
 
         /**
          * HasResource.
