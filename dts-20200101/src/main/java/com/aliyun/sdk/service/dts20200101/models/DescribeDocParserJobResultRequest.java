@@ -22,6 +22,10 @@ public class DescribeDocParserJobResultRequest extends Request {
     private String dtsJobId;
 
     @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("RagInstanceId")
+    private String ragInstanceId;
+
+    @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("RegionId")
     private String regionId;
 
@@ -32,6 +36,7 @@ public class DescribeDocParserJobResultRequest extends Request {
     private DescribeDocParserJobResultRequest(Builder builder) {
         super(builder);
         this.dtsJobId = builder.dtsJobId;
+        this.ragInstanceId = builder.ragInstanceId;
         this.regionId = builder.regionId;
         this.resourceGroupId = builder.resourceGroupId;
     }
@@ -57,6 +62,13 @@ public class DescribeDocParserJobResultRequest extends Request {
     }
 
     /**
+     * @return ragInstanceId
+     */
+    public String getRagInstanceId() {
+        return this.ragInstanceId;
+    }
+
+    /**
      * @return regionId
      */
     public String getRegionId() {
@@ -72,6 +84,7 @@ public class DescribeDocParserJobResultRequest extends Request {
 
     public static final class Builder extends Request.Builder<DescribeDocParserJobResultRequest, Builder> {
         private String dtsJobId; 
+        private String ragInstanceId; 
         private String regionId; 
         private String resourceGroupId; 
 
@@ -82,6 +95,7 @@ public class DescribeDocParserJobResultRequest extends Request {
         private Builder(DescribeDocParserJobResultRequest request) {
             super(request);
             this.dtsJobId = request.dtsJobId;
+            this.ragInstanceId = request.ragInstanceId;
             this.regionId = request.regionId;
             this.resourceGroupId = request.resourceGroupId;
         } 
@@ -92,6 +106,15 @@ public class DescribeDocParserJobResultRequest extends Request {
         public Builder dtsJobId(String dtsJobId) {
             this.putQueryParameter("DtsJobId", dtsJobId);
             this.dtsJobId = dtsJobId;
+            return this;
+        }
+
+        /**
+         * RagInstanceId.
+         */
+        public Builder ragInstanceId(String ragInstanceId) {
+            this.putQueryParameter("RagInstanceId", ragInstanceId);
+            this.ragInstanceId = ragInstanceId;
             return this;
         }
 
