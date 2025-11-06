@@ -50,6 +50,12 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<DescribeAppDomainDnsRecordResponse> describeAppDomainDnsRecord(DescribeAppDomainDnsRecordRequest request);
 
     /**
+     * @param request the request parameters of DispatchConsoleAPIForPartner  DispatchConsoleAPIForPartnerRequest
+     * @return DispatchConsoleAPIForPartnerResponse
+     */
+    CompletableFuture<DispatchConsoleAPIForPartnerResponse> dispatchConsoleAPIForPartner(DispatchConsoleAPIForPartnerRequest request);
+
+    /**
      * @param request the request parameters of GetCreateLogoTask  GetCreateLogoTaskRequest
      * @return GetCreateLogoTaskResponse
      */
@@ -66,6 +72,12 @@ public interface AsyncClient extends SdkAutoCloseable {
      * @return GetIcpFilingInfoForPartnerResponse
      */
     CompletableFuture<GetIcpFilingInfoForPartnerResponse> getIcpFilingInfoForPartner(GetIcpFilingInfoForPartnerRequest request);
+
+    /**
+     * @param request the request parameters of GetUserAccessTokenForPartner  GetUserAccessTokenForPartnerRequest
+     * @return GetUserAccessTokenForPartnerResponse
+     */
+    CompletableFuture<GetUserAccessTokenForPartnerResponse> getUserAccessTokenForPartner(GetUserAccessTokenForPartnerRequest request);
 
     /**
      * @param request the request parameters of GetUserTmpIdentityForPartner  GetUserTmpIdentityForPartnerRequest

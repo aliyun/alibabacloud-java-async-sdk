@@ -75,6 +75,7 @@ public class SearchImageRequest extends Request {
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("Text")
+    @com.aliyun.core.annotation.Validation(maxLength = 500, minLength = 1)
     private String text;
 
     private SearchImageRequest(Builder builder) {
