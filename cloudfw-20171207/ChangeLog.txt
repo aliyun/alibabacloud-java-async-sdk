@@ -1,3 +1,6 @@
+2025-11-06 Version: 7.0.5
+- Generated java-async 2017-12-07 for Cloudfw.
+
 2025-11-05 Version: 7.0.4
 - Generated java-async 2017-12-07 for Cloudfw.
 

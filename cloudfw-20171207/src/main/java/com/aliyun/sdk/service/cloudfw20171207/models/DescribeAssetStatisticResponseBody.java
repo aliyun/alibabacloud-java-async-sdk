@@ -193,9 +193,87 @@ public class DescribeAssetStatisticResponseBody extends TeaModel {
      *
      * <p>DescribeAssetStatisticResponseBody</p>
      */
+    public static class CfwTotalGeneralInstanceRegionStatistic extends TeaModel {
+        @com.aliyun.core.annotation.NameInMap("MemberList")
+        private java.util.List<String> memberList;
+
+        @com.aliyun.core.annotation.NameInMap("RegionNo")
+        private String regionNo;
+
+        private CfwTotalGeneralInstanceRegionStatistic(Builder builder) {
+            this.memberList = builder.memberList;
+            this.regionNo = builder.regionNo;
+        }
+
+        public static Builder builder() {
+            return new Builder();
+        }
+
+        public static CfwTotalGeneralInstanceRegionStatistic create() {
+            return builder().build();
+        }
+
+        /**
+         * @return memberList
+         */
+        public java.util.List<String> getMemberList() {
+            return this.memberList;
+        }
+
+        /**
+         * @return regionNo
+         */
+        public String getRegionNo() {
+            return this.regionNo;
+        }
+
+        public static final class Builder {
+            private java.util.List<String> memberList; 
+            private String regionNo; 
+
+            private Builder() {
+            } 
+
+            private Builder(CfwTotalGeneralInstanceRegionStatistic model) {
+                this.memberList = model.memberList;
+                this.regionNo = model.regionNo;
+            } 
+
+            /**
+             * MemberList.
+             */
+            public Builder memberList(java.util.List<String> memberList) {
+                this.memberList = memberList;
+                return this;
+            }
+
+            /**
+             * RegionNo.
+             */
+            public Builder regionNo(String regionNo) {
+                this.regionNo = regionNo;
+                return this;
+            }
+
+            public CfwTotalGeneralInstanceRegionStatistic build() {
+                return new CfwTotalGeneralInstanceRegionStatistic(this);
+            } 
+
+        } 
+
+    }
+    /**
+     * 
+     * {@link DescribeAssetStatisticResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeAssetStatisticResponseBody</p>
+     */
     public static class GeneralInstanceSpecStatistic extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("CfwGeneralInstanceRegionStatistic")
         private java.util.List<CfwGeneralInstanceRegionStatistic> cfwGeneralInstanceRegionStatistic;
+
+        @com.aliyun.core.annotation.NameInMap("CfwTotalGeneralInstanceRegionStatistic")
+        private java.util.List<CfwTotalGeneralInstanceRegionStatistic> cfwTotalGeneralInstanceRegionStatistic;
 
         @com.aliyun.core.annotation.NameInMap("TotalCfwGeneralInstanceCnt")
         private Integer totalCfwGeneralInstanceCnt;
@@ -217,6 +295,7 @@ public class DescribeAssetStatisticResponseBody extends TeaModel {
 
         private GeneralInstanceSpecStatistic(Builder builder) {
             this.cfwGeneralInstanceRegionStatistic = builder.cfwGeneralInstanceRegionStatistic;
+            this.cfwTotalGeneralInstanceRegionStatistic = builder.cfwTotalGeneralInstanceRegionStatistic;
             this.totalCfwGeneralInstanceCnt = builder.totalCfwGeneralInstanceCnt;
             this.totalCfwGeneralInstanceUsedCnt = builder.totalCfwGeneralInstanceUsedCnt;
             this.totalGeneralInstanceUsedCnt = builder.totalGeneralInstanceUsedCnt;
@@ -238,6 +317,13 @@ public class DescribeAssetStatisticResponseBody extends TeaModel {
          */
         public java.util.List<CfwGeneralInstanceRegionStatistic> getCfwGeneralInstanceRegionStatistic() {
             return this.cfwGeneralInstanceRegionStatistic;
+        }
+
+        /**
+         * @return cfwTotalGeneralInstanceRegionStatistic
+         */
+        public java.util.List<CfwTotalGeneralInstanceRegionStatistic> getCfwTotalGeneralInstanceRegionStatistic() {
+            return this.cfwTotalGeneralInstanceRegionStatistic;
         }
 
         /**
@@ -284,6 +370,7 @@ public class DescribeAssetStatisticResponseBody extends TeaModel {
 
         public static final class Builder {
             private java.util.List<CfwGeneralInstanceRegionStatistic> cfwGeneralInstanceRegionStatistic; 
+            private java.util.List<CfwTotalGeneralInstanceRegionStatistic> cfwTotalGeneralInstanceRegionStatistic; 
             private Integer totalCfwGeneralInstanceCnt; 
             private Integer totalCfwGeneralInstanceUsedCnt; 
             private Integer totalGeneralInstanceUsedCnt; 
@@ -296,6 +383,7 @@ public class DescribeAssetStatisticResponseBody extends TeaModel {
 
             private Builder(GeneralInstanceSpecStatistic model) {
                 this.cfwGeneralInstanceRegionStatistic = model.cfwGeneralInstanceRegionStatistic;
+                this.cfwTotalGeneralInstanceRegionStatistic = model.cfwTotalGeneralInstanceRegionStatistic;
                 this.totalCfwGeneralInstanceCnt = model.totalCfwGeneralInstanceCnt;
                 this.totalCfwGeneralInstanceUsedCnt = model.totalCfwGeneralInstanceUsedCnt;
                 this.totalGeneralInstanceUsedCnt = model.totalGeneralInstanceUsedCnt;
@@ -309,6 +397,14 @@ public class DescribeAssetStatisticResponseBody extends TeaModel {
              */
             public Builder cfwGeneralInstanceRegionStatistic(java.util.List<CfwGeneralInstanceRegionStatistic> cfwGeneralInstanceRegionStatistic) {
                 this.cfwGeneralInstanceRegionStatistic = cfwGeneralInstanceRegionStatistic;
+                return this;
+            }
+
+            /**
+             * CfwTotalGeneralInstanceRegionStatistic.
+             */
+            public Builder cfwTotalGeneralInstanceRegionStatistic(java.util.List<CfwTotalGeneralInstanceRegionStatistic> cfwTotalGeneralInstanceRegionStatistic) {
+                this.cfwTotalGeneralInstanceRegionStatistic = cfwTotalGeneralInstanceRegionStatistic;
                 return this;
             }
 
