@@ -120,6 +120,12 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<CreateExperimentResponse> createExperiment(CreateExperimentRequest request);
 
     /**
+     * @param request the request parameters of CreateImageBuild  CreateImageBuildRequest
+     * @return CreateImageBuildResponse
+     */
+    CompletableFuture<CreateImageBuildResponse> createImageBuild(CreateImageBuildRequest request);
+
+    /**
      * @param request the request parameters of CreateMember  CreateMemberRequest
      * @return CreateMemberResponse
      */
