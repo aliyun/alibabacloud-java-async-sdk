@@ -12,11 +12,11 @@ import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
  * 
- * {@link CreateMdsMiniprogramTaskRequest} extends {@link RequestModel}
+ * {@link CreateMdsCubeTaskRequest} extends {@link RequestModel}
  *
- * <p>CreateMdsMiniprogramTaskRequest</p>
+ * <p>CreateMdsCubeTaskRequest</p>
  */
-public class CreateMdsMiniprogramTaskRequest extends Request {
+public class CreateMdsCubeTaskRequest extends Request {
     @com.aliyun.core.annotation.Host
     @com.aliyun.core.annotation.NameInMap("RegionId")
     private String regionId;
@@ -35,37 +35,23 @@ public class CreateMdsMiniprogramTaskRequest extends Request {
 
     @com.aliyun.core.annotation.Body
     @com.aliyun.core.annotation.NameInMap("GreyNum")
-    private String greyNum;
-
-    @com.aliyun.core.annotation.Body
-    @com.aliyun.core.annotation.NameInMap("H5Id")
-    private String h5Id;
-
-    @com.aliyun.core.annotation.Body
-    @com.aliyun.core.annotation.NameInMap("Id")
-    private Long id;
-
-    @com.aliyun.core.annotation.Body
-    @com.aliyun.core.annotation.NameInMap("Memo")
-    private String memo;
-
-    @com.aliyun.core.annotation.Body
-    @com.aliyun.core.annotation.NameInMap("PackageId")
-    @com.aliyun.core.annotation.Validation(required = true)
-    private Long packageId;
+    private Integer greyNum;
 
     @com.aliyun.core.annotation.Body
     @com.aliyun.core.annotation.NameInMap("PublishMode")
-    private String publishMode;
+    private Integer publishMode;
 
     @com.aliyun.core.annotation.Body
     @com.aliyun.core.annotation.NameInMap("PublishType")
-    @com.aliyun.core.annotation.Validation(required = true)
-    private Long publishType;
+    private Integer publishType;
 
     @com.aliyun.core.annotation.Body
-    @com.aliyun.core.annotation.NameInMap("SyncMode")
-    private String syncMode;
+    @com.aliyun.core.annotation.NameInMap("TaskDesc")
+    private String taskDesc;
+
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("TemplateResourceId")
+    private Long templateResourceId;
 
     @com.aliyun.core.annotation.Body
     @com.aliyun.core.annotation.NameInMap("TenantId")
@@ -79,20 +65,17 @@ public class CreateMdsMiniprogramTaskRequest extends Request {
     @com.aliyun.core.annotation.NameInMap("WorkspaceId")
     private String workspaceId;
 
-    private CreateMdsMiniprogramTaskRequest(Builder builder) {
+    private CreateMdsCubeTaskRequest(Builder builder) {
         super(builder);
         this.regionId = builder.regionId;
         this.appId = builder.appId;
         this.greyConfigInfo = builder.greyConfigInfo;
         this.greyEndtimeData = builder.greyEndtimeData;
         this.greyNum = builder.greyNum;
-        this.h5Id = builder.h5Id;
-        this.id = builder.id;
-        this.memo = builder.memo;
-        this.packageId = builder.packageId;
         this.publishMode = builder.publishMode;
         this.publishType = builder.publishType;
-        this.syncMode = builder.syncMode;
+        this.taskDesc = builder.taskDesc;
+        this.templateResourceId = builder.templateResourceId;
         this.tenantId = builder.tenantId;
         this.whitelistIds = builder.whitelistIds;
         this.workspaceId = builder.workspaceId;
@@ -102,7 +85,7 @@ public class CreateMdsMiniprogramTaskRequest extends Request {
         return new Builder();
     }
 
-    public static CreateMdsMiniprogramTaskRequest create() {
+    public static CreateMdsCubeTaskRequest create() {
         return builder().build();
     }
 
@@ -142,57 +125,36 @@ public class CreateMdsMiniprogramTaskRequest extends Request {
     /**
      * @return greyNum
      */
-    public String getGreyNum() {
+    public Integer getGreyNum() {
         return this.greyNum;
-    }
-
-    /**
-     * @return h5Id
-     */
-    public String getH5Id() {
-        return this.h5Id;
-    }
-
-    /**
-     * @return id
-     */
-    public Long getId() {
-        return this.id;
-    }
-
-    /**
-     * @return memo
-     */
-    public String getMemo() {
-        return this.memo;
-    }
-
-    /**
-     * @return packageId
-     */
-    public Long getPackageId() {
-        return this.packageId;
     }
 
     /**
      * @return publishMode
      */
-    public String getPublishMode() {
+    public Integer getPublishMode() {
         return this.publishMode;
     }
 
     /**
      * @return publishType
      */
-    public Long getPublishType() {
+    public Integer getPublishType() {
         return this.publishType;
     }
 
     /**
-     * @return syncMode
+     * @return taskDesc
      */
-    public String getSyncMode() {
-        return this.syncMode;
+    public String getTaskDesc() {
+        return this.taskDesc;
+    }
+
+    /**
+     * @return templateResourceId
+     */
+    public Long getTemplateResourceId() {
+        return this.templateResourceId;
     }
 
     /**
@@ -216,19 +178,16 @@ public class CreateMdsMiniprogramTaskRequest extends Request {
         return this.workspaceId;
     }
 
-    public static final class Builder extends Request.Builder<CreateMdsMiniprogramTaskRequest, Builder> {
+    public static final class Builder extends Request.Builder<CreateMdsCubeTaskRequest, Builder> {
         private String regionId; 
         private String appId; 
         private String greyConfigInfo; 
         private String greyEndtimeData; 
-        private String greyNum; 
-        private String h5Id; 
-        private Long id; 
-        private String memo; 
-        private Long packageId; 
-        private String publishMode; 
-        private Long publishType; 
-        private String syncMode; 
+        private Integer greyNum; 
+        private Integer publishMode; 
+        private Integer publishType; 
+        private String taskDesc; 
+        private Long templateResourceId; 
         private String tenantId; 
         private String whitelistIds; 
         private String workspaceId; 
@@ -237,20 +196,17 @@ public class CreateMdsMiniprogramTaskRequest extends Request {
             super();
         } 
 
-        private Builder(CreateMdsMiniprogramTaskRequest request) {
+        private Builder(CreateMdsCubeTaskRequest request) {
             super(request);
             this.regionId = request.regionId;
             this.appId = request.appId;
             this.greyConfigInfo = request.greyConfigInfo;
             this.greyEndtimeData = request.greyEndtimeData;
             this.greyNum = request.greyNum;
-            this.h5Id = request.h5Id;
-            this.id = request.id;
-            this.memo = request.memo;
-            this.packageId = request.packageId;
             this.publishMode = request.publishMode;
             this.publishType = request.publishType;
-            this.syncMode = request.syncMode;
+            this.taskDesc = request.taskDesc;
+            this.templateResourceId = request.templateResourceId;
             this.tenantId = request.tenantId;
             this.whitelistIds = request.whitelistIds;
             this.workspaceId = request.workspaceId;
@@ -295,72 +251,45 @@ public class CreateMdsMiniprogramTaskRequest extends Request {
         /**
          * GreyNum.
          */
-        public Builder greyNum(String greyNum) {
+        public Builder greyNum(Integer greyNum) {
             this.putBodyParameter("GreyNum", greyNum);
             this.greyNum = greyNum;
             return this;
         }
 
         /**
-         * H5Id.
-         */
-        public Builder h5Id(String h5Id) {
-            this.putBodyParameter("H5Id", h5Id);
-            this.h5Id = h5Id;
-            return this;
-        }
-
-        /**
-         * Id.
-         */
-        public Builder id(Long id) {
-            this.putBodyParameter("Id", id);
-            this.id = id;
-            return this;
-        }
-
-        /**
-         * Memo.
-         */
-        public Builder memo(String memo) {
-            this.putBodyParameter("Memo", memo);
-            this.memo = memo;
-            return this;
-        }
-
-        /**
-         * <p>This parameter is required.</p>
-         */
-        public Builder packageId(Long packageId) {
-            this.putBodyParameter("PackageId", packageId);
-            this.packageId = packageId;
-            return this;
-        }
-
-        /**
          * PublishMode.
          */
-        public Builder publishMode(String publishMode) {
+        public Builder publishMode(Integer publishMode) {
             this.putBodyParameter("PublishMode", publishMode);
             this.publishMode = publishMode;
             return this;
         }
 
         /**
-         * <p>This parameter is required.</p>
+         * PublishType.
          */
-        public Builder publishType(Long publishType) {
+        public Builder publishType(Integer publishType) {
             this.putBodyParameter("PublishType", publishType);
             this.publishType = publishType;
             return this;
         }
 
         /**
-         * SyncMode.
+         * TaskDesc.
          */
-        public Builder syncMode(String syncMode) {
-            this.putBodyParameter("SyncMode", syncMode);
-            this.syncMode = syncMode;
+        public Builder taskDesc(String taskDesc) {
+            this.putBodyParameter("TaskDesc", taskDesc);
+            this.taskDesc = taskDesc;
+            return this;
+        }
+
+        /**
+         * TemplateResourceId.
+         */
+        public Builder templateResourceId(Long templateResourceId) {
+            this.putBodyParameter("TemplateResourceId", templateResourceId);
+            this.templateResourceId = templateResourceId;
             return this;
         }
 
@@ -392,8 +321,8 @@ public class CreateMdsMiniprogramTaskRequest extends Request {
         }
 
         @Override
-        public CreateMdsMiniprogramTaskRequest build() {
-            return new CreateMdsMiniprogramTaskRequest(this);
+        public CreateMdsCubeTaskRequest build() {
+            return new CreateMdsCubeTaskRequest(this);
         } 
 
     } 

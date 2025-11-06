@@ -54,6 +54,10 @@ public class CreateMcubeUpgradePackageRequest extends Request {
     private String fileUrl;
 
     @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("HarmonyLabel")
+    private String harmonyLabel;
+
+    @com.aliyun.core.annotation.Body
     @com.aliyun.core.annotation.NameInMap("IconFileUrl")
     private String iconFileUrl;
 
@@ -68,6 +72,10 @@ public class CreateMcubeUpgradePackageRequest extends Request {
     @com.aliyun.core.annotation.Body
     @com.aliyun.core.annotation.NameInMap("IsEnterprise")
     private Integer isEnterprise;
+
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("LargeIconUrl")
+    private String largeIconUrl;
 
     @com.aliyun.core.annotation.Body
     @com.aliyun.core.annotation.NameInMap("NeedCheck")
@@ -104,10 +112,12 @@ public class CreateMcubeUpgradePackageRequest extends Request {
         this.desc = builder.desc;
         this.downloadUrl = builder.downloadUrl;
         this.fileUrl = builder.fileUrl;
+        this.harmonyLabel = builder.harmonyLabel;
         this.iconFileUrl = builder.iconFileUrl;
         this.installAmount = builder.installAmount;
         this.iosSymbolfileUrl = builder.iosSymbolfileUrl;
         this.isEnterprise = builder.isEnterprise;
+        this.largeIconUrl = builder.largeIconUrl;
         this.needCheck = builder.needCheck;
         this.onexFlag = builder.onexFlag;
         this.platform = builder.platform;
@@ -193,6 +203,13 @@ public class CreateMcubeUpgradePackageRequest extends Request {
     }
 
     /**
+     * @return harmonyLabel
+     */
+    public String getHarmonyLabel() {
+        return this.harmonyLabel;
+    }
+
+    /**
      * @return iconFileUrl
      */
     public String getIconFileUrl() {
@@ -218,6 +235,13 @@ public class CreateMcubeUpgradePackageRequest extends Request {
      */
     public Integer getIsEnterprise() {
         return this.isEnterprise;
+    }
+
+    /**
+     * @return largeIconUrl
+     */
+    public String getLargeIconUrl() {
+        return this.largeIconUrl;
     }
 
     /**
@@ -272,10 +296,12 @@ public class CreateMcubeUpgradePackageRequest extends Request {
         private String desc; 
         private String downloadUrl; 
         private String fileUrl; 
+        private String harmonyLabel; 
         private String iconFileUrl; 
         private Integer installAmount; 
         private String iosSymbolfileUrl; 
         private Integer isEnterprise; 
+        private String largeIconUrl; 
         private Integer needCheck; 
         private Boolean onexFlag; 
         private String platform; 
@@ -298,10 +324,12 @@ public class CreateMcubeUpgradePackageRequest extends Request {
             this.desc = request.desc;
             this.downloadUrl = request.downloadUrl;
             this.fileUrl = request.fileUrl;
+            this.harmonyLabel = request.harmonyLabel;
             this.iconFileUrl = request.iconFileUrl;
             this.installAmount = request.installAmount;
             this.iosSymbolfileUrl = request.iosSymbolfileUrl;
             this.isEnterprise = request.isEnterprise;
+            this.largeIconUrl = request.largeIconUrl;
             this.needCheck = request.needCheck;
             this.onexFlag = request.onexFlag;
             this.platform = request.platform;
@@ -392,6 +420,15 @@ public class CreateMcubeUpgradePackageRequest extends Request {
         }
 
         /**
+         * HarmonyLabel.
+         */
+        public Builder harmonyLabel(String harmonyLabel) {
+            this.putBodyParameter("HarmonyLabel", harmonyLabel);
+            this.harmonyLabel = harmonyLabel;
+            return this;
+        }
+
+        /**
          * IconFileUrl.
          */
         public Builder iconFileUrl(String iconFileUrl) {
@@ -424,6 +461,15 @@ public class CreateMcubeUpgradePackageRequest extends Request {
         public Builder isEnterprise(Integer isEnterprise) {
             this.putBodyParameter("IsEnterprise", isEnterprise);
             this.isEnterprise = isEnterprise;
+            return this;
+        }
+
+        /**
+         * LargeIconUrl.
+         */
+        public Builder largeIconUrl(String largeIconUrl) {
+            this.putBodyParameter("LargeIconUrl", largeIconUrl);
+            this.largeIconUrl = largeIconUrl;
             return this;
         }
 

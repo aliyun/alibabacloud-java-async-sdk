@@ -12,44 +12,36 @@ import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
  * 
- * {@link UploadUserAppToMsaRequest} extends {@link RequestModel}
+ * {@link PushQueryDeviceStateRequest} extends {@link RequestModel}
  *
- * <p>UploadUserAppToMsaRequest</p>
+ * <p>PushQueryDeviceStateRequest</p>
  */
-public class UploadUserAppToMsaRequest extends Request {
-    @com.aliyun.core.annotation.Host
-    @com.aliyun.core.annotation.NameInMap("RegionId")
-    private String regionId;
-
+public class PushQueryDeviceStateRequest extends Request {
     @com.aliyun.core.annotation.Body
     @com.aliyun.core.annotation.NameInMap("AppId")
-    @com.aliyun.core.annotation.Validation(required = true)
     private String appId;
 
     @com.aliyun.core.annotation.Body
-    @com.aliyun.core.annotation.NameInMap("FileName")
-    private String fileName;
+    @com.aliyun.core.annotation.NameInMap("Target")
+    private String target;
 
     @com.aliyun.core.annotation.Body
-    @com.aliyun.core.annotation.NameInMap("FileUrl")
-    private String fileUrl;
+    @com.aliyun.core.annotation.NameInMap("TargetType")
+    private Integer targetType;
 
     @com.aliyun.core.annotation.Body
     @com.aliyun.core.annotation.NameInMap("TenantId")
-    @com.aliyun.core.annotation.Validation(required = true)
     private String tenantId;
 
     @com.aliyun.core.annotation.Body
     @com.aliyun.core.annotation.NameInMap("WorkspaceId")
-    @com.aliyun.core.annotation.Validation(required = true)
     private String workspaceId;
 
-    private UploadUserAppToMsaRequest(Builder builder) {
+    private PushQueryDeviceStateRequest(Builder builder) {
         super(builder);
-        this.regionId = builder.regionId;
         this.appId = builder.appId;
-        this.fileName = builder.fileName;
-        this.fileUrl = builder.fileUrl;
+        this.target = builder.target;
+        this.targetType = builder.targetType;
         this.tenantId = builder.tenantId;
         this.workspaceId = builder.workspaceId;
     }
@@ -58,20 +50,13 @@ public class UploadUserAppToMsaRequest extends Request {
         return new Builder();
     }
 
-    public static UploadUserAppToMsaRequest create() {
+    public static PushQueryDeviceStateRequest create() {
         return builder().build();
     }
 
 @Override
     public Builder toBuilder() {
         return new Builder(this);
-    }
-
-    /**
-     * @return regionId
-     */
-    public String getRegionId() {
-        return this.regionId;
     }
 
     /**
@@ -82,17 +67,17 @@ public class UploadUserAppToMsaRequest extends Request {
     }
 
     /**
-     * @return fileName
+     * @return target
      */
-    public String getFileName() {
-        return this.fileName;
+    public String getTarget() {
+        return this.target;
     }
 
     /**
-     * @return fileUrl
+     * @return targetType
      */
-    public String getFileUrl() {
-        return this.fileUrl;
+    public Integer getTargetType() {
+        return this.targetType;
     }
 
     /**
@@ -109,11 +94,10 @@ public class UploadUserAppToMsaRequest extends Request {
         return this.workspaceId;
     }
 
-    public static final class Builder extends Request.Builder<UploadUserAppToMsaRequest, Builder> {
-        private String regionId; 
+    public static final class Builder extends Request.Builder<PushQueryDeviceStateRequest, Builder> {
         private String appId; 
-        private String fileName; 
-        private String fileUrl; 
+        private String target; 
+        private Integer targetType; 
         private String tenantId; 
         private String workspaceId; 
 
@@ -121,27 +105,17 @@ public class UploadUserAppToMsaRequest extends Request {
             super();
         } 
 
-        private Builder(UploadUserAppToMsaRequest request) {
+        private Builder(PushQueryDeviceStateRequest request) {
             super(request);
-            this.regionId = request.regionId;
             this.appId = request.appId;
-            this.fileName = request.fileName;
-            this.fileUrl = request.fileUrl;
+            this.target = request.target;
+            this.targetType = request.targetType;
             this.tenantId = request.tenantId;
             this.workspaceId = request.workspaceId;
         } 
 
         /**
-         * RegionId.
-         */
-        public Builder regionId(String regionId) {
-            this.putHostParameter("RegionId", regionId);
-            this.regionId = regionId;
-            return this;
-        }
-
-        /**
-         * <p>This parameter is required.</p>
+         * AppId.
          */
         public Builder appId(String appId) {
             this.putBodyParameter("AppId", appId);
@@ -150,25 +124,25 @@ public class UploadUserAppToMsaRequest extends Request {
         }
 
         /**
-         * FileName.
+         * Target.
          */
-        public Builder fileName(String fileName) {
-            this.putBodyParameter("FileName", fileName);
-            this.fileName = fileName;
+        public Builder target(String target) {
+            this.putBodyParameter("Target", target);
+            this.target = target;
             return this;
         }
 
         /**
-         * FileUrl.
+         * TargetType.
          */
-        public Builder fileUrl(String fileUrl) {
-            this.putBodyParameter("FileUrl", fileUrl);
-            this.fileUrl = fileUrl;
+        public Builder targetType(Integer targetType) {
+            this.putBodyParameter("TargetType", targetType);
+            this.targetType = targetType;
             return this;
         }
 
         /**
-         * <p>This parameter is required.</p>
+         * TenantId.
          */
         public Builder tenantId(String tenantId) {
             this.putBodyParameter("TenantId", tenantId);
@@ -177,7 +151,7 @@ public class UploadUserAppToMsaRequest extends Request {
         }
 
         /**
-         * <p>This parameter is required.</p>
+         * WorkspaceId.
          */
         public Builder workspaceId(String workspaceId) {
             this.putBodyParameter("WorkspaceId", workspaceId);
@@ -186,8 +160,8 @@ public class UploadUserAppToMsaRequest extends Request {
         }
 
         @Override
-        public UploadUserAppToMsaRequest build() {
-            return new UploadUserAppToMsaRequest(this);
+        public PushQueryDeviceStateRequest build() {
+            return new PushQueryDeviceStateRequest(this);
         } 
 
     } 

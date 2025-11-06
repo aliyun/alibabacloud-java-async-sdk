@@ -50,6 +50,12 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<ChangeMcubePublicTaskStatusResponse> changeMcubePublicTaskStatus(ChangeMcubePublicTaskStatusRequest request);
 
     /**
+     * @param request the request parameters of ChangeMdsCubeTaskStatus  ChangeMdsCubeTaskStatusRequest
+     * @return ChangeMdsCubeTaskStatusResponse
+     */
+    CompletableFuture<ChangeMdsCubeTaskStatusResponse> changeMdsCubeTaskStatus(ChangeMdsCubeTaskStatusRequest request);
+
+    /**
      * @param request the request parameters of CopyMcdpGroup  CopyMcdpGroupRequest
      * @return CopyMcdpGroupResponse
      */
@@ -140,6 +146,24 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<CreateMcubeWhitelistForIdeResponse> createMcubeWhitelistForIde(CreateMcubeWhitelistForIdeRequest request);
 
     /**
+     * @param request the request parameters of CreateMdsCubeResource  CreateMdsCubeResourceRequest
+     * @return CreateMdsCubeResourceResponse
+     */
+    CompletableFuture<CreateMdsCubeResourceResponse> createMdsCubeResource(CreateMdsCubeResourceRequest request);
+
+    /**
+     * @param request the request parameters of CreateMdsCubeTask  CreateMdsCubeTaskRequest
+     * @return CreateMdsCubeTaskResponse
+     */
+    CompletableFuture<CreateMdsCubeTaskResponse> createMdsCubeTask(CreateMdsCubeTaskRequest request);
+
+    /**
+     * @param request the request parameters of CreateMdsCubeTemplate  CreateMdsCubeTemplateRequest
+     * @return CreateMdsCubeTemplateResponse
+     */
+    CompletableFuture<CreateMdsCubeTemplateResponse> createMdsCubeTemplate(CreateMdsCubeTemplateRequest request);
+
+    /**
      * @param request the request parameters of CreateMdsMiniprogramTask  CreateMdsMiniprogramTaskRequest
      * @return CreateMdsMiniprogramTaskResponse
      */
@@ -156,6 +180,12 @@ public interface AsyncClient extends SdkAutoCloseable {
      * @return CreateOpenSingleDataResponse
      */
     CompletableFuture<CreateOpenSingleDataResponse> createOpenSingleData(CreateOpenSingleDataRequest request);
+
+    /**
+     * @param request the request parameters of CreateTemplate  CreateTemplateRequest
+     * @return CreateTemplateResponse
+     */
+    CompletableFuture<CreateTemplateResponse> createTemplate(CreateTemplateRequest request);
 
     /**
      * @param request the request parameters of DeleteCubecardWhitelistContent  DeleteCubecardWhitelistContentRequest
@@ -210,6 +240,12 @@ public interface AsyncClient extends SdkAutoCloseable {
      * @return DeleteMdsWhitelistContentResponse
      */
     CompletableFuture<DeleteMdsWhitelistContentResponse> deleteMdsWhitelistContent(DeleteMdsWhitelistContentRequest request);
+
+    /**
+     * @param request the request parameters of DeleteTemplate  DeleteTemplateRequest
+     * @return DeleteTemplateResponse
+     */
+    CompletableFuture<DeleteTemplateResponse> deleteTemplate(DeleteTemplateRequest request);
 
     /**
      * @param request the request parameters of ExistMcubeRsaKey  ExistMcubeRsaKeyRequest
@@ -272,6 +308,12 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<GetMdsMiniConfigResponse> getMdsMiniConfig(GetMdsMiniConfigRequest request);
 
     /**
+     * @param request the request parameters of GetTemplate  GetTemplateRequest
+     * @return GetTemplateResponse
+     */
+    CompletableFuture<GetTemplateResponse> getTemplate(GetTemplateRequest request);
+
+    /**
      * @param request the request parameters of GetUserAppDonwloadUrlInMsa  GetUserAppDonwloadUrlInMsaRequest
      * @return GetUserAppDonwloadUrlInMsaResponse
      */
@@ -288,6 +330,18 @@ public interface AsyncClient extends SdkAutoCloseable {
      * @return GetUserAppUploadProcessInMsaResponse
      */
     CompletableFuture<GetUserAppUploadProcessInMsaResponse> getUserAppUploadProcessInMsa(GetUserAppUploadProcessInMsaRequest request);
+
+    /**
+     * @param request the request parameters of ListAnalysisCoreIndex  ListAnalysisCoreIndexRequest
+     * @return ListAnalysisCoreIndexResponse
+     */
+    CompletableFuture<ListAnalysisCoreIndexResponse> listAnalysisCoreIndex(ListAnalysisCoreIndexRequest request);
+
+    /**
+     * @param request the request parameters of ListCubecardApps  ListCubecardAppsRequest
+     * @return ListCubecardAppsResponse
+     */
+    CompletableFuture<ListCubecardAppsResponse> listCubecardApps(ListCubecardAppsRequest request);
 
     /**
      * @param request the request parameters of ListMappCenterApps  ListMappCenterAppsRequest
@@ -362,10 +416,34 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<ListMcubeWhitelistsResponse> listMcubeWhitelists(ListMcubeWhitelistsRequest request);
 
     /**
+     * @param request the request parameters of ListMdsCubeResources  ListMdsCubeResourcesRequest
+     * @return ListMdsCubeResourcesResponse
+     */
+    CompletableFuture<ListMdsCubeResourcesResponse> listMdsCubeResources(ListMdsCubeResourcesRequest request);
+
+    /**
+     * @param request the request parameters of ListMdsCubeTasks  ListMdsCubeTasksRequest
+     * @return ListMdsCubeTasksResponse
+     */
+    CompletableFuture<ListMdsCubeTasksResponse> listMdsCubeTasks(ListMdsCubeTasksRequest request);
+
+    /**
+     * @param request the request parameters of ListMdsCubeTemplates  ListMdsCubeTemplatesRequest
+     * @return ListMdsCubeTemplatesResponse
+     */
+    CompletableFuture<ListMdsCubeTemplatesResponse> listMdsCubeTemplates(ListMdsCubeTemplatesRequest request);
+
+    /**
      * @param request the request parameters of ListMgsApi  ListMgsApiRequest
      * @return ListMgsApiResponse
      */
     CompletableFuture<ListMgsApiResponse> listMgsApi(ListMgsApiRequest request);
+
+    /**
+     * @param request the request parameters of ListTemplatePage  ListTemplatePageRequest
+     * @return ListTemplatePageResponse
+     */
+    CompletableFuture<ListTemplatePageResponse> listTemplatePage(ListTemplatePageRequest request);
 
     /**
      * @param request the request parameters of MTRSOCRService  MTRSOCRServiceRequest
@@ -392,6 +470,12 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<PushMultipleResponse> pushMultiple(PushMultipleRequest request);
 
     /**
+     * @param request the request parameters of PushQueryDeviceState  PushQueryDeviceStateRequest
+     * @return PushQueryDeviceStateResponse
+     */
+    CompletableFuture<PushQueryDeviceStateResponse> pushQueryDeviceState(PushQueryDeviceStateRequest request);
+
+    /**
      * @param request the request parameters of PushReport  PushReportRequest
      * @return PushReportResponse
      */
@@ -414,6 +498,12 @@ public interface AsyncClient extends SdkAutoCloseable {
      * @return PushUnBindResponse
      */
     CompletableFuture<PushUnBindResponse> pushUnBind(PushUnBindRequest request);
+
+    /**
+     * @param request the request parameters of QueryCubecardFiletoken  QueryCubecardFiletokenRequest
+     * @return QueryCubecardFiletokenResponse
+     */
+    CompletableFuture<QueryCubecardFiletokenResponse> queryCubecardFiletoken(QueryCubecardFiletokenRequest request);
 
     /**
      * @param request the request parameters of QueryInfoFromMdp  QueryInfoFromMdpRequest
@@ -558,6 +648,12 @@ public interface AsyncClient extends SdkAutoCloseable {
      * @return UpdateMcubeWhitelistResponse
      */
     CompletableFuture<UpdateMcubeWhitelistResponse> updateMcubeWhitelist(UpdateMcubeWhitelistRequest request);
+
+    /**
+     * @param request the request parameters of UpdateMdsCubeResource  UpdateMdsCubeResourceRequest
+     * @return UpdateMdsCubeResourceResponse
+     */
+    CompletableFuture<UpdateMdsCubeResourceResponse> updateMdsCubeResource(UpdateMdsCubeResourceRequest request);
 
     /**
      * @param request the request parameters of UpdateMpaasAppInfo  UpdateMpaasAppInfoRequest

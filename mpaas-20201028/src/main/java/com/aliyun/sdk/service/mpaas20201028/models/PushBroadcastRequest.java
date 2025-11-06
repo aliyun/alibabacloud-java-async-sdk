@@ -32,8 +32,16 @@ public class PushBroadcastRequest extends Request {
     private String appId;
 
     @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("BindEndTime")
+    private Long bindEndTime;
+
+    @com.aliyun.core.annotation.Body
     @com.aliyun.core.annotation.NameInMap("BindPeriod")
     private Integer bindPeriod;
+
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("BindStartTime")
+    private Long bindStartTime;
 
     @com.aliyun.core.annotation.Body
     @com.aliyun.core.annotation.NameInMap("ChannelId")
@@ -65,6 +73,10 @@ public class PushBroadcastRequest extends Request {
     @com.aliyun.core.annotation.NameInMap("Msgkey")
     @com.aliyun.core.annotation.Validation(required = true)
     private String msgkey;
+
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("NotifyLevel")
+    private java.util.Map<String, ?> notifyLevel;
 
     @com.aliyun.core.annotation.Body
     @com.aliyun.core.annotation.NameInMap("NotifyType")
@@ -115,6 +127,10 @@ public class PushBroadcastRequest extends Request {
     private java.util.Map<String, ?> thirdChannelCategory;
 
     @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("TimeMode")
+    private Integer timeMode;
+
+    @com.aliyun.core.annotation.Body
     @com.aliyun.core.annotation.NameInMap("TransparentMessagePayload")
     private Object transparentMessagePayload;
 
@@ -123,9 +139,17 @@ public class PushBroadcastRequest extends Request {
     private String transparentMessageUrgency;
 
     @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("UnBindEndTime")
+    private Long unBindEndTime;
+
+    @com.aliyun.core.annotation.Body
     @com.aliyun.core.annotation.NameInMap("UnBindPeriod")
     @com.aliyun.core.annotation.Validation(maximum = 10)
     private Long unBindPeriod;
+
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("UnBindStartTime")
+    private Long unBindStartTime;
 
     @com.aliyun.core.annotation.Body
     @com.aliyun.core.annotation.NameInMap("WorkspaceId")
@@ -137,7 +161,9 @@ public class PushBroadcastRequest extends Request {
         this.regionId = builder.regionId;
         this.androidChannel = builder.androidChannel;
         this.appId = builder.appId;
+        this.bindEndTime = builder.bindEndTime;
         this.bindPeriod = builder.bindPeriod;
+        this.bindStartTime = builder.bindStartTime;
         this.channelId = builder.channelId;
         this.classification = builder.classification;
         this.deliveryType = builder.deliveryType;
@@ -145,6 +171,7 @@ public class PushBroadcastRequest extends Request {
         this.extendedParams = builder.extendedParams;
         this.miChannelId = builder.miChannelId;
         this.msgkey = builder.msgkey;
+        this.notifyLevel = builder.notifyLevel;
         this.notifyType = builder.notifyType;
         this.pushAction = builder.pushAction;
         this.pushStatus = builder.pushStatus;
@@ -156,9 +183,12 @@ public class PushBroadcastRequest extends Request {
         this.templateName = builder.templateName;
         this.tenantId = builder.tenantId;
         this.thirdChannelCategory = builder.thirdChannelCategory;
+        this.timeMode = builder.timeMode;
         this.transparentMessagePayload = builder.transparentMessagePayload;
         this.transparentMessageUrgency = builder.transparentMessageUrgency;
+        this.unBindEndTime = builder.unBindEndTime;
         this.unBindPeriod = builder.unBindPeriod;
+        this.unBindStartTime = builder.unBindStartTime;
         this.workspaceId = builder.workspaceId;
     }
 
@@ -197,10 +227,24 @@ public class PushBroadcastRequest extends Request {
     }
 
     /**
+     * @return bindEndTime
+     */
+    public Long getBindEndTime() {
+        return this.bindEndTime;
+    }
+
+    /**
      * @return bindPeriod
      */
     public Integer getBindPeriod() {
         return this.bindPeriod;
+    }
+
+    /**
+     * @return bindStartTime
+     */
+    public Long getBindStartTime() {
+        return this.bindStartTime;
     }
 
     /**
@@ -250,6 +294,13 @@ public class PushBroadcastRequest extends Request {
      */
     public String getMsgkey() {
         return this.msgkey;
+    }
+
+    /**
+     * @return notifyLevel
+     */
+    public java.util.Map<String, ?> getNotifyLevel() {
+        return this.notifyLevel;
     }
 
     /**
@@ -330,6 +381,13 @@ public class PushBroadcastRequest extends Request {
     }
 
     /**
+     * @return timeMode
+     */
+    public Integer getTimeMode() {
+        return this.timeMode;
+    }
+
+    /**
      * @return transparentMessagePayload
      */
     public Object getTransparentMessagePayload() {
@@ -344,10 +402,24 @@ public class PushBroadcastRequest extends Request {
     }
 
     /**
+     * @return unBindEndTime
+     */
+    public Long getUnBindEndTime() {
+        return this.unBindEndTime;
+    }
+
+    /**
      * @return unBindPeriod
      */
     public Long getUnBindPeriod() {
         return this.unBindPeriod;
+    }
+
+    /**
+     * @return unBindStartTime
+     */
+    public Long getUnBindStartTime() {
+        return this.unBindStartTime;
     }
 
     /**
@@ -361,7 +433,9 @@ public class PushBroadcastRequest extends Request {
         private String regionId; 
         private Integer androidChannel; 
         private String appId; 
+        private Long bindEndTime; 
         private Integer bindPeriod; 
+        private Long bindStartTime; 
         private String channelId; 
         private String classification; 
         private Long deliveryType; 
@@ -369,6 +443,7 @@ public class PushBroadcastRequest extends Request {
         private String extendedParams; 
         private String miChannelId; 
         private String msgkey; 
+        private java.util.Map<String, ?> notifyLevel; 
         private String notifyType; 
         private Long pushAction; 
         private Long pushStatus; 
@@ -380,9 +455,12 @@ public class PushBroadcastRequest extends Request {
         private String templateName; 
         private String tenantId; 
         private java.util.Map<String, ?> thirdChannelCategory; 
+        private Integer timeMode; 
         private Object transparentMessagePayload; 
         private String transparentMessageUrgency; 
+        private Long unBindEndTime; 
         private Long unBindPeriod; 
+        private Long unBindStartTime; 
         private String workspaceId; 
 
         private Builder() {
@@ -394,7 +472,9 @@ public class PushBroadcastRequest extends Request {
             this.regionId = request.regionId;
             this.androidChannel = request.androidChannel;
             this.appId = request.appId;
+            this.bindEndTime = request.bindEndTime;
             this.bindPeriod = request.bindPeriod;
+            this.bindStartTime = request.bindStartTime;
             this.channelId = request.channelId;
             this.classification = request.classification;
             this.deliveryType = request.deliveryType;
@@ -402,6 +482,7 @@ public class PushBroadcastRequest extends Request {
             this.extendedParams = request.extendedParams;
             this.miChannelId = request.miChannelId;
             this.msgkey = request.msgkey;
+            this.notifyLevel = request.notifyLevel;
             this.notifyType = request.notifyType;
             this.pushAction = request.pushAction;
             this.pushStatus = request.pushStatus;
@@ -413,9 +494,12 @@ public class PushBroadcastRequest extends Request {
             this.templateName = request.templateName;
             this.tenantId = request.tenantId;
             this.thirdChannelCategory = request.thirdChannelCategory;
+            this.timeMode = request.timeMode;
             this.transparentMessagePayload = request.transparentMessagePayload;
             this.transparentMessageUrgency = request.transparentMessageUrgency;
+            this.unBindEndTime = request.unBindEndTime;
             this.unBindPeriod = request.unBindPeriod;
+            this.unBindStartTime = request.unBindStartTime;
             this.workspaceId = request.workspaceId;
         } 
 
@@ -447,11 +531,29 @@ public class PushBroadcastRequest extends Request {
         }
 
         /**
+         * BindEndTime.
+         */
+        public Builder bindEndTime(Long bindEndTime) {
+            this.putBodyParameter("BindEndTime", bindEndTime);
+            this.bindEndTime = bindEndTime;
+            return this;
+        }
+
+        /**
          * BindPeriod.
          */
         public Builder bindPeriod(Integer bindPeriod) {
             this.putBodyParameter("BindPeriod", bindPeriod);
             this.bindPeriod = bindPeriod;
+            return this;
+        }
+
+        /**
+         * BindStartTime.
+         */
+        public Builder bindStartTime(Long bindStartTime) {
+            this.putBodyParameter("BindStartTime", bindStartTime);
+            this.bindStartTime = bindStartTime;
             return this;
         }
 
@@ -515,6 +617,16 @@ public class PushBroadcastRequest extends Request {
         public Builder msgkey(String msgkey) {
             this.putBodyParameter("Msgkey", msgkey);
             this.msgkey = msgkey;
+            return this;
+        }
+
+        /**
+         * NotifyLevel.
+         */
+        public Builder notifyLevel(java.util.Map<String, ?> notifyLevel) {
+            String notifyLevelShrink = shrink(notifyLevel, "NotifyLevel", "json");
+            this.putBodyParameter("NotifyLevel", notifyLevelShrink);
+            this.notifyLevel = notifyLevel;
             return this;
         }
 
@@ -619,6 +731,15 @@ public class PushBroadcastRequest extends Request {
         }
 
         /**
+         * TimeMode.
+         */
+        public Builder timeMode(Integer timeMode) {
+            this.putBodyParameter("TimeMode", timeMode);
+            this.timeMode = timeMode;
+            return this;
+        }
+
+        /**
          * TransparentMessagePayload.
          */
         public Builder transparentMessagePayload(Object transparentMessagePayload) {
@@ -637,11 +758,29 @@ public class PushBroadcastRequest extends Request {
         }
 
         /**
+         * UnBindEndTime.
+         */
+        public Builder unBindEndTime(Long unBindEndTime) {
+            this.putBodyParameter("UnBindEndTime", unBindEndTime);
+            this.unBindEndTime = unBindEndTime;
+            return this;
+        }
+
+        /**
          * UnBindPeriod.
          */
         public Builder unBindPeriod(Long unBindPeriod) {
             this.putBodyParameter("UnBindPeriod", unBindPeriod);
             this.unBindPeriod = unBindPeriod;
+            return this;
+        }
+
+        /**
+         * UnBindStartTime.
+         */
+        public Builder unBindStartTime(Long unBindStartTime) {
+            this.putBodyParameter("UnBindStartTime", unBindStartTime);
+            this.unBindStartTime = unBindStartTime;
             return this;
         }
 

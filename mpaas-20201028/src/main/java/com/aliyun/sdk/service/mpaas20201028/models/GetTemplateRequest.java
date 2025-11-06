@@ -12,44 +12,36 @@ import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
  * 
- * {@link UploadUserAppToMsaRequest} extends {@link RequestModel}
+ * {@link GetTemplateRequest} extends {@link RequestModel}
  *
- * <p>UploadUserAppToMsaRequest</p>
+ * <p>GetTemplateRequest</p>
  */
-public class UploadUserAppToMsaRequest extends Request {
-    @com.aliyun.core.annotation.Host
-    @com.aliyun.core.annotation.NameInMap("RegionId")
-    private String regionId;
-
+public class GetTemplateRequest extends Request {
     @com.aliyun.core.annotation.Body
     @com.aliyun.core.annotation.NameInMap("AppId")
-    @com.aliyun.core.annotation.Validation(required = true)
     private String appId;
 
     @com.aliyun.core.annotation.Body
-    @com.aliyun.core.annotation.NameInMap("FileName")
-    private String fileName;
+    @com.aliyun.core.annotation.NameInMap("TemplateId")
+    private String templateId;
 
     @com.aliyun.core.annotation.Body
-    @com.aliyun.core.annotation.NameInMap("FileUrl")
-    private String fileUrl;
+    @com.aliyun.core.annotation.NameInMap("TemplateName")
+    private String templateName;
 
     @com.aliyun.core.annotation.Body
     @com.aliyun.core.annotation.NameInMap("TenantId")
-    @com.aliyun.core.annotation.Validation(required = true)
     private String tenantId;
 
     @com.aliyun.core.annotation.Body
     @com.aliyun.core.annotation.NameInMap("WorkspaceId")
-    @com.aliyun.core.annotation.Validation(required = true)
     private String workspaceId;
 
-    private UploadUserAppToMsaRequest(Builder builder) {
+    private GetTemplateRequest(Builder builder) {
         super(builder);
-        this.regionId = builder.regionId;
         this.appId = builder.appId;
-        this.fileName = builder.fileName;
-        this.fileUrl = builder.fileUrl;
+        this.templateId = builder.templateId;
+        this.templateName = builder.templateName;
         this.tenantId = builder.tenantId;
         this.workspaceId = builder.workspaceId;
     }
@@ -58,20 +50,13 @@ public class UploadUserAppToMsaRequest extends Request {
         return new Builder();
     }
 
-    public static UploadUserAppToMsaRequest create() {
+    public static GetTemplateRequest create() {
         return builder().build();
     }
 
 @Override
     public Builder toBuilder() {
         return new Builder(this);
-    }
-
-    /**
-     * @return regionId
-     */
-    public String getRegionId() {
-        return this.regionId;
     }
 
     /**
@@ -82,17 +67,17 @@ public class UploadUserAppToMsaRequest extends Request {
     }
 
     /**
-     * @return fileName
+     * @return templateId
      */
-    public String getFileName() {
-        return this.fileName;
+    public String getTemplateId() {
+        return this.templateId;
     }
 
     /**
-     * @return fileUrl
+     * @return templateName
      */
-    public String getFileUrl() {
-        return this.fileUrl;
+    public String getTemplateName() {
+        return this.templateName;
     }
 
     /**
@@ -109,11 +94,10 @@ public class UploadUserAppToMsaRequest extends Request {
         return this.workspaceId;
     }
 
-    public static final class Builder extends Request.Builder<UploadUserAppToMsaRequest, Builder> {
-        private String regionId; 
+    public static final class Builder extends Request.Builder<GetTemplateRequest, Builder> {
         private String appId; 
-        private String fileName; 
-        private String fileUrl; 
+        private String templateId; 
+        private String templateName; 
         private String tenantId; 
         private String workspaceId; 
 
@@ -121,27 +105,17 @@ public class UploadUserAppToMsaRequest extends Request {
             super();
         } 
 
-        private Builder(UploadUserAppToMsaRequest request) {
+        private Builder(GetTemplateRequest request) {
             super(request);
-            this.regionId = request.regionId;
             this.appId = request.appId;
-            this.fileName = request.fileName;
-            this.fileUrl = request.fileUrl;
+            this.templateId = request.templateId;
+            this.templateName = request.templateName;
             this.tenantId = request.tenantId;
             this.workspaceId = request.workspaceId;
         } 
 
         /**
-         * RegionId.
-         */
-        public Builder regionId(String regionId) {
-            this.putHostParameter("RegionId", regionId);
-            this.regionId = regionId;
-            return this;
-        }
-
-        /**
-         * <p>This parameter is required.</p>
+         * AppId.
          */
         public Builder appId(String appId) {
             this.putBodyParameter("AppId", appId);
@@ -150,25 +124,25 @@ public class UploadUserAppToMsaRequest extends Request {
         }
 
         /**
-         * FileName.
+         * TemplateId.
          */
-        public Builder fileName(String fileName) {
-            this.putBodyParameter("FileName", fileName);
-            this.fileName = fileName;
+        public Builder templateId(String templateId) {
+            this.putBodyParameter("TemplateId", templateId);
+            this.templateId = templateId;
             return this;
         }
 
         /**
-         * FileUrl.
+         * TemplateName.
          */
-        public Builder fileUrl(String fileUrl) {
-            this.putBodyParameter("FileUrl", fileUrl);
-            this.fileUrl = fileUrl;
+        public Builder templateName(String templateName) {
+            this.putBodyParameter("TemplateName", templateName);
+            this.templateName = templateName;
             return this;
         }
 
         /**
-         * <p>This parameter is required.</p>
+         * TenantId.
          */
         public Builder tenantId(String tenantId) {
             this.putBodyParameter("TenantId", tenantId);
@@ -177,7 +151,7 @@ public class UploadUserAppToMsaRequest extends Request {
         }
 
         /**
-         * <p>This parameter is required.</p>
+         * WorkspaceId.
          */
         public Builder workspaceId(String workspaceId) {
             this.putBodyParameter("WorkspaceId", workspaceId);
@@ -186,8 +160,8 @@ public class UploadUserAppToMsaRequest extends Request {
         }
 
         @Override
-        public UploadUserAppToMsaRequest build() {
-            return new UploadUserAppToMsaRequest(this);
+        public GetTemplateRequest build() {
+            return new GetTemplateRequest(this);
         } 
 
     } 

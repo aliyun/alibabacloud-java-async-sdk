@@ -12,44 +12,46 @@ import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
  * 
- * {@link UploadUserAppToMsaRequest} extends {@link RequestModel}
+ * {@link ChangeMdsCubeTaskStatusRequest} extends {@link RequestModel}
  *
- * <p>UploadUserAppToMsaRequest</p>
+ * <p>ChangeMdsCubeTaskStatusRequest</p>
  */
-public class UploadUserAppToMsaRequest extends Request {
+public class ChangeMdsCubeTaskStatusRequest extends Request {
     @com.aliyun.core.annotation.Host
     @com.aliyun.core.annotation.NameInMap("RegionId")
     private String regionId;
 
     @com.aliyun.core.annotation.Body
     @com.aliyun.core.annotation.NameInMap("AppId")
-    @com.aliyun.core.annotation.Validation(required = true)
     private String appId;
 
     @com.aliyun.core.annotation.Body
-    @com.aliyun.core.annotation.NameInMap("FileName")
-    private String fileName;
+    @com.aliyun.core.annotation.NameInMap("TaskStatus")
+    private Integer taskStatus;
 
     @com.aliyun.core.annotation.Body
-    @com.aliyun.core.annotation.NameInMap("FileUrl")
-    private String fileUrl;
+    @com.aliyun.core.annotation.NameInMap("TemplateResourceId")
+    private Long templateResourceId;
+
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("TemplateTaskId")
+    private Long templateTaskId;
 
     @com.aliyun.core.annotation.Body
     @com.aliyun.core.annotation.NameInMap("TenantId")
-    @com.aliyun.core.annotation.Validation(required = true)
     private String tenantId;
 
     @com.aliyun.core.annotation.Body
     @com.aliyun.core.annotation.NameInMap("WorkspaceId")
-    @com.aliyun.core.annotation.Validation(required = true)
     private String workspaceId;
 
-    private UploadUserAppToMsaRequest(Builder builder) {
+    private ChangeMdsCubeTaskStatusRequest(Builder builder) {
         super(builder);
         this.regionId = builder.regionId;
         this.appId = builder.appId;
-        this.fileName = builder.fileName;
-        this.fileUrl = builder.fileUrl;
+        this.taskStatus = builder.taskStatus;
+        this.templateResourceId = builder.templateResourceId;
+        this.templateTaskId = builder.templateTaskId;
         this.tenantId = builder.tenantId;
         this.workspaceId = builder.workspaceId;
     }
@@ -58,7 +60,7 @@ public class UploadUserAppToMsaRequest extends Request {
         return new Builder();
     }
 
-    public static UploadUserAppToMsaRequest create() {
+    public static ChangeMdsCubeTaskStatusRequest create() {
         return builder().build();
     }
 
@@ -82,17 +84,24 @@ public class UploadUserAppToMsaRequest extends Request {
     }
 
     /**
-     * @return fileName
+     * @return taskStatus
      */
-    public String getFileName() {
-        return this.fileName;
+    public Integer getTaskStatus() {
+        return this.taskStatus;
     }
 
     /**
-     * @return fileUrl
+     * @return templateResourceId
      */
-    public String getFileUrl() {
-        return this.fileUrl;
+    public Long getTemplateResourceId() {
+        return this.templateResourceId;
+    }
+
+    /**
+     * @return templateTaskId
+     */
+    public Long getTemplateTaskId() {
+        return this.templateTaskId;
     }
 
     /**
@@ -109,11 +118,12 @@ public class UploadUserAppToMsaRequest extends Request {
         return this.workspaceId;
     }
 
-    public static final class Builder extends Request.Builder<UploadUserAppToMsaRequest, Builder> {
+    public static final class Builder extends Request.Builder<ChangeMdsCubeTaskStatusRequest, Builder> {
         private String regionId; 
         private String appId; 
-        private String fileName; 
-        private String fileUrl; 
+        private Integer taskStatus; 
+        private Long templateResourceId; 
+        private Long templateTaskId; 
         private String tenantId; 
         private String workspaceId; 
 
@@ -121,12 +131,13 @@ public class UploadUserAppToMsaRequest extends Request {
             super();
         } 
 
-        private Builder(UploadUserAppToMsaRequest request) {
+        private Builder(ChangeMdsCubeTaskStatusRequest request) {
             super(request);
             this.regionId = request.regionId;
             this.appId = request.appId;
-            this.fileName = request.fileName;
-            this.fileUrl = request.fileUrl;
+            this.taskStatus = request.taskStatus;
+            this.templateResourceId = request.templateResourceId;
+            this.templateTaskId = request.templateTaskId;
             this.tenantId = request.tenantId;
             this.workspaceId = request.workspaceId;
         } 
@@ -141,7 +152,7 @@ public class UploadUserAppToMsaRequest extends Request {
         }
 
         /**
-         * <p>This parameter is required.</p>
+         * AppId.
          */
         public Builder appId(String appId) {
             this.putBodyParameter("AppId", appId);
@@ -150,25 +161,34 @@ public class UploadUserAppToMsaRequest extends Request {
         }
 
         /**
-         * FileName.
+         * TaskStatus.
          */
-        public Builder fileName(String fileName) {
-            this.putBodyParameter("FileName", fileName);
-            this.fileName = fileName;
+        public Builder taskStatus(Integer taskStatus) {
+            this.putBodyParameter("TaskStatus", taskStatus);
+            this.taskStatus = taskStatus;
             return this;
         }
 
         /**
-         * FileUrl.
+         * TemplateResourceId.
          */
-        public Builder fileUrl(String fileUrl) {
-            this.putBodyParameter("FileUrl", fileUrl);
-            this.fileUrl = fileUrl;
+        public Builder templateResourceId(Long templateResourceId) {
+            this.putBodyParameter("TemplateResourceId", templateResourceId);
+            this.templateResourceId = templateResourceId;
             return this;
         }
 
         /**
-         * <p>This parameter is required.</p>
+         * TemplateTaskId.
+         */
+        public Builder templateTaskId(Long templateTaskId) {
+            this.putBodyParameter("TemplateTaskId", templateTaskId);
+            this.templateTaskId = templateTaskId;
+            return this;
+        }
+
+        /**
+         * TenantId.
          */
         public Builder tenantId(String tenantId) {
             this.putBodyParameter("TenantId", tenantId);
@@ -177,7 +197,7 @@ public class UploadUserAppToMsaRequest extends Request {
         }
 
         /**
-         * <p>This parameter is required.</p>
+         * WorkspaceId.
          */
         public Builder workspaceId(String workspaceId) {
             this.putBodyParameter("WorkspaceId", workspaceId);
@@ -186,8 +206,8 @@ public class UploadUserAppToMsaRequest extends Request {
         }
 
         @Override
-        public UploadUserAppToMsaRequest build() {
-            return new UploadUserAppToMsaRequest(this);
+        public ChangeMdsCubeTaskStatusRequest build() {
+            return new ChangeMdsCubeTaskStatusRequest(this);
         } 
 
     } 

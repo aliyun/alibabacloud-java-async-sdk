@@ -12,44 +12,37 @@ import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
  * 
- * {@link UploadUserAppToMsaRequest} extends {@link RequestModel}
+ * {@link QueryCubecardFiletokenRequest} extends {@link RequestModel}
  *
- * <p>UploadUserAppToMsaRequest</p>
+ * <p>QueryCubecardFiletokenRequest</p>
  */
-public class UploadUserAppToMsaRequest extends Request {
+public class QueryCubecardFiletokenRequest extends Request {
     @com.aliyun.core.annotation.Host
     @com.aliyun.core.annotation.NameInMap("RegionId")
     private String regionId;
 
     @com.aliyun.core.annotation.Body
     @com.aliyun.core.annotation.NameInMap("AppId")
-    @com.aliyun.core.annotation.Validation(required = true)
     private String appId;
 
     @com.aliyun.core.annotation.Body
-    @com.aliyun.core.annotation.NameInMap("FileName")
-    private String fileName;
-
-    @com.aliyun.core.annotation.Body
-    @com.aliyun.core.annotation.NameInMap("FileUrl")
-    private String fileUrl;
+    @com.aliyun.core.annotation.NameInMap("OnexFlag")
+    @com.aliyun.core.annotation.Validation(required = true)
+    private Boolean onexFlag;
 
     @com.aliyun.core.annotation.Body
     @com.aliyun.core.annotation.NameInMap("TenantId")
-    @com.aliyun.core.annotation.Validation(required = true)
     private String tenantId;
 
     @com.aliyun.core.annotation.Body
     @com.aliyun.core.annotation.NameInMap("WorkspaceId")
-    @com.aliyun.core.annotation.Validation(required = true)
     private String workspaceId;
 
-    private UploadUserAppToMsaRequest(Builder builder) {
+    private QueryCubecardFiletokenRequest(Builder builder) {
         super(builder);
         this.regionId = builder.regionId;
         this.appId = builder.appId;
-        this.fileName = builder.fileName;
-        this.fileUrl = builder.fileUrl;
+        this.onexFlag = builder.onexFlag;
         this.tenantId = builder.tenantId;
         this.workspaceId = builder.workspaceId;
     }
@@ -58,7 +51,7 @@ public class UploadUserAppToMsaRequest extends Request {
         return new Builder();
     }
 
-    public static UploadUserAppToMsaRequest create() {
+    public static QueryCubecardFiletokenRequest create() {
         return builder().build();
     }
 
@@ -82,17 +75,10 @@ public class UploadUserAppToMsaRequest extends Request {
     }
 
     /**
-     * @return fileName
+     * @return onexFlag
      */
-    public String getFileName() {
-        return this.fileName;
-    }
-
-    /**
-     * @return fileUrl
-     */
-    public String getFileUrl() {
-        return this.fileUrl;
+    public Boolean getOnexFlag() {
+        return this.onexFlag;
     }
 
     /**
@@ -109,11 +95,10 @@ public class UploadUserAppToMsaRequest extends Request {
         return this.workspaceId;
     }
 
-    public static final class Builder extends Request.Builder<UploadUserAppToMsaRequest, Builder> {
+    public static final class Builder extends Request.Builder<QueryCubecardFiletokenRequest, Builder> {
         private String regionId; 
         private String appId; 
-        private String fileName; 
-        private String fileUrl; 
+        private Boolean onexFlag; 
         private String tenantId; 
         private String workspaceId; 
 
@@ -121,12 +106,11 @@ public class UploadUserAppToMsaRequest extends Request {
             super();
         } 
 
-        private Builder(UploadUserAppToMsaRequest request) {
+        private Builder(QueryCubecardFiletokenRequest request) {
             super(request);
             this.regionId = request.regionId;
             this.appId = request.appId;
-            this.fileName = request.fileName;
-            this.fileUrl = request.fileUrl;
+            this.onexFlag = request.onexFlag;
             this.tenantId = request.tenantId;
             this.workspaceId = request.workspaceId;
         } 
@@ -141,7 +125,7 @@ public class UploadUserAppToMsaRequest extends Request {
         }
 
         /**
-         * <p>This parameter is required.</p>
+         * AppId.
          */
         public Builder appId(String appId) {
             this.putBodyParameter("AppId", appId);
@@ -150,25 +134,19 @@ public class UploadUserAppToMsaRequest extends Request {
         }
 
         /**
-         * FileName.
-         */
-        public Builder fileName(String fileName) {
-            this.putBodyParameter("FileName", fileName);
-            this.fileName = fileName;
-            return this;
-        }
-
-        /**
-         * FileUrl.
-         */
-        public Builder fileUrl(String fileUrl) {
-            this.putBodyParameter("FileUrl", fileUrl);
-            this.fileUrl = fileUrl;
-            return this;
-        }
-
-        /**
          * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
+         */
+        public Builder onexFlag(Boolean onexFlag) {
+            this.putBodyParameter("OnexFlag", onexFlag);
+            this.onexFlag = onexFlag;
+            return this;
+        }
+
+        /**
+         * TenantId.
          */
         public Builder tenantId(String tenantId) {
             this.putBodyParameter("TenantId", tenantId);
@@ -177,7 +155,7 @@ public class UploadUserAppToMsaRequest extends Request {
         }
 
         /**
-         * <p>This parameter is required.</p>
+         * WorkspaceId.
          */
         public Builder workspaceId(String workspaceId) {
             this.putBodyParameter("WorkspaceId", workspaceId);
@@ -186,8 +164,8 @@ public class UploadUserAppToMsaRequest extends Request {
         }
 
         @Override
-        public UploadUserAppToMsaRequest build() {
-            return new UploadUserAppToMsaRequest(this);
+        public QueryCubecardFiletokenRequest build() {
+            return new QueryCubecardFiletokenRequest(this);
         } 
 
     } 

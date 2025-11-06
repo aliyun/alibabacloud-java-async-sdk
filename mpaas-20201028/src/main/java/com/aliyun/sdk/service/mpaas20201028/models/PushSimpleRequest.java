@@ -78,6 +78,10 @@ public class PushSimpleRequest extends Request {
     private String miChannelId;
 
     @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("NotifyLevel")
+    private java.util.Map<String, ?> notifyLevel;
+
+    @com.aliyun.core.annotation.Body
     @com.aliyun.core.annotation.NameInMap("NotifyType")
     private String notifyType;
 
@@ -174,6 +178,7 @@ public class PushSimpleRequest extends Request {
         this.iconUrls = builder.iconUrls;
         this.imageUrls = builder.imageUrls;
         this.miChannelId = builder.miChannelId;
+        this.notifyLevel = builder.notifyLevel;
         this.notifyType = builder.notifyType;
         this.pushAction = builder.pushAction;
         this.pushStyle = builder.pushStyle;
@@ -304,6 +309,13 @@ public class PushSimpleRequest extends Request {
      */
     public String getMiChannelId() {
         return this.miChannelId;
+    }
+
+    /**
+     * @return notifyLevel
+     */
+    public java.util.Map<String, ?> getNotifyLevel() {
+        return this.notifyLevel;
     }
 
     /**
@@ -454,6 +466,7 @@ public class PushSimpleRequest extends Request {
         private String iconUrls; 
         private String imageUrls; 
         private String miChannelId; 
+        private java.util.Map<String, ?> notifyLevel; 
         private String notifyType; 
         private Long pushAction; 
         private Integer pushStyle; 
@@ -494,6 +507,7 @@ public class PushSimpleRequest extends Request {
             this.iconUrls = request.iconUrls;
             this.imageUrls = request.imageUrls;
             this.miChannelId = request.miChannelId;
+            this.notifyLevel = request.notifyLevel;
             this.notifyType = request.notifyType;
             this.pushAction = request.pushAction;
             this.pushStyle = request.pushStyle;
@@ -638,6 +652,16 @@ public class PushSimpleRequest extends Request {
         public Builder miChannelId(String miChannelId) {
             this.putBodyParameter("MiChannelId", miChannelId);
             this.miChannelId = miChannelId;
+            return this;
+        }
+
+        /**
+         * NotifyLevel.
+         */
+        public Builder notifyLevel(java.util.Map<String, ?> notifyLevel) {
+            String notifyLevelShrink = shrink(notifyLevel, "NotifyLevel", "json");
+            this.putBodyParameter("NotifyLevel", notifyLevelShrink);
+            this.notifyLevel = notifyLevel;
             return this;
         }
 
