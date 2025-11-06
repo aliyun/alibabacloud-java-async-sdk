@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.domain20180129.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -53,6 +58,10 @@ public class PollTaskResultResponseBody extends TeaModel {
 
     public static PollTaskResultResponseBody create() {
         return builder().build();
+    }
+
+    public Builder toBuilder() {
+        return new Builder(this);
     }
 
     /**
@@ -120,6 +129,20 @@ public class PollTaskResultResponseBody extends TeaModel {
         private String requestId; 
         private Integer totalItemNum; 
         private Integer totalPageNum; 
+
+        private Builder() {
+        } 
+
+        private Builder(PollTaskResultResponseBody model) {
+            this.currentPageNum = model.currentPageNum;
+            this.data = model.data;
+            this.nextPage = model.nextPage;
+            this.pageSize = model.pageSize;
+            this.prePage = model.prePage;
+            this.requestId = model.requestId;
+            this.totalItemNum = model.totalItemNum;
+            this.totalPageNum = model.totalPageNum;
+        } 
 
         /**
          * CurrentPageNum.
@@ -367,6 +390,25 @@ public class PollTaskResultResponseBody extends TeaModel {
             private Integer tryCount; 
             private String updateTime; 
 
+            private Builder() {
+            } 
+
+            private Builder(TaskDetail model) {
+                this.createTime = model.createTime;
+                this.domainName = model.domainName;
+                this.errorMsg = model.errorMsg;
+                this.instanceId = model.instanceId;
+                this.taskDetailNo = model.taskDetailNo;
+                this.taskNo = model.taskNo;
+                this.taskResult = model.taskResult;
+                this.taskStatus = model.taskStatus;
+                this.taskStatusCode = model.taskStatusCode;
+                this.taskType = model.taskType;
+                this.taskTypeDescription = model.taskTypeDescription;
+                this.tryCount = model.tryCount;
+                this.updateTime = model.updateTime;
+            } 
+
             /**
              * CreateTime.
              */
@@ -486,7 +528,7 @@ public class PollTaskResultResponseBody extends TeaModel {
      */
     public static class Data extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("TaskDetail")
-        private java.util.List < TaskDetail> taskDetail;
+        private java.util.List<TaskDetail> taskDetail;
 
         private Data(Builder builder) {
             this.taskDetail = builder.taskDetail;
@@ -503,17 +545,24 @@ public class PollTaskResultResponseBody extends TeaModel {
         /**
          * @return taskDetail
          */
-        public java.util.List < TaskDetail> getTaskDetail() {
+        public java.util.List<TaskDetail> getTaskDetail() {
             return this.taskDetail;
         }
 
         public static final class Builder {
-            private java.util.List < TaskDetail> taskDetail; 
+            private java.util.List<TaskDetail> taskDetail; 
+
+            private Builder() {
+            } 
+
+            private Builder(Data model) {
+                this.taskDetail = model.taskDetail;
+            } 
 
             /**
              * TaskDetail.
              */
-            public Builder taskDetail(java.util.List < TaskDetail> taskDetail) {
+            public Builder taskDetail(java.util.List<TaskDetail> taskDetail) {
                 this.taskDetail = taskDetail;
                 return this;
             }

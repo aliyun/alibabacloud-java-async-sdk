@@ -778,6 +778,24 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
+     * @param request the request parameters of QueryDomainRealTimePrice  QueryDomainRealTimePriceRequest
+     * @return QueryDomainRealTimePriceResponse
+     */
+    @Override
+    public CompletableFuture<QueryDomainRealTimePriceResponse> queryDomainRealTimePrice(QueryDomainRealTimePriceRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RPC).setAction("QueryDomainRealTimePrice").setMethod(HttpMethod.POST).setPathRegex("/").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(QueryDomainRealTimePriceResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<QueryDomainRealTimePriceResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
      * @param request the request parameters of QueryDomainSpecialBizDetail  QueryDomainSpecialBizDetailRequest
      * @return QueryDomainSpecialBizDetailResponse
      */
@@ -1030,6 +1048,13 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
+     * <b>description</b> :
+     * <p>You can use optional request parameters to specify specific query criteria to query registrant profiles as required. For example:</p>
+     * <ul>
+     * <li>If you know the ID of the profile that you want to query, you can use the registrant profile ID parameter to query the detailed information about the profile.</li>
+     * <li>If you do not know the ID of the profile that you want to query, you can use parameters such as the registrant name parameter to query the detailed information about the profile.</li>
+     * </ul>
+     * 
      * @param request the request parameters of QueryRegistrantProfiles  QueryRegistrantProfilesRequest
      * @return QueryRegistrantProfilesResponse
      */
@@ -1984,6 +2009,9 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
+     * <b>description</b> :
+     * <p>The task ID.</p>
+     * 
      * @param request the request parameters of SaveSingleTaskForTransferOutByAuthorizationCode  SaveSingleTaskForTransferOutByAuthorizationCodeRequest
      * @return SaveSingleTaskForTransferOutByAuthorizationCodeResponse
      */

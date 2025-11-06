@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.domain20180129.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -19,7 +24,7 @@ public class QueryTaskInfoHistoryResponseBody extends TeaModel {
     private NextPageCursor nextPageCursor;
 
     @com.aliyun.core.annotation.NameInMap("Objects")
-    private java.util.List < Objects> objects;
+    private java.util.List<Objects> objects;
 
     @com.aliyun.core.annotation.NameInMap("PageSize")
     private Integer pageSize;
@@ -47,6 +52,10 @@ public class QueryTaskInfoHistoryResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return currentPageCursor
      */
@@ -64,7 +73,7 @@ public class QueryTaskInfoHistoryResponseBody extends TeaModel {
     /**
      * @return objects
      */
-    public java.util.List < Objects> getObjects() {
+    public java.util.List<Objects> getObjects() {
         return this.objects;
     }
 
@@ -92,10 +101,22 @@ public class QueryTaskInfoHistoryResponseBody extends TeaModel {
     public static final class Builder {
         private CurrentPageCursor currentPageCursor; 
         private NextPageCursor nextPageCursor; 
-        private java.util.List < Objects> objects; 
+        private java.util.List<Objects> objects; 
         private Integer pageSize; 
         private PrePageCursor prePageCursor; 
         private String requestId; 
+
+        private Builder() {
+        } 
+
+        private Builder(QueryTaskInfoHistoryResponseBody model) {
+            this.currentPageCursor = model.currentPageCursor;
+            this.nextPageCursor = model.nextPageCursor;
+            this.objects = model.objects;
+            this.pageSize = model.pageSize;
+            this.prePageCursor = model.prePageCursor;
+            this.requestId = model.requestId;
+        } 
 
         /**
          * CurrentPageCursor.
@@ -116,7 +137,7 @@ public class QueryTaskInfoHistoryResponseBody extends TeaModel {
         /**
          * Objects.
          */
-        public Builder objects(java.util.List < Objects> objects) {
+        public Builder objects(java.util.List<Objects> objects) {
             this.objects = objects;
             return this;
         }
@@ -278,6 +299,21 @@ public class QueryTaskInfoHistoryResponseBody extends TeaModel {
             private Integer taskStatusCode; 
             private String taskType; 
             private String taskTypeDescription; 
+
+            private Builder() {
+            } 
+
+            private Builder(CurrentPageCursor model) {
+                this.clientip = model.clientip;
+                this.createTime = model.createTime;
+                this.createTimeLong = model.createTimeLong;
+                this.taskNo = model.taskNo;
+                this.taskNum = model.taskNum;
+                this.taskStatus = model.taskStatus;
+                this.taskStatusCode = model.taskStatusCode;
+                this.taskType = model.taskType;
+                this.taskTypeDescription = model.taskTypeDescription;
+            } 
 
             /**
              * Clientip.
@@ -486,6 +522,21 @@ public class QueryTaskInfoHistoryResponseBody extends TeaModel {
             private String taskType; 
             private String taskTypeDescription; 
 
+            private Builder() {
+            } 
+
+            private Builder(NextPageCursor model) {
+                this.clientip = model.clientip;
+                this.createTime = model.createTime;
+                this.createTimeLong = model.createTimeLong;
+                this.taskNo = model.taskNo;
+                this.taskNum = model.taskNum;
+                this.taskStatus = model.taskStatus;
+                this.taskStatusCode = model.taskStatusCode;
+                this.taskType = model.taskType;
+                this.taskTypeDescription = model.taskTypeDescription;
+            } 
+
             /**
              * Clientip.
              */
@@ -693,6 +744,21 @@ public class QueryTaskInfoHistoryResponseBody extends TeaModel {
             private String taskType; 
             private String taskTypeDescription; 
 
+            private Builder() {
+            } 
+
+            private Builder(Objects model) {
+                this.clientip = model.clientip;
+                this.createTime = model.createTime;
+                this.createTimeLong = model.createTimeLong;
+                this.taskNo = model.taskNo;
+                this.taskNum = model.taskNum;
+                this.taskStatus = model.taskStatus;
+                this.taskStatusCode = model.taskStatusCode;
+                this.taskType = model.taskType;
+                this.taskTypeDescription = model.taskTypeDescription;
+            } 
+
             /**
              * Clientip.
              */
@@ -899,6 +965,21 @@ public class QueryTaskInfoHistoryResponseBody extends TeaModel {
             private Integer taskStatusCode; 
             private String taskType; 
             private String taskTypeDescription; 
+
+            private Builder() {
+            } 
+
+            private Builder(PrePageCursor model) {
+                this.clientip = model.clientip;
+                this.createTime = model.createTime;
+                this.createTimeLong = model.createTimeLong;
+                this.taskNo = model.taskNo;
+                this.taskNum = model.taskNum;
+                this.taskStatus = model.taskStatus;
+                this.taskStatusCode = model.taskStatusCode;
+                this.taskType = model.taskType;
+                this.taskTypeDescription = model.taskTypeDescription;
+            } 
 
             /**
              * Clientip.

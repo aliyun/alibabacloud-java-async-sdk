@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.domain20180129.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -25,7 +30,7 @@ public class QueryDomainSpecialBizInfoByDomainResponseBody extends TeaModel {
     private String dynamicMessage;
 
     @com.aliyun.core.annotation.NameInMap("ErrorArgs")
-    private java.util.List < ? > errorArgs;
+    private java.util.List<?> errorArgs;
 
     @com.aliyun.core.annotation.NameInMap("ErrorCode")
     private String errorCode;
@@ -71,6 +76,10 @@ public class QueryDomainSpecialBizInfoByDomainResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return allowRetry
      */
@@ -102,7 +111,7 @@ public class QueryDomainSpecialBizInfoByDomainResponseBody extends TeaModel {
     /**
      * @return errorArgs
      */
-    public java.util.List < ? > getErrorArgs() {
+    public java.util.List<?> getErrorArgs() {
         return this.errorArgs;
     }
 
@@ -160,7 +169,7 @@ public class QueryDomainSpecialBizInfoByDomainResponseBody extends TeaModel {
         private String appName; 
         private String dynamicCode; 
         private String dynamicMessage; 
-        private java.util.List < ? > errorArgs; 
+        private java.util.List<?> errorArgs; 
         private String errorCode; 
         private String errorMsg; 
         private Integer httpStatusCode; 
@@ -168,6 +177,24 @@ public class QueryDomainSpecialBizInfoByDomainResponseBody extends TeaModel {
         private String requestId; 
         private Boolean success; 
         private Boolean synchro; 
+
+        private Builder() {
+        } 
+
+        private Builder(QueryDomainSpecialBizInfoByDomainResponseBody model) {
+            this.allowRetry = model.allowRetry;
+            this.appName = model.appName;
+            this.dynamicCode = model.dynamicCode;
+            this.dynamicMessage = model.dynamicMessage;
+            this.errorArgs = model.errorArgs;
+            this.errorCode = model.errorCode;
+            this.errorMsg = model.errorMsg;
+            this.httpStatusCode = model.httpStatusCode;
+            this.module = model.module;
+            this.requestId = model.requestId;
+            this.success = model.success;
+            this.synchro = model.synchro;
+        } 
 
         /**
          * <p>Indicates whether retries are allowed.</p>
@@ -220,7 +247,7 @@ public class QueryDomainSpecialBizInfoByDomainResponseBody extends TeaModel {
         /**
          * <p>The array of error parameters that are returned.</p>
          */
-        public Builder errorArgs(java.util.List < ? > errorArgs) {
+        public Builder errorArgs(java.util.List<?> errorArgs) {
             this.errorArgs = errorArgs;
             return this;
         }
@@ -622,6 +649,37 @@ public class QueryDomainSpecialBizInfoByDomainResponseBody extends TeaModel {
             private String telMain; 
             private String vspContactId; 
 
+            private Builder() {
+            } 
+
+            private Builder(DomainSpecialBizContact model) {
+                this.bizId = model.bizId;
+                this.cCity = model.cCity;
+                this.cCompany = model.cCompany;
+                this.cCountry = model.cCountry;
+                this.cName = model.cName;
+                this.cProvince = model.cProvince;
+                this.cVenu = model.cVenu;
+                this.eCity = model.eCity;
+                this.eCompany = model.eCompany;
+                this.eName = model.eName;
+                this.eProvince = model.eProvince;
+                this.eVenu = model.eVenu;
+                this.email = model.email;
+                this.extend = model.extend;
+                this.faxArea = model.faxArea;
+                this.faxExt = model.faxExt;
+                this.faxMain = model.faxMain;
+                this.mobile = model.mobile;
+                this.postalcode = model.postalcode;
+                this.regType = model.regType;
+                this.registrantId = model.registrantId;
+                this.telArea = model.telArea;
+                this.telExt = model.telExt;
+                this.telMain = model.telMain;
+                this.vspContactId = model.vspContactId;
+            } 
+
             /**
              * <p>The business ID.</p>
              * 
@@ -995,6 +1053,19 @@ public class QueryDomainSpecialBizInfoByDomainResponseBody extends TeaModel {
             private Integer holderCert; 
             private String saleId; 
 
+            private Builder() {
+            } 
+
+            private Builder(DomainSpecialBizCredentials model) {
+                this.bizId = model.bizId;
+                this.credentialNo = model.credentialNo;
+                this.credentialType = model.credentialType;
+                this.credentialUrl = model.credentialUrl;
+                this.domainName = model.domainName;
+                this.holderCert = model.holderCert;
+                this.saleId = model.saleId;
+            } 
+
             /**
              * <p>The ID of the associated workflow.</p>
              * 
@@ -1111,7 +1182,7 @@ public class QueryDomainSpecialBizInfoByDomainResponseBody extends TeaModel {
         private DomainSpecialBizContact domainSpecialBizContact;
 
         @com.aliyun.core.annotation.NameInMap("DomainSpecialBizCredentials")
-        private java.util.List < DomainSpecialBizCredentials> domainSpecialBizCredentials;
+        private java.util.List<DomainSpecialBizCredentials> domainSpecialBizCredentials;
 
         @com.aliyun.core.annotation.NameInMap("GmtCreate")
         private String gmtCreate;
@@ -1232,7 +1303,7 @@ public class QueryDomainSpecialBizInfoByDomainResponseBody extends TeaModel {
         /**
          * @return domainSpecialBizCredentials
          */
-        public java.util.List < DomainSpecialBizCredentials> getDomainSpecialBizCredentials() {
+        public java.util.List<DomainSpecialBizCredentials> getDomainSpecialBizCredentials() {
             return this.domainSpecialBizCredentials;
         }
 
@@ -1315,7 +1386,7 @@ public class QueryDomainSpecialBizInfoByDomainResponseBody extends TeaModel {
             private Long createTime; 
             private String domainName; 
             private DomainSpecialBizContact domainSpecialBizContact; 
-            private java.util.List < DomainSpecialBizCredentials> domainSpecialBizCredentials; 
+            private java.util.List<DomainSpecialBizCredentials> domainSpecialBizCredentials; 
             private String gmtCreate; 
             private String gmtModified; 
             private Long id; 
@@ -1326,6 +1397,31 @@ public class QueryDomainSpecialBizInfoByDomainResponseBody extends TeaModel {
             private String statusDesc; 
             private Long updateTime; 
             private String userId; 
+
+            private Builder() {
+            } 
+
+            private Builder(Module model) {
+                this.auditMsg = model.auditMsg;
+                this.bizName = model.bizName;
+                this.bizNo = model.bizNo;
+                this.bizStatus = model.bizStatus;
+                this.bizType = model.bizType;
+                this.createTime = model.createTime;
+                this.domainName = model.domainName;
+                this.domainSpecialBizContact = model.domainSpecialBizContact;
+                this.domainSpecialBizCredentials = model.domainSpecialBizCredentials;
+                this.gmtCreate = model.gmtCreate;
+                this.gmtModified = model.gmtModified;
+                this.id = model.id;
+                this.orderId = model.orderId;
+                this.productId = model.productId;
+                this.saleId = model.saleId;
+                this.status = model.status;
+                this.statusDesc = model.statusDesc;
+                this.updateTime = model.updateTime;
+                this.userId = model.userId;
+            } 
 
             /**
              * <p>The review information.</p>
@@ -1409,7 +1505,7 @@ public class QueryDomainSpecialBizInfoByDomainResponseBody extends TeaModel {
             /**
              * <p>The certificate information.</p>
              */
-            public Builder domainSpecialBizCredentials(java.util.List < DomainSpecialBizCredentials> domainSpecialBizCredentials) {
+            public Builder domainSpecialBizCredentials(java.util.List<DomainSpecialBizCredentials> domainSpecialBizCredentials) {
                 this.domainSpecialBizCredentials = domainSpecialBizCredentials;
                 return this;
             }

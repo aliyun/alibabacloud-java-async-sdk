@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.domain20180129.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -53,6 +58,10 @@ public class CheckDomainResponseBody extends TeaModel {
 
     public static CheckDomainResponseBody create() {
         return builder().build();
+    }
+
+    public Builder toBuilder() {
+        return new Builder(this);
     }
 
     /**
@@ -120,6 +129,20 @@ public class CheckDomainResponseBody extends TeaModel {
         private String reason; 
         private String requestId; 
         private StaticPriceInfo staticPriceInfo; 
+
+        private Builder() {
+        } 
+
+        private Builder(CheckDomainResponseBody model) {
+            this.avail = model.avail;
+            this.domainName = model.domainName;
+            this.dynamicCheck = model.dynamicCheck;
+            this.premium = model.premium;
+            this.price = model.price;
+            this.reason = model.reason;
+            this.requestId = model.requestId;
+            this.staticPriceInfo = model.staticPriceInfo;
+        } 
 
         /**
          * Avail.
@@ -247,6 +270,15 @@ public class CheckDomainResponseBody extends TeaModel {
             private Double money; 
             private Long period; 
 
+            private Builder() {
+            } 
+
+            private Builder(PriceInfo model) {
+                this.action = model.action;
+                this.money = model.money;
+                this.period = model.period;
+            } 
+
             /**
              * action.
              */
@@ -286,7 +318,7 @@ public class CheckDomainResponseBody extends TeaModel {
      */
     public static class StaticPriceInfo extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("PriceInfo")
-        private java.util.List < PriceInfo> priceInfo;
+        private java.util.List<PriceInfo> priceInfo;
 
         private StaticPriceInfo(Builder builder) {
             this.priceInfo = builder.priceInfo;
@@ -303,17 +335,24 @@ public class CheckDomainResponseBody extends TeaModel {
         /**
          * @return priceInfo
          */
-        public java.util.List < PriceInfo> getPriceInfo() {
+        public java.util.List<PriceInfo> getPriceInfo() {
             return this.priceInfo;
         }
 
         public static final class Builder {
-            private java.util.List < PriceInfo> priceInfo; 
+            private java.util.List<PriceInfo> priceInfo; 
+
+            private Builder() {
+            } 
+
+            private Builder(StaticPriceInfo model) {
+                this.priceInfo = model.priceInfo;
+            } 
 
             /**
              * PriceInfo.
              */
-            public Builder priceInfo(java.util.List < PriceInfo> priceInfo) {
+            public Builder priceInfo(java.util.List<PriceInfo> priceInfo) {
                 this.priceInfo = priceInfo;
                 return this;
             }

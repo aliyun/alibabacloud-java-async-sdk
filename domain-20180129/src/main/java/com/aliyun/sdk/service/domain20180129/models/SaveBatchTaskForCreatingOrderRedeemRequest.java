@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.domain20180129.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -23,7 +28,7 @@ public class SaveBatchTaskForCreatingOrderRedeemRequest extends Request {
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("OrderRedeemParam")
     @com.aliyun.core.annotation.Validation(required = true)
-    private java.util.List < OrderRedeemParam> orderRedeemParam;
+    private java.util.List<OrderRedeemParam> orderRedeemParam;
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("PromotionNo")
@@ -60,7 +65,7 @@ public class SaveBatchTaskForCreatingOrderRedeemRequest extends Request {
         return builder().build();
     }
 
-    @Override
+@Override
     public Builder toBuilder() {
         return new Builder(this);
     }
@@ -82,7 +87,7 @@ public class SaveBatchTaskForCreatingOrderRedeemRequest extends Request {
     /**
      * @return orderRedeemParam
      */
-    public java.util.List < OrderRedeemParam> getOrderRedeemParam() {
+    public java.util.List<OrderRedeemParam> getOrderRedeemParam() {
         return this.orderRedeemParam;
     }
 
@@ -117,7 +122,7 @@ public class SaveBatchTaskForCreatingOrderRedeemRequest extends Request {
     public static final class Builder extends Request.Builder<SaveBatchTaskForCreatingOrderRedeemRequest, Builder> {
         private String couponNo; 
         private String lang; 
-        private java.util.List < OrderRedeemParam> orderRedeemParam; 
+        private java.util.List<OrderRedeemParam> orderRedeemParam; 
         private String promotionNo; 
         private Boolean useCoupon; 
         private Boolean usePromotion; 
@@ -159,7 +164,7 @@ public class SaveBatchTaskForCreatingOrderRedeemRequest extends Request {
         /**
          * <p>This parameter is required.</p>
          */
-        public Builder orderRedeemParam(java.util.List < OrderRedeemParam> orderRedeemParam) {
+        public Builder orderRedeemParam(java.util.List<OrderRedeemParam> orderRedeemParam) {
             this.putQueryParameter("OrderRedeemParam", orderRedeemParam);
             this.orderRedeemParam = orderRedeemParam;
             return this;
@@ -251,6 +256,14 @@ public class SaveBatchTaskForCreatingOrderRedeemRequest extends Request {
         public static final class Builder {
             private Long currentExpirationDate; 
             private String domainName; 
+
+            private Builder() {
+            } 
+
+            private Builder(OrderRedeemParam model) {
+                this.currentExpirationDate = model.currentExpirationDate;
+                this.domainName = model.domainName;
+            } 
 
             /**
              * CurrentExpirationDate.

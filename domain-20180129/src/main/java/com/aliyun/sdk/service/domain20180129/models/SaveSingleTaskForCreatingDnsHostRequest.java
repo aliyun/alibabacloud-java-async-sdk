@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.domain20180129.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -25,7 +30,7 @@ public class SaveSingleTaskForCreatingDnsHostRequest extends Request {
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("Ip")
     @com.aliyun.core.annotation.Validation(required = true)
-    private java.util.List < String > ip;
+    private java.util.List<String> ip;
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("Lang")
@@ -52,7 +57,7 @@ public class SaveSingleTaskForCreatingDnsHostRequest extends Request {
         return builder().build();
     }
 
-    @Override
+@Override
     public Builder toBuilder() {
         return new Builder(this);
     }
@@ -74,7 +79,7 @@ public class SaveSingleTaskForCreatingDnsHostRequest extends Request {
     /**
      * @return ip
      */
-    public java.util.List < String > getIp() {
+    public java.util.List<String> getIp() {
         return this.ip;
     }
 
@@ -95,7 +100,7 @@ public class SaveSingleTaskForCreatingDnsHostRequest extends Request {
     public static final class Builder extends Request.Builder<SaveSingleTaskForCreatingDnsHostRequest, Builder> {
         private String dnsName; 
         private String instanceId; 
-        private java.util.List < String > ip; 
+        private java.util.List<String> ip; 
         private String lang; 
         private String userClientIp; 
 
@@ -142,7 +147,7 @@ public class SaveSingleTaskForCreatingDnsHostRequest extends Request {
          * <strong>example:</strong>
          * <p>218.xx.xx.236</p>
          */
-        public Builder ip(java.util.List < String > ip) {
+        public Builder ip(java.util.List<String> ip) {
             this.putQueryParameter("Ip", ip);
             this.ip = ip;
             return this;

@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.domain20180129.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -53,6 +58,10 @@ public class QueryTransferOutInfoResponseBody extends TeaModel {
 
     public static QueryTransferOutInfoResponseBody create() {
         return builder().build();
+    }
+
+    public Builder toBuilder() {
+        return new Builder(this);
     }
 
     /**
@@ -120,6 +129,20 @@ public class QueryTransferOutInfoResponseBody extends TeaModel {
         private String resultMsg; 
         private Integer status; 
         private String transferAuthorizationCodeSendDate; 
+
+        private Builder() {
+        } 
+
+        private Builder(QueryTransferOutInfoResponseBody model) {
+            this.email = model.email;
+            this.expirationDate = model.expirationDate;
+            this.pendingRequestDate = model.pendingRequestDate;
+            this.requestId = model.requestId;
+            this.resultCode = model.resultCode;
+            this.resultMsg = model.resultMsg;
+            this.status = model.status;
+            this.transferAuthorizationCodeSendDate = model.transferAuthorizationCodeSendDate;
+        } 
 
         /**
          * Email.

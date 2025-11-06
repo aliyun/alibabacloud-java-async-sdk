@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.domain20180129.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -53,6 +58,10 @@ public class QueryDomainListResponseBody extends TeaModel {
 
     public static QueryDomainListResponseBody create() {
         return builder().build();
+    }
+
+    public Builder toBuilder() {
+        return new Builder(this);
     }
 
     /**
@@ -120,6 +129,20 @@ public class QueryDomainListResponseBody extends TeaModel {
         private String requestId; 
         private Integer totalItemNum; 
         private Integer totalPageNum; 
+
+        private Builder() {
+        } 
+
+        private Builder(QueryDomainListResponseBody model) {
+            this.currentPageNum = model.currentPageNum;
+            this.data = model.data;
+            this.nextPage = model.nextPage;
+            this.pageSize = model.pageSize;
+            this.prePage = model.prePage;
+            this.requestId = model.requestId;
+            this.totalItemNum = model.totalItemNum;
+            this.totalPageNum = model.totalPageNum;
+        } 
 
         /**
          * <p>The page number.</p>
@@ -256,6 +279,14 @@ public class QueryDomainListResponseBody extends TeaModel {
             private String key; 
             private String value; 
 
+            private Builder() {
+            } 
+
+            private Builder(Tag model) {
+                this.key = model.key;
+                this.value = model.value;
+            } 
+
             /**
              * <p>The key of the tag added to the resource.</p>
              * 
@@ -293,7 +324,7 @@ public class QueryDomainListResponseBody extends TeaModel {
      */
     public static class DomainTag extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Tag")
-        private java.util.List < Tag> tag;
+        private java.util.List<Tag> tag;
 
         private DomainTag(Builder builder) {
             this.tag = builder.tag;
@@ -310,17 +341,24 @@ public class QueryDomainListResponseBody extends TeaModel {
         /**
          * @return tag
          */
-        public java.util.List < Tag> getTag() {
+        public java.util.List<Tag> getTag() {
             return this.tag;
         }
 
         public static final class Builder {
-            private java.util.List < Tag> tag; 
+            private java.util.List<Tag> tag; 
+
+            private Builder() {
+            } 
+
+            private Builder(DomainTag model) {
+                this.tag = model.tag;
+            } 
 
             /**
              * Tag.
              */
-            public Builder tag(java.util.List < Tag> tag) {
+            public Builder tag(java.util.List<Tag> tag) {
                 this.tag = tag;
                 return this;
             }
@@ -387,6 +425,9 @@ public class QueryDomainListResponseBody extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("RegistrantType")
         private String registrantType;
 
+        @com.aliyun.core.annotation.NameInMap("Registrar")
+        private String registrar;
+
         @com.aliyun.core.annotation.NameInMap("RegistrationDate")
         private String registrationDate;
 
@@ -419,6 +460,7 @@ public class QueryDomainListResponseBody extends TeaModel {
             this.premium = builder.premium;
             this.productId = builder.productId;
             this.registrantType = builder.registrantType;
+            this.registrar = builder.registrar;
             this.registrationDate = builder.registrationDate;
             this.registrationDateLong = builder.registrationDateLong;
             this.remark = builder.remark;
@@ -547,6 +589,13 @@ public class QueryDomainListResponseBody extends TeaModel {
         }
 
         /**
+         * @return registrar
+         */
+        public String getRegistrar() {
+            return this.registrar;
+        }
+
+        /**
          * @return registrationDate
          */
         public String getRegistrationDate() {
@@ -598,11 +647,40 @@ public class QueryDomainListResponseBody extends TeaModel {
             private Boolean premium; 
             private String productId; 
             private String registrantType; 
+            private String registrar; 
             private String registrationDate; 
             private Long registrationDateLong; 
             private String remark; 
             private String resourceGroupId; 
             private DomainTag tag; 
+
+            private Builder() {
+            } 
+
+            private Builder(Domain model) {
+                this.ccompany = model.ccompany;
+                this.chgholderStatus = model.chgholderStatus;
+                this.domainAuditStatus = model.domainAuditStatus;
+                this.domainGroupId = model.domainGroupId;
+                this.domainGroupName = model.domainGroupName;
+                this.domainName = model.domainName;
+                this.domainStatus = model.domainStatus;
+                this.domainType = model.domainType;
+                this.expirationCurrDateDiff = model.expirationCurrDateDiff;
+                this.expirationDate = model.expirationDate;
+                this.expirationDateLong = model.expirationDateLong;
+                this.expirationDateStatus = model.expirationDateStatus;
+                this.instanceId = model.instanceId;
+                this.premium = model.premium;
+                this.productId = model.productId;
+                this.registrantType = model.registrantType;
+                this.registrar = model.registrar;
+                this.registrationDate = model.registrationDate;
+                this.registrationDateLong = model.registrationDateLong;
+                this.remark = model.remark;
+                this.resourceGroupId = model.resourceGroupId;
+                this.tag = model.tag;
+            } 
 
             /**
              * <p>The name of the domain name registrant.</p>
@@ -616,7 +694,15 @@ public class QueryDomainListResponseBody extends TeaModel {
             }
 
             /**
-             * ChgholderStatus.
+             * <p>domain transfer status. value:</p>
+             * <ul>
+             * <li>0: domain status normal.</li>
+             * <li>1: domain is pending change holder.</li>
+             * <li>2: change holder failed.</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>0</p>
              */
             public Builder chgholderStatus(String chgholderStatus) {
                 this.chgholderStatus = chgholderStatus;
@@ -655,7 +741,7 @@ public class QueryDomainListResponseBody extends TeaModel {
              * <p>The name of the domain name group.</p>
              * 
              * <strong>example:</strong>
-             * <p>测试分组</p>
+             * <p>test group</p>
              */
             public Builder domainGroupName(String domainGroupName) {
                 this.domainGroupName = domainGroupName;
@@ -802,6 +888,14 @@ public class QueryDomainListResponseBody extends TeaModel {
             }
 
             /**
+             * Registrar.
+             */
+            public Builder registrar(String registrar) {
+                this.registrar = registrar;
+                return this;
+            }
+
+            /**
              * <p>The time when the domain name was registered.</p>
              * 
              * <strong>example:</strong>
@@ -827,7 +921,7 @@ public class QueryDomainListResponseBody extends TeaModel {
              * <p>The remarks of the domain name.</p>
              * 
              * <strong>example:</strong>
-             * <p>备注</p>
+             * <p>test remark</p>
              */
             public Builder remark(String remark) {
                 this.remark = remark;
@@ -868,7 +962,7 @@ public class QueryDomainListResponseBody extends TeaModel {
      */
     public static class Data extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Domain")
-        private java.util.List < Domain> domain;
+        private java.util.List<Domain> domain;
 
         private Data(Builder builder) {
             this.domain = builder.domain;
@@ -885,17 +979,24 @@ public class QueryDomainListResponseBody extends TeaModel {
         /**
          * @return domain
          */
-        public java.util.List < Domain> getDomain() {
+        public java.util.List<Domain> getDomain() {
             return this.domain;
         }
 
         public static final class Builder {
-            private java.util.List < Domain> domain; 
+            private java.util.List<Domain> domain; 
+
+            private Builder() {
+            } 
+
+            private Builder(Data model) {
+                this.domain = model.domain;
+            } 
 
             /**
              * Domain.
              */
-            public Builder domain(java.util.List < Domain> domain) {
+            public Builder domain(java.util.List<Domain> domain) {
                 this.domain = domain;
                 return this;
             }

@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.domain20180129.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -65,6 +70,10 @@ public class QueryEmailVerificationResponseBody extends TeaModel {
 
     public static QueryEmailVerificationResponseBody create() {
         return builder().build();
+    }
+
+    public Builder toBuilder() {
+        return new Builder(this);
     }
 
     /**
@@ -156,6 +165,23 @@ public class QueryEmailVerificationResponseBody extends TeaModel {
         private String userId; 
         private Integer verificationStatus; 
         private String verificationTime; 
+
+        private Builder() {
+        } 
+
+        private Builder(QueryEmailVerificationResponseBody model) {
+            this.confirmIp = model.confirmIp;
+            this.email = model.email;
+            this.emailVerificationNo = model.emailVerificationNo;
+            this.gmtCreate = model.gmtCreate;
+            this.gmtModified = model.gmtModified;
+            this.requestId = model.requestId;
+            this.sendIp = model.sendIp;
+            this.tokenSendTime = model.tokenSendTime;
+            this.userId = model.userId;
+            this.verificationStatus = model.verificationStatus;
+            this.verificationTime = model.verificationTime;
+        } 
 
         /**
          * ConfirmIp.

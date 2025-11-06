@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.domain20180129.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -63,6 +68,10 @@ public class QueryDomainListRequest extends Request {
     private String queryType;
 
     @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Registrar")
+    private String registrar;
+
+    @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("ResourceGroupId")
     private String resourceGroupId;
 
@@ -76,7 +85,7 @@ public class QueryDomainListRequest extends Request {
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("Tag")
-    private java.util.List < Tag> tag;
+    private java.util.List<Tag> tag;
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("UserClientIp")
@@ -96,6 +105,7 @@ public class QueryDomainListRequest extends Request {
         this.pageSize = builder.pageSize;
         this.productDomainType = builder.productDomainType;
         this.queryType = builder.queryType;
+        this.registrar = builder.registrar;
         this.resourceGroupId = builder.resourceGroupId;
         this.startExpirationDate = builder.startExpirationDate;
         this.startRegistrationDate = builder.startRegistrationDate;
@@ -111,7 +121,7 @@ public class QueryDomainListRequest extends Request {
         return builder().build();
     }
 
-    @Override
+@Override
     public Builder toBuilder() {
         return new Builder(this);
     }
@@ -201,6 +211,13 @@ public class QueryDomainListRequest extends Request {
     }
 
     /**
+     * @return registrar
+     */
+    public String getRegistrar() {
+        return this.registrar;
+    }
+
+    /**
      * @return resourceGroupId
      */
     public String getResourceGroupId() {
@@ -224,7 +241,7 @@ public class QueryDomainListRequest extends Request {
     /**
      * @return tag
      */
-    public java.util.List < Tag> getTag() {
+    public java.util.List<Tag> getTag() {
         return this.tag;
     }
 
@@ -248,10 +265,11 @@ public class QueryDomainListRequest extends Request {
         private Integer pageSize; 
         private String productDomainType; 
         private String queryType; 
+        private String registrar; 
         private String resourceGroupId; 
         private Long startExpirationDate; 
         private Long startRegistrationDate; 
-        private java.util.List < Tag> tag; 
+        private java.util.List<Tag> tag; 
         private String userClientIp; 
 
         private Builder() {
@@ -272,6 +290,7 @@ public class QueryDomainListRequest extends Request {
             this.pageSize = request.pageSize;
             this.productDomainType = request.productDomainType;
             this.queryType = request.queryType;
+            this.registrar = request.registrar;
             this.resourceGroupId = request.resourceGroupId;
             this.startExpirationDate = request.startExpirationDate;
             this.startRegistrationDate = request.startRegistrationDate;
@@ -304,7 +323,7 @@ public class QueryDomainListRequest extends Request {
         }
 
         /**
-         * <p>The domain name that you want to search for.</p>
+         * <p>The domain name. You can search for the domain name in the domain name list.</p>
          * 
          * <strong>example:</strong>
          * <p>test.com</p>
@@ -316,7 +335,7 @@ public class QueryDomainListRequest extends Request {
         }
 
         /**
-         * <p>The end of the time range to query domain names based on expiration dates. Set the value to a UNIX timestamp representing the number of milliseconds that have elapsed since January 1, 1970, 00:00:00 UTC. Only queries by day are supported.</p>
+         * <p>The end of the time range to query domain names based on expiration dates. Set the value to a UNIX timestamp representing the number of milliseconds that have elapsed from January 1, 1970, 00:00:00 UTC to the time you perform the query. Only queries by day are supported.</p>
          * 
          * <strong>example:</strong>
          * <p>1522080000000</p>
@@ -454,6 +473,15 @@ public class QueryDomainListRequest extends Request {
         }
 
         /**
+         * Registrar.
+         */
+        public Builder registrar(String registrar) {
+            this.putQueryParameter("Registrar", registrar);
+            this.registrar = registrar;
+            return this;
+        }
+
+        /**
          * <p>The ID of the resource group.</p>
          * 
          * <strong>example:</strong>
@@ -466,7 +494,7 @@ public class QueryDomainListRequest extends Request {
         }
 
         /**
-         * <p>The beginning of the time range to query domain names based on expiration dates. Set the value to a UNIX timestamp representing the number of milliseconds that have elapsed since January 1, 1970, 00:00:00 UTC. Only queries by day are supported.</p>
+         * <p>The beginning of the time range to query domain names based on expiration dates. Set the value to a UNIX timestamp representing the number of milliseconds that have elapsed from January 1, 1970, 00:00:00 UTC to the time you perform the query. Only queries by day are supported.</p>
          * 
          * <strong>example:</strong>
          * <p>1522080000000</p>
@@ -492,7 +520,7 @@ public class QueryDomainListRequest extends Request {
         /**
          * <p>The tags to add to the resource.</p>
          */
-        public Builder tag(java.util.List < Tag> tag) {
+        public Builder tag(java.util.List<Tag> tag) {
             this.putQueryParameter("Tag", tag);
             this.tag = tag;
             return this;
@@ -560,6 +588,14 @@ public class QueryDomainListRequest extends Request {
         public static final class Builder {
             private String key; 
             private String value; 
+
+            private Builder() {
+            } 
+
+            private Builder(Tag model) {
+                this.key = model.key;
+                this.value = model.value;
+            } 
 
             /**
              * <p>The key of the tag to add to the resource.</p>

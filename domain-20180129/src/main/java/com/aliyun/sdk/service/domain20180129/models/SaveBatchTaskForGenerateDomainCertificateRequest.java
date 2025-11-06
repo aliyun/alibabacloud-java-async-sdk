@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.domain20180129.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -15,7 +20,7 @@ public class SaveBatchTaskForGenerateDomainCertificateRequest extends Request {
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("DomainNames")
     @com.aliyun.core.annotation.Validation(required = true)
-    private java.util.List < String > domainNames;
+    private java.util.List<String> domainNames;
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("Lang")
@@ -40,7 +45,7 @@ public class SaveBatchTaskForGenerateDomainCertificateRequest extends Request {
         return builder().build();
     }
 
-    @Override
+@Override
     public Builder toBuilder() {
         return new Builder(this);
     }
@@ -48,7 +53,7 @@ public class SaveBatchTaskForGenerateDomainCertificateRequest extends Request {
     /**
      * @return domainNames
      */
-    public java.util.List < String > getDomainNames() {
+    public java.util.List<String> getDomainNames() {
         return this.domainNames;
     }
 
@@ -67,7 +72,7 @@ public class SaveBatchTaskForGenerateDomainCertificateRequest extends Request {
     }
 
     public static final class Builder extends Request.Builder<SaveBatchTaskForGenerateDomainCertificateRequest, Builder> {
-        private java.util.List < String > domainNames; 
+        private java.util.List<String> domainNames; 
         private String lang; 
         private String userClientIp; 
 
@@ -86,7 +91,7 @@ public class SaveBatchTaskForGenerateDomainCertificateRequest extends Request {
          * <p>The domain names.</p>
          * <p>This parameter is required.</p>
          */
-        public Builder domainNames(java.util.List < String > domainNames) {
+        public Builder domainNames(java.util.List<String> domainNames) {
             String domainNamesShrink = shrink(domainNames, "DomainNames", "json");
             this.putQueryParameter("DomainNames", domainNamesShrink);
             this.domainNames = domainNames;

@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.domain20180129.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -57,6 +62,10 @@ public class QueryChangeLogListResponseBody extends TeaModel {
 
     public static QueryChangeLogListResponseBody create() {
         return builder().build();
+    }
+
+    public Builder toBuilder() {
+        return new Builder(this);
     }
 
     /**
@@ -132,6 +141,21 @@ public class QueryChangeLogListResponseBody extends TeaModel {
         private Boolean resultLimit; 
         private Integer totalItemNum; 
         private Integer totalPageNum; 
+
+        private Builder() {
+        } 
+
+        private Builder(QueryChangeLogListResponseBody model) {
+            this.currentPageNum = model.currentPageNum;
+            this.data = model.data;
+            this.nextPage = model.nextPage;
+            this.pageSize = model.pageSize;
+            this.prePage = model.prePage;
+            this.requestId = model.requestId;
+            this.resultLimit = model.resultLimit;
+            this.totalItemNum = model.totalItemNum;
+            this.totalPageNum = model.totalPageNum;
+        } 
 
         /**
          * CurrentPageNum.
@@ -230,6 +254,9 @@ public class QueryChangeLogListResponseBody extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("OperationIPAddress")
         private String operationIPAddress;
 
+        @com.aliyun.core.annotation.NameInMap("Remark")
+        private String remark;
+
         @com.aliyun.core.annotation.NameInMap("Result")
         private String result;
 
@@ -241,6 +268,7 @@ public class QueryChangeLogListResponseBody extends TeaModel {
             this.domainName = builder.domainName;
             this.operation = builder.operation;
             this.operationIPAddress = builder.operationIPAddress;
+            this.remark = builder.remark;
             this.result = builder.result;
             this.time = builder.time;
         }
@@ -282,6 +310,13 @@ public class QueryChangeLogListResponseBody extends TeaModel {
         }
 
         /**
+         * @return remark
+         */
+        public String getRemark() {
+            return this.remark;
+        }
+
+        /**
          * @return result
          */
         public String getResult() {
@@ -300,8 +335,22 @@ public class QueryChangeLogListResponseBody extends TeaModel {
             private String domainName; 
             private String operation; 
             private String operationIPAddress; 
+            private String remark; 
             private String result; 
             private String time; 
+
+            private Builder() {
+            } 
+
+            private Builder(ChangeLog model) {
+                this.details = model.details;
+                this.domainName = model.domainName;
+                this.operation = model.operation;
+                this.operationIPAddress = model.operationIPAddress;
+                this.remark = model.remark;
+                this.result = model.result;
+                this.time = model.time;
+            } 
 
             /**
              * Details.
@@ -336,6 +385,14 @@ public class QueryChangeLogListResponseBody extends TeaModel {
             }
 
             /**
+             * Remark.
+             */
+            public Builder remark(String remark) {
+                this.remark = remark;
+                return this;
+            }
+
+            /**
              * Result.
              */
             public Builder result(String result) {
@@ -366,7 +423,7 @@ public class QueryChangeLogListResponseBody extends TeaModel {
      */
     public static class Data extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("ChangeLog")
-        private java.util.List < ChangeLog> changeLog;
+        private java.util.List<ChangeLog> changeLog;
 
         private Data(Builder builder) {
             this.changeLog = builder.changeLog;
@@ -383,17 +440,24 @@ public class QueryChangeLogListResponseBody extends TeaModel {
         /**
          * @return changeLog
          */
-        public java.util.List < ChangeLog> getChangeLog() {
+        public java.util.List<ChangeLog> getChangeLog() {
             return this.changeLog;
         }
 
         public static final class Builder {
-            private java.util.List < ChangeLog> changeLog; 
+            private java.util.List<ChangeLog> changeLog; 
+
+            private Builder() {
+            } 
+
+            private Builder(Data model) {
+                this.changeLog = model.changeLog;
+            } 
 
             /**
              * ChangeLog.
              */
-            public Builder changeLog(java.util.List < ChangeLog> changeLog) {
+            public Builder changeLog(java.util.List<ChangeLog> changeLog) {
                 this.changeLog = changeLog;
                 return this;
             }

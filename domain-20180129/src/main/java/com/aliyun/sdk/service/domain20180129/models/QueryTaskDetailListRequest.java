@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.domain20180129.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -67,7 +72,7 @@ public class QueryTaskDetailListRequest extends Request {
         return builder().build();
     }
 
-    @Override
+@Override
     public Builder toBuilder() {
         return new Builder(this);
     }
@@ -155,7 +160,10 @@ public class QueryTaskDetailListRequest extends Request {
         } 
 
         /**
-         * DomainName.
+         * <p>The domain name.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>example.com</p>
          */
         public Builder domainName(String domainName) {
             this.putQueryParameter("DomainName", domainName);
@@ -164,7 +172,10 @@ public class QueryTaskDetailListRequest extends Request {
         }
 
         /**
-         * InstanceId.
+         * <p>The instance ID of the domain name.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>S20179H1BBI9test</p>
          */
         public Builder instanceId(String instanceId) {
             this.putQueryParameter("InstanceId", instanceId);
@@ -173,7 +184,15 @@ public class QueryTaskDetailListRequest extends Request {
         }
 
         /**
-         * Lang.
+         * <p>The language of the error message to return if the request fails. Valid value:</p>
+         * <ul>
+         * <li><strong>zh</strong>: Chinese</li>
+         * <li><strong>en</strong>: English</li>
+         * </ul>
+         * <p>Default value: <strong>en</strong>.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>en</p>
          */
         public Builder lang(String lang) {
             this.putQueryParameter("Lang", lang);
@@ -182,6 +201,7 @@ public class QueryTaskDetailListRequest extends Request {
         }
 
         /**
+         * <p>The page number.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -194,6 +214,7 @@ public class QueryTaskDetailListRequest extends Request {
         }
 
         /**
+         * <p>The number of entries to return on each page. Maximum value: <strong>1000</strong>.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -206,6 +227,7 @@ public class QueryTaskDetailListRequest extends Request {
         }
 
         /**
+         * <p>The task ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -218,7 +240,16 @@ public class QueryTaskDetailListRequest extends Request {
         }
 
         /**
-         * TaskStatus.
+         * <p>The task status. Valid value:</p>
+         * <ul>
+         * <li><strong>0</strong>: waiting for execution</li>
+         * <li><strong>1</strong>: being executed</li>
+         * <li><strong>2</strong>: successful</li>
+         * <li><strong>3</strong>: failed</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>2</p>
          */
         public Builder taskStatus(Integer taskStatus) {
             this.putQueryParameter("TaskStatus", taskStatus);
@@ -227,7 +258,10 @@ public class QueryTaskDetailListRequest extends Request {
         }
 
         /**
-         * UserClientIp.
+         * <p>The IP address of the client. Set the value to <strong>127.0.0.1</strong>.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>127.0.0.0</p>
          */
         public Builder userClientIp(String userClientIp) {
             this.putQueryParameter("UserClientIp", userClientIp);

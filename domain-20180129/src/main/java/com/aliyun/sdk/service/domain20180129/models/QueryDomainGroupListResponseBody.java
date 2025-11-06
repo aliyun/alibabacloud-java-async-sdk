@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.domain20180129.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -31,6 +36,10 @@ public class QueryDomainGroupListResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return data
      */
@@ -48,6 +57,14 @@ public class QueryDomainGroupListResponseBody extends TeaModel {
     public static final class Builder {
         private Data data; 
         private String requestId; 
+
+        private Builder() {
+        } 
+
+        private Builder(QueryDomainGroupListResponseBody model) {
+            this.data = model.data;
+            this.requestId = model.requestId;
+        } 
 
         /**
          * Data.
@@ -175,6 +192,19 @@ public class QueryDomainGroupListResponseBody extends TeaModel {
             private String modificationDate; 
             private Integer totalNumber; 
 
+            private Builder() {
+            } 
+
+            private Builder(DomainGroup model) {
+                this.beingDeleted = model.beingDeleted;
+                this.creationDate = model.creationDate;
+                this.domainGroupId = model.domainGroupId;
+                this.domainGroupName = model.domainGroupName;
+                this.domainGroupStatus = model.domainGroupStatus;
+                this.modificationDate = model.modificationDate;
+                this.totalNumber = model.totalNumber;
+            } 
+
             /**
              * BeingDeleted.
              */
@@ -246,7 +276,7 @@ public class QueryDomainGroupListResponseBody extends TeaModel {
      */
     public static class Data extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("DomainGroup")
-        private java.util.List < DomainGroup> domainGroup;
+        private java.util.List<DomainGroup> domainGroup;
 
         private Data(Builder builder) {
             this.domainGroup = builder.domainGroup;
@@ -263,17 +293,24 @@ public class QueryDomainGroupListResponseBody extends TeaModel {
         /**
          * @return domainGroup
          */
-        public java.util.List < DomainGroup> getDomainGroup() {
+        public java.util.List<DomainGroup> getDomainGroup() {
             return this.domainGroup;
         }
 
         public static final class Builder {
-            private java.util.List < DomainGroup> domainGroup; 
+            private java.util.List<DomainGroup> domainGroup; 
+
+            private Builder() {
+            } 
+
+            private Builder(Data model) {
+                this.domainGroup = model.domainGroup;
+            } 
 
             /**
              * DomainGroup.
              */
-            public Builder domainGroup(java.util.List < DomainGroup> domainGroup) {
+            public Builder domainGroup(java.util.List<DomainGroup> domainGroup) {
                 this.domainGroup = domainGroup;
                 return this;
             }

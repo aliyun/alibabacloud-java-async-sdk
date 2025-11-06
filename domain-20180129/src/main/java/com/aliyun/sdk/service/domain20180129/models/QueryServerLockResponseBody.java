@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.domain20180129.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -65,6 +70,10 @@ public class QueryServerLockResponseBody extends TeaModel {
 
     public static QueryServerLockResponseBody create() {
         return builder().build();
+    }
+
+    public Builder toBuilder() {
+        return new Builder(this);
     }
 
     /**
@@ -156,6 +165,23 @@ public class QueryServerLockResponseBody extends TeaModel {
         private Integer serverLockStatus; 
         private String startDate; 
         private String userId; 
+
+        private Builder() {
+        } 
+
+        private Builder(QueryServerLockResponseBody model) {
+            this.domainInstanceId = model.domainInstanceId;
+            this.domainName = model.domainName;
+            this.expireDate = model.expireDate;
+            this.gmtCreate = model.gmtCreate;
+            this.gmtModified = model.gmtModified;
+            this.lockInstanceId = model.lockInstanceId;
+            this.lockProductId = model.lockProductId;
+            this.requestId = model.requestId;
+            this.serverLockStatus = model.serverLockStatus;
+            this.startDate = model.startDate;
+            this.userId = model.userId;
+        } 
 
         /**
          * DomainInstanceId.

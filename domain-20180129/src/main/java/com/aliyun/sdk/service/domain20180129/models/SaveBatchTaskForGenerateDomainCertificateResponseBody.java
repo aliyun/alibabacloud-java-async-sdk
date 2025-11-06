@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.domain20180129.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -31,6 +36,10 @@ public class SaveBatchTaskForGenerateDomainCertificateResponseBody extends TeaMo
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return requestId
      */
@@ -48,6 +57,14 @@ public class SaveBatchTaskForGenerateDomainCertificateResponseBody extends TeaMo
     public static final class Builder {
         private String requestId; 
         private String taskNo; 
+
+        private Builder() {
+        } 
+
+        private Builder(SaveBatchTaskForGenerateDomainCertificateResponseBody model) {
+            this.requestId = model.requestId;
+            this.taskNo = model.taskNo;
+        } 
 
         /**
          * <p>The request ID.</p>

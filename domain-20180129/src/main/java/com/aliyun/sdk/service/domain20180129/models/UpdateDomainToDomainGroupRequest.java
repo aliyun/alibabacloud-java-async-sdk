@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.domain20180129.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -24,7 +29,7 @@ public class UpdateDomainToDomainGroupRequest extends Request {
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("DomainName")
-    private java.util.List < String > domainName;
+    private java.util.List<String> domainName;
 
     @com.aliyun.core.annotation.Body
     @com.aliyun.core.annotation.NameInMap("FileToUpload")
@@ -62,7 +67,7 @@ public class UpdateDomainToDomainGroupRequest extends Request {
         return builder().build();
     }
 
-    @Override
+@Override
     public Builder toBuilder() {
         return new Builder(this);
     }
@@ -84,7 +89,7 @@ public class UpdateDomainToDomainGroupRequest extends Request {
     /**
      * @return domainName
      */
-    public java.util.List < String > getDomainName() {
+    public java.util.List<String> getDomainName() {
         return this.domainName;
     }
 
@@ -119,7 +124,7 @@ public class UpdateDomainToDomainGroupRequest extends Request {
     public static final class Builder extends Request.Builder<UpdateDomainToDomainGroupRequest, Builder> {
         private Integer dataSource; 
         private Long domainGroupId; 
-        private java.util.List < String > domainName; 
+        private java.util.List<String> domainName; 
         private String fileToUpload; 
         private String lang; 
         private Boolean replace; 
@@ -167,7 +172,7 @@ public class UpdateDomainToDomainGroupRequest extends Request {
         /**
          * DomainName.
          */
-        public Builder domainName(java.util.List < String > domainName) {
+        public Builder domainName(java.util.List<String> domainName) {
             this.putQueryParameter("DomainName", domainName);
             this.domainName = domainName;
             return this;

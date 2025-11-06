@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.domain20180129.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -13,16 +18,16 @@ import com.aliyun.sdk.gateway.pop.models.*;
  */
 public class SubmitEmailVerificationResponseBody extends TeaModel {
     @com.aliyun.core.annotation.NameInMap("ExistList")
-    private java.util.List < ExistList> existList;
+    private java.util.List<ExistList> existList;
 
     @com.aliyun.core.annotation.NameInMap("FailList")
-    private java.util.List < FailList> failList;
+    private java.util.List<FailList> failList;
 
     @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
     @com.aliyun.core.annotation.NameInMap("SuccessList")
-    private java.util.List < SuccessList> successList;
+    private java.util.List<SuccessList> successList;
 
     private SubmitEmailVerificationResponseBody(Builder builder) {
         this.existList = builder.existList;
@@ -39,17 +44,21 @@ public class SubmitEmailVerificationResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return existList
      */
-    public java.util.List < ExistList> getExistList() {
+    public java.util.List<ExistList> getExistList() {
         return this.existList;
     }
 
     /**
      * @return failList
      */
-    public java.util.List < FailList> getFailList() {
+    public java.util.List<FailList> getFailList() {
         return this.failList;
     }
 
@@ -63,20 +72,30 @@ public class SubmitEmailVerificationResponseBody extends TeaModel {
     /**
      * @return successList
      */
-    public java.util.List < SuccessList> getSuccessList() {
+    public java.util.List<SuccessList> getSuccessList() {
         return this.successList;
     }
 
     public static final class Builder {
-        private java.util.List < ExistList> existList; 
-        private java.util.List < FailList> failList; 
+        private java.util.List<ExistList> existList; 
+        private java.util.List<FailList> failList; 
         private String requestId; 
-        private java.util.List < SuccessList> successList; 
+        private java.util.List<SuccessList> successList; 
+
+        private Builder() {
+        } 
+
+        private Builder(SubmitEmailVerificationResponseBody model) {
+            this.existList = model.existList;
+            this.failList = model.failList;
+            this.requestId = model.requestId;
+            this.successList = model.successList;
+        } 
 
         /**
          * ExistList.
          */
-        public Builder existList(java.util.List < ExistList> existList) {
+        public Builder existList(java.util.List<ExistList> existList) {
             this.existList = existList;
             return this;
         }
@@ -84,7 +103,7 @@ public class SubmitEmailVerificationResponseBody extends TeaModel {
         /**
          * FailList.
          */
-        public Builder failList(java.util.List < FailList> failList) {
+        public Builder failList(java.util.List<FailList> failList) {
             this.failList = failList;
             return this;
         }
@@ -100,7 +119,7 @@ public class SubmitEmailVerificationResponseBody extends TeaModel {
         /**
          * SuccessList.
          */
-        public Builder successList(java.util.List < SuccessList> successList) {
+        public Builder successList(java.util.List<SuccessList> successList) {
             this.successList = successList;
             return this;
         }
@@ -166,6 +185,15 @@ public class SubmitEmailVerificationResponseBody extends TeaModel {
             private String code; 
             private String email; 
             private String message; 
+
+            private Builder() {
+            } 
+
+            private Builder(ExistList model) {
+                this.code = model.code;
+                this.email = model.email;
+                this.message = model.message;
+            } 
 
             /**
              * Code.
@@ -254,6 +282,15 @@ public class SubmitEmailVerificationResponseBody extends TeaModel {
             private String email; 
             private String message; 
 
+            private Builder() {
+            } 
+
+            private Builder(FailList model) {
+                this.code = model.code;
+                this.email = model.email;
+                this.message = model.message;
+            } 
+
             /**
              * Code.
              */
@@ -340,6 +377,15 @@ public class SubmitEmailVerificationResponseBody extends TeaModel {
             private String code; 
             private String email; 
             private String message; 
+
+            private Builder() {
+            } 
+
+            private Builder(SuccessList model) {
+                this.code = model.code;
+                this.email = model.email;
+                this.message = model.message;
+            } 
 
             /**
              * Code.

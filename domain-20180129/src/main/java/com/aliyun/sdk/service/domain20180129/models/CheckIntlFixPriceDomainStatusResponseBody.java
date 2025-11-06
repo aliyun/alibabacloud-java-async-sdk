@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.domain20180129.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -31,6 +36,10 @@ public class CheckIntlFixPriceDomainStatusResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return module
      */
@@ -48,6 +57,14 @@ public class CheckIntlFixPriceDomainStatusResponseBody extends TeaModel {
     public static final class Builder {
         private Module module; 
         private String requestId; 
+
+        private Builder() {
+        } 
+
+        private Builder(CheckIntlFixPriceDomainStatusResponseBody model) {
+            this.module = model.module;
+            this.requestId = model.requestId;
+        } 
 
         /**
          * Module.
@@ -174,6 +191,19 @@ public class CheckIntlFixPriceDomainStatusResponseBody extends TeaModel {
             private Boolean premium; 
             private Long price; 
             private Long regDate; 
+
+            private Builder() {
+            } 
+
+            private Builder(Module model) {
+                this.currency = model.currency;
+                this.deadDate = model.deadDate;
+                this.domain = model.domain;
+                this.endTime = model.endTime;
+                this.premium = model.premium;
+                this.price = model.price;
+                this.regDate = model.regDate;
+            } 
 
             /**
              * Currency.

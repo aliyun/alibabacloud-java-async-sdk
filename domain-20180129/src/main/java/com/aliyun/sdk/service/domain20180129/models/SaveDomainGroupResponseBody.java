@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.domain20180129.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -53,6 +58,10 @@ public class SaveDomainGroupResponseBody extends TeaModel {
 
     public static SaveDomainGroupResponseBody create() {
         return builder().build();
+    }
+
+    public Builder toBuilder() {
+        return new Builder(this);
     }
 
     /**
@@ -120,6 +129,20 @@ public class SaveDomainGroupResponseBody extends TeaModel {
         private String modificationDate; 
         private String requestId; 
         private Integer totalNumber; 
+
+        private Builder() {
+        } 
+
+        private Builder(SaveDomainGroupResponseBody model) {
+            this.beingDeleted = model.beingDeleted;
+            this.creationDate = model.creationDate;
+            this.domainGroupId = model.domainGroupId;
+            this.domainGroupName = model.domainGroupName;
+            this.domainGroupStatus = model.domainGroupStatus;
+            this.modificationDate = model.modificationDate;
+            this.requestId = model.requestId;
+            this.totalNumber = model.totalNumber;
+        } 
 
         /**
          * BeingDeleted.

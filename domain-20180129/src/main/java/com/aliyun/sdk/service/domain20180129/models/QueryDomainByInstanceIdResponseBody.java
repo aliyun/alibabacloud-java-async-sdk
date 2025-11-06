@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.domain20180129.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -20,6 +25,9 @@ public class QueryDomainByInstanceIdResponseBody extends TeaModel {
 
     @com.aliyun.core.annotation.NameInMap("DomainGroupName")
     private String domainGroupName;
+
+    @com.aliyun.core.annotation.NameInMap("DomainLifecycleStatus")
+    private String domainLifecycleStatus;
 
     @com.aliyun.core.annotation.NameInMap("DomainName")
     private String domainName;
@@ -62,6 +70,9 @@ public class QueryDomainByInstanceIdResponseBody extends TeaModel {
 
     @com.aliyun.core.annotation.NameInMap("Premium")
     private Boolean premium;
+
+    @com.aliyun.core.annotation.NameInMap("PrivacyServiceStatus")
+    private String privacyServiceStatus;
 
     @com.aliyun.core.annotation.NameInMap("RealNameStatus")
     private String realNameStatus;
@@ -118,6 +129,7 @@ public class QueryDomainByInstanceIdResponseBody extends TeaModel {
         this.dnsList = builder.dnsList;
         this.domainGroupId = builder.domainGroupId;
         this.domainGroupName = builder.domainGroupName;
+        this.domainLifecycleStatus = builder.domainLifecycleStatus;
         this.domainName = builder.domainName;
         this.domainNameProxyService = builder.domainNameProxyService;
         this.domainNameVerificationStatus = builder.domainNameVerificationStatus;
@@ -132,6 +144,7 @@ public class QueryDomainByInstanceIdResponseBody extends TeaModel {
         this.expirationDateStatus = builder.expirationDateStatus;
         this.instanceId = builder.instanceId;
         this.premium = builder.premium;
+        this.privacyServiceStatus = builder.privacyServiceStatus;
         this.realNameStatus = builder.realNameStatus;
         this.registrantName = builder.registrantName;
         this.registrantOrganization = builder.registrantOrganization;
@@ -159,6 +172,10 @@ public class QueryDomainByInstanceIdResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return dnsList
      */
@@ -178,6 +195,13 @@ public class QueryDomainByInstanceIdResponseBody extends TeaModel {
      */
     public String getDomainGroupName() {
         return this.domainGroupName;
+    }
+
+    /**
+     * @return domainLifecycleStatus
+     */
+    public String getDomainLifecycleStatus() {
+        return this.domainLifecycleStatus;
     }
 
     /**
@@ -276,6 +300,13 @@ public class QueryDomainByInstanceIdResponseBody extends TeaModel {
      */
     public Boolean getPremium() {
         return this.premium;
+    }
+
+    /**
+     * @return privacyServiceStatus
+     */
+    public String getPrivacyServiceStatus() {
+        return this.privacyServiceStatus;
     }
 
     /**
@@ -401,6 +432,7 @@ public class QueryDomainByInstanceIdResponseBody extends TeaModel {
         private DnsList dnsList; 
         private Long domainGroupId; 
         private String domainGroupName; 
+        private String domainLifecycleStatus; 
         private String domainName; 
         private Boolean domainNameProxyService; 
         private String domainNameVerificationStatus; 
@@ -415,6 +447,7 @@ public class QueryDomainByInstanceIdResponseBody extends TeaModel {
         private String expirationDateStatus; 
         private String instanceId; 
         private Boolean premium; 
+        private String privacyServiceStatus; 
         private String realNameStatus; 
         private String registrantName; 
         private String registrantOrganization; 
@@ -432,6 +465,48 @@ public class QueryDomainByInstanceIdResponseBody extends TeaModel {
         private String userId; 
         private String zhRegistrantName; 
         private String zhRegistrantOrganization; 
+
+        private Builder() {
+        } 
+
+        private Builder(QueryDomainByInstanceIdResponseBody model) {
+            this.dnsList = model.dnsList;
+            this.domainGroupId = model.domainGroupId;
+            this.domainGroupName = model.domainGroupName;
+            this.domainLifecycleStatus = model.domainLifecycleStatus;
+            this.domainName = model.domainName;
+            this.domainNameProxyService = model.domainNameProxyService;
+            this.domainNameVerificationStatus = model.domainNameVerificationStatus;
+            this.domainStatus = model.domainStatus;
+            this.domainType = model.domainType;
+            this.email = model.email;
+            this.emailVerificationClientHold = model.emailVerificationClientHold;
+            this.emailVerificationStatus = model.emailVerificationStatus;
+            this.expirationCurrDateDiff = model.expirationCurrDateDiff;
+            this.expirationDate = model.expirationDate;
+            this.expirationDateLong = model.expirationDateLong;
+            this.expirationDateStatus = model.expirationDateStatus;
+            this.instanceId = model.instanceId;
+            this.premium = model.premium;
+            this.privacyServiceStatus = model.privacyServiceStatus;
+            this.realNameStatus = model.realNameStatus;
+            this.registrantName = model.registrantName;
+            this.registrantOrganization = model.registrantOrganization;
+            this.registrantType = model.registrantType;
+            this.registrantUpdatingStatus = model.registrantUpdatingStatus;
+            this.registrationDate = model.registrationDate;
+            this.registrationDateLong = model.registrationDateLong;
+            this.remark = model.remark;
+            this.requestId = model.requestId;
+            this.resourceGroupId = model.resourceGroupId;
+            this.tag = model.tag;
+            this.transferOutStatus = model.transferOutStatus;
+            this.transferProhibitionLock = model.transferProhibitionLock;
+            this.updateProhibitionLock = model.updateProhibitionLock;
+            this.userId = model.userId;
+            this.zhRegistrantName = model.zhRegistrantName;
+            this.zhRegistrantOrganization = model.zhRegistrantOrganization;
+        } 
 
         /**
          * DnsList.
@@ -454,6 +529,14 @@ public class QueryDomainByInstanceIdResponseBody extends TeaModel {
          */
         public Builder domainGroupName(String domainGroupName) {
             this.domainGroupName = domainGroupName;
+            return this;
+        }
+
+        /**
+         * DomainLifecycleStatus.
+         */
+        public Builder domainLifecycleStatus(String domainLifecycleStatus) {
+            this.domainLifecycleStatus = domainLifecycleStatus;
             return this;
         }
 
@@ -566,6 +649,14 @@ public class QueryDomainByInstanceIdResponseBody extends TeaModel {
          */
         public Builder premium(Boolean premium) {
             this.premium = premium;
+            return this;
+        }
+
+        /**
+         * PrivacyServiceStatus.
+         */
+        public Builder privacyServiceStatus(String privacyServiceStatus) {
+            this.privacyServiceStatus = privacyServiceStatus;
             return this;
         }
 
@@ -719,7 +810,7 @@ public class QueryDomainByInstanceIdResponseBody extends TeaModel {
      */
     public static class DnsList extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Dns")
-        private java.util.List < String > dns;
+        private java.util.List<String> dns;
 
         private DnsList(Builder builder) {
             this.dns = builder.dns;
@@ -736,17 +827,24 @@ public class QueryDomainByInstanceIdResponseBody extends TeaModel {
         /**
          * @return dns
          */
-        public java.util.List < String > getDns() {
+        public java.util.List<String> getDns() {
             return this.dns;
         }
 
         public static final class Builder {
-            private java.util.List < String > dns; 
+            private java.util.List<String> dns; 
+
+            private Builder() {
+            } 
+
+            private Builder(DnsList model) {
+                this.dns = model.dns;
+            } 
 
             /**
              * Dns.
              */
-            public Builder dns(java.util.List < String > dns) {
+            public Builder dns(java.util.List<String> dns) {
                 this.dns = dns;
                 return this;
             }
@@ -802,6 +900,14 @@ public class QueryDomainByInstanceIdResponseBody extends TeaModel {
             private String key; 
             private String value; 
 
+            private Builder() {
+            } 
+
+            private Builder(TagTag model) {
+                this.key = model.key;
+                this.value = model.value;
+            } 
+
             /**
              * Key.
              */
@@ -833,7 +939,7 @@ public class QueryDomainByInstanceIdResponseBody extends TeaModel {
      */
     public static class Tag extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Tag")
-        private java.util.List < TagTag> tag;
+        private java.util.List<TagTag> tag;
 
         private Tag(Builder builder) {
             this.tag = builder.tag;
@@ -850,17 +956,24 @@ public class QueryDomainByInstanceIdResponseBody extends TeaModel {
         /**
          * @return tag
          */
-        public java.util.List < TagTag> getTag() {
+        public java.util.List<TagTag> getTag() {
             return this.tag;
         }
 
         public static final class Builder {
-            private java.util.List < TagTag> tag; 
+            private java.util.List<TagTag> tag; 
+
+            private Builder() {
+            } 
+
+            private Builder(Tag model) {
+                this.tag = model.tag;
+            } 
 
             /**
              * Tag.
              */
-            public Builder tag(java.util.List < TagTag> tag) {
+            public Builder tag(java.util.List<TagTag> tag) {
                 this.tag = tag;
                 return this;
             }

@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.domain20180129.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -31,6 +36,10 @@ public class QueryIntlFixedPriceOrderListResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return module
      */
@@ -48,6 +57,14 @@ public class QueryIntlFixedPriceOrderListResponseBody extends TeaModel {
     public static final class Builder {
         private Module module; 
         private String requestId; 
+
+        private Builder() {
+        } 
+
+        private Builder(QueryIntlFixedPriceOrderListResponseBody model) {
+            this.module = model.module;
+            this.requestId = model.requestId;
+        } 
 
         /**
          * Module.
@@ -187,6 +204,20 @@ public class QueryIntlFixedPriceOrderListResponseBody extends TeaModel {
             private Long updateTime; 
             private String userId; 
 
+            private Builder() {
+            } 
+
+            private Builder(Data model) {
+                this.bizId = model.bizId;
+                this.createTime = model.createTime;
+                this.domain = model.domain;
+                this.orderType = model.orderType;
+                this.price = model.price;
+                this.status = model.status;
+                this.updateTime = model.updateTime;
+                this.userId = model.userId;
+            } 
+
             /**
              * BizId.
              */
@@ -269,7 +300,7 @@ public class QueryIntlFixedPriceOrderListResponseBody extends TeaModel {
         private Integer currentPageNum;
 
         @com.aliyun.core.annotation.NameInMap("Data")
-        private java.util.List < Data> data;
+        private java.util.List<Data> data;
 
         @com.aliyun.core.annotation.NameInMap("PageSize")
         private Integer pageSize;
@@ -306,7 +337,7 @@ public class QueryIntlFixedPriceOrderListResponseBody extends TeaModel {
         /**
          * @return data
          */
-        public java.util.List < Data> getData() {
+        public java.util.List<Data> getData() {
             return this.data;
         }
 
@@ -333,10 +364,21 @@ public class QueryIntlFixedPriceOrderListResponseBody extends TeaModel {
 
         public static final class Builder {
             private Integer currentPageNum; 
-            private java.util.List < Data> data; 
+            private java.util.List<Data> data; 
             private Integer pageSize; 
             private Integer totalItemNum; 
             private Integer totalPageNum; 
+
+            private Builder() {
+            } 
+
+            private Builder(Module model) {
+                this.currentPageNum = model.currentPageNum;
+                this.data = model.data;
+                this.pageSize = model.pageSize;
+                this.totalItemNum = model.totalItemNum;
+                this.totalPageNum = model.totalPageNum;
+            } 
 
             /**
              * CurrentPageNum.
@@ -349,7 +391,7 @@ public class QueryIntlFixedPriceOrderListResponseBody extends TeaModel {
             /**
              * Data.
              */
-            public Builder data(java.util.List < Data> data) {
+            public Builder data(java.util.List<Data> data) {
                 this.data = data;
                 return this;
             }

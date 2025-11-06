@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.domain20180129.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -27,7 +32,7 @@ public class SaveTaskForUpdatingRegistrantInfoByIdentityCredentialRequest extend
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("DomainName")
     @com.aliyun.core.annotation.Validation(required = true)
-    private java.util.List < String > domainName;
+    private java.util.List<String> domainName;
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("Email")
@@ -152,7 +157,7 @@ public class SaveTaskForUpdatingRegistrantInfoByIdentityCredentialRequest extend
         return builder().build();
     }
 
-    @Override
+@Override
     public Builder toBuilder() {
         return new Builder(this);
     }
@@ -181,7 +186,7 @@ public class SaveTaskForUpdatingRegistrantInfoByIdentityCredentialRequest extend
     /**
      * @return domainName
      */
-    public java.util.List < String > getDomainName() {
+    public java.util.List<String> getDomainName() {
         return this.domainName;
     }
 
@@ -329,7 +334,7 @@ public class SaveTaskForUpdatingRegistrantInfoByIdentityCredentialRequest extend
         private String address; 
         private String city; 
         private String country; 
-        private java.util.List < String > domainName; 
+        private java.util.List<String> domainName; 
         private String email; 
         private String identityCredential; 
         private String identityCredentialNo; 
@@ -416,7 +421,7 @@ public class SaveTaskForUpdatingRegistrantInfoByIdentityCredentialRequest extend
          * <strong>example:</strong>
          * <p>alibabacloud.com</p>
          */
-        public Builder domainName(java.util.List < String > domainName) {
+        public Builder domainName(java.util.List<String> domainName) {
             this.putQueryParameter("DomainName", domainName);
             this.domainName = domainName;
             return this;

@@ -266,6 +266,12 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<QueryDomainRealNameVerificationInfoResponse> queryDomainRealNameVerificationInfo(QueryDomainRealNameVerificationInfoRequest request);
 
     /**
+     * @param request the request parameters of QueryDomainRealTimePrice  QueryDomainRealTimePriceRequest
+     * @return QueryDomainRealTimePriceResponse
+     */
+    CompletableFuture<QueryDomainRealTimePriceResponse> queryDomainRealTimePrice(QueryDomainRealTimePriceRequest request);
+
+    /**
      * @param request the request parameters of QueryDomainSpecialBizDetail  QueryDomainSpecialBizDetailRequest
      * @return QueryDomainSpecialBizDetailResponse
      */
@@ -350,6 +356,13 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<QueryRegistrantProfileRealNameVerificationInfoResponse> queryRegistrantProfileRealNameVerificationInfo(QueryRegistrantProfileRealNameVerificationInfoRequest request);
 
     /**
+     * <b>description</b> :
+     * <p>You can use optional request parameters to specify specific query criteria to query registrant profiles as required. For example:</p>
+     * <ul>
+     * <li>If you know the ID of the profile that you want to query, you can use the registrant profile ID parameter to query the detailed information about the profile.</li>
+     * <li>If you do not know the ID of the profile that you want to query, you can use parameters such as the registrant name parameter to query the detailed information about the profile.</li>
+     * </ul>
+     * 
      * @param request the request parameters of QueryRegistrantProfiles  QueryRegistrantProfilesRequest
      * @return QueryRegistrantProfilesResponse
      */
@@ -668,6 +681,9 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<SaveSingleTaskForSynchronizingDnsHostResponse> saveSingleTaskForSynchronizingDnsHost(SaveSingleTaskForSynchronizingDnsHostRequest request);
 
     /**
+     * <b>description</b> :
+     * <p>The task ID.</p>
+     * 
      * @param request the request parameters of SaveSingleTaskForTransferOutByAuthorizationCode  SaveSingleTaskForTransferOutByAuthorizationCodeRequest
      * @return SaveSingleTaskForTransferOutByAuthorizationCodeResponse
      */

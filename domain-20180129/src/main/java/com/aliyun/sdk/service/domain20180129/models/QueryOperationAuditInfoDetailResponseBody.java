@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.domain20180129.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -61,6 +66,10 @@ public class QueryOperationAuditInfoDetailResponseBody extends TeaModel {
 
     public static QueryOperationAuditInfoDetailResponseBody create() {
         return builder().build();
+    }
+
+    public Builder toBuilder() {
+        return new Builder(this);
     }
 
     /**
@@ -144,6 +153,22 @@ public class QueryOperationAuditInfoDetailResponseBody extends TeaModel {
         private String remark; 
         private String requestId; 
         private Long updateTime; 
+
+        private Builder() {
+        } 
+
+        private Builder(QueryOperationAuditInfoDetailResponseBody model) {
+            this.auditInfo = model.auditInfo;
+            this.auditStatus = model.auditStatus;
+            this.auditType = model.auditType;
+            this.businessName = model.businessName;
+            this.createTime = model.createTime;
+            this.domainName = model.domainName;
+            this.id = model.id;
+            this.remark = model.remark;
+            this.requestId = model.requestId;
+            this.updateTime = model.updateTime;
+        } 
 
         /**
          * AuditInfo.

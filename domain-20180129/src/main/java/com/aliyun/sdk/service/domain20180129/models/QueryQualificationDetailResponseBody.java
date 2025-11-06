@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.domain20180129.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -39,6 +44,10 @@ public class QueryQualificationDetailResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return auditStatus
      */
@@ -72,6 +81,16 @@ public class QueryQualificationDetailResponseBody extends TeaModel {
         private Credentials credentials; 
         private String requestId; 
         private String trackId; 
+
+        private Builder() {
+        } 
+
+        private Builder(QueryQualificationDetailResponseBody model) {
+            this.auditStatus = model.auditStatus;
+            this.credentials = model.credentials;
+            this.requestId = model.requestId;
+            this.trackId = model.trackId;
+        } 
 
         /**
          * AuditStatus.
@@ -167,6 +186,15 @@ public class QueryQualificationDetailResponseBody extends TeaModel {
             private String credentialType; 
             private String credentialUrl; 
 
+            private Builder() {
+            } 
+
+            private Builder(QualificationCredential model) {
+                this.credentialNo = model.credentialNo;
+                this.credentialType = model.credentialType;
+                this.credentialUrl = model.credentialUrl;
+            } 
+
             /**
              * CredentialNo.
              */
@@ -206,7 +234,7 @@ public class QueryQualificationDetailResponseBody extends TeaModel {
      */
     public static class Credentials extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("QualificationCredential")
-        private java.util.List < QualificationCredential> qualificationCredential;
+        private java.util.List<QualificationCredential> qualificationCredential;
 
         private Credentials(Builder builder) {
             this.qualificationCredential = builder.qualificationCredential;
@@ -223,17 +251,24 @@ public class QueryQualificationDetailResponseBody extends TeaModel {
         /**
          * @return qualificationCredential
          */
-        public java.util.List < QualificationCredential> getQualificationCredential() {
+        public java.util.List<QualificationCredential> getQualificationCredential() {
             return this.qualificationCredential;
         }
 
         public static final class Builder {
-            private java.util.List < QualificationCredential> qualificationCredential; 
+            private java.util.List<QualificationCredential> qualificationCredential; 
+
+            private Builder() {
+            } 
+
+            private Builder(Credentials model) {
+                this.qualificationCredential = model.qualificationCredential;
+            } 
 
             /**
              * QualificationCredential.
              */
-            public Builder qualificationCredential(java.util.List < QualificationCredential> qualificationCredential) {
+            public Builder qualificationCredential(java.util.List<QualificationCredential> qualificationCredential) {
                 this.qualificationCredential = qualificationCredential;
                 return this;
             }

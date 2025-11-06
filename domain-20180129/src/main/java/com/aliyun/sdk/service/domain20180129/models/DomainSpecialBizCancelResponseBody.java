@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.domain20180129.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -25,7 +30,7 @@ public class DomainSpecialBizCancelResponseBody extends TeaModel {
     private String dynamicMessage;
 
     @com.aliyun.core.annotation.NameInMap("ErrorArgs")
-    private java.util.List < ? > errorArgs;
+    private java.util.List<?> errorArgs;
 
     @com.aliyun.core.annotation.NameInMap("ErrorCode")
     private String errorCode;
@@ -71,6 +76,10 @@ public class DomainSpecialBizCancelResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return allowRetry
      */
@@ -102,7 +111,7 @@ public class DomainSpecialBizCancelResponseBody extends TeaModel {
     /**
      * @return errorArgs
      */
-    public java.util.List < ? > getErrorArgs() {
+    public java.util.List<?> getErrorArgs() {
         return this.errorArgs;
     }
 
@@ -160,7 +169,7 @@ public class DomainSpecialBizCancelResponseBody extends TeaModel {
         private String appName; 
         private String dynamicCode; 
         private String dynamicMessage; 
-        private java.util.List < ? > errorArgs; 
+        private java.util.List<?> errorArgs; 
         private String errorCode; 
         private String errorMsg; 
         private Integer httpStatusCode; 
@@ -168,6 +177,24 @@ public class DomainSpecialBizCancelResponseBody extends TeaModel {
         private String requestId; 
         private Boolean success; 
         private Boolean synchro; 
+
+        private Builder() {
+        } 
+
+        private Builder(DomainSpecialBizCancelResponseBody model) {
+            this.allowRetry = model.allowRetry;
+            this.appName = model.appName;
+            this.dynamicCode = model.dynamicCode;
+            this.dynamicMessage = model.dynamicMessage;
+            this.errorArgs = model.errorArgs;
+            this.errorCode = model.errorCode;
+            this.errorMsg = model.errorMsg;
+            this.httpStatusCode = model.httpStatusCode;
+            this.module = model.module;
+            this.requestId = model.requestId;
+            this.success = model.success;
+            this.synchro = model.synchro;
+        } 
 
         /**
          * <p>Indicates whether retries are allowed.</p>
@@ -220,7 +247,7 @@ public class DomainSpecialBizCancelResponseBody extends TeaModel {
         /**
          * <p>The array of error parameters that are returned.</p>
          */
-        public Builder errorArgs(java.util.List < ? > errorArgs) {
+        public Builder errorArgs(java.util.List<?> errorArgs) {
             this.errorArgs = errorArgs;
             return this;
         }

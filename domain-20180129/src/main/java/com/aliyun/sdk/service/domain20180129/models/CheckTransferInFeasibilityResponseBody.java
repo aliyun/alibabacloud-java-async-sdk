@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.domain20180129.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -41,6 +46,10 @@ public class CheckTransferInFeasibilityResponseBody extends TeaModel {
 
     public static CheckTransferInFeasibilityResponseBody create() {
         return builder().build();
+    }
+
+    public Builder toBuilder() {
+        return new Builder(this);
     }
 
     /**
@@ -84,6 +93,17 @@ public class CheckTransferInFeasibilityResponseBody extends TeaModel {
         private String message; 
         private String productId; 
         private String requestId; 
+
+        private Builder() {
+        } 
+
+        private Builder(CheckTransferInFeasibilityResponseBody model) {
+            this.canTransfer = model.canTransfer;
+            this.code = model.code;
+            this.message = model.message;
+            this.productId = model.productId;
+            this.requestId = model.requestId;
+        } 
 
         /**
          * CanTransfer.

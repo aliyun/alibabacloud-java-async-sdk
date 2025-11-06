@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.domain20180129.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -53,6 +58,10 @@ public class QueryTaskDetailListResponseBody extends TeaModel {
 
     public static QueryTaskDetailListResponseBody create() {
         return builder().build();
+    }
+
+    public Builder toBuilder() {
+        return new Builder(this);
     }
 
     /**
@@ -121,8 +130,25 @@ public class QueryTaskDetailListResponseBody extends TeaModel {
         private Integer totalItemNum; 
         private Integer totalPageNum; 
 
+        private Builder() {
+        } 
+
+        private Builder(QueryTaskDetailListResponseBody model) {
+            this.currentPageNum = model.currentPageNum;
+            this.data = model.data;
+            this.nextPage = model.nextPage;
+            this.pageSize = model.pageSize;
+            this.prePage = model.prePage;
+            this.requestId = model.requestId;
+            this.totalItemNum = model.totalItemNum;
+            this.totalPageNum = model.totalPageNum;
+        } 
+
         /**
-         * CurrentPageNum.
+         * <p>The page number returned.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder currentPageNum(Integer currentPageNum) {
             this.currentPageNum = currentPageNum;
@@ -130,7 +156,7 @@ public class QueryTaskDetailListResponseBody extends TeaModel {
         }
 
         /**
-         * Data.
+         * <p>The tasks.</p>
          */
         public Builder data(Data data) {
             this.data = data;
@@ -138,7 +164,10 @@ public class QueryTaskDetailListResponseBody extends TeaModel {
         }
 
         /**
-         * NextPage.
+         * <p>Indicates whether the current page is followed by a page.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder nextPage(Boolean nextPage) {
             this.nextPage = nextPage;
@@ -146,7 +175,10 @@ public class QueryTaskDetailListResponseBody extends TeaModel {
         }
 
         /**
-         * PageSize.
+         * <p>The number of entries per page.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2</p>
          */
         public Builder pageSize(Integer pageSize) {
             this.pageSize = pageSize;
@@ -154,7 +186,10 @@ public class QueryTaskDetailListResponseBody extends TeaModel {
         }
 
         /**
-         * PrePage.
+         * <p>Indicates whether the current page is preceded by a page.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>false</p>
          */
         public Builder prePage(Boolean prePage) {
             this.prePage = prePage;
@@ -162,7 +197,10 @@ public class QueryTaskDetailListResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>6A2320E4-D870-49C9-A6DC-test</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -170,7 +208,10 @@ public class QueryTaskDetailListResponseBody extends TeaModel {
         }
 
         /**
-         * TotalItemNum.
+         * <p>The total number of entries.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder totalItemNum(Integer totalItemNum) {
             this.totalItemNum = totalItemNum;
@@ -178,7 +219,10 @@ public class QueryTaskDetailListResponseBody extends TeaModel {
         }
 
         /**
-         * TotalPageNum.
+         * <p>The total number of pages.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder totalPageNum(Integer totalPageNum) {
             this.totalPageNum = totalPageNum;
@@ -379,8 +423,31 @@ public class QueryTaskDetailListResponseBody extends TeaModel {
             private Integer tryCount; 
             private String updateTime; 
 
+            private Builder() {
+            } 
+
+            private Builder(TaskDetail model) {
+                this.createTime = model.createTime;
+                this.domainName = model.domainName;
+                this.errorMsg = model.errorMsg;
+                this.failReason = model.failReason;
+                this.instanceId = model.instanceId;
+                this.taskDetailNo = model.taskDetailNo;
+                this.taskNo = model.taskNo;
+                this.taskResult = model.taskResult;
+                this.taskStatus = model.taskStatus;
+                this.taskStatusCode = model.taskStatusCode;
+                this.taskType = model.taskType;
+                this.taskTypeDescription = model.taskTypeDescription;
+                this.tryCount = model.tryCount;
+                this.updateTime = model.updateTime;
+            } 
+
             /**
-             * CreateTime.
+             * <p>The time when the task was created.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2018-01-25 20:46:57</p>
              */
             public Builder createTime(String createTime) {
                 this.createTime = createTime;
@@ -388,7 +455,10 @@ public class QueryTaskDetailListResponseBody extends TeaModel {
             }
 
             /**
-             * DomainName.
+             * <p>The domain name.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>example.com</p>
              */
             public Builder domainName(String domainName) {
                 this.domainName = domainName;
@@ -396,7 +466,10 @@ public class QueryTaskDetailListResponseBody extends TeaModel {
             }
 
             /**
-             * ErrorMsg.
+             * <p>The error message returned when the task failed.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>The operation is successful.</p>
              */
             public Builder errorMsg(String errorMsg) {
                 this.errorMsg = errorMsg;
@@ -404,7 +477,10 @@ public class QueryTaskDetailListResponseBody extends TeaModel {
             }
 
             /**
-             * FailReason.
+             * <p>The cause of a domain name task failure.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Purchase record exists for the domain name in Aliyun</p>
              */
             public Builder failReason(String failReason) {
                 this.failReason = failReason;
@@ -412,7 +488,10 @@ public class QueryTaskDetailListResponseBody extends TeaModel {
             }
 
             /**
-             * InstanceId.
+             * <p>The instance ID of the domain name.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>S20179H1BBI9test</p>
              */
             public Builder instanceId(String instanceId) {
                 this.instanceId = instanceId;
@@ -420,7 +499,10 @@ public class QueryTaskDetailListResponseBody extends TeaModel {
             }
 
             /**
-             * TaskDetailNo.
+             * <p>The ID of the task details.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>75addb07-28a3-450e-b5ec-test</p>
              */
             public Builder taskDetailNo(String taskDetailNo) {
                 this.taskDetailNo = taskDetailNo;
@@ -428,7 +510,10 @@ public class QueryTaskDetailListResponseBody extends TeaModel {
             }
 
             /**
-             * TaskNo.
+             * <p>The task ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>60d6e201-8ee5-47ab-8fdc-test</p>
              */
             public Builder taskNo(String taskNo) {
                 this.taskNo = taskNo;
@@ -436,7 +521,10 @@ public class QueryTaskDetailListResponseBody extends TeaModel {
             }
 
             /**
-             * TaskResult.
+             * <p>The result of the task.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>12345</p>
              */
             public Builder taskResult(String taskResult) {
                 this.taskResult = taskResult;
@@ -444,7 +532,16 @@ public class QueryTaskDetailListResponseBody extends TeaModel {
             }
 
             /**
-             * TaskStatus.
+             * <p>The task status. Valid values:</p>
+             * <ul>
+             * <li><strong>WAITING_EXECUTE</strong>: To be executed</li>
+             * <li><strong>EXECUTING</strong>: being executed</li>
+             * <li><strong>EXECUTE_SUCCESS</strong>: successful</li>
+             * <li><strong>EXECUTE_FAILURE</strong>: failed</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>EXECUTE_SUCCESS</p>
              */
             public Builder taskStatus(String taskStatus) {
                 this.taskStatus = taskStatus;
@@ -452,7 +549,16 @@ public class QueryTaskDetailListResponseBody extends TeaModel {
             }
 
             /**
-             * TaskStatusCode.
+             * <p>The status code of the task. Valid values:</p>
+             * <ul>
+             * <li><strong>0</strong>: waiting for execution</li>
+             * <li><strong>1</strong>: being executed</li>
+             * <li><strong>2</strong>: successful</li>
+             * <li><strong>3</strong>: failed</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>2</p>
              */
             public Builder taskStatusCode(Integer taskStatusCode) {
                 this.taskStatusCode = taskStatusCode;
@@ -460,7 +566,26 @@ public class QueryTaskDetailListResponseBody extends TeaModel {
             }
 
             /**
-             * TaskType.
+             * <p>The task type. Valid values:</p>
+             * <ul>
+             * <li><strong>CHG_HOLDER</strong>: The task is run to modify the domain name registrant.</li>
+             * <li><strong>CHG_DNS</strong>: The task is run to change the Domain Name System (DNS) servers.</li>
+             * <li><strong>SET_WHOIS_PROTECT</strong>: The task is run to configure privacy protection for the domain name.</li>
+             * <li><strong>UPDATE_ADMIN_CONTACT</strong>: The task is run to modify the information about the administrator of the domain name.</li>
+             * <li><strong>UPDATE_BILLING_CONTACT</strong>: The task is run to modify the information about the payer for the domain name.</li>
+             * <li><strong>UPDATE_TECH_CONTACT</strong>: The task is run to modify the information about the technical support for the domain name.</li>
+             * <li><strong>SET_UPDATE_PROHIBITED</strong>: The task is run to configure the security lock for the domain name.</li>
+             * <li><strong>SET_TRANSFER_PROHIBITED</strong>: The task is run to configure the transfer lock for the domain name.</li>
+             * <li><strong>ORDER_ACTIVATE</strong>: The task is run to create a registration order for the domain name.</li>
+             * <li><strong>ORDER_RENEW</strong>: The task is run to create a renewal order for the domain name.</li>
+             * <li><strong>ORDER_REDEEM</strong>: The task is run to create a redemption order for the domain name.</li>
+             * <li><strong>CREATE_DNSHOST</strong>: The task is run to create a DNS server for the domain name.</li>
+             * <li><strong>UPDATE_DNSHOST</strong>: The task is run to update the information about a DNS server for the domain name.</li>
+             * <li><strong>SYNC_DNSHOST</strong>: The task is run to synchronize a DNS server for the domain name.</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>ORDER_RENEW</p>
              */
             public Builder taskType(String taskType) {
                 this.taskType = taskType;
@@ -468,7 +593,7 @@ public class QueryTaskDetailListResponseBody extends TeaModel {
             }
 
             /**
-             * TaskTypeDescription.
+             * <p>The description of the task type.</p>
              */
             public Builder taskTypeDescription(String taskTypeDescription) {
                 this.taskTypeDescription = taskTypeDescription;
@@ -476,7 +601,10 @@ public class QueryTaskDetailListResponseBody extends TeaModel {
             }
 
             /**
-             * TryCount.
+             * <p>The number of times the task was retried.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>0</p>
              */
             public Builder tryCount(Integer tryCount) {
                 this.tryCount = tryCount;
@@ -484,7 +612,10 @@ public class QueryTaskDetailListResponseBody extends TeaModel {
             }
 
             /**
-             * UpdateTime.
+             * <p>The last time when the task was run.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2018-01-25 20:47:01</p>
              */
             public Builder updateTime(String updateTime) {
                 this.updateTime = updateTime;
@@ -506,7 +637,7 @@ public class QueryTaskDetailListResponseBody extends TeaModel {
      */
     public static class Data extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("TaskDetail")
-        private java.util.List < TaskDetail> taskDetail;
+        private java.util.List<TaskDetail> taskDetail;
 
         private Data(Builder builder) {
             this.taskDetail = builder.taskDetail;
@@ -523,17 +654,24 @@ public class QueryTaskDetailListResponseBody extends TeaModel {
         /**
          * @return taskDetail
          */
-        public java.util.List < TaskDetail> getTaskDetail() {
+        public java.util.List<TaskDetail> getTaskDetail() {
             return this.taskDetail;
         }
 
         public static final class Builder {
-            private java.util.List < TaskDetail> taskDetail; 
+            private java.util.List<TaskDetail> taskDetail; 
+
+            private Builder() {
+            } 
+
+            private Builder(Data model) {
+                this.taskDetail = model.taskDetail;
+            } 
 
             /**
              * TaskDetail.
              */
-            public Builder taskDetail(java.util.List < TaskDetail> taskDetail) {
+            public Builder taskDetail(java.util.List<TaskDetail> taskDetail) {
                 this.taskDetail = taskDetail;
                 return this;
             }

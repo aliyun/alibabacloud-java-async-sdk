@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.domain20180129.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -89,7 +94,7 @@ public class QueryRegistrantProfilesRequest extends Request {
         return builder().build();
     }
 
-    @Override
+@Override
     public Builder toBuilder() {
         return new Builder(this);
     }
@@ -222,7 +227,15 @@ public class QueryRegistrantProfilesRequest extends Request {
         } 
 
         /**
-         * DefaultRegistrantProfile.
+         * <p>Specifies whether to query the default profile. Valid values:</p>
+         * <ul>
+         * <li><strong>true</strong></li>
+         * <li><strong>false</strong></li>
+         * </ul>
+         * <p>Default value: <strong>false</strong>.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>false</p>
          */
         public Builder defaultRegistrantProfile(Boolean defaultRegistrantProfile) {
             this.putQueryParameter("DefaultRegistrantProfile", defaultRegistrantProfile);
@@ -231,7 +244,10 @@ public class QueryRegistrantProfilesRequest extends Request {
         }
 
         /**
-         * Email.
+         * <p>The email address of the domain name registrant.</p>
+         * 
+         * <strong>example:</strong>
+         * <p><a href="mailto:username@example.com">username@example.com</a></p>
          */
         public Builder email(String email) {
             this.putQueryParameter("Email", email);
@@ -240,7 +256,15 @@ public class QueryRegistrantProfilesRequest extends Request {
         }
 
         /**
-         * Lang.
+         * <p>The language of the error message to return if the request fails. Valid values:</p>
+         * <ul>
+         * <li><strong>zh</strong>: Chinese</li>
+         * <li><strong>en</strong>: English</li>
+         * </ul>
+         * <p>Default value: <strong>en</strong>.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>en</p>
          */
         public Builder lang(String lang) {
             this.putQueryParameter("Lang", lang);
@@ -249,7 +273,10 @@ public class QueryRegistrantProfilesRequest extends Request {
         }
 
         /**
-         * PageNum.
+         * <p>The number of the page to return. Default value: <strong>0</strong>.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder pageNum(Integer pageNum) {
             this.putQueryParameter("PageNum", pageNum);
@@ -258,7 +285,10 @@ public class QueryRegistrantProfilesRequest extends Request {
         }
 
         /**
-         * PageSize.
+         * <p>The number of entries per page. Default value: <strong>0</strong>. Maximum value: <strong>5000</strong>.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>500</p>
          */
         public Builder pageSize(Integer pageSize) {
             this.putQueryParameter("PageSize", pageSize);
@@ -267,7 +297,16 @@ public class QueryRegistrantProfilesRequest extends Request {
         }
 
         /**
-         * RealNameStatus.
+         * <p>The state of real-name verification for the domain name registrant. Valid values:</p>
+         * <ul>
+         * <li><strong>FAILED</strong>: Real-name verification for the domain name fails.</li>
+         * <li><strong>SUCCEED</strong>: Real-name verification for the domain name is successful.</li>
+         * <li><strong>NONAUDIT</strong>: Real-name verification for the domain name is not performed.</li>
+         * <li><strong>AUDITING</strong>: Real-name verification for the domain name is in progress.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>SUCCEED</p>
          */
         public Builder realNameStatus(String realNameStatus) {
             this.putQueryParameter("RealNameStatus", realNameStatus);
@@ -276,7 +315,10 @@ public class QueryRegistrantProfilesRequest extends Request {
         }
 
         /**
-         * RegistrantOrganization.
+         * <p>The name of the domain name registrant.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>li si</p>
          */
         public Builder registrantOrganization(String registrantOrganization) {
             this.putQueryParameter("RegistrantOrganization", registrantOrganization);
@@ -285,7 +327,10 @@ public class QueryRegistrantProfilesRequest extends Request {
         }
 
         /**
-         * RegistrantProfileId.
+         * <p>The ID of the registrant profile that you want to query. The system generates an ID after you create a registrant profile.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1234567</p>
          */
         public Builder registrantProfileId(Long registrantProfileId) {
             this.putQueryParameter("RegistrantProfileId", registrantProfileId);
@@ -294,7 +339,17 @@ public class QueryRegistrantProfilesRequest extends Request {
         }
 
         /**
-         * RegistrantProfileType.
+         * <p>The type of the registrant profile. Valid values:</p>
+         * <ul>
+         * <li><strong>common</strong>: common profile.</li>
+         * <li><strong>cnnic</strong>: China Internet Network Information Center (CNNIC) profile.</li>
+         * </ul>
+         * <blockquote>
+         * <p> Only the Alibaba Cloud international site (alibabacloud.com) supports CNNIC profiles. To register domain names provided by CNNIC such as the .cn and . domain names on the Alibaba Cloud international site, you must use a CNNIC profile. To register other domain names, use a common profile.</p>
+         * </blockquote>
+         * 
+         * <strong>example:</strong>
+         * <p>common</p>
          */
         public Builder registrantProfileType(String registrantProfileType) {
             this.putQueryParameter("RegistrantProfileType", registrantProfileType);
@@ -303,7 +358,15 @@ public class QueryRegistrantProfilesRequest extends Request {
         }
 
         /**
-         * RegistrantType.
+         * <p>The type of the domain name registrant. Valid values:</p>
+         * <ul>
+         * <li><strong>1</strong>: individual.</li>
+         * <li><strong>2</strong>: enterprise.</li>
+         * </ul>
+         * <p>Default value: <strong>1</strong>.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder registrantType(String registrantType) {
             this.putQueryParameter("RegistrantType", registrantType);
@@ -312,7 +375,10 @@ public class QueryRegistrantProfilesRequest extends Request {
         }
 
         /**
-         * Remark.
+         * <p>The remarks.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Test domain name</p>
          */
         public Builder remark(String remark) {
             this.putQueryParameter("Remark", remark);
@@ -321,7 +387,10 @@ public class QueryRegistrantProfilesRequest extends Request {
         }
 
         /**
-         * UserClientIp.
+         * <p>The IP address of the client. Set the value to 127.0.0.1.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>127.0.0.1</p>
          */
         public Builder userClientIp(String userClientIp) {
             this.putQueryParameter("UserClientIp", userClientIp);
@@ -330,7 +399,7 @@ public class QueryRegistrantProfilesRequest extends Request {
         }
 
         /**
-         * ZhRegistrantOrganization.
+         * <p>The Chinese name of the domain name registrant.</p>
          */
         public Builder zhRegistrantOrganization(String zhRegistrantOrganization) {
             this.putQueryParameter("ZhRegistrantOrganization", zhRegistrantOrganization);

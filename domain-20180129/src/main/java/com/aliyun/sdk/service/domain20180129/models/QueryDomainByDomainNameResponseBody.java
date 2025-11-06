@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.domain20180129.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -157,6 +162,10 @@ public class QueryDomainByDomainNameResponseBody extends TeaModel {
 
     public static QueryDomainByDomainNameResponseBody create() {
         return builder().build();
+    }
+
+    public Builder toBuilder() {
+        return new Builder(this);
     }
 
     /**
@@ -432,6 +441,46 @@ public class QueryDomainByDomainNameResponseBody extends TeaModel {
         private String userId; 
         private String zhRegistrantName; 
         private String zhRegistrantOrganization; 
+
+        private Builder() {
+        } 
+
+        private Builder(QueryDomainByDomainNameResponseBody model) {
+            this.dnsList = model.dnsList;
+            this.domainGroupId = model.domainGroupId;
+            this.domainGroupName = model.domainGroupName;
+            this.domainName = model.domainName;
+            this.domainNameProxyService = model.domainNameProxyService;
+            this.domainNameVerificationStatus = model.domainNameVerificationStatus;
+            this.domainStatus = model.domainStatus;
+            this.domainType = model.domainType;
+            this.email = model.email;
+            this.emailVerificationClientHold = model.emailVerificationClientHold;
+            this.emailVerificationStatus = model.emailVerificationStatus;
+            this.expirationCurrDateDiff = model.expirationCurrDateDiff;
+            this.expirationDate = model.expirationDate;
+            this.expirationDateLong = model.expirationDateLong;
+            this.expirationDateStatus = model.expirationDateStatus;
+            this.instanceId = model.instanceId;
+            this.premium = model.premium;
+            this.realNameStatus = model.realNameStatus;
+            this.registrantName = model.registrantName;
+            this.registrantOrganization = model.registrantOrganization;
+            this.registrantType = model.registrantType;
+            this.registrantUpdatingStatus = model.registrantUpdatingStatus;
+            this.registrationDate = model.registrationDate;
+            this.registrationDateLong = model.registrationDateLong;
+            this.remark = model.remark;
+            this.requestId = model.requestId;
+            this.resourceGroupId = model.resourceGroupId;
+            this.tag = model.tag;
+            this.transferOutStatus = model.transferOutStatus;
+            this.transferProhibitionLock = model.transferProhibitionLock;
+            this.updateProhibitionLock = model.updateProhibitionLock;
+            this.userId = model.userId;
+            this.zhRegistrantName = model.zhRegistrantName;
+            this.zhRegistrantOrganization = model.zhRegistrantOrganization;
+        } 
 
         /**
          * <p>The Domain Name System (DNS) servers of the domain name.</p>
@@ -855,7 +904,7 @@ public class QueryDomainByDomainNameResponseBody extends TeaModel {
      */
     public static class DnsList extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Dns")
-        private java.util.List < String > dns;
+        private java.util.List<String> dns;
 
         private DnsList(Builder builder) {
             this.dns = builder.dns;
@@ -872,17 +921,24 @@ public class QueryDomainByDomainNameResponseBody extends TeaModel {
         /**
          * @return dns
          */
-        public java.util.List < String > getDns() {
+        public java.util.List<String> getDns() {
             return this.dns;
         }
 
         public static final class Builder {
-            private java.util.List < String > dns; 
+            private java.util.List<String> dns; 
+
+            private Builder() {
+            } 
+
+            private Builder(DnsList model) {
+                this.dns = model.dns;
+            } 
 
             /**
              * Dns.
              */
-            public Builder dns(java.util.List < String > dns) {
+            public Builder dns(java.util.List<String> dns) {
                 this.dns = dns;
                 return this;
             }
@@ -938,6 +994,14 @@ public class QueryDomainByDomainNameResponseBody extends TeaModel {
             private String key; 
             private String vaue; 
 
+            private Builder() {
+            } 
+
+            private Builder(TagTag model) {
+                this.key = model.key;
+                this.vaue = model.vaue;
+            } 
+
             /**
              * <p>The tag key.</p>
              */
@@ -969,7 +1033,7 @@ public class QueryDomainByDomainNameResponseBody extends TeaModel {
      */
     public static class Tag extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Tag")
-        private java.util.List < TagTag> tag;
+        private java.util.List<TagTag> tag;
 
         private Tag(Builder builder) {
             this.tag = builder.tag;
@@ -986,17 +1050,24 @@ public class QueryDomainByDomainNameResponseBody extends TeaModel {
         /**
          * @return tag
          */
-        public java.util.List < TagTag> getTag() {
+        public java.util.List<TagTag> getTag() {
             return this.tag;
         }
 
         public static final class Builder {
-            private java.util.List < TagTag> tag; 
+            private java.util.List<TagTag> tag; 
+
+            private Builder() {
+            } 
+
+            private Builder(Tag model) {
+                this.tag = model.tag;
+            } 
 
             /**
              * <p>The tags.</p>
              */
-            public Builder tag(java.util.List < TagTag> tag) {
+            public Builder tag(java.util.List<TagTag> tag) {
                 this.tag = tag;
                 return this;
             }

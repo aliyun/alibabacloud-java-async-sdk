@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.domain20180129.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -31,6 +36,10 @@ public class QueryDomainAdminDivisionResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return adminDivisions
      */
@@ -48,6 +57,14 @@ public class QueryDomainAdminDivisionResponseBody extends TeaModel {
     public static final class Builder {
         private AdminDivisions adminDivisions; 
         private String requestId; 
+
+        private Builder() {
+        } 
+
+        private Builder(QueryDomainAdminDivisionResponseBody model) {
+            this.adminDivisions = model.adminDivisions;
+            this.requestId = model.requestId;
+        } 
 
         /**
          * AdminDivisions.
@@ -103,6 +120,13 @@ public class QueryDomainAdminDivisionResponseBody extends TeaModel {
         public static final class Builder {
             private String childDivisionName; 
 
+            private Builder() {
+            } 
+
+            private Builder(Children model) {
+                this.childDivisionName = model.childDivisionName;
+            } 
+
             /**
              * ChildDivisionName.
              */
@@ -126,7 +150,7 @@ public class QueryDomainAdminDivisionResponseBody extends TeaModel {
      */
     public static class AdminDivisionChildren extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Children")
-        private java.util.List < Children> children;
+        private java.util.List<Children> children;
 
         private AdminDivisionChildren(Builder builder) {
             this.children = builder.children;
@@ -143,17 +167,24 @@ public class QueryDomainAdminDivisionResponseBody extends TeaModel {
         /**
          * @return children
          */
-        public java.util.List < Children> getChildren() {
+        public java.util.List<Children> getChildren() {
             return this.children;
         }
 
         public static final class Builder {
-            private java.util.List < Children> children; 
+            private java.util.List<Children> children; 
+
+            private Builder() {
+            } 
+
+            private Builder(AdminDivisionChildren model) {
+                this.children = model.children;
+            } 
 
             /**
              * Children.
              */
-            public Builder children(java.util.List < Children> children) {
+            public Builder children(java.util.List<Children> children) {
                 this.children = children;
                 return this;
             }
@@ -209,6 +240,14 @@ public class QueryDomainAdminDivisionResponseBody extends TeaModel {
             private AdminDivisionChildren children; 
             private String divisionName; 
 
+            private Builder() {
+            } 
+
+            private Builder(AdminDivision model) {
+                this.children = model.children;
+                this.divisionName = model.divisionName;
+            } 
+
             /**
              * Children.
              */
@@ -240,7 +279,7 @@ public class QueryDomainAdminDivisionResponseBody extends TeaModel {
      */
     public static class AdminDivisions extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("AdminDivision")
-        private java.util.List < AdminDivision> adminDivision;
+        private java.util.List<AdminDivision> adminDivision;
 
         private AdminDivisions(Builder builder) {
             this.adminDivision = builder.adminDivision;
@@ -257,17 +296,24 @@ public class QueryDomainAdminDivisionResponseBody extends TeaModel {
         /**
          * @return adminDivision
          */
-        public java.util.List < AdminDivision> getAdminDivision() {
+        public java.util.List<AdminDivision> getAdminDivision() {
             return this.adminDivision;
         }
 
         public static final class Builder {
-            private java.util.List < AdminDivision> adminDivision; 
+            private java.util.List<AdminDivision> adminDivision; 
+
+            private Builder() {
+            } 
+
+            private Builder(AdminDivisions model) {
+                this.adminDivision = model.adminDivision;
+            } 
 
             /**
              * AdminDivision.
              */
-            public Builder adminDivision(java.util.List < AdminDivision> adminDivision) {
+            public Builder adminDivision(java.util.List<AdminDivision> adminDivision) {
                 this.adminDivision = adminDivision;
                 return this;
             }

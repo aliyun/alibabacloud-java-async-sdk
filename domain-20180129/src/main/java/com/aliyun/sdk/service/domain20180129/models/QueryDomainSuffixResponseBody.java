@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.domain20180129.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -31,6 +36,10 @@ public class QueryDomainSuffixResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return requestId
      */
@@ -48,6 +57,14 @@ public class QueryDomainSuffixResponseBody extends TeaModel {
     public static final class Builder {
         private String requestId; 
         private SuffixList suffixList; 
+
+        private Builder() {
+        } 
+
+        private Builder(QueryDomainSuffixResponseBody model) {
+            this.requestId = model.requestId;
+            this.suffixList = model.suffixList;
+        } 
 
         /**
          * RequestId.
@@ -79,7 +96,7 @@ public class QueryDomainSuffixResponseBody extends TeaModel {
      */
     public static class SuffixList extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Suffix")
-        private java.util.List < String > suffix;
+        private java.util.List<String> suffix;
 
         private SuffixList(Builder builder) {
             this.suffix = builder.suffix;
@@ -96,17 +113,24 @@ public class QueryDomainSuffixResponseBody extends TeaModel {
         /**
          * @return suffix
          */
-        public java.util.List < String > getSuffix() {
+        public java.util.List<String> getSuffix() {
             return this.suffix;
         }
 
         public static final class Builder {
-            private java.util.List < String > suffix; 
+            private java.util.List<String> suffix; 
+
+            private Builder() {
+            } 
+
+            private Builder(SuffixList model) {
+                this.suffix = model.suffix;
+            } 
 
             /**
              * Suffix.
              */
-            public Builder suffix(java.util.List < String > suffix) {
+            public Builder suffix(java.util.List<String> suffix) {
                 this.suffix = suffix;
                 return this;
             }

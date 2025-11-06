@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.domain20180129.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -31,6 +36,10 @@ public class SaveSingleTaskForTransferOutByAuthorizationCodeResponseBody extends
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return requestId
      */
@@ -49,8 +58,19 @@ public class SaveSingleTaskForTransferOutByAuthorizationCodeResponseBody extends
         private String requestId; 
         private String taskNo; 
 
+        private Builder() {
+        } 
+
+        private Builder(SaveSingleTaskForTransferOutByAuthorizationCodeResponseBody model) {
+            this.requestId = model.requestId;
+            this.taskNo = model.taskNo;
+        } 
+
         /**
-         * RequestId.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>C560A803-B975-481D-A66B-A4395EA863A1</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -58,7 +78,10 @@ public class SaveSingleTaskForTransferOutByAuthorizationCodeResponseBody extends
         }
 
         /**
-         * TaskNo.
+         * <p>The task ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>3cb1adc3-20e8-44ae-9e76-e812fa6fc9d8</p>
          */
         public Builder taskNo(String taskNo) {
             this.taskNo = taskNo;

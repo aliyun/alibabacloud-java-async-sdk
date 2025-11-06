@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.domain20180129.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -53,6 +58,10 @@ public class QueryAdvancedDomainListResponseBody extends TeaModel {
 
     public static QueryAdvancedDomainListResponseBody create() {
         return builder().build();
+    }
+
+    public Builder toBuilder() {
+        return new Builder(this);
     }
 
     /**
@@ -120,6 +129,20 @@ public class QueryAdvancedDomainListResponseBody extends TeaModel {
         private String requestId; 
         private Integer totalItemNum; 
         private Integer totalPageNum; 
+
+        private Builder() {
+        } 
+
+        private Builder(QueryAdvancedDomainListResponseBody model) {
+            this.currentPageNum = model.currentPageNum;
+            this.data = model.data;
+            this.nextPage = model.nextPage;
+            this.pageSize = model.pageSize;
+            this.prePage = model.prePage;
+            this.requestId = model.requestId;
+            this.totalItemNum = model.totalItemNum;
+            this.totalPageNum = model.totalPageNum;
+        } 
 
         /**
          * CurrentPageNum.
@@ -199,7 +222,7 @@ public class QueryAdvancedDomainListResponseBody extends TeaModel {
      */
     public static class DnsList extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Dns")
-        private java.util.List < String > dns;
+        private java.util.List<String> dns;
 
         private DnsList(Builder builder) {
             this.dns = builder.dns;
@@ -216,17 +239,24 @@ public class QueryAdvancedDomainListResponseBody extends TeaModel {
         /**
          * @return dns
          */
-        public java.util.List < String > getDns() {
+        public java.util.List<String> getDns() {
             return this.dns;
         }
 
         public static final class Builder {
-            private java.util.List < String > dns; 
+            private java.util.List<String> dns; 
+
+            private Builder() {
+            } 
+
+            private Builder(DnsList model) {
+                this.dns = model.dns;
+            } 
 
             /**
              * Dns.
              */
-            public Builder dns(java.util.List < String > dns) {
+            public Builder dns(java.util.List<String> dns) {
                 this.dns = dns;
                 return this;
             }
@@ -282,6 +312,14 @@ public class QueryAdvancedDomainListResponseBody extends TeaModel {
             private String key; 
             private String value; 
 
+            private Builder() {
+            } 
+
+            private Builder(Tag model) {
+                this.key = model.key;
+                this.value = model.value;
+            } 
+
             /**
              * Key.
              */
@@ -313,7 +351,7 @@ public class QueryAdvancedDomainListResponseBody extends TeaModel {
      */
     public static class DomainTag extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Tag")
-        private java.util.List < Tag> tag;
+        private java.util.List<Tag> tag;
 
         private DomainTag(Builder builder) {
             this.tag = builder.tag;
@@ -330,17 +368,24 @@ public class QueryAdvancedDomainListResponseBody extends TeaModel {
         /**
          * @return tag
          */
-        public java.util.List < Tag> getTag() {
+        public java.util.List<Tag> getTag() {
             return this.tag;
         }
 
         public static final class Builder {
-            private java.util.List < Tag> tag; 
+            private java.util.List<Tag> tag; 
+
+            private Builder() {
+            } 
+
+            private Builder(DomainTag model) {
+                this.tag = model.tag;
+            } 
 
             /**
              * Tag.
              */
-            public Builder tag(java.util.List < Tag> tag) {
+            public Builder tag(java.util.List<Tag> tag) {
                 this.tag = tag;
                 return this;
             }
@@ -648,6 +693,35 @@ public class QueryAdvancedDomainListResponseBody extends TeaModel {
             private DomainTag tag; 
             private String zhRegistrantOrganization; 
 
+            private Builder() {
+            } 
+
+            private Builder(Domain model) {
+                this.dnsList = model.dnsList;
+                this.domainAuditStatus = model.domainAuditStatus;
+                this.domainGroupId = model.domainGroupId;
+                this.domainGroupName = model.domainGroupName;
+                this.domainName = model.domainName;
+                this.domainStatus = model.domainStatus;
+                this.domainType = model.domainType;
+                this.email = model.email;
+                this.expirationCurrDateDiff = model.expirationCurrDateDiff;
+                this.expirationDate = model.expirationDate;
+                this.expirationDateLong = model.expirationDateLong;
+                this.expirationDateStatus = model.expirationDateStatus;
+                this.instanceId = model.instanceId;
+                this.premium = model.premium;
+                this.productId = model.productId;
+                this.registrantOrganization = model.registrantOrganization;
+                this.registrantType = model.registrantType;
+                this.registrationDate = model.registrationDate;
+                this.registrationDateLong = model.registrationDateLong;
+                this.remark = model.remark;
+                this.resourceGroupId = model.resourceGroupId;
+                this.tag = model.tag;
+                this.zhRegistrantOrganization = model.zhRegistrantOrganization;
+            } 
+
             /**
              * DnsList.
              */
@@ -847,7 +921,7 @@ public class QueryAdvancedDomainListResponseBody extends TeaModel {
      */
     public static class Data extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Domain")
-        private java.util.List < Domain> domain;
+        private java.util.List<Domain> domain;
 
         private Data(Builder builder) {
             this.domain = builder.domain;
@@ -864,17 +938,24 @@ public class QueryAdvancedDomainListResponseBody extends TeaModel {
         /**
          * @return domain
          */
-        public java.util.List < Domain> getDomain() {
+        public java.util.List<Domain> getDomain() {
             return this.domain;
         }
 
         public static final class Builder {
-            private java.util.List < Domain> domain; 
+            private java.util.List<Domain> domain; 
+
+            private Builder() {
+            } 
+
+            private Builder(Data model) {
+                this.domain = model.domain;
+            } 
 
             /**
              * Domain.
              */
-            public Builder domain(java.util.List < Domain> domain) {
+            public Builder domain(java.util.List<Domain> domain) {
                 this.domain = domain;
                 return this;
             }

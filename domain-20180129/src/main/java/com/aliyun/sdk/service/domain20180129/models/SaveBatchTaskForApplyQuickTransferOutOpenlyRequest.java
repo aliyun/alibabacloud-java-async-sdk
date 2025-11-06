@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.domain20180129.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -14,7 +19,7 @@ import com.aliyun.sdk.gateway.pop.models.*;
 public class SaveBatchTaskForApplyQuickTransferOutOpenlyRequest extends Request {
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("DomainNames")
-    private java.util.List < String > domainNames;
+    private java.util.List<String> domainNames;
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("Lang")
@@ -39,7 +44,7 @@ public class SaveBatchTaskForApplyQuickTransferOutOpenlyRequest extends Request 
         return builder().build();
     }
 
-    @Override
+@Override
     public Builder toBuilder() {
         return new Builder(this);
     }
@@ -47,7 +52,7 @@ public class SaveBatchTaskForApplyQuickTransferOutOpenlyRequest extends Request 
     /**
      * @return domainNames
      */
-    public java.util.List < String > getDomainNames() {
+    public java.util.List<String> getDomainNames() {
         return this.domainNames;
     }
 
@@ -66,7 +71,7 @@ public class SaveBatchTaskForApplyQuickTransferOutOpenlyRequest extends Request 
     }
 
     public static final class Builder extends Request.Builder<SaveBatchTaskForApplyQuickTransferOutOpenlyRequest, Builder> {
-        private java.util.List < String > domainNames; 
+        private java.util.List<String> domainNames; 
         private String lang; 
         private String userClientIp; 
 
@@ -84,7 +89,7 @@ public class SaveBatchTaskForApplyQuickTransferOutOpenlyRequest extends Request 
         /**
          * DomainNames.
          */
-        public Builder domainNames(java.util.List < String > domainNames) {
+        public Builder domainNames(java.util.List<String> domainNames) {
             this.putQueryParameter("DomainNames", domainNames);
             this.domainNames = domainNames;
             return this;

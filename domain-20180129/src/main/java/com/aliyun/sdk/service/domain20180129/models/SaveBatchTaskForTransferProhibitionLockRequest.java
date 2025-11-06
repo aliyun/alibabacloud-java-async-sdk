@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.domain20180129.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -15,7 +20,7 @@ public class SaveBatchTaskForTransferProhibitionLockRequest extends Request {
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("DomainName")
     @com.aliyun.core.annotation.Validation(required = true)
-    private java.util.List < String > domainName;
+    private java.util.List<String> domainName;
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("Lang")
@@ -46,7 +51,7 @@ public class SaveBatchTaskForTransferProhibitionLockRequest extends Request {
         return builder().build();
     }
 
-    @Override
+@Override
     public Builder toBuilder() {
         return new Builder(this);
     }
@@ -54,7 +59,7 @@ public class SaveBatchTaskForTransferProhibitionLockRequest extends Request {
     /**
      * @return domainName
      */
-    public java.util.List < String > getDomainName() {
+    public java.util.List<String> getDomainName() {
         return this.domainName;
     }
 
@@ -80,7 +85,7 @@ public class SaveBatchTaskForTransferProhibitionLockRequest extends Request {
     }
 
     public static final class Builder extends Request.Builder<SaveBatchTaskForTransferProhibitionLockRequest, Builder> {
-        private java.util.List < String > domainName; 
+        private java.util.List<String> domainName; 
         private String lang; 
         private Boolean status; 
         private String userClientIp; 
@@ -103,7 +108,7 @@ public class SaveBatchTaskForTransferProhibitionLockRequest extends Request {
          * <strong>example:</strong>
          * <p>test1.com</p>
          */
-        public Builder domainName(java.util.List < String > domainName) {
+        public Builder domainName(java.util.List<String> domainName) {
             this.putQueryParameter("DomainName", domainName);
             this.domainName = domainName;
             return this;

@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.domain20180129.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -13,23 +18,13 @@ import com.aliyun.sdk.gateway.pop.models.*;
  */
 public class SaveBatchTaskForTransferOutByAuthorizationCodeRequest extends Request {
     @com.aliyun.core.annotation.Query
-    @com.aliyun.core.annotation.NameInMap("Long")
-    private String _long;
-
-    @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("TransferOutParamList")
     @com.aliyun.core.annotation.Validation(required = true)
-    private java.util.List < TransferOutParamList> transferOutParamList;
-
-    @com.aliyun.core.annotation.Query
-    @com.aliyun.core.annotation.NameInMap("UserClientIp")
-    private String userClientIp;
+    private java.util.List<TransferOutParamList> transferOutParamList;
 
     private SaveBatchTaskForTransferOutByAuthorizationCodeRequest(Builder builder) {
         super(builder);
-        this._long = builder._long;
         this.transferOutParamList = builder.transferOutParamList;
-        this.userClientIp = builder.userClientIp;
     }
 
     public static Builder builder() {
@@ -40,36 +35,20 @@ public class SaveBatchTaskForTransferOutByAuthorizationCodeRequest extends Reque
         return builder().build();
     }
 
-    @Override
+@Override
     public Builder toBuilder() {
         return new Builder(this);
     }
 
     /**
-     * @return _long
-     */
-    public String get_long() {
-        return this._long;
-    }
-
-    /**
      * @return transferOutParamList
      */
-    public java.util.List < TransferOutParamList> getTransferOutParamList() {
+    public java.util.List<TransferOutParamList> getTransferOutParamList() {
         return this.transferOutParamList;
     }
 
-    /**
-     * @return userClientIp
-     */
-    public String getUserClientIp() {
-        return this.userClientIp;
-    }
-
     public static final class Builder extends Request.Builder<SaveBatchTaskForTransferOutByAuthorizationCodeRequest, Builder> {
-        private String _long; 
-        private java.util.List < TransferOutParamList> transferOutParamList; 
-        private String userClientIp; 
+        private java.util.List<TransferOutParamList> transferOutParamList; 
 
         private Builder() {
             super();
@@ -77,35 +56,15 @@ public class SaveBatchTaskForTransferOutByAuthorizationCodeRequest extends Reque
 
         private Builder(SaveBatchTaskForTransferOutByAuthorizationCodeRequest request) {
             super(request);
-            this._long = request._long;
             this.transferOutParamList = request.transferOutParamList;
-            this.userClientIp = request.userClientIp;
         } 
-
-        /**
-         * Long.
-         */
-        public Builder _long(String _long) {
-            this.putQueryParameter("Long", _long);
-            this._long = _long;
-            return this;
-        }
 
         /**
          * <p>This parameter is required.</p>
          */
-        public Builder transferOutParamList(java.util.List < TransferOutParamList> transferOutParamList) {
+        public Builder transferOutParamList(java.util.List<TransferOutParamList> transferOutParamList) {
             this.putQueryParameter("TransferOutParamList", transferOutParamList);
             this.transferOutParamList = transferOutParamList;
-            return this;
-        }
-
-        /**
-         * UserClientIp.
-         */
-        public Builder userClientIp(String userClientIp) {
-            this.putQueryParameter("UserClientIp", userClientIp);
-            this.userClientIp = userClientIp;
             return this;
         }
 
@@ -159,6 +118,14 @@ public class SaveBatchTaskForTransferOutByAuthorizationCodeRequest extends Reque
         public static final class Builder {
             private String authorizationCode; 
             private String domainName; 
+
+            private Builder() {
+            } 
+
+            private Builder(TransferOutParamList model) {
+                this.authorizationCode = model.authorizationCode;
+                this.domainName = model.domainName;
+            } 
 
             /**
              * AuthorizationCode.

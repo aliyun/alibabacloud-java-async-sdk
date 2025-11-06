@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.domain20180129.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -31,6 +36,10 @@ public class CreateIntlFixedPriceDomainOrderResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return module
      */
@@ -48,6 +57,14 @@ public class CreateIntlFixedPriceDomainOrderResponseBody extends TeaModel {
     public static final class Builder {
         private Module module; 
         private String requestId; 
+
+        private Builder() {
+        } 
+
+        private Builder(CreateIntlFixedPriceDomainOrderResponseBody model) {
+            this.module = model.module;
+            this.requestId = model.requestId;
+        } 
 
         /**
          * Module.
@@ -138,6 +155,16 @@ public class CreateIntlFixedPriceDomainOrderResponseBody extends TeaModel {
             private String orderNo; 
             private Long payPrice; 
             private String payUrl; 
+
+            private Builder() {
+            } 
+
+            private Builder(Module model) {
+                this.domain = model.domain;
+                this.orderNo = model.orderNo;
+                this.payPrice = model.payPrice;
+                this.payUrl = model.payUrl;
+            } 
 
             /**
              * Domain.

@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.domain20180129.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -109,6 +114,10 @@ public class QueryTransferInByInstanceIdResponseBody extends TeaModel {
 
     public static QueryTransferInByInstanceIdResponseBody create() {
         return builder().build();
+    }
+
+    public Builder toBuilder() {
+        return new Builder(this);
     }
 
     /**
@@ -288,6 +297,34 @@ public class QueryTransferInByInstanceIdResponseBody extends TeaModel {
         private Long transferAuthorizationCodeSubmissionDateLong; 
         private String userId; 
         private Boolean whoisMailStatus; 
+
+        private Builder() {
+        } 
+
+        private Builder(QueryTransferInByInstanceIdResponseBody model) {
+            this.domainName = model.domainName;
+            this.email = model.email;
+            this.expirationDate = model.expirationDate;
+            this.expirationDateLong = model.expirationDateLong;
+            this.instanceId = model.instanceId;
+            this.modificationDate = model.modificationDate;
+            this.modificationDateLong = model.modificationDateLong;
+            this.needMailCheck = model.needMailCheck;
+            this.progressBarType = model.progressBarType;
+            this.requestId = model.requestId;
+            this.resultCode = model.resultCode;
+            this.resultDate = model.resultDate;
+            this.resultDateLong = model.resultDateLong;
+            this.resultMsg = model.resultMsg;
+            this.simpleTransferInStatus = model.simpleTransferInStatus;
+            this.status = model.status;
+            this.submissionDate = model.submissionDate;
+            this.submissionDateLong = model.submissionDateLong;
+            this.transferAuthorizationCodeSubmissionDate = model.transferAuthorizationCodeSubmissionDate;
+            this.transferAuthorizationCodeSubmissionDateLong = model.transferAuthorizationCodeSubmissionDateLong;
+            this.userId = model.userId;
+            this.whoisMailStatus = model.whoisMailStatus;
+        } 
 
         /**
          * DomainName.

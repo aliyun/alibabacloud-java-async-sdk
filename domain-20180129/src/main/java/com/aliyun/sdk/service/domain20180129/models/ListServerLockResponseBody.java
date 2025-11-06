@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.domain20180129.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -16,7 +21,7 @@ public class ListServerLockResponseBody extends TeaModel {
     private Integer currentPageNum;
 
     @com.aliyun.core.annotation.NameInMap("Data")
-    private java.util.List < Data> data;
+    private java.util.List<Data> data;
 
     @com.aliyun.core.annotation.NameInMap("NextPage")
     private Boolean nextPage;
@@ -55,6 +60,10 @@ public class ListServerLockResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return currentPageNum
      */
@@ -65,7 +74,7 @@ public class ListServerLockResponseBody extends TeaModel {
     /**
      * @return data
      */
-    public java.util.List < Data> getData() {
+    public java.util.List<Data> getData() {
         return this.data;
     }
 
@@ -113,13 +122,27 @@ public class ListServerLockResponseBody extends TeaModel {
 
     public static final class Builder {
         private Integer currentPageNum; 
-        private java.util.List < Data> data; 
+        private java.util.List<Data> data; 
         private Boolean nextPage; 
         private Integer pageSize; 
         private Boolean prePage; 
         private String requestId; 
         private Integer totalItemNum; 
         private Integer totalPageNum; 
+
+        private Builder() {
+        } 
+
+        private Builder(ListServerLockResponseBody model) {
+            this.currentPageNum = model.currentPageNum;
+            this.data = model.data;
+            this.nextPage = model.nextPage;
+            this.pageSize = model.pageSize;
+            this.prePage = model.prePage;
+            this.requestId = model.requestId;
+            this.totalItemNum = model.totalItemNum;
+            this.totalPageNum = model.totalPageNum;
+        } 
 
         /**
          * <p>The page number.</p>
@@ -135,7 +158,7 @@ public class ListServerLockResponseBody extends TeaModel {
         /**
          * <p>The response parameters.</p>
          */
-        public Builder data(java.util.List < Data> data) {
+        public Builder data(java.util.List<Data> data) {
             this.data = data;
             return this;
         }
@@ -351,6 +374,22 @@ public class ListServerLockResponseBody extends TeaModel {
             private String serverLockStatus; 
             private String startDate; 
             private String userId; 
+
+            private Builder() {
+            } 
+
+            private Builder(Data model) {
+                this.domainInstanceId = model.domainInstanceId;
+                this.domainName = model.domainName;
+                this.expireDate = model.expireDate;
+                this.gmtCreate = model.gmtCreate;
+                this.gmtModified = model.gmtModified;
+                this.lockInstanceId = model.lockInstanceId;
+                this.lockProductId = model.lockProductId;
+                this.serverLockStatus = model.serverLockStatus;
+                this.startDate = model.startDate;
+                this.userId = model.userId;
+            } 
 
             /**
              * <p>The instance ID of the domain name.</p>

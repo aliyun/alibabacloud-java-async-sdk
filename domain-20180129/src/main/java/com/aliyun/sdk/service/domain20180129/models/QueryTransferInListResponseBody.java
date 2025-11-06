@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.domain20180129.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -53,6 +58,10 @@ public class QueryTransferInListResponseBody extends TeaModel {
 
     public static QueryTransferInListResponseBody create() {
         return builder().build();
+    }
+
+    public Builder toBuilder() {
+        return new Builder(this);
     }
 
     /**
@@ -120,6 +129,20 @@ public class QueryTransferInListResponseBody extends TeaModel {
         private String requestId; 
         private Integer totalItemNum; 
         private Integer totalPageNum; 
+
+        private Builder() {
+        } 
+
+        private Builder(QueryTransferInListResponseBody model) {
+            this.currentPageNum = model.currentPageNum;
+            this.data = model.data;
+            this.nextPage = model.nextPage;
+            this.pageSize = model.pageSize;
+            this.prePage = model.prePage;
+            this.requestId = model.requestId;
+            this.totalItemNum = model.totalItemNum;
+            this.totalPageNum = model.totalPageNum;
+        } 
 
         /**
          * CurrentPageNum.
@@ -463,6 +486,33 @@ public class QueryTransferInListResponseBody extends TeaModel {
             private String userId; 
             private Boolean whoisMailStatus; 
 
+            private Builder() {
+            } 
+
+            private Builder(TransferInInfo model) {
+                this.domainName = model.domainName;
+                this.email = model.email;
+                this.expirationDate = model.expirationDate;
+                this.expirationDateLong = model.expirationDateLong;
+                this.instanceId = model.instanceId;
+                this.modificationDate = model.modificationDate;
+                this.modificationDateLong = model.modificationDateLong;
+                this.needMailCheck = model.needMailCheck;
+                this.progressBarType = model.progressBarType;
+                this.resultCode = model.resultCode;
+                this.resultDate = model.resultDate;
+                this.resultDateLong = model.resultDateLong;
+                this.resultMsg = model.resultMsg;
+                this.simpleTransferInStatus = model.simpleTransferInStatus;
+                this.status = model.status;
+                this.submissionDate = model.submissionDate;
+                this.submissionDateLong = model.submissionDateLong;
+                this.transferAuthorizationCodeSubmissionDate = model.transferAuthorizationCodeSubmissionDate;
+                this.transferAuthorizationCodeSubmissionDateLong = model.transferAuthorizationCodeSubmissionDateLong;
+                this.userId = model.userId;
+                this.whoisMailStatus = model.whoisMailStatus;
+            } 
+
             /**
              * DomainName.
              */
@@ -646,7 +696,7 @@ public class QueryTransferInListResponseBody extends TeaModel {
      */
     public static class Data extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("TransferInInfo")
-        private java.util.List < TransferInInfo> transferInInfo;
+        private java.util.List<TransferInInfo> transferInInfo;
 
         private Data(Builder builder) {
             this.transferInInfo = builder.transferInInfo;
@@ -663,17 +713,24 @@ public class QueryTransferInListResponseBody extends TeaModel {
         /**
          * @return transferInInfo
          */
-        public java.util.List < TransferInInfo> getTransferInInfo() {
+        public java.util.List<TransferInInfo> getTransferInInfo() {
             return this.transferInInfo;
         }
 
         public static final class Builder {
-            private java.util.List < TransferInInfo> transferInInfo; 
+            private java.util.List<TransferInInfo> transferInInfo; 
+
+            private Builder() {
+            } 
+
+            private Builder(Data model) {
+                this.transferInInfo = model.transferInInfo;
+            } 
 
             /**
              * TransferInInfo.
              */
-            public Builder transferInInfo(java.util.List < TransferInInfo> transferInInfo) {
+            public Builder transferInInfo(java.util.List<TransferInInfo> transferInInfo) {
                 this.transferInInfo = transferInInfo;
                 return this;
             }
