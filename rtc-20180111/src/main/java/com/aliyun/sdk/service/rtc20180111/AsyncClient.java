@@ -50,6 +50,12 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<CreateAppStreamingOutTemplateResponse> createAppStreamingOutTemplate(CreateAppStreamingOutTemplateRequest request);
 
     /**
+     * @param request the request parameters of CreateAppViewTemplate  CreateAppViewTemplateRequest
+     * @return CreateAppViewTemplateResponse
+     */
+    CompletableFuture<CreateAppViewTemplateResponse> createAppViewTemplate(CreateAppViewTemplateRequest request);
+
+    /**
      * @param request the request parameters of CreateAutoLiveStreamRule  CreateAutoLiveStreamRuleRequest
      * @return CreateAutoLiveStreamRuleResponse
      */
@@ -96,6 +102,12 @@ public interface AsyncClient extends SdkAutoCloseable {
      * @return DeleteAppStreamingOutTemplateResponse
      */
     CompletableFuture<DeleteAppStreamingOutTemplateResponse> deleteAppStreamingOutTemplate(DeleteAppStreamingOutTemplateRequest request);
+
+    /**
+     * @param request the request parameters of DeleteAppViewTemplate  DeleteAppViewTemplateRequest
+     * @return DeleteAppViewTemplateResponse
+     */
+    CompletableFuture<DeleteAppViewTemplateResponse> deleteAppViewTemplate(DeleteAppViewTemplateRequest request);
 
     /**
      * @param request the request parameters of DeleteAutoLiveStreamRule  DeleteAutoLiveStreamRuleRequest
@@ -204,6 +216,18 @@ public interface AsyncClient extends SdkAutoCloseable {
      * @return DescribeAppStreamingOutTemplatesResponse
      */
     CompletableFuture<DescribeAppStreamingOutTemplatesResponse> describeAppStreamingOutTemplates(DescribeAppStreamingOutTemplatesRequest request);
+
+    /**
+     * @param request the request parameters of DescribeAppViewStatus  DescribeAppViewStatusRequest
+     * @return DescribeAppViewStatusResponse
+     */
+    CompletableFuture<DescribeAppViewStatusResponse> describeAppViewStatus(DescribeAppViewStatusRequest request);
+
+    /**
+     * @param request the request parameters of DescribeAppViewTemplates  DescribeAppViewTemplatesRequest
+     * @return DescribeAppViewTemplatesResponse
+     */
+    CompletableFuture<DescribeAppViewTemplatesResponse> describeAppViewTemplates(DescribeAppViewTemplatesRequest request);
 
     /**
      * @param request the request parameters of DescribeApps  DescribeAppsRequest
@@ -560,6 +584,18 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<ModifyAppStreamingOutTemplateResponse> modifyAppStreamingOutTemplate(ModifyAppStreamingOutTemplateRequest request);
 
     /**
+     * @param request the request parameters of ModifyAppViewStatus  ModifyAppViewStatusRequest
+     * @return ModifyAppViewStatusResponse
+     */
+    CompletableFuture<ModifyAppViewStatusResponse> modifyAppViewStatus(ModifyAppViewStatusRequest request);
+
+    /**
+     * @param request the request parameters of ModifyAppViewTemplate  ModifyAppViewTemplateRequest
+     * @return ModifyAppViewTemplateResponse
+     */
+    CompletableFuture<ModifyAppViewTemplateResponse> modifyAppViewTemplate(ModifyAppViewTemplateRequest request);
+
+    /**
      * @param request the request parameters of ModifyCallbackMeta  ModifyCallbackMetaRequest
      * @return ModifyCallbackMetaResponse
      */
@@ -578,6 +614,18 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<ModifyMPULayoutResponse> modifyMPULayout(ModifyMPULayoutRequest request);
 
     /**
+     * @param request the request parameters of ModifyStreamingProperty  ModifyStreamingPropertyRequest
+     * @return ModifyStreamingPropertyResponse
+     */
+    CompletableFuture<ModifyStreamingPropertyResponse> modifyStreamingProperty(ModifyStreamingPropertyRequest request);
+
+    /**
+     * @param request the request parameters of ModifyViewLayout  ModifyViewLayoutRequest
+     * @return ModifyViewLayoutResponse
+     */
+    CompletableFuture<ModifyViewLayoutResponse> modifyViewLayout(ModifyViewLayoutRequest request);
+
+    /**
      * @param request the request parameters of NotifyAgent  NotifyAgentRequest
      * @return NotifyAgentResponse
      */
@@ -594,6 +642,24 @@ public interface AsyncClient extends SdkAutoCloseable {
      * @return RemoveUsersResponse
      */
     CompletableFuture<RemoveUsersResponse> removeUsers(RemoveUsersRequest request);
+
+    /**
+     * @param request the request parameters of RtcCancelSipInvite  RtcCancelSipInviteRequest
+     * @return RtcCancelSipInviteResponse
+     */
+    CompletableFuture<RtcCancelSipInviteResponse> rtcCancelSipInvite(RtcCancelSipInviteRequest request);
+
+    /**
+     * @param request the request parameters of RtcSipInviteMember  RtcSipInviteMemberRequest
+     * @return RtcSipInviteMemberResponse
+     */
+    CompletableFuture<RtcSipInviteMemberResponse> rtcSipInviteMember(RtcSipInviteMemberRequest request);
+
+    /**
+     * @param request the request parameters of RtcSipMute  RtcSipMuteRequest
+     * @return RtcSipMuteResponse
+     */
+    CompletableFuture<RtcSipMuteResponse> rtcSipMute(RtcSipMuteRequest request);
 
     /**
      * @param request the request parameters of StartAgent  StartAgentRequest
@@ -636,6 +702,12 @@ public interface AsyncClient extends SdkAutoCloseable {
      * @return StartStreamingOutResponse
      */
     CompletableFuture<StartStreamingOutResponse> startStreamingOut(StartStreamingOutRequest request);
+
+    /**
+     * @param request the request parameters of StartView  StartViewRequest
+     * @return StartViewResponse
+     */
+    CompletableFuture<StartViewResponse> startView(StartViewRequest request);
 
     /**
      * @param request the request parameters of StopAgent  StopAgentRequest
@@ -684,6 +756,12 @@ public interface AsyncClient extends SdkAutoCloseable {
      * @return StopStreamingOutResponse
      */
     CompletableFuture<StopStreamingOutResponse> stopStreamingOut(StopStreamingOutRequest request);
+
+    /**
+     * @param request the request parameters of StopView  StopViewRequest
+     * @return StopViewResponse
+     */
+    CompletableFuture<StopViewResponse> stopView(StopViewRequest request);
 
     /**
      * @param request the request parameters of UpdateAgent  UpdateAgentRequest

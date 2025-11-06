@@ -12,15 +12,11 @@ import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
  * 
- * {@link StartCloudRecordRequest} extends {@link RequestModel}
+ * {@link ModifyViewLayoutRequest} extends {@link RequestModel}
  *
- * <p>StartCloudRecordRequest</p>
+ * <p>ModifyViewLayoutRequest</p>
  */
-public class StartCloudRecordRequest extends Request {
-    @com.aliyun.core.annotation.Query
-    @com.aliyun.core.annotation.NameInMap("Annotation")
-    private String annotation;
-
+public class ModifyViewLayoutRequest extends Request {
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("AppId")
     @com.aliyun.core.annotation.Validation(required = true)
@@ -31,10 +27,6 @@ public class StartCloudRecordRequest extends Request {
     private java.util.List<Backgrounds> backgrounds;
 
     @com.aliyun.core.annotation.Query
-    @com.aliyun.core.annotation.NameInMap("BgColor")
-    private BgColor bgColor;
-
-    @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("ChannelId")
     @com.aliyun.core.annotation.Validation(required = true)
     private String channelId;
@@ -42,10 +34,6 @@ public class StartCloudRecordRequest extends Request {
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("ClockWidgets")
     private java.util.List<ClockWidgets> clockWidgets;
-
-    @com.aliyun.core.annotation.Query
-    @com.aliyun.core.annotation.NameInMap("CropMode")
-    private Integer cropMode;
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("Images")
@@ -60,45 +48,8 @@ public class StartCloudRecordRequest extends Request {
     private java.util.List<Panes> panes;
 
     @com.aliyun.core.annotation.Query
-    @com.aliyun.core.annotation.NameInMap("RecordMode")
-    private Integer recordMode;
-
-    @com.aliyun.core.annotation.Query
-    @com.aliyun.core.annotation.NameInMap("RegionColor")
-    private RegionColor regionColor;
-
-    @com.aliyun.core.annotation.Query
-    @com.aliyun.core.annotation.NameInMap("ReservePaneForNoCameraUser")
-    private Boolean reservePaneForNoCameraUser;
-
-    @com.aliyun.core.annotation.Query
-    @com.aliyun.core.annotation.NameInMap("ShowDefaultBackgroundOnMute")
-    private Boolean showDefaultBackgroundOnMute;
-
-    @com.aliyun.core.annotation.Query
-    @com.aliyun.core.annotation.NameInMap("SingleStreamingRecord")
-    private SingleStreamingRecord singleStreamingRecord;
-
-    @com.aliyun.core.annotation.Query
-    @com.aliyun.core.annotation.NameInMap("StartWithoutChannel")
-    private Boolean startWithoutChannel;
-
-    @com.aliyun.core.annotation.Query
-    @com.aliyun.core.annotation.NameInMap("StartWithoutChannelWaitTime")
-    private Integer startWithoutChannelWaitTime;
-
-    @com.aliyun.core.annotation.Query
-    @com.aliyun.core.annotation.NameInMap("StorageConfig")
-    @com.aliyun.core.annotation.Validation(required = true)
-    private StorageConfig storageConfig;
-
-    @com.aliyun.core.annotation.Query
-    @com.aliyun.core.annotation.NameInMap("SubHighResolutionStream")
-    private Boolean subHighResolutionStream;
-
-    @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("TaskId")
-    @com.aliyun.core.annotation.Validation(maxLength = 55, minLength = 1)
+    @com.aliyun.core.annotation.Validation(required = true, maxLength = 55, minLength = 1)
     private String taskId;
 
     @com.aliyun.core.annotation.Query
@@ -110,27 +61,15 @@ public class StartCloudRecordRequest extends Request {
     @com.aliyun.core.annotation.NameInMap("Texts")
     private java.util.List<Texts> texts;
 
-    private StartCloudRecordRequest(Builder builder) {
+    private ModifyViewLayoutRequest(Builder builder) {
         super(builder);
-        this.annotation = builder.annotation;
         this.appId = builder.appId;
         this.backgrounds = builder.backgrounds;
-        this.bgColor = builder.bgColor;
         this.channelId = builder.channelId;
         this.clockWidgets = builder.clockWidgets;
-        this.cropMode = builder.cropMode;
         this.images = builder.images;
         this.layoutSpecifiedUsers = builder.layoutSpecifiedUsers;
         this.panes = builder.panes;
-        this.recordMode = builder.recordMode;
-        this.regionColor = builder.regionColor;
-        this.reservePaneForNoCameraUser = builder.reservePaneForNoCameraUser;
-        this.showDefaultBackgroundOnMute = builder.showDefaultBackgroundOnMute;
-        this.singleStreamingRecord = builder.singleStreamingRecord;
-        this.startWithoutChannel = builder.startWithoutChannel;
-        this.startWithoutChannelWaitTime = builder.startWithoutChannelWaitTime;
-        this.storageConfig = builder.storageConfig;
-        this.subHighResolutionStream = builder.subHighResolutionStream;
         this.taskId = builder.taskId;
         this.templateId = builder.templateId;
         this.texts = builder.texts;
@@ -140,20 +79,13 @@ public class StartCloudRecordRequest extends Request {
         return new Builder();
     }
 
-    public static StartCloudRecordRequest create() {
+    public static ModifyViewLayoutRequest create() {
         return builder().build();
     }
 
 @Override
     public Builder toBuilder() {
         return new Builder(this);
-    }
-
-    /**
-     * @return annotation
-     */
-    public String getAnnotation() {
-        return this.annotation;
     }
 
     /**
@@ -171,13 +103,6 @@ public class StartCloudRecordRequest extends Request {
     }
 
     /**
-     * @return bgColor
-     */
-    public BgColor getBgColor() {
-        return this.bgColor;
-    }
-
-    /**
      * @return channelId
      */
     public String getChannelId() {
@@ -189,13 +114,6 @@ public class StartCloudRecordRequest extends Request {
      */
     public java.util.List<ClockWidgets> getClockWidgets() {
         return this.clockWidgets;
-    }
-
-    /**
-     * @return cropMode
-     */
-    public Integer getCropMode() {
-        return this.cropMode;
     }
 
     /**
@@ -220,69 +138,6 @@ public class StartCloudRecordRequest extends Request {
     }
 
     /**
-     * @return recordMode
-     */
-    public Integer getRecordMode() {
-        return this.recordMode;
-    }
-
-    /**
-     * @return regionColor
-     */
-    public RegionColor getRegionColor() {
-        return this.regionColor;
-    }
-
-    /**
-     * @return reservePaneForNoCameraUser
-     */
-    public Boolean getReservePaneForNoCameraUser() {
-        return this.reservePaneForNoCameraUser;
-    }
-
-    /**
-     * @return showDefaultBackgroundOnMute
-     */
-    public Boolean getShowDefaultBackgroundOnMute() {
-        return this.showDefaultBackgroundOnMute;
-    }
-
-    /**
-     * @return singleStreamingRecord
-     */
-    public SingleStreamingRecord getSingleStreamingRecord() {
-        return this.singleStreamingRecord;
-    }
-
-    /**
-     * @return startWithoutChannel
-     */
-    public Boolean getStartWithoutChannel() {
-        return this.startWithoutChannel;
-    }
-
-    /**
-     * @return startWithoutChannelWaitTime
-     */
-    public Integer getStartWithoutChannelWaitTime() {
-        return this.startWithoutChannelWaitTime;
-    }
-
-    /**
-     * @return storageConfig
-     */
-    public StorageConfig getStorageConfig() {
-        return this.storageConfig;
-    }
-
-    /**
-     * @return subHighResolutionStream
-     */
-    public Boolean getSubHighResolutionStream() {
-        return this.subHighResolutionStream;
-    }
-
-    /**
      * @return taskId
      */
     public String getTaskId() {
@@ -303,26 +158,14 @@ public class StartCloudRecordRequest extends Request {
         return this.texts;
     }
 
-    public static final class Builder extends Request.Builder<StartCloudRecordRequest, Builder> {
-        private String annotation; 
+    public static final class Builder extends Request.Builder<ModifyViewLayoutRequest, Builder> {
         private String appId; 
         private java.util.List<Backgrounds> backgrounds; 
-        private BgColor bgColor; 
         private String channelId; 
         private java.util.List<ClockWidgets> clockWidgets; 
-        private Integer cropMode; 
         private java.util.List<Images> images; 
         private LayoutSpecifiedUsers layoutSpecifiedUsers; 
         private java.util.List<Panes> panes; 
-        private Integer recordMode; 
-        private RegionColor regionColor; 
-        private Boolean reservePaneForNoCameraUser; 
-        private Boolean showDefaultBackgroundOnMute; 
-        private SingleStreamingRecord singleStreamingRecord; 
-        private Boolean startWithoutChannel; 
-        private Integer startWithoutChannelWaitTime; 
-        private StorageConfig storageConfig; 
-        private Boolean subHighResolutionStream; 
         private String taskId; 
         private String templateId; 
         private java.util.List<Texts> texts; 
@@ -331,43 +174,21 @@ public class StartCloudRecordRequest extends Request {
             super();
         } 
 
-        private Builder(StartCloudRecordRequest request) {
+        private Builder(ModifyViewLayoutRequest request) {
             super(request);
-            this.annotation = request.annotation;
             this.appId = request.appId;
             this.backgrounds = request.backgrounds;
-            this.bgColor = request.bgColor;
             this.channelId = request.channelId;
             this.clockWidgets = request.clockWidgets;
-            this.cropMode = request.cropMode;
             this.images = request.images;
             this.layoutSpecifiedUsers = request.layoutSpecifiedUsers;
             this.panes = request.panes;
-            this.recordMode = request.recordMode;
-            this.regionColor = request.regionColor;
-            this.reservePaneForNoCameraUser = request.reservePaneForNoCameraUser;
-            this.showDefaultBackgroundOnMute = request.showDefaultBackgroundOnMute;
-            this.singleStreamingRecord = request.singleStreamingRecord;
-            this.startWithoutChannel = request.startWithoutChannel;
-            this.startWithoutChannelWaitTime = request.startWithoutChannelWaitTime;
-            this.storageConfig = request.storageConfig;
-            this.subHighResolutionStream = request.subHighResolutionStream;
             this.taskId = request.taskId;
             this.templateId = request.templateId;
             this.texts = request.texts;
         } 
 
         /**
-         * Annotation.
-         */
-        public Builder annotation(String annotation) {
-            this.putQueryParameter("Annotation", annotation);
-            this.annotation = annotation;
-            return this;
-        }
-
-        /**
-         * <p>appId</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -389,16 +210,6 @@ public class StartCloudRecordRequest extends Request {
         }
 
         /**
-         * BgColor.
-         */
-        public Builder bgColor(BgColor bgColor) {
-            this.putQueryParameter("BgColor", bgColor);
-            this.bgColor = bgColor;
-            return this;
-        }
-
-        /**
-         * <p>channelName</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -416,15 +227,6 @@ public class StartCloudRecordRequest extends Request {
         public Builder clockWidgets(java.util.List<ClockWidgets> clockWidgets) {
             this.putQueryParameter("ClockWidgets", clockWidgets);
             this.clockWidgets = clockWidgets;
-            return this;
-        }
-
-        /**
-         * CropMode.
-         */
-        public Builder cropMode(Integer cropMode) {
-            this.putQueryParameter("CropMode", cropMode);
-            this.cropMode = cropMode;
             return this;
         }
 
@@ -448,7 +250,7 @@ public class StartCloudRecordRequest extends Request {
         }
 
         /**
-         * <p>panes</p>
+         * Panes.
          */
         public Builder panes(java.util.List<Panes> panes) {
             this.putQueryParameter("Panes", panes);
@@ -457,90 +259,7 @@ public class StartCloudRecordRequest extends Request {
         }
 
         /**
-         * RecordMode.
-         */
-        public Builder recordMode(Integer recordMode) {
-            this.putQueryParameter("RecordMode", recordMode);
-            this.recordMode = recordMode;
-            return this;
-        }
-
-        /**
-         * RegionColor.
-         */
-        public Builder regionColor(RegionColor regionColor) {
-            this.putQueryParameter("RegionColor", regionColor);
-            this.regionColor = regionColor;
-            return this;
-        }
-
-        /**
-         * ReservePaneForNoCameraUser.
-         */
-        public Builder reservePaneForNoCameraUser(Boolean reservePaneForNoCameraUser) {
-            this.putQueryParameter("ReservePaneForNoCameraUser", reservePaneForNoCameraUser);
-            this.reservePaneForNoCameraUser = reservePaneForNoCameraUser;
-            return this;
-        }
-
-        /**
-         * ShowDefaultBackgroundOnMute.
-         */
-        public Builder showDefaultBackgroundOnMute(Boolean showDefaultBackgroundOnMute) {
-            this.putQueryParameter("ShowDefaultBackgroundOnMute", showDefaultBackgroundOnMute);
-            this.showDefaultBackgroundOnMute = showDefaultBackgroundOnMute;
-            return this;
-        }
-
-        /**
-         * SingleStreamingRecord.
-         */
-        public Builder singleStreamingRecord(SingleStreamingRecord singleStreamingRecord) {
-            String singleStreamingRecordShrink = shrink(singleStreamingRecord, "SingleStreamingRecord", "json");
-            this.putQueryParameter("SingleStreamingRecord", singleStreamingRecordShrink);
-            this.singleStreamingRecord = singleStreamingRecord;
-            return this;
-        }
-
-        /**
-         * StartWithoutChannel.
-         */
-        public Builder startWithoutChannel(Boolean startWithoutChannel) {
-            this.putQueryParameter("StartWithoutChannel", startWithoutChannel);
-            this.startWithoutChannel = startWithoutChannel;
-            return this;
-        }
-
-        /**
-         * StartWithoutChannelWaitTime.
-         */
-        public Builder startWithoutChannelWaitTime(Integer startWithoutChannelWaitTime) {
-            this.putQueryParameter("StartWithoutChannelWaitTime", startWithoutChannelWaitTime);
-            this.startWithoutChannelWaitTime = startWithoutChannelWaitTime;
-            return this;
-        }
-
-        /**
-         * <p>storageConfig</p>
          * <p>This parameter is required.</p>
-         */
-        public Builder storageConfig(StorageConfig storageConfig) {
-            this.putQueryParameter("StorageConfig", storageConfig);
-            this.storageConfig = storageConfig;
-            return this;
-        }
-
-        /**
-         * SubHighResolutionStream.
-         */
-        public Builder subHighResolutionStream(Boolean subHighResolutionStream) {
-            this.putQueryParameter("SubHighResolutionStream", subHighResolutionStream);
-            this.subHighResolutionStream = subHighResolutionStream;
-            return this;
-        }
-
-        /**
-         * <p>taskId</p>
          * 
          * <strong>example:</strong>
          * <p>123</p>
@@ -552,7 +271,6 @@ public class StartCloudRecordRequest extends Request {
         }
 
         /**
-         * <p>templateId</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -574,17 +292,17 @@ public class StartCloudRecordRequest extends Request {
         }
 
         @Override
-        public StartCloudRecordRequest build() {
-            return new StartCloudRecordRequest(this);
+        public ModifyViewLayoutRequest build() {
+            return new ModifyViewLayoutRequest(this);
         } 
 
     } 
 
     /**
      * 
-     * {@link StartCloudRecordRequest} extends {@link TeaModel}
+     * {@link ModifyViewLayoutRequest} extends {@link TeaModel}
      *
-     * <p>StartCloudRecordRequest</p>
+     * <p>ModifyViewLayoutRequest</p>
      */
     public static class Backgrounds extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Alpha")
@@ -601,7 +319,7 @@ public class StartCloudRecordRequest extends Request {
         private Integer layer;
 
         @com.aliyun.core.annotation.NameInMap("Url")
-        @com.aliyun.core.annotation.Validation(required = true, maxLength = 1024, minLength = 1)
+        @com.aliyun.core.annotation.Validation(required = true)
         private String url;
 
         @com.aliyun.core.annotation.NameInMap("Width")
@@ -803,108 +521,9 @@ public class StartCloudRecordRequest extends Request {
     }
     /**
      * 
-     * {@link StartCloudRecordRequest} extends {@link TeaModel}
+     * {@link ModifyViewLayoutRequest} extends {@link TeaModel}
      *
-     * <p>StartCloudRecordRequest</p>
-     */
-    public static class BgColor extends TeaModel {
-        @com.aliyun.core.annotation.NameInMap("B")
-        @com.aliyun.core.annotation.Validation(maximum = 255)
-        private Integer b;
-
-        @com.aliyun.core.annotation.NameInMap("G")
-        @com.aliyun.core.annotation.Validation(maximum = 255)
-        private Integer g;
-
-        @com.aliyun.core.annotation.NameInMap("R")
-        @com.aliyun.core.annotation.Validation(maximum = 255)
-        private Integer r;
-
-        private BgColor(Builder builder) {
-            this.b = builder.b;
-            this.g = builder.g;
-            this.r = builder.r;
-        }
-
-        public static Builder builder() {
-            return new Builder();
-        }
-
-        public static BgColor create() {
-            return builder().build();
-        }
-
-        /**
-         * @return b
-         */
-        public Integer getB() {
-            return this.b;
-        }
-
-        /**
-         * @return g
-         */
-        public Integer getG() {
-            return this.g;
-        }
-
-        /**
-         * @return r
-         */
-        public Integer getR() {
-            return this.r;
-        }
-
-        public static final class Builder {
-            private Integer b; 
-            private Integer g; 
-            private Integer r; 
-
-            private Builder() {
-            } 
-
-            private Builder(BgColor model) {
-                this.b = model.b;
-                this.g = model.g;
-                this.r = model.r;
-            } 
-
-            /**
-             * B.
-             */
-            public Builder b(Integer b) {
-                this.b = b;
-                return this;
-            }
-
-            /**
-             * G.
-             */
-            public Builder g(Integer g) {
-                this.g = g;
-                return this;
-            }
-
-            /**
-             * R.
-             */
-            public Builder r(Integer r) {
-                this.r = r;
-                return this;
-            }
-
-            public BgColor build() {
-                return new BgColor(this);
-            } 
-
-        } 
-
-    }
-    /**
-     * 
-     * {@link StartCloudRecordRequest} extends {@link TeaModel}
-     *
-     * <p>StartCloudRecordRequest</p>
+     * <p>ModifyViewLayoutRequest</p>
      */
     public static class BoxColor extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("B")
@@ -966,7 +585,10 @@ public class StartCloudRecordRequest extends Request {
             } 
 
             /**
-             * B.
+             * <p>B。</p>
+             * 
+             * <strong>example:</strong>
+             * <p>255</p>
              */
             public Builder b(Integer b) {
                 this.b = b;
@@ -974,7 +596,10 @@ public class StartCloudRecordRequest extends Request {
             }
 
             /**
-             * G.
+             * <p>G。</p>
+             * 
+             * <strong>example:</strong>
+             * <p>255</p>
              */
             public Builder g(Integer g) {
                 this.g = g;
@@ -982,7 +607,10 @@ public class StartCloudRecordRequest extends Request {
             }
 
             /**
-             * R.
+             * <p>R。</p>
+             * 
+             * <strong>example:</strong>
+             * <p>255</p>
              */
             public Builder r(Integer r) {
                 this.r = r;
@@ -998,9 +626,9 @@ public class StartCloudRecordRequest extends Request {
     }
     /**
      * 
-     * {@link StartCloudRecordRequest} extends {@link TeaModel}
+     * {@link ModifyViewLayoutRequest} extends {@link TeaModel}
      *
-     * <p>StartCloudRecordRequest</p>
+     * <p>ModifyViewLayoutRequest</p>
      */
     public static class FontColor extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("B")
@@ -1062,7 +690,10 @@ public class StartCloudRecordRequest extends Request {
             } 
 
             /**
-             * B.
+             * <p>B。</p>
+             * 
+             * <strong>example:</strong>
+             * <p>255</p>
              */
             public Builder b(Integer b) {
                 this.b = b;
@@ -1070,7 +701,10 @@ public class StartCloudRecordRequest extends Request {
             }
 
             /**
-             * G.
+             * <p>G。</p>
+             * 
+             * <strong>example:</strong>
+             * <p>255</p>
              */
             public Builder g(Integer g) {
                 this.g = g;
@@ -1078,7 +712,10 @@ public class StartCloudRecordRequest extends Request {
             }
 
             /**
-             * R.
+             * <p>R。</p>
+             * 
+             * <strong>example:</strong>
+             * <p>255</p>
              */
             public Builder r(Integer r) {
                 this.r = r;
@@ -1094,9 +731,9 @@ public class StartCloudRecordRequest extends Request {
     }
     /**
      * 
-     * {@link StartCloudRecordRequest} extends {@link TeaModel}
+     * {@link ModifyViewLayoutRequest} extends {@link TeaModel}
      *
-     * <p>StartCloudRecordRequest</p>
+     * <p>ModifyViewLayoutRequest</p>
      */
     public static class ClockWidgets extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Alpha")
@@ -1387,9 +1024,9 @@ public class StartCloudRecordRequest extends Request {
     }
     /**
      * 
-     * {@link StartCloudRecordRequest} extends {@link TeaModel}
+     * {@link ModifyViewLayoutRequest} extends {@link TeaModel}
      *
-     * <p>StartCloudRecordRequest</p>
+     * <p>ModifyViewLayoutRequest</p>
      */
     public static class Images extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Alpha")
@@ -1406,7 +1043,7 @@ public class StartCloudRecordRequest extends Request {
         private Integer layer;
 
         @com.aliyun.core.annotation.NameInMap("Url")
-        @com.aliyun.core.annotation.Validation(required = true, maxLength = 1024, minLength = 1)
+        @com.aliyun.core.annotation.Validation(required = true)
         private String url;
 
         @com.aliyun.core.annotation.NameInMap("Width")
@@ -1592,7 +1229,7 @@ public class StartCloudRecordRequest extends Request {
              * <p>This parameter is required.</p>
              * 
              * <strong>example:</strong>
-             * <p>0.3</p>
+             * <p>0.2</p>
              */
             public Builder y(Double y) {
                 this.y = y;
@@ -1608,9 +1245,9 @@ public class StartCloudRecordRequest extends Request {
     }
     /**
      * 
-     * {@link StartCloudRecordRequest} extends {@link TeaModel}
+     * {@link ModifyViewLayoutRequest} extends {@link TeaModel}
      *
-     * <p>StartCloudRecordRequest</p>
+     * <p>ModifyViewLayoutRequest</p>
      */
     public static class LayoutSpecifiedUsers extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Ids")
@@ -1670,6 +1307,9 @@ public class StartCloudRecordRequest extends Request {
 
             /**
              * <p>This parameter is required.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>white</p>
              */
             public Builder type(String type) {
                 this.type = type;
@@ -1685,258 +1325,13 @@ public class StartCloudRecordRequest extends Request {
     }
     /**
      * 
-     * {@link StartCloudRecordRequest} extends {@link TeaModel}
+     * {@link ModifyViewLayoutRequest} extends {@link TeaModel}
      *
-     * <p>StartCloudRecordRequest</p>
-     */
-    public static class PanesBackgrounds extends TeaModel {
-        @com.aliyun.core.annotation.NameInMap("Alpha")
-        private Double alpha;
-
-        @com.aliyun.core.annotation.NameInMap("Display")
-        private String display;
-
-        @com.aliyun.core.annotation.NameInMap("Height")
-        @com.aliyun.core.annotation.Validation(required = true)
-        private Double height;
-
-        @com.aliyun.core.annotation.NameInMap("Layer")
-        private Integer layer;
-
-        @com.aliyun.core.annotation.NameInMap("PaneBackgroundCropMode")
-        private Integer paneBackgroundCropMode;
-
-        @com.aliyun.core.annotation.NameInMap("Url")
-        @com.aliyun.core.annotation.Validation(required = true, maxLength = 1024, minLength = 1)
-        private String url;
-
-        @com.aliyun.core.annotation.NameInMap("Width")
-        @com.aliyun.core.annotation.Validation(required = true)
-        private Double width;
-
-        @com.aliyun.core.annotation.NameInMap("X")
-        @com.aliyun.core.annotation.Validation(required = true)
-        private Double x;
-
-        @com.aliyun.core.annotation.NameInMap("Y")
-        @com.aliyun.core.annotation.Validation(required = true)
-        private Double y;
-
-        private PanesBackgrounds(Builder builder) {
-            this.alpha = builder.alpha;
-            this.display = builder.display;
-            this.height = builder.height;
-            this.layer = builder.layer;
-            this.paneBackgroundCropMode = builder.paneBackgroundCropMode;
-            this.url = builder.url;
-            this.width = builder.width;
-            this.x = builder.x;
-            this.y = builder.y;
-        }
-
-        public static Builder builder() {
-            return new Builder();
-        }
-
-        public static PanesBackgrounds create() {
-            return builder().build();
-        }
-
-        /**
-         * @return alpha
-         */
-        public Double getAlpha() {
-            return this.alpha;
-        }
-
-        /**
-         * @return display
-         */
-        public String getDisplay() {
-            return this.display;
-        }
-
-        /**
-         * @return height
-         */
-        public Double getHeight() {
-            return this.height;
-        }
-
-        /**
-         * @return layer
-         */
-        public Integer getLayer() {
-            return this.layer;
-        }
-
-        /**
-         * @return paneBackgroundCropMode
-         */
-        public Integer getPaneBackgroundCropMode() {
-            return this.paneBackgroundCropMode;
-        }
-
-        /**
-         * @return url
-         */
-        public String getUrl() {
-            return this.url;
-        }
-
-        /**
-         * @return width
-         */
-        public Double getWidth() {
-            return this.width;
-        }
-
-        /**
-         * @return x
-         */
-        public Double getX() {
-            return this.x;
-        }
-
-        /**
-         * @return y
-         */
-        public Double getY() {
-            return this.y;
-        }
-
-        public static final class Builder {
-            private Double alpha; 
-            private String display; 
-            private Double height; 
-            private Integer layer; 
-            private Integer paneBackgroundCropMode; 
-            private String url; 
-            private Double width; 
-            private Double x; 
-            private Double y; 
-
-            private Builder() {
-            } 
-
-            private Builder(PanesBackgrounds model) {
-                this.alpha = model.alpha;
-                this.display = model.display;
-                this.height = model.height;
-                this.layer = model.layer;
-                this.paneBackgroundCropMode = model.paneBackgroundCropMode;
-                this.url = model.url;
-                this.width = model.width;
-                this.x = model.x;
-                this.y = model.y;
-            } 
-
-            /**
-             * Alpha.
-             */
-            public Builder alpha(Double alpha) {
-                this.alpha = alpha;
-                return this;
-            }
-
-            /**
-             * Display.
-             */
-            public Builder display(String display) {
-                this.display = display;
-                return this;
-            }
-
-            /**
-             * <p>This parameter is required.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>0.2</p>
-             */
-            public Builder height(Double height) {
-                this.height = height;
-                return this;
-            }
-
-            /**
-             * Layer.
-             */
-            public Builder layer(Integer layer) {
-                this.layer = layer;
-                return this;
-            }
-
-            /**
-             * PaneBackgroundCropMode.
-             */
-            public Builder paneBackgroundCropMode(Integer paneBackgroundCropMode) {
-                this.paneBackgroundCropMode = paneBackgroundCropMode;
-                return this;
-            }
-
-            /**
-             * <p>This parameter is required.</p>
-             * 
-             * <strong>example:</strong>
-             * <p><a href="https://aliyun.com/123xx.jpg">https://aliyun.com/123xx.jpg</a></p>
-             */
-            public Builder url(String url) {
-                this.url = url;
-                return this;
-            }
-
-            /**
-             * <p>This parameter is required.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>0.2</p>
-             */
-            public Builder width(Double width) {
-                this.width = width;
-                return this;
-            }
-
-            /**
-             * <p>This parameter is required.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>0.2</p>
-             */
-            public Builder x(Double x) {
-                this.x = x;
-                return this;
-            }
-
-            /**
-             * <p>This parameter is required.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>0.2</p>
-             */
-            public Builder y(Double y) {
-                this.y = y;
-                return this;
-            }
-
-            public PanesBackgrounds build() {
-                return new PanesBackgrounds(this);
-            } 
-
-        } 
-
-    }
-    /**
-     * 
-     * {@link StartCloudRecordRequest} extends {@link TeaModel}
-     *
-     * <p>StartCloudRecordRequest</p>
+     * <p>ModifyViewLayoutRequest</p>
      */
     public static class PanesImages extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Alpha")
         private Double alpha;
-
-        @com.aliyun.core.annotation.NameInMap("Display")
-        private String display;
 
         @com.aliyun.core.annotation.NameInMap("Height")
         @com.aliyun.core.annotation.Validation(required = true)
@@ -1949,7 +1344,7 @@ public class StartCloudRecordRequest extends Request {
         private Integer paneImageCropMode;
 
         @com.aliyun.core.annotation.NameInMap("Url")
-        @com.aliyun.core.annotation.Validation(required = true, maxLength = 1024, minLength = 1)
+        @com.aliyun.core.annotation.Validation(required = true)
         private String url;
 
         @com.aliyun.core.annotation.NameInMap("Width")
@@ -1966,7 +1361,6 @@ public class StartCloudRecordRequest extends Request {
 
         private PanesImages(Builder builder) {
             this.alpha = builder.alpha;
-            this.display = builder.display;
             this.height = builder.height;
             this.layer = builder.layer;
             this.paneImageCropMode = builder.paneImageCropMode;
@@ -1989,13 +1383,6 @@ public class StartCloudRecordRequest extends Request {
          */
         public Double getAlpha() {
             return this.alpha;
-        }
-
-        /**
-         * @return display
-         */
-        public String getDisplay() {
-            return this.display;
         }
 
         /**
@@ -2049,7 +1436,6 @@ public class StartCloudRecordRequest extends Request {
 
         public static final class Builder {
             private Double alpha; 
-            private String display; 
             private Double height; 
             private Integer layer; 
             private Integer paneImageCropMode; 
@@ -2063,7 +1449,6 @@ public class StartCloudRecordRequest extends Request {
 
             private Builder(PanesImages model) {
                 this.alpha = model.alpha;
-                this.display = model.display;
                 this.height = model.height;
                 this.layer = model.layer;
                 this.paneImageCropMode = model.paneImageCropMode;
@@ -2078,14 +1463,6 @@ public class StartCloudRecordRequest extends Request {
              */
             public Builder alpha(Double alpha) {
                 this.alpha = alpha;
-                return this;
-            }
-
-            /**
-             * Display.
-             */
-            public Builder display(String display) {
-                this.display = display;
                 return this;
             }
 
@@ -2120,7 +1497,7 @@ public class StartCloudRecordRequest extends Request {
              * <p>This parameter is required.</p>
              * 
              * <strong>example:</strong>
-             * <p><a href="https://aliyun.com/123xx.jpg">https://aliyun.com/123xx.jpg</a></p>
+             * <p><a href="https://aliyun.com/123xxx.jpg">https://aliyun.com/123xxx.jpg</a></p>
              */
             public Builder url(String url) {
                 this.url = url;
@@ -2153,7 +1530,7 @@ public class StartCloudRecordRequest extends Request {
              * <p>This parameter is required.</p>
              * 
              * <strong>example:</strong>
-             * <p>0.2</p>
+             * <p>0.3</p>
              */
             public Builder y(Double y) {
                 this.y = y;
@@ -2169,9 +1546,9 @@ public class StartCloudRecordRequest extends Request {
     }
     /**
      * 
-     * {@link StartCloudRecordRequest} extends {@link TeaModel}
+     * {@link ModifyViewLayoutRequest} extends {@link TeaModel}
      *
-     * <p>StartCloudRecordRequest</p>
+     * <p>ModifyViewLayoutRequest</p>
      */
     public static class TextsBoxColor extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("B")
@@ -2233,7 +1610,10 @@ public class StartCloudRecordRequest extends Request {
             } 
 
             /**
-             * B.
+             * <p>B。</p>
+             * 
+             * <strong>example:</strong>
+             * <p>255</p>
              */
             public Builder b(Integer b) {
                 this.b = b;
@@ -2241,7 +1621,10 @@ public class StartCloudRecordRequest extends Request {
             }
 
             /**
-             * G.
+             * <p>G。</p>
+             * 
+             * <strong>example:</strong>
+             * <p>255</p>
              */
             public Builder g(Integer g) {
                 this.g = g;
@@ -2249,7 +1632,10 @@ public class StartCloudRecordRequest extends Request {
             }
 
             /**
-             * R.
+             * <p>R。</p>
+             * 
+             * <strong>example:</strong>
+             * <p>255</p>
              */
             public Builder r(Integer r) {
                 this.r = r;
@@ -2265,9 +1651,9 @@ public class StartCloudRecordRequest extends Request {
     }
     /**
      * 
-     * {@link StartCloudRecordRequest} extends {@link TeaModel}
+     * {@link ModifyViewLayoutRequest} extends {@link TeaModel}
      *
-     * <p>StartCloudRecordRequest</p>
+     * <p>ModifyViewLayoutRequest</p>
      */
     public static class TextsFontColor extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("B")
@@ -2329,7 +1715,10 @@ public class StartCloudRecordRequest extends Request {
             } 
 
             /**
-             * B.
+             * <p>B。</p>
+             * 
+             * <strong>example:</strong>
+             * <p>255</p>
              */
             public Builder b(Integer b) {
                 this.b = b;
@@ -2337,7 +1726,10 @@ public class StartCloudRecordRequest extends Request {
             }
 
             /**
-             * G.
+             * <p>G。</p>
+             * 
+             * <strong>example:</strong>
+             * <p>255</p>
              */
             public Builder g(Integer g) {
                 this.g = g;
@@ -2345,7 +1737,10 @@ public class StartCloudRecordRequest extends Request {
             }
 
             /**
-             * R.
+             * <p>R。</p>
+             * 
+             * <strong>example:</strong>
+             * <p>255</p>
              */
             public Builder r(Integer r) {
                 this.r = r;
@@ -2361,9 +1756,9 @@ public class StartCloudRecordRequest extends Request {
     }
     /**
      * 
-     * {@link StartCloudRecordRequest} extends {@link TeaModel}
+     * {@link ModifyViewLayoutRequest} extends {@link TeaModel}
      *
-     * <p>StartCloudRecordRequest</p>
+     * <p>ModifyViewLayoutRequest</p>
      */
     public static class PanesTexts extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Alpha")
@@ -2377,9 +1772,6 @@ public class StartCloudRecordRequest extends Request {
 
         @com.aliyun.core.annotation.NameInMap("BoxColor")
         private TextsBoxColor boxColor;
-
-        @com.aliyun.core.annotation.NameInMap("Display")
-        private String display;
 
         @com.aliyun.core.annotation.NameInMap("Font")
         private Integer font;
@@ -2397,7 +1789,7 @@ public class StartCloudRecordRequest extends Request {
         private Integer layer;
 
         @com.aliyun.core.annotation.NameInMap("Texture")
-        @com.aliyun.core.annotation.Validation(required = true, maxLength = 128, minLength = 1)
+        @com.aliyun.core.annotation.Validation(required = true)
         private String texture;
 
         @com.aliyun.core.annotation.NameInMap("X")
@@ -2413,7 +1805,6 @@ public class StartCloudRecordRequest extends Request {
             this.boxAlpha = builder.boxAlpha;
             this.boxBorderw = builder.boxBorderw;
             this.boxColor = builder.boxColor;
-            this.display = builder.display;
             this.font = builder.font;
             this.fontColor = builder.fontColor;
             this.fontSize = builder.fontSize;
@@ -2458,13 +1849,6 @@ public class StartCloudRecordRequest extends Request {
          */
         public TextsBoxColor getBoxColor() {
             return this.boxColor;
-        }
-
-        /**
-         * @return display
-         */
-        public String getDisplay() {
-            return this.display;
         }
 
         /**
@@ -2528,7 +1912,6 @@ public class StartCloudRecordRequest extends Request {
             private Double boxAlpha; 
             private Integer boxBorderw; 
             private TextsBoxColor boxColor; 
-            private String display; 
             private Integer font; 
             private TextsFontColor fontColor; 
             private Integer fontSize; 
@@ -2546,7 +1929,6 @@ public class StartCloudRecordRequest extends Request {
                 this.boxAlpha = model.boxAlpha;
                 this.boxBorderw = model.boxBorderw;
                 this.boxColor = model.boxColor;
-                this.display = model.display;
                 this.font = model.font;
                 this.fontColor = model.fontColor;
                 this.fontSize = model.fontSize;
@@ -2586,14 +1968,6 @@ public class StartCloudRecordRequest extends Request {
              */
             public Builder boxColor(TextsBoxColor boxColor) {
                 this.boxColor = boxColor;
-                return this;
-            }
-
-            /**
-             * Display.
-             */
-            public Builder display(String display) {
-                this.display = display;
                 return this;
             }
 
@@ -2679,68 +2053,11 @@ public class StartCloudRecordRequest extends Request {
     }
     /**
      * 
-     * {@link StartCloudRecordRequest} extends {@link TeaModel}
+     * {@link ModifyViewLayoutRequest} extends {@link TeaModel}
      *
-     * <p>StartCloudRecordRequest</p>
-     */
-    public static class Whiteboard extends TeaModel {
-        @com.aliyun.core.annotation.NameInMap("WhiteboardId")
-        private String whiteboardId;
-
-        private Whiteboard(Builder builder) {
-            this.whiteboardId = builder.whiteboardId;
-        }
-
-        public static Builder builder() {
-            return new Builder();
-        }
-
-        public static Whiteboard create() {
-            return builder().build();
-        }
-
-        /**
-         * @return whiteboardId
-         */
-        public String getWhiteboardId() {
-            return this.whiteboardId;
-        }
-
-        public static final class Builder {
-            private String whiteboardId; 
-
-            private Builder() {
-            } 
-
-            private Builder(Whiteboard model) {
-                this.whiteboardId = model.whiteboardId;
-            } 
-
-            /**
-             * WhiteboardId.
-             */
-            public Builder whiteboardId(String whiteboardId) {
-                this.whiteboardId = whiteboardId;
-                return this;
-            }
-
-            public Whiteboard build() {
-                return new Whiteboard(this);
-            } 
-
-        } 
-
-    }
-    /**
-     * 
-     * {@link StartCloudRecordRequest} extends {@link TeaModel}
-     *
-     * <p>StartCloudRecordRequest</p>
+     * <p>ModifyViewLayoutRequest</p>
      */
     public static class Panes extends TeaModel {
-        @com.aliyun.core.annotation.NameInMap("Backgrounds")
-        private java.util.List<PanesBackgrounds> backgrounds;
-
         @com.aliyun.core.annotation.NameInMap("Images")
         private java.util.List<PanesImages> images;
 
@@ -2749,10 +2066,7 @@ public class StartCloudRecordRequest extends Request {
 
         @com.aliyun.core.annotation.NameInMap("PaneId")
         @com.aliyun.core.annotation.Validation(required = true)
-        private Integer paneId;
-
-        @com.aliyun.core.annotation.NameInMap("ReservePaneForOfflineUser")
-        private Boolean reservePaneForOfflineUser;
+        private String paneId;
 
         @com.aliyun.core.annotation.NameInMap("Source")
         private String source;
@@ -2763,23 +2077,13 @@ public class StartCloudRecordRequest extends Request {
         @com.aliyun.core.annotation.NameInMap("Texts")
         private java.util.List<PanesTexts> texts;
 
-        @com.aliyun.core.annotation.NameInMap("VideoOrder")
-        private String videoOrder;
-
-        @com.aliyun.core.annotation.NameInMap("Whiteboard")
-        private Whiteboard whiteboard;
-
         private Panes(Builder builder) {
-            this.backgrounds = builder.backgrounds;
             this.images = builder.images;
             this.paneCropMode = builder.paneCropMode;
             this.paneId = builder.paneId;
-            this.reservePaneForOfflineUser = builder.reservePaneForOfflineUser;
             this.source = builder.source;
             this.sourceType = builder.sourceType;
             this.texts = builder.texts;
-            this.videoOrder = builder.videoOrder;
-            this.whiteboard = builder.whiteboard;
         }
 
         public static Builder builder() {
@@ -2788,13 +2092,6 @@ public class StartCloudRecordRequest extends Request {
 
         public static Panes create() {
             return builder().build();
-        }
-
-        /**
-         * @return backgrounds
-         */
-        public java.util.List<PanesBackgrounds> getBackgrounds() {
-            return this.backgrounds;
         }
 
         /**
@@ -2814,15 +2111,8 @@ public class StartCloudRecordRequest extends Request {
         /**
          * @return paneId
          */
-        public Integer getPaneId() {
+        public String getPaneId() {
             return this.paneId;
-        }
-
-        /**
-         * @return reservePaneForOfflineUser
-         */
-        public Boolean getReservePaneForOfflineUser() {
-            return this.reservePaneForOfflineUser;
         }
 
         /**
@@ -2846,55 +2136,25 @@ public class StartCloudRecordRequest extends Request {
             return this.texts;
         }
 
-        /**
-         * @return videoOrder
-         */
-        public String getVideoOrder() {
-            return this.videoOrder;
-        }
-
-        /**
-         * @return whiteboard
-         */
-        public Whiteboard getWhiteboard() {
-            return this.whiteboard;
-        }
-
         public static final class Builder {
-            private java.util.List<PanesBackgrounds> backgrounds; 
             private java.util.List<PanesImages> images; 
             private Integer paneCropMode; 
-            private Integer paneId; 
-            private Boolean reservePaneForOfflineUser; 
+            private String paneId; 
             private String source; 
             private String sourceType; 
             private java.util.List<PanesTexts> texts; 
-            private String videoOrder; 
-            private Whiteboard whiteboard; 
 
             private Builder() {
             } 
 
             private Builder(Panes model) {
-                this.backgrounds = model.backgrounds;
                 this.images = model.images;
                 this.paneCropMode = model.paneCropMode;
                 this.paneId = model.paneId;
-                this.reservePaneForOfflineUser = model.reservePaneForOfflineUser;
                 this.source = model.source;
                 this.sourceType = model.sourceType;
                 this.texts = model.texts;
-                this.videoOrder = model.videoOrder;
-                this.whiteboard = model.whiteboard;
             } 
-
-            /**
-             * Backgrounds.
-             */
-            public Builder backgrounds(java.util.List<PanesBackgrounds> backgrounds) {
-                this.backgrounds = backgrounds;
-                return this;
-            }
 
             /**
              * Images.
@@ -2913,27 +2173,18 @@ public class StartCloudRecordRequest extends Request {
             }
 
             /**
-             * <p>paneId</p>
              * <p>This parameter is required.</p>
              * 
              * <strong>example:</strong>
              * <p>0</p>
              */
-            public Builder paneId(Integer paneId) {
+            public Builder paneId(String paneId) {
                 this.paneId = paneId;
                 return this;
             }
 
             /**
-             * ReservePaneForOfflineUser.
-             */
-            public Builder reservePaneForOfflineUser(Boolean reservePaneForOfflineUser) {
-                this.reservePaneForOfflineUser = reservePaneForOfflineUser;
-                return this;
-            }
-
-            /**
-             * <p>source</p>
+             * Source.
              */
             public Builder source(String source) {
                 this.source = source;
@@ -2941,10 +2192,7 @@ public class StartCloudRecordRequest extends Request {
             }
 
             /**
-             * <p>sourceType</p>
-             * 
-             * <strong>example:</strong>
-             * <p>video</p>
+             * SourceType.
              */
             public Builder sourceType(String sourceType) {
                 this.sourceType = sourceType;
@@ -2959,22 +2207,6 @@ public class StartCloudRecordRequest extends Request {
                 return this;
             }
 
-            /**
-             * VideoOrder.
-             */
-            public Builder videoOrder(String videoOrder) {
-                this.videoOrder = videoOrder;
-                return this;
-            }
-
-            /**
-             * Whiteboard.
-             */
-            public Builder whiteboard(Whiteboard whiteboard) {
-                this.whiteboard = whiteboard;
-                return this;
-            }
-
             public Panes build() {
                 return new Panes(this);
             } 
@@ -2984,24 +2216,21 @@ public class StartCloudRecordRequest extends Request {
     }
     /**
      * 
-     * {@link StartCloudRecordRequest} extends {@link TeaModel}
+     * {@link ModifyViewLayoutRequest} extends {@link TeaModel}
      *
-     * <p>StartCloudRecordRequest</p>
+     * <p>ModifyViewLayoutRequest</p>
      */
-    public static class RegionColor extends TeaModel {
+    public static class ModifyViewLayoutRequestTextsBoxColor extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("B")
-        @com.aliyun.core.annotation.Validation(maximum = 255)
         private Integer b;
 
         @com.aliyun.core.annotation.NameInMap("G")
-        @com.aliyun.core.annotation.Validation(maximum = 255)
         private Integer g;
 
         @com.aliyun.core.annotation.NameInMap("R")
-        @com.aliyun.core.annotation.Validation(maximum = 255)
         private Integer r;
 
-        private RegionColor(Builder builder) {
+        private ModifyViewLayoutRequestTextsBoxColor(Builder builder) {
             this.b = builder.b;
             this.g = builder.g;
             this.r = builder.r;
@@ -3011,7 +2240,7 @@ public class StartCloudRecordRequest extends Request {
             return new Builder();
         }
 
-        public static RegionColor create() {
+        public static ModifyViewLayoutRequestTextsBoxColor create() {
             return builder().build();
         }
 
@@ -3044,14 +2273,17 @@ public class StartCloudRecordRequest extends Request {
             private Builder() {
             } 
 
-            private Builder(RegionColor model) {
+            private Builder(ModifyViewLayoutRequestTextsBoxColor model) {
                 this.b = model.b;
                 this.g = model.g;
                 this.r = model.r;
             } 
 
             /**
-             * B.
+             * <p>B。</p>
+             * 
+             * <strong>example:</strong>
+             * <p>255</p>
              */
             public Builder b(Integer b) {
                 this.b = b;
@@ -3059,7 +2291,10 @@ public class StartCloudRecordRequest extends Request {
             }
 
             /**
-             * G.
+             * <p>G。</p>
+             * 
+             * <strong>example:</strong>
+             * <p>255</p>
              */
             public Builder g(Integer g) {
                 this.g = g;
@@ -3067,15 +2302,18 @@ public class StartCloudRecordRequest extends Request {
             }
 
             /**
-             * R.
+             * <p>R。</p>
+             * 
+             * <strong>example:</strong>
+             * <p>255</p>
              */
             public Builder r(Integer r) {
                 this.r = r;
                 return this;
             }
 
-            public RegionColor build() {
-                return new RegionColor(this);
+            public ModifyViewLayoutRequestTextsBoxColor build() {
+                return new ModifyViewLayoutRequestTextsBoxColor(this);
             } 
 
         } 
@@ -3083,561 +2321,11 @@ public class StartCloudRecordRequest extends Request {
     }
     /**
      * 
-     * {@link StartCloudRecordRequest} extends {@link TeaModel}
+     * {@link ModifyViewLayoutRequest} extends {@link TeaModel}
      *
-     * <p>StartCloudRecordRequest</p>
+     * <p>ModifyViewLayoutRequest</p>
      */
-    public static class SpecifiedStreams extends TeaModel {
-        @com.aliyun.core.annotation.NameInMap("Ids")
-        @com.aliyun.core.annotation.Validation(required = true)
-        private java.util.List<String> ids;
-
-        @com.aliyun.core.annotation.NameInMap("StreamType")
-        @com.aliyun.core.annotation.Validation(required = true)
-        private String streamType;
-
-        @com.aliyun.core.annotation.NameInMap("Type")
-        private String type;
-
-        private SpecifiedStreams(Builder builder) {
-            this.ids = builder.ids;
-            this.streamType = builder.streamType;
-            this.type = builder.type;
-        }
-
-        public static Builder builder() {
-            return new Builder();
-        }
-
-        public static SpecifiedStreams create() {
-            return builder().build();
-        }
-
-        /**
-         * @return ids
-         */
-        public java.util.List<String> getIds() {
-            return this.ids;
-        }
-
-        /**
-         * @return streamType
-         */
-        public String getStreamType() {
-            return this.streamType;
-        }
-
-        /**
-         * @return type
-         */
-        public String getType() {
-            return this.type;
-        }
-
-        public static final class Builder {
-            private java.util.List<String> ids; 
-            private String streamType; 
-            private String type; 
-
-            private Builder() {
-            } 
-
-            private Builder(SpecifiedStreams model) {
-                this.ids = model.ids;
-                this.streamType = model.streamType;
-                this.type = model.type;
-            } 
-
-            /**
-             * <p>This parameter is required.</p>
-             */
-            public Builder ids(java.util.List<String> ids) {
-                this.ids = ids;
-                return this;
-            }
-
-            /**
-             * <p>This parameter is required.</p>
-             */
-            public Builder streamType(String streamType) {
-                this.streamType = streamType;
-                return this;
-            }
-
-            /**
-             * <p>This parameter is required.</p>
-             */
-            public Builder type(String type) {
-                this.type = type;
-                return this;
-            }
-
-            public SpecifiedStreams build() {
-                return new SpecifiedStreams(this);
-            } 
-
-        } 
-
-    }
-    /**
-     * 
-     * {@link StartCloudRecordRequest} extends {@link TeaModel}
-     *
-     * <p>StartCloudRecordRequest</p>
-     */
-    public static class Audio extends TeaModel {
-        @com.aliyun.core.annotation.NameInMap("Bitrate")
-        private Integer bitrate;
-
-        @com.aliyun.core.annotation.NameInMap("Codec")
-        private String codec;
-
-        @com.aliyun.core.annotation.NameInMap("SampleRate")
-        private Integer sampleRate;
-
-        private Audio(Builder builder) {
-            this.bitrate = builder.bitrate;
-            this.codec = builder.codec;
-            this.sampleRate = builder.sampleRate;
-        }
-
-        public static Builder builder() {
-            return new Builder();
-        }
-
-        public static Audio create() {
-            return builder().build();
-        }
-
-        /**
-         * @return bitrate
-         */
-        public Integer getBitrate() {
-            return this.bitrate;
-        }
-
-        /**
-         * @return codec
-         */
-        public String getCodec() {
-            return this.codec;
-        }
-
-        /**
-         * @return sampleRate
-         */
-        public Integer getSampleRate() {
-            return this.sampleRate;
-        }
-
-        public static final class Builder {
-            private Integer bitrate; 
-            private String codec; 
-            private Integer sampleRate; 
-
-            private Builder() {
-            } 
-
-            private Builder(Audio model) {
-                this.bitrate = model.bitrate;
-                this.codec = model.codec;
-                this.sampleRate = model.sampleRate;
-            } 
-
-            /**
-             * Bitrate.
-             */
-            public Builder bitrate(Integer bitrate) {
-                this.bitrate = bitrate;
-                return this;
-            }
-
-            /**
-             * Codec.
-             */
-            public Builder codec(String codec) {
-                this.codec = codec;
-                return this;
-            }
-
-            /**
-             * SampleRate.
-             */
-            public Builder sampleRate(Integer sampleRate) {
-                this.sampleRate = sampleRate;
-                return this;
-            }
-
-            public Audio build() {
-                return new Audio(this);
-            } 
-
-        } 
-
-    }
-    /**
-     * 
-     * {@link StartCloudRecordRequest} extends {@link TeaModel}
-     *
-     * <p>StartCloudRecordRequest</p>
-     */
-    public static class TranscodingParameters extends TeaModel {
-        @com.aliyun.core.annotation.NameInMap("Audio")
-        private Audio audio;
-
-        @com.aliyun.core.annotation.NameInMap("Container")
-        private String container;
-
-        private TranscodingParameters(Builder builder) {
-            this.audio = builder.audio;
-            this.container = builder.container;
-        }
-
-        public static Builder builder() {
-            return new Builder();
-        }
-
-        public static TranscodingParameters create() {
-            return builder().build();
-        }
-
-        /**
-         * @return audio
-         */
-        public Audio getAudio() {
-            return this.audio;
-        }
-
-        /**
-         * @return container
-         */
-        public String getContainer() {
-            return this.container;
-        }
-
-        public static final class Builder {
-            private Audio audio; 
-            private String container; 
-
-            private Builder() {
-            } 
-
-            private Builder(TranscodingParameters model) {
-                this.audio = model.audio;
-                this.container = model.container;
-            } 
-
-            /**
-             * Audio.
-             */
-            public Builder audio(Audio audio) {
-                this.audio = audio;
-                return this;
-            }
-
-            /**
-             * Container.
-             */
-            public Builder container(String container) {
-                this.container = container;
-                return this;
-            }
-
-            public TranscodingParameters build() {
-                return new TranscodingParameters(this);
-            } 
-
-        } 
-
-    }
-    /**
-     * 
-     * {@link StartCloudRecordRequest} extends {@link TeaModel}
-     *
-     * <p>StartCloudRecordRequest</p>
-     */
-    public static class SingleStreamingRecord extends TeaModel {
-        @com.aliyun.core.annotation.NameInMap("AvMerge")
-        private Boolean avMerge;
-
-        @com.aliyun.core.annotation.NameInMap("SpecifiedStreams")
-        @com.aliyun.core.annotation.Validation(required = true)
-        private java.util.List<SpecifiedStreams> specifiedStreams;
-
-        @com.aliyun.core.annotation.NameInMap("TranscodingParameters")
-        private TranscodingParameters transcodingParameters;
-
-        private SingleStreamingRecord(Builder builder) {
-            this.avMerge = builder.avMerge;
-            this.specifiedStreams = builder.specifiedStreams;
-            this.transcodingParameters = builder.transcodingParameters;
-        }
-
-        public static Builder builder() {
-            return new Builder();
-        }
-
-        public static SingleStreamingRecord create() {
-            return builder().build();
-        }
-
-        /**
-         * @return avMerge
-         */
-        public Boolean getAvMerge() {
-            return this.avMerge;
-        }
-
-        /**
-         * @return specifiedStreams
-         */
-        public java.util.List<SpecifiedStreams> getSpecifiedStreams() {
-            return this.specifiedStreams;
-        }
-
-        /**
-         * @return transcodingParameters
-         */
-        public TranscodingParameters getTranscodingParameters() {
-            return this.transcodingParameters;
-        }
-
-        public static final class Builder {
-            private Boolean avMerge; 
-            private java.util.List<SpecifiedStreams> specifiedStreams; 
-            private TranscodingParameters transcodingParameters; 
-
-            private Builder() {
-            } 
-
-            private Builder(SingleStreamingRecord model) {
-                this.avMerge = model.avMerge;
-                this.specifiedStreams = model.specifiedStreams;
-                this.transcodingParameters = model.transcodingParameters;
-            } 
-
-            /**
-             * AvMerge.
-             */
-            public Builder avMerge(Boolean avMerge) {
-                this.avMerge = avMerge;
-                return this;
-            }
-
-            /**
-             * <p>This parameter is required.</p>
-             */
-            public Builder specifiedStreams(java.util.List<SpecifiedStreams> specifiedStreams) {
-                this.specifiedStreams = specifiedStreams;
-                return this;
-            }
-
-            /**
-             * TranscodingParameters.
-             */
-            public Builder transcodingParameters(TranscodingParameters transcodingParameters) {
-                this.transcodingParameters = transcodingParameters;
-                return this;
-            }
-
-            public SingleStreamingRecord build() {
-                return new SingleStreamingRecord(this);
-            } 
-
-        } 
-
-    }
-    /**
-     * 
-     * {@link StartCloudRecordRequest} extends {@link TeaModel}
-     *
-     * <p>StartCloudRecordRequest</p>
-     */
-    public static class StorageConfig extends TeaModel {
-        @com.aliyun.core.annotation.NameInMap("AccessKey")
-        @com.aliyun.core.annotation.Validation(required = true, minLength = 1)
-        private String accessKey;
-
-        @com.aliyun.core.annotation.NameInMap("Bucket")
-        @com.aliyun.core.annotation.Validation(required = true, minLength = 1)
-        private String bucket;
-
-        @com.aliyun.core.annotation.NameInMap("Endpoint")
-        private String endpoint;
-
-        @com.aliyun.core.annotation.NameInMap("Region")
-        @com.aliyun.core.annotation.Validation(required = true)
-        private Integer region;
-
-        @com.aliyun.core.annotation.NameInMap("SecretKey")
-        @com.aliyun.core.annotation.Validation(required = true, minLength = 1)
-        private String secretKey;
-
-        @com.aliyun.core.annotation.NameInMap("Vendor")
-        @com.aliyun.core.annotation.Validation(required = true, minimum = 1)
-        private Integer vendor;
-
-        private StorageConfig(Builder builder) {
-            this.accessKey = builder.accessKey;
-            this.bucket = builder.bucket;
-            this.endpoint = builder.endpoint;
-            this.region = builder.region;
-            this.secretKey = builder.secretKey;
-            this.vendor = builder.vendor;
-        }
-
-        public static Builder builder() {
-            return new Builder();
-        }
-
-        public static StorageConfig create() {
-            return builder().build();
-        }
-
-        /**
-         * @return accessKey
-         */
-        public String getAccessKey() {
-            return this.accessKey;
-        }
-
-        /**
-         * @return bucket
-         */
-        public String getBucket() {
-            return this.bucket;
-        }
-
-        /**
-         * @return endpoint
-         */
-        public String getEndpoint() {
-            return this.endpoint;
-        }
-
-        /**
-         * @return region
-         */
-        public Integer getRegion() {
-            return this.region;
-        }
-
-        /**
-         * @return secretKey
-         */
-        public String getSecretKey() {
-            return this.secretKey;
-        }
-
-        /**
-         * @return vendor
-         */
-        public Integer getVendor() {
-            return this.vendor;
-        }
-
-        public static final class Builder {
-            private String accessKey; 
-            private String bucket; 
-            private String endpoint; 
-            private Integer region; 
-            private String secretKey; 
-            private Integer vendor; 
-
-            private Builder() {
-            } 
-
-            private Builder(StorageConfig model) {
-                this.accessKey = model.accessKey;
-                this.bucket = model.bucket;
-                this.endpoint = model.endpoint;
-                this.region = model.region;
-                this.secretKey = model.secretKey;
-                this.vendor = model.vendor;
-            } 
-
-            /**
-             * <p>accessKey</p>
-             * <p>This parameter is required.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>LTAX***</p>
-             */
-            public Builder accessKey(String accessKey) {
-                this.accessKey = accessKey;
-                return this;
-            }
-
-            /**
-             * <p>bucket</p>
-             * <p>This parameter is required.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>test-bucket-for-recording</p>
-             */
-            public Builder bucket(String bucket) {
-                this.bucket = bucket;
-                return this;
-            }
-
-            /**
-             * Endpoint.
-             */
-            public Builder endpoint(String endpoint) {
-                this.endpoint = endpoint;
-                return this;
-            }
-
-            /**
-             * <p>region</p>
-             * <p>This parameter is required.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>0</p>
-             */
-            public Builder region(Integer region) {
-                this.region = region;
-                return this;
-            }
-
-            /**
-             * <p>secretKey</p>
-             * <p>This parameter is required.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>APb6qWYEzKtYxE***</p>
-             */
-            public Builder secretKey(String secretKey) {
-                this.secretKey = secretKey;
-                return this;
-            }
-
-            /**
-             * <p>vendor</p>
-             * <p>This parameter is required.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>1</p>
-             */
-            public Builder vendor(Integer vendor) {
-                this.vendor = vendor;
-                return this;
-            }
-
-            public StorageConfig build() {
-                return new StorageConfig(this);
-            } 
-
-        } 
-
-    }
-    /**
-     * 
-     * {@link StartCloudRecordRequest} extends {@link TeaModel}
-     *
-     * <p>StartCloudRecordRequest</p>
-     */
-    public static class StartCloudRecordRequestTextsBoxColor extends TeaModel {
+    public static class ModifyViewLayoutRequestTextsFontColor extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("B")
         private Integer b;
 
@@ -3647,7 +2335,7 @@ public class StartCloudRecordRequest extends Request {
         @com.aliyun.core.annotation.NameInMap("R")
         private Integer r;
 
-        private StartCloudRecordRequestTextsBoxColor(Builder builder) {
+        private ModifyViewLayoutRequestTextsFontColor(Builder builder) {
             this.b = builder.b;
             this.g = builder.g;
             this.r = builder.r;
@@ -3657,7 +2345,7 @@ public class StartCloudRecordRequest extends Request {
             return new Builder();
         }
 
-        public static StartCloudRecordRequestTextsBoxColor create() {
+        public static ModifyViewLayoutRequestTextsFontColor create() {
             return builder().build();
         }
 
@@ -3690,14 +2378,17 @@ public class StartCloudRecordRequest extends Request {
             private Builder() {
             } 
 
-            private Builder(StartCloudRecordRequestTextsBoxColor model) {
+            private Builder(ModifyViewLayoutRequestTextsFontColor model) {
                 this.b = model.b;
                 this.g = model.g;
                 this.r = model.r;
             } 
 
             /**
-             * B.
+             * <p>B。</p>
+             * 
+             * <strong>example:</strong>
+             * <p>255</p>
              */
             public Builder b(Integer b) {
                 this.b = b;
@@ -3705,7 +2396,10 @@ public class StartCloudRecordRequest extends Request {
             }
 
             /**
-             * G.
+             * <p>G。</p>
+             * 
+             * <strong>example:</strong>
+             * <p>255</p>
              */
             public Builder g(Integer g) {
                 this.g = g;
@@ -3713,15 +2407,18 @@ public class StartCloudRecordRequest extends Request {
             }
 
             /**
-             * R.
+             * <p>R。</p>
+             * 
+             * <strong>example:</strong>
+             * <p>255</p>
              */
             public Builder r(Integer r) {
                 this.r = r;
                 return this;
             }
 
-            public StartCloudRecordRequestTextsBoxColor build() {
-                return new StartCloudRecordRequestTextsBoxColor(this);
+            public ModifyViewLayoutRequestTextsFontColor build() {
+                return new ModifyViewLayoutRequestTextsFontColor(this);
             } 
 
         } 
@@ -3729,105 +2426,9 @@ public class StartCloudRecordRequest extends Request {
     }
     /**
      * 
-     * {@link StartCloudRecordRequest} extends {@link TeaModel}
+     * {@link ModifyViewLayoutRequest} extends {@link TeaModel}
      *
-     * <p>StartCloudRecordRequest</p>
-     */
-    public static class StartCloudRecordRequestTextsFontColor extends TeaModel {
-        @com.aliyun.core.annotation.NameInMap("B")
-        private Integer b;
-
-        @com.aliyun.core.annotation.NameInMap("G")
-        private Integer g;
-
-        @com.aliyun.core.annotation.NameInMap("R")
-        private Integer r;
-
-        private StartCloudRecordRequestTextsFontColor(Builder builder) {
-            this.b = builder.b;
-            this.g = builder.g;
-            this.r = builder.r;
-        }
-
-        public static Builder builder() {
-            return new Builder();
-        }
-
-        public static StartCloudRecordRequestTextsFontColor create() {
-            return builder().build();
-        }
-
-        /**
-         * @return b
-         */
-        public Integer getB() {
-            return this.b;
-        }
-
-        /**
-         * @return g
-         */
-        public Integer getG() {
-            return this.g;
-        }
-
-        /**
-         * @return r
-         */
-        public Integer getR() {
-            return this.r;
-        }
-
-        public static final class Builder {
-            private Integer b; 
-            private Integer g; 
-            private Integer r; 
-
-            private Builder() {
-            } 
-
-            private Builder(StartCloudRecordRequestTextsFontColor model) {
-                this.b = model.b;
-                this.g = model.g;
-                this.r = model.r;
-            } 
-
-            /**
-             * B.
-             */
-            public Builder b(Integer b) {
-                this.b = b;
-                return this;
-            }
-
-            /**
-             * G.
-             */
-            public Builder g(Integer g) {
-                this.g = g;
-                return this;
-            }
-
-            /**
-             * R.
-             */
-            public Builder r(Integer r) {
-                this.r = r;
-                return this;
-            }
-
-            public StartCloudRecordRequestTextsFontColor build() {
-                return new StartCloudRecordRequestTextsFontColor(this);
-            } 
-
-        } 
-
-    }
-    /**
-     * 
-     * {@link StartCloudRecordRequest} extends {@link TeaModel}
-     *
-     * <p>StartCloudRecordRequest</p>
+     * <p>ModifyViewLayoutRequest</p>
      */
     public static class Texts extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Alpha")
@@ -3840,13 +2441,13 @@ public class StartCloudRecordRequest extends Request {
         private Integer boxBorderw;
 
         @com.aliyun.core.annotation.NameInMap("BoxColor")
-        private StartCloudRecordRequestTextsBoxColor boxColor;
+        private ModifyViewLayoutRequestTextsBoxColor boxColor;
 
         @com.aliyun.core.annotation.NameInMap("Font")
         private Integer font;
 
         @com.aliyun.core.annotation.NameInMap("FontColor")
-        private StartCloudRecordRequestTextsFontColor fontColor;
+        private ModifyViewLayoutRequestTextsFontColor fontColor;
 
         @com.aliyun.core.annotation.NameInMap("FontSize")
         private Integer fontSize;
@@ -3858,7 +2459,7 @@ public class StartCloudRecordRequest extends Request {
         private Integer layer;
 
         @com.aliyun.core.annotation.NameInMap("Texture")
-        @com.aliyun.core.annotation.Validation(required = true, maxLength = 128, minLength = 1)
+        @com.aliyun.core.annotation.Validation(required = true)
         private String texture;
 
         @com.aliyun.core.annotation.NameInMap("X")
@@ -3916,7 +2517,7 @@ public class StartCloudRecordRequest extends Request {
         /**
          * @return boxColor
          */
-        public StartCloudRecordRequestTextsBoxColor getBoxColor() {
+        public ModifyViewLayoutRequestTextsBoxColor getBoxColor() {
             return this.boxColor;
         }
 
@@ -3930,7 +2531,7 @@ public class StartCloudRecordRequest extends Request {
         /**
          * @return fontColor
          */
-        public StartCloudRecordRequestTextsFontColor getFontColor() {
+        public ModifyViewLayoutRequestTextsFontColor getFontColor() {
             return this.fontColor;
         }
 
@@ -3980,9 +2581,9 @@ public class StartCloudRecordRequest extends Request {
             private Double alpha; 
             private Double boxAlpha; 
             private Integer boxBorderw; 
-            private StartCloudRecordRequestTextsBoxColor boxColor; 
+            private ModifyViewLayoutRequestTextsBoxColor boxColor; 
             private Integer font; 
-            private StartCloudRecordRequestTextsFontColor fontColor; 
+            private ModifyViewLayoutRequestTextsFontColor fontColor; 
             private Integer fontSize; 
             private Boolean hasBox; 
             private Integer layer; 
@@ -4035,7 +2636,7 @@ public class StartCloudRecordRequest extends Request {
             /**
              * BoxColor.
              */
-            public Builder boxColor(StartCloudRecordRequestTextsBoxColor boxColor) {
+            public Builder boxColor(ModifyViewLayoutRequestTextsBoxColor boxColor) {
                 this.boxColor = boxColor;
                 return this;
             }
@@ -4051,7 +2652,7 @@ public class StartCloudRecordRequest extends Request {
             /**
              * FontColor.
              */
-            public Builder fontColor(StartCloudRecordRequestTextsFontColor fontColor) {
+            public Builder fontColor(ModifyViewLayoutRequestTextsFontColor fontColor) {
                 this.fontColor = fontColor;
                 return this;
             }
