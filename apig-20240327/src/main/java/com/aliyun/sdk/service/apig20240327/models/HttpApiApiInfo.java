@@ -17,6 +17,9 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>HttpApiApiInfo</p>
  */
 public class HttpApiApiInfo extends TeaModel {
+    @com.aliyun.core.annotation.NameInMap("agentProtocols")
+    private java.util.List<String> agentProtocols;
+
     @com.aliyun.core.annotation.NameInMap("aiProtocols")
     private java.util.List<String> aiProtocols;
 
@@ -69,6 +72,7 @@ public class HttpApiApiInfo extends TeaModel {
     private HttpApiVersionInfo versionInfo;
 
     private HttpApiApiInfo(Builder builder) {
+        this.agentProtocols = builder.agentProtocols;
         this.aiProtocols = builder.aiProtocols;
         this.authConfig = builder.authConfig;
         this.basePath = builder.basePath;
@@ -98,6 +102,13 @@ public class HttpApiApiInfo extends TeaModel {
 
     public Builder toBuilder() {
         return new Builder(this);
+    }
+
+    /**
+     * @return agentProtocols
+     */
+    public java.util.List<String> getAgentProtocols() {
+        return this.agentProtocols;
     }
 
     /**
@@ -220,6 +231,7 @@ public class HttpApiApiInfo extends TeaModel {
     }
 
     public static final class Builder {
+        private java.util.List<String> agentProtocols; 
         private java.util.List<String> aiProtocols; 
         private AuthConfig authConfig; 
         private String basePath; 
@@ -242,6 +254,7 @@ public class HttpApiApiInfo extends TeaModel {
         } 
 
         private Builder(HttpApiApiInfo model) {
+            this.agentProtocols = model.agentProtocols;
             this.aiProtocols = model.aiProtocols;
             this.authConfig = model.authConfig;
             this.basePath = model.basePath;
@@ -260,6 +273,14 @@ public class HttpApiApiInfo extends TeaModel {
             this.type = model.type;
             this.versionInfo = model.versionInfo;
         } 
+
+        /**
+         * agentProtocols.
+         */
+        public Builder agentProtocols(java.util.List<String> agentProtocols) {
+            this.agentProtocols = agentProtocols;
+            return this;
+        }
 
         /**
          * aiProtocols.

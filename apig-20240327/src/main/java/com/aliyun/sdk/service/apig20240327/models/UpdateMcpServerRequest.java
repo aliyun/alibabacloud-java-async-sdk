@@ -30,6 +30,10 @@ public class UpdateMcpServerRequest extends Request {
     private BackendConfig backendConfig;
 
     @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("createFromType")
+    private String createFromType;
+
+    @com.aliyun.core.annotation.Body
     @com.aliyun.core.annotation.NameInMap("description")
     private String description;
 
@@ -64,6 +68,7 @@ public class UpdateMcpServerRequest extends Request {
         this.mcpServerId = builder.mcpServerId;
         this.assembledSources = builder.assembledSources;
         this.backendConfig = builder.backendConfig;
+        this.createFromType = builder.createFromType;
         this.description = builder.description;
         this.domainIds = builder.domainIds;
         this.exposedUriPath = builder.exposedUriPath;
@@ -105,6 +110,13 @@ public class UpdateMcpServerRequest extends Request {
      */
     public BackendConfig getBackendConfig() {
         return this.backendConfig;
+    }
+
+    /**
+     * @return createFromType
+     */
+    public String getCreateFromType() {
+        return this.createFromType;
     }
 
     /**
@@ -160,6 +172,7 @@ public class UpdateMcpServerRequest extends Request {
         private String mcpServerId; 
         private java.util.List<AssembledSources> assembledSources; 
         private BackendConfig backendConfig; 
+        private String createFromType; 
         private String description; 
         private java.util.List<String> domainIds; 
         private String exposedUriPath; 
@@ -177,6 +190,7 @@ public class UpdateMcpServerRequest extends Request {
             this.mcpServerId = request.mcpServerId;
             this.assembledSources = request.assembledSources;
             this.backendConfig = request.backendConfig;
+            this.createFromType = request.createFromType;
             this.description = request.description;
             this.domainIds = request.domainIds;
             this.exposedUriPath = request.exposedUriPath;
@@ -213,6 +227,15 @@ public class UpdateMcpServerRequest extends Request {
         public Builder backendConfig(BackendConfig backendConfig) {
             this.putBodyParameter("backendConfig", backendConfig);
             this.backendConfig = backendConfig;
+            return this;
+        }
+
+        /**
+         * createFromType.
+         */
+        public Builder createFromType(String createFromType) {
+            this.putBodyParameter("createFromType", createFromType);
+            this.createFromType = createFromType;
             return this;
         }
 
