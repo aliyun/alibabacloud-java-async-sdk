@@ -243,6 +243,9 @@ public class ListMaliciousFileWhitelistConfigsResponseBody extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Operator")
         private String operator;
 
+        @com.aliyun.core.annotation.NameInMap("Remark")
+        private String remark;
+
         @com.aliyun.core.annotation.NameInMap("Source")
         private String source;
 
@@ -261,6 +264,7 @@ public class ListMaliciousFileWhitelistConfigsResponseBody extends TeaModel {
             this.gmtModified = builder.gmtModified;
             this.id = builder.id;
             this.operator = builder.operator;
+            this.remark = builder.remark;
             this.source = builder.source;
             this.targetType = builder.targetType;
             this.targetValue = builder.targetValue;
@@ -331,6 +335,13 @@ public class ListMaliciousFileWhitelistConfigsResponseBody extends TeaModel {
         }
 
         /**
+         * @return remark
+         */
+        public String getRemark() {
+            return this.remark;
+        }
+
+        /**
          * @return source
          */
         public String getSource() {
@@ -360,6 +371,7 @@ public class ListMaliciousFileWhitelistConfigsResponseBody extends TeaModel {
             private String gmtModified; 
             private Long id; 
             private String operator; 
+            private String remark; 
             private String source; 
             private String targetType; 
             private String targetValue; 
@@ -376,6 +388,7 @@ public class ListMaliciousFileWhitelistConfigsResponseBody extends TeaModel {
                 this.gmtModified = model.gmtModified;
                 this.id = model.id;
                 this.operator = model.operator;
+                this.remark = model.remark;
                 this.source = model.source;
                 this.targetType = model.targetType;
                 this.targetValue = model.targetValue;
@@ -475,6 +488,14 @@ public class ListMaliciousFileWhitelistConfigsResponseBody extends TeaModel {
              */
             public Builder operator(String operator) {
                 this.operator = operator;
+                return this;
+            }
+
+            /**
+             * Remark.
+             */
+            public Builder remark(String remark) {
+                this.remark = remark;
                 return this;
             }
 

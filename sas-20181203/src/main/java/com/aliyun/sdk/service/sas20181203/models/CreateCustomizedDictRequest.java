@@ -103,7 +103,10 @@ public class CreateCustomizedDictRequest extends Request {
         }
 
         /**
-         * Override.
+         * <p>Whether to overwrite. Value range: - true: Overwrite. - false: Do not overwrite.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>false</p>
          */
         public Builder override(Boolean override) {
             this.putQueryParameter("Override", override);

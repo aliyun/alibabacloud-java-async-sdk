@@ -26,6 +26,10 @@ public class ListMaliciousFileWhitelistConfigsRequest extends Request {
     private String eventName;
 
     @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("IdList")
+    private Long idList;
+
+    @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("Lang")
     private String lang;
 
@@ -41,6 +45,7 @@ public class ListMaliciousFileWhitelistConfigsRequest extends Request {
         super(builder);
         this.currentPage = builder.currentPage;
         this.eventName = builder.eventName;
+        this.idList = builder.idList;
         this.lang = builder.lang;
         this.pageSize = builder.pageSize;
         this.source = builder.source;
@@ -74,6 +79,13 @@ public class ListMaliciousFileWhitelistConfigsRequest extends Request {
     }
 
     /**
+     * @return idList
+     */
+    public Long getIdList() {
+        return this.idList;
+    }
+
+    /**
      * @return lang
      */
     public String getLang() {
@@ -97,6 +109,7 @@ public class ListMaliciousFileWhitelistConfigsRequest extends Request {
     public static final class Builder extends Request.Builder<ListMaliciousFileWhitelistConfigsRequest, Builder> {
         private Integer currentPage; 
         private String eventName; 
+        private Long idList; 
         private String lang; 
         private Integer pageSize; 
         private String source; 
@@ -109,6 +122,7 @@ public class ListMaliciousFileWhitelistConfigsRequest extends Request {
             super(request);
             this.currentPage = request.currentPage;
             this.eventName = request.eventName;
+            this.idList = request.idList;
             this.lang = request.lang;
             this.pageSize = request.pageSize;
             this.source = request.source;
@@ -138,6 +152,15 @@ public class ListMaliciousFileWhitelistConfigsRequest extends Request {
         public Builder eventName(String eventName) {
             this.putQueryParameter("EventName", eventName);
             this.eventName = eventName;
+            return this;
+        }
+
+        /**
+         * IdList.
+         */
+        public Builder idList(Long idList) {
+            this.putQueryParameter("IdList", idList);
+            this.idList = idList;
             return this;
         }
 

@@ -546,7 +546,16 @@ public class DescribeStrategyResponseBody extends TeaModel {
             }
 
             /**
-             * ExecutionType.
+             * <p>The triggering method of baseline scanning. Value:</p>
+             * <ul>
+             * <li><p><strong>Schedule</strong> : Periodic configuration of task triggers</p>
+             * </li>
+             * <li><p><strong>Manual</strong> : Manually triggered</p>
+             * </li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>Manual</p>
              */
             public Builder executionType(String executionType) {
                 this.executionType = executionType;

@@ -34,6 +34,10 @@ public class CreateMaliciousFileWhitelistConfigRequest extends Request {
     private String operator;
 
     @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Remark")
+    private String remark;
+
+    @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("Source")
     private String source;
 
@@ -51,6 +55,7 @@ public class CreateMaliciousFileWhitelistConfigRequest extends Request {
         this.field = builder.field;
         this.fieldValue = builder.fieldValue;
         this.operator = builder.operator;
+        this.remark = builder.remark;
         this.source = builder.source;
         this.targetType = builder.targetType;
         this.targetValue = builder.targetValue;
@@ -98,6 +103,13 @@ public class CreateMaliciousFileWhitelistConfigRequest extends Request {
     }
 
     /**
+     * @return remark
+     */
+    public String getRemark() {
+        return this.remark;
+    }
+
+    /**
      * @return source
      */
     public String getSource() {
@@ -123,6 +135,7 @@ public class CreateMaliciousFileWhitelistConfigRequest extends Request {
         private String field; 
         private String fieldValue; 
         private String operator; 
+        private String remark; 
         private String source; 
         private String targetType; 
         private String targetValue; 
@@ -137,6 +150,7 @@ public class CreateMaliciousFileWhitelistConfigRequest extends Request {
             this.field = request.field;
             this.fieldValue = request.fieldValue;
             this.operator = request.operator;
+            this.remark = request.remark;
             this.source = request.source;
             this.targetType = request.targetType;
             this.targetValue = request.targetValue;
@@ -193,6 +207,15 @@ public class CreateMaliciousFileWhitelistConfigRequest extends Request {
         public Builder operator(String operator) {
             this.putQueryParameter("Operator", operator);
             this.operator = operator;
+            return this;
+        }
+
+        /**
+         * Remark.
+         */
+        public Builder remark(String remark) {
+            this.putQueryParameter("Remark", remark);
+            this.remark = remark;
             return this;
         }
 

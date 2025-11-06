@@ -257,7 +257,10 @@ public class AddCloudVendorAccountAKRequest extends Request {
         }
 
         /**
-         * CtdrCloudUserId.
+         * <p>Account ID. &gt; The account ID of the cloud provider, required when permissions include threat analysis and response.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>azure_demo_1</p>
          */
         public Builder ctdrCloudUserId(String ctdrCloudUserId) {
             this.putQueryParameter("CtdrCloudUserId", ctdrCloudUserId);
@@ -282,7 +285,13 @@ public class AddCloudVendorAccountAKRequest extends Request {
         }
 
         /**
-         * ExtendInfo.
+         * <p>Extended information.</p>
+         * <blockquote>
+         * <p>Used to record extended information from different vendors. &gt; For Google Cloud, which is accessed via a service account, ExtendInfo stores the service key file in JSON format, excluding the private_key_id and zprivate_key fields. The file includes the following fields: type, project_id, client_email, client_id, auth_uri, token_uri, auth_provider_x509_cert_url, client_x509_cert_url, universe_domain.</p>
+         * </blockquote>
+         * 
+         * <strong>example:</strong>
+         * <p>{&quot;product&quot;:&quot;webFirewall&quot;,&quot;remark&quot;:&quot;remark&quot;}</p>
          */
         public Builder extendInfo(String extendInfo) {
             this.putQueryParameter("ExtendInfo", extendInfo);

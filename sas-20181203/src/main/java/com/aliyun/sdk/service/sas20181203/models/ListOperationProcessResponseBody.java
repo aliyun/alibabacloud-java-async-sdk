@@ -422,7 +422,10 @@ public class ListOperationProcessResponseBody extends TeaModel {
             }
 
             /**
-             * DetailTaskReadyCount.
+             * <p>Number of completed subtasks</p>
+             * 
+             * <strong>example:</strong>
+             * <p>5</p>
              */
             public Builder detailTaskReadyCount(Integer detailTaskReadyCount) {
                 this.detailTaskReadyCount = detailTaskReadyCount;
@@ -430,7 +433,10 @@ public class ListOperationProcessResponseBody extends TeaModel {
             }
 
             /**
-             * DetailTaskTotalCount.
+             * <p>Total number of subtasks.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>10</p>
              */
             public Builder detailTaskTotalCount(Integer detailTaskTotalCount) {
                 this.detailTaskTotalCount = detailTaskTotalCount;
@@ -499,7 +505,13 @@ public class ListOperationProcessResponseBody extends TeaModel {
             }
 
             /**
-             * TaskSource.
+             * <p>Task source. Values: </p>
+             * <ul>
+             * <li><strong>YAO_CHI</strong>: YaoChi.</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>YAO_CHI</p>
              */
             public Builder taskSource(String taskSource) {
                 this.taskSource = taskSource;

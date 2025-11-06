@@ -82,7 +82,10 @@ public class VerifyCheckResultRequest extends Request {
         }
 
         /**
-         * TaskSource.
+         * <p>The source of task.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>YAO_CHI</p>
          */
         public Builder taskSource(String taskSource) {
             this.putQueryParameter("TaskSource", taskSource);

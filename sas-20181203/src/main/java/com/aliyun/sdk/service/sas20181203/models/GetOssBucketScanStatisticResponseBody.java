@@ -113,6 +113,15 @@ public class GetOssBucketScanStatisticResponseBody extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("NoScanBucket")
         private Integer noScanBucket;
 
+        @com.aliyun.core.annotation.NameInMap("PostPayInvokeCount")
+        private Long postPayInvokeCount;
+
+        @com.aliyun.core.annotation.NameInMap("PrePayAuthCount")
+        private Long prePayAuthCount;
+
+        @com.aliyun.core.annotation.NameInMap("PrePayInvokeCount")
+        private Long prePayInvokeCount;
+
         @com.aliyun.core.annotation.NameInMap("RemainAuth")
         private Integer remainAuth;
 
@@ -134,6 +143,9 @@ public class GetOssBucketScanStatisticResponseBody extends TeaModel {
             this.lowRisk = builder.lowRisk;
             this.mediumRisk = builder.mediumRisk;
             this.noScanBucket = builder.noScanBucket;
+            this.postPayInvokeCount = builder.postPayInvokeCount;
+            this.prePayAuthCount = builder.prePayAuthCount;
+            this.prePayInvokeCount = builder.prePayInvokeCount;
             this.remainAuth = builder.remainAuth;
             this.riskBucket = builder.riskBucket;
             this.scanObject = builder.scanObject;
@@ -185,6 +197,27 @@ public class GetOssBucketScanStatisticResponseBody extends TeaModel {
         }
 
         /**
+         * @return postPayInvokeCount
+         */
+        public Long getPostPayInvokeCount() {
+            return this.postPayInvokeCount;
+        }
+
+        /**
+         * @return prePayAuthCount
+         */
+        public Long getPrePayAuthCount() {
+            return this.prePayAuthCount;
+        }
+
+        /**
+         * @return prePayInvokeCount
+         */
+        public Long getPrePayInvokeCount() {
+            return this.prePayInvokeCount;
+        }
+
+        /**
          * @return remainAuth
          */
         public Integer getRemainAuth() {
@@ -225,6 +258,9 @@ public class GetOssBucketScanStatisticResponseBody extends TeaModel {
             private Long lowRisk; 
             private Long mediumRisk; 
             private Integer noScanBucket; 
+            private Long postPayInvokeCount; 
+            private Long prePayAuthCount; 
+            private Long prePayInvokeCount; 
             private Integer remainAuth; 
             private Integer riskBucket; 
             private Long scanObject; 
@@ -240,6 +276,9 @@ public class GetOssBucketScanStatisticResponseBody extends TeaModel {
                 this.lowRisk = model.lowRisk;
                 this.mediumRisk = model.mediumRisk;
                 this.noScanBucket = model.noScanBucket;
+                this.postPayInvokeCount = model.postPayInvokeCount;
+                this.prePayAuthCount = model.prePayAuthCount;
+                this.prePayInvokeCount = model.prePayInvokeCount;
                 this.remainAuth = model.remainAuth;
                 this.riskBucket = model.riskBucket;
                 this.scanObject = model.scanObject;
@@ -299,6 +338,30 @@ public class GetOssBucketScanStatisticResponseBody extends TeaModel {
              */
             public Builder noScanBucket(Integer noScanBucket) {
                 this.noScanBucket = noScanBucket;
+                return this;
+            }
+
+            /**
+             * PostPayInvokeCount.
+             */
+            public Builder postPayInvokeCount(Long postPayInvokeCount) {
+                this.postPayInvokeCount = postPayInvokeCount;
+                return this;
+            }
+
+            /**
+             * PrePayAuthCount.
+             */
+            public Builder prePayAuthCount(Long prePayAuthCount) {
+                this.prePayAuthCount = prePayAuthCount;
+                return this;
+            }
+
+            /**
+             * PrePayInvokeCount.
+             */
+            public Builder prePayInvokeCount(Long prePayInvokeCount) {
+                this.prePayInvokeCount = prePayInvokeCount;
                 return this;
             }
 

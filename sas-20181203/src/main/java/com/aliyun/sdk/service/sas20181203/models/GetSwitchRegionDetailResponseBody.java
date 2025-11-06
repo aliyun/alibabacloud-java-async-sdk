@@ -243,6 +243,9 @@ public class GetSwitchRegionDetailResponseBody extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("IsNoticed")
         private String isNoticed;
 
+        @com.aliyun.core.annotation.NameInMap("NeedNotice")
+        private Boolean needNotice;
+
         @com.aliyun.core.annotation.NameInMap("NeedSwitch")
         private Boolean needSwitch;
 
@@ -254,6 +257,7 @@ public class GetSwitchRegionDetailResponseBody extends TeaModel {
             this.gmtNoticed = builder.gmtNoticed;
             this.isAgree = builder.isAgree;
             this.isNoticed = builder.isNoticed;
+            this.needNotice = builder.needNotice;
             this.needSwitch = builder.needSwitch;
             this.regionStatus = builder.regionStatus;
         }
@@ -295,6 +299,13 @@ public class GetSwitchRegionDetailResponseBody extends TeaModel {
         }
 
         /**
+         * @return needNotice
+         */
+        public Boolean getNeedNotice() {
+            return this.needNotice;
+        }
+
+        /**
          * @return needSwitch
          */
         public Boolean getNeedSwitch() {
@@ -313,6 +324,7 @@ public class GetSwitchRegionDetailResponseBody extends TeaModel {
             private Long gmtNoticed; 
             private String isAgree; 
             private String isNoticed; 
+            private Boolean needNotice; 
             private Boolean needSwitch; 
             private java.util.List<RegionStatus> regionStatus; 
 
@@ -324,6 +336,7 @@ public class GetSwitchRegionDetailResponseBody extends TeaModel {
                 this.gmtNoticed = model.gmtNoticed;
                 this.isAgree = model.isAgree;
                 this.isNoticed = model.isNoticed;
+                this.needNotice = model.needNotice;
                 this.needSwitch = model.needSwitch;
                 this.regionStatus = model.regionStatus;
             } 
@@ -373,7 +386,21 @@ public class GetSwitchRegionDetailResponseBody extends TeaModel {
             }
 
             /**
-             * NeedSwitch.
+             * <p>Specifies whether to notify the account.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>true</p>
+             */
+            public Builder needNotice(Boolean needNotice) {
+                this.needNotice = needNotice;
+                return this;
+            }
+
+            /**
+             * <p>Specifies whether to switch.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>true</p>
              */
             public Builder needSwitch(Boolean needSwitch) {
                 this.needSwitch = needSwitch;

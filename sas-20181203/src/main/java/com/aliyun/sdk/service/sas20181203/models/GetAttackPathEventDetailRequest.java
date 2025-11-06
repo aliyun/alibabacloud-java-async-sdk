@@ -22,12 +22,17 @@ public class GetAttackPathEventDetailRequest extends Request {
     private Long eventId;
 
     @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("EventSource")
+    private String eventSource;
+
+    @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("Lang")
     private String lang;
 
     private GetAttackPathEventDetailRequest(Builder builder) {
         super(builder);
         this.eventId = builder.eventId;
+        this.eventSource = builder.eventSource;
         this.lang = builder.lang;
     }
 
@@ -52,6 +57,13 @@ public class GetAttackPathEventDetailRequest extends Request {
     }
 
     /**
+     * @return eventSource
+     */
+    public String getEventSource() {
+        return this.eventSource;
+    }
+
+    /**
      * @return lang
      */
     public String getLang() {
@@ -60,6 +72,7 @@ public class GetAttackPathEventDetailRequest extends Request {
 
     public static final class Builder extends Request.Builder<GetAttackPathEventDetailRequest, Builder> {
         private Long eventId; 
+        private String eventSource; 
         private String lang; 
 
         private Builder() {
@@ -69,6 +82,7 @@ public class GetAttackPathEventDetailRequest extends Request {
         private Builder(GetAttackPathEventDetailRequest request) {
             super(request);
             this.eventId = request.eventId;
+            this.eventSource = request.eventSource;
             this.lang = request.lang;
         } 
 
@@ -84,6 +98,15 @@ public class GetAttackPathEventDetailRequest extends Request {
         public Builder eventId(Long eventId) {
             this.putQueryParameter("EventId", eventId);
             this.eventId = eventId;
+            return this;
+        }
+
+        /**
+         * EventSource.
+         */
+        public Builder eventSource(String eventSource) {
+            this.putQueryParameter("EventSource", eventSource);
+            this.eventSource = eventSource;
             return this;
         }
 

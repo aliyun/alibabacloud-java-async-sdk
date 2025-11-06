@@ -145,7 +145,10 @@ public class UpdatePostPaidBindRelRequest extends Request {
         }
 
         /**
-         * UpdateIfNecessary.
+         * <p>Whether to force upgrade the version.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>false</p>
          */
         public Builder updateIfNecessary(Boolean updateIfNecessary) {
             this.putQueryParameter("UpdateIfNecessary", updateIfNecessary);

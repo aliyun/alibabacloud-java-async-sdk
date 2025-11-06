@@ -59,7 +59,7 @@ public class GetDockerhubImageRiskStatisticRequest extends Request {
         } 
 
         /**
-         * <p>The types of image risks to be queried.</p>
+         * <p>The risk types that you want to query.</p>
          */
         public Builder types(java.util.List<String> types) {
             this.putQueryParameter("Types", types);

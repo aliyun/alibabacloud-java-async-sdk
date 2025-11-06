@@ -78,7 +78,7 @@ public class DescribeSupportRegionResponseBody extends TeaModel {
         }
 
         /**
-         * SupportRegion.
+         * <p>List of supported regions</p>
          */
         public Builder supportRegion(java.util.List<String> supportRegion) {
             this.supportRegion = supportRegion;

@@ -22,6 +22,10 @@ public class GrantSwitchAgreementRequest extends Request {
     private Boolean isAgree;
 
     @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("IsConfirmed")
+    private Boolean isConfirmed;
+
+    @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("IsImmediate")
     private Boolean isImmediate;
 
@@ -36,6 +40,7 @@ public class GrantSwitchAgreementRequest extends Request {
     private GrantSwitchAgreementRequest(Builder builder) {
         super(builder);
         this.isAgree = builder.isAgree;
+        this.isConfirmed = builder.isConfirmed;
         this.isImmediate = builder.isImmediate;
         this.lang = builder.lang;
         this.type = builder.type;
@@ -62,6 +67,13 @@ public class GrantSwitchAgreementRequest extends Request {
     }
 
     /**
+     * @return isConfirmed
+     */
+    public Boolean getIsConfirmed() {
+        return this.isConfirmed;
+    }
+
+    /**
      * @return isImmediate
      */
     public Boolean getIsImmediate() {
@@ -84,6 +96,7 @@ public class GrantSwitchAgreementRequest extends Request {
 
     public static final class Builder extends Request.Builder<GrantSwitchAgreementRequest, Builder> {
         private Boolean isAgree; 
+        private Boolean isConfirmed; 
         private Boolean isImmediate; 
         private String lang; 
         private String type; 
@@ -95,6 +108,7 @@ public class GrantSwitchAgreementRequest extends Request {
         private Builder(GrantSwitchAgreementRequest request) {
             super(request);
             this.isAgree = request.isAgree;
+            this.isConfirmed = request.isConfirmed;
             this.isImmediate = request.isImmediate;
             this.lang = request.lang;
             this.type = request.type;
@@ -109,6 +123,15 @@ public class GrantSwitchAgreementRequest extends Request {
         public Builder isAgree(Boolean isAgree) {
             this.putQueryParameter("IsAgree", isAgree);
             this.isAgree = isAgree;
+            return this;
+        }
+
+        /**
+         * IsConfirmed.
+         */
+        public Builder isConfirmed(Boolean isConfirmed) {
+            this.putQueryParameter("IsConfirmed", isConfirmed);
+            this.isConfirmed = isConfirmed;
             return this;
         }
 

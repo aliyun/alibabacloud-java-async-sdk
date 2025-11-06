@@ -269,6 +269,9 @@ public class DescribeExposedStatisticsDetailResponseBody extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("ExposureTypeInstanceName")
         private String exposureTypeInstanceName;
 
+        @com.aliyun.core.annotation.NameInMap("ForwardPort")
+        private String forwardPort;
+
         @com.aliyun.core.annotation.NameInMap("RegionId")
         private String regionId;
 
@@ -280,6 +283,7 @@ public class DescribeExposedStatisticsDetailResponseBody extends TeaModel {
             this.exposureType = builder.exposureType;
             this.exposureTypeId = builder.exposureTypeId;
             this.exposureTypeInstanceName = builder.exposureTypeInstanceName;
+            this.forwardPort = builder.forwardPort;
             this.regionId = builder.regionId;
         }
 
@@ -341,6 +345,13 @@ public class DescribeExposedStatisticsDetailResponseBody extends TeaModel {
         }
 
         /**
+         * @return forwardPort
+         */
+        public String getForwardPort() {
+            return this.forwardPort;
+        }
+
+        /**
          * @return regionId
          */
         public String getRegionId() {
@@ -355,6 +366,7 @@ public class DescribeExposedStatisticsDetailResponseBody extends TeaModel {
             private String exposureType; 
             private String exposureTypeId; 
             private String exposureTypeInstanceName; 
+            private String forwardPort; 
             private String regionId; 
 
             private Builder() {
@@ -368,6 +380,7 @@ public class DescribeExposedStatisticsDetailResponseBody extends TeaModel {
                 this.exposureType = model.exposureType;
                 this.exposureTypeId = model.exposureTypeId;
                 this.exposureTypeInstanceName = model.exposureTypeInstanceName;
+                this.forwardPort = model.forwardPort;
                 this.regionId = model.regionId;
             } 
 
@@ -457,6 +470,14 @@ public class DescribeExposedStatisticsDetailResponseBody extends TeaModel {
              */
             public Builder exposureTypeInstanceName(String exposureTypeInstanceName) {
                 this.exposureTypeInstanceName = exposureTypeInstanceName;
+                return this;
+            }
+
+            /**
+             * ForwardPort.
+             */
+            public Builder forwardPort(String forwardPort) {
+                this.forwardPort = forwardPort;
                 return this;
             }
 

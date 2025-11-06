@@ -497,7 +497,10 @@ public class DescribePropertyScaProcessDetailResponseBody extends TeaModel {
             }
 
             /**
-             * Version.
+             * <p>The version of web application service.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>3.10.0</p>
              */
             public Builder version(String version) {
                 this.version = version;

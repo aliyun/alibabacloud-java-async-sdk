@@ -288,7 +288,13 @@ public class DescribeSuspEventDetailResponseBody extends TeaModel {
         } 
 
         /**
-         * AlarmUniqueInfo.
+         * <p>The unique ID of the alarm event.</p>
+         * <blockquote>
+         * <p>If querying the anomaly information of a single alarm event, you need to provide the unique ID of the alarm event, which can be obtained by calling the <a href="~~DescribeSuspEvents~~">DescribeSuspEvents</a> interface.</p>
+         * </blockquote>
+         * 
+         * <strong>example:</strong>
+         * <p>8df914418f4211fb****</p>
          */
         public Builder alarmUniqueInfo(String alarmUniqueInfo) {
             this.alarmUniqueInfo = alarmUniqueInfo;

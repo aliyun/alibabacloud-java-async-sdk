@@ -548,7 +548,10 @@ public class DescribePropertyProcDetailResponseBody extends TeaModel {
             }
 
             /**
-             * FileHash.
+             * <p>Process file hash information.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>935c1861df1f4018d698e8b65abfa02d7e9037d8f68ca3c2065b6ca165d4****</p>
              */
             public Builder fileHash(String fileHash) {
                 this.fileHash = fileHash;

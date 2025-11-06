@@ -223,7 +223,10 @@ public class DescribePropertyCountResponseBody extends TeaModel {
         } 
 
         /**
-         * AgentlessLlmService.
+         * <p>The number of AI services.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>3</p>
          */
         public Builder agentlessLlmService(Integer agentlessLlmService) {
             this.agentlessLlmService = agentlessLlmService;
@@ -231,7 +234,10 @@ public class DescribePropertyCountResponseBody extends TeaModel {
         }
 
         /**
-         * AgentlessScaAiComponent.
+         * <p>The number of AI tools.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>13</p>
          */
         public Builder agentlessScaAiComponent(Integer agentlessScaAiComponent) {
             this.agentlessScaAiComponent = agentlessScaAiComponent;

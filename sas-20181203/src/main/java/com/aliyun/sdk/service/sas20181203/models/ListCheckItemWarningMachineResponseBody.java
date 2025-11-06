@@ -283,6 +283,9 @@ public class ListCheckItemWarningMachineResponseBody extends TeaModel {
      * <p>ListCheckItemWarningMachineResponseBody</p>
      */
     public static class List extends TeaModel {
+        @com.aliyun.core.annotation.NameInMap("AssetType")
+        private String assetType;
+
         @com.aliyun.core.annotation.NameInMap("AuthVersion")
         private Integer authVersion;
 
@@ -348,6 +351,7 @@ public class ListCheckItemWarningMachineResponseBody extends TeaModel {
         private java.util.List<WarningRiskList> warningRiskList;
 
         private List(Builder builder) {
+            this.assetType = builder.assetType;
             this.authVersion = builder.authVersion;
             this.bind = builder.bind;
             this.containerId = builder.containerId;
@@ -377,6 +381,13 @@ public class ListCheckItemWarningMachineResponseBody extends TeaModel {
 
         public static List create() {
             return builder().build();
+        }
+
+        /**
+         * @return assetType
+         */
+        public String getAssetType() {
+            return this.assetType;
         }
 
         /**
@@ -527,6 +538,7 @@ public class ListCheckItemWarningMachineResponseBody extends TeaModel {
         }
 
         public static final class Builder {
+            private String assetType; 
             private Integer authVersion; 
             private Boolean bind; 
             private String containerId; 
@@ -553,6 +565,7 @@ public class ListCheckItemWarningMachineResponseBody extends TeaModel {
             } 
 
             private Builder(List model) {
+                this.assetType = model.assetType;
                 this.authVersion = model.authVersion;
                 this.bind = model.bind;
                 this.containerId = model.containerId;
@@ -575,6 +588,14 @@ public class ListCheckItemWarningMachineResponseBody extends TeaModel {
                 this.uuid = model.uuid;
                 this.warningRiskList = model.warningRiskList;
             } 
+
+            /**
+             * AssetType.
+             */
+            public Builder assetType(String assetType) {
+                this.assetType = assetType;
+                return this;
+            }
 
             /**
              * <p>The edition of Security Center that is authorized to protect the asset. Valid values:</p>

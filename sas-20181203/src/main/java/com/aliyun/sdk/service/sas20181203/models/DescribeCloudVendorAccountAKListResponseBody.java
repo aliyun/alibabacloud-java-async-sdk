@@ -587,7 +587,10 @@ public class DescribeCloudVendorAccountAKListResponseBody extends TeaModel {
             }
 
             /**
-             * CtdrCloudUserId.
+             * <p>The Account ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>azure_demo_1</p>
              */
             public Builder ctdrCloudUserId(String ctdrCloudUserId) {
                 this.ctdrCloudUserId = ctdrCloudUserId;
@@ -595,7 +598,10 @@ public class DescribeCloudVendorAccountAKListResponseBody extends TeaModel {
             }
 
             /**
-             * ExtendInfo.
+             * <p>The extended information of the module.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>{&quot;product&quot;:&quot;webFirewall&quot;,&quot;remark&quot;:&quot;remark&quot;}</p>
              */
             public Builder extendInfo(String extendInfo) {
                 this.extendInfo = extendInfo;
@@ -685,7 +691,10 @@ public class DescribeCloudVendorAccountAKListResponseBody extends TeaModel {
             }
 
             /**
-             * VendorUid.
+             * <p>Account ID of the multi-cloud instance.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>123</p>
              */
             public Builder vendorUid(String vendorUid) {
                 this.vendorUid = vendorUid;
@@ -693,7 +702,10 @@ public class DescribeCloudVendorAccountAKListResponseBody extends TeaModel {
             }
 
             /**
-             * VendorUserName.
+             * <p>Account name of the multi-cloud instance.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>VendorUserName</p>
              */
             public Builder vendorUserName(String vendorUserName) {
                 this.vendorUserName = vendorUserName;

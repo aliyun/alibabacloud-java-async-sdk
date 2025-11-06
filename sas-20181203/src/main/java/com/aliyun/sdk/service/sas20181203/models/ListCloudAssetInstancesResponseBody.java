@@ -696,7 +696,10 @@ public class ListCloudAssetInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * VendorUid.
+             * <p>The account ID of the multi-cloud instance.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>123xxx</p>
              */
             public Builder vendorUid(String vendorUid) {
                 this.vendorUid = vendorUid;
@@ -704,7 +707,10 @@ public class ListCloudAssetInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * VendorUserName.
+             * <p>The user name of the multi-cloud instance.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>testxxx</p>
              */
             public Builder vendorUserName(String vendorUserName) {
                 this.vendorUserName = vendorUserName;

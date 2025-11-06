@@ -480,6 +480,9 @@ public class GetAttackPathEventDetailResponseBody extends TeaModel {
      * <p>GetAttackPathEventDetailResponseBody</p>
      */
     public static class PathEventNodeList extends TeaModel {
+        @com.aliyun.core.annotation.NameInMap("AiAssetFlag")
+        private Integer aiAssetFlag;
+
         @com.aliyun.core.annotation.NameInMap("ElementType")
         private String elementType;
 
@@ -499,6 +502,7 @@ public class GetAttackPathEventDetailResponseBody extends TeaModel {
         private Integer sensitiveAssetFlag;
 
         private PathEventNodeList(Builder builder) {
+            this.aiAssetFlag = builder.aiAssetFlag;
             this.elementType = builder.elementType;
             this.nodeDetail = builder.nodeDetail;
             this.nodeName = builder.nodeName;
@@ -513,6 +517,13 @@ public class GetAttackPathEventDetailResponseBody extends TeaModel {
 
         public static PathEventNodeList create() {
             return builder().build();
+        }
+
+        /**
+         * @return aiAssetFlag
+         */
+        public Integer getAiAssetFlag() {
+            return this.aiAssetFlag;
         }
 
         /**
@@ -558,6 +569,7 @@ public class GetAttackPathEventDetailResponseBody extends TeaModel {
         }
 
         public static final class Builder {
+            private Integer aiAssetFlag; 
             private String elementType; 
             private String nodeDetail; 
             private String nodeName; 
@@ -569,6 +581,7 @@ public class GetAttackPathEventDetailResponseBody extends TeaModel {
             } 
 
             private Builder(PathEventNodeList model) {
+                this.aiAssetFlag = model.aiAssetFlag;
                 this.elementType = model.elementType;
                 this.nodeDetail = model.nodeDetail;
                 this.nodeName = model.nodeName;
@@ -576,6 +589,14 @@ public class GetAttackPathEventDetailResponseBody extends TeaModel {
                 this.nodeUuid = model.nodeUuid;
                 this.sensitiveAssetFlag = model.sensitiveAssetFlag;
             } 
+
+            /**
+             * AiAssetFlag.
+             */
+            public Builder aiAssetFlag(Integer aiAssetFlag) {
+                this.aiAssetFlag = aiAssetFlag;
+                return this;
+            }
 
             /**
              * <p>Node element type.</p>

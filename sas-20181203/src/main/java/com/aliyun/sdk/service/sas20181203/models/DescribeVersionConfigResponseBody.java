@@ -655,7 +655,10 @@ public class DescribeVersionConfigResponseBody extends TeaModel {
         }
 
         /**
-         * AntiRansomwareCapacity.
+         * <p>防勒索备份容量，单位GB。</p>
+         * 
+         * <strong>example:</strong>
+         * <p>160</p>
          */
         public Builder antiRansomwareCapacity(Integer antiRansomwareCapacity) {
             this.antiRansomwareCapacity = antiRansomwareCapacity;
@@ -773,7 +776,10 @@ public class DescribeVersionConfigResponseBody extends TeaModel {
         }
 
         /**
-         * InstanceBuyType.
+         * <p>Instance purchase type. Values: - <strong>0</strong>: Self-purchased - <strong>1</strong>: Multi-account allocation</p>
+         * 
+         * <strong>example:</strong>
+         * <p>0</p>
          */
         public Builder instanceBuyType(Integer instanceBuyType) {
             this.instanceBuyType = instanceBuyType;
@@ -914,7 +920,10 @@ public class DescribeVersionConfigResponseBody extends TeaModel {
         }
 
         /**
-         * MultiVersion.
+         * <p>Usage of multiple version numbers and license counts</p>
+         * 
+         * <strong>example:</strong>
+         * <p>null</p>
          */
         public Builder multiVersion(String multiVersion) {
             this.multiVersion = multiVersion;

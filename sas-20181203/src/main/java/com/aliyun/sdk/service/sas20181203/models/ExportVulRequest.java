@@ -453,7 +453,16 @@ public class ExportVulRequest extends Request {
         }
 
         /**
-         * RaspDefend.
+         * <p>Indicates whether the application protection feature is supported. Valid values:</p>
+         * <ul>
+         * <li><p><strong>0</strong>: no.</p>
+         * </li>
+         * <li><p><strong>1</strong>: yes.</p>
+         * </li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>0</p>
          */
         public Builder raspDefend(Integer raspDefend) {
             this.putQueryParameter("RaspDefend", raspDefend);

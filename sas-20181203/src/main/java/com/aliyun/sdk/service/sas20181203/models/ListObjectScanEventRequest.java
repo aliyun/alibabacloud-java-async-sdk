@@ -18,6 +18,10 @@ import com.aliyun.sdk.gateway.pop.models.*;
  */
 public class ListObjectScanEventRequest extends Request {
     @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("BatchType")
+    private String batchType;
+
+    @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("BucketName")
     private String bucketName;
 
@@ -25,6 +29,10 @@ public class ListObjectScanEventRequest extends Request {
     @com.aliyun.core.annotation.NameInMap("CurrentPage")
     @com.aliyun.core.annotation.Validation(required = true)
     private Integer currentPage;
+
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("EventId")
+    private Long eventId;
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("EventName")
@@ -60,6 +68,10 @@ public class ListObjectScanEventRequest extends Request {
     private String source;
 
     @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Status")
+    private Integer status;
+
+    @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("TimeEnd")
     private Long timeEnd;
 
@@ -69,8 +81,10 @@ public class ListObjectScanEventRequest extends Request {
 
     private ListObjectScanEventRequest(Builder builder) {
         super(builder);
+        this.batchType = builder.batchType;
         this.bucketName = builder.bucketName;
         this.currentPage = builder.currentPage;
+        this.eventId = builder.eventId;
         this.eventName = builder.eventName;
         this.lang = builder.lang;
         this.md5 = builder.md5;
@@ -79,6 +93,7 @@ public class ListObjectScanEventRequest extends Request {
         this.parentEventId = builder.parentEventId;
         this.riskLevel = builder.riskLevel;
         this.source = builder.source;
+        this.status = builder.status;
         this.timeEnd = builder.timeEnd;
         this.timeStart = builder.timeStart;
     }
@@ -97,6 +112,13 @@ public class ListObjectScanEventRequest extends Request {
     }
 
     /**
+     * @return batchType
+     */
+    public String getBatchType() {
+        return this.batchType;
+    }
+
+    /**
      * @return bucketName
      */
     public String getBucketName() {
@@ -108,6 +130,13 @@ public class ListObjectScanEventRequest extends Request {
      */
     public Integer getCurrentPage() {
         return this.currentPage;
+    }
+
+    /**
+     * @return eventId
+     */
+    public Long getEventId() {
+        return this.eventId;
     }
 
     /**
@@ -167,6 +196,13 @@ public class ListObjectScanEventRequest extends Request {
     }
 
     /**
+     * @return status
+     */
+    public Integer getStatus() {
+        return this.status;
+    }
+
+    /**
      * @return timeEnd
      */
     public Long getTimeEnd() {
@@ -181,8 +217,10 @@ public class ListObjectScanEventRequest extends Request {
     }
 
     public static final class Builder extends Request.Builder<ListObjectScanEventRequest, Builder> {
+        private String batchType; 
         private String bucketName; 
         private Integer currentPage; 
+        private Long eventId; 
         private String eventName; 
         private String lang; 
         private String md5; 
@@ -191,6 +229,7 @@ public class ListObjectScanEventRequest extends Request {
         private Long parentEventId; 
         private String riskLevel; 
         private String source; 
+        private Integer status; 
         private Long timeEnd; 
         private Long timeStart; 
 
@@ -200,8 +239,10 @@ public class ListObjectScanEventRequest extends Request {
 
         private Builder(ListObjectScanEventRequest request) {
             super(request);
+            this.batchType = request.batchType;
             this.bucketName = request.bucketName;
             this.currentPage = request.currentPage;
+            this.eventId = request.eventId;
             this.eventName = request.eventName;
             this.lang = request.lang;
             this.md5 = request.md5;
@@ -210,9 +251,19 @@ public class ListObjectScanEventRequest extends Request {
             this.parentEventId = request.parentEventId;
             this.riskLevel = request.riskLevel;
             this.source = request.source;
+            this.status = request.status;
             this.timeEnd = request.timeEnd;
             this.timeStart = request.timeStart;
         } 
+
+        /**
+         * BatchType.
+         */
+        public Builder batchType(String batchType) {
+            this.putQueryParameter("BatchType", batchType);
+            this.batchType = batchType;
+            return this;
+        }
 
         /**
          * <p>The name of the OSS bucket.</p>
@@ -236,6 +287,15 @@ public class ListObjectScanEventRequest extends Request {
         public Builder currentPage(Integer currentPage) {
             this.putQueryParameter("CurrentPage", currentPage);
             this.currentPage = currentPage;
+            return this;
+        }
+
+        /**
+         * EventId.
+         */
+        public Builder eventId(Long eventId) {
+            this.putQueryParameter("EventId", eventId);
+            this.eventId = eventId;
             return this;
         }
 
@@ -346,6 +406,15 @@ public class ListObjectScanEventRequest extends Request {
         public Builder source(String source) {
             this.putQueryParameter("Source", source);
             this.source = source;
+            return this;
+        }
+
+        /**
+         * Status.
+         */
+        public Builder status(Integer status) {
+            this.putQueryParameter("Status", status);
+            this.status = status;
             return this;
         }
 

@@ -292,7 +292,7 @@ public class DescribeNsasSuspEventTypeRequest extends Request {
         }
 
         /**
-         * SupportOperateCodeList.
+         * <p>List of supported alarm operation types.</p>
          */
         public Builder supportOperateCodeList(java.util.List<String> supportOperateCodeList) {
             this.putQueryParameter("SupportOperateCodeList", supportOperateCodeList);

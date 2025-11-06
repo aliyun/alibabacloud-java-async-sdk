@@ -381,7 +381,17 @@ public class DescribeCustomizeReportConfigDetailResponseBody extends TeaModel {
         }
 
         /**
-         * MemberAccountSyncFlag.
+         * <p>Whether the new account is connected by default. Values:</p>
+         * <ul>
+         * <li><strong>true</strong>: Yes.</li>
+         * <li><strong>false</strong>: No.<blockquote>
+         * <p>Only supported in version 2.0.0.</p>
+         * </blockquote>
+         * </li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder memberAccountSyncFlag(Boolean memberAccountSyncFlag) {
             this.memberAccountSyncFlag = memberAccountSyncFlag;

@@ -1667,7 +1667,10 @@ public class DescribeCloudCenterInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * VendorUid.
+             * <p>Account ID of the multi-cloud instance.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>123</p>
              */
             public Builder vendorUid(String vendorUid) {
                 this.vendorUid = vendorUid;
@@ -1675,7 +1678,10 @@ public class DescribeCloudCenterInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * VendorUserName.
+             * <p>Account name of the multi-cloud instance.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>VendorUserName</p>
              */
             public Builder vendorUserName(String vendorUserName) {
                 this.vendorUserName = vendorUserName;

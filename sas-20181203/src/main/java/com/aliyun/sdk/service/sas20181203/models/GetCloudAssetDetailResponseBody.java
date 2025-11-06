@@ -501,7 +501,10 @@ public class GetCloudAssetDetailResponseBody extends TeaModel {
             }
 
             /**
-             * OriginalAssetInfo.
+             * <p>Detailed asset information.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>{&quot;owner&quot;:{&quot;displayName&quot;:&quot;123&quot;,&quot;id&quot;:&quot;123&quot;},&quot;intranetEndpoint&quot;:&quot;oss-cn-shanghai-internal.aliyuncs.com&quot;,&quot;extranetEndpoint&quot;:&quot;oss-cn-shanghai.aliyuncs.com&quot;,&quot;storageClass&quot;:&quot;Standard&quot;,&quot;name&quot;:&quot;test&quot;,&quot;location&quot;:&quot;oss-cn-shanghai&quot;,&quot;creationDate&quot;:1629882579000,&quot;region&quot;:&quot;cn-shanghai&quot;}</p>
              */
             public Builder originalAssetInfo(String originalAssetInfo) {
                 this.originalAssetInfo = originalAssetInfo;
@@ -567,7 +570,10 @@ public class GetCloudAssetDetailResponseBody extends TeaModel {
             }
 
             /**
-             * VendorUid.
+             * <p>Account id for multi-cloud instances.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>123</p>
              */
             public Builder vendorUid(String vendorUid) {
                 this.vendorUid = vendorUid;
@@ -575,7 +581,10 @@ public class GetCloudAssetDetailResponseBody extends TeaModel {
             }
 
             /**
-             * VendorUserName.
+             * <p>The account name of the multi-cloud instance.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>test</p>
              */
             public Builder vendorUserName(String vendorUserName) {
                 this.vendorUserName = vendorUserName;

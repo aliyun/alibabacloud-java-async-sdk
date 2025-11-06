@@ -471,7 +471,13 @@ public class AddCloudVendorAccountAKResponseBody extends TeaModel {
             }
 
             /**
-             * CtdrCloudUserId.
+             * <p>Account ID. </p>
+             * <blockquote>
+             * <p>The account ID of the cloud provider being integrated.</p>
+             * </blockquote>
+             * 
+             * <strong>example:</strong>
+             * <p>azure_demo_1</p>
              */
             public Builder ctdrCloudUserId(String ctdrCloudUserId) {
                 this.ctdrCloudUserId = ctdrCloudUserId;

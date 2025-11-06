@@ -322,7 +322,16 @@ public class GetAuthSummaryResponseBody extends TeaModel {
         }
 
         /**
-         * ClusterNodeCheck.
+         * <p>Cluster node need to check the machine version,  Value:</p>
+         * <ul>
+         * <li><p><strong>0</strong> : Not required</p>
+         * </li>
+         * <li><p><strong>1</strong> : Required</p>
+         * </li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>Required</p>
          */
         public Builder clusterNodeCheck(Integer clusterNodeCheck) {
             this.clusterNodeCheck = clusterNodeCheck;
@@ -382,7 +391,16 @@ public class GetAuthSummaryResponseBody extends TeaModel {
         }
 
         /**
-         * InvalidBindStatus.
+         * <p>Binding effective status, value:</p>
+         * <ul>
+         * <li><p><strong>NORMAL</strong> : Effective</p>
+         * </li>
+         * <li><p><strong>INVALID_NODE_VERSION</strong>: Invalid</p>
+         * </li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>Effective</p>
          */
         public Builder invalidBindStatus(String invalidBindStatus) {
             this.invalidBindStatus = invalidBindStatus;

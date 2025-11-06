@@ -314,7 +314,10 @@ public class GenerateK8sAccessInfoResponseBody extends TeaModel {
             }
 
             /**
-             * CpuArch.
+             * <p>CPU architectures are divided into ARM architecture and x86 architecture.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>arm</p>
              */
             public Builder cpuArch(String cpuArch) {
                 this.cpuArch = cpuArch;

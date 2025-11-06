@@ -18,6 +18,10 @@ import com.aliyun.sdk.gateway.pop.models.*;
  */
 public class DescribeExposedStatisticsDetailRequest extends Request {
     @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Criteria")
+    private String criteria;
+
+    @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("CurrentPage")
     private Integer currentPage;
 
@@ -42,14 +46,20 @@ public class DescribeExposedStatisticsDetailRequest extends Request {
     @com.aliyun.core.annotation.NameInMap("StatisticsTypeInstanceValue")
     private String statisticsTypeInstanceValue;
 
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Uuid")
+    private String uuid;
+
     private DescribeExposedStatisticsDetailRequest(Builder builder) {
         super(builder);
+        this.criteria = builder.criteria;
         this.currentPage = builder.currentPage;
         this.pageSize = builder.pageSize;
         this.resourceDirectoryAccountId = builder.resourceDirectoryAccountId;
         this.statisticsType = builder.statisticsType;
         this.statisticsTypeGatewayType = builder.statisticsTypeGatewayType;
         this.statisticsTypeInstanceValue = builder.statisticsTypeInstanceValue;
+        this.uuid = builder.uuid;
     }
 
     public static Builder builder() {
@@ -63,6 +73,13 @@ public class DescribeExposedStatisticsDetailRequest extends Request {
 @Override
     public Builder toBuilder() {
         return new Builder(this);
+    }
+
+    /**
+     * @return criteria
+     */
+    public String getCriteria() {
+        return this.criteria;
     }
 
     /**
@@ -107,13 +124,22 @@ public class DescribeExposedStatisticsDetailRequest extends Request {
         return this.statisticsTypeInstanceValue;
     }
 
+    /**
+     * @return uuid
+     */
+    public String getUuid() {
+        return this.uuid;
+    }
+
     public static final class Builder extends Request.Builder<DescribeExposedStatisticsDetailRequest, Builder> {
+        private String criteria; 
         private Integer currentPage; 
         private Integer pageSize; 
         private Long resourceDirectoryAccountId; 
         private String statisticsType; 
         private String statisticsTypeGatewayType; 
         private String statisticsTypeInstanceValue; 
+        private String uuid; 
 
         private Builder() {
             super();
@@ -121,13 +147,24 @@ public class DescribeExposedStatisticsDetailRequest extends Request {
 
         private Builder(DescribeExposedStatisticsDetailRequest request) {
             super(request);
+            this.criteria = request.criteria;
             this.currentPage = request.currentPage;
             this.pageSize = request.pageSize;
             this.resourceDirectoryAccountId = request.resourceDirectoryAccountId;
             this.statisticsType = request.statisticsType;
             this.statisticsTypeGatewayType = request.statisticsTypeGatewayType;
             this.statisticsTypeInstanceValue = request.statisticsTypeInstanceValue;
+            this.uuid = request.uuid;
         } 
+
+        /**
+         * Criteria.
+         */
+        public Builder criteria(String criteria) {
+            this.putQueryParameter("Criteria", criteria);
+            this.criteria = criteria;
+            return this;
+        }
 
         /**
          * <p>The number of the page to return.</p>
@@ -215,6 +252,15 @@ public class DescribeExposedStatisticsDetailRequest extends Request {
         public Builder statisticsTypeInstanceValue(String statisticsTypeInstanceValue) {
             this.putQueryParameter("StatisticsTypeInstanceValue", statisticsTypeInstanceValue);
             this.statisticsTypeInstanceValue = statisticsTypeInstanceValue;
+            return this;
+        }
+
+        /**
+         * Uuid.
+         */
+        public Builder uuid(String uuid) {
+            this.putQueryParameter("Uuid", uuid);
+            this.uuid = uuid;
             return this;
         }
 

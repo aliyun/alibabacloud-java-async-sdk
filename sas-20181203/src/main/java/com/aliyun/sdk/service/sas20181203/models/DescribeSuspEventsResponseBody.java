@@ -1856,7 +1856,15 @@ public class DescribeSuspEventsResponseBody extends TeaModel {
             }
 
             /**
-             * SupportOperateCode.
+             * <p>Supported alarm operation types: </p>
+             * <ul>
+             * <li><strong>AI.false_positive</strong>: Suspected false positive </li>
+             * <li><strong>AI.real_attack</strong>: Real attack </li>
+             * <li><strong>AI.Insufficient_information_to_evaluate</strong>: Insufficient information to evaluate</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>AI.real_attack</p>
              */
             public Builder supportOperateCode(String supportOperateCode) {
                 this.supportOperateCode = supportOperateCode;

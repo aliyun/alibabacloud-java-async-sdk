@@ -985,7 +985,7 @@ public class DescribeSuspEventsRequest extends Request {
         }
 
         /**
-         * SupportOperateCodeList.
+         * <p>告警支持的操作类型列表。</p>
          */
         public Builder supportOperateCodeList(java.util.List<String> supportOperateCodeList) {
             this.putQueryParameter("SupportOperateCodeList", supportOperateCodeList);
