@@ -1831,6 +1831,9 @@ public class ListInstancesResponseBody extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("ForwardInfos")
         private java.util.List<ForwardInfoResponse> forwardInfos;
 
+        @com.aliyun.core.annotation.NameInMap("Ip")
+        private String ip;
+
         @com.aliyun.core.annotation.NameInMap("SecurityGroupId")
         private String securityGroupId;
 
@@ -1845,6 +1848,7 @@ public class ListInstancesResponseBody extends TeaModel {
             this.defaultRoute = builder.defaultRoute;
             this.extendedCIDRs = builder.extendedCIDRs;
             this.forwardInfos = builder.forwardInfos;
+            this.ip = builder.ip;
             this.securityGroupId = builder.securityGroupId;
             this.vSwitchId = builder.vSwitchId;
             this.vpcId = builder.vpcId;
@@ -1887,6 +1891,13 @@ public class ListInstancesResponseBody extends TeaModel {
         }
 
         /**
+         * @return ip
+         */
+        public String getIp() {
+            return this.ip;
+        }
+
+        /**
          * @return securityGroupId
          */
         public String getSecurityGroupId() {
@@ -1912,6 +1923,7 @@ public class ListInstancesResponseBody extends TeaModel {
             private String defaultRoute; 
             private java.util.List<String> extendedCIDRs; 
             private java.util.List<ForwardInfoResponse> forwardInfos; 
+            private String ip; 
             private String securityGroupId; 
             private String vSwitchId; 
             private String vpcId; 
@@ -1924,6 +1936,7 @@ public class ListInstancesResponseBody extends TeaModel {
                 this.defaultRoute = model.defaultRoute;
                 this.extendedCIDRs = model.extendedCIDRs;
                 this.forwardInfos = model.forwardInfos;
+                this.ip = model.ip;
                 this.securityGroupId = model.securityGroupId;
                 this.vSwitchId = model.vSwitchId;
                 this.vpcId = model.vpcId;
@@ -1964,6 +1977,14 @@ public class ListInstancesResponseBody extends TeaModel {
              */
             public Builder forwardInfos(java.util.List<ForwardInfoResponse> forwardInfos) {
                 this.forwardInfos = forwardInfos;
+                return this;
+            }
+
+            /**
+             * Ip.
+             */
+            public Builder ip(String ip) {
+                this.ip = ip;
                 return this;
             }
 
@@ -2119,6 +2140,9 @@ public class ListInstancesResponseBody extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("ResourceName")
         private String resourceName;
 
+        @com.aliyun.core.annotation.NameInMap("ServiceConfig")
+        private ServiceConfig serviceConfig;
+
         @com.aliyun.core.annotation.NameInMap("Status")
         private String status;
 
@@ -2185,6 +2209,7 @@ public class ListInstancesResponseBody extends TeaModel {
             this.requestedResource = builder.requestedResource;
             this.resourceId = builder.resourceId;
             this.resourceName = builder.resourceName;
+            this.serviceConfig = builder.serviceConfig;
             this.status = builder.status;
             this.tags = builder.tags;
             this.terminalUrl = builder.terminalUrl;
@@ -2451,6 +2476,13 @@ public class ListInstancesResponseBody extends TeaModel {
         }
 
         /**
+         * @return serviceConfig
+         */
+        public ServiceConfig getServiceConfig() {
+            return this.serviceConfig;
+        }
+
+        /**
          * @return status
          */
         public String getStatus() {
@@ -2556,6 +2588,7 @@ public class ListInstancesResponseBody extends TeaModel {
             private RequestedResource requestedResource; 
             private String resourceId; 
             private String resourceName; 
+            private ServiceConfig serviceConfig; 
             private String status; 
             private java.util.List<Tags> tags; 
             private String terminalUrl; 
@@ -2606,6 +2639,7 @@ public class ListInstancesResponseBody extends TeaModel {
                 this.requestedResource = model.requestedResource;
                 this.resourceId = model.resourceId;
                 this.resourceName = model.resourceName;
+                this.serviceConfig = model.serviceConfig;
                 this.status = model.status;
                 this.tags = model.tags;
                 this.terminalUrl = model.terminalUrl;
@@ -2992,6 +3026,14 @@ public class ListInstancesResponseBody extends TeaModel {
              */
             public Builder resourceName(String resourceName) {
                 this.resourceName = resourceName;
+                return this;
+            }
+
+            /**
+             * ServiceConfig.
+             */
+            public Builder serviceConfig(ServiceConfig serviceConfig) {
+                this.serviceConfig = serviceConfig;
                 return this;
             }
 

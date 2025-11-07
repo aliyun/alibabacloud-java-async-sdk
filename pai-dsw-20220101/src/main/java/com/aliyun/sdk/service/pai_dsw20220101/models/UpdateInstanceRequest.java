@@ -131,6 +131,10 @@ public class UpdateInstanceRequest extends Request {
     private SpotSpec spotSpec;
 
     @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("StartInstance")
+    private Boolean startInstance;
+
+    @com.aliyun.core.annotation.Body
     @com.aliyun.core.annotation.NameInMap("UserCommand")
     private UserCommand userCommand;
 
@@ -176,6 +180,7 @@ public class UpdateInstanceRequest extends Request {
         this.priority = builder.priority;
         this.requestedResource = builder.requestedResource;
         this.spotSpec = builder.spotSpec;
+        this.startInstance = builder.startInstance;
         this.userCommand = builder.userCommand;
         this.userId = builder.userId;
         this.userVpc = builder.userVpc;
@@ -392,6 +397,13 @@ public class UpdateInstanceRequest extends Request {
     }
 
     /**
+     * @return startInstance
+     */
+    public Boolean getStartInstance() {
+        return this.startInstance;
+    }
+
+    /**
      * @return userCommand
      */
     public UserCommand getUserCommand() {
@@ -448,6 +460,7 @@ public class UpdateInstanceRequest extends Request {
         private Long priority; 
         private RequestedResource requestedResource; 
         private SpotSpec spotSpec; 
+        private Boolean startInstance; 
         private UserCommand userCommand; 
         private String userId; 
         private UserVpc userVpc; 
@@ -487,6 +500,7 @@ public class UpdateInstanceRequest extends Request {
             this.priority = request.priority;
             this.requestedResource = request.requestedResource;
             this.spotSpec = request.spotSpec;
+            this.startInstance = request.startInstance;
             this.userCommand = request.userCommand;
             this.userId = request.userId;
             this.userVpc = request.userVpc;
@@ -808,6 +822,15 @@ public class UpdateInstanceRequest extends Request {
         public Builder spotSpec(SpotSpec spotSpec) {
             this.putBodyParameter("SpotSpec", spotSpec);
             this.spotSpec = spotSpec;
+            return this;
+        }
+
+        /**
+         * StartInstance.
+         */
+        public Builder startInstance(Boolean startInstance) {
+            this.putBodyParameter("StartInstance", startInstance);
+            this.startInstance = startInstance;
             return this;
         }
 

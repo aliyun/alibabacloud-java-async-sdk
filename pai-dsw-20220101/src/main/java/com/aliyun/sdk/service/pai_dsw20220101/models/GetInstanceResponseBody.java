@@ -134,6 +134,9 @@ public class GetInstanceResponseBody extends TeaModel {
     @com.aliyun.core.annotation.NameInMap("ResourceName")
     private String resourceName;
 
+    @com.aliyun.core.annotation.NameInMap("ServiceConfig")
+    private ServiceConfig serviceConfig;
+
     @com.aliyun.core.annotation.NameInMap("Status")
     private String status;
 
@@ -210,6 +213,7 @@ public class GetInstanceResponseBody extends TeaModel {
         this.requestedResource = builder.requestedResource;
         this.resourceId = builder.resourceId;
         this.resourceName = builder.resourceName;
+        this.serviceConfig = builder.serviceConfig;
         this.status = builder.status;
         this.success = builder.success;
         this.tags = builder.tags;
@@ -510,6 +514,13 @@ public class GetInstanceResponseBody extends TeaModel {
     }
 
     /**
+     * @return serviceConfig
+     */
+    public ServiceConfig getServiceConfig() {
+        return this.serviceConfig;
+    }
+
+    /**
      * @return status
      */
     public String getStatus() {
@@ -633,6 +644,7 @@ public class GetInstanceResponseBody extends TeaModel {
         private RequestedResource requestedResource; 
         private String resourceId; 
         private String resourceName; 
+        private ServiceConfig serviceConfig; 
         private String status; 
         private Boolean success; 
         private java.util.List<Tags> tags; 
@@ -689,6 +701,7 @@ public class GetInstanceResponseBody extends TeaModel {
             this.requestedResource = model.requestedResource;
             this.resourceId = model.resourceId;
             this.resourceName = model.resourceName;
+            this.serviceConfig = model.serviceConfig;
             this.status = model.status;
             this.success = model.success;
             this.tags = model.tags;
@@ -1141,6 +1154,14 @@ public class GetInstanceResponseBody extends TeaModel {
         }
 
         /**
+         * ServiceConfig.
+         */
+        public Builder serviceConfig(ServiceConfig serviceConfig) {
+            this.serviceConfig = serviceConfig;
+            return this;
+        }
+
+        /**
          * <p>The instance status.</p>
          * <p>Valid values:</p>
          * <ul>
@@ -1409,6 +1430,102 @@ public class GetInstanceResponseBody extends TeaModel {
      *
      * <p>GetInstanceResponseBody</p>
      */
+    public static class Status extends TeaModel {
+        @com.aliyun.core.annotation.NameInMap("Available")
+        private Long available;
+
+        @com.aliyun.core.annotation.NameInMap("Capacity")
+        private Long capacity;
+
+        @com.aliyun.core.annotation.NameInMap("Usage")
+        private Long usage;
+
+        private Status(Builder builder) {
+            this.available = builder.available;
+            this.capacity = builder.capacity;
+            this.usage = builder.usage;
+        }
+
+        public static Builder builder() {
+            return new Builder();
+        }
+
+        public static Status create() {
+            return builder().build();
+        }
+
+        /**
+         * @return available
+         */
+        public Long getAvailable() {
+            return this.available;
+        }
+
+        /**
+         * @return capacity
+         */
+        public Long getCapacity() {
+            return this.capacity;
+        }
+
+        /**
+         * @return usage
+         */
+        public Long getUsage() {
+            return this.usage;
+        }
+
+        public static final class Builder {
+            private Long available; 
+            private Long capacity; 
+            private Long usage; 
+
+            private Builder() {
+            } 
+
+            private Builder(Status model) {
+                this.available = model.available;
+                this.capacity = model.capacity;
+                this.usage = model.usage;
+            } 
+
+            /**
+             * Available.
+             */
+            public Builder available(Long available) {
+                this.available = available;
+                return this;
+            }
+
+            /**
+             * Capacity.
+             */
+            public Builder capacity(Long capacity) {
+                this.capacity = capacity;
+                return this;
+            }
+
+            /**
+             * Usage.
+             */
+            public Builder usage(Long usage) {
+                this.usage = usage;
+                return this;
+            }
+
+            public Status build() {
+                return new Status(this);
+            } 
+
+        } 
+
+    }
+    /**
+     * 
+     * {@link GetInstanceResponseBody} extends {@link TeaModel}
+     *
+     * <p>GetInstanceResponseBody</p>
+     */
     public static class CloudDisks extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Capacity")
         private String capacity;
@@ -1419,6 +1536,9 @@ public class GetInstanceResponseBody extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Path")
         private String path;
 
+        @com.aliyun.core.annotation.NameInMap("Status")
+        private Status status;
+
         @com.aliyun.core.annotation.NameInMap("SubType")
         private String subType;
 
@@ -1426,6 +1546,7 @@ public class GetInstanceResponseBody extends TeaModel {
             this.capacity = builder.capacity;
             this.mountPath = builder.mountPath;
             this.path = builder.path;
+            this.status = builder.status;
             this.subType = builder.subType;
         }
 
@@ -1459,6 +1580,13 @@ public class GetInstanceResponseBody extends TeaModel {
         }
 
         /**
+         * @return status
+         */
+        public Status getStatus() {
+            return this.status;
+        }
+
+        /**
          * @return subType
          */
         public String getSubType() {
@@ -1469,6 +1597,7 @@ public class GetInstanceResponseBody extends TeaModel {
             private String capacity; 
             private String mountPath; 
             private String path; 
+            private Status status; 
             private String subType; 
 
             private Builder() {
@@ -1478,6 +1607,7 @@ public class GetInstanceResponseBody extends TeaModel {
                 this.capacity = model.capacity;
                 this.mountPath = model.mountPath;
                 this.path = model.path;
+                this.status = model.status;
                 this.subType = model.subType;
             } 
 
@@ -1511,6 +1641,35 @@ public class GetInstanceResponseBody extends TeaModel {
              */
             public Builder path(String path) {
                 this.path = path;
+                return this;
+            }
+
+            /**
+             * <p>The instance status.</p>
+             * <p>Valid values:</p>
+             * <ul>
+             * <li>Creating</li>
+             * <li>SaveFailed</li>
+             * <li>Stopped</li>
+             * <li>Failed</li>
+             * <li>ResourceAllocating</li>
+             * <li>Stopping</li>
+             * <li>Updating</li>
+             * <li>Saving</li>
+             * <li>Queuing</li>
+             * <li>Recovering</li>
+             * <li>Starting</li>
+             * <li>Running</li>
+             * <li>Saved</li>
+             * <li>Deleting</li>
+             * <li>EnvPreparing</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>Running</p>
+             */
+            public Builder status(Status status) {
+                this.status = status;
                 return this;
             }
 
@@ -3018,6 +3177,9 @@ public class GetInstanceResponseBody extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("ForwardInfos")
         private java.util.List<ForwardInfoResponse> forwardInfos;
 
+        @com.aliyun.core.annotation.NameInMap("Ip")
+        private String ip;
+
         @com.aliyun.core.annotation.NameInMap("SecurityGroupId")
         private String securityGroupId;
 
@@ -3032,6 +3194,7 @@ public class GetInstanceResponseBody extends TeaModel {
             this.defaultRoute = builder.defaultRoute;
             this.extendedCIDRs = builder.extendedCIDRs;
             this.forwardInfos = builder.forwardInfos;
+            this.ip = builder.ip;
             this.securityGroupId = builder.securityGroupId;
             this.vSwitchId = builder.vSwitchId;
             this.vpcId = builder.vpcId;
@@ -3074,6 +3237,13 @@ public class GetInstanceResponseBody extends TeaModel {
         }
 
         /**
+         * @return ip
+         */
+        public String getIp() {
+            return this.ip;
+        }
+
+        /**
          * @return securityGroupId
          */
         public String getSecurityGroupId() {
@@ -3099,6 +3269,7 @@ public class GetInstanceResponseBody extends TeaModel {
             private String defaultRoute; 
             private java.util.List<String> extendedCIDRs; 
             private java.util.List<ForwardInfoResponse> forwardInfos; 
+            private String ip; 
             private String securityGroupId; 
             private String vSwitchId; 
             private String vpcId; 
@@ -3111,6 +3282,7 @@ public class GetInstanceResponseBody extends TeaModel {
                 this.defaultRoute = model.defaultRoute;
                 this.extendedCIDRs = model.extendedCIDRs;
                 this.forwardInfos = model.forwardInfos;
+                this.ip = model.ip;
                 this.securityGroupId = model.securityGroupId;
                 this.vSwitchId = model.vSwitchId;
                 this.vpcId = model.vpcId;
@@ -3155,6 +3327,14 @@ public class GetInstanceResponseBody extends TeaModel {
              */
             public Builder forwardInfos(java.util.List<ForwardInfoResponse> forwardInfos) {
                 this.forwardInfos = forwardInfos;
+                return this;
+            }
+
+            /**
+             * Ip.
+             */
+            public Builder ip(String ip) {
+                this.ip = ip;
                 return this;
             }
 

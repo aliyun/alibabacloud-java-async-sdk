@@ -20,6 +20,12 @@ public interface AsyncClient extends SdkAutoCloseable {
     }
 
     /**
+     * @param request the request parameters of CreateDiagnosis  CreateDiagnosisRequest
+     * @return CreateDiagnosisResponse
+     */
+    CompletableFuture<CreateDiagnosisResponse> createDiagnosis(CreateDiagnosisRequest request);
+
+    /**
      * @param request the request parameters of CreateIdleInstanceCuller  CreateIdleInstanceCullerRequest
      * @return CreateIdleInstanceCullerResponse
      */
@@ -72,6 +78,12 @@ public interface AsyncClient extends SdkAutoCloseable {
      * @return DeleteInstanceSnapshotResponse
      */
     CompletableFuture<DeleteInstanceSnapshotResponse> deleteInstanceSnapshot(DeleteInstanceSnapshotRequest request);
+
+    /**
+     * @param request the request parameters of DeleteInstances  DeleteInstancesRequest
+     * @return DeleteInstancesResponse
+     */
+    CompletableFuture<DeleteInstancesResponse> deleteInstances(DeleteInstancesRequest request);
 
     /**
      * @param request the request parameters of GetIdleInstanceCuller  GetIdleInstanceCullerRequest
@@ -189,6 +201,12 @@ public interface AsyncClient extends SdkAutoCloseable {
      * @return StopInstanceResponse
      */
     CompletableFuture<StopInstanceResponse> stopInstance(StopInstanceRequest request);
+
+    /**
+     * @param request the request parameters of StopInstances  StopInstancesRequest
+     * @return StopInstancesResponse
+     */
+    CompletableFuture<StopInstancesResponse> stopInstances(StopInstancesRequest request);
 
     /**
      * @param request the request parameters of UpdateInstance  UpdateInstanceRequest
