@@ -149,6 +149,9 @@ public class GetInstanceResponseBody extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("TenantIsolationType")
         private String tenantIsolationType;
 
+        @com.aliyun.core.annotation.NameInMap("TpsEnabled")
+        private Integer tpsEnabled;
+
         @com.aliyun.core.annotation.NameInMap("VSwitchId")
         private String vSwitchId;
 
@@ -182,6 +185,7 @@ public class GetInstanceResponseBody extends TeaModel {
             this.remark = builder.remark;
             this.status = builder.status;
             this.tenantIsolationType = builder.tenantIsolationType;
+            this.tpsEnabled = builder.tpsEnabled;
             this.vSwitchId = builder.vSwitchId;
             this.vendor = builder.vendor;
             this.vpcId = builder.vpcId;
@@ -317,6 +321,13 @@ public class GetInstanceResponseBody extends TeaModel {
         }
 
         /**
+         * @return tpsEnabled
+         */
+        public Integer getTpsEnabled() {
+            return this.tpsEnabled;
+        }
+
+        /**
          * @return vSwitchId
          */
         public String getVSwitchId() {
@@ -369,6 +380,7 @@ public class GetInstanceResponseBody extends TeaModel {
             private String remark; 
             private String status; 
             private String tenantIsolationType; 
+            private Integer tpsEnabled; 
             private String vSwitchId; 
             private String vendor; 
             private String vpcId; 
@@ -396,6 +408,7 @@ public class GetInstanceResponseBody extends TeaModel {
                 this.remark = model.remark;
                 this.status = model.status;
                 this.tenantIsolationType = model.tenantIsolationType;
+                this.tpsEnabled = model.tpsEnabled;
                 this.vSwitchId = model.vSwitchId;
                 this.vendor = model.vendor;
                 this.vpcId = model.vpcId;
@@ -600,6 +613,14 @@ public class GetInstanceResponseBody extends TeaModel {
              */
             public Builder tenantIsolationType(String tenantIsolationType) {
                 this.tenantIsolationType = tenantIsolationType;
+                return this;
+            }
+
+            /**
+             * TpsEnabled.
+             */
+            public Builder tpsEnabled(Integer tpsEnabled) {
+                this.tpsEnabled = tpsEnabled;
                 return this;
             }
 

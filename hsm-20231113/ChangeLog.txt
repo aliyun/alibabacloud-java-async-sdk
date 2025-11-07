@@ -1,3 +1,6 @@
+2025-11-07 Version: 1.0.5
+- Generated java-async 2023-11-13 for hsm.
+
 2025-10-31 Version: 1.0.4
 - Generated java-async 2023-11-13 for hsm.
 
