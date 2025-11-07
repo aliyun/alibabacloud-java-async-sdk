@@ -163,6 +163,9 @@ public class ListApplicationGroupsResponseBody extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("DeployRegionId")
         private String deployRegionId;
 
+        @com.aliyun.core.annotation.NameInMap("DeployedRevisionIds")
+        private String deployedRevisionIds;
+
         @com.aliyun.core.annotation.NameInMap("Description")
         private String description;
 
@@ -171,6 +174,9 @@ public class ListApplicationGroupsResponseBody extends TeaModel {
 
         @com.aliyun.core.annotation.NameInMap("ErrorType")
         private String errorType;
+
+        @com.aliyun.core.annotation.NameInMap("ExecutionId")
+        private String executionId;
 
         @com.aliyun.core.annotation.NameInMap("ImportTagKey")
         private String importTagKey;
@@ -196,9 +202,11 @@ public class ListApplicationGroupsResponseBody extends TeaModel {
             this.createDate = builder.createDate;
             this.deployParameters = builder.deployParameters;
             this.deployRegionId = builder.deployRegionId;
+            this.deployedRevisionIds = builder.deployedRevisionIds;
             this.description = builder.description;
             this.errorDetail = builder.errorDetail;
             this.errorType = builder.errorType;
+            this.executionId = builder.executionId;
             this.importTagKey = builder.importTagKey;
             this.importTagValue = builder.importTagValue;
             this.name = builder.name;
@@ -251,6 +259,13 @@ public class ListApplicationGroupsResponseBody extends TeaModel {
         }
 
         /**
+         * @return deployedRevisionIds
+         */
+        public String getDeployedRevisionIds() {
+            return this.deployedRevisionIds;
+        }
+
+        /**
          * @return description
          */
         public String getDescription() {
@@ -269,6 +284,13 @@ public class ListApplicationGroupsResponseBody extends TeaModel {
          */
         public String getErrorType() {
             return this.errorType;
+        }
+
+        /**
+         * @return executionId
+         */
+        public String getExecutionId() {
+            return this.executionId;
         }
 
         /**
@@ -319,9 +341,11 @@ public class ListApplicationGroupsResponseBody extends TeaModel {
             private String createDate; 
             private String deployParameters; 
             private String deployRegionId; 
+            private String deployedRevisionIds; 
             private String description; 
             private String errorDetail; 
             private String errorType; 
+            private String executionId; 
             private String importTagKey; 
             private String importTagValue; 
             private String name; 
@@ -338,9 +362,11 @@ public class ListApplicationGroupsResponseBody extends TeaModel {
                 this.createDate = model.createDate;
                 this.deployParameters = model.deployParameters;
                 this.deployRegionId = model.deployRegionId;
+                this.deployedRevisionIds = model.deployedRevisionIds;
                 this.description = model.description;
                 this.errorDetail = model.errorDetail;
                 this.errorType = model.errorType;
+                this.executionId = model.executionId;
                 this.importTagKey = model.importTagKey;
                 this.importTagValue = model.importTagValue;
                 this.name = model.name;
@@ -405,6 +431,14 @@ public class ListApplicationGroupsResponseBody extends TeaModel {
             }
 
             /**
+             * DeployedRevisionIds.
+             */
+            public Builder deployedRevisionIds(String deployedRevisionIds) {
+                this.deployedRevisionIds = deployedRevisionIds;
+                return this;
+            }
+
+            /**
              * <p>The description of the application group.</p>
              * 
              * <strong>example:</strong>
@@ -428,6 +462,14 @@ public class ListApplicationGroupsResponseBody extends TeaModel {
              */
             public Builder errorType(String errorType) {
                 this.errorType = errorType;
+                return this;
+            }
+
+            /**
+             * ExecutionId.
+             */
+            public Builder executionId(String executionId) {
+                this.executionId = executionId;
                 return this;
             }
 

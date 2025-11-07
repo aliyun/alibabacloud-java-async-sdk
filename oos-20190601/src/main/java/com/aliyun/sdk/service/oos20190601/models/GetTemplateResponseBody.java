@@ -143,6 +143,9 @@ public class GetTemplateResponseBody extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("ShareType")
         private String shareType;
 
+        @com.aliyun.core.annotation.NameInMap("SharedAccounts")
+        private String sharedAccounts;
+
         @com.aliyun.core.annotation.NameInMap("Tags")
         private java.util.Map<String, ?> tags;
 
@@ -178,6 +181,7 @@ public class GetTemplateResponseBody extends TeaModel {
             this.hash = builder.hash;
             this.resourceGroupId = builder.resourceGroupId;
             this.shareType = builder.shareType;
+            this.sharedAccounts = builder.sharedAccounts;
             this.tags = builder.tags;
             this.templateFormat = builder.templateFormat;
             this.templateId = builder.templateId;
@@ -244,6 +248,13 @@ public class GetTemplateResponseBody extends TeaModel {
          */
         public String getShareType() {
             return this.shareType;
+        }
+
+        /**
+         * @return sharedAccounts
+         */
+        public String getSharedAccounts() {
+            return this.sharedAccounts;
         }
 
         /**
@@ -317,6 +328,7 @@ public class GetTemplateResponseBody extends TeaModel {
             private String hash; 
             private String resourceGroupId; 
             private String shareType; 
+            private String sharedAccounts; 
             private java.util.Map<String, ?> tags; 
             private String templateFormat; 
             private String templateId; 
@@ -338,6 +350,7 @@ public class GetTemplateResponseBody extends TeaModel {
                 this.hash = model.hash;
                 this.resourceGroupId = model.resourceGroupId;
                 this.shareType = model.shareType;
+                this.sharedAccounts = model.sharedAccounts;
                 this.tags = model.tags;
                 this.templateFormat = model.templateFormat;
                 this.templateId = model.templateId;
@@ -423,6 +436,14 @@ public class GetTemplateResponseBody extends TeaModel {
              */
             public Builder shareType(String shareType) {
                 this.shareType = shareType;
+                return this;
+            }
+
+            /**
+             * SharedAccounts.
+             */
+            public Builder sharedAccounts(String sharedAccounts) {
+                this.sharedAccounts = sharedAccounts;
                 return this;
             }
 

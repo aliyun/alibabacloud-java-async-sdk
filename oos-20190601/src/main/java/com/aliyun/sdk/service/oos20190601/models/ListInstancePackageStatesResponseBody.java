@@ -146,6 +146,9 @@ public class ListInstancePackageStatesResponseBody extends TeaModel {
      * <p>ListInstancePackageStatesResponseBody</p>
      */
     public static class PackageStates extends TeaModel {
+        @com.aliyun.core.annotation.NameInMap("ConfigurationInfo")
+        private String configurationInfo;
+
         @com.aliyun.core.annotation.NameInMap("Description")
         private String description;
 
@@ -174,6 +177,7 @@ public class ListInstancePackageStatesResponseBody extends TeaModel {
         private String updateTime;
 
         private PackageStates(Builder builder) {
+            this.configurationInfo = builder.configurationInfo;
             this.description = builder.description;
             this.parameters = builder.parameters;
             this.publisher = builder.publisher;
@@ -191,6 +195,13 @@ public class ListInstancePackageStatesResponseBody extends TeaModel {
 
         public static PackageStates create() {
             return builder().build();
+        }
+
+        /**
+         * @return configurationInfo
+         */
+        public String getConfigurationInfo() {
+            return this.configurationInfo;
         }
 
         /**
@@ -257,6 +268,7 @@ public class ListInstancePackageStatesResponseBody extends TeaModel {
         }
 
         public static final class Builder {
+            private String configurationInfo; 
             private String description; 
             private String parameters; 
             private String publisher; 
@@ -271,6 +283,7 @@ public class ListInstancePackageStatesResponseBody extends TeaModel {
             } 
 
             private Builder(PackageStates model) {
+                this.configurationInfo = model.configurationInfo;
                 this.description = model.description;
                 this.parameters = model.parameters;
                 this.publisher = model.publisher;
@@ -281,6 +294,14 @@ public class ListInstancePackageStatesResponseBody extends TeaModel {
                 this.templateVersionName = model.templateVersionName;
                 this.updateTime = model.updateTime;
             } 
+
+            /**
+             * ConfigurationInfo.
+             */
+            public Builder configurationInfo(String configurationInfo) {
+                this.configurationInfo = configurationInfo;
+                return this;
+            }
 
             /**
              * <p>Description</p>

@@ -18,6 +18,10 @@ import com.aliyun.sdk.gateway.pop.models.*;
  */
 public class UpdateInstancePackageStateRequest extends Request {
     @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ConfigurationInfo")
+    private String configurationInfo;
+
+    @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("ConfigureAction")
     @com.aliyun.core.annotation.Validation(required = true)
     private String configureAction;
@@ -46,6 +50,7 @@ public class UpdateInstancePackageStateRequest extends Request {
 
     private UpdateInstancePackageStateRequest(Builder builder) {
         super(builder);
+        this.configurationInfo = builder.configurationInfo;
         this.configureAction = builder.configureAction;
         this.instanceId = builder.instanceId;
         this.parameters = builder.parameters;
@@ -65,6 +70,13 @@ public class UpdateInstancePackageStateRequest extends Request {
 @Override
     public Builder toBuilder() {
         return new Builder(this);
+    }
+
+    /**
+     * @return configurationInfo
+     */
+    public String getConfigurationInfo() {
+        return this.configurationInfo;
     }
 
     /**
@@ -110,6 +122,7 @@ public class UpdateInstancePackageStateRequest extends Request {
     }
 
     public static final class Builder extends Request.Builder<UpdateInstancePackageStateRequest, Builder> {
+        private String configurationInfo; 
         private String configureAction; 
         private String instanceId; 
         private java.util.Map<String, ?> parameters; 
@@ -123,6 +136,7 @@ public class UpdateInstancePackageStateRequest extends Request {
 
         private Builder(UpdateInstancePackageStateRequest request) {
             super(request);
+            this.configurationInfo = request.configurationInfo;
             this.configureAction = request.configureAction;
             this.instanceId = request.instanceId;
             this.parameters = request.parameters;
@@ -130,6 +144,15 @@ public class UpdateInstancePackageStateRequest extends Request {
             this.templateName = request.templateName;
             this.templateVersion = request.templateVersion;
         } 
+
+        /**
+         * ConfigurationInfo.
+         */
+        public Builder configurationInfo(String configurationInfo) {
+            this.putQueryParameter("ConfigurationInfo", configurationInfo);
+            this.configurationInfo = configurationInfo;
+            return this;
+        }
 
         /**
          * <p>The operation type.</p>

@@ -23,6 +23,10 @@ public class UpdateApplicationGroupRequest extends Request {
     private String applicationName;
 
     @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("DeployedRevisionId")
+    private String deployedRevisionId;
+
+    @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("Name")
     @com.aliyun.core.annotation.Validation(required = true)
     private String name;
@@ -46,6 +50,7 @@ public class UpdateApplicationGroupRequest extends Request {
     private UpdateApplicationGroupRequest(Builder builder) {
         super(builder);
         this.applicationName = builder.applicationName;
+        this.deployedRevisionId = builder.deployedRevisionId;
         this.name = builder.name;
         this.newName = builder.newName;
         this.operationName = builder.operationName;
@@ -71,6 +76,13 @@ public class UpdateApplicationGroupRequest extends Request {
      */
     public String getApplicationName() {
         return this.applicationName;
+    }
+
+    /**
+     * @return deployedRevisionId
+     */
+    public String getDeployedRevisionId() {
+        return this.deployedRevisionId;
     }
 
     /**
@@ -110,6 +122,7 @@ public class UpdateApplicationGroupRequest extends Request {
 
     public static final class Builder extends Request.Builder<UpdateApplicationGroupRequest, Builder> {
         private String applicationName; 
+        private String deployedRevisionId; 
         private String name; 
         private String newName; 
         private String operationName; 
@@ -123,6 +136,7 @@ public class UpdateApplicationGroupRequest extends Request {
         private Builder(UpdateApplicationGroupRequest request) {
             super(request);
             this.applicationName = request.applicationName;
+            this.deployedRevisionId = request.deployedRevisionId;
             this.name = request.name;
             this.newName = request.newName;
             this.operationName = request.operationName;
@@ -140,6 +154,15 @@ public class UpdateApplicationGroupRequest extends Request {
         public Builder applicationName(String applicationName) {
             this.putQueryParameter("ApplicationName", applicationName);
             this.applicationName = applicationName;
+            return this;
+        }
+
+        /**
+         * DeployedRevisionId.
+         */
+        public Builder deployedRevisionId(String deployedRevisionId) {
+            this.putQueryParameter("DeployedRevisionId", deployedRevisionId);
+            this.deployedRevisionId = deployedRevisionId;
             return this;
         }
 

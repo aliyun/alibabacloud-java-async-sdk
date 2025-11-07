@@ -38,6 +38,18 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<ChangeResourceGroupResponse> changeResourceGroup(ChangeResourceGroupRequest request);
 
     /**
+     * @param request the request parameters of CheckGitRepoFileExists  CheckGitRepoFileExistsRequest
+     * @return CheckGitRepoFileExistsResponse
+     */
+    CompletableFuture<CheckGitRepoFileExistsResponse> checkGitRepoFileExists(CheckGitRepoFileExistsRequest request);
+
+    /**
+     * @param request the request parameters of CheckGitRepositoryExists  CheckGitRepositoryExistsRequest
+     * @return CheckGitRepositoryExistsResponse
+     */
+    CompletableFuture<CheckGitRepositoryExistsResponse> checkGitRepositoryExists(CheckGitRepositoryExistsRequest request);
+
+    /**
      * @param request the request parameters of ContinueDeployApplicationGroup  ContinueDeployApplicationGroupRequest
      * @return ContinueDeployApplicationGroupResponse
      */
@@ -54,6 +66,12 @@ public interface AsyncClient extends SdkAutoCloseable {
      * @return CreateApplicationGroupResponse
      */
     CompletableFuture<CreateApplicationGroupResponse> createApplicationGroup(CreateApplicationGroupRequest request);
+
+    /**
+     * @param request the request parameters of CreateGitRepository  CreateGitRepositoryRequest
+     * @return CreateGitRepositoryResponse
+     */
+    CompletableFuture<CreateGitRepositoryResponse> createGitRepository(CreateGitRepositoryRequest request);
 
     /**
      * @param request the request parameters of CreateOpsItem  CreateOpsItemRequest
@@ -200,6 +218,18 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<GetExecutionTemplateResponse> getExecutionTemplate(GetExecutionTemplateRequest request);
 
     /**
+     * @param request the request parameters of GetGitBranch  GetGitBranchRequest
+     * @return GetGitBranchResponse
+     */
+    CompletableFuture<GetGitBranchResponse> getGitBranch(GetGitBranchRequest request);
+
+    /**
+     * @param request the request parameters of GetGitRepository  GetGitRepositoryRequest
+     * @return GetGitRepositoryResponse
+     */
+    CompletableFuture<GetGitRepositoryResponse> getGitRepository(GetGitRepositoryRequest request);
+
+    /**
      * @param request the request parameters of GetInventorySchema  GetInventorySchemaRequest
      * @return GetInventorySchemaResponse
      */
@@ -309,6 +339,36 @@ public interface AsyncClient extends SdkAutoCloseable {
      * @return ListExecutionsResponse
      */
     CompletableFuture<ListExecutionsResponse> listExecutions(ListExecutionsRequest request);
+
+    /**
+     * @param request the request parameters of ListGitAccounts  ListGitAccountsRequest
+     * @return ListGitAccountsResponse
+     */
+    CompletableFuture<ListGitAccountsResponse> listGitAccounts(ListGitAccountsRequest request);
+
+    /**
+     * @param request the request parameters of ListGitBranches  ListGitBranchesRequest
+     * @return ListGitBranchesResponse
+     */
+    CompletableFuture<ListGitBranchesResponse> listGitBranches(ListGitBranchesRequest request);
+
+    /**
+     * @param request the request parameters of ListGitOrganizations  ListGitOrganizationsRequest
+     * @return ListGitOrganizationsResponse
+     */
+    CompletableFuture<ListGitOrganizationsResponse> listGitOrganizations(ListGitOrganizationsRequest request);
+
+    /**
+     * @param request the request parameters of ListGitRepositories  ListGitRepositoriesRequest
+     * @return ListGitRepositoriesResponse
+     */
+    CompletableFuture<ListGitRepositoriesResponse> listGitRepositories(ListGitRepositoriesRequest request);
+
+    /**
+     * @param request the request parameters of ListGitRepositoryContents  ListGitRepositoryContentsRequest
+     * @return ListGitRepositoryContentsResponse
+     */
+    CompletableFuture<ListGitRepositoryContentsResponse> listGitRepositoryContents(ListGitRepositoryContentsRequest request);
 
     /**
      * @param request the request parameters of ListInstancePackageStates  ListInstancePackageStatesRequest

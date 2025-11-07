@@ -36,12 +36,17 @@ public class DeployApplicationGroupRequest extends Request {
     @com.aliyun.core.annotation.NameInMap("RegionId")
     private String regionId;
 
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("RevisionId")
+    private String revisionId;
+
     private DeployApplicationGroupRequest(Builder builder) {
         super(builder);
         this.applicationName = builder.applicationName;
         this.deployParameters = builder.deployParameters;
         this.name = builder.name;
         this.regionId = builder.regionId;
+        this.revisionId = builder.revisionId;
     }
 
     public static Builder builder() {
@@ -85,11 +90,19 @@ public class DeployApplicationGroupRequest extends Request {
         return this.regionId;
     }
 
+    /**
+     * @return revisionId
+     */
+    public String getRevisionId() {
+        return this.revisionId;
+    }
+
     public static final class Builder extends Request.Builder<DeployApplicationGroupRequest, Builder> {
         private String applicationName; 
         private String deployParameters; 
         private String name; 
         private String regionId; 
+        private String revisionId; 
 
         private Builder() {
             super();
@@ -101,6 +114,7 @@ public class DeployApplicationGroupRequest extends Request {
             this.deployParameters = request.deployParameters;
             this.name = request.name;
             this.regionId = request.regionId;
+            this.revisionId = request.revisionId;
         } 
 
         /**
@@ -151,6 +165,15 @@ public class DeployApplicationGroupRequest extends Request {
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);
             this.regionId = regionId;
+            return this;
+        }
+
+        /**
+         * RevisionId.
+         */
+        public Builder revisionId(String revisionId) {
+            this.putQueryParameter("RevisionId", revisionId);
+            this.revisionId = revisionId;
             return this;
         }
 
