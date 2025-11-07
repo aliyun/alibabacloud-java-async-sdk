@@ -206,6 +206,9 @@ public class DescribeLiveStreamsNotifyRecordsResponseBody extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("NotifyContent")
         private String notifyContent;
 
+        @com.aliyun.core.annotation.NameInMap("NotifyHeader")
+        private String notifyHeader;
+
         @com.aliyun.core.annotation.NameInMap("NotifyResponse")
         private String notifyResponse;
 
@@ -229,6 +232,7 @@ public class DescribeLiveStreamsNotifyRecordsResponseBody extends TeaModel {
             this.description = builder.description;
             this.domainName = builder.domainName;
             this.notifyContent = builder.notifyContent;
+            this.notifyHeader = builder.notifyHeader;
             this.notifyResponse = builder.notifyResponse;
             this.notifyResult = builder.notifyResult;
             this.notifyTime = builder.notifyTime;
@@ -271,6 +275,13 @@ public class DescribeLiveStreamsNotifyRecordsResponseBody extends TeaModel {
          */
         public String getNotifyContent() {
             return this.notifyContent;
+        }
+
+        /**
+         * @return notifyHeader
+         */
+        public String getNotifyHeader() {
+            return this.notifyHeader;
         }
 
         /**
@@ -320,6 +331,7 @@ public class DescribeLiveStreamsNotifyRecordsResponseBody extends TeaModel {
             private String description; 
             private String domainName; 
             private String notifyContent; 
+            private String notifyHeader; 
             private String notifyResponse; 
             private String notifyResult; 
             private String notifyTime; 
@@ -335,6 +347,7 @@ public class DescribeLiveStreamsNotifyRecordsResponseBody extends TeaModel {
                 this.description = model.description;
                 this.domainName = model.domainName;
                 this.notifyContent = model.notifyContent;
+                this.notifyHeader = model.notifyHeader;
                 this.notifyResponse = model.notifyResponse;
                 this.notifyResult = model.notifyResult;
                 this.notifyTime = model.notifyTime;
@@ -384,6 +397,14 @@ public class DescribeLiveStreamsNotifyRecordsResponseBody extends TeaModel {
              */
             public Builder notifyContent(String notifyContent) {
                 this.notifyContent = notifyContent;
+                return this;
+            }
+
+            /**
+             * NotifyHeader.
+             */
+            public Builder notifyHeader(String notifyHeader) {
+                this.notifyHeader = notifyHeader;
                 return this;
             }
 
