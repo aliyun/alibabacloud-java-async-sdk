@@ -93,7 +93,10 @@ public class GetApiSchemaUsageResponseBody extends TeaModel {
         } 
 
         /**
-         * InstanceId.
+         * <p>The plan ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>esa-site-agknce3n****</p>
          */
         public Builder instanceId(String instanceId) {
             this.instanceId = instanceId;
@@ -101,7 +104,10 @@ public class GetApiSchemaUsageResponseBody extends TeaModel {
         }
 
         /**
-         * InstanceUsage.
+         * <p>The number of files uploaded for schema verification in the plan instance of the website.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10</p>
          */
         public Builder instanceUsage(Integer instanceUsage) {
             this.instanceUsage = instanceUsage;
@@ -120,7 +126,7 @@ public class GetApiSchemaUsageResponseBody extends TeaModel {
         }
 
         /**
-         * Usages.
+         * <p>Usage details for websites.</p>
          */
         public Builder usages(java.util.List<Usages> usages) {
             this.usages = usages;
@@ -199,7 +205,10 @@ public class GetApiSchemaUsageResponseBody extends TeaModel {
             } 
 
             /**
-             * Id.
+             * <p>The website ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>40000449</p>
              */
             public Builder id(Long id) {
                 this.id = id;
@@ -207,7 +216,10 @@ public class GetApiSchemaUsageResponseBody extends TeaModel {
             }
 
             /**
-             * Name.
+             * <p>The website name.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>test</p>
              */
             public Builder name(String name) {
                 this.name = name;
@@ -215,7 +227,10 @@ public class GetApiSchemaUsageResponseBody extends TeaModel {
             }
 
             /**
-             * Usage.
+             * <p>The number of files uploaded for the website.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>0</p>
              */
             public Builder usage(Integer usage) {
                 this.usage = usage;

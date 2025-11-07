@@ -441,6 +441,9 @@ public class GetOriginPoolResponseBody extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Id")
         private Long id;
 
+        @com.aliyun.core.annotation.NameInMap("IpVersionPolicy")
+        private String ipVersionPolicy;
+
         @com.aliyun.core.annotation.NameInMap("Name")
         private String name;
 
@@ -456,6 +459,7 @@ public class GetOriginPoolResponseBody extends TeaModel {
             this.enabled = builder.enabled;
             this.header = builder.header;
             this.id = builder.id;
+            this.ipVersionPolicy = builder.ipVersionPolicy;
             this.name = builder.name;
             this.type = builder.type;
             this.weight = builder.weight;
@@ -505,6 +509,13 @@ public class GetOriginPoolResponseBody extends TeaModel {
         }
 
         /**
+         * @return ipVersionPolicy
+         */
+        public String getIpVersionPolicy() {
+            return this.ipVersionPolicy;
+        }
+
+        /**
          * @return name
          */
         public String getName() {
@@ -531,6 +542,7 @@ public class GetOriginPoolResponseBody extends TeaModel {
             private Boolean enabled; 
             private Object header; 
             private Long id; 
+            private String ipVersionPolicy; 
             private String name; 
             private String type; 
             private Integer weight; 
@@ -544,6 +556,7 @@ public class GetOriginPoolResponseBody extends TeaModel {
                 this.enabled = model.enabled;
                 this.header = model.header;
                 this.id = model.id;
+                this.ipVersionPolicy = model.ipVersionPolicy;
                 this.name = model.name;
                 this.type = model.type;
                 this.weight = model.weight;
@@ -606,6 +619,14 @@ public class GetOriginPoolResponseBody extends TeaModel {
              */
             public Builder id(Long id) {
                 this.id = id;
+                return this;
+            }
+
+            /**
+             * IpVersionPolicy.
+             */
+            public Builder ipVersionPolicy(String ipVersionPolicy) {
+                this.ipVersionPolicy = ipVersionPolicy;
                 return this;
             }
 

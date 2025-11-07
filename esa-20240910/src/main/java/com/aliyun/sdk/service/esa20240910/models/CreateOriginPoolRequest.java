@@ -339,6 +339,9 @@ public class CreateOriginPoolRequest extends Request {
         @com.aliyun.core.annotation.NameInMap("Header")
         private Object header;
 
+        @com.aliyun.core.annotation.NameInMap("IpVersionPolicy")
+        private String ipVersionPolicy;
+
         @com.aliyun.core.annotation.NameInMap("Name")
         private String name;
 
@@ -353,6 +356,7 @@ public class CreateOriginPoolRequest extends Request {
             this.authConf = builder.authConf;
             this.enabled = builder.enabled;
             this.header = builder.header;
+            this.ipVersionPolicy = builder.ipVersionPolicy;
             this.name = builder.name;
             this.type = builder.type;
             this.weight = builder.weight;
@@ -395,6 +399,13 @@ public class CreateOriginPoolRequest extends Request {
         }
 
         /**
+         * @return ipVersionPolicy
+         */
+        public String getIpVersionPolicy() {
+            return this.ipVersionPolicy;
+        }
+
+        /**
          * @return name
          */
         public String getName() {
@@ -420,6 +431,7 @@ public class CreateOriginPoolRequest extends Request {
             private AuthConf authConf; 
             private Boolean enabled; 
             private Object header; 
+            private String ipVersionPolicy; 
             private String name; 
             private String type; 
             private Integer weight; 
@@ -432,6 +444,7 @@ public class CreateOriginPoolRequest extends Request {
                 this.authConf = model.authConf;
                 this.enabled = model.enabled;
                 this.header = model.header;
+                this.ipVersionPolicy = model.ipVersionPolicy;
                 this.name = model.name;
                 this.type = model.type;
                 this.weight = model.weight;
@@ -483,6 +496,14 @@ public class CreateOriginPoolRequest extends Request {
              */
             public Builder header(Object header) {
                 this.header = header;
+                return this;
+            }
+
+            /**
+             * IpVersionPolicy.
+             */
+            public Builder ipVersionPolicy(String ipVersionPolicy) {
+                this.ipVersionPolicy = ipVersionPolicy;
                 return this;
             }
 
