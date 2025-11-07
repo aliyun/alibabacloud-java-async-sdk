@@ -27,6 +27,7 @@ public class ListMaliciousFileWhitelistConfigsRequest extends Request {
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("IdList")
+    @Deprecated
     private Long idList;
 
     @com.aliyun.core.annotation.Query
@@ -156,7 +157,10 @@ public class ListMaliciousFileWhitelistConfigsRequest extends Request {
         }
 
         /**
-         * IdList.
+         * <p>Event ID. <notice>Field is deprecated.</notice></p>
+         * 
+         * <strong>example:</strong>
+         * <p>123</p>
          */
         public Builder idList(Long idList) {
             this.putQueryParameter("IdList", idList);

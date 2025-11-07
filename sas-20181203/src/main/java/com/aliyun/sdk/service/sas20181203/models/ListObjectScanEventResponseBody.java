@@ -586,7 +586,10 @@ public class ListObjectScanEventResponseBody extends TeaModel {
             }
 
             /**
-             * ErrorMsg.
+             * <p>Error message.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>connect timed out</p>
              */
             public Builder errorMsg(String errorMsg) {
                 this.errorMsg = errorMsg;
@@ -664,7 +667,10 @@ public class ListObjectScanEventResponseBody extends TeaModel {
             }
 
             /**
-             * MatchedWhiteListRuleI18nStr.
+             * <p>Information on whitelisting rule hits.</p>
+             * 
+             * <strong>example:</strong>
+             * <p><strong></strong>&amp;nbsp&amp;nbspmd5&amp;nbsp&amp;nbsp contains &amp;nbsp&amp;nbsp23&amp;nbsp&amp;nbsp</p>
              */
             public Builder matchedWhiteListRuleI18nStr(String matchedWhiteListRuleI18nStr) {
                 this.matchedWhiteListRuleI18nStr = matchedWhiteListRuleI18nStr;
@@ -683,7 +689,10 @@ public class ListObjectScanEventResponseBody extends TeaModel {
             }
 
             /**
-             * OperateResult.
+             * <p>Alarm handling result</p>
+             * 
+             * <strong>example:</strong>
+             * <p>fail</p>
              */
             public Builder operateResult(String operateResult) {
                 this.operateResult = operateResult;
@@ -702,7 +711,10 @@ public class ListObjectScanEventResponseBody extends TeaModel {
             }
 
             /**
-             * Remark.
+             * <p>Remark.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>test</p>
              */
             public Builder remark(String remark) {
                 this.remark = remark;
@@ -763,7 +775,17 @@ public class ListObjectScanEventResponseBody extends TeaModel {
             }
 
             /**
-             * Status.
+             * <p>Event status. Valid values::</p>
+             * <ul>
+             * <li><strong>0</strong>: Unprocessed </li>
+             * <li><strong>1</strong>: Processed manually </li>
+             * <li><strong>2</strong>: Whitelisted </li>
+             * <li><strong>3</strong>: Ignored </li>
+             * <li><strong>4</strong>: Access denied</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>0</p>
              */
             public Builder status(Integer status) {
                 this.status = status;

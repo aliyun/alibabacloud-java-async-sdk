@@ -342,7 +342,10 @@ public class GetOssBucketScanStatisticResponseBody extends TeaModel {
             }
 
             /**
-             * PostPayInvokeCount.
+             * <p>Postpaid usage count.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1000</p>
              */
             public Builder postPayInvokeCount(Long postPayInvokeCount) {
                 this.postPayInvokeCount = postPayInvokeCount;
@@ -350,7 +353,10 @@ public class GetOssBucketScanStatisticResponseBody extends TeaModel {
             }
 
             /**
-             * PrePayAuthCount.
+             * <p>Prepaid authorized count.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>10000</p>
              */
             public Builder prePayAuthCount(Long prePayAuthCount) {
                 this.prePayAuthCount = prePayAuthCount;
@@ -358,7 +364,10 @@ public class GetOssBucketScanStatisticResponseBody extends TeaModel {
             }
 
             /**
-             * PrePayInvokeCount.
+             * <p>Prepaid usage count.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>100</p>
              */
             public Builder prePayInvokeCount(Long prePayInvokeCount) {
                 this.prePayInvokeCount = prePayInvokeCount;

@@ -80,7 +80,7 @@ public class DescribeMonitorAccountsResponseBody extends TeaModel {
         } 
 
         /**
-         * AccountIdInfos.
+         * <p>List of member account information.</p>
          */
         public Builder accountIdInfos(java.util.List<AccountIdInfos> accountIdInfos) {
             this.accountIdInfos = accountIdInfos;
@@ -204,7 +204,10 @@ public class DescribeMonitorAccountsResponseBody extends TeaModel {
             } 
 
             /**
-             * AccountId.
+             * <p>The Alibaba Cloud account ID of the member.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>119593010538****</p>
              */
             public Builder accountId(String accountId) {
                 this.accountId = accountId;
@@ -212,7 +215,10 @@ public class DescribeMonitorAccountsResponseBody extends TeaModel {
             }
 
             /**
-             * AddTime.
+             * <p>The time when it was added to the control list, in timestamp format with second precision.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1760520684000</p>
              */
             public Builder addTime(Long addTime) {
                 this.addTime = addTime;
@@ -220,7 +226,10 @@ public class DescribeMonitorAccountsResponseBody extends TeaModel {
             }
 
             /**
-             * OperatorUid.
+             * <p>The account ID of the operator.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>106635707417****</p>
              */
             public Builder operatorUid(String operatorUid) {
                 this.operatorUid = operatorUid;
@@ -228,7 +237,14 @@ public class DescribeMonitorAccountsResponseBody extends TeaModel {
             }
 
             /**
-             * PostBasicService.
+             * <p>Basic service switch. Values: </p>
+             * <ul>
+             * <li><strong>0</strong>: Off </li>
+             * <li><strong>1</strong>: On</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder postBasicService(Integer postBasicService) {
                 this.postBasicService = postBasicService;
@@ -236,7 +252,17 @@ public class DescribeMonitorAccountsResponseBody extends TeaModel {
             }
 
             /**
-             * SasVersion.
+             * <p>The purchased version of Cloud Security Center. Values:</p>
+             * <ul>
+             * <li><strong>0</strong> or <strong>1</strong>: Free Edition </li>
+             * <li><strong>2</strong> or <strong>3</strong>: Enterprise Edition</li>
+             * <li><strong>5</strong>: Advanced Edition </li>
+             * <li><strong>6</strong>: Anti-Virus Edition </li>
+             * <li><strong>7</strong>: Flagship Edition</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>7</p>
              */
             public Builder sasVersion(String sasVersion) {
                 this.sasVersion = sasVersion;

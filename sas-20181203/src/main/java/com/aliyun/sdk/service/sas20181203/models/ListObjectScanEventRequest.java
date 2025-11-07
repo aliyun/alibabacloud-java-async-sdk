@@ -257,7 +257,14 @@ public class ListObjectScanEventRequest extends Request {
         } 
 
         /**
-         * BatchType.
+         * <p>Batch operation type. Valid values:</p>
+         * <ul>
+         * <li><strong>sha256</strong>: Same file content</li>
+         * <li><strong>eventName</strong>: Same alert type</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>sha256</p>
          */
         public Builder batchType(String batchType) {
             this.putQueryParameter("BatchType", batchType);
@@ -291,7 +298,10 @@ public class ListObjectScanEventRequest extends Request {
         }
 
         /**
-         * EventId.
+         * <p>Event ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>8925****</p>
          */
         public Builder eventId(Long eventId) {
             this.putQueryParameter("EventId", eventId);
@@ -410,7 +420,17 @@ public class ListObjectScanEventRequest extends Request {
         }
 
         /**
-         * Status.
+         * <p>Event status. The values are as follows:</p>
+         * <ul>
+         * <li><strong>0</strong>: Unprocessed </li>
+         * <li><strong>1</strong>: I have processed manually </li>
+         * <li><strong>2</strong>: Whitelisted </li>
+         * <li><strong>3</strong>: Ignored </li>
+         * <li><strong>4</strong>: Access denied</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>0</p>
          */
         public Builder status(Integer status) {
             this.putQueryParameter("Status", status);

@@ -492,7 +492,10 @@ public class ListMaliciousFileWhitelistConfigsResponseBody extends TeaModel {
             }
 
             /**
-             * Remark.
+             * <p>Remark</p>
+             * 
+             * <strong>example:</strong>
+             * <p>test</p>
              */
             public Builder remark(String remark) {
                 this.remark = remark;

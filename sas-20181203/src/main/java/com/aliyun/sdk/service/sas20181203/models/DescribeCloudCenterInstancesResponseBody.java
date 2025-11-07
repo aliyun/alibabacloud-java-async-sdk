@@ -252,6 +252,9 @@ public class DescribeCloudCenterInstancesResponseBody extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Mem")
         private Integer mem;
 
+        @com.aliyun.core.annotation.NameInMap("Namespace")
+        private String namespace;
+
         @com.aliyun.core.annotation.NameInMap("Os")
         private String os;
 
@@ -357,6 +360,7 @@ public class DescribeCloudCenterInstancesResponseBody extends TeaModel {
             this.lastLoginTimestamp = builder.lastLoginTimestamp;
             this.macListString = builder.macListString;
             this.mem = builder.mem;
+            this.namespace = builder.namespace;
             this.os = builder.os;
             this.osName = builder.osName;
             this.podCount = builder.podCount;
@@ -636,6 +640,13 @@ public class DescribeCloudCenterInstancesResponseBody extends TeaModel {
         }
 
         /**
+         * @return namespace
+         */
+        public String getNamespace() {
+            return this.namespace;
+        }
+
+        /**
          * @return os
          */
         public String getOs() {
@@ -832,6 +843,7 @@ public class DescribeCloudCenterInstancesResponseBody extends TeaModel {
             private Long lastLoginTimestamp; 
             private String macListString; 
             private Integer mem; 
+            private String namespace; 
             private String os; 
             private String osName; 
             private Integer podCount; 
@@ -895,6 +907,7 @@ public class DescribeCloudCenterInstancesResponseBody extends TeaModel {
                 this.lastLoginTimestamp = model.lastLoginTimestamp;
                 this.macListString = model.macListString;
                 this.mem = model.mem;
+                this.namespace = model.namespace;
                 this.os = model.os;
                 this.osName = model.osName;
                 this.podCount = model.podCount;
@@ -1389,6 +1402,14 @@ public class DescribeCloudCenterInstancesResponseBody extends TeaModel {
              */
             public Builder mem(Integer mem) {
                 this.mem = mem;
+                return this;
+            }
+
+            /**
+             * Namespace.
+             */
+            public Builder namespace(String namespace) {
+                this.namespace = namespace;
                 return this;
             }
 
