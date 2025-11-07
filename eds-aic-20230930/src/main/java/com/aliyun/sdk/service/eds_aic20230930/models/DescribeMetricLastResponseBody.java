@@ -140,6 +140,9 @@ public class DescribeMetricLastResponseBody extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Average")
         private Double average;
 
+        @com.aliyun.core.annotation.NameInMap("GpuId")
+        private String gpuId;
+
         @com.aliyun.core.annotation.NameInMap("Maximum")
         private Double maximum;
 
@@ -151,6 +154,7 @@ public class DescribeMetricLastResponseBody extends TeaModel {
 
         private DataPoints(Builder builder) {
             this.average = builder.average;
+            this.gpuId = builder.gpuId;
             this.maximum = builder.maximum;
             this.minimum = builder.minimum;
             this.timestamp = builder.timestamp;
@@ -169,6 +173,13 @@ public class DescribeMetricLastResponseBody extends TeaModel {
          */
         public Double getAverage() {
             return this.average;
+        }
+
+        /**
+         * @return gpuId
+         */
+        public String getGpuId() {
+            return this.gpuId;
         }
 
         /**
@@ -194,6 +205,7 @@ public class DescribeMetricLastResponseBody extends TeaModel {
 
         public static final class Builder {
             private Double average; 
+            private String gpuId; 
             private Double maximum; 
             private Double minimum; 
             private Long timestamp; 
@@ -203,6 +215,7 @@ public class DescribeMetricLastResponseBody extends TeaModel {
 
             private Builder(DataPoints model) {
                 this.average = model.average;
+                this.gpuId = model.gpuId;
                 this.maximum = model.maximum;
                 this.minimum = model.minimum;
                 this.timestamp = model.timestamp;
@@ -213,6 +226,14 @@ public class DescribeMetricLastResponseBody extends TeaModel {
              */
             public Builder average(Double average) {
                 this.average = average;
+                return this;
+            }
+
+            /**
+             * GpuId.
+             */
+            public Builder gpuId(String gpuId) {
+                this.gpuId = gpuId;
                 return this;
             }
 
