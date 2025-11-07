@@ -37,4 +37,10 @@ public interface AsyncClient extends SdkAutoCloseable {
      */
     CompletableFuture<GetTokenResponse> getToken(GetTokenRequest request);
 
+    /**
+     * @param request the request parameters of ModelTypeDetermine  ModelTypeDetermineRequest
+     * @return ModelTypeDetermineResponse
+     */
+    CompletableFuture<ModelTypeDetermineResponse> modelTypeDetermine(ModelTypeDetermineRequest request);
+
 }

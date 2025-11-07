@@ -93,4 +93,22 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of ModelTypeDetermine  ModelTypeDetermineRequest
+     * @return ModelTypeDetermineResponse
+     */
+    @Override
+    public CompletableFuture<ModelTypeDetermineResponse> modelTypeDetermine(ModelTypeDetermineRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RESTFUL).setAction("ModelTypeDetermine").setMethod(HttpMethod.POST).setPathRegex("/open/api/v1/model/type/determine").setBodyType(BodyType.JSON).setBodyIsForm(true).setReqBodyType(BodyType.FORM).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(ModelTypeDetermineResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<ModelTypeDetermineResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
 }
