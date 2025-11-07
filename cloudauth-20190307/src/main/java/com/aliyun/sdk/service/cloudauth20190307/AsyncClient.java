@@ -93,6 +93,18 @@ public interface AsyncClient extends SdkAutoCloseable {
      * <b>description</b> :
      * <p>Request Method: Supports sending requests via HTTPS POST and GET methods.</p>
      * <blockquote>
+     * <p>The authorization key is valid for 30 minutes and cannot be reused. It is recommended to reacquire it before each activation.</p>
+     * </blockquote>
+     * 
+     * @param request the request parameters of CreateAntCloudAuthScene  CreateAntCloudAuthSceneRequest
+     * @return CreateAntCloudAuthSceneResponse
+     */
+    CompletableFuture<CreateAntCloudAuthSceneResponse> createAntCloudAuthScene(CreateAntCloudAuthSceneRequest request);
+
+    /**
+     * <b>description</b> :
+     * <p>Request Method: Supports sending requests via HTTPS POST and GET methods.</p>
+     * <blockquote>
      * <p>The authorization key is valid for 30 minutes and cannot be reused. It is recommended to re-obtain it before each activation.</p>
      * </blockquote>
      * 
@@ -103,12 +115,46 @@ public interface AsyncClient extends SdkAutoCloseable {
 
     /**
      * <b>description</b> :
+     * <p>Request Method: Supports sending requests via HTTPS POST and GET methods.</p>
+     * <blockquote>
+     * <p>The authorization key is valid for 30 minutes and cannot be reused. It is recommended to reacquire it before each activation.</p>
+     * </blockquote>
+     * 
+     * @param request the request parameters of CreateCloudauthstScene  CreateCloudauthstSceneRequest
+     * @return CreateCloudauthstSceneResponse
+     */
+    CompletableFuture<CreateCloudauthstSceneResponse> createCloudauthstScene(CreateCloudauthstSceneRequest request);
+
+    /**
+     * <b>description</b> :
+     * <p>Request Method: Supports sending requests via HTTPS POST.
+     * Request Address: cloudauth.aliyuncs.com.</p>
+     * <blockquote>
+     * <p>The authorization key is valid for 30 minutes and cannot be reused. It is recommended to reacquire it before each activation.</p>
+     * </blockquote>
+     * 
+     * @param request the request parameters of CreateSceneConfig  CreateSceneConfigRequest
+     * @return CreateSceneConfigResponse
+     */
+    CompletableFuture<CreateSceneConfigResponse> createSceneConfig(CreateSceneConfigRequest request);
+
+    /**
+     * <b>description</b> :
      * <p>Request Method: Only supports sending requests via HTTPS POST.</p>
      * 
      * @param request the request parameters of CreateVerifySetting  CreateVerifySettingRequest
      * @return CreateVerifySettingResponse
      */
     CompletableFuture<CreateVerifySettingResponse> createVerifySetting(CreateVerifySettingRequest request);
+
+    /**
+     * <b>description</b> :
+     * <p>Request Method: Only supports sending requests via HTTPS POST.</p>
+     * 
+     * @param request the request parameters of CreateWhitelistSetting  CreateWhitelistSettingRequest
+     * @return CreateWhitelistSettingResponse
+     */
+    CompletableFuture<CreateWhitelistSettingResponse> createWhitelistSetting(CreateWhitelistSettingRequest request);
 
     /**
      * @param request the request parameters of CredentialVerify  CredentialVerifyRequest
@@ -134,6 +180,73 @@ public interface AsyncClient extends SdkAutoCloseable {
 
     /**
      * <b>description</b> :
+     * <p>Request Method: Supports sending requests via HTTPS POST and GET methods.</p>
+     * <blockquote>
+     * <p>The authorization key is valid for 30 minutes and cannot be reused. It is recommended to reacquire it before each activation.</p>
+     * </blockquote>
+     * 
+     * @param request the request parameters of DeleteAllCustomizeFlowStrategy  DeleteAllCustomizeFlowStrategyRequest
+     * @return DeleteAllCustomizeFlowStrategyResponse
+     */
+    CompletableFuture<DeleteAllCustomizeFlowStrategyResponse> deleteAllCustomizeFlowStrategy(DeleteAllCustomizeFlowStrategyRequest request);
+
+    /**
+     * <b>description</b> :
+     * <ul>
+     * <li>Service Address: cloudauth.aliyuncs.com.</li>
+     * <li>Request Method: HTTPS POST and GET.</li>
+     * </ul>
+     * 
+     * @param request the request parameters of DeleteAntCloudAuthScene  DeleteAntCloudAuthSceneRequest
+     * @return DeleteAntCloudAuthSceneResponse
+     */
+    CompletableFuture<DeleteAntCloudAuthSceneResponse> deleteAntCloudAuthScene(DeleteAntCloudAuthSceneRequest request);
+
+    /**
+     * <b>description</b> :
+     * <p>Request Method: Only supports sending requests via HTTPS POST method.</p>
+     * 
+     * @param request the request parameters of DeleteBlackListStrategy  DeleteBlackListStrategyRequest
+     * @return DeleteBlackListStrategyResponse
+     */
+    CompletableFuture<DeleteBlackListStrategyResponse> deleteBlackListStrategy(DeleteBlackListStrategyRequest request);
+
+    /**
+     * <b>description</b> :
+     * <p>Request Method: Supports sending requests using HTTPS POST and GET methods.</p>
+     * <blockquote>
+     * <p>The authorization key is valid for 30 minutes and cannot be reused. It is recommended to re-obtain it before each activation.</p>
+     * </blockquote>
+     * 
+     * @param request the request parameters of DeleteCloudauthstScene  DeleteCloudauthstSceneRequest
+     * @return DeleteCloudauthstSceneResponse
+     */
+    CompletableFuture<DeleteCloudauthstSceneResponse> deleteCloudauthstScene(DeleteCloudauthstSceneRequest request);
+
+    /**
+     * <b>description</b> :
+     * <p>Request Method: Supports sending requests via HTTPS POST.
+     * Request URL: cloudauth.aliyuncs.com.</p>
+     * 
+     * @param request the request parameters of DeleteControlStrategy  DeleteControlStrategyRequest
+     * @return DeleteControlStrategyResponse
+     */
+    CompletableFuture<DeleteControlStrategyResponse> deleteControlStrategy(DeleteControlStrategyRequest request);
+
+    /**
+     * <b>description</b> :
+     * <p>Request Method: Supports sending requests using HTTPS POST and GET methods.</p>
+     * <blockquote>
+     * <p>The authorization key is valid for 30 minutes and cannot be reused. It is recommended to reacquire it before each activation.</p>
+     * </blockquote>
+     * 
+     * @param request the request parameters of DeleteCustomizeFlowStrategy  DeleteCustomizeFlowStrategyRequest
+     * @return DeleteCustomizeFlowStrategyResponse
+     */
+    CompletableFuture<DeleteCustomizeFlowStrategyResponse> deleteCustomizeFlowStrategy(DeleteCustomizeFlowStrategyRequest request);
+
+    /**
+     * <b>description</b> :
      * <p>Deletes all personal information fields in the request, including name, ID number, phone number, IP, images, videos, and device information, etc.</p>
      * 
      * @param request the request parameters of DeleteFaceVerifyResult  DeleteFaceVerifyResultRequest
@@ -143,12 +256,60 @@ public interface AsyncClient extends SdkAutoCloseable {
 
     /**
      * <b>description</b> :
+     * <ul>
+     * <li>Request Method: Supports sending requests via HTTPS POST and GET methods.</li>
+     * <li>Request URL: cloudauth.aliyuncs.com.<blockquote>
+     * <p>The authorization key is valid for 30 minutes and cannot be reused. It is recommended to re-obtain it before each activation.</p>
+     * </blockquote>
+     * </li>
+     * </ul>
+     * 
+     * @param request the request parameters of DeleteSceneConfig  DeleteSceneConfigRequest
+     * @return DeleteSceneConfigResponse
+     */
+    CompletableFuture<DeleteSceneConfigResponse> deleteSceneConfig(DeleteSceneConfigRequest request);
+
+    /**
+     * <b>description</b> :
+     * <p>Request Method: Only supports sending requests via HTTPS POST method.</p>
+     * 
+     * @param request the request parameters of DeleteWhitelistSetting  DeleteWhitelistSettingRequest
+     * @return DeleteWhitelistSettingResponse
+     */
+    CompletableFuture<DeleteWhitelistSettingResponse> deleteWhitelistSetting(DeleteWhitelistSettingRequest request);
+
+    /**
+     * <b>description</b> :
+     * <p>Request Method: Supports sending requests via HTTPS POST and GET methods.</p>
+     * <blockquote>
+     * <p>The authorization key is valid for 30 minutes and cannot be reused. It is recommended to re-obtain it before each activation.</p>
+     * </blockquote>
+     * 
+     * @param request the request parameters of DescribeAntAndCloudAuthUserStatus  DescribeAntAndCloudAuthUserStatusRequest
+     * @return DescribeAntAndCloudAuthUserStatusResponse
+     */
+    CompletableFuture<DescribeAntAndCloudAuthUserStatusResponse> describeAntAndCloudAuthUserStatus(DescribeAntAndCloudAuthUserStatusRequest request);
+
+    /**
+     * <b>description</b> :
      * <p>After receiving the callback notification, you can use this interface on the server side to obtain the corresponding authentication status and information.</p>
      * 
      * @param request the request parameters of DescribeCardVerify  DescribeCardVerifyRequest
      * @return DescribeCardVerifyResponse
      */
     CompletableFuture<DescribeCardVerifyResponse> describeCardVerify(DescribeCardVerifyRequest request);
+
+    /**
+     * <b>description</b> :
+     * <p>Request Method: Supports sending requests via HTTPS POST and GET methods.</p>
+     * <blockquote>
+     * <p>The authorization key is valid for 30 minutes and cannot be reused. It is recommended to reacquire it before each activation.</p>
+     * </blockquote>
+     * 
+     * @param request the request parameters of DescribeCloudauthstSceneList  DescribeCloudauthstSceneListRequest
+     * @return DescribeCloudauthstSceneListResponse
+     */
+    CompletableFuture<DescribeCloudauthstSceneListResponse> describeCloudauthstSceneList(DescribeCloudauthstSceneListRequest request);
 
     /**
      * <b>description</b> :
@@ -178,6 +339,90 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<DescribeFaceVerifyResponse> describeFaceVerify(DescribeFaceVerifyRequest request);
 
     /**
+     * @param request the request parameters of DescribeInfoCheckExportRecord  DescribeInfoCheckExportRecordRequest
+     * @return DescribeInfoCheckExportRecordResponse
+     */
+    CompletableFuture<DescribeInfoCheckExportRecordResponse> describeInfoCheckExportRecord(DescribeInfoCheckExportRecordRequest request);
+
+    /**
+     * <b>description</b> :
+     * <p>Request Method: Supports sending requests via HTTPS POST and GET methods.</p>
+     * <blockquote>
+     * <p>The authorization key is valid for 30 minutes and cannot be reused. It is recommended to re-obtain it before each activation.</p>
+     * </blockquote>
+     * 
+     * @param request the request parameters of DescribeListAntCloudAuthScenes  DescribeListAntCloudAuthScenesRequest
+     * @return DescribeListAntCloudAuthScenesResponse
+     */
+    CompletableFuture<DescribeListAntCloudAuthScenesResponse> describeListAntCloudAuthScenes(DescribeListAntCloudAuthScenesRequest request);
+
+    /**
+     * <b>description</b> :
+     * <ul>
+     * <li>Service Address: cloudauth.aliyuncs.com.</li>
+     * <li>Request Method: HTTPS POST and GET.</li>
+     * </ul>
+     * 
+     * @param request the request parameters of DescribeListFaceVerifyData  DescribeListFaceVerifyDataRequest
+     * @return DescribeListFaceVerifyDataResponse
+     */
+    CompletableFuture<DescribeListFaceVerifyDataResponse> describeListFaceVerifyData(DescribeListFaceVerifyDataRequest request);
+
+    /**
+     * <b>description</b> :
+     * <ul>
+     * <li>Service address: cloudauth.aliyuncs.com.</li>
+     * <li>Request method: HTTPS POST and GET.</li>
+     * </ul>
+     * 
+     * @param request the request parameters of DescribeListFaceVerifyInfos  DescribeListFaceVerifyInfosRequest
+     * @return DescribeListFaceVerifyInfosResponse
+     */
+    CompletableFuture<DescribeListFaceVerifyInfosResponse> describeListFaceVerifyInfos(DescribeListFaceVerifyInfosRequest request);
+
+    /**
+     * @param request the request parameters of DescribeMetaSearchPageList  DescribeMetaSearchPageListRequest
+     * @return DescribeMetaSearchPageListResponse
+     */
+    CompletableFuture<DescribeMetaSearchPageListResponse> describeMetaSearchPageList(DescribeMetaSearchPageListRequest request);
+
+    /**
+     * @param request the request parameters of DescribeMetaStatisticsList  DescribeMetaStatisticsListRequest
+     * @return DescribeMetaStatisticsListResponse
+     */
+    CompletableFuture<DescribeMetaStatisticsListResponse> describeMetaStatisticsList(DescribeMetaStatisticsListRequest request);
+
+    /**
+     * @param request the request parameters of DescribeMetaStatisticsPageList  DescribeMetaStatisticsPageListRequest
+     * @return DescribeMetaStatisticsPageListResponse
+     */
+    CompletableFuture<DescribeMetaStatisticsPageListResponse> describeMetaStatisticsPageList(DescribeMetaStatisticsPageListRequest request);
+
+    /**
+     * <b>description</b> :
+     * <ul>
+     * <li>Request Method: Supports sending requests via HTTPS POST and GET methods.</li>
+     * <li>Service Address: cloudauth.aliyuncs.com.</li>
+     * </ul>
+     * 
+     * @param request the request parameters of DescribeOssStatus  DescribeOssStatusRequest
+     * @return DescribeOssStatusResponse
+     */
+    CompletableFuture<DescribeOssStatusResponse> describeOssStatus(DescribeOssStatusRequest request);
+
+    /**
+     * <b>description</b> :
+     * <ul>
+     * <li>Request Method: Supports sending requests via HTTPS POST and GET methods.</li>
+     * <li>Service Address: cloudauth.aliyuncs.com.</li>
+     * </ul>
+     * 
+     * @param request the request parameters of DescribeOssStatusV2  DescribeOssStatusV2Request
+     * @return DescribeOssStatusV2Response
+     */
+    CompletableFuture<DescribeOssStatusV2Response> describeOssStatusV2(DescribeOssStatusV2Request request);
+
+    /**
      * @param request the request parameters of DescribeOssUploadToken  DescribeOssUploadTokenRequest
      * @return DescribeOssUploadTokenResponse
      */
@@ -190,10 +435,100 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<DescribePageFaceVerifyDataResponse> describePageFaceVerifyData(DescribePageFaceVerifyDataRequest request);
 
     /**
+     * <b>description</b> :
+     * <p>Request Method: Only supports sending requests via HTTPS POST method.</p>
+     * 
+     * @param request the request parameters of DescribePageSetting  DescribePageSettingRequest
+     * @return DescribePageSettingResponse
+     */
+    CompletableFuture<DescribePageSettingResponse> describePageSetting(DescribePageSettingRequest request);
+
+    /**
+     * <b>description</b> :
+     * <p>Request Method: Supports sending requests via HTTPS GET/POST methods.</p>
+     * 
+     * @param request the request parameters of DescribeProductCode  DescribeProductCodeRequest
+     * @return DescribeProductCodeResponse
+     */
+    CompletableFuture<DescribeProductCodeResponse> describeProductCode(DescribeProductCodeRequest request);
+
+    /**
      * @param request the request parameters of DescribeSmartStatisticsPageList  DescribeSmartStatisticsPageListRequest
      * @return DescribeSmartStatisticsPageListResponse
      */
     CompletableFuture<DescribeSmartStatisticsPageListResponse> describeSmartStatisticsPageList(DescribeSmartStatisticsPageListRequest request);
+
+    /**
+     * <b>description</b> :
+     * <ul>
+     * <li>Service address: cloudauth.aliyuncs.com.</li>
+     * <li>Request method: HTTPS POST and GET.</li>
+     * </ul>
+     * 
+     * @param request the request parameters of DescribeVerifyDeviceRiskStatistics  DescribeVerifyDeviceRiskStatisticsRequest
+     * @return DescribeVerifyDeviceRiskStatisticsResponse
+     */
+    CompletableFuture<DescribeVerifyDeviceRiskStatisticsResponse> describeVerifyDeviceRiskStatistics(DescribeVerifyDeviceRiskStatisticsRequest request);
+
+    /**
+     * <b>description</b> :
+     * <ul>
+     * <li>Service address: cloudauth.aliyuncs.com.</li>
+     * <li>Request method: HTTPS POST and GET.</li>
+     * </ul>
+     * 
+     * @param request the request parameters of DescribeVerifyFailStatistics  DescribeVerifyFailStatisticsRequest
+     * @return DescribeVerifyFailStatisticsResponse
+     */
+    CompletableFuture<DescribeVerifyFailStatisticsResponse> describeVerifyFailStatistics(DescribeVerifyFailStatisticsRequest request);
+
+    /**
+     * <b>description</b> :
+     * <ul>
+     * <li>Service Address: cloudauth.aliyuncs.com.</li>
+     * <li>Request Method: HTTPS POST and GET.</li>
+     * </ul>
+     * 
+     * @param request the request parameters of DescribeVerifyPersonasDeviceModelStatistics  DescribeVerifyPersonasDeviceModelStatisticsRequest
+     * @return DescribeVerifyPersonasDeviceModelStatisticsResponse
+     */
+    CompletableFuture<DescribeVerifyPersonasDeviceModelStatisticsResponse> describeVerifyPersonasDeviceModelStatistics(DescribeVerifyPersonasDeviceModelStatisticsRequest request);
+
+    /**
+     * <b>description</b> :
+     * <ul>
+     * <li>Service address: cloudauth.aliyuncs.com.</li>
+     * <li>Request method: HTTPS POST and GET.</li>
+     * </ul>
+     * 
+     * @param request the request parameters of DescribeVerifyPersonasOsStatistics  DescribeVerifyPersonasOsStatisticsRequest
+     * @return DescribeVerifyPersonasOsStatisticsResponse
+     */
+    CompletableFuture<DescribeVerifyPersonasOsStatisticsResponse> describeVerifyPersonasOsStatistics(DescribeVerifyPersonasOsStatisticsRequest request);
+
+    /**
+     * <b>description</b> :
+     * <ul>
+     * <li>Service Address: cloudauth.aliyuncs.com.</li>
+     * <li>Request Method: HTTPS POST and GET.</li>
+     * </ul>
+     * 
+     * @param request the request parameters of DescribeVerifyPersonasProvinceStatistics  DescribeVerifyPersonasProvinceStatisticsRequest
+     * @return DescribeVerifyPersonasProvinceStatisticsResponse
+     */
+    CompletableFuture<DescribeVerifyPersonasProvinceStatisticsResponse> describeVerifyPersonasProvinceStatistics(DescribeVerifyPersonasProvinceStatisticsRequest request);
+
+    /**
+     * <b>description</b> :
+     * <ul>
+     * <li>Service address: cloudauth.aliyuncs.com.</li>
+     * <li>Request method: HTTPS POST and GET.</li>
+     * </ul>
+     * 
+     * @param request the request parameters of DescribeVerifyPersonasSexStatistics  DescribeVerifyPersonasSexStatisticsRequest
+     * @return DescribeVerifyPersonasSexStatisticsResponse
+     */
+    CompletableFuture<DescribeVerifyPersonasSexStatisticsResponse> describeVerifyPersonasSexStatistics(DescribeVerifyPersonasSexStatisticsRequest request);
 
     /**
      * <b>description</b> :
@@ -222,6 +557,30 @@ public interface AsyncClient extends SdkAutoCloseable {
 
     /**
      * <b>description</b> :
+     * <ul>
+     * <li>Service Address: cloudauth.aliyuncs.com.</li>
+     * <li>Request Method: HTTPS POST and GET.</li>
+     * </ul>
+     * 
+     * @param request the request parameters of DescribeVerifySearchPageList  DescribeVerifySearchPageListRequest
+     * @return DescribeVerifySearchPageListResponse
+     */
+    CompletableFuture<DescribeVerifySearchPageListResponse> describeVerifySearchPageList(DescribeVerifySearchPageListRequest request);
+
+    /**
+     * <b>description</b> :
+     * <ul>
+     * <li>Request Method: Supports sending requests using HTTPS POST and GET methods.</li>
+     * <li>Service Address: cloudauth.aliyuncs.com.</li>
+     * </ul>
+     * 
+     * @param request the request parameters of DescribeVerifyStatistics  DescribeVerifyStatisticsRequest
+     * @return DescribeVerifyStatisticsResponse
+     */
+    CompletableFuture<DescribeVerifyStatisticsResponse> describeVerifyStatistics(DescribeVerifyStatisticsRequest request);
+
+    /**
+     * <b>description</b> :
      * <p>Preparation for Access: When integrating this API, please ensure that the corresponding preparations have been completed. For details, see <a href="https://help.aliyun.com/document_detail/127536.html">Overview of Real Person Authentication Solution Integration Process</a> and <a href="https://help.aliyun.com/document_detail/127687.html">Overview of Live Face Verification Solution (Liveness Detection Solution) Integration Process</a>.
      * Request Method: HTTPS POST and GET
      * API Description: Before each authentication, use this interface to obtain an authentication Token (VerifyToken), which is used to link various interfaces in the authentication request.
@@ -242,6 +601,15 @@ public interface AsyncClient extends SdkAutoCloseable {
 
     /**
      * <b>description</b> :
+     * <p>Request Method: Only supports sending requests via HTTPS POST method.</p>
+     * 
+     * @param request the request parameters of DescribeWhitelistSetting  DescribeWhitelistSettingRequest
+     * @return DescribeWhitelistSettingResponse
+     */
+    CompletableFuture<DescribeWhitelistSettingResponse> describeWhitelistSetting(DescribeWhitelistSettingRequest request);
+
+    /**
+     * <b>description</b> :
      * <p>Request Method: Only supports sending requests via HTTPS POST.
      * Interface Description: Detects the validity-related attributes of faces in the input photo, which helps the business side to determine whether the photo meets their own business retention or comparison requirements. The currently supported face validity-related attributes include: whether it is a face, whether it is blurry, whether glasses are worn, face pose, whether it is a smile, etc.
      * Instructions for Uploading Image Addresses: When passing in images, you need to upload their corresponding HTTP, OSS addresses, or Base64 encoding.</p>
@@ -259,6 +627,22 @@ public interface AsyncClient extends SdkAutoCloseable {
      * @return DetectFaceAttributesResponse
      */
     CompletableFuture<DetectFaceAttributesResponse> detectFaceAttributes(DetectFaceAttributesRequest request);
+
+    /**
+     * <b>description</b> :
+     * <p>Obtain the download link for statistical call data files under the product plan based on query conditions.</p>
+     * <ul>
+     * <li>Method: HTTPS POST</li>
+     * <li>Service Address: cloudauth.aliyuncs.com<blockquote>
+     * <p>Real-person authentication products use CertifyId to count call volumes. For ease of reconciliation, please retain the CertifyId field in your system.</p>
+     * </blockquote>
+     * </li>
+     * </ul>
+     * 
+     * @param request the request parameters of DownloadVerifyRecords  DownloadVerifyRecordsRequest
+     * @return DownloadVerifyRecordsResponse
+     */
+    CompletableFuture<DownloadVerifyRecordsResponse> downloadVerifyRecords(DownloadVerifyRecordsRequest request);
 
     /**
      * @param request the request parameters of Id2MetaPeriodVerify  Id2MetaPeriodVerifyRequest
@@ -404,6 +788,43 @@ public interface AsyncClient extends SdkAutoCloseable {
 
     /**
      * <b>description</b> :
+     * <ul>
+     * <li>Service Address: cloudauth.aliyuncs.com.</li>
+     * <li>Request Method: HTTPS POST and GET.</li>
+     * <li>Interface Description: Add or modify blacklist rule.</li>
+     * </ul>
+     * 
+     * @param request the request parameters of ModifyBlackListStrategy  ModifyBlackListStrategyRequest
+     * @return ModifyBlackListStrategyResponse
+     */
+    CompletableFuture<ModifyBlackListStrategyResponse> modifyBlackListStrategy(ModifyBlackListStrategyRequest request);
+
+    /**
+     * <b>description</b> :
+     * <ul>
+     * <li>Request Method: Supports sending requests via HTTPS POST method.</li>
+     * <li>Request Address: cloudauth.aliyuncs.com.</li>
+     * </ul>
+     * 
+     * @param request the request parameters of ModifyControlStrategy  ModifyControlStrategyRequest
+     * @return ModifyControlStrategyResponse
+     */
+    CompletableFuture<ModifyControlStrategyResponse> modifyControlStrategy(ModifyControlStrategyRequest request);
+
+    /**
+     * <b>description</b> :
+     * <ul>
+     * <li>Request Method: Supports sending requests via HTTPS POST and GET methods.</li>
+     * <li>Service Address: cloudauth.aliyuncs.com.</li>
+     * </ul>
+     * 
+     * @param request the request parameters of ModifyCustomizeFlowStrategyList  ModifyCustomizeFlowStrategyListRequest
+     * @return ModifyCustomizeFlowStrategyListResponse
+     */
+    CompletableFuture<ModifyCustomizeFlowStrategyListResponse> modifyCustomizeFlowStrategyList(ModifyCustomizeFlowStrategyListRequest request);
+
+    /**
+     * <b>description</b> :
      * <p>Request Method: Supports sending requests using HTTPS POST and GET methods.</p>
      * 
      * @param request the request parameters of ModifyDeviceInfo  ModifyDeviceInfoRequest
@@ -418,10 +839,132 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<PageQueryWhiteListSettingResponse> pageQueryWhiteListSetting(PageQueryWhiteListSettingRequest request);
 
     /**
+     * <b>description</b> :
+     * <ul>
+     * <li>Request URL: cloudauth.aliyuncs.com</li>
+     * <li>Request Method: HTTPS POST and GET.<blockquote>
+     * <p>Supports setting blacklists for IP, ID number, phone number, bank card number, etc. When a blacklist is hit, the system rejects the request and returns a fixed error code.
+     * Supports setting blacklists for IP, ID number, phone number, bank card number, etc. When a blacklist is hit, the system rejects the request and returns a fixed error code.</p>
+     * </blockquote>
+     * </li>
+     * </ul>
+     * 
+     * @param request the request parameters of QueryBlackListStrategy  QueryBlackListStrategyRequest
+     * @return QueryBlackListStrategyResponse
+     */
+    CompletableFuture<QueryBlackListStrategyResponse> queryBlackListStrategy(QueryBlackListStrategyRequest request);
+
+    /**
+     * <b>description</b> :
+     * <ul>
+     * <li>Request Method: Supports sending requests via HTTPS POST and GET methods.</li>
+     * <li>Request Address: cloudauth.aliyuncs.com.</li>
+     * </ul>
+     * 
+     * @param request the request parameters of QueryControlStrategy  QueryControlStrategyRequest
+     * @return QueryControlStrategyResponse
+     */
+    CompletableFuture<QueryControlStrategyResponse> queryControlStrategy(QueryControlStrategyRequest request);
+
+    /**
+     * <b>description</b> :
+     * <ul>
+     * <li>Service Address: cloudauth.aliyuncs.com</li>
+     * <li>Request Method: HTTPS POST and GET.</li>
+     * <li>Security Rules: These are rules to ensure system security, such as monitoring for API abuse, account theft, etc. When a threshold is triggered, the system supports alerting.</li>
+     * </ul>
+     * 
+     * @param request the request parameters of QueryCustomizeFlowStrategy  QueryCustomizeFlowStrategyRequest
+     * @return QueryCustomizeFlowStrategyResponse
+     */
+    CompletableFuture<QueryCustomizeFlowStrategyResponse> queryCustomizeFlowStrategy(QueryCustomizeFlowStrategyRequest request);
+
+    /**
+     * <b>description</b> :
+     * <ul>
+     * <li>Service address: cloudauth.aliyuncs.com.</li>
+     * <li>Request method: HTTPS POST and GET.</li>
+     * </ul>
+     * 
+     * @param request the request parameters of QuerySceneConfigs  QuerySceneConfigsRequest
+     * @return QuerySceneConfigsResponse
+     */
+    CompletableFuture<QuerySceneConfigsResponse> querySceneConfigs(QuerySceneConfigsRequest request);
+
+    /**
+     * <b>description</b> :
+     * <p>Obtain the download link for statistical call data files under the product plan based on query conditions.</p>
+     * <ul>
+     * <li>Method: HTTPS POST</li>
+     * <li>Service Address: cloudauth.aliyuncs.com<blockquote>
+     * <p>The real-person authentication product uses CertifyId to count the number of calls. For ease of reconciliation, please retain the CertifyId field in your system.</p>
+     * </blockquote>
+     * </li>
+     * </ul>
+     * 
+     * @param request the request parameters of QueryVerifyDownloadTask  QueryVerifyDownloadTaskRequest
+     * @return QueryVerifyDownloadTaskResponse
+     */
+    CompletableFuture<QueryVerifyDownloadTaskResponse> queryVerifyDownloadTask(QueryVerifyDownloadTaskRequest request);
+
+    /**
+     * <b>description</b> :
+     * <ul>
+     * <li>Service address: cloudauth.aliyuncs.com</li>
+     * <li>Request method: HTTPS POST and GET.</li>
+     * <li>This interface uses different parameters for different product solutions. For details, please refer to the <a href="https://help.aliyun.com/zh/id-verification/financial-grade-id-verification/product-overview/introduction/?spm=a2c4g.11186623.help-menu-2401581.d_0_0.13f644ecRzFHfm&scm=20140722.H_99169._.OR_help-T_cn~zh-V_1">official documentation</a>.</li>
+     * </ul>
+     * 
+     * @param request the request parameters of QueryVerifyFlowPackage  QueryVerifyFlowPackageRequest
+     * @return QueryVerifyFlowPackageResponse
+     */
+    CompletableFuture<QueryVerifyFlowPackageResponse> queryVerifyFlowPackage(QueryVerifyFlowPackageRequest request);
+
+    /**
+     * <b>description</b> :
+     * <ul>
+     * <li>Request URL: cloudauth.aliyuncs.com</li>
+     * <li>Request Method: HTTPS POST and GET.<blockquote>
+     * <p>Real-person authentication products use CertifyId to count call volume. For ease of reconciliation, please retain the CertifyId field in your system.</p>
+     * </blockquote>
+     * </li>
+     * </ul>
+     * 
+     * @param request the request parameters of QueryVerifyInvokeSatistic  QueryVerifyInvokeSatisticRequest
+     * @return QueryVerifyInvokeSatisticResponse
+     */
+    CompletableFuture<QueryVerifyInvokeSatisticResponse> queryVerifyInvokeSatistic(QueryVerifyInvokeSatisticRequest request);
+
+    /**
      * @param request the request parameters of RemoveWhiteListSetting  RemoveWhiteListSettingRequest
      * @return RemoveWhiteListSettingResponse
      */
     CompletableFuture<RemoveWhiteListSettingResponse> removeWhiteListSetting(RemoveWhiteListSettingRequest request);
+
+    /**
+     * <b>description</b> :
+     * <p>Update the information of a financial-level authentication scenario based on the scenario ID.</p>
+     * <ul>
+     * <li>Service address: cloudauth.aliyuncs.com.</li>
+     * <li>Request method: HTTPS POST.</li>
+     * </ul>
+     * 
+     * @param request the request parameters of UpdateAntCloudAuthScene  UpdateAntCloudAuthSceneRequest
+     * @return UpdateAntCloudAuthSceneResponse
+     */
+    CompletableFuture<UpdateAntCloudAuthSceneResponse> updateAntCloudAuthScene(UpdateAntCloudAuthSceneRequest request);
+
+    /**
+     * <b>description</b> :
+     * <ul>
+     * <li>Request Method: Supports sending requests via HTTPS POST.</li>
+     * <li>Request URL: cloudauth.aliyuncs.com.</li>
+     * </ul>
+     * 
+     * @param request the request parameters of UpdateSceneConfig  UpdateSceneConfigRequest
+     * @return UpdateSceneConfigResponse
+     */
+    CompletableFuture<UpdateSceneConfigResponse> updateSceneConfig(UpdateSceneConfigRequest request);
 
     /**
      * <b>description</b> :

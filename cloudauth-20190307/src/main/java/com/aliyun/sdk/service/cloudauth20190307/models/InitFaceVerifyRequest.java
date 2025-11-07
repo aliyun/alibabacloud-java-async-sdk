@@ -91,6 +91,10 @@ public class InitFaceVerifyRequest extends Request {
     private String faceGuardOutput;
 
     @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("H5DegradeConfirmBtn")
+    private String h5DegradeConfirmBtn;
+
+    @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("Ip")
     private String ip;
 
@@ -194,6 +198,7 @@ public class InitFaceVerifyRequest extends Request {
         this.faceContrastPicture = builder.faceContrastPicture;
         this.faceContrastPictureUrl = builder.faceContrastPictureUrl;
         this.faceGuardOutput = builder.faceGuardOutput;
+        this.h5DegradeConfirmBtn = builder.h5DegradeConfirmBtn;
         this.ip = builder.ip;
         this.metaInfo = builder.metaInfo;
         this.mobile = builder.mobile;
@@ -354,6 +359,13 @@ public class InitFaceVerifyRequest extends Request {
      */
     public String getFaceGuardOutput() {
         return this.faceGuardOutput;
+    }
+
+    /**
+     * @return h5DegradeConfirmBtn
+     */
+    public String getH5DegradeConfirmBtn() {
+        return this.h5DegradeConfirmBtn;
     }
 
     /**
@@ -522,6 +534,7 @@ public class InitFaceVerifyRequest extends Request {
         private String faceContrastPicture; 
         private String faceContrastPictureUrl; 
         private String faceGuardOutput; 
+        private String h5DegradeConfirmBtn; 
         private String ip; 
         private String metaInfo; 
         private String mobile; 
@@ -568,6 +581,7 @@ public class InitFaceVerifyRequest extends Request {
             this.faceContrastPicture = request.faceContrastPicture;
             this.faceContrastPictureUrl = request.faceContrastPictureUrl;
             this.faceGuardOutput = request.faceGuardOutput;
+            this.h5DegradeConfirmBtn = request.h5DegradeConfirmBtn;
             this.ip = request.ip;
             this.metaInfo = request.metaInfo;
             this.mobile = request.mobile;
@@ -870,6 +884,15 @@ public class InitFaceVerifyRequest extends Request {
         public Builder faceGuardOutput(String faceGuardOutput) {
             this.putQueryParameter("FaceGuardOutput", faceGuardOutput);
             this.faceGuardOutput = faceGuardOutput;
+            return this;
+        }
+
+        /**
+         * H5DegradeConfirmBtn.
+         */
+        public Builder h5DegradeConfirmBtn(String h5DegradeConfirmBtn) {
+            this.putQueryParameter("H5DegradeConfirmBtn", h5DegradeConfirmBtn);
+            this.h5DegradeConfirmBtn = h5DegradeConfirmBtn;
             return this;
         }
 
