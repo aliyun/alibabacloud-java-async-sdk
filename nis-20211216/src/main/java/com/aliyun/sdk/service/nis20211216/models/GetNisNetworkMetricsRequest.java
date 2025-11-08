@@ -56,6 +56,10 @@ public class GetNisNetworkMetricsRequest extends Request {
     private String scanBy;
 
     @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("StepMinutes")
+    private Integer stepMinutes;
+
+    @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("UseCrossAccount")
     private Boolean useCrossAccount;
 
@@ -69,6 +73,7 @@ public class GetNisNetworkMetricsRequest extends Request {
         this.regionNo = builder.regionNo;
         this.resourceType = builder.resourceType;
         this.scanBy = builder.scanBy;
+        this.stepMinutes = builder.stepMinutes;
         this.useCrossAccount = builder.useCrossAccount;
     }
 
@@ -142,6 +147,13 @@ public class GetNisNetworkMetricsRequest extends Request {
     }
 
     /**
+     * @return stepMinutes
+     */
+    public Integer getStepMinutes() {
+        return this.stepMinutes;
+    }
+
+    /**
      * @return useCrossAccount
      */
     public Boolean getUseCrossAccount() {
@@ -157,6 +169,7 @@ public class GetNisNetworkMetricsRequest extends Request {
         private String regionNo; 
         private String resourceType; 
         private String scanBy; 
+        private Integer stepMinutes; 
         private Boolean useCrossAccount; 
 
         private Builder() {
@@ -173,6 +186,7 @@ public class GetNisNetworkMetricsRequest extends Request {
             this.regionNo = request.regionNo;
             this.resourceType = request.resourceType;
             this.scanBy = request.scanBy;
+            this.stepMinutes = request.stepMinutes;
             this.useCrossAccount = request.useCrossAccount;
         } 
 
@@ -255,6 +269,15 @@ public class GetNisNetworkMetricsRequest extends Request {
         public Builder scanBy(String scanBy) {
             this.putQueryParameter("ScanBy", scanBy);
             this.scanBy = scanBy;
+            return this;
+        }
+
+        /**
+         * StepMinutes.
+         */
+        public Builder stepMinutes(Integer stepMinutes) {
+            this.putQueryParameter("StepMinutes", stepMinutes);
+            this.stepMinutes = stepMinutes;
             return this;
         }
 

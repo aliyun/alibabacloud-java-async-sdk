@@ -470,6 +470,9 @@ public class DescribeNisInspectionReportCheckItemsResponseBody extends TeaModel 
         @com.aliyun.core.annotation.NameInMap("Description")
         private String description;
 
+        @com.aliyun.core.annotation.NameInMap("DescriptionCode")
+        private String descriptionCode;
+
         @com.aliyun.core.annotation.NameInMap("RecommendationList")
         private java.util.List<RecommendationList> recommendationList;
 
@@ -482,6 +485,7 @@ public class DescribeNisInspectionReportCheckItemsResponseBody extends TeaModel 
             this.checkItemName = builder.checkItemName;
             this.checkResultList = builder.checkResultList;
             this.description = builder.description;
+            this.descriptionCode = builder.descriptionCode;
             this.recommendationList = builder.recommendationList;
             this.resourceType = builder.resourceType;
         }
@@ -530,6 +534,13 @@ public class DescribeNisInspectionReportCheckItemsResponseBody extends TeaModel 
         }
 
         /**
+         * @return descriptionCode
+         */
+        public String getDescriptionCode() {
+            return this.descriptionCode;
+        }
+
+        /**
          * @return recommendationList
          */
         public java.util.List<RecommendationList> getRecommendationList() {
@@ -549,6 +560,7 @@ public class DescribeNisInspectionReportCheckItemsResponseBody extends TeaModel 
             private String checkItemName; 
             private java.util.List<CheckResultList> checkResultList; 
             private String description; 
+            private String descriptionCode; 
             private java.util.List<RecommendationList> recommendationList; 
             private String resourceType; 
 
@@ -561,6 +573,7 @@ public class DescribeNisInspectionReportCheckItemsResponseBody extends TeaModel 
                 this.checkItemName = model.checkItemName;
                 this.checkResultList = model.checkResultList;
                 this.description = model.description;
+                this.descriptionCode = model.descriptionCode;
                 this.recommendationList = model.recommendationList;
                 this.resourceType = model.resourceType;
             } 
@@ -602,6 +615,14 @@ public class DescribeNisInspectionReportCheckItemsResponseBody extends TeaModel 
              */
             public Builder description(String description) {
                 this.description = description;
+                return this;
+            }
+
+            /**
+             * DescriptionCode.
+             */
+            public Builder descriptionCode(String descriptionCode) {
+                this.descriptionCode = descriptionCode;
                 return this;
             }
 
