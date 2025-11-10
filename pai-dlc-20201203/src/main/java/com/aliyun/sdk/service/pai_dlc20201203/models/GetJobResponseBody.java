@@ -71,6 +71,9 @@ public class GetJobResponseBody extends TeaModel {
     @com.aliyun.core.annotation.NameInMap("JobId")
     private String jobId;
 
+    @com.aliyun.core.annotation.NameInMap("JobReplicaStatuses")
+    private java.util.List<JobReplicaStatus> jobReplicaStatuses;
+
     @com.aliyun.core.annotation.NameInMap("JobSpecs")
     private java.util.List<JobSpec> jobSpecs;
 
@@ -162,6 +165,7 @@ public class GetJobResponseBody extends TeaModel {
         this.gmtSubmittedTime = builder.gmtSubmittedTime;
         this.gmtSuccessedTime = builder.gmtSuccessedTime;
         this.jobId = builder.jobId;
+        this.jobReplicaStatuses = builder.jobReplicaStatuses;
         this.jobSpecs = builder.jobSpecs;
         this.jobType = builder.jobType;
         this.pods = builder.pods;
@@ -324,6 +328,13 @@ public class GetJobResponseBody extends TeaModel {
      */
     public String getJobId() {
         return this.jobId;
+    }
+
+    /**
+     * @return jobReplicaStatuses
+     */
+    public java.util.List<JobReplicaStatus> getJobReplicaStatuses() {
+        return this.jobReplicaStatuses;
     }
 
     /**
@@ -513,6 +524,7 @@ public class GetJobResponseBody extends TeaModel {
         private String gmtSubmittedTime; 
         private String gmtSuccessedTime; 
         private String jobId; 
+        private java.util.List<JobReplicaStatus> jobReplicaStatuses; 
         private java.util.List<JobSpec> jobSpecs; 
         private String jobType; 
         private java.util.List<Pods> pods; 
@@ -560,6 +572,7 @@ public class GetJobResponseBody extends TeaModel {
             this.gmtSubmittedTime = model.gmtSubmittedTime;
             this.gmtSuccessedTime = model.gmtSuccessedTime;
             this.jobId = model.jobId;
+            this.jobReplicaStatuses = model.jobReplicaStatuses;
             this.jobSpecs = model.jobSpecs;
             this.jobType = model.jobType;
             this.pods = model.pods;
@@ -770,6 +783,14 @@ public class GetJobResponseBody extends TeaModel {
          */
         public Builder jobId(String jobId) {
             this.jobId = jobId;
+            return this;
+        }
+
+        /**
+         * JobReplicaStatuses.
+         */
+        public Builder jobReplicaStatuses(java.util.List<JobReplicaStatus> jobReplicaStatuses) {
+            this.jobReplicaStatuses = jobReplicaStatuses;
             return this;
         }
 

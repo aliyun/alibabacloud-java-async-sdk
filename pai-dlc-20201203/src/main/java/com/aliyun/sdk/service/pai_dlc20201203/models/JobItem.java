@@ -83,6 +83,9 @@ public class JobItem extends TeaModel {
     @com.aliyun.core.annotation.NameInMap("JobMaxRunningTimeMinutes")
     private Long jobMaxRunningTimeMinutes;
 
+    @com.aliyun.core.annotation.NameInMap("JobReplicaStatuses")
+    private JobReplicaStatus jobReplicaStatuses;
+
     @com.aliyun.core.annotation.NameInMap("JobSpecs")
     private java.util.List<JobSpec> jobSpecs;
 
@@ -208,6 +211,7 @@ public class JobItem extends TeaModel {
         this.isDeleted = builder.isDeleted;
         this.jobId = builder.jobId;
         this.jobMaxRunningTimeMinutes = builder.jobMaxRunningTimeMinutes;
+        this.jobReplicaStatuses = builder.jobReplicaStatuses;
         this.jobSpecs = builder.jobSpecs;
         this.jobType = builder.jobType;
         this.nodeCount = builder.nodeCount;
@@ -408,6 +412,13 @@ public class JobItem extends TeaModel {
      */
     public Long getJobMaxRunningTimeMinutes() {
         return this.jobMaxRunningTimeMinutes;
+    }
+
+    /**
+     * @return jobReplicaStatuses
+     */
+    public JobReplicaStatus getJobReplicaStatuses() {
+        return this.jobReplicaStatuses;
     }
 
     /**
@@ -671,6 +682,7 @@ public class JobItem extends TeaModel {
         private Boolean isDeleted; 
         private String jobId; 
         private Long jobMaxRunningTimeMinutes; 
+        private JobReplicaStatus jobReplicaStatuses; 
         private java.util.List<JobSpec> jobSpecs; 
         private String jobType; 
         private String nodeCount; 
@@ -732,6 +744,7 @@ public class JobItem extends TeaModel {
             this.isDeleted = model.isDeleted;
             this.jobId = model.jobId;
             this.jobMaxRunningTimeMinutes = model.jobMaxRunningTimeMinutes;
+            this.jobReplicaStatuses = model.jobReplicaStatuses;
             this.jobSpecs = model.jobSpecs;
             this.jobType = model.jobType;
             this.nodeCount = model.nodeCount;
@@ -941,6 +954,14 @@ public class JobItem extends TeaModel {
          */
         public Builder jobMaxRunningTimeMinutes(Long jobMaxRunningTimeMinutes) {
             this.jobMaxRunningTimeMinutes = jobMaxRunningTimeMinutes;
+            return this;
+        }
+
+        /**
+         * JobReplicaStatuses.
+         */
+        public Builder jobReplicaStatuses(JobReplicaStatus jobReplicaStatuses) {
+            this.jobReplicaStatuses = jobReplicaStatuses;
             return this;
         }
 

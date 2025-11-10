@@ -54,7 +54,10 @@ public class GetDashboardResponseBody extends TeaModel {
         } 
 
         /**
-         * url.
+         * <p>The Dashboard URL</p>
+         * 
+         * <strong>example:</strong>
+         * <p><a href="https://dlcj1jzm1p01saqw-spark.pre-dsw-gateway-cn-hangzhou.data.aliyun.com">https://dlcj1jzm1p01saqw-spark.pre-dsw-gateway-cn-hangzhou.data.aliyun.com</a></p>
          */
         public Builder url(String url) {
             this.url = url;

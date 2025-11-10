@@ -26,6 +26,10 @@ public class UpdateJobRequest extends Request {
     private String accessibility;
 
     @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("JobSpecs")
+    private java.util.List<JobSpec> jobSpecs;
+
+    @com.aliyun.core.annotation.Body
     @com.aliyun.core.annotation.NameInMap("Priority")
     private Integer priority;
 
@@ -33,6 +37,7 @@ public class UpdateJobRequest extends Request {
         super(builder);
         this.jobId = builder.jobId;
         this.accessibility = builder.accessibility;
+        this.jobSpecs = builder.jobSpecs;
         this.priority = builder.priority;
     }
 
@@ -64,6 +69,13 @@ public class UpdateJobRequest extends Request {
     }
 
     /**
+     * @return jobSpecs
+     */
+    public java.util.List<JobSpec> getJobSpecs() {
+        return this.jobSpecs;
+    }
+
+    /**
      * @return priority
      */
     public Integer getPriority() {
@@ -73,6 +85,7 @@ public class UpdateJobRequest extends Request {
     public static final class Builder extends Request.Builder<UpdateJobRequest, Builder> {
         private String jobId; 
         private String accessibility; 
+        private java.util.List<JobSpec> jobSpecs; 
         private Integer priority; 
 
         private Builder() {
@@ -83,6 +96,7 @@ public class UpdateJobRequest extends Request {
             super(request);
             this.jobId = request.jobId;
             this.accessibility = request.accessibility;
+            this.jobSpecs = request.jobSpecs;
             this.priority = request.priority;
         } 
 
@@ -111,6 +125,15 @@ public class UpdateJobRequest extends Request {
         public Builder accessibility(String accessibility) {
             this.putBodyParameter("Accessibility", accessibility);
             this.accessibility = accessibility;
+            return this;
+        }
+
+        /**
+         * JobSpecs.
+         */
+        public Builder jobSpecs(java.util.List<JobSpec> jobSpecs) {
+            this.putBodyParameter("JobSpecs", jobSpecs);
+            this.jobSpecs = jobSpecs;
             return this;
         }
 

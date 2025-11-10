@@ -87,7 +87,10 @@ public class GetDashboardRequest extends Request {
         } 
 
         /**
-         * jobId.
+         * <p>The task ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>dlc1k7426goc7bvy</p>
          */
         public Builder jobId(String jobId) {
             this.putPathParameter("jobId", jobId);
@@ -96,7 +99,15 @@ public class GetDashboardRequest extends Request {
         }
 
         /**
-         * isShared.
+         * <p>Specifies whether the link is a sharing link. If yes, a token is required.</p>
+         * <p>Enumerated values:</p>
+         * <ul>
+         * <li>true</li>
+         * <li>false</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>false</p>
          */
         public Builder isShared(Boolean isShared) {
             this.putQueryParameter("isShared", isShared);
@@ -105,7 +116,10 @@ public class GetDashboardRequest extends Request {
         }
 
         /**
-         * token.
+         * <p>The token obtained from GetToken</p>
+         * 
+         * <strong>example:</strong>
+         * <p>some_token_value</p>
          */
         public Builder token(String token) {
             this.putQueryParameter("token", token);
