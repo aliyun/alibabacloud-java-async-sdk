@@ -42,8 +42,16 @@ public class CreateConsumerGroupRequest extends Request {
     private Long maxReceiveTps;
 
     @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("messageModel")
+    private String messageModel;
+
+    @com.aliyun.core.annotation.Body
     @com.aliyun.core.annotation.NameInMap("remark")
     private String remark;
+
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("topicName")
+    private String topicName;
 
     private CreateConsumerGroupRequest(Builder builder) {
         super(builder);
@@ -52,7 +60,9 @@ public class CreateConsumerGroupRequest extends Request {
         this.consumeRetryPolicy = builder.consumeRetryPolicy;
         this.deliveryOrderType = builder.deliveryOrderType;
         this.maxReceiveTps = builder.maxReceiveTps;
+        this.messageModel = builder.messageModel;
         this.remark = builder.remark;
+        this.topicName = builder.topicName;
     }
 
     public static Builder builder() {
@@ -104,10 +114,24 @@ public class CreateConsumerGroupRequest extends Request {
     }
 
     /**
+     * @return messageModel
+     */
+    public String getMessageModel() {
+        return this.messageModel;
+    }
+
+    /**
      * @return remark
      */
     public String getRemark() {
         return this.remark;
+    }
+
+    /**
+     * @return topicName
+     */
+    public String getTopicName() {
+        return this.topicName;
     }
 
     public static final class Builder extends Request.Builder<CreateConsumerGroupRequest, Builder> {
@@ -116,7 +140,9 @@ public class CreateConsumerGroupRequest extends Request {
         private ConsumeRetryPolicy consumeRetryPolicy; 
         private String deliveryOrderType; 
         private Long maxReceiveTps; 
+        private String messageModel; 
         private String remark; 
+        private String topicName; 
 
         private Builder() {
             super();
@@ -129,7 +155,9 @@ public class CreateConsumerGroupRequest extends Request {
             this.consumeRetryPolicy = request.consumeRetryPolicy;
             this.deliveryOrderType = request.deliveryOrderType;
             this.maxReceiveTps = request.maxReceiveTps;
+            this.messageModel = request.messageModel;
             this.remark = request.remark;
+            this.topicName = request.topicName;
         } 
 
         /**
@@ -199,6 +227,15 @@ public class CreateConsumerGroupRequest extends Request {
         }
 
         /**
+         * messageModel.
+         */
+        public Builder messageModel(String messageModel) {
+            this.putBodyParameter("messageModel", messageModel);
+            this.messageModel = messageModel;
+            return this;
+        }
+
+        /**
          * <p>The description of the consumer group.</p>
          * 
          * <strong>example:</strong>
@@ -207,6 +244,15 @@ public class CreateConsumerGroupRequest extends Request {
         public Builder remark(String remark) {
             this.putBodyParameter("remark", remark);
             this.remark = remark;
+            return this;
+        }
+
+        /**
+         * topicName.
+         */
+        public Builder topicName(String topicName) {
+            this.putBodyParameter("topicName", topicName);
+            this.topicName = topicName;
             return this;
         }
 

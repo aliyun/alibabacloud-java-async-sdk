@@ -1016,6 +1016,9 @@ public class GetTraceResponseBody extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("instanceId")
         private String instanceId;
 
+        @com.aliyun.core.annotation.NameInMap("liteTopicName")
+        private String liteTopicName;
+
         @com.aliyun.core.annotation.NameInMap("messageGroup")
         private String messageGroup;
 
@@ -1054,6 +1057,7 @@ public class GetTraceResponseBody extends TeaModel {
             this.bornHost = builder.bornHost;
             this.bornTime = builder.bornTime;
             this.instanceId = builder.instanceId;
+            this.liteTopicName = builder.liteTopicName;
             this.messageGroup = builder.messageGroup;
             this.messageId = builder.messageId;
             this.messageKeys = builder.messageKeys;
@@ -1101,6 +1105,13 @@ public class GetTraceResponseBody extends TeaModel {
          */
         public String getInstanceId() {
             return this.instanceId;
+        }
+
+        /**
+         * @return liteTopicName
+         */
+        public String getLiteTopicName() {
+            return this.liteTopicName;
         }
 
         /**
@@ -1185,6 +1196,7 @@ public class GetTraceResponseBody extends TeaModel {
             private String bornHost; 
             private String bornTime; 
             private String instanceId; 
+            private String liteTopicName; 
             private String messageGroup; 
             private String messageId; 
             private java.util.List<String> messageKeys; 
@@ -1205,6 +1217,7 @@ public class GetTraceResponseBody extends TeaModel {
                 this.bornHost = model.bornHost;
                 this.bornTime = model.bornTime;
                 this.instanceId = model.instanceId;
+                this.liteTopicName = model.liteTopicName;
                 this.messageGroup = model.messageGroup;
                 this.messageId = model.messageId;
                 this.messageKeys = model.messageKeys;
@@ -1259,6 +1272,14 @@ public class GetTraceResponseBody extends TeaModel {
              */
             public Builder instanceId(String instanceId) {
                 this.instanceId = instanceId;
+                return this;
+            }
+
+            /**
+             * liteTopicName.
+             */
+            public Builder liteTopicName(String liteTopicName) {
+                this.liteTopicName = liteTopicName;
                 return this;
             }
 

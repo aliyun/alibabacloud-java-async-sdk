@@ -27,10 +27,20 @@ public class ListConsumerConnectionsRequest extends Request {
     @com.aliyun.core.annotation.Validation(required = true)
     private String consumerGroupId;
 
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("liteTopicName")
+    private String liteTopicName;
+
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("topicName")
+    private String topicName;
+
     private ListConsumerConnectionsRequest(Builder builder) {
         super(builder);
         this.instanceId = builder.instanceId;
         this.consumerGroupId = builder.consumerGroupId;
+        this.liteTopicName = builder.liteTopicName;
+        this.topicName = builder.topicName;
     }
 
     public static Builder builder() {
@@ -60,9 +70,25 @@ public class ListConsumerConnectionsRequest extends Request {
         return this.consumerGroupId;
     }
 
+    /**
+     * @return liteTopicName
+     */
+    public String getLiteTopicName() {
+        return this.liteTopicName;
+    }
+
+    /**
+     * @return topicName
+     */
+    public String getTopicName() {
+        return this.topicName;
+    }
+
     public static final class Builder extends Request.Builder<ListConsumerConnectionsRequest, Builder> {
         private String instanceId; 
         private String consumerGroupId; 
+        private String liteTopicName; 
+        private String topicName; 
 
         private Builder() {
             super();
@@ -72,6 +98,8 @@ public class ListConsumerConnectionsRequest extends Request {
             super(request);
             this.instanceId = request.instanceId;
             this.consumerGroupId = request.consumerGroupId;
+            this.liteTopicName = request.liteTopicName;
+            this.topicName = request.topicName;
         } 
 
         /**
@@ -97,6 +125,24 @@ public class ListConsumerConnectionsRequest extends Request {
         public Builder consumerGroupId(String consumerGroupId) {
             this.putPathParameter("consumerGroupId", consumerGroupId);
             this.consumerGroupId = consumerGroupId;
+            return this;
+        }
+
+        /**
+         * liteTopicName.
+         */
+        public Builder liteTopicName(String liteTopicName) {
+            this.putQueryParameter("liteTopicName", liteTopicName);
+            this.liteTopicName = liteTopicName;
+            return this;
+        }
+
+        /**
+         * topicName.
+         */
+        public Builder topicName(String topicName) {
+            this.putQueryParameter("topicName", topicName);
+            this.topicName = topicName;
             return this;
         }
 

@@ -254,6 +254,9 @@ public class ListConsumerGroupsResponseBody extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("maxReceiveTps")
         private Long maxReceiveTps;
 
+        @com.aliyun.core.annotation.NameInMap("messageModel")
+        private String messageModel;
+
         @com.aliyun.core.annotation.NameInMap("regionId")
         private String regionId;
 
@@ -263,6 +266,9 @@ public class ListConsumerGroupsResponseBody extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("status")
         private String status;
 
+        @com.aliyun.core.annotation.NameInMap("topicName")
+        private String topicName;
+
         @com.aliyun.core.annotation.NameInMap("updateTime")
         private String updateTime;
 
@@ -271,9 +277,11 @@ public class ListConsumerGroupsResponseBody extends TeaModel {
             this.createTime = builder.createTime;
             this.instanceId = builder.instanceId;
             this.maxReceiveTps = builder.maxReceiveTps;
+            this.messageModel = builder.messageModel;
             this.regionId = builder.regionId;
             this.remark = builder.remark;
             this.status = builder.status;
+            this.topicName = builder.topicName;
             this.updateTime = builder.updateTime;
         }
 
@@ -314,6 +322,13 @@ public class ListConsumerGroupsResponseBody extends TeaModel {
         }
 
         /**
+         * @return messageModel
+         */
+        public String getMessageModel() {
+            return this.messageModel;
+        }
+
+        /**
          * @return regionId
          */
         public String getRegionId() {
@@ -335,6 +350,13 @@ public class ListConsumerGroupsResponseBody extends TeaModel {
         }
 
         /**
+         * @return topicName
+         */
+        public String getTopicName() {
+            return this.topicName;
+        }
+
+        /**
          * @return updateTime
          */
         public String getUpdateTime() {
@@ -346,9 +368,11 @@ public class ListConsumerGroupsResponseBody extends TeaModel {
             private String createTime; 
             private String instanceId; 
             private Long maxReceiveTps; 
+            private String messageModel; 
             private String regionId; 
             private String remark; 
             private String status; 
+            private String topicName; 
             private String updateTime; 
 
             private Builder() {
@@ -359,9 +383,11 @@ public class ListConsumerGroupsResponseBody extends TeaModel {
                 this.createTime = model.createTime;
                 this.instanceId = model.instanceId;
                 this.maxReceiveTps = model.maxReceiveTps;
+                this.messageModel = model.messageModel;
                 this.regionId = model.regionId;
                 this.remark = model.remark;
                 this.status = model.status;
+                this.topicName = model.topicName;
                 this.updateTime = model.updateTime;
             } 
 
@@ -410,6 +436,14 @@ public class ListConsumerGroupsResponseBody extends TeaModel {
             }
 
             /**
+             * messageModel.
+             */
+            public Builder messageModel(String messageModel) {
+                this.messageModel = messageModel;
+                return this;
+            }
+
+            /**
              * <p>The region ID to which the instance belongs.</p>
              * 
              * <strong>example:</strong>
@@ -439,6 +473,14 @@ public class ListConsumerGroupsResponseBody extends TeaModel {
              */
             public Builder status(String status) {
                 this.status = status;
+                return this;
+            }
+
+            /**
+             * topicName.
+             */
+            public Builder topicName(String topicName) {
+                this.topicName = topicName;
                 return this;
             }
 

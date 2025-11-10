@@ -963,11 +963,17 @@ public class CreateInstanceRequest extends Request {
         @com.aliyun.core.annotation.NameInMap("autoScaling")
         private Boolean autoScaling;
 
+        @com.aliyun.core.annotation.NameInMap("capacityType")
+        private String capacityType;
+
         @com.aliyun.core.annotation.NameInMap("messageRetentionTime")
         private Integer messageRetentionTime;
 
         @com.aliyun.core.annotation.NameInMap("msgProcessSpec")
         private String msgProcessSpec;
+
+        @com.aliyun.core.annotation.NameInMap("provisionedCapacity")
+        private Long provisionedCapacity;
 
         @com.aliyun.core.annotation.NameInMap("sendReceiveRatio")
         private Float sendReceiveRatio;
@@ -980,8 +986,10 @@ public class CreateInstanceRequest extends Request {
 
         private ProductInfo(Builder builder) {
             this.autoScaling = builder.autoScaling;
+            this.capacityType = builder.capacityType;
             this.messageRetentionTime = builder.messageRetentionTime;
             this.msgProcessSpec = builder.msgProcessSpec;
+            this.provisionedCapacity = builder.provisionedCapacity;
             this.sendReceiveRatio = builder.sendReceiveRatio;
             this.storageEncryption = builder.storageEncryption;
             this.storageSecretKey = builder.storageSecretKey;
@@ -1003,6 +1011,13 @@ public class CreateInstanceRequest extends Request {
         }
 
         /**
+         * @return capacityType
+         */
+        public String getCapacityType() {
+            return this.capacityType;
+        }
+
+        /**
          * @return messageRetentionTime
          */
         public Integer getMessageRetentionTime() {
@@ -1014,6 +1029,13 @@ public class CreateInstanceRequest extends Request {
          */
         public String getMsgProcessSpec() {
             return this.msgProcessSpec;
+        }
+
+        /**
+         * @return provisionedCapacity
+         */
+        public Long getProvisionedCapacity() {
+            return this.provisionedCapacity;
         }
 
         /**
@@ -1039,8 +1061,10 @@ public class CreateInstanceRequest extends Request {
 
         public static final class Builder {
             private Boolean autoScaling; 
+            private String capacityType; 
             private Integer messageRetentionTime; 
             private String msgProcessSpec; 
+            private Long provisionedCapacity; 
             private Float sendReceiveRatio; 
             private Boolean storageEncryption; 
             private String storageSecretKey; 
@@ -1050,8 +1074,10 @@ public class CreateInstanceRequest extends Request {
 
             private Builder(ProductInfo model) {
                 this.autoScaling = model.autoScaling;
+                this.capacityType = model.capacityType;
                 this.messageRetentionTime = model.messageRetentionTime;
                 this.msgProcessSpec = model.msgProcessSpec;
+                this.provisionedCapacity = model.provisionedCapacity;
                 this.sendReceiveRatio = model.sendReceiveRatio;
                 this.storageEncryption = model.storageEncryption;
                 this.storageSecretKey = model.storageSecretKey;
@@ -1078,6 +1104,14 @@ public class CreateInstanceRequest extends Request {
             }
 
             /**
+             * capacityType.
+             */
+            public Builder capacityType(String capacityType) {
+                this.capacityType = capacityType;
+                return this;
+            }
+
+            /**
              * <p>The retention period of messages. Unit: hours.</p>
              * <p>For information about the valid values of this parameter, see the &quot;Limits on resource quotas&quot; section of the <a href="https://help.aliyun.com/document_detail/440347.html">Limits</a> topic.</p>
              * <p>ApsaraMQ for RocketMQ supports serverless scaling of message storage. You are charged storage fees based on your actual storage usage. You can change the retention period of messages to manage storage capacity. For more information, see <a href="https://help.aliyun.com/document_detail/427238.html">Storage fees</a>.</p>
@@ -1098,6 +1132,14 @@ public class CreateInstanceRequest extends Request {
              */
             public Builder msgProcessSpec(String msgProcessSpec) {
                 this.msgProcessSpec = msgProcessSpec;
+                return this;
+            }
+
+            /**
+             * provisionedCapacity.
+             */
+            public Builder provisionedCapacity(Long provisionedCapacity) {
+                this.provisionedCapacity = provisionedCapacity;
                 return this;
             }
 

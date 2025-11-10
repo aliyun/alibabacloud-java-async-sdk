@@ -242,10 +242,14 @@ public class ListInstancesResponseBody extends TeaModel {
      * <p>ListInstancesResponseBody</p>
      */
     public static class ProductInfo extends TeaModel {
+        @com.aliyun.core.annotation.NameInMap("capacityType")
+        private String capacityType;
+
         @com.aliyun.core.annotation.NameInMap("traceOn")
         private Boolean traceOn;
 
         private ProductInfo(Builder builder) {
+            this.capacityType = builder.capacityType;
             this.traceOn = builder.traceOn;
         }
 
@@ -258,6 +262,13 @@ public class ListInstancesResponseBody extends TeaModel {
         }
 
         /**
+         * @return capacityType
+         */
+        public String getCapacityType() {
+            return this.capacityType;
+        }
+
+        /**
          * @return traceOn
          */
         public Boolean getTraceOn() {
@@ -265,14 +276,24 @@ public class ListInstancesResponseBody extends TeaModel {
         }
 
         public static final class Builder {
+            private String capacityType; 
             private Boolean traceOn; 
 
             private Builder() {
             } 
 
             private Builder(ProductInfo model) {
+                this.capacityType = model.capacityType;
                 this.traceOn = model.traceOn;
             } 
+
+            /**
+             * capacityType.
+             */
+            public Builder capacityType(String capacityType) {
+                this.capacityType = capacityType;
+                return this;
+            }
 
             /**
              * <p>Indicates whether the message trace feature is enabled. Valid values:</p>

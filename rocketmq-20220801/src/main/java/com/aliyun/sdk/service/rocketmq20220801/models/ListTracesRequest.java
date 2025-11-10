@@ -33,6 +33,10 @@ public class ListTracesRequest extends Request {
     private String endTime;
 
     @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("liteTopicName")
+    private String liteTopicName;
+
+    @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("messageId")
     private String messageId;
 
@@ -65,6 +69,7 @@ public class ListTracesRequest extends Request {
         this.instanceId = builder.instanceId;
         this.topicName = builder.topicName;
         this.endTime = builder.endTime;
+        this.liteTopicName = builder.liteTopicName;
         this.messageId = builder.messageId;
         this.messageKey = builder.messageKey;
         this.pageNumber = builder.pageNumber;
@@ -105,6 +110,13 @@ public class ListTracesRequest extends Request {
      */
     public String getEndTime() {
         return this.endTime;
+    }
+
+    /**
+     * @return liteTopicName
+     */
+    public String getLiteTopicName() {
+        return this.liteTopicName;
     }
 
     /**
@@ -153,6 +165,7 @@ public class ListTracesRequest extends Request {
         private String instanceId; 
         private String topicName; 
         private String endTime; 
+        private String liteTopicName; 
         private String messageId; 
         private String messageKey; 
         private Integer pageNumber; 
@@ -169,6 +182,7 @@ public class ListTracesRequest extends Request {
             this.instanceId = request.instanceId;
             this.topicName = request.topicName;
             this.endTime = request.endTime;
+            this.liteTopicName = request.liteTopicName;
             this.messageId = request.messageId;
             this.messageKey = request.messageKey;
             this.pageNumber = request.pageNumber;
@@ -213,6 +227,15 @@ public class ListTracesRequest extends Request {
         public Builder endTime(String endTime) {
             this.putQueryParameter("endTime", endTime);
             this.endTime = endTime;
+            return this;
+        }
+
+        /**
+         * liteTopicName.
+         */
+        public Builder liteTopicName(String liteTopicName) {
+            this.putQueryParameter("liteTopicName", liteTopicName);
+            this.liteTopicName = liteTopicName;
             return this;
         }
 

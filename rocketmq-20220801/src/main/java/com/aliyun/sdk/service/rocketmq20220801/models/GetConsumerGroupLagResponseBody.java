@@ -377,11 +377,17 @@ public class GetConsumerGroupLagResponseBody extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("instanceId")
         private String instanceId;
 
+        @com.aliyun.core.annotation.NameInMap("liteTopicLagMap")
+        private java.util.Map<String, DataLiteTopicLagMapValue> liteTopicLagMap;
+
         @com.aliyun.core.annotation.NameInMap("regionId")
         private String regionId;
 
         @com.aliyun.core.annotation.NameInMap("topicLagMap")
         private java.util.Map<String, DataTopicLagMapValue> topicLagMap;
+
+        @com.aliyun.core.annotation.NameInMap("topicName")
+        private String topicName;
 
         @com.aliyun.core.annotation.NameInMap("totalLag")
         private TotalLag totalLag;
@@ -389,8 +395,10 @@ public class GetConsumerGroupLagResponseBody extends TeaModel {
         private Data(Builder builder) {
             this.consumerGroupId = builder.consumerGroupId;
             this.instanceId = builder.instanceId;
+            this.liteTopicLagMap = builder.liteTopicLagMap;
             this.regionId = builder.regionId;
             this.topicLagMap = builder.topicLagMap;
+            this.topicName = builder.topicName;
             this.totalLag = builder.totalLag;
         }
 
@@ -417,6 +425,13 @@ public class GetConsumerGroupLagResponseBody extends TeaModel {
         }
 
         /**
+         * @return liteTopicLagMap
+         */
+        public java.util.Map<String, DataLiteTopicLagMapValue> getLiteTopicLagMap() {
+            return this.liteTopicLagMap;
+        }
+
+        /**
          * @return regionId
          */
         public String getRegionId() {
@@ -431,6 +446,13 @@ public class GetConsumerGroupLagResponseBody extends TeaModel {
         }
 
         /**
+         * @return topicName
+         */
+        public String getTopicName() {
+            return this.topicName;
+        }
+
+        /**
          * @return totalLag
          */
         public TotalLag getTotalLag() {
@@ -440,8 +462,10 @@ public class GetConsumerGroupLagResponseBody extends TeaModel {
         public static final class Builder {
             private String consumerGroupId; 
             private String instanceId; 
+            private java.util.Map<String, DataLiteTopicLagMapValue> liteTopicLagMap; 
             private String regionId; 
             private java.util.Map<String, DataTopicLagMapValue> topicLagMap; 
+            private String topicName; 
             private TotalLag totalLag; 
 
             private Builder() {
@@ -450,8 +474,10 @@ public class GetConsumerGroupLagResponseBody extends TeaModel {
             private Builder(Data model) {
                 this.consumerGroupId = model.consumerGroupId;
                 this.instanceId = model.instanceId;
+                this.liteTopicLagMap = model.liteTopicLagMap;
                 this.regionId = model.regionId;
                 this.topicLagMap = model.topicLagMap;
+                this.topicName = model.topicName;
                 this.totalLag = model.totalLag;
             } 
 
@@ -478,6 +504,14 @@ public class GetConsumerGroupLagResponseBody extends TeaModel {
             }
 
             /**
+             * liteTopicLagMap.
+             */
+            public Builder liteTopicLagMap(java.util.Map<String, DataLiteTopicLagMapValue> liteTopicLagMap) {
+                this.liteTopicLagMap = liteTopicLagMap;
+                return this;
+            }
+
+            /**
              * <p>Region ID</p>
              * 
              * <strong>example:</strong>
@@ -493,6 +527,14 @@ public class GetConsumerGroupLagResponseBody extends TeaModel {
              */
             public Builder topicLagMap(java.util.Map<String, DataTopicLagMapValue> topicLagMap) {
                 this.topicLagMap = topicLagMap;
+                return this;
+            }
+
+            /**
+             * topicName.
+             */
+            public Builder topicName(String topicName) {
+                this.topicName = topicName;
                 return this;
             }
 

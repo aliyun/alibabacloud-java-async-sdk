@@ -28,6 +28,10 @@ public class CreateTopicRequest extends Request {
     private String topicName;
 
     @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("liteTopicExpiration")
+    private Long liteTopicExpiration;
+
+    @com.aliyun.core.annotation.Body
     @com.aliyun.core.annotation.NameInMap("maxSendTps")
     private Long maxSendTps;
 
@@ -44,6 +48,7 @@ public class CreateTopicRequest extends Request {
         super(builder);
         this.instanceId = builder.instanceId;
         this.topicName = builder.topicName;
+        this.liteTopicExpiration = builder.liteTopicExpiration;
         this.maxSendTps = builder.maxSendTps;
         this.messageType = builder.messageType;
         this.remark = builder.remark;
@@ -77,6 +82,13 @@ public class CreateTopicRequest extends Request {
     }
 
     /**
+     * @return liteTopicExpiration
+     */
+    public Long getLiteTopicExpiration() {
+        return this.liteTopicExpiration;
+    }
+
+    /**
      * @return maxSendTps
      */
     public Long getMaxSendTps() {
@@ -100,6 +112,7 @@ public class CreateTopicRequest extends Request {
     public static final class Builder extends Request.Builder<CreateTopicRequest, Builder> {
         private String instanceId; 
         private String topicName; 
+        private Long liteTopicExpiration; 
         private Long maxSendTps; 
         private String messageType; 
         private String remark; 
@@ -112,6 +125,7 @@ public class CreateTopicRequest extends Request {
             super(request);
             this.instanceId = request.instanceId;
             this.topicName = request.topicName;
+            this.liteTopicExpiration = request.liteTopicExpiration;
             this.maxSendTps = request.maxSendTps;
             this.messageType = request.messageType;
             this.remark = request.remark;
@@ -146,6 +160,15 @@ public class CreateTopicRequest extends Request {
         public Builder topicName(String topicName) {
             this.putPathParameter("topicName", topicName);
             this.topicName = topicName;
+            return this;
+        }
+
+        /**
+         * liteTopicExpiration.
+         */
+        public Builder liteTopicExpiration(Long liteTopicExpiration) {
+            this.putBodyParameter("liteTopicExpiration", liteTopicExpiration);
+            this.liteTopicExpiration = liteTopicExpiration;
             return this;
         }
 

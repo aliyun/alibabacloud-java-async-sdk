@@ -28,6 +28,10 @@ public class VerifySendMessageRequest extends Request {
     private String topicName;
 
     @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("liteTopicName")
+    private String liteTopicName;
+
+    @com.aliyun.core.annotation.Body
     @com.aliyun.core.annotation.NameInMap("message")
     private String message;
 
@@ -43,6 +47,7 @@ public class VerifySendMessageRequest extends Request {
         super(builder);
         this.instanceId = builder.instanceId;
         this.topicName = builder.topicName;
+        this.liteTopicName = builder.liteTopicName;
         this.message = builder.message;
         this.messageKey = builder.messageKey;
         this.messageTag = builder.messageTag;
@@ -76,6 +81,13 @@ public class VerifySendMessageRequest extends Request {
     }
 
     /**
+     * @return liteTopicName
+     */
+    public String getLiteTopicName() {
+        return this.liteTopicName;
+    }
+
+    /**
      * @return message
      */
     public String getMessage() {
@@ -99,6 +111,7 @@ public class VerifySendMessageRequest extends Request {
     public static final class Builder extends Request.Builder<VerifySendMessageRequest, Builder> {
         private String instanceId; 
         private String topicName; 
+        private String liteTopicName; 
         private String message; 
         private String messageKey; 
         private String messageTag; 
@@ -111,6 +124,7 @@ public class VerifySendMessageRequest extends Request {
             super(request);
             this.instanceId = request.instanceId;
             this.topicName = request.topicName;
+            this.liteTopicName = request.liteTopicName;
             this.message = request.message;
             this.messageKey = request.messageKey;
             this.messageTag = request.messageTag;
@@ -139,6 +153,15 @@ public class VerifySendMessageRequest extends Request {
         public Builder topicName(String topicName) {
             this.putPathParameter("topicName", topicName);
             this.topicName = topicName;
+            return this;
+        }
+
+        /**
+         * liteTopicName.
+         */
+        public Builder liteTopicName(String liteTopicName) {
+            this.putBodyParameter("liteTopicName", liteTopicName);
+            this.liteTopicName = liteTopicName;
             return this;
         }
 

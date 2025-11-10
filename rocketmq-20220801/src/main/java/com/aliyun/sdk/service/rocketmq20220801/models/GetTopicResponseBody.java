@@ -248,6 +248,9 @@ public class GetTopicResponseBody extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("instanceId")
         private String instanceId;
 
+        @com.aliyun.core.annotation.NameInMap("liteTopicExpiration")
+        private Long liteTopicExpiration;
+
         @com.aliyun.core.annotation.NameInMap("maxSendTps")
         private Long maxSendTps;
 
@@ -272,6 +275,7 @@ public class GetTopicResponseBody extends TeaModel {
         private Data(Builder builder) {
             this.createTime = builder.createTime;
             this.instanceId = builder.instanceId;
+            this.liteTopicExpiration = builder.liteTopicExpiration;
             this.maxSendTps = builder.maxSendTps;
             this.messageType = builder.messageType;
             this.regionId = builder.regionId;
@@ -301,6 +305,13 @@ public class GetTopicResponseBody extends TeaModel {
          */
         public String getInstanceId() {
             return this.instanceId;
+        }
+
+        /**
+         * @return liteTopicExpiration
+         */
+        public Long getLiteTopicExpiration() {
+            return this.liteTopicExpiration;
         }
 
         /**
@@ -355,6 +366,7 @@ public class GetTopicResponseBody extends TeaModel {
         public static final class Builder {
             private String createTime; 
             private String instanceId; 
+            private Long liteTopicExpiration; 
             private Long maxSendTps; 
             private String messageType; 
             private String regionId; 
@@ -369,6 +381,7 @@ public class GetTopicResponseBody extends TeaModel {
             private Builder(Data model) {
                 this.createTime = model.createTime;
                 this.instanceId = model.instanceId;
+                this.liteTopicExpiration = model.liteTopicExpiration;
                 this.maxSendTps = model.maxSendTps;
                 this.messageType = model.messageType;
                 this.regionId = model.regionId;
@@ -397,6 +410,14 @@ public class GetTopicResponseBody extends TeaModel {
              */
             public Builder instanceId(String instanceId) {
                 this.instanceId = instanceId;
+                return this;
+            }
+
+            /**
+             * liteTopicExpiration.
+             */
+            public Builder liteTopicExpiration(Long liteTopicExpiration) {
+                this.liteTopicExpiration = liteTopicExpiration;
                 return this;
             }
 
