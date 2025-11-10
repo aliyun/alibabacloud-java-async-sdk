@@ -47,6 +47,26 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<ContinueDeployServiceInstanceResponse> continueDeployServiceInstance(ContinueDeployServiceInstanceRequest request);
 
     /**
+     * <b>description</b> :
+     * <h3><a href="#"></a>Prerequisites</h3>
+     * <p>Please ensure that the service provider has enabled the configuration change feature and completed the change parameter settings.</p>
+     * 
+     * @param request the request parameters of CreateBackup  CreateBackupRequest
+     * @return CreateBackupResponse
+     */
+    CompletableFuture<CreateBackupResponse> createBackup(CreateBackupRequest request);
+
+    /**
+     * <b>description</b> :
+     * <h3><a href="#"></a>Prerequisites</h3>
+     * <p>Please ensure that the service provider has enabled the configuration change feature and completed the change parameter settings.</p>
+     * 
+     * @param request the request parameters of CreateRestoreTask  CreateRestoreTaskRequest
+     * @return CreateRestoreTaskResponse
+     */
+    CompletableFuture<CreateRestoreTaskResponse> createRestoreTask(CreateRestoreTaskRequest request);
+
+    /**
      * @param request the request parameters of CreateServiceInstance  CreateServiceInstanceRequest
      * @return CreateServiceInstanceResponse
      */
@@ -57,6 +77,16 @@ public interface AsyncClient extends SdkAutoCloseable {
      * @return CreateServiceUsageResponse
      */
     CompletableFuture<CreateServiceUsageResponse> createServiceUsage(CreateServiceUsageRequest request);
+
+    /**
+     * <b>description</b> :
+     * <h3><a href="#"></a>Prerequisites</h3>
+     * <p>Please ensure that the service provider has enabled the configuration change feature and completed the change parameter settings.</p>
+     * 
+     * @param request the request parameters of DeleteBackup  DeleteBackupRequest
+     * @return DeleteBackupResponse
+     */
+    CompletableFuture<DeleteBackupResponse> deleteBackup(DeleteBackupRequest request);
 
     /**
      * @param request the request parameters of DeleteServiceInstances  DeleteServiceInstancesRequest
@@ -81,6 +111,22 @@ public interface AsyncClient extends SdkAutoCloseable {
      * @return GenerateServicePolicyResponse
      */
     CompletableFuture<GenerateServicePolicyResponse> generateServicePolicy(GenerateServicePolicyRequest request);
+
+    /**
+     * <b>description</b> :
+     * <h3><a href="#"></a>Prerequisites</h3>
+     * <p>Please ensure that the service provider has enabled the configuration change feature and completed the change parameter settings.</p>
+     * 
+     * @param request the request parameters of GetBackup  GetBackupRequest
+     * @return GetBackupResponse
+     */
+    CompletableFuture<GetBackupResponse> getBackup(GetBackupRequest request);
+
+    /**
+     * @param request the request parameters of GetNetworkAvailableZones  GetNetworkAvailableZonesRequest
+     * @return GetNetworkAvailableZonesResponse
+     */
+    CompletableFuture<GetNetworkAvailableZonesResponse> getNetworkAvailableZones(GetNetworkAvailableZonesRequest request);
 
     /**
      * @param request the request parameters of GetService  GetServiceRequest
@@ -125,10 +171,30 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<GetUserInformationResponse> getUserInformation(GetUserInformationRequest request);
 
     /**
+     * <b>description</b> :
+     * <h3><a href="#"></a>Prerequisites</h3>
+     * <p>Please ensure that the service provider has enabled the configuration change feature and completed the change parameter settings.</p>
+     * 
+     * @param request the request parameters of ListBackups  ListBackupsRequest
+     * @return ListBackupsResponse
+     */
+    CompletableFuture<ListBackupsResponse> listBackups(ListBackupsRequest request);
+
+    /**
      * @param request the request parameters of ListPolicies  ListPoliciesRequest
      * @return ListPoliciesResponse
      */
     CompletableFuture<ListPoliciesResponse> listPolicies(ListPoliciesRequest request);
+
+    /**
+     * <b>description</b> :
+     * <h3><a href="#"></a>Prerequisites</h3>
+     * <p>Please ensure that the service provider has enabled the configuration change feature and completed the change parameter settings.</p>
+     * 
+     * @param request the request parameters of ListRestoreTasks  ListRestoreTasksRequest
+     * @return ListRestoreTasksResponse
+     */
+    CompletableFuture<ListRestoreTasksResponse> listRestoreTasks(ListRestoreTasksRequest request);
 
     /**
      * @param request the request parameters of ListServiceCategories  ListServiceCategoriesRequest
@@ -271,5 +337,11 @@ public interface AsyncClient extends SdkAutoCloseable {
      * @return UpgradeServiceInstanceResponse
      */
     CompletableFuture<UpgradeServiceInstanceResponse> upgradeServiceInstance(UpgradeServiceInstanceRequest request);
+
+    /**
+     * @param request the request parameters of ValidateServiceInstanceName  ValidateServiceInstanceNameRequest
+     * @return ValidateServiceInstanceNameResponse
+     */
+    CompletableFuture<ValidateServiceInstanceNameResponse> validateServiceInstanceName(ValidateServiceInstanceNameRequest request);
 
 }

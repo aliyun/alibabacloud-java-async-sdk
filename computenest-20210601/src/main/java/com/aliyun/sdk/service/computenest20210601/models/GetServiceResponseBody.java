@@ -77,6 +77,9 @@ public class GetServiceResponseBody extends TeaModel {
     @com.aliyun.core.annotation.NameInMap("ServiceInfos")
     private java.util.List<ServiceInfos> serviceInfos;
 
+    @com.aliyun.core.annotation.NameInMap("ServiceLocaleConfigs")
+    private java.util.List<ServiceLocaleConfigs> serviceLocaleConfigs;
+
     @com.aliyun.core.annotation.NameInMap("ServiceProductUrl")
     private String serviceProductUrl;
 
@@ -146,6 +149,7 @@ public class GetServiceResponseBody extends TeaModel {
         this.serviceDocumentInfos = builder.serviceDocumentInfos;
         this.serviceId = builder.serviceId;
         this.serviceInfos = builder.serviceInfos;
+        this.serviceLocaleConfigs = builder.serviceLocaleConfigs;
         this.serviceProductUrl = builder.serviceProductUrl;
         this.serviceType = builder.serviceType;
         this.shareType = builder.shareType;
@@ -317,6 +321,13 @@ public class GetServiceResponseBody extends TeaModel {
     }
 
     /**
+     * @return serviceLocaleConfigs
+     */
+    public java.util.List<ServiceLocaleConfigs> getServiceLocaleConfigs() {
+        return this.serviceLocaleConfigs;
+    }
+
+    /**
      * @return serviceProductUrl
      */
     public String getServiceProductUrl() {
@@ -449,6 +460,7 @@ public class GetServiceResponseBody extends TeaModel {
         private java.util.List<ServiceDocumentInfos> serviceDocumentInfos; 
         private String serviceId; 
         private java.util.List<ServiceInfos> serviceInfos; 
+        private java.util.List<ServiceLocaleConfigs> serviceLocaleConfigs; 
         private String serviceProductUrl; 
         private String serviceType; 
         private String shareType; 
@@ -490,6 +502,7 @@ public class GetServiceResponseBody extends TeaModel {
             this.serviceDocumentInfos = model.serviceDocumentInfos;
             this.serviceId = model.serviceId;
             this.serviceInfos = model.serviceInfos;
+            this.serviceLocaleConfigs = model.serviceLocaleConfigs;
             this.serviceProductUrl = model.serviceProductUrl;
             this.serviceType = model.serviceType;
             this.shareType = model.shareType;
@@ -733,6 +746,14 @@ public class GetServiceResponseBody extends TeaModel {
          */
         public Builder serviceInfos(java.util.List<ServiceInfos> serviceInfos) {
             this.serviceInfos = serviceInfos;
+            return this;
+        }
+
+        /**
+         * ServiceLocaleConfigs.
+         */
+        public Builder serviceLocaleConfigs(java.util.List<ServiceLocaleConfigs> serviceLocaleConfigs) {
+            this.serviceLocaleConfigs = serviceLocaleConfigs;
             return this;
         }
 
@@ -2200,6 +2221,102 @@ public class GetServiceResponseBody extends TeaModel {
 
             public ServiceInfos build() {
                 return new ServiceInfos(this);
+            } 
+
+        } 
+
+    }
+    /**
+     * 
+     * {@link GetServiceResponseBody} extends {@link TeaModel}
+     *
+     * <p>GetServiceResponseBody</p>
+     */
+    public static class ServiceLocaleConfigs extends TeaModel {
+        @com.aliyun.core.annotation.NameInMap("EnValue")
+        private String enValue;
+
+        @com.aliyun.core.annotation.NameInMap("OriginalValue")
+        private String originalValue;
+
+        @com.aliyun.core.annotation.NameInMap("ZhValue")
+        private String zhValue;
+
+        private ServiceLocaleConfigs(Builder builder) {
+            this.enValue = builder.enValue;
+            this.originalValue = builder.originalValue;
+            this.zhValue = builder.zhValue;
+        }
+
+        public static Builder builder() {
+            return new Builder();
+        }
+
+        public static ServiceLocaleConfigs create() {
+            return builder().build();
+        }
+
+        /**
+         * @return enValue
+         */
+        public String getEnValue() {
+            return this.enValue;
+        }
+
+        /**
+         * @return originalValue
+         */
+        public String getOriginalValue() {
+            return this.originalValue;
+        }
+
+        /**
+         * @return zhValue
+         */
+        public String getZhValue() {
+            return this.zhValue;
+        }
+
+        public static final class Builder {
+            private String enValue; 
+            private String originalValue; 
+            private String zhValue; 
+
+            private Builder() {
+            } 
+
+            private Builder(ServiceLocaleConfigs model) {
+                this.enValue = model.enValue;
+                this.originalValue = model.originalValue;
+                this.zhValue = model.zhValue;
+            } 
+
+            /**
+             * EnValue.
+             */
+            public Builder enValue(String enValue) {
+                this.enValue = enValue;
+                return this;
+            }
+
+            /**
+             * OriginalValue.
+             */
+            public Builder originalValue(String originalValue) {
+                this.originalValue = originalValue;
+                return this;
+            }
+
+            /**
+             * ZhValue.
+             */
+            public Builder zhValue(String zhValue) {
+                this.zhValue = zhValue;
+                return this;
+            }
+
+            public ServiceLocaleConfigs build() {
+                return new ServiceLocaleConfigs(this);
             } 
 
         } 

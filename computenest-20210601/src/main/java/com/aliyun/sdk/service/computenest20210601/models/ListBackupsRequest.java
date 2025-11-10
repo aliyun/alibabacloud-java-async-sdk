@@ -12,11 +12,11 @@ import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
  * 
- * {@link ListServiceUsagesRequest} extends {@link RequestModel}
+ * {@link ListBackupsRequest} extends {@link RequestModel}
  *
- * <p>ListServiceUsagesRequest</p>
+ * <p>ListBackupsRequest</p>
  */
-public class ListServiceUsagesRequest extends Request {
+public class ListBackupsRequest extends Request {
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("Filter")
     private java.util.List<Filter> filter;
@@ -29,23 +29,18 @@ public class ListServiceUsagesRequest extends Request {
     @com.aliyun.core.annotation.NameInMap("NextToken")
     private String nextToken;
 
-    @com.aliyun.core.annotation.Query
-    @com.aliyun.core.annotation.NameInMap("RegionId")
-    private String regionId;
-
-    private ListServiceUsagesRequest(Builder builder) {
+    private ListBackupsRequest(Builder builder) {
         super(builder);
         this.filter = builder.filter;
         this.maxResults = builder.maxResults;
         this.nextToken = builder.nextToken;
-        this.regionId = builder.regionId;
     }
 
     public static Builder builder() {
         return new Builder();
     }
 
-    public static ListServiceUsagesRequest create() {
+    public static ListBackupsRequest create() {
         return builder().build();
     }
 
@@ -75,33 +70,24 @@ public class ListServiceUsagesRequest extends Request {
         return this.nextToken;
     }
 
-    /**
-     * @return regionId
-     */
-    public String getRegionId() {
-        return this.regionId;
-    }
-
-    public static final class Builder extends Request.Builder<ListServiceUsagesRequest, Builder> {
+    public static final class Builder extends Request.Builder<ListBackupsRequest, Builder> {
         private java.util.List<Filter> filter; 
         private Integer maxResults; 
         private String nextToken; 
-        private String regionId; 
 
         private Builder() {
             super();
         } 
 
-        private Builder(ListServiceUsagesRequest request) {
+        private Builder(ListBackupsRequest request) {
             super(request);
             this.filter = request.filter;
             this.maxResults = request.maxResults;
             this.nextToken = request.nextToken;
-            this.regionId = request.regionId;
         } 
 
         /**
-         * <p>The filters.</p>
+         * <p>The filter.</p>
          */
         public Builder filter(java.util.List<Filter> filter) {
             this.putQueryParameter("Filter", filter);
@@ -110,7 +96,7 @@ public class ListServiceUsagesRequest extends Request {
         }
 
         /**
-         * <p>The number of entries per page. Valid values: 1 to 100. Default value: 20.</p>
+         * <p>The number of entries per page.</p>
          * 
          * <strong>example:</strong>
          * <p>20</p>
@@ -122,10 +108,10 @@ public class ListServiceUsagesRequest extends Request {
         }
 
         /**
-         * <p>The pagination token that is used in the next request to retrieve a new page of results. You do not need to specify this parameter for the first request. You must specify the token that is obtained from the previous query as the value of NextToken.</p>
+         * <p>A pagination token. It can be used in the next request to retrieve a new page of results.</p>
          * 
          * <strong>example:</strong>
-         * <p>AAAAAWns8w4MmhzeptXVRG0PUEU=</p>
+         * <p>AAAAAc3HCuYhJi/wvpk4xOr0VLYoaeZA6xVdkCrmG9EmGshtmECUGpq9Qm7x5vQkpz9NXH0XzUc9t4Kxaf3UtuPY4a0=</p>
          */
         public Builder nextToken(String nextToken) {
             this.putQueryParameter("NextToken", nextToken);
@@ -133,27 +119,18 @@ public class ListServiceUsagesRequest extends Request {
             return this;
         }
 
-        /**
-         * RegionId.
-         */
-        public Builder regionId(String regionId) {
-            this.putQueryParameter("RegionId", regionId);
-            this.regionId = regionId;
-            return this;
-        }
-
         @Override
-        public ListServiceUsagesRequest build() {
-            return new ListServiceUsagesRequest(this);
+        public ListBackupsRequest build() {
+            return new ListBackupsRequest(this);
         } 
 
     } 
 
     /**
      * 
-     * {@link ListServiceUsagesRequest} extends {@link TeaModel}
+     * {@link ListBackupsRequest} extends {@link TeaModel}
      *
-     * <p>ListServiceUsagesRequest</p>
+     * <p>ListBackupsRequest</p>
      */
     public static class Filter extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Name")
@@ -202,16 +179,17 @@ public class ListServiceUsagesRequest extends Request {
             } 
 
             /**
-             * <p>The parameter name of the filter. You can specify one or more filters. Valid values:</p>
+             * <p>The parameter name of the filter. You can specify one or more parameter names to query services. Valid values:</p>
              * <ul>
-             * <li>ServiceId: the ID of the service.</li>
-             * <li>ServiceName: the service name.</li>
+             * <li>BackupId: the ID of the backup.</li>
+             * <li>ServiceInstanceId: The ID of the service instance.</li>
              * <li>Status: the state of the service.</li>
-             * <li>SupplierName: the name of the service provider.</li>
+             * <li>StartTime</li>
+             * <li>EndTime</li>
              * </ul>
              * 
              * <strong>example:</strong>
-             * <p>ServiceId</p>
+             * <p>ServiceInstanceId</p>
              */
             public Builder name(String name) {
                 this.name = name;
@@ -219,7 +197,7 @@ public class ListServiceUsagesRequest extends Request {
             }
 
             /**
-             * <p>The parameter values of the filter.</p>
+             * <p>The list of filters.</p>
              */
             public Builder value(java.util.List<String> value) {
                 this.value = value;

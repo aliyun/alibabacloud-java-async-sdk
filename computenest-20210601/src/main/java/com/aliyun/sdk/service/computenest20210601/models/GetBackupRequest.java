@@ -1,0 +1,82 @@
+// This file is auto-generated, don't edit it. Thanks.
+package com.aliyun.sdk.service.computenest20210601.models;
+
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
+import darabonba.core.RequestModel;
+import darabonba.core.TeaModel;
+import com.aliyun.sdk.gateway.pop.models.*;
+
+/**
+ * 
+ * {@link GetBackupRequest} extends {@link RequestModel}
+ *
+ * <p>GetBackupRequest</p>
+ */
+public class GetBackupRequest extends Request {
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("BackupId")
+    @com.aliyun.core.annotation.Validation(required = true)
+    private String backupId;
+
+    private GetBackupRequest(Builder builder) {
+        super(builder);
+        this.backupId = builder.backupId;
+    }
+
+    public static Builder builder() {
+        return new Builder();
+    }
+
+    public static GetBackupRequest create() {
+        return builder().build();
+    }
+
+@Override
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
+    /**
+     * @return backupId
+     */
+    public String getBackupId() {
+        return this.backupId;
+    }
+
+    public static final class Builder extends Request.Builder<GetBackupRequest, Builder> {
+        private String backupId; 
+
+        private Builder() {
+            super();
+        } 
+
+        private Builder(GetBackupRequest request) {
+            super(request);
+            this.backupId = request.backupId;
+        } 
+
+        /**
+         * <p>The backup ID.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>backup-cad4a85ff5e340388b93</p>
+         */
+        public Builder backupId(String backupId) {
+            this.putQueryParameter("BackupId", backupId);
+            this.backupId = backupId;
+            return this;
+        }
+
+        @Override
+        public GetBackupRequest build() {
+            return new GetBackupRequest(this);
+        } 
+
+    } 
+
+}

@@ -38,6 +38,9 @@ public class GetServiceInstanceResponseBody extends TeaModel {
     @com.aliyun.core.annotation.NameInMap("GrafanaDashBoardUrl")
     private String grafanaDashBoardUrl;
 
+    @com.aliyun.core.annotation.NameInMap("GrantedPermission")
+    private GrantedPermission grantedPermission;
+
     @com.aliyun.core.annotation.NameInMap("IsOperated")
     private Boolean isOperated;
 
@@ -70,6 +73,9 @@ public class GetServiceInstanceResponseBody extends TeaModel {
 
     @com.aliyun.core.annotation.NameInMap("PayType")
     private String payType;
+
+    @com.aliyun.core.annotation.NameInMap("PolicyNames")
+    private String policyNames;
 
     @com.aliyun.core.annotation.NameInMap("PredefinedParameterName")
     private String predefinedParameterName;
@@ -130,6 +136,7 @@ public class GetServiceInstanceResponseBody extends TeaModel {
         this.enableUserPrometheus = builder.enableUserPrometheus;
         this.endTime = builder.endTime;
         this.grafanaDashBoardUrl = builder.grafanaDashBoardUrl;
+        this.grantedPermission = builder.grantedPermission;
         this.isOperated = builder.isOperated;
         this.licenseEndTime = builder.licenseEndTime;
         this.marketInstanceId = builder.marketInstanceId;
@@ -141,6 +148,7 @@ public class GetServiceInstanceResponseBody extends TeaModel {
         this.outputs = builder.outputs;
         this.parameters = builder.parameters;
         this.payType = builder.payType;
+        this.policyNames = builder.policyNames;
         this.predefinedParameterName = builder.predefinedParameterName;
         this.progress = builder.progress;
         this.requestId = builder.requestId;
@@ -222,6 +230,13 @@ public class GetServiceInstanceResponseBody extends TeaModel {
     }
 
     /**
+     * @return grantedPermission
+     */
+    public GrantedPermission getGrantedPermission() {
+        return this.grantedPermission;
+    }
+
+    /**
      * @return isOperated
      */
     public Boolean getIsOperated() {
@@ -296,6 +311,13 @@ public class GetServiceInstanceResponseBody extends TeaModel {
      */
     public String getPayType() {
         return this.payType;
+    }
+
+    /**
+     * @return policyNames
+     */
+    public String getPolicyNames() {
+        return this.policyNames;
     }
 
     /**
@@ -425,6 +447,7 @@ public class GetServiceInstanceResponseBody extends TeaModel {
         private Boolean enableUserPrometheus; 
         private String endTime; 
         private String grafanaDashBoardUrl; 
+        private GrantedPermission grantedPermission; 
         private Boolean isOperated; 
         private String licenseEndTime; 
         private String marketInstanceId; 
@@ -436,6 +459,7 @@ public class GetServiceInstanceResponseBody extends TeaModel {
         private String outputs; 
         private String parameters; 
         private String payType; 
+        private String policyNames; 
         private String predefinedParameterName; 
         private Long progress; 
         private String requestId; 
@@ -465,6 +489,7 @@ public class GetServiceInstanceResponseBody extends TeaModel {
             this.enableUserPrometheus = model.enableUserPrometheus;
             this.endTime = model.endTime;
             this.grafanaDashBoardUrl = model.grafanaDashBoardUrl;
+            this.grantedPermission = model.grantedPermission;
             this.isOperated = model.isOperated;
             this.licenseEndTime = model.licenseEndTime;
             this.marketInstanceId = model.marketInstanceId;
@@ -476,6 +501,7 @@ public class GetServiceInstanceResponseBody extends TeaModel {
             this.outputs = model.outputs;
             this.parameters = model.parameters;
             this.payType = model.payType;
+            this.policyNames = model.policyNames;
             this.predefinedParameterName = model.predefinedParameterName;
             this.progress = model.progress;
             this.requestId = model.requestId;
@@ -579,6 +605,14 @@ public class GetServiceInstanceResponseBody extends TeaModel {
          */
         public Builder grafanaDashBoardUrl(String grafanaDashBoardUrl) {
             this.grafanaDashBoardUrl = grafanaDashBoardUrl;
+            return this;
+        }
+
+        /**
+         * GrantedPermission.
+         */
+        public Builder grantedPermission(GrantedPermission grantedPermission) {
+            this.grantedPermission = grantedPermission;
             return this;
         }
 
@@ -714,6 +748,14 @@ public class GetServiceInstanceResponseBody extends TeaModel {
          */
         public Builder payType(String payType) {
             this.payType = payType;
+            return this;
+        }
+
+        /**
+         * PolicyNames.
+         */
+        public Builder policyNames(String policyNames) {
+            this.policyNames = policyNames;
             return this;
         }
 
@@ -921,6 +963,84 @@ public class GetServiceInstanceResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link GetServiceInstanceResponseBody} extends {@link TeaModel}
+     *
+     * <p>GetServiceInstanceResponseBody</p>
+     */
+    public static class GrantedPermission extends TeaModel {
+        @com.aliyun.core.annotation.NameInMap("OperationEndTime")
+        private String operationEndTime;
+
+        @com.aliyun.core.annotation.NameInMap("PolicyNames")
+        private String policyNames;
+
+        private GrantedPermission(Builder builder) {
+            this.operationEndTime = builder.operationEndTime;
+            this.policyNames = builder.policyNames;
+        }
+
+        public static Builder builder() {
+            return new Builder();
+        }
+
+        public static GrantedPermission create() {
+            return builder().build();
+        }
+
+        /**
+         * @return operationEndTime
+         */
+        public String getOperationEndTime() {
+            return this.operationEndTime;
+        }
+
+        /**
+         * @return policyNames
+         */
+        public String getPolicyNames() {
+            return this.policyNames;
+        }
+
+        public static final class Builder {
+            private String operationEndTime; 
+            private String policyNames; 
+
+            private Builder() {
+            } 
+
+            private Builder(GrantedPermission model) {
+                this.operationEndTime = model.operationEndTime;
+                this.policyNames = model.policyNames;
+            } 
+
+            /**
+             * <p>The operation end time.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2022-01-28T06:48:56Z</p>
+             */
+            public Builder operationEndTime(String operationEndTime) {
+                this.operationEndTime = operationEndTime;
+                return this;
+            }
+
+            /**
+             * PolicyNames.
+             */
+            public Builder policyNames(String policyNames) {
+                this.policyNames = policyNames;
+                return this;
+            }
+
+            public GrantedPermission build() {
+                return new GrantedPermission(this);
+            } 
+
+        } 
+
+    }
     /**
      * 
      * {@link GetServiceInstanceResponseBody} extends {@link TeaModel}

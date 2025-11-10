@@ -421,7 +421,7 @@ public class GetServiceEstimateCostRequest extends Request {
             } 
 
             /**
-             * <p>优惠券ID</p>
+             * <p>The coupon ID.</p>
              * 
              * <strong>example:</strong>
              * <p>302070970220</p>
@@ -432,7 +432,7 @@ public class GetServiceEstimateCostRequest extends Request {
             }
 
             /**
-             * <p>The subscription duration.</p>
+             * <p>The subscription duration of the instance.</p>
              * 
              * <strong>example:</strong>
              * <p>1</p>
@@ -445,9 +445,9 @@ public class GetServiceEstimateCostRequest extends Request {
             /**
              * <p>The unit of the subscription duration. Valid values:</p>
              * <ul>
-             * <li>Year</li>
-             * <li>Month</li>
-             * <li>Day</li>
+             * <li>Year.</li>
+             * <li>Month.</li>
+             * <li>Day.</li>
              * </ul>
              * 
              * <strong>example:</strong>
@@ -459,7 +459,10 @@ public class GetServiceEstimateCostRequest extends Request {
             }
 
             /**
-             * QuotationId.
+             * <p>The PrivateOffer ID of the Alibaba Cloud Marketplace.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>17cde2e8-2f5d-xxxx-xxxx-5120dd215d66</p>
              */
             public Builder quotationId(String quotationId) {
                 this.quotationId = quotationId;

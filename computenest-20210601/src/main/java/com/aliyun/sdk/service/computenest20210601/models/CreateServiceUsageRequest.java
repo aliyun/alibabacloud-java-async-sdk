@@ -22,6 +22,10 @@ public class CreateServiceUsageRequest extends Request {
     private String clientToken;
 
     @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("RegionId")
+    private String regionId;
+
+    @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("ServiceId")
     @com.aliyun.core.annotation.Validation(required = true)
     private String serviceId;
@@ -33,6 +37,7 @@ public class CreateServiceUsageRequest extends Request {
     private CreateServiceUsageRequest(Builder builder) {
         super(builder);
         this.clientToken = builder.clientToken;
+        this.regionId = builder.regionId;
         this.serviceId = builder.serviceId;
         this.userInformation = builder.userInformation;
     }
@@ -58,6 +63,13 @@ public class CreateServiceUsageRequest extends Request {
     }
 
     /**
+     * @return regionId
+     */
+    public String getRegionId() {
+        return this.regionId;
+    }
+
+    /**
      * @return serviceId
      */
     public String getServiceId() {
@@ -73,6 +85,7 @@ public class CreateServiceUsageRequest extends Request {
 
     public static final class Builder extends Request.Builder<CreateServiceUsageRequest, Builder> {
         private String clientToken; 
+        private String regionId; 
         private String serviceId; 
         private java.util.Map<String, String> userInformation; 
 
@@ -83,6 +96,7 @@ public class CreateServiceUsageRequest extends Request {
         private Builder(CreateServiceUsageRequest request) {
             super(request);
             this.clientToken = request.clientToken;
+            this.regionId = request.regionId;
             this.serviceId = request.serviceId;
             this.userInformation = request.userInformation;
         } 
@@ -96,6 +110,15 @@ public class CreateServiceUsageRequest extends Request {
         public Builder clientToken(String clientToken) {
             this.putQueryParameter("ClientToken", clientToken);
             this.clientToken = clientToken;
+            return this;
+        }
+
+        /**
+         * RegionId.
+         */
+        public Builder regionId(String regionId) {
+            this.putQueryParameter("RegionId", regionId);
+            this.regionId = regionId;
             return this;
         }
 

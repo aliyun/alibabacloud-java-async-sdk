@@ -39,6 +39,10 @@ public class CheckServiceDeployableRequest extends Request {
     private String serviceVersion;
 
     @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("TemplateName")
+    private String templateName;
+
+    @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("TrialType")
     private String trialType;
 
@@ -49,6 +53,7 @@ public class CheckServiceDeployableRequest extends Request {
         this.regionId = builder.regionId;
         this.serviceId = builder.serviceId;
         this.serviceVersion = builder.serviceVersion;
+        this.templateName = builder.templateName;
         this.trialType = builder.trialType;
     }
 
@@ -101,6 +106,13 @@ public class CheckServiceDeployableRequest extends Request {
     }
 
     /**
+     * @return templateName
+     */
+    public String getTemplateName() {
+        return this.templateName;
+    }
+
+    /**
      * @return trialType
      */
     public String getTrialType() {
@@ -113,6 +125,7 @@ public class CheckServiceDeployableRequest extends Request {
         private String regionId; 
         private String serviceId; 
         private String serviceVersion; 
+        private String templateName; 
         private String trialType; 
 
         private Builder() {
@@ -126,6 +139,7 @@ public class CheckServiceDeployableRequest extends Request {
             this.regionId = request.regionId;
             this.serviceId = request.serviceId;
             this.serviceVersion = request.serviceVersion;
+            this.templateName = request.templateName;
             this.trialType = request.trialType;
         } 
 
@@ -187,6 +201,15 @@ public class CheckServiceDeployableRequest extends Request {
         public Builder serviceVersion(String serviceVersion) {
             this.putQueryParameter("ServiceVersion", serviceVersion);
             this.serviceVersion = serviceVersion;
+            return this;
+        }
+
+        /**
+         * TemplateName.
+         */
+        public Builder templateName(String templateName) {
+            this.putQueryParameter("TemplateName", templateName);
+            this.templateName = templateName;
             return this;
         }
 

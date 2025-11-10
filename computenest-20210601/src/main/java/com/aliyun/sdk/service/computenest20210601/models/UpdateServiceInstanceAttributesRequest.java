@@ -22,6 +22,10 @@ public class UpdateServiceInstanceAttributesRequest extends Request {
     private Boolean enableOperation;
 
     @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("GrantedPermission")
+    private GrantedPermission grantedPermission;
+
+    @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("RegionId")
     @com.aliyun.core.annotation.Validation(required = true)
     private String regionId;
@@ -34,6 +38,7 @@ public class UpdateServiceInstanceAttributesRequest extends Request {
     private UpdateServiceInstanceAttributesRequest(Builder builder) {
         super(builder);
         this.enableOperation = builder.enableOperation;
+        this.grantedPermission = builder.grantedPermission;
         this.regionId = builder.regionId;
         this.serviceInstanceId = builder.serviceInstanceId;
     }
@@ -59,6 +64,13 @@ public class UpdateServiceInstanceAttributesRequest extends Request {
     }
 
     /**
+     * @return grantedPermission
+     */
+    public GrantedPermission getGrantedPermission() {
+        return this.grantedPermission;
+    }
+
+    /**
      * @return regionId
      */
     public String getRegionId() {
@@ -74,6 +86,7 @@ public class UpdateServiceInstanceAttributesRequest extends Request {
 
     public static final class Builder extends Request.Builder<UpdateServiceInstanceAttributesRequest, Builder> {
         private Boolean enableOperation; 
+        private GrantedPermission grantedPermission; 
         private String regionId; 
         private String serviceInstanceId; 
 
@@ -84,6 +97,7 @@ public class UpdateServiceInstanceAttributesRequest extends Request {
         private Builder(UpdateServiceInstanceAttributesRequest request) {
             super(request);
             this.enableOperation = request.enableOperation;
+            this.grantedPermission = request.grantedPermission;
             this.regionId = request.regionId;
             this.serviceInstanceId = request.serviceInstanceId;
         } 
@@ -97,6 +111,15 @@ public class UpdateServiceInstanceAttributesRequest extends Request {
         public Builder enableOperation(Boolean enableOperation) {
             this.putQueryParameter("EnableOperation", enableOperation);
             this.enableOperation = enableOperation;
+            return this;
+        }
+
+        /**
+         * GrantedPermission.
+         */
+        public Builder grantedPermission(GrantedPermission grantedPermission) {
+            this.putQueryParameter("GrantedPermission", grantedPermission);
+            this.grantedPermission = grantedPermission;
             return this;
         }
 
@@ -134,4 +157,79 @@ public class UpdateServiceInstanceAttributesRequest extends Request {
 
     } 
 
+    /**
+     * 
+     * {@link UpdateServiceInstanceAttributesRequest} extends {@link TeaModel}
+     *
+     * <p>UpdateServiceInstanceAttributesRequest</p>
+     */
+    public static class GrantedPermission extends TeaModel {
+        @com.aliyun.core.annotation.NameInMap("OperationEndTime")
+        private String operationEndTime;
+
+        @com.aliyun.core.annotation.NameInMap("PolicyNames")
+        private String policyNames;
+
+        private GrantedPermission(Builder builder) {
+            this.operationEndTime = builder.operationEndTime;
+            this.policyNames = builder.policyNames;
+        }
+
+        public static Builder builder() {
+            return new Builder();
+        }
+
+        public static GrantedPermission create() {
+            return builder().build();
+        }
+
+        /**
+         * @return operationEndTime
+         */
+        public String getOperationEndTime() {
+            return this.operationEndTime;
+        }
+
+        /**
+         * @return policyNames
+         */
+        public String getPolicyNames() {
+            return this.policyNames;
+        }
+
+        public static final class Builder {
+            private String operationEndTime; 
+            private String policyNames; 
+
+            private Builder() {
+            } 
+
+            private Builder(GrantedPermission model) {
+                this.operationEndTime = model.operationEndTime;
+                this.policyNames = model.policyNames;
+            } 
+
+            /**
+             * OperationEndTime.
+             */
+            public Builder operationEndTime(String operationEndTime) {
+                this.operationEndTime = operationEndTime;
+                return this;
+            }
+
+            /**
+             * PolicyNames.
+             */
+            public Builder policyNames(String policyNames) {
+                this.policyNames = policyNames;
+                return this;
+            }
+
+            public GrantedPermission build() {
+                return new GrantedPermission(this);
+            } 
+
+        } 
+
+    }
 }

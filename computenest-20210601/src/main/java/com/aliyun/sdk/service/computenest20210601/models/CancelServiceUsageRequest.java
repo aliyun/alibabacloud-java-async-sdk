@@ -26,6 +26,10 @@ public class CancelServiceUsageRequest extends Request {
     private Boolean needDelete;
 
     @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("RegionId")
+    private String regionId;
+
+    @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("ServiceId")
     @com.aliyun.core.annotation.Validation(required = true)
     private String serviceId;
@@ -34,6 +38,7 @@ public class CancelServiceUsageRequest extends Request {
         super(builder);
         this.clientToken = builder.clientToken;
         this.needDelete = builder.needDelete;
+        this.regionId = builder.regionId;
         this.serviceId = builder.serviceId;
     }
 
@@ -65,6 +70,13 @@ public class CancelServiceUsageRequest extends Request {
     }
 
     /**
+     * @return regionId
+     */
+    public String getRegionId() {
+        return this.regionId;
+    }
+
+    /**
      * @return serviceId
      */
     public String getServiceId() {
@@ -74,6 +86,7 @@ public class CancelServiceUsageRequest extends Request {
     public static final class Builder extends Request.Builder<CancelServiceUsageRequest, Builder> {
         private String clientToken; 
         private Boolean needDelete; 
+        private String regionId; 
         private String serviceId; 
 
         private Builder() {
@@ -84,6 +97,7 @@ public class CancelServiceUsageRequest extends Request {
             super(request);
             this.clientToken = request.clientToken;
             this.needDelete = request.needDelete;
+            this.regionId = request.regionId;
             this.serviceId = request.serviceId;
         } 
 
@@ -111,6 +125,15 @@ public class CancelServiceUsageRequest extends Request {
         public Builder needDelete(Boolean needDelete) {
             this.putQueryParameter("NeedDelete", needDelete);
             this.needDelete = needDelete;
+            return this;
+        }
+
+        /**
+         * RegionId.
+         */
+        public Builder regionId(String regionId) {
+            this.putQueryParameter("RegionId", regionId);
+            this.regionId = regionId;
             return this;
         }
 

@@ -767,7 +767,10 @@ public class CreateServiceInstanceRequest extends Request {
             }
 
             /**
-             * QuotationId.
+             * <p>privet offer Id</p>
+             * 
+             * <strong>example:</strong>
+             * <p>xxxx-xxxx-xxxx-xxxx</p>
              */
             public Builder quotationId(String quotationId) {
                 this.quotationId = quotationId;
