@@ -12,11 +12,11 @@ import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
  * 
- * {@link GetErrorCodeSolutionsResponse} extends {@link TeaModel}
+ * {@link ListApiMcpServersResponse} extends {@link TeaModel}
  *
- * <p>GetErrorCodeSolutionsResponse</p>
+ * <p>ListApiMcpServersResponse</p>
  */
-public class GetErrorCodeSolutionsResponse extends Response {
+public class ListApiMcpServersResponse extends Response {
     @com.aliyun.core.annotation.NameInMap("headers")
     private java.util.Map<String, String> headers;
 
@@ -24,16 +24,16 @@ public class GetErrorCodeSolutionsResponse extends Response {
     private Integer statusCode;
 
     @com.aliyun.core.annotation.NameInMap("body")
-    private GetErrorCodeSolutionsResponseBody body;
+    private ListApiMcpServersResponseBody body;
 
-    private GetErrorCodeSolutionsResponse(BuilderImpl builder) {
+    private ListApiMcpServersResponse(BuilderImpl builder) {
         super(builder);
         this.headers = builder.headers;
         this.statusCode = builder.statusCode;
         this.body = builder.body;
     }
 
-    public static GetErrorCodeSolutionsResponse create() {
+    public static ListApiMcpServersResponse create() {
         return new BuilderImpl().build();
     }
 
@@ -59,35 +59,35 @@ public class GetErrorCodeSolutionsResponse extends Response {
     /**
      * @return body
      */
-    public GetErrorCodeSolutionsResponseBody getBody() {
+    public ListApiMcpServersResponseBody getBody() {
         return this.body;
     }
 
-    public interface Builder extends Response.Builder<GetErrorCodeSolutionsResponse, Builder> {
+    public interface Builder extends Response.Builder<ListApiMcpServersResponse, Builder> {
 
         Builder headers(java.util.Map<String, String> headers);
 
         Builder statusCode(Integer statusCode);
 
-        Builder body(GetErrorCodeSolutionsResponseBody body);
+        Builder body(ListApiMcpServersResponseBody body);
 
         @Override
-        GetErrorCodeSolutionsResponse build();
+        ListApiMcpServersResponse build();
 
     } 
 
     private static final class BuilderImpl
-            extends Response.BuilderImpl<GetErrorCodeSolutionsResponse, Builder>
+            extends Response.BuilderImpl<ListApiMcpServersResponse, Builder>
             implements Builder {
         private java.util.Map<String, String> headers; 
         private Integer statusCode; 
-        private GetErrorCodeSolutionsResponseBody body; 
+        private ListApiMcpServersResponseBody body; 
 
         private BuilderImpl() {
             super();
         } 
 
-        private BuilderImpl(GetErrorCodeSolutionsResponse response) {
+        private BuilderImpl(ListApiMcpServersResponse response) {
             super(response);
             this.headers = response.headers;
             this.statusCode = response.statusCode;
@@ -116,14 +116,14 @@ public class GetErrorCodeSolutionsResponse extends Response {
          * body.
          */
         @Override
-        public Builder body(GetErrorCodeSolutionsResponseBody body) {
+        public Builder body(ListApiMcpServersResponseBody body) {
             this.body = body;
             return this;
         }
 
         @Override
-        public GetErrorCodeSolutionsResponse build() {
-            return new GetErrorCodeSolutionsResponse(this);
+        public ListApiMcpServersResponse build() {
+            return new ListApiMcpServersResponse(this);
         } 
 
     } 

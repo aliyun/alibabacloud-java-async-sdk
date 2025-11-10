@@ -40,15 +40,116 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
+     * @param request the request parameters of ApiMcpServerValidateHcl  ApiMcpServerValidateHclRequest
+     * @return ApiMcpServerValidateHclResponse
+     */
+    @Override
+    public CompletableFuture<ApiMcpServerValidateHclResponse> apiMcpServerValidateHcl(ApiMcpServerValidateHclRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RESTFUL).setAction("ApiMcpServerValidateHcl").setMethod(HttpMethod.POST).setPathRegex("/terraform/validate").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(ApiMcpServerValidateHclResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<ApiMcpServerValidateHclResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
+     * @param request the request parameters of CreateApiMcpServer  CreateApiMcpServerRequest
+     * @return CreateApiMcpServerResponse
+     */
+    @Override
+    public CompletableFuture<CreateApiMcpServerResponse> createApiMcpServer(CreateApiMcpServerRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RESTFUL).setAction("CreateApiMcpServer").setMethod(HttpMethod.POST).setPathRegex("/apimcpserver").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(CreateApiMcpServerResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<CreateApiMcpServerResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
+     * @param request the request parameters of DeleteApiMcpServer  DeleteApiMcpServerRequest
+     * @return DeleteApiMcpServerResponse
+     */
+    @Override
+    public CompletableFuture<DeleteApiMcpServerResponse> deleteApiMcpServer(DeleteApiMcpServerRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RESTFUL).setAction("DeleteApiMcpServer").setMethod(HttpMethod.DELETE).setPathRegex("/apimcpserver").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(DeleteApiMcpServerResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<DeleteApiMcpServerResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
+     * @param request the request parameters of GenerateCLICommand  GenerateCLICommandRequest
+     * @return GenerateCLICommandResponse
+     */
+    @Override
+    public CompletableFuture<GenerateCLICommandResponse> generateCLICommand(GenerateCLICommandRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RESTFUL).setAction("GenerateCLICommand").setMethod(HttpMethod.POST).setPathRegex("/api/cli/makeCode").setBodyType(BodyType.JSON).setBodyIsForm(true).setReqBodyType(BodyType.FORM).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(GenerateCLICommandResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<GenerateCLICommandResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
+     * @param request the request parameters of GetApiDefinition  GetApiDefinitionRequest
+     * @return GetApiDefinitionResponse
+     */
+    @Override
+    public CompletableFuture<GetApiDefinitionResponse> getApiDefinition(GetApiDefinitionRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RESTFUL).setAction("GetApiDefinition").setMethod(HttpMethod.GET).setPathRegex("/api/definition").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(GetApiDefinitionResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<GetApiDefinitionResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
+     * @param request the request parameters of GetApiMcpServer  GetApiMcpServerRequest
+     * @return GetApiMcpServerResponse
+     */
+    @Override
+    public CompletableFuture<GetApiMcpServerResponse> getApiMcpServer(GetApiMcpServerRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RESTFUL).setAction("GetApiMcpServer").setMethod(HttpMethod.GET).setPathRegex("/apimcpserver").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(GetApiMcpServerResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<GetApiMcpServerResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
      * <b>description</b> :
-     * <h2>请求说明</h2>
-     * <ul>
-     * <li>本接口支持通过POST或GET方法调用。</li>
-     * <li><code>Accept-Language</code>请求头必须设置为<code>zh-CN</code>或<code>en-US</code>之一，用于指定返回结果的语言类型。</li>
-     * <li>错误码格式需符合特定规则，特别是针对OSS的错误码应遵循正则表达式<code>[0-9]{4}-[0-9]{8}</code>。</li>
-     * <li>当前实现中未使用<code>maxResults</code>和<code>nextToken</code>参数。</li>
-     * <li>如果请求失败，将根据不同的错误情况返回相应的错误代码及描述信息。</li>
-     * </ul>
+     * <p>You can call this API operation to query public information instead of special information, such as the account ownership. Permissions on this API operation cannot be granted to other members.</p>
      * 
      * @param request the request parameters of GetErrorCodeSolutions  GetErrorCodeSolutionsRequest
      * @return GetErrorCodeSolutionsResponse
@@ -69,13 +170,7 @@ public final class DefaultAsyncClient implements AsyncClient {
 
     /**
      * <b>description</b> :
-     * <h2>请求说明</h2>
-     * <ul>
-     * <li>本接口主要用于帮助用户通过提供具体的<code>apiRequestId</code>来获取相关API请求的详细日志信息。</li>
-     * <li><code>apiRequestId</code>必须是大写形式的UUID，并且应确保该ID确实来自于您之前对某个OpenAPI的实际调用。</li>
-     * <li>如果提供的<code>apiRequestId</code>无效或者没有找到对应的日志记录，系统将返回相应的错误提示。</li>
-     * <li>在使用此接口时，请注意检查您的网络环境以及权限设置，以保证能够顺利访问到所需资源。</li>
-     * </ul>
+     * <p>Permissions on this API cannot be granted to other members.</p>
      * 
      * @param request the request parameters of GetOwnRequestLog  GetOwnRequestLogRequest
      * @return GetOwnRequestLogResponse
@@ -95,14 +190,26 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
+     * @param request the request parameters of GetProductEndpoints  GetProductEndpointsRequest
+     * @return GetProductEndpointsResponse
+     */
+    @Override
+    public CompletableFuture<GetProductEndpointsResponse> getProductEndpoints(GetProductEndpointsRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RESTFUL).setAction("GetProductEndpoints").setMethod(HttpMethod.GET).setPathRegex("/product/endpoints").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(GetProductEndpointsResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<GetProductEndpointsResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
      * <b>description</b> :
-     * <h2>请求说明</h2>
-     * <ul>
-     * <li>本接口主要用于帮助用户通过提供具体的<code>apiRequestId</code>来获取相关API请求的详细日志信息。</li>
-     * <li><code>apiRequestId</code>必须是大写形式的UUID，并且应确保该ID确实来自于您之前对某个OpenAPI的实际调用。</li>
-     * <li>如果提供的<code>apiRequestId</code>无效或者没有找到对应的日志记录，系统将返回相应的错误提示。</li>
-     * <li>在使用此接口时，请注意检查您的网络环境以及权限设置，以保证能够顺利访问到所需资源。</li>
-     * </ul>
+     * <p>You can grant permissions to a Resource Access Management (RAM) user or assume a role to query the log of an API call across RAM users or Alibaba Cloud accounts. For more information, see <a href="https://help.aliyun.com/document_detail/2868101.html">Grant permissions to troubleshoot API errors across accounts</a>.</p>
      * 
      * @param request the request parameters of GetRequestLog  GetRequestLogRequest
      * @return GetRequestLogResponse
@@ -116,6 +223,78 @@ public final class DefaultAsyncClient implements AsyncClient {
             return this.handler.execute(params);
         } catch (Exception e) {
             CompletableFuture<GetRequestLogResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
+     * @param request the request parameters of ListApiDefinitions  ListApiDefinitionsRequest
+     * @return ListApiDefinitionsResponse
+     */
+    @Override
+    public CompletableFuture<ListApiDefinitionsResponse> listApiDefinitions(ListApiDefinitionsRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RESTFUL).setAction("ListApiDefinitions").setMethod(HttpMethod.GET).setPathRegex("/api/definitions").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(ListApiDefinitionsResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<ListApiDefinitionsResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
+     * @param request the request parameters of ListApiMcpServerSystemTools  ListApiMcpServerSystemToolsRequest
+     * @return ListApiMcpServerSystemToolsResponse
+     */
+    @Override
+    public CompletableFuture<ListApiMcpServerSystemToolsResponse> listApiMcpServerSystemTools(ListApiMcpServerSystemToolsRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RESTFUL).setAction("ListApiMcpServerSystemTools").setMethod(HttpMethod.GET).setPathRegex("/mcpSystemTools").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(ListApiMcpServerSystemToolsResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<ListApiMcpServerSystemToolsResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
+     * @param request the request parameters of ListApiMcpServers  ListApiMcpServersRequest
+     * @return ListApiMcpServersResponse
+     */
+    @Override
+    public CompletableFuture<ListApiMcpServersResponse> listApiMcpServers(ListApiMcpServersRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RESTFUL).setAction("ListApiMcpServers").setMethod(HttpMethod.GET).setPathRegex("/apimcpservers").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(ListApiMcpServersResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<ListApiMcpServersResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
+     * @param request the request parameters of UpdateApiMcpServer  UpdateApiMcpServerRequest
+     * @return UpdateApiMcpServerResponse
+     */
+    @Override
+    public CompletableFuture<UpdateApiMcpServerResponse> updateApiMcpServer(UpdateApiMcpServerRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RESTFUL).setAction("UpdateApiMcpServer").setMethod(HttpMethod.PATCH).setPathRegex("/apimcpserver").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(UpdateApiMcpServerResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<UpdateApiMcpServerResponse> future = new CompletableFuture<>();
             future.completeExceptionally(e);
             return future;
         }

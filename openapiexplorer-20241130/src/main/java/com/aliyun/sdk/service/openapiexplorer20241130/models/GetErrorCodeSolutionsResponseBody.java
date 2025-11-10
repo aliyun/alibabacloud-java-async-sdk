@@ -36,6 +36,10 @@ public class GetErrorCodeSolutionsResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return requestId
      */
@@ -54,8 +58,19 @@ public class GetErrorCodeSolutionsResponseBody extends TeaModel {
         private String requestId; 
         private java.util.List<Solutions> solutions; 
 
+        private Builder() {
+        } 
+
+        private Builder(GetErrorCodeSolutionsResponseBody model) {
+            this.requestId = model.requestId;
+            this.solutions = model.solutions;
+        } 
+
         /**
-         * requestId.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>A707AFA8-1A4C-5B2A-A165-8436C1EA38DB</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -63,7 +78,7 @@ public class GetErrorCodeSolutionsResponseBody extends TeaModel {
         }
 
         /**
-         * solutions.
+         * <p>The solutions. Not all error codes have corresponding solutions. You can submit a ticket or use OpenAPI Explorer to contact technical support if necessary.</p>
          */
         public Builder solutions(java.util.List<Solutions> solutions) {
             this.solutions = solutions;
@@ -168,8 +183,20 @@ public class GetErrorCodeSolutionsResponseBody extends TeaModel {
             private String productName; 
             private String solutionId; 
 
+            private Builder() {
+            } 
+
+            private Builder(Solutions model) {
+                this.content = model.content;
+                this.errorCode = model.errorCode;
+                this.errorMessage = model.errorMessage;
+                this.product = model.product;
+                this.productName = model.productName;
+                this.solutionId = model.solutionId;
+            } 
+
             /**
-             * content.
+             * <p>The content of the solution, which is in the markdown format.</p>
              */
             public Builder content(String content) {
                 this.content = content;
@@ -177,7 +204,10 @@ public class GetErrorCodeSolutionsResponseBody extends TeaModel {
             }
 
             /**
-             * errorCode.
+             * <p>The error code.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>0017-00000502</p>
              */
             public Builder errorCode(String errorCode) {
                 this.errorCode = errorCode;
@@ -185,7 +215,10 @@ public class GetErrorCodeSolutionsResponseBody extends TeaModel {
             }
 
             /**
-             * errorMessage.
+             * <p>The error message.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>The resource is not in a valid state for the operation.</p>
              */
             public Builder errorMessage(String errorMessage) {
                 this.errorMessage = errorMessage;
@@ -193,7 +226,10 @@ public class GetErrorCodeSolutionsResponseBody extends TeaModel {
             }
 
             /**
-             * product.
+             * <p>The code of the product to which the solution belongs.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Ecs</p>
              */
             public Builder product(String product) {
                 this.product = product;
@@ -201,7 +237,7 @@ public class GetErrorCodeSolutionsResponseBody extends TeaModel {
             }
 
             /**
-             * productName.
+             * <p>The name of the product to which the solution belongs.</p>
              */
             public Builder productName(String productName) {
                 this.productName = productName;
@@ -209,7 +245,10 @@ public class GetErrorCodeSolutionsResponseBody extends TeaModel {
             }
 
             /**
-             * solutionId.
+             * <p>The solution ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>0017-00000502</p>
              */
             public Builder solutionId(String solutionId) {
                 this.solutionId = solutionId;

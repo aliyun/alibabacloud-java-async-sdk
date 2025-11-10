@@ -12,11 +12,11 @@ import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
  * 
- * {@link GetErrorCodeSolutionsResponse} extends {@link TeaModel}
+ * {@link DeleteApiMcpServerResponse} extends {@link TeaModel}
  *
- * <p>GetErrorCodeSolutionsResponse</p>
+ * <p>DeleteApiMcpServerResponse</p>
  */
-public class GetErrorCodeSolutionsResponse extends Response {
+public class DeleteApiMcpServerResponse extends Response {
     @com.aliyun.core.annotation.NameInMap("headers")
     private java.util.Map<String, String> headers;
 
@@ -24,16 +24,16 @@ public class GetErrorCodeSolutionsResponse extends Response {
     private Integer statusCode;
 
     @com.aliyun.core.annotation.NameInMap("body")
-    private GetErrorCodeSolutionsResponseBody body;
+    private DeleteApiMcpServerResponseBody body;
 
-    private GetErrorCodeSolutionsResponse(BuilderImpl builder) {
+    private DeleteApiMcpServerResponse(BuilderImpl builder) {
         super(builder);
         this.headers = builder.headers;
         this.statusCode = builder.statusCode;
         this.body = builder.body;
     }
 
-    public static GetErrorCodeSolutionsResponse create() {
+    public static DeleteApiMcpServerResponse create() {
         return new BuilderImpl().build();
     }
 
@@ -59,35 +59,35 @@ public class GetErrorCodeSolutionsResponse extends Response {
     /**
      * @return body
      */
-    public GetErrorCodeSolutionsResponseBody getBody() {
+    public DeleteApiMcpServerResponseBody getBody() {
         return this.body;
     }
 
-    public interface Builder extends Response.Builder<GetErrorCodeSolutionsResponse, Builder> {
+    public interface Builder extends Response.Builder<DeleteApiMcpServerResponse, Builder> {
 
         Builder headers(java.util.Map<String, String> headers);
 
         Builder statusCode(Integer statusCode);
 
-        Builder body(GetErrorCodeSolutionsResponseBody body);
+        Builder body(DeleteApiMcpServerResponseBody body);
 
         @Override
-        GetErrorCodeSolutionsResponse build();
+        DeleteApiMcpServerResponse build();
 
     } 
 
     private static final class BuilderImpl
-            extends Response.BuilderImpl<GetErrorCodeSolutionsResponse, Builder>
+            extends Response.BuilderImpl<DeleteApiMcpServerResponse, Builder>
             implements Builder {
         private java.util.Map<String, String> headers; 
         private Integer statusCode; 
-        private GetErrorCodeSolutionsResponseBody body; 
+        private DeleteApiMcpServerResponseBody body; 
 
         private BuilderImpl() {
             super();
         } 
 
-        private BuilderImpl(GetErrorCodeSolutionsResponse response) {
+        private BuilderImpl(DeleteApiMcpServerResponse response) {
             super(response);
             this.headers = response.headers;
             this.statusCode = response.statusCode;
@@ -116,14 +116,14 @@ public class GetErrorCodeSolutionsResponse extends Response {
          * body.
          */
         @Override
-        public Builder body(GetErrorCodeSolutionsResponseBody body) {
+        public Builder body(DeleteApiMcpServerResponseBody body) {
             this.body = body;
             return this;
         }
 
         @Override
-        public GetErrorCodeSolutionsResponse build() {
-            return new GetErrorCodeSolutionsResponse(this);
+        public DeleteApiMcpServerResponse build() {
+            return new DeleteApiMcpServerResponse(this);
         } 
 
     } 

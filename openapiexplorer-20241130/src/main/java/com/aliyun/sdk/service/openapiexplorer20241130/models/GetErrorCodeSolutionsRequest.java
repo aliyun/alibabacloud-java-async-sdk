@@ -50,7 +50,7 @@ public class GetErrorCodeSolutionsRequest extends Request {
         return builder().build();
     }
 
-    @Override
+@Override
     public Builder toBuilder() {
         return new Builder(this);
     }
@@ -102,7 +102,10 @@ public class GetErrorCodeSolutionsRequest extends Request {
         } 
 
         /**
-         * acceptLanguage.
+         * <p>The language of the solution. Valid values: zh-CN and en-US. Not all of the solutions are available in English. If you set this parameter to en-US, but the corresponding solution is actually not available in English, no response is returned.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>zh-CN</p>
          */
         public Builder acceptLanguage(String acceptLanguage) {
             this.putQueryParameter("acceptLanguage", acceptLanguage);
@@ -111,6 +114,7 @@ public class GetErrorCodeSolutionsRequest extends Request {
         }
 
         /**
+         * <p>The error code based on which you want to query a solution.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -123,7 +127,10 @@ public class GetErrorCodeSolutionsRequest extends Request {
         }
 
         /**
-         * errorMessage.
+         * <p>The error message for which you want to query a solution. This parameter must be configured together with the errorCode parameter.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>An error occurred while processing your request.</p>
          */
         public Builder errorMessage(String errorMessage) {
             this.putQueryParameter("errorMessage", errorMessage);
@@ -132,7 +139,14 @@ public class GetErrorCodeSolutionsRequest extends Request {
         }
 
         /**
-         * product.
+         * <p>The product code. You can use one of the following methods to query a product code:</p>
+         * <ul>
+         * <li>Call the GetRequestLog operation to query a product code from the response.</li>
+         * <li>Query the code of a product in the OpenAPI Explorer URL of the product. For example, the OpenAPI Explorer URL of Short Message Service (SMS) is <a href="https://api.alibabacloud.com/product/Dysmsapi">https://api.alibabacloud.com/product/Dysmsapi</a>. Therefore, the product code of SMS is Dysmsapi.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>oss</p>
          */
         public Builder product(String product) {
             this.putQueryParameter("product", product);

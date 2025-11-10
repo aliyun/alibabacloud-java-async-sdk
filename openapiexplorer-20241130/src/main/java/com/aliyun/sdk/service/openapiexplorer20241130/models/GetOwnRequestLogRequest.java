@@ -35,7 +35,7 @@ public class GetOwnRequestLogRequest extends Request {
         return builder().build();
     }
 
-    @Override
+@Override
     public Builder toBuilder() {
         return new Builder(this);
     }
@@ -60,6 +60,7 @@ public class GetOwnRequestLogRequest extends Request {
         } 
 
         /**
+         * <p>The request ID returned by the API for which you want to query the log. The value is the universally unique identifiers (UUID) of the API request and must be uppercase.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
