@@ -67,7 +67,10 @@ public class UpdateServiceResponseBody extends TeaModel {
         } 
 
         /**
-         * requestId.
+         * <p>Request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>123-0F43-23423-AC43-34234</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -75,7 +78,10 @@ public class UpdateServiceResponseBody extends TeaModel {
         }
 
         /**
-         * serviceId.
+         * <p>Service ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>em87vd@c2e25bcfe0e21ce0***</p>
          */
         public Builder serviceId(String serviceId) {
             this.serviceId = serviceId;

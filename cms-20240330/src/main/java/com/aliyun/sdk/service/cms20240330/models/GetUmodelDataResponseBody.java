@@ -119,7 +119,7 @@ public class GetUmodelDataResponseBody extends TeaModel {
         } 
 
         /**
-         * errors.
+         * <p>Error information</p>
          */
         public Builder errors(java.util.List<Errors> errors) {
             this.errors = errors;
@@ -127,7 +127,7 @@ public class GetUmodelDataResponseBody extends TeaModel {
         }
 
         /**
-         * links.
+         * <p>List of node link relationships</p>
          */
         public Builder links(java.util.List<?> links) {
             this.links = links;
@@ -135,7 +135,7 @@ public class GetUmodelDataResponseBody extends TeaModel {
         }
 
         /**
-         * nodes.
+         * <p>List of nodes</p>
          */
         public Builder nodes(java.util.List<?> nodes) {
             this.nodes = nodes;
@@ -143,7 +143,10 @@ public class GetUmodelDataResponseBody extends TeaModel {
         }
 
         /**
-         * requestId.
+         * <p>Request ID</p>
+         * 
+         * <strong>example:</strong>
+         * <p>123-123-234-345-123</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -151,7 +154,10 @@ public class GetUmodelDataResponseBody extends TeaModel {
         }
 
         /**
-         * totalLinksCount.
+         * <p>Total number of node links</p>
+         * 
+         * <strong>example:</strong>
+         * <p>0</p>
          */
         public Builder totalLinksCount(Integer totalLinksCount) {
             this.totalLinksCount = totalLinksCount;
@@ -159,7 +165,10 @@ public class GetUmodelDataResponseBody extends TeaModel {
         }
 
         /**
-         * totalNodesCount.
+         * <p>Total number of nodes</p>
+         * 
+         * <strong>example:</strong>
+         * <p>0</p>
          */
         public Builder totalNodesCount(Integer totalNodesCount) {
             this.totalNodesCount = totalNodesCount;
@@ -225,7 +234,10 @@ public class GetUmodelDataResponseBody extends TeaModel {
             } 
 
             /**
-             * message.
+             * <p>Details.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>ok</p>
              */
             public Builder message(String message) {
                 this.message = message;
@@ -233,7 +245,10 @@ public class GetUmodelDataResponseBody extends TeaModel {
             }
 
             /**
-             * type.
+             * <p>Error type</p>
+             * 
+             * <strong>example:</strong>
+             * <p>external</p>
              */
             public Builder type(String type) {
                 this.type = type;

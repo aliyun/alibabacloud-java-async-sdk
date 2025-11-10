@@ -75,6 +75,7 @@ public class GetAggTaskGroupRequest extends Request {
         } 
 
         /**
+         * <p>The ID of the Prometheus instance to which the aggregation task group belongs.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -87,6 +88,7 @@ public class GetAggTaskGroupRequest extends Request {
         }
 
         /**
+         * <p>The ID of the aggregation task group.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>

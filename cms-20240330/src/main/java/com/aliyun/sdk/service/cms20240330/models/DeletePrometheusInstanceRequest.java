@@ -60,6 +60,7 @@ public class DeletePrometheusInstanceRequest extends Request {
         } 
 
         /**
+         * <p>Instance ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>

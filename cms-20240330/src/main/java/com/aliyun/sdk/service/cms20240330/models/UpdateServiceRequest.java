@@ -145,6 +145,7 @@ public class UpdateServiceRequest extends Request {
         } 
 
         /**
+         * <p>Workspace name</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -157,6 +158,7 @@ public class UpdateServiceRequest extends Request {
         }
 
         /**
+         * <p>Service ID</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -178,7 +180,10 @@ public class UpdateServiceRequest extends Request {
         }
 
         /**
-         * attributes.
+         * <p>Extended attributes.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>{&quot;language&quot;:&quot;java&quot;}</p>
          */
         public Builder attributes(String attributes) {
             this.putBodyParameter("attributes", attributes);
@@ -187,7 +192,10 @@ public class UpdateServiceRequest extends Request {
         }
 
         /**
-         * description.
+         * <p>Service description, only valid when serviceType=RUM.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>test</p>
          */
         public Builder description(String description) {
             this.putBodyParameter("description", description);
@@ -196,7 +204,10 @@ public class UpdateServiceRequest extends Request {
         }
 
         /**
-         * displayName.
+         * <p>Display name, only valid when serviceType=RUM.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>api-monitor-test</p>
          */
         public Builder displayName(String displayName) {
             this.putBodyParameter("displayName", displayName);
@@ -205,7 +216,10 @@ public class UpdateServiceRequest extends Request {
         }
 
         /**
-         * serviceStatus.
+         * <p>Service status, only valid when serviceType=RUM.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Stopped</p>
          */
         public Builder serviceStatus(String serviceStatus) {
             this.putBodyParameter("serviceStatus", serviceStatus);

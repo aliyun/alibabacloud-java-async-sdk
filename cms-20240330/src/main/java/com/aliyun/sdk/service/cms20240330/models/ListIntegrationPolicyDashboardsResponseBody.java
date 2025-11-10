@@ -80,7 +80,7 @@ public class ListIntegrationPolicyDashboardsResponseBody extends TeaModel {
         } 
 
         /**
-         * dashboards.
+         * <p>List of dashboards.</p>
          */
         public Builder dashboards(java.util.List<Dashboards> dashboards) {
             this.dashboards = dashboards;
@@ -88,7 +88,7 @@ public class ListIntegrationPolicyDashboardsResponseBody extends TeaModel {
         }
 
         /**
-         * <p>Id of the request</p>
+         * <p>ID of the request</p>
          * 
          * <strong>example:</strong>
          * <p>CD8BA7D6-995D-578D-9941-78B0FECD14B5</p>
@@ -99,7 +99,10 @@ public class ListIntegrationPolicyDashboardsResponseBody extends TeaModel {
         }
 
         /**
-         * total.
+         * <p>Number of components.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder total(Integer total) {
             this.total = total;
@@ -119,6 +122,9 @@ public class ListIntegrationPolicyDashboardsResponseBody extends TeaModel {
      * <p>ListIntegrationPolicyDashboardsResponseBody</p>
      */
     public static class Dashboards extends TeaModel {
+        @com.aliyun.core.annotation.NameInMap("engine")
+        private String engine;
+
         @com.aliyun.core.annotation.NameInMap("folderUid")
         private String folderUid;
 
@@ -141,6 +147,7 @@ public class ListIntegrationPolicyDashboardsResponseBody extends TeaModel {
         private String url;
 
         private Dashboards(Builder builder) {
+            this.engine = builder.engine;
             this.folderUid = builder.folderUid;
             this.name = builder.name;
             this.region = builder.region;
@@ -156,6 +163,13 @@ public class ListIntegrationPolicyDashboardsResponseBody extends TeaModel {
 
         public static Dashboards create() {
             return builder().build();
+        }
+
+        /**
+         * @return engine
+         */
+        public String getEngine() {
+            return this.engine;
         }
 
         /**
@@ -208,6 +222,7 @@ public class ListIntegrationPolicyDashboardsResponseBody extends TeaModel {
         }
 
         public static final class Builder {
+            private String engine; 
             private String folderUid; 
             private String name; 
             private String region; 
@@ -220,6 +235,7 @@ public class ListIntegrationPolicyDashboardsResponseBody extends TeaModel {
             } 
 
             private Builder(Dashboards model) {
+                this.engine = model.engine;
                 this.folderUid = model.folderUid;
                 this.name = model.name;
                 this.region = model.region;
@@ -230,7 +246,23 @@ public class ListIntegrationPolicyDashboardsResponseBody extends TeaModel {
             } 
 
             /**
-             * folderUid.
+             * <p>Dashboard engine:
+             * grafana: shared grafana.
+             * cms: cms self-developed dashboard engine.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>grafana</p>
+             */
+            public Builder engine(String engine) {
+                this.engine = engine;
+                return this;
+            }
+
+            /**
+             * <p>UID of the dashboard folder.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Env-AAA</p>
              */
             public Builder folderUid(String folderUid) {
                 this.folderUid = folderUid;
@@ -238,7 +270,10 @@ public class ListIntegrationPolicyDashboardsResponseBody extends TeaModel {
             }
 
             /**
-             * name.
+             * <p>Dashboard name</p>
+             * 
+             * <strong>example:</strong>
+             * <p>k8s-pod</p>
              */
             public Builder name(String name) {
                 this.name = name;
@@ -246,7 +281,10 @@ public class ListIntegrationPolicyDashboardsResponseBody extends TeaModel {
             }
 
             /**
-             * region.
+             * <p>Region</p>
+             * 
+             * <strong>example:</strong>
+             * <p>cn-hongkong</p>
              */
             public Builder region(String region) {
                 this.region = region;
@@ -254,7 +292,7 @@ public class ListIntegrationPolicyDashboardsResponseBody extends TeaModel {
             }
 
             /**
-             * tags.
+             * <p>List of tags.</p>
              */
             public Builder tags(java.util.List<String> tags) {
                 this.tags = tags;
@@ -262,7 +300,10 @@ public class ListIntegrationPolicyDashboardsResponseBody extends TeaModel {
             }
 
             /**
-             * title.
+             * <p>Title of the UI module (not name)</p>
+             * 
+             * <strong>example:</strong>
+             * <p>test</p>
              */
             public Builder title(String title) {
                 this.title = title;
@@ -270,7 +311,10 @@ public class ListIntegrationPolicyDashboardsResponseBody extends TeaModel {
             }
 
             /**
-             * uid.
+             * <p>ID of the current Alibaba Cloud primary account, read-only</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1258199346721590</p>
              */
             public Builder uid(String uid) {
                 this.uid = uid;
@@ -278,7 +322,10 @@ public class ListIntegrationPolicyDashboardsResponseBody extends TeaModel {
             }
 
             /**
-             * url.
+             * <p>pagerDuty integration webhook. Supports V1 and V2 versions</p>
+             * 
+             * <strong>example:</strong>
+             * <p><a href="https://agi.alicdn.com/user/0/0_0_5255362686.png?x-oss-process=image/quality,q_75/format,jpg&file=1734574878007.jpg">https://agi.alicdn.com/user/0/0_0_5255362686.png?x-oss-process=image/quality,q_75/format,jpg&amp;file=1734574878007.jpg</a></p>
              */
             public Builder url(String url) {
                 this.url = url;

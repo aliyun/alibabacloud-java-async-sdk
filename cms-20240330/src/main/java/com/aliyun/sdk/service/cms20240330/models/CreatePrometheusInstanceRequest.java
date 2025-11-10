@@ -214,7 +214,14 @@ public class CreatePrometheusInstanceRequest extends Request {
         } 
 
         /**
-         * archiveDuration.
+         * <p>The number of days to automatically archive and save after the storage expires, 0 means no archiving. The range of archiving days is as follows:</p>
+         * <ul>
+         * <li>V1: 60~365 days.</li>
+         * <li>V2: 60~3650 days (3650 indicates permanent storage).</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>60</p>
          */
         public Builder archiveDuration(Integer archiveDuration) {
             this.putBodyParameter("archiveDuration", archiveDuration);
@@ -223,7 +230,19 @@ public class CreatePrometheusInstanceRequest extends Request {
         }
 
         /**
-         * authFreeReadPolicy.
+         * <p>Password-free read policy (supports IP segments and VpcId).</p>
+         * 
+         * <strong>example:</strong>
+         * <p>{
+         *   &quot;SourceIp&quot;: [
+         *     &quot;192.168.1.0/24&quot;,
+         *     &quot;172.168.2.22&quot;
+         *   ],
+         *   &quot;SourceVpc&quot;: [
+         *     &quot;vpc-xx1&quot;,
+         *     &quot;vpc-xx2&quot;
+         *   ]
+         * }</p>
          */
         public Builder authFreeReadPolicy(String authFreeReadPolicy) {
             this.putBodyParameter("authFreeReadPolicy", authFreeReadPolicy);
@@ -232,7 +251,19 @@ public class CreatePrometheusInstanceRequest extends Request {
         }
 
         /**
-         * authFreeWritePolicy.
+         * <p>Password-free write policy.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>{
+         *   &quot;SourceIp&quot;: [
+         *     &quot;192.168.1.0/24&quot;,
+         *     &quot;172.168.2.22&quot;
+         *   ],
+         *   &quot;SourceVpc&quot;: [
+         *     &quot;vpc-xx1&quot;,
+         *     &quot;vpc-xx2&quot;
+         *   ]
+         * }</p>
          */
         public Builder authFreeWritePolicy(String authFreeWritePolicy) {
             this.putBodyParameter("authFreeWritePolicy", authFreeWritePolicy);
@@ -241,7 +272,10 @@ public class CreatePrometheusInstanceRequest extends Request {
         }
 
         /**
-         * enableAuthFreeRead.
+         * <p>Whether to enable password-free read (only supported in V2 version).</p>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder enableAuthFreeRead(Boolean enableAuthFreeRead) {
             this.putBodyParameter("enableAuthFreeRead", enableAuthFreeRead);
@@ -250,7 +284,10 @@ public class CreatePrometheusInstanceRequest extends Request {
         }
 
         /**
-         * enableAuthFreeWrite.
+         * <p>Whether to enable password-free write (only supported in V2 version).</p>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder enableAuthFreeWrite(Boolean enableAuthFreeWrite) {
             this.putBodyParameter("enableAuthFreeWrite", enableAuthFreeWrite);
@@ -259,7 +296,10 @@ public class CreatePrometheusInstanceRequest extends Request {
         }
 
         /**
-         * enableAuthToken.
+         * <p>Whether to enable authorization Token (only supported in V1 version).</p>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder enableAuthToken(Boolean enableAuthToken) {
             this.putBodyParameter("enableAuthToken", enableAuthToken);
@@ -268,7 +308,15 @@ public class CreatePrometheusInstanceRequest extends Request {
         }
 
         /**
-         * paymentType.
+         * <p>Billing method:</p>
+         * <ul>
+         * <li>POSTPAY: Postpaid by metric reporting volume.</li>
+         * <li>POSTPAY_GB: Postpaid by metric write volume.
+         * Note, if left blank, the user&quot;s default billing method configuration will be used. If the user has not configured a default, the system defaults to billing by metric reporting volume.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>POSTPAY</p>
          */
         public Builder paymentType(String paymentType) {
             this.putBodyParameter("paymentType", paymentType);
@@ -277,6 +325,7 @@ public class CreatePrometheusInstanceRequest extends Request {
         }
 
         /**
+         * <p>Instance name.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -289,7 +338,10 @@ public class CreatePrometheusInstanceRequest extends Request {
         }
 
         /**
-         * status.
+         * <p>Instance status.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Running</p>
          */
         public Builder status(String status) {
             this.putBodyParameter("status", status);
@@ -298,7 +350,14 @@ public class CreatePrometheusInstanceRequest extends Request {
         }
 
         /**
-         * storageDuration.
+         * <p>Storage duration (days):</p>
+         * <ul>
+         * <li>By write volume: 90, 180.</li>
+         * <li>By metric reporting volume: 15, 30, 60, 90, 180.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>90</p>
          */
         public Builder storageDuration(Integer storageDuration) {
             this.putBodyParameter("storageDuration", storageDuration);
@@ -307,7 +366,7 @@ public class CreatePrometheusInstanceRequest extends Request {
         }
 
         /**
-         * tags.
+         * <p>Tag values.</p>
          */
         public Builder tags(java.util.List<Tags> tags) {
             this.putBodyParameter("tags", tags);
@@ -316,7 +375,10 @@ public class CreatePrometheusInstanceRequest extends Request {
         }
 
         /**
-         * workspace.
+         * <p>Belonging workspace, default value: default-cms-{userId}-{regionId}.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>wokspace1</p>
          */
         public Builder workspace(String workspace) {
             this.putBodyParameter("workspace", workspace);
@@ -384,7 +446,10 @@ public class CreatePrometheusInstanceRequest extends Request {
             } 
 
             /**
-             * key.
+             * <p>Tag key.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>key1</p>
              */
             public Builder key(String key) {
                 this.key = key;
@@ -392,7 +457,10 @@ public class CreatePrometheusInstanceRequest extends Request {
             }
 
             /**
-             * value.
+             * <p>Tag value.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>110109200001214284</p>
              */
             public Builder value(String value) {
                 this.value = value;

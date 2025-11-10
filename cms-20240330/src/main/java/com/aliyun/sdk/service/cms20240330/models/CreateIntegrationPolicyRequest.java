@@ -130,7 +130,7 @@ public class CreateIntegrationPolicyRequest extends Request {
         } 
 
         /**
-         * entityGroup.
+         * <p>Entity group for creating the policy. Policies can be quickly created using the entity group, and <code>clusterId</code> and <code>vpcId</code> are independent of each other.</p>
          */
         public Builder entityGroup(EntityGroup entityGroup) {
             this.putBodyParameter("entityGroup", entityGroup);
@@ -139,7 +139,10 @@ public class CreateIntegrationPolicyRequest extends Request {
         }
 
         /**
-         * policyName.
+         * <p>Policy name</p>
+         * 
+         * <strong>example:</strong>
+         * <p>prod-database</p>
          */
         public Builder policyName(String policyName) {
             this.putBodyParameter("policyName", policyName);
@@ -148,6 +151,7 @@ public class CreateIntegrationPolicyRequest extends Request {
         }
 
         /**
+         * <p>Policy type: CS/ECS/Cloud</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -160,7 +164,10 @@ public class CreateIntegrationPolicyRequest extends Request {
         }
 
         /**
-         * resourceGroupId.
+         * <p>Resource group ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>rg-aekz2km4kmhtbii</p>
          */
         public Builder resourceGroupId(String resourceGroupId) {
             this.putBodyParameter("resourceGroupId", resourceGroupId);
@@ -169,7 +176,7 @@ public class CreateIntegrationPolicyRequest extends Request {
         }
 
         /**
-         * tags.
+         * <p>Resource tags.</p>
          */
         public Builder tags(java.util.List<Tags> tags) {
             this.putBodyParameter("tags", tags);
@@ -178,7 +185,10 @@ public class CreateIntegrationPolicyRequest extends Request {
         }
 
         /**
-         * workspace.
+         * <p>Workspace.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>prometheus</p>
          */
         public Builder workspace(String workspace) {
             this.putBodyParameter("workspace", workspace);
@@ -212,6 +222,9 @@ public class CreateIntegrationPolicyRequest extends Request {
         @com.aliyun.core.annotation.NameInMap("entityGroupId")
         private String entityGroupId;
 
+        @com.aliyun.core.annotation.NameInMap("entityUserId")
+        private String entityUserId;
+
         @com.aliyun.core.annotation.NameInMap("vpcId")
         private String vpcId;
 
@@ -220,6 +233,7 @@ public class CreateIntegrationPolicyRequest extends Request {
             this.clusterId = builder.clusterId;
             this.disablePolicyShare = builder.disablePolicyShare;
             this.entityGroupId = builder.entityGroupId;
+            this.entityUserId = builder.entityUserId;
             this.vpcId = builder.vpcId;
         }
 
@@ -260,6 +274,13 @@ public class CreateIntegrationPolicyRequest extends Request {
         }
 
         /**
+         * @return entityUserId
+         */
+        public String getEntityUserId() {
+            return this.entityUserId;
+        }
+
+        /**
          * @return vpcId
          */
         public String getVpcId() {
@@ -271,6 +292,7 @@ public class CreateIntegrationPolicyRequest extends Request {
             private String clusterId; 
             private Boolean disablePolicyShare; 
             private String entityGroupId; 
+            private String entityUserId; 
             private String vpcId; 
 
             private Builder() {
@@ -281,11 +303,15 @@ public class CreateIntegrationPolicyRequest extends Request {
                 this.clusterId = model.clusterId;
                 this.disablePolicyShare = model.disablePolicyShare;
                 this.entityGroupId = model.entityGroupId;
+                this.entityUserId = model.entityUserId;
                 this.vpcId = model.vpcId;
             } 
 
             /**
-             * clusterEntityType.
+             * <p>Cluster entity type, such as acs.ack.cluster/acs.one.cluster/acs.asi.cluster or others.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>acs.ack.cluster</p>
              */
             public Builder clusterEntityType(String clusterEntityType) {
                 this.clusterEntityType = clusterEntityType;
@@ -293,7 +319,10 @@ public class CreateIntegrationPolicyRequest extends Request {
             }
 
             /**
-             * clusterId.
+             * <p>Cluster ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>na61prod3-na61cloudhdfsssd</p>
              */
             public Builder clusterId(String clusterId) {
                 this.clusterId = clusterId;
@@ -301,7 +330,10 @@ public class CreateIntegrationPolicyRequest extends Request {
             }
 
             /**
-             * disablePolicyShare.
+             * <p>Whether to disable the unique binding of the Policy. If enabled, multiple Policies can be created for a single container cluster.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>ture</p>
              */
             public Builder disablePolicyShare(Boolean disablePolicyShare) {
                 this.disablePolicyShare = disablePolicyShare;
@@ -309,7 +341,10 @@ public class CreateIntegrationPolicyRequest extends Request {
             }
 
             /**
-             * entityGroupId.
+             * <p>Entity group ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>eg-b79f65d11fb94e779867cf937c3a3002</p>
              */
             public Builder entityGroupId(String entityGroupId) {
                 this.entityGroupId = entityGroupId;
@@ -317,7 +352,21 @@ public class CreateIntegrationPolicyRequest extends Request {
             }
 
             /**
-             * vpcId.
+             * <p>User ID to which the cluster belongs.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>12xxxx</p>
+             */
+            public Builder entityUserId(String entityUserId) {
+                this.entityUserId = entityUserId;
+                return this;
+            }
+
+            /**
+             * <p>VPC ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>vpc-bp18fgg3ffxa9czna40xt</p>
              */
             public Builder vpcId(String vpcId) {
                 this.vpcId = vpcId;
@@ -384,7 +433,10 @@ public class CreateIntegrationPolicyRequest extends Request {
             } 
 
             /**
-             * key.
+             * <p>Tag <code>key</code> value.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>use</p>
              */
             public Builder key(String key) {
                 this.key = key;
@@ -392,7 +444,10 @@ public class CreateIntegrationPolicyRequest extends Request {
             }
 
             /**
-             * value.
+             * <p>Tag <code>value</code> value.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>database</p>
              */
             public Builder value(String value) {
                 this.value = value;

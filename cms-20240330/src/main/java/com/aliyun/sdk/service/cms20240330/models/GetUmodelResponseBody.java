@@ -106,7 +106,7 @@ public class GetUmodelResponseBody extends TeaModel {
         } 
 
         /**
-         * commonSchemaRef.
+         * <p>This field does not need to be filled currently</p>
          */
         public Builder commonSchemaRef(java.util.List<CommonSchemaRef> commonSchemaRef) {
             this.commonSchemaRef = commonSchemaRef;
@@ -114,7 +114,10 @@ public class GetUmodelResponseBody extends TeaModel {
         }
 
         /**
-         * description.
+         * <p>Umodel description</p>
+         * 
+         * <strong>example:</strong>
+         * <p>workspace test</p>
          */
         public Builder description(String description) {
             this.description = description;
@@ -122,7 +125,10 @@ public class GetUmodelResponseBody extends TeaModel {
         }
 
         /**
-         * regionId.
+         * <p>Region</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-heyuan</p>
          */
         public Builder regionId(String regionId) {
             this.regionId = regionId;
@@ -130,7 +136,10 @@ public class GetUmodelResponseBody extends TeaModel {
         }
 
         /**
-         * requestId.
+         * <p>Request ID</p>
+         * 
+         * <strong>example:</strong>
+         * <p>123-123123-sdf-435-3123</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -138,7 +147,10 @@ public class GetUmodelResponseBody extends TeaModel {
         }
 
         /**
-         * workspace.
+         * <p>Workspace name</p>
+         * 
+         * <strong>example:</strong>
+         * <p>workspace-test</p>
          */
         public Builder workspace(String workspace) {
             this.workspace = workspace;
@@ -204,7 +216,10 @@ public class GetUmodelResponseBody extends TeaModel {
             } 
 
             /**
-             * group.
+             * <p>Common Umodel Schema group</p>
+             * 
+             * <strong>example:</strong>
+             * <p>test-job-123123</p>
              */
             public Builder group(String group) {
                 this.group = group;
@@ -212,7 +227,10 @@ public class GetUmodelResponseBody extends TeaModel {
             }
 
             /**
-             * version.
+             * <p>Version</p>
+             * 
+             * <strong>example:</strong>
+             * <p>5</p>
              */
             public Builder version(String version) {
                 this.version = version;

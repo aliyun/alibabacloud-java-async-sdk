@@ -40,6 +40,9 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
+     * <b>description</b> :
+     * <p>Used to create a site monitoring task</p>
+     * 
      * @param request the request parameters of CreateAddonRelease  CreateAddonReleaseRequest
      * @return CreateAddonReleaseResponse
      */
@@ -94,6 +97,9 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
+     * <b>description</b> :
+     * <p>This interface is used to support users in creating event integration.</p>
+     * 
      * @param request the request parameters of CreateIntegrationPolicy  CreateIntegrationPolicyRequest
      * @return CreateIntegrationPolicyResponse
      */
@@ -130,6 +136,9 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
+     * <b>description</b> :
+     * <p>Used to create a site monitoring task</p>
+     * 
      * @param request the request parameters of CreatePrometheusView  CreatePrometheusViewRequest
      * @return CreatePrometheusViewResponse
      */
@@ -148,6 +157,9 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
+     * <b>description</b> :
+     * <p>Create a Prometheus monitoring virtual instance.</p>
+     * 
      * @param request the request parameters of CreatePrometheusVirtualInstance  CreatePrometheusVirtualInstanceRequest
      * @return CreatePrometheusVirtualInstanceResponse
      */
@@ -202,6 +214,9 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
+     * <b>description</b> :
+     * <p>Create Umodel configuration in the specified workspace</p>
+     * 
      * @param request the request parameters of CreateUmodel  CreateUmodelRequest
      * @return CreateUmodelResponse
      */
@@ -292,6 +307,9 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
+     * <b>description</b> :
+     * <p>Delete a Prometheus instance.</p>
+     * 
      * @param request the request parameters of DeletePrometheusInstance  DeletePrometheusInstanceRequest
      * @return DeletePrometheusInstanceResponse
      */
@@ -310,6 +328,9 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
+     * <b>description</b> :
+     * <p>Delete prometheus view instance.</p>
+     * 
      * @param request the request parameters of DeletePrometheusView  DeletePrometheusViewRequest
      * @return DeletePrometheusViewResponse
      */
@@ -346,6 +367,9 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
+     * <b>description</b> :
+     * <p>Delete the Umodel under the specified workspace</p>
+     * 
      * @param request the request parameters of DeleteUmodel  DeleteUmodelRequest
      * @return DeleteUmodelResponse
      */
@@ -364,6 +388,27 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
+     * @param request the request parameters of DeleteUmodelCommonSchemaRef  DeleteUmodelCommonSchemaRefRequest
+     * @return DeleteUmodelCommonSchemaRefResponse
+     */
+    @Override
+    public CompletableFuture<DeleteUmodelCommonSchemaRefResponse> deleteUmodelCommonSchemaRef(DeleteUmodelCommonSchemaRefRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RESTFUL).setAction("DeleteUmodelCommonSchemaRef").setMethod(HttpMethod.DELETE).setPathRegex("/workspace/{workspace}/umodel/common-schema-ref").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(DeleteUmodelCommonSchemaRefResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<DeleteUmodelCommonSchemaRefResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
+     * <b>description</b> :
+     * <p>Delete the Umodel Data under a specified workspace</p>
+     * 
      * @param request the request parameters of DeleteUmodelData  DeleteUmodelDataRequest
      * @return DeleteUmodelDataResponse
      */
@@ -490,6 +535,9 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
+     * <b>description</b> :
+     * <p>Retrieve details of a Prometheus instance.</p>
+     * 
      * @param request the request parameters of GetPrometheusInstance  GetPrometheusInstanceRequest
      * @return GetPrometheusInstanceResponse
      */
@@ -508,6 +556,9 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
+     * <b>description</b> :
+     * <p>Query a specified Prometheus view instance.</p>
+     * 
      * @param request the request parameters of GetPrometheusView  GetPrometheusViewRequest
      * @return GetPrometheusViewResponse
      */
@@ -562,6 +613,9 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
+     * <b>description</b> :
+     * <p>Get Umodel configuration information</p>
+     * 
      * @param request the request parameters of GetUmodel  GetUmodelRequest
      * @return GetUmodelResponse
      */
@@ -580,6 +634,27 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
+     * @param request the request parameters of GetUmodelCommonSchemaRef  GetUmodelCommonSchemaRefRequest
+     * @return GetUmodelCommonSchemaRefResponse
+     */
+    @Override
+    public CompletableFuture<GetUmodelCommonSchemaRefResponse> getUmodelCommonSchemaRef(GetUmodelCommonSchemaRefRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RESTFUL).setAction("GetUmodelCommonSchemaRef").setMethod(HttpMethod.GET).setPathRegex("/workspace/{workspace}/umodel/common-schema-ref").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(GetUmodelCommonSchemaRefResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<GetUmodelCommonSchemaRefResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
+     * <b>description</b> :
+     * <p>Find Umodel</p>
+     * 
      * @param request the request parameters of GetUmodelData  GetUmodelDataRequest
      * @return GetUmodelDataResponse
      */
@@ -616,6 +691,9 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
+     * <b>description</b> :
+     * <p>Query the list of access configurations</p>
+     * 
      * @param request the request parameters of ListAddonReleases  ListAddonReleasesRequest
      * @return ListAddonReleasesResponse
      */
@@ -670,6 +748,9 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
+     * <b>description</b> :
+     * <p>Query integration list</p>
+     * 
      * @param request the request parameters of ListIntegrationPolicies  ListIntegrationPoliciesRequest
      * @return ListIntegrationPoliciesResponse
      */
@@ -706,6 +787,9 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
+     * <b>description</b> :
+     * <p>This article provides an example of querying the alarm template list. The result shows that there are 2 alarm templates in the list, which are <code>ECS_Template1</code> and <code>ECS_Template2</code>.</p>
+     * 
      * @param request the request parameters of ListIntegrationPolicyDashboards  ListIntegrationPolicyDashboardsRequest
      * @return ListIntegrationPolicyDashboardsResponse
      */
@@ -724,6 +808,9 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
+     * <b>description</b> :
+     * <p>This article provides an example to query the alarm template list. The result shows that there are 2 alarm templates in the alarm template list, which are <code>ECS_Template1</code> and <code>ECS_Template2</code>.</p>
+     * 
      * @param request the request parameters of ListIntegrationPolicyPodMonitors  ListIntegrationPolicyPodMonitorsRequest
      * @return ListIntegrationPolicyPodMonitorsResponse
      */
@@ -742,6 +829,10 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
+     * <b>description</b> :
+     * <p>During the effective period of the policy, all alarms within the application group will no longer send notifications.</p>
+     * <p>This article provides an example of creating a pause alarm notification policy <code>PauseNotify</code> for the application group <code>7301****</code>. This application group will pause alarms from <code>1622949300000</code> to <code>1623208500000</code> (Beijing Time <code>2021-06-06 11:15:00</code> to <code>2021-06-09 11:15:00</code>).</p>
+     * 
      * @param request the request parameters of ListIntegrationPolicyStorageRequirements  ListIntegrationPolicyStorageRequirementsRequest
      * @return ListIntegrationPolicyStorageRequirementsResponse
      */
@@ -760,6 +851,9 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
+     * <b>description</b> :
+     * <p>Get the list of Prometheus instance dashboards.</p>
+     * 
      * @param request the request parameters of ListPrometheusDashboards  ListPrometheusDashboardsRequest
      * @return ListPrometheusDashboardsResponse
      */
@@ -778,6 +872,9 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
+     * <b>description</b> :
+     * <p>Get the list of Prometheus instances.</p>
+     * 
      * @param request the request parameters of ListPrometheusInstances  ListPrometheusInstancesRequest
      * @return ListPrometheusInstancesResponse
      */
@@ -796,6 +893,9 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
+     * <b>description</b> :
+     * <p>Retrieve a list of Prometheus view instance information.</p>
+     * 
      * @param request the request parameters of ListPrometheusViews  ListPrometheusViewsRequest
      * @return ListPrometheusViewsResponse
      */
@@ -814,6 +914,9 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
+     * <b>description</b> :
+     * <p>Used for creating a site monitoring task</p>
+     * 
      * @param request the request parameters of ListPrometheusVirtualInstances  ListPrometheusVirtualInstancesRequest
      * @return ListPrometheusVirtualInstancesResponse
      */
@@ -958,6 +1061,27 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
+     * @param request the request parameters of UpdateNotifyStrategy  UpdateNotifyStrategyRequest
+     * @return UpdateNotifyStrategyResponse
+     */
+    @Override
+    public CompletableFuture<UpdateNotifyStrategyResponse> updateNotifyStrategy(UpdateNotifyStrategyRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RESTFUL).setAction("UpdateNotifyStrategy").setMethod(HttpMethod.PUT).setPathRegex("/notifyStrategies/{notifyStrategyId}").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(UpdateNotifyStrategyResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<UpdateNotifyStrategyResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
+     * <b>description</b> :
+     * <p>Update Prometheus instance information.</p>
+     * 
      * @param request the request parameters of UpdatePrometheusInstance  UpdatePrometheusInstanceRequest
      * @return UpdatePrometheusInstanceResponse
      */
@@ -976,6 +1100,9 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
+     * <b>description</b> :
+     * <p>Update Prometheus view instance information.</p>
+     * 
      * @param request the request parameters of UpdatePrometheusView  UpdatePrometheusViewRequest
      * @return UpdatePrometheusViewResponse
      */
@@ -1012,6 +1139,27 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
+     * @param request the request parameters of UpdateSubscription  UpdateSubscriptionRequest
+     * @return UpdateSubscriptionResponse
+     */
+    @Override
+    public CompletableFuture<UpdateSubscriptionResponse> updateSubscription(UpdateSubscriptionRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RESTFUL).setAction("UpdateSubscription").setMethod(HttpMethod.PUT).setPathRegex("/subscriptions/{subscriptionId}").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(UpdateSubscriptionResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<UpdateSubscriptionResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
+     * <b>description</b> :
+     * <p>Update Umodel configuration information</p>
+     * 
      * @param request the request parameters of UpdateUmodel  UpdateUmodelRequest
      * @return UpdateUmodelResponse
      */
@@ -1024,6 +1172,24 @@ public final class DefaultAsyncClient implements AsyncClient {
             return this.handler.execute(params);
         } catch (Exception e) {
             CompletableFuture<UpdateUmodelResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
+     * @param request the request parameters of UpsertUmodelCommonSchemaRef  UpsertUmodelCommonSchemaRefRequest
+     * @return UpsertUmodelCommonSchemaRefResponse
+     */
+    @Override
+    public CompletableFuture<UpsertUmodelCommonSchemaRefResponse> upsertUmodelCommonSchemaRef(UpsertUmodelCommonSchemaRefRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RESTFUL).setAction("UpsertUmodelCommonSchemaRef").setMethod(HttpMethod.PATCH).setPathRegex("/workspace/{workspace}/umodel/common-schema-ref").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(UpsertUmodelCommonSchemaRefResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<UpsertUmodelCommonSchemaRefResponse> future = new CompletableFuture<>();
             future.completeExceptionally(e);
             return future;
         }

@@ -174,6 +174,7 @@ public class CreateServiceRequest extends Request {
         } 
 
         /**
+         * <p>Workspace name</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -195,7 +196,10 @@ public class CreateServiceRequest extends Request {
         }
 
         /**
-         * attributes.
+         * <p>Extended attributes.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>{&quot;language&quot;:&quot;java&quot;}</p>
          */
         public Builder attributes(String attributes) {
             this.putBodyParameter("attributes", attributes);
@@ -204,7 +208,10 @@ public class CreateServiceRequest extends Request {
         }
 
         /**
-         * description.
+         * <p>Service description, only valid when <code>serviceType=RUM</code>.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>mag测试应用</p>
          */
         public Builder description(String description) {
             this.putBodyParameter("description", description);
@@ -213,7 +220,10 @@ public class CreateServiceRequest extends Request {
         }
 
         /**
-         * displayName.
+         * <p>Display name, only valid when <code>serviceType=RUM</code>.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>mag测试应用</p>
          */
         public Builder displayName(String displayName) {
             this.putBodyParameter("displayName", displayName);
@@ -222,7 +232,10 @@ public class CreateServiceRequest extends Request {
         }
 
         /**
-         * pid.
+         * <p>Application ID, generally not required to be specified.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>bx3udsi5ie@ed2ba6beebdb6de</p>
          */
         public Builder pid(String pid) {
             this.putBodyParameter("pid", pid);
@@ -231,6 +244,7 @@ public class CreateServiceRequest extends Request {
         }
 
         /**
+         * <p>Service name</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -243,7 +257,10 @@ public class CreateServiceRequest extends Request {
         }
 
         /**
-         * serviceStatus.
+         * <p>Service status, not required for service creation.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Created</p>
          */
         public Builder serviceStatus(String serviceStatus) {
             this.putBodyParameter("serviceStatus", serviceStatus);
@@ -252,6 +269,7 @@ public class CreateServiceRequest extends Request {
         }
 
         /**
+         * <p>Service type</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>

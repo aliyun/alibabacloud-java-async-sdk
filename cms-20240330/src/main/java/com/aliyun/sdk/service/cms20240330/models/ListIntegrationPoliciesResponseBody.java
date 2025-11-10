@@ -106,7 +106,14 @@ public class ListIntegrationPoliciesResponseBody extends TeaModel {
         } 
 
         /**
-         * maxResults.
+         * <p>Page size
+         * Default value:
+         *     50
+         * Maximum value:
+         *     50</p>
+         * 
+         * <strong>example:</strong>
+         * <p>100</p>
          */
         public Builder maxResults(Integer maxResults) {
             this.maxResults = maxResults;
@@ -114,7 +121,10 @@ public class ListIntegrationPoliciesResponseBody extends TeaModel {
         }
 
         /**
-         * nextToken.
+         * <p>Pagination token</p>
+         * 
+         * <strong>example:</strong>
+         * <p>44ANBjKZmQeKnaB1fXRq06w7sFYK3MUcCALMD9qQbmEiE</p>
          */
         public Builder nextToken(String nextToken) {
             this.nextToken = nextToken;
@@ -122,7 +132,7 @@ public class ListIntegrationPoliciesResponseBody extends TeaModel {
         }
 
         /**
-         * policies.
+         * <p>Access policy list</p>
          */
         public Builder policies(java.util.List<Policies> policies) {
             this.policies = policies;
@@ -130,7 +140,7 @@ public class ListIntegrationPoliciesResponseBody extends TeaModel {
         }
 
         /**
-         * <p>Id of the request</p>
+         * <p>ID of the request</p>
          * 
          * <strong>example:</strong>
          * <p>CD8BA7D6-995D-578D-9941-78B0FECD14B5</p>
@@ -141,7 +151,10 @@ public class ListIntegrationPoliciesResponseBody extends TeaModel {
         }
 
         /**
-         * totalCount.
+         * <p>Total number of entries</p>
+         * 
+         * <strong>example:</strong>
+         * <p>0</p>
          */
         public Builder totalCount(Integer totalCount) {
             this.totalCount = totalCount;
@@ -233,7 +246,10 @@ public class ListIntegrationPoliciesResponseBody extends TeaModel {
             } 
 
             /**
-             * clusterId.
+             * <p>Cluster ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>cv68tt87d78vyc89zy9v</p>
              */
             public Builder clusterId(String clusterId) {
                 this.clusterId = clusterId;
@@ -241,7 +257,10 @@ public class ListIntegrationPoliciesResponseBody extends TeaModel {
             }
 
             /**
-             * clusterType.
+             * <p>Cluster type.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>ManagedKubernetes</p>
              */
             public Builder clusterType(String clusterType) {
                 this.clusterType = clusterType;
@@ -249,7 +268,10 @@ public class ListIntegrationPoliciesResponseBody extends TeaModel {
             }
 
             /**
-             * vpcCidr.
+             * <p>VPC CIDR</p>
+             * 
+             * <strong>example:</strong>
+             * <p>100.100.0.1/16</p>
              */
             public Builder vpcCidr(String vpcCidr) {
                 this.vpcCidr = vpcCidr;
@@ -257,7 +279,10 @@ public class ListIntegrationPoliciesResponseBody extends TeaModel {
             }
 
             /**
-             * vpcId.
+             * <p>Virtual Private Cloud (VPC).</p>
+             * 
+             * <strong>example:</strong>
+             * <p>vpc-uf664nyle5khp5d4d7hdo</p>
              */
             public Builder vpcId(String vpcId) {
                 this.vpcId = vpcId;
@@ -337,7 +362,10 @@ public class ListIntegrationPoliciesResponseBody extends TeaModel {
             } 
 
             /**
-             * op.
+             * <p>Operation to be performed.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>add</p>
              */
             public Builder op(String op) {
                 this.op = op;
@@ -345,7 +373,10 @@ public class ListIntegrationPoliciesResponseBody extends TeaModel {
             }
 
             /**
-             * tagKey.
+             * <p>Tag key.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>key</p>
              */
             public Builder tagKey(String tagKey) {
                 this.tagKey = tagKey;
@@ -353,7 +384,7 @@ public class ListIntegrationPoliciesResponseBody extends TeaModel {
             }
 
             /**
-             * tagValues.
+             * <p>Tag values</p>
              */
             public Builder tagValues(java.util.List<String> tagValues) {
                 this.tagValues = tagValues;
@@ -433,7 +464,10 @@ public class ListIntegrationPoliciesResponseBody extends TeaModel {
             } 
 
             /**
-             * fieldKey.
+             * <p>Unique identifier for the field.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>test</p>
              */
             public Builder fieldKey(String fieldKey) {
                 this.fieldKey = fieldKey;
@@ -441,7 +475,7 @@ public class ListIntegrationPoliciesResponseBody extends TeaModel {
             }
 
             /**
-             * fieldValues.
+             * <p>Field content, multiple values separated by English commas.</p>
              */
             public Builder fieldValues(java.util.List<String> fieldValues) {
                 this.fieldValues = fieldValues;
@@ -449,7 +483,10 @@ public class ListIntegrationPoliciesResponseBody extends TeaModel {
             }
 
             /**
-             * op.
+             * <p>Operation to be performed.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>add</p>
              */
             public Builder op(String op) {
                 this.op = op;
@@ -516,7 +553,10 @@ public class ListIntegrationPoliciesResponseBody extends TeaModel {
             } 
 
             /**
-             * ipCidr.
+             * <p>IP segment</p>
+             * 
+             * <strong>example:</strong>
+             * <p>100.100.1.0/16</p>
              */
             public Builder ipCidr(String ipCidr) {
                 this.ipCidr = ipCidr;
@@ -524,7 +564,10 @@ public class ListIntegrationPoliciesResponseBody extends TeaModel {
             }
 
             /**
-             * ipFieldKey.
+             * <p>Key of the IP field</p>
+             * 
+             * <strong>example:</strong>
+             * <p>xxxx</p>
              */
             public Builder ipFieldKey(String ipFieldKey) {
                 this.ipFieldKey = ipFieldKey;
@@ -604,7 +647,10 @@ public class ListIntegrationPoliciesResponseBody extends TeaModel {
             } 
 
             /**
-             * op.
+             * <p>Operation to be performed.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>add</p>
              */
             public Builder op(String op) {
                 this.op = op;
@@ -612,7 +658,10 @@ public class ListIntegrationPoliciesResponseBody extends TeaModel {
             }
 
             /**
-             * tagKey.
+             * <p>Tag key.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>test</p>
              */
             public Builder tagKey(String tagKey) {
                 this.tagKey = tagKey;
@@ -620,7 +669,7 @@ public class ListIntegrationPoliciesResponseBody extends TeaModel {
             }
 
             /**
-             * tagValues.
+             * <p>Tag values</p>
              */
             public Builder tagValues(java.util.List<String> tagValues) {
                 this.tagValues = tagValues;
@@ -700,7 +749,10 @@ public class ListIntegrationPoliciesResponseBody extends TeaModel {
             } 
 
             /**
-             * op.
+             * <p>Operation to be performed.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>add</p>
              */
             public Builder op(String op) {
                 this.op = op;
@@ -708,7 +760,10 @@ public class ListIntegrationPoliciesResponseBody extends TeaModel {
             }
 
             /**
-             * tagKey.
+             * <p>Tag key.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>key</p>
              */
             public Builder tagKey(String tagKey) {
                 this.tagKey = tagKey;
@@ -716,7 +771,7 @@ public class ListIntegrationPoliciesResponseBody extends TeaModel {
             }
 
             /**
-             * tagValues.
+             * <p>Tag value.</p>
              */
             public Builder tagValues(java.util.List<String> tagValues) {
                 this.tagValues = tagValues;
@@ -874,7 +929,7 @@ public class ListIntegrationPoliciesResponseBody extends TeaModel {
             } 
 
             /**
-             * annotations.
+             * <p>Annotations</p>
              */
             public Builder annotations(java.util.List<Annotations> annotations) {
                 this.annotations = annotations;
@@ -882,7 +937,7 @@ public class ListIntegrationPoliciesResponseBody extends TeaModel {
             }
 
             /**
-             * entityTypes.
+             * <p>List of entity types</p>
              */
             public Builder entityTypes(java.util.List<String> entityTypes) {
                 this.entityTypes = entityTypes;
@@ -890,7 +945,7 @@ public class ListIntegrationPoliciesResponseBody extends TeaModel {
             }
 
             /**
-             * fieldRules.
+             * <p>Field rules</p>
              */
             public Builder fieldRules(java.util.List<FieldRules> fieldRules) {
                 this.fieldRules = fieldRules;
@@ -898,7 +953,7 @@ public class ListIntegrationPoliciesResponseBody extends TeaModel {
             }
 
             /**
-             * instanceIds.
+             * <p>Instance IDs.</p>
              */
             public Builder instanceIds(java.util.List<String> instanceIds) {
                 this.instanceIds = instanceIds;
@@ -906,7 +961,7 @@ public class ListIntegrationPoliciesResponseBody extends TeaModel {
             }
 
             /**
-             * ipMatchRule.
+             * <p>IP match rule</p>
              */
             public Builder ipMatchRule(IpMatchRule ipMatchRule) {
                 this.ipMatchRule = ipMatchRule;
@@ -914,7 +969,7 @@ public class ListIntegrationPoliciesResponseBody extends TeaModel {
             }
 
             /**
-             * labels.
+             * <p>Labels</p>
              */
             public Builder labels(java.util.List<Labels> labels) {
                 this.labels = labels;
@@ -922,7 +977,7 @@ public class ListIntegrationPoliciesResponseBody extends TeaModel {
             }
 
             /**
-             * regionIds.
+             * <p>List of region IDs.</p>
              */
             public Builder regionIds(java.util.List<String> regionIds) {
                 this.regionIds = regionIds;
@@ -930,7 +985,10 @@ public class ListIntegrationPoliciesResponseBody extends TeaModel {
             }
 
             /**
-             * resourceGroupId.
+             * <p>Resource group ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>rg-5i6dbwxfxuqihk7k</p>
              */
             public Builder resourceGroupId(String resourceGroupId) {
                 this.resourceGroupId = resourceGroupId;
@@ -938,7 +996,7 @@ public class ListIntegrationPoliciesResponseBody extends TeaModel {
             }
 
             /**
-             * tags.
+             * <p>Instance tag information.</p>
              */
             public Builder tags(java.util.List<Tags> tags) {
                 this.tags = tags;
@@ -1083,7 +1141,10 @@ public class ListIntegrationPoliciesResponseBody extends TeaModel {
             } 
 
             /**
-             * description.
+             * <p>Description.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>xxxx</p>
              */
             public Builder description(String description) {
                 this.description = description;
@@ -1091,7 +1152,10 @@ public class ListIntegrationPoliciesResponseBody extends TeaModel {
             }
 
             /**
-             * entityGroupId.
+             * <p>Entity group ID</p>
+             * 
+             * <strong>example:</strong>
+             * <p>eg-b79f65d11fb94e779867cf937c3a3002</p>
              */
             public Builder entityGroupId(String entityGroupId) {
                 this.entityGroupId = entityGroupId;
@@ -1099,7 +1163,10 @@ public class ListIntegrationPoliciesResponseBody extends TeaModel {
             }
 
             /**
-             * entityGroupName.
+             * <p>Entity group name</p>
+             * 
+             * <strong>example:</strong>
+             * <p>test-eg</p>
              */
             public Builder entityGroupName(String entityGroupName) {
                 this.entityGroupName = entityGroupName;
@@ -1107,7 +1174,7 @@ public class ListIntegrationPoliciesResponseBody extends TeaModel {
             }
 
             /**
-             * entityRules.
+             * <p>Entity group</p>
              */
             public Builder entityRules(EntityRules entityRules) {
                 this.entityRules = entityRules;
@@ -1115,7 +1182,10 @@ public class ListIntegrationPoliciesResponseBody extends TeaModel {
             }
 
             /**
-             * query.
+             * <p>Search keywords, supporting document library name and description</p>
+             * 
+             * <strong>example:</strong>
+             * <p>哈弗</p>
              */
             public Builder query(String query) {
                 this.query = query;
@@ -1123,7 +1193,10 @@ public class ListIntegrationPoliciesResponseBody extends TeaModel {
             }
 
             /**
-             * regionId.
+             * <p>Region ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>cn-heyuan</p>
              */
             public Builder regionId(String regionId) {
                 this.regionId = regionId;
@@ -1131,7 +1204,10 @@ public class ListIntegrationPoliciesResponseBody extends TeaModel {
             }
 
             /**
-             * userId.
+             * <p>User ID</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1236812738</p>
              */
             public Builder userId(String userId) {
                 this.userId = userId;
@@ -1139,7 +1215,10 @@ public class ListIntegrationPoliciesResponseBody extends TeaModel {
             }
 
             /**
-             * workspace.
+             * <p>Workspace.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>test-api</p>
              */
             public Builder workspace(String workspace) {
                 this.workspace = workspace;
@@ -1219,7 +1298,10 @@ public class ListIntegrationPoliciesResponseBody extends TeaModel {
             } 
 
             /**
-             * eniId.
+             * <p>ENI card ID of the managed probe. For example: eni-xxxx.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>eni-12345678</p>
              */
             public Builder eniId(String eniId) {
                 this.eniId = eniId;
@@ -1227,7 +1309,10 @@ public class ListIntegrationPoliciesResponseBody extends TeaModel {
             }
 
             /**
-             * securityGroupId.
+             * <p>Security group ID</p>
+             * 
+             * <strong>example:</strong>
+             * <p>sg-xxxxx</p>
              */
             public Builder securityGroupId(String securityGroupId) {
                 this.securityGroupId = securityGroupId;
@@ -1235,7 +1320,10 @@ public class ListIntegrationPoliciesResponseBody extends TeaModel {
             }
 
             /**
-             * vswitchId.
+             * <p>VSwitch ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>vsw-xxxxxx</p>
              */
             public Builder vswitchId(String vswitchId) {
                 this.vswitchId = vswitchId;
@@ -1302,7 +1390,10 @@ public class ListIntegrationPoliciesResponseBody extends TeaModel {
             } 
 
             /**
-             * ready.
+             * <p>Number of ready sub-releases</p>
+             * 
+             * <strong>example:</strong>
+             * <p>30</p>
              */
             public Builder ready(Integer ready) {
                 this.ready = ready;
@@ -1310,7 +1401,10 @@ public class ListIntegrationPoliciesResponseBody extends TeaModel {
             }
 
             /**
-             * total.
+             * <p>Number of rules.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>278</p>
              */
             public Builder total(Integer total) {
                 this.total = total;
@@ -1377,7 +1471,10 @@ public class ListIntegrationPoliciesResponseBody extends TeaModel {
             } 
 
             /**
-             * key.
+             * <p>Tag key</p>
+             * 
+             * <strong>example:</strong>
+             * <p>key</p>
              */
             public Builder key(String key) {
                 this.key = key;
@@ -1385,7 +1482,10 @@ public class ListIntegrationPoliciesResponseBody extends TeaModel {
             }
 
             /**
-             * value.
+             * <p>Match value.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>value</p>
              */
             public Builder value(String value) {
                 this.value = value;
@@ -1409,8 +1509,14 @@ public class ListIntegrationPoliciesResponseBody extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("bindResource")
         private BindResource bindResource;
 
+        @com.aliyun.core.annotation.NameInMap("csUmodelStatus")
+        private Boolean csUmodelStatus;
+
         @com.aliyun.core.annotation.NameInMap("entityGroup")
         private EntityGroup entityGroup;
+
+        @com.aliyun.core.annotation.NameInMap("feePackage")
+        private String feePackage;
 
         @com.aliyun.core.annotation.NameInMap("managedInfo")
         private ManagedInfo managedInfo;
@@ -1444,7 +1550,9 @@ public class ListIntegrationPoliciesResponseBody extends TeaModel {
 
         private Policies(Builder builder) {
             this.bindResource = builder.bindResource;
+            this.csUmodelStatus = builder.csUmodelStatus;
             this.entityGroup = builder.entityGroup;
+            this.feePackage = builder.feePackage;
             this.managedInfo = builder.managedInfo;
             this.policyId = builder.policyId;
             this.policyName = builder.policyName;
@@ -1473,10 +1581,24 @@ public class ListIntegrationPoliciesResponseBody extends TeaModel {
         }
 
         /**
+         * @return csUmodelStatus
+         */
+        public Boolean getCsUmodelStatus() {
+            return this.csUmodelStatus;
+        }
+
+        /**
          * @return entityGroup
          */
         public EntityGroup getEntityGroup() {
             return this.entityGroup;
+        }
+
+        /**
+         * @return feePackage
+         */
+        public String getFeePackage() {
+            return this.feePackage;
         }
 
         /**
@@ -1551,7 +1673,9 @@ public class ListIntegrationPoliciesResponseBody extends TeaModel {
 
         public static final class Builder {
             private BindResource bindResource; 
+            private Boolean csUmodelStatus; 
             private EntityGroup entityGroup; 
+            private String feePackage; 
             private ManagedInfo managedInfo; 
             private String policyId; 
             private String policyName; 
@@ -1568,7 +1692,9 @@ public class ListIntegrationPoliciesResponseBody extends TeaModel {
 
             private Builder(Policies model) {
                 this.bindResource = model.bindResource;
+                this.csUmodelStatus = model.csUmodelStatus;
                 this.entityGroup = model.entityGroup;
+                this.feePackage = model.feePackage;
                 this.managedInfo = model.managedInfo;
                 this.policyId = model.policyId;
                 this.policyName = model.policyName;
@@ -1582,7 +1708,7 @@ public class ListIntegrationPoliciesResponseBody extends TeaModel {
             } 
 
             /**
-             * bindResource.
+             * <p>Bound resource information</p>
              */
             public Builder bindResource(BindResource bindResource) {
                 this.bindResource = bindResource;
@@ -1590,7 +1716,18 @@ public class ListIntegrationPoliciesResponseBody extends TeaModel {
             }
 
             /**
-             * entityGroup.
+             * <p>Container environment umodel installation status.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>true</p>
+             */
+            public Builder csUmodelStatus(Boolean csUmodelStatus) {
+                this.csUmodelStatus = csUmodelStatus;
+                return this;
+            }
+
+            /**
+             * <p>Entity group</p>
              */
             public Builder entityGroup(EntityGroup entityGroup) {
                 this.entityGroup = entityGroup;
@@ -1598,7 +1735,18 @@ public class ListIntegrationPoliciesResponseBody extends TeaModel {
             }
 
             /**
-             * managedInfo.
+             * <p>Billing type.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>CS_Pro</p>
+             */
+            public Builder feePackage(String feePackage) {
+                this.feePackage = feePackage;
+                return this;
+            }
+
+            /**
+             * <p>Policy network management information.</p>
              */
             public Builder managedInfo(ManagedInfo managedInfo) {
                 this.managedInfo = managedInfo;
@@ -1606,7 +1754,10 @@ public class ListIntegrationPoliciesResponseBody extends TeaModel {
             }
 
             /**
-             * policyId.
+             * <p>Policy ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>policy-ac38a7cb02d14ff48bc9f97d0a75063e</p>
              */
             public Builder policyId(String policyId) {
                 this.policyId = policyId;
@@ -1614,7 +1765,10 @@ public class ListIntegrationPoliciesResponseBody extends TeaModel {
             }
 
             /**
-             * policyName.
+             * <p>Rule name.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>6f5HSsg3AP</p>
              */
             public Builder policyName(String policyName) {
                 this.policyName = policyName;
@@ -1622,7 +1776,10 @@ public class ListIntegrationPoliciesResponseBody extends TeaModel {
             }
 
             /**
-             * policyType.
+             * <p>Access center policy type</p>
+             * 
+             * <strong>example:</strong>
+             * <p>ECS</p>
              */
             public Builder policyType(String policyType) {
                 this.policyType = policyType;
@@ -1630,7 +1787,10 @@ public class ListIntegrationPoliciesResponseBody extends TeaModel {
             }
 
             /**
-             * regionId.
+             * <p>Region ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>cn-heyuan</p>
              */
             public Builder regionId(String regionId) {
                 this.regionId = regionId;
@@ -1638,7 +1798,10 @@ public class ListIntegrationPoliciesResponseBody extends TeaModel {
             }
 
             /**
-             * resourceGroupId.
+             * <p>Resource group ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>rg-xxxxx</p>
              */
             public Builder resourceGroupId(String resourceGroupId) {
                 this.resourceGroupId = resourceGroupId;
@@ -1646,7 +1809,7 @@ public class ListIntegrationPoliciesResponseBody extends TeaModel {
             }
 
             /**
-             * subAddonRelease.
+             * <p>Number of sub-releases</p>
              */
             public Builder subAddonRelease(SubAddonRelease subAddonRelease) {
                 this.subAddonRelease = subAddonRelease;
@@ -1654,7 +1817,7 @@ public class ListIntegrationPoliciesResponseBody extends TeaModel {
             }
 
             /**
-             * tags.
+             * <p>Resource tag key values.</p>
              */
             public Builder tags(java.util.List<PoliciesTags> tags) {
                 this.tags = tags;
@@ -1662,7 +1825,10 @@ public class ListIntegrationPoliciesResponseBody extends TeaModel {
             }
 
             /**
-             * userId.
+             * <p>User ID</p>
+             * 
+             * <strong>example:</strong>
+             * <p>128470923</p>
              */
             public Builder userId(String userId) {
                 this.userId = userId;
@@ -1670,7 +1836,10 @@ public class ListIntegrationPoliciesResponseBody extends TeaModel {
             }
 
             /**
-             * workspace.
+             * <p>Workspace.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>test-api</p>
              */
             public Builder workspace(String workspace) {
                 this.workspace = workspace;

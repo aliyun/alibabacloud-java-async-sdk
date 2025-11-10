@@ -102,6 +102,7 @@ public class DeleteAddonReleaseRequest extends Request {
         } 
 
         /**
+         * <p>Environment ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -114,7 +115,10 @@ public class DeleteAddonReleaseRequest extends Request {
         }
 
         /**
-         * addonName.
+         * <p>Addon name. When AddonName is provided, it will ignore the ReleaseName parameter and batch uninstall all AddonReleases belonging to the same Addon.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cs-gpu</p>
          */
         public Builder addonName(String addonName) {
             this.putQueryParameter("addonName", addonName);
@@ -123,7 +127,10 @@ public class DeleteAddonReleaseRequest extends Request {
         }
 
         /**
-         * force.
+         * <p>Whether to force deletion, default is false.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>false</p>
          */
         public Builder force(Boolean force) {
             this.putQueryParameter("force", force);
@@ -132,7 +139,10 @@ public class DeleteAddonReleaseRequest extends Request {
         }
 
         /**
-         * releaseName.
+         * <p>The name of the AddonRelease.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>test-gpu-integration-name</p>
          */
         public Builder releaseName(String releaseName) {
             this.putQueryParameter("releaseName", releaseName);

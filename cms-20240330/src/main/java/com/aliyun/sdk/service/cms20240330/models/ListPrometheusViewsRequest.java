@@ -187,7 +187,10 @@ public class ListPrometheusViewsRequest extends Request {
         } 
 
         /**
-         * filterRegionIds.
+         * <p>Filter by RegionID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-zhangjiakou,cn-beijing</p>
          */
         public Builder filterRegionIds(String filterRegionIds) {
             this.putQueryParameter("filterRegionIds", filterRegionIds);
@@ -196,7 +199,10 @@ public class ListPrometheusViewsRequest extends Request {
         }
 
         /**
-         * maxResults.
+         * <p>Maximum number of records to return.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>100</p>
          */
         public Builder maxResults(Integer maxResults) {
             this.putQueryParameter("maxResults", maxResults);
@@ -205,7 +211,10 @@ public class ListPrometheusViewsRequest extends Request {
         }
 
         /**
-         * nextToken.
+         * <p>Query token.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>44ANBjKZmQeKnaB1fXRq06w7sFYK3MUcCALMD9qQbmEiE</p>
          */
         public Builder nextToken(String nextToken) {
             this.putQueryParameter("nextToken", nextToken);
@@ -214,7 +223,10 @@ public class ListPrometheusViewsRequest extends Request {
         }
 
         /**
-         * prometheusViewIds.
+         * <p>List of Prometheus view instance IDs.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>view-xxx</p>
          */
         public Builder prometheusViewIds(String prometheusViewIds) {
             this.putQueryParameter("prometheusViewIds", prometheusViewIds);
@@ -223,7 +235,10 @@ public class ListPrometheusViewsRequest extends Request {
         }
 
         /**
-         * prometheusViewName.
+         * <p>Prometheus view name.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>view1</p>
          */
         public Builder prometheusViewName(String prometheusViewName) {
             this.putQueryParameter("prometheusViewName", prometheusViewName);
@@ -232,7 +247,10 @@ public class ListPrometheusViewsRequest extends Request {
         }
 
         /**
-         * resourceGroupId.
+         * <p>Resource group ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>rg-acfm3gn5i6bigbi</p>
          */
         public Builder resourceGroupId(String resourceGroupId) {
             this.putQueryParameter("resourceGroupId", resourceGroupId);
@@ -241,7 +259,10 @@ public class ListPrometheusViewsRequest extends Request {
         }
 
         /**
-         * resourceType.
+         * <p>Resource type.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>PROMETHEUSVIEW</p>
          */
         public Builder resourceType(String resourceType) {
             this.putQueryParameter("resourceType", resourceType);
@@ -250,7 +271,7 @@ public class ListPrometheusViewsRequest extends Request {
         }
 
         /**
-         * tag.
+         * <p>List of tags.</p>
          */
         public Builder tag(java.util.List<Tag> tag) {
             String tagShrink = shrink(tag, "tag", "json");
@@ -260,7 +281,10 @@ public class ListPrometheusViewsRequest extends Request {
         }
 
         /**
-         * version.
+         * <p>Instance version: V1 or V2</p>
+         * 
+         * <strong>example:</strong>
+         * <p>V2</p>
          */
         public Builder version(String version) {
             this.putQueryParameter("version", version);
@@ -269,7 +293,10 @@ public class ListPrometheusViewsRequest extends Request {
         }
 
         /**
-         * workspace.
+         * <p>Workspace name</p>
+         * 
+         * <strong>example:</strong>
+         * <p>workspace-test</p>
          */
         public Builder workspace(String workspace) {
             this.putQueryParameter("workspace", workspace);
@@ -337,7 +364,10 @@ public class ListPrometheusViewsRequest extends Request {
             } 
 
             /**
-             * key.
+             * <p>Tag key</p>
+             * 
+             * <strong>example:</strong>
+             * <p>key1</p>
              */
             public Builder key(String key) {
                 this.key = key;
@@ -345,7 +375,10 @@ public class ListPrometheusViewsRequest extends Request {
             }
 
             /**
-             * value.
+             * <p>Match value.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>value1</p>
              */
             public Builder value(String value) {
                 this.value = value;

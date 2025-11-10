@@ -116,7 +116,14 @@ public class ListWorkspacesRequest extends Request {
         } 
 
         /**
-         * maxResults.
+         * <p>Page size
+         * Default value:
+         *     50
+         * Maximum value:
+         *     50</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10</p>
          */
         public Builder maxResults(Integer maxResults) {
             this.putQueryParameter("maxResults", maxResults);
@@ -125,7 +132,10 @@ public class ListWorkspacesRequest extends Request {
         }
 
         /**
-         * nextToken.
+         * <p>Pagination Token</p>
+         * 
+         * <strong>example:</strong>
+         * <p>xxxxxxxxxx</p>
          */
         public Builder nextToken(String nextToken) {
             this.putQueryParameter("nextToken", nextToken);
@@ -134,7 +144,10 @@ public class ListWorkspacesRequest extends Request {
         }
 
         /**
-         * region.
+         * <p>Region</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-heyuan</p>
          */
         public Builder region(String region) {
             this.putQueryParameter("region", region);
@@ -143,7 +156,10 @@ public class ListWorkspacesRequest extends Request {
         }
 
         /**
-         * workspaceName.
+         * <p>Workspace name, fuzzy search</p>
+         * 
+         * <strong>example:</strong>
+         * <p>workspace-test-001</p>
          */
         public Builder workspaceName(String workspaceName) {
             this.putQueryParameter("workspaceName", workspaceName);
@@ -152,7 +168,10 @@ public class ListWorkspacesRequest extends Request {
         }
 
         /**
-         * workspaceNameList.
+         * <p>Workspace name, exact match</p>
+         * 
+         * <strong>example:</strong>
+         * <p>workspace-test-001</p>
          */
         public Builder workspaceNameList(java.util.List<String> workspaceNameList) {
             String workspaceNameListShrink = shrink(workspaceNameList, "workspaceNameList", "simple");

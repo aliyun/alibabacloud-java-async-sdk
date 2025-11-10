@@ -102,6 +102,7 @@ public class ListIntegrationPolicyStorageRequirementsRequest extends Request {
         } 
 
         /**
+         * <p>Access Center Policy ID</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -114,7 +115,10 @@ public class ListIntegrationPolicyStorageRequirementsRequest extends Request {
         }
 
         /**
-         * addonName.
+         * <p>Addon Release Name</p>
+         * 
+         * <strong>example:</strong>
+         * <p>release-1234357</p>
          */
         public Builder addonName(String addonName) {
             this.putQueryParameter("addonName", addonName);
@@ -123,7 +127,10 @@ public class ListIntegrationPolicyStorageRequirementsRequest extends Request {
         }
 
         /**
-         * addonReleaseName.
+         * <p>Name of AddonRelease.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>kafka-17201012937917</p>
          */
         public Builder addonReleaseName(String addonReleaseName) {
             this.putQueryParameter("addonReleaseName", addonReleaseName);
@@ -132,7 +139,10 @@ public class ListIntegrationPolicyStorageRequirementsRequest extends Request {
         }
 
         /**
-         * storageType.
+         * <p>Storage Type, LogStore/Prometheus/TraceStore/EventStore/EntityStore.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>LogStore</p>
          */
         public Builder storageType(String storageType) {
             this.putQueryParameter("storageType", storageType);

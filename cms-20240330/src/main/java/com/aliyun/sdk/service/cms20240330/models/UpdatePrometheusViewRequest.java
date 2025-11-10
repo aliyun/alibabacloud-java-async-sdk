@@ -158,6 +158,7 @@ public class UpdatePrometheusViewRequest extends Request {
         } 
 
         /**
+         * <p>Prometheus view instance ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -170,7 +171,19 @@ public class UpdatePrometheusViewRequest extends Request {
         }
 
         /**
-         * authFreeReadPolicy.
+         * <p>Password-free read policy (supports IP segments and VpcId).</p>
+         * 
+         * <strong>example:</strong>
+         * <p>{
+         *   &quot;SourceIp&quot;: [
+         *     &quot;192.168.1.0/24&quot;,
+         *     &quot;172.168.2.22&quot;
+         *   ],
+         *   &quot;SourceVpc&quot;: [
+         *     &quot;vpc-xx1&quot;,
+         *     &quot;vpc-xx2&quot;
+         *   ]
+         * }</p>
          */
         public Builder authFreeReadPolicy(String authFreeReadPolicy) {
             this.putBodyParameter("authFreeReadPolicy", authFreeReadPolicy);
@@ -179,7 +192,10 @@ public class UpdatePrometheusViewRequest extends Request {
         }
 
         /**
-         * enableAuthFreeRead.
+         * <p>Whether to support password-free read.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder enableAuthFreeRead(Boolean enableAuthFreeRead) {
             this.putBodyParameter("enableAuthFreeRead", enableAuthFreeRead);
@@ -188,7 +204,10 @@ public class UpdatePrometheusViewRequest extends Request {
         }
 
         /**
-         * enableAuthToken.
+         * <p>Whether to support authToken.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>false</p>
          */
         public Builder enableAuthToken(Boolean enableAuthToken) {
             this.putBodyParameter("enableAuthToken", enableAuthToken);
@@ -197,7 +216,7 @@ public class UpdatePrometheusViewRequest extends Request {
         }
 
         /**
-         * prometheusInstances.
+         * <p>List of Prometheus instances.</p>
          */
         public Builder prometheusInstances(java.util.List<PrometheusInstances> prometheusInstances) {
             this.putBodyParameter("prometheusInstances", prometheusInstances);
@@ -206,7 +225,10 @@ public class UpdatePrometheusViewRequest extends Request {
         }
 
         /**
-         * prometheusViewName.
+         * <p>Prometheus view name.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>test-prom-view-name</p>
          */
         public Builder prometheusViewName(String prometheusViewName) {
             this.putBodyParameter("prometheusViewName", prometheusViewName);
@@ -215,7 +237,10 @@ public class UpdatePrometheusViewRequest extends Request {
         }
 
         /**
-         * status.
+         * <p>Running status.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Running</p>
          */
         public Builder status(String status) {
             this.putBodyParameter("status", status);
@@ -224,7 +249,10 @@ public class UpdatePrometheusViewRequest extends Request {
         }
 
         /**
-         * workspace.
+         * <p>Belonging workspace.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>default-cms-108490012345-cn-heyuan</p>
          */
         public Builder workspace(String workspace) {
             this.putBodyParameter("workspace", workspace);
@@ -305,7 +333,10 @@ public class UpdatePrometheusViewRequest extends Request {
             } 
 
             /**
-             * prometheusInstanceId.
+             * <p>Instance ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>c7ba84651c71e442c8d0653085d862164</p>
              */
             public Builder prometheusInstanceId(String prometheusInstanceId) {
                 this.prometheusInstanceId = prometheusInstanceId;
@@ -313,7 +344,10 @@ public class UpdatePrometheusViewRequest extends Request {
             }
 
             /**
-             * regionId.
+             * <p>Region.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>cn-north-2-gov-1</p>
              */
             public Builder regionId(String regionId) {
                 this.regionId = regionId;
@@ -321,7 +355,10 @@ public class UpdatePrometheusViewRequest extends Request {
             }
 
             /**
-             * userId.
+             * <p>User ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>16727123456789</p>
              */
             public Builder userId(String userId) {
                 this.userId = userId;

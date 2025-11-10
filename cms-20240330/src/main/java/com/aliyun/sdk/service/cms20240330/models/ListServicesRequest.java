@@ -102,6 +102,7 @@ public class ListServicesRequest extends Request {
         } 
 
         /**
+         * <p>Workspace name</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -114,7 +115,10 @@ public class ListServicesRequest extends Request {
         }
 
         /**
-         * maxResults.
+         * <p>The maximum number of records to return in this request.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10</p>
          */
         public Builder maxResults(Integer maxResults) {
             this.putQueryParameter("maxResults", maxResults);
@@ -123,7 +127,10 @@ public class ListServicesRequest extends Request {
         }
 
         /**
-         * nextToken.
+         * <p>Token for the next query, an empty value indicates the last page.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>7-b81a-4bc9-bbfa-a50cc6988667</p>
          */
         public Builder nextToken(String nextToken) {
             this.putQueryParameter("nextToken", nextToken);
@@ -132,7 +139,10 @@ public class ListServicesRequest extends Request {
         }
 
         /**
-         * serviceType.
+         * <p>Service type</p>
+         * 
+         * <strong>example:</strong>
+         * <p>apm</p>
          */
         public Builder serviceType(String serviceType) {
             this.putQueryParameter("serviceType", serviceType);

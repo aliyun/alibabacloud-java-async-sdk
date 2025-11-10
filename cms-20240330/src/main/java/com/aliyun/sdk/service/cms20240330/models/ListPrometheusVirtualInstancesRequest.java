@@ -82,7 +82,10 @@ public class ListPrometheusVirtualInstancesRequest extends Request {
         }
 
         /**
-         * namespace.
+         * <p>Optional cloud product</p>
+         * 
+         * <strong>example:</strong>
+         * <p>ack-csi-fuse</p>
          */
         public Builder namespace(String namespace) {
             this.putQueryParameter("namespace", namespace);

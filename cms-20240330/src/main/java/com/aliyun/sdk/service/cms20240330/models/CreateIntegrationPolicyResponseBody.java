@@ -80,7 +80,10 @@ public class CreateIntegrationPolicyResponseBody extends TeaModel {
         } 
 
         /**
-         * created.
+         * <p>Whether it is created.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder created(Boolean created) {
             this.created = created;
@@ -88,7 +91,7 @@ public class CreateIntegrationPolicyResponseBody extends TeaModel {
         }
 
         /**
-         * policy.
+         * <p>Uploaded policy.</p>
          */
         public Builder policy(Policy policy) {
             this.policy = policy;
@@ -96,7 +99,10 @@ public class CreateIntegrationPolicyResponseBody extends TeaModel {
         }
 
         /**
-         * requestId.
+         * <p>Request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>CD8BA7D6-995D-578D-9941-78B0FECD14B5</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -227,7 +233,10 @@ public class CreateIntegrationPolicyResponseBody extends TeaModel {
             } 
 
             /**
-             * entityGroupId.
+             * <p>Entity group ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>eg-b79f65d11fb94e779867cf937c3a3002</p>
              */
             public Builder entityGroupId(String entityGroupId) {
                 this.entityGroupId = entityGroupId;
@@ -235,7 +244,10 @@ public class CreateIntegrationPolicyResponseBody extends TeaModel {
             }
 
             /**
-             * policyId.
+             * <p>Policy ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>policy-14c8e9a29b0a46da843f8781471062ff</p>
              */
             public Builder policyId(String policyId) {
                 this.policyId = policyId;
@@ -243,7 +255,10 @@ public class CreateIntegrationPolicyResponseBody extends TeaModel {
             }
 
             /**
-             * policyName.
+             * <p>Policy name.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>metrics-inner-manage</p>
              */
             public Builder policyName(String policyName) {
                 this.policyName = policyName;
@@ -251,7 +266,10 @@ public class CreateIntegrationPolicyResponseBody extends TeaModel {
             }
 
             /**
-             * policyType.
+             * <p>Policy type.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>CS</p>
              */
             public Builder policyType(String policyType) {
                 this.policyType = policyType;
@@ -259,7 +277,10 @@ public class CreateIntegrationPolicyResponseBody extends TeaModel {
             }
 
             /**
-             * regionId.
+             * <p>Region ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>cn-heyuan</p>
              */
             public Builder regionId(String regionId) {
                 this.regionId = regionId;
@@ -267,7 +288,10 @@ public class CreateIntegrationPolicyResponseBody extends TeaModel {
             }
 
             /**
-             * userId.
+             * <p>User ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>u1234567</p>
              */
             public Builder userId(String userId) {
                 this.userId = userId;
@@ -275,7 +299,10 @@ public class CreateIntegrationPolicyResponseBody extends TeaModel {
             }
 
             /**
-             * workspace.
+             * <p>The workspace where the Policy resides.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>prometheus</p>
              */
             public Builder workspace(String workspace) {
                 this.workspace = workspace;

@@ -131,6 +131,7 @@ public class UpdateAddonReleaseRequest extends Request {
         } 
 
         /**
+         * <p>The name of the Release.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -143,6 +144,7 @@ public class UpdateAddonReleaseRequest extends Request {
         }
 
         /**
+         * <p>Policy environment ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -155,7 +157,10 @@ public class UpdateAddonReleaseRequest extends Request {
         }
 
         /**
-         * addonVersion.
+         * <p>Addon version information.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>0.0.2</p>
          */
         public Builder addonVersion(String addonVersion) {
             this.putBodyParameter("addonVersion", addonVersion);
@@ -164,7 +169,10 @@ public class UpdateAddonReleaseRequest extends Request {
         }
 
         /**
-         * dryRun.
+         * <p>Whether to pre-check this request.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder dryRun(Boolean dryRun) {
             this.putBodyParameter("dryRun", dryRun);
@@ -173,7 +181,7 @@ public class UpdateAddonReleaseRequest extends Request {
         }
 
         /**
-         * entityRules.
+         * <p>Entity discovery rules.</p>
          */
         public Builder entityRules(EntityDiscoverRule entityRules) {
             this.putBodyParameter("entityRules", entityRules);
@@ -182,7 +190,10 @@ public class UpdateAddonReleaseRequest extends Request {
         }
 
         /**
-         * values.
+         * <p>Metadata information.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>{&quot;install&quot;:{&quot;mode&quot;:&quot;auto-install&quot;,&quot;listenPort&quot;:&quot;9400&quot;},&quot;discoverMode&quot;:&quot;instances&quot;,&quot;discover&quot;:{&quot;instances&quot;:&quot;worker-k8s-for-cs-c126d87c76218487e83ab322017f11b44&quot;},&quot;scrapeInterval&quot;:&quot;15&quot;,&quot;enableSecuritecs-nodeyGroupInjection&quot;:&quot;true&quot;,&quot;metricTags&quot;:&quot;&quot;}</p>
          */
         public Builder values(String values) {
             this.putBodyParameter("values", values);

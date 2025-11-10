@@ -138,7 +138,7 @@ public class ListAlertActionsRequest extends Request {
         }
 
         /**
-         * alertActionIds.
+         * <p>Unique identifier for the action integration.</p>
          */
         public Builder alertActionIds(java.util.List<String> alertActionIds) {
             String alertActionIdsShrink = shrink(alertActionIds, "alertActionIds", "json");
@@ -148,7 +148,10 @@ public class ListAlertActionsRequest extends Request {
         }
 
         /**
-         * alertActionName.
+         * <p>Name of the action integration.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>testName</p>
          */
         public Builder alertActionName(String alertActionName) {
             this.putQueryParameter("alertActionName", alertActionName);
@@ -157,7 +160,10 @@ public class ListAlertActionsRequest extends Request {
         }
 
         /**
-         * pageNumber.
+         * <p>Page number. Default is 1.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder pageNumber(Integer pageNumber) {
             this.putQueryParameter("pageNumber", pageNumber);
@@ -166,7 +172,10 @@ public class ListAlertActionsRequest extends Request {
         }
 
         /**
-         * pageSize.
+         * <p>Page size. Default is 100.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>100</p>
          */
         public Builder pageSize(Integer pageSize) {
             this.putQueryParameter("pageSize", pageSize);
@@ -175,7 +184,10 @@ public class ListAlertActionsRequest extends Request {
         }
 
         /**
-         * type.
+         * <p>Type of the action integration.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>FC</p>
          */
         public Builder type(String type) {
             this.putQueryParameter("type", type);

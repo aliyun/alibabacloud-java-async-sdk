@@ -54,7 +54,10 @@ public class DeleteUmodelResponseBody extends TeaModel {
         } 
 
         /**
-         * requestId.
+         * <p>request ID</p>
+         * 
+         * <strong>example:</strong>
+         * <p>123123-3213-345-9941-345345345</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;

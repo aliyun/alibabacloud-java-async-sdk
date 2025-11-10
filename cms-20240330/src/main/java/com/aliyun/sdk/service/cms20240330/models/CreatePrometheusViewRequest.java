@@ -188,7 +188,19 @@ public class CreatePrometheusViewRequest extends Request {
         } 
 
         /**
-         * authFreeReadPolicy.
+         * <p>Not enabled yet</p>
+         * 
+         * <strong>example:</strong>
+         * <p>{
+         *   &quot;SourceIp&quot;: [
+         *     &quot;192.168.1.0/24&quot;,
+         *     &quot;172.168.2.22&quot;
+         *   ],
+         *   &quot;SourceVpc&quot;: [
+         *     &quot;vpc-xx1&quot;,
+         *     &quot;vpc-xx2&quot;
+         *   ]
+         * }</p>
          */
         public Builder authFreeReadPolicy(String authFreeReadPolicy) {
             this.putBodyParameter("authFreeReadPolicy", authFreeReadPolicy);
@@ -197,7 +209,10 @@ public class CreatePrometheusViewRequest extends Request {
         }
 
         /**
-         * enableAuthFreeRead.
+         * <p>Whether to support password-free read</p>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder enableAuthFreeRead(Boolean enableAuthFreeRead) {
             this.putBodyParameter("enableAuthFreeRead", enableAuthFreeRead);
@@ -206,7 +221,10 @@ public class CreatePrometheusViewRequest extends Request {
         }
 
         /**
-         * enableAuthToken.
+         * <p>Whether to support authToken</p>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder enableAuthToken(Boolean enableAuthToken) {
             this.putBodyParameter("enableAuthToken", enableAuthToken);
@@ -215,6 +233,7 @@ public class CreatePrometheusViewRequest extends Request {
         }
 
         /**
+         * <p>List of Prometheus instances.</p>
          * <p>This parameter is required.</p>
          */
         public Builder prometheusInstances(java.util.List<PrometheusInstances> prometheusInstances) {
@@ -224,6 +243,7 @@ public class CreatePrometheusViewRequest extends Request {
         }
 
         /**
+         * <p>Prometheus view name.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -236,7 +256,10 @@ public class CreatePrometheusViewRequest extends Request {
         }
 
         /**
-         * resourceGroupId.
+         * <p>Resource group ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>rg-acfm3gn5i6bigbi</p>
          */
         public Builder resourceGroupId(String resourceGroupId) {
             this.putBodyParameter("resourceGroupId", resourceGroupId);
@@ -245,7 +268,10 @@ public class CreatePrometheusViewRequest extends Request {
         }
 
         /**
-         * status.
+         * <p>Not enabled yet.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>null</p>
          */
         public Builder status(String status) {
             this.putBodyParameter("status", status);
@@ -254,7 +280,7 @@ public class CreatePrometheusViewRequest extends Request {
         }
 
         /**
-         * tags.
+         * <p>The operation to be performed.</p>
          */
         public Builder tags(java.util.List<Tags> tags) {
             this.putBodyParameter("tags", tags);
@@ -263,6 +289,10 @@ public class CreatePrometheusViewRequest extends Request {
         }
 
         /**
+         * <ul>
+         * <li>V1: Old version</li>
+         * <li>V2: New version</li>
+         * </ul>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -275,7 +305,10 @@ public class CreatePrometheusViewRequest extends Request {
         }
 
         /**
-         * workspace.
+         * <p>Default value: default-cms-{userId}-{regionId}</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cms-monitor-test-aysls-pub-cn-zhangjiakou-spe-monitor</p>
          */
         public Builder workspace(String workspace) {
             this.putBodyParameter("workspace", workspace);
@@ -356,7 +389,10 @@ public class CreatePrometheusViewRequest extends Request {
             } 
 
             /**
-             * prometheusInstanceId.
+             * <p>Instance ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>arms-1d581fac20a462dcde743d9628</p>
              */
             public Builder prometheusInstanceId(String prometheusInstanceId) {
                 this.prometheusInstanceId = prometheusInstanceId;
@@ -364,7 +400,10 @@ public class CreatePrometheusViewRequest extends Request {
             }
 
             /**
-             * regionId.
+             * <p>Region ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>cn-wulanchabu</p>
              */
             public Builder regionId(String regionId) {
                 this.regionId = regionId;
@@ -372,7 +411,10 @@ public class CreatePrometheusViewRequest extends Request {
             }
 
             /**
-             * userId.
+             * <p>User ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>167271234567890</p>
              */
             public Builder userId(String userId) {
                 this.userId = userId;
@@ -439,7 +481,10 @@ public class CreatePrometheusViewRequest extends Request {
             } 
 
             /**
-             * key.
+             * <p>Tag key.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>test-key</p>
              */
             public Builder key(String key) {
                 this.key = key;
@@ -447,7 +492,10 @@ public class CreatePrometheusViewRequest extends Request {
             }
 
             /**
-             * value.
+             * <p>Tag value.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>test-value</p>
              */
             public Builder value(String value) {
                 this.value = value;

@@ -74,6 +74,7 @@ public class CreateUmodelRequest extends Request {
         } 
 
         /**
+         * <p>Workspace name</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -86,7 +87,10 @@ public class CreateUmodelRequest extends Request {
         }
 
         /**
-         * description.
+         * <p>Umodel description</p>
+         * 
+         * <strong>example:</strong>
+         * <p>workspace test</p>
          */
         public Builder description(String description) {
             this.putBodyParameter("description", description);

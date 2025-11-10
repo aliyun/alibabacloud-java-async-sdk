@@ -106,7 +106,10 @@ public class ListServicesResponseBody extends TeaModel {
         } 
 
         /**
-         * maxResults.
+         * <p>Maximum number of results to return, with a maximum value of 200</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10</p>
          */
         public Builder maxResults(Integer maxResults) {
             this.maxResults = maxResults;
@@ -114,7 +117,10 @@ public class ListServicesResponseBody extends TeaModel {
         }
 
         /**
-         * nextToken.
+         * <p>Pagination token</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2-ba4d-4b9f-aa24-dcb067a30f1c</p>
          */
         public Builder nextToken(String nextToken) {
             this.nextToken = nextToken;
@@ -122,7 +128,10 @@ public class ListServicesResponseBody extends TeaModel {
         }
 
         /**
-         * requestId.
+         * <p>Request ID</p>
+         * 
+         * <strong>example:</strong>
+         * <p>0CEC5375-C554-562B-A65F-9A629907C1F0</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -130,7 +139,7 @@ public class ListServicesResponseBody extends TeaModel {
         }
 
         /**
-         * services.
+         * <p>List of service information.</p>
          */
         public Builder services(java.util.List<Services> services) {
             this.services = services;
@@ -138,7 +147,10 @@ public class ListServicesResponseBody extends TeaModel {
         }
 
         /**
-         * totalCount.
+         * <p>Total count</p>
+         * 
+         * <strong>example:</strong>
+         * <p>66</p>
          */
         public Builder totalCount(Integer totalCount) {
             this.totalCount = totalCount;
@@ -308,7 +320,10 @@ public class ListServicesResponseBody extends TeaModel {
             } 
 
             /**
-             * attributes.
+             * <p>Extended information.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>{&quot;language&quot;:&quot;java&quot;}</p>
              */
             public Builder attributes(String attributes) {
                 this.attributes = attributes;
@@ -316,7 +331,10 @@ public class ListServicesResponseBody extends TeaModel {
             }
 
             /**
-             * createTime.
+             * <p>Creation time</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2025-07-01T02:23:59Z</p>
              */
             public Builder createTime(String createTime) {
                 this.createTime = createTime;
@@ -324,7 +342,10 @@ public class ListServicesResponseBody extends TeaModel {
             }
 
             /**
-             * description.
+             * <p>Service description, valid only when serviceType=RUM.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>workspace api monitor test</p>
              */
             public Builder description(String description) {
                 this.description = description;
@@ -332,7 +353,10 @@ public class ListServicesResponseBody extends TeaModel {
             }
 
             /**
-             * displayName.
+             * <p>Display name, valid only when serviceType=RUM.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>test</p>
              */
             public Builder displayName(String displayName) {
                 this.displayName = displayName;
@@ -340,7 +364,10 @@ public class ListServicesResponseBody extends TeaModel {
             }
 
             /**
-             * pid.
+             * <p>Historical compatible ARMS application ID</p>
+             * 
+             * <strong>example:</strong>
+             * <p>kgcsf@192197e828d51aa</p>
              */
             public Builder pid(String pid) {
                 this.pid = pid;
@@ -348,7 +375,10 @@ public class ListServicesResponseBody extends TeaModel {
             }
 
             /**
-             * serviceId.
+             * <p>Service ID</p>
+             * 
+             * <strong>example:</strong>
+             * <p>jm2pl0yoqf@d4905cb11a4f218dfb0a8</p>
              */
             public Builder serviceId(String serviceId) {
                 this.serviceId = serviceId;
@@ -356,7 +386,10 @@ public class ListServicesResponseBody extends TeaModel {
             }
 
             /**
-             * serviceName.
+             * <p>Service name</p>
+             * 
+             * <strong>example:</strong>
+             * <p>demo-app</p>
              */
             public Builder serviceName(String serviceName) {
                 this.serviceName = serviceName;
@@ -364,7 +397,10 @@ public class ListServicesResponseBody extends TeaModel {
             }
 
             /**
-             * serviceStatus.
+             * <p>Service status, valid only when serviceType=RUM.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Running</p>
              */
             public Builder serviceStatus(String serviceStatus) {
                 this.serviceStatus = serviceStatus;
@@ -372,7 +408,10 @@ public class ListServicesResponseBody extends TeaModel {
             }
 
             /**
-             * serviceType.
+             * <p>Service type</p>
+             * 
+             * <strong>example:</strong>
+             * <p>TRACE</p>
              */
             public Builder serviceType(String serviceType) {
                 this.serviceType = serviceType;
@@ -380,7 +419,10 @@ public class ListServicesResponseBody extends TeaModel {
             }
 
             /**
-             * workspace.
+             * <p>Workspace.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>default-cms-1192928460540589-cn-hangzhou</p>
              */
             public Builder workspace(String workspace) {
                 this.workspace = workspace;

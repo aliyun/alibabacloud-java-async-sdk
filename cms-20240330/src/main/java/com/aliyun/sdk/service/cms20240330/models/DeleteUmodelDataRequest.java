@@ -116,6 +116,7 @@ public class DeleteUmodelDataRequest extends Request {
         } 
 
         /**
+         * <p>Workspace name</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -137,7 +138,10 @@ public class DeleteUmodelDataRequest extends Request {
         }
 
         /**
-         * domain.
+         * <p>Can specify the name of a specific Umodel data, leaving it blank means all</p>
+         * 
+         * <strong>example:</strong>
+         * <p>apm</p>
          */
         public Builder domain(String domain) {
             this.putQueryParameter("domain", domain);
@@ -146,7 +150,10 @@ public class DeleteUmodelDataRequest extends Request {
         }
 
         /**
-         * kind.
+         * <p>Can specify the kind of a specific Umodel data, leaving it blank means all</p>
+         * 
+         * <strong>example:</strong>
+         * <p>metric_set</p>
          */
         public Builder kind(String kind) {
             this.putQueryParameter("kind", kind);
@@ -155,7 +162,10 @@ public class DeleteUmodelDataRequest extends Request {
         }
 
         /**
-         * name.
+         * <p>Can specify the name of a specific Umodel data, leaving it blank means all</p>
+         * 
+         * <strong>example:</strong>
+         * <p>test</p>
          */
         public Builder name(String name) {
             this.putQueryParameter("name", name);

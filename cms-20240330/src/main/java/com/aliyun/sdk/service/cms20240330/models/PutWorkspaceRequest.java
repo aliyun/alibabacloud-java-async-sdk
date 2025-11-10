@@ -105,6 +105,7 @@ public class PutWorkspaceRequest extends Request {
         } 
 
         /**
+         * <p>Name of the workspace</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -117,7 +118,7 @@ public class PutWorkspaceRequest extends Request {
         }
 
         /**
-         * <p>工作空间描述</p>
+         * <p>Description of the workspace</p>
          * 
          * <strong>example:</strong>
          * <p>workspace test</p>
@@ -129,7 +130,10 @@ public class PutWorkspaceRequest extends Request {
         }
 
         /**
-         * displayName.
+         * <p>Display name of the workspace</p>
+         * 
+         * <strong>example:</strong>
+         * <p>workspace-test</p>
          */
         public Builder displayName(String displayName) {
             this.putBodyParameter("displayName", displayName);
@@ -138,7 +142,7 @@ public class PutWorkspaceRequest extends Request {
         }
 
         /**
-         * <p>工作空间绑定的日志服务项目名称</p>
+         * <p>Name of the Log Service project</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>

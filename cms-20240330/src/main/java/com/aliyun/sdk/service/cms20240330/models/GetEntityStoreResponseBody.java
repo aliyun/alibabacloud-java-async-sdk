@@ -80,7 +80,10 @@ public class GetEntityStoreResponseBody extends TeaModel {
         } 
 
         /**
-         * regionId.
+         * <p>Region ID</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-heyuan</p>
          */
         public Builder regionId(String regionId) {
             this.regionId = regionId;
@@ -88,7 +91,10 @@ public class GetEntityStoreResponseBody extends TeaModel {
         }
 
         /**
-         * requestId.
+         * <p>Request ID</p>
+         * 
+         * <strong>example:</strong>
+         * <p>264C3E89-XXXX-XXXX-XXXX-CE9C2196C7DC</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -96,7 +102,10 @@ public class GetEntityStoreResponseBody extends TeaModel {
         }
 
         /**
-         * workspaceName.
+         * <p>Workspace name</p>
+         * 
+         * <strong>example:</strong>
+         * <p>workspace-test-001</p>
          */
         public Builder workspaceName(String workspaceName) {
             this.workspaceName = workspaceName;

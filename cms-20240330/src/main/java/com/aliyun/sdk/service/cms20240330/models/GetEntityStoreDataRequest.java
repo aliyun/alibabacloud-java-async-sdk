@@ -133,6 +133,7 @@ public class GetEntityStoreDataRequest extends Request {
         } 
 
         /**
+         * <p>Workspace name</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -154,7 +155,10 @@ public class GetEntityStoreDataRequest extends Request {
         }
 
         /**
-         * acceptEncoding.
+         * <p>Content encoding type for the compression algorithm</p>
+         * 
+         * <strong>example:</strong>
+         * <p>gzip</p>
          */
         public Builder acceptEncoding(String acceptEncoding) {
             this.putHeaderParameter("acceptEncoding", acceptEncoding);
@@ -163,6 +167,8 @@ public class GetEntityStoreDataRequest extends Request {
         }
 
         /**
+         * <p>Start time of the query.</p>
+         * <p>Unix timestamp format, representing the number of seconds since 1970-1-1 00:00:00 UTC.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -175,6 +181,7 @@ public class GetEntityStoreDataRequest extends Request {
         }
 
         /**
+         * <p>Query statement</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -187,6 +194,8 @@ public class GetEntityStoreDataRequest extends Request {
         }
 
         /**
+         * <p>End time of the query.</p>
+         * <p>Unix timestamp format, representing the number of seconds since 1970-1-1 00:00:00 UTC.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>

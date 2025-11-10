@@ -173,7 +173,10 @@ public class ListPrometheusInstancesRequest extends Request {
         } 
 
         /**
-         * filterRegionIds.
+         * <p>Specified list of regionIds to filter (comma-separated).</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-shenzhen</p>
          */
         public Builder filterRegionIds(String filterRegionIds) {
             this.putQueryParameter("filterRegionIds", filterRegionIds);
@@ -182,7 +185,10 @@ public class ListPrometheusInstancesRequest extends Request {
         }
 
         /**
-         * maxResults.
+         * <p>Maximum number of records to return.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10</p>
          */
         public Builder maxResults(Integer maxResults) {
             this.putQueryParameter("maxResults", maxResults);
@@ -191,7 +197,10 @@ public class ListPrometheusInstancesRequest extends Request {
         }
 
         /**
-         * nextToken.
+         * <p>Query token.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>xxxxxxxxxx</p>
          */
         public Builder nextToken(String nextToken) {
             this.putQueryParameter("nextToken", nextToken);
@@ -200,7 +209,10 @@ public class ListPrometheusInstancesRequest extends Request {
         }
 
         /**
-         * prometheusInstanceIds.
+         * <p>List of instance IDs (comma-separated)</p>
+         * 
+         * <strong>example:</strong>
+         * <p>rw-00001,rw-00002,rw-00003</p>
          */
         public Builder prometheusInstanceIds(String prometheusInstanceIds) {
             this.putQueryParameter("prometheusInstanceIds", prometheusInstanceIds);
@@ -209,7 +221,10 @@ public class ListPrometheusInstancesRequest extends Request {
         }
 
         /**
-         * prometheusInstanceName.
+         * <p>Instance name (partial match supported)</p>
+         * 
+         * <strong>example:</strong>
+         * <p>test</p>
          */
         public Builder prometheusInstanceName(String prometheusInstanceName) {
             this.putQueryParameter("prometheusInstanceName", prometheusInstanceName);
@@ -218,7 +233,10 @@ public class ListPrometheusInstancesRequest extends Request {
         }
 
         /**
-         * resourceGroupId.
+         * <p>Resource group ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>rg-aek2bhocin5e2na</p>
          */
         public Builder resourceGroupId(String resourceGroupId) {
             this.putQueryParameter("resourceGroupId", resourceGroupId);
@@ -227,7 +245,10 @@ public class ListPrometheusInstancesRequest extends Request {
         }
 
         /**
-         * resourceType.
+         * <p>Resource type of the instance.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Prometheus</p>
          */
         public Builder resourceType(String resourceType) {
             this.putQueryParameter("resourceType", resourceType);
@@ -236,7 +257,7 @@ public class ListPrometheusInstancesRequest extends Request {
         }
 
         /**
-         * tag.
+         * <p>List of tags.</p>
          */
         public Builder tag(java.util.List<Tag> tag) {
             String tagShrink = shrink(tag, "tag", "json");
@@ -246,7 +267,10 @@ public class ListPrometheusInstancesRequest extends Request {
         }
 
         /**
-         * version.
+         * <p>Instance version: V1 or V2</p>
+         * 
+         * <strong>example:</strong>
+         * <p>V2</p>
          */
         public Builder version(String version) {
             this.putQueryParameter("version", version);
@@ -314,7 +338,10 @@ public class ListPrometheusInstancesRequest extends Request {
             } 
 
             /**
-             * key.
+             * <p>Tag key</p>
+             * 
+             * <strong>example:</strong>
+             * <p>testKey</p>
              */
             public Builder key(String key) {
                 this.key = key;
@@ -322,7 +349,10 @@ public class ListPrometheusInstancesRequest extends Request {
             }
 
             /**
-             * value.
+             * <p>Tag value.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>testValue</p>
              */
             public Builder value(String value) {
                 this.value = value;

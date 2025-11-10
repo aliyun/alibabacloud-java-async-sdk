@@ -67,7 +67,7 @@ public class CreatePrometheusVirtualInstanceResponseBody extends TeaModel {
         } 
 
         /**
-         * instance.
+         * <p>Instance ID</p>
          */
         public Builder instance(Instance instance) {
             this.instance = instance;
@@ -75,7 +75,7 @@ public class CreatePrometheusVirtualInstanceResponseBody extends TeaModel {
         }
 
         /**
-         * <p>Id of the request</p>
+         * <p>ID of the request</p>
          * 
          * <strong>example:</strong>
          * <p>0B9377D9-C56B-5C2E-A8A4-************</p>
@@ -196,7 +196,10 @@ public class CreatePrometheusVirtualInstanceResponseBody extends TeaModel {
             } 
 
             /**
-             * createdAt.
+             * <p>Creation time</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1751520976660</p>
              */
             public Builder createdAt(String createdAt) {
                 this.createdAt = createdAt;
@@ -204,7 +207,10 @@ public class CreatePrometheusVirtualInstanceResponseBody extends TeaModel {
             }
 
             /**
-             * httpApiUrl.
+             * <p>HTTP API query address</p>
+             * 
+             * <strong>example:</strong>
+             * <p><a href="http://xxxxxxx">http://xxxxxxx</a></p>
              */
             public Builder httpApiUrl(String httpApiUrl) {
                 this.httpApiUrl = httpApiUrl;
@@ -212,7 +218,10 @@ public class CreatePrometheusVirtualInstanceResponseBody extends TeaModel {
             }
 
             /**
-             * instanceId.
+             * <p>Region ID</p>
+             * 
+             * <strong>example:</strong>
+             * <p>rw-e815960b4c9ebc5c3d89790c7e82</p>
              */
             public Builder instanceId(String instanceId) {
                 this.instanceId = instanceId;
@@ -220,7 +229,10 @@ public class CreatePrometheusVirtualInstanceResponseBody extends TeaModel {
             }
 
             /**
-             * namespace.
+             * <p>Cloud product</p>
+             * 
+             * <strong>example:</strong>
+             * <p>ack-csi-fuse</p>
              */
             public Builder namespace(String namespace) {
                 this.namespace = namespace;
@@ -228,7 +240,10 @@ public class CreatePrometheusVirtualInstanceResponseBody extends TeaModel {
             }
 
             /**
-             * regionId.
+             * <p>User ID</p>
+             * 
+             * <strong>example:</strong>
+             * <p>cn-zhengzhou-jva</p>
              */
             public Builder regionId(String regionId) {
                 this.regionId = regionId;
@@ -236,7 +251,10 @@ public class CreatePrometheusVirtualInstanceResponseBody extends TeaModel {
             }
 
             /**
-             * userId.
+             * <p>User ID</p>
+             * 
+             * <strong>example:</strong>
+             * <p>167212345678</p>
              */
             public Builder userId(String userId) {
                 this.userId = userId;

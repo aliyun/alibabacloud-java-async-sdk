@@ -73,7 +73,14 @@ public class CreateTicketRequest extends Request {
         } 
 
         /**
-         * accessTokenExpirationTime.
+         * <ul>
+         * <li>Access token expiration time (in seconds), which is the expiration time for the user to access the page interface. The default value is 86400 seconds (one day), and the range of values is from 0 to 86400 seconds (one day).</li>
+         * <li>The access token expiration time is the minimum value between <code>accessTokenExpirationTime</code> and <code>expirationTime</code>.</li>
+         * <li>If called through STS, the access token expiration time (i.e., the time during which the user can access the page interface) is the minimum value among <code>accessTokenExpirationTime</code>, <code>expirationTime</code>, and the STS expiration time.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>600</p>
          */
         public Builder accessTokenExpirationTime(Long accessTokenExpirationTime) {
             this.putQueryParameter("accessTokenExpirationTime", accessTokenExpirationTime);
@@ -82,7 +89,12 @@ public class CreateTicketRequest extends Request {
         }
 
         /**
-         * expirationTime.
+         * <ul>
+         * <li>Expiration time (in seconds), which is the expiration time for the embedded page URL. The default value is 86400 seconds (one day), and the range of values is from 0 to 2592000 seconds (30 days).</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>86400</p>
          */
         public Builder expirationTime(Long expirationTime) {
             this.putQueryParameter("expirationTime", expirationTime);

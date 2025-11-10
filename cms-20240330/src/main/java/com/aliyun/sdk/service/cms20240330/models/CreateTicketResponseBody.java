@@ -54,7 +54,10 @@ public class CreateTicketResponseBody extends TeaModel {
         } 
 
         /**
-         * ticket.
+         * <p>免登录票据。</p>
+         * 
+         * <strong>example:</strong>
+         * <p>eyJ***************.eyJ******************.KUT****************</p>
          */
         public Builder ticket(String ticket) {
             this.ticket = ticket;

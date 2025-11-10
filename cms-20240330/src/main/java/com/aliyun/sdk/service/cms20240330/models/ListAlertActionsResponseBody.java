@@ -106,7 +106,7 @@ public class ListAlertActionsResponseBody extends TeaModel {
         } 
 
         /**
-         * alertActions.
+         * <p>List of alert action configurations.</p>
          */
         public Builder alertActions(java.util.List<AlertActions> alertActions) {
             this.alertActions = alertActions;
@@ -114,7 +114,10 @@ public class ListAlertActionsResponseBody extends TeaModel {
         }
 
         /**
-         * pageNumber.
+         * <p>Page number.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder pageNumber(Long pageNumber) {
             this.pageNumber = pageNumber;
@@ -122,7 +125,10 @@ public class ListAlertActionsResponseBody extends TeaModel {
         }
 
         /**
-         * pageSize.
+         * <p>Page size.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>100</p>
          */
         public Builder pageSize(Long pageSize) {
             this.pageSize = pageSize;
@@ -130,7 +136,10 @@ public class ListAlertActionsResponseBody extends TeaModel {
         }
 
         /**
-         * requestId.
+         * <p>Request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>8FDE2569-626B-5176-9844-28877A*****</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -138,7 +147,10 @@ public class ListAlertActionsResponseBody extends TeaModel {
         }
 
         /**
-         * total.
+         * <p>Total number of items.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>9</p>
          */
         public Builder total(Integer total) {
             this.total = total;
@@ -230,7 +242,10 @@ public class ListAlertActionsResponseBody extends TeaModel {
             } 
 
             /**
-             * ebSource.
+             * <p>Event source.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>test</p>
              */
             public Builder ebSource(String ebSource) {
                 this.ebSource = ebSource;
@@ -238,7 +253,10 @@ public class ListAlertActionsResponseBody extends TeaModel {
             }
 
             /**
-             * eventBusName.
+             * <p>Event bus name.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>test</p>
              */
             public Builder eventBusName(String eventBusName) {
                 this.eventBusName = eventBusName;
@@ -246,7 +264,10 @@ public class ListAlertActionsResponseBody extends TeaModel {
             }
 
             /**
-             * regionId.
+             * <p>Region ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>cn-heyuan</p>
              */
             public Builder regionId(String regionId) {
                 this.regionId = regionId;
@@ -254,7 +275,10 @@ public class ListAlertActionsResponseBody extends TeaModel {
             }
 
             /**
-             * subject.
+             * <p>Subject.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>test</p>
              */
             public Builder subject(String subject) {
                 this.subject = subject;
@@ -334,7 +358,10 @@ public class ListAlertActionsResponseBody extends TeaModel {
             } 
 
             /**
-             * essGroupId.
+             * <p>Elastic scaling group ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>testId</p>
              */
             public Builder essGroupId(String essGroupId) {
                 this.essGroupId = essGroupId;
@@ -342,7 +369,10 @@ public class ListAlertActionsResponseBody extends TeaModel {
             }
 
             /**
-             * essRuleId.
+             * <p>Elastic scaling rule ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>testId</p>
              */
             public Builder essRuleId(String essRuleId) {
                 this.essRuleId = essRuleId;
@@ -350,7 +380,10 @@ public class ListAlertActionsResponseBody extends TeaModel {
             }
 
             /**
-             * regionId.
+             * <p>Region ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>cn-beijing</p>
              */
             public Builder regionId(String regionId) {
                 this.regionId = regionId;
@@ -430,7 +463,10 @@ public class ListAlertActionsResponseBody extends TeaModel {
             } 
 
             /**
-             * function.
+             * <p>Function name of the Function Compute service.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>test</p>
              */
             public Builder function(String function) {
                 this.function = function;
@@ -438,7 +474,10 @@ public class ListAlertActionsResponseBody extends TeaModel {
             }
 
             /**
-             * qualifier.
+             * <p>Version or alias of the function.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>test</p>
              */
             public Builder qualifier(String qualifier) {
                 this.qualifier = qualifier;
@@ -446,7 +485,10 @@ public class ListAlertActionsResponseBody extends TeaModel {
             }
 
             /**
-             * regionId.
+             * <p>Region ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>cn-qingdao</p>
              */
             public Builder regionId(String regionId) {
                 this.regionId = regionId;
@@ -526,7 +568,10 @@ public class ListAlertActionsResponseBody extends TeaModel {
             } 
 
             /**
-             * function.
+             * <p>Function name in the Function Compute service.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>test</p>
              */
             public Builder function(String function) {
                 this.function = function;
@@ -534,7 +579,10 @@ public class ListAlertActionsResponseBody extends TeaModel {
             }
 
             /**
-             * regionId.
+             * <p>Region ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>cn-beijing</p>
              */
             public Builder regionId(String regionId) {
                 this.regionId = regionId;
@@ -542,7 +590,10 @@ public class ListAlertActionsResponseBody extends TeaModel {
             }
 
             /**
-             * service.
+             * <p>Function Compute service name.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>test</p>
              */
             public Builder service(String service) {
                 this.service = service;
@@ -622,7 +673,10 @@ public class ListAlertActionsResponseBody extends TeaModel {
             } 
 
             /**
-             * mnsType.
+             * <p>Resource type of the Lightweight Message Queue (formerly MNS).</p>
+             * 
+             * <strong>example:</strong>
+             * <p>queue</p>
              */
             public Builder mnsType(String mnsType) {
                 this.mnsType = mnsType;
@@ -630,7 +684,14 @@ public class ListAlertActionsResponseBody extends TeaModel {
             }
 
             /**
-             * name.
+             * <p>Resource name.</p>
+             * <ul>
+             * <li>If the resource type is queue, the resource name is the queue name.</li>
+             * <li>If the resource type is topic, the resource name is the topic name.</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>test</p>
              */
             public Builder name(String name) {
                 this.name = name;
@@ -638,7 +699,10 @@ public class ListAlertActionsResponseBody extends TeaModel {
             }
 
             /**
-             * regionId.
+             * <p>Region ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>cn-hangzhou</p>
              */
             public Builder regionId(String regionId) {
                 this.regionId = regionId;
@@ -705,7 +769,10 @@ public class ListAlertActionsResponseBody extends TeaModel {
             } 
 
             /**
-             * key.
+             * <p>Integration key for PagerDuty.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>fsfer4543t5t65g4t4</p>
              */
             public Builder key(String key) {
                 this.key = key;
@@ -713,7 +780,10 @@ public class ListAlertActionsResponseBody extends TeaModel {
             }
 
             /**
-             * url.
+             * <p>Integration webhook for PagerDuty. Supports V1 and V2 versions.</p>
+             * 
+             * <strong>example:</strong>
+             * <p><a href="https://events.pagerduty.com/v2/enqueue">https://events.pagerduty.com/v2/enqueue</a></p>
              */
             public Builder url(String url) {
                 this.url = url;
@@ -793,7 +863,10 @@ public class ListAlertActionsResponseBody extends TeaModel {
             } 
 
             /**
-             * logstore.
+             * <p>Logstore name of the Log Service.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>test</p>
              */
             public Builder logstore(String logstore) {
                 this.logstore = logstore;
@@ -801,7 +874,10 @@ public class ListAlertActionsResponseBody extends TeaModel {
             }
 
             /**
-             * project.
+             * <p>Log Service project name.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>test</p>
              */
             public Builder project(String project) {
                 this.project = project;
@@ -809,7 +885,10 @@ public class ListAlertActionsResponseBody extends TeaModel {
             }
 
             /**
-             * regionId.
+             * <p>Region ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>cn-hangzhou</p>
              */
             public Builder regionId(String regionId) {
                 this.regionId = regionId;
@@ -902,7 +981,10 @@ public class ListAlertActionsResponseBody extends TeaModel {
             } 
 
             /**
-             * contentType.
+             * <p>Data format, effective when the request method is POST.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>JSON</p>
              */
             public Builder contentType(String contentType) {
                 this.contentType = contentType;
@@ -910,7 +992,7 @@ public class ListAlertActionsResponseBody extends TeaModel {
             }
 
             /**
-             * headers.
+             * <p>Request headers.</p>
              */
             public Builder headers(java.util.Map<String, String> headers) {
                 this.headers = headers;
@@ -918,7 +1000,10 @@ public class ListAlertActionsResponseBody extends TeaModel {
             }
 
             /**
-             * method.
+             * <p>Webhook request method.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>GET</p>
              */
             public Builder method(String method) {
                 this.method = method;
@@ -926,7 +1011,10 @@ public class ListAlertActionsResponseBody extends TeaModel {
             }
 
             /**
-             * url.
+             * <p>The URL address for the alarm callback.</p>
+             * 
+             * <strong>example:</strong>
+             * <p><a href="http://www.test.com">http://www.test.com</a></p>
              */
             public Builder url(String url) {
                 this.url = url;
@@ -1110,7 +1198,10 @@ public class ListAlertActionsResponseBody extends TeaModel {
             } 
 
             /**
-             * alertActionId.
+             * <p>Unique identifier for the action integration.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>test</p>
              */
             public Builder alertActionId(String alertActionId) {
                 this.alertActionId = alertActionId;
@@ -1118,7 +1209,10 @@ public class ListAlertActionsResponseBody extends TeaModel {
             }
 
             /**
-             * alertActionName.
+             * <p>Alert action name.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>testName</p>
              */
             public Builder alertActionName(String alertActionName) {
                 this.alertActionName = alertActionName;
@@ -1126,7 +1220,7 @@ public class ListAlertActionsResponseBody extends TeaModel {
             }
 
             /**
-             * ebParam.
+             * <p>Event Bridge parameters.</p>
              */
             public Builder ebParam(EbParam ebParam) {
                 this.ebParam = ebParam;
@@ -1134,7 +1228,7 @@ public class ListAlertActionsResponseBody extends TeaModel {
             }
 
             /**
-             * essParam.
+             * <p>Elastic scaling parameters.</p>
              */
             public Builder essParam(EssParam essParam) {
                 this.essParam = essParam;
@@ -1142,7 +1236,7 @@ public class ListAlertActionsResponseBody extends TeaModel {
             }
 
             /**
-             * fc3Param.
+             * <p>Function Compute 3.0 parameters.</p>
              */
             public Builder fc3Param(Fc3Param fc3Param) {
                 this.fc3Param = fc3Param;
@@ -1150,7 +1244,7 @@ public class ListAlertActionsResponseBody extends TeaModel {
             }
 
             /**
-             * fcParam.
+             * <p>Function Compute parameters.</p>
              */
             public Builder fcParam(FcParam fcParam) {
                 this.fcParam = fcParam;
@@ -1158,7 +1252,7 @@ public class ListAlertActionsResponseBody extends TeaModel {
             }
 
             /**
-             * mnsParam.
+             * <p>Lightweight Message Queue (formerly MNS) parameters.</p>
              */
             public Builder mnsParam(MnsParam mnsParam) {
                 this.mnsParam = mnsParam;
@@ -1166,7 +1260,7 @@ public class ListAlertActionsResponseBody extends TeaModel {
             }
 
             /**
-             * pagerDutyParam.
+             * <p>PagerDuty parameters</p>
              */
             public Builder pagerDutyParam(PagerDutyParam pagerDutyParam) {
                 this.pagerDutyParam = pagerDutyParam;
@@ -1174,7 +1268,7 @@ public class ListAlertActionsResponseBody extends TeaModel {
             }
 
             /**
-             * slsParam.
+             * <p>Log Service parameters.</p>
              */
             public Builder slsParam(SlsParam slsParam) {
                 this.slsParam = slsParam;
@@ -1182,7 +1276,10 @@ public class ListAlertActionsResponseBody extends TeaModel {
             }
 
             /**
-             * type.
+             * <p>Action integration type.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>FC</p>
              */
             public Builder type(String type) {
                 this.type = type;
@@ -1190,7 +1287,7 @@ public class ListAlertActionsResponseBody extends TeaModel {
             }
 
             /**
-             * webhookParam.
+             * <p>Webhook parameters</p>
              */
             public Builder webhookParam(WebhookParam webhookParam) {
                 this.webhookParam = webhookParam;

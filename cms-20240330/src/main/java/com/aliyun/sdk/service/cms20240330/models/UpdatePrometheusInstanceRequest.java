@@ -214,6 +214,7 @@ public class UpdatePrometheusInstanceRequest extends Request {
         } 
 
         /**
+         * <p>Prometheus instance ID</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -226,7 +227,12 @@ public class UpdatePrometheusInstanceRequest extends Request {
         }
 
         /**
-         * archiveDuration.
+         * <p>The number of days to automatically archive and save after the storage expires, 0 means no archiving. The range of archiving days:
+         * V1: 1<del>365 days. Only supported for metric write volume.
+         * V2: 1</del>3650 days (3650 indicates permanent storage).</p>
+         * 
+         * <strong>example:</strong>
+         * <p>365</p>
          */
         public Builder archiveDuration(Integer archiveDuration) {
             this.putBodyParameter("archiveDuration", archiveDuration);
@@ -235,7 +241,19 @@ public class UpdatePrometheusInstanceRequest extends Request {
         }
 
         /**
-         * authFreeReadPolicy.
+         * <p>Password-free read policy (supports IP segments and VpcId).</p>
+         * 
+         * <strong>example:</strong>
+         * <p>{
+         *   &quot;SourceIp&quot;: [
+         *     &quot;192.168.1.0/24&quot;,
+         *     &quot;172.168.2.22&quot;
+         *   ],
+         *   &quot;SourceVpc&quot;: [
+         *     &quot;vpc-xx1&quot;,
+         *     &quot;vpc-xx2&quot;
+         *   ]
+         * }</p>
          */
         public Builder authFreeReadPolicy(String authFreeReadPolicy) {
             this.putBodyParameter("authFreeReadPolicy", authFreeReadPolicy);
@@ -244,7 +262,19 @@ public class UpdatePrometheusInstanceRequest extends Request {
         }
 
         /**
-         * authFreeWritePolicy.
+         * <p>Password-free write policy (supports IP segments and VpcId).</p>
+         * 
+         * <strong>example:</strong>
+         * <p>{
+         *   &quot;SourceIp&quot;: [
+         *     &quot;192.168.1.0/24&quot;,
+         *     &quot;172.168.2.22&quot;
+         *   ],
+         *   &quot;SourceVpc&quot;: [
+         *     &quot;vpc-xx1&quot;,
+         *     &quot;vpc-xx2&quot;
+         *   ]
+         * }</p>
          */
         public Builder authFreeWritePolicy(String authFreeWritePolicy) {
             this.putBodyParameter("authFreeWritePolicy", authFreeWritePolicy);
@@ -253,7 +283,10 @@ public class UpdatePrometheusInstanceRequest extends Request {
         }
 
         /**
-         * enableAuthFreeRead.
+         * <p>Whether to enable password-free read.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder enableAuthFreeRead(Boolean enableAuthFreeRead) {
             this.putBodyParameter("enableAuthFreeRead", enableAuthFreeRead);
@@ -262,7 +295,10 @@ public class UpdatePrometheusInstanceRequest extends Request {
         }
 
         /**
-         * enableAuthFreeWrite.
+         * <p>Whether to enable password-free write.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder enableAuthFreeWrite(Boolean enableAuthFreeWrite) {
             this.putBodyParameter("enableAuthFreeWrite", enableAuthFreeWrite);
@@ -271,7 +307,10 @@ public class UpdatePrometheusInstanceRequest extends Request {
         }
 
         /**
-         * enableAuthToken.
+         * <p>Whether to enable access token authentication.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder enableAuthToken(Boolean enableAuthToken) {
             this.putBodyParameter("enableAuthToken", enableAuthToken);
@@ -280,7 +319,12 @@ public class UpdatePrometheusInstanceRequest extends Request {
         }
 
         /**
-         * paymentType.
+         * <p>Billing method (can only be modified once during the instance&quot;s lifecycle):
+         * POSTPAY: Postpaid by metric reporting volume.
+         * POSTPAY_GB: Postpaid by metric write volume.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>POSTPAY_GB</p>
          */
         public Builder paymentType(String paymentType) {
             this.putBodyParameter("paymentType", paymentType);
@@ -289,7 +333,10 @@ public class UpdatePrometheusInstanceRequest extends Request {
         }
 
         /**
-         * prometheusInstanceName.
+         * <p>Instance name.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>test-prom-name</p>
          */
         public Builder prometheusInstanceName(String prometheusInstanceName) {
             this.putBodyParameter("prometheusInstanceName", prometheusInstanceName);
@@ -298,7 +345,10 @@ public class UpdatePrometheusInstanceRequest extends Request {
         }
 
         /**
-         * status.
+         * <p>Instance storage DB status (only supports RUNNING). If empty, the storage DB status will not be changed.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>RUNNING</p>
          */
         public Builder status(String status) {
             this.putBodyParameter("status", status);
@@ -307,7 +357,12 @@ public class UpdatePrometheusInstanceRequest extends Request {
         }
 
         /**
-         * storageDuration.
+         * <p>Storage duration (days):
+         * By write volume: 90, 180.
+         * By metric reporting volume: 15, 30, 60, 90, 180.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>90</p>
          */
         public Builder storageDuration(Integer storageDuration) {
             this.putBodyParameter("storageDuration", storageDuration);
@@ -316,7 +371,10 @@ public class UpdatePrometheusInstanceRequest extends Request {
         }
 
         /**
-         * workspace.
+         * <p>Belonging workspace.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>default-cms-1500199863951574-cn-shanghai</p>
          */
         public Builder workspace(String workspace) {
             this.putBodyParameter("workspace", workspace);

@@ -20,6 +20,9 @@ public interface AsyncClient extends SdkAutoCloseable {
     }
 
     /**
+     * <b>description</b> :
+     * <p>Used to create a site monitoring task</p>
+     * 
      * @param request the request parameters of CreateAddonRelease  CreateAddonReleaseRequest
      * @return CreateAddonReleaseResponse
      */
@@ -38,6 +41,9 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<CreateEntityStoreResponse> createEntityStore(CreateEntityStoreRequest request);
 
     /**
+     * <b>description</b> :
+     * <p>This interface is used to support users in creating event integration.</p>
+     * 
      * @param request the request parameters of CreateIntegrationPolicy  CreateIntegrationPolicyRequest
      * @return CreateIntegrationPolicyResponse
      */
@@ -50,12 +56,18 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<CreatePrometheusInstanceResponse> createPrometheusInstance(CreatePrometheusInstanceRequest request);
 
     /**
+     * <b>description</b> :
+     * <p>Used to create a site monitoring task</p>
+     * 
      * @param request the request parameters of CreatePrometheusView  CreatePrometheusViewRequest
      * @return CreatePrometheusViewResponse
      */
     CompletableFuture<CreatePrometheusViewResponse> createPrometheusView(CreatePrometheusViewRequest request);
 
     /**
+     * <b>description</b> :
+     * <p>Create a Prometheus monitoring virtual instance.</p>
+     * 
      * @param request the request parameters of CreatePrometheusVirtualInstance  CreatePrometheusVirtualInstanceRequest
      * @return CreatePrometheusVirtualInstanceResponse
      */
@@ -74,6 +86,9 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<CreateTicketResponse> createTicket(CreateTicketRequest request);
 
     /**
+     * <b>description</b> :
+     * <p>Create Umodel configuration in the specified workspace</p>
+     * 
      * @param request the request parameters of CreateUmodel  CreateUmodelRequest
      * @return CreateUmodelResponse
      */
@@ -104,12 +119,18 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<DeleteIntegrationPolicyResponse> deleteIntegrationPolicy(DeleteIntegrationPolicyRequest request);
 
     /**
+     * <b>description</b> :
+     * <p>Delete a Prometheus instance.</p>
+     * 
      * @param request the request parameters of DeletePrometheusInstance  DeletePrometheusInstanceRequest
      * @return DeletePrometheusInstanceResponse
      */
     CompletableFuture<DeletePrometheusInstanceResponse> deletePrometheusInstance(DeletePrometheusInstanceRequest request);
 
     /**
+     * <b>description</b> :
+     * <p>Delete prometheus view instance.</p>
+     * 
      * @param request the request parameters of DeletePrometheusView  DeletePrometheusViewRequest
      * @return DeletePrometheusViewResponse
      */
@@ -122,12 +143,24 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<DeleteServiceResponse> deleteService(DeleteServiceRequest request);
 
     /**
+     * <b>description</b> :
+     * <p>Delete the Umodel under the specified workspace</p>
+     * 
      * @param request the request parameters of DeleteUmodel  DeleteUmodelRequest
      * @return DeleteUmodelResponse
      */
     CompletableFuture<DeleteUmodelResponse> deleteUmodel(DeleteUmodelRequest request);
 
     /**
+     * @param request the request parameters of DeleteUmodelCommonSchemaRef  DeleteUmodelCommonSchemaRefRequest
+     * @return DeleteUmodelCommonSchemaRefResponse
+     */
+    CompletableFuture<DeleteUmodelCommonSchemaRefResponse> deleteUmodelCommonSchemaRef(DeleteUmodelCommonSchemaRefRequest request);
+
+    /**
+     * <b>description</b> :
+     * <p>Delete the Umodel Data under a specified workspace</p>
+     * 
      * @param request the request parameters of DeleteUmodelData  DeleteUmodelDataRequest
      * @return DeleteUmodelDataResponse
      */
@@ -170,12 +203,18 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<GetIntegrationPolicyResponse> getIntegrationPolicy(GetIntegrationPolicyRequest request);
 
     /**
+     * <b>description</b> :
+     * <p>Retrieve details of a Prometheus instance.</p>
+     * 
      * @param request the request parameters of GetPrometheusInstance  GetPrometheusInstanceRequest
      * @return GetPrometheusInstanceResponse
      */
     CompletableFuture<GetPrometheusInstanceResponse> getPrometheusInstance(GetPrometheusInstanceRequest request);
 
     /**
+     * <b>description</b> :
+     * <p>Query a specified Prometheus view instance.</p>
+     * 
      * @param request the request parameters of GetPrometheusView  GetPrometheusViewRequest
      * @return GetPrometheusViewResponse
      */
@@ -194,12 +233,24 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<GetServiceObservabilityResponse> getServiceObservability(GetServiceObservabilityRequest request);
 
     /**
+     * <b>description</b> :
+     * <p>Get Umodel configuration information</p>
+     * 
      * @param request the request parameters of GetUmodel  GetUmodelRequest
      * @return GetUmodelResponse
      */
     CompletableFuture<GetUmodelResponse> getUmodel(GetUmodelRequest request);
 
     /**
+     * @param request the request parameters of GetUmodelCommonSchemaRef  GetUmodelCommonSchemaRefRequest
+     * @return GetUmodelCommonSchemaRefResponse
+     */
+    CompletableFuture<GetUmodelCommonSchemaRefResponse> getUmodelCommonSchemaRef(GetUmodelCommonSchemaRefRequest request);
+
+    /**
+     * <b>description</b> :
+     * <p>Find Umodel</p>
+     * 
      * @param request the request parameters of GetUmodelData  GetUmodelDataRequest
      * @return GetUmodelDataResponse
      */
@@ -212,6 +263,9 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<GetWorkspaceResponse> getWorkspace(GetWorkspaceRequest request);
 
     /**
+     * <b>description</b> :
+     * <p>Query the list of access configurations</p>
+     * 
      * @param request the request parameters of ListAddonReleases  ListAddonReleasesRequest
      * @return ListAddonReleasesResponse
      */
@@ -230,6 +284,9 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<ListAlertActionsResponse> listAlertActions(ListAlertActionsRequest request);
 
     /**
+     * <b>description</b> :
+     * <p>Query integration list</p>
+     * 
      * @param request the request parameters of ListIntegrationPolicies  ListIntegrationPoliciesRequest
      * @return ListIntegrationPoliciesResponse
      */
@@ -242,42 +299,64 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<ListIntegrationPolicyCustomScrapeJobRulesResponse> listIntegrationPolicyCustomScrapeJobRules(ListIntegrationPolicyCustomScrapeJobRulesRequest request);
 
     /**
+     * <b>description</b> :
+     * <p>This article provides an example of querying the alarm template list. The result shows that there are 2 alarm templates in the list, which are <code>ECS_Template1</code> and <code>ECS_Template2</code>.</p>
+     * 
      * @param request the request parameters of ListIntegrationPolicyDashboards  ListIntegrationPolicyDashboardsRequest
      * @return ListIntegrationPolicyDashboardsResponse
      */
     CompletableFuture<ListIntegrationPolicyDashboardsResponse> listIntegrationPolicyDashboards(ListIntegrationPolicyDashboardsRequest request);
 
     /**
+     * <b>description</b> :
+     * <p>This article provides an example to query the alarm template list. The result shows that there are 2 alarm templates in the alarm template list, which are <code>ECS_Template1</code> and <code>ECS_Template2</code>.</p>
+     * 
      * @param request the request parameters of ListIntegrationPolicyPodMonitors  ListIntegrationPolicyPodMonitorsRequest
      * @return ListIntegrationPolicyPodMonitorsResponse
      */
     CompletableFuture<ListIntegrationPolicyPodMonitorsResponse> listIntegrationPolicyPodMonitors(ListIntegrationPolicyPodMonitorsRequest request);
 
     /**
+     * <b>description</b> :
+     * <p>During the effective period of the policy, all alarms within the application group will no longer send notifications.</p>
+     * <p>This article provides an example of creating a pause alarm notification policy <code>PauseNotify</code> for the application group <code>7301****</code>. This application group will pause alarms from <code>1622949300000</code> to <code>1623208500000</code> (Beijing Time <code>2021-06-06 11:15:00</code> to <code>2021-06-09 11:15:00</code>).</p>
+     * 
      * @param request the request parameters of ListIntegrationPolicyStorageRequirements  ListIntegrationPolicyStorageRequirementsRequest
      * @return ListIntegrationPolicyStorageRequirementsResponse
      */
     CompletableFuture<ListIntegrationPolicyStorageRequirementsResponse> listIntegrationPolicyStorageRequirements(ListIntegrationPolicyStorageRequirementsRequest request);
 
     /**
+     * <b>description</b> :
+     * <p>Get the list of Prometheus instance dashboards.</p>
+     * 
      * @param request the request parameters of ListPrometheusDashboards  ListPrometheusDashboardsRequest
      * @return ListPrometheusDashboardsResponse
      */
     CompletableFuture<ListPrometheusDashboardsResponse> listPrometheusDashboards(ListPrometheusDashboardsRequest request);
 
     /**
+     * <b>description</b> :
+     * <p>Get the list of Prometheus instances.</p>
+     * 
      * @param request the request parameters of ListPrometheusInstances  ListPrometheusInstancesRequest
      * @return ListPrometheusInstancesResponse
      */
     CompletableFuture<ListPrometheusInstancesResponse> listPrometheusInstances(ListPrometheusInstancesRequest request);
 
     /**
+     * <b>description</b> :
+     * <p>Retrieve a list of Prometheus view instance information.</p>
+     * 
      * @param request the request parameters of ListPrometheusViews  ListPrometheusViewsRequest
      * @return ListPrometheusViewsResponse
      */
     CompletableFuture<ListPrometheusViewsResponse> listPrometheusViews(ListPrometheusViewsRequest request);
 
     /**
+     * <b>description</b> :
+     * <p>Used for creating a site monitoring task</p>
+     * 
      * @param request the request parameters of ListPrometheusVirtualInstances  ListPrometheusVirtualInstancesRequest
      * @return ListPrometheusVirtualInstancesResponse
      */
@@ -326,12 +405,24 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<UpdateIntegrationPolicyResponse> updateIntegrationPolicy(UpdateIntegrationPolicyRequest request);
 
     /**
+     * @param request the request parameters of UpdateNotifyStrategy  UpdateNotifyStrategyRequest
+     * @return UpdateNotifyStrategyResponse
+     */
+    CompletableFuture<UpdateNotifyStrategyResponse> updateNotifyStrategy(UpdateNotifyStrategyRequest request);
+
+    /**
+     * <b>description</b> :
+     * <p>Update Prometheus instance information.</p>
+     * 
      * @param request the request parameters of UpdatePrometheusInstance  UpdatePrometheusInstanceRequest
      * @return UpdatePrometheusInstanceResponse
      */
     CompletableFuture<UpdatePrometheusInstanceResponse> updatePrometheusInstance(UpdatePrometheusInstanceRequest request);
 
     /**
+     * <b>description</b> :
+     * <p>Update Prometheus view instance information.</p>
+     * 
      * @param request the request parameters of UpdatePrometheusView  UpdatePrometheusViewRequest
      * @return UpdatePrometheusViewResponse
      */
@@ -344,10 +435,25 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<UpdateServiceResponse> updateService(UpdateServiceRequest request);
 
     /**
+     * @param request the request parameters of UpdateSubscription  UpdateSubscriptionRequest
+     * @return UpdateSubscriptionResponse
+     */
+    CompletableFuture<UpdateSubscriptionResponse> updateSubscription(UpdateSubscriptionRequest request);
+
+    /**
+     * <b>description</b> :
+     * <p>Update Umodel configuration information</p>
+     * 
      * @param request the request parameters of UpdateUmodel  UpdateUmodelRequest
      * @return UpdateUmodelResponse
      */
     CompletableFuture<UpdateUmodelResponse> updateUmodel(UpdateUmodelRequest request);
+
+    /**
+     * @param request the request parameters of UpsertUmodelCommonSchemaRef  UpsertUmodelCommonSchemaRefRequest
+     * @return UpsertUmodelCommonSchemaRefResponse
+     */
+    CompletableFuture<UpsertUmodelCommonSchemaRefResponse> upsertUmodelCommonSchemaRef(UpsertUmodelCommonSchemaRefRequest request);
 
     /**
      * @param request the request parameters of UpsertUmodelData  UpsertUmodelDataRequest

@@ -107,7 +107,7 @@ public class ListAggTaskGroupsResponseBody extends TeaModel {
         } 
 
         /**
-         * aggTaskGroups.
+         * <p>List of aggregation task groups.</p>
          */
         public Builder aggTaskGroups(java.util.List<AggTaskGroups> aggTaskGroups) {
             this.aggTaskGroups = aggTaskGroups;
@@ -115,7 +115,10 @@ public class ListAggTaskGroupsResponseBody extends TeaModel {
         }
 
         /**
-         * maxResults.
+         * <p>The maximum number of records returned.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>100</p>
          */
         public Builder maxResults(Integer maxResults) {
             this.maxResults = maxResults;
@@ -123,7 +126,10 @@ public class ListAggTaskGroupsResponseBody extends TeaModel {
         }
 
         /**
-         * nextToken.
+         * <p>Token for the next query.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>aa9d0e569b880xxx</p>
          */
         public Builder nextToken(String nextToken) {
             this.nextToken = nextToken;
@@ -131,7 +137,10 @@ public class ListAggTaskGroupsResponseBody extends TeaModel {
         }
 
         /**
-         * requestId.
+         * <p>Request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>7BF1F4D6-B9A8-5F0B-8C1D-4347FFCB798E</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -139,7 +148,10 @@ public class ListAggTaskGroupsResponseBody extends TeaModel {
         }
 
         /**
-         * totalCount.
+         * <p>Total number of instances.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>5</p>
          */
         public Builder totalCount(Integer totalCount) {
             this.totalCount = totalCount;
@@ -205,7 +217,10 @@ public class ListAggTaskGroupsResponseBody extends TeaModel {
             } 
 
             /**
-             * key.
+             * <p>Key of the resource group tag.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>key1</p>
              */
             public Builder key(String key) {
                 this.key = key;
@@ -213,7 +228,10 @@ public class ListAggTaskGroupsResponseBody extends TeaModel {
             }
 
             /**
-             * value.
+             * <p>Value of the resource group tag.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>value1</p>
              */
             public Builder value(String value) {
                 this.value = value;
@@ -501,7 +519,10 @@ public class ListAggTaskGroupsResponseBody extends TeaModel {
             } 
 
             /**
-             * aggTaskGroupConfigHash.
+             * <p>Hash of the aggregation task group configuration.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>a54136014xxx</p>
              */
             public Builder aggTaskGroupConfigHash(String aggTaskGroupConfigHash) {
                 this.aggTaskGroupConfigHash = aggTaskGroupConfigHash;
@@ -509,7 +530,10 @@ public class ListAggTaskGroupsResponseBody extends TeaModel {
             }
 
             /**
-             * aggTaskGroupId.
+             * <p>ID of the aggregation task group.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>aggTaskGroup-xxxx</p>
              */
             public Builder aggTaskGroupId(String aggTaskGroupId) {
                 this.aggTaskGroupId = aggTaskGroupId;
@@ -517,7 +541,10 @@ public class ListAggTaskGroupsResponseBody extends TeaModel {
             }
 
             /**
-             * aggTaskGroupName.
+             * <p>Name of the aggregation task group.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>pipeline-aggtask-group</p>
              */
             public Builder aggTaskGroupName(String aggTaskGroupName) {
                 this.aggTaskGroupName = aggTaskGroupName;
@@ -525,7 +552,10 @@ public class ListAggTaskGroupsResponseBody extends TeaModel {
             }
 
             /**
-             * cronExpr.
+             * <p>Cron expression for the aggregation task group when the scheduling mode is set to &quot;Cron&quot;.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>0 10 8 1 * ? *</p>
              */
             public Builder cronExpr(String cronExpr) {
                 this.cronExpr = cronExpr;
@@ -533,7 +563,10 @@ public class ListAggTaskGroupsResponseBody extends TeaModel {
             }
 
             /**
-             * delay.
+             * <p>Fixed delay time (in seconds) for scheduling.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>30</p>
              */
             public Builder delay(Integer delay) {
                 this.delay = delay;
@@ -541,7 +574,10 @@ public class ListAggTaskGroupsResponseBody extends TeaModel {
             }
 
             /**
-             * description.
+             * <p>Description of the aggregation task group.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>workspace api monitor update test</p>
              */
             public Builder description(String description) {
                 this.description = description;
@@ -549,7 +585,10 @@ public class ListAggTaskGroupsResponseBody extends TeaModel {
             }
 
             /**
-             * fromTime.
+             * <p>Start time of the schedule in seconds since epoch.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1757409499000</p>
              */
             public Builder fromTime(Long fromTime) {
                 this.fromTime = fromTime;
@@ -557,7 +596,10 @@ public class ListAggTaskGroupsResponseBody extends TeaModel {
             }
 
             /**
-             * interval.
+             * <p>Scheduling interval.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2025-04-24 00:00:00,2025-04-24 00:00:00</p>
              */
             public Builder interval(String interval) {
                 this.interval = interval;
@@ -565,7 +607,10 @@ public class ListAggTaskGroupsResponseBody extends TeaModel {
             }
 
             /**
-             * maxRetries.
+             * <p>Maximum number of retries for the aggregation task.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2</p>
              */
             public Builder maxRetries(Integer maxRetries) {
                 this.maxRetries = maxRetries;
@@ -573,7 +618,10 @@ public class ListAggTaskGroupsResponseBody extends TeaModel {
             }
 
             /**
-             * maxRunTimeInSeconds.
+             * <p>Maximum retry time (in seconds) for the aggregation task.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>200</p>
              */
             public Builder maxRunTimeInSeconds(Integer maxRunTimeInSeconds) {
                 this.maxRunTimeInSeconds = maxRunTimeInSeconds;
@@ -581,7 +629,10 @@ public class ListAggTaskGroupsResponseBody extends TeaModel {
             }
 
             /**
-             * regionId.
+             * <p>Region ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>cn-hangzhou</p>
              */
             public Builder regionId(String regionId) {
                 this.regionId = regionId;
@@ -589,7 +640,10 @@ public class ListAggTaskGroupsResponseBody extends TeaModel {
             }
 
             /**
-             * scheduleMode.
+             * <p>Scheduling mode.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>FixedRate</p>
              */
             public Builder scheduleMode(String scheduleMode) {
                 this.scheduleMode = scheduleMode;
@@ -597,7 +651,10 @@ public class ListAggTaskGroupsResponseBody extends TeaModel {
             }
 
             /**
-             * scheduleTimeExpr.
+             * <p>Scheduling time expression.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>@m</p>
              */
             public Builder scheduleTimeExpr(String scheduleTimeExpr) {
                 this.scheduleTimeExpr = scheduleTimeExpr;
@@ -605,7 +662,10 @@ public class ListAggTaskGroupsResponseBody extends TeaModel {
             }
 
             /**
-             * sourcePrometheusId.
+             * <p>The source Prometheus instance ID of the aggregation task group.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>rw-xxx</p>
              */
             public Builder sourcePrometheusId(String sourcePrometheusId) {
                 this.sourcePrometheusId = sourcePrometheusId;
@@ -613,7 +673,10 @@ public class ListAggTaskGroupsResponseBody extends TeaModel {
             }
 
             /**
-             * status.
+             * <p>Status of the aggregation task group.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Running</p>
              */
             public Builder status(String status) {
                 this.status = status;
@@ -621,7 +684,7 @@ public class ListAggTaskGroupsResponseBody extends TeaModel {
             }
 
             /**
-             * tags.
+             * <p>Resource group tags</p>
              */
             public Builder tags(java.util.List<Tags> tags) {
                 this.tags = tags;
@@ -629,7 +692,10 @@ public class ListAggTaskGroupsResponseBody extends TeaModel {
             }
 
             /**
-             * targetPrometheusId.
+             * <p>The target Prometheus instance ID of the aggregation task group.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>rw-xxx</p>
              */
             public Builder targetPrometheusId(String targetPrometheusId) {
                 this.targetPrometheusId = targetPrometheusId;
@@ -637,7 +703,10 @@ public class ListAggTaskGroupsResponseBody extends TeaModel {
             }
 
             /**
-             * toTime.
+             * <p>The second-level timestamp corresponding to the end time of scheduling.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>0</p>
              */
             public Builder toTime(Long toTime) {
                 this.toTime = toTime;
@@ -645,7 +714,10 @@ public class ListAggTaskGroupsResponseBody extends TeaModel {
             }
 
             /**
-             * updateTime.
+             * <p>Update time of the aggregation task group.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1757409499000</p>
              */
             public Builder updateTime(String updateTime) {
                 this.updateTime = updateTime;

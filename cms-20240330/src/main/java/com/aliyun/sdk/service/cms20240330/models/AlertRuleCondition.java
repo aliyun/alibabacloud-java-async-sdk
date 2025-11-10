@@ -545,6 +545,12 @@ public class AlertRuleCondition extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("aggregate")
         private String aggregate;
 
+        @com.aliyun.core.annotation.NameInMap("baseUnit")
+        private String baseUnit;
+
+        @com.aliyun.core.annotation.NameInMap("displayUnit")
+        private String displayUnit;
+
         @com.aliyun.core.annotation.NameInMap("oper")
         private String oper;
 
@@ -562,6 +568,8 @@ public class AlertRuleCondition extends TeaModel {
 
         private CompareList(Builder builder) {
             this.aggregate = builder.aggregate;
+            this.baseUnit = builder.baseUnit;
+            this.displayUnit = builder.displayUnit;
             this.oper = builder.oper;
             this.value = builder.value;
             this.valueLevelList = builder.valueLevelList;
@@ -582,6 +590,20 @@ public class AlertRuleCondition extends TeaModel {
          */
         public String getAggregate() {
             return this.aggregate;
+        }
+
+        /**
+         * @return baseUnit
+         */
+        public String getBaseUnit() {
+            return this.baseUnit;
+        }
+
+        /**
+         * @return displayUnit
+         */
+        public String getDisplayUnit() {
+            return this.displayUnit;
         }
 
         /**
@@ -621,6 +643,8 @@ public class AlertRuleCondition extends TeaModel {
 
         public static final class Builder {
             private String aggregate; 
+            private String baseUnit; 
+            private String displayUnit; 
             private String oper; 
             private Double value; 
             private java.util.List<ValueLevelList> valueLevelList; 
@@ -632,6 +656,8 @@ public class AlertRuleCondition extends TeaModel {
 
             private Builder(CompareList model) {
                 this.aggregate = model.aggregate;
+                this.baseUnit = model.baseUnit;
+                this.displayUnit = model.displayUnit;
                 this.oper = model.oper;
                 this.value = model.value;
                 this.valueLevelList = model.valueLevelList;
@@ -644,6 +670,22 @@ public class AlertRuleCondition extends TeaModel {
              */
             public Builder aggregate(String aggregate) {
                 this.aggregate = aggregate;
+                return this;
+            }
+
+            /**
+             * baseUnit.
+             */
+            public Builder baseUnit(String baseUnit) {
+                this.baseUnit = baseUnit;
+                return this;
+            }
+
+            /**
+             * displayUnit.
+             */
+            public Builder displayUnit(String displayUnit) {
+                this.displayUnit = displayUnit;
                 return this;
             }
 

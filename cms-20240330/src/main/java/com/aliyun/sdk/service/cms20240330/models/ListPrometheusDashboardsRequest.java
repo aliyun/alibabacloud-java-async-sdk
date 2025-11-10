@@ -88,6 +88,7 @@ public class ListPrometheusDashboardsRequest extends Request {
         } 
 
         /**
+         * <p>Instance ID</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -100,7 +101,10 @@ public class ListPrometheusDashboardsRequest extends Request {
         }
 
         /**
-         * aliyunLang.
+         * <p>Language environment, default is Chinese zh | en</p>
+         * 
+         * <strong>example:</strong>
+         * <p>zh</p>
          */
         public Builder aliyunLang(String aliyunLang) {
             this.putQueryParameter("aliyunLang", aliyunLang);
@@ -109,7 +113,10 @@ public class ListPrometheusDashboardsRequest extends Request {
         }
 
         /**
-         * resourceGroupId.
+         * <p>Resource Group ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>rg-acfm3gn5i6bigbi</p>
          */
         public Builder resourceGroupId(String resourceGroupId) {
             this.putQueryParameter("resourceGroupId", resourceGroupId);

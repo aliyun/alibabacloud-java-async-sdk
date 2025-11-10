@@ -54,7 +54,7 @@ public class UpdateIntegrationPolicyResponseBody extends TeaModel {
         } 
 
         /**
-         * <p>Id of the request</p>
+         * <p>ID of the request</p>
          * 
          * <strong>example:</strong>
          * <p>0CEC5375-C554-562B-A65F-9A629907C1F0</p>

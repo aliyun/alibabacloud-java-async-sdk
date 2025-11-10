@@ -60,6 +60,7 @@ public class DeleteWorkspaceRequest extends Request {
         } 
 
         /**
+         * <p>Workspace Name</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>

@@ -74,6 +74,7 @@ public class DeleteIntegrationPolicyRequest extends Request {
         } 
 
         /**
+         * <p>Policy environment ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -86,7 +87,11 @@ public class DeleteIntegrationPolicyRequest extends Request {
         }
 
         /**
-         * force.
+         * <p>Whether to forcibly delete the cloud-native all-in-one machine,
+         * default value: <code>false</code>.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>false</p>
          */
         public Builder force(Boolean force) {
             this.putQueryParameter("force", force);

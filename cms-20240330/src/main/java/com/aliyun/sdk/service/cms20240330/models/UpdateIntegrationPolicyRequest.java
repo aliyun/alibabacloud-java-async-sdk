@@ -116,6 +116,7 @@ public class UpdateIntegrationPolicyRequest extends Request {
         } 
 
         /**
+         * <p>Access center policy ID</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -128,7 +129,10 @@ public class UpdateIntegrationPolicyRequest extends Request {
         }
 
         /**
-         * feePackage.
+         * <p>Fee package type, CS_Pro/CS_Basic/empty.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>CS_Pro</p>
          */
         public Builder feePackage(String feePackage) {
             this.putBodyParameter("feePackage", feePackage);
@@ -137,7 +141,10 @@ public class UpdateIntegrationPolicyRequest extends Request {
         }
 
         /**
-         * policyName.
+         * <p>Rule name, minimum 3 characters, maximum 63 characters, must start with a letter.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>metrics-inner-manage</p>
          */
         public Builder policyName(String policyName) {
             this.putBodyParameter("policyName", policyName);
@@ -146,7 +153,10 @@ public class UpdateIntegrationPolicyRequest extends Request {
         }
 
         /**
-         * resourceGroupId.
+         * <p>Resource group ID of the instance.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>rg-aekzoiafjtr7zyq</p>
          */
         public Builder resourceGroupId(String resourceGroupId) {
             this.putBodyParameter("resourceGroupId", resourceGroupId);
@@ -155,7 +165,7 @@ public class UpdateIntegrationPolicyRequest extends Request {
         }
 
         /**
-         * tags.
+         * <p>Resource tags.</p>
          */
         public Builder tags(java.util.List<Tags> tags) {
             this.putBodyParameter("tags", tags);
@@ -223,7 +233,10 @@ public class UpdateIntegrationPolicyRequest extends Request {
             } 
 
             /**
-             * key.
+             * <p>Tag <code>key</code> value.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>algo_bhv_expose_in_airec_exposure</p>
              */
             public Builder key(String key) {
                 this.key = key;
@@ -231,7 +244,10 @@ public class UpdateIntegrationPolicyRequest extends Request {
             }
 
             /**
-             * value.
+             * <p>Tag <code>value</code> value.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>[{&quot;Id&quot;: &quot;kgqie6hm&quot;, &quot;Name&quot;: &quot;Sheet1&quot;}]</p>
              */
             public Builder value(String value) {
                 this.value = value;

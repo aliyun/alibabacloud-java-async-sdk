@@ -67,7 +67,7 @@ public class PutWorkspaceResponseBody extends TeaModel {
         } 
 
         /**
-         * <p>Id of the request</p>
+         * <p>ID of the request</p>
          * 
          * <strong>example:</strong>
          * <p>264C3E89-XXXX-XXXX-XXXX-CE9C2196C7DC</p>
@@ -78,7 +78,10 @@ public class PutWorkspaceResponseBody extends TeaModel {
         }
 
         /**
-         * workspaceName.
+         * <p>Name of the workspace.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>workspace-test-001</p>
          */
         public Builder workspaceName(String workspaceName) {
             this.workspaceName = workspaceName;

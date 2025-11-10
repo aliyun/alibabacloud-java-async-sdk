@@ -67,7 +67,10 @@ public class CreatePrometheusViewResponseBody extends TeaModel {
         } 
 
         /**
-         * prometheusViewId.
+         * <p>Prometheus view ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cd5237f7dbd574cf9bbd648ff9efb16cd</p>
          */
         public Builder prometheusViewId(String prometheusViewId) {
             this.prometheusViewId = prometheusViewId;
@@ -75,7 +78,7 @@ public class CreatePrometheusViewResponseBody extends TeaModel {
         }
 
         /**
-         * <p>Id of the request</p>
+         * <p>ID of the request</p>
          * 
          * <strong>example:</strong>
          * <p>8FDE2569-626B-5176-9844-28877A*****</p>

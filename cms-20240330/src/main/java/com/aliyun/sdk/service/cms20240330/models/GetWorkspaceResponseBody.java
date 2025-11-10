@@ -146,6 +146,7 @@ public class GetWorkspaceResponseBody extends TeaModel {
         } 
 
         /**
+         * <p>Creation Time</p>
          * <p>Use the UTC time format: yyyy-MM-ddTHH:mm:ss.SSSZ</p>
          * 
          * <strong>example:</strong>
@@ -157,7 +158,7 @@ public class GetWorkspaceResponseBody extends TeaModel {
         }
 
         /**
-         * <p>工作空间描述</p>
+         * <p>Workspace Description</p>
          * 
          * <strong>example:</strong>
          * <p>workspace test</p>
@@ -168,7 +169,10 @@ public class GetWorkspaceResponseBody extends TeaModel {
         }
 
         /**
-         * displayName.
+         * <p>Workspace Display Name</p>
+         * 
+         * <strong>example:</strong>
+         * <p>workspace-test</p>
          */
         public Builder displayName(String displayName) {
             this.displayName = displayName;
@@ -176,6 +180,7 @@ public class GetWorkspaceResponseBody extends TeaModel {
         }
 
         /**
+         * <p>Last Modified Time</p>
          * <p>Use the UTC time format: yyyy-MM-ddTHH:mm:ssZ</p>
          * 
          * <strong>example:</strong>
@@ -187,7 +192,7 @@ public class GetWorkspaceResponseBody extends TeaModel {
         }
 
         /**
-         * <p>地域ID</p>
+         * <p>Region ID</p>
          * 
          * <strong>example:</strong>
          * <p>cn-heyuan</p>
@@ -198,7 +203,10 @@ public class GetWorkspaceResponseBody extends TeaModel {
         }
 
         /**
-         * requestId.
+         * <p>Request ID</p>
+         * 
+         * <strong>example:</strong>
+         * <p>264C3E89-XXXX-XXXX-XXXX-CE9C2196C7DC</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -206,7 +214,7 @@ public class GetWorkspaceResponseBody extends TeaModel {
         }
 
         /**
-         * <p>工作空间绑定的日志服务项目名称</p>
+         * <p>Log Service Project Name</p>
          * 
          * <strong>example:</strong>
          * <p>sls-project-test-001</p>
@@ -217,7 +225,7 @@ public class GetWorkspaceResponseBody extends TeaModel {
         }
 
         /**
-         * <p>工作空间名称</p>
+         * <p>Workspace Name</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>

@@ -88,6 +88,7 @@ public class ListAddonReleasesRequest extends Request {
         } 
 
         /**
+         * <p>Policy environment ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -100,7 +101,10 @@ public class ListAddonReleasesRequest extends Request {
         }
 
         /**
-         * addonName.
+         * <p>Addon component name.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cs-gpu</p>
          */
         public Builder addonName(String addonName) {
             this.putQueryParameter("addonName", addonName);
@@ -109,7 +113,10 @@ public class ListAddonReleasesRequest extends Request {
         }
 
         /**
-         * parentAddonReleaseId.
+         * <p>Parent AddonReleaseId.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>policy-xxxxxxxxxxxxx</p>
          */
         public Builder parentAddonReleaseId(String parentAddonReleaseId) {
             this.putQueryParameter("parentAddonReleaseId", parentAddonReleaseId);

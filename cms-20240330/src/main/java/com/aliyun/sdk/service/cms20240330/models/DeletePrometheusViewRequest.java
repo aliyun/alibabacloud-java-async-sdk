@@ -60,6 +60,7 @@ public class DeletePrometheusViewRequest extends Request {
         } 
 
         /**
+         * <p>Prometheus view ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>

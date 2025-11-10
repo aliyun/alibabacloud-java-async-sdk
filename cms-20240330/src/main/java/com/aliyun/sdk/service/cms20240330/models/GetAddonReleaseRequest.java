@@ -75,6 +75,7 @@ public class GetAddonReleaseRequest extends Request {
         } 
 
         /**
+         * <p>The name of the AddonRelease.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -87,6 +88,7 @@ public class GetAddonReleaseRequest extends Request {
         }
 
         /**
+         * <p>Environment ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>

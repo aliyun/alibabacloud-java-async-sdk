@@ -102,6 +102,7 @@ public class ListIntegrationPolicyCustomScrapeJobRulesRequest extends Request {
         } 
 
         /**
+         * <p>Access center policy ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -114,7 +115,10 @@ public class ListIntegrationPolicyCustomScrapeJobRulesRequest extends Request {
         }
 
         /**
-         * addonReleaseName.
+         * <p>Addon Release name.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>release12345678</p>
          */
         public Builder addonReleaseName(String addonReleaseName) {
             this.putQueryParameter("addonReleaseName", addonReleaseName);
@@ -123,7 +127,10 @@ public class ListIntegrationPolicyCustomScrapeJobRulesRequest extends Request {
         }
 
         /**
-         * encryptYaml.
+         * <p>Whether to encrypt Yaml.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder encryptYaml(Boolean encryptYaml) {
             this.putQueryParameter("encryptYaml", encryptYaml);
@@ -132,7 +139,10 @@ public class ListIntegrationPolicyCustomScrapeJobRulesRequest extends Request {
         }
 
         /**
-         * namespace.
+         * <p>Namespace.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>arms-prom</p>
          */
         public Builder namespace(String namespace) {
             this.putQueryParameter("namespace", namespace);

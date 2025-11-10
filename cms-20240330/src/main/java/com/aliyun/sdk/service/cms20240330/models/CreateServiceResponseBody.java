@@ -80,7 +80,10 @@ public class CreateServiceResponseBody extends TeaModel {
         } 
 
         /**
-         * pid.
+         * <p>Historical compatible ARMS application ID</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cwzxvuc6uo@d60088ad4797d26</p>
          */
         public Builder pid(String pid) {
             this.pid = pid;
@@ -88,7 +91,10 @@ public class CreateServiceResponseBody extends TeaModel {
         }
 
         /**
-         * requestId.
+         * <p>Request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>3A2FA9E9-9CF1-5CB1-A808-52828F14310D</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -96,7 +102,10 @@ public class CreateServiceResponseBody extends TeaModel {
         }
 
         /**
-         * serviceId.
+         * <p>Service ID</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cwzxvuc6uo@4bc6b15ad81f166174ffb</p>
          */
         public Builder serviceId(String serviceId) {
             this.serviceId = serviceId;

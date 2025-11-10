@@ -54,7 +54,10 @@ public class UpsertUmodelDataResponseBody extends TeaModel {
         } 
 
         /**
-         * requestId.
+         * <p>Request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>0CEC5375-C554-562B-A65F-9A629907C1F0</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;

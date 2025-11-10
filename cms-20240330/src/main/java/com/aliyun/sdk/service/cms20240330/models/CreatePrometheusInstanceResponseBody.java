@@ -67,7 +67,10 @@ public class CreatePrometheusInstanceResponseBody extends TeaModel {
         } 
 
         /**
-         * prometheusInstanceId.
+         * <p>Instance ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>rw-abc123</p>
          */
         public Builder prometheusInstanceId(String prometheusInstanceId) {
             this.prometheusInstanceId = prometheusInstanceId;
@@ -75,7 +78,7 @@ public class CreatePrometheusInstanceResponseBody extends TeaModel {
         }
 
         /**
-         * <p>Id of the request</p>
+         * <p>ID of the request.</p>
          * 
          * <strong>example:</strong>
          * <p>264C3E89-BE6E-5F82-A484-CE9C2196C7DC</p>

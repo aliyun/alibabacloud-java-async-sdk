@@ -103,6 +103,7 @@ public class GetUmodelDataRequest extends Request {
         } 
 
         /**
+         * <p>Workspace name</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -124,7 +125,16 @@ public class GetUmodelDataRequest extends Request {
         }
 
         /**
-         * content.
+         * <p>Query conditions</p>
+         * 
+         * <strong>example:</strong>
+         * <p>{
+         *     &quot;filter&quot;: {
+         *         &quot;domains&quot;: []
+         *     },
+         *     &quot;offset&quot;: 0,
+         *     &quot;size&quot;: 100000
+         * }</p>
          */
         public Builder content(Object content) {
             this.putBodyParameter("content", content);
@@ -133,6 +143,7 @@ public class GetUmodelDataRequest extends Request {
         }
 
         /**
+         * <p>Method</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>

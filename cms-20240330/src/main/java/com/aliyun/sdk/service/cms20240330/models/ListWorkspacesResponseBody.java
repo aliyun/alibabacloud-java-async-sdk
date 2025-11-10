@@ -106,7 +106,14 @@ public class ListWorkspacesResponseBody extends TeaModel {
         } 
 
         /**
-         * maxResults.
+         * <p>Page size
+         * Default value:
+         *     50
+         * Maximum value:
+         *     50</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10</p>
          */
         public Builder maxResults(Integer maxResults) {
             this.maxResults = maxResults;
@@ -114,7 +121,10 @@ public class ListWorkspacesResponseBody extends TeaModel {
         }
 
         /**
-         * nextToken.
+         * <p>Pagination Token</p>
+         * 
+         * <strong>example:</strong>
+         * <p>xxxxxxxxxx</p>
          */
         public Builder nextToken(String nextToken) {
             this.nextToken = nextToken;
@@ -122,7 +132,10 @@ public class ListWorkspacesResponseBody extends TeaModel {
         }
 
         /**
-         * requestId.
+         * <p>Request ID</p>
+         * 
+         * <strong>example:</strong>
+         * <p>264C3E89-XXXX-XXXX-XXXX-CE9C2196C7DC</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -130,7 +143,10 @@ public class ListWorkspacesResponseBody extends TeaModel {
         }
 
         /**
-         * total.
+         * <p>Total count</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder total(Integer total) {
             this.total = total;
@@ -138,7 +154,7 @@ public class ListWorkspacesResponseBody extends TeaModel {
         }
 
         /**
-         * workspaces.
+         * <p>List of workspaces</p>
          */
         public Builder workspaces(java.util.List<Workspaces> workspaces) {
             this.workspaces = workspaces;
@@ -270,6 +286,7 @@ public class ListWorkspacesResponseBody extends TeaModel {
             } 
 
             /**
+             * <p>Creation time</p>
              * <p>Use the UTC time format: yyyy-MM-ddTHH:mm:ssZ</p>
              * 
              * <strong>example:</strong>
@@ -281,7 +298,7 @@ public class ListWorkspacesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>工作空间描述</p>
+             * <p>Workspace description</p>
              * 
              * <strong>example:</strong>
              * <p>workspace test</p>
@@ -292,7 +309,10 @@ public class ListWorkspacesResponseBody extends TeaModel {
             }
 
             /**
-             * displayName.
+             * <p>Workspace display name</p>
+             * 
+             * <strong>example:</strong>
+             * <p>workspace-test</p>
              */
             public Builder displayName(String displayName) {
                 this.displayName = displayName;
@@ -300,6 +320,7 @@ public class ListWorkspacesResponseBody extends TeaModel {
             }
 
             /**
+             * <p>Last modified time</p>
              * <p>Use the UTC time format: yyyy-MM-ddTHH:mm:ssZ</p>
              * 
              * <strong>example:</strong>
@@ -311,7 +332,7 @@ public class ListWorkspacesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>地域ID</p>
+             * <p>Region ID</p>
              * 
              * <strong>example:</strong>
              * <p>cn-heyuan</p>
@@ -322,7 +343,7 @@ public class ListWorkspacesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>工作空间绑定的日志服务项目名称</p>
+             * <p>Log Service project name</p>
              * 
              * <strong>example:</strong>
              * <p>sls-project-test-001</p>
@@ -333,7 +354,7 @@ public class ListWorkspacesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>工作空间名称</p>
+             * <p>Workspace name</p>
              * <p>This parameter is required.</p>
              * 
              * <strong>example:</strong>

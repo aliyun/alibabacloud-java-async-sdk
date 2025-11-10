@@ -108,7 +108,10 @@ public class ListPrometheusViewsResponseBody extends TeaModel {
         } 
 
         /**
-         * maxResults.
+         * <p>Maximum number of records to return.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10</p>
          */
         public Builder maxResults(Integer maxResults) {
             this.maxResults = maxResults;
@@ -116,7 +119,10 @@ public class ListPrometheusViewsResponseBody extends TeaModel {
         }
 
         /**
-         * nextToken.
+         * <p>Token for the next query.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2-ba4d-4b9f-aa24-dcb067a30f1c</p>
          */
         public Builder nextToken(String nextToken) {
             this.nextToken = nextToken;
@@ -124,7 +130,7 @@ public class ListPrometheusViewsResponseBody extends TeaModel {
         }
 
         /**
-         * prometheusViews.
+         * <p>List of Prometheus view instances.</p>
          */
         public Builder prometheusViews(java.util.List<PrometheusViews> prometheusViews) {
             this.prometheusViews = prometheusViews;
@@ -132,7 +138,7 @@ public class ListPrometheusViewsResponseBody extends TeaModel {
         }
 
         /**
-         * <p>Id of the request</p>
+         * <p>ID of the request</p>
          * 
          * <strong>example:</strong>
          * <p>0CEC5375-C554-562B-A65F-9A629907C1F0</p>
@@ -143,7 +149,10 @@ public class ListPrometheusViewsResponseBody extends TeaModel {
         }
 
         /**
-         * totalCount.
+         * <p>Total number of instances</p>
+         * 
+         * <strong>example:</strong>
+         * <p>66</p>
          */
         public Builder totalCount(Integer totalCount) {
             this.totalCount = totalCount;
@@ -209,7 +218,10 @@ public class ListPrometheusViewsResponseBody extends TeaModel {
             } 
 
             /**
-             * key.
+             * <p>Tag key</p>
+             * 
+             * <strong>example:</strong>
+             * <p>key1</p>
              */
             public Builder key(String key) {
                 this.key = key;
@@ -217,7 +229,10 @@ public class ListPrometheusViewsResponseBody extends TeaModel {
             }
 
             /**
-             * value.
+             * <p>Match value.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>value1</p>
              */
             public Builder value(String value) {
                 this.value = value;
@@ -453,7 +468,10 @@ public class ListPrometheusViewsResponseBody extends TeaModel {
             } 
 
             /**
-             * createTime.
+             * <p>Instance creation time, using UTC+0 time, formatted as yyyy-MM-ddTHH:mmZ</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2025-07-12T02:18:36Z</p>
              */
             public Builder createTime(String createTime) {
                 this.createTime = createTime;
@@ -461,7 +479,12 @@ public class ListPrometheusViewsResponseBody extends TeaModel {
             }
 
             /**
-             * instanceType.
+             * <p>Instance type:
+             * prom-view: new version aggregated view
+             * global-view: old version aggregated view</p>
+             * 
+             * <strong>example:</strong>
+             * <p>prom-view</p>
              */
             public Builder instanceType(String instanceType) {
                 this.instanceType = instanceType;
@@ -469,7 +492,10 @@ public class ListPrometheusViewsResponseBody extends TeaModel {
             }
 
             /**
-             * paymentType.
+             * <p>Payment type. Currently, the fixed value is FREE (free).</p>
+             * 
+             * <strong>example:</strong>
+             * <p>FREE</p>
              */
             public Builder paymentType(String paymentType) {
                 this.paymentType = paymentType;
@@ -477,7 +503,10 @@ public class ListPrometheusViewsResponseBody extends TeaModel {
             }
 
             /**
-             * product.
+             * <p>Product that the prom instance belongs to (arms or cms).</p>
+             * 
+             * <strong>example:</strong>
+             * <p>cms</p>
              */
             public Builder product(String product) {
                 this.product = product;
@@ -485,7 +514,10 @@ public class ListPrometheusViewsResponseBody extends TeaModel {
             }
 
             /**
-             * prometheusInstanceCount.
+             * <p>Number of Prometheus instances in the view.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2</p>
              */
             public Builder prometheusInstanceCount(Integer prometheusInstanceCount) {
                 this.prometheusInstanceCount = prometheusInstanceCount;
@@ -493,7 +525,10 @@ public class ListPrometheusViewsResponseBody extends TeaModel {
             }
 
             /**
-             * prometheusViewId.
+             * <p>Prometheus view ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>view-xxx</p>
              */
             public Builder prometheusViewId(String prometheusViewId) {
                 this.prometheusViewId = prometheusViewId;
@@ -501,7 +536,10 @@ public class ListPrometheusViewsResponseBody extends TeaModel {
             }
 
             /**
-             * prometheusViewName.
+             * <p>Prometheus view name.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>view1</p>
              */
             public Builder prometheusViewName(String prometheusViewName) {
                 this.prometheusViewName = prometheusViewName;
@@ -509,7 +547,10 @@ public class ListPrometheusViewsResponseBody extends TeaModel {
             }
 
             /**
-             * regionId.
+             * <p>Region ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>cn-zhangjiakou</p>
              */
             public Builder regionId(String regionId) {
                 this.regionId = regionId;
@@ -517,7 +558,10 @@ public class ListPrometheusViewsResponseBody extends TeaModel {
             }
 
             /**
-             * resourceGroupId.
+             * <p>Resource group ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>rg-acfm3gn5i6bigbi</p>
              */
             public Builder resourceGroupId(String resourceGroupId) {
                 this.resourceGroupId = resourceGroupId;
@@ -525,7 +569,10 @@ public class ListPrometheusViewsResponseBody extends TeaModel {
             }
 
             /**
-             * resourceType.
+             * <p>Fixed value: PrometheusView.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>PrometheusView</p>
              */
             public Builder resourceType(String resourceType) {
                 this.resourceType = resourceType;
@@ -533,7 +580,10 @@ public class ListPrometheusViewsResponseBody extends TeaModel {
             }
 
             /**
-             * status.
+             * <p>Backend data storage status.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Running</p>
              */
             public Builder status(String status) {
                 this.status = status;
@@ -541,7 +591,7 @@ public class ListPrometheusViewsResponseBody extends TeaModel {
             }
 
             /**
-             * tags.
+             * <p>Tag values.</p>
              */
             public Builder tags(java.util.List<Tags> tags) {
                 this.tags = tags;
@@ -549,7 +599,10 @@ public class ListPrometheusViewsResponseBody extends TeaModel {
             }
 
             /**
-             * userId.
+             * <p>User ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>123xxx</p>
              */
             public Builder userId(String userId) {
                 this.userId = userId;
@@ -557,7 +610,10 @@ public class ListPrometheusViewsResponseBody extends TeaModel {
             }
 
             /**
-             * version.
+             * <p>Version.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>V2</p>
              */
             public Builder version(String version) {
                 this.version = version;
@@ -565,7 +621,10 @@ public class ListPrometheusViewsResponseBody extends TeaModel {
             }
 
             /**
-             * workspace.
+             * <p>Workspace that the prom instance belongs to.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>default-cms-1490404746278495-cn-hangzhou</p>
              */
             public Builder workspace(String workspace) {
                 this.workspace = workspace;

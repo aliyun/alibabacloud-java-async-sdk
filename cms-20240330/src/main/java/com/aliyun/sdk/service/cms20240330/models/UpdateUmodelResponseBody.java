@@ -67,7 +67,10 @@ public class UpdateUmodelResponseBody extends TeaModel {
         } 
 
         /**
-         * requestId.
+         * <p>Request ID</p>
+         * 
+         * <strong>example:</strong>
+         * <p>234324-123-123-123-23423</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -75,7 +78,10 @@ public class UpdateUmodelResponseBody extends TeaModel {
         }
 
         /**
-         * workspace.
+         * <p>Workspace name</p>
+         * 
+         * <strong>example:</strong>
+         * <p>workspace-test</p>
          */
         public Builder workspace(String workspace) {
             this.workspace = workspace;

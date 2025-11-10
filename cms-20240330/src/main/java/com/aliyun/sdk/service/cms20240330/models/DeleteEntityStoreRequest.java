@@ -60,6 +60,7 @@ public class DeleteEntityStoreRequest extends Request {
         } 
 
         /**
+         * <p>workspace name</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>

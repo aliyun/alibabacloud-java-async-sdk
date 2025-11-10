@@ -67,7 +67,7 @@ public class CreateAddonReleaseResponseBody extends TeaModel {
         } 
 
         /**
-         * release.
+         * <p>Accessed component information.</p>
          */
         public Builder release(Release release) {
             this.release = release;
@@ -75,7 +75,10 @@ public class CreateAddonReleaseResponseBody extends TeaModel {
         }
 
         /**
-         * requestId.
+         * <p>Request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>0CEC5375-C554-562B-A65F-9A629907C1F0</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -180,7 +183,10 @@ public class CreateAddonReleaseResponseBody extends TeaModel {
             } 
 
             /**
-             * firstTransitionTime.
+             * <p>First transition time.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2024-11-04T16:10:22+08:00</p>
              */
             public Builder firstTransitionTime(String firstTransitionTime) {
                 this.firstTransitionTime = firstTransitionTime;
@@ -188,7 +194,10 @@ public class CreateAddonReleaseResponseBody extends TeaModel {
             }
 
             /**
-             * lastTransitionTime.
+             * <p>Last transition time.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2024-11-04T16:10:22+08:00</p>
              */
             public Builder lastTransitionTime(String lastTransitionTime) {
                 this.lastTransitionTime = lastTransitionTime;
@@ -196,7 +205,10 @@ public class CreateAddonReleaseResponseBody extends TeaModel {
             }
 
             /**
-             * message.
+             * <p>Detailed information.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>The addon loaded successfully</p>
              */
             public Builder message(String message) {
                 this.message = message;
@@ -204,7 +216,10 @@ public class CreateAddonReleaseResponseBody extends TeaModel {
             }
 
             /**
-             * status.
+             * <p>Phase status.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>{&quot;phase&quot;: &quot;Created&quot;, &quot;executionDetails&quot;: [], &quot;invocations&quot;: [], &quot;latestExecError&quot;: {&quot;message&quot;: &quot;&quot;, &quot;code&quot;: &quot;&quot;, &quot;requestId&quot;: &quot;&quot;, &quot;extraInfo&quot;: &quot;&quot;, &quot;title&quot;: &quot;&quot;}}</p>
              */
             public Builder status(String status) {
                 this.status = status;
@@ -212,7 +227,10 @@ public class CreateAddonReleaseResponseBody extends TeaModel {
             }
 
             /**
-             * type.
+             * <p>Phase type.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Loaded</p>
              */
             public Builder type(String type) {
                 this.type = type;
@@ -578,7 +596,10 @@ public class CreateAddonReleaseResponseBody extends TeaModel {
             } 
 
             /**
-             * addonName.
+             * <p>The Addon name of the component being monitored.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>cs-gpu</p>
              */
             public Builder addonName(String addonName) {
                 this.addonName = addonName;
@@ -586,7 +607,10 @@ public class CreateAddonReleaseResponseBody extends TeaModel {
             }
 
             /**
-             * alertRuleCount.
+             * <p>Number of alert groups.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>6</p>
              */
             public Builder alertRuleCount(Long alertRuleCount) {
                 this.alertRuleCount = alertRuleCount;
@@ -594,7 +618,7 @@ public class CreateAddonReleaseResponseBody extends TeaModel {
             }
 
             /**
-             * conditions.
+             * <p>Component installation phase information.</p>
              */
             public Builder conditions(java.util.List<Conditions> conditions) {
                 this.conditions = conditions;
@@ -602,7 +626,10 @@ public class CreateAddonReleaseResponseBody extends TeaModel {
             }
 
             /**
-             * config.
+             * <p>Component configuration.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>{&quot;install&quot;:{&quot;mode&quot;:&quot;auto-install&quot;,&quot;listenPort&quot;:&quot;9400&quot;},&quot;discoverMode&quot;:&quot;instances&quot;,&quot;discover&quot;:{&quot;instances&quot;:&quot;worker-k8s-for-cs-c126d87c76218487e83ab322017f11b44&quot;},&quot;scrapeInterval&quot;:&quot;15&quot;,&quot;enableSecuritecs-nodeyGroupInjection&quot;:&quot;true&quot;,&quot;metricTags&quot;:&quot;&quot;}</p>
              */
             public Builder config(String config) {
                 this.config = config;
@@ -610,7 +637,10 @@ public class CreateAddonReleaseResponseBody extends TeaModel {
             }
 
             /**
-             * createTime.
+             * <p>Connection time.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2024-11-05T15:21:30+08:00</p>
              */
             public Builder createTime(String createTime) {
                 this.createTime = createTime;
@@ -618,7 +648,10 @@ public class CreateAddonReleaseResponseBody extends TeaModel {
             }
 
             /**
-             * dashboardCount.
+             * <p>Number of dashboards.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>3</p>
              */
             public Builder dashboardCount(Long dashboardCount) {
                 this.dashboardCount = dashboardCount;
@@ -626,7 +659,7 @@ public class CreateAddonReleaseResponseBody extends TeaModel {
             }
 
             /**
-             * entityRules.
+             * <p>Entity details.</p>
              */
             public Builder entityRules(EntityGroupBase entityRules) {
                 this.entityRules = entityRules;
@@ -634,7 +667,10 @@ public class CreateAddonReleaseResponseBody extends TeaModel {
             }
 
             /**
-             * envType.
+             * <p>Environment type.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>CS</p>
              */
             public Builder envType(String envType) {
                 this.envType = envType;
@@ -642,7 +678,10 @@ public class CreateAddonReleaseResponseBody extends TeaModel {
             }
 
             /**
-             * environmentId.
+             * <p>Environment ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>policy-xxxxxxxxxxx</p>
              */
             public Builder environmentId(String environmentId) {
                 this.environmentId = environmentId;
@@ -650,7 +689,10 @@ public class CreateAddonReleaseResponseBody extends TeaModel {
             }
 
             /**
-             * exporterCount.
+             * <p>Number of plugins.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2</p>
              */
             public Builder exporterCount(Long exporterCount) {
                 this.exporterCount = exporterCount;
@@ -658,7 +700,10 @@ public class CreateAddonReleaseResponseBody extends TeaModel {
             }
 
             /**
-             * haveConfig.
+             * <p>Whether it has configuration.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>true</p>
              */
             public Builder haveConfig(Boolean haveConfig) {
                 this.haveConfig = haveConfig;
@@ -666,7 +711,10 @@ public class CreateAddonReleaseResponseBody extends TeaModel {
             }
 
             /**
-             * installUserId.
+             * <p>ID of the user who installed it.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1654218965xxxxxx</p>
              */
             public Builder installUserId(String installUserId) {
                 this.installUserId = installUserId;
@@ -674,7 +722,10 @@ public class CreateAddonReleaseResponseBody extends TeaModel {
             }
 
             /**
-             * language.
+             * <p>Language.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>zh</p>
              */
             public Builder language(String language) {
                 this.language = language;
@@ -682,7 +733,10 @@ public class CreateAddonReleaseResponseBody extends TeaModel {
             }
 
             /**
-             * managed.
+             * <p>Whether it is a managed component.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>true</p>
              */
             public Builder managed(Boolean managed) {
                 this.managed = managed;
@@ -690,7 +744,10 @@ public class CreateAddonReleaseResponseBody extends TeaModel {
             }
 
             /**
-             * parentAddonReleaseId.
+             * <p>Parent AddonReleaseId.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>policy-xxxxxxxxxxx</p>
              */
             public Builder parentAddonReleaseId(String parentAddonReleaseId) {
                 this.parentAddonReleaseId = parentAddonReleaseId;
@@ -698,7 +755,10 @@ public class CreateAddonReleaseResponseBody extends TeaModel {
             }
 
             /**
-             * policyId.
+             * <p>Policy environment ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>policy-xxxxxxxxxx</p>
              */
             public Builder policyId(String policyId) {
                 this.policyId = policyId;
@@ -706,7 +766,10 @@ public class CreateAddonReleaseResponseBody extends TeaModel {
             }
 
             /**
-             * regionId.
+             * <p>Region ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>cn-hangzhou</p>
              */
             public Builder regionId(String regionId) {
                 this.regionId = regionId;
@@ -714,7 +777,10 @@ public class CreateAddonReleaseResponseBody extends TeaModel {
             }
 
             /**
-             * releaseId.
+             * <p>ReleaseID after installation.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2e898e60-5e6a-46d1-a994-xxxxxxxxxx</p>
              */
             public Builder releaseId(String releaseId) {
                 this.releaseId = releaseId;
@@ -722,7 +788,10 @@ public class CreateAddonReleaseResponseBody extends TeaModel {
             }
 
             /**
-             * releaseName.
+             * <p>Name of the Release.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>test-gpu-integration-name</p>
              */
             public Builder releaseName(String releaseName) {
                 this.releaseName = releaseName;
@@ -730,7 +799,10 @@ public class CreateAddonReleaseResponseBody extends TeaModel {
             }
 
             /**
-             * scene.
+             * <p>Component scenario.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder scene(String scene) {
                 this.scene = scene;
@@ -738,7 +810,10 @@ public class CreateAddonReleaseResponseBody extends TeaModel {
             }
 
             /**
-             * status.
+             * <p>Component status.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>200</p>
              */
             public Builder status(String status) {
                 this.status = status;
@@ -746,7 +821,10 @@ public class CreateAddonReleaseResponseBody extends TeaModel {
             }
 
             /**
-             * updateTime.
+             * <p>Update time.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2024-09-13T02:21:02Z</p>
              */
             public Builder updateTime(String updateTime) {
                 this.updateTime = updateTime;
@@ -754,7 +832,10 @@ public class CreateAddonReleaseResponseBody extends TeaModel {
             }
 
             /**
-             * userId.
+             * <p>ID of the owner user.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>165421896xxxxxx</p>
              */
             public Builder userId(String userId) {
                 this.userId = userId;
@@ -762,7 +843,10 @@ public class CreateAddonReleaseResponseBody extends TeaModel {
             }
 
             /**
-             * version.
+             * <p>Component version.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1.0.0</p>
              */
             public Builder version(String version) {
                 this.version = version;
@@ -770,7 +854,10 @@ public class CreateAddonReleaseResponseBody extends TeaModel {
             }
 
             /**
-             * workspace.
+             * <p>Workspace.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>default</p>
              */
             public Builder workspace(String workspace) {
                 this.workspace = workspace;

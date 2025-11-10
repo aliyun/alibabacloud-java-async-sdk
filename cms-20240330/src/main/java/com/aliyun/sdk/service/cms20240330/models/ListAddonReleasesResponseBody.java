@@ -80,7 +80,7 @@ public class ListAddonReleasesResponseBody extends TeaModel {
         } 
 
         /**
-         * releases.
+         * <p>Set of add-on component information.</p>
          */
         public Builder releases(java.util.List<Releases> releases) {
             this.releases = releases;
@@ -88,7 +88,10 @@ public class ListAddonReleasesResponseBody extends TeaModel {
         }
 
         /**
-         * requestId.
+         * <p>Request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>CD8BA7D6-995D-578D-9941-78B0FECD14B5</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -96,7 +99,10 @@ public class ListAddonReleasesResponseBody extends TeaModel {
         }
 
         /**
-         * total.
+         * <p>Number of components.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder total(Long total) {
             this.total = total;
@@ -201,7 +207,10 @@ public class ListAddonReleasesResponseBody extends TeaModel {
             } 
 
             /**
-             * firstTransitionTime.
+             * <p>First transition time.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2024-11-04T16:10:22+08:00</p>
              */
             public Builder firstTransitionTime(String firstTransitionTime) {
                 this.firstTransitionTime = firstTransitionTime;
@@ -209,7 +218,10 @@ public class ListAddonReleasesResponseBody extends TeaModel {
             }
 
             /**
-             * lastTransitionTime.
+             * <p>Last transition time.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2024-11-04T16:10:22+08:00</p>
              */
             public Builder lastTransitionTime(String lastTransitionTime) {
                 this.lastTransitionTime = lastTransitionTime;
@@ -217,7 +229,10 @@ public class ListAddonReleasesResponseBody extends TeaModel {
             }
 
             /**
-             * message.
+             * <p>Details.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>The addon loaded successfully</p>
              */
             public Builder message(String message) {
                 this.message = message;
@@ -225,7 +240,10 @@ public class ListAddonReleasesResponseBody extends TeaModel {
             }
 
             /**
-             * status.
+             * <p>Phase status.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>True</p>
              */
             public Builder status(String status) {
                 this.status = status;
@@ -233,7 +251,10 @@ public class ListAddonReleasesResponseBody extends TeaModel {
             }
 
             /**
-             * type.
+             * <p>Phase type.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Loaded</p>
              */
             public Builder type(String type) {
                 this.type = type;
@@ -300,7 +321,10 @@ public class ListAddonReleasesResponseBody extends TeaModel {
             } 
 
             /**
-             * ready.
+             * <p>Number of ready sub-Releases.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2</p>
              */
             public Builder ready(Integer ready) {
                 this.ready = ready;
@@ -308,7 +332,10 @@ public class ListAddonReleasesResponseBody extends TeaModel {
             }
 
             /**
-             * total.
+             * <p>Number of sub-Releases.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>3</p>
              */
             public Builder total(Integer total) {
                 this.total = total;
@@ -713,7 +740,10 @@ public class ListAddonReleasesResponseBody extends TeaModel {
             } 
 
             /**
-             * addonName.
+             * <p>Addon name.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>cs-gpu</p>
              */
             public Builder addonName(String addonName) {
                 this.addonName = addonName;
@@ -721,7 +751,10 @@ public class ListAddonReleasesResponseBody extends TeaModel {
             }
 
             /**
-             * alertRuleCount.
+             * <p>Number of alert rules.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>6</p>
              */
             public Builder alertRuleCount(Long alertRuleCount) {
                 this.alertRuleCount = alertRuleCount;
@@ -729,7 +762,10 @@ public class ListAddonReleasesResponseBody extends TeaModel {
             }
 
             /**
-             * apiVersion.
+             * <p>API version.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2023-03-30</p>
              */
             public Builder apiVersion(String apiVersion) {
                 this.apiVersion = apiVersion;
@@ -737,7 +773,7 @@ public class ListAddonReleasesResponseBody extends TeaModel {
             }
 
             /**
-             * conditions.
+             * <p>Installation phase information.</p>
              */
             public Builder conditions(java.util.List<Conditions> conditions) {
                 this.conditions = conditions;
@@ -745,7 +781,10 @@ public class ListAddonReleasesResponseBody extends TeaModel {
             }
 
             /**
-             * config.
+             * <p>Component configuration information.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>{&quot;install&quot;:{&quot;mode&quot;:&quot;auto-install&quot;,&quot;listenPort&quot;:&quot;9400&quot;},&quot;discoverMode&quot;:&quot;instances&quot;,&quot;discover&quot;:{&quot;instances&quot;:&quot;worker-k8s-for-cs-c126d87c76218487e83ab322017f11b44&quot;},&quot;scrapeInterval&quot;:&quot;15&quot;,&quot;enableSecuritecs-nodeyGroupInjection&quot;:&quot;true&quot;,&quot;metricTags&quot;:&quot;&quot;}</p>
              */
             public Builder config(String config) {
                 this.config = config;
@@ -753,7 +792,10 @@ public class ListAddonReleasesResponseBody extends TeaModel {
             }
 
             /**
-             * createTime.
+             * <p>Access time.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2024-11-04T16:10:12+08:00</p>
              */
             public Builder createTime(String createTime) {
                 this.createTime = createTime;
@@ -761,7 +803,10 @@ public class ListAddonReleasesResponseBody extends TeaModel {
             }
 
             /**
-             * dashboardCount.
+             * <p>Number of dashboards.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>3</p>
              */
             public Builder dashboardCount(Long dashboardCount) {
                 this.dashboardCount = dashboardCount;
@@ -769,7 +814,7 @@ public class ListAddonReleasesResponseBody extends TeaModel {
             }
 
             /**
-             * entityRules.
+             * <p>Entity details.</p>
              */
             public Builder entityRules(EntityGroupBase entityRules) {
                 this.entityRules = entityRules;
@@ -777,7 +822,10 @@ public class ListAddonReleasesResponseBody extends TeaModel {
             }
 
             /**
-             * envType.
+             * <p>Environment type.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>CS</p>
              */
             public Builder envType(String envType) {
                 this.envType = envType;
@@ -785,7 +833,10 @@ public class ListAddonReleasesResponseBody extends TeaModel {
             }
 
             /**
-             * environmentId.
+             * <p>Environment ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>policy-xxxxxxxxxxxx</p>
              */
             public Builder environmentId(String environmentId) {
                 this.environmentId = environmentId;
@@ -793,7 +844,10 @@ public class ListAddonReleasesResponseBody extends TeaModel {
             }
 
             /**
-             * exporterCount.
+             * <p>Number of plugins.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2</p>
              */
             public Builder exporterCount(Long exporterCount) {
                 this.exporterCount = exporterCount;
@@ -801,7 +855,10 @@ public class ListAddonReleasesResponseBody extends TeaModel {
             }
 
             /**
-             * haveConfig.
+             * <p>Whether there is a configuration.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>true</p>
              */
             public Builder haveConfig(Boolean haveConfig) {
                 this.haveConfig = haveConfig;
@@ -809,7 +866,10 @@ public class ListAddonReleasesResponseBody extends TeaModel {
             }
 
             /**
-             * installUserId.
+             * <p>Access user ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>175xxxxxxxxx</p>
              */
             public Builder installUserId(String installUserId) {
                 this.installUserId = installUserId;
@@ -817,7 +877,10 @@ public class ListAddonReleasesResponseBody extends TeaModel {
             }
 
             /**
-             * language.
+             * <p>Language.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>zh</p>
              */
             public Builder language(String language) {
                 this.language = language;
@@ -825,7 +888,10 @@ public class ListAddonReleasesResponseBody extends TeaModel {
             }
 
             /**
-             * managed.
+             * <p>Whether it is a managed component.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>true</p>
              */
             public Builder managed(Boolean managed) {
                 this.managed = managed;
@@ -833,7 +899,10 @@ public class ListAddonReleasesResponseBody extends TeaModel {
             }
 
             /**
-             * nextVersion.
+             * <p>Starting version number for the remaining list.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>None</p>
              */
             public Builder nextVersion(String nextVersion) {
                 this.nextVersion = nextVersion;
@@ -841,7 +910,10 @@ public class ListAddonReleasesResponseBody extends TeaModel {
             }
 
             /**
-             * parentAddonReleaseId.
+             * <p>Parent AddonReleaseId.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>policy-xxxxxxxxxxxxxx</p>
              */
             public Builder parentAddonReleaseId(String parentAddonReleaseId) {
                 this.parentAddonReleaseId = parentAddonReleaseId;
@@ -849,7 +921,10 @@ public class ListAddonReleasesResponseBody extends TeaModel {
             }
 
             /**
-             * policyId.
+             * <p>Policy ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>policy-xxxxxxxxxxxxxx</p>
              */
             public Builder policyId(String policyId) {
                 this.policyId = policyId;
@@ -857,7 +932,10 @@ public class ListAddonReleasesResponseBody extends TeaModel {
             }
 
             /**
-             * regionId.
+             * <p>Region ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>cn-hangzhou</p>
              */
             public Builder regionId(String regionId) {
                 this.regionId = regionId;
@@ -865,7 +943,7 @@ public class ListAddonReleasesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>Release ID。</p>
+             * <p>Release ID.</p>
              * 
              * <strong>example:</strong>
              * <p>7339d808-66f9-4d40-83fa-xxxxxxxxxxx</p>
@@ -876,7 +954,10 @@ public class ListAddonReleasesResponseBody extends TeaModel {
             }
 
             /**
-             * releaseName.
+             * <p>Release name.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>test-gpu-integration-name</p>
              */
             public Builder releaseName(String releaseName) {
                 this.releaseName = releaseName;
@@ -884,7 +965,10 @@ public class ListAddonReleasesResponseBody extends TeaModel {
             }
 
             /**
-             * scene.
+             * <p>Component scenario.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>container</p>
              */
             public Builder scene(String scene) {
                 this.scene = scene;
@@ -892,7 +976,10 @@ public class ListAddonReleasesResponseBody extends TeaModel {
             }
 
             /**
-             * status.
+             * <p>Status.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>running</p>
              */
             public Builder status(String status) {
                 this.status = status;
@@ -900,7 +987,7 @@ public class ListAddonReleasesResponseBody extends TeaModel {
             }
 
             /**
-             * subAddonRelease.
+             * <p>Sub-AddonRelease statistics.</p>
              */
             public Builder subAddonRelease(SubAddonRelease subAddonRelease) {
                 this.subAddonRelease = subAddonRelease;
@@ -908,7 +995,10 @@ public class ListAddonReleasesResponseBody extends TeaModel {
             }
 
             /**
-             * updateTime.
+             * <p>Update time.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2024-11-04T16:10:23+08:00</p>
              */
             public Builder updateTime(String updateTime) {
                 this.updateTime = updateTime;
@@ -916,7 +1006,10 @@ public class ListAddonReleasesResponseBody extends TeaModel {
             }
 
             /**
-             * userId.
+             * <p>Owner user ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>175xxxxxxxxxxxxx</p>
              */
             public Builder userId(String userId) {
                 this.userId = userId;
@@ -924,7 +1017,10 @@ public class ListAddonReleasesResponseBody extends TeaModel {
             }
 
             /**
-             * version.
+             * <p>Component version.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>0.0.2</p>
              */
             public Builder version(String version) {
                 this.version = version;
@@ -932,7 +1028,10 @@ public class ListAddonReleasesResponseBody extends TeaModel {
             }
 
             /**
-             * workspace.
+             * <p>Workspace.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>default</p>
              */
             public Builder workspace(String workspace) {
                 this.workspace = workspace;

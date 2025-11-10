@@ -67,7 +67,7 @@ public class ListPrometheusVirtualInstancesResponseBody extends TeaModel {
         } 
 
         /**
-         * instances.
+         * <p>Instance information.</p>
          */
         public Builder instances(java.util.List<Instances> instances) {
             this.instances = instances;
@@ -75,7 +75,7 @@ public class ListPrometheusVirtualInstancesResponseBody extends TeaModel {
         }
 
         /**
-         * <p>Id of the request</p>
+         * <p>ID of the request</p>
          * 
          * <strong>example:</strong>
          * <p>264C3E89-XXXX-XXXX-XXXX-CE9C2196C7DC</p>
@@ -196,7 +196,10 @@ public class ListPrometheusVirtualInstancesResponseBody extends TeaModel {
             } 
 
             /**
-             * createdAt.
+             * <p>Creation time</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1750315319946</p>
              */
             public Builder createdAt(String createdAt) {
                 this.createdAt = createdAt;
@@ -204,7 +207,10 @@ public class ListPrometheusVirtualInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * httpApiUrl.
+             * <p>HTTP API URL.</p>
+             * 
+             * <strong>example:</strong>
+             * <p><a href="http://xxxxxxxx">http://xxxxxxxx</a></p>
              */
             public Builder httpApiUrl(String httpApiUrl) {
                 this.httpApiUrl = httpApiUrl;
@@ -212,7 +218,11 @@ public class ListPrometheusVirtualInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * instanceId.
+             * <p>Applicable data source type: PROMETHEUS_DS</p>
+             * <p>Prometheus instance ID</p>
+             * 
+             * <strong>example:</strong>
+             * <p>rw-b8cfbbe94194ac37fe83f3d2d16a</p>
              */
             public Builder instanceId(String instanceId) {
                 this.instanceId = instanceId;
@@ -220,7 +230,11 @@ public class ListPrometheusVirtualInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * namespace.
+             * <p>Applicable query type: CMS_BASIC_QUERY.</p>
+             * <p>Namespace of the metric</p>
+             * 
+             * <strong>example:</strong>
+             * <p>arms-prom</p>
              */
             public Builder namespace(String namespace) {
                 this.namespace = namespace;
@@ -228,7 +242,10 @@ public class ListPrometheusVirtualInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * regionId.
+             * <p>Region ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>cn-shanghai-cloudspe</p>
              */
             public Builder regionId(String regionId) {
                 this.regionId = regionId;
@@ -236,7 +253,10 @@ public class ListPrometheusVirtualInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * userId.
+             * <p>User ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>17073812345</p>
              */
             public Builder userId(String userId) {
                 this.userId = userId;

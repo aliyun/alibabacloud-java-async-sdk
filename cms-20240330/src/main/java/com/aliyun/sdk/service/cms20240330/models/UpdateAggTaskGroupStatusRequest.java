@@ -90,6 +90,7 @@ public class UpdateAggTaskGroupStatusRequest extends Request {
         } 
 
         /**
+         * <p>The ID of the Prometheus instance to which the aggregation task group belongs. The aggregation tasks read data from this instance.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -102,6 +103,7 @@ public class UpdateAggTaskGroupStatusRequest extends Request {
         }
 
         /**
+         * <p>Aggregation task group ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -114,6 +116,7 @@ public class UpdateAggTaskGroupStatusRequest extends Request {
         }
 
         /**
+         * <p>Status of the aggregation task group, either “Running” or “Stopped”. Default is Running.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>

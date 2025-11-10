@@ -158,7 +158,7 @@ public class GetServiceObservabilityResponseBody extends TeaModel {
         } 
 
         /**
-         * entryPointInfo.
+         * <p>Endpoint and Authentication Information</p>
          */
         public Builder entryPointInfo(EntryPointInfo entryPointInfo) {
             this.entryPointInfo = entryPointInfo;
@@ -166,7 +166,10 @@ public class GetServiceObservabilityResponseBody extends TeaModel {
         }
 
         /**
-         * feeType.
+         * <p>Billing Type</p>
+         * 
+         * <strong>example:</strong>
+         * <p>arms=serverless;xtrace=serverless</p>
          */
         public Builder feeType(String feeType) {
             this.feeType = feeType;
@@ -174,7 +177,7 @@ public class GetServiceObservabilityResponseBody extends TeaModel {
         }
 
         /**
-         * quotas.
+         * <p>Quota Configuration</p>
          */
         public Builder quotas(java.util.Map<String, String> quotas) {
             this.quotas = quotas;
@@ -182,7 +185,10 @@ public class GetServiceObservabilityResponseBody extends TeaModel {
         }
 
         /**
-         * regionId.
+         * <p>Region</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-hangzhou</p>
          */
         public Builder regionId(String regionId) {
             this.regionId = regionId;
@@ -190,7 +196,10 @@ public class GetServiceObservabilityResponseBody extends TeaModel {
         }
 
         /**
-         * requestId.
+         * <p>Request ID</p>
+         * 
+         * <strong>example:</strong>
+         * <p>4852B9B5-345C-5CBC-A15F-786D83ECCBBA</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -198,7 +207,7 @@ public class GetServiceObservabilityResponseBody extends TeaModel {
         }
 
         /**
-         * settings.
+         * <p>System Configuration</p>
          */
         public Builder settings(java.util.Map<String, String> settings) {
             this.settings = settings;
@@ -206,7 +215,10 @@ public class GetServiceObservabilityResponseBody extends TeaModel {
         }
 
         /**
-         * status.
+         * <p>Resource Initialization Status</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Running</p>
          */
         public Builder status(String status) {
             this.status = status;
@@ -214,7 +226,10 @@ public class GetServiceObservabilityResponseBody extends TeaModel {
         }
 
         /**
-         * type.
+         * <p>Application Observability Type</p>
+         * 
+         * <strong>example:</strong>
+         * <p>apm</p>
          */
         public Builder type(String type) {
             this.type = type;
@@ -222,7 +237,10 @@ public class GetServiceObservabilityResponseBody extends TeaModel {
         }
 
         /**
-         * workspace.
+         * <p>Workspace Name</p>
+         * 
+         * <strong>example:</strong>
+         * <p>default-cms-1654218***343050-cn-hangzhou</p>
          */
         public Builder workspace(String workspace) {
             this.workspace = workspace;
@@ -314,7 +332,10 @@ public class GetServiceObservabilityResponseBody extends TeaModel {
             } 
 
             /**
-             * authToken.
+             * <p>Authentication Token for Data Reporting</p>
+             * 
+             * <strong>example:</strong>
+             * <p>gaddp****@de20f2<em><strong>1ce</strong></em></p>
              */
             public Builder authToken(String authToken) {
                 this.authToken = authToken;
@@ -322,7 +343,10 @@ public class GetServiceObservabilityResponseBody extends TeaModel {
             }
 
             /**
-             * privateDomain.
+             * <p>Private Network Access Address</p>
+             * 
+             * <strong>example:</strong>
+             * <p>project-xtrace-xxxx-cn-hangzhou.cn-hangzhou-intranet.log.aliyuncs.com</p>
              */
             public Builder privateDomain(String privateDomain) {
                 this.privateDomain = privateDomain;
@@ -341,7 +365,10 @@ public class GetServiceObservabilityResponseBody extends TeaModel {
             }
 
             /**
-             * publicDomain.
+             * <p>Public Network Access Address</p>
+             * 
+             * <strong>example:</strong>
+             * <p>project-xtrace-xxxx-cn-hangzhou.cn-hangzhou.log.aliyuncs.com</p>
              */
             public Builder publicDomain(String publicDomain) {
                 this.publicDomain = publicDomain;

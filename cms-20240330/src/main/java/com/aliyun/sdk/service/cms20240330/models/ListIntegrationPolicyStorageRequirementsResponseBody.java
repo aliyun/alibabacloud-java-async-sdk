@@ -67,7 +67,7 @@ public class ListIntegrationPolicyStorageRequirementsResponseBody extends TeaMod
         } 
 
         /**
-         * <p>Id of the request</p>
+         * <p>ID of the request</p>
          * 
          * <strong>example:</strong>
          * <p>0CEC5375-C554-562B-A65F-9A629907C1F0</p>
@@ -78,7 +78,7 @@ public class ListIntegrationPolicyStorageRequirementsResponseBody extends TeaMod
         }
 
         /**
-         * storageRequirements.
+         * <p>List of storage requirements</p>
          */
         public Builder storageRequirements(java.util.List<StorageRequirements> storageRequirements) {
             this.storageRequirements = storageRequirements;
@@ -170,7 +170,7 @@ public class ListIntegrationPolicyStorageRequirementsResponseBody extends TeaMod
             } 
 
             /**
-             * annotations.
+             * <p>Annotations</p>
              */
             public Builder annotations(java.util.Map<String, String> annotations) {
                 this.annotations = annotations;
@@ -178,7 +178,7 @@ public class ListIntegrationPolicyStorageRequirementsResponseBody extends TeaMod
             }
 
             /**
-             * labels.
+             * <p>Resource labels</p>
              */
             public Builder labels(java.util.Map<String, String> labels) {
                 this.labels = labels;
@@ -186,7 +186,10 @@ public class ListIntegrationPolicyStorageRequirementsResponseBody extends TeaMod
             }
 
             /**
-             * name.
+             * <p>Resource name</p>
+             * 
+             * <strong>example:</strong>
+             * <p>pod-1234567</p>
              */
             public Builder name(String name) {
                 this.name = name;
@@ -194,7 +197,10 @@ public class ListIntegrationPolicyStorageRequirementsResponseBody extends TeaMod
             }
 
             /**
-             * namespace.
+             * <p>Namespace</p>
+             * 
+             * <strong>example:</strong>
+             * <p>arms-prom</p>
              */
             public Builder namespace(String namespace) {
                 this.namespace = namespace;
@@ -378,7 +384,10 @@ public class ListIntegrationPolicyStorageRequirementsResponseBody extends TeaMod
             } 
 
             /**
-             * entityId.
+             * <p>Instance ID, which can be specified if you need to pinpoint to the instance level. It depends on the data in EntityStore.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>es-xxxxx</p>
              */
             public Builder entityId(String entityId) {
                 this.entityId = entityId;
@@ -386,7 +395,10 @@ public class ListIntegrationPolicyStorageRequirementsResponseBody extends TeaMod
             }
 
             /**
-             * instance.
+             * <p>Prom Instance ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>i-bp122p85gthbniw8rsu9</p>
              */
             public Builder instance(String instance) {
                 this.instance = instance;
@@ -394,7 +406,10 @@ public class ListIntegrationPolicyStorageRequirementsResponseBody extends TeaMod
             }
 
             /**
-             * instanceName.
+             * <p>Prom instance name</p>
+             * 
+             * <strong>example:</strong>
+             * <p>category_predict</p>
              */
             public Builder instanceName(String instanceName) {
                 this.instanceName = instanceName;
@@ -402,7 +417,10 @@ public class ListIntegrationPolicyStorageRequirementsResponseBody extends TeaMod
             }
 
             /**
-             * project.
+             * <p>Optional parameter, determined based on the current environment type</p>
+             * 
+             * <strong>example:</strong>
+             * <p>datagrid_cdm</p>
              */
             public Builder project(String project) {
                 this.project = project;
@@ -410,7 +428,10 @@ public class ListIntegrationPolicyStorageRequirementsResponseBody extends TeaMod
             }
 
             /**
-             * region.
+             * <p>Region</p>
+             * 
+             * <strong>example:</strong>
+             * <p>cn-shenzhen</p>
              */
             public Builder region(String region) {
                 this.region = region;
@@ -418,7 +439,10 @@ public class ListIntegrationPolicyStorageRequirementsResponseBody extends TeaMod
             }
 
             /**
-             * shareScope.
+             * <p>Storage sharing scope: Environment | Region | Workspace | Custom</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Region</p>
              */
             public Builder shareScope(String shareScope) {
                 this.shareScope = shareScope;
@@ -426,7 +450,10 @@ public class ListIntegrationPolicyStorageRequirementsResponseBody extends TeaMod
             }
 
             /**
-             * storageType.
+             * <p>Instance storage type</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Prometheus</p>
              */
             public Builder storageType(String storageType) {
                 this.storageType = storageType;
@@ -434,7 +461,7 @@ public class ListIntegrationPolicyStorageRequirementsResponseBody extends TeaMod
             }
 
             /**
-             * systemTags.
+             * <p>Tags to be applied to the target storage (injected as system tags)</p>
              */
             public Builder systemTags(java.util.Map<String, String> systemTags) {
                 this.systemTags = systemTags;
@@ -442,7 +469,7 @@ public class ListIntegrationPolicyStorageRequirementsResponseBody extends TeaMod
             }
 
             /**
-             * tags.
+             * <p>Tags to be applied to the target storage (injected as regular tags)</p>
              */
             public Builder tags(java.util.Map<String, String> tags) {
                 this.tags = tags;
@@ -450,7 +477,10 @@ public class ListIntegrationPolicyStorageRequirementsResponseBody extends TeaMod
             }
 
             /**
-             * userId.
+             * <p>User ID</p>
+             * 
+             * <strong>example:</strong>
+             * <p>12345678</p>
              */
             public Builder userId(String userId) {
                 this.userId = userId;
@@ -458,7 +488,10 @@ public class ListIntegrationPolicyStorageRequirementsResponseBody extends TeaMod
             }
 
             /**
-             * workspace.
+             * <p>Workspace</p>
+             * 
+             * <strong>example:</strong>
+             * <p>test-api</p>
              */
             public Builder workspace(String workspace) {
                 this.workspace = workspace;
@@ -616,7 +649,10 @@ public class ListIntegrationPolicyStorageRequirementsResponseBody extends TeaMod
             } 
 
             /**
-             * instanceId.
+             * <p>Instance ID</p>
+             * 
+             * <strong>example:</strong>
+             * <p>rmq-cn-uqm3ket1t0u</p>
              */
             public Builder instanceId(String instanceId) {
                 this.instanceId = instanceId;
@@ -624,7 +660,10 @@ public class ListIntegrationPolicyStorageRequirementsResponseBody extends TeaMod
             }
 
             /**
-             * interUrl.
+             * <p>Internal URL</p>
+             * 
+             * <strong>example:</strong>
+             * <p><a href="http://192.168.xxxxxx">http://192.168.xxxxxx</a></p>
              */
             public Builder interUrl(String interUrl) {
                 this.interUrl = interUrl;
@@ -632,7 +671,10 @@ public class ListIntegrationPolicyStorageRequirementsResponseBody extends TeaMod
             }
 
             /**
-             * intraUrl.
+             * <p>External URL</p>
+             * 
+             * <strong>example:</strong>
+             * <p><a href="http://100.100.xxxxxx">http://100.100.xxxxxx</a></p>
              */
             public Builder intraUrl(String intraUrl) {
                 this.intraUrl = intraUrl;
@@ -640,7 +682,10 @@ public class ListIntegrationPolicyStorageRequirementsResponseBody extends TeaMod
             }
 
             /**
-             * name.
+             * <p>存储需求名称</p>
+             * 
+             * <strong>example:</strong>
+             * <p>sr-xxxx</p>
              */
             public Builder name(String name) {
                 this.name = name;
@@ -648,7 +693,10 @@ public class ListIntegrationPolicyStorageRequirementsResponseBody extends TeaMod
             }
 
             /**
-             * project.
+             * <p>存储需求项目</p>
+             * 
+             * <strong>example:</strong>
+             * <p>jiuwu_algo</p>
              */
             public Builder project(String project) {
                 this.project = project;
@@ -656,7 +704,10 @@ public class ListIntegrationPolicyStorageRequirementsResponseBody extends TeaMod
             }
 
             /**
-             * promMetricStore.
+             * <p>Prom&quot;s metric center</p>
+             * 
+             * <strong>example:</strong>
+             * <p>xxxx</p>
              */
             public Builder promMetricStore(String promMetricStore) {
                 this.promMetricStore = promMetricStore;
@@ -664,7 +715,10 @@ public class ListIntegrationPolicyStorageRequirementsResponseBody extends TeaMod
             }
 
             /**
-             * region.
+             * <p>Region</p>
+             * 
+             * <strong>example:</strong>
+             * <p>cn-hangzhou</p>
              */
             public Builder region(String region) {
                 this.region = region;
@@ -672,7 +726,10 @@ public class ListIntegrationPolicyStorageRequirementsResponseBody extends TeaMod
             }
 
             /**
-             * storageType.
+             * <p>Instance storage type</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Prometheus</p>
              */
             public Builder storageType(String storageType) {
                 this.storageType = storageType;
@@ -680,7 +737,10 @@ public class ListIntegrationPolicyStorageRequirementsResponseBody extends TeaMod
             }
 
             /**
-             * workspace.
+             * <p>Workspace.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>default</p>
              */
             public Builder workspace(String workspace) {
                 this.workspace = workspace;
@@ -799,7 +859,7 @@ public class ListIntegrationPolicyStorageRequirementsResponseBody extends TeaMod
             } 
 
             /**
-             * addonReleaseNames.
+             * <p>Collection of AddonReleases.</p>
              */
             public Builder addonReleaseNames(java.util.List<String> addonReleaseNames) {
                 this.addonReleaseNames = addonReleaseNames;
@@ -807,7 +867,10 @@ public class ListIntegrationPolicyStorageRequirementsResponseBody extends TeaMod
             }
 
             /**
-             * apiVersion.
+             * <p>API Version</p>
+             * 
+             * <strong>example:</strong>
+             * <p>v1</p>
              */
             public Builder apiVersion(String apiVersion) {
                 this.apiVersion = apiVersion;
@@ -815,7 +878,10 @@ public class ListIntegrationPolicyStorageRequirementsResponseBody extends TeaMod
             }
 
             /**
-             * kind.
+             * <p>Resource kind</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Pod</p>
              */
             public Builder kind(String kind) {
                 this.kind = kind;
@@ -823,7 +889,7 @@ public class ListIntegrationPolicyStorageRequirementsResponseBody extends TeaMod
             }
 
             /**
-             * metadata.
+             * <p>Metadata</p>
              */
             public Builder metadata(Metadata metadata) {
                 this.metadata = metadata;
@@ -831,7 +897,7 @@ public class ListIntegrationPolicyStorageRequirementsResponseBody extends TeaMod
             }
 
             /**
-             * spec.
+             * <p>Resource spec</p>
              */
             public Builder spec(Spec spec) {
                 this.spec = spec;
@@ -839,7 +905,7 @@ public class ListIntegrationPolicyStorageRequirementsResponseBody extends TeaMod
             }
 
             /**
-             * status.
+             * <p>Storage requirement status</p>
              */
             public Builder status(Status status) {
                 this.status = status;

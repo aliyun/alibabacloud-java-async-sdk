@@ -174,6 +174,7 @@ public class ListAggTaskGroupsRequest extends Request {
         } 
 
         /**
+         * <p>The ID of the Prometheus instance to which the aggregation task group belongs. The aggregation tasks read data from this instance.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -186,7 +187,10 @@ public class ListAggTaskGroupsRequest extends Request {
         }
 
         /**
-         * filterAggTaskGroupIds.
+         * <p>List of IDs for the aggregation task groups, which must be JSON parseable.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>[&quot;aggTaskGroup-xxx&quot;]</p>
          */
         public Builder filterAggTaskGroupIds(String filterAggTaskGroupIds) {
             this.putQueryParameter("filterAggTaskGroupIds", filterAggTaskGroupIds);
@@ -195,7 +199,10 @@ public class ListAggTaskGroupsRequest extends Request {
         }
 
         /**
-         * filterAggTaskGroupNames.
+         * <p>List of names for the aggregation task groups, which must be JSON parseable.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>[&quot;apiserver_request_total&quot;]</p>
          */
         public Builder filterAggTaskGroupNames(String filterAggTaskGroupNames) {
             this.putQueryParameter("filterAggTaskGroupNames", filterAggTaskGroupNames);
@@ -204,7 +211,10 @@ public class ListAggTaskGroupsRequest extends Request {
         }
 
         /**
-         * maxResults.
+         * <p>Maximum number of records to return.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>20</p>
          */
         public Builder maxResults(Integer maxResults) {
             this.putQueryParameter("maxResults", maxResults);
@@ -213,7 +223,10 @@ public class ListAggTaskGroupsRequest extends Request {
         }
 
         /**
-         * nextToken.
+         * <p>Query token.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>28036394xxx</p>
          */
         public Builder nextToken(String nextToken) {
             this.putQueryParameter("nextToken", nextToken);
@@ -222,7 +235,10 @@ public class ListAggTaskGroupsRequest extends Request {
         }
 
         /**
-         * query.
+         * <p>Name search, supports fuzzy matching.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>test</p>
          */
         public Builder query(String query) {
             this.putQueryParameter("query", query);
@@ -231,7 +247,10 @@ public class ListAggTaskGroupsRequest extends Request {
         }
 
         /**
-         * status.
+         * <p>Status of the aggregation task group, either &quot;Running&quot; or &quot;Stopped&quot;. Default is Running.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Running</p>
          */
         public Builder status(String status) {
             this.putQueryParameter("status", status);
@@ -240,7 +259,7 @@ public class ListAggTaskGroupsRequest extends Request {
         }
 
         /**
-         * tags.
+         * <p>Resource group tags.</p>
          */
         public Builder tags(java.util.List<Tags> tags) {
             String tagsShrink = shrink(tags, "tags", "json");
@@ -250,7 +269,10 @@ public class ListAggTaskGroupsRequest extends Request {
         }
 
         /**
-         * targetPrometheusId.
+         * <p>The target Prometheus instance ID for the aggregation task group.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>rw-pq4apob9jm</p>
          */
         public Builder targetPrometheusId(String targetPrometheusId) {
             this.putQueryParameter("targetPrometheusId", targetPrometheusId);
@@ -318,7 +340,10 @@ public class ListAggTaskGroupsRequest extends Request {
             } 
 
             /**
-             * key.
+             * <p>Key of the resource group tag.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>key1</p>
              */
             public Builder key(String key) {
                 this.key = key;
@@ -326,7 +351,10 @@ public class ListAggTaskGroupsRequest extends Request {
             }
 
             /**
-             * value.
+             * <p>Value of the resource group tag.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>value1</p>
              */
             public Builder value(String value) {
                 this.value = value;

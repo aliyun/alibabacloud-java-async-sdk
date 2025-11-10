@@ -60,6 +60,7 @@ public class GetIntegrationPolicyRequest extends Request {
         } 
 
         /**
+         * <p>Policy ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>

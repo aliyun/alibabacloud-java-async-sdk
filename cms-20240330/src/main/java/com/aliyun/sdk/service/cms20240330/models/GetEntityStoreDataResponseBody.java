@@ -93,7 +93,7 @@ public class GetEntityStoreDataResponseBody extends TeaModel {
         } 
 
         /**
-         * data.
+         * <p>Total list of returned data</p>
          */
         public Builder data(java.util.List<java.util.List<String>> data) {
             this.data = data;
@@ -101,7 +101,7 @@ public class GetEntityStoreDataResponseBody extends TeaModel {
         }
 
         /**
-         * header.
+         * <p>List of request headers</p>
          */
         public Builder header(java.util.List<String> header) {
             this.header = header;
@@ -109,7 +109,10 @@ public class GetEntityStoreDataResponseBody extends TeaModel {
         }
 
         /**
-         * requestId.
+         * <p>Request ID</p>
+         * 
+         * <strong>example:</strong>
+         * <p>264C3E89-XXXX-XXXX-XXXX-CE9C2196C7DC</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -117,7 +120,7 @@ public class GetEntityStoreDataResponseBody extends TeaModel {
         }
 
         /**
-         * responseStatus.
+         * <p>Result status</p>
          */
         public Builder responseStatus(ResponseStatus responseStatus) {
             this.responseStatus = responseStatus;
@@ -209,7 +212,10 @@ public class GetEntityStoreDataResponseBody extends TeaModel {
             } 
 
             /**
-             * code.
+             * <p>Status code</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Success,ExecuteTimeout,UModelNotExist</p>
              */
             public Builder code(String code) {
                 this.code = code;
@@ -217,7 +223,10 @@ public class GetEntityStoreDataResponseBody extends TeaModel {
             }
 
             /**
-             * level.
+             * <p>Status level</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Info,Warn,Error</p>
              */
             public Builder level(String level) {
                 this.level = level;
@@ -225,7 +234,10 @@ public class GetEntityStoreDataResponseBody extends TeaModel {
             }
 
             /**
-             * message.
+             * <p>Calculation execution information</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Query execution timeout after 30 seconds</p>
              */
             public Builder message(String message) {
                 this.message = message;
@@ -233,7 +245,10 @@ public class GetEntityStoreDataResponseBody extends TeaModel {
             }
 
             /**
-             * suggestion.
+             * <p>Suggestions when an error occurs during execution</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Try to reduce the query scope or increase timeout limit, then retry</p>
              */
             public Builder suggestion(String suggestion) {
                 this.suggestion = suggestion;
@@ -339,7 +354,10 @@ public class GetEntityStoreDataResponseBody extends TeaModel {
             } 
 
             /**
-             * executionStates.
+             * <p>Information during the execution process</p>
+             * 
+             * <strong>example:</strong>
+             * <p>{}</p>
              */
             public Builder executionStates(String executionStates) {
                 this.executionStates = executionStates;
@@ -347,7 +365,10 @@ public class GetEntityStoreDataResponseBody extends TeaModel {
             }
 
             /**
-             * level.
+             * <p>Status level</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Info,Warn,Error</p>
              */
             public Builder level(String level) {
                 this.level = level;
@@ -355,7 +376,10 @@ public class GetEntityStoreDataResponseBody extends TeaModel {
             }
 
             /**
-             * result.
+             * <p>Execution result</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Success,PartialSuccess,Error</p>
              */
             public Builder result(String result) {
                 this.result = result;
@@ -363,7 +387,10 @@ public class GetEntityStoreDataResponseBody extends TeaModel {
             }
 
             /**
-             * retryPolicy.
+             * <p>Retry policy</p>
+             * 
+             * <strong>example:</strong>
+             * <p>None,Once,Continuous</p>
              */
             public Builder retryPolicy(String retryPolicy) {
                 this.retryPolicy = retryPolicy;
@@ -371,7 +398,7 @@ public class GetEntityStoreDataResponseBody extends TeaModel {
             }
 
             /**
-             * statusItem.
+             * <p>Detailed status information list</p>
              */
             public Builder statusItem(java.util.List<StatusItem> statusItem) {
                 this.statusItem = statusItem;

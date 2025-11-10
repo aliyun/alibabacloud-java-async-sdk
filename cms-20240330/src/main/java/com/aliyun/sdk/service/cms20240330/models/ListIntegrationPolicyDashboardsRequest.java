@@ -27,6 +27,10 @@ public class ListIntegrationPolicyDashboardsRequest extends Request {
     private String addonName;
 
     @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("language")
+    private String language;
+
+    @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("scene")
     private String scene;
 
@@ -34,6 +38,7 @@ public class ListIntegrationPolicyDashboardsRequest extends Request {
         super(builder);
         this.policyId = builder.policyId;
         this.addonName = builder.addonName;
+        this.language = builder.language;
         this.scene = builder.scene;
     }
 
@@ -65,6 +70,13 @@ public class ListIntegrationPolicyDashboardsRequest extends Request {
     }
 
     /**
+     * @return language
+     */
+    public String getLanguage() {
+        return this.language;
+    }
+
+    /**
      * @return scene
      */
     public String getScene() {
@@ -74,6 +86,7 @@ public class ListIntegrationPolicyDashboardsRequest extends Request {
     public static final class Builder extends Request.Builder<ListIntegrationPolicyDashboardsRequest, Builder> {
         private String policyId; 
         private String addonName; 
+        private String language; 
         private String scene; 
 
         private Builder() {
@@ -84,10 +97,12 @@ public class ListIntegrationPolicyDashboardsRequest extends Request {
             super(request);
             this.policyId = request.policyId;
             this.addonName = request.addonName;
+            this.language = request.language;
             this.scene = request.scene;
         } 
 
         /**
+         * <p>Policy ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -100,7 +115,10 @@ public class ListIntegrationPolicyDashboardsRequest extends Request {
         }
 
         /**
-         * addonName.
+         * <p>Addon Name.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cs-default</p>
          */
         public Builder addonName(String addonName) {
             this.putQueryParameter("addonName", addonName);
@@ -109,7 +127,22 @@ public class ListIntegrationPolicyDashboardsRequest extends Request {
         }
 
         /**
-         * scene.
+         * <p>Query Language</p>
+         * 
+         * <strong>example:</strong>
+         * <p>zh</p>
+         */
+        public Builder language(String language) {
+            this.putQueryParameter("language", language);
+            this.language = language;
+            return this;
+        }
+
+        /**
+         * <p>Component Scenario.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>databse</p>
          */
         public Builder scene(String scene) {
             this.putQueryParameter("scene", scene);

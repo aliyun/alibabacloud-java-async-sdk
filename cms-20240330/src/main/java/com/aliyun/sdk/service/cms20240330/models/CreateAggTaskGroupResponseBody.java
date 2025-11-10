@@ -119,7 +119,10 @@ public class CreateAggTaskGroupResponseBody extends TeaModel {
         } 
 
         /**
-         * aggTaskGroupConfigHash.
+         * <p>Summary of the aggregation task group configuration.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>a54136014dc386a92c83a6ef1e97ff22</p>
          */
         public Builder aggTaskGroupConfigHash(String aggTaskGroupConfigHash) {
             this.aggTaskGroupConfigHash = aggTaskGroupConfigHash;
@@ -127,7 +130,10 @@ public class CreateAggTaskGroupResponseBody extends TeaModel {
         }
 
         /**
-         * aggTaskGroupId.
+         * <p>Aggregation task group ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>aggTaskGroup-f4b8e50525cf41c894488c0c71ec483f</p>
          */
         public Builder aggTaskGroupId(String aggTaskGroupId) {
             this.aggTaskGroupId = aggTaskGroupId;
@@ -135,7 +141,10 @@ public class CreateAggTaskGroupResponseBody extends TeaModel {
         }
 
         /**
-         * aggTaskGroupName.
+         * <p>Aggregation task group name.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>pipeline-aggtask-group</p>
          */
         public Builder aggTaskGroupName(String aggTaskGroupName) {
             this.aggTaskGroupName = aggTaskGroupName;
@@ -143,7 +152,10 @@ public class CreateAggTaskGroupResponseBody extends TeaModel {
         }
 
         /**
-         * requestId.
+         * <p>Request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>16C0A6D6-C3E7-511D-A60B-A87FD85F5BA7</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -151,7 +163,10 @@ public class CreateAggTaskGroupResponseBody extends TeaModel {
         }
 
         /**
-         * sourcePrometheusId.
+         * <p>Source Prometheus instance ID of the aggregation task group.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>rw-ecc04af14729b1a16e40a0d10068</p>
          */
         public Builder sourcePrometheusId(String sourcePrometheusId) {
             this.sourcePrometheusId = sourcePrometheusId;
@@ -159,7 +174,10 @@ public class CreateAggTaskGroupResponseBody extends TeaModel {
         }
 
         /**
-         * status.
+         * <p>Current status of the aggregation task group.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Pending2Running</p>
          */
         public Builder status(String status) {
             this.status = status;

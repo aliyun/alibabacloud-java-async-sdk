@@ -80,7 +80,7 @@ public class ListPrometheusDashboardsResponseBody extends TeaModel {
         } 
 
         /**
-         * prometheusDashboards.
+         * <p>List of Prometheus instance dashboards.</p>
          */
         public Builder prometheusDashboards(java.util.List<PrometheusDashboards> prometheusDashboards) {
             this.prometheusDashboards = prometheusDashboards;
@@ -88,7 +88,7 @@ public class ListPrometheusDashboardsResponseBody extends TeaModel {
         }
 
         /**
-         * <p>Id of the request</p>
+         * <p>ID of the request</p>
          * 
          * <strong>example:</strong>
          * <p>8FDE2569-626B-5176-9844-28877A*****</p>
@@ -99,7 +99,10 @@ public class ListPrometheusDashboardsResponseBody extends TeaModel {
         }
 
         /**
-         * totalCount.
+         * <p>Total number of instances</p>
+         * 
+         * <strong>example:</strong>
+         * <p>66</p>
          */
         public Builder totalCount(Integer totalCount) {
             this.totalCount = totalCount;
@@ -217,7 +220,10 @@ public class ListPrometheusDashboardsResponseBody extends TeaModel {
             } 
 
             /**
-             * id.
+             * <p>Dashboard ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder id(String id) {
                 this.id = id;
@@ -225,7 +231,10 @@ public class ListPrometheusDashboardsResponseBody extends TeaModel {
             }
 
             /**
-             * name.
+             * <p>Dashboard name.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>pod</p>
              */
             public Builder name(String name) {
                 this.name = name;
@@ -233,7 +242,7 @@ public class ListPrometheusDashboardsResponseBody extends TeaModel {
             }
 
             /**
-             * tags.
+             * <p>Tags.</p>
              */
             public Builder tags(java.util.List<String> tags) {
                 this.tags = tags;
@@ -241,7 +250,10 @@ public class ListPrometheusDashboardsResponseBody extends TeaModel {
             }
 
             /**
-             * title.
+             * <p>Dashboard title.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>ceshi</p>
              */
             public Builder title(String title) {
                 this.title = title;
@@ -249,7 +261,10 @@ public class ListPrometheusDashboardsResponseBody extends TeaModel {
             }
 
             /**
-             * uid.
+             * <p>Dashboard UID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1987395500251724</p>
              */
             public Builder uid(String uid) {
                 this.uid = uid;
@@ -257,7 +272,10 @@ public class ListPrometheusDashboardsResponseBody extends TeaModel {
             }
 
             /**
-             * url.
+             * <p>Dashboard URL address.</p>
+             * 
+             * <strong>example:</strong>
+             * <p><a href="https://gnew.console.aliyun.com/d/xxx-17460385-807-7-6/cs-cost-application">https://gnew.console.aliyun.com/d/xxx-17460385-807-7-6/cs-cost-application</a></p>
              */
             public Builder url(String url) {
                 this.url = url;

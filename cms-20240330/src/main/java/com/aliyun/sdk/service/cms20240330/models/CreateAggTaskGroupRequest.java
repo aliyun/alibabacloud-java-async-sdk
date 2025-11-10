@@ -302,6 +302,7 @@ public class CreateAggTaskGroupRequest extends Request {
         } 
 
         /**
+         * <p>The source Prometheus instance ID of the aggregation task group.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -314,6 +315,8 @@ public class CreateAggTaskGroupRequest extends Request {
         }
 
         /**
+         * <p>Aggregation task group configuration.
+         * Currently, only the “RecordingRuleYaml” format is supported, which must comply with the format requirements of open-source Prometheus RecordingRules.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -335,7 +338,10 @@ public class CreateAggTaskGroupRequest extends Request {
         }
 
         /**
-         * aggTaskGroupConfigType.
+         * <p>Aggregation task group configuration type, default is “RecordingRuleYaml” (open-source Prometheus RecordingRule format).</p>
+         * 
+         * <strong>example:</strong>
+         * <p>RecordingRuleYaml</p>
          */
         public Builder aggTaskGroupConfigType(String aggTaskGroupConfigType) {
             this.putBodyParameter("aggTaskGroupConfigType", aggTaskGroupConfigType);
@@ -344,6 +350,7 @@ public class CreateAggTaskGroupRequest extends Request {
         }
 
         /**
+         * <p>Aggregation task group name.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -356,7 +363,10 @@ public class CreateAggTaskGroupRequest extends Request {
         }
 
         /**
-         * cronExpr.
+         * <p>When the scheduling mode is selected as “Cron”, this is the specific scheduling expression. For example, “0/1 * * * *” means starting from 0 minutes and scheduling every 1 minute.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>0/1 * * * *</p>
          */
         public Builder cronExpr(String cronExpr) {
             this.putBodyParameter("cronExpr", cronExpr);
@@ -365,7 +375,10 @@ public class CreateAggTaskGroupRequest extends Request {
         }
 
         /**
-         * delay.
+         * <p>Fixed delay time for scheduling, in seconds, default is 30.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>30</p>
          */
         public Builder delay(Integer delay) {
             this.putBodyParameter("delay", delay);
@@ -374,7 +387,10 @@ public class CreateAggTaskGroupRequest extends Request {
         }
 
         /**
-         * description.
+         * <p>Description of the aggregation task group.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>desc</p>
          */
         public Builder description(String description) {
             this.putBodyParameter("description", description);
@@ -383,7 +399,10 @@ public class CreateAggTaskGroupRequest extends Request {
         }
 
         /**
-         * fromTime.
+         * <p>The second-level timestamp corresponding to the start time of the schedule.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1724996015</p>
          */
         public Builder fromTime(Long fromTime) {
             this.putBodyParameter("fromTime", fromTime);
@@ -392,7 +411,10 @@ public class CreateAggTaskGroupRequest extends Request {
         }
 
         /**
-         * maxRetries.
+         * <p>Maximum number of retries for executing the aggregation task, default is 20.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>20</p>
          */
         public Builder maxRetries(Integer maxRetries) {
             this.putBodyParameter("maxRetries", maxRetries);
@@ -401,7 +423,10 @@ public class CreateAggTaskGroupRequest extends Request {
         }
 
         /**
-         * maxRunTimeInSeconds.
+         * <p>Maximum retry time for executing the aggregation task, in seconds, default is 600.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>600</p>
          */
         public Builder maxRunTimeInSeconds(Integer maxRunTimeInSeconds) {
             this.putBodyParameter("maxRunTimeInSeconds", maxRunTimeInSeconds);
@@ -410,7 +435,10 @@ public class CreateAggTaskGroupRequest extends Request {
         }
 
         /**
-         * precheckString.
+         * <p>Pre-check configuration, no configuration by default. The input string needs to be correctly parsed as JSON.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>{&quot;policy&quot;:&quot;skip&quot;,&quot;prometheusId&quot;:&quot;xxx&quot;,&quot;query&quot;:&quot;scalar(sum(count_over_time(up{job=&quot;_arms/kubelet/cadvisor&quot;}[15s])) / 21)&quot;,&quot;threshold&quot;:0.5,&quot;timeout&quot;:15,&quot;type&quot;:&quot;promql&quot;}</p>
          */
         public Builder precheckString(String precheckString) {
             this.putBodyParameter("precheckString", precheckString);
@@ -419,7 +447,10 @@ public class CreateAggTaskGroupRequest extends Request {
         }
 
         /**
-         * scheduleMode.
+         * <p>Scheduling mode, either “Cron” or “FixedRate”, default is “FixedRate”.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>FixedRate</p>
          */
         public Builder scheduleMode(String scheduleMode) {
             this.putBodyParameter("scheduleMode", scheduleMode);
@@ -428,7 +459,10 @@ public class CreateAggTaskGroupRequest extends Request {
         }
 
         /**
-         * scheduleTimeExpr.
+         * <p>Scheduling time expression, recommended “@s” or “@m”, indicating the alignment granularity of the scheduling time window, default is “@m”.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>@m</p>
          */
         public Builder scheduleTimeExpr(String scheduleTimeExpr) {
             this.putBodyParameter("scheduleTimeExpr", scheduleTimeExpr);
@@ -437,7 +471,10 @@ public class CreateAggTaskGroupRequest extends Request {
         }
 
         /**
-         * status.
+         * <p>Status of the aggregation task group, either “Running” or “Stopped”. Default is Running.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Running</p>
          */
         public Builder status(String status) {
             this.putBodyParameter("status", status);
@@ -446,7 +483,7 @@ public class CreateAggTaskGroupRequest extends Request {
         }
 
         /**
-         * tags.
+         * <p>Resource group tags.</p>
          */
         public Builder tags(java.util.List<Tags> tags) {
             this.putBodyParameter("tags", tags);
@@ -455,6 +492,7 @@ public class CreateAggTaskGroupRequest extends Request {
         }
 
         /**
+         * <p>The target Prometheus instance ID of the aggregation task group.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -467,7 +505,10 @@ public class CreateAggTaskGroupRequest extends Request {
         }
 
         /**
-         * toTime.
+         * <p>The second-level timestamp corresponding to the end time of the schedule, 0 indicates that the scheduling does not stop.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>0</p>
          */
         public Builder toTime(Long toTime) {
             this.putBodyParameter("toTime", toTime);
@@ -476,7 +517,10 @@ public class CreateAggTaskGroupRequest extends Request {
         }
 
         /**
-         * overrideIfExists.
+         * <p>Whether to overwrite and update if a resource with the same name exists when creating an aggregation task group.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder overrideIfExists(Boolean overrideIfExists) {
             this.putQueryParameter("overrideIfExists", overrideIfExists);
@@ -544,7 +588,10 @@ public class CreateAggTaskGroupRequest extends Request {
             } 
 
             /**
-             * key.
+             * <p>Key of the resource group tag.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>key1</p>
              */
             public Builder key(String key) {
                 this.key = key;
@@ -552,7 +599,10 @@ public class CreateAggTaskGroupRequest extends Request {
             }
 
             /**
-             * value.
+             * <p>Value of the resource group tag.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>value1</p>
              */
             public Builder value(String value) {
                 this.value = value;

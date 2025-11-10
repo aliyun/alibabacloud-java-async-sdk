@@ -93,7 +93,10 @@ public class ListIntegrationPolicyPodMonitorsResponseBody extends TeaModel {
         } 
 
         /**
-         * clusterId.
+         * <p>Cluster ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>et15prod-et15storage</p>
          */
         public Builder clusterId(String clusterId) {
             this.clusterId = clusterId;
@@ -101,7 +104,7 @@ public class ListIntegrationPolicyPodMonitorsResponseBody extends TeaModel {
         }
 
         /**
-         * podMonitors.
+         * <p>PodMonitor list</p>
          */
         public Builder podMonitors(java.util.List<PodMonitors> podMonitors) {
             this.podMonitors = podMonitors;
@@ -109,7 +112,10 @@ public class ListIntegrationPolicyPodMonitorsResponseBody extends TeaModel {
         }
 
         /**
-         * policyId.
+         * <p>Policy ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>policy-c9efed2b99c348d49e589c5f780fc074</p>
          */
         public Builder policyId(String policyId) {
             this.policyId = policyId;
@@ -117,7 +123,7 @@ public class ListIntegrationPolicyPodMonitorsResponseBody extends TeaModel {
         }
 
         /**
-         * <p>Id of the request</p>
+         * <p>ID of the request</p>
          * 
          * <strong>example:</strong>
          * <p>CD8BA7D6-995D-578D-9941-78B0FECD14B5</p>
@@ -225,7 +231,10 @@ public class ListIntegrationPolicyPodMonitorsResponseBody extends TeaModel {
             } 
 
             /**
-             * interval.
+             * <p>Collection interval</p>
+             * 
+             * <strong>example:</strong>
+             * <p>30s</p>
              */
             public Builder interval(String interval) {
                 this.interval = interval;
@@ -233,7 +242,10 @@ public class ListIntegrationPolicyPodMonitorsResponseBody extends TeaModel {
             }
 
             /**
-             * matchedTargetCount.
+             * <p>Number of matched targets</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder matchedTargetCount(Long matchedTargetCount) {
                 this.matchedTargetCount = matchedTargetCount;
@@ -241,7 +253,10 @@ public class ListIntegrationPolicyPodMonitorsResponseBody extends TeaModel {
             }
 
             /**
-             * path.
+             * <p>Metric collection path</p>
+             * 
+             * <strong>example:</strong>
+             * <p>/metrics</p>
              */
             public Builder path(String path) {
                 this.path = path;
@@ -249,7 +264,10 @@ public class ListIntegrationPolicyPodMonitorsResponseBody extends TeaModel {
             }
 
             /**
-             * port.
+             * <p>Port number</p>
+             * 
+             * <strong>example:</strong>
+             * <p>9100</p>
              */
             public Builder port(String port) {
                 this.port = port;
@@ -257,7 +275,10 @@ public class ListIntegrationPolicyPodMonitorsResponseBody extends TeaModel {
             }
 
             /**
-             * targetPort.
+             * <p>Target port</p>
+             * 
+             * <strong>example:</strong>
+             * <p>https</p>
              */
             public Builder targetPort(String targetPort) {
                 this.targetPort = targetPort;
@@ -428,7 +449,10 @@ public class ListIntegrationPolicyPodMonitorsResponseBody extends TeaModel {
             } 
 
             /**
-             * addonName.
+             * <p>Addon name.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>cloud-ecs</p>
              */
             public Builder addonName(String addonName) {
                 this.addonName = addonName;
@@ -436,7 +460,10 @@ public class ListIntegrationPolicyPodMonitorsResponseBody extends TeaModel {
             }
 
             /**
-             * addonReleaseName.
+             * <p>Addon Release name.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>release-2345678</p>
              */
             public Builder addonReleaseName(String addonReleaseName) {
                 this.addonReleaseName = addonReleaseName;
@@ -444,7 +471,10 @@ public class ListIntegrationPolicyPodMonitorsResponseBody extends TeaModel {
             }
 
             /**
-             * addonVersion.
+             * <p>Addon version.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>0.0.1</p>
              */
             public Builder addonVersion(String addonVersion) {
                 this.addonVersion = addonVersion;
@@ -452,7 +482,10 @@ public class ListIntegrationPolicyPodMonitorsResponseBody extends TeaModel {
             }
 
             /**
-             * configYaml.
+             * <p>Configuration yaml.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>apiVersion: xxxxx</p>
              */
             public Builder configYaml(String configYaml) {
                 this.configYaml = configYaml;
@@ -460,7 +493,10 @@ public class ListIntegrationPolicyPodMonitorsResponseBody extends TeaModel {
             }
 
             /**
-             * enableStatus.
+             * <p>Enable status.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>run</p>
              */
             public Builder enableStatus(String enableStatus) {
                 this.enableStatus = enableStatus;
@@ -468,7 +504,10 @@ public class ListIntegrationPolicyPodMonitorsResponseBody extends TeaModel {
             }
 
             /**
-             * encryptYaml.
+             * <p>Encrypt yaml.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>YXBpVmVyc2lvbjogeHh4eHgK</p>
              */
             public Builder encryptYaml(Boolean encryptYaml) {
                 this.encryptYaml = encryptYaml;
@@ -476,7 +515,7 @@ public class ListIntegrationPolicyPodMonitorsResponseBody extends TeaModel {
             }
 
             /**
-             * endpoints.
+             * <p>Instance endpoints.</p>
              */
             public Builder endpoints(java.util.List<Endpoints> endpoints) {
                 this.endpoints = endpoints;
@@ -484,7 +523,10 @@ public class ListIntegrationPolicyPodMonitorsResponseBody extends TeaModel {
             }
 
             /**
-             * matchedPodCount.
+             * <p>Number of matched pods</p>
+             * 
+             * <strong>example:</strong>
+             * <p>3</p>
              */
             public Builder matchedPodCount(Long matchedPodCount) {
                 this.matchedPodCount = matchedPodCount;
@@ -492,7 +534,10 @@ public class ListIntegrationPolicyPodMonitorsResponseBody extends TeaModel {
             }
 
             /**
-             * name.
+             * <p>Collection name.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>znzmo_entity_test</p>
              */
             public Builder name(String name) {
                 this.name = name;
@@ -500,7 +545,10 @@ public class ListIntegrationPolicyPodMonitorsResponseBody extends TeaModel {
             }
 
             /**
-             * namespace.
+             * <p>Namespace</p>
+             * 
+             * <strong>example:</strong>
+             * <p>sla-ns-d5aeb2b4f91b47</p>
              */
             public Builder namespace(String namespace) {
                 this.namespace = namespace;

@@ -202,6 +202,7 @@ public class CreateAddonReleaseRequest extends Request {
         } 
 
         /**
+         * <p>Environment policy ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -214,6 +215,7 @@ public class CreateAddonReleaseRequest extends Request {
         }
 
         /**
+         * <p>The Addon name of the component that needs to be monitored.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -226,7 +228,10 @@ public class CreateAddonReleaseRequest extends Request {
         }
 
         /**
-         * aliyunLang.
+         * <p>The language type of the component.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>zh</p>
          */
         public Builder aliyunLang(String aliyunLang) {
             this.putBodyParameter("aliyunLang", aliyunLang);
@@ -235,7 +240,10 @@ public class CreateAddonReleaseRequest extends Request {
         }
 
         /**
-         * dryRun.
+         * <p>Whether it is a dry run, default is false.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>false</p>
          */
         public Builder dryRun(Boolean dryRun) {
             this.putBodyParameter("dryRun", dryRun);
@@ -244,7 +252,7 @@ public class CreateAddonReleaseRequest extends Request {
         }
 
         /**
-         * entityRules.
+         * <p>Field rules</p>
          */
         public Builder entityRules(EntityDiscoverRule entityRules) {
             this.putBodyParameter("entityRules", entityRules);
@@ -253,7 +261,10 @@ public class CreateAddonReleaseRequest extends Request {
         }
 
         /**
-         * envType.
+         * <p>Environment type. If the Policy type is CS and ECS, use accordingly; otherwise, it is unified as Cloud.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>CS</p>
          */
         public Builder envType(String envType) {
             this.putBodyParameter("envType", envType);
@@ -262,7 +273,10 @@ public class CreateAddonReleaseRequest extends Request {
         }
 
         /**
-         * parentAddonReleaseId.
+         * <p>Parent AddonReleaseId.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>policy-xxxxxxxxxxx</p>
          */
         public Builder parentAddonReleaseId(String parentAddonReleaseId) {
             this.putBodyParameter("parentAddonReleaseId", parentAddonReleaseId);
@@ -271,7 +285,10 @@ public class CreateAddonReleaseRequest extends Request {
         }
 
         /**
-         * releaseName.
+         * <p>The plugin name after access. If not specified, a default rule name will be generated.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>test-gpu-integration-name</p>
          */
         public Builder releaseName(String releaseName) {
             this.putBodyParameter("releaseName", releaseName);
@@ -280,7 +297,10 @@ public class CreateAddonReleaseRequest extends Request {
         }
 
         /**
-         * values.
+         * <p>Input metadata.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>{&quot;install&quot;:{&quot;mode&quot;:&quot;auto-install&quot;,&quot;listenPort&quot;:&quot;9400&quot;},&quot;discoverMode&quot;:&quot;instances&quot;,&quot;discover&quot;:{&quot;instances&quot;:&quot;worker-k8s-for-cs-c126d87c76218487e83ab322017f11b44&quot;},&quot;scrapeInterval&quot;:&quot;15&quot;,&quot;enableSecuritecs-nodeyGroupInjection&quot;:&quot;true&quot;,&quot;metricTags&quot;:&quot;&quot;}</p>
          */
         public Builder values(String values) {
             this.putBodyParameter("values", values);
@@ -289,6 +309,7 @@ public class CreateAddonReleaseRequest extends Request {
         }
 
         /**
+         * <p>The version of the Addon component that needs to be monitored.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -301,7 +322,10 @@ public class CreateAddonReleaseRequest extends Request {
         }
 
         /**
-         * workspace.
+         * <p>The workspace name for installing the component resources.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>default</p>
          */
         public Builder workspace(String workspace) {
             this.putBodyParameter("workspace", workspace);

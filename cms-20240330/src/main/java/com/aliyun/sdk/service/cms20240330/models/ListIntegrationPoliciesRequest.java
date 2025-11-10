@@ -241,7 +241,10 @@ public class ListIntegrationPoliciesRequest extends Request {
         } 
 
         /**
-         * addonName.
+         * <p>Addon name.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cs-default</p>
          */
         public Builder addonName(String addonName) {
             this.putQueryParameter("addonName", addonName);
@@ -250,7 +253,10 @@ public class ListIntegrationPoliciesRequest extends Request {
         }
 
         /**
-         * bindResourceId.
+         * <p>Bound resource ID</p>
+         * 
+         * <strong>example:</strong>
+         * <p>622d27c2e87d49debceeebc7c642610e</p>
          */
         public Builder bindResourceId(String bindResourceId) {
             this.putQueryParameter("bindResourceId", bindResourceId);
@@ -259,7 +265,10 @@ public class ListIntegrationPoliciesRequest extends Request {
         }
 
         /**
-         * entityGroupIds.
+         * <p>Filter for entity IDs, separated by commas</p>
+         * 
+         * <strong>example:</strong>
+         * <p>eg-1,eg-2,eg-3</p>
          */
         public Builder entityGroupIds(String entityGroupIds) {
             this.putQueryParameter("entityGroupIds", entityGroupIds);
@@ -268,7 +277,10 @@ public class ListIntegrationPoliciesRequest extends Request {
         }
 
         /**
-         * filterRegionIds.
+         * <p>Used for Region query, separated by commas</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-beijing,cn-hangzhou</p>
          */
         public Builder filterRegionIds(String filterRegionIds) {
             this.putQueryParameter("filterRegionIds", filterRegionIds);
@@ -277,7 +289,10 @@ public class ListIntegrationPoliciesRequest extends Request {
         }
 
         /**
-         * maxResults.
+         * <p>Maximum number of results to return. Default is 30, with a maximum of 100.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>30</p>
          */
         public Builder maxResults(Integer maxResults) {
             this.putQueryParameter("maxResults", maxResults);
@@ -286,7 +301,10 @@ public class ListIntegrationPoliciesRequest extends Request {
         }
 
         /**
-         * nextToken.
+         * <p>Used to return more results. This parameter is not required for the first query. For subsequent queries, use the Token obtained from the response.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>mvnX6zqg3P</p>
          */
         public Builder nextToken(String nextToken) {
             this.putQueryParameter("nextToken", nextToken);
@@ -295,7 +313,10 @@ public class ListIntegrationPoliciesRequest extends Request {
         }
 
         /**
-         * policyId.
+         * <p>Policy ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>policy-93817a401f78435596d745a97d2e85a1</p>
          */
         public Builder policyId(String policyId) {
             this.putQueryParameter("policyId", policyId);
@@ -304,7 +325,10 @@ public class ListIntegrationPoliciesRequest extends Request {
         }
 
         /**
-         * policyName.
+         * <p>Rule name.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>prod-database</p>
          */
         public Builder policyName(String policyName) {
             this.putQueryParameter("policyName", policyName);
@@ -313,7 +337,10 @@ public class ListIntegrationPoliciesRequest extends Request {
         }
 
         /**
-         * policyType.
+         * <p>Policy type</p>
+         * 
+         * <strong>example:</strong>
+         * <p>CS</p>
          */
         public Builder policyType(String policyType) {
             this.putQueryParameter("policyType", policyType);
@@ -322,7 +349,10 @@ public class ListIntegrationPoliciesRequest extends Request {
         }
 
         /**
-         * prometheusInstanceId.
+         * <p>Instance ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cmee-622d27c2e87d49debceeebc7c642610e</p>
          */
         public Builder prometheusInstanceId(String prometheusInstanceId) {
             this.putQueryParameter("prometheusInstanceId", prometheusInstanceId);
@@ -331,7 +361,10 @@ public class ListIntegrationPoliciesRequest extends Request {
         }
 
         /**
-         * query.
+         * <p>Used for general queries</p>
+         * 
+         * <strong>example:</strong>
+         * <p>test</p>
          */
         public Builder query(String query) {
             this.putQueryParameter("query", query);
@@ -340,7 +373,10 @@ public class ListIntegrationPoliciesRequest extends Request {
         }
 
         /**
-         * resourceGroupId.
+         * <p>Resource group ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>rg-xxxxx</p>
          */
         public Builder resourceGroupId(String resourceGroupId) {
             this.putQueryParameter("resourceGroupId", resourceGroupId);
@@ -349,7 +385,7 @@ public class ListIntegrationPoliciesRequest extends Request {
         }
 
         /**
-         * tag.
+         * <p>Tag list.</p>
          */
         public Builder tag(java.util.List<Tag> tag) {
             String tagShrink = shrink(tag, "tag", "json");
@@ -359,7 +395,10 @@ public class ListIntegrationPoliciesRequest extends Request {
         }
 
         /**
-         * workspace.
+         * <p>Workspace.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>demo</p>
          */
         public Builder workspace(String workspace) {
             this.putQueryParameter("workspace", workspace);
@@ -427,7 +466,10 @@ public class ListIntegrationPoliciesRequest extends Request {
             } 
 
             /**
-             * key.
+             * <p>Tag key</p>
+             * 
+             * <strong>example:</strong>
+             * <p>test</p>
              */
             public Builder key(String key) {
                 this.key = key;
@@ -435,7 +477,10 @@ public class ListIntegrationPoliciesRequest extends Request {
             }
 
             /**
-             * value.
+             * <p>Tag value</p>
+             * 
+             * <strong>example:</strong>
+             * <p>value</p>
              */
             public Builder value(String value) {
                 this.value = value;

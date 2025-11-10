@@ -88,6 +88,7 @@ public class GetPrometheusViewRequest extends Request {
         } 
 
         /**
+         * <p>Instance ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -100,7 +101,10 @@ public class GetPrometheusViewRequest extends Request {
         }
 
         /**
-         * aliyunLang.
+         * <p>Language environment, default is Chinese zh | en</p>
+         * 
+         * <strong>example:</strong>
+         * <p>zh</p>
          */
         public Builder aliyunLang(String aliyunLang) {
             this.putQueryParameter("aliyunLang", aliyunLang);
@@ -109,7 +113,10 @@ public class GetPrometheusViewRequest extends Request {
         }
 
         /**
-         * resourceGroupId.
+         * <p>Resource group ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>rg-aek2bhocin5e2na</p>
          */
         public Builder resourceGroupId(String resourceGroupId) {
             this.putQueryParameter("resourceGroupId", resourceGroupId);

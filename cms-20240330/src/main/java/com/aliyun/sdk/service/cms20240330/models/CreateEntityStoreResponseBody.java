@@ -67,7 +67,10 @@ public class CreateEntityStoreResponseBody extends TeaModel {
         } 
 
         /**
-         * requestId.
+         * <p>request ID</p>
+         * 
+         * <strong>example:</strong>
+         * <p>264C3E89-XXXX-XXXX-XXXX-CE9C2196C7DC</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -75,7 +78,10 @@ public class CreateEntityStoreResponseBody extends TeaModel {
         }
 
         /**
-         * workspaceName.
+         * <p>workspace name</p>
+         * 
+         * <strong>example:</strong>
+         * <p>workspace-test-001</p>
          */
         public Builder workspaceName(String workspaceName) {
             this.workspaceName = workspaceName;
