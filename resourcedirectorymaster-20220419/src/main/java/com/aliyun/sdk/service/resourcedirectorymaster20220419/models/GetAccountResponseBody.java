@@ -218,6 +218,9 @@ public class GetAccountResponseBody extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("ResourceDirectoryPath")
         private String resourceDirectoryPath;
 
+        @com.aliyun.core.annotation.NameInMap("SecureMobilePhone")
+        private String secureMobilePhone;
+
         @com.aliyun.core.annotation.NameInMap("Status")
         private String status;
 
@@ -241,6 +244,7 @@ public class GetAccountResponseBody extends TeaModel {
             this.modifyTime = builder.modifyTime;
             this.resourceDirectoryId = builder.resourceDirectoryId;
             this.resourceDirectoryPath = builder.resourceDirectoryPath;
+            this.secureMobilePhone = builder.secureMobilePhone;
             this.status = builder.status;
             this.tags = builder.tags;
             this.type = builder.type;
@@ -346,6 +350,13 @@ public class GetAccountResponseBody extends TeaModel {
         }
 
         /**
+         * @return secureMobilePhone
+         */
+        public String getSecureMobilePhone() {
+            return this.secureMobilePhone;
+        }
+
+        /**
          * @return status
          */
         public String getStatus() {
@@ -380,6 +391,7 @@ public class GetAccountResponseBody extends TeaModel {
             private String modifyTime; 
             private String resourceDirectoryId; 
             private String resourceDirectoryPath; 
+            private String secureMobilePhone; 
             private String status; 
             private java.util.List<Tags> tags; 
             private String type; 
@@ -401,6 +413,7 @@ public class GetAccountResponseBody extends TeaModel {
                 this.modifyTime = model.modifyTime;
                 this.resourceDirectoryId = model.resourceDirectoryId;
                 this.resourceDirectoryPath = model.resourceDirectoryPath;
+                this.secureMobilePhone = model.secureMobilePhone;
                 this.status = model.status;
                 this.tags = model.tags;
                 this.type = model.type;
@@ -554,6 +567,14 @@ public class GetAccountResponseBody extends TeaModel {
              */
             public Builder resourceDirectoryPath(String resourceDirectoryPath) {
                 this.resourceDirectoryPath = resourceDirectoryPath;
+                return this;
+            }
+
+            /**
+             * SecureMobilePhone.
+             */
+            public Builder secureMobilePhone(String secureMobilePhone) {
+                this.secureMobilePhone = secureMobilePhone;
                 return this;
             }
 
