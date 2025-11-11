@@ -665,6 +665,9 @@ public class DescribeFaqResponseBody extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("SolutionId")
         private Long solutionId;
 
+        @com.aliyun.core.annotation.NameInMap("TagIdList")
+        private java.util.List<Long> tagIdList;
+
         private Solutions(Builder builder) {
             this.content = builder.content;
             this.contentType = builder.contentType;
@@ -673,6 +676,7 @@ public class DescribeFaqResponseBody extends TeaModel {
             this.perspectiveCodes = builder.perspectiveCodes;
             this.plainText = builder.plainText;
             this.solutionId = builder.solutionId;
+            this.tagIdList = builder.tagIdList;
         }
 
         public static Builder builder() {
@@ -732,6 +736,13 @@ public class DescribeFaqResponseBody extends TeaModel {
             return this.solutionId;
         }
 
+        /**
+         * @return tagIdList
+         */
+        public java.util.List<Long> getTagIdList() {
+            return this.tagIdList;
+        }
+
         public static final class Builder {
             private String content; 
             private Integer contentType; 
@@ -740,6 +751,7 @@ public class DescribeFaqResponseBody extends TeaModel {
             private java.util.List<String> perspectiveCodes; 
             private String plainText; 
             private Long solutionId; 
+            private java.util.List<Long> tagIdList; 
 
             private Builder() {
             } 
@@ -752,6 +764,7 @@ public class DescribeFaqResponseBody extends TeaModel {
                 this.perspectiveCodes = model.perspectiveCodes;
                 this.plainText = model.plainText;
                 this.solutionId = model.solutionId;
+                this.tagIdList = model.tagIdList;
             } 
 
             /**
@@ -807,6 +820,14 @@ public class DescribeFaqResponseBody extends TeaModel {
              */
             public Builder solutionId(Long solutionId) {
                 this.solutionId = solutionId;
+                return this;
+            }
+
+            /**
+             * TagIdList.
+             */
+            public Builder tagIdList(java.util.List<Long> tagIdList) {
+                this.tagIdList = tagIdList;
                 return this;
             }
 
