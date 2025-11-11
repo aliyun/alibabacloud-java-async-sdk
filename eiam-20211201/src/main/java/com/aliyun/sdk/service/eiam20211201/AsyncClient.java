@@ -62,6 +62,12 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<AuthorizeApplicationToUsersResponse> authorizeApplicationToUsers(AuthorizeApplicationToUsersRequest request);
 
     /**
+     * @param request the request parameters of BindUserAuthnSourceMapping  BindUserAuthnSourceMappingRequest
+     * @return BindUserAuthnSourceMappingResponse
+     */
+    CompletableFuture<BindUserAuthnSourceMappingResponse> bindUserAuthnSourceMapping(BindUserAuthnSourceMappingRequest request);
+
+    /**
      * <b>description</b> :
      * <p>IDaaS EIAM supports the following two standard single sign-on (SSO) protocols for adding applications: SAML 2.0 and OIDC. You can select an SSO protocol based on your business requirements when you add an application. You cannot change the SSO protocol that you selected after the application is added.</p>
      * 
@@ -929,6 +935,12 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<ListSynchronizationJobsResponse> listSynchronizationJobs(ListSynchronizationJobsRequest request);
 
     /**
+     * @param request the request parameters of ListUserAuthnSourceMappings  ListUserAuthnSourceMappingsRequest
+     * @return ListUserAuthnSourceMappingsResponse
+     */
+    CompletableFuture<ListUserAuthnSourceMappingsResponse> listUserAuthnSourceMappings(ListUserAuthnSourceMappingsRequest request);
+
+    /**
      * @param request the request parameters of ListUsers  ListUsersRequest
      * @return ListUsersResponse
      */
@@ -1092,6 +1104,12 @@ public interface AsyncClient extends SdkAutoCloseable {
      * @return SetUserPrimaryOrganizationalUnitResponse
      */
     CompletableFuture<SetUserPrimaryOrganizationalUnitResponse> setUserPrimaryOrganizationalUnit(SetUserPrimaryOrganizationalUnitRequest request);
+
+    /**
+     * @param request the request parameters of UnbindUserAuthnSourceMapping  UnbindUserAuthnSourceMappingRequest
+     * @return UnbindUserAuthnSourceMappingResponse
+     */
+    CompletableFuture<UnbindUserAuthnSourceMappingResponse> unbindUserAuthnSourceMapping(UnbindUserAuthnSourceMappingRequest request);
 
     /**
      * @param request the request parameters of UnlockUser  UnlockUserRequest

@@ -166,6 +166,24 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
+     * @param request the request parameters of BindUserAuthnSourceMapping  BindUserAuthnSourceMappingRequest
+     * @return BindUserAuthnSourceMappingResponse
+     */
+    @Override
+    public CompletableFuture<BindUserAuthnSourceMappingResponse> bindUserAuthnSourceMapping(BindUserAuthnSourceMappingRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RPC).setAction("BindUserAuthnSourceMapping").setMethod(HttpMethod.POST).setPathRegex("/").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(BindUserAuthnSourceMappingResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<BindUserAuthnSourceMappingResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
      * <b>description</b> :
      * <p>IDaaS EIAM supports the following two standard single sign-on (SSO) protocols for adding applications: SAML 2.0 and OIDC. You can select an SSO protocol based on your business requirements when you add an application. You cannot change the SSO protocol that you selected after the application is added.</p>
      * 
@@ -2689,6 +2707,24 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
+     * @param request the request parameters of ListUserAuthnSourceMappings  ListUserAuthnSourceMappingsRequest
+     * @return ListUserAuthnSourceMappingsResponse
+     */
+    @Override
+    public CompletableFuture<ListUserAuthnSourceMappingsResponse> listUserAuthnSourceMappings(ListUserAuthnSourceMappingsRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RPC).setAction("ListUserAuthnSourceMappings").setMethod(HttpMethod.POST).setPathRegex("/").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(ListUserAuthnSourceMappingsResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<ListUserAuthnSourceMappingsResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
      * @param request the request parameters of ListUsers  ListUsersRequest
      * @return ListUsersResponse
      */
@@ -3172,6 +3208,24 @@ public final class DefaultAsyncClient implements AsyncClient {
             return this.handler.execute(params);
         } catch (Exception e) {
             CompletableFuture<SetUserPrimaryOrganizationalUnitResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
+     * @param request the request parameters of UnbindUserAuthnSourceMapping  UnbindUserAuthnSourceMappingRequest
+     * @return UnbindUserAuthnSourceMappingResponse
+     */
+    @Override
+    public CompletableFuture<UnbindUserAuthnSourceMappingResponse> unbindUserAuthnSourceMapping(UnbindUserAuthnSourceMappingRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RPC).setAction("UnbindUserAuthnSourceMapping").setMethod(HttpMethod.POST).setPathRegex("/").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(UnbindUserAuthnSourceMappingResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<UnbindUserAuthnSourceMappingResponse> future = new CompletableFuture<>();
             future.completeExceptionally(e);
             return future;
         }
