@@ -23,6 +23,10 @@ public class SubmitImportTermsTaskRequest extends Request {
     private String fileKey;
 
     @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("TermsName")
+    private String termsName;
+
+    @com.aliyun.core.annotation.Body
     @com.aliyun.core.annotation.NameInMap("WorkspaceId")
     @com.aliyun.core.annotation.Validation(required = true)
     private String workspaceId;
@@ -30,6 +34,7 @@ public class SubmitImportTermsTaskRequest extends Request {
     private SubmitImportTermsTaskRequest(Builder builder) {
         super(builder);
         this.fileKey = builder.fileKey;
+        this.termsName = builder.termsName;
         this.workspaceId = builder.workspaceId;
     }
 
@@ -54,6 +59,13 @@ public class SubmitImportTermsTaskRequest extends Request {
     }
 
     /**
+     * @return termsName
+     */
+    public String getTermsName() {
+        return this.termsName;
+    }
+
+    /**
      * @return workspaceId
      */
     public String getWorkspaceId() {
@@ -62,6 +74,7 @@ public class SubmitImportTermsTaskRequest extends Request {
 
     public static final class Builder extends Request.Builder<SubmitImportTermsTaskRequest, Builder> {
         private String fileKey; 
+        private String termsName; 
         private String workspaceId; 
 
         private Builder() {
@@ -71,6 +84,7 @@ public class SubmitImportTermsTaskRequest extends Request {
         private Builder(SubmitImportTermsTaskRequest request) {
             super(request);
             this.fileKey = request.fileKey;
+            this.termsName = request.termsName;
             this.workspaceId = request.workspaceId;
         } 
 
@@ -83,6 +97,15 @@ public class SubmitImportTermsTaskRequest extends Request {
         public Builder fileKey(String fileKey) {
             this.putBodyParameter("FileKey", fileKey);
             this.fileKey = fileKey;
+            return this;
+        }
+
+        /**
+         * TermsName.
+         */
+        public Builder termsName(String termsName) {
+            this.putBodyParameter("TermsName", termsName);
+            this.termsName = termsName;
             return this;
         }
 

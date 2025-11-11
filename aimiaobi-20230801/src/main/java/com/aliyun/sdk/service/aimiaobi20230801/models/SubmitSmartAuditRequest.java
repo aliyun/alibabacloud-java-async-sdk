@@ -22,8 +22,16 @@ public class SubmitSmartAuditRequest extends Request {
     private java.util.List<ImageUrlList> imageUrlList;
 
     @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("NoteId")
+    private String noteId;
+
+    @com.aliyun.core.annotation.Body
     @com.aliyun.core.annotation.NameInMap("SubCodes")
     private java.util.List<String> subCodes;
+
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("TermsName")
+    private String termsName;
 
     @com.aliyun.core.annotation.Body
     @com.aliyun.core.annotation.NameInMap("Text")
@@ -40,7 +48,9 @@ public class SubmitSmartAuditRequest extends Request {
     private SubmitSmartAuditRequest(Builder builder) {
         super(builder);
         this.imageUrlList = builder.imageUrlList;
+        this.noteId = builder.noteId;
         this.subCodes = builder.subCodes;
+        this.termsName = builder.termsName;
         this.text = builder.text;
         this.workspaceId = builder.workspaceId;
         this.imageUrls = builder.imageUrls;
@@ -67,10 +77,24 @@ public class SubmitSmartAuditRequest extends Request {
     }
 
     /**
+     * @return noteId
+     */
+    public String getNoteId() {
+        return this.noteId;
+    }
+
+    /**
      * @return subCodes
      */
     public java.util.List<String> getSubCodes() {
         return this.subCodes;
+    }
+
+    /**
+     * @return termsName
+     */
+    public String getTermsName() {
+        return this.termsName;
     }
 
     /**
@@ -96,7 +120,9 @@ public class SubmitSmartAuditRequest extends Request {
 
     public static final class Builder extends Request.Builder<SubmitSmartAuditRequest, Builder> {
         private java.util.List<ImageUrlList> imageUrlList; 
+        private String noteId; 
         private java.util.List<String> subCodes; 
+        private String termsName; 
         private String text; 
         private String workspaceId; 
         private java.util.List<ImageUrls> imageUrls; 
@@ -108,7 +134,9 @@ public class SubmitSmartAuditRequest extends Request {
         private Builder(SubmitSmartAuditRequest request) {
             super(request);
             this.imageUrlList = request.imageUrlList;
+            this.noteId = request.noteId;
             this.subCodes = request.subCodes;
+            this.termsName = request.termsName;
             this.text = request.text;
             this.workspaceId = request.workspaceId;
             this.imageUrls = request.imageUrls;
@@ -125,12 +153,30 @@ public class SubmitSmartAuditRequest extends Request {
         }
 
         /**
+         * NoteId.
+         */
+        public Builder noteId(String noteId) {
+            this.putBodyParameter("NoteId", noteId);
+            this.noteId = noteId;
+            return this;
+        }
+
+        /**
          * SubCodes.
          */
         public Builder subCodes(java.util.List<String> subCodes) {
             String subCodesShrink = shrink(subCodes, "SubCodes", "json");
             this.putBodyParameter("SubCodes", subCodesShrink);
             this.subCodes = subCodes;
+            return this;
+        }
+
+        /**
+         * TermsName.
+         */
+        public Builder termsName(String termsName) {
+            this.putBodyParameter("TermsName", termsName);
+            this.termsName = termsName;
             return this;
         }
 

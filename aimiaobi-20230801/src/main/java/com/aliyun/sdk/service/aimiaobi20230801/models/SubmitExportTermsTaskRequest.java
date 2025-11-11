@@ -18,12 +18,17 @@ import com.aliyun.sdk.gateway.pop.models.*;
  */
 public class SubmitExportTermsTaskRequest extends Request {
     @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("TermsName")
+    private String termsName;
+
+    @com.aliyun.core.annotation.Body
     @com.aliyun.core.annotation.NameInMap("WorkspaceId")
     @com.aliyun.core.annotation.Validation(required = true)
     private String workspaceId;
 
     private SubmitExportTermsTaskRequest(Builder builder) {
         super(builder);
+        this.termsName = builder.termsName;
         this.workspaceId = builder.workspaceId;
     }
 
@@ -41,6 +46,13 @@ public class SubmitExportTermsTaskRequest extends Request {
     }
 
     /**
+     * @return termsName
+     */
+    public String getTermsName() {
+        return this.termsName;
+    }
+
+    /**
      * @return workspaceId
      */
     public String getWorkspaceId() {
@@ -48,6 +60,7 @@ public class SubmitExportTermsTaskRequest extends Request {
     }
 
     public static final class Builder extends Request.Builder<SubmitExportTermsTaskRequest, Builder> {
+        private String termsName; 
         private String workspaceId; 
 
         private Builder() {
@@ -56,8 +69,18 @@ public class SubmitExportTermsTaskRequest extends Request {
 
         private Builder(SubmitExportTermsTaskRequest request) {
             super(request);
+            this.termsName = request.termsName;
             this.workspaceId = request.workspaceId;
         } 
+
+        /**
+         * TermsName.
+         */
+        public Builder termsName(String termsName) {
+            this.putBodyParameter("TermsName", termsName);
+            this.termsName = termsName;
+            return this;
+        }
 
         /**
          * <p>This parameter is required.</p>

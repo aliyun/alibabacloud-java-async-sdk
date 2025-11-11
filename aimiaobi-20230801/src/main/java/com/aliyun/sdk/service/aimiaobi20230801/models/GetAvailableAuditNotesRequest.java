@@ -18,12 +18,17 @@ import com.aliyun.sdk.gateway.pop.models.*;
  */
 public class GetAvailableAuditNotesRequest extends Request {
     @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("NoteId")
+    private String noteId;
+
+    @com.aliyun.core.annotation.Body
     @com.aliyun.core.annotation.NameInMap("WorkspaceId")
     @com.aliyun.core.annotation.Validation(required = true)
     private String workspaceId;
 
     private GetAvailableAuditNotesRequest(Builder builder) {
         super(builder);
+        this.noteId = builder.noteId;
         this.workspaceId = builder.workspaceId;
     }
 
@@ -41,6 +46,13 @@ public class GetAvailableAuditNotesRequest extends Request {
     }
 
     /**
+     * @return noteId
+     */
+    public String getNoteId() {
+        return this.noteId;
+    }
+
+    /**
      * @return workspaceId
      */
     public String getWorkspaceId() {
@@ -48,6 +60,7 @@ public class GetAvailableAuditNotesRequest extends Request {
     }
 
     public static final class Builder extends Request.Builder<GetAvailableAuditNotesRequest, Builder> {
+        private String noteId; 
         private String workspaceId; 
 
         private Builder() {
@@ -56,8 +69,18 @@ public class GetAvailableAuditNotesRequest extends Request {
 
         private Builder(GetAvailableAuditNotesRequest request) {
             super(request);
+            this.noteId = request.noteId;
             this.workspaceId = request.workspaceId;
         } 
+
+        /**
+         * NoteId.
+         */
+        public Builder noteId(String noteId) {
+            this.putBodyParameter("NoteId", noteId);
+            this.noteId = noteId;
+            return this;
+        }
 
         /**
          * <p>This parameter is required.</p>

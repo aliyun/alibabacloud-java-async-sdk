@@ -18,6 +18,10 @@ import com.aliyun.sdk.gateway.pop.models.*;
  */
 public class DownloadAuditNoteRequest extends Request {
     @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("NoteId")
+    private String noteId;
+
+    @com.aliyun.core.annotation.Body
     @com.aliyun.core.annotation.NameInMap("TaskId")
     private String taskId;
 
@@ -28,6 +32,7 @@ public class DownloadAuditNoteRequest extends Request {
 
     private DownloadAuditNoteRequest(Builder builder) {
         super(builder);
+        this.noteId = builder.noteId;
         this.taskId = builder.taskId;
         this.workspaceId = builder.workspaceId;
     }
@@ -46,6 +51,13 @@ public class DownloadAuditNoteRequest extends Request {
     }
 
     /**
+     * @return noteId
+     */
+    public String getNoteId() {
+        return this.noteId;
+    }
+
+    /**
      * @return taskId
      */
     public String getTaskId() {
@@ -60,6 +72,7 @@ public class DownloadAuditNoteRequest extends Request {
     }
 
     public static final class Builder extends Request.Builder<DownloadAuditNoteRequest, Builder> {
+        private String noteId; 
         private String taskId; 
         private String workspaceId; 
 
@@ -69,9 +82,19 @@ public class DownloadAuditNoteRequest extends Request {
 
         private Builder(DownloadAuditNoteRequest request) {
             super(request);
+            this.noteId = request.noteId;
             this.taskId = request.taskId;
             this.workspaceId = request.workspaceId;
         } 
+
+        /**
+         * NoteId.
+         */
+        public Builder noteId(String noteId) {
+            this.putBodyParameter("NoteId", noteId);
+            this.noteId = noteId;
+            return this;
+        }
 
         /**
          * TaskId.

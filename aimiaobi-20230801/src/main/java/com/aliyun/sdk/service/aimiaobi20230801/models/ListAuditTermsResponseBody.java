@@ -260,12 +260,16 @@ public class ListAuditTermsResponseBody extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("TermsDesc")
         private String termsDesc;
 
+        @com.aliyun.core.annotation.NameInMap("TermsName")
+        private String termsName;
+
         private Data(Builder builder) {
             this.exceptionWord = builder.exceptionWord;
             this.id = builder.id;
             this.keyword = builder.keyword;
             this.suggestWord = builder.suggestWord;
             this.termsDesc = builder.termsDesc;
+            this.termsName = builder.termsName;
         }
 
         public static Builder builder() {
@@ -311,12 +315,20 @@ public class ListAuditTermsResponseBody extends TeaModel {
             return this.termsDesc;
         }
 
+        /**
+         * @return termsName
+         */
+        public String getTermsName() {
+            return this.termsName;
+        }
+
         public static final class Builder {
             private java.util.List<String> exceptionWord; 
             private String id; 
             private String keyword; 
             private String suggestWord; 
             private String termsDesc; 
+            private String termsName; 
 
             private Builder() {
             } 
@@ -327,6 +339,7 @@ public class ListAuditTermsResponseBody extends TeaModel {
                 this.keyword = model.keyword;
                 this.suggestWord = model.suggestWord;
                 this.termsDesc = model.termsDesc;
+                this.termsName = model.termsName;
             } 
 
             /**
@@ -366,6 +379,14 @@ public class ListAuditTermsResponseBody extends TeaModel {
              */
             public Builder termsDesc(String termsDesc) {
                 this.termsDesc = termsDesc;
+                return this;
+            }
+
+            /**
+             * TermsName.
+             */
+            public Builder termsName(String termsName) {
+                this.termsName = termsName;
                 return this;
             }
 

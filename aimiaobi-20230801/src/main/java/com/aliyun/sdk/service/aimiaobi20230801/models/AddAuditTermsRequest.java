@@ -34,6 +34,10 @@ public class AddAuditTermsRequest extends Request {
     private String termsDesc;
 
     @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("TermsName")
+    private String termsName;
+
+    @com.aliyun.core.annotation.Body
     @com.aliyun.core.annotation.NameInMap("WorkspaceId")
     @com.aliyun.core.annotation.Validation(required = true)
     private String workspaceId;
@@ -44,6 +48,7 @@ public class AddAuditTermsRequest extends Request {
         this.keyword = builder.keyword;
         this.suggestWord = builder.suggestWord;
         this.termsDesc = builder.termsDesc;
+        this.termsName = builder.termsName;
         this.workspaceId = builder.workspaceId;
     }
 
@@ -89,6 +94,13 @@ public class AddAuditTermsRequest extends Request {
     }
 
     /**
+     * @return termsName
+     */
+    public String getTermsName() {
+        return this.termsName;
+    }
+
+    /**
      * @return workspaceId
      */
     public String getWorkspaceId() {
@@ -100,6 +112,7 @@ public class AddAuditTermsRequest extends Request {
         private String keyword; 
         private String suggestWord; 
         private String termsDesc; 
+        private String termsName; 
         private String workspaceId; 
 
         private Builder() {
@@ -112,6 +125,7 @@ public class AddAuditTermsRequest extends Request {
             this.keyword = request.keyword;
             this.suggestWord = request.suggestWord;
             this.termsDesc = request.termsDesc;
+            this.termsName = request.termsName;
             this.workspaceId = request.workspaceId;
         } 
 
@@ -149,6 +163,15 @@ public class AddAuditTermsRequest extends Request {
         public Builder termsDesc(String termsDesc) {
             this.putBodyParameter("TermsDesc", termsDesc);
             this.termsDesc = termsDesc;
+            return this;
+        }
+
+        /**
+         * TermsName.
+         */
+        public Builder termsName(String termsName) {
+            this.putBodyParameter("TermsName", termsName);
+            this.termsName = termsName;
             return this;
         }
 

@@ -26,6 +26,10 @@ public class ListAuditTermsRequest extends Request {
     private String nextToken;
 
     @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("TermsName")
+    private String termsName;
+
+    @com.aliyun.core.annotation.Body
     @com.aliyun.core.annotation.NameInMap("WorkspaceId")
     @com.aliyun.core.annotation.Validation(required = true)
     private String workspaceId;
@@ -34,6 +38,7 @@ public class ListAuditTermsRequest extends Request {
         super(builder);
         this.maxResults = builder.maxResults;
         this.nextToken = builder.nextToken;
+        this.termsName = builder.termsName;
         this.workspaceId = builder.workspaceId;
     }
 
@@ -65,6 +70,13 @@ public class ListAuditTermsRequest extends Request {
     }
 
     /**
+     * @return termsName
+     */
+    public String getTermsName() {
+        return this.termsName;
+    }
+
+    /**
      * @return workspaceId
      */
     public String getWorkspaceId() {
@@ -74,6 +86,7 @@ public class ListAuditTermsRequest extends Request {
     public static final class Builder extends Request.Builder<ListAuditTermsRequest, Builder> {
         private Integer maxResults; 
         private String nextToken; 
+        private String termsName; 
         private String workspaceId; 
 
         private Builder() {
@@ -84,6 +97,7 @@ public class ListAuditTermsRequest extends Request {
             super(request);
             this.maxResults = request.maxResults;
             this.nextToken = request.nextToken;
+            this.termsName = request.termsName;
             this.workspaceId = request.workspaceId;
         } 
 
@@ -102,6 +116,15 @@ public class ListAuditTermsRequest extends Request {
         public Builder nextToken(String nextToken) {
             this.putBodyParameter("NextToken", nextToken);
             this.nextToken = nextToken;
+            return this;
+        }
+
+        /**
+         * TermsName.
+         */
+        public Builder termsName(String termsName) {
+            this.putBodyParameter("TermsName", termsName);
+            this.termsName = termsName;
             return this;
         }
 

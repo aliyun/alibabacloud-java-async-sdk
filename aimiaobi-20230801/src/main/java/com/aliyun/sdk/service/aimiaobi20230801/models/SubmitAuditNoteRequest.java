@@ -23,6 +23,10 @@ public class SubmitAuditNoteRequest extends Request {
     private String fileKey;
 
     @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("NoteId")
+    private String noteId;
+
+    @com.aliyun.core.annotation.Body
     @com.aliyun.core.annotation.NameInMap("WorkspaceId")
     @com.aliyun.core.annotation.Validation(required = true)
     private String workspaceId;
@@ -30,6 +34,7 @@ public class SubmitAuditNoteRequest extends Request {
     private SubmitAuditNoteRequest(Builder builder) {
         super(builder);
         this.fileKey = builder.fileKey;
+        this.noteId = builder.noteId;
         this.workspaceId = builder.workspaceId;
     }
 
@@ -54,6 +59,13 @@ public class SubmitAuditNoteRequest extends Request {
     }
 
     /**
+     * @return noteId
+     */
+    public String getNoteId() {
+        return this.noteId;
+    }
+
+    /**
      * @return workspaceId
      */
     public String getWorkspaceId() {
@@ -62,6 +74,7 @@ public class SubmitAuditNoteRequest extends Request {
 
     public static final class Builder extends Request.Builder<SubmitAuditNoteRequest, Builder> {
         private String fileKey; 
+        private String noteId; 
         private String workspaceId; 
 
         private Builder() {
@@ -71,6 +84,7 @@ public class SubmitAuditNoteRequest extends Request {
         private Builder(SubmitAuditNoteRequest request) {
             super(request);
             this.fileKey = request.fileKey;
+            this.noteId = request.noteId;
             this.workspaceId = request.workspaceId;
         } 
 
@@ -83,6 +97,15 @@ public class SubmitAuditNoteRequest extends Request {
         public Builder fileKey(String fileKey) {
             this.putBodyParameter("FileKey", fileKey);
             this.fileKey = fileKey;
+            return this;
+        }
+
+        /**
+         * NoteId.
+         */
+        public Builder noteId(String noteId) {
+            this.putBodyParameter("NoteId", noteId);
+            this.noteId = noteId;
             return this;
         }
 
