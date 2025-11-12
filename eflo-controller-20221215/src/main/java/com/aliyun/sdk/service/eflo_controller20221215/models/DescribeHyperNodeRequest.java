@@ -12,11 +12,11 @@ import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
  * 
- * {@link GetHyperNodeRequest} extends {@link RequestModel}
+ * {@link DescribeHyperNodeRequest} extends {@link RequestModel}
  *
- * <p>GetHyperNodeRequest</p>
+ * <p>DescribeHyperNodeRequest</p>
  */
-public class GetHyperNodeRequest extends Request {
+public class DescribeHyperNodeRequest extends Request {
     @com.aliyun.core.annotation.Host
     @com.aliyun.core.annotation.NameInMap("RegionId")
     private String regionId;
@@ -26,7 +26,7 @@ public class GetHyperNodeRequest extends Request {
     @com.aliyun.core.annotation.Validation(required = true)
     private String hyperNodeId;
 
-    private GetHyperNodeRequest(Builder builder) {
+    private DescribeHyperNodeRequest(Builder builder) {
         super(builder);
         this.regionId = builder.regionId;
         this.hyperNodeId = builder.hyperNodeId;
@@ -36,7 +36,7 @@ public class GetHyperNodeRequest extends Request {
         return new Builder();
     }
 
-    public static GetHyperNodeRequest create() {
+    public static DescribeHyperNodeRequest create() {
         return builder().build();
     }
 
@@ -59,7 +59,7 @@ public class GetHyperNodeRequest extends Request {
         return this.hyperNodeId;
     }
 
-    public static final class Builder extends Request.Builder<GetHyperNodeRequest, Builder> {
+    public static final class Builder extends Request.Builder<DescribeHyperNodeRequest, Builder> {
         private String regionId; 
         private String hyperNodeId; 
 
@@ -67,7 +67,7 @@ public class GetHyperNodeRequest extends Request {
             super();
         } 
 
-        private Builder(GetHyperNodeRequest request) {
+        private Builder(DescribeHyperNodeRequest request) {
             super(request);
             this.regionId = request.regionId;
             this.hyperNodeId = request.hyperNodeId;
@@ -95,8 +95,8 @@ public class GetHyperNodeRequest extends Request {
         }
 
         @Override
-        public GetHyperNodeRequest build() {
-            return new GetHyperNodeRequest(this);
+        public DescribeHyperNodeRequest build() {
+            return new DescribeHyperNodeRequest(this);
         } 
 
     } 

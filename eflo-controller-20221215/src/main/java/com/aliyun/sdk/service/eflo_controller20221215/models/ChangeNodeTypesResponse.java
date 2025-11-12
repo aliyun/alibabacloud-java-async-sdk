@@ -12,11 +12,11 @@ import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
  * 
- * {@link GetHyperNodeResponse} extends {@link TeaModel}
+ * {@link ChangeNodeTypesResponse} extends {@link TeaModel}
  *
- * <p>GetHyperNodeResponse</p>
+ * <p>ChangeNodeTypesResponse</p>
  */
-public class GetHyperNodeResponse extends Response {
+public class ChangeNodeTypesResponse extends Response {
     @com.aliyun.core.annotation.NameInMap("headers")
     private java.util.Map<String, String> headers;
 
@@ -24,16 +24,16 @@ public class GetHyperNodeResponse extends Response {
     private Integer statusCode;
 
     @com.aliyun.core.annotation.NameInMap("body")
-    private GetHyperNodeResponseBody body;
+    private ChangeNodeTypesResponseBody body;
 
-    private GetHyperNodeResponse(BuilderImpl builder) {
+    private ChangeNodeTypesResponse(BuilderImpl builder) {
         super(builder);
         this.headers = builder.headers;
         this.statusCode = builder.statusCode;
         this.body = builder.body;
     }
 
-    public static GetHyperNodeResponse create() {
+    public static ChangeNodeTypesResponse create() {
         return new BuilderImpl().build();
     }
 
@@ -59,35 +59,35 @@ public class GetHyperNodeResponse extends Response {
     /**
      * @return body
      */
-    public GetHyperNodeResponseBody getBody() {
+    public ChangeNodeTypesResponseBody getBody() {
         return this.body;
     }
 
-    public interface Builder extends Response.Builder<GetHyperNodeResponse, Builder> {
+    public interface Builder extends Response.Builder<ChangeNodeTypesResponse, Builder> {
 
         Builder headers(java.util.Map<String, String> headers);
 
         Builder statusCode(Integer statusCode);
 
-        Builder body(GetHyperNodeResponseBody body);
+        Builder body(ChangeNodeTypesResponseBody body);
 
         @Override
-        GetHyperNodeResponse build();
+        ChangeNodeTypesResponse build();
 
     } 
 
     private static final class BuilderImpl
-            extends Response.BuilderImpl<GetHyperNodeResponse, Builder>
+            extends Response.BuilderImpl<ChangeNodeTypesResponse, Builder>
             implements Builder {
         private java.util.Map<String, String> headers; 
         private Integer statusCode; 
-        private GetHyperNodeResponseBody body; 
+        private ChangeNodeTypesResponseBody body; 
 
         private BuilderImpl() {
             super();
         } 
 
-        private BuilderImpl(GetHyperNodeResponse response) {
+        private BuilderImpl(ChangeNodeTypesResponse response) {
             super(response);
             this.headers = response.headers;
             this.statusCode = response.statusCode;
@@ -116,14 +116,14 @@ public class GetHyperNodeResponse extends Response {
          * body.
          */
         @Override
-        public Builder body(GetHyperNodeResponseBody body) {
+        public Builder body(ChangeNodeTypesResponseBody body) {
             this.body = body;
             return this;
         }
 
         @Override
-        public GetHyperNodeResponse build() {
-            return new GetHyperNodeResponse(this);
+        public ChangeNodeTypesResponse build() {
+            return new ChangeNodeTypesResponse(this);
         } 
 
     } 

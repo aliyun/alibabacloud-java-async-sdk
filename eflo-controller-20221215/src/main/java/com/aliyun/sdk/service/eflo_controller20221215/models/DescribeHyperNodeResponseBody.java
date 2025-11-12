@@ -12,11 +12,11 @@ import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
  * 
- * {@link GetHyperNodeResponseBody} extends {@link TeaModel}
+ * {@link DescribeHyperNodeResponseBody} extends {@link TeaModel}
  *
- * <p>GetHyperNodeResponseBody</p>
+ * <p>DescribeHyperNodeResponseBody</p>
  */
-public class GetHyperNodeResponseBody extends TeaModel {
+public class DescribeHyperNodeResponseBody extends TeaModel {
     @com.aliyun.core.annotation.NameInMap("ClusterId")
     private String clusterId;
 
@@ -53,6 +53,9 @@ public class GetHyperNodeResponseBody extends TeaModel {
     @com.aliyun.core.annotation.NameInMap("Nodes")
     private java.util.List<Nodes> nodes;
 
+    @com.aliyun.core.annotation.NameInMap("OperatingState")
+    private String operatingState;
+
     @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
@@ -60,12 +63,13 @@ public class GetHyperNodeResponseBody extends TeaModel {
     private String resourceGroupId;
 
     @com.aliyun.core.annotation.NameInMap("Status")
+    @Deprecated
     private String status;
 
     @com.aliyun.core.annotation.NameInMap("ZoneId")
     private String zoneId;
 
-    private GetHyperNodeResponseBody(Builder builder) {
+    private DescribeHyperNodeResponseBody(Builder builder) {
         this.clusterId = builder.clusterId;
         this.clusterName = builder.clusterName;
         this.createTime = builder.createTime;
@@ -78,6 +82,7 @@ public class GetHyperNodeResponseBody extends TeaModel {
         this.nodeGroupId = builder.nodeGroupId;
         this.nodeGroupName = builder.nodeGroupName;
         this.nodes = builder.nodes;
+        this.operatingState = builder.operatingState;
         this.requestId = builder.requestId;
         this.resourceGroupId = builder.resourceGroupId;
         this.status = builder.status;
@@ -88,7 +93,7 @@ public class GetHyperNodeResponseBody extends TeaModel {
         return new Builder();
     }
 
-    public static GetHyperNodeResponseBody create() {
+    public static DescribeHyperNodeResponseBody create() {
         return builder().build();
     }
 
@@ -181,6 +186,13 @@ public class GetHyperNodeResponseBody extends TeaModel {
     }
 
     /**
+     * @return operatingState
+     */
+    public String getOperatingState() {
+        return this.operatingState;
+    }
+
+    /**
      * @return requestId
      */
     public String getRequestId() {
@@ -221,6 +233,7 @@ public class GetHyperNodeResponseBody extends TeaModel {
         private String nodeGroupId; 
         private String nodeGroupName; 
         private java.util.List<Nodes> nodes; 
+        private String operatingState; 
         private String requestId; 
         private String resourceGroupId; 
         private String status; 
@@ -229,7 +242,7 @@ public class GetHyperNodeResponseBody extends TeaModel {
         private Builder() {
         } 
 
-        private Builder(GetHyperNodeResponseBody model) {
+        private Builder(DescribeHyperNodeResponseBody model) {
             this.clusterId = model.clusterId;
             this.clusterName = model.clusterName;
             this.createTime = model.createTime;
@@ -242,6 +255,7 @@ public class GetHyperNodeResponseBody extends TeaModel {
             this.nodeGroupId = model.nodeGroupId;
             this.nodeGroupName = model.nodeGroupName;
             this.nodes = model.nodes;
+            this.operatingState = model.operatingState;
             this.requestId = model.requestId;
             this.resourceGroupId = model.resourceGroupId;
             this.status = model.status;
@@ -345,6 +359,14 @@ public class GetHyperNodeResponseBody extends TeaModel {
         }
 
         /**
+         * OperatingState.
+         */
+        public Builder operatingState(String operatingState) {
+            this.operatingState = operatingState;
+            return this;
+        }
+
+        /**
          * RequestId.
          */
         public Builder requestId(String requestId) {
@@ -376,17 +398,17 @@ public class GetHyperNodeResponseBody extends TeaModel {
             return this;
         }
 
-        public GetHyperNodeResponseBody build() {
-            return new GetHyperNodeResponseBody(this);
+        public DescribeHyperNodeResponseBody build() {
+            return new DescribeHyperNodeResponseBody(this);
         } 
 
     } 
 
     /**
      * 
-     * {@link GetHyperNodeResponseBody} extends {@link TeaModel}
+     * {@link DescribeHyperNodeResponseBody} extends {@link TeaModel}
      *
-     * <p>GetHyperNodeResponseBody</p>
+     * <p>DescribeHyperNodeResponseBody</p>
      */
     public static class Disks extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Category")
@@ -522,9 +544,9 @@ public class GetHyperNodeResponseBody extends TeaModel {
     }
     /**
      * 
-     * {@link GetHyperNodeResponseBody} extends {@link TeaModel}
+     * {@link DescribeHyperNodeResponseBody} extends {@link TeaModel}
      *
-     * <p>GetHyperNodeResponseBody</p>
+     * <p>DescribeHyperNodeResponseBody</p>
      */
     public static class Networks extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("BondName")
@@ -597,9 +619,9 @@ public class GetHyperNodeResponseBody extends TeaModel {
     }
     /**
      * 
-     * {@link GetHyperNodeResponseBody} extends {@link TeaModel}
+     * {@link DescribeHyperNodeResponseBody} extends {@link TeaModel}
      *
-     * <p>GetHyperNodeResponseBody</p>
+     * <p>DescribeHyperNodeResponseBody</p>
      */
     public static class Nodes extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Disks")
@@ -620,7 +642,11 @@ public class GetHyperNodeResponseBody extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("NodeId")
         private String nodeId;
 
+        @com.aliyun.core.annotation.NameInMap("OperatingState")
+        private String operatingState;
+
         @com.aliyun.core.annotation.NameInMap("Status")
+        @Deprecated
         private String status;
 
         @com.aliyun.core.annotation.NameInMap("UserData")
@@ -633,6 +659,7 @@ public class GetHyperNodeResponseBody extends TeaModel {
             this.imageName = builder.imageName;
             this.networks = builder.networks;
             this.nodeId = builder.nodeId;
+            this.operatingState = builder.operatingState;
             this.status = builder.status;
             this.userData = builder.userData;
         }
@@ -688,6 +715,13 @@ public class GetHyperNodeResponseBody extends TeaModel {
         }
 
         /**
+         * @return operatingState
+         */
+        public String getOperatingState() {
+            return this.operatingState;
+        }
+
+        /**
          * @return status
          */
         public String getStatus() {
@@ -708,6 +742,7 @@ public class GetHyperNodeResponseBody extends TeaModel {
             private String imageName; 
             private Networks networks; 
             private String nodeId; 
+            private String operatingState; 
             private String status; 
             private String userData; 
 
@@ -721,6 +756,7 @@ public class GetHyperNodeResponseBody extends TeaModel {
                 this.imageName = model.imageName;
                 this.networks = model.networks;
                 this.nodeId = model.nodeId;
+                this.operatingState = model.operatingState;
                 this.status = model.status;
                 this.userData = model.userData;
             } 
@@ -770,6 +806,14 @@ public class GetHyperNodeResponseBody extends TeaModel {
              */
             public Builder nodeId(String nodeId) {
                 this.nodeId = nodeId;
+                return this;
+            }
+
+            /**
+             * OperatingState.
+             */
+            public Builder operatingState(String operatingState) {
+                this.operatingState = operatingState;
                 return this;
             }
 

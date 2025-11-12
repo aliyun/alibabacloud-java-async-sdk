@@ -32,6 +32,12 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<ChangeNodeGroupResponse> changeNodeGroup(ChangeNodeGroupRequest request);
 
     /**
+     * @param request the request parameters of ChangeNodeTypes  ChangeNodeTypesRequest
+     * @return ChangeNodeTypesResponse
+     */
+    CompletableFuture<ChangeNodeTypesResponse> changeNodeTypes(ChangeNodeTypesRequest request);
+
+    /**
      * @param request the request parameters of ChangeResourceGroup  ChangeResourceGroupRequest
      * @return ChangeResourceGroupResponse
      */
@@ -92,6 +98,12 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<DeleteClusterResponse> deleteCluster(DeleteClusterRequest request);
 
     /**
+     * @param request the request parameters of DeleteHyperNode  DeleteHyperNodeRequest
+     * @return DeleteHyperNodeResponse
+     */
+    CompletableFuture<DeleteHyperNodeResponse> deleteHyperNode(DeleteHyperNodeRequest request);
+
+    /**
      * @param request the request parameters of DeleteNode  DeleteNodeRequest
      * @return DeleteNodeResponse
      */
@@ -125,6 +137,12 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<DescribeDiagnosticResultResponse> describeDiagnosticResult(DescribeDiagnosticResultRequest request);
 
     /**
+     * @param request the request parameters of DescribeHyperNode  DescribeHyperNodeRequest
+     * @return DescribeHyperNodeResponse
+     */
+    CompletableFuture<DescribeHyperNodeResponse> describeHyperNode(DescribeHyperNodeRequest request);
+
+    /**
      * @param request the request parameters of DescribeInvocations  DescribeInvocationsRequest
      * @return DescribeInvocationsResponse
      */
@@ -141,6 +159,12 @@ public interface AsyncClient extends SdkAutoCloseable {
      * @return DescribeNodeResponse
      */
     CompletableFuture<DescribeNodeResponse> describeNode(DescribeNodeRequest request);
+
+    /**
+     * @param request the request parameters of DescribeNodeGroup  DescribeNodeGroupRequest
+     * @return DescribeNodeGroupResponse
+     */
+    CompletableFuture<DescribeNodeGroupResponse> describeNodeGroup(DescribeNodeGroupRequest request);
 
     /**
      * @param request the request parameters of DescribeNodeType  DescribeNodeTypeRequest
@@ -183,12 +207,6 @@ public interface AsyncClient extends SdkAutoCloseable {
      * @return ExtendClusterResponse
      */
     CompletableFuture<ExtendClusterResponse> extendCluster(ExtendClusterRequest request);
-
-    /**
-     * @param request the request parameters of GetHyperNode  GetHyperNodeRequest
-     * @return GetHyperNodeResponse
-     */
-    CompletableFuture<GetHyperNodeResponse> getHyperNode(GetHyperNodeRequest request);
 
     /**
      * @param request the request parameters of ListClusterHyperNodes  ListClusterHyperNodesRequest
@@ -264,6 +282,12 @@ public interface AsyncClient extends SdkAutoCloseable {
      * @return ListNodeGroupsResponse
      */
     CompletableFuture<ListNodeGroupsResponse> listNodeGroups(ListNodeGroupsRequest request);
+
+    /**
+     * @param request the request parameters of ListSyslogs  ListSyslogsRequest
+     * @return ListSyslogsResponse
+     */
+    CompletableFuture<ListSyslogsResponse> listSyslogs(ListSyslogsRequest request);
 
     /**
      * @param request the request parameters of ListTagResources  ListTagResourcesRequest

@@ -224,7 +224,11 @@ public class ListClusterHyperNodesResponseBody extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("NodeGroupName")
         private String nodeGroupName;
 
+        @com.aliyun.core.annotation.NameInMap("OperatingState")
+        private String operatingState;
+
         @com.aliyun.core.annotation.NameInMap("Status")
+        @Deprecated
         private String status;
 
         @com.aliyun.core.annotation.NameInMap("Tags")
@@ -253,6 +257,7 @@ public class ListClusterHyperNodesResponseBody extends TeaModel {
             this.machineType = builder.machineType;
             this.nodeGroupId = builder.nodeGroupId;
             this.nodeGroupName = builder.nodeGroupName;
+            this.operatingState = builder.operatingState;
             this.status = builder.status;
             this.tags = builder.tags;
             this.taskId = builder.taskId;
@@ -340,6 +345,13 @@ public class ListClusterHyperNodesResponseBody extends TeaModel {
         }
 
         /**
+         * @return operatingState
+         */
+        public String getOperatingState() {
+            return this.operatingState;
+        }
+
+        /**
          * @return status
          */
         public String getStatus() {
@@ -392,6 +404,7 @@ public class ListClusterHyperNodesResponseBody extends TeaModel {
             private String machineType; 
             private String nodeGroupId; 
             private String nodeGroupName; 
+            private String operatingState; 
             private String status; 
             private java.util.List<Tags> tags; 
             private String taskId; 
@@ -413,6 +426,7 @@ public class ListClusterHyperNodesResponseBody extends TeaModel {
                 this.machineType = model.machineType;
                 this.nodeGroupId = model.nodeGroupId;
                 this.nodeGroupName = model.nodeGroupName;
+                this.operatingState = model.operatingState;
                 this.status = model.status;
                 this.tags = model.tags;
                 this.taskId = model.taskId;
@@ -498,6 +512,14 @@ public class ListClusterHyperNodesResponseBody extends TeaModel {
              */
             public Builder nodeGroupName(String nodeGroupName) {
                 this.nodeGroupName = nodeGroupName;
+                return this;
+            }
+
+            /**
+             * OperatingState.
+             */
+            public Builder operatingState(String operatingState) {
+                this.operatingState = operatingState;
                 return this;
             }
 

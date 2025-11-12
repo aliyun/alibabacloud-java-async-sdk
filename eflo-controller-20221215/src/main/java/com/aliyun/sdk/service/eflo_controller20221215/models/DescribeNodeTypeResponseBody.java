@@ -17,6 +17,9 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>DescribeNodeTypeResponseBody</p>
  */
 public class DescribeNodeTypeResponseBody extends TeaModel {
+    @com.aliyun.core.annotation.NameInMap("DiskQuantity")
+    private Integer diskQuantity;
+
     @com.aliyun.core.annotation.NameInMap("EniHighDenseQuantity")
     private Integer eniHighDenseQuantity;
 
@@ -33,6 +36,7 @@ public class DescribeNodeTypeResponseBody extends TeaModel {
     private String requestId;
 
     private DescribeNodeTypeResponseBody(Builder builder) {
+        this.diskQuantity = builder.diskQuantity;
         this.eniHighDenseQuantity = builder.eniHighDenseQuantity;
         this.eniIpv6AddressQuantity = builder.eniIpv6AddressQuantity;
         this.eniPrivateIpAddressQuantity = builder.eniPrivateIpAddressQuantity;
@@ -50,6 +54,13 @@ public class DescribeNodeTypeResponseBody extends TeaModel {
 
     public Builder toBuilder() {
         return new Builder(this);
+    }
+
+    /**
+     * @return diskQuantity
+     */
+    public Integer getDiskQuantity() {
+        return this.diskQuantity;
     }
 
     /**
@@ -88,6 +99,7 @@ public class DescribeNodeTypeResponseBody extends TeaModel {
     }
 
     public static final class Builder {
+        private Integer diskQuantity; 
         private Integer eniHighDenseQuantity; 
         private Integer eniIpv6AddressQuantity; 
         private Integer eniPrivateIpAddressQuantity; 
@@ -98,12 +110,21 @@ public class DescribeNodeTypeResponseBody extends TeaModel {
         } 
 
         private Builder(DescribeNodeTypeResponseBody model) {
+            this.diskQuantity = model.diskQuantity;
             this.eniHighDenseQuantity = model.eniHighDenseQuantity;
             this.eniIpv6AddressQuantity = model.eniIpv6AddressQuantity;
             this.eniPrivateIpAddressQuantity = model.eniPrivateIpAddressQuantity;
             this.eniQuantity = model.eniQuantity;
             this.requestId = model.requestId;
         } 
+
+        /**
+         * DiskQuantity.
+         */
+        public Builder diskQuantity(Integer diskQuantity) {
+            this.diskQuantity = diskQuantity;
+            return this;
+        }
 
         /**
          * EniHighDenseQuantity.

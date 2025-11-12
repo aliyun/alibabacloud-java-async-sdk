@@ -248,10 +248,14 @@ public class ListHyperNodesResponseBody extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("NodeGroupName")
         private String nodeGroupName;
 
+        @com.aliyun.core.annotation.NameInMap("OperatingState")
+        private String operatingState;
+
         @com.aliyun.core.annotation.NameInMap("ResourceGroupId")
         private String resourceGroupId;
 
         @com.aliyun.core.annotation.NameInMap("Status")
+        @Deprecated
         private String status;
 
         @com.aliyun.core.annotation.NameInMap("Tags")
@@ -275,6 +279,7 @@ public class ListHyperNodesResponseBody extends TeaModel {
             this.machineType = builder.machineType;
             this.nodeGroupId = builder.nodeGroupId;
             this.nodeGroupName = builder.nodeGroupName;
+            this.operatingState = builder.operatingState;
             this.resourceGroupId = builder.resourceGroupId;
             this.status = builder.status;
             this.tags = builder.tags;
@@ -368,6 +373,13 @@ public class ListHyperNodesResponseBody extends TeaModel {
         }
 
         /**
+         * @return operatingState
+         */
+        public String getOperatingState() {
+            return this.operatingState;
+        }
+
+        /**
          * @return resourceGroupId
          */
         public String getResourceGroupId() {
@@ -414,6 +426,7 @@ public class ListHyperNodesResponseBody extends TeaModel {
             private String machineType; 
             private String nodeGroupId; 
             private String nodeGroupName; 
+            private String operatingState; 
             private String resourceGroupId; 
             private String status; 
             private java.util.List<Tags> tags; 
@@ -435,6 +448,7 @@ public class ListHyperNodesResponseBody extends TeaModel {
                 this.machineType = model.machineType;
                 this.nodeGroupId = model.nodeGroupId;
                 this.nodeGroupName = model.nodeGroupName;
+                this.operatingState = model.operatingState;
                 this.resourceGroupId = model.resourceGroupId;
                 this.status = model.status;
                 this.tags = model.tags;
@@ -527,6 +541,14 @@ public class ListHyperNodesResponseBody extends TeaModel {
              */
             public Builder nodeGroupName(String nodeGroupName) {
                 this.nodeGroupName = nodeGroupName;
+                return this;
+            }
+
+            /**
+             * OperatingState.
+             */
+            public Builder operatingState(String operatingState) {
+                this.operatingState = operatingState;
                 return this;
             }
 

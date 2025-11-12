@@ -233,10 +233,14 @@ public class ListFreeHyperNodesResponseBody extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("MachineType")
         private String machineType;
 
+        @com.aliyun.core.annotation.NameInMap("OperatingState")
+        private String operatingState;
+
         @com.aliyun.core.annotation.NameInMap("ResourceGroupId")
         private String resourceGroupId;
 
         @com.aliyun.core.annotation.NameInMap("Status")
+        @Deprecated
         private String status;
 
         @com.aliyun.core.annotation.NameInMap("Tags")
@@ -253,6 +257,7 @@ public class ListFreeHyperNodesResponseBody extends TeaModel {
             this.hpnZone = builder.hpnZone;
             this.hyperNodeId = builder.hyperNodeId;
             this.machineType = builder.machineType;
+            this.operatingState = builder.operatingState;
             this.resourceGroupId = builder.resourceGroupId;
             this.status = builder.status;
             this.tags = builder.tags;
@@ -317,6 +322,13 @@ public class ListFreeHyperNodesResponseBody extends TeaModel {
         }
 
         /**
+         * @return operatingState
+         */
+        public String getOperatingState() {
+            return this.operatingState;
+        }
+
+        /**
          * @return resourceGroupId
          */
         public String getResourceGroupId() {
@@ -352,6 +364,7 @@ public class ListFreeHyperNodesResponseBody extends TeaModel {
             private String hpnZone; 
             private String hyperNodeId; 
             private String machineType; 
+            private String operatingState; 
             private String resourceGroupId; 
             private String status; 
             private java.util.List<Tags> tags; 
@@ -368,6 +381,7 @@ public class ListFreeHyperNodesResponseBody extends TeaModel {
                 this.hpnZone = model.hpnZone;
                 this.hyperNodeId = model.hyperNodeId;
                 this.machineType = model.machineType;
+                this.operatingState = model.operatingState;
                 this.resourceGroupId = model.resourceGroupId;
                 this.status = model.status;
                 this.tags = model.tags;
@@ -427,6 +441,14 @@ public class ListFreeHyperNodesResponseBody extends TeaModel {
              */
             public Builder machineType(String machineType) {
                 this.machineType = machineType;
+                return this;
+            }
+
+            /**
+             * OperatingState.
+             */
+            public Builder operatingState(String operatingState) {
+                this.operatingState = operatingState;
                 return this;
             }
 
