@@ -1168,8 +1168,20 @@ public class RunSearchGenerationRequest extends Request {
         @com.aliyun.core.annotation.NameInMap("MultimodalSearchTypes")
         private java.util.List<String> multimodalSearchTypes;
 
+        @com.aliyun.core.annotation.NameInMap("SearchAudioMinScore")
+        private Double searchAudioMinScore;
+
+        @com.aliyun.core.annotation.NameInMap("SearchImageMinScore")
+        private Double searchImageMinScore;
+
         @com.aliyun.core.annotation.NameInMap("SearchSources")
         private java.util.List<SearchSources> searchSources;
+
+        @com.aliyun.core.annotation.NameInMap("SearchTextMinScore")
+        private Double searchTextMinScore;
+
+        @com.aliyun.core.annotation.NameInMap("SearchVideoMinScore")
+        private Double searchVideoMinScore;
 
         @com.aliyun.core.annotation.NameInMap("StartTime")
         private Long startTime;
@@ -1177,7 +1189,11 @@ public class RunSearchGenerationRequest extends Request {
         private SearchParam(Builder builder) {
             this.endTime = builder.endTime;
             this.multimodalSearchTypes = builder.multimodalSearchTypes;
+            this.searchAudioMinScore = builder.searchAudioMinScore;
+            this.searchImageMinScore = builder.searchImageMinScore;
             this.searchSources = builder.searchSources;
+            this.searchTextMinScore = builder.searchTextMinScore;
+            this.searchVideoMinScore = builder.searchVideoMinScore;
             this.startTime = builder.startTime;
         }
 
@@ -1204,10 +1220,38 @@ public class RunSearchGenerationRequest extends Request {
         }
 
         /**
+         * @return searchAudioMinScore
+         */
+        public Double getSearchAudioMinScore() {
+            return this.searchAudioMinScore;
+        }
+
+        /**
+         * @return searchImageMinScore
+         */
+        public Double getSearchImageMinScore() {
+            return this.searchImageMinScore;
+        }
+
+        /**
          * @return searchSources
          */
         public java.util.List<SearchSources> getSearchSources() {
             return this.searchSources;
+        }
+
+        /**
+         * @return searchTextMinScore
+         */
+        public Double getSearchTextMinScore() {
+            return this.searchTextMinScore;
+        }
+
+        /**
+         * @return searchVideoMinScore
+         */
+        public Double getSearchVideoMinScore() {
+            return this.searchVideoMinScore;
         }
 
         /**
@@ -1220,7 +1264,11 @@ public class RunSearchGenerationRequest extends Request {
         public static final class Builder {
             private Long endTime; 
             private java.util.List<String> multimodalSearchTypes; 
+            private Double searchAudioMinScore; 
+            private Double searchImageMinScore; 
             private java.util.List<SearchSources> searchSources; 
+            private Double searchTextMinScore; 
+            private Double searchVideoMinScore; 
             private Long startTime; 
 
             private Builder() {
@@ -1229,7 +1277,11 @@ public class RunSearchGenerationRequest extends Request {
             private Builder(SearchParam model) {
                 this.endTime = model.endTime;
                 this.multimodalSearchTypes = model.multimodalSearchTypes;
+                this.searchAudioMinScore = model.searchAudioMinScore;
+                this.searchImageMinScore = model.searchImageMinScore;
                 this.searchSources = model.searchSources;
+                this.searchTextMinScore = model.searchTextMinScore;
+                this.searchVideoMinScore = model.searchVideoMinScore;
                 this.startTime = model.startTime;
             } 
 
@@ -1250,10 +1302,42 @@ public class RunSearchGenerationRequest extends Request {
             }
 
             /**
+             * SearchAudioMinScore.
+             */
+            public Builder searchAudioMinScore(Double searchAudioMinScore) {
+                this.searchAudioMinScore = searchAudioMinScore;
+                return this;
+            }
+
+            /**
+             * SearchImageMinScore.
+             */
+            public Builder searchImageMinScore(Double searchImageMinScore) {
+                this.searchImageMinScore = searchImageMinScore;
+                return this;
+            }
+
+            /**
              * SearchSources.
              */
             public Builder searchSources(java.util.List<SearchSources> searchSources) {
                 this.searchSources = searchSources;
+                return this;
+            }
+
+            /**
+             * SearchTextMinScore.
+             */
+            public Builder searchTextMinScore(Double searchTextMinScore) {
+                this.searchTextMinScore = searchTextMinScore;
+                return this;
+            }
+
+            /**
+             * SearchVideoMinScore.
+             */
+            public Builder searchVideoMinScore(Double searchVideoMinScore) {
+                this.searchVideoMinScore = searchVideoMinScore;
                 return this;
             }
 
@@ -1291,6 +1375,12 @@ public class RunSearchGenerationRequest extends Request {
         @com.aliyun.core.annotation.NameInMap("GenerateTechnology")
         private String generateTechnology;
 
+        @com.aliyun.core.annotation.NameInMap("ModelCustomPromptTemplate")
+        private String modelCustomPromptTemplate;
+
+        @com.aliyun.core.annotation.NameInMap("ModelCustomVlPromptTemplate")
+        private String modelCustomVlPromptTemplate;
+
         @com.aliyun.core.annotation.NameInMap("SearchModels")
         private java.util.List<String> searchModels;
 
@@ -1302,6 +1392,8 @@ public class RunSearchGenerationRequest extends Request {
             this.excludeGenerateOptions = builder.excludeGenerateOptions;
             this.generateLevel = builder.generateLevel;
             this.generateTechnology = builder.generateTechnology;
+            this.modelCustomPromptTemplate = builder.modelCustomPromptTemplate;
+            this.modelCustomVlPromptTemplate = builder.modelCustomVlPromptTemplate;
             this.searchModels = builder.searchModels;
             this.searchParam = builder.searchParam;
         }
@@ -1343,6 +1435,20 @@ public class RunSearchGenerationRequest extends Request {
         }
 
         /**
+         * @return modelCustomPromptTemplate
+         */
+        public String getModelCustomPromptTemplate() {
+            return this.modelCustomPromptTemplate;
+        }
+
+        /**
+         * @return modelCustomVlPromptTemplate
+         */
+        public String getModelCustomVlPromptTemplate() {
+            return this.modelCustomVlPromptTemplate;
+        }
+
+        /**
          * @return searchModels
          */
         public java.util.List<String> getSearchModels() {
@@ -1361,6 +1467,8 @@ public class RunSearchGenerationRequest extends Request {
             private java.util.List<String> excludeGenerateOptions; 
             private String generateLevel; 
             private String generateTechnology; 
+            private String modelCustomPromptTemplate; 
+            private String modelCustomVlPromptTemplate; 
             private java.util.List<String> searchModels; 
             private SearchParam searchParam; 
 
@@ -1372,6 +1480,8 @@ public class RunSearchGenerationRequest extends Request {
                 this.excludeGenerateOptions = model.excludeGenerateOptions;
                 this.generateLevel = model.generateLevel;
                 this.generateTechnology = model.generateTechnology;
+                this.modelCustomPromptTemplate = model.modelCustomPromptTemplate;
+                this.modelCustomVlPromptTemplate = model.modelCustomVlPromptTemplate;
                 this.searchModels = model.searchModels;
                 this.searchParam = model.searchParam;
             } 
@@ -1405,6 +1515,22 @@ public class RunSearchGenerationRequest extends Request {
              */
             public Builder generateTechnology(String generateTechnology) {
                 this.generateTechnology = generateTechnology;
+                return this;
+            }
+
+            /**
+             * ModelCustomPromptTemplate.
+             */
+            public Builder modelCustomPromptTemplate(String modelCustomPromptTemplate) {
+                this.modelCustomPromptTemplate = modelCustomPromptTemplate;
+                return this;
+            }
+
+            /**
+             * ModelCustomVlPromptTemplate.
+             */
+            public Builder modelCustomVlPromptTemplate(String modelCustomVlPromptTemplate) {
+                this.modelCustomVlPromptTemplate = modelCustomVlPromptTemplate;
                 return this;
             }
 
