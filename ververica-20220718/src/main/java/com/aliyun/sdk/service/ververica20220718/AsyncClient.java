@@ -302,6 +302,12 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<GetMemberResponse> getMember(GetMemberRequest request);
 
     /**
+     * @param request the request parameters of GetPreSignedUrlForPutObject  GetPreSignedUrlForPutObjectRequest
+     * @return GetPreSignedUrlForPutObjectResponse
+     */
+    CompletableFuture<GetPreSignedUrlForPutObjectResponse> getPreSignedUrlForPutObject(GetPreSignedUrlForPutObjectRequest request);
+
+    /**
      * @param request the request parameters of GetSavepoint  GetSavepointRequest
      * @return GetSavepointResponse
      */

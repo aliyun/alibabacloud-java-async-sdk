@@ -886,6 +886,24 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
+     * @param request the request parameters of GetPreSignedUrlForPutObject  GetPreSignedUrlForPutObjectRequest
+     * @return GetPreSignedUrlForPutObjectResponse
+     */
+    @Override
+    public CompletableFuture<GetPreSignedUrlForPutObjectResponse> getPreSignedUrlForPutObject(GetPreSignedUrlForPutObjectRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RESTFUL).setAction("GetPreSignedUrlForPutObject").setMethod(HttpMethod.GET).setPathRegex("/artifacts/v2/namespaces/{namespace}/getPreSignedUrlForPutObject").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(GetPreSignedUrlForPutObjectResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<GetPreSignedUrlForPutObjectResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
      * @param request the request parameters of GetSavepoint  GetSavepointRequest
      * @return GetSavepointResponse
      */
