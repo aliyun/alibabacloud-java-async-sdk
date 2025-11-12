@@ -25,10 +25,15 @@ public class GetQuotaRequest extends Request {
     @com.aliyun.core.annotation.NameInMap("Verbose")
     private Boolean verbose;
 
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("WithNodeMeta")
+    private Boolean withNodeMeta;
+
     private GetQuotaRequest(Builder builder) {
         super(builder);
         this.quotaId = builder.quotaId;
         this.verbose = builder.verbose;
+        this.withNodeMeta = builder.withNodeMeta;
     }
 
     public static Builder builder() {
@@ -58,9 +63,17 @@ public class GetQuotaRequest extends Request {
         return this.verbose;
     }
 
+    /**
+     * @return withNodeMeta
+     */
+    public Boolean getWithNodeMeta() {
+        return this.withNodeMeta;
+    }
+
     public static final class Builder extends Request.Builder<GetQuotaRequest, Builder> {
         private String quotaId; 
         private Boolean verbose; 
+        private Boolean withNodeMeta; 
 
         private Builder() {
             super();
@@ -70,6 +83,7 @@ public class GetQuotaRequest extends Request {
             super(request);
             this.quotaId = request.quotaId;
             this.verbose = request.verbose;
+            this.withNodeMeta = request.withNodeMeta;
         } 
 
         /**
@@ -87,6 +101,15 @@ public class GetQuotaRequest extends Request {
         public Builder verbose(Boolean verbose) {
             this.putQueryParameter("Verbose", verbose);
             this.verbose = verbose;
+            return this;
+        }
+
+        /**
+         * WithNodeMeta.
+         */
+        public Builder withNodeMeta(Boolean withNodeMeta) {
+            this.putQueryParameter("WithNodeMeta", withNodeMeta);
+            this.withNodeMeta = withNodeMeta;
             return this;
         }
 
