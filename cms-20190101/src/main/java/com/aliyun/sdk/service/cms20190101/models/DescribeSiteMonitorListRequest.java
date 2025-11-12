@@ -143,7 +143,18 @@ public class DescribeSiteMonitorListRequest extends Request {
         } 
 
         /**
-         * AgentGroup.
+         * <p>Task network type. Valid values:</p>
+         * <ul>
+         * <li><p>PC: Cable Network</p>
+         * </li>
+         * <li><p>MOBILE: Mobile Cellular Network</p>
+         * </li>
+         * <li><p>FC: Alibaba Cloud VPC Network</p>
+         * </li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>PC</p>
          */
         public Builder agentGroup(String agentGroup) {
             this.putQueryParameter("AgentGroup", agentGroup);
