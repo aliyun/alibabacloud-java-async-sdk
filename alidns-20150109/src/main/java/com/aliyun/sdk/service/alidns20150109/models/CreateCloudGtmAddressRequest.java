@@ -251,7 +251,7 @@ public class CreateCloudGtmAddressRequest extends Request {
          * <p>Address ownership information.</p>
          * 
          * <strong>example:</strong>
-         * <p>当前版本不支持传入此参数，请不要传入参数。</p>
+         * <p>This parameter is not supported in the version. Do not enter this parameter</p>
          */
         public Builder attributeInfo(String attributeInfo) {
             this.putQueryParameter("AttributeInfo", attributeInfo);

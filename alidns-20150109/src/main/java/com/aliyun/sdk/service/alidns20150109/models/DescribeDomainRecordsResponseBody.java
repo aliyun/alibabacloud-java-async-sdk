@@ -176,6 +176,9 @@ public class DescribeDomainRecordsResponseBody extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("DomainName")
         private String domainName;
 
+        @com.aliyun.core.annotation.NameInMap("LbaStatus")
+        private Boolean lbaStatus;
+
         @com.aliyun.core.annotation.NameInMap("Line")
         private String line;
 
@@ -215,6 +218,7 @@ public class DescribeDomainRecordsResponseBody extends TeaModel {
         private Record(Builder builder) {
             this.createTimestamp = builder.createTimestamp;
             this.domainName = builder.domainName;
+            this.lbaStatus = builder.lbaStatus;
             this.line = builder.line;
             this.locked = builder.locked;
             this.priority = builder.priority;
@@ -249,6 +253,13 @@ public class DescribeDomainRecordsResponseBody extends TeaModel {
          */
         public String getDomainName() {
             return this.domainName;
+        }
+
+        /**
+         * @return lbaStatus
+         */
+        public Boolean getLbaStatus() {
+            return this.lbaStatus;
         }
 
         /**
@@ -338,6 +349,7 @@ public class DescribeDomainRecordsResponseBody extends TeaModel {
         public static final class Builder {
             private Long createTimestamp; 
             private String domainName; 
+            private Boolean lbaStatus; 
             private String line; 
             private Boolean locked; 
             private Long priority; 
@@ -357,6 +369,7 @@ public class DescribeDomainRecordsResponseBody extends TeaModel {
             private Builder(Record model) {
                 this.createTimestamp = model.createTimestamp;
                 this.domainName = model.domainName;
+                this.lbaStatus = model.lbaStatus;
                 this.line = model.line;
                 this.locked = model.locked;
                 this.priority = model.priority;
@@ -390,6 +403,14 @@ public class DescribeDomainRecordsResponseBody extends TeaModel {
              */
             public Builder domainName(String domainName) {
                 this.domainName = domainName;
+                return this;
+            }
+
+            /**
+             * LbaStatus.
+             */
+            public Builder lbaStatus(Boolean lbaStatus) {
+                this.lbaStatus = lbaStatus;
                 return this;
             }
 

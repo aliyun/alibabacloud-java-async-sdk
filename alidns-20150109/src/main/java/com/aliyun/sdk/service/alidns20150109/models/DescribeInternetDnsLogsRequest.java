@@ -50,6 +50,10 @@ public class DescribeInternetDnsLogsRequest extends Request {
     private String queryCondition;
 
     @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("RecursionProtocolType")
+    private String recursionProtocolType;
+
+    @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("StartTimestamp")
     private Long startTimestamp;
 
@@ -63,6 +67,7 @@ public class DescribeInternetDnsLogsRequest extends Request {
         this.pageNumber = builder.pageNumber;
         this.pageSize = builder.pageSize;
         this.queryCondition = builder.queryCondition;
+        this.recursionProtocolType = builder.recursionProtocolType;
         this.startTimestamp = builder.startTimestamp;
     }
 
@@ -136,6 +141,13 @@ public class DescribeInternetDnsLogsRequest extends Request {
     }
 
     /**
+     * @return recursionProtocolType
+     */
+    public String getRecursionProtocolType() {
+        return this.recursionProtocolType;
+    }
+
+    /**
      * @return startTimestamp
      */
     public Long getStartTimestamp() {
@@ -151,6 +163,7 @@ public class DescribeInternetDnsLogsRequest extends Request {
         private Integer pageNumber; 
         private Integer pageSize; 
         private String queryCondition; 
+        private String recursionProtocolType; 
         private Long startTimestamp; 
 
         private Builder() {
@@ -167,6 +180,7 @@ public class DescribeInternetDnsLogsRequest extends Request {
             this.pageNumber = request.pageNumber;
             this.pageSize = request.pageSize;
             this.queryCondition = request.queryCondition;
+            this.recursionProtocolType = request.recursionProtocolType;
             this.startTimestamp = request.startTimestamp;
         } 
 
@@ -280,6 +294,15 @@ public class DescribeInternetDnsLogsRequest extends Request {
         public Builder queryCondition(String queryCondition) {
             this.putQueryParameter("QueryCondition", queryCondition);
             this.queryCondition = queryCondition;
+            return this;
+        }
+
+        /**
+         * RecursionProtocolType.
+         */
+        public Builder recursionProtocolType(String recursionProtocolType) {
+            this.putQueryParameter("RecursionProtocolType", recursionProtocolType);
+            this.recursionProtocolType = recursionProtocolType;
             return this;
         }
 

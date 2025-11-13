@@ -109,6 +109,18 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<AddGtmRecoveryPlanResponse> addGtmRecoveryPlan(AddGtmRecoveryPlanRequest request);
 
     /**
+     * @param request the request parameters of AddRecursionRecord  AddRecursionRecordRequest
+     * @return AddRecursionRecordResponse
+     */
+    CompletableFuture<AddRecursionRecordResponse> addRecursionRecord(AddRecursionRecordRequest request);
+
+    /**
+     * @param request the request parameters of AddRecursionZone  AddRecursionZoneRequest
+     * @return AddRecursionZoneResponse
+     */
+    CompletableFuture<AddRecursionZoneResponse> addRecursionZone(AddRecursionZoneRequest request);
+
+    /**
      * <b>description</b> :
      * <p>A paid Alibaba Cloud DNS instance whose ID starts with dns is an instance of the new version. You can call this API operation to bind multiple domain names to the instance. If the upper limit is exceeded, an error message is returned.\
      * A paid Alibaba Cloud DNS instance whose ID does not start with dns is an instance of the old version. You can call this API operation to bind only one domain name to the instance. However, if the instance is already bound to a domain name, you must unbind the original domain name from the instance and bind the desired domain name to the instance.</p>
@@ -269,6 +281,18 @@ public interface AsyncClient extends SdkAutoCloseable {
      * @return DeleteGtmRecoveryPlanResponse
      */
     CompletableFuture<DeleteGtmRecoveryPlanResponse> deleteGtmRecoveryPlan(DeleteGtmRecoveryPlanRequest request);
+
+    /**
+     * @param request the request parameters of DeleteRecursionRecord  DeleteRecursionRecordRequest
+     * @return DeleteRecursionRecordResponse
+     */
+    CompletableFuture<DeleteRecursionRecordResponse> deleteRecursionRecord(DeleteRecursionRecordRequest request);
+
+    /**
+     * @param request the request parameters of DeleteRecursionZone  DeleteRecursionZoneRequest
+     * @return DeleteRecursionZoneResponse
+     */
+    CompletableFuture<DeleteRecursionZoneResponse> deleteRecursionZone(DeleteRecursionZoneRequest request);
 
     /**
      * <b>description</b> :
@@ -844,6 +868,18 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<DescribeRecordStatisticsSummaryResponse> describeRecordStatisticsSummary(DescribeRecordStatisticsSummaryRequest request);
 
     /**
+     * @param request the request parameters of DescribeRecursionRecord  DescribeRecursionRecordRequest
+     * @return DescribeRecursionRecordResponse
+     */
+    CompletableFuture<DescribeRecursionRecordResponse> describeRecursionRecord(DescribeRecursionRecordRequest request);
+
+    /**
+     * @param request the request parameters of DescribeRecursionZone  DescribeRecursionZoneRequest
+     * @return DescribeRecursionZoneResponse
+     */
+    CompletableFuture<DescribeRecursionZoneResponse> describeRecursionZone(DescribeRecursionZoneRequest request);
+
+    /**
      * @param request the request parameters of DescribeSubDomainRecords  DescribeSubDomainRecordsRequest
      * @return DescribeSubDomainRecordsResponse
      */
@@ -936,6 +972,18 @@ public interface AsyncClient extends SdkAutoCloseable {
      * @return ListCloudGtmMonitorTemplatesResponse
      */
     CompletableFuture<ListCloudGtmMonitorTemplatesResponse> listCloudGtmMonitorTemplates(ListCloudGtmMonitorTemplatesRequest request);
+
+    /**
+     * @param request the request parameters of ListRecursionRecords  ListRecursionRecordsRequest
+     * @return ListRecursionRecordsResponse
+     */
+    CompletableFuture<ListRecursionRecordsResponse> listRecursionRecords(ListRecursionRecordsRequest request);
+
+    /**
+     * @param request the request parameters of ListRecursionZones  ListRecursionZonesRequest
+     * @return ListRecursionZonesResponse
+     */
+    CompletableFuture<ListRecursionZonesResponse> listRecursionZones(ListRecursionZonesRequest request);
 
     /**
      * <b>description</b> :
@@ -1070,6 +1118,18 @@ public interface AsyncClient extends SdkAutoCloseable {
      * @return SearchCloudGtmMonitorTemplatesResponse
      */
     CompletableFuture<SearchCloudGtmMonitorTemplatesResponse> searchCloudGtmMonitorTemplates(SearchCloudGtmMonitorTemplatesRequest request);
+
+    /**
+     * @param request the request parameters of SearchRecursionRecords  SearchRecursionRecordsRequest
+     * @return SearchRecursionRecordsResponse
+     */
+    CompletableFuture<SearchRecursionRecordsResponse> searchRecursionRecords(SearchRecursionRecordsRequest request);
+
+    /**
+     * @param request the request parameters of SearchRecursionZones  SearchRecursionZonesRequest
+     * @return SearchRecursionZonesResponse
+     */
+    CompletableFuture<SearchRecursionZonesResponse> searchRecursionZones(SearchRecursionZonesRequest request);
 
     /**
      * @param request the request parameters of SetDNSSLBStatus  SetDNSSLBStatusRequest
@@ -1396,6 +1456,86 @@ public interface AsyncClient extends SdkAutoCloseable {
      * @return UpdateIspFlushCacheInstanceConfigResponse
      */
     CompletableFuture<UpdateIspFlushCacheInstanceConfigResponse> updateIspFlushCacheInstanceConfig(UpdateIspFlushCacheInstanceConfigRequest request);
+
+    /**
+     * @param request the request parameters of UpdateRecursionRecord  UpdateRecursionRecordRequest
+     * @return UpdateRecursionRecordResponse
+     */
+    CompletableFuture<UpdateRecursionRecordResponse> updateRecursionRecord(UpdateRecursionRecordRequest request);
+
+    /**
+     * @param request the request parameters of UpdateRecursionRecordEnableStatus  UpdateRecursionRecordEnableStatusRequest
+     * @return UpdateRecursionRecordEnableStatusResponse
+     */
+    CompletableFuture<UpdateRecursionRecordEnableStatusResponse> updateRecursionRecordEnableStatus(UpdateRecursionRecordEnableStatusRequest request);
+
+    /**
+     * @param request the request parameters of UpdateRecursionRecordRemark  UpdateRecursionRecordRemarkRequest
+     * @return UpdateRecursionRecordRemarkResponse
+     */
+    CompletableFuture<UpdateRecursionRecordRemarkResponse> updateRecursionRecordRemark(UpdateRecursionRecordRemarkRequest request);
+
+    /**
+     * @param request the request parameters of UpdateRecursionRecordWeight  UpdateRecursionRecordWeightRequest
+     * @return UpdateRecursionRecordWeightResponse
+     */
+    CompletableFuture<UpdateRecursionRecordWeightResponse> updateRecursionRecordWeight(UpdateRecursionRecordWeightRequest request);
+
+    /**
+     * @param request the request parameters of UpdateRecursionRecordWeightEnableStatus  UpdateRecursionRecordWeightEnableStatusRequest
+     * @return UpdateRecursionRecordWeightEnableStatusResponse
+     */
+    CompletableFuture<UpdateRecursionRecordWeightEnableStatusResponse> updateRecursionRecordWeightEnableStatus(UpdateRecursionRecordWeightEnableStatusRequest request);
+
+    /**
+     * @param request the request parameters of UpdateRecursionZoneEffectiveScope  UpdateRecursionZoneEffectiveScopeRequest
+     * @return UpdateRecursionZoneEffectiveScopeResponse
+     */
+    CompletableFuture<UpdateRecursionZoneEffectiveScopeResponse> updateRecursionZoneEffectiveScope(UpdateRecursionZoneEffectiveScopeRequest request);
+
+    /**
+     * @param request the request parameters of UpdateRecursionZoneProxyPattern  UpdateRecursionZoneProxyPatternRequest
+     * @return UpdateRecursionZoneProxyPatternResponse
+     */
+    CompletableFuture<UpdateRecursionZoneProxyPatternResponse> updateRecursionZoneProxyPattern(UpdateRecursionZoneProxyPatternRequest request);
+
+    /**
+     * @param request the request parameters of UpdateRecursionZoneRemark  UpdateRecursionZoneRemarkRequest
+     * @return UpdateRecursionZoneRemarkResponse
+     */
+    CompletableFuture<UpdateRecursionZoneRemarkResponse> updateRecursionZoneRemark(UpdateRecursionZoneRemarkRequest request);
+
+    /**
+     * <b>description</b> :
+     * <h2>请求说明</h2>
+     * <ul>
+     * <li>本接口专为注册局用户设计，允许他们更新指定顶级域名（TLD）的各种属性。</li>
+     * <li>必须提供<code>RegistryId</code>和<code>Tld</code>参数以标识要修改的具体TLD。</li>
+     * <li>可选参数包括但不限于宽限期设置、DNS解析缓存时间、价格设定等，这些都可根据需要进行调整。</li>
+     * <li>环境(<code>Env</code>)参数指定了API调用的目标环境，默认值为“DAILY”表示日常测试环境；正式上线前，请确保已正确设置此参数。</li>
+     * <li>某些时间戳字段如<code>SunriseStartTimeStamp</code>要求输入Unix时间戳格式的数据。</li>
+     * </ul>
+     * 
+     * @param request the request parameters of UpdateRspDomainServerHoldStatusOte  UpdateRspDomainServerHoldStatusOteRequest
+     * @return UpdateRspDomainServerHoldStatusOteResponse
+     */
+    CompletableFuture<UpdateRspDomainServerHoldStatusOteResponse> updateRspDomainServerHoldStatusOte(UpdateRspDomainServerHoldStatusOteRequest request);
+
+    /**
+     * <b>description</b> :
+     * <h2>请求说明</h2>
+     * <ul>
+     * <li>本接口专为注册局用户设计，允许他们更新指定顶级域名（TLD）的各种属性。</li>
+     * <li>必须提供<code>RegistryId</code>和<code>Tld</code>参数以标识要修改的具体TLD。</li>
+     * <li>可选参数包括但不限于宽限期设置、DNS解析缓存时间、价格设定等，这些都可根据需要进行调整。</li>
+     * <li>环境(<code>Env</code>)参数指定了API调用的目标环境，默认值为“DAILY”表示日常测试环境；正式上线前，请确保已正确设置此参数。</li>
+     * <li>某些时间戳字段如<code>SunriseStartTimeStamp</code>要求输入Unix时间戳格式的数据。</li>
+     * </ul>
+     * 
+     * @param request the request parameters of UpdateRspDomainStatusOte  UpdateRspDomainStatusOteRequest
+     * @return UpdateRspDomainStatusOteResponse
+     */
+    CompletableFuture<UpdateRspDomainStatusOteResponse> updateRspDomainStatusOte(UpdateRspDomainStatusOteRequest request);
 
     /**
      * @param request the request parameters of ValidateDnsGtmCnameRrCanUse  ValidateDnsGtmCnameRrCanUseRequest

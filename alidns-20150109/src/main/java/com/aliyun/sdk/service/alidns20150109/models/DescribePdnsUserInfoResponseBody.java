@@ -67,7 +67,10 @@ public class DescribePdnsUserInfoResponseBody extends TeaModel {
         } 
 
         /**
-         * RequestId.
+         * <p>The ID of the request.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>FD552816-FCC8-4832-B4A2-2DA0C2BA1688</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -75,7 +78,7 @@ public class DescribePdnsUserInfoResponseBody extends TeaModel {
         }
 
         /**
-         * UserInfo.
+         * <p>The information about the user.</p>
          */
         public Builder userInfo(UserInfo userInfo) {
             this.userInfo = userInfo;
@@ -219,7 +222,10 @@ public class DescribePdnsUserInfoResponseBody extends TeaModel {
             } 
 
             /**
-             * AvailableAccessSecurityType.
+             * <p>The enabled access security types.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>SECURE</p>
              */
             public Builder availableAccessSecurityType(String availableAccessSecurityType) {
                 this.availableAccessSecurityType = availableAccessSecurityType;
@@ -227,7 +233,10 @@ public class DescribePdnsUserInfoResponseBody extends TeaModel {
             }
 
             /**
-             * AvailableService.
+             * <p>The enabled public recursive DNS service.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>HTTP,HTTPS</p>
              */
             public Builder availableService(String availableService) {
                 this.availableService = availableService;
@@ -235,7 +244,10 @@ public class DescribePdnsUserInfoResponseBody extends TeaModel {
             }
 
             /**
-             * PdnsId.
+             * <p>The configuration ID of the users in public recursive DNS.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>10001</p>
              */
             public Builder pdnsId(Long pdnsId) {
                 this.pdnsId = pdnsId;
@@ -243,7 +255,10 @@ public class DescribePdnsUserInfoResponseBody extends TeaModel {
             }
 
             /**
-             * SecretKey.
+             * <p>The SecretKey configured for a UDP-based CIDR block.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1c092d715b7a48de</p>
              */
             public Builder secretKey(String secretKey) {
                 this.secretKey = secretKey;
@@ -251,7 +266,10 @@ public class DescribePdnsUserInfoResponseBody extends TeaModel {
             }
 
             /**
-             * ServiceType.
+             * <p>The type of the public recursive DNS service.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>normal</p>
              */
             public Builder serviceType(String serviceType) {
                 this.serviceType = serviceType;
@@ -259,7 +277,10 @@ public class DescribePdnsUserInfoResponseBody extends TeaModel {
             }
 
             /**
-             * State.
+             * <p>The status of the public recursive DNS service.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>AVAILABLE</p>
              */
             public Builder state(String state) {
                 this.state = state;
@@ -267,7 +288,10 @@ public class DescribePdnsUserInfoResponseBody extends TeaModel {
             }
 
             /**
-             * StatisticSwitchStatus.
+             * <p>The status of the traffic analysis switch for the user in public recursive DNS service.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>CLOSED</p>
              */
             public Builder statisticSwitchStatus(String statisticSwitchStatus) {
                 this.statisticSwitchStatus = statisticSwitchStatus;
@@ -275,7 +299,7 @@ public class DescribePdnsUserInfoResponseBody extends TeaModel {
             }
 
             /**
-             * StoppedService.
+             * <p>The disabled public recursive DNS service.</p>
              */
             public Builder stoppedService(String stoppedService) {
                 this.stoppedService = stoppedService;

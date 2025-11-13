@@ -285,6 +285,42 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
+     * @param request the request parameters of AddRecursionRecord  AddRecursionRecordRequest
+     * @return AddRecursionRecordResponse
+     */
+    @Override
+    public CompletableFuture<AddRecursionRecordResponse> addRecursionRecord(AddRecursionRecordRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RPC).setAction("AddRecursionRecord").setMethod(HttpMethod.POST).setPathRegex("/").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(AddRecursionRecordResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<AddRecursionRecordResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
+     * @param request the request parameters of AddRecursionZone  AddRecursionZoneRequest
+     * @return AddRecursionZoneResponse
+     */
+    @Override
+    public CompletableFuture<AddRecursionZoneResponse> addRecursionZone(AddRecursionZoneRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RPC).setAction("AddRecursionZone").setMethod(HttpMethod.POST).setPathRegex("/").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(AddRecursionZoneResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<AddRecursionZoneResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
      * <b>description</b> :
      * <p>A paid Alibaba Cloud DNS instance whose ID starts with dns is an instance of the new version. You can call this API operation to bind multiple domain names to the instance. If the upper limit is exceeded, an error message is returned.\
      * A paid Alibaba Cloud DNS instance whose ID does not start with dns is an instance of the old version. You can call this API operation to bind only one domain name to the instance. However, if the instance is already bound to a domain name, you must unbind the original domain name from the instance and bind the desired domain name to the instance.</p>
@@ -729,6 +765,42 @@ public final class DefaultAsyncClient implements AsyncClient {
             return this.handler.execute(params);
         } catch (Exception e) {
             CompletableFuture<DeleteGtmRecoveryPlanResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
+     * @param request the request parameters of DeleteRecursionRecord  DeleteRecursionRecordRequest
+     * @return DeleteRecursionRecordResponse
+     */
+    @Override
+    public CompletableFuture<DeleteRecursionRecordResponse> deleteRecursionRecord(DeleteRecursionRecordRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RPC).setAction("DeleteRecursionRecord").setMethod(HttpMethod.POST).setPathRegex("/").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(DeleteRecursionRecordResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<DeleteRecursionRecordResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
+     * @param request the request parameters of DeleteRecursionZone  DeleteRecursionZoneRequest
+     * @return DeleteRecursionZoneResponse
+     */
+    @Override
+    public CompletableFuture<DeleteRecursionZoneResponse> deleteRecursionZone(DeleteRecursionZoneRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RPC).setAction("DeleteRecursionZone").setMethod(HttpMethod.POST).setPathRegex("/").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(DeleteRecursionZoneResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<DeleteRecursionZoneResponse> future = new CompletableFuture<>();
             future.completeExceptionally(e);
             return future;
         }
@@ -2364,6 +2436,42 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
+     * @param request the request parameters of DescribeRecursionRecord  DescribeRecursionRecordRequest
+     * @return DescribeRecursionRecordResponse
+     */
+    @Override
+    public CompletableFuture<DescribeRecursionRecordResponse> describeRecursionRecord(DescribeRecursionRecordRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RPC).setAction("DescribeRecursionRecord").setMethod(HttpMethod.POST).setPathRegex("/").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(DescribeRecursionRecordResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<DescribeRecursionRecordResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
+     * @param request the request parameters of DescribeRecursionZone  DescribeRecursionZoneRequest
+     * @return DescribeRecursionZoneResponse
+     */
+    @Override
+    public CompletableFuture<DescribeRecursionZoneResponse> describeRecursionZone(DescribeRecursionZoneRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RPC).setAction("DescribeRecursionZone").setMethod(HttpMethod.POST).setPathRegex("/").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(DescribeRecursionZoneResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<DescribeRecursionZoneResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
      * @param request the request parameters of DescribeSubDomainRecords  DescribeSubDomainRecordsRequest
      * @return DescribeSubDomainRecordsResponse
      */
@@ -2632,6 +2740,42 @@ public final class DefaultAsyncClient implements AsyncClient {
             return this.handler.execute(params);
         } catch (Exception e) {
             CompletableFuture<ListCloudGtmMonitorTemplatesResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
+     * @param request the request parameters of ListRecursionRecords  ListRecursionRecordsRequest
+     * @return ListRecursionRecordsResponse
+     */
+    @Override
+    public CompletableFuture<ListRecursionRecordsResponse> listRecursionRecords(ListRecursionRecordsRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RPC).setAction("ListRecursionRecords").setMethod(HttpMethod.POST).setPathRegex("/").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(ListRecursionRecordsResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<ListRecursionRecordsResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
+     * @param request the request parameters of ListRecursionZones  ListRecursionZonesRequest
+     * @return ListRecursionZonesResponse
+     */
+    @Override
+    public CompletableFuture<ListRecursionZonesResponse> listRecursionZones(ListRecursionZonesRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RPC).setAction("ListRecursionZones").setMethod(HttpMethod.POST).setPathRegex("/").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(ListRecursionZonesResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<ListRecursionZonesResponse> future = new CompletableFuture<>();
             future.completeExceptionally(e);
             return future;
         }
@@ -2994,6 +3138,42 @@ public final class DefaultAsyncClient implements AsyncClient {
             return this.handler.execute(params);
         } catch (Exception e) {
             CompletableFuture<SearchCloudGtmMonitorTemplatesResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
+     * @param request the request parameters of SearchRecursionRecords  SearchRecursionRecordsRequest
+     * @return SearchRecursionRecordsResponse
+     */
+    @Override
+    public CompletableFuture<SearchRecursionRecordsResponse> searchRecursionRecords(SearchRecursionRecordsRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RPC).setAction("SearchRecursionRecords").setMethod(HttpMethod.POST).setPathRegex("/").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(SearchRecursionRecordsResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<SearchRecursionRecordsResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
+     * @param request the request parameters of SearchRecursionZones  SearchRecursionZonesRequest
+     * @return SearchRecursionZonesResponse
+     */
+    @Override
+    public CompletableFuture<SearchRecursionZonesResponse> searchRecursionZones(SearchRecursionZonesRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RPC).setAction("SearchRecursionZones").setMethod(HttpMethod.POST).setPathRegex("/").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(SearchRecursionZonesResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<SearchRecursionZonesResponse> future = new CompletableFuture<>();
             future.completeExceptionally(e);
             return future;
         }
@@ -3908,6 +4088,206 @@ public final class DefaultAsyncClient implements AsyncClient {
             return this.handler.execute(params);
         } catch (Exception e) {
             CompletableFuture<UpdateIspFlushCacheInstanceConfigResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
+     * @param request the request parameters of UpdateRecursionRecord  UpdateRecursionRecordRequest
+     * @return UpdateRecursionRecordResponse
+     */
+    @Override
+    public CompletableFuture<UpdateRecursionRecordResponse> updateRecursionRecord(UpdateRecursionRecordRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RPC).setAction("UpdateRecursionRecord").setMethod(HttpMethod.POST).setPathRegex("/").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(UpdateRecursionRecordResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<UpdateRecursionRecordResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
+     * @param request the request parameters of UpdateRecursionRecordEnableStatus  UpdateRecursionRecordEnableStatusRequest
+     * @return UpdateRecursionRecordEnableStatusResponse
+     */
+    @Override
+    public CompletableFuture<UpdateRecursionRecordEnableStatusResponse> updateRecursionRecordEnableStatus(UpdateRecursionRecordEnableStatusRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RPC).setAction("UpdateRecursionRecordEnableStatus").setMethod(HttpMethod.POST).setPathRegex("/").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(UpdateRecursionRecordEnableStatusResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<UpdateRecursionRecordEnableStatusResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
+     * @param request the request parameters of UpdateRecursionRecordRemark  UpdateRecursionRecordRemarkRequest
+     * @return UpdateRecursionRecordRemarkResponse
+     */
+    @Override
+    public CompletableFuture<UpdateRecursionRecordRemarkResponse> updateRecursionRecordRemark(UpdateRecursionRecordRemarkRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RPC).setAction("UpdateRecursionRecordRemark").setMethod(HttpMethod.POST).setPathRegex("/").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(UpdateRecursionRecordRemarkResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<UpdateRecursionRecordRemarkResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
+     * @param request the request parameters of UpdateRecursionRecordWeight  UpdateRecursionRecordWeightRequest
+     * @return UpdateRecursionRecordWeightResponse
+     */
+    @Override
+    public CompletableFuture<UpdateRecursionRecordWeightResponse> updateRecursionRecordWeight(UpdateRecursionRecordWeightRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RPC).setAction("UpdateRecursionRecordWeight").setMethod(HttpMethod.POST).setPathRegex("/").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(UpdateRecursionRecordWeightResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<UpdateRecursionRecordWeightResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
+     * @param request the request parameters of UpdateRecursionRecordWeightEnableStatus  UpdateRecursionRecordWeightEnableStatusRequest
+     * @return UpdateRecursionRecordWeightEnableStatusResponse
+     */
+    @Override
+    public CompletableFuture<UpdateRecursionRecordWeightEnableStatusResponse> updateRecursionRecordWeightEnableStatus(UpdateRecursionRecordWeightEnableStatusRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RPC).setAction("UpdateRecursionRecordWeightEnableStatus").setMethod(HttpMethod.POST).setPathRegex("/").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(UpdateRecursionRecordWeightEnableStatusResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<UpdateRecursionRecordWeightEnableStatusResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
+     * @param request the request parameters of UpdateRecursionZoneEffectiveScope  UpdateRecursionZoneEffectiveScopeRequest
+     * @return UpdateRecursionZoneEffectiveScopeResponse
+     */
+    @Override
+    public CompletableFuture<UpdateRecursionZoneEffectiveScopeResponse> updateRecursionZoneEffectiveScope(UpdateRecursionZoneEffectiveScopeRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RPC).setAction("UpdateRecursionZoneEffectiveScope").setMethod(HttpMethod.POST).setPathRegex("/").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(UpdateRecursionZoneEffectiveScopeResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<UpdateRecursionZoneEffectiveScopeResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
+     * @param request the request parameters of UpdateRecursionZoneProxyPattern  UpdateRecursionZoneProxyPatternRequest
+     * @return UpdateRecursionZoneProxyPatternResponse
+     */
+    @Override
+    public CompletableFuture<UpdateRecursionZoneProxyPatternResponse> updateRecursionZoneProxyPattern(UpdateRecursionZoneProxyPatternRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RPC).setAction("UpdateRecursionZoneProxyPattern").setMethod(HttpMethod.POST).setPathRegex("/").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(UpdateRecursionZoneProxyPatternResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<UpdateRecursionZoneProxyPatternResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
+     * @param request the request parameters of UpdateRecursionZoneRemark  UpdateRecursionZoneRemarkRequest
+     * @return UpdateRecursionZoneRemarkResponse
+     */
+    @Override
+    public CompletableFuture<UpdateRecursionZoneRemarkResponse> updateRecursionZoneRemark(UpdateRecursionZoneRemarkRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RPC).setAction("UpdateRecursionZoneRemark").setMethod(HttpMethod.POST).setPathRegex("/").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(UpdateRecursionZoneRemarkResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<UpdateRecursionZoneRemarkResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
+     * <b>description</b> :
+     * <h2>请求说明</h2>
+     * <ul>
+     * <li>本接口专为注册局用户设计，允许他们更新指定顶级域名（TLD）的各种属性。</li>
+     * <li>必须提供<code>RegistryId</code>和<code>Tld</code>参数以标识要修改的具体TLD。</li>
+     * <li>可选参数包括但不限于宽限期设置、DNS解析缓存时间、价格设定等，这些都可根据需要进行调整。</li>
+     * <li>环境(<code>Env</code>)参数指定了API调用的目标环境，默认值为“DAILY”表示日常测试环境；正式上线前，请确保已正确设置此参数。</li>
+     * <li>某些时间戳字段如<code>SunriseStartTimeStamp</code>要求输入Unix时间戳格式的数据。</li>
+     * </ul>
+     * 
+     * @param request the request parameters of UpdateRspDomainServerHoldStatusOte  UpdateRspDomainServerHoldStatusOteRequest
+     * @return UpdateRspDomainServerHoldStatusOteResponse
+     */
+    @Override
+    public CompletableFuture<UpdateRspDomainServerHoldStatusOteResponse> updateRspDomainServerHoldStatusOte(UpdateRspDomainServerHoldStatusOteRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RPC).setAction("UpdateRspDomainServerHoldStatusOte").setMethod(HttpMethod.POST).setPathRegex("/").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(UpdateRspDomainServerHoldStatusOteResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<UpdateRspDomainServerHoldStatusOteResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
+     * <b>description</b> :
+     * <h2>请求说明</h2>
+     * <ul>
+     * <li>本接口专为注册局用户设计，允许他们更新指定顶级域名（TLD）的各种属性。</li>
+     * <li>必须提供<code>RegistryId</code>和<code>Tld</code>参数以标识要修改的具体TLD。</li>
+     * <li>可选参数包括但不限于宽限期设置、DNS解析缓存时间、价格设定等，这些都可根据需要进行调整。</li>
+     * <li>环境(<code>Env</code>)参数指定了API调用的目标环境，默认值为“DAILY”表示日常测试环境；正式上线前，请确保已正确设置此参数。</li>
+     * <li>某些时间戳字段如<code>SunriseStartTimeStamp</code>要求输入Unix时间戳格式的数据。</li>
+     * </ul>
+     * 
+     * @param request the request parameters of UpdateRspDomainStatusOte  UpdateRspDomainStatusOteRequest
+     * @return UpdateRspDomainStatusOteResponse
+     */
+    @Override
+    public CompletableFuture<UpdateRspDomainStatusOteResponse> updateRspDomainStatusOte(UpdateRspDomainStatusOteRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RPC).setAction("UpdateRspDomainStatusOte").setMethod(HttpMethod.POST).setPathRegex("/").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(UpdateRspDomainStatusOteResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<UpdateRspDomainStatusOteResponse> future = new CompletableFuture<>();
             future.completeExceptionally(e);
             return future;
         }

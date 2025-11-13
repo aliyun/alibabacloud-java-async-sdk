@@ -404,6 +404,9 @@ public class DescribeDomainsResponseBody extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("ResourceGroupId")
         private String resourceGroupId;
 
+        @com.aliyun.core.annotation.NameInMap("SlaveDnsStatus")
+        private String slaveDnsStatus;
+
         @com.aliyun.core.annotation.NameInMap("Starmark")
         private Boolean starmark;
 
@@ -434,6 +437,7 @@ public class DescribeDomainsResponseBody extends TeaModel {
             this.registrantEmail = builder.registrantEmail;
             this.remark = builder.remark;
             this.resourceGroupId = builder.resourceGroupId;
+            this.slaveDnsStatus = builder.slaveDnsStatus;
             this.starmark = builder.starmark;
             this.tags = builder.tags;
             this.versionCode = builder.versionCode;
@@ -568,6 +572,13 @@ public class DescribeDomainsResponseBody extends TeaModel {
         }
 
         /**
+         * @return slaveDnsStatus
+         */
+        public String getSlaveDnsStatus() {
+            return this.slaveDnsStatus;
+        }
+
+        /**
          * @return starmark
          */
         public Boolean getStarmark() {
@@ -613,6 +624,7 @@ public class DescribeDomainsResponseBody extends TeaModel {
             private String registrantEmail; 
             private String remark; 
             private String resourceGroupId; 
+            private String slaveDnsStatus; 
             private Boolean starmark; 
             private Tags tags; 
             private String versionCode; 
@@ -639,6 +651,7 @@ public class DescribeDomainsResponseBody extends TeaModel {
                 this.registrantEmail = model.registrantEmail;
                 this.remark = model.remark;
                 this.resourceGroupId = model.resourceGroupId;
+                this.slaveDnsStatus = model.slaveDnsStatus;
                 this.starmark = model.starmark;
                 this.tags = model.tags;
                 this.versionCode = model.versionCode;
@@ -830,6 +843,14 @@ public class DescribeDomainsResponseBody extends TeaModel {
              */
             public Builder resourceGroupId(String resourceGroupId) {
                 this.resourceGroupId = resourceGroupId;
+                return this;
+            }
+
+            /**
+             * SlaveDnsStatus.
+             */
+            public Builder slaveDnsStatus(String slaveDnsStatus) {
+                this.slaveDnsStatus = slaveDnsStatus;
                 return this;
             }
 

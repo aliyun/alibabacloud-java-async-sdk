@@ -194,6 +194,9 @@ public class SearchCloudGtmInstancesResponseBody extends TeaModel {
      * <p>SearchCloudGtmInstancesResponseBody</p>
      */
     public static class Instance extends TeaModel {
+        @com.aliyun.core.annotation.NameInMap("ChargeType")
+        private String chargeType;
+
         @com.aliyun.core.annotation.NameInMap("CommodityCode")
         private String commodityCode;
 
@@ -243,6 +246,7 @@ public class SearchCloudGtmInstancesResponseBody extends TeaModel {
         private String versionCode;
 
         private Instance(Builder builder) {
+            this.chargeType = builder.chargeType;
             this.commodityCode = builder.commodityCode;
             this.createTime = builder.createTime;
             this.createTimestamp = builder.createTimestamp;
@@ -267,6 +271,13 @@ public class SearchCloudGtmInstancesResponseBody extends TeaModel {
 
         public static Instance create() {
             return builder().build();
+        }
+
+        /**
+         * @return chargeType
+         */
+        public String getChargeType() {
+            return this.chargeType;
         }
 
         /**
@@ -382,6 +393,7 @@ public class SearchCloudGtmInstancesResponseBody extends TeaModel {
         }
 
         public static final class Builder {
+            private String chargeType; 
             private String commodityCode; 
             private String createTime; 
             private Long createTimestamp; 
@@ -403,6 +415,7 @@ public class SearchCloudGtmInstancesResponseBody extends TeaModel {
             } 
 
             private Builder(Instance model) {
+                this.chargeType = model.chargeType;
                 this.commodityCode = model.commodityCode;
                 this.createTime = model.createTime;
                 this.createTimestamp = model.createTimestamp;
@@ -420,6 +433,14 @@ public class SearchCloudGtmInstancesResponseBody extends TeaModel {
                 this.updateTimestamp = model.updateTimestamp;
                 this.versionCode = model.versionCode;
             } 
+
+            /**
+             * ChargeType.
+             */
+            public Builder chargeType(String chargeType) {
+                this.chargeType = chargeType;
+                return this;
+            }
 
             /**
              * <p>The commodity code. Valid values:</p>

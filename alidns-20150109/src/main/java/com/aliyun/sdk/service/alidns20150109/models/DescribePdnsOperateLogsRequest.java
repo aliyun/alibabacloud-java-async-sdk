@@ -42,6 +42,10 @@ public class DescribePdnsOperateLogsRequest extends Request {
     private Long pageSize;
 
     @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ResourceType")
+    private String resourceType;
+
+    @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("StartDate")
     private String startDate;
 
@@ -53,6 +57,7 @@ public class DescribePdnsOperateLogsRequest extends Request {
         this.lang = builder.lang;
         this.pageNumber = builder.pageNumber;
         this.pageSize = builder.pageSize;
+        this.resourceType = builder.resourceType;
         this.startDate = builder.startDate;
     }
 
@@ -112,6 +117,13 @@ public class DescribePdnsOperateLogsRequest extends Request {
     }
 
     /**
+     * @return resourceType
+     */
+    public String getResourceType() {
+        return this.resourceType;
+    }
+
+    /**
      * @return startDate
      */
     public String getStartDate() {
@@ -125,6 +137,7 @@ public class DescribePdnsOperateLogsRequest extends Request {
         private String lang; 
         private Long pageNumber; 
         private Long pageSize; 
+        private String resourceType; 
         private String startDate; 
 
         private Builder() {
@@ -139,6 +152,7 @@ public class DescribePdnsOperateLogsRequest extends Request {
             this.lang = request.lang;
             this.pageNumber = request.pageNumber;
             this.pageSize = request.pageSize;
+            this.resourceType = request.resourceType;
             this.startDate = request.startDate;
         } 
 
@@ -193,6 +207,15 @@ public class DescribePdnsOperateLogsRequest extends Request {
         public Builder pageSize(Long pageSize) {
             this.putQueryParameter("PageSize", pageSize);
             this.pageSize = pageSize;
+            return this;
+        }
+
+        /**
+         * ResourceType.
+         */
+        public Builder resourceType(String resourceType) {
+            this.putQueryParameter("ResourceType", resourceType);
+            this.resourceType = resourceType;
             return this;
         }
 

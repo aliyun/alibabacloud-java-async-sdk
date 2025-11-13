@@ -22,6 +22,10 @@ public class CreateCloudGtmInstanceConfigRequest extends Request {
     private String acceptLanguage;
 
     @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ChargeType")
+    private String chargeType;
+
+    @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("ClientToken")
     private String clientToken;
 
@@ -60,6 +64,7 @@ public class CreateCloudGtmInstanceConfigRequest extends Request {
     private CreateCloudGtmInstanceConfigRequest(Builder builder) {
         super(builder);
         this.acceptLanguage = builder.acceptLanguage;
+        this.chargeType = builder.chargeType;
         this.clientToken = builder.clientToken;
         this.enableStatus = builder.enableStatus;
         this.instanceId = builder.instanceId;
@@ -89,6 +94,13 @@ public class CreateCloudGtmInstanceConfigRequest extends Request {
      */
     public String getAcceptLanguage() {
         return this.acceptLanguage;
+    }
+
+    /**
+     * @return chargeType
+     */
+    public String getChargeType() {
+        return this.chargeType;
     }
 
     /**
@@ -156,6 +168,7 @@ public class CreateCloudGtmInstanceConfigRequest extends Request {
 
     public static final class Builder extends Request.Builder<CreateCloudGtmInstanceConfigRequest, Builder> {
         private String acceptLanguage; 
+        private String chargeType; 
         private String clientToken; 
         private String enableStatus; 
         private String instanceId; 
@@ -173,6 +186,7 @@ public class CreateCloudGtmInstanceConfigRequest extends Request {
         private Builder(CreateCloudGtmInstanceConfigRequest request) {
             super(request);
             this.acceptLanguage = request.acceptLanguage;
+            this.chargeType = request.chargeType;
             this.clientToken = request.clientToken;
             this.enableStatus = request.enableStatus;
             this.instanceId = request.instanceId;
@@ -197,6 +211,15 @@ public class CreateCloudGtmInstanceConfigRequest extends Request {
         public Builder acceptLanguage(String acceptLanguage) {
             this.putQueryParameter("AcceptLanguage", acceptLanguage);
             this.acceptLanguage = acceptLanguage;
+            return this;
+        }
+
+        /**
+         * ChargeType.
+         */
+        public Builder chargeType(String chargeType) {
+            this.putQueryParameter("ChargeType", chargeType);
+            this.chargeType = chargeType;
             return this;
         }
 

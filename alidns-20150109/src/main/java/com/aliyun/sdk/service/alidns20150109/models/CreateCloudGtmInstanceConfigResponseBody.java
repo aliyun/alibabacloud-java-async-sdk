@@ -20,6 +20,9 @@ public class CreateCloudGtmInstanceConfigResponseBody extends TeaModel {
     @com.aliyun.core.annotation.NameInMap("ConfigId")
     private Boolean configId;
 
+    @com.aliyun.core.annotation.NameInMap("InstanceId")
+    private String instanceId;
+
     @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
@@ -28,6 +31,7 @@ public class CreateCloudGtmInstanceConfigResponseBody extends TeaModel {
 
     private CreateCloudGtmInstanceConfigResponseBody(Builder builder) {
         this.configId = builder.configId;
+        this.instanceId = builder.instanceId;
         this.requestId = builder.requestId;
         this.success = builder.success;
     }
@@ -52,6 +56,13 @@ public class CreateCloudGtmInstanceConfigResponseBody extends TeaModel {
     }
 
     /**
+     * @return instanceId
+     */
+    public String getInstanceId() {
+        return this.instanceId;
+    }
+
+    /**
      * @return requestId
      */
     public String getRequestId() {
@@ -67,6 +78,7 @@ public class CreateCloudGtmInstanceConfigResponseBody extends TeaModel {
 
     public static final class Builder {
         private Boolean configId; 
+        private String instanceId; 
         private String requestId; 
         private Boolean success; 
 
@@ -75,6 +87,7 @@ public class CreateCloudGtmInstanceConfigResponseBody extends TeaModel {
 
         private Builder(CreateCloudGtmInstanceConfigResponseBody model) {
             this.configId = model.configId;
+            this.instanceId = model.instanceId;
             this.requestId = model.requestId;
             this.success = model.success;
         } 
@@ -87,6 +100,14 @@ public class CreateCloudGtmInstanceConfigResponseBody extends TeaModel {
          */
         public Builder configId(Boolean configId) {
             this.configId = configId;
+            return this;
+        }
+
+        /**
+         * InstanceId.
+         */
+        public Builder instanceId(String instanceId) {
+            this.instanceId = instanceId;
             return this;
         }
 
