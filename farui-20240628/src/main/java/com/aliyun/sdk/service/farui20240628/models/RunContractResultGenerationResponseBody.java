@@ -218,6 +218,9 @@ public class RunContractResultGenerationResponseBody extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("riskExplain")
         private String riskExplain;
 
+        @com.aliyun.core.annotation.NameInMap("standardOriginalContent")
+        private String standardOriginalContent;
+
         private SubRisks(Builder builder) {
             this.originalContent = builder.originalContent;
             this.resultContent = builder.resultContent;
@@ -225,6 +228,7 @@ public class RunContractResultGenerationResponseBody extends TeaModel {
             this.riskBrief = builder.riskBrief;
             this.riskClause = builder.riskClause;
             this.riskExplain = builder.riskExplain;
+            this.standardOriginalContent = builder.standardOriginalContent;
         }
 
         public static Builder builder() {
@@ -277,6 +281,13 @@ public class RunContractResultGenerationResponseBody extends TeaModel {
             return this.riskExplain;
         }
 
+        /**
+         * @return standardOriginalContent
+         */
+        public String getStandardOriginalContent() {
+            return this.standardOriginalContent;
+        }
+
         public static final class Builder {
             private String originalContent; 
             private String resultContent; 
@@ -284,6 +295,7 @@ public class RunContractResultGenerationResponseBody extends TeaModel {
             private String riskBrief; 
             private String riskClause; 
             private String riskExplain; 
+            private String standardOriginalContent; 
 
             private Builder() {
             } 
@@ -295,6 +307,7 @@ public class RunContractResultGenerationResponseBody extends TeaModel {
                 this.riskBrief = model.riskBrief;
                 this.riskClause = model.riskClause;
                 this.riskExplain = model.riskExplain;
+                this.standardOriginalContent = model.standardOriginalContent;
             } 
 
             /**
@@ -342,6 +355,14 @@ public class RunContractResultGenerationResponseBody extends TeaModel {
              */
             public Builder riskExplain(String riskExplain) {
                 this.riskExplain = riskExplain;
+                return this;
+            }
+
+            /**
+             * standardOriginalContent.
+             */
+            public Builder standardOriginalContent(String standardOriginalContent) {
+                this.standardOriginalContent = standardOriginalContent;
                 return this;
             }
 

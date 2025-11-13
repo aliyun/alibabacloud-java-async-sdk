@@ -1,3 +1,6 @@
+2025-11-13 Version: 1.0.7
+- Generated java-async 2024-06-28 for FaRui.
+
 2025-07-04 Version: 1.0.6
 - Generated java-async 2024-06-28 for FaRui.
 
