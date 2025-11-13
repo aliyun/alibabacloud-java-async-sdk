@@ -38,7 +38,6 @@ public class CreateInstanceRequest extends Request {
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("NumberList")
-    @com.aliyun.core.annotation.Validation(required = true)
     private String numberList;
 
     private CreateInstanceRequest(Builder builder) {
@@ -161,10 +160,7 @@ public class CreateInstanceRequest extends Request {
         }
 
         /**
-         * <p>This parameter is required.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>[&quot;0830011xxxx&quot;, &quot;0830312xxxx&quot;]</p>
+         * NumberList.
          */
         public Builder numberList(String numberList) {
             this.putQueryParameter("NumberList", numberList);

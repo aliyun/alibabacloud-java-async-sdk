@@ -45,6 +45,14 @@ public class CreateCampaignRequest extends Request {
     private Boolean executingUntilTimeout;
 
     @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("FlashSmsParameters")
+    private String flashSmsParameters;
+
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("InstGroupId")
+    private String instGroupId;
+
+    @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("InstanceId")
     @com.aliyun.core.annotation.Validation(required = true)
     private String instanceId;
@@ -63,6 +71,10 @@ public class CreateCampaignRequest extends Request {
     @com.aliyun.core.annotation.NameInMap("Name")
     @com.aliyun.core.annotation.Validation(required = true)
     private String name;
+
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("NumberList")
+    private java.util.List<String> numberList;
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("QueueId")
@@ -100,10 +112,13 @@ public class CreateCampaignRequest extends Request {
         this.contactFlowId = builder.contactFlowId;
         this.endTime = builder.endTime;
         this.executingUntilTimeout = builder.executingUntilTimeout;
+        this.flashSmsParameters = builder.flashSmsParameters;
+        this.instGroupId = builder.instGroupId;
         this.instanceId = builder.instanceId;
         this.maxAttemptCount = builder.maxAttemptCount;
         this.minAttemptInterval = builder.minAttemptInterval;
         this.name = builder.name;
+        this.numberList = builder.numberList;
         this.queueId = builder.queueId;
         this.simulation = builder.simulation;
         this.simulationParameters = builder.simulationParameters;
@@ -168,6 +183,20 @@ public class CreateCampaignRequest extends Request {
     }
 
     /**
+     * @return flashSmsParameters
+     */
+    public String getFlashSmsParameters() {
+        return this.flashSmsParameters;
+    }
+
+    /**
+     * @return instGroupId
+     */
+    public String getInstGroupId() {
+        return this.instGroupId;
+    }
+
+    /**
      * @return instanceId
      */
     public String getInstanceId() {
@@ -193,6 +222,13 @@ public class CreateCampaignRequest extends Request {
      */
     public String getName() {
         return this.name;
+    }
+
+    /**
+     * @return numberList
+     */
+    public java.util.List<String> getNumberList() {
+        return this.numberList;
     }
 
     /**
@@ -244,10 +280,13 @@ public class CreateCampaignRequest extends Request {
         private String contactFlowId; 
         private String endTime; 
         private Boolean executingUntilTimeout; 
+        private String flashSmsParameters; 
+        private String instGroupId; 
         private String instanceId; 
         private Long maxAttemptCount; 
         private Long minAttemptInterval; 
         private String name; 
+        private java.util.List<String> numberList; 
         private String queueId; 
         private Boolean simulation; 
         private String simulationParameters; 
@@ -267,10 +306,13 @@ public class CreateCampaignRequest extends Request {
             this.contactFlowId = request.contactFlowId;
             this.endTime = request.endTime;
             this.executingUntilTimeout = request.executingUntilTimeout;
+            this.flashSmsParameters = request.flashSmsParameters;
+            this.instGroupId = request.instGroupId;
             this.instanceId = request.instanceId;
             this.maxAttemptCount = request.maxAttemptCount;
             this.minAttemptInterval = request.minAttemptInterval;
             this.name = request.name;
+            this.numberList = request.numberList;
             this.queueId = request.queueId;
             this.simulation = request.simulation;
             this.simulationParameters = request.simulationParameters;
@@ -344,6 +386,24 @@ public class CreateCampaignRequest extends Request {
         }
 
         /**
+         * FlashSmsParameters.
+         */
+        public Builder flashSmsParameters(String flashSmsParameters) {
+            this.putQueryParameter("FlashSmsParameters", flashSmsParameters);
+            this.flashSmsParameters = flashSmsParameters;
+            return this;
+        }
+
+        /**
+         * InstGroupId.
+         */
+        public Builder instGroupId(String instGroupId) {
+            this.putQueryParameter("InstGroupId", instGroupId);
+            this.instGroupId = instGroupId;
+            return this;
+        }
+
+        /**
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -388,6 +448,16 @@ public class CreateCampaignRequest extends Request {
         public Builder name(String name) {
             this.putQueryParameter("Name", name);
             this.name = name;
+            return this;
+        }
+
+        /**
+         * NumberList.
+         */
+        public Builder numberList(java.util.List<String> numberList) {
+            String numberListShrink = shrink(numberList, "NumberList", "json");
+            this.putQueryParameter("NumberList", numberListShrink);
+            this.numberList = numberList;
             return this;
         }
 

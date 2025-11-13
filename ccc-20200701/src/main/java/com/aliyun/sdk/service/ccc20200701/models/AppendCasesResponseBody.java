@@ -20,6 +20,9 @@ public class AppendCasesResponseBody extends TeaModel {
     @com.aliyun.core.annotation.NameInMap("Code")
     private String code;
 
+    @com.aliyun.core.annotation.NameInMap("Data")
+    private java.util.List<Data> data;
+
     @com.aliyun.core.annotation.NameInMap("HttpStatusCode")
     private String httpStatusCode;
 
@@ -31,6 +34,7 @@ public class AppendCasesResponseBody extends TeaModel {
 
     private AppendCasesResponseBody(Builder builder) {
         this.code = builder.code;
+        this.data = builder.data;
         this.httpStatusCode = builder.httpStatusCode;
         this.message = builder.message;
         this.requestId = builder.requestId;
@@ -56,6 +60,13 @@ public class AppendCasesResponseBody extends TeaModel {
     }
 
     /**
+     * @return data
+     */
+    public java.util.List<Data> getData() {
+        return this.data;
+    }
+
+    /**
      * @return httpStatusCode
      */
     public String getHttpStatusCode() {
@@ -78,6 +89,7 @@ public class AppendCasesResponseBody extends TeaModel {
 
     public static final class Builder {
         private String code; 
+        private java.util.List<Data> data; 
         private String httpStatusCode; 
         private String message; 
         private String requestId; 
@@ -87,6 +99,7 @@ public class AppendCasesResponseBody extends TeaModel {
 
         private Builder(AppendCasesResponseBody model) {
             this.code = model.code;
+            this.data = model.data;
             this.httpStatusCode = model.httpStatusCode;
             this.message = model.message;
             this.requestId = model.requestId;
@@ -97,6 +110,14 @@ public class AppendCasesResponseBody extends TeaModel {
          */
         public Builder code(String code) {
             this.code = code;
+            return this;
+        }
+
+        /**
+         * Data.
+         */
+        public Builder data(java.util.List<Data> data) {
+            this.data = data;
             return this;
         }
 
@@ -130,4 +151,100 @@ public class AppendCasesResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link AppendCasesResponseBody} extends {@link TeaModel}
+     *
+     * <p>AppendCasesResponseBody</p>
+     */
+    public static class Data extends TeaModel {
+        @com.aliyun.core.annotation.NameInMap("CustomVariables")
+        private String customVariables;
+
+        @com.aliyun.core.annotation.NameInMap("PhoneNumber")
+        private String phoneNumber;
+
+        @com.aliyun.core.annotation.NameInMap("ReferenceId")
+        private String referenceId;
+
+        private Data(Builder builder) {
+            this.customVariables = builder.customVariables;
+            this.phoneNumber = builder.phoneNumber;
+            this.referenceId = builder.referenceId;
+        }
+
+        public static Builder builder() {
+            return new Builder();
+        }
+
+        public static Data create() {
+            return builder().build();
+        }
+
+        /**
+         * @return customVariables
+         */
+        public String getCustomVariables() {
+            return this.customVariables;
+        }
+
+        /**
+         * @return phoneNumber
+         */
+        public String getPhoneNumber() {
+            return this.phoneNumber;
+        }
+
+        /**
+         * @return referenceId
+         */
+        public String getReferenceId() {
+            return this.referenceId;
+        }
+
+        public static final class Builder {
+            private String customVariables; 
+            private String phoneNumber; 
+            private String referenceId; 
+
+            private Builder() {
+            } 
+
+            private Builder(Data model) {
+                this.customVariables = model.customVariables;
+                this.phoneNumber = model.phoneNumber;
+                this.referenceId = model.referenceId;
+            } 
+
+            /**
+             * CustomVariables.
+             */
+            public Builder customVariables(String customVariables) {
+                this.customVariables = customVariables;
+                return this;
+            }
+
+            /**
+             * PhoneNumber.
+             */
+            public Builder phoneNumber(String phoneNumber) {
+                this.phoneNumber = phoneNumber;
+                return this;
+            }
+
+            /**
+             * ReferenceId.
+             */
+            public Builder referenceId(String referenceId) {
+                this.referenceId = referenceId;
+                return this;
+            }
+
+            public Data build() {
+                return new Data(this);
+            } 
+
+        } 
+
+    }
 }

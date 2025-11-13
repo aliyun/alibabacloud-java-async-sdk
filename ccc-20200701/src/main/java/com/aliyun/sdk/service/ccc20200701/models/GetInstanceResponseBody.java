@@ -400,6 +400,81 @@ public class GetInstanceResponseBody extends TeaModel {
      *
      * <p>GetInstanceResponseBody</p>
      */
+    public static class ChatbotBusinessUnit extends TeaModel {
+        @com.aliyun.core.annotation.NameInMap("UnitId")
+        private Long unitId;
+
+        @com.aliyun.core.annotation.NameInMap("UnitKey")
+        private String unitKey;
+
+        private ChatbotBusinessUnit(Builder builder) {
+            this.unitId = builder.unitId;
+            this.unitKey = builder.unitKey;
+        }
+
+        public static Builder builder() {
+            return new Builder();
+        }
+
+        public static ChatbotBusinessUnit create() {
+            return builder().build();
+        }
+
+        /**
+         * @return unitId
+         */
+        public Long getUnitId() {
+            return this.unitId;
+        }
+
+        /**
+         * @return unitKey
+         */
+        public String getUnitKey() {
+            return this.unitKey;
+        }
+
+        public static final class Builder {
+            private Long unitId; 
+            private String unitKey; 
+
+            private Builder() {
+            } 
+
+            private Builder(ChatbotBusinessUnit model) {
+                this.unitId = model.unitId;
+                this.unitKey = model.unitKey;
+            } 
+
+            /**
+             * UnitId.
+             */
+            public Builder unitId(Long unitId) {
+                this.unitId = unitId;
+                return this;
+            }
+
+            /**
+             * UnitKey.
+             */
+            public Builder unitKey(String unitKey) {
+                this.unitKey = unitKey;
+                return this;
+            }
+
+            public ChatbotBusinessUnit build() {
+                return new ChatbotBusinessUnit(this);
+            } 
+
+        } 
+
+    }
+    /**
+     * 
+     * {@link GetInstanceResponseBody} extends {@link TeaModel}
+     *
+     * <p>GetInstanceResponseBody</p>
+     */
     public static class SkillGroups extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Description")
         private String description;
@@ -806,8 +881,14 @@ public class GetInstanceResponseBody extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("AdminList")
         private java.util.List<AdminList> adminList;
 
+        @com.aliyun.core.annotation.NameInMap("AgentType")
+        private String agentType;
+
         @com.aliyun.core.annotation.NameInMap("AliyunUid")
         private String aliyunUid;
+
+        @com.aliyun.core.annotation.NameInMap("ChatbotBusinessUnit")
+        private ChatbotBusinessUnit chatbotBusinessUnit;
 
         @com.aliyun.core.annotation.NameInMap("ConsoleUrl")
         private String consoleUrl;
@@ -832,7 +913,9 @@ public class GetInstanceResponseBody extends TeaModel {
 
         private Data(Builder builder) {
             this.adminList = builder.adminList;
+            this.agentType = builder.agentType;
             this.aliyunUid = builder.aliyunUid;
+            this.chatbotBusinessUnit = builder.chatbotBusinessUnit;
             this.consoleUrl = builder.consoleUrl;
             this.description = builder.description;
             this.domainName = builder.domainName;
@@ -858,10 +941,24 @@ public class GetInstanceResponseBody extends TeaModel {
         }
 
         /**
+         * @return agentType
+         */
+        public String getAgentType() {
+            return this.agentType;
+        }
+
+        /**
          * @return aliyunUid
          */
         public String getAliyunUid() {
             return this.aliyunUid;
+        }
+
+        /**
+         * @return chatbotBusinessUnit
+         */
+        public ChatbotBusinessUnit getChatbotBusinessUnit() {
+            return this.chatbotBusinessUnit;
         }
 
         /**
@@ -915,7 +1012,9 @@ public class GetInstanceResponseBody extends TeaModel {
 
         public static final class Builder {
             private java.util.List<AdminList> adminList; 
+            private String agentType; 
             private String aliyunUid; 
+            private ChatbotBusinessUnit chatbotBusinessUnit; 
             private String consoleUrl; 
             private String description; 
             private String domainName; 
@@ -929,7 +1028,9 @@ public class GetInstanceResponseBody extends TeaModel {
 
             private Builder(Data model) {
                 this.adminList = model.adminList;
+                this.agentType = model.agentType;
                 this.aliyunUid = model.aliyunUid;
+                this.chatbotBusinessUnit = model.chatbotBusinessUnit;
                 this.consoleUrl = model.consoleUrl;
                 this.description = model.description;
                 this.domainName = model.domainName;
@@ -948,10 +1049,26 @@ public class GetInstanceResponseBody extends TeaModel {
             }
 
             /**
+             * AgentType.
+             */
+            public Builder agentType(String agentType) {
+                this.agentType = agentType;
+                return this;
+            }
+
+            /**
              * AliyunUid.
              */
             public Builder aliyunUid(String aliyunUid) {
                 this.aliyunUid = aliyunUid;
+                return this;
+            }
+
+            /**
+             * ChatbotBusinessUnit.
+             */
+            public Builder chatbotBusinessUnit(ChatbotBusinessUnit chatbotBusinessUnit) {
+                this.chatbotBusinessUnit = chatbotBusinessUnit;
                 return this;
             }
 
