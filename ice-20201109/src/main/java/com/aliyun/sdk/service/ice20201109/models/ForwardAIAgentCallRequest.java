@@ -22,13 +22,23 @@ public class ForwardAIAgentCallRequest extends Request {
     private String calledNumber;
 
     @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ErrorPrompt")
+    private String errorPrompt;
+
+    @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("InstanceId")
     private String instanceId;
+
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("TransferPrompt")
+    private String transferPrompt;
 
     private ForwardAIAgentCallRequest(Builder builder) {
         super(builder);
         this.calledNumber = builder.calledNumber;
+        this.errorPrompt = builder.errorPrompt;
         this.instanceId = builder.instanceId;
+        this.transferPrompt = builder.transferPrompt;
     }
 
     public static Builder builder() {
@@ -52,15 +62,31 @@ public class ForwardAIAgentCallRequest extends Request {
     }
 
     /**
+     * @return errorPrompt
+     */
+    public String getErrorPrompt() {
+        return this.errorPrompt;
+    }
+
+    /**
      * @return instanceId
      */
     public String getInstanceId() {
         return this.instanceId;
     }
 
+    /**
+     * @return transferPrompt
+     */
+    public String getTransferPrompt() {
+        return this.transferPrompt;
+    }
+
     public static final class Builder extends Request.Builder<ForwardAIAgentCallRequest, Builder> {
         private String calledNumber; 
+        private String errorPrompt; 
         private String instanceId; 
+        private String transferPrompt; 
 
         private Builder() {
             super();
@@ -69,7 +95,9 @@ public class ForwardAIAgentCallRequest extends Request {
         private Builder(ForwardAIAgentCallRequest request) {
             super(request);
             this.calledNumber = request.calledNumber;
+            this.errorPrompt = request.errorPrompt;
             this.instanceId = request.instanceId;
+            this.transferPrompt = request.transferPrompt;
         } 
 
         /**
@@ -82,11 +110,29 @@ public class ForwardAIAgentCallRequest extends Request {
         }
 
         /**
+         * ErrorPrompt.
+         */
+        public Builder errorPrompt(String errorPrompt) {
+            this.putQueryParameter("ErrorPrompt", errorPrompt);
+            this.errorPrompt = errorPrompt;
+            return this;
+        }
+
+        /**
          * InstanceId.
          */
         public Builder instanceId(String instanceId) {
             this.putQueryParameter("InstanceId", instanceId);
             this.instanceId = instanceId;
+            return this;
+        }
+
+        /**
+         * TransferPrompt.
+         */
+        public Builder transferPrompt(String transferPrompt) {
+            this.putQueryParameter("TransferPrompt", transferPrompt);
+            this.transferPrompt = transferPrompt;
             return this;
         }
 

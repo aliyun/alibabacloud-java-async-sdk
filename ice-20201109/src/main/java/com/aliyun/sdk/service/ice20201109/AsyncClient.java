@@ -20,6 +20,12 @@ public interface AsyncClient extends SdkAutoCloseable {
     }
 
     /**
+     * @param request the request parameters of ActiveAiRtcLicense  ActiveAiRtcLicenseRequest
+     * @return ActiveAiRtcLicenseResponse
+     */
+    CompletableFuture<ActiveAiRtcLicenseResponse> activeAiRtcLicense(ActiveAiRtcLicenseRequest request);
+
+    /**
      * @param request the request parameters of AddAdInsertion  AddAdInsertionRequest
      * @return AddAdInsertionResponse
      */
@@ -940,6 +946,18 @@ public interface AsyncClient extends SdkAutoCloseable {
      * @return GetAdInsertionResponse
      */
     CompletableFuture<GetAdInsertionResponse> getAdInsertion(GetAdInsertionRequest request);
+
+    /**
+     * @param request the request parameters of GetAiRtcAuthCodeList  GetAiRtcAuthCodeListRequest
+     * @return GetAiRtcAuthCodeListResponse
+     */
+    CompletableFuture<GetAiRtcAuthCodeListResponse> getAiRtcAuthCodeList(GetAiRtcAuthCodeListRequest request);
+
+    /**
+     * @param request the request parameters of GetAiRtcLicenseInfoList  GetAiRtcLicenseInfoListRequest
+     * @return GetAiRtcLicenseInfoListResponse
+     */
+    CompletableFuture<GetAiRtcLicenseInfoListResponse> getAiRtcLicenseInfoList(GetAiRtcLicenseInfoListRequest request);
 
     /**
      * @param request the request parameters of GetAvatar  GetAvatarRequest
@@ -2543,6 +2561,12 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<SubmitProjectExportJobResponse> submitProjectExportJob(SubmitProjectExportJobRequest request);
 
     /**
+     * @param request the request parameters of SubmitSceneBatchEditingJob  SubmitSceneBatchEditingJobRequest
+     * @return SubmitSceneBatchEditingJobResponse
+     */
+    CompletableFuture<SubmitSceneBatchEditingJobResponse> submitSceneBatchEditingJob(SubmitSceneBatchEditingJobRequest request);
+
+    /**
      * <b>description</b> :
      * <p>  After a job is submitted, you can call <a href="https://help.aliyun.com/document_detail/2803751.html">ListBatchMediaProducingJob</a> to query submitted jobs, or <a href="https://help.aliyun.com/document_detail/2693269.html">GetBatchMediaProducingJob</a> to query the job status and results.</p>
      * <ul>
@@ -2553,6 +2577,12 @@ public interface AsyncClient extends SdkAutoCloseable {
      * @return SubmitSceneMediaSelectionJobResponse
      */
     CompletableFuture<SubmitSceneMediaSelectionJobResponse> submitSceneMediaSelectionJob(SubmitSceneMediaSelectionJobRequest request);
+
+    /**
+     * @param request the request parameters of SubmitSceneTimelineOrganizationJob  SubmitSceneTimelineOrganizationJobRequest
+     * @return SubmitSceneTimelineOrganizationJobResponse
+     */
+    CompletableFuture<SubmitSceneTimelineOrganizationJobResponse> submitSceneTimelineOrganizationJob(SubmitSceneTimelineOrganizationJobRequest request);
 
     /**
      * @param request the request parameters of SubmitScreenMediaHighlightsJob  SubmitScreenMediaHighlightsJobRequest
