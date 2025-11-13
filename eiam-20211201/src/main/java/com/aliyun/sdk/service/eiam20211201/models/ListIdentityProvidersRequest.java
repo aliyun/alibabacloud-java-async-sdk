@@ -22,6 +22,10 @@ public class ListIdentityProvidersRequest extends Request {
     private String regionId;
 
     @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Direction")
+    private String direction;
+
+    @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("InstanceId")
     @com.aliyun.core.annotation.Validation(required = true, maxLength = 64)
     private String instanceId;
@@ -37,6 +41,7 @@ public class ListIdentityProvidersRequest extends Request {
     private ListIdentityProvidersRequest(Builder builder) {
         super(builder);
         this.regionId = builder.regionId;
+        this.direction = builder.direction;
         this.instanceId = builder.instanceId;
         this.pageNumber = builder.pageNumber;
         this.pageSize = builder.pageSize;
@@ -63,6 +68,13 @@ public class ListIdentityProvidersRequest extends Request {
     }
 
     /**
+     * @return direction
+     */
+    public String getDirection() {
+        return this.direction;
+    }
+
+    /**
      * @return instanceId
      */
     public String getInstanceId() {
@@ -85,6 +97,7 @@ public class ListIdentityProvidersRequest extends Request {
 
     public static final class Builder extends Request.Builder<ListIdentityProvidersRequest, Builder> {
         private String regionId; 
+        private String direction; 
         private String instanceId; 
         private Long pageNumber; 
         private Long pageSize; 
@@ -96,6 +109,7 @@ public class ListIdentityProvidersRequest extends Request {
         private Builder(ListIdentityProvidersRequest request) {
             super(request);
             this.regionId = request.regionId;
+            this.direction = request.direction;
             this.instanceId = request.instanceId;
             this.pageNumber = request.pageNumber;
             this.pageSize = request.pageSize;
@@ -107,6 +121,15 @@ public class ListIdentityProvidersRequest extends Request {
         public Builder regionId(String regionId) {
             this.putHostParameter("RegionId", regionId);
             this.regionId = regionId;
+            return this;
+        }
+
+        /**
+         * Direction.
+         */
+        public Builder direction(String direction) {
+            this.putQueryParameter("Direction", direction);
+            this.direction = direction;
             return this;
         }
 

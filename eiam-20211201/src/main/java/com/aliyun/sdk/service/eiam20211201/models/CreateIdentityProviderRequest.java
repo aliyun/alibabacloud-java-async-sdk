@@ -1371,6 +1371,12 @@ public class CreateIdentityProviderRequest extends Request {
         @com.aliyun.core.annotation.NameInMap("OrganizationUnitObjectClass")
         private String organizationUnitObjectClass;
 
+        @com.aliyun.core.annotation.NameInMap("OrganizationalUnitRdn")
+        private String organizationalUnitRdn;
+
+        @com.aliyun.core.annotation.NameInMap("PasswordSyncStatus")
+        private String passwordSyncStatus;
+
         @com.aliyun.core.annotation.NameInMap("StartTlsStatus")
         private String startTlsStatus;
 
@@ -1382,6 +1388,9 @@ public class CreateIdentityProviderRequest extends Request {
 
         @com.aliyun.core.annotation.NameInMap("UserObjectClassCustomFilter")
         private String userObjectClassCustomFilter;
+
+        @com.aliyun.core.annotation.NameInMap("UserRdn")
+        private String userRdn;
 
         private LdapConfig(Builder builder) {
             this.administratorPassword = builder.administratorPassword;
@@ -1395,10 +1404,13 @@ public class CreateIdentityProviderRequest extends Request {
             this.ldapServerHost = builder.ldapServerHost;
             this.ldapServerPort = builder.ldapServerPort;
             this.organizationUnitObjectClass = builder.organizationUnitObjectClass;
+            this.organizationalUnitRdn = builder.organizationalUnitRdn;
+            this.passwordSyncStatus = builder.passwordSyncStatus;
             this.startTlsStatus = builder.startTlsStatus;
             this.userLoginIdentifier = builder.userLoginIdentifier;
             this.userObjectClass = builder.userObjectClass;
             this.userObjectClassCustomFilter = builder.userObjectClassCustomFilter;
+            this.userRdn = builder.userRdn;
         }
 
         public static Builder builder() {
@@ -1487,6 +1499,20 @@ public class CreateIdentityProviderRequest extends Request {
         }
 
         /**
+         * @return organizationalUnitRdn
+         */
+        public String getOrganizationalUnitRdn() {
+            return this.organizationalUnitRdn;
+        }
+
+        /**
+         * @return passwordSyncStatus
+         */
+        public String getPasswordSyncStatus() {
+            return this.passwordSyncStatus;
+        }
+
+        /**
          * @return startTlsStatus
          */
         public String getStartTlsStatus() {
@@ -1514,6 +1540,13 @@ public class CreateIdentityProviderRequest extends Request {
             return this.userObjectClassCustomFilter;
         }
 
+        /**
+         * @return userRdn
+         */
+        public String getUserRdn() {
+            return this.userRdn;
+        }
+
         public static final class Builder {
             private String administratorPassword; 
             private String administratorUsername; 
@@ -1526,10 +1559,13 @@ public class CreateIdentityProviderRequest extends Request {
             private String ldapServerHost; 
             private Integer ldapServerPort; 
             private String organizationUnitObjectClass; 
+            private String organizationalUnitRdn; 
+            private String passwordSyncStatus; 
             private String startTlsStatus; 
             private String userLoginIdentifier; 
             private String userObjectClass; 
             private String userObjectClassCustomFilter; 
+            private String userRdn; 
 
             private Builder() {
             } 
@@ -1546,10 +1582,13 @@ public class CreateIdentityProviderRequest extends Request {
                 this.ldapServerHost = model.ldapServerHost;
                 this.ldapServerPort = model.ldapServerPort;
                 this.organizationUnitObjectClass = model.organizationUnitObjectClass;
+                this.organizationalUnitRdn = model.organizationalUnitRdn;
+                this.passwordSyncStatus = model.passwordSyncStatus;
                 this.startTlsStatus = model.startTlsStatus;
                 this.userLoginIdentifier = model.userLoginIdentifier;
                 this.userObjectClass = model.userObjectClass;
                 this.userObjectClassCustomFilter = model.userObjectClassCustomFilter;
+                this.userRdn = model.userRdn;
             } 
 
             /**
@@ -1677,6 +1716,22 @@ public class CreateIdentityProviderRequest extends Request {
             }
 
             /**
+             * OrganizationalUnitRdn.
+             */
+            public Builder organizationalUnitRdn(String organizationalUnitRdn) {
+                this.organizationalUnitRdn = organizationalUnitRdn;
+                return this;
+            }
+
+            /**
+             * PasswordSyncStatus.
+             */
+            public Builder passwordSyncStatus(String passwordSyncStatus) {
+                this.passwordSyncStatus = passwordSyncStatus;
+                return this;
+            }
+
+            /**
              * <p>Whether startTLS is enabled. Value range:</p>
              * <ul>
              * <li><p>Disabled: disabled</p>
@@ -1723,6 +1778,14 @@ public class CreateIdentityProviderRequest extends Request {
              */
             public Builder userObjectClassCustomFilter(String userObjectClassCustomFilter) {
                 this.userObjectClassCustomFilter = userObjectClassCustomFilter;
+                return this;
+            }
+
+            /**
+             * UserRdn.
+             */
+            public Builder userRdn(String userRdn) {
+                this.userRdn = userRdn;
                 return this;
             }
 
@@ -2528,6 +2591,108 @@ public class CreateIdentityProviderRequest extends Request {
      *
      * <p>CreateIdentityProviderRequest</p>
      */
+    public static class UdPushConfigPeriodicSyncConfig extends TeaModel {
+        @com.aliyun.core.annotation.NameInMap("PeriodicSyncCron")
+        private String periodicSyncCron;
+
+        @com.aliyun.core.annotation.NameInMap("PeriodicSyncTimes")
+        private java.util.List<Integer> periodicSyncTimes;
+
+        @com.aliyun.core.annotation.NameInMap("PeriodicSyncType")
+        private String periodicSyncType;
+
+        private UdPushConfigPeriodicSyncConfig(Builder builder) {
+            this.periodicSyncCron = builder.periodicSyncCron;
+            this.periodicSyncTimes = builder.periodicSyncTimes;
+            this.periodicSyncType = builder.periodicSyncType;
+        }
+
+        public static Builder builder() {
+            return new Builder();
+        }
+
+        public static UdPushConfigPeriodicSyncConfig create() {
+            return builder().build();
+        }
+
+        /**
+         * @return periodicSyncCron
+         */
+        public String getPeriodicSyncCron() {
+            return this.periodicSyncCron;
+        }
+
+        /**
+         * @return periodicSyncTimes
+         */
+        public java.util.List<Integer> getPeriodicSyncTimes() {
+            return this.periodicSyncTimes;
+        }
+
+        /**
+         * @return periodicSyncType
+         */
+        public String getPeriodicSyncType() {
+            return this.periodicSyncType;
+        }
+
+        public static final class Builder {
+            private String periodicSyncCron; 
+            private java.util.List<Integer> periodicSyncTimes; 
+            private String periodicSyncType; 
+
+            private Builder() {
+            } 
+
+            private Builder(UdPushConfigPeriodicSyncConfig model) {
+                this.periodicSyncCron = model.periodicSyncCron;
+                this.periodicSyncTimes = model.periodicSyncTimes;
+                this.periodicSyncType = model.periodicSyncType;
+            } 
+
+            /**
+             * <p>cron expression.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>0 45 1 * * ?</p>
+             */
+            public Builder periodicSyncCron(String periodicSyncCron) {
+                this.periodicSyncCron = periodicSyncCron;
+                return this;
+            }
+
+            /**
+             * <p>Collection of time points.</p>
+             */
+            public Builder periodicSyncTimes(java.util.List<Integer> periodicSyncTimes) {
+                this.periodicSyncTimes = periodicSyncTimes;
+                return this;
+            }
+
+            /**
+             * <p>type.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>cron</p>
+             */
+            public Builder periodicSyncType(String periodicSyncType) {
+                this.periodicSyncType = periodicSyncType;
+                return this;
+            }
+
+            public UdPushConfigPeriodicSyncConfig build() {
+                return new UdPushConfigPeriodicSyncConfig(this);
+            } 
+
+        } 
+
+    }
+    /**
+     * 
+     * {@link CreateIdentityProviderRequest} extends {@link TeaModel}
+     *
+     * <p>CreateIdentityProviderRequest</p>
+     */
     public static class UdSyncScopeConfigs extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("SourceScopes")
         private java.util.List<String> sourceScopes;
@@ -2611,6 +2776,9 @@ public class CreateIdentityProviderRequest extends Request {
         @com.aliyun.core.annotation.Validation(maxLength = 32)
         private String incrementalCallbackStatus;
 
+        @com.aliyun.core.annotation.NameInMap("PeriodicSyncConfig")
+        private UdPushConfigPeriodicSyncConfig periodicSyncConfig;
+
         @com.aliyun.core.annotation.NameInMap("PeriodicSyncStatus")
         @com.aliyun.core.annotation.Validation(maxLength = 32)
         private String periodicSyncStatus;
@@ -2620,6 +2788,7 @@ public class CreateIdentityProviderRequest extends Request {
 
         private UdPushConfig(Builder builder) {
             this.incrementalCallbackStatus = builder.incrementalCallbackStatus;
+            this.periodicSyncConfig = builder.periodicSyncConfig;
             this.periodicSyncStatus = builder.periodicSyncStatus;
             this.udSyncScopeConfigs = builder.udSyncScopeConfigs;
         }
@@ -2640,6 +2809,13 @@ public class CreateIdentityProviderRequest extends Request {
         }
 
         /**
+         * @return periodicSyncConfig
+         */
+        public UdPushConfigPeriodicSyncConfig getPeriodicSyncConfig() {
+            return this.periodicSyncConfig;
+        }
+
+        /**
          * @return periodicSyncStatus
          */
         public String getPeriodicSyncStatus() {
@@ -2655,6 +2831,7 @@ public class CreateIdentityProviderRequest extends Request {
 
         public static final class Builder {
             private String incrementalCallbackStatus; 
+            private UdPushConfigPeriodicSyncConfig periodicSyncConfig; 
             private String periodicSyncStatus; 
             private java.util.List<UdSyncScopeConfigs> udSyncScopeConfigs; 
 
@@ -2663,6 +2840,7 @@ public class CreateIdentityProviderRequest extends Request {
 
             private Builder(UdPushConfig model) {
                 this.incrementalCallbackStatus = model.incrementalCallbackStatus;
+                this.periodicSyncConfig = model.periodicSyncConfig;
                 this.periodicSyncStatus = model.periodicSyncStatus;
                 this.udSyncScopeConfigs = model.udSyncScopeConfigs;
             } 
@@ -2675,6 +2853,14 @@ public class CreateIdentityProviderRequest extends Request {
              */
             public Builder incrementalCallbackStatus(String incrementalCallbackStatus) {
                 this.incrementalCallbackStatus = incrementalCallbackStatus;
+                return this;
+            }
+
+            /**
+             * <p>Scheduled configuration verification.</p>
+             */
+            public Builder periodicSyncConfig(UdPushConfigPeriodicSyncConfig periodicSyncConfig) {
+                this.periodicSyncConfig = periodicSyncConfig;
                 return this;
             }
 
