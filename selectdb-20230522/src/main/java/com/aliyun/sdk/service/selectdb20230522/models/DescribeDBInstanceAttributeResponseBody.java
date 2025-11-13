@@ -83,6 +83,9 @@ public class DescribeDBInstanceAttributeResponseBody extends TeaModel {
     @com.aliyun.core.annotation.NameInMap("ResourceGroupId")
     private String resourceGroupId;
 
+    @com.aliyun.core.annotation.NameInMap("SecGroupConnValid")
+    private String secGroupConnValid;
+
     @com.aliyun.core.annotation.NameInMap("Serverless")
     private Boolean serverless;
 
@@ -100,6 +103,9 @@ public class DescribeDBInstanceAttributeResponseBody extends TeaModel {
 
     @com.aliyun.core.annotation.NameInMap("VSwitchId")
     private String vSwitchId;
+
+    @com.aliyun.core.annotation.NameInMap("VirtualClusterList")
+    private java.util.List<VirtualClusterList> virtualClusterList;
 
     @com.aliyun.core.annotation.NameInMap("VpcId")
     private String vpcId;
@@ -130,12 +136,14 @@ public class DescribeDBInstanceAttributeResponseBody extends TeaModel {
         this.requestId = builder.requestId;
         this.resourceCpu = builder.resourceCpu;
         this.resourceGroupId = builder.resourceGroupId;
+        this.secGroupConnValid = builder.secGroupConnValid;
         this.serverless = builder.serverless;
         this.status = builder.status;
         this.storageSize = builder.storageSize;
         this.subDomain = builder.subDomain;
         this.tags = builder.tags;
         this.vSwitchId = builder.vSwitchId;
+        this.virtualClusterList = builder.virtualClusterList;
         this.vpcId = builder.vpcId;
         this.zoneId = builder.zoneId;
     }
@@ -307,6 +315,13 @@ public class DescribeDBInstanceAttributeResponseBody extends TeaModel {
     }
 
     /**
+     * @return secGroupConnValid
+     */
+    public String getSecGroupConnValid() {
+        return this.secGroupConnValid;
+    }
+
+    /**
      * @return serverless
      */
     public Boolean getServerless() {
@@ -349,6 +364,13 @@ public class DescribeDBInstanceAttributeResponseBody extends TeaModel {
     }
 
     /**
+     * @return virtualClusterList
+     */
+    public java.util.List<VirtualClusterList> getVirtualClusterList() {
+        return this.virtualClusterList;
+    }
+
+    /**
      * @return vpcId
      */
     public String getVpcId() {
@@ -385,12 +407,14 @@ public class DescribeDBInstanceAttributeResponseBody extends TeaModel {
         private String requestId; 
         private Long resourceCpu; 
         private String resourceGroupId; 
+        private String secGroupConnValid; 
         private Boolean serverless; 
         private String status; 
         private Long storageSize; 
         private String subDomain; 
         private java.util.List<Tags> tags; 
         private String vSwitchId; 
+        private java.util.List<VirtualClusterList> virtualClusterList; 
         private String vpcId; 
         private String zoneId; 
 
@@ -420,12 +444,14 @@ public class DescribeDBInstanceAttributeResponseBody extends TeaModel {
             this.requestId = model.requestId;
             this.resourceCpu = model.resourceCpu;
             this.resourceGroupId = model.resourceGroupId;
+            this.secGroupConnValid = model.secGroupConnValid;
             this.serverless = model.serverless;
             this.status = model.status;
             this.storageSize = model.storageSize;
             this.subDomain = model.subDomain;
             this.tags = model.tags;
             this.vSwitchId = model.vSwitchId;
+            this.virtualClusterList = model.virtualClusterList;
             this.vpcId = model.vpcId;
             this.zoneId = model.zoneId;
         } 
@@ -665,6 +691,14 @@ public class DescribeDBInstanceAttributeResponseBody extends TeaModel {
         }
 
         /**
+         * SecGroupConnValid.
+         */
+        public Builder secGroupConnValid(String secGroupConnValid) {
+            this.secGroupConnValid = secGroupConnValid;
+            return this;
+        }
+
+        /**
          * Serverless.
          */
         public Builder serverless(Boolean serverless) {
@@ -726,6 +760,14 @@ public class DescribeDBInstanceAttributeResponseBody extends TeaModel {
          */
         public Builder vSwitchId(String vSwitchId) {
             this.vSwitchId = vSwitchId;
+            return this;
+        }
+
+        /**
+         * VirtualClusterList.
+         */
+        public Builder virtualClusterList(java.util.List<VirtualClusterList> virtualClusterList) {
+            this.virtualClusterList = virtualClusterList;
             return this;
         }
 
@@ -1538,6 +1580,227 @@ public class DescribeDBInstanceAttributeResponseBody extends TeaModel {
 
             public Tags build() {
                 return new Tags(this);
+            } 
+
+        } 
+
+    }
+    /**
+     * 
+     * {@link DescribeDBInstanceAttributeResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeDBInstanceAttributeResponseBody</p>
+     */
+    public static class VirtualClusterList extends TeaModel {
+        @com.aliyun.core.annotation.NameInMap("ActiveClusterId")
+        private String activeClusterId;
+
+        @com.aliyun.core.annotation.NameInMap("ActiveClusterName")
+        private String activeClusterName;
+
+        @com.aliyun.core.annotation.NameInMap("CreatedTime")
+        private String createdTime;
+
+        @com.aliyun.core.annotation.NameInMap("DbClusterId")
+        private String dbClusterId;
+
+        @com.aliyun.core.annotation.NameInMap("DbClusterName")
+        private String dbClusterName;
+
+        @com.aliyun.core.annotation.NameInMap("StandbyClusterId")
+        private String standbyClusterId;
+
+        @com.aliyun.core.annotation.NameInMap("StandbyClusterName")
+        private String standbyClusterName;
+
+        @com.aliyun.core.annotation.NameInMap("Status")
+        private String status;
+
+        private VirtualClusterList(Builder builder) {
+            this.activeClusterId = builder.activeClusterId;
+            this.activeClusterName = builder.activeClusterName;
+            this.createdTime = builder.createdTime;
+            this.dbClusterId = builder.dbClusterId;
+            this.dbClusterName = builder.dbClusterName;
+            this.standbyClusterId = builder.standbyClusterId;
+            this.standbyClusterName = builder.standbyClusterName;
+            this.status = builder.status;
+        }
+
+        public static Builder builder() {
+            return new Builder();
+        }
+
+        public static VirtualClusterList create() {
+            return builder().build();
+        }
+
+        /**
+         * @return activeClusterId
+         */
+        public String getActiveClusterId() {
+            return this.activeClusterId;
+        }
+
+        /**
+         * @return activeClusterName
+         */
+        public String getActiveClusterName() {
+            return this.activeClusterName;
+        }
+
+        /**
+         * @return createdTime
+         */
+        public String getCreatedTime() {
+            return this.createdTime;
+        }
+
+        /**
+         * @return dbClusterId
+         */
+        public String getDbClusterId() {
+            return this.dbClusterId;
+        }
+
+        /**
+         * @return dbClusterName
+         */
+        public String getDbClusterName() {
+            return this.dbClusterName;
+        }
+
+        /**
+         * @return standbyClusterId
+         */
+        public String getStandbyClusterId() {
+            return this.standbyClusterId;
+        }
+
+        /**
+         * @return standbyClusterName
+         */
+        public String getStandbyClusterName() {
+            return this.standbyClusterName;
+        }
+
+        /**
+         * @return status
+         */
+        public String getStatus() {
+            return this.status;
+        }
+
+        public static final class Builder {
+            private String activeClusterId; 
+            private String activeClusterName; 
+            private String createdTime; 
+            private String dbClusterId; 
+            private String dbClusterName; 
+            private String standbyClusterId; 
+            private String standbyClusterName; 
+            private String status; 
+
+            private Builder() {
+            } 
+
+            private Builder(VirtualClusterList model) {
+                this.activeClusterId = model.activeClusterId;
+                this.activeClusterName = model.activeClusterName;
+                this.createdTime = model.createdTime;
+                this.dbClusterId = model.dbClusterId;
+                this.dbClusterName = model.dbClusterName;
+                this.standbyClusterId = model.standbyClusterId;
+                this.standbyClusterName = model.standbyClusterName;
+                this.status = model.status;
+            } 
+
+            /**
+             * ActiveClusterId.
+             */
+            public Builder activeClusterId(String activeClusterId) {
+                this.activeClusterId = activeClusterId;
+                return this;
+            }
+
+            /**
+             * ActiveClusterName.
+             */
+            public Builder activeClusterName(String activeClusterName) {
+                this.activeClusterName = activeClusterName;
+                return this;
+            }
+
+            /**
+             * <p>The time when the cluster was created.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2023-08-14T09:24:13Z</p>
+             */
+            public Builder createdTime(String createdTime) {
+                this.createdTime = createdTime;
+                return this;
+            }
+
+            /**
+             * <p>The ID of the cluster.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>selectdb-cn-h033cjs****-be</p>
+             */
+            public Builder dbClusterId(String dbClusterId) {
+                this.dbClusterId = dbClusterId;
+                return this;
+            }
+
+            /**
+             * <p>The name of the cluster.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>test01</p>
+             */
+            public Builder dbClusterName(String dbClusterName) {
+                this.dbClusterName = dbClusterName;
+                return this;
+            }
+
+            /**
+             * StandbyClusterId.
+             */
+            public Builder standbyClusterId(String standbyClusterId) {
+                this.standbyClusterId = standbyClusterId;
+                return this;
+            }
+
+            /**
+             * StandbyClusterName.
+             */
+            public Builder standbyClusterName(String standbyClusterName) {
+                this.standbyClusterName = standbyClusterName;
+                return this;
+            }
+
+            /**
+             * <p>The state of the cluster. Valid values:</p>
+             * <ul>
+             * <li><strong>CREATING</strong>: The cluster is being created.</li>
+             * <li><strong>ACTIVATION</strong>: The cluster is running.</li>
+             * <li><strong>RESOURCE_CHANGING</strong>: The resource configuration of the cluster is being changed.</li>
+             * <li><strong>ORDER_PREPARING</strong>: The order is being confirmed.</li>
+             * <li><strong>READONLY_RESOURCE_CHANGING</strong>: The resource configuration of the cluster is being changed and the cluster is write-locked.</li>
+             * <li><strong>DELETING</strong>: The cluster is being deleted.</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>ACTIVATION</p>
+             */
+            public Builder status(String status) {
+                this.status = status;
+                return this;
+            }
+
+            public VirtualClusterList build() {
+                return new VirtualClusterList(this);
             } 
 
         } 
