@@ -1235,12 +1235,16 @@ public class DescribeApplicationAttributeResponseBody extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Port")
         private String port;
 
+        @com.aliyun.core.annotation.NameInMap("PortDescription")
+        private String portDescription;
+
         private Endpoints(Builder builder) {
             this.description = builder.description;
             this.endpointId = builder.endpointId;
             this.ip = builder.ip;
             this.netType = builder.netType;
             this.port = builder.port;
+            this.portDescription = builder.portDescription;
         }
 
         public static Builder builder() {
@@ -1286,12 +1290,20 @@ public class DescribeApplicationAttributeResponseBody extends TeaModel {
             return this.port;
         }
 
+        /**
+         * @return portDescription
+         */
+        public String getPortDescription() {
+            return this.portDescription;
+        }
+
         public static final class Builder {
             private String description; 
             private String endpointId; 
             private String ip; 
             private String netType; 
             private String port; 
+            private String portDescription; 
 
             private Builder() {
             } 
@@ -1302,6 +1314,7 @@ public class DescribeApplicationAttributeResponseBody extends TeaModel {
                 this.ip = model.ip;
                 this.netType = model.netType;
                 this.port = model.port;
+                this.portDescription = model.portDescription;
             } 
 
             /**
@@ -1341,6 +1354,14 @@ public class DescribeApplicationAttributeResponseBody extends TeaModel {
              */
             public Builder port(String port) {
                 this.port = port;
+                return this;
+            }
+
+            /**
+             * PortDescription.
+             */
+            public Builder portDescription(String portDescription) {
+                this.portDescription = portDescription;
                 return this;
             }
 
