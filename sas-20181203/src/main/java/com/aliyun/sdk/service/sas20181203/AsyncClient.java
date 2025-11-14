@@ -323,6 +323,12 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<CreateBinarySecurityPolicyResponse> createBinarySecurityPolicy(CreateBinarySecurityPolicyRequest request);
 
     /**
+     * @param request the request parameters of CreateCheckItem  CreateCheckItemRequest
+     * @return CreateCheckItemResponse
+     */
+    CompletableFuture<CreateCheckItemResponse> createCheckItem(CreateCheckItemRequest request);
+
+    /**
      * @param request the request parameters of CreateContainerScanTask  CreateContainerScanTaskRequest
      * @return CreateContainerScanTaskResponse
      */
@@ -664,6 +670,12 @@ public interface AsyncClient extends SdkAutoCloseable {
      * @return DeleteBinarySecurityPolicyResponse
      */
     CompletableFuture<DeleteBinarySecurityPolicyResponse> deleteBinarySecurityPolicy(DeleteBinarySecurityPolicyRequest request);
+
+    /**
+     * @param request the request parameters of DeleteCheckItem  DeleteCheckItemRequest
+     * @return DeleteCheckItemResponse
+     */
+    CompletableFuture<DeleteCheckItemResponse> deleteCheckItem(DeleteCheckItemRequest request);
 
     /**
      * @param request the request parameters of DeleteCheckPolicy  DeleteCheckPolicyRequest
@@ -1314,6 +1326,12 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<DescribeClusterNetworkResponse> describeClusterNetwork(DescribeClusterNetworkRequest request);
 
     /**
+     * @param request the request parameters of DescribeClusterScannerList  DescribeClusterScannerListRequest
+     * @return DescribeClusterScannerListResponse
+     */
+    CompletableFuture<DescribeClusterScannerListResponse> describeClusterScannerList(DescribeClusterScannerListRequest request);
+
+    /**
      * @param request the request parameters of DescribeClusterVulStatistics  DescribeClusterVulStatisticsRequest
      * @return DescribeClusterVulStatisticsResponse
      */
@@ -1459,6 +1477,12 @@ public interface AsyncClient extends SdkAutoCloseable {
      * @return DescribeCustomizeReportListResponse
      */
     CompletableFuture<DescribeCustomizeReportListResponse> describeCustomizeReportList(DescribeCustomizeReportListRequest request);
+
+    /**
+     * @param request the request parameters of DescribeCustomizedDict  DescribeCustomizedDictRequest
+     * @return DescribeCustomizedDictResponse
+     */
+    CompletableFuture<DescribeCustomizedDictResponse> describeCustomizedDict(DescribeCustomizedDictRequest request);
 
     /**
      * @param request the request parameters of DescribeCustomizedDictUploadInfo  DescribeCustomizedDictUploadInfoRequest
@@ -3044,6 +3068,12 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<FixCheckWarningsResponse> fixCheckWarnings(FixCheckWarningsRequest request);
 
     /**
+     * @param request the request parameters of GenerateClusterScannerWebhookYaml  GenerateClusterScannerWebhookYamlRequest
+     * @return GenerateClusterScannerWebhookYamlResponse
+     */
+    CompletableFuture<GenerateClusterScannerWebhookYamlResponse> generateClusterScannerWebhookYaml(GenerateClusterScannerWebhookYamlRequest request);
+
+    /**
      * @param request the request parameters of GenerateDynamicDict  GenerateDynamicDictRequest
      * @return GenerateDynamicDictResponse
      */
@@ -3087,6 +3117,12 @@ public interface AsyncClient extends SdkAutoCloseable {
      * @return GetAgentlessTaskCountResponse
      */
     CompletableFuture<GetAgentlessTaskCountResponse> getAgentlessTaskCount(GetAgentlessTaskCountRequest request);
+
+    /**
+     * @param request the request parameters of GetAgentlessTaskUsedSizeEstimate  GetAgentlessTaskUsedSizeEstimateRequest
+     * @return GetAgentlessTaskUsedSizeEstimateResponse
+     */
+    CompletableFuture<GetAgentlessTaskUsedSizeEstimateResponse> getAgentlessTaskUsedSizeEstimate(GetAgentlessTaskUsedSizeEstimateRequest request);
 
     /**
      * @param request the request parameters of GetAlarmMachineCount  GetAlarmMachineCountRequest
@@ -3288,6 +3324,12 @@ public interface AsyncClient extends SdkAutoCloseable {
      * @return GetClusterRuleSummaryResponse
      */
     CompletableFuture<GetClusterRuleSummaryResponse> getClusterRuleSummary(GetClusterRuleSummaryRequest request);
+
+    /**
+     * @param request the request parameters of GetClusterScannerYaml  GetClusterScannerYamlRequest
+     * @return GetClusterScannerYamlResponse
+     */
+    CompletableFuture<GetClusterScannerYamlResponse> getClusterScannerYaml(GetClusterScannerYamlRequest request);
 
     /**
      * @param request the request parameters of GetClusterStrategyCount  GetClusterStrategyCountRequest
@@ -3764,6 +3806,15 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<HandleSecurityEventsResponse> handleSecurityEvents(HandleSecurityEventsRequest request);
 
     /**
+     * <b>description</b> :
+     * <hr>
+     * 
+     * @param request the request parameters of HandleSimilarMaliciousFiles  HandleSimilarMaliciousFilesRequest
+     * @return HandleSimilarMaliciousFilesResponse
+     */
+    CompletableFuture<HandleSimilarMaliciousFilesResponse> handleSimilarMaliciousFiles(HandleSimilarMaliciousFilesRequest request);
+
+    /**
      * @param request the request parameters of HandleSimilarSecurityEvents  HandleSimilarSecurityEventsRequest
      * @return HandleSimilarSecurityEventsResponse
      */
@@ -3987,6 +4038,18 @@ public interface AsyncClient extends SdkAutoCloseable {
      * @return ListCheckItemWarningSummaryResponse
      */
     CompletableFuture<ListCheckItemWarningSummaryResponse> listCheckItemWarningSummary(ListCheckItemWarningSummaryRequest request);
+
+    /**
+     * @param request the request parameters of ListCheckItems  ListCheckItemsRequest
+     * @return ListCheckItemsResponse
+     */
+    CompletableFuture<ListCheckItemsResponse> listCheckItems(ListCheckItemsRequest request);
+
+    /**
+     * @param request the request parameters of ListCheckPolicies  ListCheckPoliciesRequest
+     * @return ListCheckPoliciesResponse
+     */
+    CompletableFuture<ListCheckPoliciesResponse> listCheckPolicies(ListCheckPoliciesRequest request);
 
     /**
      * @param request the request parameters of ListCheckResult  ListCheckResultRequest
@@ -4441,6 +4504,12 @@ public interface AsyncClient extends SdkAutoCloseable {
      * @return ListUnfinishedOnceTaskResponse
      */
     CompletableFuture<ListUnfinishedOnceTaskResponse> listUnfinishedOnceTask(ListUnfinishedOnceTaskRequest request);
+
+    /**
+     * @param request the request parameters of ListUniBackupRecord  ListUniBackupRecordRequest
+     * @return ListUniBackupRecordResponse
+     */
+    CompletableFuture<ListUniBackupRecordResponse> listUniBackupRecord(ListUniBackupRecordRequest request);
 
     /**
      * @param request the request parameters of ListUninstallAegisMachines  ListUninstallAegisMachinesRequest
@@ -5491,6 +5560,12 @@ public interface AsyncClient extends SdkAutoCloseable {
      * @return UpdateBaselineCheckWhiteRecordResponse
      */
     CompletableFuture<UpdateBaselineCheckWhiteRecordResponse> updateBaselineCheckWhiteRecord(UpdateBaselineCheckWhiteRecordRequest request);
+
+    /**
+     * @param request the request parameters of UpdateCheckItem  UpdateCheckItemRequest
+     * @return UpdateCheckItemResponse
+     */
+    CompletableFuture<UpdateCheckItemResponse> updateCheckItem(UpdateCheckItemRequest request);
 
     /**
      * @param request the request parameters of UpdateClientAlertMode  UpdateClientAlertModeRequest

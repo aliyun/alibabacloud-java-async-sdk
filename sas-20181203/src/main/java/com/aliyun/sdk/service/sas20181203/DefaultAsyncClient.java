@@ -971,6 +971,24 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
+     * @param request the request parameters of CreateCheckItem  CreateCheckItemRequest
+     * @return CreateCheckItemResponse
+     */
+    @Override
+    public CompletableFuture<CreateCheckItemResponse> createCheckItem(CreateCheckItemRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RPC).setAction("CreateCheckItem").setMethod(HttpMethod.POST).setPathRegex("/").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(CreateCheckItemResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<CreateCheckItemResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
      * @param request the request parameters of CreateContainerScanTask  CreateContainerScanTaskRequest
      * @return CreateContainerScanTaskResponse
      */
@@ -1944,6 +1962,24 @@ public final class DefaultAsyncClient implements AsyncClient {
             return this.handler.execute(params);
         } catch (Exception e) {
             CompletableFuture<DeleteBinarySecurityPolicyResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
+     * @param request the request parameters of DeleteCheckItem  DeleteCheckItemRequest
+     * @return DeleteCheckItemResponse
+     */
+    @Override
+    public CompletableFuture<DeleteCheckItemResponse> deleteCheckItem(DeleteCheckItemRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RPC).setAction("DeleteCheckItem").setMethod(HttpMethod.POST).setPathRegex("/").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(DeleteCheckItemResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<DeleteCheckItemResponse> future = new CompletableFuture<>();
             future.completeExceptionally(e);
             return future;
         }
@@ -3834,6 +3870,24 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
+     * @param request the request parameters of DescribeClusterScannerList  DescribeClusterScannerListRequest
+     * @return DescribeClusterScannerListResponse
+     */
+    @Override
+    public CompletableFuture<DescribeClusterScannerListResponse> describeClusterScannerList(DescribeClusterScannerListRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RPC).setAction("DescribeClusterScannerList").setMethod(HttpMethod.POST).setPathRegex("/").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(DescribeClusterScannerListResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<DescribeClusterScannerListResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
      * @param request the request parameters of DescribeClusterVulStatistics  DescribeClusterVulStatisticsRequest
      * @return DescribeClusterVulStatisticsResponse
      */
@@ -4263,6 +4317,24 @@ public final class DefaultAsyncClient implements AsyncClient {
             return this.handler.execute(params);
         } catch (Exception e) {
             CompletableFuture<DescribeCustomizeReportListResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
+     * @param request the request parameters of DescribeCustomizedDict  DescribeCustomizedDictRequest
+     * @return DescribeCustomizedDictResponse
+     */
+    @Override
+    public CompletableFuture<DescribeCustomizedDictResponse> describeCustomizedDict(DescribeCustomizedDictRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RPC).setAction("DescribeCustomizedDict").setMethod(HttpMethod.POST).setPathRegex("/").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(DescribeCustomizedDictResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<DescribeCustomizedDictResponse> future = new CompletableFuture<>();
             future.completeExceptionally(e);
             return future;
         }
@@ -8792,6 +8864,24 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
+     * @param request the request parameters of GenerateClusterScannerWebhookYaml  GenerateClusterScannerWebhookYamlRequest
+     * @return GenerateClusterScannerWebhookYamlResponse
+     */
+    @Override
+    public CompletableFuture<GenerateClusterScannerWebhookYamlResponse> generateClusterScannerWebhookYaml(GenerateClusterScannerWebhookYamlRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RPC).setAction("GenerateClusterScannerWebhookYaml").setMethod(HttpMethod.POST).setPathRegex("/").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(GenerateClusterScannerWebhookYamlResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<GenerateClusterScannerWebhookYamlResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
      * @param request the request parameters of GenerateDynamicDict  GenerateDynamicDictRequest
      * @return GenerateDynamicDictResponse
      */
@@ -8915,6 +9005,24 @@ public final class DefaultAsyncClient implements AsyncClient {
             return this.handler.execute(params);
         } catch (Exception e) {
             CompletableFuture<GetAgentlessTaskCountResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
+     * @param request the request parameters of GetAgentlessTaskUsedSizeEstimate  GetAgentlessTaskUsedSizeEstimateRequest
+     * @return GetAgentlessTaskUsedSizeEstimateResponse
+     */
+    @Override
+    public CompletableFuture<GetAgentlessTaskUsedSizeEstimateResponse> getAgentlessTaskUsedSizeEstimate(GetAgentlessTaskUsedSizeEstimateRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RPC).setAction("GetAgentlessTaskUsedSizeEstimate").setMethod(HttpMethod.POST).setPathRegex("/").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(GetAgentlessTaskUsedSizeEstimateResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<GetAgentlessTaskUsedSizeEstimateResponse> future = new CompletableFuture<>();
             future.completeExceptionally(e);
             return future;
         }
@@ -9512,6 +9620,24 @@ public final class DefaultAsyncClient implements AsyncClient {
             return this.handler.execute(params);
         } catch (Exception e) {
             CompletableFuture<GetClusterRuleSummaryResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
+     * @param request the request parameters of GetClusterScannerYaml  GetClusterScannerYamlRequest
+     * @return GetClusterScannerYamlResponse
+     */
+    @Override
+    public CompletableFuture<GetClusterScannerYamlResponse> getClusterScannerYaml(GetClusterScannerYamlRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RPC).setAction("GetClusterScannerYaml").setMethod(HttpMethod.POST).setPathRegex("/").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(GetClusterScannerYamlResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<GetClusterScannerYamlResponse> future = new CompletableFuture<>();
             future.completeExceptionally(e);
             return future;
         }
@@ -10928,6 +11054,27 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
+     * <b>description</b> :
+     * <hr>
+     * 
+     * @param request the request parameters of HandleSimilarMaliciousFiles  HandleSimilarMaliciousFilesRequest
+     * @return HandleSimilarMaliciousFilesResponse
+     */
+    @Override
+    public CompletableFuture<HandleSimilarMaliciousFilesResponse> handleSimilarMaliciousFiles(HandleSimilarMaliciousFilesRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RPC).setAction("HandleSimilarMaliciousFiles").setMethod(HttpMethod.POST).setPathRegex("/").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(HandleSimilarMaliciousFilesResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<HandleSimilarMaliciousFilesResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
      * @param request the request parameters of HandleSimilarSecurityEvents  HandleSimilarSecurityEventsRequest
      * @return HandleSimilarSecurityEventsResponse
      */
@@ -11579,6 +11726,42 @@ public final class DefaultAsyncClient implements AsyncClient {
             return this.handler.execute(params);
         } catch (Exception e) {
             CompletableFuture<ListCheckItemWarningSummaryResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
+     * @param request the request parameters of ListCheckItems  ListCheckItemsRequest
+     * @return ListCheckItemsResponse
+     */
+    @Override
+    public CompletableFuture<ListCheckItemsResponse> listCheckItems(ListCheckItemsRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RPC).setAction("ListCheckItems").setMethod(HttpMethod.GET).setPathRegex("/").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(ListCheckItemsResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<ListCheckItemsResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
+     * @param request the request parameters of ListCheckPolicies  ListCheckPoliciesRequest
+     * @return ListCheckPoliciesResponse
+     */
+    @Override
+    public CompletableFuture<ListCheckPoliciesResponse> listCheckPolicies(ListCheckPoliciesRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RPC).setAction("ListCheckPolicies").setMethod(HttpMethod.GET).setPathRegex("/").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(ListCheckPoliciesResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<ListCheckPoliciesResponse> future = new CompletableFuture<>();
             future.completeExceptionally(e);
             return future;
         }
@@ -12897,6 +13080,24 @@ public final class DefaultAsyncClient implements AsyncClient {
             return this.handler.execute(params);
         } catch (Exception e) {
             CompletableFuture<ListUnfinishedOnceTaskResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
+     * @param request the request parameters of ListUniBackupRecord  ListUniBackupRecordRequest
+     * @return ListUniBackupRecordResponse
+     */
+    @Override
+    public CompletableFuture<ListUniBackupRecordResponse> listUniBackupRecord(ListUniBackupRecordRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RPC).setAction("ListUniBackupRecord").setMethod(HttpMethod.POST).setPathRegex("/").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(ListUniBackupRecordResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<ListUniBackupRecordResponse> future = new CompletableFuture<>();
             future.completeExceptionally(e);
             return future;
         }
@@ -15927,6 +16128,24 @@ public final class DefaultAsyncClient implements AsyncClient {
             return this.handler.execute(params);
         } catch (Exception e) {
             CompletableFuture<UpdateBaselineCheckWhiteRecordResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
+     * @param request the request parameters of UpdateCheckItem  UpdateCheckItemRequest
+     * @return UpdateCheckItemResponse
+     */
+    @Override
+    public CompletableFuture<UpdateCheckItemResponse> updateCheckItem(UpdateCheckItemRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RPC).setAction("UpdateCheckItem").setMethod(HttpMethod.POST).setPathRegex("/").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(UpdateCheckItemResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<UpdateCheckItemResponse> future = new CompletableFuture<>();
             future.completeExceptionally(e);
             return future;
         }

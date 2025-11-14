@@ -46,6 +46,10 @@ public class DescribeImageRepoListRequest extends Request {
     private String repoNamespace;
 
     @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Selected")
+    private Integer selected;
+
+    @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("TargetType")
     @com.aliyun.core.annotation.Validation(required = true)
     private String targetType;
@@ -64,6 +68,7 @@ public class DescribeImageRepoListRequest extends Request {
         this.pageSize = builder.pageSize;
         this.repoName = builder.repoName;
         this.repoNamespace = builder.repoNamespace;
+        this.selected = builder.selected;
         this.targetType = builder.targetType;
         this.type = builder.type;
     }
@@ -131,6 +136,13 @@ public class DescribeImageRepoListRequest extends Request {
     }
 
     /**
+     * @return selected
+     */
+    public Integer getSelected() {
+        return this.selected;
+    }
+
+    /**
      * @return targetType
      */
     public String getTargetType() {
@@ -152,6 +164,7 @@ public class DescribeImageRepoListRequest extends Request {
         private Integer pageSize; 
         private String repoName; 
         private String repoNamespace; 
+        private Integer selected; 
         private String targetType; 
         private String type; 
 
@@ -168,6 +181,7 @@ public class DescribeImageRepoListRequest extends Request {
             this.pageSize = request.pageSize;
             this.repoName = request.repoName;
             this.repoNamespace = request.repoNamespace;
+            this.selected = request.selected;
             this.targetType = request.targetType;
             this.type = request.type;
         } 
@@ -270,6 +284,22 @@ public class DescribeImageRepoListRequest extends Request {
         public Builder repoNamespace(String repoNamespace) {
             this.putQueryParameter("RepoNamespace", repoNamespace);
             this.repoNamespace = repoNamespace;
+            return this;
+        }
+
+        /**
+         * <p>Whether it is selected. Values:</p>
+         * <ul>
+         * <li><strong>0</strong>: NO</li>
+         * <li><strong>1</strong>: YES</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
+         */
+        public Builder selected(Integer selected) {
+            this.putQueryParameter("Selected", selected);
+            this.selected = selected;
             return this;
         }
 

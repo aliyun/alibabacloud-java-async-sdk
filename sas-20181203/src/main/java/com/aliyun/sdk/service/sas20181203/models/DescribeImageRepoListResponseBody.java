@@ -194,6 +194,9 @@ public class DescribeImageRepoListResponseBody extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Flag")
         private String flag;
 
+        @com.aliyun.core.annotation.NameInMap("ImageCount")
+        private Integer imageCount;
+
         @com.aliyun.core.annotation.NameInMap("RepoName")
         private String repoName;
 
@@ -202,6 +205,7 @@ public class DescribeImageRepoListResponseBody extends TeaModel {
 
         private ImageRepoList(Builder builder) {
             this.flag = builder.flag;
+            this.imageCount = builder.imageCount;
             this.repoName = builder.repoName;
             this.repoNamespace = builder.repoNamespace;
         }
@@ -222,6 +226,13 @@ public class DescribeImageRepoListResponseBody extends TeaModel {
         }
 
         /**
+         * @return imageCount
+         */
+        public Integer getImageCount() {
+            return this.imageCount;
+        }
+
+        /**
          * @return repoName
          */
         public String getRepoName() {
@@ -237,6 +248,7 @@ public class DescribeImageRepoListResponseBody extends TeaModel {
 
         public static final class Builder {
             private String flag; 
+            private Integer imageCount; 
             private String repoName; 
             private String repoNamespace; 
 
@@ -245,6 +257,7 @@ public class DescribeImageRepoListResponseBody extends TeaModel {
 
             private Builder(ImageRepoList model) {
                 this.flag = model.flag;
+                this.imageCount = model.imageCount;
                 this.repoName = model.repoName;
                 this.repoNamespace = model.repoNamespace;
             } 
@@ -261,6 +274,17 @@ public class DescribeImageRepoListResponseBody extends TeaModel {
              */
             public Builder flag(String flag) {
                 this.flag = flag;
+                return this;
+            }
+
+            /**
+             * <p>Number of images.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1</p>
+             */
+            public Builder imageCount(Integer imageCount) {
+                this.imageCount = imageCount;
                 return this;
             }
 

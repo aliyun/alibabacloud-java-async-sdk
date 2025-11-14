@@ -1406,7 +1406,10 @@ public class DescribeCloudCenterInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * Namespace.
+             * <p>The namespace.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>crm-test</p>
              */
             public Builder namespace(String namespace) {
                 this.namespace = namespace;

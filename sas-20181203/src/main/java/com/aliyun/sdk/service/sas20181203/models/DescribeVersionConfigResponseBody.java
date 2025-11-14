@@ -38,6 +38,9 @@ public class DescribeVersionConfigResponseBody extends TeaModel {
     @com.aliyun.core.annotation.NameInMap("AssetLevel")
     private Integer assetLevel;
 
+    @com.aliyun.core.annotation.NameInMap("CanTryPostPaidPackage")
+    private Integer canTryPostPaidPackage;
+
     @com.aliyun.core.annotation.NameInMap("CspmCapacity")
     private Long cspmCapacity;
 
@@ -160,6 +163,7 @@ public class DescribeVersionConfigResponseBody extends TeaModel {
         this.appWhiteList = builder.appWhiteList;
         this.appWhiteListAuthCount = builder.appWhiteListAuthCount;
         this.assetLevel = builder.assetLevel;
+        this.canTryPostPaidPackage = builder.canTryPostPaidPackage;
         this.cspmCapacity = builder.cspmCapacity;
         this.highestVersion = builder.highestVersion;
         this.honeypotCapacity = builder.honeypotCapacity;
@@ -259,6 +263,13 @@ public class DescribeVersionConfigResponseBody extends TeaModel {
      */
     public Integer getAssetLevel() {
         return this.assetLevel;
+    }
+
+    /**
+     * @return canTryPostPaidPackage
+     */
+    public Integer getCanTryPostPaidPackage() {
+        return this.canTryPostPaidPackage;
     }
 
     /**
@@ -535,6 +546,7 @@ public class DescribeVersionConfigResponseBody extends TeaModel {
         private Integer appWhiteList; 
         private Long appWhiteListAuthCount; 
         private Integer assetLevel; 
+        private Integer canTryPostPaidPackage; 
         private Long cspmCapacity; 
         private Integer highestVersion; 
         private Long honeypotCapacity; 
@@ -585,6 +597,7 @@ public class DescribeVersionConfigResponseBody extends TeaModel {
             this.appWhiteList = model.appWhiteList;
             this.appWhiteListAuthCount = model.appWhiteListAuthCount;
             this.assetLevel = model.assetLevel;
+            this.canTryPostPaidPackage = model.canTryPostPaidPackage;
             this.cspmCapacity = model.cspmCapacity;
             this.highestVersion = model.highestVersion;
             this.honeypotCapacity = model.honeypotCapacity;
@@ -717,6 +730,14 @@ public class DescribeVersionConfigResponseBody extends TeaModel {
          */
         public Builder assetLevel(Integer assetLevel) {
             this.assetLevel = assetLevel;
+            return this;
+        }
+
+        /**
+         * CanTryPostPaidPackage.
+         */
+        public Builder canTryPostPaidPackage(Integer canTryPostPaidPackage) {
+            this.canTryPostPaidPackage = canTryPostPaidPackage;
             return this;
         }
 
