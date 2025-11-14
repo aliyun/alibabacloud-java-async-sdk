@@ -189,6 +189,9 @@ public class DescribeMonitoringAgentStatusesResponseBody extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("LoongCollectorStatus")
         private String loongCollectorStatus;
 
+        @com.aliyun.core.annotation.NameInMap("LoongCollectorVersion")
+        private String loongCollectorVersion;
+
         @com.aliyun.core.annotation.NameInMap("OsMonitorConfig")
         private String osMonitorConfig;
 
@@ -212,6 +215,7 @@ public class DescribeMonitoringAgentStatusesResponseBody extends TeaModel {
             this.autoInstall = builder.autoInstall;
             this.instanceId = builder.instanceId;
             this.loongCollectorStatus = builder.loongCollectorStatus;
+            this.loongCollectorVersion = builder.loongCollectorVersion;
             this.osMonitorConfig = builder.osMonitorConfig;
             this.osMonitorErrorCode = builder.osMonitorErrorCode;
             this.osMonitorErrorDetail = builder.osMonitorErrorDetail;
@@ -254,6 +258,13 @@ public class DescribeMonitoringAgentStatusesResponseBody extends TeaModel {
          */
         public String getLoongCollectorStatus() {
             return this.loongCollectorStatus;
+        }
+
+        /**
+         * @return loongCollectorVersion
+         */
+        public String getLoongCollectorVersion() {
+            return this.loongCollectorVersion;
         }
 
         /**
@@ -303,6 +314,7 @@ public class DescribeMonitoringAgentStatusesResponseBody extends TeaModel {
             private Boolean autoInstall; 
             private String instanceId; 
             private String loongCollectorStatus; 
+            private String loongCollectorVersion; 
             private String osMonitorConfig; 
             private String osMonitorErrorCode; 
             private String osMonitorErrorDetail; 
@@ -318,6 +330,7 @@ public class DescribeMonitoringAgentStatusesResponseBody extends TeaModel {
                 this.autoInstall = model.autoInstall;
                 this.instanceId = model.instanceId;
                 this.loongCollectorStatus = model.loongCollectorStatus;
+                this.loongCollectorVersion = model.loongCollectorVersion;
                 this.osMonitorConfig = model.osMonitorConfig;
                 this.osMonitorErrorCode = model.osMonitorErrorCode;
                 this.osMonitorErrorDetail = model.osMonitorErrorDetail;
@@ -373,6 +386,14 @@ public class DescribeMonitoringAgentStatusesResponseBody extends TeaModel {
              */
             public Builder loongCollectorStatus(String loongCollectorStatus) {
                 this.loongCollectorStatus = loongCollectorStatus;
+                return this;
+            }
+
+            /**
+             * LoongCollectorVersion.
+             */
+            public Builder loongCollectorVersion(String loongCollectorVersion) {
+                this.loongCollectorVersion = loongCollectorVersion;
                 return this;
             }
 
