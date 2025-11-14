@@ -63,6 +63,10 @@ public class DescribeBackupFilesRequest extends Request {
     private String nextToken;
 
     @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("SaleMode")
+    private String saleMode;
+
+    @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("StartTime")
     private String startTime;
 
@@ -83,6 +87,7 @@ public class DescribeBackupFilesRequest extends Request {
         this.instanceGroupId = builder.instanceGroupId;
         this.maxResults = builder.maxResults;
         this.nextToken = builder.nextToken;
+        this.saleMode = builder.saleMode;
         this.startTime = builder.startTime;
         this.statusList = builder.statusList;
     }
@@ -178,6 +183,13 @@ public class DescribeBackupFilesRequest extends Request {
     }
 
     /**
+     * @return saleMode
+     */
+    public String getSaleMode() {
+        return this.saleMode;
+    }
+
+    /**
      * @return startTime
      */
     public String getStartTime() {
@@ -203,6 +215,7 @@ public class DescribeBackupFilesRequest extends Request {
         private String instanceGroupId; 
         private Long maxResults; 
         private String nextToken; 
+        private String saleMode; 
         private String startTime; 
         private java.util.List<String> statusList; 
 
@@ -223,6 +236,7 @@ public class DescribeBackupFilesRequest extends Request {
             this.instanceGroupId = request.instanceGroupId;
             this.maxResults = request.maxResults;
             this.nextToken = request.nextToken;
+            this.saleMode = request.saleMode;
             this.startTime = request.startTime;
             this.statusList = request.statusList;
         } 
@@ -361,6 +375,15 @@ public class DescribeBackupFilesRequest extends Request {
         public Builder nextToken(String nextToken) {
             this.putQueryParameter("NextToken", nextToken);
             this.nextToken = nextToken;
+            return this;
+        }
+
+        /**
+         * SaleMode.
+         */
+        public Builder saleMode(String saleMode) {
+            this.putQueryParameter("SaleMode", saleMode);
+            this.saleMode = saleMode;
             return this;
         }
 
