@@ -1117,6 +1117,12 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<ModifyAudioFileResponse> modifyAudioFile(ModifyAudioFileRequest request);
 
     /**
+     * @param request the request parameters of ModifyCampaignNumbers  ModifyCampaignNumbersRequest
+     * @return ModifyCampaignNumbersResponse
+     */
+    CompletableFuture<ModifyCampaignNumbersResponse> modifyCampaignNumbers(ModifyCampaignNumbersRequest request);
+
+    /**
      * @param request the request parameters of ModifyCustomCallTagging  ModifyCustomCallTaggingRequest
      * @return ModifyCustomCallTaggingResponse
      */
