@@ -287,6 +287,18 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<DescribeMetricLastResponse> describeMetricLast(DescribeMetricLastRequest request);
 
     /**
+     * @param request the request parameters of DescribeMetricList  DescribeMetricListRequest
+     * @return DescribeMetricListResponse
+     */
+    CompletableFuture<DescribeMetricListResponse> describeMetricList(DescribeMetricListRequest request);
+
+    /**
+     * @param request the request parameters of DescribeMetricTop  DescribeMetricTopRequest
+     * @return DescribeMetricTopResponse
+     */
+    CompletableFuture<DescribeMetricTopResponse> describeMetricTop(DescribeMetricTopRequest request);
+
+    /**
      * @param request the request parameters of DescribeRegions  DescribeRegionsRequest
      * @return DescribeRegionsResponse
      */
@@ -423,6 +435,12 @@ public interface AsyncClient extends SdkAutoCloseable {
      * @return InstanceHealerResponse
      */
     CompletableFuture<InstanceHealerResponse> instanceHealer(InstanceHealerRequest request);
+
+    /**
+     * @param request the request parameters of ListInstanceAdbAttributes  ListInstanceAdbAttributesRequest
+     * @return ListInstanceAdbAttributesResponse
+     */
+    CompletableFuture<ListInstanceAdbAttributesResponse> listInstanceAdbAttributes(ListInstanceAdbAttributesRequest request);
 
     /**
      * @param request the request parameters of ListPolicyGroups  ListPolicyGroupsRequest
@@ -578,6 +596,12 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<StartAndroidInstanceResponse> startAndroidInstance(StartAndroidInstanceRequest request);
 
     /**
+     * @param request the request parameters of StartInstanceAdb  StartInstanceAdbRequest
+     * @return StartInstanceAdbResponse
+     */
+    CompletableFuture<StartInstanceAdbResponse> startInstanceAdb(StartInstanceAdbRequest request);
+
+    /**
      * <b>description</b> :
      * <p>Before you stop a cloud phone instance, make sure it is in one of the following states: <strong>Available, Backup failure, and Restoration failure</strong>.</p>
      * 
@@ -585,6 +609,12 @@ public interface AsyncClient extends SdkAutoCloseable {
      * @return StopAndroidInstanceResponse
      */
     CompletableFuture<StopAndroidInstanceResponse> stopAndroidInstance(StopAndroidInstanceRequest request);
+
+    /**
+     * @param request the request parameters of StopInstanceAdb  StopInstanceAdbRequest
+     * @return StopInstanceAdbResponse
+     */
+    CompletableFuture<StopInstanceAdbResponse> stopInstanceAdb(StopInstanceAdbRequest request);
 
     /**
      * @param request the request parameters of TagResources  TagResourcesRequest
