@@ -249,6 +249,9 @@ public class DescribeMultiPriceRequest extends Request {
         @com.aliyun.core.annotation.NameInMap("ResourceType")
         private String resourceType;
 
+        @com.aliyun.core.annotation.NameInMap("SavingPlanPeriod")
+        private String savingPlanPeriod;
+
         private OrderItems(Builder builder) {
             this.amount = builder.amount;
             this.components = builder.components;
@@ -258,6 +261,7 @@ public class DescribeMultiPriceRequest extends Request {
             this.promotionId = builder.promotionId;
             this.resourceIds = builder.resourceIds;
             this.resourceType = builder.resourceType;
+            this.savingPlanPeriod = builder.savingPlanPeriod;
         }
 
         public static Builder builder() {
@@ -324,6 +328,13 @@ public class DescribeMultiPriceRequest extends Request {
             return this.resourceType;
         }
 
+        /**
+         * @return savingPlanPeriod
+         */
+        public String getSavingPlanPeriod() {
+            return this.savingPlanPeriod;
+        }
+
         public static final class Builder {
             private Integer amount; 
             private java.util.List<Components> components; 
@@ -333,6 +344,7 @@ public class DescribeMultiPriceRequest extends Request {
             private String promotionId; 
             private java.util.List<String> resourceIds; 
             private String resourceType; 
+            private String savingPlanPeriod; 
 
             private Builder() {
             } 
@@ -346,6 +358,7 @@ public class DescribeMultiPriceRequest extends Request {
                 this.promotionId = model.promotionId;
                 this.resourceIds = model.resourceIds;
                 this.resourceType = model.resourceType;
+                this.savingPlanPeriod = model.savingPlanPeriod;
             } 
 
             /**
@@ -409,6 +422,14 @@ public class DescribeMultiPriceRequest extends Request {
              */
             public Builder resourceType(String resourceType) {
                 this.resourceType = resourceType;
+                return this;
+            }
+
+            /**
+             * SavingPlanPeriod.
+             */
+            public Builder savingPlanPeriod(String savingPlanPeriod) {
+                this.savingPlanPeriod = savingPlanPeriod;
                 return this;
             }
 

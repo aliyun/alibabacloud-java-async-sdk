@@ -110,6 +110,9 @@ public class DescribeMultiPriceResponseBody extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("OriginalPrice")
         private Float originalPrice;
 
+        @com.aliyun.core.annotation.NameInMap("SavingPlanDiscountPrice")
+        private Float savingPlanDiscountPrice;
+
         @com.aliyun.core.annotation.NameInMap("TradePrice")
         private Float tradePrice;
 
@@ -119,6 +122,7 @@ public class DescribeMultiPriceResponseBody extends TeaModel {
             this.moduleName = builder.moduleName;
             this.moduleValue = builder.moduleValue;
             this.originalPrice = builder.originalPrice;
+            this.savingPlanDiscountPrice = builder.savingPlanDiscountPrice;
             this.tradePrice = builder.tradePrice;
         }
 
@@ -166,6 +170,13 @@ public class DescribeMultiPriceResponseBody extends TeaModel {
         }
 
         /**
+         * @return savingPlanDiscountPrice
+         */
+        public Float getSavingPlanDiscountPrice() {
+            return this.savingPlanDiscountPrice;
+        }
+
+        /**
          * @return tradePrice
          */
         public Float getTradePrice() {
@@ -178,6 +189,7 @@ public class DescribeMultiPriceResponseBody extends TeaModel {
             private String moduleName; 
             private String moduleValue; 
             private Float originalPrice; 
+            private Float savingPlanDiscountPrice; 
             private Float tradePrice; 
 
             private Builder() {
@@ -189,6 +201,7 @@ public class DescribeMultiPriceResponseBody extends TeaModel {
                 this.moduleName = model.moduleName;
                 this.moduleValue = model.moduleValue;
                 this.originalPrice = model.originalPrice;
+                this.savingPlanDiscountPrice = model.savingPlanDiscountPrice;
                 this.tradePrice = model.tradePrice;
             } 
 
@@ -233,6 +246,14 @@ public class DescribeMultiPriceResponseBody extends TeaModel {
             }
 
             /**
+             * SavingPlanDiscountPrice.
+             */
+            public Builder savingPlanDiscountPrice(Float savingPlanDiscountPrice) {
+                this.savingPlanDiscountPrice = savingPlanDiscountPrice;
+                return this;
+            }
+
+            /**
              * TradePrice.
              */
             public Builder tradePrice(Float tradePrice) {
@@ -263,6 +284,9 @@ public class DescribeMultiPriceResponseBody extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("ResourceType")
         private String resourceType;
 
+        @com.aliyun.core.annotation.NameInMap("SavingPlanRecommendPrice")
+        private Float savingPlanRecommendPrice;
+
         @com.aliyun.core.annotation.NameInMap("TradePrice")
         private Float tradePrice;
 
@@ -270,6 +294,7 @@ public class DescribeMultiPriceResponseBody extends TeaModel {
             this.discountPrice = builder.discountPrice;
             this.originalPrice = builder.originalPrice;
             this.resourceType = builder.resourceType;
+            this.savingPlanRecommendPrice = builder.savingPlanRecommendPrice;
             this.tradePrice = builder.tradePrice;
         }
 
@@ -303,6 +328,13 @@ public class DescribeMultiPriceResponseBody extends TeaModel {
         }
 
         /**
+         * @return savingPlanRecommendPrice
+         */
+        public Float getSavingPlanRecommendPrice() {
+            return this.savingPlanRecommendPrice;
+        }
+
+        /**
          * @return tradePrice
          */
         public Float getTradePrice() {
@@ -313,6 +345,7 @@ public class DescribeMultiPriceResponseBody extends TeaModel {
             private Float discountPrice; 
             private Float originalPrice; 
             private String resourceType; 
+            private Float savingPlanRecommendPrice; 
             private Float tradePrice; 
 
             private Builder() {
@@ -322,6 +355,7 @@ public class DescribeMultiPriceResponseBody extends TeaModel {
                 this.discountPrice = model.discountPrice;
                 this.originalPrice = model.originalPrice;
                 this.resourceType = model.resourceType;
+                this.savingPlanRecommendPrice = model.savingPlanRecommendPrice;
                 this.tradePrice = model.tradePrice;
             } 
 
@@ -346,6 +380,14 @@ public class DescribeMultiPriceResponseBody extends TeaModel {
              */
             public Builder resourceType(String resourceType) {
                 this.resourceType = resourceType;
+                return this;
+            }
+
+            /**
+             * SavingPlanRecommendPrice.
+             */
+            public Builder savingPlanRecommendPrice(Float savingPlanRecommendPrice) {
+                this.savingPlanRecommendPrice = savingPlanRecommendPrice;
                 return this;
             }
 
