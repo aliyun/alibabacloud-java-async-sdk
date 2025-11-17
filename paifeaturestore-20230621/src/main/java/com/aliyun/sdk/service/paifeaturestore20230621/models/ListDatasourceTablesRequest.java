@@ -32,6 +32,10 @@ public class ListDatasourceTablesRequest extends Request {
     private String regionId;
 
     @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("SchemaName")
+    private String schemaName;
+
+    @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("TableName")
     private String tableName;
 
@@ -40,6 +44,7 @@ public class ListDatasourceTablesRequest extends Request {
         this.instanceId = builder.instanceId;
         this.datasourceId = builder.datasourceId;
         this.regionId = builder.regionId;
+        this.schemaName = builder.schemaName;
         this.tableName = builder.tableName;
     }
 
@@ -78,6 +83,13 @@ public class ListDatasourceTablesRequest extends Request {
     }
 
     /**
+     * @return schemaName
+     */
+    public String getSchemaName() {
+        return this.schemaName;
+    }
+
+    /**
      * @return tableName
      */
     public String getTableName() {
@@ -88,6 +100,7 @@ public class ListDatasourceTablesRequest extends Request {
         private String instanceId; 
         private String datasourceId; 
         private String regionId; 
+        private String schemaName; 
         private String tableName; 
 
         private Builder() {
@@ -99,6 +112,7 @@ public class ListDatasourceTablesRequest extends Request {
             this.instanceId = request.instanceId;
             this.datasourceId = request.datasourceId;
             this.regionId = request.regionId;
+            this.schemaName = request.schemaName;
             this.tableName = request.tableName;
         } 
 
@@ -132,6 +146,15 @@ public class ListDatasourceTablesRequest extends Request {
         public Builder regionId(String regionId) {
             this.putHostParameter("RegionId", regionId);
             this.regionId = regionId;
+            return this;
+        }
+
+        /**
+         * SchemaName.
+         */
+        public Builder schemaName(String schemaName) {
+            this.putQueryParameter("SchemaName", schemaName);
+            this.schemaName = schemaName;
             return this;
         }
 

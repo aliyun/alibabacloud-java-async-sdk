@@ -29,6 +29,15 @@ public class GetFeatureEntityResponseBody extends TeaModel {
     @com.aliyun.core.annotation.NameInMap("Owner")
     private String owner;
 
+    @com.aliyun.core.annotation.NameInMap("ParentFeatureEntityId")
+    private String parentFeatureEntityId;
+
+    @com.aliyun.core.annotation.NameInMap("ParentFeatureEntityName")
+    private String parentFeatureEntityName;
+
+    @com.aliyun.core.annotation.NameInMap("ParentJoinId")
+    private String parentJoinId;
+
     @com.aliyun.core.annotation.NameInMap("ProjectId")
     private String projectId;
 
@@ -43,6 +52,9 @@ public class GetFeatureEntityResponseBody extends TeaModel {
         this.joinId = builder.joinId;
         this.name = builder.name;
         this.owner = builder.owner;
+        this.parentFeatureEntityId = builder.parentFeatureEntityId;
+        this.parentFeatureEntityName = builder.parentFeatureEntityName;
+        this.parentJoinId = builder.parentJoinId;
         this.projectId = builder.projectId;
         this.projectName = builder.projectName;
         this.requestId = builder.requestId;
@@ -89,6 +101,27 @@ public class GetFeatureEntityResponseBody extends TeaModel {
     }
 
     /**
+     * @return parentFeatureEntityId
+     */
+    public String getParentFeatureEntityId() {
+        return this.parentFeatureEntityId;
+    }
+
+    /**
+     * @return parentFeatureEntityName
+     */
+    public String getParentFeatureEntityName() {
+        return this.parentFeatureEntityName;
+    }
+
+    /**
+     * @return parentJoinId
+     */
+    public String getParentJoinId() {
+        return this.parentJoinId;
+    }
+
+    /**
      * @return projectId
      */
     public String getProjectId() {
@@ -114,6 +147,9 @@ public class GetFeatureEntityResponseBody extends TeaModel {
         private String joinId; 
         private String name; 
         private String owner; 
+        private String parentFeatureEntityId; 
+        private String parentFeatureEntityName; 
+        private String parentJoinId; 
         private String projectId; 
         private String projectName; 
         private String requestId; 
@@ -126,6 +162,9 @@ public class GetFeatureEntityResponseBody extends TeaModel {
             this.joinId = model.joinId;
             this.name = model.name;
             this.owner = model.owner;
+            this.parentFeatureEntityId = model.parentFeatureEntityId;
+            this.parentFeatureEntityName = model.parentFeatureEntityName;
+            this.parentJoinId = model.parentJoinId;
             this.projectId = model.projectId;
             this.projectName = model.projectName;
             this.requestId = model.requestId;
@@ -160,6 +199,30 @@ public class GetFeatureEntityResponseBody extends TeaModel {
          */
         public Builder owner(String owner) {
             this.owner = owner;
+            return this;
+        }
+
+        /**
+         * ParentFeatureEntityId.
+         */
+        public Builder parentFeatureEntityId(String parentFeatureEntityId) {
+            this.parentFeatureEntityId = parentFeatureEntityId;
+            return this;
+        }
+
+        /**
+         * ParentFeatureEntityName.
+         */
+        public Builder parentFeatureEntityName(String parentFeatureEntityName) {
+            this.parentFeatureEntityName = parentFeatureEntityName;
+            return this;
+        }
+
+        /**
+         * ParentJoinId.
+         */
+        public Builder parentJoinId(String parentJoinId) {
+            this.parentJoinId = parentJoinId;
             return this;
         }
 

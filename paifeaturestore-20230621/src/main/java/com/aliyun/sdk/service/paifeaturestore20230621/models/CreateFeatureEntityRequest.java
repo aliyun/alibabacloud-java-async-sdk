@@ -37,6 +37,10 @@ public class CreateFeatureEntityRequest extends Request {
     private String name;
 
     @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("ParentFeatureEntityId")
+    private String parentFeatureEntityId;
+
+    @com.aliyun.core.annotation.Body
     @com.aliyun.core.annotation.NameInMap("ProjectId")
     @com.aliyun.core.annotation.Validation(required = true)
     private String projectId;
@@ -47,6 +51,7 @@ public class CreateFeatureEntityRequest extends Request {
         this.regionId = builder.regionId;
         this.joinId = builder.joinId;
         this.name = builder.name;
+        this.parentFeatureEntityId = builder.parentFeatureEntityId;
         this.projectId = builder.projectId;
     }
 
@@ -92,6 +97,13 @@ public class CreateFeatureEntityRequest extends Request {
     }
 
     /**
+     * @return parentFeatureEntityId
+     */
+    public String getParentFeatureEntityId() {
+        return this.parentFeatureEntityId;
+    }
+
+    /**
      * @return projectId
      */
     public String getProjectId() {
@@ -103,6 +115,7 @@ public class CreateFeatureEntityRequest extends Request {
         private String regionId; 
         private String joinId; 
         private String name; 
+        private String parentFeatureEntityId; 
         private String projectId; 
 
         private Builder() {
@@ -115,6 +128,7 @@ public class CreateFeatureEntityRequest extends Request {
             this.regionId = request.regionId;
             this.joinId = request.joinId;
             this.name = request.name;
+            this.parentFeatureEntityId = request.parentFeatureEntityId;
             this.projectId = request.projectId;
         } 
 
@@ -160,6 +174,15 @@ public class CreateFeatureEntityRequest extends Request {
         public Builder name(String name) {
             this.putBodyParameter("Name", name);
             this.name = name;
+            return this;
+        }
+
+        /**
+         * ParentFeatureEntityId.
+         */
+        public Builder parentFeatureEntityId(String parentFeatureEntityId) {
+            this.putBodyParameter("ParentFeatureEntityId", parentFeatureEntityId);
+            this.parentFeatureEntityId = parentFeatureEntityId;
             return this;
         }
 

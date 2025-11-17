@@ -218,8 +218,14 @@ public class ListProjectFeatureViewsResponseBody extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Features")
         private java.util.List<Features> features;
 
+        @com.aliyun.core.annotation.NameInMap("JoinId")
+        private String joinId;
+
         @com.aliyun.core.annotation.NameInMap("Name")
         private String name;
+
+        @com.aliyun.core.annotation.NameInMap("ParentJoinId")
+        private String parentJoinId;
 
         @com.aliyun.core.annotation.NameInMap("Type")
         private String type;
@@ -227,7 +233,9 @@ public class ListProjectFeatureViewsResponseBody extends TeaModel {
         private FeatureViews(Builder builder) {
             this.featureViewId = builder.featureViewId;
             this.features = builder.features;
+            this.joinId = builder.joinId;
             this.name = builder.name;
+            this.parentJoinId = builder.parentJoinId;
             this.type = builder.type;
         }
 
@@ -254,10 +262,24 @@ public class ListProjectFeatureViewsResponseBody extends TeaModel {
         }
 
         /**
+         * @return joinId
+         */
+        public String getJoinId() {
+            return this.joinId;
+        }
+
+        /**
          * @return name
          */
         public String getName() {
             return this.name;
+        }
+
+        /**
+         * @return parentJoinId
+         */
+        public String getParentJoinId() {
+            return this.parentJoinId;
         }
 
         /**
@@ -270,7 +292,9 @@ public class ListProjectFeatureViewsResponseBody extends TeaModel {
         public static final class Builder {
             private String featureViewId; 
             private java.util.List<Features> features; 
+            private String joinId; 
             private String name; 
+            private String parentJoinId; 
             private String type; 
 
             private Builder() {
@@ -279,7 +303,9 @@ public class ListProjectFeatureViewsResponseBody extends TeaModel {
             private Builder(FeatureViews model) {
                 this.featureViewId = model.featureViewId;
                 this.features = model.features;
+                this.joinId = model.joinId;
                 this.name = model.name;
+                this.parentJoinId = model.parentJoinId;
                 this.type = model.type;
             } 
 
@@ -300,10 +326,26 @@ public class ListProjectFeatureViewsResponseBody extends TeaModel {
             }
 
             /**
+             * JoinId.
+             */
+            public Builder joinId(String joinId) {
+                this.joinId = joinId;
+                return this;
+            }
+
+            /**
              * Name.
              */
             public Builder name(String name) {
                 this.name = name;
+                return this;
+            }
+
+            /**
+             * ParentJoinId.
+             */
+            public Builder parentJoinId(String parentJoinId) {
+                this.parentJoinId = parentJoinId;
                 return this;
             }
 

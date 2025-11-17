@@ -51,6 +51,10 @@ public class ListFeatureEntitiesRequest extends Request {
     private Integer pageSize;
 
     @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ParentFeatureEntityId")
+    private String parentFeatureEntityId;
+
+    @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("ProjectId")
     private String projectId;
 
@@ -68,6 +72,7 @@ public class ListFeatureEntitiesRequest extends Request {
         this.owner = builder.owner;
         this.pageNumber = builder.pageNumber;
         this.pageSize = builder.pageSize;
+        this.parentFeatureEntityId = builder.parentFeatureEntityId;
         this.projectId = builder.projectId;
         this.sortBy = builder.sortBy;
     }
@@ -142,6 +147,13 @@ public class ListFeatureEntitiesRequest extends Request {
     }
 
     /**
+     * @return parentFeatureEntityId
+     */
+    public String getParentFeatureEntityId() {
+        return this.parentFeatureEntityId;
+    }
+
+    /**
      * @return projectId
      */
     public String getProjectId() {
@@ -164,6 +176,7 @@ public class ListFeatureEntitiesRequest extends Request {
         private String owner; 
         private Integer pageNumber; 
         private Integer pageSize; 
+        private String parentFeatureEntityId; 
         private String projectId; 
         private String sortBy; 
 
@@ -181,6 +194,7 @@ public class ListFeatureEntitiesRequest extends Request {
             this.owner = request.owner;
             this.pageNumber = request.pageNumber;
             this.pageSize = request.pageSize;
+            this.parentFeatureEntityId = request.parentFeatureEntityId;
             this.projectId = request.projectId;
             this.sortBy = request.sortBy;
         } 
@@ -258,6 +272,15 @@ public class ListFeatureEntitiesRequest extends Request {
         public Builder pageSize(Integer pageSize) {
             this.putQueryParameter("PageSize", pageSize);
             this.pageSize = pageSize;
+            return this;
+        }
+
+        /**
+         * ParentFeatureEntityId.
+         */
+        public Builder parentFeatureEntityId(String parentFeatureEntityId) {
+            this.putQueryParameter("ParentFeatureEntityId", parentFeatureEntityId);
+            this.parentFeatureEntityId = parentFeatureEntityId;
             return this;
         }
 
