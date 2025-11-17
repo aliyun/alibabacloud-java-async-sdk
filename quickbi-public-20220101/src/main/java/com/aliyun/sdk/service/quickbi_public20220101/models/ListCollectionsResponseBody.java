@@ -80,7 +80,7 @@ public class ListCollectionsResponseBody extends TeaModel {
         } 
 
         /**
-         * <p>The ID of the request.</p>
+         * <p>Request ID.</p>
          * 
          * <strong>example:</strong>
          * <p>162A632E-0A88-51CF-98F8-94FDEE82DB7D</p>
@@ -91,7 +91,7 @@ public class ListCollectionsResponseBody extends TeaModel {
         }
 
         /**
-         * Result.
+         * <p>Details of the list of reports favored by the user.</p>
          */
         public Builder result(java.util.List<Result> result) {
             this.result = result;
@@ -233,7 +233,10 @@ public class ListCollectionsResponseBody extends TeaModel {
             } 
 
             /**
-             * FavoriteId.
+             * <p>The primary key ID of the favorite record.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>12373</p>
              */
             public Builder favoriteId(Integer favoriteId) {
                 this.favoriteId = favoriteId;
@@ -241,7 +244,10 @@ public class ListCollectionsResponseBody extends TeaModel {
             }
 
             /**
-             * OwnerId.
+             * <p>The user ID of the work owner. This refers to the UserID in Quick BI, not the Alibaba Cloud UID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>fe67f61a35a94b7da1a34ba174a7****</p>
              */
             public Builder ownerId(String ownerId) {
                 this.ownerId = ownerId;
@@ -249,7 +255,10 @@ public class ListCollectionsResponseBody extends TeaModel {
             }
 
             /**
-             * WorksId.
+             * <p>The ID of the work.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>95296e95-ca89-4c7d-8af9-dedf0ad0****</p>
              */
             public Builder worksId(String worksId) {
                 this.worksId = worksId;
@@ -257,7 +266,10 @@ public class ListCollectionsResponseBody extends TeaModel {
             }
 
             /**
-             * WorksName.
+             * <p>The name of the work.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>test</p>
              */
             public Builder worksName(String worksName) {
                 this.worksName = worksName;
@@ -265,7 +277,17 @@ public class ListCollectionsResponseBody extends TeaModel {
             }
 
             /**
-             * WorksType.
+             * <p>The type of the work. Possible values:</p>
+             * <ul>
+             * <li>DATAPRODUCT: Data Portal</li>
+             * <li>PAGE: Dashboard</li>
+             * <li>REPORT: Spreadsheet</li>
+             * <li>dataForm: Data Entry Form</li>
+             * <li>dashboardOfflineQuery: Self-service Data Extraction</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>dashboardOfflineQuery</p>
              */
             public Builder worksType(String worksType) {
                 this.worksType = worksType;
@@ -273,7 +295,10 @@ public class ListCollectionsResponseBody extends TeaModel {
             }
 
             /**
-             * WorkspaceId.
+             * <p>Workspace ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>9337d121-a78f-4c1b-a8bc-f81de117****</p>
              */
             public Builder workspaceId(String workspaceId) {
                 this.workspaceId = workspaceId;
@@ -281,7 +306,10 @@ public class ListCollectionsResponseBody extends TeaModel {
             }
 
             /**
-             * WorkspaceName.
+             * <p>Workspace Name.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>test</p>
              */
             public Builder workspaceName(String workspaceName) {
                 this.workspaceName = workspaceName;

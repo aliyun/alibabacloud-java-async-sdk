@@ -75,6 +75,7 @@ public class QueryDashboardNl2sqlRequest extends Request {
         } 
 
         /**
+         * <p>User ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -87,6 +88,7 @@ public class QueryDashboardNl2sqlRequest extends Request {
         }
 
         /**
+         * <p>Workspace ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>

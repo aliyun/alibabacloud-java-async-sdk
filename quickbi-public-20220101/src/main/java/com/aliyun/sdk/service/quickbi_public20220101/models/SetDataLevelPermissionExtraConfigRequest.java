@@ -90,6 +90,7 @@ public class SetDataLevelPermissionExtraConfigRequest extends Request {
         } 
 
         /**
+         * <p>Dataset ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -102,6 +103,11 @@ public class SetDataLevelPermissionExtraConfigRequest extends Request {
         }
 
         /**
+         * <p>Policy when no rule is matched:</p>
+         * <ul>
+         * <li>NONE: No permission</li>
+         * <li>ALL: Full permission</li>
+         * </ul>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -114,6 +120,11 @@ public class SetDataLevelPermissionExtraConfigRequest extends Request {
         }
 
         /**
+         * <p>Type of dataset row and column permissions. Possible values:</p>
+         * <ul>
+         * <li>ROW_LEVEL: Row-level permission</li>
+         * <li>COLUMN_LEVEL: Column-level permission</li>
+         * </ul>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>

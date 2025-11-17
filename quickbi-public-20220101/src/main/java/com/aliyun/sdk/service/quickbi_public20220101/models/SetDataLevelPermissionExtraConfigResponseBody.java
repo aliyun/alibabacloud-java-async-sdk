@@ -80,7 +80,10 @@ public class SetDataLevelPermissionExtraConfigResponseBody extends TeaModel {
         } 
 
         /**
-         * RequestId.
+         * <p>Request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>B70E1FBD-E533-52F2-A7A1-E02B92F78DDF</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -88,7 +91,14 @@ public class SetDataLevelPermissionExtraConfigResponseBody extends TeaModel {
         }
 
         /**
-         * Result.
+         * <p>Result of the API execution. Possible values:</p>
+         * <ul>
+         * <li>true: Request succeeded</li>
+         * <li>false: Request failed</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder result(Boolean result) {
             this.result = result;
@@ -96,7 +106,14 @@ public class SetDataLevelPermissionExtraConfigResponseBody extends TeaModel {
         }
 
         /**
-         * Success.
+         * <p>Whether the request was successful. Possible values:</p>
+         * <ul>
+         * <li>true: Request succeeded</li>
+         * <li>false: Request failed</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder success(Boolean success) {
             this.success = success;

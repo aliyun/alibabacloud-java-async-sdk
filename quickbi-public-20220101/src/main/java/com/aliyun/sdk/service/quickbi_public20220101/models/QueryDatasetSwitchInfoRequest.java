@@ -60,6 +60,7 @@ public class QueryDatasetSwitchInfoRequest extends Request {
         } 
 
         /**
+         * <p>Dataset ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>

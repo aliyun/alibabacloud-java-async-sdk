@@ -286,6 +286,9 @@ public class SmartqQueryAbilityResponseBody extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("ConclusionText")
         private String conclusionText;
 
+        @com.aliyun.core.annotation.NameInMap("DataList")
+        private java.util.List<String> dataList;
+
         @com.aliyun.core.annotation.NameInMap("LogicSql")
         private String logicSql;
 
@@ -298,6 +301,7 @@ public class SmartqQueryAbilityResponseBody extends TeaModel {
         private Result(Builder builder) {
             this.chartType = builder.chartType;
             this.conclusionText = builder.conclusionText;
+            this.dataList = builder.dataList;
             this.logicSql = builder.logicSql;
             this.metaType = builder.metaType;
             this.values = builder.values;
@@ -326,6 +330,13 @@ public class SmartqQueryAbilityResponseBody extends TeaModel {
         }
 
         /**
+         * @return dataList
+         */
+        public java.util.List<String> getDataList() {
+            return this.dataList;
+        }
+
+        /**
          * @return logicSql
          */
         public String getLogicSql() {
@@ -349,6 +360,7 @@ public class SmartqQueryAbilityResponseBody extends TeaModel {
         public static final class Builder {
             private String chartType; 
             private String conclusionText; 
+            private java.util.List<String> dataList; 
             private String logicSql; 
             private java.util.List<MetaType> metaType; 
             private java.util.List<Values> values; 
@@ -359,6 +371,7 @@ public class SmartqQueryAbilityResponseBody extends TeaModel {
             private Builder(Result model) {
                 this.chartType = model.chartType;
                 this.conclusionText = model.conclusionText;
+                this.dataList = model.dataList;
                 this.logicSql = model.logicSql;
                 this.metaType = model.metaType;
                 this.values = model.values;
@@ -383,6 +396,14 @@ public class SmartqQueryAbilityResponseBody extends TeaModel {
              */
             public Builder conclusionText(String conclusionText) {
                 this.conclusionText = conclusionText;
+                return this;
+            }
+
+            /**
+             * DataList.
+             */
+            public Builder dataList(java.util.List<String> dataList) {
+                this.dataList = dataList;
                 return this;
             }
 

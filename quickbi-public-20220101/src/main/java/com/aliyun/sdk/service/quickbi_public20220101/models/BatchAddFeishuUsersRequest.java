@@ -115,7 +115,10 @@ public class BatchAddFeishuUsersRequest extends Request {
         } 
 
         /**
-         * FeishuUsers.
+         * <p>Information of the users to be added</p>
+         * 
+         * <strong>example:</strong>
+         * <p>{&quot;ad<strong><strong>fd&quot;: &quot;TEST&quot;, &quot;82</strong></strong>5a&quot;: &quot;TEST&quot;}&quot;</p>
          */
         public Builder feishuUsers(String feishuUsers) {
             this.putQueryParameter("FeishuUsers", feishuUsers);
@@ -124,7 +127,15 @@ public class BatchAddFeishuUsersRequest extends Request {
         }
 
         /**
-         * IsAdmin.
+         * <p>Whether the user is an admin user:</p>
+         * <ul>
+         * <li>true</li>
+         * <li>false</li>
+         * </ul>
+         * <p>Default is false if not provided</p>
+         * 
+         * <strong>example:</strong>
+         * <p>False</p>
          */
         public Builder isAdmin(Boolean isAdmin) {
             this.putQueryParameter("IsAdmin", isAdmin);
@@ -133,7 +144,15 @@ public class BatchAddFeishuUsersRequest extends Request {
         }
 
         /**
-         * IsAuthAdmin.
+         * <p>Whether the user is an authorization administrator</p>
+         * <ul>
+         * <li>true</li>
+         * <li>false</li>
+         * </ul>
+         * <p>Default is false if not provided</p>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder isAuthAdmin(Boolean isAuthAdmin) {
             this.putQueryParameter("IsAuthAdmin", isAuthAdmin);
@@ -142,7 +161,10 @@ public class BatchAddFeishuUsersRequest extends Request {
         }
 
         /**
-         * UserGroupIds.
+         * <p>User group ID(s)</p>
+         * 
+         * <strong>example:</strong>
+         * <p>&quot;0d5fb19b-5555-41f0-99da-1248fc27ca51,0f868dd6_68dd_4d13_8422_c5dca3bd4b61&quot;</p>
          */
         public Builder userGroupIds(String userGroupIds) {
             this.putQueryParameter("UserGroupIds", userGroupIds);
@@ -151,7 +173,15 @@ public class BatchAddFeishuUsersRequest extends Request {
         }
 
         /**
-         * UserType.
+         * <p>User type</p>
+         * <ul>
+         * <li>Developer: 1</li>
+         * <li>Visitor: 2</li>
+         * <li>Analyst: 3</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder userType(Integer userType) {
             this.putQueryParameter("UserType", userType);

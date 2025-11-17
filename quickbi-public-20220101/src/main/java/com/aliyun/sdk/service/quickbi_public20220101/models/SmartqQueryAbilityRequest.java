@@ -19,8 +19,11 @@ import com.aliyun.sdk.gateway.pop.models.*;
 public class SmartqQueryAbilityRequest extends Request {
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("CubeId")
-    @com.aliyun.core.annotation.Validation(required = true)
     private String cubeId;
+
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("MultipleCubeIds")
+    private String multipleCubeIds;
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("UserId")
@@ -34,6 +37,7 @@ public class SmartqQueryAbilityRequest extends Request {
     private SmartqQueryAbilityRequest(Builder builder) {
         super(builder);
         this.cubeId = builder.cubeId;
+        this.multipleCubeIds = builder.multipleCubeIds;
         this.userId = builder.userId;
         this.userQuestion = builder.userQuestion;
     }
@@ -59,6 +63,13 @@ public class SmartqQueryAbilityRequest extends Request {
     }
 
     /**
+     * @return multipleCubeIds
+     */
+    public String getMultipleCubeIds() {
+        return this.multipleCubeIds;
+    }
+
+    /**
      * @return userId
      */
     public String getUserId() {
@@ -74,6 +85,7 @@ public class SmartqQueryAbilityRequest extends Request {
 
     public static final class Builder extends Request.Builder<SmartqQueryAbilityRequest, Builder> {
         private String cubeId; 
+        private String multipleCubeIds; 
         private String userId; 
         private String userQuestion; 
 
@@ -84,13 +96,13 @@ public class SmartqQueryAbilityRequest extends Request {
         private Builder(SmartqQueryAbilityRequest request) {
             super(request);
             this.cubeId = request.cubeId;
+            this.multipleCubeIds = request.multipleCubeIds;
             this.userId = request.userId;
             this.userQuestion = request.userQuestion;
         } 
 
         /**
          * <p>Dataset ID.</p>
-         * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
          * <p>7c7223ae-****-3c744528014b</p>
@@ -98,6 +110,15 @@ public class SmartqQueryAbilityRequest extends Request {
         public Builder cubeId(String cubeId) {
             this.putQueryParameter("CubeId", cubeId);
             this.cubeId = cubeId;
+            return this;
+        }
+
+        /**
+         * MultipleCubeIds.
+         */
+        public Builder multipleCubeIds(String multipleCubeIds) {
+            this.putQueryParameter("MultipleCubeIds", multipleCubeIds);
+            this.multipleCubeIds = multipleCubeIds;
             return this;
         }
 

@@ -80,7 +80,10 @@ public class QueryDatasetSwitchInfoResponseBody extends TeaModel {
         } 
 
         /**
-         * RequestId.
+         * <p>Request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>FAECEFA8-09BB-58AB-BC58-C8ACEFE4D232</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -88,7 +91,7 @@ public class QueryDatasetSwitchInfoResponseBody extends TeaModel {
         }
 
         /**
-         * Result.
+         * <p>Details of the dataset&quot;s row and column permission switches.</p>
          */
         public Builder result(Result result) {
             this.result = result;
@@ -96,7 +99,14 @@ public class QueryDatasetSwitchInfoResponseBody extends TeaModel {
         }
 
         /**
-         * Success.
+         * <p>Indicates whether the request was successful. Possible values:</p>
+         * <ul>
+         * <li>true: The request was successful.</li>
+         * <li>false: The request failed.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder success(Boolean success) {
             this.success = success;
@@ -175,7 +185,10 @@ public class QueryDatasetSwitchInfoResponseBody extends TeaModel {
             } 
 
             /**
-             * CubeId.
+             * <p>Dataset ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>7c7223ae-****-3c744528014b</p>
              */
             public Builder cubeId(String cubeId) {
                 this.cubeId = cubeId;
@@ -183,7 +196,14 @@ public class QueryDatasetSwitchInfoResponseBody extends TeaModel {
             }
 
             /**
-             * IsOpenColumnLevelPermission.
+             * <p>Status of the column-level field permission switch. Possible values:</p>
+             * <ul>
+             * <li>1: Enabled</li>
+             * <li>0: Disabled</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder isOpenColumnLevelPermission(Integer isOpenColumnLevelPermission) {
                 this.isOpenColumnLevelPermission = isOpenColumnLevelPermission;
@@ -191,7 +211,14 @@ public class QueryDatasetSwitchInfoResponseBody extends TeaModel {
             }
 
             /**
-             * IsOpenRowLevelPermission.
+             * <p>Status of the row-level permission switch.</p>
+             * <ul>
+             * <li>1: Enabled</li>
+             * <li>0: Disabled</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder isOpenRowLevelPermission(Integer isOpenRowLevelPermission) {
                 this.isOpenRowLevelPermission = isOpenRowLevelPermission;

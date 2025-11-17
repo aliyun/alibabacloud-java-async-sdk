@@ -12,21 +12,21 @@ import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
  * 
- * {@link UpdateDataSourceResponseBody} extends {@link TeaModel}
+ * {@link CreateWorkspaceResponseBody} extends {@link TeaModel}
  *
- * <p>UpdateDataSourceResponseBody</p>
+ * <p>CreateWorkspaceResponseBody</p>
  */
-public class UpdateDataSourceResponseBody extends TeaModel {
+public class CreateWorkspaceResponseBody extends TeaModel {
     @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
     @com.aliyun.core.annotation.NameInMap("Result")
-    private Boolean result;
+    private String result;
 
     @com.aliyun.core.annotation.NameInMap("Success")
     private Boolean success;
 
-    private UpdateDataSourceResponseBody(Builder builder) {
+    private CreateWorkspaceResponseBody(Builder builder) {
         this.requestId = builder.requestId;
         this.result = builder.result;
         this.success = builder.success;
@@ -36,7 +36,7 @@ public class UpdateDataSourceResponseBody extends TeaModel {
         return new Builder();
     }
 
-    public static UpdateDataSourceResponseBody create() {
+    public static CreateWorkspaceResponseBody create() {
         return builder().build();
     }
 
@@ -54,7 +54,7 @@ public class UpdateDataSourceResponseBody extends TeaModel {
     /**
      * @return result
      */
-    public Boolean getResult() {
+    public String getResult() {
         return this.result;
     }
 
@@ -67,23 +67,20 @@ public class UpdateDataSourceResponseBody extends TeaModel {
 
     public static final class Builder {
         private String requestId; 
-        private Boolean result; 
+        private String result; 
         private Boolean success; 
 
         private Builder() {
         } 
 
-        private Builder(UpdateDataSourceResponseBody model) {
+        private Builder(CreateWorkspaceResponseBody model) {
             this.requestId = model.requestId;
             this.result = model.result;
             this.success = model.success;
         } 
 
         /**
-         * <p>Request ID.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>D787E1A***********5DF8D885</p>
+         * RequestId.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -91,37 +88,23 @@ public class UpdateDataSourceResponseBody extends TeaModel {
         }
 
         /**
-         * <p>Result of the API call. Possible values:</p>
-         * <ul>
-         * <li>true: Request successful</li>
-         * <li>false: Request failed</li>
-         * </ul>
-         * 
-         * <strong>example:</strong>
-         * <p>true</p>
+         * Result.
          */
-        public Builder result(Boolean result) {
+        public Builder result(String result) {
             this.result = result;
             return this;
         }
 
         /**
-         * <p>Indicates whether the request was successful. Possible values:</p>
-         * <ul>
-         * <li>true: Request successful</li>
-         * <li>false: Request failed</li>
-         * </ul>
-         * 
-         * <strong>example:</strong>
-         * <p>true</p>
+         * Success.
          */
         public Builder success(Boolean success) {
             this.success = success;
             return this;
         }
 
-        public UpdateDataSourceResponseBody build() {
-            return new UpdateDataSourceResponseBody(this);
+        public CreateWorkspaceResponseBody build() {
+            return new CreateWorkspaceResponseBody(this);
         } 
 
     } 

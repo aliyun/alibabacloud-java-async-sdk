@@ -502,6 +502,24 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
+     * @param request the request parameters of CreateWorkspace  CreateWorkspaceRequest
+     * @return CreateWorkspaceResponse
+     */
+    @Override
+    public CompletableFuture<CreateWorkspaceResponse> createWorkspace(CreateWorkspaceRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RPC).setAction("CreateWorkspace").setMethod(HttpMethod.POST).setPathRegex("/").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(CreateWorkspaceResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<CreateWorkspaceResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
      * @param request the request parameters of DataInterpretation  DataInterpretationRequest
      * @return DataInterpretationResponse
      */
@@ -808,6 +826,24 @@ public final class DefaultAsyncClient implements AsyncClient {
             return this.handler.execute(params);
         } catch (Exception e) {
             CompletableFuture<GetWorksEmbedListResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
+     * @param request the request parameters of ListAccelerationOfWorkspace  ListAccelerationOfWorkspaceRequest
+     * @return ListAccelerationOfWorkspaceResponse
+     */
+    @Override
+    public CompletableFuture<ListAccelerationOfWorkspaceResponse> listAccelerationOfWorkspace(ListAccelerationOfWorkspaceRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RPC).setAction("ListAccelerationOfWorkspace").setMethod(HttpMethod.POST).setPathRegex("/").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(ListAccelerationOfWorkspaceResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<ListAccelerationOfWorkspaceResponse> future = new CompletableFuture<>();
             future.completeExceptionally(e);
             return future;
         }
@@ -1190,6 +1226,42 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
+     * @param request the request parameters of ModifyDashboardNl2sqlStatus  ModifyDashboardNl2sqlStatusRequest
+     * @return ModifyDashboardNl2sqlStatusResponse
+     */
+    @Override
+    public CompletableFuture<ModifyDashboardNl2sqlStatusResponse> modifyDashboardNl2sqlStatus(ModifyDashboardNl2sqlStatusRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RPC).setAction("ModifyDashboardNl2sqlStatus").setMethod(HttpMethod.POST).setPathRegex("/").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(ModifyDashboardNl2sqlStatusResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<ModifyDashboardNl2sqlStatusResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
+     * @param request the request parameters of QueryAccelerationLogByCubeId  QueryAccelerationLogByCubeIdRequest
+     * @return QueryAccelerationLogByCubeIdResponse
+     */
+    @Override
+    public CompletableFuture<QueryAccelerationLogByCubeIdResponse> queryAccelerationLogByCubeId(QueryAccelerationLogByCubeIdRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RPC).setAction("QueryAccelerationLogByCubeId").setMethod(HttpMethod.POST).setPathRegex("/").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(QueryAccelerationLogByCubeIdResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<QueryAccelerationLogByCubeIdResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
      * @param request the request parameters of QueryApprovalInfo  QueryApprovalInfoRequest
      * @return QueryApprovalInfoResponse
      */
@@ -1481,6 +1553,11 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
+     * <b>description</b> :
+     * <blockquote>
+     * <p>This interface only supports the new row and column permission model of Quick BI. If you are still using the old row and column permissions, please migrate to the new row and column permission model before calling this interface. To migrate to the new row and column permission model, follow these steps: In Organization Management -&gt; Security Configuration -&gt; Upgrade Row and Column Permissions, click <strong>One-Click Upgrade</strong> to upgrade to the new row-level permissions.</p>
+     * </blockquote>
+     * 
      * @param request the request parameters of QueryDatasetSwitchInfo  QueryDatasetSwitchInfoRequest
      * @return QueryDatasetSwitchInfoResponse
      */
@@ -2022,6 +2099,11 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
+     * <b>description</b> :
+     * <blockquote>
+     * <p>This interface only supports the new version of Quick BI\&quot;s row and column permission model. If you are still using the old row and column permissions, please migrate to the new row and column permission model before calling this interface. The steps to migrate to the new row and column permission model: In Organization Management --&gt; Security Configuration --&gt; Upgrade Row and Column Permissions to New Version, click <strong>One-Click Upgrade</strong> to upgrade to the new row-level permissions.</p>
+     * </blockquote>
+     * 
      * @param request the request parameters of SetDataLevelPermissionExtraConfig  SetDataLevelPermissionExtraConfigRequest
      * @return SetDataLevelPermissionExtraConfigResponse
      */
@@ -2040,6 +2122,11 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
+     * <b>description</b> :
+     * <blockquote>
+     * <p>This interface only supports the new row and column permission model of Quick BI. If you are still using the old row and column permissions, please migrate to the new row and column permission model before calling this interface. Steps to migrate to the new row and column permission model: In Organization Management --&gt; Security Configuration --&gt; Upgrade Row and Column Permissions to New Version, click <strong>One-Click Upgrade</strong> to upgrade to the new row-level permissions.</p>
+     * </blockquote>
+     * 
      * @param request the request parameters of SetDataLevelPermissionRuleConfig  SetDataLevelPermissionRuleConfigRequest
      * @return SetDataLevelPermissionRuleConfigResponse
      */

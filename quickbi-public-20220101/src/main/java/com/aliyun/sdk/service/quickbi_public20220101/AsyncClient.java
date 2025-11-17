@@ -182,6 +182,12 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<CreateUserGroupResponse> createUserGroup(CreateUserGroupRequest request);
 
     /**
+     * @param request the request parameters of CreateWorkspace  CreateWorkspaceRequest
+     * @return CreateWorkspaceResponse
+     */
+    CompletableFuture<CreateWorkspaceResponse> createWorkspace(CreateWorkspaceRequest request);
+
+    /**
      * @param request the request parameters of DataInterpretation  DataInterpretationRequest
      * @return DataInterpretationResponse
      */
@@ -288,6 +294,12 @@ public interface AsyncClient extends SdkAutoCloseable {
      * @return GetWorksEmbedListResponse
      */
     CompletableFuture<GetWorksEmbedListResponse> getWorksEmbedList(GetWorksEmbedListRequest request);
+
+    /**
+     * @param request the request parameters of ListAccelerationOfWorkspace  ListAccelerationOfWorkspaceRequest
+     * @return ListAccelerationOfWorkspaceResponse
+     */
+    CompletableFuture<ListAccelerationOfWorkspaceResponse> listAccelerationOfWorkspace(ListAccelerationOfWorkspaceRequest request);
 
     /**
      * <b>description</b> :
@@ -426,6 +438,18 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<ModifyCopilotEmbedConfigResponse> modifyCopilotEmbedConfig(ModifyCopilotEmbedConfigRequest request);
 
     /**
+     * @param request the request parameters of ModifyDashboardNl2sqlStatus  ModifyDashboardNl2sqlStatusRequest
+     * @return ModifyDashboardNl2sqlStatusResponse
+     */
+    CompletableFuture<ModifyDashboardNl2sqlStatusResponse> modifyDashboardNl2sqlStatus(ModifyDashboardNl2sqlStatusRequest request);
+
+    /**
+     * @param request the request parameters of QueryAccelerationLogByCubeId  QueryAccelerationLogByCubeIdRequest
+     * @return QueryAccelerationLogByCubeIdResponse
+     */
+    CompletableFuture<QueryAccelerationLogByCubeIdResponse> queryAccelerationLogByCubeId(QueryAccelerationLogByCubeIdRequest request);
+
+    /**
      * @param request the request parameters of QueryApprovalInfo  QueryApprovalInfoRequest
      * @return QueryApprovalInfoResponse
      */
@@ -537,6 +561,11 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<QueryDatasetSmartqStatusResponse> queryDatasetSmartqStatus(QueryDatasetSmartqStatusRequest request);
 
     /**
+     * <b>description</b> :
+     * <blockquote>
+     * <p>This interface only supports the new row and column permission model of Quick BI. If you are still using the old row and column permissions, please migrate to the new row and column permission model before calling this interface. To migrate to the new row and column permission model, follow these steps: In Organization Management -&gt; Security Configuration -&gt; Upgrade Row and Column Permissions, click <strong>One-Click Upgrade</strong> to upgrade to the new row-level permissions.</p>
+     * </blockquote>
+     * 
      * @param request the request parameters of QueryDatasetSwitchInfo  QueryDatasetSwitchInfoRequest
      * @return QueryDatasetSwitchInfoResponse
      */
@@ -718,12 +747,22 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<SaveFavoritesResponse> saveFavorites(SaveFavoritesRequest request);
 
     /**
+     * <b>description</b> :
+     * <blockquote>
+     * <p>This interface only supports the new version of Quick BI\&quot;s row and column permission model. If you are still using the old row and column permissions, please migrate to the new row and column permission model before calling this interface. The steps to migrate to the new row and column permission model: In Organization Management --&gt; Security Configuration --&gt; Upgrade Row and Column Permissions to New Version, click <strong>One-Click Upgrade</strong> to upgrade to the new row-level permissions.</p>
+     * </blockquote>
+     * 
      * @param request the request parameters of SetDataLevelPermissionExtraConfig  SetDataLevelPermissionExtraConfigRequest
      * @return SetDataLevelPermissionExtraConfigResponse
      */
     CompletableFuture<SetDataLevelPermissionExtraConfigResponse> setDataLevelPermissionExtraConfig(SetDataLevelPermissionExtraConfigRequest request);
 
     /**
+     * <b>description</b> :
+     * <blockquote>
+     * <p>This interface only supports the new row and column permission model of Quick BI. If you are still using the old row and column permissions, please migrate to the new row and column permission model before calling this interface. Steps to migrate to the new row and column permission model: In Organization Management --&gt; Security Configuration --&gt; Upgrade Row and Column Permissions to New Version, click <strong>One-Click Upgrade</strong> to upgrade to the new row-level permissions.</p>
+     * </blockquote>
+     * 
      * @param request the request parameters of SetDataLevelPermissionRuleConfig  SetDataLevelPermissionRuleConfigRequest
      * @return SetDataLevelPermissionRuleConfigResponse
      */

@@ -80,7 +80,10 @@ public class QueryDashboardNl2sqlResponseBody extends TeaModel {
         } 
 
         /**
-         * RequestId.
+         * <p>Request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>46e537a5****,3dadsu****</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -88,7 +91,11 @@ public class QueryDashboardNl2sqlResponseBody extends TeaModel {
         }
 
         /**
-         * Result.
+         * <p>Result of the API execution. Possible values:</p>
+         * <ul>
+         * <li>true: Request succeeded</li>
+         * <li>false: Request failed</li>
+         * </ul>
          */
         public Builder result(java.util.List<Result> result) {
             this.result = result;
@@ -96,7 +103,14 @@ public class QueryDashboardNl2sqlResponseBody extends TeaModel {
         }
 
         /**
-         * Success.
+         * <p>Indicates whether the request was successful. Possible values: </p>
+         * <ul>
+         * <li>true: Request succeeded</li>
+         * <li>false: Request failed</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder success(Boolean success) {
             this.success = success;
@@ -188,7 +202,7 @@ public class QueryDashboardNl2sqlResponseBody extends TeaModel {
             } 
 
             /**
-             * Authorities.
+             * <p>If this parameter has a value and includes &quot;READ&quot;, it indicates that the user has read permission for the dashboard question resource.</p>
              */
             public Builder authorities(java.util.List<String> authorities) {
                 this.authorities = authorities;
@@ -196,7 +210,10 @@ public class QueryDashboardNl2sqlResponseBody extends TeaModel {
             }
 
             /**
-             * DashboardName.
+             * <p>Dashboard name</p>
+             * 
+             * <strong>example:</strong>
+             * <p>612b</p>
              */
             public Builder dashboardName(String dashboardName) {
                 this.dashboardName = dashboardName;
@@ -204,7 +221,10 @@ public class QueryDashboardNl2sqlResponseBody extends TeaModel {
             }
 
             /**
-             * DashboardNl2sqlId.
+             * <p>Dashboard question resource ID</p>
+             * 
+             * <strong>example:</strong>
+             * <p>sasdas****sawdau</p>
              */
             public Builder dashboardNl2sqlId(String dashboardNl2sqlId) {
                 this.dashboardNl2sqlId = dashboardNl2sqlId;
@@ -212,7 +232,10 @@ public class QueryDashboardNl2sqlResponseBody extends TeaModel {
             }
 
             /**
-             * OwnerId.
+             * <p>UserID of the dashboard creator</p>
+             * 
+             * <strong>example:</strong>
+             * <p>46e5374665ba4b679ee22e2a2927****</p>
              */
             public Builder ownerId(String ownerId) {
                 this.ownerId = ownerId;

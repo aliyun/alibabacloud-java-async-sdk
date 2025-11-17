@@ -80,7 +80,10 @@ public class QueryLastAccelerationEngineJobResponseBody extends TeaModel {
         } 
 
         /**
-         * RequestId.
+         * <p>Request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>46e53*********92704c8</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -88,7 +91,7 @@ public class QueryLastAccelerationEngineJobResponseBody extends TeaModel {
         }
 
         /**
-         * Result.
+         * <p>The entity of the most recent acceleration task.</p>
          */
         public Builder result(Result result) {
             this.result = result;
@@ -96,7 +99,14 @@ public class QueryLastAccelerationEngineJobResponseBody extends TeaModel {
         }
 
         /**
-         * Success.
+         * <p>Indicates whether the request was successful. Possible values:</p>
+         * <ul>
+         * <li>true: The request was successful.</li>
+         * <li>false: The request failed.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder success(Boolean success) {
             this.success = success;
@@ -188,7 +198,10 @@ public class QueryLastAccelerationEngineJobResponseBody extends TeaModel {
             } 
 
             /**
-             * GmtCreate.
+             * <p>Execution time, in the format yyyy-MM-dd hh:mm:ss.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2025-06-18 17:07:43</p>
              */
             public Builder gmtCreate(String gmtCreate) {
                 this.gmtCreate = gmtCreate;
@@ -196,7 +209,10 @@ public class QueryLastAccelerationEngineJobResponseBody extends TeaModel {
             }
 
             /**
-             * GmtModified.
+             * <p>Completion time, in the format yyyy-MM-dd hh:mm:ss.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2025-06-18 17:08:26</p>
              */
             public Builder gmtModified(String gmtModified) {
                 this.gmtModified = gmtModified;
@@ -204,7 +220,10 @@ public class QueryLastAccelerationEngineJobResponseBody extends TeaModel {
             }
 
             /**
-             * JobHistoryId.
+             * <p>Acceleration task ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>46e53********5464564</p>
              */
             public Builder jobHistoryId(String jobHistoryId) {
                 this.jobHistoryId = jobHistoryId;
@@ -212,7 +231,18 @@ public class QueryLastAccelerationEngineJobResponseBody extends TeaModel {
             }
 
             /**
-             * Status.
+             * <p>Task status. Possible values:</p>
+             * <ul>
+             * <li>TODO -- To be run</li>
+             * <li>RUNNING -- Running</li>
+             * <li>SUCCESS -- Successfully completed</li>
+             * <li>FAILURE -- Abnormally terminated</li>
+             * <li>CANCELED -- Canceled</li>
+             * <li>CHECK_DEPENDENCY -- Checking dependencies</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>SUCCESS</p>
              */
             public Builder status(String status) {
                 this.status = status;

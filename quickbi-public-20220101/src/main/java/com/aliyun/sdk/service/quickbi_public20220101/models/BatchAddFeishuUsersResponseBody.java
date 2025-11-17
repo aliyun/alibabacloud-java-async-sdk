@@ -80,7 +80,10 @@ public class BatchAddFeishuUsersResponseBody extends TeaModel {
         } 
 
         /**
-         * RequestId.
+         * <p>Request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>D8749D65-E80A-433C-AF1B-CE9C180FF3B4</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -88,7 +91,14 @@ public class BatchAddFeishuUsersResponseBody extends TeaModel {
         }
 
         /**
-         * Result.
+         * <p>Result of adding members to the user group. Possible values:</p>
+         * <ul>
+         * <li>true: Addition successful</li>
+         * <li>false: Addition failed</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>True</p>
          */
         public Builder result(Result result) {
             this.result = result;
@@ -96,7 +106,14 @@ public class BatchAddFeishuUsersResponseBody extends TeaModel {
         }
 
         /**
-         * Success.
+         * <p>Whether the request was successful. Possible values:</p>
+         * <ul>
+         * <li>true: Request successful</li>
+         * <li>false: Request failed</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>True</p>
          */
         public Builder success(Boolean success) {
             this.success = success;
@@ -175,7 +192,10 @@ public class BatchAddFeishuUsersResponseBody extends TeaModel {
             } 
 
             /**
-             * Code.
+             * <p>Error code.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>ACCOUNT_EXIST</p>
              */
             public Builder code(String code) {
                 this.code = code;
@@ -183,7 +203,10 @@ public class BatchAddFeishuUsersResponseBody extends TeaModel {
             }
 
             /**
-             * CodeDesc.
+             * <p>Description of the error code.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>TEST</p>
              */
             public Builder codeDesc(String codeDesc) {
                 this.codeDesc = codeDesc;
@@ -191,7 +214,10 @@ public class BatchAddFeishuUsersResponseBody extends TeaModel {
             }
 
             /**
-             * Input.
+             * <p>Incorrect input value.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>20</p>
              */
             public Builder input(String input) {
                 this.input = input;
@@ -245,7 +271,7 @@ public class BatchAddFeishuUsersResponseBody extends TeaModel {
             } 
 
             /**
-             * FailInfos.
+             * <p>Reasons for errors.</p>
              */
             public Builder failInfos(java.util.List<FailInfos> failInfos) {
                 this.failInfos = failInfos;
@@ -325,7 +351,10 @@ public class BatchAddFeishuUsersResponseBody extends TeaModel {
             } 
 
             /**
-             * FailCount.
+             * <p>Number of failed validations.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>10</p>
              */
             public Builder failCount(Integer failCount) {
                 this.failCount = failCount;
@@ -333,7 +362,7 @@ public class BatchAddFeishuUsersResponseBody extends TeaModel {
             }
 
             /**
-             * FailResults.
+             * <p>Details of the failures.</p>
              */
             public Builder failResults(java.util.List<FailResults> failResults) {
                 this.failResults = failResults;
@@ -341,7 +370,10 @@ public class BatchAddFeishuUsersResponseBody extends TeaModel {
             }
 
             /**
-             * OkCount.
+             * <p>Count of successes.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder okCount(Integer okCount) {
                 this.okCount = okCount;
