@@ -46,6 +46,10 @@ public class SubmitSmarttagJobRequest extends Request {
     private ScheduleConfig scheduleConfig;
 
     @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("TemplateConfig")
+    private String templateConfig;
+
+    @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("TemplateId")
     private String templateId;
 
@@ -66,6 +70,7 @@ public class SubmitSmarttagJobRequest extends Request {
         this.notifyUrl = builder.notifyUrl;
         this.params = builder.params;
         this.scheduleConfig = builder.scheduleConfig;
+        this.templateConfig = builder.templateConfig;
         this.templateId = builder.templateId;
         this.title = builder.title;
         this.userData = builder.userData;
@@ -134,6 +139,13 @@ public class SubmitSmarttagJobRequest extends Request {
     }
 
     /**
+     * @return templateConfig
+     */
+    public String getTemplateConfig() {
+        return this.templateConfig;
+    }
+
+    /**
      * @return templateId
      */
     public String getTemplateId() {
@@ -162,6 +174,7 @@ public class SubmitSmarttagJobRequest extends Request {
         private String notifyUrl; 
         private String params; 
         private ScheduleConfig scheduleConfig; 
+        private String templateConfig; 
         private String templateId; 
         private String title; 
         private String userData; 
@@ -179,6 +192,7 @@ public class SubmitSmarttagJobRequest extends Request {
             this.notifyUrl = request.notifyUrl;
             this.params = request.params;
             this.scheduleConfig = request.scheduleConfig;
+            this.templateConfig = request.templateConfig;
             this.templateId = request.templateId;
             this.title = request.title;
             this.userData = request.userData;
@@ -267,6 +281,15 @@ public class SubmitSmarttagJobRequest extends Request {
             String scheduleConfigShrink = shrink(scheduleConfig, "ScheduleConfig", "json");
             this.putQueryParameter("ScheduleConfig", scheduleConfigShrink);
             this.scheduleConfig = scheduleConfig;
+            return this;
+        }
+
+        /**
+         * TemplateConfig.
+         */
+        public Builder templateConfig(String templateConfig) {
+            this.putQueryParameter("TemplateConfig", templateConfig);
+            this.templateConfig = templateConfig;
             return this;
         }
 

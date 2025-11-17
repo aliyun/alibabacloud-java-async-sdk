@@ -28,6 +28,10 @@ public class ListRecognitionSamplesRequest extends Request {
     private String entityId;
 
     @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("EntityName")
+    private String entityName;
+
+    @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("LibId")
     @com.aliyun.core.annotation.Validation(required = true)
     private String libId;
@@ -62,6 +66,7 @@ public class ListRecognitionSamplesRequest extends Request {
         super(builder);
         this.algorithm = builder.algorithm;
         this.entityId = builder.entityId;
+        this.entityName = builder.entityName;
         this.libId = builder.libId;
         this.ownerAccount = builder.ownerAccount;
         this.ownerId = builder.ownerId;
@@ -96,6 +101,13 @@ public class ListRecognitionSamplesRequest extends Request {
      */
     public String getEntityId() {
         return this.entityId;
+    }
+
+    /**
+     * @return entityName
+     */
+    public String getEntityName() {
+        return this.entityName;
     }
 
     /**
@@ -150,6 +162,7 @@ public class ListRecognitionSamplesRequest extends Request {
     public static final class Builder extends Request.Builder<ListRecognitionSamplesRequest, Builder> {
         private String algorithm; 
         private String entityId; 
+        private String entityName; 
         private String libId; 
         private String ownerAccount; 
         private Long ownerId; 
@@ -166,6 +179,7 @@ public class ListRecognitionSamplesRequest extends Request {
             super(request);
             this.algorithm = request.algorithm;
             this.entityId = request.entityId;
+            this.entityName = request.entityName;
             this.libId = request.libId;
             this.ownerAccount = request.ownerAccount;
             this.ownerId = request.ownerId;
@@ -204,6 +218,15 @@ public class ListRecognitionSamplesRequest extends Request {
         public Builder entityId(String entityId) {
             this.putQueryParameter("EntityId", entityId);
             this.entityId = entityId;
+            return this;
+        }
+
+        /**
+         * EntityName.
+         */
+        public Builder entityName(String entityName) {
+            this.putQueryParameter("EntityName", entityName);
+            this.entityName = entityName;
             return this;
         }
 

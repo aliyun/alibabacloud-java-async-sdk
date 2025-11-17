@@ -26,6 +26,10 @@ public class SubmitVideoCognitionJobRequest extends Request {
     private String params;
 
     @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("TemplateConfig")
+    private String templateConfig;
+
+    @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("TemplateId")
     private String templateId;
 
@@ -41,6 +45,7 @@ public class SubmitVideoCognitionJobRequest extends Request {
         super(builder);
         this.input = builder.input;
         this.params = builder.params;
+        this.templateConfig = builder.templateConfig;
         this.templateId = builder.templateId;
         this.title = builder.title;
         this.userData = builder.userData;
@@ -74,6 +79,13 @@ public class SubmitVideoCognitionJobRequest extends Request {
     }
 
     /**
+     * @return templateConfig
+     */
+    public String getTemplateConfig() {
+        return this.templateConfig;
+    }
+
+    /**
      * @return templateId
      */
     public String getTemplateId() {
@@ -97,6 +109,7 @@ public class SubmitVideoCognitionJobRequest extends Request {
     public static final class Builder extends Request.Builder<SubmitVideoCognitionJobRequest, Builder> {
         private Input input; 
         private String params; 
+        private String templateConfig; 
         private String templateId; 
         private String title; 
         private String userData; 
@@ -109,6 +122,7 @@ public class SubmitVideoCognitionJobRequest extends Request {
             super(request);
             this.input = request.input;
             this.params = request.params;
+            this.templateConfig = request.templateConfig;
             this.templateId = request.templateId;
             this.title = request.title;
             this.userData = request.userData;
@@ -145,6 +159,15 @@ public class SubmitVideoCognitionJobRequest extends Request {
         public Builder params(String params) {
             this.putQueryParameter("Params", params);
             this.params = params;
+            return this;
+        }
+
+        /**
+         * TemplateConfig.
+         */
+        public Builder templateConfig(String templateConfig) {
+            this.putQueryParameter("TemplateConfig", templateConfig);
+            this.templateConfig = templateConfig;
             return this;
         }
 

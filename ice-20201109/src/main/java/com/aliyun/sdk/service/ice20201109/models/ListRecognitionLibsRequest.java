@@ -23,6 +23,10 @@ public class ListRecognitionLibsRequest extends Request {
     private String algorithm;
 
     @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("LibId")
+    private String libId;
+
+    @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("OwnerAccount")
     private String ownerAccount;
 
@@ -51,6 +55,7 @@ public class ListRecognitionLibsRequest extends Request {
     private ListRecognitionLibsRequest(Builder builder) {
         super(builder);
         this.algorithm = builder.algorithm;
+        this.libId = builder.libId;
         this.ownerAccount = builder.ownerAccount;
         this.ownerId = builder.ownerId;
         this.pageNumber = builder.pageNumber;
@@ -77,6 +82,13 @@ public class ListRecognitionLibsRequest extends Request {
      */
     public String getAlgorithm() {
         return this.algorithm;
+    }
+
+    /**
+     * @return libId
+     */
+    public String getLibId() {
+        return this.libId;
     }
 
     /**
@@ -123,6 +135,7 @@ public class ListRecognitionLibsRequest extends Request {
 
     public static final class Builder extends Request.Builder<ListRecognitionLibsRequest, Builder> {
         private String algorithm; 
+        private String libId; 
         private String ownerAccount; 
         private Long ownerId; 
         private Integer pageNumber; 
@@ -137,6 +150,7 @@ public class ListRecognitionLibsRequest extends Request {
         private Builder(ListRecognitionLibsRequest request) {
             super(request);
             this.algorithm = request.algorithm;
+            this.libId = request.libId;
             this.ownerAccount = request.ownerAccount;
             this.ownerId = request.ownerId;
             this.pageNumber = request.pageNumber;
@@ -162,6 +176,15 @@ public class ListRecognitionLibsRequest extends Request {
         public Builder algorithm(String algorithm) {
             this.putQueryParameter("Algorithm", algorithm);
             this.algorithm = algorithm;
+            return this;
+        }
+
+        /**
+         * LibId.
+         */
+        public Builder libId(String libId) {
+            this.putQueryParameter("LibId", libId);
+            this.libId = libId;
             return this;
         }
 

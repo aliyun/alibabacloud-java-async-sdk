@@ -170,14 +170,22 @@ public class ListRecognitionSamplesResponseBody extends TeaModel {
      * <p>ListRecognitionSamplesResponseBody</p>
      */
     public static class Sample extends TeaModel {
+        @com.aliyun.core.annotation.NameInMap("EntityId")
+        private String entityId;
+
         @com.aliyun.core.annotation.NameInMap("ImageUrl")
         private String imageUrl;
+
+        @com.aliyun.core.annotation.NameInMap("LibId")
+        private String libId;
 
         @com.aliyun.core.annotation.NameInMap("SampleId")
         private String sampleId;
 
         private Sample(Builder builder) {
+            this.entityId = builder.entityId;
             this.imageUrl = builder.imageUrl;
+            this.libId = builder.libId;
             this.sampleId = builder.sampleId;
         }
 
@@ -190,10 +198,24 @@ public class ListRecognitionSamplesResponseBody extends TeaModel {
         }
 
         /**
+         * @return entityId
+         */
+        public String getEntityId() {
+            return this.entityId;
+        }
+
+        /**
          * @return imageUrl
          */
         public String getImageUrl() {
             return this.imageUrl;
+        }
+
+        /**
+         * @return libId
+         */
+        public String getLibId() {
+            return this.libId;
         }
 
         /**
@@ -204,16 +226,28 @@ public class ListRecognitionSamplesResponseBody extends TeaModel {
         }
 
         public static final class Builder {
+            private String entityId; 
             private String imageUrl; 
+            private String libId; 
             private String sampleId; 
 
             private Builder() {
             } 
 
             private Builder(Sample model) {
+                this.entityId = model.entityId;
                 this.imageUrl = model.imageUrl;
+                this.libId = model.libId;
                 this.sampleId = model.sampleId;
             } 
+
+            /**
+             * EntityId.
+             */
+            public Builder entityId(String entityId) {
+                this.entityId = entityId;
+                return this;
+            }
 
             /**
              * <p>The URL of the image sample.</p>
@@ -223,6 +257,14 @@ public class ListRecognitionSamplesResponseBody extends TeaModel {
              */
             public Builder imageUrl(String imageUrl) {
                 this.imageUrl = imageUrl;
+                return this;
+            }
+
+            /**
+             * LibId.
+             */
+            public Builder libId(String libId) {
+                this.libId = libId;
                 return this;
             }
 
