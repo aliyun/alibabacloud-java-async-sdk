@@ -1299,6 +1299,9 @@ public class GetJobResponseBody extends TeaModel {
      * <p>GetJobResponseBody</p>
      */
     public static class HistoryPods extends TeaModel {
+        @com.aliyun.core.annotation.NameInMap("Duration")
+        private Double duration;
+
         @com.aliyun.core.annotation.NameInMap("GmtCreateTime")
         private String gmtCreateTime;
 
@@ -1311,8 +1314,14 @@ public class GetJobResponseBody extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Ip")
         private String ip;
 
+        @com.aliyun.core.annotation.NameInMap("NodeName")
+        private String nodeName;
+
         @com.aliyun.core.annotation.NameInMap("PodId")
         private String podId;
+
+        @com.aliyun.core.annotation.NameInMap("PodIps")
+        private java.util.List<PodNetworkInterface> podIps;
 
         @com.aliyun.core.annotation.NameInMap("PodUid")
         private String podUid;
@@ -1330,11 +1339,14 @@ public class GetJobResponseBody extends TeaModel {
         private String type;
 
         private HistoryPods(Builder builder) {
+            this.duration = builder.duration;
             this.gmtCreateTime = builder.gmtCreateTime;
             this.gmtFinishTime = builder.gmtFinishTime;
             this.gmtStartTime = builder.gmtStartTime;
             this.ip = builder.ip;
+            this.nodeName = builder.nodeName;
             this.podId = builder.podId;
+            this.podIps = builder.podIps;
             this.podUid = builder.podUid;
             this.resourceType = builder.resourceType;
             this.status = builder.status;
@@ -1348,6 +1360,13 @@ public class GetJobResponseBody extends TeaModel {
 
         public static HistoryPods create() {
             return builder().build();
+        }
+
+        /**
+         * @return duration
+         */
+        public Double getDuration() {
+            return this.duration;
         }
 
         /**
@@ -1379,10 +1398,24 @@ public class GetJobResponseBody extends TeaModel {
         }
 
         /**
+         * @return nodeName
+         */
+        public String getNodeName() {
+            return this.nodeName;
+        }
+
+        /**
          * @return podId
          */
         public String getPodId() {
             return this.podId;
+        }
+
+        /**
+         * @return podIps
+         */
+        public java.util.List<PodNetworkInterface> getPodIps() {
+            return this.podIps;
         }
 
         /**
@@ -1421,11 +1454,14 @@ public class GetJobResponseBody extends TeaModel {
         }
 
         public static final class Builder {
+            private Double duration; 
             private String gmtCreateTime; 
             private String gmtFinishTime; 
             private String gmtStartTime; 
             private String ip; 
+            private String nodeName; 
             private String podId; 
+            private java.util.List<PodNetworkInterface> podIps; 
             private String podUid; 
             private String resourceType; 
             private String status; 
@@ -1436,17 +1472,31 @@ public class GetJobResponseBody extends TeaModel {
             } 
 
             private Builder(HistoryPods model) {
+                this.duration = model.duration;
                 this.gmtCreateTime = model.gmtCreateTime;
                 this.gmtFinishTime = model.gmtFinishTime;
                 this.gmtStartTime = model.gmtStartTime;
                 this.ip = model.ip;
+                this.nodeName = model.nodeName;
                 this.podId = model.podId;
+                this.podIps = model.podIps;
                 this.podUid = model.podUid;
                 this.resourceType = model.resourceType;
                 this.status = model.status;
                 this.subStatus = model.subStatus;
                 this.type = model.type;
             } 
+
+            /**
+             * <p>The duration of the job (seconds).</p>
+             * 
+             * <strong>example:</strong>
+             * <p>3602</p>
+             */
+            public Builder duration(Double duration) {
+                this.duration = duration;
+                return this;
+            }
 
             /**
              * <p>The time when the node was created (UTC).</p>
@@ -1493,6 +1543,14 @@ public class GetJobResponseBody extends TeaModel {
             }
 
             /**
+             * NodeName.
+             */
+            public Builder nodeName(String nodeName) {
+                this.nodeName = nodeName;
+                return this;
+            }
+
+            /**
              * <p>The ID of the node.</p>
              * 
              * <strong>example:</strong>
@@ -1500,6 +1558,14 @@ public class GetJobResponseBody extends TeaModel {
              */
             public Builder podId(String podId) {
                 this.podId = podId;
+                return this;
+            }
+
+            /**
+             * PodIps.
+             */
+            public Builder podIps(java.util.List<PodNetworkInterface> podIps) {
+                this.podIps = podIps;
                 return this;
             }
 
@@ -1576,6 +1642,9 @@ public class GetJobResponseBody extends TeaModel {
      * <p>GetJobResponseBody</p>
      */
     public static class Pods extends TeaModel {
+        @com.aliyun.core.annotation.NameInMap("Duration")
+        private Double duration;
+
         @com.aliyun.core.annotation.NameInMap("GmtCreateTime")
         private String gmtCreateTime;
 
@@ -1591,8 +1660,14 @@ public class GetJobResponseBody extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Ip")
         private String ip;
 
+        @com.aliyun.core.annotation.NameInMap("NodeName")
+        private String nodeName;
+
         @com.aliyun.core.annotation.NameInMap("PodId")
         private String podId;
+
+        @com.aliyun.core.annotation.NameInMap("PodIps")
+        private java.util.List<PodNetworkInterface> podIps;
 
         @com.aliyun.core.annotation.NameInMap("PodUid")
         private String podUid;
@@ -1610,12 +1685,15 @@ public class GetJobResponseBody extends TeaModel {
         private String type;
 
         private Pods(Builder builder) {
+            this.duration = builder.duration;
             this.gmtCreateTime = builder.gmtCreateTime;
             this.gmtFinishTime = builder.gmtFinishTime;
             this.gmtStartTime = builder.gmtStartTime;
             this.historyPods = builder.historyPods;
             this.ip = builder.ip;
+            this.nodeName = builder.nodeName;
             this.podId = builder.podId;
+            this.podIps = builder.podIps;
             this.podUid = builder.podUid;
             this.resourceType = builder.resourceType;
             this.status = builder.status;
@@ -1629,6 +1707,13 @@ public class GetJobResponseBody extends TeaModel {
 
         public static Pods create() {
             return builder().build();
+        }
+
+        /**
+         * @return duration
+         */
+        public Double getDuration() {
+            return this.duration;
         }
 
         /**
@@ -1667,10 +1752,24 @@ public class GetJobResponseBody extends TeaModel {
         }
 
         /**
+         * @return nodeName
+         */
+        public String getNodeName() {
+            return this.nodeName;
+        }
+
+        /**
          * @return podId
          */
         public String getPodId() {
             return this.podId;
+        }
+
+        /**
+         * @return podIps
+         */
+        public java.util.List<PodNetworkInterface> getPodIps() {
+            return this.podIps;
         }
 
         /**
@@ -1709,12 +1808,15 @@ public class GetJobResponseBody extends TeaModel {
         }
 
         public static final class Builder {
+            private Double duration; 
             private String gmtCreateTime; 
             private String gmtFinishTime; 
             private String gmtStartTime; 
             private java.util.List<HistoryPods> historyPods; 
             private String ip; 
+            private String nodeName; 
             private String podId; 
+            private java.util.List<PodNetworkInterface> podIps; 
             private String podUid; 
             private String resourceType; 
             private String status; 
@@ -1725,18 +1827,32 @@ public class GetJobResponseBody extends TeaModel {
             } 
 
             private Builder(Pods model) {
+                this.duration = model.duration;
                 this.gmtCreateTime = model.gmtCreateTime;
                 this.gmtFinishTime = model.gmtFinishTime;
                 this.gmtStartTime = model.gmtStartTime;
                 this.historyPods = model.historyPods;
                 this.ip = model.ip;
+                this.nodeName = model.nodeName;
                 this.podId = model.podId;
+                this.podIps = model.podIps;
                 this.podUid = model.podUid;
                 this.resourceType = model.resourceType;
                 this.status = model.status;
                 this.subStatus = model.subStatus;
                 this.type = model.type;
             } 
+
+            /**
+             * <p>The duration of the job (seconds).</p>
+             * 
+             * <strong>example:</strong>
+             * <p>3602</p>
+             */
+            public Builder duration(Double duration) {
+                this.duration = duration;
+                return this;
+            }
 
             /**
              * <p>The time when the node was created (UTC).</p>
@@ -1791,6 +1907,14 @@ public class GetJobResponseBody extends TeaModel {
             }
 
             /**
+             * NodeName.
+             */
+            public Builder nodeName(String nodeName) {
+                this.nodeName = nodeName;
+                return this;
+            }
+
+            /**
              * <p>The node ID. It can be used in the GetPodLogs and GetPodEvents operations to obtain the detailed logs and events of the node.</p>
              * 
              * <strong>example:</strong>
@@ -1798,6 +1922,14 @@ public class GetJobResponseBody extends TeaModel {
              */
             public Builder podId(String podId) {
                 this.podId = podId;
+                return this;
+            }
+
+            /**
+             * PodIps.
+             */
+            public Builder podIps(java.util.List<PodNetworkInterface> podIps) {
+                this.podIps = podIps;
                 return this;
             }
 
