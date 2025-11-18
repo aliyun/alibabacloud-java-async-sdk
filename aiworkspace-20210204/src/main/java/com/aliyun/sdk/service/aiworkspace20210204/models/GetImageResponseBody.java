@@ -45,7 +45,7 @@ public class GetImageResponseBody extends TeaModel {
     private String requestId;
 
     @com.aliyun.core.annotation.NameInMap("Size")
-    private Integer size;
+    private Long size;
 
     @com.aliyun.core.annotation.NameInMap("SourceId")
     private String sourceId;
@@ -154,7 +154,7 @@ public class GetImageResponseBody extends TeaModel {
     /**
      * @return size
      */
-    public Integer getSize() {
+    public Long getSize() {
         return this.size;
     }
 
@@ -196,7 +196,7 @@ public class GetImageResponseBody extends TeaModel {
         private String name; 
         private String parentUserId; 
         private String requestId; 
-        private Integer size; 
+        private Long size; 
         private String sourceId; 
         private String sourceType; 
         private String userId; 
@@ -325,7 +325,7 @@ public class GetImageResponseBody extends TeaModel {
          * <strong>example:</strong>
          * <p>10</p>
          */
-        public Builder size(Integer size) {
+        public Builder size(Long size) {
             this.size = size;
             return this;
         }

@@ -231,7 +231,7 @@ public class ListImagesResponseBody extends TeaModel {
         private String parentUserId;
 
         @com.aliyun.core.annotation.NameInMap("Size")
-        private Integer size;
+        private Long size;
 
         @com.aliyun.core.annotation.NameInMap("SourceId")
         private String sourceId;
@@ -336,7 +336,7 @@ public class ListImagesResponseBody extends TeaModel {
         /**
          * @return size
          */
-        public Integer getSize() {
+        public Long getSize() {
             return this.size;
         }
 
@@ -378,7 +378,7 @@ public class ListImagesResponseBody extends TeaModel {
             private java.util.List<Labels> labels; 
             private String name; 
             private String parentUserId; 
-            private Integer size; 
+            private Long size; 
             private String sourceId; 
             private String sourceType; 
             private String userId; 
@@ -507,7 +507,7 @@ public class ListImagesResponseBody extends TeaModel {
              * <strong>example:</strong>
              * <p>2</p>
              */
-            public Builder size(Integer size) {
+            public Builder size(Long size) {
                 this.size = size;
                 return this;
             }

@@ -45,7 +45,7 @@ public class AddImageRequest extends Request {
 
     @com.aliyun.core.annotation.Body
     @com.aliyun.core.annotation.NameInMap("Size")
-    private Integer size;
+    private Long size;
 
     @com.aliyun.core.annotation.Body
     @com.aliyun.core.annotation.NameInMap("SourceId")
@@ -131,7 +131,7 @@ public class AddImageRequest extends Request {
     /**
      * @return size
      */
-    public Integer getSize() {
+    public Long getSize() {
         return this.size;
     }
 
@@ -163,7 +163,7 @@ public class AddImageRequest extends Request {
         private String imageUri; 
         private java.util.List<Labels> labels; 
         private String name; 
-        private Integer size; 
+        private Long size; 
         private String sourceId; 
         private String sourceType; 
         private String workspaceId; 
@@ -289,7 +289,7 @@ public class AddImageRequest extends Request {
          * <strong>example:</strong>
          * <p>2</p>
          */
-        public Builder size(Integer size) {
+        public Builder size(Long size) {
             this.putBodyParameter("Size", size);
             this.size = size;
             return this;
