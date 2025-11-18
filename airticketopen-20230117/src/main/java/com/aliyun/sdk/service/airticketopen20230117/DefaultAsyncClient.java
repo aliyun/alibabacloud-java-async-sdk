@@ -408,9 +408,6 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
-     * <b>description</b> :
-     * <p>Apply for a refund and generate a refund order.</p>
-     * 
      * @param request the request parameters of RefundApply  RefundApplyRequest
      * @return RefundApplyResponse
      */
@@ -429,9 +426,6 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
-     * <b>description</b> :
-     * <p>Query refund order detail.</p>
-     * 
      * @param request the request parameters of RefundDetail  RefundDetailRequest
      * @return RefundDetailResponse
      */
@@ -450,9 +444,6 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
-     * <b>description</b> :
-     * <p>Query refund order detail.</p>
-     * 
      * @param request the request parameters of RefundDetailList  RefundDetailListRequest
      * @return RefundDetailListResponse
      */
@@ -486,6 +477,24 @@ public final class DefaultAsyncClient implements AsyncClient {
             return this.handler.execute(params);
         } catch (Exception e) {
             CompletableFuture<SearchResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
+     * @param request the request parameters of StandardSearch  StandardSearchRequest
+     * @return StandardSearchResponse
+     */
+    @Override
+    public CompletableFuture<StandardSearchResponse> standardSearch(StandardSearchRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RESTFUL).setAction("StandardSearch").setMethod(HttpMethod.POST).setPathRegex("/airticket/v1/trade/action-standardsearch").setBodyType(BodyType.JSON).setBodyIsForm(true).setReqBodyType(BodyType.FORM).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(StandardSearchResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<StandardSearchResponse> future = new CompletableFuture<>();
             future.completeExceptionally(e);
             return future;
         }

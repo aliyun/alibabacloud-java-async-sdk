@@ -41,6 +41,30 @@ public class DataSolutionSegmentBaggageMappingListPassengerBaggageAllowanceMappi
     @com.aliyun.core.annotation.NameInMap("is_all_carry_on_weight")
     private Boolean isAllCarryOnWeight;
 
+    @com.aliyun.core.annotation.NameInMap("carry_length")
+    private Integer carryLength;
+
+    @com.aliyun.core.annotation.NameInMap("carry_width")
+    private Integer carryWidth;
+
+    @com.aliyun.core.annotation.NameInMap("carry_height")
+    private Integer carryHeight;
+
+    @com.aliyun.core.annotation.NameInMap("carry_sum_of_length_width_height")
+    private Integer carrySumOfLengthWidthHeight;
+
+    @com.aliyun.core.annotation.NameInMap("length")
+    private Integer length;
+
+    @com.aliyun.core.annotation.NameInMap("width")
+    private Integer width;
+
+    @com.aliyun.core.annotation.NameInMap("height")
+    private Integer height;
+
+    @com.aliyun.core.annotation.NameInMap("sum_of_length_width_height")
+    private Integer sumOfLengthWidthHeight;
+
     private DataSolutionSegmentBaggageMappingListPassengerBaggageAllowanceMappingValue(Builder builder) {
         this.baggageAmount = builder.baggageAmount;
         this.baggageWeight = builder.baggageWeight;
@@ -50,6 +74,14 @@ public class DataSolutionSegmentBaggageMappingListPassengerBaggageAllowanceMappi
         this.carryOnWeight = builder.carryOnWeight;
         this.carryOnWeightUnit = builder.carryOnWeightUnit;
         this.isAllCarryOnWeight = builder.isAllCarryOnWeight;
+        this.carryLength = builder.carryLength;
+        this.carryWidth = builder.carryWidth;
+        this.carryHeight = builder.carryHeight;
+        this.carrySumOfLengthWidthHeight = builder.carrySumOfLengthWidthHeight;
+        this.length = builder.length;
+        this.width = builder.width;
+        this.height = builder.height;
+        this.sumOfLengthWidthHeight = builder.sumOfLengthWidthHeight;
     }
 
     public static Builder builder() {
@@ -120,6 +152,62 @@ public class DataSolutionSegmentBaggageMappingListPassengerBaggageAllowanceMappi
         return this.isAllCarryOnWeight;
     }
 
+    /**
+     * @return carryLength
+     */
+    public Integer getCarryLength() {
+        return this.carryLength;
+    }
+
+    /**
+     * @return carryWidth
+     */
+    public Integer getCarryWidth() {
+        return this.carryWidth;
+    }
+
+    /**
+     * @return carryHeight
+     */
+    public Integer getCarryHeight() {
+        return this.carryHeight;
+    }
+
+    /**
+     * @return carrySumOfLengthWidthHeight
+     */
+    public Integer getCarrySumOfLengthWidthHeight() {
+        return this.carrySumOfLengthWidthHeight;
+    }
+
+    /**
+     * @return length
+     */
+    public Integer getLength() {
+        return this.length;
+    }
+
+    /**
+     * @return width
+     */
+    public Integer getWidth() {
+        return this.width;
+    }
+
+    /**
+     * @return height
+     */
+    public Integer getHeight() {
+        return this.height;
+    }
+
+    /**
+     * @return sumOfLengthWidthHeight
+     */
+    public Integer getSumOfLengthWidthHeight() {
+        return this.sumOfLengthWidthHeight;
+    }
+
     public static final class Builder {
         private Integer baggageAmount; 
         private Integer baggageWeight; 
@@ -129,6 +217,14 @@ public class DataSolutionSegmentBaggageMappingListPassengerBaggageAllowanceMappi
         private Integer carryOnWeight; 
         private String carryOnWeightUnit; 
         private Boolean isAllCarryOnWeight; 
+        private Integer carryLength; 
+        private Integer carryWidth; 
+        private Integer carryHeight; 
+        private Integer carrySumOfLengthWidthHeight; 
+        private Integer length; 
+        private Integer width; 
+        private Integer height; 
+        private Integer sumOfLengthWidthHeight; 
 
         private Builder() {
         } 
@@ -142,6 +238,14 @@ public class DataSolutionSegmentBaggageMappingListPassengerBaggageAllowanceMappi
             this.carryOnWeight = model.carryOnWeight;
             this.carryOnWeightUnit = model.carryOnWeightUnit;
             this.isAllCarryOnWeight = model.isAllCarryOnWeight;
+            this.carryLength = model.carryLength;
+            this.carryWidth = model.carryWidth;
+            this.carryHeight = model.carryHeight;
+            this.carrySumOfLengthWidthHeight = model.carrySumOfLengthWidthHeight;
+            this.length = model.length;
+            this.width = model.width;
+            this.height = model.height;
+            this.sumOfLengthWidthHeight = model.sumOfLengthWidthHeight;
         } 
 
         /**
@@ -229,6 +333,70 @@ public class DataSolutionSegmentBaggageMappingListPassengerBaggageAllowanceMappi
          */
         public Builder isAllCarryOnWeight(Boolean isAllCarryOnWeight) {
             this.isAllCarryOnWeight = isAllCarryOnWeight;
+            return this;
+        }
+
+        /**
+         * carry_length.
+         */
+        public Builder carryLength(Integer carryLength) {
+            this.carryLength = carryLength;
+            return this;
+        }
+
+        /**
+         * carry_width.
+         */
+        public Builder carryWidth(Integer carryWidth) {
+            this.carryWidth = carryWidth;
+            return this;
+        }
+
+        /**
+         * carry_height.
+         */
+        public Builder carryHeight(Integer carryHeight) {
+            this.carryHeight = carryHeight;
+            return this;
+        }
+
+        /**
+         * carry_sum_of_length_width_height.
+         */
+        public Builder carrySumOfLengthWidthHeight(Integer carrySumOfLengthWidthHeight) {
+            this.carrySumOfLengthWidthHeight = carrySumOfLengthWidthHeight;
+            return this;
+        }
+
+        /**
+         * length.
+         */
+        public Builder length(Integer length) {
+            this.length = length;
+            return this;
+        }
+
+        /**
+         * width.
+         */
+        public Builder width(Integer width) {
+            this.width = width;
+            return this;
+        }
+
+        /**
+         * height.
+         */
+        public Builder height(Integer height) {
+            this.height = height;
+            return this;
+        }
+
+        /**
+         * sum_of_length_width_height.
+         */
+        public Builder sumOfLengthWidthHeight(Integer sumOfLengthWidthHeight) {
+            this.sumOfLengthWidthHeight = sumOfLengthWidthHeight;
             return this;
         }
 

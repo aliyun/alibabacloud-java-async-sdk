@@ -12,11 +12,11 @@ import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
  * 
- * {@link PricingResponseBody} extends {@link TeaModel}
+ * {@link StandardSearchResponseBody} extends {@link TeaModel}
  *
- * <p>PricingResponseBody</p>
+ * <p>StandardSearchResponseBody</p>
  */
-public class PricingResponseBody extends TeaModel {
+public class StandardSearchResponseBody extends TeaModel {
     @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
@@ -38,7 +38,7 @@ public class PricingResponseBody extends TeaModel {
     @com.aliyun.core.annotation.NameInMap("success")
     private Boolean success;
 
-    private PricingResponseBody(Builder builder) {
+    private StandardSearchResponseBody(Builder builder) {
         this.requestId = builder.requestId;
         this.data = builder.data;
         this.errorCode = builder.errorCode;
@@ -52,7 +52,7 @@ public class PricingResponseBody extends TeaModel {
         return new Builder();
     }
 
-    public static PricingResponseBody create() {
+    public static StandardSearchResponseBody create() {
         return builder().build();
     }
 
@@ -121,7 +121,7 @@ public class PricingResponseBody extends TeaModel {
         private Builder() {
         } 
 
-        private Builder(PricingResponseBody model) {
+        private Builder(StandardSearchResponseBody model) {
             this.requestId = model.requestId;
             this.data = model.data;
             this.errorCode = model.errorCode;
@@ -132,10 +132,7 @@ public class PricingResponseBody extends TeaModel {
         } 
 
         /**
-         * <p>request ID</p>
-         * 
-         * <strong>example:</strong>
-         * <p>51593418-8C73-5E47-8BA8-3F1D4A00CC0B</p>
+         * RequestId.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -143,7 +140,7 @@ public class PricingResponseBody extends TeaModel {
         }
 
         /**
-         * <p>data</p>
+         * data.
          */
         public Builder data(Data data) {
             this.data = data;
@@ -151,10 +148,7 @@ public class PricingResponseBody extends TeaModel {
         }
 
         /**
-         * <p>error code</p>
-         * 
-         * <strong>example:</strong>
-         * <p>null</p>
+         * error_code.
          */
         public Builder errorCode(String errorCode) {
             this.errorCode = errorCode;
@@ -162,10 +156,7 @@ public class PricingResponseBody extends TeaModel {
         }
 
         /**
-         * <p>error data</p>
-         * 
-         * <strong>example:</strong>
-         * <p>null</p>
+         * error_data.
          */
         public Builder errorData(Object errorData) {
             this.errorData = errorData;
@@ -173,10 +164,7 @@ public class PricingResponseBody extends TeaModel {
         }
 
         /**
-         * <p>error message</p>
-         * 
-         * <strong>example:</strong>
-         * <p>null</p>
+         * error_msg.
          */
         public Builder errorMsg(String errorMsg) {
             this.errorMsg = errorMsg;
@@ -184,10 +172,7 @@ public class PricingResponseBody extends TeaModel {
         }
 
         /**
-         * <p>http request has been processed successfully，status code is 200</p>
-         * 
-         * <strong>example:</strong>
-         * <p>200</p>
+         * status.
          */
         public Builder status(Integer status) {
             this.status = status;
@@ -195,381 +180,24 @@ public class PricingResponseBody extends TeaModel {
         }
 
         /**
-         * <p>true represents success, false represents failure</p>
-         * 
-         * <strong>example:</strong>
-         * <p>true</p>
+         * success.
          */
         public Builder success(Boolean success) {
             this.success = success;
             return this;
         }
 
-        public PricingResponseBody build() {
-            return new PricingResponseBody(this);
+        public StandardSearchResponseBody build() {
+            return new StandardSearchResponseBody(this);
         } 
 
     } 
 
     /**
      * 
-     * {@link PricingResponseBody} extends {@link TeaModel}
+     * {@link StandardSearchResponseBody} extends {@link TeaModel}
      *
-     * <p>PricingResponseBody</p>
-     */
-    public static class ChangedPriceInfo extends TeaModel {
-        @com.aliyun.core.annotation.NameInMap("adult_price")
-        private Double adultPrice;
-
-        @com.aliyun.core.annotation.NameInMap("adult_tax")
-        private Double adultTax;
-
-        @com.aliyun.core.annotation.NameInMap("child_price")
-        private Double childPrice;
-
-        @com.aliyun.core.annotation.NameInMap("child_tax")
-        private Double childTax;
-
-        @com.aliyun.core.annotation.NameInMap("infant_price")
-        private Double infantPrice;
-
-        @com.aliyun.core.annotation.NameInMap("infant_tax")
-        private Double infantTax;
-
-        private ChangedPriceInfo(Builder builder) {
-            this.adultPrice = builder.adultPrice;
-            this.adultTax = builder.adultTax;
-            this.childPrice = builder.childPrice;
-            this.childTax = builder.childTax;
-            this.infantPrice = builder.infantPrice;
-            this.infantTax = builder.infantTax;
-        }
-
-        public static Builder builder() {
-            return new Builder();
-        }
-
-        public static ChangedPriceInfo create() {
-            return builder().build();
-        }
-
-        /**
-         * @return adultPrice
-         */
-        public Double getAdultPrice() {
-            return this.adultPrice;
-        }
-
-        /**
-         * @return adultTax
-         */
-        public Double getAdultTax() {
-            return this.adultTax;
-        }
-
-        /**
-         * @return childPrice
-         */
-        public Double getChildPrice() {
-            return this.childPrice;
-        }
-
-        /**
-         * @return childTax
-         */
-        public Double getChildTax() {
-            return this.childTax;
-        }
-
-        /**
-         * @return infantPrice
-         */
-        public Double getInfantPrice() {
-            return this.infantPrice;
-        }
-
-        /**
-         * @return infantTax
-         */
-        public Double getInfantTax() {
-            return this.infantTax;
-        }
-
-        public static final class Builder {
-            private Double adultPrice; 
-            private Double adultTax; 
-            private Double childPrice; 
-            private Double childTax; 
-            private Double infantPrice; 
-            private Double infantTax; 
-
-            private Builder() {
-            } 
-
-            private Builder(ChangedPriceInfo model) {
-                this.adultPrice = model.adultPrice;
-                this.adultTax = model.adultTax;
-                this.childPrice = model.childPrice;
-                this.childTax = model.childTax;
-                this.infantPrice = model.infantPrice;
-                this.infantTax = model.infantTax;
-            } 
-
-            /**
-             * <p>adult fare</p>
-             * 
-             * <strong>example:</strong>
-             * <p>100</p>
-             */
-            public Builder adultPrice(Double adultPrice) {
-                this.adultPrice = adultPrice;
-                return this;
-            }
-
-            /**
-             * <p>adult tax</p>
-             * 
-             * <strong>example:</strong>
-             * <p>10</p>
-             */
-            public Builder adultTax(Double adultTax) {
-                this.adultTax = adultTax;
-                return this;
-            }
-
-            /**
-             * <p>child fare</p>
-             * 
-             * <strong>example:</strong>
-             * <p>100</p>
-             */
-            public Builder childPrice(Double childPrice) {
-                this.childPrice = childPrice;
-                return this;
-            }
-
-            /**
-             * <p>child tax</p>
-             * 
-             * <strong>example:</strong>
-             * <p>10</p>
-             */
-            public Builder childTax(Double childTax) {
-                this.childTax = childTax;
-                return this;
-            }
-
-            /**
-             * <p>infant fare</p>
-             * 
-             * <strong>example:</strong>
-             * <p>100</p>
-             */
-            public Builder infantPrice(Double infantPrice) {
-                this.infantPrice = infantPrice;
-                return this;
-            }
-
-            /**
-             * <p>infant tax</p>
-             * 
-             * <strong>example:</strong>
-             * <p>10</p>
-             */
-            public Builder infantTax(Double infantTax) {
-                this.infantTax = infantTax;
-                return this;
-            }
-
-            public ChangedPriceInfo build() {
-                return new ChangedPriceInfo(this);
-            } 
-
-        } 
-
-    }
-    /**
-     * 
-     * {@link PricingResponseBody} extends {@link TeaModel}
-     *
-     * <p>PricingResponseBody</p>
-     */
-    public static class OriginalPriceInfo extends TeaModel {
-        @com.aliyun.core.annotation.NameInMap("adult_price")
-        private Double adultPrice;
-
-        @com.aliyun.core.annotation.NameInMap("adult_tax")
-        private Double adultTax;
-
-        @com.aliyun.core.annotation.NameInMap("child_price")
-        private Double childPrice;
-
-        @com.aliyun.core.annotation.NameInMap("child_tax")
-        private Double childTax;
-
-        @com.aliyun.core.annotation.NameInMap("infant_price")
-        private Double infantPrice;
-
-        @com.aliyun.core.annotation.NameInMap("infant_tax")
-        private Double infantTax;
-
-        private OriginalPriceInfo(Builder builder) {
-            this.adultPrice = builder.adultPrice;
-            this.adultTax = builder.adultTax;
-            this.childPrice = builder.childPrice;
-            this.childTax = builder.childTax;
-            this.infantPrice = builder.infantPrice;
-            this.infantTax = builder.infantTax;
-        }
-
-        public static Builder builder() {
-            return new Builder();
-        }
-
-        public static OriginalPriceInfo create() {
-            return builder().build();
-        }
-
-        /**
-         * @return adultPrice
-         */
-        public Double getAdultPrice() {
-            return this.adultPrice;
-        }
-
-        /**
-         * @return adultTax
-         */
-        public Double getAdultTax() {
-            return this.adultTax;
-        }
-
-        /**
-         * @return childPrice
-         */
-        public Double getChildPrice() {
-            return this.childPrice;
-        }
-
-        /**
-         * @return childTax
-         */
-        public Double getChildTax() {
-            return this.childTax;
-        }
-
-        /**
-         * @return infantPrice
-         */
-        public Double getInfantPrice() {
-            return this.infantPrice;
-        }
-
-        /**
-         * @return infantTax
-         */
-        public Double getInfantTax() {
-            return this.infantTax;
-        }
-
-        public static final class Builder {
-            private Double adultPrice; 
-            private Double adultTax; 
-            private Double childPrice; 
-            private Double childTax; 
-            private Double infantPrice; 
-            private Double infantTax; 
-
-            private Builder() {
-            } 
-
-            private Builder(OriginalPriceInfo model) {
-                this.adultPrice = model.adultPrice;
-                this.adultTax = model.adultTax;
-                this.childPrice = model.childPrice;
-                this.childTax = model.childTax;
-                this.infantPrice = model.infantPrice;
-                this.infantTax = model.infantTax;
-            } 
-
-            /**
-             * <p>adult fare</p>
-             * 
-             * <strong>example:</strong>
-             * <p>200</p>
-             */
-            public Builder adultPrice(Double adultPrice) {
-                this.adultPrice = adultPrice;
-                return this;
-            }
-
-            /**
-             * <p>adult tax</p>
-             * 
-             * <strong>example:</strong>
-             * <p>20</p>
-             */
-            public Builder adultTax(Double adultTax) {
-                this.adultTax = adultTax;
-                return this;
-            }
-
-            /**
-             * <p>child fare</p>
-             * 
-             * <strong>example:</strong>
-             * <p>200</p>
-             */
-            public Builder childPrice(Double childPrice) {
-                this.childPrice = childPrice;
-                return this;
-            }
-
-            /**
-             * <p>child tax</p>
-             * 
-             * <strong>example:</strong>
-             * <p>20</p>
-             */
-            public Builder childTax(Double childTax) {
-                this.childTax = childTax;
-                return this;
-            }
-
-            /**
-             * <p>infant fare</p>
-             * 
-             * <strong>example:</strong>
-             * <p>200</p>
-             */
-            public Builder infantPrice(Double infantPrice) {
-                this.infantPrice = infantPrice;
-                return this;
-            }
-
-            /**
-             * <p>infant tax</p>
-             * 
-             * <strong>example:</strong>
-             * <p>20</p>
-             */
-            public Builder infantTax(Double infantTax) {
-                this.infantTax = infantTax;
-                return this;
-            }
-
-            public OriginalPriceInfo build() {
-                return new OriginalPriceInfo(this);
-            } 
-
-        } 
-
-    }
-    /**
-     * 
-     * {@link PricingResponseBody} extends {@link TeaModel}
-     *
-     * <p>PricingResponseBody</p>
+     * <p>StandardSearchResponseBody</p>
      */
     public static class SegmentList extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("arrival_airport")
@@ -878,10 +506,7 @@ public class PricingResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>arrival airport code (capitalized)</p>
-             * 
-             * <strong>example:</strong>
-             * <p>MFM</p>
+             * arrival_airport.
              */
             public Builder arrivalAirport(String arrivalAirport) {
                 this.arrivalAirport = arrivalAirport;
@@ -889,10 +514,7 @@ public class PricingResponseBody extends TeaModel {
             }
 
             /**
-             * <p>arrival city code (capitalized)</p>
-             * 
-             * <strong>example:</strong>
-             * <p>MFM</p>
+             * arrival_city.
              */
             public Builder arrivalCity(String arrivalCity) {
                 this.arrivalCity = arrivalCity;
@@ -900,10 +522,7 @@ public class PricingResponseBody extends TeaModel {
             }
 
             /**
-             * <p>arrival terminal</p>
-             * 
-             * <strong>example:</strong>
-             * <p>T1</p>
+             * arrival_terminal.
              */
             public Builder arrivalTerminal(String arrivalTerminal) {
                 this.arrivalTerminal = arrivalTerminal;
@@ -911,10 +530,7 @@ public class PricingResponseBody extends TeaModel {
             }
 
             /**
-             * <p>arrival time in string format (yyyy-MM-dd HH:mm:ss)</p>
-             * 
-             * <strong>example:</strong>
-             * <p>2023-03-10 10:40:00</p>
+             * arrival_time.
              */
             public Builder arrivalTime(String arrivalTime) {
                 this.arrivalTime = arrivalTime;
@@ -922,10 +538,7 @@ public class PricingResponseBody extends TeaModel {
             }
 
             /**
-             * <p>available seats (for reference only)</p>
-             * 
-             * <strong>example:</strong>
-             * <p>7</p>
+             * availability.
              */
             public Builder availability(String availability) {
                 this.availability = availability;
@@ -933,10 +546,7 @@ public class PricingResponseBody extends TeaModel {
             }
 
             /**
-             * <p>RBD</p>
-             * 
-             * <strong>example:</strong>
-             * <p>V</p>
+             * cabin.
              */
             public Builder cabin(String cabin) {
                 this.cabin = cabin;
@@ -944,10 +554,7 @@ public class PricingResponseBody extends TeaModel {
             }
 
             /**
-             * <p>cabin class</p>
-             * 
-             * <strong>example:</strong>
-             * <p>ALL_CABIN</p>
+             * cabin_class.
              */
             public Builder cabinClass(String cabinClass) {
                 this.cabinClass = cabinClass;
@@ -955,10 +562,7 @@ public class PricingResponseBody extends TeaModel {
             }
 
             /**
-             * <p>code share or not</p>
-             * 
-             * <strong>example:</strong>
-             * <p>false</p>
+             * code_share.
              */
             public Builder codeShare(Boolean codeShare) {
                 this.codeShare = codeShare;
@@ -966,10 +570,7 @@ public class PricingResponseBody extends TeaModel {
             }
 
             /**
-             * <p>departure airport code (capitalized)</p>
-             * 
-             * <strong>example:</strong>
-             * <p>PVG</p>
+             * departure_airport.
              */
             public Builder departureAirport(String departureAirport) {
                 this.departureAirport = departureAirport;
@@ -977,10 +578,7 @@ public class PricingResponseBody extends TeaModel {
             }
 
             /**
-             * <p>departure city code (capitalized)</p>
-             * 
-             * <strong>example:</strong>
-             * <p>SHA</p>
+             * departure_city.
              */
             public Builder departureCity(String departureCity) {
                 this.departureCity = departureCity;
@@ -988,10 +586,7 @@ public class PricingResponseBody extends TeaModel {
             }
 
             /**
-             * <p>departure terminal</p>
-             * 
-             * <strong>example:</strong>
-             * <p>T2</p>
+             * departure_terminal.
              */
             public Builder departureTerminal(String departureTerminal) {
                 this.departureTerminal = departureTerminal;
@@ -999,10 +594,7 @@ public class PricingResponseBody extends TeaModel {
             }
 
             /**
-             * <p>departure time in string format (yyyy-MM-dd HH:mm:ss)</p>
-             * 
-             * <strong>example:</strong>
-             * <p>2023-03-10 07:55:00</p>
+             * departure_time.
              */
             public Builder departureTime(String departureTime) {
                 this.departureTime = departureTime;
@@ -1010,10 +602,7 @@ public class PricingResponseBody extends TeaModel {
             }
 
             /**
-             * <p>equipment type</p>
-             * 
-             * <strong>example:</strong>
-             * <p>32Q</p>
+             * equip_type.
              */
             public Builder equipType(String equipType) {
                 this.equipType = equipType;
@@ -1021,10 +610,7 @@ public class PricingResponseBody extends TeaModel {
             }
 
             /**
-             * <p>flight time, unit: minute</p>
-             * 
-             * <strong>example:</strong>
-             * <p>165</p>
+             * flight_duration.
              */
             public Builder flightDuration(Integer flightDuration) {
                 this.flightDuration = flightDuration;
@@ -1032,10 +618,7 @@ public class PricingResponseBody extends TeaModel {
             }
 
             /**
-             * <p>marketing airline code (eg: KA)</p>
-             * 
-             * <strong>example:</strong>
-             * <p>HO</p>
+             * marketing_airline.
              */
             public Builder marketingAirline(String marketingAirline) {
                 this.marketingAirline = marketingAirline;
@@ -1043,10 +626,7 @@ public class PricingResponseBody extends TeaModel {
             }
 
             /**
-             * <p>marketing airline flight no. (eg: KA5809)</p>
-             * 
-             * <strong>example:</strong>
-             * <p>HO1295</p>
+             * marketing_flight_no.
              */
             public Builder marketingFlightNo(String marketingFlightNo) {
                 this.marketingFlightNo = marketingFlightNo;
@@ -1054,10 +634,7 @@ public class PricingResponseBody extends TeaModel {
             }
 
             /**
-             * <p>marketing airline flight no. (eg: 5809)</p>
-             * 
-             * <strong>example:</strong>
-             * <p>1295</p>
+             * marketing_flight_no_int.
              */
             public Builder marketingFlightNoInt(Integer marketingFlightNoInt) {
                 this.marketingFlightNoInt = marketingFlightNoInt;
@@ -1065,10 +642,7 @@ public class PricingResponseBody extends TeaModel {
             }
 
             /**
-             * <p>operating airline code (eg: CX)</p>
-             * 
-             * <strong>example:</strong>
-             * <p>HO</p>
+             * operating_airline.
              */
             public Builder operatingAirline(String operatingAirline) {
                 this.operatingAirline = operatingAirline;
@@ -1076,10 +650,7 @@ public class PricingResponseBody extends TeaModel {
             }
 
             /**
-             * <p>operating airline flight no. (eg: CX601)</p>
-             * 
-             * <strong>example:</strong>
-             * <p>HO1295</p>
+             * operating_flight_no.
              */
             public Builder operatingFlightNo(String operatingFlightNo) {
                 this.operatingFlightNo = operatingFlightNo;
@@ -1087,10 +658,7 @@ public class PricingResponseBody extends TeaModel {
             }
 
             /**
-             * <p>segment ID format: flight no.+departure airport[IATA airport code]+arrival airport[IATA airport code]+departure time(MMdd)</p>
-             * 
-             * <strong>example:</strong>
-             * <p>HO1295-PVG-MFM-20230310</p>
+             * segment_id.
              */
             public Builder segmentId(String segmentId) {
                 this.segmentId = segmentId;
@@ -1098,10 +666,7 @@ public class PricingResponseBody extends TeaModel {
             }
 
             /**
-             * <p>stop city list. when stop_quantity &gt; 1 , use “,” for seperation</p>
-             * 
-             * <strong>example:</strong>
-             * <p>MFM,PVG</p>
+             * stop_city_list.
              */
             public Builder stopCityList(String stopCityList) {
                 this.stopCityList = stopCityList;
@@ -1109,10 +674,7 @@ public class PricingResponseBody extends TeaModel {
             }
 
             /**
-             * <p>number of stops</p>
-             * 
-             * <strong>example:</strong>
-             * <p>0</p>
+             * stop_quantity.
              */
             public Builder stopQuantity(Integer stopQuantity) {
                 this.stopQuantity = stopQuantity;
@@ -1128,9 +690,9 @@ public class PricingResponseBody extends TeaModel {
     }
     /**
      * 
-     * {@link PricingResponseBody} extends {@link TeaModel}
+     * {@link StandardSearchResponseBody} extends {@link TeaModel}
      *
-     * <p>PricingResponseBody</p>
+     * <p>StandardSearchResponseBody</p>
      */
     public static class JourneyList extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("segment_list")
@@ -1179,7 +741,7 @@ public class PricingResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>segment list</p>
+             * segment_list.
              */
             public Builder segmentList(java.util.List<SegmentList> segmentList) {
                 this.segmentList = segmentList;
@@ -1187,10 +749,7 @@ public class PricingResponseBody extends TeaModel {
             }
 
             /**
-             * <p>number of transfers</p>
-             * 
-             * <strong>example:</strong>
-             * <p>0</p>
+             * transfer_count.
              */
             public Builder transferCount(Integer transferCount) {
                 this.transferCount = transferCount;
@@ -1206,9 +765,9 @@ public class PricingResponseBody extends TeaModel {
     }
     /**
      * 
-     * {@link PricingResponseBody} extends {@link TeaModel}
+     * {@link StandardSearchResponseBody} extends {@link TeaModel}
      *
-     * <p>PricingResponseBody</p>
+     * <p>StandardSearchResponseBody</p>
      */
     public static class SegmentBaggageCheckInInfoList extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("luggage_direct_info_type")
@@ -1257,16 +816,7 @@ public class PricingResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>through check-in baggage policy type</p>
-             * <ol>
-             * <li>baggage through check-in between segments</li>
-             * <li>baggage re-check-in needed between segments</li>
-             * <li>baggage through check-in at stop city ( applies for stop flight )</li>
-             * <li>baggage re-checkin needed at stop city ( applies for stop flight )</li>
-             * </ol>
-             * 
-             * <strong>example:</strong>
-             * <p>1</p>
+             * luggage_direct_info_type.
              */
             public Builder luggageDirectInfoType(Integer luggageDirectInfoType) {
                 this.luggageDirectInfoType = luggageDirectInfoType;
@@ -1274,7 +824,7 @@ public class PricingResponseBody extends TeaModel {
             }
 
             /**
-             * <p>segment id list. all the listed segment ids share the same baggage through check-in policy</p>
+             * segment_id_list.
              */
             public Builder segmentIdList(java.util.List<String> segmentIdList) {
                 this.segmentIdList = segmentIdList;
@@ -1290,13 +840,13 @@ public class PricingResponseBody extends TeaModel {
     }
     /**
      * 
-     * {@link PricingResponseBody} extends {@link TeaModel}
+     * {@link StandardSearchResponseBody} extends {@link TeaModel}
      *
-     * <p>PricingResponseBody</p>
+     * <p>StandardSearchResponseBody</p>
      */
     public static class SegmentBaggageMappingList extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("passenger_baggage_allowance_mapping")
-        private java.util.Map<String, DataSolutionSegmentBaggageMappingListPassengerBaggageAllowanceMappingValue> passengerBaggageAllowanceMapping;
+        private java.util.Map<String, DataSolutionListSegmentBaggageMappingListPassengerBaggageAllowanceMappingValue> passengerBaggageAllowanceMapping;
 
         @com.aliyun.core.annotation.NameInMap("segment_id_list")
         private java.util.List<String> segmentIdList;
@@ -1317,7 +867,7 @@ public class PricingResponseBody extends TeaModel {
         /**
          * @return passengerBaggageAllowanceMapping
          */
-        public java.util.Map<String, DataSolutionSegmentBaggageMappingListPassengerBaggageAllowanceMappingValue> getPassengerBaggageAllowanceMapping() {
+        public java.util.Map<String, DataSolutionListSegmentBaggageMappingListPassengerBaggageAllowanceMappingValue> getPassengerBaggageAllowanceMapping() {
             return this.passengerBaggageAllowanceMapping;
         }
 
@@ -1329,7 +879,7 @@ public class PricingResponseBody extends TeaModel {
         }
 
         public static final class Builder {
-            private java.util.Map<String, DataSolutionSegmentBaggageMappingListPassengerBaggageAllowanceMappingValue> passengerBaggageAllowanceMapping; 
+            private java.util.Map<String, DataSolutionListSegmentBaggageMappingListPassengerBaggageAllowanceMappingValue> passengerBaggageAllowanceMapping; 
             private java.util.List<String> segmentIdList; 
 
             private Builder() {
@@ -1341,15 +891,15 @@ public class PricingResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>baggage rule mapping, key is passenger type, value is baggage allowance details</p>
+             * passenger_baggage_allowance_mapping.
              */
-            public Builder passengerBaggageAllowanceMapping(java.util.Map<String, DataSolutionSegmentBaggageMappingListPassengerBaggageAllowanceMappingValue> passengerBaggageAllowanceMapping) {
+            public Builder passengerBaggageAllowanceMapping(java.util.Map<String, DataSolutionListSegmentBaggageMappingListPassengerBaggageAllowanceMappingValue> passengerBaggageAllowanceMapping) {
                 this.passengerBaggageAllowanceMapping = passengerBaggageAllowanceMapping;
                 return this;
             }
 
             /**
-             * <p>segment id list all the listed segment id share the same baggage rule</p>
+             * segment_id_list.
              */
             public Builder segmentIdList(java.util.List<String> segmentIdList) {
                 this.segmentIdList = segmentIdList;
@@ -1365,13 +915,13 @@ public class PricingResponseBody extends TeaModel {
     }
     /**
      * 
-     * {@link PricingResponseBody} extends {@link TeaModel}
+     * {@link StandardSearchResponseBody} extends {@link TeaModel}
      *
-     * <p>PricingResponseBody</p>
+     * <p>StandardSearchResponseBody</p>
      */
     public static class SegmentRefundChangeRuleMappingList extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("refund_change_rule_map")
-        private java.util.Map<String, DataSolutionSegmentRefundChangeRuleMappingListRefundChangeRuleMapValue> refundChangeRuleMap;
+        private java.util.Map<String, DataSolutionListSegmentRefundChangeRuleMappingListRefundChangeRuleMapValue> refundChangeRuleMap;
 
         @com.aliyun.core.annotation.NameInMap("segment_id_list")
         private java.util.List<String> segmentIdList;
@@ -1392,7 +942,7 @@ public class PricingResponseBody extends TeaModel {
         /**
          * @return refundChangeRuleMap
          */
-        public java.util.Map<String, DataSolutionSegmentRefundChangeRuleMappingListRefundChangeRuleMapValue> getRefundChangeRuleMap() {
+        public java.util.Map<String, DataSolutionListSegmentRefundChangeRuleMappingListRefundChangeRuleMapValue> getRefundChangeRuleMap() {
             return this.refundChangeRuleMap;
         }
 
@@ -1404,7 +954,7 @@ public class PricingResponseBody extends TeaModel {
         }
 
         public static final class Builder {
-            private java.util.Map<String, DataSolutionSegmentRefundChangeRuleMappingListRefundChangeRuleMapValue> refundChangeRuleMap; 
+            private java.util.Map<String, DataSolutionListSegmentRefundChangeRuleMappingListRefundChangeRuleMapValue> refundChangeRuleMap; 
             private java.util.List<String> segmentIdList; 
 
             private Builder() {
@@ -1416,15 +966,15 @@ public class PricingResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>change and refund policy mapping, key is passenger type, value is change and refund policy detail</p>
+             * refund_change_rule_map.
              */
-            public Builder refundChangeRuleMap(java.util.Map<String, DataSolutionSegmentRefundChangeRuleMappingListRefundChangeRuleMapValue> refundChangeRuleMap) {
+            public Builder refundChangeRuleMap(java.util.Map<String, DataSolutionListSegmentRefundChangeRuleMappingListRefundChangeRuleMapValue> refundChangeRuleMap) {
                 this.refundChangeRuleMap = refundChangeRuleMap;
                 return this;
             }
 
             /**
-             * <p>segment id list. all the listed segment ids share the same change and refund policy</p>
+             * segment_id_list.
              */
             public Builder segmentIdList(java.util.List<String> segmentIdList) {
                 this.segmentIdList = segmentIdList;
@@ -1440,9 +990,9 @@ public class PricingResponseBody extends TeaModel {
     }
     /**
      * 
-     * {@link PricingResponseBody} extends {@link TeaModel}
+     * {@link StandardSearchResponseBody} extends {@link TeaModel}
      *
-     * <p>PricingResponseBody</p>
+     * <p>StandardSearchResponseBody</p>
      */
     public static class IssueTimeInfo extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("issue_ticket_type")
@@ -1491,7 +1041,7 @@ public class PricingResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>Issue ticket type: 1: after payment; 2: before departure; -1: unknown</p>
+             * issue_ticket_type.
              */
             public Builder issueTicketType(Integer issueTicketType) {
                 this.issueTicketType = issueTicketType;
@@ -1499,7 +1049,7 @@ public class PricingResponseBody extends TeaModel {
             }
 
             /**
-             * <p>Estimated issue ticket time, unit: minutes</p>
+             * issue_time_limit.
              */
             public Builder issueTimeLimit(Integer issueTimeLimit) {
                 this.issueTimeLimit = issueTimeLimit;
@@ -1515,9 +1065,9 @@ public class PricingResponseBody extends TeaModel {
     }
     /**
      * 
-     * {@link PricingResponseBody} extends {@link TeaModel}
+     * {@link StandardSearchResponseBody} extends {@link TeaModel}
      *
-     * <p>PricingResponseBody</p>
+     * <p>StandardSearchResponseBody</p>
      */
     public static class SolutionAttribute extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("issue_time_info")
@@ -1566,7 +1116,7 @@ public class PricingResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>Issue ticket time related</p>
+             * issue_time_info.
              */
             public Builder issueTimeInfo(IssueTimeInfo issueTimeInfo) {
                 this.issueTimeInfo = issueTimeInfo;
@@ -1574,7 +1124,7 @@ public class PricingResponseBody extends TeaModel {
             }
 
             /**
-             * <p>Supply source type 1: Self-operated; 2: Agent; 3: Flagship store</p>
+             * supply_source_type.
              */
             public Builder supplySourceType(String supplySourceType) {
                 this.supplySourceType = supplySourceType;
@@ -1590,11 +1140,11 @@ public class PricingResponseBody extends TeaModel {
     }
     /**
      * 
-     * {@link PricingResponseBody} extends {@link TeaModel}
+     * {@link StandardSearchResponseBody} extends {@link TeaModel}
      *
-     * <p>PricingResponseBody</p>
+     * <p>StandardSearchResponseBody</p>
      */
-    public static class Solution extends TeaModel {
+    public static class SolutionList extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("adult_price")
         private Double adultPrice;
 
@@ -1631,7 +1181,7 @@ public class PricingResponseBody extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("solution_id")
         private String solutionId;
 
-        private Solution(Builder builder) {
+        private SolutionList(Builder builder) {
             this.adultPrice = builder.adultPrice;
             this.adultTax = builder.adultTax;
             this.childPrice = builder.childPrice;
@@ -1650,7 +1200,7 @@ public class PricingResponseBody extends TeaModel {
             return new Builder();
         }
 
-        public static Solution create() {
+        public static SolutionList create() {
             return builder().build();
         }
 
@@ -1755,7 +1305,7 @@ public class PricingResponseBody extends TeaModel {
             private Builder() {
             } 
 
-            private Builder(Solution model) {
+            private Builder(SolutionList model) {
                 this.adultPrice = model.adultPrice;
                 this.adultTax = model.adultTax;
                 this.childPrice = model.childPrice;
@@ -1771,10 +1321,7 @@ public class PricingResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>adult fare</p>
-             * 
-             * <strong>example:</strong>
-             * <p>300</p>
+             * adult_price.
              */
             public Builder adultPrice(Double adultPrice) {
                 this.adultPrice = adultPrice;
@@ -1782,10 +1329,7 @@ public class PricingResponseBody extends TeaModel {
             }
 
             /**
-             * <p>adult tax</p>
-             * 
-             * <strong>example:</strong>
-             * <p>30</p>
+             * adult_tax.
              */
             public Builder adultTax(Double adultTax) {
                 this.adultTax = adultTax;
@@ -1793,10 +1337,7 @@ public class PricingResponseBody extends TeaModel {
             }
 
             /**
-             * <p>child fare</p>
-             * 
-             * <strong>example:</strong>
-             * <p>200</p>
+             * child_price.
              */
             public Builder childPrice(Double childPrice) {
                 this.childPrice = childPrice;
@@ -1804,10 +1345,7 @@ public class PricingResponseBody extends TeaModel {
             }
 
             /**
-             * <p>child tax</p>
-             * 
-             * <strong>example:</strong>
-             * <p>20</p>
+             * child_tax.
              */
             public Builder childTax(Double childTax) {
                 this.childTax = childTax;
@@ -1815,10 +1353,7 @@ public class PricingResponseBody extends TeaModel {
             }
 
             /**
-             * <p>infant fare</p>
-             * 
-             * <strong>example:</strong>
-             * <p>200</p>
+             * infant_price.
              */
             public Builder infantPrice(Double infantPrice) {
                 this.infantPrice = infantPrice;
@@ -1826,10 +1361,7 @@ public class PricingResponseBody extends TeaModel {
             }
 
             /**
-             * <p>infant tax</p>
-             * 
-             * <strong>example:</strong>
-             * <p>10</p>
+             * infant_tax.
              */
             public Builder infantTax(Double infantTax) {
                 this.infantTax = infantTax;
@@ -1837,7 +1369,7 @@ public class PricingResponseBody extends TeaModel {
             }
 
             /**
-             * <p>journey list</p>
+             * journey_list.
              */
             public Builder journeyList(java.util.List<JourneyList> journeyList) {
                 this.journeyList = journeyList;
@@ -1845,7 +1377,7 @@ public class PricingResponseBody extends TeaModel {
             }
 
             /**
-             * <p>through check-in baggage policy</p>
+             * segment_baggage_check_in_info_list.
              */
             public Builder segmentBaggageCheckInInfoList(java.util.List<SegmentBaggageCheckInInfoList> segmentBaggageCheckInInfoList) {
                 this.segmentBaggageCheckInInfoList = segmentBaggageCheckInInfoList;
@@ -1853,7 +1385,7 @@ public class PricingResponseBody extends TeaModel {
             }
 
             /**
-             * <p>baggage rule list</p>
+             * segment_baggage_mapping_list.
              */
             public Builder segmentBaggageMappingList(java.util.List<SegmentBaggageMappingList> segmentBaggageMappingList) {
                 this.segmentBaggageMappingList = segmentBaggageMappingList;
@@ -1861,7 +1393,7 @@ public class PricingResponseBody extends TeaModel {
             }
 
             /**
-             * <p>change and refund policy</p>
+             * segment_refund_change_rule_mapping_list.
              */
             public Builder segmentRefundChangeRuleMappingList(java.util.List<SegmentRefundChangeRuleMappingList> segmentRefundChangeRuleMappingList) {
                 this.segmentRefundChangeRuleMappingList = segmentRefundChangeRuleMappingList;
@@ -1869,7 +1401,7 @@ public class PricingResponseBody extends TeaModel {
             }
 
             /**
-             * <p>Quotation attributes</p>
+             * solution_attribute.
              */
             public Builder solutionAttribute(SolutionAttribute solutionAttribute) {
                 this.solutionAttribute = solutionAttribute;
@@ -1877,18 +1409,18 @@ public class PricingResponseBody extends TeaModel {
             }
 
             /**
-             * <p>solution_id, equals to solution_id in request</p>
+             * <p>solution_id</p>
              * 
              * <strong>example:</strong>
-             * <p>eJwz8DeySEo0NjQ01TU3TU7TNTFINNO1SE5O0jVKM0hKNjEwTElLNYwz0A32cNT1dfPVNTIwMjYwNjRQ8/A3NLI01Q0Ic0cRBwBVFxJJ</p>
+             * <p>eJwz8DeySEo0NjQ01TU3TUxxx</p>
              */
             public Builder solutionId(String solutionId) {
                 this.solutionId = solutionId;
                 return this;
             }
 
-            public Solution build() {
-                return new Solution(this);
+            public SolutionList build() {
+                return new SolutionList(this);
             } 
 
         } 
@@ -1896,32 +1428,16 @@ public class PricingResponseBody extends TeaModel {
     }
     /**
      * 
-     * {@link PricingResponseBody} extends {@link TeaModel}
+     * {@link StandardSearchResponseBody} extends {@link TeaModel}
      *
-     * <p>PricingResponseBody</p>
+     * <p>StandardSearchResponseBody</p>
      */
     public static class Data extends TeaModel {
-        @com.aliyun.core.annotation.NameInMap("changed_price_info")
-        private ChangedPriceInfo changedPriceInfo;
-
-        @com.aliyun.core.annotation.NameInMap("is_changed")
-        private Boolean isChanged;
-
-        @com.aliyun.core.annotation.NameInMap("original_price_info")
-        private OriginalPriceInfo originalPriceInfo;
-
-        @com.aliyun.core.annotation.NameInMap("remain_seats")
-        private String remainSeats;
-
-        @com.aliyun.core.annotation.NameInMap("solution")
-        private Solution solution;
+        @com.aliyun.core.annotation.NameInMap("solution_list")
+        private java.util.List<SolutionList> solutionList;
 
         private Data(Builder builder) {
-            this.changedPriceInfo = builder.changedPriceInfo;
-            this.isChanged = builder.isChanged;
-            this.originalPriceInfo = builder.originalPriceInfo;
-            this.remainSeats = builder.remainSeats;
-            this.solution = builder.solution;
+            this.solutionList = builder.solutionList;
         }
 
         public static Builder builder() {
@@ -1933,101 +1449,27 @@ public class PricingResponseBody extends TeaModel {
         }
 
         /**
-         * @return changedPriceInfo
+         * @return solutionList
          */
-        public ChangedPriceInfo getChangedPriceInfo() {
-            return this.changedPriceInfo;
-        }
-
-        /**
-         * @return isChanged
-         */
-        public Boolean getIsChanged() {
-            return this.isChanged;
-        }
-
-        /**
-         * @return originalPriceInfo
-         */
-        public OriginalPriceInfo getOriginalPriceInfo() {
-            return this.originalPriceInfo;
-        }
-
-        /**
-         * @return remainSeats
-         */
-        public String getRemainSeats() {
-            return this.remainSeats;
-        }
-
-        /**
-         * @return solution
-         */
-        public Solution getSolution() {
-            return this.solution;
+        public java.util.List<SolutionList> getSolutionList() {
+            return this.solutionList;
         }
 
         public static final class Builder {
-            private ChangedPriceInfo changedPriceInfo; 
-            private Boolean isChanged; 
-            private OriginalPriceInfo originalPriceInfo; 
-            private String remainSeats; 
-            private Solution solution; 
+            private java.util.List<SolutionList> solutionList; 
 
             private Builder() {
             } 
 
             private Builder(Data model) {
-                this.changedPriceInfo = model.changedPriceInfo;
-                this.isChanged = model.isChanged;
-                this.originalPriceInfo = model.originalPriceInfo;
-                this.remainSeats = model.remainSeats;
-                this.solution = model.solution;
+                this.solutionList = model.solutionList;
             } 
 
             /**
-             * <p>price information after the price change</p>
+             * solution_list.
              */
-            public Builder changedPriceInfo(ChangedPriceInfo changedPriceInfo) {
-                this.changedPriceInfo = changedPriceInfo;
-                return this;
-            }
-
-            /**
-             * <p>whether the price has changed</p>
-             * 
-             * <strong>example:</strong>
-             * <p>true</p>
-             */
-            public Builder isChanged(Boolean isChanged) {
-                this.isChanged = isChanged;
-                return this;
-            }
-
-            /**
-             * <p>the price information before the change, only available when is_changed = true</p>
-             */
-            public Builder originalPriceInfo(OriginalPriceInfo originalPriceInfo) {
-                this.originalPriceInfo = originalPriceInfo;
-                return this;
-            }
-
-            /**
-             * <p>remaining seats: A indicates more than 9, 0-9 represents the specific number</p>
-             * 
-             * <strong>example:</strong>
-             * <p>A</p>
-             */
-            public Builder remainSeats(String remainSeats) {
-                this.remainSeats = remainSeats;
-                return this;
-            }
-
-            /**
-             * <p>the solution represented by the solution_id in request</p>
-             */
-            public Builder solution(Solution solution) {
-                this.solution = solution;
+            public Builder solutionList(java.util.List<SolutionList> solutionList) {
+                this.solutionList = solutionList;
                 return this;
             }
 

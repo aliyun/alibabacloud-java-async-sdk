@@ -146,7 +146,7 @@ public class RefundDetailListRequest extends Request {
         } 
 
         /**
-         * <p>order number returned by Book</p>
+         * <p>Order number</p>
          * 
          * <strong>example:</strong>
          * <p>49884*****950</p>
@@ -158,7 +158,7 @@ public class RefundDetailListRequest extends Request {
         }
 
         /**
-         * <p>pagination query parameters, from which page to start querying</p>
+         * <p>Page index</p>
          * 
          * <strong>example:</strong>
          * <p>1</p>
@@ -170,7 +170,7 @@ public class RefundDetailListRequest extends Request {
         }
 
         /**
-         * <p>pagination query parameters, how many orders to return</p>
+         * <p>Page size</p>
          * 
          * <strong>example:</strong>
          * <p>20</p>
@@ -182,7 +182,7 @@ public class RefundDetailListRequest extends Request {
         }
 
         /**
-         * <p>the earliest time(timestamp) of refund order creation</p>
+         * <p>Refund order creation start time, UTC timestamp</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -195,7 +195,7 @@ public class RefundDetailListRequest extends Request {
         }
 
         /**
-         * <p>the latest time(timestamp) of refund order creation</p>
+         * <p>Refund order creation end time, UTC timestamp</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -208,7 +208,7 @@ public class RefundDetailListRequest extends Request {
         }
 
         /**
-         * <p>access token</p>
+         * <p>Access token</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -221,7 +221,7 @@ public class RefundDetailListRequest extends Request {
         }
 
         /**
-         * <p>language code(refer to ISO_639), defaults to the buyer&quot;s account configuration</p>
+         * <p>Multi-language, default to buyer account configuration</p>
          * 
          * <strong>example:</strong>
          * <p>en_US</p>

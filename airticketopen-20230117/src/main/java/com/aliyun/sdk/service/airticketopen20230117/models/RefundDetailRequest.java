@@ -89,7 +89,7 @@ public class RefundDetailRequest extends Request {
         } 
 
         /**
-         * <p>refund order number</p>
+         * <p>Refund order number</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -102,7 +102,7 @@ public class RefundDetailRequest extends Request {
         }
 
         /**
-         * <p>access token</p>
+         * <p>access_token</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -115,7 +115,7 @@ public class RefundDetailRequest extends Request {
         }
 
         /**
-         * <p>language code(refer to ISO_639), defaults to the buyer&quot;s account configuration</p>
+         * <p>Multi-language, default to buyer account configuration</p>
          * 
          * <strong>example:</strong>
          * <p>en_US</p>

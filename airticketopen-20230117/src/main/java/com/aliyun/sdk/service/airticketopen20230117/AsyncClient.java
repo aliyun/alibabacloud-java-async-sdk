@@ -160,27 +160,18 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<PricingResponse> pricing(PricingRequest request);
 
     /**
-     * <b>description</b> :
-     * <p>Apply for a refund and generate a refund order.</p>
-     * 
      * @param request the request parameters of RefundApply  RefundApplyRequest
      * @return RefundApplyResponse
      */
     CompletableFuture<RefundApplyResponse> refundApply(RefundApplyRequest request);
 
     /**
-     * <b>description</b> :
-     * <p>Query refund order detail.</p>
-     * 
      * @param request the request parameters of RefundDetail  RefundDetailRequest
      * @return RefundDetailResponse
      */
     CompletableFuture<RefundDetailResponse> refundDetail(RefundDetailRequest request);
 
     /**
-     * <b>description</b> :
-     * <p>Query refund order detail.</p>
-     * 
      * @param request the request parameters of RefundDetailList  RefundDetailListRequest
      * @return RefundDetailListResponse
      */
@@ -194,6 +185,12 @@ public interface AsyncClient extends SdkAutoCloseable {
      * @return SearchResponse
      */
     CompletableFuture<SearchResponse> search(SearchRequest request);
+
+    /**
+     * @param request the request parameters of StandardSearch  StandardSearchRequest
+     * @return StandardSearchResponse
+     */
+    CompletableFuture<StandardSearchResponse> standardSearch(StandardSearchRequest request);
 
     /**
      * @param request the request parameters of Ticketing  TicketingRequest

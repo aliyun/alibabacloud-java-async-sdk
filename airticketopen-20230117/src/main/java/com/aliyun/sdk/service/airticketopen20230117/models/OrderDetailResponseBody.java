@@ -184,7 +184,7 @@ public class OrderDetailResponseBody extends TeaModel {
         }
 
         /**
-         * <p>http reqeust has been processed successfully，status code is 200</p>
+         * <p>http request has been processed successfully，status code is 200</p>
          * 
          * <strong>example:</strong>
          * <p>200</p>
@@ -303,7 +303,10 @@ public class OrderDetailResponseBody extends TeaModel {
             } 
 
             /**
-             * baggage_amount.
+             * <p>Number of luggage pieces. Values can be: 3, 2, 1, 0, -2. -2 indicates weight-based calculation.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>0</p>
              */
             public Builder baggageAmount(Integer baggageAmount) {
                 this.baggageAmount = baggageAmount;
@@ -311,7 +314,10 @@ public class OrderDetailResponseBody extends TeaModel {
             }
 
             /**
-             * baggage_weight.
+             * <p>Luggage weight, 0-50. When isAllWeght=true, it indicates the total weight of all items.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>0</p>
              */
             public Builder baggageWeight(Integer baggageWeight) {
                 this.baggageWeight = baggageWeight;
@@ -319,7 +325,10 @@ public class OrderDetailResponseBody extends TeaModel {
             }
 
             /**
-             * baggage_weight_unit.
+             * <p>Unit of luggage weight</p>
+             * 
+             * <strong>example:</strong>
+             * <p>KG</p>
              */
             public Builder baggageWeightUnit(String baggageWeightUnit) {
                 this.baggageWeightUnit = baggageWeightUnit;
@@ -327,7 +336,7 @@ public class OrderDetailResponseBody extends TeaModel {
             }
 
             /**
-             * is_all_weight.
+             * <p>whether all luggage weight</p>
              */
             public Builder isAllWeight(Boolean isAllWeight) {
                 this.isAllWeight = isAllWeight;
@@ -335,7 +344,10 @@ public class OrderDetailResponseBody extends TeaModel {
             }
 
             /**
-             * price.
+             * <p>Total Price</p>
+             * 
+             * <strong>example:</strong>
+             * <p>10.0</p>
              */
             public Builder price(Double price) {
                 this.price = price;
@@ -437,7 +449,7 @@ public class OrderDetailResponseBody extends TeaModel {
             }
 
             /**
-             * baggage_ancillary.
+             * <p>Ancillary Service Details</p>
              */
             public Builder baggageAncillary(BaggageAncillary baggageAncillary) {
                 this.baggageAncillary = baggageAncillary;
@@ -3015,7 +3027,7 @@ public class OrderDetailResponseBody extends TeaModel {
             } 
 
             /**
-             * issue_ticket_type.
+             * <p>Issue ticket type: 1: after payment; 2: before departure; -1: unknown</p>
              */
             public Builder issueTicketType(Integer issueTicketType) {
                 this.issueTicketType = issueTicketType;
@@ -3023,7 +3035,7 @@ public class OrderDetailResponseBody extends TeaModel {
             }
 
             /**
-             * issue_time_limit.
+             * <p>Estimated issue ticket time, unit: minutes</p>
              */
             public Builder issueTimeLimit(Integer issueTimeLimit) {
                 this.issueTimeLimit = issueTimeLimit;
@@ -3090,7 +3102,7 @@ public class OrderDetailResponseBody extends TeaModel {
             } 
 
             /**
-             * issue_time_info.
+             * <p>Issue ticket time related</p>
              */
             public Builder issueTimeInfo(IssueTimeInfo issueTimeInfo) {
                 this.issueTimeInfo = issueTimeInfo;
@@ -3098,7 +3110,7 @@ public class OrderDetailResponseBody extends TeaModel {
             }
 
             /**
-             * supply_source_type.
+             * <p>Supply source type 1: Self-operated; 2: Agent; 3: Flagship store</p>
              */
             public Builder supplySourceType(String supplySourceType) {
                 this.supplySourceType = supplySourceType;
@@ -3140,12 +3152,6 @@ public class OrderDetailResponseBody extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("journey_list")
         private java.util.List<JourneyList> journeyList;
 
-        @com.aliyun.core.annotation.NameInMap("product_type_description")
-        private String productTypeDescription;
-
-        @com.aliyun.core.annotation.NameInMap("refund_ticket_coupon_description")
-        private String refundTicketCouponDescription;
-
         @com.aliyun.core.annotation.NameInMap("segment_baggage_check_in_info_list")
         private java.util.List<SegmentBaggageCheckInInfoList> segmentBaggageCheckInInfoList;
 
@@ -3169,8 +3175,6 @@ public class OrderDetailResponseBody extends TeaModel {
             this.infantPrice = builder.infantPrice;
             this.infantTax = builder.infantTax;
             this.journeyList = builder.journeyList;
-            this.productTypeDescription = builder.productTypeDescription;
-            this.refundTicketCouponDescription = builder.refundTicketCouponDescription;
             this.segmentBaggageCheckInInfoList = builder.segmentBaggageCheckInInfoList;
             this.segmentBaggageMappingList = builder.segmentBaggageMappingList;
             this.segmentRefundChangeRuleMappingList = builder.segmentRefundChangeRuleMappingList;
@@ -3236,20 +3240,6 @@ public class OrderDetailResponseBody extends TeaModel {
         }
 
         /**
-         * @return productTypeDescription
-         */
-        public String getProductTypeDescription() {
-            return this.productTypeDescription;
-        }
-
-        /**
-         * @return refundTicketCouponDescription
-         */
-        public String getRefundTicketCouponDescription() {
-            return this.refundTicketCouponDescription;
-        }
-
-        /**
          * @return segmentBaggageCheckInInfoList
          */
         public java.util.List<SegmentBaggageCheckInInfoList> getSegmentBaggageCheckInInfoList() {
@@ -3292,8 +3282,6 @@ public class OrderDetailResponseBody extends TeaModel {
             private Double infantPrice; 
             private Double infantTax; 
             private java.util.List<JourneyList> journeyList; 
-            private String productTypeDescription; 
-            private String refundTicketCouponDescription; 
             private java.util.List<SegmentBaggageCheckInInfoList> segmentBaggageCheckInInfoList; 
             private java.util.List<SegmentBaggageMappingList> segmentBaggageMappingList; 
             private java.util.List<SegmentRefundChangeRuleMappingList> segmentRefundChangeRuleMappingList; 
@@ -3311,8 +3299,6 @@ public class OrderDetailResponseBody extends TeaModel {
                 this.infantPrice = model.infantPrice;
                 this.infantTax = model.infantTax;
                 this.journeyList = model.journeyList;
-                this.productTypeDescription = model.productTypeDescription;
-                this.refundTicketCouponDescription = model.refundTicketCouponDescription;
                 this.segmentBaggageCheckInInfoList = model.segmentBaggageCheckInInfoList;
                 this.segmentBaggageMappingList = model.segmentBaggageMappingList;
                 this.segmentRefundChangeRuleMappingList = model.segmentRefundChangeRuleMappingList;
@@ -3395,28 +3381,6 @@ public class OrderDetailResponseBody extends TeaModel {
             }
 
             /**
-             * <p>product type description</p>
-             * 
-             * <strong>example:</strong>
-             * <p>description</p>
-             */
-            public Builder productTypeDescription(String productTypeDescription) {
-                this.productTypeDescription = productTypeDescription;
-                return this;
-            }
-
-            /**
-             * <p>refund coupon description</p>
-             * 
-             * <strong>example:</strong>
-             * <p>description</p>
-             */
-            public Builder refundTicketCouponDescription(String refundTicketCouponDescription) {
-                this.refundTicketCouponDescription = refundTicketCouponDescription;
-                return this;
-            }
-
-            /**
              * <p>through check-in baggage policy</p>
              */
             public Builder segmentBaggageCheckInInfoList(java.util.List<SegmentBaggageCheckInInfoList> segmentBaggageCheckInInfoList) {
@@ -3441,7 +3405,7 @@ public class OrderDetailResponseBody extends TeaModel {
             }
 
             /**
-             * solution_attribute.
+             * <p>Quotation Attributes</p>
              */
             public Builder solutionAttribute(SolutionAttribute solutionAttribute) {
                 this.solutionAttribute = solutionAttribute;

@@ -132,7 +132,10 @@ public class ChangeDetailResponseBody extends TeaModel {
         } 
 
         /**
-         * RequestId.
+         * <p>Request RequestId</p>
+         * 
+         * <strong>example:</strong>
+         * <p>51593418-8C73-5E47-8BA8-3F1D4A00CC0B</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -140,7 +143,7 @@ public class ChangeDetailResponseBody extends TeaModel {
         }
 
         /**
-         * data.
+         * <p>Correctly processed return data</p>
          */
         public Builder data(Data data) {
             this.data = data;
@@ -148,7 +151,10 @@ public class ChangeDetailResponseBody extends TeaModel {
         }
 
         /**
-         * error_code.
+         * <p>error code</p>
+         * 
+         * <strong>example:</strong>
+         * <p>null</p>
          */
         public Builder errorCode(String errorCode) {
             this.errorCode = errorCode;
@@ -156,7 +162,10 @@ public class ChangeDetailResponseBody extends TeaModel {
         }
 
         /**
-         * error_data.
+         * <p>Data carried in error handling</p>
+         * 
+         * <strong>example:</strong>
+         * <p>null</p>
          */
         public Builder errorData(Object errorData) {
             this.errorData = errorData;
@@ -164,7 +173,10 @@ public class ChangeDetailResponseBody extends TeaModel {
         }
 
         /**
-         * error_msg.
+         * <p>Error message</p>
+         * 
+         * <strong>example:</strong>
+         * <p>null</p>
          */
         public Builder errorMsg(String errorMsg) {
             this.errorMsg = errorMsg;
@@ -172,7 +184,10 @@ public class ChangeDetailResponseBody extends TeaModel {
         }
 
         /**
-         * status.
+         * <p>HTTP request successful, status value is 200</p>
+         * 
+         * <strong>example:</strong>
+         * <p>200</p>
          */
         public Builder status(Integer status) {
             this.status = status;
@@ -180,7 +195,10 @@ public class ChangeDetailResponseBody extends TeaModel {
         }
 
         /**
-         * success.
+         * <p>Whether it is successful</p>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder success(Boolean success) {
             this.success = success;
@@ -259,7 +277,10 @@ public class ChangeDetailResponseBody extends TeaModel {
             } 
 
             /**
-             * service_fee.
+             * <p>fare penalty</p>
+             * 
+             * <strong>example:</strong>
+             * <p>50</p>
              */
             public Builder serviceFee(Double serviceFee) {
                 this.serviceFee = serviceFee;
@@ -267,7 +288,10 @@ public class ChangeDetailResponseBody extends TeaModel {
             }
 
             /**
-             * tax_fee.
+             * <p>tax penalty</p>
+             * 
+             * <strong>example:</strong>
+             * <p>20</p>
              */
             public Builder taxFee(Double taxFee) {
                 this.taxFee = taxFee;
@@ -275,7 +299,10 @@ public class ChangeDetailResponseBody extends TeaModel {
             }
 
             /**
-             * upgrade_fee.
+             * <p>price difference</p>
+             * 
+             * <strong>example:</strong>
+             * <p>30</p>
              */
             public Builder upgradeFee(Double upgradeFee) {
                 this.upgradeFee = upgradeFee;
@@ -355,7 +382,10 @@ public class ChangeDetailResponseBody extends TeaModel {
             } 
 
             /**
-             * document.
+             * <p>Document number</p>
+             * 
+             * <strong>example:</strong>
+             * <p>411***********4411</p>
              */
             public Builder document(String document) {
                 this.document = document;
@@ -363,7 +393,10 @@ public class ChangeDetailResponseBody extends TeaModel {
             }
 
             /**
-             * first_name.
+             * <p>Passenger&quot;s first name</p>
+             * 
+             * <strong>example:</strong>
+             * <p>SAN</p>
              */
             public Builder firstName(String firstName) {
                 this.firstName = firstName;
@@ -371,7 +404,10 @@ public class ChangeDetailResponseBody extends TeaModel {
             }
 
             /**
-             * last_name.
+             * <p>Passenger&quot;s last name</p>
+             * 
+             * <strong>example:</strong>
+             * <p>ZHANG</p>
              */
             public Builder lastName(String lastName) {
                 this.lastName = lastName;
@@ -438,7 +474,7 @@ public class ChangeDetailResponseBody extends TeaModel {
             } 
 
             /**
-             * change_fee.
+             * <p>Change fee details for the passenger</p>
              */
             public Builder changeFee(ChangeFee changeFee) {
                 this.changeFee = changeFee;
@@ -446,7 +482,7 @@ public class ChangeDetailResponseBody extends TeaModel {
             }
 
             /**
-             * passenger.
+             * <p>Information of the passenger for the change</p>
              */
             public Builder passenger(Passenger passenger) {
                 this.passenger = passenger;
@@ -526,7 +562,10 @@ public class ChangeDetailResponseBody extends TeaModel {
             } 
 
             /**
-             * document.
+             * <p>Document number</p>
+             * 
+             * <strong>example:</strong>
+             * <p>411***********4411</p>
              */
             public Builder document(String document) {
                 this.document = document;
@@ -534,7 +573,10 @@ public class ChangeDetailResponseBody extends TeaModel {
             }
 
             /**
-             * first_name.
+             * <p>Passenger first name</p>
+             * 
+             * <strong>example:</strong>
+             * <p>SAN</p>
              */
             public Builder firstName(String firstName) {
                 this.firstName = firstName;
@@ -542,7 +584,10 @@ public class ChangeDetailResponseBody extends TeaModel {
             }
 
             /**
-             * last_name.
+             * <p>Passenger last name</p>
+             * 
+             * <strong>example:</strong>
+             * <p>ZHANG</p>
              */
             public Builder lastName(String lastName) {
                 this.lastName = lastName;
@@ -869,7 +914,10 @@ public class ChangeDetailResponseBody extends TeaModel {
             } 
 
             /**
-             * arrival_airport.
+             * <p>Arrival airport three-letter code (uppercase)</p>
+             * 
+             * <strong>example:</strong>
+             * <p>MFM</p>
              */
             public Builder arrivalAirport(String arrivalAirport) {
                 this.arrivalAirport = arrivalAirport;
@@ -877,7 +925,10 @@ public class ChangeDetailResponseBody extends TeaModel {
             }
 
             /**
-             * arrival_city.
+             * <p>Arrival city three-letter code (uppercase)</p>
+             * 
+             * <strong>example:</strong>
+             * <p>MFM</p>
              */
             public Builder arrivalCity(String arrivalCity) {
                 this.arrivalCity = arrivalCity;
@@ -885,7 +936,10 @@ public class ChangeDetailResponseBody extends TeaModel {
             }
 
             /**
-             * arrival_terminal.
+             * <p>Arrival terminal of the flight</p>
+             * 
+             * <strong>example:</strong>
+             * <p>T1</p>
              */
             public Builder arrivalTerminal(String arrivalTerminal) {
                 this.arrivalTerminal = arrivalTerminal;
@@ -893,7 +947,10 @@ public class ChangeDetailResponseBody extends TeaModel {
             }
 
             /**
-             * arrival_time.
+             * <p>Flight arrival date and time, in the format (yyyy-MM-dd HH:mm:ss)</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2023-03-10 10:40:00</p>
              */
             public Builder arrivalTime(String arrivalTime) {
                 this.arrivalTime = arrivalTime;
@@ -901,7 +958,10 @@ public class ChangeDetailResponseBody extends TeaModel {
             }
 
             /**
-             * availability.
+             * <p>Number of available seats</p>
+             * 
+             * <strong>example:</strong>
+             * <p>7</p>
              */
             public Builder availability(String availability) {
                 this.availability = availability;
@@ -909,7 +969,10 @@ public class ChangeDetailResponseBody extends TeaModel {
             }
 
             /**
-             * cabin.
+             * <p>RBD</p>
+             * 
+             * <strong>example:</strong>
+             * <p>V</p>
              */
             public Builder cabin(String cabin) {
                 this.cabin = cabin;
@@ -917,7 +980,10 @@ public class ChangeDetailResponseBody extends TeaModel {
             }
 
             /**
-             * cabin_class.
+             * <p>service class ( compartment )</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Y</p>
              */
             public Builder cabinClass(String cabinClass) {
                 this.cabinClass = cabinClass;
@@ -925,7 +991,10 @@ public class ChangeDetailResponseBody extends TeaModel {
             }
 
             /**
-             * code_share.
+             * <p>Whether it is a code-share flight</p>
+             * 
+             * <strong>example:</strong>
+             * <p>false</p>
              */
             public Builder codeShare(Boolean codeShare) {
                 this.codeShare = codeShare;
@@ -933,7 +1002,10 @@ public class ChangeDetailResponseBody extends TeaModel {
             }
 
             /**
-             * departure_airport.
+             * <p>Departure airport three-letter code (uppercase)</p>
+             * 
+             * <strong>example:</strong>
+             * <p>PVG</p>
              */
             public Builder departureAirport(String departureAirport) {
                 this.departureAirport = departureAirport;
@@ -941,7 +1013,10 @@ public class ChangeDetailResponseBody extends TeaModel {
             }
 
             /**
-             * departure_city.
+             * <p>Departure city three-letter code (uppercase)</p>
+             * 
+             * <strong>example:</strong>
+             * <p>SHA</p>
              */
             public Builder departureCity(String departureCity) {
                 this.departureCity = departureCity;
@@ -949,7 +1024,10 @@ public class ChangeDetailResponseBody extends TeaModel {
             }
 
             /**
-             * departure_terminal.
+             * <p>Departure terminal of the flight</p>
+             * 
+             * <strong>example:</strong>
+             * <p>T2</p>
              */
             public Builder departureTerminal(String departureTerminal) {
                 this.departureTerminal = departureTerminal;
@@ -957,7 +1035,10 @@ public class ChangeDetailResponseBody extends TeaModel {
             }
 
             /**
-             * departure_time.
+             * <p>Flight departure date and time, in the format (yyyy-MM-dd HH:mm:ss)</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2023-03-10 07:55:00</p>
              */
             public Builder departureTime(String departureTime) {
                 this.departureTime = departureTime;
@@ -965,7 +1046,10 @@ public class ChangeDetailResponseBody extends TeaModel {
             }
 
             /**
-             * equip_type.
+             * <p>Aircraft type</p>
+             * 
+             * <strong>example:</strong>
+             * <p>32Q</p>
              */
             public Builder equipType(String equipType) {
                 this.equipType = equipType;
@@ -973,7 +1057,10 @@ public class ChangeDetailResponseBody extends TeaModel {
             }
 
             /**
-             * flight_duration.
+             * <p>Flight duration in minutes</p>
+             * 
+             * <strong>example:</strong>
+             * <p>165</p>
              */
             public Builder flightDuration(Integer flightDuration) {
                 this.flightDuration = flightDuration;
@@ -981,7 +1068,10 @@ public class ChangeDetailResponseBody extends TeaModel {
             }
 
             /**
-             * marketing_airline.
+             * <p>Market airline (e.g., HO)</p>
+             * 
+             * <strong>example:</strong>
+             * <p>HO</p>
              */
             public Builder marketingAirline(String marketingAirline) {
                 this.marketingAirline = marketingAirline;
@@ -989,7 +1079,10 @@ public class ChangeDetailResponseBody extends TeaModel {
             }
 
             /**
-             * marketing_flight_no.
+             * <p>Marketing flight number (e.g., HO1295)</p>
+             * 
+             * <strong>example:</strong>
+             * <p>HO1295</p>
              */
             public Builder marketingFlightNo(String marketingFlightNo) {
                 this.marketingFlightNo = marketingFlightNo;
@@ -997,7 +1090,10 @@ public class ChangeDetailResponseBody extends TeaModel {
             }
 
             /**
-             * marketing_flight_no_int.
+             * <p>Marketing flight number (e.g., 1295)</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1295</p>
              */
             public Builder marketingFlightNoInt(Integer marketingFlightNoInt) {
                 this.marketingFlightNoInt = marketingFlightNoInt;
@@ -1005,7 +1101,10 @@ public class ChangeDetailResponseBody extends TeaModel {
             }
 
             /**
-             * operating_airline.
+             * <p>Operating airline (e.g., CX)</p>
+             * 
+             * <strong>example:</strong>
+             * <p>HO</p>
              */
             public Builder operatingAirline(String operatingAirline) {
                 this.operatingAirline = operatingAirline;
@@ -1013,7 +1112,10 @@ public class ChangeDetailResponseBody extends TeaModel {
             }
 
             /**
-             * operating_flight_no.
+             * <p>Operating flight number (e.g., CX601)</p>
+             * 
+             * <strong>example:</strong>
+             * <p>HO1295</p>
              */
             public Builder operatingFlightNo(String operatingFlightNo) {
                 this.operatingFlightNo = operatingFlightNo;
@@ -1021,7 +1123,10 @@ public class ChangeDetailResponseBody extends TeaModel {
             }
 
             /**
-             * segment_id.
+             * <p>Segment ID format: flight number + departure airport + arrival airport + departure date (MMdd)</p>
+             * 
+             * <strong>example:</strong>
+             * <p>HO1295-PVG-MFM-20230310</p>
              */
             public Builder segmentId(String segmentId) {
                 this.segmentId = segmentId;
@@ -1029,7 +1134,10 @@ public class ChangeDetailResponseBody extends TeaModel {
             }
 
             /**
-             * stop_city_list.
+             * <p>List of stop cities, with values when stopQuantity &gt; 0, separated by commas</p>
+             * 
+             * <strong>example:</strong>
+             * <p>SEL,HKG</p>
              */
             public Builder stopCityList(String stopCityList) {
                 this.stopCityList = stopCityList;
@@ -1037,7 +1145,10 @@ public class ChangeDetailResponseBody extends TeaModel {
             }
 
             /**
-             * stop_quantity.
+             * <p>Number of stop cities</p>
+             * 
+             * <strong>example:</strong>
+             * <p>0</p>
              */
             public Builder stopQuantity(Integer stopQuantity) {
                 this.stopQuantity = stopQuantity;
@@ -1104,7 +1215,7 @@ public class ChangeDetailResponseBody extends TeaModel {
             } 
 
             /**
-             * segment_list.
+             * <p>Segment information</p>
              */
             public Builder segmentList(java.util.List<SegmentList> segmentList) {
                 this.segmentList = segmentList;
@@ -1112,7 +1223,10 @@ public class ChangeDetailResponseBody extends TeaModel {
             }
 
             /**
-             * transfer_count.
+             * <p>Number of transfers</p>
+             * 
+             * <strong>example:</strong>
+             * <p>0</p>
              */
             public Builder transferCount(Integer transferCount) {
                 this.transferCount = transferCount;
@@ -1192,7 +1306,10 @@ public class ChangeDetailResponseBody extends TeaModel {
             } 
 
             /**
-             * email.
+             * <p>Email address</p>
+             * 
+             * <strong>example:</strong>
+             * <p>gao******@gmail.com</p>
              */
             public Builder email(String email) {
                 this.email = email;
@@ -1200,7 +1317,10 @@ public class ChangeDetailResponseBody extends TeaModel {
             }
 
             /**
-             * mobile_country_code.
+             * <p>Country code</p>
+             * 
+             * <strong>example:</strong>
+             * <p>86</p>
              */
             public Builder mobileCountryCode(String mobileCountryCode) {
                 this.mobileCountryCode = mobileCountryCode;
@@ -1208,7 +1328,10 @@ public class ChangeDetailResponseBody extends TeaModel {
             }
 
             /**
-             * mobile_phone_num.
+             * <p>Contact&quot;s mobile phone number</p>
+             * 
+             * <strong>example:</strong>
+             * <p>183*****92</p>
              */
             public Builder mobilePhoneNum(String mobilePhoneNum) {
                 this.mobilePhoneNum = mobilePhoneNum;
@@ -1535,7 +1658,10 @@ public class ChangeDetailResponseBody extends TeaModel {
             } 
 
             /**
-             * arrival_airport.
+             * <p>Arrival airport three-letter code (uppercase)</p>
+             * 
+             * <strong>example:</strong>
+             * <p>MFM</p>
              */
             public Builder arrivalAirport(String arrivalAirport) {
                 this.arrivalAirport = arrivalAirport;
@@ -1543,7 +1669,10 @@ public class ChangeDetailResponseBody extends TeaModel {
             }
 
             /**
-             * arrival_city.
+             * <p>Arrival city three-letter code (uppercase)</p>
+             * 
+             * <strong>example:</strong>
+             * <p>MFM</p>
              */
             public Builder arrivalCity(String arrivalCity) {
                 this.arrivalCity = arrivalCity;
@@ -1551,7 +1680,10 @@ public class ChangeDetailResponseBody extends TeaModel {
             }
 
             /**
-             * arrival_terminal.
+             * <p>Arrival terminal of the flight</p>
+             * 
+             * <strong>example:</strong>
+             * <p>T1</p>
              */
             public Builder arrivalTerminal(String arrivalTerminal) {
                 this.arrivalTerminal = arrivalTerminal;
@@ -1559,7 +1691,10 @@ public class ChangeDetailResponseBody extends TeaModel {
             }
 
             /**
-             * arrival_time.
+             * <p>Flight arrival date and time, in the format (yyyy-MM-dd HH:mm:ss)</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2023-03-10 10:40:00</p>
              */
             public Builder arrivalTime(String arrivalTime) {
                 this.arrivalTime = arrivalTime;
@@ -1567,7 +1702,10 @@ public class ChangeDetailResponseBody extends TeaModel {
             }
 
             /**
-             * availability.
+             * <p>Number of available seats</p>
+             * 
+             * <strong>example:</strong>
+             * <p>7</p>
              */
             public Builder availability(String availability) {
                 this.availability = availability;
@@ -1575,7 +1713,10 @@ public class ChangeDetailResponseBody extends TeaModel {
             }
 
             /**
-             * cabin.
+             * <p>RBD</p>
+             * 
+             * <strong>example:</strong>
+             * <p>V</p>
              */
             public Builder cabin(String cabin) {
                 this.cabin = cabin;
@@ -1583,7 +1724,10 @@ public class ChangeDetailResponseBody extends TeaModel {
             }
 
             /**
-             * cabin_class.
+             * <p>service class ( compartment )</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Y</p>
              */
             public Builder cabinClass(String cabinClass) {
                 this.cabinClass = cabinClass;
@@ -1591,7 +1735,10 @@ public class ChangeDetailResponseBody extends TeaModel {
             }
 
             /**
-             * code_share.
+             * <p>Whether it is a codeshare flight</p>
+             * 
+             * <strong>example:</strong>
+             * <p>false</p>
              */
             public Builder codeShare(Boolean codeShare) {
                 this.codeShare = codeShare;
@@ -1599,7 +1746,10 @@ public class ChangeDetailResponseBody extends TeaModel {
             }
 
             /**
-             * departure_airport.
+             * <p>Departure airport three-letter code (uppercase)</p>
+             * 
+             * <strong>example:</strong>
+             * <p>PVG</p>
              */
             public Builder departureAirport(String departureAirport) {
                 this.departureAirport = departureAirport;
@@ -1607,7 +1757,10 @@ public class ChangeDetailResponseBody extends TeaModel {
             }
 
             /**
-             * departure_city.
+             * <p>Departure city three-letter code (uppercase)</p>
+             * 
+             * <strong>example:</strong>
+             * <p>SHA</p>
              */
             public Builder departureCity(String departureCity) {
                 this.departureCity = departureCity;
@@ -1615,7 +1768,10 @@ public class ChangeDetailResponseBody extends TeaModel {
             }
 
             /**
-             * departure_terminal.
+             * <p>Departure terminal of the flight</p>
+             * 
+             * <strong>example:</strong>
+             * <p>T2</p>
              */
             public Builder departureTerminal(String departureTerminal) {
                 this.departureTerminal = departureTerminal;
@@ -1623,7 +1779,10 @@ public class ChangeDetailResponseBody extends TeaModel {
             }
 
             /**
-             * departure_time.
+             * <p>Flight departure date and time, in the format (yyyy-MM-dd HH:mm:ss)</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2023-03-10 07:55:00</p>
              */
             public Builder departureTime(String departureTime) {
                 this.departureTime = departureTime;
@@ -1631,7 +1790,10 @@ public class ChangeDetailResponseBody extends TeaModel {
             }
 
             /**
-             * equip_type.
+             * <p>Aircraft type</p>
+             * 
+             * <strong>example:</strong>
+             * <p>32Q</p>
              */
             public Builder equipType(String equipType) {
                 this.equipType = equipType;
@@ -1639,7 +1801,10 @@ public class ChangeDetailResponseBody extends TeaModel {
             }
 
             /**
-             * flight_duration.
+             * <p>Flight duration in minutes</p>
+             * 
+             * <strong>example:</strong>
+             * <p>165</p>
              */
             public Builder flightDuration(Integer flightDuration) {
                 this.flightDuration = flightDuration;
@@ -1647,7 +1812,10 @@ public class ChangeDetailResponseBody extends TeaModel {
             }
 
             /**
-             * marketing_airline.
+             * <p>Marketing airline (e.g., HO)</p>
+             * 
+             * <strong>example:</strong>
+             * <p>HO</p>
              */
             public Builder marketingAirline(String marketingAirline) {
                 this.marketingAirline = marketingAirline;
@@ -1655,7 +1823,10 @@ public class ChangeDetailResponseBody extends TeaModel {
             }
 
             /**
-             * marketing_flight_no.
+             * <p>Marketing flight number (e.g., HO1295)</p>
+             * 
+             * <strong>example:</strong>
+             * <p>HO1295</p>
              */
             public Builder marketingFlightNo(String marketingFlightNo) {
                 this.marketingFlightNo = marketingFlightNo;
@@ -1663,7 +1834,10 @@ public class ChangeDetailResponseBody extends TeaModel {
             }
 
             /**
-             * marketing_flight_no_int.
+             * <p>Marketing flight number (e.g., 1295)</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1295</p>
              */
             public Builder marketingFlightNoInt(Integer marketingFlightNoInt) {
                 this.marketingFlightNoInt = marketingFlightNoInt;
@@ -1671,7 +1845,10 @@ public class ChangeDetailResponseBody extends TeaModel {
             }
 
             /**
-             * operating_airline.
+             * <p>Operating airline (e.g., CX)</p>
+             * 
+             * <strong>example:</strong>
+             * <p>HO</p>
              */
             public Builder operatingAirline(String operatingAirline) {
                 this.operatingAirline = operatingAirline;
@@ -1679,7 +1856,10 @@ public class ChangeDetailResponseBody extends TeaModel {
             }
 
             /**
-             * operating_flight_no.
+             * <p>Operating flight number (e.g., CX601)</p>
+             * 
+             * <strong>example:</strong>
+             * <p>HO1295</p>
              */
             public Builder operatingFlightNo(String operatingFlightNo) {
                 this.operatingFlightNo = operatingFlightNo;
@@ -1687,7 +1867,10 @@ public class ChangeDetailResponseBody extends TeaModel {
             }
 
             /**
-             * segment_id.
+             * <p>Segment ID format: flight number + departure airport + arrival airport + departure date (MMdd)</p>
+             * 
+             * <strong>example:</strong>
+             * <p>HO1295-PVG-MFM-20230310</p>
              */
             public Builder segmentId(String segmentId) {
                 this.segmentId = segmentId;
@@ -1695,7 +1878,10 @@ public class ChangeDetailResponseBody extends TeaModel {
             }
 
             /**
-             * stop_city_list.
+             * <p>List of stop cities, with values when stopQuantity &gt; 0, separated by commas</p>
+             * 
+             * <strong>example:</strong>
+             * <p>SEL,HKG</p>
              */
             public Builder stopCityList(String stopCityList) {
                 this.stopCityList = stopCityList;
@@ -1703,7 +1889,10 @@ public class ChangeDetailResponseBody extends TeaModel {
             }
 
             /**
-             * stop_quantity.
+             * <p>Number of stop cities</p>
+             * 
+             * <strong>example:</strong>
+             * <p>0</p>
              */
             public Builder stopQuantity(Integer stopQuantity) {
                 this.stopQuantity = stopQuantity;
@@ -1770,7 +1959,7 @@ public class ChangeDetailResponseBody extends TeaModel {
             } 
 
             /**
-             * segment_list.
+             * <p>Segment information</p>
              */
             public Builder segmentList(java.util.List<LastJourneysSegmentList> segmentList) {
                 this.segmentList = segmentList;
@@ -1778,7 +1967,10 @@ public class ChangeDetailResponseBody extends TeaModel {
             }
 
             /**
-             * transfer_count.
+             * <p>Number of transfers</p>
+             * 
+             * <strong>example:</strong>
+             * <p>0</p>
              */
             public Builder transferCount(Integer transferCount) {
                 this.transferCount = transferCount;
@@ -2105,7 +2297,10 @@ public class ChangeDetailResponseBody extends TeaModel {
             } 
 
             /**
-             * arrival_airport.
+             * <p>Arrival airport three-letter code (uppercase)</p>
+             * 
+             * <strong>example:</strong>
+             * <p>MFM</p>
              */
             public Builder arrivalAirport(String arrivalAirport) {
                 this.arrivalAirport = arrivalAirport;
@@ -2113,7 +2308,10 @@ public class ChangeDetailResponseBody extends TeaModel {
             }
 
             /**
-             * arrival_city.
+             * <p>Arrival city three-letter code (uppercase)</p>
+             * 
+             * <strong>example:</strong>
+             * <p>MFM</p>
              */
             public Builder arrivalCity(String arrivalCity) {
                 this.arrivalCity = arrivalCity;
@@ -2121,7 +2319,10 @@ public class ChangeDetailResponseBody extends TeaModel {
             }
 
             /**
-             * arrival_terminal.
+             * <p>Arrival terminal of the flight</p>
+             * 
+             * <strong>example:</strong>
+             * <p>T1</p>
              */
             public Builder arrivalTerminal(String arrivalTerminal) {
                 this.arrivalTerminal = arrivalTerminal;
@@ -2129,7 +2330,10 @@ public class ChangeDetailResponseBody extends TeaModel {
             }
 
             /**
-             * arrival_time.
+             * <p>Flight arrival date and time in string format (yyyy-MM-dd HH:mm:ss)</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2023-03-10 10:40:00</p>
              */
             public Builder arrivalTime(String arrivalTime) {
                 this.arrivalTime = arrivalTime;
@@ -2137,7 +2341,10 @@ public class ChangeDetailResponseBody extends TeaModel {
             }
 
             /**
-             * availability.
+             * <p>Number of available seats</p>
+             * 
+             * <strong>example:</strong>
+             * <p>7</p>
              */
             public Builder availability(String availability) {
                 this.availability = availability;
@@ -2145,7 +2352,10 @@ public class ChangeDetailResponseBody extends TeaModel {
             }
 
             /**
-             * cabin.
+             * <p>RBD</p>
+             * 
+             * <strong>example:</strong>
+             * <p>V</p>
              */
             public Builder cabin(String cabin) {
                 this.cabin = cabin;
@@ -2153,7 +2363,10 @@ public class ChangeDetailResponseBody extends TeaModel {
             }
 
             /**
-             * cabin_class.
+             * <p>service class ( compartment )</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Y</p>
              */
             public Builder cabinClass(String cabinClass) {
                 this.cabinClass = cabinClass;
@@ -2161,7 +2374,10 @@ public class ChangeDetailResponseBody extends TeaModel {
             }
 
             /**
-             * code_share.
+             * <p>Whether it is a codeshare flight</p>
+             * 
+             * <strong>example:</strong>
+             * <p>false</p>
              */
             public Builder codeShare(Boolean codeShare) {
                 this.codeShare = codeShare;
@@ -2169,7 +2385,10 @@ public class ChangeDetailResponseBody extends TeaModel {
             }
 
             /**
-             * departure_airport.
+             * <p>Departure airport three-letter code (uppercase)</p>
+             * 
+             * <strong>example:</strong>
+             * <p>PVG</p>
              */
             public Builder departureAirport(String departureAirport) {
                 this.departureAirport = departureAirport;
@@ -2177,7 +2396,10 @@ public class ChangeDetailResponseBody extends TeaModel {
             }
 
             /**
-             * departure_city.
+             * <p>Departure city three-letter code (uppercase)</p>
+             * 
+             * <strong>example:</strong>
+             * <p>SHA</p>
              */
             public Builder departureCity(String departureCity) {
                 this.departureCity = departureCity;
@@ -2185,7 +2407,10 @@ public class ChangeDetailResponseBody extends TeaModel {
             }
 
             /**
-             * departure_terminal.
+             * <p>Departure terminal of the flight</p>
+             * 
+             * <strong>example:</strong>
+             * <p>T2</p>
              */
             public Builder departureTerminal(String departureTerminal) {
                 this.departureTerminal = departureTerminal;
@@ -2193,7 +2418,10 @@ public class ChangeDetailResponseBody extends TeaModel {
             }
 
             /**
-             * departure_time.
+             * <p>Flight departure date and time in string format (yyyy-MM-dd HH:mm:ss)</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2023-03-10 07:55:00</p>
              */
             public Builder departureTime(String departureTime) {
                 this.departureTime = departureTime;
@@ -2201,7 +2429,10 @@ public class ChangeDetailResponseBody extends TeaModel {
             }
 
             /**
-             * equip_type.
+             * <p>Aircraft type</p>
+             * 
+             * <strong>example:</strong>
+             * <p>32Q</p>
              */
             public Builder equipType(String equipType) {
                 this.equipType = equipType;
@@ -2209,7 +2440,10 @@ public class ChangeDetailResponseBody extends TeaModel {
             }
 
             /**
-             * flight_duration.
+             * <p>Flight duration in minutes</p>
+             * 
+             * <strong>example:</strong>
+             * <p>165</p>
              */
             public Builder flightDuration(Integer flightDuration) {
                 this.flightDuration = flightDuration;
@@ -2217,7 +2451,10 @@ public class ChangeDetailResponseBody extends TeaModel {
             }
 
             /**
-             * marketing_airline.
+             * <p>Marketing airline (e.g., HO)</p>
+             * 
+             * <strong>example:</strong>
+             * <p>HO</p>
              */
             public Builder marketingAirline(String marketingAirline) {
                 this.marketingAirline = marketingAirline;
@@ -2225,7 +2462,10 @@ public class ChangeDetailResponseBody extends TeaModel {
             }
 
             /**
-             * marketing_flight_no.
+             * <p>Marketing flight number (e.g., HO1295)</p>
+             * 
+             * <strong>example:</strong>
+             * <p>HO1295</p>
              */
             public Builder marketingFlightNo(String marketingFlightNo) {
                 this.marketingFlightNo = marketingFlightNo;
@@ -2233,7 +2473,10 @@ public class ChangeDetailResponseBody extends TeaModel {
             }
 
             /**
-             * marketing_flight_no_int.
+             * <p>Marketing airline&quot;s numeric flight number (e.g., 1295)</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1295</p>
              */
             public Builder marketingFlightNoInt(Integer marketingFlightNoInt) {
                 this.marketingFlightNoInt = marketingFlightNoInt;
@@ -2241,7 +2484,10 @@ public class ChangeDetailResponseBody extends TeaModel {
             }
 
             /**
-             * operating_airline.
+             * <p>Operating airline (e.g., CX)</p>
+             * 
+             * <strong>example:</strong>
+             * <p>HO</p>
              */
             public Builder operatingAirline(String operatingAirline) {
                 this.operatingAirline = operatingAirline;
@@ -2249,7 +2495,10 @@ public class ChangeDetailResponseBody extends TeaModel {
             }
 
             /**
-             * operating_flight_no.
+             * <p>Operating airline&quot;s flight number (e.g., CX601)</p>
+             * 
+             * <strong>example:</strong>
+             * <p>HO1295</p>
              */
             public Builder operatingFlightNo(String operatingFlightNo) {
                 this.operatingFlightNo = operatingFlightNo;
@@ -2257,7 +2506,10 @@ public class ChangeDetailResponseBody extends TeaModel {
             }
 
             /**
-             * segment_id.
+             * <p>Segment ID format: flight number + departure airport + arrival airport + departure date (yyyyMMdd)</p>
+             * 
+             * <strong>example:</strong>
+             * <p>HO1295-PVG-MFM-20230310</p>
              */
             public Builder segmentId(String segmentId) {
                 this.segmentId = segmentId;
@@ -2265,7 +2517,10 @@ public class ChangeDetailResponseBody extends TeaModel {
             }
 
             /**
-             * stop_city_list.
+             * <p>List of stop cities, with values when stopQuantity &gt; 0, separated by commas</p>
+             * 
+             * <strong>example:</strong>
+             * <p>SEL,HKG</p>
              */
             public Builder stopCityList(String stopCityList) {
                 this.stopCityList = stopCityList;
@@ -2273,7 +2528,10 @@ public class ChangeDetailResponseBody extends TeaModel {
             }
 
             /**
-             * stop_quantity.
+             * <p>Number of stop cities</p>
+             * 
+             * <strong>example:</strong>
+             * <p>0</p>
              */
             public Builder stopQuantity(Integer stopQuantity) {
                 this.stopQuantity = stopQuantity;
@@ -2340,7 +2598,7 @@ public class ChangeDetailResponseBody extends TeaModel {
             } 
 
             /**
-             * segment_list.
+             * <p>Segment information</p>
              */
             public Builder segmentList(java.util.List<OriginalJourneysSegmentList> segmentList) {
                 this.segmentList = segmentList;
@@ -2348,7 +2606,10 @@ public class ChangeDetailResponseBody extends TeaModel {
             }
 
             /**
-             * transfer_count.
+             * <p>Number of transfers</p>
+             * 
+             * <strong>example:</strong>
+             * <p>0</p>
              */
             public Builder transferCount(Integer transferCount) {
                 this.transferCount = transferCount;
@@ -2623,7 +2884,7 @@ public class ChangeDetailResponseBody extends TeaModel {
             } 
 
             /**
-             * change_fee_details.
+             * <p>Change fee details, per passenger</p>
              */
             public Builder changeFeeDetails(java.util.List<ChangeFeeDetails> changeFeeDetails) {
                 this.changeFeeDetails = changeFeeDetails;
@@ -2631,7 +2892,10 @@ public class ChangeDetailResponseBody extends TeaModel {
             }
 
             /**
-             * change_order_num.
+             * <p>Change order number</p>
+             * 
+             * <strong>example:</strong>
+             * <p>4988430***950</p>
              */
             public Builder changeOrderNum(Long changeOrderNum) {
                 this.changeOrderNum = changeOrderNum;
@@ -2639,7 +2903,7 @@ public class ChangeDetailResponseBody extends TeaModel {
             }
 
             /**
-             * change_passengers.
+             * <p>List of passengers for the change</p>
              */
             public Builder changePassengers(java.util.List<ChangePassengers> changePassengers) {
                 this.changePassengers = changePassengers;
@@ -2647,7 +2911,13 @@ public class ChangeDetailResponseBody extends TeaModel {
             }
 
             /**
-             * change_reason_type.
+             * <p>Change reason type. 
+             * 0: Voluntary change; 
+             * 1: Involuntary change, due to flight delay or cancellation, schedule changes, or other airline reasons; 
+             * 2: Involuntary change, due to health reasons with a medical report</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder changeReasonType(Integer changeReasonType) {
                 this.changeReasonType = changeReasonType;
@@ -2655,7 +2925,7 @@ public class ChangeDetailResponseBody extends TeaModel {
             }
 
             /**
-             * changed_journeys.
+             * <p>New journeys</p>
              */
             public Builder changedJourneys(java.util.List<ChangedJourneys> changedJourneys) {
                 this.changedJourneys = changedJourneys;
@@ -2663,7 +2933,10 @@ public class ChangeDetailResponseBody extends TeaModel {
             }
 
             /**
-             * close_reason.
+             * <p>Reason for closing the change order</p>
+             * 
+             * <strong>example:</strong>
+             * <p>reason desc</p>
              */
             public Builder closeReason(String closeReason) {
                 this.closeReason = closeReason;
@@ -2671,7 +2944,10 @@ public class ChangeDetailResponseBody extends TeaModel {
             }
 
             /**
-             * close_utc_time.
+             * <p>The time when the order was closed, in UTC timestamp</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1677415244000</p>
              */
             public Builder closeUtcTime(Long closeUtcTime) {
                 this.closeUtcTime = closeUtcTime;
@@ -2679,7 +2955,7 @@ public class ChangeDetailResponseBody extends TeaModel {
             }
 
             /**
-             * contact.
+             * <p>Contact information for the change request</p>
              */
             public Builder contact(Contact contact) {
                 this.contact = contact;
@@ -2687,7 +2963,10 @@ public class ChangeDetailResponseBody extends TeaModel {
             }
 
             /**
-             * create_utc_time.
+             * <p>Creation time of the change order, UTC timestamp</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1677415276000</p>
              */
             public Builder createUtcTime(Long createUtcTime) {
                 this.createUtcTime = createUtcTime;
@@ -2695,7 +2974,10 @@ public class ChangeDetailResponseBody extends TeaModel {
             }
 
             /**
-             * last_confirm_utc_time.
+             * <p>Latest payment time for the buyer, UTC timestamp</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1677415278000</p>
              */
             public Builder lastConfirmUtcTime(Long lastConfirmUtcTime) {
                 this.lastConfirmUtcTime = lastConfirmUtcTime;
@@ -2703,7 +2985,7 @@ public class ChangeDetailResponseBody extends TeaModel {
             }
 
             /**
-             * last_journeys.
+             * <p>The itinerary of the last change</p>
              */
             public Builder lastJourneys(java.util.List<LastJourneys> lastJourneys) {
                 this.lastJourneys = lastJourneys;
@@ -2711,7 +2993,10 @@ public class ChangeDetailResponseBody extends TeaModel {
             }
 
             /**
-             * order_num.
+             * <p>Ticketing Order number</p>
+             * 
+             * <strong>example:</strong>
+             * <p>5988430***541</p>
              */
             public Builder orderNum(Long orderNum) {
                 this.orderNum = orderNum;
@@ -2719,7 +3004,10 @@ public class ChangeDetailResponseBody extends TeaModel {
             }
 
             /**
-             * order_status.
+             * <p>Change order status 0: Initial state; 1: Pending payment; 2: Payment successful; 3: Change successful; 4: Change closed</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2</p>
              */
             public Builder orderStatus(Integer orderStatus) {
                 this.orderStatus = orderStatus;
@@ -2727,7 +3015,7 @@ public class ChangeDetailResponseBody extends TeaModel {
             }
 
             /**
-             * original_journeys.
+             * <p>Original journeys</p>
              */
             public Builder originalJourneys(java.util.List<OriginalJourneys> originalJourneys) {
                 this.originalJourneys = originalJourneys;
@@ -2735,7 +3023,10 @@ public class ChangeDetailResponseBody extends TeaModel {
             }
 
             /**
-             * pay_status.
+             * <p>Payment status 0: initial state; 1: pending payment; 2: payment successful; 4: successfully closed paid order; 5: successfully closed unpaid order</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2</p>
              */
             public Builder payStatus(Integer payStatus) {
                 this.payStatus = payStatus;
@@ -2743,7 +3034,10 @@ public class ChangeDetailResponseBody extends TeaModel {
             }
 
             /**
-             * pay_success_utc_time.
+             * <p>The time when the buyer successfully paid, in UTC timestamp</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1677415255000</p>
              */
             public Builder paySuccessUtcTime(Long paySuccessUtcTime) {
                 this.paySuccessUtcTime = paySuccessUtcTime;
@@ -2751,7 +3045,10 @@ public class ChangeDetailResponseBody extends TeaModel {
             }
 
             /**
-             * total_amount.
+             * <p>Total payment amount for the change order</p>
+             * 
+             * <strong>example:</strong>
+             * <p>300</p>
              */
             public Builder totalAmount(Double totalAmount) {
                 this.totalAmount = totalAmount;
@@ -2759,7 +3056,10 @@ public class ChangeDetailResponseBody extends TeaModel {
             }
 
             /**
-             * transaction_no.
+             * <p>Transaction serial number</p>
+             * 
+             * <strong>example:</strong>
+             * <p>hkduendkd-2023-dj0</p>
              */
             public Builder transactionNo(String transactionNo) {
                 this.transactionNo = transactionNo;

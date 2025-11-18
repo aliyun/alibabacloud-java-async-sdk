@@ -184,7 +184,7 @@ public class SearchResponseBody extends TeaModel {
         }
 
         /**
-         * <p>http reqeust has been processed successfully，status code is 200</p>
+         * <p>http request has been processed successfully，status code is 200</p>
          * 
          * <strong>example:</strong>
          * <p>200</p>
@@ -1141,7 +1141,7 @@ public class SearchResponseBody extends TeaModel {
             } 
 
             /**
-             * issue_ticket_type.
+             * <p>Issue ticket type: 1: after payment; 2: before departure; -1: unknown</p>
              */
             public Builder issueTicketType(Integer issueTicketType) {
                 this.issueTicketType = issueTicketType;
@@ -1149,7 +1149,7 @@ public class SearchResponseBody extends TeaModel {
             }
 
             /**
-             * issue_time_limit.
+             * <p>Estimated issue ticket time, unit: minutes</p>
              */
             public Builder issueTimeLimit(Integer issueTimeLimit) {
                 this.issueTimeLimit = issueTimeLimit;
@@ -1216,7 +1216,7 @@ public class SearchResponseBody extends TeaModel {
             } 
 
             /**
-             * issue_time_info.
+             * <p>Issue ticket time related</p>
              */
             public Builder issueTimeInfo(IssueTimeInfo issueTimeInfo) {
                 this.issueTimeInfo = issueTimeInfo;
@@ -1224,7 +1224,7 @@ public class SearchResponseBody extends TeaModel {
             }
 
             /**
-             * <p>supply source: 1;2;3</p>
+             * <p>Supply source type 1: Self-operated; 2: Agent; 3: Flagship store</p>
              * 
              * <strong>example:</strong>
              * <p>1</p>
@@ -1522,7 +1522,7 @@ public class SearchResponseBody extends TeaModel {
             }
 
             /**
-             * <p>supply source type</p>
+             * <p>Quotation attributes</p>
              */
             public Builder solutionAttribute(SolutionAttribute solutionAttribute) {
                 this.solutionAttribute = solutionAttribute;
