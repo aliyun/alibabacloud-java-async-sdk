@@ -26,6 +26,9 @@ public class DescribeAppInstanceAttributeResponseBody extends TeaModel {
     @com.aliyun.core.annotation.NameInMap("DBInstanceName")
     private String DBInstanceName;
 
+    @com.aliyun.core.annotation.NameInMap("EipStatus")
+    private String eipStatus;
+
     @com.aliyun.core.annotation.NameInMap("InstanceClass")
     private String instanceClass;
 
@@ -34,6 +37,9 @@ public class DescribeAppInstanceAttributeResponseBody extends TeaModel {
 
     @com.aliyun.core.annotation.NameInMap("InstanceName")
     private String instanceName;
+
+    @com.aliyun.core.annotation.NameInMap("NatStatus")
+    private String natStatus;
 
     @com.aliyun.core.annotation.NameInMap("PublicConnectionString")
     private String publicConnectionString;
@@ -60,9 +66,11 @@ public class DescribeAppInstanceAttributeResponseBody extends TeaModel {
         this.appName = builder.appName;
         this.appType = builder.appType;
         this.DBInstanceName = builder.DBInstanceName;
+        this.eipStatus = builder.eipStatus;
         this.instanceClass = builder.instanceClass;
         this.instanceMinorVersion = builder.instanceMinorVersion;
         this.instanceName = builder.instanceName;
+        this.natStatus = builder.natStatus;
         this.publicConnectionString = builder.publicConnectionString;
         this.regionId = builder.regionId;
         this.requestId = builder.requestId;
@@ -106,6 +114,13 @@ public class DescribeAppInstanceAttributeResponseBody extends TeaModel {
     }
 
     /**
+     * @return eipStatus
+     */
+    public String getEipStatus() {
+        return this.eipStatus;
+    }
+
+    /**
      * @return instanceClass
      */
     public String getInstanceClass() {
@@ -124,6 +139,13 @@ public class DescribeAppInstanceAttributeResponseBody extends TeaModel {
      */
     public String getInstanceName() {
         return this.instanceName;
+    }
+
+    /**
+     * @return natStatus
+     */
+    public String getNatStatus() {
+        return this.natStatus;
     }
 
     /**
@@ -179,9 +201,11 @@ public class DescribeAppInstanceAttributeResponseBody extends TeaModel {
         private String appName; 
         private String appType; 
         private String DBInstanceName; 
+        private String eipStatus; 
         private String instanceClass; 
         private String instanceMinorVersion; 
         private String instanceName; 
+        private String natStatus; 
         private String publicConnectionString; 
         private String regionId; 
         private String requestId; 
@@ -197,9 +221,11 @@ public class DescribeAppInstanceAttributeResponseBody extends TeaModel {
             this.appName = model.appName;
             this.appType = model.appType;
             this.DBInstanceName = model.DBInstanceName;
+            this.eipStatus = model.eipStatus;
             this.instanceClass = model.instanceClass;
             this.instanceMinorVersion = model.instanceMinorVersion;
             this.instanceName = model.instanceName;
+            this.natStatus = model.natStatus;
             this.publicConnectionString = model.publicConnectionString;
             this.regionId = model.regionId;
             this.requestId = model.requestId;
@@ -234,6 +260,14 @@ public class DescribeAppInstanceAttributeResponseBody extends TeaModel {
         }
 
         /**
+         * EipStatus.
+         */
+        public Builder eipStatus(String eipStatus) {
+            this.eipStatus = eipStatus;
+            return this;
+        }
+
+        /**
          * InstanceClass.
          */
         public Builder instanceClass(String instanceClass) {
@@ -254,6 +288,14 @@ public class DescribeAppInstanceAttributeResponseBody extends TeaModel {
          */
         public Builder instanceName(String instanceName) {
             this.instanceName = instanceName;
+            return this;
+        }
+
+        /**
+         * NatStatus.
+         */
+        public Builder natStatus(String natStatus) {
+            this.natStatus = natStatus;
             return this;
         }
 

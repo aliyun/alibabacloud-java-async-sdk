@@ -86,6 +86,12 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<ModifyInstanceAuthConfigResponse> modifyInstanceAuthConfig(ModifyInstanceAuthConfigRequest request);
 
     /**
+     * @param request the request parameters of ModifyInstanceConfig  ModifyInstanceConfigRequest
+     * @return ModifyInstanceConfigResponse
+     */
+    CompletableFuture<ModifyInstanceConfigResponse> modifyInstanceConfig(ModifyInstanceConfigRequest request);
+
+    /**
      * @param request the request parameters of ModifyInstanceIpWhitelist  ModifyInstanceIpWhitelistRequest
      * @return ModifyInstanceIpWhitelistResponse
      */
