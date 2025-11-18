@@ -18,12 +18,20 @@ import com.aliyun.sdk.gateway.pop.models.*;
  */
 public class GetLoginTokenRequest extends Request {
     @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("AreaSite")
+    private String areaSite;
+
+    @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("AuthenticationCode")
     private String authenticationCode;
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("AvailableFeatures")
     private java.util.Map<String, String> availableFeatures;
+
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Channel")
+    private String channel;
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("ClientId")
@@ -165,8 +173,10 @@ public class GetLoginTokenRequest extends Request {
 
     private GetLoginTokenRequest(Builder builder) {
         super(builder);
+        this.areaSite = builder.areaSite;
         this.authenticationCode = builder.authenticationCode;
         this.availableFeatures = builder.availableFeatures;
+        this.channel = builder.channel;
         this.clientId = builder.clientId;
         this.clientName = builder.clientName;
         this.clientOS = builder.clientOS;
@@ -217,6 +227,13 @@ public class GetLoginTokenRequest extends Request {
     }
 
     /**
+     * @return areaSite
+     */
+    public String getAreaSite() {
+        return this.areaSite;
+    }
+
+    /**
      * @return authenticationCode
      */
     public String getAuthenticationCode() {
@@ -228,6 +245,13 @@ public class GetLoginTokenRequest extends Request {
      */
     public java.util.Map<String, String> getAvailableFeatures() {
         return this.availableFeatures;
+    }
+
+    /**
+     * @return channel
+     */
+    public String getChannel() {
+        return this.channel;
     }
 
     /**
@@ -469,8 +493,10 @@ public class GetLoginTokenRequest extends Request {
     }
 
     public static final class Builder extends Request.Builder<GetLoginTokenRequest, Builder> {
+        private String areaSite; 
         private String authenticationCode; 
         private java.util.Map<String, String> availableFeatures; 
+        private String channel; 
         private String clientId; 
         private String clientName; 
         private String clientOS; 
@@ -512,8 +538,10 @@ public class GetLoginTokenRequest extends Request {
 
         private Builder(GetLoginTokenRequest request) {
             super(request);
+            this.areaSite = request.areaSite;
             this.authenticationCode = request.authenticationCode;
             this.availableFeatures = request.availableFeatures;
+            this.channel = request.channel;
             this.clientId = request.clientId;
             this.clientName = request.clientName;
             this.clientOS = request.clientOS;
@@ -551,6 +579,15 @@ public class GetLoginTokenRequest extends Request {
         } 
 
         /**
+         * AreaSite.
+         */
+        public Builder areaSite(String areaSite) {
+            this.putQueryParameter("AreaSite", areaSite);
+            this.areaSite = areaSite;
+            return this;
+        }
+
+        /**
          * AuthenticationCode.
          */
         public Builder authenticationCode(String authenticationCode) {
@@ -566,6 +603,15 @@ public class GetLoginTokenRequest extends Request {
             String availableFeaturesShrink = shrink(availableFeatures, "AvailableFeatures", "json");
             this.putQueryParameter("AvailableFeatures", availableFeaturesShrink);
             this.availableFeatures = availableFeatures;
+            return this;
+        }
+
+        /**
+         * Channel.
+         */
+        public Builder channel(String channel) {
+            this.putQueryParameter("Channel", channel);
+            this.channel = channel;
             return this;
         }
 
