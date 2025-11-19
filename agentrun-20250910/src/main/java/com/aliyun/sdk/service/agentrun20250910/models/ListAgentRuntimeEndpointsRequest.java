@@ -34,12 +34,17 @@ public class ListAgentRuntimeEndpointsRequest extends Request {
     @com.aliyun.core.annotation.NameInMap("pageSize")
     private Integer pageSize;
 
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("searchMode")
+    private String searchMode;
+
     private ListAgentRuntimeEndpointsRequest(Builder builder) {
         super(builder);
         this.agentRuntimeId = builder.agentRuntimeId;
         this.endpointName = builder.endpointName;
         this.pageNumber = builder.pageNumber;
         this.pageSize = builder.pageSize;
+        this.searchMode = builder.searchMode;
     }
 
     public static Builder builder() {
@@ -83,11 +88,19 @@ public class ListAgentRuntimeEndpointsRequest extends Request {
         return this.pageSize;
     }
 
+    /**
+     * @return searchMode
+     */
+    public String getSearchMode() {
+        return this.searchMode;
+    }
+
     public static final class Builder extends Request.Builder<ListAgentRuntimeEndpointsRequest, Builder> {
         private String agentRuntimeId; 
         private String endpointName; 
         private Integer pageNumber; 
         private Integer pageSize; 
+        private String searchMode; 
 
         private Builder() {
             super();
@@ -99,6 +112,7 @@ public class ListAgentRuntimeEndpointsRequest extends Request {
             this.endpointName = request.endpointName;
             this.pageNumber = request.pageNumber;
             this.pageSize = request.pageSize;
+            this.searchMode = request.searchMode;
         } 
 
         /**
@@ -147,6 +161,18 @@ public class ListAgentRuntimeEndpointsRequest extends Request {
         public Builder pageSize(Integer pageSize) {
             this.putQueryParameter("pageSize", pageSize);
             this.pageSize = pageSize;
+            return this;
+        }
+
+        /**
+         * <p>查询模式，支持精确查询和模糊查询</p>
+         * 
+         * <strong>example:</strong>
+         * <p>fuzzy</p>
+         */
+        public Builder searchMode(String searchMode) {
+            this.putQueryParameter("searchMode", searchMode);
+            this.searchMode = searchMode;
             return this;
         }
 

@@ -33,6 +33,9 @@ public class UpdateAgentRuntimeInput extends TeaModel {
     @com.aliyun.core.annotation.Validation(required = true)
     private Float cpu;
 
+    @com.aliyun.core.annotation.NameInMap("credentialName")
+    private String credentialName;
+
     @com.aliyun.core.annotation.NameInMap("description")
     private String description;
 
@@ -73,6 +76,7 @@ public class UpdateAgentRuntimeInput extends TeaModel {
         this.codeConfiguration = builder.codeConfiguration;
         this.containerConfiguration = builder.containerConfiguration;
         this.cpu = builder.cpu;
+        this.credentialName = builder.credentialName;
         this.description = builder.description;
         this.environmentVariables = builder.environmentVariables;
         this.executionRoleArn = builder.executionRoleArn;
@@ -131,6 +135,13 @@ public class UpdateAgentRuntimeInput extends TeaModel {
      */
     public Float getCpu() {
         return this.cpu;
+    }
+
+    /**
+     * @return credentialName
+     */
+    public String getCredentialName() {
+        return this.credentialName;
     }
 
     /**
@@ -216,6 +227,7 @@ public class UpdateAgentRuntimeInput extends TeaModel {
         private CodeConfiguration codeConfiguration; 
         private ContainerConfiguration containerConfiguration; 
         private Float cpu; 
+        private String credentialName; 
         private String description; 
         private java.util.Map<String, String> environmentVariables; 
         private String executionRoleArn; 
@@ -237,6 +249,7 @@ public class UpdateAgentRuntimeInput extends TeaModel {
             this.codeConfiguration = model.codeConfiguration;
             this.containerConfiguration = model.containerConfiguration;
             this.cpu = model.cpu;
+            this.credentialName = model.credentialName;
             this.description = model.description;
             this.environmentVariables = model.environmentVariables;
             this.executionRoleArn = model.executionRoleArn;
@@ -296,6 +309,17 @@ public class UpdateAgentRuntimeInput extends TeaModel {
          */
         public Builder cpu(Float cpu) {
             this.cpu = cpu;
+            return this;
+        }
+
+        /**
+         * <p>用于访问智能体的凭证名称，访问智能体运行时将使用此凭证进行身份验证</p>
+         * 
+         * <strong>example:</strong>
+         * <p>my-credential</p>
+         */
+        public Builder credentialName(String credentialName) {
+            this.credentialName = credentialName;
             return this;
         }
 

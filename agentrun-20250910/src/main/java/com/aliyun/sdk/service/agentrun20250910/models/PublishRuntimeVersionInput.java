@@ -20,8 +20,12 @@ public class PublishRuntimeVersionInput extends TeaModel {
     @com.aliyun.core.annotation.NameInMap("description")
     private String description;
 
+    @com.aliyun.core.annotation.NameInMap("publisher")
+    private String publisher;
+
     private PublishRuntimeVersionInput(Builder builder) {
         this.description = builder.description;
+        this.publisher = builder.publisher;
     }
 
     public static Builder builder() {
@@ -43,14 +47,23 @@ public class PublishRuntimeVersionInput extends TeaModel {
         return this.description;
     }
 
+    /**
+     * @return publisher
+     */
+    public String getPublisher() {
+        return this.publisher;
+    }
+
     public static final class Builder {
         private String description; 
+        private String publisher; 
 
         private Builder() {
         } 
 
         private Builder(PublishRuntimeVersionInput model) {
             this.description = model.description;
+            this.publisher = model.publisher;
         } 
 
         /**
@@ -58,6 +71,17 @@ public class PublishRuntimeVersionInput extends TeaModel {
          */
         public Builder description(String description) {
             this.description = description;
+            return this;
+        }
+
+        /**
+         * <p>发布此版本的用户或系统标识</p>
+         * 
+         * <strong>example:</strong>
+         * <p>user123</p>
+         */
+        public Builder publisher(String publisher) {
+            this.publisher = publisher;
             return this;
         }
 

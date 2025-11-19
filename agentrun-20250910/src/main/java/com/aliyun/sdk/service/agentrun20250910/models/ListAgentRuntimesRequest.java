@@ -29,11 +29,16 @@ public class ListAgentRuntimesRequest extends Request {
     @com.aliyun.core.annotation.NameInMap("pageSize")
     private Integer pageSize;
 
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("searchMode")
+    private String searchMode;
+
     private ListAgentRuntimesRequest(Builder builder) {
         super(builder);
         this.agentRuntimeName = builder.agentRuntimeName;
         this.pageNumber = builder.pageNumber;
         this.pageSize = builder.pageSize;
+        this.searchMode = builder.searchMode;
     }
 
     public static Builder builder() {
@@ -70,10 +75,18 @@ public class ListAgentRuntimesRequest extends Request {
         return this.pageSize;
     }
 
+    /**
+     * @return searchMode
+     */
+    public String getSearchMode() {
+        return this.searchMode;
+    }
+
     public static final class Builder extends Request.Builder<ListAgentRuntimesRequest, Builder> {
         private String agentRuntimeName; 
         private Integer pageNumber; 
         private Integer pageSize; 
+        private String searchMode; 
 
         private Builder() {
             super();
@@ -84,6 +97,7 @@ public class ListAgentRuntimesRequest extends Request {
             this.agentRuntimeName = request.agentRuntimeName;
             this.pageNumber = request.pageNumber;
             this.pageSize = request.pageSize;
+            this.searchMode = request.searchMode;
         } 
 
         /**
@@ -119,6 +133,18 @@ public class ListAgentRuntimesRequest extends Request {
         public Builder pageSize(Integer pageSize) {
             this.putQueryParameter("pageSize", pageSize);
             this.pageSize = pageSize;
+            return this;
+        }
+
+        /**
+         * <p>查询模式，支持精确查询和模糊查询</p>
+         * 
+         * <strong>example:</strong>
+         * <p>fuzzy</p>
+         */
+        public Builder searchMode(String searchMode) {
+            this.putQueryParameter("searchMode", searchMode);
+            this.searchMode = searchMode;
             return this;
         }
 

@@ -27,10 +27,6 @@ public class UpdateMemoryRequest extends Request {
     private Integer longTtl;
 
     @com.aliyun.core.annotation.Body
-    @com.aliyun.core.annotation.NameInMap("permanent")
-    private Boolean permanent;
-
-    @com.aliyun.core.annotation.Body
     @com.aliyun.core.annotation.NameInMap("shortTtl")
     private Integer shortTtl;
 
@@ -42,7 +38,6 @@ public class UpdateMemoryRequest extends Request {
         super(builder);
         this.memoryName = builder.memoryName;
         this.longTtl = builder.longTtl;
-        this.permanent = builder.permanent;
         this.shortTtl = builder.shortTtl;
         this.strategy = builder.strategy;
     }
@@ -75,13 +70,6 @@ public class UpdateMemoryRequest extends Request {
     }
 
     /**
-     * @return permanent
-     */
-    public Boolean getPermanent() {
-        return this.permanent;
-    }
-
-    /**
      * @return shortTtl
      */
     public Integer getShortTtl() {
@@ -98,7 +86,6 @@ public class UpdateMemoryRequest extends Request {
     public static final class Builder extends Request.Builder<UpdateMemoryRequest, Builder> {
         private String memoryName; 
         private Integer longTtl; 
-        private Boolean permanent; 
         private Integer shortTtl; 
         private java.util.List<String> strategy; 
 
@@ -110,7 +97,6 @@ public class UpdateMemoryRequest extends Request {
             super(request);
             this.memoryName = request.memoryName;
             this.longTtl = request.longTtl;
-            this.permanent = request.permanent;
             this.shortTtl = request.shortTtl;
             this.strategy = request.strategy;
         } 
@@ -133,15 +119,6 @@ public class UpdateMemoryRequest extends Request {
         public Builder longTtl(Integer longTtl) {
             this.putBodyParameter("longTtl", longTtl);
             this.longTtl = longTtl;
-            return this;
-        }
-
-        /**
-         * permanent.
-         */
-        public Builder permanent(Boolean permanent) {
-            this.putBodyParameter("permanent", permanent);
-            this.permanent = permanent;
             return this;
         }
 

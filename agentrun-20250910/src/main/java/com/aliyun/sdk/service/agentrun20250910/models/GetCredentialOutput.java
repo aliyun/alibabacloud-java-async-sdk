@@ -17,38 +17,50 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>GetCredentialOutput</p>
  */
 public class GetCredentialOutput extends TeaModel {
-    @com.aliyun.core.annotation.NameInMap("config")
-    private java.util.Map<String, String> config;
-
     @com.aliyun.core.annotation.NameInMap("createdAt")
     private String createdAt;
+
+    @com.aliyun.core.annotation.NameInMap("credentialAuthType")
+    private String credentialAuthType;
+
+    @com.aliyun.core.annotation.NameInMap("credentialId")
+    private String credentialId;
+
+    @com.aliyun.core.annotation.NameInMap("credentialName")
+    private String credentialName;
+
+    @com.aliyun.core.annotation.NameInMap("credentialPublicConfig")
+    private java.util.Map<String, String> credentialPublicConfig;
+
+    @com.aliyun.core.annotation.NameInMap("credentialSecret")
+    private String credentialSecret;
+
+    @com.aliyun.core.annotation.NameInMap("credentialSourceType")
+    private String credentialSourceType;
 
     @com.aliyun.core.annotation.NameInMap("description")
     private String description;
 
-    @com.aliyun.core.annotation.NameInMap("id")
-    private String id;
+    @com.aliyun.core.annotation.NameInMap("enabled")
+    private Boolean enabled;
 
-    @com.aliyun.core.annotation.NameInMap("name")
-    private String name;
-
-    @com.aliyun.core.annotation.NameInMap("secret")
-    private String secret;
-
-    @com.aliyun.core.annotation.NameInMap("type")
-    private String type;
+    @com.aliyun.core.annotation.NameInMap("relatedResources")
+    private java.util.List<RelatedResource> relatedResources;
 
     @com.aliyun.core.annotation.NameInMap("updatedAt")
     private String updatedAt;
 
     private GetCredentialOutput(Builder builder) {
-        this.config = builder.config;
         this.createdAt = builder.createdAt;
+        this.credentialAuthType = builder.credentialAuthType;
+        this.credentialId = builder.credentialId;
+        this.credentialName = builder.credentialName;
+        this.credentialPublicConfig = builder.credentialPublicConfig;
+        this.credentialSecret = builder.credentialSecret;
+        this.credentialSourceType = builder.credentialSourceType;
         this.description = builder.description;
-        this.id = builder.id;
-        this.name = builder.name;
-        this.secret = builder.secret;
-        this.type = builder.type;
+        this.enabled = builder.enabled;
+        this.relatedResources = builder.relatedResources;
         this.updatedAt = builder.updatedAt;
     }
 
@@ -65,17 +77,52 @@ public class GetCredentialOutput extends TeaModel {
     }
 
     /**
-     * @return config
-     */
-    public java.util.Map<String, String> getConfig() {
-        return this.config;
-    }
-
-    /**
      * @return createdAt
      */
     public String getCreatedAt() {
         return this.createdAt;
+    }
+
+    /**
+     * @return credentialAuthType
+     */
+    public String getCredentialAuthType() {
+        return this.credentialAuthType;
+    }
+
+    /**
+     * @return credentialId
+     */
+    public String getCredentialId() {
+        return this.credentialId;
+    }
+
+    /**
+     * @return credentialName
+     */
+    public String getCredentialName() {
+        return this.credentialName;
+    }
+
+    /**
+     * @return credentialPublicConfig
+     */
+    public java.util.Map<String, String> getCredentialPublicConfig() {
+        return this.credentialPublicConfig;
+    }
+
+    /**
+     * @return credentialSecret
+     */
+    public String getCredentialSecret() {
+        return this.credentialSecret;
+    }
+
+    /**
+     * @return credentialSourceType
+     */
+    public String getCredentialSourceType() {
+        return this.credentialSourceType;
     }
 
     /**
@@ -86,31 +133,17 @@ public class GetCredentialOutput extends TeaModel {
     }
 
     /**
-     * @return id
+     * @return enabled
      */
-    public String getId() {
-        return this.id;
+    public Boolean getEnabled() {
+        return this.enabled;
     }
 
     /**
-     * @return name
+     * @return relatedResources
      */
-    public String getName() {
-        return this.name;
-    }
-
-    /**
-     * @return secret
-     */
-    public String getSecret() {
-        return this.secret;
-    }
-
-    /**
-     * @return type
-     */
-    public String getType() {
-        return this.type;
+    public java.util.List<RelatedResource> getRelatedResources() {
+        return this.relatedResources;
     }
 
     /**
@@ -121,45 +154,88 @@ public class GetCredentialOutput extends TeaModel {
     }
 
     public static final class Builder {
-        private java.util.Map<String, String> config; 
         private String createdAt; 
+        private String credentialAuthType; 
+        private String credentialId; 
+        private String credentialName; 
+        private java.util.Map<String, String> credentialPublicConfig; 
+        private String credentialSecret; 
+        private String credentialSourceType; 
         private String description; 
-        private String id; 
-        private String name; 
-        private String secret; 
-        private String type; 
+        private Boolean enabled; 
+        private java.util.List<RelatedResource> relatedResources; 
         private String updatedAt; 
 
         private Builder() {
         } 
 
         private Builder(GetCredentialOutput model) {
-            this.config = model.config;
             this.createdAt = model.createdAt;
+            this.credentialAuthType = model.credentialAuthType;
+            this.credentialId = model.credentialId;
+            this.credentialName = model.credentialName;
+            this.credentialPublicConfig = model.credentialPublicConfig;
+            this.credentialSecret = model.credentialSecret;
+            this.credentialSourceType = model.credentialSourceType;
             this.description = model.description;
-            this.id = model.id;
-            this.name = model.name;
-            this.secret = model.secret;
-            this.type = model.type;
+            this.enabled = model.enabled;
+            this.relatedResources = model.relatedResources;
             this.updatedAt = model.updatedAt;
         } 
-
-        /**
-         * <p>凭证的配置参数，以键值对形式存储</p>
-         * 
-         * <strong>example:</strong>
-         * <p>api_endpoint=<a href="https://api.example.com,timeout=30">https://api.example.com,timeout=30</a></p>
-         */
-        public Builder config(java.util.Map<String, String> config) {
-            this.config = config;
-            return this;
-        }
 
         /**
          * createdAt.
          */
         public Builder createdAt(String createdAt) {
             this.createdAt = createdAt;
+            return this;
+        }
+
+        /**
+         * credentialAuthType.
+         */
+        public Builder credentialAuthType(String credentialAuthType) {
+            this.credentialAuthType = credentialAuthType;
+            return this;
+        }
+
+        /**
+         * credentialId.
+         */
+        public Builder credentialId(String credentialId) {
+            this.credentialId = credentialId;
+            return this;
+        }
+
+        /**
+         * credentialName.
+         */
+        public Builder credentialName(String credentialName) {
+            this.credentialName = credentialName;
+            return this;
+        }
+
+        /**
+         * credentialPublicConfig.
+         */
+        public Builder credentialPublicConfig(java.util.Map<String, String> credentialPublicConfig) {
+            this.credentialPublicConfig = credentialPublicConfig;
+            return this;
+        }
+
+        /**
+         * credentialSecret.
+         */
+        public Builder credentialSecret(String credentialSecret) {
+            this.credentialSecret = credentialSecret;
+            return this;
+        }
+
+        /**
+         * credentialSourceType.
+         */
+        public Builder credentialSourceType(String credentialSourceType) {
+            this.credentialSourceType = credentialSourceType;
             return this;
         }
 
@@ -172,34 +248,18 @@ public class GetCredentialOutput extends TeaModel {
         }
 
         /**
-         * id.
+         * enabled.
          */
-        public Builder id(String id) {
-            this.id = id;
+        public Builder enabled(Boolean enabled) {
+            this.enabled = enabled;
             return this;
         }
 
         /**
-         * name.
+         * relatedResources.
          */
-        public Builder name(String name) {
-            this.name = name;
-            return this;
-        }
-
-        /**
-         * secret.
-         */
-        public Builder secret(String secret) {
-            this.secret = secret;
-            return this;
-        }
-
-        /**
-         * type.
-         */
-        public Builder type(String type) {
-            this.type = type;
+        public Builder relatedResources(java.util.List<RelatedResource> relatedResources) {
+            this.relatedResources = relatedResources;
             return this;
         }
 

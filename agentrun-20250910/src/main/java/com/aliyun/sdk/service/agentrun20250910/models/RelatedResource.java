@@ -12,11 +12,11 @@ import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
  * 
- * {@link RelatedWorkload} extends {@link TeaModel}
+ * {@link RelatedResource} extends {@link TeaModel}
  *
- * <p>RelatedWorkload</p>
+ * <p>RelatedResource</p>
  */
-public class RelatedWorkload extends TeaModel {
+public class RelatedResource extends TeaModel {
     @com.aliyun.core.annotation.NameInMap("resourceId")
     private String resourceId;
 
@@ -26,7 +26,7 @@ public class RelatedWorkload extends TeaModel {
     @com.aliyun.core.annotation.NameInMap("resourceType")
     private String resourceType;
 
-    private RelatedWorkload(Builder builder) {
+    private RelatedResource(Builder builder) {
         this.resourceId = builder.resourceId;
         this.resourceName = builder.resourceName;
         this.resourceType = builder.resourceType;
@@ -36,7 +36,7 @@ public class RelatedWorkload extends TeaModel {
         return new Builder();
     }
 
-    public static RelatedWorkload create() {
+    public static RelatedResource create() {
         return builder().build();
     }
 
@@ -73,7 +73,7 @@ public class RelatedWorkload extends TeaModel {
         private Builder() {
         } 
 
-        private Builder(RelatedWorkload model) {
+        private Builder(RelatedResource model) {
             this.resourceId = model.resourceId;
             this.resourceName = model.resourceName;
             this.resourceType = model.resourceType;
@@ -103,8 +103,8 @@ public class RelatedWorkload extends TeaModel {
             return this;
         }
 
-        public RelatedWorkload build() {
-            return new RelatedWorkload(this);
+        public RelatedResource build() {
+            return new RelatedResource(this);
         } 
 
     } 

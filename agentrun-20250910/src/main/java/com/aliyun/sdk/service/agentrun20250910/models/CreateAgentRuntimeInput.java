@@ -36,7 +36,11 @@ public class CreateAgentRuntimeInput extends TeaModel {
     private Float cpu;
 
     @com.aliyun.core.annotation.NameInMap("credentialId")
+    @Deprecated
     private String credentialId;
+
+    @com.aliyun.core.annotation.NameInMap("credentialName")
+    private String credentialName;
 
     @com.aliyun.core.annotation.NameInMap("description")
     private String description;
@@ -82,6 +86,7 @@ public class CreateAgentRuntimeInput extends TeaModel {
         this.containerConfiguration = builder.containerConfiguration;
         this.cpu = builder.cpu;
         this.credentialId = builder.credentialId;
+        this.credentialName = builder.credentialName;
         this.description = builder.description;
         this.environmentVariables = builder.environmentVariables;
         this.executionRoleArn = builder.executionRoleArn;
@@ -147,6 +152,13 @@ public class CreateAgentRuntimeInput extends TeaModel {
      */
     public String getCredentialId() {
         return this.credentialId;
+    }
+
+    /**
+     * @return credentialName
+     */
+    public String getCredentialName() {
+        return this.credentialName;
     }
 
     /**
@@ -233,6 +245,7 @@ public class CreateAgentRuntimeInput extends TeaModel {
         private ContainerConfiguration containerConfiguration; 
         private Float cpu; 
         private String credentialId; 
+        private String credentialName; 
         private String description; 
         private java.util.Map<String, String> environmentVariables; 
         private String executionRoleArn; 
@@ -255,6 +268,7 @@ public class CreateAgentRuntimeInput extends TeaModel {
             this.containerConfiguration = model.containerConfiguration;
             this.cpu = model.cpu;
             this.credentialId = model.credentialId;
+            this.credentialName = model.credentialName;
             this.description = model.description;
             this.environmentVariables = model.environmentVariables;
             this.executionRoleArn = model.executionRoleArn;
@@ -334,6 +348,17 @@ public class CreateAgentRuntimeInput extends TeaModel {
          */
         public Builder credentialId(String credentialId) {
             this.credentialId = credentialId;
+            return this;
+        }
+
+        /**
+         * <p>用于访问智能体的凭证名称，访问智能体运行时将使用此凭证进行身份验证</p>
+         * 
+         * <strong>example:</strong>
+         * <p>my-credential</p>
+         */
+        public Builder credentialName(String credentialName) {
+            this.credentialName = credentialName;
             return this;
         }
 

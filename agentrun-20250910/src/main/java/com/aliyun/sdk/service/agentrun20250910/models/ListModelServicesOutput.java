@@ -12,24 +12,24 @@ import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
  * 
- * {@link ListCredentialsOutput} extends {@link TeaModel}
+ * {@link ListModelServicesOutput} extends {@link TeaModel}
  *
- * <p>ListCredentialsOutput</p>
+ * <p>ListModelServicesOutput</p>
  */
-public class ListCredentialsOutput extends TeaModel {
+public class ListModelServicesOutput extends TeaModel {
     @com.aliyun.core.annotation.NameInMap("items")
-    private java.util.List<CredentialListItem> items;
+    private java.util.List<ModelService> items;
 
     @com.aliyun.core.annotation.NameInMap("pageNumber")
-    private String pageNumber;
+    private Integer pageNumber;
 
     @com.aliyun.core.annotation.NameInMap("pageSize")
-    private String pageSize;
+    private Integer pageSize;
 
     @com.aliyun.core.annotation.NameInMap("total")
-    private String total;
+    private Long total;
 
-    private ListCredentialsOutput(Builder builder) {
+    private ListModelServicesOutput(Builder builder) {
         this.items = builder.items;
         this.pageNumber = builder.pageNumber;
         this.pageSize = builder.pageSize;
@@ -40,7 +40,7 @@ public class ListCredentialsOutput extends TeaModel {
         return new Builder();
     }
 
-    public static ListCredentialsOutput create() {
+    public static ListModelServicesOutput create() {
         return builder().build();
     }
 
@@ -51,41 +51,41 @@ public class ListCredentialsOutput extends TeaModel {
     /**
      * @return items
      */
-    public java.util.List<CredentialListItem> getItems() {
+    public java.util.List<ModelService> getItems() {
         return this.items;
     }
 
     /**
      * @return pageNumber
      */
-    public String getPageNumber() {
+    public Integer getPageNumber() {
         return this.pageNumber;
     }
 
     /**
      * @return pageSize
      */
-    public String getPageSize() {
+    public Integer getPageSize() {
         return this.pageSize;
     }
 
     /**
      * @return total
      */
-    public String getTotal() {
+    public Long getTotal() {
         return this.total;
     }
 
     public static final class Builder {
-        private java.util.List<CredentialListItem> items; 
-        private String pageNumber; 
-        private String pageSize; 
-        private String total; 
+        private java.util.List<ModelService> items; 
+        private Integer pageNumber; 
+        private Integer pageSize; 
+        private Long total; 
 
         private Builder() {
         } 
 
-        private Builder(ListCredentialsOutput model) {
+        private Builder(ListModelServicesOutput model) {
             this.items = model.items;
             this.pageNumber = model.pageNumber;
             this.pageSize = model.pageSize;
@@ -95,7 +95,7 @@ public class ListCredentialsOutput extends TeaModel {
         /**
          * items.
          */
-        public Builder items(java.util.List<CredentialListItem> items) {
+        public Builder items(java.util.List<ModelService> items) {
             this.items = items;
             return this;
         }
@@ -103,7 +103,7 @@ public class ListCredentialsOutput extends TeaModel {
         /**
          * pageNumber.
          */
-        public Builder pageNumber(String pageNumber) {
+        public Builder pageNumber(Integer pageNumber) {
             this.pageNumber = pageNumber;
             return this;
         }
@@ -111,7 +111,7 @@ public class ListCredentialsOutput extends TeaModel {
         /**
          * pageSize.
          */
-        public Builder pageSize(String pageSize) {
+        public Builder pageSize(Integer pageSize) {
             this.pageSize = pageSize;
             return this;
         }
@@ -119,13 +119,13 @@ public class ListCredentialsOutput extends TeaModel {
         /**
          * total.
          */
-        public Builder total(String total) {
+        public Builder total(Long total) {
             this.total = total;
             return this;
         }
 
-        public ListCredentialsOutput build() {
-            return new ListCredentialsOutput(this);
+        public ListModelServicesOutput build() {
+            return new ListModelServicesOutput(this);
         } 
 
     } 

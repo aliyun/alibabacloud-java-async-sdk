@@ -12,43 +12,51 @@ import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
  * 
- * {@link ListMemoryRequest} extends {@link RequestModel}
+ * {@link ListTemplatesOutput} extends {@link TeaModel}
  *
- * <p>ListMemoryRequest</p>
+ * <p>ListTemplatesOutput</p>
  */
-public class ListMemoryRequest extends Request {
-    @com.aliyun.core.annotation.Query
+public class ListTemplatesOutput extends TeaModel {
+    @com.aliyun.core.annotation.NameInMap("items")
+    @com.aliyun.core.annotation.Validation(required = true)
+    private java.util.List<Template> items;
+
     @com.aliyun.core.annotation.NameInMap("pageNumber")
     @com.aliyun.core.annotation.Validation(required = true)
     private Integer pageNumber;
 
-    @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("pageSize")
     @com.aliyun.core.annotation.Validation(required = true)
     private Integer pageSize;
 
-    @com.aliyun.core.annotation.Query
-    @com.aliyun.core.annotation.NameInMap("pattern")
-    private String pattern;
+    @com.aliyun.core.annotation.NameInMap("total")
+    @com.aliyun.core.annotation.Validation(required = true)
+    private Integer total;
 
-    private ListMemoryRequest(Builder builder) {
-        super(builder);
+    private ListTemplatesOutput(Builder builder) {
+        this.items = builder.items;
         this.pageNumber = builder.pageNumber;
         this.pageSize = builder.pageSize;
-        this.pattern = builder.pattern;
+        this.total = builder.total;
     }
 
     public static Builder builder() {
         return new Builder();
     }
 
-    public static ListMemoryRequest create() {
+    public static ListTemplatesOutput create() {
         return builder().build();
     }
 
-@Override
     public Builder toBuilder() {
         return new Builder(this);
+    }
+
+    /**
+     * @return items
+     */
+    public java.util.List<Template> getItems() {
+        return this.items;
     }
 
     /**
@@ -66,64 +74,62 @@ public class ListMemoryRequest extends Request {
     }
 
     /**
-     * @return pattern
+     * @return total
      */
-    public String getPattern() {
-        return this.pattern;
+    public Integer getTotal() {
+        return this.total;
     }
 
-    public static final class Builder extends Request.Builder<ListMemoryRequest, Builder> {
+    public static final class Builder {
+        private java.util.List<Template> items; 
         private Integer pageNumber; 
         private Integer pageSize; 
-        private String pattern; 
+        private Integer total; 
 
         private Builder() {
-            super();
         } 
 
-        private Builder(ListMemoryRequest request) {
-            super(request);
-            this.pageNumber = request.pageNumber;
-            this.pageSize = request.pageSize;
-            this.pattern = request.pattern;
+        private Builder(ListTemplatesOutput model) {
+            this.items = model.items;
+            this.pageNumber = model.pageNumber;
+            this.pageSize = model.pageSize;
+            this.total = model.total;
         } 
 
         /**
          * <p>This parameter is required.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>1</p>
+         */
+        public Builder items(java.util.List<Template> items) {
+            this.items = items;
+            return this;
+        }
+
+        /**
+         * <p>This parameter is required.</p>
          */
         public Builder pageNumber(Integer pageNumber) {
-            this.putQueryParameter("pageNumber", pageNumber);
             this.pageNumber = pageNumber;
             return this;
         }
 
         /**
          * <p>This parameter is required.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>0</p>
          */
         public Builder pageSize(Integer pageSize) {
-            this.putQueryParameter("pageSize", pageSize);
             this.pageSize = pageSize;
             return this;
         }
 
         /**
-         * pattern.
+         * <p>This parameter is required.</p>
          */
-        public Builder pattern(String pattern) {
-            this.putQueryParameter("pattern", pattern);
-            this.pattern = pattern;
+        public Builder total(Integer total) {
+            this.total = total;
             return this;
         }
 
-        @Override
-        public ListMemoryRequest build() {
-            return new ListMemoryRequest(this);
+        public ListTemplatesOutput build() {
+            return new ListTemplatesOutput(this);
         } 
 
     } 

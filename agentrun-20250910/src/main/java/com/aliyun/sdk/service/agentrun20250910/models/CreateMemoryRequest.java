@@ -28,10 +28,6 @@ public class CreateMemoryRequest extends Request {
     private String name;
 
     @com.aliyun.core.annotation.Body
-    @com.aliyun.core.annotation.NameInMap("permanent")
-    private Boolean permanent;
-
-    @com.aliyun.core.annotation.Body
     @com.aliyun.core.annotation.NameInMap("shortTtl")
     @com.aliyun.core.annotation.Validation(required = true)
     private Integer shortTtl;
@@ -44,7 +40,6 @@ public class CreateMemoryRequest extends Request {
         super(builder);
         this.longTtl = builder.longTtl;
         this.name = builder.name;
-        this.permanent = builder.permanent;
         this.shortTtl = builder.shortTtl;
         this.strategy = builder.strategy;
     }
@@ -77,13 +72,6 @@ public class CreateMemoryRequest extends Request {
     }
 
     /**
-     * @return permanent
-     */
-    public Boolean getPermanent() {
-        return this.permanent;
-    }
-
-    /**
      * @return shortTtl
      */
     public Integer getShortTtl() {
@@ -100,7 +88,6 @@ public class CreateMemoryRequest extends Request {
     public static final class Builder extends Request.Builder<CreateMemoryRequest, Builder> {
         private Integer longTtl; 
         private String name; 
-        private Boolean permanent; 
         private Integer shortTtl; 
         private java.util.List<String> strategy; 
 
@@ -112,7 +99,6 @@ public class CreateMemoryRequest extends Request {
             super(request);
             this.longTtl = request.longTtl;
             this.name = request.name;
-            this.permanent = request.permanent;
             this.shortTtl = request.shortTtl;
             this.strategy = request.strategy;
         } 
@@ -138,15 +124,6 @@ public class CreateMemoryRequest extends Request {
         public Builder name(String name) {
             this.putBodyParameter("name", name);
             this.name = name;
-            return this;
-        }
-
-        /**
-         * permanent.
-         */
-        public Builder permanent(Boolean permanent) {
-            this.putBodyParameter("permanent", permanent);
-            this.permanent = permanent;
             return this;
         }
 

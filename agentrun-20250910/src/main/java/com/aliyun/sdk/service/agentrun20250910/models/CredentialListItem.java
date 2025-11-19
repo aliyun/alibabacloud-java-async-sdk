@@ -20,27 +20,35 @@ public class CredentialListItem extends TeaModel {
     @com.aliyun.core.annotation.NameInMap("createdAt")
     private String createdAt;
 
-    @com.aliyun.core.annotation.NameInMap("id")
-    private String id;
+    @com.aliyun.core.annotation.NameInMap("credentialAuthType")
+    private String credentialAuthType;
 
-    @com.aliyun.core.annotation.NameInMap("name")
-    private String name;
+    @com.aliyun.core.annotation.NameInMap("credentialId")
+    private String credentialId;
 
-    @com.aliyun.core.annotation.NameInMap("relatedWorloads")
-    private java.util.List<RelatedWorkload> relatedWorloads;
+    @com.aliyun.core.annotation.NameInMap("credentialName")
+    private String credentialName;
 
-    @com.aliyun.core.annotation.NameInMap("type")
-    private String type;
+    @com.aliyun.core.annotation.NameInMap("credentialSourceType")
+    private String credentialSourceType;
+
+    @com.aliyun.core.annotation.NameInMap("enabled")
+    private Boolean enabled;
+
+    @com.aliyun.core.annotation.NameInMap("relatedResourceCount")
+    private Integer relatedResourceCount;
 
     @com.aliyun.core.annotation.NameInMap("updatedAt")
     private String updatedAt;
 
     private CredentialListItem(Builder builder) {
         this.createdAt = builder.createdAt;
-        this.id = builder.id;
-        this.name = builder.name;
-        this.relatedWorloads = builder.relatedWorloads;
-        this.type = builder.type;
+        this.credentialAuthType = builder.credentialAuthType;
+        this.credentialId = builder.credentialId;
+        this.credentialName = builder.credentialName;
+        this.credentialSourceType = builder.credentialSourceType;
+        this.enabled = builder.enabled;
+        this.relatedResourceCount = builder.relatedResourceCount;
         this.updatedAt = builder.updatedAt;
     }
 
@@ -64,31 +72,45 @@ public class CredentialListItem extends TeaModel {
     }
 
     /**
-     * @return id
+     * @return credentialAuthType
      */
-    public String getId() {
-        return this.id;
+    public String getCredentialAuthType() {
+        return this.credentialAuthType;
     }
 
     /**
-     * @return name
+     * @return credentialId
      */
-    public String getName() {
-        return this.name;
+    public String getCredentialId() {
+        return this.credentialId;
     }
 
     /**
-     * @return relatedWorloads
+     * @return credentialName
      */
-    public java.util.List<RelatedWorkload> getRelatedWorloads() {
-        return this.relatedWorloads;
+    public String getCredentialName() {
+        return this.credentialName;
     }
 
     /**
-     * @return type
+     * @return credentialSourceType
      */
-    public String getType() {
-        return this.type;
+    public String getCredentialSourceType() {
+        return this.credentialSourceType;
+    }
+
+    /**
+     * @return enabled
+     */
+    public Boolean getEnabled() {
+        return this.enabled;
+    }
+
+    /**
+     * @return relatedResourceCount
+     */
+    public Integer getRelatedResourceCount() {
+        return this.relatedResourceCount;
     }
 
     /**
@@ -100,10 +122,12 @@ public class CredentialListItem extends TeaModel {
 
     public static final class Builder {
         private String createdAt; 
-        private String id; 
-        private String name; 
-        private java.util.List<RelatedWorkload> relatedWorloads; 
-        private String type; 
+        private String credentialAuthType; 
+        private String credentialId; 
+        private String credentialName; 
+        private String credentialSourceType; 
+        private Boolean enabled; 
+        private Integer relatedResourceCount; 
         private String updatedAt; 
 
         private Builder() {
@@ -111,10 +135,12 @@ public class CredentialListItem extends TeaModel {
 
         private Builder(CredentialListItem model) {
             this.createdAt = model.createdAt;
-            this.id = model.id;
-            this.name = model.name;
-            this.relatedWorloads = model.relatedWorloads;
-            this.type = model.type;
+            this.credentialAuthType = model.credentialAuthType;
+            this.credentialId = model.credentialId;
+            this.credentialName = model.credentialName;
+            this.credentialSourceType = model.credentialSourceType;
+            this.enabled = model.enabled;
+            this.relatedResourceCount = model.relatedResourceCount;
             this.updatedAt = model.updatedAt;
         } 
 
@@ -127,34 +153,50 @@ public class CredentialListItem extends TeaModel {
         }
 
         /**
-         * id.
+         * credentialAuthType.
          */
-        public Builder id(String id) {
-            this.id = id;
+        public Builder credentialAuthType(String credentialAuthType) {
+            this.credentialAuthType = credentialAuthType;
             return this;
         }
 
         /**
-         * name.
+         * credentialId.
          */
-        public Builder name(String name) {
-            this.name = name;
+        public Builder credentialId(String credentialId) {
+            this.credentialId = credentialId;
             return this;
         }
 
         /**
-         * relatedWorloads.
+         * credentialName.
          */
-        public Builder relatedWorloads(java.util.List<RelatedWorkload> relatedWorloads) {
-            this.relatedWorloads = relatedWorloads;
+        public Builder credentialName(String credentialName) {
+            this.credentialName = credentialName;
             return this;
         }
 
         /**
-         * type.
+         * credentialSourceType.
          */
-        public Builder type(String type) {
-            this.type = type;
+        public Builder credentialSourceType(String credentialSourceType) {
+            this.credentialSourceType = credentialSourceType;
+            return this;
+        }
+
+        /**
+         * enabled.
+         */
+        public Builder enabled(Boolean enabled) {
+            this.enabled = enabled;
+            return this;
+        }
+
+        /**
+         * relatedResourceCount.
+         */
+        public Builder relatedResourceCount(Integer relatedResourceCount) {
+            this.relatedResourceCount = relatedResourceCount;
             return this;
         }
 

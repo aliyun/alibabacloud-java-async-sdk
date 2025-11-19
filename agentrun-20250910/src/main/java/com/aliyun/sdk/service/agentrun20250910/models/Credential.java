@@ -12,11 +12,11 @@ import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
  * 
- * {@link UpdateCredentialOutput} extends {@link TeaModel}
+ * {@link Credential} extends {@link TeaModel}
  *
- * <p>UpdateCredentialOutput</p>
+ * <p>Credential</p>
  */
-public class UpdateCredentialOutput extends TeaModel {
+public class Credential extends TeaModel {
     @com.aliyun.core.annotation.NameInMap("createdAt")
     private String createdAt;
 
@@ -50,7 +50,7 @@ public class UpdateCredentialOutput extends TeaModel {
     @com.aliyun.core.annotation.NameInMap("updatedAt")
     private String updatedAt;
 
-    private UpdateCredentialOutput(Builder builder) {
+    private Credential(Builder builder) {
         this.createdAt = builder.createdAt;
         this.credentialAuthType = builder.credentialAuthType;
         this.credentialId = builder.credentialId;
@@ -68,7 +68,7 @@ public class UpdateCredentialOutput extends TeaModel {
         return new Builder();
     }
 
-    public static UpdateCredentialOutput create() {
+    public static Credential create() {
         return builder().build();
     }
 
@@ -169,7 +169,7 @@ public class UpdateCredentialOutput extends TeaModel {
         private Builder() {
         } 
 
-        private Builder(UpdateCredentialOutput model) {
+        private Builder(Credential model) {
             this.createdAt = model.createdAt;
             this.credentialAuthType = model.credentialAuthType;
             this.credentialId = model.credentialId;
@@ -271,8 +271,8 @@ public class UpdateCredentialOutput extends TeaModel {
             return this;
         }
 
-        public UpdateCredentialOutput build() {
-            return new UpdateCredentialOutput(this);
+        public Credential build() {
+            return new Credential(this);
         } 
 
     } 

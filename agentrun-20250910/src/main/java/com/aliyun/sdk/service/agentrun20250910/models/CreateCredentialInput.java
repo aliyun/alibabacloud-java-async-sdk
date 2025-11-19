@@ -17,27 +17,38 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>CreateCredentialInput</p>
  */
 public class CreateCredentialInput extends TeaModel {
-    @com.aliyun.core.annotation.NameInMap("config")
-    private java.util.Map<String, String> config;
+    @com.aliyun.core.annotation.NameInMap("credentialAuthType")
+    @com.aliyun.core.annotation.Validation(required = true)
+    private String credentialAuthType;
+
+    @com.aliyun.core.annotation.NameInMap("credentialName")
+    @com.aliyun.core.annotation.Validation(required = true)
+    private String credentialName;
+
+    @com.aliyun.core.annotation.NameInMap("credentialPublicConfig")
+    private CredentialPublicConfig credentialPublicConfig;
+
+    @com.aliyun.core.annotation.NameInMap("credentialSecret")
+    private String credentialSecret;
+
+    @com.aliyun.core.annotation.NameInMap("credentialSourceType")
+    @com.aliyun.core.annotation.Validation(required = true)
+    private String credentialSourceType;
 
     @com.aliyun.core.annotation.NameInMap("description")
     private String description;
 
-    @com.aliyun.core.annotation.NameInMap("name")
-    private String name;
-
-    @com.aliyun.core.annotation.NameInMap("secret")
-    private String secret;
-
-    @com.aliyun.core.annotation.NameInMap("type")
-    private String type;
+    @com.aliyun.core.annotation.NameInMap("enabled")
+    private Boolean enabled;
 
     private CreateCredentialInput(Builder builder) {
-        this.config = builder.config;
+        this.credentialAuthType = builder.credentialAuthType;
+        this.credentialName = builder.credentialName;
+        this.credentialPublicConfig = builder.credentialPublicConfig;
+        this.credentialSecret = builder.credentialSecret;
+        this.credentialSourceType = builder.credentialSourceType;
         this.description = builder.description;
-        this.name = builder.name;
-        this.secret = builder.secret;
-        this.type = builder.type;
+        this.enabled = builder.enabled;
     }
 
     public static Builder builder() {
@@ -53,10 +64,38 @@ public class CreateCredentialInput extends TeaModel {
     }
 
     /**
-     * @return config
+     * @return credentialAuthType
      */
-    public java.util.Map<String, String> getConfig() {
-        return this.config;
+    public String getCredentialAuthType() {
+        return this.credentialAuthType;
+    }
+
+    /**
+     * @return credentialName
+     */
+    public String getCredentialName() {
+        return this.credentialName;
+    }
+
+    /**
+     * @return credentialPublicConfig
+     */
+    public CredentialPublicConfig getCredentialPublicConfig() {
+        return this.credentialPublicConfig;
+    }
+
+    /**
+     * @return credentialSecret
+     */
+    public String getCredentialSecret() {
+        return this.credentialSecret;
+    }
+
+    /**
+     * @return credentialSourceType
+     */
+    public String getCredentialSourceType() {
+        return this.credentialSourceType;
     }
 
     /**
@@ -67,52 +106,71 @@ public class CreateCredentialInput extends TeaModel {
     }
 
     /**
-     * @return name
+     * @return enabled
      */
-    public String getName() {
-        return this.name;
-    }
-
-    /**
-     * @return secret
-     */
-    public String getSecret() {
-        return this.secret;
-    }
-
-    /**
-     * @return type
-     */
-    public String getType() {
-        return this.type;
+    public Boolean getEnabled() {
+        return this.enabled;
     }
 
     public static final class Builder {
-        private java.util.Map<String, String> config; 
+        private String credentialAuthType; 
+        private String credentialName; 
+        private CredentialPublicConfig credentialPublicConfig; 
+        private String credentialSecret; 
+        private String credentialSourceType; 
         private String description; 
-        private String name; 
-        private String secret; 
-        private String type; 
+        private Boolean enabled; 
 
         private Builder() {
         } 
 
         private Builder(CreateCredentialInput model) {
-            this.config = model.config;
+            this.credentialAuthType = model.credentialAuthType;
+            this.credentialName = model.credentialName;
+            this.credentialPublicConfig = model.credentialPublicConfig;
+            this.credentialSecret = model.credentialSecret;
+            this.credentialSourceType = model.credentialSourceType;
             this.description = model.description;
-            this.name = model.name;
-            this.secret = model.secret;
-            this.type = model.type;
+            this.enabled = model.enabled;
         } 
 
         /**
-         * <p>凭证的配置参数，以键值对形式存储</p>
-         * 
-         * <strong>example:</strong>
-         * <p>api_endpoint=<a href="https://api.example.com,timeout=30">https://api.example.com,timeout=30</a></p>
+         * <p>This parameter is required.</p>
          */
-        public Builder config(java.util.Map<String, String> config) {
-            this.config = config;
+        public Builder credentialAuthType(String credentialAuthType) {
+            this.credentialAuthType = credentialAuthType;
+            return this;
+        }
+
+        /**
+         * <p>This parameter is required.</p>
+         */
+        public Builder credentialName(String credentialName) {
+            this.credentialName = credentialName;
+            return this;
+        }
+
+        /**
+         * credentialPublicConfig.
+         */
+        public Builder credentialPublicConfig(CredentialPublicConfig credentialPublicConfig) {
+            this.credentialPublicConfig = credentialPublicConfig;
+            return this;
+        }
+
+        /**
+         * credentialSecret.
+         */
+        public Builder credentialSecret(String credentialSecret) {
+            this.credentialSecret = credentialSecret;
+            return this;
+        }
+
+        /**
+         * <p>This parameter is required.</p>
+         */
+        public Builder credentialSourceType(String credentialSourceType) {
+            this.credentialSourceType = credentialSourceType;
             return this;
         }
 
@@ -125,26 +183,10 @@ public class CreateCredentialInput extends TeaModel {
         }
 
         /**
-         * name.
+         * enabled.
          */
-        public Builder name(String name) {
-            this.name = name;
-            return this;
-        }
-
-        /**
-         * secret.
-         */
-        public Builder secret(String secret) {
-            this.secret = secret;
-            return this;
-        }
-
-        /**
-         * type.
-         */
-        public Builder type(String type) {
-            this.type = type;
+        public Builder enabled(Boolean enabled) {
+            this.enabled = enabled;
             return this;
         }
 

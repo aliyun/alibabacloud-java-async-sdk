@@ -17,27 +17,23 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>UpdateCredentialInput</p>
  */
 public class UpdateCredentialInput extends TeaModel {
-    @com.aliyun.core.annotation.NameInMap("config")
-    private java.util.Map<String, String> config;
+    @com.aliyun.core.annotation.NameInMap("credentialPublicConfig")
+    private CredentialPublicConfig credentialPublicConfig;
+
+    @com.aliyun.core.annotation.NameInMap("credentialSecret")
+    private String credentialSecret;
 
     @com.aliyun.core.annotation.NameInMap("description")
     private String description;
 
-    @com.aliyun.core.annotation.NameInMap("name")
-    private String name;
-
-    @com.aliyun.core.annotation.NameInMap("secret")
-    private String secret;
-
-    @com.aliyun.core.annotation.NameInMap("type")
-    private String type;
+    @com.aliyun.core.annotation.NameInMap("enabled")
+    private Boolean enabled;
 
     private UpdateCredentialInput(Builder builder) {
-        this.config = builder.config;
+        this.credentialPublicConfig = builder.credentialPublicConfig;
+        this.credentialSecret = builder.credentialSecret;
         this.description = builder.description;
-        this.name = builder.name;
-        this.secret = builder.secret;
-        this.type = builder.type;
+        this.enabled = builder.enabled;
     }
 
     public static Builder builder() {
@@ -53,10 +49,17 @@ public class UpdateCredentialInput extends TeaModel {
     }
 
     /**
-     * @return config
+     * @return credentialPublicConfig
      */
-    public java.util.Map<String, String> getConfig() {
-        return this.config;
+    public CredentialPublicConfig getCredentialPublicConfig() {
+        return this.credentialPublicConfig;
+    }
+
+    /**
+     * @return credentialSecret
+     */
+    public String getCredentialSecret() {
+        return this.credentialSecret;
     }
 
     /**
@@ -67,52 +70,41 @@ public class UpdateCredentialInput extends TeaModel {
     }
 
     /**
-     * @return name
+     * @return enabled
      */
-    public String getName() {
-        return this.name;
-    }
-
-    /**
-     * @return secret
-     */
-    public String getSecret() {
-        return this.secret;
-    }
-
-    /**
-     * @return type
-     */
-    public String getType() {
-        return this.type;
+    public Boolean getEnabled() {
+        return this.enabled;
     }
 
     public static final class Builder {
-        private java.util.Map<String, String> config; 
+        private CredentialPublicConfig credentialPublicConfig; 
+        private String credentialSecret; 
         private String description; 
-        private String name; 
-        private String secret; 
-        private String type; 
+        private Boolean enabled; 
 
         private Builder() {
         } 
 
         private Builder(UpdateCredentialInput model) {
-            this.config = model.config;
+            this.credentialPublicConfig = model.credentialPublicConfig;
+            this.credentialSecret = model.credentialSecret;
             this.description = model.description;
-            this.name = model.name;
-            this.secret = model.secret;
-            this.type = model.type;
+            this.enabled = model.enabled;
         } 
 
         /**
-         * <p>凭证的配置参数，以键值对形式存储</p>
-         * 
-         * <strong>example:</strong>
-         * <p>api_endpoint=<a href="https://api.example.com,timeout=30">https://api.example.com,timeout=30</a></p>
+         * credentialPublicConfig.
          */
-        public Builder config(java.util.Map<String, String> config) {
-            this.config = config;
+        public Builder credentialPublicConfig(CredentialPublicConfig credentialPublicConfig) {
+            this.credentialPublicConfig = credentialPublicConfig;
+            return this;
+        }
+
+        /**
+         * credentialSecret.
+         */
+        public Builder credentialSecret(String credentialSecret) {
+            this.credentialSecret = credentialSecret;
             return this;
         }
 
@@ -125,26 +117,10 @@ public class UpdateCredentialInput extends TeaModel {
         }
 
         /**
-         * name.
+         * enabled.
          */
-        public Builder name(String name) {
-            this.name = name;
-            return this;
-        }
-
-        /**
-         * secret.
-         */
-        public Builder secret(String secret) {
-            this.secret = secret;
-            return this;
-        }
-
-        /**
-         * type.
-         */
-        public Builder type(String type) {
-            this.type = type;
+        public Builder enabled(Boolean enabled) {
+            this.enabled = enabled;
             return this;
         }
 

@@ -131,9 +131,6 @@ public class GetMemoryResponseBody extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("name")
         private String name;
 
-        @com.aliyun.core.annotation.NameInMap("permanent")
-        private Boolean permanent;
-
         @com.aliyun.core.annotation.NameInMap("shortTtl")
         private Integer shortTtl;
 
@@ -145,7 +142,6 @@ public class GetMemoryResponseBody extends TeaModel {
             this.createTime = builder.createTime;
             this.longTtl = builder.longTtl;
             this.name = builder.name;
-            this.permanent = builder.permanent;
             this.shortTtl = builder.shortTtl;
             this.strategy = builder.strategy;
         }
@@ -187,13 +183,6 @@ public class GetMemoryResponseBody extends TeaModel {
         }
 
         /**
-         * @return permanent
-         */
-        public Boolean getPermanent() {
-            return this.permanent;
-        }
-
-        /**
          * @return shortTtl
          */
         public Integer getShortTtl() {
@@ -212,7 +201,6 @@ public class GetMemoryResponseBody extends TeaModel {
             private Integer createTime; 
             private Integer longTtl; 
             private String name; 
-            private Boolean permanent; 
             private Integer shortTtl; 
             private java.util.List<String> strategy; 
 
@@ -224,7 +212,6 @@ public class GetMemoryResponseBody extends TeaModel {
                 this.createTime = model.createTime;
                 this.longTtl = model.longTtl;
                 this.name = model.name;
-                this.permanent = model.permanent;
                 this.shortTtl = model.shortTtl;
                 this.strategy = model.strategy;
             } 
@@ -258,14 +245,6 @@ public class GetMemoryResponseBody extends TeaModel {
              */
             public Builder name(String name) {
                 this.name = name;
-                return this;
-            }
-
-            /**
-             * permanent.
-             */
-            public Builder permanent(Boolean permanent) {
-                this.permanent = permanent;
                 return this;
             }
 
