@@ -78,6 +78,11 @@ public class RtcSipInviteMemberRequest extends Request {
     private String sipUserPassword;
 
     @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("TaskId")
+    @com.aliyun.core.annotation.Validation(maxLength = 100)
+    private String taskId;
+
+    @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("Uid")
     @com.aliyun.core.annotation.Validation(required = true)
     private String uid;
@@ -97,6 +102,7 @@ public class RtcSipInviteMemberRequest extends Request {
         this.sipUserAgent = builder.sipUserAgent;
         this.sipUserId = builder.sipUserId;
         this.sipUserPassword = builder.sipUserPassword;
+        this.taskId = builder.taskId;
         this.uid = builder.uid;
     }
 
@@ -205,6 +211,13 @@ public class RtcSipInviteMemberRequest extends Request {
     }
 
     /**
+     * @return taskId
+     */
+    public String getTaskId() {
+        return this.taskId;
+    }
+
+    /**
      * @return uid
      */
     public String getUid() {
@@ -225,6 +238,7 @@ public class RtcSipInviteMemberRequest extends Request {
         private String sipUserAgent; 
         private String sipUserId; 
         private String sipUserPassword; 
+        private String taskId; 
         private String uid; 
 
         private Builder() {
@@ -246,6 +260,7 @@ public class RtcSipInviteMemberRequest extends Request {
             this.sipUserAgent = request.sipUserAgent;
             this.sipUserId = request.sipUserId;
             this.sipUserPassword = request.sipUserPassword;
+            this.taskId = request.taskId;
             this.uid = request.uid;
         } 
 
@@ -384,6 +399,15 @@ public class RtcSipInviteMemberRequest extends Request {
         public Builder sipUserPassword(String sipUserPassword) {
             this.putQueryParameter("SipUserPassword", sipUserPassword);
             this.sipUserPassword = sipUserPassword;
+            return this;
+        }
+
+        /**
+         * TaskId.
+         */
+        public Builder taskId(String taskId) {
+            this.putQueryParameter("TaskId", taskId);
+            this.taskId = taskId;
             return this;
         }
 

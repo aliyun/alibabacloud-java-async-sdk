@@ -1,3 +1,6 @@
+2025-11-19 Version: 5.0.15
+- Generated java-async 2018-01-11 for rtc.
+
 2025-11-06 Version: 5.0.14
 - Generated java-async 2018-01-11 for rtc.
 
