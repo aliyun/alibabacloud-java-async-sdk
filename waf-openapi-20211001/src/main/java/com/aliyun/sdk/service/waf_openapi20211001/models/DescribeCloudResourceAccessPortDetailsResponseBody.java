@@ -547,6 +547,9 @@ public class DescribeCloudResourceAccessPortDetailsResponseBody extends TeaModel
         @com.aliyun.core.annotation.NameInMap("CipherSuite")
         private Integer cipherSuite;
 
+        @com.aliyun.core.annotation.NameInMap("CloudResourceId")
+        private String cloudResourceId;
+
         @com.aliyun.core.annotation.NameInMap("CustomCiphers")
         private java.util.List<String> customCiphers;
 
@@ -607,6 +610,7 @@ public class DescribeCloudResourceAccessPortDetailsResponseBody extends TeaModel
         private AccessPortDetails(Builder builder) {
             this.certificates = builder.certificates;
             this.cipherSuite = builder.cipherSuite;
+            this.cloudResourceId = builder.cloudResourceId;
             this.customCiphers = builder.customCiphers;
             this.enableTLSv3 = builder.enableTLSv3;
             this.http2Enabled = builder.http2Enabled;
@@ -648,6 +652,13 @@ public class DescribeCloudResourceAccessPortDetailsResponseBody extends TeaModel
          */
         public Integer getCipherSuite() {
             return this.cipherSuite;
+        }
+
+        /**
+         * @return cloudResourceId
+         */
+        public String getCloudResourceId() {
+            return this.cloudResourceId;
         }
 
         /**
@@ -786,6 +797,7 @@ public class DescribeCloudResourceAccessPortDetailsResponseBody extends TeaModel
         public static final class Builder {
             private java.util.List<Certificates> certificates; 
             private Integer cipherSuite; 
+            private String cloudResourceId; 
             private java.util.List<String> customCiphers; 
             private Boolean enableTLSv3; 
             private Boolean http2Enabled; 
@@ -812,6 +824,7 @@ public class DescribeCloudResourceAccessPortDetailsResponseBody extends TeaModel
             private Builder(AccessPortDetails model) {
                 this.certificates = model.certificates;
                 this.cipherSuite = model.cipherSuite;
+                this.cloudResourceId = model.cloudResourceId;
                 this.customCiphers = model.customCiphers;
                 this.enableTLSv3 = model.enableTLSv3;
                 this.http2Enabled = model.http2Enabled;
@@ -854,6 +867,14 @@ public class DescribeCloudResourceAccessPortDetailsResponseBody extends TeaModel
              */
             public Builder cipherSuite(Integer cipherSuite) {
                 this.cipherSuite = cipherSuite;
+                return this;
+            }
+
+            /**
+             * CloudResourceId.
+             */
+            public Builder cloudResourceId(String cloudResourceId) {
+                this.cloudResourceId = cloudResourceId;
                 return this;
             }
 

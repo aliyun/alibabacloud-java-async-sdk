@@ -23,13 +23,18 @@ public class ModifyCloudResourceCertRequest extends Request {
     private java.util.List<Certificates> certificates;
 
     @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("CloudResourceId")
+    private String cloudResourceId;
+
+    @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("InstanceId")
     @com.aliyun.core.annotation.Validation(required = true)
     private String instanceId;
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("Port")
-    @com.aliyun.core.annotation.Validation(required = true, maximum = 65534, minimum = 1)
+    @Deprecated
+    @com.aliyun.core.annotation.Validation(maximum = 65534, minimum = 1)
     private Integer port;
 
     @com.aliyun.core.annotation.Query
@@ -39,17 +44,18 @@ public class ModifyCloudResourceCertRequest extends Request {
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("ResourceInstanceId")
-    @com.aliyun.core.annotation.Validation(required = true)
+    @Deprecated
     private String resourceInstanceId;
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("ResourceProduct")
-    @com.aliyun.core.annotation.Validation(required = true)
+    @Deprecated
     private String resourceProduct;
 
     private ModifyCloudResourceCertRequest(Builder builder) {
         super(builder);
         this.certificates = builder.certificates;
+        this.cloudResourceId = builder.cloudResourceId;
         this.instanceId = builder.instanceId;
         this.port = builder.port;
         this.regionId = builder.regionId;
@@ -75,6 +81,13 @@ public class ModifyCloudResourceCertRequest extends Request {
      */
     public java.util.List<Certificates> getCertificates() {
         return this.certificates;
+    }
+
+    /**
+     * @return cloudResourceId
+     */
+    public String getCloudResourceId() {
+        return this.cloudResourceId;
     }
 
     /**
@@ -114,6 +127,7 @@ public class ModifyCloudResourceCertRequest extends Request {
 
     public static final class Builder extends Request.Builder<ModifyCloudResourceCertRequest, Builder> {
         private java.util.List<Certificates> certificates; 
+        private String cloudResourceId; 
         private String instanceId; 
         private Integer port; 
         private String regionId; 
@@ -127,6 +141,7 @@ public class ModifyCloudResourceCertRequest extends Request {
         private Builder(ModifyCloudResourceCertRequest request) {
             super(request);
             this.certificates = request.certificates;
+            this.cloudResourceId = request.cloudResourceId;
             this.instanceId = request.instanceId;
             this.port = request.port;
             this.regionId = request.regionId;
@@ -144,6 +159,15 @@ public class ModifyCloudResourceCertRequest extends Request {
         }
 
         /**
+         * CloudResourceId.
+         */
+        public Builder cloudResourceId(String cloudResourceId) {
+            this.putQueryParameter("CloudResourceId", cloudResourceId);
+            this.cloudResourceId = cloudResourceId;
+            return this;
+        }
+
+        /**
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -156,10 +180,7 @@ public class ModifyCloudResourceCertRequest extends Request {
         }
 
         /**
-         * <p>This parameter is required.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>443</p>
+         * Port.
          */
         public Builder port(Integer port) {
             this.putQueryParameter("Port", port);
@@ -180,10 +201,7 @@ public class ModifyCloudResourceCertRequest extends Request {
         }
 
         /**
-         * <p>This parameter is required.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>lb-bp1*****jqnnqk5uj2p</p>
+         * ResourceInstanceId.
          */
         public Builder resourceInstanceId(String resourceInstanceId) {
             this.putQueryParameter("ResourceInstanceId", resourceInstanceId);
@@ -192,10 +210,7 @@ public class ModifyCloudResourceCertRequest extends Request {
         }
 
         /**
-         * <p>This parameter is required.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>clb4</p>
+         * ResourceProduct.
          */
         public Builder resourceProduct(String resourceProduct) {
             this.putQueryParameter("ResourceProduct", resourceProduct);

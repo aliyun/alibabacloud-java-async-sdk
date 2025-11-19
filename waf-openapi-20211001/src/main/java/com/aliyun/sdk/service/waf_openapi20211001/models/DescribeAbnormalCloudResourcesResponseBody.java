@@ -299,6 +299,9 @@ public class DescribeAbnormalCloudResourcesResponseBody extends TeaModel {
      * <p>DescribeAbnormalCloudResourcesResponseBody</p>
      */
     public static class AbnormalCloudResources extends TeaModel {
+        @com.aliyun.core.annotation.NameInMap("CloudResourceId")
+        private String cloudResourceId;
+
         @com.aliyun.core.annotation.NameInMap("Details")
         private java.util.List<Details> details;
 
@@ -318,6 +321,7 @@ public class DescribeAbnormalCloudResourcesResponseBody extends TeaModel {
         private String resourceProduct;
 
         private AbnormalCloudResources(Builder builder) {
+            this.cloudResourceId = builder.cloudResourceId;
             this.details = builder.details;
             this.reason = builder.reason;
             this.resourceInstanceId = builder.resourceInstanceId;
@@ -332,6 +336,13 @@ public class DescribeAbnormalCloudResourcesResponseBody extends TeaModel {
 
         public static AbnormalCloudResources create() {
             return builder().build();
+        }
+
+        /**
+         * @return cloudResourceId
+         */
+        public String getCloudResourceId() {
+            return this.cloudResourceId;
         }
 
         /**
@@ -377,6 +388,7 @@ public class DescribeAbnormalCloudResourcesResponseBody extends TeaModel {
         }
 
         public static final class Builder {
+            private String cloudResourceId; 
             private java.util.List<Details> details; 
             private String reason; 
             private String resourceInstanceId; 
@@ -388,6 +400,7 @@ public class DescribeAbnormalCloudResourcesResponseBody extends TeaModel {
             } 
 
             private Builder(AbnormalCloudResources model) {
+                this.cloudResourceId = model.cloudResourceId;
                 this.details = model.details;
                 this.reason = model.reason;
                 this.resourceInstanceId = model.resourceInstanceId;
@@ -395,6 +408,14 @@ public class DescribeAbnormalCloudResourcesResponseBody extends TeaModel {
                 this.resourceInstancePort = model.resourceInstancePort;
                 this.resourceProduct = model.resourceProduct;
             } 
+
+            /**
+             * CloudResourceId.
+             */
+            public Builder cloudResourceId(String cloudResourceId) {
+                this.cloudResourceId = cloudResourceId;
+                return this;
+            }
 
             /**
              * Details.

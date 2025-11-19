@@ -18,13 +18,17 @@ import com.aliyun.sdk.gateway.pop.models.*;
  */
 public class DeleteCloudResourceRequest extends Request {
     @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("CloudResourceId")
+    private String cloudResourceId;
+
+    @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("InstanceId")
     @com.aliyun.core.annotation.Validation(required = true)
     private String instanceId;
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("Port")
-    @com.aliyun.core.annotation.Validation(required = true)
+    @Deprecated
     private Integer port;
 
     @com.aliyun.core.annotation.Query
@@ -34,7 +38,7 @@ public class DeleteCloudResourceRequest extends Request {
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("ResourceInstanceId")
-    @com.aliyun.core.annotation.Validation(required = true)
+    @Deprecated
     private String resourceInstanceId;
 
     @com.aliyun.core.annotation.Query
@@ -43,11 +47,12 @@ public class DeleteCloudResourceRequest extends Request {
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("ResourceProduct")
-    @com.aliyun.core.annotation.Validation(required = true)
+    @Deprecated
     private String resourceProduct;
 
     private DeleteCloudResourceRequest(Builder builder) {
         super(builder);
+        this.cloudResourceId = builder.cloudResourceId;
         this.instanceId = builder.instanceId;
         this.port = builder.port;
         this.regionId = builder.regionId;
@@ -67,6 +72,13 @@ public class DeleteCloudResourceRequest extends Request {
 @Override
     public Builder toBuilder() {
         return new Builder(this);
+    }
+
+    /**
+     * @return cloudResourceId
+     */
+    public String getCloudResourceId() {
+        return this.cloudResourceId;
     }
 
     /**
@@ -112,6 +124,7 @@ public class DeleteCloudResourceRequest extends Request {
     }
 
     public static final class Builder extends Request.Builder<DeleteCloudResourceRequest, Builder> {
+        private String cloudResourceId; 
         private String instanceId; 
         private Integer port; 
         private String regionId; 
@@ -125,6 +138,7 @@ public class DeleteCloudResourceRequest extends Request {
 
         private Builder(DeleteCloudResourceRequest request) {
             super(request);
+            this.cloudResourceId = request.cloudResourceId;
             this.instanceId = request.instanceId;
             this.port = request.port;
             this.regionId = request.regionId;
@@ -132,6 +146,15 @@ public class DeleteCloudResourceRequest extends Request {
             this.resourceManagerResourceGroupId = request.resourceManagerResourceGroupId;
             this.resourceProduct = request.resourceProduct;
         } 
+
+        /**
+         * CloudResourceId.
+         */
+        public Builder cloudResourceId(String cloudResourceId) {
+            this.putQueryParameter("CloudResourceId", cloudResourceId);
+            this.cloudResourceId = cloudResourceId;
+            return this;
+        }
 
         /**
          * <p>The ID of the WAF instance.</p>
@@ -151,7 +174,6 @@ public class DeleteCloudResourceRequest extends Request {
 
         /**
          * <p>The port of the resource that is added to WAF.</p>
-         * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
          * <p>443</p>
@@ -181,7 +203,6 @@ public class DeleteCloudResourceRequest extends Request {
 
         /**
          * <p>The ID of the instance.</p>
-         * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
          * <p>lb-bp1*****jqnnqk5uj2p</p>
@@ -211,7 +232,6 @@ public class DeleteCloudResourceRequest extends Request {
          * <li><strong>clb7</strong>: Layer 7 CLB.</li>
          * <li><strong>ecs</strong>: ECS.</li>
          * </ul>
-         * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
          * <p>clb7</p>

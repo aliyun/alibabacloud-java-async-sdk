@@ -18,6 +18,10 @@ import com.aliyun.sdk.gateway.pop.models.*;
  */
 public class ModifyCloudResourceRequest extends Request {
     @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("CloudResourceId")
+    private String cloudResourceId;
+
+    @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("InstanceId")
     @com.aliyun.core.annotation.Validation(required = true)
     private String instanceId;
@@ -42,6 +46,7 @@ public class ModifyCloudResourceRequest extends Request {
 
     private ModifyCloudResourceRequest(Builder builder) {
         super(builder);
+        this.cloudResourceId = builder.cloudResourceId;
         this.instanceId = builder.instanceId;
         this.listen = builder.listen;
         this.redirect = builder.redirect;
@@ -60,6 +65,13 @@ public class ModifyCloudResourceRequest extends Request {
 @Override
     public Builder toBuilder() {
         return new Builder(this);
+    }
+
+    /**
+     * @return cloudResourceId
+     */
+    public String getCloudResourceId() {
+        return this.cloudResourceId;
     }
 
     /**
@@ -98,6 +110,7 @@ public class ModifyCloudResourceRequest extends Request {
     }
 
     public static final class Builder extends Request.Builder<ModifyCloudResourceRequest, Builder> {
+        private String cloudResourceId; 
         private String instanceId; 
         private Listen listen; 
         private Redirect redirect; 
@@ -110,12 +123,22 @@ public class ModifyCloudResourceRequest extends Request {
 
         private Builder(ModifyCloudResourceRequest request) {
             super(request);
+            this.cloudResourceId = request.cloudResourceId;
             this.instanceId = request.instanceId;
             this.listen = request.listen;
             this.redirect = request.redirect;
             this.regionId = request.regionId;
             this.resourceManagerResourceGroupId = request.resourceManagerResourceGroupId;
         } 
+
+        /**
+         * CloudResourceId.
+         */
+        public Builder cloudResourceId(String cloudResourceId) {
+            this.putQueryParameter("CloudResourceId", cloudResourceId);
+            this.cloudResourceId = cloudResourceId;
+            return this;
+        }
 
         /**
          * <p>The ID of the WAF instance.</p>
@@ -298,7 +321,7 @@ public class ModifyCloudResourceRequest extends Request {
         private Boolean http2Enabled;
 
         @com.aliyun.core.annotation.NameInMap("Port")
-        @com.aliyun.core.annotation.Validation(required = true)
+        @Deprecated
         private Integer port;
 
         @com.aliyun.core.annotation.NameInMap("Protocol")
@@ -306,11 +329,11 @@ public class ModifyCloudResourceRequest extends Request {
         private String protocol;
 
         @com.aliyun.core.annotation.NameInMap("ResourceInstanceId")
-        @com.aliyun.core.annotation.Validation(required = true)
+        @Deprecated
         private String resourceInstanceId;
 
         @com.aliyun.core.annotation.NameInMap("ResourceProduct")
-        @com.aliyun.core.annotation.Validation(required = true)
+        @Deprecated
         private String resourceProduct;
 
         @com.aliyun.core.annotation.NameInMap("TLSVersion")
@@ -499,7 +522,6 @@ public class ModifyCloudResourceRequest extends Request {
 
             /**
              * <p>The port of the cloud service instance that is added to WAF.</p>
-             * <p>This parameter is required.</p>
              * 
              * <strong>example:</strong>
              * <p>80</p>
@@ -527,7 +549,6 @@ public class ModifyCloudResourceRequest extends Request {
 
             /**
              * <p>The ID of the cloud service instance that is added to WAF.</p>
-             * <p>This parameter is required.</p>
              * 
              * <strong>example:</strong>
              * <p>lb-***</p>
@@ -545,7 +566,6 @@ public class ModifyCloudResourceRequest extends Request {
              * <li><strong>ecs</strong>: Elastic Compute Service (ECS).</li>
              * <li><strong>nlb</strong>: Network Load Balancer (NLB).</li>
              * </ul>
-             * <p>This parameter is required.</p>
              * 
              * <strong>example:</strong>
              * <p>clb7</p>
