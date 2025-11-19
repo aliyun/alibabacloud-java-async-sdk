@@ -67,6 +67,10 @@ public class StartUserAppAsyncEnhanceInMsaRequest extends Request {
     @com.aliyun.core.annotation.NameInMap("NativeHook")
     private Integer nativeHook;
 
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("NewShieldConfig")
+    private String newShieldConfig;
+
     @com.aliyun.core.annotation.Body
     @com.aliyun.core.annotation.NameInMap("PackageTampered")
     private Integer packageTampered;
@@ -101,6 +105,10 @@ public class StartUserAppAsyncEnhanceInMsaRequest extends Request {
     private Boolean useAShield;
 
     @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("UseYShield")
+    private Boolean useYShield;
+
+    @com.aliyun.core.annotation.Body
     @com.aliyun.core.annotation.NameInMap("WorkspaceId")
     @com.aliyun.core.annotation.Validation(required = true)
     private String workspaceId;
@@ -119,6 +127,7 @@ public class StartUserAppAsyncEnhanceInMsaRequest extends Request {
         this.memoryDump = builder.memoryDump;
         this.nativeDebugger = builder.nativeDebugger;
         this.nativeHook = builder.nativeHook;
+        this.newShieldConfig = builder.newShieldConfig;
         this.packageTampered = builder.packageTampered;
         this.root = builder.root;
         this.runMode = builder.runMode;
@@ -127,6 +136,7 @@ public class StartUserAppAsyncEnhanceInMsaRequest extends Request {
         this.tenantId = builder.tenantId;
         this.totalSwitch = builder.totalSwitch;
         this.useAShield = builder.useAShield;
+        this.useYShield = builder.useYShield;
         this.workspaceId = builder.workspaceId;
     }
 
@@ -228,6 +238,13 @@ public class StartUserAppAsyncEnhanceInMsaRequest extends Request {
     }
 
     /**
+     * @return newShieldConfig
+     */
+    public String getNewShieldConfig() {
+        return this.newShieldConfig;
+    }
+
+    /**
      * @return packageTampered
      */
     public Integer getPackageTampered() {
@@ -284,6 +301,13 @@ public class StartUserAppAsyncEnhanceInMsaRequest extends Request {
     }
 
     /**
+     * @return useYShield
+     */
+    public Boolean getUseYShield() {
+        return this.useYShield;
+    }
+
+    /**
      * @return workspaceId
      */
     public String getWorkspaceId() {
@@ -303,6 +327,7 @@ public class StartUserAppAsyncEnhanceInMsaRequest extends Request {
         private Integer memoryDump; 
         private Integer nativeDebugger; 
         private Integer nativeHook; 
+        private String newShieldConfig; 
         private Integer packageTampered; 
         private Integer root; 
         private String runMode; 
@@ -311,6 +336,7 @@ public class StartUserAppAsyncEnhanceInMsaRequest extends Request {
         private String tenantId; 
         private Boolean totalSwitch; 
         private Boolean useAShield; 
+        private Boolean useYShield; 
         private String workspaceId; 
 
         private Builder() {
@@ -331,6 +357,7 @@ public class StartUserAppAsyncEnhanceInMsaRequest extends Request {
             this.memoryDump = request.memoryDump;
             this.nativeDebugger = request.nativeDebugger;
             this.nativeHook = request.nativeHook;
+            this.newShieldConfig = request.newShieldConfig;
             this.packageTampered = request.packageTampered;
             this.root = request.root;
             this.runMode = request.runMode;
@@ -339,6 +366,7 @@ public class StartUserAppAsyncEnhanceInMsaRequest extends Request {
             this.tenantId = request.tenantId;
             this.totalSwitch = request.totalSwitch;
             this.useAShield = request.useAShield;
+            this.useYShield = request.useYShield;
             this.workspaceId = request.workspaceId;
         } 
 
@@ -451,6 +479,15 @@ public class StartUserAppAsyncEnhanceInMsaRequest extends Request {
         }
 
         /**
+         * NewShieldConfig.
+         */
+        public Builder newShieldConfig(String newShieldConfig) {
+            this.putQueryParameter("NewShieldConfig", newShieldConfig);
+            this.newShieldConfig = newShieldConfig;
+            return this;
+        }
+
+        /**
          * PackageTampered.
          */
         public Builder packageTampered(Integer packageTampered) {
@@ -519,6 +556,15 @@ public class StartUserAppAsyncEnhanceInMsaRequest extends Request {
         public Builder useAShield(Boolean useAShield) {
             this.putBodyParameter("UseAShield", useAShield);
             this.useAShield = useAShield;
+            return this;
+        }
+
+        /**
+         * UseYShield.
+         */
+        public Builder useYShield(Boolean useYShield) {
+            this.putBodyParameter("UseYShield", useYShield);
+            this.useYShield = useYShield;
             return this;
         }
 

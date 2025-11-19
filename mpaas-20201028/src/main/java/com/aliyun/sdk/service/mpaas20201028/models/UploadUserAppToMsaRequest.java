@@ -40,6 +40,10 @@ public class UploadUserAppToMsaRequest extends Request {
     private String tenantId;
 
     @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("UseYShield")
+    private Boolean useYShield;
+
+    @com.aliyun.core.annotation.Body
     @com.aliyun.core.annotation.NameInMap("WorkspaceId")
     @com.aliyun.core.annotation.Validation(required = true)
     private String workspaceId;
@@ -51,6 +55,7 @@ public class UploadUserAppToMsaRequest extends Request {
         this.fileName = builder.fileName;
         this.fileUrl = builder.fileUrl;
         this.tenantId = builder.tenantId;
+        this.useYShield = builder.useYShield;
         this.workspaceId = builder.workspaceId;
     }
 
@@ -103,6 +108,13 @@ public class UploadUserAppToMsaRequest extends Request {
     }
 
     /**
+     * @return useYShield
+     */
+    public Boolean getUseYShield() {
+        return this.useYShield;
+    }
+
+    /**
      * @return workspaceId
      */
     public String getWorkspaceId() {
@@ -115,6 +127,7 @@ public class UploadUserAppToMsaRequest extends Request {
         private String fileName; 
         private String fileUrl; 
         private String tenantId; 
+        private Boolean useYShield; 
         private String workspaceId; 
 
         private Builder() {
@@ -128,6 +141,7 @@ public class UploadUserAppToMsaRequest extends Request {
             this.fileName = request.fileName;
             this.fileUrl = request.fileUrl;
             this.tenantId = request.tenantId;
+            this.useYShield = request.useYShield;
             this.workspaceId = request.workspaceId;
         } 
 
@@ -173,6 +187,15 @@ public class UploadUserAppToMsaRequest extends Request {
         public Builder tenantId(String tenantId) {
             this.putBodyParameter("TenantId", tenantId);
             this.tenantId = tenantId;
+            return this;
+        }
+
+        /**
+         * UseYShield.
+         */
+        public Builder useYShield(Boolean useYShield) {
+            this.putBodyParameter("UseYShield", useYShield);
+            this.useYShield = useYShield;
             return this;
         }
 
