@@ -1697,6 +1697,9 @@ public class BatchGetMediaInfosResponseBody extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Duration")
         private String duration;
 
+        @com.aliyun.core.annotation.NameInMap("FileMD5")
+        private String fileMD5;
+
         @com.aliyun.core.annotation.NameInMap("FileName")
         private String fileName;
 
@@ -1729,6 +1732,7 @@ public class BatchGetMediaInfosResponseBody extends TeaModel {
             this.bitrate = builder.bitrate;
             this.creationTime = builder.creationTime;
             this.duration = builder.duration;
+            this.fileMD5 = builder.fileMD5;
             this.fileName = builder.fileName;
             this.fileURL = builder.fileURL;
             this.fps = builder.fps;
@@ -1774,6 +1778,13 @@ public class BatchGetMediaInfosResponseBody extends TeaModel {
          */
         public String getDuration() {
             return this.duration;
+        }
+
+        /**
+         * @return fileMD5
+         */
+        public String getFileMD5() {
+            return this.fileMD5;
         }
 
         /**
@@ -1844,6 +1855,7 @@ public class BatchGetMediaInfosResponseBody extends TeaModel {
             private String bitrate; 
             private String creationTime; 
             private String duration; 
+            private String fileMD5; 
             private String fileName; 
             private String fileURL; 
             private String fps; 
@@ -1862,6 +1874,7 @@ public class BatchGetMediaInfosResponseBody extends TeaModel {
                 this.bitrate = model.bitrate;
                 this.creationTime = model.creationTime;
                 this.duration = model.duration;
+                this.fileMD5 = model.fileMD5;
                 this.fileName = model.fileName;
                 this.fileURL = model.fileURL;
                 this.fps = model.fps;
@@ -1911,6 +1924,14 @@ public class BatchGetMediaInfosResponseBody extends TeaModel {
              */
             public Builder duration(String duration) {
                 this.duration = duration;
+                return this;
+            }
+
+            /**
+             * FileMD5.
+             */
+            public Builder fileMD5(String fileMD5) {
+                this.fileMD5 = fileMD5;
                 return this;
             }
 
