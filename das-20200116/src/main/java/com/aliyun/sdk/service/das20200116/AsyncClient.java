@@ -151,6 +151,12 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<CreateRequestDiagnosisResponse> createRequestDiagnosis(CreateRequestDiagnosisRequest request);
 
     /**
+     * @param request the request parameters of CreateSecurityIPGroup  CreateSecurityIPGroupRequest
+     * @return CreateSecurityIPGroupResponse
+     */
+    CompletableFuture<CreateSecurityIPGroupResponse> createSecurityIPGroup(CreateSecurityIPGroupRequest request);
+
+    /**
      * <b>description</b> :
      * <p>Before you call this operation, take note of the following items:</p>
      * <ul>
@@ -186,6 +192,12 @@ public interface AsyncClient extends SdkAutoCloseable {
      * @return DeleteCloudBenchTaskResponse
      */
     CompletableFuture<DeleteCloudBenchTaskResponse> deleteCloudBenchTask(DeleteCloudBenchTaskRequest request);
+
+    /**
+     * @param request the request parameters of DeleteSecurityIPGroup  DeleteSecurityIPGroupRequest
+     * @return DeleteSecurityIPGroupResponse
+     */
+    CompletableFuture<DeleteSecurityIPGroupResponse> deleteSecurityIPGroup(DeleteSecurityIPGroupRequest request);
 
     /**
      * <b>description</b> :
@@ -370,6 +382,18 @@ public interface AsyncClient extends SdkAutoCloseable {
      * @return DescribeQueryExplainResponse
      */
     CompletableFuture<DescribeQueryExplainResponse> describeQueryExplain(DescribeQueryExplainRequest request);
+
+    /**
+     * @param request the request parameters of DescribeSecurityIPGroup  DescribeSecurityIPGroupRequest
+     * @return DescribeSecurityIPGroupResponse
+     */
+    CompletableFuture<DescribeSecurityIPGroupResponse> describeSecurityIPGroup(DescribeSecurityIPGroupRequest request);
+
+    /**
+     * @param request the request parameters of DescribeSecurityIPGroupRelation  DescribeSecurityIPGroupRelationRequest
+     * @return DescribeSecurityIPGroupRelationResponse
+     */
+    CompletableFuture<DescribeSecurityIPGroupRelationResponse> describeSecurityIPGroupRelation(DescribeSecurityIPGroupRelationRequest request);
 
     /**
      * @param request the request parameters of DescribeSlowLogHistogramAsync  DescribeSlowLogHistogramAsyncRequest
@@ -1395,6 +1419,18 @@ public interface AsyncClient extends SdkAutoCloseable {
      * @return ModifyAutoScalingConfigResponse
      */
     CompletableFuture<ModifyAutoScalingConfigResponse> modifyAutoScalingConfig(ModifyAutoScalingConfigRequest request);
+
+    /**
+     * @param request the request parameters of ModifySecurityIPGroup  ModifySecurityIPGroupRequest
+     * @return ModifySecurityIPGroupResponse
+     */
+    CompletableFuture<ModifySecurityIPGroupResponse> modifySecurityIPGroup(ModifySecurityIPGroupRequest request);
+
+    /**
+     * @param request the request parameters of ModifySecurityIPGroupRelation  ModifySecurityIPGroupRelationRequest
+     * @return ModifySecurityIPGroupRelationResponse
+     */
+    CompletableFuture<ModifySecurityIPGroupRelationResponse> modifySecurityIPGroupRelation(ModifySecurityIPGroupRelationRequest request);
 
     /**
      * <b>description</b> :
