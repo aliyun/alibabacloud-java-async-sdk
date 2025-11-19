@@ -374,6 +374,9 @@ public class ListClusterNodesResponseBody extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("NodeId")
         private String nodeId;
 
+        @com.aliyun.core.annotation.NameInMap("NodeType")
+        private String nodeType;
+
         @com.aliyun.core.annotation.NameInMap("OperatingState")
         private String operatingState;
 
@@ -410,6 +413,7 @@ public class ListClusterNodesResponseBody extends TeaModel {
             this.nodeGroupId = builder.nodeGroupId;
             this.nodeGroupName = builder.nodeGroupName;
             this.nodeId = builder.nodeId;
+            this.nodeType = builder.nodeType;
             this.operatingState = builder.operatingState;
             this.sn = builder.sn;
             this.tags = builder.tags;
@@ -526,6 +530,13 @@ public class ListClusterNodesResponseBody extends TeaModel {
         }
 
         /**
+         * @return nodeType
+         */
+        public String getNodeType() {
+            return this.nodeType;
+        }
+
+        /**
          * @return operatingState
          */
         public String getOperatingState() {
@@ -589,6 +600,7 @@ public class ListClusterNodesResponseBody extends TeaModel {
             private String nodeGroupId; 
             private String nodeGroupName; 
             private String nodeId; 
+            private String nodeType; 
             private String operatingState; 
             private String sn; 
             private java.util.List<Tags> tags; 
@@ -615,6 +627,7 @@ public class ListClusterNodesResponseBody extends TeaModel {
                 this.nodeGroupId = model.nodeGroupId;
                 this.nodeGroupName = model.nodeGroupName;
                 this.nodeId = model.nodeId;
+                this.nodeType = model.nodeType;
                 this.operatingState = model.operatingState;
                 this.sn = model.sn;
                 this.tags = model.tags;
@@ -769,6 +782,14 @@ public class ListClusterNodesResponseBody extends TeaModel {
              */
             public Builder nodeId(String nodeId) {
                 this.nodeId = nodeId;
+                return this;
+            }
+
+            /**
+             * NodeType.
+             */
+            public Builder nodeType(String nodeType) {
+                this.nodeType = nodeType;
                 return this;
             }
 
