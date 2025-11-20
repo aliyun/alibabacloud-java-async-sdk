@@ -25,6 +25,10 @@ public class UpdateBackupPlanRequest extends Request {
     @com.aliyun.core.annotation.NameInMap("Detail")
     private java.util.Map<String, ?> detail;
 
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Edition")
+    private String edition;
+
     @com.aliyun.core.annotation.Body
     @com.aliyun.core.annotation.NameInMap("Exclude")
     private String exclude;
@@ -95,6 +99,7 @@ public class UpdateBackupPlanRequest extends Request {
         super(builder);
         this.changeListPath = builder.changeListPath;
         this.detail = builder.detail;
+        this.edition = builder.edition;
         this.exclude = builder.exclude;
         this.include = builder.include;
         this.keepLatestSnapshots = builder.keepLatestSnapshots;
@@ -138,6 +143,13 @@ public class UpdateBackupPlanRequest extends Request {
      */
     public java.util.Map<String, ?> getDetail() {
         return this.detail;
+    }
+
+    /**
+     * @return edition
+     */
+    public String getEdition() {
+        return this.edition;
     }
 
     /**
@@ -255,6 +267,7 @@ public class UpdateBackupPlanRequest extends Request {
     public static final class Builder extends Request.Builder<UpdateBackupPlanRequest, Builder> {
         private String changeListPath; 
         private java.util.Map<String, ?> detail; 
+        private String edition; 
         private String exclude; 
         private String include; 
         private Long keepLatestSnapshots; 
@@ -280,6 +293,7 @@ public class UpdateBackupPlanRequest extends Request {
             super(request);
             this.changeListPath = request.changeListPath;
             this.detail = request.detail;
+            this.edition = request.edition;
             this.exclude = request.exclude;
             this.include = request.include;
             this.keepLatestSnapshots = request.keepLatestSnapshots;
@@ -326,6 +340,15 @@ public class UpdateBackupPlanRequest extends Request {
             String detailShrink = shrink(detail, "Detail", "json");
             this.putQueryParameter("Detail", detailShrink);
             this.detail = detail;
+            return this;
+        }
+
+        /**
+         * Edition.
+         */
+        public Builder edition(String edition) {
+            this.putQueryParameter("Edition", edition);
+            this.edition = edition;
             return this;
         }
 

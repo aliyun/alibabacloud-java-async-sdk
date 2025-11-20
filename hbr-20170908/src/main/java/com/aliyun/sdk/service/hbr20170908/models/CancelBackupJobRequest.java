@@ -18,6 +18,10 @@ import com.aliyun.sdk.gateway.pop.models.*;
  */
 public class CancelBackupJobRequest extends Request {
     @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Edition")
+    private String edition;
+
+    @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("JobId")
     @com.aliyun.core.annotation.Validation(required = true)
     private String jobId;
@@ -28,6 +32,7 @@ public class CancelBackupJobRequest extends Request {
 
     private CancelBackupJobRequest(Builder builder) {
         super(builder);
+        this.edition = builder.edition;
         this.jobId = builder.jobId;
         this.vaultId = builder.vaultId;
     }
@@ -46,6 +51,13 @@ public class CancelBackupJobRequest extends Request {
     }
 
     /**
+     * @return edition
+     */
+    public String getEdition() {
+        return this.edition;
+    }
+
+    /**
      * @return jobId
      */
     public String getJobId() {
@@ -60,6 +72,7 @@ public class CancelBackupJobRequest extends Request {
     }
 
     public static final class Builder extends Request.Builder<CancelBackupJobRequest, Builder> {
+        private String edition; 
         private String jobId; 
         private String vaultId; 
 
@@ -69,9 +82,19 @@ public class CancelBackupJobRequest extends Request {
 
         private Builder(CancelBackupJobRequest request) {
             super(request);
+            this.edition = request.edition;
             this.jobId = request.jobId;
             this.vaultId = request.vaultId;
         } 
+
+        /**
+         * Edition.
+         */
+        public Builder edition(String edition) {
+            this.putQueryParameter("Edition", edition);
+            this.edition = edition;
+            return this;
+        }
 
         /**
          * <p>The ID of the backup job.</p>

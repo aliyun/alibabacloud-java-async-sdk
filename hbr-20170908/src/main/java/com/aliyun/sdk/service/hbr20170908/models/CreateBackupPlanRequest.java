@@ -19,7 +19,6 @@ import com.aliyun.sdk.gateway.pop.models.*;
 public class CreateBackupPlanRequest extends Request {
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("BackupType")
-    @com.aliyun.core.annotation.Validation(required = true)
     private String backupType;
 
     @com.aliyun.core.annotation.Query
@@ -112,7 +111,7 @@ public class CreateBackupPlanRequest extends Request {
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("PlanName")
-    @com.aliyun.core.annotation.Validation(required = true, maxLength = 64, minLength = 1)
+    @com.aliyun.core.annotation.Validation(maxLength = 64, minLength = 1)
     private String planName;
 
     @com.aliyun.core.annotation.Query
@@ -129,7 +128,6 @@ public class CreateBackupPlanRequest extends Request {
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("Schedule")
-    @com.aliyun.core.annotation.Validation(required = true)
     private String schedule;
 
     @com.aliyun.core.annotation.Query
@@ -498,7 +496,6 @@ public class CreateBackupPlanRequest extends Request {
 
         /**
          * <p>Backup type. Value: <strong>COMPLETE</strong>, indicating a full backup.</p>
-         * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
          * <p>COMPLETE</p>
@@ -791,7 +788,6 @@ public class CreateBackupPlanRequest extends Request {
 
         /**
          * <p>Name of the backup plan. 1 to 64 characters. The name must be unique for each data source type within a single backup vault.</p>
-         * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
          * <p>planname</p>
@@ -841,7 +837,6 @@ public class CreateBackupPlanRequest extends Request {
          * <li><strong>startTime</strong>: Start time of the backup, in UNIX timestamp, in seconds.</li>
          * <li><strong>interval</strong>: ISO8601 time interval. For example, PT1H indicates an interval of one hour, and P1D indicates an interval of one day.</li>
          * </ul>
-         * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
          * <p>I|1602673264|P1D</p>

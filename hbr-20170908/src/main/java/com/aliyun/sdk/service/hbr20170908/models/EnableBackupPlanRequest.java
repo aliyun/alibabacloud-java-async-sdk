@@ -18,6 +18,10 @@ import com.aliyun.sdk.gateway.pop.models.*;
  */
 public class EnableBackupPlanRequest extends Request {
     @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Edition")
+    private String edition;
+
+    @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("PlanId")
     @com.aliyun.core.annotation.Validation(required = true)
     private String planId;
@@ -32,6 +36,7 @@ public class EnableBackupPlanRequest extends Request {
 
     private EnableBackupPlanRequest(Builder builder) {
         super(builder);
+        this.edition = builder.edition;
         this.planId = builder.planId;
         this.sourceType = builder.sourceType;
         this.vaultId = builder.vaultId;
@@ -48,6 +53,13 @@ public class EnableBackupPlanRequest extends Request {
 @Override
     public Builder toBuilder() {
         return new Builder(this);
+    }
+
+    /**
+     * @return edition
+     */
+    public String getEdition() {
+        return this.edition;
     }
 
     /**
@@ -72,6 +84,7 @@ public class EnableBackupPlanRequest extends Request {
     }
 
     public static final class Builder extends Request.Builder<EnableBackupPlanRequest, Builder> {
+        private String edition; 
         private String planId; 
         private String sourceType; 
         private String vaultId; 
@@ -82,10 +95,20 @@ public class EnableBackupPlanRequest extends Request {
 
         private Builder(EnableBackupPlanRequest request) {
             super(request);
+            this.edition = request.edition;
             this.planId = request.planId;
             this.sourceType = request.sourceType;
             this.vaultId = request.vaultId;
         } 
+
+        /**
+         * Edition.
+         */
+        public Builder edition(String edition) {
+            this.putQueryParameter("Edition", edition);
+            this.edition = edition;
+            return this;
+        }
 
         /**
          * <p>The ID of the backup plan.</p>

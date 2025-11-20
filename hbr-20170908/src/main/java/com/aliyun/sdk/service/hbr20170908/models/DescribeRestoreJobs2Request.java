@@ -18,6 +18,10 @@ import com.aliyun.sdk.gateway.pop.models.*;
  */
 public class DescribeRestoreJobs2Request extends Request {
     @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Edition")
+    private String edition;
+
+    @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("Filters")
     private java.util.List<Filters> filters;
 
@@ -36,6 +40,7 @@ public class DescribeRestoreJobs2Request extends Request {
 
     private DescribeRestoreJobs2Request(Builder builder) {
         super(builder);
+        this.edition = builder.edition;
         this.filters = builder.filters;
         this.pageNumber = builder.pageNumber;
         this.pageSize = builder.pageSize;
@@ -53,6 +58,13 @@ public class DescribeRestoreJobs2Request extends Request {
 @Override
     public Builder toBuilder() {
         return new Builder(this);
+    }
+
+    /**
+     * @return edition
+     */
+    public String getEdition() {
+        return this.edition;
     }
 
     /**
@@ -84,6 +96,7 @@ public class DescribeRestoreJobs2Request extends Request {
     }
 
     public static final class Builder extends Request.Builder<DescribeRestoreJobs2Request, Builder> {
+        private String edition; 
         private java.util.List<Filters> filters; 
         private Integer pageNumber; 
         private Integer pageSize; 
@@ -95,11 +108,21 @@ public class DescribeRestoreJobs2Request extends Request {
 
         private Builder(DescribeRestoreJobs2Request request) {
             super(request);
+            this.edition = request.edition;
             this.filters = request.filters;
             this.pageNumber = request.pageNumber;
             this.pageSize = request.pageSize;
             this.restoreType = request.restoreType;
         } 
+
+        /**
+         * Edition.
+         */
+        public Builder edition(String edition) {
+            this.putQueryParameter("Edition", edition);
+            this.edition = edition;
+            return this;
+        }
 
         /**
          * <p>The keys in the filter.</p>

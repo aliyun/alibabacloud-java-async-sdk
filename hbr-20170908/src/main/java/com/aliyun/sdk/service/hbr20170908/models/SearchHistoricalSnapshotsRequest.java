@@ -18,6 +18,10 @@ import com.aliyun.sdk.gateway.pop.models.*;
  */
 public class SearchHistoricalSnapshotsRequest extends Request {
     @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Edition")
+    private String edition;
+
+    @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("Limit")
     private Integer limit;
 
@@ -43,6 +47,7 @@ public class SearchHistoricalSnapshotsRequest extends Request {
 
     private SearchHistoricalSnapshotsRequest(Builder builder) {
         super(builder);
+        this.edition = builder.edition;
         this.limit = builder.limit;
         this.nextToken = builder.nextToken;
         this.order = builder.order;
@@ -62,6 +67,13 @@ public class SearchHistoricalSnapshotsRequest extends Request {
 @Override
     public Builder toBuilder() {
         return new Builder(this);
+    }
+
+    /**
+     * @return edition
+     */
+    public String getEdition() {
+        return this.edition;
     }
 
     /**
@@ -107,6 +119,7 @@ public class SearchHistoricalSnapshotsRequest extends Request {
     }
 
     public static final class Builder extends Request.Builder<SearchHistoricalSnapshotsRequest, Builder> {
+        private String edition; 
         private Integer limit; 
         private String nextToken; 
         private String order; 
@@ -120,6 +133,7 @@ public class SearchHistoricalSnapshotsRequest extends Request {
 
         private Builder(SearchHistoricalSnapshotsRequest request) {
             super(request);
+            this.edition = request.edition;
             this.limit = request.limit;
             this.nextToken = request.nextToken;
             this.order = request.order;
@@ -127,6 +141,15 @@ public class SearchHistoricalSnapshotsRequest extends Request {
             this.sortBy = request.sortBy;
             this.sourceType = request.sourceType;
         } 
+
+        /**
+         * Edition.
+         */
+        public Builder edition(String edition) {
+            this.putQueryParameter("Edition", edition);
+            this.edition = edition;
+            return this;
+        }
 
         /**
          * <p>The maximum number of rows that you want the current query to return. To query only the number of matched rows without the need to return specific data, you can set the Limit parameter to <code>0</code>. Then, the operation returns only the number of matched rows.</p>

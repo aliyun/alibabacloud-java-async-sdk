@@ -18,6 +18,10 @@ import com.aliyun.sdk.gateway.pop.models.*;
  */
 public class ExecuteBackupPlanRequest extends Request {
     @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Edition")
+    private String edition;
+
+    @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("PlanId")
     @com.aliyun.core.annotation.Validation(required = true)
     private String planId;
@@ -36,6 +40,7 @@ public class ExecuteBackupPlanRequest extends Request {
 
     private ExecuteBackupPlanRequest(Builder builder) {
         super(builder);
+        this.edition = builder.edition;
         this.planId = builder.planId;
         this.ruleId = builder.ruleId;
         this.sourceType = builder.sourceType;
@@ -53,6 +58,13 @@ public class ExecuteBackupPlanRequest extends Request {
 @Override
     public Builder toBuilder() {
         return new Builder(this);
+    }
+
+    /**
+     * @return edition
+     */
+    public String getEdition() {
+        return this.edition;
     }
 
     /**
@@ -84,6 +96,7 @@ public class ExecuteBackupPlanRequest extends Request {
     }
 
     public static final class Builder extends Request.Builder<ExecuteBackupPlanRequest, Builder> {
+        private String edition; 
         private String planId; 
         private String ruleId; 
         private String sourceType; 
@@ -95,11 +108,21 @@ public class ExecuteBackupPlanRequest extends Request {
 
         private Builder(ExecuteBackupPlanRequest request) {
             super(request);
+            this.edition = request.edition;
             this.planId = request.planId;
             this.ruleId = request.ruleId;
             this.sourceType = request.sourceType;
             this.vaultId = request.vaultId;
         } 
+
+        /**
+         * Edition.
+         */
+        public Builder edition(String edition) {
+            this.putQueryParameter("Edition", edition);
+            this.edition = edition;
+            return this;
+        }
 
         /**
          * <p>The ID of the backup plan.</p>

@@ -765,6 +765,15 @@ public class DescribeUdmSnapshotsResponseBody extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("AdvancedRetentionType")
         private String advancedRetentionType;
 
+        @com.aliyun.core.annotation.NameInMap("ArchiveErrorMessage")
+        private String archiveErrorMessage;
+
+        @com.aliyun.core.annotation.NameInMap("ArchiveStatus")
+        private String archiveStatus;
+
+        @com.aliyun.core.annotation.NameInMap("ArchiveTriggerTime")
+        private Long archiveTriggerTime;
+
         @com.aliyun.core.annotation.NameInMap("BackupType")
         private String backupType;
 
@@ -837,6 +846,9 @@ public class DescribeUdmSnapshotsResponseBody extends TeaModel {
         private Snapshots(Builder builder) {
             this.actualBytes = builder.actualBytes;
             this.advancedRetentionType = builder.advancedRetentionType;
+            this.archiveErrorMessage = builder.archiveErrorMessage;
+            this.archiveStatus = builder.archiveStatus;
+            this.archiveTriggerTime = builder.archiveTriggerTime;
             this.backupType = builder.backupType;
             this.bytesTotal = builder.bytesTotal;
             this.canBeDeleted = builder.canBeDeleted;
@@ -882,6 +894,27 @@ public class DescribeUdmSnapshotsResponseBody extends TeaModel {
          */
         public String getAdvancedRetentionType() {
             return this.advancedRetentionType;
+        }
+
+        /**
+         * @return archiveErrorMessage
+         */
+        public String getArchiveErrorMessage() {
+            return this.archiveErrorMessage;
+        }
+
+        /**
+         * @return archiveStatus
+         */
+        public String getArchiveStatus() {
+            return this.archiveStatus;
+        }
+
+        /**
+         * @return archiveTriggerTime
+         */
+        public Long getArchiveTriggerTime() {
+            return this.archiveTriggerTime;
         }
 
         /**
@@ -1048,6 +1081,9 @@ public class DescribeUdmSnapshotsResponseBody extends TeaModel {
         public static final class Builder {
             private String actualBytes; 
             private String advancedRetentionType; 
+            private String archiveErrorMessage; 
+            private String archiveStatus; 
+            private Long archiveTriggerTime; 
             private String backupType; 
             private Long bytesTotal; 
             private Boolean canBeDeleted; 
@@ -1078,6 +1114,9 @@ public class DescribeUdmSnapshotsResponseBody extends TeaModel {
             private Builder(Snapshots model) {
                 this.actualBytes = model.actualBytes;
                 this.advancedRetentionType = model.advancedRetentionType;
+                this.archiveErrorMessage = model.archiveErrorMessage;
+                this.archiveStatus = model.archiveStatus;
+                this.archiveTriggerTime = model.archiveTriggerTime;
                 this.backupType = model.backupType;
                 this.bytesTotal = model.bytesTotal;
                 this.canBeDeleted = model.canBeDeleted;
@@ -1127,6 +1166,30 @@ public class DescribeUdmSnapshotsResponseBody extends TeaModel {
              */
             public Builder advancedRetentionType(String advancedRetentionType) {
                 this.advancedRetentionType = advancedRetentionType;
+                return this;
+            }
+
+            /**
+             * ArchiveErrorMessage.
+             */
+            public Builder archiveErrorMessage(String archiveErrorMessage) {
+                this.archiveErrorMessage = archiveErrorMessage;
+                return this;
+            }
+
+            /**
+             * ArchiveStatus.
+             */
+            public Builder archiveStatus(String archiveStatus) {
+                this.archiveStatus = archiveStatus;
+                return this;
+            }
+
+            /**
+             * ArchiveTriggerTime.
+             */
+            public Builder archiveTriggerTime(Long archiveTriggerTime) {
+                this.archiveTriggerTime = archiveTriggerTime;
                 return this;
             }
 

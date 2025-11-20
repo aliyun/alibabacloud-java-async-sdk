@@ -18,17 +18,21 @@ import com.aliyun.sdk.gateway.pop.models.*;
  */
 public class CancelRestoreJobRequest extends Request {
     @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Edition")
+    private String edition;
+
+    @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("RestoreId")
     @com.aliyun.core.annotation.Validation(required = true)
     private String restoreId;
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("VaultId")
-    @com.aliyun.core.annotation.Validation(required = true)
     private String vaultId;
 
     private CancelRestoreJobRequest(Builder builder) {
         super(builder);
+        this.edition = builder.edition;
         this.restoreId = builder.restoreId;
         this.vaultId = builder.vaultId;
     }
@@ -47,6 +51,13 @@ public class CancelRestoreJobRequest extends Request {
     }
 
     /**
+     * @return edition
+     */
+    public String getEdition() {
+        return this.edition;
+    }
+
+    /**
      * @return restoreId
      */
     public String getRestoreId() {
@@ -61,6 +72,7 @@ public class CancelRestoreJobRequest extends Request {
     }
 
     public static final class Builder extends Request.Builder<CancelRestoreJobRequest, Builder> {
+        private String edition; 
         private String restoreId; 
         private String vaultId; 
 
@@ -70,9 +82,19 @@ public class CancelRestoreJobRequest extends Request {
 
         private Builder(CancelRestoreJobRequest request) {
             super(request);
+            this.edition = request.edition;
             this.restoreId = request.restoreId;
             this.vaultId = request.vaultId;
         } 
+
+        /**
+         * Edition.
+         */
+        public Builder edition(String edition) {
+            this.putQueryParameter("Edition", edition);
+            this.edition = edition;
+            return this;
+        }
 
         /**
          * <p>The ID of the restore job.</p>
@@ -89,7 +111,6 @@ public class CancelRestoreJobRequest extends Request {
 
         /**
          * <p>The ID of the backup vault.</p>
-         * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
          * <p>v-*********************</p>

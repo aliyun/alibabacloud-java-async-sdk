@@ -375,6 +375,9 @@ public class SearchHistoricalSnapshotsResponseBody extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Prefix")
         private String prefix;
 
+        @com.aliyun.core.annotation.NameInMap("ProtectedDataSize")
+        private Long protectedDataSize;
+
         @com.aliyun.core.annotation.NameInMap("RangeEnd")
         private Long rangeEnd;
 
@@ -446,6 +449,7 @@ public class SearchHistoricalSnapshotsResponseBody extends TeaModel {
             this.path = builder.path;
             this.paths = builder.paths;
             this.prefix = builder.prefix;
+            this.protectedDataSize = builder.protectedDataSize;
             this.rangeEnd = builder.rangeEnd;
             this.rangeStart = builder.rangeStart;
             this.retention = builder.retention;
@@ -647,6 +651,13 @@ public class SearchHistoricalSnapshotsResponseBody extends TeaModel {
         }
 
         /**
+         * @return protectedDataSize
+         */
+        public Long getProtectedDataSize() {
+            return this.protectedDataSize;
+        }
+
+        /**
          * @return rangeEnd
          */
         public Long getRangeEnd() {
@@ -777,6 +788,7 @@ public class SearchHistoricalSnapshotsResponseBody extends TeaModel {
             private String path; 
             private Paths paths; 
             private String prefix; 
+            private Long protectedDataSize; 
             private Long rangeEnd; 
             private Long rangeStart; 
             private Long retention; 
@@ -822,6 +834,7 @@ public class SearchHistoricalSnapshotsResponseBody extends TeaModel {
                 this.path = model.path;
                 this.paths = model.paths;
                 this.prefix = model.prefix;
+                this.protectedDataSize = model.protectedDataSize;
                 this.rangeEnd = model.rangeEnd;
                 this.rangeStart = model.rangeStart;
                 this.retention = model.retention;
@@ -1120,6 +1133,14 @@ public class SearchHistoricalSnapshotsResponseBody extends TeaModel {
              */
             public Builder prefix(String prefix) {
                 this.prefix = prefix;
+                return this;
+            }
+
+            /**
+             * ProtectedDataSize.
+             */
+            public Builder protectedDataSize(Long protectedDataSize) {
+                this.protectedDataSize = protectedDataSize;
                 return this;
             }
 

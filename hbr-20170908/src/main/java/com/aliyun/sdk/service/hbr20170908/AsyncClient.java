@@ -546,6 +546,12 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<InstallBackupClientsResponse> installBackupClients(InstallBackupClientsRequest request);
 
     /**
+     * @param request the request parameters of ListProtectedResources  ListProtectedResourcesRequest
+     * @return ListProtectedResourcesResponse
+     */
+    CompletableFuture<ListProtectedResourcesResponse> listProtectedResources(ListProtectedResourcesRequest request);
+
+    /**
      * @param request the request parameters of OpenHbrService  OpenHbrServiceRequest
      * @return OpenHbrServiceResponse
      */

@@ -29,6 +29,10 @@ public class CreateRestoreJobRequest extends Request {
     @com.aliyun.core.annotation.NameInMap("CrossAccountUserId")
     private Long crossAccountUserId;
 
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Edition")
+    private String edition;
+
     @com.aliyun.core.annotation.Body
     @com.aliyun.core.annotation.NameInMap("Exclude")
     private String exclude;
@@ -132,6 +136,7 @@ public class CreateRestoreJobRequest extends Request {
         this.crossAccountRoleName = builder.crossAccountRoleName;
         this.crossAccountType = builder.crossAccountType;
         this.crossAccountUserId = builder.crossAccountUserId;
+        this.edition = builder.edition;
         this.exclude = builder.exclude;
         this.failbackDetail = builder.failbackDetail;
         this.include = builder.include;
@@ -190,6 +195,13 @@ public class CreateRestoreJobRequest extends Request {
      */
     public Long getCrossAccountUserId() {
         return this.crossAccountUserId;
+    }
+
+    /**
+     * @return edition
+     */
+    public String getEdition() {
+        return this.edition;
     }
 
     /**
@@ -364,6 +376,7 @@ public class CreateRestoreJobRequest extends Request {
         private String crossAccountRoleName; 
         private String crossAccountType; 
         private Long crossAccountUserId; 
+        private String edition; 
         private String exclude; 
         private java.util.Map<String, ?> failbackDetail; 
         private String include; 
@@ -398,6 +411,7 @@ public class CreateRestoreJobRequest extends Request {
             this.crossAccountRoleName = request.crossAccountRoleName;
             this.crossAccountType = request.crossAccountType;
             this.crossAccountUserId = request.crossAccountUserId;
+            this.edition = request.edition;
             this.exclude = request.exclude;
             this.failbackDetail = request.failbackDetail;
             this.include = request.include;
@@ -461,6 +475,15 @@ public class CreateRestoreJobRequest extends Request {
         public Builder crossAccountUserId(Long crossAccountUserId) {
             this.putQueryParameter("CrossAccountUserId", crossAccountUserId);
             this.crossAccountUserId = crossAccountUserId;
+            return this;
+        }
+
+        /**
+         * Edition.
+         */
+        public Builder edition(String edition) {
+            this.putQueryParameter("Edition", edition);
+            this.edition = edition;
             return this;
         }
 

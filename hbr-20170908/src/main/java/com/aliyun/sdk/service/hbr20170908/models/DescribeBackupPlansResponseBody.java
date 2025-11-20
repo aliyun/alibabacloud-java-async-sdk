@@ -1250,6 +1250,9 @@ public class DescribeBackupPlansResponseBody extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("LatestExecuteJobId")
         private String latestExecuteJobId;
 
+        @com.aliyun.core.annotation.NameInMap("LatestFinishJobId")
+        private String latestFinishJobId;
+
         @com.aliyun.core.annotation.NameInMap("Options")
         private String options;
 
@@ -1324,6 +1327,7 @@ public class DescribeBackupPlansResponseBody extends TeaModel {
             this.instanceName = builder.instanceName;
             this.keepLatestSnapshots = builder.keepLatestSnapshots;
             this.latestExecuteJobId = builder.latestExecuteJobId;
+            this.latestFinishJobId = builder.latestFinishJobId;
             this.options = builder.options;
             this.otsDetail = builder.otsDetail;
             this.paths = builder.paths;
@@ -1546,6 +1550,13 @@ public class DescribeBackupPlansResponseBody extends TeaModel {
         }
 
         /**
+         * @return latestFinishJobId
+         */
+        public String getLatestFinishJobId() {
+            return this.latestFinishJobId;
+        }
+
+        /**
          * @return options
          */
         public String getOptions() {
@@ -1679,6 +1690,7 @@ public class DescribeBackupPlansResponseBody extends TeaModel {
             private String instanceName; 
             private Long keepLatestSnapshots; 
             private String latestExecuteJobId; 
+            private String latestFinishJobId; 
             private String options; 
             private OtsDetail otsDetail; 
             private Paths paths; 
@@ -1727,6 +1739,7 @@ public class DescribeBackupPlansResponseBody extends TeaModel {
                 this.instanceName = model.instanceName;
                 this.keepLatestSnapshots = model.keepLatestSnapshots;
                 this.latestExecuteJobId = model.latestExecuteJobId;
+                this.latestFinishJobId = model.latestFinishJobId;
                 this.options = model.options;
                 this.otsDetail = model.otsDetail;
                 this.paths = model.paths;
@@ -2055,6 +2068,14 @@ public class DescribeBackupPlansResponseBody extends TeaModel {
              */
             public Builder latestExecuteJobId(String latestExecuteJobId) {
                 this.latestExecuteJobId = latestExecuteJobId;
+                return this;
+            }
+
+            /**
+             * LatestFinishJobId.
+             */
+            public Builder latestFinishJobId(String latestFinishJobId) {
+                this.latestFinishJobId = latestFinishJobId;
                 return this;
             }
 

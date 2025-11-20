@@ -18,6 +18,10 @@ import com.aliyun.sdk.gateway.pop.models.*;
  */
 public class DescribeBackupPlansRequest extends Request {
     @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Edition")
+    private String edition;
+
+    @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("Filters")
     private java.util.List<Filters> filters;
 
@@ -36,6 +40,7 @@ public class DescribeBackupPlansRequest extends Request {
 
     private DescribeBackupPlansRequest(Builder builder) {
         super(builder);
+        this.edition = builder.edition;
         this.filters = builder.filters;
         this.pageNumber = builder.pageNumber;
         this.pageSize = builder.pageSize;
@@ -53,6 +58,13 @@ public class DescribeBackupPlansRequest extends Request {
 @Override
     public Builder toBuilder() {
         return new Builder(this);
+    }
+
+    /**
+     * @return edition
+     */
+    public String getEdition() {
+        return this.edition;
     }
 
     /**
@@ -84,6 +96,7 @@ public class DescribeBackupPlansRequest extends Request {
     }
 
     public static final class Builder extends Request.Builder<DescribeBackupPlansRequest, Builder> {
+        private String edition; 
         private java.util.List<Filters> filters; 
         private Integer pageNumber; 
         private Integer pageSize; 
@@ -95,11 +108,21 @@ public class DescribeBackupPlansRequest extends Request {
 
         private Builder(DescribeBackupPlansRequest request) {
             super(request);
+            this.edition = request.edition;
             this.filters = request.filters;
             this.pageNumber = request.pageNumber;
             this.pageSize = request.pageSize;
             this.sourceType = request.sourceType;
         } 
+
+        /**
+         * Edition.
+         */
+        public Builder edition(String edition) {
+            this.putQueryParameter("Edition", edition);
+            this.edition = edition;
+            return this;
+        }
 
         /**
          * <p>The filters.</p>
