@@ -18,6 +18,11 @@ import com.aliyun.sdk.gateway.pop.models.*;
  */
 public class GenerateWuyingServerSceneUrlRequest extends Request {
     @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("ApiKey")
+    @com.aliyun.core.annotation.Validation(required = true)
+    private String apiKey;
+
+    @com.aliyun.core.annotation.Body
     @com.aliyun.core.annotation.NameInMap("ClientId")
     private String clientId;
 
@@ -47,7 +52,6 @@ public class GenerateWuyingServerSceneUrlRequest extends Request {
 
     @com.aliyun.core.annotation.Body
     @com.aliyun.core.annotation.NameInMap("LoginToken")
-    @com.aliyun.core.annotation.Validation(required = true)
     private String loginToken;
 
     @com.aliyun.core.annotation.Body
@@ -62,7 +66,6 @@ public class GenerateWuyingServerSceneUrlRequest extends Request {
 
     @com.aliyun.core.annotation.Body
     @com.aliyun.core.annotation.NameInMap("SessionId")
-    @com.aliyun.core.annotation.Validation(required = true)
     private String sessionId;
 
     @com.aliyun.core.annotation.Body
@@ -76,6 +79,7 @@ public class GenerateWuyingServerSceneUrlRequest extends Request {
 
     private GenerateWuyingServerSceneUrlRequest(Builder builder) {
         super(builder);
+        this.apiKey = builder.apiKey;
         this.clientId = builder.clientId;
         this.clientIp = builder.clientIp;
         this.clientOS = builder.clientOS;
@@ -102,6 +106,13 @@ public class GenerateWuyingServerSceneUrlRequest extends Request {
 @Override
     public Builder toBuilder() {
         return new Builder(this);
+    }
+
+    /**
+     * @return apiKey
+     */
+    public String getApiKey() {
+        return this.apiKey;
     }
 
     /**
@@ -196,6 +207,7 @@ public class GenerateWuyingServerSceneUrlRequest extends Request {
     }
 
     public static final class Builder extends Request.Builder<GenerateWuyingServerSceneUrlRequest, Builder> {
+        private String apiKey; 
         private String clientId; 
         private String clientIp; 
         private String clientOS; 
@@ -216,6 +228,7 @@ public class GenerateWuyingServerSceneUrlRequest extends Request {
 
         private Builder(GenerateWuyingServerSceneUrlRequest request) {
             super(request);
+            this.apiKey = request.apiKey;
             this.clientId = request.clientId;
             this.clientIp = request.clientIp;
             this.clientOS = request.clientOS;
@@ -230,6 +243,15 @@ public class GenerateWuyingServerSceneUrlRequest extends Request {
             this.uuid = request.uuid;
             this.wuyingServerId = request.wuyingServerId;
         } 
+
+        /**
+         * <p>This parameter is required.</p>
+         */
+        public Builder apiKey(String apiKey) {
+            this.putBodyParameter("ApiKey", apiKey);
+            this.apiKey = apiKey;
+            return this;
+        }
 
         /**
          * ClientId.
@@ -295,7 +317,7 @@ public class GenerateWuyingServerSceneUrlRequest extends Request {
         }
 
         /**
-         * <p>This parameter is required.</p>
+         * LoginToken.
          */
         public Builder loginToken(String loginToken) {
             this.putBodyParameter("LoginToken", loginToken);
@@ -322,7 +344,7 @@ public class GenerateWuyingServerSceneUrlRequest extends Request {
         }
 
         /**
-         * <p>This parameter is required.</p>
+         * SessionId.
          */
         public Builder sessionId(String sessionId) {
             this.putBodyParameter("SessionId", sessionId);
