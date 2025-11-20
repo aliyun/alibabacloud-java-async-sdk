@@ -59,7 +59,10 @@ public class GetPluginAttachmentRequest extends Request {
         } 
 
         /**
-         * pluginAttachmentId.
+         * <p>The attachment ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>pa-cvl541em1hkk7n8vq810</p>
          */
         public Builder pluginAttachmentId(String pluginAttachmentId) {
             this.putPathParameter("pluginAttachmentId", pluginAttachmentId);

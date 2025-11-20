@@ -93,7 +93,10 @@ public class CreateAndAttachPolicyResponseBody extends TeaModel {
         } 
 
         /**
-         * code.
+         * <p>The status code returned.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Ok</p>
          */
         public Builder code(String code) {
             this.code = code;
@@ -101,7 +104,7 @@ public class CreateAndAttachPolicyResponseBody extends TeaModel {
         }
 
         /**
-         * data.
+         * <p>The returned data.</p>
          */
         public Builder data(Data data) {
             this.data = data;
@@ -109,7 +112,10 @@ public class CreateAndAttachPolicyResponseBody extends TeaModel {
         }
 
         /**
-         * message.
+         * <p>The response message returned.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>success</p>
          */
         public Builder message(String message) {
             this.message = message;
@@ -117,7 +123,10 @@ public class CreateAndAttachPolicyResponseBody extends TeaModel {
         }
 
         /**
-         * requestId.
+         * <p>The request ID, which is used to trace the call link.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>585657D2-1C20-5B8A-AF17-D727C6490BE4</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -183,7 +192,7 @@ public class CreateAndAttachPolicyResponseBody extends TeaModel {
             } 
 
             /**
-             * attachment.
+             * <p>The association information of the policy.</p>
              */
             public Builder attachment(Attachment attachment) {
                 this.attachment = attachment;
@@ -191,7 +200,10 @@ public class CreateAndAttachPolicyResponseBody extends TeaModel {
             }
 
             /**
-             * policyId.
+             * <p>The policy ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>p-cq7l5s5lhtgi6qasrdc0</p>
              */
             public Builder policyId(String policyId) {
                 this.policyId = policyId;

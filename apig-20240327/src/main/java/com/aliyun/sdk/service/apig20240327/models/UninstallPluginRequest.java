@@ -59,7 +59,10 @@ public class UninstallPluginRequest extends Request {
         } 
 
         /**
-         * pluginId.
+         * <p>The plug-in ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>pl-cvd2b36m1hkhdosfhar0</p>
          */
         public Builder pluginId(String pluginId) {
             this.putPathParameter("pluginId", pluginId);

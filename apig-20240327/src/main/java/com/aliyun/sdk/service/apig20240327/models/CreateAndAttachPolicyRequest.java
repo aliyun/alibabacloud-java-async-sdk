@@ -161,6 +161,7 @@ public class CreateAndAttachPolicyRequest extends Request {
         } 
 
         /**
+         * <p>The IDs of the resources to be associated with the policy.</p>
          * <p>This parameter is required.</p>
          */
         public Builder attachResourceIds(java.util.List<String> attachResourceIds) {
@@ -170,6 +171,16 @@ public class CreateAndAttachPolicyRequest extends Request {
         }
 
         /**
+         * <p>The supported resource type. Valid values:</p>
+         * <ul>
+         * <li>HttpApi: an HTTP API</li>
+         * <li>Operation: an operation in an HTTP API</li>
+         * <li>GatewayRoute: a route</li>
+         * <li>GatewayService: a service</li>
+         * <li>GatewayServicePort: a service port</li>
+         * <li>Domain: a domain name</li>
+         * <li>Gateway: an instance</li>
+         * </ul>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -182,6 +193,29 @@ public class CreateAndAttachPolicyRequest extends Request {
         }
 
         /**
+         * <p>The class name supported by the policy. Different policies support different resources. This parameter is used in combination with AttachResourceType.</p>
+         * <ul>
+         * <li>RateLimit: throttles traffic. Supported: HttpApi, Operation, and GatewayRoute.</li>
+         * <li>ConcurrencyLimit: controls concurrency. Supported: HttpApi, Operation, and GatewayRoute.</li>
+         * <li>CircuitBreaker: breaks circuits and downgrades traffic. Supported: HttpApi, Operation, and GatewayRoute.</li>
+         * <li>HttpRewrite: rewrites HTTP traffic. Supported: HttpApi, Operation, and GatewayRoute.</li>
+         * <li>HeaderModify: modifies headers. Supported: HttpApi, Operation, and GatewayRoute.</li>
+         * <li>Cors: supports CORS. Supported: HttpApi, Operation, and GatewayRoute.</li>
+         * <li>FlowCopy: replicates traffic. Supported: HttpApi, Operation, and GatewayRoute.</li>
+         * <li>Timeout: times out requests. Supported: HttpApi, Operation, and GatewayRoute.</li>
+         * <li>Retry: retries requests. Supported: HttpApi, Operation, and GatewayRoute.</li>
+         * <li>IpAccessControl: implements IP address-based access control. Supported: HttpApi, Operation, GatewayRoute, Domain, and Gateway.</li>
+         * <li>DirectResponse: mocks responses. Supported: Operation and GatewayRoute.</li>
+         * <li>Redirect: redirects traffic. Supported: GatewayRoute.</li>
+         * <li>Fallback: implements fallback. Supported: Operation and GatewayRoute.</li>
+         * <li>ServiceTls: implements TLS authentication. Supported: GatewayService.</li>
+         * <li>ServiceLb: balances loads. Supported: GatewayService.</li>
+         * <li>ServicePortTls: implements service port TLS authentication. Supported: GatewayServicePort.</li>
+         * <li>Waf: implements WAF protection. Supported: GatewayRoute and Gateway.</li>
+         * <li>JWTAuth: implements global JWT authentication. Supported: Gateway.</li>
+         * <li>OIDCAuth: implements global OIDC authentication. Supported: Gateway.</li>
+         * <li>ExternalZAuth: implements custom authentication. Supported: Gateway.</li>
+         * </ul>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -194,6 +228,7 @@ public class CreateAndAttachPolicyRequest extends Request {
         }
 
         /**
+         * <p>The policy configurations.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -206,7 +241,10 @@ public class CreateAndAttachPolicyRequest extends Request {
         }
 
         /**
-         * description.
+         * <p>The policy description.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>This is the policy description.</p>
          */
         public Builder description(String description) {
             this.putBodyParameter("description", description);
@@ -215,7 +253,10 @@ public class CreateAndAttachPolicyRequest extends Request {
         }
 
         /**
-         * environmentId.
+         * <p>The environment ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>env-cq7l5s5lhtgi6qasrdc0</p>
          */
         public Builder environmentId(String environmentId) {
             this.putBodyParameter("environmentId", environmentId);
@@ -224,7 +265,10 @@ public class CreateAndAttachPolicyRequest extends Request {
         }
 
         /**
-         * gatewayId.
+         * <p>The instance ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>gw-cq7l5s5lhtgi6qasrdc0</p>
          */
         public Builder gatewayId(String gatewayId) {
             this.putBodyParameter("gatewayId", gatewayId);
@@ -233,7 +277,10 @@ public class CreateAndAttachPolicyRequest extends Request {
         }
 
         /**
-         * name.
+         * <p>The policy name.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>test</p>
          */
         public Builder name(String name) {
             this.putBodyParameter("name", name);

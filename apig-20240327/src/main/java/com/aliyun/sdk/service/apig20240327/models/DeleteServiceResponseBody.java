@@ -80,7 +80,10 @@ public class DeleteServiceResponseBody extends TeaModel {
         } 
 
         /**
-         * code.
+         * <p>The status code.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Ok</p>
          */
         public Builder code(String code) {
             this.code = code;
@@ -88,7 +91,10 @@ public class DeleteServiceResponseBody extends TeaModel {
         }
 
         /**
-         * message.
+         * <p>The status message.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>success</p>
          */
         public Builder message(String message) {
             this.message = message;
@@ -96,7 +102,10 @@ public class DeleteServiceResponseBody extends TeaModel {
         }
 
         /**
-         * requestId.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>3C3B9A12-3868-5EB9-8BEA-F99E03DD125C</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;

@@ -93,7 +93,10 @@ public class ListConsumersResponseBody extends TeaModel {
         } 
 
         /**
-         * code.
+         * <p>The status code.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Ok</p>
          */
         public Builder code(String code) {
             this.code = code;
@@ -101,7 +104,7 @@ public class ListConsumersResponseBody extends TeaModel {
         }
 
         /**
-         * data.
+         * <p>The response payload.</p>
          */
         public Builder data(Data data) {
             this.data = data;
@@ -109,7 +112,10 @@ public class ListConsumersResponseBody extends TeaModel {
         }
 
         /**
-         * message.
+         * <p>The status message.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>success</p>
          */
         public Builder message(String message) {
             this.message = message;
@@ -117,7 +123,7 @@ public class ListConsumersResponseBody extends TeaModel {
         }
 
         /**
-         * <p>Id of the request</p>
+         * <p>The request ID.</p>
          * 
          * <strong>example:</strong>
          * <p>9BDD6A7C-CBA7-504F-B8C5-51B9F16590F7</p>
@@ -251,7 +257,10 @@ public class ListConsumersResponseBody extends TeaModel {
             } 
 
             /**
-             * consumerId.
+             * <p>The consumer ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>cs-csheiftlhtgmp0j0hp4g</p>
              */
             public Builder consumerId(String consumerId) {
                 this.consumerId = consumerId;
@@ -259,7 +268,10 @@ public class ListConsumersResponseBody extends TeaModel {
             }
 
             /**
-             * createTimestamp.
+             * <p>The creation timestamp.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1721097861050</p>
              */
             public Builder createTimestamp(Long createTimestamp) {
                 this.createTimestamp = createTimestamp;
@@ -267,7 +279,10 @@ public class ListConsumersResponseBody extends TeaModel {
             }
 
             /**
-             * deployStatus.
+             * <p>The deployment status of the API in the current environment.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>{}</p>
              */
             public Builder deployStatus(String deployStatus) {
                 this.deployStatus = deployStatus;
@@ -275,7 +290,10 @@ public class ListConsumersResponseBody extends TeaModel {
             }
 
             /**
-             * description.
+             * <p>The description.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>This is the description.</p>
              */
             public Builder description(String description) {
                 this.description = description;
@@ -283,7 +301,10 @@ public class ListConsumersResponseBody extends TeaModel {
             }
 
             /**
-             * enable.
+             * <p>Indicates if enabled.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>true</p>
              */
             public Builder enable(Boolean enable) {
                 this.enable = enable;
@@ -291,7 +312,10 @@ public class ListConsumersResponseBody extends TeaModel {
             }
 
             /**
-             * name.
+             * <p>The consumer name.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>user-service</p>
              */
             public Builder name(String name) {
                 this.name = name;
@@ -299,7 +323,10 @@ public class ListConsumersResponseBody extends TeaModel {
             }
 
             /**
-             * updateTimestamp.
+             * <p>The last update timestamp.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1721123855214</p>
              */
             public Builder updateTimestamp(Long updateTimestamp) {
                 this.updateTimestamp = updateTimestamp;
@@ -392,7 +419,7 @@ public class ListConsumersResponseBody extends TeaModel {
             } 
 
             /**
-             * items.
+             * <p>The list of consumer information.</p>
              */
             public Builder items(java.util.List<Items> items) {
                 this.items = items;
@@ -400,7 +427,10 @@ public class ListConsumersResponseBody extends TeaModel {
             }
 
             /**
-             * pageNumber.
+             * <p>The page number.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder pageNumber(Integer pageNumber) {
                 this.pageNumber = pageNumber;
@@ -408,7 +438,10 @@ public class ListConsumersResponseBody extends TeaModel {
             }
 
             /**
-             * pageSize.
+             * <p>The number of entries per page.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>10</p>
              */
             public Builder pageSize(Integer pageSize) {
                 this.pageSize = pageSize;
@@ -416,7 +449,10 @@ public class ListConsumersResponseBody extends TeaModel {
             }
 
             /**
-             * totalSize.
+             * <p>The total number of entries returned.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>18</p>
              */
             public Builder totalSize(Integer totalSize) {
                 this.totalSize = totalSize;

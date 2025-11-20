@@ -101,7 +101,10 @@ public class UpdatePluginAttachmentRequest extends Request {
         } 
 
         /**
-         * pluginAttachmentId.
+         * <p>The attachment ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>pa-cri2uq5lhtgkq0ldllj0</p>
          */
         public Builder pluginAttachmentId(String pluginAttachmentId) {
             this.putPathParameter("pluginAttachmentId", pluginAttachmentId);
@@ -110,7 +113,7 @@ public class UpdatePluginAttachmentRequest extends Request {
         }
 
         /**
-         * attachResourceIds.
+         * <p>The IDs of the resources to which the plug-in is attached.</p>
          */
         public Builder attachResourceIds(java.util.List<String> attachResourceIds) {
             this.putBodyParameter("attachResourceIds", attachResourceIds);
@@ -119,7 +122,10 @@ public class UpdatePluginAttachmentRequest extends Request {
         }
 
         /**
-         * enable.
+         * <p>Specifies whether to enable the plug-in.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>false</p>
          */
         public Builder enable(Boolean enable) {
             this.putBodyParameter("enable", enable);
@@ -128,7 +134,10 @@ public class UpdatePluginAttachmentRequest extends Request {
         }
 
         /**
-         * pluginConfig.
+         * <p>The Base64-encoded configurations of the plug-in.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cHJlcGVuZDoKLSByb2xlOiBzeXN0ZW0KICBjb250ZW50OiDor7fkvb/nlKjoi7Hor63lm57nrZTpl67popgKYXBwZW5kOgotIHJvbGU6IHVzZXIKICBjb250ZW50OiDmr4/mrKHlm57nrZTlrozpl67popjvvIzlsJ3or5Xov5vooYzlj43pl64K</p>
          */
         public Builder pluginConfig(String pluginConfig) {
             this.putBodyParameter("pluginConfig", pluginConfig);

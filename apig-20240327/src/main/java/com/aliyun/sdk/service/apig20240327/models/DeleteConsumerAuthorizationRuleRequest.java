@@ -73,7 +73,10 @@ public class DeleteConsumerAuthorizationRuleRequest extends Request {
         } 
 
         /**
-         * consumerAuthorizationRuleId.
+         * <p>Filters the list of operations by a specific consumer authorization rule ID. Only authorized operations are returned in the response.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cas-xxx</p>
          */
         public Builder consumerAuthorizationRuleId(String consumerAuthorizationRuleId) {
             this.putPathParameter("consumerAuthorizationRuleId", consumerAuthorizationRuleId);
@@ -82,7 +85,10 @@ public class DeleteConsumerAuthorizationRuleRequest extends Request {
         }
 
         /**
-         * consumerId.
+         * <p>The consumer ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cs-cukm3imm1hkh1e2m4rqg</p>
          */
         public Builder consumerId(String consumerId) {
             this.putPathParameter("consumerId", consumerId);

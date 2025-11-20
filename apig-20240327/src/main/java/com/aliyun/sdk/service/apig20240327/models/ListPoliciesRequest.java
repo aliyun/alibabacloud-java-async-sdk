@@ -129,7 +129,10 @@ public class ListPoliciesRequest extends Request {
         } 
 
         /**
-         * attachResourceId.
+         * <p>The attachment point ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>api-cq7l5s5lhtgi6qasrdc0</p>
          */
         public Builder attachResourceId(String attachResourceId) {
             this.putQueryParameter("attachResourceId", attachResourceId);
@@ -138,7 +141,19 @@ public class ListPoliciesRequest extends Request {
         }
 
         /**
-         * attachResourceType.
+         * <p>The types of attachment points supported by the policy. Valid values: </p>
+         * <ul>
+         * <li>HttpApi</li>
+         * <li>Operation</li>
+         * <li>GatewayRoute</li>
+         * <li>GatewayService</li>
+         * <li>GatewayServicePort</li>
+         * <li>Domain</li>
+         * <li>Gateway</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>HttpApi</p>
          */
         public Builder attachResourceType(String attachResourceType) {
             this.putQueryParameter("attachResourceType", attachResourceType);
@@ -147,7 +162,10 @@ public class ListPoliciesRequest extends Request {
         }
 
         /**
-         * environmentId.
+         * <p>The environment ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>env-cq7l5s5lhtgi6qasrdc0</p>
          */
         public Builder environmentId(String environmentId) {
             this.putQueryParameter("environmentId", environmentId);
@@ -156,7 +174,10 @@ public class ListPoliciesRequest extends Request {
         }
 
         /**
-         * gatewayId.
+         * <p>The gateway ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>gw-cq2fm65lhtgm9nrrl7ag</p>
          */
         public Builder gatewayId(String gatewayId) {
             this.putQueryParameter("gatewayId", gatewayId);
@@ -165,7 +186,10 @@ public class ListPoliciesRequest extends Request {
         }
 
         /**
-         * withAttachments.
+         * <p>Specifies whether to return attachment information.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>false</p>
          */
         public Builder withAttachments(Boolean withAttachments) {
             this.putQueryParameter("withAttachments", withAttachments);
@@ -174,7 +198,10 @@ public class ListPoliciesRequest extends Request {
         }
 
         /**
-         * withSystemPolicy.
+         * <p>Specifies whether it is a system policy.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder withSystemPolicy(Boolean withSystemPolicy) {
             this.putQueryParameter("withSystemPolicy", withSystemPolicy);

@@ -80,7 +80,10 @@ public class UninstallPluginResponseBody extends TeaModel {
         } 
 
         /**
-         * code.
+         * <p>The status code.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Ok</p>
          */
         public Builder code(String code) {
             this.code = code;
@@ -88,7 +91,10 @@ public class UninstallPluginResponseBody extends TeaModel {
         }
 
         /**
-         * message.
+         * <p>The status message.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>success</p>
          */
         public Builder message(String message) {
             this.message = message;
@@ -96,7 +102,7 @@ public class UninstallPluginResponseBody extends TeaModel {
         }
 
         /**
-         * <p>Id of the request</p>
+         * <p>The request ID.</p>
          * 
          * <strong>example:</strong>
          * <p>F61D96E8-4E6D-5896-86E7-F1202AC31280</p>

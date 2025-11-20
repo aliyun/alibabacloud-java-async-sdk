@@ -185,7 +185,10 @@ public class ListPluginsRequest extends Request {
         } 
 
         /**
-         * attachResourceId.
+         * <p>The resource attachment ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>api-cuip2pum1hksng6oni3g</p>
          */
         public Builder attachResourceId(String attachResourceId) {
             this.putQueryParameter("attachResourceId", attachResourceId);
@@ -194,7 +197,19 @@ public class ListPluginsRequest extends Request {
         }
 
         /**
-         * attachResourceType.
+         * <p>The resource attachment type.</p>
+         * <ul>
+         * <li>HttpApi: HttpApi.</li>
+         * <li>Operation: Operation of HttpApi.</li>
+         * <li>GatewayRoute: Gateway route.</li>
+         * <li>GatewayService: Gateway service.</li>
+         * <li>GatewayServicePort: Gateway service port.</li>
+         * <li>Domain: Gateway domain.</li>
+         * <li>Gateway: Gateway.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>HttpApi</p>
          */
         public Builder attachResourceType(String attachResourceType) {
             this.putQueryParameter("attachResourceType", attachResourceType);
@@ -203,7 +218,10 @@ public class ListPluginsRequest extends Request {
         }
 
         /**
-         * gatewayId.
+         * <p>The gateway instance ID for filtering.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>gw-csrhgn6m1hkt65qbxxgg</p>
          */
         public Builder gatewayId(String gatewayId) {
             this.putQueryParameter("gatewayId", gatewayId);
@@ -212,7 +230,10 @@ public class ListPluginsRequest extends Request {
         }
 
         /**
-         * gatewayType.
+         * <p>The instance type. Valid values: <strong>AI</strong> and <strong>API</strong>.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>AI</p>
          */
         public Builder gatewayType(String gatewayType) {
             this.putQueryParameter("gatewayType", gatewayType);
@@ -221,7 +242,10 @@ public class ListPluginsRequest extends Request {
         }
 
         /**
-         * includeBuiltinAiGateway.
+         * <p>Specifies whether to include built-in AI plug-ins in the returned results. Default: false.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>false</p>
          */
         public Builder includeBuiltinAiGateway(Boolean includeBuiltinAiGateway) {
             this.putQueryParameter("includeBuiltinAiGateway", includeBuiltinAiGateway);
@@ -230,7 +254,10 @@ public class ListPluginsRequest extends Request {
         }
 
         /**
-         * pageNumber.
+         * <p>The page number to return. Pages start from 1. Default value: 1.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder pageNumber(Integer pageNumber) {
             this.putQueryParameter("pageNumber", pageNumber);
@@ -239,7 +266,10 @@ public class ListPluginsRequest extends Request {
         }
 
         /**
-         * pageSize.
+         * <p>The number of entries per page. Default value: 10.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10</p>
          */
         public Builder pageSize(Integer pageSize) {
             this.putQueryParameter("pageSize", pageSize);
@@ -248,7 +278,10 @@ public class ListPluginsRequest extends Request {
         }
 
         /**
-         * pluginClassId.
+         * <p>The plug-in type ID for filtering.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>pls-dn82a9djd8z****</p>
          */
         public Builder pluginClassId(String pluginClassId) {
             this.putQueryParameter("pluginClassId", pluginClassId);
@@ -257,7 +290,10 @@ public class ListPluginsRequest extends Request {
         }
 
         /**
-         * pluginClassName.
+         * <p>The plug-in type name for filtering.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>key-auth</p>
          */
         public Builder pluginClassName(String pluginClassName) {
             this.putQueryParameter("pluginClassName", pluginClassName);
@@ -266,7 +302,10 @@ public class ListPluginsRequest extends Request {
         }
 
         /**
-         * withAttachmentInfo.
+         * <p>Specifies whether the returned results should include plug-in attachment information corresponding to the attachResourceId.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>false</p>
          */
         public Builder withAttachmentInfo(Boolean withAttachmentInfo) {
             this.putQueryParameter("withAttachmentInfo", withAttachmentInfo);

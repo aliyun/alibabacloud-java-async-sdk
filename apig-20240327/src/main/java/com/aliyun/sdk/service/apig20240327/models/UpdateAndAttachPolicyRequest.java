@@ -161,6 +161,7 @@ public class UpdateAndAttachPolicyRequest extends Request {
         } 
 
         /**
+         * <p>The policy ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -173,6 +174,7 @@ public class UpdateAndAttachPolicyRequest extends Request {
         }
 
         /**
+         * <p>The association IDs.</p>
          * <p>This parameter is required.</p>
          */
         public Builder attachResourceIds(java.util.List<String> attachResourceIds) {
@@ -182,6 +184,16 @@ public class UpdateAndAttachPolicyRequest extends Request {
         }
 
         /**
+         * <p>The supported associated resource type. Valid values:</p>
+         * <ul>
+         * <li>HttpApi: an HTTP API</li>
+         * <li>Operation: an operation in an HTTP API</li>
+         * <li>GatewayRoute: a route</li>
+         * <li>GatewayService: a service</li>
+         * <li>GatewayServicePort: a service port</li>
+         * <li>Domain: a domain name</li>
+         * <li>Gateway: an instance</li>
+         * </ul>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -194,6 +206,7 @@ public class UpdateAndAttachPolicyRequest extends Request {
         }
 
         /**
+         * <p>The policy configurations. The value is a JSON string.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -206,7 +219,10 @@ public class UpdateAndAttachPolicyRequest extends Request {
         }
 
         /**
-         * description.
+         * <p>The policy description.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>This is the description.</p>
          */
         public Builder description(String description) {
             this.putBodyParameter("description", description);
@@ -215,7 +231,10 @@ public class UpdateAndAttachPolicyRequest extends Request {
         }
 
         /**
-         * environmentId.
+         * <p>The environment ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>env-cq2avtllhtgja4dk5djg</p>
          */
         public Builder environmentId(String environmentId) {
             this.putBodyParameter("environmentId", environmentId);
@@ -224,7 +243,10 @@ public class UpdateAndAttachPolicyRequest extends Request {
         }
 
         /**
-         * gatewayId.
+         * <p>The instance ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>gw-cq2avtllhtgja4dk5djg</p>
          */
         public Builder gatewayId(String gatewayId) {
             this.putBodyParameter("gatewayId", gatewayId);
@@ -233,7 +255,10 @@ public class UpdateAndAttachPolicyRequest extends Request {
         }
 
         /**
-         * name.
+         * <p>The policy name.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>test</p>
          */
         public Builder name(String name) {
             this.putBodyParameter("name", name);

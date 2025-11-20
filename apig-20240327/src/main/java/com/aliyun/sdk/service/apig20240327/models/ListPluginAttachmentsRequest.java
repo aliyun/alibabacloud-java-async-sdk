@@ -171,7 +171,10 @@ public class ListPluginAttachmentsRequest extends Request {
         } 
 
         /**
-         * attachResourceId.
+         * <p>The resource attachment ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>hr-cv2h58em1hkg7c6vt43g</p>
          */
         public Builder attachResourceId(String attachResourceId) {
             this.putQueryParameter("attachResourceId", attachResourceId);
@@ -180,7 +183,10 @@ public class ListPluginAttachmentsRequest extends Request {
         }
 
         /**
-         * attachResourceType.
+         * <p>The resource attachment type (not yet in use).</p>
+         * 
+         * <strong>example:</strong>
+         * <p>GatewayRoute</p>
          */
         public Builder attachResourceType(String attachResourceType) {
             this.putQueryParameter("attachResourceType", attachResourceType);
@@ -189,7 +195,10 @@ public class ListPluginAttachmentsRequest extends Request {
         }
 
         /**
-         * attachResourceTypes.
+         * <p>The resource attachment types, separated by commas.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>GatewayRoute</p>
          */
         public Builder attachResourceTypes(String attachResourceTypes) {
             this.putQueryParameter("attachResourceTypes", attachResourceTypes);
@@ -198,7 +207,10 @@ public class ListPluginAttachmentsRequest extends Request {
         }
 
         /**
-         * environmentId.
+         * <p>The environment ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>env-crlnqhtlhtgqflkqislg</p>
          */
         public Builder environmentId(String environmentId) {
             this.putQueryParameter("environmentId", environmentId);
@@ -207,7 +219,10 @@ public class ListPluginAttachmentsRequest extends Request {
         }
 
         /**
-         * gatewayId.
+         * <p>The gateway ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>gw-cr79f75lhtgme744084g</p>
          */
         public Builder gatewayId(String gatewayId) {
             this.putQueryParameter("gatewayId", gatewayId);
@@ -216,7 +231,10 @@ public class ListPluginAttachmentsRequest extends Request {
         }
 
         /**
-         * pageNumber.
+         * <p>The page number to return. Pages start from 1. Default value: 1.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder pageNumber(Integer pageNumber) {
             this.putQueryParameter("pageNumber", pageNumber);
@@ -225,7 +243,10 @@ public class ListPluginAttachmentsRequest extends Request {
         }
 
         /**
-         * pageSize.
+         * <p>The number of entries per page. Default value: 10.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10</p>
          */
         public Builder pageSize(Integer pageSize) {
             this.putQueryParameter("pageSize", pageSize);
@@ -234,7 +255,10 @@ public class ListPluginAttachmentsRequest extends Request {
         }
 
         /**
-         * pluginId.
+         * <p>The plug-in ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>pl-ct8181um1hkiqns9f6e0</p>
          */
         public Builder pluginId(String pluginId) {
             this.putQueryParameter("pluginId", pluginId);
@@ -243,7 +267,10 @@ public class ListPluginAttachmentsRequest extends Request {
         }
 
         /**
-         * withParentResource.
+         * <p>Specifies whether to return parent resource attachments.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>false</p>
          */
         public Builder withParentResource(Boolean withParentResource) {
             this.putQueryParameter("withParentResource", withParentResource);

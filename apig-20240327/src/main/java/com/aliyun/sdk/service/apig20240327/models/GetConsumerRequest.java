@@ -59,7 +59,10 @@ public class GetConsumerRequest extends Request {
         } 
 
         /**
-         * consumerId.
+         * <p>The consumer ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cs-ctb92p6m1hkqu85iph8g</p>
          */
         public Builder consumerId(String consumerId) {
             this.putPathParameter("consumerId", consumerId);

@@ -129,7 +129,10 @@ public class UpdateConsumerRequest extends Request {
         } 
 
         /**
-         * consumerId.
+         * <p>The consumer ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cs-cvfmq9um1hkg1teictkg</p>
          */
         public Builder consumerId(String consumerId) {
             this.putPathParameter("consumerId", consumerId);
@@ -138,7 +141,7 @@ public class UpdateConsumerRequest extends Request {
         }
 
         /**
-         * akSkIdentityConfigs.
+         * <p>The list of AK/SK authentication configurations.</p>
          */
         public Builder akSkIdentityConfigs(java.util.List<AkSkIdentityConfig> akSkIdentityConfigs) {
             this.putBodyParameter("akSkIdentityConfigs", akSkIdentityConfigs);
@@ -147,7 +150,7 @@ public class UpdateConsumerRequest extends Request {
         }
 
         /**
-         * apikeyIdentityConfig.
+         * <p>The API key authentication configurations.</p>
          */
         public Builder apikeyIdentityConfig(ApiKeyIdentityConfig apikeyIdentityConfig) {
             this.putBodyParameter("apikeyIdentityConfig", apikeyIdentityConfig);
@@ -156,7 +159,10 @@ public class UpdateConsumerRequest extends Request {
         }
 
         /**
-         * description.
+         * <p>The description.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>This is the description.</p>
          */
         public Builder description(String description) {
             this.putBodyParameter("description", description);
@@ -165,7 +171,10 @@ public class UpdateConsumerRequest extends Request {
         }
 
         /**
-         * enable.
+         * <p>Specifies the enablement status.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>false</p>
          */
         public Builder enable(Boolean enable) {
             this.putBodyParameter("enable", enable);
@@ -174,7 +183,7 @@ public class UpdateConsumerRequest extends Request {
         }
 
         /**
-         * jwtIdentityConfig.
+         * <p>The JWT authentication configuration.</p>
          */
         public Builder jwtIdentityConfig(JwtIdentityConfig jwtIdentityConfig) {
             this.putBodyParameter("jwtIdentityConfig", jwtIdentityConfig);

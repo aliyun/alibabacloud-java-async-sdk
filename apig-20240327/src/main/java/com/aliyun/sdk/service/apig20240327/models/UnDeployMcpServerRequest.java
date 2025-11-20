@@ -59,7 +59,7 @@ public class UnDeployMcpServerRequest extends Request {
         } 
 
         /**
-         * <p>MCP Server ID</p>
+         * <p>The ID of the MCP server.</p>
          * 
          * <strong>example:</strong>
          * <p>mcp-adfef2334fa</p>

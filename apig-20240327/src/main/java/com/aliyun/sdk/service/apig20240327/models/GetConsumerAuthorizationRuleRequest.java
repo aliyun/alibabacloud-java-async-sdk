@@ -73,7 +73,10 @@ public class GetConsumerAuthorizationRuleRequest extends Request {
         } 
 
         /**
-         * consumerAuthorizationRuleId.
+         * <p>Filters the list of operations by a specific consumer authorization rule ID. Only authorized operations are returned in the response.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>car-ctgdn8em1hko5krqq03g</p>
          */
         public Builder consumerAuthorizationRuleId(String consumerAuthorizationRuleId) {
             this.putPathParameter("consumerAuthorizationRuleId", consumerAuthorizationRuleId);
@@ -82,7 +85,10 @@ public class GetConsumerAuthorizationRuleRequest extends Request {
         }
 
         /**
-         * consumerId.
+         * <p>The consumer ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cs-ctgdn2um1hkossul8gvg</p>
          */
         public Builder consumerId(String consumerId) {
             this.putPathParameter("consumerId", consumerId);

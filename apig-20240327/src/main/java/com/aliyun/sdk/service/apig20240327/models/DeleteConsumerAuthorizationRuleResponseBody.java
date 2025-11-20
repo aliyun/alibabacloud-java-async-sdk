@@ -80,7 +80,10 @@ public class DeleteConsumerAuthorizationRuleResponseBody extends TeaModel {
         } 
 
         /**
-         * code.
+         * <p>The status code.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Ok</p>
          */
         public Builder code(String code) {
             this.code = code;
@@ -88,7 +91,10 @@ public class DeleteConsumerAuthorizationRuleResponseBody extends TeaModel {
         }
 
         /**
-         * message.
+         * <p>The status message.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>ok</p>
          */
         public Builder message(String message) {
             this.message = message;
@@ -96,7 +102,7 @@ public class DeleteConsumerAuthorizationRuleResponseBody extends TeaModel {
         }
 
         /**
-         * <p>Id of the request</p>
+         * <p>The request ID.</p>
          * 
          * <strong>example:</strong>
          * <p>3C3B9A12-3868-5EB9-8BEA-F99E03DD125C</p>

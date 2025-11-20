@@ -143,7 +143,7 @@ public class CreatePluginAttachmentRequest extends Request {
         } 
 
         /**
-         * attachResourceIds.
+         * <p>The attachment IDs.</p>
          */
         public Builder attachResourceIds(java.util.List<String> attachResourceIds) {
             this.putBodyParameter("attachResourceIds", attachResourceIds);
@@ -152,7 +152,10 @@ public class CreatePluginAttachmentRequest extends Request {
         }
 
         /**
-         * attachResourceType.
+         * <p>The type of the resource to which the plug-in is attached. Valid values: GatewayRoute, Gateway, GatewayDomain, HttpApi, and Operation.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>HttpApi</p>
          */
         public Builder attachResourceType(String attachResourceType) {
             this.putBodyParameter("attachResourceType", attachResourceType);
@@ -161,7 +164,10 @@ public class CreatePluginAttachmentRequest extends Request {
         }
 
         /**
-         * enable.
+         * <p>Specifies whether to enable the plug-in. Default value: false.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>false</p>
          */
         public Builder enable(Boolean enable) {
             this.putBodyParameter("enable", enable);
@@ -170,7 +176,10 @@ public class CreatePluginAttachmentRequest extends Request {
         }
 
         /**
-         * environmentId.
+         * <p>The environment ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>env-xxx</p>
          */
         public Builder environmentId(String environmentId) {
             this.putBodyParameter("environmentId", environmentId);
@@ -179,7 +188,10 @@ public class CreatePluginAttachmentRequest extends Request {
         }
 
         /**
-         * gatewayId.
+         * <p>The instance ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>gw-cq7l5s5lhtg***</p>
          */
         public Builder gatewayId(String gatewayId) {
             this.putBodyParameter("gatewayId", gatewayId);
@@ -188,7 +200,10 @@ public class CreatePluginAttachmentRequest extends Request {
         }
 
         /**
-         * pluginConfig.
+         * <p>The Base64-encoded configurations of the plug-in.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cHJlcGVuZDoKLSByb2xlOiBzeXN0ZW0KICBjb250ZW50OiDor7fkvb/nlKjoi7Hor63lm57nrZTpl67popgKYXBwZW5kOgotIHJvbGU6IHVzZXIKICBjb250ZW50OiDmr4/mrKHlm57nrZTlrozpl67popjvvIzlsJ3or5Xov5vooYzlj43pl64K</p>
          */
         public Builder pluginConfig(String pluginConfig) {
             this.putBodyParameter("pluginConfig", pluginConfig);
@@ -197,7 +212,10 @@ public class CreatePluginAttachmentRequest extends Request {
         }
 
         /**
-         * pluginId.
+         * <p>The plug-in ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>pl-cvo8udem1hkob1qd67i0</p>
          */
         public Builder pluginId(String pluginId) {
             this.putBodyParameter("pluginId", pluginId);

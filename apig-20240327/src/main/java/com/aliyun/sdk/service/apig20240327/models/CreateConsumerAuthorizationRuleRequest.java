@@ -129,7 +129,10 @@ public class CreateConsumerAuthorizationRuleRequest extends Request {
         } 
 
         /**
-         * consumerId.
+         * <p>The consumer ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cs-ctd4l1um1hkph7ki1k80</p>
          */
         public Builder consumerId(String consumerId) {
             this.putPathParameter("consumerId", consumerId);
@@ -138,7 +141,7 @@ public class CreateConsumerAuthorizationRuleRequest extends Request {
         }
 
         /**
-         * authorizationResourceInfos.
+         * <p>The list of resource authorization information.</p>
          */
         public Builder authorizationResourceInfos(java.util.List<AuthorizationResourceInfo> authorizationResourceInfos) {
             this.putBodyParameter("authorizationResourceInfos", authorizationResourceInfos);
@@ -147,7 +150,10 @@ public class CreateConsumerAuthorizationRuleRequest extends Request {
         }
 
         /**
-         * expireMode.
+         * <p>The expiry mode. Valid values: LongTerm and ShortTerm.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>LongTerm</p>
          */
         public Builder expireMode(String expireMode) {
             this.putBodyParameter("expireMode", expireMode);
@@ -156,7 +162,10 @@ public class CreateConsumerAuthorizationRuleRequest extends Request {
         }
 
         /**
-         * expireTimestamp.
+         * <p>The expiration time.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1750852089975</p>
          */
         public Builder expireTimestamp(Long expireTimestamp) {
             this.putBodyParameter("expireTimestamp", expireTimestamp);
@@ -165,7 +174,10 @@ public class CreateConsumerAuthorizationRuleRequest extends Request {
         }
 
         /**
-         * parentResourceType.
+         * <p>The type of the parent resource.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>API</p>
          */
         public Builder parentResourceType(String parentResourceType) {
             this.putBodyParameter("parentResourceType", parentResourceType);
@@ -174,7 +186,10 @@ public class CreateConsumerAuthorizationRuleRequest extends Request {
         }
 
         /**
-         * resourceType.
+         * <p>The resource type,</p>
+         * 
+         * <strong>example:</strong>
+         * <p>API</p>
          */
         public Builder resourceType(String resourceType) {
             this.putBodyParameter("resourceType", resourceType);

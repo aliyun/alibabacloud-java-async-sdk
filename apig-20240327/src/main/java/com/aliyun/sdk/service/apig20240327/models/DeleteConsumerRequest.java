@@ -59,7 +59,10 @@ public class DeleteConsumerRequest extends Request {
         } 
 
         /**
-         * consumerId.
+         * <p>The consumer ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cs-cv8em6um1hku2shkv19g</p>
          */
         public Builder consumerId(String consumerId) {
             this.putPathParameter("consumerId", consumerId);

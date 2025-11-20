@@ -59,7 +59,10 @@ public class DeletePluginAttachmentRequest extends Request {
         } 
 
         /**
-         * pluginAttachmentId.
+         * <p>The attachment ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>pa-cvlkefmm1hkkc90m8vq0</p>
          */
         public Builder pluginAttachmentId(String pluginAttachmentId) {
             this.putPathParameter("pluginAttachmentId", pluginAttachmentId);

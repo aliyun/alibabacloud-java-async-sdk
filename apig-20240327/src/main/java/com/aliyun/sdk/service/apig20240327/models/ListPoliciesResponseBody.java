@@ -93,7 +93,10 @@ public class ListPoliciesResponseBody extends TeaModel {
         } 
 
         /**
-         * code.
+         * <p>The status code.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Ok</p>
          */
         public Builder code(String code) {
             this.code = code;
@@ -101,7 +104,7 @@ public class ListPoliciesResponseBody extends TeaModel {
         }
 
         /**
-         * data.
+         * <p>The response payload.</p>
          */
         public Builder data(Data data) {
             this.data = data;
@@ -109,7 +112,10 @@ public class ListPoliciesResponseBody extends TeaModel {
         }
 
         /**
-         * message.
+         * <p>The status message.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>success</p>
          */
         public Builder message(String message) {
             this.message = message;
@@ -117,7 +123,10 @@ public class ListPoliciesResponseBody extends TeaModel {
         }
 
         /**
-         * requestId.
+         * <p>The request ID for API call tracing.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>393E2630-DBE7-5221-AB35-9E740675491A</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -209,7 +218,7 @@ public class ListPoliciesResponseBody extends TeaModel {
             } 
 
             /**
-             * items.
+             * <p>The list of policies.</p>
              */
             public Builder items(java.util.List<PolicyInfo> items) {
                 this.items = items;
@@ -217,7 +226,10 @@ public class ListPoliciesResponseBody extends TeaModel {
             }
 
             /**
-             * pageNumber.
+             * <p>The page number.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder pageNumber(Integer pageNumber) {
                 this.pageNumber = pageNumber;
@@ -225,7 +237,10 @@ public class ListPoliciesResponseBody extends TeaModel {
             }
 
             /**
-             * pageSize.
+             * <p>The page size.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>10</p>
              */
             public Builder pageSize(Integer pageSize) {
                 this.pageSize = pageSize;
@@ -233,7 +248,10 @@ public class ListPoliciesResponseBody extends TeaModel {
             }
 
             /**
-             * totalSize.
+             * <p>The total number of entries returned.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>18</p>
              */
             public Builder totalSize(Integer totalSize) {
                 this.totalSize = totalSize;

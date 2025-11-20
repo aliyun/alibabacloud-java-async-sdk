@@ -216,7 +216,7 @@ public class CreateMcpServerRequest extends Request {
         } 
 
         /**
-         * assembledSources.
+         * <p>The list of assembly sources. This parameter is required when the type parameter is set to AssemblyMCP.</p>
          */
         public Builder assembledSources(java.util.List<AssembledSources> assembledSources) {
             this.putBodyParameter("assembledSources", assembledSources);
@@ -225,7 +225,7 @@ public class CreateMcpServerRequest extends Request {
         }
 
         /**
-         * backendConfig.
+         * <p>The backend service configurations for the route.</p>
          */
         public Builder backendConfig(BackendConfig backendConfig) {
             this.putBodyParameter("backendConfig", backendConfig);
@@ -234,7 +234,7 @@ public class CreateMcpServerRequest extends Request {
         }
 
         /**
-         * createFromType.
+         * <p>Creates the MCP server from the specified type.</p>
          */
         public Builder createFromType(String createFromType) {
             this.putBodyParameter("createFromType", createFromType);
@@ -243,7 +243,10 @@ public class CreateMcpServerRequest extends Request {
         }
 
         /**
-         * description.
+         * <p>The MCP server description.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>mcp tool fetch time</p>
          */
         public Builder description(String description) {
             this.putBodyParameter("description", description);
@@ -252,7 +255,7 @@ public class CreateMcpServerRequest extends Request {
         }
 
         /**
-         * domainIds.
+         * <p>The domain IDs.</p>
          */
         public Builder domainIds(java.util.List<String> domainIds) {
             this.putBodyParameter("domainIds", domainIds);
@@ -261,7 +264,10 @@ public class CreateMcpServerRequest extends Request {
         }
 
         /**
-         * exposedUriPath.
+         * <p>The exposed URI path. This parameter is required when the protocol parameter is set to SSE or StreamableHTTP, and the type parameter is set to RealMCP.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>/sse</p>
          */
         public Builder exposedUriPath(String exposedUriPath) {
             this.putBodyParameter("exposedUriPath", exposedUriPath);
@@ -270,6 +276,7 @@ public class CreateMcpServerRequest extends Request {
         }
 
         /**
+         * <p>The ID of the gateway.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -282,7 +289,7 @@ public class CreateMcpServerRequest extends Request {
         }
 
         /**
-         * match.
+         * <p>The route match rule.</p>
          */
         public Builder match(HttpRouteMatch match) {
             this.putBodyParameter("match", match);
@@ -291,7 +298,10 @@ public class CreateMcpServerRequest extends Request {
         }
 
         /**
-         * mcpStatisticsEnable.
+         * <p>Specifies whether MCP observability is enabled. Default: false.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>false</p>
          */
         public Builder mcpStatisticsEnable(Boolean mcpStatisticsEnable) {
             this.putBodyParameter("mcpStatisticsEnable", mcpStatisticsEnable);
@@ -300,6 +310,7 @@ public class CreateMcpServerRequest extends Request {
         }
 
         /**
+         * <p>The name of the MCP server. The name must match the regular expression ^<a href="%5B-a-z0-9%5D*%5Ba-z0-9%5D">a-z0-9</a>?(.<a href="%5B-a-z0-9%5D*%5Ba-z0-9%5D">a-z0-9</a>?)*$ and can be up to 64 characters in length.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -312,7 +323,10 @@ public class CreateMcpServerRequest extends Request {
         }
 
         /**
-         * protocol.
+         * <p>The protocol type. Valid values: HTTP, HTTPS, SSE, and StreamableHTTP</p>
+         * 
+         * <strong>example:</strong>
+         * <p>HTTP</p>
          */
         public Builder protocol(String protocol) {
             this.putBodyParameter("protocol", protocol);
@@ -321,6 +335,8 @@ public class CreateMcpServerRequest extends Request {
         }
 
         /**
+         * <p>The type. Valid value:</p>
+         * <p>RealMCP: regular MCP service</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -405,7 +421,7 @@ public class CreateMcpServerRequest extends Request {
             } 
 
             /**
-             * <p>MCP Server ID</p>
+             * <p>The MCP server ID.</p>
              * 
              * <strong>example:</strong>
              * <p>mcp-sdfa3qgavz</p>
@@ -416,7 +432,10 @@ public class CreateMcpServerRequest extends Request {
             }
 
             /**
-             * mcpServerName.
+             * <p>The name of the MCP server.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>test-mcp</p>
              */
             public Builder mcpServerName(String mcpServerName) {
                 this.mcpServerName = mcpServerName;
@@ -424,7 +443,7 @@ public class CreateMcpServerRequest extends Request {
             }
 
             /**
-             * tools.
+             * <p>The list of the MCP tools.</p>
              */
             public Builder tools(java.util.List<String> tools) {
                 this.tools = tools;
@@ -530,7 +549,10 @@ public class CreateMcpServerRequest extends Request {
             } 
 
             /**
-             * port.
+             * <p>The backend node port of the service.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>8080</p>
              */
             public Builder port(Integer port) {
                 this.port = port;
@@ -538,7 +560,14 @@ public class CreateMcpServerRequest extends Request {
             }
 
             /**
-             * protocol.
+             * <p>The service protocol. Valid values:</p>
+             * <ul>
+             * <li>HTTP</li>
+             * <li>HTTPS</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>HTTP</p>
              */
             public Builder protocol(String protocol) {
                 this.protocol = protocol;
@@ -546,7 +575,10 @@ public class CreateMcpServerRequest extends Request {
             }
 
             /**
-             * serviceId.
+             * <p>The service ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>svc-crbgq0dlhtgr***</p>
              */
             public Builder serviceId(String serviceId) {
                 this.serviceId = serviceId;
@@ -554,7 +586,10 @@ public class CreateMcpServerRequest extends Request {
             }
 
             /**
-             * version.
+             * <p>The service version.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2.1.6</p>
              */
             public Builder version(String version) {
                 this.version = version;
@@ -562,7 +597,10 @@ public class CreateMcpServerRequest extends Request {
             }
 
             /**
-             * weight.
+             * <p>The weight.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>49</p>
              */
             public Builder weight(Integer weight) {
                 this.weight = weight;
@@ -629,7 +667,10 @@ public class CreateMcpServerRequest extends Request {
             } 
 
             /**
-             * scene.
+             * <p>The scenario of the backend service.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>SingleService</p>
              */
             public Builder scene(String scene) {
                 this.scene = scene;
@@ -637,7 +678,7 @@ public class CreateMcpServerRequest extends Request {
             }
 
             /**
-             * services.
+             * <p>The backend services.</p>
              */
             public Builder services(java.util.List<Services> services) {
                 this.services = services;

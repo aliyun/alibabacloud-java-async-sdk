@@ -199,7 +199,15 @@ public class CreateGatewayRequest extends Request {
         } 
 
         /**
-         * chargeType.
+         * <p>The billing method.</p>
+         * <p>Valid values:</p>
+         * <ul>
+         * <li>POSTPAY</li>
+         * <li>PREPAY</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>POSTPAY</p>
          */
         public Builder chargeType(String chargeType) {
             this.putBodyParameter("chargeType", chargeType);
@@ -208,7 +216,12 @@ public class CreateGatewayRequest extends Request {
         }
 
         /**
-         * gatewayEdition.
+         * <p>The gateway edition.</p>
+         * 
+         * <strong>example:</strong>
+         * <ul>
+         * <li></li>
+         * </ul>
          */
         public Builder gatewayEdition(String gatewayEdition) {
             this.putBodyParameter("gatewayEdition", gatewayEdition);
@@ -217,7 +230,15 @@ public class CreateGatewayRequest extends Request {
         }
 
         /**
-         * gatewayType.
+         * <p>The type of the gateway.</p>
+         * <p>Valid values:</p>
+         * <ul>
+         * <li>AI</li>
+         * <li>API</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>API</p>
          */
         public Builder gatewayType(String gatewayType) {
             this.putBodyParameter("gatewayType", gatewayType);
@@ -226,7 +247,7 @@ public class CreateGatewayRequest extends Request {
         }
 
         /**
-         * logConfig.
+         * <p>The logging configurations.</p>
          */
         public Builder logConfig(LogConfig logConfig) {
             this.putBodyParameter("logConfig", logConfig);
@@ -235,7 +256,10 @@ public class CreateGatewayRequest extends Request {
         }
 
         /**
-         * name.
+         * <p>The name of the gateway instance.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>test-ceshi</p>
          */
         public Builder name(String name) {
             this.putBodyParameter("name", name);
@@ -244,7 +268,7 @@ public class CreateGatewayRequest extends Request {
         }
 
         /**
-         * networkAccessConfig.
+         * <p>The network access configuration.</p>
          */
         public Builder networkAccessConfig(NetworkAccessConfig networkAccessConfig) {
             this.putBodyParameter("networkAccessConfig", networkAccessConfig);
@@ -253,7 +277,10 @@ public class CreateGatewayRequest extends Request {
         }
 
         /**
-         * resourceGroupId.
+         * <p>The ID of the resource group.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>rg-ahr5uil8raz0rq3b</p>
          */
         public Builder resourceGroupId(String resourceGroupId) {
             this.putBodyParameter("resourceGroupId", resourceGroupId);
@@ -262,7 +289,10 @@ public class CreateGatewayRequest extends Request {
         }
 
         /**
-         * spec.
+         * <p>The specifications of the node.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>apigw.dev.x2</p>
          */
         public Builder spec(String spec) {
             this.putBodyParameter("spec", spec);
@@ -271,7 +301,7 @@ public class CreateGatewayRequest extends Request {
         }
 
         /**
-         * tag.
+         * <p>The tags.</p>
          */
         public Builder tag(java.util.List<Tag> tag) {
             this.putBodyParameter("tag", tag);
@@ -280,7 +310,10 @@ public class CreateGatewayRequest extends Request {
         }
 
         /**
-         * vpcId.
+         * <p>The ID of the VPC.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>vpc-zm0x16tomfiat1mk9f6rs</p>
          */
         public Builder vpcId(String vpcId) {
             this.putBodyParameter("vpcId", vpcId);
@@ -289,7 +322,7 @@ public class CreateGatewayRequest extends Request {
         }
 
         /**
-         * zoneConfig.
+         * <p>The zone settings.</p>
          */
         public Builder zoneConfig(ZoneConfig zoneConfig) {
             this.putBodyParameter("zoneConfig", zoneConfig);
@@ -344,7 +377,10 @@ public class CreateGatewayRequest extends Request {
             } 
 
             /**
-             * enable.
+             * <p>Indicates if enabled.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>false</p>
              */
             public Builder enable(Boolean enable) {
                 this.enable = enable;
@@ -398,7 +434,7 @@ public class CreateGatewayRequest extends Request {
             } 
 
             /**
-             * sls.
+             * <p>The Simple Log Service configurations.</p>
              */
             public Builder sls(Sls sls) {
                 this.sls = sls;
@@ -452,7 +488,16 @@ public class CreateGatewayRequest extends Request {
             } 
 
             /**
-             * type.
+             * <p>The network access type.</p>
+             * <p>Valid values:</p>
+             * <ul>
+             * <li>InternetAndIntranet</li>
+             * <li>Intranet</li>
+             * <li>Internet</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>Internet</p>
              */
             public Builder type(String type) {
                 this.type = type;
@@ -519,7 +564,10 @@ public class CreateGatewayRequest extends Request {
             } 
 
             /**
-             * key.
+             * <p>The tag key.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>key</p>
              */
             public Builder key(String key) {
                 this.key = key;
@@ -527,7 +575,10 @@ public class CreateGatewayRequest extends Request {
             }
 
             /**
-             * value.
+             * <p>The tag value.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>value</p>
              */
             public Builder value(String value) {
                 this.value = value;
@@ -594,7 +645,10 @@ public class CreateGatewayRequest extends Request {
             } 
 
             /**
-             * vSwitchId.
+             * <p>The ID of the vSwitch.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>vsw-xx</p>
              */
             public Builder vSwitchId(String vSwitchId) {
                 this.vSwitchId = vSwitchId;
@@ -602,7 +656,10 @@ public class CreateGatewayRequest extends Request {
             }
 
             /**
-             * zoneId.
+             * <p>The zone ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>cn-wulanchabu-a</p>
              */
             public Builder zoneId(String zoneId) {
                 this.zoneId = zoneId;
@@ -682,7 +739,15 @@ public class CreateGatewayRequest extends Request {
             } 
 
             /**
-             * selectOption.
+             * <p>The option for selecting the zone.</p>
+             * <p>Valid values:</p>
+             * <ul>
+             * <li>Auto</li>
+             * <li>Manual</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>Manual</p>
              */
             public Builder selectOption(String selectOption) {
                 this.selectOption = selectOption;
@@ -690,7 +755,10 @@ public class CreateGatewayRequest extends Request {
             }
 
             /**
-             * vSwitchId.
+             * <p>The ID of the vSwitch.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>vsw-xxx</p>
              */
             public Builder vSwitchId(String vSwitchId) {
                 this.vSwitchId = vSwitchId;
@@ -698,7 +766,7 @@ public class CreateGatewayRequest extends Request {
             }
 
             /**
-             * zones.
+             * <p>The supported zones.</p>
              */
             public Builder zones(java.util.List<Zones> zones) {
                 this.zones = zones;

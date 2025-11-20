@@ -93,7 +93,10 @@ public class CreateGatewayResponseBody extends TeaModel {
         } 
 
         /**
-         * code.
+         * <p>The status code.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Ok</p>
          */
         public Builder code(String code) {
             this.code = code;
@@ -101,7 +104,7 @@ public class CreateGatewayResponseBody extends TeaModel {
         }
 
         /**
-         * data.
+         * <p>The response payload.</p>
          */
         public Builder data(Data data) {
             this.data = data;
@@ -109,7 +112,10 @@ public class CreateGatewayResponseBody extends TeaModel {
         }
 
         /**
-         * message.
+         * <p>The status message.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>success</p>
          */
         public Builder message(String message) {
             this.message = message;
@@ -117,7 +123,7 @@ public class CreateGatewayResponseBody extends TeaModel {
         }
 
         /**
-         * <p>Id of the request</p>
+         * <p>The ID of the request.</p>
          * 
          * <strong>example:</strong>
          * <p>9CDE3E69-69C2-5402-83AD-ACA80B1AF35B</p>
@@ -173,7 +179,10 @@ public class CreateGatewayResponseBody extends TeaModel {
             } 
 
             /**
-             * gatewayId.
+             * <p>The instance ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>gw-cq2vundlhtg***</p>
              */
             public Builder gatewayId(String gatewayId) {
                 this.gatewayId = gatewayId;

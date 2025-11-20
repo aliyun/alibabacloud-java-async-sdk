@@ -146,7 +146,10 @@ public class ListMcpServersRequest extends Request {
         } 
 
         /**
-         * createFromTypes.
+         * <p>The type of source to create from.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>ApiGatewayHttpToMCP</p>
          */
         public Builder createFromTypes(String createFromTypes) {
             this.putQueryParameter("createFromTypes", createFromTypes);
@@ -155,7 +158,10 @@ public class ListMcpServersRequest extends Request {
         }
 
         /**
-         * deployStatuses.
+         * <p>The deployment status of the MCP server.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Deployed</p>
          */
         public Builder deployStatuses(String deployStatuses) {
             this.putQueryParameter("deployStatuses", deployStatuses);
@@ -164,6 +170,7 @@ public class ListMcpServersRequest extends Request {
         }
 
         /**
+         * <p>The gateway instance ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -176,7 +183,10 @@ public class ListMcpServersRequest extends Request {
         }
 
         /**
-         * nameLike.
+         * <p>The name to perform a fuzzy search on the MCP server.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>test</p>
          */
         public Builder nameLike(String nameLike) {
             this.putQueryParameter("nameLike", nameLike);
@@ -185,6 +195,7 @@ public class ListMcpServersRequest extends Request {
         }
 
         /**
+         * <p>The page number to return. Pages start from 1. Default value: 1.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -197,6 +208,7 @@ public class ListMcpServersRequest extends Request {
         }
 
         /**
+         * <p>The number of entries per page. Default value: 10.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -209,7 +221,10 @@ public class ListMcpServersRequest extends Request {
         }
 
         /**
-         * type.
+         * <p>The type of the MCP server.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>RealMCP</p>
          */
         public Builder type(String type) {
             this.putQueryParameter("type", type);

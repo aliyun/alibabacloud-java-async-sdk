@@ -80,7 +80,10 @@ public class DeletePluginAttachmentResponseBody extends TeaModel {
         } 
 
         /**
-         * code.
+         * <p>The response code.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Ok</p>
          */
         public Builder code(String code) {
             this.code = code;
@@ -88,7 +91,10 @@ public class DeletePluginAttachmentResponseBody extends TeaModel {
         }
 
         /**
-         * message.
+         * <p>The response message returned.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>success</p>
          */
         public Builder message(String message) {
             this.message = message;
@@ -96,7 +102,7 @@ public class DeletePluginAttachmentResponseBody extends TeaModel {
         }
 
         /**
-         * <p>Id of the request</p>
+         * <p>The request ID.</p>
          * 
          * <strong>example:</strong>
          * <p>76BDFFC7-0764-5168-B047-92EE0BC7FDDE</p>

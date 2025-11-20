@@ -93,7 +93,10 @@ public class InstallPluginResponseBody extends TeaModel {
         } 
 
         /**
-         * code.
+         * <p>The status code.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Ok</p>
          */
         public Builder code(String code) {
             this.code = code;
@@ -101,7 +104,7 @@ public class InstallPluginResponseBody extends TeaModel {
         }
 
         /**
-         * data.
+         * <p>The response payload.</p>
          */
         public Builder data(Data data) {
             this.data = data;
@@ -109,7 +112,10 @@ public class InstallPluginResponseBody extends TeaModel {
         }
 
         /**
-         * message.
+         * <p>The status message.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Success</p>
          */
         public Builder message(String message) {
             this.message = message;
@@ -117,7 +123,7 @@ public class InstallPluginResponseBody extends TeaModel {
         }
 
         /**
-         * <p>Id of the request</p>
+         * <p>The request ID.</p>
          * 
          * <strong>example:</strong>
          * <p>201CFCA0-3AF5-52D0-A0F3-FBA697AF55CB</p>
@@ -186,7 +192,10 @@ public class InstallPluginResponseBody extends TeaModel {
             } 
 
             /**
-             * gatewayId.
+             * <p>The gateway ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>gw-d28mjcmm1hkub84mdbi0</p>
              */
             public Builder gatewayId(String gatewayId) {
                 this.gatewayId = gatewayId;
@@ -194,7 +203,10 @@ public class InstallPluginResponseBody extends TeaModel {
             }
 
             /**
-             * pluginId.
+             * <p>The plug-in ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>pl-cvs7gbum1hkhs6us6vbg</p>
              */
             public Builder pluginId(String pluginId) {
                 this.pluginId = pluginId;
@@ -248,7 +260,7 @@ public class InstallPluginResponseBody extends TeaModel {
             } 
 
             /**
-             * installPluginResults.
+             * <p>The installation result.</p>
              */
             public Builder installPluginResults(java.util.List<InstallPluginResults> installPluginResults) {
                 this.installPluginResults = installPluginResults;

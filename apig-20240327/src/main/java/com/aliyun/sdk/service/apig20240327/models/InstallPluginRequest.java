@@ -73,7 +73,7 @@ public class InstallPluginRequest extends Request {
         } 
 
         /**
-         * gatewayIds.
+         * <p>The list of gateway IDs.</p>
          */
         public Builder gatewayIds(java.util.List<String> gatewayIds) {
             this.putBodyParameter("gatewayIds", gatewayIds);
@@ -82,7 +82,10 @@ public class InstallPluginRequest extends Request {
         }
 
         /**
-         * pluginClassId.
+         * <p>The plug-in type ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>pls-csqmjndlhtguk0loef21</p>
          */
         public Builder pluginClassId(String pluginClassId) {
             this.putBodyParameter("pluginClassId", pluginClassId);

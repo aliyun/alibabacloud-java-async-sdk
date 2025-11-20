@@ -93,7 +93,10 @@ public class GetConsumerResponseBody extends TeaModel {
         } 
 
         /**
-         * code.
+         * <p>The status code.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Ok</p>
          */
         public Builder code(String code) {
             this.code = code;
@@ -101,7 +104,7 @@ public class GetConsumerResponseBody extends TeaModel {
         }
 
         /**
-         * data.
+         * <p>The response payload.</p>
          */
         public Builder data(Data data) {
             this.data = data;
@@ -109,7 +112,10 @@ public class GetConsumerResponseBody extends TeaModel {
         }
 
         /**
-         * message.
+         * <p>The status message.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>success</p>
          */
         public Builder message(String message) {
             this.message = message;
@@ -117,7 +123,7 @@ public class GetConsumerResponseBody extends TeaModel {
         }
 
         /**
-         * <p>Id of the request</p>
+         * <p>The request ID.</p>
          * 
          * <strong>example:</strong>
          * <p>880C61B3-7B90-5570-A3F7-D6D92C0E2D36</p>
@@ -290,7 +296,7 @@ public class GetConsumerResponseBody extends TeaModel {
             } 
 
             /**
-             * akSkIdentityConfigs.
+             * <p>The AK/SK authentication configurations.</p>
              */
             public Builder akSkIdentityConfigs(AkSkIdentityConfig akSkIdentityConfigs) {
                 this.akSkIdentityConfigs = akSkIdentityConfigs;
@@ -298,7 +304,7 @@ public class GetConsumerResponseBody extends TeaModel {
             }
 
             /**
-             * apiKeyIdentityConfig.
+             * <p>The API key authentication configurations.</p>
              */
             public Builder apiKeyIdentityConfig(ApiKeyIdentityConfig apiKeyIdentityConfig) {
                 this.apiKeyIdentityConfig = apiKeyIdentityConfig;
@@ -306,7 +312,10 @@ public class GetConsumerResponseBody extends TeaModel {
             }
 
             /**
-             * consumerId.
+             * <p>The consumer ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>cs-cvgbtk6m1hkji5sb8dr0</p>
              */
             public Builder consumerId(String consumerId) {
                 this.consumerId = consumerId;
@@ -314,7 +323,10 @@ public class GetConsumerResponseBody extends TeaModel {
             }
 
             /**
-             * createTimestamp.
+             * <p>The creation timestamp.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1719386834548</p>
              */
             public Builder createTimestamp(Long createTimestamp) {
                 this.createTimestamp = createTimestamp;
@@ -322,7 +334,10 @@ public class GetConsumerResponseBody extends TeaModel {
             }
 
             /**
-             * deployStatus.
+             * <p>The publishing status of the API in the current environment.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>&quot;&quot;</p>
              */
             public Builder deployStatus(String deployStatus) {
                 this.deployStatus = deployStatus;
@@ -330,7 +345,10 @@ public class GetConsumerResponseBody extends TeaModel {
             }
 
             /**
-             * description.
+             * <p>The description.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>This is the description.</p>
              */
             public Builder description(String description) {
                 this.description = description;
@@ -338,7 +356,10 @@ public class GetConsumerResponseBody extends TeaModel {
             }
 
             /**
-             * enable.
+             * <p>Indicates if enabled.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>true</p>
              */
             public Builder enable(Boolean enable) {
                 this.enable = enable;
@@ -346,7 +367,7 @@ public class GetConsumerResponseBody extends TeaModel {
             }
 
             /**
-             * jwtIdentityConfig.
+             * <p>The JWT authentication configurations.</p>
              */
             public Builder jwtIdentityConfig(JwtIdentityConfig jwtIdentityConfig) {
                 this.jwtIdentityConfig = jwtIdentityConfig;
@@ -354,7 +375,10 @@ public class GetConsumerResponseBody extends TeaModel {
             }
 
             /**
-             * name.
+             * <p>The consumer name.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>consumer-1</p>
              */
             public Builder name(String name) {
                 this.name = name;
@@ -362,7 +386,10 @@ public class GetConsumerResponseBody extends TeaModel {
             }
 
             /**
-             * updateTimestamp.
+             * <p>The last update timestamp.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1719386834548</p>
              */
             public Builder updateTimestamp(Long updateTimestamp) {
                 this.updateTimestamp = updateTimestamp;

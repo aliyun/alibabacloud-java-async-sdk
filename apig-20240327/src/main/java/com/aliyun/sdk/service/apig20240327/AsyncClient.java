@@ -295,6 +295,9 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<GetHttpApiRouteResponse> getHttpApiRoute(GetHttpApiRouteRequest request);
 
     /**
+     * <b>description</b> :
+     * <p>You can call this operation to create multiple services at a time.</p>
+     * 
      * @param request the request parameters of GetMcpServer  GetMcpServerRequest
      * @return GetMcpServerResponse
      */
@@ -368,6 +371,12 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<ListEnvironmentsResponse> listEnvironments(ListEnvironmentsRequest request);
 
     /**
+     * @param request the request parameters of ListGatewayFeatures  ListGatewayFeaturesRequest
+     * @return ListGatewayFeaturesResponse
+     */
+    CompletableFuture<ListGatewayFeaturesResponse> listGatewayFeatures(ListGatewayFeaturesRequest request);
+
+    /**
      * @param request the request parameters of ListGateways  ListGatewaysRequest
      * @return ListGatewaysResponse
      */
@@ -392,6 +401,9 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<ListHttpApisResponse> listHttpApis(ListHttpApisRequest request);
 
     /**
+     * <b>description</b> :
+     * <p>You can call this operation to create multiple services at a time.</p>
+     * 
      * @param request the request parameters of ListMcpServers  ListMcpServersRequest
      * @return ListMcpServersResponse
      */
@@ -537,6 +549,9 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<UpdateHttpApiRouteResponse> updateHttpApiRoute(UpdateHttpApiRouteRequest request);
 
     /**
+     * <b>description</b> :
+     * <p>You can only update the listening Ingress configuration for sources of the <strong>ACK</strong> type.</p>
+     * 
      * @param request the request parameters of UpdateMcpServer  UpdateMcpServerRequest
      * @return UpdateMcpServerResponse
      */

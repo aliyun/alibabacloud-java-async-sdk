@@ -93,7 +93,10 @@ public class CreateConsumerResponseBody extends TeaModel {
         } 
 
         /**
-         * code.
+         * <p>The status code.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Ok</p>
          */
         public Builder code(String code) {
             this.code = code;
@@ -101,7 +104,7 @@ public class CreateConsumerResponseBody extends TeaModel {
         }
 
         /**
-         * data.
+         * <p>The response payload.</p>
          */
         public Builder data(Data data) {
             this.data = data;
@@ -109,7 +112,10 @@ public class CreateConsumerResponseBody extends TeaModel {
         }
 
         /**
-         * message.
+         * <p>The status message.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>success</p>
          */
         public Builder message(String message) {
             this.message = message;
@@ -117,7 +123,7 @@ public class CreateConsumerResponseBody extends TeaModel {
         }
 
         /**
-         * <p>Id of the request</p>
+         * <p>The request ID.</p>
          * 
          * <strong>example:</strong>
          * <p>479AE38F-A574-52F7-87EA-E91199999F9E</p>
@@ -173,7 +179,10 @@ public class CreateConsumerResponseBody extends TeaModel {
             } 
 
             /**
-             * consumerId.
+             * <p>The consumer ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>cs-cvnjramm1hks1r3fmmug</p>
              */
             public Builder consumerId(String consumerId) {
                 this.consumerId = consumerId;

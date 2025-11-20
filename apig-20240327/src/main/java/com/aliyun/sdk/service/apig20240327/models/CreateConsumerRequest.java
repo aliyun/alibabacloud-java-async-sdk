@@ -143,7 +143,7 @@ public class CreateConsumerRequest extends Request {
         } 
 
         /**
-         * akSkIdentityConfigs.
+         * <p>The list of AK/SK identity configurations.</p>
          */
         public Builder akSkIdentityConfigs(java.util.List<AkSkIdentityConfig> akSkIdentityConfigs) {
             this.putBodyParameter("akSkIdentityConfigs", akSkIdentityConfigs);
@@ -152,7 +152,7 @@ public class CreateConsumerRequest extends Request {
         }
 
         /**
-         * apikeyIdentityConfig.
+         * <p>The configuration for the API key authentication method.</p>
          */
         public Builder apikeyIdentityConfig(ApiKeyIdentityConfig apikeyIdentityConfig) {
             this.putBodyParameter("apikeyIdentityConfig", apikeyIdentityConfig);
@@ -161,7 +161,10 @@ public class CreateConsumerRequest extends Request {
         }
 
         /**
-         * description.
+         * <p>The description of the consumer.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>consumer for test</p>
          */
         public Builder description(String description) {
             this.putBodyParameter("description", description);
@@ -170,7 +173,10 @@ public class CreateConsumerRequest extends Request {
         }
 
         /**
-         * enable.
+         * <p>Indicates if enabled.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>false</p>
          */
         public Builder enable(Boolean enable) {
             this.putBodyParameter("enable", enable);
@@ -179,7 +185,10 @@ public class CreateConsumerRequest extends Request {
         }
 
         /**
-         * gatewayType.
+         * <p>The type of the gateway.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>API</p>
          */
         public Builder gatewayType(String gatewayType) {
             this.putBodyParameter("gatewayType", gatewayType);
@@ -188,7 +197,7 @@ public class CreateConsumerRequest extends Request {
         }
 
         /**
-         * jwtIdentityConfig.
+         * <p>The configuration of the JWT identity.</p>
          */
         public Builder jwtIdentityConfig(JwtIdentityConfig jwtIdentityConfig) {
             this.putBodyParameter("jwtIdentityConfig", jwtIdentityConfig);
@@ -197,7 +206,10 @@ public class CreateConsumerRequest extends Request {
         }
 
         /**
-         * name.
+         * <p>The name of the consumer.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>test</p>
          */
         public Builder name(String name) {
             this.putBodyParameter("name", name);

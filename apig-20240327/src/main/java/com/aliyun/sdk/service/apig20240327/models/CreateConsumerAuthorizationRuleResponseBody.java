@@ -93,7 +93,10 @@ public class CreateConsumerAuthorizationRuleResponseBody extends TeaModel {
         } 
 
         /**
-         * code.
+         * <p>The status code.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Ok</p>
          */
         public Builder code(String code) {
             this.code = code;
@@ -101,7 +104,7 @@ public class CreateConsumerAuthorizationRuleResponseBody extends TeaModel {
         }
 
         /**
-         * data.
+         * <p>The response payload.</p>
          */
         public Builder data(Data data) {
             this.data = data;
@@ -109,7 +112,10 @@ public class CreateConsumerAuthorizationRuleResponseBody extends TeaModel {
         }
 
         /**
-         * message.
+         * <p>The status message.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>success</p>
          */
         public Builder message(String message) {
             this.message = message;
@@ -117,7 +123,10 @@ public class CreateConsumerAuthorizationRuleResponseBody extends TeaModel {
         }
 
         /**
-         * requestId.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>6CC83C32-3B5A-57EE-9AFE-D0D51822C7BA</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -170,7 +179,10 @@ public class CreateConsumerAuthorizationRuleResponseBody extends TeaModel {
             } 
 
             /**
-             * consumerAuthorizationRuleId.
+             * <p>Filters the list of operations based on a specific consumer authorization rule ID. Only authorized operations are returned in the response.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>car-d06p196m1hkg9ukum5pg</p>
              */
             public Builder consumerAuthorizationRuleId(String consumerAuthorizationRuleId) {
                 this.consumerAuthorizationRuleId = consumerAuthorizationRuleId;

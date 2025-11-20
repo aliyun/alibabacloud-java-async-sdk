@@ -93,7 +93,10 @@ public class ListPluginAttachmentsResponseBody extends TeaModel {
         } 
 
         /**
-         * code.
+         * <p>The status code.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Ok</p>
          */
         public Builder code(String code) {
             this.code = code;
@@ -101,7 +104,7 @@ public class ListPluginAttachmentsResponseBody extends TeaModel {
         }
 
         /**
-         * data.
+         * <p>The response payload.</p>
          */
         public Builder data(Data data) {
             this.data = data;
@@ -109,7 +112,10 @@ public class ListPluginAttachmentsResponseBody extends TeaModel {
         }
 
         /**
-         * message.
+         * <p>The status message.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>success</p>
          */
         public Builder message(String message) {
             this.message = message;
@@ -117,7 +123,7 @@ public class ListPluginAttachmentsResponseBody extends TeaModel {
         }
 
         /**
-         * <p>Id of the request</p>
+         * <p>The request ID.</p>
          * 
          * <strong>example:</strong>
          * <p>9640D776-794A-5077-9184-A247CA4B45C1</p>
@@ -277,7 +283,17 @@ public class ListPluginAttachmentsResponseBody extends TeaModel {
             } 
 
             /**
-             * attachResourceType.
+             * <p>The types of resource attachments.</p>
+             * <ul>
+             * <li>HttpApi</li>
+             * <li>Operation</li>
+             * <li>GatewayRoute</li>
+             * <li>GatewayDomain</li>
+             * <li>Gateway</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>GatewayRoute</p>
              */
             public Builder attachResourceType(String attachResourceType) {
                 this.attachResourceType = attachResourceType;
@@ -285,7 +301,10 @@ public class ListPluginAttachmentsResponseBody extends TeaModel {
             }
 
             /**
-             * enable.
+             * <p>Indicates if enabled.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>true</p>
              */
             public Builder enable(Boolean enable) {
                 this.enable = enable;
@@ -293,7 +312,7 @@ public class ListPluginAttachmentsResponseBody extends TeaModel {
             }
 
             /**
-             * environmentInfo.
+             * <p>The environment metadata.</p>
              */
             public Builder environmentInfo(EnvironmentInfo environmentInfo) {
                 this.environmentInfo = environmentInfo;
@@ -301,7 +320,7 @@ public class ListPluginAttachmentsResponseBody extends TeaModel {
             }
 
             /**
-             * parentResourceInfo.
+             * <p>The parent resource metadata.</p>
              */
             public Builder parentResourceInfo(ParentResourceInfo parentResourceInfo) {
                 this.parentResourceInfo = parentResourceInfo;
@@ -309,7 +328,10 @@ public class ListPluginAttachmentsResponseBody extends TeaModel {
             }
 
             /**
-             * pluginAttachmentId.
+             * <p>The ID of the resource attachment.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>pa-d0j9t5em1hkncrlo51mg</p>
              */
             public Builder pluginAttachmentId(String pluginAttachmentId) {
                 this.pluginAttachmentId = pluginAttachmentId;
@@ -317,7 +339,7 @@ public class ListPluginAttachmentsResponseBody extends TeaModel {
             }
 
             /**
-             * pluginClassInfo.
+             * <p>The plug-in type metadata.</p>
              */
             public Builder pluginClassInfo(PluginClassInfo pluginClassInfo) {
                 this.pluginClassInfo = pluginClassInfo;
@@ -325,7 +347,10 @@ public class ListPluginAttachmentsResponseBody extends TeaModel {
             }
 
             /**
-             * pluginConfig.
+             * <p>The plug-in configurations (Base64-encoded).</p>
+             * 
+             * <strong>example:</strong>
+             * <p>bGltaXRfYnlfaGVhZGVyOiB4LWFwaS1rZXkKbGltaXRfa2V5czoKLSBrZXk6IGV4YW1wbGUta2V5LWEKICBxdWVyeV9wZXJfc2Vjb25kOiAxMAotIGtleTogZXhhbXBsZS1rZXktYgogIHF1ZXJ5X3Blcl9zZWNvbmQ6IDEK</p>
              */
             public Builder pluginConfig(String pluginConfig) {
                 this.pluginConfig = pluginConfig;
@@ -333,7 +358,10 @@ public class ListPluginAttachmentsResponseBody extends TeaModel {
             }
 
             /**
-             * pluginId.
+             * <p>The plug-in ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>pl-cvu6r4um1hko3b3ti0a0</p>
              */
             public Builder pluginId(String pluginId) {
                 this.pluginId = pluginId;
@@ -341,7 +369,7 @@ public class ListPluginAttachmentsResponseBody extends TeaModel {
             }
 
             /**
-             * resourceInfos.
+             * <p>The information of resource attachments.</p>
              */
             public Builder resourceInfos(java.util.List<ResourceInfo> resourceInfos) {
                 this.resourceInfos = resourceInfos;
@@ -434,7 +462,7 @@ public class ListPluginAttachmentsResponseBody extends TeaModel {
             } 
 
             /**
-             * items.
+             * <p>The details of resource attachments.</p>
              */
             public Builder items(java.util.List<Items> items) {
                 this.items = items;
@@ -442,7 +470,10 @@ public class ListPluginAttachmentsResponseBody extends TeaModel {
             }
 
             /**
-             * pageNumber.
+             * <p>The page number.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder pageNumber(Integer pageNumber) {
                 this.pageNumber = pageNumber;
@@ -450,7 +481,10 @@ public class ListPluginAttachmentsResponseBody extends TeaModel {
             }
 
             /**
-             * pageSize.
+             * <p>The page size.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>10</p>
              */
             public Builder pageSize(Integer pageSize) {
                 this.pageSize = pageSize;
@@ -458,7 +492,10 @@ public class ListPluginAttachmentsResponseBody extends TeaModel {
             }
 
             /**
-             * totalSize.
+             * <p>The total number of entries returned.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>10</p>
              */
             public Builder totalSize(Integer totalSize) {
                 this.totalSize = totalSize;

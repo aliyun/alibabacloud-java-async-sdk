@@ -59,7 +59,10 @@ public class DeleteServiceRequest extends Request {
         } 
 
         /**
-         * serviceId.
+         * <p>The service ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>svc-cr6pk4tlhtgm***</p>
          */
         public Builder serviceId(String serviceId) {
             this.putPathParameter("serviceId", serviceId);

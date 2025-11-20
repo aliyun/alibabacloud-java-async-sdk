@@ -93,7 +93,10 @@ public class ListPluginsResponseBody extends TeaModel {
         } 
 
         /**
-         * code.
+         * <p>The status code.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Ok</p>
          */
         public Builder code(String code) {
             this.code = code;
@@ -101,7 +104,7 @@ public class ListPluginsResponseBody extends TeaModel {
         }
 
         /**
-         * data.
+         * <p>The response payload.</p>
          */
         public Builder data(Data data) {
             this.data = data;
@@ -109,7 +112,10 @@ public class ListPluginsResponseBody extends TeaModel {
         }
 
         /**
-         * message.
+         * <p>The status message.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>success</p>
          */
         public Builder message(String message) {
             this.message = message;
@@ -117,7 +123,10 @@ public class ListPluginsResponseBody extends TeaModel {
         }
 
         /**
-         * requestId.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>168BA42D-F822-569D-A67F-FC59E6ABC2B1</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -183,7 +192,10 @@ public class ListPluginsResponseBody extends TeaModel {
             } 
 
             /**
-             * enable.
+             * <p>Indicates if enabled.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>false</p>
              */
             public Builder enable(String enable) {
                 this.enable = enable;
@@ -191,7 +203,10 @@ public class ListPluginsResponseBody extends TeaModel {
             }
 
             /**
-             * pluginAttachmentId.
+             * <p>The attachment ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>pa-ct2irn6m1hkreaen0t40</p>
              */
             public Builder pluginAttachmentId(String pluginAttachmentId) {
                 this.pluginAttachmentId = pluginAttachmentId;
@@ -258,7 +273,10 @@ public class ListPluginsResponseBody extends TeaModel {
             } 
 
             /**
-             * gatewayId.
+             * <p>The instance ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>gw-cq7og15lhtxx6qasrj60</p>
              */
             public Builder gatewayId(String gatewayId) {
                 this.gatewayId = gatewayId;
@@ -266,7 +284,10 @@ public class ListPluginsResponseBody extends TeaModel {
             }
 
             /**
-             * name.
+             * <p>The instance name.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>apitest-gw</p>
              */
             public Builder name(String name) {
                 this.name = name;
@@ -411,7 +432,10 @@ public class ListPluginsResponseBody extends TeaModel {
             } 
 
             /**
-             * alias.
+             * <p>The alias.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>key-based rate limit</p>
              */
             public Builder alias(String alias) {
                 this.alias = alias;
@@ -419,7 +443,10 @@ public class ListPluginsResponseBody extends TeaModel {
             }
 
             /**
-             * executePriority.
+             * <p>The execution priority.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>999</p>
              */
             public Builder executePriority(String executePriority) {
                 this.executePriority = executePriority;
@@ -427,7 +454,10 @@ public class ListPluginsResponseBody extends TeaModel {
             }
 
             /**
-             * executeStage.
+             * <p>The execution stage.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>AUTHZ</p>
              */
             public Builder executeStage(String executeStage) {
                 this.executeStage = executeStage;
@@ -435,7 +465,10 @@ public class ListPluginsResponseBody extends TeaModel {
             }
 
             /**
-             * name.
+             * <p>The name of the plug-in.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>key-rate-limit</p>
              */
             public Builder name(String name) {
                 this.name = name;
@@ -443,7 +476,10 @@ public class ListPluginsResponseBody extends TeaModel {
             }
 
             /**
-             * pluginClassId.
+             * <p>The plug-in type ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>pls-cqebrgh46ppatmpri</p>
              */
             public Builder pluginClassId(String pluginClassId) {
                 this.pluginClassId = pluginClassId;
@@ -451,7 +487,10 @@ public class ListPluginsResponseBody extends TeaModel {
             }
 
             /**
-             * source.
+             * <p>The source of the plug-in.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>HigressOfficial</p>
              */
             public Builder source(String source) {
                 this.source = source;
@@ -459,7 +498,10 @@ public class ListPluginsResponseBody extends TeaModel {
             }
 
             /**
-             * version.
+             * <p>The version.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2.0.3</p>
              */
             public Builder version(String version) {
                 this.version = version;
@@ -467,7 +509,10 @@ public class ListPluginsResponseBody extends TeaModel {
             }
 
             /**
-             * versionDescription.
+             * <p>The description of the version.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>version description</p>
              */
             public Builder versionDescription(String versionDescription) {
                 this.versionDescription = versionDescription;
@@ -560,7 +605,7 @@ public class ListPluginsResponseBody extends TeaModel {
             } 
 
             /**
-             * attachmentInfo.
+             * <p>The attachment information.</p>
              */
             public Builder attachmentInfo(AttachmentInfo attachmentInfo) {
                 this.attachmentInfo = attachmentInfo;
@@ -568,7 +613,7 @@ public class ListPluginsResponseBody extends TeaModel {
             }
 
             /**
-             * gatewayInfo.
+             * <p>The gateway instance information.</p>
              */
             public Builder gatewayInfo(GatewayInfo gatewayInfo) {
                 this.gatewayInfo = gatewayInfo;
@@ -576,7 +621,7 @@ public class ListPluginsResponseBody extends TeaModel {
             }
 
             /**
-             * pluginClassInfo.
+             * <p>The plug-in type information.</p>
              */
             public Builder pluginClassInfo(PluginClassInfo pluginClassInfo) {
                 this.pluginClassInfo = pluginClassInfo;
@@ -584,7 +629,10 @@ public class ListPluginsResponseBody extends TeaModel {
             }
 
             /**
-             * pluginId.
+             * <p>The plug-in ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>pl-cvu6r4um1hko3b3ti0a0</p>
              */
             public Builder pluginId(String pluginId) {
                 this.pluginId = pluginId;
@@ -677,7 +725,7 @@ public class ListPluginsResponseBody extends TeaModel {
             } 
 
             /**
-             * items.
+             * <p>The list of plug-in information.</p>
              */
             public Builder items(java.util.List<Items> items) {
                 this.items = items;
@@ -685,7 +733,10 @@ public class ListPluginsResponseBody extends TeaModel {
             }
 
             /**
-             * pageNumber.
+             * <p>The page number.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder pageNumber(Integer pageNumber) {
                 this.pageNumber = pageNumber;
@@ -693,7 +744,10 @@ public class ListPluginsResponseBody extends TeaModel {
             }
 
             /**
-             * pageSize.
+             * <p>The page size.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>10</p>
              */
             public Builder pageSize(Integer pageSize) {
                 this.pageSize = pageSize;
@@ -701,7 +755,10 @@ public class ListPluginsResponseBody extends TeaModel {
             }
 
             /**
-             * totalSize.
+             * <p>The total number of entries returned.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>10</p>
              */
             public Builder totalSize(Integer totalSize) {
                 this.totalSize = totalSize;

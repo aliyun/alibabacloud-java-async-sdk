@@ -101,7 +101,10 @@ public class ListConsumersRequest extends Request {
         } 
 
         /**
-         * gatewayType.
+         * <p>The instance type. Valid values: <strong>AI</strong> and <strong>API</strong>.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>AI</p>
          */
         public Builder gatewayType(String gatewayType) {
             this.putQueryParameter("gatewayType", gatewayType);
@@ -110,7 +113,10 @@ public class ListConsumersRequest extends Request {
         }
 
         /**
-         * nameLike.
+         * <p>The name used to perform a fuzzy search for operations.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>UI-test</p>
          */
         public Builder nameLike(String nameLike) {
             this.putQueryParameter("nameLike", nameLike);
@@ -119,7 +125,10 @@ public class ListConsumersRequest extends Request {
         }
 
         /**
-         * pageNumber.
+         * <p>The page number to return. Pages start from 1. Default value: 1.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder pageNumber(Integer pageNumber) {
             this.putQueryParameter("pageNumber", pageNumber);
@@ -128,7 +137,10 @@ public class ListConsumersRequest extends Request {
         }
 
         /**
-         * pageSize.
+         * <p>The number of entries per page. Default value: 10.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10</p>
          */
         public Builder pageSize(Integer pageSize) {
             this.putQueryParameter("pageSize", pageSize);

@@ -115,7 +115,10 @@ public class UpdateConsumerAuthorizationRuleRequest extends Request {
         } 
 
         /**
-         * consumerId.
+         * <p>The consumer ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cs-cvs7kbem1hkiit4ivhu0</p>
          */
         public Builder consumerId(String consumerId) {
             this.putPathParameter("consumerId", consumerId);
@@ -124,7 +127,10 @@ public class UpdateConsumerAuthorizationRuleRequest extends Request {
         }
 
         /**
-         * consumerAuthorizationRuleId.
+         * <p>Filters the list of operations by a specific consumer authorization rule ID. Only authorized operations are returned in the response.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cas-xxx</p>
          */
         public Builder consumerAuthorizationRuleId(String consumerAuthorizationRuleId) {
             this.putPathParameter("consumerAuthorizationRuleId", consumerAuthorizationRuleId);
@@ -133,7 +139,7 @@ public class UpdateConsumerAuthorizationRuleRequest extends Request {
         }
 
         /**
-         * authorizationResourceInfos.
+         * <p>The list of resource authorization information.</p>
          */
         public Builder authorizationResourceInfos(java.util.List<AuthorizationResourceInfo> authorizationResourceInfos) {
             this.putBodyParameter("authorizationResourceInfos", authorizationResourceInfos);
@@ -142,7 +148,10 @@ public class UpdateConsumerAuthorizationRuleRequest extends Request {
         }
 
         /**
-         * expireMode.
+         * <p>The expiry mode. Valid values: LongTerm and ShortTerm.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>LongTerm</p>
          */
         public Builder expireMode(String expireMode) {
             this.putBodyParameter("expireMode", expireMode);
@@ -151,7 +160,10 @@ public class UpdateConsumerAuthorizationRuleRequest extends Request {
         }
 
         /**
-         * expireTimestamp.
+         * <p>The expiration time.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1750852089975</p>
          */
         public Builder expireTimestamp(Long expireTimestamp) {
             this.putBodyParameter("expireTimestamp", expireTimestamp);

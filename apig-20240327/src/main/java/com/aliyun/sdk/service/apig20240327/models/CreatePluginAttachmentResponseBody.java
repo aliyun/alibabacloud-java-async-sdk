@@ -93,7 +93,10 @@ public class CreatePluginAttachmentResponseBody extends TeaModel {
         } 
 
         /**
-         * code.
+         * <p>The status code.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Ok</p>
          */
         public Builder code(String code) {
             this.code = code;
@@ -101,7 +104,7 @@ public class CreatePluginAttachmentResponseBody extends TeaModel {
         }
 
         /**
-         * data.
+         * <p>The returned data.</p>
          */
         public Builder data(Data data) {
             this.data = data;
@@ -109,7 +112,10 @@ public class CreatePluginAttachmentResponseBody extends TeaModel {
         }
 
         /**
-         * message.
+         * <p>The response message returned.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>success</p>
          */
         public Builder message(String message) {
             this.message = message;
@@ -117,7 +123,7 @@ public class CreatePluginAttachmentResponseBody extends TeaModel {
         }
 
         /**
-         * <p>Id of the request</p>
+         * <p>The request ID.</p>
          * 
          * <strong>example:</strong>
          * <p>EBCB8485-24F9-54CD-B258-CB15FDB27677</p>
@@ -173,7 +179,10 @@ public class CreatePluginAttachmentResponseBody extends TeaModel {
             } 
 
             /**
-             * pluginAttachmentId.
+             * <p>The plug-in ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>pa-cvs7jpmm1hkgihaqv4a0</p>
              */
             public Builder pluginAttachmentId(String pluginAttachmentId) {
                 this.pluginAttachmentId = pluginAttachmentId;

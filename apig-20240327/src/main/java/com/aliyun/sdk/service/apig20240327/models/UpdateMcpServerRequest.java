@@ -201,7 +201,7 @@ public class UpdateMcpServerRequest extends Request {
         } 
 
         /**
-         * <p>MCP Server ID</p>
+         * <p>The MCP server ID.</p>
          * 
          * <strong>example:</strong>
          * <p>mcp-adfefz24afg</p>
@@ -213,7 +213,7 @@ public class UpdateMcpServerRequest extends Request {
         }
 
         /**
-         * assembledSources.
+         * <p>The list of assembly sources. This parameter is required when the type parameter is set to AssemblyMCP.</p>
          */
         public Builder assembledSources(java.util.List<AssembledSources> assembledSources) {
             this.putBodyParameter("assembledSources", assembledSources);
@@ -222,7 +222,7 @@ public class UpdateMcpServerRequest extends Request {
         }
 
         /**
-         * backendConfig.
+         * <p>The backend service configurations for the route.</p>
          */
         public Builder backendConfig(BackendConfig backendConfig) {
             this.putBodyParameter("backendConfig", backendConfig);
@@ -231,7 +231,7 @@ public class UpdateMcpServerRequest extends Request {
         }
 
         /**
-         * createFromType.
+         * <p>Specifies the type of source for MCP server creation.</p>
          */
         public Builder createFromType(String createFromType) {
             this.putBodyParameter("createFromType", createFromType);
@@ -240,7 +240,7 @@ public class UpdateMcpServerRequest extends Request {
         }
 
         /**
-         * description.
+         * <p>The description.</p>
          */
         public Builder description(String description) {
             this.putBodyParameter("description", description);
@@ -249,7 +249,7 @@ public class UpdateMcpServerRequest extends Request {
         }
 
         /**
-         * domainIds.
+         * <p>The domain IDs.</p>
          */
         public Builder domainIds(java.util.List<String> domainIds) {
             this.putBodyParameter("domainIds", domainIds);
@@ -258,7 +258,10 @@ public class UpdateMcpServerRequest extends Request {
         }
 
         /**
-         * exposedUriPath.
+         * <p>The exposed URI path. This parameter is required when the protocol parameter is set to SSE or StreamableHTTP and the type parameter is set to RealMCP.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>/sse</p>
          */
         public Builder exposedUriPath(String exposedUriPath) {
             this.putBodyParameter("exposedUriPath", exposedUriPath);
@@ -267,7 +270,7 @@ public class UpdateMcpServerRequest extends Request {
         }
 
         /**
-         * match.
+         * <p>The route match rule.</p>
          */
         public Builder match(HttpRouteMatch match) {
             this.putBodyParameter("match", match);
@@ -276,7 +279,10 @@ public class UpdateMcpServerRequest extends Request {
         }
 
         /**
-         * mcpStatisticsEnable.
+         * <p>Specifies if MCP observability is enabled. Default value: false.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>false</p>
          */
         public Builder mcpStatisticsEnable(Boolean mcpStatisticsEnable) {
             this.putBodyParameter("mcpStatisticsEnable", mcpStatisticsEnable);
@@ -285,6 +291,7 @@ public class UpdateMcpServerRequest extends Request {
         }
 
         /**
+         * <p>The service protocol. Valid values: HTTP, HTTPS, SSE, and StreamableHTTP.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -297,6 +304,7 @@ public class UpdateMcpServerRequest extends Request {
         }
 
         /**
+         * <p>The MCP server type. Valid values: RealMCP and AssemblyMCP.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -381,7 +389,7 @@ public class UpdateMcpServerRequest extends Request {
             } 
 
             /**
-             * <p>MCP Server ID</p>
+             * <p>The MCP server ID.</p>
              * 
              * <strong>example:</strong>
              * <p>mcp-afaefaefaf</p>
@@ -392,7 +400,10 @@ public class UpdateMcpServerRequest extends Request {
             }
 
             /**
-             * mcpServerName.
+             * <p>The name of the MCP server.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>test-mcp</p>
              */
             public Builder mcpServerName(String mcpServerName) {
                 this.mcpServerName = mcpServerName;
@@ -400,7 +411,7 @@ public class UpdateMcpServerRequest extends Request {
             }
 
             /**
-             * tools.
+             * <p>The MCP tools.</p>
              */
             public Builder tools(java.util.List<String> tools) {
                 this.tools = tools;
@@ -506,7 +517,10 @@ public class UpdateMcpServerRequest extends Request {
             } 
 
             /**
-             * port.
+             * <p>The service port (omit for dynamic ports).</p>
+             * 
+             * <strong>example:</strong>
+             * <p>8080</p>
              */
             public Builder port(Integer port) {
                 this.port = port;
@@ -514,7 +528,12 @@ public class UpdateMcpServerRequest extends Request {
             }
 
             /**
-             * <p>This parameter is required.</p>
+             * <p>The service protocol. Valid values:</p>
+             * <ul>
+             * <li>TCP</li>
+             * <li>HTTP</li>
+             * <li>DUBBO</li>
+             * </ul>
              * 
              * <strong>example:</strong>
              * <p>HTTP</p>
@@ -525,7 +544,10 @@ public class UpdateMcpServerRequest extends Request {
             }
 
             /**
-             * serviceId.
+             * <p>The service ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>svc-cr6pk4tlhtgm58e***</p>
              */
             public Builder serviceId(String serviceId) {
                 this.serviceId = serviceId;
@@ -533,7 +555,10 @@ public class UpdateMcpServerRequest extends Request {
             }
 
             /**
-             * version.
+             * <p>The service version.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>v1</p>
              */
             public Builder version(String version) {
                 this.version = version;
@@ -541,7 +566,10 @@ public class UpdateMcpServerRequest extends Request {
             }
 
             /**
-             * weight.
+             * <p>The traffic weight percentage.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>49</p>
              */
             public Builder weight(Integer weight) {
                 this.weight = weight;
@@ -608,7 +636,10 @@ public class UpdateMcpServerRequest extends Request {
             } 
 
             /**
-             * scene.
+             * <p>The backend service scenario.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>SingleService</p>
              */
             public Builder scene(String scene) {
                 this.scene = scene;
@@ -616,7 +647,7 @@ public class UpdateMcpServerRequest extends Request {
             }
 
             /**
-             * services.
+             * <p>The backend services.</p>
              */
             public Builder services(java.util.List<Services> services) {
                 this.services = services;
