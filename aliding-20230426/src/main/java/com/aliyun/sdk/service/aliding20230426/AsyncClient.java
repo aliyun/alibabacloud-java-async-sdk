@@ -194,6 +194,12 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<CopyDentryResponse> copyDentry(CopyDentryRequest request);
 
     /**
+     * @param request the request parameters of CopyDentryByNodeId  CopyDentryByNodeIdRequest
+     * @return CopyDentryByNodeIdResponse
+     */
+    CompletableFuture<CopyDentryByNodeIdResponse> copyDentryByNodeId(CopyDentryByNodeIdRequest request);
+
+    /**
      * @param request the request parameters of CreateAlidingAssistant  CreateAlidingAssistantRequest
      * @return CreateAlidingAssistantResponse
      */
