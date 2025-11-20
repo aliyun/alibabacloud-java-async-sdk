@@ -34,12 +34,17 @@ public class InvokeSkillRequest extends Request {
     @com.aliyun.core.annotation.NameInMap("Stream")
     private Boolean stream;
 
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("sourceIdOfAssistantId")
+    private String sourceIdOfAssistantId;
+
     private InvokeSkillRequest(Builder builder) {
         super(builder);
         this.accountContext = builder.accountContext;
         this.params = builder.params;
         this.skillId = builder.skillId;
         this.stream = builder.stream;
+        this.sourceIdOfAssistantId = builder.sourceIdOfAssistantId;
     }
 
     public static Builder builder() {
@@ -83,11 +88,19 @@ public class InvokeSkillRequest extends Request {
         return this.stream;
     }
 
+    /**
+     * @return sourceIdOfAssistantId
+     */
+    public String getSourceIdOfAssistantId() {
+        return this.sourceIdOfAssistantId;
+    }
+
     public static final class Builder extends Request.Builder<InvokeSkillRequest, Builder> {
         private AccountContext accountContext; 
         private java.util.Map<String, ?> params; 
         private String skillId; 
         private Boolean stream; 
+        private String sourceIdOfAssistantId; 
 
         private Builder() {
             super();
@@ -99,6 +112,7 @@ public class InvokeSkillRequest extends Request {
             this.params = request.params;
             this.skillId = request.skillId;
             this.stream = request.stream;
+            this.sourceIdOfAssistantId = request.sourceIdOfAssistantId;
         } 
 
         /**
@@ -142,6 +156,15 @@ public class InvokeSkillRequest extends Request {
             return this;
         }
 
+        /**
+         * sourceIdOfAssistantId.
+         */
+        public Builder sourceIdOfAssistantId(String sourceIdOfAssistantId) {
+            this.putBodyParameter("sourceIdOfAssistantId", sourceIdOfAssistantId);
+            this.sourceIdOfAssistantId = sourceIdOfAssistantId;
+            return this;
+        }
+
         @Override
         public InvokeSkillRequest build() {
             return new InvokeSkillRequest(this);
@@ -160,8 +183,12 @@ public class InvokeSkillRequest extends Request {
         @com.aliyun.core.annotation.Validation(required = true)
         private String accountId;
 
+        @com.aliyun.core.annotation.NameInMap("ssoTicket")
+        private String ssoTicket;
+
         private AccountContext(Builder builder) {
             this.accountId = builder.accountId;
+            this.ssoTicket = builder.ssoTicket;
         }
 
         public static Builder builder() {
@@ -179,14 +206,23 @@ public class InvokeSkillRequest extends Request {
             return this.accountId;
         }
 
+        /**
+         * @return ssoTicket
+         */
+        public String getSsoTicket() {
+            return this.ssoTicket;
+        }
+
         public static final class Builder {
             private String accountId; 
+            private String ssoTicket; 
 
             private Builder() {
             } 
 
             private Builder(AccountContext model) {
                 this.accountId = model.accountId;
+                this.ssoTicket = model.ssoTicket;
             } 
 
             /**
@@ -197,6 +233,14 @@ public class InvokeSkillRequest extends Request {
              */
             public Builder accountId(String accountId) {
                 this.accountId = accountId;
+                return this;
+            }
+
+            /**
+             * ssoTicket.
+             */
+            public Builder ssoTicket(String ssoTicket) {
+                this.ssoTicket = ssoTicket;
                 return this;
             }
 
