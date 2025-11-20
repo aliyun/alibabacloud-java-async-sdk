@@ -22,6 +22,10 @@ public class ValidateEmailRequest extends Request {
     private String regionId;
 
     @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("CheckGraylist")
+    private Boolean checkGraylist;
+
+    @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("Email")
     @com.aliyun.core.annotation.Validation(required = true)
     private String email;
@@ -33,6 +37,7 @@ public class ValidateEmailRequest extends Request {
     private ValidateEmailRequest(Builder builder) {
         super(builder);
         this.regionId = builder.regionId;
+        this.checkGraylist = builder.checkGraylist;
         this.email = builder.email;
         this.timeout = builder.timeout;
     }
@@ -58,6 +63,13 @@ public class ValidateEmailRequest extends Request {
     }
 
     /**
+     * @return checkGraylist
+     */
+    public Boolean getCheckGraylist() {
+        return this.checkGraylist;
+    }
+
+    /**
      * @return email
      */
     public String getEmail() {
@@ -73,6 +85,7 @@ public class ValidateEmailRequest extends Request {
 
     public static final class Builder extends Request.Builder<ValidateEmailRequest, Builder> {
         private String regionId; 
+        private Boolean checkGraylist; 
         private String email; 
         private Long timeout; 
 
@@ -83,6 +96,7 @@ public class ValidateEmailRequest extends Request {
         private Builder(ValidateEmailRequest request) {
             super(request);
             this.regionId = request.regionId;
+            this.checkGraylist = request.checkGraylist;
             this.email = request.email;
             this.timeout = request.timeout;
         } 
@@ -93,6 +107,15 @@ public class ValidateEmailRequest extends Request {
         public Builder regionId(String regionId) {
             this.putHostParameter("RegionId", regionId);
             this.regionId = regionId;
+            return this;
+        }
+
+        /**
+         * CheckGraylist.
+         */
+        public Builder checkGraylist(Boolean checkGraylist) {
+            this.putQueryParameter("CheckGraylist", checkGraylist);
+            this.checkGraylist = checkGraylist;
             return this;
         }
 
