@@ -20,6 +20,12 @@ public interface AsyncClient extends SdkAutoCloseable {
     }
 
     /**
+     * @param request the request parameters of ActivateTemplateMCP  ActivateTemplateMCPRequest
+     * @return ActivateTemplateMCPResponse
+     */
+    CompletableFuture<ActivateTemplateMCPResponse> activateTemplateMCP(ActivateTemplateMCPRequest request);
+
+    /**
      * <b>description</b> :
      * <p>创建一个新的智能体运行时实例，用于执行AI代理任务。智能体运行时是AgentRun服务的核心组件，提供代码执行、浏览器操作、内存管理等能力。</p>
      * 
@@ -56,6 +62,12 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<CreateCodeInterpreterResponse> createCodeInterpreter(CreateCodeInterpreterRequest request);
 
     /**
+     * @param request the request parameters of CreateCredential  CreateCredentialRequest
+     * @return CreateCredentialResponse
+     */
+    CompletableFuture<CreateCredentialResponse> createCredential(CreateCredentialRequest request);
+
+    /**
      * @param request the request parameters of CreateMemory  CreateMemoryRequest
      * @return CreateMemoryResponse
      */
@@ -66,6 +78,36 @@ public interface AsyncClient extends SdkAutoCloseable {
      * @return CreateMemoryEventResponse
      */
     CompletableFuture<CreateMemoryEventResponse> createMemoryEvent(CreateMemoryEventRequest request);
+
+    /**
+     * @param request the request parameters of CreateModelProxy  CreateModelProxyRequest
+     * @return CreateModelProxyResponse
+     */
+    CompletableFuture<CreateModelProxyResponse> createModelProxy(CreateModelProxyRequest request);
+
+    /**
+     * @param request the request parameters of CreateModelService  CreateModelServiceRequest
+     * @return CreateModelServiceResponse
+     */
+    CompletableFuture<CreateModelServiceResponse> createModelService(CreateModelServiceRequest request);
+
+    /**
+     * <b>description</b> :
+     * <p>根据模板创建一个新的沙箱实例。沙箱是运行时的执行环境，可以执行代码或运行浏览器。</p>
+     * 
+     * @param request the request parameters of CreateSandbox  CreateSandboxRequest
+     * @return CreateSandboxResponse
+     */
+    CompletableFuture<CreateSandboxResponse> createSandbox(CreateSandboxRequest request);
+
+    /**
+     * <b>description</b> :
+     * <p>创建一个新的模板，用于后续创建沙箱。模板定义了沙箱的运行时环境、资源配置等。</p>
+     * 
+     * @param request the request parameters of CreateTemplate  CreateTemplateRequest
+     * @return CreateTemplateResponse
+     */
+    CompletableFuture<CreateTemplateResponse> createTemplate(CreateTemplateRequest request);
 
     /**
      * <b>description</b> :
@@ -101,10 +143,43 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<DeleteCodeInterpreterResponse> deleteCodeInterpreter(DeleteCodeInterpreterRequest request);
 
     /**
+     * @param request the request parameters of DeleteCredential  DeleteCredentialRequest
+     * @return DeleteCredentialResponse
+     */
+    CompletableFuture<DeleteCredentialResponse> deleteCredential(DeleteCredentialRequest request);
+
+    /**
      * @param request the request parameters of DeleteMemory  DeleteMemoryRequest
      * @return DeleteMemoryResponse
      */
     CompletableFuture<DeleteMemoryResponse> deleteMemory(DeleteMemoryRequest request);
+
+    /**
+     * @param request the request parameters of DeleteModelProxy  DeleteModelProxyRequest
+     * @return DeleteModelProxyResponse
+     */
+    CompletableFuture<DeleteModelProxyResponse> deleteModelProxy(DeleteModelProxyRequest request);
+
+    /**
+     * @param request the request parameters of DeleteModelService  DeleteModelServiceRequest
+     * @return DeleteModelServiceResponse
+     */
+    CompletableFuture<DeleteModelServiceResponse> deleteModelService(DeleteModelServiceRequest request);
+
+    /**
+     * <b>description</b> :
+     * <p>删除指定的模板。删除后，该模板将无法再用于创建新的沙箱。</p>
+     * 
+     * @param request the request parameters of DeleteTemplate  DeleteTemplateRequest
+     * @return DeleteTemplateResponse
+     */
+    CompletableFuture<DeleteTemplateResponse> deleteTemplate(DeleteTemplateRequest request);
+
+    /**
+     * @param request the request parameters of GetAccessToken  GetAccessTokenRequest
+     * @return GetAccessTokenResponse
+     */
+    CompletableFuture<GetAccessTokenResponse> getAccessToken(GetAccessTokenRequest request);
 
     /**
      * <b>description</b> :
@@ -140,6 +215,12 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<GetCodeInterpreterResponse> getCodeInterpreter(GetCodeInterpreterRequest request);
 
     /**
+     * @param request the request parameters of GetCredential  GetCredentialRequest
+     * @return GetCredentialResponse
+     */
+    CompletableFuture<GetCredentialResponse> getCredential(GetCredentialRequest request);
+
+    /**
      * @param request the request parameters of GetMemory  GetMemoryRequest
      * @return GetMemoryResponse
      */
@@ -159,6 +240,36 @@ public interface AsyncClient extends SdkAutoCloseable {
      * @return GetMemorySessionResponse
      */
     CompletableFuture<GetMemorySessionResponse> getMemorySession(GetMemorySessionRequest request);
+
+    /**
+     * @param request the request parameters of GetModelProxy  GetModelProxyRequest
+     * @return GetModelProxyResponse
+     */
+    CompletableFuture<GetModelProxyResponse> getModelProxy(GetModelProxyRequest request);
+
+    /**
+     * @param request the request parameters of GetModelService  GetModelServiceRequest
+     * @return GetModelServiceResponse
+     */
+    CompletableFuture<GetModelServiceResponse> getModelService(GetModelServiceRequest request);
+
+    /**
+     * <b>description</b> :
+     * <p>根据沙箱ID获取指定沙箱的详细信息，包括状态、配置等。</p>
+     * 
+     * @param request the request parameters of GetSandbox  GetSandboxRequest
+     * @return GetSandboxResponse
+     */
+    CompletableFuture<GetSandboxResponse> getSandbox(GetSandboxRequest request);
+
+    /**
+     * <b>description</b> :
+     * <p>根据模板名称获取指定模板的详细信息，包括配置、状态等。</p>
+     * 
+     * @param request the request parameters of GetTemplate  GetTemplateRequest
+     * @return GetTemplateResponse
+     */
+    CompletableFuture<GetTemplateResponse> getTemplate(GetTemplateRequest request);
 
     /**
      * <b>description</b> :
@@ -203,6 +314,12 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<ListCodeInterpretersResponse> listCodeInterpreters(ListCodeInterpretersRequest request);
 
     /**
+     * @param request the request parameters of ListCredentials  ListCredentialsRequest
+     * @return ListCredentialsResponse
+     */
+    CompletableFuture<ListCredentialsResponse> listCredentials(ListCredentialsRequest request);
+
+    /**
      * @param request the request parameters of ListMemory  ListMemoryRequest
      * @return ListMemoryResponse
      */
@@ -224,6 +341,42 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<ListMemorySessionsResponse> listMemorySessions(ListMemorySessionsRequest request);
 
     /**
+     * @param request the request parameters of ListModelProviders  ListModelProvidersRequest
+     * @return ListModelProvidersResponse
+     */
+    CompletableFuture<ListModelProvidersResponse> listModelProviders(ListModelProvidersRequest request);
+
+    /**
+     * @param request the request parameters of ListModelProxies  ListModelProxiesRequest
+     * @return ListModelProxiesResponse
+     */
+    CompletableFuture<ListModelProxiesResponse> listModelProxies(ListModelProxiesRequest request);
+
+    /**
+     * @param request the request parameters of ListModelServices  ListModelServicesRequest
+     * @return ListModelServicesResponse
+     */
+    CompletableFuture<ListModelServicesResponse> listModelServices(ListModelServicesRequest request);
+
+    /**
+     * <b>description</b> :
+     * <p>获取当前用户的所有沙箱列表，支持按模板名称过滤，支持分页查询。</p>
+     * 
+     * @param request the request parameters of ListSandboxes  ListSandboxesRequest
+     * @return ListSandboxesResponse
+     */
+    CompletableFuture<ListSandboxesResponse> listSandboxes(ListSandboxesRequest request);
+
+    /**
+     * <b>description</b> :
+     * <p>获取当前用户的所有模板列表，支持按模板类型过滤，支持分页查询。</p>
+     * 
+     * @param request the request parameters of ListTemplates  ListTemplatesRequest
+     * @return ListTemplatesResponse
+     */
+    CompletableFuture<ListTemplatesResponse> listTemplates(ListTemplatesRequest request);
+
+    /**
      * <b>description</b> :
      * <p>为指定的智能体运行时发布新版本，用于版本管理和部署。新版本可以包含代码更新、配置变更等内容。</p>
      * 
@@ -237,6 +390,21 @@ public interface AsyncClient extends SdkAutoCloseable {
      * @return RetrieveMemoryResponse
      */
     CompletableFuture<RetrieveMemoryResponse> retrieveMemory(RetrieveMemoryRequest request);
+
+    /**
+     * <b>description</b> :
+     * <p>停止指定的沙箱实例。停止后，沙箱将进入TERMINATED状态。</p>
+     * 
+     * @param request the request parameters of StopSandbox  StopSandboxRequest
+     * @return StopSandboxResponse
+     */
+    CompletableFuture<StopSandboxResponse> stopSandbox(StopSandboxRequest request);
+
+    /**
+     * @param request the request parameters of StopTemplateMCP  StopTemplateMCPRequest
+     * @return StopTemplateMCPResponse
+     */
+    CompletableFuture<StopTemplateMCPResponse> stopTemplateMCP(StopTemplateMCPRequest request);
 
     /**
      * <b>description</b> :
@@ -254,9 +422,36 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<UpdateAgentRuntimeEndpointResponse> updateAgentRuntimeEndpoint(UpdateAgentRuntimeEndpointRequest request);
 
     /**
+     * @param request the request parameters of UpdateCredential  UpdateCredentialRequest
+     * @return UpdateCredentialResponse
+     */
+    CompletableFuture<UpdateCredentialResponse> updateCredential(UpdateCredentialRequest request);
+
+    /**
      * @param request the request parameters of UpdateMemory  UpdateMemoryRequest
      * @return UpdateMemoryResponse
      */
     CompletableFuture<UpdateMemoryResponse> updateMemory(UpdateMemoryRequest request);
+
+    /**
+     * @param request the request parameters of UpdateModelProxy  UpdateModelProxyRequest
+     * @return UpdateModelProxyResponse
+     */
+    CompletableFuture<UpdateModelProxyResponse> updateModelProxy(UpdateModelProxyRequest request);
+
+    /**
+     * @param request the request parameters of UpdateModelService  UpdateModelServiceRequest
+     * @return UpdateModelServiceResponse
+     */
+    CompletableFuture<UpdateModelServiceResponse> updateModelService(UpdateModelServiceRequest request);
+
+    /**
+     * <b>description</b> :
+     * <p>更新指定模板的配置信息，包括资源配置、网络配置、环境变量等。</p>
+     * 
+     * @param request the request parameters of UpdateTemplate  UpdateTemplateRequest
+     * @return UpdateTemplateResponse
+     */
+    CompletableFuture<UpdateTemplateResponse> updateTemplate(UpdateTemplateRequest request);
 
 }

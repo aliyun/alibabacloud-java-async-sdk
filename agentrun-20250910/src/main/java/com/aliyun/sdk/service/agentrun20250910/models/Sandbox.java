@@ -17,9 +17,15 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>Sandbox</p>
  */
 public class Sandbox extends TeaModel {
+    @com.aliyun.core.annotation.NameInMap("SandboxIdleTTLInSeconds")
+    private Integer sandboxIdleTTLInSeconds;
+
     @com.aliyun.core.annotation.NameInMap("createdAt")
     @com.aliyun.core.annotation.Validation(required = true)
     private String createdAt;
+
+    @com.aliyun.core.annotation.NameInMap("endedAt")
+    private String endedAt;
 
     @com.aliyun.core.annotation.NameInMap("lastUpdatedAt")
     private String lastUpdatedAt;
@@ -50,7 +56,9 @@ public class Sandbox extends TeaModel {
     private String templateName;
 
     private Sandbox(Builder builder) {
+        this.sandboxIdleTTLInSeconds = builder.sandboxIdleTTLInSeconds;
         this.createdAt = builder.createdAt;
+        this.endedAt = builder.endedAt;
         this.lastUpdatedAt = builder.lastUpdatedAt;
         this.metadata = builder.metadata;
         this.sandboxArn = builder.sandboxArn;
@@ -74,10 +82,24 @@ public class Sandbox extends TeaModel {
     }
 
     /**
+     * @return sandboxIdleTTLInSeconds
+     */
+    public Integer getSandboxIdleTTLInSeconds() {
+        return this.sandboxIdleTTLInSeconds;
+    }
+
+    /**
      * @return createdAt
      */
     public String getCreatedAt() {
         return this.createdAt;
+    }
+
+    /**
+     * @return endedAt
+     */
+    public String getEndedAt() {
+        return this.endedAt;
     }
 
     /**
@@ -137,7 +159,9 @@ public class Sandbox extends TeaModel {
     }
 
     public static final class Builder {
+        private Integer sandboxIdleTTLInSeconds; 
         private String createdAt; 
+        private String endedAt; 
         private String lastUpdatedAt; 
         private java.util.Map<String, ?> metadata; 
         private String sandboxArn; 
@@ -151,7 +175,9 @@ public class Sandbox extends TeaModel {
         } 
 
         private Builder(Sandbox model) {
+            this.sandboxIdleTTLInSeconds = model.sandboxIdleTTLInSeconds;
             this.createdAt = model.createdAt;
+            this.endedAt = model.endedAt;
             this.lastUpdatedAt = model.lastUpdatedAt;
             this.metadata = model.metadata;
             this.sandboxArn = model.sandboxArn;
@@ -163,11 +189,27 @@ public class Sandbox extends TeaModel {
         } 
 
         /**
+         * SandboxIdleTTLInSeconds.
+         */
+        public Builder sandboxIdleTTLInSeconds(Integer sandboxIdleTTLInSeconds) {
+            this.sandboxIdleTTLInSeconds = sandboxIdleTTLInSeconds;
+            return this;
+        }
+
+        /**
          * <p>沙箱创建时间</p>
          * <p>This parameter is required.</p>
          */
         public Builder createdAt(String createdAt) {
             this.createdAt = createdAt;
+            return this;
+        }
+
+        /**
+         * endedAt.
+         */
+        public Builder endedAt(String endedAt) {
+            this.endedAt = endedAt;
             return this;
         }
 
