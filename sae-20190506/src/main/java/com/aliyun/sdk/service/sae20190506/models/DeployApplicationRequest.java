@@ -26,6 +26,14 @@ public class DeployApplicationRequest extends Request {
     private String acrInstanceId;
 
     @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("AgentVersion")
+    private String agentVersion;
+
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("AlbIngressReadinessGate")
+    private String albIngressReadinessGate;
+
+    @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("AppId")
     @com.aliyun.core.annotation.Validation(required = true)
     private String appId;
@@ -82,6 +90,10 @@ public class DeployApplicationRequest extends Request {
     @com.aliyun.core.annotation.NameInMap("EdasContainerVersion")
     private String edasContainerVersion;
 
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("EmptyDirDesc")
+    private String emptyDirDesc;
+
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("EnableAhas")
     private String enableAhas;
@@ -95,8 +107,16 @@ public class DeployApplicationRequest extends Request {
     private Boolean enableGreyTagRoute;
 
     @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("EnableNamespaceAgentVersion")
+    private Boolean enableNamespaceAgentVersion;
+
+    @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("EnableNewArms")
     private Boolean enableNewArms;
+
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("EnablePrometheus")
+    private Boolean enablePrometheus;
 
     @com.aliyun.core.annotation.Body
     @com.aliyun.core.annotation.NameInMap("EnableSidecarResourceIsolated")
@@ -109,6 +129,10 @@ public class DeployApplicationRequest extends Request {
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("GpuConfig")
     private String gpuConfig;
+
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Html")
+    private String html;
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("ImagePullSecrets")
@@ -141,6 +165,14 @@ public class DeployApplicationRequest extends Request {
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("Liveness")
     private String liveness;
+
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("MaxSurgeInstanceRatio")
+    private Integer maxSurgeInstanceRatio;
+
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("MaxSurgeInstances")
+    private Integer maxSurgeInstances;
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("Memory")
@@ -319,6 +351,8 @@ public class DeployApplicationRequest extends Request {
         super(builder);
         this.acrAssumeRoleArn = builder.acrAssumeRoleArn;
         this.acrInstanceId = builder.acrInstanceId;
+        this.agentVersion = builder.agentVersion;
+        this.albIngressReadinessGate = builder.albIngressReadinessGate;
         this.appId = builder.appId;
         this.associateEip = builder.associateEip;
         this.autoEnableApplicationScalingRule = builder.autoEnableApplicationScalingRule;
@@ -333,13 +367,17 @@ public class DeployApplicationRequest extends Request {
         this.deploy = builder.deploy;
         this.dotnet = builder.dotnet;
         this.edasContainerVersion = builder.edasContainerVersion;
+        this.emptyDirDesc = builder.emptyDirDesc;
         this.enableAhas = builder.enableAhas;
         this.enableCpuBurst = builder.enableCpuBurst;
         this.enableGreyTagRoute = builder.enableGreyTagRoute;
+        this.enableNamespaceAgentVersion = builder.enableNamespaceAgentVersion;
         this.enableNewArms = builder.enableNewArms;
+        this.enablePrometheus = builder.enablePrometheus;
         this.enableSidecarResourceIsolated = builder.enableSidecarResourceIsolated;
         this.envs = builder.envs;
         this.gpuConfig = builder.gpuConfig;
+        this.html = builder.html;
         this.imagePullSecrets = builder.imagePullSecrets;
         this.imageUrl = builder.imageUrl;
         this.initContainersConfig = builder.initContainersConfig;
@@ -348,6 +386,8 @@ public class DeployApplicationRequest extends Request {
         this.jdk = builder.jdk;
         this.kafkaConfigs = builder.kafkaConfigs;
         this.liveness = builder.liveness;
+        this.maxSurgeInstanceRatio = builder.maxSurgeInstanceRatio;
+        this.maxSurgeInstances = builder.maxSurgeInstances;
         this.memory = builder.memory;
         this.microRegistration = builder.microRegistration;
         this.microRegistrationConfig = builder.microRegistrationConfig;
@@ -418,6 +458,20 @@ public class DeployApplicationRequest extends Request {
      */
     public String getAcrInstanceId() {
         return this.acrInstanceId;
+    }
+
+    /**
+     * @return agentVersion
+     */
+    public String getAgentVersion() {
+        return this.agentVersion;
+    }
+
+    /**
+     * @return albIngressReadinessGate
+     */
+    public String getAlbIngressReadinessGate() {
+        return this.albIngressReadinessGate;
     }
 
     /**
@@ -519,6 +573,13 @@ public class DeployApplicationRequest extends Request {
     }
 
     /**
+     * @return emptyDirDesc
+     */
+    public String getEmptyDirDesc() {
+        return this.emptyDirDesc;
+    }
+
+    /**
      * @return enableAhas
      */
     public String getEnableAhas() {
@@ -540,10 +601,24 @@ public class DeployApplicationRequest extends Request {
     }
 
     /**
+     * @return enableNamespaceAgentVersion
+     */
+    public Boolean getEnableNamespaceAgentVersion() {
+        return this.enableNamespaceAgentVersion;
+    }
+
+    /**
      * @return enableNewArms
      */
     public Boolean getEnableNewArms() {
         return this.enableNewArms;
+    }
+
+    /**
+     * @return enablePrometheus
+     */
+    public Boolean getEnablePrometheus() {
+        return this.enablePrometheus;
     }
 
     /**
@@ -565,6 +640,13 @@ public class DeployApplicationRequest extends Request {
      */
     public String getGpuConfig() {
         return this.gpuConfig;
+    }
+
+    /**
+     * @return html
+     */
+    public String getHtml() {
+        return this.html;
     }
 
     /**
@@ -621,6 +703,20 @@ public class DeployApplicationRequest extends Request {
      */
     public String getLiveness() {
         return this.liveness;
+    }
+
+    /**
+     * @return maxSurgeInstanceRatio
+     */
+    public Integer getMaxSurgeInstanceRatio() {
+        return this.maxSurgeInstanceRatio;
+    }
+
+    /**
+     * @return maxSurgeInstances
+     */
+    public Integer getMaxSurgeInstances() {
+        return this.maxSurgeInstances;
     }
 
     /**
@@ -927,6 +1023,8 @@ public class DeployApplicationRequest extends Request {
     public static final class Builder extends Request.Builder<DeployApplicationRequest, Builder> {
         private String acrAssumeRoleArn; 
         private String acrInstanceId; 
+        private String agentVersion; 
+        private String albIngressReadinessGate; 
         private String appId; 
         private Boolean associateEip; 
         private Boolean autoEnableApplicationScalingRule; 
@@ -941,13 +1039,17 @@ public class DeployApplicationRequest extends Request {
         private String deploy; 
         private String dotnet; 
         private String edasContainerVersion; 
+        private String emptyDirDesc; 
         private String enableAhas; 
         private Boolean enableCpuBurst; 
         private Boolean enableGreyTagRoute; 
+        private Boolean enableNamespaceAgentVersion; 
         private Boolean enableNewArms; 
+        private Boolean enablePrometheus; 
         private Boolean enableSidecarResourceIsolated; 
         private String envs; 
         private String gpuConfig; 
+        private String html; 
         private String imagePullSecrets; 
         private String imageUrl; 
         private java.util.List<InitContainerConfig> initContainersConfig; 
@@ -956,6 +1058,8 @@ public class DeployApplicationRequest extends Request {
         private String jdk; 
         private String kafkaConfigs; 
         private String liveness; 
+        private Integer maxSurgeInstanceRatio; 
+        private Integer maxSurgeInstances; 
         private Integer memory; 
         private String microRegistration; 
         private String microRegistrationConfig; 
@@ -1008,6 +1112,8 @@ public class DeployApplicationRequest extends Request {
             super(request);
             this.acrAssumeRoleArn = request.acrAssumeRoleArn;
             this.acrInstanceId = request.acrInstanceId;
+            this.agentVersion = request.agentVersion;
+            this.albIngressReadinessGate = request.albIngressReadinessGate;
             this.appId = request.appId;
             this.associateEip = request.associateEip;
             this.autoEnableApplicationScalingRule = request.autoEnableApplicationScalingRule;
@@ -1022,13 +1128,17 @@ public class DeployApplicationRequest extends Request {
             this.deploy = request.deploy;
             this.dotnet = request.dotnet;
             this.edasContainerVersion = request.edasContainerVersion;
+            this.emptyDirDesc = request.emptyDirDesc;
             this.enableAhas = request.enableAhas;
             this.enableCpuBurst = request.enableCpuBurst;
             this.enableGreyTagRoute = request.enableGreyTagRoute;
+            this.enableNamespaceAgentVersion = request.enableNamespaceAgentVersion;
             this.enableNewArms = request.enableNewArms;
+            this.enablePrometheus = request.enablePrometheus;
             this.enableSidecarResourceIsolated = request.enableSidecarResourceIsolated;
             this.envs = request.envs;
             this.gpuConfig = request.gpuConfig;
+            this.html = request.html;
             this.imagePullSecrets = request.imagePullSecrets;
             this.imageUrl = request.imageUrl;
             this.initContainersConfig = request.initContainersConfig;
@@ -1037,6 +1147,8 @@ public class DeployApplicationRequest extends Request {
             this.jdk = request.jdk;
             this.kafkaConfigs = request.kafkaConfigs;
             this.liveness = request.liveness;
+            this.maxSurgeInstanceRatio = request.maxSurgeInstanceRatio;
+            this.maxSurgeInstances = request.maxSurgeInstances;
             this.memory = request.memory;
             this.microRegistration = request.microRegistration;
             this.microRegistrationConfig = request.microRegistrationConfig;
@@ -1103,6 +1215,24 @@ public class DeployApplicationRequest extends Request {
         public Builder acrInstanceId(String acrInstanceId) {
             this.putBodyParameter("AcrInstanceId", acrInstanceId);
             this.acrInstanceId = acrInstanceId;
+            return this;
+        }
+
+        /**
+         * AgentVersion.
+         */
+        public Builder agentVersion(String agentVersion) {
+            this.putQueryParameter("AgentVersion", agentVersion);
+            this.agentVersion = agentVersion;
+            return this;
+        }
+
+        /**
+         * AlbIngressReadinessGate.
+         */
+        public Builder albIngressReadinessGate(String albIngressReadinessGate) {
+            this.putQueryParameter("AlbIngressReadinessGate", albIngressReadinessGate);
+            this.albIngressReadinessGate = albIngressReadinessGate;
             return this;
         }
 
@@ -1231,7 +1361,20 @@ public class DeployApplicationRequest extends Request {
         }
 
         /**
-         * Cpu.
+         * <p>The CPU specifications that are required for each instance. Unit: millicores. This parameter cannot be set to 0. Valid values:</p>
+         * <ul>
+         * <li><strong>500</strong></li>
+         * <li><strong>1000</strong></li>
+         * <li><strong>2000</strong></li>
+         * <li><strong>4000</strong></li>
+         * <li><strong>8000</strong></li>
+         * <li><strong>12000</strong></li>
+         * <li><strong>16000</strong></li>
+         * <li><strong>32000</strong></li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>1000</p>
          */
         public Builder cpu(Integer cpu) {
             this.putQueryParameter("Cpu", cpu);
@@ -1256,7 +1399,16 @@ public class DeployApplicationRequest extends Request {
         }
 
         /**
-         * CustomImageNetworkType.
+         * <p>Custom image type. To it to empty string to use pre-built image.</p>
+         * <ul>
+         * <li><p>internet: Public network image</p>
+         * </li>
+         * <li><p>intranet: Private network image</p>
+         * </li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>internet</p>
          */
         public Builder customImageNetworkType(String customImageNetworkType) {
             this.putQueryParameter("CustomImageNetworkType", customImageNetworkType);
@@ -1281,7 +1433,17 @@ public class DeployApplicationRequest extends Request {
         }
 
         /**
-         * Dotnet.
+         * <p>The version of .NET</p>
+         * <ul>
+         * <li>.NET 3.1</li>
+         * <li>.NET 5.0</li>
+         * <li>.NET 6.0</li>
+         * <li>.NET 7.0</li>
+         * <li>.NET 8.0</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>.NET 3.1</p>
          */
         public Builder dotnet(String dotnet) {
             this.putQueryParameter("Dotnet", dotnet);
@@ -1302,6 +1464,15 @@ public class DeployApplicationRequest extends Request {
         }
 
         /**
+         * EmptyDirDesc.
+         */
+        public Builder emptyDirDesc(String emptyDirDesc) {
+            this.putBodyParameter("EmptyDirDesc", emptyDirDesc);
+            this.emptyDirDesc = emptyDirDesc;
+            return this;
+        }
+
+        /**
          * <p>Indicates whether access to Application High Availability Service (AHAS) is enabled. Take note of the following rules:</p>
          * <ul>
          * <li><strong>true</strong>: Access to AHAS is enabled.</li>
@@ -1318,7 +1489,12 @@ public class DeployApplicationRequest extends Request {
         }
 
         /**
-         * EnableCpuBurst.
+         * <p>Enable CPU Burst.</p>
+         * <p>true: enable</p>
+         * <p>false: disable</p>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder enableCpuBurst(Boolean enableCpuBurst) {
             this.putQueryParameter("EnableCpuBurst", enableCpuBurst);
@@ -1343,7 +1519,25 @@ public class DeployApplicationRequest extends Request {
         }
 
         /**
-         * EnableNewArms.
+         * EnableNamespaceAgentVersion.
+         */
+        public Builder enableNamespaceAgentVersion(Boolean enableNamespaceAgentVersion) {
+            this.putQueryParameter("EnableNamespaceAgentVersion", enableNamespaceAgentVersion);
+            this.enableNamespaceAgentVersion = enableNamespaceAgentVersion;
+            return this;
+        }
+
+        /**
+         * <p>Enable new ARMS features.</p>
+         * <ul>
+         * <li><p>true: enable</p>
+         * </li>
+         * <li><p>false: disable</p>
+         * </li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder enableNewArms(Boolean enableNewArms) {
             this.putQueryParameter("EnableNewArms", enableNewArms);
@@ -1352,7 +1546,21 @@ public class DeployApplicationRequest extends Request {
         }
 
         /**
-         * EnableSidecarResourceIsolated.
+         * EnablePrometheus.
+         */
+        public Builder enablePrometheus(Boolean enablePrometheus) {
+            this.putQueryParameter("EnablePrometheus", enablePrometheus);
+            this.enablePrometheus = enablePrometheus;
+            return this;
+        }
+
+        /**
+         * <p>Enable Sidecar resource isolation.</p>
+         * <p>true: enable</p>
+         * <p>false: disable</p>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder enableSidecarResourceIsolated(Boolean enableSidecarResourceIsolated) {
             this.putBodyParameter("EnableSidecarResourceIsolated", enableSidecarResourceIsolated);
@@ -1377,6 +1585,14 @@ public class DeployApplicationRequest extends Request {
          * <li><strong>key</strong>: the key. If you want to reference all keys, do not configure this parameter.</li>
          * </ul>
          * </li>
+         * <li><p>Reference secret dictionary</p>
+         * <ul>
+         * <li><strong>name</strong>: the name of the environment variable. You can reference one or all keys. If you want to reference all keys, specify <code>sae-sys-secret-all-&lt;Secret dictionary name&gt;</code>. Example: <code>sae-sys-secret-all-test1</code>.</li>
+         * <li><strong>valueFrom</strong>: the reference of the environment variable. Set the value to <code>secretRef</code>.</li>
+         * <li><strong>secretId</strong>: the secret dictionary ID.</li>
+         * <li><strong>key</strong>: the key. If you want to reference all keys, do not configure this parameter.</li>
+         * </ul>
+         * </li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -1394,6 +1610,15 @@ public class DeployApplicationRequest extends Request {
         public Builder gpuConfig(String gpuConfig) {
             this.putQueryParameter("GpuConfig", gpuConfig);
             this.gpuConfig = gpuConfig;
+            return this;
+        }
+
+        /**
+         * Html.
+         */
+        public Builder html(String html) {
+            this.putQueryParameter("Html", html);
+            this.html = html;
             return this;
         }
 
@@ -1422,7 +1647,7 @@ public class DeployApplicationRequest extends Request {
         }
 
         /**
-         * InitContainersConfig.
+         * <p>Initialize container configuration.</p>
          */
         public Builder initContainersConfig(java.util.List<InitContainerConfig> initContainersConfig) {
             String initContainersConfigShrink = shrink(initContainersConfig, "InitContainersConfig", "json");
@@ -1526,7 +1751,40 @@ public class DeployApplicationRequest extends Request {
         }
 
         /**
-         * Memory.
+         * MaxSurgeInstanceRatio.
+         */
+        public Builder maxSurgeInstanceRatio(Integer maxSurgeInstanceRatio) {
+            this.putQueryParameter("MaxSurgeInstanceRatio", maxSurgeInstanceRatio);
+            this.maxSurgeInstanceRatio = maxSurgeInstanceRatio;
+            return this;
+        }
+
+        /**
+         * MaxSurgeInstances.
+         */
+        public Builder maxSurgeInstances(Integer maxSurgeInstances) {
+            this.putQueryParameter("MaxSurgeInstances", maxSurgeInstances);
+            this.maxSurgeInstances = maxSurgeInstances;
+            return this;
+        }
+
+        /**
+         * <p>The memory size that is required by each instance. Unit: MB. This parameter cannot be set to 0. The values of this parameter correspond to the values of the Cpu parameter:</p>
+         * <ul>
+         * <li>This parameter is set to <strong>1024</strong> if the Cpu parameter is set to 500 or 1000.</li>
+         * <li>This parameter is set to <strong>2048</strong> if the Cpu parameter is set to 500, 1000, or 2000.</li>
+         * <li>This parameter is set to <strong>4096</strong> if the Cpu parameter is set to 1000, 2000, or 4000.</li>
+         * <li>This parameter is set to <strong>8192</strong> if the Cpu parameter is set to 2000, 4000, or 8,000.</li>
+         * <li>This parameter is set to <strong>12288</strong> if the Cpu parameter is set to 12000.</li>
+         * <li>This parameter is set to <strong>16384</strong> if the Cpu parameter is set to 4000, 8000, or 16000.</li>
+         * <li>This parameter is set to <strong>24576</strong> if the Cpu parameter is set to 12000.</li>
+         * <li>This parameter is set to <strong>32768</strong> if the Cpu parameter is set to 16000.</li>
+         * <li>This parameter is set to <strong>65536</strong> if the Cpu parameter is set to 8000, 16000, or 32000.</li>
+         * <li>This parameter is set to <strong>131072</strong> if the Cpu parameter is set to 32000.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>1024</p>
          */
         public Builder memory(Integer memory) {
             this.putQueryParameter("Memory", memory);
@@ -1552,7 +1810,18 @@ public class DeployApplicationRequest extends Request {
         }
 
         /**
-         * MicroRegistrationConfig.
+         * <p>Select the edition of Nacos.</p>
+         * <ul>
+         * <li><p>0: SAE built-in Nacos. Unable to get the configuration of SAE built-in Nacos.</p>
+         * </li>
+         * <li><p>1: Self-built Nacos from users.</p>
+         * </li>
+         * <li><p>2: MSE enterprise Nacos.</p>
+         * </li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>{&quot;instanceId&quot;:&quot;mse-cn-zvp2bh6h70r&quot;,&quot;namespace&quot;:&quot;4c0aa74f-57cb-423c-b6af-5d9f2d0e3dbd&quot;}</p>
          */
         public Builder microRegistrationConfig(String microRegistrationConfig) {
             this.putBodyParameter("MicroRegistrationConfig", microRegistrationConfig);
@@ -1561,7 +1830,32 @@ public class DeployApplicationRequest extends Request {
         }
 
         /**
-         * MicroserviceEngineConfig.
+         * <p>Configure Microservices Governance</p>
+         * <p>Whether to enable microservices governance (enable):</p>
+         * <ul>
+         * <li>true: Enable</li>
+         * <li>false: Disable</li>
+         * </ul>
+         * <p>Configure lossless online/offline deployment (mseLosslessRule):</p>
+         * <p>delayTime: Delay duration (unit: seconds)</p>
+         * <p>enable: Whether to enable lossless deployment</p>
+         * <ul>
+         * <li><p>true: Enable</p>
+         * </li>
+         * <li><p>false: Disable</p>
+         * </li>
+         * </ul>
+         * <p>notice: Whether to enable notifications</p>
+         * <ul>
+         * <li><p>true: Enable</p>
+         * </li>
+         * <li><p>false: Disable</p>
+         * </li>
+         * </ul>
+         * <p>warmupTime: Small-traffic warm-up duration (unit: seconds)</p>
+         * 
+         * <strong>example:</strong>
+         * <p>{&quot;enable&quot;: true,&quot;mseLosslessRule&quot;: {&quot;delayTime&quot;: 0,&quot;enable&quot;: false,&quot;notice&quot;: false,&quot;warmupTime&quot;: 120}}</p>
          */
         public Builder microserviceEngineConfig(String microserviceEngineConfig) {
             this.putQueryParameter("MicroserviceEngineConfig", microserviceEngineConfig);
@@ -1663,7 +1957,18 @@ public class DeployApplicationRequest extends Request {
         }
 
         /**
-         * NewSaeVersion.
+         * <p>SAE edition.</p>
+         * <ul>
+         * <li><p>lite: the lightweight edition.</p>
+         * </li>
+         * <li><p>std: the standard edition.</p>
+         * </li>
+         * <li><p>pro: the professional edition.</p>
+         * </li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>pro</p>
          */
         public Builder newSaeVersion(String newSaeVersion) {
             this.putQueryParameter("NewSaeVersion", newSaeVersion);
@@ -1737,7 +2042,30 @@ public class DeployApplicationRequest extends Request {
         }
 
         /**
-         * PackageType.
+         * <p>The package type.</p>
+         * <p>When using Java, FatJar, War and Image are supported.
+         * When using Python, PythonZip and Image are supported.
+         * When using PHP, the followings are supported:</p>
+         * <ul>
+         * <li>PhpZip</li>
+         * <li>IMAGE_PHP_5_4</li>
+         * <li>IMAGE_PHP_5_4_ALPINE</li>
+         * <li>IMAGE_PHP_5_5</li>
+         * <li>IMAGE_PHP_5_5_ALPINE</li>
+         * <li>IMAGE_PHP_5_6</li>
+         * <li>IMAGE_PHP_5_6_ALPINE</li>
+         * <li>IMAGE_PHP_7_0</li>
+         * <li>IMAGE_PHP_7_0_ALPINE</li>
+         * <li>IMAGE_PHP_7_1</li>
+         * <li>IMAGE_PHP_7_1_ALPINE</li>
+         * <li>IMAGE_PHP_7_2</li>
+         * <li>IMAGE_PHP_7_2_ALPINE</li>
+         * <li>IMAGE_PHP_7_3</li>
+         * <li>IMAGE_PHP_7_3_ALPINE</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>FatJar</p>
          */
         public Builder packageType(String packageType) {
             this.putQueryParameter("PackageType", packageType);
@@ -1770,7 +2098,10 @@ public class DeployApplicationRequest extends Request {
         }
 
         /**
-         * Php.
+         * <p>The dependent PHP version of PHP package. Image is not supported.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>PHP-FPM 7.0</p>
          */
         public Builder php(String php) {
             this.putBodyParameter("Php", php);
@@ -1896,7 +2227,10 @@ public class DeployApplicationRequest extends Request {
         }
 
         /**
-         * Replicas.
+         * <p>The number of instances.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder replicas(Integer replicas) {
             this.putQueryParameter("Replicas", replicas);
@@ -1905,7 +2239,19 @@ public class DeployApplicationRequest extends Request {
         }
 
         /**
-         * SecretMountDesc.
+         * <p>Secret Mount Description
+         * Use the secret dictionaries created in the Namespace Secret Dictionary page to inject information into containers. Parameter descriptions are as follows:</p>
+         * <ul>
+         * <li><p>secretId: Secret instance ID. Obtain via the ListSecrets interface.</p>
+         * </li>
+         * <li><p>key: Key-value pair. Note: Set the parameter sae-sys-secret-all to mount all keys.</p>
+         * </li>
+         * <li><p>mountPath: Mount path.</p>
+         * </li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>[{“secretId&quot;:10,”key&quot;:&quot;test&quot;,&quot;mountPath&quot;:&quot;/tmp&quot;}]</p>
          */
         public Builder secretMountDesc(String secretMountDesc) {
             this.putQueryParameter("SecretMountDesc", secretMountDesc);
@@ -1914,7 +2260,10 @@ public class DeployApplicationRequest extends Request {
         }
 
         /**
-         * SecurityGroupId.
+         * <p>Security group ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>sg-wz969ngg2e49q5i4****</p>
          */
         public Builder securityGroupId(String securityGroupId) {
             this.putQueryParameter("SecurityGroupId", securityGroupId);
@@ -1923,7 +2272,10 @@ public class DeployApplicationRequest extends Request {
         }
 
         /**
-         * ServiceTags.
+         * <p>The gray-release tag of the application.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>{&quot;alicloud.service.tag&quot;:&quot;g1&quot;}</p>
          */
         public Builder serviceTags(String serviceTags) {
             this.putBodyParameter("ServiceTags", serviceTags);
@@ -1970,7 +2322,13 @@ public class DeployApplicationRequest extends Request {
         }
 
         /**
-         * StartupProbe.
+         * <p>Check Failure: Indicates that the application failed to start. The system will report the exception and automatically restart it.</p>
+         * <p>Note: </p>
+         * <p>Supports exec, httpGet, and tcpSocket methods. For specific examples, see Liveness Parameters.
+         * Only one method can be selected for health checks.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>{&quot;exec&quot;:{&quot;command&quot;:[&quot;sh&quot;,&quot;-c&quot;,&quot;cat /home/admin/start.sh&quot;]},&quot;initialDelaySeconds&quot;:30,&quot;periodSeconds&quot;:30,&quot;timeoutSeconds&quot;:2}</p>
          */
         public Builder startupProbe(String startupProbe) {
             this.putQueryParameter("StartupProbe", startupProbe);
@@ -1979,7 +2337,29 @@ public class DeployApplicationRequest extends Request {
         }
 
         /**
-         * SwimlanePvtzDiscoverySvc.
+         * <p>Configure K8s Service-based Service Registration/Discovery and Full-Chain Grayscale Capabilities</p>
+         * <ul>
+         * <li><p>enable: Whether to enable full-link grayscale based on K8s Service (set to &quot;true&quot; to enable; set to &quot;false&quot; to disable).</p>
+         * </li>
+         * <li><p>namespaceId: Namespace ID</p>
+         * </li>
+         * <li><p>portAndProtocol: Listener port and protocol. Format: {&quot;Port:Protocol Type&quot;:&quot;Container Port&quot;}</p>
+         * </li>
+         * <li><p>portProtocols: Define service ports and protocols
+         * port: Port
+         * protocol: Protocol
+         * targetPort: Container port</p>
+         * </li>
+         * <li><p>pvtzDiscoveryName: Service discovery name</p>
+         * </li>
+         * <li><p>serviceId: Service ID</p>
+         * </li>
+         * <li><p>serviceName: Service name</p>
+         * </li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>{&quot;enable&quot;:&quot;false&quot;,&quot;namespaceId&quot;:&quot;cn-beijing:test&quot;,&quot;portAndProtocol&quot;:{&quot;2000:TCP&quot;:&quot;18081&quot;},&quot;portProtocols&quot;:[{&quot;port&quot;:2000,&quot;protocol&quot;:&quot;TCP&quot;,&quot;targetPort&quot;:18081}],&quot;pvtzDiscoveryName&quot;:&quot;cn-beijing-1421801774382676&quot;,&quot;serviceId&quot;:&quot;3513&quot;,&quot;serviceName&quot;:&quot;demo-gray.test&quot;}</p>
          */
         public Builder swimlanePvtzDiscoverySvc(String swimlanePvtzDiscoverySvc) {
             this.putBodyParameter("SwimlanePvtzDiscoverySvc", swimlanePvtzDiscoverySvc);
@@ -2062,7 +2442,10 @@ public class DeployApplicationRequest extends Request {
         }
 
         /**
-         * VSwitchId.
+         * <p>The ID of the vSwitch, where the EIP of the application instances resides. The vSwitch must reside in the VPC above.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>vsw-bp12mw1f8k3jgygk9****</p>
          */
         public Builder vSwitchId(String vSwitchId) {
             this.putQueryParameter("VSwitchId", vSwitchId);

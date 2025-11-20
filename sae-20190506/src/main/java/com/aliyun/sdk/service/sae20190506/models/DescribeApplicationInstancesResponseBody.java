@@ -149,7 +149,7 @@ public class DescribeApplicationInstancesResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The details of the application instances.</p>
+         * <p>The details of the application instance.</p>
          */
         public Builder data(Data data) {
             this.data = data;
@@ -288,7 +288,10 @@ public class DescribeApplicationInstancesResponseBody extends TeaModel {
             } 
 
             /**
-             * ContainerId.
+             * <p>The ID of the sidecar container.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>sidecar-test-01</p>
              */
             public Builder containerId(String containerId) {
                 this.containerId = containerId;
@@ -296,7 +299,10 @@ public class DescribeApplicationInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * ContainerStatus.
+             * <p>The status of the container.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Running</p>
              */
             public Builder containerStatus(String containerStatus) {
                 this.containerStatus = containerStatus;
@@ -304,7 +310,10 @@ public class DescribeApplicationInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * ImageUrl.
+             * <p>The URL of the image.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>registry.cn-beijing.aliyuncs.com/sae-dev-test/******</p>
              */
             public Builder imageUrl(String imageUrl) {
                 this.imageUrl = imageUrl;
@@ -710,7 +719,10 @@ public class DescribeApplicationInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * MainContainerStatus.
+             * <p>The status of the main container.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Running</p>
              */
             public Builder mainContainerStatus(String mainContainerStatus) {
                 this.mainContainerStatus = mainContainerStatus;
@@ -729,7 +741,7 @@ public class DescribeApplicationInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * SidecarContainersStatus.
+             * <p>The status of the sidecar container.</p>
              */
             public Builder sidecarContainersStatus(java.util.List<SidecarContainersStatus> sidecarContainersStatus) {
                 this.sidecarContainersStatus = sidecarContainersStatus;
@@ -745,7 +757,10 @@ public class DescribeApplicationInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * UnhealthyMessage.
+             * <p>If the health check of an application instance fails, the detailed failure cause or error message is returned. If the health check of an application instance passes, no response is returned.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Null</p>
              */
             public Builder unhealthyMessage(String unhealthyMessage) {
                 this.unhealthyMessage = unhealthyMessage;
@@ -860,7 +875,7 @@ public class DescribeApplicationInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The list of application instances.</p>
+             * <p>The application instances.</p>
              */
             public Builder instances(java.util.List<Instances> instances) {
                 this.instances = instances;

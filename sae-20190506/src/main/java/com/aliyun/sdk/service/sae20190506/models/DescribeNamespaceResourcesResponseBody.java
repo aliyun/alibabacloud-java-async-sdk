@@ -233,6 +233,9 @@ public class DescribeNamespaceResourcesResponseBody extends TeaModel {
      * <p>DescribeNamespaceResourcesResponseBody</p>
      */
     public static class Data extends TeaModel {
+        @com.aliyun.core.annotation.NameInMap("ApmJavaAgentVersion")
+        private String apmJavaAgentVersion;
+
         @com.aliyun.core.annotation.NameInMap("AppCount")
         private Long appCount;
 
@@ -272,6 +275,9 @@ public class DescribeNamespaceResourcesResponseBody extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("SecurityGroupId")
         private String securityGroupId;
 
+        @com.aliyun.core.annotation.NameInMap("SlsConfigs")
+        private String slsConfigs;
+
         @com.aliyun.core.annotation.NameInMap("TenantId")
         private String tenantId;
 
@@ -291,6 +297,7 @@ public class DescribeNamespaceResourcesResponseBody extends TeaModel {
         private String vpcName;
 
         private Data(Builder builder) {
+            this.apmJavaAgentVersion = builder.apmJavaAgentVersion;
             this.appCount = builder.appCount;
             this.belongRegion = builder.belongRegion;
             this.description = builder.description;
@@ -304,6 +311,7 @@ public class DescribeNamespaceResourcesResponseBody extends TeaModel {
             this.namespaceName = builder.namespaceName;
             this.notificationExpired = builder.notificationExpired;
             this.securityGroupId = builder.securityGroupId;
+            this.slsConfigs = builder.slsConfigs;
             this.tenantId = builder.tenantId;
             this.userId = builder.userId;
             this.vSwitchId = builder.vSwitchId;
@@ -318,6 +326,13 @@ public class DescribeNamespaceResourcesResponseBody extends TeaModel {
 
         public static Data create() {
             return builder().build();
+        }
+
+        /**
+         * @return apmJavaAgentVersion
+         */
+        public String getApmJavaAgentVersion() {
+            return this.apmJavaAgentVersion;
         }
 
         /**
@@ -412,6 +427,13 @@ public class DescribeNamespaceResourcesResponseBody extends TeaModel {
         }
 
         /**
+         * @return slsConfigs
+         */
+        public String getSlsConfigs() {
+            return this.slsConfigs;
+        }
+
+        /**
          * @return tenantId
          */
         public String getTenantId() {
@@ -454,6 +476,7 @@ public class DescribeNamespaceResourcesResponseBody extends TeaModel {
         }
 
         public static final class Builder {
+            private String apmJavaAgentVersion; 
             private Long appCount; 
             private String belongRegion; 
             private String description; 
@@ -467,6 +490,7 @@ public class DescribeNamespaceResourcesResponseBody extends TeaModel {
             private String namespaceName; 
             private Boolean notificationExpired; 
             private String securityGroupId; 
+            private String slsConfigs; 
             private String tenantId; 
             private String userId; 
             private String vSwitchId; 
@@ -478,6 +502,7 @@ public class DescribeNamespaceResourcesResponseBody extends TeaModel {
             } 
 
             private Builder(Data model) {
+                this.apmJavaAgentVersion = model.apmJavaAgentVersion;
                 this.appCount = model.appCount;
                 this.belongRegion = model.belongRegion;
                 this.description = model.description;
@@ -491,6 +516,7 @@ public class DescribeNamespaceResourcesResponseBody extends TeaModel {
                 this.namespaceName = model.namespaceName;
                 this.notificationExpired = model.notificationExpired;
                 this.securityGroupId = model.securityGroupId;
+                this.slsConfigs = model.slsConfigs;
                 this.tenantId = model.tenantId;
                 this.userId = model.userId;
                 this.vSwitchId = model.vSwitchId;
@@ -498,6 +524,14 @@ public class DescribeNamespaceResourcesResponseBody extends TeaModel {
                 this.vpcId = model.vpcId;
                 this.vpcName = model.vpcName;
             } 
+
+            /**
+             * ApmJavaAgentVersion.
+             */
+            public Builder apmJavaAgentVersion(String apmJavaAgentVersion) {
+                this.apmJavaAgentVersion = apmJavaAgentVersion;
+                return this;
+            }
 
             /**
              * <p>The number of applications.</p>
@@ -656,6 +690,14 @@ public class DescribeNamespaceResourcesResponseBody extends TeaModel {
              */
             public Builder securityGroupId(String securityGroupId) {
                 this.securityGroupId = securityGroupId;
+                return this;
+            }
+
+            /**
+             * SlsConfigs.
+             */
+            public Builder slsConfigs(String slsConfigs) {
+                this.slsConfigs = slsConfigs;
                 return this;
             }
 

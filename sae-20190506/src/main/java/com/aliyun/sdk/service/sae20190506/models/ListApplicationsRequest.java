@@ -38,6 +38,10 @@ public class ListApplicationsRequest extends Request {
     private String fieldValue;
 
     @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("IsStateful")
+    private String isStateful;
+
+    @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("NamespaceId")
     private String namespaceId;
 
@@ -64,6 +68,7 @@ public class ListApplicationsRequest extends Request {
         this.currentPage = builder.currentPage;
         this.fieldType = builder.fieldType;
         this.fieldValue = builder.fieldValue;
+        this.isStateful = builder.isStateful;
         this.namespaceId = builder.namespaceId;
         this.orderBy = builder.orderBy;
         this.pageSize = builder.pageSize;
@@ -120,6 +125,13 @@ public class ListApplicationsRequest extends Request {
     }
 
     /**
+     * @return isStateful
+     */
+    public String getIsStateful() {
+        return this.isStateful;
+    }
+
+    /**
      * @return namespaceId
      */
     public String getNamespaceId() {
@@ -160,6 +172,7 @@ public class ListApplicationsRequest extends Request {
         private Integer currentPage; 
         private String fieldType; 
         private String fieldValue; 
+        private String isStateful; 
         private String namespaceId; 
         private String orderBy; 
         private Integer pageSize; 
@@ -177,6 +190,7 @@ public class ListApplicationsRequest extends Request {
             this.currentPage = request.currentPage;
             this.fieldType = request.fieldType;
             this.fieldValue = request.fieldValue;
+            this.isStateful = request.isStateful;
             this.namespaceId = request.namespaceId;
             this.orderBy = request.orderBy;
             this.pageSize = request.pageSize;
@@ -185,13 +199,7 @@ public class ListApplicationsRequest extends Request {
         } 
 
         /**
-         * <p>The HTTP status code. Valid values:</p>
-         * <ul>
-         * <li><strong>2xx</strong>: indicates that the request was successful.</li>
-         * <li><strong>3xx</strong>: indicates that the request was redirected.</li>
-         * <li><strong>4xx</strong>: indicates that the request was invalid.</li>
-         * <li><strong>5xx</strong>: indicates that a server error occurred.</li>
-         * </ul>
+         * <p>The application name.</p>
          * 
          * <strong>example:</strong>
          * <p>demo-app</p>
@@ -220,7 +228,7 @@ public class ListApplicationsRequest extends Request {
         }
 
         /**
-         * <p>The number of the returned page.</p>
+         * <p>The current page number.</p>
          * 
          * <strong>example:</strong>
          * <p>1</p>
@@ -232,7 +240,13 @@ public class ListApplicationsRequest extends Request {
         }
 
         /**
-         * <p>true</p>
+         * <p>Set the filtering criteria for applications. The value options are as follows:</p>
+         * <ul>
+         * <li>appName: Application name.</li>
+         * <li>appIds: Application IDs.</li>
+         * <li>slbIps: SLB IP addresses.</li>
+         * <li>instanceIps: Instance IP addresses.</li>
+         * </ul>
          * 
          * <strong>example:</strong>
          * <p>appName</p>
@@ -244,7 +258,7 @@ public class ListApplicationsRequest extends Request {
         }
 
         /**
-         * <p>The ID of the region.</p>
+         * <p>The name, ID, SLB IP, or instance IP of the target application.</p>
          * 
          * <strong>example:</strong>
          * <p>demo-app</p>
@@ -256,7 +270,16 @@ public class ListApplicationsRequest extends Request {
         }
 
         /**
-         * <p>1</p>
+         * IsStateful.
+         */
+        public Builder isStateful(String isStateful) {
+            this.putQueryParameter("IsStateful", isStateful);
+            this.isStateful = isStateful;
+            return this;
+        }
+
+        /**
+         * <p>The namespace ID.</p>
          * 
          * <strong>example:</strong>
          * <p>cn-beijing:demo</p>
@@ -268,7 +291,11 @@ public class ListApplicationsRequest extends Request {
         }
 
         /**
-         * <p>runnings</p>
+         * <p>Specifies how applications are sorted. Valid values:</p>
+         * <ul>
+         * <li><strong>running</strong>: The applications are sorted based on the number of running instances.</li>
+         * <li><strong>instances</strong>: The applications are sorted based on the number of destination instances.</li>
+         * </ul>
          * 
          * <strong>example:</strong>
          * <p>running</p>
@@ -280,11 +307,7 @@ public class ListApplicationsRequest extends Request {
         }
 
         /**
-         * <p>Indicates whether the application is being deleted. Valid values:</p>
-         * <ul>
-         * <li><strong>true</strong>: The application is being deleted.</li>
-         * <li><strong>false</strong>: The application is not being deleted.</li>
-         * </ul>
+         * <p>The number of records in each page. Value range: [0,10000]</p>
          * 
          * <strong>example:</strong>
          * <p>20</p>
@@ -296,7 +319,11 @@ public class ListApplicationsRequest extends Request {
         }
 
         /**
-         * <p>The returned message.</p>
+         * <p>Sort by the running status of application instances. If the statuses are the same, sort by instance ID. The value options are as follows:</p>
+         * <ul>
+         * <li>true: Sort in ascending order. Instances are arranged according to the startup process, for example: to ultimately reach the running state, an instance must first go through steps such as starting containers, pulling images, and initializing the instance.</li>
+         * <li>false: Sort in descending order.</li>
+         * </ul>
          * 
          * <strong>example:</strong>
          * <p>true</p>
@@ -308,7 +335,13 @@ public class ListApplicationsRequest extends Request {
         }
 
         /**
-         * <p>The list of applications.</p>
+         * <p>The tag in the format of a key-value pair.</p>
+         * <ul>
+         * <li><strong>key</strong>: the tag key. It cannot exceed 128 characters in length.</li>
+         * <li><strong>value</strong>: the tag value. It cannot exceed 128 characters in length.</li>
+         * </ul>
+         * <p>Tag keys and tag values are case-sensitive. If you specify multiple tags, the system adds all the tags to the specified resources. Each tag key on a resource can have only one tag value. If you create a tag that has the same key as an existing tag, the value of the existing tag is overwritten.</p>
+         * <p>Tag keys and tag values cannot start with <code>aliyun</code> or <code>acs:</code>, and cannot contain <code>http://</code> or <code>https://</code>.</p>
          * 
          * <strong>example:</strong>
          * <p>[{&quot;key&quot;:&quot;key&quot;,&quot;value&quot;:&quot;value&quot;}]</p>

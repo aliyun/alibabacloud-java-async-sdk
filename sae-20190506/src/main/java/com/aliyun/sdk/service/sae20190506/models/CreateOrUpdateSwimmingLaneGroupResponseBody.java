@@ -132,7 +132,16 @@ public class CreateOrUpdateSwimmingLaneGroupResponseBody extends TeaModel {
         } 
 
         /**
-         * Code.
+         * <p>The HTTP status code or the error code. Valid values:</p>
+         * <ul>
+         * <li><strong>2xx</strong>: The request was successful.</li>
+         * <li><strong>3xx</strong>: Redirection.</li>
+         * <li><strong>4xx</strong>: The request failed.</li>
+         * <li><strong>5xx</strong>: Server error.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>200</p>
          */
         public Builder code(String code) {
             this.code = code;
@@ -140,7 +149,7 @@ public class CreateOrUpdateSwimmingLaneGroupResponseBody extends TeaModel {
         }
 
         /**
-         * Data.
+         * <p>The application information.</p>
          */
         public Builder data(Data data) {
             this.data = data;
@@ -148,7 +157,11 @@ public class CreateOrUpdateSwimmingLaneGroupResponseBody extends TeaModel {
         }
 
         /**
-         * ErrorCode.
+         * <p>The status code. Value values:</p>
+         * <ul>
+         * <li>If the request was successful, <strong>ErrorCode</strong> is not returned.</li>
+         * <li>If the request failed, <strong>ErrorCode</strong> is returned. For more information, see <strong>Error codes</strong> in this topic.</li>
+         * </ul>
          */
         public Builder errorCode(String errorCode) {
             this.errorCode = errorCode;
@@ -156,7 +169,14 @@ public class CreateOrUpdateSwimmingLaneGroupResponseBody extends TeaModel {
         }
 
         /**
-         * Message.
+         * <p>Additional information. Valid values:</p>
+         * <ul>
+         * <li>The error message returned because the request is normal and <strong>success</strong> is returned.</li>
+         * <li>If the request is abnormal, the specific exception error code is returned.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>success</p>
          */
         public Builder message(String message) {
             this.message = message;
@@ -164,7 +184,10 @@ public class CreateOrUpdateSwimmingLaneGroupResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>91F93257-7A4A-4BD3-9A7E-2F6EAE6D****</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -172,7 +195,14 @@ public class CreateOrUpdateSwimmingLaneGroupResponseBody extends TeaModel {
         }
 
         /**
-         * Success.
+         * <p>Whether the lane group is created. Valid values:</p>
+         * <ul>
+         * <li><strong>true</strong>: Created successfully.</li>
+         * <li><strong>false</strong>: The ConfigMap failed to be created.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder success(Boolean success) {
             this.success = success;
@@ -180,7 +210,10 @@ public class CreateOrUpdateSwimmingLaneGroupResponseBody extends TeaModel {
         }
 
         /**
-         * TraceId.
+         * <p>The ID of the trace. This parameter is used to query the exact call information.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>0a98a02315955564772843261e****</p>
          */
         public Builder traceId(String traceId) {
             this.traceId = traceId;
@@ -233,7 +266,10 @@ public class CreateOrUpdateSwimmingLaneGroupResponseBody extends TeaModel {
             } 
 
             /**
-             * GroupId.
+             * <p>The ID of the lane group.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2074</p>
              */
             public Builder groupId(Long groupId) {
                 this.groupId = groupId;

@@ -32,6 +32,12 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<AbortChangeOrderResponse> abortChangeOrder(AbortChangeOrderRequest request);
 
     /**
+     * @param request the request parameters of BatchRestartApplications  BatchRestartApplicationsRequest
+     * @return BatchRestartApplicationsResponse
+     */
+    CompletableFuture<BatchRestartApplicationsResponse> batchRestartApplications(BatchRestartApplicationsRequest request);
+
+    /**
      * @param request the request parameters of BatchStartApplications  BatchStartApplicationsRequest
      * @return BatchStartApplicationsResponse
      */
@@ -69,12 +75,13 @@ public interface AsyncClient extends SdkAutoCloseable {
 
     /**
      * <b>description</b> :
-     * <p>The HTTP status code. Take note of the following rules:</p>
+     * <h2><a href="#"></a>Precautions</h2>
      * <ul>
-     * <li><strong>2xx</strong>: The call was successful.</li>
-     * <li><strong>3xx</strong>: The call was redirected.</li>
-     * <li><strong>4xx</strong>: The call failed.</li>
-     * <li><strong>5xx</strong>: A server error occurred.</li>
+     * <li>You can create up to five auto scaling policies for one application.</li>
+     * <li>You can create up to 20 trigger points within one day in a scheduled auto scaling policy.</li>
+     * <li>If an auto scaling policy is enabled for an application, you cannot manually manage the lifecycle of the application. For example, you cannot scale, deploy (including single-batch release, phased release, and canary release), stop, or restart the application, or change the instance type. If you want to perform the preceding operations on the application, disable the auto scaling policy and then manually perform the operations.</li>
+     * <li>If an application is in the process of scale-out, scale-in, deployment (including single-batch release, phased release, and canary release), instance type change, restart, or stop, you cannot add or enable an auto scaling policy for the application.</li>
+     * <li>If you want to configure more than 50 instances for an application, you must contact SAE technical support to add your account to the whitelist. For more information, see <a href="https://help.aliyun.com/document_detail/146530.html">Contact us</a>.</li>
      * </ul>
      * 
      * @param request the request parameters of CreateApplicationScalingRule  CreateApplicationScalingRuleRequest
@@ -281,6 +288,12 @@ public interface AsyncClient extends SdkAutoCloseable {
      * @return DescribeApplicationInstancesResponse
      */
     CompletableFuture<DescribeApplicationInstancesResponse> describeApplicationInstances(DescribeApplicationInstancesRequest request);
+
+    /**
+     * @param request the request parameters of DescribeApplicationMseService  DescribeApplicationMseServiceRequest
+     * @return DescribeApplicationMseServiceResponse
+     */
+    CompletableFuture<DescribeApplicationMseServiceResponse> describeApplicationMseService(DescribeApplicationMseServiceRequest request);
 
     /**
      * @param request the request parameters of DescribeApplicationNlbs  DescribeApplicationNlbsRequest
@@ -749,6 +762,12 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<PublishWebApplicationRevisionResponse> publishWebApplicationRevision(PublishWebApplicationRevisionRequest request);
 
     /**
+     * @param request the request parameters of QueryArmsEnable  QueryArmsEnableRequest
+     * @return QueryArmsEnableResponse
+     */
+    CompletableFuture<QueryArmsEnableResponse> queryArmsEnable(QueryArmsEnableRequest request);
+
+    /**
      * @param request the request parameters of QueryResourceStatics  QueryResourceStaticsRequest
      * @return QueryResourceStaticsResponse
      */
@@ -915,6 +934,12 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<UpdateNamespaceResponse> updateNamespace(UpdateNamespaceRequest request);
 
     /**
+     * @param request the request parameters of UpdateNamespaceSlsConfigs  UpdateNamespaceSlsConfigsRequest
+     * @return UpdateNamespaceSlsConfigsResponse
+     */
+    CompletableFuture<UpdateNamespaceSlsConfigsResponse> updateNamespaceSlsConfigs(UpdateNamespaceSlsConfigsRequest request);
+
+    /**
      * @param request the request parameters of UpdateNamespaceVpc  UpdateNamespaceVpcRequest
      * @return UpdateNamespaceVpcResponse
      */
@@ -970,7 +995,7 @@ public interface AsyncClient extends SdkAutoCloseable {
 
     /**
      * <b>description</b> :
-     * <p>You are charged when you use the ARMS advanced monitoring feature. Enable this feature based on your business requirements. For more information, see <a href="https://icms.alibaba-inc.com/content/arms/arms?l=1%5C&m=16992%5C&n=3183148">Billing overview</a>.</p>
+     * <p>You are charged when you use the ARMS advanced monitoring feature. Enable this feature based on your business requirements. For more information, see <a href="https://www.alibabacloud.com/help/zh/arms/application-monitoring/product-overview/billing-overview-1">Billing overview</a>.</p>
      * 
      * @param request the request parameters of UpgradeApplicationApmService  UpgradeApplicationApmServiceRequest
      * @return UpgradeApplicationApmServiceResponse

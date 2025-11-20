@@ -869,6 +869,9 @@ public class DescribeIngressResponseBody extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Description")
         private String description;
 
+        @com.aliyun.core.annotation.NameInMap("EnableGzip")
+        private Boolean enableGzip;
+
         @com.aliyun.core.annotation.NameInMap("EnableXForwardedFor")
         private Boolean enableXForwardedFor;
 
@@ -927,6 +930,7 @@ public class DescribeIngressResponseBody extends TeaModel {
             this.createdBySae = builder.createdBySae;
             this.defaultRule = builder.defaultRule;
             this.description = builder.description;
+            this.enableGzip = builder.enableGzip;
             this.enableXForwardedFor = builder.enableXForwardedFor;
             this.enableXForwardedForClientSrcPort = builder.enableXForwardedForClientSrcPort;
             this.enableXForwardedForProto = builder.enableXForwardedForProto;
@@ -994,6 +998,13 @@ public class DescribeIngressResponseBody extends TeaModel {
          */
         public String getDescription() {
             return this.description;
+        }
+
+        /**
+         * @return enableGzip
+         */
+        public Boolean getEnableGzip() {
+            return this.enableGzip;
         }
 
         /**
@@ -1122,6 +1133,7 @@ public class DescribeIngressResponseBody extends TeaModel {
             private Boolean createdBySae; 
             private DefaultRule defaultRule; 
             private String description; 
+            private Boolean enableGzip; 
             private Boolean enableXForwardedFor; 
             private Boolean enableXForwardedForClientSrcPort; 
             private Boolean enableXForwardedForProto; 
@@ -1150,6 +1162,7 @@ public class DescribeIngressResponseBody extends TeaModel {
                 this.createdBySae = model.createdBySae;
                 this.defaultRule = model.defaultRule;
                 this.description = model.description;
+                this.enableGzip = model.enableGzip;
                 this.enableXForwardedFor = model.enableXForwardedFor;
                 this.enableXForwardedForClientSrcPort = model.enableXForwardedForClientSrcPort;
                 this.enableXForwardedForProto = model.enableXForwardedForProto;
@@ -1223,6 +1236,14 @@ public class DescribeIngressResponseBody extends TeaModel {
              */
             public Builder description(String description) {
                 this.description = description;
+                return this;
+            }
+
+            /**
+             * EnableGzip.
+             */
+            public Builder enableGzip(Boolean enableGzip) {
+                this.enableGzip = enableGzip;
                 return this;
             }
 

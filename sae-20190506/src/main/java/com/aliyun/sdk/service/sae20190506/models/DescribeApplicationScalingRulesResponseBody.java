@@ -832,6 +832,81 @@ public class DescribeApplicationScalingRulesResponseBody extends TeaModel {
      *
      * <p>DescribeApplicationScalingRulesResponseBody</p>
      */
+    public static class PrometheusMetrics extends TeaModel {
+        @com.aliyun.core.annotation.NameInMap("PrometheusQuery")
+        private String prometheusQuery;
+
+        @com.aliyun.core.annotation.NameInMap("TargetMetricValue")
+        private String targetMetricValue;
+
+        private PrometheusMetrics(Builder builder) {
+            this.prometheusQuery = builder.prometheusQuery;
+            this.targetMetricValue = builder.targetMetricValue;
+        }
+
+        public static Builder builder() {
+            return new Builder();
+        }
+
+        public static PrometheusMetrics create() {
+            return builder().build();
+        }
+
+        /**
+         * @return prometheusQuery
+         */
+        public String getPrometheusQuery() {
+            return this.prometheusQuery;
+        }
+
+        /**
+         * @return targetMetricValue
+         */
+        public String getTargetMetricValue() {
+            return this.targetMetricValue;
+        }
+
+        public static final class Builder {
+            private String prometheusQuery; 
+            private String targetMetricValue; 
+
+            private Builder() {
+            } 
+
+            private Builder(PrometheusMetrics model) {
+                this.prometheusQuery = model.prometheusQuery;
+                this.targetMetricValue = model.targetMetricValue;
+            } 
+
+            /**
+             * PrometheusQuery.
+             */
+            public Builder prometheusQuery(String prometheusQuery) {
+                this.prometheusQuery = prometheusQuery;
+                return this;
+            }
+
+            /**
+             * TargetMetricValue.
+             */
+            public Builder targetMetricValue(String targetMetricValue) {
+                this.targetMetricValue = targetMetricValue;
+                return this;
+            }
+
+            public PrometheusMetrics build() {
+                return new PrometheusMetrics(this);
+            } 
+
+        } 
+
+    }
+    /**
+     * 
+     * {@link DescribeApplicationScalingRulesResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeApplicationScalingRulesResponseBody</p>
+     */
     public static class ScaleDownRules extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Disabled")
         private Boolean disabled;
@@ -1060,6 +1135,9 @@ public class DescribeApplicationScalingRulesResponseBody extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("MaxReplicas")
         private Integer maxReplicas;
 
+        @com.aliyun.core.annotation.NameInMap("MetricSource")
+        private String metricSource;
+
         @com.aliyun.core.annotation.NameInMap("Metrics")
         private java.util.List<Metrics> metrics;
 
@@ -1069,6 +1147,15 @@ public class DescribeApplicationScalingRulesResponseBody extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("MinReplicas")
         private Integer minReplicas;
 
+        @com.aliyun.core.annotation.NameInMap("PrometheusMetrics")
+        private java.util.List<PrometheusMetrics> prometheusMetrics;
+
+        @com.aliyun.core.annotation.NameInMap("PrometheusToken")
+        private String prometheusToken;
+
+        @com.aliyun.core.annotation.NameInMap("PrometheusUrl")
+        private String prometheusUrl;
+
         @com.aliyun.core.annotation.NameInMap("ScaleDownRules")
         private ScaleDownRules scaleDownRules;
 
@@ -1077,9 +1164,13 @@ public class DescribeApplicationScalingRulesResponseBody extends TeaModel {
 
         private Metric(Builder builder) {
             this.maxReplicas = builder.maxReplicas;
+            this.metricSource = builder.metricSource;
             this.metrics = builder.metrics;
             this.metricsStatus = builder.metricsStatus;
             this.minReplicas = builder.minReplicas;
+            this.prometheusMetrics = builder.prometheusMetrics;
+            this.prometheusToken = builder.prometheusToken;
+            this.prometheusUrl = builder.prometheusUrl;
             this.scaleDownRules = builder.scaleDownRules;
             this.scaleUpRules = builder.scaleUpRules;
         }
@@ -1097,6 +1188,13 @@ public class DescribeApplicationScalingRulesResponseBody extends TeaModel {
          */
         public Integer getMaxReplicas() {
             return this.maxReplicas;
+        }
+
+        /**
+         * @return metricSource
+         */
+        public String getMetricSource() {
+            return this.metricSource;
         }
 
         /**
@@ -1121,6 +1219,27 @@ public class DescribeApplicationScalingRulesResponseBody extends TeaModel {
         }
 
         /**
+         * @return prometheusMetrics
+         */
+        public java.util.List<PrometheusMetrics> getPrometheusMetrics() {
+            return this.prometheusMetrics;
+        }
+
+        /**
+         * @return prometheusToken
+         */
+        public String getPrometheusToken() {
+            return this.prometheusToken;
+        }
+
+        /**
+         * @return prometheusUrl
+         */
+        public String getPrometheusUrl() {
+            return this.prometheusUrl;
+        }
+
+        /**
          * @return scaleDownRules
          */
         public ScaleDownRules getScaleDownRules() {
@@ -1136,9 +1255,13 @@ public class DescribeApplicationScalingRulesResponseBody extends TeaModel {
 
         public static final class Builder {
             private Integer maxReplicas; 
+            private String metricSource; 
             private java.util.List<Metrics> metrics; 
             private MetricsStatus metricsStatus; 
             private Integer minReplicas; 
+            private java.util.List<PrometheusMetrics> prometheusMetrics; 
+            private String prometheusToken; 
+            private String prometheusUrl; 
             private ScaleDownRules scaleDownRules; 
             private ScaleUpRules scaleUpRules; 
 
@@ -1147,9 +1270,13 @@ public class DescribeApplicationScalingRulesResponseBody extends TeaModel {
 
             private Builder(Metric model) {
                 this.maxReplicas = model.maxReplicas;
+                this.metricSource = model.metricSource;
                 this.metrics = model.metrics;
                 this.metricsStatus = model.metricsStatus;
                 this.minReplicas = model.minReplicas;
+                this.prometheusMetrics = model.prometheusMetrics;
+                this.prometheusToken = model.prometheusToken;
+                this.prometheusUrl = model.prometheusUrl;
                 this.scaleDownRules = model.scaleDownRules;
                 this.scaleUpRules = model.scaleUpRules;
             } 
@@ -1162,6 +1289,14 @@ public class DescribeApplicationScalingRulesResponseBody extends TeaModel {
              */
             public Builder maxReplicas(Integer maxReplicas) {
                 this.maxReplicas = maxReplicas;
+                return this;
+            }
+
+            /**
+             * MetricSource.
+             */
+            public Builder metricSource(String metricSource) {
+                this.metricSource = metricSource;
                 return this;
             }
 
@@ -1189,6 +1324,30 @@ public class DescribeApplicationScalingRulesResponseBody extends TeaModel {
              */
             public Builder minReplicas(Integer minReplicas) {
                 this.minReplicas = minReplicas;
+                return this;
+            }
+
+            /**
+             * PrometheusMetrics.
+             */
+            public Builder prometheusMetrics(java.util.List<PrometheusMetrics> prometheusMetrics) {
+                this.prometheusMetrics = prometheusMetrics;
+                return this;
+            }
+
+            /**
+             * PrometheusToken.
+             */
+            public Builder prometheusToken(String prometheusToken) {
+                this.prometheusToken = prometheusToken;
+                return this;
+            }
+
+            /**
+             * PrometheusUrl.
+             */
+            public Builder prometheusUrl(String prometheusUrl) {
+                this.prometheusUrl = prometheusUrl;
                 return this;
             }
 

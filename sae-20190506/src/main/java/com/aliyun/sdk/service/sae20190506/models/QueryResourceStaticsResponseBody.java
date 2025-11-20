@@ -162,6 +162,9 @@ public class QueryResourceStaticsResponseBody extends TeaModel {
          * <li>The <strong>ErrorCode</strong> parameter is not returned when the request succeeds.</li>
          * <li>The <strong>ErrorCode</strong> parameter is returned when the request fails. For more information, see <strong>Error codes</strong> in this topic.</li>
          * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>Null</p>
          */
         public Builder errorCode(String errorCode) {
             this.errorCode = errorCode;
@@ -303,7 +306,10 @@ public class QueryResourceStaticsResponseBody extends TeaModel {
             }
 
             /**
-             * EphemeralStorage.
+             * <p>The storage size of the temporary storage space. Unit: GiB.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>0</p>
              */
             public Builder ephemeralStorage(Float ephemeralStorage) {
                 this.ephemeralStorage = ephemeralStorage;
@@ -459,7 +465,10 @@ public class QueryResourceStaticsResponseBody extends TeaModel {
             } 
 
             /**
-             * ActiveCpu.
+             * <p>The usage of active vCPU. Unit: Core*min.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>10</p>
              */
             public Builder activeCpu(Float activeCpu) {
                 this.activeCpu = activeCpu;
@@ -478,7 +487,10 @@ public class QueryResourceStaticsResponseBody extends TeaModel {
             }
 
             /**
-             * Cu.
+             * <p>The CU usage.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2312145</p>
              */
             public Builder cu(Float cu) {
                 this.cu = cu;
@@ -486,7 +498,10 @@ public class QueryResourceStaticsResponseBody extends TeaModel {
             }
 
             /**
-             * EphemeralStorage.
+             * <p>The storage size of the temporary storage space. Unit: GiB.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>20</p>
              */
             public Builder ephemeralStorage(Float ephemeralStorage) {
                 this.ephemeralStorage = ephemeralStorage;
@@ -510,7 +525,10 @@ public class QueryResourceStaticsResponseBody extends TeaModel {
             }
 
             /**
-             * IdleCpu.
+             * <p>The usage of idle CPU. Unit: Core*min.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>10</p>
              */
             public Builder idleCpu(Float idleCpu) {
                 this.idleCpu = idleCpu;

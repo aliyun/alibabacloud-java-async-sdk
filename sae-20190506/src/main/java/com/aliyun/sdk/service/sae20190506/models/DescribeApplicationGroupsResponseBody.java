@@ -134,10 +134,10 @@ public class DescribeApplicationGroupsResponseBody extends TeaModel {
         /**
          * <p>The HTTP status code. Valid values:</p>
          * <ul>
-         * <li><strong>2xx</strong>: indicates that the request was successful.</li>
-         * <li><strong>3xx</strong>: indicates that the request was redirected.</li>
-         * <li><strong>4xx</strong>: indicates that the request was invalid.</li>
-         * <li><strong>5xx</strong>: indicates that a server error occurred.</li>
+         * <li><strong>2xx</strong>: The call was successful.</li>
+         * <li><strong>3xx</strong>: The call was redirected.</li>
+         * <li><strong>4xx</strong>: The call failed.</li>
+         * <li><strong>5xx</strong>: A server error occurred.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -157,10 +157,10 @@ public class DescribeApplicationGroupsResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The error code.</p>
+         * <p>The error code. Valid values:</p>
          * <ul>
-         * <li>The <strong>ErrorCode</strong> parameter is not returned when the request succeeds.</li>
-         * <li>The <strong>ErrorCode</strong> parameter is returned when the request fails. For more information, see <strong>Error codes</strong> in this topic.</li>
+         * <li>If the call is successful, the <strong>ErrorCode</strong> parameter is not returned.</li>
+         * <li>If the call fails, the <strong>ErrorCode</strong> parameter is returned. For more information, see the <strong>Error codes</strong> section in this topic.</li>
          * </ul>
          */
         public Builder errorCode(String errorCode) {
@@ -180,7 +180,7 @@ public class DescribeApplicationGroupsResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The ID of the request.</p>
+         * <p>The request ID.</p>
          * 
          * <strong>example:</strong>
          * <p>91F93257-7A4A-4BD3-9A7E-2F6EAE6D****</p>
@@ -191,10 +191,10 @@ public class DescribeApplicationGroupsResponseBody extends TeaModel {
         }
 
         /**
-         * <p>Indicates whether the information about instance groups of an application was obtained. Valid values:</p>
+         * <p>Indicates whether the instance groups of an application were obtained. Valid values:</p>
          * <ul>
-         * <li><strong>true</strong>: indicates that the information was obtained.</li>
-         * <li><strong>false</strong>: indicates that the information could not be obtained.</li>
+         * <li><strong>true</strong>: The instance groups were obtained.</li>
+         * <li><strong>false</strong>: The instance groups failed to be obtained.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -206,7 +206,7 @@ public class DescribeApplicationGroupsResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The ID of the trace. It is used to query the details of a request.</p>
+         * <p>The trace ID that is used to query the details of the request.</p>
          * 
          * <strong>example:</strong>
          * <p>0a98a02315955564772843261e****</p>
@@ -418,7 +418,7 @@ public class DescribeApplicationGroupsResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The version of the container, such as Ali-Tomcat, in which a High-speed Service Framework (HSF) application runs.</p>
+             * <p>The version of the container, such as Ali-Tomcat, in which an application that is developed based on High-speed Service Framework (HSF) is deployed.</p>
              * 
              * <strong>example:</strong>
              * <p>3.5.3</p>
@@ -429,7 +429,7 @@ public class DescribeApplicationGroupsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The ID of the group.</p>
+             * <p>The ID of the instance group.</p>
              * 
              * <strong>example:</strong>
              * <p>b2a8a925-477a-eswa-b823-d5e22500****</p>
@@ -440,7 +440,7 @@ public class DescribeApplicationGroupsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The name of the group.</p>
+             * <p>The name of the instance group.</p>
              * 
              * <strong>example:</strong>
              * <p>_DEFAULT_GROUP</p>
@@ -451,7 +451,7 @@ public class DescribeApplicationGroupsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The type of the group.</p>
+             * <p>The type of the instance group.</p>
              * 
              * <strong>example:</strong>
              * <p>0</p>
@@ -462,7 +462,7 @@ public class DescribeApplicationGroupsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The address of the image. This parameter is required when the <strong>PackageType</strong> parameter is set to <strong>Image</strong>.</p>
+             * <p>The URL of the image. This parameter is returned only if the <strong>PackageType</strong> parameter is set to <strong>Image</strong>.</p>
              * 
              * <strong>example:</strong>
              * <p>registry-vpc.cn-hangzhou.aliyuncs.com/demo/nginx:latest</p>
@@ -473,7 +473,7 @@ public class DescribeApplicationGroupsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The version of the Java development kit (JDK) on which the deployment package of the application depends. This parameter is invalid when the <strong>PackageType</strong> parameter is set to <strong>Image</strong>.</p>
+             * <p>The version of the JDK on which the deployment package of the application depends. This parameter is not returned if the <strong>PackageType</strong> parameter is set to <strong>Image</strong>.</p>
              * 
              * <strong>example:</strong>
              * <p>Open JDK 8</p>
@@ -484,11 +484,11 @@ public class DescribeApplicationGroupsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The type of the application deployment package. Valid values:</p>
+             * <p>The type of the deployment package. Valid values:</p>
              * <ul>
-             * <li><p>When you use a Java package, set this value to <strong>FatJar</strong>, <strong>War</strong>, or <strong>Image</strong>.</p>
+             * <li><p>If you deploy a Java application, the value of this parameter can be <strong>FatJar</strong>, <strong>War</strong>, or <strong>Image</strong>.</p>
              * </li>
-             * <li><p>When you use a PHP package, the following values are valid:</p>
+             * <li><p>If you deploy a PHP application, the value of this parameter can be one of the following values:</p>
              * <ul>
              * <li><strong>PhpZip</strong></li>
              * <li><strong>IMAGE_PHP_5_4</strong></li>
@@ -518,7 +518,7 @@ public class DescribeApplicationGroupsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The address of the deployment package. This parameter is required when the <strong>PackageType</strong> parameter is set to <strong>FatJar</strong>, <strong>War</strong>, or <strong>PhpZip</strong>.</p>
+             * <p>The URL of the deployment package. This parameter is returned only if the <strong>PackageType</strong> parameter is set to <strong>FatJar</strong>, <strong>War</strong>, or <strong>PhpZip</strong>.</p>
              * 
              * <strong>example:</strong>
              * <p>registry-vpc.cn-hangzhou.aliyuncs.com/demo/nginx:latest</p>
@@ -529,7 +529,7 @@ public class DescribeApplicationGroupsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The version of the deployment package. This parameter is required when the <strong>PackageType</strong> parameter is set to <strong>FatJar</strong>, <strong>War</strong>, or <strong>PhpZip</strong>. The parameter value will be automatically generated when you use an image to deploy the application and specify the <strong>ImageUrl</strong> parameter.</p>
+             * <p>The version of the deployment package. This parameter is returned only if the <strong>PackageType</strong> parameter is set to <strong>FatJar</strong>, <strong>War</strong>, or <strong>PhpZip</strong>. The value of this parameter is automatically generated only if the <strong>ImageUrl</strong> is returned.</p>
              * 
              * <strong>example:</strong>
              * <p>1.0.0</p>
@@ -570,7 +570,7 @@ public class DescribeApplicationGroupsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The version of the Apache Tomcat container on which the deployment package of the application depends. This parameter is invalid when the <strong>PackageType</strong> parameter is set to <strong>Image</strong>.</p>
+             * <p>The version of the Tomcat container on which the deployment package depends. This parameter is not returned if the <strong>PackageType</strong> parameter is set to <strong>Image</strong>.</p>
              * 
              * <strong>example:</strong>
              * <p>Apache Tomcat 7</p>

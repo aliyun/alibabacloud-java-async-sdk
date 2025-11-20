@@ -132,7 +132,16 @@ public class DowngradeApplicationApmServiceResponseBody extends TeaModel {
         } 
 
         /**
-         * Code.
+         * <p>The HTTP status code or the error code. Valid values:</p>
+         * <ul>
+         * <li><strong>2xx</strong>: The request was successful.</li>
+         * <li><strong>3xx</strong>: The request was redirected.</li>
+         * <li><strong>4xx</strong>: The request failed.</li>
+         * <li><strong>5xx</strong>: A server error occurred.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>200</p>
          */
         public Builder code(String code) {
             this.code = code;
@@ -140,7 +149,7 @@ public class DowngradeApplicationApmServiceResponseBody extends TeaModel {
         }
 
         /**
-         * Data.
+         * <p>The returned result.</p>
          */
         public Builder data(Data data) {
             this.data = data;
@@ -148,7 +157,10 @@ public class DowngradeApplicationApmServiceResponseBody extends TeaModel {
         }
 
         /**
-         * ErrorCode.
+         * <p>The status code.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>400</p>
          */
         public Builder errorCode(String errorCode) {
             this.errorCode = errorCode;
@@ -156,7 +168,10 @@ public class DowngradeApplicationApmServiceResponseBody extends TeaModel {
         }
 
         /**
-         * Message.
+         * <p>The message that is returned.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>success</p>
          */
         public Builder message(String message) {
             this.message = message;
@@ -164,7 +179,10 @@ public class DowngradeApplicationApmServiceResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * <p>Request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>01CF26C7-00A3-4AA6-BA76-7E95F2A3****</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -172,7 +190,11 @@ public class DowngradeApplicationApmServiceResponseBody extends TeaModel {
         }
 
         /**
-         * Success.
+         * <p>Indicates whether ARMS advanced monitoring is disabled. Valid values:</p>
+         * <ul>
+         * <li><strong>true</strong></li>
+         * <li><strong>false</strong></li>
+         * </ul>
          */
         public Builder success(Boolean success) {
             this.success = success;
@@ -180,7 +202,10 @@ public class DowngradeApplicationApmServiceResponseBody extends TeaModel {
         }
 
         /**
-         * TraceId.
+         * <p>The ID of the trace. The ID is used to query the details of a request.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>0a98a02315955564772843261e****</p>
          */
         public Builder traceId(String traceId) {
             this.traceId = traceId;
@@ -233,7 +258,14 @@ public class DowngradeApplicationApmServiceResponseBody extends TeaModel {
             } 
 
             /**
-             * Status.
+             * <p>Indicates whether ARMS advanced monitoring is disabled. Valid values:</p>
+             * <ul>
+             * <li><strong>true</strong></li>
+             * <li><strong>false</strong></li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>true</p>
              */
             public Builder status(Boolean status) {
                 this.status = status;

@@ -183,7 +183,10 @@ public class DescribeApplicationInstancesRequest extends Request {
         }
 
         /**
-         * InstanceId.
+         * <p>The ID of the application instance.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>demo-faaca66c-5959-45cc-b3bf-d26093b2e9c0******</p>
          */
         public Builder instanceId(String instanceId) {
             this.putQueryParameter("InstanceId", instanceId);

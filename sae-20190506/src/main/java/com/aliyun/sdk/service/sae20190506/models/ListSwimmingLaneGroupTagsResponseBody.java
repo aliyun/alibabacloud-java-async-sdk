@@ -132,7 +132,16 @@ public class ListSwimmingLaneGroupTagsResponseBody extends TeaModel {
         } 
 
         /**
-         * Code.
+         * <p>The HTTP status code or the error code. Valid values:</p>
+         * <ul>
+         * <li><strong>2xx</strong>: The request was successful.</li>
+         * <li><strong>3xx</strong>: Redirection.</li>
+         * <li><strong>4xx</strong>: Request error.</li>
+         * <li><strong>5xx</strong>: Server error.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>200</p>
          */
         public Builder code(String code) {
             this.code = code;
@@ -140,7 +149,7 @@ public class ListSwimmingLaneGroupTagsResponseBody extends TeaModel {
         }
 
         /**
-         * Data.
+         * <p>Responses.</p>
          */
         public Builder data(java.util.List<Data> data) {
             this.data = data;
@@ -148,7 +157,11 @@ public class ListSwimmingLaneGroupTagsResponseBody extends TeaModel {
         }
 
         /**
-         * ErrorCode.
+         * <p>Error code. Valid values:</p>
+         * <ul>
+         * <li>If the request is successful, no <strong>ErrorCode</strong> fields are returned.</li>
+         * <li>Request failed: <strong>ErrorCode</strong> fields are returned. For more information, see <strong>Error codes</strong>.</li>
+         * </ul>
          */
         public Builder errorCode(String errorCode) {
             this.errorCode = errorCode;
@@ -156,7 +169,14 @@ public class ListSwimmingLaneGroupTagsResponseBody extends TeaModel {
         }
 
         /**
-         * Message.
+         * <p>Additional information. Valid values:</p>
+         * <ul>
+         * <li>The error message returned because the request is normal and <strong>success</strong> is returned.</li>
+         * <li>If the request is abnormal, the specific exception error code is returned.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>success</p>
          */
         public Builder message(String message) {
             this.message = message;
@@ -164,7 +184,10 @@ public class ListSwimmingLaneGroupTagsResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * <p>The ID of the request.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>30375C38-F4ED-4135-A0AE-5C75DC7F****</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -172,7 +195,14 @@ public class ListSwimmingLaneGroupTagsResponseBody extends TeaModel {
         }
 
         /**
-         * Success.
+         * <p>Whether the data is successful. Valid values:</p>
+         * <ul>
+         * <li><strong>true</strong>: The request is successful.</li>
+         * <li><strong>false</strong>: Failed.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder success(Boolean success) {
             this.success = success;
@@ -180,7 +210,10 @@ public class ListSwimmingLaneGroupTagsResponseBody extends TeaModel {
         }
 
         /**
-         * TraceId.
+         * <p>The ID of the trace. This parameter is used to query the exact call information.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>ac1a0b2215622920113732501e****</p>
          */
         public Builder traceId(String traceId) {
             this.traceId = traceId;
@@ -246,7 +279,10 @@ public class ListSwimmingLaneGroupTagsResponseBody extends TeaModel {
             } 
 
             /**
-             * Metadata.
+             * <p>The metadata.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>{&quot;version&quot;:&quot;1.0.0&quot;,&quot;owner&quot;:&quot;team-a&quot;}</p>
              */
             public Builder metadata(String metadata) {
                 this.metadata = metadata;
@@ -254,7 +290,10 @@ public class ListSwimmingLaneGroupTagsResponseBody extends TeaModel {
             }
 
             /**
-             * Tag.
+             * <p>The label of the lane.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>{&quot;alicloud.service.tag&quot;:&quot;g1&quot;}</p>
              */
             public Builder tag(String tag) {
                 this.tag = tag;

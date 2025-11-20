@@ -101,7 +101,14 @@ public class UpdateSwimmingLaneEnableAttributeRequest extends Request {
         } 
 
         /**
-         * Enable.
+         * <p>Lane status:</p>
+         * <ul>
+         * <li>true: enabled</li>
+         * <li>false: disabled</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder enable(Boolean enable) {
             this.putQueryParameter("Enable", enable);
@@ -110,7 +117,10 @@ public class UpdateSwimmingLaneEnableAttributeRequest extends Request {
         }
 
         /**
-         * GroupId.
+         * <p>The ID of the lane group.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2074</p>
          */
         public Builder groupId(Long groupId) {
             this.putQueryParameter("GroupId", groupId);
@@ -119,7 +129,10 @@ public class UpdateSwimmingLaneEnableAttributeRequest extends Request {
         }
 
         /**
-         * LaneId.
+         * <p>The ID of the lane.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>9637</p>
          */
         public Builder laneId(Long laneId) {
             this.putQueryParameter("LaneId", laneId);
@@ -128,7 +141,10 @@ public class UpdateSwimmingLaneEnableAttributeRequest extends Request {
         }
 
         /**
-         * NamespaceId.
+         * <p>The ID of a namespace.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-beijing:test</p>
          */
         public Builder namespaceId(String namespaceId) {
             this.putQueryParameter("NamespaceId", namespaceId);

@@ -18,6 +18,10 @@ import com.aliyun.sdk.gateway.pop.models.*;
  */
 public class DescribeConfigurationPriceRequest extends Request {
     @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("BestEffortType")
+    private String bestEffortType;
+
+    @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("Cpu")
     @com.aliyun.core.annotation.Validation(required = true)
     private Integer cpu;
@@ -41,6 +45,7 @@ public class DescribeConfigurationPriceRequest extends Request {
 
     private DescribeConfigurationPriceRequest(Builder builder) {
         super(builder);
+        this.bestEffortType = builder.bestEffortType;
         this.cpu = builder.cpu;
         this.memory = builder.memory;
         this.newSaeVersion = builder.newSaeVersion;
@@ -59,6 +64,13 @@ public class DescribeConfigurationPriceRequest extends Request {
 @Override
     public Builder toBuilder() {
         return new Builder(this);
+    }
+
+    /**
+     * @return bestEffortType
+     */
+    public String getBestEffortType() {
+        return this.bestEffortType;
     }
 
     /**
@@ -97,6 +109,7 @@ public class DescribeConfigurationPriceRequest extends Request {
     }
 
     public static final class Builder extends Request.Builder<DescribeConfigurationPriceRequest, Builder> {
+        private String bestEffortType; 
         private Integer cpu; 
         private Integer memory; 
         private String newSaeVersion; 
@@ -109,12 +122,22 @@ public class DescribeConfigurationPriceRequest extends Request {
 
         private Builder(DescribeConfigurationPriceRequest request) {
             super(request);
+            this.bestEffortType = request.bestEffortType;
             this.cpu = request.cpu;
             this.memory = request.memory;
             this.newSaeVersion = request.newSaeVersion;
             this.resourceType = request.resourceType;
             this.workload = request.workload;
         } 
+
+        /**
+         * BestEffortType.
+         */
+        public Builder bestEffortType(String bestEffortType) {
+            this.putQueryParameter("BestEffortType", bestEffortType);
+            this.bestEffortType = bestEffortType;
+            return this;
+        }
 
         /**
          * <p>The CPU specifications that are required for each instance. Unit: millicores. This parameter cannot be set to 0. Valid values:</p>

@@ -89,6 +89,7 @@ public class GetWebshellTokenRequest extends Request {
         } 
 
         /**
+         * <p>The ID of the interactive messaging application.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -101,10 +102,10 @@ public class GetWebshellTokenRequest extends Request {
         }
 
         /**
-         * <p>The name of the container.</p>
+         * <p>The name of the init container.</p>
          * <p>Note:</p>
          * <ul>
-         * <li><p>If this parameter is specified, Cloud Assistant runs the command in the specified container of the instance.</p>
+         * <li><p>If you specify this parameter, Cloud Assistant runs the command in the specified container of the instances.</p>
          * </li>
          * <li><p>If this parameter is specified, the command can run only on Linux instances on which Cloud Assistant Agent 2.2.3.344 or later is installed.</p>
          * <ul>
@@ -128,6 +129,7 @@ public class GetWebshellTokenRequest extends Request {
         }
 
         /**
+         * <p>The name of the pod.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>

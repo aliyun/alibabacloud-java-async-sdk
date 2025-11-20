@@ -88,11 +88,7 @@ public class BatchStartApplicationsRequest extends Request {
         } 
 
         /**
-         * <p>The returned message.</p>
-         * <ul>
-         * <li><strong>success</strong> is returned when the request succeeds.</li>
-         * <li>An error code is returned when the request fails.</li>
-         * </ul>
+         * <p>The IDs of the applications that you want to start. Separate multiple IDs with commas (,).</p>
          * 
          * <strong>example:</strong>
          * <p>ebf491f0-c1a5-45e2-b2c4-710dbe2a****</p>

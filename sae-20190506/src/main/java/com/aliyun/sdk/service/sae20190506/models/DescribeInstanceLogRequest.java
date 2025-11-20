@@ -26,10 +26,15 @@ public class DescribeInstanceLogRequest extends Request {
     @com.aliyun.core.annotation.Validation(required = true)
     private String instanceId;
 
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Previous")
+    private String previous;
+
     private DescribeInstanceLogRequest(Builder builder) {
         super(builder);
         this.containerId = builder.containerId;
         this.instanceId = builder.instanceId;
+        this.previous = builder.previous;
     }
 
     public static Builder builder() {
@@ -59,9 +64,17 @@ public class DescribeInstanceLogRequest extends Request {
         return this.instanceId;
     }
 
+    /**
+     * @return previous
+     */
+    public String getPrevious() {
+        return this.previous;
+    }
+
     public static final class Builder extends Request.Builder<DescribeInstanceLogRequest, Builder> {
         private String containerId; 
         private String instanceId; 
+        private String previous; 
 
         private Builder() {
             super();
@@ -71,6 +84,7 @@ public class DescribeInstanceLogRequest extends Request {
             super(request);
             this.containerId = request.containerId;
             this.instanceId = request.instanceId;
+            this.previous = request.previous;
         } 
 
         /**
@@ -86,7 +100,7 @@ public class DescribeInstanceLogRequest extends Request {
         }
 
         /**
-         * <p>The ID of the request.</p>
+         * <p>The instance ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -95,6 +109,15 @@ public class DescribeInstanceLogRequest extends Request {
         public Builder instanceId(String instanceId) {
             this.putQueryParameter("InstanceId", instanceId);
             this.instanceId = instanceId;
+            return this;
+        }
+
+        /**
+         * Previous.
+         */
+        public Builder previous(String previous) {
+            this.putQueryParameter("Previous", previous);
+            this.previous = previous;
             return this;
         }
 

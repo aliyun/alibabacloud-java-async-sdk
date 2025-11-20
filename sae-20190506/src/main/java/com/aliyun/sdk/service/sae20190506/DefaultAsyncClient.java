@@ -76,6 +76,24 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
+     * @param request the request parameters of BatchRestartApplications  BatchRestartApplicationsRequest
+     * @return BatchRestartApplicationsResponse
+     */
+    @Override
+    public CompletableFuture<BatchRestartApplicationsResponse> batchRestartApplications(BatchRestartApplicationsRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RESTFUL).setAction("BatchRestartApplications").setMethod(HttpMethod.PUT).setPathRegex("/pop/v1/sam/app/batchRestartApplications").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(BatchRestartApplicationsResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<BatchRestartApplicationsResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
      * @param request the request parameters of BatchStartApplications  BatchStartApplicationsRequest
      * @return BatchStartApplicationsResponse
      */
@@ -185,12 +203,13 @@ public final class DefaultAsyncClient implements AsyncClient {
 
     /**
      * <b>description</b> :
-     * <p>The HTTP status code. Take note of the following rules:</p>
+     * <h2><a href="#"></a>Precautions</h2>
      * <ul>
-     * <li><strong>2xx</strong>: The call was successful.</li>
-     * <li><strong>3xx</strong>: The call was redirected.</li>
-     * <li><strong>4xx</strong>: The call failed.</li>
-     * <li><strong>5xx</strong>: A server error occurred.</li>
+     * <li>You can create up to five auto scaling policies for one application.</li>
+     * <li>You can create up to 20 trigger points within one day in a scheduled auto scaling policy.</li>
+     * <li>If an auto scaling policy is enabled for an application, you cannot manually manage the lifecycle of the application. For example, you cannot scale, deploy (including single-batch release, phased release, and canary release), stop, or restart the application, or change the instance type. If you want to perform the preceding operations on the application, disable the auto scaling policy and then manually perform the operations.</li>
+     * <li>If an application is in the process of scale-out, scale-in, deployment (including single-batch release, phased release, and canary release), instance type change, restart, or stop, you cannot add or enable an auto scaling policy for the application.</li>
+     * <li>If you want to configure more than 50 instances for an application, you must contact SAE technical support to add your account to the whitelist. For more information, see <a href="https://help.aliyun.com/document_detail/146530.html">Contact us</a>.</li>
      * </ul>
      * 
      * @param request the request parameters of CreateApplicationScalingRule  CreateApplicationScalingRuleRequest
@@ -765,6 +784,24 @@ public final class DefaultAsyncClient implements AsyncClient {
             return this.handler.execute(params);
         } catch (Exception e) {
             CompletableFuture<DescribeApplicationInstancesResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
+     * @param request the request parameters of DescribeApplicationMseService  DescribeApplicationMseServiceRequest
+     * @return DescribeApplicationMseServiceResponse
+     */
+    @Override
+    public CompletableFuture<DescribeApplicationMseServiceResponse> describeApplicationMseService(DescribeApplicationMseServiceRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RESTFUL).setAction("DescribeApplicationMseService").setMethod(HttpMethod.GET).setPathRegex("/pop/v1/sam/app/applicationMseService").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(DescribeApplicationMseServiceResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<DescribeApplicationMseServiceResponse> future = new CompletableFuture<>();
             future.completeExceptionally(e);
             return future;
         }
@@ -2077,6 +2114,24 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
+     * @param request the request parameters of QueryArmsEnable  QueryArmsEnableRequest
+     * @return QueryArmsEnableResponse
+     */
+    @Override
+    public CompletableFuture<QueryArmsEnableResponse> queryArmsEnable(QueryArmsEnableRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RESTFUL).setAction("QueryArmsEnable").setMethod(HttpMethod.GET).setPathRegex("/pop/v1/arms/queryArms").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(QueryArmsEnableResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<QueryArmsEnableResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
      * @param request the request parameters of QueryResourceStatics  QueryResourceStaticsRequest
      * @return QueryResourceStaticsResponse
      */
@@ -2555,6 +2610,24 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
+     * @param request the request parameters of UpdateNamespaceSlsConfigs  UpdateNamespaceSlsConfigsRequest
+     * @return UpdateNamespaceSlsConfigsResponse
+     */
+    @Override
+    public CompletableFuture<UpdateNamespaceSlsConfigsResponse> updateNamespaceSlsConfigs(UpdateNamespaceSlsConfigsRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RESTFUL).setAction("UpdateNamespaceSlsConfigs").setMethod(HttpMethod.POST).setPathRegex("/pop/cas/namespace/updateNamespaceSlsConfigs").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(UpdateNamespaceSlsConfigsResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<UpdateNamespaceSlsConfigsResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
      * @param request the request parameters of UpdateNamespaceVpc  UpdateNamespaceVpcRequest
      * @return UpdateNamespaceVpcResponse
      */
@@ -2694,7 +2767,7 @@ public final class DefaultAsyncClient implements AsyncClient {
 
     /**
      * <b>description</b> :
-     * <p>You are charged when you use the ARMS advanced monitoring feature. Enable this feature based on your business requirements. For more information, see <a href="https://icms.alibaba-inc.com/content/arms/arms?l=1%5C&m=16992%5C&n=3183148">Billing overview</a>.</p>
+     * <p>You are charged when you use the ARMS advanced monitoring feature. Enable this feature based on your business requirements. For more information, see <a href="https://www.alibabacloud.com/help/zh/arms/application-monitoring/product-overview/billing-overview-1">Billing overview</a>.</p>
      * 
      * @param request the request parameters of UpgradeApplicationApmService  UpgradeApplicationApmServiceRequest
      * @return UpgradeApplicationApmServiceResponse

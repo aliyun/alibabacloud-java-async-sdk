@@ -22,13 +22,23 @@ public class UpdateAppModeRequest extends Request {
     private String appId;
 
     @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("AppIds")
+    private String appIds;
+
+    @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("EnableIdle")
     private Boolean enableIdle;
+
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("NamespaceId")
+    private String namespaceId;
 
     private UpdateAppModeRequest(Builder builder) {
         super(builder);
         this.appId = builder.appId;
+        this.appIds = builder.appIds;
         this.enableIdle = builder.enableIdle;
+        this.namespaceId = builder.namespaceId;
     }
 
     public static Builder builder() {
@@ -52,15 +62,31 @@ public class UpdateAppModeRequest extends Request {
     }
 
     /**
+     * @return appIds
+     */
+    public String getAppIds() {
+        return this.appIds;
+    }
+
+    /**
      * @return enableIdle
      */
     public Boolean getEnableIdle() {
         return this.enableIdle;
     }
 
+    /**
+     * @return namespaceId
+     */
+    public String getNamespaceId() {
+        return this.namespaceId;
+    }
+
     public static final class Builder extends Request.Builder<UpdateAppModeRequest, Builder> {
         private String appId; 
+        private String appIds; 
         private Boolean enableIdle; 
+        private String namespaceId; 
 
         private Builder() {
             super();
@@ -69,11 +95,16 @@ public class UpdateAppModeRequest extends Request {
         private Builder(UpdateAppModeRequest request) {
             super(request);
             this.appId = request.appId;
+            this.appIds = request.appIds;
             this.enableIdle = request.enableIdle;
+            this.namespaceId = request.namespaceId;
         } 
 
         /**
-         * AppId.
+         * <p>The app ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>7171a6ca-d1cd-4928-8642-7d5cfe69****</p>
          */
         public Builder appId(String appId) {
             this.putQueryParameter("AppId", appId);
@@ -82,11 +113,37 @@ public class UpdateAppModeRequest extends Request {
         }
 
         /**
-         * EnableIdle.
+         * AppIds.
+         */
+        public Builder appIds(String appIds) {
+            this.putQueryParameter("AppIds", appIds);
+            this.appIds = appIds;
+            return this;
+        }
+
+        /**
+         * <p>Enable Idle Mode?</p>
+         * <p>Enumeration value:</p>
+         * <ul>
+         * <li>true: enables.</li>
+         * <li>false: disables.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder enableIdle(Boolean enableIdle) {
             this.putQueryParameter("EnableIdle", enableIdle);
             this.enableIdle = enableIdle;
+            return this;
+        }
+
+        /**
+         * NamespaceId.
+         */
+        public Builder namespaceId(String namespaceId) {
+            this.putQueryParameter("NamespaceId", namespaceId);
+            this.namespaceId = namespaceId;
             return this;
         }
 

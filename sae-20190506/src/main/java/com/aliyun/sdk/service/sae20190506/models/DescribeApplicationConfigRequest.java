@@ -74,7 +74,7 @@ public class DescribeApplicationConfigRequest extends Request {
         } 
 
         /**
-         * <p>7171a6ca-d1cd-4928-8642-7d5cfe69****</p>
+         * <p>The app id.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -87,7 +87,7 @@ public class DescribeApplicationConfigRequest extends Request {
         }
 
         /**
-         * <p>0026ff7f-2b57-4127-bdd0-9bf202bb****</p>
+         * <p>The version id.</p>
          * 
          * <strong>example:</strong>
          * <p>0026ff7f-2b57-4127-bdd0-9bf202bb****</p>

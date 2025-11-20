@@ -59,7 +59,10 @@ public class ListAllSwimmingLaneGroupsRequest extends Request {
         } 
 
         /**
-         * NamespaceId.
+         * <p>The ID of a namespace.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-beijing:test</p>
          */
         public Builder namespaceId(String namespaceId) {
             this.putQueryParameter("NamespaceId", namespaceId);

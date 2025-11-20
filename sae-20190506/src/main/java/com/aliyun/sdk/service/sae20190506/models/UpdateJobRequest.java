@@ -35,6 +35,10 @@ public class UpdateJobRequest extends Request {
     private Long backoffLimit;
 
     @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("BestEffortType")
+    private String bestEffortType;
+
+    @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("Command")
     private String command;
 
@@ -93,6 +97,10 @@ public class UpdateJobRequest extends Request {
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("MountHost")
     private String mountHost;
+
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("NasConfigs")
+    private String nasConfigs;
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("NasId")
@@ -205,6 +213,7 @@ public class UpdateJobRequest extends Request {
         this.acrInstanceId = builder.acrInstanceId;
         this.appId = builder.appId;
         this.backoffLimit = builder.backoffLimit;
+        this.bestEffortType = builder.bestEffortType;
         this.command = builder.command;
         this.commandArgs = builder.commandArgs;
         this.concurrencyPolicy = builder.concurrencyPolicy;
@@ -220,6 +229,7 @@ public class UpdateJobRequest extends Request {
         this.jdk = builder.jdk;
         this.mountDesc = builder.mountDesc;
         this.mountHost = builder.mountHost;
+        this.nasConfigs = builder.nasConfigs;
         this.nasId = builder.nasId;
         this.ossAkId = builder.ossAkId;
         this.ossAkSecret = builder.ossAkSecret;
@@ -287,6 +297,13 @@ public class UpdateJobRequest extends Request {
      */
     public Long getBackoffLimit() {
         return this.backoffLimit;
+    }
+
+    /**
+     * @return bestEffortType
+     */
+    public String getBestEffortType() {
+        return this.bestEffortType;
     }
 
     /**
@@ -392,6 +409,13 @@ public class UpdateJobRequest extends Request {
      */
     public String getMountHost() {
         return this.mountHost;
+    }
+
+    /**
+     * @return nasConfigs
+     */
+    public String getNasConfigs() {
+        return this.nasConfigs;
     }
 
     /**
@@ -581,6 +605,7 @@ public class UpdateJobRequest extends Request {
         private String acrInstanceId; 
         private String appId; 
         private Long backoffLimit; 
+        private String bestEffortType; 
         private String command; 
         private String commandArgs; 
         private String concurrencyPolicy; 
@@ -596,6 +621,7 @@ public class UpdateJobRequest extends Request {
         private String jdk; 
         private String mountDesc; 
         private String mountHost; 
+        private String nasConfigs; 
         private String nasId; 
         private String ossAkId; 
         private String ossAkSecret; 
@@ -633,6 +659,7 @@ public class UpdateJobRequest extends Request {
             this.acrInstanceId = request.acrInstanceId;
             this.appId = request.appId;
             this.backoffLimit = request.backoffLimit;
+            this.bestEffortType = request.bestEffortType;
             this.command = request.command;
             this.commandArgs = request.commandArgs;
             this.concurrencyPolicy = request.concurrencyPolicy;
@@ -648,6 +675,7 @@ public class UpdateJobRequest extends Request {
             this.jdk = request.jdk;
             this.mountDesc = request.mountDesc;
             this.mountHost = request.mountHost;
+            this.nasConfigs = request.nasConfigs;
             this.nasId = request.nasId;
             this.ossAkId = request.ossAkId;
             this.ossAkSecret = request.ossAkSecret;
@@ -722,6 +750,15 @@ public class UpdateJobRequest extends Request {
         public Builder backoffLimit(Long backoffLimit) {
             this.putQueryParameter("BackoffLimit", backoffLimit);
             this.backoffLimit = backoffLimit;
+            return this;
+        }
+
+        /**
+         * BestEffortType.
+         */
+        public Builder bestEffortType(String bestEffortType) {
+            this.putQueryParameter("BestEffortType", bestEffortType);
+            this.bestEffortType = bestEffortType;
             return this;
         }
 
@@ -952,6 +989,15 @@ public class UpdateJobRequest extends Request {
         public Builder mountHost(String mountHost) {
             this.putQueryParameter("MountHost", mountHost);
             this.mountHost = mountHost;
+            return this;
+        }
+
+        /**
+         * NasConfigs.
+         */
+        public Builder nasConfigs(String nasConfigs) {
+            this.putQueryParameter("NasConfigs", nasConfigs);
+            this.nasConfigs = nasConfigs;
             return this;
         }
 

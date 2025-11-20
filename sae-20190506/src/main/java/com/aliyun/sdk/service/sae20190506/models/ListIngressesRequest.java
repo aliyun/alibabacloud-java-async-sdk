@@ -22,14 +22,24 @@ public class ListIngressesRequest extends Request {
     private String appId;
 
     @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("CurrentPage")
+    private Integer currentPage;
+
+    @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("NamespaceId")
     @com.aliyun.core.annotation.Validation(required = true)
     private String namespaceId;
 
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("PageSize")
+    private Integer pageSize;
+
     private ListIngressesRequest(Builder builder) {
         super(builder);
         this.appId = builder.appId;
+        this.currentPage = builder.currentPage;
         this.namespaceId = builder.namespaceId;
+        this.pageSize = builder.pageSize;
     }
 
     public static Builder builder() {
@@ -53,15 +63,31 @@ public class ListIngressesRequest extends Request {
     }
 
     /**
+     * @return currentPage
+     */
+    public Integer getCurrentPage() {
+        return this.currentPage;
+    }
+
+    /**
      * @return namespaceId
      */
     public String getNamespaceId() {
         return this.namespaceId;
     }
 
+    /**
+     * @return pageSize
+     */
+    public Integer getPageSize() {
+        return this.pageSize;
+    }
+
     public static final class Builder extends Request.Builder<ListIngressesRequest, Builder> {
         private String appId; 
+        private Integer currentPage; 
         private String namespaceId; 
+        private Integer pageSize; 
 
         private Builder() {
             super();
@@ -70,7 +96,9 @@ public class ListIngressesRequest extends Request {
         private Builder(ListIngressesRequest request) {
             super(request);
             this.appId = request.appId;
+            this.currentPage = request.currentPage;
             this.namespaceId = request.namespaceId;
+            this.pageSize = request.pageSize;
         } 
 
         /**
@@ -86,6 +114,15 @@ public class ListIngressesRequest extends Request {
         }
 
         /**
+         * CurrentPage.
+         */
+        public Builder currentPage(Integer currentPage) {
+            this.putQueryParameter("CurrentPage", currentPage);
+            this.currentPage = currentPage;
+            return this;
+        }
+
+        /**
          * <p>The ID of a namespace.</p>
          * <p>This parameter is required.</p>
          * 
@@ -95,6 +132,15 @@ public class ListIngressesRequest extends Request {
         public Builder namespaceId(String namespaceId) {
             this.putQueryParameter("NamespaceId", namespaceId);
             this.namespaceId = namespaceId;
+            return this;
+        }
+
+        /**
+         * PageSize.
+         */
+        public Builder pageSize(Integer pageSize) {
+            this.putQueryParameter("PageSize", pageSize);
+            this.pageSize = pageSize;
             return this;
         }
 

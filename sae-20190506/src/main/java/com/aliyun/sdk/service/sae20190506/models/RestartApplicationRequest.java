@@ -115,7 +115,14 @@ public class RestartApplicationRequest extends Request {
         }
 
         /**
-         * AutoEnableApplicationScalingRule.
+         * <p>Specifies whether to automatically enable an auto scaling policy for the application. Valid values:</p>
+         * <ul>
+         * <li><strong>true</strong>: enabled.</li>
+         * <li><strong>false</strong>: disabled</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>false</p>
          */
         public Builder autoEnableApplicationScalingRule(Boolean autoEnableApplicationScalingRule) {
             this.putQueryParameter("AutoEnableApplicationScalingRule", autoEnableApplicationScalingRule);

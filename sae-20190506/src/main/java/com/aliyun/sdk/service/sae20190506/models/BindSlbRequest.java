@@ -169,7 +169,14 @@ public class BindSlbRequest extends Request {
         }
 
         /**
-         * InternetSlbChargeType.
+         * <p>The billing method of an Internet-facing SLB instance. The following billing methods are supported:</p>
+         * <ul>
+         * <li><strong>PayBySpec</strong>: Pay-by-specification.</li>
+         * <li><strong>PayByCLCU</strong>: Pay-by-CLCU.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>PayBySpec</p>
          */
         public Builder internetSlbChargeType(String internetSlbChargeType) {
             this.putQueryParameter("InternetSlbChargeType", internetSlbChargeType);
@@ -202,7 +209,14 @@ public class BindSlbRequest extends Request {
         }
 
         /**
-         * IntranetSlbChargeType.
+         * <p>The billing method of an Internal-facing SLB instance. The following billing methods are supported:</p>
+         * <ul>
+         * <li><strong>PayBySpec</strong>: Pay-by-specification.</li>
+         * <li><strong>PayByCLCU</strong>: Pay-by-CLCU.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>PayBySpec</p>
          */
         public Builder intranetSlbChargeType(String intranetSlbChargeType) {
             this.putQueryParameter("IntranetSlbChargeType", intranetSlbChargeType);

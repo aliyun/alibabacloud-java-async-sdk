@@ -119,7 +119,16 @@ public class ListApplicationsForSwimmingLaneResponseBody extends TeaModel {
         } 
 
         /**
-         * Code.
+         * <p>The HTTP status code or the error code. Valid values:</p>
+         * <ul>
+         * <li><strong>2xx</strong>: The request was successful.</li>
+         * <li><strong>3xx</strong>: The request was redirected.</li>
+         * <li><strong>4xx</strong>: The request failed.</li>
+         * <li><strong>5xx</strong>: A server error occurred.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>200</p>
          */
         public Builder code(String code) {
             this.code = code;
@@ -127,7 +136,7 @@ public class ListApplicationsForSwimmingLaneResponseBody extends TeaModel {
         }
 
         /**
-         * Data.
+         * <p>The list of applications.</p>
          */
         public Builder data(java.util.List<Data> data) {
             this.data = data;
@@ -135,7 +144,11 @@ public class ListApplicationsForSwimmingLaneResponseBody extends TeaModel {
         }
 
         /**
-         * ErrorCode.
+         * <p>The status code. Value values:</p>
+         * <ul>
+         * <li>If the request was successful, <strong>ErrorCode</strong> is not returned.</li>
+         * <li>If the request failed, the <strong>ErrorCode</strong> parameter is returned. For more information, see <strong>Error codes</strong> section in this topic.</li>
+         * </ul>
          */
         public Builder errorCode(String errorCode) {
             this.errorCode = errorCode;
@@ -143,7 +156,14 @@ public class ListApplicationsForSwimmingLaneResponseBody extends TeaModel {
         }
 
         /**
-         * Message.
+         * <p>The message returned. The following limits are imposed on the ID:</p>
+         * <ul>
+         * <li>If the request was successful, <strong>success</strong> is returned.</li>
+         * <li>An error code is returned when a request failed.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>success</p>
          */
         public Builder message(String message) {
             this.message = message;
@@ -151,7 +171,10 @@ public class ListApplicationsForSwimmingLaneResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * <p>The ID of the trace. The ID is used to query the details of a request.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>0a98a02315955564772843261e****</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -159,7 +182,14 @@ public class ListApplicationsForSwimmingLaneResponseBody extends TeaModel {
         }
 
         /**
-         * Success.
+         * <p>Indicates whether the list of application instances was queried. Valid values:</p>
+         * <ul>
+         * <li><strong>true</strong>: The instance groups were obtained.</li>
+         * <li><strong>false</strong>: The instance groups failed to be obtained.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder success(Boolean success) {
             this.success = success;
@@ -303,7 +333,10 @@ public class ListApplicationsForSwimmingLaneResponseBody extends TeaModel {
             } 
 
             /**
-             * AppId.
+             * <p>The ID of the application.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>0099b7be-5f5b-4512-a7fc-56049ef1****</p>
              */
             public Builder appId(String appId) {
                 this.appId = appId;
@@ -311,7 +344,10 @@ public class ListApplicationsForSwimmingLaneResponseBody extends TeaModel {
             }
 
             /**
-             * AppName.
+             * <p>The name of the application.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>demo-app</p>
              */
             public Builder appName(String appName) {
                 this.appName = appName;
@@ -319,7 +355,10 @@ public class ListApplicationsForSwimmingLaneResponseBody extends TeaModel {
             }
 
             /**
-             * BaseAppId.
+             * <p>The ID of the baseline application.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>8c573618-8d72-4407-baf4-f7b64b******</p>
              */
             public Builder baseAppId(String baseAppId) {
                 this.baseAppId = baseAppId;
@@ -327,7 +366,10 @@ public class ListApplicationsForSwimmingLaneResponseBody extends TeaModel {
             }
 
             /**
-             * BaseAppName.
+             * <p>The name of the baseline application.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>demo</p>
              */
             public Builder baseAppName(String baseAppName) {
                 this.baseAppName = baseAppName;
@@ -335,7 +377,10 @@ public class ListApplicationsForSwimmingLaneResponseBody extends TeaModel {
             }
 
             /**
-             * MseAppId.
+             * <p>The ID of the MSE instance.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>mse-cn-hvm47******</p>
              */
             public Builder mseAppId(String mseAppId) {
                 this.mseAppId = mseAppId;
@@ -343,7 +388,10 @@ public class ListApplicationsForSwimmingLaneResponseBody extends TeaModel {
             }
 
             /**
-             * MseAppName.
+             * <p>MSE Instance Name</p>
+             * 
+             * <strong>example:</strong>
+             * <p>test</p>
              */
             public Builder mseAppName(String mseAppName) {
                 this.mseAppName = mseAppName;
@@ -351,7 +399,10 @@ public class ListApplicationsForSwimmingLaneResponseBody extends TeaModel {
             }
 
             /**
-             * MseNamespaceId.
+             * <p>The ID of the namespace to which the MSE instance belongs.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>sae-test</p>
              */
             public Builder mseNamespaceId(String mseNamespaceId) {
                 this.mseNamespaceId = mseNamespaceId;
@@ -359,7 +410,7 @@ public class ListApplicationsForSwimmingLaneResponseBody extends TeaModel {
             }
 
             /**
-             * ServiceTags.
+             * <p>The canary tag configured for the application.</p>
              */
             public Builder serviceTags(java.util.Map<String, String> serviceTags) {
                 this.serviceTags = serviceTags;

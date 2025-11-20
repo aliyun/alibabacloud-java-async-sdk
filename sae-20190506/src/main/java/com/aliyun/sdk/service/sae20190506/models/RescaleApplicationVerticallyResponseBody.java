@@ -132,11 +132,11 @@ public class RescaleApplicationVerticallyResponseBody extends TeaModel {
         } 
 
         /**
-         * <p>The HTTP status code. Take note of the following rules:</p>
+         * <p>The HTTP status code. Valid values:</p>
          * <ul>
-         * <li><strong>2xx</strong>: The call was successful.</li>
-         * <li><strong>3xx</strong>: The call was redirected.</li>
-         * <li><strong>4xx</strong>: The call failed.</li>
+         * <li><strong>2xx</strong>: The request was successful.</li>
+         * <li><strong>3xx</strong>: The request was redirected.</li>
+         * <li><strong>4xx</strong>: The request failed.</li>
          * <li><strong>5xx</strong>: A server error occurred.</li>
          * </ul>
          * 
@@ -149,7 +149,7 @@ public class RescaleApplicationVerticallyResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The response.</p>
+         * <p>Data returned.</p>
          */
         public Builder data(Data data) {
             this.data = data;
@@ -157,10 +157,10 @@ public class RescaleApplicationVerticallyResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The error code returned if the request failed. Take note of the following rules:</p>
+         * <p>The error code. Valid values:</p>
          * <ul>
-         * <li>The <strong>ErrorCode</strong> parameter is not returned if the request succeeds.</li>
-         * <li>The <strong>ErrorCode</strong> parameter is returned if the request fails. For more information, see the <strong>Error codes</strong> section in this topic.</li>
+         * <li>If the call is successful, the <strong>ErrorCode</strong> parameter is not returned.</li>
+         * <li>If the call fails, the <strong>ErrorCode</strong> parameter is returned. For more information, see the <strong>Error codes</strong> section in this topic.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -172,7 +172,7 @@ public class RescaleApplicationVerticallyResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The message returned for the operation.</p>
+         * <p>Messages returned for additional information.</p>
          * 
          * <strong>example:</strong>
          * <p>success</p>
@@ -183,7 +183,7 @@ public class RescaleApplicationVerticallyResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The ID of the request.</p>
+         * <p>Request ID.</p>
          * 
          * <strong>example:</strong>
          * <p>AB521DBB-FA78-42E6-803F-A862EA4F****</p>
@@ -194,10 +194,10 @@ public class RescaleApplicationVerticallyResponseBody extends TeaModel {
         }
 
         /**
-         * <p>Indicates whether the instance specifications are changed. Take note of the following rules:</p>
+         * <p>Indicates whether the update of instance specifications was successful. Valid values:</p>
          * <ul>
-         * <li><strong>true</strong></li>
-         * <li><strong>false</strong></li>
+         * <li><strong>true</strong>: Updated.</li>
+         * <li><strong>false</strong>: Failed to update.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -209,7 +209,7 @@ public class RescaleApplicationVerticallyResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The trace ID that is used to query the details of the request.</p>
+         * <p>Trace ID for request information.</p>
          * 
          * <strong>example:</strong>
          * <p>0bc3b6f315637273629117900d****</p>
@@ -265,7 +265,7 @@ public class RescaleApplicationVerticallyResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The ID of the change order.</p>
+             * <p>The ticked ID of updates.</p>
              * 
              * <strong>example:</strong>
              * <p>ffd8cd45-2b5f-415d-b4d0-1003e80b****</p>

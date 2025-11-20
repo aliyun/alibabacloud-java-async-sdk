@@ -73,7 +73,10 @@ public class ListSwimmingLaneGatewayRoutesRequest extends Request {
         } 
 
         /**
-         * GatewayUniqueId.
+         * <p>The unique ID of the gateway.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>gw-277c0727535f4aae917e48de0f******</p>
          */
         public Builder gatewayUniqueId(String gatewayUniqueId) {
             this.putQueryParameter("GatewayUniqueId", gatewayUniqueId);
@@ -82,7 +85,10 @@ public class ListSwimmingLaneGatewayRoutesRequest extends Request {
         }
 
         /**
-         * NamespaceId.
+         * <p>The ID of the namespace.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-beijing:test</p>
          */
         public Builder namespaceId(String namespaceId) {
             this.putQueryParameter("NamespaceId", namespaceId);

@@ -168,6 +168,9 @@ public class GetApplicationResponseBody extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Instances")
         private Integer instances;
 
+        @com.aliyun.core.annotation.NameInMap("IsStateful")
+        private Boolean isStateful;
+
         @com.aliyun.core.annotation.NameInMap("Mem")
         private Integer mem;
 
@@ -199,6 +202,7 @@ public class GetApplicationResponseBody extends TeaModel {
             this.baseAppId = builder.baseAppId;
             this.cpu = builder.cpu;
             this.instances = builder.instances;
+            this.isStateful = builder.isStateful;
             this.mem = builder.mem;
             this.mseEnabled = builder.mseEnabled;
             this.mseNamespaceId = builder.mseNamespaceId;
@@ -257,6 +261,13 @@ public class GetApplicationResponseBody extends TeaModel {
          */
         public Integer getInstances() {
             return this.instances;
+        }
+
+        /**
+         * @return isStateful
+         */
+        public Boolean getIsStateful() {
+            return this.isStateful;
         }
 
         /**
@@ -322,6 +333,7 @@ public class GetApplicationResponseBody extends TeaModel {
             private String baseAppId; 
             private Integer cpu; 
             private Integer instances; 
+            private Boolean isStateful; 
             private Integer mem; 
             private Boolean mseEnabled; 
             private String mseNamespaceId; 
@@ -341,6 +353,7 @@ public class GetApplicationResponseBody extends TeaModel {
                 this.baseAppId = model.baseAppId;
                 this.cpu = model.cpu;
                 this.instances = model.instances;
+                this.isStateful = model.isStateful;
                 this.mem = model.mem;
                 this.mseEnabled = model.mseEnabled;
                 this.mseNamespaceId = model.mseNamespaceId;
@@ -421,6 +434,14 @@ public class GetApplicationResponseBody extends TeaModel {
              */
             public Builder instances(Integer instances) {
                 this.instances = instances;
+                return this;
+            }
+
+            /**
+             * IsStateful.
+             */
+            public Builder isStateful(Boolean isStateful) {
+                this.isStateful = isStateful;
                 return this;
             }
 

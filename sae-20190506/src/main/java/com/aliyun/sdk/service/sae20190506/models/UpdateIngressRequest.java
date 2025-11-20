@@ -38,6 +38,10 @@ public class UpdateIngressRequest extends Request {
     private String description;
 
     @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("EnableGzip")
+    private Boolean enableGzip;
+
+    @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("EnableXForwardedFor")
     private Boolean enableXForwardedFor;
 
@@ -97,6 +101,7 @@ public class UpdateIngressRequest extends Request {
         this.corsConfig = builder.corsConfig;
         this.defaultRule = builder.defaultRule;
         this.description = builder.description;
+        this.enableGzip = builder.enableGzip;
         this.enableXForwardedFor = builder.enableXForwardedFor;
         this.enableXForwardedForClientSrcPort = builder.enableXForwardedForClientSrcPort;
         this.enableXForwardedForProto = builder.enableXForwardedForProto;
@@ -158,6 +163,13 @@ public class UpdateIngressRequest extends Request {
      */
     public String getDescription() {
         return this.description;
+    }
+
+    /**
+     * @return enableGzip
+     */
+    public Boolean getEnableGzip() {
+        return this.enableGzip;
     }
 
     /**
@@ -257,6 +269,7 @@ public class UpdateIngressRequest extends Request {
         private String corsConfig; 
         private String defaultRule; 
         private String description; 
+        private Boolean enableGzip; 
         private Boolean enableXForwardedFor; 
         private Boolean enableXForwardedForClientSrcPort; 
         private Boolean enableXForwardedForProto; 
@@ -282,6 +295,7 @@ public class UpdateIngressRequest extends Request {
             this.corsConfig = request.corsConfig;
             this.defaultRule = request.defaultRule;
             this.description = request.description;
+            this.enableGzip = request.enableGzip;
             this.enableXForwardedFor = request.enableXForwardedFor;
             this.enableXForwardedForClientSrcPort = request.enableXForwardedForClientSrcPort;
             this.enableXForwardedForProto = request.enableXForwardedForProto;
@@ -298,11 +312,11 @@ public class UpdateIngressRequest extends Request {
         } 
 
         /**
-         * <p>The ID of the certificate that is associated with the Classic Load Balancer (<strong>CLB</strong>) instance.</p>
+         * <p>The ID of the <strong>CLB</strong> certificate. Valid values:</p>
          * <ul>
-         * <li>If you set <strong>LoadBalanceType</strong> to <strong>clb</strong>, you can use CertId to configure a certificate for the HTTPS listener.</li>
+         * <li>If the <strong>LoadBalanceType</strong> is <strong>clb</strong>, use this field to configure the HTTPS listener certificate.</li>
          * </ul>
-         * <p>For more information about how to manage the SSL certificate IDs that are used by CLB instances, see <a href="https://help.aliyun.com/document_detail/90792.html">Overview</a>.</p>
+         * <p>For more information about how to use SSL certificate IDs for CLB, see <a href="https://help.aliyun.com/document_detail/90792.html">Manage certificates (CLB)</a>.</p>
          * 
          * <strong>example:</strong>
          * <p>188077086902****_176993d****_181437****_108724****</p>
@@ -314,10 +328,10 @@ public class UpdateIngressRequest extends Request {
         }
 
         /**
-         * <p>The IDs of the certificates that are associated with the Application Load Balancer (<strong>ALB</strong>) instance.</p>
+         * <p>The ID of the multi-certificate <strong>ALB</strong>. Valid values:</p>
          * <ul>
-         * <li>If you set <strong>LoadBalanceType</strong> to <strong>alb</strong>, you can use CertIds to configure multiple certificates for the HTTPS listener. Separate multiple certificate IDs with commas (,).</li>
-         * <li>The ID of the SSL certificate that is used by an ALB instance can be obtained from Certificate Management Service. For example, if you specify <code>756***-cn-hangzhou</code>, <code>756***</code> is the certificate ID that is obtained from the service page, and <code>-cn-hangzhou</code> is the fixed suffix. For more information, see <a href="https://help.aliyun.com/document_detail/209076.html">Manage certificates</a>.</li>
+         * <li>If the <strong>LoadBalanceType</strong> is <strong>alb</strong>, use this field to configure multiple certificates for HTTPS listeners. Separate multiple certificate IDs with commas (,).</li>
+         * <li>The ID of the SSL certificate used by ALB must be obtained from the digital certificate product. For example, in the configuration <code>756***-cn-hangzhou</code>, the <code>756***</code> is the certificate ID obtained from the product page, and the <code>-cn-hangzhou</code> is a fixed suffix. For more information, see <a href="https://help.aliyun.com/document_detail/209076.html">Manage certificates</a>.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -339,7 +353,7 @@ public class UpdateIngressRequest extends Request {
         }
 
         /**
-         * <p>The default forwarding rule. You can specify a port and an application in the default forwarding rule to forward traffic based on the IP address. The following list describes the involved parameters:</p>
+         * <p>The default forwarding rule. Forwards traffic to a specified application through a specified port based on the IP address. The following table describes the parameters.</p>
          * <ul>
          * <li><strong>appId</strong>: the ID of the application.</li>
          * <li><strong>containerPort</strong>: the container port of the application.</li>
@@ -366,6 +380,15 @@ public class UpdateIngressRequest extends Request {
         public Builder description(String description) {
             this.putQueryParameter("Description", description);
             this.description = description;
+            return this;
+        }
+
+        /**
+         * EnableGzip.
+         */
+        public Builder enableGzip(Boolean enableGzip) {
+            this.putQueryParameter("EnableGzip", enableGzip);
+            this.enableGzip = enableGzip;
             return this;
         }
 
@@ -443,7 +466,7 @@ public class UpdateIngressRequest extends Request {
         }
 
         /**
-         * <p>The port specified for the Server Load Balancer (SLB) listener. You must specify a vacant port.</p>
+         * <p>The SLB listening port. This port cannot be occupied.</p>
          * 
          * <strong>example:</strong>
          * <p>443</p>
@@ -457,7 +480,7 @@ public class UpdateIngressRequest extends Request {
         /**
          * <p>The protocol that is used to forward requests. Valid values:</p>
          * <ul>
-         * <li><strong>HTTP</strong>: HTTP is suitable for applications that need to identify the transmitted data.</li>
+         * <li><strong>HTTP</strong>: HTTP is suitable for applications that need to identify transmitted data.</li>
          * <li><strong>HTTPS</strong>: HTTPS is suitable for applications that require encrypted data transmission.</li>
          * </ul>
          * 
@@ -471,7 +494,7 @@ public class UpdateIngressRequest extends Request {
         }
 
         /**
-         * <p>This parameter is discontinued.</p>
+         * <p>The parameter is deprecated and cannot be updated.</p>
          * 
          * <strong>example:</strong>
          * <p>clb</p>
@@ -495,10 +518,10 @@ public class UpdateIngressRequest extends Request {
         }
 
         /**
-         * <p>The forwarding rules. You can specify a port and an application in a forwarding rule to forward traffic based on the specified domain name and request path. The following list describes the involved parameters:</p>
+         * <p>The forwarding rule. Forwards traffic to a specified application through a specified port based on the domain name and request path. The following table describes the parameters.</p>
          * <ul>
          * <li><strong>appId</strong>: the ID of the application.</li>
-         * <li><strong>containerPort</strong>: the container port of the application.</li>
+         * <li><strong>containerPort</strong>: The port of the application instance.</li>
          * <li><strong>domain</strong>: the domain name.</li>
          * <li><strong>path</strong>: the request path.</li>
          * </ul>

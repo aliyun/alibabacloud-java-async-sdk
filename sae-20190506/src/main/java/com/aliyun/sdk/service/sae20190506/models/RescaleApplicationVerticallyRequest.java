@@ -37,6 +37,14 @@ public class RescaleApplicationVerticallyRequest extends Request {
     private String memory;
 
     @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ResourceType")
+    private String resourceType;
+
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("VSwitchId")
+    private String vSwitchId;
+
+    @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("autoEnableApplicationScalingRule")
     private Boolean autoEnableApplicationScalingRule;
 
@@ -54,6 +62,8 @@ public class RescaleApplicationVerticallyRequest extends Request {
         this.cpu = builder.cpu;
         this.diskSize = builder.diskSize;
         this.memory = builder.memory;
+        this.resourceType = builder.resourceType;
+        this.vSwitchId = builder.vSwitchId;
         this.autoEnableApplicationScalingRule = builder.autoEnableApplicationScalingRule;
         this.minReadyInstanceRatio = builder.minReadyInstanceRatio;
         this.minReadyInstances = builder.minReadyInstances;
@@ -101,6 +111,20 @@ public class RescaleApplicationVerticallyRequest extends Request {
     }
 
     /**
+     * @return resourceType
+     */
+    public String getResourceType() {
+        return this.resourceType;
+    }
+
+    /**
+     * @return vSwitchId
+     */
+    public String getVSwitchId() {
+        return this.vSwitchId;
+    }
+
+    /**
      * @return autoEnableApplicationScalingRule
      */
     public Boolean getAutoEnableApplicationScalingRule() {
@@ -126,6 +150,8 @@ public class RescaleApplicationVerticallyRequest extends Request {
         private String cpu; 
         private String diskSize; 
         private String memory; 
+        private String resourceType; 
+        private String vSwitchId; 
         private Boolean autoEnableApplicationScalingRule; 
         private Integer minReadyInstanceRatio; 
         private Integer minReadyInstances; 
@@ -140,13 +166,15 @@ public class RescaleApplicationVerticallyRequest extends Request {
             this.cpu = request.cpu;
             this.diskSize = request.diskSize;
             this.memory = request.memory;
+            this.resourceType = request.resourceType;
+            this.vSwitchId = request.vSwitchId;
             this.autoEnableApplicationScalingRule = request.autoEnableApplicationScalingRule;
             this.minReadyInstanceRatio = request.minReadyInstanceRatio;
             this.minReadyInstances = request.minReadyInstances;
         } 
 
         /**
-         * <p>The application ID.</p>
+         * <p>The app ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -159,7 +187,7 @@ public class RescaleApplicationVerticallyRequest extends Request {
         }
 
         /**
-         * <p>The destination CPU specification. Unit: millicore.</p>
+         * <p>Target CPU specification. Unit: millicore.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -172,7 +200,10 @@ public class RescaleApplicationVerticallyRequest extends Request {
         }
 
         /**
-         * DiskSize.
+         * <p>The disk size. Unit: GB.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>20</p>
          */
         public Builder diskSize(String diskSize) {
             this.putQueryParameter("DiskSize", diskSize);
@@ -181,7 +212,7 @@ public class RescaleApplicationVerticallyRequest extends Request {
         }
 
         /**
-         * <p>The destination memory size. Unit: MB.</p>
+         * <p>Target memory specification. Unit: MB.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -194,7 +225,28 @@ public class RescaleApplicationVerticallyRequest extends Request {
         }
 
         /**
-         * autoEnableApplicationScalingRule.
+         * ResourceType.
+         */
+        public Builder resourceType(String resourceType) {
+            this.putQueryParameter("ResourceType", resourceType);
+            this.resourceType = resourceType;
+            return this;
+        }
+
+        /**
+         * VSwitchId.
+         */
+        public Builder vSwitchId(String vSwitchId) {
+            this.putQueryParameter("VSwitchId", vSwitchId);
+            this.vSwitchId = vSwitchId;
+            return this;
+        }
+
+        /**
+         * <p>Enable application scale rules automatically.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder autoEnableApplicationScalingRule(Boolean autoEnableApplicationScalingRule) {
             this.putQueryParameter("autoEnableApplicationScalingRule", autoEnableApplicationScalingRule);
@@ -203,7 +255,10 @@ public class RescaleApplicationVerticallyRequest extends Request {
         }
 
         /**
-         * minReadyInstanceRatio.
+         * <p>The ratio of minimum ready instances.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>50</p>
          */
         public Builder minReadyInstanceRatio(Integer minReadyInstanceRatio) {
             this.putQueryParameter("minReadyInstanceRatio", minReadyInstanceRatio);
@@ -212,7 +267,10 @@ public class RescaleApplicationVerticallyRequest extends Request {
         }
 
         /**
-         * minReadyInstances.
+         * <p>Minimum ready instances.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder minReadyInstances(Integer minReadyInstances) {
             this.putQueryParameter("minReadyInstances", minReadyInstances);

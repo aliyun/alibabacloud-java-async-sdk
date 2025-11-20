@@ -132,7 +132,16 @@ public class DescribeSwimmingLaneResponseBody extends TeaModel {
         } 
 
         /**
-         * Code.
+         * <p>The HTTP status code or the error code. Valid values:</p>
+         * <ul>
+         * <li><strong>2xx</strong>: The request was successful.</li>
+         * <li><strong>3xx</strong>: The request was redirected.</li>
+         * <li><strong>4xx</strong>: The request failed.</li>
+         * <li><strong>5xx</strong>: A server error occurred.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>200</p>
          */
         public Builder code(String code) {
             this.code = code;
@@ -140,7 +149,7 @@ public class DescribeSwimmingLaneResponseBody extends TeaModel {
         }
 
         /**
-         * Data.
+         * <p>Responses.</p>
          */
         public Builder data(Data data) {
             this.data = data;
@@ -148,7 +157,11 @@ public class DescribeSwimmingLaneResponseBody extends TeaModel {
         }
 
         /**
-         * ErrorCode.
+         * <p>The status code. Value values:</p>
+         * <ul>
+         * <li>If the request was successful, <strong>ErrorCode</strong> is not returned.</li>
+         * <li>If the request failed, <strong>ErrorCode</strong> is returned. For more information, see <strong>Error codes</strong> in this topic.</li>
+         * </ul>
          */
         public Builder errorCode(String errorCode) {
             this.errorCode = errorCode;
@@ -156,7 +169,14 @@ public class DescribeSwimmingLaneResponseBody extends TeaModel {
         }
 
         /**
-         * Message.
+         * <p>The returned message. Valid values:</p>
+         * <ul>
+         * <li>The error message returned because the request is normal and <strong>success</strong> is returned.</li>
+         * <li>If the request is abnormal, the specific exception error code is returned.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>success</p>
          */
         public Builder message(String message) {
             this.message = message;
@@ -164,7 +184,10 @@ public class DescribeSwimmingLaneResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>30375C38-F4ED-4135-A0AE-5C75DC7F****</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -172,7 +195,14 @@ public class DescribeSwimmingLaneResponseBody extends TeaModel {
         }
 
         /**
-         * Success.
+         * <p>Indicates whether the request was successful. Valid values: Valid values:</p>
+         * <ul>
+         * <li><strong>true</strong>: The information was queried.</li>
+         * <li><strong>false</strong>: Query failed.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder success(Boolean success) {
             this.success = success;
@@ -180,7 +210,10 @@ public class DescribeSwimmingLaneResponseBody extends TeaModel {
         }
 
         /**
-         * TraceId.
+         * <p>The ID of the trace. This parameter is used to query the exact call information.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>0a98a02315955564772843261e****</p>
          */
         public Builder traceId(String traceId) {
             this.traceId = traceId;
@@ -285,7 +318,10 @@ public class DescribeSwimmingLaneResponseBody extends TeaModel {
             } 
 
             /**
-             * Condition.
+             * <p>The matching rule.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>==</p>
              */
             public Builder condition(String condition) {
                 this.condition = condition;
@@ -293,7 +329,10 @@ public class DescribeSwimmingLaneResponseBody extends TeaModel {
             }
 
             /**
-             * Name.
+             * <p>The name of the parameter.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>t</p>
              */
             public Builder name(String name) {
                 this.name = name;
@@ -301,7 +340,10 @@ public class DescribeSwimmingLaneResponseBody extends TeaModel {
             }
 
             /**
-             * Type.
+             * <p>Parameter type.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Header</p>
              */
             public Builder type(String type) {
                 this.type = type;
@@ -309,7 +351,10 @@ public class DescribeSwimmingLaneResponseBody extends TeaModel {
             }
 
             /**
-             * Value.
+             * <p>The match value of the condition.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>g1</p>
              */
             public Builder value(String value) {
                 this.value = value;
@@ -317,7 +362,7 @@ public class DescribeSwimmingLaneResponseBody extends TeaModel {
             }
 
             /**
-             * Values.
+             * <p>The match value of the condition.</p>
              */
             public Builder values(java.util.List<String> values) {
                 this.values = values;
@@ -436,7 +481,14 @@ public class DescribeSwimmingLaneResponseBody extends TeaModel {
             } 
 
             /**
-             * ConditionJoiner.
+             * <p>Logical connectors between conditions:</p>
+             * <ul>
+             * <li>AND: All conditions are met at the same time.</li>
+             * <li>OR: Any condition is met.</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>AND</p>
              */
             public Builder conditionJoiner(String conditionJoiner) {
                 this.conditionJoiner = conditionJoiner;
@@ -444,7 +496,7 @@ public class DescribeSwimmingLaneResponseBody extends TeaModel {
             }
 
             /**
-             * Conditions.
+             * <p>The matching condition.</p>
              */
             public Builder conditions(java.util.List<Conditions> conditions) {
                 this.conditions = conditions;
@@ -452,7 +504,10 @@ public class DescribeSwimmingLaneResponseBody extends TeaModel {
             }
 
             /**
-             * IndependentPercentageEnable.
+             * <p>Whether to enable proportional grayscale.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>true</p>
              */
             public Builder independentPercentageEnable(Boolean independentPercentageEnable) {
                 this.independentPercentageEnable = independentPercentageEnable;
@@ -460,7 +515,7 @@ public class DescribeSwimmingLaneResponseBody extends TeaModel {
             }
 
             /**
-             * Paths.
+             * <p>The request path.</p>
              */
             public Builder paths(java.util.List<String> paths) {
                 this.paths = paths;
@@ -468,7 +523,10 @@ public class DescribeSwimmingLaneResponseBody extends TeaModel {
             }
 
             /**
-             * Percentage.
+             * <p>The traffic ratio. Valid values: 0 to 100.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>50</p>
              */
             public Builder percentage(Integer percentage) {
                 this.percentage = percentage;
@@ -476,7 +534,7 @@ public class DescribeSwimmingLaneResponseBody extends TeaModel {
             }
 
             /**
-             * PercentageByPath.
+             * <p>Traffic matching.</p>
              */
             public Builder percentageByPath(java.util.Map<String, Integer> percentageByPath) {
                 this.percentageByPath = percentageByPath;
@@ -582,7 +640,10 @@ public class DescribeSwimmingLaneResponseBody extends TeaModel {
             } 
 
             /**
-             * AppId.
+             * <p>The ID of the application.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>6b4c0f64-f679-4580-8105-91eac4******</p>
              */
             public Builder appId(String appId) {
                 this.appId = appId;
@@ -590,7 +651,10 @@ public class DescribeSwimmingLaneResponseBody extends TeaModel {
             }
 
             /**
-             * AppName.
+             * <p>The name of the application.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>test</p>
              */
             public Builder appName(String appName) {
                 this.appName = appName;
@@ -598,7 +662,10 @@ public class DescribeSwimmingLaneResponseBody extends TeaModel {
             }
 
             /**
-             * MseAppId.
+             * <p>The ID of the MSE instance.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>mse-cn-53y49******</p>
              */
             public Builder mseAppId(String mseAppId) {
                 this.mseAppId = mseAppId;
@@ -606,7 +673,10 @@ public class DescribeSwimmingLaneResponseBody extends TeaModel {
             }
 
             /**
-             * MseAppName.
+             * <p>The name of the MSE instance.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>sae-test</p>
              */
             public Builder mseAppName(String mseAppName) {
                 this.mseAppName = mseAppName;
@@ -614,7 +684,10 @@ public class DescribeSwimmingLaneResponseBody extends TeaModel {
             }
 
             /**
-             * mseNamespaceId.
+             * <p>The ID of the MSE namespace.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>6733e538-d52f-48e6-91a4-192f91******</p>
              */
             public Builder mseNamespaceId(String mseNamespaceId) {
                 this.mseNamespaceId = mseNamespaceId;
@@ -707,7 +780,10 @@ public class DescribeSwimmingLaneResponseBody extends TeaModel {
             } 
 
             /**
-             * Condition.
+             * <p>The matching rule.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>==</p>
              */
             public Builder condition(String condition) {
                 this.condition = condition;
@@ -715,7 +791,10 @@ public class DescribeSwimmingLaneResponseBody extends TeaModel {
             }
 
             /**
-             * Name.
+             * <p>The parameter name.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>t</p>
              */
             public Builder name(String name) {
                 this.name = name;
@@ -723,7 +802,10 @@ public class DescribeSwimmingLaneResponseBody extends TeaModel {
             }
 
             /**
-             * Type.
+             * <p>The type of the parameter.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Header</p>
              */
             public Builder type(String type) {
                 this.type = type;
@@ -731,7 +813,10 @@ public class DescribeSwimmingLaneResponseBody extends TeaModel {
             }
 
             /**
-             * Value.
+             * <p>The match value of the condition.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>g1</p>
              */
             public Builder value(String value) {
                 this.value = value;
@@ -798,7 +883,10 @@ public class DescribeSwimmingLaneResponseBody extends TeaModel {
             } 
 
             /**
-             * Path.
+             * <p>The path.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>/Path</p>
              */
             public Builder path(String path) {
                 this.path = path;
@@ -806,7 +894,10 @@ public class DescribeSwimmingLaneResponseBody extends TeaModel {
             }
 
             /**
-             * Type.
+             * <p>The matching rule.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Header</p>
              */
             public Builder type(String type) {
                 this.type = type;
@@ -860,7 +951,7 @@ public class DescribeSwimmingLaneResponseBody extends TeaModel {
             } 
 
             /**
-             * PathPredicate.
+             * <p>The path matching rule.</p>
              */
             public Builder pathPredicate(PathPredicate pathPredicate) {
                 this.pathPredicate = pathPredicate;
@@ -940,7 +1031,10 @@ public class DescribeSwimmingLaneResponseBody extends TeaModel {
             } 
 
             /**
-             * RouteId.
+             * <p>The route ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>9504</p>
              */
             public Builder routeId(Long routeId) {
                 this.routeId = routeId;
@@ -948,7 +1042,10 @@ public class DescribeSwimmingLaneResponseBody extends TeaModel {
             }
 
             /**
-             * RouteName.
+             * <p>The name of the route.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>demo</p>
              */
             public Builder routeName(String routeName) {
                 this.routeName = routeName;
@@ -956,7 +1053,7 @@ public class DescribeSwimmingLaneResponseBody extends TeaModel {
             }
 
             /**
-             * RoutePredicate.
+             * <p>The routing rule.</p>
              */
             public Builder routePredicate(RoutePredicate routePredicate) {
                 this.routePredicate = routePredicate;
@@ -1088,7 +1185,10 @@ public class DescribeSwimmingLaneResponseBody extends TeaModel {
             } 
 
             /**
-             * ConditionJoiner.
+             * <p>The logical connector between conditions.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>AND</p>
              */
             public Builder conditionJoiner(String conditionJoiner) {
                 this.conditionJoiner = conditionJoiner;
@@ -1096,7 +1196,7 @@ public class DescribeSwimmingLaneResponseBody extends TeaModel {
             }
 
             /**
-             * Conditions.
+             * <p>The matching condition.</p>
              */
             public Builder conditions(java.util.List<MseGatewayEntryRuleConditions> conditions) {
                 this.conditions = conditions;
@@ -1104,7 +1204,10 @@ public class DescribeSwimmingLaneResponseBody extends TeaModel {
             }
 
             /**
-             * IndependentPercentageEnable.
+             * <p>Whether to enable proportional grayscale.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>true</p>
              */
             public Builder independentPercentageEnable(Boolean independentPercentageEnable) {
                 this.independentPercentageEnable = independentPercentageEnable;
@@ -1112,7 +1215,10 @@ public class DescribeSwimmingLaneResponseBody extends TeaModel {
             }
 
             /**
-             * Percentage.
+             * <p>The proportion of path traffic.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>100</p>
              */
             public Builder percentage(Integer percentage) {
                 this.percentage = percentage;
@@ -1120,7 +1226,7 @@ public class DescribeSwimmingLaneResponseBody extends TeaModel {
             }
 
             /**
-             * PercentageByRoute.
+             * <p>The traffic configuration.</p>
              */
             public Builder percentageByRoute(java.util.Map<String, Integer> percentageByRoute) {
                 this.percentageByRoute = percentageByRoute;
@@ -1128,7 +1234,7 @@ public class DescribeSwimmingLaneResponseBody extends TeaModel {
             }
 
             /**
-             * RouteIds.
+             * <p>The list of route IDs.</p>
              */
             public Builder routeIds(java.util.List<Long> routeIds) {
                 this.routeIds = routeIds;
@@ -1136,7 +1242,7 @@ public class DescribeSwimmingLaneResponseBody extends TeaModel {
             }
 
             /**
-             * Routes.
+             * <p>The detailed configuration of the routing rule.</p>
              */
             public Builder routes(java.util.List<Routes> routes) {
                 this.routes = routes;
@@ -1294,7 +1400,7 @@ public class DescribeSwimmingLaneResponseBody extends TeaModel {
             } 
 
             /**
-             * AppEntryRule.
+             * <p>Apply ingress rules.</p>
              */
             public Builder appEntryRule(AppEntryRule appEntryRule) {
                 this.appEntryRule = appEntryRule;
@@ -1302,7 +1408,7 @@ public class DescribeSwimmingLaneResponseBody extends TeaModel {
             }
 
             /**
-             * Apps.
+             * <p>The apps.</p>
              */
             public Builder apps(java.util.List<Apps> apps) {
                 this.apps = apps;
@@ -1310,7 +1416,14 @@ public class DescribeSwimmingLaneResponseBody extends TeaModel {
             }
 
             /**
-             * CanaryModel.
+             * <p>The routing mode for end-to-end canary release.</p>
+             * <ul>
+             * <li>0: routing based on request content</li>
+             * <li>1: routing based on percentages</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>0</p>
              */
             public Builder canaryModel(Integer canaryModel) {
                 this.canaryModel = canaryModel;
@@ -1318,7 +1431,14 @@ public class DescribeSwimmingLaneResponseBody extends TeaModel {
             }
 
             /**
-             * Enable.
+             * <p>Lane status:</p>
+             * <ul>
+             * <li>true: enabled</li>
+             * <li>false: disabled</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>true</p>
              */
             public Builder enable(Boolean enable) {
                 this.enable = enable;
@@ -1326,7 +1446,10 @@ public class DescribeSwimmingLaneResponseBody extends TeaModel {
             }
 
             /**
-             * EnableRules.
+             * <p>Whether the traffic rule is enabled.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>true</p>
              */
             public Builder enableRules(Boolean enableRules) {
                 this.enableRules = enableRules;
@@ -1334,7 +1457,10 @@ public class DescribeSwimmingLaneResponseBody extends TeaModel {
             }
 
             /**
-             * LaneId.
+             * <p>The ID of the lane.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>9488</p>
              */
             public Builder laneId(Long laneId) {
                 this.laneId = laneId;
@@ -1342,7 +1468,10 @@ public class DescribeSwimmingLaneResponseBody extends TeaModel {
             }
 
             /**
-             * LaneName.
+             * <p>The name of the lane group.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>mse-test</p>
              */
             public Builder laneName(String laneName) {
                 this.laneName = laneName;
@@ -1350,7 +1479,10 @@ public class DescribeSwimmingLaneResponseBody extends TeaModel {
             }
 
             /**
-             * LaneTag.
+             * <p>The label of the lane.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>{&quot;alicloud.service.tag&quot;:&quot;g1&quot;}</p>
              */
             public Builder laneTag(String laneTag) {
                 this.laneTag = laneTag;
@@ -1358,7 +1490,7 @@ public class DescribeSwimmingLaneResponseBody extends TeaModel {
             }
 
             /**
-             * MseGatewayEntryRule.
+             * <p>MSE gateway routes.</p>
              */
             public Builder mseGatewayEntryRule(MseGatewayEntryRule mseGatewayEntryRule) {
                 this.mseGatewayEntryRule = mseGatewayEntryRule;

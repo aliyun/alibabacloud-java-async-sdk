@@ -1318,11 +1318,23 @@ public class ListIngressesResponseBody extends TeaModel {
      * <p>ListIngressesResponseBody</p>
      */
     public static class Data extends TeaModel {
+        @com.aliyun.core.annotation.NameInMap("CurrentPage")
+        private Integer currentPage;
+
         @com.aliyun.core.annotation.NameInMap("IngressList")
         private java.util.List<IngressList> ingressList;
 
+        @com.aliyun.core.annotation.NameInMap("PageSize")
+        private Integer pageSize;
+
+        @com.aliyun.core.annotation.NameInMap("TotalSize")
+        private Integer totalSize;
+
         private Data(Builder builder) {
+            this.currentPage = builder.currentPage;
             this.ingressList = builder.ingressList;
+            this.pageSize = builder.pageSize;
+            this.totalSize = builder.totalSize;
         }
 
         public static Builder builder() {
@@ -1334,27 +1346,78 @@ public class ListIngressesResponseBody extends TeaModel {
         }
 
         /**
+         * @return currentPage
+         */
+        public Integer getCurrentPage() {
+            return this.currentPage;
+        }
+
+        /**
          * @return ingressList
          */
         public java.util.List<IngressList> getIngressList() {
             return this.ingressList;
         }
 
+        /**
+         * @return pageSize
+         */
+        public Integer getPageSize() {
+            return this.pageSize;
+        }
+
+        /**
+         * @return totalSize
+         */
+        public Integer getTotalSize() {
+            return this.totalSize;
+        }
+
         public static final class Builder {
+            private Integer currentPage; 
             private java.util.List<IngressList> ingressList; 
+            private Integer pageSize; 
+            private Integer totalSize; 
 
             private Builder() {
             } 
 
             private Builder(Data model) {
+                this.currentPage = model.currentPage;
                 this.ingressList = model.ingressList;
+                this.pageSize = model.pageSize;
+                this.totalSize = model.totalSize;
             } 
+
+            /**
+             * CurrentPage.
+             */
+            public Builder currentPage(Integer currentPage) {
+                this.currentPage = currentPage;
+                return this;
+            }
 
             /**
              * <p>The list of routing rules.</p>
              */
             public Builder ingressList(java.util.List<IngressList> ingressList) {
                 this.ingressList = ingressList;
+                return this;
+            }
+
+            /**
+             * PageSize.
+             */
+            public Builder pageSize(Integer pageSize) {
+                this.pageSize = pageSize;
+                return this;
+            }
+
+            /**
+             * TotalSize.
+             */
+            public Builder totalSize(Integer totalSize) {
+                this.totalSize = totalSize;
                 return this;
             }
 

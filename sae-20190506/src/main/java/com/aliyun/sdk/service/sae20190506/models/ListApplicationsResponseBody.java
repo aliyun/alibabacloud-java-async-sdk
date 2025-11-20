@@ -158,7 +158,13 @@ public class ListApplicationsResponseBody extends TeaModel {
         } 
 
         /**
-         * <p>Queries applications.</p>
+         * <p>The HTTP status code. Take note of the following rules:</p>
+         * <ul>
+         * <li><strong>2xx</strong>: The call was successful.</li>
+         * <li><strong>3xx</strong>: The call was redirected.</li>
+         * <li><strong>4xx</strong>: The call failed.</li>
+         * <li><strong>5xx</strong>: A server error occurred.</li>
+         * </ul>
          * 
          * <strong>example:</strong>
          * <p>200</p>
@@ -169,7 +175,7 @@ public class ListApplicationsResponseBody extends TeaModel {
         }
 
         /**
-         * <p>20</p>
+         * <p>The current page number.</p>
          * 
          * <strong>example:</strong>
          * <p>1</p>
@@ -188,7 +194,11 @@ public class ListApplicationsResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The number of entries returned on each page.</p>
+         * <p>The returned error code. Valid values:</p>
+         * <ul>
+         * <li>If the call is successful, the <strong>ErrorCode</strong> parameter is not returned.</li>
+         * <li>If the call fails, the <strong>ErrorCode</strong> parameter is returned. For more information, see the &quot;<strong>Error codes</strong>&quot; section of this topic.</li>
+         * </ul>
          * 
          * <strong>example:</strong>
          * <p>The ID of the request.</p>
@@ -199,7 +209,7 @@ public class ListApplicationsResponseBody extends TeaModel {
         }
 
         /**
-         * <p>20</p>
+         * <p>Additional message.</p>
          * 
          * <strong>example:</strong>
          * <p>success</p>
@@ -210,7 +220,7 @@ public class ListApplicationsResponseBody extends TeaModel {
         }
 
         /**
-         * <p>cn-beijing:demo</p>
+         * <p>The page size.</p>
          * 
          * <strong>example:</strong>
          * <p>20</p>
@@ -221,7 +231,7 @@ public class ListApplicationsResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The number of entries returned on each page.</p>
+         * <p>Request ID.</p>
          * 
          * <strong>example:</strong>
          * <p>B4D805CA-926D-41B1-8E63-7AD0C1ED****</p>
@@ -232,7 +242,11 @@ public class ListApplicationsResponseBody extends TeaModel {
         }
 
         /**
-         * <p>1</p>
+         * <p>Indicates whether the request was successful. Valid values:</p>
+         * <ul>
+         * <li><strong>true</strong>: The request was successful.</li>
+         * <li><strong>false</strong>: The request failed.</li>
+         * </ul>
          * 
          * <strong>example:</strong>
          * <p>true</p>
@@ -243,7 +257,7 @@ public class ListApplicationsResponseBody extends TeaModel {
         }
 
         /**
-         * <p>demo-app</p>
+         * <p>The number of applications.</p>
          * 
          * <strong>example:</strong>
          * <p>2</p>
@@ -312,7 +326,10 @@ public class ListApplicationsResponseBody extends TeaModel {
             } 
 
             /**
-             * Key.
+             * <p>The tag key.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>key</p>
              */
             public Builder key(String key) {
                 this.key = key;
@@ -320,7 +337,10 @@ public class ListApplicationsResponseBody extends TeaModel {
             }
 
             /**
-             * Value.
+             * <p>The tag value.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>value</p>
              */
             public Builder value(String value) {
                 this.value = value;
@@ -621,7 +641,10 @@ public class ListApplicationsResponseBody extends TeaModel {
             } 
 
             /**
-             * AppDeletingStatus.
+             * <p>If is deleting this application.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>false</p>
              */
             public Builder appDeletingStatus(Boolean appDeletingStatus) {
                 this.appDeletingStatus = appDeletingStatus;
@@ -629,7 +652,10 @@ public class ListApplicationsResponseBody extends TeaModel {
             }
 
             /**
-             * AppDescription.
+             * <p>The application description.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Test</p>
              */
             public Builder appDescription(String appDescription) {
                 this.appDescription = appDescription;
@@ -637,7 +663,10 @@ public class ListApplicationsResponseBody extends TeaModel {
             }
 
             /**
-             * AppId.
+             * <p>The application ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>xxx-xxx-xxx-xxx</p>
              */
             public Builder appId(String appId) {
                 this.appId = appId;
@@ -645,7 +674,10 @@ public class ListApplicationsResponseBody extends TeaModel {
             }
 
             /**
-             * AppName.
+             * <p>The application name.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>app1</p>
              */
             public Builder appName(String appName) {
                 this.appName = appName;
@@ -653,7 +685,10 @@ public class ListApplicationsResponseBody extends TeaModel {
             }
 
             /**
-             * AppType.
+             * <p>The way to deploy applications.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Image</p>
              */
             public Builder appType(String appType) {
                 this.appType = appType;
@@ -661,7 +696,10 @@ public class ListApplicationsResponseBody extends TeaModel {
             }
 
             /**
-             * BaseAppId.
+             * <p>The base application ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>ee99cce6-1c8e-4bfa-96c3-3e2fa9******</p>
              */
             public Builder baseAppId(String baseAppId) {
                 this.baseAppId = baseAppId;
@@ -669,7 +707,10 @@ public class ListApplicationsResponseBody extends TeaModel {
             }
 
             /**
-             * Cpu.
+             * <p>The CPU sepcification.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2000</p>
              */
             public Builder cpu(Integer cpu) {
                 this.cpu = cpu;
@@ -677,7 +718,10 @@ public class ListApplicationsResponseBody extends TeaModel {
             }
 
             /**
-             * Instances.
+             * <p>The number of instances.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2</p>
              */
             public Builder instances(Integer instances) {
                 this.instances = instances;
@@ -693,7 +737,10 @@ public class ListApplicationsResponseBody extends TeaModel {
             }
 
             /**
-             * Mem.
+             * <p>The memory specification.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2048</p>
              */
             public Builder mem(Integer mem) {
                 this.mem = mem;
@@ -701,7 +748,10 @@ public class ListApplicationsResponseBody extends TeaModel {
             }
 
             /**
-             * MseEnabled.
+             * <p>If this application has enabled MSE.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>true</p>
              */
             public Builder mseEnabled(Boolean mseEnabled) {
                 this.mseEnabled = mseEnabled;
@@ -709,7 +759,10 @@ public class ListApplicationsResponseBody extends TeaModel {
             }
 
             /**
-             * NamespaceId.
+             * <p>The namespace ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>cn-beijing:demo</p>
              */
             public Builder namespaceId(String namespaceId) {
                 this.namespaceId = namespaceId;
@@ -717,7 +770,10 @@ public class ListApplicationsResponseBody extends TeaModel {
             }
 
             /**
-             * NamespaceName.
+             * <p>The name of the namespace.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>demo</p>
              */
             public Builder namespaceName(String namespaceName) {
                 this.namespaceName = namespaceName;
@@ -725,7 +781,15 @@ public class ListApplicationsResponseBody extends TeaModel {
             }
 
             /**
-             * NewSaeVersion.
+             * <p>The application edition.</p>
+             * <ul>
+             * <li>lite: the lightweight edition.</li>
+             * <li>std: the standard edition.</li>
+             * <li>pro: the professional edition.</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>pro</p>
              */
             public Builder newSaeVersion(String newSaeVersion) {
                 this.newSaeVersion = newSaeVersion;
@@ -733,7 +797,10 @@ public class ListApplicationsResponseBody extends TeaModel {
             }
 
             /**
-             * ProgrammingLanguage.
+             * <p>The programming language of this application.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>java</p>
              */
             public Builder programmingLanguage(String programmingLanguage) {
                 this.programmingLanguage = programmingLanguage;
@@ -741,7 +808,10 @@ public class ListApplicationsResponseBody extends TeaModel {
             }
 
             /**
-             * RegionId.
+             * <p>The region ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>cn-beijing</p>
              */
             public Builder regionId(String regionId) {
                 this.regionId = regionId;
@@ -749,7 +819,10 @@ public class ListApplicationsResponseBody extends TeaModel {
             }
 
             /**
-             * RunningInstances.
+             * <p>The number of instances in running state.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2</p>
              */
             public Builder runningInstances(Integer runningInstances) {
                 this.runningInstances = runningInstances;
@@ -757,7 +830,10 @@ public class ListApplicationsResponseBody extends TeaModel {
             }
 
             /**
-             * ScaleRuleEnabled.
+             * <p>If the scale rule is enabled.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>false</p>
              */
             public Builder scaleRuleEnabled(Boolean scaleRuleEnabled) {
                 this.scaleRuleEnabled = scaleRuleEnabled;
@@ -765,7 +841,10 @@ public class ListApplicationsResponseBody extends TeaModel {
             }
 
             /**
-             * ScaleRuleType.
+             * <p>The type of the scale rule.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>timing</p>
              */
             public Builder scaleRuleType(String scaleRuleType) {
                 this.scaleRuleType = scaleRuleType;
@@ -773,7 +852,7 @@ public class ListApplicationsResponseBody extends TeaModel {
             }
 
             /**
-             * Tags.
+             * <p>The application tag.</p>
              */
             public Builder tags(java.util.List<Tags> tags) {
                 this.tags = tags;
@@ -1268,7 +1347,10 @@ public class ListApplicationsResponseBody extends TeaModel {
             }
 
             /**
-             * AppType.
+             * <p>The application type.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Image</p>
              */
             public Builder appType(String appType) {
                 this.appType = appType;
@@ -1276,7 +1358,10 @@ public class ListApplicationsResponseBody extends TeaModel {
             }
 
             /**
-             * BaseAppId.
+             * <p>The base app ID. Only gray-release applications have this property.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>xxx-xxx-xx-xxx</p>
              */
             public Builder baseAppId(String baseAppId) {
                 this.baseAppId = baseAppId;
@@ -1284,7 +1369,7 @@ public class ListApplicationsResponseBody extends TeaModel {
             }
 
             /**
-             * Children.
+             * <p>The gray-release application list of this application.</p>
              */
             public Builder children(java.util.List<Children> children) {
                 this.children = children;
@@ -1312,7 +1397,10 @@ public class ListApplicationsResponseBody extends TeaModel {
             }
 
             /**
-             * DiskSize.
+             * <p>The disk size. Unit: GB.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>20</p>
              */
             public Builder diskSize(Integer diskSize) {
                 this.diskSize = diskSize;
@@ -1320,7 +1408,10 @@ public class ListApplicationsResponseBody extends TeaModel {
             }
 
             /**
-             * EnableIdle.
+             * <p>If the idle mode is enabled.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>false</p>
              */
             public Builder enableIdle(String enableIdle) {
                 this.enableIdle = enableIdle;
@@ -1328,7 +1419,10 @@ public class ListApplicationsResponseBody extends TeaModel {
             }
 
             /**
-             * ImageUrl.
+             * <p>The image URL.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>registry.cn-hangzhou.aliyuncs.com/sae-serverless-demo/sae-demo:microservice-java-provider-v1.0</p>
              */
             public Builder imageUrl(String imageUrl) {
                 this.imageUrl = imageUrl;
@@ -1378,7 +1472,10 @@ public class ListApplicationsResponseBody extends TeaModel {
             }
 
             /**
-             * MseEnabled.
+             * <p>The application has enabled MSE or not.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>true</p>
              */
             public Builder mseEnabled(Boolean mseEnabled) {
                 this.mseEnabled = mseEnabled;
@@ -1386,7 +1483,15 @@ public class ListApplicationsResponseBody extends TeaModel {
             }
 
             /**
-             * MseNamespaceId.
+             * <p>The name space of MSE:</p>
+             * <ul>
+             * <li>default: the free edition.</li>
+             * <li>sae-pro: the professional edition.</li>
+             * <li>sae-ent: the enterprise eiditon.</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>sae-ent</p>
              */
             public Builder mseNamespaceId(String mseNamespaceId) {
                 this.mseNamespaceId = mseNamespaceId;
@@ -1405,7 +1510,10 @@ public class ListApplicationsResponseBody extends TeaModel {
             }
 
             /**
-             * NamespaceName.
+             * <p>The name of the namespace.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>demo</p>
              */
             public Builder namespaceName(String namespaceName) {
                 this.namespaceName = namespaceName;
@@ -1413,7 +1521,15 @@ public class ListApplicationsResponseBody extends TeaModel {
             }
 
             /**
-             * NewSaeVersion.
+             * <p>The application edition.</p>
+             * <ul>
+             * <li>lite: the lightweight edition.</li>
+             * <li>std: the standard edition.</li>
+             * <li>pro: the professional edition.</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>pro</p>
              */
             public Builder newSaeVersion(String newSaeVersion) {
                 this.newSaeVersion = newSaeVersion;
@@ -1421,7 +1537,7 @@ public class ListApplicationsResponseBody extends TeaModel {
             }
 
             /**
-             * PackageUrl.
+             * <p>The package URL.</p>
              */
             public Builder packageUrl(String packageUrl) {
                 this.packageUrl = packageUrl;
@@ -1429,7 +1545,10 @@ public class ListApplicationsResponseBody extends TeaModel {
             }
 
             /**
-             * ProgrammingLanguage.
+             * <p>The programming language of the application.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>java</p>
              */
             public Builder programmingLanguage(String programmingLanguage) {
                 this.programmingLanguage = programmingLanguage;
@@ -1467,7 +1586,7 @@ public class ListApplicationsResponseBody extends TeaModel {
             }
 
             /**
-             * VpcId.
+             * <p>VPC ID.</p>
              */
             public Builder vpcId(String vpcId) {
                 this.vpcId = vpcId;
@@ -1568,7 +1687,7 @@ public class ListApplicationsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The number of application instances.</p>
+             * <p>The current page number.</p>
              * 
              * <strong>example:</strong>
              * <p>1</p>
@@ -1579,7 +1698,7 @@ public class ListApplicationsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The tags of the application.</p>
+             * <p>The number of records in each page.</p>
              * 
              * <strong>example:</strong>
              * <p>20</p>
@@ -1590,7 +1709,7 @@ public class ListApplicationsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The information about applications.</p>
+             * <p>The number of applications.</p>
              * 
              * <strong>example:</strong>
              * <p>2</p>

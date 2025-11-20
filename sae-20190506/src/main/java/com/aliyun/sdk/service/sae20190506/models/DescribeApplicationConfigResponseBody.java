@@ -162,6 +162,9 @@ public class DescribeApplicationConfigResponseBody extends TeaModel {
          * <li>If the call is successful, the <strong>ErrorCode</strong> parameter is not returned.</li>
          * <li>If the call fails, the <strong>ErrorCode</strong> parameter is returned. For more information, see the &quot;<strong>Error codes</strong>&quot; section of this topic.</li>
          * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>Null</p>
          */
         public Builder errorCode(String errorCode) {
             this.errorCode = errorCode;
@@ -357,6 +360,84 @@ public class DescribeApplicationConfigResponseBody extends TeaModel {
      *
      * <p>DescribeApplicationConfigResponseBody</p>
      */
+    public static class EmptyDirDesc extends TeaModel {
+        @com.aliyun.core.annotation.NameInMap("MountPath")
+        private String mountPath;
+
+        @com.aliyun.core.annotation.NameInMap("Name")
+        private String name;
+
+        private EmptyDirDesc(Builder builder) {
+            this.mountPath = builder.mountPath;
+            this.name = builder.name;
+        }
+
+        public static Builder builder() {
+            return new Builder();
+        }
+
+        public static EmptyDirDesc create() {
+            return builder().build();
+        }
+
+        /**
+         * @return mountPath
+         */
+        public String getMountPath() {
+            return this.mountPath;
+        }
+
+        /**
+         * @return name
+         */
+        public String getName() {
+            return this.name;
+        }
+
+        public static final class Builder {
+            private String mountPath; 
+            private String name; 
+
+            private Builder() {
+            } 
+
+            private Builder(EmptyDirDesc model) {
+                this.mountPath = model.mountPath;
+                this.name = model.name;
+            } 
+
+            /**
+             * <p>The path on which the ConfigMap is mounted.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>/tmp</p>
+             */
+            public Builder mountPath(String mountPath) {
+                this.mountPath = mountPath;
+                return this;
+            }
+
+            /**
+             * Name.
+             */
+            public Builder name(String name) {
+                this.name = name;
+                return this;
+            }
+
+            public EmptyDirDesc build() {
+                return new EmptyDirDesc(this);
+            } 
+
+        } 
+
+    }
+    /**
+     * 
+     * {@link DescribeApplicationConfigResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeApplicationConfigResponseBody</p>
+     */
     public static class InitContainersConfigConfigMapMountDesc extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("ConfigMapId")
         private Long configMapId;
@@ -430,7 +511,7 @@ public class DescribeApplicationConfigResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The ID of the ConfigMap.</p>
+             * <p>ConfigMap ID。</p>
              * 
              * <strong>example:</strong>
              * <p>1</p>
@@ -452,7 +533,7 @@ public class DescribeApplicationConfigResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The key-value pair that is stored in the ConfigMap.</p>
+             * <p>The key.</p>
              * 
              * <strong>example:</strong>
              * <p>k1</p>
@@ -463,7 +544,7 @@ public class DescribeApplicationConfigResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The path on which the ConfigMap is mounted.</p>
+             * <p>The mount path.</p>
              * 
              * <strong>example:</strong>
              * <p>/tmp</p>
@@ -486,6 +567,84 @@ public class DescribeApplicationConfigResponseBody extends TeaModel {
      *
      * <p>DescribeApplicationConfigResponseBody</p>
      */
+    public static class InitContainersConfigEmptyDirDesc extends TeaModel {
+        @com.aliyun.core.annotation.NameInMap("MountPath")
+        private String mountPath;
+
+        @com.aliyun.core.annotation.NameInMap("Name")
+        private String name;
+
+        private InitContainersConfigEmptyDirDesc(Builder builder) {
+            this.mountPath = builder.mountPath;
+            this.name = builder.name;
+        }
+
+        public static Builder builder() {
+            return new Builder();
+        }
+
+        public static InitContainersConfigEmptyDirDesc create() {
+            return builder().build();
+        }
+
+        /**
+         * @return mountPath
+         */
+        public String getMountPath() {
+            return this.mountPath;
+        }
+
+        /**
+         * @return name
+         */
+        public String getName() {
+            return this.name;
+        }
+
+        public static final class Builder {
+            private String mountPath; 
+            private String name; 
+
+            private Builder() {
+            } 
+
+            private Builder(InitContainersConfigEmptyDirDesc model) {
+                this.mountPath = model.mountPath;
+                this.name = model.name;
+            } 
+
+            /**
+             * <p>The mount path.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>/tmp</p>
+             */
+            public Builder mountPath(String mountPath) {
+                this.mountPath = mountPath;
+                return this;
+            }
+
+            /**
+             * Name.
+             */
+            public Builder name(String name) {
+                this.name = name;
+                return this;
+            }
+
+            public InitContainersConfigEmptyDirDesc build() {
+                return new InitContainersConfigEmptyDirDesc(this);
+            } 
+
+        } 
+
+    }
+    /**
+     * 
+     * {@link DescribeApplicationConfigResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeApplicationConfigResponseBody</p>
+     */
     public static class InitContainersConfig extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Command")
         private String command;
@@ -495,6 +654,9 @@ public class DescribeApplicationConfigResponseBody extends TeaModel {
 
         @com.aliyun.core.annotation.NameInMap("ConfigMapMountDesc")
         private java.util.List<InitContainersConfigConfigMapMountDesc> configMapMountDesc;
+
+        @com.aliyun.core.annotation.NameInMap("EmptyDirDesc")
+        private java.util.List<InitContainersConfigEmptyDirDesc> emptyDirDesc;
 
         @com.aliyun.core.annotation.NameInMap("Envs")
         private String envs;
@@ -509,6 +671,7 @@ public class DescribeApplicationConfigResponseBody extends TeaModel {
             this.command = builder.command;
             this.commandArgs = builder.commandArgs;
             this.configMapMountDesc = builder.configMapMountDesc;
+            this.emptyDirDesc = builder.emptyDirDesc;
             this.envs = builder.envs;
             this.imageUrl = builder.imageUrl;
             this.name = builder.name;
@@ -544,6 +707,13 @@ public class DescribeApplicationConfigResponseBody extends TeaModel {
         }
 
         /**
+         * @return emptyDirDesc
+         */
+        public java.util.List<InitContainersConfigEmptyDirDesc> getEmptyDirDesc() {
+            return this.emptyDirDesc;
+        }
+
+        /**
          * @return envs
          */
         public String getEnvs() {
@@ -568,6 +738,7 @@ public class DescribeApplicationConfigResponseBody extends TeaModel {
             private String command; 
             private String commandArgs; 
             private java.util.List<InitContainersConfigConfigMapMountDesc> configMapMountDesc; 
+            private java.util.List<InitContainersConfigEmptyDirDesc> emptyDirDesc; 
             private String envs; 
             private String imageUrl; 
             private String name; 
@@ -579,13 +750,24 @@ public class DescribeApplicationConfigResponseBody extends TeaModel {
                 this.command = model.command;
                 this.commandArgs = model.commandArgs;
                 this.configMapMountDesc = model.configMapMountDesc;
+                this.emptyDirDesc = model.emptyDirDesc;
                 this.envs = model.envs;
                 this.imageUrl = model.imageUrl;
                 this.name = model.name;
             } 
 
             /**
-             * Command.
+             * <p>The command that is used to start the image. The command must be an existing executable object in the container. Sample statements:</p>
+             * <pre><code>command:
+             *       - echo
+             *       - abc
+             *       - &gt;
+             *       - file0
+             * </code></pre>
+             * <p>In this example, the Command parameter is set to <code>Command=&quot;echo&quot;, CommandArgs=[&quot;abc&quot;, &quot;&gt;&quot;, &quot;file0&quot;]</code>.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>/bin/sh</p>
              */
             public Builder command(String command) {
                 this.command = command;
@@ -593,7 +775,12 @@ public class DescribeApplicationConfigResponseBody extends TeaModel {
             }
 
             /**
-             * CommandArgs.
+             * <p>The parameters of the image startup command. The CommandArgs parameter specifies the parameters that are required for the <strong>Command</strong> parameter. You can specify the name in one of the following formats:</p>
+             * <p><code>[&quot;a&quot;,&quot;b&quot;]</code></p>
+             * <p>In the preceding example, the CommandArgs parameter is set to <code>CommandArgs=[&quot;abc&quot;, &quot;&gt;&quot;, &quot;file0&quot;]</code>. The data type of <code>[&quot;abc&quot;, &quot;&gt;&quot;, &quot;file0&quot;]</code> must be an array of strings in the JSON format. This parameter is optional.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>[&quot;a&quot;,&quot;b&quot;]</p>
              */
             public Builder commandArgs(String commandArgs) {
                 this.commandArgs = commandArgs;
@@ -601,7 +788,7 @@ public class DescribeApplicationConfigResponseBody extends TeaModel {
             }
 
             /**
-             * ConfigMapMountDesc.
+             * <p>The information of ConfigMap.</p>
              */
             public Builder configMapMountDesc(java.util.List<InitContainersConfigConfigMapMountDesc> configMapMountDesc) {
                 this.configMapMountDesc = configMapMountDesc;
@@ -609,7 +796,34 @@ public class DescribeApplicationConfigResponseBody extends TeaModel {
             }
 
             /**
-             * Envs.
+             * EmptyDirDesc.
+             */
+            public Builder emptyDirDesc(java.util.List<InitContainersConfigEmptyDirDesc> emptyDirDesc) {
+                this.emptyDirDesc = emptyDirDesc;
+                return this;
+            }
+
+            /**
+             * <p>The environment variables. You can configure custom environment variables or reference a ConfigMap. If you want to reference a ConfigMap, you must first create a ConfigMap. For more information, see <a href="https://help.aliyun.com/document_detail/176914.html">CreateConfigMap</a>. Take note of the following rules:</p>
+             * <ul>
+             * <li><p>Customize</p>
+             * <ul>
+             * <li><strong>name</strong>: the name of the environment variable.</li>
+             * <li><strong>value</strong>: the value of the environment variable.</li>
+             * </ul>
+             * </li>
+             * <li><p>Reference ConfigMap</p>
+             * <ul>
+             * <li><strong>name</strong>: the name of the environment variable. You can reference one or all keys. If you want to reference all keys, specify <code>sae-sys-configmap-all-&lt;ConfigMap name&gt;</code>. Example: <code>sae-sys-configmap-all-test1</code>.</li>
+             * <li><strong>valueFrom</strong>: the reference of the environment variable. Set the value to <code>configMapRef</code>.</li>
+             * <li><strong>configMapId</strong>: the ConfigMap ID.</li>
+             * <li><strong>key</strong>: the key. If you want to reference all keys, do not configure this parameter.</li>
+             * </ul>
+             * </li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>[{&quot;name&quot;:&quot;TEST_ENV_KEY&quot;,&quot;value&quot;:&quot;TEST_ENV_VAR&quot;}]</p>
              */
             public Builder envs(String envs) {
                 this.envs = envs;
@@ -617,7 +831,10 @@ public class DescribeApplicationConfigResponseBody extends TeaModel {
             }
 
             /**
-             * ImageUrl.
+             * <p>The image URL of the initialized container.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>registry.cn-shenzhen.aliyuncs.com/sae-serverless-demo/sae-demo:microservice-java-provider-v1.0</p>
              */
             public Builder imageUrl(String imageUrl) {
                 this.imageUrl = imageUrl;
@@ -625,7 +842,10 @@ public class DescribeApplicationConfigResponseBody extends TeaModel {
             }
 
             /**
-             * Name.
+             * <p>The name of the initialized container.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>init-container</p>
              */
             public Builder name(String name) {
                 this.name = name;
@@ -932,10 +1152,10 @@ public class DescribeApplicationConfigResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The key-value pair that is stored in the ConfigMap.</p>
+             * <p>The key to Base64 encode values.</p>
              * 
              * <strong>example:</strong>
-             * <p>k1</p>
+             * <p>task-center</p>
              */
             public Builder key(String key) {
                 this.key = key;
@@ -943,10 +1163,10 @@ public class DescribeApplicationConfigResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The path on which the NAS file system is mounted.</p>
+             * <p>The mount path.</p>
              * 
              * <strong>example:</strong>
-             * <p>/tmp</p>
+             * <p>/opt/www/runtime/logs</p>
              */
             public Builder mountPath(String mountPath) {
                 this.mountPath = mountPath;
@@ -954,7 +1174,10 @@ public class DescribeApplicationConfigResponseBody extends TeaModel {
             }
 
             /**
-             * SecretId.
+             * <p>The secret ID of the instance.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>520</p>
              */
             public Builder secretId(Long secretId) {
                 this.secretId = secretId;
@@ -962,7 +1185,10 @@ public class DescribeApplicationConfigResponseBody extends TeaModel {
             }
 
             /**
-             * SecretName.
+             * <p>The name of the secret.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>dummy-name-opaque-894</p>
              */
             public Builder secretName(String secretName) {
                 this.secretName = secretName;
@@ -1055,10 +1281,10 @@ public class DescribeApplicationConfigResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The ID of the ConfigMap.</p>
+             * <p>The ConfigMap ID.</p>
              * 
              * <strong>example:</strong>
-             * <p>1</p>
+             * <p>7361</p>
              */
             public Builder configMapId(Long configMapId) {
                 this.configMapId = configMapId;
@@ -1066,10 +1292,10 @@ public class DescribeApplicationConfigResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The name of the ConfigMap.</p>
+             * <p>The ConfigMap name.</p>
              * 
              * <strong>example:</strong>
-             * <p>test</p>
+             * <p>ConfigMap-test</p>
              */
             public Builder configMapName(String configMapName) {
                 this.configMapName = configMapName;
@@ -1077,10 +1303,10 @@ public class DescribeApplicationConfigResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The key-value pair that is stored in the ConfigMap.</p>
+             * <p>The ConfigMap key</p>
              * 
              * <strong>example:</strong>
-             * <p>k1</p>
+             * <p>key</p>
              */
             public Builder key(String key) {
                 this.key = key;
@@ -1088,10 +1314,10 @@ public class DescribeApplicationConfigResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The path on which the NAS file system is mounted.</p>
+             * <p>The mount path.</p>
              * 
              * <strong>example:</strong>
-             * <p>/tmp</p>
+             * <p>/mnt/test</p>
              */
             public Builder mountPath(String mountPath) {
                 this.mountPath = mountPath;
@@ -1111,14 +1337,14 @@ public class DescribeApplicationConfigResponseBody extends TeaModel {
      *
      * <p>DescribeApplicationConfigResponseBody</p>
      */
-    public static class EmptyDirDesc extends TeaModel {
+    public static class SidecarContainersConfigEmptyDirDesc extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("MountPath")
         private String mountPath;
 
         @com.aliyun.core.annotation.NameInMap("Name")
         private String name;
 
-        private EmptyDirDesc(Builder builder) {
+        private SidecarContainersConfigEmptyDirDesc(Builder builder) {
             this.mountPath = builder.mountPath;
             this.name = builder.name;
         }
@@ -1127,7 +1353,7 @@ public class DescribeApplicationConfigResponseBody extends TeaModel {
             return new Builder();
         }
 
-        public static EmptyDirDesc create() {
+        public static SidecarContainersConfigEmptyDirDesc create() {
             return builder().build();
         }
 
@@ -1152,16 +1378,16 @@ public class DescribeApplicationConfigResponseBody extends TeaModel {
             private Builder() {
             } 
 
-            private Builder(EmptyDirDesc model) {
+            private Builder(SidecarContainersConfigEmptyDirDesc model) {
                 this.mountPath = model.mountPath;
                 this.name = model.name;
             } 
 
             /**
-             * <p>The path on which the NAS file system is mounted.</p>
+             * <p>Mount path of the data volume within the container.</p>
              * 
              * <strong>example:</strong>
-             * <p>/tmp</p>
+             * <p>/mnt/cache</p>
              */
             public Builder mountPath(String mountPath) {
                 this.mountPath = mountPath;
@@ -1169,15 +1395,18 @@ public class DescribeApplicationConfigResponseBody extends TeaModel {
             }
 
             /**
-             * Name.
+             * <p>The name of the shared temporary storage.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>sidecar-container</p>
              */
             public Builder name(String name) {
                 this.name = name;
                 return this;
             }
 
-            public EmptyDirDesc build() {
-                return new EmptyDirDesc(this);
+            public SidecarContainersConfigEmptyDirDesc build() {
+                return new SidecarContainersConfigEmptyDirDesc(this);
             } 
 
         } 
@@ -1206,7 +1435,7 @@ public class DescribeApplicationConfigResponseBody extends TeaModel {
         private Integer cpu;
 
         @com.aliyun.core.annotation.NameInMap("EmptyDirDesc")
-        private java.util.List<EmptyDirDesc> emptyDirDesc;
+        private java.util.List<SidecarContainersConfigEmptyDirDesc> emptyDirDesc;
 
         @com.aliyun.core.annotation.NameInMap("Envs")
         private String envs;
@@ -1279,7 +1508,7 @@ public class DescribeApplicationConfigResponseBody extends TeaModel {
         /**
          * @return emptyDirDesc
          */
-        public java.util.List<EmptyDirDesc> getEmptyDirDesc() {
+        public java.util.List<SidecarContainersConfigEmptyDirDesc> getEmptyDirDesc() {
             return this.emptyDirDesc;
         }
 
@@ -1317,7 +1546,7 @@ public class DescribeApplicationConfigResponseBody extends TeaModel {
             private String commandArgs; 
             private java.util.List<SidecarContainersConfigConfigMapMountDesc> configMapMountDesc; 
             private Integer cpu; 
-            private java.util.List<EmptyDirDesc> emptyDirDesc; 
+            private java.util.List<SidecarContainersConfigEmptyDirDesc> emptyDirDesc; 
             private String envs; 
             private String imageUrl; 
             private Integer memory; 
@@ -1340,7 +1569,10 @@ public class DescribeApplicationConfigResponseBody extends TeaModel {
             } 
 
             /**
-             * AcrInstanceId.
+             * <p>The ID of Container Registry Enterprise Edition instance. This parameter is required when the <strong>ImageUrl</strong> parameter is set to the URL of an image in an ACR Enterprise Edition instance.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>cri-fhzlneorxala66ip</p>
              */
             public Builder acrInstanceId(String acrInstanceId) {
                 this.acrInstanceId = acrInstanceId;
@@ -1348,7 +1580,17 @@ public class DescribeApplicationConfigResponseBody extends TeaModel {
             }
 
             /**
-             * Command.
+             * <p>The command that is used to start the image. The command must be an existing executable object in the container. Sample statements:</p>
+             * <pre><code>command:
+             *       - echo
+             *       - abc
+             *       - &gt;
+             *       - file0
+             * </code></pre>
+             * <p>In this example, the Command parameter is set to <code>Command=&quot;echo&quot;, CommandArgs=[&quot;abc&quot;, &quot;&gt;&quot;, &quot;file0&quot;]</code>.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>/bin/sh</p>
              */
             public Builder command(String command) {
                 this.command = command;
@@ -1356,7 +1598,12 @@ public class DescribeApplicationConfigResponseBody extends TeaModel {
             }
 
             /**
-             * CommandArgs.
+             * <p>The parameters of the image startup command. The CommandArgs parameter specifies the parameters that are required for the <strong>Command</strong> parameter. You can specify the name in one of the following formats:</p>
+             * <p><code>[&quot;a&quot;,&quot;b&quot;]</code></p>
+             * <p>In the preceding example, the CommandArgs parameter is set to <code>CommandArgs=[&quot;abc&quot;, &quot;&gt;&quot;, &quot;file0&quot;]</code>. The data type of <code>[&quot;abc&quot;, &quot;&gt;&quot;, &quot;file0&quot;]</code> must be an array of strings in the JSON format. This parameter is optional.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>[&quot;-c&quot;,&quot;echo \&quot;test\&quot; &gt; /home/nas/test.log &amp;&amp; sleep 10000000s&quot;]</p>
              */
             public Builder commandArgs(String commandArgs) {
                 this.commandArgs = commandArgs;
@@ -1364,7 +1611,17 @@ public class DescribeApplicationConfigResponseBody extends TeaModel {
             }
 
             /**
-             * ConfigMapMountDesc.
+             * <p>The description of the <strong>ConfigMap</strong> instance mounted to the application. Use configurations created on the Configuration Items page to configure containers. The following table describes the parameters that are used in the preceding statements.</p>
+             * <ul>
+             * <li><strong>congfigMapId</strong>: the ID of the ConfigMap instance. You can call the <a href="https://help.aliyun.com/document_detail/176917.html">ListNamespacedConfigMaps</a> operation to obtain the ID.</li>
+             * <li><strong>key</strong>: the key.</li>
+             * </ul>
+             * <blockquote>
+             * <p>You can use the <code>sae-sys-configmap-all</code> key to mount all keys.</p>
+             * </blockquote>
+             * <ul>
+             * <li><strong>mountPath</strong>: the mount path in the container.</li>
+             * </ul>
              */
             public Builder configMapMountDesc(java.util.List<SidecarContainersConfigConfigMapMountDesc> configMapMountDesc) {
                 this.configMapMountDesc = configMapMountDesc;
@@ -1372,7 +1629,10 @@ public class DescribeApplicationConfigResponseBody extends TeaModel {
             }
 
             /**
-             * Cpu.
+             * <p>Set the CPU resource limit of the primary container that can be used by Sidecar container.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>500</p>
              */
             public Builder cpu(Integer cpu) {
                 this.cpu = cpu;
@@ -1380,15 +1640,34 @@ public class DescribeApplicationConfigResponseBody extends TeaModel {
             }
 
             /**
-             * EmptyDirDesc.
+             * <p>Shared temporary storage mounted to the primary container and the Sidecar container.</p>
              */
-            public Builder emptyDirDesc(java.util.List<EmptyDirDesc> emptyDirDesc) {
+            public Builder emptyDirDesc(java.util.List<SidecarContainersConfigEmptyDirDesc> emptyDirDesc) {
                 this.emptyDirDesc = emptyDirDesc;
                 return this;
             }
 
             /**
-             * Envs.
+             * <p>The environment variables. You can configure custom environment variables or reference a ConfigMap. If you want to reference a ConfigMap, you must first create a ConfigMap. For more information, see <a href="https://help.aliyun.com/document_detail/176914.html">CreateConfigMap</a>. Take note of the following rules:</p>
+             * <ul>
+             * <li><p>Customize</p>
+             * <ul>
+             * <li><strong>name</strong>: the name of the environment variable.</li>
+             * <li><strong>value</strong>: the value of the environment variable.</li>
+             * </ul>
+             * </li>
+             * <li><p>Reference ConfigMap</p>
+             * <ul>
+             * <li><strong>name</strong>: the name of the environment variable. You can reference one or all keys. If you want to reference all keys, specify <code>sae-sys-configmap-all-&lt;ConfigMap name&gt;</code>. Example: <code>sae-sys-configmap-all-test1</code>.</li>
+             * <li><strong>valueFrom</strong>: the reference of the environment variable. Set the value to <code>configMapRef</code>.</li>
+             * <li><strong>configMapId</strong>: the ConfigMap ID.</li>
+             * <li><strong>key</strong>: the key. If you want to reference all keys, do not configure this parameter.</li>
+             * </ul>
+             * </li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>[{&quot;name&quot;:&quot;k1&quot;,&quot;value&quot;:&quot;c8e3a815-e5d3-4adf-abb3-98b106a607c4&quot;}]</p>
              */
             public Builder envs(String envs) {
                 this.envs = envs;
@@ -1396,7 +1675,10 @@ public class DescribeApplicationConfigResponseBody extends TeaModel {
             }
 
             /**
-             * ImageUrl.
+             * <p>The URL of the image.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>registry.cn-beijing.aliyuncs.com/sae-dev-test/nginx:stable</p>
              */
             public Builder imageUrl(String imageUrl) {
                 this.imageUrl = imageUrl;
@@ -1404,7 +1686,10 @@ public class DescribeApplicationConfigResponseBody extends TeaModel {
             }
 
             /**
-             * Memory.
+             * <p>Set the memory limit of the primary container that can be used by Sidecar container.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1024</p>
              */
             public Builder memory(Integer memory) {
                 this.memory = memory;
@@ -1412,7 +1697,10 @@ public class DescribeApplicationConfigResponseBody extends TeaModel {
             }
 
             /**
-             * Name.
+             * <p>The container name.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>test</p>
              */
             public Builder name(String name) {
                 this.name = name;
@@ -1520,6 +1808,12 @@ public class DescribeApplicationConfigResponseBody extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("AcrInstanceId")
         private String acrInstanceId;
 
+        @com.aliyun.core.annotation.NameInMap("AgentVersion")
+        private String agentVersion;
+
+        @com.aliyun.core.annotation.NameInMap("AlbIngressReadinessGate")
+        private String albIngressReadinessGate;
+
         @com.aliyun.core.annotation.NameInMap("AppDescription")
         private String appDescription;
 
@@ -1544,6 +1838,9 @@ public class DescribeApplicationConfigResponseBody extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("ClusterId")
         private String clusterId;
 
+        @com.aliyun.core.annotation.NameInMap("CmsServiceId")
+        private String cmsServiceId;
+
         @com.aliyun.core.annotation.NameInMap("Command")
         private String command;
 
@@ -1562,6 +1859,9 @@ public class DescribeApplicationConfigResponseBody extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("CustomImageNetworkType")
         private String customImageNetworkType;
 
+        @com.aliyun.core.annotation.NameInMap("DeploymentName")
+        private String deploymentName;
+
         @com.aliyun.core.annotation.NameInMap("DiskSize")
         private Integer diskSize;
 
@@ -1570,6 +1870,9 @@ public class DescribeApplicationConfigResponseBody extends TeaModel {
 
         @com.aliyun.core.annotation.NameInMap("EdasContainerVersion")
         private String edasContainerVersion;
+
+        @com.aliyun.core.annotation.NameInMap("EmptyDirDesc")
+        private java.util.List<EmptyDirDesc> emptyDirDesc;
 
         @com.aliyun.core.annotation.NameInMap("EnableAhas")
         private String enableAhas;
@@ -1583,8 +1886,14 @@ public class DescribeApplicationConfigResponseBody extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("EnableIdle")
         private Boolean enableIdle;
 
+        @com.aliyun.core.annotation.NameInMap("EnableNamespaceAgentVersion")
+        private Boolean enableNamespaceAgentVersion;
+
         @com.aliyun.core.annotation.NameInMap("EnableNewArms")
         private Boolean enableNewArms;
+
+        @com.aliyun.core.annotation.NameInMap("EnablePrometheus")
+        private Boolean enablePrometheus;
 
         @com.aliyun.core.annotation.NameInMap("Envs")
         private String envs;
@@ -1595,6 +1904,12 @@ public class DescribeApplicationConfigResponseBody extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("GpuType")
         private String gpuType;
 
+        @com.aliyun.core.annotation.NameInMap("HeadlessPvtzDiscovery")
+        private String headlessPvtzDiscovery;
+
+        @com.aliyun.core.annotation.NameInMap("Html")
+        private String html;
+
         @com.aliyun.core.annotation.NameInMap("ImagePullSecrets")
         private String imagePullSecrets;
 
@@ -1603,6 +1918,9 @@ public class DescribeApplicationConfigResponseBody extends TeaModel {
 
         @com.aliyun.core.annotation.NameInMap("InitContainersConfig")
         private java.util.List<InitContainersConfig> initContainersConfig;
+
+        @com.aliyun.core.annotation.NameInMap("IsStateful")
+        private Boolean isStateful;
 
         @com.aliyun.core.annotation.NameInMap("JarStartArgs")
         private String jarStartArgs;
@@ -1618,6 +1936,12 @@ public class DescribeApplicationConfigResponseBody extends TeaModel {
 
         @com.aliyun.core.annotation.NameInMap("Liveness")
         private String liveness;
+
+        @com.aliyun.core.annotation.NameInMap("MaxSurgeInstanceRatio")
+        private Integer maxSurgeInstanceRatio;
+
+        @com.aliyun.core.annotation.NameInMap("MaxSurgeInstances")
+        private Integer maxSurgeInstances;
 
         @com.aliyun.core.annotation.NameInMap("Memory")
         private Integer memory;
@@ -1775,6 +2099,8 @@ public class DescribeApplicationConfigResponseBody extends TeaModel {
         private Data(Builder builder) {
             this.acrAssumeRoleArn = builder.acrAssumeRoleArn;
             this.acrInstanceId = builder.acrInstanceId;
+            this.agentVersion = builder.agentVersion;
+            this.albIngressReadinessGate = builder.albIngressReadinessGate;
             this.appDescription = builder.appDescription;
             this.appId = builder.appId;
             this.appName = builder.appName;
@@ -1783,31 +2109,41 @@ public class DescribeApplicationConfigResponseBody extends TeaModel {
             this.baseAppId = builder.baseAppId;
             this.batchWaitTime = builder.batchWaitTime;
             this.clusterId = builder.clusterId;
+            this.cmsServiceId = builder.cmsServiceId;
             this.command = builder.command;
             this.commandArgs = builder.commandArgs;
             this.configMapMountDesc = builder.configMapMountDesc;
             this.cpu = builder.cpu;
             this.customHostAlias = builder.customHostAlias;
             this.customImageNetworkType = builder.customImageNetworkType;
+            this.deploymentName = builder.deploymentName;
             this.diskSize = builder.diskSize;
             this.dotnet = builder.dotnet;
             this.edasContainerVersion = builder.edasContainerVersion;
+            this.emptyDirDesc = builder.emptyDirDesc;
             this.enableAhas = builder.enableAhas;
             this.enableCpuBurst = builder.enableCpuBurst;
             this.enableGreyTagRoute = builder.enableGreyTagRoute;
             this.enableIdle = builder.enableIdle;
+            this.enableNamespaceAgentVersion = builder.enableNamespaceAgentVersion;
             this.enableNewArms = builder.enableNewArms;
+            this.enablePrometheus = builder.enablePrometheus;
             this.envs = builder.envs;
             this.gpuCount = builder.gpuCount;
             this.gpuType = builder.gpuType;
+            this.headlessPvtzDiscovery = builder.headlessPvtzDiscovery;
+            this.html = builder.html;
             this.imagePullSecrets = builder.imagePullSecrets;
             this.imageUrl = builder.imageUrl;
             this.initContainersConfig = builder.initContainersConfig;
+            this.isStateful = builder.isStateful;
             this.jarStartArgs = builder.jarStartArgs;
             this.jarStartOptions = builder.jarStartOptions;
             this.jdk = builder.jdk;
             this.kafkaConfigs = builder.kafkaConfigs;
             this.liveness = builder.liveness;
+            this.maxSurgeInstanceRatio = builder.maxSurgeInstanceRatio;
+            this.maxSurgeInstances = builder.maxSurgeInstances;
             this.memory = builder.memory;
             this.microRegistration = builder.microRegistration;
             this.microRegistrationConfig = builder.microRegistrationConfig;
@@ -1884,6 +2220,20 @@ public class DescribeApplicationConfigResponseBody extends TeaModel {
         }
 
         /**
+         * @return agentVersion
+         */
+        public String getAgentVersion() {
+            return this.agentVersion;
+        }
+
+        /**
+         * @return albIngressReadinessGate
+         */
+        public String getAlbIngressReadinessGate() {
+            return this.albIngressReadinessGate;
+        }
+
+        /**
          * @return appDescription
          */
         public String getAppDescription() {
@@ -1940,6 +2290,13 @@ public class DescribeApplicationConfigResponseBody extends TeaModel {
         }
 
         /**
+         * @return cmsServiceId
+         */
+        public String getCmsServiceId() {
+            return this.cmsServiceId;
+        }
+
+        /**
          * @return command
          */
         public String getCommand() {
@@ -1982,6 +2339,13 @@ public class DescribeApplicationConfigResponseBody extends TeaModel {
         }
 
         /**
+         * @return deploymentName
+         */
+        public String getDeploymentName() {
+            return this.deploymentName;
+        }
+
+        /**
          * @return diskSize
          */
         public Integer getDiskSize() {
@@ -2000,6 +2364,13 @@ public class DescribeApplicationConfigResponseBody extends TeaModel {
          */
         public String getEdasContainerVersion() {
             return this.edasContainerVersion;
+        }
+
+        /**
+         * @return emptyDirDesc
+         */
+        public java.util.List<EmptyDirDesc> getEmptyDirDesc() {
+            return this.emptyDirDesc;
         }
 
         /**
@@ -2031,10 +2402,24 @@ public class DescribeApplicationConfigResponseBody extends TeaModel {
         }
 
         /**
+         * @return enableNamespaceAgentVersion
+         */
+        public Boolean getEnableNamespaceAgentVersion() {
+            return this.enableNamespaceAgentVersion;
+        }
+
+        /**
          * @return enableNewArms
          */
         public Boolean getEnableNewArms() {
             return this.enableNewArms;
+        }
+
+        /**
+         * @return enablePrometheus
+         */
+        public Boolean getEnablePrometheus() {
+            return this.enablePrometheus;
         }
 
         /**
@@ -2059,6 +2444,20 @@ public class DescribeApplicationConfigResponseBody extends TeaModel {
         }
 
         /**
+         * @return headlessPvtzDiscovery
+         */
+        public String getHeadlessPvtzDiscovery() {
+            return this.headlessPvtzDiscovery;
+        }
+
+        /**
+         * @return html
+         */
+        public String getHtml() {
+            return this.html;
+        }
+
+        /**
          * @return imagePullSecrets
          */
         public String getImagePullSecrets() {
@@ -2077,6 +2476,13 @@ public class DescribeApplicationConfigResponseBody extends TeaModel {
          */
         public java.util.List<InitContainersConfig> getInitContainersConfig() {
             return this.initContainersConfig;
+        }
+
+        /**
+         * @return isStateful
+         */
+        public Boolean getIsStateful() {
+            return this.isStateful;
         }
 
         /**
@@ -2112,6 +2518,20 @@ public class DescribeApplicationConfigResponseBody extends TeaModel {
          */
         public String getLiveness() {
             return this.liveness;
+        }
+
+        /**
+         * @return maxSurgeInstanceRatio
+         */
+        public Integer getMaxSurgeInstanceRatio() {
+            return this.maxSurgeInstanceRatio;
+        }
+
+        /**
+         * @return maxSurgeInstances
+         */
+        public Integer getMaxSurgeInstances() {
+            return this.maxSurgeInstances;
         }
 
         /**
@@ -2474,6 +2894,8 @@ public class DescribeApplicationConfigResponseBody extends TeaModel {
         public static final class Builder {
             private String acrAssumeRoleArn; 
             private String acrInstanceId; 
+            private String agentVersion; 
+            private String albIngressReadinessGate; 
             private String appDescription; 
             private String appId; 
             private String appName; 
@@ -2482,31 +2904,41 @@ public class DescribeApplicationConfigResponseBody extends TeaModel {
             private String baseAppId; 
             private Integer batchWaitTime; 
             private String clusterId; 
+            private String cmsServiceId; 
             private String command; 
             private String commandArgs; 
             private java.util.List<ConfigMapMountDesc> configMapMountDesc; 
             private Integer cpu; 
             private String customHostAlias; 
             private String customImageNetworkType; 
+            private String deploymentName; 
             private Integer diskSize; 
             private String dotnet; 
             private String edasContainerVersion; 
+            private java.util.List<EmptyDirDesc> emptyDirDesc; 
             private String enableAhas; 
             private String enableCpuBurst; 
             private Boolean enableGreyTagRoute; 
             private Boolean enableIdle; 
+            private Boolean enableNamespaceAgentVersion; 
             private Boolean enableNewArms; 
+            private Boolean enablePrometheus; 
             private String envs; 
             private String gpuCount; 
             private String gpuType; 
+            private String headlessPvtzDiscovery; 
+            private String html; 
             private String imagePullSecrets; 
             private String imageUrl; 
             private java.util.List<InitContainersConfig> initContainersConfig; 
+            private Boolean isStateful; 
             private String jarStartArgs; 
             private String jarStartOptions; 
             private String jdk; 
             private String kafkaConfigs; 
             private String liveness; 
+            private Integer maxSurgeInstanceRatio; 
+            private Integer maxSurgeInstances; 
             private Integer memory; 
             private String microRegistration; 
             private String microRegistrationConfig; 
@@ -2565,6 +2997,8 @@ public class DescribeApplicationConfigResponseBody extends TeaModel {
             private Builder(Data model) {
                 this.acrAssumeRoleArn = model.acrAssumeRoleArn;
                 this.acrInstanceId = model.acrInstanceId;
+                this.agentVersion = model.agentVersion;
+                this.albIngressReadinessGate = model.albIngressReadinessGate;
                 this.appDescription = model.appDescription;
                 this.appId = model.appId;
                 this.appName = model.appName;
@@ -2573,31 +3007,41 @@ public class DescribeApplicationConfigResponseBody extends TeaModel {
                 this.baseAppId = model.baseAppId;
                 this.batchWaitTime = model.batchWaitTime;
                 this.clusterId = model.clusterId;
+                this.cmsServiceId = model.cmsServiceId;
                 this.command = model.command;
                 this.commandArgs = model.commandArgs;
                 this.configMapMountDesc = model.configMapMountDesc;
                 this.cpu = model.cpu;
                 this.customHostAlias = model.customHostAlias;
                 this.customImageNetworkType = model.customImageNetworkType;
+                this.deploymentName = model.deploymentName;
                 this.diskSize = model.diskSize;
                 this.dotnet = model.dotnet;
                 this.edasContainerVersion = model.edasContainerVersion;
+                this.emptyDirDesc = model.emptyDirDesc;
                 this.enableAhas = model.enableAhas;
                 this.enableCpuBurst = model.enableCpuBurst;
                 this.enableGreyTagRoute = model.enableGreyTagRoute;
                 this.enableIdle = model.enableIdle;
+                this.enableNamespaceAgentVersion = model.enableNamespaceAgentVersion;
                 this.enableNewArms = model.enableNewArms;
+                this.enablePrometheus = model.enablePrometheus;
                 this.envs = model.envs;
                 this.gpuCount = model.gpuCount;
                 this.gpuType = model.gpuType;
+                this.headlessPvtzDiscovery = model.headlessPvtzDiscovery;
+                this.html = model.html;
                 this.imagePullSecrets = model.imagePullSecrets;
                 this.imageUrl = model.imageUrl;
                 this.initContainersConfig = model.initContainersConfig;
+                this.isStateful = model.isStateful;
                 this.jarStartArgs = model.jarStartArgs;
                 this.jarStartOptions = model.jarStartOptions;
                 this.jdk = model.jdk;
                 this.kafkaConfigs = model.kafkaConfigs;
                 this.liveness = model.liveness;
+                this.maxSurgeInstanceRatio = model.maxSurgeInstanceRatio;
+                this.maxSurgeInstances = model.maxSurgeInstances;
                 this.memory = model.memory;
                 this.microRegistration = model.microRegistration;
                 this.microRegistrationConfig = model.microRegistrationConfig;
@@ -2674,7 +3118,26 @@ public class DescribeApplicationConfigResponseBody extends TeaModel {
             }
 
             /**
+             * AgentVersion.
+             */
+            public Builder agentVersion(String agentVersion) {
+                this.agentVersion = agentVersion;
+                return this;
+            }
+
+            /**
+             * AlbIngressReadinessGate.
+             */
+            public Builder albIngressReadinessGate(String albIngressReadinessGate) {
+                this.albIngressReadinessGate = albIngressReadinessGate;
+                return this;
+            }
+
+            /**
              * <p>The description of the application.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>The application description.</p>
              */
             public Builder appDescription(String appDescription) {
                 this.appDescription = appDescription;
@@ -2735,7 +3198,10 @@ public class DescribeApplicationConfigResponseBody extends TeaModel {
             }
 
             /**
-             * BaseAppId.
+             * <p>The base app ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>8c573618-8d72-4407-baf4-f7b64b******</p>
              */
             public Builder baseAppId(String baseAppId) {
                 this.baseAppId = baseAppId;
@@ -2754,10 +3220,21 @@ public class DescribeApplicationConfigResponseBody extends TeaModel {
             }
 
             /**
-             * ClusterId.
+             * <p>The cluster ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>495fc79c-ae61-4600-866d-a09d68******</p>
              */
             public Builder clusterId(String clusterId) {
                 this.clusterId = clusterId;
+                return this;
+            }
+
+            /**
+             * CmsServiceId.
+             */
+            public Builder cmsServiceId(String cmsServiceId) {
+                this.cmsServiceId = cmsServiceId;
                 return this;
             }
 
@@ -2837,7 +3314,16 @@ public class DescribeApplicationConfigResponseBody extends TeaModel {
             }
 
             /**
-             * CustomImageNetworkType.
+             * <p>The type of custom image. Set to empty string if using pre-built image.</p>
+             * <ul>
+             * <li><p>internet: public network image.</p>
+             * </li>
+             * <li><p>intranet: private network image.</p>
+             * </li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>internet</p>
              */
             public Builder customImageNetworkType(String customImageNetworkType) {
                 this.customImageNetworkType = customImageNetworkType;
@@ -2845,7 +3331,18 @@ public class DescribeApplicationConfigResponseBody extends TeaModel {
             }
 
             /**
-             * DiskSize.
+             * DeploymentName.
+             */
+            public Builder deploymentName(String deploymentName) {
+                this.deploymentName = deploymentName;
+                return this;
+            }
+
+            /**
+             * <p>The disk size. Unit: GB.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>20</p>
              */
             public Builder diskSize(Integer diskSize) {
                 this.diskSize = diskSize;
@@ -2853,7 +3350,17 @@ public class DescribeApplicationConfigResponseBody extends TeaModel {
             }
 
             /**
-             * Dotnet.
+             * <p>The version of .NET.</p>
+             * <ul>
+             * <li>.NET 3.1</li>
+             * <li>.NET 5.0</li>
+             * <li>.NET 6.0</li>
+             * <li>.NET 7.0</li>
+             * <li>.NET 8.0</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>.NET 8.0</p>
              */
             public Builder dotnet(String dotnet) {
                 this.dotnet = dotnet;
@@ -2868,6 +3375,14 @@ public class DescribeApplicationConfigResponseBody extends TeaModel {
              */
             public Builder edasContainerVersion(String edasContainerVersion) {
                 this.edasContainerVersion = edasContainerVersion;
+                return this;
+            }
+
+            /**
+             * <p>Shared temporary storage mounted to the primary container and the Sidecar container.</p>
+             */
+            public Builder emptyDirDesc(java.util.List<EmptyDirDesc> emptyDirDesc) {
+                this.emptyDirDesc = emptyDirDesc;
                 return this;
             }
 
@@ -2887,7 +3402,16 @@ public class DescribeApplicationConfigResponseBody extends TeaModel {
             }
 
             /**
-             * EnableCpuBurst.
+             * <p>Enable CPU Burst.</p>
+             * <ul>
+             * <li><p>true: enable</p>
+             * </li>
+             * <li><p>false: disable</p>
+             * </li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>true</p>
              */
             public Builder enableCpuBurst(String enableCpuBurst) {
                 this.enableCpuBurst = enableCpuBurst;
@@ -2910,7 +3434,16 @@ public class DescribeApplicationConfigResponseBody extends TeaModel {
             }
 
             /**
-             * EnableIdle.
+             * <p>Enable idle mode.</p>
+             * <ul>
+             * <li><p>true: enable</p>
+             * </li>
+             * <li><p>false: disable</p>
+             * </li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>false</p>
              */
             public Builder enableIdle(Boolean enableIdle) {
                 this.enableIdle = enableIdle;
@@ -2918,10 +3451,35 @@ public class DescribeApplicationConfigResponseBody extends TeaModel {
             }
 
             /**
-             * EnableNewArms.
+             * EnableNamespaceAgentVersion.
+             */
+            public Builder enableNamespaceAgentVersion(Boolean enableNamespaceAgentVersion) {
+                this.enableNamespaceAgentVersion = enableNamespaceAgentVersion;
+                return this;
+            }
+
+            /**
+             * <p>Enable new ARMS feature.</p>
+             * <ul>
+             * <li><p>true: enable</p>
+             * </li>
+             * <li><p>false: disable</p>
+             * </li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>false</p>
              */
             public Builder enableNewArms(Boolean enableNewArms) {
                 this.enableNewArms = enableNewArms;
+                return this;
+            }
+
+            /**
+             * EnablePrometheus.
+             */
+            public Builder enablePrometheus(Boolean enablePrometheus) {
+                this.enablePrometheus = enablePrometheus;
                 return this;
             }
 
@@ -2957,7 +3515,26 @@ public class DescribeApplicationConfigResponseBody extends TeaModel {
             }
 
             /**
-             * ImagePullSecrets.
+             * HeadlessPvtzDiscovery.
+             */
+            public Builder headlessPvtzDiscovery(String headlessPvtzDiscovery) {
+                this.headlessPvtzDiscovery = headlessPvtzDiscovery;
+                return this;
+            }
+
+            /**
+             * Html.
+             */
+            public Builder html(String html) {
+                this.html = html;
+                return this;
+            }
+
+            /**
+             * <p>The ID of the corresponding secret dictionary.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>10</p>
              */
             public Builder imagePullSecrets(String imagePullSecrets) {
                 this.imagePullSecrets = imagePullSecrets;
@@ -2976,10 +3553,18 @@ public class DescribeApplicationConfigResponseBody extends TeaModel {
             }
 
             /**
-             * InitContainersConfig.
+             * <p>Initialize container configuration.</p>
              */
             public Builder initContainersConfig(java.util.List<InitContainersConfig> initContainersConfig) {
                 this.initContainersConfig = initContainersConfig;
+                return this;
+            }
+
+            /**
+             * IsStateful.
+             */
+            public Builder isStateful(Boolean isStateful) {
+                this.isStateful = isStateful;
                 return this;
             }
 
@@ -3087,6 +3672,22 @@ public class DescribeApplicationConfigResponseBody extends TeaModel {
             }
 
             /**
+             * MaxSurgeInstanceRatio.
+             */
+            public Builder maxSurgeInstanceRatio(Integer maxSurgeInstanceRatio) {
+                this.maxSurgeInstanceRatio = maxSurgeInstanceRatio;
+                return this;
+            }
+
+            /**
+             * MaxSurgeInstances.
+             */
+            public Builder maxSurgeInstances(Integer maxSurgeInstances) {
+                this.maxSurgeInstances = maxSurgeInstances;
+                return this;
+            }
+
+            /**
              * <p>The size of memory required by each instance. Unit: MB. You cannot set this parameter to 0. The values of this parameter correspond to the values of the Cpu parameter:</p>
              * <ul>
              * <li>This parameter is set to <strong>1024</strong> if the Cpu parameter is set to 500 or 1000.</li>
@@ -3110,7 +3711,15 @@ public class DescribeApplicationConfigResponseBody extends TeaModel {
             }
 
             /**
-             * MicroRegistration.
+             * <p>The Nacos registry. Valid values:</p>
+             * <ul>
+             * <li><strong>0</strong>: SAE built-in Nacos registry</li>
+             * <li><strong>1</strong>: self-managed Nacos registry</li>
+             * <li><strong>2</strong> : MSE Nacos registry</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>&quot;0&quot;</p>
              */
             public Builder microRegistration(String microRegistration) {
                 this.microRegistration = microRegistration;
@@ -3118,7 +3727,10 @@ public class DescribeApplicationConfigResponseBody extends TeaModel {
             }
 
             /**
-             * MicroRegistrationConfig.
+             * <p>The configuration of registration center. Takes effect only the type of registration center is MSE enterprise Nacos.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>{&quot;instanceId&quot;:&quot;mse-cn-1ls43******&quot;,&quot;namespace&quot;:&quot;62ee12fb-c279-4da4-be96-21**********&quot;}</p>
              */
             public Builder microRegistrationConfig(String microRegistrationConfig) {
                 this.microRegistrationConfig = microRegistrationConfig;
@@ -3126,7 +3738,22 @@ public class DescribeApplicationConfigResponseBody extends TeaModel {
             }
 
             /**
-             * MicroserviceEngineConfig.
+             * <p>Configure microservices governance</p>
+             * <p>enable: Whether to enable microservices governance</p>
+             * <ul>
+             * <li>true: Enable</li>
+             * <li>false: Disable</li>
+             * </ul>
+             * <p>mseLosslessRule: Configure lossless online/offline deployment</p>
+             * <ul>
+             * <li>delayTime: Delay duration (unit: seconds)</li>
+             * <li>enable: Whether to enable lossless deployment. Set to &quot;true&quot; to enable; set to &quot;false&quot; to disable.</li>
+             * <li>notice: Whether to enable notifications. Set to &quot;true&quot; to enable; set to &quot;false&quot; to disable.</li>
+             * <li>warmupTime: Small-traffic warm-up duration (unit: seconds)</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>{&quot;Enable&quot;:true,&quot;MseLosslessRule&quot;:{&quot;enable&quot;:true,&quot;notice&quot;:true,&quot;delayTime&quot;:10,&quot;warmupTime&quot;:120,&quot;funcType&quot;:2,&quot;aligned&quot;:false,&quot;related&quot;:false,&quot;lossLessDetail&quot;:false}}</p>
              */
             public Builder microserviceEngineConfig(String microserviceEngineConfig) {
                 this.microserviceEngineConfig = microserviceEngineConfig;
@@ -3200,7 +3827,10 @@ public class DescribeApplicationConfigResponseBody extends TeaModel {
             }
 
             /**
-             * MseApplicationName.
+             * <p>The application name of SAE service registered in MSE.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>cn-shenzhen-alb-demo-5c****</p>
              */
             public Builder mseApplicationName(String mseApplicationName) {
                 this.mseApplicationName = mseApplicationName;
@@ -3219,7 +3849,10 @@ public class DescribeApplicationConfigResponseBody extends TeaModel {
             }
 
             /**
-             * NasConfigs.
+             * <p>The configurations for mounting the NAS file system.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>[{&quot;mountPath&quot;:&quot;/test1&quot;,&quot;readOnly&quot;:false,&quot;nasId&quot;:&quot;nasId1&quot;,&quot;mountDomain&quot;:&quot;nasId1.cn-shenzhen.nas.aliyuncs.com&quot;,&quot;nasPath&quot;:&quot;/test1&quot;},{&quot;nasId&quot;:&quot;nasId2&quot;,&quot;mountDomain&quot;:&quot;nasId2.cn-shenzhen.nas.aliyuncs.com&quot;,&quot;readOnly&quot;:false,&quot;nasPath&quot;:&quot;/test2&quot;,&quot;mountPath&quot;:&quot;/test2&quot;}]</p>
              */
             public Builder nasConfigs(String nasConfigs) {
                 this.nasConfigs = nasConfigs;
@@ -3238,7 +3871,15 @@ public class DescribeApplicationConfigResponseBody extends TeaModel {
             }
 
             /**
-             * NewSaeVersion.
+             * <p>The SAE application edition.</p>
+             * <ul>
+             * <li>lite: The lightweight edition.</li>
+             * <li>std: The standard edition.</li>
+             * <li>pro: The professional edition.</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>pro</p>
              */
             public Builder newSaeVersion(String newSaeVersion) {
                 this.newSaeVersion = newSaeVersion;
@@ -3246,7 +3887,13 @@ public class DescribeApplicationConfigResponseBody extends TeaModel {
             }
 
             /**
-             * OidcRoleName.
+             * <p>The name of the RAM role used to authenticate the user identity.</p>
+             * <blockquote>
+             * <p> You need to create an OpenID Connect (OIDC) identity provider (IdP) and an identity provider (IdP) for role-based single sign-on (SSO) in advance. For more information, see <a href="https://help.aliyun.com/document_detail/2331022.html">Creates an OpenID Connect (OIDC) identity provider (IdP)</a> and <a href="https://help.aliyun.com/document_detail/2331016.html">Creates an identity provider (IdP) for role-based single sign-on (SSO)</a>.</p>
+             * </blockquote>
+             * 
+             * <strong>example:</strong>
+             * <p>sae-test</p>
              */
             public Builder oidcRoleName(String oidcRoleName) {
                 this.oidcRoleName = oidcRoleName;
@@ -3337,7 +3984,10 @@ public class DescribeApplicationConfigResponseBody extends TeaModel {
             }
 
             /**
-             * Php.
+             * <p>The version of PHP supporting PHP deployment packages. Image is not supported.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>PHP-FPM 7.0</p>
              */
             public Builder php(String php) {
                 this.php = php;
@@ -3417,7 +4067,10 @@ public class DescribeApplicationConfigResponseBody extends TeaModel {
             }
 
             /**
-             * PvtzDiscovery.
+             * <p>Enable K8s Service discovery and registration.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>{&quot;serviceName&quot;:&quot;bwm-poc-sc-gateway-cn-beijing-front&quot;,&quot;namespaceId&quot;:&quot;cn-beijing:front&quot;,&quot;portAndProtocol&quot;:{&quot;18012&quot;:&quot;TCP&quot;},&quot;enable&quot;:true}</p>
              */
             public Builder pvtzDiscovery(String pvtzDiscovery) {
                 this.pvtzDiscovery = pvtzDiscovery;
@@ -3425,7 +4078,10 @@ public class DescribeApplicationConfigResponseBody extends TeaModel {
             }
 
             /**
-             * Python.
+             * <p>The Python environment. PYTHON 3.9.15 is supported.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>PYTHON 3.9.15</p>
              */
             public Builder python(String python) {
                 this.python = python;
@@ -3433,7 +4089,10 @@ public class DescribeApplicationConfigResponseBody extends TeaModel {
             }
 
             /**
-             * PythonModules.
+             * <p>The configurations for installing custom module dependencies. By default, the dependencies defined by the requirements.txt file in the root directory are installed. If no software package is configured, you can specify dependencies based on your business requirements.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Flask==2.0</p>
              */
             public Builder pythonModules(String pythonModules) {
                 this.pythonModules = pythonModules;
@@ -3477,7 +4136,10 @@ public class DescribeApplicationConfigResponseBody extends TeaModel {
             }
 
             /**
-             * ResourceType.
+             * <p>The type of the resource. Set the value to <code>application</code>.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>application</p>
              */
             public Builder resourceType(String resourceType) {
                 this.resourceType = resourceType;
@@ -3485,7 +4147,7 @@ public class DescribeApplicationConfigResponseBody extends TeaModel {
             }
 
             /**
-             * SecretMountDesc.
+             * <p>Secret mount description.</p>
              */
             public Builder secretMountDesc(java.util.List<SecretMountDesc> secretMountDesc) {
                 this.secretMountDesc = secretMountDesc;
@@ -3512,7 +4174,7 @@ public class DescribeApplicationConfigResponseBody extends TeaModel {
             }
 
             /**
-             * SidecarContainersConfig.
+             * <p>The configuration of the Sidecar container.</p>
              */
             public Builder sidecarContainersConfig(java.util.List<SidecarContainersConfig> sidecarContainersConfig) {
                 this.sidecarContainersConfig = sidecarContainersConfig;
@@ -3544,7 +4206,10 @@ public class DescribeApplicationConfigResponseBody extends TeaModel {
             }
 
             /**
-             * StartupProbe.
+             * <p>Enable startup probe.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>{&quot;exec&quot;:{&quot;command&quot;:[&quot;/bin/sh&quot;,&quot;-c&quot;,&quot;#!Note: If microservice config is enabled, the application will be automatically injected with the prestop configuration for lossless offline. If you delete this prestop configuration, lossless offline will not be effective.\n echo stop &gt; /tmp/prestop; /home/admin/.tools/curl <a href="http://127.0.0.1:54199/offline">http://127.0.0.1:54199/offline</a>; sleep 30&quot;]}}</p>
              */
             public Builder startupProbe(String startupProbe) {
                 this.startupProbe = startupProbe;
@@ -3552,7 +4217,10 @@ public class DescribeApplicationConfigResponseBody extends TeaModel {
             }
 
             /**
-             * SwimlanePvtzDiscovery.
+             * <p>Configuration of K8s Service discovery and registration, and full-chain gray-release feature.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>{&quot;enable&quot;:&quot;false&quot;,&quot;namespaceId&quot;:&quot;cn-beijing:test&quot;,&quot;portAndProtocol&quot;:{&quot;2000:TCP&quot;:&quot;18081&quot;},&quot;portProtocols&quot;:[{&quot;port&quot;:2000,&quot;protocol&quot;:&quot;TCP&quot;,&quot;targetPort&quot;:18081}],&quot;pvtzDiscoveryName&quot;:&quot;cn-beijing-1421801774382676&quot;,&quot;serviceId&quot;:&quot;3513&quot;,&quot;serviceName&quot;:&quot;demo-gray.test&quot;}</p>
              */
             public Builder swimlanePvtzDiscovery(String swimlanePvtzDiscovery) {
                 this.swimlanePvtzDiscovery = swimlanePvtzDiscovery;

@@ -149,7 +149,7 @@ public class DescribeNamespaceListResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The namespaces.</p>
+         * <p>The list of namespaces.</p>
          */
         public Builder data(java.util.List<Data> data) {
             this.data = data;

@@ -75,6 +75,7 @@ public class DeleteInstancesRequest extends Request {
         } 
 
         /**
+         * <p>The ID of the application.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -87,6 +88,7 @@ public class DeleteInstancesRequest extends Request {
         }
 
         /**
+         * <p>The ID of the instance to be deleted.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>

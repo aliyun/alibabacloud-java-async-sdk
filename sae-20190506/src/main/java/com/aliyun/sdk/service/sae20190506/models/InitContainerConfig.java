@@ -26,6 +26,9 @@ public class InitContainerConfig extends TeaModel {
     @com.aliyun.core.annotation.NameInMap("ConfigMapMountDesc")
     private String configMapMountDesc;
 
+    @com.aliyun.core.annotation.NameInMap("EmptyDirDesc")
+    private String emptyDirDesc;
+
     @com.aliyun.core.annotation.NameInMap("Envs")
     private String envs;
 
@@ -39,6 +42,7 @@ public class InitContainerConfig extends TeaModel {
         this.command = builder.command;
         this.commandArgs = builder.commandArgs;
         this.configMapMountDesc = builder.configMapMountDesc;
+        this.emptyDirDesc = builder.emptyDirDesc;
         this.envs = builder.envs;
         this.imageUrl = builder.imageUrl;
         this.name = builder.name;
@@ -78,6 +82,13 @@ public class InitContainerConfig extends TeaModel {
     }
 
     /**
+     * @return emptyDirDesc
+     */
+    public String getEmptyDirDesc() {
+        return this.emptyDirDesc;
+    }
+
+    /**
      * @return envs
      */
     public String getEnvs() {
@@ -102,6 +113,7 @@ public class InitContainerConfig extends TeaModel {
         private String command; 
         private String commandArgs; 
         private String configMapMountDesc; 
+        private String emptyDirDesc; 
         private String envs; 
         private String imageUrl; 
         private String name; 
@@ -113,6 +125,7 @@ public class InitContainerConfig extends TeaModel {
             this.command = model.command;
             this.commandArgs = model.commandArgs;
             this.configMapMountDesc = model.configMapMountDesc;
+            this.emptyDirDesc = model.emptyDirDesc;
             this.envs = model.envs;
             this.imageUrl = model.imageUrl;
             this.name = model.name;
@@ -139,6 +152,14 @@ public class InitContainerConfig extends TeaModel {
          */
         public Builder configMapMountDesc(String configMapMountDesc) {
             this.configMapMountDesc = configMapMountDesc;
+            return this;
+        }
+
+        /**
+         * EmptyDirDesc.
+         */
+        public Builder emptyDirDesc(String emptyDirDesc) {
+            this.emptyDirDesc = emptyDirDesc;
             return this;
         }
 

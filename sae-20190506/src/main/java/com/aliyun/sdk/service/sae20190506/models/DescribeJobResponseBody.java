@@ -674,6 +674,9 @@ public class DescribeJobResponseBody extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("BackoffLimit")
         private Long backoffLimit;
 
+        @com.aliyun.core.annotation.NameInMap("BestEffortType")
+        private String bestEffortType;
+
         @com.aliyun.core.annotation.NameInMap("Command")
         private String command;
 
@@ -840,6 +843,7 @@ public class DescribeJobResponseBody extends TeaModel {
             this.appId = builder.appId;
             this.appName = builder.appName;
             this.backoffLimit = builder.backoffLimit;
+            this.bestEffortType = builder.bestEffortType;
             this.command = builder.command;
             this.commandArgs = builder.commandArgs;
             this.concurrencyPolicy = builder.concurrencyPolicy;
@@ -943,6 +947,13 @@ public class DescribeJobResponseBody extends TeaModel {
          */
         public Long getBackoffLimit() {
             return this.backoffLimit;
+        }
+
+        /**
+         * @return bestEffortType
+         */
+        public String getBestEffortType() {
+            return this.bestEffortType;
         }
 
         /**
@@ -1323,6 +1334,7 @@ public class DescribeJobResponseBody extends TeaModel {
             private String appId; 
             private String appName; 
             private Long backoffLimit; 
+            private String bestEffortType; 
             private String command; 
             private String commandArgs; 
             private String concurrencyPolicy; 
@@ -1387,6 +1399,7 @@ public class DescribeJobResponseBody extends TeaModel {
                 this.appId = model.appId;
                 this.appName = model.appName;
                 this.backoffLimit = model.backoffLimit;
+                this.bestEffortType = model.bestEffortType;
                 this.command = model.command;
                 this.commandArgs = model.commandArgs;
                 this.concurrencyPolicy = model.concurrencyPolicy;
@@ -1505,6 +1518,14 @@ public class DescribeJobResponseBody extends TeaModel {
              */
             public Builder backoffLimit(Long backoffLimit) {
                 this.backoffLimit = backoffLimit;
+                return this;
+            }
+
+            /**
+             * BestEffortType.
+             */
+            public Builder bestEffortType(String bestEffortType) {
+                this.bestEffortType = bestEffortType;
                 return this;
             }
 

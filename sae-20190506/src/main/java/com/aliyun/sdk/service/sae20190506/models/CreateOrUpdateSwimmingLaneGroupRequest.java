@@ -143,7 +143,7 @@ public class CreateOrUpdateSwimmingLaneGroupRequest extends Request {
         } 
 
         /**
-         * AppIds.
+         * <p>The ID of the baseline application.</p>
          */
         public Builder appIds(java.util.List<String> appIds) {
             String appIdsShrink = shrink(appIds, "AppIds", "json");
@@ -153,7 +153,10 @@ public class CreateOrUpdateSwimmingLaneGroupRequest extends Request {
         }
 
         /**
-         * EntryAppId.
+         * <p>The unique ID of the corresponding gateway.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>mse_ingresspost-cn-axc49******</p>
          */
         public Builder entryAppId(String entryAppId) {
             this.putQueryParameter("EntryAppId", entryAppId);
@@ -162,7 +165,15 @@ public class CreateOrUpdateSwimmingLaneGroupRequest extends Request {
         }
 
         /**
-         * EntryAppType.
+         * <p>The application entry type (gateway type).</p>
+         * <ul>
+         * <li><strong>apig:</strong> cloud-native API Gateway</li>
+         * <li><strong>mse:</strong> Java Services Gateway</li>
+         * <li><strong>mse-gw:</strong> MSE cloud-native Gateway</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>mse-gw</p>
          */
         public Builder entryAppType(String entryAppType) {
             this.putQueryParameter("EntryAppType", entryAppType);
@@ -171,7 +182,10 @@ public class CreateOrUpdateSwimmingLaneGroupRequest extends Request {
         }
 
         /**
-         * GroupId.
+         * <p>The ID of the lane group. This is required when you update a lane group.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2047</p>
          */
         public Builder groupId(Long groupId) {
             this.putQueryParameter("GroupId", groupId);
@@ -180,7 +194,10 @@ public class CreateOrUpdateSwimmingLaneGroupRequest extends Request {
         }
 
         /**
-         * GroupName.
+         * <p>The name of the lane group.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>mse-test</p>
          */
         public Builder groupName(String groupName) {
             this.putQueryParameter("GroupName", groupName);
@@ -189,7 +206,10 @@ public class CreateOrUpdateSwimmingLaneGroupRequest extends Request {
         }
 
         /**
-         * NamespaceId.
+         * <p>The ID of a namespace.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-beijing:test</p>
          */
         public Builder namespaceId(String namespaceId) {
             this.putQueryParameter("NamespaceId", namespaceId);
@@ -198,7 +218,10 @@ public class CreateOrUpdateSwimmingLaneGroupRequest extends Request {
         }
 
         /**
-         * SwimVersion.
+         * <p>The end-to-end grayscale version. Valid values: 0 and 2 (recommended).</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2</p>
          */
         public Builder swimVersion(String swimVersion) {
             this.putQueryParameter("SwimVersion", swimVersion);

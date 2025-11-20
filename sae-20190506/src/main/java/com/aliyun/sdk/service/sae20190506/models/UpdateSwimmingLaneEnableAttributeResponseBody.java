@@ -119,7 +119,16 @@ public class UpdateSwimmingLaneEnableAttributeResponseBody extends TeaModel {
         } 
 
         /**
-         * Code.
+         * <p>The interface status or POP error code. Valid values:</p>
+         * <ul>
+         * <li><strong>2xx</strong>: The request was successful.</li>
+         * <li><strong>3xx</strong>: Redirection.</li>
+         * <li><strong>4xx</strong>: Request error.</li>
+         * <li><strong>5xx</strong>: A server error occurred.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>200</p>
          */
         public Builder code(String code) {
             this.code = code;
@@ -127,7 +136,11 @@ public class UpdateSwimmingLaneEnableAttributeResponseBody extends TeaModel {
         }
 
         /**
-         * ErrorCode.
+         * <p>Error code. Valid values:</p>
+         * <ul>
+         * <li>If the request is successful, no <strong>ErrorCode</strong> fields are returned.</li>
+         * <li>Request failed: <strong>ErrorCode</strong> fields are returned. For more information, see <strong>Error codes</strong>.</li>
+         * </ul>
          */
         public Builder errorCode(String errorCode) {
             this.errorCode = errorCode;
@@ -135,7 +148,14 @@ public class UpdateSwimmingLaneEnableAttributeResponseBody extends TeaModel {
         }
 
         /**
-         * Message.
+         * <p>Additional information. Valid values:</p>
+         * <ul>
+         * <li>The error message returned because the request is normal and <strong>success</strong> is returned.</li>
+         * <li>If the request is abnormal, the specific exception error code is returned.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>success</p>
          */
         public Builder message(String message) {
             this.message = message;
@@ -143,7 +163,10 @@ public class UpdateSwimmingLaneEnableAttributeResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * <p>The ID of the request.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>91F93257-7A4A-4BD3-9A7E-2F6EAE6D****</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -151,7 +174,14 @@ public class UpdateSwimmingLaneEnableAttributeResponseBody extends TeaModel {
         }
 
         /**
-         * Success.
+         * <p>Whether the data is successful. Valid values:</p>
+         * <ul>
+         * <li><strong>true</strong>: The policy was deleted.</li>
+         * <li><strong>false</strong>: The policy failed to be deleted.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder success(Boolean success) {
             this.success = success;
@@ -159,7 +189,10 @@ public class UpdateSwimmingLaneEnableAttributeResponseBody extends TeaModel {
         }
 
         /**
-         * TraceId.
+         * <p>The ID of the trace. This parameter is used to query the exact call information.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>ac1a0b2215622920113732501e****</p>
          */
         public Builder traceId(String traceId) {
             this.traceId = traceId;

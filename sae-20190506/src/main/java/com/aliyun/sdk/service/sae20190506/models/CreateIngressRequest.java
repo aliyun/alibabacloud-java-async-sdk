@@ -43,6 +43,10 @@ public class CreateIngressRequest extends Request {
     private String description;
 
     @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("EnableGzip")
+    private Boolean enableGzip;
+
+    @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("EnableXForwardedFor")
     private Boolean enableXForwardedFor;
 
@@ -117,6 +121,7 @@ public class CreateIngressRequest extends Request {
         this.corsConfig = builder.corsConfig;
         this.defaultRule = builder.defaultRule;
         this.description = builder.description;
+        this.enableGzip = builder.enableGzip;
         this.enableXForwardedFor = builder.enableXForwardedFor;
         this.enableXForwardedForClientSrcPort = builder.enableXForwardedForClientSrcPort;
         this.enableXForwardedForProto = builder.enableXForwardedForProto;
@@ -188,6 +193,13 @@ public class CreateIngressRequest extends Request {
      */
     public String getDescription() {
         return this.description;
+    }
+
+    /**
+     * @return enableGzip
+     */
+    public Boolean getEnableGzip() {
+        return this.enableGzip;
     }
 
     /**
@@ -309,6 +321,7 @@ public class CreateIngressRequest extends Request {
         private String corsConfig; 
         private String defaultRule; 
         private String description; 
+        private Boolean enableGzip; 
         private Boolean enableXForwardedFor; 
         private Boolean enableXForwardedForClientSrcPort; 
         private Boolean enableXForwardedForProto; 
@@ -338,6 +351,7 @@ public class CreateIngressRequest extends Request {
             this.corsConfig = request.corsConfig;
             this.defaultRule = request.defaultRule;
             this.description = request.description;
+            this.enableGzip = request.enableGzip;
             this.enableXForwardedFor = request.enableXForwardedFor;
             this.enableXForwardedForClientSrcPort = request.enableXForwardedForClientSrcPort;
             this.enableXForwardedForProto = request.enableXForwardedForProto;
@@ -357,7 +371,14 @@ public class CreateIngressRequest extends Request {
         } 
 
         /**
-         * AddressType.
+         * <ul>
+         * <li></li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <ul>
+         * <li></li>
+         * </ul>
          */
         public Builder addressType(String addressType) {
             this.putQueryParameter("AddressType", addressType);
@@ -366,11 +387,11 @@ public class CreateIngressRequest extends Request {
         }
 
         /**
-         * <p>The ID of the certificate that is associated with the <strong>CLB</strong> instance.</p>
+         * <p>The ID of the <strong>CLB</strong> certificate. Valid values:</p>
          * <ul>
          * <li>If you set <strong>LoadBalanceType</strong> to <strong>clb</strong>, you can use CertId to configure a certificate for the HTTPS listener.</li>
          * </ul>
-         * <p>For more information about how to manage the SSL certificate IDs that are used by CLB instances, see <a href="https://help.aliyun.com/document_detail/90792.html">Overview</a>.</p>
+         * <p>For more information about how to use SSL certificate IDs for CLB, see <a href="https://help.aliyun.com/document_detail/90792.html">Manage certificates (CLB)</a>.</p>
          * 
          * <strong>example:</strong>
          * <p>188077086902****_176993d****_181437****_108724****</p>
@@ -382,10 +403,10 @@ public class CreateIngressRequest extends Request {
         }
 
         /**
-         * <p>The IDs of the certificates that are associated with the <strong>ALB</strong> instance.</p>
+         * <p>The ID of the multi-certificate <strong>ALB</strong>. Valid values:</p>
          * <ul>
-         * <li>If you set <strong>LoadBalanceType</strong> to <strong>alb</strong>, you can use CertIds to configure multiple certificates for the HTTPS listener. Separate multiple certificate IDs with commas (,).</li>
-         * <li>The ID of the SSL certificate that is used by an ALB instance can be obtained from Certificate Management Service. For example, if you specify <code>756***-cn-hangzhou</code>, <code>756***</code> is the certificate ID that is obtained from the service page, and <code>-cn-hangzhou</code> is the fixed suffix. For more information, see <a href="https://help.aliyun.com/document_detail/209076.html">Manage certificates</a>.</li>
+         * <li>If the <strong>LoadBalanceType</strong> is <strong>alb</strong>, use this field to configure multiple certificates for HTTPS listeners. Separate multiple certificate IDs with commas (,).</li>
+         * <li>The ID of the SSL certificate used by ALB must be obtained from the digital certificate product. For example, in the configuration <code>756***-cn-hangzhou</code>, the <code>756***</code> is the certificate ID obtained from the product page, and the <code>-cn-hangzhou</code> is a fixed suffix. For more information, see <a href="https://help.aliyun.com/document_detail/209076.html">Manage certificates</a>.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -398,7 +419,14 @@ public class CreateIngressRequest extends Request {
         }
 
         /**
-         * CorsConfig.
+         * <ul>
+         * <li></li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <ul>
+         * <li></li>
+         * </ul>
          */
         public Builder corsConfig(String corsConfig) {
             this.putQueryParameter("CorsConfig", corsConfig);
@@ -407,13 +435,14 @@ public class CreateIngressRequest extends Request {
         }
 
         /**
-         * <p>Default forwarding rule. Traffic is forwarded to the specified application through a designated port based on the IP address. Parameter descriptions are as follows:</p>
+         * <p>The default forwarding rule. Forwards traffic to a specified application through a specified port based on the IP address. The following table describes the parameters.</p>
          * <ul>
-         * <li><strong>appId</strong>: Application ID. - <strong>containerPort</strong>: Application instance port.<blockquote>
-         * <p>All requests that do not match or do not meet the <strong>Rules</strong> for forwarding will be directed to this specified application.</p>
-         * </blockquote>
-         * </li>
+         * <li><strong>appId</strong>: the ID of the application.</li>
+         * <li><strong>containerPort</strong>: The port of the application instance.</li>
          * </ul>
+         * <blockquote>
+         * <p> All requests that do not match or satisfy <strong>Rules</strong> forwarding rules are forwarded to the specified application.</p>
+         * </blockquote>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -426,7 +455,7 @@ public class CreateIngressRequest extends Request {
         }
 
         /**
-         * <p>Route rule name.</p>
+         * <p>The name of the routing rule.</p>
          * 
          * <strong>example:</strong>
          * <p>ingress-for-sae-test</p>
@@ -438,7 +467,30 @@ public class CreateIngressRequest extends Request {
         }
 
         /**
-         * EnableXForwardedFor.
+         * <ul>
+         * <li></li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <ul>
+         * <li></li>
+         * </ul>
+         */
+        public Builder enableGzip(Boolean enableGzip) {
+            this.putQueryParameter("EnableGzip", enableGzip);
+            this.enableGzip = enableGzip;
+            return this;
+        }
+
+        /**
+         * <ul>
+         * <li></li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <ul>
+         * <li></li>
+         * </ul>
          */
         public Builder enableXForwardedFor(Boolean enableXForwardedFor) {
             this.putQueryParameter("EnableXForwardedFor", enableXForwardedFor);
@@ -447,7 +499,14 @@ public class CreateIngressRequest extends Request {
         }
 
         /**
-         * EnableXForwardedForClientSrcPort.
+         * <ul>
+         * <li></li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <ul>
+         * <li></li>
+         * </ul>
          */
         public Builder enableXForwardedForClientSrcPort(Boolean enableXForwardedForClientSrcPort) {
             this.putQueryParameter("EnableXForwardedForClientSrcPort", enableXForwardedForClientSrcPort);
@@ -456,7 +515,14 @@ public class CreateIngressRequest extends Request {
         }
 
         /**
-         * EnableXForwardedForProto.
+         * <ul>
+         * <li></li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <ul>
+         * <li></li>
+         * </ul>
          */
         public Builder enableXForwardedForProto(Boolean enableXForwardedForProto) {
             this.putQueryParameter("EnableXForwardedForProto", enableXForwardedForProto);
@@ -465,7 +531,14 @@ public class CreateIngressRequest extends Request {
         }
 
         /**
-         * EnableXForwardedForSlbId.
+         * <ul>
+         * <li></li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <ul>
+         * <li></li>
+         * </ul>
          */
         public Builder enableXForwardedForSlbId(Boolean enableXForwardedForSlbId) {
             this.putQueryParameter("EnableXForwardedForSlbId", enableXForwardedForSlbId);
@@ -474,7 +547,14 @@ public class CreateIngressRequest extends Request {
         }
 
         /**
-         * EnableXForwardedForSlbPort.
+         * <ul>
+         * <li></li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <ul>
+         * <li></li>
+         * </ul>
          */
         public Builder enableXForwardedForSlbPort(Boolean enableXForwardedForSlbPort) {
             this.putQueryParameter("EnableXForwardedForSlbPort", enableXForwardedForSlbPort);
@@ -483,7 +563,7 @@ public class CreateIngressRequest extends Request {
         }
 
         /**
-         * <p>The timeout period of an idle connection. Unit: seconds Valid values: 1 to 60. If no requests are received within the specified timeout period, ALB closes the current connection. When a new request is received, ALB establishes a new connection.</p>
+         * <p>Specifies the connection idle timeout period. Unit: seconds. Valid values: 1 to 60. If there is no access request within the timeout period, the SLB will temporarily interrupt the current connection until the next request comes to re-establish a new connection.</p>
          * 
          * <strong>example:</strong>
          * <p>15</p>
@@ -495,8 +575,7 @@ public class CreateIngressRequest extends Request {
         }
 
         /**
-         * <p>SThe frontend port that is used by the ALB instance.
-         * Valid values: 1 to 65535.</p>
+         * <p>The SLB listening port. This port cannot be occupied.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -509,9 +588,10 @@ public class CreateIngressRequest extends Request {
         }
 
         /**
-         * <p>Request forwarding protocol. The value description is as follows:</p>
+         * <p>The request forwarding protocol. Valid values:</p>
          * <ul>
-         * <li><strong>HTTP</strong>: Suitable for applications that need to identify data content. - <strong>HTTPS</strong>: Suitable for applications that require encrypted transmission.</li>
+         * <li><strong>HTTP</strong>: suitable for applications that need to identify data content.</li>
+         * <li><strong>HTTPS</strong>: suitable for applications that require encrypted transmission.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -524,10 +604,10 @@ public class CreateIngressRequest extends Request {
         }
 
         /**
-         * <p>The type of the SLB instance. The instance type can be specified only when you create a routing rule. You cannot change the instance type when you update the routing rule. Valid values:</p>
+         * <p>SLB the type of the SLB instance. It depends on the type that you entered when you created the routing rule and cannot be changed when you update it. Valid values:</p>
          * <ul>
-         * <li><strong>clb</strong></li>
-         * <li><strong>alb</strong></li>
+         * <li><strong>clb</strong>: traditional SLB CLB (formerly SLB).</li>
+         * <li><strong>alb</strong>: Applied SLB ALB.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -540,7 +620,14 @@ public class CreateIngressRequest extends Request {
         }
 
         /**
-         * LoadBalancerEdition.
+         * <ul>
+         * <li></li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <ul>
+         * <li></li>
+         * </ul>
          */
         public Builder loadBalancerEdition(String loadBalancerEdition) {
             this.putQueryParameter("LoadBalancerEdition", loadBalancerEdition);
@@ -549,7 +636,7 @@ public class CreateIngressRequest extends Request {
         }
 
         /**
-         * <p>The ID of the namespace where the application is located. Currently, cross-namespace applications are not supported.</p>
+         * <p>The ID of the namespace where the application resides. Currently, cross-namespace applications are not supported.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -562,7 +649,7 @@ public class CreateIngressRequest extends Request {
         }
 
         /**
-         * <p>The timeout period of a request. Unit: seconds. Valid values: 1 to 180. If no response is received from the backend server within the specified timeout period, ALB stops waiting for the response and returns an HTTP 504 error code to the client.</p>
+         * <p>Specifies the request timeout period. Unit: seconds. Valid values: 1 to 180. If the backend server does not respond within the timeout period, the SLB abandons the wait and returns an HTTP 504 error code to the client.</p>
          * 
          * <strong>example:</strong>
          * <p>3</p>
@@ -574,17 +661,17 @@ public class CreateIngressRequest extends Request {
         }
 
         /**
-         * <p>The forwarding rules. You can specify a port and an application in a forwarding rule to forward traffic based on the specified domain name and request path. The following list describes the involved parameters:</p>
+         * <p>The forwarding rule. Forwards traffic to a specified application through a specified port based on the domain name and request path. The following table describes the parameters.</p>
          * <ul>
          * <li><strong>appId</strong>: the ID of the application.</li>
-         * <li><strong>containerPort</strong>: the container port of the application.</li>
+         * <li><strong>containerPort</strong>: The port of the application instance.</li>
          * <li><strong>domain</strong>: the domain name.</li>
          * <li><strong>path</strong>: the request path.</li>
-         * <li><strong>backendProtocol</strong>: the backend service protocol. Valid values: http, https, and grpc. Default value: http.</li>
-         * <li><strong>rewritePath</strong>: the rewrite path.</li>
+         * <li><strong>backendProtocol</strong>: The backend service protocol. Valid values: http, https, and grpc. Default value: http.</li>
+         * <li><strong>rewritePath</strong>: Rewrite the path.</li>
          * </ul>
          * <blockquote>
-         * <p> The path rewrite feature is supported only by ALB instances.</p>
+         * <p> Only ALB allows you to set the RewritePath feature. CLB does not support this feature.</p>
          * </blockquote>
          * <p>This parameter is required.</p>
          * 
@@ -598,7 +685,7 @@ public class CreateIngressRequest extends Request {
         }
 
         /**
-         * <p>The ID of a security policy.</p>
+         * <p>The ID of the security policy instance.</p>
          * 
          * <strong>example:</strong>
          * <p>sp-bp1bpn0kn9****</p>
@@ -612,7 +699,7 @@ public class CreateIngressRequest extends Request {
         /**
          * <p>The Server Load Balancer (SLB) instance that is used by the routing rule.</p>
          * <blockquote>
-         * <p> The SLB instance can be a Classic Load Balancer (CLB) instance or an Application Load Balancer (ALB) instance.</p>
+         * <p> SLB SLB instances include CLB instances and ALB instances.</p>
          * </blockquote>
          * 
          * <strong>example:</strong>
@@ -625,7 +712,14 @@ public class CreateIngressRequest extends Request {
         }
 
         /**
-         * ZoneMappings.
+         * <ul>
+         * <li></li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <ul>
+         * <li></li>
+         * </ul>
          */
         public Builder zoneMappings(String zoneMappings) {
             this.putQueryParameter("ZoneMappings", zoneMappings);

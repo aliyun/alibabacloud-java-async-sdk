@@ -382,6 +382,9 @@ public class ListJobsResponseBody extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Failed")
         private Long failed;
 
+        @com.aliyun.core.annotation.NameInMap("ImageUrl")
+        private String imageUrl;
+
         @com.aliyun.core.annotation.NameInMap("LastChangeorderState")
         private String lastChangeorderState;
 
@@ -423,6 +426,7 @@ public class ListJobsResponseBody extends TeaModel {
             this.completionTime = builder.completionTime;
             this.cpu = builder.cpu;
             this.failed = builder.failed;
+            this.imageUrl = builder.imageUrl;
             this.lastChangeorderState = builder.lastChangeorderState;
             this.lastJobState = builder.lastJobState;
             this.lastStartTime = builder.lastStartTime;
@@ -491,6 +495,13 @@ public class ListJobsResponseBody extends TeaModel {
          */
         public Long getFailed() {
             return this.failed;
+        }
+
+        /**
+         * @return imageUrl
+         */
+        public String getImageUrl() {
+            return this.imageUrl;
         }
 
         /**
@@ -578,6 +589,7 @@ public class ListJobsResponseBody extends TeaModel {
             private Long completionTime; 
             private Integer cpu; 
             private Long failed; 
+            private String imageUrl; 
             private String lastChangeorderState; 
             private String lastJobState; 
             private Long lastStartTime; 
@@ -601,6 +613,7 @@ public class ListJobsResponseBody extends TeaModel {
                 this.completionTime = model.completionTime;
                 this.cpu = model.cpu;
                 this.failed = model.failed;
+                this.imageUrl = model.imageUrl;
                 this.lastChangeorderState = model.lastChangeorderState;
                 this.lastJobState = model.lastJobState;
                 this.lastStartTime = model.lastStartTime;
@@ -697,6 +710,14 @@ public class ListJobsResponseBody extends TeaModel {
              */
             public Builder failed(Long failed) {
                 this.failed = failed;
+                return this;
+            }
+
+            /**
+             * ImageUrl.
+             */
+            public Builder imageUrl(String imageUrl) {
+                this.imageUrl = imageUrl;
                 return this;
             }
 

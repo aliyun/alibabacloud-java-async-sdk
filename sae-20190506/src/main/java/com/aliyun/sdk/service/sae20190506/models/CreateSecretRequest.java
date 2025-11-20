@@ -105,6 +105,7 @@ public class CreateSecretRequest extends Request {
         } 
 
         /**
+         * <p>The ID of the namespace where the Secret resides. If the namespace is the default namespace, you need to only enter the region ID, such as <code>cn-beijing</code>.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -117,6 +118,7 @@ public class CreateSecretRequest extends Request {
         }
 
         /**
+         * <p>The Secret data.</p>
          * <p>This parameter is required.</p>
          */
         public Builder secretData(SecretData secretData) {
@@ -127,6 +129,7 @@ public class CreateSecretRequest extends Request {
         }
 
         /**
+         * <p>The Secret name. The name can contain digits, letters, and underscores (_). The name must start with a letter.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -139,6 +142,16 @@ public class CreateSecretRequest extends Request {
         }
 
         /**
+         * <p>The supported Secret type. Valid values:</p>
+         * <ul>
+         * <li><strong>kubernetes.io/dockerconfigjson</strong>: the Secret for the username and password of the image repository. The Secret is used for authentication when images are pulled during application deployment.</li>
+         * </ul>
+         * <p>Valid values:</p>
+         * <ul>
+         * <li>Opaque</li>
+         * <li>kubernetes.io/dockerconfigjson</li>
+         * <li>kubernetes.io/tls</li>
+         * </ul>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -198,7 +211,13 @@ public class CreateSecretRequest extends Request {
             } 
 
             /**
+             * <p>The information about the key-value pairs of the Secret. This parameter is required. The following formats are supported:</p>
+             * <p>{&quot;Data&quot;:&quot;{&quot;k1&quot;:&quot;v1&quot;, &quot;k2&quot;:&quot;v2&quot;}&quot;}</p>
+             * <p>k specifies a key and v specifies a value.</p>
              * <p>This parameter is required.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>{&quot;.dockerconfigjson&quot;:&quot;eyJhdXRocyI6eyJyZWdpc3RyeS12cGMuY24tYmVpamluZy5hbGl5dW5jcy5jb20iOnsidXNlcm5hbWUiOiJ1c2VybmFtZSIsInBhc3N3b3JkIjoicGFzc3dvcmQiLCJhdXRoIjoiZFhObGNtNWhiV1U2Y0dGemMzZHZjbVE9In0sInJlZ2lzdHJ5LmNuLWJlaWppbmcuYWxpeXVuY3MuY29tIjp7InVzZXJuYW1lIjoidXNlcm5hbWUiLCJwYXNzd29yZCI6InBhc3N3b3JkIiwiYXV0aCI6ImRYTmxjbTVoYldVNmNHRnpjM2R2Y21RPSJ9fX0=&quot;}</p>
              */
             public Builder secretData(String secretData) {
                 this.secretData = secretData;
