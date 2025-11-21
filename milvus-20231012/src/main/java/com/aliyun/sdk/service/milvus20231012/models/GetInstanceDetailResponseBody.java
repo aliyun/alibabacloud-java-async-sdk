@@ -963,6 +963,81 @@ public class GetInstanceDetailResponseBody extends TeaModel {
      *
      * <p>GetInstanceDetailResponseBody</p>
      */
+    public static class VSwitches extends TeaModel {
+        @com.aliyun.core.annotation.NameInMap("VswId")
+        private String vswId;
+
+        @com.aliyun.core.annotation.NameInMap("ZoneId")
+        private String zoneId;
+
+        private VSwitches(Builder builder) {
+            this.vswId = builder.vswId;
+            this.zoneId = builder.zoneId;
+        }
+
+        public static Builder builder() {
+            return new Builder();
+        }
+
+        public static VSwitches create() {
+            return builder().build();
+        }
+
+        /**
+         * @return vswId
+         */
+        public String getVswId() {
+            return this.vswId;
+        }
+
+        /**
+         * @return zoneId
+         */
+        public String getZoneId() {
+            return this.zoneId;
+        }
+
+        public static final class Builder {
+            private String vswId; 
+            private String zoneId; 
+
+            private Builder() {
+            } 
+
+            private Builder(VSwitches model) {
+                this.vswId = model.vswId;
+                this.zoneId = model.zoneId;
+            } 
+
+            /**
+             * VswId.
+             */
+            public Builder vswId(String vswId) {
+                this.vswId = vswId;
+                return this;
+            }
+
+            /**
+             * ZoneId.
+             */
+            public Builder zoneId(String zoneId) {
+                this.zoneId = zoneId;
+                return this;
+            }
+
+            public VSwitches build() {
+                return new VSwitches(this);
+            } 
+
+        } 
+
+    }
+    /**
+     * 
+     * {@link GetInstanceDetailResponseBody} extends {@link TeaModel}
+     *
+     * <p>GetInstanceDetailResponseBody</p>
+     */
     public static class Data extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("AclId")
         private String aclId;
@@ -985,6 +1060,9 @@ public class GetInstanceDetailResponseBody extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("EnableHa")
         private Boolean enableHa;
 
+        @com.aliyun.core.annotation.NameInMap("Encrypted")
+        private String encrypted;
+
         @com.aliyun.core.annotation.NameInMap("ExpireTime")
         private Long expireTime;
 
@@ -994,8 +1072,14 @@ public class GetInstanceDetailResponseBody extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("InstanceStatus")
         private String instanceStatus;
 
+        @com.aliyun.core.annotation.NameInMap("KmsKeyId")
+        private String kmsKeyId;
+
         @com.aliyun.core.annotation.NameInMap("MeasureConfig")
         private MeasureConfig measureConfig;
+
+        @com.aliyun.core.annotation.NameInMap("MultiZoneMode")
+        private String multiZoneMode;
 
         @com.aliyun.core.annotation.NameInMap("NodeType")
         private String nodeType;
@@ -1033,6 +1117,9 @@ public class GetInstanceDetailResponseBody extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("UserConfig")
         private String userConfig;
 
+        @com.aliyun.core.annotation.NameInMap("VSwitches")
+        private java.util.List<VSwitches> vSwitches;
+
         @com.aliyun.core.annotation.NameInMap("Version")
         private String version;
 
@@ -1053,10 +1140,13 @@ public class GetInstanceDetailResponseBody extends TeaModel {
             this.clusterInfo = builder.clusterInfo;
             this.clusterName = builder.clusterName;
             this.enableHa = builder.enableHa;
+            this.encrypted = builder.encrypted;
             this.expireTime = builder.expireTime;
             this.instanceId = builder.instanceId;
             this.instanceStatus = builder.instanceStatus;
+            this.kmsKeyId = builder.kmsKeyId;
             this.measureConfig = builder.measureConfig;
+            this.multiZoneMode = builder.multiZoneMode;
             this.nodeType = builder.nodeType;
             this.openPublicNet = builder.openPublicNet;
             this.packageType = builder.packageType;
@@ -1069,6 +1159,7 @@ public class GetInstanceDetailResponseBody extends TeaModel {
             this.tags = builder.tags;
             this.templateVersion = builder.templateVersion;
             this.userConfig = builder.userConfig;
+            this.vSwitches = builder.vSwitches;
             this.version = builder.version;
             this.vpcId = builder.vpcId;
             this.vswId = builder.vswId;
@@ -1133,6 +1224,13 @@ public class GetInstanceDetailResponseBody extends TeaModel {
         }
 
         /**
+         * @return encrypted
+         */
+        public String getEncrypted() {
+            return this.encrypted;
+        }
+
+        /**
          * @return expireTime
          */
         public Long getExpireTime() {
@@ -1154,10 +1252,24 @@ public class GetInstanceDetailResponseBody extends TeaModel {
         }
 
         /**
+         * @return kmsKeyId
+         */
+        public String getKmsKeyId() {
+            return this.kmsKeyId;
+        }
+
+        /**
          * @return measureConfig
          */
         public MeasureConfig getMeasureConfig() {
             return this.measureConfig;
+        }
+
+        /**
+         * @return multiZoneMode
+         */
+        public String getMultiZoneMode() {
+            return this.multiZoneMode;
         }
 
         /**
@@ -1245,6 +1357,13 @@ public class GetInstanceDetailResponseBody extends TeaModel {
         }
 
         /**
+         * @return vSwitches
+         */
+        public java.util.List<VSwitches> getVSwitches() {
+            return this.vSwitches;
+        }
+
+        /**
          * @return version
          */
         public String getVersion() {
@@ -1280,10 +1399,13 @@ public class GetInstanceDetailResponseBody extends TeaModel {
             private ClusterInfo clusterInfo; 
             private String clusterName; 
             private Boolean enableHa; 
+            private String encrypted; 
             private Long expireTime; 
             private String instanceId; 
             private String instanceStatus; 
+            private String kmsKeyId; 
             private MeasureConfig measureConfig; 
+            private String multiZoneMode; 
             private String nodeType; 
             private Boolean openPublicNet; 
             private String packageType; 
@@ -1296,6 +1418,7 @@ public class GetInstanceDetailResponseBody extends TeaModel {
             private java.util.List<Tags> tags; 
             private String templateVersion; 
             private String userConfig; 
+            private java.util.List<VSwitches> vSwitches; 
             private String version; 
             private String vpcId; 
             private String vswId; 
@@ -1312,10 +1435,13 @@ public class GetInstanceDetailResponseBody extends TeaModel {
                 this.clusterInfo = model.clusterInfo;
                 this.clusterName = model.clusterName;
                 this.enableHa = model.enableHa;
+                this.encrypted = model.encrypted;
                 this.expireTime = model.expireTime;
                 this.instanceId = model.instanceId;
                 this.instanceStatus = model.instanceStatus;
+                this.kmsKeyId = model.kmsKeyId;
                 this.measureConfig = model.measureConfig;
+                this.multiZoneMode = model.multiZoneMode;
                 this.nodeType = model.nodeType;
                 this.openPublicNet = model.openPublicNet;
                 this.packageType = model.packageType;
@@ -1328,6 +1454,7 @@ public class GetInstanceDetailResponseBody extends TeaModel {
                 this.tags = model.tags;
                 this.templateVersion = model.templateVersion;
                 this.userConfig = model.userConfig;
+                this.vSwitches = model.vSwitches;
                 this.version = model.version;
                 this.vpcId = model.vpcId;
                 this.vswId = model.vswId;
@@ -1406,6 +1533,14 @@ public class GetInstanceDetailResponseBody extends TeaModel {
             }
 
             /**
+             * Encrypted.
+             */
+            public Builder encrypted(String encrypted) {
+                this.encrypted = encrypted;
+                return this;
+            }
+
+            /**
              * <p>The expiration time.</p>
              * 
              * <strong>example:</strong>
@@ -1447,10 +1582,26 @@ public class GetInstanceDetailResponseBody extends TeaModel {
             }
 
             /**
+             * KmsKeyId.
+             */
+            public Builder kmsKeyId(String kmsKeyId) {
+                this.kmsKeyId = kmsKeyId;
+                return this;
+            }
+
+            /**
              * MeasureConfig.
              */
             public Builder measureConfig(MeasureConfig measureConfig) {
                 this.measureConfig = measureConfig;
+                return this;
+            }
+
+            /**
+             * MultiZoneMode.
+             */
+            public Builder multiZoneMode(String multiZoneMode) {
+                this.multiZoneMode = multiZoneMode;
                 return this;
             }
 
@@ -1585,6 +1736,14 @@ public class GetInstanceDetailResponseBody extends TeaModel {
              */
             public Builder userConfig(String userConfig) {
                 this.userConfig = userConfig;
+                return this;
+            }
+
+            /**
+             * VSwitches.
+             */
+            public Builder vSwitches(java.util.List<VSwitches> vSwitches) {
+                this.vSwitches = vSwitches;
                 return this;
             }
 
