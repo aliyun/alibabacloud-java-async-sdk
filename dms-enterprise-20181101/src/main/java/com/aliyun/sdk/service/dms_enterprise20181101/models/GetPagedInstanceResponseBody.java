@@ -158,7 +158,7 @@ public class GetPagedInstanceResponseBody extends TeaModel {
         } 
 
         /**
-         * Data.
+         * <p>The data returned.</p>
          */
         public Builder data(Data data) {
             this.data = data;
@@ -166,7 +166,10 @@ public class GetPagedInstanceResponseBody extends TeaModel {
         }
 
         /**
-         * ErrorCode.
+         * <p>The error code returned if the request failed.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>UnknownError</p>
          */
         public Builder errorCode(String errorCode) {
             this.errorCode = errorCode;
@@ -174,7 +177,10 @@ public class GetPagedInstanceResponseBody extends TeaModel {
         }
 
         /**
-         * ErrorMessage.
+         * <p>The error message that is returned if the request failed.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>UnknownError</p>
          */
         public Builder errorMessage(String errorMessage) {
             this.errorMessage = errorMessage;
@@ -182,7 +188,10 @@ public class GetPagedInstanceResponseBody extends TeaModel {
         }
 
         /**
-         * PageIndex.
+         * <p>The page number.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder pageIndex(Long pageIndex) {
             this.pageIndex = pageIndex;
@@ -190,7 +199,10 @@ public class GetPagedInstanceResponseBody extends TeaModel {
         }
 
         /**
-         * PageSize.
+         * <p>The number of entries to return on each page.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10</p>
          */
         public Builder pageSize(Long pageSize) {
             this.pageSize = pageSize;
@@ -198,7 +210,10 @@ public class GetPagedInstanceResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * <p>The request ID. You can use the request ID to query logs and troubleshoot issues.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>7FAD400F-7A5C-4193-8F9A-39D86C4F0231</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -206,7 +221,14 @@ public class GetPagedInstanceResponseBody extends TeaModel {
         }
 
         /**
-         * Success.
+         * <p>Indicates whether the request was successful. Valid values:</p>
+         * <ul>
+         * <li><strong>true</strong></li>
+         * <li><strong>false</strong>: The request failed.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder success(Boolean success) {
             this.success = success;
@@ -214,7 +236,10 @@ public class GetPagedInstanceResponseBody extends TeaModel {
         }
 
         /**
-         * Total.
+         * <p>The total number of instances.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2</p>
          */
         public Builder total(Long total) {
             this.total = total;
@@ -222,7 +247,7 @@ public class GetPagedInstanceResponseBody extends TeaModel {
         }
 
         /**
-         * <p>Id of the request</p>
+         * <p>The trace ID, which is used to track the request.</p>
          * 
          * <strong>example:</strong>
          * <p>0a06e1e316757357507896067d3780</p>
@@ -473,7 +498,10 @@ public class GetPagedInstanceResponseBody extends TeaModel {
             } 
 
             /**
-             * BusinessTime.
+             * <p>The data timestamp of the task node.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2023-05-14 16:00:57</p>
              */
             public Builder businessTime(String businessTime) {
                 this.businessTime = businessTime;
@@ -481,7 +509,17 @@ public class GetPagedInstanceResponseBody extends TeaModel {
             }
 
             /**
-             * CheckStatus.
+             * <p>The state of archived data verification. Valid values:</p>
+             * <ul>
+             * <li><strong>0</strong>: The verification was successful.</li>
+             * <li><strong>1</strong>: Inconsistent data was detected.</li>
+             * <li><strong>2</strong>: The verification was not performed.</li>
+             * <li><strong>3</strong>: The verification is in progress.</li>
+             * <li><strong>4</strong>: The verification was interrupted.</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>3</p>
              */
             public Builder checkStatus(Long checkStatus) {
                 this.checkStatus = checkStatus;
@@ -489,7 +527,10 @@ public class GetPagedInstanceResponseBody extends TeaModel {
             }
 
             /**
-             * DagId.
+             * <p>The unique ID of the task flow.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>33753</p>
              */
             public Builder dagId(Long dagId) {
                 this.dagId = dagId;
@@ -497,7 +538,14 @@ public class GetPagedInstanceResponseBody extends TeaModel {
             }
 
             /**
-             * Delete.
+             * <p>Indicates whether the source data is deleted. Valid values:</p>
+             * <ul>
+             * <li><strong>true</strong>: deletes the jobs in the application group.</li>
+             * <li><strong>false</strong></li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>false</p>
              */
             public Builder delete(String delete) {
                 this.delete = delete;
@@ -505,7 +553,10 @@ public class GetPagedInstanceResponseBody extends TeaModel {
             }
 
             /**
-             * EndTime.
+             * <p>The time when the task ended.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2023-04-23 10:23:20</p>
              */
             public Builder endTime(String endTime) {
                 this.endTime = endTime;
@@ -513,7 +564,10 @@ public class GetPagedInstanceResponseBody extends TeaModel {
             }
 
             /**
-             * GmtCreate.
+             * <p>The time when the task flow was created.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2023-03-28 10:50:45</p>
              */
             public Builder gmtCreate(String gmtCreate) {
                 this.gmtCreate = gmtCreate;
@@ -521,7 +575,10 @@ public class GetPagedInstanceResponseBody extends TeaModel {
             }
 
             /**
-             * GmtModified.
+             * <p>The time when the task flow was last modified.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2023-04-18 15:28:16</p>
              */
             public Builder gmtModified(String gmtModified) {
                 this.gmtModified = gmtModified;
@@ -529,7 +586,10 @@ public class GetPagedInstanceResponseBody extends TeaModel {
             }
 
             /**
-             * HistoryDagId.
+             * <p>The ID of the historical task flow.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>6851</p>
              */
             public Builder historyDagId(Long historyDagId) {
                 this.historyDagId = historyDagId;
@@ -537,7 +597,10 @@ public class GetPagedInstanceResponseBody extends TeaModel {
             }
 
             /**
-             * Id.
+             * <p>The task flow ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>24271</p>
              */
             public Builder id(Long id) {
                 this.id = id;
@@ -545,7 +608,10 @@ public class GetPagedInstanceResponseBody extends TeaModel {
             }
 
             /**
-             * LastRunningContext.
+             * <p>The context of the last execution of the task flow.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>{”nodes&quot;:[11694,11695]&quot;}</p>
              */
             public Builder lastRunningContext(String lastRunningContext) {
                 this.lastRunningContext = lastRunningContext;
@@ -553,7 +619,7 @@ public class GetPagedInstanceResponseBody extends TeaModel {
             }
 
             /**
-             * Msg.
+             * <p>The details of the current task execution.</p>
              */
             public Builder msg(String msg) {
                 this.msg = msg;
@@ -561,7 +627,17 @@ public class GetPagedInstanceResponseBody extends TeaModel {
             }
 
             /**
-             * Status.
+             * <p>The state of the archiving task.</p>
+             * <ul>
+             * <li><strong>0</strong>: Pending.</li>
+             * <li><strong>1</strong>: Running.</li>
+             * <li><strong>2</strong>: Paused.</li>
+             * <li><strong>3</strong>: Failed.</li>
+             * <li><strong>4</strong>: Succeeded.</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder status(Long status) {
                 this.status = status;
@@ -569,7 +645,15 @@ public class GetPagedInstanceResponseBody extends TeaModel {
             }
 
             /**
-             * TaskType.
+             * <p>The task type. Valid values:</p>
+             * <ul>
+             * <li><strong>1</strong>: data archiving</li>
+             * <li><strong>2</strong>: archived data restoration</li>
+             * <li><strong>3</strong>: archived data verification</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder taskType(Long taskType) {
                 this.taskType = taskType;
@@ -577,7 +661,10 @@ public class GetPagedInstanceResponseBody extends TeaModel {
             }
 
             /**
-             * TenantId.
+             * <p>The ID of the tenant.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>3406</p>
              */
             public Builder tenantId(String tenantId) {
                 this.tenantId = tenantId;
@@ -585,7 +672,14 @@ public class GetPagedInstanceResponseBody extends TeaModel {
             }
 
             /**
-             * TriggerType.
+             * <p>The mode in which the task flow is triggered. Valid values:</p>
+             * <ul>
+             * <li><strong>0</strong>: The task flow was triggered based on a schedule.</li>
+             * <li><strong>1</strong>: The task flow was manually triggered.</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder triggerType(Long triggerType) {
                 this.triggerType = triggerType;
@@ -593,7 +687,10 @@ public class GetPagedInstanceResponseBody extends TeaModel {
             }
 
             /**
-             * Version.
+             * <p>The version number.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder version(String version) {
                 this.version = version;
@@ -647,7 +744,7 @@ public class GetPagedInstanceResponseBody extends TeaModel {
             } 
 
             /**
-             * Instance.
+             * <p>The information about the task.</p>
              */
             public Builder instance(java.util.List<Instance> instance) {
                 this.instance = instance;

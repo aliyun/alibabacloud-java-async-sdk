@@ -67,7 +67,7 @@ public class ListAuthorizedDatabasesForUserResponseBody extends TeaModel {
         } 
 
         /**
-         * Databases.
+         * <p>The names of the databases on which the user has permissions.</p>
          */
         public Builder databases(java.util.List<Databases> databases) {
             this.databases = databases;
@@ -75,7 +75,10 @@ public class ListAuthorizedDatabasesForUserResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * <p>The request ID. You can use the ID to query logs and troubleshoot issues.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>012AE0B5-4B52-532F-BD7C-1EE9F182089B</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -167,7 +170,10 @@ public class ListAuthorizedDatabasesForUserResponseBody extends TeaModel {
             } 
 
             /**
-             * DsType.
+             * <p>The type of object on which the operation is performed.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>DATABASE</p>
              */
             public Builder dsType(String dsType) {
                 this.dsType = dsType;
@@ -175,7 +181,10 @@ public class ListAuthorizedDatabasesForUserResponseBody extends TeaModel {
             }
 
             /**
-             * ExpireDate.
+             * <p>The time when the permissions expire.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2024-12-06 10:00:00</p>
              */
             public Builder expireDate(String expireDate) {
                 this.expireDate = expireDate;
@@ -183,7 +192,7 @@ public class ListAuthorizedDatabasesForUserResponseBody extends TeaModel {
             }
 
             /**
-             * Message.
+             * <p>If the permission source is a permission policy, the value of this parameter includes the policy name and the operations that are allowed for the user.</p>
              */
             public Builder message(String message) {
                 this.message = message;
@@ -191,7 +200,15 @@ public class ListAuthorizedDatabasesForUserResponseBody extends TeaModel {
             }
 
             /**
-             * PermType.
+             * <p>The type of the permission. Valid values:</p>
+             * <ul>
+             * <li><strong>QUERY</strong>: the query permission</li>
+             * <li><strong>EXPORT</strong>: the data export permission</li>
+             * <li><strong>CORRECT</strong>: the data change permission</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>CORRECT</p>
              */
             public Builder permType(String permType) {
                 this.permType = permType;
@@ -349,7 +366,10 @@ public class ListAuthorizedDatabasesForUserResponseBody extends TeaModel {
             } 
 
             /**
-             * DbId.
+             * <p>The database ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>254****</p>
              */
             public Builder dbId(String dbId) {
                 this.dbId = dbId;
@@ -357,7 +377,10 @@ public class ListAuthorizedDatabasesForUserResponseBody extends TeaModel {
             }
 
             /**
-             * DbType.
+             * <p>The engine of the database.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>MYSQL</p>
              */
             public Builder dbType(String dbType) {
                 this.dbType = dbType;
@@ -365,7 +388,10 @@ public class ListAuthorizedDatabasesForUserResponseBody extends TeaModel {
             }
 
             /**
-             * EnvType.
+             * <p>The type of the environment in which the database instance is deployed.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>product</p>
              */
             public Builder envType(String envType) {
                 this.envType = envType;
@@ -373,7 +399,10 @@ public class ListAuthorizedDatabasesForUserResponseBody extends TeaModel {
             }
 
             /**
-             * InstanceId.
+             * <p>The ID of the instance.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>235****</p>
              */
             public Builder instanceId(String instanceId) {
                 this.instanceId = instanceId;
@@ -381,7 +410,14 @@ public class ListAuthorizedDatabasesForUserResponseBody extends TeaModel {
             }
 
             /**
-             * Logic.
+             * <p>Indicates whether the database is a logical database. Valid values:</p>
+             * <ul>
+             * <li><strong>true.</strong>: The database is a logical database</li>
+             * <li><strong>false</strong>: The database is a physical database.</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>false</p>
              */
             public Builder logic(Boolean logic) {
                 this.logic = logic;
@@ -389,7 +425,7 @@ public class ListAuthorizedDatabasesForUserResponseBody extends TeaModel {
             }
 
             /**
-             * PermissionDetail.
+             * <p>The details of permissions. The format of the permission details varies with the permission source. For example, if the permission source is a normal permission, the following parameters are returned.</p>
              */
             public Builder permissionDetail(PermissionDetail permissionDetail) {
                 this.permissionDetail = permissionDetail;
@@ -397,7 +433,10 @@ public class ListAuthorizedDatabasesForUserResponseBody extends TeaModel {
             }
 
             /**
-             * SchemaName.
+             * <p>The database name.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>poc_testdb</p>
              */
             public Builder schemaName(String schemaName) {
                 this.schemaName = schemaName;
@@ -405,7 +444,10 @@ public class ListAuthorizedDatabasesForUserResponseBody extends TeaModel {
             }
 
             /**
-             * SearchName.
+             * <p>The name that is used to search for the database.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>poc</p>
              */
             public Builder searchName(String searchName) {
                 this.searchName = searchName;
@@ -413,7 +455,10 @@ public class ListAuthorizedDatabasesForUserResponseBody extends TeaModel {
             }
 
             /**
-             * UserId.
+             * <p>The user IDs.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>51****</p>
              */
             public Builder userId(String userId) {
                 this.userId = userId;

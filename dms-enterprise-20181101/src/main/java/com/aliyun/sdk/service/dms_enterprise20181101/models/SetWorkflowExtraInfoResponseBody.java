@@ -106,7 +106,10 @@ public class SetWorkflowExtraInfoResponseBody extends TeaModel {
         } 
 
         /**
-         * Data.
+         * <p>Indicates whether the call was successful.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder data(Boolean data) {
             this.data = data;
@@ -114,7 +117,10 @@ public class SetWorkflowExtraInfoResponseBody extends TeaModel {
         }
 
         /**
-         * ErrorCode.
+         * <p>The error code returned if the request failed.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>UnknownError</p>
          */
         public Builder errorCode(String errorCode) {
             this.errorCode = errorCode;
@@ -122,7 +128,10 @@ public class SetWorkflowExtraInfoResponseBody extends TeaModel {
         }
 
         /**
-         * ErrorMessage.
+         * <p>The error message that is returned if the request failed.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>UnknownError</p>
          */
         public Builder errorMessage(String errorMessage) {
             this.errorMessage = errorMessage;
@@ -130,7 +139,10 @@ public class SetWorkflowExtraInfoResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * <p>The request ID. You can use the ID to query logs and troubleshoot issues.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>8401893F-4235-55D5-B563-7CF7A7D037DE</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -138,7 +150,14 @@ public class SetWorkflowExtraInfoResponseBody extends TeaModel {
         }
 
         /**
-         * Success.
+         * <p>Indicates whether the request was successful. Valid values:</p>
+         * <ul>
+         * <li><strong>true</strong>: The request was successful.</li>
+         * <li><strong>false</strong>: The request failed.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder success(Boolean success) {
             this.success = success;

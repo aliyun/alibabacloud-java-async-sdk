@@ -141,7 +141,11 @@ public class CreateProcCorrectOrderRequest extends Request {
         }
 
         /**
-         * AttachmentKey.
+         * <p>The key of the attachment for the ticket. The attachment provides more instructions for this operation.</p>
+         * <p>You can call the <a href="https://help.aliyun.com/document_detail/206069.html">GetUserUploadFileJob</a> operation to query the key of the attachment.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>order_attachment.txt</p>
          */
         public Builder attachmentKey(String attachmentKey) {
             this.putQueryParameter("AttachmentKey", attachmentKey);
@@ -150,6 +154,7 @@ public class CreateProcCorrectOrderRequest extends Request {
         }
 
         /**
+         * <p>The remarks of the ticket.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -162,6 +167,7 @@ public class CreateProcCorrectOrderRequest extends Request {
         }
 
         /**
+         * <p>The parameters of the ticket.</p>
          * <p>This parameter is required.</p>
          */
         public Builder param(Param param) {
@@ -172,7 +178,7 @@ public class CreateProcCorrectOrderRequest extends Request {
         }
 
         /**
-         * RelatedUserList.
+         * <p>The operators that are related to the ticket.</p>
          */
         public Builder relatedUserList(java.util.List<Long> relatedUserList) {
             String relatedUserListShrink = shrink(relatedUserList, "RelatedUserList", "json");
@@ -182,7 +188,13 @@ public class CreateProcCorrectOrderRequest extends Request {
         }
 
         /**
-         * Tid.
+         * <p>The ID of the tenant.</p>
+         * <blockquote>
+         * <p> To view the ID of the tenant, go to the Data Management (DMS) console and move the pointer over the profile picture in the upper-right corner. For more information, see the <a href="https://help.aliyun.com/document_detail/181330.html">View information about the current tenant</a> section of the &quot;Manage DMS tenants&quot; topic.</p>
+         * </blockquote>
+         * 
+         * <strong>example:</strong>
+         * <p>4***</p>
          */
         public Builder tid(Long tid) {
             this.putQueryParameter("Tid", tid);
@@ -252,6 +264,11 @@ public class CreateProcCorrectOrderRequest extends Request {
             } 
 
             /**
+             * <p>The database ID. Databases are divided into physical databases and logical databases.</p>
+             * <ul>
+             * <li>To query the ID of a physical database, call the <a href="https://help.aliyun.com/document_detail/141873.html">ListDatabases</a> or <a href="https://help.aliyun.com/document_detail/141876.html">SearchDatabase</a> operation.</li>
+             * <li>To query the ID of a logical database, call the <a href="https://help.aliyun.com/document_detail/141874.html">ListLogicDatabases</a> or <a href="https://help.aliyun.com/document_detail/141876.html">SearchDatabase</a> operation.</li>
+             * </ul>
              * <p>This parameter is required.</p>
              * 
              * <strong>example:</strong>
@@ -263,6 +280,11 @@ public class CreateProcCorrectOrderRequest extends Request {
             }
 
             /**
+             * <p>Specifies whether the database is a logical database. Valid values:</p>
+             * <ul>
+             * <li><strong>true</strong>: The database is a logical database.</li>
+             * <li><strong>false</strong>: The database is a physical database.</li>
+             * </ul>
              * <p>This parameter is required.</p>
              * 
              * <strong>example:</strong>
@@ -400,7 +422,10 @@ public class CreateProcCorrectOrderRequest extends Request {
             } 
 
             /**
-             * Classify.
+             * <p>The reason for the programmable object change.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>test</p>
              */
             public Builder classify(String classify) {
                 this.classify = classify;
@@ -408,6 +433,7 @@ public class CreateProcCorrectOrderRequest extends Request {
             }
 
             /**
+             * <p>The information about the database.</p>
              * <p>This parameter is required.</p>
              */
             public Builder dbItemList(java.util.List<DbItemList> dbItemList) {
@@ -416,7 +442,15 @@ public class CreateProcCorrectOrderRequest extends Request {
             }
 
             /**
-             * ExecMode.
+             * <p>The mode in which the data change ticket is executed after the ticket is approved. Valid values:</p>
+             * <ul>
+             * <li><strong>COMMITOR</strong>: The ticket is executed by the user who submits the ticket.</li>
+             * <li><strong>AUTO</strong>: The ticket is automatically executed after the ticket is approved.</li>
+             * <li><strong>LAST_AUDITOR</strong>: The ticket is executed by the last approver of the ticket.</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>COMMITOR</p>
              */
             public Builder execMode(String execMode) {
                 this.execMode = execMode;
@@ -424,6 +458,7 @@ public class CreateProcCorrectOrderRequest extends Request {
             }
 
             /**
+             * <p>The SQL statements for data change.</p>
              * <p>This parameter is required.</p>
              * 
              * <strong>example:</strong>
@@ -439,7 +474,13 @@ public class CreateProcCorrectOrderRequest extends Request {
             }
 
             /**
-             * RollbackAttachmentName.
+             * <p>The key of the attachment that contains the SQL statements used to roll back the data change. You can call the <a href="https://help.aliyun.com/document_detail/206069.html">GetUserUploadFileJob</a> operation to obtain the attachment key from the value of AttachmentKey.</p>
+             * <blockquote>
+             * <p> This parameter is required if you set <strong>RollbackSqlType</strong> to <strong>ATTACHMENT</strong>.</p>
+             * </blockquote>
+             * 
+             * <strong>example:</strong>
+             * <p>test_rollback.sql</p>
              */
             public Builder rollbackAttachmentName(String rollbackAttachmentName) {
                 this.rollbackAttachmentName = rollbackAttachmentName;
@@ -447,7 +488,13 @@ public class CreateProcCorrectOrderRequest extends Request {
             }
 
             /**
-             * RollbackSQL.
+             * <p>The SQL statements for rolling back the data change.</p>
+             * <blockquote>
+             * <p> This parameter is required if you set the <strong>RollbackSqlType</strong> parameter to <strong>TEXT</strong>.</p>
+             * </blockquote>
+             * 
+             * <strong>example:</strong>
+             * <p>empty</p>
              */
             public Builder rollbackSQL(String rollbackSQL) {
                 this.rollbackSQL = rollbackSQL;
@@ -455,7 +502,14 @@ public class CreateProcCorrectOrderRequest extends Request {
             }
 
             /**
-             * RollbackSqlType.
+             * <p>The format of the SQL statements used to roll back the data change. Valid values:</p>
+             * <ul>
+             * <li><strong>TEXT</strong></li>
+             * <li><strong>ATTACHMENT</strong></li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>TEXT</p>
              */
             public Builder rollbackSqlType(String rollbackSqlType) {
                 this.rollbackSqlType = rollbackSqlType;

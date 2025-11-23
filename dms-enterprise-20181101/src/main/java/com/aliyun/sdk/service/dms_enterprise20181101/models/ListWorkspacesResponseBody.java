@@ -145,7 +145,7 @@ public class ListWorkspacesResponseBody extends TeaModel {
         } 
 
         /**
-         * Data.
+         * <p>The dataset.</p>
          */
         public Builder data(Data data) {
             this.data = data;
@@ -153,7 +153,10 @@ public class ListWorkspacesResponseBody extends TeaModel {
         }
 
         /**
-         * ErrorCode.
+         * <p>The error code.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>UserNotExist</p>
          */
         public Builder errorCode(String errorCode) {
             this.errorCode = errorCode;
@@ -161,7 +164,10 @@ public class ListWorkspacesResponseBody extends TeaModel {
         }
 
         /**
-         * ErrorMessage.
+         * <p>The error message that is returned if the request failed.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>UnknownError</p>
          */
         public Builder errorMessage(String errorMessage) {
             this.errorMessage = errorMessage;
@@ -169,7 +175,10 @@ public class ListWorkspacesResponseBody extends TeaModel {
         }
 
         /**
-         * MaxResults.
+         * <p>The total number of workspaces that meet the condition, which is the same as the TotalCount parameter.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10</p>
          */
         public Builder maxResults(Integer maxResults) {
             this.maxResults = maxResults;
@@ -177,7 +186,10 @@ public class ListWorkspacesResponseBody extends TeaModel {
         }
 
         /**
-         * NextToken.
+         * <p>NextToken does not take effect.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>token-xxx</p>
          */
         public Builder nextToken(String nextToken) {
             this.nextToken = nextToken;
@@ -185,7 +197,10 @@ public class ListWorkspacesResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>EE214ECD-4330-503A-82F0-FFB03975****</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -193,7 +208,14 @@ public class ListWorkspacesResponseBody extends TeaModel {
         }
 
         /**
-         * Success.
+         * <p>Indicates whether the call was successful. Valid values:</p>
+         * <ul>
+         * <li><strong>true</strong>: The request succeeded.</li>
+         * <li><strong>false</strong>: The request failed.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder success(Boolean success) {
             this.success = success;
@@ -201,7 +223,10 @@ public class ListWorkspacesResponseBody extends TeaModel {
         }
 
         /**
-         * TotalCount.
+         * <p>The total number of workspaces that meet the conditions.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10</p>
          */
         public Builder totalCount(Long totalCount) {
             this.totalCount = totalCount;
@@ -488,7 +513,10 @@ public class ListWorkspacesResponseBody extends TeaModel {
             } 
 
             /**
-             * AlreadyJoined.
+             * <p>Whether the current user has joined the workspace.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>true</p>
              */
             public Builder alreadyJoined(Boolean alreadyJoined) {
                 this.alreadyJoined = alreadyJoined;
@@ -496,7 +524,10 @@ public class ListWorkspacesResponseBody extends TeaModel {
             }
 
             /**
-             * CreatorId.
+             * <p>The ID of the creator.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>123</p>
              */
             public Builder creatorId(Long creatorId) {
                 this.creatorId = creatorId;
@@ -504,7 +535,10 @@ public class ListWorkspacesResponseBody extends TeaModel {
             }
 
             /**
-             * CreatorNickName.
+             * <p>The nickname of the creator.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>work*****</p>
              */
             public Builder creatorNickName(String creatorNickName) {
                 this.creatorNickName = creatorNickName;
@@ -512,7 +546,10 @@ public class ListWorkspacesResponseBody extends TeaModel {
             }
 
             /**
-             * CreatorUid.
+             * <p>The Alibaba Cloud account UID of the creator.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1344****</p>
              */
             public Builder creatorUid(String creatorUid) {
                 this.creatorUid = creatorUid;
@@ -520,7 +557,10 @@ public class ListWorkspacesResponseBody extends TeaModel {
             }
 
             /**
-             * Description.
+             * <p>The description of the workspace.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Test</p>
              */
             public Builder description(String description) {
                 this.description = description;
@@ -528,7 +568,10 @@ public class ListWorkspacesResponseBody extends TeaModel {
             }
 
             /**
-             * GmtCreate.
+             * <p>The creation time.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2025-01-01 00:00:00</p>
              */
             public Builder gmtCreate(String gmtCreate) {
                 this.gmtCreate = gmtCreate;
@@ -536,7 +579,10 @@ public class ListWorkspacesResponseBody extends TeaModel {
             }
 
             /**
-             * GmtModified.
+             * <p>The update time.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2025-01-01 00:00:00</p>
              */
             public Builder gmtModified(String gmtModified) {
                 this.gmtModified = gmtModified;
@@ -544,7 +590,10 @@ public class ListWorkspacesResponseBody extends TeaModel {
             }
 
             /**
-             * Name.
+             * <p>The name of the workspace.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>workspace-xxxx</p>
              */
             public Builder name(String name) {
                 this.name = name;
@@ -552,7 +601,10 @@ public class ListWorkspacesResponseBody extends TeaModel {
             }
 
             /**
-             * OwnerId.
+             * <p>The owner ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>123****</p>
              */
             public Builder ownerId(Long ownerId) {
                 this.ownerId = ownerId;
@@ -560,7 +612,10 @@ public class ListWorkspacesResponseBody extends TeaModel {
             }
 
             /**
-             * OwnerNickName.
+             * <p>The nickname of the owner.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>hel****</p>
              */
             public Builder ownerNickName(String ownerNickName) {
                 this.ownerNickName = ownerNickName;
@@ -568,7 +623,10 @@ public class ListWorkspacesResponseBody extends TeaModel {
             }
 
             /**
-             * OwnerUid.
+             * <p>The Alibaba Cloud UID of the owner.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>15608564799****</p>
              */
             public Builder ownerUid(String ownerUid) {
                 this.ownerUid = ownerUid;
@@ -576,7 +634,10 @@ public class ListWorkspacesResponseBody extends TeaModel {
             }
 
             /**
-             * Region.
+             * <p>The region ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>cn-hangzhou</p>
              */
             public Builder region(String region) {
                 this.region = region;
@@ -584,7 +645,10 @@ public class ListWorkspacesResponseBody extends TeaModel {
             }
 
             /**
-             * ServiceAccountId.
+             * <p>The ID of the service account.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>12345</p>
              */
             public Builder serviceAccountId(Long serviceAccountId) {
                 this.serviceAccountId = serviceAccountId;
@@ -592,7 +656,10 @@ public class ListWorkspacesResponseBody extends TeaModel {
             }
 
             /**
-             * ServiceAccountNickName.
+             * <p>The nickname of the service account.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>testname</p>
              */
             public Builder serviceAccountNickName(String serviceAccountNickName) {
                 this.serviceAccountNickName = serviceAccountNickName;
@@ -600,7 +667,10 @@ public class ListWorkspacesResponseBody extends TeaModel {
             }
 
             /**
-             * ServiceAccountUid.
+             * <p>The Alibaba Cloud account UID of the service account.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1422****</p>
              */
             public Builder serviceAccountUid(String serviceAccountUid) {
                 this.serviceAccountUid = serviceAccountUid;
@@ -608,7 +678,10 @@ public class ListWorkspacesResponseBody extends TeaModel {
             }
 
             /**
-             * TenantId.
+             * <p>The ID of the tenant to which the workspace belongs.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>23456</p>
              */
             public Builder tenantId(Long tenantId) {
                 this.tenantId = tenantId;
@@ -616,7 +689,10 @@ public class ListWorkspacesResponseBody extends TeaModel {
             }
 
             /**
-             * VpcId.
+             * <p>The VPC ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>vpc-25fl3qjqb****</p>
              */
             public Builder vpcId(String vpcId) {
                 this.vpcId = vpcId;
@@ -624,7 +700,10 @@ public class ListWorkspacesResponseBody extends TeaModel {
             }
 
             /**
-             * WorkspaceId.
+             * <p>The workspace ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>8652340494****</p>
              */
             public Builder workspaceId(Long workspaceId) {
                 this.workspaceId = workspaceId;
@@ -632,7 +711,10 @@ public class ListWorkspacesResponseBody extends TeaModel {
             }
 
             /**
-             * WorkspaceName.
+             * <p>The name of the workspace.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>test-workspace</p>
              */
             public Builder workspaceName(String workspaceName) {
                 this.workspaceName = workspaceName;

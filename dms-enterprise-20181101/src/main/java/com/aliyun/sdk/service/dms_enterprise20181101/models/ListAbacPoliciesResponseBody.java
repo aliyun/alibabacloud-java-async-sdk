@@ -132,7 +132,10 @@ public class ListAbacPoliciesResponseBody extends TeaModel {
         } 
 
         /**
-         * ErrorCode.
+         * <p>The error code that is returned if the request failed.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>UnknownError</p>
          */
         public Builder errorCode(String errorCode) {
             this.errorCode = errorCode;
@@ -140,7 +143,10 @@ public class ListAbacPoliciesResponseBody extends TeaModel {
         }
 
         /**
-         * ErrorMessage.
+         * <p>The error message that is returned if the request failed.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>UnknownError</p>
          */
         public Builder errorMessage(String errorMessage) {
             this.errorMessage = errorMessage;
@@ -148,7 +154,7 @@ public class ListAbacPoliciesResponseBody extends TeaModel {
         }
 
         /**
-         * PolicyList.
+         * <p>The details of the permission policies.</p>
          */
         public Builder policyList(java.util.List<PolicyList> policyList) {
             this.policyList = policyList;
@@ -156,7 +162,10 @@ public class ListAbacPoliciesResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * <p>The request ID. You can use the request ID to locate logs and troubleshoot issues.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>0C1CB646-1DE4-4AD0-B4A4-7D47DD52E931</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -164,7 +173,14 @@ public class ListAbacPoliciesResponseBody extends TeaModel {
         }
 
         /**
-         * Success.
+         * <p>Indicates whether the request was successful. Valid values:</p>
+         * <ul>
+         * <li><strong>true</strong>: The request was successful.</li>
+         * <li><strong>false</strong>: The request failed.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder success(Boolean success) {
             this.success = success;
@@ -172,7 +188,10 @@ public class ListAbacPoliciesResponseBody extends TeaModel {
         }
 
         /**
-         * Tid.
+         * <p>The ID of the tenant.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>3***</p>
          */
         public Builder tid(Long tid) {
             this.tid = tid;
@@ -180,7 +199,10 @@ public class ListAbacPoliciesResponseBody extends TeaModel {
         }
 
         /**
-         * TotalCount.
+         * <p>The total number of policies.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>5</p>
          */
         public Builder totalCount(Long totalCount) {
             this.totalCount = totalCount;
@@ -298,7 +320,26 @@ public class ListAbacPoliciesResponseBody extends TeaModel {
             } 
 
             /**
-             * AbacPolicyContent.
+             * <p>The content of the policy.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>{
+             *   &quot;Statement&quot;: [
+             *     {
+             *       &quot;Action&quot;: &quot;<em>&quot;,
+             *       &quot;Effect&quot;: &quot;Allow&quot;,
+             *       &quot;Resource&quot;: &quot;</em>&quot;,
+             *       &quot;Condition&quot;: {
+             *         &quot;StringEqualsIgnoreCase&quot;: {
+             *           &quot;dms:DbType&quot;: [
+             *             &quot;redis&quot;
+             *           ]
+             *         }
+             *       }
+             *     }
+             *   ],
+             *   &quot;Version&quot;: &quot;1&quot;
+             * }</p>
              */
             public Builder abacPolicyContent(String abacPolicyContent) {
                 this.abacPolicyContent = abacPolicyContent;
@@ -306,7 +347,10 @@ public class ListAbacPoliciesResponseBody extends TeaModel {
             }
 
             /**
-             * AbacPolicyDesc.
+             * <p>The description of the policy.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>test</p>
              */
             public Builder abacPolicyDesc(String abacPolicyDesc) {
                 this.abacPolicyDesc = abacPolicyDesc;
@@ -314,7 +358,10 @@ public class ListAbacPoliciesResponseBody extends TeaModel {
             }
 
             /**
-             * AbacPolicyId.
+             * <p>The ID of the policy.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>12****</p>
              */
             public Builder abacPolicyId(Long abacPolicyId) {
                 this.abacPolicyId = abacPolicyId;
@@ -322,7 +369,10 @@ public class ListAbacPoliciesResponseBody extends TeaModel {
             }
 
             /**
-             * AbacPolicyName.
+             * <p>The name of the policy.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>policy_test</p>
              */
             public Builder abacPolicyName(String abacPolicyName) {
                 this.abacPolicyName = abacPolicyName;
@@ -330,7 +380,10 @@ public class ListAbacPoliciesResponseBody extends TeaModel {
             }
 
             /**
-             * AbacPolicySource.
+             * <p>The source of the policy.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>USER_DEFINE</p>
              */
             public Builder abacPolicySource(String abacPolicySource) {
                 this.abacPolicySource = abacPolicySource;
@@ -338,7 +391,10 @@ public class ListAbacPoliciesResponseBody extends TeaModel {
             }
 
             /**
-             * CreatorId.
+             * <p>The ID of the user who created the policy.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>51****</p>
              */
             public Builder creatorId(Long creatorId) {
                 this.creatorId = creatorId;

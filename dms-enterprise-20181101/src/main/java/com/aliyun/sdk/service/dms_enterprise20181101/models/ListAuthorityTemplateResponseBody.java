@@ -132,7 +132,7 @@ public class ListAuthorityTemplateResponseBody extends TeaModel {
         } 
 
         /**
-         * AuthorityTemplateViewList.
+         * <p>The permission templates.</p>
          */
         public Builder authorityTemplateViewList(AuthorityTemplateViewList authorityTemplateViewList) {
             this.authorityTemplateViewList = authorityTemplateViewList;
@@ -140,7 +140,10 @@ public class ListAuthorityTemplateResponseBody extends TeaModel {
         }
 
         /**
-         * ErrorCode.
+         * <p>The error code that is returned if the request failed.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>UnknownError</p>
          */
         public Builder errorCode(String errorCode) {
             this.errorCode = errorCode;
@@ -148,7 +151,10 @@ public class ListAuthorityTemplateResponseBody extends TeaModel {
         }
 
         /**
-         * ErrorMessage.
+         * <p>The error message that is returned if the request failed.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>UnknownError</p>
          */
         public Builder errorMessage(String errorMessage) {
             this.errorMessage = errorMessage;
@@ -156,7 +162,10 @@ public class ListAuthorityTemplateResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * <p>The request ID. You can use the request ID to locate logs and troubleshoot issues.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>31853A2B-DC9D-5B39-8492-D2AC8BCF550E</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -164,7 +173,14 @@ public class ListAuthorityTemplateResponseBody extends TeaModel {
         }
 
         /**
-         * Success.
+         * <p>Indicates whether the request was successful. Valid values:</p>
+         * <ul>
+         * <li><strong>true</strong>: The request was successful.</li>
+         * <li><strong>false</strong>: The request failed.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder success(Boolean success) {
             this.success = success;
@@ -172,7 +188,10 @@ public class ListAuthorityTemplateResponseBody extends TeaModel {
         }
 
         /**
-         * Tid.
+         * <p>The ID of the tenant.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>3***</p>
          */
         public Builder tid(Long tid) {
             this.tid = tid;
@@ -180,7 +199,10 @@ public class ListAuthorityTemplateResponseBody extends TeaModel {
         }
 
         /**
-         * TotalCount.
+         * <p>The total number of permission templates.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10</p>
          */
         public Builder totalCount(Long totalCount) {
             this.totalCount = totalCount;
@@ -285,7 +307,10 @@ public class ListAuthorityTemplateResponseBody extends TeaModel {
             } 
 
             /**
-             * CreateTime.
+             * <p>The time when the permission template was created. The time is in the yyyy-MM-DD HH:mm:ss format.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2023-10-26 11:37:47</p>
              */
             public Builder createTime(String createTime) {
                 this.createTime = createTime;
@@ -293,7 +318,10 @@ public class ListAuthorityTemplateResponseBody extends TeaModel {
             }
 
             /**
-             * CreatorId.
+             * <p>The ID of the user who created the permission template.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>522****</p>
              */
             public Builder creatorId(Long creatorId) {
                 this.creatorId = creatorId;
@@ -301,7 +329,7 @@ public class ListAuthorityTemplateResponseBody extends TeaModel {
             }
 
             /**
-             * Description.
+             * <p>The description of the permission template.</p>
              */
             public Builder description(String description) {
                 this.description = description;
@@ -309,7 +337,7 @@ public class ListAuthorityTemplateResponseBody extends TeaModel {
             }
 
             /**
-             * Name.
+             * <p>The name of the permission template.</p>
              */
             public Builder name(String name) {
                 this.name = name;
@@ -317,7 +345,10 @@ public class ListAuthorityTemplateResponseBody extends TeaModel {
             }
 
             /**
-             * TemplateId.
+             * <p>The ID of the permission template.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2592</p>
              */
             public Builder templateId(Long templateId) {
                 this.templateId = templateId;

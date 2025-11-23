@@ -194,7 +194,10 @@ public class ListWorkspacesRequest extends Request {
         }
 
         /**
-         * AlreadyJoined.
+         * <p>Specifies whether the current user has joined the workspace.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder alreadyJoined(Boolean alreadyJoined) {
             this.putQueryParameter("AlreadyJoined", alreadyJoined);
@@ -212,7 +215,10 @@ public class ListWorkspacesRequest extends Request {
         }
 
         /**
-         * PageNumber.
+         * <p>The page number.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder pageNumber(Integer pageNumber) {
             this.putQueryParameter("PageNumber", pageNumber);
@@ -221,7 +227,10 @@ public class ListWorkspacesRequest extends Request {
         }
 
         /**
-         * PageSize.
+         * <p>The number of entries per page.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10</p>
          */
         public Builder pageSize(Integer pageSize) {
             this.putQueryParameter("PageSize", pageSize);
@@ -230,7 +239,10 @@ public class ListWorkspacesRequest extends Request {
         }
 
         /**
-         * Region.
+         * <p>The region in which the bucket is located.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-hangzhou</p>
          */
         public Builder region(String region) {
             this.putQueryParameter("Region", region);
@@ -239,7 +251,10 @@ public class ListWorkspacesRequest extends Request {
         }
 
         /**
-         * SearchKey.
+         * <p>The search keyword. Fuzzy match is supported.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>poc_test</p>
          */
         public Builder searchKey(String searchKey) {
             this.putQueryParameter("SearchKey", searchKey);
@@ -248,7 +263,10 @@ public class ListWorkspacesRequest extends Request {
         }
 
         /**
-         * ServiceAccountId.
+         * <p>The service account ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>12345</p>
          */
         public Builder serviceAccountId(Long serviceAccountId) {
             this.putQueryParameter("ServiceAccountId", serviceAccountId);
@@ -257,7 +275,13 @@ public class ListWorkspacesRequest extends Request {
         }
 
         /**
-         * VpcId.
+         * <p>The virtual private cloud (VPC) ID.</p>
+         * <blockquote>
+         * <p>This parameter cannot be used as a filter.</p>
+         * </blockquote>
+         * 
+         * <strong>example:</strong>
+         * <p>vpc-bp10wnlcmor****</p>
          */
         public Builder vpcId(String vpcId) {
             this.putQueryParameter("VpcId", vpcId);
@@ -266,7 +290,10 @@ public class ListWorkspacesRequest extends Request {
         }
 
         /**
-         * WorkspaceId.
+         * <p>The workspace ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>12****</p>
          */
         public Builder workspaceId(Long workspaceId) {
             this.putQueryParameter("WorkspaceId", workspaceId);

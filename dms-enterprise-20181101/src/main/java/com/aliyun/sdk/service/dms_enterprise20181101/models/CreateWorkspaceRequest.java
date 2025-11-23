@@ -119,7 +119,10 @@ public class CreateWorkspaceRequest extends Request {
         } 
 
         /**
-         * ClientToken.
+         * <p>The client token that is used to ensure the idempotence of the request.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>token-xxx</p>
          */
         public Builder clientToken(String clientToken) {
             this.putBodyParameter("ClientToken", clientToken);
@@ -128,6 +131,7 @@ public class CreateWorkspaceRequest extends Request {
         }
 
         /**
+         * <p>The description of the workspace.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -140,6 +144,7 @@ public class CreateWorkspaceRequest extends Request {
         }
 
         /**
+         * <p>The region to which the workspace belongs.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -152,6 +157,7 @@ public class CreateWorkspaceRequest extends Request {
         }
 
         /**
+         * <p>The VPC ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -164,6 +170,7 @@ public class CreateWorkspaceRequest extends Request {
         }
 
         /**
+         * <p>The name of the workspace.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>

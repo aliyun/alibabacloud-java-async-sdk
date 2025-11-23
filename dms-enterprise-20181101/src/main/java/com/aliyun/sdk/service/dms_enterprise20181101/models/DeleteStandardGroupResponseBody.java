@@ -93,7 +93,10 @@ public class DeleteStandardGroupResponseBody extends TeaModel {
         } 
 
         /**
-         * ErrorCode.
+         * <p>The error code returned if the request failed.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>UnknownError</p>
          */
         public Builder errorCode(String errorCode) {
             this.errorCode = errorCode;
@@ -101,7 +104,10 @@ public class DeleteStandardGroupResponseBody extends TeaModel {
         }
 
         /**
-         * ErrorMessage.
+         * <p>The error message that is returned if the request failed.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>UnknownError</p>
          */
         public Builder errorMessage(String errorMessage) {
             this.errorMessage = errorMessage;
@@ -109,7 +115,10 @@ public class DeleteStandardGroupResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * <p>The ID of the request. You can use the request ID to locate logs and troubleshoot issues.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>C5B8E84B-42B6-4374-AD5A-6264E1753378</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -117,7 +126,14 @@ public class DeleteStandardGroupResponseBody extends TeaModel {
         }
 
         /**
-         * Success.
+         * <p>Indicates whether the request was successful. Valid values:</p>
+         * <ul>
+         * <li><strong>true</strong>: The request was successful.</li>
+         * <li><strong>false</strong>: The request failed.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder success(Boolean success) {
             this.success = success;

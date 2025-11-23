@@ -119,7 +119,7 @@ public class ListMetaCategoryResponseBody extends TeaModel {
         } 
 
         /**
-         * CategoryList.
+         * <p>The list of categories.</p>
          */
         public Builder categoryList(CategoryList categoryList) {
             this.categoryList = categoryList;
@@ -127,7 +127,10 @@ public class ListMetaCategoryResponseBody extends TeaModel {
         }
 
         /**
-         * ErrorCode.
+         * <p>The error code returned if the request fails.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>UnknownError</p>
          */
         public Builder errorCode(String errorCode) {
             this.errorCode = errorCode;
@@ -135,7 +138,10 @@ public class ListMetaCategoryResponseBody extends TeaModel {
         }
 
         /**
-         * ErrorMessage.
+         * <p>The error message returned if the request fails.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>UnknownError</p>
          */
         public Builder errorMessage(String errorMessage) {
             this.errorMessage = errorMessage;
@@ -143,7 +149,10 @@ public class ListMetaCategoryResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * <p>The ID of the request.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>0C1CB646-1DE4-4AD0-B4A4-7D47DD52E931</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -151,7 +160,14 @@ public class ListMetaCategoryResponseBody extends TeaModel {
         }
 
         /**
-         * Success.
+         * <p>Indicates whether the call was successful. Valid values:</p>
+         * <ul>
+         * <li><strong>true</strong>: The request was successful.</li>
+         * <li><strong>false</strong>: The request failed.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder success(Boolean success) {
             this.success = success;
@@ -159,7 +175,10 @@ public class ListMetaCategoryResponseBody extends TeaModel {
         }
 
         /**
-         * TotalCount.
+         * <p>The total number of entries returned.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder totalCount(Long totalCount) {
             this.totalCount = totalCount;

@@ -67,7 +67,10 @@ public class ListAuthorizedUsersForInstanceResponseBody extends TeaModel {
         } 
 
         /**
-         * RequestId.
+         * <p>The request ID. You can use the request ID to locate logs and troubleshoot issues.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>0C1CB646-1DE4-4AD0-B4A4-7D47DD52E931</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -75,7 +78,7 @@ public class ListAuthorizedUsersForInstanceResponseBody extends TeaModel {
         }
 
         /**
-         * Users.
+         * <p>The list of users that have permissions on the specified instance.</p>
          */
         public Builder users(java.util.List<Users> users) {
             this.users = users;
@@ -167,7 +170,10 @@ public class ListAuthorizedUsersForInstanceResponseBody extends TeaModel {
             } 
 
             /**
-             * Uid.
+             * <p>The UID of the user&quot;s Alibaba Cloud account.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>164882191****</p>
              */
             public Builder uid(String uid) {
                 this.uid = uid;
@@ -175,7 +181,10 @@ public class ListAuthorizedUsersForInstanceResponseBody extends TeaModel {
             }
 
             /**
-             * UserId.
+             * <p>The ID of the user.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>51***</p>
              */
             public Builder userId(String userId) {
                 this.userId = userId;
@@ -183,7 +192,10 @@ public class ListAuthorizedUsersForInstanceResponseBody extends TeaModel {
             }
 
             /**
-             * UserNickName.
+             * <p>The nickname of the user.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>user_test</p>
              */
             public Builder userNickName(String userNickName) {
                 this.userNickName = userNickName;
@@ -191,7 +203,10 @@ public class ListAuthorizedUsersForInstanceResponseBody extends TeaModel {
             }
 
             /**
-             * UserRealName.
+             * <p>The real name of the user.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>user01</p>
              */
             public Builder userRealName(String userRealName) {
                 this.userRealName = userRealName;

@@ -106,7 +106,10 @@ public class GetTableKnowledgeInfoResponseBody extends TeaModel {
         } 
 
         /**
-         * ErrorCode.
+         * <p>The error code returned if the request failed.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>UnknownError</p>
          */
         public Builder errorCode(String errorCode) {
             this.errorCode = errorCode;
@@ -114,7 +117,10 @@ public class GetTableKnowledgeInfoResponseBody extends TeaModel {
         }
 
         /**
-         * ErrorMessage.
+         * <p>The error message returned if the request failed.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>UnknownError</p>
          */
         public Builder errorMessage(String errorMessage) {
             this.errorMessage = errorMessage;
@@ -122,7 +128,10 @@ public class GetTableKnowledgeInfoResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * <p>The request ID. You can use the request ID to query logs and troubleshoot issues.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>0C1CB646-1DE4-4AD0-B4A4-7D47DD52E931</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -130,7 +139,14 @@ public class GetTableKnowledgeInfoResponseBody extends TeaModel {
         }
 
         /**
-         * Success.
+         * <p>Indicates whether the request was successful. Valid values:</p>
+         * <ul>
+         * <li><strong>true</strong>: The request was successful.</li>
+         * <li><strong>false</strong>: The request failed.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder success(Boolean success) {
             this.success = success;
@@ -138,7 +154,10 @@ public class GetTableKnowledgeInfoResponseBody extends TeaModel {
         }
 
         /**
-         * Table.
+         * <p>The information about the table.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>bill_orders</p>
          */
         public Builder table(TableKnowledgeInfo table) {
             this.table = table;

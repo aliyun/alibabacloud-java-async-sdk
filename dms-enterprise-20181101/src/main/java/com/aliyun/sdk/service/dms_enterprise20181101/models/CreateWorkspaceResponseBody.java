@@ -80,7 +80,10 @@ public class CreateWorkspaceResponseBody extends TeaModel {
         } 
 
         /**
-         * RequestId.
+         * <p>The request ID. You can use the request ID to locate logs and troubleshoot issues.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>4AC23904-55DE-550B-9676-E8946F07****</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -88,7 +91,14 @@ public class CreateWorkspaceResponseBody extends TeaModel {
         }
 
         /**
-         * Success.
+         * <p>Indicates whether the request was successful. Valid values:</p>
+         * <ul>
+         * <li><strong>true</strong>: The request was successful.</li>
+         * <li><strong>false</strong>: The request failed.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder success(Boolean success) {
             this.success = success;
@@ -96,7 +106,10 @@ public class CreateWorkspaceResponseBody extends TeaModel {
         }
 
         /**
-         * WorkspaceId.
+         * <p>The workspace ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>12****</p>
          */
         public Builder workspaceId(Long workspaceId) {
             this.workspaceId = workspaceId;

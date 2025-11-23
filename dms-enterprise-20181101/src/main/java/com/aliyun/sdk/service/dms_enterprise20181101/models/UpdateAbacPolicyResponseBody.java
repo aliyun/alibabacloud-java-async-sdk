@@ -106,7 +106,10 @@ public class UpdateAbacPolicyResponseBody extends TeaModel {
         } 
 
         /**
-         * ErrorCode.
+         * <p>The error code that is returned if the request failed.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>UnknownError</p>
          */
         public Builder errorCode(String errorCode) {
             this.errorCode = errorCode;
@@ -114,7 +117,10 @@ public class UpdateAbacPolicyResponseBody extends TeaModel {
         }
 
         /**
-         * ErrorMessage.
+         * <p>The error message that is returned if the request failed.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>UnknownError</p>
          */
         public Builder errorMessage(String errorMessage) {
             this.errorMessage = errorMessage;
@@ -122,7 +128,10 @@ public class UpdateAbacPolicyResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * <p>The request ID. You can use the ID to query logs and troubleshoot issues.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>CE43759B-5A72-560A-BF3D-862F38B36B9E</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -130,7 +139,14 @@ public class UpdateAbacPolicyResponseBody extends TeaModel {
         }
 
         /**
-         * Success.
+         * <p>Indicates whether the request was successful. Valid values:</p>
+         * <ul>
+         * <li><strong>true</strong>: The request was successful.</li>
+         * <li><strong>false</strong>: The request failed.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder success(Boolean success) {
             this.success = success;
@@ -138,7 +154,10 @@ public class UpdateAbacPolicyResponseBody extends TeaModel {
         }
 
         /**
-         * UpdatePolicyResult.
+         * <p>Indicates whether the policy is updated.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder updatePolicyResult(Long updatePolicyResult) {
             this.updatePolicyResult = updatePolicyResult;

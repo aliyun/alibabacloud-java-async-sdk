@@ -106,7 +106,10 @@ public class DeleteAbacAuthorizationResponseBody extends TeaModel {
         } 
 
         /**
-         * ErrorCode.
+         * <p>The error code that is returned if the request failed.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>UnknownError</p>
          */
         public Builder errorCode(String errorCode) {
             this.errorCode = errorCode;
@@ -114,7 +117,10 @@ public class DeleteAbacAuthorizationResponseBody extends TeaModel {
         }
 
         /**
-         * ErrorMessage.
+         * <p>The error message that is returned if the request failed.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>UnknownError</p>
          */
         public Builder errorMessage(String errorMessage) {
             this.errorMessage = errorMessage;
@@ -122,7 +128,10 @@ public class DeleteAbacAuthorizationResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * <p>The request ID. You can use the ID to query logs and troubleshoot issues.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>207176D7-A9B3-55CE-A9DA-14E223A31913</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -130,7 +139,10 @@ public class DeleteAbacAuthorizationResponseBody extends TeaModel {
         }
 
         /**
-         * Result.
+         * <p>Indicates whether the policy is detached from the user.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder result(String result) {
             this.result = result;
@@ -138,7 +150,14 @@ public class DeleteAbacAuthorizationResponseBody extends TeaModel {
         }
 
         /**
-         * Success.
+         * <p>Indicates whether the request was successful. Valid values:</p>
+         * <ul>
+         * <li><strong>true</strong>: The request was successful.</li>
+         * <li><strong>false</strong>: The request failed.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder success(Boolean success) {
             this.success = success;

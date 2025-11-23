@@ -195,7 +195,14 @@ public class SetWorkflowExtraInfoRequest extends Request {
         }
 
         /**
-         * RenderAddApprovalNode.
+         * <p>Specifies whether the Sign button is displayed in the ticket approval section of the DMS console for a third-party approval workflow. Valid values:</p>
+         * <ul>
+         * <li><strong>true</strong> (default): The Sign button is displayed.</li>
+         * <li><strong>false</strong>: The Sign button is not displayed.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>false</p>
          */
         public Builder renderAddApprovalNode(Boolean renderAddApprovalNode) {
             this.putQueryParameter("RenderAddApprovalNode", renderAddApprovalNode);
@@ -204,7 +211,14 @@ public class SetWorkflowExtraInfoRequest extends Request {
         }
 
         /**
-         * RenderAgree.
+         * <p>Specifies whether the Agree button is displayed in the ticket approval section of the DMS console for a third-party approval workflow. Valid values:</p>
+         * <ul>
+         * <li><strong>true</strong> (default): The Agree button is displayed.</li>
+         * <li><strong>false</strong>: The Agree button is not displayed.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder renderAgree(Boolean renderAgree) {
             this.putQueryParameter("RenderAgree", renderAgree);
@@ -213,7 +227,14 @@ public class SetWorkflowExtraInfoRequest extends Request {
         }
 
         /**
-         * RenderCancel.
+         * <p>Specifies whether the Revoke button is displayed in the ticket approval section of the DMS console for a third-party approval workflow. Valid values:</p>
+         * <ul>
+         * <li><strong>true</strong> (default): The Revoke button is displayed.</li>
+         * <li><strong>false</strong>: The Revoke button is not displayed.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder renderCancel(Boolean renderCancel) {
             this.putQueryParameter("RenderCancel", renderCancel);
@@ -222,7 +243,14 @@ public class SetWorkflowExtraInfoRequest extends Request {
         }
 
         /**
-         * RenderReject.
+         * <p>Specifies whether the Reject button is displayed in the ticket approval section of the DMS console for a third-party approval workflow. Valid values:</p>
+         * <ul>
+         * <li><strong>true</strong> (default): The Reject button is displayed.</li>
+         * <li><strong>false</strong>: The Reject button is not displayed.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>false</p>
          */
         public Builder renderReject(Boolean renderReject) {
             this.putQueryParameter("RenderReject", renderReject);
@@ -231,7 +259,14 @@ public class SetWorkflowExtraInfoRequest extends Request {
         }
 
         /**
-         * RenderTransfer.
+         * <p>Specifies whether the Forward button is displayed in the ticket approval section of the DMS console for a third-party approval workflow. Valid values:</p>
+         * <ul>
+         * <li><strong>true</strong> (default): The Forward button is displayed.</li>
+         * <li><strong>false</strong>: The Forward button is not displayed.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder renderTransfer(Boolean renderTransfer) {
             this.putQueryParameter("RenderTransfer", renderTransfer);
@@ -240,7 +275,10 @@ public class SetWorkflowExtraInfoRequest extends Request {
         }
 
         /**
-         * ThirdpartyWorkflowComment.
+         * <p>The remarks of approval workflow for third parties.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>test</p>
          */
         public Builder thirdpartyWorkflowComment(String thirdpartyWorkflowComment) {
             this.putQueryParameter("ThirdpartyWorkflowComment", thirdpartyWorkflowComment);
@@ -249,7 +287,10 @@ public class SetWorkflowExtraInfoRequest extends Request {
         }
 
         /**
-         * ThirdpartyWorkflowUrl.
+         * <p>The link of approval workflow for third parties.</p>
+         * 
+         * <strong>example:</strong>
+         * <p><a href="https://xxx">https://xxx</a></p>
          */
         public Builder thirdpartyWorkflowUrl(String thirdpartyWorkflowUrl) {
             this.putQueryParameter("ThirdpartyWorkflowUrl", thirdpartyWorkflowUrl);
@@ -258,7 +299,13 @@ public class SetWorkflowExtraInfoRequest extends Request {
         }
 
         /**
-         * Tid.
+         * <p>The ID of the tenant.</p>
+         * <blockquote>
+         * <p> To view the ID of the tenant, go to the DMS console and move the pointer over the profile picture in the upper-right corner. For more information, see the <a href="https://help.aliyun.com/document_detail/181330.html">View information about the current tenant</a> section of the &quot;Manage DMS tenants&quot; topic.</p>
+         * </blockquote>
+         * 
+         * <strong>example:</strong>
+         * <p>3***</p>
          */
         public Builder tid(Long tid) {
             this.putQueryParameter("Tid", tid);
@@ -267,6 +314,7 @@ public class SetWorkflowExtraInfoRequest extends Request {
         }
 
         /**
+         * <p>The ID of the approval workflow. You can call the <a href="https://help.aliyun.com/document_detail/144642.html">GetOrderBaseInfo</a> operation to query the ID of the approval workflow.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>

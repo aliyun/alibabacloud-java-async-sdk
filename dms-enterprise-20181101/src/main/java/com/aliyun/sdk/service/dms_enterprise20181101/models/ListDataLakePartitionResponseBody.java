@@ -132,7 +132,10 @@ public class ListDataLakePartitionResponseBody extends TeaModel {
         } 
 
         /**
-         * ErrorCode.
+         * <p>The error code that is returned if the request failed.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>UnknownError</p>
          */
         public Builder errorCode(String errorCode) {
             this.errorCode = errorCode;
@@ -140,7 +143,10 @@ public class ListDataLakePartitionResponseBody extends TeaModel {
         }
 
         /**
-         * ErrorMessage.
+         * <p>The error message that is returned if the request failed.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>UnknownError</p>
          */
         public Builder errorMessage(String errorMessage) {
             this.errorMessage = errorMessage;
@@ -148,7 +154,10 @@ public class ListDataLakePartitionResponseBody extends TeaModel {
         }
 
         /**
-         * MaxResults.
+         * <p>The number of records per page.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>20</p>
          */
         public Builder maxResults(Integer maxResults) {
             this.maxResults = maxResults;
@@ -156,7 +165,10 @@ public class ListDataLakePartitionResponseBody extends TeaModel {
         }
 
         /**
-         * NextToken.
+         * <p>The information about the token.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>NesLoKLEdIZrKhDT7I2gS****</p>
          */
         public Builder nextToken(String nextToken) {
             this.nextToken = nextToken;
@@ -164,7 +176,7 @@ public class ListDataLakePartitionResponseBody extends TeaModel {
         }
 
         /**
-         * PartitionList.
+         * <p>The queried partitions.</p>
          */
         public Builder partitionList(java.util.List<DLPartition> partitionList) {
             this.partitionList = partitionList;
@@ -172,7 +184,10 @@ public class ListDataLakePartitionResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * <p>The request ID. You can use the ID to query logs and troubleshoot issues.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>0C1CB646-1DE4-4AD0-B4A4-7D47DD52E931</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -180,7 +195,14 @@ public class ListDataLakePartitionResponseBody extends TeaModel {
         }
 
         /**
-         * Success.
+         * <p>Indicates whether the request was successful. Valid values:</p>
+         * <ul>
+         * <li><strong>true</strong>: The call was successful.</li>
+         * <li><strong>false</strong></li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder success(Boolean success) {
             this.success = success;

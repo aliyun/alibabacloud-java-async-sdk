@@ -119,7 +119,10 @@ public class ListSensitiveColumnInfoResponseBody extends TeaModel {
         } 
 
         /**
-         * ErrorCode.
+         * <p>The error code returned if the request failed.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>UnknownError</p>
          */
         public Builder errorCode(String errorCode) {
             this.errorCode = errorCode;
@@ -127,7 +130,10 @@ public class ListSensitiveColumnInfoResponseBody extends TeaModel {
         }
 
         /**
-         * ErrorMessage.
+         * <p>The error message returned if the request failed.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>UnknownError</p>
          */
         public Builder errorMessage(String errorMessage) {
             this.errorMessage = errorMessage;
@@ -135,7 +141,10 @@ public class ListSensitiveColumnInfoResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * <p>The request ID. You can use the request ID to locate logs and troubleshoot issues.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>0C1CB646-1DE4-4AD0-B4A4-7D47DD52E931</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -143,7 +152,7 @@ public class ListSensitiveColumnInfoResponseBody extends TeaModel {
         }
 
         /**
-         * SensitiveColumnList.
+         * <p>The details of the sensitive field.</p>
          */
         public Builder sensitiveColumnList(SensitiveColumnList sensitiveColumnList) {
             this.sensitiveColumnList = sensitiveColumnList;
@@ -151,7 +160,14 @@ public class ListSensitiveColumnInfoResponseBody extends TeaModel {
         }
 
         /**
-         * Success.
+         * <p>Indicates whether the request was successful. Valid values:</p>
+         * <ul>
+         * <li><strong>true</strong>: The request was successful.</li>
+         * <li><strong>false</strong>: The request failed.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder success(Boolean success) {
             this.success = success;
@@ -159,7 +175,10 @@ public class ListSensitiveColumnInfoResponseBody extends TeaModel {
         }
 
         /**
-         * TotalCount.
+         * <p>The total number of entries that are returned.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder totalCount(Long totalCount) {
             this.totalCount = totalCount;
@@ -225,7 +244,10 @@ public class ListSensitiveColumnInfoResponseBody extends TeaModel {
             } 
 
             /**
-             * RuleId.
+             * <p>The masking algorithm ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>101**</p>
              */
             public Builder ruleId(Long ruleId) {
                 this.ruleId = ruleId;
@@ -233,7 +255,10 @@ public class ListSensitiveColumnInfoResponseBody extends TeaModel {
             }
 
             /**
-             * RuleName.
+             * <p>The masking algorithm name.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>test</p>
              */
             public Builder ruleName(String ruleName) {
                 this.ruleName = ruleName;
@@ -300,7 +325,10 @@ public class ListSensitiveColumnInfoResponseBody extends TeaModel {
             } 
 
             /**
-             * RuleId.
+             * <p>The ID of the partial masking algorithm.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>10***</p>
              */
             public Builder ruleId(Long ruleId) {
                 this.ruleId = ruleId;
@@ -308,7 +336,10 @@ public class ListSensitiveColumnInfoResponseBody extends TeaModel {
             }
 
             /**
-             * RuleName.
+             * <p>The partial masking algorithm name.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>test01</p>
              */
             public Builder ruleName(String ruleName) {
                 this.ruleName = ruleName;
@@ -546,7 +577,7 @@ public class ListSensitiveColumnInfoResponseBody extends TeaModel {
             } 
 
             /**
-             * CategoryName.
+             * <p>The name of the category.</p>
              */
             public Builder categoryName(String categoryName) {
                 this.categoryName = categoryName;
@@ -554,7 +585,10 @@ public class ListSensitiveColumnInfoResponseBody extends TeaModel {
             }
 
             /**
-             * ColumnName.
+             * <p>The name of the sensitive field.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>test_column</p>
              */
             public Builder columnName(String columnName) {
                 this.columnName = columnName;
@@ -562,7 +596,7 @@ public class ListSensitiveColumnInfoResponseBody extends TeaModel {
             }
 
             /**
-             * DefaultDesensitizationRule.
+             * <p>The information about the default masking algorithm.</p>
              */
             public Builder defaultDesensitizationRule(DefaultDesensitizationRule defaultDesensitizationRule) {
                 this.defaultDesensitizationRule = defaultDesensitizationRule;
@@ -570,7 +604,10 @@ public class ListSensitiveColumnInfoResponseBody extends TeaModel {
             }
 
             /**
-             * InstanceId.
+             * <p>The ID of the instance.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>183****</p>
              */
             public Builder instanceId(Integer instanceId) {
                 this.instanceId = instanceId;
@@ -578,7 +615,10 @@ public class ListSensitiveColumnInfoResponseBody extends TeaModel {
             }
 
             /**
-             * IsPlain.
+             * <p>Indicates whether the sensitive field is displayed in plaintext.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>False</p>
              */
             public Builder isPlain(Boolean isPlain) {
                 this.isPlain = isPlain;
@@ -586,7 +626,7 @@ public class ListSensitiveColumnInfoResponseBody extends TeaModel {
             }
 
             /**
-             * SampleData.
+             * <p>The sample data.</p>
              */
             public Builder sampleData(String sampleData) {
                 this.sampleData = sampleData;
@@ -594,7 +634,10 @@ public class ListSensitiveColumnInfoResponseBody extends TeaModel {
             }
 
             /**
-             * SchemaName.
+             * <p>The name of the database.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>test_schema</p>
              */
             public Builder schemaName(String schemaName) {
                 this.schemaName = schemaName;
@@ -602,7 +645,12 @@ public class ListSensitiveColumnInfoResponseBody extends TeaModel {
             }
 
             /**
-             * SecurityLevel.
+             * <p>The sensitivity level of the field. Valid values:</p>
+             * <ul>
+             * <li>Low</li>
+             * <li>Medium</li>
+             * <li>High</li>
+             * </ul>
              */
             public Builder securityLevel(String securityLevel) {
                 this.securityLevel = securityLevel;
@@ -610,7 +658,7 @@ public class ListSensitiveColumnInfoResponseBody extends TeaModel {
             }
 
             /**
-             * SemiDesensitizationRuleList.
+             * <p>The list of partial masking algorithms.</p>
              */
             public Builder semiDesensitizationRuleList(SemiDesensitizationRuleList semiDesensitizationRuleList) {
                 this.semiDesensitizationRuleList = semiDesensitizationRuleList;
@@ -618,7 +666,10 @@ public class ListSensitiveColumnInfoResponseBody extends TeaModel {
             }
 
             /**
-             * TableName.
+             * <p>The name of the table.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>test_table</p>
              */
             public Builder tableName(String tableName) {
                 this.tableName = tableName;
@@ -626,7 +677,10 @@ public class ListSensitiveColumnInfoResponseBody extends TeaModel {
             }
 
             /**
-             * UserSensitivityLevel.
+             * <p>The user-defined sensitivity level.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>S1</p>
              */
             public Builder userSensitivityLevel(String userSensitivityLevel) {
                 this.userSensitivityLevel = userSensitivityLevel;

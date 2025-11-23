@@ -167,7 +167,13 @@ public class ListSensitiveColumnInfoRequest extends Request {
         }
 
         /**
-         * ColumnName.
+         * <p>The name of the sensitive field. You can call the <a href="https://help.aliyun.com/document_detail/188103.html">ListSensitiveColumns</a> operation to query the name of the sensitive field.</p>
+         * <blockquote>
+         * <p>You can also call the <a href="https://help.aliyun.com/document_detail/141870.html">ListColumns</a> operation to query the name of the sensitive field.</p>
+         * </blockquote>
+         * 
+         * <strong>example:</strong>
+         * <p>test_column</p>
          */
         public Builder columnName(String columnName) {
             this.putQueryParameter("ColumnName", columnName);
@@ -176,6 +182,7 @@ public class ListSensitiveColumnInfoRequest extends Request {
         }
 
         /**
+         * <p>The ID of the instance. You can call the <a href="https://help.aliyun.com/document_detail/141936.html">ListInstances</a> or <a href="https://help.aliyun.com/document_detail/141567.html">GetInstance</a> operation to query the instance ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -188,7 +195,10 @@ public class ListSensitiveColumnInfoRequest extends Request {
         }
 
         /**
-         * PageNumber.
+         * <p>The page number of the returned page.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder pageNumber(Integer pageNumber) {
             this.putQueryParameter("PageNumber", pageNumber);
@@ -197,7 +207,10 @@ public class ListSensitiveColumnInfoRequest extends Request {
         }
 
         /**
-         * PageSize.
+         * <p>The number of entries to return on each page.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>100</p>
          */
         public Builder pageSize(Integer pageSize) {
             this.putQueryParameter("PageSize", pageSize);
@@ -206,7 +219,13 @@ public class ListSensitiveColumnInfoRequest extends Request {
         }
 
         /**
-         * SchemaName.
+         * <p>The database name. You can also call the <a href="https://help.aliyun.com/document_detail/141876.html">SearchDatabase</a> operation to query the name of the database.</p>
+         * <blockquote>
+         * <p>You can also call the <a href="https://help.aliyun.com/document_detail/141873.html">ListDatabases</a> operation to query the value of the SchemaName parameter of a physical database, or the <a href="https://help.aliyun.com/document_detail/141874.html">ListLogicDatabases</a> operation to query the value of the SchemaName parameter of a logical database.</p>
+         * </blockquote>
+         * 
+         * <strong>example:</strong>
+         * <p>test_schema</p>
          */
         public Builder schemaName(String schemaName) {
             this.putQueryParameter("SchemaName", schemaName);
@@ -215,7 +234,13 @@ public class ListSensitiveColumnInfoRequest extends Request {
         }
 
         /**
-         * TableName.
+         * <p>The name of the table. You can call the <a href="https://help.aliyun.com/document_detail/188103.html">ListSensitiveColumns</a> operation to query the table name.</p>
+         * <blockquote>
+         * <p>You can also call the <a href="https://help.aliyun.com/document_detail/141878.html">ListTables</a> operation to query the table name.</p>
+         * </blockquote>
+         * 
+         * <strong>example:</strong>
+         * <p>test_table</p>
          */
         public Builder tableName(String tableName) {
             this.putQueryParameter("TableName", tableName);
@@ -224,7 +249,13 @@ public class ListSensitiveColumnInfoRequest extends Request {
         }
 
         /**
-         * Tid.
+         * <p>The ID of the tenant.</p>
+         * <blockquote>
+         * <p>To view the ID of the tenant, go to the DMS console and move the pointer over the profile picture in the upper-right corner. For more information, see the <a href="https://help.aliyun.com/document_detail/181330.html">View information about the current tenant</a> section of the &quot;Manage DMS tenants&quot; topic.</p>
+         * </blockquote>
+         * 
+         * <strong>example:</strong>
+         * <p>3***</p>
          */
         public Builder tid(Long tid) {
             this.putQueryParameter("Tid", tid);

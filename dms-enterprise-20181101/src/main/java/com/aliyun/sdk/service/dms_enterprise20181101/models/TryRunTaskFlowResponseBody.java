@@ -106,7 +106,14 @@ public class TryRunTaskFlowResponseBody extends TeaModel {
         } 
 
         /**
-         * ErrorCode.
+         * <p>The error code that is returned if the request failed. Value values:</p>
+         * <ul>
+         * <li>If the request was successful, the <strong>ErrorCode</strong> parameter is not returned.</li>
+         * <li>If the request failed, <strong>ErrorCode</strong> is returned. For more information, see the <strong>Error codes</strong> section in this topic.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>UnknownError</p>
          */
         public Builder errorCode(String errorCode) {
             this.errorCode = errorCode;
@@ -114,7 +121,10 @@ public class TryRunTaskFlowResponseBody extends TeaModel {
         }
 
         /**
-         * ErrorMessage.
+         * <p>The error message that is returned if the request failed.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>UnknownError</p>
          */
         public Builder errorMessage(String errorMessage) {
             this.errorMessage = errorMessage;
@@ -122,7 +132,10 @@ public class TryRunTaskFlowResponseBody extends TeaModel {
         }
 
         /**
-         * InstanceId.
+         * <p>The instance ID of the order.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>169****</p>
          */
         public Builder instanceId(String instanceId) {
             this.instanceId = instanceId;
@@ -130,7 +143,10 @@ public class TryRunTaskFlowResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>9997630E-1993-5E6D-9DF1-4EFEE755FE31</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -138,7 +154,14 @@ public class TryRunTaskFlowResponseBody extends TeaModel {
         }
 
         /**
-         * Success.
+         * <p>Indicates whether the request was successful. Valid values:</p>
+         * <ul>
+         * <li>true: The request was successful.</li>
+         * <li>false: The request failed.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder success(Boolean success) {
             this.success = success;

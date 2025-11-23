@@ -119,7 +119,7 @@ public class ListAbacAuthorizationsResponseBody extends TeaModel {
         } 
 
         /**
-         * AuthorizationList.
+         * <p>The list of users to which the specified policy is attached.</p>
          */
         public Builder authorizationList(java.util.List<AuthorizationList> authorizationList) {
             this.authorizationList = authorizationList;
@@ -127,7 +127,10 @@ public class ListAbacAuthorizationsResponseBody extends TeaModel {
         }
 
         /**
-         * ErrorCode.
+         * <p>The error code that is returned when the request failed.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>UnknownError</p>
          */
         public Builder errorCode(String errorCode) {
             this.errorCode = errorCode;
@@ -135,7 +138,10 @@ public class ListAbacAuthorizationsResponseBody extends TeaModel {
         }
 
         /**
-         * ErrorMessage.
+         * <p>The error message that is returned when the request failed.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>UnknownError</p>
          */
         public Builder errorMessage(String errorMessage) {
             this.errorMessage = errorMessage;
@@ -143,7 +149,10 @@ public class ListAbacAuthorizationsResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * <p>The request ID. You can use the ID to query logs and troubleshoot issues.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>7FAD400F-7A5C-4193-8F9A-39D86C4F0231</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -151,7 +160,14 @@ public class ListAbacAuthorizationsResponseBody extends TeaModel {
         }
 
         /**
-         * Success.
+         * <p>Indicates whether the request was successful. Valid values:</p>
+         * <ul>
+         * <li><strong>true</strong>: The request was successful.</li>
+         * <li><strong>false</strong>: The request failed.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder success(Boolean success) {
             this.success = success;
@@ -159,7 +175,10 @@ public class ListAbacAuthorizationsResponseBody extends TeaModel {
         }
 
         /**
-         * TotalCount.
+         * <p>The number of objects to which the policy is attached.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>3</p>
          */
         public Builder totalCount(Long totalCount) {
             this.totalCount = totalCount;
@@ -290,7 +309,10 @@ public class ListAbacAuthorizationsResponseBody extends TeaModel {
             } 
 
             /**
-             * AuthorizationId.
+             * <p>The authorization ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>32****</p>
              */
             public Builder authorizationId(Long authorizationId) {
                 this.authorizationId = authorizationId;
@@ -298,7 +320,10 @@ public class ListAbacAuthorizationsResponseBody extends TeaModel {
             }
 
             /**
-             * IdentityId.
+             * <p>The ID of the object to which the policy is attached.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>51****</p>
              */
             public Builder identityId(Long identityId) {
                 this.identityId = identityId;
@@ -306,7 +331,10 @@ public class ListAbacAuthorizationsResponseBody extends TeaModel {
             }
 
             /**
-             * IdentityName.
+             * <p>The name of the object to which the policy is attached.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>test_user</p>
              */
             public Builder identityName(String identityName) {
                 this.identityName = identityName;
@@ -314,7 +342,10 @@ public class ListAbacAuthorizationsResponseBody extends TeaModel {
             }
 
             /**
-             * IdentityType.
+             * <p>The type of the object to which the policy is attached.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>USER</p>
              */
             public Builder identityType(String identityType) {
                 this.identityType = identityType;
@@ -322,7 +353,10 @@ public class ListAbacAuthorizationsResponseBody extends TeaModel {
             }
 
             /**
-             * PolicyId.
+             * <p>The ID of the policy.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>12****</p>
              */
             public Builder policyId(Long policyId) {
                 this.policyId = policyId;
@@ -330,7 +364,10 @@ public class ListAbacAuthorizationsResponseBody extends TeaModel {
             }
 
             /**
-             * PolicyName.
+             * <p>The name of the policy.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>policy_test</p>
              */
             public Builder policyName(String policyName) {
                 this.policyName = policyName;
@@ -338,7 +375,10 @@ public class ListAbacAuthorizationsResponseBody extends TeaModel {
             }
 
             /**
-             * PolicySource.
+             * <p>The source of the policy.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>USER_DEFINE</p>
              */
             public Builder policySource(String policySource) {
                 this.policySource = policySource;

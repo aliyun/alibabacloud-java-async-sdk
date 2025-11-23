@@ -184,6 +184,7 @@ public class ListDataLakeFunctionNameRequest extends Request {
         }
 
         /**
+         * <p>The name of the data catalog.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -196,6 +197,7 @@ public class ListDataLakeFunctionNameRequest extends Request {
         }
 
         /**
+         * <p>The region where the data lake resides.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -208,6 +210,7 @@ public class ListDataLakeFunctionNameRequest extends Request {
         }
 
         /**
+         * <p>The database name.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -220,7 +223,10 @@ public class ListDataLakeFunctionNameRequest extends Request {
         }
 
         /**
-         * FunctionNamePattern.
+         * <p>The regular expression that is used to filter the returned function names.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>.*</p>
          */
         public Builder functionNamePattern(String functionNamePattern) {
             this.putQueryParameter("FunctionNamePattern", functionNamePattern);
@@ -229,7 +235,10 @@ public class ListDataLakeFunctionNameRequest extends Request {
         }
 
         /**
-         * MaxResults.
+         * <p>The number of records per page. Valid values: 1 to 100.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>20</p>
          */
         public Builder maxResults(Integer maxResults) {
             this.putQueryParameter("MaxResults", maxResults);
@@ -238,7 +247,14 @@ public class ListDataLakeFunctionNameRequest extends Request {
         }
 
         /**
-         * NextToken.
+         * <p>The pagination token that is used in the next request to retrieve a new page of results. Valid values:</p>
+         * <ul>
+         * <li>If <strong>NextToken</strong> is empty, there is no next page.</li>
+         * <li>If a value of <strong>NextToken</strong> is returned, it indicates the token that is used for the next query.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>f056501ada12c1cc</p>
          */
         public Builder nextToken(String nextToken) {
             this.putQueryParameter("NextToken", nextToken);
@@ -247,7 +263,13 @@ public class ListDataLakeFunctionNameRequest extends Request {
         }
 
         /**
-         * Tid.
+         * <p>The ID of the tenant.</p>
+         * <blockquote>
+         * <p>To view the ID of the tenant, go to the DMS console and move the pointer over the profile picture in the upper-right corner. For more information, see the <a href="https://help.aliyun.com/document_detail/181330.html">View information about the current tenant</a> section of the &quot;Manage DMS tenants&quot; topic.</p>
+         * </blockquote>
+         * 
+         * <strong>example:</strong>
+         * <p>3***</p>
          */
         public Builder tid(Long tid) {
             this.putQueryParameter("Tid", tid);
@@ -256,7 +278,10 @@ public class ListDataLakeFunctionNameRequest extends Request {
         }
 
         /**
-         * WorkspaceId.
+         * <p>The workspace ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>12****</p>
          */
         public Builder workspaceId(Long workspaceId) {
             this.putQueryParameter("WorkspaceId", workspaceId);

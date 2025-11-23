@@ -32,6 +32,9 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<AddDesensitizationRuleResponse> addDesensitizationRule(AddDesensitizationRuleRequest request);
 
     /**
+     * <b>description</b> :
+     * <p>You must be a database administrator (DBA) or a DMS administrator. For more information, see <a href="https://help.aliyun.com/document_detail/324212.html">View system roles</a>.</p>
+     * 
      * @param request the request parameters of AddInstance  AddInstanceRequest
      * @return AddInstanceResponse
      */
@@ -92,7 +95,7 @@ public interface AsyncClient extends SdkAutoCloseable {
 
     /**
      * <b>description</b> :
-     * <p>根据用户提供的数据库ID，回答对应引擎的语法问题</p>
+     * <p>You can call this operation to answer the syntax questions of the corresponding engine according to the specified database ID.</p>
      * 
      * @param request the request parameters of AnswerSqlSyntaxByMetaAgent  AnswerSqlSyntaxByMetaAgentRequest
      * @return AnswerSqlSyntaxByMetaAgentResponse
@@ -164,6 +167,15 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<ChangeLhDagOwnerResponse> changeLhDagOwner(ChangeLhDagOwnerRequest request);
 
     /**
+     * <b>description</b> :
+     * <p>带有DMS脱敏能力的聊天API接口</p>
+     * 
+     * @param request the request parameters of ChatWithDesensitize  ChatWithDesensitizeRequest
+     * @return ChatWithDesensitizeResponse
+     */
+    CompletableFuture<ChatWithDesensitizeResponse> chatWithDesensitize(ChatWithDesensitizeRequest request);
+
+    /**
      * @param request the request parameters of CloseOrder  CloseOrderRequest
      * @return CloseOrderResponse
      */
@@ -176,6 +188,9 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<CreateAbacAuthorizationResponse> createAbacAuthorization(CreateAbacAuthorizationRequest request);
 
     /**
+     * <b>description</b> :
+     * <p>Currently, this feature is in the phased release phase. Only users who have phased out can use this feature and related APIs. For more information about the policy feature, see <a href="https://help.aliyun.com/document_detail/2848565.html">Manage policies</a>.</p>
+     * 
      * @param request the request parameters of CreateAbacPolicy  CreateAbacPolicyRequest
      * @return CreateAbacPolicyResponse
      */
@@ -340,6 +355,9 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<CreateOrderResponse> createOrder(CreateOrderRequest request);
 
     /**
+     * <b>description</b> :
+     * <p>You can call this API operation only for database instances that are managed in Security Collaboration mode.</p>
+     * 
      * @param request the request parameters of CreateProcCorrectOrder  CreateProcCorrectOrderRequest
      * @return CreateProcCorrectOrderResponse
      */
@@ -429,6 +447,13 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<CreateUploadOSSFileJobResponse> createUploadOSSFileJob(CreateUploadOSSFileJobRequest request);
 
     /**
+     * <b>description</b> :
+     * <h2><a href="#"></a>Prerequisites</h2>
+     * <ul>
+     * <li>A virtual private cloud (VPC) is created.</li>
+     * <li>Log on to the DMS console by using an Alibaba Cloud account or a RAM user that has high permissions, and grant DMS the permissions to access cloud resources (AliyunDMSProcessingDataRolePolicy).</li>
+     * </ul>
+     * 
      * @param request the request parameters of CreateWorkspace  CreateWorkspaceRequest
      * @return CreateWorkspaceResponse
      */
@@ -544,6 +569,9 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<DeleteScenarioResponse> deleteScenario(DeleteScenarioRequest request);
 
     /**
+     * <b>description</b> :
+     * <p>Before you call this API operation, make sure that the security rule set is not associated with an instance.</p>
+     * 
      * @param request the request parameters of DeleteStandardGroup  DeleteStandardGroupRequest
      * @return DeleteStandardGroupResponse
      */
@@ -685,6 +713,9 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<EditLogicDatabaseResponse> editLogicDatabase(EditLogicDatabaseRequest request);
 
     /**
+     * <b>description</b> :
+     * <p>Edits the business knowledge of the metadata represented by the specified GUID.</p>
+     * 
      * @param request the request parameters of EditMetaKnowledgeAsset  EditMetaKnowledgeAssetRequest
      * @return EditMetaKnowledgeAssetResponse
      */
@@ -737,7 +768,7 @@ public interface AsyncClient extends SdkAutoCloseable {
 
     /**
      * <b>description</b> :
-     * <p>根据用户提供的SQL，报错信息和数据库ID，分析SQL报错原因并修复</p>
+     * <p>You can call this operation to analyze and fix SQL errors based on the specified SQL statement, error message, and database ID.</p>
      * 
      * @param request the request parameters of FixSqlByMetaAgent  FixSqlByMetaAgentRequest
      * @return FixSqlByMetaAgentResponse
@@ -1152,6 +1183,9 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<GetTableDesignProjectInfoResponse> getTableDesignProjectInfo(GetTableDesignProjectInfoRequest request);
 
     /**
+     * <b>description</b> :
+     * <p>This API can be called only for database instances that are enabled for security hosting.</p>
+     * 
      * @param request the request parameters of GetTableKnowledgeInfo  GetTableKnowledgeInfoRequest
      * @return GetTableKnowledgeInfoResponse
      */
@@ -1677,6 +1711,12 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<ListTasksInTaskFlowResponse> listTasksInTaskFlow(ListTasksInTaskFlowRequest request);
 
     /**
+     * @param request the request parameters of ListUserOwnedResources  ListUserOwnedResourcesRequest
+     * @return ListUserOwnedResourcesResponse
+     */
+    CompletableFuture<ListUserOwnedResourcesResponse> listUserOwnedResources(ListUserOwnedResourcesRequest request);
+
+    /**
      * @param request the request parameters of ListUserPermissions  ListUserPermissionsRequest
      * @return ListUserPermissionsResponse
      */
@@ -1750,7 +1790,7 @@ public interface AsyncClient extends SdkAutoCloseable {
 
     /**
      * <b>description</b> :
-     * <p>根据用户提供的SQL数据库ID，分析SQL性能并优化</p>
+     * <p>You can call this operation to analyze and optimize the SQL statements in the specified database.</p>
      * 
      * @param request the request parameters of OptimizeSqlByMetaAgent  OptimizeSqlByMetaAgentRequest
      * @return OptimizeSqlByMetaAgentResponse
@@ -1989,6 +2029,14 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<SyncInstanceMetaResponse> syncInstanceMeta(SyncInstanceMetaRequest request);
 
     /**
+     * <b>description</b> :
+     * <h3><a href="#"></a>Usage notes</h3>
+     * <p>An edge can be created only when the following conditions are met:</p>
+     * <ol>
+     * <li>The start and end nodes of the edge exist in the directed acyclic graph (DAG) of the task flow specified by DagId.</li>
+     * <li>After the edge is created, the DAG does not contain loops.</li>
+     * </ol>
+     * 
      * @param request the request parameters of TryRunTaskFlow  TryRunTaskFlowRequest
      * @return TryRunTaskFlowResponse
      */
@@ -2088,6 +2136,9 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<UpdateTaskContentResponse> updateTaskContent(UpdateTaskContentRequest request);
 
     /**
+     * <b>description</b> :
+     * <p>You can call this operation to modify node configurations.</p>
+     * 
      * @param request the request parameters of UpdateTaskContentV2  UpdateTaskContentV2Request
      * @return UpdateTaskContentV2Response
      */

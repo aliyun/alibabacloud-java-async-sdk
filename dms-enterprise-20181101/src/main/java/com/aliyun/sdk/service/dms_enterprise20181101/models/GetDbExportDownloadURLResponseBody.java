@@ -106,7 +106,7 @@ public class GetDbExportDownloadURLResponseBody extends TeaModel {
         } 
 
         /**
-         * DownloadURLResult.
+         * <p>The download URL of the exported file.</p>
          */
         public Builder downloadURLResult(DownloadURLResult downloadURLResult) {
             this.downloadURLResult = downloadURLResult;
@@ -114,7 +114,10 @@ public class GetDbExportDownloadURLResponseBody extends TeaModel {
         }
 
         /**
-         * ErrorCode.
+         * <p>The error code returned.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>UnknownError</p>
          */
         public Builder errorCode(String errorCode) {
             this.errorCode = errorCode;
@@ -122,7 +125,10 @@ public class GetDbExportDownloadURLResponseBody extends TeaModel {
         }
 
         /**
-         * ErrorMessage.
+         * <p>The error message returned if the request fails.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>UnknownError</p>
          */
         public Builder errorMessage(String errorMessage) {
             this.errorMessage = errorMessage;
@@ -130,7 +136,10 @@ public class GetDbExportDownloadURLResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * <p>The request ID. You can use the request ID to locate logs and troubleshoot issues.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>0C1CB646-1DE4-4AD0-B4A4-7D47DD52E931</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -138,7 +147,14 @@ public class GetDbExportDownloadURLResponseBody extends TeaModel {
         }
 
         /**
-         * Success.
+         * <p>Indicates whether the request was successful. Valid values:</p>
+         * <ul>
+         * <li>true: The request succeeded.</li>
+         * <li>false: The request failed.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder success(Boolean success) {
             this.success = success;
@@ -217,7 +233,14 @@ public class GetDbExportDownloadURLResponseBody extends TeaModel {
             } 
 
             /**
-             * HasResult.
+             * <p>Indicates whether export results are available for download. Valid values:</p>
+             * <ul>
+             * <li><strong>true</strong>: Export results are available for download.</li>
+             * <li><strong>false</strong>: No export results are available for download.</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>true</p>
              */
             public Builder hasResult(Boolean hasResult) {
                 this.hasResult = hasResult;
@@ -225,7 +248,10 @@ public class GetDbExportDownloadURLResponseBody extends TeaModel {
             }
 
             /**
-             * TipMessage.
+             * <p>The message that indicates an exception.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>tip message</p>
              */
             public Builder tipMessage(String tipMessage) {
                 this.tipMessage = tipMessage;
@@ -233,7 +259,10 @@ public class GetDbExportDownloadURLResponseBody extends TeaModel {
             }
 
             /**
-             * URL.
+             * <p>The download URL of the exported file.</p>
+             * 
+             * <strong>example:</strong>
+             * <p><a href="https://dms-idb-hangzhou.oss-cn-hangzhou.aliyuncs.com/xxx.zip">https://dms-idb-hangzhou.oss-cn-hangzhou.aliyuncs.com/xxx.zip</a></p>
              */
             public Builder URL(String URL) {
                 this.URL = URL;

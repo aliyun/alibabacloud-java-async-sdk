@@ -80,7 +80,10 @@ public class DeleteWorkspaceResponseBody extends TeaModel {
         } 
 
         /**
-         * Data.
+         * <p>Indicates whether the workspace is deleted successfully.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder data(String data) {
             this.data = data;
@@ -99,7 +102,10 @@ public class DeleteWorkspaceResponseBody extends TeaModel {
         }
 
         /**
-         * Success.
+         * <p>Indicates whether the operation is called successfully.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder success(Boolean success) {
             this.success = success;

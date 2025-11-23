@@ -203,6 +203,15 @@ public class DescribeDifyAttributeResponseBody extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("AppUuid")
         private String appUuid;
 
+        @com.aliyun.core.annotation.NameInMap("BillingInstanceId")
+        private String billingInstanceId;
+
+        @com.aliyun.core.annotation.NameInMap("ChargeType")
+        private String chargeType;
+
+        @com.aliyun.core.annotation.NameInMap("ExpireTime")
+        private Long expireTime;
+
         @com.aliyun.core.annotation.NameInMap("Replicas")
         private String replicas;
 
@@ -214,6 +223,9 @@ public class DescribeDifyAttributeResponseBody extends TeaModel {
 
         @com.aliyun.core.annotation.NameInMap("Status")
         private String status;
+
+        @com.aliyun.core.annotation.NameInMap("StorageType")
+        private String storageType;
 
         @com.aliyun.core.annotation.NameInMap("VSwitchId")
         private String vSwitchId;
@@ -229,10 +241,14 @@ public class DescribeDifyAttributeResponseBody extends TeaModel {
 
         private Root(Builder builder) {
             this.appUuid = builder.appUuid;
+            this.billingInstanceId = builder.billingInstanceId;
+            this.chargeType = builder.chargeType;
+            this.expireTime = builder.expireTime;
             this.replicas = builder.replicas;
             this.resourceQuota = builder.resourceQuota;
             this.securityGroupId = builder.securityGroupId;
             this.status = builder.status;
+            this.storageType = builder.storageType;
             this.vSwitchId = builder.vSwitchId;
             this.vpcId = builder.vpcId;
             this.workspaceId = builder.workspaceId;
@@ -252,6 +268,27 @@ public class DescribeDifyAttributeResponseBody extends TeaModel {
          */
         public String getAppUuid() {
             return this.appUuid;
+        }
+
+        /**
+         * @return billingInstanceId
+         */
+        public String getBillingInstanceId() {
+            return this.billingInstanceId;
+        }
+
+        /**
+         * @return chargeType
+         */
+        public String getChargeType() {
+            return this.chargeType;
+        }
+
+        /**
+         * @return expireTime
+         */
+        public Long getExpireTime() {
+            return this.expireTime;
         }
 
         /**
@@ -280,6 +317,13 @@ public class DescribeDifyAttributeResponseBody extends TeaModel {
          */
         public String getStatus() {
             return this.status;
+        }
+
+        /**
+         * @return storageType
+         */
+        public String getStorageType() {
+            return this.storageType;
         }
 
         /**
@@ -312,10 +356,14 @@ public class DescribeDifyAttributeResponseBody extends TeaModel {
 
         public static final class Builder {
             private String appUuid; 
+            private String billingInstanceId; 
+            private String chargeType; 
+            private Long expireTime; 
             private String replicas; 
             private String resourceQuota; 
             private String securityGroupId; 
             private String status; 
+            private String storageType; 
             private String vSwitchId; 
             private String vpcId; 
             private String workspaceId; 
@@ -326,10 +374,14 @@ public class DescribeDifyAttributeResponseBody extends TeaModel {
 
             private Builder(Root model) {
                 this.appUuid = model.appUuid;
+                this.billingInstanceId = model.billingInstanceId;
+                this.chargeType = model.chargeType;
+                this.expireTime = model.expireTime;
                 this.replicas = model.replicas;
                 this.resourceQuota = model.resourceQuota;
                 this.securityGroupId = model.securityGroupId;
                 this.status = model.status;
+                this.storageType = model.storageType;
                 this.vSwitchId = model.vSwitchId;
                 this.vpcId = model.vpcId;
                 this.workspaceId = model.workspaceId;
@@ -341,6 +393,30 @@ public class DescribeDifyAttributeResponseBody extends TeaModel {
              */
             public Builder appUuid(String appUuid) {
                 this.appUuid = appUuid;
+                return this;
+            }
+
+            /**
+             * BillingInstanceId.
+             */
+            public Builder billingInstanceId(String billingInstanceId) {
+                this.billingInstanceId = billingInstanceId;
+                return this;
+            }
+
+            /**
+             * ChargeType.
+             */
+            public Builder chargeType(String chargeType) {
+                this.chargeType = chargeType;
+                return this;
+            }
+
+            /**
+             * ExpireTime.
+             */
+            public Builder expireTime(Long expireTime) {
+                this.expireTime = expireTime;
                 return this;
             }
 
@@ -373,6 +449,14 @@ public class DescribeDifyAttributeResponseBody extends TeaModel {
              */
             public Builder status(String status) {
                 this.status = status;
+                return this;
+            }
+
+            /**
+             * StorageType.
+             */
+            public Builder storageType(String storageType) {
+                this.storageType = storageType;
                 return this;
             }
 

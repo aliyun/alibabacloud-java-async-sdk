@@ -106,7 +106,10 @@ public class CreateDataLakePartitionResponseBody extends TeaModel {
         } 
 
         /**
-         * ErrorCode.
+         * <p>The error code that is returned if the request failed.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>UnknownError</p>
          */
         public Builder errorCode(String errorCode) {
             this.errorCode = errorCode;
@@ -114,7 +117,10 @@ public class CreateDataLakePartitionResponseBody extends TeaModel {
         }
 
         /**
-         * ErrorMessage.
+         * <p>The error message that is returned if the request failed.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>UnknownError</p>
          */
         public Builder errorMessage(String errorMessage) {
             this.errorMessage = errorMessage;
@@ -122,7 +128,7 @@ public class CreateDataLakePartitionResponseBody extends TeaModel {
         }
 
         /**
-         * Partition.
+         * <p>The information about the partition.</p>
          */
         public Builder partition(DLPartition partition) {
             this.partition = partition;
@@ -130,7 +136,10 @@ public class CreateDataLakePartitionResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * <p>The request ID. You can use the request ID to locate logs and troubleshoot issues.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>427688B8-ADFB-4C4E-9D45-EF5C1FD6E23D</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -138,7 +147,11 @@ public class CreateDataLakePartitionResponseBody extends TeaModel {
         }
 
         /**
-         * Success.
+         * <p>Indicates whether the request was successful. Valid values:</p>
+         * <ul>
+         * <li><strong>true</strong>: The request was successful.</li>
+         * <li><strong>false</strong>: The request failed.</li>
+         * </ul>
          */
         public Builder success(Boolean success) {
             this.success = success;

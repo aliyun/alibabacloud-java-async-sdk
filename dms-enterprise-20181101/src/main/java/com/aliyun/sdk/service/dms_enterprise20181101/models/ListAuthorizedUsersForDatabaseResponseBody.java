@@ -67,7 +67,10 @@ public class ListAuthorizedUsersForDatabaseResponseBody extends TeaModel {
         } 
 
         /**
-         * RequestId.
+         * <p>The request ID. You can use the ID to locate logs and troubleshoot issues.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>FE8EE2F1-4880-46BC-A704-5CF63EAF9A04</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -75,7 +78,7 @@ public class ListAuthorizedUsersForDatabaseResponseBody extends TeaModel {
         }
 
         /**
-         * Users.
+         * <p>The list of users that have permissions on the specified instance.</p>
          */
         public Builder users(java.util.List<Users> users) {
             this.users = users;
@@ -154,7 +157,10 @@ public class ListAuthorizedUsersForDatabaseResponseBody extends TeaModel {
             } 
 
             /**
-             * Uid.
+             * <p>The UID of the user&quot;s Alibaba Cloud account.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>164882191****</p>
              */
             public Builder uid(String uid) {
                 this.uid = uid;
@@ -162,7 +168,10 @@ public class ListAuthorizedUsersForDatabaseResponseBody extends TeaModel {
             }
 
             /**
-             * UserId.
+             * <p>The user IDs.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>51****</p>
              */
             public Builder userId(String userId) {
                 this.userId = userId;
@@ -170,7 +179,10 @@ public class ListAuthorizedUsersForDatabaseResponseBody extends TeaModel {
             }
 
             /**
-             * UserNickName.
+             * <p>The nickname of the user.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>user_test</p>
              */
             public Builder userNickName(String userNickName) {
                 this.userNickName = userNickName;

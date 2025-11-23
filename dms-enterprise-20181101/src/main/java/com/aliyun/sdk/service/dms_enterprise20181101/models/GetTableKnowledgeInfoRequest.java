@@ -112,6 +112,7 @@ public class GetTableKnowledgeInfoRequest extends Request {
         }
 
         /**
+         * <p>The ID of the physical database. You can call the <a href="https://help.aliyun.com/document_detail/141876.html">SearchDatabase</a> operation to obtain the ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -124,6 +125,7 @@ public class GetTableKnowledgeInfoRequest extends Request {
         }
 
         /**
+         * <p>The name of the table.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -136,7 +138,10 @@ public class GetTableKnowledgeInfoRequest extends Request {
         }
 
         /**
-         * TableSchemaName.
+         * <p>The schema name of the table, which is required only for SQL Server instances.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>dbo</p>
          */
         public Builder tableSchemaName(String tableSchemaName) {
             this.putQueryParameter("TableSchemaName", tableSchemaName);

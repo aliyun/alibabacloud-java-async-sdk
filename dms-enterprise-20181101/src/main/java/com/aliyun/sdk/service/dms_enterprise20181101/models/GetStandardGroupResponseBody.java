@@ -106,7 +106,10 @@ public class GetStandardGroupResponseBody extends TeaModel {
         } 
 
         /**
-         * ErrorCode.
+         * <p>The error code that is returned if the request failed.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>UnknownError</p>
          */
         public Builder errorCode(String errorCode) {
             this.errorCode = errorCode;
@@ -114,7 +117,10 @@ public class GetStandardGroupResponseBody extends TeaModel {
         }
 
         /**
-         * ErrorMessage.
+         * <p>The error message that is returned if the request failed.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>UnknownError</p>
          */
         public Builder errorMessage(String errorMessage) {
             this.errorMessage = errorMessage;
@@ -122,7 +128,10 @@ public class GetStandardGroupResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * <p>The request ID. You can use the ID to query logs and troubleshoot issues.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>BF7E9543-F431-566A-991A-B5C493EA36C2</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -130,7 +139,7 @@ public class GetStandardGroupResponseBody extends TeaModel {
         }
 
         /**
-         * StandardGroup.
+         * <p>The information about the security rule set.</p>
          */
         public Builder standardGroup(StandardGroup standardGroup) {
             this.standardGroup = standardGroup;
@@ -138,7 +147,14 @@ public class GetStandardGroupResponseBody extends TeaModel {
         }
 
         /**
-         * Success.
+         * <p>Indicates whether the request was successful. Valid values:</p>
+         * <ul>
+         * <li><strong>true</strong>: The request was successful.</li>
+         * <li><strong>false</strong>: The request failed.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder success(Boolean success) {
             this.success = success;
@@ -256,7 +272,10 @@ public class GetStandardGroupResponseBody extends TeaModel {
             } 
 
             /**
-             * DbType.
+             * <p>The engine type.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>mysql</p>
              */
             public Builder dbType(String dbType) {
                 this.dbType = dbType;
@@ -264,7 +283,7 @@ public class GetStandardGroupResponseBody extends TeaModel {
             }
 
             /**
-             * Description.
+             * <p>The description of the security rule set.</p>
              */
             public Builder description(String description) {
                 this.description = description;
@@ -272,7 +291,10 @@ public class GetStandardGroupResponseBody extends TeaModel {
             }
 
             /**
-             * GroupId.
+             * <p>The ID of the security rule set.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>41****</p>
              */
             public Builder groupId(Long groupId) {
                 this.groupId = groupId;
@@ -280,7 +302,15 @@ public class GetStandardGroupResponseBody extends TeaModel {
             }
 
             /**
-             * GroupMode.
+             * <p>The control mode. Valid values:</p>
+             * <ul>
+             * <li><strong>NONE_CONTROL</strong>: Flexible Management</li>
+             * <li><strong>STABLE</strong>: Stable Change</li>
+             * <li><strong>COMMON</strong>: Security Collaboration</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>COMMON</p>
              */
             public Builder groupMode(String groupMode) {
                 this.groupMode = groupMode;
@@ -288,7 +318,10 @@ public class GetStandardGroupResponseBody extends TeaModel {
             }
 
             /**
-             * GroupName.
+             * <p>The name of the security rule set.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>poc_test</p>
              */
             public Builder groupName(String groupName) {
                 this.groupName = groupName;
@@ -296,7 +329,10 @@ public class GetStandardGroupResponseBody extends TeaModel {
             }
 
             /**
-             * LastMenderId.
+             * <p>The ID of the user who last modified the security rules.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>51****</p>
              */
             public Builder lastMenderId(Long lastMenderId) {
                 this.lastMenderId = lastMenderId;

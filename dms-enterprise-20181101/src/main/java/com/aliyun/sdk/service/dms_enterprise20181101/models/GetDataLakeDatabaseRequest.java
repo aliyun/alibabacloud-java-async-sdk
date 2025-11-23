@@ -142,6 +142,7 @@ public class GetDataLakeDatabaseRequest extends Request {
         }
 
         /**
+         * <p>The name of the data catalog.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -154,6 +155,7 @@ public class GetDataLakeDatabaseRequest extends Request {
         }
 
         /**
+         * <p>The region where the data lake resides.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -166,6 +168,7 @@ public class GetDataLakeDatabaseRequest extends Request {
         }
 
         /**
+         * <p>The database name.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -178,7 +181,13 @@ public class GetDataLakeDatabaseRequest extends Request {
         }
 
         /**
-         * Tid.
+         * <p>The ID of the tenant.</p>
+         * <blockquote>
+         * <p>To view the tenant ID, go to the Data Management (DMS) console and move the pointer over the profile picture in the upper-right corner. For more information, see the <a href="https://help.aliyun.com/document_detail/181330.html">View information about the current tenant</a> section of the &quot;Manage DMS tenants&quot; topic.</p>
+         * </blockquote>
+         * 
+         * <strong>example:</strong>
+         * <p>3</p>
          */
         public Builder tid(Long tid) {
             this.putQueryParameter("Tid", tid);
@@ -187,7 +196,10 @@ public class GetDataLakeDatabaseRequest extends Request {
         }
 
         /**
-         * WorkspaceId.
+         * <p>The workspace ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>12****</p>
          */
         public Builder workspaceId(Long workspaceId) {
             this.putQueryParameter("WorkspaceId", workspaceId);

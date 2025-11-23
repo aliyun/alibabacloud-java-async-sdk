@@ -3,7 +3,7 @@
   <modelVersion>4.0.0</modelVersion>
   <groupId>com.aliyun</groupId>
   <artifactId>alibabacloud-dms_enterprise20181101</artifactId>
-  <version>1.53.40</version>
+  <version>1.53.41</version>
   <packaging>jar</packaging>
   <name>alibabacloud-dms_enterprise20181101</name>
   <description>Alibaba Cloud dms-enterprise (20181101) Async SDK for Java
@@ -104,12 +104,11 @@
       <plugin>
         <groupId>org.sonatype.central</groupId>
         <artifactId>central-publishing-maven-plugin</artifactId>
-        <version>0.8.0</version>
+        <version>0.9.0</version>
         <extensions>true</extensions>
         <configuration>
           <publishingServerId>central</publishingServerId>
           <autoPublish>true</autoPublish>
-          <waitUntil>published</waitUntil>
         </configuration>
       </plugin>
     </plugins>

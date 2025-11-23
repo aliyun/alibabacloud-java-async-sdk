@@ -128,6 +128,7 @@ public class ListTablesInCategoryRequest extends Request {
         }
 
         /**
+         * <p>The category ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -140,6 +141,7 @@ public class ListTablesInCategoryRequest extends Request {
         }
 
         /**
+         * <p>The page number.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -152,6 +154,7 @@ public class ListTablesInCategoryRequest extends Request {
         }
 
         /**
+         * <p>The number of entries to return per page.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -164,7 +167,10 @@ public class ListTablesInCategoryRequest extends Request {
         }
 
         /**
-         * Tid.
+         * <p>The ID of the tenant. You can call the <a href="https://help.aliyun.com/document_detail/198073.html">GetUserActiveTenant</a> or <a href="https://help.aliyun.com/document_detail/198074.html">ListUserTenants</a> operation to obtain the tenant ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>3***</p>
          */
         public Builder tid(Long tid) {
             this.putQueryParameter("Tid", tid);

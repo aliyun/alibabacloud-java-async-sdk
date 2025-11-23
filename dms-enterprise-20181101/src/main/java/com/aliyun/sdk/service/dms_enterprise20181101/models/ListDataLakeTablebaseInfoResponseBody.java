@@ -119,7 +119,10 @@ public class ListDataLakeTablebaseInfoResponseBody extends TeaModel {
         } 
 
         /**
-         * ErrorCode.
+         * <p>The error code returned if the request fails.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>400</p>
          */
         public Builder errorCode(String errorCode) {
             this.errorCode = errorCode;
@@ -127,7 +130,10 @@ public class ListDataLakeTablebaseInfoResponseBody extends TeaModel {
         }
 
         /**
-         * ErrorMessage.
+         * <p>The error message returned if the request failed.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Specified parameter Rows is not valid.</p>
          */
         public Builder errorMessage(String errorMessage) {
             this.errorMessage = errorMessage;
@@ -135,7 +141,10 @@ public class ListDataLakeTablebaseInfoResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>B43AD641-49C2-5299-9E06-1B37EC1B****</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -143,7 +152,14 @@ public class ListDataLakeTablebaseInfoResponseBody extends TeaModel {
         }
 
         /**
-         * Success.
+         * <p>Indicates whether the request was successful. Valid values:</p>
+         * <ul>
+         * <li><strong>true</strong>: The request was successful.</li>
+         * <li><strong>false</strong>: The request failed.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder success(Boolean success) {
             this.success = success;
@@ -151,7 +167,7 @@ public class ListDataLakeTablebaseInfoResponseBody extends TeaModel {
         }
 
         /**
-         * TablebaseInfoList.
+         * <p>The list of tables in the data lake.</p>
          */
         public Builder tablebaseInfoList(java.util.List<DLTablebaseInfo> tablebaseInfoList) {
             this.tablebaseInfoList = tablebaseInfoList;
@@ -159,7 +175,10 @@ public class ListDataLakeTablebaseInfoResponseBody extends TeaModel {
         }
 
         /**
-         * TotalCount.
+         * <p>The number of tables that meet the conditions.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>100</p>
          */
         public Builder totalCount(String totalCount) {
             this.totalCount = totalCount;

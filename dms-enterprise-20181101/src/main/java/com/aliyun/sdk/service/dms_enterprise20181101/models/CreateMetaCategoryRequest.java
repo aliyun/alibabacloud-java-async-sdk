@@ -112,6 +112,7 @@ public class CreateMetaCategoryRequest extends Request {
         }
 
         /**
+         * <p>The name of the category.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -124,7 +125,10 @@ public class CreateMetaCategoryRequest extends Request {
         }
 
         /**
-         * ParentCategoryId.
+         * <p>The ID of the parent category. The new category is created under this parent category. If this value is left empty, the new category is of the first level.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>30000322682</p>
          */
         public Builder parentCategoryId(Long parentCategoryId) {
             this.putQueryParameter("ParentCategoryId", parentCategoryId);
@@ -133,7 +137,10 @@ public class CreateMetaCategoryRequest extends Request {
         }
 
         /**
-         * Tid.
+         * <p>The ID of the tenant. You can call the <a href="https://help.aliyun.com/document_detail/198073.html">GetUserActiveTenant</a> or <a href="https://help.aliyun.com/document_detail/198074.html">ListUserTenants</a> operation to obtain the tenant ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>3***</p>
          */
         public Builder tid(Long tid) {
             this.putQueryParameter("Tid", tid);

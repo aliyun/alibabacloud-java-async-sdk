@@ -487,7 +487,20 @@ public class AddInstanceRequest extends Request {
         }
 
         /**
-         * DataLinkName.
+         * <p>The name of the database link for cross-database queries.</p>
+         * <blockquote>
+         * </blockquote>
+         * <ul>
+         * <li><p>This property must be specified when UseDsql is set to 1.</p>
+         * </li>
+         * <li><p>The name can contain only lowercase letters and underscores (_).</p>
+         * </li>
+         * <li><p>The name must be unique within a tenant.</p>
+         * </li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>dblink_test</p>
          */
         public Builder dataLinkName(String dataLinkName) {
             this.putQueryParameter("DataLinkName", dataLinkName);
@@ -496,6 +509,7 @@ public class AddInstanceRequest extends Request {
         }
 
         /**
+         * <p>The password of the database account.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -508,6 +522,7 @@ public class AddInstanceRequest extends Request {
         }
 
         /**
+         * <p>The name of the database account.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -520,7 +535,10 @@ public class AddInstanceRequest extends Request {
         }
 
         /**
-         * DbaId.
+         * <p>The ID of the user who assumes the database administrator (DBA) role. You can call the <a href="https://help.aliyun.com/document_detail/141938.html">ListUsers</a> or <a href="https://help.aliyun.com/document_detail/141567.html">GetInstance</a> operation to obtain the value of this parameter.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>27****</p>
          */
         public Builder dbaId(Long dbaId) {
             this.putQueryParameter("DbaId", dbaId);
@@ -529,7 +547,18 @@ public class AddInstanceRequest extends Request {
         }
 
         /**
-         * DdlOnline.
+         * <p>Specifies whether to enable Lock-free Schema Change. Valid values:</p>
+         * <ul>
+         * <li><strong>0</strong>: does not enable lock-free schema change.</li>
+         * <li><strong>1</strong>: uses the native online DDL operations of MySQL first.</li>
+         * <li><strong>2:</strong> uses lock-free schema change first.</li>
+         * </ul>
+         * <blockquote>
+         * <p>Supported databases include ApsaraDB RDS for MySQL, PolarDB for MySQL, ApsaraDB MyBase for MySQL, and third-party MySQL databases.</p>
+         * </blockquote>
+         * 
+         * <strong>example:</strong>
+         * <p>2</p>
          */
         public Builder ddlOnline(Integer ddlOnline) {
             this.putQueryParameter("DdlOnline", ddlOnline);
@@ -538,7 +567,13 @@ public class AddInstanceRequest extends Request {
         }
 
         /**
-         * EcsInstanceId.
+         * <p>The ID of the instance. If your instance is a database instance connected by using a database gateway, specify the gateway ID for this parameter.</p>
+         * <blockquote>
+         * <p>This parameter is required if InstanceSource is set to ECS_OWN or GATEWAY.</p>
+         * </blockquote>
+         * 
+         * <strong>example:</strong>
+         * <p>i-2zei9gs1t7h8l7ac****</p>
          */
         public Builder ecsInstanceId(String ecsInstanceId) {
             this.putQueryParameter("EcsInstanceId", ecsInstanceId);
@@ -547,7 +582,13 @@ public class AddInstanceRequest extends Request {
         }
 
         /**
-         * EcsRegion.
+         * <p>The region in which the ECS instance resides.</p>
+         * <blockquote>
+         * <p>This parameter is required if InstanceSource is set to RDS, ECS_OWN, GATEWAY, or VPC_IDC.</p>
+         * </blockquote>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-hangzhou</p>
          */
         public Builder ecsRegion(String ecsRegion) {
             this.putQueryParameter("EcsRegion", ecsRegion);
@@ -556,7 +597,14 @@ public class AddInstanceRequest extends Request {
         }
 
         /**
-         * EnableSellCommon.
+         * <p>Specifies whether to enable Security Collaboration for the database instance. Valid values:</p>
+         * <ul>
+         * <li>Y: enables Security Collaboration.</li>
+         * <li>N: disables Security Collaboration.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>Y</p>
          */
         public Builder enableSellCommon(String enableSellCommon) {
             this.putQueryParameter("EnableSellCommon", enableSellCommon);
@@ -565,7 +613,14 @@ public class AddInstanceRequest extends Request {
         }
 
         /**
-         * EnableSellSitd.
+         * <p>Specifies whether to enable sensitive data protection. Valid values:</p>
+         * <ul>
+         * <li>Y: enables the sensitive data protection feature for the database instance.</li>
+         * <li>N: disables the sensitive data protection feature for the database instance.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>Y</p>
          */
         public Builder enableSellSitd(String enableSellSitd) {
             this.putQueryParameter("EnableSellSitd", enableSellSitd);
@@ -574,7 +629,14 @@ public class AddInstanceRequest extends Request {
         }
 
         /**
-         * EnableSellStable.
+         * <p>Specifies whether to enable Stable Change for the database instance. Valid values:</p>
+         * <ul>
+         * <li>Y: Enables Stable Change.</li>
+         * <li>N: Disables Stable Change.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>NULL</p>
          */
         public Builder enableSellStable(String enableSellStable) {
             this.putQueryParameter("EnableSellStable", enableSellStable);
@@ -583,6 +645,11 @@ public class AddInstanceRequest extends Request {
         }
 
         /**
+         * <p>Specifies whether to enable the security hosting feature for the database instance. Valid values:</p>
+         * <ul>
+         * <li>Y: enables the security hosting feature for the database instance.</li>
+         * <li>N: disables the security hosting feature for the database instance.</li>
+         * </ul>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -595,6 +662,17 @@ public class AddInstanceRequest extends Request {
         }
 
         /**
+         * <p>The type of the environment to which the database instance belongs. Valid values:</p>
+         * <ul>
+         * <li><strong>product:</strong> the production environment.</li>
+         * <li><strong>dev</strong>: development environment.</li>
+         * <li><strong>pre</strong>: pre-release environment.</li>
+         * <li><strong>test</strong>: test environment.</li>
+         * <li><strong>sit</strong>: system integration testing (SIT) environment.</li>
+         * <li><strong>uat</strong>: user acceptance testing (UAT) environment.</li>
+         * <li><strong>pet</strong>: stress testing environment.</li>
+         * <li><strong>stag</strong>: staging environment.</li>
+         * </ul>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -607,6 +685,7 @@ public class AddInstanceRequest extends Request {
         }
 
         /**
+         * <p>The timeout period for exporting data from the database instance. Unit: seconds.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -619,6 +698,7 @@ public class AddInstanceRequest extends Request {
         }
 
         /**
+         * <p>The endpoint that is used to connect to the database.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -631,6 +711,7 @@ public class AddInstanceRequest extends Request {
         }
 
         /**
+         * <p>The alias of the database instance. Specify an alias that can help you identify the database instance in DMS.</p>
          * <p>This parameter is required.</p>
          */
         public Builder instanceAlias(String instanceAlias) {
@@ -640,6 +721,14 @@ public class AddInstanceRequest extends Request {
         }
 
         /**
+         * <p>The source of the database instance. Valid values:</p>
+         * <ul>
+         * <li><strong>PUBLIC_OWN</strong>: a self-managed database instance that is deployed on the Internet.</li>
+         * <li><strong>RDS</strong>: an ApsaraDB RDS instance.</li>
+         * <li><strong>ECS_OWN</strong>: a self-managed database instance that is deployed on an Elastic Compute Service (ECS) instance.</li>
+         * <li><strong>VPC_IDC</strong>: a self-managed database instance that is deployed in a data center connected over a virtual private cloud (VPC).</li>
+         * <li><strong>GATEWAY</strong>: a database instance connected by using a database gateway.</li>
+         * </ul>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -652,6 +741,7 @@ public class AddInstanceRequest extends Request {
         }
 
         /**
+         * <p>The type of the database instance. For more information about the valid values of this parameter, see <a href="https://help.aliyun.com/document_detail/198106.html">DbType parameter</a>.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -664,6 +754,11 @@ public class AddInstanceRequest extends Request {
         }
 
         /**
+         * <p>The network type. Valid values:</p>
+         * <ul>
+         * <li><strong>CLASSIC:</strong> the classic network.</li>
+         * <li><strong>VPC</strong></li>
+         * </ul>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -676,6 +771,7 @@ public class AddInstanceRequest extends Request {
         }
 
         /**
+         * <p>The port that is used to connect to the database.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -688,6 +784,7 @@ public class AddInstanceRequest extends Request {
         }
 
         /**
+         * <p>The timeout period for querying data from the database instance. Unit: seconds.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -700,7 +797,7 @@ public class AddInstanceRequest extends Request {
         }
 
         /**
-         * SafeRule.
+         * <p>The name of the security rule set for the database instance. This parameter is required if Security Collaboration is enabled. You can call the<a href="https://help.aliyun.com/document_detail/465940.html">ListStandardGroups</a> or <a href="https://help.aliyun.com/document_detail/465826.html">GetInstance</a> operation to obtain the name of the security rule set from GroupName.</p>
          */
         public Builder safeRule(String safeRule) {
             this.putQueryParameter("SafeRule", safeRule);
@@ -709,7 +806,13 @@ public class AddInstanceRequest extends Request {
         }
 
         /**
-         * Sid.
+         * <p>The system ID (SID) of the database instance.</p>
+         * <blockquote>
+         * <p>This parameter is required if InstanceType is set to ORACLE.</p>
+         * </blockquote>
+         * 
+         * <strong>example:</strong>
+         * <p>testSid</p>
          */
         public Builder sid(String sid) {
             this.putQueryParameter("Sid", sid);
@@ -718,7 +821,14 @@ public class AddInstanceRequest extends Request {
         }
 
         /**
-         * SkipTest.
+         * <p>Specifies whether to skip the connectivity test. Valid values:</p>
+         * <ul>
+         * <li><strong>true</strong></li>
+         * <li><strong>false</strong></li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>false</p>
          */
         public Builder skipTest(Boolean skipTest) {
             this.putQueryParameter("SkipTest", skipTest);
@@ -727,7 +837,10 @@ public class AddInstanceRequest extends Request {
         }
 
         /**
-         * TemplateId.
+         * <p>The ID of the classification and grading template. You can call the <a href="https://help.aliyun.com/document_detail/465947.html">ListClassificationTemplates</a> operation to query the template ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>31***</p>
          */
         public Builder templateId(Long templateId) {
             this.putQueryParameter("TemplateId", templateId);
@@ -736,7 +849,10 @@ public class AddInstanceRequest extends Request {
         }
 
         /**
-         * TemplateType.
+         * <p>The type of the classification and grading template. You can call the <a href="https://help.aliyun.com/document_detail/465947.html">ListClassificationTemplates</a> operation to query the template type.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>INNER</p>
          */
         public Builder templateType(String templateType) {
             this.putQueryParameter("TemplateType", templateType);
@@ -745,7 +861,13 @@ public class AddInstanceRequest extends Request {
         }
 
         /**
-         * Tid.
+         * <p>The ID of the tenant.</p>
+         * <blockquote>
+         * <p>You can move the pointer over the profile picture in the upper-right corner of the DMS console to obtain the tenant ID.</p>
+         * </blockquote>
+         * 
+         * <strong>example:</strong>
+         * <p>23****</p>
          */
         public Builder tid(Long tid) {
             this.putQueryParameter("Tid", tid);
@@ -754,7 +876,17 @@ public class AddInstanceRequest extends Request {
         }
 
         /**
-         * UseDsql.
+         * <p>Specifies whether to enable cross-database query for the database instance. Valid values:</p>
+         * <ul>
+         * <li><strong>0: does not enable cross-database query.</strong></li>
+         * <li><strong>1</strong>: enables cross-database query.</li>
+         * </ul>
+         * <blockquote>
+         * <p>Supported databases include MySQL, SQL Server, PostgreSQL, PolarDB for Oracle, and Redis.</p>
+         * </blockquote>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder useDsql(Integer useDsql) {
             this.putQueryParameter("UseDsql", useDsql);
@@ -763,7 +895,23 @@ public class AddInstanceRequest extends Request {
         }
 
         /**
-         * UseSsl.
+         * <p>Specifies whether to allow Data Management Service (DMS) to connect to the database instance by using SSL connections. Before you use SSL connections, make sure that the SSL encryption feature is enabled for the database instance. Valid values:</p>
+         * <ul>
+         * <li><strong>0</strong> (default): DMS automatically checks whether self-negotiation is enabled for the database instance. DMS automatically checks whether the SSL encryption feature is enabled for the database instance. If the SSL encryption feature is enabled, DMS connects to the database instance by using SSL connections. Otherwise, DMS connects to the database instance without encryption.</li>
+         * <li><strong>1</strong>: DMS connects to the database instance by using SSL connections. This value is invalid if the SSL encryption feature is disabled for the database instance.</li>
+         * <li><strong>-1</strong>: DMS does not connect to the database instance by using SSL connections.</li>
+         * </ul>
+         * <blockquote>
+         * </blockquote>
+         * <ul>
+         * <li><p>This parameter is available only for a MySQL or Redis database instance.</p>
+         * </li>
+         * <li><p>SSL encrypts network connections at the transport layer to improve the security and integrity of data in transmission. However, SSL increases the response time of network connections.</p>
+         * </li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>0</p>
          */
         public Builder useSsl(Integer useSsl) {
             this.putQueryParameter("UseSsl", useSsl);
@@ -772,7 +920,13 @@ public class AddInstanceRequest extends Request {
         }
 
         /**
-         * VpcId.
+         * <p>The ID of the instance connected over a VPC.</p>
+         * <blockquote>
+         * <p>This parameter is required if InstanceSource is set to VPC_IDC.</p>
+         * </blockquote>
+         * 
+         * <strong>example:</strong>
+         * <p>vpc-2zef4o1hu7ljd****</p>
          */
         public Builder vpcId(String vpcId) {
             this.putQueryParameter("VpcId", vpcId);

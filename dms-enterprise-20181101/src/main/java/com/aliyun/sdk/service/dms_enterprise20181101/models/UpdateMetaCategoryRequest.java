@@ -112,6 +112,7 @@ public class UpdateMetaCategoryRequest extends Request {
         }
 
         /**
+         * <p>The category ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -124,7 +125,7 @@ public class UpdateMetaCategoryRequest extends Request {
         }
 
         /**
-         * Name.
+         * <p>The updated name of the category.</p>
          */
         public Builder name(String name) {
             this.putQueryParameter("Name", name);
@@ -133,7 +134,10 @@ public class UpdateMetaCategoryRequest extends Request {
         }
 
         /**
-         * Tid.
+         * <p>The ID of the tenant. You can call the <a href="https://help.aliyun.com/document_detail/198073.html">GetUserActiveTenant</a> or <a href="https://help.aliyun.com/document_detail/198074.html">ListUserTenants</a> operation to obtain the tenant ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>23****</p>
          */
         public Builder tid(Long tid) {
             this.putQueryParameter("Tid", tid);

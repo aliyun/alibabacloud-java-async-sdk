@@ -127,6 +127,7 @@ public class ListMetaCategoryRequest extends Request {
         }
 
         /**
+         * <p>The number of the page to return. Pages start from page 1.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -139,6 +140,7 @@ public class ListMetaCategoryRequest extends Request {
         }
 
         /**
+         * <p>The number of entries to return on each page.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -151,7 +153,10 @@ public class ListMetaCategoryRequest extends Request {
         }
 
         /**
-         * ParentCategoryId.
+         * <p>The parent category ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>30000322682</p>
          */
         public Builder parentCategoryId(Long parentCategoryId) {
             this.putQueryParameter("ParentCategoryId", parentCategoryId);
@@ -160,7 +165,10 @@ public class ListMetaCategoryRequest extends Request {
         }
 
         /**
-         * Tid.
+         * <p>The tenant ID. You can call the <a href="https://help.aliyun.com/document_detail/198073.html">GetUserActiveTenant</a> or <a href="https://help.aliyun.com/document_detail/198074.html">ListUserTenants</a> operation to query the tenant ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>3***</p>
          */
         public Builder tid(Long tid) {
             this.putQueryParameter("Tid", tid);

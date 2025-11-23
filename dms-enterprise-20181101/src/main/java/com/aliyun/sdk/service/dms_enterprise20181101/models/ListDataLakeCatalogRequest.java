@@ -126,6 +126,7 @@ public class ListDataLakeCatalogRequest extends Request {
         }
 
         /**
+         * <p>The region where the data lake resides.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -138,7 +139,10 @@ public class ListDataLakeCatalogRequest extends Request {
         }
 
         /**
-         * SearchKey.
+         * <p>The keyword that is used to search for catalogs.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>hive</p>
          */
         public Builder searchKey(String searchKey) {
             this.putQueryParameter("SearchKey", searchKey);
@@ -147,7 +151,10 @@ public class ListDataLakeCatalogRequest extends Request {
         }
 
         /**
-         * Tid.
+         * <p>The ID of the tenant. You can call the <a href="https://help.aliyun.com/document_detail/198073.html">GetUserActiveTenant</a> or <a href="https://help.aliyun.com/document_detail/198074.html">ListUserTenants</a> operation to query the ID of the tenant.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>3</p>
          */
         public Builder tid(Long tid) {
             this.putQueryParameter("Tid", tid);
@@ -156,7 +163,10 @@ public class ListDataLakeCatalogRequest extends Request {
         }
 
         /**
-         * WorkspaceId.
+         * <p>The workspace ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>12****</p>
          */
         public Builder workspaceId(Long workspaceId) {
             this.putQueryParameter("WorkspaceId", workspaceId);

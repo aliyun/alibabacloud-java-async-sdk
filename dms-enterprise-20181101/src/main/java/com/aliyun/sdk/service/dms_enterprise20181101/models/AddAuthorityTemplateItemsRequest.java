@@ -112,6 +112,7 @@ public class AddAuthorityTemplateItemsRequest extends Request {
         }
 
         /**
+         * <p>The resources that you want to add to the permission template.</p>
          * <p>This parameter is required.</p>
          */
         public Builder items(java.util.List<Items> items) {
@@ -122,6 +123,7 @@ public class AddAuthorityTemplateItemsRequest extends Request {
         }
 
         /**
+         * <p>The ID of the permission template. You can call the <a href="https://help.aliyun.com/document_detail/600705.html">CreateAuthorityTemplate</a> operation to obtain the value of this parameter.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -134,7 +136,13 @@ public class AddAuthorityTemplateItemsRequest extends Request {
         }
 
         /**
-         * Tid.
+         * <p>The ID of the tenant.</p>
+         * <blockquote>
+         * <p>To view the tenant ID, go to the Data Management (DMS) console and move the pointer over the profile picture in the upper-right corner. For more information, see the <a href="https://help.aliyun.com/document_detail/181330.html">View information about the current tenant</a> section of the &quot;Manage DMS tenants&quot; topic.</p>
+         * </blockquote>
+         * 
+         * <strong>example:</strong>
+         * <p>3***</p>
          */
         public Builder tid(Long tid) {
             this.putQueryParameter("Tid", tid);
@@ -242,7 +250,17 @@ public class AddAuthorityTemplateItemsRequest extends Request {
             } 
 
             /**
-             * DbId.
+             * <p>The database ID. Databases are divided into physical databases and logical databases.</p>
+             * <ul>
+             * <li>To query the ID of a physical database, call the <a href="https://help.aliyun.com/document_detail/141873.html">ListDatabases</a> or <a href="https://help.aliyun.com/document_detail/141876.html">SearchDatabase</a> operation.</li>
+             * <li>To query the ID of a logical database, call the <a href="https://help.aliyun.com/document_detail/141874.html">ListLogicDatabases</a> or <a href="https://help.aliyun.com/document_detail/141876.html">SearchDatabase</a> operation.</li>
+             * </ul>
+             * <blockquote>
+             * <p>This parameter is required if the ResourceType parameter is set to META_DB, LOGIC_DB, META_TABLE, or LOGIC_TABLE.</p>
+             * </blockquote>
+             * 
+             * <strong>example:</strong>
+             * <p>2478****</p>
              */
             public Builder dbId(Integer dbId) {
                 this.dbId = dbId;
@@ -250,7 +268,13 @@ public class AddAuthorityTemplateItemsRequest extends Request {
             }
 
             /**
-             * InstanceId.
+             * <p>The instance ID. You can call the <a href="https://help.aliyun.com/document_detail/141936.html">ListInstances</a> or <a href="https://help.aliyun.com/document_detail/141567.html">GetInstance</a> operation to query the instance ID.</p>
+             * <blockquote>
+             * <p>This parameter is required if the ResourceType parameter is set to INSTANCE.</p>
+             * </blockquote>
+             * 
+             * <strong>example:</strong>
+             * <p>237****</p>
              */
             public Builder instanceId(Integer instanceId) {
                 this.instanceId = instanceId;
@@ -258,7 +282,7 @@ public class AddAuthorityTemplateItemsRequest extends Request {
             }
 
             /**
-             * PermissionTypes.
+             * <p>The permission types.</p>
              */
             public Builder permissionTypes(java.util.List<String> permissionTypes) {
                 this.permissionTypes = permissionTypes;
@@ -266,6 +290,14 @@ public class AddAuthorityTemplateItemsRequest extends Request {
             }
 
             /**
+             * <p>The type of the resource from which you want to remove tags. Valid values:</p>
+             * <ul>
+             * <li><strong>INSTANCE</strong>: instance</li>
+             * <li><strong>LOGIC_DB</strong>: logical database</li>
+             * <li><strong>META_DB</strong>: physical database</li>
+             * <li><strong>LOGIC_TABLE</strong>: logical table</li>
+             * <li><strong>LOGIC_TABLE</strong>: physical table</li>
+             * </ul>
              * <p>This parameter is required.</p>
              * 
              * <strong>example:</strong>
@@ -277,7 +309,13 @@ public class AddAuthorityTemplateItemsRequest extends Request {
             }
 
             /**
-             * TableName.
+             * <p>The table name. You can call the <a href="https://help.aliyun.com/document_detail/141878.html">ListTables</a> operation to query the name of the table.</p>
+             * <blockquote>
+             * <p>This parameter is required if the ResourceType parameter is set to META_TABLE or LOGIC_TABLE.</p>
+             * </blockquote>
+             * 
+             * <strong>example:</strong>
+             * <p>test_table</p>
              */
             public Builder tableName(String tableName) {
                 this.tableName = tableName;

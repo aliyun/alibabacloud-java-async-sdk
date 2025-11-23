@@ -140,7 +140,10 @@ public class ListAbacAuthorizationsRequest extends Request {
         }
 
         /**
-         * PageNumber.
+         * <p>The page number.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder pageNumber(Long pageNumber) {
             this.putQueryParameter("PageNumber", pageNumber);
@@ -149,7 +152,10 @@ public class ListAbacAuthorizationsRequest extends Request {
         }
 
         /**
-         * PageSize.
+         * <p>The number of entries on each page.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>20</p>
          */
         public Builder pageSize(Long pageSize) {
             this.putQueryParameter("PageSize", pageSize);
@@ -158,7 +164,10 @@ public class ListAbacAuthorizationsRequest extends Request {
         }
 
         /**
-         * PolicyId.
+         * <p>The ID of the policy.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>12****</p>
          */
         public Builder policyId(String policyId) {
             this.putQueryParameter("PolicyId", policyId);
@@ -167,7 +176,15 @@ public class ListAbacAuthorizationsRequest extends Request {
         }
 
         /**
-         * PolicySource.
+         * <p>The type of the policy. The value can be custom or system.</p>
+         * <p>Valid values:</p>
+         * <ul>
+         * <li>USER_DEFINE</li>
+         * <li>SYSTEM</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>USER_DEFINE</p>
          */
         public Builder policySource(String policySource) {
             this.putQueryParameter("PolicySource", policySource);
@@ -176,7 +193,13 @@ public class ListAbacAuthorizationsRequest extends Request {
         }
 
         /**
-         * Tid.
+         * <p>The ID of the tenant.</p>
+         * <blockquote>
+         * <p>To view the tenant ID, go to the Data Management (DMS) console and move the pointer over the profile picture in the upper-right corner. For more information, see the <a href="https://help.aliyun.com/document_detail/181330.html">View information about the current tenant</a> section of the &quot;Manage DMS tenants&quot; topic.</p>
+         * </blockquote>
+         * 
+         * <strong>example:</strong>
+         * <p>3***</p>
          */
         public Builder tid(Long tid) {
             this.putQueryParameter("Tid", tid);

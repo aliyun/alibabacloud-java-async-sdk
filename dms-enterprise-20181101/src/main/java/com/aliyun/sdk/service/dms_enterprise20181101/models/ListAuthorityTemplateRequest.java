@@ -125,7 +125,10 @@ public class ListAuthorityTemplateRequest extends Request {
         }
 
         /**
-         * PageNumber.
+         * <p>The page number.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder pageNumber(Integer pageNumber) {
             this.putQueryParameter("PageNumber", pageNumber);
@@ -134,7 +137,15 @@ public class ListAuthorityTemplateRequest extends Request {
         }
 
         /**
-         * PageSize.
+         * <p>The number of entries per page. Valid values:</p>
+         * <ul>
+         * <li>5</li>
+         * <li>10</li>
+         * <li>20</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>10</p>
          */
         public Builder pageSize(Integer pageSize) {
             this.putQueryParameter("PageSize", pageSize);
@@ -143,7 +154,7 @@ public class ListAuthorityTemplateRequest extends Request {
         }
 
         /**
-         * SearchKey.
+         * <p>The keyword that is used to search for permission templates.</p>
          */
         public Builder searchKey(String searchKey) {
             this.putQueryParameter("SearchKey", searchKey);
@@ -152,7 +163,10 @@ public class ListAuthorityTemplateRequest extends Request {
         }
 
         /**
-         * Tid.
+         * <p>The tenant ID. You can call the <a href="https://help.aliyun.com/document_detail/198073.html">GetUserActiveTenant</a> or <a href="https://help.aliyun.com/document_detail/198074.html">ListUserTenants</a> operation to obtain the tenant ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>3***</p>
          */
         public Builder tid(Long tid) {
             this.putQueryParameter("Tid", tid);

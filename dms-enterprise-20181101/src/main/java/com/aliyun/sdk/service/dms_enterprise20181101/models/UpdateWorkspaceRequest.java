@@ -102,7 +102,10 @@ public class UpdateWorkspaceRequest extends Request {
         } 
 
         /**
-         * ClientToken.
+         * <p>The client token that is used to ensure the idempotence of the request.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>token-xxx</p>
          */
         public Builder clientToken(String clientToken) {
             this.putBodyParameter("ClientToken", clientToken);
@@ -111,7 +114,10 @@ public class UpdateWorkspaceRequest extends Request {
         }
 
         /**
-         * Description.
+         * <p>The new description of the workspace.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>test</p>
          */
         public Builder description(String description) {
             this.putQueryParameter("Description", description);
@@ -120,6 +126,7 @@ public class UpdateWorkspaceRequest extends Request {
         }
 
         /**
+         * <p>The workspace ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -132,7 +139,10 @@ public class UpdateWorkspaceRequest extends Request {
         }
 
         /**
-         * WorkspaceName.
+         * <p>The new name of the workspace.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>workspace_xxx</p>
          */
         public Builder workspaceName(String workspaceName) {
             this.putQueryParameter("WorkspaceName", workspaceName);

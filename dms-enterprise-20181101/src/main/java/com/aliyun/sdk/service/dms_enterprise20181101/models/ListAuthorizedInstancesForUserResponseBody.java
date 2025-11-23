@@ -67,7 +67,7 @@ public class ListAuthorizedInstancesForUserResponseBody extends TeaModel {
         } 
 
         /**
-         * Instances.
+         * <p>The list of instances on which the user has permissions.</p>
          */
         public Builder instances(java.util.List<Instances> instances) {
             this.instances = instances;
@@ -75,7 +75,10 @@ public class ListAuthorizedInstancesForUserResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * <p>The request ID. You can use the ID to query logs and troubleshoot issues.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>B7DB89CC-017D-5503-8953-38FFE241A618</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -167,7 +170,10 @@ public class ListAuthorizedInstancesForUserResponseBody extends TeaModel {
             } 
 
             /**
-             * DsType.
+             * <p>The type of object on which the operation is performed.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>DATABASE</p>
              */
             public Builder dsType(String dsType) {
                 this.dsType = dsType;
@@ -175,7 +181,10 @@ public class ListAuthorizedInstancesForUserResponseBody extends TeaModel {
             }
 
             /**
-             * ExpireDate.
+             * <p>The time when the permission expires.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2024-12-06 10:00:00</p>
              */
             public Builder expireDate(String expireDate) {
                 this.expireDate = expireDate;
@@ -183,7 +192,7 @@ public class ListAuthorizedInstancesForUserResponseBody extends TeaModel {
             }
 
             /**
-             * Message.
+             * <p>If the permission source is a permission policy, the value of this parameter includes the policy name and the operations that are allowed for the user.</p>
              */
             public Builder message(String message) {
                 this.message = message;
@@ -191,7 +200,15 @@ public class ListAuthorizedInstancesForUserResponseBody extends TeaModel {
             }
 
             /**
-             * PermType.
+             * <p>The type of the permission. Valid values:</p>
+             * <ul>
+             * <li><strong>QUERY</strong>: the query permission</li>
+             * <li><strong>EXPORT</strong>: the data export permission</li>
+             * <li><strong>CORRECT</strong>: the data change permission</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>CORRECT</p>
              */
             public Builder permType(String permType) {
                 this.permType = permType;
@@ -349,7 +366,10 @@ public class ListAuthorizedInstancesForUserResponseBody extends TeaModel {
             } 
 
             /**
-             * DbType.
+             * <p>The database engine that the instance runs.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>MySQL</p>
              */
             public Builder dbType(String dbType) {
                 this.dbType = dbType;
@@ -357,7 +377,10 @@ public class ListAuthorizedInstancesForUserResponseBody extends TeaModel {
             }
 
             /**
-             * EnvType.
+             * <p>The type of the environment to which the database instance belongs.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>product</p>
              */
             public Builder envType(String envType) {
                 this.envType = envType;
@@ -365,7 +388,10 @@ public class ListAuthorizedInstancesForUserResponseBody extends TeaModel {
             }
 
             /**
-             * Host.
+             * <p>The endpoint that is used to connect to the instance.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>rm-2zex9lrc0gz0****.mysql.rds.aliyuncs.com</p>
              */
             public Builder host(String host) {
                 this.host = host;
@@ -373,7 +399,10 @@ public class ListAuthorizedInstancesForUserResponseBody extends TeaModel {
             }
 
             /**
-             * InstanceAlias.
+             * <p>The alias of the instance.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>DMS_TEST</p>
              */
             public Builder instanceAlias(String instanceAlias) {
                 this.instanceAlias = instanceAlias;
@@ -381,7 +410,10 @@ public class ListAuthorizedInstancesForUserResponseBody extends TeaModel {
             }
 
             /**
-             * InstanceId.
+             * <p>The ID of the instance.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>21****</p>
              */
             public Builder instanceId(String instanceId) {
                 this.instanceId = instanceId;
@@ -389,7 +421,7 @@ public class ListAuthorizedInstancesForUserResponseBody extends TeaModel {
             }
 
             /**
-             * PermissionDetail.
+             * <p>The details of permissions. The format of the permission details varies with the permission source. For example, if the permission source is a normal permission, the following parameters are returned.</p>
              */
             public Builder permissionDetail(PermissionDetail permissionDetail) {
                 this.permissionDetail = permissionDetail;
@@ -397,7 +429,10 @@ public class ListAuthorizedInstancesForUserResponseBody extends TeaModel {
             }
 
             /**
-             * Port.
+             * <p>The port number that is used to connect to the instance.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>3306</p>
              */
             public Builder port(String port) {
                 this.port = port;
@@ -405,7 +440,10 @@ public class ListAuthorizedInstancesForUserResponseBody extends TeaModel {
             }
 
             /**
-             * UserId.
+             * <p>The user IDs.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>51****</p>
              */
             public Builder userId(String userId) {
                 this.userId = userId;
@@ -413,7 +451,10 @@ public class ListAuthorizedInstancesForUserResponseBody extends TeaModel {
             }
 
             /**
-             * UserName.
+             * <p>The user name.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>user_test</p>
              */
             public Builder userName(String userName) {
                 this.userName = userName;

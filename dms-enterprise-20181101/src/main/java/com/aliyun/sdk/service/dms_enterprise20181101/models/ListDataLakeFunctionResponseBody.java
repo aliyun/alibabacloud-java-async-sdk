@@ -132,7 +132,10 @@ public class ListDataLakeFunctionResponseBody extends TeaModel {
         } 
 
         /**
-         * ErrorCode.
+         * <p>The error code that is returned if the request failed.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>UnknownError</p>
          */
         public Builder errorCode(String errorCode) {
             this.errorCode = errorCode;
@@ -140,7 +143,10 @@ public class ListDataLakeFunctionResponseBody extends TeaModel {
         }
 
         /**
-         * ErrorMessage.
+         * <p>The error message that is returned if the request failed.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>UnknownError</p>
          */
         public Builder errorMessage(String errorMessage) {
             this.errorMessage = errorMessage;
@@ -148,7 +154,7 @@ public class ListDataLakeFunctionResponseBody extends TeaModel {
         }
 
         /**
-         * FunctionList.
+         * <p>The information about functions.</p>
          */
         public Builder functionList(java.util.List<DLFunction> functionList) {
             this.functionList = functionList;
@@ -156,7 +162,10 @@ public class ListDataLakeFunctionResponseBody extends TeaModel {
         }
 
         /**
-         * MaxResults.
+         * <p>The number of records per page.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>20</p>
          */
         public Builder maxResults(Integer maxResults) {
             this.maxResults = maxResults;
@@ -164,7 +173,10 @@ public class ListDataLakeFunctionResponseBody extends TeaModel {
         }
 
         /**
-         * NextToken.
+         * <p>The token that determines the start point of the next query.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>f056501ada12c1cc</p>
          */
         public Builder nextToken(String nextToken) {
             this.nextToken = nextToken;
@@ -172,7 +184,10 @@ public class ListDataLakeFunctionResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * <p>The request ID. You can use the ID to query logs and troubleshoot issues.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>7FAD400F-7A5C-4193-8F9A-39D86C4F0231</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -180,7 +195,14 @@ public class ListDataLakeFunctionResponseBody extends TeaModel {
         }
 
         /**
-         * Success.
+         * <p>Indicates whether the request was successful. Valid values:</p>
+         * <ul>
+         * <li><strong>true</strong>: The request was successful.</li>
+         * <li><strong>false</strong>: The request failed.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder success(Boolean success) {
             this.success = success;

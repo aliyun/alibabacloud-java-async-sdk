@@ -106,7 +106,7 @@ public class OptimizeSqlByMetaAgentResponseBody extends TeaModel {
         } 
 
         /**
-         * Data.
+         * <p>The data returned.</p>
          */
         public Builder data(Data data) {
             this.data = data;
@@ -114,7 +114,10 @@ public class OptimizeSqlByMetaAgentResponseBody extends TeaModel {
         }
 
         /**
-         * ErrorCode.
+         * <p>The error code returned if the request failed.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>UnknownError</p>
          */
         public Builder errorCode(String errorCode) {
             this.errorCode = errorCode;
@@ -122,7 +125,10 @@ public class OptimizeSqlByMetaAgentResponseBody extends TeaModel {
         }
 
         /**
-         * ErrorMessage.
+         * <p>The error message that is returned if the request failed.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>UnknownError</p>
          */
         public Builder errorMessage(String errorMessage) {
             this.errorMessage = errorMessage;
@@ -141,7 +147,14 @@ public class OptimizeSqlByMetaAgentResponseBody extends TeaModel {
         }
 
         /**
-         * Success.
+         * <p>Indicates whether the request was successful. Valid values:</p>
+         * <ul>
+         * <li><strong>true</strong>: The request was successful.</li>
+         * <li><strong>false</strong>: The request failed.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder success(Boolean success) {
             this.success = success;
@@ -207,7 +220,10 @@ public class OptimizeSqlByMetaAgentResponseBody extends TeaModel {
             } 
 
             /**
-             * Content.
+             * <p>The answer.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>SQL优化结果...</p>
              */
             public Builder content(String content) {
                 this.content = content;
@@ -215,7 +231,10 @@ public class OptimizeSqlByMetaAgentResponseBody extends TeaModel {
             }
 
             /**
-             * SessionId.
+             * <p>The session ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>f63a6eed-0e3c-4564-8533-b1295db8d6ff</p>
              */
             public Builder sessionId(String sessionId) {
                 this.sessionId = sessionId;

@@ -140,7 +140,26 @@ public class UpdateAbacPolicyRequest extends Request {
         }
 
         /**
-         * AbacPolicyContent.
+         * <p>The content of the policy.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>{
+         *   &quot;Statement&quot;: [
+         *     {
+         *       &quot;Action&quot;: &quot;<em>&quot;,
+         *       &quot;Effect&quot;: &quot;Allow&quot;,
+         *       &quot;Resource&quot;: &quot;</em>&quot;,
+         *       &quot;Condition&quot;: {
+         *         &quot;StringEqualsIgnoreCase&quot;: {
+         *           &quot;dms:DbType&quot;: [
+         *             &quot;redis&quot;
+         *           ]
+         *         }
+         *       }
+         *     }
+         *   ],
+         *   &quot;Version&quot;: &quot;1&quot;
+         * }</p>
          */
         public Builder abacPolicyContent(String abacPolicyContent) {
             this.putQueryParameter("AbacPolicyContent", abacPolicyContent);
@@ -149,7 +168,10 @@ public class UpdateAbacPolicyRequest extends Request {
         }
 
         /**
-         * AbacPolicyDesc.
+         * <p>The description of the policy.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>test</p>
          */
         public Builder abacPolicyDesc(String abacPolicyDesc) {
             this.putQueryParameter("AbacPolicyDesc", abacPolicyDesc);
@@ -158,6 +180,7 @@ public class UpdateAbacPolicyRequest extends Request {
         }
 
         /**
+         * <p>The ID of the policy.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -170,7 +193,10 @@ public class UpdateAbacPolicyRequest extends Request {
         }
 
         /**
-         * AbacPolicyName.
+         * <p>The name of the permission policy.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>policy_test</p>
          */
         public Builder abacPolicyName(String abacPolicyName) {
             this.putQueryParameter("AbacPolicyName", abacPolicyName);
@@ -179,7 +205,13 @@ public class UpdateAbacPolicyRequest extends Request {
         }
 
         /**
-         * Tid.
+         * <p>The ID of the tenant.</p>
+         * <blockquote>
+         * <p>To view the ID of the tenant, go to the DMS console and move the pointer over the profile picture in the upper-right corner. For more information, see the <a href="https://help.aliyun.com/document_detail/181330.html">View information about the current tenant</a> section of the &quot;Manage DMS tenants&quot; topic.</p>
+         * </blockquote>
+         * 
+         * <strong>example:</strong>
+         * <p>3***</p>
          */
         public Builder tid(Long tid) {
             this.putQueryParameter("Tid", tid);

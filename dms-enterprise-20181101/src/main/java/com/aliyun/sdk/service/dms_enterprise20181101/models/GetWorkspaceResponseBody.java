@@ -93,7 +93,7 @@ public class GetWorkspaceResponseBody extends TeaModel {
         } 
 
         /**
-         * Data.
+         * <p>The data returned.</p>
          */
         public Builder data(Data data) {
             this.data = data;
@@ -101,7 +101,10 @@ public class GetWorkspaceResponseBody extends TeaModel {
         }
 
         /**
-         * Message.
+         * <p>The error message that is returned if the request failed.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>UnknownError</p>
          */
         public Builder message(String message) {
             this.message = message;
@@ -109,7 +112,10 @@ public class GetWorkspaceResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * <p>The request ID. You can use the request ID to locate logs and troubleshoot issues.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>FE8EE2F1-4880-46BC-A704-5CF63EAF****</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -117,7 +123,14 @@ public class GetWorkspaceResponseBody extends TeaModel {
         }
 
         /**
-         * Success.
+         * <p>Indicates whether the request was successful. Valid values:</p>
+         * <ul>
+         * <li><strong>true</strong>: The request was successful.</li>
+         * <li><strong>false</strong>: The request failed.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder success(Boolean success) {
             this.success = success;
@@ -261,7 +274,10 @@ public class GetWorkspaceResponseBody extends TeaModel {
             } 
 
             /**
-             * Description.
+             * <p>The description of the workspace.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Test</p>
              */
             public Builder description(String description) {
                 this.description = description;
@@ -269,7 +285,10 @@ public class GetWorkspaceResponseBody extends TeaModel {
             }
 
             /**
-             * OwnerId.
+             * <p>The owner ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>12345****</p>
              */
             public Builder ownerId(String ownerId) {
                 this.ownerId = ownerId;
@@ -277,7 +296,10 @@ public class GetWorkspaceResponseBody extends TeaModel {
             }
 
             /**
-             * RegionId.
+             * <p>The ID of the region to which the workspace belongs.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>cn-hangzhou</p>
              */
             public Builder regionId(String regionId) {
                 this.regionId = regionId;
@@ -285,7 +307,10 @@ public class GetWorkspaceResponseBody extends TeaModel {
             }
 
             /**
-             * ServiceAccountId.
+             * <p>The ID of the service account.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>12345****</p>
              */
             public Builder serviceAccountId(String serviceAccountId) {
                 this.serviceAccountId = serviceAccountId;
@@ -293,7 +318,13 @@ public class GetWorkspaceResponseBody extends TeaModel {
             }
 
             /**
-             * Tid.
+             * <p>The ID of the tenant.</p>
+             * <blockquote>
+             * <p>To view the tenant ID, go to the Data Management (DMS) console and move the pointer over the profile picture in the upper-right corner. For more information, see the <a href="https://help.aliyun.com/document_detail/181330.html">View information about the current tenant</a> section of the &quot;Manage DMS tenants&quot; topic.</p>
+             * </blockquote>
+             * 
+             * <strong>example:</strong>
+             * <p>3322****</p>
              */
             public Builder tid(Long tid) {
                 this.tid = tid;
@@ -301,7 +332,10 @@ public class GetWorkspaceResponseBody extends TeaModel {
             }
 
             /**
-             * VpcId.
+             * <p>The VPC ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>vpc-xxxx</p>
              */
             public Builder vpcId(String vpcId) {
                 this.vpcId = vpcId;
@@ -309,7 +343,10 @@ public class GetWorkspaceResponseBody extends TeaModel {
             }
 
             /**
-             * WorkspaceId.
+             * <p>The workspace ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>863020290155****</p>
              */
             public Builder workspaceId(Long workspaceId) {
                 this.workspaceId = workspaceId;
@@ -317,7 +354,10 @@ public class GetWorkspaceResponseBody extends TeaModel {
             }
 
             /**
-             * WorkspaceName.
+             * <p>The name of the workspace.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>workspace_xxx</p>
              */
             public Builder workspaceName(String workspaceName) {
                 this.workspaceName = workspaceName;

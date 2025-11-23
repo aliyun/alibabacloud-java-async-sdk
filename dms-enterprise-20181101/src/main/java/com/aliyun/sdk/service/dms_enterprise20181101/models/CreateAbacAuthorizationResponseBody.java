@@ -106,7 +106,10 @@ public class CreateAbacAuthorizationResponseBody extends TeaModel {
         } 
 
         /**
-         * ErrorCode.
+         * <p>The error code.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>UnknownError</p>
          */
         public Builder errorCode(String errorCode) {
             this.errorCode = errorCode;
@@ -114,7 +117,10 @@ public class CreateAbacAuthorizationResponseBody extends TeaModel {
         }
 
         /**
-         * ErrorMessage.
+         * <p>The error message.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>UnknownError</p>
          */
         public Builder errorMessage(String errorMessage) {
             this.errorMessage = errorMessage;
@@ -122,7 +128,10 @@ public class CreateAbacAuthorizationResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * <p>The request ID. You can use the request ID to query logs and troubleshoot issues.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>0C1CB646-1DE4-4AD0-B4A4-7D47DD52E931</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -130,7 +139,10 @@ public class CreateAbacAuthorizationResponseBody extends TeaModel {
         }
 
         /**
-         * Result.
+         * <p>Indicates whether the policy is attached.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder result(String result) {
             this.result = result;
@@ -138,7 +150,14 @@ public class CreateAbacAuthorizationResponseBody extends TeaModel {
         }
 
         /**
-         * Success.
+         * <p>Indicates whether the request was successful. Valid values:</p>
+         * <ul>
+         * <li><strong>true</strong>: The request succeeded.</li>
+         * <li><strong>false</strong>: The request failed.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder success(Boolean success) {
             this.success = success;

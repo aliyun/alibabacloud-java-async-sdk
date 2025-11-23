@@ -126,6 +126,7 @@ public class ListTableColumnsRequest extends Request {
         }
 
         /**
+         * <p>The ID of a physical database: You can call the <a href="https://help.aliyun.com/document_detail/141873.html">ListDatabases</a> or <a href="https://help.aliyun.com/document_detail/141876.html">SearchDatabase</a> operation to obtain the physical database ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -138,6 +139,10 @@ public class ListTableColumnsRequest extends Request {
         }
 
         /**
+         * <p>The table name.</p>
+         * <blockquote>
+         * <p> You can also call the <a href="https://help.aliyun.com/document_detail/141878.html">ListTables</a> operation to query the table name.</p>
+         * </blockquote>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -150,7 +155,10 @@ public class ListTableColumnsRequest extends Request {
         }
 
         /**
-         * TableSchemaName.
+         * <p>The schema name of the table, which is required only for SQL Server instances.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>dbo</p>
          */
         public Builder tableSchemaName(String tableSchemaName) {
             this.putQueryParameter("TableSchemaName", tableSchemaName);
@@ -159,7 +167,10 @@ public class ListTableColumnsRequest extends Request {
         }
 
         /**
-         * Tid.
+         * <p>The tenant ID. You can call the <a href="https://help.aliyun.com/document_detail/198073.html">GetUserActiveTenant</a> or <a href="https://help.aliyun.com/document_detail/198074.html">ListUserTenants</a> operation to obtain the tenant ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>3***</p>
          */
         public Builder tid(Long tid) {
             this.putQueryParameter("Tid", tid);

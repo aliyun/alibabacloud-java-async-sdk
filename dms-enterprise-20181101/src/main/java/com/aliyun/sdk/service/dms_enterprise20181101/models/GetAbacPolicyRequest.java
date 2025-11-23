@@ -111,7 +111,10 @@ public class GetAbacPolicyRequest extends Request {
         }
 
         /**
-         * AbacPolicyId.
+         * <p>The ID of the policy.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>12****</p>
          */
         public Builder abacPolicyId(Long abacPolicyId) {
             this.putQueryParameter("AbacPolicyId", abacPolicyId);
@@ -120,7 +123,10 @@ public class GetAbacPolicyRequest extends Request {
         }
 
         /**
-         * AbacPolicyName.
+         * <p>The name of the policy.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>policy_test</p>
          */
         public Builder abacPolicyName(String abacPolicyName) {
             this.putQueryParameter("AbacPolicyName", abacPolicyName);
@@ -129,7 +135,13 @@ public class GetAbacPolicyRequest extends Request {
         }
 
         /**
-         * Tid.
+         * <p>The ID of the tenant.</p>
+         * <blockquote>
+         * <p>To view the ID of the tenant, go to the Data Management (DMS) console and move the pointer over the profile picture in the upper-right corner. For more information, see the <a href="https://help.aliyun.com/document_detail/181330.html">View information about the current tenant</a> section of the &quot;Manage DMS tenants&quot; topic.</p>
+         * </blockquote>
+         * 
+         * <strong>example:</strong>
+         * <p>3***</p>
          */
         public Builder tid(Long tid) {
             this.putQueryParameter("Tid", tid);

@@ -185,6 +185,7 @@ public class ListDataLakeTablebaseInfoRequest extends Request {
         }
 
         /**
+         * <p>The name of the data catalog to query.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -197,6 +198,7 @@ public class ListDataLakeTablebaseInfoRequest extends Request {
         }
 
         /**
+         * <p>The region where the data lake resides.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -209,6 +211,7 @@ public class ListDataLakeTablebaseInfoRequest extends Request {
         }
 
         /**
+         * <p>The name of the database to which the table belongs.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -221,7 +224,10 @@ public class ListDataLakeTablebaseInfoRequest extends Request {
         }
 
         /**
-         * Page.
+         * <p>The page number.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder page(Integer page) {
             this.putQueryParameter("Page", page);
@@ -230,7 +236,10 @@ public class ListDataLakeTablebaseInfoRequest extends Request {
         }
 
         /**
-         * Rows.
+         * <p>The number of entries per page.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10</p>
          */
         public Builder rows(Integer rows) {
             this.putQueryParameter("Rows", rows);
@@ -239,7 +248,10 @@ public class ListDataLakeTablebaseInfoRequest extends Request {
         }
 
         /**
-         * SearchKey.
+         * <p>The keyword that is used to search for tables.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>test</p>
          */
         public Builder searchKey(String searchKey) {
             this.putQueryParameter("SearchKey", searchKey);
@@ -248,7 +260,10 @@ public class ListDataLakeTablebaseInfoRequest extends Request {
         }
 
         /**
-         * Tid.
+         * <p>The tenant ID. You can call the <a href="https://help.aliyun.com/document_detail/198073.html">GetUserActiveTenant</a> operation to query the tenant ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>3***</p>
          */
         public Builder tid(Long tid) {
             this.putQueryParameter("Tid", tid);
@@ -257,7 +272,10 @@ public class ListDataLakeTablebaseInfoRequest extends Request {
         }
 
         /**
-         * WorkspaceId.
+         * <p>The workspace ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>12****</p>
          */
         public Builder workspaceId(Long workspaceId) {
             this.putQueryParameter("WorkspaceId", workspaceId);

@@ -97,6 +97,7 @@ public class DeleteAuthorityTemplateRequest extends Request {
         }
 
         /**
+         * <p>The ID of the permission template.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -109,7 +110,10 @@ public class DeleteAuthorityTemplateRequest extends Request {
         }
 
         /**
-         * Tid.
+         * <p>The tenant ID. You can call the <a href="https://help.aliyun.com/document_detail/198073.html">GetUserActiveTenant</a> or <a href="https://help.aliyun.com/document_detail/198074.html">ListUserTenants</a> operation to obtain the tenant ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>3***</p>
          */
         public Builder tid(Long tid) {
             this.putQueryParameter("Tid", tid);

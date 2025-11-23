@@ -106,7 +106,10 @@ public class PreviewWorkflowResponseBody extends TeaModel {
         } 
 
         /**
-         * ErrorCode.
+         * <p>The error code returned if the request failed.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>UnknownError</p>
          */
         public Builder errorCode(String errorCode) {
             this.errorCode = errorCode;
@@ -114,7 +117,10 @@ public class PreviewWorkflowResponseBody extends TeaModel {
         }
 
         /**
-         * ErrorMessage.
+         * <p>The error message returned if the request failed.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>UnknownError</p>
          */
         public Builder errorMessage(String errorMessage) {
             this.errorMessage = errorMessage;
@@ -122,7 +128,10 @@ public class PreviewWorkflowResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * <p>The request ID. You can use the request ID to locate logs and troubleshoot issues.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>0C1CB646-1DE4-4AD0-B4A4-7D47DD52E931</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -130,7 +139,14 @@ public class PreviewWorkflowResponseBody extends TeaModel {
         }
 
         /**
-         * Success.
+         * <p>Indicates whether the request was successful. Valid values:</p>
+         * <ul>
+         * <li><strong>true</strong>: The request was successful.</li>
+         * <li><strong>false</strong>: The request failed.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder success(Boolean success) {
             this.success = success;
@@ -138,7 +154,7 @@ public class PreviewWorkflowResponseBody extends TeaModel {
         }
 
         /**
-         * WorkflowDetail.
+         * <p>The details of the workflow.</p>
          */
         public Builder workflowDetail(WorkflowDetail workflowDetail) {
             this.workflowDetail = workflowDetail;
@@ -217,7 +233,10 @@ public class PreviewWorkflowResponseBody extends TeaModel {
             } 
 
             /**
-             * NickName.
+             * <p>The nickname of the approver.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Owner</p>
              */
             public Builder nickName(String nickName) {
                 this.nickName = nickName;
@@ -225,7 +244,10 @@ public class PreviewWorkflowResponseBody extends TeaModel {
             }
 
             /**
-             * RealName.
+             * <p>The name of the approver.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>db_test</p>
              */
             public Builder realName(String realName) {
                 this.realName = realName;
@@ -233,7 +255,10 @@ public class PreviewWorkflowResponseBody extends TeaModel {
             }
 
             /**
-             * UserId.
+             * <p>The ID of the approver.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>16***</p>
              */
             public Builder userId(Long userId) {
                 this.userId = userId;
@@ -380,7 +405,7 @@ public class PreviewWorkflowResponseBody extends TeaModel {
             } 
 
             /**
-             * AuditUserList.
+             * <p>The approvers.</p>
              */
             public Builder auditUserList(AuditUserList auditUserList) {
                 this.auditUserList = auditUserList;
@@ -388,7 +413,7 @@ public class PreviewWorkflowResponseBody extends TeaModel {
             }
 
             /**
-             * Comment.
+             * <p>The remarks of the approval node.</p>
              */
             public Builder comment(String comment) {
                 this.comment = comment;
@@ -396,7 +421,10 @@ public class PreviewWorkflowResponseBody extends TeaModel {
             }
 
             /**
-             * NodeName.
+             * <p>The name of the approval node.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Owner</p>
              */
             public Builder nodeName(String nodeName) {
                 this.nodeName = nodeName;
@@ -404,7 +432,16 @@ public class PreviewWorkflowResponseBody extends TeaModel {
             }
 
             /**
-             * NodeType.
+             * <p>The type of the approval node.</p>
+             * <p>Valid values:</p>
+             * <ul>
+             * <li>USER_LIST: The approval node is created by a user.</li>
+             * <li>UNKNOWN: The source of the approval node is unknown.</li>
+             * <li>SYS: The approval node is predefined by the system.</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>SYS</p>
              */
             public Builder nodeType(String nodeType) {
                 this.nodeType = nodeType;
@@ -538,7 +575,7 @@ public class PreviewWorkflowResponseBody extends TeaModel {
             } 
 
             /**
-             * Comment.
+             * <p>The remarks of the approval template.</p>
              */
             public Builder comment(String comment) {
                 this.comment = comment;
@@ -546,7 +583,7 @@ public class PreviewWorkflowResponseBody extends TeaModel {
             }
 
             /**
-             * WfCateName.
+             * <p>The name of the approval template.</p>
              */
             public Builder wfCateName(String wfCateName) {
                 this.wfCateName = wfCateName;
@@ -554,7 +591,7 @@ public class PreviewWorkflowResponseBody extends TeaModel {
             }
 
             /**
-             * WorkflowNodeList.
+             * <p>The approval nodes.</p>
              */
             public Builder workflowNodeList(WorkflowNodeList workflowNodeList) {
                 this.workflowNodeList = workflowNodeList;

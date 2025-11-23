@@ -132,7 +132,7 @@ public class ListDataLakeDatabaseResponseBody extends TeaModel {
         } 
 
         /**
-         * DatabaseList.
+         * <p>The list of databases.</p>
          */
         public Builder databaseList(java.util.List<DLDatabase> databaseList) {
             this.databaseList = databaseList;
@@ -140,7 +140,10 @@ public class ListDataLakeDatabaseResponseBody extends TeaModel {
         }
 
         /**
-         * ErrorCode.
+         * <p>The error code returned if the call failed.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>400</p>
          */
         public Builder errorCode(String errorCode) {
             this.errorCode = errorCode;
@@ -148,7 +151,10 @@ public class ListDataLakeDatabaseResponseBody extends TeaModel {
         }
 
         /**
-         * ErrorMessage.
+         * <p>The error message that is returned if the request failed.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>UnknownError</p>
          */
         public Builder errorMessage(String errorMessage) {
             this.errorMessage = errorMessage;
@@ -156,7 +162,10 @@ public class ListDataLakeDatabaseResponseBody extends TeaModel {
         }
 
         /**
-         * MaxResults.
+         * <p>The maximum number of entries to be returned in a request. You can use this parameter and NextToken to implement paging.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>20</p>
          */
         public Builder maxResults(Integer maxResults) {
             this.maxResults = maxResults;
@@ -164,7 +173,10 @@ public class ListDataLakeDatabaseResponseBody extends TeaModel {
         }
 
         /**
-         * NextToken.
+         * <p>The pagination token that is used in the next request to retrieve a new page of results. If NextToken is empty, no next page exists. Set this parameter to the value of NextToken obtained from the previous query.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>NesLoKLEdIZrKhDT7I2gSw==</p>
          */
         public Builder nextToken(String nextToken) {
             this.nextToken = nextToken;
@@ -172,7 +184,10 @@ public class ListDataLakeDatabaseResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * <p>The request ID. You can use the ID to locate logs and troubleshoot issues.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>4E1D2B4D-3E53-4ABC-999D-1D2520B3471A</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -180,7 +195,14 @@ public class ListDataLakeDatabaseResponseBody extends TeaModel {
         }
 
         /**
-         * Success.
+         * <p>Indicates whether the request was successful. Valid values:</p>
+         * <ul>
+         * <li><strong>true</strong>: The request was successful.</li>
+         * <li><strong>false</strong>: The request failed.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder success(Boolean success) {
             this.success = success;

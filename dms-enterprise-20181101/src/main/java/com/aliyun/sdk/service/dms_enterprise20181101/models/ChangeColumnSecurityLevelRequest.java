@@ -172,6 +172,7 @@ public class ChangeColumnSecurityLevelRequest extends Request {
         }
 
         /**
+         * <p>The name of the field. You can call the <a href="https://help.aliyun.com/document_detail/188103.html">ListSensitiveColumns</a> or <a href="https://help.aliyun.com/document_detail/141870.html">ListColumns</a> operation to query the column name.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -184,6 +185,11 @@ public class ChangeColumnSecurityLevelRequest extends Request {
         }
 
         /**
+         * <p>The database ID. The database can be a physical database or a logical database.</p>
+         * <ul>
+         * <li>The ID of a physical database: You can call the <a href="https://help.aliyun.com/document_detail/141873.html">ListDatabases</a> or <a href="https://help.aliyun.com/document_detail/141876.html">SearchDatabase</a> operation to obtain the physical database ID.</li>
+         * <li>To obtain the ID of a logical database, call the <a href="https://help.aliyun.com/document_detail/141874.html">ListLogicDatabases</a> or <a href="https://help.aliyun.com/document_detail/141876.html">SearchDatabase</a> operation.</li>
+         * </ul>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -196,6 +202,11 @@ public class ChangeColumnSecurityLevelRequest extends Request {
         }
 
         /**
+         * <p>Specifies whether the database is a logical database. Valid values:</p>
+         * <ul>
+         * <li><strong>true</strong>: The database is a logical database</li>
+         * <li><strong>false</strong>: The database is a physical database.</li>
+         * </ul>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -208,6 +219,7 @@ public class ChangeColumnSecurityLevelRequest extends Request {
         }
 
         /**
+         * <p>The new security level of the column. The valid values are the same as the sensitivity levels of the classification template that is associated with the instance. You can call the <a href="https://help.aliyun.com/document_detail/2539519.html">ListSensitivityLevel</a> operation to obtain the sensitivity levels of the classification template.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -220,6 +232,10 @@ public class ChangeColumnSecurityLevelRequest extends Request {
         }
 
         /**
+         * <p>The database name. You can call the <a href="https://help.aliyun.com/document_detail/188103.html">ListSensitiveColumns</a> or <a href="https://help.aliyun.com/document_detail/141876.html">SearchDatabase</a> operation to query the database name.</p>
+         * <blockquote>
+         * <p>You can call the <a href="https://help.aliyun.com/document_detail/141873.html">ListDatabases</a> operation to query the name of a physical database and call the <a href="https://help.aliyun.com/document_detail/141874.html">ListLogicDatabases</a> operation to query the name of a logical database.</p>
+         * </blockquote>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -232,6 +248,7 @@ public class ChangeColumnSecurityLevelRequest extends Request {
         }
 
         /**
+         * <p>The name of the table. You can call the <a href="https://help.aliyun.com/document_detail/188103.html">ListSensitiveColumns</a> or <a href="https://help.aliyun.com/document_detail/141878.html">ListTables</a> operation to query the table name.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -244,7 +261,13 @@ public class ChangeColumnSecurityLevelRequest extends Request {
         }
 
         /**
-         * Tid.
+         * <p>The ID of the tenant.</p>
+         * <blockquote>
+         * <p>To view the tenant ID, go to the Data Management (DMS) console and move the pointer over the profile picture in the upper-right corner. For more information, see the <a href="https://help.aliyun.com/document_detail/181330.html">View information about the current tenant</a> section of the &quot;Manage DMS tenants&quot; topic.</p>
+         * </blockquote>
+         * 
+         * <strong>example:</strong>
+         * <p>10****</p>
          */
         public Builder tid(Long tid) {
             this.putQueryParameter("Tid", tid);
