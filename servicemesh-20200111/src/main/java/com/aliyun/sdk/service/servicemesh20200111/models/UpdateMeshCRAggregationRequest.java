@@ -1,44 +1,49 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.servicemesh20200111.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link UpdateMeshCRAggregationRequest} extends {@link RequestModel}
  *
  * <p>UpdateMeshCRAggregationRequest</p>
  */
 public class UpdateMeshCRAggregationRequest extends Request {
-    @Body
-    @NameInMap("CPULimit")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("CPULimit")
     private String CPULimit;
 
-    @Body
-    @NameInMap("CPURequirement")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("CPURequirement")
     private String CPURequirement;
 
-    @Body
-    @NameInMap("Enabled")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("Enabled")
     private Boolean enabled;
 
-    @Body
-    @NameInMap("MemoryLimit")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("MemoryLimit")
     private String memoryLimit;
 
-    @Body
-    @NameInMap("MemoryRequirement")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("MemoryRequirement")
     private String memoryRequirement;
 
-    @Body
-    @NameInMap("ServiceMeshId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("ServiceMeshId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String serviceMeshId;
 
-    @Body
-    @NameInMap("UsePublicApiServer")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("UsePublicApiServer")
     private Boolean usePublicApiServer;
 
     private UpdateMeshCRAggregationRequest(Builder builder) {
@@ -60,7 +65,7 @@ public class UpdateMeshCRAggregationRequest extends Request {
         return builder().build();
     }
 
-    @Override
+@Override
     public Builder toBuilder() {
         return new Builder(this);
     }
@@ -139,7 +144,10 @@ public class UpdateMeshCRAggregationRequest extends Request {
         } 
 
         /**
-         * The maximum number of CPU cores that are available for the components installed in the ACK cluster on the data plane if you enable the Kubernetes API to access Istio resources in the ASM instance. You can specify the parameter value in the standard quantity representation used by Kubernetes.
+         * <p>The maximum number of CPU cores that are available for the components installed in the ACK cluster on the data plane if you enable the Kubernetes API to access Istio resources in the ASM instance. You can specify the parameter value in the standard quantity representation used by Kubernetes.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder CPULimit(String CPULimit) {
             this.putBodyParameter("CPULimit", CPULimit);
@@ -148,7 +156,10 @@ public class UpdateMeshCRAggregationRequest extends Request {
         }
 
         /**
-         * The number of CPU cores that are requested by the components installed in the Container Service for Kubernetes (ACK) cluster on the data plane if you enable the Kubernetes API to access Istio resources in the ASM instance. You can specify the parameter value in the standard quantity representation used by Kubernetes.
+         * <p>The number of CPU cores that are requested by the components installed in the Container Service for Kubernetes (ACK) cluster on the data plane if you enable the Kubernetes API to access Istio resources in the ASM instance. You can specify the parameter value in the standard quantity representation used by Kubernetes.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder CPURequirement(String CPURequirement) {
             this.putBodyParameter("CPURequirement", CPURequirement);
@@ -157,11 +168,14 @@ public class UpdateMeshCRAggregationRequest extends Request {
         }
 
         /**
-         * Specifies whether to enable the Kubernetes API on the data plane to access Istio resources in the ASM instance. Valid values:
-         * <p>
+         * <p>Specifies whether to enable the Kubernetes API on the data plane to access Istio resources in the ASM instance. Valid values:</p>
+         * <ul>
+         * <li><code>true</code>: enables the Kubernetes API to access Istio resources in the ASM instance.</li>
+         * <li><code>false</code>: disables the Kubernetes API to access Istio resources in the ASM instance.</li>
+         * </ul>
          * 
-         * *   `true`: enables the Kubernetes API to access Istio resources in the ASM instance.
-         * *   `false`: disables the Kubernetes API to access Istio resources in the ASM instance.
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder enabled(Boolean enabled) {
             this.putBodyParameter("Enabled", enabled);
@@ -170,7 +184,10 @@ public class UpdateMeshCRAggregationRequest extends Request {
         }
 
         /**
-         * The maximum size of the memory that is available for the components installed in the ACK cluster on the data plane if you enable the Kubernetes API to access Istio resources in the ASM instance. You can specify the parameter value in the standard quantity representation used by Kubernetes. 1 Mi equals 1,024 KB.
+         * <p>The maximum size of the memory that is available for the components installed in the ACK cluster on the data plane if you enable the Kubernetes API to access Istio resources in the ASM instance. You can specify the parameter value in the standard quantity representation used by Kubernetes. 1 Mi equals 1,024 KB.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>500Mi</p>
          */
         public Builder memoryLimit(String memoryLimit) {
             this.putBodyParameter("MemoryLimit", memoryLimit);
@@ -179,7 +196,10 @@ public class UpdateMeshCRAggregationRequest extends Request {
         }
 
         /**
-         * The size of the memory that is requested by the components installed in the ACK cluster on the data plane if you enable the Kubernetes API to access Istio resources in the ASM instance. You can specify the parameter value in the standard quantity representation used by Kubernetes. 1 Mi equals 1,024 KB.
+         * <p>The size of the memory that is requested by the components installed in the ACK cluster on the data plane if you enable the Kubernetes API to access Istio resources in the ASM instance. You can specify the parameter value in the standard quantity representation used by Kubernetes. 1 Mi equals 1,024 KB.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>500Mi</p>
          */
         public Builder memoryRequirement(String memoryRequirement) {
             this.putBodyParameter("MemoryRequirement", memoryRequirement);
@@ -188,7 +208,11 @@ public class UpdateMeshCRAggregationRequest extends Request {
         }
 
         /**
-         * The Service Mesh (ASM) instance ID.
+         * <p>The Service Mesh (ASM) instance ID.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>c08ba3fd1e6484b0f8cc1ad8fe10d****</p>
          */
         public Builder serviceMeshId(String serviceMeshId) {
             this.putBodyParameter("ServiceMeshId", serviceMeshId);
@@ -197,13 +221,15 @@ public class UpdateMeshCRAggregationRequest extends Request {
         }
 
         /**
-         * Specifies whether the Kubernetes API on the data plane uses the public endpoint of the API server to access Istio resources in the ASM instance. Valid values:
-         * <p>
+         * <p>Specifies whether the Kubernetes API on the data plane uses the public endpoint of the API server to access Istio resources in the ASM instance. Valid values:</p>
+         * <ul>
+         * <li><code>true</code>: The Kubernetes API on the data plane uses the public endpoint of the API server to access Istio resources in the ASM instance.</li>
+         * <li><code>false</code>: The Kubernetes API on the data plane uses the private endpoint of the API server to access Istio resources in the ASM instance.</li>
+         * </ul>
+         * <p>Default value: <code>false</code>.</p>
          * 
-         * *   `true`: The Kubernetes API on the data plane uses the public endpoint of the API server to access Istio resources in the ASM instance.
-         * *   `false`: The Kubernetes API on the data plane uses the private endpoint of the API server to access Istio resources in the ASM instance.
-         * 
-         * Default value: `false`.
+         * <strong>example:</strong>
+         * <p>false</p>
          */
         public Builder usePublicApiServer(Boolean usePublicApiServer) {
             this.putBodyParameter("UsePublicApiServer", usePublicApiServer);

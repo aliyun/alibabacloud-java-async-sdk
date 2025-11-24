@@ -1,21 +1,26 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.servicemesh20200111.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeServiceMeshLogsResponseBody} extends {@link TeaModel}
  *
  * <p>DescribeServiceMeshLogsResponseBody</p>
  */
 public class DescribeServiceMeshLogsResponseBody extends TeaModel {
-    @NameInMap("Logs")
-    private java.util.List < Logs> logs;
+    @com.aliyun.core.annotation.NameInMap("Logs")
+    private java.util.List<Logs> logs;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
     private DescribeServiceMeshLogsResponseBody(Builder builder) {
@@ -31,10 +36,14 @@ public class DescribeServiceMeshLogsResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return logs
      */
-    public java.util.List < Logs> getLogs() {
+    public java.util.List<Logs> getLogs() {
         return this.logs;
     }
 
@@ -46,19 +55,30 @@ public class DescribeServiceMeshLogsResponseBody extends TeaModel {
     }
 
     public static final class Builder {
-        private java.util.List < Logs> logs; 
+        private java.util.List<Logs> logs; 
         private String requestId; 
 
+        private Builder() {
+        } 
+
+        private Builder(DescribeServiceMeshLogsResponseBody model) {
+            this.logs = model.logs;
+            this.requestId = model.requestId;
+        } 
+
         /**
-         * The details of the logs.
+         * <p>The details of the logs.</p>
          */
-        public Builder logs(java.util.List < Logs> logs) {
+        public Builder logs(java.util.List<Logs> logs) {
             this.logs = logs;
             return this;
         }
 
         /**
-         * The request ID.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>31d3a0f0-07ed-4f6e-9004-1804498c****</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -71,14 +91,20 @@ public class DescribeServiceMeshLogsResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link DescribeServiceMeshLogsResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeServiceMeshLogsResponseBody</p>
+     */
     public static class Logs extends TeaModel {
-        @NameInMap("CreationTime")
+        @com.aliyun.core.annotation.NameInMap("CreationTime")
         private String creationTime;
 
-        @NameInMap("Log")
+        @com.aliyun.core.annotation.NameInMap("Log")
         private String log;
 
-        @NameInMap("ServiceMeshId")
+        @com.aliyun.core.annotation.NameInMap("ServiceMeshId")
         private String serviceMeshId;
 
         private Logs(Builder builder) {
@@ -121,8 +147,20 @@ public class DescribeServiceMeshLogsResponseBody extends TeaModel {
             private String log; 
             private String serviceMeshId; 
 
+            private Builder() {
+            } 
+
+            private Builder(Logs model) {
+                this.creationTime = model.creationTime;
+                this.log = model.log;
+                this.serviceMeshId = model.serviceMeshId;
+            } 
+
             /**
-             * The point in time when the logs were generated.
+             * <p>The point in time when the logs were generated.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2021-11-19T15:21:53+08:00</p>
              */
             public Builder creationTime(String creationTime) {
                 this.creationTime = creationTime;
@@ -130,7 +168,10 @@ public class DescribeServiceMeshLogsResponseBody extends TeaModel {
             }
 
             /**
-             * The content of the logs.
+             * <p>The content of the logs.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>[RequestID: 31d3a0f0-07ed-4f6e-9004-1804498c****, UID-110982038403****] c096d641835af4658827a4c66c234**** | Start to add cluster c186a6d9641a24098b5499d4d8313****</p>
              */
             public Builder log(String log) {
                 this.log = log;
@@ -138,7 +179,10 @@ public class DescribeServiceMeshLogsResponseBody extends TeaModel {
             }
 
             /**
-             * The ASM instance ID.
+             * <p>The ASM instance ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>ca04bc38979214bf2882be79d39b4****</p>
              */
             public Builder serviceMeshId(String serviceMeshId) {
                 this.serviceMeshId = serviceMeshId;

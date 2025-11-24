@@ -1,24 +1,29 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.servicemesh20200111.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link GetDeploymentBySelectorResponseBody} extends {@link TeaModel}
  *
  * <p>GetDeploymentBySelectorResponseBody</p>
  */
 public class GetDeploymentBySelectorResponseBody extends TeaModel {
-    @NameInMap("DeploymentNameList")
-    private java.util.List < byte[] > deploymentNameList;
+    @com.aliyun.core.annotation.NameInMap("DeploymentNameList")
+    private java.util.List<byte[]> deploymentNameList;
 
-    @NameInMap("Mark")
+    @com.aliyun.core.annotation.NameInMap("Mark")
     private String mark;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
     private GetDeploymentBySelectorResponseBody(Builder builder) {
@@ -35,10 +40,14 @@ public class GetDeploymentBySelectorResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return deploymentNameList
      */
-    public java.util.List < byte[] > getDeploymentNameList() {
+    public java.util.List<byte[]> getDeploymentNameList() {
         return this.deploymentNameList;
     }
 
@@ -57,20 +66,32 @@ public class GetDeploymentBySelectorResponseBody extends TeaModel {
     }
 
     public static final class Builder {
-        private java.util.List < byte[] > deploymentNameList; 
+        private java.util.List<byte[]> deploymentNameList; 
         private String mark; 
         private String requestId; 
 
+        private Builder() {
+        } 
+
+        private Builder(GetDeploymentBySelectorResponseBody model) {
+            this.deploymentNameList = model.deploymentNameList;
+            this.mark = model.mark;
+            this.requestId = model.requestId;
+        } 
+
         /**
-         * The queried workloads.
+         * <p>The queried workloads.</p>
          */
-        public Builder deploymentNameList(java.util.List < byte[] > deploymentNameList) {
+        public Builder deploymentNameList(java.util.List<byte[]> deploymentNameList) {
             this.deploymentNameList = deploymentNameList;
             return this;
         }
 
         /**
-         * The end-of-data marker.
+         * <p>The end-of-data marker.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>eyJ2IjoibWV0YS5rOHMuaW8vdjEiLCJydiI6NTgyMDUzMzk5MCwic3RhcnQiOiJwbXMtYWRhcHRlci1kZGxsXHUwMDA****</p>
          */
         public Builder mark(String mark) {
             this.mark = mark;
@@ -78,7 +99,10 @@ public class GetDeploymentBySelectorResponseBody extends TeaModel {
         }
 
         /**
-         * The request ID.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>946690C2-41D3-55A0-A501-E2FFAB5F****</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;

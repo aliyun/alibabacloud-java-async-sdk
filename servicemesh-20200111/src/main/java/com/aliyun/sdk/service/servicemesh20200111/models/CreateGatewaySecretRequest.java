@@ -1,36 +1,41 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.servicemesh20200111.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link CreateGatewaySecretRequest} extends {@link RequestModel}
  *
  * <p>CreateGatewaySecretRequest</p>
  */
 public class CreateGatewaySecretRequest extends Request {
-    @Body
-    @NameInMap("Cert")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("Cert")
     private String cert;
 
-    @Body
-    @NameInMap("IstioGatewayName")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("IstioGatewayName")
     private String istioGatewayName;
 
-    @Body
-    @NameInMap("Key")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("Key")
     private String key;
 
-    @Body
-    @NameInMap("SecretName")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("SecretName")
     private String secretName;
 
-    @Body
-    @NameInMap("ServiceMeshId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("ServiceMeshId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String serviceMeshId;
 
     private CreateGatewaySecretRequest(Builder builder) {
@@ -50,7 +55,7 @@ public class CreateGatewaySecretRequest extends Request {
         return builder().build();
     }
 
-    @Override
+@Override
     public Builder toBuilder() {
         return new Builder(this);
     }
@@ -111,7 +116,10 @@ public class CreateGatewaySecretRequest extends Request {
         } 
 
         /**
-         * The content of the certificate.
+         * <p>The content of the certificate.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>-----BEGIN CERTIFICATE----- MIIC2DCCAcACA-----END CERTIF****-----</p>
          */
         public Builder cert(String cert) {
             this.putBodyParameter("Cert", cert);
@@ -120,7 +128,10 @@ public class CreateGatewaySecretRequest extends Request {
         }
 
         /**
-         * The name of the ASM gateway.
+         * <p>The name of the ASM gateway.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>ingressgateway</p>
          */
         public Builder istioGatewayName(String istioGatewayName) {
             this.putBodyParameter("IstioGatewayName", istioGatewayName);
@@ -129,7 +140,10 @@ public class CreateGatewaySecretRequest extends Request {
         }
 
         /**
-         * The private key of the certificate.
+         * <p>The private key of the certificate.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>MIIEvAIBADANBgkqhkiG9w0BAQEFAASCBKYwggSiAgEAAoIBAQC2ag/Bzcgm****</p>
          */
         public Builder key(String key) {
             this.putBodyParameter("Key", key);
@@ -138,7 +152,10 @@ public class CreateGatewaySecretRequest extends Request {
         }
 
         /**
-         * The name of the secret.
+         * <p>The name of the secret.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>bookinfo-secret</p>
          */
         public Builder secretName(String secretName) {
             this.putBodyParameter("SecretName", secretName);
@@ -147,7 +164,11 @@ public class CreateGatewaySecretRequest extends Request {
         }
 
         /**
-         * The ASM instance ID.
+         * <p>The ASM instance ID.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>c08ba3fd1e6484b0f8cc1ad8fe10d****</p>
          */
         public Builder serviceMeshId(String serviceMeshId) {
             this.putBodyParameter("ServiceMeshId", serviceMeshId);

@@ -1,21 +1,26 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.servicemesh20200111.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeServiceMeshDetailResponseBody} extends {@link TeaModel}
  *
  * <p>DescribeServiceMeshDetailResponseBody</p>
  */
 public class DescribeServiceMeshDetailResponseBody extends TeaModel {
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("ServiceMesh")
+    @com.aliyun.core.annotation.NameInMap("ServiceMesh")
     private ServiceMesh serviceMesh;
 
     private DescribeServiceMeshDetailResponseBody(Builder builder) {
@@ -29,6 +34,10 @@ public class DescribeServiceMeshDetailResponseBody extends TeaModel {
 
     public static DescribeServiceMeshDetailResponseBody create() {
         return builder().build();
+    }
+
+    public Builder toBuilder() {
+        return new Builder(this);
     }
 
     /**
@@ -49,8 +58,19 @@ public class DescribeServiceMeshDetailResponseBody extends TeaModel {
         private String requestId; 
         private ServiceMesh serviceMesh; 
 
+        private Builder() {
+        } 
+
+        private Builder(DescribeServiceMeshDetailResponseBody model) {
+            this.requestId = model.requestId;
+            this.serviceMesh = model.serviceMesh;
+        } 
+
         /**
-         * The request ID.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>11fd0027-c27e-41bb-a565-75583054****</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -58,7 +78,7 @@ public class DescribeServiceMeshDetailResponseBody extends TeaModel {
         }
 
         /**
-         * The details of the ASM instance.
+         * <p>The information about the ASM instance.</p>
          */
         public Builder serviceMesh(ServiceMesh serviceMesh) {
             this.serviceMesh = serviceMesh;
@@ -71,23 +91,37 @@ public class DescribeServiceMeshDetailResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link DescribeServiceMeshDetailResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeServiceMeshDetailResponseBody</p>
+     */
     public static class Endpoints extends TeaModel {
-        @NameInMap("IntranetApiServerEndpoint")
+        @com.aliyun.core.annotation.NameInMap("IntranetApiServerEndpoint")
         private String intranetApiServerEndpoint;
 
-        @NameInMap("IntranetPilotEndpoint")
+        @com.aliyun.core.annotation.NameInMap("IntranetCanaryPilotEndpoint")
+        private String intranetCanaryPilotEndpoint;
+
+        @com.aliyun.core.annotation.NameInMap("IntranetPilotEndpoint")
         private String intranetPilotEndpoint;
 
-        @NameInMap("PublicApiServerEndpoint")
+        @com.aliyun.core.annotation.NameInMap("PublicApiServerEndpoint")
         private String publicApiServerEndpoint;
 
-        @NameInMap("PublicPilotEndpoint")
+        @com.aliyun.core.annotation.NameInMap("PublicCanaryPilotEndpoint")
+        private String publicCanaryPilotEndpoint;
+
+        @com.aliyun.core.annotation.NameInMap("PublicPilotEndpoint")
         private String publicPilotEndpoint;
 
         private Endpoints(Builder builder) {
             this.intranetApiServerEndpoint = builder.intranetApiServerEndpoint;
+            this.intranetCanaryPilotEndpoint = builder.intranetCanaryPilotEndpoint;
             this.intranetPilotEndpoint = builder.intranetPilotEndpoint;
             this.publicApiServerEndpoint = builder.publicApiServerEndpoint;
+            this.publicCanaryPilotEndpoint = builder.publicCanaryPilotEndpoint;
             this.publicPilotEndpoint = builder.publicPilotEndpoint;
         }
 
@@ -107,6 +141,13 @@ public class DescribeServiceMeshDetailResponseBody extends TeaModel {
         }
 
         /**
+         * @return intranetCanaryPilotEndpoint
+         */
+        public String getIntranetCanaryPilotEndpoint() {
+            return this.intranetCanaryPilotEndpoint;
+        }
+
+        /**
          * @return intranetPilotEndpoint
          */
         public String getIntranetPilotEndpoint() {
@@ -121,6 +162,13 @@ public class DescribeServiceMeshDetailResponseBody extends TeaModel {
         }
 
         /**
+         * @return publicCanaryPilotEndpoint
+         */
+        public String getPublicCanaryPilotEndpoint() {
+            return this.publicCanaryPilotEndpoint;
+        }
+
+        /**
          * @return publicPilotEndpoint
          */
         public String getPublicPilotEndpoint() {
@@ -129,12 +177,29 @@ public class DescribeServiceMeshDetailResponseBody extends TeaModel {
 
         public static final class Builder {
             private String intranetApiServerEndpoint; 
+            private String intranetCanaryPilotEndpoint; 
             private String intranetPilotEndpoint; 
             private String publicApiServerEndpoint; 
+            private String publicCanaryPilotEndpoint; 
             private String publicPilotEndpoint; 
 
+            private Builder() {
+            } 
+
+            private Builder(Endpoints model) {
+                this.intranetApiServerEndpoint = model.intranetApiServerEndpoint;
+                this.intranetCanaryPilotEndpoint = model.intranetCanaryPilotEndpoint;
+                this.intranetPilotEndpoint = model.intranetPilotEndpoint;
+                this.publicApiServerEndpoint = model.publicApiServerEndpoint;
+                this.publicCanaryPilotEndpoint = model.publicCanaryPilotEndpoint;
+                this.publicPilotEndpoint = model.publicPilotEndpoint;
+            } 
+
             /**
-             * The endpoint that is used to access the API server from the internal network.
+             * <p>The endpoint that is used to access the API server from the internal network.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>https://<code>192.168.**.**</code>:6443</p>
              */
             public Builder intranetApiServerEndpoint(String intranetApiServerEndpoint) {
                 this.intranetApiServerEndpoint = intranetApiServerEndpoint;
@@ -142,7 +207,21 @@ public class DescribeServiceMeshDetailResponseBody extends TeaModel {
             }
 
             /**
-             * The endpoint that is used to access Istio Pilot from the internal network.
+             * <p>The endpoint that is used to access Istio Pilot from the internal network (Intranet) during canary release.</p>
+             * 
+             * <strong>example:</strong>
+             * <p><code>192.168.**.**</code>:15011</p>
+             */
+            public Builder intranetCanaryPilotEndpoint(String intranetCanaryPilotEndpoint) {
+                this.intranetCanaryPilotEndpoint = intranetCanaryPilotEndpoint;
+                return this;
+            }
+
+            /**
+             * <p>The endpoint that is used to access Istio Pilot from the internal network.</p>
+             * 
+             * <strong>example:</strong>
+             * <p><code>192.168.**.**</code>:15011</p>
              */
             public Builder intranetPilotEndpoint(String intranetPilotEndpoint) {
                 this.intranetPilotEndpoint = intranetPilotEndpoint;
@@ -150,7 +229,10 @@ public class DescribeServiceMeshDetailResponseBody extends TeaModel {
             }
 
             /**
-             * The endpoint that is used to access the API server over the Internet.
+             * <p>The endpoint that is used to access the API server over the Internet.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>https://<code>123.56.**.**</code>:6443</p>
              */
             public Builder publicApiServerEndpoint(String publicApiServerEndpoint) {
                 this.publicApiServerEndpoint = publicApiServerEndpoint;
@@ -158,7 +240,21 @@ public class DescribeServiceMeshDetailResponseBody extends TeaModel {
             }
 
             /**
-             * The endpoint that is used to expose Istio Pilot to the Internet.
+             * <p>The endpoint that is used to expose Istio Pilot to the public network (Internet) during canary release.</p>
+             * 
+             * <strong>example:</strong>
+             * <p><code>182.92.**.**</code>:15011</p>
+             */
+            public Builder publicCanaryPilotEndpoint(String publicCanaryPilotEndpoint) {
+                this.publicCanaryPilotEndpoint = publicCanaryPilotEndpoint;
+                return this;
+            }
+
+            /**
+             * <p>The endpoint that is used to expose Istio Pilot to the Internet.</p>
+             * 
+             * <strong>example:</strong>
+             * <p><code>182.92.**.**</code>:15011</p>
              */
             public Builder publicPilotEndpoint(String publicPilotEndpoint) {
                 this.publicPilotEndpoint = publicPilotEndpoint;
@@ -172,32 +268,38 @@ public class DescribeServiceMeshDetailResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link DescribeServiceMeshDetailResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeServiceMeshDetailResponseBody</p>
+     */
     public static class ServiceMeshInfo extends TeaModel {
-        @NameInMap("CreationTime")
+        @com.aliyun.core.annotation.NameInMap("CreationTime")
         private String creationTime;
 
-        @NameInMap("ErrorMessage")
+        @com.aliyun.core.annotation.NameInMap("ErrorMessage")
         private String errorMessage;
 
-        @NameInMap("Name")
+        @com.aliyun.core.annotation.NameInMap("Name")
         private String name;
 
-        @NameInMap("Profile")
+        @com.aliyun.core.annotation.NameInMap("Profile")
         private String profile;
 
-        @NameInMap("RegionId")
+        @com.aliyun.core.annotation.NameInMap("RegionId")
         private String regionId;
 
-        @NameInMap("ServiceMeshId")
+        @com.aliyun.core.annotation.NameInMap("ServiceMeshId")
         private String serviceMeshId;
 
-        @NameInMap("State")
+        @com.aliyun.core.annotation.NameInMap("State")
         private String state;
 
-        @NameInMap("UpdateTime")
+        @com.aliyun.core.annotation.NameInMap("UpdateTime")
         private String updateTime;
 
-        @NameInMap("Version")
+        @com.aliyun.core.annotation.NameInMap("Version")
         private String version;
 
         private ServiceMeshInfo(Builder builder) {
@@ -294,8 +396,26 @@ public class DescribeServiceMeshDetailResponseBody extends TeaModel {
             private String updateTime; 
             private String version; 
 
+            private Builder() {
+            } 
+
+            private Builder(ServiceMeshInfo model) {
+                this.creationTime = model.creationTime;
+                this.errorMessage = model.errorMessage;
+                this.name = model.name;
+                this.profile = model.profile;
+                this.regionId = model.regionId;
+                this.serviceMeshId = model.serviceMeshId;
+                this.state = model.state;
+                this.updateTime = model.updateTime;
+                this.version = model.version;
+            } 
+
             /**
-             * The time when the ASM instance was created.
+             * <p>The time when the ASM instance was created.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2020-04-21T09:42:20+08:00</p>
              */
             public Builder creationTime(String creationTime) {
                 this.creationTime = creationTime;
@@ -303,7 +423,10 @@ public class DescribeServiceMeshDetailResponseBody extends TeaModel {
             }
 
             /**
-             * The returned error message.
+             * <p>The returned error message.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>error</p>
              */
             public Builder errorMessage(String errorMessage) {
                 this.errorMessage = errorMessage;
@@ -311,7 +434,10 @@ public class DescribeServiceMeshDetailResponseBody extends TeaModel {
             }
 
             /**
-             * The name of the ASM instance.
+             * <p>The name of the ASM instance.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>mesh1</p>
              */
             public Builder name(String name) {
                 this.name = name;
@@ -319,11 +445,14 @@ public class DescribeServiceMeshDetailResponseBody extends TeaModel {
             }
 
             /**
-             * The edition of the ASM instance. Valid values:
-             * <p>
+             * <p>The edition of the ASM instance. Valid values:</p>
+             * <ul>
+             * <li><code>Default</code>: Standard Edition</li>
+             * <li><code>Pro</code>: Enterprise Edition and Ultimate Edition</li>
+             * </ul>
              * 
-             * *   `Default`: Standard Edition
-             * *   `Pro`: Enterprise Edition and Ultimate Edition
+             * <strong>example:</strong>
+             * <p>Default</p>
              */
             public Builder profile(String profile) {
                 this.profile = profile;
@@ -331,7 +460,10 @@ public class DescribeServiceMeshDetailResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the region in which the ASM instance resides.
+             * <p>The ID of the region in which the ASM instance resides.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>cn-beijing</p>
              */
             public Builder regionId(String regionId) {
                 this.regionId = regionId;
@@ -339,7 +471,10 @@ public class DescribeServiceMeshDetailResponseBody extends TeaModel {
             }
 
             /**
-             * The ASM instance ID.
+             * <p>The ASM instance ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>c08ba3fd1e6484b0f8cc1ad8fe10d****</p>
              */
             public Builder serviceMeshId(String serviceMeshId) {
                 this.serviceMeshId = serviceMeshId;
@@ -347,7 +482,10 @@ public class DescribeServiceMeshDetailResponseBody extends TeaModel {
             }
 
             /**
-             * The state of the ASM instance.
+             * <p>The state of the ASM instance.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>running</p>
              */
             public Builder state(String state) {
                 this.state = state;
@@ -355,7 +493,10 @@ public class DescribeServiceMeshDetailResponseBody extends TeaModel {
             }
 
             /**
-             * The time when the ASM instance was last modified.
+             * <p>The time when the ASM instance was last modified.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2020-06-03T14:48:54+08:00</p>
              */
             public Builder updateTime(String updateTime) {
                 this.updateTime = updateTime;
@@ -363,7 +504,10 @@ public class DescribeServiceMeshDetailResponseBody extends TeaModel {
             }
 
             /**
-             * The version of the ASM instance.
+             * <p>The version of the ASM instance.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>v1.7.4.0-gfb34ba99-aliyun</p>
              */
             public Builder version(String version) {
                 this.version = version;
@@ -377,23 +521,45 @@ public class DescribeServiceMeshDetailResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link DescribeServiceMeshDetailResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeServiceMeshDetailResponseBody</p>
+     */
     public static class LoadBalancer extends TeaModel {
-        @NameInMap("ApiServerLoadbalancerId")
+        @com.aliyun.core.annotation.NameInMap("ApiServerLoadbalancerId")
         private String apiServerLoadbalancerId;
 
-        @NameInMap("ApiServerPublicEip")
+        @com.aliyun.core.annotation.NameInMap("ApiServerPublicEip")
         private Boolean apiServerPublicEip;
 
-        @NameInMap("PilotPublicEip")
+        @com.aliyun.core.annotation.NameInMap("ApiServerPublicEipId")
+        private String apiServerPublicEipId;
+
+        @com.aliyun.core.annotation.NameInMap("CanaryPilotLoadBalancerId")
+        private String canaryPilotLoadBalancerId;
+
+        @com.aliyun.core.annotation.NameInMap("CanaryPilotPublicEipId")
+        private String canaryPilotPublicEipId;
+
+        @com.aliyun.core.annotation.NameInMap("PilotPublicEip")
         private Boolean pilotPublicEip;
 
-        @NameInMap("PilotPublicLoadbalancerId")
+        @com.aliyun.core.annotation.NameInMap("PilotPublicEipId")
+        private String pilotPublicEipId;
+
+        @com.aliyun.core.annotation.NameInMap("PilotPublicLoadbalancerId")
         private String pilotPublicLoadbalancerId;
 
         private LoadBalancer(Builder builder) {
             this.apiServerLoadbalancerId = builder.apiServerLoadbalancerId;
             this.apiServerPublicEip = builder.apiServerPublicEip;
+            this.apiServerPublicEipId = builder.apiServerPublicEipId;
+            this.canaryPilotLoadBalancerId = builder.canaryPilotLoadBalancerId;
+            this.canaryPilotPublicEipId = builder.canaryPilotPublicEipId;
             this.pilotPublicEip = builder.pilotPublicEip;
+            this.pilotPublicEipId = builder.pilotPublicEipId;
             this.pilotPublicLoadbalancerId = builder.pilotPublicLoadbalancerId;
         }
 
@@ -420,10 +586,38 @@ public class DescribeServiceMeshDetailResponseBody extends TeaModel {
         }
 
         /**
+         * @return apiServerPublicEipId
+         */
+        public String getApiServerPublicEipId() {
+            return this.apiServerPublicEipId;
+        }
+
+        /**
+         * @return canaryPilotLoadBalancerId
+         */
+        public String getCanaryPilotLoadBalancerId() {
+            return this.canaryPilotLoadBalancerId;
+        }
+
+        /**
+         * @return canaryPilotPublicEipId
+         */
+        public String getCanaryPilotPublicEipId() {
+            return this.canaryPilotPublicEipId;
+        }
+
+        /**
          * @return pilotPublicEip
          */
         public Boolean getPilotPublicEip() {
             return this.pilotPublicEip;
+        }
+
+        /**
+         * @return pilotPublicEipId
+         */
+        public String getPilotPublicEipId() {
+            return this.pilotPublicEipId;
         }
 
         /**
@@ -436,11 +630,32 @@ public class DescribeServiceMeshDetailResponseBody extends TeaModel {
         public static final class Builder {
             private String apiServerLoadbalancerId; 
             private Boolean apiServerPublicEip; 
+            private String apiServerPublicEipId; 
+            private String canaryPilotLoadBalancerId; 
+            private String canaryPilotPublicEipId; 
             private Boolean pilotPublicEip; 
+            private String pilotPublicEipId; 
             private String pilotPublicLoadbalancerId; 
 
+            private Builder() {
+            } 
+
+            private Builder(LoadBalancer model) {
+                this.apiServerLoadbalancerId = model.apiServerLoadbalancerId;
+                this.apiServerPublicEip = model.apiServerPublicEip;
+                this.apiServerPublicEipId = model.apiServerPublicEipId;
+                this.canaryPilotLoadBalancerId = model.canaryPilotLoadBalancerId;
+                this.canaryPilotPublicEipId = model.canaryPilotPublicEipId;
+                this.pilotPublicEip = model.pilotPublicEip;
+                this.pilotPublicEipId = model.pilotPublicEipId;
+                this.pilotPublicLoadbalancerId = model.pilotPublicLoadbalancerId;
+            } 
+
             /**
-             * The ID of the CLB instance that is used when the API server is exposed to the Internet.
+             * <p>The ID of the CLB instance that is used when the API server is exposed to the Internet.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>lb-2zekaak10uxds44vx****</p>
              */
             public Builder apiServerLoadbalancerId(String apiServerLoadbalancerId) {
                 this.apiServerLoadbalancerId = apiServerLoadbalancerId;
@@ -448,11 +663,14 @@ public class DescribeServiceMeshDetailResponseBody extends TeaModel {
             }
 
             /**
-             * Indicates whether the API server is exposed to the Internet. Valid values:
-             * <p>
+             * <p>Indicates whether the API server is exposed to the Internet. Valid values:</p>
+             * <ul>
+             * <li><code>true</code></li>
+             * <li><code>false</code></li>
+             * </ul>
              * 
-             * *   `true`
-             * *   `false`
+             * <strong>example:</strong>
+             * <p>true</p>
              */
             public Builder apiServerPublicEip(Boolean apiServerPublicEip) {
                 this.apiServerPublicEip = apiServerPublicEip;
@@ -460,11 +678,47 @@ public class DescribeServiceMeshDetailResponseBody extends TeaModel {
             }
 
             /**
-             * Indicates whether Istio Pilot is exposed to the Internet. Valid values:
-             * <p>
+             * <p>The ID of the endpoint that is used to expose API server to the Internet.</p>
              * 
-             * *   `true`
-             * *   `false`
+             * <strong>example:</strong>
+             * <p>eip-wz9gtwau6b2aklgjk****</p>
+             */
+            public Builder apiServerPublicEipId(String apiServerPublicEipId) {
+                this.apiServerPublicEipId = apiServerPublicEipId;
+                return this;
+            }
+
+            /**
+             * <p>The ID of the Classic Load Balancer (CLB) instance that is used during the canary release of Istio Pilot.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>lb-2zesa8qs8kbkj9jkl****</p>
+             */
+            public Builder canaryPilotLoadBalancerId(String canaryPilotLoadBalancerId) {
+                this.canaryPilotLoadBalancerId = canaryPilotLoadBalancerId;
+                return this;
+            }
+
+            /**
+             * <p>The ID of the endpoint that is used to expose Istio Pilot to the Internet during canary release.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>eip-wz9gtwau6b2aklgjk****</p>
+             */
+            public Builder canaryPilotPublicEipId(String canaryPilotPublicEipId) {
+                this.canaryPilotPublicEipId = canaryPilotPublicEipId;
+                return this;
+            }
+
+            /**
+             * <p>Indicates whether Istio Pilot is exposed to the Internet. Valid values:</p>
+             * <ul>
+             * <li><code>true</code></li>
+             * <li><code>false</code></li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>true</p>
              */
             public Builder pilotPublicEip(Boolean pilotPublicEip) {
                 this.pilotPublicEip = pilotPublicEip;
@@ -472,7 +726,21 @@ public class DescribeServiceMeshDetailResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the Classic Load Balancer (CLB) instance that is used when Istio Pilot is exposed to the Internet.
+             * <p>The ID of the endpoint that is used to expose Istio Pilot to the Internet.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>eip-wz9gtwau6b2aklgjk****</p>
+             */
+            public Builder pilotPublicEipId(String pilotPublicEipId) {
+                this.pilotPublicEipId = pilotPublicEipId;
+                return this;
+            }
+
+            /**
+             * <p>The ID of the Classic Load Balancer (CLB) instance that is used when Istio Pilot is exposed to the Internet.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>lb-2zesa8qs8kbkj9jkl****</p>
              */
             public Builder pilotPublicLoadbalancerId(String pilotPublicLoadbalancerId) {
                 this.pilotPublicLoadbalancerId = pilotPublicLoadbalancerId;
@@ -486,11 +754,17 @@ public class DescribeServiceMeshDetailResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link DescribeServiceMeshDetailResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeServiceMeshDetailResponseBody</p>
+     */
     public static class AccessLog extends TeaModel {
-        @NameInMap("Enabled")
+        @com.aliyun.core.annotation.NameInMap("Enabled")
         private Boolean enabled;
 
-        @NameInMap("Project")
+        @com.aliyun.core.annotation.NameInMap("Project")
         private String project;
 
         private AccessLog(Builder builder) {
@@ -524,12 +798,23 @@ public class DescribeServiceMeshDetailResponseBody extends TeaModel {
             private Boolean enabled; 
             private String project; 
 
+            private Builder() {
+            } 
+
+            private Builder(AccessLog model) {
+                this.enabled = model.enabled;
+                this.project = model.project;
+            } 
+
             /**
-             * Indicates whether access log collection is enabled. Valid values:
-             * <p>
+             * <p>Indicates whether access log collection is enabled. Valid values:</p>
+             * <ul>
+             * <li><code>true</code></li>
+             * <li><code>false</code></li>
+             * </ul>
              * 
-             * *   `true`
-             * *   `false`
+             * <strong>example:</strong>
+             * <p>true</p>
              */
             public Builder enabled(Boolean enabled) {
                 this.enabled = enabled;
@@ -537,7 +822,10 @@ public class DescribeServiceMeshDetailResponseBody extends TeaModel {
             }
 
             /**
-             * The name of the Simple Log Service project that stores access logs.
+             * <p>The name of the Simple Log Service project that stores access logs.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>k8s-log-b7b05d08670e41ca8c8fc0b7718f*****</p>
              */
             public Builder project(String project) {
                 this.project = project;
@@ -551,14 +839,20 @@ public class DescribeServiceMeshDetailResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link DescribeServiceMeshDetailResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeServiceMeshDetailResponseBody</p>
+     */
     public static class Audit extends TeaModel {
-        @NameInMap("AuditProjectStatus")
+        @com.aliyun.core.annotation.NameInMap("AuditProjectStatus")
         private String auditProjectStatus;
 
-        @NameInMap("Enabled")
+        @com.aliyun.core.annotation.NameInMap("Enabled")
         private Boolean enabled;
 
-        @NameInMap("Project")
+        @com.aliyun.core.annotation.NameInMap("Project")
         private String project;
 
         private Audit(Builder builder) {
@@ -601,12 +895,24 @@ public class DescribeServiceMeshDetailResponseBody extends TeaModel {
             private Boolean enabled; 
             private String project; 
 
+            private Builder() {
+            } 
+
+            private Builder(Audit model) {
+                this.auditProjectStatus = model.auditProjectStatus;
+                this.enabled = model.enabled;
+                this.project = model.project;
+            } 
+
             /**
-             * Indicates whether an audit project exists in the ASM instance. Valid values:
-             * <p>
+             * <p>Indicates whether an audit project exists in the ASM instance. Valid values:</p>
+             * <ul>
+             * <li><code>audit_project_exist</code>: An audit project exists.</li>
+             * <li><code>audit_project_not_exist</code>: No audit project exists.</li>
+             * </ul>
              * 
-             * *   `audit_project_exist`: An audit project exists.
-             * *   `audit_project_not_exist`: No audit project exists.
+             * <strong>example:</strong>
+             * <p>audit_project_not_exist</p>
              */
             public Builder auditProjectStatus(String auditProjectStatus) {
                 this.auditProjectStatus = auditProjectStatus;
@@ -614,11 +920,14 @@ public class DescribeServiceMeshDetailResponseBody extends TeaModel {
             }
 
             /**
-             * Indicates whether mesh audit is enabled. Valid values:
-             * <p>
+             * <p>Indicates whether mesh audit is enabled. Valid values:</p>
+             * <ul>
+             * <li><code>true</code></li>
+             * <li><code>false</code></li>
+             * </ul>
              * 
-             * *   `true`
-             * *   `false`
+             * <strong>example:</strong>
+             * <p>true</p>
              */
             public Builder enabled(Boolean enabled) {
                 this.enabled = enabled;
@@ -626,7 +935,10 @@ public class DescribeServiceMeshDetailResponseBody extends TeaModel {
             }
 
             /**
-             * The name of the Simple Log Service project that is used for mesh audit.
+             * <p>The name of the Simple Log Service project that is used for mesh audit.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>audit-project</p>
              */
             public Builder project(String project) {
                 this.project = project;
@@ -640,14 +952,20 @@ public class DescribeServiceMeshDetailResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link DescribeServiceMeshDetailResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeServiceMeshDetailResponseBody</p>
+     */
     public static class ControlPlaneLogInfo extends TeaModel {
-        @NameInMap("Enabled")
+        @com.aliyun.core.annotation.NameInMap("Enabled")
         private Boolean enabled;
 
-        @NameInMap("LogTTL")
+        @com.aliyun.core.annotation.NameInMap("LogTTL")
         private Integer logTTL;
 
-        @NameInMap("Project")
+        @com.aliyun.core.annotation.NameInMap("Project")
         private String project;
 
         private ControlPlaneLogInfo(Builder builder) {
@@ -690,12 +1008,24 @@ public class DescribeServiceMeshDetailResponseBody extends TeaModel {
             private Integer logTTL; 
             private String project; 
 
+            private Builder() {
+            } 
+
+            private Builder(ControlPlaneLogInfo model) {
+                this.enabled = model.enabled;
+                this.logTTL = model.logTTL;
+                this.project = model.project;
+            } 
+
             /**
-             * Indicates whether the collection of control plane logs is enabled. Valid values:
-             * <p>
+             * <p>Indicates whether the collection of control plane logs is enabled. Valid values:</p>
+             * <ul>
+             * <li><code>true</code></li>
+             * <li><code>false</code></li>
+             * </ul>
              * 
-             * *   `true`
-             * *   `false`
+             * <strong>example:</strong>
+             * <p>false</p>
              */
             public Builder enabled(Boolean enabled) {
                 this.enabled = enabled;
@@ -703,7 +1033,10 @@ public class DescribeServiceMeshDetailResponseBody extends TeaModel {
             }
 
             /**
-             * LogTTL.
+             * <p>The time to live (TTL) of the collected control-plane logs. Unit: day.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>30</p>
              */
             public Builder logTTL(Integer logTTL) {
                 this.logTTL = logTTL;
@@ -711,7 +1044,10 @@ public class DescribeServiceMeshDetailResponseBody extends TeaModel {
             }
 
             /**
-             * The name of the Simple Log Service project that stores control plane logs.
+             * <p>The name of the Simple Log Service project that stores control plane logs.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>mesh-log-cbeb85a09161b4a26ab73e0ac****</p>
              */
             public Builder project(String project) {
                 this.project = project;
@@ -725,14 +1061,20 @@ public class DescribeServiceMeshDetailResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link DescribeServiceMeshDetailResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeServiceMeshDetailResponseBody</p>
+     */
     public static class Edition extends TeaModel {
-        @NameInMap("IstiodImageTag")
+        @com.aliyun.core.annotation.NameInMap("IstiodImageTag")
         private String istiodImageTag;
 
-        @NameInMap("Name")
+        @com.aliyun.core.annotation.NameInMap("Name")
         private String name;
 
-        @NameInMap("ProxyImageTag")
+        @com.aliyun.core.annotation.NameInMap("ProxyImageTag")
         private String proxyImageTag;
 
         private Edition(Builder builder) {
@@ -775,8 +1117,20 @@ public class DescribeServiceMeshDetailResponseBody extends TeaModel {
             private String name; 
             private String proxyImageTag; 
 
+            private Builder() {
+            } 
+
+            private Builder(Edition model) {
+                this.istiodImageTag = model.istiodImageTag;
+                this.name = model.name;
+                this.proxyImageTag = model.proxyImageTag;
+            } 
+
             /**
-             * The version of the Istiod image.
+             * <p>The version of the Istiod image.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>v1.9.7.1-3-gb3f1ab3c9c-pro-aliyun</p>
              */
             public Builder istiodImageTag(String istiodImageTag) {
                 this.istiodImageTag = istiodImageTag;
@@ -784,7 +1138,10 @@ public class DescribeServiceMeshDetailResponseBody extends TeaModel {
             }
 
             /**
-             * The name of the edition.
+             * <p>The name of the edition.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Pro</p>
              */
             public Builder name(String name) {
                 this.name = name;
@@ -792,7 +1149,10 @@ public class DescribeServiceMeshDetailResponseBody extends TeaModel {
             }
 
             /**
-             * The version of the Istio Proxy image.
+             * <p>The version of the Istio Proxy image.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>v1.9.7.1-3-gb3f1ab3c9c-pro-aliyun</p>
              */
             public Builder proxyImageTag(String proxyImageTag) {
                 this.proxyImageTag = proxyImageTag;
@@ -806,17 +1166,23 @@ public class DescribeServiceMeshDetailResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link DescribeServiceMeshDetailResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeServiceMeshDetailResponseBody</p>
+     */
     public static class AccessLogExtraConf extends TeaModel {
-        @NameInMap("GatewayEnabled")
+        @com.aliyun.core.annotation.NameInMap("GatewayEnabled")
         private Boolean gatewayEnabled;
 
-        @NameInMap("GatewayLifecycle")
+        @com.aliyun.core.annotation.NameInMap("GatewayLifecycle")
         private Integer gatewayLifecycle;
 
-        @NameInMap("SidecarEnabled")
+        @com.aliyun.core.annotation.NameInMap("SidecarEnabled")
         private Boolean sidecarEnabled;
 
-        @NameInMap("SidecarLifecycle")
+        @com.aliyun.core.annotation.NameInMap("SidecarLifecycle")
         private Integer sidecarLifecycle;
 
         private AccessLogExtraConf(Builder builder) {
@@ -868,8 +1234,21 @@ public class DescribeServiceMeshDetailResponseBody extends TeaModel {
             private Boolean sidecarEnabled; 
             private Integer sidecarLifecycle; 
 
+            private Builder() {
+            } 
+
+            private Builder(AccessLogExtraConf model) {
+                this.gatewayEnabled = model.gatewayEnabled;
+                this.gatewayLifecycle = model.gatewayLifecycle;
+                this.sidecarEnabled = model.sidecarEnabled;
+                this.sidecarLifecycle = model.sidecarLifecycle;
+            } 
+
             /**
-             * GatewayEnabled.
+             * <p>Indicates whether gateway log collection is enabled.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>true</p>
              */
             public Builder gatewayEnabled(Boolean gatewayEnabled) {
                 this.gatewayEnabled = gatewayEnabled;
@@ -877,7 +1256,10 @@ public class DescribeServiceMeshDetailResponseBody extends TeaModel {
             }
 
             /**
-             * The retention period for the access logs of the ingress gateway. Unit: day. The logs are collected by using Simple Log Service. For example, the value 30 indicates that the logs are retained for 30 days.
+             * <p>The retention period for the access logs of the ingress gateway. Unit: day. The logs are collected by using Simple Log Service. For example, the value 30 indicates that the logs are retained for 30 days.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>30</p>
              */
             public Builder gatewayLifecycle(Integer gatewayLifecycle) {
                 this.gatewayLifecycle = gatewayLifecycle;
@@ -885,7 +1267,10 @@ public class DescribeServiceMeshDetailResponseBody extends TeaModel {
             }
 
             /**
-             * SidecarEnabled.
+             * <p>Indicates whether sidecar log collection is enabled.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>true</p>
              */
             public Builder sidecarEnabled(Boolean sidecarEnabled) {
                 this.sidecarEnabled = sidecarEnabled;
@@ -893,7 +1278,10 @@ public class DescribeServiceMeshDetailResponseBody extends TeaModel {
             }
 
             /**
-             * The retention period for the access logs of sidecar proxies. Unit: day. The logs are collected by using Simple Log Service. For example, the value 30 indicates that the logs are retained for 30 days.
+             * <p>The retention period for the access logs of sidecar proxies. Unit: day. The logs are collected by using Simple Log Service. For example, the value 30 indicates that the logs are retained for 30 days.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>30</p>
              */
             public Builder sidecarLifecycle(Integer sidecarLifecycle) {
                 this.sidecarLifecycle = sidecarLifecycle;
@@ -907,8 +1295,14 @@ public class DescribeServiceMeshDetailResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link DescribeServiceMeshDetailResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeServiceMeshDetailResponseBody</p>
+     */
     public static class EgressHpaCpu extends TeaModel {
-        @NameInMap("TargetAverageUtilization")
+        @com.aliyun.core.annotation.NameInMap("TargetAverageUtilization")
         private Integer targetAverageUtilization;
 
         private EgressHpaCpu(Builder builder) {
@@ -933,8 +1327,18 @@ public class DescribeServiceMeshDetailResponseBody extends TeaModel {
         public static final class Builder {
             private Integer targetAverageUtilization; 
 
+            private Builder() {
+            } 
+
+            private Builder(EgressHpaCpu model) {
+                this.targetAverageUtilization = model.targetAverageUtilization;
+            } 
+
             /**
-             * The expected CPU utilization when HPA is enabled. Valid values: 1 to 100. If the CPU utilization exceeds this value, the number of pod replicas increases. If the CPU utilization is less than this value, the number of pod replicas decreases.
+             * <p>The expected CPU utilization when HPA is enabled. Valid values: 1 to 100. If the CPU utilization exceeds this value, the number of pod replicas increases. If the CPU utilization is less than this value, the number of pod replicas decreases.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>80</p>
              */
             public Builder targetAverageUtilization(Integer targetAverageUtilization) {
                 this.targetAverageUtilization = targetAverageUtilization;
@@ -948,8 +1352,14 @@ public class DescribeServiceMeshDetailResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link DescribeServiceMeshDetailResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeServiceMeshDetailResponseBody</p>
+     */
     public static class EgressHpaMemory extends TeaModel {
-        @NameInMap("TargetAverageUtilization")
+        @com.aliyun.core.annotation.NameInMap("TargetAverageUtilization")
         private Integer targetAverageUtilization;
 
         private EgressHpaMemory(Builder builder) {
@@ -974,8 +1384,18 @@ public class DescribeServiceMeshDetailResponseBody extends TeaModel {
         public static final class Builder {
             private Integer targetAverageUtilization; 
 
+            private Builder() {
+            } 
+
+            private Builder(EgressHpaMemory model) {
+                this.targetAverageUtilization = model.targetAverageUtilization;
+            } 
+
             /**
-             * The expected memory usage when HPA is enabled. Valid values: 1 to 100. If the memory usage exceeds this value, the number of pod replicas increases. If the memory usage is less than this value, the number of pod replicas decreases.
+             * <p>The expected memory usage when HPA is enabled. Valid values: 1 to 100. If the memory usage exceeds this value, the number of pod replicas increases. If the memory usage is less than this value, the number of pod replicas decreases.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>80</p>
              */
             public Builder targetAverageUtilization(Integer targetAverageUtilization) {
                 this.targetAverageUtilization = targetAverageUtilization;
@@ -989,12 +1409,18 @@ public class DescribeServiceMeshDetailResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link DescribeServiceMeshDetailResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeServiceMeshDetailResponseBody</p>
+     */
     public static class EgressResources extends TeaModel {
-        @NameInMap("Limits")
-        private java.util.Map < String, ? > limits;
+        @com.aliyun.core.annotation.NameInMap("Limits")
+        private java.util.Map<String, ?> limits;
 
-        @NameInMap("Requests")
-        private java.util.Map < String, ? > requests;
+        @com.aliyun.core.annotation.NameInMap("Requests")
+        private java.util.Map<String, ?> requests;
 
         private EgressResources(Builder builder) {
             this.limits = builder.limits;
@@ -1012,33 +1438,47 @@ public class DescribeServiceMeshDetailResponseBody extends TeaModel {
         /**
          * @return limits
          */
-        public java.util.Map < String, ? > getLimits() {
+        public java.util.Map<String, ?> getLimits() {
             return this.limits;
         }
 
         /**
          * @return requests
          */
-        public java.util.Map < String, ? > getRequests() {
+        public java.util.Map<String, ?> getRequests() {
             return this.requests;
         }
 
         public static final class Builder {
-            private java.util.Map < String, ? > limits; 
-            private java.util.Map < String, ? > requests; 
+            private java.util.Map<String, ?> limits; 
+            private java.util.Map<String, ?> requests; 
+
+            private Builder() {
+            } 
+
+            private Builder(EgressResources model) {
+                this.limits = model.limits;
+                this.requests = model.requests;
+            } 
 
             /**
-             * The resources that are available to the egress gateway.
+             * <p>The resources that are available to the egress gateway.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>{&quot;cpu&quot;:&quot;200m&quot;, &quot;memory&quot;: &quot;512Mi&quot;}</p>
              */
-            public Builder limits(java.util.Map < String, ? > limits) {
+            public Builder limits(java.util.Map<String, ?> limits) {
                 this.limits = limits;
                 return this;
             }
 
             /**
-             * The resources that are requested by the egress gateway.
+             * <p>The resources that are requested by the egress gateway.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>{&quot;cpu&quot;:&quot;100m&quot;, &quot;memory&quot;: &quot;256Mi&quot;}</p>
              */
-            public Builder requests(java.util.Map < String, ? > requests) {
+            public Builder requests(java.util.Map<String, ?> requests) {
                 this.requests = requests;
                 return this;
             }
@@ -1050,29 +1490,35 @@ public class DescribeServiceMeshDetailResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link DescribeServiceMeshDetailResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeServiceMeshDetailResponseBody</p>
+     */
     public static class AdaptiveXdsConfiguration extends TeaModel {
-        @NameInMap("EgressAutoscaleEnabled")
+        @com.aliyun.core.annotation.NameInMap("EgressAutoscaleEnabled")
         private Boolean egressAutoscaleEnabled;
 
-        @NameInMap("EgressHpaCpu")
+        @com.aliyun.core.annotation.NameInMap("EgressHpaCpu")
         private EgressHpaCpu egressHpaCpu;
 
-        @NameInMap("EgressHpaMemory")
+        @com.aliyun.core.annotation.NameInMap("EgressHpaMemory")
         private EgressHpaMemory egressHpaMemory;
 
-        @NameInMap("EgressMaxReplica")
+        @com.aliyun.core.annotation.NameInMap("EgressMaxReplica")
         private Integer egressMaxReplica;
 
-        @NameInMap("EgressMinReplica")
+        @com.aliyun.core.annotation.NameInMap("EgressMinReplica")
         private Integer egressMinReplica;
 
-        @NameInMap("EgressReplicaCount")
+        @com.aliyun.core.annotation.NameInMap("EgressReplicaCount")
         private Integer egressReplicaCount;
 
-        @NameInMap("EgressResources")
+        @com.aliyun.core.annotation.NameInMap("EgressResources")
         private EgressResources egressResources;
 
-        @NameInMap("Enabled")
+        @com.aliyun.core.annotation.NameInMap("Enabled")
         private Boolean enabled;
 
         private AdaptiveXdsConfiguration(Builder builder) {
@@ -1160,8 +1606,25 @@ public class DescribeServiceMeshDetailResponseBody extends TeaModel {
             private EgressResources egressResources; 
             private Boolean enabled; 
 
+            private Builder() {
+            } 
+
+            private Builder(AdaptiveXdsConfiguration model) {
+                this.egressAutoscaleEnabled = model.egressAutoscaleEnabled;
+                this.egressHpaCpu = model.egressHpaCpu;
+                this.egressHpaMemory = model.egressHpaMemory;
+                this.egressMaxReplica = model.egressMaxReplica;
+                this.egressMinReplica = model.egressMinReplica;
+                this.egressReplicaCount = model.egressReplicaCount;
+                this.egressResources = model.egressResources;
+                this.enabled = model.enabled;
+            } 
+
             /**
-             * Indicates whether Horizontal Pod Autoscaling (HPA) is enabled for the egress gateway.
+             * <p>Indicates whether Horizontal Pod Autoscaling (HPA) is enabled for the egress gateway.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>true</p>
              */
             public Builder egressAutoscaleEnabled(Boolean egressAutoscaleEnabled) {
                 this.egressAutoscaleEnabled = egressAutoscaleEnabled;
@@ -1169,7 +1632,7 @@ public class DescribeServiceMeshDetailResponseBody extends TeaModel {
             }
 
             /**
-             * The CPU resource configurations of the egress gateway when HPA is enabled.
+             * <p>The CPU resource configurations of the egress gateway when HPA is enabled.</p>
              */
             public Builder egressHpaCpu(EgressHpaCpu egressHpaCpu) {
                 this.egressHpaCpu = egressHpaCpu;
@@ -1177,7 +1640,7 @@ public class DescribeServiceMeshDetailResponseBody extends TeaModel {
             }
 
             /**
-             * The memory resource configurations of the egress gateway when HPA is enabled.
+             * <p>The memory resource configurations of the egress gateway when HPA is enabled.</p>
              */
             public Builder egressHpaMemory(EgressHpaMemory egressHpaMemory) {
                 this.egressHpaMemory = egressHpaMemory;
@@ -1185,7 +1648,10 @@ public class DescribeServiceMeshDetailResponseBody extends TeaModel {
             }
 
             /**
-             * The maximum number of egress gateway pod replicas when HPA is enabled.
+             * <p>The maximum number of egress gateway pod replicas when HPA is enabled.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2</p>
              */
             public Builder egressMaxReplica(Integer egressMaxReplica) {
                 this.egressMaxReplica = egressMaxReplica;
@@ -1193,7 +1659,10 @@ public class DescribeServiceMeshDetailResponseBody extends TeaModel {
             }
 
             /**
-             * The minimum number of egress gateway pod replicas when HPA is enabled.
+             * <p>The minimum number of egress gateway pod replicas when HPA is enabled.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder egressMinReplica(Integer egressMinReplica) {
                 this.egressMinReplica = egressMinReplica;
@@ -1201,7 +1670,10 @@ public class DescribeServiceMeshDetailResponseBody extends TeaModel {
             }
 
             /**
-             * The number of the egress gateway pod replicas.
+             * <p>The number of the egress gateway pod replicas.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2</p>
              */
             public Builder egressReplicaCount(Integer egressReplicaCount) {
                 this.egressReplicaCount = egressReplicaCount;
@@ -1209,7 +1681,7 @@ public class DescribeServiceMeshDetailResponseBody extends TeaModel {
             }
 
             /**
-             * The resource configurations of the egress gateway that is used by adaptive xDS optimization.
+             * <p>The resource configurations of the egress gateway that is used by adaptive xDS optimization.</p>
              */
             public Builder egressResources(EgressResources egressResources) {
                 this.egressResources = egressResources;
@@ -1217,7 +1689,10 @@ public class DescribeServiceMeshDetailResponseBody extends TeaModel {
             }
 
             /**
-             * Indicates whether adaptive xDS optimization is enabled.
+             * <p>Indicates whether adaptive xDS optimization is enabled.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>true</p>
              */
             public Builder enabled(Boolean enabled) {
                 this.enabled = enabled;
@@ -1231,8 +1706,14 @@ public class DescribeServiceMeshDetailResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link DescribeServiceMeshDetailResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeServiceMeshDetailResponseBody</p>
+     */
     public static class AutoDiagnosis extends TeaModel {
-        @NameInMap("AutoDiagnosisEnabled")
+        @com.aliyun.core.annotation.NameInMap("AutoDiagnosisEnabled")
         private Boolean autoDiagnosisEnabled;
 
         private AutoDiagnosis(Builder builder) {
@@ -1257,8 +1738,18 @@ public class DescribeServiceMeshDetailResponseBody extends TeaModel {
         public static final class Builder {
             private Boolean autoDiagnosisEnabled; 
 
+            private Builder() {
+            } 
+
+            private Builder(AutoDiagnosis model) {
+                this.autoDiagnosisEnabled = model.autoDiagnosisEnabled;
+            } 
+
             /**
-             * Indicates whether automatic diagnostics is enabled for the ASM instance. If you enable this feature, the ASM instance is automatically diagnosed 5 minutes after you modify an Istio resource.
+             * <p>Indicates whether automatic diagnostics is enabled for the ASM instance. If you enable this feature, the ASM instance is automatically diagnosed 5 minutes after you modify an Istio resource.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>true</p>
              */
             public Builder autoDiagnosisEnabled(Boolean autoDiagnosisEnabled) {
                 this.autoDiagnosisEnabled = autoDiagnosisEnabled;
@@ -1272,8 +1763,14 @@ public class DescribeServiceMeshDetailResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link DescribeServiceMeshDetailResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeServiceMeshDetailResponseBody</p>
+     */
     public static class CRAggregationConfiguration extends TeaModel {
-        @NameInMap("Enabled")
+        @com.aliyun.core.annotation.NameInMap("Enabled")
         private Boolean enabled;
 
         private CRAggregationConfiguration(Builder builder) {
@@ -1298,8 +1795,18 @@ public class DescribeServiceMeshDetailResponseBody extends TeaModel {
         public static final class Builder {
             private Boolean enabled; 
 
+            private Builder() {
+            } 
+
+            private Builder(CRAggregationConfiguration model) {
+                this.enabled = model.enabled;
+            } 
+
             /**
-             * Indicates whether Istio resources can be accessed by using the Kubernetes API on the data plane.
+             * <p>Indicates whether Istio resources can be accessed by using the Kubernetes API on the data plane.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>true</p>
              */
             public Builder enabled(Boolean enabled) {
                 this.enabled = enabled;
@@ -1313,8 +1820,14 @@ public class DescribeServiceMeshDetailResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link DescribeServiceMeshDetailResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeServiceMeshDetailResponseBody</p>
+     */
     public static class IstioCRHistory extends TeaModel {
-        @NameInMap("EnableHistory")
+        @com.aliyun.core.annotation.NameInMap("EnableHistory")
         private Boolean enableHistory;
 
         private IstioCRHistory(Builder builder) {
@@ -1339,12 +1852,22 @@ public class DescribeServiceMeshDetailResponseBody extends TeaModel {
         public static final class Builder {
             private Boolean enableHistory; 
 
+            private Builder() {
+            } 
+
+            private Builder(IstioCRHistory model) {
+                this.enableHistory = model.enableHistory;
+            } 
+
             /**
-             * Indicates whether the rollback feature for Istio resources is enabled. Valid values:
-             * <p>
+             * <p>Indicates whether the rollback feature for Istio resources is enabled. Valid values:</p>
+             * <ul>
+             * <li><code>true</code></li>
+             * <li><code>false</code></li>
+             * </ul>
              * 
-             * *   `true`
-             * *   `false`
+             * <strong>example:</strong>
+             * <p>false</p>
              */
             public Builder enableHistory(Boolean enableHistory) {
                 this.enableHistory = enableHistory;
@@ -1358,9 +1881,93 @@ public class DescribeServiceMeshDetailResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link DescribeServiceMeshDetailResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeServiceMeshDetailResponseBody</p>
+     */
+    public static class IstiodExtraConfiguration extends TeaModel {
+        @com.aliyun.core.annotation.NameInMap("LabelsForOffloadedWorkloads")
+        private String labelsForOffloadedWorkloads;
+
+        @com.aliyun.core.annotation.NameInMap("PilotEnableQuicListeners")
+        private Boolean pilotEnableQuicListeners;
+
+        private IstiodExtraConfiguration(Builder builder) {
+            this.labelsForOffloadedWorkloads = builder.labelsForOffloadedWorkloads;
+            this.pilotEnableQuicListeners = builder.pilotEnableQuicListeners;
+        }
+
+        public static Builder builder() {
+            return new Builder();
+        }
+
+        public static IstiodExtraConfiguration create() {
+            return builder().build();
+        }
+
+        /**
+         * @return labelsForOffloadedWorkloads
+         */
+        public String getLabelsForOffloadedWorkloads() {
+            return this.labelsForOffloadedWorkloads;
+        }
+
+        /**
+         * @return pilotEnableQuicListeners
+         */
+        public Boolean getPilotEnableQuicListeners() {
+            return this.pilotEnableQuicListeners;
+        }
+
+        public static final class Builder {
+            private String labelsForOffloadedWorkloads; 
+            private Boolean pilotEnableQuicListeners; 
+
+            private Builder() {
+            } 
+
+            private Builder(IstiodExtraConfiguration model) {
+                this.labelsForOffloadedWorkloads = model.labelsForOffloadedWorkloads;
+                this.pilotEnableQuicListeners = model.pilotEnableQuicListeners;
+            } 
+
+            /**
+             * <p>The labels for isolated workloads.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>name=xx,region=xx</p>
+             */
+            public Builder labelsForOffloadedWorkloads(String labelsForOffloadedWorkloads) {
+                this.labelsForOffloadedWorkloads = labelsForOffloadedWorkloads;
+                return this;
+            }
+
+            /**
+             * PilotEnableQuicListeners.
+             */
+            public Builder pilotEnableQuicListeners(Boolean pilotEnableQuicListeners) {
+                this.pilotEnableQuicListeners = pilotEnableQuicListeners;
+                return this;
+            }
+
+            public IstiodExtraConfiguration build() {
+                return new IstiodExtraConfiguration(this);
+            } 
+
+        } 
+
+    }
+    /**
+     * 
+     * {@link DescribeServiceMeshDetailResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeServiceMeshDetailResponseBody</p>
+     */
     public static class Exec extends TeaModel {
-        @NameInMap("command")
-        private java.util.List < String > command;
+        @com.aliyun.core.annotation.NameInMap("command")
+        private java.util.List<String> command;
 
         private Exec(Builder builder) {
             this.command = builder.command;
@@ -1377,17 +1984,24 @@ public class DescribeServiceMeshDetailResponseBody extends TeaModel {
         /**
          * @return command
          */
-        public java.util.List < String > getCommand() {
+        public java.util.List<String> getCommand() {
             return this.command;
         }
 
         public static final class Builder {
-            private java.util.List < String > command; 
+            private java.util.List<String> command; 
+
+            private Builder() {
+            } 
+
+            private Builder(Exec model) {
+                this.command = model.command;
+            } 
 
             /**
-             * The executed commands. The value is a string that consists of JSON arrays.
+             * <p>The executed commands. The value is a string that consists of JSON arrays.</p>
              */
-            public Builder command(java.util.List < String > command) {
+            public Builder command(java.util.List<String> command) {
                 this.command = command;
                 return this;
             }
@@ -1399,11 +2013,17 @@ public class DescribeServiceMeshDetailResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link DescribeServiceMeshDetailResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeServiceMeshDetailResponseBody</p>
+     */
     public static class HttpHeaders extends TeaModel {
-        @NameInMap("name")
+        @com.aliyun.core.annotation.NameInMap("name")
         private String name;
 
-        @NameInMap("value")
+        @com.aliyun.core.annotation.NameInMap("value")
         private String value;
 
         private HttpHeaders(Builder builder) {
@@ -1437,8 +2057,19 @@ public class DescribeServiceMeshDetailResponseBody extends TeaModel {
             private String name; 
             private String value; 
 
+            private Builder() {
+            } 
+
+            private Builder(HttpHeaders model) {
+                this.name = model.name;
+                this.value = model.value;
+            } 
+
             /**
-             * The name of the HTTP request header.
+             * <p>The name of the HTTP request header.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>key</p>
              */
             public Builder name(String name) {
                 this.name = name;
@@ -1446,7 +2077,10 @@ public class DescribeServiceMeshDetailResponseBody extends TeaModel {
             }
 
             /**
-             * The value of the HTTP request header field.
+             * <p>The value of the HTTP request header.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>value</p>
              */
             public Builder value(String value) {
                 this.value = value;
@@ -1460,17 +2094,23 @@ public class DescribeServiceMeshDetailResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link DescribeServiceMeshDetailResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeServiceMeshDetailResponseBody</p>
+     */
     public static class HttpGet extends TeaModel {
-        @NameInMap("host")
+        @com.aliyun.core.annotation.NameInMap("host")
         private String host;
 
-        @NameInMap("httpHeaders")
-        private java.util.List < HttpHeaders> httpHeaders;
+        @com.aliyun.core.annotation.NameInMap("httpHeaders")
+        private java.util.List<HttpHeaders> httpHeaders;
 
-        @NameInMap("port")
+        @com.aliyun.core.annotation.NameInMap("port")
         private String port;
 
-        @NameInMap("scheme")
+        @com.aliyun.core.annotation.NameInMap("scheme")
         private String scheme;
 
         private HttpGet(Builder builder) {
@@ -1498,7 +2138,7 @@ public class DescribeServiceMeshDetailResponseBody extends TeaModel {
         /**
          * @return httpHeaders
          */
-        public java.util.List < HttpHeaders> getHttpHeaders() {
+        public java.util.List<HttpHeaders> getHttpHeaders() {
             return this.httpHeaders;
         }
 
@@ -1518,12 +2158,25 @@ public class DescribeServiceMeshDetailResponseBody extends TeaModel {
 
         public static final class Builder {
             private String host; 
-            private java.util.List < HttpHeaders> httpHeaders; 
+            private java.util.List<HttpHeaders> httpHeaders; 
             private String port; 
             private String scheme; 
 
+            private Builder() {
+            } 
+
+            private Builder(HttpGet model) {
+                this.host = model.host;
+                this.httpHeaders = model.httpHeaders;
+                this.port = model.port;
+                this.scheme = model.scheme;
+            } 
+
             /**
-             * The URL of the request.
+             * <p>The URL of the request.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>127.xx.xx.1</p>
              */
             public Builder host(String host) {
                 this.host = host;
@@ -1531,15 +2184,18 @@ public class DescribeServiceMeshDetailResponseBody extends TeaModel {
             }
 
             /**
-             * The HTTP request headers.
+             * <p>The HTTP request headers.</p>
              */
-            public Builder httpHeaders(java.util.List < HttpHeaders> httpHeaders) {
+            public Builder httpHeaders(java.util.List<HttpHeaders> httpHeaders) {
                 this.httpHeaders = httpHeaders;
                 return this;
             }
 
             /**
-             * The port number of the request.
+             * <p>The port number of the request.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>80</p>
              */
             public Builder port(String port) {
                 this.port = port;
@@ -1547,7 +2203,10 @@ public class DescribeServiceMeshDetailResponseBody extends TeaModel {
             }
 
             /**
-             * The request method. Valid values: `http` and `https`.
+             * <p>The request method. Valid values: <code>http</code> and <code>https</code>.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>http</p>
              */
             public Builder scheme(String scheme) {
                 this.scheme = scheme;
@@ -1561,11 +2220,17 @@ public class DescribeServiceMeshDetailResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link DescribeServiceMeshDetailResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeServiceMeshDetailResponseBody</p>
+     */
     public static class TcpSocket extends TeaModel {
-        @NameInMap("host")
+        @com.aliyun.core.annotation.NameInMap("host")
         private String host;
 
-        @NameInMap("port")
+        @com.aliyun.core.annotation.NameInMap("port")
         private String port;
 
         private TcpSocket(Builder builder) {
@@ -1599,8 +2264,19 @@ public class DescribeServiceMeshDetailResponseBody extends TeaModel {
             private String host; 
             private String port; 
 
+            private Builder() {
+            } 
+
+            private Builder(TcpSocket model) {
+                this.host = model.host;
+                this.port = model.port;
+            } 
+
             /**
-             * The URL of the TCP socket request.
+             * <p>The URL of the TCP socket request.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>127.xx.xx.1</p>
              */
             public Builder host(String host) {
                 this.host = host;
@@ -1608,7 +2284,10 @@ public class DescribeServiceMeshDetailResponseBody extends TeaModel {
             }
 
             /**
-             * The port number of the TCP socket request.
+             * <p>The port number of the TCP socket request.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>888</p>
              */
             public Builder port(String port) {
                 this.port = port;
@@ -1622,14 +2301,20 @@ public class DescribeServiceMeshDetailResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link DescribeServiceMeshDetailResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeServiceMeshDetailResponseBody</p>
+     */
     public static class PostStart extends TeaModel {
-        @NameInMap("exec")
+        @com.aliyun.core.annotation.NameInMap("exec")
         private Exec exec;
 
-        @NameInMap("httpGet")
+        @com.aliyun.core.annotation.NameInMap("httpGet")
         private HttpGet httpGet;
 
-        @NameInMap("tcpSocket")
+        @com.aliyun.core.annotation.NameInMap("tcpSocket")
         private TcpSocket tcpSocket;
 
         private PostStart(Builder builder) {
@@ -1672,8 +2357,17 @@ public class DescribeServiceMeshDetailResponseBody extends TeaModel {
             private HttpGet httpGet; 
             private TcpSocket tcpSocket; 
 
+            private Builder() {
+            } 
+
+            private Builder(PostStart model) {
+                this.exec = model.exec;
+                this.httpGet = model.httpGet;
+                this.tcpSocket = model.tcpSocket;
+            } 
+
             /**
-             * The post-start script.
+             * <p>The post-start script.</p>
              */
             public Builder exec(Exec exec) {
                 this.exec = exec;
@@ -1681,7 +2375,7 @@ public class DescribeServiceMeshDetailResponseBody extends TeaModel {
             }
 
             /**
-             * The HTTP GET request that is sent before the instance stops.
+             * <p>The HTTP GET request that is sent before the instance stops.</p>
              */
             public Builder httpGet(HttpGet httpGet) {
                 this.httpGet = httpGet;
@@ -1689,7 +2383,7 @@ public class DescribeServiceMeshDetailResponseBody extends TeaModel {
             }
 
             /**
-             * The TCP socket request that is sent.
+             * <p>The TCP socket request that is sent.</p>
              */
             public Builder tcpSocket(TcpSocket tcpSocket) {
                 this.tcpSocket = tcpSocket;
@@ -1703,9 +2397,15 @@ public class DescribeServiceMeshDetailResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link DescribeServiceMeshDetailResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeServiceMeshDetailResponseBody</p>
+     */
     public static class PreStopExec extends TeaModel {
-        @NameInMap("command")
-        private java.util.List < String > command;
+        @com.aliyun.core.annotation.NameInMap("command")
+        private java.util.List<String> command;
 
         private PreStopExec(Builder builder) {
             this.command = builder.command;
@@ -1722,17 +2422,24 @@ public class DescribeServiceMeshDetailResponseBody extends TeaModel {
         /**
          * @return command
          */
-        public java.util.List < String > getCommand() {
+        public java.util.List<String> getCommand() {
             return this.command;
         }
 
         public static final class Builder {
-            private java.util.List < String > command; 
+            private java.util.List<String> command; 
+
+            private Builder() {
+            } 
+
+            private Builder(PreStopExec model) {
+                this.command = model.command;
+            } 
 
             /**
-             * The executed commands. The value is a string that consists of JSON arrays.
+             * <p>The executed commands. The value is a string that consists of JSON arrays.</p>
              */
-            public Builder command(java.util.List < String > command) {
+            public Builder command(java.util.List<String> command) {
                 this.command = command;
                 return this;
             }
@@ -1744,11 +2451,17 @@ public class DescribeServiceMeshDetailResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link DescribeServiceMeshDetailResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeServiceMeshDetailResponseBody</p>
+     */
     public static class HttpGetHttpHeaders extends TeaModel {
-        @NameInMap("name")
+        @com.aliyun.core.annotation.NameInMap("name")
         private String name;
 
-        @NameInMap("value")
+        @com.aliyun.core.annotation.NameInMap("value")
         private String value;
 
         private HttpGetHttpHeaders(Builder builder) {
@@ -1782,8 +2495,19 @@ public class DescribeServiceMeshDetailResponseBody extends TeaModel {
             private String name; 
             private String value; 
 
+            private Builder() {
+            } 
+
+            private Builder(HttpGetHttpHeaders model) {
+                this.name = model.name;
+                this.value = model.value;
+            } 
+
             /**
-             * The name of the HTTP request header.
+             * <p>The name of the HTTP request header.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>key</p>
              */
             public Builder name(String name) {
                 this.name = name;
@@ -1791,7 +2515,10 @@ public class DescribeServiceMeshDetailResponseBody extends TeaModel {
             }
 
             /**
-             * The value of the HTTP request header field.
+             * <p>The value of the HTTP request header.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>value</p>
              */
             public Builder value(String value) {
                 this.value = value;
@@ -1805,17 +2532,23 @@ public class DescribeServiceMeshDetailResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link DescribeServiceMeshDetailResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeServiceMeshDetailResponseBody</p>
+     */
     public static class PreStopHttpGet extends TeaModel {
-        @NameInMap("host")
+        @com.aliyun.core.annotation.NameInMap("host")
         private String host;
 
-        @NameInMap("httpHeaders")
-        private java.util.List < HttpGetHttpHeaders> httpHeaders;
+        @com.aliyun.core.annotation.NameInMap("httpHeaders")
+        private java.util.List<HttpGetHttpHeaders> httpHeaders;
 
-        @NameInMap("port")
+        @com.aliyun.core.annotation.NameInMap("port")
         private String port;
 
-        @NameInMap("scheme")
+        @com.aliyun.core.annotation.NameInMap("scheme")
         private String scheme;
 
         private PreStopHttpGet(Builder builder) {
@@ -1843,7 +2576,7 @@ public class DescribeServiceMeshDetailResponseBody extends TeaModel {
         /**
          * @return httpHeaders
          */
-        public java.util.List < HttpGetHttpHeaders> getHttpHeaders() {
+        public java.util.List<HttpGetHttpHeaders> getHttpHeaders() {
             return this.httpHeaders;
         }
 
@@ -1863,12 +2596,25 @@ public class DescribeServiceMeshDetailResponseBody extends TeaModel {
 
         public static final class Builder {
             private String host; 
-            private java.util.List < HttpGetHttpHeaders> httpHeaders; 
+            private java.util.List<HttpGetHttpHeaders> httpHeaders; 
             private String port; 
             private String scheme; 
 
+            private Builder() {
+            } 
+
+            private Builder(PreStopHttpGet model) {
+                this.host = model.host;
+                this.httpHeaders = model.httpHeaders;
+                this.port = model.port;
+                this.scheme = model.scheme;
+            } 
+
             /**
-             * The URL of the request.
+             * <p>The URL of the request.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>127.xx.xx.1</p>
              */
             public Builder host(String host) {
                 this.host = host;
@@ -1876,15 +2622,18 @@ public class DescribeServiceMeshDetailResponseBody extends TeaModel {
             }
 
             /**
-             * The HTTP request headers.
+             * <p>The HTTP request headers.</p>
              */
-            public Builder httpHeaders(java.util.List < HttpGetHttpHeaders> httpHeaders) {
+            public Builder httpHeaders(java.util.List<HttpGetHttpHeaders> httpHeaders) {
                 this.httpHeaders = httpHeaders;
                 return this;
             }
 
             /**
-             * The port number of the request.
+             * <p>The port number of the request.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>80</p>
              */
             public Builder port(String port) {
                 this.port = port;
@@ -1892,7 +2641,10 @@ public class DescribeServiceMeshDetailResponseBody extends TeaModel {
             }
 
             /**
-             * The request method. Valid values: `http` and `https`.
+             * <p>The request method. Valid values: <code>http</code> and <code>https</code>.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>http</p>
              */
             public Builder scheme(String scheme) {
                 this.scheme = scheme;
@@ -1906,11 +2658,17 @@ public class DescribeServiceMeshDetailResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link DescribeServiceMeshDetailResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeServiceMeshDetailResponseBody</p>
+     */
     public static class PreStopTcpSocket extends TeaModel {
-        @NameInMap("host")
+        @com.aliyun.core.annotation.NameInMap("host")
         private String host;
 
-        @NameInMap("port")
+        @com.aliyun.core.annotation.NameInMap("port")
         private String port;
 
         private PreStopTcpSocket(Builder builder) {
@@ -1944,8 +2702,19 @@ public class DescribeServiceMeshDetailResponseBody extends TeaModel {
             private String host; 
             private String port; 
 
+            private Builder() {
+            } 
+
+            private Builder(PreStopTcpSocket model) {
+                this.host = model.host;
+                this.port = model.port;
+            } 
+
             /**
-             * The URL of the request.
+             * <p>The URL of the request.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>127.xx.xx.1</p>
              */
             public Builder host(String host) {
                 this.host = host;
@@ -1953,7 +2722,10 @@ public class DescribeServiceMeshDetailResponseBody extends TeaModel {
             }
 
             /**
-             * The port number of the request.
+             * <p>The port number of the request.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>888</p>
              */
             public Builder port(String port) {
                 this.port = port;
@@ -1967,14 +2739,20 @@ public class DescribeServiceMeshDetailResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link DescribeServiceMeshDetailResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeServiceMeshDetailResponseBody</p>
+     */
     public static class PreStop extends TeaModel {
-        @NameInMap("exec")
+        @com.aliyun.core.annotation.NameInMap("exec")
         private PreStopExec exec;
 
-        @NameInMap("httpGet")
+        @com.aliyun.core.annotation.NameInMap("httpGet")
         private PreStopHttpGet httpGet;
 
-        @NameInMap("tcpSocket")
+        @com.aliyun.core.annotation.NameInMap("tcpSocket")
         private PreStopTcpSocket tcpSocket;
 
         private PreStop(Builder builder) {
@@ -2017,8 +2795,17 @@ public class DescribeServiceMeshDetailResponseBody extends TeaModel {
             private PreStopHttpGet httpGet; 
             private PreStopTcpSocket tcpSocket; 
 
+            private Builder() {
+            } 
+
+            private Builder(PreStop model) {
+                this.exec = model.exec;
+                this.httpGet = model.httpGet;
+                this.tcpSocket = model.tcpSocket;
+            } 
+
             /**
-             * The pre-close script.
+             * <p>The pre-close script.</p>
              */
             public Builder exec(PreStopExec exec) {
                 this.exec = exec;
@@ -2026,7 +2813,7 @@ public class DescribeServiceMeshDetailResponseBody extends TeaModel {
             }
 
             /**
-             * The HTTP GET request that is sent before the instance stops.
+             * <p>The HTTP GET request that is sent before the instance stops.</p>
              */
             public Builder httpGet(PreStopHttpGet httpGet) {
                 this.httpGet = httpGet;
@@ -2034,7 +2821,7 @@ public class DescribeServiceMeshDetailResponseBody extends TeaModel {
             }
 
             /**
-             * The TCP socket request that is sent.
+             * <p>The TCP socket request that is sent.</p>
              */
             public Builder tcpSocket(PreStopTcpSocket tcpSocket) {
                 this.tcpSocket = tcpSocket;
@@ -2048,11 +2835,17 @@ public class DescribeServiceMeshDetailResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link DescribeServiceMeshDetailResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeServiceMeshDetailResponseBody</p>
+     */
     public static class Lifecycle extends TeaModel {
-        @NameInMap("postStart")
+        @com.aliyun.core.annotation.NameInMap("postStart")
         private PostStart postStart;
 
-        @NameInMap("preStop")
+        @com.aliyun.core.annotation.NameInMap("preStop")
         private PreStop preStop;
 
         private Lifecycle(Builder builder) {
@@ -2086,8 +2879,16 @@ public class DescribeServiceMeshDetailResponseBody extends TeaModel {
             private PostStart postStart; 
             private PreStop preStop; 
 
+            private Builder() {
+            } 
+
+            private Builder(Lifecycle model) {
+                this.postStart = model.postStart;
+                this.preStop = model.preStop;
+            } 
+
             /**
-             * The post-start parameters.
+             * <p>The post-start parameters.</p>
              */
             public Builder postStart(PostStart postStart) {
                 this.postStart = postStart;
@@ -2095,7 +2896,7 @@ public class DescribeServiceMeshDetailResponseBody extends TeaModel {
             }
 
             /**
-             * The pre-close parameters.
+             * <p>The pre-close parameters.</p>
              */
             public Builder preStop(PreStop preStop) {
                 this.preStop = preStop;
@@ -2109,11 +2910,17 @@ public class DescribeServiceMeshDetailResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link DescribeServiceMeshDetailResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeServiceMeshDetailResponseBody</p>
+     */
     public static class MultiBuffer extends TeaModel {
-        @NameInMap("Enabled")
+        @com.aliyun.core.annotation.NameInMap("Enabled")
         private Boolean enabled;
 
-        @NameInMap("PollDelay")
+        @com.aliyun.core.annotation.NameInMap("PollDelay")
         private String pollDelay;
 
         private MultiBuffer(Builder builder) {
@@ -2147,12 +2954,23 @@ public class DescribeServiceMeshDetailResponseBody extends TeaModel {
             private Boolean enabled; 
             private String pollDelay; 
 
+            private Builder() {
+            } 
+
+            private Builder(MultiBuffer model) {
+                this.enabled = model.enabled;
+                this.pollDelay = model.pollDelay;
+            } 
+
             /**
-             * Indicates whether MulitiBuffer-based TLS acceleration is enabled. Valid values:
-             * <p>
+             * <p>Indicates whether MultiBuffer-based TLS acceleration is enabled. Valid values:</p>
+             * <ul>
+             * <li><code>true</code></li>
+             * <li><code>false</code></li>
+             * </ul>
              * 
-             * *   `true`
-             * *   `false`
+             * <strong>example:</strong>
+             * <p>false</p>
              */
             public Builder enabled(Boolean enabled) {
                 this.enabled = enabled;
@@ -2160,7 +2978,10 @@ public class DescribeServiceMeshDetailResponseBody extends TeaModel {
             }
 
             /**
-             * The pull-request latency.
+             * <p>The pull-request latency.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>0.02s</p>
              */
             public Builder pollDelay(String pollDelay) {
                 this.pollDelay = pollDelay;
@@ -2174,11 +2995,17 @@ public class DescribeServiceMeshDetailResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link DescribeServiceMeshDetailResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeServiceMeshDetailResponseBody</p>
+     */
     public static class NFDConfiguration extends TeaModel {
-        @NameInMap("Enabled")
+        @com.aliyun.core.annotation.NameInMap("Enabled")
         private Boolean enabled;
 
-        @NameInMap("NFDLabelPruned")
+        @com.aliyun.core.annotation.NameInMap("NFDLabelPruned")
         private Boolean NFDLabelPruned;
 
         private NFDConfiguration(Builder builder) {
@@ -2212,8 +3039,19 @@ public class DescribeServiceMeshDetailResponseBody extends TeaModel {
             private Boolean enabled; 
             private Boolean NFDLabelPruned; 
 
+            private Builder() {
+            } 
+
+            private Builder(NFDConfiguration model) {
+                this.enabled = model.enabled;
+                this.NFDLabelPruned = model.NFDLabelPruned;
+            } 
+
             /**
-             * Indicates whether NFD is enabled.
+             * <p>Indicates whether NFD is enabled.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>true</p>
              */
             public Builder enabled(Boolean enabled) {
                 this.enabled = enabled;
@@ -2221,7 +3059,10 @@ public class DescribeServiceMeshDetailResponseBody extends TeaModel {
             }
 
             /**
-             * Indicates whether feature labels on nodes are cleared when NFD is disabled.
+             * <p>Indicates whether feature labels on nodes are cleared when NFD is disabled.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>true</p>
              */
             public Builder NFDLabelPruned(Boolean NFDLabelPruned) {
                 this.NFDLabelPruned = NFDLabelPruned;
@@ -2235,8 +3076,14 @@ public class DescribeServiceMeshDetailResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link DescribeServiceMeshDetailResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeServiceMeshDetailResponseBody</p>
+     */
     public static class OPAScopeInjection extends TeaModel {
-        @NameInMap("OPAScopeInjected")
+        @com.aliyun.core.annotation.NameInMap("OPAScopeInjected")
         private Boolean OPAScopeInjected;
 
         private OPAScopeInjection(Builder builder) {
@@ -2261,12 +3108,22 @@ public class DescribeServiceMeshDetailResponseBody extends TeaModel {
         public static final class Builder {
             private Boolean OPAScopeInjected; 
 
+            private Builder() {
+            } 
+
+            private Builder(OPAScopeInjection model) {
+                this.OPAScopeInjected = model.OPAScopeInjected;
+            } 
+
             /**
-             * Indicates whether the feature of controlling the OPA injection scope is enabled. Valid values:
-             * <p>
+             * <p>Indicates whether the feature of controlling the OPA injection scope is enabled. Valid values:</p>
+             * <ul>
+             * <li><code>true</code></li>
+             * <li><code>false</code></li>
+             * </ul>
              * 
-             * *   `true`
-             * *   `false`
+             * <strong>example:</strong>
+             * <p>false</p>
              */
             public Builder OPAScopeInjected(Boolean OPAScopeInjected) {
                 this.OPAScopeInjected = OPAScopeInjected;
@@ -2280,11 +3137,71 @@ public class DescribeServiceMeshDetailResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link DescribeServiceMeshDetailResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeServiceMeshDetailResponseBody</p>
+     */
+    public static class Playground extends TeaModel {
+        @com.aliyun.core.annotation.NameInMap("Scene")
+        private String scene;
+
+        private Playground(Builder builder) {
+            this.scene = builder.scene;
+        }
+
+        public static Builder builder() {
+            return new Builder();
+        }
+
+        public static Playground create() {
+            return builder().build();
+        }
+
+        /**
+         * @return scene
+         */
+        public String getScene() {
+            return this.scene;
+        }
+
+        public static final class Builder {
+            private String scene; 
+
+            private Builder() {
+            } 
+
+            private Builder(Playground model) {
+                this.scene = model.scene;
+            } 
+
+            /**
+             * Scene.
+             */
+            public Builder scene(String scene) {
+                this.scene = scene;
+                return this;
+            }
+
+            public Playground build() {
+                return new Playground(this);
+            } 
+
+        } 
+
+    }
+    /**
+     * 
+     * {@link DescribeServiceMeshDetailResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeServiceMeshDetailResponseBody</p>
+     */
     public static class SidecarProxyInitResourceLimit extends TeaModel {
-        @NameInMap("ResourceCPULimit")
+        @com.aliyun.core.annotation.NameInMap("ResourceCPULimit")
         private String resourceCPULimit;
 
-        @NameInMap("ResourceMemoryLimit")
+        @com.aliyun.core.annotation.NameInMap("ResourceMemoryLimit")
         private String resourceMemoryLimit;
 
         private SidecarProxyInitResourceLimit(Builder builder) {
@@ -2318,8 +3235,19 @@ public class DescribeServiceMeshDetailResponseBody extends TeaModel {
             private String resourceCPULimit; 
             private String resourceMemoryLimit; 
 
+            private Builder() {
+            } 
+
+            private Builder(SidecarProxyInitResourceLimit model) {
+                this.resourceCPULimit = model.resourceCPULimit;
+                this.resourceMemoryLimit = model.resourceMemoryLimit;
+            } 
+
             /**
-             * The maximum number of CPU cores that are available to the istio-init container.
+             * <p>The maximum number of CPU cores that are available to the istio-init container.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2000m</p>
              */
             public Builder resourceCPULimit(String resourceCPULimit) {
                 this.resourceCPULimit = resourceCPULimit;
@@ -2327,7 +3255,10 @@ public class DescribeServiceMeshDetailResponseBody extends TeaModel {
             }
 
             /**
-             * The maximum size of the memory that is available to the istio-init container.
+             * <p>The maximum size of the memory that is available to the istio-init container.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1024Mi</p>
              */
             public Builder resourceMemoryLimit(String resourceMemoryLimit) {
                 this.resourceMemoryLimit = resourceMemoryLimit;
@@ -2341,11 +3272,17 @@ public class DescribeServiceMeshDetailResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link DescribeServiceMeshDetailResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeServiceMeshDetailResponseBody</p>
+     */
     public static class SidecarProxyInitResourceRequest extends TeaModel {
-        @NameInMap("ResourceCPURequest")
+        @com.aliyun.core.annotation.NameInMap("ResourceCPURequest")
         private String resourceCPURequest;
 
-        @NameInMap("ResourceMemoryRequest")
+        @com.aliyun.core.annotation.NameInMap("ResourceMemoryRequest")
         private String resourceMemoryRequest;
 
         private SidecarProxyInitResourceRequest(Builder builder) {
@@ -2379,8 +3316,19 @@ public class DescribeServiceMeshDetailResponseBody extends TeaModel {
             private String resourceCPURequest; 
             private String resourceMemoryRequest; 
 
+            private Builder() {
+            } 
+
+            private Builder(SidecarProxyInitResourceRequest model) {
+                this.resourceCPURequest = model.resourceCPURequest;
+                this.resourceMemoryRequest = model.resourceMemoryRequest;
+            } 
+
             /**
-             * The number of CPU cores that are requested by the istio-init container.
+             * <p>The number of CPU cores that are requested by the istio-init container.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>10m</p>
              */
             public Builder resourceCPURequest(String resourceCPURequest) {
                 this.resourceCPURequest = resourceCPURequest;
@@ -2388,7 +3336,10 @@ public class DescribeServiceMeshDetailResponseBody extends TeaModel {
             }
 
             /**
-             * The size of the memory that is requested by the istio-init container.
+             * <p>The size of the memory that is requested by the istio-init container.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>10Mi</p>
              */
             public Builder resourceMemoryRequest(String resourceMemoryRequest) {
                 this.resourceMemoryRequest = resourceMemoryRequest;
@@ -2402,47 +3353,59 @@ public class DescribeServiceMeshDetailResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link DescribeServiceMeshDetailResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeServiceMeshDetailResponseBody</p>
+     */
     public static class ExtraConfiguration extends TeaModel {
-        @NameInMap("AccessLogExtraConf")
+        @com.aliyun.core.annotation.NameInMap("AccessLogExtraConf")
         private AccessLogExtraConf accessLogExtraConf;
 
-        @NameInMap("AdaptiveXdsConfiguration")
+        @com.aliyun.core.annotation.NameInMap("AdaptiveXdsConfiguration")
         private AdaptiveXdsConfiguration adaptiveXdsConfiguration;
 
-        @NameInMap("AutoDiagnosis")
+        @com.aliyun.core.annotation.NameInMap("AutoDiagnosis")
         private AutoDiagnosis autoDiagnosis;
 
-        @NameInMap("CRAggregationConfiguration")
+        @com.aliyun.core.annotation.NameInMap("CRAggregationConfiguration")
         private CRAggregationConfiguration CRAggregationConfiguration;
 
-        @NameInMap("CRAggregationEnabled")
+        @com.aliyun.core.annotation.NameInMap("CRAggregationEnabled")
         private Boolean CRAggregationEnabled;
 
-        @NameInMap("DiscoverySelectors")
-        private java.util.List < java.util.Map<String, ?>> discoverySelectors;
+        @com.aliyun.core.annotation.NameInMap("DiscoverySelectors")
+        private java.util.List<java.util.Map<String, ?>> discoverySelectors;
 
-        @NameInMap("IstioCRHistory")
+        @com.aliyun.core.annotation.NameInMap("IstioCRHistory")
         private IstioCRHistory istioCRHistory;
 
-        @NameInMap("Lifecycle")
+        @com.aliyun.core.annotation.NameInMap("IstiodExtraConfiguration")
+        private IstiodExtraConfiguration istiodExtraConfiguration;
+
+        @com.aliyun.core.annotation.NameInMap("Lifecycle")
         private Lifecycle lifecycle;
 
-        @NameInMap("MultiBuffer")
+        @com.aliyun.core.annotation.NameInMap("MultiBuffer")
         private MultiBuffer multiBuffer;
 
-        @NameInMap("NFDConfiguration")
+        @com.aliyun.core.annotation.NameInMap("NFDConfiguration")
         private NFDConfiguration NFDConfiguration;
 
-        @NameInMap("OPAScopeInjection")
+        @com.aliyun.core.annotation.NameInMap("OPAScopeInjection")
         private OPAScopeInjection OPAScopeInjection;
 
-        @NameInMap("SidecarProxyInitResourceLimit")
+        @com.aliyun.core.annotation.NameInMap("Playground")
+        private Playground playground;
+
+        @com.aliyun.core.annotation.NameInMap("SidecarProxyInitResourceLimit")
         private SidecarProxyInitResourceLimit sidecarProxyInitResourceLimit;
 
-        @NameInMap("SidecarProxyInitResourceRequest")
+        @com.aliyun.core.annotation.NameInMap("SidecarProxyInitResourceRequest")
         private SidecarProxyInitResourceRequest sidecarProxyInitResourceRequest;
 
-        @NameInMap("TerminationDrainDuration")
+        @com.aliyun.core.annotation.NameInMap("TerminationDrainDuration")
         private String terminationDrainDuration;
 
         private ExtraConfiguration(Builder builder) {
@@ -2453,10 +3416,12 @@ public class DescribeServiceMeshDetailResponseBody extends TeaModel {
             this.CRAggregationEnabled = builder.CRAggregationEnabled;
             this.discoverySelectors = builder.discoverySelectors;
             this.istioCRHistory = builder.istioCRHistory;
+            this.istiodExtraConfiguration = builder.istiodExtraConfiguration;
             this.lifecycle = builder.lifecycle;
             this.multiBuffer = builder.multiBuffer;
             this.NFDConfiguration = builder.NFDConfiguration;
             this.OPAScopeInjection = builder.OPAScopeInjection;
+            this.playground = builder.playground;
             this.sidecarProxyInitResourceLimit = builder.sidecarProxyInitResourceLimit;
             this.sidecarProxyInitResourceRequest = builder.sidecarProxyInitResourceRequest;
             this.terminationDrainDuration = builder.terminationDrainDuration;
@@ -2508,7 +3473,7 @@ public class DescribeServiceMeshDetailResponseBody extends TeaModel {
         /**
          * @return discoverySelectors
          */
-        public java.util.List < java.util.Map<String, ?>> getDiscoverySelectors() {
+        public java.util.List<java.util.Map<String, ?>> getDiscoverySelectors() {
             return this.discoverySelectors;
         }
 
@@ -2517,6 +3482,13 @@ public class DescribeServiceMeshDetailResponseBody extends TeaModel {
          */
         public IstioCRHistory getIstioCRHistory() {
             return this.istioCRHistory;
+        }
+
+        /**
+         * @return istiodExtraConfiguration
+         */
+        public IstiodExtraConfiguration getIstiodExtraConfiguration() {
+            return this.istiodExtraConfiguration;
         }
 
         /**
@@ -2548,6 +3520,13 @@ public class DescribeServiceMeshDetailResponseBody extends TeaModel {
         }
 
         /**
+         * @return playground
+         */
+        public Playground getPlayground() {
+            return this.playground;
+        }
+
+        /**
          * @return sidecarProxyInitResourceLimit
          */
         public SidecarProxyInitResourceLimit getSidecarProxyInitResourceLimit() {
@@ -2574,18 +3553,42 @@ public class DescribeServiceMeshDetailResponseBody extends TeaModel {
             private AutoDiagnosis autoDiagnosis; 
             private CRAggregationConfiguration CRAggregationConfiguration; 
             private Boolean CRAggregationEnabled; 
-            private java.util.List < java.util.Map<String, ?>> discoverySelectors; 
+            private java.util.List<java.util.Map<String, ?>> discoverySelectors; 
             private IstioCRHistory istioCRHistory; 
+            private IstiodExtraConfiguration istiodExtraConfiguration; 
             private Lifecycle lifecycle; 
             private MultiBuffer multiBuffer; 
             private NFDConfiguration NFDConfiguration; 
             private OPAScopeInjection OPAScopeInjection; 
+            private Playground playground; 
             private SidecarProxyInitResourceLimit sidecarProxyInitResourceLimit; 
             private SidecarProxyInitResourceRequest sidecarProxyInitResourceRequest; 
             private String terminationDrainDuration; 
 
+            private Builder() {
+            } 
+
+            private Builder(ExtraConfiguration model) {
+                this.accessLogExtraConf = model.accessLogExtraConf;
+                this.adaptiveXdsConfiguration = model.adaptiveXdsConfiguration;
+                this.autoDiagnosis = model.autoDiagnosis;
+                this.CRAggregationConfiguration = model.CRAggregationConfiguration;
+                this.CRAggregationEnabled = model.CRAggregationEnabled;
+                this.discoverySelectors = model.discoverySelectors;
+                this.istioCRHistory = model.istioCRHistory;
+                this.istiodExtraConfiguration = model.istiodExtraConfiguration;
+                this.lifecycle = model.lifecycle;
+                this.multiBuffer = model.multiBuffer;
+                this.NFDConfiguration = model.NFDConfiguration;
+                this.OPAScopeInjection = model.OPAScopeInjection;
+                this.playground = model.playground;
+                this.sidecarProxyInitResourceLimit = model.sidecarProxyInitResourceLimit;
+                this.sidecarProxyInitResourceRequest = model.sidecarProxyInitResourceRequest;
+                this.terminationDrainDuration = model.terminationDrainDuration;
+            } 
+
             /**
-             * The configurations of additional features for access log collection.
+             * <p>The configurations of additional features for access log collection.</p>
              */
             public Builder accessLogExtraConf(AccessLogExtraConf accessLogExtraConf) {
                 this.accessLogExtraConf = accessLogExtraConf;
@@ -2593,7 +3596,7 @@ public class DescribeServiceMeshDetailResponseBody extends TeaModel {
             }
 
             /**
-             * The configurations of adaptive xDS optimization.
+             * <p>The configurations of adaptive xDS optimization.</p>
              */
             public Builder adaptiveXdsConfiguration(AdaptiveXdsConfiguration adaptiveXdsConfiguration) {
                 this.adaptiveXdsConfiguration = adaptiveXdsConfiguration;
@@ -2601,7 +3604,7 @@ public class DescribeServiceMeshDetailResponseBody extends TeaModel {
             }
 
             /**
-             * The configurations of automatic diagnostics for the ASM instance.
+             * <p>The configurations of automatic diagnostics for the ASM instance.</p>
              */
             public Builder autoDiagnosis(AutoDiagnosis autoDiagnosis) {
                 this.autoDiagnosis = autoDiagnosis;
@@ -2609,7 +3612,7 @@ public class DescribeServiceMeshDetailResponseBody extends TeaModel {
             }
 
             /**
-             * Access to Istio resources by using the Kubernetes API on the data plane.
+             * <p>Access to Istio resources by using the Kubernetes API on the data plane.</p>
              */
             public Builder CRAggregationConfiguration(CRAggregationConfiguration CRAggregationConfiguration) {
                 this.CRAggregationConfiguration = CRAggregationConfiguration;
@@ -2617,11 +3620,14 @@ public class DescribeServiceMeshDetailResponseBody extends TeaModel {
             }
 
             /**
-             * Indicates whether the Kubernetes API of clusters on the data plane can be used to access Istio resources. Valid values:
-             * <p>
+             * <p>Indicates whether the Kubernetes API of clusters on the data plane can be used to access Istio resources. Valid values:</p>
+             * <ul>
+             * <li><code>true</code></li>
+             * <li><code>false</code></li>
+             * </ul>
              * 
-             * *   `true`
-             * *   `false`
+             * <strong>example:</strong>
+             * <p>false</p>
              */
             public Builder CRAggregationEnabled(Boolean CRAggregationEnabled) {
                 this.CRAggregationEnabled = CRAggregationEnabled;
@@ -2629,15 +3635,15 @@ public class DescribeServiceMeshDetailResponseBody extends TeaModel {
             }
 
             /**
-             * The label selectors used to specify the namespaces of the clusters on the data plane. The control plane discovers and processes only application services in the specified namespaces.
+             * <p>The label selectors used to specify the namespaces of the clusters on the data plane. The control plane discovers and processes only application services in the specified namespaces.</p>
              */
-            public Builder discoverySelectors(java.util.List < java.util.Map<String, ?>> discoverySelectors) {
+            public Builder discoverySelectors(java.util.List<java.util.Map<String, ?>> discoverySelectors) {
                 this.discoverySelectors = discoverySelectors;
                 return this;
             }
 
             /**
-             * The configurations of the rollback feature for Istio resources.
+             * <p>The configurations of the rollback feature for Istio resources.</p>
              */
             public Builder istioCRHistory(IstioCRHistory istioCRHistory) {
                 this.istioCRHistory = istioCRHistory;
@@ -2645,7 +3651,15 @@ public class DescribeServiceMeshDetailResponseBody extends TeaModel {
             }
 
             /**
-             * The lifecycle of Istio Proxy.
+             * <p>Additional configurations for Istiod.</p>
+             */
+            public Builder istiodExtraConfiguration(IstiodExtraConfiguration istiodExtraConfiguration) {
+                this.istiodExtraConfiguration = istiodExtraConfiguration;
+                return this;
+            }
+
+            /**
+             * <p>The lifecycle of Istio Proxy.</p>
              */
             public Builder lifecycle(Lifecycle lifecycle) {
                 this.lifecycle = lifecycle;
@@ -2653,7 +3667,7 @@ public class DescribeServiceMeshDetailResponseBody extends TeaModel {
             }
 
             /**
-             * The information about Transport Layer Security (TLS) acceleration based on MulitiBuffer.
+             * <p>The information about Transport Layer Security (TLS) acceleration based on MultiBuffer.</p>
              */
             public Builder multiBuffer(MultiBuffer multiBuffer) {
                 this.multiBuffer = multiBuffer;
@@ -2661,7 +3675,7 @@ public class DescribeServiceMeshDetailResponseBody extends TeaModel {
             }
 
             /**
-             * The configurations of Node Feature Discovery (NFD).
+             * <p>The configurations of Node Feature Discovery (NFD).</p>
              */
             public Builder NFDConfiguration(NFDConfiguration NFDConfiguration) {
                 this.NFDConfiguration = NFDConfiguration;
@@ -2669,7 +3683,7 @@ public class DescribeServiceMeshDetailResponseBody extends TeaModel {
             }
 
             /**
-             * The configurations of the feature of controlling the OPA injection scope.
+             * <p>The configurations of the feature of controlling the OPA injection scope.</p>
              */
             public Builder OPAScopeInjection(OPAScopeInjection OPAScopeInjection) {
                 this.OPAScopeInjection = OPAScopeInjection;
@@ -2677,7 +3691,15 @@ public class DescribeServiceMeshDetailResponseBody extends TeaModel {
             }
 
             /**
-             * The resource limits on the istio-init container.
+             * Playground.
+             */
+            public Builder playground(Playground playground) {
+                this.playground = playground;
+                return this;
+            }
+
+            /**
+             * <p>The resource limits on the istio-init container.</p>
              */
             public Builder sidecarProxyInitResourceLimit(SidecarProxyInitResourceLimit sidecarProxyInitResourceLimit) {
                 this.sidecarProxyInitResourceLimit = sidecarProxyInitResourceLimit;
@@ -2685,7 +3707,7 @@ public class DescribeServiceMeshDetailResponseBody extends TeaModel {
             }
 
             /**
-             * The resources that are required by the istio-init container.
+             * <p>The resources that are required by the istio-init container.</p>
              */
             public Builder sidecarProxyInitResourceRequest(SidecarProxyInitResourceRequest sidecarProxyInitResourceRequest) {
                 this.sidecarProxyInitResourceRequest = sidecarProxyInitResourceRequest;
@@ -2693,7 +3715,10 @@ public class DescribeServiceMeshDetailResponseBody extends TeaModel {
             }
 
             /**
-             * The maximum period of time that Istio Proxy waits for a request to end.
+             * <p>The maximum period of time that Istio Proxy waits for a request to end.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>5s</p>
              */
             public Builder terminationDrainDuration(String terminationDrainDuration) {
                 this.terminationDrainDuration = terminationDrainDuration;
@@ -2707,8 +3732,14 @@ public class DescribeServiceMeshDetailResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link DescribeServiceMeshDetailResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeServiceMeshDetailResponseBody</p>
+     */
     public static class K8sNewAPIsSupport extends TeaModel {
-        @NameInMap("GatewayAPIEnabled")
+        @com.aliyun.core.annotation.NameInMap("GatewayAPIEnabled")
         private Boolean gatewayAPIEnabled;
 
         private K8sNewAPIsSupport(Builder builder) {
@@ -2733,12 +3764,22 @@ public class DescribeServiceMeshDetailResponseBody extends TeaModel {
         public static final class Builder {
             private Boolean gatewayAPIEnabled; 
 
+            private Builder() {
+            } 
+
+            private Builder(K8sNewAPIsSupport model) {
+                this.gatewayAPIEnabled = model.gatewayAPIEnabled;
+            } 
+
             /**
-             * Indicates whether Gateway API is enabled. Valid values:
-             * <p>
+             * <p>Indicates whether Gateway API is enabled. Valid values:</p>
+             * <ul>
+             * <li><code>true</code></li>
+             * <li><code>false</code></li>
+             * </ul>
              * 
-             * *   `true`
-             * *   `false`
+             * <strong>example:</strong>
+             * <p>false</p>
              */
             public Builder gatewayAPIEnabled(Boolean gatewayAPIEnabled) {
                 this.gatewayAPIEnabled = gatewayAPIEnabled;
@@ -2752,11 +3793,17 @@ public class DescribeServiceMeshDetailResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link DescribeServiceMeshDetailResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeServiceMeshDetailResponseBody</p>
+     */
     public static class Kiali extends TeaModel {
-        @NameInMap("Enabled")
+        @com.aliyun.core.annotation.NameInMap("Enabled")
         private Boolean enabled;
 
-        @NameInMap("Url")
+        @com.aliyun.core.annotation.NameInMap("Url")
         private String url;
 
         private Kiali(Builder builder) {
@@ -2790,12 +3837,23 @@ public class DescribeServiceMeshDetailResponseBody extends TeaModel {
             private Boolean enabled; 
             private String url; 
 
+            private Builder() {
+            } 
+
+            private Builder(Kiali model) {
+                this.enabled = model.enabled;
+                this.url = model.url;
+            } 
+
             /**
-             * Indicates whether mesh topology is enabled. Mesh topology can be enabled only when Prometheus monitoring is enabled. If Prometheus monitoring is disabled, you must set this parameter to `false`.`` Valid values:
-             * <p>
+             * <p>Indicates whether mesh topology is enabled. Mesh topology can be enabled only when Prometheus monitoring is enabled. If Prometheus monitoring is disabled, you must set this parameter to <code>false</code>.`` Valid values:</p>
+             * <ul>
+             * <li><code>true</code></li>
+             * <li><code>false</code></li>
+             * </ul>
              * 
-             * *   `true`
-             * *   `false`
+             * <strong>example:</strong>
+             * <p>false</p>
              */
             public Builder enabled(Boolean enabled) {
                 this.enabled = enabled;
@@ -2803,7 +3861,10 @@ public class DescribeServiceMeshDetailResponseBody extends TeaModel {
             }
 
             /**
-             * The endpoint of the mesh topology service.
+             * <p>The endpoint of the mesh topology service.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>http://<code>1.2.**.**</code>:20001</p>
              */
             public Builder url(String url) {
                 this.url = url;
@@ -2817,20 +3878,30 @@ public class DescribeServiceMeshDetailResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link DescribeServiceMeshDetailResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeServiceMeshDetailResponseBody</p>
+     */
     public static class LocalityLB extends TeaModel {
-        @NameInMap("Distribute")
-        private java.util.Map < String, ? > distribute;
+        @com.aliyun.core.annotation.NameInMap("Distribute")
+        private java.util.Map<String, ?> distribute;
 
-        @NameInMap("Enabled")
+        @com.aliyun.core.annotation.NameInMap("Enabled")
         private Boolean enabled;
 
-        @NameInMap("Failover")
-        private java.util.Map < String, ? > failover;
+        @com.aliyun.core.annotation.NameInMap("Failover")
+        private java.util.Map<String, ?> failover;
+
+        @com.aliyun.core.annotation.NameInMap("FailoverPriority")
+        private java.util.Map<String, ?> failoverPriority;
 
         private LocalityLB(Builder builder) {
             this.distribute = builder.distribute;
             this.enabled = builder.enabled;
             this.failover = builder.failover;
+            this.failoverPriority = builder.failoverPriority;
         }
 
         public static Builder builder() {
@@ -2844,7 +3915,7 @@ public class DescribeServiceMeshDetailResponseBody extends TeaModel {
         /**
          * @return distribute
          */
-        public java.util.Map < String, ? > getDistribute() {
+        public java.util.Map<String, ?> getDistribute() {
             return this.distribute;
         }
 
@@ -2858,32 +3929,56 @@ public class DescribeServiceMeshDetailResponseBody extends TeaModel {
         /**
          * @return failover
          */
-        public java.util.Map < String, ? > getFailover() {
+        public java.util.Map<String, ?> getFailover() {
             return this.failover;
         }
 
+        /**
+         * @return failoverPriority
+         */
+        public java.util.Map<String, ?> getFailoverPriority() {
+            return this.failoverPriority;
+        }
+
         public static final class Builder {
-            private java.util.Map < String, ? > distribute; 
+            private java.util.Map<String, ?> distribute; 
             private Boolean enabled; 
-            private java.util.Map < String, ? > failover; 
+            private java.util.Map<String, ?> failover; 
+            private java.util.Map<String, ?> failoverPriority; 
+
+            private Builder() {
+            } 
+
+            private Builder(LocalityLB model) {
+                this.distribute = model.distribute;
+                this.enabled = model.enabled;
+                this.failover = model.failover;
+                this.failoverPriority = model.failoverPriority;
+            } 
 
             /**
-             * The configurations of cross-region traffic distribution.
-             * <p>
+             * <p>The configurations of cross-region traffic distribution.</p>
+             * <blockquote>
+             * <p> Either <code>Failover</code> or Distribute can be set. If you set <code>Distribute</code>, you cannot set Failover.</p>
+             * </blockquote>
              * 
-             * >  Either `Failover` or Distribute can be set. If you set `Distribute`, you cannot set Failover.
+             * <strong>example:</strong>
+             * <p>[{&quot;from&quot;:&quot;cn-shanghai&quot;,&quot;to&quot;:{&quot;cn-hangzhou/<em>&quot;:50,&quot;cn-shanghai/</em>&quot;:25,&quot;cn-zhangjiakou/<em>&quot;:25}},{&quot;from&quot;:&quot;cn-hangzhou&quot;,&quot;to&quot;:{&quot;cn-hangzhou/</em>&quot;:50,&quot;cn-shanghai/<em>&quot;:25,&quot;cn-zhangjiakou/</em>&quot;:25}}]</p>
              */
-            public Builder distribute(java.util.Map < String, ? > distribute) {
+            public Builder distribute(java.util.Map<String, ?> distribute) {
                 this.distribute = distribute;
                 return this;
             }
 
             /**
-             * Indicates whether cross-region load balancing is enabled. Valid values:
-             * <p>
+             * <p>Indicates whether cross-region load balancing is enabled. Valid values:</p>
+             * <ul>
+             * <li><code>true</code></li>
+             * <li><code>false</code></li>
+             * </ul>
              * 
-             * *   `true`
-             * *   `false`
+             * <strong>example:</strong>
+             * <p>false</p>
              */
             public Builder enabled(Boolean enabled) {
                 this.enabled = enabled;
@@ -2891,13 +3986,24 @@ public class DescribeServiceMeshDetailResponseBody extends TeaModel {
             }
 
             /**
-             * The configurations of cross-region failover.
-             * <p>
+             * <p>The configurations of cross-region failover.</p>
+             * <blockquote>
+             * <p> Either Failover or <code>Distribute</code> can be set. If you set <code>Failover</code>, you cannot set <code>Distribute</code>.</p>
+             * </blockquote>
              * 
-             * >  Either Failover or `Distribute` can be set. If you set `Failover`, you cannot set `Distribute`.
+             * <strong>example:</strong>
+             * <p>{&quot;failover&quot;:[{&quot;from&quot;:&quot;cn-hangzhou&quot;,&quot;to&quot;:&quot;cn-shanghai&quot;}]}</p>
              */
-            public Builder failover(java.util.Map < String, ? > failover) {
+            public Builder failover(java.util.Map<String, ?> failover) {
                 this.failover = failover;
+                return this;
+            }
+
+            /**
+             * FailoverPriority.
+             */
+            public Builder failoverPriority(java.util.Map<String, ?> failoverPriority) {
+                this.failoverPriority = failoverPriority;
                 return this;
             }
 
@@ -2908,8 +4014,14 @@ public class DescribeServiceMeshDetailResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link DescribeServiceMeshDetailResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeServiceMeshDetailResponseBody</p>
+     */
     public static class MSE extends TeaModel {
-        @NameInMap("Enabled")
+        @com.aliyun.core.annotation.NameInMap("Enabled")
         private Boolean enabled;
 
         private MSE(Builder builder) {
@@ -2934,12 +4046,22 @@ public class DescribeServiceMeshDetailResponseBody extends TeaModel {
         public static final class Builder {
             private Boolean enabled; 
 
+            private Builder() {
+            } 
+
+            private Builder(MSE model) {
+                this.enabled = model.enabled;
+            } 
+
             /**
-             * Indicates whether MSE is enabled. Valid values:
-             * <p>
+             * <p>Indicates whether MSE is enabled. Valid values:</p>
+             * <ul>
+             * <li><code>true</code></li>
+             * <li><code>false</code></li>
+             * </ul>
              * 
-             * *   `true`
-             * *   `false`
+             * <strong>example:</strong>
+             * <p>false</p>
              */
             public Builder enabled(Boolean enabled) {
                 this.enabled = enabled;
@@ -2953,23 +4075,29 @@ public class DescribeServiceMeshDetailResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link DescribeServiceMeshDetailResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeServiceMeshDetailResponseBody</p>
+     */
     public static class OPA extends TeaModel {
-        @NameInMap("Enabled")
+        @com.aliyun.core.annotation.NameInMap("Enabled")
         private Boolean enabled;
 
-        @NameInMap("LimitCPU")
+        @com.aliyun.core.annotation.NameInMap("LimitCPU")
         private String limitCPU;
 
-        @NameInMap("LimitMemory")
+        @com.aliyun.core.annotation.NameInMap("LimitMemory")
         private String limitMemory;
 
-        @NameInMap("LogLevel")
+        @com.aliyun.core.annotation.NameInMap("LogLevel")
         private String logLevel;
 
-        @NameInMap("RequestCPU")
+        @com.aliyun.core.annotation.NameInMap("RequestCPU")
         private String requestCPU;
 
-        @NameInMap("RequestMemory")
+        @com.aliyun.core.annotation.NameInMap("RequestMemory")
         private String requestMemory;
 
         private OPA(Builder builder) {
@@ -3039,12 +4167,27 @@ public class DescribeServiceMeshDetailResponseBody extends TeaModel {
             private String requestCPU; 
             private String requestMemory; 
 
+            private Builder() {
+            } 
+
+            private Builder(OPA model) {
+                this.enabled = model.enabled;
+                this.limitCPU = model.limitCPU;
+                this.limitMemory = model.limitMemory;
+                this.logLevel = model.logLevel;
+                this.requestCPU = model.requestCPU;
+                this.requestMemory = model.requestMemory;
+            } 
+
             /**
-             * Indicates whether the OPA plug-in is installed. Valid values:
-             * <p>
+             * <p>Indicates whether the OPA plug-in is installed. Valid values:</p>
+             * <ul>
+             * <li><code>true</code></li>
+             * <li><code>false</code></li>
+             * </ul>
              * 
-             * *   `true`
-             * *   `false`
+             * <strong>example:</strong>
+             * <p>true</p>
              */
             public Builder enabled(Boolean enabled) {
                 this.enabled = enabled;
@@ -3052,7 +4195,10 @@ public class DescribeServiceMeshDetailResponseBody extends TeaModel {
             }
 
             /**
-             * The maximum number of CPU cores that are available to the OPA proxy container.
+             * <p>The maximum number of CPU cores that are available to the OPA proxy container.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder limitCPU(String limitCPU) {
                 this.limitCPU = limitCPU;
@@ -3060,7 +4206,10 @@ public class DescribeServiceMeshDetailResponseBody extends TeaModel {
             }
 
             /**
-             * The maximum size of the memory that is available to the OPA proxy container.
+             * <p>The maximum size of the memory that is available to the OPA proxy container.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>512Mi</p>
              */
             public Builder limitMemory(String limitMemory) {
                 this.limitMemory = limitMemory;
@@ -3068,7 +4217,10 @@ public class DescribeServiceMeshDetailResponseBody extends TeaModel {
             }
 
             /**
-             * The level of the logs to be generated for OPA.
+             * <p>The level of the logs to be generated for OPA.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>info</p>
              */
             public Builder logLevel(String logLevel) {
                 this.logLevel = logLevel;
@@ -3076,7 +4228,10 @@ public class DescribeServiceMeshDetailResponseBody extends TeaModel {
             }
 
             /**
-             * The number of CPU cores that are requested by the OPA proxy container.
+             * <p>The number of CPU cores that are requested by the OPA proxy container.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2</p>
              */
             public Builder requestCPU(String requestCPU) {
                 this.requestCPU = requestCPU;
@@ -3084,7 +4239,10 @@ public class DescribeServiceMeshDetailResponseBody extends TeaModel {
             }
 
             /**
-             * The size of the memory that is requested by OPA.
+             * <p>The size of the memory that is requested by OPA.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1024Mi</p>
              */
             public Builder requestMemory(String requestMemory) {
                 this.requestMemory = requestMemory;
@@ -3098,11 +4256,17 @@ public class DescribeServiceMeshDetailResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link DescribeServiceMeshDetailResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeServiceMeshDetailResponseBody</p>
+     */
     public static class ConfigSource extends TeaModel {
-        @NameInMap("Enabled")
+        @com.aliyun.core.annotation.NameInMap("Enabled")
         private Boolean enabled;
 
-        @NameInMap("NacosID")
+        @com.aliyun.core.annotation.NameInMap("NacosID")
         private String nacosID;
 
         private ConfigSource(Builder builder) {
@@ -3136,12 +4300,23 @@ public class DescribeServiceMeshDetailResponseBody extends TeaModel {
             private Boolean enabled; 
             private String nacosID; 
 
+            private Builder() {
+            } 
+
+            private Builder(ConfigSource model) {
+                this.enabled = model.enabled;
+                this.nacosID = model.nacosID;
+            } 
+
             /**
-             * Indicates whether communication is allowed between external services and services in the mesh. Valid values:
-             * <p>
+             * <p>Indicates whether communication is allowed between external services and services in the mesh. Valid values:</p>
+             * <ul>
+             * <li><code>true</code></li>
+             * <li><code>false</code></li>
+             * </ul>
              * 
-             * *   `true`
-             * *   `false`
+             * <strong>example:</strong>
+             * <p>false</p>
              */
             public Builder enabled(Boolean enabled) {
                 this.enabled = enabled;
@@ -3149,7 +4324,10 @@ public class DescribeServiceMeshDetailResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the Nacos instance that provides external service information.
+             * <p>The ID of the Nacos instance that provides external service information.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>mse-cn-tl326******</p>
              */
             public Builder nacosID(String nacosID) {
                 this.nacosID = nacosID;
@@ -3163,11 +4341,17 @@ public class DescribeServiceMeshDetailResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link DescribeServiceMeshDetailResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeServiceMeshDetailResponseBody</p>
+     */
     public static class Feature extends TeaModel {
-        @NameInMap("EnableSDSServer")
+        @com.aliyun.core.annotation.NameInMap("EnableSDSServer")
         private Boolean enableSDSServer;
 
-        @NameInMap("FilterGatewayClusterConfig")
+        @com.aliyun.core.annotation.NameInMap("FilterGatewayClusterConfig")
         private Boolean filterGatewayClusterConfig;
 
         private Feature(Builder builder) {
@@ -3201,12 +4385,23 @@ public class DescribeServiceMeshDetailResponseBody extends TeaModel {
             private Boolean enableSDSServer; 
             private Boolean filterGatewayClusterConfig; 
 
+            private Builder() {
+            } 
+
+            private Builder(Feature model) {
+                this.enableSDSServer = model.enableSDSServer;
+                this.filterGatewayClusterConfig = model.filterGatewayClusterConfig;
+            } 
+
             /**
-             * Indicates whether Secret Discovery Service (SDS) is enabled. Valid values:
-             * <p>
+             * <p>Indicates whether Secret Discovery Service (SDS) is enabled. Valid values:</p>
+             * <ul>
+             * <li><code>true</code></li>
+             * <li><code>false</code></li>
+             * </ul>
              * 
-             * *   `true`
-             * *   `false`
+             * <strong>example:</strong>
+             * <p>false</p>
              */
             public Builder enableSDSServer(Boolean enableSDSServer) {
                 this.enableSDSServer = enableSDSServer;
@@ -3214,11 +4409,14 @@ public class DescribeServiceMeshDetailResponseBody extends TeaModel {
             }
 
             /**
-             * Indicates whether gateway configuration filtering is enabled. Valid values:
-             * <p>
+             * <p>Indicates whether gateway configuration filtering is enabled. Valid values:</p>
+             * <ul>
+             * <li><code>true</code></li>
+             * <li><code>false</code></li>
+             * </ul>
              * 
-             * *   `true`
-             * *   `false`
+             * <strong>example:</strong>
+             * <p>false</p>
              */
             public Builder filterGatewayClusterConfig(Boolean filterGatewayClusterConfig) {
                 this.filterGatewayClusterConfig = filterGatewayClusterConfig;
@@ -3232,17 +4430,23 @@ public class DescribeServiceMeshDetailResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link DescribeServiceMeshDetailResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeServiceMeshDetailResponseBody</p>
+     */
     public static class Pilot extends TeaModel {
-        @NameInMap("ConfigSource")
+        @com.aliyun.core.annotation.NameInMap("ConfigSource")
         private ConfigSource configSource;
 
-        @NameInMap("Feature")
+        @com.aliyun.core.annotation.NameInMap("Feature")
         private Feature feature;
 
-        @NameInMap("Http10Enabled")
+        @com.aliyun.core.annotation.NameInMap("Http10Enabled")
         private Boolean http10Enabled;
 
-        @NameInMap("TraceSampling")
+        @com.aliyun.core.annotation.NameInMap("TraceSampling")
         private Float traceSampling;
 
         private Pilot(Builder builder) {
@@ -3294,8 +4498,18 @@ public class DescribeServiceMeshDetailResponseBody extends TeaModel {
             private Boolean http10Enabled; 
             private Float traceSampling; 
 
+            private Builder() {
+            } 
+
+            private Builder(Pilot model) {
+                this.configSource = model.configSource;
+                this.feature = model.feature;
+                this.http10Enabled = model.http10Enabled;
+                this.traceSampling = model.traceSampling;
+            } 
+
             /**
-             * The configurations of communication between external services and services in the mesh.
+             * <p>The configurations of communication between external services and services in the mesh.</p>
              */
             public Builder configSource(ConfigSource configSource) {
                 this.configSource = configSource;
@@ -3303,7 +4517,7 @@ public class DescribeServiceMeshDetailResponseBody extends TeaModel {
             }
 
             /**
-             * The configurations of Pilot features.
+             * <p>The configurations of Pilot features.</p>
              */
             public Builder feature(Feature feature) {
                 this.feature = feature;
@@ -3311,11 +4525,14 @@ public class DescribeServiceMeshDetailResponseBody extends TeaModel {
             }
 
             /**
-             * Indicates whether HTTP/1.0 is supported. Valid values:
-             * <p>
+             * <p>Indicates whether HTTP/1.0 is supported. Valid values:</p>
+             * <ul>
+             * <li><code>true</code></li>
+             * <li><code>false</code></li>
+             * </ul>
              * 
-             * *   `true`
-             * *   `false`
+             * <strong>example:</strong>
+             * <p>false</p>
              */
             public Builder http10Enabled(Boolean http10Enabled) {
                 this.http10Enabled = http10Enabled;
@@ -3323,7 +4540,10 @@ public class DescribeServiceMeshDetailResponseBody extends TeaModel {
             }
 
             /**
-             * The sampling percentage of tracing analysis.
+             * <p>The sampling percentage of tracing analysis.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>100</p>
              */
             public Builder traceSampling(Float traceSampling) {
                 this.traceSampling = traceSampling;
@@ -3337,11 +4557,17 @@ public class DescribeServiceMeshDetailResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link DescribeServiceMeshDetailResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeServiceMeshDetailResponseBody</p>
+     */
     public static class Prometheus extends TeaModel {
-        @NameInMap("ExternalUrl")
+        @com.aliyun.core.annotation.NameInMap("ExternalUrl")
         private String externalUrl;
 
-        @NameInMap("UseExternal")
+        @com.aliyun.core.annotation.NameInMap("UseExternal")
         private Boolean useExternal;
 
         private Prometheus(Builder builder) {
@@ -3375,8 +4601,19 @@ public class DescribeServiceMeshDetailResponseBody extends TeaModel {
             private String externalUrl; 
             private Boolean useExternal; 
 
+            private Builder() {
+            } 
+
+            private Builder(Prometheus model) {
+                this.externalUrl = model.externalUrl;
+                this.useExternal = model.useExternal;
+            } 
+
             /**
-             * The endpoint of Prometheus monitoring. If you use a custom Prometheus instance, this parameter is populated by the system.
+             * <p>The endpoint of Prometheus monitoring. If you use a custom Prometheus instance, this parameter is populated by the system.</p>
+             * 
+             * <strong>example:</strong>
+             * <p><a href="http://prometheus:9090">http://prometheus:9090</a></p>
              */
             public Builder externalUrl(String externalUrl) {
                 this.externalUrl = externalUrl;
@@ -3384,11 +4621,14 @@ public class DescribeServiceMeshDetailResponseBody extends TeaModel {
             }
 
             /**
-             * Indicates whether a custom Prometheus instance is used. Valid values:
-             * <p>
+             * <p>Indicates whether a custom Prometheus instance is used. Valid values:</p>
+             * <ul>
+             * <li><code>true</code></li>
+             * <li><code>false</code></li>
+             * </ul>
              * 
-             * *   `true`
-             * *   `false`
+             * <strong>example:</strong>
+             * <p>false</p>
              */
             public Builder useExternal(Boolean useExternal) {
                 this.useExternal = useExternal;
@@ -3402,17 +4642,23 @@ public class DescribeServiceMeshDetailResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link DescribeServiceMeshDetailResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeServiceMeshDetailResponseBody</p>
+     */
     public static class ProtocolSupport extends TeaModel {
-        @NameInMap("DubboFilterEnabled")
+        @com.aliyun.core.annotation.NameInMap("DubboFilterEnabled")
         private Boolean dubboFilterEnabled;
 
-        @NameInMap("MysqlFilterEnabled")
+        @com.aliyun.core.annotation.NameInMap("MysqlFilterEnabled")
         private Boolean mysqlFilterEnabled;
 
-        @NameInMap("RedisFilterEnabled")
+        @com.aliyun.core.annotation.NameInMap("RedisFilterEnabled")
         private Boolean redisFilterEnabled;
 
-        @NameInMap("ThriftFilterEnabled")
+        @com.aliyun.core.annotation.NameInMap("ThriftFilterEnabled")
         private Boolean thriftFilterEnabled;
 
         private ProtocolSupport(Builder builder) {
@@ -3464,12 +4710,25 @@ public class DescribeServiceMeshDetailResponseBody extends TeaModel {
             private Boolean redisFilterEnabled; 
             private Boolean thriftFilterEnabled; 
 
+            private Builder() {
+            } 
+
+            private Builder(ProtocolSupport model) {
+                this.dubboFilterEnabled = model.dubboFilterEnabled;
+                this.mysqlFilterEnabled = model.mysqlFilterEnabled;
+                this.redisFilterEnabled = model.redisFilterEnabled;
+                this.thriftFilterEnabled = model.thriftFilterEnabled;
+            } 
+
             /**
-             * Indicates whether Dubbo Filter is enabled. Valid values:
-             * <p>
+             * <p>Indicates whether Dubbo Filter is enabled. Valid values:</p>
+             * <ul>
+             * <li><code>true</code></li>
+             * <li><code>false</code></li>
+             * </ul>
              * 
-             * *   `true`
-             * *   `false`
+             * <strong>example:</strong>
+             * <p>false</p>
              */
             public Builder dubboFilterEnabled(Boolean dubboFilterEnabled) {
                 this.dubboFilterEnabled = dubboFilterEnabled;
@@ -3477,11 +4736,14 @@ public class DescribeServiceMeshDetailResponseBody extends TeaModel {
             }
 
             /**
-             * Indicates whether MySQL Filter is enabled. Valid values:
-             * <p>
+             * <p>Indicates whether MySQL Filter is enabled. Valid values:</p>
+             * <ul>
+             * <li><code>true</code></li>
+             * <li><code>false</code></li>
+             * </ul>
              * 
-             * *   `true`
-             * *   `false`
+             * <strong>example:</strong>
+             * <p>false</p>
              */
             public Builder mysqlFilterEnabled(Boolean mysqlFilterEnabled) {
                 this.mysqlFilterEnabled = mysqlFilterEnabled;
@@ -3489,11 +4751,14 @@ public class DescribeServiceMeshDetailResponseBody extends TeaModel {
             }
 
             /**
-             * Indicates whether Redis Filter is enabled. Valid values:
-             * <p>
+             * <p>Indicates whether Redis Filter is enabled. Valid values:</p>
+             * <ul>
+             * <li><code>true</code></li>
+             * <li><code>false</code></li>
+             * </ul>
              * 
-             * *   `true`
-             * *   `false`
+             * <strong>example:</strong>
+             * <p>false</p>
              */
             public Builder redisFilterEnabled(Boolean redisFilterEnabled) {
                 this.redisFilterEnabled = redisFilterEnabled;
@@ -3501,11 +4766,14 @@ public class DescribeServiceMeshDetailResponseBody extends TeaModel {
             }
 
             /**
-             * Indicates whether Thrift Filter is enabled. Valid values:
-             * <p>
+             * <p>Indicates whether Thrift Filter is enabled. Valid values:</p>
+             * <ul>
+             * <li><code>true</code></li>
+             * <li><code>false</code></li>
+             * </ul>
              * 
-             * *   `true`
-             * *   `false`
+             * <strong>example:</strong>
+             * <p>false</p>
              */
             public Builder thriftFilterEnabled(Boolean thriftFilterEnabled) {
                 this.thriftFilterEnabled = thriftFilterEnabled;
@@ -3519,38 +4787,44 @@ public class DescribeServiceMeshDetailResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link DescribeServiceMeshDetailResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeServiceMeshDetailResponseBody</p>
+     */
     public static class Proxy extends TeaModel {
-        @NameInMap("AccessLogFile")
+        @com.aliyun.core.annotation.NameInMap("AccessLogFile")
         private String accessLogFile;
 
-        @NameInMap("AccessLogFormat")
+        @com.aliyun.core.annotation.NameInMap("AccessLogFormat")
         private String accessLogFormat;
 
-        @NameInMap("AccessLogServiceEnabled")
+        @com.aliyun.core.annotation.NameInMap("AccessLogServiceEnabled")
         private Boolean accessLogServiceEnabled;
 
-        @NameInMap("AccessLogServiceHost")
+        @com.aliyun.core.annotation.NameInMap("AccessLogServiceHost")
         private String accessLogServiceHost;
 
-        @NameInMap("AccessLogServicePort")
+        @com.aliyun.core.annotation.NameInMap("AccessLogServicePort")
         private Integer accessLogServicePort;
 
-        @NameInMap("ClusterDomain")
+        @com.aliyun.core.annotation.NameInMap("ClusterDomain")
         private String clusterDomain;
 
-        @NameInMap("EnableDNSProxying")
+        @com.aliyun.core.annotation.NameInMap("EnableDNSProxying")
         private Boolean enableDNSProxying;
 
-        @NameInMap("LimitCPU")
+        @com.aliyun.core.annotation.NameInMap("LimitCPU")
         private String limitCPU;
 
-        @NameInMap("LimitMemory")
+        @com.aliyun.core.annotation.NameInMap("LimitMemory")
         private String limitMemory;
 
-        @NameInMap("RequestCPU")
+        @com.aliyun.core.annotation.NameInMap("RequestCPU")
         private String requestCPU;
 
-        @NameInMap("RequestMemory")
+        @com.aliyun.core.annotation.NameInMap("RequestMemory")
         private String requestMemory;
 
         private Proxy(Builder builder) {
@@ -3665,8 +4939,28 @@ public class DescribeServiceMeshDetailResponseBody extends TeaModel {
             private String requestCPU; 
             private String requestMemory; 
 
+            private Builder() {
+            } 
+
+            private Builder(Proxy model) {
+                this.accessLogFile = model.accessLogFile;
+                this.accessLogFormat = model.accessLogFormat;
+                this.accessLogServiceEnabled = model.accessLogServiceEnabled;
+                this.accessLogServiceHost = model.accessLogServiceHost;
+                this.accessLogServicePort = model.accessLogServicePort;
+                this.clusterDomain = model.clusterDomain;
+                this.enableDNSProxying = model.enableDNSProxying;
+                this.limitCPU = model.limitCPU;
+                this.limitMemory = model.limitMemory;
+                this.requestCPU = model.requestCPU;
+                this.requestMemory = model.requestMemory;
+            } 
+
             /**
-             * The path to the file that stores the access logs of sidecar proxies.
+             * <p>The path to the file that stores the access logs of sidecar proxies.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>/dev/stdout</p>
              */
             public Builder accessLogFile(String accessLogFile) {
                 this.accessLogFile = accessLogFile;
@@ -3674,7 +4968,10 @@ public class DescribeServiceMeshDetailResponseBody extends TeaModel {
             }
 
             /**
-             * The format of the access logs of sidecar proxies.
+             * <p>The format of the access logs of sidecar proxies.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>{&quot;authority_for&quot;:&quot;%REQ(:AUTHORITY)%&quot;,&quot;bytes_received&quot;:&quot;%BYTES_RECEIVED%&quot;,&quot;bytes_sent&quot;:&quot;%BYTES_SENT%&quot;,&quot;downstream_local_address&quot;:&quot;%DOWNSTREAM_LOCAL_ADDRESS%&quot;,&quot;downstream_remote_address&quot;:&quot;%DOWNSTREAM_REMOTE_ADDRESS%&quot;,&quot;duration&quot;:&quot;%DURATION%&quot;,&quot;istio_policy_status&quot;:&quot;%DYNAMIC_METADATA(istio.mixer:status)%&quot;,&quot;method&quot;:&quot;%REQ(:METHOD)%&quot;,&quot;path&quot;:&quot;%REQ(X-ENVOY-ORIGINAL-PATH?:PATH)%&quot;,&quot;protocol&quot;:&quot;%PROTOCOL%&quot;,&quot;request_id&quot;:&quot;%REQ(X-REQUEST-ID)%&quot;,&quot;requested_server_name&quot;:&quot;%REQUESTED_SERVER_NAME%&quot;,&quot;response_code&quot;:&quot;%RESPONSE_CODE%&quot;,&quot;response_flags&quot;:&quot;%RESPONSE_FLAGS%&quot;,&quot;route_name&quot;:&quot;%ROUTE_NAME%&quot;,&quot;start_time&quot;:&quot;%START_TIME%&quot;,&quot;trace_id&quot;:&quot;%REQ(X-B3-TRACEID)%&quot;,&quot;upstream_cluster&quot;:&quot;%UPSTREAM_CLUSTER%&quot;,&quot;upstream_host&quot;:&quot;%UPSTREAM_HOST%&quot;,&quot;upstream_local_address&quot;:&quot;%UPSTREAM_LOCAL_ADDRESS%&quot;,&quot;upstream_service_time&quot;:&quot;%RESP(X-ENVOY-UPSTREAM-SERVICE-TIME)%&quot;,&quot;upstream_transport_failure_reason&quot;:&quot;%UPSTREAM_TRANSPORT_FAILURE_REASON%&quot;,&quot;user_agent&quot;:&quot;%REQ(USER-AGENT)%&quot;,&quot;x_forwarded_for&quot;:&quot;%REQ(X-FORWARDED-FOR)%&quot;}</p>
              */
             public Builder accessLogFormat(String accessLogFormat) {
                 this.accessLogFormat = accessLogFormat;
@@ -3682,11 +4979,14 @@ public class DescribeServiceMeshDetailResponseBody extends TeaModel {
             }
 
             /**
-             * Indicates whether gRPC Access Log Service (ALS) for Envoy is enabled. Valid values:
-             * <p>
+             * <p>Indicates whether gRPC Access Log Service (ALS) for Envoy is enabled. Valid values:</p>
+             * <ul>
+             * <li><code>true</code></li>
+             * <li><code>false</code></li>
+             * </ul>
              * 
-             * *   `true`
-             * *   `false`
+             * <strong>example:</strong>
+             * <p>false</p>
              */
             public Builder accessLogServiceEnabled(Boolean accessLogServiceEnabled) {
                 this.accessLogServiceEnabled = accessLogServiceEnabled;
@@ -3694,7 +4994,10 @@ public class DescribeServiceMeshDetailResponseBody extends TeaModel {
             }
 
             /**
-             * The endpoint of gRPC ALS for Envoy.
+             * <p>The endpoint of gRPC ALS for Envoy.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>0.0.0.0</p>
              */
             public Builder accessLogServiceHost(String accessLogServiceHost) {
                 this.accessLogServiceHost = accessLogServiceHost;
@@ -3702,7 +5005,10 @@ public class DescribeServiceMeshDetailResponseBody extends TeaModel {
             }
 
             /**
-             * The port of gRPC ALS for Envoy.
+             * <p>The port of gRPC ALS for Envoy.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>9999</p>
              */
             public Builder accessLogServicePort(Integer accessLogServicePort) {
                 this.accessLogServicePort = accessLogServicePort;
@@ -3710,7 +5016,10 @@ public class DescribeServiceMeshDetailResponseBody extends TeaModel {
             }
 
             /**
-             * The trusted domain.
+             * <p>The trusted domain.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>cluster.domain</p>
              */
             public Builder clusterDomain(String clusterDomain) {
                 this.clusterDomain = clusterDomain;
@@ -3718,11 +5027,14 @@ public class DescribeServiceMeshDetailResponseBody extends TeaModel {
             }
 
             /**
-             * Indicates whether the Domain Name System (DNS) proxy feature is enabled. Valid values:
-             * <p>
+             * <p>Indicates whether the Domain Name System (DNS) proxy feature is enabled. Valid values:</p>
+             * <ul>
+             * <li><code>true</code></li>
+             * <li><code>false</code></li>
+             * </ul>
              * 
-             * *   `true`
-             * *   `false`
+             * <strong>example:</strong>
+             * <p>false</p>
              */
             public Builder enableDNSProxying(Boolean enableDNSProxying) {
                 this.enableDNSProxying = enableDNSProxying;
@@ -3730,7 +5042,10 @@ public class DescribeServiceMeshDetailResponseBody extends TeaModel {
             }
 
             /**
-             * The maximum number of CPU cores.
+             * <p>The maximum number of CPU cores.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2000m</p>
              */
             public Builder limitCPU(String limitCPU) {
                 this.limitCPU = limitCPU;
@@ -3738,7 +5053,10 @@ public class DescribeServiceMeshDetailResponseBody extends TeaModel {
             }
 
             /**
-             * The maximum size of the memory.
+             * <p>The maximum size of the memory.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1024Mi</p>
              */
             public Builder limitMemory(String limitMemory) {
                 this.limitMemory = limitMemory;
@@ -3746,7 +5064,10 @@ public class DescribeServiceMeshDetailResponseBody extends TeaModel {
             }
 
             /**
-             * The number of CPU cores that are requested.
+             * <p>The number of CPU cores that are requested.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>100m</p>
              */
             public Builder requestCPU(String requestCPU) {
                 this.requestCPU = requestCPU;
@@ -3754,7 +5075,10 @@ public class DescribeServiceMeshDetailResponseBody extends TeaModel {
             }
 
             /**
-             * The size of the memory that is requested.
+             * <p>The size of the memory that is requested.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>128Mi</p>
              */
             public Builder requestMemory(String requestMemory) {
                 this.requestMemory = requestMemory;
@@ -3768,11 +5092,17 @@ public class DescribeServiceMeshDetailResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link DescribeServiceMeshDetailResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeServiceMeshDetailResponseBody</p>
+     */
     public static class InitCNIConfiguration extends TeaModel {
-        @NameInMap("Enabled")
+        @com.aliyun.core.annotation.NameInMap("Enabled")
         private Boolean enabled;
 
-        @NameInMap("ExcludeNamespaces")
+        @com.aliyun.core.annotation.NameInMap("ExcludeNamespaces")
         private String excludeNamespaces;
 
         private InitCNIConfiguration(Builder builder) {
@@ -3806,12 +5136,23 @@ public class DescribeServiceMeshDetailResponseBody extends TeaModel {
             private Boolean enabled; 
             private String excludeNamespaces; 
 
+            private Builder() {
+            } 
+
+            private Builder(InitCNIConfiguration model) {
+                this.enabled = model.enabled;
+                this.excludeNamespaces = model.excludeNamespaces;
+            } 
+
             /**
-             * Indicates whether the CNI plug-in is enabled. Valid values:
-             * <p>
+             * <p>Indicates whether the CNI plug-in is enabled. Valid values:</p>
+             * <ul>
+             * <li><code>true</code></li>
+             * <li><code>false</code></li>
+             * </ul>
              * 
-             * *   `true`
-             * *   `false`
+             * <strong>example:</strong>
+             * <p>false</p>
              */
             public Builder enabled(Boolean enabled) {
                 this.enabled = enabled;
@@ -3819,7 +5160,10 @@ public class DescribeServiceMeshDetailResponseBody extends TeaModel {
             }
 
             /**
-             * The namespaces to exclude. The CNI plug-in ignores pods in the excluded namespaces.
+             * <p>The namespaces to exclude. The CNI plug-in ignores pods in the excluded namespaces.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>kube-system,istio-system</p>
              */
             public Builder excludeNamespaces(String excludeNamespaces) {
                 this.excludeNamespaces = excludeNamespaces;
@@ -3833,32 +5177,38 @@ public class DescribeServiceMeshDetailResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link DescribeServiceMeshDetailResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeServiceMeshDetailResponseBody</p>
+     */
     public static class SidecarInjector extends TeaModel {
-        @NameInMap("AutoInjectionPolicyEnabled")
+        @com.aliyun.core.annotation.NameInMap("AutoInjectionPolicyEnabled")
         private Boolean autoInjectionPolicyEnabled;
 
-        @NameInMap("EnableNamespacesByDefault")
+        @com.aliyun.core.annotation.NameInMap("EnableNamespacesByDefault")
         private Boolean enableNamespacesByDefault;
 
-        @NameInMap("InitCNIConfiguration")
+        @com.aliyun.core.annotation.NameInMap("InitCNIConfiguration")
         private InitCNIConfiguration initCNIConfiguration;
 
-        @NameInMap("LimitCPU")
+        @com.aliyun.core.annotation.NameInMap("LimitCPU")
         private String limitCPU;
 
-        @NameInMap("LimitMemory")
+        @com.aliyun.core.annotation.NameInMap("LimitMemory")
         private String limitMemory;
 
-        @NameInMap("RequestCPU")
+        @com.aliyun.core.annotation.NameInMap("RequestCPU")
         private String requestCPU;
 
-        @NameInMap("RequestMemory")
+        @com.aliyun.core.annotation.NameInMap("RequestMemory")
         private String requestMemory;
 
-        @NameInMap("SidecarInjectorNum")
+        @com.aliyun.core.annotation.NameInMap("SidecarInjectorNum")
         private Integer sidecarInjectorNum;
 
-        @NameInMap("SidecarInjectorWebhookAsYaml")
+        @com.aliyun.core.annotation.NameInMap("SidecarInjectorWebhookAsYaml")
         private String sidecarInjectorWebhookAsYaml;
 
         private SidecarInjector(Builder builder) {
@@ -3955,12 +5305,30 @@ public class DescribeServiceMeshDetailResponseBody extends TeaModel {
             private Integer sidecarInjectorNum; 
             private String sidecarInjectorWebhookAsYaml; 
 
+            private Builder() {
+            } 
+
+            private Builder(SidecarInjector model) {
+                this.autoInjectionPolicyEnabled = model.autoInjectionPolicyEnabled;
+                this.enableNamespacesByDefault = model.enableNamespacesByDefault;
+                this.initCNIConfiguration = model.initCNIConfiguration;
+                this.limitCPU = model.limitCPU;
+                this.limitMemory = model.limitMemory;
+                this.requestCPU = model.requestCPU;
+                this.requestMemory = model.requestMemory;
+                this.sidecarInjectorNum = model.sidecarInjectorNum;
+                this.sidecarInjectorWebhookAsYaml = model.sidecarInjectorWebhookAsYaml;
+            } 
+
             /**
-             * Indicates whether automatic sidecar proxy injection can be enabled by using pod annotations. Valid values:
-             * <p>
+             * <p>Indicates whether automatic sidecar proxy injection can be enabled by using pod annotations. Valid values:</p>
+             * <ul>
+             * <li><code>true</code></li>
+             * <li><code>false</code></li>
+             * </ul>
              * 
-             * *   `true`
-             * *   `false`
+             * <strong>example:</strong>
+             * <p>true</p>
              */
             public Builder autoInjectionPolicyEnabled(Boolean autoInjectionPolicyEnabled) {
                 this.autoInjectionPolicyEnabled = autoInjectionPolicyEnabled;
@@ -3968,11 +5336,14 @@ public class DescribeServiceMeshDetailResponseBody extends TeaModel {
             }
 
             /**
-             * Indicates whether automatic sidecar proxy injection is enabled for all namespaces. Valid values:
-             * <p>
+             * <p>Indicates whether automatic sidecar proxy injection is enabled for all namespaces. Valid values:</p>
+             * <ul>
+             * <li><code>true</code></li>
+             * <li><code>false</code></li>
+             * </ul>
              * 
-             * *   `true`
-             * *   `false`
+             * <strong>example:</strong>
+             * <p>false</p>
              */
             public Builder enableNamespacesByDefault(Boolean enableNamespacesByDefault) {
                 this.enableNamespacesByDefault = enableNamespacesByDefault;
@@ -3980,7 +5351,7 @@ public class DescribeServiceMeshDetailResponseBody extends TeaModel {
             }
 
             /**
-             * The configurations of Container Network Interface (CNI).
+             * <p>The configurations of Container Network Interface (CNI).</p>
              */
             public Builder initCNIConfiguration(InitCNIConfiguration initCNIConfiguration) {
                 this.initCNIConfiguration = initCNIConfiguration;
@@ -3988,7 +5359,10 @@ public class DescribeServiceMeshDetailResponseBody extends TeaModel {
             }
 
             /**
-             * The maximum number of CPU cores that are available to the pod where the sidecar injector resides.
+             * <p>The maximum number of CPU cores that are available to the pod where the sidecar injector resides.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>4000m</p>
              */
             public Builder limitCPU(String limitCPU) {
                 this.limitCPU = limitCPU;
@@ -3996,7 +5370,10 @@ public class DescribeServiceMeshDetailResponseBody extends TeaModel {
             }
 
             /**
-             * The maximum size of the memory that is available to the pod where the sidecar injector resides.
+             * <p>The maximum size of the memory that is available to the pod where the sidecar injector resides.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2048Mi</p>
              */
             public Builder limitMemory(String limitMemory) {
                 this.limitMemory = limitMemory;
@@ -4004,7 +5381,10 @@ public class DescribeServiceMeshDetailResponseBody extends TeaModel {
             }
 
             /**
-             * The number of CPU cores that are requested by the pod where the sidecar injector resides.
+             * <p>The number of CPU cores that are requested by the pod where the sidecar injector resides.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1000m</p>
              */
             public Builder requestCPU(String requestCPU) {
                 this.requestCPU = requestCPU;
@@ -4012,7 +5392,10 @@ public class DescribeServiceMeshDetailResponseBody extends TeaModel {
             }
 
             /**
-             * The size of the memory that is requested by the pod where the sidecar injector resides.
+             * <p>The size of the memory that is requested by the pod where the sidecar injector resides.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>512Mi</p>
              */
             public Builder requestMemory(String requestMemory) {
                 this.requestMemory = requestMemory;
@@ -4020,7 +5403,10 @@ public class DescribeServiceMeshDetailResponseBody extends TeaModel {
             }
 
             /**
-             * The number of component replicas that are used for sidecar proxy injection. Default value: `1`.
+             * <p>The number of component replicas that are used for sidecar proxy injection. Default value: <code>1</code>.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder sidecarInjectorNum(Integer sidecarInjectorNum) {
                 this.sidecarInjectorNum = sidecarInjectorNum;
@@ -4028,7 +5414,10 @@ public class DescribeServiceMeshDetailResponseBody extends TeaModel {
             }
 
             /**
-             * Other configurations of automatic sidecar proxy injection, in the YAML format. For more information, see [Enable automatic sidecar proxy injection](~~186136~~).
+             * <p>Other configurations of automatic sidecar proxy injection, in the YAML format. For more information, see <a href="https://help.aliyun.com/document_detail/186136.html">Enable automatic sidecar proxy injection</a>.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>{&quot;injectedAnnotations&quot;:{&quot;test/istio-init&quot;:&quot;runtime/default2&quot;,&quot;test/istio-proxy&quot;:&quot;runtime/default&quot;},&quot;replicaCount&quot;:2,&quot;nodeSelector&quot;:{&quot;beta.kubernetes.io/os&quot;:&quot;linux&quot;}}</p>
              */
             public Builder sidecarInjectorWebhookAsYaml(String sidecarInjectorWebhookAsYaml) {
                 this.sidecarInjectorWebhookAsYaml = sidecarInjectorWebhookAsYaml;
@@ -4042,8 +5431,14 @@ public class DescribeServiceMeshDetailResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link DescribeServiceMeshDetailResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeServiceMeshDetailResponseBody</p>
+     */
     public static class WebAssemblyFilterDeployment extends TeaModel {
-        @NameInMap("Enabled")
+        @com.aliyun.core.annotation.NameInMap("Enabled")
         private Boolean enabled;
 
         private WebAssemblyFilterDeployment(Builder builder) {
@@ -4068,12 +5463,22 @@ public class DescribeServiceMeshDetailResponseBody extends TeaModel {
         public static final class Builder {
             private Boolean enabled; 
 
+            private Builder() {
+            } 
+
+            private Builder(WebAssemblyFilterDeployment model) {
+                this.enabled = model.enabled;
+            } 
+
             /**
-             * Indicates whether WebAssembly Filter is enabled. Valid values:
-             * <p>
+             * <p>Indicates whether WebAssembly Filter is enabled. Valid values:</p>
+             * <ul>
+             * <li><code>true</code></li>
+             * <li><code>false</code></li>
+             * </ul>
              * 
-             * *   `true`
-             * *   `false`
+             * <strong>example:</strong>
+             * <p>false</p>
              */
             public Builder enabled(Boolean enabled) {
                 this.enabled = enabled;
@@ -4087,80 +5492,86 @@ public class DescribeServiceMeshDetailResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link DescribeServiceMeshDetailResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeServiceMeshDetailResponseBody</p>
+     */
     public static class MeshConfig extends TeaModel {
-        @NameInMap("AccessLog")
+        @com.aliyun.core.annotation.NameInMap("AccessLog")
         private AccessLog accessLog;
 
-        @NameInMap("Audit")
+        @com.aliyun.core.annotation.NameInMap("Audit")
         private Audit audit;
 
-        @NameInMap("ControlPlaneLogInfo")
+        @com.aliyun.core.annotation.NameInMap("ControlPlaneLogInfo")
         private ControlPlaneLogInfo controlPlaneLogInfo;
 
-        @NameInMap("CustomizedZipkin")
+        @com.aliyun.core.annotation.NameInMap("CustomizedZipkin")
         private Boolean customizedZipkin;
 
-        @NameInMap("Edition")
+        @com.aliyun.core.annotation.NameInMap("Edition")
         private Edition edition;
 
-        @NameInMap("EnableLocalityLB")
+        @com.aliyun.core.annotation.NameInMap("EnableLocalityLB")
         private Boolean enableLocalityLB;
 
-        @NameInMap("ExcludeIPRanges")
+        @com.aliyun.core.annotation.NameInMap("ExcludeIPRanges")
         private String excludeIPRanges;
 
-        @NameInMap("ExcludeInboundPorts")
+        @com.aliyun.core.annotation.NameInMap("ExcludeInboundPorts")
         private String excludeInboundPorts;
 
-        @NameInMap("ExcludeOutboundPorts")
+        @com.aliyun.core.annotation.NameInMap("ExcludeOutboundPorts")
         private String excludeOutboundPorts;
 
-        @NameInMap("ExtraConfiguration")
+        @com.aliyun.core.annotation.NameInMap("ExtraConfiguration")
         private ExtraConfiguration extraConfiguration;
 
-        @NameInMap("IncludeIPRanges")
+        @com.aliyun.core.annotation.NameInMap("IncludeIPRanges")
         private String includeIPRanges;
 
-        @NameInMap("K8sNewAPIsSupport")
+        @com.aliyun.core.annotation.NameInMap("K8sNewAPIsSupport")
         private K8sNewAPIsSupport k8sNewAPIsSupport;
 
-        @NameInMap("Kiali")
+        @com.aliyun.core.annotation.NameInMap("Kiali")
         private Kiali kiali;
 
-        @NameInMap("LocalityLB")
+        @com.aliyun.core.annotation.NameInMap("LocalityLB")
         private LocalityLB localityLB;
 
-        @NameInMap("MSE")
+        @com.aliyun.core.annotation.NameInMap("MSE")
         private MSE MSE;
 
-        @NameInMap("OPA")
+        @com.aliyun.core.annotation.NameInMap("OPA")
         private OPA OPA;
 
-        @NameInMap("OutboundTrafficPolicy")
+        @com.aliyun.core.annotation.NameInMap("OutboundTrafficPolicy")
         private String outboundTrafficPolicy;
 
-        @NameInMap("Pilot")
+        @com.aliyun.core.annotation.NameInMap("Pilot")
         private Pilot pilot;
 
-        @NameInMap("Prometheus")
+        @com.aliyun.core.annotation.NameInMap("Prometheus")
         private Prometheus prometheus;
 
-        @NameInMap("ProtocolSupport")
+        @com.aliyun.core.annotation.NameInMap("ProtocolSupport")
         private ProtocolSupport protocolSupport;
 
-        @NameInMap("Proxy")
+        @com.aliyun.core.annotation.NameInMap("Proxy")
         private Proxy proxy;
 
-        @NameInMap("SidecarInjector")
+        @com.aliyun.core.annotation.NameInMap("SidecarInjector")
         private SidecarInjector sidecarInjector;
 
-        @NameInMap("Telemetry")
+        @com.aliyun.core.annotation.NameInMap("Telemetry")
         private Boolean telemetry;
 
-        @NameInMap("Tracing")
+        @com.aliyun.core.annotation.NameInMap("Tracing")
         private Boolean tracing;
 
-        @NameInMap("WebAssemblyFilterDeployment")
+        @com.aliyun.core.annotation.NameInMap("WebAssemblyFilterDeployment")
         private WebAssemblyFilterDeployment webAssemblyFilterDeployment;
 
         private MeshConfig(Builder builder) {
@@ -4401,8 +5812,39 @@ public class DescribeServiceMeshDetailResponseBody extends TeaModel {
             private Boolean tracing; 
             private WebAssemblyFilterDeployment webAssemblyFilterDeployment; 
 
+            private Builder() {
+            } 
+
+            private Builder(MeshConfig model) {
+                this.accessLog = model.accessLog;
+                this.audit = model.audit;
+                this.controlPlaneLogInfo = model.controlPlaneLogInfo;
+                this.customizedZipkin = model.customizedZipkin;
+                this.edition = model.edition;
+                this.enableLocalityLB = model.enableLocalityLB;
+                this.excludeIPRanges = model.excludeIPRanges;
+                this.excludeInboundPorts = model.excludeInboundPorts;
+                this.excludeOutboundPorts = model.excludeOutboundPorts;
+                this.extraConfiguration = model.extraConfiguration;
+                this.includeIPRanges = model.includeIPRanges;
+                this.k8sNewAPIsSupport = model.k8sNewAPIsSupport;
+                this.kiali = model.kiali;
+                this.localityLB = model.localityLB;
+                this.MSE = model.MSE;
+                this.OPA = model.OPA;
+                this.outboundTrafficPolicy = model.outboundTrafficPolicy;
+                this.pilot = model.pilot;
+                this.prometheus = model.prometheus;
+                this.protocolSupport = model.protocolSupport;
+                this.proxy = model.proxy;
+                this.sidecarInjector = model.sidecarInjector;
+                this.telemetry = model.telemetry;
+                this.tracing = model.tracing;
+                this.webAssemblyFilterDeployment = model.webAssemblyFilterDeployment;
+            } 
+
             /**
-             * The configurations of access log collection.
+             * <p>The configurations of access log collection.</p>
              */
             public Builder accessLog(AccessLog accessLog) {
                 this.accessLog = accessLog;
@@ -4410,7 +5852,7 @@ public class DescribeServiceMeshDetailResponseBody extends TeaModel {
             }
 
             /**
-             * The information about mesh audit.
+             * <p>The information about mesh audit.</p>
              */
             public Builder audit(Audit audit) {
                 this.audit = audit;
@@ -4418,7 +5860,7 @@ public class DescribeServiceMeshDetailResponseBody extends TeaModel {
             }
 
             /**
-             * The configurations of control plane log collection.
+             * <p>The configurations of control-plane log collection.</p>
              */
             public Builder controlPlaneLogInfo(ControlPlaneLogInfo controlPlaneLogInfo) {
                 this.controlPlaneLogInfo = controlPlaneLogInfo;
@@ -4426,11 +5868,14 @@ public class DescribeServiceMeshDetailResponseBody extends TeaModel {
             }
 
             /**
-             * Indicates whether a custom Zipkin system is used. Valid values:
-             * <p>
+             * <p>Indicates whether a custom Zipkin system is used. Valid values:</p>
+             * <ul>
+             * <li><code>true</code></li>
+             * <li><code>false</code></li>
+             * </ul>
              * 
-             * *   `true`
-             * *   `false`
+             * <strong>example:</strong>
+             * <p>false</p>
              */
             public Builder customizedZipkin(Boolean customizedZipkin) {
                 this.customizedZipkin = customizedZipkin;
@@ -4438,7 +5883,7 @@ public class DescribeServiceMeshDetailResponseBody extends TeaModel {
             }
 
             /**
-             * The information about the edition.
+             * <p>The information about the edition.</p>
              */
             public Builder edition(Edition edition) {
                 this.edition = edition;
@@ -4446,11 +5891,14 @@ public class DescribeServiceMeshDetailResponseBody extends TeaModel {
             }
 
             /**
-             * Indicates whether the feature that routes traffic to the nearest instance is enabled. Valid values:
-             * <p>
+             * <p>Indicates whether the feature that routes traffic to the nearest instance is enabled. Valid values:</p>
+             * <ul>
+             * <li><code>true</code></li>
+             * <li><code>false</code></li>
+             * </ul>
              * 
-             * *   `true`
-             * *   `false`
+             * <strong>example:</strong>
+             * <p>true</p>
              */
             public Builder enableLocalityLB(Boolean enableLocalityLB) {
                 this.enableLocalityLB = enableLocalityLB;
@@ -4458,7 +5906,10 @@ public class DescribeServiceMeshDetailResponseBody extends TeaModel {
             }
 
             /**
-             * The IP ranges in CIDR form to be excluded from redirection to sidecar proxies in the ASM instance.
+             * <p>The IP ranges in CIDR form to be excluded from redirection to sidecar proxies in the ASM instance.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>172.16.0.0</p>
              */
             public Builder excludeIPRanges(String excludeIPRanges) {
                 this.excludeIPRanges = excludeIPRanges;
@@ -4466,7 +5917,10 @@ public class DescribeServiceMeshDetailResponseBody extends TeaModel {
             }
 
             /**
-             * The inbound ports to be excluded from redirection to sidecar proxies in the ASM instance.
+             * <p>The inbound ports to be excluded from redirection to sidecar proxies in the ASM instance.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>80,81</p>
              */
             public Builder excludeInboundPorts(String excludeInboundPorts) {
                 this.excludeInboundPorts = excludeInboundPorts;
@@ -4474,7 +5928,10 @@ public class DescribeServiceMeshDetailResponseBody extends TeaModel {
             }
 
             /**
-             * The outbound ports to be excluded from redirection to sidecar proxies in the ASM instance.
+             * <p>The outbound ports to be excluded from redirection to sidecar proxies in the ASM instance.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>80,81</p>
              */
             public Builder excludeOutboundPorts(String excludeOutboundPorts) {
                 this.excludeOutboundPorts = excludeOutboundPorts;
@@ -4482,7 +5939,7 @@ public class DescribeServiceMeshDetailResponseBody extends TeaModel {
             }
 
             /**
-             * The configurations of additional features for the ASM instance.
+             * <p>The configurations of additional features for the ASM instance.</p>
              */
             public Builder extraConfiguration(ExtraConfiguration extraConfiguration) {
                 this.extraConfiguration = extraConfiguration;
@@ -4490,7 +5947,10 @@ public class DescribeServiceMeshDetailResponseBody extends TeaModel {
             }
 
             /**
-             * The IP ranges in CIDR form to redirect to the sidecar proxies in the ASM instance.
+             * <p>The IP ranges in CIDR form to redirect to the sidecar proxies in the ASM instance.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>192.168.0.0/16</p>
              */
             public Builder includeIPRanges(String includeIPRanges) {
                 this.includeIPRanges = includeIPRanges;
@@ -4498,7 +5958,7 @@ public class DescribeServiceMeshDetailResponseBody extends TeaModel {
             }
 
             /**
-             * The information about the Kubernetes API.
+             * <p>The information about the Kubernetes API.</p>
              */
             public Builder k8sNewAPIsSupport(K8sNewAPIsSupport k8sNewAPIsSupport) {
                 this.k8sNewAPIsSupport = k8sNewAPIsSupport;
@@ -4506,7 +5966,7 @@ public class DescribeServiceMeshDetailResponseBody extends TeaModel {
             }
 
             /**
-             * The configurations of mesh topology.
+             * <p>The configurations of mesh topology.</p>
              */
             public Builder kiali(Kiali kiali) {
                 this.kiali = kiali;
@@ -4514,7 +5974,7 @@ public class DescribeServiceMeshDetailResponseBody extends TeaModel {
             }
 
             /**
-             * The configurations of cross-region load balancing.
+             * <p>The configurations of cross-region load balancing.</p>
              */
             public Builder localityLB(LocalityLB localityLB) {
                 this.localityLB = localityLB;
@@ -4522,7 +5982,7 @@ public class DescribeServiceMeshDetailResponseBody extends TeaModel {
             }
 
             /**
-             * The configurations of Microservices Engine (MSE).
+             * <p>The configurations of Microservices Engine (MSE).</p>
              */
             public Builder MSE(MSE MSE) {
                 this.MSE = MSE;
@@ -4530,7 +5990,7 @@ public class DescribeServiceMeshDetailResponseBody extends TeaModel {
             }
 
             /**
-             * The information about the Open Policy Agent (OPA) plug-in.
+             * <p>The information about the Open Policy Agent (OPA) plug-in.</p>
              */
             public Builder OPA(OPA OPA) {
                 this.OPA = OPA;
@@ -4538,11 +5998,14 @@ public class DescribeServiceMeshDetailResponseBody extends TeaModel {
             }
 
             /**
-             * The outbound traffic policy. Valid values:
-             * <p>
+             * <p>The outbound traffic policy. Valid values:</p>
+             * <ul>
+             * <li><code>ALLOW_ANY</code>: Outbound traffic to all external services is allowed.</li>
+             * <li><code>REGISTRY_ONLY</code>: Outbound traffic is allowed to only external services that are defined in the service registry of the ASM instance.</li>
+             * </ul>
              * 
-             * *   `ALLOW_ANY`: Outbound traffic to all external services is allowed.
-             * *   `REGISTRY_ONLY`: Outbound traffic is allowed to only external services that are defined in the service registry of the ASM instance.
+             * <strong>example:</strong>
+             * <p>ALLOW_ANY</p>
              */
             public Builder outboundTrafficPolicy(String outboundTrafficPolicy) {
                 this.outboundTrafficPolicy = outboundTrafficPolicy;
@@ -4550,7 +6013,7 @@ public class DescribeServiceMeshDetailResponseBody extends TeaModel {
             }
 
             /**
-             * The Pilot configurations.
+             * <p>The Pilot configurations.</p>
              */
             public Builder pilot(Pilot pilot) {
                 this.pilot = pilot;
@@ -4558,7 +6021,7 @@ public class DescribeServiceMeshDetailResponseBody extends TeaModel {
             }
 
             /**
-             * The configurations of Prometheus monitoring.
+             * <p>The configurations of Prometheus monitoring.</p>
              */
             public Builder prometheus(Prometheus prometheus) {
                 this.prometheus = prometheus;
@@ -4566,7 +6029,7 @@ public class DescribeServiceMeshDetailResponseBody extends TeaModel {
             }
 
             /**
-             * The configurations of protocol support.
+             * <p>The configurations of protocol support.</p>
              */
             public Builder protocolSupport(ProtocolSupport protocolSupport) {
                 this.protocolSupport = protocolSupport;
@@ -4574,7 +6037,7 @@ public class DescribeServiceMeshDetailResponseBody extends TeaModel {
             }
 
             /**
-             * The proxy configurations.
+             * <p>The proxy configurations.</p>
              */
             public Builder proxy(Proxy proxy) {
                 this.proxy = proxy;
@@ -4582,7 +6045,7 @@ public class DescribeServiceMeshDetailResponseBody extends TeaModel {
             }
 
             /**
-             * The configurations of the sidecar injector.
+             * <p>The configurations of the sidecar injector.</p>
              */
             public Builder sidecarInjector(SidecarInjector sidecarInjector) {
                 this.sidecarInjector = sidecarInjector;
@@ -4590,11 +6053,14 @@ public class DescribeServiceMeshDetailResponseBody extends TeaModel {
             }
 
             /**
-             * Indicates whether Prometheus monitoring is enabled. We recommend that you use [Managed Service for Prometheus](https://arms.console.aliyun.com/). Valid values:
-             * <p>
+             * <p>Indicates whether Prometheus monitoring is enabled. We recommend that you use <a href="https://arms.console.aliyun.com/">Managed Service for Prometheus</a>. Valid values:</p>
+             * <ul>
+             * <li><code>true</code></li>
+             * <li><code>false</code></li>
+             * </ul>
              * 
-             * *   `true`
-             * *   `false`
+             * <strong>example:</strong>
+             * <p>true</p>
              */
             public Builder telemetry(Boolean telemetry) {
                 this.telemetry = telemetry;
@@ -4602,11 +6068,14 @@ public class DescribeServiceMeshDetailResponseBody extends TeaModel {
             }
 
             /**
-             * Indicates whether tracing analysis is enabled. This feature can be enabled only after [Managed Service for OpenTelemetry](https://tracing-analysis.console.aliyun.com/) is activated. Valid values:
-             * <p>
+             * <p>Indicates whether tracing analysis is enabled. This feature can be enabled only after <a href="https://tracing-analysis.console.aliyun.com/">Managed Service for OpenTelemetry</a> is activated. Valid values:</p>
+             * <ul>
+             * <li><code>true</code></li>
+             * <li><code>false</code></li>
+             * </ul>
              * 
-             * *   `true`
-             * *   `false`
+             * <strong>example:</strong>
+             * <p>true</p>
              */
             public Builder tracing(Boolean tracing) {
                 this.tracing = tracing;
@@ -4614,7 +6083,7 @@ public class DescribeServiceMeshDetailResponseBody extends TeaModel {
             }
 
             /**
-             * The configurations of WebAssembly Filter.
+             * <p>The configurations of WebAssembly Filter.</p>
              */
             public Builder webAssemblyFilterDeployment(WebAssemblyFilterDeployment webAssemblyFilterDeployment) {
                 this.webAssemblyFilterDeployment = webAssemblyFilterDeployment;
@@ -4628,14 +6097,20 @@ public class DescribeServiceMeshDetailResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link DescribeServiceMeshDetailResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeServiceMeshDetailResponseBody</p>
+     */
     public static class Network extends TeaModel {
-        @NameInMap("SecurityGroupId")
+        @com.aliyun.core.annotation.NameInMap("SecurityGroupId")
         private String securityGroupId;
 
-        @NameInMap("VSwitches")
-        private java.util.List < String > vSwitches;
+        @com.aliyun.core.annotation.NameInMap("VSwitches")
+        private java.util.List<String> vSwitches;
 
-        @NameInMap("VpcId")
+        @com.aliyun.core.annotation.NameInMap("VpcId")
         private String vpcId;
 
         private Network(Builder builder) {
@@ -4662,7 +6137,7 @@ public class DescribeServiceMeshDetailResponseBody extends TeaModel {
         /**
          * @return vSwitches
          */
-        public java.util.List < String > getVSwitches() {
+        public java.util.List<String> getVSwitches() {
             return this.vSwitches;
         }
 
@@ -4675,11 +6150,23 @@ public class DescribeServiceMeshDetailResponseBody extends TeaModel {
 
         public static final class Builder {
             private String securityGroupId; 
-            private java.util.List < String > vSwitches; 
+            private java.util.List<String> vSwitches; 
             private String vpcId; 
 
+            private Builder() {
+            } 
+
+            private Builder(Network model) {
+                this.securityGroupId = model.securityGroupId;
+                this.vSwitches = model.vSwitches;
+                this.vpcId = model.vpcId;
+            } 
+
             /**
-             * The security group ID.
+             * <p>The security group ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>sg-2ze384sxttxbctnj****</p>
              */
             public Builder securityGroupId(String securityGroupId) {
                 this.securityGroupId = securityGroupId;
@@ -4687,15 +6174,18 @@ public class DescribeServiceMeshDetailResponseBody extends TeaModel {
             }
 
             /**
-             * The virtual switches (vSwitches).
+             * <p>The virtual switches (vSwitches).</p>
              */
-            public Builder vSwitches(java.util.List < String > vSwitches) {
+            public Builder vSwitches(java.util.List<String> vSwitches) {
                 this.vSwitches = vSwitches;
                 return this;
             }
 
             /**
-             * The ID of the virtual private cloud (VPC).
+             * <p>The ID of the virtual private cloud (VPC).</p>
+             * 
+             * <strong>example:</strong>
+             * <p>vpc-2zew0rajjkmxy2369****</p>
              */
             public Builder vpcId(String vpcId) {
                 this.vpcId = vpcId;
@@ -4709,14 +6199,20 @@ public class DescribeServiceMeshDetailResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link DescribeServiceMeshDetailResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeServiceMeshDetailResponseBody</p>
+     */
     public static class Spec extends TeaModel {
-        @NameInMap("LoadBalancer")
+        @com.aliyun.core.annotation.NameInMap("LoadBalancer")
         private LoadBalancer loadBalancer;
 
-        @NameInMap("MeshConfig")
+        @com.aliyun.core.annotation.NameInMap("MeshConfig")
         private MeshConfig meshConfig;
 
-        @NameInMap("Network")
+        @com.aliyun.core.annotation.NameInMap("Network")
         private Network network;
 
         private Spec(Builder builder) {
@@ -4759,8 +6255,17 @@ public class DescribeServiceMeshDetailResponseBody extends TeaModel {
             private MeshConfig meshConfig; 
             private Network network; 
 
+            private Builder() {
+            } 
+
+            private Builder(Spec model) {
+                this.loadBalancer = model.loadBalancer;
+                this.meshConfig = model.meshConfig;
+                this.network = model.network;
+            } 
+
             /**
-             * The information about load balancing.
+             * <p>The information about the load balancer.</p>
              */
             public Builder loadBalancer(LoadBalancer loadBalancer) {
                 this.loadBalancer = loadBalancer;
@@ -4768,7 +6273,7 @@ public class DescribeServiceMeshDetailResponseBody extends TeaModel {
             }
 
             /**
-             * The configurations of the ASM instance.
+             * <p>The configurations of the ASM instance.</p>
              */
             public Builder meshConfig(MeshConfig meshConfig) {
                 this.meshConfig = meshConfig;
@@ -4776,7 +6281,7 @@ public class DescribeServiceMeshDetailResponseBody extends TeaModel {
             }
 
             /**
-             * The network configurations of the ASM instance.
+             * <p>The network configurations of the ASM instance.</p>
              */
             public Builder network(Network network) {
                 this.network = network;
@@ -4790,26 +6295,32 @@ public class DescribeServiceMeshDetailResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link DescribeServiceMeshDetailResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeServiceMeshDetailResponseBody</p>
+     */
     public static class ServiceMesh extends TeaModel {
-        @NameInMap("ClusterSpec")
+        @com.aliyun.core.annotation.NameInMap("ClusterSpec")
         private String clusterSpec;
 
-        @NameInMap("Clusters")
-        private java.util.List < String > clusters;
+        @com.aliyun.core.annotation.NameInMap("Clusters")
+        private java.util.List<String> clusters;
 
-        @NameInMap("Endpoints")
+        @com.aliyun.core.annotation.NameInMap("Endpoints")
         private Endpoints endpoints;
 
-        @NameInMap("OwnerId")
+        @com.aliyun.core.annotation.NameInMap("OwnerId")
         private String ownerId;
 
-        @NameInMap("OwnerType")
+        @com.aliyun.core.annotation.NameInMap("OwnerType")
         private String ownerType;
 
-        @NameInMap("ServiceMeshInfo")
+        @com.aliyun.core.annotation.NameInMap("ServiceMeshInfo")
         private ServiceMeshInfo serviceMeshInfo;
 
-        @NameInMap("Spec")
+        @com.aliyun.core.annotation.NameInMap("Spec")
         private Spec spec;
 
         private ServiceMesh(Builder builder) {
@@ -4840,7 +6351,7 @@ public class DescribeServiceMeshDetailResponseBody extends TeaModel {
         /**
          * @return clusters
          */
-        public java.util.List < String > getClusters() {
+        public java.util.List<String> getClusters() {
             return this.clusters;
         }
 
@@ -4881,20 +6392,36 @@ public class DescribeServiceMeshDetailResponseBody extends TeaModel {
 
         public static final class Builder {
             private String clusterSpec; 
-            private java.util.List < String > clusters; 
+            private java.util.List<String> clusters; 
             private Endpoints endpoints; 
             private String ownerId; 
             private String ownerType; 
             private ServiceMeshInfo serviceMeshInfo; 
             private Spec spec; 
 
+            private Builder() {
+            } 
+
+            private Builder(ServiceMesh model) {
+                this.clusterSpec = model.clusterSpec;
+                this.clusters = model.clusters;
+                this.endpoints = model.endpoints;
+                this.ownerId = model.ownerId;
+                this.ownerType = model.ownerType;
+                this.serviceMeshInfo = model.serviceMeshInfo;
+                this.spec = model.spec;
+            } 
+
             /**
-             * The specification of the ASM instance. Valid values:
-             * <p>
+             * <p>The specification of the ASM instance. Valid values:</p>
+             * <ul>
+             * <li><code>standard</code>: Standard Edition</li>
+             * <li><code>enterprise</code>: Enterprise Edition</li>
+             * <li><code>ultimate</code>: Ultimate Edition</li>
+             * </ul>
              * 
-             * *   `standard`: Standard Edition
-             * *   `enterprise`: Enterprise Edition
-             * *   `ultimate`: Ultimate Edition
+             * <strong>example:</strong>
+             * <p>standard</p>
              */
             public Builder clusterSpec(String clusterSpec) {
                 this.clusterSpec = clusterSpec;
@@ -4902,15 +6429,15 @@ public class DescribeServiceMeshDetailResponseBody extends TeaModel {
             }
 
             /**
-             * The clusters.
+             * <p>The clusters.</p>
              */
-            public Builder clusters(java.util.List < String > clusters) {
+            public Builder clusters(java.util.List<String> clusters) {
                 this.clusters = clusters;
                 return this;
             }
 
             /**
-             * The endpoints of the ASM instance.
+             * <p>The endpoints of the ASM instance.</p>
              */
             public Builder endpoints(Endpoints endpoints) {
                 this.endpoints = endpoints;
@@ -4918,7 +6445,10 @@ public class DescribeServiceMeshDetailResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the Alibaba Cloud service instance for which the ASM instance is created.
+             * <p>The ID of the Alibaba Cloud service instance for which the ASM instance is created.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>cc3e96f249d124eb38b72718ec5*****</p>
              */
             public Builder ownerId(String ownerId) {
                 this.ownerId = ownerId;
@@ -4926,11 +6456,14 @@ public class DescribeServiceMeshDetailResponseBody extends TeaModel {
             }
 
             /**
-             * The Alibaba Cloud service for which the ASM instance is created. Valid values:
-             * <p>
+             * <p>The Alibaba Cloud service for which the ASM instance is created. Valid values:</p>
+             * <ul>
+             * <li><code>ackone</code>: The ASM instance is created for Alibaba Cloud Distributed Cloud Container Platform (ACK One).</li>
+             * <li>An empty value indicates that the ASM instance is created by the user.</li>
+             * </ul>
              * 
-             * *   `ackone`: The ASM instance is created for Alibaba Cloud Distributed Cloud Container Platform (ACK One).
-             * *   An empty value indicates that the ASM instance is created by the user.
+             * <strong>example:</strong>
+             * <p>ackone</p>
              */
             public Builder ownerType(String ownerType) {
                 this.ownerType = ownerType;
@@ -4938,7 +6471,7 @@ public class DescribeServiceMeshDetailResponseBody extends TeaModel {
             }
 
             /**
-             * The basic information about the ASM instance.
+             * <p>The basic information about the ASM instance.</p>
              */
             public Builder serviceMeshInfo(ServiceMeshInfo serviceMeshInfo) {
                 this.serviceMeshInfo = serviceMeshInfo;
@@ -4946,7 +6479,7 @@ public class DescribeServiceMeshDetailResponseBody extends TeaModel {
             }
 
             /**
-             * The specifications of the ASM instance.
+             * <p>The specifications of the ASM instance.</p>
              */
             public Builder spec(Spec spec) {
                 this.spec = spec;

@@ -1,28 +1,33 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.servicemesh20200111.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DeleteServiceMeshRequest} extends {@link RequestModel}
  *
  * <p>DeleteServiceMeshRequest</p>
  */
 public class DeleteServiceMeshRequest extends Request {
-    @Body
-    @NameInMap("Force")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("Force")
     private Boolean force;
 
-    @Body
-    @NameInMap("RetainResources")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("RetainResources")
     private String retainResources;
 
-    @Body
-    @NameInMap("ServiceMeshId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("ServiceMeshId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String serviceMeshId;
 
     private DeleteServiceMeshRequest(Builder builder) {
@@ -40,7 +45,7 @@ public class DeleteServiceMeshRequest extends Request {
         return builder().build();
     }
 
-    @Override
+@Override
     public Builder toBuilder() {
         return new Builder(this);
     }
@@ -83,13 +88,15 @@ public class DeleteServiceMeshRequest extends Request {
         } 
 
         /**
-         * Specifies whether to forcibly delete the ASM instance. Valid values:
-         * <p>
+         * <p>Specifies whether to forcibly delete the ASM instance. Valid values:</p>
+         * <ul>
+         * <li><code>true</code>: forcibly deletes the ASM instance.</li>
+         * <li><code>false</code>: does not forcibly delete the ASM instance.</li>
+         * </ul>
+         * <p>Default value: false.</p>
          * 
-         * *   `true`: forcibly deletes the ASM instance.
-         * *   `false`: does not forcibly delete the ASM instance.
-         * 
-         * Default value: false.
+         * <strong>example:</strong>
+         * <p>false</p>
          */
         public Builder force(Boolean force) {
             this.putBodyParameter("Force", force);
@@ -98,7 +105,10 @@ public class DeleteServiceMeshRequest extends Request {
         }
 
         /**
-         * A JSON string that can be parsed into a string array. You can use this JSON string to specify the IDs of the resource instances that need to be retained when the ASM instance is deleted.
+         * <p>A JSON string that can be parsed into a string array. You can use this JSON string to specify the IDs of the resource instances that need to be retained when the ASM instance is deleted.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>[&quot; lb-bp1fxvl3q8akbj6m*****&quot;, &quot;lb-bp1hoxkolggdw0y3*****&quot;]</p>
          */
         public Builder retainResources(String retainResources) {
             this.putBodyParameter("RetainResources", retainResources);
@@ -107,7 +117,11 @@ public class DeleteServiceMeshRequest extends Request {
         }
 
         /**
-         * The ASM instance ID.
+         * <p>The ASM instance ID.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>c08ba3fd1e6484b0f8cc1ad8fe10d****</p>
          */
         public Builder serviceMeshId(String serviceMeshId) {
             this.putBodyParameter("ServiceMeshId", serviceMeshId);

@@ -1,24 +1,29 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.servicemesh20200111.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeNamespaceScopeSidecarConfigRequest} extends {@link RequestModel}
  *
  * <p>DescribeNamespaceScopeSidecarConfigRequest</p>
  */
 public class DescribeNamespaceScopeSidecarConfigRequest extends Request {
-    @Body
-    @NameInMap("Namespace")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("Namespace")
     private String namespace;
 
-    @Body
-    @NameInMap("ServiceMeshId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("ServiceMeshId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String serviceMeshId;
 
     private DescribeNamespaceScopeSidecarConfigRequest(Builder builder) {
@@ -35,7 +40,7 @@ public class DescribeNamespaceScopeSidecarConfigRequest extends Request {
         return builder().build();
     }
 
-    @Override
+@Override
     public Builder toBuilder() {
         return new Builder(this);
     }
@@ -69,7 +74,10 @@ public class DescribeNamespaceScopeSidecarConfigRequest extends Request {
         } 
 
         /**
-         * The namespace.
+         * <p>The namespace.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>default</p>
          */
         public Builder namespace(String namespace) {
             this.putBodyParameter("Namespace", namespace);
@@ -78,7 +86,11 @@ public class DescribeNamespaceScopeSidecarConfigRequest extends Request {
         }
 
         /**
-         * The ID of the ASM instance.
+         * <p>The ID of the ASM instance.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>c7120e75a202d4fd8acb028a86b6a****</p>
          */
         public Builder serviceMeshId(String serviceMeshId) {
             this.putBodyParameter("ServiceMeshId", serviceMeshId);

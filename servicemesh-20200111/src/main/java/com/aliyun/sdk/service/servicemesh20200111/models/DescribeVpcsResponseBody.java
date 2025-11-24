@@ -1,32 +1,37 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.servicemesh20200111.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeVpcsResponseBody} extends {@link TeaModel}
  *
  * <p>DescribeVpcsResponseBody</p>
  */
 public class DescribeVpcsResponseBody extends TeaModel {
-    @NameInMap("MaxResults")
+    @com.aliyun.core.annotation.NameInMap("MaxResults")
     private Integer maxResults;
 
-    @NameInMap("NextToken")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.NameInMap("NextToken")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String nextToken;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("TotalCount")
+    @com.aliyun.core.annotation.NameInMap("TotalCount")
     private Integer totalCount;
 
-    @NameInMap("Vpcs")
-    private java.util.List < Vpcs> vpcs;
+    @com.aliyun.core.annotation.NameInMap("Vpcs")
+    private java.util.List<Vpcs> vpcs;
 
     private DescribeVpcsResponseBody(Builder builder) {
         this.maxResults = builder.maxResults;
@@ -42,6 +47,10 @@ public class DescribeVpcsResponseBody extends TeaModel {
 
     public static DescribeVpcsResponseBody create() {
         return builder().build();
+    }
+
+    public Builder toBuilder() {
+        return new Builder(this);
     }
 
     /**
@@ -75,7 +84,7 @@ public class DescribeVpcsResponseBody extends TeaModel {
     /**
      * @return vpcs
      */
-    public java.util.List < Vpcs> getVpcs() {
+    public java.util.List<Vpcs> getVpcs() {
         return this.vpcs;
     }
 
@@ -84,10 +93,24 @@ public class DescribeVpcsResponseBody extends TeaModel {
         private String nextToken; 
         private String requestId; 
         private Integer totalCount; 
-        private java.util.List < Vpcs> vpcs; 
+        private java.util.List<Vpcs> vpcs; 
+
+        private Builder() {
+        } 
+
+        private Builder(DescribeVpcsResponseBody model) {
+            this.maxResults = model.maxResults;
+            this.nextToken = model.nextToken;
+            this.requestId = model.requestId;
+            this.totalCount = model.totalCount;
+            this.vpcs = model.vpcs;
+        } 
 
         /**
-         * The maximum number of entries returned on a single page.
+         * <p>The maximum number of entries returned on a single page.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10</p>
          */
         public Builder maxResults(Integer maxResults) {
             this.maxResults = maxResults;
@@ -95,7 +118,11 @@ public class DescribeVpcsResponseBody extends TeaModel {
         }
 
         /**
-         * The token that marks the end of the current returned page. If this parameter is empty, it indicates that you have retrieved all the data.
+         * <p>The token that marks the end of the current returned page. If this parameter is empty, it indicates that you have retrieved all the data.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>&quot;&quot;</p>
          */
         public Builder nextToken(String nextToken) {
             this.nextToken = nextToken;
@@ -103,7 +130,10 @@ public class DescribeVpcsResponseBody extends TeaModel {
         }
 
         /**
-         * The request ID.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>BD65C0AD-D3C6-48D3-8D93-38D2015C****</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -111,7 +141,10 @@ public class DescribeVpcsResponseBody extends TeaModel {
         }
 
         /**
-         * The total number of entries returned. By default, this parameter is not returned.
+         * <p>The total number of entries returned. By default, this parameter is not returned.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10</p>
          */
         public Builder totalCount(Integer totalCount) {
             this.totalCount = totalCount;
@@ -119,9 +152,9 @@ public class DescribeVpcsResponseBody extends TeaModel {
         }
 
         /**
-         * The list of VPCs that are available in the specified region.
+         * <p>The list of VPCs that are available in the specified region.</p>
          */
-        public Builder vpcs(java.util.List < Vpcs> vpcs) {
+        public Builder vpcs(java.util.List<Vpcs> vpcs) {
             this.vpcs = vpcs;
             return this;
         }
@@ -132,17 +165,23 @@ public class DescribeVpcsResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link DescribeVpcsResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeVpcsResponseBody</p>
+     */
     public static class Vpcs extends TeaModel {
-        @NameInMap("IsDefault")
+        @com.aliyun.core.annotation.NameInMap("IsDefault")
         private Boolean isDefault;
 
-        @NameInMap("Status")
+        @com.aliyun.core.annotation.NameInMap("Status")
         private String status;
 
-        @NameInMap("VpcId")
+        @com.aliyun.core.annotation.NameInMap("VpcId")
         private String vpcId;
 
-        @NameInMap("VpcName")
+        @com.aliyun.core.annotation.NameInMap("VpcName")
         private String vpcName;
 
         private Vpcs(Builder builder) {
@@ -194,12 +233,25 @@ public class DescribeVpcsResponseBody extends TeaModel {
             private String vpcId; 
             private String vpcName; 
 
+            private Builder() {
+            } 
+
+            private Builder(Vpcs model) {
+                this.isDefault = model.isDefault;
+                this.status = model.status;
+                this.vpcId = model.vpcId;
+                this.vpcName = model.vpcName;
+            } 
+
             /**
-             * Indicates whether the VPC is the default VPC in the specified region. Valid values:
-             * <p>
+             * <p>Indicates whether the VPC is the default VPC in the specified region. Valid values:</p>
+             * <ul>
+             * <li><code>true</code>: yes</li>
+             * <li><code>false</code>: no</li>
+             * </ul>
              * 
-             * *   `true`: yes
-             * *   `false`: no
+             * <strong>example:</strong>
+             * <p>false</p>
              */
             public Builder isDefault(Boolean isDefault) {
                 this.isDefault = isDefault;
@@ -207,11 +259,14 @@ public class DescribeVpcsResponseBody extends TeaModel {
             }
 
             /**
-             * The status of the VPC. Valid values:
-             * <p>
+             * <p>The status of the VPC. Valid values:</p>
+             * <ul>
+             * <li><code>Pending</code>: The VPC is being configured.</li>
+             * <li><code>Available</code>: The VPC is available for use.</li>
+             * </ul>
              * 
-             * *   `Pending`: The VPC is being configured.
-             * *   `Available`: The VPC is available for use.
+             * <strong>example:</strong>
+             * <p>Available</p>
              */
             public Builder status(String status) {
                 this.status = status;
@@ -219,7 +274,10 @@ public class DescribeVpcsResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of a VPC.
+             * <p>The ID of a VPC.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>vpc-bp1qkf2o3xmqc2519****</p>
              */
             public Builder vpcId(String vpcId) {
                 this.vpcId = vpcId;
@@ -227,7 +285,10 @@ public class DescribeVpcsResponseBody extends TeaModel {
             }
 
             /**
-             * The name of the VPC.
+             * <p>The name of the VPC.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>vpc-test</p>
              */
             public Builder vpcName(String vpcName) {
                 this.vpcName = vpcName;

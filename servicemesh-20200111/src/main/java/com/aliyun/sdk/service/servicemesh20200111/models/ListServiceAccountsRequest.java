@@ -1,29 +1,34 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.servicemesh20200111.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ListServiceAccountsRequest} extends {@link RequestModel}
  *
  * <p>ListServiceAccountsRequest</p>
  */
 public class ListServiceAccountsRequest extends Request {
-    @Body
-    @NameInMap("ClusterId")
-    @Validation(required = true, minLength = 1)
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("ClusterId")
+    @com.aliyun.core.annotation.Validation(required = true, minLength = 1)
     private String clusterId;
 
-    @Body
-    @NameInMap("Namespace")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("Namespace")
     private String namespace;
 
-    @Body
-    @NameInMap("ServiceMeshId")
-    @Validation(required = true, minLength = 1)
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("ServiceMeshId")
+    @com.aliyun.core.annotation.Validation(required = true, minLength = 1)
     private String serviceMeshId;
 
     private ListServiceAccountsRequest(Builder builder) {
@@ -41,7 +46,7 @@ public class ListServiceAccountsRequest extends Request {
         return builder().build();
     }
 
-    @Override
+@Override
     public Builder toBuilder() {
         return new Builder(this);
     }
@@ -84,7 +89,11 @@ public class ListServiceAccountsRequest extends Request {
         } 
 
         /**
-         * ClusterId.
+         * <p>The ID of the cluster on the data plane.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>ce3c25e247da24f3aab9b7edfae83****</p>
          */
         public Builder clusterId(String clusterId) {
             this.putBodyParameter("ClusterId", clusterId);
@@ -93,7 +102,10 @@ public class ListServiceAccountsRequest extends Request {
         }
 
         /**
-         * Namespace.
+         * <p>The namespace.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>default</p>
          */
         public Builder namespace(String namespace) {
             this.putBodyParameter("Namespace", namespace);
@@ -102,7 +114,11 @@ public class ListServiceAccountsRequest extends Request {
         }
 
         /**
-         * ServiceMeshId.
+         * <p>The ID of the Service Mesh (ASM) instance.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>ce134b0727aa2492db69f6c3880e1****</p>
          */
         public Builder serviceMeshId(String serviceMeshId) {
             this.putBodyParameter("ServiceMeshId", serviceMeshId);

@@ -1,30 +1,35 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.servicemesh20200111.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeServiceMeshProxyStatusResponseBody} extends {@link TeaModel}
  *
  * <p>DescribeServiceMeshProxyStatusResponseBody</p>
  */
 public class DescribeServiceMeshProxyStatusResponseBody extends TeaModel {
-    @NameInMap("Code")
+    @com.aliyun.core.annotation.NameInMap("Code")
     private String code;
 
-    @NameInMap("Message")
+    @com.aliyun.core.annotation.NameInMap("Message")
     private String message;
 
-    @NameInMap("ProxyStatus")
-    private java.util.List < ProxyStatus> proxyStatus;
+    @com.aliyun.core.annotation.NameInMap("ProxyStatus")
+    private java.util.List<ProxyStatus> proxyStatus;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("Success")
+    @com.aliyun.core.annotation.NameInMap("Success")
     private String success;
 
     private DescribeServiceMeshProxyStatusResponseBody(Builder builder) {
@@ -41,6 +46,10 @@ public class DescribeServiceMeshProxyStatusResponseBody extends TeaModel {
 
     public static DescribeServiceMeshProxyStatusResponseBody create() {
         return builder().build();
+    }
+
+    public Builder toBuilder() {
+        return new Builder(this);
     }
 
     /**
@@ -60,7 +69,7 @@ public class DescribeServiceMeshProxyStatusResponseBody extends TeaModel {
     /**
      * @return proxyStatus
      */
-    public java.util.List < ProxyStatus> getProxyStatus() {
+    public java.util.List<ProxyStatus> getProxyStatus() {
         return this.proxyStatus;
     }
 
@@ -81,18 +90,31 @@ public class DescribeServiceMeshProxyStatusResponseBody extends TeaModel {
     public static final class Builder {
         private String code; 
         private String message; 
-        private java.util.List < ProxyStatus> proxyStatus; 
+        private java.util.List<ProxyStatus> proxyStatus; 
         private String requestId; 
         private String success; 
 
+        private Builder() {
+        } 
+
+        private Builder(DescribeServiceMeshProxyStatusResponseBody model) {
+            this.code = model.code;
+            this.message = model.message;
+            this.proxyStatus = model.proxyStatus;
+            this.requestId = model.requestId;
+            this.success = model.success;
+        } 
+
         /**
-         * The status code. Valid values:
-         * <p>
+         * <p>The status code. Valid values:</p>
+         * <p><code>200</code>: The operation is successful.</p>
+         * <ul>
+         * <li><code>403</code>: You are not authorized to perform this operation.</li>
+         * <li><code>503</code>: A backend server error occurs.</li>
+         * </ul>
          * 
-         * `200`: The operation is successful.
-         * 
-         * *   `403`: You are not authorized to perform this operation.
-         * *   `503`: A backend server error occurs.
+         * <strong>example:</strong>
+         * <p>200</p>
          */
         public Builder code(String code) {
             this.code = code;
@@ -100,7 +122,10 @@ public class DescribeServiceMeshProxyStatusResponseBody extends TeaModel {
         }
 
         /**
-         * The returned message.
+         * <p>The returned message.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>success</p>
          */
         public Builder message(String message) {
             this.message = message;
@@ -108,15 +133,18 @@ public class DescribeServiceMeshProxyStatusResponseBody extends TeaModel {
         }
 
         /**
-         * The information about the status of the proxies on the data plane.
+         * <p>The information about the status of the proxies on the data plane.</p>
          */
-        public Builder proxyStatus(java.util.List < ProxyStatus> proxyStatus) {
+        public Builder proxyStatus(java.util.List<ProxyStatus> proxyStatus) {
             this.proxyStatus = proxyStatus;
             return this;
         }
 
         /**
-         * The request ID.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>31d3a0f0-07ed-4f6e-9004-1804498c****</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -124,7 +152,10 @@ public class DescribeServiceMeshProxyStatusResponseBody extends TeaModel {
         }
 
         /**
-         * Indicates whether the request was successful.
+         * <p>Indicates whether the request was successful.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>success</p>
          */
         public Builder success(String success) {
             this.success = success;
@@ -137,29 +168,35 @@ public class DescribeServiceMeshProxyStatusResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link DescribeServiceMeshProxyStatusResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeServiceMeshProxyStatusResponseBody</p>
+     */
     public static class ProxyStatus extends TeaModel {
-        @NameInMap("ClusterSynced")
+        @com.aliyun.core.annotation.NameInMap("ClusterSynced")
         private String clusterSynced;
 
-        @NameInMap("EndpointPercent")
+        @com.aliyun.core.annotation.NameInMap("EndpointPercent")
         private String endpointPercent;
 
-        @NameInMap("EndpointSynced")
+        @com.aliyun.core.annotation.NameInMap("EndpointSynced")
         private String endpointSynced;
 
-        @NameInMap("IstioVersion")
+        @com.aliyun.core.annotation.NameInMap("IstioVersion")
         private String istioVersion;
 
-        @NameInMap("ListenerSynced")
+        @com.aliyun.core.annotation.NameInMap("ListenerSynced")
         private String listenerSynced;
 
-        @NameInMap("ProxyId")
+        @com.aliyun.core.annotation.NameInMap("ProxyId")
         private String proxyId;
 
-        @NameInMap("ProxyVersion")
+        @com.aliyun.core.annotation.NameInMap("ProxyVersion")
         private String proxyVersion;
 
-        @NameInMap("RouteSynced")
+        @com.aliyun.core.annotation.NameInMap("RouteSynced")
         private String routeSynced;
 
         private ProxyStatus(Builder builder) {
@@ -247,14 +284,31 @@ public class DescribeServiceMeshProxyStatusResponseBody extends TeaModel {
             private String proxyVersion; 
             private String routeSynced; 
 
+            private Builder() {
+            } 
+
+            private Builder(ProxyStatus model) {
+                this.clusterSynced = model.clusterSynced;
+                this.endpointPercent = model.endpointPercent;
+                this.endpointSynced = model.endpointSynced;
+                this.istioVersion = model.istioVersion;
+                this.listenerSynced = model.listenerSynced;
+                this.proxyId = model.proxyId;
+                this.proxyVersion = model.proxyVersion;
+                this.routeSynced = model.routeSynced;
+            } 
+
             /**
-             * The update status of the proxy. Valid values:
-             * <p>
+             * <p>The update status of the proxy. Valid values:</p>
+             * <ul>
+             * <li><code>SYNCED</code>: The status of the proxy is updated.</li>
+             * <li><code>NOT SENT</code>: The status of the proxy is not updated.</li>
+             * <li><code>STALE (Never Acknowledged)</code>: Istiod has sent multiple requests to the Envoy proxy to update the status of the proxy but receives no response.</li>
+             * <li><code>STALE</code>: Istiod has sent a request to the Envoy proxy to update the status of the proxy but receives no response.</li>
+             * </ul>
              * 
-             * *   `SYNCED`: The status of the proxy is updated.
-             * *   `NOT SENT`: The status of the proxy is not updated.
-             * *   `STALE (Never Acknowledged)`: Istiod has sent multiple requests to the Envoy proxy to update the status of the proxy but receives no response.
-             * *   `STALE`: Istiod has sent a request to the Envoy proxy to update the status of the proxy but receives no response.
+             * <strong>example:</strong>
+             * <p>SYNCED</p>
              */
             public Builder clusterSynced(String clusterSynced) {
                 this.clusterSynced = clusterSynced;
@@ -262,7 +316,10 @@ public class DescribeServiceMeshProxyStatusResponseBody extends TeaModel {
             }
 
             /**
-             * The percentage of the updated endpoints.
+             * <p>The percentage of the updated endpoints.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder endpointPercent(String endpointPercent) {
                 this.endpointPercent = endpointPercent;
@@ -270,13 +327,16 @@ public class DescribeServiceMeshProxyStatusResponseBody extends TeaModel {
             }
 
             /**
-             * The update status of the endpoint. Valid values:
-             * <p>
+             * <p>The update status of the endpoint. Valid values:</p>
+             * <ul>
+             * <li><code>SYNCED</code>: The status of the endpoint is updated.</li>
+             * <li><code>NOT SENT</code>: The status of the endpoint is not updated.</li>
+             * <li><code>STALE (Never Acknowledged)</code>: Istiod has sent multiple requests to the Envoy proxy to update the status of the endpoint but receives no response.</li>
+             * <li><code>STALE</code>: Istiod has sent a request to the Envoy proxy to update the status of the endpoint but receives no response.</li>
+             * </ul>
              * 
-             * *   `SYNCED`: The status of the endpoint is updated.
-             * *   `NOT SENT`: The status of the endpoint is not updated.
-             * *   `STALE (Never Acknowledged)`: Istiod has sent multiple requests to the Envoy proxy to update the status of the endpoint but receives no response.
-             * *   `STALE`: Istiod has sent a request to the Envoy proxy to update the status of the endpoint but receives no response.
+             * <strong>example:</strong>
+             * <p>SYNCED</p>
              */
             public Builder endpointSynced(String endpointSynced) {
                 this.endpointSynced = endpointSynced;
@@ -284,7 +344,10 @@ public class DescribeServiceMeshProxyStatusResponseBody extends TeaModel {
             }
 
             /**
-             * The version of Istiod.
+             * <p>The version of Istiod.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1.9.7</p>
              */
             public Builder istioVersion(String istioVersion) {
                 this.istioVersion = istioVersion;
@@ -292,13 +355,16 @@ public class DescribeServiceMeshProxyStatusResponseBody extends TeaModel {
             }
 
             /**
-             * The update status of the listener. Valid values:
-             * <p>
+             * <p>The update status of the listener. Valid values:</p>
+             * <ul>
+             * <li><code>SYNCED</code>: The status of the listener is updated.</li>
+             * <li><code>NOT SENT</code>: The status of the listener is not updated.</li>
+             * <li><code>STALE (Never Acknowledged)</code>: Istiod has sent multiple requests to the Envoy proxy to update the status of the listener but receives no response.</li>
+             * <li><code>STALE</code>: Istiod has sent a request to the Envoy proxy to update the status of the listener but receives no response.</li>
+             * </ul>
              * 
-             * *   `SYNCED`: The status of the listener is updated.
-             * *   `NOT SENT`: The status of the listener is not updated.
-             * *   `STALE (Never Acknowledged)`: Istiod has sent multiple requests to the Envoy proxy to update the status of the listener but receives no response.
-             * *   `STALE`: Istiod has sent a request to the Envoy proxy to update the status of the listener but receives no response.
+             * <strong>example:</strong>
+             * <p>SYNCED</p>
              */
             public Builder listenerSynced(String listenerSynced) {
                 this.listenerSynced = listenerSynced;
@@ -306,7 +372,10 @@ public class DescribeServiceMeshProxyStatusResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the proxy on the data plane.
+             * <p>The ID of the proxy on the data plane.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>119q****</p>
              */
             public Builder proxyId(String proxyId) {
                 this.proxyId = proxyId;
@@ -314,7 +383,10 @@ public class DescribeServiceMeshProxyStatusResponseBody extends TeaModel {
             }
 
             /**
-             * The version number of a proxy on the data plane.
+             * <p>The version number of a proxy on the data plane.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1.9.7</p>
              */
             public Builder proxyVersion(String proxyVersion) {
                 this.proxyVersion = proxyVersion;
@@ -322,13 +394,16 @@ public class DescribeServiceMeshProxyStatusResponseBody extends TeaModel {
             }
 
             /**
-             * The update status of the route. Valid values:
-             * <p>
+             * <p>The update status of the route. Valid values:</p>
+             * <ul>
+             * <li><code>SYNCED</code>: The status of the route is updated.</li>
+             * <li><code>NOT SENT</code>: The status of the route is not updated.</li>
+             * <li><code>STALE (Never Acknowledged)</code>: Istiod has sent multiple requests to the Envoy proxy to update the status of the route but receives no response.</li>
+             * <li><code>STALE</code>: Istiod has sent a request to the Envoy proxy to update the status of the route but receives no response.</li>
+             * </ul>
              * 
-             * *   `SYNCED`: The status of the route is updated.
-             * *   `NOT SENT`: The status of the route is not updated.
-             * *   `STALE (Never Acknowledged)`: Istiod has sent multiple requests to the Envoy proxy to update the status of the route but receives no response.
-             * *   `STALE`: Istiod has sent a request to the Envoy proxy to update the status of the route but receives no response.
+             * <strong>example:</strong>
+             * <p>SYNCED</p>
              */
             public Builder routeSynced(String routeSynced) {
                 this.routeSynced = routeSynced;

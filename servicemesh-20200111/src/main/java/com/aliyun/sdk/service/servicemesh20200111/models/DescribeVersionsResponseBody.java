@@ -1,22 +1,27 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.servicemesh20200111.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeVersionsResponseBody} extends {@link TeaModel}
  *
  * <p>DescribeVersionsResponseBody</p>
  */
 public class DescribeVersionsResponseBody extends TeaModel {
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("VersionInfo")
-    private java.util.List < VersionInfo> versionInfo;
+    @com.aliyun.core.annotation.NameInMap("VersionInfo")
+    private java.util.List<VersionInfo> versionInfo;
 
     private DescribeVersionsResponseBody(Builder builder) {
         this.requestId = builder.requestId;
@@ -31,6 +36,10 @@ public class DescribeVersionsResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return requestId
      */
@@ -41,16 +50,27 @@ public class DescribeVersionsResponseBody extends TeaModel {
     /**
      * @return versionInfo
      */
-    public java.util.List < VersionInfo> getVersionInfo() {
+    public java.util.List<VersionInfo> getVersionInfo() {
         return this.versionInfo;
     }
 
     public static final class Builder {
         private String requestId; 
-        private java.util.List < VersionInfo> versionInfo; 
+        private java.util.List<VersionInfo> versionInfo; 
+
+        private Builder() {
+        } 
+
+        private Builder(DescribeVersionsResponseBody model) {
+            this.requestId = model.requestId;
+            this.versionInfo = model.versionInfo;
+        } 
 
         /**
-         * The request ID.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>BD65C0AD-D3C6-48D3-8D93-38D2015C****</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -58,9 +78,9 @@ public class DescribeVersionsResponseBody extends TeaModel {
         }
 
         /**
-         * The available ASM versions.
+         * <p>The available ASM versions.</p>
          */
-        public Builder versionInfo(java.util.List < VersionInfo> versionInfo) {
+        public Builder versionInfo(java.util.List<VersionInfo> versionInfo) {
             this.versionInfo = versionInfo;
             return this;
         }
@@ -71,12 +91,18 @@ public class DescribeVersionsResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link DescribeVersionsResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeVersionsResponseBody</p>
+     */
     public static class VersionInfo extends TeaModel {
-        @NameInMap("Edition")
+        @com.aliyun.core.annotation.NameInMap("Edition")
         private String edition;
 
-        @NameInMap("Versions")
-        private java.util.List < String > versions;
+        @com.aliyun.core.annotation.NameInMap("Versions")
+        private java.util.List<String> versions;
 
         private VersionInfo(Builder builder) {
             this.edition = builder.edition;
@@ -101,20 +127,31 @@ public class DescribeVersionsResponseBody extends TeaModel {
         /**
          * @return versions
          */
-        public java.util.List < String > getVersions() {
+        public java.util.List<String> getVersions() {
             return this.versions;
         }
 
         public static final class Builder {
             private String edition; 
-            private java.util.List < String > versions; 
+            private java.util.List<String> versions; 
+
+            private Builder() {
+            } 
+
+            private Builder(VersionInfo model) {
+                this.edition = model.edition;
+                this.versions = model.versions;
+            } 
 
             /**
-             * The edition of the ASM instance. Valid values:
-             * <p>
+             * <p>The edition of the ASM instance. Valid values:</p>
+             * <ul>
+             * <li><code>Default</code>: Standard Edition</li>
+             * <li><code>Pro</code>: Professional Edition that is commercially released</li>
+             * </ul>
              * 
-             * *   `Default`: Standard Edition
-             * *   `Pro`: Professional Edition that is commercially released
+             * <strong>example:</strong>
+             * <p>Default</p>
              */
             public Builder edition(String edition) {
                 this.edition = edition;
@@ -122,9 +159,9 @@ public class DescribeVersionsResponseBody extends TeaModel {
             }
 
             /**
-             * The list of ASM versions available for the ASM instance of the current edition.
+             * <p>The list of ASM versions available for the ASM instance of the current edition.</p>
              */
-            public Builder versions(java.util.List < String > versions) {
+            public Builder versions(java.util.List<String> versions) {
                 this.versions = versions;
                 return this;
             }

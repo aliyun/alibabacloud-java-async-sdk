@@ -1,21 +1,26 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.servicemesh20200111.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeImportedServicesDetailResponseBody} extends {@link TeaModel}
  *
  * <p>DescribeImportedServicesDetailResponseBody</p>
  */
 public class DescribeImportedServicesDetailResponseBody extends TeaModel {
-    @NameInMap("Details")
-    private java.util.List < Details> details;
+    @com.aliyun.core.annotation.NameInMap("Details")
+    private java.util.List<Details> details;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
     private DescribeImportedServicesDetailResponseBody(Builder builder) {
@@ -31,10 +36,14 @@ public class DescribeImportedServicesDetailResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return details
      */
-    public java.util.List < Details> getDetails() {
+    public java.util.List<Details> getDetails() {
         return this.details;
     }
 
@@ -46,19 +55,30 @@ public class DescribeImportedServicesDetailResponseBody extends TeaModel {
     }
 
     public static final class Builder {
-        private java.util.List < Details> details; 
+        private java.util.List<Details> details; 
         private String requestId; 
 
+        private Builder() {
+        } 
+
+        private Builder(DescribeImportedServicesDetailResponseBody model) {
+            this.details = model.details;
+            this.requestId = model.requestId;
+        } 
+
         /**
-         * The details of the services.
+         * <p>The details of the services.</p>
          */
-        public Builder details(java.util.List < Details> details) {
+        public Builder details(java.util.List<Details> details) {
             this.details = details;
             return this;
         }
 
         /**
-         * The request ID.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>E0496204-7586-5B4C-B364-2361CC0EDxxxx</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -71,20 +91,26 @@ public class DescribeImportedServicesDetailResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link DescribeImportedServicesDetailResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeImportedServicesDetailResponseBody</p>
+     */
     public static class Ports extends TeaModel {
-        @NameInMap("Name")
+        @com.aliyun.core.annotation.NameInMap("Name")
         private String name;
 
-        @NameInMap("NodePort")
+        @com.aliyun.core.annotation.NameInMap("NodePort")
         private Integer nodePort;
 
-        @NameInMap("Port")
+        @com.aliyun.core.annotation.NameInMap("Port")
         private Integer port;
 
-        @NameInMap("Protocol")
+        @com.aliyun.core.annotation.NameInMap("Protocol")
         private String protocol;
 
-        @NameInMap("TargetPort")
+        @com.aliyun.core.annotation.NameInMap("TargetPort")
         private Integer targetPort;
 
         private Ports(Builder builder) {
@@ -145,8 +171,22 @@ public class DescribeImportedServicesDetailResponseBody extends TeaModel {
             private String protocol; 
             private Integer targetPort; 
 
+            private Builder() {
+            } 
+
+            private Builder(Ports model) {
+                this.name = model.name;
+                this.nodePort = model.nodePort;
+                this.port = model.port;
+                this.protocol = model.protocol;
+                this.targetPort = model.targetPort;
+            } 
+
             /**
-             * The name of a port.
+             * <p>The name of a port.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>http-0</p>
              */
             public Builder name(String name) {
                 this.name = name;
@@ -154,7 +194,10 @@ public class DescribeImportedServicesDetailResponseBody extends TeaModel {
             }
 
             /**
-             * The node port.
+             * <p>The node port.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>12345</p>
              */
             public Builder nodePort(Integer nodePort) {
                 this.nodePort = nodePort;
@@ -162,7 +205,10 @@ public class DescribeImportedServicesDetailResponseBody extends TeaModel {
             }
 
             /**
-             * The port number.
+             * <p>The port number.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>80</p>
              */
             public Builder port(Integer port) {
                 this.port = port;
@@ -170,7 +216,10 @@ public class DescribeImportedServicesDetailResponseBody extends TeaModel {
             }
 
             /**
-             * The protocol of the port.
+             * <p>The protocol of the port.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>tcp</p>
              */
             public Builder protocol(String protocol) {
                 this.protocol = protocol;
@@ -178,7 +227,10 @@ public class DescribeImportedServicesDetailResponseBody extends TeaModel {
             }
 
             /**
-             * The container port.
+             * <p>The container port.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>8080</p>
              */
             public Builder targetPort(Integer targetPort) {
                 this.targetPort = targetPort;
@@ -192,23 +244,29 @@ public class DescribeImportedServicesDetailResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link DescribeImportedServicesDetailResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeImportedServicesDetailResponseBody</p>
+     */
     public static class Details extends TeaModel {
-        @NameInMap("ClusterIds")
-        private java.util.List < String > clusterIds;
+        @com.aliyun.core.annotation.NameInMap("ClusterIds")
+        private java.util.List<String> clusterIds;
 
-        @NameInMap("Labels")
-        private java.util.Map < String, String > labels;
+        @com.aliyun.core.annotation.NameInMap("Labels")
+        private java.util.Map<String, String> labels;
 
-        @NameInMap("Namespace")
+        @com.aliyun.core.annotation.NameInMap("Namespace")
         private String namespace;
 
-        @NameInMap("Ports")
-        private java.util.List < Ports> ports;
+        @com.aliyun.core.annotation.NameInMap("Ports")
+        private java.util.List<Ports> ports;
 
-        @NameInMap("ServiceName")
+        @com.aliyun.core.annotation.NameInMap("ServiceName")
         private String serviceName;
 
-        @NameInMap("ServiceType")
+        @com.aliyun.core.annotation.NameInMap("ServiceType")
         private String serviceType;
 
         private Details(Builder builder) {
@@ -231,14 +289,14 @@ public class DescribeImportedServicesDetailResponseBody extends TeaModel {
         /**
          * @return clusterIds
          */
-        public java.util.List < String > getClusterIds() {
+        public java.util.List<String> getClusterIds() {
             return this.clusterIds;
         }
 
         /**
          * @return labels
          */
-        public java.util.Map < String, String > getLabels() {
+        public java.util.Map<String, String> getLabels() {
             return this.labels;
         }
 
@@ -252,7 +310,7 @@ public class DescribeImportedServicesDetailResponseBody extends TeaModel {
         /**
          * @return ports
          */
-        public java.util.List < Ports> getPorts() {
+        public java.util.List<Ports> getPorts() {
             return this.ports;
         }
 
@@ -271,31 +329,46 @@ public class DescribeImportedServicesDetailResponseBody extends TeaModel {
         }
 
         public static final class Builder {
-            private java.util.List < String > clusterIds; 
-            private java.util.Map < String, String > labels; 
+            private java.util.List<String> clusterIds; 
+            private java.util.Map<String, String> labels; 
             private String namespace; 
-            private java.util.List < Ports> ports; 
+            private java.util.List<Ports> ports; 
             private String serviceName; 
             private String serviceType; 
 
+            private Builder() {
+            } 
+
+            private Builder(Details model) {
+                this.clusterIds = model.clusterIds;
+                this.labels = model.labels;
+                this.namespace = model.namespace;
+                this.ports = model.ports;
+                this.serviceName = model.serviceName;
+                this.serviceType = model.serviceType;
+            } 
+
             /**
-             * The clusters on the data plane.
+             * <p>The clusters on the data plane.</p>
              */
-            public Builder clusterIds(java.util.List < String > clusterIds) {
+            public Builder clusterIds(java.util.List<String> clusterIds) {
                 this.clusterIds = clusterIds;
                 return this;
             }
 
             /**
-             * The labels of the service.
+             * <p>The labels of the service.</p>
              */
-            public Builder labels(java.util.Map < String, String > labels) {
+            public Builder labels(java.util.Map<String, String> labels) {
                 this.labels = labels;
                 return this;
             }
 
             /**
-             * The namespace in which the service resides.
+             * <p>The namespace in which the service resides.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>default</p>
              */
             public Builder namespace(String namespace) {
                 this.namespace = namespace;
@@ -303,15 +376,18 @@ public class DescribeImportedServicesDetailResponseBody extends TeaModel {
             }
 
             /**
-             * The ports declared for the service.
+             * <p>The ports declared for the service.</p>
              */
-            public Builder ports(java.util.List < Ports> ports) {
+            public Builder ports(java.util.List<Ports> ports) {
                 this.ports = ports;
                 return this;
             }
 
             /**
-             * The name of a service.
+             * <p>The name of a service.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>productpage</p>
              */
             public Builder serviceName(String serviceName) {
                 this.serviceName = serviceName;
@@ -319,7 +395,10 @@ public class DescribeImportedServicesDetailResponseBody extends TeaModel {
             }
 
             /**
-             * The type of the service.
+             * <p>The type of the service.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Kubernetes</p>
              */
             public Builder serviceType(String serviceType) {
                 this.serviceType = serviceType;

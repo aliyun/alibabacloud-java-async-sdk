@@ -1,22 +1,27 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.servicemesh20200111.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ListServiceAccountsResponseBody} extends {@link TeaModel}
  *
  * <p>ListServiceAccountsResponseBody</p>
  */
 public class ListServiceAccountsResponseBody extends TeaModel {
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("ServiceAccounts")
-    private java.util.List < ServiceAccounts> serviceAccounts;
+    @com.aliyun.core.annotation.NameInMap("ServiceAccounts")
+    private java.util.List<ServiceAccounts> serviceAccounts;
 
     private ListServiceAccountsResponseBody(Builder builder) {
         this.requestId = builder.requestId;
@@ -31,6 +36,10 @@ public class ListServiceAccountsResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return requestId
      */
@@ -41,16 +50,27 @@ public class ListServiceAccountsResponseBody extends TeaModel {
     /**
      * @return serviceAccounts
      */
-    public java.util.List < ServiceAccounts> getServiceAccounts() {
+    public java.util.List<ServiceAccounts> getServiceAccounts() {
         return this.serviceAccounts;
     }
 
     public static final class Builder {
         private String requestId; 
-        private java.util.List < ServiceAccounts> serviceAccounts; 
+        private java.util.List<ServiceAccounts> serviceAccounts; 
+
+        private Builder() {
+        } 
+
+        private Builder(ListServiceAccountsResponseBody model) {
+            this.requestId = model.requestId;
+            this.serviceAccounts = model.serviceAccounts;
+        } 
 
         /**
-         * RequestId.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>8349374D-0F22-5CAB-9DE3-8CCE8EFA71FF</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -58,9 +78,9 @@ public class ListServiceAccountsResponseBody extends TeaModel {
         }
 
         /**
-         * ServiceAccounts.
+         * <p>The list of service accounts.</p>
          */
-        public Builder serviceAccounts(java.util.List < ServiceAccounts> serviceAccounts) {
+        public Builder serviceAccounts(java.util.List<ServiceAccounts> serviceAccounts) {
             this.serviceAccounts = serviceAccounts;
             return this;
         }
@@ -71,11 +91,17 @@ public class ListServiceAccountsResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link ListServiceAccountsResponseBody} extends {@link TeaModel}
+     *
+     * <p>ListServiceAccountsResponseBody</p>
+     */
     public static class ServiceAccounts extends TeaModel {
-        @NameInMap("Name")
+        @com.aliyun.core.annotation.NameInMap("Name")
         private String name;
 
-        @NameInMap("Namespace")
+        @com.aliyun.core.annotation.NameInMap("Namespace")
         private String namespace;
 
         private ServiceAccounts(Builder builder) {
@@ -109,8 +135,19 @@ public class ListServiceAccountsResponseBody extends TeaModel {
             private String name; 
             private String namespace; 
 
+            private Builder() {
+            } 
+
+            private Builder(ServiceAccounts model) {
+                this.name = model.name;
+                this.namespace = model.namespace;
+            } 
+
             /**
-             * Name.
+             * <p>The name of the service account.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>bookinfo-reviews</p>
              */
             public Builder name(String name) {
                 this.name = name;
@@ -118,7 +155,10 @@ public class ListServiceAccountsResponseBody extends TeaModel {
             }
 
             /**
-             * Namespace.
+             * <p>The namespace where the service account resides.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>default</p>
              */
             public Builder namespace(String namespace) {
                 this.namespace = namespace;

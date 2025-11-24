@@ -1,412 +1,450 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.servicemesh20200111.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link UpdateMeshFeatureRequest} extends {@link RequestModel}
  *
  * <p>UpdateMeshFeatureRequest</p>
  */
 public class UpdateMeshFeatureRequest extends Request {
-    @Body
-    @NameInMap("AccessLogEnabled")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("AccessLogEnabled")
     private Boolean accessLogEnabled;
 
-    @Body
-    @NameInMap("AccessLogFile")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("AccessLogFile")
     private String accessLogFile;
 
-    @Body
-    @NameInMap("AccessLogFormat")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("AccessLogFormat")
     private String accessLogFormat;
 
-    @Query
-    @NameInMap("AccessLogGatewayEnabled")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("AccessLogGatewayEnabled")
     private Boolean accessLogGatewayEnabled;
 
-    @Body
-    @NameInMap("AccessLogGatewayLifecycle")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("AccessLogGatewayLifecycle")
     private Integer accessLogGatewayLifecycle;
 
-    @Body
-    @NameInMap("AccessLogProject")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("AccessLogProject")
     private String accessLogProject;
 
-    @Body
-    @NameInMap("AccessLogServiceEnabled")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("AccessLogServiceEnabled")
     private Boolean accessLogServiceEnabled;
 
-    @Body
-    @NameInMap("AccessLogServiceHost")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("AccessLogServiceHost")
     private String accessLogServiceHost;
 
-    @Body
-    @NameInMap("AccessLogServicePort")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("AccessLogServicePort")
     private Integer accessLogServicePort;
 
-    @Query
-    @NameInMap("AccessLogSidecarEnabled")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("AccessLogSidecarEnabled")
     private Boolean accessLogSidecarEnabled;
 
-    @Body
-    @NameInMap("AccessLogSidecarLifecycle")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("AccessLogSidecarLifecycle")
     private Integer accessLogSidecarLifecycle;
 
-    @Body
-    @NameInMap("AuditProject")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("AuditProject")
     private String auditProject;
 
-    @Body
-    @NameInMap("AutoInjectionPolicyEnabled")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("AutoInjectionPolicyEnabled")
     private Boolean autoInjectionPolicyEnabled;
 
-    @Body
-    @NameInMap("CRAggregationEnabled")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("CRAggregationEnabled")
     private Boolean CRAggregationEnabled;
 
-    @Body
-    @NameInMap("ClusterSpec")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("CertChain")
+    private String certChain;
+
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("ClusterSpec")
     private String clusterSpec;
 
-    @Body
-    @NameInMap("CniEnabled")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("CniEnabled")
     private Boolean cniEnabled;
 
-    @Body
-    @NameInMap("CniExcludeNamespaces")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("CniExcludeNamespaces")
     private String cniExcludeNamespaces;
 
-    @Body
-    @NameInMap("Concurrency")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("Concurrency")
     private Integer concurrency;
 
-    @Body
-    @NameInMap("ConfigSourceEnabled")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("ConfigSourceEnabled")
     private Boolean configSourceEnabled;
 
-    @Body
-    @NameInMap("ConfigSourceNacosID")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("ConfigSourceNacosID")
     private String configSourceNacosID;
 
-    @Body
-    @NameInMap("CustomizedPrometheus")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("CustomizedPrometheus")
     private Boolean customizedPrometheus;
 
-    @Body
-    @NameInMap("CustomizedZipkin")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("CustomizedZipkin")
     private Boolean customizedZipkin;
 
-    @Body
-    @NameInMap("DNSProxyingEnabled")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("DNSProxyingEnabled")
     private Boolean DNSProxyingEnabled;
 
-    @Body
-    @NameInMap("DefaultComponentsScheduleConfig")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("DefaultComponentsScheduleConfig")
     private String defaultComponentsScheduleConfig;
 
-    @Body
-    @NameInMap("DiscoverySelectors")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("DiscoverySelectors")
     private String discoverySelectors;
 
-    @Body
-    @NameInMap("DubboFilterEnabled")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("DubboFilterEnabled")
     private Boolean dubboFilterEnabled;
 
-    @Body
-    @NameInMap("EnableAudit")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("EnableAudit")
     private Boolean enableAudit;
 
-    @Body
-    @NameInMap("EnableAutoDiagnosis")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("EnableAutoDiagnosis")
     private Boolean enableAutoDiagnosis;
 
-    @Body
-    @NameInMap("EnableBootstrapXdsAgent")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("EnableBootstrapXdsAgent")
     private Boolean enableBootstrapXdsAgent;
 
-    @Body
-    @NameInMap("EnableCRHistory")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("EnableCRHistory")
     private Boolean enableCRHistory;
 
-    @Body
-    @NameInMap("EnableNamespacesByDefault")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("EnableNamespacesByDefault")
     private Boolean enableNamespacesByDefault;
 
-    @Body
-    @NameInMap("EnableSDSServer")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("EnableSDSServer")
     private Boolean enableSDSServer;
 
-    @Body
-    @NameInMap("ExcludeIPRanges")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("ExcludeIPRanges")
     private String excludeIPRanges;
 
-    @Body
-    @NameInMap("ExcludeInboundPorts")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("ExcludeInboundPorts")
     private String excludeInboundPorts;
 
-    @Body
-    @NameInMap("ExcludeOutboundPorts")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("ExcludeOutboundPorts")
     private String excludeOutboundPorts;
 
-    @Body
-    @NameInMap("FilterGatewayClusterConfig")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("ExistingCaCert")
+    private String existingCaCert;
+
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("ExistingCaKey")
+    private String existingCaKey;
+
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("ExistingRootCaCert")
+    private String existingRootCaCert;
+
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("FilterGatewayClusterConfig")
     private Boolean filterGatewayClusterConfig;
 
-    @Body
-    @NameInMap("GatewayAPIEnabled")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("GatewayAPIEnabled")
     private Boolean gatewayAPIEnabled;
 
-    @Body
-    @NameInMap("HoldApplicationUntilProxyStarts")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("HoldApplicationUntilProxyStarts")
     private Boolean holdApplicationUntilProxyStarts;
 
-    @Body
-    @NameInMap("Http10Enabled")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("Http10Enabled")
     private Boolean http10Enabled;
 
-    @Body
-    @NameInMap("IncludeIPRanges")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("IncludeIPRanges")
     private String includeIPRanges;
 
-    @Body
-    @NameInMap("IncludeInboundPorts")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("IncludeInboundPorts")
     private String includeInboundPorts;
 
-    @Body
-    @NameInMap("IncludeOutboundPorts")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("IncludeOutboundPorts")
     private String includeOutboundPorts;
 
-    @Body
-    @NameInMap("IntegrateKiali")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("IntegrateKiali")
     private Boolean integrateKiali;
 
-    @Body
-    @NameInMap("InterceptionMode")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("InterceptionMode")
     private String interceptionMode;
 
-    @Body
-    @NameInMap("KialiArmsAuthTokens")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("KialiArmsAuthTokens")
     private String kialiArmsAuthTokens;
 
-    @Body
-    @NameInMap("KialiEnabled")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("KialiEnabled")
     private Boolean kialiEnabled;
 
-    @Body
-    @NameInMap("KialiServiceAnnotations")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("KialiServiceAnnotations")
     private String kialiServiceAnnotations;
 
-    @Body
-    @NameInMap("Lifecycle")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("LabelsForOffloadedWorkloads")
+    private String labelsForOffloadedWorkloads;
+
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("Lifecycle")
     private String lifecycle;
 
-    @Body
-    @NameInMap("LocalityLBConf")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("LocalityLBConf")
     private String localityLBConf;
 
-    @Body
-    @NameInMap("LocalityLoadBalancing")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("LocalityLoadBalancing")
     private Boolean localityLoadBalancing;
 
-    @Body
-    @NameInMap("LogLevel")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("LogLevel")
     private String logLevel;
 
-    @Body
-    @NameInMap("MSEEnabled")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("MSEEnabled")
+    @Deprecated
     private Boolean MSEEnabled;
 
-    @Body
-    @NameInMap("MultiBufferEnabled")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("MultiBufferEnabled")
     private Boolean multiBufferEnabled;
 
-    @Body
-    @NameInMap("MultiBufferPollDelay")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("MultiBufferPollDelay")
     private String multiBufferPollDelay;
 
-    @Body
-    @NameInMap("MysqlFilterEnabled")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("MysqlFilterEnabled")
     private Boolean mysqlFilterEnabled;
 
-    @Body
-    @NameInMap("NFDEnabled")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("NFDEnabled")
     private Boolean NFDEnabled;
 
-    @Body
-    @NameInMap("NFDLabelPruned")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("NFDLabelPruned")
     private Boolean NFDLabelPruned;
 
-    @Body
-    @NameInMap("OPAInjectorCPULimit")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("OPAInjectorCPULimit")
     private String OPAInjectorCPULimit;
 
-    @Body
-    @NameInMap("OPAInjectorCPURequirement")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("OPAInjectorCPURequirement")
     private String OPAInjectorCPURequirement;
 
-    @Body
-    @NameInMap("OPAInjectorMemoryLimit")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("OPAInjectorMemoryLimit")
     private String OPAInjectorMemoryLimit;
 
-    @Body
-    @NameInMap("OPAInjectorMemoryRequirement")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("OPAInjectorMemoryRequirement")
     private String OPAInjectorMemoryRequirement;
 
-    @Body
-    @NameInMap("OPALimitCPU")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("OPALimitCPU")
     private String OPALimitCPU;
 
-    @Body
-    @NameInMap("OPALimitMemory")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("OPALimitMemory")
     private String OPALimitMemory;
 
-    @Body
-    @NameInMap("OPALogLevel")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("OPALogLevel")
     private String OPALogLevel;
 
-    @Body
-    @NameInMap("OPARequestCPU")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("OPARequestCPU")
     private String OPARequestCPU;
 
-    @Body
-    @NameInMap("OPARequestMemory")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("OPARequestMemory")
     private String OPARequestMemory;
 
-    @Body
-    @NameInMap("OPAScopeInjected")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("OPAScopeInjected")
     private Boolean OPAScopeInjected;
 
-    @Body
-    @NameInMap("OpaEnabled")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("OpaEnabled")
     private Boolean opaEnabled;
 
-    @Body
-    @NameInMap("OpenAgentPolicy")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("OpenAgentPolicy")
     private Boolean openAgentPolicy;
 
-    @Body
-    @NameInMap("OutboundTrafficPolicy")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("OutboundTrafficPolicy")
     private String outboundTrafficPolicy;
 
-    @Body
-    @NameInMap("PrometheusUrl")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("PilotEnableQuicListeners")
+    private Boolean pilotEnableQuicListeners;
+
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("PrometheusUrl")
     private String prometheusUrl;
 
-    @Body
-    @NameInMap("ProxyInitCPUResourceLimit")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("ProxyInitCPUResourceLimit")
     private String proxyInitCPUResourceLimit;
 
-    @Body
-    @NameInMap("ProxyInitCPUResourceRequest")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("ProxyInitCPUResourceRequest")
     private String proxyInitCPUResourceRequest;
 
-    @Body
-    @NameInMap("ProxyInitMemoryResourceLimit")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("ProxyInitMemoryResourceLimit")
     private String proxyInitMemoryResourceLimit;
 
-    @Body
-    @NameInMap("ProxyInitMemoryResourceRequest")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("ProxyInitMemoryResourceRequest")
     private String proxyInitMemoryResourceRequest;
 
-    @Body
-    @NameInMap("ProxyLimitCPU")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("ProxyLimitCPU")
     private String proxyLimitCPU;
 
-    @Body
-    @NameInMap("ProxyLimitMemory")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("ProxyLimitMemory")
     private String proxyLimitMemory;
 
-    @Body
-    @NameInMap("ProxyRequestCPU")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("ProxyRequestCPU")
     private String proxyRequestCPU;
 
-    @Body
-    @NameInMap("ProxyRequestMemory")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("ProxyRequestMemory")
     private String proxyRequestMemory;
 
-    @Body
-    @NameInMap("ProxyStatsMatcher")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("ProxyStatsMatcher")
     private String proxyStatsMatcher;
 
-    @Body
-    @NameInMap("RedisFilterEnabled")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("RedisFilterEnabled")
     private Boolean redisFilterEnabled;
 
-    @Body
-    @NameInMap("ServiceMeshId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("SMCEnabled")
+    private Boolean SMCEnabled;
+
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("ServiceMeshId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String serviceMeshId;
 
-    @Body
-    @NameInMap("SidecarInjectorLimitCPU")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("SidecarInjectorLimitCPU")
     private String sidecarInjectorLimitCPU;
 
-    @Body
-    @NameInMap("SidecarInjectorLimitMemory")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("SidecarInjectorLimitMemory")
     private String sidecarInjectorLimitMemory;
 
-    @Body
-    @NameInMap("SidecarInjectorRequestCPU")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("SidecarInjectorRequestCPU")
     private String sidecarInjectorRequestCPU;
 
-    @Body
-    @NameInMap("SidecarInjectorRequestMemory")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("SidecarInjectorRequestMemory")
     private String sidecarInjectorRequestMemory;
 
-    @Body
-    @NameInMap("SidecarInjectorWebhookAsYaml")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("SidecarInjectorWebhookAsYaml")
     private String sidecarInjectorWebhookAsYaml;
 
-    @Body
-    @NameInMap("Telemetry")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("Telemetry")
     private Boolean telemetry;
 
-    @Body
-    @NameInMap("TerminationDrainDuration")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("TerminationDrainDuration")
     private String terminationDrainDuration;
 
-    @Body
-    @NameInMap("ThriftFilterEnabled")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("ThriftFilterEnabled")
     private Boolean thriftFilterEnabled;
 
-    @Body
-    @NameInMap("TraceCustomTags")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("TraceCustomTags")
     private String traceCustomTags;
 
-    @Body
-    @NameInMap("TraceMaxPathTagLength")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("TraceMaxPathTagLength")
     private String traceMaxPathTagLength;
 
-    @Body
-    @NameInMap("TraceSampling")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("TraceSampling")
     private Float traceSampling;
 
-    @Body
-    @NameInMap("Tracing")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("Tracing")
     private Boolean tracing;
 
-    @Body
-    @NameInMap("TracingOnExtZipkinLimitCPU")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("TracingOnExtZipkinLimitCPU")
     private String tracingOnExtZipkinLimitCPU;
 
-    @Body
-    @NameInMap("TracingOnExtZipkinLimitMemory")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("TracingOnExtZipkinLimitMemory")
     private String tracingOnExtZipkinLimitMemory;
 
-    @Body
-    @NameInMap("TracingOnExtZipkinRequestCPU")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("TracingOnExtZipkinReplicaCount")
+    private String tracingOnExtZipkinReplicaCount;
+
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("TracingOnExtZipkinRequestCPU")
     private String tracingOnExtZipkinRequestCPU;
 
-    @Body
-    @NameInMap("TracingOnExtZipkinRequestMemory")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("TracingOnExtZipkinRequestMemory")
     private String tracingOnExtZipkinRequestMemory;
 
-    @Body
-    @NameInMap("WebAssemblyFilterEnabled")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("WebAssemblyFilterEnabled")
     private Boolean webAssemblyFilterEnabled;
 
     private UpdateMeshFeatureRequest(Builder builder) {
@@ -425,6 +463,7 @@ public class UpdateMeshFeatureRequest extends Request {
         this.auditProject = builder.auditProject;
         this.autoInjectionPolicyEnabled = builder.autoInjectionPolicyEnabled;
         this.CRAggregationEnabled = builder.CRAggregationEnabled;
+        this.certChain = builder.certChain;
         this.clusterSpec = builder.clusterSpec;
         this.cniEnabled = builder.cniEnabled;
         this.cniExcludeNamespaces = builder.cniExcludeNamespaces;
@@ -446,6 +485,9 @@ public class UpdateMeshFeatureRequest extends Request {
         this.excludeIPRanges = builder.excludeIPRanges;
         this.excludeInboundPorts = builder.excludeInboundPorts;
         this.excludeOutboundPorts = builder.excludeOutboundPorts;
+        this.existingCaCert = builder.existingCaCert;
+        this.existingCaKey = builder.existingCaKey;
+        this.existingRootCaCert = builder.existingRootCaCert;
         this.filterGatewayClusterConfig = builder.filterGatewayClusterConfig;
         this.gatewayAPIEnabled = builder.gatewayAPIEnabled;
         this.holdApplicationUntilProxyStarts = builder.holdApplicationUntilProxyStarts;
@@ -458,6 +500,7 @@ public class UpdateMeshFeatureRequest extends Request {
         this.kialiArmsAuthTokens = builder.kialiArmsAuthTokens;
         this.kialiEnabled = builder.kialiEnabled;
         this.kialiServiceAnnotations = builder.kialiServiceAnnotations;
+        this.labelsForOffloadedWorkloads = builder.labelsForOffloadedWorkloads;
         this.lifecycle = builder.lifecycle;
         this.localityLBConf = builder.localityLBConf;
         this.localityLoadBalancing = builder.localityLoadBalancing;
@@ -481,6 +524,7 @@ public class UpdateMeshFeatureRequest extends Request {
         this.opaEnabled = builder.opaEnabled;
         this.openAgentPolicy = builder.openAgentPolicy;
         this.outboundTrafficPolicy = builder.outboundTrafficPolicy;
+        this.pilotEnableQuicListeners = builder.pilotEnableQuicListeners;
         this.prometheusUrl = builder.prometheusUrl;
         this.proxyInitCPUResourceLimit = builder.proxyInitCPUResourceLimit;
         this.proxyInitCPUResourceRequest = builder.proxyInitCPUResourceRequest;
@@ -492,6 +536,7 @@ public class UpdateMeshFeatureRequest extends Request {
         this.proxyRequestMemory = builder.proxyRequestMemory;
         this.proxyStatsMatcher = builder.proxyStatsMatcher;
         this.redisFilterEnabled = builder.redisFilterEnabled;
+        this.SMCEnabled = builder.SMCEnabled;
         this.serviceMeshId = builder.serviceMeshId;
         this.sidecarInjectorLimitCPU = builder.sidecarInjectorLimitCPU;
         this.sidecarInjectorLimitMemory = builder.sidecarInjectorLimitMemory;
@@ -507,6 +552,7 @@ public class UpdateMeshFeatureRequest extends Request {
         this.tracing = builder.tracing;
         this.tracingOnExtZipkinLimitCPU = builder.tracingOnExtZipkinLimitCPU;
         this.tracingOnExtZipkinLimitMemory = builder.tracingOnExtZipkinLimitMemory;
+        this.tracingOnExtZipkinReplicaCount = builder.tracingOnExtZipkinReplicaCount;
         this.tracingOnExtZipkinRequestCPU = builder.tracingOnExtZipkinRequestCPU;
         this.tracingOnExtZipkinRequestMemory = builder.tracingOnExtZipkinRequestMemory;
         this.webAssemblyFilterEnabled = builder.webAssemblyFilterEnabled;
@@ -520,7 +566,7 @@ public class UpdateMeshFeatureRequest extends Request {
         return builder().build();
     }
 
-    @Override
+@Override
     public Builder toBuilder() {
         return new Builder(this);
     }
@@ -621,6 +667,13 @@ public class UpdateMeshFeatureRequest extends Request {
      */
     public Boolean getCRAggregationEnabled() {
         return this.CRAggregationEnabled;
+    }
+
+    /**
+     * @return certChain
+     */
+    public String getCertChain() {
+        return this.certChain;
     }
 
     /**
@@ -771,6 +824,27 @@ public class UpdateMeshFeatureRequest extends Request {
     }
 
     /**
+     * @return existingCaCert
+     */
+    public String getExistingCaCert() {
+        return this.existingCaCert;
+    }
+
+    /**
+     * @return existingCaKey
+     */
+    public String getExistingCaKey() {
+        return this.existingCaKey;
+    }
+
+    /**
+     * @return existingRootCaCert
+     */
+    public String getExistingRootCaCert() {
+        return this.existingRootCaCert;
+    }
+
+    /**
      * @return filterGatewayClusterConfig
      */
     public Boolean getFilterGatewayClusterConfig() {
@@ -852,6 +926,13 @@ public class UpdateMeshFeatureRequest extends Request {
      */
     public String getKialiServiceAnnotations() {
         return this.kialiServiceAnnotations;
+    }
+
+    /**
+     * @return labelsForOffloadedWorkloads
+     */
+    public String getLabelsForOffloadedWorkloads() {
+        return this.labelsForOffloadedWorkloads;
     }
 
     /**
@@ -1016,6 +1097,13 @@ public class UpdateMeshFeatureRequest extends Request {
     }
 
     /**
+     * @return pilotEnableQuicListeners
+     */
+    public Boolean getPilotEnableQuicListeners() {
+        return this.pilotEnableQuicListeners;
+    }
+
+    /**
      * @return prometheusUrl
      */
     public String getPrometheusUrl() {
@@ -1090,6 +1178,13 @@ public class UpdateMeshFeatureRequest extends Request {
      */
     public Boolean getRedisFilterEnabled() {
         return this.redisFilterEnabled;
+    }
+
+    /**
+     * @return SMCEnabled
+     */
+    public Boolean getSMCEnabled() {
+        return this.SMCEnabled;
     }
 
     /**
@@ -1198,6 +1293,13 @@ public class UpdateMeshFeatureRequest extends Request {
     }
 
     /**
+     * @return tracingOnExtZipkinReplicaCount
+     */
+    public String getTracingOnExtZipkinReplicaCount() {
+        return this.tracingOnExtZipkinReplicaCount;
+    }
+
+    /**
      * @return tracingOnExtZipkinRequestCPU
      */
     public String getTracingOnExtZipkinRequestCPU() {
@@ -1233,6 +1335,7 @@ public class UpdateMeshFeatureRequest extends Request {
         private String auditProject; 
         private Boolean autoInjectionPolicyEnabled; 
         private Boolean CRAggregationEnabled; 
+        private String certChain; 
         private String clusterSpec; 
         private Boolean cniEnabled; 
         private String cniExcludeNamespaces; 
@@ -1254,6 +1357,9 @@ public class UpdateMeshFeatureRequest extends Request {
         private String excludeIPRanges; 
         private String excludeInboundPorts; 
         private String excludeOutboundPorts; 
+        private String existingCaCert; 
+        private String existingCaKey; 
+        private String existingRootCaCert; 
         private Boolean filterGatewayClusterConfig; 
         private Boolean gatewayAPIEnabled; 
         private Boolean holdApplicationUntilProxyStarts; 
@@ -1266,6 +1372,7 @@ public class UpdateMeshFeatureRequest extends Request {
         private String kialiArmsAuthTokens; 
         private Boolean kialiEnabled; 
         private String kialiServiceAnnotations; 
+        private String labelsForOffloadedWorkloads; 
         private String lifecycle; 
         private String localityLBConf; 
         private Boolean localityLoadBalancing; 
@@ -1289,6 +1396,7 @@ public class UpdateMeshFeatureRequest extends Request {
         private Boolean opaEnabled; 
         private Boolean openAgentPolicy; 
         private String outboundTrafficPolicy; 
+        private Boolean pilotEnableQuicListeners; 
         private String prometheusUrl; 
         private String proxyInitCPUResourceLimit; 
         private String proxyInitCPUResourceRequest; 
@@ -1300,6 +1408,7 @@ public class UpdateMeshFeatureRequest extends Request {
         private String proxyRequestMemory; 
         private String proxyStatsMatcher; 
         private Boolean redisFilterEnabled; 
+        private Boolean SMCEnabled; 
         private String serviceMeshId; 
         private String sidecarInjectorLimitCPU; 
         private String sidecarInjectorLimitMemory; 
@@ -1315,6 +1424,7 @@ public class UpdateMeshFeatureRequest extends Request {
         private Boolean tracing; 
         private String tracingOnExtZipkinLimitCPU; 
         private String tracingOnExtZipkinLimitMemory; 
+        private String tracingOnExtZipkinReplicaCount; 
         private String tracingOnExtZipkinRequestCPU; 
         private String tracingOnExtZipkinRequestMemory; 
         private Boolean webAssemblyFilterEnabled; 
@@ -1339,6 +1449,7 @@ public class UpdateMeshFeatureRequest extends Request {
             this.auditProject = request.auditProject;
             this.autoInjectionPolicyEnabled = request.autoInjectionPolicyEnabled;
             this.CRAggregationEnabled = request.CRAggregationEnabled;
+            this.certChain = request.certChain;
             this.clusterSpec = request.clusterSpec;
             this.cniEnabled = request.cniEnabled;
             this.cniExcludeNamespaces = request.cniExcludeNamespaces;
@@ -1360,6 +1471,9 @@ public class UpdateMeshFeatureRequest extends Request {
             this.excludeIPRanges = request.excludeIPRanges;
             this.excludeInboundPorts = request.excludeInboundPorts;
             this.excludeOutboundPorts = request.excludeOutboundPorts;
+            this.existingCaCert = request.existingCaCert;
+            this.existingCaKey = request.existingCaKey;
+            this.existingRootCaCert = request.existingRootCaCert;
             this.filterGatewayClusterConfig = request.filterGatewayClusterConfig;
             this.gatewayAPIEnabled = request.gatewayAPIEnabled;
             this.holdApplicationUntilProxyStarts = request.holdApplicationUntilProxyStarts;
@@ -1372,6 +1486,7 @@ public class UpdateMeshFeatureRequest extends Request {
             this.kialiArmsAuthTokens = request.kialiArmsAuthTokens;
             this.kialiEnabled = request.kialiEnabled;
             this.kialiServiceAnnotations = request.kialiServiceAnnotations;
+            this.labelsForOffloadedWorkloads = request.labelsForOffloadedWorkloads;
             this.lifecycle = request.lifecycle;
             this.localityLBConf = request.localityLBConf;
             this.localityLoadBalancing = request.localityLoadBalancing;
@@ -1395,6 +1510,7 @@ public class UpdateMeshFeatureRequest extends Request {
             this.opaEnabled = request.opaEnabled;
             this.openAgentPolicy = request.openAgentPolicy;
             this.outboundTrafficPolicy = request.outboundTrafficPolicy;
+            this.pilotEnableQuicListeners = request.pilotEnableQuicListeners;
             this.prometheusUrl = request.prometheusUrl;
             this.proxyInitCPUResourceLimit = request.proxyInitCPUResourceLimit;
             this.proxyInitCPUResourceRequest = request.proxyInitCPUResourceRequest;
@@ -1406,6 +1522,7 @@ public class UpdateMeshFeatureRequest extends Request {
             this.proxyRequestMemory = request.proxyRequestMemory;
             this.proxyStatsMatcher = request.proxyStatsMatcher;
             this.redisFilterEnabled = request.redisFilterEnabled;
+            this.SMCEnabled = request.SMCEnabled;
             this.serviceMeshId = request.serviceMeshId;
             this.sidecarInjectorLimitCPU = request.sidecarInjectorLimitCPU;
             this.sidecarInjectorLimitMemory = request.sidecarInjectorLimitMemory;
@@ -1421,19 +1538,22 @@ public class UpdateMeshFeatureRequest extends Request {
             this.tracing = request.tracing;
             this.tracingOnExtZipkinLimitCPU = request.tracingOnExtZipkinLimitCPU;
             this.tracingOnExtZipkinLimitMemory = request.tracingOnExtZipkinLimitMemory;
+            this.tracingOnExtZipkinReplicaCount = request.tracingOnExtZipkinReplicaCount;
             this.tracingOnExtZipkinRequestCPU = request.tracingOnExtZipkinRequestCPU;
             this.tracingOnExtZipkinRequestMemory = request.tracingOnExtZipkinRequestMemory;
             this.webAssemblyFilterEnabled = request.webAssemblyFilterEnabled;
         } 
 
         /**
-         * Specifies whether to enable access log collection. Valid values:
-         * <p>
+         * <p>Specifies whether to enable access log collection. Valid values:</p>
+         * <ul>
+         * <li><code>true</code>: enables access log collection.</li>
+         * <li><code>false</code>: disables access log collection.</li>
+         * </ul>
+         * <p>Default value: <code>false</code>.</p>
          * 
-         * *   `true`: enables access log collection.
-         * *   `false`: disables access log collection.
-         * 
-         * Default value: `false`.
+         * <strong>example:</strong>
+         * <p>false</p>
          */
         public Builder accessLogEnabled(Boolean accessLogEnabled) {
             this.putBodyParameter("AccessLogEnabled", accessLogEnabled);
@@ -1442,11 +1562,14 @@ public class UpdateMeshFeatureRequest extends Request {
         }
 
         /**
-         * Specifies whether to enable access logging. Valid values:
-         * <p>
+         * <p>Specifies whether to enable access logging. Valid values:</p>
+         * <ul>
+         * <li><code>&quot;&quot;</code>: disables access logging.</li>
+         * <li><code>/dev/stdout</code>: enables access logging. Access logs are written to /dev/stdout.</li>
+         * </ul>
          * 
-         * *   `""`: disables access logging.
-         * *   `/dev/stdout`: enables access logging. Access logs are written to /dev/stdout.
+         * <strong>example:</strong>
+         * <p>“”</p>
          */
         public Builder accessLogFile(String accessLogFile) {
             this.putBodyParameter("AccessLogFile", accessLogFile);
@@ -1455,7 +1578,10 @@ public class UpdateMeshFeatureRequest extends Request {
         }
 
         /**
-         * The custom format of access logs. To set this parameter, make sure that you have enabled access log collection. The value must be a JSON string. The following key names must be contained: authority_for, bytes_received, bytes_sent, downstream_local_address, downstream_remote_address, duration, istio_policy_status, method, path, protocol, requested_server_name, response_code, response_flags, route_name, start_time, trace_id, upstream_cluster, upstream_host, upstream_local_address, upstream_service_time, upstream_transport_failure_reason, user_agent, and x_forwarded_for.
+         * <p>The custom format of access logs. To set this parameter, make sure that you have enabled access log collection. The value must be a JSON string. The following key names must be contained: authority_for, bytes_received, bytes_sent, downstream_local_address, downstream_remote_address, duration, istio_policy_status, method, path, protocol, requested_server_name, response_code, response_flags, route_name, start_time, trace_id, upstream_cluster, upstream_host, upstream_local_address, upstream_service_time, upstream_transport_failure_reason, user_agent, and x_forwarded_for.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>{&quot;authority_for&quot;:&quot;%REQ(:AUTHORITY)%&quot;,&quot;bytes_received&quot;:&quot;%BYTES_RECEIVED%&quot;,&quot;bytes_sent&quot;:&quot;%BYTES_SENT%&quot;,&quot;downstream_local_address&quot;:&quot;%DOWNSTREAM_LOCAL_ADDRESS%&quot;,&quot;downstream_remote_address&quot;:&quot;%DOWNSTREAM_REMOTE_ADDRESS%&quot;,&quot;duration&quot;:&quot;%DURATION%&quot;,&quot;istio_policy_status&quot;:&quot;%DYNAMIC_METADATA(istio.mixer:status)%&quot;,&quot;method&quot;:&quot;%REQ(:METHOD)%&quot;,&quot;path&quot;:&quot;%REQ(X-ENVOY-ORIGINAL-PATH?:PATH)%&quot;,&quot;protocol&quot;:&quot;%PROTOCOL%&quot;,&quot;request_id&quot;:&quot;%REQ(X-REQUEST-ID)%&quot;,&quot;requested_server_name&quot;:&quot;%REQUESTED_SERVER_NAME%&quot;,&quot;response_code&quot;:&quot;%RESPONSE_CODE%&quot;,&quot;response_flags&quot;:&quot;%RESPONSE_FLAGS%&quot;,&quot;route_name&quot;:&quot;%ROUTE_NAME%&quot;,&quot;start_time&quot;:&quot;%START_TIME%&quot;,&quot;trace_id&quot;:&quot;%REQ(X-B3-TRACEID)%&quot;,&quot;upstream_cluster&quot;:&quot;%UPSTREAM_CLUSTER%&quot;,&quot;upstream_host&quot;:&quot;%UPSTREAM_HOST%&quot;,&quot;upstream_local_address&quot;:&quot;%UPSTREAM_LOCAL_ADDRESS%&quot;,&quot;upstream_service_time&quot;:&quot;%RESP(X-ENVOY-UPSTREAM-SERVICE-TIME)%&quot;,&quot;upstream_transport_failure_reason&quot;:&quot;%UPSTREAM_TRANSPORT_FAILURE_REASON%&quot;,&quot;user_agent&quot;:&quot;%REQ(USER-AGENT)%&quot;,&quot;x_forwarded_for&quot;:&quot;%REQ(X-FORWARDED-FOR)%&quot;}</p>
          */
         public Builder accessLogFormat(String accessLogFormat) {
             this.putBodyParameter("AccessLogFormat", accessLogFormat);
@@ -1464,7 +1590,10 @@ public class UpdateMeshFeatureRequest extends Request {
         }
 
         /**
-         * AccessLogGatewayEnabled.
+         * <p>Specifies whether to enable the collection of access logs of ASM gateways to Simple Log Service.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>false</p>
          */
         public Builder accessLogGatewayEnabled(Boolean accessLogGatewayEnabled) {
             this.putQueryParameter("AccessLogGatewayEnabled", accessLogGatewayEnabled);
@@ -1473,7 +1602,10 @@ public class UpdateMeshFeatureRequest extends Request {
         }
 
         /**
-         * The retention period for the access logs of the sidecar proxy. Unit: day. The logs are collected by using Log Service. For example, `30` indicates 30 days.
+         * <p>The retention period for the access logs of the sidecar proxy. Unit: day. The logs are collected by using Log Service. For example, <code>30</code> indicates 30 days.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>30</p>
          */
         public Builder accessLogGatewayLifecycle(Integer accessLogGatewayLifecycle) {
             this.putBodyParameter("AccessLogGatewayLifecycle", accessLogGatewayLifecycle);
@@ -1482,7 +1614,10 @@ public class UpdateMeshFeatureRequest extends Request {
         }
 
         /**
-         * The custom project on which the Log Service collects logs.
+         * <p>The custom project on which the Log Service collects logs.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>mesh-log-cf245a429b6ff4b6e97f20797758e****</p>
          */
         public Builder accessLogProject(String accessLogProject) {
             this.putBodyParameter("AccessLogProject", accessLogProject);
@@ -1491,13 +1626,15 @@ public class UpdateMeshFeatureRequest extends Request {
         }
 
         /**
-         * Specifies whether to enable gRPC Access Log Service (ALS) for Envoy. Valid values:
-         * <p>
+         * <p>Specifies whether to enable gRPC Access Log Service (ALS) for Envoy. Valid values:</p>
+         * <ul>
+         * <li><code>true</code>: enables gRPC ALS for Envoy.</li>
+         * <li><code>false</code>: disables gRPC ALS for Envoy.</li>
+         * </ul>
+         * <p>Default value: <code>false</code>.</p>
          * 
-         * *   `true`: enables gRPC ALS for Envoy.
-         * *   `false`: disables gRPC ALS for Envoy.
-         * 
-         * Default value: `false`.
+         * <strong>example:</strong>
+         * <p>false</p>
          */
         public Builder accessLogServiceEnabled(Boolean accessLogServiceEnabled) {
             this.putBodyParameter("AccessLogServiceEnabled", accessLogServiceEnabled);
@@ -1506,7 +1643,10 @@ public class UpdateMeshFeatureRequest extends Request {
         }
 
         /**
-         * The endpoint of gRPC ALS for Envoy.
+         * <p>The endpoint of gRPC ALS for Envoy.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>0.0.0.0</p>
          */
         public Builder accessLogServiceHost(String accessLogServiceHost) {
             this.putBodyParameter("AccessLogServiceHost", accessLogServiceHost);
@@ -1515,7 +1655,10 @@ public class UpdateMeshFeatureRequest extends Request {
         }
 
         /**
-         * The port of gRPC ALS for Envoy.
+         * <p>The port of gRPC ALS for Envoy.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>9999</p>
          */
         public Builder accessLogServicePort(Integer accessLogServicePort) {
             this.putBodyParameter("AccessLogServicePort", accessLogServicePort);
@@ -1524,7 +1667,10 @@ public class UpdateMeshFeatureRequest extends Request {
         }
 
         /**
-         * AccessLogSidecarEnabled.
+         * <p>Specifies whether to enable the collection of access logs of sidecar proxies to Simple Log Service.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>false</p>
          */
         public Builder accessLogSidecarEnabled(Boolean accessLogSidecarEnabled) {
             this.putQueryParameter("AccessLogSidecarEnabled", accessLogSidecarEnabled);
@@ -1533,7 +1679,10 @@ public class UpdateMeshFeatureRequest extends Request {
         }
 
         /**
-         * Specifies whether to enable automatic diagnostics for the ASM instance. If you enable this feature, the ASM instance is automatically diagnosed when you modify Istio resources in the ASM instance.
+         * <p>Specifies whether to enable automatic diagnostics for the ASM instance. If you enable this feature, the ASM instance is automatically diagnosed when you modify Istio resources in the ASM instance.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>30</p>
          */
         public Builder accessLogSidecarLifecycle(Integer accessLogSidecarLifecycle) {
             this.putBodyParameter("AccessLogSidecarLifecycle", accessLogSidecarLifecycle);
@@ -1542,10 +1691,11 @@ public class UpdateMeshFeatureRequest extends Request {
         }
 
         /**
-         * The name of the Log Service project that is used for mesh audit.
-         * <p>
+         * <p>The name of the Log Service project that is used for mesh audit.</p>
+         * <p>Default value: <code>mesh-log-{ASM instance ID}</code>.</p>
          * 
-         * Default value: `mesh-log-{ASM instance ID}`.
+         * <strong>example:</strong>
+         * <p>mesh-log-c08ba3fd1e64xxb0f8cc1ad8****</p>
          */
         public Builder auditProject(String auditProject) {
             this.putBodyParameter("AuditProject", auditProject);
@@ -1554,13 +1704,15 @@ public class UpdateMeshFeatureRequest extends Request {
         }
 
         /**
-         * Specifies whether to enable automatic sidecar proxy injection by using pod annotations. Valid values:
-         * <p>
+         * <p>Specifies whether to enable automatic sidecar proxy injection by using pod annotations. Valid values:</p>
+         * <ul>
+         * <li><code>true</code>: enables automatic sidecar proxy injection by using pod annotations.</li>
+         * <li><code>false</code>: disables automatic sidecar proxy injection by using pod annotations.</li>
+         * </ul>
+         * <p>Default value: <code>false</code>.</p>
          * 
-         * *   `true`: enables automatic sidecar proxy injection by using pod annotations.
-         * *   `false`: disables automatic sidecar proxy injection by using pod annotations.
-         * 
-         * Default value: `false`.
+         * <strong>example:</strong>
+         * <p>false</p>
          */
         public Builder autoInjectionPolicyEnabled(Boolean autoInjectionPolicyEnabled) {
             this.putBodyParameter("AutoInjectionPolicyEnabled", autoInjectionPolicyEnabled);
@@ -1569,7 +1721,10 @@ public class UpdateMeshFeatureRequest extends Request {
         }
 
         /**
-         * Specifies whether to use the Kubernetes API of clusters on the data plane to access Istio resources. To use this feature, the version of the ASM instance must be V1.9.7.93 or later.
+         * <p>Specifies whether to use the Kubernetes API of clusters on the data plane to access Istio resources. To use this feature, the version of the ASM instance must be V1.9.7.93 or later.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>false</p>
          */
         public Builder CRAggregationEnabled(Boolean CRAggregationEnabled) {
             this.putBodyParameter("CRAggregationEnabled", CRAggregationEnabled);
@@ -1578,11 +1733,26 @@ public class UpdateMeshFeatureRequest extends Request {
         }
 
         /**
-         * Specifies whether to enable the feature of controlling the OPA injection scope. Valid values:
-         * <p>
+         * <p>The certificate chain from the CA certificate to the root certificate. At least two certificates are included in the chain.</p>
          * 
-         * *   `true`: enables the feature.
-         * *   `false`: disables the feature.
+         * <strong>example:</strong>
+         * <p>Base64 encoded PEM cert chain.</p>
+         */
+        public Builder certChain(String certChain) {
+            this.putBodyParameter("CertChain", certChain);
+            this.certChain = certChain;
+            return this;
+        }
+
+        /**
+         * <p>Specifies whether to enable the feature of controlling the OPA injection scope. Valid values:</p>
+         * <ul>
+         * <li><code>true</code>: enables the feature.</li>
+         * <li><code>false</code>: disables the feature.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>standard</p>
          */
         public Builder clusterSpec(String clusterSpec) {
             this.putBodyParameter("ClusterSpec", clusterSpec);
@@ -1591,13 +1761,15 @@ public class UpdateMeshFeatureRequest extends Request {
         }
 
         /**
-         * Specifies whether to enable the Container Network Interface (CNI) plug-in. Valid values:
-         * <p>
+         * <p>Specifies whether to enable the Container Network Interface (CNI) plug-in. Valid values:</p>
+         * <ul>
+         * <li><code>true</code>: enables the CNI plug-in.</li>
+         * <li><code>false</code>: disables the CNI plug-in.</li>
+         * </ul>
+         * <p>Default value: <code>false</code>.</p>
          * 
-         * *   `true`: enables the CNI plug-in.
-         * *   `false`: disables the CNI plug-in.
-         * 
-         * Default value: `false`.
+         * <strong>example:</strong>
+         * <p>false</p>
          */
         public Builder cniEnabled(Boolean cniEnabled) {
             this.putBodyParameter("CniEnabled", cniEnabled);
@@ -1606,7 +1778,10 @@ public class UpdateMeshFeatureRequest extends Request {
         }
 
         /**
-         * The namespaces to be excluded for the CNI plug-in.
+         * <p>The namespaces to be excluded for the CNI plug-in.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>kube-system</p>
          */
         public Builder cniExcludeNamespaces(String cniExcludeNamespaces) {
             this.putBodyParameter("CniExcludeNamespaces", cniExcludeNamespaces);
@@ -1615,7 +1790,10 @@ public class UpdateMeshFeatureRequest extends Request {
         }
 
         /**
-         * Specifies whether to delay application container startup until the sidecar proxy container is started in a pod.
+         * <p>Specifies whether to delay application container startup until the sidecar proxy container is started in a pod.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2</p>
          */
         public Builder concurrency(Integer concurrency) {
             this.putBodyParameter("Concurrency", concurrency);
@@ -1624,13 +1802,15 @@ public class UpdateMeshFeatureRequest extends Request {
         }
 
         /**
-         * Specifies whether to enable the external service registry. Valid values:
-         * <p>
+         * <p>Specifies whether to enable the external service registry. Valid values:</p>
+         * <ul>
+         * <li><code>true</code>: enables the external service registry.</li>
+         * <li><code>false</code>: disables the external service registry.</li>
+         * </ul>
+         * <p>Default value: <code>false</code>.</p>
          * 
-         * *   `true`: enables the external service registry.
-         * *   `false`: disables the external service registry.
-         * 
-         * Default value: `false`.
+         * <strong>example:</strong>
+         * <p>false</p>
          */
         public Builder configSourceEnabled(Boolean configSourceEnabled) {
             this.putBodyParameter("ConfigSourceEnabled", configSourceEnabled);
@@ -1639,7 +1819,10 @@ public class UpdateMeshFeatureRequest extends Request {
         }
 
         /**
-         * The instance ID of the Nacos registry.
+         * <p>The instance ID of the Nacos registry.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>mse-cn-tl326******</p>
          */
         public Builder configSourceNacosID(String configSourceNacosID) {
             this.putBodyParameter("ConfigSourceNacosID", configSourceNacosID);
@@ -1648,13 +1831,15 @@ public class UpdateMeshFeatureRequest extends Request {
         }
 
         /**
-         * Specifies whether to use a custom Prometheus instance. Valid values:
-         * <p>
+         * <p>Specifies whether to use a custom Prometheus instance. Valid values:</p>
+         * <ul>
+         * <li><code>true</code>: uses a custom Prometheus instance.</li>
+         * <li><code>false</code>: does not use a custom Prometheus instance.</li>
+         * </ul>
+         * <p>Default value: <code>false</code>.</p>
          * 
-         * *   `true`: uses a custom Prometheus instance.
-         * *   `false`: does not use a custom Prometheus instance.
-         * 
-         * Default value: `false`.
+         * <strong>example:</strong>
+         * <p>false</p>
          */
         public Builder customizedPrometheus(Boolean customizedPrometheus) {
             this.putBodyParameter("CustomizedPrometheus", customizedPrometheus);
@@ -1663,13 +1848,15 @@ public class UpdateMeshFeatureRequest extends Request {
         }
 
         /**
-         * Specifies whether to use a self-managed Zipkin system to collect tracing data. Valid values:
-         * <p>
+         * <p>Specifies whether to use a self-managed Zipkin system to collect tracing data. Valid values:</p>
+         * <ul>
+         * <li><code>true</code>: uses a self-managed Zipkin system.</li>
+         * <li><code>false</code>: does not use a self-managed Zipkin system.</li>
+         * </ul>
+         * <p>Default value: <code>false</code>.</p>
          * 
-         * *   `true`: uses a self-managed Zipkin system.
-         * *   `false`: does not use a self-managed Zipkin system.
-         * 
-         * Default value: `false`.
+         * <strong>example:</strong>
+         * <p>false</p>
          */
         public Builder customizedZipkin(Boolean customizedZipkin) {
             this.putBodyParameter("CustomizedZipkin", customizedZipkin);
@@ -1678,13 +1865,15 @@ public class UpdateMeshFeatureRequest extends Request {
         }
 
         /**
-         * Specifies whether to enable DNS proxy. Valid values:
-         * <p>
+         * <p>Specifies whether to enable DNS proxy. Valid values:</p>
+         * <ul>
+         * <li><code>true</code>: enables the DNS proxy feature.</li>
+         * <li><code>false</code>: disables the DNS proxy feature.</li>
+         * </ul>
+         * <p>Default value: <code>false</code>.</p>
          * 
-         * *   `true`: enables the DNS proxy feature.
-         * *   `false`: disables the DNS proxy feature.
-         * 
-         * Default value: `false`.
+         * <strong>example:</strong>
+         * <p>false</p>
          */
         public Builder DNSProxyingEnabled(Boolean DNSProxyingEnabled) {
             this.putBodyParameter("DNSProxyingEnabled", DNSProxyingEnabled);
@@ -1693,14 +1882,18 @@ public class UpdateMeshFeatureRequest extends Request {
         }
 
         /**
-         * Specifies the default scheduling configurations that ASM delivers to components on the data plane. You can configure `nodeSelector` and `tolerations` in the JSON format.
-         * <p>
+         * <p>Specifies the default scheduling configurations that ASM delivers to components on the data plane. You can configure <code>nodeSelector</code> and <code>tolerations</code> in the JSON format.</p>
+         * <blockquote>
+         * </blockquote>
+         * <ul>
+         * <li><p>Modifying the value of this parameter is a high-risk operation. The modification will cause all components on the data plane of ASM to restart. Exercise caution before modifying the value of this parameter.</p>
+         * </li>
+         * <li><p>The configurations specified by this parameter do not apply to ASM gateways. You can configure gateway-specific scheduling on ASM gateways.</p>
+         * </li>
+         * </ul>
          * 
-         * > 
-         * 
-         * *   Modifying the value of this parameter is a high-risk operation. The modification will cause all components on the data plane of ASM to restart. Exercise caution before modifying the value of this parameter.
-         * 
-         * *   The configurations specified by this parameter do not apply to the ASM gateway. You can configure gateway-specific scheduling on the ASM gateway.
+         * <strong>example:</strong>
+         * <p>{&quot;tolerations&quot;:[{&quot;key&quot;:&quot;test-taints&quot;, &quot;operator&quot;:&quot;Exists&quot;, &quot;effect&quot;:&quot;NoSchedule&quot;}], &quot;nodeSelector&quot;:{&quot;kubernetes.io/hostname&quot;:&quot;test-nodes&quot;}}</p>
          */
         public Builder defaultComponentsScheduleConfig(String defaultComponentsScheduleConfig) {
             this.putBodyParameter("DefaultComponentsScheduleConfig", defaultComponentsScheduleConfig);
@@ -1709,7 +1902,10 @@ public class UpdateMeshFeatureRequest extends Request {
         }
 
         /**
-         * The label selectors used to specify the namespaces of the clusters on the data plane for selective service discovery.
+         * <p>The label selectors used to specify the namespaces of the clusters on the data plane for selective service discovery.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>[{&quot;matchExpressions&quot;:[{&quot;key&quot;:&quot;asm-discovery&quot;,&quot;operator&quot;:&quot;Exists&quot;}]}]</p>
          */
         public Builder discoverySelectors(String discoverySelectors) {
             this.putBodyParameter("DiscoverySelectors", discoverySelectors);
@@ -1718,13 +1914,15 @@ public class UpdateMeshFeatureRequest extends Request {
         }
 
         /**
-         * Specifies whether to enable Dubbo Filter. Valid values:
-         * <p>
+         * <p>Specifies whether to enable Dubbo Filter. Valid values:</p>
+         * <ul>
+         * <li><code>true</code>: enables Dubbo Filter.</li>
+         * <li><code>false</code>: disables Dubbo Filter.</li>
+         * </ul>
+         * <p>Default value: <code>false</code>.</p>
          * 
-         * *   `true`: enables Dubbo Filter.
-         * *   `false`: disables Dubbo Filter.
-         * 
-         * Default value: `false`.
+         * <strong>example:</strong>
+         * <p>false</p>
          */
         public Builder dubboFilterEnabled(Boolean dubboFilterEnabled) {
             this.putBodyParameter("DubboFilterEnabled", dubboFilterEnabled);
@@ -1733,13 +1931,15 @@ public class UpdateMeshFeatureRequest extends Request {
         }
 
         /**
-         * Specifies whether to enable the mesh audit feature. To enable this feature, make sure that you have activated [Log Service](https://sls.console.aliyun.com/). Valid values:
-         * <p>
+         * <p>Specifies whether to enable the mesh audit feature. To enable this feature, make sure that you have activated <a href="https://sls.console.aliyun.com/">Log Service</a>. Valid values:</p>
+         * <ul>
+         * <li><code>true</code>: enables the mesh audit feature.</li>
+         * <li><code>false</code>: disables the mesh audit feature.</li>
+         * </ul>
+         * <p>Default value: <code>false</code>.</p>
          * 
-         * *   `true`: enables the mesh audit feature.
-         * *   `false`: disables the mesh audit feature.
-         * 
-         * Default value: `false`.
+         * <strong>example:</strong>
+         * <p>false</p>
          */
         public Builder enableAudit(Boolean enableAudit) {
             this.putBodyParameter("EnableAudit", enableAudit);
@@ -1748,7 +1948,10 @@ public class UpdateMeshFeatureRequest extends Request {
         }
 
         /**
-         * The ports for which outbound traffic is redirected to the sidecar proxy.
+         * <p>The ports for which outbound traffic is redirected to the sidecar proxy.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder enableAutoDiagnosis(Boolean enableAutoDiagnosis) {
             this.putBodyParameter("EnableAutoDiagnosis", enableAutoDiagnosis);
@@ -1757,7 +1960,10 @@ public class UpdateMeshFeatureRequest extends Request {
         }
 
         /**
-         * Specifies the authentication token of an ARMS Prometheus instance when the Mesh Topology feature is enabled and ARMS Prometheus is used to collect monitoring metrics. The token is used to allow Mesh Topology to access the ARMS Prometheus instance. The token is in the JSON format. The key in the JSON object is the ID of the cluster on the data plane, and the value is the authentication token of the ARMS Prometheus instance deployed in the cluster.
+         * <p>Specifies the authentication token of an ARMS Prometheus instance when the Mesh Topology feature is enabled and ARMS Prometheus is used to collect monitoring metrics. The token is used to allow Mesh Topology to access the ARMS Prometheus instance. The token is in the JSON format. The key in the JSON object is the ID of the cluster on the data plane, and the value is the authentication token of the ARMS Prometheus instance deployed in the cluster.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder enableBootstrapXdsAgent(Boolean enableBootstrapXdsAgent) {
             this.putBodyParameter("EnableBootstrapXdsAgent", enableBootstrapXdsAgent);
@@ -1766,7 +1972,10 @@ public class UpdateMeshFeatureRequest extends Request {
         }
 
         /**
-         * Specifies whether to enable the rollback feature for Istio resources.
+         * <p>Specifies whether to enable the rollback feature for Istio resources.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>false</p>
          */
         public Builder enableCRHistory(Boolean enableCRHistory) {
             this.putBodyParameter("EnableCRHistory", enableCRHistory);
@@ -1775,13 +1984,15 @@ public class UpdateMeshFeatureRequest extends Request {
         }
 
         /**
-         * Specifies whether to enable automatic sidecar proxy injection for all namespaces. Valid values:
-         * <p>
+         * <p>Specifies whether to enable automatic sidecar proxy injection for all namespaces. Valid values:</p>
+         * <ul>
+         * <li><code>true</code>: enables automatic sidecar proxy injection for all namespaces.</li>
+         * <li><code>false</code>: disables automatic sidecar proxy injection for all namespaces.</li>
+         * </ul>
+         * <p>Default value: <code>false</code>.</p>
          * 
-         * *   `true`: enables automatic sidecar proxy injection for all namespaces.
-         * *   `false`: disables automatic sidecar proxy injection for all namespaces.
-         * 
-         * Default value: `false`.
+         * <strong>example:</strong>
+         * <p>false</p>
          */
         public Builder enableNamespacesByDefault(Boolean enableNamespacesByDefault) {
             this.putBodyParameter("EnableNamespacesByDefault", enableNamespacesByDefault);
@@ -1790,13 +2001,15 @@ public class UpdateMeshFeatureRequest extends Request {
         }
 
         /**
-         * Specifies whether to enable Secret Discovery Service (SDS). Valid values:
-         * <p>
+         * <p>Specifies whether to enable Secret Discovery Service (SDS). Valid values:</p>
+         * <ul>
+         * <li><code>true</code>: enables SDS.</li>
+         * <li><code>false</code>: disables SDS.</li>
+         * </ul>
+         * <p>Default value: <code>false</code>.</p>
          * 
-         * *   `true`: enables SDS.
-         * *   `false`: disables SDS.
-         * 
-         * Default value: `false`.
+         * <strong>example:</strong>
+         * <p>false</p>
          */
         public Builder enableSDSServer(Boolean enableSDSServer) {
             this.putBodyParameter("EnableSDSServer", enableSDSServer);
@@ -1805,7 +2018,10 @@ public class UpdateMeshFeatureRequest extends Request {
         }
 
         /**
-         * The IP addresses of external services to which traffic is not intercepted.
+         * <p>The IP addresses of external services to which traffic is not intercepted.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>100.100.XXX.XXX</p>
          */
         public Builder excludeIPRanges(String excludeIPRanges) {
             this.putBodyParameter("ExcludeIPRanges", excludeIPRanges);
@@ -1814,7 +2030,10 @@ public class UpdateMeshFeatureRequest extends Request {
         }
 
         /**
-         * The ports for which inbound traffic is not redirected to the sidecar proxy. Separate multiple ports with commas (,).
+         * <p>The ports for which inbound traffic is not redirected to the sidecar proxy. Separate multiple ports with commas (,).</p>
+         * 
+         * <strong>example:</strong>
+         * <p>80,81</p>
          */
         public Builder excludeInboundPorts(String excludeInboundPorts) {
             this.putBodyParameter("ExcludeInboundPorts", excludeInboundPorts);
@@ -1823,7 +2042,10 @@ public class UpdateMeshFeatureRequest extends Request {
         }
 
         /**
-         * The ports for which outbound traffic is not redirected to the sidecar proxy. Separate multiple ports with commas (,).
+         * <p>The ports for which outbound traffic is not redirected to the sidecar proxy. Separate multiple ports with commas (,).</p>
+         * 
+         * <strong>example:</strong>
+         * <p>80,81</p>
          */
         public Builder excludeOutboundPorts(String excludeOutboundPorts) {
             this.putBodyParameter("ExcludeOutboundPorts", excludeOutboundPorts);
@@ -1832,13 +2054,52 @@ public class UpdateMeshFeatureRequest extends Request {
         }
 
         /**
-         * Specifies whether to enable gateway configuration filtering. Valid values:
-         * <p>
+         * <p>The updated certificate authority (CA) certificate. You can modify this parameter only if you use a custom certificate when you create an ASM instance.</p>
          * 
-         * *   `true`: enables gateway configuration filtering.
-         * *   `false`: disables gateway configuration filtering.
+         * <strong>example:</strong>
+         * <p>Base64 encoded PEM certificate.</p>
+         */
+        public Builder existingCaCert(String existingCaCert) {
+            this.putBodyParameter("ExistingCaCert", existingCaCert);
+            this.existingCaCert = existingCaCert;
+            return this;
+        }
+
+        /**
+         * <p>The updated CA certificate key. You can modify this parameter only if you use a custom certificate when you create an ASM instance.</p>
          * 
-         * Default value: `false`.
+         * <strong>example:</strong>
+         * <p>Base64 encoded PEM
+         *  private key.</p>
+         */
+        public Builder existingCaKey(String existingCaKey) {
+            this.putBodyParameter("ExistingCaKey", existingCaKey);
+            this.existingCaKey = existingCaKey;
+            return this;
+        }
+
+        /**
+         * <p>The updated root certificate. You can modify this parameter only if you use a custom certificate when you create a Service Mesh (ASM) instance.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Base64 encoded PEM certificate.</p>
+         */
+        public Builder existingRootCaCert(String existingRootCaCert) {
+            this.putBodyParameter("ExistingRootCaCert", existingRootCaCert);
+            this.existingRootCaCert = existingRootCaCert;
+            return this;
+        }
+
+        /**
+         * <p>Specifies whether to enable gateway configuration filtering. Valid values:</p>
+         * <ul>
+         * <li><code>true</code>: enables gateway configuration filtering.</li>
+         * <li><code>false</code>: disables gateway configuration filtering.</li>
+         * </ul>
+         * <p>Default value: <code>false</code>.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>false</p>
          */
         public Builder filterGatewayClusterConfig(Boolean filterGatewayClusterConfig) {
             this.putBodyParameter("FilterGatewayClusterConfig", filterGatewayClusterConfig);
@@ -1847,13 +2108,15 @@ public class UpdateMeshFeatureRequest extends Request {
         }
 
         /**
-         * Specifies whether to enable Gateway API. Valid values:
-         * <p>
+         * <p>Specifies whether to enable Gateway API. Valid values:</p>
+         * <ul>
+         * <li><code>true</code>: enables Gateway API.</li>
+         * <li><code>false</code>: disables Gateway API.</li>
+         * </ul>
+         * <p>Default value: <code>false</code>.</p>
          * 
-         * *   `true`: enables Gateway API.
-         * *   `false`: disables Gateway API.
-         * 
-         * Default value: `false`.
+         * <strong>example:</strong>
+         * <p>false</p>
          */
         public Builder gatewayAPIEnabled(Boolean gatewayAPIEnabled) {
             this.putBodyParameter("GatewayAPIEnabled", gatewayAPIEnabled);
@@ -1862,7 +2125,10 @@ public class UpdateMeshFeatureRequest extends Request {
         }
 
         /**
-         * Other metrics of the sidecar proxy on the data plane.
+         * <p>Other metrics of the sidecar proxy on the data plane.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder holdApplicationUntilProxyStarts(Boolean holdApplicationUntilProxyStarts) {
             this.putBodyParameter("HoldApplicationUntilProxyStarts", holdApplicationUntilProxyStarts);
@@ -1871,13 +2137,15 @@ public class UpdateMeshFeatureRequest extends Request {
         }
 
         /**
-         * Specifies whether to support HTTP 1.0. Valid values:
-         * <p>
+         * <p>Specifies whether to support HTTP 1.0. Valid values:</p>
+         * <ul>
+         * <li><code>true</code>: supports HTTP 1.0.</li>
+         * <li><code>false</code>: does not support HTTP 1.0.</li>
+         * </ul>
+         * <p>Default value: <code>false</code>.</p>
          * 
-         * *   `true`: supports HTTP 1.0.
-         * *   `false`: does not support HTTP 1.0.
-         * 
-         * Default value: `false`.
+         * <strong>example:</strong>
+         * <p>false</p>
          */
         public Builder http10Enabled(Boolean http10Enabled) {
             this.putBodyParameter("Http10Enabled", http10Enabled);
@@ -1886,7 +2154,12 @@ public class UpdateMeshFeatureRequest extends Request {
         }
 
         /**
-         * The IP addresses of external services to which traffic is intercepted.
+         * <p>The IP addresses of external services to which traffic is intercepted.</p>
+         * 
+         * <strong>example:</strong>
+         * <ul>
+         * <li></li>
+         * </ul>
          */
         public Builder includeIPRanges(String includeIPRanges) {
             this.putBodyParameter("IncludeIPRanges", includeIPRanges);
@@ -1895,7 +2168,10 @@ public class UpdateMeshFeatureRequest extends Request {
         }
 
         /**
-         * The ports for which inbound traffic is redirected to the sidecar proxy.
+         * <p>The ports for which inbound traffic is redirected to the sidecar proxy.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>80,81</p>
          */
         public Builder includeInboundPorts(String includeInboundPorts) {
             this.putBodyParameter("IncludeInboundPorts", includeInboundPorts);
@@ -1904,7 +2180,10 @@ public class UpdateMeshFeatureRequest extends Request {
         }
 
         /**
-         * The log level of the sidecar proxy on the data plane. Log levels include `none`, `error`, `warn`, `info`, and `debug`. The levels correspond to different amounts of information reported by the logs. For example, none-level logs report the least information, while debug-level logs report the most information.
+         * <p>The log level of the sidecar proxy on the data plane. Log levels include <code>none</code>, <code>error</code>, <code>warn</code>, <code>info</code>, and <code>debug</code>. The levels correspond to different amounts of information reported by the logs. For example, none-level logs report the least information, while debug-level logs report the most information.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>8000,8001</p>
          */
         public Builder includeOutboundPorts(String includeOutboundPorts) {
             this.putBodyParameter("IncludeOutboundPorts", includeOutboundPorts);
@@ -1913,7 +2192,10 @@ public class UpdateMeshFeatureRequest extends Request {
         }
 
         /**
-         * Specifies whether to enable Node Feature Discovery (NFD).
+         * <p>Specifies whether to create a Classic Load Balancer (CLB) instance for accessing Mesh Topology of Service Mesh (ASM).</p>
+         * 
+         * <strong>example:</strong>
+         * <p>false</p>
          */
         public Builder integrateKiali(Boolean integrateKiali) {
             this.putBodyParameter("IntegrateKiali", integrateKiali);
@@ -1922,7 +2204,10 @@ public class UpdateMeshFeatureRequest extends Request {
         }
 
         /**
-         * Specifies whether to load the bootstrap configuration before the sidecar proxy is started.
+         * <p>Specifies whether to load the bootstrap configuration before the sidecar proxy is started.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>TPROXY</p>
          */
         public Builder interceptionMode(String interceptionMode) {
             this.putBodyParameter("InterceptionMode", interceptionMode);
@@ -1931,11 +2216,16 @@ public class UpdateMeshFeatureRequest extends Request {
         }
 
         /**
-         * Specifies the default scheduling configurations that ASM delivers to components on the data plane. You can configure `nodeSelector` and tolerations in the JSON format.
-         * <p>
+         * <p>Specifies the default scheduling configurations that ASM delivers to components on the data plane. You can configure <code>nodeSelector</code> and tolerations in the JSON format.</p>
+         * <blockquote>
+         * <ul>
+         * <li>Modifying the value of this parameter is a high-risk operation. The modification will cause all components on the data plane of ASM to restart. Exercise caution before modifying the value of this parameter.</li>
+         * <li>The configurations specified by this parameter do not apply to the ASM gateway. You can configure gateway-specific scheduling on the ASM gateway.</li>
+         * </ul>
+         * </blockquote>
          * 
-         * > *   Modifying the value of this parameter is a high-risk operation. The modification will cause all components on the data plane of ASM to restart. Exercise caution before modifying the value of this parameter.
-         * >*   The configurations specified by this parameter do not apply to the ASM gateway. You can configure gateway-specific scheduling on the ASM gateway.
+         * <strong>example:</strong>
+         * <p>{&quot;c31e3b******5634b&quot;:&quot;token_example&quot;}</p>
          */
         public Builder kialiArmsAuthTokens(String kialiArmsAuthTokens) {
             this.putBodyParameter("KialiArmsAuthTokens", kialiArmsAuthTokens);
@@ -1944,13 +2234,15 @@ public class UpdateMeshFeatureRequest extends Request {
         }
 
         /**
-         * Specifies whether to enable the Mesh Topology feature. To enable this feature, make sure that you have enabled Prometheus monitoring. If Prometheus monitoring is disabled, the Mesh Topology feature must be disabled. Valid values:````
-         * <p>
+         * <p>Specifies whether to enable the Mesh Topology feature. To enable this feature, make sure that you have enabled Prometheus monitoring. If Prometheus monitoring is disabled, the Mesh Topology feature must be disabled. Valid values:````</p>
+         * <ul>
+         * <li><code>true</code>: enables the Mesh Topology feature.</li>
+         * <li><code>false</code>: disables the Mesh Topology feature.</li>
+         * </ul>
+         * <p>Default value: <code>false</code>.</p>
          * 
-         * *   `true`: enables the Mesh Topology feature.
-         * *   `false`: disables the Mesh Topology feature.
-         * 
-         * Default value: `false`.
+         * <strong>example:</strong>
+         * <p>false</p>
          */
         public Builder kialiEnabled(Boolean kialiEnabled) {
             this.putBodyParameter("KialiEnabled", kialiEnabled);
@@ -1959,12 +2251,12 @@ public class UpdateMeshFeatureRequest extends Request {
         }
 
         /**
-         * Specifies Classic Load Balancer (CLB) instances by using annotations when the Mesh Topology feature is enabled. These CLB instances are used to access the Mesh Topology feature in different clusters.
-         * <p>
+         * <p>Specifies Classic Load Balancer (CLB) instances by using annotations when the Mesh Topology feature is enabled. These CLB instances are used to access the Mesh Topology feature in different clusters.</p>
+         * <p>This parameter is a JSON-encoded string. The key in the JSON object is the ID of a cluster on the data plane, and the value is the annotation content of the Mesh Topology service in the cluster.</p>
+         * <p>For more information about how to configure CLB instances by using annotations, see <a href="https://www.alibabacloud.com/help/container-service-for-kubernetes/latest/use-annotations-to-configure-load-balancing-1">Add annotations to the YAML file of a Service to configure CLB instances</a>.</p>
          * 
-         * This parameter is a JSON-encoded string. The key in the JSON object is the ID of a cluster on the data plane, and the value is the annotation content of the Mesh Topology service in the cluster.
-         * 
-         * For more information about how to configure CLB instances by using annotations, see [Add annotations to the YAML file of a Service to configure CLB instances](https://www.alibabacloud.com/help/container-service-for-kubernetes/latest/use-annotations-to-configure-load-balancing-1).
+         * <strong>example:</strong>
+         * <p>{&quot;c31e3b******5634b&quot;:{&quot;service.beta.kubernetes.io/alibaba-cloud-loadbalancer-address-type&quot;:&quot;intranet&quot;}}</p>
          */
         public Builder kialiServiceAnnotations(String kialiServiceAnnotations) {
             this.putBodyParameter("KialiServiceAnnotations", kialiServiceAnnotations);
@@ -1973,7 +2265,22 @@ public class UpdateMeshFeatureRequest extends Request {
         }
 
         /**
-         * The lifecycle of the sidecar proxy.
+         * <p>The labels for isolated workloads.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>name=xx,region=xx</p>
+         */
+        public Builder labelsForOffloadedWorkloads(String labelsForOffloadedWorkloads) {
+            this.putQueryParameter("LabelsForOffloadedWorkloads", labelsForOffloadedWorkloads);
+            this.labelsForOffloadedWorkloads = labelsForOffloadedWorkloads;
+            return this;
+        }
+
+        /**
+         * <p>The lifecycle of the sidecar proxy.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>{&quot;postStart&quot;:{&quot;exec&quot;:{&quot;command&quot;:[&quot;pilot-agent&quot;,&quot;wait&quot;]}},&quot;preStop&quot;:{&quot;exec&quot;:{&quot;command&quot;:[&quot;/bin/sh&quot;,&quot;-c&quot;,&quot;sleep 15&quot;]}}}</p>
          */
         public Builder lifecycle(String lifecycle) {
             this.putBodyParameter("Lifecycle", lifecycle);
@@ -1982,35 +2289,39 @@ public class UpdateMeshFeatureRequest extends Request {
         }
 
         /**
-         * The configurations of cross-region load balancing. Valid values:
-         * <p>
-         * 
-         * *   `failover`: the configurations of cross-region failover. Example:
-         * 
+         * <p>The configurations of cross-region load balancing. Valid values:</p>
+         * <ul>
+         * <li><code>failover</code>: the configurations of cross-region failover. Example:</li>
+         * </ul>
          * <!---->
          * 
-         *     failover: [// Cross-region failover configurations of the struct type. 
-         *             {
-         *                 // If a service fails in the China (Beijing) region, the traffic is redirected to the same service in the China (Hangzhou) region. 
-         *                 from: "cn-beijing", 
-         *                 to: "cn-hangzhou",
-         *             }
-         *         ]
-         * 
-         * *   `distribute`: the configurations of cross-region traffic distribution. Example:
-         * 
+         * <pre><code>failover: [// Cross-region failover configurations of the struct type. 
+         *         {
+         *             // If a service fails in the China (Beijing) region, the traffic is redirected to the same service in the China (Hangzhou) region. 
+         *             from: &quot;cn-beijing&quot;, 
+         *             to: &quot;cn-hangzhou&quot;,
+         *         }
+         *     ]
+         * </code></pre>
+         * <ul>
+         * <li><code>distribute</code>: the configurations of cross-region traffic distribution. Example:</li>
+         * </ul>
          * <!---->
          * 
-         *     distribute: [// Cross-region traffic distribution configurations of the struct type. 
-         *             {
-         *                 // For traffic that is routed to the China (Beijing) region, 70% of the traffic is allocated to the China (Beijing) region and the rest of the traffic is redirected to the China (Hangzhou) region. 
-         *                 "from": "cn-beijing",
-         *                 "to": {
-         *                     "cn-beijing": 70,
-         *                     "cn-hangzhou": 30,
-         *                 }
+         * <pre><code>distribute: [// Cross-region traffic distribution configurations of the struct type. 
+         *         {
+         *             // For traffic that is routed to the China (Beijing) region, 70% of the traffic is allocated to the China (Beijing) region and the rest of the traffic is redirected to the China (Hangzhou) region. 
+         *             &quot;from&quot;: &quot;cn-beijing&quot;,
+         *             &quot;to&quot;: {
+         *                 &quot;cn-beijing&quot;: 70,
+         *                 &quot;cn-hangzhou&quot;: 30,
          *             }
-         *         ]
+         *         }
+         *     ]
+         * </code></pre>
+         * 
+         * <strong>example:</strong>
+         * <p>{&quot;failover&quot;:[{&quot;from&quot;:&quot;cn-hangzhou&quot;,&quot;to&quot;:&quot;cn-shanghai&quot;}]}</p>
          */
         public Builder localityLBConf(String localityLBConf) {
             this.putBodyParameter("LocalityLBConf", localityLBConf);
@@ -2019,13 +2330,15 @@ public class UpdateMeshFeatureRequest extends Request {
         }
 
         /**
-         * Specifies whether to enable cross-region load balancing. Valid values:
-         * <p>
+         * <p>Specifies whether to enable cross-region load balancing. Valid values:</p>
+         * <ul>
+         * <li><code>true</code>: enables cross-region load balancing.</li>
+         * <li><code>false</code>: disables cross-region load balancing.</li>
+         * </ul>
+         * <p>Default value: <code>false</code>.</p>
          * 
-         * *   `true`: enables cross-region load balancing.
-         * *   `false`: disables cross-region load balancing.
-         * 
-         * Default value: `false`.
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder localityLoadBalancing(Boolean localityLoadBalancing) {
             this.putBodyParameter("LocalityLoadBalancing", localityLoadBalancing);
@@ -2034,7 +2347,10 @@ public class UpdateMeshFeatureRequest extends Request {
         }
 
         /**
-         * The number of worker threads used by the sidecar proxy on the data plane.
+         * <p>The number of worker threads used by the sidecar proxy on the data plane.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>info</p>
          */
         public Builder logLevel(String logLevel) {
             this.putBodyParameter("LogLevel", logLevel);
@@ -2043,13 +2359,15 @@ public class UpdateMeshFeatureRequest extends Request {
         }
 
         /**
-         * Specifies whether to enable Microservice Engine (MSE). Valid values:
-         * <p>
+         * <p>Specifies whether to enable Microservices Engine (MSE). Valid values:</p>
+         * <ul>
+         * <li><code>true</code></li>
+         * <li><code>false</code></li>
+         * </ul>
+         * <p>Default value: <code>false</code>.</p>
          * 
-         * *   `true`: enables MSE.
-         * *   `false`: disables MSE.
-         * 
-         * Default value: `false`.
+         * <strong>example:</strong>
+         * <p>false</p>
          */
         public Builder MSEEnabled(Boolean MSEEnabled) {
             this.putBodyParameter("MSEEnabled", MSEEnabled);
@@ -2058,7 +2376,10 @@ public class UpdateMeshFeatureRequest extends Request {
         }
 
         /**
-         * Specifies whether to enable Transport Layer Security (TLS) acceleration based on MultiBuffer.
+         * <p>Specifies whether to enable Transport Layer Security (TLS) acceleration based on MultiBuffer.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>false</p>
          */
         public Builder multiBufferEnabled(Boolean multiBufferEnabled) {
             this.putBodyParameter("MultiBufferEnabled", multiBufferEnabled);
@@ -2067,7 +2388,10 @@ public class UpdateMeshFeatureRequest extends Request {
         }
 
         /**
-         * The pull-request latency. By default, this parameter is left empty.
+         * <p>The pull-request latency. By default, this parameter is left empty.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>0.02s</p>
          */
         public Builder multiBufferPollDelay(String multiBufferPollDelay) {
             this.putBodyParameter("MultiBufferPollDelay", multiBufferPollDelay);
@@ -2076,13 +2400,15 @@ public class UpdateMeshFeatureRequest extends Request {
         }
 
         /**
-         * Specifies whether to enable MySQL Filter. Valid values:
-         * <p>
+         * <p>Specifies whether to enable MySQL Filter. Valid values:</p>
+         * <ul>
+         * <li><code>true</code>: enables MySQL Filter.</li>
+         * <li><code>false</code>: disables MySQL Filter.</li>
+         * </ul>
+         * <p>Default value: <code>false</code>.</p>
          * 
-         * *   `true`: enables MySQL Filter.
-         * *   `false`: disables MySQL Filter.
-         * 
-         * Default value: `false`.
+         * <strong>example:</strong>
+         * <p>false</p>
          */
         public Builder mysqlFilterEnabled(Boolean mysqlFilterEnabled) {
             this.putBodyParameter("MysqlFilterEnabled", mysqlFilterEnabled);
@@ -2091,10 +2417,11 @@ public class UpdateMeshFeatureRequest extends Request {
         }
 
         /**
-         * Specifies whether to clear feature labels on nodes when NFD is disabled.
-         * <p>
+         * <p>Specifies whether to clear feature labels on nodes when NFD is disabled.</p>
+         * <p>This parameter is valid only when the <code>NFDEnabled</code> parameter is set to <code>false</code>.</p>
          * 
-         * This parameter is valid only when the `NFDEnabled` parameter is set to `false`.
+         * <strong>example:</strong>
+         * <p>false</p>
          */
         public Builder NFDEnabled(Boolean NFDEnabled) {
             this.putBodyParameter("NFDEnabled", NFDEnabled);
@@ -2103,7 +2430,10 @@ public class UpdateMeshFeatureRequest extends Request {
         }
 
         /**
-         * The minimum number of CPU cores requested by the proxy service that exports Tracing Analysis data. For example, `1000m` indicates one CPU core.
+         * <p>The minimum number of CPU cores requested by the proxy service that exports Tracing Analysis data. For example, <code>1000m</code> indicates one CPU core.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>false</p>
          */
         public Builder NFDLabelPruned(Boolean NFDLabelPruned) {
             this.putBodyParameter("NFDLabelPruned", NFDLabelPruned);
@@ -2112,7 +2442,10 @@ public class UpdateMeshFeatureRequest extends Request {
         }
 
         /**
-         * The maximum size of the memory that is available to the pod that injects OPA proxies into application pods. For example, `1024Mi` indicates 1024 MB.
+         * <p>The maximum size of the memory that is available to the pod that injects OPA proxies into application pods. For example, <code>1024Mi</code> indicates 1024 MB.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1000m</p>
          */
         public Builder OPAInjectorCPULimit(String OPAInjectorCPULimit) {
             this.putBodyParameter("OPAInjectorCPULimit", OPAInjectorCPULimit);
@@ -2121,7 +2454,10 @@ public class UpdateMeshFeatureRequest extends Request {
         }
 
         /**
-         * The minimum size of the memory requested by the pod that injects OPA proxies into application pods. For example, `50 Mi` indicates 50 MB.
+         * <p>The minimum size of the memory requested by the pod that injects OPA proxies into application pods. For example, <code>50 Mi</code> indicates 50 MB.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>80m</p>
          */
         public Builder OPAInjectorCPURequirement(String OPAInjectorCPURequirement) {
             this.putBodyParameter("OPAInjectorCPURequirement", OPAInjectorCPURequirement);
@@ -2130,7 +2466,10 @@ public class UpdateMeshFeatureRequest extends Request {
         }
 
         /**
-         * Specifies whether to create a CLB instance for accessing the ASM mesh topology.
+         * <p>Specifies whether to create a CLB instance for accessing the ASM mesh topology.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1024Mi</p>
          */
         public Builder OPAInjectorMemoryLimit(String OPAInjectorMemoryLimit) {
             this.putBodyParameter("OPAInjectorMemoryLimit", OPAInjectorMemoryLimit);
@@ -2139,7 +2478,10 @@ public class UpdateMeshFeatureRequest extends Request {
         }
 
         /**
-         * The maximum number of CPU cores that are available to the pod that injects OPA proxies into application pods. For example, `1000m` indicates one CPU core.
+         * <p>The maximum number of CPU cores that are available to the pod that injects OPA proxies into application pods. For example, <code>1000m</code> indicates one CPU core.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>50Mi</p>
          */
         public Builder OPAInjectorMemoryRequirement(String OPAInjectorMemoryRequirement) {
             this.putBodyParameter("OPAInjectorMemoryRequirement", OPAInjectorMemoryRequirement);
@@ -2148,7 +2490,10 @@ public class UpdateMeshFeatureRequest extends Request {
         }
 
         /**
-         * The maximum number of CPU cores that are available to the OPA proxy container.
+         * <p>The maximum number of CPU cores that are available to the OPA proxy container.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2</p>
          */
         public Builder OPALimitCPU(String OPALimitCPU) {
             this.putBodyParameter("OPALimitCPU", OPALimitCPU);
@@ -2157,7 +2502,10 @@ public class UpdateMeshFeatureRequest extends Request {
         }
 
         /**
-         * The maximum size of the memory that is available to the OPA proxy container.
+         * <p>The maximum size of the memory that is available to the OPA proxy container.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1024Mi</p>
          */
         public Builder OPALimitMemory(String OPALimitMemory) {
             this.putBodyParameter("OPALimitMemory", OPALimitMemory);
@@ -2166,12 +2514,15 @@ public class UpdateMeshFeatureRequest extends Request {
         }
 
         /**
-         * The log level of the OPA proxy container.
-         * <p>
+         * <p>The log level of the OPA proxy container.</p>
+         * <ul>
+         * <li><code>info</code>: outputs all information.</li>
+         * <li><code>debug</code>: outputs debugging and error information.</li>
+         * <li><code>error</code>: outputs only error information.</li>
+         * </ul>
          * 
-         * *   `info`: outputs all information.
-         * *   `debug`: outputs debugging and error information.
-         * *   `error`: outputs only error information.
+         * <strong>example:</strong>
+         * <p>info</p>
          */
         public Builder OPALogLevel(String OPALogLevel) {
             this.putBodyParameter("OPALogLevel", OPALogLevel);
@@ -2180,7 +2531,10 @@ public class UpdateMeshFeatureRequest extends Request {
         }
 
         /**
-         * The number of CPU cores that are requested by the OPA proxy container.
+         * <p>The number of CPU cores that are requested by the OPA proxy container.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder OPARequestCPU(String OPARequestCPU) {
             this.putBodyParameter("OPARequestCPU", OPARequestCPU);
@@ -2189,7 +2543,10 @@ public class UpdateMeshFeatureRequest extends Request {
         }
 
         /**
-         * The size of the memory that is requested by the OPA proxy container.
+         * <p>The size of the memory that is requested by the OPA proxy container.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>512Mi</p>
          */
         public Builder OPARequestMemory(String OPARequestMemory) {
             this.putBodyParameter("OPARequestMemory", OPARequestMemory);
@@ -2198,7 +2555,10 @@ public class UpdateMeshFeatureRequest extends Request {
         }
 
         /**
-         * The minimum number of CPU cores requested by the pod that injects OPA proxies into application pods. For example, `1000m` indicates one CPU core.
+         * <p>The minimum number of CPU cores requested by the pod that injects OPA proxies into application pods. For example, <code>1000m</code> indicates one CPU core.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>false</p>
          */
         public Builder OPAScopeInjected(Boolean OPAScopeInjected) {
             this.putBodyParameter("OPAScopeInjected", OPAScopeInjected);
@@ -2207,13 +2567,15 @@ public class UpdateMeshFeatureRequest extends Request {
         }
 
         /**
-         * Specifies whether to enable the OPA plug-in. Valid values:
-         * <p>
+         * <p>Specifies whether to enable the OPA plug-in. Valid values:</p>
+         * <ul>
+         * <li><code>true</code>: enables the OPA plug-in.</li>
+         * <li><code>false</code>: disables the OPA plug-in.</li>
+         * </ul>
+         * <p>Default value: <code>false</code>.</p>
          * 
-         * *   `true`: enables the OPA plug-in.
-         * *   `false`: disables the OPA plug-in.
-         * 
-         * Default value: `false`.
+         * <strong>example:</strong>
+         * <p>false</p>
          */
         public Builder opaEnabled(Boolean opaEnabled) {
             this.putBodyParameter("OpaEnabled", opaEnabled);
@@ -2222,13 +2584,15 @@ public class UpdateMeshFeatureRequest extends Request {
         }
 
         /**
-         * Specifies whether to install the Open Policy Agent (OPA) plug-in. Valid values:
-         * <p>
+         * <p>Specifies whether to install the Open Policy Agent (OPA) plug-in. Valid values:</p>
+         * <ul>
+         * <li><code>true</code>: installs the OPA plug-in.</li>
+         * <li><code>false</code>: does not install the OPA plug-in.</li>
+         * </ul>
+         * <p>Default value: <code>false</code>.</p>
          * 
-         * *   `true`: installs the OPA plug-in.
-         * *   `false`: does not install the OPA plug-in.
-         * 
-         * Default value: `false`.
+         * <strong>example:</strong>
+         * <p>false</p>
          */
         public Builder openAgentPolicy(Boolean openAgentPolicy) {
             this.putBodyParameter("OpenAgentPolicy", openAgentPolicy);
@@ -2237,11 +2601,14 @@ public class UpdateMeshFeatureRequest extends Request {
         }
 
         /**
-         * The policy for accessing external services. Valid values:
-         * <p>
+         * <p>The policy for accessing external services. Valid values:</p>
+         * <ul>
+         * <li><code>ALLOW_ANY</code>: allows access to all external services.</li>
+         * <li><code>REGISTRY_ONLY</code>: allows access to only the external services that are defined in the ServiceEntry of the ASM instance.</li>
+         * </ul>
          * 
-         * *   `ALLOW_ANY`: allows access to all external services.
-         * *   `REGISTRY_ONLY`: allows access to only the external services that are defined in the ServiceEntry of the ASM instance.
+         * <strong>example:</strong>
+         * <p>ALLOW_ANY</p>
          */
         public Builder outboundTrafficPolicy(String outboundTrafficPolicy) {
             this.putBodyParameter("OutboundTrafficPolicy", outboundTrafficPolicy);
@@ -2250,7 +2617,22 @@ public class UpdateMeshFeatureRequest extends Request {
         }
 
         /**
-         * The endpoint of Prometheus monitoring. If you use ARMS Prometheus, set this parameter to the endpoint of Prometheus provided by ARMS.
+         * <p>Specifies whether to support HTTP/3.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>false</p>
+         */
+        public Builder pilotEnableQuicListeners(Boolean pilotEnableQuicListeners) {
+            this.putBodyParameter("PilotEnableQuicListeners", pilotEnableQuicListeners);
+            this.pilotEnableQuicListeners = pilotEnableQuicListeners;
+            return this;
+        }
+
+        /**
+         * <p>The endpoint of Prometheus monitoring. If you use ARMS Prometheus, set this parameter to the endpoint of Prometheus provided by ARMS.</p>
+         * 
+         * <strong>example:</strong>
+         * <p><a href="http://prometheus:9090">http://prometheus:9090</a></p>
          */
         public Builder prometheusUrl(String prometheusUrl) {
             this.putBodyParameter("PrometheusUrl", prometheusUrl);
@@ -2259,7 +2641,10 @@ public class UpdateMeshFeatureRequest extends Request {
         }
 
         /**
-         * The maximum number of CPU cores that are available to the istio-init container.
+         * <p>The maximum number of CPU cores that are available to the istio-init container.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2000m</p>
          */
         public Builder proxyInitCPUResourceLimit(String proxyInitCPUResourceLimit) {
             this.putBodyParameter("ProxyInitCPUResourceLimit", proxyInitCPUResourceLimit);
@@ -2268,7 +2653,10 @@ public class UpdateMeshFeatureRequest extends Request {
         }
 
         /**
-         * The number of CPU cores that are requested by the istio-init container.
+         * <p>The number of CPU cores that are requested by the istio-init container.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10m</p>
          */
         public Builder proxyInitCPUResourceRequest(String proxyInitCPUResourceRequest) {
             this.putBodyParameter("ProxyInitCPUResourceRequest", proxyInitCPUResourceRequest);
@@ -2277,7 +2665,10 @@ public class UpdateMeshFeatureRequest extends Request {
         }
 
         /**
-         * The maximum size of the memory that is available to the istio-init container.
+         * <p>The maximum size of the memory that is available to the istio-init container.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1024Mi</p>
          */
         public Builder proxyInitMemoryResourceLimit(String proxyInitMemoryResourceLimit) {
             this.putBodyParameter("ProxyInitMemoryResourceLimit", proxyInitMemoryResourceLimit);
@@ -2286,7 +2677,10 @@ public class UpdateMeshFeatureRequest extends Request {
         }
 
         /**
-         * The size of the memory that is requested by the istio-init container.
+         * <p>The size of the memory that is requested by the istio-init container.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10Mi</p>
          */
         public Builder proxyInitMemoryResourceRequest(String proxyInitMemoryResourceRequest) {
             this.putBodyParameter("ProxyInitMemoryResourceRequest", proxyInitMemoryResourceRequest);
@@ -2295,7 +2689,10 @@ public class UpdateMeshFeatureRequest extends Request {
         }
 
         /**
-         * The maximum number of CPU cores that are available to the sidecar proxy container.
+         * <p>The maximum number of CPU cores that are available to the sidecar proxy container.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2000m</p>
          */
         public Builder proxyLimitCPU(String proxyLimitCPU) {
             this.putBodyParameter("ProxyLimitCPU", proxyLimitCPU);
@@ -2304,7 +2701,10 @@ public class UpdateMeshFeatureRequest extends Request {
         }
 
         /**
-         * The maximum size of the memory that is available to the sidecar proxy container.
+         * <p>The maximum size of the memory that is available to the sidecar proxy container.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1024Mi</p>
          */
         public Builder proxyLimitMemory(String proxyLimitMemory) {
             this.putBodyParameter("ProxyLimitMemory", proxyLimitMemory);
@@ -2313,7 +2713,10 @@ public class UpdateMeshFeatureRequest extends Request {
         }
 
         /**
-         * The number of CPU cores that are requested by the sidecar proxy container.
+         * <p>The number of CPU cores that are requested by the sidecar proxy container.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>100m</p>
          */
         public Builder proxyRequestCPU(String proxyRequestCPU) {
             this.putBodyParameter("ProxyRequestCPU", proxyRequestCPU);
@@ -2322,7 +2725,10 @@ public class UpdateMeshFeatureRequest extends Request {
         }
 
         /**
-         * The size of the memory that is requested by the sidecar proxy container.
+         * <p>The size of the memory that is requested by the sidecar proxy container.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>128Mi</p>
          */
         public Builder proxyRequestMemory(String proxyRequestMemory) {
             this.putBodyParameter("ProxyRequestMemory", proxyRequestMemory);
@@ -2331,11 +2737,14 @@ public class UpdateMeshFeatureRequest extends Request {
         }
 
         /**
-         * The mode in which the sidecar proxy intercepts inbound traffic. Valid values:
-         * <p>
+         * <p>The mode in which the sidecar proxy intercepts inbound traffic. Valid values:</p>
+         * <ul>
+         * <li><code>REDIRECT</code>: The sidecar proxy intercepts inbound traffic in the REDIRECT mode.</li>
+         * <li><code>TPROXY</code>: The sidecar proxy intercepts inbound traffic in the TPROXY mode.</li>
+         * </ul>
          * 
-         * *   `REDIRECT`: The sidecar proxy intercepts inbound traffic in the REDIRECT mode.
-         * *   `TPROXY`: The sidecar proxy intercepts inbound traffic in the TPROXY mode.
+         * <strong>example:</strong>
+         * <p>{&quot;inclusionRegexps&quot;:&quot;.<em>adaptive_concurrency.</em>&quot;}</p>
          */
         public Builder proxyStatsMatcher(String proxyStatsMatcher) {
             this.putBodyParameter("ProxyStatsMatcher", proxyStatsMatcher);
@@ -2344,13 +2753,15 @@ public class UpdateMeshFeatureRequest extends Request {
         }
 
         /**
-         * Specifies whether to enable Redis Filter. Valid values:
-         * <p>
+         * <p>Specifies whether to enable Redis Filter. Valid values:</p>
+         * <ul>
+         * <li><code>true</code>: enables Redis Filter.</li>
+         * <li><code>false</code>: disables Redis Filter.</li>
+         * </ul>
+         * <p>Default value: <code>false</code>.</p>
          * 
-         * *   `true`: enables Redis Filter.
-         * *   `false`: disables Redis Filter.
-         * 
-         * Default value: `false`.
+         * <strong>example:</strong>
+         * <p>false</p>
          */
         public Builder redisFilterEnabled(Boolean redisFilterEnabled) {
             this.putBodyParameter("RedisFilterEnabled", redisFilterEnabled);
@@ -2359,7 +2770,23 @@ public class UpdateMeshFeatureRequest extends Request {
         }
 
         /**
-         * The ID of the ASM instance.
+         * <p>Specifies whether to enable SMC optimization.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>false</p>
+         */
+        public Builder SMCEnabled(Boolean SMCEnabled) {
+            this.putBodyParameter("SMCEnabled", SMCEnabled);
+            this.SMCEnabled = SMCEnabled;
+            return this;
+        }
+
+        /**
+         * <p>The ID of the ASM instance.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cb8963379255149cb98c8686f274x****</p>
          */
         public Builder serviceMeshId(String serviceMeshId) {
             this.putBodyParameter("ServiceMeshId", serviceMeshId);
@@ -2368,7 +2795,10 @@ public class UpdateMeshFeatureRequest extends Request {
         }
 
         /**
-         * The maximum number of CPU cores that are available to the pod where a sidecar proxy injector resides.
+         * <p>The maximum number of CPU cores that are available to the pod where a sidecar proxy injector resides.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>4000m</p>
          */
         public Builder sidecarInjectorLimitCPU(String sidecarInjectorLimitCPU) {
             this.putBodyParameter("SidecarInjectorLimitCPU", sidecarInjectorLimitCPU);
@@ -2377,7 +2807,10 @@ public class UpdateMeshFeatureRequest extends Request {
         }
 
         /**
-         * The maximum size of the memory that is available to the pod where a sidecar proxy injector resides.
+         * <p>The maximum size of the memory that is available to the pod where a sidecar proxy injector resides.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2048Mi</p>
          */
         public Builder sidecarInjectorLimitMemory(String sidecarInjectorLimitMemory) {
             this.putBodyParameter("SidecarInjectorLimitMemory", sidecarInjectorLimitMemory);
@@ -2386,7 +2819,10 @@ public class UpdateMeshFeatureRequest extends Request {
         }
 
         /**
-         * The number of CPU cores that are requested by the pod where a sidecar proxy injector resides.
+         * <p>The number of CPU cores that are requested by the pod where a sidecar proxy injector resides.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1000m</p>
          */
         public Builder sidecarInjectorRequestCPU(String sidecarInjectorRequestCPU) {
             this.putBodyParameter("SidecarInjectorRequestCPU", sidecarInjectorRequestCPU);
@@ -2395,7 +2831,10 @@ public class UpdateMeshFeatureRequest extends Request {
         }
 
         /**
-         * The size of the memory that is requested by the pod where a sidecar proxy injector resides.
+         * <p>The size of the memory that is requested by the pod where a sidecar proxy injector resides.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>512Mi</p>
          */
         public Builder sidecarInjectorRequestMemory(String sidecarInjectorRequestMemory) {
             this.putBodyParameter("SidecarInjectorRequestMemory", sidecarInjectorRequestMemory);
@@ -2404,7 +2843,10 @@ public class UpdateMeshFeatureRequest extends Request {
         }
 
         /**
-         * Other configurations of automatic sidecar proxy injection, in the YAML format.
+         * <p>Other configurations of automatic sidecar proxy injection, in the YAML format.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>{&quot;injectedAnnotations&quot;:{&quot;test/istio-init&quot;:&quot;runtime/default2&quot;,&quot;test/istio-proxy&quot;:&quot;runtime/default&quot;},&quot;replicaCount&quot;:2,&quot;nodeSelector&quot;:{&quot;beta.kubernetes.io/os&quot;:&quot;linux&quot;}}</p>
          */
         public Builder sidecarInjectorWebhookAsYaml(String sidecarInjectorWebhookAsYaml) {
             this.putBodyParameter("SidecarInjectorWebhookAsYaml", sidecarInjectorWebhookAsYaml);
@@ -2413,13 +2855,15 @@ public class UpdateMeshFeatureRequest extends Request {
         }
 
         /**
-         * Specifies whether to enable Prometheus monitoring. We recommend that you enable [ARMS Prometheus](https://arms.console.aliyun.com/). Valid values:
-         * <p>
+         * <p>Specifies whether to enable Prometheus monitoring. We recommend that you enable <a href="https://arms.console.aliyun.com/">ARMS Prometheus</a>. Valid values:</p>
+         * <ul>
+         * <li><code>true</code>: enables Prometheus monitoring.</li>
+         * <li><code>false</code>: disables Prometheus monitoring.</li>
+         * </ul>
+         * <p>Default value: <code>false</code>.</p>
          * 
-         * *   `true`: enables Prometheus monitoring.
-         * *   `false`: disables Prometheus monitoring.
-         * 
-         * Default value: `false`.
+         * <strong>example:</strong>
+         * <p>false</p>
          */
         public Builder telemetry(Boolean telemetry) {
             this.putBodyParameter("Telemetry", telemetry);
@@ -2428,7 +2872,10 @@ public class UpdateMeshFeatureRequest extends Request {
         }
 
         /**
-         * The maximum period of time that the sidecar proxy waits for requests to be processed before the proxy is stopped. For example, if you want to specify a period of 5 seconds, set this parameter to 5s.
+         * <p>The maximum period of time that the sidecar proxy waits for requests to be processed before the proxy is stopped. For example, if you want to specify a period of 5 seconds, set this parameter to 5s.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>5s</p>
          */
         public Builder terminationDrainDuration(String terminationDrainDuration) {
             this.putBodyParameter("TerminationDrainDuration", terminationDrainDuration);
@@ -2437,13 +2884,15 @@ public class UpdateMeshFeatureRequest extends Request {
         }
 
         /**
-         * Specifies whether to enable Thrift Filter. Valid values:
-         * <p>
+         * <p>Specifies whether to enable Thrift Filter. Valid values:</p>
+         * <ul>
+         * <li><code>true</code>: enables Thrift Filter.</li>
+         * <li><code>false</code>: disables Thrift Filter.</li>
+         * </ul>
+         * <p>Default value: <code>false</code>.</p>
          * 
-         * *   `true`: enables Thrift Filter.
-         * *   `false`: disables Thrift Filter.
-         * 
-         * Default value: `false`.
+         * <strong>example:</strong>
+         * <p>false</p>
          */
         public Builder thriftFilterEnabled(Boolean thriftFilterEnabled) {
             this.putBodyParameter("ThriftFilterEnabled", thriftFilterEnabled);
@@ -2452,29 +2901,30 @@ public class UpdateMeshFeatureRequest extends Request {
         }
 
         /**
-         * The custom tag of Tracing Analysis. Specify this parameter in the JSON format.
-         * <p>
-         * 
-         *     {
-         *         "name1": CustomTag,
-         *         "name2": CustomTag
+         * <p>The custom tag of Tracing Analysis. Specify this parameter in the JSON format.</p>
+         * <pre><code>{
+         *     &quot;name1&quot;: CustomTag,
+         *     &quot;name2&quot;: CustomTag
+         * }
+         * </code></pre>
+         * <p>Tag key: literal, header, or environment.</p>
+         * <pre><code>{
+         *     &quot;literal&quot;: {
+         *         &quot;value&quot;: &quot;Fixed value&quot;
          *     }
-         * 
-         * Tag key: literal, header, or environment.
-         * 
-         *     {
-         *         "literal": {
-         *             "value": "Fixed value"
-         *         }
-         *         "header": {
-         *             "name": "Header name"
-         *             "defaultValue": "Default value that is used if the specified header does not exist"
-         *         }
-         *         "environment": {
-         *             "name": "Environment variable name"
-         *             "defaultValue": "Default value that is used if the specified environment variable does not exist"
-         *         }
+         *     &quot;header&quot;: {
+         *         &quot;name&quot;: &quot;Header name&quot;
+         *         &quot;defaultValue&quot;: &quot;Default value that is used if the specified header does not exist&quot;
          *     }
+         *     &quot;environment&quot;: {
+         *         &quot;name&quot;: &quot;Environment variable name&quot;
+         *         &quot;defaultValue&quot;: &quot;Default value that is used if the specified environment variable does not exist&quot;
+         *     }
+         * }
+         * </code></pre>
+         * 
+         * <strong>example:</strong>
+         * <p>{&quot;mytag&quot;: {&quot;literal&quot;:{&quot;value&quot;:&quot;test&quot;}}}</p>
          */
         public Builder traceCustomTags(String traceCustomTags) {
             this.putBodyParameter("TraceCustomTags", traceCustomTags);
@@ -2483,7 +2933,10 @@ public class UpdateMeshFeatureRequest extends Request {
         }
 
         /**
-         * The maximum length of the request path contained in the HttpUrl span tag. Default value: `256`.
+         * <p>The maximum length of the request path contained in the HttpUrl span tag. Default value: <code>256</code>.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>256</p>
          */
         public Builder traceMaxPathTagLength(String traceMaxPathTagLength) {
             this.putBodyParameter("TraceMaxPathTagLength", traceMaxPathTagLength);
@@ -2492,7 +2945,10 @@ public class UpdateMeshFeatureRequest extends Request {
         }
 
         /**
-         * The sampling percentage of Tracing Analysis.
+         * <p>The sampling percentage of Tracing Analysis.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>100</p>
          */
         public Builder traceSampling(Float traceSampling) {
             this.putBodyParameter("TraceSampling", traceSampling);
@@ -2501,13 +2957,15 @@ public class UpdateMeshFeatureRequest extends Request {
         }
 
         /**
-         * Specifies whether to enable the Tracing Analysis feature. To enable this feature, make sure that you have activated [Tracing Analysis](https://tracing-analysis.console.aliyun.com/). Valid values:
-         * <p>
+         * <p>Specifies whether to enable Managed Service for OpenTelemetry. (Before you enable <a href="https://tracing-analysis.console.aliyun.com/">Managed Service for OpenTelemetry</a>, make sure that you have activated it.) Valid values:</p>
+         * <ul>
+         * <li><code>true</code></li>
+         * <li><code>false</code></li>
+         * </ul>
+         * <p>Default value: <code>false</code>.</p>
          * 
-         * *   `true`: enables the Tracing Analysis feature.
-         * *   `false`: disables the Tracing Analysis feature.
-         * 
-         * Default value: `false`.
+         * <strong>example:</strong>
+         * <p>false</p>
          */
         public Builder tracing(Boolean tracing) {
             this.putBodyParameter("Tracing", tracing);
@@ -2516,7 +2974,10 @@ public class UpdateMeshFeatureRequest extends Request {
         }
 
         /**
-         * The maximum size of the memory that is available to the proxy service that exports Tracing Analysis data. For example, `1Mi` indicates 1 MB.
+         * <p>The maximum size of the memory that is available to the proxy service that exports Tracing Analysis data. For example, <code>1Mi</code> indicates 1 MB.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1000Mi</p>
          */
         public Builder tracingOnExtZipkinLimitCPU(String tracingOnExtZipkinLimitCPU) {
             this.putBodyParameter("TracingOnExtZipkinLimitCPU", tracingOnExtZipkinLimitCPU);
@@ -2525,7 +2986,10 @@ public class UpdateMeshFeatureRequest extends Request {
         }
 
         /**
-         * The retention period for the access logs of the ingress gateway. Unit: day. The logs are collected by using Log Service. For example, `30` indicates 30 days.
+         * <p>The retention period for the access logs of the ingress gateway. Unit: day. The logs are collected by using Log Service. For example, <code>30</code> indicates 30 days.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1024Mi</p>
          */
         public Builder tracingOnExtZipkinLimitMemory(String tracingOnExtZipkinLimitMemory) {
             this.putBodyParameter("TracingOnExtZipkinLimitMemory", tracingOnExtZipkinLimitMemory);
@@ -2534,7 +2998,22 @@ public class UpdateMeshFeatureRequest extends Request {
         }
 
         /**
-         * The minimum size of the memory requested by the proxy service that exports Tracing Analysis data. For example, `1Mi` indicates 1 MB.
+         * <p>The number of replicas that are available to the proxy service that exports Managed Service for OpenTelemetry data.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2</p>
+         */
+        public Builder tracingOnExtZipkinReplicaCount(String tracingOnExtZipkinReplicaCount) {
+            this.putBodyParameter("TracingOnExtZipkinReplicaCount", tracingOnExtZipkinReplicaCount);
+            this.tracingOnExtZipkinReplicaCount = tracingOnExtZipkinReplicaCount;
+            return this;
+        }
+
+        /**
+         * <p>The minimum size of the memory requested by the proxy service that exports Tracing Analysis data. For example, <code>1Mi</code> indicates 1 MB.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>200m</p>
          */
         public Builder tracingOnExtZipkinRequestCPU(String tracingOnExtZipkinRequestCPU) {
             this.putBodyParameter("TracingOnExtZipkinRequestCPU", tracingOnExtZipkinRequestCPU);
@@ -2543,7 +3022,10 @@ public class UpdateMeshFeatureRequest extends Request {
         }
 
         /**
-         * The maximum number of CPU cores that are available to the proxy service that exports Tracing Analysis data. For example, `1000m` indicates one CPU core.
+         * <p>The maximum number of CPU cores that are available to the proxy service that exports Tracing Analysis data. For example, <code>1000m</code> indicates one CPU core.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>200Mi</p>
          */
         public Builder tracingOnExtZipkinRequestMemory(String tracingOnExtZipkinRequestMemory) {
             this.putBodyParameter("TracingOnExtZipkinRequestMemory", tracingOnExtZipkinRequestMemory);
@@ -2552,13 +3034,15 @@ public class UpdateMeshFeatureRequest extends Request {
         }
 
         /**
-         * Specifies whether to enable WebAssembly Filter. Valid values:
-         * <p>
+         * <p>Specifies whether to enable WebAssembly Filter. Valid values:</p>
+         * <ul>
+         * <li><code>true</code>: enables WebAssembly Filter.</li>
+         * <li><code>false</code>: disables WebAssembly Filter.</li>
+         * </ul>
+         * <p>Default value: <code>false</code>.</p>
          * 
-         * *   `true`: enables WebAssembly Filter.
-         * *   `false`: disables WebAssembly Filter.
-         * 
-         * Default value: `false`.
+         * <strong>example:</strong>
+         * <p>false</p>
          */
         public Builder webAssemblyFilterEnabled(Boolean webAssemblyFilterEnabled) {
             this.putBodyParameter("WebAssemblyFilterEnabled", webAssemblyFilterEnabled);

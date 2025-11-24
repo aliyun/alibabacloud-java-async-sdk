@@ -1,21 +1,26 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.servicemesh20200111.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ReActivateAuditResponseBody} extends {@link TeaModel}
  *
  * <p>ReActivateAuditResponseBody</p>
  */
 public class ReActivateAuditResponseBody extends TeaModel {
-    @NameInMap("Data")
+    @com.aliyun.core.annotation.NameInMap("Data")
     private String data;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
     private ReActivateAuditResponseBody(Builder builder) {
@@ -29,6 +34,10 @@ public class ReActivateAuditResponseBody extends TeaModel {
 
     public static ReActivateAuditResponseBody create() {
         return builder().build();
+    }
+
+    public Builder toBuilder() {
+        return new Builder(this);
     }
 
     /**
@@ -49,8 +58,19 @@ public class ReActivateAuditResponseBody extends TeaModel {
         private String data; 
         private String requestId; 
 
+        private Builder() {
+        } 
+
+        private Builder(ReActivateAuditResponseBody model) {
+            this.data = model.data;
+            this.requestId = model.requestId;
+        } 
+
         /**
-         * The name of the project that is used to store audit logs.
+         * <p>The name of the project that is used to store audit logs.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>k8s-log-c0703599f695f4b8fa1c6492a33af****</p>
          */
         public Builder data(String data) {
             this.data = data;
@@ -58,7 +78,10 @@ public class ReActivateAuditResponseBody extends TeaModel {
         }
 
         /**
-         * The request ID.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>17163CE9-CE4B-1B87-9185-1A1AD7E7****</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;

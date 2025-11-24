@@ -1,32 +1,37 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.servicemesh20200111.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeIstioGatewayDomainsRequest} extends {@link RequestModel}
  *
  * <p>DescribeIstioGatewayDomainsRequest</p>
  */
 public class DescribeIstioGatewayDomainsRequest extends Request {
-    @Body
-    @NameInMap("IstioGatewayName")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("IstioGatewayName")
     private String istioGatewayName;
 
-    @Body
-    @NameInMap("Limit")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("Limit")
     private String limit;
 
-    @Body
-    @NameInMap("Namespace")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("Namespace")
     private String namespace;
 
-    @Body
-    @NameInMap("ServiceMeshId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("ServiceMeshId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String serviceMeshId;
 
     private DescribeIstioGatewayDomainsRequest(Builder builder) {
@@ -45,7 +50,7 @@ public class DescribeIstioGatewayDomainsRequest extends Request {
         return builder().build();
     }
 
-    @Override
+@Override
     public Builder toBuilder() {
         return new Builder(this);
     }
@@ -97,7 +102,10 @@ public class DescribeIstioGatewayDomainsRequest extends Request {
         } 
 
         /**
-         * The name of the ASM gateway.
+         * <p>The name of the ASM gateway.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>ingressgateway</p>
          */
         public Builder istioGatewayName(String istioGatewayName) {
             this.putBodyParameter("IstioGatewayName", istioGatewayName);
@@ -106,7 +114,10 @@ public class DescribeIstioGatewayDomainsRequest extends Request {
         }
 
         /**
-         * The maximum number of Istio gateways to query.
+         * <p>The maximum number of Istio gateways to query.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10</p>
          */
         public Builder limit(String limit) {
             this.putBodyParameter("Limit", limit);
@@ -115,7 +126,10 @@ public class DescribeIstioGatewayDomainsRequest extends Request {
         }
 
         /**
-         * The namespace in which the ASM gateway resides.
+         * <p>The namespace in which the ASM gateway resides.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>default</p>
          */
         public Builder namespace(String namespace) {
             this.putBodyParameter("Namespace", namespace);
@@ -124,7 +138,11 @@ public class DescribeIstioGatewayDomainsRequest extends Request {
         }
 
         /**
-         * The ASM instance ID.
+         * <p>The ASM instance ID.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>c08ba3fd1e6484b0f8cc1ad8fe10d****</p>
          */
         public Builder serviceMeshId(String serviceMeshId) {
             this.putBodyParameter("ServiceMeshId", serviceMeshId);

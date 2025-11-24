@@ -1,318 +1,337 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.servicemesh20200111.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link CreateServiceMeshRequest} extends {@link RequestModel}
  *
  * <p>CreateServiceMeshRequest</p>
  */
 public class CreateServiceMeshRequest extends Request {
-    @Body
-    @NameInMap("AccessLogEnabled")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("AccessLogEnabled")
     private Boolean accessLogEnabled;
 
-    @Body
-    @NameInMap("AccessLogFile")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("AccessLogFile")
     private String accessLogFile;
 
-    @Body
-    @NameInMap("AccessLogFormat")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("AccessLogFormat")
     private String accessLogFormat;
 
-    @Body
-    @NameInMap("AccessLogProject")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("AccessLogProject")
     private String accessLogProject;
 
-    @Body
-    @NameInMap("AccessLogServiceEnabled")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("AccessLogServiceEnabled")
     private Boolean accessLogServiceEnabled;
 
-    @Body
-    @NameInMap("AccessLogServiceHost")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("AccessLogServiceHost")
     private String accessLogServiceHost;
 
-    @Body
-    @NameInMap("AccessLogServicePort")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("AccessLogServicePort")
     private Integer accessLogServicePort;
 
-    @Body
-    @NameInMap("ApiServerLoadBalancerSpec")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("ApiServerLoadBalancerSpec")
     private String apiServerLoadBalancerSpec;
 
-    @Body
-    @NameInMap("ApiServerPublicEip")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("ApiServerPublicEip")
     private Boolean apiServerPublicEip;
 
-    @Body
-    @NameInMap("AuditProject")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("AuditProject")
     private String auditProject;
 
-    @Body
-    @NameInMap("AutoRenew")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("AutoRenew")
     private Boolean autoRenew;
 
-    @Body
-    @NameInMap("AutoRenewPeriod")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("AutoRenewPeriod")
     private Integer autoRenewPeriod;
 
-    @Body
-    @NameInMap("CRAggregationEnabled")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("CRAggregationEnabled")
     private Boolean CRAggregationEnabled;
 
-    @Body
-    @NameInMap("ChargeType")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("CertChain")
+    private String certChain;
+
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("ChargeType")
     private String chargeType;
 
-    @Body
-    @NameInMap("ClusterDomain")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("ClusterDomain")
     private String clusterDomain;
 
-    @Body
-    @NameInMap("ClusterSpec")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("ClusterSpec")
     private String clusterSpec;
 
-    @Body
-    @NameInMap("ConfigSourceEnabled")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("ConfigSourceEnabled")
     private Boolean configSourceEnabled;
 
-    @Body
-    @NameInMap("ConfigSourceNacosID")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("ConfigSourceNacosID")
     private String configSourceNacosID;
 
-    @Body
-    @NameInMap("ControlPlaneLogEnabled")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("ControlPlaneLogEnabled")
     private Boolean controlPlaneLogEnabled;
 
-    @Body
-    @NameInMap("ControlPlaneLogProject")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("ControlPlaneLogProject")
     private String controlPlaneLogProject;
 
-    @Body
-    @NameInMap("CustomizedPrometheus")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("CustomizedPrometheus")
     private Boolean customizedPrometheus;
 
-    @Body
-    @NameInMap("CustomizedZipkin")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("CustomizedZipkin")
     private Boolean customizedZipkin;
 
-    @Body
-    @NameInMap("DNSProxyingEnabled")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("DNSProxyingEnabled")
     private Boolean DNSProxyingEnabled;
 
-    @Body
-    @NameInMap("DubboFilterEnabled")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("DubboFilterEnabled")
     private Boolean dubboFilterEnabled;
 
-    @Body
-    @NameInMap("Edition")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("Edition")
     private String edition;
 
-    @Body
-    @NameInMap("EnableAmbient")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("EnableACMG")
+    private Boolean enableACMG;
+
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("EnableAmbient")
     private Boolean enableAmbient;
 
-    @Body
-    @NameInMap("EnableAudit")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("EnableAudit")
     private Boolean enableAudit;
 
-    @Body
-    @NameInMap("EnableCRHistory")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("EnableCRHistory")
     private Boolean enableCRHistory;
 
-    @Body
-    @NameInMap("EnableSDSServer")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("EnableSDSServer")
     private Boolean enableSDSServer;
 
-    @Body
-    @NameInMap("ExcludeIPRanges")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("ExcludeIPRanges")
     private String excludeIPRanges;
 
-    @Body
-    @NameInMap("ExcludeInboundPorts")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("ExcludeInboundPorts")
     private String excludeInboundPorts;
 
-    @Body
-    @NameInMap("ExcludeOutboundPorts")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("ExcludeOutboundPorts")
     private String excludeOutboundPorts;
 
-    @Body
-    @NameInMap("ExistingCaCert")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("ExistingCaCert")
     private String existingCaCert;
 
-    @Body
-    @NameInMap("ExistingCaKey")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("ExistingCaKey")
     private String existingCaKey;
 
-    @Body
-    @NameInMap("ExistingCaType")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("ExistingCaType")
+    @Deprecated
     private String existingCaType;
 
-    @Body
-    @NameInMap("ExistingRootCaCert")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("ExistingRootCaCert")
     private String existingRootCaCert;
 
-    @Body
-    @NameInMap("ExistingRootCaKey")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("ExistingRootCaKey")
+    @Deprecated
     private String existingRootCaKey;
 
-    @Body
-    @NameInMap("FilterGatewayClusterConfig")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("FilterGatewayClusterConfig")
     private Boolean filterGatewayClusterConfig;
 
-    @Body
-    @NameInMap("GatewayAPIEnabled")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("GatewayAPIEnabled")
     private Boolean gatewayAPIEnabled;
 
-    @Body
-    @NameInMap("GuestCluster")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("GuestCluster")
     private String guestCluster;
 
-    @Body
-    @NameInMap("IncludeIPRanges")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("IncludeIPRanges")
     private String includeIPRanges;
 
-    @Body
-    @NameInMap("IstioVersion")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("IstioVersion")
     private String istioVersion;
 
-    @Body
-    @NameInMap("KialiEnabled")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("KialiEnabled")
     private Boolean kialiEnabled;
 
-    @Body
-    @NameInMap("LocalityLBConf")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("LocalityLBConf")
     private String localityLBConf;
 
-    @Body
-    @NameInMap("LocalityLoadBalancing")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("LocalityLoadBalancing")
     private Boolean localityLoadBalancing;
 
-    @Body
-    @NameInMap("MSEEnabled")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("MSEEnabled")
     private Boolean MSEEnabled;
 
-    @Body
-    @NameInMap("MultiBufferEnabled")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("MultiBufferEnabled")
     private Boolean multiBufferEnabled;
 
-    @Body
-    @NameInMap("MultiBufferPollDelay")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("MultiBufferPollDelay")
     private String multiBufferPollDelay;
 
-    @Body
-    @NameInMap("MysqlFilterEnabled")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("MysqlFilterEnabled")
     private Boolean mysqlFilterEnabled;
 
-    @Body
-    @NameInMap("Name")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("Name")
     private String name;
 
-    @Body
-    @NameInMap("OPALimitCPU")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("OPALimitCPU")
     private String OPALimitCPU;
 
-    @Body
-    @NameInMap("OPALimitMemory")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("OPALimitMemory")
     private String OPALimitMemory;
 
-    @Body
-    @NameInMap("OPALogLevel")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("OPALogLevel")
     private String OPALogLevel;
 
-    @Body
-    @NameInMap("OPARequestCPU")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("OPARequestCPU")
     private String OPARequestCPU;
 
-    @Body
-    @NameInMap("OPARequestMemory")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("OPARequestMemory")
     private String OPARequestMemory;
 
-    @Body
-    @NameInMap("OpaEnabled")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("OpaEnabled")
     private Boolean opaEnabled;
 
-    @Body
-    @NameInMap("OpenAgentPolicy")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("OpenAgentPolicy")
     private Boolean openAgentPolicy;
 
-    @Body
-    @NameInMap("Period")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("Period")
     private Integer period;
 
-    @Body
-    @NameInMap("PilotLoadBalancerSpec")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("PilotLoadBalancerSpec")
     private String pilotLoadBalancerSpec;
 
-    @Body
-    @NameInMap("PrometheusUrl")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("PlaygroundScene")
+    private String playgroundScene;
+
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("PrometheusUrl")
     private String prometheusUrl;
 
-    @Body
-    @NameInMap("ProxyLimitCPU")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("ProxyLimitCPU")
     private String proxyLimitCPU;
 
-    @Body
-    @NameInMap("ProxyLimitMemory")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("ProxyLimitMemory")
     private String proxyLimitMemory;
 
-    @Body
-    @NameInMap("ProxyRequestCPU")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("ProxyRequestCPU")
     private String proxyRequestCPU;
 
-    @Body
-    @NameInMap("ProxyRequestMemory")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("ProxyRequestMemory")
     private String proxyRequestMemory;
 
-    @Body
-    @NameInMap("RedisFilterEnabled")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("RedisFilterEnabled")
     private Boolean redisFilterEnabled;
 
-    @Body
-    @NameInMap("RegionId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("RegionId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String regionId;
 
-    @Query
-    @NameInMap("Tag")
-    private java.util.List < Tag> tag;
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Tag")
+    private java.util.List<Tag> tag;
 
-    @Body
-    @NameInMap("Telemetry")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("Telemetry")
     private Boolean telemetry;
 
-    @Body
-    @NameInMap("ThriftFilterEnabled")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("ThriftFilterEnabled")
     private Boolean thriftFilterEnabled;
 
-    @Body
-    @NameInMap("TraceSampling")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("TraceSampling")
     private Float traceSampling;
 
-    @Body
-    @NameInMap("Tracing")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("Tracing")
     private Boolean tracing;
 
-    @Body
-    @NameInMap("UseExistingCA")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("UseExistingCA")
     private Boolean useExistingCA;
 
-    @Body
-    @NameInMap("VSwitches")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("VSwitches")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String vSwitches;
 
-    @Body
-    @NameInMap("VpcId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("VpcId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String vpcId;
 
-    @Body
-    @NameInMap("WebAssemblyFilterEnabled")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("WebAssemblyFilterEnabled")
     private Boolean webAssemblyFilterEnabled;
 
     private CreateServiceMeshRequest(Builder builder) {
@@ -330,6 +349,7 @@ public class CreateServiceMeshRequest extends Request {
         this.autoRenew = builder.autoRenew;
         this.autoRenewPeriod = builder.autoRenewPeriod;
         this.CRAggregationEnabled = builder.CRAggregationEnabled;
+        this.certChain = builder.certChain;
         this.chargeType = builder.chargeType;
         this.clusterDomain = builder.clusterDomain;
         this.clusterSpec = builder.clusterSpec;
@@ -342,6 +362,7 @@ public class CreateServiceMeshRequest extends Request {
         this.DNSProxyingEnabled = builder.DNSProxyingEnabled;
         this.dubboFilterEnabled = builder.dubboFilterEnabled;
         this.edition = builder.edition;
+        this.enableACMG = builder.enableACMG;
         this.enableAmbient = builder.enableAmbient;
         this.enableAudit = builder.enableAudit;
         this.enableCRHistory = builder.enableCRHistory;
@@ -376,6 +397,7 @@ public class CreateServiceMeshRequest extends Request {
         this.openAgentPolicy = builder.openAgentPolicy;
         this.period = builder.period;
         this.pilotLoadBalancerSpec = builder.pilotLoadBalancerSpec;
+        this.playgroundScene = builder.playgroundScene;
         this.prometheusUrl = builder.prometheusUrl;
         this.proxyLimitCPU = builder.proxyLimitCPU;
         this.proxyLimitMemory = builder.proxyLimitMemory;
@@ -402,7 +424,7 @@ public class CreateServiceMeshRequest extends Request {
         return builder().build();
     }
 
-    @Override
+@Override
     public Builder toBuilder() {
         return new Builder(this);
     }
@@ -499,6 +521,13 @@ public class CreateServiceMeshRequest extends Request {
     }
 
     /**
+     * @return certChain
+     */
+    public String getCertChain() {
+        return this.certChain;
+    }
+
+    /**
      * @return chargeType
      */
     public String getChargeType() {
@@ -580,6 +609,13 @@ public class CreateServiceMeshRequest extends Request {
      */
     public String getEdition() {
         return this.edition;
+    }
+
+    /**
+     * @return enableACMG
+     */
+    public Boolean getEnableACMG() {
+        return this.enableACMG;
     }
 
     /**
@@ -821,6 +857,13 @@ public class CreateServiceMeshRequest extends Request {
     }
 
     /**
+     * @return playgroundScene
+     */
+    public String getPlaygroundScene() {
+        return this.playgroundScene;
+    }
+
+    /**
      * @return prometheusUrl
      */
     public String getPrometheusUrl() {
@@ -872,7 +915,7 @@ public class CreateServiceMeshRequest extends Request {
     /**
      * @return tag
      */
-    public java.util.List < Tag> getTag() {
+    public java.util.List<Tag> getTag() {
         return this.tag;
     }
 
@@ -946,6 +989,7 @@ public class CreateServiceMeshRequest extends Request {
         private Boolean autoRenew; 
         private Integer autoRenewPeriod; 
         private Boolean CRAggregationEnabled; 
+        private String certChain; 
         private String chargeType; 
         private String clusterDomain; 
         private String clusterSpec; 
@@ -958,6 +1002,7 @@ public class CreateServiceMeshRequest extends Request {
         private Boolean DNSProxyingEnabled; 
         private Boolean dubboFilterEnabled; 
         private String edition; 
+        private Boolean enableACMG; 
         private Boolean enableAmbient; 
         private Boolean enableAudit; 
         private Boolean enableCRHistory; 
@@ -992,6 +1037,7 @@ public class CreateServiceMeshRequest extends Request {
         private Boolean openAgentPolicy; 
         private Integer period; 
         private String pilotLoadBalancerSpec; 
+        private String playgroundScene; 
         private String prometheusUrl; 
         private String proxyLimitCPU; 
         private String proxyLimitMemory; 
@@ -999,7 +1045,7 @@ public class CreateServiceMeshRequest extends Request {
         private String proxyRequestMemory; 
         private Boolean redisFilterEnabled; 
         private String regionId; 
-        private java.util.List < Tag> tag; 
+        private java.util.List<Tag> tag; 
         private Boolean telemetry; 
         private Boolean thriftFilterEnabled; 
         private Float traceSampling; 
@@ -1028,6 +1074,7 @@ public class CreateServiceMeshRequest extends Request {
             this.autoRenew = request.autoRenew;
             this.autoRenewPeriod = request.autoRenewPeriod;
             this.CRAggregationEnabled = request.CRAggregationEnabled;
+            this.certChain = request.certChain;
             this.chargeType = request.chargeType;
             this.clusterDomain = request.clusterDomain;
             this.clusterSpec = request.clusterSpec;
@@ -1040,6 +1087,7 @@ public class CreateServiceMeshRequest extends Request {
             this.DNSProxyingEnabled = request.DNSProxyingEnabled;
             this.dubboFilterEnabled = request.dubboFilterEnabled;
             this.edition = request.edition;
+            this.enableACMG = request.enableACMG;
             this.enableAmbient = request.enableAmbient;
             this.enableAudit = request.enableAudit;
             this.enableCRHistory = request.enableCRHistory;
@@ -1074,6 +1122,7 @@ public class CreateServiceMeshRequest extends Request {
             this.openAgentPolicy = request.openAgentPolicy;
             this.period = request.period;
             this.pilotLoadBalancerSpec = request.pilotLoadBalancerSpec;
+            this.playgroundScene = request.playgroundScene;
             this.prometheusUrl = request.prometheusUrl;
             this.proxyLimitCPU = request.proxyLimitCPU;
             this.proxyLimitMemory = request.proxyLimitMemory;
@@ -1093,13 +1142,15 @@ public class CreateServiceMeshRequest extends Request {
         } 
 
         /**
-         * Specifies whether to enable access log collection. Valid values:
-         * <p>
+         * <p>Specifies whether to enable access log collection. Valid values:</p>
+         * <ul>
+         * <li><code>true</code></li>
+         * <li><code>false</code></li>
+         * </ul>
+         * <p>Default value: <code>false</code>.</p>
          * 
-         * *   `true`
-         * *   `false`
-         * 
-         * Default value: `false`.
+         * <strong>example:</strong>
+         * <p>false</p>
          */
         public Builder accessLogEnabled(Boolean accessLogEnabled) {
             this.putBodyParameter("AccessLogEnabled", accessLogEnabled);
@@ -1108,11 +1159,14 @@ public class CreateServiceMeshRequest extends Request {
         }
 
         /**
-         * Specifies whether to enable access log collection. Valid values:
-         * <p>
+         * <p>Specifies whether to enable access log collection. Valid values:</p>
+         * <ul>
+         * <li>&quot;&quot;: disables access log collection.</li>
+         * <li><code>/dev/stdout</code>: enables access log collection. Access logs are written to /dev/stdout.</li>
+         * </ul>
          * 
-         * *   "": disables access log collection.
-         * *   `/dev/stdout`: enables access log collection. Access logs are written to /dev/stdout.
+         * <strong>example:</strong>
+         * <p>/dev/stdout</p>
          */
         public Builder accessLogFile(String accessLogFile) {
             this.putBodyParameter("AccessLogFile", accessLogFile);
@@ -1121,7 +1175,10 @@ public class CreateServiceMeshRequest extends Request {
         }
 
         /**
-         * Custom fields of access logs. To set this parameter, you must enable access log collection. Otherwise, you cannot set this parameter. The value must be a JSON string. The following key values must be contained: authority_for, bytes_received, bytes_sent, downstream_local_address, downstream_remote_address, duration, istio_policy_status, method, path, protocol, requested_server_name, response_code, response_flags, route_name, start_time, trace_id, upstream_cluster, upstream_host, upstream_local_address, upstream_service_time, upstream_transport_failure_reason, user_agent, and x_forwarded_for.
+         * <p>Custom fields of access logs. To set this parameter, you must enable access log collection. Otherwise, you cannot set this parameter. The value must be a JSON string. The following key values must be contained: authority_for, bytes_received, bytes_sent, downstream_local_address, downstream_remote_address, duration, istio_policy_status, method, path, protocol, requested_server_name, response_code, response_flags, route_name, start_time, trace_id, upstream_cluster, upstream_host, upstream_local_address, upstream_service_time, upstream_transport_failure_reason, user_agent, and x_forwarded_for.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>{&quot;authority_for&quot;:&quot;%REQ(:AUTHORITY)%&quot;,&quot;bytes_received&quot;:&quot;%BYTES_RECEIVED%&quot;,&quot;bytes_sent&quot;:&quot;%BYTES_SENT%&quot;,&quot;downstream_local_address&quot;:&quot;%DOWNSTREAM_LOCAL_ADDRESS%&quot;,&quot;downstream_remote_address&quot;:&quot;%DOWNSTREAM_REMOTE_ADDRESS%&quot;,&quot;duration&quot;:&quot;%DURATION%&quot;,&quot;istio_policy_status&quot;:&quot;%DYNAMIC_METADATA(istio.mixer:status)%&quot;,&quot;method&quot;:&quot;%REQ(:METHOD)%&quot;,&quot;path&quot;:&quot;%REQ(X-ENVOY-ORIGINAL-PATH?:PATH)%&quot;,&quot;protocol&quot;:&quot;%PROTOCOL%&quot;,&quot;request_id&quot;:&quot;%REQ(X-REQUEST-ID)%&quot;,&quot;requested_server_name&quot;:&quot;%REQUESTED_SERVER_NAME%&quot;,&quot;response_code&quot;:&quot;%RESPONSE_CODE%&quot;,&quot;response_flags&quot;:&quot;%RESPONSE_FLAGS%&quot;,&quot;route_name&quot;:&quot;%ROUTE_NAME%&quot;,&quot;start_time&quot;:&quot;%START_TIME%&quot;,&quot;trace_id&quot;:&quot;%REQ(X-B3-TRACEID)%&quot;,&quot;upstream_cluster&quot;:&quot;%UPSTREAM_CLUSTER%&quot;,&quot;upstream_host&quot;:&quot;%UPSTREAM_HOST%&quot;,&quot;upstream_local_address&quot;:&quot;%UPSTREAM_LOCAL_ADDRESS%&quot;,&quot;upstream_service_time&quot;:&quot;%RESP(X-ENVOY-UPSTREAM-SERVICE-TIME)%&quot;,&quot;upstream_transport_failure_reason&quot;:&quot;%UPSTREAM_TRANSPORT_FAILURE_REASON%&quot;,&quot;user_agent&quot;:&quot;%REQ(USER-AGENT)%&quot;,&quot;x_forwarded_for&quot;:&quot;%REQ(X-FORWARDED-FOR)%&quot;}</p>
          */
         public Builder accessLogFormat(String accessLogFormat) {
             this.putBodyParameter("AccessLogFormat", accessLogFormat);
@@ -1130,7 +1187,10 @@ public class CreateServiceMeshRequest extends Request {
         }
 
         /**
-         * The SLS project from which access logs are collected.
+         * <p>The SLS project from which access logs are collected.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>mesh-log-cf245a429b6ff4b6e97f20797758*****</p>
          */
         public Builder accessLogProject(String accessLogProject) {
             this.putBodyParameter("AccessLogProject", accessLogProject);
@@ -1139,13 +1199,15 @@ public class CreateServiceMeshRequest extends Request {
         }
 
         /**
-         * Specifies whether to enable gRPC Access Log Service (ALS) of Envoy. gRPC is short for Google Remote Procedure Call. Valid values:
-         * <p>
+         * <p>Specifies whether to enable gRPC Access Log Service (ALS) of Envoy. gRPC is short for Google Remote Procedure Call. Valid values:</p>
+         * <ul>
+         * <li><code>true</code></li>
+         * <li><code>false</code></li>
+         * </ul>
+         * <p>Default value: <code>false</code>.</p>
          * 
-         * *   `true`
-         * *   `false`
-         * 
-         * Default value: `false`.
+         * <strong>example:</strong>
+         * <p>false</p>
          */
         public Builder accessLogServiceEnabled(Boolean accessLogServiceEnabled) {
             this.putBodyParameter("AccessLogServiceEnabled", accessLogServiceEnabled);
@@ -1154,7 +1216,10 @@ public class CreateServiceMeshRequest extends Request {
         }
 
         /**
-         * The endpoint of Envoy\"s gRPC ALS.
+         * <p>The endpoint of Envoy&quot;s gRPC ALS.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>0.0.0.0</p>
          */
         public Builder accessLogServiceHost(String accessLogServiceHost) {
             this.putBodyParameter("AccessLogServiceHost", accessLogServiceHost);
@@ -1163,7 +1228,10 @@ public class CreateServiceMeshRequest extends Request {
         }
 
         /**
-         * The port of Envoy\"s gRPC ALS.
+         * <p>The port of Envoy&quot;s gRPC ALS.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>9999</p>
          */
         public Builder accessLogServicePort(Integer accessLogServicePort) {
             this.putBodyParameter("AccessLogServicePort", accessLogServicePort);
@@ -1172,7 +1240,10 @@ public class CreateServiceMeshRequest extends Request {
         }
 
         /**
-         * The type of the CLB instance that is bound to Istio Pilot. Valid values: `slb.s1.small`, `slb.s2.small`, `slb.s2.medium`, `slb.s3.small`, `slb.s3.medium`, and `slb.s3.large`.
+         * <p>The type of the Classic Load Balancer (CLB) instance that is bound to the API server. Valid values: <code>slb.s1.small</code>, <code>slb.s2.small</code>, <code>slb.s2.medium</code>, <code>slb.s3.small</code>, <code>slb.s3.medium</code>, and <code>slb.s3.large</code>.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>slb.s1.small</p>
          */
         public Builder apiServerLoadBalancerSpec(String apiServerLoadBalancerSpec) {
             this.putBodyParameter("ApiServerLoadBalancerSpec", apiServerLoadBalancerSpec);
@@ -1181,15 +1252,18 @@ public class CreateServiceMeshRequest extends Request {
         }
 
         /**
-         * Specifies whether to expose the API server to the Internet. Valid values:
-         * <p>
+         * <p>Specifies whether to expose the API server to the Internet. Valid values:</p>
+         * <ul>
+         * <li><code>true</code></li>
+         * <li><code>false</code></li>
+         * </ul>
+         * <p>Default value: <code>false</code>.</p>
+         * <blockquote>
+         * <p>If you set this parameter to <code>false</code>, the API server cannot be accessed over the Internet.</p>
+         * </blockquote>
          * 
-         * *   `true`
-         * *   `false`
-         * 
-         * Default value: `false`.
-         * 
-         * > If you set this parameter to `false`, the API server cannot be accessed over the Internet.
+         * <strong>example:</strong>
+         * <p>false</p>
          */
         public Builder apiServerPublicEip(Boolean apiServerPublicEip) {
             this.putBodyParameter("ApiServerPublicEip", apiServerPublicEip);
@@ -1198,10 +1272,11 @@ public class CreateServiceMeshRequest extends Request {
         }
 
         /**
-         * The name of the Log Service project that is used for mesh audit.
-         * <p>
+         * <p>The name of the Log Service project that is used for mesh audit.</p>
+         * <p>Default value: mesh-log-{ASM instance ID}.</p>
          * 
-         * Default value: mesh-log-{ASM instance ID}.
+         * <strong>example:</strong>
+         * <p>mesh-log-xxxx</p>
          */
         public Builder auditProject(String auditProject) {
             this.putBodyParameter("AuditProject", auditProject);
@@ -1210,12 +1285,14 @@ public class CreateServiceMeshRequest extends Request {
         }
 
         /**
-         * Specifies whether to enable auto-renewal for the CLB instance if the CLB instance uses the subscription billing method. Valid values:
-         * <p>
+         * <p>Specifies whether to enable auto-renewal for the CLB instance if the CLB instance uses the subscription billing method. Valid values:</p>
+         * <ul>
+         * <li><code>true</code></li>
+         * <li><code>false</code></li>
+         * </ul>
          * 
-         * - true
-         * 
-         * - false
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder autoRenew(Boolean autoRenew) {
             this.putBodyParameter("AutoRenew", autoRenew);
@@ -1224,7 +1301,10 @@ public class CreateServiceMeshRequest extends Request {
         }
 
         /**
-         * The auto-renewal period of the CLB instance. This parameter is valid only if the `ChargeType` parameter is set to `PrePay`. If the original subscription period of the CLB instance is less than one year, the value of this parameter indicates the number of months for auto-renewal. If the original subscription period of the CLB instance is more than one year, the value of this parameter indicates the number of years for auto-renewal.
+         * <p>The auto-renewal period of the subscription CLB instance. This parameter is valid only if <code>ChargeType</code> is set to <code>PrePay</code>. If the original subscription period of the CLB instance is less than one year, the value of this parameter indicates the number of months for auto-renewal. If the original subscription period of the CLB instance is more than one year, the value of this parameter indicates the number of years for auto-renewal.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>3</p>
          */
         public Builder autoRenewPeriod(Integer autoRenewPeriod) {
             this.putBodyParameter("AutoRenewPeriod", autoRenewPeriod);
@@ -1233,13 +1313,15 @@ public class CreateServiceMeshRequest extends Request {
         }
 
         /**
-         * Specifies whether to allow the Kubernetes API of clusters on the data plane to access Istio resources. The version of the ASM instance must be V1.9.7.93 or later. Valid values:
-         * <p>
+         * <p>Specifies whether to allow the Kubernetes API of clusters on the data plane to access Istio resources. The version of the ASM instance must be V1.9.7.93 or later. Valid values:</p>
+         * <ul>
+         * <li><code>true</code></li>
+         * <li><code>false</code></li>
+         * </ul>
+         * <p>Default value: <code>false</code>.</p>
          * 
-         * *   `true`
-         * *   `false`
-         * 
-         * Default value: `false`.
+         * <strong>example:</strong>
+         * <p>false</p>
          */
         public Builder CRAggregationEnabled(Boolean CRAggregationEnabled) {
             this.putBodyParameter("CRAggregationEnabled", CRAggregationEnabled);
@@ -1248,11 +1330,26 @@ public class CreateServiceMeshRequest extends Request {
         }
 
         /**
-         * The billing method of the CLB instance. Valid values:
-         * <p>
+         * <p>The certificate chain from the CA certificate to the root certificate. At least two certificates are included in the chain.</p>
          * 
-         * *   `PayOnDemand`: pay-as-you-go.
-         * *   `PrePay`: subscription.
+         * <strong>example:</strong>
+         * <p>Base64 encoded PEM certificate chain.</p>
+         */
+        public Builder certChain(String certChain) {
+            this.putBodyParameter("CertChain", certChain);
+            this.certChain = certChain;
+            return this;
+        }
+
+        /**
+         * <p>The billing method of the CLB instance. Valid values:</p>
+         * <ul>
+         * <li><code>PayOnDemand</code>: pay-as-you-go</li>
+         * <li><code>PrePay</code>: subscription</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>PrePay</p>
          */
         public Builder chargeType(String chargeType) {
             this.putBodyParameter("ChargeType", chargeType);
@@ -1261,7 +1358,10 @@ public class CreateServiceMeshRequest extends Request {
         }
 
         /**
-         * ClusterDomain.
+         * <p>ASM cluster domain.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cluster.local</p>
          */
         public Builder clusterDomain(String clusterDomain) {
             this.putBodyParameter("ClusterDomain", clusterDomain);
@@ -1270,14 +1370,18 @@ public class CreateServiceMeshRequest extends Request {
         }
 
         /**
-         * The edition of the ASM instance. Valid values:
-         * <p>
+         * <p>The edition of the ASM instance. Valid values:</p>
+         * <ul>
+         * <li><p><code>standard</code>: Standard Edition</p>
+         * </li>
+         * <li><p><code>enterprise</code>: Enterprise Edition</p>
+         * </li>
+         * <li><p><code>ultimate</code>: Ultimate Edition</p>
+         * </li>
+         * </ul>
          * 
-         * - `standard`: Standard Edition
-         * 
-         * - `enterprise`: Enterprise Edition
-         * 
-         * - `ultimate`: Ultimate Edition
+         * <strong>example:</strong>
+         * <p>standard</p>
          */
         public Builder clusterSpec(String clusterSpec) {
             this.putBodyParameter("ClusterSpec", clusterSpec);
@@ -1286,13 +1390,15 @@ public class CreateServiceMeshRequest extends Request {
         }
 
         /**
-         * Specifies whether to enable the external service registry. Valid values:
-         * <p>
+         * <p>Specifies whether to enable the external service registry. Valid values:</p>
+         * <ul>
+         * <li><code>true</code></li>
+         * <li><code>false</code></li>
+         * </ul>
+         * <p>Default value: <code>false</code>.</p>
          * 
-         * *   `true`
-         * *   `false`
-         * 
-         * Default value: `false`.
+         * <strong>example:</strong>
+         * <p>false</p>
          */
         public Builder configSourceEnabled(Boolean configSourceEnabled) {
             this.putBodyParameter("ConfigSourceEnabled", configSourceEnabled);
@@ -1301,7 +1407,10 @@ public class CreateServiceMeshRequest extends Request {
         }
 
         /**
-         * The instance ID of the Nacos registry.
+         * <p>The instance ID of the Nacos registry.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>mse-cn-tl326******</p>
          */
         public Builder configSourceNacosID(String configSourceNacosID) {
             this.putBodyParameter("ConfigSourceNacosID", configSourceNacosID);
@@ -1310,13 +1419,15 @@ public class CreateServiceMeshRequest extends Request {
         }
 
         /**
-         * Specifies whether to enable the collection of control plane logs. Valid values:
-         * <p>
+         * <p>Specifies whether to enable the collection of control plane logs. Valid values:</p>
+         * <ul>
+         * <li><code>true</code></li>
+         * <li><code>false</code></li>
+         * </ul>
+         * <p>Default value: <code>false</code>.</p>
          * 
-         * *   `true`
-         * *   `false`
-         * 
-         * Default value: `false`.
+         * <strong>example:</strong>
+         * <p>false</p>
          */
         public Builder controlPlaneLogEnabled(Boolean controlPlaneLogEnabled) {
             this.putBodyParameter("ControlPlaneLogEnabled", controlPlaneLogEnabled);
@@ -1325,7 +1436,10 @@ public class CreateServiceMeshRequest extends Request {
         }
 
         /**
-         * The name of the Log Service project that is used to collect the logs of the control plane.
+         * <p>The name of the Log Service project that is used to collect the logs of the control plane.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>mesh-log-cf245a429b6ff4b6e97f20797758*****</p>
          */
         public Builder controlPlaneLogProject(String controlPlaneLogProject) {
             this.putBodyParameter("ControlPlaneLogProject", controlPlaneLogProject);
@@ -1334,13 +1448,15 @@ public class CreateServiceMeshRequest extends Request {
         }
 
         /**
-         * Specifies whether to use a custom Prometheus instance. Valid values:
-         * <p>
+         * <p>Specifies whether to use a custom Prometheus instance. Valid values:</p>
+         * <ul>
+         * <li><code>true</code></li>
+         * <li><code>false</code></li>
+         * </ul>
+         * <p>Default value: <code>false</code>.</p>
          * 
-         * *   `true`
-         * *   `false`
-         * 
-         * Default value: `false`.
+         * <strong>example:</strong>
+         * <p>false</p>
          */
         public Builder customizedPrometheus(Boolean customizedPrometheus) {
             this.putBodyParameter("CustomizedPrometheus", customizedPrometheus);
@@ -1349,13 +1465,15 @@ public class CreateServiceMeshRequest extends Request {
         }
 
         /**
-         * Specifies whether to use a self-managed Zipkin system to collect tracing data. Valid values:
-         * <p>
+         * <p>Specifies whether to use a self-managed Zipkin system to collect tracing data. Valid values:</p>
+         * <ul>
+         * <li><code>true</code>: uses a self-managed Zipkin system to collect tracing data.</li>
+         * <li><code>false</code>: uses Alibaba Cloud Tracing Analysis to collect tracing data.</li>
+         * </ul>
+         * <p>Default value: <code>false</code>.</p>
          * 
-         * *   `true`: uses a self-managed Zipkin system to collect tracing data.
-         * *   `false`: uses Alibaba Cloud Tracing Analysis to collect tracing data.
-         * 
-         * Default value: `false`.
+         * <strong>example:</strong>
+         * <p>false</p>
          */
         public Builder customizedZipkin(Boolean customizedZipkin) {
             this.putBodyParameter("CustomizedZipkin", customizedZipkin);
@@ -1364,13 +1482,15 @@ public class CreateServiceMeshRequest extends Request {
         }
 
         /**
-         * Specifies whether to enable the DNS proxy feature. Valid values:
-         * <p>
+         * <p>Specifies whether to enable the DNS proxy feature. Valid values:</p>
+         * <ul>
+         * <li><code>true</code></li>
+         * <li><code>false</code></li>
+         * </ul>
+         * <p>Default value: <code>false</code>.</p>
          * 
-         * *   `true`
-         * *   `false`
-         * 
-         * Default value: `false`.
+         * <strong>example:</strong>
+         * <p>false</p>
          */
         public Builder DNSProxyingEnabled(Boolean DNSProxyingEnabled) {
             this.putBodyParameter("DNSProxyingEnabled", DNSProxyingEnabled);
@@ -1379,13 +1499,15 @@ public class CreateServiceMeshRequest extends Request {
         }
 
         /**
-         * Specifies whether to enable Dubbo Filter. Valid values:
-         * <p>
+         * <p>Specifies whether to enable Dubbo Filter. Valid values:</p>
+         * <ul>
+         * <li><code>true</code></li>
+         * <li><code>false</code></li>
+         * </ul>
+         * <p>Default value: <code>false</code>.</p>
          * 
-         * *   `true`
-         * *   `false`
-         * 
-         * Default value: `false`.
+         * <strong>example:</strong>
+         * <p>false</p>
          */
         public Builder dubboFilterEnabled(Boolean dubboFilterEnabled) {
             this.putBodyParameter("DubboFilterEnabled", dubboFilterEnabled);
@@ -1394,7 +1516,10 @@ public class CreateServiceMeshRequest extends Request {
         }
 
         /**
-         * The edition of the ASM instance.
+         * <p>The edition of the ASM instance.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Pro</p>
          */
         public Builder edition(String edition) {
             this.putBodyParameter("Edition", edition);
@@ -1403,7 +1528,22 @@ public class CreateServiceMeshRequest extends Request {
         }
 
         /**
-         * Specifies whether to enable the Ambient Mesh mode for the ASM instance.
+         * <p>Specifies whether to enable the ACMG mode for the ASM instance.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>false</p>
+         */
+        public Builder enableACMG(Boolean enableACMG) {
+            this.putBodyParameter("EnableACMG", enableACMG);
+            this.enableACMG = enableACMG;
+            return this;
+        }
+
+        /**
+         * <p>Specifies whether to enable the Ambient Mesh mode for the ASM instance.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>false</p>
          */
         public Builder enableAmbient(Boolean enableAmbient) {
             this.putBodyParameter("EnableAmbient", enableAmbient);
@@ -1412,13 +1552,15 @@ public class CreateServiceMeshRequest extends Request {
         }
 
         /**
-         * Specifies whether to enable the mesh audit feature. To enable this feature, make sure that you have activated [Log Service](https://sls.console.aliyun.com/). Valid values:
-         * <p>
+         * <p>Specifies whether to enable the mesh audit feature. To enable this feature, make sure that you have activated <a href="https://sls.console.aliyun.com/">Log Service</a>. Valid values:</p>
+         * <ul>
+         * <li><code>true</code></li>
+         * <li><code>false</code></li>
+         * </ul>
+         * <p>Default value: <code>false</code>.</p>
          * 
-         * *   `true`
-         * *   `false`
-         * 
-         * Default value: `false`.
+         * <strong>example:</strong>
+         * <p>false</p>
          */
         public Builder enableAudit(Boolean enableAudit) {
             this.putBodyParameter("EnableAudit", enableAudit);
@@ -1427,13 +1569,15 @@ public class CreateServiceMeshRequest extends Request {
         }
 
         /**
-         * Specifies whether to enable the rollback feature for Istio resources. Valid values:
-         * <p>
+         * <p>Specifies whether to enable the rollback feature for Istio resources. Valid values:</p>
+         * <ul>
+         * <li><code>true</code></li>
+         * <li><code>false</code></li>
+         * </ul>
+         * <p>Default value: <code>false</code>.</p>
          * 
-         * *   `true`
-         * *   `false`
-         * 
-         * Default value: `false`.
+         * <strong>example:</strong>
+         * <p>false</p>
          */
         public Builder enableCRHistory(Boolean enableCRHistory) {
             this.putBodyParameter("EnableCRHistory", enableCRHistory);
@@ -1442,13 +1586,15 @@ public class CreateServiceMeshRequest extends Request {
         }
 
         /**
-         * Specifies whether to enable Secret Discovery Service (SDS). Valid values:
-         * <p>
+         * <p>Specifies whether to enable Secret Discovery Service (SDS). Valid values:</p>
+         * <ul>
+         * <li><code>true</code></li>
+         * <li><code>false</code></li>
+         * </ul>
+         * <p>Default value: <code>false</code>.</p>
          * 
-         * *   `true`
-         * *   `false`
-         * 
-         * Default value: `false`.
+         * <strong>example:</strong>
+         * <p>false</p>
          */
         public Builder enableSDSServer(Boolean enableSDSServer) {
             this.putBodyParameter("EnableSDSServer", enableSDSServer);
@@ -1457,7 +1603,10 @@ public class CreateServiceMeshRequest extends Request {
         }
 
         /**
-         * The IP ranges in CIDR form to be excluded from redirection to the sidecar proxy in the ASM instance.
+         * <p>The IP ranges in CIDR form to be excluded from redirection to the sidecar proxy in the ASM instance.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>100.100.10*.***</p>
          */
         public Builder excludeIPRanges(String excludeIPRanges) {
             this.putBodyParameter("ExcludeIPRanges", excludeIPRanges);
@@ -1466,7 +1615,10 @@ public class CreateServiceMeshRequest extends Request {
         }
 
         /**
-         * The inbound ports to be excluded from redirection to the sidecar proxy in the ASM instance. Separate multiple port numbers with commas (,).
+         * <p>The inbound ports to be excluded from redirection to the sidecar proxy in the ASM instance. Separate multiple port numbers with commas (,).</p>
+         * 
+         * <strong>example:</strong>
+         * <p>80,81</p>
          */
         public Builder excludeInboundPorts(String excludeInboundPorts) {
             this.putBodyParameter("ExcludeInboundPorts", excludeInboundPorts);
@@ -1475,7 +1627,10 @@ public class CreateServiceMeshRequest extends Request {
         }
 
         /**
-         * The outbound ports to be excluded from redirection to the sidecar proxy in the ASM instance. Separate multiple port numbers with commas (,).
+         * <p>The outbound ports to be excluded from redirection to the sidecar proxy in the ASM instance. Separate multiple port numbers with commas (,).</p>
+         * 
+         * <strong>example:</strong>
+         * <p>80,81</p>
          */
         public Builder excludeOutboundPorts(String excludeOutboundPorts) {
             this.putBodyParameter("ExcludeOutboundPorts", excludeOutboundPorts);
@@ -1484,7 +1639,10 @@ public class CreateServiceMeshRequest extends Request {
         }
 
         /**
-         * The existing CA certificate, which is encoded in Base64. This parameter is used in scenarios where you migrate open source Istio to ASM. It specifies the content of the ca-cert.pem file in the istio-ca-secret secret. The secret is in the istio-system namespace of the Kubernetes cluster where the open source Istio is installed.
+         * <p>The existing CA certificate, which is encoded in Base64. This parameter is used in scenarios where you migrate open source Istio to ASM. It specifies the content of the ca-cert.pem file in the istio-ca-secret secret. The secret is in the istio-system namespace of the Kubernetes cluster where the open source Istio is installed.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>CA cert content, base64 encoded format.</p>
          */
         public Builder existingCaCert(String existingCaCert) {
             this.putBodyParameter("ExistingCaCert", existingCaCert);
@@ -1493,7 +1651,10 @@ public class CreateServiceMeshRequest extends Request {
         }
 
         /**
-         * The existing CA key, which is encoded in Base64. This parameter is used in scenarios where you migrate open source Istio to ASM. It specifies the content of the ca-key.pem file in the istio-ca-secret secret. The secret is in the istio-system namespace of the Kubernetes cluster where the open source Istio is installed.
+         * <p>The existing CA key, which is encoded in Base64. This parameter is used in scenarios where you migrate open source Istio to ASM. It specifies the content of the ca-key.pem file in the istio-ca-secret secret. The secret is in the istio-system namespace of the Kubernetes cluster where the open source Istio is installed.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>CA key content, base64 encoded format.</p>
          */
         public Builder existingCaKey(String existingCaKey) {
             this.putBodyParameter("ExistingCaKey", existingCaKey);
@@ -1502,11 +1663,14 @@ public class CreateServiceMeshRequest extends Request {
         }
 
         /**
-         * The type of the existing CA certificate. Valid values:
-         * <p>
+         * <p>The type of the existing CA certificate. Valid values:</p>
+         * <ul>
+         * <li>1: Self-signed certificate generated by istiod. The certificate corresponds to the secret named istio-ca-secret in the istio-system namespace. If you use this type of certificate, you must set the <code>ExistingCaCert</code> and <code>ExistingCaKey</code> parameters.</li>
+         * <li>2: Administrator-specified certificate. For more information, see <a href="https://istio.io/latest/docs/tasks/security/cert-management/plugin-ca-cert/">plugin ca cert</a>. In most cases, the certificate corresponds to the secret named cacerts in the istio-system namespace. If you use this type of certificate, you must set the <code>ExisingRootCaCert</code> and <code>ExisingRootCaKey</code> parameters.</li>
+         * </ul>
          * 
-         * *   1: Self-signed certificate generated by istiod. The certificate corresponds to the secret named istio-ca-secret in the istio-system namespace. If you use this type of certificate, you must set the `ExistingCaCert` and `ExsitingCaKey` parameters.
-         * *   2: Administrator-specified certificate. For more information, see [plugin ca cert](https://istio.io/latest/docs/tasks/security/cert-management/plugin-ca-cert/). In most cases, the certificate corresponds to the secret named cacerts in the istio-system namespace. If you use this type of certificate, you must set the `ExisingRootCaCert` and `ExisingRootCaKey` parameters.
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder existingCaType(String existingCaType) {
             this.putBodyParameter("ExistingCaType", existingCaType);
@@ -1515,7 +1679,10 @@ public class CreateServiceMeshRequest extends Request {
         }
 
         /**
-         * The existing root certificate, which is encoded in Base64.
+         * <p>The existing root certificate, which is encoded in Base64.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Existing CA cert content, base64 encoded format.</p>
          */
         public Builder existingRootCaCert(String existingRootCaCert) {
             this.putBodyParameter("ExistingRootCaCert", existingRootCaCert);
@@ -1524,7 +1691,10 @@ public class CreateServiceMeshRequest extends Request {
         }
 
         /**
-         * The private key that corresponds to the root certificate, which is encoded in Base64.
+         * <p>The private key that corresponds to the root certificate, which is encoded in Base64.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Existing CA key content, base64 encoded format.</p>
          */
         public Builder existingRootCaKey(String existingRootCaKey) {
             this.putBodyParameter("ExistingRootCaKey", existingRootCaKey);
@@ -1533,13 +1703,15 @@ public class CreateServiceMeshRequest extends Request {
         }
 
         /**
-         * Specifies whether to enable gateway configuration filtering. Valid values:
-         * <p>
+         * <p>Specifies whether to enable gateway configuration filtering. Valid values:</p>
+         * <ul>
+         * <li><code>true</code></li>
+         * <li><code>false</code></li>
+         * </ul>
+         * <p>Default value: <code>false</code>.</p>
          * 
-         * *   `true`
-         * *   `false`
-         * 
-         * Default value: `false`.
+         * <strong>example:</strong>
+         * <p>false</p>
          */
         public Builder filterGatewayClusterConfig(Boolean filterGatewayClusterConfig) {
             this.putBodyParameter("FilterGatewayClusterConfig", filterGatewayClusterConfig);
@@ -1548,13 +1720,15 @@ public class CreateServiceMeshRequest extends Request {
         }
 
         /**
-         * Specifies whether to enable Gateway API. Valid values:
-         * <p>
+         * <p>Specifies whether to enable Gateway API. Valid values:</p>
+         * <ul>
+         * <li><code>true</code></li>
+         * <li><code>false</code></li>
+         * </ul>
+         * <p>Default value: <code>false</code>.</p>
          * 
-         * *   `true`
-         * *   `false`
-         * 
-         * Default value: `false`.
+         * <strong>example:</strong>
+         * <p>false</p>
          */
         public Builder gatewayAPIEnabled(Boolean gatewayAPIEnabled) {
             this.putBodyParameter("GatewayAPIEnabled", gatewayAPIEnabled);
@@ -1563,7 +1737,10 @@ public class CreateServiceMeshRequest extends Request {
         }
 
         /**
-         * When you create an ASM instance, you can add a cluster to the ASM instance. If you do not specify this parameter, no cluster is added to the ASM instance. The cluster and the ASM instance must be in the same vSwitch of the same VPC and have the same domain name.
+         * <p>When you create an ASM instance, you can add a cluster to the ASM instance. If you do not specify this parameter, no cluster is added to the ASM instance. The cluster and the ASM instance must be in the same vSwitch of the same VPC and have the same domain name.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>ACK cluster id</p>
          */
         public Builder guestCluster(String guestCluster) {
             this.putBodyParameter("GuestCluster", guestCluster);
@@ -1572,7 +1749,12 @@ public class CreateServiceMeshRequest extends Request {
         }
 
         /**
-         * The IP ranges in CIDR form for which traffic is to be redirected to the sidecar proxy in the ASM instance.
+         * <p>The IP ranges in CIDR form for which traffic is to be redirected to the sidecar proxy in the ASM instance.</p>
+         * 
+         * <strong>example:</strong>
+         * <ul>
+         * <li></li>
+         * </ul>
          */
         public Builder includeIPRanges(String includeIPRanges) {
             this.putBodyParameter("IncludeIPRanges", includeIPRanges);
@@ -1581,7 +1763,10 @@ public class CreateServiceMeshRequest extends Request {
         }
 
         /**
-         * The Istio version of the ASM instance.
+         * <p>The Istio version of the ASM instance.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>v1.5.4.1-g5960ec40-aliyun</p>
          */
         public Builder istioVersion(String istioVersion) {
             this.putBodyParameter("IstioVersion", istioVersion);
@@ -1590,13 +1775,15 @@ public class CreateServiceMeshRequest extends Request {
         }
 
         /**
-         * Specifies whether to enable the mesh topology feature. To enable this feature, make sure that you have enabled Prometheus monitoring. If Prometheus monitoring is disabled, you must set this parameter to `false`.`` Valid values:
-         * <p>
+         * <p>Specifies whether to enable the mesh topology feature. To enable this feature, make sure that you have enabled Prometheus monitoring. If Prometheus monitoring is disabled, you must set this parameter to <code>false</code>.`` Valid values:</p>
+         * <ul>
+         * <li><code>true</code></li>
+         * <li><code>false</code></li>
+         * </ul>
+         * <p>Default value: <code>false</code>.</p>
          * 
-         * *   `true`
-         * *   `false`
-         * 
-         * Default value: `false`.
+         * <strong>example:</strong>
+         * <p>false</p>
          */
         public Builder kialiEnabled(Boolean kialiEnabled) {
             this.putBodyParameter("KialiEnabled", kialiEnabled);
@@ -1605,7 +1792,10 @@ public class CreateServiceMeshRequest extends Request {
         }
 
         /**
-         * The configurations for the access to the nearest instance.
+         * <p>The configurations for the access to the nearest instance.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>{&quot;failover&quot;:[{&quot;from&quot;:&quot;cn-hangzhou&quot;,&quot;to&quot;:&quot;cn-shanghai&quot;}]}</p>
          */
         public Builder localityLBConf(String localityLBConf) {
             this.putBodyParameter("LocalityLBConf", localityLBConf);
@@ -1614,13 +1804,15 @@ public class CreateServiceMeshRequest extends Request {
         }
 
         /**
-         * Specifies whether to route traffic to the nearest instance. Valid values:
-         * <p>
+         * <p>Specifies whether to route traffic to the nearest instance. Valid values:</p>
+         * <ul>
+         * <li><code>true</code></li>
+         * <li><code>false</code></li>
+         * </ul>
+         * <p>Default value: <code>false</code>.</p>
          * 
-         * *   `true`
-         * *   `false`
-         * 
-         * Default value: `false`.
+         * <strong>example:</strong>
+         * <p>false</p>
          */
         public Builder localityLoadBalancing(Boolean localityLoadBalancing) {
             this.putBodyParameter("LocalityLoadBalancing", localityLoadBalancing);
@@ -1629,13 +1821,15 @@ public class CreateServiceMeshRequest extends Request {
         }
 
         /**
-         * Specifies whether to enable Microservices Engine (MSE). Valid values:
-         * <p>
+         * <p>Specifies whether to enable Microservices Engine (MSE). Valid values:</p>
+         * <ul>
+         * <li><code>true</code></li>
+         * <li><code>false</code></li>
+         * </ul>
+         * <p>Default value: <code>false</code>.</p>
          * 
-         * *   `true`
-         * *   `false`
-         * 
-         * Default value: `false`.
+         * <strong>example:</strong>
+         * <p>false</p>
          */
         public Builder MSEEnabled(Boolean MSEEnabled) {
             this.putBodyParameter("MSEEnabled", MSEEnabled);
@@ -1644,15 +1838,17 @@ public class CreateServiceMeshRequest extends Request {
         }
 
         /**
-         * Specifies whether to enable MultiBuffer-based Transport Layer Security (TLS) acceleration. Valid values:
-         * <p>
+         * <p>Specifies whether to enable MultiBuffer-based Transport Layer Security (TLS) acceleration. Valid values:</p>
+         * <ul>
+         * <li><p><code>true</code></p>
+         * </li>
+         * <li><p><code>false</code></p>
+         * </li>
+         * </ul>
+         * <p>Default value: <code>true</code></p>
          * 
-         * - `true`
-         * 
-         * - `false`
-         * 
-         * 
-         * Default value: `true`
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder multiBufferEnabled(Boolean multiBufferEnabled) {
             this.putBodyParameter("MultiBufferEnabled", multiBufferEnabled);
@@ -1661,7 +1857,10 @@ public class CreateServiceMeshRequest extends Request {
         }
 
         /**
-         * The pull-request latency. Default value: 30. Unit: seconds.
+         * <p>The pull-request latency. Default value: 30. Unit: seconds.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>30s</p>
          */
         public Builder multiBufferPollDelay(String multiBufferPollDelay) {
             this.putBodyParameter("MultiBufferPollDelay", multiBufferPollDelay);
@@ -1670,13 +1869,15 @@ public class CreateServiceMeshRequest extends Request {
         }
 
         /**
-         * Specifies whether to enable MySQL Filter. Valid values:
-         * <p>
+         * <p>Specifies whether to enable MySQL Filter. Valid values:</p>
+         * <ul>
+         * <li><code>true</code></li>
+         * <li><code>false</code></li>
+         * </ul>
+         * <p>Default value: <code>false</code>.</p>
          * 
-         * *   `true`
-         * *   `false`
-         * 
-         * Default value: `false`.
+         * <strong>example:</strong>
+         * <p>false</p>
          */
         public Builder mysqlFilterEnabled(Boolean mysqlFilterEnabled) {
             this.putBodyParameter("MysqlFilterEnabled", mysqlFilterEnabled);
@@ -1685,7 +1886,10 @@ public class CreateServiceMeshRequest extends Request {
         }
 
         /**
-         * The name of the ASM instance.
+         * <p>The name of the ASM instance.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>mesh1</p>
          */
         public Builder name(String name) {
             this.putBodyParameter("Name", name);
@@ -1694,7 +1898,10 @@ public class CreateServiceMeshRequest extends Request {
         }
 
         /**
-         * The maximum number of CPU cores that are available to the OPA container.
+         * <p>The maximum number of CPU cores that are available to the OPA container.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2</p>
          */
         public Builder OPALimitCPU(String OPALimitCPU) {
             this.putBodyParameter("OPALimitCPU", OPALimitCPU);
@@ -1703,7 +1910,10 @@ public class CreateServiceMeshRequest extends Request {
         }
 
         /**
-         * The maximum size of the memory that is available to the OPA container. You can specify the parameter value in the standard quantity representation form used by Kubernetes. 1 Mi equals 1,024 KB.
+         * <p>The maximum size of the memory that is available to the OPA container. You can specify the parameter value in the standard quantity representation form used by Kubernetes. 1 Mi equals 1,024 KB.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1024Mi</p>
          */
         public Builder OPALimitMemory(String OPALimitMemory) {
             this.putBodyParameter("OPALimitMemory", OPALimitMemory);
@@ -1712,7 +1922,10 @@ public class CreateServiceMeshRequest extends Request {
         }
 
         /**
-         * The log level of the OPA container.
+         * <p>The log level of the OPA container.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>info</p>
          */
         public Builder OPALogLevel(String OPALogLevel) {
             this.putBodyParameter("OPALogLevel", OPALogLevel);
@@ -1721,7 +1934,10 @@ public class CreateServiceMeshRequest extends Request {
         }
 
         /**
-         * The minimum number of CPU cores that are required by the OPA container. You can specify the parameter value in the standard representation form of CPUs in Kubernetes. For example, if you set the value to 1, one CPU core is required.
+         * <p>The minimum number of CPU cores that are required by the OPA container. You can specify the parameter value in the standard representation form of CPUs in Kubernetes. For example, if you set the value to 1, one CPU core is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder OPARequestCPU(String OPARequestCPU) {
             this.putBodyParameter("OPARequestCPU", OPARequestCPU);
@@ -1730,7 +1946,10 @@ public class CreateServiceMeshRequest extends Request {
         }
 
         /**
-         * The minimum size of the memory that is required by the OPA container. You can specify the parameter value in the standard quantity representation form used by Kubernetes. 1 Mi equals 1,024 KB.
+         * <p>The minimum size of the memory that is required by the OPA container. You can specify the parameter value in the standard quantity representation form used by Kubernetes. 1 Mi equals 1,024 KB.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>512Mi</p>
          */
         public Builder OPARequestMemory(String OPARequestMemory) {
             this.putBodyParameter("OPARequestMemory", OPARequestMemory);
@@ -1739,13 +1958,15 @@ public class CreateServiceMeshRequest extends Request {
         }
 
         /**
-         * Specifies whether to enable the OPA plug-in. Valid values:
-         * <p>
+         * <p>Specifies whether to enable the OPA plug-in. Valid values:</p>
+         * <ul>
+         * <li><code>true</code></li>
+         * <li><code>false</code></li>
+         * </ul>
+         * <p>Default value: <code>false</code>.</p>
          * 
-         * *   `true`
-         * *   `false`
-         * 
-         * Default value: `false`.
+         * <strong>example:</strong>
+         * <p>false</p>
          */
         public Builder opaEnabled(Boolean opaEnabled) {
             this.putBodyParameter("OpaEnabled", opaEnabled);
@@ -1754,13 +1975,15 @@ public class CreateServiceMeshRequest extends Request {
         }
 
         /**
-         * Specifies whether to install the Open Policy Agent (OPA) plug-in. Valid values:
-         * <p>
+         * <p>Specifies whether to install the Open Policy Agent (OPA) plug-in. Valid values:</p>
+         * <ul>
+         * <li><code>true</code></li>
+         * <li><code>false</code></li>
+         * </ul>
+         * <p>Default value: <code>false</code>.</p>
          * 
-         * *   `true`
-         * *   `false`
-         * 
-         * Default value: `false`.
+         * <strong>example:</strong>
+         * <p>false</p>
          */
         public Builder openAgentPolicy(Boolean openAgentPolicy) {
             this.putBodyParameter("OpenAgentPolicy", openAgentPolicy);
@@ -1769,7 +1992,10 @@ public class CreateServiceMeshRequest extends Request {
         }
 
         /**
-         * The auto-renewal period of the CLB instance. This parameter is valid only if `ChargeType` is set to `PrePaid`. The value of this parameter indicates the purchased month of the CLB instance when the subscription billing method is used. For example, if the subscription period is one year, set this parameter to 12.
+         * <p>The subscription period of the CLB instance. This parameter is valid only if <code>ChargeType</code> is set to <code>PrePay</code>. The value of this parameter indicates the subscription period of the CLB instance. Unit: month. For example, if the subscription period is one year, set this parameter to 12.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>3</p>
          */
         public Builder period(Integer period) {
             this.putBodyParameter("Period", period);
@@ -1778,7 +2004,10 @@ public class CreateServiceMeshRequest extends Request {
         }
 
         /**
-         * The type of the CLB instance that is bound to Istio Pilot. Valid values: `slb.s1.small`, `slb.s2.small`, `slb.s2.medium`, `slb.s3.small`, `slb.s3.medium`, and `slb.s3.large`.
+         * <p>The type of the CLB instance that is bound to Istio Pilot. Valid values: <code>slb.s1.small</code>, <code>slb.s2.small</code>, <code>slb.s2.medium</code>, <code>slb.s3.small</code>, <code>slb.s3.medium</code>, and <code>slb.s3.large</code>.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>slb.s1.small</p>
          */
         public Builder pilotLoadBalancerSpec(String pilotLoadBalancerSpec) {
             this.putBodyParameter("PilotLoadBalancerSpec", pilotLoadBalancerSpec);
@@ -1787,7 +2016,25 @@ public class CreateServiceMeshRequest extends Request {
         }
 
         /**
-         * The endpoint of the custom Prometheus instance.
+         * <p>The playground scenario. If you specify this parameter, an ASM playground instance is created. Valid values:</p>
+         * <ul>
+         * <li>ewmaLb: the exponentially weighted moving average (EWMA) load balancing algorithm.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>ewmaLb</p>
+         */
+        public Builder playgroundScene(String playgroundScene) {
+            this.putBodyParameter("PlaygroundScene", playgroundScene);
+            this.playgroundScene = playgroundScene;
+            return this;
+        }
+
+        /**
+         * <p>The endpoint of the custom Prometheus instance.</p>
+         * 
+         * <strong>example:</strong>
+         * <p><a href="http://prometheus:9090">http://prometheus:9090</a></p>
          */
         public Builder prometheusUrl(String prometheusUrl) {
             this.putBodyParameter("PrometheusUrl", prometheusUrl);
@@ -1796,7 +2043,10 @@ public class CreateServiceMeshRequest extends Request {
         }
 
         /**
-         * The maximum number of CPU cores that are available to the proxy container.
+         * <p>The maximum number of CPU cores that are available to the proxy container.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2000m</p>
          */
         public Builder proxyLimitCPU(String proxyLimitCPU) {
             this.putBodyParameter("ProxyLimitCPU", proxyLimitCPU);
@@ -1805,7 +2055,10 @@ public class CreateServiceMeshRequest extends Request {
         }
 
         /**
-         * The maximum size of the memory that is available to the proxy container.
+         * <p>The maximum size of the memory that is available to the proxy container.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1024Mi</p>
          */
         public Builder proxyLimitMemory(String proxyLimitMemory) {
             this.putBodyParameter("ProxyLimitMemory", proxyLimitMemory);
@@ -1814,7 +2067,10 @@ public class CreateServiceMeshRequest extends Request {
         }
 
         /**
-         * The minimum number of CPU cores that are required by the proxy container.
+         * <p>The minimum number of CPU cores that are required by the proxy container.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>100m</p>
          */
         public Builder proxyRequestCPU(String proxyRequestCPU) {
             this.putBodyParameter("ProxyRequestCPU", proxyRequestCPU);
@@ -1823,7 +2079,10 @@ public class CreateServiceMeshRequest extends Request {
         }
 
         /**
-         * The minimum size of the memory that is required by the proxy container.
+         * <p>The minimum size of the memory that is required by the proxy container.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>128Mi</p>
          */
         public Builder proxyRequestMemory(String proxyRequestMemory) {
             this.putBodyParameter("ProxyRequestMemory", proxyRequestMemory);
@@ -1832,13 +2091,15 @@ public class CreateServiceMeshRequest extends Request {
         }
 
         /**
-         * Specifies whether to enable Redis Filter. Valid values:
-         * <p>
+         * <p>Specifies whether to enable Redis Filter. Valid values:</p>
+         * <ul>
+         * <li><code>true</code></li>
+         * <li><code>false</code></li>
+         * </ul>
+         * <p>Default value: <code>false</code>.</p>
          * 
-         * *   `true`
-         * *   `false`
-         * 
-         * Default value: `false`.
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder redisFilterEnabled(Boolean redisFilterEnabled) {
             this.putBodyParameter("RedisFilterEnabled", redisFilterEnabled);
@@ -1847,7 +2108,11 @@ public class CreateServiceMeshRequest extends Request {
         }
 
         /**
-         * The ID of the region in which the ASM instance resides.
+         * <p>The ID of the region in which the ASM instance resides.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-hangzhou</p>
          */
         public Builder regionId(String regionId) {
             this.putBodyParameter("RegionId", regionId);
@@ -1856,26 +2121,28 @@ public class CreateServiceMeshRequest extends Request {
         }
 
         /**
-         * Tag of the ASM instance. A tag contains the following information:
-         * <p>
-         * 
-         * *   key: the name of the tag
-         * *   value: the value of the tag
+         * <p>Tag of the ASM instance. A tag contains the following information:</p>
+         * <ul>
+         * <li>key: the name of the tag</li>
+         * <li>value: the value of the tag</li>
+         * </ul>
          */
-        public Builder tag(java.util.List < Tag> tag) {
+        public Builder tag(java.util.List<Tag> tag) {
             this.putQueryParameter("Tag", tag);
             this.tag = tag;
             return this;
         }
 
         /**
-         * Specifies whether to enable Prometheus monitoring. We recommend that you use Prometheus Service of [Application Real-Time Monitoring Service (ARMS)](https://arms.console.aliyun.com/). Valid values:
-         * <p>
+         * <p>Specifies whether to enable Prometheus monitoring. We recommend that you use Prometheus Service of <a href="https://arms.console.aliyun.com/">Application Real-Time Monitoring Service (ARMS)</a>. Valid values:</p>
+         * <ul>
+         * <li><code>true</code></li>
+         * <li><code>false</code></li>
+         * </ul>
+         * <p>Default value: <code>false</code>.</p>
          * 
-         * *   `true`
-         * *   `false`
-         * 
-         * Default value: `false`.
+         * <strong>example:</strong>
+         * <p>false</p>
          */
         public Builder telemetry(Boolean telemetry) {
             this.putBodyParameter("Telemetry", telemetry);
@@ -1884,13 +2151,15 @@ public class CreateServiceMeshRequest extends Request {
         }
 
         /**
-         * Specifies whether to enable Thrift Filter. Valid values:
-         * <p>
+         * <p>Specifies whether to enable Thrift Filter. Valid values:</p>
+         * <ul>
+         * <li><code>true</code></li>
+         * <li><code>false</code></li>
+         * </ul>
+         * <p>Default value: <code>false</code>.</p>
          * 
-         * *   `true`
-         * *   `false`
-         * 
-         * Default value: `false`.
+         * <strong>example:</strong>
+         * <p>false</p>
          */
         public Builder thriftFilterEnabled(Boolean thriftFilterEnabled) {
             this.putBodyParameter("ThriftFilterEnabled", thriftFilterEnabled);
@@ -1899,7 +2168,10 @@ public class CreateServiceMeshRequest extends Request {
         }
 
         /**
-         * The sampling percentage of Tracing Analysis.
+         * <p>The sampling percentage of Tracing Analysis.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>100</p>
          */
         public Builder traceSampling(Float traceSampling) {
             this.putBodyParameter("TraceSampling", traceSampling);
@@ -1908,13 +2180,15 @@ public class CreateServiceMeshRequest extends Request {
         }
 
         /**
-         * Specifies whether to enable the Tracing Analysis feature. Valid values:
-         * <p>
+         * <p>Specifies whether to enable the Tracing Analysis feature. Valid values:</p>
+         * <ul>
+         * <li><code>true</code></li>
+         * <li><code>false</code></li>
+         * </ul>
+         * <p>Default value: <code>false</code>.</p>
          * 
-         * *   `true`
-         * *   `false`
-         * 
-         * Default value: `false`.
+         * <strong>example:</strong>
+         * <p>false</p>
          */
         public Builder tracing(Boolean tracing) {
             this.putBodyParameter("Tracing", tracing);
@@ -1923,7 +2197,10 @@ public class CreateServiceMeshRequest extends Request {
         }
 
         /**
-         * Specifies whether to use an existing CA certificate and private key.
+         * <p>Specifies whether to use an existing CA certificate and private key.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>false</p>
          */
         public Builder useExistingCA(Boolean useExistingCA) {
             this.putBodyParameter("UseExistingCA", useExistingCA);
@@ -1932,7 +2209,11 @@ public class CreateServiceMeshRequest extends Request {
         }
 
         /**
-         * The ID of the vSwitch to which the ASM instance is connected.
+         * <p>The ID of the vSwitch to which the ASM instance is connected.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>[&quot;vsw-xzegf5dndkbf4m6eg****&quot;]</p>
          */
         public Builder vSwitches(String vSwitches) {
             this.putBodyParameter("VSwitches", vSwitches);
@@ -1941,7 +2222,11 @@ public class CreateServiceMeshRequest extends Request {
         }
 
         /**
-         * The ID of the virtual private cloud (VPC) in which the ASM instance resides.
+         * <p>The ID of the virtual private cloud (VPC) in which the ASM instance resides.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>vpc-xzelac2tw4ic7wz31****</p>
          */
         public Builder vpcId(String vpcId) {
             this.putBodyParameter("VpcId", vpcId);
@@ -1950,13 +2235,15 @@ public class CreateServiceMeshRequest extends Request {
         }
 
         /**
-         * Specifies whether to enable WebAssembly Filter. Valid values:
-         * <p>
+         * <p>Specifies whether to enable WebAssembly Filter. Valid values:</p>
+         * <ul>
+         * <li><code>true</code></li>
+         * <li><code>false</code></li>
+         * </ul>
+         * <p>Default value: <code>false</code>.</p>
          * 
-         * *   `true`
-         * *   `false`
-         * 
-         * Default value: `false`.
+         * <strong>example:</strong>
+         * <p>false</p>
          */
         public Builder webAssemblyFilterEnabled(Boolean webAssemblyFilterEnabled) {
             this.putBodyParameter("WebAssemblyFilterEnabled", webAssemblyFilterEnabled);
@@ -1971,11 +2258,17 @@ public class CreateServiceMeshRequest extends Request {
 
     } 
 
+    /**
+     * 
+     * {@link CreateServiceMeshRequest} extends {@link TeaModel}
+     *
+     * <p>CreateServiceMeshRequest</p>
+     */
     public static class Tag extends TeaModel {
-        @NameInMap("Key")
+        @com.aliyun.core.annotation.NameInMap("Key")
         private String key;
 
-        @NameInMap("Value")
+        @com.aliyun.core.annotation.NameInMap("Value")
         private String value;
 
         private Tag(Builder builder) {
@@ -2009,8 +2302,19 @@ public class CreateServiceMeshRequest extends Request {
             private String key; 
             private String value; 
 
+            private Builder() {
+            } 
+
+            private Builder(Tag model) {
+                this.key = model.key;
+                this.value = model.value;
+            } 
+
             /**
-             * The name of the tag.
+             * <p>The name of the tag.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>env</p>
              */
             public Builder key(String key) {
                 this.key = key;
@@ -2018,7 +2322,10 @@ public class CreateServiceMeshRequest extends Request {
             }
 
             /**
-             * The value of the tag.
+             * <p>The value of the tag.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>prod</p>
              */
             public Builder value(String value) {
                 this.value = value;

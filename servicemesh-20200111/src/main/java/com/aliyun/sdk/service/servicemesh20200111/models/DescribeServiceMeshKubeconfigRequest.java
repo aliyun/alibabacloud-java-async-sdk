@@ -1,24 +1,29 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.servicemesh20200111.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeServiceMeshKubeconfigRequest} extends {@link RequestModel}
  *
  * <p>DescribeServiceMeshKubeconfigRequest</p>
  */
 public class DescribeServiceMeshKubeconfigRequest extends Request {
-    @Query
-    @NameInMap("PrivateIpAddress")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("PrivateIpAddress")
     private Boolean privateIpAddress;
 
-    @Query
-    @NameInMap("ServiceMeshId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ServiceMeshId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String serviceMeshId;
 
     private DescribeServiceMeshKubeconfigRequest(Builder builder) {
@@ -35,7 +40,7 @@ public class DescribeServiceMeshKubeconfigRequest extends Request {
         return builder().build();
     }
 
-    @Override
+@Override
     public Builder toBuilder() {
         return new Builder(this);
     }
@@ -69,7 +74,10 @@ public class DescribeServiceMeshKubeconfigRequest extends Request {
         } 
 
         /**
-         * Specifies whether to query the kubeconfig file that is used for Internet access or internal network access.
+         * <p>Specifies whether to query the kubeconfig file that is used for Internet access or internal network access.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>false</p>
          */
         public Builder privateIpAddress(Boolean privateIpAddress) {
             this.putQueryParameter("PrivateIpAddress", privateIpAddress);
@@ -78,7 +86,11 @@ public class DescribeServiceMeshKubeconfigRequest extends Request {
         }
 
         /**
-         * The ID of the ASM instance.
+         * <p>The ID of the ASM instance.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>c08ba3fd1e6484b0f8cc1ad8fe10d****</p>
          */
         public Builder serviceMeshId(String serviceMeshId) {
             this.putQueryParameter("ServiceMeshId", serviceMeshId);

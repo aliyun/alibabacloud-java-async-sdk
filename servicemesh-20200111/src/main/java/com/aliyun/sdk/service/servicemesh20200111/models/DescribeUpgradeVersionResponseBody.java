@@ -1,21 +1,26 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.servicemesh20200111.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeUpgradeVersionResponseBody} extends {@link TeaModel}
  *
  * <p>DescribeUpgradeVersionResponseBody</p>
  */
 public class DescribeUpgradeVersionResponseBody extends TeaModel {
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("Version")
+    @com.aliyun.core.annotation.NameInMap("Version")
     private Version version;
 
     private DescribeUpgradeVersionResponseBody(Builder builder) {
@@ -29,6 +34,10 @@ public class DescribeUpgradeVersionResponseBody extends TeaModel {
 
     public static DescribeUpgradeVersionResponseBody create() {
         return builder().build();
+    }
+
+    public Builder toBuilder() {
+        return new Builder(this);
     }
 
     /**
@@ -49,8 +58,19 @@ public class DescribeUpgradeVersionResponseBody extends TeaModel {
         private String requestId; 
         private Version version; 
 
+        private Builder() {
+        } 
+
+        private Builder(DescribeUpgradeVersionResponseBody model) {
+            this.requestId = model.requestId;
+            this.version = model.version;
+        } 
+
         /**
-         * The request ID.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>11fd0027-c27e-41bb-a565-75583054****</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -58,7 +78,7 @@ public class DescribeUpgradeVersionResponseBody extends TeaModel {
         }
 
         /**
-         * The version information.
+         * <p>The version information.</p>
          */
         public Builder version(Version version) {
             this.version = version;
@@ -71,14 +91,20 @@ public class DescribeUpgradeVersionResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link DescribeUpgradeVersionResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeUpgradeVersionResponseBody</p>
+     */
     public static class Version extends TeaModel {
-        @NameInMap("IstioOperatorVersion")
+        @com.aliyun.core.annotation.NameInMap("IstioOperatorVersion")
         private String istioOperatorVersion;
 
-        @NameInMap("IstioVersion")
+        @com.aliyun.core.annotation.NameInMap("IstioVersion")
         private String istioVersion;
 
-        @NameInMap("KubernetesVersion")
+        @com.aliyun.core.annotation.NameInMap("KubernetesVersion")
         private String kubernetesVersion;
 
         private Version(Builder builder) {
@@ -121,8 +147,20 @@ public class DescribeUpgradeVersionResponseBody extends TeaModel {
             private String istioVersion; 
             private String kubernetesVersion; 
 
+            private Builder() {
+            } 
+
+            private Builder(Version model) {
+                this.istioOperatorVersion = model.istioOperatorVersion;
+                this.istioVersion = model.istioVersion;
+                this.kubernetesVersion = model.kubernetesVersion;
+            } 
+
             /**
-             * The version of the ASM instance.
+             * <p>The version of the ASM instance.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>v1.17.2.42-gf7619883-aliyun</p>
              */
             public Builder istioOperatorVersion(String istioOperatorVersion) {
                 this.istioOperatorVersion = istioOperatorVersion;
@@ -130,7 +168,10 @@ public class DescribeUpgradeVersionResponseBody extends TeaModel {
             }
 
             /**
-             * The Istio version.
+             * <p>The Istio version.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1.17.2</p>
              */
             public Builder istioVersion(String istioVersion) {
                 this.istioVersion = istioVersion;
@@ -138,7 +179,10 @@ public class DescribeUpgradeVersionResponseBody extends TeaModel {
             }
 
             /**
-             * The Kubernetes version.
+             * <p>The Kubernetes version.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>v1.24.6-aliyun.1</p>
              */
             public Builder kubernetesVersion(String kubernetesVersion) {
                 this.kubernetesVersion = kubernetesVersion;

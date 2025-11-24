@@ -1,30 +1,35 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.servicemesh20200111.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeGuestClusterPodsRequest} extends {@link RequestModel}
  *
  * <p>DescribeGuestClusterPodsRequest</p>
  */
 public class DescribeGuestClusterPodsRequest extends Request {
-    @Body
-    @NameInMap("GuestClusterID")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("GuestClusterID")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String guestClusterID;
 
-    @Body
-    @NameInMap("Namespace")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("Namespace")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String namespace;
 
-    @Body
-    @NameInMap("ServiceMeshId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("ServiceMeshId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String serviceMeshId;
 
     private DescribeGuestClusterPodsRequest(Builder builder) {
@@ -42,7 +47,7 @@ public class DescribeGuestClusterPodsRequest extends Request {
         return builder().build();
     }
 
-    @Override
+@Override
     public Builder toBuilder() {
         return new Builder(this);
     }
@@ -85,7 +90,11 @@ public class DescribeGuestClusterPodsRequest extends Request {
         } 
 
         /**
-         * The ID of the Kubernetes cluster that is added to the ASM instance.
+         * <p>The ID of the Kubernetes cluster that is added to the ASM instance.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>c49ad2169d5a04f2d89dfc4b6bcu****</p>
          */
         public Builder guestClusterID(String guestClusterID) {
             this.putBodyParameter("GuestClusterID", guestClusterID);
@@ -94,7 +103,11 @@ public class DescribeGuestClusterPodsRequest extends Request {
         }
 
         /**
-         * The namespace.
+         * <p>The namespace.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>default</p>
          */
         public Builder namespace(String namespace) {
             this.putBodyParameter("Namespace", namespace);
@@ -103,7 +116,11 @@ public class DescribeGuestClusterPodsRequest extends Request {
         }
 
         /**
-         * The ASM instance ID.
+         * <p>The ASM instance ID.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>c78d60f98fa43403ab6e0701b2678****</p>
          */
         public Builder serviceMeshId(String serviceMeshId) {
             this.putBodyParameter("ServiceMeshId", serviceMeshId);

@@ -1,21 +1,26 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.servicemesh20200111.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeASMGatewayImportedServicesResponseBody} extends {@link TeaModel}
  *
  * <p>DescribeASMGatewayImportedServicesResponseBody</p>
  */
 public class DescribeASMGatewayImportedServicesResponseBody extends TeaModel {
-    @NameInMap("ImportedServices")
-    private java.util.List < ImportedServices> importedServices;
+    @com.aliyun.core.annotation.NameInMap("ImportedServices")
+    private java.util.List<ImportedServices> importedServices;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
     private DescribeASMGatewayImportedServicesResponseBody(Builder builder) {
@@ -31,10 +36,14 @@ public class DescribeASMGatewayImportedServicesResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return importedServices
      */
-    public java.util.List < ImportedServices> getImportedServices() {
+    public java.util.List<ImportedServices> getImportedServices() {
         return this.importedServices;
     }
 
@@ -46,19 +55,30 @@ public class DescribeASMGatewayImportedServicesResponseBody extends TeaModel {
     }
 
     public static final class Builder {
-        private java.util.List < ImportedServices> importedServices; 
+        private java.util.List<ImportedServices> importedServices; 
         private String requestId; 
 
+        private Builder() {
+        } 
+
+        private Builder(DescribeASMGatewayImportedServicesResponseBody model) {
+            this.importedServices = model.importedServices;
+            this.requestId = model.requestId;
+        } 
+
         /**
-         * The list of the imported services.
+         * <p>The list of the imported services.</p>
          */
-        public Builder importedServices(java.util.List < ImportedServices> importedServices) {
+        public Builder importedServices(java.util.List<ImportedServices> importedServices) {
             this.importedServices = importedServices;
             return this;
         }
 
         /**
-         * The request ID.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>11fd0027-c27e-41bb-a565-75583054****</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -71,11 +91,17 @@ public class DescribeASMGatewayImportedServicesResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link DescribeASMGatewayImportedServicesResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeASMGatewayImportedServicesResponseBody</p>
+     */
     public static class ImportedServices extends TeaModel {
-        @NameInMap("ServiceName")
+        @com.aliyun.core.annotation.NameInMap("ServiceName")
         private String serviceName;
 
-        @NameInMap("ServiceNamespace")
+        @com.aliyun.core.annotation.NameInMap("ServiceNamespace")
         private String serviceNamespace;
 
         private ImportedServices(Builder builder) {
@@ -109,8 +135,19 @@ public class DescribeASMGatewayImportedServicesResponseBody extends TeaModel {
             private String serviceName; 
             private String serviceNamespace; 
 
+            private Builder() {
+            } 
+
+            private Builder(ImportedServices model) {
+                this.serviceName = model.serviceName;
+                this.serviceNamespace = model.serviceNamespace;
+            } 
+
             /**
-             * The name of a service.
+             * <p>The name of a service.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>productpage</p>
              */
             public Builder serviceName(String serviceName) {
                 this.serviceName = serviceName;
@@ -118,7 +155,10 @@ public class DescribeASMGatewayImportedServicesResponseBody extends TeaModel {
             }
 
             /**
-             * The namespace in which the service resides.
+             * <p>The namespace in which the service resides.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>default</p>
              */
             public Builder serviceNamespace(String serviceNamespace) {
                 this.serviceNamespace = serviceNamespace;

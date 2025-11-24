@@ -1,27 +1,32 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.servicemesh20200111.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeServiceMeshClustersRequest} extends {@link RequestModel}
  *
  * <p>DescribeServiceMeshClustersRequest</p>
  */
 public class DescribeServiceMeshClustersRequest extends Request {
-    @Body
-    @NameInMap("Limit")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("Limit")
     private Long limit;
 
-    @Body
-    @NameInMap("Offset")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("Offset")
     private Long offset;
 
-    @Query
-    @NameInMap("ServiceMeshId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ServiceMeshId")
     private String serviceMeshId;
 
     private DescribeServiceMeshClustersRequest(Builder builder) {
@@ -39,7 +44,7 @@ public class DescribeServiceMeshClustersRequest extends Request {
         return builder().build();
     }
 
-    @Override
+@Override
     public Builder toBuilder() {
         return new Builder(this);
     }
@@ -82,7 +87,10 @@ public class DescribeServiceMeshClustersRequest extends Request {
         } 
 
         /**
-         * The maximum number of entries per page.
+         * <p>The maximum number of entries per page.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>30</p>
          */
         public Builder limit(Long limit) {
             this.putBodyParameter("Limit", limit);
@@ -91,7 +99,10 @@ public class DescribeServiceMeshClustersRequest extends Request {
         }
 
         /**
-         * The position where the query starts.
+         * <p>The position where the query starts.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>20</p>
          */
         public Builder offset(Long offset) {
             this.putBodyParameter("Offset", offset);
@@ -100,7 +111,10 @@ public class DescribeServiceMeshClustersRequest extends Request {
         }
 
         /**
-         * The ASM instance ID.
+         * <p>The ASM instance ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cb8963379255149cb98c8686f274x****</p>
          */
         public Builder serviceMeshId(String serviceMeshId) {
             this.putQueryParameter("ServiceMeshId", serviceMeshId);

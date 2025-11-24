@@ -1,21 +1,26 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.servicemesh20200111.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link GetVmMetaResponseBody} extends {@link TeaModel}
  *
  * <p>GetVmMetaResponseBody</p>
  */
 public class GetVmMetaResponseBody extends TeaModel {
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("VmMetaInfo")
+    @com.aliyun.core.annotation.NameInMap("VmMetaInfo")
     private VmMetaInfo vmMetaInfo;
 
     private GetVmMetaResponseBody(Builder builder) {
@@ -29,6 +34,10 @@ public class GetVmMetaResponseBody extends TeaModel {
 
     public static GetVmMetaResponseBody create() {
         return builder().build();
+    }
+
+    public Builder toBuilder() {
+        return new Builder(this);
     }
 
     /**
@@ -49,8 +58,19 @@ public class GetVmMetaResponseBody extends TeaModel {
         private String requestId; 
         private VmMetaInfo vmMetaInfo; 
 
+        private Builder() {
+        } 
+
+        private Builder(GetVmMetaResponseBody model) {
+            this.requestId = model.requestId;
+            this.vmMetaInfo = model.vmMetaInfo;
+        } 
+
         /**
-         * The request ID.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>9522f7c9-63a1-4603-b850-37d12a****</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -58,7 +78,7 @@ public class GetVmMetaResponseBody extends TeaModel {
         }
 
         /**
-         * The metadata that is required to add a non-containerized application to the ASM instance.
+         * <p>The metadata that is required to add a non-containerized application to the ASM instance.</p>
          */
         public Builder vmMetaInfo(VmMetaInfo vmMetaInfo) {
             this.vmMetaInfo = vmMetaInfo;
@@ -71,14 +91,20 @@ public class GetVmMetaResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link GetVmMetaResponseBody} extends {@link TeaModel}
+     *
+     * <p>GetVmMetaResponseBody</p>
+     */
     public static class VmMetaInfo extends TeaModel {
-        @NameInMap("EnvoyEnvContent")
+        @com.aliyun.core.annotation.NameInMap("EnvoyEnvContent")
         private String envoyEnvContent;
 
-        @NameInMap("HostsContent")
+        @com.aliyun.core.annotation.NameInMap("HostsContent")
         private String hostsContent;
 
-        @NameInMap("TokenContent")
+        @com.aliyun.core.annotation.NameInMap("TokenContent")
         private String tokenContent;
 
         private VmMetaInfo(Builder builder) {
@@ -121,8 +147,20 @@ public class GetVmMetaResponseBody extends TeaModel {
             private String hostsContent; 
             private String tokenContent; 
 
+            private Builder() {
+            } 
+
+            private Builder(VmMetaInfo model) {
+                this.envoyEnvContent = model.envoyEnvContent;
+                this.hostsContent = model.hostsContent;
+                this.tokenContent = model.tokenContent;
+            } 
+
             /**
-             * The content of the EnvoyEnv file.
+             * <p>The content of the EnvoyEnv file.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>....</p>
              */
             public Builder envoyEnvContent(String envoyEnvContent) {
                 this.envoyEnvContent = envoyEnvContent;
@@ -130,7 +168,10 @@ public class GetVmMetaResponseBody extends TeaModel {
             }
 
             /**
-             * The content of the hosts file.
+             * <p>The content of the hosts file.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>....</p>
              */
             public Builder hostsContent(String hostsContent) {
                 this.hostsContent = hostsContent;
@@ -138,7 +179,10 @@ public class GetVmMetaResponseBody extends TeaModel {
             }
 
             /**
-             * The content of the Token file.
+             * <p>The content of the Token file.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>....</p>
              */
             public Builder tokenContent(String tokenContent) {
                 this.tokenContent = tokenContent;

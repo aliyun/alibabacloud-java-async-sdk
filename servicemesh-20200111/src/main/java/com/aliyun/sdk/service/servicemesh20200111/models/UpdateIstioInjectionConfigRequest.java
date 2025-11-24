@@ -1,41 +1,46 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.servicemesh20200111.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link UpdateIstioInjectionConfigRequest} extends {@link RequestModel}
  *
  * <p>UpdateIstioInjectionConfigRequest</p>
  */
 public class UpdateIstioInjectionConfigRequest extends Request {
-    @Body
-    @NameInMap("DataPlaneMode")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("DataPlaneMode")
     private String dataPlaneMode;
 
-    @Body
-    @NameInMap("EnableIstioInjection")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("EnableIstioInjection")
     private Boolean enableIstioInjection;
 
-    @Body
-    @NameInMap("EnableSidecarSetInjection")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("EnableSidecarSetInjection")
     private Boolean enableSidecarSetInjection;
 
-    @Body
-    @NameInMap("IstioRev")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("IstioRev")
     private String istioRev;
 
-    @Body
-    @NameInMap("Namespace")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("Namespace")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String namespace;
 
-    @Body
-    @NameInMap("ServiceMeshId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("ServiceMeshId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String serviceMeshId;
 
     private UpdateIstioInjectionConfigRequest(Builder builder) {
@@ -56,7 +61,7 @@ public class UpdateIstioInjectionConfigRequest extends Request {
         return builder().build();
     }
 
-    @Override
+@Override
     public Builder toBuilder() {
         return new Builder(this);
     }
@@ -126,11 +131,14 @@ public class UpdateIstioInjectionConfigRequest extends Request {
         } 
 
         /**
-         * The data plane mode of the namespace. This parameter is valid only when the Ambient Mesh mode is enabled for the current Service Mesh (ASM) instance. Valid values:
-         * <p>
+         * <p>The data plane mode of the namespace. This parameter is valid only when the Ambient Mesh mode is enabled for the current Service Mesh (ASM) instance. Valid values:</p>
+         * <ul>
+         * <li>ambient: sets the data plane mode of the namespace to the Ambient Mesh mode.</li>
+         * <li>sidecar: sets the data plane mode of the namespace to the Sidecar mode.</li>
+         * </ul>
          * 
-         * *   ambient: sets the data plane mode of the namespace to the Ambient Mesh mode.
-         * *   sidecar: sets the data plane mode of the namespace to the Sidecar mode.
+         * <strong>example:</strong>
+         * <p>ambient</p>
          */
         public Builder dataPlaneMode(String dataPlaneMode) {
             this.putBodyParameter("DataPlaneMode", dataPlaneMode);
@@ -139,7 +147,10 @@ public class UpdateIstioInjectionConfigRequest extends Request {
         }
 
         /**
-         * Specifies whether to enable Istio automatic sidecar injection.
+         * <p>Specifies whether to enable Istio automatic sidecar injection.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder enableIstioInjection(Boolean enableIstioInjection) {
             this.putBodyParameter("EnableIstioInjection", enableIstioInjection);
@@ -148,7 +159,10 @@ public class UpdateIstioInjectionConfigRequest extends Request {
         }
 
         /**
-         * Specifies whether to enable automatic sidecar injection by using SidecarSet.
+         * <p>Specifies whether to enable automatic sidecar injection by using SidecarSet.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>false</p>
          */
         public Builder enableSidecarSetInjection(Boolean enableSidecarSetInjection) {
             this.putBodyParameter("EnableSidecarSetInjection", enableSidecarSetInjection);
@@ -157,7 +171,10 @@ public class UpdateIstioInjectionConfigRequest extends Request {
         }
 
         /**
-         * Specifies the version to be injected into the namespace. This parameter is valid only when the ASM instance performs a canary release. When IstioRev is not empty, you must not specify EnableIstioInjection and EnableSidecarSetInjection.
+         * <p>Specifies the version to be injected into the namespace. This parameter is valid only when the ASM instance performs a canary release. When IstioRev is not empty, you must not specify EnableIstioInjection and EnableSidecarSetInjection.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>canary</p>
          */
         public Builder istioRev(String istioRev) {
             this.putBodyParameter("IstioRev", istioRev);
@@ -166,7 +183,11 @@ public class UpdateIstioInjectionConfigRequest extends Request {
         }
 
         /**
-         * The namespace for which you want to modify the sidecar injection setting.
+         * <p>The namespace for which you want to modify the sidecar injection setting.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>default</p>
          */
         public Builder namespace(String namespace) {
             this.putBodyParameter("Namespace", namespace);
@@ -175,7 +196,11 @@ public class UpdateIstioInjectionConfigRequest extends Request {
         }
 
         /**
-         * The ID of the ASM instance.
+         * <p>The ID of the ASM instance.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>ce2cdbb9d013f447180cf5ca8bb******</p>
          */
         public Builder serviceMeshId(String serviceMeshId) {
             this.putBodyParameter("ServiceMeshId", serviceMeshId);

@@ -1,20 +1,25 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.servicemesh20200111.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeNodesInstanceTypeRequest} extends {@link RequestModel}
  *
  * <p>DescribeNodesInstanceTypeRequest</p>
  */
 public class DescribeNodesInstanceTypeRequest extends Request {
-    @Body
-    @NameInMap("ServiceMeshId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("ServiceMeshId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String serviceMeshId;
 
     private DescribeNodesInstanceTypeRequest(Builder builder) {
@@ -30,7 +35,7 @@ public class DescribeNodesInstanceTypeRequest extends Request {
         return builder().build();
     }
 
-    @Override
+@Override
     public Builder toBuilder() {
         return new Builder(this);
     }
@@ -55,7 +60,11 @@ public class DescribeNodesInstanceTypeRequest extends Request {
         } 
 
         /**
-         * The ID of the Alibaba Cloud Service Mesh (ASM) instance.
+         * <p>The ID of the Alibaba Cloud Service Mesh (ASM) instance.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cb8963379255149cb98c8686f274x****</p>
          */
         public Builder serviceMeshId(String serviceMeshId) {
             this.putBodyParameter("ServiceMeshId", serviceMeshId);

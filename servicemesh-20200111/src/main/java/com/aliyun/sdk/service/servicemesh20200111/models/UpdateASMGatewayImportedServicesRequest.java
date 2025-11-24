@@ -1,32 +1,37 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.servicemesh20200111.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link UpdateASMGatewayImportedServicesRequest} extends {@link RequestModel}
  *
  * <p>UpdateASMGatewayImportedServicesRequest</p>
  */
 public class UpdateASMGatewayImportedServicesRequest extends Request {
-    @Body
-    @NameInMap("ASMGatewayName")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("ASMGatewayName")
     private String ASMGatewayName;
 
-    @Body
-    @NameInMap("ServiceMeshId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("ServiceMeshId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String serviceMeshId;
 
-    @Body
-    @NameInMap("ServiceNames")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("ServiceNames")
     private String serviceNames;
 
-    @Body
-    @NameInMap("ServiceNamespace")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("ServiceNamespace")
     private String serviceNamespace;
 
     private UpdateASMGatewayImportedServicesRequest(Builder builder) {
@@ -45,7 +50,7 @@ public class UpdateASMGatewayImportedServicesRequest extends Request {
         return builder().build();
     }
 
-    @Override
+@Override
     public Builder toBuilder() {
         return new Builder(this);
     }
@@ -97,7 +102,10 @@ public class UpdateASMGatewayImportedServicesRequest extends Request {
         } 
 
         /**
-         * The name of the ASM gateway.
+         * <p>The name of the ASM gateway.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>ingressgateway</p>
          */
         public Builder ASMGatewayName(String ASMGatewayName) {
             this.putBodyParameter("ASMGatewayName", ASMGatewayName);
@@ -106,7 +114,11 @@ public class UpdateASMGatewayImportedServicesRequest extends Request {
         }
 
         /**
-         * The ASM instance ID.
+         * <p>The ASM instance ID.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>c08ba3fd1e6484b0f8cc1ad8fe10d****</p>
          */
         public Builder serviceMeshId(String serviceMeshId) {
             this.putBodyParameter("ServiceMeshId", serviceMeshId);
@@ -115,7 +127,10 @@ public class UpdateASMGatewayImportedServicesRequest extends Request {
         }
 
         /**
-         * The names of the services. Separate multiple service names with commas (,). Example: reviews,sleep.
+         * <p>The names of the services. Separate multiple service names with commas (,). Example: reviews,sleep.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>reviews,sleep</p>
          */
         public Builder serviceNames(String serviceNames) {
             this.putBodyParameter("ServiceNames", serviceNames);
@@ -124,7 +139,10 @@ public class UpdateASMGatewayImportedServicesRequest extends Request {
         }
 
         /**
-         * The namespace in which the service resides.
+         * <p>The namespace in which the service resides.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>default</p>
          */
         public Builder serviceNamespace(String serviceNamespace) {
             this.putBodyParameter("ServiceNamespace", serviceNamespace);

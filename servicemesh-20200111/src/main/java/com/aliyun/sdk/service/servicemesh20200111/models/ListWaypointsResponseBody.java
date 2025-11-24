@@ -1,25 +1,30 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.servicemesh20200111.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ListWaypointsResponseBody} extends {@link TeaModel}
  *
  * <p>ListWaypointsResponseBody</p>
  */
 public class ListWaypointsResponseBody extends TeaModel {
-    @NameInMap("Continue")
+    @com.aliyun.core.annotation.NameInMap("Continue")
     private String _continue;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("Waypoints")
-    private java.util.List < Waypoints> waypoints;
+    @com.aliyun.core.annotation.NameInMap("Waypoints")
+    private java.util.List<Waypoints> waypoints;
 
     private ListWaypointsResponseBody(Builder builder) {
         this._continue = builder._continue;
@@ -33,6 +38,10 @@ public class ListWaypointsResponseBody extends TeaModel {
 
     public static ListWaypointsResponseBody create() {
         return builder().build();
+    }
+
+    public Builder toBuilder() {
+        return new Builder(this);
     }
 
     /**
@@ -52,17 +61,29 @@ public class ListWaypointsResponseBody extends TeaModel {
     /**
      * @return waypoints
      */
-    public java.util.List < Waypoints> getWaypoints() {
+    public java.util.List<Waypoints> getWaypoints() {
         return this.waypoints;
     }
 
     public static final class Builder {
         private String _continue; 
         private String requestId; 
-        private java.util.List < Waypoints> waypoints; 
+        private java.util.List<Waypoints> waypoints; 
+
+        private Builder() {
+        } 
+
+        private Builder(ListWaypointsResponseBody model) {
+            this._continue = model._continue;
+            this.requestId = model.requestId;
+            this.waypoints = model.waypoints;
+        } 
 
         /**
-         * Continue.
+         * <p>Base64 encoded string. If it is empty, it means that all waypoints have been obtained; if it is not empty, this value should be included in the next list, and you can continue to obtain it from the offset that ends this time.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>eyJ2IjoibWV0YS5rOHMuaW8vdjEiLCJydiI6MjY4Njc5Miwic3RhcnQiOiJkZWZhdWx0L2Jvb2tpbmZvLXByb2R1Y3RwYWdlXHUwMDAwIn0</p>
          */
         public Builder _continue(String _continue) {
             this._continue = _continue;
@@ -70,7 +91,10 @@ public class ListWaypointsResponseBody extends TeaModel {
         }
 
         /**
-         * The request ID.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>BD65C0AD-D3C6-48D3-8D93-38D2015C****</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -78,9 +102,9 @@ public class ListWaypointsResponseBody extends TeaModel {
         }
 
         /**
-         * The list of waypoint proxy configurations.
+         * <p>The configurations of waypoint proxies.</p>
          */
-        public Builder waypoints(java.util.List < Waypoints> waypoints) {
+        public Builder waypoints(java.util.List<Waypoints> waypoints) {
             this.waypoints = waypoints;
             return this;
         }
@@ -91,47 +115,53 @@ public class ListWaypointsResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link ListWaypointsResponseBody} extends {@link TeaModel}
+     *
+     * <p>ListWaypointsResponseBody</p>
+     */
     public static class Waypoints extends TeaModel {
-        @NameInMap("HPAEnabled")
+        @com.aliyun.core.annotation.NameInMap("HPAEnabled")
         private String HPAEnabled;
 
-        @NameInMap("HPAMaxReplicas")
+        @com.aliyun.core.annotation.NameInMap("HPAMaxReplicas")
         private String HPAMaxReplicas;
 
-        @NameInMap("HPAMinReplicas")
+        @com.aliyun.core.annotation.NameInMap("HPAMinReplicas")
         private String HPAMinReplicas;
 
-        @NameInMap("HPATargetCPU")
+        @com.aliyun.core.annotation.NameInMap("HPATargetCPU")
         private String HPATargetCPU;
 
-        @NameInMap("HPATargetMemory")
+        @com.aliyun.core.annotation.NameInMap("HPATargetMemory")
         private String HPATargetMemory;
 
-        @NameInMap("LimitCPU")
+        @com.aliyun.core.annotation.NameInMap("LimitCPU")
         private String limitCPU;
 
-        @NameInMap("LimitMemory")
+        @com.aliyun.core.annotation.NameInMap("LimitMemory")
         private String limitMemory;
 
-        @NameInMap("Name")
+        @com.aliyun.core.annotation.NameInMap("Name")
         private String name;
 
-        @NameInMap("Namespace")
+        @com.aliyun.core.annotation.NameInMap("Namespace")
         private String namespace;
 
-        @NameInMap("PreferECI")
+        @com.aliyun.core.annotation.NameInMap("PreferECI")
         private String preferECI;
 
-        @NameInMap("Replicas")
+        @com.aliyun.core.annotation.NameInMap("Replicas")
         private String replicas;
 
-        @NameInMap("RequestCPU")
+        @com.aliyun.core.annotation.NameInMap("RequestCPU")
         private String requestCPU;
 
-        @NameInMap("RequestMemory")
+        @com.aliyun.core.annotation.NameInMap("RequestMemory")
         private String requestMemory;
 
-        @NameInMap("ServiceAccount")
+        @com.aliyun.core.annotation.NameInMap("ServiceAccount")
         private String serviceAccount;
 
         private Waypoints(Builder builder) {
@@ -273,8 +303,31 @@ public class ListWaypointsResponseBody extends TeaModel {
             private String requestMemory; 
             private String serviceAccount; 
 
+            private Builder() {
+            } 
+
+            private Builder(Waypoints model) {
+                this.HPAEnabled = model.HPAEnabled;
+                this.HPAMaxReplicas = model.HPAMaxReplicas;
+                this.HPAMinReplicas = model.HPAMinReplicas;
+                this.HPATargetCPU = model.HPATargetCPU;
+                this.HPATargetMemory = model.HPATargetMemory;
+                this.limitCPU = model.limitCPU;
+                this.limitMemory = model.limitMemory;
+                this.name = model.name;
+                this.namespace = model.namespace;
+                this.preferECI = model.preferECI;
+                this.replicas = model.replicas;
+                this.requestCPU = model.requestCPU;
+                this.requestMemory = model.requestMemory;
+                this.serviceAccount = model.serviceAccount;
+            } 
+
             /**
-             * Indicates whether Horizontal Pod Autoscaling (HPA) is enabled.
+             * <p>Indicates whether Horizontal Pod Autoscaling (HPA) is enabled.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>false</p>
              */
             public Builder HPAEnabled(String HPAEnabled) {
                 this.HPAEnabled = HPAEnabled;
@@ -282,7 +335,10 @@ public class ListWaypointsResponseBody extends TeaModel {
             }
 
             /**
-             * The maximum number of waypoint proxy pods when HPA is enabled.
+             * <p>The maximum number of waypoint proxy pods when HPA is enabled.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>4</p>
              */
             public Builder HPAMaxReplicas(String HPAMaxReplicas) {
                 this.HPAMaxReplicas = HPAMaxReplicas;
@@ -290,7 +346,10 @@ public class ListWaypointsResponseBody extends TeaModel {
             }
 
             /**
-             * The minimum number of waypoint proxy pods when HPA is enabled.
+             * <p>The minimum number of waypoint proxy pods when HPA is enabled.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2</p>
              */
             public Builder HPAMinReplicas(String HPAMinReplicas) {
                 this.HPAMinReplicas = HPAMinReplicas;
@@ -298,7 +357,10 @@ public class ListWaypointsResponseBody extends TeaModel {
             }
 
             /**
-             * The expected CPU utilization when HPA is enabled.
+             * <p>The expected CPU utilization when HPA is enabled.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>93</p>
              */
             public Builder HPATargetCPU(String HPATargetCPU) {
                 this.HPATargetCPU = HPATargetCPU;
@@ -306,7 +368,10 @@ public class ListWaypointsResponseBody extends TeaModel {
             }
 
             /**
-             * The expected memory usage when HPA is enabled.
+             * <p>The expected memory usage when HPA is enabled.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>91</p>
              */
             public Builder HPATargetMemory(String HPATargetMemory) {
                 this.HPATargetMemory = HPATargetMemory;
@@ -314,7 +379,10 @@ public class ListWaypointsResponseBody extends TeaModel {
             }
 
             /**
-             * The maximum number of CPU cores that are available to the waypoint proxy pods.
+             * <p>The maximum amount of CPU resources that are available to the waypoint proxy pods.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2000m</p>
              */
             public Builder limitCPU(String limitCPU) {
                 this.limitCPU = limitCPU;
@@ -322,7 +390,10 @@ public class ListWaypointsResponseBody extends TeaModel {
             }
 
             /**
-             * The maximum size of the memory that is available to the waypoint proxy pods.
+             * <p>The maximum amount of memory resources that are available to the waypoint proxy pods.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1024Mi</p>
              */
             public Builder limitMemory(String limitMemory) {
                 this.limitMemory = limitMemory;
@@ -330,7 +401,10 @@ public class ListWaypointsResponseBody extends TeaModel {
             }
 
             /**
-             * The name of the gateway resource corresponding to the waypoint proxy. If the waypoint proxy takes effect on a service account, the name is the service account name. If the waypoint proxy takes effect for the entire namespace, the name is "namespace".
+             * <p>The name of the gateway resource for the waypoint proxy. If the waypoint proxy applies to a service account, the name is the service account name. If the waypoint proxy applies to the entire namespace, the name is <code>namespace</code>.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>namespace</p>
              */
             public Builder name(String name) {
                 this.name = name;
@@ -338,7 +412,10 @@ public class ListWaypointsResponseBody extends TeaModel {
             }
 
             /**
-             * The namespace.
+             * <p>The namespace.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>default</p>
              */
             public Builder namespace(String namespace) {
                 this.namespace = namespace;
@@ -346,7 +423,10 @@ public class ListWaypointsResponseBody extends TeaModel {
             }
 
             /**
-             * Indicates whether waypoint proxy pods are deployed based on Elastic Container Instance (ECI).
+             * <p>Indicates whether waypoint proxy pods are preferentially scheduled to elastic container instances.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>false</p>
              */
             public Builder preferECI(String preferECI) {
                 this.preferECI = preferECI;
@@ -354,7 +434,10 @@ public class ListWaypointsResponseBody extends TeaModel {
             }
 
             /**
-             * The number of waypoint proxy pods.
+             * <p>The number of waypoint proxy pods.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder replicas(String replicas) {
                 this.replicas = replicas;
@@ -362,7 +445,10 @@ public class ListWaypointsResponseBody extends TeaModel {
             }
 
             /**
-             * The number of CPU cores requested by the waypoint proxy pods.
+             * <p>The amount of CPU resources requested by the waypoint proxy pods.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>100m</p>
              */
             public Builder requestCPU(String requestCPU) {
                 this.requestCPU = requestCPU;
@@ -370,7 +456,10 @@ public class ListWaypointsResponseBody extends TeaModel {
             }
 
             /**
-             * The size of the memory requested by the waypoint proxy pods.
+             * <p>The amount of memory resources requested by the waypoint proxy pods.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>128Mi</p>
              */
             public Builder requestMemory(String requestMemory) {
                 this.requestMemory = requestMemory;
@@ -378,7 +467,10 @@ public class ListWaypointsResponseBody extends TeaModel {
             }
 
             /**
-             * The service account on which the waypoint proxy takes effect. If this parameter is not specified, the waypoint proxy takes effect for the entire namespace.
+             * <p>The service account to which the waypoint proxy applies. If no value is returned for this parameter, the waypoint proxy applies to the entire namespace.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>bookinfo-productpage</p>
              */
             public Builder serviceAccount(String serviceAccount) {
                 this.serviceAccount = serviceAccount;

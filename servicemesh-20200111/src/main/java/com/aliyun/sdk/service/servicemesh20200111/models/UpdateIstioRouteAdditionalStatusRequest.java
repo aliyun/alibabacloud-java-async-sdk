@@ -1,40 +1,45 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.servicemesh20200111.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link UpdateIstioRouteAdditionalStatusRequest} extends {@link RequestModel}
  *
  * <p>UpdateIstioRouteAdditionalStatusRequest</p>
  */
 public class UpdateIstioRouteAdditionalStatusRequest extends Request {
-    @Query
-    @NameInMap("Description")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Description")
     private String description;
 
-    @Body
-    @NameInMap("IstioGatewayName")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("IstioGatewayName")
     private String istioGatewayName;
 
-    @Query
-    @NameInMap("Priority")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Priority")
     private Integer priority;
 
-    @Query
-    @NameInMap("RouteName")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("RouteName")
     private String routeName;
 
-    @Body
-    @NameInMap("ServiceMeshId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("ServiceMeshId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String serviceMeshId;
 
-    @Query
-    @NameInMap("Status")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Status")
     private Integer status;
 
     private UpdateIstioRouteAdditionalStatusRequest(Builder builder) {
@@ -55,7 +60,7 @@ public class UpdateIstioRouteAdditionalStatusRequest extends Request {
         return builder().build();
     }
 
-    @Override
+@Override
     public Builder toBuilder() {
         return new Builder(this);
     }
@@ -125,7 +130,10 @@ public class UpdateIstioRouteAdditionalStatusRequest extends Request {
         } 
 
         /**
-         * The description of the routing rule.
+         * <p>The description of the routing rule.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>demo route</p>
          */
         public Builder description(String description) {
             this.putQueryParameter("Description", description);
@@ -134,7 +142,10 @@ public class UpdateIstioRouteAdditionalStatusRequest extends Request {
         }
 
         /**
-         * The name of the ASM gateway.
+         * <p>The name of the ASM gateway.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>ingressgateway</p>
          */
         public Builder istioGatewayName(String istioGatewayName) {
             this.putBodyParameter("IstioGatewayName", istioGatewayName);
@@ -143,7 +154,10 @@ public class UpdateIstioRouteAdditionalStatusRequest extends Request {
         }
 
         /**
-         * The priority of the routing rule. The value of this parameter is an integer. A smaller value indicates a higher priority.
+         * <p>The priority of the routing rule. The value of this parameter is an integer. A smaller value indicates a higher priority.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>0</p>
          */
         public Builder priority(Integer priority) {
             this.putQueryParameter("Priority", priority);
@@ -152,7 +166,10 @@ public class UpdateIstioRouteAdditionalStatusRequest extends Request {
         }
 
         /**
-         * The name of the routing rule.
+         * <p>The name of the routing rule.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>http-test</p>
          */
         public Builder routeName(String routeName) {
             this.putQueryParameter("RouteName", routeName);
@@ -161,7 +178,11 @@ public class UpdateIstioRouteAdditionalStatusRequest extends Request {
         }
 
         /**
-         * The ASM instance ID.
+         * <p>The ASM instance ID.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>c08ba3fd1e6484b0f8cc1ad8fe10d****</p>
          */
         public Builder serviceMeshId(String serviceMeshId) {
             this.putBodyParameter("ServiceMeshId", serviceMeshId);
@@ -170,7 +191,10 @@ public class UpdateIstioRouteAdditionalStatusRequest extends Request {
         }
 
         /**
-         * The status of the routing rule. Valid values: 0: The routing rule is valid. 1: The routing rule is invalid. 2: An error occurs during the creation or update of the routing rule.
+         * <p>The status of the routing rule. Valid values: 0: The routing rule is valid. 1: The routing rule is invalid. 2: An error occurs during the creation or update of the routing rule.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>0</p>
          */
         public Builder status(Integer status) {
             this.putQueryParameter("Status", status);

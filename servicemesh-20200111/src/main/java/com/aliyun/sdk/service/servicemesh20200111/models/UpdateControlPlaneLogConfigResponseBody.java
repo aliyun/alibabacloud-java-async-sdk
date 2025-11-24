@@ -1,18 +1,23 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.servicemesh20200111.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link UpdateControlPlaneLogConfigResponseBody} extends {@link TeaModel}
  *
  * <p>UpdateControlPlaneLogConfigResponseBody</p>
  */
 public class UpdateControlPlaneLogConfigResponseBody extends TeaModel {
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
     private UpdateControlPlaneLogConfigResponseBody(Builder builder) {
@@ -27,6 +32,10 @@ public class UpdateControlPlaneLogConfigResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return requestId
      */
@@ -37,8 +46,18 @@ public class UpdateControlPlaneLogConfigResponseBody extends TeaModel {
     public static final class Builder {
         private String requestId; 
 
+        private Builder() {
+        } 
+
+        private Builder(UpdateControlPlaneLogConfigResponseBody model) {
+            this.requestId = model.requestId;
+        } 
+
         /**
-         * The request ID.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>488F046B-63D2-5D96-9A70-E00C3685D49F</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;

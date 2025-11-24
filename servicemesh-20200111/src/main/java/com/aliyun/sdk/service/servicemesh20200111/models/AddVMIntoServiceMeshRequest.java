@@ -1,25 +1,30 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.servicemesh20200111.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link AddVMIntoServiceMeshRequest} extends {@link RequestModel}
  *
  * <p>AddVMIntoServiceMeshRequest</p>
  */
 public class AddVMIntoServiceMeshRequest extends Request {
-    @Query
-    @NameInMap("EcsId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("EcsId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String ecsId;
 
-    @Query
-    @NameInMap("ServiceMeshId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ServiceMeshId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String serviceMeshId;
 
     private AddVMIntoServiceMeshRequest(Builder builder) {
@@ -36,7 +41,7 @@ public class AddVMIntoServiceMeshRequest extends Request {
         return builder().build();
     }
 
-    @Override
+@Override
     public Builder toBuilder() {
         return new Builder(this);
     }
@@ -70,7 +75,11 @@ public class AddVMIntoServiceMeshRequest extends Request {
         } 
 
         /**
-         * The ID of the ECS instance.
+         * <p>The ID of the ECS instance.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>i-2ze90ts4e7dj3650****</p>
          */
         public Builder ecsId(String ecsId) {
             this.putQueryParameter("EcsId", ecsId);
@@ -79,7 +88,11 @@ public class AddVMIntoServiceMeshRequest extends Request {
         }
 
         /**
-         * The ASM instance ID.
+         * <p>The ASM instance ID.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>ccb37ff104caf419fbf48fb38e6f3****</p>
          */
         public Builder serviceMeshId(String serviceMeshId) {
             this.putQueryParameter("ServiceMeshId", serviceMeshId);

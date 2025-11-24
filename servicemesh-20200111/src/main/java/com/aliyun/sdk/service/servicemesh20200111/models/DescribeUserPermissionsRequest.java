@@ -1,20 +1,25 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.servicemesh20200111.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeUserPermissionsRequest} extends {@link RequestModel}
  *
  * <p>DescribeUserPermissionsRequest</p>
  */
 public class DescribeUserPermissionsRequest extends Request {
-    @Body
-    @NameInMap("SubAccountUserId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("SubAccountUserId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String subAccountUserId;
 
     private DescribeUserPermissionsRequest(Builder builder) {
@@ -30,7 +35,7 @@ public class DescribeUserPermissionsRequest extends Request {
         return builder().build();
     }
 
-    @Override
+@Override
     public Builder toBuilder() {
         return new Builder(this);
     }
@@ -55,7 +60,11 @@ public class DescribeUserPermissionsRequest extends Request {
         } 
 
         /**
-         * The ID of a RAM user or RAM role.
+         * <p>The ID of a RAM user or RAM role.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>27852573609480****</p>
          */
         public Builder subAccountUserId(String subAccountUserId) {
             this.putBodyParameter("SubAccountUserId", subAccountUserId);

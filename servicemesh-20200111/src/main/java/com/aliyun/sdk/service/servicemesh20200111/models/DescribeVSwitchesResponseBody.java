@@ -1,32 +1,37 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.servicemesh20200111.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeVSwitchesResponseBody} extends {@link TeaModel}
  *
  * <p>DescribeVSwitchesResponseBody</p>
  */
 public class DescribeVSwitchesResponseBody extends TeaModel {
-    @NameInMap("MaxResults")
+    @com.aliyun.core.annotation.NameInMap("MaxResults")
     private Integer maxResults;
 
-    @NameInMap("NextToken")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.NameInMap("NextToken")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String nextToken;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("TotalCount")
+    @com.aliyun.core.annotation.NameInMap("TotalCount")
     private Integer totalCount;
 
-    @NameInMap("VSwitches")
-    private java.util.List < VSwitches> vSwitches;
+    @com.aliyun.core.annotation.NameInMap("VSwitches")
+    private java.util.List<VSwitches> vSwitches;
 
     private DescribeVSwitchesResponseBody(Builder builder) {
         this.maxResults = builder.maxResults;
@@ -42,6 +47,10 @@ public class DescribeVSwitchesResponseBody extends TeaModel {
 
     public static DescribeVSwitchesResponseBody create() {
         return builder().build();
+    }
+
+    public Builder toBuilder() {
+        return new Builder(this);
     }
 
     /**
@@ -75,7 +84,7 @@ public class DescribeVSwitchesResponseBody extends TeaModel {
     /**
      * @return vSwitches
      */
-    public java.util.List < VSwitches> getVSwitches() {
+    public java.util.List<VSwitches> getVSwitches() {
         return this.vSwitches;
     }
 
@@ -84,10 +93,24 @@ public class DescribeVSwitchesResponseBody extends TeaModel {
         private String nextToken; 
         private String requestId; 
         private Integer totalCount; 
-        private java.util.List < VSwitches> vSwitches; 
+        private java.util.List<VSwitches> vSwitches; 
+
+        private Builder() {
+        } 
+
+        private Builder(DescribeVSwitchesResponseBody model) {
+            this.maxResults = model.maxResults;
+            this.nextToken = model.nextToken;
+            this.requestId = model.requestId;
+            this.totalCount = model.totalCount;
+            this.vSwitches = model.vSwitches;
+        } 
 
         /**
-         * The maximum number of entries returned.
+         * <p>The maximum number of entries returned.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10</p>
          */
         public Builder maxResults(Integer maxResults) {
             this.maxResults = maxResults;
@@ -95,7 +118,11 @@ public class DescribeVSwitchesResponseBody extends TeaModel {
         }
 
         /**
-         * A pagination token. It can be used in the next request to retrieve a new page of results. If NextToken is empty, no next page exists.
+         * <p>A pagination token. It can be used in the next request to retrieve a new page of results. If NextToken is empty, no next page exists.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>“”</p>
          */
         public Builder nextToken(String nextToken) {
             this.nextToken = nextToken;
@@ -103,7 +130,10 @@ public class DescribeVSwitchesResponseBody extends TeaModel {
         }
 
         /**
-         * The request ID.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>BD65C0AD-D3C6-48D3-8D93-38D2015C****</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -111,7 +141,10 @@ public class DescribeVSwitchesResponseBody extends TeaModel {
         }
 
         /**
-         * The total number of vSwitches that are deployed in the VPC in the region. This parameter is optional and is not returned by default.
+         * <p>The total number of vSwitches that are deployed in the VPC in the region. This parameter is optional and is not returned by default.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10</p>
          */
         public Builder totalCount(Integer totalCount) {
             this.totalCount = totalCount;
@@ -119,9 +152,9 @@ public class DescribeVSwitchesResponseBody extends TeaModel {
         }
 
         /**
-         * The available vSwitches.
+         * <p>The available vSwitches.</p>
          */
-        public Builder vSwitches(java.util.List < VSwitches> vSwitches) {
+        public Builder vSwitches(java.util.List<VSwitches> vSwitches) {
             this.vSwitches = vSwitches;
             return this;
         }
@@ -132,23 +165,29 @@ public class DescribeVSwitchesResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link DescribeVSwitchesResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeVSwitchesResponseBody</p>
+     */
     public static class VSwitches extends TeaModel {
-        @NameInMap("IsDefault")
+        @com.aliyun.core.annotation.NameInMap("IsDefault")
         private Boolean isDefault;
 
-        @NameInMap("Status")
+        @com.aliyun.core.annotation.NameInMap("Status")
         private String status;
 
-        @NameInMap("VSwitchId")
+        @com.aliyun.core.annotation.NameInMap("VSwitchId")
         private String vSwitchId;
 
-        @NameInMap("VSwitchName")
+        @com.aliyun.core.annotation.NameInMap("VSwitchName")
         private String vSwitchName;
 
-        @NameInMap("VpcId")
+        @com.aliyun.core.annotation.NameInMap("VpcId")
         private String vpcId;
 
-        @NameInMap("ZoneId")
+        @com.aliyun.core.annotation.NameInMap("ZoneId")
         private String zoneId;
 
         private VSwitches(Builder builder) {
@@ -218,12 +257,27 @@ public class DescribeVSwitchesResponseBody extends TeaModel {
             private String vpcId; 
             private String zoneId; 
 
+            private Builder() {
+            } 
+
+            private Builder(VSwitches model) {
+                this.isDefault = model.isDefault;
+                this.status = model.status;
+                this.vSwitchId = model.vSwitchId;
+                this.vSwitchName = model.vSwitchName;
+                this.vpcId = model.vpcId;
+                this.zoneId = model.zoneId;
+            } 
+
             /**
-             * Indicates whether the vSwitch is the default vSwitch. Valid values:
-             * <p>
+             * <p>Indicates whether the vSwitch is the default vSwitch. Valid values:</p>
+             * <ul>
+             * <li><code>true</code></li>
+             * <li><code>false</code></li>
+             * </ul>
              * 
-             * *   `true`
-             * *   `false`
+             * <strong>example:</strong>
+             * <p>false</p>
              */
             public Builder isDefault(Boolean isDefault) {
                 this.isDefault = isDefault;
@@ -231,11 +285,14 @@ public class DescribeVSwitchesResponseBody extends TeaModel {
             }
 
             /**
-             * The state of the vSwitch. Valid values:
-             * <p>
+             * <p>The state of the vSwitch. Valid values:</p>
+             * <ul>
+             * <li><code>Pending</code>: The vSwitch is being configured.</li>
+             * <li><code>Available</code>: The vSwitch is available.</li>
+             * </ul>
              * 
-             * *   `Pending`: The vSwitch is being configured.
-             * *   `Available`: The vSwitch is available.
+             * <strong>example:</strong>
+             * <p>Available</p>
              */
             public Builder status(String status) {
                 this.status = status;
@@ -243,7 +300,10 @@ public class DescribeVSwitchesResponseBody extends TeaModel {
             }
 
             /**
-             * The vSwitch ID.
+             * <p>The vSwitch ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>vsw-bp1g24p9no0iqir46****</p>
              */
             public Builder vSwitchId(String vSwitchId) {
                 this.vSwitchId = vSwitchId;
@@ -251,7 +311,10 @@ public class DescribeVSwitchesResponseBody extends TeaModel {
             }
 
             /**
-             * The name of the vSwitch.
+             * <p>The name of the vSwitch.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>vsw-test</p>
              */
             public Builder vSwitchName(String vSwitchName) {
                 this.vSwitchName = vSwitchName;
@@ -259,7 +322,10 @@ public class DescribeVSwitchesResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the VPC to which the vSwitch belongs.
+             * <p>The ID of the VPC to which the vSwitch belongs.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>vpc-bp17gig441u0msmd6****</p>
              */
             public Builder vpcId(String vpcId) {
                 this.vpcId = vpcId;
@@ -267,7 +333,10 @@ public class DescribeVSwitchesResponseBody extends TeaModel {
             }
 
             /**
-             * The zone to which the switch belongs.
+             * <p>The zone to which the switch belongs.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>cn-hangzhou-k</p>
              */
             public Builder zoneId(String zoneId) {
                 this.zoneId = zoneId;

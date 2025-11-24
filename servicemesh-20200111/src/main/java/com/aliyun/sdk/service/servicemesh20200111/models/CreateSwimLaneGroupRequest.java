@@ -1,58 +1,68 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.servicemesh20200111.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link CreateSwimLaneGroupRequest} extends {@link RequestModel}
  *
  * <p>CreateSwimLaneGroupRequest</p>
  */
 public class CreateSwimLaneGroupRequest extends Request {
-    @Body
-    @NameInMap("GroupName")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("GroupName")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String groupName;
 
-    @Body
-    @NameInMap("IngressGatewayName")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("IngressGatewayName")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String ingressGatewayName;
 
-    @Body
-    @NameInMap("IngressType")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("IngressGatewayNamespace")
+    private String ingressGatewayNamespace;
+
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("IngressType")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String ingressType;
 
-    @Body
-    @NameInMap("IsPermissive")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("IsPermissive")
     private Boolean isPermissive;
 
-    @Body
-    @NameInMap("RouteHeader")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("RouteHeader")
     private String routeHeader;
 
-    @Body
-    @NameInMap("ServiceMeshId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("ServiceMeshId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String serviceMeshId;
 
-    @Body
-    @NameInMap("ServicesList")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("ServicesList")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String servicesList;
 
-    @Body
-    @NameInMap("TraceHeader")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("TraceHeader")
     private String traceHeader;
 
     private CreateSwimLaneGroupRequest(Builder builder) {
         super(builder);
         this.groupName = builder.groupName;
         this.ingressGatewayName = builder.ingressGatewayName;
+        this.ingressGatewayNamespace = builder.ingressGatewayNamespace;
         this.ingressType = builder.ingressType;
         this.isPermissive = builder.isPermissive;
         this.routeHeader = builder.routeHeader;
@@ -69,7 +79,7 @@ public class CreateSwimLaneGroupRequest extends Request {
         return builder().build();
     }
 
-    @Override
+@Override
     public Builder toBuilder() {
         return new Builder(this);
     }
@@ -86,6 +96,13 @@ public class CreateSwimLaneGroupRequest extends Request {
      */
     public String getIngressGatewayName() {
         return this.ingressGatewayName;
+    }
+
+    /**
+     * @return ingressGatewayNamespace
+     */
+    public String getIngressGatewayNamespace() {
+        return this.ingressGatewayNamespace;
     }
 
     /**
@@ -133,6 +150,7 @@ public class CreateSwimLaneGroupRequest extends Request {
     public static final class Builder extends Request.Builder<CreateSwimLaneGroupRequest, Builder> {
         private String groupName; 
         private String ingressGatewayName; 
+        private String ingressGatewayNamespace; 
         private String ingressType; 
         private Boolean isPermissive; 
         private String routeHeader; 
@@ -148,6 +166,7 @@ public class CreateSwimLaneGroupRequest extends Request {
             super(request);
             this.groupName = request.groupName;
             this.ingressGatewayName = request.ingressGatewayName;
+            this.ingressGatewayNamespace = request.ingressGatewayNamespace;
             this.ingressType = request.ingressType;
             this.isPermissive = request.isPermissive;
             this.routeHeader = request.routeHeader;
@@ -157,7 +176,11 @@ public class CreateSwimLaneGroupRequest extends Request {
         } 
 
         /**
-         * The name of the lane group.
+         * <p>The name of the lane group.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>test</p>
          */
         public Builder groupName(String groupName) {
             this.putBodyParameter("GroupName", groupName);
@@ -166,7 +189,11 @@ public class CreateSwimLaneGroupRequest extends Request {
         }
 
         /**
-         * The name of the ingress gateway.
+         * <p>The name of the ingress gateway.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>ingressgateway</p>
          */
         public Builder ingressGatewayName(String ingressGatewayName) {
             this.putBodyParameter("IngressGatewayName", ingressGatewayName);
@@ -175,7 +202,20 @@ public class CreateSwimLaneGroupRequest extends Request {
         }
 
         /**
-         * The type of the gateway for ingress traffic. Only ASM ingress gateways are supported.
+         * IngressGatewayNamespace.
+         */
+        public Builder ingressGatewayNamespace(String ingressGatewayNamespace) {
+            this.putBodyParameter("IngressGatewayNamespace", ingressGatewayNamespace);
+            this.ingressGatewayNamespace = ingressGatewayNamespace;
+            return this;
+        }
+
+        /**
+         * <p>The type of the gateway for ingress traffic. Only ASM ingress gateways are supported.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>ASM</p>
          */
         public Builder ingressType(String ingressType) {
             this.putBodyParameter("IngressType", ingressType);
@@ -184,7 +224,10 @@ public class CreateSwimLaneGroupRequest extends Request {
         }
 
         /**
-         * IsPermissive.
+         * <p>Specifies whether the permissive mode is enabled for the lane group to be created.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>false</p>
          */
         public Builder isPermissive(Boolean isPermissive) {
             this.putBodyParameter("IsPermissive", isPermissive);
@@ -193,7 +236,10 @@ public class CreateSwimLaneGroupRequest extends Request {
         }
 
         /**
-         * RouteHeader.
+         * <p>The request routing header of the lane group if you plan to create a lane group in permissive mode. This parameter must be specified when IsPermissive is set to true.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>x-asm-prefer-tag</p>
          */
         public Builder routeHeader(String routeHeader) {
             this.putBodyParameter("RouteHeader", routeHeader);
@@ -202,7 +248,11 @@ public class CreateSwimLaneGroupRequest extends Request {
         }
 
         /**
-         * The ID of the Alibaba Cloud Service Mesh (ASM) instance.
+         * <p>The ID of the Alibaba Cloud Service Mesh (ASM) instance.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>xxx</p>
          */
         public Builder serviceMeshId(String serviceMeshId) {
             this.putBodyParameter("ServiceMeshId", serviceMeshId);
@@ -211,7 +261,11 @@ public class CreateSwimLaneGroupRequest extends Request {
         }
 
         /**
-         * A list of services associated with the lane group. The value is a JSON array. The format of a service is `$Cluster name/$Cluster ID/$Namespace/$Service name`.
+         * <p>A list of services associated with the lane group. The value is a JSON array. The format of a service is <code>$Cluster name/$Cluster ID/$Namespace/$Service name</code>.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>[&quot;sh01/c089443ea9e50403fa4f0a6237d11e0a9/default/mocka&quot;,&quot;sh01/c089443ea9e50403fa4f0a6237d11e0a9/default/mockb&quot;,&quot;sh01/c089443ea9e50403fa4f0a6237d11e0a9/default/mockc&quot;]</p>
          */
         public Builder servicesList(String servicesList) {
             this.putBodyParameter("ServicesList", servicesList);
@@ -220,7 +274,10 @@ public class CreateSwimLaneGroupRequest extends Request {
         }
 
         /**
-         * TraceHeader.
+         * <p>The end-to-end (E2E) pass-through request header of the lane group if you plan to create a lane group in permissive mode. This parameter must be specified when IsPermissive is set to true.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>my-request-id</p>
          */
         public Builder traceHeader(String traceHeader) {
             this.putBodyParameter("TraceHeader", traceHeader);

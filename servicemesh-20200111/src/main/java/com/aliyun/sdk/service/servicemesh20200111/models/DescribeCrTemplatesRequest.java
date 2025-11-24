@@ -1,25 +1,30 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.servicemesh20200111.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeCrTemplatesRequest} extends {@link RequestModel}
  *
  * <p>DescribeCrTemplatesRequest</p>
  */
 public class DescribeCrTemplatesRequest extends Request {
-    @Body
-    @NameInMap("IstioVersion")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("IstioVersion")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String istioVersion;
 
-    @Body
-    @NameInMap("Kind")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("Kind")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String kind;
 
     private DescribeCrTemplatesRequest(Builder builder) {
@@ -36,7 +41,7 @@ public class DescribeCrTemplatesRequest extends Request {
         return builder().build();
     }
 
-    @Override
+@Override
     public Builder toBuilder() {
         return new Builder(this);
     }
@@ -70,7 +75,11 @@ public class DescribeCrTemplatesRequest extends Request {
         } 
 
         /**
-         * The Istio version used in ASM.
+         * <p>The version of Istio used by the ASM instance.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>v1.9.7.31-g24cdcb43-aliyun</p>
          */
         public Builder istioVersion(String istioVersion) {
             this.putBodyParameter("IstioVersion", istioVersion);
@@ -79,20 +88,24 @@ public class DescribeCrTemplatesRequest extends Request {
         }
 
         /**
-         * The type of Istio resource whose common YAML templates you want to query. Valid values:
-         * <p>
+         * <p>The type of Istio resource whose common YAML templates you want to query. Valid values:</p>
+         * <ul>
+         * <li>AuthorizationPolicy</li>
+         * <li>RequestAuthentication</li>
+         * <li>PeerAuthentication</li>
+         * <li>WorkloadGroup</li>
+         * <li>WorkloadEntry</li>
+         * <li>Sidecar</li>
+         * <li>EnvoyFilter</li>
+         * <li>ServiceEntry</li>
+         * <li>Gateway</li>
+         * <li>DestinationRule</li>
+         * <li>VirtualService</li>
+         * </ul>
+         * <p>This parameter is required.</p>
          * 
-         * *   AuthorizationPolicy
-         * *   RequestAuthentication
-         * *   PeerAuthentication
-         * *   WorkloadGroup
-         * *   WorkloadEntry
-         * *   Sidecar
-         * *   EnvoyFilter
-         * *   ServiceEntry
-         * *   Gateway
-         * *   DestinationRule
-         * *   VirtualService
+         * <strong>example:</strong>
+         * <p>VirtualService</p>
          */
         public Builder kind(String kind) {
             this.putBodyParameter("Kind", kind);

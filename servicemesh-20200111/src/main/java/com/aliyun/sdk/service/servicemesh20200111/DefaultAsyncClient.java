@@ -39,6 +39,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         this.handler.close();
     }
 
+    /**
+     * @param request the request parameters of AddClusterIntoServiceMesh  AddClusterIntoServiceMeshRequest
+     * @return AddClusterIntoServiceMeshResponse
+     */
     @Override
     public CompletableFuture<AddClusterIntoServiceMeshResponse> addClusterIntoServiceMesh(AddClusterIntoServiceMeshRequest request) {
         try {
@@ -54,9 +58,10 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
-      * @deprecated
-      *
+     * @deprecated OpenAPI AddVMIntoServiceMesh is deprecated  * @param request  the request parameters of AddVMIntoServiceMesh  AddVMIntoServiceMeshRequest
+     * @return AddVMIntoServiceMeshResponse
      */
+    @Deprecated
     @Override
     public CompletableFuture<AddVMIntoServiceMeshResponse> addVMIntoServiceMesh(AddVMIntoServiceMeshRequest request) {
         try {
@@ -71,6 +76,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of CreateASMGateway  CreateASMGatewayRequest
+     * @return CreateASMGatewayResponse
+     */
     @Override
     public CompletableFuture<CreateASMGatewayResponse> createASMGateway(CreateASMGatewayRequest request) {
         try {
@@ -85,6 +94,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of CreateGatewaySecret  CreateGatewaySecretRequest
+     * @return CreateGatewaySecretResponse
+     */
     @Override
     public CompletableFuture<CreateGatewaySecretResponse> createGatewaySecret(CreateGatewaySecretRequest request) {
         try {
@@ -99,6 +112,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of CreateIstioGatewayDomains  CreateIstioGatewayDomainsRequest
+     * @return CreateIstioGatewayDomainsResponse
+     */
     @Override
     public CompletableFuture<CreateIstioGatewayDomainsResponse> createIstioGatewayDomains(CreateIstioGatewayDomainsRequest request) {
         try {
@@ -113,6 +130,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of CreateIstioGatewayRoutes  CreateIstioGatewayRoutesRequest
+     * @return CreateIstioGatewayRoutesResponse
+     */
     @Override
     public CompletableFuture<CreateIstioGatewayRoutesResponse> createIstioGatewayRoutes(CreateIstioGatewayRoutesRequest request) {
         try {
@@ -127,6 +148,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of CreateServiceMesh  CreateServiceMeshRequest
+     * @return CreateServiceMeshResponse
+     */
     @Override
     public CompletableFuture<CreateServiceMeshResponse> createServiceMesh(CreateServiceMeshRequest request) {
         try {
@@ -141,6 +166,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of CreateSwimLane  CreateSwimLaneRequest
+     * @return CreateSwimLaneResponse
+     */
     @Override
     public CompletableFuture<CreateSwimLaneResponse> createSwimLane(CreateSwimLaneRequest request) {
         try {
@@ -155,6 +184,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of CreateSwimLaneGroup  CreateSwimLaneGroupRequest
+     * @return CreateSwimLaneGroupResponse
+     */
     @Override
     public CompletableFuture<CreateSwimLaneGroupResponse> createSwimLaneGroup(CreateSwimLaneGroupRequest request) {
         try {
@@ -169,6 +202,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of CreateWaypoint  CreateWaypointRequest
+     * @return CreateWaypointResponse
+     */
     @Override
     public CompletableFuture<CreateWaypointResponse> createWaypoint(CreateWaypointRequest request) {
         try {
@@ -183,6 +220,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of DeleteGatewayRoute  DeleteGatewayRouteRequest
+     * @return DeleteGatewayRouteResponse
+     */
     @Override
     public CompletableFuture<DeleteGatewayRouteResponse> deleteGatewayRoute(DeleteGatewayRouteRequest request) {
         try {
@@ -197,6 +238,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of DeleteGatewaySecret  DeleteGatewaySecretRequest
+     * @return DeleteGatewaySecretResponse
+     */
     @Override
     public CompletableFuture<DeleteGatewaySecretResponse> deleteGatewaySecret(DeleteGatewaySecretRequest request) {
         try {
@@ -211,6 +256,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of DeleteIstioGatewayDomains  DeleteIstioGatewayDomainsRequest
+     * @return DeleteIstioGatewayDomainsResponse
+     */
     @Override
     public CompletableFuture<DeleteIstioGatewayDomainsResponse> deleteIstioGatewayDomains(DeleteIstioGatewayDomainsRequest request) {
         try {
@@ -225,6 +274,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of DeleteServiceMesh  DeleteServiceMeshRequest
+     * @return DeleteServiceMeshResponse
+     */
     @Override
     public CompletableFuture<DeleteServiceMeshResponse> deleteServiceMesh(DeleteServiceMeshRequest request) {
         try {
@@ -239,6 +292,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of DeleteSwimLane  DeleteSwimLaneRequest
+     * @return DeleteSwimLaneResponse
+     */
     @Override
     public CompletableFuture<DeleteSwimLaneResponse> deleteSwimLane(DeleteSwimLaneRequest request) {
         try {
@@ -253,6 +310,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of DeleteSwimLaneGroup  DeleteSwimLaneGroupRequest
+     * @return DeleteSwimLaneGroupResponse
+     */
     @Override
     public CompletableFuture<DeleteSwimLaneGroupResponse> deleteSwimLaneGroup(DeleteSwimLaneGroupRequest request) {
         try {
@@ -267,6 +328,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of DeleteWaypoint  DeleteWaypointRequest
+     * @return DeleteWaypointResponse
+     */
     @Override
     public CompletableFuture<DeleteWaypointResponse> deleteWaypoint(DeleteWaypointRequest request) {
         try {
@@ -281,6 +346,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of DescribeASMGatewayImportedServices  DescribeASMGatewayImportedServicesRequest
+     * @return DescribeASMGatewayImportedServicesResponse
+     */
     @Override
     public CompletableFuture<DescribeASMGatewayImportedServicesResponse> describeASMGatewayImportedServices(DescribeASMGatewayImportedServicesRequest request) {
         try {
@@ -295,6 +364,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of DescribeCCMVersion  DescribeCCMVersionRequest
+     * @return DescribeCCMVersionResponse
+     */
     @Override
     public CompletableFuture<DescribeCCMVersionResponse> describeCCMVersion(DescribeCCMVersionRequest request) {
         try {
@@ -309,6 +382,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of DescribeCens  DescribeCensRequest
+     * @return DescribeCensResponse
+     */
     @Override
     public CompletableFuture<DescribeCensResponse> describeCens(DescribeCensRequest request) {
         try {
@@ -323,6 +400,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of DescribeClusterGrafana  DescribeClusterGrafanaRequest
+     * @return DescribeClusterGrafanaResponse
+     */
     @Override
     public CompletableFuture<DescribeClusterGrafanaResponse> describeClusterGrafana(DescribeClusterGrafanaRequest request) {
         try {
@@ -337,6 +418,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of DescribeClusterPrometheus  DescribeClusterPrometheusRequest
+     * @return DescribeClusterPrometheusResponse
+     */
     @Override
     public CompletableFuture<DescribeClusterPrometheusResponse> describeClusterPrometheus(DescribeClusterPrometheusRequest request) {
         try {
@@ -351,6 +436,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of DescribeClustersInServiceMesh  DescribeClustersInServiceMeshRequest
+     * @return DescribeClustersInServiceMeshResponse
+     */
     @Override
     public CompletableFuture<DescribeClustersInServiceMeshResponse> describeClustersInServiceMesh(DescribeClustersInServiceMeshRequest request) {
         try {
@@ -365,6 +454,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of DescribeCrTemplates  DescribeCrTemplatesRequest
+     * @return DescribeCrTemplatesResponse
+     */
     @Override
     public CompletableFuture<DescribeCrTemplatesResponse> describeCrTemplates(DescribeCrTemplatesRequest request) {
         try {
@@ -379,6 +472,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of DescribeEipResources  DescribeEipResourcesRequest
+     * @return DescribeEipResourcesResponse
+     */
     @Override
     public CompletableFuture<DescribeEipResourcesResponse> describeEipResources(DescribeEipResourcesRequest request) {
         try {
@@ -393,6 +490,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of DescribeGatewaySecretDetails  DescribeGatewaySecretDetailsRequest
+     * @return DescribeGatewaySecretDetailsResponse
+     */
     @Override
     public CompletableFuture<DescribeGatewaySecretDetailsResponse> describeGatewaySecretDetails(DescribeGatewaySecretDetailsRequest request) {
         try {
@@ -407,6 +508,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of DescribeGuestClusterAccessLogDashboards  DescribeGuestClusterAccessLogDashboardsRequest
+     * @return DescribeGuestClusterAccessLogDashboardsResponse
+     */
     @Override
     public CompletableFuture<DescribeGuestClusterAccessLogDashboardsResponse> describeGuestClusterAccessLogDashboards(DescribeGuestClusterAccessLogDashboardsRequest request) {
         try {
@@ -421,6 +526,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of DescribeGuestClusterNamespaces  DescribeGuestClusterNamespacesRequest
+     * @return DescribeGuestClusterNamespacesResponse
+     */
     @Override
     public CompletableFuture<DescribeGuestClusterNamespacesResponse> describeGuestClusterNamespaces(DescribeGuestClusterNamespacesRequest request) {
         try {
@@ -435,6 +544,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of DescribeGuestClusterPods  DescribeGuestClusterPodsRequest
+     * @return DescribeGuestClusterPodsResponse
+     */
     @Override
     public CompletableFuture<DescribeGuestClusterPodsResponse> describeGuestClusterPods(DescribeGuestClusterPodsRequest request) {
         try {
@@ -449,6 +562,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of DescribeImportedServicesDetail  DescribeImportedServicesDetailRequest
+     * @return DescribeImportedServicesDetailResponse
+     */
     @Override
     public CompletableFuture<DescribeImportedServicesDetailResponse> describeImportedServicesDetail(DescribeImportedServicesDetailRequest request) {
         try {
@@ -463,6 +580,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of DescribeIstioGatewayDomains  DescribeIstioGatewayDomainsRequest
+     * @return DescribeIstioGatewayDomainsResponse
+     */
     @Override
     public CompletableFuture<DescribeIstioGatewayDomainsResponse> describeIstioGatewayDomains(DescribeIstioGatewayDomainsRequest request) {
         try {
@@ -477,6 +598,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of DescribeIstioGatewayRouteDetail  DescribeIstioGatewayRouteDetailRequest
+     * @return DescribeIstioGatewayRouteDetailResponse
+     */
     @Override
     public CompletableFuture<DescribeIstioGatewayRouteDetailResponse> describeIstioGatewayRouteDetail(DescribeIstioGatewayRouteDetailRequest request) {
         try {
@@ -491,6 +616,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of DescribeIstioGatewayRoutes  DescribeIstioGatewayRoutesRequest
+     * @return DescribeIstioGatewayRoutesResponse
+     */
     @Override
     public CompletableFuture<DescribeIstioGatewayRoutesResponse> describeIstioGatewayRoutes(DescribeIstioGatewayRoutesRequest request) {
         try {
@@ -505,6 +634,28 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of DescribeMeshMultiClusterNetwork  DescribeMeshMultiClusterNetworkRequest
+     * @return DescribeMeshMultiClusterNetworkResponse
+     */
+    @Override
+    public CompletableFuture<DescribeMeshMultiClusterNetworkResponse> describeMeshMultiClusterNetwork(DescribeMeshMultiClusterNetworkRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RPC).setAction("DescribeMeshMultiClusterNetwork").setMethod(HttpMethod.POST).setPathRegex("/").setBodyType(BodyType.JSON).setBodyIsForm(true).setReqBodyType(BodyType.FORM).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(DescribeMeshMultiClusterNetworkResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<DescribeMeshMultiClusterNetworkResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
+     * @param request the request parameters of DescribeMetadata  DescribeMetadataRequest
+     * @return DescribeMetadataResponse
+     */
     @Override
     public CompletableFuture<DescribeMetadataResponse> describeMetadata(DescribeMetadataRequest request) {
         try {
@@ -519,6 +670,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of DescribeNamespaceScopeSidecarConfig  DescribeNamespaceScopeSidecarConfigRequest
+     * @return DescribeNamespaceScopeSidecarConfigResponse
+     */
     @Override
     public CompletableFuture<DescribeNamespaceScopeSidecarConfigResponse> describeNamespaceScopeSidecarConfig(DescribeNamespaceScopeSidecarConfigRequest request) {
         try {
@@ -533,6 +688,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of DescribeNodesInstanceType  DescribeNodesInstanceTypeRequest
+     * @return DescribeNodesInstanceTypeResponse
+     */
     @Override
     public CompletableFuture<DescribeNodesInstanceTypeResponse> describeNodesInstanceType(DescribeNodesInstanceTypeRequest request) {
         try {
@@ -547,6 +706,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of DescribeReusableSlb  DescribeReusableSlbRequest
+     * @return DescribeReusableSlbResponse
+     */
     @Override
     public CompletableFuture<DescribeReusableSlbResponse> describeReusableSlb(DescribeReusableSlbRequest request) {
         try {
@@ -561,6 +724,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of DescribeServiceMeshAdditionalStatus  DescribeServiceMeshAdditionalStatusRequest
+     * @return DescribeServiceMeshAdditionalStatusResponse
+     */
     @Override
     public CompletableFuture<DescribeServiceMeshAdditionalStatusResponse> describeServiceMeshAdditionalStatus(DescribeServiceMeshAdditionalStatusRequest request) {
         try {
@@ -575,6 +742,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of DescribeServiceMeshClusters  DescribeServiceMeshClustersRequest
+     * @return DescribeServiceMeshClustersResponse
+     */
     @Override
     public CompletableFuture<DescribeServiceMeshClustersResponse> describeServiceMeshClusters(DescribeServiceMeshClustersRequest request) {
         try {
@@ -589,6 +760,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of DescribeServiceMeshDetail  DescribeServiceMeshDetailRequest
+     * @return DescribeServiceMeshDetailResponse
+     */
     @Override
     public CompletableFuture<DescribeServiceMeshDetailResponse> describeServiceMeshDetail(DescribeServiceMeshDetailRequest request) {
         try {
@@ -603,6 +778,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of DescribeServiceMeshKubeconfig  DescribeServiceMeshKubeconfigRequest
+     * @return DescribeServiceMeshKubeconfigResponse
+     */
     @Override
     public CompletableFuture<DescribeServiceMeshKubeconfigResponse> describeServiceMeshKubeconfig(DescribeServiceMeshKubeconfigRequest request) {
         try {
@@ -617,6 +796,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of DescribeServiceMeshLogs  DescribeServiceMeshLogsRequest
+     * @return DescribeServiceMeshLogsResponse
+     */
     @Override
     public CompletableFuture<DescribeServiceMeshLogsResponse> describeServiceMeshLogs(DescribeServiceMeshLogsRequest request) {
         try {
@@ -631,6 +814,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of DescribeServiceMeshProxyStatus  DescribeServiceMeshProxyStatusRequest
+     * @return DescribeServiceMeshProxyStatusResponse
+     */
     @Override
     public CompletableFuture<DescribeServiceMeshProxyStatusResponse> describeServiceMeshProxyStatus(DescribeServiceMeshProxyStatusRequest request) {
         try {
@@ -645,6 +832,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of DescribeServiceMeshUpgradeStatus  DescribeServiceMeshUpgradeStatusRequest
+     * @return DescribeServiceMeshUpgradeStatusResponse
+     */
     @Override
     public CompletableFuture<DescribeServiceMeshUpgradeStatusResponse> describeServiceMeshUpgradeStatus(DescribeServiceMeshUpgradeStatusRequest request) {
         try {
@@ -660,9 +851,10 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
-      * @deprecated
-      *
+     * @deprecated OpenAPI DescribeServiceMeshVMs is deprecated  * @param request  the request parameters of DescribeServiceMeshVMs  DescribeServiceMeshVMsRequest
+     * @return DescribeServiceMeshVMsResponse
      */
+    @Deprecated
     @Override
     public CompletableFuture<DescribeServiceMeshVMsResponse> describeServiceMeshVMs(DescribeServiceMeshVMsRequest request) {
         try {
@@ -677,6 +869,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of DescribeServiceMeshes  DescribeServiceMeshesRequest
+     * @return DescribeServiceMeshesResponse
+     */
     @Override
     public CompletableFuture<DescribeServiceMeshesResponse> describeServiceMeshes(DescribeServiceMeshesRequest request) {
         try {
@@ -691,6 +887,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of DescribeUpgradeVersion  DescribeUpgradeVersionRequest
+     * @return DescribeUpgradeVersionResponse
+     */
     @Override
     public CompletableFuture<DescribeUpgradeVersionResponse> describeUpgradeVersion(DescribeUpgradeVersionRequest request) {
         try {
@@ -705,6 +905,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of DescribeUserPermissions  DescribeUserPermissionsRequest
+     * @return DescribeUserPermissionsResponse
+     */
     @Override
     public CompletableFuture<DescribeUserPermissionsResponse> describeUserPermissions(DescribeUserPermissionsRequest request) {
         try {
@@ -719,6 +923,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of DescribeUsersWithPermissions  DescribeUsersWithPermissionsRequest
+     * @return DescribeUsersWithPermissionsResponse
+     */
     @Override
     public CompletableFuture<DescribeUsersWithPermissionsResponse> describeUsersWithPermissions(DescribeUsersWithPermissionsRequest request) {
         try {
@@ -734,9 +942,10 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
-      * @deprecated
-      *
+     * @deprecated OpenAPI DescribeVMsInServiceMesh is deprecated  * @param request  the request parameters of DescribeVMsInServiceMesh  DescribeVMsInServiceMeshRequest
+     * @return DescribeVMsInServiceMeshResponse
      */
+    @Deprecated
     @Override
     public CompletableFuture<DescribeVMsInServiceMeshResponse> describeVMsInServiceMesh(DescribeVMsInServiceMeshRequest request) {
         try {
@@ -751,6 +960,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of DescribeVSwitches  DescribeVSwitchesRequest
+     * @return DescribeVSwitchesResponse
+     */
     @Override
     public CompletableFuture<DescribeVSwitchesResponse> describeVSwitches(DescribeVSwitchesRequest request) {
         try {
@@ -765,6 +978,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of DescribeVersions  DescribeVersionsRequest
+     * @return DescribeVersionsResponse
+     */
     @Override
     public CompletableFuture<DescribeVersionsResponse> describeVersions(DescribeVersionsRequest request) {
         try {
@@ -779,6 +996,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of DescribeVpcs  DescribeVpcsRequest
+     * @return DescribeVpcsResponse
+     */
     @Override
     public CompletableFuture<DescribeVpcsResponse> describeVpcs(DescribeVpcsRequest request) {
         try {
@@ -793,6 +1014,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of GetCaCert  GetCaCertRequest
+     * @return GetCaCertResponse
+     */
     @Override
     public CompletableFuture<GetCaCertResponse> getCaCert(GetCaCertRequest request) {
         try {
@@ -807,6 +1032,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of GetDeploymentBySelector  GetDeploymentBySelectorRequest
+     * @return GetDeploymentBySelectorResponse
+     */
     @Override
     public CompletableFuture<GetDeploymentBySelectorResponse> getDeploymentBySelector(GetDeploymentBySelectorRequest request) {
         try {
@@ -821,6 +1050,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of GetGrafanaDashboardUrl  GetGrafanaDashboardUrlRequest
+     * @return GetGrafanaDashboardUrlResponse
+     */
     @Override
     public CompletableFuture<GetGrafanaDashboardUrlResponse> getGrafanaDashboardUrl(GetGrafanaDashboardUrlRequest request) {
         try {
@@ -835,6 +1068,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of GetRegisteredServiceEndpoints  GetRegisteredServiceEndpointsRequest
+     * @return GetRegisteredServiceEndpointsResponse
+     */
     @Override
     public CompletableFuture<GetRegisteredServiceEndpointsResponse> getRegisteredServiceEndpoints(GetRegisteredServiceEndpointsRequest request) {
         try {
@@ -849,6 +1086,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of GetRegisteredServiceNamespaces  GetRegisteredServiceNamespacesRequest
+     * @return GetRegisteredServiceNamespacesResponse
+     */
     @Override
     public CompletableFuture<GetRegisteredServiceNamespacesResponse> getRegisteredServiceNamespaces(GetRegisteredServiceNamespacesRequest request) {
         try {
@@ -863,6 +1104,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of GetSwimLaneDetail  GetSwimLaneDetailRequest
+     * @return GetSwimLaneDetailResponse
+     */
     @Override
     public CompletableFuture<GetSwimLaneDetailResponse> getSwimLaneDetail(GetSwimLaneDetailRequest request) {
         try {
@@ -877,6 +1122,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of GetSwimLaneGroupList  GetSwimLaneGroupListRequest
+     * @return GetSwimLaneGroupListResponse
+     */
     @Override
     public CompletableFuture<GetSwimLaneGroupListResponse> getSwimLaneGroupList(GetSwimLaneGroupListRequest request) {
         try {
@@ -891,6 +1140,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of GetSwimLaneList  GetSwimLaneListRequest
+     * @return GetSwimLaneListResponse
+     */
     @Override
     public CompletableFuture<GetSwimLaneListResponse> getSwimLaneList(GetSwimLaneListRequest request) {
         try {
@@ -906,9 +1159,10 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
-      * @deprecated
-      *
+     * @deprecated OpenAPI GetVmAppMeshInfo is deprecated  * @param request  the request parameters of GetVmAppMeshInfo  GetVmAppMeshInfoRequest
+     * @return GetVmAppMeshInfoResponse
      */
+    @Deprecated
     @Override
     public CompletableFuture<GetVmAppMeshInfoResponse> getVmAppMeshInfo(GetVmAppMeshInfoRequest request) {
         try {
@@ -924,9 +1178,10 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
-      * @deprecated
-      *
+     * @deprecated OpenAPI GetVmMeta is deprecated  * @param request  the request parameters of GetVmMeta  GetVmMetaRequest
+     * @return GetVmMetaResponse
      */
+    @Deprecated
     @Override
     public CompletableFuture<GetVmMetaResponse> getVmMeta(GetVmMetaRequest request) {
         try {
@@ -941,6 +1196,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of GrantUserPermissions  GrantUserPermissionsRequest
+     * @return GrantUserPermissionsResponse
+     */
     @Override
     public CompletableFuture<GrantUserPermissionsResponse> grantUserPermissions(GrantUserPermissionsRequest request) {
         try {
@@ -955,6 +1214,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of ListServiceAccounts  ListServiceAccountsRequest
+     * @return ListServiceAccountsResponse
+     */
     @Override
     public CompletableFuture<ListServiceAccountsResponse> listServiceAccounts(ListServiceAccountsRequest request) {
         try {
@@ -969,6 +1232,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of ListTagResources  ListTagResourcesRequest
+     * @return ListTagResourcesResponse
+     */
     @Override
     public CompletableFuture<ListTagResourcesResponse> listTagResources(ListTagResourcesRequest request) {
         try {
@@ -983,6 +1250,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of ListWaypoints  ListWaypointsRequest
+     * @return ListWaypointsResponse
+     */
     @Override
     public CompletableFuture<ListWaypointsResponse> listWaypoints(ListWaypointsRequest request) {
         try {
@@ -997,6 +1268,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of ModifyApiServerEipResource  ModifyApiServerEipResourceRequest
+     * @return ModifyApiServerEipResourceResponse
+     */
     @Override
     public CompletableFuture<ModifyApiServerEipResourceResponse> modifyApiServerEipResource(ModifyApiServerEipResourceRequest request) {
         try {
@@ -1011,6 +1286,28 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of ModifyPilotEipResource  ModifyPilotEipResourceRequest
+     * @return ModifyPilotEipResourceResponse
+     */
+    @Override
+    public CompletableFuture<ModifyPilotEipResourceResponse> modifyPilotEipResource(ModifyPilotEipResourceRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RPC).setAction("ModifyPilotEipResource").setMethod(HttpMethod.POST).setPathRegex("/").setBodyType(BodyType.JSON).setBodyIsForm(true).setReqBodyType(BodyType.FORM).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(ModifyPilotEipResourceResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<ModifyPilotEipResourceResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
+     * @param request the request parameters of ModifyServiceMeshName  ModifyServiceMeshNameRequest
+     * @return ModifyServiceMeshNameResponse
+     */
     @Override
     public CompletableFuture<ModifyServiceMeshNameResponse> modifyServiceMeshName(ModifyServiceMeshNameRequest request) {
         try {
@@ -1026,8 +1323,11 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
-      * Before you call this operation, make sure that you understand the billing methods of Simple Log Service. For more information, visit the [pricing page](https://www.aliyun.com/price/product?spm=5176.10695662.1119587.4.194c6a67rcPWQH#/sls/detail).
-      *
+     * <b>description</b> :
+     * <p>Before you call this operation, make sure that you understand the billing methods of Simple Log Service. For more information, visit the <a href="https://www.alibabacloud.com/zh/pricing-calculator?_p_lc=1%5C&spm=a2796.7960336.3034855210.1.44e6b91aaSp2M7#/commodity/vm_intl">pricing page</a>.</p>
+     * 
+     * @param request the request parameters of ReActivateAudit  ReActivateAuditRequest
+     * @return ReActivateAuditResponse
      */
     @Override
     public CompletableFuture<ReActivateAuditResponse> reActivateAudit(ReActivateAuditRequest request) {
@@ -1043,6 +1343,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of RemoveClusterFromServiceMesh  RemoveClusterFromServiceMeshRequest
+     * @return RemoveClusterFromServiceMeshResponse
+     */
     @Override
     public CompletableFuture<RemoveClusterFromServiceMeshResponse> removeClusterFromServiceMesh(RemoveClusterFromServiceMeshRequest request) {
         try {
@@ -1058,9 +1362,10 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
-      * @deprecated
-      *
+     * @deprecated OpenAPI RemoveVMFromServiceMesh is deprecated  * @param request  the request parameters of RemoveVMFromServiceMesh  RemoveVMFromServiceMeshRequest
+     * @return RemoveVMFromServiceMeshResponse
      */
+    @Deprecated
     @Override
     public CompletableFuture<RemoveVMFromServiceMeshResponse> removeVMFromServiceMesh(RemoveVMFromServiceMeshRequest request) {
         try {
@@ -1075,6 +1380,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of RevokeKubeconfig  RevokeKubeconfigRequest
+     * @return RevokeKubeconfigResponse
+     */
     @Override
     public CompletableFuture<RevokeKubeconfigResponse> revokeKubeconfig(RevokeKubeconfigRequest request) {
         try {
@@ -1089,6 +1398,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of TagResources  TagResourcesRequest
+     * @return TagResourcesResponse
+     */
     @Override
     public CompletableFuture<TagResourcesResponse> tagResources(TagResourcesRequest request) {
         try {
@@ -1103,6 +1416,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of UntagResources  UntagResourcesRequest
+     * @return UntagResourcesResponse
+     */
     @Override
     public CompletableFuture<UntagResourcesResponse> untagResources(UntagResourcesRequest request) {
         try {
@@ -1117,6 +1434,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of UpdateASMGateway  UpdateASMGatewayRequest
+     * @return UpdateASMGatewayResponse
+     */
     @Override
     public CompletableFuture<UpdateASMGatewayResponse> updateASMGateway(UpdateASMGatewayRequest request) {
         try {
@@ -1131,6 +1452,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of UpdateASMGatewayImportedServices  UpdateASMGatewayImportedServicesRequest
+     * @return UpdateASMGatewayImportedServicesResponse
+     */
     @Override
     public CompletableFuture<UpdateASMGatewayImportedServicesResponse> updateASMGatewayImportedServices(UpdateASMGatewayImportedServicesRequest request) {
         try {
@@ -1145,6 +1470,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of UpdateASMNamespaceFromGuestCluster  UpdateASMNamespaceFromGuestClusterRequest
+     * @return UpdateASMNamespaceFromGuestClusterResponse
+     */
     @Override
     public CompletableFuture<UpdateASMNamespaceFromGuestClusterResponse> updateASMNamespaceFromGuestCluster(UpdateASMNamespaceFromGuestClusterRequest request) {
         try {
@@ -1159,6 +1488,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of UpdateControlPlaneLogConfig  UpdateControlPlaneLogConfigRequest
+     * @return UpdateControlPlaneLogConfigResponse
+     */
     @Override
     public CompletableFuture<UpdateControlPlaneLogConfigResponse> updateControlPlaneLogConfig(UpdateControlPlaneLogConfigRequest request) {
         try {
@@ -1173,6 +1506,28 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of UpdateGuestClusterConfig  UpdateGuestClusterConfigRequest
+     * @return UpdateGuestClusterConfigResponse
+     */
+    @Override
+    public CompletableFuture<UpdateGuestClusterConfigResponse> updateGuestClusterConfig(UpdateGuestClusterConfigRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RPC).setAction("UpdateGuestClusterConfig").setMethod(HttpMethod.POST).setPathRegex("/").setBodyType(BodyType.JSON).setBodyIsForm(true).setReqBodyType(BodyType.FORM).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(UpdateGuestClusterConfigResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<UpdateGuestClusterConfigResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
+     * @param request the request parameters of UpdateIstioGatewayRoutes  UpdateIstioGatewayRoutesRequest
+     * @return UpdateIstioGatewayRoutesResponse
+     */
     @Override
     public CompletableFuture<UpdateIstioGatewayRoutesResponse> updateIstioGatewayRoutes(UpdateIstioGatewayRoutesRequest request) {
         try {
@@ -1187,6 +1542,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of UpdateIstioInjectionConfig  UpdateIstioInjectionConfigRequest
+     * @return UpdateIstioInjectionConfigResponse
+     */
     @Override
     public CompletableFuture<UpdateIstioInjectionConfigResponse> updateIstioInjectionConfig(UpdateIstioInjectionConfigRequest request) {
         try {
@@ -1201,6 +1560,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of UpdateIstioRouteAdditionalStatus  UpdateIstioRouteAdditionalStatusRequest
+     * @return UpdateIstioRouteAdditionalStatusResponse
+     */
     @Override
     public CompletableFuture<UpdateIstioRouteAdditionalStatusResponse> updateIstioRouteAdditionalStatus(UpdateIstioRouteAdditionalStatusRequest request) {
         try {
@@ -1215,6 +1578,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of UpdateMeshCRAggregation  UpdateMeshCRAggregationRequest
+     * @return UpdateMeshCRAggregationResponse
+     */
     @Override
     public CompletableFuture<UpdateMeshCRAggregationResponse> updateMeshCRAggregation(UpdateMeshCRAggregationRequest request) {
         try {
@@ -1229,6 +1596,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of UpdateMeshFeature  UpdateMeshFeatureRequest
+     * @return UpdateMeshFeatureResponse
+     */
     @Override
     public CompletableFuture<UpdateMeshFeatureResponse> updateMeshFeature(UpdateMeshFeatureRequest request) {
         try {
@@ -1243,6 +1614,28 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of UpdateMeshMultiClusterNetwork  UpdateMeshMultiClusterNetworkRequest
+     * @return UpdateMeshMultiClusterNetworkResponse
+     */
+    @Override
+    public CompletableFuture<UpdateMeshMultiClusterNetworkResponse> updateMeshMultiClusterNetwork(UpdateMeshMultiClusterNetworkRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RPC).setAction("UpdateMeshMultiClusterNetwork").setMethod(HttpMethod.POST).setPathRegex("/").setBodyType(BodyType.JSON).setBodyIsForm(true).setReqBodyType(BodyType.FORM).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(UpdateMeshMultiClusterNetworkResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<UpdateMeshMultiClusterNetworkResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
+     * @param request the request parameters of UpdateNamespaceScopeSidecarConfig  UpdateNamespaceScopeSidecarConfigRequest
+     * @return UpdateNamespaceScopeSidecarConfigResponse
+     */
     @Override
     public CompletableFuture<UpdateNamespaceScopeSidecarConfigResponse> updateNamespaceScopeSidecarConfig(UpdateNamespaceScopeSidecarConfigRequest request) {
         try {
@@ -1257,6 +1650,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of UpdateSwimLane  UpdateSwimLaneRequest
+     * @return UpdateSwimLaneResponse
+     */
     @Override
     public CompletableFuture<UpdateSwimLaneResponse> updateSwimLane(UpdateSwimLaneRequest request) {
         try {
@@ -1271,6 +1668,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of UpdateSwimLaneGroup  UpdateSwimLaneGroupRequest
+     * @return UpdateSwimLaneGroupResponse
+     */
     @Override
     public CompletableFuture<UpdateSwimLaneGroupResponse> updateSwimLaneGroup(UpdateSwimLaneGroupRequest request) {
         try {
@@ -1285,6 +1686,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of UpdateWaypoint  UpdateWaypointRequest
+     * @return UpdateWaypointResponse
+     */
     @Override
     public CompletableFuture<UpdateWaypointResponse> updateWaypoint(UpdateWaypointRequest request) {
         try {
@@ -1299,6 +1704,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of UpgradeMeshEditionPartially  UpgradeMeshEditionPartiallyRequest
+     * @return UpgradeMeshEditionPartiallyResponse
+     */
     @Override
     public CompletableFuture<UpgradeMeshEditionPartiallyResponse> upgradeMeshEditionPartially(UpgradeMeshEditionPartiallyRequest request) {
         try {
@@ -1313,6 +1722,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of UpgradeMeshVersion  UpgradeMeshVersionRequest
+     * @return UpgradeMeshVersionResponse
+     */
     @Override
     public CompletableFuture<UpgradeMeshVersionResponse> upgradeMeshVersion(UpgradeMeshVersionRequest request) {
         try {

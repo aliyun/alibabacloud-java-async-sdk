@@ -1,30 +1,35 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.servicemesh20200111.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link GetGrafanaDashboardUrlRequest} extends {@link RequestModel}
  *
  * <p>GetGrafanaDashboardUrlRequest</p>
  */
 public class GetGrafanaDashboardUrlRequest extends Request {
-    @Body
-    @NameInMap("K8sClusterId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("K8sClusterId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String k8sClusterId;
 
-    @Body
-    @NameInMap("ServiceMeshId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("ServiceMeshId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String serviceMeshId;
 
-    @Body
-    @NameInMap("Title")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("Title")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String title;
 
     private GetGrafanaDashboardUrlRequest(Builder builder) {
@@ -42,7 +47,7 @@ public class GetGrafanaDashboardUrlRequest extends Request {
         return builder().build();
     }
 
-    @Override
+@Override
     public Builder toBuilder() {
         return new Builder(this);
     }
@@ -85,7 +90,11 @@ public class GetGrafanaDashboardUrlRequest extends Request {
         } 
 
         /**
-         * The ID of the Container Service for Kubernetes (ACK) or ACK Serverless cluster.
+         * <p>The ID of the Container Service for Kubernetes (ACK) or ACK Serverless cluster.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>c94ca2d27f7aa47ab84ed73e6f084****</p>
          */
         public Builder k8sClusterId(String k8sClusterId) {
             this.putBodyParameter("K8sClusterId", k8sClusterId);
@@ -94,7 +103,11 @@ public class GetGrafanaDashboardUrlRequest extends Request {
         }
 
         /**
-         * The ID of the Service Mesh (ASM) instance.
+         * <p>The ID of the Service Mesh (ASM) instance.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cb8963379255149cb98c8686f274x****</p>
          */
         public Builder serviceMeshId(String serviceMeshId) {
             this.putBodyParameter("ServiceMeshId", serviceMeshId);
@@ -103,7 +116,11 @@ public class GetGrafanaDashboardUrlRequest extends Request {
         }
 
         /**
-         * The name of the dashboard.
+         * <p>The name of the dashboard.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Cloud ASM Istio Http Gateway</p>
          */
         public Builder title(String title) {
             this.putBodyParameter("Title", title);

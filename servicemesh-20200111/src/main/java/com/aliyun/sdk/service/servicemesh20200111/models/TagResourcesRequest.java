@@ -1,36 +1,41 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.servicemesh20200111.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link TagResourcesRequest} extends {@link RequestModel}
  *
  * <p>TagResourcesRequest</p>
  */
 public class TagResourcesRequest extends Request {
-    @Query
-    @NameInMap("RegionId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("RegionId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String regionId;
 
-    @Query
-    @NameInMap("ResourceId")
-    @Validation(required = true)
-    private java.util.List < String > resourceId;
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ResourceId")
+    @com.aliyun.core.annotation.Validation(required = true)
+    private java.util.List<String> resourceId;
 
-    @Query
-    @NameInMap("ResourceType")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ResourceType")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String resourceType;
 
-    @Query
-    @NameInMap("Tag")
-    @Validation(required = true)
-    private java.util.List < Tag> tag;
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Tag")
+    @com.aliyun.core.annotation.Validation(required = true)
+    private java.util.List<Tag> tag;
 
     private TagResourcesRequest(Builder builder) {
         super(builder);
@@ -48,7 +53,7 @@ public class TagResourcesRequest extends Request {
         return builder().build();
     }
 
-    @Override
+@Override
     public Builder toBuilder() {
         return new Builder(this);
     }
@@ -63,7 +68,7 @@ public class TagResourcesRequest extends Request {
     /**
      * @return resourceId
      */
-    public java.util.List < String > getResourceId() {
+    public java.util.List<String> getResourceId() {
         return this.resourceId;
     }
 
@@ -77,15 +82,15 @@ public class TagResourcesRequest extends Request {
     /**
      * @return tag
      */
-    public java.util.List < Tag> getTag() {
+    public java.util.List<Tag> getTag() {
         return this.tag;
     }
 
     public static final class Builder extends Request.Builder<TagResourcesRequest, Builder> {
         private String regionId; 
-        private java.util.List < String > resourceId; 
+        private java.util.List<String> resourceId; 
         private String resourceType; 
-        private java.util.List < Tag> tag; 
+        private java.util.List<Tag> tag; 
 
         private Builder() {
             super();
@@ -100,7 +105,11 @@ public class TagResourcesRequest extends Request {
         } 
 
         /**
-         * The region ID of the Service Mesh (ASM) instance.
+         * <p>The region ID of the Service Mesh (ASM) instance.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-hangzhou</p>
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);
@@ -109,16 +118,21 @@ public class TagResourcesRequest extends Request {
         }
 
         /**
-         * The IDs of the ASM instances.
+         * <p>The IDs of the ASM instances.</p>
+         * <p>This parameter is required.</p>
          */
-        public Builder resourceId(java.util.List < String > resourceId) {
+        public Builder resourceId(java.util.List<String> resourceId) {
             this.putQueryParameter("ResourceId", resourceId);
             this.resourceId = resourceId;
             return this;
         }
 
         /**
-         * The resource type. Set the value to `servicemesh`.
+         * <p>The resource type. Set the value to <code>servicemesh</code>.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>servicemesh</p>
          */
         public Builder resourceType(String resourceType) {
             this.putQueryParameter("ResourceType", resourceType);
@@ -127,9 +141,10 @@ public class TagResourcesRequest extends Request {
         }
 
         /**
-         * The tags.
+         * <p>The tags.</p>
+         * <p>This parameter is required.</p>
          */
-        public Builder tag(java.util.List < Tag> tag) {
+        public Builder tag(java.util.List<Tag> tag) {
             this.putQueryParameter("Tag", tag);
             this.tag = tag;
             return this;
@@ -142,13 +157,19 @@ public class TagResourcesRequest extends Request {
 
     } 
 
+    /**
+     * 
+     * {@link TagResourcesRequest} extends {@link TeaModel}
+     *
+     * <p>TagResourcesRequest</p>
+     */
     public static class Tag extends TeaModel {
-        @NameInMap("Key")
-        @Validation(required = true)
+        @com.aliyun.core.annotation.NameInMap("Key")
+        @com.aliyun.core.annotation.Validation(required = true)
         private String key;
 
-        @NameInMap("Value")
-        @Validation(required = true)
+        @com.aliyun.core.annotation.NameInMap("Value")
+        @com.aliyun.core.annotation.Validation(required = true)
         private String value;
 
         private Tag(Builder builder) {
@@ -182,17 +203,28 @@ public class TagResourcesRequest extends Request {
             private String key; 
             private String value; 
 
+            private Builder() {
+            } 
+
+            private Builder(Tag model) {
+                this.key = model.key;
+                this.value = model.value;
+            } 
+
             /**
-             * The tag keys.
-             * <p>
+             * <p>The tag keys.</p>
+             * <p>The following limits apply:</p>
+             * <ul>
+             * <li>The key of tag N cannot be an empty string.</li>
+             * <li>Valid values of N: 1 to 20.</li>
+             * <li>The tag key can be up to 128 characters in length.</li>
+             * <li>The tag key cannot start with <code>aliyun</code> or <code>acs:</code>.</li>
+             * <li>The tag key cannot contain <code>http://</code> or <code>https://</code>.</li>
+             * </ul>
+             * <p>This parameter is required.</p>
              * 
-             * The following limits apply:
-             * 
-             * *   The key of tag N cannot be an empty string.
-             * *   Valid values of N: 1 to 20.
-             * *   The tag key can be up to 128 characters in length.
-             * *   The tag key cannot start with `aliyun` or `acs:`.
-             * *   The tag key cannot contain `http://` or `https://`.
+             * <strong>example:</strong>
+             * <p>test</p>
              */
             public Builder key(String key) {
                 this.key = key;
@@ -200,15 +232,18 @@ public class TagResourcesRequest extends Request {
             }
 
             /**
-             * The tag values.
-             * <p>
+             * <p>The tag values.</p>
+             * <p>The following limits apply:</p>
+             * <ul>
+             * <li>The value of tag N cannot be an empty string.</li>
+             * <li>Valid values of N: 1 to 20.</li>
+             * <li>The tag value can be up to 128 characters in length.</li>
+             * <li>The tag value cannot contain <code>http://</code> or <code>https://</code>.</li>
+             * </ul>
+             * <p>This parameter is required.</p>
              * 
-             * The following limits apply:
-             * 
-             * *   The value of tag N cannot be an empty string.
-             * *   Valid values of N: 1 to 20.
-             * *   The tag value can be up to 128 characters in length.
-             * *   The tag value cannot contain `http://` or `https://`.
+             * <strong>example:</strong>
+             * <p>yahaha</p>
              */
             public Builder value(String value) {
                 this.value = value;

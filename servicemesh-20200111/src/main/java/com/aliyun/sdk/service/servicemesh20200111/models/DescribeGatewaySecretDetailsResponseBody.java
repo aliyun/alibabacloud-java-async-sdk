@@ -1,21 +1,26 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.servicemesh20200111.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeGatewaySecretDetailsResponseBody} extends {@link TeaModel}
  *
  * <p>DescribeGatewaySecretDetailsResponseBody</p>
  */
 public class DescribeGatewaySecretDetailsResponseBody extends TeaModel {
-    @NameInMap("GatewaySecretDetails")
-    private java.util.List < GatewaySecretDetails> gatewaySecretDetails;
+    @com.aliyun.core.annotation.NameInMap("GatewaySecretDetails")
+    private java.util.List<GatewaySecretDetails> gatewaySecretDetails;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
     private DescribeGatewaySecretDetailsResponseBody(Builder builder) {
@@ -31,10 +36,14 @@ public class DescribeGatewaySecretDetailsResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return gatewaySecretDetails
      */
-    public java.util.List < GatewaySecretDetails> getGatewaySecretDetails() {
+    public java.util.List<GatewaySecretDetails> getGatewaySecretDetails() {
         return this.gatewaySecretDetails;
     }
 
@@ -46,19 +55,30 @@ public class DescribeGatewaySecretDetailsResponseBody extends TeaModel {
     }
 
     public static final class Builder {
-        private java.util.List < GatewaySecretDetails> gatewaySecretDetails; 
+        private java.util.List<GatewaySecretDetails> gatewaySecretDetails; 
         private String requestId; 
 
+        private Builder() {
+        } 
+
+        private Builder(DescribeGatewaySecretDetailsResponseBody model) {
+            this.gatewaySecretDetails = model.gatewaySecretDetails;
+            this.requestId = model.requestId;
+        } 
+
         /**
-         * The detailed information about the secret of the ASM gateway.
+         * <p>The detailed information about the secret of the ASM gateway.</p>
          */
-        public Builder gatewaySecretDetails(java.util.List < GatewaySecretDetails> gatewaySecretDetails) {
+        public Builder gatewaySecretDetails(java.util.List<GatewaySecretDetails> gatewaySecretDetails) {
             this.gatewaySecretDetails = gatewaySecretDetails;
             return this;
         }
 
         /**
-         * The request ID.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>31d3a0f0-07ed-4f6e-9004-1804498c****</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -71,26 +91,32 @@ public class DescribeGatewaySecretDetailsResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link DescribeGatewaySecretDetailsResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeGatewaySecretDetailsResponseBody</p>
+     */
     public static class GatewaySecretDetails extends TeaModel {
-        @NameInMap("ExpiredTime")
+        @com.aliyun.core.annotation.NameInMap("ExpiredTime")
         private String expiredTime;
 
-        @NameInMap("GatewayName")
+        @com.aliyun.core.annotation.NameInMap("GatewayName")
         private String gatewayName;
 
-        @NameInMap("IssueTime")
+        @com.aliyun.core.annotation.NameInMap("IssueTime")
         private String issueTime;
 
-        @NameInMap("Message")
+        @com.aliyun.core.annotation.NameInMap("Message")
         private String message;
 
-        @NameInMap("SNI")
+        @com.aliyun.core.annotation.NameInMap("SNI")
         private String SNI;
 
-        @NameInMap("SecretName")
+        @com.aliyun.core.annotation.NameInMap("SecretName")
         private String secretName;
 
-        @NameInMap("State")
+        @com.aliyun.core.annotation.NameInMap("State")
         private String state;
 
         private GatewaySecretDetails(Builder builder) {
@@ -169,8 +195,24 @@ public class DescribeGatewaySecretDetailsResponseBody extends TeaModel {
             private String secretName; 
             private String state; 
 
+            private Builder() {
+            } 
+
+            private Builder(GatewaySecretDetails model) {
+                this.expiredTime = model.expiredTime;
+                this.gatewayName = model.gatewayName;
+                this.issueTime = model.issueTime;
+                this.message = model.message;
+                this.SNI = model.SNI;
+                this.secretName = model.secretName;
+                this.state = model.state;
+            } 
+
             /**
-             * The time when the certificate expires.
+             * <p>The time when the certificate expires.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2023-03-03 07:45</p>
              */
             public Builder expiredTime(String expiredTime) {
                 this.expiredTime = expiredTime;
@@ -178,7 +220,10 @@ public class DescribeGatewaySecretDetailsResponseBody extends TeaModel {
             }
 
             /**
-             * The name of the gateway.
+             * <p>The name of the gateway.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>bookinfo-gateway</p>
              */
             public Builder gatewayName(String gatewayName) {
                 this.gatewayName = gatewayName;
@@ -186,7 +231,10 @@ public class DescribeGatewaySecretDetailsResponseBody extends TeaModel {
             }
 
             /**
-             * The time when the certificate was issued.
+             * <p>The time when the certificate was issued.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2022-03-03 07:45</p>
              */
             public Builder issueTime(String issueTime) {
                 this.issueTime = issueTime;
@@ -194,9 +242,13 @@ public class DescribeGatewaySecretDetailsResponseBody extends TeaModel {
             }
 
             /**
-             * *   An error message is returned if the status of the gateway is abnormal. Examples: `tls.crt not exist`, `tls.key not exist`, and `secret type must be kubernetes.io/tls`.
-             * <p>
-             * *   An empty value is returned if the status of the gateway is normal.
+             * <ul>
+             * <li>An error message is returned if the status of the gateway is abnormal. Examples: <code>tls.crt not exist</code>, <code>tls.key not exist</code>, and <code>secret type must be kubernetes.io/tls</code>.</li>
+             * <li>An empty value is returned if the status of the gateway is normal.</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>tls.crt not exist</p>
              */
             public Builder message(String message) {
                 this.message = message;
@@ -204,7 +256,10 @@ public class DescribeGatewaySecretDetailsResponseBody extends TeaModel {
             }
 
             /**
-             * The Server Name Indication (SNI) value.
+             * <p>The Server Name Indication (SNI) value.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>demo.com</p>
              */
             public Builder SNI(String SNI) {
                 this.SNI = SNI;
@@ -212,7 +267,10 @@ public class DescribeGatewaySecretDetailsResponseBody extends TeaModel {
             }
 
             /**
-             * The name of the secret.
+             * <p>The name of the secret.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>demo-secret</p>
              */
             public Builder secretName(String secretName) {
                 this.secretName = secretName;
@@ -220,11 +278,14 @@ public class DescribeGatewaySecretDetailsResponseBody extends TeaModel {
             }
 
             /**
-             * The status of the certificate. Valid values:
-             * <p>
+             * <p>The status of the certificate. Valid values:</p>
+             * <ul>
+             * <li><code>normal</code></li>
+             * <li><code>abnormal</code></li>
+             * </ul>
              * 
-             * *   `normal`
-             * *   `abnormal`
+             * <strong>example:</strong>
+             * <p>normal</p>
              */
             public Builder state(String state) {
                 this.state = state;

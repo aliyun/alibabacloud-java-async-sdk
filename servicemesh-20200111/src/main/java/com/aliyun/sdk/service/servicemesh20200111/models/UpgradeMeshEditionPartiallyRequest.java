@@ -1,41 +1,46 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.servicemesh20200111.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link UpgradeMeshEditionPartiallyRequest} extends {@link RequestModel}
  *
  * <p>UpgradeMeshEditionPartiallyRequest</p>
  */
 public class UpgradeMeshEditionPartiallyRequest extends Request {
-    @Body
-    @NameInMap("ASMGatewayContinue")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("ASMGatewayContinue")
     private Boolean ASMGatewayContinue;
 
-    @Body
-    @NameInMap("ExpectedVersion")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("ExpectedVersion")
     private String expectedVersion;
 
-    @Body
-    @NameInMap("PreCheck")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("PreCheck")
     private Boolean preCheck;
 
-    @Body
-    @NameInMap("ServiceMeshId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("ServiceMeshId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String serviceMeshId;
 
-    @Body
-    @NameInMap("SwitchToPro")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("SwitchToPro")
     @Deprecated
     private Boolean switchToPro;
 
-    @Body
-    @NameInMap("UpgradeGatewayRecords")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("UpgradeGatewayRecords")
     private String upgradeGatewayRecords;
 
     private UpgradeMeshEditionPartiallyRequest(Builder builder) {
@@ -56,7 +61,7 @@ public class UpgradeMeshEditionPartiallyRequest extends Request {
         return builder().build();
     }
 
-    @Override
+@Override
     public Builder toBuilder() {
         return new Builder(this);
     }
@@ -126,11 +131,14 @@ public class UpgradeMeshEditionPartiallyRequest extends Request {
         } 
 
         /**
-         * Specifies whether to upgrade the ASM gateways for the ASM instance. Valid values:
-         * <p>
+         * <p>Specifies whether to upgrade the ASM gateways for the ASM instance. Valid values:</p>
+         * <ul>
+         * <li><code>true</code></li>
+         * <li><code>false</code></li>
+         * </ul>
          * 
-         * *   `true`
-         * *   `false`
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder ASMGatewayContinue(Boolean ASMGatewayContinue) {
             this.putBodyParameter("ASMGatewayContinue", ASMGatewayContinue);
@@ -139,7 +147,10 @@ public class UpgradeMeshEditionPartiallyRequest extends Request {
         }
 
         /**
-         * ExpectedVersion.
+         * <p>The expected version that desired to be upgraded to.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>v1.15.3.118-g4712daf0-aliyun</p>
          */
         public Builder expectedVersion(String expectedVersion) {
             this.putBodyParameter("ExpectedVersion", expectedVersion);
@@ -148,7 +159,10 @@ public class UpgradeMeshEditionPartiallyRequest extends Request {
         }
 
         /**
-         * Specifies whether to perform an upgrade check. If the value of this parameter is set to true, only the upgrade check is performed and the ASM instance is not upgraded.
+         * <p>Specifies whether to perform an upgrade check. If the value of this parameter is set to true, only the upgrade check is performed and the ASM instance is not upgraded.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder preCheck(Boolean preCheck) {
             this.putBodyParameter("PreCheck", preCheck);
@@ -157,7 +171,11 @@ public class UpgradeMeshEditionPartiallyRequest extends Request {
         }
 
         /**
-         * The ASM instance ID.
+         * <p>The ASM instance ID.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>ca04bc38979214bf2882be79d39b4****</p>
          */
         public Builder serviceMeshId(String serviceMeshId) {
             this.putBodyParameter("ServiceMeshId", serviceMeshId);
@@ -166,11 +184,14 @@ public class UpgradeMeshEditionPartiallyRequest extends Request {
         }
 
         /**
-         * Specifies whether to upgrade the ASM instance to Professional Edition. Valid values:
-         * <p>
+         * <p>Specifies whether to upgrade the ASM instance to Professional Edition. Valid values:</p>
+         * <ul>
+         * <li><code>true</code></li>
+         * <li><code>false</code></li>
+         * </ul>
          * 
-         * *   `true`
-         * *   `false`
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder switchToPro(Boolean switchToPro) {
             this.putBodyParameter("SwitchToPro", switchToPro);
@@ -179,7 +200,10 @@ public class UpgradeMeshEditionPartiallyRequest extends Request {
         }
 
         /**
-         * Specifies the ASM gateways to be upgraded. Separate multiple ASM gateways with commas (,).
+         * <p>Specifies the ASM gateways to be upgraded. Separate multiple ASM gateways with commas (,).</p>
+         * 
+         * <strong>example:</strong>
+         * <p>ingressgateway1,ingressgateway2</p>
          */
         public Builder upgradeGatewayRecords(String upgradeGatewayRecords) {
             this.putBodyParameter("UpgradeGatewayRecords", upgradeGatewayRecords);

@@ -1,21 +1,26 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.servicemesh20200111.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeClusterGrafanaResponseBody} extends {@link TeaModel}
  *
  * <p>DescribeClusterGrafanaResponseBody</p>
  */
 public class DescribeClusterGrafanaResponseBody extends TeaModel {
-    @NameInMap("Dashboards")
-    private java.util.List < Dashboards> dashboards;
+    @com.aliyun.core.annotation.NameInMap("Dashboards")
+    private java.util.List<Dashboards> dashboards;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
     private DescribeClusterGrafanaResponseBody(Builder builder) {
@@ -31,10 +36,14 @@ public class DescribeClusterGrafanaResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return dashboards
      */
-    public java.util.List < Dashboards> getDashboards() {
+    public java.util.List<Dashboards> getDashboards() {
         return this.dashboards;
     }
 
@@ -46,19 +55,30 @@ public class DescribeClusterGrafanaResponseBody extends TeaModel {
     }
 
     public static final class Builder {
-        private java.util.List < Dashboards> dashboards; 
+        private java.util.List<Dashboards> dashboards; 
         private String requestId; 
 
+        private Builder() {
+        } 
+
+        private Builder(DescribeClusterGrafanaResponseBody model) {
+            this.dashboards = model.dashboards;
+            this.requestId = model.requestId;
+        } 
+
         /**
-         * The information of Grafana dashboards.
+         * <p>The information about Grafana dashboards.</p>
          */
-        public Builder dashboards(java.util.List < Dashboards> dashboards) {
+        public Builder dashboards(java.util.List<Dashboards> dashboards) {
             this.dashboards = dashboards;
             return this;
         }
 
         /**
-         * The request ID.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>BD65C0AD-D3C6-48D3-8D93-38D2015C****</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -71,11 +91,17 @@ public class DescribeClusterGrafanaResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link DescribeClusterGrafanaResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeClusterGrafanaResponseBody</p>
+     */
     public static class Dashboards extends TeaModel {
-        @NameInMap("Title")
+        @com.aliyun.core.annotation.NameInMap("Title")
         private String title;
 
-        @NameInMap("Url")
+        @com.aliyun.core.annotation.NameInMap("Url")
         private String url;
 
         private Dashboards(Builder builder) {
@@ -109,8 +135,19 @@ public class DescribeClusterGrafanaResponseBody extends TeaModel {
             private String title; 
             private String url; 
 
+            private Builder() {
+            } 
+
+            private Builder(Dashboards model) {
+                this.title = model.title;
+                this.url = model.url;
+            } 
+
             /**
-             * The title of the Grafana dashboard.
+             * <p>The title of the Grafana dashboard.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>test</p>
              */
             public Builder title(String title) {
                 this.title = title;
@@ -118,7 +155,10 @@ public class DescribeClusterGrafanaResponseBody extends TeaModel {
             }
 
             /**
-             * The endpoint of a Grafana dashboard.
+             * <p>The endpoint of the Grafana dashboard.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>test.com</p>
              */
             public Builder url(String url) {
                 this.url = url;

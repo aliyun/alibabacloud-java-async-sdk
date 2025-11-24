@@ -1,34 +1,39 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.servicemesh20200111.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link UpdateControlPlaneLogConfigRequest} extends {@link RequestModel}
  *
  * <p>UpdateControlPlaneLogConfigRequest</p>
  */
 public class UpdateControlPlaneLogConfigRequest extends Request {
-    @Body
-    @NameInMap("Enabled")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("Enabled")
+    @com.aliyun.core.annotation.Validation(required = true)
     private Boolean enabled;
 
-    @Body
-    @NameInMap("LogTTLInDay")
-    @Validation(maximum = 3000, minimum = 1)
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("LogTTLInDay")
+    @com.aliyun.core.annotation.Validation(maximum = 3000, minimum = 1)
     private Integer logTTLInDay;
 
-    @Body
-    @NameInMap("Project")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("Project")
     private String project;
 
-    @Body
-    @NameInMap("ServiceMeshId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("ServiceMeshId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String serviceMeshId;
 
     private UpdateControlPlaneLogConfigRequest(Builder builder) {
@@ -47,7 +52,7 @@ public class UpdateControlPlaneLogConfigRequest extends Request {
         return builder().build();
     }
 
-    @Override
+@Override
     public Builder toBuilder() {
         return new Builder(this);
     }
@@ -99,7 +104,11 @@ public class UpdateControlPlaneLogConfigRequest extends Request {
         } 
 
         /**
-         * Specifies whether to collect control plane logs to Simple Log Service.
+         * <p>Specifies whether to collect control plane logs to Simple Log Service.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>false</p>
          */
         public Builder enabled(Boolean enabled) {
             this.putBodyParameter("Enabled", enabled);
@@ -108,7 +117,10 @@ public class UpdateControlPlaneLogConfigRequest extends Request {
         }
 
         /**
-         * The time to live (TTL) period of the collected logs. Unit: day.
+         * <p>The time to live (TTL) period of the collected logs. Unit: day.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>30</p>
          */
         public Builder logTTLInDay(Integer logTTLInDay) {
             this.putBodyParameter("LogTTLInDay", logTTLInDay);
@@ -117,7 +129,10 @@ public class UpdateControlPlaneLogConfigRequest extends Request {
         }
 
         /**
-         * The name of the Simple Log Service project to which control plane logs are collected.
+         * <p>The name of the Simple Log Service project to which control plane logs are collected.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>aia-asm-deva-sh</p>
          */
         public Builder project(String project) {
             this.putBodyParameter("Project", project);
@@ -126,7 +141,11 @@ public class UpdateControlPlaneLogConfigRequest extends Request {
         }
 
         /**
-         * The ID of the Service Mesh (ASM) instance.
+         * <p>The ID of the Service Mesh (ASM) instance.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>c20667db760fe4ee6910220136624****</p>
          */
         public Builder serviceMeshId(String serviceMeshId) {
             this.putBodyParameter("ServiceMeshId", serviceMeshId);

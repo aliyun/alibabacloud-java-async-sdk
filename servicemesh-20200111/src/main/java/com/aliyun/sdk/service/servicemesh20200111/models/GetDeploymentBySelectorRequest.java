@@ -1,40 +1,45 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.servicemesh20200111.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link GetDeploymentBySelectorRequest} extends {@link RequestModel}
  *
  * <p>GetDeploymentBySelectorRequest</p>
  */
 public class GetDeploymentBySelectorRequest extends Request {
-    @Body
-    @NameInMap("GuestCluster")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("GuestCluster")
     private String guestCluster;
 
-    @Body
-    @NameInMap("LabelSelector")
-    private java.util.Map < String, String > labelSelector;
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("LabelSelector")
+    private java.util.Map<String, String> labelSelector;
 
-    @Body
-    @NameInMap("Limit")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("Limit")
     private Long limit;
 
-    @Body
-    @NameInMap("Mark")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("Mark")
     private String mark;
 
-    @Body
-    @NameInMap("NameSpace")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("NameSpace")
     private String nameSpace;
 
-    @Body
-    @NameInMap("ServiceMeshId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("ServiceMeshId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String serviceMeshId;
 
     private GetDeploymentBySelectorRequest(Builder builder) {
@@ -55,7 +60,7 @@ public class GetDeploymentBySelectorRequest extends Request {
         return builder().build();
     }
 
-    @Override
+@Override
     public Builder toBuilder() {
         return new Builder(this);
     }
@@ -70,7 +75,7 @@ public class GetDeploymentBySelectorRequest extends Request {
     /**
      * @return labelSelector
      */
-    public java.util.Map < String, String > getLabelSelector() {
+    public java.util.Map<String, String> getLabelSelector() {
         return this.labelSelector;
     }
 
@@ -104,7 +109,7 @@ public class GetDeploymentBySelectorRequest extends Request {
 
     public static final class Builder extends Request.Builder<GetDeploymentBySelectorRequest, Builder> {
         private String guestCluster; 
-        private java.util.Map < String, String > labelSelector; 
+        private java.util.Map<String, String> labelSelector; 
         private Long limit; 
         private String mark; 
         private String nameSpace; 
@@ -125,7 +130,10 @@ public class GetDeploymentBySelectorRequest extends Request {
         } 
 
         /**
-         * The name of the cluster.
+         * <p>The name of the cluster.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cbe80a56d07ed45818b4d39273e23****</p>
          */
         public Builder guestCluster(String guestCluster) {
             this.putBodyParameter("GuestCluster", guestCluster);
@@ -134,9 +142,9 @@ public class GetDeploymentBySelectorRequest extends Request {
         }
 
         /**
-         * The label selector information.
+         * <p>The label selector information.</p>
          */
-        public Builder labelSelector(java.util.Map < String, String > labelSelector) {
+        public Builder labelSelector(java.util.Map<String, String> labelSelector) {
             String labelSelectorShrink = shrink(labelSelector, "LabelSelector", "json");
             this.putBodyParameter("LabelSelector", labelSelectorShrink);
             this.labelSelector = labelSelector;
@@ -144,7 +152,10 @@ public class GetDeploymentBySelectorRequest extends Request {
         }
 
         /**
-         * The maximum number of returned data entries.
+         * <p>The maximum number of returned data entries.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10</p>
          */
         public Builder limit(Long limit) {
             this.putBodyParameter("Limit", limit);
@@ -153,7 +164,10 @@ public class GetDeploymentBySelectorRequest extends Request {
         }
 
         /**
-         * The marker of data queried last time.
+         * <p>The marker of data queried last time.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>eyJ2IjoibWV0YS5rOHMuaW8vdjEiLCJydiI6NzgxODk3MCwic3RhcnQiOiJuZ2lueDQ1N1x1MDAw****</p>
          */
         public Builder mark(String mark) {
             this.putBodyParameter("Mark", mark);
@@ -162,7 +176,10 @@ public class GetDeploymentBySelectorRequest extends Request {
         }
 
         /**
-         * The namespace.
+         * <p>The namespace.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>default</p>
          */
         public Builder nameSpace(String nameSpace) {
             this.putBodyParameter("NameSpace", nameSpace);
@@ -171,7 +188,11 @@ public class GetDeploymentBySelectorRequest extends Request {
         }
 
         /**
-         * The ID of the Alibaba Cloud Service Mesh (ASM) instance.
+         * <p>The ID of the Alibaba Cloud Service Mesh (ASM) instance.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>ce9fc65def2aa4c918747b9360fbd****</p>
          */
         public Builder serviceMeshId(String serviceMeshId) {
             this.putBodyParameter("ServiceMeshId", serviceMeshId);

@@ -1,25 +1,30 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.servicemesh20200111.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link GetRegisteredServiceEndpointsResponseBody} extends {@link TeaModel}
  *
  * <p>GetRegisteredServiceEndpointsResponseBody</p>
  */
 public class GetRegisteredServiceEndpointsResponseBody extends TeaModel {
-    @NameInMap("EndPointSlice")
+    @com.aliyun.core.annotation.NameInMap("EndPointSlice")
     private EndPointSlice endPointSlice;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("ServiceEndpoints")
-    private java.util.List < ServiceEndpoints> serviceEndpoints;
+    @com.aliyun.core.annotation.NameInMap("ServiceEndpoints")
+    private java.util.List<ServiceEndpoints> serviceEndpoints;
 
     private GetRegisteredServiceEndpointsResponseBody(Builder builder) {
         this.endPointSlice = builder.endPointSlice;
@@ -33,6 +38,10 @@ public class GetRegisteredServiceEndpointsResponseBody extends TeaModel {
 
     public static GetRegisteredServiceEndpointsResponseBody create() {
         return builder().build();
+    }
+
+    public Builder toBuilder() {
+        return new Builder(this);
     }
 
     /**
@@ -52,17 +61,26 @@ public class GetRegisteredServiceEndpointsResponseBody extends TeaModel {
     /**
      * @return serviceEndpoints
      */
-    public java.util.List < ServiceEndpoints> getServiceEndpoints() {
+    public java.util.List<ServiceEndpoints> getServiceEndpoints() {
         return this.serviceEndpoints;
     }
 
     public static final class Builder {
         private EndPointSlice endPointSlice; 
         private String requestId; 
-        private java.util.List < ServiceEndpoints> serviceEndpoints; 
+        private java.util.List<ServiceEndpoints> serviceEndpoints; 
+
+        private Builder() {
+        } 
+
+        private Builder(GetRegisteredServiceEndpointsResponseBody model) {
+            this.endPointSlice = model.endPointSlice;
+            this.requestId = model.requestId;
+            this.serviceEndpoints = model.serviceEndpoints;
+        } 
 
         /**
-         * The name of the registered service.
+         * <p>The name of the registered service.</p>
          */
         public Builder endPointSlice(EndPointSlice endPointSlice) {
             this.endPointSlice = endPointSlice;
@@ -78,9 +96,9 @@ public class GetRegisteredServiceEndpointsResponseBody extends TeaModel {
         }
 
         /**
-         * The IP address of the registered service.
+         * <p>The IP address of the registered service.</p>
          */
-        public Builder serviceEndpoints(java.util.List < ServiceEndpoints> serviceEndpoints) {
+        public Builder serviceEndpoints(java.util.List<ServiceEndpoints> serviceEndpoints) {
             this.serviceEndpoints = serviceEndpoints;
             return this;
         }
@@ -91,23 +109,29 @@ public class GetRegisteredServiceEndpointsResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link GetRegisteredServiceEndpointsResponseBody} extends {@link TeaModel}
+     *
+     * <p>GetRegisteredServiceEndpointsResponseBody</p>
+     */
     public static class EndpointsDetails extends TeaModel {
-        @NameInMap("Address")
+        @com.aliyun.core.annotation.NameInMap("Address")
         private String address;
 
-        @NameInMap("Hostname")
+        @com.aliyun.core.annotation.NameInMap("Hostname")
         private String hostname;
 
-        @NameInMap("PodName")
+        @com.aliyun.core.annotation.NameInMap("PodName")
         private String podName;
 
-        @NameInMap("Ports")
-        private java.util.List < Integer > ports;
+        @com.aliyun.core.annotation.NameInMap("Ports")
+        private java.util.List<Integer> ports;
 
-        @NameInMap("Region")
+        @com.aliyun.core.annotation.NameInMap("Region")
         private String region;
 
-        @NameInMap("SidecarInjected")
+        @com.aliyun.core.annotation.NameInMap("SidecarInjected")
         private Boolean sidecarInjected;
 
         private EndpointsDetails(Builder builder) {
@@ -151,7 +175,7 @@ public class GetRegisteredServiceEndpointsResponseBody extends TeaModel {
         /**
          * @return ports
          */
-        public java.util.List < Integer > getPorts() {
+        public java.util.List<Integer> getPorts() {
             return this.ports;
         }
 
@@ -173,12 +197,27 @@ public class GetRegisteredServiceEndpointsResponseBody extends TeaModel {
             private String address; 
             private String hostname; 
             private String podName; 
-            private java.util.List < Integer > ports; 
+            private java.util.List<Integer> ports; 
             private String region; 
             private Boolean sidecarInjected; 
 
+            private Builder() {
+            } 
+
+            private Builder(EndpointsDetails model) {
+                this.address = model.address;
+                this.hostname = model.hostname;
+                this.podName = model.podName;
+                this.ports = model.ports;
+                this.region = model.region;
+                this.sidecarInjected = model.sidecarInjected;
+            } 
+
             /**
-             * The port of the registered service.
+             * <p>The port of the registered service.</p>
+             * 
+             * <strong>example:</strong>
+             * <p><code>127.2.**.**</code></p>
              */
             public Builder address(String address) {
                 this.address = address;
@@ -186,7 +225,10 @@ public class GetRegisteredServiceEndpointsResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the region in which the registered service resides.
+             * <p>The ID of the region in which the registered service resides.</p>
+             * 
+             * <strong>example:</strong>
+             * <p><a href="http://www.demo.com">www.demo.com</a></p>
              */
             public Builder hostname(String hostname) {
                 this.hostname = hostname;
@@ -194,7 +236,10 @@ public class GetRegisteredServiceEndpointsResponseBody extends TeaModel {
             }
 
             /**
-             * The IP address of the registered service.
+             * <p>The IP address of the registered service.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>provider-v1-8c86b6898-h***</p>
              */
             public Builder podName(String podName) {
                 this.podName = podName;
@@ -202,19 +247,22 @@ public class GetRegisteredServiceEndpointsResponseBody extends TeaModel {
             }
 
             /**
-             * The host name of the registered service.
+             * <p>The host name of the registered service.</p>
              */
-            public Builder ports(java.util.List < Integer > ports) {
+            public Builder ports(java.util.List<Integer> ports) {
                 this.ports = ports;
                 return this;
             }
 
             /**
-             * Indicates whether sidecar proxies are injected. Valid values:
-             * <p>
+             * <p>Indicates whether sidecar proxies are injected. Valid values:</p>
+             * <ul>
+             * <li><code>true</code>: yes</li>
+             * <li><code>false</code>: no</li>
+             * </ul>
              * 
-             * *   `true`: yes
-             * *   `false`: no
+             * <strong>example:</strong>
+             * <p>cn-hangzhou</p>
              */
             public Builder region(String region) {
                 this.region = region;
@@ -222,7 +270,10 @@ public class GetRegisteredServiceEndpointsResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the request.
+             * <p>The ID of the request.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>false</p>
              */
             public Builder sidecarInjected(Boolean sidecarInjected) {
                 this.sidecarInjected = sidecarInjected;
@@ -236,17 +287,23 @@ public class GetRegisteredServiceEndpointsResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link GetRegisteredServiceEndpointsResponseBody} extends {@link TeaModel}
+     *
+     * <p>GetRegisteredServiceEndpointsResponseBody</p>
+     */
     public static class EndPointSlice extends TeaModel {
-        @NameInMap("EndpointsDetails")
-        private java.util.List < EndpointsDetails> endpointsDetails;
+        @com.aliyun.core.annotation.NameInMap("EndpointsDetails")
+        private java.util.List<EndpointsDetails> endpointsDetails;
 
-        @NameInMap("Location")
+        @com.aliyun.core.annotation.NameInMap("Location")
         private String location;
 
-        @NameInMap("Namespace")
+        @com.aliyun.core.annotation.NameInMap("Namespace")
         private String namespace;
 
-        @NameInMap("ServiceName")
+        @com.aliyun.core.annotation.NameInMap("ServiceName")
         private String serviceName;
 
         private EndPointSlice(Builder builder) {
@@ -267,7 +324,7 @@ public class GetRegisteredServiceEndpointsResponseBody extends TeaModel {
         /**
          * @return endpointsDetails
          */
-        public java.util.List < EndpointsDetails> getEndpointsDetails() {
+        public java.util.List<EndpointsDetails> getEndpointsDetails() {
             return this.endpointsDetails;
         }
 
@@ -293,21 +350,34 @@ public class GetRegisteredServiceEndpointsResponseBody extends TeaModel {
         }
 
         public static final class Builder {
-            private java.util.List < EndpointsDetails> endpointsDetails; 
+            private java.util.List<EndpointsDetails> endpointsDetails; 
             private String location; 
             private String namespace; 
             private String serviceName; 
 
+            private Builder() {
+            } 
+
+            private Builder(EndPointSlice model) {
+                this.endpointsDetails = model.endpointsDetails;
+                this.location = model.location;
+                this.namespace = model.namespace;
+                this.serviceName = model.serviceName;
+            } 
+
             /**
-             * The name of the pod.
+             * <p>The name of the pod.</p>
              */
-            public Builder endpointsDetails(java.util.List < EndpointsDetails> endpointsDetails) {
+            public Builder endpointsDetails(java.util.List<EndpointsDetails> endpointsDetails) {
                 this.endpointsDetails = endpointsDetails;
                 return this;
             }
 
             /**
-             * The details of the endpoint of the registered service.
+             * <p>The details of the endpoint of the registered service.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>MESH_INTERNAL</p>
              */
             public Builder location(String location) {
                 this.location = location;
@@ -315,11 +385,14 @@ public class GetRegisteredServiceEndpointsResponseBody extends TeaModel {
             }
 
             /**
-             * The location of the registered service. Valid values:
-             * <p>
+             * <p>The location of the registered service. Valid values:</p>
+             * <ul>
+             * <li><code>MESH_INTERNAL</code>: The service is deployed inside the ASM instance.</li>
+             * <li><code>MESH_EXTERNAL</code>: The service is deployed outside the ASM instance.</li>
+             * </ul>
              * 
-             * *   `MESH_INTERNAL`: The service is deployed inside the ASM instance.
-             * *   `MESH_EXTERNAL`: The service is deployed outside the ASM instance.
+             * <strong>example:</strong>
+             * <p>default</p>
              */
             public Builder namespace(String namespace) {
                 this.namespace = namespace;
@@ -327,7 +400,10 @@ public class GetRegisteredServiceEndpointsResponseBody extends TeaModel {
             }
 
             /**
-             * The name of the namespace.
+             * <p>The name of the namespace.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>reviews</p>
              */
             public Builder serviceName(String serviceName) {
                 this.serviceName = serviceName;
@@ -341,11 +417,17 @@ public class GetRegisteredServiceEndpointsResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link GetRegisteredServiceEndpointsResponseBody} extends {@link TeaModel}
+     *
+     * <p>GetRegisteredServiceEndpointsResponseBody</p>
+     */
     public static class ServiceEndpoints extends TeaModel {
-        @NameInMap("Address")
+        @com.aliyun.core.annotation.NameInMap("Address")
         private String address;
 
-        @NameInMap("ClusterId")
+        @com.aliyun.core.annotation.NameInMap("ClusterId")
         private String clusterId;
 
         private ServiceEndpoints(Builder builder) {
@@ -379,8 +461,19 @@ public class GetRegisteredServiceEndpointsResponseBody extends TeaModel {
             private String address; 
             private String clusterId; 
 
+            private Builder() {
+            } 
+
+            private Builder(ServiceEndpoints model) {
+                this.address = model.address;
+                this.clusterId = model.clusterId;
+            } 
+
             /**
-             * The ID of the cluster on the data plane.
+             * <p>The ID of the cluster on the data plane.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>192.168.25.153</p>
              */
             public Builder address(String address) {
                 this.address = address;
@@ -388,7 +481,10 @@ public class GetRegisteredServiceEndpointsResponseBody extends TeaModel {
             }
 
             /**
-             * The details of the endpoints of the registered service.
+             * <p>The details of the endpoints of the registered service.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>c80f45444b3da447da60a911390c2****</p>
              */
             public Builder clusterId(String clusterId) {
                 this.clusterId = clusterId;

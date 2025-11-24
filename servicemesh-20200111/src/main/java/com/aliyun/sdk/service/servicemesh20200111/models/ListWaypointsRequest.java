@@ -1,41 +1,46 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.servicemesh20200111.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ListWaypointsRequest} extends {@link RequestModel}
  *
  * <p>ListWaypointsRequest</p>
  */
 public class ListWaypointsRequest extends Request {
-    @Body
-    @NameInMap("ClusterId")
-    @Validation(required = true, minLength = 1)
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("ClusterId")
+    @com.aliyun.core.annotation.Validation(required = true, minLength = 1)
     private String clusterId;
 
-    @Body
-    @NameInMap("Continue")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("Continue")
     private String _continue;
 
-    @Body
-    @NameInMap("Limit")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("Limit")
     private Long limit;
 
-    @Body
-    @NameInMap("Name")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("Name")
     private String name;
 
-    @Body
-    @NameInMap("Namespace")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("Namespace")
     private String namespace;
 
-    @Body
-    @NameInMap("ServiceMeshId")
-    @Validation(required = true, minLength = 1)
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("ServiceMeshId")
+    @com.aliyun.core.annotation.Validation(required = true, minLength = 1)
     private String serviceMeshId;
 
     private ListWaypointsRequest(Builder builder) {
@@ -56,7 +61,7 @@ public class ListWaypointsRequest extends Request {
         return builder().build();
     }
 
-    @Override
+@Override
     public Builder toBuilder() {
         return new Builder(this);
     }
@@ -126,7 +131,11 @@ public class ListWaypointsRequest extends Request {
         } 
 
         /**
-         * The ID of the cluster on the data plane.
+         * <p>The ID of the cluster on the data plane.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>ce3c25e247da24f3aab9b7edfae83****</p>
          */
         public Builder clusterId(String clusterId) {
             this.putBodyParameter("ClusterId", clusterId);
@@ -135,7 +144,10 @@ public class ListWaypointsRequest extends Request {
         }
 
         /**
-         * Continue.
+         * <p>Used in conjunction with Limit, it is used to query waypoints starting from a specified offset. When calling for the first time, no need to care abount it. If the Continue in the returned result is not empty, it means that there is still data that has not been returned, and you need to continue the call with the returned Continue.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>eyJ2IjoibWV0YS5rOHMuaW8vdjEiLCJydiI6MjY4Njc5Miwic3RhcnQiOiJkZWZhdWx0L2Jvb2tpbmZvLXByb2R1Y3RwYWdlXHUwMDAwIn0</p>
          */
         public Builder _continue(String _continue) {
             this.putBodyParameter("Continue", _continue);
@@ -144,7 +156,10 @@ public class ListWaypointsRequest extends Request {
         }
 
         /**
-         * Limit.
+         * <p>Limit the number of waypoints returned.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>30</p>
          */
         public Builder limit(Long limit) {
             this.putBodyParameter("Limit", limit);
@@ -153,7 +168,10 @@ public class ListWaypointsRequest extends Request {
         }
 
         /**
-         * Name.
+         * <p>Waypoint which you want to get. If empty, return all waypoints.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>bookinfo-productpage</p>
          */
         public Builder name(String name) {
             this.putBodyParameter("Name", name);
@@ -162,7 +180,10 @@ public class ListWaypointsRequest extends Request {
         }
 
         /**
-         * The namespace.
+         * <p>The namespace.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>default</p>
          */
         public Builder namespace(String namespace) {
             this.putBodyParameter("Namespace", namespace);
@@ -171,7 +192,11 @@ public class ListWaypointsRequest extends Request {
         }
 
         /**
-         * The Service Mesh (ASM) instance ID.
+         * <p>The Service Mesh (ASM) instance ID.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>c08ba3fd1e6484b0f8cc1ad8fe10d****</p>
          */
         public Builder serviceMeshId(String serviceMeshId) {
             this.putBodyParameter("ServiceMeshId", serviceMeshId);

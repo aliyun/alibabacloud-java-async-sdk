@@ -1,24 +1,29 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.servicemesh20200111.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeServiceMeshClustersResponseBody} extends {@link TeaModel}
  *
  * <p>DescribeServiceMeshClustersResponseBody</p>
  */
 public class DescribeServiceMeshClustersResponseBody extends TeaModel {
-    @NameInMap("Clusters")
-    private java.util.List < Clusters> clusters;
+    @com.aliyun.core.annotation.NameInMap("Clusters")
+    private java.util.List<Clusters> clusters;
 
-    @NameInMap("NumberOfClusters")
+    @com.aliyun.core.annotation.NameInMap("NumberOfClusters")
     private Long numberOfClusters;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
     private DescribeServiceMeshClustersResponseBody(Builder builder) {
@@ -35,10 +40,14 @@ public class DescribeServiceMeshClustersResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return clusters
      */
-    public java.util.List < Clusters> getClusters() {
+    public java.util.List<Clusters> getClusters() {
         return this.clusters;
     }
 
@@ -57,20 +66,32 @@ public class DescribeServiceMeshClustersResponseBody extends TeaModel {
     }
 
     public static final class Builder {
-        private java.util.List < Clusters> clusters; 
+        private java.util.List<Clusters> clusters; 
         private Long numberOfClusters; 
         private String requestId; 
 
+        private Builder() {
+        } 
+
+        private Builder(DescribeServiceMeshClustersResponseBody model) {
+            this.clusters = model.clusters;
+            this.numberOfClusters = model.numberOfClusters;
+            this.requestId = model.requestId;
+        } 
+
         /**
-         * The queried clusters.
+         * <p>The queried clusters.</p>
          */
-        public Builder clusters(java.util.List < Clusters> clusters) {
+        public Builder clusters(java.util.List<Clusters> clusters) {
             this.clusters = clusters;
             return this;
         }
 
         /**
-         * NumberOfClusters.
+         * <p>The total number of ACK clusters in the current Region.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>5</p>
          */
         public Builder numberOfClusters(Long numberOfClusters) {
             this.numberOfClusters = numberOfClusters;
@@ -78,7 +99,10 @@ public class DescribeServiceMeshClustersResponseBody extends TeaModel {
         }
 
         /**
-         * The request ID.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>31d3a0f0-07ed-4f6e-9004-1804498c****</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -91,50 +115,56 @@ public class DescribeServiceMeshClustersResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link DescribeServiceMeshClustersResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeServiceMeshClustersResponseBody</p>
+     */
     public static class Clusters extends TeaModel {
-        @NameInMap("ClusterDomain")
+        @com.aliyun.core.annotation.NameInMap("ClusterDomain")
         private String clusterDomain;
 
-        @NameInMap("ClusterId")
+        @com.aliyun.core.annotation.NameInMap("ClusterId")
         private String clusterId;
 
-        @NameInMap("ClusterType")
+        @com.aliyun.core.annotation.NameInMap("ClusterType")
         private String clusterType;
 
-        @NameInMap("CreationTime")
+        @com.aliyun.core.annotation.NameInMap("CreationTime")
         private String creationTime;
 
-        @NameInMap("ErrorMessage")
+        @com.aliyun.core.annotation.NameInMap("ErrorMessage")
         private String errorMessage;
 
-        @NameInMap("ForbiddenFlag")
+        @com.aliyun.core.annotation.NameInMap("ForbiddenFlag")
         private Long forbiddenFlag;
 
-        @NameInMap("ForbiddenInfo")
+        @com.aliyun.core.annotation.NameInMap("ForbiddenInfo")
         private String forbiddenInfo;
 
-        @NameInMap("Name")
+        @com.aliyun.core.annotation.NameInMap("Name")
         private String name;
 
-        @NameInMap("RegionId")
+        @com.aliyun.core.annotation.NameInMap("RegionId")
         private String regionId;
 
-        @NameInMap("ServiceMeshId")
+        @com.aliyun.core.annotation.NameInMap("ServiceMeshId")
         private String serviceMeshId;
 
-        @NameInMap("SgId")
+        @com.aliyun.core.annotation.NameInMap("SgId")
         private String sgId;
 
-        @NameInMap("State")
+        @com.aliyun.core.annotation.NameInMap("State")
         private String state;
 
-        @NameInMap("UpdateTime")
+        @com.aliyun.core.annotation.NameInMap("UpdateTime")
         private String updateTime;
 
-        @NameInMap("Version")
+        @com.aliyun.core.annotation.NameInMap("Version")
         private String version;
 
-        @NameInMap("VpcId")
+        @com.aliyun.core.annotation.NameInMap("VpcId")
         private String vpcId;
 
         private Clusters(Builder builder) {
@@ -285,8 +315,32 @@ public class DescribeServiceMeshClustersResponseBody extends TeaModel {
             private String version; 
             private String vpcId; 
 
+            private Builder() {
+            } 
+
+            private Builder(Clusters model) {
+                this.clusterDomain = model.clusterDomain;
+                this.clusterId = model.clusterId;
+                this.clusterType = model.clusterType;
+                this.creationTime = model.creationTime;
+                this.errorMessage = model.errorMessage;
+                this.forbiddenFlag = model.forbiddenFlag;
+                this.forbiddenInfo = model.forbiddenInfo;
+                this.name = model.name;
+                this.regionId = model.regionId;
+                this.serviceMeshId = model.serviceMeshId;
+                this.sgId = model.sgId;
+                this.state = model.state;
+                this.updateTime = model.updateTime;
+                this.version = model.version;
+                this.vpcId = model.vpcId;
+            } 
+
             /**
-             * The domain name of the cluster.
+             * <p>The domain name of the cluster.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>c.com</p>
              */
             public Builder clusterDomain(String clusterDomain) {
                 this.clusterDomain = clusterDomain;
@@ -294,7 +348,10 @@ public class DescribeServiceMeshClustersResponseBody extends TeaModel {
             }
 
             /**
-             * The cluster ID.
+             * <p>The cluster ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>c80f45444b3da447da60a911390c2****</p>
              */
             public Builder clusterId(String clusterId) {
                 this.clusterId = clusterId;
@@ -302,7 +359,10 @@ public class DescribeServiceMeshClustersResponseBody extends TeaModel {
             }
 
             /**
-             * The cluster type.
+             * <p>The cluster type.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Ask</p>
              */
             public Builder clusterType(String clusterType) {
                 this.clusterType = clusterType;
@@ -310,7 +370,10 @@ public class DescribeServiceMeshClustersResponseBody extends TeaModel {
             }
 
             /**
-             * The time when the cluster was created.
+             * <p>The time when the cluster was created.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2020-05-12T15:38:16+08:00</p>
              */
             public Builder creationTime(String creationTime) {
                 this.creationTime = creationTime;
@@ -318,7 +381,10 @@ public class DescribeServiceMeshClustersResponseBody extends TeaModel {
             }
 
             /**
-             * The error message about the cluster.
+             * <p>The error message about the cluster.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>fail</p>
              */
             public Builder errorMessage(String errorMessage) {
                 this.errorMessage = errorMessage;
@@ -326,14 +392,17 @@ public class DescribeServiceMeshClustersResponseBody extends TeaModel {
             }
 
             /**
-             * Indicates that the cluster is available or the reason why the cluster cannot be added to the ASM instance. Valid values:
-             * <p>
+             * <p>Indicates that the cluster is available or the reason why the cluster cannot be added to the ASM instance. Valid values:</p>
+             * <ul>
+             * <li><code>0</code>: The cluster can be added to the ASM instance.</li>
+             * <li><code>1</code>: The cluster cannot be added to the ASM instance because you do not have administrator permissions on the cluster.</li>
+             * <li><code>2</code>: The cluster cannot be added to the ASM instance because the cluster and the ASM instance reside in different VPCs between which no private connections are built.</li>
+             * <li><code>3</code>: The CIDR block of the cluster conflicts with that of the ASM instance.</li>
+             * <li><code>4</code>: The cluster has a namespace that is named istio-system.</li>
+             * </ul>
              * 
-             * *   `0`: The cluster can be added to the ASM instance.
-             * *   `1`: The cluster cannot be added to the ASM instance because you do not have administrator permissions on the cluster.
-             * *   `2`: The cluster cannot be added to the ASM instance because the cluster and the ASM instance reside in different VPCs between which no private connections are built.
-             * *   `3`: The CIDR block of the cluster conflicts with that of the ASM instance.
-             * *   `4`: The cluster has a namespace that is named istio-system.
+             * <strong>example:</strong>
+             * <p>0</p>
              */
             public Builder forbiddenFlag(Long forbiddenFlag) {
                 this.forbiddenFlag = forbiddenFlag;
@@ -341,31 +410,32 @@ public class DescribeServiceMeshClustersResponseBody extends TeaModel {
             }
 
             /**
-             * The reason why the cluster on the data plane cannot be added to the ASM instance. The value is a JSON string in the following format:
-             * <p>
+             * <p>The reason why the cluster on the data plane cannot be added to the ASM instance. The value is a JSON string in the following format:</p>
+             * <pre><code>[
+             *   {
+             *     &quot;cluster&quot;: &quot;cdd55bd6e054b4c6ca18ec02614******&quot;,
+             *     &quot;object&quot;: &quot;Pod&quot;,
+             *     &quot;cidr&quot;: &quot;172.16.0.0/24&quot;
+             *   },
+             *   {
+             *     &quot;cluster&quot;: &quot;cfa37fdf7cb1641e1976f8293ac******&quot;,
+             *     &quot;object&quot;: &quot;Pod&quot;,
+             *     &quot;cidr&quot;: &quot;172.16.0.0/24&quot;
+             *   }
+             * ]
+             * </code></pre>
+             * <p>In the preceding example, the CIDR block <code>172.16.0.0/24</code> of the pod in the <code>cdd55bd6e054b4c6ca18ec02614******</code> cluster conflicts with the CIDR block <code>172.16.0.0/24</code> of the pod in the <code>cfa37fdf7cb1641e1976f8293ac******</code> cluster.</p>
+             * <p>Valid values of the <code>object</code> parameter:</p>
+             * <ul>
+             * <li><code>Pod</code></li>
+             * <li><code>Service</code></li>
+             * <li><code>VSwitch</code></li>
+             * <li><code>VPC</code></li>
+             * <li><code>VPC CIDR</code></li>
+             * </ul>
              * 
-             *     [
-             *       {
-             *         "cluster": "cdd55bd6e054b4c6ca18ec02614******",
-             *         "object": "Pod",
-             *         "cidr": "172.16.0.0/24"
-             *       },
-             *       {
-             *         "cluster": "cfa37fdf7cb1641e1976f8293ac******",
-             *         "object": "Pod",
-             *         "cidr": "172.16.0.0/24"
-             *       }
-             *     ]
-             * 
-             * In the preceding example, the CIDR block `172.16.0.0/24` of the pod in the `cdd55bd6e054b4c6ca18ec02614******` cluster conflicts with the CIDR block `172.16.0.0/24` of the pod in the `cfa37fdf7cb1641e1976f8293ac******` cluster.
-             * 
-             * Valid values of the `object` parameter:
-             * 
-             * *   `Pod`
-             * *   `Service`
-             * *   `VSwitch`
-             * *   `VPC`
-             * *   `VPC CIDR`
+             * <strong>example:</strong>
+             * <p>[{&quot;cluster&quot;:&quot;cdd55bd6e054b4c6ca18ec02614******&quot;, &quot;object&quot;:&quot;Pod&quot;, &quot;cidr&quot;:&quot;172.16.0.0/24&quot;},{&quot;cluster&quot;:&quot;cfa37fdf7cb1641e1976f8293ac******&quot;, &quot;object&quot;:&quot;Pod&quot;, &quot;cidr&quot;:&quot;172.16.0.0/24&quot;}]</p>
              */
             public Builder forbiddenInfo(String forbiddenInfo) {
                 this.forbiddenInfo = forbiddenInfo;
@@ -373,7 +443,10 @@ public class DescribeServiceMeshClustersResponseBody extends TeaModel {
             }
 
             /**
-             * The name of the cluster.
+             * <p>The name of the cluster.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>ask1</p>
              */
             public Builder name(String name) {
                 this.name = name;
@@ -381,7 +454,10 @@ public class DescribeServiceMeshClustersResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the region in which the cluster resides.
+             * <p>The ID of the region in which the cluster resides.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>cn-hangzhou</p>
              */
             public Builder regionId(String regionId) {
                 this.regionId = regionId;
@@ -389,7 +465,10 @@ public class DescribeServiceMeshClustersResponseBody extends TeaModel {
             }
 
             /**
-             * The ASM instance ID.
+             * <p>The ASM instance ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>cb8963379255149cb98c8686f274x****</p>
              */
             public Builder serviceMeshId(String serviceMeshId) {
                 this.serviceMeshId = serviceMeshId;
@@ -397,7 +476,10 @@ public class DescribeServiceMeshClustersResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the security group.
+             * <p>The ID of the security group.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>sg-bp197668l6iupljy****</p>
              */
             public Builder sgId(String sgId) {
                 this.sgId = sgId;
@@ -405,14 +487,17 @@ public class DescribeServiceMeshClustersResponseBody extends TeaModel {
             }
 
             /**
-             * The state of the cluster. Valid values:
-             * <p>
+             * <p>The state of the cluster. Valid values:</p>
+             * <ul>
+             * <li><code>running</code>: The cluster is running.</li>
+             * <li><code>starting</code>: The cluster is starting.</li>
+             * <li><code>stopping</code>: The cluster is being stopped.</li>
+             * <li><code>stopped</code>: The cluster is stopped.</li>
+             * <li><code>failed</code>: The cluster fails to be run.</li>
+             * </ul>
              * 
-             * *   `running`: The cluster is running.
-             * *   `starting`: The cluster is starting.
-             * *   `stopping`: The cluster is being stopped.
-             * *   `stopped`: The cluster is stopped.
-             * *   `failed`: The cluster fails to be run.
+             * <strong>example:</strong>
+             * <p>running</p>
              */
             public Builder state(String state) {
                 this.state = state;
@@ -420,7 +505,10 @@ public class DescribeServiceMeshClustersResponseBody extends TeaModel {
             }
 
             /**
-             * The time when the cluster was last modified.
+             * <p>The time when the cluster was last modified.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2020-05-12T15:38:16+08:00</p>
              */
             public Builder updateTime(String updateTime) {
                 this.updateTime = updateTime;
@@ -428,7 +516,10 @@ public class DescribeServiceMeshClustersResponseBody extends TeaModel {
             }
 
             /**
-             * The version number of the cluster.
+             * <p>The version number of the cluster.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>v1.16.6-aliyun.1</p>
              */
             public Builder version(String version) {
                 this.version = version;
@@ -436,7 +527,10 @@ public class DescribeServiceMeshClustersResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the virtual private cloud (VPC).
+             * <p>The ID of the virtual private cloud (VPC).</p>
+             * 
+             * <strong>example:</strong>
+             * <p>vpc-8vbrwmt95b4zf6wf7****</p>
              */
             public Builder vpcId(String vpcId) {
                 this.vpcId = vpcId;

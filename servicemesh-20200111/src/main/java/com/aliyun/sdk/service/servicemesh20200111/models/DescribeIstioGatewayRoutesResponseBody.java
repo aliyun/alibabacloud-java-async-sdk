@@ -1,21 +1,26 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.servicemesh20200111.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeIstioGatewayRoutesResponseBody} extends {@link TeaModel}
  *
  * <p>DescribeIstioGatewayRoutesResponseBody</p>
  */
 public class DescribeIstioGatewayRoutesResponseBody extends TeaModel {
-    @NameInMap("ManagementRoutes")
-    private java.util.List < ManagementRoutes> managementRoutes;
+    @com.aliyun.core.annotation.NameInMap("ManagementRoutes")
+    private java.util.List<ManagementRoutes> managementRoutes;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
     private DescribeIstioGatewayRoutesResponseBody(Builder builder) {
@@ -31,10 +36,14 @@ public class DescribeIstioGatewayRoutesResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return managementRoutes
      */
-    public java.util.List < ManagementRoutes> getManagementRoutes() {
+    public java.util.List<ManagementRoutes> getManagementRoutes() {
         return this.managementRoutes;
     }
 
@@ -46,19 +55,30 @@ public class DescribeIstioGatewayRoutesResponseBody extends TeaModel {
     }
 
     public static final class Builder {
-        private java.util.List < ManagementRoutes> managementRoutes; 
+        private java.util.List<ManagementRoutes> managementRoutes; 
         private String requestId; 
 
+        private Builder() {
+        } 
+
+        private Builder(DescribeIstioGatewayRoutesResponseBody model) {
+            this.managementRoutes = model.managementRoutes;
+            this.requestId = model.requestId;
+        } 
+
         /**
-         * The routing rules.
+         * <p>The routing rules.</p>
          */
-        public Builder managementRoutes(java.util.List < ManagementRoutes> managementRoutes) {
+        public Builder managementRoutes(java.util.List<ManagementRoutes> managementRoutes) {
             this.managementRoutes = managementRoutes;
             return this;
         }
 
         /**
-         * The request ID.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>31d3a0f0-07ed-4f6e-9004-1804498c****</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -71,32 +91,38 @@ public class DescribeIstioGatewayRoutesResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link DescribeIstioGatewayRoutesResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeIstioGatewayRoutesResponseBody</p>
+     */
     public static class ManagementRoutes extends TeaModel {
-        @NameInMap("ASMGatewayName")
+        @com.aliyun.core.annotation.NameInMap("ASMGatewayName")
         private String ASMGatewayName;
 
-        @NameInMap("Description")
+        @com.aliyun.core.annotation.NameInMap("Description")
         private String description;
 
-        @NameInMap("DestinationHost")
-        private java.util.List < String > destinationHost;
+        @com.aliyun.core.annotation.NameInMap("DestinationHost")
+        private java.util.List<String> destinationHost;
 
-        @NameInMap("DestinationSubSet")
-        private java.util.List < String > destinationSubSet;
+        @com.aliyun.core.annotation.NameInMap("DestinationSubSet")
+        private java.util.List<String> destinationSubSet;
 
-        @NameInMap("Namespace")
+        @com.aliyun.core.annotation.NameInMap("Namespace")
         private String namespace;
 
-        @NameInMap("Priority")
+        @com.aliyun.core.annotation.NameInMap("Priority")
         private Integer priority;
 
-        @NameInMap("RouteName")
+        @com.aliyun.core.annotation.NameInMap("RouteName")
         private String routeName;
 
-        @NameInMap("RoutePath")
+        @com.aliyun.core.annotation.NameInMap("RoutePath")
         private String routePath;
 
-        @NameInMap("Status")
+        @com.aliyun.core.annotation.NameInMap("Status")
         private Integer status;
 
         private ManagementRoutes(Builder builder) {
@@ -136,14 +162,14 @@ public class DescribeIstioGatewayRoutesResponseBody extends TeaModel {
         /**
          * @return destinationHost
          */
-        public java.util.List < String > getDestinationHost() {
+        public java.util.List<String> getDestinationHost() {
             return this.destinationHost;
         }
 
         /**
          * @return destinationSubSet
          */
-        public java.util.List < String > getDestinationSubSet() {
+        public java.util.List<String> getDestinationSubSet() {
             return this.destinationSubSet;
         }
 
@@ -185,16 +211,34 @@ public class DescribeIstioGatewayRoutesResponseBody extends TeaModel {
         public static final class Builder {
             private String ASMGatewayName; 
             private String description; 
-            private java.util.List < String > destinationHost; 
-            private java.util.List < String > destinationSubSet; 
+            private java.util.List<String> destinationHost; 
+            private java.util.List<String> destinationSubSet; 
             private String namespace; 
             private Integer priority; 
             private String routeName; 
             private String routePath; 
             private Integer status; 
 
+            private Builder() {
+            } 
+
+            private Builder(ManagementRoutes model) {
+                this.ASMGatewayName = model.ASMGatewayName;
+                this.description = model.description;
+                this.destinationHost = model.destinationHost;
+                this.destinationSubSet = model.destinationSubSet;
+                this.namespace = model.namespace;
+                this.priority = model.priority;
+                this.routeName = model.routeName;
+                this.routePath = model.routePath;
+                this.status = model.status;
+            } 
+
             /**
-             * The name of the ASM gateway.
+             * <p>The name of the ASM gateway.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>ingressgateway</p>
              */
             public Builder ASMGatewayName(String ASMGatewayName) {
                 this.ASMGatewayName = ASMGatewayName;
@@ -202,7 +246,10 @@ public class DescribeIstioGatewayRoutesResponseBody extends TeaModel {
             }
 
             /**
-             * The description of the routing rule.
+             * <p>The description of the routing rule.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>demo route</p>
              */
             public Builder description(String description) {
                 this.description = description;
@@ -210,23 +257,26 @@ public class DescribeIstioGatewayRoutesResponseBody extends TeaModel {
             }
 
             /**
-             * Destination hosts list.
+             * <p>Destination hosts list.</p>
              */
-            public Builder destinationHost(java.util.List < String > destinationHost) {
+            public Builder destinationHost(java.util.List<String> destinationHost) {
                 this.destinationHost = destinationHost;
                 return this;
             }
 
             /**
-             * Destination subset list.
+             * <p>Destination subset list.</p>
              */
-            public Builder destinationSubSet(java.util.List < String > destinationSubSet) {
+            public Builder destinationSubSet(java.util.List<String> destinationSubSet) {
                 this.destinationSubSet = destinationSubSet;
                 return this;
             }
 
             /**
-             * The namespace.
+             * <p>The namespace.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>istio-demo</p>
              */
             public Builder namespace(String namespace) {
                 this.namespace = namespace;
@@ -234,7 +284,10 @@ public class DescribeIstioGatewayRoutesResponseBody extends TeaModel {
             }
 
             /**
-             * The priority of the routing rule. The value of this parameter is an integer. A smaller value indicates a higher priority.
+             * <p>The priority of the routing rule. The value of this parameter is an integer. A smaller value indicates a higher priority.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder priority(Integer priority) {
                 this.priority = priority;
@@ -242,7 +295,10 @@ public class DescribeIstioGatewayRoutesResponseBody extends TeaModel {
             }
 
             /**
-             * The name of the routing rule.
+             * <p>The name of the routing rule.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>http-route</p>
              */
             public Builder routeName(String routeName) {
                 this.routeName = routeName;
@@ -250,7 +306,10 @@ public class DescribeIstioGatewayRoutesResponseBody extends TeaModel {
             }
 
             /**
-             * The path that is used to match request URLs.
+             * <p>The path that is used to match request URLs.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>/reviews/v1</p>
              */
             public Builder routePath(String routePath) {
                 this.routePath = routePath;
@@ -258,12 +317,15 @@ public class DescribeIstioGatewayRoutesResponseBody extends TeaModel {
             }
 
             /**
-             * The status of the routing rule. Valid values:
-             * <p>
+             * <p>The status of the routing rule. Valid values:</p>
+             * <ul>
+             * <li><code>0</code>: The routing rule is valid.</li>
+             * <li><code>1</code>: The routing rule is invalid.</li>
+             * <li><code>2</code>: An error occurs during the creation or update of the routing rule.</li>
+             * </ul>
              * 
-             * *   `0`: The routing rule is valid.
-             * *   `1`: The routing rule is invalid.
-             * *   `2`: An error occurs during the creation or update of the routing rule.
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder status(Integer status) {
                 this.status = status;

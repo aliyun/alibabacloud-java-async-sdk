@@ -1,24 +1,29 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.servicemesh20200111.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeEipResourcesResponseBody} extends {@link TeaModel}
  *
  * <p>DescribeEipResourcesResponseBody</p>
  */
 public class DescribeEipResourcesResponseBody extends TeaModel {
-    @NameInMap("EipList")
-    private java.util.List < EipList> eipList;
+    @com.aliyun.core.annotation.NameInMap("EipList")
+    private java.util.List<EipList> eipList;
 
-    @NameInMap("PageResult")
+    @com.aliyun.core.annotation.NameInMap("PageResult")
     private PageResult pageResult;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
     private DescribeEipResourcesResponseBody(Builder builder) {
@@ -35,10 +40,14 @@ public class DescribeEipResourcesResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return eipList
      */
-    public java.util.List < EipList> getEipList() {
+    public java.util.List<EipList> getEipList() {
         return this.eipList;
     }
 
@@ -57,20 +66,29 @@ public class DescribeEipResourcesResponseBody extends TeaModel {
     }
 
     public static final class Builder {
-        private java.util.List < EipList> eipList; 
+        private java.util.List<EipList> eipList; 
         private PageResult pageResult; 
         private String requestId; 
 
+        private Builder() {
+        } 
+
+        private Builder(DescribeEipResourcesResponseBody model) {
+            this.eipList = model.eipList;
+            this.pageResult = model.pageResult;
+            this.requestId = model.requestId;
+        } 
+
         /**
-         * The EIPs.
+         * <p>The EIPs.</p>
          */
-        public Builder eipList(java.util.List < EipList> eipList) {
+        public Builder eipList(java.util.List<EipList> eipList) {
             this.eipList = eipList;
             return this;
         }
 
         /**
-         * The pagination information.
+         * <p>The pagination information.</p>
          */
         public Builder pageResult(PageResult pageResult) {
             this.pageResult = pageResult;
@@ -78,7 +96,10 @@ public class DescribeEipResourcesResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the request.
+         * <p>The ID of the request.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>BD65C0AD-D3C6-48D3-8D93-38D2015C****</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -91,17 +112,23 @@ public class DescribeEipResourcesResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link DescribeEipResourcesResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeEipResourcesResponseBody</p>
+     */
     public static class EipList extends TeaModel {
-        @NameInMap("AllocationId")
+        @com.aliyun.core.annotation.NameInMap("AllocationId")
         private String allocationId;
 
-        @NameInMap("InstanceType")
+        @com.aliyun.core.annotation.NameInMap("InstanceType")
         private String instanceType;
 
-        @NameInMap("IpAddress")
+        @com.aliyun.core.annotation.NameInMap("IpAddress")
         private String ipAddress;
 
-        @NameInMap("Status")
+        @com.aliyun.core.annotation.NameInMap("Status")
         private String status;
 
         private EipList(Builder builder) {
@@ -153,8 +180,21 @@ public class DescribeEipResourcesResponseBody extends TeaModel {
             private String ipAddress; 
             private String status; 
 
+            private Builder() {
+            } 
+
+            private Builder(EipList model) {
+                this.allocationId = model.allocationId;
+                this.instanceType = model.instanceType;
+                this.ipAddress = model.ipAddress;
+                this.status = model.status;
+            } 
+
             /**
-             * The ID of the EIP.
+             * <p>The ID of the EIP.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>eip-2zeerraiwb7ujxscd****</p>
              */
             public Builder allocationId(String allocationId) {
                 this.allocationId = allocationId;
@@ -162,16 +202,18 @@ public class DescribeEipResourcesResponseBody extends TeaModel {
             }
 
             /**
-             * The type of the resource that is associated with the EIP. Valid values:
-             * <p>
+             * <p>The type of the resource that is associated with the EIP. Valid values:</p>
+             * <ul>
+             * <li><code>EcsInstance</code>: an ECS instance in a VPC</li>
+             * <li><code>SlbInstance</code>: a Server Load Balancer (SLB) instance in a VPC</li>
+             * <li><code>Nat</code>: a NAT gateway</li>
+             * <li><code>HaVip</code>: a high-availability virtual IP address (HAVIP)</li>
+             * <li><code>NetworkInterface</code>: a secondary elastic network interface (ENI)</li>
+             * </ul>
+             * <p>Default value: <code>EcsInstance</code>.</p>
              * 
-             * *   `EcsInstance`: an ECS instance in a VPC
-             * *   `SlbInstance`: a Server Load Balancer (SLB) instance in a VPC
-             * *   `Nat`: a NAT gateway
-             * *   `HaVip`: a high-availability virtual IP address (HAVIP)
-             * *   `NetworkInterface`: a secondary elastic network interface (ENI)
-             * 
-             * Default value: `EcsInstance`.
+             * <strong>example:</strong>
+             * <p>SlbInstance</p>
              */
             public Builder instanceType(String instanceType) {
                 this.instanceType = instanceType;
@@ -179,7 +221,10 @@ public class DescribeEipResourcesResponseBody extends TeaModel {
             }
 
             /**
-             * The IP address of the EIP.
+             * <p>The IP address of the EIP.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>120.xx.xx.112</p>
              */
             public Builder ipAddress(String ipAddress) {
                 this.ipAddress = ipAddress;
@@ -187,13 +232,16 @@ public class DescribeEipResourcesResponseBody extends TeaModel {
             }
 
             /**
-             * The status of the EIP. Valid values:
-             * <p>
+             * <p>The status of the EIP. Valid values:</p>
+             * <ul>
+             * <li><code>Associating</code>: The EIP is being associated with a resource.</li>
+             * <li><code>Unassociating</code>: The EIP is being disassociated from a resource.</li>
+             * <li><code>InUse</code>: The EIP is associated with a resource.</li>
+             * <li><code>Available</code>: The EIP is available.</li>
+             * </ul>
              * 
-             * *   `Associating`: The EIP is being associated with a resource.
-             * *   `Unassociating`: The EIP is being disassociated from a resource.
-             * *   `InUse`: The EIP is associated with a resource.
-             * *   `Available`: The EIP is available.
+             * <strong>example:</strong>
+             * <p>InUse</p>
              */
             public Builder status(String status) {
                 this.status = status;
@@ -207,14 +255,20 @@ public class DescribeEipResourcesResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link DescribeEipResourcesResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeEipResourcesResponseBody</p>
+     */
     public static class PageResult extends TeaModel {
-        @NameInMap("PageNumber")
+        @com.aliyun.core.annotation.NameInMap("PageNumber")
         private Integer pageNumber;
 
-        @NameInMap("PageSize")
+        @com.aliyun.core.annotation.NameInMap("PageSize")
         private Integer pageSize;
 
-        @NameInMap("TotalCount")
+        @com.aliyun.core.annotation.NameInMap("TotalCount")
         private Integer totalCount;
 
         private PageResult(Builder builder) {
@@ -257,8 +311,20 @@ public class DescribeEipResourcesResponseBody extends TeaModel {
             private Integer pageSize; 
             private Integer totalCount; 
 
+            private Builder() {
+            } 
+
+            private Builder(PageResult model) {
+                this.pageNumber = model.pageNumber;
+                this.pageSize = model.pageSize;
+                this.totalCount = model.totalCount;
+            } 
+
             /**
-             * The page number of the returned page.
+             * <p>The page number of the returned page.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder pageNumber(Integer pageNumber) {
                 this.pageNumber = pageNumber;
@@ -266,7 +332,10 @@ public class DescribeEipResourcesResponseBody extends TeaModel {
             }
 
             /**
-             * The number of entries returned per page.
+             * <p>The number of entries returned per page.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>10</p>
              */
             public Builder pageSize(Integer pageSize) {
                 this.pageSize = pageSize;
@@ -274,7 +343,10 @@ public class DescribeEipResourcesResponseBody extends TeaModel {
             }
 
             /**
-             * The number of entries returned.
+             * <p>The number of entries returned.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>10</p>
              */
             public Builder totalCount(Integer totalCount) {
                 this.totalCount = totalCount;

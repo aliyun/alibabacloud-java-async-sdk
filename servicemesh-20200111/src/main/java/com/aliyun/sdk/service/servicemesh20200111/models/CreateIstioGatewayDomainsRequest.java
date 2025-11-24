@@ -1,61 +1,66 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.servicemesh20200111.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link CreateIstioGatewayDomainsRequest} extends {@link RequestModel}
  *
  * <p>CreateIstioGatewayDomainsRequest</p>
  */
 public class CreateIstioGatewayDomainsRequest extends Request {
-    @Body
-    @NameInMap("Credential")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("Credential")
     private String credential;
 
-    @Body
-    @NameInMap("ForceHttps")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("ForceHttps")
     private Boolean forceHttps;
 
-    @Body
-    @NameInMap("Hosts")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("Hosts")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String hosts;
 
-    @Body
-    @NameInMap("IstioGatewayName")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("IstioGatewayName")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String istioGatewayName;
 
-    @Body
-    @NameInMap("Limit")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("Limit")
     private String limit;
 
-    @Body
-    @NameInMap("Namespace")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("Namespace")
     private String namespace;
 
-    @Body
-    @NameInMap("Number")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("Number")
+    @com.aliyun.core.annotation.Validation(required = true)
     private Integer number;
 
-    @Body
-    @NameInMap("PortName")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("PortName")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String portName;
 
-    @Body
-    @NameInMap("Protocol")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("Protocol")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String protocol;
 
-    @Body
-    @NameInMap("ServiceMeshId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("ServiceMeshId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String serviceMeshId;
 
     private CreateIstioGatewayDomainsRequest(Builder builder) {
@@ -80,7 +85,7 @@ public class CreateIstioGatewayDomainsRequest extends Request {
         return builder().build();
     }
 
-    @Override
+@Override
     public Builder toBuilder() {
         return new Builder(this);
     }
@@ -186,7 +191,10 @@ public class CreateIstioGatewayDomainsRequest extends Request {
         } 
 
         /**
-         * The name of the secret that contains the Transport Layer Security (TLS) certificate and certificate authority (CA) certificate.
+         * <p>The name of the secret that contains the Transport Layer Security (TLS) certificate and certificate authority (CA) certificate.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>bookinfo-secret</p>
          */
         public Builder credential(String credential) {
             this.putBodyParameter("Credential", credential);
@@ -195,11 +203,14 @@ public class CreateIstioGatewayDomainsRequest extends Request {
         }
 
         /**
-         * Specifies whether to forcibly use TLS to protect connection security.
-         * <p>
+         * <p>Specifies whether to forcibly use TLS to protect connection security.</p>
+         * <ul>
+         * <li><code>true</code>: forcibly uses TLS to protect connection security.</li>
+         * <li><code>false</code>: does not forcibly use TLS to protect connection security.</li>
+         * </ul>
          * 
-         * *   `true`: forcibly uses TLS to protect connection security.
-         * *   `false`: does not forcibly use TLS to protect connection security.
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder forceHttps(Boolean forceHttps) {
             this.putBodyParameter("ForceHttps", forceHttps);
@@ -208,7 +219,11 @@ public class CreateIstioGatewayDomainsRequest extends Request {
         }
 
         /**
-         * The one or more domain names that are exposed by the ASM gateway. Separate multiple domain names with commas (,).
+         * <p>The one or more domain names that are exposed by the ASM gateway. Separate multiple domain names with commas (,).</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>example.com,demo.com</p>
          */
         public Builder hosts(String hosts) {
             this.putBodyParameter("Hosts", hosts);
@@ -217,7 +232,11 @@ public class CreateIstioGatewayDomainsRequest extends Request {
         }
 
         /**
-         * The name of the ASM gateway.
+         * <p>The name of the ASM gateway.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>ingressgateway</p>
          */
         public Builder istioGatewayName(String istioGatewayName) {
             this.putBodyParameter("IstioGatewayName", istioGatewayName);
@@ -226,7 +245,10 @@ public class CreateIstioGatewayDomainsRequest extends Request {
         }
 
         /**
-         * The maximum number of ASM gateways to query.
+         * <p>The maximum number of ASM gateways to query.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10</p>
          */
         public Builder limit(String limit) {
             this.putBodyParameter("Limit", limit);
@@ -235,7 +257,10 @@ public class CreateIstioGatewayDomainsRequest extends Request {
         }
 
         /**
-         * The name of the namespace.
+         * <p>The name of the namespace.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>default</p>
          */
         public Builder namespace(String namespace) {
             this.putBodyParameter("Namespace", namespace);
@@ -244,7 +269,11 @@ public class CreateIstioGatewayDomainsRequest extends Request {
         }
 
         /**
-         * The port that is provided by the ASM gateway.
+         * <p>The port that is provided by the ASM gateway.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>443</p>
          */
         public Builder number(Integer number) {
             this.putBodyParameter("Number", number);
@@ -253,7 +282,11 @@ public class CreateIstioGatewayDomainsRequest extends Request {
         }
 
         /**
-         * The name of the port.
+         * <p>The name of the port.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>http-demo</p>
          */
         public Builder portName(String portName) {
             this.putBodyParameter("PortName", portName);
@@ -262,7 +295,11 @@ public class CreateIstioGatewayDomainsRequest extends Request {
         }
 
         /**
-         * The type of the protocol. Valid values: `HTTP`, `HTTPS`, `GRPC`, `HTTP2`, `MONGO`, `TCP`, and `TLS`.
+         * <p>The type of the protocol. Valid values: <code>HTTP</code>, <code>HTTPS</code>, <code>GRPC</code>, <code>HTTP2</code>, <code>MONGO</code>, <code>TCP</code>, and <code>TLS</code>.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>HTTPS</p>
          */
         public Builder protocol(String protocol) {
             this.putBodyParameter("Protocol", protocol);
@@ -271,7 +308,11 @@ public class CreateIstioGatewayDomainsRequest extends Request {
         }
 
         /**
-         * The ASM instance ID.
+         * <p>The ASM instance ID.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>c08ba3fd1e6484b0f8cc1ad8fe10d****</p>
          */
         public Builder serviceMeshId(String serviceMeshId) {
             this.putBodyParameter("ServiceMeshId", serviceMeshId);

@@ -1,20 +1,25 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.servicemesh20200111.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeUsersWithPermissionsRequest} extends {@link RequestModel}
  *
  * <p>DescribeUsersWithPermissionsRequest</p>
  */
 public class DescribeUsersWithPermissionsRequest extends Request {
-    @Body
-    @NameInMap("UserType")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("UserType")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String userType;
 
     private DescribeUsersWithPermissionsRequest(Builder builder) {
@@ -30,7 +35,7 @@ public class DescribeUsersWithPermissionsRequest extends Request {
         return builder().build();
     }
 
-    @Override
+@Override
     public Builder toBuilder() {
         return new Builder(this);
     }
@@ -55,11 +60,15 @@ public class DescribeUsersWithPermissionsRequest extends Request {
         } 
 
         /**
-         * Specifies whether to query the IDs of all RAM users or RAM roles to which an RBAC role is assigned. Valid values:
-         * <p>
+         * <p>Specifies whether to query the IDs of all RAM users or RAM roles to which an RBAC role is assigned. Valid values:</p>
+         * <ul>
+         * <li><code>SubUser</code>: Query the IDs of all RAM users to which an RBAC role is assigned.</li>
+         * <li><code>RamRole</code>: Query the IDs of all RAM roles to which an RBAC role is assigned.</li>
+         * </ul>
+         * <p>This parameter is required.</p>
          * 
-         * *   `SubUser`: Query the IDs of all RAM users to which an RBAC role is assigned.
-         * *   `RamRole`: Query the IDs of all RAM roles to which an RBAC role is assigned.
+         * <strong>example:</strong>
+         * <p>SubUser</p>
          */
         public Builder userType(String userType) {
             this.putBodyParameter("UserType", userType);

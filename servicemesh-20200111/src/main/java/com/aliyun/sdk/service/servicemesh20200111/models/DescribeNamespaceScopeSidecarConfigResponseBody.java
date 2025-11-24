@@ -1,21 +1,26 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.servicemesh20200111.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeNamespaceScopeSidecarConfigResponseBody} extends {@link TeaModel}
  *
  * <p>DescribeNamespaceScopeSidecarConfigResponseBody</p>
  */
 public class DescribeNamespaceScopeSidecarConfigResponseBody extends TeaModel {
-    @NameInMap("ConfigPatches")
+    @com.aliyun.core.annotation.NameInMap("ConfigPatches")
     private ConfigPatches configPatches;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
     private DescribeNamespaceScopeSidecarConfigResponseBody(Builder builder) {
@@ -29,6 +34,10 @@ public class DescribeNamespaceScopeSidecarConfigResponseBody extends TeaModel {
 
     public static DescribeNamespaceScopeSidecarConfigResponseBody create() {
         return builder().build();
+    }
+
+    public Builder toBuilder() {
+        return new Builder(this);
     }
 
     /**
@@ -49,8 +58,16 @@ public class DescribeNamespaceScopeSidecarConfigResponseBody extends TeaModel {
         private ConfigPatches configPatches; 
         private String requestId; 
 
+        private Builder() {
+        } 
+
+        private Builder(DescribeNamespaceScopeSidecarConfigResponseBody model) {
+            this.configPatches = model.configPatches;
+            this.requestId = model.requestId;
+        } 
+
         /**
-         * The namespace-level sidecar proxy configurations.
+         * <p>The namespace-level sidecar configurations.</p>
          */
         public Builder configPatches(ConfigPatches configPatches) {
             this.configPatches = configPatches;
@@ -58,7 +75,10 @@ public class DescribeNamespaceScopeSidecarConfigResponseBody extends TeaModel {
         }
 
         /**
-         * The request ID.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>31d3a0f0-07ed-4f6e-9004-1804498c****</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -71,15 +91,21 @@ public class DescribeNamespaceScopeSidecarConfigResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link DescribeNamespaceScopeSidecarConfigResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeNamespaceScopeSidecarConfigResponseBody</p>
+     */
     public static class ProxyStatsMatcher extends TeaModel {
-        @NameInMap("InclusionPrefixes")
-        private java.util.List < String > inclusionPrefixes;
+        @com.aliyun.core.annotation.NameInMap("InclusionPrefixes")
+        private java.util.List<String> inclusionPrefixes;
 
-        @NameInMap("InclusionRegexps")
-        private java.util.List < String > inclusionRegexps;
+        @com.aliyun.core.annotation.NameInMap("InclusionRegexps")
+        private java.util.List<String> inclusionRegexps;
 
-        @NameInMap("InclusionSuffixes")
-        private java.util.List < String > inclusionSuffixes;
+        @com.aliyun.core.annotation.NameInMap("InclusionSuffixes")
+        private java.util.List<String> inclusionSuffixes;
 
         private ProxyStatsMatcher(Builder builder) {
             this.inclusionPrefixes = builder.inclusionPrefixes;
@@ -98,49 +124,58 @@ public class DescribeNamespaceScopeSidecarConfigResponseBody extends TeaModel {
         /**
          * @return inclusionPrefixes
          */
-        public java.util.List < String > getInclusionPrefixes() {
+        public java.util.List<String> getInclusionPrefixes() {
             return this.inclusionPrefixes;
         }
 
         /**
          * @return inclusionRegexps
          */
-        public java.util.List < String > getInclusionRegexps() {
+        public java.util.List<String> getInclusionRegexps() {
             return this.inclusionRegexps;
         }
 
         /**
          * @return inclusionSuffixes
          */
-        public java.util.List < String > getInclusionSuffixes() {
+        public java.util.List<String> getInclusionSuffixes() {
             return this.inclusionSuffixes;
         }
 
         public static final class Builder {
-            private java.util.List < String > inclusionPrefixes; 
-            private java.util.List < String > inclusionRegexps; 
-            private java.util.List < String > inclusionSuffixes; 
+            private java.util.List<String> inclusionPrefixes; 
+            private java.util.List<String> inclusionRegexps; 
+            private java.util.List<String> inclusionSuffixes; 
+
+            private Builder() {
+            } 
+
+            private Builder(ProxyStatsMatcher model) {
+                this.inclusionPrefixes = model.inclusionPrefixes;
+                this.inclusionRegexps = model.inclusionRegexps;
+                this.inclusionSuffixes = model.inclusionSuffixes;
+            } 
 
             /**
-             * The prefixes of the custom Envoy statistics that are reported by the sidecar proxy.
+             * <p>The prefixes of the custom Envoy statistics that are reported by the sidecar proxy.</p>
              */
-            public Builder inclusionPrefixes(java.util.List < String > inclusionPrefixes) {
+            public Builder inclusionPrefixes(java.util.List<String> inclusionPrefixes) {
                 this.inclusionPrefixes = inclusionPrefixes;
                 return this;
             }
 
             /**
-             * The regular expressions for specifying the custom Envoy statistics that are reported by the sidecar proxy.
+             * <p>The regular expressions for specifying the custom Envoy statistics that are reported by the sidecar proxy.</p>
              */
-            public Builder inclusionRegexps(java.util.List < String > inclusionRegexps) {
+            public Builder inclusionRegexps(java.util.List<String> inclusionRegexps) {
                 this.inclusionRegexps = inclusionRegexps;
                 return this;
             }
 
             /**
-             * The suffixes of the custom Envoy statistics that are reported by the sidecar proxy.
+             * <p>The suffixes of the custom Envoy statistics that are reported by the sidecar proxy.</p>
              */
-            public Builder inclusionSuffixes(java.util.List < String > inclusionSuffixes) {
+            public Builder inclusionSuffixes(java.util.List<String> inclusionSuffixes) {
                 this.inclusionSuffixes = inclusionSuffixes;
                 return this;
             }
@@ -152,12 +187,171 @@ public class DescribeNamespaceScopeSidecarConfigResponseBody extends TeaModel {
         } 
 
     }
-    public static class SidecarProxyAckSloResource extends TeaModel {
-        @NameInMap("Limits")
-        private java.util.Map < String, String > limits;
+    /**
+     * 
+     * {@link DescribeNamespaceScopeSidecarConfigResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeNamespaceScopeSidecarConfigResponseBody</p>
+     */
+    public static class SMCConfiguration extends TeaModel {
+        @com.aliyun.core.annotation.NameInMap("Enabled")
+        private Boolean enabled;
 
-        @NameInMap("Requests")
-        private java.util.Map < String, String > requests;
+        private SMCConfiguration(Builder builder) {
+            this.enabled = builder.enabled;
+        }
+
+        public static Builder builder() {
+            return new Builder();
+        }
+
+        public static SMCConfiguration create() {
+            return builder().build();
+        }
+
+        /**
+         * @return enabled
+         */
+        public Boolean getEnabled() {
+            return this.enabled;
+        }
+
+        public static final class Builder {
+            private Boolean enabled; 
+
+            private Builder() {
+            } 
+
+            private Builder(SMCConfiguration model) {
+                this.enabled = model.enabled;
+            } 
+
+            /**
+             * <p>Indicates whether the SMC-R optimization feature is enabled. The SMC-R optimization feature uses Alibaba Cloud Linux 3 and elastic remote direct memory access (eRDMA) network devices, which optimizes cross-node communication.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>true</p>
+             */
+            public Builder enabled(Boolean enabled) {
+                this.enabled = enabled;
+                return this;
+            }
+
+            public SMCConfiguration build() {
+                return new SMCConfiguration(this);
+            } 
+
+        } 
+
+    }
+    /**
+     * 
+     * {@link DescribeNamespaceScopeSidecarConfigResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeNamespaceScopeSidecarConfigResponseBody</p>
+     */
+    public static class ScaledSidecarResource extends TeaModel {
+        @com.aliyun.core.annotation.NameInMap("ContainerRef")
+        private String containerRef;
+
+        @com.aliyun.core.annotation.NameInMap("ResourceCalculationStrategy")
+        private String resourceCalculationStrategy;
+
+        @com.aliyun.core.annotation.NameInMap("ResourcePercentage")
+        private Integer resourcePercentage;
+
+        private ScaledSidecarResource(Builder builder) {
+            this.containerRef = builder.containerRef;
+            this.resourceCalculationStrategy = builder.resourceCalculationStrategy;
+            this.resourcePercentage = builder.resourcePercentage;
+        }
+
+        public static Builder builder() {
+            return new Builder();
+        }
+
+        public static ScaledSidecarResource create() {
+            return builder().build();
+        }
+
+        /**
+         * @return containerRef
+         */
+        public String getContainerRef() {
+            return this.containerRef;
+        }
+
+        /**
+         * @return resourceCalculationStrategy
+         */
+        public String getResourceCalculationStrategy() {
+            return this.resourceCalculationStrategy;
+        }
+
+        /**
+         * @return resourcePercentage
+         */
+        public Integer getResourcePercentage() {
+            return this.resourcePercentage;
+        }
+
+        public static final class Builder {
+            private String containerRef; 
+            private String resourceCalculationStrategy; 
+            private Integer resourcePercentage; 
+
+            private Builder() {
+            } 
+
+            private Builder(ScaledSidecarResource model) {
+                this.containerRef = model.containerRef;
+                this.resourceCalculationStrategy = model.resourceCalculationStrategy;
+                this.resourcePercentage = model.resourcePercentage;
+            } 
+
+            /**
+             * ContainerRef.
+             */
+            public Builder containerRef(String containerRef) {
+                this.containerRef = containerRef;
+                return this;
+            }
+
+            /**
+             * ResourceCalculationStrategy.
+             */
+            public Builder resourceCalculationStrategy(String resourceCalculationStrategy) {
+                this.resourceCalculationStrategy = resourceCalculationStrategy;
+                return this;
+            }
+
+            /**
+             * ResourcePercentage.
+             */
+            public Builder resourcePercentage(Integer resourcePercentage) {
+                this.resourcePercentage = resourcePercentage;
+                return this;
+            }
+
+            public ScaledSidecarResource build() {
+                return new ScaledSidecarResource(this);
+            } 
+
+        } 
+
+    }
+    /**
+     * 
+     * {@link DescribeNamespaceScopeSidecarConfigResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeNamespaceScopeSidecarConfigResponseBody</p>
+     */
+    public static class SidecarProxyAckSloResource extends TeaModel {
+        @com.aliyun.core.annotation.NameInMap("Limits")
+        private java.util.Map<String, String> limits;
+
+        @com.aliyun.core.annotation.NameInMap("Requests")
+        private java.util.Map<String, String> requests;
 
         private SidecarProxyAckSloResource(Builder builder) {
             this.limits = builder.limits;
@@ -175,33 +369,49 @@ public class DescribeNamespaceScopeSidecarConfigResponseBody extends TeaModel {
         /**
          * @return limits
          */
-        public java.util.Map < String, String > getLimits() {
+        public java.util.Map<String, String> getLimits() {
             return this.limits;
         }
 
         /**
          * @return requests
          */
-        public java.util.Map < String, String > getRequests() {
+        public java.util.Map<String, String> getRequests() {
             return this.requests;
         }
 
         public static final class Builder {
-            private java.util.Map < String, String > limits; 
-            private java.util.Map < String, String > requests; 
+            private java.util.Map<String, String> limits; 
+            private java.util.Map<String, String> requests; 
+
+            private Builder() {
+            } 
+
+            private Builder(SidecarProxyAckSloResource model) {
+                this.limits = model.limits;
+                this.requests = model.requests;
+            } 
 
             /**
-             * Limits.
+             * <p>The maximum size of reclaimed ACK resources that are available to the sidecar proxy container. This configuration item indicates the maximum size of resources that are available to the sidecar proxy container in a pod labeled with <code>koordinator.sh/qosClass</code>. The object can contain the following two types of keys, which indicate two types of resources:</p>
+             * <ul>
+             * <li><code>kubernetes.io/batch-cpu</code>: CPU resources that can be dynamically overcommitted. Unit: millicore.</li>
+             * <li><code>kubernetes.io/batch-memory</code>: memory resources that can be dynamically overcommitted.</li>
+             * </ul>
              */
-            public Builder limits(java.util.Map < String, String > limits) {
+            public Builder limits(java.util.Map<String, String> limits) {
                 this.limits = limits;
                 return this;
             }
 
             /**
-             * Requests.
+             * <p>The minimum size of reclaimed ACK resources that the sidecar proxy container needs to use at runtime. This configuration item indicates the minimum size of reclaimed ACK resources for the sidecar proxy container in a pod labeled with <code>koordinator.sh/qosClass</code>. The object can contain the following two types of keys, which indicate two types of resources:</p>
+             * <ul>
+             * <li><code>kubernetes.io/batch-cpu</code>: CPU resources that can be dynamically overcommitted. Unit: millicore.</li>
+             * <li><code>kubernetes.io/batch-memory</code>: memory resources that can be dynamically overcommitted.</li>
+             * </ul>
              */
-            public Builder requests(java.util.Map < String, String > requests) {
+            public Builder requests(java.util.Map<String, String> requests) {
                 this.requests = requests;
                 return this;
             }
@@ -213,12 +423,18 @@ public class DescribeNamespaceScopeSidecarConfigResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link DescribeNamespaceScopeSidecarConfigResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeNamespaceScopeSidecarConfigResponseBody</p>
+     */
     public static class SidecarProxyInitAckSloResource extends TeaModel {
-        @NameInMap("Limits")
-        private java.util.Map < String, String > limits;
+        @com.aliyun.core.annotation.NameInMap("Limits")
+        private java.util.Map<String, String> limits;
 
-        @NameInMap("Requests")
-        private java.util.Map < String, String > requests;
+        @com.aliyun.core.annotation.NameInMap("Requests")
+        private java.util.Map<String, String> requests;
 
         private SidecarProxyInitAckSloResource(Builder builder) {
             this.limits = builder.limits;
@@ -236,33 +452,49 @@ public class DescribeNamespaceScopeSidecarConfigResponseBody extends TeaModel {
         /**
          * @return limits
          */
-        public java.util.Map < String, String > getLimits() {
+        public java.util.Map<String, String> getLimits() {
             return this.limits;
         }
 
         /**
          * @return requests
          */
-        public java.util.Map < String, String > getRequests() {
+        public java.util.Map<String, String> getRequests() {
             return this.requests;
         }
 
         public static final class Builder {
-            private java.util.Map < String, String > limits; 
-            private java.util.Map < String, String > requests; 
+            private java.util.Map<String, String> limits; 
+            private java.util.Map<String, String> requests; 
+
+            private Builder() {
+            } 
+
+            private Builder(SidecarProxyInitAckSloResource model) {
+                this.limits = model.limits;
+                this.requests = model.requests;
+            } 
 
             /**
-             * Limits.
+             * <p>The maximum size of reclaimed ACK resources that are available to the istio-init container. This configuration item indicates the maximum size of resources that are available to the istio-init container in a pod labeled with <code>koordinator.sh/qosClass</code>. The object can contain the following two types of keys, which indicate two types of resources:</p>
+             * <ul>
+             * <li><code>kubernetes.io/batch-cpu</code>: CPU resources that can be dynamically overcommitted. Unit: millicore.</li>
+             * <li><code>kubernetes.io/batch-memory</code>: memory resources that can be dynamically overcommitted.</li>
+             * </ul>
              */
-            public Builder limits(java.util.Map < String, String > limits) {
+            public Builder limits(java.util.Map<String, String> limits) {
                 this.limits = limits;
                 return this;
             }
 
             /**
-             * Requests.
+             * <p>The minimum size of reclaimed ACK resources that the istio-init container needs to use at runtime. This configuration item indicates the minimum size of reclaimed ACK resources for the istio-init container in a pod labeled with <code>koordinator.sh/qosClass</code>. The object can contain the following two types of keys, which indicate two types of resources:</p>
+             * <ul>
+             * <li><code>kubernetes.io/batch-cpu</code>: CPU resources that can be dynamically overcommitted. Unit: millicore.</li>
+             * <li><code>kubernetes.io/batch-memory</code>: memory resources that can be dynamically overcommitted.</li>
+             * </ul>
              */
-            public Builder requests(java.util.Map < String, String > requests) {
+            public Builder requests(java.util.Map<String, String> requests) {
                 this.requests = requests;
                 return this;
             }
@@ -274,11 +506,17 @@ public class DescribeNamespaceScopeSidecarConfigResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link DescribeNamespaceScopeSidecarConfigResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeNamespaceScopeSidecarConfigResponseBody</p>
+     */
     public static class SidecarProxyInitResourceLimit extends TeaModel {
-        @NameInMap("ResourceCPULimit")
+        @com.aliyun.core.annotation.NameInMap("ResourceCPULimit")
         private String resourceCPULimit;
 
-        @NameInMap("ResourceMemoryLimit")
+        @com.aliyun.core.annotation.NameInMap("ResourceMemoryLimit")
         private String resourceMemoryLimit;
 
         private SidecarProxyInitResourceLimit(Builder builder) {
@@ -312,8 +550,19 @@ public class DescribeNamespaceScopeSidecarConfigResponseBody extends TeaModel {
             private String resourceCPULimit; 
             private String resourceMemoryLimit; 
 
+            private Builder() {
+            } 
+
+            private Builder(SidecarProxyInitResourceLimit model) {
+                this.resourceCPULimit = model.resourceCPULimit;
+                this.resourceMemoryLimit = model.resourceMemoryLimit;
+            } 
+
             /**
-             * The maximum number of CPU cores.
+             * <p>The maximum number of CPU cores.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2000 m</p>
              */
             public Builder resourceCPULimit(String resourceCPULimit) {
                 this.resourceCPULimit = resourceCPULimit;
@@ -321,7 +570,10 @@ public class DescribeNamespaceScopeSidecarConfigResponseBody extends TeaModel {
             }
 
             /**
-             * The maximum size of the memory.
+             * <p>The maximum size of the memory.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>50 Mi</p>
              */
             public Builder resourceMemoryLimit(String resourceMemoryLimit) {
                 this.resourceMemoryLimit = resourceMemoryLimit;
@@ -335,11 +587,17 @@ public class DescribeNamespaceScopeSidecarConfigResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link DescribeNamespaceScopeSidecarConfigResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeNamespaceScopeSidecarConfigResponseBody</p>
+     */
     public static class SidecarProxyInitResourceRequest extends TeaModel {
-        @NameInMap("ResourceCPURequest")
+        @com.aliyun.core.annotation.NameInMap("ResourceCPURequest")
         private String resourceCPURequest;
 
-        @NameInMap("ResourceMemoryRequest")
+        @com.aliyun.core.annotation.NameInMap("ResourceMemoryRequest")
         private String resourceMemoryRequest;
 
         private SidecarProxyInitResourceRequest(Builder builder) {
@@ -373,8 +631,19 @@ public class DescribeNamespaceScopeSidecarConfigResponseBody extends TeaModel {
             private String resourceCPURequest; 
             private String resourceMemoryRequest; 
 
+            private Builder() {
+            } 
+
+            private Builder(SidecarProxyInitResourceRequest model) {
+                this.resourceCPURequest = model.resourceCPURequest;
+                this.resourceMemoryRequest = model.resourceMemoryRequest;
+            } 
+
             /**
-             * The minimum number of CPU cores.
+             * <p>The minimum number of CPU cores.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>60 m</p>
              */
             public Builder resourceCPURequest(String resourceCPURequest) {
                 this.resourceCPURequest = resourceCPURequest;
@@ -382,7 +651,10 @@ public class DescribeNamespaceScopeSidecarConfigResponseBody extends TeaModel {
             }
 
             /**
-             * The minimum size of the memory.
+             * <p>The minimum size of the memory.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>30 Mi</p>
              */
             public Builder resourceMemoryRequest(String resourceMemoryRequest) {
                 this.resourceMemoryRequest = resourceMemoryRequest;
@@ -396,11 +668,17 @@ public class DescribeNamespaceScopeSidecarConfigResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link DescribeNamespaceScopeSidecarConfigResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeNamespaceScopeSidecarConfigResponseBody</p>
+     */
     public static class SidecarProxyResourceLimit extends TeaModel {
-        @NameInMap("ResourceCPULimit")
+        @com.aliyun.core.annotation.NameInMap("ResourceCPULimit")
         private String resourceCPULimit;
 
-        @NameInMap("ResourceMemoryLimit")
+        @com.aliyun.core.annotation.NameInMap("ResourceMemoryLimit")
         private String resourceMemoryLimit;
 
         private SidecarProxyResourceLimit(Builder builder) {
@@ -434,8 +712,19 @@ public class DescribeNamespaceScopeSidecarConfigResponseBody extends TeaModel {
             private String resourceCPULimit; 
             private String resourceMemoryLimit; 
 
+            private Builder() {
+            } 
+
+            private Builder(SidecarProxyResourceLimit model) {
+                this.resourceCPULimit = model.resourceCPULimit;
+                this.resourceMemoryLimit = model.resourceMemoryLimit;
+            } 
+
             /**
-             * The maximum number of CPU cores.
+             * <p>The maximum number of CPU cores.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2000 m</p>
              */
             public Builder resourceCPULimit(String resourceCPULimit) {
                 this.resourceCPULimit = resourceCPULimit;
@@ -443,7 +732,10 @@ public class DescribeNamespaceScopeSidecarConfigResponseBody extends TeaModel {
             }
 
             /**
-             * The maximum size of the memory.
+             * <p>The maximum size of the memory.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>50 Mi</p>
              */
             public Builder resourceMemoryLimit(String resourceMemoryLimit) {
                 this.resourceMemoryLimit = resourceMemoryLimit;
@@ -457,11 +749,17 @@ public class DescribeNamespaceScopeSidecarConfigResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link DescribeNamespaceScopeSidecarConfigResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeNamespaceScopeSidecarConfigResponseBody</p>
+     */
     public static class SidecarProxyResourceRequest extends TeaModel {
-        @NameInMap("ResourceCPURequest")
+        @com.aliyun.core.annotation.NameInMap("ResourceCPURequest")
         private String resourceCPURequest;
 
-        @NameInMap("ResourceMemoryRequest")
+        @com.aliyun.core.annotation.NameInMap("ResourceMemoryRequest")
         private String resourceMemoryRequest;
 
         private SidecarProxyResourceRequest(Builder builder) {
@@ -495,8 +793,19 @@ public class DescribeNamespaceScopeSidecarConfigResponseBody extends TeaModel {
             private String resourceCPURequest; 
             private String resourceMemoryRequest; 
 
+            private Builder() {
+            } 
+
+            private Builder(SidecarProxyResourceRequest model) {
+                this.resourceCPURequest = model.resourceCPURequest;
+                this.resourceMemoryRequest = model.resourceMemoryRequest;
+            } 
+
             /**
-             * The minimum number of CPU cores.
+             * <p>The minimum number of CPU cores.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>60 m</p>
              */
             public Builder resourceCPURequest(String resourceCPURequest) {
                 this.resourceCPURequest = resourceCPURequest;
@@ -504,7 +813,10 @@ public class DescribeNamespaceScopeSidecarConfigResponseBody extends TeaModel {
             }
 
             /**
-             * The minimum size of the memory.
+             * <p>The minimum size of the memory.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>30 Mi</p>
              */
             public Builder resourceMemoryRequest(String resourceMemoryRequest) {
                 this.resourceMemoryRequest = resourceMemoryRequest;
@@ -518,14 +830,20 @@ public class DescribeNamespaceScopeSidecarConfigResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link DescribeNamespaceScopeSidecarConfigResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeNamespaceScopeSidecarConfigResponseBody</p>
+     */
     public static class Tracing extends TeaModel {
-        @NameInMap("CustomTags")
-        private java.util.Map < String, ? > customTags;
+        @com.aliyun.core.annotation.NameInMap("CustomTags")
+        private java.util.Map<String, ?> customTags;
 
-        @NameInMap("MaxPathTagLength")
+        @com.aliyun.core.annotation.NameInMap("MaxPathTagLength")
         private Integer maxPathTagLength;
 
-        @NameInMap("Sampling")
+        @com.aliyun.core.annotation.NameInMap("Sampling")
         private Double sampling;
 
         private Tracing(Builder builder) {
@@ -545,7 +863,7 @@ public class DescribeNamespaceScopeSidecarConfigResponseBody extends TeaModel {
         /**
          * @return customTags
          */
-        public java.util.Map < String, ? > getCustomTags() {
+        public java.util.Map<String, ?> getCustomTags() {
             return this.customTags;
         }
 
@@ -564,25 +882,40 @@ public class DescribeNamespaceScopeSidecarConfigResponseBody extends TeaModel {
         }
 
         public static final class Builder {
-            private java.util.Map < String, ? > customTags; 
+            private java.util.Map<String, ?> customTags; 
             private Integer maxPathTagLength; 
             private Double sampling; 
 
+            private Builder() {
+            } 
+
+            private Builder(Tracing model) {
+                this.customTags = model.customTags;
+                this.maxPathTagLength = model.maxPathTagLength;
+                this.sampling = model.sampling;
+            } 
+
             /**
-             * The custom tags added to reported spans. The key of a tag is of the string type. The value of a tag is in the JSON format. A custom tag can belong to one of the following types:
-             * <p>
+             * <p>The custom tags added to reported spans. The key of a tag is of the string type. The value of a tag is in the JSON format. A custom tag can belong to one of the following types:</p>
+             * <ul>
+             * <li><code>literal</code>: The tag value is a fixed value in the JSON format. This tag must contain the <code>value</code> field that specifies a literal. Example: <code>{&quot;value&quot;:&quot;test&quot;}</code>.</li>
+             * <li><code>header</code>: The tag value is a request header in the JSON format. This tag must contain the <code>name</code> field and the <code>defaultValue</code> field. The name field indicates the name of the request header. The defaultValue field indicates the default value that is used when no request header is available. Example: <code>{&quot;name&quot;:&quot;test&quot;,&quot;defaultValue&quot;:&quot;test&quot;}</code>.</li>
+             * <li><code>environment</code>: The tag value is an environment variable in the JSON format. This tag must contain the <code>name</code> field and the <code>defaultValue</code> field. The name field indicates the name of the environment variable. The defaultValue field indicates the environment variable that is used when no environment variable is available. Example: <code>{&quot;name&quot;:&quot;test&quot;,&quot;defaultValue&quot;:&quot;test&quot;}</code>.</li>
+             * </ul>
              * 
-             * *   `literal`: The tag value is a fixed value in the JSON format. This tag must contain the `value` field that specifies a literal. Example: `{"value":"test"}`.
-             * *   `header`: The tag value is a request header in the JSON format. This tag must contain the `name` field and the `defaultValue` field. The name field indicates the name of the request header. The defaultValue field indicates the default value that is used when no request header is available. Example: `{"name":"test","defaultValue":"test"}`.
-             * *   `environment`: The tag value is an environment variable in the JSON format. This tag must contain the `name` field and the `defaultValue` field. The name field indicates the name of the environment variable. The defaultValue field indicates the environment variable that is used when no environment variable is available. Example: `{"name":"test","defaultValue":"test"}`.
+             * <strong>example:</strong>
+             * <p>{&quot;test&quot;:{&quot;literal&quot;:{&quot;value&quot;:&quot;test&quot;}}}</p>
              */
-            public Builder customTags(java.util.Map < String, ? > customTags) {
+            public Builder customTags(java.util.Map<String, ?> customTags) {
                 this.customTags = customTags;
                 return this;
             }
 
             /**
-             * The maximum tag length.
+             * <p>The maximum tag length.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>10</p>
              */
             public Builder maxPathTagLength(Integer maxPathTagLength) {
                 this.maxPathTagLength = maxPathTagLength;
@@ -590,7 +923,10 @@ public class DescribeNamespaceScopeSidecarConfigResponseBody extends TeaModel {
             }
 
             /**
-             * The sampling rate.
+             * <p>The sampling rate.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>99.8</p>
              */
             public Builder sampling(Double sampling) {
                 this.sampling = sampling;
@@ -604,86 +940,101 @@ public class DescribeNamespaceScopeSidecarConfigResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link DescribeNamespaceScopeSidecarConfigResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeNamespaceScopeSidecarConfigResponseBody</p>
+     */
     public static class ConfigPatches extends TeaModel {
-        @NameInMap("Concurrency")
+        @com.aliyun.core.annotation.NameInMap("Concurrency")
         private Integer concurrency;
 
-        @NameInMap("EnableCoreDump")
+        @com.aliyun.core.annotation.NameInMap("EnableCoreDump")
         private Boolean enableCoreDump;
 
-        @NameInMap("ExcludeInboundPorts")
+        @com.aliyun.core.annotation.NameInMap("ExcludeInboundPorts")
         private String excludeInboundPorts;
 
-        @NameInMap("ExcludeOutboundIPRanges")
+        @com.aliyun.core.annotation.NameInMap("ExcludeOutboundIPRanges")
         private String excludeOutboundIPRanges;
 
-        @NameInMap("ExcludeOutboundPorts")
+        @com.aliyun.core.annotation.NameInMap("ExcludeOutboundPorts")
         private String excludeOutboundPorts;
 
-        @NameInMap("HoldApplicationUntilProxyStarts")
+        @com.aliyun.core.annotation.NameInMap("HoldApplicationUntilProxyStarts")
         private Boolean holdApplicationUntilProxyStarts;
 
-        @NameInMap("IncludeInboundPorts")
+        @com.aliyun.core.annotation.NameInMap("IncludeInboundPorts")
         private String includeInboundPorts;
 
-        @NameInMap("IncludeOutboundIPRanges")
+        @com.aliyun.core.annotation.NameInMap("IncludeOutboundIPRanges")
         private String includeOutboundIPRanges;
 
-        @NameInMap("IncludeOutboundPorts")
+        @com.aliyun.core.annotation.NameInMap("IncludeOutboundPorts")
         private String includeOutboundPorts;
 
-        @NameInMap("InterceptionMode")
+        @com.aliyun.core.annotation.NameInMap("InterceptionMode")
         private String interceptionMode;
 
-        @NameInMap("IstioDNSProxyEnabled")
+        @com.aliyun.core.annotation.NameInMap("IstioDNSProxyEnabled")
         private Boolean istioDNSProxyEnabled;
 
-        @NameInMap("LifecycleStr")
+        @com.aliyun.core.annotation.NameInMap("LifecycleStr")
         private String lifecycleStr;
 
-        @NameInMap("LogLevel")
+        @com.aliyun.core.annotation.NameInMap("LogLevel")
         private String logLevel;
 
-        @NameInMap("Privileged")
+        @com.aliyun.core.annotation.NameInMap("Privileged")
         private Boolean privileged;
 
-        @NameInMap("ProxyMetadata")
-        private java.util.Map < String, String > proxyMetadata;
+        @com.aliyun.core.annotation.NameInMap("ProxyMetadata")
+        private java.util.Map<String, String> proxyMetadata;
 
-        @NameInMap("ProxyStatsMatcher")
+        @com.aliyun.core.annotation.NameInMap("ProxyStatsMatcher")
         private ProxyStatsMatcher proxyStatsMatcher;
 
-        @NameInMap("ReadinessFailureThreshold")
+        @com.aliyun.core.annotation.NameInMap("ReadinessFailureThreshold")
         private Integer readinessFailureThreshold;
 
-        @NameInMap("ReadinessInitialDelaySeconds")
+        @com.aliyun.core.annotation.NameInMap("ReadinessInitialDelaySeconds")
         private Integer readinessInitialDelaySeconds;
 
-        @NameInMap("ReadinessPeriodSeconds")
+        @com.aliyun.core.annotation.NameInMap("ReadinessPeriodSeconds")
         private Integer readinessPeriodSeconds;
 
-        @NameInMap("SidecarProxyAckSloResource")
+        @com.aliyun.core.annotation.NameInMap("RuntimeValues")
+        private java.util.Map<String, String> runtimeValues;
+
+        @com.aliyun.core.annotation.NameInMap("SMCConfiguration")
+        private SMCConfiguration SMCConfiguration;
+
+        @com.aliyun.core.annotation.NameInMap("ScaledSidecarResource")
+        private ScaledSidecarResource scaledSidecarResource;
+
+        @com.aliyun.core.annotation.NameInMap("SidecarProxyAckSloResource")
         private SidecarProxyAckSloResource sidecarProxyAckSloResource;
 
-        @NameInMap("SidecarProxyInitAckSloResource")
+        @com.aliyun.core.annotation.NameInMap("SidecarProxyInitAckSloResource")
         private SidecarProxyInitAckSloResource sidecarProxyInitAckSloResource;
 
-        @NameInMap("SidecarProxyInitResourceLimit")
+        @com.aliyun.core.annotation.NameInMap("SidecarProxyInitResourceLimit")
         private SidecarProxyInitResourceLimit sidecarProxyInitResourceLimit;
 
-        @NameInMap("SidecarProxyInitResourceRequest")
+        @com.aliyun.core.annotation.NameInMap("SidecarProxyInitResourceRequest")
         private SidecarProxyInitResourceRequest sidecarProxyInitResourceRequest;
 
-        @NameInMap("SidecarProxyResourceLimit")
+        @com.aliyun.core.annotation.NameInMap("SidecarProxyResourceLimit")
         private SidecarProxyResourceLimit sidecarProxyResourceLimit;
 
-        @NameInMap("SidecarProxyResourceRequest")
+        @com.aliyun.core.annotation.NameInMap("SidecarProxyResourceRequest")
         private SidecarProxyResourceRequest sidecarProxyResourceRequest;
 
-        @NameInMap("TerminationDrainDuration")
+        @com.aliyun.core.annotation.NameInMap("TerminationDrainDuration")
         private String terminationDrainDuration;
 
-        @NameInMap("Tracing")
+        @com.aliyun.core.annotation.NameInMap("Tracing")
         private Tracing tracing;
 
         private ConfigPatches(Builder builder) {
@@ -706,6 +1057,9 @@ public class DescribeNamespaceScopeSidecarConfigResponseBody extends TeaModel {
             this.readinessFailureThreshold = builder.readinessFailureThreshold;
             this.readinessInitialDelaySeconds = builder.readinessInitialDelaySeconds;
             this.readinessPeriodSeconds = builder.readinessPeriodSeconds;
+            this.runtimeValues = builder.runtimeValues;
+            this.SMCConfiguration = builder.SMCConfiguration;
+            this.scaledSidecarResource = builder.scaledSidecarResource;
             this.sidecarProxyAckSloResource = builder.sidecarProxyAckSloResource;
             this.sidecarProxyInitAckSloResource = builder.sidecarProxyInitAckSloResource;
             this.sidecarProxyInitResourceLimit = builder.sidecarProxyInitResourceLimit;
@@ -825,7 +1179,7 @@ public class DescribeNamespaceScopeSidecarConfigResponseBody extends TeaModel {
         /**
          * @return proxyMetadata
          */
-        public java.util.Map < String, String > getProxyMetadata() {
+        public java.util.Map<String, String> getProxyMetadata() {
             return this.proxyMetadata;
         }
 
@@ -855,6 +1209,27 @@ public class DescribeNamespaceScopeSidecarConfigResponseBody extends TeaModel {
          */
         public Integer getReadinessPeriodSeconds() {
             return this.readinessPeriodSeconds;
+        }
+
+        /**
+         * @return runtimeValues
+         */
+        public java.util.Map<String, String> getRuntimeValues() {
+            return this.runtimeValues;
+        }
+
+        /**
+         * @return SMCConfiguration
+         */
+        public SMCConfiguration getSMCConfiguration() {
+            return this.SMCConfiguration;
+        }
+
+        /**
+         * @return scaledSidecarResource
+         */
+        public ScaledSidecarResource getScaledSidecarResource() {
+            return this.scaledSidecarResource;
         }
 
         /**
@@ -928,11 +1303,14 @@ public class DescribeNamespaceScopeSidecarConfigResponseBody extends TeaModel {
             private String lifecycleStr; 
             private String logLevel; 
             private Boolean privileged; 
-            private java.util.Map < String, String > proxyMetadata; 
+            private java.util.Map<String, String> proxyMetadata; 
             private ProxyStatsMatcher proxyStatsMatcher; 
             private Integer readinessFailureThreshold; 
             private Integer readinessInitialDelaySeconds; 
             private Integer readinessPeriodSeconds; 
+            private java.util.Map<String, String> runtimeValues; 
+            private SMCConfiguration SMCConfiguration; 
+            private ScaledSidecarResource scaledSidecarResource; 
             private SidecarProxyAckSloResource sidecarProxyAckSloResource; 
             private SidecarProxyInitAckSloResource sidecarProxyInitAckSloResource; 
             private SidecarProxyInitResourceLimit sidecarProxyInitResourceLimit; 
@@ -942,8 +1320,47 @@ public class DescribeNamespaceScopeSidecarConfigResponseBody extends TeaModel {
             private String terminationDrainDuration; 
             private Tracing tracing; 
 
+            private Builder() {
+            } 
+
+            private Builder(ConfigPatches model) {
+                this.concurrency = model.concurrency;
+                this.enableCoreDump = model.enableCoreDump;
+                this.excludeInboundPorts = model.excludeInboundPorts;
+                this.excludeOutboundIPRanges = model.excludeOutboundIPRanges;
+                this.excludeOutboundPorts = model.excludeOutboundPorts;
+                this.holdApplicationUntilProxyStarts = model.holdApplicationUntilProxyStarts;
+                this.includeInboundPorts = model.includeInboundPorts;
+                this.includeOutboundIPRanges = model.includeOutboundIPRanges;
+                this.includeOutboundPorts = model.includeOutboundPorts;
+                this.interceptionMode = model.interceptionMode;
+                this.istioDNSProxyEnabled = model.istioDNSProxyEnabled;
+                this.lifecycleStr = model.lifecycleStr;
+                this.logLevel = model.logLevel;
+                this.privileged = model.privileged;
+                this.proxyMetadata = model.proxyMetadata;
+                this.proxyStatsMatcher = model.proxyStatsMatcher;
+                this.readinessFailureThreshold = model.readinessFailureThreshold;
+                this.readinessInitialDelaySeconds = model.readinessInitialDelaySeconds;
+                this.readinessPeriodSeconds = model.readinessPeriodSeconds;
+                this.runtimeValues = model.runtimeValues;
+                this.SMCConfiguration = model.SMCConfiguration;
+                this.scaledSidecarResource = model.scaledSidecarResource;
+                this.sidecarProxyAckSloResource = model.sidecarProxyAckSloResource;
+                this.sidecarProxyInitAckSloResource = model.sidecarProxyInitAckSloResource;
+                this.sidecarProxyInitResourceLimit = model.sidecarProxyInitResourceLimit;
+                this.sidecarProxyInitResourceRequest = model.sidecarProxyInitResourceRequest;
+                this.sidecarProxyResourceLimit = model.sidecarProxyResourceLimit;
+                this.sidecarProxyResourceRequest = model.sidecarProxyResourceRequest;
+                this.terminationDrainDuration = model.terminationDrainDuration;
+                this.tracing = model.tracing;
+            } 
+
             /**
-             * The number of worker threads to run in the istio-proxy container.
+             * <p>The number of worker threads to run in the istio-proxy container.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2</p>
              */
             public Builder concurrency(Integer concurrency) {
                 this.concurrency = concurrency;
@@ -951,7 +1368,14 @@ public class DescribeNamespaceScopeSidecarConfigResponseBody extends TeaModel {
             }
 
             /**
-             * EnableCoreDump.
+             * <p>Indicates whether the core dump feature is enabled for the sidecar proxy containers. Valid values:</p>
+             * <ul>
+             * <li><code>true</code></li>
+             * <li><code>false</code></li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>false</p>
              */
             public Builder enableCoreDump(Boolean enableCoreDump) {
                 this.enableCoreDump = enableCoreDump;
@@ -959,7 +1383,10 @@ public class DescribeNamespaceScopeSidecarConfigResponseBody extends TeaModel {
             }
 
             /**
-             * The inbound ports to be excluded from redirection to the sidecar proxy in the ASM instance.
+             * <p>The inbound ports to be excluded from redirection to the sidecar proxy in the ASM instance.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>82</p>
              */
             public Builder excludeInboundPorts(String excludeInboundPorts) {
                 this.excludeInboundPorts = excludeInboundPorts;
@@ -967,7 +1394,10 @@ public class DescribeNamespaceScopeSidecarConfigResponseBody extends TeaModel {
             }
 
             /**
-             * The outbound IP ranges in CIDR form to be excluded from redirection to the sidecar proxy in the ASM instance.
+             * <p>The outbound IP ranges in CIDR form to be excluded from redirection to the sidecar proxy in the ASM instance.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>192.168.1.3/31</p>
              */
             public Builder excludeOutboundIPRanges(String excludeOutboundIPRanges) {
                 this.excludeOutboundIPRanges = excludeOutboundIPRanges;
@@ -975,7 +1405,10 @@ public class DescribeNamespaceScopeSidecarConfigResponseBody extends TeaModel {
             }
 
             /**
-             * The outbound ports to be excluded from redirection to the sidecar proxy in the ASM instance.
+             * <p>The outbound ports to be excluded from redirection to the sidecar proxy in the ASM instance.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>81</p>
              */
             public Builder excludeOutboundPorts(String excludeOutboundPorts) {
                 this.excludeOutboundPorts = excludeOutboundPorts;
@@ -983,11 +1416,14 @@ public class DescribeNamespaceScopeSidecarConfigResponseBody extends TeaModel {
             }
 
             /**
-             * Indicates whether applications can be started only after the istio-proxy container starts. Valid values:
-             * <p>
+             * <p>Indicates whether applications can be started only after the istio-proxy container starts. Valid values:</p>
+             * <ul>
+             * <li><code>true</code>: Applications can be started only after the istio-proxy container starts.</li>
+             * <li><code>false</code>: Applications can be started before the istio-proxy container starts.</li>
+             * </ul>
              * 
-             * *   `true`
-             * *   false
+             * <strong>example:</strong>
+             * <p>true</p>
              */
             public Builder holdApplicationUntilProxyStarts(Boolean holdApplicationUntilProxyStarts) {
                 this.holdApplicationUntilProxyStarts = holdApplicationUntilProxyStarts;
@@ -995,7 +1431,10 @@ public class DescribeNamespaceScopeSidecarConfigResponseBody extends TeaModel {
             }
 
             /**
-             * The inbound ports for which traffic is to be redirected to the sidecar proxy in the ASM instance.
+             * <p>The inbound ports for which traffic is to be redirected to the sidecar proxy in the ASM instance.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>83</p>
              */
             public Builder includeInboundPorts(String includeInboundPorts) {
                 this.includeInboundPorts = includeInboundPorts;
@@ -1003,7 +1442,10 @@ public class DescribeNamespaceScopeSidecarConfigResponseBody extends TeaModel {
             }
 
             /**
-             * The outbound IP ranges in CIDR form for which traffic is to be redirected to the sidecar proxy in the ASM instance.
+             * <p>The outbound IP ranges in CIDR form for which traffic is to be redirected to the sidecar proxy in the ASM instance.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>192.168.1.4/31</p>
              */
             public Builder includeOutboundIPRanges(String includeOutboundIPRanges) {
                 this.includeOutboundIPRanges = includeOutboundIPRanges;
@@ -1011,7 +1453,10 @@ public class DescribeNamespaceScopeSidecarConfigResponseBody extends TeaModel {
             }
 
             /**
-             * The outbound ports for which traffic is to be redirected to the sidecar proxy in the ASM instance.
+             * <p>The outbound ports for which traffic is to be redirected to the sidecar proxy in the ASM instance.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>84</p>
              */
             public Builder includeOutboundPorts(String includeOutboundPorts) {
                 this.includeOutboundPorts = includeOutboundPorts;
@@ -1019,11 +1464,14 @@ public class DescribeNamespaceScopeSidecarConfigResponseBody extends TeaModel {
             }
 
             /**
-             * The mode in which the sidecar proxy intercepts inbound traffic. Valid values:
-             * <p>
+             * <p>The mode in which the sidecar proxy intercepts inbound traffic. Valid values:</p>
+             * <ul>
+             * <li><code>REDIRECT</code> (default): In this mode, source IP addresses are lost during traffic redirection to the sidecar proxy.</li>
+             * <li><code>TPROXY</code>: In this mode, both the source and destination IP addresses and ports are preserved.</li>
+             * </ul>
              * 
-             * *   `REDIRECT` (default): In this mode, source IP addresses are lost during traffic redirection to the sidecar proxy.
-             * *   `TPROXY`: In this mode, both the source and destination IP addresses and ports are preserved.
+             * <strong>example:</strong>
+             * <p>TPROXY</p>
              */
             public Builder interceptionMode(String interceptionMode) {
                 this.interceptionMode = interceptionMode;
@@ -1031,11 +1479,14 @@ public class DescribeNamespaceScopeSidecarConfigResponseBody extends TeaModel {
             }
 
             /**
-             * Indicates whether the Domain Name System (DNS) proxy feature is enabled. Valid values:
-             * <p>
+             * <p>Indicates whether the Domain Name System (DNS) proxy feature is enabled. Valid values:</p>
+             * <ul>
+             * <li><code>true</code></li>
+             * <li><code>false</code></li>
+             * </ul>
              * 
-             * *   `true`
-             * *   `false`
+             * <strong>example:</strong>
+             * <p>true</p>
              */
             public Builder istioDNSProxyEnabled(Boolean istioDNSProxyEnabled) {
                 this.istioDNSProxyEnabled = istioDNSProxyEnabled;
@@ -1043,7 +1494,10 @@ public class DescribeNamespaceScopeSidecarConfigResponseBody extends TeaModel {
             }
 
             /**
-             * The JSON string that describes the lifecycle of the sidecar proxy.
+             * <p>The JSON string that describes the lifecycle of the sidecar proxy.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>{&quot;postStart&quot;:{&quot;exec&quot;:{&quot;command&quot;:[&quot;pilot-agent&quot;,&quot;wait&quot;]}},&quot;preStop&quot;:{&quot;exec&quot;:{&quot;command&quot;:[&quot;/bin/sh&quot;,&quot;-c&quot;,&quot;sleep 15&quot;]}}}</p>
              */
             public Builder lifecycleStr(String lifecycleStr) {
                 this.lifecycleStr = lifecycleStr;
@@ -1051,7 +1505,10 @@ public class DescribeNamespaceScopeSidecarConfigResponseBody extends TeaModel {
             }
 
             /**
-             * The log level. Valid values: `info`, `debug`, `trace`, and `error`.
+             * <p>The log level. Valid values: <code>info</code>, <code>debug</code>, <code>trace</code>, and <code>error</code>.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>info</p>
              */
             public Builder logLevel(String logLevel) {
                 this.logLevel = logLevel;
@@ -1059,7 +1516,14 @@ public class DescribeNamespaceScopeSidecarConfigResponseBody extends TeaModel {
             }
 
             /**
-             * Privileged.
+             * <p>Indicates whether the privileged mode is enabled in the security context of the sidecar proxy containers. Valid values:</p>
+             * <ul>
+             * <li><code>true</code>: The privileged mode is enabled, that is, the sidecar proxy containers run in privileged mode.</li>
+             * <li><code>false</code>: The privileged mode is not enabled.</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>false</p>
              */
             public Builder privileged(Boolean privileged) {
                 this.privileged = privileged;
@@ -1069,13 +1533,13 @@ public class DescribeNamespaceScopeSidecarConfigResponseBody extends TeaModel {
             /**
              * ProxyMetadata.
              */
-            public Builder proxyMetadata(java.util.Map < String, String > proxyMetadata) {
+            public Builder proxyMetadata(java.util.Map<String, String> proxyMetadata) {
                 this.proxyMetadata = proxyMetadata;
                 return this;
             }
 
             /**
-             * The custom Envoy statistics that are reported by the sidecar proxy.
+             * <p>The custom Envoy statistics that are reported by the sidecar proxy.</p>
              */
             public Builder proxyStatsMatcher(ProxyStatsMatcher proxyStatsMatcher) {
                 this.proxyStatsMatcher = proxyStatsMatcher;
@@ -1083,7 +1547,10 @@ public class DescribeNamespaceScopeSidecarConfigResponseBody extends TeaModel {
             }
 
             /**
-             * ReadinessFailureThreshold.
+             * <p>The number of readiness check failures required before marking a sidecar proxy container as not ready.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>5</p>
              */
             public Builder readinessFailureThreshold(Integer readinessFailureThreshold) {
                 this.readinessFailureThreshold = readinessFailureThreshold;
@@ -1091,7 +1558,10 @@ public class DescribeNamespaceScopeSidecarConfigResponseBody extends TeaModel {
             }
 
             /**
-             * ReadinessInitialDelaySeconds.
+             * <p>The amount of time to wait before the first readiness check of a sidecar proxy container is performed. Unit: seconds.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2</p>
              */
             public Builder readinessInitialDelaySeconds(Integer readinessInitialDelaySeconds) {
                 this.readinessInitialDelaySeconds = readinessInitialDelaySeconds;
@@ -1099,7 +1569,10 @@ public class DescribeNamespaceScopeSidecarConfigResponseBody extends TeaModel {
             }
 
             /**
-             * ReadinessPeriodSeconds.
+             * <p>The interval between two readiness checks of a sidecar proxy container. Unit: seconds.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>3</p>
              */
             public Builder readinessPeriodSeconds(Integer readinessPeriodSeconds) {
                 this.readinessPeriodSeconds = readinessPeriodSeconds;
@@ -1107,7 +1580,31 @@ public class DescribeNamespaceScopeSidecarConfigResponseBody extends TeaModel {
             }
 
             /**
-             * SidecarProxyAckSloResource.
+             * <p>Indicates the runtime parameters of Envoy proxy processes in the sidecar proxy container.</p>
+             */
+            public Builder runtimeValues(java.util.Map<String, String> runtimeValues) {
+                this.runtimeValues = runtimeValues;
+                return this;
+            }
+
+            /**
+             * <p>The configurations of the Shared Memory Communications over Remote Direct Memory Access (SMC-R) optimization feature.</p>
+             */
+            public Builder SMCConfiguration(SMCConfiguration SMCConfiguration) {
+                this.SMCConfiguration = SMCConfiguration;
+                return this;
+            }
+
+            /**
+             * ScaledSidecarResource.
+             */
+            public Builder scaledSidecarResource(ScaledSidecarResource scaledSidecarResource) {
+                this.scaledSidecarResource = scaledSidecarResource;
+                return this;
+            }
+
+            /**
+             * <p>The maximum size of reclaimed ACK resources that are available to the sidecar proxy container. This configuration item indicates the maximum size of resources that are available to the sidecar proxy container in a pod labeled with <code>koordinator.sh/qosClass</code>.</p>
              */
             public Builder sidecarProxyAckSloResource(SidecarProxyAckSloResource sidecarProxyAckSloResource) {
                 this.sidecarProxyAckSloResource = sidecarProxyAckSloResource;
@@ -1115,7 +1612,7 @@ public class DescribeNamespaceScopeSidecarConfigResponseBody extends TeaModel {
             }
 
             /**
-             * SidecarProxyInitAckSloResource.
+             * <p>The reclaimed Container Service for Kubernetes (ACK) resources for the istio-init container. This configuration item indicates the resources of the istio-init container in a pod labeled with <code>koordinator.sh/qosClass</code>. Reclaimed ACK resources are resources that can be dynamically overcommitted.</p>
              */
             public Builder sidecarProxyInitAckSloResource(SidecarProxyInitAckSloResource sidecarProxyInitAckSloResource) {
                 this.sidecarProxyInitAckSloResource = sidecarProxyInitAckSloResource;
@@ -1123,7 +1620,7 @@ public class DescribeNamespaceScopeSidecarConfigResponseBody extends TeaModel {
             }
 
             /**
-             * The maximum size of resources that are available to the istio-init container in the pod into which the sidecar proxy is injected. The istio-init container is used in this topic.
+             * <p>The maximum size of resources that are available to the istio-init container in the pod into which the sidecar proxy is injected. The istio-init container is used in this topic.</p>
              */
             public Builder sidecarProxyInitResourceLimit(SidecarProxyInitResourceLimit sidecarProxyInitResourceLimit) {
                 this.sidecarProxyInitResourceLimit = sidecarProxyInitResourceLimit;
@@ -1131,7 +1628,7 @@ public class DescribeNamespaceScopeSidecarConfigResponseBody extends TeaModel {
             }
 
             /**
-             * The minimum size of resources that are required by the istio-init container.
+             * <p>The minimum size of resources that are required by the istio-init container.</p>
              */
             public Builder sidecarProxyInitResourceRequest(SidecarProxyInitResourceRequest sidecarProxyInitResourceRequest) {
                 this.sidecarProxyInitResourceRequest = sidecarProxyInitResourceRequest;
@@ -1139,7 +1636,7 @@ public class DescribeNamespaceScopeSidecarConfigResponseBody extends TeaModel {
             }
 
             /**
-             * The maximum size of resources that are available to the sidecar proxy container.
+             * <p>The maximum size of resources that are available to the sidecar proxy container.</p>
              */
             public Builder sidecarProxyResourceLimit(SidecarProxyResourceLimit sidecarProxyResourceLimit) {
                 this.sidecarProxyResourceLimit = sidecarProxyResourceLimit;
@@ -1147,7 +1644,7 @@ public class DescribeNamespaceScopeSidecarConfigResponseBody extends TeaModel {
             }
 
             /**
-             * The minimum size of resources that are required by the sidecar proxy container.
+             * <p>The minimum size of resources that are required by the sidecar proxy container.</p>
              */
             public Builder sidecarProxyResourceRequest(SidecarProxyResourceRequest sidecarProxyResourceRequest) {
                 this.sidecarProxyResourceRequest = sidecarProxyResourceRequest;
@@ -1155,7 +1652,10 @@ public class DescribeNamespaceScopeSidecarConfigResponseBody extends TeaModel {
             }
 
             /**
-             * The maximum period of time allowed for connections to complete on sidecar proxy shutdown.
+             * <p>The maximum period of time allowed for connections to complete on sidecar proxy shutdown.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>6s</p>
              */
             public Builder terminationDrainDuration(String terminationDrainDuration) {
                 this.terminationDrainDuration = terminationDrainDuration;
@@ -1163,7 +1663,7 @@ public class DescribeNamespaceScopeSidecarConfigResponseBody extends TeaModel {
             }
 
             /**
-             * The custom configurations of Tracing Analysis.
+             * <p>The custom configurations of Tracing Analysis.</p>
              */
             public Builder tracing(Tracing tracing) {
                 this.tracing = tracing;

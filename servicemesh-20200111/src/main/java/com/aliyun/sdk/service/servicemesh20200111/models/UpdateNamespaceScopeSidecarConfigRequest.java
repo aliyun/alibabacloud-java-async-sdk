@@ -1,180 +1,197 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.servicemesh20200111.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link UpdateNamespaceScopeSidecarConfigRequest} extends {@link RequestModel}
  *
  * <p>UpdateNamespaceScopeSidecarConfigRequest</p>
  */
 public class UpdateNamespaceScopeSidecarConfigRequest extends Request {
-    @Body
-    @NameInMap("Concurrency")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("Concurrency")
     private Integer concurrency;
 
-    @Body
-    @NameInMap("EnableCoreDump")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("EnableCoreDump")
     private Boolean enableCoreDump;
 
-    @Body
-    @NameInMap("ExcludeIPRanges")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("ExcludeIPRanges")
     private String excludeIPRanges;
 
-    @Body
-    @NameInMap("ExcludeInboundPorts")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("ExcludeInboundPorts")
     private String excludeInboundPorts;
 
-    @Body
-    @NameInMap("ExcludeOutboundPorts")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("ExcludeOutboundPorts")
     private String excludeOutboundPorts;
 
-    @Body
-    @NameInMap("HoldApplicationUntilProxyStarts")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("HoldApplicationUntilProxyStarts")
     private Boolean holdApplicationUntilProxyStarts;
 
-    @Body
-    @NameInMap("IncludeIPRanges")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("IncludeIPRanges")
     private String includeIPRanges;
 
-    @Body
-    @NameInMap("IncludeInboundPorts")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("IncludeInboundPorts")
     private String includeInboundPorts;
 
-    @Body
-    @NameInMap("IncludeOutboundPorts")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("IncludeOutboundPorts")
     private String includeOutboundPorts;
 
-    @Body
-    @NameInMap("InterceptionMode")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("InterceptionMode")
     private String interceptionMode;
 
-    @Body
-    @NameInMap("IstioDNSProxyEnabled")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("IstioDNSProxyEnabled")
     private Boolean istioDNSProxyEnabled;
 
-    @Body
-    @NameInMap("Lifecycle")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("Lifecycle")
     private String lifecycle;
 
-    @Body
-    @NameInMap("LogLevel")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("LogLevel")
     private String logLevel;
 
-    @Body
-    @NameInMap("Namespace")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("Namespace")
     private String namespace;
 
-    @Body
-    @NameInMap("PostStart")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("PostStart")
     private String postStart;
 
-    @Body
-    @NameInMap("PreStop")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("PreStop")
     private String preStop;
 
-    @Body
-    @NameInMap("Privileged")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("Privileged")
     private Boolean privileged;
 
-    @Body
-    @NameInMap("ProxyInitAckSloCPUResourceLimit")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("ProxyInitAckSloCPUResourceLimit")
     private String proxyInitAckSloCPUResourceLimit;
 
-    @Body
-    @NameInMap("ProxyInitAckSloCPUResourceRequest")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("ProxyInitAckSloCPUResourceRequest")
     private String proxyInitAckSloCPUResourceRequest;
 
-    @Body
-    @NameInMap("ProxyInitAckSloMemoryResourceLimit")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("ProxyInitAckSloMemoryResourceLimit")
     private String proxyInitAckSloMemoryResourceLimit;
 
-    @Body
-    @NameInMap("ProxyInitAckSloMemoryResourceRequest")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("ProxyInitAckSloMemoryResourceRequest")
     private String proxyInitAckSloMemoryResourceRequest;
 
-    @Body
-    @NameInMap("ProxyInitCPUResourceLimit")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("ProxyInitCPUResourceLimit")
     private String proxyInitCPUResourceLimit;
 
-    @Body
-    @NameInMap("ProxyInitCPUResourceRequest")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("ProxyInitCPUResourceRequest")
     private String proxyInitCPUResourceRequest;
 
-    @Body
-    @NameInMap("ProxyInitMemoryResourceLimit")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("ProxyInitMemoryResourceLimit")
     private String proxyInitMemoryResourceLimit;
 
-    @Body
-    @NameInMap("ProxyInitMemoryResourceRequest")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("ProxyInitMemoryResourceRequest")
     private String proxyInitMemoryResourceRequest;
 
-    @Body
-    @NameInMap("ProxyMetadata")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("ProxyMetadata")
     private String proxyMetadata;
 
-    @Body
-    @NameInMap("ProxyStatsMatcher")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("ProxyStatsMatcher")
     private String proxyStatsMatcher;
 
-    @Body
-    @NameInMap("ReadinessFailureThreshold")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("ReadinessFailureThreshold")
     private Integer readinessFailureThreshold;
 
-    @Body
-    @NameInMap("ReadinessInitialDelaySeconds")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("ReadinessInitialDelaySeconds")
     private Integer readinessInitialDelaySeconds;
 
-    @Body
-    @NameInMap("ReadinessPeriodSeconds")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("ReadinessPeriodSeconds")
     private Integer readinessPeriodSeconds;
 
-    @Body
-    @NameInMap("ServiceMeshId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("RuntimeValues")
+    private String runtimeValues;
+
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("SMCEnabled")
+    private Boolean SMCEnabled;
+
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("ScaledSidecarResource")
+    private ScaledSidecarResource scaledSidecarResource;
+
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("ServiceMeshId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String serviceMeshId;
 
-    @Body
-    @NameInMap("SidecarProxyAckSloCPUResourceLimit")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("SidecarProxyAckSloCPUResourceLimit")
     private String sidecarProxyAckSloCPUResourceLimit;
 
-    @Body
-    @NameInMap("SidecarProxyAckSloCPUResourceRequest")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("SidecarProxyAckSloCPUResourceRequest")
     private String sidecarProxyAckSloCPUResourceRequest;
 
-    @Body
-    @NameInMap("SidecarProxyAckSloMemoryResourceLimit")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("SidecarProxyAckSloMemoryResourceLimit")
     private String sidecarProxyAckSloMemoryResourceLimit;
 
-    @Body
-    @NameInMap("SidecarProxyAckSloMemoryResourceRequest")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("SidecarProxyAckSloMemoryResourceRequest")
     private String sidecarProxyAckSloMemoryResourceRequest;
 
-    @Body
-    @NameInMap("SidecarProxyCPUResourceLimit")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("SidecarProxyCPUResourceLimit")
     private String sidecarProxyCPUResourceLimit;
 
-    @Body
-    @NameInMap("SidecarProxyCPUResourceRequest")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("SidecarProxyCPUResourceRequest")
     private String sidecarProxyCPUResourceRequest;
 
-    @Body
-    @NameInMap("SidecarProxyMemoryResourceLimit")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("SidecarProxyMemoryResourceLimit")
     private String sidecarProxyMemoryResourceLimit;
 
-    @Body
-    @NameInMap("SidecarProxyMemoryResourceRequest")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("SidecarProxyMemoryResourceRequest")
     private String sidecarProxyMemoryResourceRequest;
 
-    @Body
-    @NameInMap("TerminationDrainDuration")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("TerminationDrainDuration")
     private String terminationDrainDuration;
 
-    @Body
-    @NameInMap("Tracing")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("Tracing")
     private String tracing;
 
     private UpdateNamespaceScopeSidecarConfigRequest(Builder builder) {
@@ -209,6 +226,9 @@ public class UpdateNamespaceScopeSidecarConfigRequest extends Request {
         this.readinessFailureThreshold = builder.readinessFailureThreshold;
         this.readinessInitialDelaySeconds = builder.readinessInitialDelaySeconds;
         this.readinessPeriodSeconds = builder.readinessPeriodSeconds;
+        this.runtimeValues = builder.runtimeValues;
+        this.SMCEnabled = builder.SMCEnabled;
+        this.scaledSidecarResource = builder.scaledSidecarResource;
         this.serviceMeshId = builder.serviceMeshId;
         this.sidecarProxyAckSloCPUResourceLimit = builder.sidecarProxyAckSloCPUResourceLimit;
         this.sidecarProxyAckSloCPUResourceRequest = builder.sidecarProxyAckSloCPUResourceRequest;
@@ -230,7 +250,7 @@ public class UpdateNamespaceScopeSidecarConfigRequest extends Request {
         return builder().build();
     }
 
-    @Override
+@Override
     public Builder toBuilder() {
         return new Builder(this);
     }
@@ -446,6 +466,27 @@ public class UpdateNamespaceScopeSidecarConfigRequest extends Request {
     }
 
     /**
+     * @return runtimeValues
+     */
+    public String getRuntimeValues() {
+        return this.runtimeValues;
+    }
+
+    /**
+     * @return SMCEnabled
+     */
+    public Boolean getSMCEnabled() {
+        return this.SMCEnabled;
+    }
+
+    /**
+     * @return scaledSidecarResource
+     */
+    public ScaledSidecarResource getScaledSidecarResource() {
+        return this.scaledSidecarResource;
+    }
+
+    /**
      * @return serviceMeshId
      */
     public String getServiceMeshId() {
@@ -553,6 +594,9 @@ public class UpdateNamespaceScopeSidecarConfigRequest extends Request {
         private Integer readinessFailureThreshold; 
         private Integer readinessInitialDelaySeconds; 
         private Integer readinessPeriodSeconds; 
+        private String runtimeValues; 
+        private Boolean SMCEnabled; 
+        private ScaledSidecarResource scaledSidecarResource; 
         private String serviceMeshId; 
         private String sidecarProxyAckSloCPUResourceLimit; 
         private String sidecarProxyAckSloCPUResourceRequest; 
@@ -601,6 +645,9 @@ public class UpdateNamespaceScopeSidecarConfigRequest extends Request {
             this.readinessFailureThreshold = request.readinessFailureThreshold;
             this.readinessInitialDelaySeconds = request.readinessInitialDelaySeconds;
             this.readinessPeriodSeconds = request.readinessPeriodSeconds;
+            this.runtimeValues = request.runtimeValues;
+            this.SMCEnabled = request.SMCEnabled;
+            this.scaledSidecarResource = request.scaledSidecarResource;
             this.serviceMeshId = request.serviceMeshId;
             this.sidecarProxyAckSloCPUResourceLimit = request.sidecarProxyAckSloCPUResourceLimit;
             this.sidecarProxyAckSloCPUResourceRequest = request.sidecarProxyAckSloCPUResourceRequest;
@@ -615,7 +662,10 @@ public class UpdateNamespaceScopeSidecarConfigRequest extends Request {
         } 
 
         /**
-         * The number of worker threads to run in Istio Proxy.
+         * <p>The number of worker threads to run in Istio Proxy.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2</p>
          */
         public Builder concurrency(Integer concurrency) {
             this.putBodyParameter("Concurrency", concurrency);
@@ -624,7 +674,14 @@ public class UpdateNamespaceScopeSidecarConfigRequest extends Request {
         }
 
         /**
-         * EnableCoreDump.
+         * <p>Specifies whether to enable the core dump feature for the sidecar proxy containers. Valid values:</p>
+         * <ul>
+         * <li><code>true</code></li>
+         * <li><code>false</code></li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>false</p>
          */
         public Builder enableCoreDump(Boolean enableCoreDump) {
             this.putBodyParameter("EnableCoreDump", enableCoreDump);
@@ -633,7 +690,10 @@ public class UpdateNamespaceScopeSidecarConfigRequest extends Request {
         }
 
         /**
-         * The range of IP addresses that are allowed to access external services. (`global.proxy.excludelPRanges`)
+         * <p>The range of IP addresses that are allowed to access external services. (<code>global.proxy.excludelPRanges</code>)</p>
+         * 
+         * <strong>example:</strong>
+         * <p>172.16.0.0/12</p>
          */
         public Builder excludeIPRanges(String excludeIPRanges) {
             this.putBodyParameter("ExcludeIPRanges", excludeIPRanges);
@@ -642,7 +702,10 @@ public class UpdateNamespaceScopeSidecarConfigRequest extends Request {
         }
 
         /**
-         * The port that the inbound traffic of the sidecar proxy does not pass through.
+         * <p>The port that the inbound traffic of the sidecar proxy does not pass through.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>82</p>
          */
         public Builder excludeInboundPorts(String excludeInboundPorts) {
             this.putBodyParameter("ExcludeInboundPorts", excludeInboundPorts);
@@ -651,7 +714,10 @@ public class UpdateNamespaceScopeSidecarConfigRequest extends Request {
         }
 
         /**
-         * The port that the outbound traffic of the sidecar proxy does not pass through.
+         * <p>The port that the outbound traffic of the sidecar proxy does not pass through.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>81</p>
          */
         public Builder excludeOutboundPorts(String excludeOutboundPorts) {
             this.putBodyParameter("ExcludeOutboundPorts", excludeOutboundPorts);
@@ -660,11 +726,14 @@ public class UpdateNamespaceScopeSidecarConfigRequest extends Request {
         }
 
         /**
-         * Specifies whether applications can be started only after Istio Proxy starts. Valid values:
-         * <p>
+         * <p>Specifies whether applications can be started only after Istio Proxy starts. Valid values:</p>
+         * <ul>
+         * <li><code>true</code>: Applications can be started only after Istio Proxy starts.</li>
+         * <li><code>false</code>: Applications can be started before Istio Proxy starts.</li>
+         * </ul>
          * 
-         * *   `true`: Applications can be started only after Istio Proxy starts.
-         * *   `false`: Applications can be started before Istio Proxy starts.
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder holdApplicationUntilProxyStarts(Boolean holdApplicationUntilProxyStarts) {
             this.putBodyParameter("HoldApplicationUntilProxyStarts", holdApplicationUntilProxyStarts);
@@ -673,7 +742,12 @@ public class UpdateNamespaceScopeSidecarConfigRequest extends Request {
         }
 
         /**
-         * The range of IP addresses that are denied to access external services. (`global.proxy.includelPRanges`)
+         * <p>The range of IP addresses that are denied to access external services. (<code>global.proxy.includelPRanges</code>)</p>
+         * 
+         * <strong>example:</strong>
+         * <ul>
+         * <li></li>
+         * </ul>
          */
         public Builder includeIPRanges(String includeIPRanges) {
             this.putBodyParameter("IncludeIPRanges", includeIPRanges);
@@ -682,7 +756,10 @@ public class UpdateNamespaceScopeSidecarConfigRequest extends Request {
         }
 
         /**
-         * The port that the inbound traffic of the sidecar proxy passes through.
+         * <p>The port that the inbound traffic of the sidecar proxy passes through.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>83</p>
          */
         public Builder includeInboundPorts(String includeInboundPorts) {
             this.putBodyParameter("IncludeInboundPorts", includeInboundPorts);
@@ -691,7 +768,10 @@ public class UpdateNamespaceScopeSidecarConfigRequest extends Request {
         }
 
         /**
-         * The port that the outbound traffic of the sidecar proxy passes through.
+         * <p>The port that the outbound traffic of the sidecar proxy passes through.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>84</p>
          */
         public Builder includeOutboundPorts(String includeOutboundPorts) {
             this.putBodyParameter("IncludeOutboundPorts", includeOutboundPorts);
@@ -700,11 +780,14 @@ public class UpdateNamespaceScopeSidecarConfigRequest extends Request {
         }
 
         /**
-         * The mode in which the sidecar proxy intercepts inbound traffic. Valid values:
-         * <p>
+         * <p>The mode in which the sidecar proxy intercepts inbound traffic. Valid values:</p>
+         * <ul>
+         * <li><code>REDIRECT</code>: The sidecar proxy intercepts inbound traffic in the REDIRECT mode.</li>
+         * <li><code>TPROXY</code>: The sidecar proxy intercepts inbound traffic in the TPROXY mode.</li>
+         * </ul>
          * 
-         * *   `REDIRECT`: The sidecar proxy intercepts inbound traffic in the REDIRECT mode.
-         * *   `TPROXY`: The sidecar proxy intercepts inbound traffic in the TPROXY mode.
+         * <strong>example:</strong>
+         * <p>TPROXY</p>
          */
         public Builder interceptionMode(String interceptionMode) {
             this.putBodyParameter("InterceptionMode", interceptionMode);
@@ -713,11 +796,14 @@ public class UpdateNamespaceScopeSidecarConfigRequest extends Request {
         }
 
         /**
-         * Specifies whether to enable the Domain Name System (DNS) proxy feature. Valid values:
-         * <p>
+         * <p>Specifies whether to enable the Domain Name System (DNS) proxy feature. Valid values:</p>
+         * <ul>
+         * <li><code>true</code>: The DNS proxy feature is enabled.</li>
+         * <li><code>false</code>: The DNS proxy feature is disabled.</li>
+         * </ul>
          * 
-         * *   `true`: The DNS proxy feature is enabled.
-         * *   `false`: The DNS proxy feature is disabled.
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder istioDNSProxyEnabled(Boolean istioDNSProxyEnabled) {
             this.putBodyParameter("IstioDNSProxyEnabled", istioDNSProxyEnabled);
@@ -726,7 +812,10 @@ public class UpdateNamespaceScopeSidecarConfigRequest extends Request {
         }
 
         /**
-         * The lifecycle of the sidecar proxy.
+         * <p>The lifecycle of the sidecar proxy.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>{&quot;postStart&quot;:{&quot;exec&quot;:{&quot;command&quot;:[&quot;pilot-agent&quot;,&quot;wait&quot;]}},&quot;preStop&quot;:{&quot;exec&quot;:{&quot;command&quot;:[&quot;/bin/sh&quot;,&quot;-c&quot;,&quot;sleep 15&quot;]}}}</p>
          */
         public Builder lifecycle(String lifecycle) {
             this.putBodyParameter("Lifecycle", lifecycle);
@@ -735,7 +824,10 @@ public class UpdateNamespaceScopeSidecarConfigRequest extends Request {
         }
 
         /**
-         * The log level. Valid values: `info`, `debug`, `tracing`, and `error`.
+         * <p>The log level. Valid values: <code>info</code>, <code>debug</code>, <code>tracing</code>, and <code>error</code>.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>info</p>
          */
         public Builder logLevel(String logLevel) {
             this.putBodyParameter("LogLevel", logLevel);
@@ -744,7 +836,10 @@ public class UpdateNamespaceScopeSidecarConfigRequest extends Request {
         }
 
         /**
-         * The namespace for which you want to update the sidecar proxy configurations.
+         * <p>The namespace for which you want to update the sidecar proxy configurations.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>default</p>
          */
         public Builder namespace(String namespace) {
             this.putBodyParameter("Namespace", namespace);
@@ -753,7 +848,10 @@ public class UpdateNamespaceScopeSidecarConfigRequest extends Request {
         }
 
         /**
-         * The post-start parameters of Istio Proxy.
+         * <p>The post-start parameters of Istio Proxy.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>{&quot;exec&quot;:{&quot;command&quot;:[&quot;pilot-agent&quot;,&quot;wait&quot;]}}</p>
          */
         public Builder postStart(String postStart) {
             this.putBodyParameter("PostStart", postStart);
@@ -762,7 +860,10 @@ public class UpdateNamespaceScopeSidecarConfigRequest extends Request {
         }
 
         /**
-         * The pre-close parameters of Istio Proxy.
+         * <p>The pre-close parameters of Istio Proxy.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>{&quot;exec&quot;:{&quot;command&quot;:[&quot;/bin/sh&quot;,&quot;-c&quot;,&quot;sleep 15&quot;]}}</p>
          */
         public Builder preStop(String preStop) {
             this.putBodyParameter("PreStop", preStop);
@@ -771,7 +872,14 @@ public class UpdateNamespaceScopeSidecarConfigRequest extends Request {
         }
 
         /**
-         * Privileged.
+         * <p>Specifies whether to enable the privileged mode in the security context of the sidecar proxy containers. Valid values:</p>
+         * <ul>
+         * <li><code>true</code>: enables the privileged mode. This means that the sidecar proxy containers run in privileged mode.</li>
+         * <li><code>false</code>: does not enable the privileged mode.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>false</p>
          */
         public Builder privileged(Boolean privileged) {
             this.putBodyParameter("Privileged", privileged);
@@ -780,7 +888,10 @@ public class UpdateNamespaceScopeSidecarConfigRequest extends Request {
         }
 
         /**
-         * ProxyInitAckSloCPUResourceLimit.
+         * <p>The maximum number of reclaimed CPU cores provided by Container Service for Kubernetes (ACK) that are available to the istio-init container. Reclaimed resources, including CPU cores and memory, are resources that can be dynamically overcommitted. This configuration item is used to set the maximum number of CPU cores that are available to the istio-init container in a pod labeled with <code>koordinator.sh/qosClass</code>. Unit: millicore.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2000</p>
          */
         public Builder proxyInitAckSloCPUResourceLimit(String proxyInitAckSloCPUResourceLimit) {
             this.putBodyParameter("ProxyInitAckSloCPUResourceLimit", proxyInitAckSloCPUResourceLimit);
@@ -789,7 +900,10 @@ public class UpdateNamespaceScopeSidecarConfigRequest extends Request {
         }
 
         /**
-         * ProxyInitAckSloCPUResourceRequest.
+         * <p>The minimum number of reclaimed CPU cores provided by ACK that the istio-init container requires at runtime. This configuration item is used to set the minimum number of reclaimed CPU cores for the istio-init container in a pod labeled with <code>koordinator.sh/qosClass</code>. Unit: millicore.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>100</p>
          */
         public Builder proxyInitAckSloCPUResourceRequest(String proxyInitAckSloCPUResourceRequest) {
             this.putBodyParameter("ProxyInitAckSloCPUResourceRequest", proxyInitAckSloCPUResourceRequest);
@@ -798,7 +912,10 @@ public class UpdateNamespaceScopeSidecarConfigRequest extends Request {
         }
 
         /**
-         * ProxyInitAckSloMemoryResourceLimit.
+         * <p>The maximum size of reclaimed memory resources provided by ACK that are available to the istio-init container. This configuration item is used to set the maximum size of memory that is available to the istio-init container in a pod labeled with <code>koordinator.sh/qosClass</code>.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2048Mi</p>
          */
         public Builder proxyInitAckSloMemoryResourceLimit(String proxyInitAckSloMemoryResourceLimit) {
             this.putBodyParameter("ProxyInitAckSloMemoryResourceLimit", proxyInitAckSloMemoryResourceLimit);
@@ -807,7 +924,10 @@ public class UpdateNamespaceScopeSidecarConfigRequest extends Request {
         }
 
         /**
-         * ProxyInitAckSloMemoryResourceRequest.
+         * <p>The minimum size of reclaimed memory provided by ACK that the istio-init container requires at runtime. This configuration item is used to set the minimum size of reclaimed memory for the istio-init container in a pod labeled with <code>koordinator.sh/qosClass</code>.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>128Mi</p>
          */
         public Builder proxyInitAckSloMemoryResourceRequest(String proxyInitAckSloMemoryResourceRequest) {
             this.putBodyParameter("ProxyInitAckSloMemoryResourceRequest", proxyInitAckSloMemoryResourceRequest);
@@ -816,7 +936,10 @@ public class UpdateNamespaceScopeSidecarConfigRequest extends Request {
         }
 
         /**
-         * The maximum number of CPU cores that are available to the sidecar proxy init container.
+         * <p>The maximum number of CPU cores that are available to the sidecar proxy init container.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2000 m</p>
          */
         public Builder proxyInitCPUResourceLimit(String proxyInitCPUResourceLimit) {
             this.putBodyParameter("ProxyInitCPUResourceLimit", proxyInitCPUResourceLimit);
@@ -825,7 +948,10 @@ public class UpdateNamespaceScopeSidecarConfigRequest extends Request {
         }
 
         /**
-         * The minimum number of CPU cores that are requested by the sidecar proxy init container.
+         * <p>The minimum number of CPU cores that are requested by the sidecar proxy init container.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>60 m</p>
          */
         public Builder proxyInitCPUResourceRequest(String proxyInitCPUResourceRequest) {
             this.putBodyParameter("ProxyInitCPUResourceRequest", proxyInitCPUResourceRequest);
@@ -834,7 +960,10 @@ public class UpdateNamespaceScopeSidecarConfigRequest extends Request {
         }
 
         /**
-         * The maximum size of memory that is available to the sidecar proxy init container.
+         * <p>The maximum size of memory that is available to the sidecar proxy init container.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>50 Mi</p>
          */
         public Builder proxyInitMemoryResourceLimit(String proxyInitMemoryResourceLimit) {
             this.putBodyParameter("ProxyInitMemoryResourceLimit", proxyInitMemoryResourceLimit);
@@ -843,7 +972,10 @@ public class UpdateNamespaceScopeSidecarConfigRequest extends Request {
         }
 
         /**
-         * The minimum size of memory that is requested by the sidecar proxy init container.
+         * <p>The minimum size of memory that is requested by the sidecar proxy init container.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>30 Mi</p>
          */
         public Builder proxyInitMemoryResourceRequest(String proxyInitMemoryResourceRequest) {
             this.putBodyParameter("ProxyInitMemoryResourceRequest", proxyInitMemoryResourceRequest);
@@ -852,7 +984,10 @@ public class UpdateNamespaceScopeSidecarConfigRequest extends Request {
         }
 
         /**
-         * The environment variables that are added to a sidecar proxy. The environment variables are represented as JSON objects. The keys and values in the JSON objects represent the keys and values added to the environment variables of the sidecar proxy.
+         * <p>The environment variables that are added to a sidecar proxy. The environment variables are represented as JSON objects. The keys and values in the JSON objects represent the keys and values added to the environment variables of the sidecar proxy.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>{&quot;EXIT_ON_ZERO_ACTIVE_CONNECTIONS&quot;:&quot;true&quot;}</p>
          */
         public Builder proxyMetadata(String proxyMetadata) {
             this.putBodyParameter("ProxyMetadata", proxyMetadata);
@@ -861,7 +996,10 @@ public class UpdateNamespaceScopeSidecarConfigRequest extends Request {
         }
 
         /**
-         * The monitoring metrics for data collected by Envoy proxies. The value is in the JSON format.
+         * <p>The monitoring metrics for data collected by Envoy proxies. The value is in the JSON format.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>{ &quot;inclusionPrefixes&quot;: [ &quot;cluster.outbound&quot;, &quot;cluster_manager&quot;, &quot;listener_manager&quot;, &quot;server&quot;, &quot;cluster.xds-grpc&quot; ], &quot;inclusionRegexps&quot;: [ &quot;listener.<em>.downstream_cx_total&quot;, &quot;listener.</em>.downstream_cx_active&quot; ] }</p>
          */
         public Builder proxyStatsMatcher(String proxyStatsMatcher) {
             this.putBodyParameter("ProxyStatsMatcher", proxyStatsMatcher);
@@ -870,7 +1008,10 @@ public class UpdateNamespaceScopeSidecarConfigRequest extends Request {
         }
 
         /**
-         * ReadinessFailureThreshold.
+         * <p>The number of readiness check failures required before marking a sidecar proxy container as not ready.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>5</p>
          */
         public Builder readinessFailureThreshold(Integer readinessFailureThreshold) {
             this.putBodyParameter("ReadinessFailureThreshold", readinessFailureThreshold);
@@ -879,7 +1020,10 @@ public class UpdateNamespaceScopeSidecarConfigRequest extends Request {
         }
 
         /**
-         * ReadinessInitialDelaySeconds.
+         * <p>The amount of time to wait before the first readiness check of a sidecar proxy container is performed. Unit: seconds.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder readinessInitialDelaySeconds(Integer readinessInitialDelaySeconds) {
             this.putBodyParameter("ReadinessInitialDelaySeconds", readinessInitialDelaySeconds);
@@ -888,7 +1032,10 @@ public class UpdateNamespaceScopeSidecarConfigRequest extends Request {
         }
 
         /**
-         * ReadinessPeriodSeconds.
+         * <p>The interval between two readiness checks of a sidecar proxy container. Unit: seconds.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2</p>
          */
         public Builder readinessPeriodSeconds(Integer readinessPeriodSeconds) {
             this.putBodyParameter("ReadinessPeriodSeconds", readinessPeriodSeconds);
@@ -897,7 +1044,49 @@ public class UpdateNamespaceScopeSidecarConfigRequest extends Request {
         }
 
         /**
-         * The ID of the ASM instance.
+         * <p>Indicates the runtime parameters of Envoy proxy processes in the sidecar proxy container. This parameter is a serialized JSON string. The keys and values of a JSON object are the keys and the values of a Envoy Runtime Parameter respectively.</p>
+         * <p>Valid values:</p>
+         * <ul>
+         * <li>global_downstream_max_connections: indicates that the limits on the number of connections from downstream to Envoy.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>{&quot;overload.global_downstream_max_connections&quot;:&quot;65536&quot;}</p>
+         */
+        public Builder runtimeValues(String runtimeValues) {
+            this.putBodyParameter("RuntimeValues", runtimeValues);
+            this.runtimeValues = runtimeValues;
+            return this;
+        }
+
+        /**
+         * <p>Specifies whether to enable Shared Memory Communications over Remote Direct Memory Access (SMC-R) optimization. The SMC-R optimization feature uses Alibaba Cloud Linux 3 and elastic remote direct memory access (eRDMA) network devices, which optimizes cross-node communication.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>false</p>
+         */
+        public Builder SMCEnabled(Boolean SMCEnabled) {
+            this.putBodyParameter("SMCEnabled", SMCEnabled);
+            this.SMCEnabled = SMCEnabled;
+            return this;
+        }
+
+        /**
+         * ScaledSidecarResource.
+         */
+        public Builder scaledSidecarResource(ScaledSidecarResource scaledSidecarResource) {
+            String scaledSidecarResourceShrink = shrink(scaledSidecarResource, "ScaledSidecarResource", "json");
+            this.putBodyParameter("ScaledSidecarResource", scaledSidecarResourceShrink);
+            this.scaledSidecarResource = scaledSidecarResource;
+            return this;
+        }
+
+        /**
+         * <p>The ID of the ASM instance.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>ca04bc38979214bf2882be79d39b4****</p>
          */
         public Builder serviceMeshId(String serviceMeshId) {
             this.putBodyParameter("ServiceMeshId", serviceMeshId);
@@ -906,7 +1095,10 @@ public class UpdateNamespaceScopeSidecarConfigRequest extends Request {
         }
 
         /**
-         * SidecarProxyAckSloCPUResourceLimit.
+         * <p>The maximum number of reclaimed CPU cores provided by ACK that are available to the sidecar proxy container. This configuration item is used to set the maximum number of CPU cores that are available to the sidecar proxy container in a pod labeled with <code>koordinator.sh/qosClass</code>. Unit: millicore.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2000</p>
          */
         public Builder sidecarProxyAckSloCPUResourceLimit(String sidecarProxyAckSloCPUResourceLimit) {
             this.putBodyParameter("SidecarProxyAckSloCPUResourceLimit", sidecarProxyAckSloCPUResourceLimit);
@@ -915,7 +1107,10 @@ public class UpdateNamespaceScopeSidecarConfigRequest extends Request {
         }
 
         /**
-         * SidecarProxyAckSloCPUResourceRequest.
+         * <p>The minimum number of reclaimed CPU cores provided by ACK that the sidecar proxy container requires at runtime. This configuration item is used to set the minimum number of reclaimed CPU cores for the sidecar proxy container in a pod labeled with <code>koordinator.sh/qosClass</code>. Unit: millicore.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>100</p>
          */
         public Builder sidecarProxyAckSloCPUResourceRequest(String sidecarProxyAckSloCPUResourceRequest) {
             this.putBodyParameter("SidecarProxyAckSloCPUResourceRequest", sidecarProxyAckSloCPUResourceRequest);
@@ -924,7 +1119,10 @@ public class UpdateNamespaceScopeSidecarConfigRequest extends Request {
         }
 
         /**
-         * SidecarProxyAckSloMemoryResourceLimit.
+         * <p>The maximum size of reclaimed memory resources provided by ACK that are available to the sidecar proxy container. This configuration item is used to set the maximum size of memory that is available to the sidecar proxy container in a pod labeled with <code>koordinator.sh/qosClass</code>.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2048Mi</p>
          */
         public Builder sidecarProxyAckSloMemoryResourceLimit(String sidecarProxyAckSloMemoryResourceLimit) {
             this.putBodyParameter("SidecarProxyAckSloMemoryResourceLimit", sidecarProxyAckSloMemoryResourceLimit);
@@ -933,7 +1131,10 @@ public class UpdateNamespaceScopeSidecarConfigRequest extends Request {
         }
 
         /**
-         * SidecarProxyAckSloMemoryResourceRequest.
+         * <p>The minimum size of reclaimed memory provided by ACK that the sidecar proxy container requires at runtime. This configuration item is used to set the minimum size of reclaimed memory for the sidecar proxy container in a pod labeled with <code>koordinator.sh/qosClass</code>.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>128Mi</p>
          */
         public Builder sidecarProxyAckSloMemoryResourceRequest(String sidecarProxyAckSloMemoryResourceRequest) {
             this.putBodyParameter("SidecarProxyAckSloMemoryResourceRequest", sidecarProxyAckSloMemoryResourceRequest);
@@ -942,7 +1143,10 @@ public class UpdateNamespaceScopeSidecarConfigRequest extends Request {
         }
 
         /**
-         * The maximum number of CPU cores that are available to the sidecar proxy container.
+         * <p>The maximum number of CPU cores that are available to the sidecar proxy container.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2000 m</p>
          */
         public Builder sidecarProxyCPUResourceLimit(String sidecarProxyCPUResourceLimit) {
             this.putBodyParameter("SidecarProxyCPUResourceLimit", sidecarProxyCPUResourceLimit);
@@ -951,7 +1155,10 @@ public class UpdateNamespaceScopeSidecarConfigRequest extends Request {
         }
 
         /**
-         * The minimum number of CPU cores that are requested by the sidecar proxy container.
+         * <p>The minimum number of CPU cores that are requested by the sidecar proxy container.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>60 m</p>
          */
         public Builder sidecarProxyCPUResourceRequest(String sidecarProxyCPUResourceRequest) {
             this.putBodyParameter("SidecarProxyCPUResourceRequest", sidecarProxyCPUResourceRequest);
@@ -960,7 +1167,10 @@ public class UpdateNamespaceScopeSidecarConfigRequest extends Request {
         }
 
         /**
-         * The maximum size of memory that is available to the sidecar proxy container.
+         * <p>The maximum size of memory that is available to the sidecar proxy container.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>50 Mi</p>
          */
         public Builder sidecarProxyMemoryResourceLimit(String sidecarProxyMemoryResourceLimit) {
             this.putBodyParameter("SidecarProxyMemoryResourceLimit", sidecarProxyMemoryResourceLimit);
@@ -969,7 +1179,10 @@ public class UpdateNamespaceScopeSidecarConfigRequest extends Request {
         }
 
         /**
-         * The minimum size of memory that is requested by the sidecar proxy container.
+         * <p>The minimum size of memory that is requested by the sidecar proxy container.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>30 Mi</p>
          */
         public Builder sidecarProxyMemoryResourceRequest(String sidecarProxyMemoryResourceRequest) {
             this.putBodyParameter("SidecarProxyMemoryResourceRequest", sidecarProxyMemoryResourceRequest);
@@ -978,7 +1191,10 @@ public class UpdateNamespaceScopeSidecarConfigRequest extends Request {
         }
 
         /**
-         * The maximum period of time that the sidecar proxy waits for a request to end.
+         * <p>The maximum period of time that the sidecar proxy waits for a request to end.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>6s</p>
          */
         public Builder terminationDrainDuration(String terminationDrainDuration) {
             this.putBodyParameter("TerminationDrainDuration", terminationDrainDuration);
@@ -987,16 +1203,21 @@ public class UpdateNamespaceScopeSidecarConfigRequest extends Request {
         }
 
         /**
-         * The custom configurations of Tracing Analysis. The configurations must be serialized into JSON strings. The configurations contain the following parameters:
-         * <p>
+         * <p>The custom configurations of Tracing Analysis. The configurations must be serialized into JSON strings. The configurations contain the following parameters:</p>
+         * <ul>
+         * <li><p><code>sampling</code>: The sampling rate, which is of the DOUBLE type.</p>
+         * </li>
+         * <li><p><code>custom_tags</code>: The custom tags added to reported spans, which are of the MAP type. The key of a tag is of the string type. The value of a tag is in the JSON format. A custom tag can belong to one of the following types:</p>
+         * <ul>
+         * <li><code>literal</code>: The tag value is a fixed value in the JSON format. This tag must contain the <code>value</code> field that specifies a literal. Example: <code>{&quot;value&quot;:&quot;test&quot;}</code>.</li>
+         * <li><code>header</code>: The tag value is a request header in the JSON format. This tag must contain the <code>name</code> field and <code>defaultValue</code> field.The name field indicates the name of the request header. The defaultValue field indicates the default value that is used when no request header is available. Example: <code>{&quot;name&quot;:&quot;test&quot;,&quot;defaultValue&quot;:&quot;test&quot;}</code>.</li>
+         * <li><code>environment</code>: The tag value is an environment variable in the JSON format. This tag must contain the <code>name</code> field and <code>defaultValue</code> field. The name field indicates the name of the environment variable. The defaultValue field indicates the environment variable that is used when no environment variable is available. Example: <code>{&quot;name&quot;:&quot;test&quot;,&quot;defaultValue&quot;:&quot;test&quot;}</code>.</li>
+         * </ul>
+         * </li>
+         * </ul>
          * 
-         * *   `sampling`: The sampling rate, which is of the DOUBLE type.
-         * 
-         * *   `custom_tags`: The custom tags added to reported spans, which are of the MAP type. The key of a tag is of the string type. The value of a tag is in the JSON format. A custom tag can belong to one of the following types:
-         * 
-         *     *   `literal`: The tag value is a fixed value in the JSON format. This tag must contain the `value` field that specifies a literal. Example: `{"value":"test"}`.
-         *     *   `header`: The tag value is a request header in the JSON format. This tag must contain the `name` field and `defaultValue` field.The name field indicates the name of the request header. The defaultValue field indicates the default value that is used when no request header is available. Example: `{"name":"test","defaultValue":"test"}`.
-         *     *   `environment`: The tag value is an environment variable in the JSON format. This tag must contain the `name` field and `defaultValue` field. The name field indicates the name of the environment variable. The defaultValue field indicates the environment variable that is used when no environment variable is available. Example: `{"name":"test","defaultValue":"test"}`.
+         * <strong>example:</strong>
+         * <p>{&quot;sampling&quot;:99.8,&quot;custom_tags&quot;:{&quot;test&quot;:{&quot;literal&quot;:{&quot;value&quot;:&quot;testnamespace&quot;}}}}</p>
          */
         public Builder tracing(String tracing) {
             this.putBodyParameter("Tracing", tracing);
@@ -1011,4 +1232,100 @@ public class UpdateNamespaceScopeSidecarConfigRequest extends Request {
 
     } 
 
+    /**
+     * 
+     * {@link UpdateNamespaceScopeSidecarConfigRequest} extends {@link TeaModel}
+     *
+     * <p>UpdateNamespaceScopeSidecarConfigRequest</p>
+     */
+    public static class ScaledSidecarResource extends TeaModel {
+        @com.aliyun.core.annotation.NameInMap("ContainerRef")
+        private String containerRef;
+
+        @com.aliyun.core.annotation.NameInMap("ResourceCalculationStrategy")
+        private String resourceCalculationStrategy;
+
+        @com.aliyun.core.annotation.NameInMap("ResourcePercentage")
+        private Integer resourcePercentage;
+
+        private ScaledSidecarResource(Builder builder) {
+            this.containerRef = builder.containerRef;
+            this.resourceCalculationStrategy = builder.resourceCalculationStrategy;
+            this.resourcePercentage = builder.resourcePercentage;
+        }
+
+        public static Builder builder() {
+            return new Builder();
+        }
+
+        public static ScaledSidecarResource create() {
+            return builder().build();
+        }
+
+        /**
+         * @return containerRef
+         */
+        public String getContainerRef() {
+            return this.containerRef;
+        }
+
+        /**
+         * @return resourceCalculationStrategy
+         */
+        public String getResourceCalculationStrategy() {
+            return this.resourceCalculationStrategy;
+        }
+
+        /**
+         * @return resourcePercentage
+         */
+        public Integer getResourcePercentage() {
+            return this.resourcePercentage;
+        }
+
+        public static final class Builder {
+            private String containerRef; 
+            private String resourceCalculationStrategy; 
+            private Integer resourcePercentage; 
+
+            private Builder() {
+            } 
+
+            private Builder(ScaledSidecarResource model) {
+                this.containerRef = model.containerRef;
+                this.resourceCalculationStrategy = model.resourceCalculationStrategy;
+                this.resourcePercentage = model.resourcePercentage;
+            } 
+
+            /**
+             * ContainerRef.
+             */
+            public Builder containerRef(String containerRef) {
+                this.containerRef = containerRef;
+                return this;
+            }
+
+            /**
+             * ResourceCalculationStrategy.
+             */
+            public Builder resourceCalculationStrategy(String resourceCalculationStrategy) {
+                this.resourceCalculationStrategy = resourceCalculationStrategy;
+                return this;
+            }
+
+            /**
+             * ResourcePercentage.
+             */
+            public Builder resourcePercentage(Integer resourcePercentage) {
+                this.resourcePercentage = resourcePercentage;
+                return this;
+            }
+
+            public ScaledSidecarResource build() {
+                return new ScaledSidecarResource(this);
+            } 
+
+        } 
+
+    }
 }

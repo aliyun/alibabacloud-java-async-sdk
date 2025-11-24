@@ -1,40 +1,45 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.servicemesh20200111.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link CreateSwimLaneRequest} extends {@link RequestModel}
  *
  * <p>CreateSwimLaneRequest</p>
  */
 public class CreateSwimLaneRequest extends Request {
-    @Body
-    @NameInMap("GroupName")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("GroupName")
     private String groupName;
 
-    @Body
-    @NameInMap("LabelSelectorKey")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("LabelSelectorKey")
     private String labelSelectorKey;
 
-    @Body
-    @NameInMap("LabelSelectorValue")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("LabelSelectorValue")
     private String labelSelectorValue;
 
-    @Body
-    @NameInMap("ServiceMeshId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("ServiceMeshId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String serviceMeshId;
 
-    @Body
-    @NameInMap("ServicesList")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("ServicesList")
     private String servicesList;
 
-    @Body
-    @NameInMap("SwimLaneName")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("SwimLaneName")
     private String swimLaneName;
 
     private CreateSwimLaneRequest(Builder builder) {
@@ -55,7 +60,7 @@ public class CreateSwimLaneRequest extends Request {
         return builder().build();
     }
 
-    @Override
+@Override
     public Builder toBuilder() {
         return new Builder(this);
     }
@@ -125,7 +130,10 @@ public class CreateSwimLaneRequest extends Request {
         } 
 
         /**
-         * The name of the lane group.
+         * <p>The name of the lane group.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>test</p>
          */
         public Builder groupName(String groupName) {
             this.putBodyParameter("GroupName", groupName);
@@ -134,7 +142,10 @@ public class CreateSwimLaneRequest extends Request {
         }
 
         /**
-         * The label key of the associated service workload. Set the value to `ASM_TRAFFIC_TAG`.
+         * <p>The label key of the associated service workload. Set the value to <code>ASM_TRAFFIC_TAG</code>.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>ASM_TRAFFIC_TAG</p>
          */
         public Builder labelSelectorKey(String labelSelectorKey) {
             this.putBodyParameter("LabelSelectorKey", labelSelectorKey);
@@ -143,7 +154,10 @@ public class CreateSwimLaneRequest extends Request {
         }
 
         /**
-         * The label value of the associated service workload.``
+         * <p>The label value of the associated service workload.``</p>
+         * 
+         * <strong>example:</strong>
+         * <p>v3</p>
          */
         public Builder labelSelectorValue(String labelSelectorValue) {
             this.putBodyParameter("LabelSelectorValue", labelSelectorValue);
@@ -152,7 +166,11 @@ public class CreateSwimLaneRequest extends Request {
         }
 
         /**
-         * The ID of the Service Mesh (ASM) instance.
+         * <p>The ID of the Service Mesh (ASM) instance.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <hr>
          */
         public Builder serviceMeshId(String serviceMeshId) {
             this.putBodyParameter("ServiceMeshId", serviceMeshId);
@@ -161,7 +179,10 @@ public class CreateSwimLaneRequest extends Request {
         }
 
         /**
-         * The list of services associated with the lane. The value is a JSON array. The format of a single service is `$Cluster name/$Cluster ID/$Namespace/$Service name`.
+         * <p>The list of services associated with the lane. The value is a JSON array. The format of a single service is <code>$Cluster name/$Cluster ID/$Namespace/$Service name</code>.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>[&quot;sh01/c089443ea9e50403fa4f0a6237d11e0a9/default/mocka&quot;,&quot;sh01/c089443ea9e50403fa4f0a6237d11e0a9/default/mockb&quot;,&quot;sh01/c089443ea9e50403fa4f0a6237d11e0a9/default/mockc&quot;]</p>
          */
         public Builder servicesList(String servicesList) {
             this.putBodyParameter("ServicesList", servicesList);
@@ -170,7 +191,10 @@ public class CreateSwimLaneRequest extends Request {
         }
 
         /**
-         * The name of the lane.
+         * <p>The name of the lane.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>s3</p>
          */
         public Builder swimLaneName(String swimLaneName) {
             this.putBodyParameter("SwimLaneName", swimLaneName);

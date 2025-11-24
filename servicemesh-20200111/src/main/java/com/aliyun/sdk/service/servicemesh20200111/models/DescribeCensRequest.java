@@ -1,19 +1,24 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.servicemesh20200111.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeCensRequest} extends {@link RequestModel}
  *
  * <p>DescribeCensRequest</p>
  */
 public class DescribeCensRequest extends Request {
-    @Query
-    @NameInMap("ServiceMeshId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ServiceMeshId")
     private String serviceMeshId;
 
     private DescribeCensRequest(Builder builder) {
@@ -29,7 +34,7 @@ public class DescribeCensRequest extends Request {
         return builder().build();
     }
 
-    @Override
+@Override
     public Builder toBuilder() {
         return new Builder(this);
     }
@@ -54,7 +59,10 @@ public class DescribeCensRequest extends Request {
         } 
 
         /**
-         * The ASM instance ID.
+         * <p>The ID of the ASM instance.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>ce134b0727aa2492db69f6c3880e1****</p>
          */
         public Builder serviceMeshId(String serviceMeshId) {
             this.putQueryParameter("ServiceMeshId", serviceMeshId);

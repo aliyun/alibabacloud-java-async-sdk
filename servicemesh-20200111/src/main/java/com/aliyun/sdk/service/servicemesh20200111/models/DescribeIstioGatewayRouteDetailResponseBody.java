@@ -1,33 +1,38 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.servicemesh20200111.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeIstioGatewayRouteDetailResponseBody} extends {@link TeaModel}
  *
  * <p>DescribeIstioGatewayRouteDetailResponseBody</p>
  */
 public class DescribeIstioGatewayRouteDetailResponseBody extends TeaModel {
-    @NameInMap("Description")
+    @com.aliyun.core.annotation.NameInMap("Description")
     private String description;
 
-    @NameInMap("Namespace")
+    @com.aliyun.core.annotation.NameInMap("Namespace")
     private String namespace;
 
-    @NameInMap("Priority")
+    @com.aliyun.core.annotation.NameInMap("Priority")
     private Integer priority;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("RouteDetail")
+    @com.aliyun.core.annotation.NameInMap("RouteDetail")
     private RouteDetail routeDetail;
 
-    @NameInMap("Status")
+    @com.aliyun.core.annotation.NameInMap("Status")
     private Integer status;
 
     private DescribeIstioGatewayRouteDetailResponseBody(Builder builder) {
@@ -45,6 +50,10 @@ public class DescribeIstioGatewayRouteDetailResponseBody extends TeaModel {
 
     public static DescribeIstioGatewayRouteDetailResponseBody create() {
         return builder().build();
+    }
+
+    public Builder toBuilder() {
+        return new Builder(this);
     }
 
     /**
@@ -97,8 +106,23 @@ public class DescribeIstioGatewayRouteDetailResponseBody extends TeaModel {
         private RouteDetail routeDetail; 
         private Integer status; 
 
+        private Builder() {
+        } 
+
+        private Builder(DescribeIstioGatewayRouteDetailResponseBody model) {
+            this.description = model.description;
+            this.namespace = model.namespace;
+            this.priority = model.priority;
+            this.requestId = model.requestId;
+            this.routeDetail = model.routeDetail;
+            this.status = model.status;
+        } 
+
         /**
-         * The description of the routing rule.
+         * <p>The description of the routing rule.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>demo route</p>
          */
         public Builder description(String description) {
             this.description = description;
@@ -106,7 +130,10 @@ public class DescribeIstioGatewayRouteDetailResponseBody extends TeaModel {
         }
 
         /**
-         * The namespace.
+         * <p>The namespace.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>default</p>
          */
         public Builder namespace(String namespace) {
             this.namespace = namespace;
@@ -114,7 +141,10 @@ public class DescribeIstioGatewayRouteDetailResponseBody extends TeaModel {
         }
 
         /**
-         * The priority of the routing rule. The value of this parameter is an integer. A smaller value indicates a higher priority.
+         * <p>The priority of the routing rule. The value of this parameter is an integer. A smaller value indicates a higher priority.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder priority(Integer priority) {
             this.priority = priority;
@@ -122,7 +152,10 @@ public class DescribeIstioGatewayRouteDetailResponseBody extends TeaModel {
         }
 
         /**
-         * The request ID.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>31d3a0f0-07ed-4f6e-9004-1804498c****</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -130,7 +163,7 @@ public class DescribeIstioGatewayRouteDetailResponseBody extends TeaModel {
         }
 
         /**
-         * The detailed information about the routing rule.
+         * <p>The detailed information about the routing rule.</p>
          */
         public Builder routeDetail(RouteDetail routeDetail) {
             this.routeDetail = routeDetail;
@@ -138,12 +171,15 @@ public class DescribeIstioGatewayRouteDetailResponseBody extends TeaModel {
         }
 
         /**
-         * The status of the routing rule. Valid values:
-         * <p>
+         * <p>The status of the routing rule. Valid values:</p>
+         * <ul>
+         * <li><code>0</code>: The routing rule is valid.</li>
+         * <li><code>1</code>: The routing rule is invalid.</li>
+         * <li><code>2</code>: An error occurs during the creation or update of the routing rule.</li>
+         * </ul>
          * 
-         * *   `0`: The routing rule is valid.
-         * *   `1`: The routing rule is invalid.
-         * *   `2`: An error occurs during the creation or update of the routing rule.
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder status(Integer status) {
             this.status = status;
@@ -156,11 +192,17 @@ public class DescribeIstioGatewayRouteDetailResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link DescribeIstioGatewayRouteDetailResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeIstioGatewayRouteDetailResponseBody</p>
+     */
     public static class Delegate extends TeaModel {
-        @NameInMap("Name")
+        @com.aliyun.core.annotation.NameInMap("Name")
         private String name;
 
-        @NameInMap("Namespace")
+        @com.aliyun.core.annotation.NameInMap("Namespace")
         private String namespace;
 
         private Delegate(Builder builder) {
@@ -194,8 +236,19 @@ public class DescribeIstioGatewayRouteDetailResponseBody extends TeaModel {
             private String name; 
             private String namespace; 
 
+            private Builder() {
+            } 
+
+            private Builder(Delegate model) {
+                this.name = model.name;
+                this.namespace = model.namespace;
+            } 
+
             /**
-             * The name of the virtual service.
+             * <p>The name of the virtual service.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>reviews</p>
              */
             public Builder name(String name) {
                 this.name = name;
@@ -203,7 +256,10 @@ public class DescribeIstioGatewayRouteDetailResponseBody extends TeaModel {
             }
 
             /**
-             * The namespace to which the virtual service belongs.
+             * <p>The namespace to which the virtual service belongs.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>default</p>
              */
             public Builder namespace(String namespace) {
                 this.namespace = namespace;
@@ -217,8 +273,14 @@ public class DescribeIstioGatewayRouteDetailResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link DescribeIstioGatewayRouteDetailResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeIstioGatewayRouteDetailResponseBody</p>
+     */
     public static class Percentage extends TeaModel {
-        @NameInMap("Value")
+        @com.aliyun.core.annotation.NameInMap("Value")
         private Float value;
 
         private Percentage(Builder builder) {
@@ -243,8 +305,18 @@ public class DescribeIstioGatewayRouteDetailResponseBody extends TeaModel {
         public static final class Builder {
             private Float value; 
 
+            private Builder() {
+            } 
+
+            private Builder(Percentage model) {
+                this.value = model.value;
+            } 
+
             /**
-             * The percentage of requests that are mirrored to another destination except for the original destination, which is expressed as a decimal.
+             * <p>The percentage of requests that are mirrored to another destination except for the original destination, which is expressed as a decimal.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>0.1</p>
              */
             public Builder value(Float value) {
                 this.value = value;
@@ -258,11 +330,17 @@ public class DescribeIstioGatewayRouteDetailResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link DescribeIstioGatewayRouteDetailResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeIstioGatewayRouteDetailResponseBody</p>
+     */
     public static class Abort extends TeaModel {
-        @NameInMap("HttpStatus")
+        @com.aliyun.core.annotation.NameInMap("HttpStatus")
         private Integer httpStatus;
 
-        @NameInMap("Percentage")
+        @com.aliyun.core.annotation.NameInMap("Percentage")
         private Percentage percentage;
 
         private Abort(Builder builder) {
@@ -296,8 +374,19 @@ public class DescribeIstioGatewayRouteDetailResponseBody extends TeaModel {
             private Integer httpStatus; 
             private Percentage percentage; 
 
+            private Builder() {
+            } 
+
+            private Builder(Abort model) {
+                this.httpStatus = model.httpStatus;
+                this.percentage = model.percentage;
+            } 
+
             /**
-             * The HTTP status code.
+             * <p>The HTTP status code.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>400</p>
              */
             public Builder httpStatus(Integer httpStatus) {
                 this.httpStatus = httpStatus;
@@ -305,7 +394,7 @@ public class DescribeIstioGatewayRouteDetailResponseBody extends TeaModel {
             }
 
             /**
-             * The percentage of requests that are aborted with the specified error code.
+             * <p>The percentage of requests that are aborted with the specified error code.</p>
              */
             public Builder percentage(Percentage percentage) {
                 this.percentage = percentage;
@@ -319,8 +408,14 @@ public class DescribeIstioGatewayRouteDetailResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link DescribeIstioGatewayRouteDetailResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeIstioGatewayRouteDetailResponseBody</p>
+     */
     public static class DelayPercentage extends TeaModel {
-        @NameInMap("Value")
+        @com.aliyun.core.annotation.NameInMap("Value")
         private Float value;
 
         private DelayPercentage(Builder builder) {
@@ -345,8 +440,18 @@ public class DescribeIstioGatewayRouteDetailResponseBody extends TeaModel {
         public static final class Builder {
             private Float value; 
 
+            private Builder() {
+            } 
+
+            private Builder(DelayPercentage model) {
+                this.value = model.value;
+            } 
+
             /**
-             * The percentage of requests that are aborted with the specified error code, which is expressed as a decimal.
+             * <p>The percentage of requests that are aborted with the specified error code, which is expressed as a decimal.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>0.1</p>
              */
             public Builder value(Float value) {
                 this.value = value;
@@ -360,14 +465,20 @@ public class DescribeIstioGatewayRouteDetailResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link DescribeIstioGatewayRouteDetailResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeIstioGatewayRouteDetailResponseBody</p>
+     */
     public static class Delay extends TeaModel {
-        @NameInMap("ExponentialDelay")
+        @com.aliyun.core.annotation.NameInMap("ExponentialDelay")
         private String exponentialDelay;
 
-        @NameInMap("FixedDelay")
+        @com.aliyun.core.annotation.NameInMap("FixedDelay")
         private String fixedDelay;
 
-        @NameInMap("Percentage")
+        @com.aliyun.core.annotation.NameInMap("Percentage")
         private DelayPercentage percentage;
 
         private Delay(Builder builder) {
@@ -410,8 +521,20 @@ public class DescribeIstioGatewayRouteDetailResponseBody extends TeaModel {
             private String fixedDelay; 
             private DelayPercentage percentage; 
 
+            private Builder() {
+            } 
+
+            private Builder(Delay model) {
+                this.exponentialDelay = model.exponentialDelay;
+                this.fixedDelay = model.fixedDelay;
+                this.percentage = model.percentage;
+            } 
+
             /**
-             * The duration for request delay is expressed as 2 raised to the power of x. You must specify the value of x.
+             * <p>The duration for request delay is expressed as 2 raised to the power of x. You must specify the value of x.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>3</p>
              */
             public Builder exponentialDelay(String exponentialDelay) {
                 this.exponentialDelay = exponentialDelay;
@@ -419,7 +542,10 @@ public class DescribeIstioGatewayRouteDetailResponseBody extends TeaModel {
             }
 
             /**
-             * The fixed duration for request delay.
+             * <p>The fixed duration for request delay.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>5s</p>
              */
             public Builder fixedDelay(String fixedDelay) {
                 this.fixedDelay = fixedDelay;
@@ -427,7 +553,7 @@ public class DescribeIstioGatewayRouteDetailResponseBody extends TeaModel {
             }
 
             /**
-             * The percentage of requests to which the delay fault is injected.
+             * <p>The percentage of requests to which the delay fault is injected.</p>
              */
             public Builder percentage(DelayPercentage percentage) {
                 this.percentage = percentage;
@@ -441,11 +567,17 @@ public class DescribeIstioGatewayRouteDetailResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link DescribeIstioGatewayRouteDetailResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeIstioGatewayRouteDetailResponseBody</p>
+     */
     public static class Fault extends TeaModel {
-        @NameInMap("Abort")
+        @com.aliyun.core.annotation.NameInMap("Abort")
         private Abort abort;
 
-        @NameInMap("Delay")
+        @com.aliyun.core.annotation.NameInMap("Delay")
         private Delay delay;
 
         private Fault(Builder builder) {
@@ -479,8 +611,16 @@ public class DescribeIstioGatewayRouteDetailResponseBody extends TeaModel {
             private Abort abort; 
             private Delay delay; 
 
+            private Builder() {
+            } 
+
+            private Builder(Fault model) {
+                this.abort = model.abort;
+                this.delay = model.delay;
+            } 
+
             /**
-             * The configurations for aborting requests with specified error codes.
+             * <p>The configurations for aborting requests with specified error codes.</p>
              */
             public Builder abort(Abort abort) {
                 this.abort = abort;
@@ -488,7 +628,7 @@ public class DescribeIstioGatewayRouteDetailResponseBody extends TeaModel {
             }
 
             /**
-             * The duration to delay a request.
+             * <p>The duration to delay a request.</p>
              */
             public Builder delay(Delay delay) {
                 this.delay = delay;
@@ -502,14 +642,20 @@ public class DescribeIstioGatewayRouteDetailResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link DescribeIstioGatewayRouteDetailResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeIstioGatewayRouteDetailResponseBody</p>
+     */
     public static class HTTPRedirect extends TeaModel {
-        @NameInMap("Authority")
+        @com.aliyun.core.annotation.NameInMap("Authority")
         private String authority;
 
-        @NameInMap("RedirectCode")
+        @com.aliyun.core.annotation.NameInMap("RedirectCode")
         private Integer redirectCode;
 
-        @NameInMap("Uri")
+        @com.aliyun.core.annotation.NameInMap("Uri")
         private String uri;
 
         private HTTPRedirect(Builder builder) {
@@ -552,8 +698,20 @@ public class DescribeIstioGatewayRouteDetailResponseBody extends TeaModel {
             private Integer redirectCode; 
             private String uri; 
 
+            private Builder() {
+            } 
+
+            private Builder(HTTPRedirect model) {
+                this.authority = model.authority;
+                this.redirectCode = model.redirectCode;
+                this.uri = model.uri;
+            } 
+
             /**
-             * The value to be used to overwrite the value of the Authority or Host header during redirection.
+             * <p>The value to be used to overwrite the value of the Authority or Host header during redirection.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>newratings.default.svc.cluster.local</p>
              */
             public Builder authority(String authority) {
                 this.authority = authority;
@@ -561,7 +719,10 @@ public class DescribeIstioGatewayRouteDetailResponseBody extends TeaModel {
             }
 
             /**
-             * The HTTP status code to be used to indicate URL redirection. Default value: 301.
+             * <p>The HTTP status code to be used to indicate URL redirection. Default value: 301.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>301</p>
              */
             public Builder redirectCode(Integer redirectCode) {
                 this.redirectCode = redirectCode;
@@ -569,7 +730,10 @@ public class DescribeIstioGatewayRouteDetailResponseBody extends TeaModel {
             }
 
             /**
-             * The value to be used to overwrite the URL path during redirection.
+             * <p>The value to be used to overwrite the URL path during redirection.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>/v1/getProductRatings</p>
              */
             public Builder uri(String uri) {
                 this.uri = uri;
@@ -583,11 +747,17 @@ public class DescribeIstioGatewayRouteDetailResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link DescribeIstioGatewayRouteDetailResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeIstioGatewayRouteDetailResponseBody</p>
+     */
     public static class Mirror extends TeaModel {
-        @NameInMap("Host")
+        @com.aliyun.core.annotation.NameInMap("Host")
         private String host;
 
-        @NameInMap("Subset")
+        @com.aliyun.core.annotation.NameInMap("Subset")
         private String subset;
 
         private Mirror(Builder builder) {
@@ -621,8 +791,19 @@ public class DescribeIstioGatewayRouteDetailResponseBody extends TeaModel {
             private String host; 
             private String subset; 
 
+            private Builder() {
+            } 
+
+            private Builder(Mirror model) {
+                this.host = model.host;
+                this.subset = model.subset;
+            } 
+
             /**
-             * The name of the service defined in the service registry.
+             * <p>The name of the service defined in the service registry.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>reviews.default.svc.cluster.local</p>
              */
             public Builder host(String host) {
                 this.host = host;
@@ -630,7 +811,10 @@ public class DescribeIstioGatewayRouteDetailResponseBody extends TeaModel {
             }
 
             /**
-             * The name of the service subset.
+             * <p>The name of the service subset.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>v1</p>
              */
             public Builder subset(String subset) {
                 this.subset = subset;
@@ -644,8 +828,14 @@ public class DescribeIstioGatewayRouteDetailResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link DescribeIstioGatewayRouteDetailResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeIstioGatewayRouteDetailResponseBody</p>
+     */
     public static class MirrorPercentage extends TeaModel {
-        @NameInMap("Value")
+        @com.aliyun.core.annotation.NameInMap("Value")
         private Float value;
 
         private MirrorPercentage(Builder builder) {
@@ -670,8 +860,18 @@ public class DescribeIstioGatewayRouteDetailResponseBody extends TeaModel {
         public static final class Builder {
             private Float value; 
 
+            private Builder() {
+            } 
+
+            private Builder(MirrorPercentage model) {
+                this.value = model.value;
+            } 
+
             /**
-             * The percentage of requests that are aborted with the specified error code, which is expressed as a decimal.
+             * <p>The percentage of requests that are aborted with the specified error code, which is expressed as a decimal.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>0.2</p>
              */
             public Builder value(Float value) {
                 this.value = value;
@@ -685,8 +885,14 @@ public class DescribeIstioGatewayRouteDetailResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link DescribeIstioGatewayRouteDetailResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeIstioGatewayRouteDetailResponseBody</p>
+     */
     public static class RetryRemoteLocalities extends TeaModel {
-        @NameInMap("Value")
+        @com.aliyun.core.annotation.NameInMap("Value")
         private Boolean value;
 
         private RetryRemoteLocalities(Builder builder) {
@@ -711,14 +917,23 @@ public class DescribeIstioGatewayRouteDetailResponseBody extends TeaModel {
         public static final class Builder {
             private Boolean value; 
 
+            private Builder() {
+            } 
+
+            private Builder(RetryRemoteLocalities model) {
+                this.value = model.value;
+            } 
+
             /**
-             * Specifies whether to allow retries to other localities. Valid values:
-             * <p>
+             * <p>Specifies whether to allow retries to other localities. Valid values:</p>
+             * <ul>
+             * <li><code>true</code></li>
+             * <li><code>false</code></li>
+             * </ul>
+             * <p>Default value: <code>false</code>.</p>
              * 
-             * *   `true`
-             * *   `false`
-             * 
-             * Default value: `false`.
+             * <strong>example:</strong>
+             * <p>false</p>
              */
             public Builder value(Boolean value) {
                 this.value = value;
@@ -732,17 +947,23 @@ public class DescribeIstioGatewayRouteDetailResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link DescribeIstioGatewayRouteDetailResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeIstioGatewayRouteDetailResponseBody</p>
+     */
     public static class Retries extends TeaModel {
-        @NameInMap("Attempts")
+        @com.aliyun.core.annotation.NameInMap("Attempts")
         private Integer attempts;
 
-        @NameInMap("PerTryTimeout")
+        @com.aliyun.core.annotation.NameInMap("PerTryTimeout")
         private String perTryTimeout;
 
-        @NameInMap("RetryOn")
+        @com.aliyun.core.annotation.NameInMap("RetryOn")
         private String retryOn;
 
-        @NameInMap("RetryRemoteLocalities")
+        @com.aliyun.core.annotation.NameInMap("RetryRemoteLocalities")
         private RetryRemoteLocalities retryRemoteLocalities;
 
         private Retries(Builder builder) {
@@ -794,8 +1015,21 @@ public class DescribeIstioGatewayRouteDetailResponseBody extends TeaModel {
             private String retryOn; 
             private RetryRemoteLocalities retryRemoteLocalities; 
 
+            private Builder() {
+            } 
+
+            private Builder(Retries model) {
+                this.attempts = model.attempts;
+                this.perTryTimeout = model.perTryTimeout;
+                this.retryOn = model.retryOn;
+                this.retryRemoteLocalities = model.retryRemoteLocalities;
+            } 
+
             /**
-             * The number of retries that are allowed for a request.
+             * <p>The number of retries that are allowed for a request.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>3</p>
              */
             public Builder attempts(Integer attempts) {
                 this.attempts = attempts;
@@ -803,7 +1037,10 @@ public class DescribeIstioGatewayRouteDetailResponseBody extends TeaModel {
             }
 
             /**
-             * The timeout period for each retry.
+             * <p>The timeout period for each retry.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2s</p>
              */
             public Builder perTryTimeout(String perTryTimeout) {
                 this.perTryTimeout = perTryTimeout;
@@ -811,7 +1048,10 @@ public class DescribeIstioGatewayRouteDetailResponseBody extends TeaModel {
             }
 
             /**
-             * The condition for retries. Example: `connect-failure,refused-stream,503`.
+             * <p>The condition for retries. Example: <code>connect-failure,refused-stream,503</code>.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>connect-failure,refused-stream,503</p>
              */
             public Builder retryOn(String retryOn) {
                 this.retryOn = retryOn;
@@ -819,7 +1059,7 @@ public class DescribeIstioGatewayRouteDetailResponseBody extends TeaModel {
             }
 
             /**
-             * Specifies whether to allow retries to other localities.
+             * <p>Specifies whether to allow retries to other localities.</p>
              */
             public Builder retryRemoteLocalities(RetryRemoteLocalities retryRemoteLocalities) {
                 this.retryRemoteLocalities = retryRemoteLocalities;
@@ -833,11 +1073,17 @@ public class DescribeIstioGatewayRouteDetailResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link DescribeIstioGatewayRouteDetailResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeIstioGatewayRouteDetailResponseBody</p>
+     */
     public static class Rewrite extends TeaModel {
-        @NameInMap("Authority")
+        @com.aliyun.core.annotation.NameInMap("Authority")
         private String authority;
 
-        @NameInMap("Uri")
+        @com.aliyun.core.annotation.NameInMap("Uri")
         private String uri;
 
         private Rewrite(Builder builder) {
@@ -871,8 +1117,19 @@ public class DescribeIstioGatewayRouteDetailResponseBody extends TeaModel {
             private String authority; 
             private String uri; 
 
+            private Builder() {
+            } 
+
+            private Builder(Rewrite model) {
+                this.authority = model.authority;
+                this.uri = model.uri;
+            } 
+
             /**
-             * The value to be used to overwrite the value of the Authority or Host header.
+             * <p>The value to be used to overwrite the value of the Authority or Host header.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>newratings.default.svc.cluster.local</p>
              */
             public Builder authority(String authority) {
                 this.authority = authority;
@@ -880,7 +1137,10 @@ public class DescribeIstioGatewayRouteDetailResponseBody extends TeaModel {
             }
 
             /**
-             * The value to be used to overwrite the path or prefix of the URI.
+             * <p>The value to be used to overwrite the path or prefix of the URI.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>/v1/getProductRatings</p>
              */
             public Builder uri(String uri) {
                 this.uri = uri;
@@ -894,29 +1154,35 @@ public class DescribeIstioGatewayRouteDetailResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link DescribeIstioGatewayRouteDetailResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeIstioGatewayRouteDetailResponseBody</p>
+     */
     public static class HTTPAdvancedOptions extends TeaModel {
-        @NameInMap("Delegate")
+        @com.aliyun.core.annotation.NameInMap("Delegate")
         private Delegate delegate;
 
-        @NameInMap("Fault")
+        @com.aliyun.core.annotation.NameInMap("Fault")
         private Fault fault;
 
-        @NameInMap("HTTPRedirect")
+        @com.aliyun.core.annotation.NameInMap("HTTPRedirect")
         private HTTPRedirect HTTPRedirect;
 
-        @NameInMap("Mirror")
+        @com.aliyun.core.annotation.NameInMap("Mirror")
         private Mirror mirror;
 
-        @NameInMap("MirrorPercentage")
+        @com.aliyun.core.annotation.NameInMap("MirrorPercentage")
         private MirrorPercentage mirrorPercentage;
 
-        @NameInMap("Retries")
+        @com.aliyun.core.annotation.NameInMap("Retries")
         private Retries retries;
 
-        @NameInMap("Rewrite")
+        @com.aliyun.core.annotation.NameInMap("Rewrite")
         private Rewrite rewrite;
 
-        @NameInMap("Timeout")
+        @com.aliyun.core.annotation.NameInMap("Timeout")
         private String timeout;
 
         private HTTPAdvancedOptions(Builder builder) {
@@ -1004,8 +1270,22 @@ public class DescribeIstioGatewayRouteDetailResponseBody extends TeaModel {
             private Rewrite rewrite; 
             private String timeout; 
 
+            private Builder() {
+            } 
+
+            private Builder(HTTPAdvancedOptions model) {
+                this.delegate = model.delegate;
+                this.fault = model.fault;
+                this.HTTPRedirect = model.HTTPRedirect;
+                this.mirror = model.mirror;
+                this.mirrorPercentage = model.mirrorPercentage;
+                this.retries = model.retries;
+                this.rewrite = model.rewrite;
+                this.timeout = model.timeout;
+            } 
+
             /**
-             * The virtual service that defines traffic routing.
+             * <p>The virtual service that defines traffic routing.</p>
              */
             public Builder delegate(Delegate delegate) {
                 this.delegate = delegate;
@@ -1013,7 +1293,7 @@ public class DescribeIstioGatewayRouteDetailResponseBody extends TeaModel {
             }
 
             /**
-             * The configurations of fault injection.
+             * <p>The configurations of fault injection.</p>
              */
             public Builder fault(Fault fault) {
                 this.fault = fault;
@@ -1021,7 +1301,7 @@ public class DescribeIstioGatewayRouteDetailResponseBody extends TeaModel {
             }
 
             /**
-             * The HTTP redirection rule.
+             * <p>The HTTP redirection rule.</p>
              */
             public Builder HTTPRedirect(HTTPRedirect HTTPRedirect) {
                 this.HTTPRedirect = HTTPRedirect;
@@ -1029,7 +1309,7 @@ public class DescribeIstioGatewayRouteDetailResponseBody extends TeaModel {
             }
 
             /**
-             * The configurations for mirroring HTTP traffic to another destination in addition to forwarding requests to the specified destination.
+             * <p>The configurations for mirroring HTTP traffic to another destination in addition to forwarding requests to the specified destination.</p>
              */
             public Builder mirror(Mirror mirror) {
                 this.mirror = mirror;
@@ -1037,7 +1317,7 @@ public class DescribeIstioGatewayRouteDetailResponseBody extends TeaModel {
             }
 
             /**
-             * The percentage of requests that are aborted with the specified error code.
+             * <p>The percentage of requests that are aborted with the specified error code.</p>
              */
             public Builder mirrorPercentage(MirrorPercentage mirrorPercentage) {
                 this.mirrorPercentage = mirrorPercentage;
@@ -1045,7 +1325,7 @@ public class DescribeIstioGatewayRouteDetailResponseBody extends TeaModel {
             }
 
             /**
-             * The configurations of retries for failed requests.
+             * <p>The configurations of retries for failed requests.</p>
              */
             public Builder retries(Retries retries) {
                 this.retries = retries;
@@ -1053,7 +1333,7 @@ public class DescribeIstioGatewayRouteDetailResponseBody extends TeaModel {
             }
 
             /**
-             * The configurations for rewriting the virtual service.
+             * <p>The configurations for rewriting the virtual service.</p>
              */
             public Builder rewrite(Rewrite rewrite) {
                 this.rewrite = rewrite;
@@ -1061,7 +1341,10 @@ public class DescribeIstioGatewayRouteDetailResponseBody extends TeaModel {
             }
 
             /**
-             * The timeout period for requests.
+             * <p>The timeout period for requests.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>5s</p>
              */
             public Builder timeout(String timeout) {
                 this.timeout = timeout;
@@ -1075,14 +1358,20 @@ public class DescribeIstioGatewayRouteDetailResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link DescribeIstioGatewayRouteDetailResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeIstioGatewayRouteDetailResponseBody</p>
+     */
     public static class Headers extends TeaModel {
-        @NameInMap("MatchingContent")
+        @com.aliyun.core.annotation.NameInMap("MatchingContent")
         private String matchingContent;
 
-        @NameInMap("MatchingMode")
+        @com.aliyun.core.annotation.NameInMap("MatchingMode")
         private String matchingMode;
 
-        @NameInMap("Name")
+        @com.aliyun.core.annotation.NameInMap("Name")
         private String name;
 
         private Headers(Builder builder) {
@@ -1125,8 +1414,20 @@ public class DescribeIstioGatewayRouteDetailResponseBody extends TeaModel {
             private String matchingMode; 
             private String name; 
 
+            private Builder() {
+            } 
+
+            private Builder(Headers model) {
+                this.matchingContent = model.matchingContent;
+                this.matchingMode = model.matchingMode;
+                this.name = model.name;
+            } 
+
             /**
-             * The header value to be matched.
+             * <p>The header value to be matched.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>v1</p>
              */
             public Builder matchingContent(String matchingContent) {
                 this.matchingContent = matchingContent;
@@ -1134,12 +1435,15 @@ public class DescribeIstioGatewayRouteDetailResponseBody extends TeaModel {
             }
 
             /**
-             * The matching mode for the header value. Valid values:
-             * <p>
+             * <p>The matching mode for the header value. Valid values:</p>
+             * <ul>
+             * <li><code>exact</code>: exact match</li>
+             * <li><code>prefix</code>: match by prefix</li>
+             * <li><code>regex</code>: match by regular expression</li>
+             * </ul>
              * 
-             * *   `exact`: exact match
-             * *   `prefix`: match by prefix
-             * *   `regex`: match by regular expression
+             * <strong>example:</strong>
+             * <p>exact</p>
              */
             public Builder matchingMode(String matchingMode) {
                 this.matchingMode = matchingMode;
@@ -1147,7 +1451,10 @@ public class DescribeIstioGatewayRouteDetailResponseBody extends TeaModel {
             }
 
             /**
-             * The header key to be matched.
+             * <p>The header key to be matched.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>x-request-id</p>
              */
             public Builder name(String name) {
                 this.name = name;
@@ -1161,11 +1468,17 @@ public class DescribeIstioGatewayRouteDetailResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link DescribeIstioGatewayRouteDetailResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeIstioGatewayRouteDetailResponseBody</p>
+     */
     public static class TLSMatchAttributes extends TeaModel {
-        @NameInMap("SNIHosts")
-        private java.util.List < String > SNIHosts;
+        @com.aliyun.core.annotation.NameInMap("SNIHosts")
+        private java.util.List<String> SNIHosts;
 
-        @NameInMap("TLSPort")
+        @com.aliyun.core.annotation.NameInMap("TLSPort")
         private Integer TLSPort;
 
         private TLSMatchAttributes(Builder builder) {
@@ -1184,7 +1497,7 @@ public class DescribeIstioGatewayRouteDetailResponseBody extends TeaModel {
         /**
          * @return SNIHosts
          */
-        public java.util.List < String > getSNIHosts() {
+        public java.util.List<String> getSNIHosts() {
             return this.SNIHosts;
         }
 
@@ -1196,19 +1509,30 @@ public class DescribeIstioGatewayRouteDetailResponseBody extends TeaModel {
         }
 
         public static final class Builder {
-            private java.util.List < String > SNIHosts; 
+            private java.util.List<String> SNIHosts; 
             private Integer TLSPort; 
 
+            private Builder() {
+            } 
+
+            private Builder(TLSMatchAttributes model) {
+                this.SNIHosts = model.SNIHosts;
+                this.TLSPort = model.TLSPort;
+            } 
+
             /**
-             * The Server Name Indication (SNI) values to be matched.
+             * <p>The Server Name Indication (SNI) values to be matched.</p>
              */
-            public Builder SNIHosts(java.util.List < String > SNIHosts) {
+            public Builder SNIHosts(java.util.List<String> SNIHosts) {
                 this.SNIHosts = SNIHosts;
                 return this;
             }
 
             /**
-             * The TLS port.
+             * <p>The TLS port.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>443</p>
              */
             public Builder TLSPort(Integer TLSPort) {
                 this.TLSPort = TLSPort;
@@ -1222,11 +1546,17 @@ public class DescribeIstioGatewayRouteDetailResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link DescribeIstioGatewayRouteDetailResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeIstioGatewayRouteDetailResponseBody</p>
+     */
     public static class URI extends TeaModel {
-        @NameInMap("MatchingContent")
+        @com.aliyun.core.annotation.NameInMap("MatchingContent")
         private String matchingContent;
 
-        @NameInMap("MatchingMode")
+        @com.aliyun.core.annotation.NameInMap("MatchingMode")
         private String matchingMode;
 
         private URI(Builder builder) {
@@ -1260,8 +1590,19 @@ public class DescribeIstioGatewayRouteDetailResponseBody extends TeaModel {
             private String matchingContent; 
             private String matchingMode; 
 
+            private Builder() {
+            } 
+
+            private Builder(URI model) {
+                this.matchingContent = model.matchingContent;
+                this.matchingMode = model.matchingMode;
+            } 
+
             /**
-             * The content to be matched.
+             * <p>The content to be matched.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>/ratings/v2/</p>
              */
             public Builder matchingContent(String matchingContent) {
                 this.matchingContent = matchingContent;
@@ -1269,12 +1610,15 @@ public class DescribeIstioGatewayRouteDetailResponseBody extends TeaModel {
             }
 
             /**
-             * The matching mode. Valid values:
-             * <p>
+             * <p>The matching mode. Valid values:</p>
+             * <ul>
+             * <li><code>exact</code>: exact match</li>
+             * <li><code>prefix</code>: match by prefix</li>
+             * <li><code>regex</code>: match by regular expression</li>
+             * </ul>
              * 
-             * *   `exact`: exact match
-             * *   `prefix`: match by prefix
-             * *   `regex`: match by regular expression
+             * <strong>example:</strong>
+             * <p>prefix</p>
              */
             public Builder matchingMode(String matchingMode) {
                 this.matchingMode = matchingMode;
@@ -1288,17 +1632,23 @@ public class DescribeIstioGatewayRouteDetailResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link DescribeIstioGatewayRouteDetailResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeIstioGatewayRouteDetailResponseBody</p>
+     */
     public static class MatchRequest extends TeaModel {
-        @NameInMap("Headers")
-        private java.util.List < Headers> headers;
+        @com.aliyun.core.annotation.NameInMap("Headers")
+        private java.util.List<Headers> headers;
 
-        @NameInMap("Ports")
-        private java.util.List < Integer > ports;
+        @com.aliyun.core.annotation.NameInMap("Ports")
+        private java.util.List<Integer> ports;
 
-        @NameInMap("TLSMatchAttributes")
-        private java.util.List < TLSMatchAttributes> TLSMatchAttributes;
+        @com.aliyun.core.annotation.NameInMap("TLSMatchAttributes")
+        private java.util.List<TLSMatchAttributes> TLSMatchAttributes;
 
-        @NameInMap("URI")
+        @com.aliyun.core.annotation.NameInMap("URI")
         private URI URI;
 
         private MatchRequest(Builder builder) {
@@ -1319,21 +1669,21 @@ public class DescribeIstioGatewayRouteDetailResponseBody extends TeaModel {
         /**
          * @return headers
          */
-        public java.util.List < Headers> getHeaders() {
+        public java.util.List<Headers> getHeaders() {
             return this.headers;
         }
 
         /**
          * @return ports
          */
-        public java.util.List < Integer > getPorts() {
+        public java.util.List<Integer> getPorts() {
             return this.ports;
         }
 
         /**
          * @return TLSMatchAttributes
          */
-        public java.util.List < TLSMatchAttributes> getTLSMatchAttributes() {
+        public java.util.List<TLSMatchAttributes> getTLSMatchAttributes() {
             return this.TLSMatchAttributes;
         }
 
@@ -1345,37 +1695,47 @@ public class DescribeIstioGatewayRouteDetailResponseBody extends TeaModel {
         }
 
         public static final class Builder {
-            private java.util.List < Headers> headers; 
-            private java.util.List < Integer > ports; 
-            private java.util.List < TLSMatchAttributes> TLSMatchAttributes; 
+            private java.util.List<Headers> headers; 
+            private java.util.List<Integer> ports; 
+            private java.util.List<TLSMatchAttributes> TLSMatchAttributes; 
             private URI URI; 
 
+            private Builder() {
+            } 
+
+            private Builder(MatchRequest model) {
+                this.headers = model.headers;
+                this.ports = model.ports;
+                this.TLSMatchAttributes = model.TLSMatchAttributes;
+                this.URI = model.URI;
+            } 
+
             /**
-             * The request headers to be matched.
+             * <p>The request headers to be matched.</p>
              */
-            public Builder headers(java.util.List < Headers> headers) {
+            public Builder headers(java.util.List<Headers> headers) {
                 this.headers = headers;
                 return this;
             }
 
             /**
-             * The ports.
+             * <p>The ports.</p>
              */
-            public Builder ports(java.util.List < Integer > ports) {
+            public Builder ports(java.util.List<Integer> ports) {
                 this.ports = ports;
                 return this;
             }
 
             /**
-             * The matching rules for Transport Layer Security (TLS) traffic.
+             * <p>The matching rules for Transport Layer Security (TLS) traffic.</p>
              */
-            public Builder TLSMatchAttributes(java.util.List < TLSMatchAttributes> TLSMatchAttributes) {
+            public Builder TLSMatchAttributes(java.util.List<TLSMatchAttributes> TLSMatchAttributes) {
                 this.TLSMatchAttributes = TLSMatchAttributes;
                 return this;
             }
 
             /**
-             * The matching rule for URIs.
+             * <p>The matching rule for URIs.</p>
              */
             public Builder URI(URI URI) {
                 this.URI = URI;
@@ -1389,8 +1749,14 @@ public class DescribeIstioGatewayRouteDetailResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link DescribeIstioGatewayRouteDetailResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeIstioGatewayRouteDetailResponseBody</p>
+     */
     public static class Port extends TeaModel {
-        @NameInMap("Number")
+        @com.aliyun.core.annotation.NameInMap("Number")
         private Integer number;
 
         private Port(Builder builder) {
@@ -1415,8 +1781,18 @@ public class DescribeIstioGatewayRouteDetailResponseBody extends TeaModel {
         public static final class Builder {
             private Integer number; 
 
+            private Builder() {
+            } 
+
+            private Builder(Port model) {
+                this.number = model.number;
+            } 
+
             /**
-             * The ports of the specified hosts to which the traffic is routed.
+             * <p>The ports of the specified hosts to which the traffic is routed.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>443</p>
              */
             public Builder number(Integer number) {
                 this.number = number;
@@ -1430,14 +1806,20 @@ public class DescribeIstioGatewayRouteDetailResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link DescribeIstioGatewayRouteDetailResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeIstioGatewayRouteDetailResponseBody</p>
+     */
     public static class Destination extends TeaModel {
-        @NameInMap("Host")
+        @com.aliyun.core.annotation.NameInMap("Host")
         private String host;
 
-        @NameInMap("Port")
+        @com.aliyun.core.annotation.NameInMap("Port")
         private Port port;
 
-        @NameInMap("Subset")
+        @com.aliyun.core.annotation.NameInMap("Subset")
         private String subset;
 
         private Destination(Builder builder) {
@@ -1480,8 +1862,20 @@ public class DescribeIstioGatewayRouteDetailResponseBody extends TeaModel {
             private Port port; 
             private String subset; 
 
+            private Builder() {
+            } 
+
+            private Builder(Destination model) {
+                this.host = model.host;
+                this.port = model.port;
+                this.subset = model.subset;
+            } 
+
             /**
-             * The name of the service defined in the service registry.
+             * <p>The name of the service defined in the service registry.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>reviews</p>
              */
             public Builder host(String host) {
                 this.host = host;
@@ -1489,7 +1883,7 @@ public class DescribeIstioGatewayRouteDetailResponseBody extends TeaModel {
             }
 
             /**
-             * The ports of the specified hosts from which the traffic is routed.
+             * <p>The ports of the specified hosts from which the traffic is routed.</p>
              */
             public Builder port(Port port) {
                 this.port = port;
@@ -1497,7 +1891,10 @@ public class DescribeIstioGatewayRouteDetailResponseBody extends TeaModel {
             }
 
             /**
-             * The name of the service subset.
+             * <p>The name of the service subset.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>v1</p>
              */
             public Builder subset(String subset) {
                 this.subset = subset;
@@ -1511,15 +1908,21 @@ public class DescribeIstioGatewayRouteDetailResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link DescribeIstioGatewayRouteDetailResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeIstioGatewayRouteDetailResponseBody</p>
+     */
     public static class Request extends TeaModel {
-        @NameInMap("Add")
-        private java.util.Map < String, ? > add;
+        @com.aliyun.core.annotation.NameInMap("Add")
+        private java.util.Map<String, ?> add;
 
-        @NameInMap("Remove")
-        private java.util.List < String > remove;
+        @com.aliyun.core.annotation.NameInMap("Remove")
+        private java.util.List<String> remove;
 
-        @NameInMap("Set")
-        private java.util.Map < String, String > set;
+        @com.aliyun.core.annotation.NameInMap("Set")
+        private java.util.Map<String, String> set;
 
         private Request(Builder builder) {
             this.add = builder.add;
@@ -1538,49 +1941,61 @@ public class DescribeIstioGatewayRouteDetailResponseBody extends TeaModel {
         /**
          * @return add
          */
-        public java.util.Map < String, ? > getAdd() {
+        public java.util.Map<String, ?> getAdd() {
             return this.add;
         }
 
         /**
          * @return remove
          */
-        public java.util.List < String > getRemove() {
+        public java.util.List<String> getRemove() {
             return this.remove;
         }
 
         /**
          * @return set
          */
-        public java.util.Map < String, String > getSet() {
+        public java.util.Map<String, String> getSet() {
             return this.set;
         }
 
         public static final class Builder {
-            private java.util.Map < String, ? > add; 
-            private java.util.List < String > remove; 
-            private java.util.Map < String, String > set; 
+            private java.util.Map<String, ?> add; 
+            private java.util.List<String> remove; 
+            private java.util.Map<String, String> set; 
+
+            private Builder() {
+            } 
+
+            private Builder(Request model) {
+                this.add = model.add;
+                this.remove = model.remove;
+                this.set = model.set;
+            } 
 
             /**
-             * The values to be added to the header key.
+             * <p>The values to be added to the header key.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>key</p>
              */
-            public Builder add(java.util.Map < String, ? > add) {
+            public Builder add(java.util.Map<String, ?> add) {
                 this.add = add;
                 return this;
             }
 
             /**
-             * The header value to be deleted.
+             * <p>The header value to be deleted.</p>
              */
-            public Builder remove(java.util.List < String > remove) {
+            public Builder remove(java.util.List<String> remove) {
                 this.remove = remove;
                 return this;
             }
 
             /**
-             * The header key to be used to overwrite the original header key.
+             * <p>The header key to be used to overwrite the original header key.</p>
              */
-            public Builder set(java.util.Map < String, String > set) {
+            public Builder set(java.util.Map<String, String> set) {
                 this.set = set;
                 return this;
             }
@@ -1592,15 +2007,21 @@ public class DescribeIstioGatewayRouteDetailResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link DescribeIstioGatewayRouteDetailResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeIstioGatewayRouteDetailResponseBody</p>
+     */
     public static class Response extends TeaModel {
-        @NameInMap("Add")
-        private java.util.Map < String, ? > add;
+        @com.aliyun.core.annotation.NameInMap("Add")
+        private java.util.Map<String, ?> add;
 
-        @NameInMap("Remove")
-        private java.util.List < String > remove;
+        @com.aliyun.core.annotation.NameInMap("Remove")
+        private java.util.List<String> remove;
 
-        @NameInMap("Set")
-        private java.util.Map < String, ? > set;
+        @com.aliyun.core.annotation.NameInMap("Set")
+        private java.util.Map<String, ?> set;
 
         private Response(Builder builder) {
             this.add = builder.add;
@@ -1619,49 +2040,64 @@ public class DescribeIstioGatewayRouteDetailResponseBody extends TeaModel {
         /**
          * @return add
          */
-        public java.util.Map < String, ? > getAdd() {
+        public java.util.Map<String, ?> getAdd() {
             return this.add;
         }
 
         /**
          * @return remove
          */
-        public java.util.List < String > getRemove() {
+        public java.util.List<String> getRemove() {
             return this.remove;
         }
 
         /**
          * @return set
          */
-        public java.util.Map < String, ? > getSet() {
+        public java.util.Map<String, ?> getSet() {
             return this.set;
         }
 
         public static final class Builder {
-            private java.util.Map < String, ? > add; 
-            private java.util.List < String > remove; 
-            private java.util.Map < String, ? > set; 
+            private java.util.Map<String, ?> add; 
+            private java.util.List<String> remove; 
+            private java.util.Map<String, ?> set; 
+
+            private Builder() {
+            } 
+
+            private Builder(Response model) {
+                this.add = model.add;
+                this.remove = model.remove;
+                this.set = model.set;
+            } 
 
             /**
-             * The values to be added to the header key.
+             * <p>The values to be added to the header key.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>key</p>
              */
-            public Builder add(java.util.Map < String, ? > add) {
+            public Builder add(java.util.Map<String, ?> add) {
                 this.add = add;
                 return this;
             }
 
             /**
-             * The header value to be deleted.
+             * <p>The header value to be deleted.</p>
              */
-            public Builder remove(java.util.List < String > remove) {
+            public Builder remove(java.util.List<String> remove) {
                 this.remove = remove;
                 return this;
             }
 
             /**
-             * The header key to be used to overwrite the original header key.
+             * <p>The header key to be used to overwrite the original header key.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>key</p>
              */
-            public Builder set(java.util.Map < String, ? > set) {
+            public Builder set(java.util.Map<String, ?> set) {
                 this.set = set;
                 return this;
             }
@@ -1673,11 +2109,17 @@ public class DescribeIstioGatewayRouteDetailResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link DescribeIstioGatewayRouteDetailResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeIstioGatewayRouteDetailResponseBody</p>
+     */
     public static class RouteDestinationsHeaders extends TeaModel {
-        @NameInMap("Request")
+        @com.aliyun.core.annotation.NameInMap("Request")
         private Request request;
 
-        @NameInMap("Response")
+        @com.aliyun.core.annotation.NameInMap("Response")
         private Response response;
 
         private RouteDestinationsHeaders(Builder builder) {
@@ -1711,8 +2153,16 @@ public class DescribeIstioGatewayRouteDetailResponseBody extends TeaModel {
             private Request request; 
             private Response response; 
 
+            private Builder() {
+            } 
+
+            private Builder(RouteDestinationsHeaders model) {
+                this.request = model.request;
+                this.response = model.response;
+            } 
+
             /**
-             * The request header to be matched.
+             * <p>The request header to be matched.</p>
              */
             public Builder request(Request request) {
                 this.request = request;
@@ -1720,7 +2170,7 @@ public class DescribeIstioGatewayRouteDetailResponseBody extends TeaModel {
             }
 
             /**
-             * The processing of the headers of the response that is to be returned.
+             * <p>The processing of the headers of the response that is to be returned.</p>
              */
             public Builder response(Response response) {
                 this.response = response;
@@ -1734,14 +2184,20 @@ public class DescribeIstioGatewayRouteDetailResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link DescribeIstioGatewayRouteDetailResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeIstioGatewayRouteDetailResponseBody</p>
+     */
     public static class RouteDestinations extends TeaModel {
-        @NameInMap("Destination")
+        @com.aliyun.core.annotation.NameInMap("Destination")
         private Destination destination;
 
-        @NameInMap("Headers")
+        @com.aliyun.core.annotation.NameInMap("Headers")
         private RouteDestinationsHeaders headers;
 
-        @NameInMap("Weight")
+        @com.aliyun.core.annotation.NameInMap("Weight")
         private Integer weight;
 
         private RouteDestinations(Builder builder) {
@@ -1784,8 +2240,17 @@ public class DescribeIstioGatewayRouteDetailResponseBody extends TeaModel {
             private RouteDestinationsHeaders headers; 
             private Integer weight; 
 
+            private Builder() {
+            } 
+
+            private Builder(RouteDestinations model) {
+                this.destination = model.destination;
+                this.headers = model.headers;
+                this.weight = model.weight;
+            } 
+
             /**
-             * The unique endpoint of the destination service to which the specified requests are sent.
+             * <p>The unique endpoint of the destination service to which the specified requests are sent.</p>
              */
             public Builder destination(Destination destination) {
                 this.destination = destination;
@@ -1793,7 +2258,7 @@ public class DescribeIstioGatewayRouteDetailResponseBody extends TeaModel {
             }
 
             /**
-             * The list of the request headers to be matched.
+             * <p>The list of the request headers to be matched.</p>
              */
             public Builder headers(RouteDestinationsHeaders headers) {
                 this.headers = headers;
@@ -1801,7 +2266,10 @@ public class DescribeIstioGatewayRouteDetailResponseBody extends TeaModel {
             }
 
             /**
-             * The traffic weight. Valid values: 1 to 100.
+             * <p>The traffic weight. Valid values: 1 to 100.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>80</p>
              */
             public Builder weight(Integer weight) {
                 this.weight = weight;
@@ -1815,29 +2283,35 @@ public class DescribeIstioGatewayRouteDetailResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link DescribeIstioGatewayRouteDetailResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeIstioGatewayRouteDetailResponseBody</p>
+     */
     public static class RouteDetail extends TeaModel {
-        @NameInMap("Domains")
-        private java.util.List < String > domains;
+        @com.aliyun.core.annotation.NameInMap("Domains")
+        private java.util.List<String> domains;
 
-        @NameInMap("HTTPAdvancedOptions")
+        @com.aliyun.core.annotation.NameInMap("HTTPAdvancedOptions")
         private HTTPAdvancedOptions HTTPAdvancedOptions;
 
-        @NameInMap("HasUnsafeFeatures")
+        @com.aliyun.core.annotation.NameInMap("HasUnsafeFeatures")
         private Boolean hasUnsafeFeatures;
 
-        @NameInMap("MatchRequest")
+        @com.aliyun.core.annotation.NameInMap("MatchRequest")
         private MatchRequest matchRequest;
 
-        @NameInMap("RawVSRoute")
+        @com.aliyun.core.annotation.NameInMap("RawVSRoute")
         private String rawVSRoute;
 
-        @NameInMap("RouteDestinations")
-        private java.util.List < RouteDestinations> routeDestinations;
+        @com.aliyun.core.annotation.NameInMap("RouteDestinations")
+        private java.util.List<RouteDestinations> routeDestinations;
 
-        @NameInMap("RouteName")
+        @com.aliyun.core.annotation.NameInMap("RouteName")
         private String routeName;
 
-        @NameInMap("RouteType")
+        @com.aliyun.core.annotation.NameInMap("RouteType")
         private String routeType;
 
         private RouteDetail(Builder builder) {
@@ -1862,7 +2336,7 @@ public class DescribeIstioGatewayRouteDetailResponseBody extends TeaModel {
         /**
          * @return domains
          */
-        public java.util.List < String > getDomains() {
+        public java.util.List<String> getDomains() {
             return this.domains;
         }
 
@@ -1897,7 +2371,7 @@ public class DescribeIstioGatewayRouteDetailResponseBody extends TeaModel {
         /**
          * @return routeDestinations
          */
-        public java.util.List < RouteDestinations> getRouteDestinations() {
+        public java.util.List<RouteDestinations> getRouteDestinations() {
             return this.routeDestinations;
         }
 
@@ -1916,25 +2390,39 @@ public class DescribeIstioGatewayRouteDetailResponseBody extends TeaModel {
         }
 
         public static final class Builder {
-            private java.util.List < String > domains; 
+            private java.util.List<String> domains; 
             private HTTPAdvancedOptions HTTPAdvancedOptions; 
             private Boolean hasUnsafeFeatures; 
             private MatchRequest matchRequest; 
             private String rawVSRoute; 
-            private java.util.List < RouteDestinations> routeDestinations; 
+            private java.util.List<RouteDestinations> routeDestinations; 
             private String routeName; 
             private String routeType; 
 
+            private Builder() {
+            } 
+
+            private Builder(RouteDetail model) {
+                this.domains = model.domains;
+                this.HTTPAdvancedOptions = model.HTTPAdvancedOptions;
+                this.hasUnsafeFeatures = model.hasUnsafeFeatures;
+                this.matchRequest = model.matchRequest;
+                this.rawVSRoute = model.rawVSRoute;
+                this.routeDestinations = model.routeDestinations;
+                this.routeName = model.routeName;
+                this.routeType = model.routeType;
+            } 
+
             /**
-             * Domains.
+             * <p>Domain list.</p>
              */
-            public Builder domains(java.util.List < String > domains) {
+            public Builder domains(java.util.List<String> domains) {
                 this.domains = domains;
                 return this;
             }
 
             /**
-             * The advanced settings for routing HTTP traffic.
+             * <p>The advanced settings for routing HTTP traffic.</p>
              */
             public Builder HTTPAdvancedOptions(HTTPAdvancedOptions HTTPAdvancedOptions) {
                 this.HTTPAdvancedOptions = HTTPAdvancedOptions;
@@ -1942,7 +2430,10 @@ public class DescribeIstioGatewayRouteDetailResponseBody extends TeaModel {
             }
 
             /**
-             * If the value is true, the original YAML file contains features that are not supported on the current interface.
+             * <p>If the value is true, the original YAML file contains features that are not supported on the current interface.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>true</p>
              */
             public Builder hasUnsafeFeatures(Boolean hasUnsafeFeatures) {
                 this.hasUnsafeFeatures = hasUnsafeFeatures;
@@ -1950,7 +2441,7 @@ public class DescribeIstioGatewayRouteDetailResponseBody extends TeaModel {
             }
 
             /**
-             * The matching rules for traffic routing.
+             * <p>The matching rules for traffic routing.</p>
              */
             public Builder matchRequest(MatchRequest matchRequest) {
                 this.matchRequest = matchRequest;
@@ -1958,7 +2449,10 @@ public class DescribeIstioGatewayRouteDetailResponseBody extends TeaModel {
             }
 
             /**
-             * The original YAML file of the virtual service that is serialized into a JSON string.
+             * <p>The original YAML file of the virtual service that is serialized into a JSON string.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>{}</p>
              */
             public Builder rawVSRoute(String rawVSRoute) {
                 this.rawVSRoute = rawVSRoute;
@@ -1966,15 +2460,18 @@ public class DescribeIstioGatewayRouteDetailResponseBody extends TeaModel {
             }
 
             /**
-             * The endpoints of destination services for Layer 4 weighted routing.
+             * <p>The endpoints of destination services for Layer 4 weighted routing.</p>
              */
-            public Builder routeDestinations(java.util.List < RouteDestinations> routeDestinations) {
+            public Builder routeDestinations(java.util.List<RouteDestinations> routeDestinations) {
                 this.routeDestinations = routeDestinations;
                 return this;
             }
 
             /**
-             * The name of the routing rule.
+             * <p>The name of the routing rule.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>demo-route</p>
              */
             public Builder routeName(String routeName) {
                 this.routeName = routeName;
@@ -1982,7 +2479,10 @@ public class DescribeIstioGatewayRouteDetailResponseBody extends TeaModel {
             }
 
             /**
-             * The type of the traffic to be routed. Valid values: `HTTP`, `TLS`, and `TCP`.
+             * <p>The type of the traffic to be routed. Valid values: <code>HTTP</code>, <code>TLS</code>, and <code>TCP</code>.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>HTTP</p>
              */
             public Builder routeType(String routeType) {
                 this.routeType = routeType;

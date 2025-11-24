@@ -1,27 +1,32 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.servicemesh20200111.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ModifyApiServerEipResourceRequest} extends {@link RequestModel}
  *
  * <p>ModifyApiServerEipResourceRequest</p>
  */
 public class ModifyApiServerEipResourceRequest extends Request {
-    @Body
-    @NameInMap("ApiServerEipId")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("ApiServerEipId")
     private String apiServerEipId;
 
-    @Body
-    @NameInMap("Operation")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("Operation")
     private String operation;
 
-    @Body
-    @NameInMap("ServiceMeshId")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("ServiceMeshId")
     private String serviceMeshId;
 
     private ModifyApiServerEipResourceRequest(Builder builder) {
@@ -39,7 +44,7 @@ public class ModifyApiServerEipResourceRequest extends Request {
         return builder().build();
     }
 
-    @Override
+@Override
     public Builder toBuilder() {
         return new Builder(this);
     }
@@ -82,7 +87,10 @@ public class ModifyApiServerEipResourceRequest extends Request {
         } 
 
         /**
-         * The ID of the EIP.
+         * <p>The ID of the EIP.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>eip-bp1adu9jegmxnaoq****</p>
          */
         public Builder apiServerEipId(String apiServerEipId) {
             this.putBodyParameter("ApiServerEipId", apiServerEipId);
@@ -91,11 +99,14 @@ public class ModifyApiServerEipResourceRequest extends Request {
         }
 
         /**
-         * The type of the operation. Valid values:
-         * <p>
+         * <p>The type of the operation. Valid values:</p>
+         * <ul>
+         * <li><code>UnBindEip</code>: disassociates an EIP from the API server.</li>
+         * <li><code>BindEip</code>: associates an EIP with the API server.</li>
+         * </ul>
          * 
-         * *   `UnBindEip`: disassociates an EIP from the API server.
-         * *   `BindEip`: associates an EIP with the API server.
+         * <strong>example:</strong>
+         * <p>BindEip</p>
          */
         public Builder operation(String operation) {
             this.putBodyParameter("Operation", operation);
@@ -104,7 +115,10 @@ public class ModifyApiServerEipResourceRequest extends Request {
         }
 
         /**
-         * The ID of the Alibaba Cloud Service Mesh (ASM) instance.
+         * <p>The ID of the Alibaba Cloud Service Mesh (ASM) instance.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cb8963379255149cb98c8686f274x****</p>
          */
         public Builder serviceMeshId(String serviceMeshId) {
             this.putBodyParameter("ServiceMeshId", serviceMeshId);

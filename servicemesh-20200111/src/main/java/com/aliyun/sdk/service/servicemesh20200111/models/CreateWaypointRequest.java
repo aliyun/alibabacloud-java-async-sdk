@@ -1,80 +1,85 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.servicemesh20200111.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link CreateWaypointRequest} extends {@link RequestModel}
  *
  * <p>CreateWaypointRequest</p>
  */
 public class CreateWaypointRequest extends Request {
-    @Body
-    @NameInMap("ClusterId")
-    @Validation(required = true, minLength = 1)
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("ClusterId")
+    @com.aliyun.core.annotation.Validation(required = true, minLength = 1)
     private String clusterId;
 
-    @Body
-    @NameInMap("HPAEnabled")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("HPAEnabled")
     private Boolean HPAEnabled;
 
-    @Body
-    @NameInMap("HPAMaxReplicas")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("HPAMaxReplicas")
     private Integer HPAMaxReplicas;
 
-    @Body
-    @NameInMap("HPAMinReplicas")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("HPAMinReplicas")
     private Integer HPAMinReplicas;
 
-    @Body
-    @NameInMap("HPATargetCPU")
-    @Validation(maximum = 100)
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("HPATargetCPU")
+    @com.aliyun.core.annotation.Validation(maximum = 100)
     private Integer HPATargetCPU;
 
-    @Body
-    @NameInMap("HPATargetMemory")
-    @Validation(maximum = 100)
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("HPATargetMemory")
+    @com.aliyun.core.annotation.Validation(maximum = 100)
     private Integer HPATargetMemory;
 
-    @Body
-    @NameInMap("LimitCPU")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("LimitCPU")
     private String limitCPU;
 
-    @Body
-    @NameInMap("LimitMemory")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("LimitMemory")
     private String limitMemory;
 
-    @Body
-    @NameInMap("Namespace")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("Namespace")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String namespace;
 
-    @Body
-    @NameInMap("PreferECI")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("PreferECI")
     private Boolean preferECI;
 
-    @Body
-    @NameInMap("Replicas")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("Replicas")
     private Integer replicas;
 
-    @Body
-    @NameInMap("RequestCPU")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("RequestCPU")
     private String requestCPU;
 
-    @Body
-    @NameInMap("RequestMemory")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("RequestMemory")
     private String requestMemory;
 
-    @Body
-    @NameInMap("ServiceAccount")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("ServiceAccount")
     private String serviceAccount;
 
-    @Body
-    @NameInMap("ServiceMeshId")
-    @Validation(required = true, minLength = 1)
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("ServiceMeshId")
+    @com.aliyun.core.annotation.Validation(required = true, minLength = 1)
     private String serviceMeshId;
 
     private CreateWaypointRequest(Builder builder) {
@@ -104,7 +109,7 @@ public class CreateWaypointRequest extends Request {
         return builder().build();
     }
 
-    @Override
+@Override
     public Builder toBuilder() {
         return new Builder(this);
     }
@@ -255,7 +260,11 @@ public class CreateWaypointRequest extends Request {
         } 
 
         /**
-         * The ID of the cluster on the data plane.
+         * <p>The ID of the cluster on the data plane.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cb8963379255149cb98c8686f274x****</p>
          */
         public Builder clusterId(String clusterId) {
             this.putBodyParameter("ClusterId", clusterId);
@@ -264,7 +273,10 @@ public class CreateWaypointRequest extends Request {
         }
 
         /**
-         * Specifies whether to enable Horizontal Pod Autoscaling (HPA).
+         * <p>Specifies whether to enable Horizontal Pod Autoscaling (HPA).</p>
+         * 
+         * <strong>example:</strong>
+         * <p>false</p>
          */
         public Builder HPAEnabled(Boolean HPAEnabled) {
             this.putBodyParameter("HPAEnabled", HPAEnabled);
@@ -273,7 +285,10 @@ public class CreateWaypointRequest extends Request {
         }
 
         /**
-         * The maximum number of waypoint proxy pods when HPA is enabled.
+         * <p>The maximum number of waypoint proxy pods when HPA is enabled.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>4</p>
          */
         public Builder HPAMaxReplicas(Integer HPAMaxReplicas) {
             this.putBodyParameter("HPAMaxReplicas", HPAMaxReplicas);
@@ -282,7 +297,10 @@ public class CreateWaypointRequest extends Request {
         }
 
         /**
-         * The minimum number of waypoint proxy pods when HPA is enabled.
+         * <p>The minimum number of waypoint proxy pods when HPA is enabled.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2</p>
          */
         public Builder HPAMinReplicas(Integer HPAMinReplicas) {
             this.putBodyParameter("HPAMinReplicas", HPAMinReplicas);
@@ -291,7 +309,10 @@ public class CreateWaypointRequest extends Request {
         }
 
         /**
-         * The expected CPU utilization when HPA is enabled.
+         * <p>The expected CPU utilization when HPA is enabled.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>93</p>
          */
         public Builder HPATargetCPU(Integer HPATargetCPU) {
             this.putBodyParameter("HPATargetCPU", HPATargetCPU);
@@ -300,7 +321,10 @@ public class CreateWaypointRequest extends Request {
         }
 
         /**
-         * The expected memory usage when HPA is enabled.
+         * <p>The expected memory usage when HPA is enabled.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>91</p>
          */
         public Builder HPATargetMemory(Integer HPATargetMemory) {
             this.putBodyParameter("HPATargetMemory", HPATargetMemory);
@@ -309,7 +333,10 @@ public class CreateWaypointRequest extends Request {
         }
 
         /**
-         * The maximum number of CPU cores that are available to the waypoint proxy pods.
+         * <p>The maximum number of CPU cores that are available to the waypoint proxy pods.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2000m</p>
          */
         public Builder limitCPU(String limitCPU) {
             this.putBodyParameter("LimitCPU", limitCPU);
@@ -318,7 +345,10 @@ public class CreateWaypointRequest extends Request {
         }
 
         /**
-         * The maximum size of the memory that is available to the waypoint proxy pods.
+         * <p>The maximum size of the memory that is available to the waypoint proxy pods.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1024Mi</p>
          */
         public Builder limitMemory(String limitMemory) {
             this.putBodyParameter("LimitMemory", limitMemory);
@@ -327,7 +357,11 @@ public class CreateWaypointRequest extends Request {
         }
 
         /**
-         * The namespace.
+         * <p>The namespace.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>default</p>
          */
         public Builder namespace(String namespace) {
             this.putBodyParameter("Namespace", namespace);
@@ -336,7 +370,10 @@ public class CreateWaypointRequest extends Request {
         }
 
         /**
-         * Specifies whether to deploy waypoint proxy pods based on Elastic Container Instance (ECI).
+         * <p>Specifies whether to deploy waypoint proxy pods based on Elastic Container Instance (ECI).</p>
+         * 
+         * <strong>example:</strong>
+         * <p>false</p>
          */
         public Builder preferECI(Boolean preferECI) {
             this.putBodyParameter("PreferECI", preferECI);
@@ -345,7 +382,10 @@ public class CreateWaypointRequest extends Request {
         }
 
         /**
-         * The number of waypoint proxy pods.
+         * <p>The number of waypoint proxy pods.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder replicas(Integer replicas) {
             this.putBodyParameter("Replicas", replicas);
@@ -354,7 +394,10 @@ public class CreateWaypointRequest extends Request {
         }
 
         /**
-         * The number of CPU cores requested by the waypoint proxy pods.
+         * <p>The number of CPU cores requested by the waypoint proxy pods.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>100m</p>
          */
         public Builder requestCPU(String requestCPU) {
             this.putBodyParameter("RequestCPU", requestCPU);
@@ -363,7 +406,10 @@ public class CreateWaypointRequest extends Request {
         }
 
         /**
-         * The size of the memory requested by the waypoint proxy pods.
+         * <p>The size of the memory requested by the waypoint proxy pods.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>128Mi</p>
          */
         public Builder requestMemory(String requestMemory) {
             this.putBodyParameter("RequestMemory", requestMemory);
@@ -372,7 +418,10 @@ public class CreateWaypointRequest extends Request {
         }
 
         /**
-         * The service account on which the waypoint proxy takes effect. If you do not specify this parameter, the waypoint proxy takes effect for the entire namespace.
+         * <p>The service account on which the waypoint proxy takes effect. If you do not specify this parameter, the waypoint proxy takes effect for the entire namespace.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>bookinfo-productpage</p>
          */
         public Builder serviceAccount(String serviceAccount) {
             this.putBodyParameter("ServiceAccount", serviceAccount);
@@ -381,7 +430,11 @@ public class CreateWaypointRequest extends Request {
         }
 
         /**
-         * The Service Mesh (ASM) instance ID.
+         * <p>The Service Mesh (ASM) instance ID.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>ce134b0727aa2492db69f6c3880e****</p>
          */
         public Builder serviceMeshId(String serviceMeshId) {
             this.putBodyParameter("ServiceMeshId", serviceMeshId);

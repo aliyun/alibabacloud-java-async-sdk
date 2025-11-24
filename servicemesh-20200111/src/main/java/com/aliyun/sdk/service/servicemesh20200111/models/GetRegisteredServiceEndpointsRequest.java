@@ -1,36 +1,41 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.servicemesh20200111.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link GetRegisteredServiceEndpointsRequest} extends {@link RequestModel}
  *
  * <p>GetRegisteredServiceEndpointsRequest</p>
  */
 public class GetRegisteredServiceEndpointsRequest extends Request {
-    @Body
-    @NameInMap("ClusterIds")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("ClusterIds")
     private String clusterIds;
 
-    @Body
-    @NameInMap("Name")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("Name")
     private String name;
 
-    @Body
-    @NameInMap("Namespace")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("Namespace")
     private String namespace;
 
-    @Body
-    @NameInMap("ServiceMeshId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("ServiceMeshId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String serviceMeshId;
 
-    @Body
-    @NameInMap("ServiceType")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("ServiceType")
     private String serviceType;
 
     private GetRegisteredServiceEndpointsRequest(Builder builder) {
@@ -50,7 +55,7 @@ public class GetRegisteredServiceEndpointsRequest extends Request {
         return builder().build();
     }
 
-    @Override
+@Override
     public Builder toBuilder() {
         return new Builder(this);
     }
@@ -111,7 +116,10 @@ public class GetRegisteredServiceEndpointsRequest extends Request {
         } 
 
         /**
-         * The name of the registered service.
+         * <p>The name of the registered service.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>c8b054ee8c3914d079b5ce9733328****,c58faedb8a78640d3aeb0372e4c02****</p>
          */
         public Builder clusterIds(String clusterIds) {
             this.putBodyParameter("ClusterIds", clusterIds);
@@ -120,11 +128,14 @@ public class GetRegisteredServiceEndpointsRequest extends Request {
         }
 
         /**
-         * The type of the registered service. Valid values:
-         * <p>
+         * <p>The type of the registered service. Valid values:</p>
+         * <ul>
+         * <li><code>ServiceEntry</code>: indicates that the service is registered by creating a service entry.</li>
+         * <li><code>Kubernetes</code>: indicates that the service is registered on a Kubernetes cluster on the data plane.</li>
+         * </ul>
          * 
-         * *   `ServiceEntry`: indicates that the service is registered by creating a service entry.
-         * *   `Kubernetes`: indicates that the service is registered on a Kubernetes cluster on the data plane.
+         * <strong>example:</strong>
+         * <p>reviews</p>
          */
         public Builder name(String name) {
             this.putBodyParameter("Name", name);
@@ -133,7 +144,10 @@ public class GetRegisteredServiceEndpointsRequest extends Request {
         }
 
         /**
-         * The IDs of clusters in the ASM instance. Separate multiple cluster IDs with commas (,).
+         * <p>The IDs of clusters in the ASM instance. Separate multiple cluster IDs with commas (,).</p>
+         * 
+         * <strong>example:</strong>
+         * <p>default</p>
          */
         public Builder namespace(String namespace) {
             this.putBodyParameter("Namespace", namespace);
@@ -142,7 +156,11 @@ public class GetRegisteredServiceEndpointsRequest extends Request {
         }
 
         /**
-         * The name of the namespace.
+         * <p>The name of the namespace.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>c08ba3fd1e6484b0f8cc1ad8fe10d****</p>
          */
         public Builder serviceMeshId(String serviceMeshId) {
             this.putBodyParameter("ServiceMeshId", serviceMeshId);
@@ -151,7 +169,10 @@ public class GetRegisteredServiceEndpointsRequest extends Request {
         }
 
         /**
-         * The endpoints of the registered service.
+         * <p>The endpoints of the registered service.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Kubernetes</p>
          */
         public Builder serviceType(String serviceType) {
             this.putBodyParameter("ServiceType", serviceType);

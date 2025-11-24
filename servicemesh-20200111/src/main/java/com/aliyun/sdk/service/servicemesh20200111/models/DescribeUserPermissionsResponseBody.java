@@ -1,21 +1,26 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.servicemesh20200111.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeUserPermissionsResponseBody} extends {@link TeaModel}
  *
  * <p>DescribeUserPermissionsResponseBody</p>
  */
 public class DescribeUserPermissionsResponseBody extends TeaModel {
-    @NameInMap("Permissions")
-    private java.util.List < Permissions> permissions;
+    @com.aliyun.core.annotation.NameInMap("Permissions")
+    private java.util.List<Permissions> permissions;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
     private DescribeUserPermissionsResponseBody(Builder builder) {
@@ -31,10 +36,14 @@ public class DescribeUserPermissionsResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return permissions
      */
-    public java.util.List < Permissions> getPermissions() {
+    public java.util.List<Permissions> getPermissions() {
         return this.permissions;
     }
 
@@ -46,19 +55,30 @@ public class DescribeUserPermissionsResponseBody extends TeaModel {
     }
 
     public static final class Builder {
-        private java.util.List < Permissions> permissions; 
+        private java.util.List<Permissions> permissions; 
         private String requestId; 
 
+        private Builder() {
+        } 
+
+        private Builder(DescribeUserPermissionsResponseBody model) {
+            this.permissions = model.permissions;
+            this.requestId = model.requestId;
+        } 
+
         /**
-         * The permissions that are granted to an entity.
+         * <p>The permissions that are granted to an entity.</p>
          */
-        public Builder permissions(java.util.List < Permissions> permissions) {
+        public Builder permissions(java.util.List<Permissions> permissions) {
             this.permissions = permissions;
             return this;
         }
 
         /**
-         * The request ID.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>5A7C9E37-C171-584F-9A99-869B48C4196D</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -71,23 +91,29 @@ public class DescribeUserPermissionsResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link DescribeUserPermissionsResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeUserPermissionsResponseBody</p>
+     */
     public static class Permissions extends TeaModel {
-        @NameInMap("IsRamRole")
+        @com.aliyun.core.annotation.NameInMap("IsRamRole")
         private String isRamRole;
 
-        @NameInMap("ParentId")
+        @com.aliyun.core.annotation.NameInMap("ParentId")
         private String parentId;
 
-        @NameInMap("ResourceId")
+        @com.aliyun.core.annotation.NameInMap("ResourceId")
         private String resourceId;
 
-        @NameInMap("ResourceType")
+        @com.aliyun.core.annotation.NameInMap("ResourceType")
         private String resourceType;
 
-        @NameInMap("RoleName")
+        @com.aliyun.core.annotation.NameInMap("RoleName")
         private String roleName;
 
-        @NameInMap("RoleType")
+        @com.aliyun.core.annotation.NameInMap("RoleType")
         private String roleType;
 
         private Permissions(Builder builder) {
@@ -157,8 +183,23 @@ public class DescribeUserPermissionsResponseBody extends TeaModel {
             private String roleName; 
             private String roleType; 
 
+            private Builder() {
+            } 
+
+            private Builder(Permissions model) {
+                this.isRamRole = model.isRamRole;
+                this.parentId = model.parentId;
+                this.resourceId = model.resourceId;
+                this.resourceType = model.resourceType;
+                this.roleName = model.roleName;
+                this.roleType = model.roleType;
+            } 
+
             /**
-             * The entity to which the permissions are granted. A value of `true` indicates that the permissions are granted to a RAM user. A value of `false` indicates that the permissions are granted to a RAM role.
+             * <p>The entity to which the permissions are granted. A value of <code>true</code> indicates that the permissions are granted to a RAM user. A value of <code>false</code> indicates that the permissions are granted to a RAM role.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>false</p>
              */
             public Builder isRamRole(String isRamRole) {
                 this.isRamRole = isRamRole;
@@ -166,7 +207,10 @@ public class DescribeUserPermissionsResponseBody extends TeaModel {
             }
 
             /**
-             * The value is fixed as `0`.
+             * <p>The value is fixed as <code>0</code>.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>0</p>
              */
             public Builder parentId(String parentId) {
                 this.parentId = parentId;
@@ -174,7 +218,10 @@ public class DescribeUserPermissionsResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the ASM instance.
+             * <p>The ID of the ASM instance.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>c57b848115458460583a4260cb713****</p>
              */
             public Builder resourceId(String resourceId) {
                 this.resourceId = resourceId;
@@ -182,7 +229,10 @@ public class DescribeUserPermissionsResponseBody extends TeaModel {
             }
 
             /**
-             * The value is fixed as `cluster`.
+             * <p>The value is fixed as <code>cluster</code>.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>cluster</p>
              */
             public Builder resourceType(String resourceType) {
                 this.resourceType = resourceType;
@@ -190,12 +240,15 @@ public class DescribeUserPermissionsResponseBody extends TeaModel {
             }
 
             /**
-             * The name of the permissions. Valid values:
-             * <p>
+             * <p>The name of the permissions. Valid values:</p>
+             * <ul>
+             * <li><code>istio-admin</code>: the permissions of ASM administrators.</li>
+             * <li><code>istio-ops</code>: the permissions of ASM restricted users.</li>
+             * <li><code>istio-readonly</code>: the read-only permissions.</li>
+             * </ul>
              * 
-             * *   `istio-admin`: the permissions of ASM administrators.
-             * *   `istio-ops`: the permissions of ASM restricted users.
-             * *   `istio-readonly`: the read-only permissions.
+             * <strong>example:</strong>
+             * <p>istio-admin</p>
              */
             public Builder roleName(String roleName) {
                 this.roleName = roleName;
@@ -203,7 +256,10 @@ public class DescribeUserPermissionsResponseBody extends TeaModel {
             }
 
             /**
-             * The value is fixed as `custom`.
+             * <p>The value is fixed as <code>custom</code>.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>custom</p>
              */
             public Builder roleType(String roleType) {
                 this.roleType = roleType;
