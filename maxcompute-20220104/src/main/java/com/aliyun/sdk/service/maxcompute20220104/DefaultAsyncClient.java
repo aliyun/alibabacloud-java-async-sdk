@@ -1677,6 +1677,24 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
+     * @param request the request parameters of UpdateProjectModelTier  UpdateProjectModelTierRequest
+     * @return UpdateProjectModelTierResponse
+     */
+    @Override
+    public CompletableFuture<UpdateProjectModelTierResponse> updateProjectModelTier(UpdateProjectModelTierRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RESTFUL).setAction("UpdateProjectModelTier").setMethod(HttpMethod.PUT).setPathRegex("/api/v1/projects/{projectName}/modelTier").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(UpdateProjectModelTierResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<UpdateProjectModelTierResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
      * @param request the request parameters of UpdateQuotaPlan  UpdateQuotaPlanRequest
      * @return UpdateQuotaPlanResponse
      */

@@ -558,6 +558,12 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<UpdateProjectIpWhiteListResponse> updateProjectIpWhiteList(UpdateProjectIpWhiteListRequest request);
 
     /**
+     * @param request the request parameters of UpdateProjectModelTier  UpdateProjectModelTierRequest
+     * @return UpdateProjectModelTierResponse
+     */
+    CompletableFuture<UpdateProjectModelTierResponse> updateProjectModelTier(UpdateProjectModelTierRequest request);
+
+    /**
      * @param request the request parameters of UpdateQuotaPlan  UpdateQuotaPlanRequest
      * @return UpdateQuotaPlanResponse
      */
