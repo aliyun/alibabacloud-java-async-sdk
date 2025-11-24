@@ -105,6 +105,24 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
+     * @param request the request parameters of GetIqsUsage  GetIqsUsageRequest
+     * @return GetIqsUsageResponse
+     */
+    @Override
+    public CompletableFuture<GetIqsUsageResponse> getIqsUsage(GetIqsUsageRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RESTFUL).setAction("GetIqsUsage").setMethod(HttpMethod.GET).setPathRegex("/linked-retrieval/linked-retrieval-admin/v1/iqs/usage").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(GetIqsUsageResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<GetIqsUsageResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
      * @param request the request parameters of GlobalSearch  GlobalSearchRequest
      * @return GlobalSearchResponse
      */
@@ -117,6 +135,42 @@ public final class DefaultAsyncClient implements AsyncClient {
             return this.handler.execute(params);
         } catch (Exception e) {
             CompletableFuture<GlobalSearchResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
+     * @param request the request parameters of ReadPageBasic  ReadPageBasicRequest
+     * @return ReadPageBasicResponse
+     */
+    @Override
+    public CompletableFuture<ReadPageBasicResponse> readPageBasic(ReadPageBasicRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RESTFUL).setAction("ReadPageBasic").setMethod(HttpMethod.POST).setPathRegex("/linked-retrieval/linked-retrieval-entry/v1/iqs/readpage/basic").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(ReadPageBasicResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<ReadPageBasicResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
+     * @param request the request parameters of ReadPageScrape  ReadPageScrapeRequest
+     * @return ReadPageScrapeResponse
+     */
+    @Override
+    public CompletableFuture<ReadPageScrapeResponse> readPageScrape(ReadPageScrapeRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RESTFUL).setAction("ReadPageScrape").setMethod(HttpMethod.POST).setPathRegex("/linked-retrieval/linked-retrieval-entry/v1/iqs/readpage/scrape").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(ReadPageScrapeResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<ReadPageScrapeResponse> future = new CompletableFuture<>();
             future.completeExceptionally(e);
             return future;
         }

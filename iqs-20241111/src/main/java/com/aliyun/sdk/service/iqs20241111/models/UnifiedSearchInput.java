@@ -17,6 +17,9 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>UnifiedSearchInput</p>
  */
 public class UnifiedSearchInput extends TeaModel {
+    @com.aliyun.core.annotation.NameInMap("advancedParams")
+    private java.util.Map<String, ?> advancedParams;
+
     @com.aliyun.core.annotation.NameInMap("category")
     private String category;
 
@@ -26,6 +29,9 @@ public class UnifiedSearchInput extends TeaModel {
     @com.aliyun.core.annotation.NameInMap("engineType")
     private String engineType;
 
+    @com.aliyun.core.annotation.NameInMap("location")
+    private String location;
+
     @com.aliyun.core.annotation.NameInMap("query")
     private String query;
 
@@ -33,9 +39,11 @@ public class UnifiedSearchInput extends TeaModel {
     private String timeRange;
 
     private UnifiedSearchInput(Builder builder) {
+        this.advancedParams = builder.advancedParams;
         this.category = builder.category;
         this.contents = builder.contents;
         this.engineType = builder.engineType;
+        this.location = builder.location;
         this.query = builder.query;
         this.timeRange = builder.timeRange;
     }
@@ -50,6 +58,13 @@ public class UnifiedSearchInput extends TeaModel {
 
     public Builder toBuilder() {
         return new Builder(this);
+    }
+
+    /**
+     * @return advancedParams
+     */
+    public java.util.Map<String, ?> getAdvancedParams() {
+        return this.advancedParams;
     }
 
     /**
@@ -74,6 +89,13 @@ public class UnifiedSearchInput extends TeaModel {
     }
 
     /**
+     * @return location
+     */
+    public String getLocation() {
+        return this.location;
+    }
+
+    /**
      * @return query
      */
     public String getQuery() {
@@ -88,9 +110,11 @@ public class UnifiedSearchInput extends TeaModel {
     }
 
     public static final class Builder {
+        private java.util.Map<String, ?> advancedParams; 
         private String category; 
         private RequestContents contents; 
         private String engineType; 
+        private String location; 
         private String query; 
         private String timeRange; 
 
@@ -98,12 +122,22 @@ public class UnifiedSearchInput extends TeaModel {
         } 
 
         private Builder(UnifiedSearchInput model) {
+            this.advancedParams = model.advancedParams;
             this.category = model.category;
             this.contents = model.contents;
             this.engineType = model.engineType;
+            this.location = model.location;
             this.query = model.query;
             this.timeRange = model.timeRange;
         } 
+
+        /**
+         * advancedParams.
+         */
+        public Builder advancedParams(java.util.Map<String, ?> advancedParams) {
+            this.advancedParams = advancedParams;
+            return this;
+        }
 
         /**
          * category.
@@ -126,6 +160,14 @@ public class UnifiedSearchInput extends TeaModel {
          */
         public Builder engineType(String engineType) {
             this.engineType = engineType;
+            return this;
+        }
+
+        /**
+         * location.
+         */
+        public Builder location(String location) {
+            this.location = location;
             return this;
         }
 

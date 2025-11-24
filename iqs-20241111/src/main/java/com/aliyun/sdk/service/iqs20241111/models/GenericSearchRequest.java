@@ -18,6 +18,10 @@ import com.aliyun.sdk.gateway.pop.models.*;
  */
 public class GenericSearchRequest extends Request {
     @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("advancedParams")
+    private java.util.Map<String, ?> advancedParams;
+
+    @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("enableRerank")
     private Boolean enableRerank;
 
@@ -43,6 +47,10 @@ public class GenericSearchRequest extends Request {
     private Boolean returnMarkdownText;
 
     @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("returnRichMainBody")
+    private Boolean returnRichMainBody;
+
+    @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("returnSummary")
     private Boolean returnSummary;
 
@@ -56,12 +64,14 @@ public class GenericSearchRequest extends Request {
 
     private GenericSearchRequest(Builder builder) {
         super(builder);
+        this.advancedParams = builder.advancedParams;
         this.enableRerank = builder.enableRerank;
         this.industry = builder.industry;
         this.page = builder.page;
         this.query = builder.query;
         this.returnMainText = builder.returnMainText;
         this.returnMarkdownText = builder.returnMarkdownText;
+        this.returnRichMainBody = builder.returnRichMainBody;
         this.returnSummary = builder.returnSummary;
         this.sessionId = builder.sessionId;
         this.timeRange = builder.timeRange;
@@ -78,6 +88,13 @@ public class GenericSearchRequest extends Request {
 @Override
     public Builder toBuilder() {
         return new Builder(this);
+    }
+
+    /**
+     * @return advancedParams
+     */
+    public java.util.Map<String, ?> getAdvancedParams() {
+        return this.advancedParams;
     }
 
     /**
@@ -123,6 +140,13 @@ public class GenericSearchRequest extends Request {
     }
 
     /**
+     * @return returnRichMainBody
+     */
+    public Boolean getReturnRichMainBody() {
+        return this.returnRichMainBody;
+    }
+
+    /**
      * @return returnSummary
      */
     public Boolean getReturnSummary() {
@@ -144,12 +168,14 @@ public class GenericSearchRequest extends Request {
     }
 
     public static final class Builder extends Request.Builder<GenericSearchRequest, Builder> {
+        private java.util.Map<String, ?> advancedParams; 
         private Boolean enableRerank; 
         private String industry; 
         private Integer page; 
         private String query; 
         private Boolean returnMainText; 
         private Boolean returnMarkdownText; 
+        private Boolean returnRichMainBody; 
         private Boolean returnSummary; 
         private String sessionId; 
         private String timeRange; 
@@ -160,16 +186,28 @@ public class GenericSearchRequest extends Request {
 
         private Builder(GenericSearchRequest request) {
             super(request);
+            this.advancedParams = request.advancedParams;
             this.enableRerank = request.enableRerank;
             this.industry = request.industry;
             this.page = request.page;
             this.query = request.query;
             this.returnMainText = request.returnMainText;
             this.returnMarkdownText = request.returnMarkdownText;
+            this.returnRichMainBody = request.returnRichMainBody;
             this.returnSummary = request.returnSummary;
             this.sessionId = request.sessionId;
             this.timeRange = request.timeRange;
         } 
+
+        /**
+         * advancedParams.
+         */
+        public Builder advancedParams(java.util.Map<String, ?> advancedParams) {
+            String advancedParamsShrink = shrink(advancedParams, "advancedParams", "json");
+            this.putQueryParameter("advancedParams", advancedParamsShrink);
+            this.advancedParams = advancedParams;
+            return this;
+        }
 
         /**
          * enableRerank.
@@ -222,6 +260,15 @@ public class GenericSearchRequest extends Request {
         public Builder returnMarkdownText(Boolean returnMarkdownText) {
             this.putQueryParameter("returnMarkdownText", returnMarkdownText);
             this.returnMarkdownText = returnMarkdownText;
+            return this;
+        }
+
+        /**
+         * returnRichMainBody.
+         */
+        public Builder returnRichMainBody(Boolean returnRichMainBody) {
+            this.putQueryParameter("returnRichMainBody", returnRichMainBody);
+            this.returnRichMainBody = returnRichMainBody;
             return this;
         }
 

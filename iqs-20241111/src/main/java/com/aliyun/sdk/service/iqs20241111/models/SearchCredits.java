@@ -20,8 +20,12 @@ public class SearchCredits extends TeaModel {
     @com.aliyun.core.annotation.NameInMap("genericTextSearch")
     private Integer genericTextSearch;
 
+    @com.aliyun.core.annotation.NameInMap("liteAdvancedTextSearch")
+    private Integer liteAdvancedTextSearch;
+
     private SearchCredits(Builder builder) {
         this.genericTextSearch = builder.genericTextSearch;
+        this.liteAdvancedTextSearch = builder.liteAdvancedTextSearch;
     }
 
     public static Builder builder() {
@@ -43,14 +47,23 @@ public class SearchCredits extends TeaModel {
         return this.genericTextSearch;
     }
 
+    /**
+     * @return liteAdvancedTextSearch
+     */
+    public Integer getLiteAdvancedTextSearch() {
+        return this.liteAdvancedTextSearch;
+    }
+
     public static final class Builder {
         private Integer genericTextSearch; 
+        private Integer liteAdvancedTextSearch; 
 
         private Builder() {
         } 
 
         private Builder(SearchCredits model) {
             this.genericTextSearch = model.genericTextSearch;
+            this.liteAdvancedTextSearch = model.liteAdvancedTextSearch;
         } 
 
         /**
@@ -58,6 +71,14 @@ public class SearchCredits extends TeaModel {
          */
         public Builder genericTextSearch(Integer genericTextSearch) {
             this.genericTextSearch = genericTextSearch;
+            return this;
+        }
+
+        /**
+         * liteAdvancedTextSearch.
+         */
+        public Builder liteAdvancedTextSearch(Integer liteAdvancedTextSearch) {
+            this.liteAdvancedTextSearch = liteAdvancedTextSearch;
             return this;
         }
 

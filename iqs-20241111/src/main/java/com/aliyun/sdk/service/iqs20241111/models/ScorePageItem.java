@@ -25,6 +25,9 @@ public class ScorePageItem extends TeaModel {
     @com.aliyun.core.annotation.Validation(required = true)
     private String displayLink;
 
+    @com.aliyun.core.annotation.NameInMap("hostAuthorityScore")
+    private Double hostAuthorityScore;
+
     @com.aliyun.core.annotation.NameInMap("hostLogo")
     private String hostLogo;
 
@@ -62,6 +65,9 @@ public class ScorePageItem extends TeaModel {
     @com.aliyun.core.annotation.Validation(required = true)
     private Long publishTime;
 
+    @com.aliyun.core.annotation.NameInMap("richMainBody")
+    private String richMainBody;
+
     @com.aliyun.core.annotation.NameInMap("score")
     private Double score;
 
@@ -78,9 +84,13 @@ public class ScorePageItem extends TeaModel {
     @com.aliyun.core.annotation.Validation(required = true)
     private String title;
 
+    @com.aliyun.core.annotation.NameInMap("websiteAuthorityScore")
+    private Integer websiteAuthorityScore;
+
     private ScorePageItem(Builder builder) {
         this.cardType = builder.cardType;
         this.displayLink = builder.displayLink;
+        this.hostAuthorityScore = builder.hostAuthorityScore;
         this.hostLogo = builder.hostLogo;
         this.hostname = builder.hostname;
         this.htmlSnippet = builder.htmlSnippet;
@@ -92,11 +102,13 @@ public class ScorePageItem extends TeaModel {
         this.mime = builder.mime;
         this.pageMap = builder.pageMap;
         this.publishTime = builder.publishTime;
+        this.richMainBody = builder.richMainBody;
         this.score = builder.score;
         this.siteLabel = builder.siteLabel;
         this.snippet = builder.snippet;
         this.summary = builder.summary;
         this.title = builder.title;
+        this.websiteAuthorityScore = builder.websiteAuthorityScore;
     }
 
     public static Builder builder() {
@@ -123,6 +135,13 @@ public class ScorePageItem extends TeaModel {
      */
     public String getDisplayLink() {
         return this.displayLink;
+    }
+
+    /**
+     * @return hostAuthorityScore
+     */
+    public Double getHostAuthorityScore() {
+        return this.hostAuthorityScore;
     }
 
     /**
@@ -203,6 +222,13 @@ public class ScorePageItem extends TeaModel {
     }
 
     /**
+     * @return richMainBody
+     */
+    public String getRichMainBody() {
+        return this.richMainBody;
+    }
+
+    /**
      * @return score
      */
     public Double getScore() {
@@ -237,9 +263,17 @@ public class ScorePageItem extends TeaModel {
         return this.title;
     }
 
+    /**
+     * @return websiteAuthorityScore
+     */
+    public Integer getWebsiteAuthorityScore() {
+        return this.websiteAuthorityScore;
+    }
+
     public static final class Builder {
         private String cardType; 
         private String displayLink; 
+        private Double hostAuthorityScore; 
         private String hostLogo; 
         private String hostname; 
         private String htmlSnippet; 
@@ -251,11 +285,13 @@ public class ScorePageItem extends TeaModel {
         private String mime; 
         private java.util.Map<String, String> pageMap; 
         private Long publishTime; 
+        private String richMainBody; 
         private Double score; 
         private String siteLabel; 
         private String snippet; 
         private String summary; 
         private String title; 
+        private Integer websiteAuthorityScore; 
 
         private Builder() {
         } 
@@ -263,6 +299,7 @@ public class ScorePageItem extends TeaModel {
         private Builder(ScorePageItem model) {
             this.cardType = model.cardType;
             this.displayLink = model.displayLink;
+            this.hostAuthorityScore = model.hostAuthorityScore;
             this.hostLogo = model.hostLogo;
             this.hostname = model.hostname;
             this.htmlSnippet = model.htmlSnippet;
@@ -274,11 +311,13 @@ public class ScorePageItem extends TeaModel {
             this.mime = model.mime;
             this.pageMap = model.pageMap;
             this.publishTime = model.publishTime;
+            this.richMainBody = model.richMainBody;
             this.score = model.score;
             this.siteLabel = model.siteLabel;
             this.snippet = model.snippet;
             this.summary = model.summary;
             this.title = model.title;
+            this.websiteAuthorityScore = model.websiteAuthorityScore;
         } 
 
         /**
@@ -300,6 +339,14 @@ public class ScorePageItem extends TeaModel {
          */
         public Builder displayLink(String displayLink) {
             this.displayLink = displayLink;
+            return this;
+        }
+
+        /**
+         * hostAuthorityScore.
+         */
+        public Builder hostAuthorityScore(Double hostAuthorityScore) {
+            this.hostAuthorityScore = hostAuthorityScore;
             return this;
         }
 
@@ -404,6 +451,14 @@ public class ScorePageItem extends TeaModel {
         }
 
         /**
+         * richMainBody.
+         */
+        public Builder richMainBody(String richMainBody) {
+            this.richMainBody = richMainBody;
+            return this;
+        }
+
+        /**
          * score.
          */
         public Builder score(Double score) {
@@ -443,6 +498,14 @@ public class ScorePageItem extends TeaModel {
          */
         public Builder title(String title) {
             this.title = title;
+            return this;
+        }
+
+        /**
+         * websiteAuthorityScore.
+         */
+        public Builder websiteAuthorityScore(Integer websiteAuthorityScore) {
+            this.websiteAuthorityScore = websiteAuthorityScore;
             return this;
         }
 

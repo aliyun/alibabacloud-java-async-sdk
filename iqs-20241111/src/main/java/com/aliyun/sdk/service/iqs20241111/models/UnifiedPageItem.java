@@ -17,6 +17,9 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>UnifiedPageItem</p>
  */
 public class UnifiedPageItem extends TeaModel {
+    @com.aliyun.core.annotation.NameInMap("hostAuthorityScore")
+    private Double hostAuthorityScore;
+
     @com.aliyun.core.annotation.NameInMap("hostLogo")
     private String hostLogo;
 
@@ -41,6 +44,9 @@ public class UnifiedPageItem extends TeaModel {
     @com.aliyun.core.annotation.NameInMap("rerankScore")
     private Double rerankScore;
 
+    @com.aliyun.core.annotation.NameInMap("richMainBody")
+    private String richMainBody;
+
     @com.aliyun.core.annotation.NameInMap("snippet")
     private String snippet;
 
@@ -50,7 +56,11 @@ public class UnifiedPageItem extends TeaModel {
     @com.aliyun.core.annotation.NameInMap("title")
     private String title;
 
+    @com.aliyun.core.annotation.NameInMap("websiteAuthorityScore")
+    private Integer websiteAuthorityScore;
+
     private UnifiedPageItem(Builder builder) {
+        this.hostAuthorityScore = builder.hostAuthorityScore;
         this.hostLogo = builder.hostLogo;
         this.hostname = builder.hostname;
         this.images = builder.images;
@@ -59,9 +69,11 @@ public class UnifiedPageItem extends TeaModel {
         this.markdownText = builder.markdownText;
         this.publishedTime = builder.publishedTime;
         this.rerankScore = builder.rerankScore;
+        this.richMainBody = builder.richMainBody;
         this.snippet = builder.snippet;
         this.summary = builder.summary;
         this.title = builder.title;
+        this.websiteAuthorityScore = builder.websiteAuthorityScore;
     }
 
     public static Builder builder() {
@@ -74,6 +86,13 @@ public class UnifiedPageItem extends TeaModel {
 
     public Builder toBuilder() {
         return new Builder(this);
+    }
+
+    /**
+     * @return hostAuthorityScore
+     */
+    public Double getHostAuthorityScore() {
+        return this.hostAuthorityScore;
     }
 
     /**
@@ -133,6 +152,13 @@ public class UnifiedPageItem extends TeaModel {
     }
 
     /**
+     * @return richMainBody
+     */
+    public String getRichMainBody() {
+        return this.richMainBody;
+    }
+
+    /**
      * @return snippet
      */
     public String getSnippet() {
@@ -153,7 +179,15 @@ public class UnifiedPageItem extends TeaModel {
         return this.title;
     }
 
+    /**
+     * @return websiteAuthorityScore
+     */
+    public Integer getWebsiteAuthorityScore() {
+        return this.websiteAuthorityScore;
+    }
+
     public static final class Builder {
+        private Double hostAuthorityScore; 
         private String hostLogo; 
         private String hostname; 
         private java.util.List<String> images; 
@@ -162,14 +196,17 @@ public class UnifiedPageItem extends TeaModel {
         private String markdownText; 
         private String publishedTime; 
         private Double rerankScore; 
+        private String richMainBody; 
         private String snippet; 
         private String summary; 
         private String title; 
+        private Integer websiteAuthorityScore; 
 
         private Builder() {
         } 
 
         private Builder(UnifiedPageItem model) {
+            this.hostAuthorityScore = model.hostAuthorityScore;
             this.hostLogo = model.hostLogo;
             this.hostname = model.hostname;
             this.images = model.images;
@@ -178,10 +215,20 @@ public class UnifiedPageItem extends TeaModel {
             this.markdownText = model.markdownText;
             this.publishedTime = model.publishedTime;
             this.rerankScore = model.rerankScore;
+            this.richMainBody = model.richMainBody;
             this.snippet = model.snippet;
             this.summary = model.summary;
             this.title = model.title;
+            this.websiteAuthorityScore = model.websiteAuthorityScore;
         } 
+
+        /**
+         * hostAuthorityScore.
+         */
+        public Builder hostAuthorityScore(Double hostAuthorityScore) {
+            this.hostAuthorityScore = hostAuthorityScore;
+            return this;
+        }
 
         /**
          * hostLogo.
@@ -248,6 +295,14 @@ public class UnifiedPageItem extends TeaModel {
         }
 
         /**
+         * richMainBody.
+         */
+        public Builder richMainBody(String richMainBody) {
+            this.richMainBody = richMainBody;
+            return this;
+        }
+
+        /**
          * snippet.
          */
         public Builder snippet(String snippet) {
@@ -268,6 +323,14 @@ public class UnifiedPageItem extends TeaModel {
          */
         public Builder title(String title) {
             this.title = title;
+            return this;
+        }
+
+        /**
+         * websiteAuthorityScore.
+         */
+        public Builder websiteAuthorityScore(Integer websiteAuthorityScore) {
+            this.websiteAuthorityScore = websiteAuthorityScore;
             return this;
         }
 

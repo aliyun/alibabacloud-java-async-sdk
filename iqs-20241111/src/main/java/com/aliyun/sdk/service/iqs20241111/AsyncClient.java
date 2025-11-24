@@ -40,10 +40,28 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<GenericSearchResponse> genericSearch(GenericSearchRequest request);
 
     /**
+     * @param request the request parameters of GetIqsUsage  GetIqsUsageRequest
+     * @return GetIqsUsageResponse
+     */
+    CompletableFuture<GetIqsUsageResponse> getIqsUsage(GetIqsUsageRequest request);
+
+    /**
      * @param request the request parameters of GlobalSearch  GlobalSearchRequest
      * @return GlobalSearchResponse
      */
     CompletableFuture<GlobalSearchResponse> globalSearch(GlobalSearchRequest request);
+
+    /**
+     * @param request the request parameters of ReadPageBasic  ReadPageBasicRequest
+     * @return ReadPageBasicResponse
+     */
+    CompletableFuture<ReadPageBasicResponse> readPageBasic(ReadPageBasicRequest request);
+
+    /**
+     * @param request the request parameters of ReadPageScrape  ReadPageScrapeRequest
+     * @return ReadPageScrapeResponse
+     */
+    CompletableFuture<ReadPageScrapeResponse> readPageScrape(ReadPageScrapeRequest request);
 
     /**
      * @param request the request parameters of UnifiedSearch  UnifiedSearchRequest

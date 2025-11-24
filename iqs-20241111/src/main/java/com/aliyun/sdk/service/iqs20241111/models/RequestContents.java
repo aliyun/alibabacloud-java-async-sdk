@@ -26,6 +26,9 @@ public class RequestContents extends TeaModel {
     @com.aliyun.core.annotation.NameInMap("rerankScore")
     private Boolean rerankScore;
 
+    @com.aliyun.core.annotation.NameInMap("richMainBody")
+    private Boolean richMainBody;
+
     @com.aliyun.core.annotation.NameInMap("summary")
     private Boolean summary;
 
@@ -33,6 +36,7 @@ public class RequestContents extends TeaModel {
         this.mainText = builder.mainText;
         this.markdownText = builder.markdownText;
         this.rerankScore = builder.rerankScore;
+        this.richMainBody = builder.richMainBody;
         this.summary = builder.summary;
     }
 
@@ -70,6 +74,13 @@ public class RequestContents extends TeaModel {
     }
 
     /**
+     * @return richMainBody
+     */
+    public Boolean getRichMainBody() {
+        return this.richMainBody;
+    }
+
+    /**
      * @return summary
      */
     public Boolean getSummary() {
@@ -80,6 +91,7 @@ public class RequestContents extends TeaModel {
         private Boolean mainText; 
         private Boolean markdownText; 
         private Boolean rerankScore; 
+        private Boolean richMainBody; 
         private Boolean summary; 
 
         private Builder() {
@@ -89,6 +101,7 @@ public class RequestContents extends TeaModel {
             this.mainText = model.mainText;
             this.markdownText = model.markdownText;
             this.rerankScore = model.rerankScore;
+            this.richMainBody = model.richMainBody;
             this.summary = model.summary;
         } 
 
@@ -113,6 +126,14 @@ public class RequestContents extends TeaModel {
          */
         public Builder rerankScore(Boolean rerankScore) {
             this.rerankScore = rerankScore;
+            return this;
+        }
+
+        /**
+         * richMainBody.
+         */
+        public Builder richMainBody(Boolean richMainBody) {
+            this.richMainBody = richMainBody;
             return this;
         }
 
