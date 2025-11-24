@@ -17,9 +17,6 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>Sandbox</p>
  */
 public class Sandbox extends TeaModel {
-    @com.aliyun.core.annotation.NameInMap("SandboxIdleTTLInSeconds")
-    private Integer sandboxIdleTTLInSeconds;
-
     @com.aliyun.core.annotation.NameInMap("createdAt")
     @com.aliyun.core.annotation.Validation(required = true)
     private String createdAt;
@@ -40,6 +37,9 @@ public class Sandbox extends TeaModel {
     @com.aliyun.core.annotation.Validation(required = true)
     private String sandboxId;
 
+    @com.aliyun.core.annotation.NameInMap("sandboxIdleTTLInSeconds")
+    private Integer sandboxIdleTTLInSeconds;
+
     @com.aliyun.core.annotation.NameInMap("sandboxIdleTimeoutSeconds")
     @com.aliyun.core.annotation.Validation(maximum = 21600, minimum = 1)
     private Integer sandboxIdleTimeoutSeconds;
@@ -56,13 +56,13 @@ public class Sandbox extends TeaModel {
     private String templateName;
 
     private Sandbox(Builder builder) {
-        this.sandboxIdleTTLInSeconds = builder.sandboxIdleTTLInSeconds;
         this.createdAt = builder.createdAt;
         this.endedAt = builder.endedAt;
         this.lastUpdatedAt = builder.lastUpdatedAt;
         this.metadata = builder.metadata;
         this.sandboxArn = builder.sandboxArn;
         this.sandboxId = builder.sandboxId;
+        this.sandboxIdleTTLInSeconds = builder.sandboxIdleTTLInSeconds;
         this.sandboxIdleTimeoutSeconds = builder.sandboxIdleTimeoutSeconds;
         this.status = builder.status;
         this.templateId = builder.templateId;
@@ -79,13 +79,6 @@ public class Sandbox extends TeaModel {
 
     public Builder toBuilder() {
         return new Builder(this);
-    }
-
-    /**
-     * @return sandboxIdleTTLInSeconds
-     */
-    public Integer getSandboxIdleTTLInSeconds() {
-        return this.sandboxIdleTTLInSeconds;
     }
 
     /**
@@ -131,6 +124,13 @@ public class Sandbox extends TeaModel {
     }
 
     /**
+     * @return sandboxIdleTTLInSeconds
+     */
+    public Integer getSandboxIdleTTLInSeconds() {
+        return this.sandboxIdleTTLInSeconds;
+    }
+
+    /**
      * @return sandboxIdleTimeoutSeconds
      */
     public Integer getSandboxIdleTimeoutSeconds() {
@@ -159,13 +159,13 @@ public class Sandbox extends TeaModel {
     }
 
     public static final class Builder {
-        private Integer sandboxIdleTTLInSeconds; 
         private String createdAt; 
         private String endedAt; 
         private String lastUpdatedAt; 
         private java.util.Map<String, ?> metadata; 
         private String sandboxArn; 
         private String sandboxId; 
+        private Integer sandboxIdleTTLInSeconds; 
         private Integer sandboxIdleTimeoutSeconds; 
         private String status; 
         private String templateId; 
@@ -175,26 +175,18 @@ public class Sandbox extends TeaModel {
         } 
 
         private Builder(Sandbox model) {
-            this.sandboxIdleTTLInSeconds = model.sandboxIdleTTLInSeconds;
             this.createdAt = model.createdAt;
             this.endedAt = model.endedAt;
             this.lastUpdatedAt = model.lastUpdatedAt;
             this.metadata = model.metadata;
             this.sandboxArn = model.sandboxArn;
             this.sandboxId = model.sandboxId;
+            this.sandboxIdleTTLInSeconds = model.sandboxIdleTTLInSeconds;
             this.sandboxIdleTimeoutSeconds = model.sandboxIdleTimeoutSeconds;
             this.status = model.status;
             this.templateId = model.templateId;
             this.templateName = model.templateName;
         } 
-
-        /**
-         * SandboxIdleTTLInSeconds.
-         */
-        public Builder sandboxIdleTTLInSeconds(Integer sandboxIdleTTLInSeconds) {
-            this.sandboxIdleTTLInSeconds = sandboxIdleTTLInSeconds;
-            return this;
-        }
 
         /**
          * <p>沙箱创建时间</p>
@@ -242,6 +234,14 @@ public class Sandbox extends TeaModel {
          */
         public Builder sandboxId(String sandboxId) {
             this.sandboxId = sandboxId;
+            return this;
+        }
+
+        /**
+         * sandboxIdleTTLInSeconds.
+         */
+        public Builder sandboxIdleTTLInSeconds(Integer sandboxIdleTTLInSeconds) {
+            this.sandboxIdleTTLInSeconds = sandboxIdleTTLInSeconds;
             return this;
         }
 

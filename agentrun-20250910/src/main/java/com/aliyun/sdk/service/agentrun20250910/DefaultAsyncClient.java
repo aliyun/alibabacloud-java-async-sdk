@@ -427,6 +427,24 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
+     * @param request the request parameters of DeleteSandbox  DeleteSandboxRequest
+     * @return DeleteSandboxResponse
+     */
+    @Override
+    public CompletableFuture<DeleteSandboxResponse> deleteSandbox(DeleteSandboxRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RESTFUL).setAction("DeleteSandbox").setMethod(HttpMethod.DELETE).setPathRegex("/2025-09-10/sandboxes/{sandboxId}").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(DeleteSandboxResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<DeleteSandboxResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
      * <b>description</b> :
      * <p>删除指定的模板。删除后，该模板将无法再用于创建新的沙箱。</p>
      * 
@@ -1022,7 +1040,7 @@ public final class DefaultAsyncClient implements AsyncClient {
     public CompletableFuture<StopSandboxResponse> stopSandbox(StopSandboxRequest request) {
         try {
             this.handler.validateRequestModel(request);
-            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RESTFUL).setAction("StopSandbox").setMethod(HttpMethod.DELETE).setPathRegex("/2025-09-10/sandboxes/{sandboxId}").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RESTFUL).setAction("StopSandbox").setMethod(HttpMethod.POST).setPathRegex("/2025-09-10/sandboxes/{sandboxId}/stop").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
             ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(StopSandboxResponse.create());
             return this.handler.execute(params);
         } catch (Exception e) {

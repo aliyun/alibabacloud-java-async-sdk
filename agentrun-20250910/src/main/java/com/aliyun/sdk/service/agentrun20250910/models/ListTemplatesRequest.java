@@ -26,6 +26,14 @@ public class ListTemplatesRequest extends Request {
     private Integer pageSize;
 
     @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("status")
+    private String status;
+
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("templateName")
+    private String templateName;
+
+    @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("templateType")
     private String templateType;
 
@@ -33,6 +41,8 @@ public class ListTemplatesRequest extends Request {
         super(builder);
         this.pageNumber = builder.pageNumber;
         this.pageSize = builder.pageSize;
+        this.status = builder.status;
+        this.templateName = builder.templateName;
         this.templateType = builder.templateType;
     }
 
@@ -64,6 +74,20 @@ public class ListTemplatesRequest extends Request {
     }
 
     /**
+     * @return status
+     */
+    public String getStatus() {
+        return this.status;
+    }
+
+    /**
+     * @return templateName
+     */
+    public String getTemplateName() {
+        return this.templateName;
+    }
+
+    /**
      * @return templateType
      */
     public String getTemplateType() {
@@ -73,6 +97,8 @@ public class ListTemplatesRequest extends Request {
     public static final class Builder extends Request.Builder<ListTemplatesRequest, Builder> {
         private Integer pageNumber; 
         private Integer pageSize; 
+        private String status; 
+        private String templateName; 
         private String templateType; 
 
         private Builder() {
@@ -83,6 +109,8 @@ public class ListTemplatesRequest extends Request {
             super(request);
             this.pageNumber = request.pageNumber;
             this.pageSize = request.pageSize;
+            this.status = request.status;
+            this.templateName = request.templateName;
             this.templateType = request.templateType;
         } 
 
@@ -107,6 +135,24 @@ public class ListTemplatesRequest extends Request {
         public Builder pageSize(Integer pageSize) {
             this.putQueryParameter("pageSize", pageSize);
             this.pageSize = pageSize;
+            return this;
+        }
+
+        /**
+         * status.
+         */
+        public Builder status(String status) {
+            this.putQueryParameter("status", status);
+            this.status = status;
+            return this;
+        }
+
+        /**
+         * templateName.
+         */
+        public Builder templateName(String templateName) {
+            this.putQueryParameter("templateName", templateName);
+            this.templateName = templateName;
             return this;
         }
 

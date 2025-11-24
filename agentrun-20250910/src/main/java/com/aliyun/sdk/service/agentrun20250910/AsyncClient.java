@@ -167,6 +167,12 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<DeleteModelServiceResponse> deleteModelService(DeleteModelServiceRequest request);
 
     /**
+     * @param request the request parameters of DeleteSandbox  DeleteSandboxRequest
+     * @return DeleteSandboxResponse
+     */
+    CompletableFuture<DeleteSandboxResponse> deleteSandbox(DeleteSandboxRequest request);
+
+    /**
      * <b>description</b> :
      * <p>删除指定的模板。删除后，该模板将无法再用于创建新的沙箱。</p>
      * 

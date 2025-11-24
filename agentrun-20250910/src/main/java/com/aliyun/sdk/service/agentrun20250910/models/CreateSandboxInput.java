@@ -17,6 +17,9 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>CreateSandboxInput</p>
  */
 public class CreateSandboxInput extends TeaModel {
+    @com.aliyun.core.annotation.NameInMap("sandboxId")
+    private String sandboxId;
+
     @com.aliyun.core.annotation.NameInMap("sandboxIdleTimeoutSeconds")
     @com.aliyun.core.annotation.Validation(maximum = 21600, minimum = 1)
     private Integer sandboxIdleTimeoutSeconds;
@@ -26,6 +29,7 @@ public class CreateSandboxInput extends TeaModel {
     private String templateName;
 
     private CreateSandboxInput(Builder builder) {
+        this.sandboxId = builder.sandboxId;
         this.sandboxIdleTimeoutSeconds = builder.sandboxIdleTimeoutSeconds;
         this.templateName = builder.templateName;
     }
@@ -43,6 +47,13 @@ public class CreateSandboxInput extends TeaModel {
     }
 
     /**
+     * @return sandboxId
+     */
+    public String getSandboxId() {
+        return this.sandboxId;
+    }
+
+    /**
      * @return sandboxIdleTimeoutSeconds
      */
     public Integer getSandboxIdleTimeoutSeconds() {
@@ -57,6 +68,7 @@ public class CreateSandboxInput extends TeaModel {
     }
 
     public static final class Builder {
+        private String sandboxId; 
         private Integer sandboxIdleTimeoutSeconds; 
         private String templateName; 
 
@@ -64,9 +76,18 @@ public class CreateSandboxInput extends TeaModel {
         } 
 
         private Builder(CreateSandboxInput model) {
+            this.sandboxId = model.sandboxId;
             this.sandboxIdleTimeoutSeconds = model.sandboxIdleTimeoutSeconds;
             this.templateName = model.templateName;
         } 
+
+        /**
+         * sandboxId.
+         */
+        public Builder sandboxId(String sandboxId) {
+            this.sandboxId = sandboxId;
+            return this;
+        }
 
         /**
          * <p>沙箱空闲超时时间（秒）</p>

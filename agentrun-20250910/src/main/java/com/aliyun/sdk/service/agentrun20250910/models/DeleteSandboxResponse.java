@@ -12,11 +12,11 @@ import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
  * 
- * {@link StopSandboxResponse} extends {@link TeaModel}
+ * {@link DeleteSandboxResponse} extends {@link TeaModel}
  *
- * <p>StopSandboxResponse</p>
+ * <p>DeleteSandboxResponse</p>
  */
-public class StopSandboxResponse extends Response {
+public class DeleteSandboxResponse extends Response {
     @com.aliyun.core.annotation.NameInMap("headers")
     private java.util.Map<String, String> headers;
 
@@ -24,16 +24,16 @@ public class StopSandboxResponse extends Response {
     private Integer statusCode;
 
     @com.aliyun.core.annotation.NameInMap("body")
-    private StopSandboxResult body;
+    private DeleteSandboxResult body;
 
-    private StopSandboxResponse(BuilderImpl builder) {
+    private DeleteSandboxResponse(BuilderImpl builder) {
         super(builder);
         this.headers = builder.headers;
         this.statusCode = builder.statusCode;
         this.body = builder.body;
     }
 
-    public static StopSandboxResponse create() {
+    public static DeleteSandboxResponse create() {
         return new BuilderImpl().build();
     }
 
@@ -59,35 +59,35 @@ public class StopSandboxResponse extends Response {
     /**
      * @return body
      */
-    public StopSandboxResult getBody() {
+    public DeleteSandboxResult getBody() {
         return this.body;
     }
 
-    public interface Builder extends Response.Builder<StopSandboxResponse, Builder> {
+    public interface Builder extends Response.Builder<DeleteSandboxResponse, Builder> {
 
         Builder headers(java.util.Map<String, String> headers);
 
         Builder statusCode(Integer statusCode);
 
-        Builder body(StopSandboxResult body);
+        Builder body(DeleteSandboxResult body);
 
         @Override
-        StopSandboxResponse build();
+        DeleteSandboxResponse build();
 
     } 
 
     private static final class BuilderImpl
-            extends Response.BuilderImpl<StopSandboxResponse, Builder>
+            extends Response.BuilderImpl<DeleteSandboxResponse, Builder>
             implements Builder {
         private java.util.Map<String, String> headers; 
         private Integer statusCode; 
-        private StopSandboxResult body; 
+        private DeleteSandboxResult body; 
 
         private BuilderImpl() {
             super();
         } 
 
-        private BuilderImpl(StopSandboxResponse response) {
+        private BuilderImpl(DeleteSandboxResponse response) {
             super(response);
             this.headers = response.headers;
             this.statusCode = response.statusCode;
@@ -116,14 +116,14 @@ public class StopSandboxResponse extends Response {
          * body.
          */
         @Override
-        public Builder body(StopSandboxResult body) {
+        public Builder body(DeleteSandboxResult body) {
             this.body = body;
             return this;
         }
 
         @Override
-        public StopSandboxResponse build() {
-            return new StopSandboxResponse(this);
+        public DeleteSandboxResponse build() {
+            return new DeleteSandboxResponse(this);
         } 
 
     } 
