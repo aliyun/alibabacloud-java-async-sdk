@@ -104,6 +104,9 @@ public class GetCreateWorkflowInstancesResultResponseBody extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Status")
         private String status;
 
+        @com.aliyun.core.annotation.NameInMap("UnifiedWorkflowInstanceIds")
+        private java.util.List<Long> unifiedWorkflowInstanceIds;
+
         @com.aliyun.core.annotation.NameInMap("WorkflowInstanceIds")
         private java.util.List<Long> workflowInstanceIds;
 
@@ -113,6 +116,7 @@ public class GetCreateWorkflowInstancesResultResponseBody extends TeaModel {
         private Result(Builder builder) {
             this.failureMessage = builder.failureMessage;
             this.status = builder.status;
+            this.unifiedWorkflowInstanceIds = builder.unifiedWorkflowInstanceIds;
             this.workflowInstanceIds = builder.workflowInstanceIds;
             this.workflowTaskInstanceIds = builder.workflowTaskInstanceIds;
         }
@@ -140,6 +144,13 @@ public class GetCreateWorkflowInstancesResultResponseBody extends TeaModel {
         }
 
         /**
+         * @return unifiedWorkflowInstanceIds
+         */
+        public java.util.List<Long> getUnifiedWorkflowInstanceIds() {
+            return this.unifiedWorkflowInstanceIds;
+        }
+
+        /**
          * @return workflowInstanceIds
          */
         public java.util.List<Long> getWorkflowInstanceIds() {
@@ -156,6 +167,7 @@ public class GetCreateWorkflowInstancesResultResponseBody extends TeaModel {
         public static final class Builder {
             private String failureMessage; 
             private String status; 
+            private java.util.List<Long> unifiedWorkflowInstanceIds; 
             private java.util.List<Long> workflowInstanceIds; 
             private java.util.List<Long> workflowTaskInstanceIds; 
 
@@ -165,6 +177,7 @@ public class GetCreateWorkflowInstancesResultResponseBody extends TeaModel {
             private Builder(Result model) {
                 this.failureMessage = model.failureMessage;
                 this.status = model.status;
+                this.unifiedWorkflowInstanceIds = model.unifiedWorkflowInstanceIds;
                 this.workflowInstanceIds = model.workflowInstanceIds;
                 this.workflowTaskInstanceIds = model.workflowTaskInstanceIds;
             } 
@@ -193,6 +206,14 @@ public class GetCreateWorkflowInstancesResultResponseBody extends TeaModel {
              */
             public Builder status(String status) {
                 this.status = status;
+                return this;
+            }
+
+            /**
+             * UnifiedWorkflowInstanceIds.
+             */
+            public Builder unifiedWorkflowInstanceIds(java.util.List<Long> unifiedWorkflowInstanceIds) {
+                this.unifiedWorkflowInstanceIds = unifiedWorkflowInstanceIds;
                 return this;
             }
 

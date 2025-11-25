@@ -27,6 +27,10 @@ public class ListTaskInstancesRequest extends Request {
     private Long bizdate;
 
     @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("Filter")
+    private String filter;
+
+    @com.aliyun.core.annotation.Body
     @com.aliyun.core.annotation.NameInMap("Id")
     private Long id;
 
@@ -92,6 +96,10 @@ public class ListTaskInstancesRequest extends Request {
     private String triggerType;
 
     @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("UnifiedWorkflowInstanceId")
+    private Long unifiedWorkflowInstanceId;
+
+    @com.aliyun.core.annotation.Body
     @com.aliyun.core.annotation.NameInMap("WorkflowId")
     private Long workflowId;
 
@@ -107,6 +115,7 @@ public class ListTaskInstancesRequest extends Request {
         super(builder);
         this.regionId = builder.regionId;
         this.bizdate = builder.bizdate;
+        this.filter = builder.filter;
         this.id = builder.id;
         this.ids = builder.ids;
         this.owner = builder.owner;
@@ -123,6 +132,7 @@ public class ListTaskInstancesRequest extends Request {
         this.taskType = builder.taskType;
         this.triggerRecurrence = builder.triggerRecurrence;
         this.triggerType = builder.triggerType;
+        this.unifiedWorkflowInstanceId = builder.unifiedWorkflowInstanceId;
         this.workflowId = builder.workflowId;
         this.workflowInstanceId = builder.workflowInstanceId;
         this.workflowInstanceType = builder.workflowInstanceType;
@@ -153,6 +163,13 @@ public class ListTaskInstancesRequest extends Request {
      */
     public Long getBizdate() {
         return this.bizdate;
+    }
+
+    /**
+     * @return filter
+     */
+    public String getFilter() {
+        return this.filter;
     }
 
     /**
@@ -268,6 +285,13 @@ public class ListTaskInstancesRequest extends Request {
     }
 
     /**
+     * @return unifiedWorkflowInstanceId
+     */
+    public Long getUnifiedWorkflowInstanceId() {
+        return this.unifiedWorkflowInstanceId;
+    }
+
+    /**
      * @return workflowId
      */
     public Long getWorkflowId() {
@@ -291,6 +315,7 @@ public class ListTaskInstancesRequest extends Request {
     public static final class Builder extends Request.Builder<ListTaskInstancesRequest, Builder> {
         private String regionId; 
         private Long bizdate; 
+        private String filter; 
         private Long id; 
         private java.util.List<Long> ids; 
         private String owner; 
@@ -307,6 +332,7 @@ public class ListTaskInstancesRequest extends Request {
         private String taskType; 
         private String triggerRecurrence; 
         private String triggerType; 
+        private Long unifiedWorkflowInstanceId; 
         private Long workflowId; 
         private Long workflowInstanceId; 
         private String workflowInstanceType; 
@@ -319,6 +345,7 @@ public class ListTaskInstancesRequest extends Request {
             super(request);
             this.regionId = request.regionId;
             this.bizdate = request.bizdate;
+            this.filter = request.filter;
             this.id = request.id;
             this.ids = request.ids;
             this.owner = request.owner;
@@ -335,6 +362,7 @@ public class ListTaskInstancesRequest extends Request {
             this.taskType = request.taskType;
             this.triggerRecurrence = request.triggerRecurrence;
             this.triggerType = request.triggerType;
+            this.unifiedWorkflowInstanceId = request.unifiedWorkflowInstanceId;
             this.workflowId = request.workflowId;
             this.workflowInstanceId = request.workflowInstanceId;
             this.workflowInstanceType = request.workflowInstanceType;
@@ -359,6 +387,15 @@ public class ListTaskInstancesRequest extends Request {
         public Builder bizdate(Long bizdate) {
             this.putBodyParameter("Bizdate", bizdate);
             this.bizdate = bizdate;
+            return this;
+        }
+
+        /**
+         * Filter.
+         */
+        public Builder filter(String filter) {
+            this.putBodyParameter("Filter", filter);
+            this.filter = filter;
             return this;
         }
 
@@ -582,6 +619,15 @@ public class ListTaskInstancesRequest extends Request {
         public Builder triggerType(String triggerType) {
             this.putBodyParameter("TriggerType", triggerType);
             this.triggerType = triggerType;
+            return this;
+        }
+
+        /**
+         * UnifiedWorkflowInstanceId.
+         */
+        public Builder unifiedWorkflowInstanceId(Long unifiedWorkflowInstanceId) {
+            this.putBodyParameter("UnifiedWorkflowInstanceId", unifiedWorkflowInstanceId);
+            this.unifiedWorkflowInstanceId = unifiedWorkflowInstanceId;
             return this;
         }
 

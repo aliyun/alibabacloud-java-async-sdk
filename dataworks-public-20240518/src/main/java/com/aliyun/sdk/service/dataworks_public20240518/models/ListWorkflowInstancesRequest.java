@@ -27,6 +27,10 @@ public class ListWorkflowInstancesRequest extends Request {
     private Long bizDate;
 
     @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("Filter")
+    private String filter;
+
+    @com.aliyun.core.annotation.Body
     @com.aliyun.core.annotation.NameInMap("Ids")
     private java.util.List<Long> ids;
 
@@ -56,8 +60,16 @@ public class ListWorkflowInstancesRequest extends Request {
     private String sortBy;
 
     @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("Tags")
+    private java.util.List<String> tags;
+
+    @com.aliyun.core.annotation.Body
     @com.aliyun.core.annotation.NameInMap("Type")
     private String type;
+
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("UnifiedWorkflowInstanceId")
+    private Long unifiedWorkflowInstanceId;
 
     @com.aliyun.core.annotation.Body
     @com.aliyun.core.annotation.NameInMap("WorkflowId")
@@ -67,6 +79,7 @@ public class ListWorkflowInstancesRequest extends Request {
         super(builder);
         this.regionId = builder.regionId;
         this.bizDate = builder.bizDate;
+        this.filter = builder.filter;
         this.ids = builder.ids;
         this.name = builder.name;
         this.owner = builder.owner;
@@ -74,7 +87,9 @@ public class ListWorkflowInstancesRequest extends Request {
         this.pageSize = builder.pageSize;
         this.projectId = builder.projectId;
         this.sortBy = builder.sortBy;
+        this.tags = builder.tags;
         this.type = builder.type;
+        this.unifiedWorkflowInstanceId = builder.unifiedWorkflowInstanceId;
         this.workflowId = builder.workflowId;
     }
 
@@ -103,6 +118,13 @@ public class ListWorkflowInstancesRequest extends Request {
      */
     public Long getBizDate() {
         return this.bizDate;
+    }
+
+    /**
+     * @return filter
+     */
+    public String getFilter() {
+        return this.filter;
     }
 
     /**
@@ -155,10 +177,24 @@ public class ListWorkflowInstancesRequest extends Request {
     }
 
     /**
+     * @return tags
+     */
+    public java.util.List<String> getTags() {
+        return this.tags;
+    }
+
+    /**
      * @return type
      */
     public String getType() {
         return this.type;
+    }
+
+    /**
+     * @return unifiedWorkflowInstanceId
+     */
+    public Long getUnifiedWorkflowInstanceId() {
+        return this.unifiedWorkflowInstanceId;
     }
 
     /**
@@ -171,6 +207,7 @@ public class ListWorkflowInstancesRequest extends Request {
     public static final class Builder extends Request.Builder<ListWorkflowInstancesRequest, Builder> {
         private String regionId; 
         private Long bizDate; 
+        private String filter; 
         private java.util.List<Long> ids; 
         private String name; 
         private String owner; 
@@ -178,7 +215,9 @@ public class ListWorkflowInstancesRequest extends Request {
         private Integer pageSize; 
         private Long projectId; 
         private String sortBy; 
+        private java.util.List<String> tags; 
         private String type; 
+        private Long unifiedWorkflowInstanceId; 
         private Long workflowId; 
 
         private Builder() {
@@ -189,6 +228,7 @@ public class ListWorkflowInstancesRequest extends Request {
             super(request);
             this.regionId = request.regionId;
             this.bizDate = request.bizDate;
+            this.filter = request.filter;
             this.ids = request.ids;
             this.name = request.name;
             this.owner = request.owner;
@@ -196,7 +236,9 @@ public class ListWorkflowInstancesRequest extends Request {
             this.pageSize = request.pageSize;
             this.projectId = request.projectId;
             this.sortBy = request.sortBy;
+            this.tags = request.tags;
             this.type = request.type;
+            this.unifiedWorkflowInstanceId = request.unifiedWorkflowInstanceId;
             this.workflowId = request.workflowId;
         } 
 
@@ -219,6 +261,15 @@ public class ListWorkflowInstancesRequest extends Request {
         public Builder bizDate(Long bizDate) {
             this.putBodyParameter("BizDate", bizDate);
             this.bizDate = bizDate;
+            return this;
+        }
+
+        /**
+         * Filter.
+         */
+        public Builder filter(String filter) {
+            this.putBodyParameter("Filter", filter);
+            this.filter = filter;
             return this;
         }
 
@@ -314,6 +365,16 @@ public class ListWorkflowInstancesRequest extends Request {
         }
 
         /**
+         * Tags.
+         */
+        public Builder tags(java.util.List<String> tags) {
+            String tagsShrink = shrink(tags, "Tags", "json");
+            this.putBodyParameter("Tags", tagsShrink);
+            this.tags = tags;
+            return this;
+        }
+
+        /**
          * <p>The type of the workflow instance. Valid values:</p>
          * <ul>
          * <li>Normal: Scheduled execution</li>
@@ -330,6 +391,15 @@ public class ListWorkflowInstancesRequest extends Request {
         public Builder type(String type) {
             this.putBodyParameter("Type", type);
             this.type = type;
+            return this;
+        }
+
+        /**
+         * UnifiedWorkflowInstanceId.
+         */
+        public Builder unifiedWorkflowInstanceId(Long unifiedWorkflowInstanceId) {
+            this.putBodyParameter("UnifiedWorkflowInstanceId", unifiedWorkflowInstanceId);
+            this.unifiedWorkflowInstanceId = unifiedWorkflowInstanceId;
             return this;
         }
 

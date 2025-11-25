@@ -224,6 +224,9 @@ public class ListWorkflowInstancesResponseBody extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Type")
         private String type;
 
+        @com.aliyun.core.annotation.NameInMap("UnifiedWorkflowInstanceId")
+        private Long unifiedWorkflowInstanceId;
+
         @com.aliyun.core.annotation.NameInMap("WorkflowId")
         private Long workflowId;
 
@@ -249,6 +252,7 @@ public class ListWorkflowInstancesResponseBody extends TeaModel {
             this.status = builder.status;
             this.tags = builder.tags;
             this.type = builder.type;
+            this.unifiedWorkflowInstanceId = builder.unifiedWorkflowInstanceId;
             this.workflowId = builder.workflowId;
             this.workflowParameters = builder.workflowParameters;
             this.workflowTaskInstanceId = builder.workflowTaskInstanceId;
@@ -368,6 +372,13 @@ public class ListWorkflowInstancesResponseBody extends TeaModel {
         }
 
         /**
+         * @return unifiedWorkflowInstanceId
+         */
+        public Long getUnifiedWorkflowInstanceId() {
+            return this.unifiedWorkflowInstanceId;
+        }
+
+        /**
          * @return workflowId
          */
         public Long getWorkflowId() {
@@ -404,6 +415,7 @@ public class ListWorkflowInstancesResponseBody extends TeaModel {
             private String status; 
             private java.util.List<Tags> tags; 
             private String type; 
+            private Long unifiedWorkflowInstanceId; 
             private Long workflowId; 
             private String workflowParameters; 
             private Long workflowTaskInstanceId; 
@@ -427,6 +439,7 @@ public class ListWorkflowInstancesResponseBody extends TeaModel {
                 this.status = model.status;
                 this.tags = model.tags;
                 this.type = model.type;
+                this.unifiedWorkflowInstanceId = model.unifiedWorkflowInstanceId;
                 this.workflowId = model.workflowId;
                 this.workflowParameters = model.workflowParameters;
                 this.workflowTaskInstanceId = model.workflowTaskInstanceId;
@@ -607,6 +620,14 @@ public class ListWorkflowInstancesResponseBody extends TeaModel {
              */
             public Builder type(String type) {
                 this.type = type;
+                return this;
+            }
+
+            /**
+             * UnifiedWorkflowInstanceId.
+             */
+            public Builder unifiedWorkflowInstanceId(Long unifiedWorkflowInstanceId) {
+                this.unifiedWorkflowInstanceId = unifiedWorkflowInstanceId;
                 return this;
             }
 

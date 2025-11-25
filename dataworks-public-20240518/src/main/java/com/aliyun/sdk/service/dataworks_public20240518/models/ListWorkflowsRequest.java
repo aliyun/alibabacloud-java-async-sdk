@@ -55,6 +55,10 @@ public class ListWorkflowsRequest extends Request {
     private String sortBy;
 
     @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("Tags")
+    private java.util.List<String> tags;
+
+    @com.aliyun.core.annotation.Body
     @com.aliyun.core.annotation.NameInMap("TriggerType")
     private String triggerType;
 
@@ -69,6 +73,7 @@ public class ListWorkflowsRequest extends Request {
         this.pageSize = builder.pageSize;
         this.projectId = builder.projectId;
         this.sortBy = builder.sortBy;
+        this.tags = builder.tags;
         this.triggerType = builder.triggerType;
     }
 
@@ -149,6 +154,13 @@ public class ListWorkflowsRequest extends Request {
     }
 
     /**
+     * @return tags
+     */
+    public java.util.List<String> getTags() {
+        return this.tags;
+    }
+
+    /**
      * @return triggerType
      */
     public String getTriggerType() {
@@ -165,6 +177,7 @@ public class ListWorkflowsRequest extends Request {
         private Integer pageSize; 
         private Long projectId; 
         private String sortBy; 
+        private java.util.List<String> tags; 
         private String triggerType; 
 
         private Builder() {
@@ -182,6 +195,7 @@ public class ListWorkflowsRequest extends Request {
             this.pageSize = request.pageSize;
             this.projectId = request.projectId;
             this.sortBy = request.sortBy;
+            this.tags = request.tags;
             this.triggerType = request.triggerType;
         } 
 
@@ -296,6 +310,16 @@ public class ListWorkflowsRequest extends Request {
         public Builder sortBy(String sortBy) {
             this.putBodyParameter("SortBy", sortBy);
             this.sortBy = sortBy;
+            return this;
+        }
+
+        /**
+         * Tags.
+         */
+        public Builder tags(java.util.List<String> tags) {
+            String tagsShrink = shrink(tags, "Tags", "json");
+            this.putBodyParameter("Tags", tagsShrink);
+            this.tags = tags;
             return this;
         }
 

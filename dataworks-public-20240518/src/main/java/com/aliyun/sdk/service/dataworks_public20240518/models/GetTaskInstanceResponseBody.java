@@ -1007,6 +1007,9 @@ public class GetTaskInstanceResponseBody extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("TriggerType")
         private String triggerType;
 
+        @com.aliyun.core.annotation.NameInMap("UnifiedWorkflowInstanceId")
+        private Long unifiedWorkflowInstanceId;
+
         @com.aliyun.core.annotation.NameInMap("WaitingResourceTime")
         private Long waitingResourceTime;
 
@@ -1058,6 +1061,7 @@ public class GetTaskInstanceResponseBody extends TeaModel {
             this.triggerRecurrence = builder.triggerRecurrence;
             this.triggerTime = builder.triggerTime;
             this.triggerType = builder.triggerType;
+            this.unifiedWorkflowInstanceId = builder.unifiedWorkflowInstanceId;
             this.waitingResourceTime = builder.waitingResourceTime;
             this.waitingTriggerTime = builder.waitingTriggerTime;
             this.workflowId = builder.workflowId;
@@ -1299,6 +1303,13 @@ public class GetTaskInstanceResponseBody extends TeaModel {
         }
 
         /**
+         * @return unifiedWorkflowInstanceId
+         */
+        public Long getUnifiedWorkflowInstanceId() {
+            return this.unifiedWorkflowInstanceId;
+        }
+
+        /**
          * @return waitingResourceTime
          */
         public Long getWaitingResourceTime() {
@@ -1373,6 +1384,7 @@ public class GetTaskInstanceResponseBody extends TeaModel {
             private String triggerRecurrence; 
             private Long triggerTime; 
             private String triggerType; 
+            private Long unifiedWorkflowInstanceId; 
             private Long waitingResourceTime; 
             private Long waitingTriggerTime; 
             private Long workflowId; 
@@ -1416,6 +1428,7 @@ public class GetTaskInstanceResponseBody extends TeaModel {
                 this.triggerRecurrence = model.triggerRecurrence;
                 this.triggerTime = model.triggerTime;
                 this.triggerType = model.triggerType;
+                this.unifiedWorkflowInstanceId = model.unifiedWorkflowInstanceId;
                 this.waitingResourceTime = model.waitingResourceTime;
                 this.waitingTriggerTime = model.waitingTriggerTime;
                 this.workflowId = model.workflowId;
@@ -1781,6 +1794,14 @@ public class GetTaskInstanceResponseBody extends TeaModel {
              */
             public Builder triggerType(String triggerType) {
                 this.triggerType = triggerType;
+                return this;
+            }
+
+            /**
+             * UnifiedWorkflowInstanceId.
+             */
+            public Builder unifiedWorkflowInstanceId(Long unifiedWorkflowInstanceId) {
+                this.unifiedWorkflowInstanceId = unifiedWorkflowInstanceId;
                 return this;
             }
 
