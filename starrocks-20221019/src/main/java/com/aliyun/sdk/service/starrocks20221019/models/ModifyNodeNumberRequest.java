@@ -32,6 +32,10 @@ public class ModifyNodeNumberRequest extends Request {
     private String nodeGroupId;
 
     @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Parallelism")
+    private Integer parallelism;
+
+    @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("PromotionOptionNo")
     private String promotionOptionNo;
 
@@ -40,13 +44,19 @@ public class ModifyNodeNumberRequest extends Request {
     @com.aliyun.core.annotation.Validation(required = true, maximum = 100)
     private Integer target;
 
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("TerminationGracePeriodSeconds")
+    private Integer terminationGracePeriodSeconds;
+
     private ModifyNodeNumberRequest(Builder builder) {
         super(builder);
         this.regionId = builder.regionId;
         this.instanceId = builder.instanceId;
         this.nodeGroupId = builder.nodeGroupId;
+        this.parallelism = builder.parallelism;
         this.promotionOptionNo = builder.promotionOptionNo;
         this.target = builder.target;
+        this.terminationGracePeriodSeconds = builder.terminationGracePeriodSeconds;
     }
 
     public static Builder builder() {
@@ -84,6 +94,13 @@ public class ModifyNodeNumberRequest extends Request {
     }
 
     /**
+     * @return parallelism
+     */
+    public Integer getParallelism() {
+        return this.parallelism;
+    }
+
+    /**
      * @return promotionOptionNo
      */
     public String getPromotionOptionNo() {
@@ -97,12 +114,21 @@ public class ModifyNodeNumberRequest extends Request {
         return this.target;
     }
 
+    /**
+     * @return terminationGracePeriodSeconds
+     */
+    public Integer getTerminationGracePeriodSeconds() {
+        return this.terminationGracePeriodSeconds;
+    }
+
     public static final class Builder extends Request.Builder<ModifyNodeNumberRequest, Builder> {
         private String regionId; 
         private String instanceId; 
         private String nodeGroupId; 
+        private Integer parallelism; 
         private String promotionOptionNo; 
         private Integer target; 
+        private Integer terminationGracePeriodSeconds; 
 
         private Builder() {
             super();
@@ -113,8 +139,10 @@ public class ModifyNodeNumberRequest extends Request {
             this.regionId = request.regionId;
             this.instanceId = request.instanceId;
             this.nodeGroupId = request.nodeGroupId;
+            this.parallelism = request.parallelism;
             this.promotionOptionNo = request.promotionOptionNo;
             this.target = request.target;
+            this.terminationGracePeriodSeconds = request.terminationGracePeriodSeconds;
         } 
 
         /**
@@ -153,6 +181,15 @@ public class ModifyNodeNumberRequest extends Request {
         }
 
         /**
+         * Parallelism.
+         */
+        public Builder parallelism(Integer parallelism) {
+            this.putQueryParameter("Parallelism", parallelism);
+            this.parallelism = parallelism;
+            return this;
+        }
+
+        /**
          * PromotionOptionNo.
          */
         public Builder promotionOptionNo(String promotionOptionNo) {
@@ -171,6 +208,15 @@ public class ModifyNodeNumberRequest extends Request {
         public Builder target(Integer target) {
             this.putQueryParameter("Target", target);
             this.target = target;
+            return this;
+        }
+
+        /**
+         * TerminationGracePeriodSeconds.
+         */
+        public Builder terminationGracePeriodSeconds(Integer terminationGracePeriodSeconds) {
+            this.putQueryParameter("TerminationGracePeriodSeconds", terminationGracePeriodSeconds);
+            this.terminationGracePeriodSeconds = terminationGracePeriodSeconds;
             return this;
         }
 
