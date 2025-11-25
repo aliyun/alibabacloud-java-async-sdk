@@ -195,6 +195,9 @@ public class ListJobSnapshotInfosResponseBody extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("extPlantFrom")
         private String extPlantFrom;
 
+        @com.aliyun.core.annotation.NameInMap("extPlatformId")
+        private String extPlatformId;
+
         @com.aliyun.core.annotation.NameInMap("instanceId")
         private String instanceId;
 
@@ -274,6 +277,7 @@ public class ListJobSnapshotInfosResponseBody extends TeaModel {
             this.extNodeId = builder.extNodeId;
             this.extNodeOnDuty = builder.extNodeOnDuty;
             this.extPlantFrom = builder.extPlantFrom;
+            this.extPlatformId = builder.extPlatformId;
             this.instanceId = builder.instanceId;
             this.jobOwner = builder.jobOwner;
             this.jobType = builder.jobType;
@@ -348,6 +352,13 @@ public class ListJobSnapshotInfosResponseBody extends TeaModel {
          */
         public String getExtPlantFrom() {
             return this.extPlantFrom;
+        }
+
+        /**
+         * @return extPlatformId
+         */
+        public String getExtPlatformId() {
+            return this.extPlatformId;
         }
 
         /**
@@ -525,6 +536,7 @@ public class ListJobSnapshotInfosResponseBody extends TeaModel {
             private String extNodeId; 
             private String extNodeOnDuty; 
             private String extPlantFrom; 
+            private String extPlatformId; 
             private String instanceId; 
             private String jobOwner; 
             private String jobType; 
@@ -560,6 +572,7 @@ public class ListJobSnapshotInfosResponseBody extends TeaModel {
                 this.extNodeId = model.extNodeId;
                 this.extNodeOnDuty = model.extNodeOnDuty;
                 this.extPlantFrom = model.extPlantFrom;
+                this.extPlatformId = model.extPlatformId;
                 this.instanceId = model.instanceId;
                 this.jobOwner = model.jobOwner;
                 this.jobType = model.jobType;
@@ -649,6 +662,14 @@ public class ListJobSnapshotInfosResponseBody extends TeaModel {
              */
             public Builder extPlantFrom(String extPlantFrom) {
                 this.extPlantFrom = extPlantFrom;
+                return this;
+            }
+
+            /**
+             * extPlatformId.
+             */
+            public Builder extPlatformId(String extPlatformId) {
+                this.extPlatformId = extPlatformId;
                 return this;
             }
 

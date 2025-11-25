@@ -26,6 +26,10 @@ public class ListJobInfosRequest extends Request {
     private java.util.List<String> extNodeIdList;
 
     @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("extNodeNameList")
+    private java.util.List<String> extNodeNameList;
+
+    @com.aliyun.core.annotation.Body
     @com.aliyun.core.annotation.NameInMap("from")
     @com.aliyun.core.annotation.Validation(required = true)
     private Long from;
@@ -71,6 +75,10 @@ public class ListJobInfosRequest extends Request {
     private java.util.List<String> statusList;
 
     @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("taskNameList")
+    private java.util.List<String> taskNameList;
+
+    @com.aliyun.core.annotation.Body
     @com.aliyun.core.annotation.NameInMap("to")
     @com.aliyun.core.annotation.Validation(required = true)
     private Long to;
@@ -103,6 +111,7 @@ public class ListJobInfosRequest extends Request {
         super(builder);
         this.ascOrder = builder.ascOrder;
         this.extNodeIdList = builder.extNodeIdList;
+        this.extNodeNameList = builder.extNodeNameList;
         this.from = builder.from;
         this.instanceIdList = builder.instanceIdList;
         this.jobOwnerList = builder.jobOwnerList;
@@ -114,6 +123,7 @@ public class ListJobInfosRequest extends Request {
         this.sortByList = builder.sortByList;
         this.sortOrderList = builder.sortOrderList;
         this.statusList = builder.statusList;
+        this.taskNameList = builder.taskNameList;
         this.to = builder.to;
         this.typeList = builder.typeList;
         this.orderColumn = builder.orderColumn;
@@ -148,6 +158,13 @@ public class ListJobInfosRequest extends Request {
      */
     public java.util.List<String> getExtNodeIdList() {
         return this.extNodeIdList;
+    }
+
+    /**
+     * @return extNodeNameList
+     */
+    public java.util.List<String> getExtNodeNameList() {
+        return this.extNodeNameList;
     }
 
     /**
@@ -228,6 +245,13 @@ public class ListJobInfosRequest extends Request {
     }
 
     /**
+     * @return taskNameList
+     */
+    public java.util.List<String> getTaskNameList() {
+        return this.taskNameList;
+    }
+
+    /**
      * @return to
      */
     public Long getTo() {
@@ -279,6 +303,7 @@ public class ListJobInfosRequest extends Request {
     public static final class Builder extends Request.Builder<ListJobInfosRequest, Builder> {
         private Boolean ascOrder; 
         private java.util.List<String> extNodeIdList; 
+        private java.util.List<String> extNodeNameList; 
         private Long from; 
         private java.util.List<String> instanceIdList; 
         private java.util.List<String> jobOwnerList; 
@@ -290,6 +315,7 @@ public class ListJobInfosRequest extends Request {
         private java.util.List<String> sortByList; 
         private java.util.List<String> sortOrderList; 
         private java.util.List<String> statusList; 
+        private java.util.List<String> taskNameList; 
         private Long to; 
         private java.util.List<String> typeList; 
         private String orderColumn; 
@@ -306,6 +332,7 @@ public class ListJobInfosRequest extends Request {
             super(request);
             this.ascOrder = request.ascOrder;
             this.extNodeIdList = request.extNodeIdList;
+            this.extNodeNameList = request.extNodeNameList;
             this.from = request.from;
             this.instanceIdList = request.instanceIdList;
             this.jobOwnerList = request.jobOwnerList;
@@ -317,6 +344,7 @@ public class ListJobInfosRequest extends Request {
             this.sortByList = request.sortByList;
             this.sortOrderList = request.sortOrderList;
             this.statusList = request.statusList;
+            this.taskNameList = request.taskNameList;
             this.to = request.to;
             this.typeList = request.typeList;
             this.orderColumn = request.orderColumn;
@@ -344,6 +372,15 @@ public class ListJobInfosRequest extends Request {
         public Builder extNodeIdList(java.util.List<String> extNodeIdList) {
             this.putBodyParameter("extNodeIdList", extNodeIdList);
             this.extNodeIdList = extNodeIdList;
+            return this;
+        }
+
+        /**
+         * extNodeNameList.
+         */
+        public Builder extNodeNameList(java.util.List<String> extNodeNameList) {
+            this.putBodyParameter("extNodeNameList", extNodeNameList);
+            this.extNodeNameList = extNodeNameList;
             return this;
         }
 
@@ -450,6 +487,15 @@ public class ListJobInfosRequest extends Request {
         public Builder statusList(java.util.List<String> statusList) {
             this.putBodyParameter("statusList", statusList);
             this.statusList = statusList;
+            return this;
+        }
+
+        /**
+         * taskNameList.
+         */
+        public Builder taskNameList(java.util.List<String> taskNameList) {
+            this.putBodyParameter("taskNameList", taskNameList);
+            this.taskNameList = taskNameList;
             return this;
         }
 

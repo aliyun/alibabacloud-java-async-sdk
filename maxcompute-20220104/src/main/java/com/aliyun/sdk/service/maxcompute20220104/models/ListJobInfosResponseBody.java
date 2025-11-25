@@ -311,11 +311,17 @@ public class ListJobInfosResponseBody extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("extNodeId")
         private String extNodeId;
 
+        @com.aliyun.core.annotation.NameInMap("extNodeName")
+        private String extNodeName;
+
         @com.aliyun.core.annotation.NameInMap("extNodeOnDuty")
         private String extNodeOnDuty;
 
         @com.aliyun.core.annotation.NameInMap("extPlantFrom")
         private String extPlantFrom;
+
+        @com.aliyun.core.annotation.NameInMap("extPlatformId")
+        private String extPlatformId;
 
         @com.aliyun.core.annotation.NameInMap("inputBytes")
         private Double inputBytes;
@@ -374,6 +380,9 @@ public class ListJobInfosResponseBody extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("tags")
         private String tags;
 
+        @com.aliyun.core.annotation.NameInMap("taskName")
+        private String taskName;
+
         @com.aliyun.core.annotation.NameInMap("tenantId")
         private String tenantId;
 
@@ -389,8 +398,10 @@ public class ListJobInfosResponseBody extends TeaModel {
             this.cuUsage = builder.cuUsage;
             this.endAtTime = builder.endAtTime;
             this.extNodeId = builder.extNodeId;
+            this.extNodeName = builder.extNodeName;
             this.extNodeOnDuty = builder.extNodeOnDuty;
             this.extPlantFrom = builder.extPlantFrom;
+            this.extPlatformId = builder.extPlatformId;
             this.inputBytes = builder.inputBytes;
             this.instanceId = builder.instanceId;
             this.jobOwner = builder.jobOwner;
@@ -410,6 +421,7 @@ public class ListJobInfosResponseBody extends TeaModel {
             this.statusSnapshot = builder.statusSnapshot;
             this.submittedAtTime = builder.submittedAtTime;
             this.tags = builder.tags;
+            this.taskName = builder.taskName;
             this.tenantId = builder.tenantId;
             this.totalTime = builder.totalTime;
             this.waitingTime = builder.waitingTime;
@@ -459,6 +471,13 @@ public class ListJobInfosResponseBody extends TeaModel {
         }
 
         /**
+         * @return extNodeName
+         */
+        public String getExtNodeName() {
+            return this.extNodeName;
+        }
+
+        /**
          * @return extNodeOnDuty
          */
         public String getExtNodeOnDuty() {
@@ -470,6 +489,13 @@ public class ListJobInfosResponseBody extends TeaModel {
          */
         public String getExtPlantFrom() {
             return this.extPlantFrom;
+        }
+
+        /**
+         * @return extPlatformId
+         */
+        public String getExtPlatformId() {
+            return this.extPlatformId;
         }
 
         /**
@@ -606,6 +632,13 @@ public class ListJobInfosResponseBody extends TeaModel {
         }
 
         /**
+         * @return taskName
+         */
+        public String getTaskName() {
+            return this.taskName;
+        }
+
+        /**
          * @return tenantId
          */
         public String getTenantId() {
@@ -632,8 +665,10 @@ public class ListJobInfosResponseBody extends TeaModel {
             private Long cuUsage; 
             private Long endAtTime; 
             private String extNodeId; 
+            private String extNodeName; 
             private String extNodeOnDuty; 
             private String extPlantFrom; 
+            private String extPlatformId; 
             private Double inputBytes; 
             private String instanceId; 
             private String jobOwner; 
@@ -653,6 +688,7 @@ public class ListJobInfosResponseBody extends TeaModel {
             private String statusSnapshot; 
             private Long submittedAtTime; 
             private String tags; 
+            private String taskName; 
             private String tenantId; 
             private Long totalTime; 
             private Long waitingTime; 
@@ -666,8 +702,10 @@ public class ListJobInfosResponseBody extends TeaModel {
                 this.cuUsage = model.cuUsage;
                 this.endAtTime = model.endAtTime;
                 this.extNodeId = model.extNodeId;
+                this.extNodeName = model.extNodeName;
                 this.extNodeOnDuty = model.extNodeOnDuty;
                 this.extPlantFrom = model.extPlantFrom;
+                this.extPlatformId = model.extPlatformId;
                 this.inputBytes = model.inputBytes;
                 this.instanceId = model.instanceId;
                 this.jobOwner = model.jobOwner;
@@ -687,6 +725,7 @@ public class ListJobInfosResponseBody extends TeaModel {
                 this.statusSnapshot = model.statusSnapshot;
                 this.submittedAtTime = model.submittedAtTime;
                 this.tags = model.tags;
+                this.taskName = model.taskName;
                 this.tenantId = model.tenantId;
                 this.totalTime = model.totalTime;
                 this.waitingTime = model.waitingTime;
@@ -748,6 +787,14 @@ public class ListJobInfosResponseBody extends TeaModel {
             }
 
             /**
+             * extNodeName.
+             */
+            public Builder extNodeName(String extNodeName) {
+                this.extNodeName = extNodeName;
+                return this;
+            }
+
+            /**
              * <p>The account of the node owner.</p>
              * 
              * <strong>example:</strong>
@@ -766,6 +813,14 @@ public class ListJobInfosResponseBody extends TeaModel {
              */
             public Builder extPlantFrom(String extPlantFrom) {
                 this.extPlantFrom = extPlantFrom;
+                return this;
+            }
+
+            /**
+             * extPlatformId.
+             */
+            public Builder extPlatformId(String extPlatformId) {
+                this.extPlatformId = extPlatformId;
                 return this;
             }
 
@@ -972,6 +1027,14 @@ public class ListJobInfosResponseBody extends TeaModel {
              */
             public Builder tags(String tags) {
                 this.tags = tags;
+                return this;
+            }
+
+            /**
+             * taskName.
+             */
+            public Builder taskName(String taskName) {
+                this.taskName = taskName;
                 return this;
             }
 
