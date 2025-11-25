@@ -50,6 +50,9 @@ public class DescribeAIDBClusterAttributeResponseBody extends TeaModel {
     @com.aliyun.core.annotation.NameInMap("InternalIp")
     private String internalIp;
 
+    @com.aliyun.core.annotation.NameInMap("KVCacheInstanceId")
+    private String KVCacheInstanceId;
+
     @com.aliyun.core.annotation.NameInMap("KubeClusterId")
     private String kubeClusterId;
 
@@ -107,6 +110,7 @@ public class DescribeAIDBClusterAttributeResponseBody extends TeaModel {
         this.expireTime = builder.expireTime;
         this.expired = builder.expired;
         this.internalIp = builder.internalIp;
+        this.KVCacheInstanceId = builder.KVCacheInstanceId;
         this.kubeClusterId = builder.kubeClusterId;
         this.lockMode = builder.lockMode;
         this.maxQPM = builder.maxQPM;
@@ -211,6 +215,13 @@ public class DescribeAIDBClusterAttributeResponseBody extends TeaModel {
      */
     public String getInternalIp() {
         return this.internalIp;
+    }
+
+    /**
+     * @return KVCacheInstanceId
+     */
+    public String getKVCacheInstanceId() {
+        return this.KVCacheInstanceId;
     }
 
     /**
@@ -330,6 +341,7 @@ public class DescribeAIDBClusterAttributeResponseBody extends TeaModel {
         private String expireTime; 
         private Boolean expired; 
         private String internalIp; 
+        private String KVCacheInstanceId; 
         private String kubeClusterId; 
         private String lockMode; 
         private String maxQPM; 
@@ -361,6 +373,7 @@ public class DescribeAIDBClusterAttributeResponseBody extends TeaModel {
             this.expireTime = model.expireTime;
             this.expired = model.expired;
             this.internalIp = model.internalIp;
+            this.KVCacheInstanceId = model.KVCacheInstanceId;
             this.kubeClusterId = model.kubeClusterId;
             this.lockMode = model.lockMode;
             this.maxQPM = model.maxQPM;
@@ -463,6 +476,14 @@ public class DescribeAIDBClusterAttributeResponseBody extends TeaModel {
          */
         public Builder internalIp(String internalIp) {
             this.internalIp = internalIp;
+            return this;
+        }
+
+        /**
+         * KVCacheInstanceId.
+         */
+        public Builder KVCacheInstanceId(String KVCacheInstanceId) {
+            this.KVCacheInstanceId = KVCacheInstanceId;
             return this;
         }
 

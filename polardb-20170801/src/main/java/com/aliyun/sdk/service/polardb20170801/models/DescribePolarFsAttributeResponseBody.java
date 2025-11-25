@@ -29,6 +29,9 @@ public class DescribePolarFsAttributeResponseBody extends TeaModel {
     @com.aliyun.core.annotation.NameInMap("BandwidthBaseLine")
     private Double bandwidthBaseLine;
 
+    @com.aliyun.core.annotation.NameInMap("BucketId")
+    private String bucketId;
+
     @com.aliyun.core.annotation.NameInMap("Category")
     private String category;
 
@@ -46,6 +49,9 @@ public class DescribePolarFsAttributeResponseBody extends TeaModel {
 
     @com.aliyun.core.annotation.NameInMap("Expired")
     private String expired;
+
+    @com.aliyun.core.annotation.NameInMap("FileSystemId")
+    private String fileSystemId;
 
     @com.aliyun.core.annotation.NameInMap("LockMode")
     private String lockMode;
@@ -83,6 +89,9 @@ public class DescribePolarFsAttributeResponseBody extends TeaModel {
     @com.aliyun.core.annotation.NameInMap("RelativeDbClusterId")
     private String relativeDbClusterId;
 
+    @com.aliyun.core.annotation.NameInMap("RelativePfsClusterId")
+    private String relativePfsClusterId;
+
     @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
@@ -112,12 +121,14 @@ public class DescribePolarFsAttributeResponseBody extends TeaModel {
         this.acceleratingEnable = builder.acceleratingEnable;
         this.bandwidth = builder.bandwidth;
         this.bandwidthBaseLine = builder.bandwidthBaseLine;
+        this.bucketId = builder.bucketId;
         this.category = builder.category;
         this.clientDownloadPath = builder.clientDownloadPath;
         this.createTime = builder.createTime;
         this.DBType = builder.DBType;
         this.expireTime = builder.expireTime;
         this.expired = builder.expired;
+        this.fileSystemId = builder.fileSystemId;
         this.lockMode = builder.lockMode;
         this.metaUrl = builder.metaUrl;
         this.minorVersion = builder.minorVersion;
@@ -130,6 +141,7 @@ public class DescribePolarFsAttributeResponseBody extends TeaModel {
         this.polarFsVersion = builder.polarFsVersion;
         this.regionId = builder.regionId;
         this.relativeDbClusterId = builder.relativeDbClusterId;
+        this.relativePfsClusterId = builder.relativePfsClusterId;
         this.requestId = builder.requestId;
         this.securityGroupId = builder.securityGroupId;
         this.storageSpace = builder.storageSpace;
@@ -181,6 +193,13 @@ public class DescribePolarFsAttributeResponseBody extends TeaModel {
     }
 
     /**
+     * @return bucketId
+     */
+    public String getBucketId() {
+        return this.bucketId;
+    }
+
+    /**
      * @return category
      */
     public String getCategory() {
@@ -220,6 +239,13 @@ public class DescribePolarFsAttributeResponseBody extends TeaModel {
      */
     public String getExpired() {
         return this.expired;
+    }
+
+    /**
+     * @return fileSystemId
+     */
+    public String getFileSystemId() {
+        return this.fileSystemId;
     }
 
     /**
@@ -307,6 +333,13 @@ public class DescribePolarFsAttributeResponseBody extends TeaModel {
     }
 
     /**
+     * @return relativePfsClusterId
+     */
+    public String getRelativePfsClusterId() {
+        return this.relativePfsClusterId;
+    }
+
+    /**
      * @return requestId
      */
     public String getRequestId() {
@@ -367,12 +400,14 @@ public class DescribePolarFsAttributeResponseBody extends TeaModel {
         private String acceleratingEnable; 
         private Double bandwidth; 
         private Double bandwidthBaseLine; 
+        private String bucketId; 
         private String category; 
         private String clientDownloadPath; 
         private String createTime; 
         private String DBType; 
         private String expireTime; 
         private String expired; 
+        private String fileSystemId; 
         private String lockMode; 
         private String metaUrl; 
         private String minorVersion; 
@@ -385,6 +420,7 @@ public class DescribePolarFsAttributeResponseBody extends TeaModel {
         private String polarFsVersion; 
         private String regionId; 
         private String relativeDbClusterId; 
+        private String relativePfsClusterId; 
         private String requestId; 
         private String securityGroupId; 
         private Double storageSpace; 
@@ -402,12 +438,14 @@ public class DescribePolarFsAttributeResponseBody extends TeaModel {
             this.acceleratingEnable = model.acceleratingEnable;
             this.bandwidth = model.bandwidth;
             this.bandwidthBaseLine = model.bandwidthBaseLine;
+            this.bucketId = model.bucketId;
             this.category = model.category;
             this.clientDownloadPath = model.clientDownloadPath;
             this.createTime = model.createTime;
             this.DBType = model.DBType;
             this.expireTime = model.expireTime;
             this.expired = model.expired;
+            this.fileSystemId = model.fileSystemId;
             this.lockMode = model.lockMode;
             this.metaUrl = model.metaUrl;
             this.minorVersion = model.minorVersion;
@@ -420,6 +458,7 @@ public class DescribePolarFsAttributeResponseBody extends TeaModel {
             this.polarFsVersion = model.polarFsVersion;
             this.regionId = model.regionId;
             this.relativeDbClusterId = model.relativeDbClusterId;
+            this.relativePfsClusterId = model.relativePfsClusterId;
             this.requestId = model.requestId;
             this.securityGroupId = model.securityGroupId;
             this.storageSpace = model.storageSpace;
@@ -459,6 +498,14 @@ public class DescribePolarFsAttributeResponseBody extends TeaModel {
          */
         public Builder bandwidthBaseLine(Double bandwidthBaseLine) {
             this.bandwidthBaseLine = bandwidthBaseLine;
+            return this;
+        }
+
+        /**
+         * BucketId.
+         */
+        public Builder bucketId(String bucketId) {
+            this.bucketId = bucketId;
             return this;
         }
 
@@ -507,6 +554,14 @@ public class DescribePolarFsAttributeResponseBody extends TeaModel {
          */
         public Builder expired(String expired) {
             this.expired = expired;
+            return this;
+        }
+
+        /**
+         * FileSystemId.
+         */
+        public Builder fileSystemId(String fileSystemId) {
+            this.fileSystemId = fileSystemId;
             return this;
         }
 
@@ -603,6 +658,14 @@ public class DescribePolarFsAttributeResponseBody extends TeaModel {
          */
         public Builder relativeDbClusterId(String relativeDbClusterId) {
             this.relativeDbClusterId = relativeDbClusterId;
+            return this;
+        }
+
+        /**
+         * RelativePfsClusterId.
+         */
+        public Builder relativePfsClusterId(String relativePfsClusterId) {
+            this.relativePfsClusterId = relativePfsClusterId;
             return this;
         }
 
