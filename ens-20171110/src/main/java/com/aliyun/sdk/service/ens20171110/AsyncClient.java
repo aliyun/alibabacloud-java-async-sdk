@@ -447,6 +447,12 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<CreateSecurityGroupResponse> createSecurityGroup(CreateSecurityGroupRequest request);
 
     /**
+     * @param request the request parameters of CreateSecurityGroupPermissions  CreateSecurityGroupPermissionsRequest
+     * @return CreateSecurityGroupPermissionsResponse
+     */
+    CompletableFuture<CreateSecurityGroupPermissionsResponse> createSecurityGroupPermissions(CreateSecurityGroupPermissionsRequest request);
+
+    /**
      * @param request the request parameters of CreateSnapshot  CreateSnapshotRequest
      * @return CreateSnapshotResponse
      */
@@ -658,6 +664,12 @@ public interface AsyncClient extends SdkAutoCloseable {
      * @return DeleteSecurityGroupResponse
      */
     CompletableFuture<DeleteSecurityGroupResponse> deleteSecurityGroup(DeleteSecurityGroupRequest request);
+
+    /**
+     * @param request the request parameters of DeleteSecurityGroupPermissions  DeleteSecurityGroupPermissionsRequest
+     * @return DeleteSecurityGroupPermissionsResponse
+     */
+    CompletableFuture<DeleteSecurityGroupPermissionsResponse> deleteSecurityGroupPermissions(DeleteSecurityGroupPermissionsRequest request);
 
     /**
      * @param request the request parameters of DeleteSnapshot  DeleteSnapshotRequest
@@ -980,6 +992,12 @@ public interface AsyncClient extends SdkAutoCloseable {
      * @return DescribeFileSystemsResponse
      */
     CompletableFuture<DescribeFileSystemsResponse> describeFileSystems(DescribeFileSystemsRequest request);
+
+    /**
+     * @param request the request parameters of DescribeForwardEntryAttribute  DescribeForwardEntryAttributeRequest
+     * @return DescribeForwardEntryAttributeResponse
+     */
+    CompletableFuture<DescribeForwardEntryAttributeResponse> describeForwardEntryAttribute(DescribeForwardEntryAttributeRequest request);
 
     /**
      * @param request the request parameters of DescribeForwardTableEntries  DescribeForwardTableEntriesRequest
@@ -1720,6 +1738,12 @@ public interface AsyncClient extends SdkAutoCloseable {
      * @return ModifyInstanceChargeTypeResponse
      */
     CompletableFuture<ModifyInstanceChargeTypeResponse> modifyInstanceChargeType(ModifyInstanceChargeTypeRequest request);
+
+    /**
+     * @param request the request parameters of ModifyInstanceNetworkAttribute  ModifyInstanceNetworkAttributeRequest
+     * @return ModifyInstanceNetworkAttributeResponse
+     */
+    CompletableFuture<ModifyInstanceNetworkAttributeResponse> modifyInstanceNetworkAttribute(ModifyInstanceNetworkAttributeRequest request);
 
     /**
      * <b>description</b> :

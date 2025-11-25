@@ -486,6 +486,9 @@ public class DescribeSDGResponseBody extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("BillingCycle")
         private String billingCycle;
 
+        @com.aliyun.core.annotation.NameInMap("BillingType")
+        private String billingType;
+
         @com.aliyun.core.annotation.NameInMap("CreationDiskType")
         private String creationDiskType;
 
@@ -525,6 +528,7 @@ public class DescribeSDGResponseBody extends TeaModel {
         private SDGs(Builder builder) {
             this.avaliableRegionIds = builder.avaliableRegionIds;
             this.billingCycle = builder.billingCycle;
+            this.billingType = builder.billingType;
             this.creationDiskType = builder.creationDiskType;
             this.creationInstanceId = builder.creationInstanceId;
             this.creationRegionId = builder.creationRegionId;
@@ -559,6 +563,13 @@ public class DescribeSDGResponseBody extends TeaModel {
          */
         public String getBillingCycle() {
             return this.billingCycle;
+        }
+
+        /**
+         * @return billingType
+         */
+        public String getBillingType() {
+            return this.billingType;
         }
 
         /**
@@ -648,6 +659,7 @@ public class DescribeSDGResponseBody extends TeaModel {
         public static final class Builder {
             private java.util.List<AvaliableRegionIds> avaliableRegionIds; 
             private String billingCycle; 
+            private String billingType; 
             private String creationDiskType; 
             private String creationInstanceId; 
             private String creationRegionId; 
@@ -667,6 +679,7 @@ public class DescribeSDGResponseBody extends TeaModel {
             private Builder(SDGs model) {
                 this.avaliableRegionIds = model.avaliableRegionIds;
                 this.billingCycle = model.billingCycle;
+                this.billingType = model.billingType;
                 this.creationDiskType = model.creationDiskType;
                 this.creationInstanceId = model.creationInstanceId;
                 this.creationRegionId = model.creationRegionId;
@@ -694,6 +707,14 @@ public class DescribeSDGResponseBody extends TeaModel {
              */
             public Builder billingCycle(String billingCycle) {
                 this.billingCycle = billingCycle;
+                return this;
+            }
+
+            /**
+             * BillingType.
+             */
+            public Builder billingType(String billingType) {
+                this.billingType = billingType;
                 return this;
             }
 
