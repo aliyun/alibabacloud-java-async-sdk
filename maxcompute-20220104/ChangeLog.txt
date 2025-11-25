@@ -1,6 +1,9 @@
 2025-11-25 Version: 3.0.5
 - Generated java-async 2022-01-04 for MaxCompute.
 
+2025-11-25 Version: 3.0.5
+- Generated java-async 2022-01-04 for MaxCompute.
+
 2025-11-24 Version: 3.0.4
 - Generated java-async 2022-01-04 for MaxCompute.
 
