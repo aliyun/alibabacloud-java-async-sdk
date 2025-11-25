@@ -73,6 +73,81 @@ public class ListOperationPlansForRegionResponseBody extends TeaModel {
      *
      * <p>ListOperationPlansForRegionResponseBody</p>
      */
+    public static class StateReason extends TeaModel {
+        @com.aliyun.core.annotation.NameInMap("code")
+        private String code;
+
+        @com.aliyun.core.annotation.NameInMap("message")
+        private String message;
+
+        private StateReason(Builder builder) {
+            this.code = builder.code;
+            this.message = builder.message;
+        }
+
+        public static Builder builder() {
+            return new Builder();
+        }
+
+        public static StateReason create() {
+            return builder().build();
+        }
+
+        /**
+         * @return code
+         */
+        public String getCode() {
+            return this.code;
+        }
+
+        /**
+         * @return message
+         */
+        public String getMessage() {
+            return this.message;
+        }
+
+        public static final class Builder {
+            private String code; 
+            private String message; 
+
+            private Builder() {
+            } 
+
+            private Builder(StateReason model) {
+                this.code = model.code;
+                this.message = model.message;
+            } 
+
+            /**
+             * code.
+             */
+            public Builder code(String code) {
+                this.code = code;
+                return this;
+            }
+
+            /**
+             * message.
+             */
+            public Builder message(String message) {
+                this.message = message;
+                return this;
+            }
+
+            public StateReason build() {
+                return new StateReason(this);
+            } 
+
+        } 
+
+    }
+    /**
+     * 
+     * {@link ListOperationPlansForRegionResponseBody} extends {@link TeaModel}
+     *
+     * <p>ListOperationPlansForRegionResponseBody</p>
+     */
     public static class Plans extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("cluster_id")
         private String clusterId;
@@ -91,6 +166,9 @@ public class ListOperationPlansForRegionResponseBody extends TeaModel {
 
         @com.aliyun.core.annotation.NameInMap("state")
         private String state;
+
+        @com.aliyun.core.annotation.NameInMap("state_reason")
+        private StateReason stateReason;
 
         @com.aliyun.core.annotation.NameInMap("target_id")
         private String targetId;
@@ -111,6 +189,7 @@ public class ListOperationPlansForRegionResponseBody extends TeaModel {
             this.planId = builder.planId;
             this.startTime = builder.startTime;
             this.state = builder.state;
+            this.stateReason = builder.stateReason;
             this.targetId = builder.targetId;
             this.targetType = builder.targetType;
             this.taskId = builder.taskId;
@@ -168,6 +247,13 @@ public class ListOperationPlansForRegionResponseBody extends TeaModel {
         }
 
         /**
+         * @return stateReason
+         */
+        public StateReason getStateReason() {
+            return this.stateReason;
+        }
+
+        /**
          * @return targetId
          */
         public String getTargetId() {
@@ -202,6 +288,7 @@ public class ListOperationPlansForRegionResponseBody extends TeaModel {
             private String planId; 
             private String startTime; 
             private String state; 
+            private StateReason stateReason; 
             private String targetId; 
             private String targetType; 
             private String taskId; 
@@ -217,6 +304,7 @@ public class ListOperationPlansForRegionResponseBody extends TeaModel {
                 this.planId = model.planId;
                 this.startTime = model.startTime;
                 this.state = model.state;
+                this.stateReason = model.stateReason;
                 this.targetId = model.targetId;
                 this.targetType = model.targetType;
                 this.taskId = model.taskId;
@@ -268,6 +356,14 @@ public class ListOperationPlansForRegionResponseBody extends TeaModel {
              */
             public Builder state(String state) {
                 this.state = state;
+                return this;
+            }
+
+            /**
+             * state_reason.
+             */
+            public Builder stateReason(StateReason stateReason) {
+                this.stateReason = stateReason;
                 return this;
             }
 

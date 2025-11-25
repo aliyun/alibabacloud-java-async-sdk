@@ -2582,6 +2582,9 @@ public class DescribeClusterNodePoolDetailResponseBody extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("system_disk_size")
         private Long systemDiskSize;
 
+        @com.aliyun.core.annotation.NameInMap("system_disk_snapshot_policy_id")
+        private String systemDiskSnapshotPolicyId;
+
         @com.aliyun.core.annotation.NameInMap("tags")
         private java.util.List<Tag> tags;
 
@@ -2637,6 +2640,7 @@ public class DescribeClusterNodePoolDetailResponseBody extends TeaModel {
             this.systemDiskPerformanceLevel = builder.systemDiskPerformanceLevel;
             this.systemDiskProvisionedIops = builder.systemDiskProvisionedIops;
             this.systemDiskSize = builder.systemDiskSize;
+            this.systemDiskSnapshotPolicyId = builder.systemDiskSnapshotPolicyId;
             this.tags = builder.tags;
             this.vswitchIds = builder.vswitchIds;
         }
@@ -2986,6 +2990,13 @@ public class DescribeClusterNodePoolDetailResponseBody extends TeaModel {
         }
 
         /**
+         * @return systemDiskSnapshotPolicyId
+         */
+        public String getSystemDiskSnapshotPolicyId() {
+            return this.systemDiskSnapshotPolicyId;
+        }
+
+        /**
          * @return tags
          */
         public java.util.List<Tag> getTags() {
@@ -3048,6 +3059,7 @@ public class DescribeClusterNodePoolDetailResponseBody extends TeaModel {
             private String systemDiskPerformanceLevel; 
             private Long systemDiskProvisionedIops; 
             private Long systemDiskSize; 
+            private String systemDiskSnapshotPolicyId; 
             private java.util.List<Tag> tags; 
             private java.util.List<String> vswitchIds; 
 
@@ -3103,6 +3115,7 @@ public class DescribeClusterNodePoolDetailResponseBody extends TeaModel {
                 this.systemDiskPerformanceLevel = model.systemDiskPerformanceLevel;
                 this.systemDiskProvisionedIops = model.systemDiskProvisionedIops;
                 this.systemDiskSize = model.systemDiskSize;
+                this.systemDiskSnapshotPolicyId = model.systemDiskSnapshotPolicyId;
                 this.tags = model.tags;
                 this.vswitchIds = model.vswitchIds;
             } 
@@ -3686,6 +3699,14 @@ public class DescribeClusterNodePoolDetailResponseBody extends TeaModel {
             }
 
             /**
+             * system_disk_snapshot_policy_id.
+             */
+            public Builder systemDiskSnapshotPolicyId(String systemDiskSnapshotPolicyId) {
+                this.systemDiskSnapshotPolicyId = systemDiskSnapshotPolicyId;
+                return this;
+            }
+
+            /**
              * <p>The labels that you want to add only to ECS instances.</p>
              * <p>The label key must be unique and cannot exceed 128 characters in length. The label key and value cannot start with aliyun or acs: or contain https:// or http://.</p>
              */
@@ -3718,7 +3739,151 @@ public class DescribeClusterNodePoolDetailResponseBody extends TeaModel {
      *
      * <p>DescribeClusterNodePoolDetailResponseBody</p>
      */
+    public static class Conditions extends TeaModel {
+        @com.aliyun.core.annotation.NameInMap("last_transition_time")
+        private String lastTransitionTime;
+
+        @com.aliyun.core.annotation.NameInMap("message")
+        private String message;
+
+        @com.aliyun.core.annotation.NameInMap("reason")
+        private String reason;
+
+        @com.aliyun.core.annotation.NameInMap("status")
+        private String status;
+
+        @com.aliyun.core.annotation.NameInMap("type")
+        private String type;
+
+        private Conditions(Builder builder) {
+            this.lastTransitionTime = builder.lastTransitionTime;
+            this.message = builder.message;
+            this.reason = builder.reason;
+            this.status = builder.status;
+            this.type = builder.type;
+        }
+
+        public static Builder builder() {
+            return new Builder();
+        }
+
+        public static Conditions create() {
+            return builder().build();
+        }
+
+        /**
+         * @return lastTransitionTime
+         */
+        public String getLastTransitionTime() {
+            return this.lastTransitionTime;
+        }
+
+        /**
+         * @return message
+         */
+        public String getMessage() {
+            return this.message;
+        }
+
+        /**
+         * @return reason
+         */
+        public String getReason() {
+            return this.reason;
+        }
+
+        /**
+         * @return status
+         */
+        public String getStatus() {
+            return this.status;
+        }
+
+        /**
+         * @return type
+         */
+        public String getType() {
+            return this.type;
+        }
+
+        public static final class Builder {
+            private String lastTransitionTime; 
+            private String message; 
+            private String reason; 
+            private String status; 
+            private String type; 
+
+            private Builder() {
+            } 
+
+            private Builder(Conditions model) {
+                this.lastTransitionTime = model.lastTransitionTime;
+                this.message = model.message;
+                this.reason = model.reason;
+                this.status = model.status;
+                this.type = model.type;
+            } 
+
+            /**
+             * last_transition_time.
+             */
+            public Builder lastTransitionTime(String lastTransitionTime) {
+                this.lastTransitionTime = lastTransitionTime;
+                return this;
+            }
+
+            /**
+             * message.
+             */
+            public Builder message(String message) {
+                this.message = message;
+                return this;
+            }
+
+            /**
+             * reason.
+             */
+            public Builder reason(String reason) {
+                this.reason = reason;
+                return this;
+            }
+
+            /**
+             * <p>The status details about the node pool.</p>
+             */
+            public Builder status(String status) {
+                this.status = status;
+                return this;
+            }
+
+            /**
+             * <p>The type of node pool.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>ess</p>
+             */
+            public Builder type(String type) {
+                this.type = type;
+                return this;
+            }
+
+            public Conditions build() {
+                return new Conditions(this);
+            } 
+
+        } 
+
+    }
+    /**
+     * 
+     * {@link DescribeClusterNodePoolDetailResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeClusterNodePoolDetailResponseBody</p>
+     */
     public static class Status extends TeaModel {
+        @com.aliyun.core.annotation.NameInMap("conditions")
+        private java.util.List<Conditions> conditions;
+
         @com.aliyun.core.annotation.NameInMap("failed_nodes")
         private Long failedNodes;
 
@@ -3744,6 +3909,7 @@ public class DescribeClusterNodePoolDetailResponseBody extends TeaModel {
         private Long totalNodes;
 
         private Status(Builder builder) {
+            this.conditions = builder.conditions;
             this.failedNodes = builder.failedNodes;
             this.healthyNodes = builder.healthyNodes;
             this.initialNodes = builder.initialNodes;
@@ -3760,6 +3926,13 @@ public class DescribeClusterNodePoolDetailResponseBody extends TeaModel {
 
         public static Status create() {
             return builder().build();
+        }
+
+        /**
+         * @return conditions
+         */
+        public java.util.List<Conditions> getConditions() {
+            return this.conditions;
         }
 
         /**
@@ -3819,6 +3992,7 @@ public class DescribeClusterNodePoolDetailResponseBody extends TeaModel {
         }
 
         public static final class Builder {
+            private java.util.List<Conditions> conditions; 
             private Long failedNodes; 
             private Long healthyNodes; 
             private Long initialNodes; 
@@ -3832,6 +4006,7 @@ public class DescribeClusterNodePoolDetailResponseBody extends TeaModel {
             } 
 
             private Builder(Status model) {
+                this.conditions = model.conditions;
                 this.failedNodes = model.failedNodes;
                 this.healthyNodes = model.healthyNodes;
                 this.initialNodes = model.initialNodes;
@@ -3841,6 +4016,14 @@ public class DescribeClusterNodePoolDetailResponseBody extends TeaModel {
                 this.state = model.state;
                 this.totalNodes = model.totalNodes;
             } 
+
+            /**
+             * conditions.
+             */
+            public Builder conditions(java.util.List<Conditions> conditions) {
+                this.conditions = conditions;
+                return this;
+            }
 
             /**
              * <p>The number of failed nodes.</p>

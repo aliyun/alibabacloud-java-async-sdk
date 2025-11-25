@@ -2768,6 +2768,9 @@ public class CreateClusterNodePoolRequest extends Request {
         @com.aliyun.core.annotation.NameInMap("system_disk_size")
         private Long systemDiskSize;
 
+        @com.aliyun.core.annotation.NameInMap("system_disk_snapshot_policy_id")
+        private String systemDiskSnapshotPolicyId;
+
         @com.aliyun.core.annotation.NameInMap("tags")
         private java.util.List<Tags> tags;
 
@@ -2822,6 +2825,7 @@ public class CreateClusterNodePoolRequest extends Request {
             this.systemDiskPerformanceLevel = builder.systemDiskPerformanceLevel;
             this.systemDiskProvisionedIops = builder.systemDiskProvisionedIops;
             this.systemDiskSize = builder.systemDiskSize;
+            this.systemDiskSnapshotPolicyId = builder.systemDiskSnapshotPolicyId;
             this.tags = builder.tags;
             this.vswitchIds = builder.vswitchIds;
         }
@@ -3157,6 +3161,13 @@ public class CreateClusterNodePoolRequest extends Request {
         }
 
         /**
+         * @return systemDiskSnapshotPolicyId
+         */
+        public String getSystemDiskSnapshotPolicyId() {
+            return this.systemDiskSnapshotPolicyId;
+        }
+
+        /**
          * @return tags
          */
         public java.util.List<Tags> getTags() {
@@ -3217,6 +3228,7 @@ public class CreateClusterNodePoolRequest extends Request {
             private String systemDiskPerformanceLevel; 
             private Long systemDiskProvisionedIops; 
             private Long systemDiskSize; 
+            private String systemDiskSnapshotPolicyId; 
             private java.util.List<Tags> tags; 
             private java.util.List<String> vswitchIds; 
 
@@ -3270,6 +3282,7 @@ public class CreateClusterNodePoolRequest extends Request {
                 this.systemDiskPerformanceLevel = model.systemDiskPerformanceLevel;
                 this.systemDiskProvisionedIops = model.systemDiskProvisionedIops;
                 this.systemDiskSize = model.systemDiskSize;
+                this.systemDiskSnapshotPolicyId = model.systemDiskSnapshotPolicyId;
                 this.tags = model.tags;
                 this.vswitchIds = model.vswitchIds;
             } 
@@ -3877,6 +3890,14 @@ public class CreateClusterNodePoolRequest extends Request {
              */
             public Builder systemDiskSize(Long systemDiskSize) {
                 this.systemDiskSize = systemDiskSize;
+                return this;
+            }
+
+            /**
+             * system_disk_snapshot_policy_id.
+             */
+            public Builder systemDiskSnapshotPolicyId(String systemDiskSnapshotPolicyId) {
+                this.systemDiskSnapshotPolicyId = systemDiskSnapshotPolicyId;
                 return this;
             }
 
