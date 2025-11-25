@@ -26,6 +26,14 @@ public class DescribeExposedStatisticsDetailRequest extends Request {
     private Integer currentPage;
 
     @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ExposureIp")
+    private String exposureIp;
+
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("InstanceId")
+    private String instanceId;
+
+    @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("PageSize")
     private Integer pageSize;
 
@@ -54,6 +62,8 @@ public class DescribeExposedStatisticsDetailRequest extends Request {
         super(builder);
         this.criteria = builder.criteria;
         this.currentPage = builder.currentPage;
+        this.exposureIp = builder.exposureIp;
+        this.instanceId = builder.instanceId;
         this.pageSize = builder.pageSize;
         this.resourceDirectoryAccountId = builder.resourceDirectoryAccountId;
         this.statisticsType = builder.statisticsType;
@@ -87,6 +97,20 @@ public class DescribeExposedStatisticsDetailRequest extends Request {
      */
     public Integer getCurrentPage() {
         return this.currentPage;
+    }
+
+    /**
+     * @return exposureIp
+     */
+    public String getExposureIp() {
+        return this.exposureIp;
+    }
+
+    /**
+     * @return instanceId
+     */
+    public String getInstanceId() {
+        return this.instanceId;
     }
 
     /**
@@ -134,6 +158,8 @@ public class DescribeExposedStatisticsDetailRequest extends Request {
     public static final class Builder extends Request.Builder<DescribeExposedStatisticsDetailRequest, Builder> {
         private String criteria; 
         private Integer currentPage; 
+        private String exposureIp; 
+        private String instanceId; 
         private Integer pageSize; 
         private Long resourceDirectoryAccountId; 
         private String statisticsType; 
@@ -149,6 +175,8 @@ public class DescribeExposedStatisticsDetailRequest extends Request {
             super(request);
             this.criteria = request.criteria;
             this.currentPage = request.currentPage;
+            this.exposureIp = request.exposureIp;
+            this.instanceId = request.instanceId;
             this.pageSize = request.pageSize;
             this.resourceDirectoryAccountId = request.resourceDirectoryAccountId;
             this.statisticsType = request.statisticsType;
@@ -178,6 +206,24 @@ public class DescribeExposedStatisticsDetailRequest extends Request {
         public Builder currentPage(Integer currentPage) {
             this.putQueryParameter("CurrentPage", currentPage);
             this.currentPage = currentPage;
+            return this;
+        }
+
+        /**
+         * ExposureIp.
+         */
+        public Builder exposureIp(String exposureIp) {
+            this.putQueryParameter("ExposureIp", exposureIp);
+            this.exposureIp = exposureIp;
+            return this;
+        }
+
+        /**
+         * InstanceId.
+         */
+        public Builder instanceId(String instanceId) {
+            this.putQueryParameter("InstanceId", instanceId);
+            this.instanceId = instanceId;
             return this;
         }
 

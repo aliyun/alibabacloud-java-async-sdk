@@ -338,7 +338,10 @@ public class ListAccountsInResourceDirectoryResponseBody extends TeaModel {
             }
 
             /**
-             * BuySas.
+             * <p>This parameter is deprecated and should be ignored.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>true</p>
              */
             public Builder buySas(Integer buySas) {
                 this.buySas = buySas;
@@ -346,7 +349,14 @@ public class ListAccountsInResourceDirectoryResponseBody extends TeaModel {
             }
 
             /**
-             * BuySasNew.
+             * <p>Whether a yearly or monthly subscription of Cloud Security Center is purchased. Values:</p>
+             * <ul>
+             * <li><strong>true</strong>: Yes</li>
+             * <li><strong>false</strong>: No</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>true</p>
              */
             public Builder buySasNew(Boolean buySasNew) {
                 this.buySasNew = buySasNew;
@@ -354,7 +364,14 @@ public class ListAccountsInResourceDirectoryResponseBody extends TeaModel {
             }
 
             /**
-             * ChargeType.
+             * <p>Subscription type. Values:</p>
+             * <ul>
+             * <li><strong>0</strong>: Prepaid</li>
+             * <li><strong>1</strong>: Pay-As-You-Go</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder chargeType(Integer chargeType) {
                 this.chargeType = chargeType;
@@ -384,7 +401,14 @@ public class ListAccountsInResourceDirectoryResponseBody extends TeaModel {
             }
 
             /**
-             * InstanceBuyType.
+             * <p>Instance purchase type. Values:</p>
+             * <ul>
+             * <li><strong>0</strong>: Self-purchased</li>
+             * <li><strong>1</strong>: Multi-account allocation</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>0</p>
              */
             public Builder instanceBuyType(Integer instanceBuyType) {
                 this.instanceBuyType = instanceBuyType;
@@ -463,7 +487,14 @@ public class ListAccountsInResourceDirectoryResponseBody extends TeaModel {
             }
 
             /**
-             * PostBasicService.
+             * <p>Post-paid module switch. Values:</p>
+             * <ul>
+             * <li><strong>0</strong>: Off</li>
+             * <li><strong>1</strong>: On</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder postBasicService(Integer postBasicService) {
                 this.postBasicService = postBasicService;
@@ -471,7 +502,25 @@ public class ListAccountsInResourceDirectoryResponseBody extends TeaModel {
             }
 
             /**
-             * PostPayModuleSwitch.
+             * <p>The switch status of the pay-as-you-go module. The value is a JSON string. Valid values:</p>
+             * <ul>
+             * <li><p>Key:</p>
+             * <ul>
+             * <li><strong>VUL</strong>: vulnerability fixing module</li>
+             * <li><strong>CSPM</strong>: cloud service configuration check module</li>
+             * <li><strong>AGENTLESS</strong>: agentless detection module</li>
+             * <li><strong>SERVERLESS</strong>: serverless asset module</li>
+             * </ul>
+             * </li>
+             * <li><p>Value: A value of 0 specifies disabled. A value of 1 specifies enabled.</p>
+             * </li>
+             * </ul>
+             * <blockquote>
+             * <p> If you do not specify a value for a module, the original value of the module is retained.</p>
+             * </blockquote>
+             * 
+             * <strong>example:</strong>
+             * <p>{&quot;VUL&quot;:0}</p>
              */
             public Builder postPayModuleSwitch(String postPayModuleSwitch) {
                 this.postPayModuleSwitch = postPayModuleSwitch;
@@ -479,7 +528,10 @@ public class ListAccountsInResourceDirectoryResponseBody extends TeaModel {
             }
 
             /**
-             * SaleInstance.
+             * <p>Cloud Security Center Instance ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>postpay-sas-x5x3hy1ly***</p>
              */
             public Builder saleInstance(String saleInstance) {
                 this.saleInstance = saleInstance;

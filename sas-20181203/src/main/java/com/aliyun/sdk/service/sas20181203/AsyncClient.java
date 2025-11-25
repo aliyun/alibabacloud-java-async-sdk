@@ -329,6 +329,12 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<CreateCheckItemResponse> createCheckItem(CreateCheckItemRequest request);
 
     /**
+     * @param request the request parameters of CreateCheckPolicy  CreateCheckPolicyRequest
+     * @return CreateCheckPolicyResponse
+     */
+    CompletableFuture<CreateCheckPolicyResponse> createCheckPolicy(CreateCheckPolicyRequest request);
+
+    /**
      * @param request the request parameters of CreateContainerScanTask  CreateContainerScanTaskRequest
      * @return CreateContainerScanTaskResponse
      */
@@ -3521,6 +3527,12 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<GetInstanceAlarmStatisticsResponse> getInstanceAlarmStatistics(GetInstanceAlarmStatisticsRequest request);
 
     /**
+     * @param request the request parameters of GetInstanceAuthRange  GetInstanceAuthRangeRequest
+     * @return GetInstanceAuthRangeResponse
+     */
+    CompletableFuture<GetInstanceAuthRangeResponse> getInstanceAuthRange(GetInstanceAuthRangeRequest request);
+
+    /**
      * @param request the request parameters of GetInterceptionRuleDetail  GetInterceptionRuleDetailRequest
      * @return GetInterceptionRuleDetailResponse
      */
@@ -4106,6 +4118,21 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<ListCloudAssetInstancesResponse> listCloudAssetInstances(ListCloudAssetInstancesRequest request);
 
     /**
+     * <b>description</b> :
+     * <p>Get the list of cloud asset data operators.</p>
+     * 
+     * @param request the request parameters of ListCloudAssetMatchOperators  ListCloudAssetMatchOperatorsRequest
+     * @return ListCloudAssetMatchOperatorsResponse
+     */
+    CompletableFuture<ListCloudAssetMatchOperatorsResponse> listCloudAssetMatchOperators(ListCloudAssetMatchOperatorsRequest request);
+
+    /**
+     * @param request the request parameters of ListCloudAssetSchemas  ListCloudAssetSchemasRequest
+     * @return ListCloudAssetSchemasResponse
+     */
+    CompletableFuture<ListCloudAssetSchemasResponse> listCloudAssetSchemas(ListCloudAssetSchemasRequest request);
+
+    /**
      * @param request the request parameters of ListCloudVendorRegions  ListCloudVendorRegionsRequest
      * @return ListCloudVendorRegionsResponse
      */
@@ -4336,6 +4363,12 @@ public interface AsyncClient extends SdkAutoCloseable {
      * @return ListMaliciousFileWhitelistConfigsResponse
      */
     CompletableFuture<ListMaliciousFileWhitelistConfigsResponse> listMaliciousFileWhitelistConfigs(ListMaliciousFileWhitelistConfigsRequest request);
+
+    /**
+     * @param request the request parameters of ListMultiUserInstances  ListMultiUserInstancesRequest
+     * @return ListMultiUserInstancesResponse
+     */
+    CompletableFuture<ListMultiUserInstancesResponse> listMultiUserInstances(ListMultiUserInstancesRequest request);
 
     /**
      * @param request the request parameters of ListObjectScanEvent  ListObjectScanEventRequest
@@ -5568,6 +5601,12 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<UpdateCheckItemResponse> updateCheckItem(UpdateCheckItemRequest request);
 
     /**
+     * @param request the request parameters of UpdateCheckPolicy  UpdateCheckPolicyRequest
+     * @return UpdateCheckPolicyResponse
+     */
+    CompletableFuture<UpdateCheckPolicyResponse> updateCheckPolicy(UpdateCheckPolicyRequest request);
+
+    /**
      * @param request the request parameters of UpdateClientAlertMode  UpdateClientAlertModeRequest
      * @return UpdateClientAlertModeResponse
      */
@@ -5674,6 +5713,12 @@ public interface AsyncClient extends SdkAutoCloseable {
      * @return UpdateMaliciousFileWhitelistConfigResponse
      */
     CompletableFuture<UpdateMaliciousFileWhitelistConfigResponse> updateMaliciousFileWhitelistConfig(UpdateMaliciousFileWhitelistConfigRequest request);
+
+    /**
+     * @param request the request parameters of UpdateMultiUserInstances  UpdateMultiUserInstancesRequest
+     * @return UpdateMultiUserInstancesResponse
+     */
+    CompletableFuture<UpdateMultiUserInstancesResponse> updateMultiUserInstances(UpdateMultiUserInstancesRequest request);
 
     /**
      * @param request the request parameters of UpdateOpaStrategyNew  UpdateOpaStrategyNewRequest

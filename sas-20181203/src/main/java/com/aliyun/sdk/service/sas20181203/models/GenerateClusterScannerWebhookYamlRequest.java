@@ -74,6 +74,10 @@ public class GenerateClusterScannerWebhookYamlRequest extends Request {
         } 
 
         /**
+         * <p>The ID of the container cluster.</p>
+         * <blockquote>
+         * <p>You can call the <a href="~~DescribeGroupedContainerInstances~~">DescribeGroupedContainerInstances</a> API to obtain this parameter from the ClusterId field.</p>
+         * </blockquote>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -86,7 +90,14 @@ public class GenerateClusterScannerWebhookYamlRequest extends Request {
         }
 
         /**
-         * WebhookOpen.
+         * <p>Indicates whether the incremental scan switch is enabled. Values:</p>
+         * <ul>
+         * <li><strong>0</strong>: Not enabled</li>
+         * <li><strong>1</strong>: Enabled</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder webhookOpen(Integer webhookOpen) {
             this.putQueryParameter("WebhookOpen", webhookOpen);

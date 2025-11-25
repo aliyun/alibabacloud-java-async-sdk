@@ -471,7 +471,13 @@ public class ModifyCloudVendorAccountAKResponseBody extends TeaModel {
             }
 
             /**
-             * CtdrCloudUserId.
+             * <p>Account ID. </p>
+             * <blockquote>
+             * <p>The account ID of the cloud provider being connected.</p>
+             * </blockquote>
+             * 
+             * <strong>example:</strong>
+             * <p>azure_demo_1</p>
              */
             public Builder ctdrCloudUserId(String ctdrCloudUserId) {
                 this.ctdrCloudUserId = ctdrCloudUserId;
@@ -542,6 +548,11 @@ public class ModifyCloudVendorAccountAKResponseBody extends TeaModel {
              * <li><strong>HUAWEICLOUD</strong>: Huawei Cloud.</li>
              * <li><strong>Azure</strong>: Microsoft Azure.</li>
              * <li><strong>AWS</strong>: Amazon Web Services (AWS).</li>
+             * <li><strong>VOLCENGINE</strong>: Volcengine </li>
+             * <li><strong>google</strong>: Google Cloud </li>
+             * <li><strong>CHAITIN</strong>: Chaitin Tech </li>
+             * <li><strong>FORTINET</strong>: Fortinet </li>
+             * <li><strong>THREATBOOK</strong>: ThreatBook</li>
              * </ul>
              * 
              * <strong>example:</strong>

@@ -87,7 +87,13 @@ public class ExecStrategyRequest extends Request {
         } 
 
         /**
-         * ExecAction.
+         * <p>Set the action for this execution, default is <strong>exec</strong>. Values:</p>
+         * <ul>
+         * <li><strong>exec</strong>: Execute. - <strong>terminate</strong>: Terminate.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>terminate</p>
          */
         public Builder execAction(String execAction) {
             this.putQueryParameter("ExecAction", execAction);

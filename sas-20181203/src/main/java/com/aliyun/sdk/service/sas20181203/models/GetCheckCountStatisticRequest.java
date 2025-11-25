@@ -105,7 +105,7 @@ public class GetCheckCountStatisticRequest extends Request {
         }
 
         /**
-         * TaskSources.
+         * <p>Task source.</p>
          */
         public Builder taskSources(java.util.List<String> taskSources) {
             this.putQueryParameter("TaskSources", taskSources);

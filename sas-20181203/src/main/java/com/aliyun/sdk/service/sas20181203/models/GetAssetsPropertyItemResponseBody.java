@@ -371,7 +371,10 @@ public class GetAssetsPropertyItemResponseBody extends TeaModel {
             }
 
             /**
-             * MiddlewareName.
+             * <p>AI tool name.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>vllm</p>
              */
             public Builder middlewareName(String middlewareName) {
                 this.middlewareName = middlewareName;
@@ -379,7 +382,10 @@ public class GetAssetsPropertyItemResponseBody extends TeaModel {
             }
 
             /**
-             * ModelName.
+             * <p>Name of the LLM service.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Deepseek</p>
              */
             public Builder modelName(String modelName) {
                 this.modelName = modelName;

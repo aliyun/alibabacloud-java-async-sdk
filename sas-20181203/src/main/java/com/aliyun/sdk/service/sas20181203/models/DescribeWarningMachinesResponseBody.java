@@ -448,7 +448,13 @@ public class DescribeWarningMachinesResponseBody extends TeaModel {
             } 
 
             /**
-             * AssetType.
+             * <p>The type of cloud product assets.</p>
+             * <blockquote>
+             * <p>You can call <a href="~~ListCloudAssetInstances~~">ListCloudAssetInstances</a> to query the types of cloud product assets.</p>
+             * </blockquote>
+             * 
+             * <strong>example:</strong>
+             * <p>0</p>
              */
             public Builder assetType(String assetType) {
                 this.assetType = assetType;

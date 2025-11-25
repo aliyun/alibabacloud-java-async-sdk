@@ -590,7 +590,10 @@ public class ListCheckItemWarningMachineResponseBody extends TeaModel {
             } 
 
             /**
-             * AssetType.
+             * <p>云产品资产的类型。</p>
+             * 
+             * <strong>example:</strong>
+             * <p>0</p>
              */
             public Builder assetType(String assetType) {
                 this.assetType = assetType;

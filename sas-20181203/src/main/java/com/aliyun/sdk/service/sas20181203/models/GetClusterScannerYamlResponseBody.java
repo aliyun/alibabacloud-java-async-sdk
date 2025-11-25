@@ -145,7 +145,10 @@ public class GetClusterScannerYamlResponseBody extends TeaModel {
         } 
 
         /**
-         * CaCertBase64.
+         * <p>Base64 encoded CA certificate.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>xxx</p>
          */
         public Builder caCertBase64(String caCertBase64) {
             this.caCertBase64 = caCertBase64;
@@ -153,7 +156,10 @@ public class GetClusterScannerYamlResponseBody extends TeaModel {
         }
 
         /**
-         * ClusterEnvInfo.
+         * <p>Cluster environment information.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>xxx</p>
          */
         public Builder clusterEnvInfo(String clusterEnvInfo) {
             this.clusterEnvInfo = clusterEnvInfo;
@@ -161,7 +167,10 @@ public class GetClusterScannerYamlResponseBody extends TeaModel {
         }
 
         /**
-         * ClusterId.
+         * <p>The ID of the cluster that you want to scan.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>c7c190a82d9a048be9038d352840f****</p>
          */
         public Builder clusterId(String clusterId) {
             this.clusterId = clusterId;
@@ -169,7 +178,10 @@ public class GetClusterScannerYamlResponseBody extends TeaModel {
         }
 
         /**
-         * Image.
+         * <p>The name of the image.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>xxxx-registry.cn-shanghai.cr.aliyuncs.com/default/scanner:v1</p>
          */
         public Builder image(String image) {
             this.image = image;
@@ -177,7 +189,10 @@ public class GetClusterScannerYamlResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>24A20733-10A0-4AF6-BE6B-E3322413BB68</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -185,7 +200,10 @@ public class GetClusterScannerYamlResponseBody extends TeaModel {
         }
 
         /**
-         * TlsCertBase64.
+         * <p>Base64 encoded webhook certificate.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>xxx</p>
          */
         public Builder tlsCertBase64(String tlsCertBase64) {
             this.tlsCertBase64 = tlsCertBase64;
@@ -193,7 +211,10 @@ public class GetClusterScannerYamlResponseBody extends TeaModel {
         }
 
         /**
-         * TlsKeyBase64.
+         * <p>Base64 encoded webhook private key.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>xxx</p>
          */
         public Builder tlsKeyBase64(String tlsKeyBase64) {
             this.tlsKeyBase64 = tlsKeyBase64;
@@ -201,7 +222,14 @@ public class GetClusterScannerYamlResponseBody extends TeaModel {
         }
 
         /**
-         * WebhookOpen.
+         * <p>Indicates whether the incremental scan switch is enabled. Values:</p>
+         * <ul>
+         * <li><strong>0</strong>: Not enabled</li>
+         * <li><strong>1</strong>: Enabled</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder webhookOpen(Integer webhookOpen) {
             this.webhookOpen = webhookOpen;

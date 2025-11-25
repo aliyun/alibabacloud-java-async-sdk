@@ -694,7 +694,10 @@ public class GetAssetsPropertyDetailResponseBody extends TeaModel {
             }
 
             /**
-             * EndPoint.
+             * <p>LLM service endpoint</p>
+             * 
+             * <strong>example:</strong>
+             * <p>dashscope.aliyuncs.com</p>
              */
             public Builder endPoint(String endPoint) {
                 this.endPoint = endPoint;
@@ -702,7 +705,10 @@ public class GetAssetsPropertyDetailResponseBody extends TeaModel {
             }
 
             /**
-             * File.
+             * <p>File path for requesting the LLM service.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>/root/llm.py</p>
              */
             public Builder file(String file) {
                 this.file = file;
@@ -735,7 +741,10 @@ public class GetAssetsPropertyDetailResponseBody extends TeaModel {
             }
 
             /**
-             * InstallationPath.
+             * <p>AI tool installation path</p>
+             * 
+             * <strong>example:</strong>
+             * <p>/etc/pip3/env/vllm</p>
              */
             public Builder installationPath(String installationPath) {
                 this.installationPath = installationPath;
@@ -812,7 +821,10 @@ public class GetAssetsPropertyDetailResponseBody extends TeaModel {
             }
 
             /**
-             * MiddlewareName.
+             * <p>AI tool name.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>vllm</p>
              */
             public Builder middlewareName(String middlewareName) {
                 this.middlewareName = middlewareName;
@@ -820,7 +832,10 @@ public class GetAssetsPropertyDetailResponseBody extends TeaModel {
             }
 
             /**
-             * MiddlewareVersion.
+             * <p>AI tool version.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1.0.1</p>
              */
             public Builder middlewareVersion(String middlewareVersion) {
                 this.middlewareVersion = middlewareVersion;
@@ -828,7 +843,10 @@ public class GetAssetsPropertyDetailResponseBody extends TeaModel {
             }
 
             /**
-             * ModelName.
+             * <p>Name of the LLM vendor.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>OpenAI</p>
              */
             public Builder modelName(String modelName) {
                 this.modelName = modelName;

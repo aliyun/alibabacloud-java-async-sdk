@@ -59,7 +59,10 @@ public class DescribeCustomizedDictRequest extends Request {
         } 
 
         /**
-         * SourceIp.
+         * <p>The IP address of the access source.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>58.240.XX.XX</p>
          */
         public Builder sourceIp(String sourceIp) {
             this.putQueryParameter("SourceIp", sourceIp);

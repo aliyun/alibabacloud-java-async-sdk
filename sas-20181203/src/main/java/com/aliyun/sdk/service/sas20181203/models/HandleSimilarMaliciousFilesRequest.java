@@ -117,6 +117,7 @@ public class HandleSimilarMaliciousFilesRequest extends Request {
         } 
 
         /**
+         * <p>Target alert ID</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -129,7 +130,14 @@ public class HandleSimilarMaliciousFilesRequest extends Request {
         }
 
         /**
-         * Lang.
+         * <p>Language type for request and response messages. Values include:</p>
+         * <ul>
+         * <li><strong>zh</strong>: Chinese</li>
+         * <li><strong>en</strong>: English</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>zh</p>
          */
         public Builder lang(String lang) {
             this.putQueryParameter("Lang", lang);
@@ -138,6 +146,14 @@ public class HandleSimilarMaliciousFilesRequest extends Request {
         }
 
         /**
+         * <p>Handling action:</p>
+         * <ul>
+         * <li>addWhitelist: Add to whitelist;</li>
+         * <li>offWhitelist: Remove from whitelist;</li>
+         * <li>offline_handled: Handled offline;</li>
+         * <li>mark_mis_info: Report as false positive;</li>
+         * <li>ignore: Ignore.</li>
+         * </ul>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -150,7 +166,15 @@ public class HandleSimilarMaliciousFilesRequest extends Request {
         }
 
         /**
-         * ScanRange.
+         * <p>File source. Values include:</p>
+         * <ul>
+         * <li>agentless: Host detection;</li>
+         * <li>ecs_snapshot: User snapshot detection;</li>
+         * <li>ecs_image: User-defined image detection.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>agentless</p>
          */
         public Builder scanRange(String scanRange) {
             this.putQueryParameter("ScanRange", scanRange);
@@ -159,7 +183,14 @@ public class HandleSimilarMaliciousFilesRequest extends Request {
         }
 
         /**
-         * Scenario.
+         * <p>Batch processing scenario:</p>
+         * <ul>
+         * <li>same_file_md5: Same file MD5;</li>
+         * <li>default (default value): Same alert type.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>same_file_md5</p>
          */
         public Builder scenario(String scenario) {
             this.putQueryParameter("Scenario", scenario);

@@ -989,6 +989,24 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
+     * @param request the request parameters of CreateCheckPolicy  CreateCheckPolicyRequest
+     * @return CreateCheckPolicyResponse
+     */
+    @Override
+    public CompletableFuture<CreateCheckPolicyResponse> createCheckPolicy(CreateCheckPolicyRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RPC).setAction("CreateCheckPolicy").setMethod(HttpMethod.POST).setPathRegex("/").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(CreateCheckPolicyResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<CreateCheckPolicyResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
      * @param request the request parameters of CreateContainerScanTask  CreateContainerScanTaskRequest
      * @return CreateContainerScanTaskResponse
      */
@@ -10205,6 +10223,24 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
+     * @param request the request parameters of GetInstanceAuthRange  GetInstanceAuthRangeRequest
+     * @return GetInstanceAuthRangeResponse
+     */
+    @Override
+    public CompletableFuture<GetInstanceAuthRangeResponse> getInstanceAuthRange(GetInstanceAuthRangeRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RPC).setAction("GetInstanceAuthRange").setMethod(HttpMethod.POST).setPathRegex("/").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(GetInstanceAuthRangeResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<GetInstanceAuthRangeResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
      * @param request the request parameters of GetInterceptionRuleDetail  GetInterceptionRuleDetailRequest
      * @return GetInterceptionRuleDetailResponse
      */
@@ -11930,6 +11966,45 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
+     * <b>description</b> :
+     * <p>Get the list of cloud asset data operators.</p>
+     * 
+     * @param request the request parameters of ListCloudAssetMatchOperators  ListCloudAssetMatchOperatorsRequest
+     * @return ListCloudAssetMatchOperatorsResponse
+     */
+    @Override
+    public CompletableFuture<ListCloudAssetMatchOperatorsResponse> listCloudAssetMatchOperators(ListCloudAssetMatchOperatorsRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RPC).setAction("ListCloudAssetMatchOperators").setMethod(HttpMethod.POST).setPathRegex("/").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(ListCloudAssetMatchOperatorsResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<ListCloudAssetMatchOperatorsResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
+     * @param request the request parameters of ListCloudAssetSchemas  ListCloudAssetSchemasRequest
+     * @return ListCloudAssetSchemasResponse
+     */
+    @Override
+    public CompletableFuture<ListCloudAssetSchemasResponse> listCloudAssetSchemas(ListCloudAssetSchemasRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RPC).setAction("ListCloudAssetSchemas").setMethod(HttpMethod.POST).setPathRegex("/").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(ListCloudAssetSchemasResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<ListCloudAssetSchemasResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
      * @param request the request parameters of ListCloudVendorRegions  ListCloudVendorRegionsRequest
      * @return ListCloudVendorRegionsResponse
      */
@@ -12600,6 +12675,24 @@ public final class DefaultAsyncClient implements AsyncClient {
             return this.handler.execute(params);
         } catch (Exception e) {
             CompletableFuture<ListMaliciousFileWhitelistConfigsResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
+     * @param request the request parameters of ListMultiUserInstances  ListMultiUserInstancesRequest
+     * @return ListMultiUserInstancesResponse
+     */
+    @Override
+    public CompletableFuture<ListMultiUserInstancesResponse> listMultiUserInstances(ListMultiUserInstancesRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RPC).setAction("ListMultiUserInstances").setMethod(HttpMethod.POST).setPathRegex("/").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(ListMultiUserInstancesResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<ListMultiUserInstancesResponse> future = new CompletableFuture<>();
             future.completeExceptionally(e);
             return future;
         }
@@ -16152,6 +16245,24 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
+     * @param request the request parameters of UpdateCheckPolicy  UpdateCheckPolicyRequest
+     * @return UpdateCheckPolicyResponse
+     */
+    @Override
+    public CompletableFuture<UpdateCheckPolicyResponse> updateCheckPolicy(UpdateCheckPolicyRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RPC).setAction("UpdateCheckPolicy").setMethod(HttpMethod.POST).setPathRegex("/").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(UpdateCheckPolicyResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<UpdateCheckPolicyResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
      * @param request the request parameters of UpdateClientAlertMode  UpdateClientAlertModeRequest
      * @return UpdateClientAlertModeResponse
      */
@@ -16470,6 +16581,24 @@ public final class DefaultAsyncClient implements AsyncClient {
             return this.handler.execute(params);
         } catch (Exception e) {
             CompletableFuture<UpdateMaliciousFileWhitelistConfigResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
+     * @param request the request parameters of UpdateMultiUserInstances  UpdateMultiUserInstancesRequest
+     * @return UpdateMultiUserInstancesResponse
+     */
+    @Override
+    public CompletableFuture<UpdateMultiUserInstancesResponse> updateMultiUserInstances(UpdateMultiUserInstancesRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RPC).setAction("UpdateMultiUserInstances").setMethod(HttpMethod.POST).setPathRegex("/").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(UpdateMultiUserInstancesResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<UpdateMultiUserInstancesResponse> future = new CompletableFuture<>();
             future.completeExceptionally(e);
             return future;
         }

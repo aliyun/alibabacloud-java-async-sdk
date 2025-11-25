@@ -255,7 +255,7 @@ public class ListCheckRuleRequest extends Request {
         }
 
         /**
-         * TaskSources.
+         * <p>List of task sources.</p>
          */
         public Builder taskSources(java.util.List<String> taskSources) {
             this.putQueryParameter("TaskSources", taskSources);

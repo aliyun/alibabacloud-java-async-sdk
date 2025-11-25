@@ -584,7 +584,10 @@ public class ListCheckInstanceResultResponseBody extends TeaModel {
             }
 
             /**
-             * VendorUserName.
+             * <p>The multi-cloud provider account name.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>test</p>
              */
             public Builder vendorUserName(String vendorUserName) {
                 this.vendorUserName = vendorUserName;

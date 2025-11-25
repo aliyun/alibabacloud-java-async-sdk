@@ -102,7 +102,14 @@ public class GetAttackPathEventDetailRequest extends Request {
         }
 
         /**
-         * EventSource.
+         * <p>数据来源。默认值为<strong>default</strong>。取值：</p>
+         * <ul>
+         * <li><strong>caasm</strong>：攻击面</li>
+         * <li><strong>default</strong>：攻击路径</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>default</p>
          */
         public Builder eventSource(String eventSource) {
             this.putQueryParameter("EventSource", eventSource);

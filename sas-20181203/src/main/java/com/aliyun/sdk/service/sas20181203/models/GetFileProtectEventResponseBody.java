@@ -604,7 +604,10 @@ public class GetFileProtectEventResponseBody extends TeaModel {
             }
 
             /**
-             * UserId.
+             * <p>User ID of the user who started the current process.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1001</p>
              */
             public Builder userId(String userId) {
                 this.userId = userId;
@@ -612,7 +615,10 @@ public class GetFileProtectEventResponseBody extends TeaModel {
             }
 
             /**
-             * UserName.
+             * <p>The username that started the current process.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>test</p>
              */
             public Builder userName(String userName) {
                 this.userName = userName;

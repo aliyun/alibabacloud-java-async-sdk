@@ -1124,7 +1124,7 @@ public class DescribeVulListResponseBody extends TeaModel {
         private Long firstTs;
 
         @com.aliyun.core.annotation.NameInMap("GroupId")
-        private Integer groupId;
+        private Long groupId;
 
         @com.aliyun.core.annotation.NameInMap("Image")
         private String image;
@@ -1313,7 +1313,7 @@ public class DescribeVulListResponseBody extends TeaModel {
         /**
          * @return groupId
          */
-        public Integer getGroupId() {
+        public Long getGroupId() {
             return this.groupId;
         }
 
@@ -1554,7 +1554,7 @@ public class DescribeVulListResponseBody extends TeaModel {
             private Boolean bind; 
             private ExtendContentJson extendContentJson; 
             private Long firstTs; 
-            private Integer groupId; 
+            private Long groupId; 
             private String image; 
             private String instanceId; 
             private String instanceName; 
@@ -1704,7 +1704,7 @@ public class DescribeVulListResponseBody extends TeaModel {
              * <strong>example:</strong>
              * <p>281801</p>
              */
-            public Builder groupId(Integer groupId) {
+            public Builder groupId(Long groupId) {
                 this.groupId = groupId;
                 return this;
             }

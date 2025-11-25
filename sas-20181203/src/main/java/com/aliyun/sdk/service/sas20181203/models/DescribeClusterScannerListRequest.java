@@ -87,7 +87,7 @@ public class DescribeClusterScannerListRequest extends Request {
         } 
 
         /**
-         * ClusterIdList.
+         * <p>List of cluster IDs.</p>
          */
         public Builder clusterIdList(java.util.List<String> clusterIdList) {
             this.putQueryParameter("ClusterIdList", clusterIdList);
@@ -96,7 +96,14 @@ public class DescribeClusterScannerListRequest extends Request {
         }
 
         /**
-         * Lang.
+         * <p>The language type for requests and responses.</p>
+         * <ul>
+         * <li><strong>zh</strong>: Chinese</li>
+         * <li><strong>en</strong>: English</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>zh</p>
          */
         public Builder lang(String lang) {
             this.putQueryParameter("Lang", lang);
@@ -105,7 +112,12 @@ public class DescribeClusterScannerListRequest extends Request {
         }
 
         /**
-         * StatusList.
+         * <p>List of scanner statuses. Values:</p>
+         * <ul>
+         * <li><strong>online</strong>: Running</li>
+         * <li><strong>offline</strong>: Offline</li>
+         * <li><strong>not_installed</strong>: Not Installed</li>
+         * </ul>
          */
         public Builder statusList(java.util.List<String> statusList) {
             this.putQueryParameter("StatusList", statusList);

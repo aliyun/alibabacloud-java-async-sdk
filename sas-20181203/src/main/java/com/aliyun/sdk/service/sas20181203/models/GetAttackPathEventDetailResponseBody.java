@@ -591,7 +591,14 @@ public class GetAttackPathEventDetailResponseBody extends TeaModel {
             } 
 
             /**
-             * AiAssetFlag.
+             * <p>AI资产标识。取值：</p>
+             * <ul>
+             * <li><strong>0</strong>：非AI资产。</li>
+             * <li><strong>1</strong>：AI资产。</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder aiAssetFlag(Integer aiAssetFlag) {
                 this.aiAssetFlag = aiAssetFlag;
