@@ -113,6 +113,24 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
+     * @param request the request parameters of DescribeMetricList  DescribeMetricListRequest
+     * @return DescribeMetricListResponse
+     */
+    @Override
+    public CompletableFuture<DescribeMetricListResponse> describeMetricList(DescribeMetricListRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RESTFUL).setAction("DescribeMetricList").setMethod(HttpMethod.GET).setPathRegex("/api/v1/openapi/proxy/get/describeMetricList").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(DescribeMetricListResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<DescribeMetricListResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
      * @param request the request parameters of GenerateCopilotResponse  GenerateCopilotResponseRequest
      * @return GenerateCopilotResponseResponse
      */

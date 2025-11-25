@@ -44,6 +44,12 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<DeleteAlertStrategyResponse> deleteAlertStrategy(DeleteAlertStrategyRequest request);
 
     /**
+     * @param request the request parameters of DescribeMetricList  DescribeMetricListRequest
+     * @return DescribeMetricListResponse
+     */
+    CompletableFuture<DescribeMetricListResponse> describeMetricList(DescribeMetricListRequest request);
+
+    /**
      * @param request the request parameters of GenerateCopilotResponse  GenerateCopilotResponseRequest
      * @return GenerateCopilotResponseResponse
      */
