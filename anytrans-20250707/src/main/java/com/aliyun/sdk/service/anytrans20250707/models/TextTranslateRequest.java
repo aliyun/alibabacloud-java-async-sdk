@@ -533,6 +533,9 @@ public class TextTranslateRequest extends Request {
      * <p>TextTranslateRequest</p>
      */
     public static class Ext extends TeaModel {
+        @com.aliyun.core.annotation.NameInMap("agent")
+        private String agent;
+
         @com.aliyun.core.annotation.NameInMap("config")
         private Config config;
 
@@ -552,6 +555,7 @@ public class TextTranslateRequest extends Request {
         private TextTransform textTransform;
 
         private Ext(Builder builder) {
+            this.agent = builder.agent;
             this.config = builder.config;
             this.domainHint = builder.domainHint;
             this.examples = builder.examples;
@@ -566,6 +570,13 @@ public class TextTranslateRequest extends Request {
 
         public static Ext create() {
             return builder().build();
+        }
+
+        /**
+         * @return agent
+         */
+        public String getAgent() {
+            return this.agent;
         }
 
         /**
@@ -611,6 +622,7 @@ public class TextTranslateRequest extends Request {
         }
 
         public static final class Builder {
+            private String agent; 
             private Config config; 
             private String domainHint; 
             private java.util.List<Examples> examples; 
@@ -622,6 +634,7 @@ public class TextTranslateRequest extends Request {
             } 
 
             private Builder(Ext model) {
+                this.agent = model.agent;
                 this.config = model.config;
                 this.domainHint = model.domainHint;
                 this.examples = model.examples;
@@ -629,6 +642,14 @@ public class TextTranslateRequest extends Request {
                 this.terminologies = model.terminologies;
                 this.textTransform = model.textTransform;
             } 
+
+            /**
+             * agent.
+             */
+            public Builder agent(String agent) {
+                this.agent = agent;
+                return this;
+            }
 
             /**
              * config.

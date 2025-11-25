@@ -58,6 +58,24 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
+     * @param request the request parameters of BatchTranslateForHtml  BatchTranslateForHtmlRequest
+     * @return BatchTranslateForHtmlResponse
+     */
+    @Override
+    public CompletableFuture<BatchTranslateForHtmlResponse> batchTranslateForHtml(BatchTranslateForHtmlRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RESTFUL).setAction("BatchTranslateForHtml").setMethod(HttpMethod.POST).setPathRegex("/anytrans/translate/batchForHtml").setBodyType(BodyType.JSON).setBodyIsForm(true).setReqBodyType(BodyType.FORM).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(BatchTranslateForHtmlResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<BatchTranslateForHtmlResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
      * @param request the request parameters of GetDocTranslateTask  GetDocTranslateTaskRequest
      * @return GetDocTranslateTaskResponse
      */

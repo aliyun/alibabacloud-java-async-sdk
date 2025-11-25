@@ -12,11 +12,15 @@ import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
  * 
- * {@link SubmitHtmlTranslateTaskRequest} extends {@link RequestModel}
+ * {@link BatchTranslateForHtmlRequest} extends {@link RequestModel}
  *
- * <p>SubmitHtmlTranslateTaskRequest</p>
+ * <p>BatchTranslateForHtmlRequest</p>
  */
-public class SubmitHtmlTranslateTaskRequest extends Request {
+public class BatchTranslateForHtmlRequest extends Request {
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("appName")
+    private String appName;
+
     @com.aliyun.core.annotation.Body
     @com.aliyun.core.annotation.NameInMap("ext")
     private Ext ext;
@@ -31,23 +35,27 @@ public class SubmitHtmlTranslateTaskRequest extends Request {
 
     @com.aliyun.core.annotation.Body
     @com.aliyun.core.annotation.NameInMap("sourceLanguage")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String sourceLanguage;
 
     @com.aliyun.core.annotation.Body
     @com.aliyun.core.annotation.NameInMap("targetLanguage")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String targetLanguage;
 
     @com.aliyun.core.annotation.Body
     @com.aliyun.core.annotation.NameInMap("text")
-    private String text;
+    @com.aliyun.core.annotation.Validation(required = true)
+    private java.util.Map<String, ?> text;
 
     @com.aliyun.core.annotation.Body
     @com.aliyun.core.annotation.NameInMap("workspaceId")
     @com.aliyun.core.annotation.Validation(required = true)
     private String workspaceId;
 
-    private SubmitHtmlTranslateTaskRequest(Builder builder) {
+    private BatchTranslateForHtmlRequest(Builder builder) {
         super(builder);
+        this.appName = builder.appName;
         this.ext = builder.ext;
         this.format = builder.format;
         this.scene = builder.scene;
@@ -61,13 +69,20 @@ public class SubmitHtmlTranslateTaskRequest extends Request {
         return new Builder();
     }
 
-    public static SubmitHtmlTranslateTaskRequest create() {
+    public static BatchTranslateForHtmlRequest create() {
         return builder().build();
     }
 
 @Override
     public Builder toBuilder() {
         return new Builder(this);
+    }
+
+    /**
+     * @return appName
+     */
+    public String getAppName() {
+        return this.appName;
     }
 
     /**
@@ -108,7 +123,7 @@ public class SubmitHtmlTranslateTaskRequest extends Request {
     /**
      * @return text
      */
-    public String getText() {
+    public java.util.Map<String, ?> getText() {
         return this.text;
     }
 
@@ -119,21 +134,23 @@ public class SubmitHtmlTranslateTaskRequest extends Request {
         return this.workspaceId;
     }
 
-    public static final class Builder extends Request.Builder<SubmitHtmlTranslateTaskRequest, Builder> {
+    public static final class Builder extends Request.Builder<BatchTranslateForHtmlRequest, Builder> {
+        private String appName; 
         private Ext ext; 
         private String format; 
         private String scene; 
         private String sourceLanguage; 
         private String targetLanguage; 
-        private String text; 
+        private java.util.Map<String, ?> text; 
         private String workspaceId; 
 
         private Builder() {
             super();
         } 
 
-        private Builder(SubmitHtmlTranslateTaskRequest request) {
+        private Builder(BatchTranslateForHtmlRequest request) {
             super(request);
+            this.appName = request.appName;
             this.ext = request.ext;
             this.format = request.format;
             this.scene = request.scene;
@@ -142,6 +159,15 @@ public class SubmitHtmlTranslateTaskRequest extends Request {
             this.text = request.text;
             this.workspaceId = request.workspaceId;
         } 
+
+        /**
+         * appName.
+         */
+        public Builder appName(String appName) {
+            this.putBodyParameter("appName", appName);
+            this.appName = appName;
+            return this;
+        }
 
         /**
          * ext.
@@ -172,7 +198,10 @@ public class SubmitHtmlTranslateTaskRequest extends Request {
         }
 
         /**
-         * sourceLanguage.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>zh</p>
          */
         public Builder sourceLanguage(String sourceLanguage) {
             this.putBodyParameter("sourceLanguage", sourceLanguage);
@@ -181,7 +210,10 @@ public class SubmitHtmlTranslateTaskRequest extends Request {
         }
 
         /**
-         * targetLanguage.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>en</p>
          */
         public Builder targetLanguage(String targetLanguage) {
             this.putBodyParameter("targetLanguage", targetLanguage);
@@ -190,10 +222,11 @@ public class SubmitHtmlTranslateTaskRequest extends Request {
         }
 
         /**
-         * text.
+         * <p>This parameter is required.</p>
          */
-        public Builder text(String text) {
-            this.putBodyParameter("text", text);
+        public Builder text(java.util.Map<String, ?> text) {
+            String textShrink = shrink(text, "text", "json");
+            this.putBodyParameter("text", textShrink);
             this.text = text;
             return this;
         }
@@ -211,27 +244,23 @@ public class SubmitHtmlTranslateTaskRequest extends Request {
         }
 
         @Override
-        public SubmitHtmlTranslateTaskRequest build() {
-            return new SubmitHtmlTranslateTaskRequest(this);
+        public BatchTranslateForHtmlRequest build() {
+            return new BatchTranslateForHtmlRequest(this);
         } 
 
     } 
 
     /**
      * 
-     * {@link SubmitHtmlTranslateTaskRequest} extends {@link TeaModel}
+     * {@link BatchTranslateForHtmlRequest} extends {@link TeaModel}
      *
-     * <p>SubmitHtmlTranslateTaskRequest</p>
+     * <p>BatchTranslateForHtmlRequest</p>
      */
     public static class Config extends TeaModel {
-        @com.aliyun.core.annotation.NameInMap("callbackUrl")
-        private String callbackUrl;
-
         @com.aliyun.core.annotation.NameInMap("skipCsiCheck")
         private Boolean skipCsiCheck;
 
         private Config(Builder builder) {
-            this.callbackUrl = builder.callbackUrl;
             this.skipCsiCheck = builder.skipCsiCheck;
         }
 
@@ -244,13 +273,6 @@ public class SubmitHtmlTranslateTaskRequest extends Request {
         }
 
         /**
-         * @return callbackUrl
-         */
-        public String getCallbackUrl() {
-            return this.callbackUrl;
-        }
-
-        /**
          * @return skipCsiCheck
          */
         public Boolean getSkipCsiCheck() {
@@ -258,24 +280,14 @@ public class SubmitHtmlTranslateTaskRequest extends Request {
         }
 
         public static final class Builder {
-            private String callbackUrl; 
             private Boolean skipCsiCheck; 
 
             private Builder() {
             } 
 
             private Builder(Config model) {
-                this.callbackUrl = model.callbackUrl;
                 this.skipCsiCheck = model.skipCsiCheck;
             } 
-
-            /**
-             * callbackUrl.
-             */
-            public Builder callbackUrl(String callbackUrl) {
-                this.callbackUrl = callbackUrl;
-                return this;
-            }
 
             /**
              * skipCsiCheck.
@@ -294,9 +306,9 @@ public class SubmitHtmlTranslateTaskRequest extends Request {
     }
     /**
      * 
-     * {@link SubmitHtmlTranslateTaskRequest} extends {@link TeaModel}
+     * {@link BatchTranslateForHtmlRequest} extends {@link TeaModel}
      *
-     * <p>SubmitHtmlTranslateTaskRequest</p>
+     * <p>BatchTranslateForHtmlRequest</p>
      */
     public static class Examples extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("src")
@@ -369,9 +381,9 @@ public class SubmitHtmlTranslateTaskRequest extends Request {
     }
     /**
      * 
-     * {@link SubmitHtmlTranslateTaskRequest} extends {@link TeaModel}
+     * {@link BatchTranslateForHtmlRequest} extends {@link TeaModel}
      *
-     * <p>SubmitHtmlTranslateTaskRequest</p>
+     * <p>BatchTranslateForHtmlRequest</p>
      */
     public static class Terminologies extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("src")
@@ -444,9 +456,9 @@ public class SubmitHtmlTranslateTaskRequest extends Request {
     }
     /**
      * 
-     * {@link SubmitHtmlTranslateTaskRequest} extends {@link TeaModel}
+     * {@link BatchTranslateForHtmlRequest} extends {@link TeaModel}
      *
-     * <p>SubmitHtmlTranslateTaskRequest</p>
+     * <p>BatchTranslateForHtmlRequest</p>
      */
     public static class TextTransform extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("toLower")
@@ -540,9 +552,9 @@ public class SubmitHtmlTranslateTaskRequest extends Request {
     }
     /**
      * 
-     * {@link SubmitHtmlTranslateTaskRequest} extends {@link TeaModel}
+     * {@link BatchTranslateForHtmlRequest} extends {@link TeaModel}
      *
-     * <p>SubmitHtmlTranslateTaskRequest</p>
+     * <p>BatchTranslateForHtmlRequest</p>
      */
     public static class Ext extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("config")
