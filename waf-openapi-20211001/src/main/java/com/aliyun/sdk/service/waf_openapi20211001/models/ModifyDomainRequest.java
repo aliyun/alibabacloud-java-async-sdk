@@ -937,6 +937,10 @@ public class ModifyDomainRequest extends Request {
         @com.aliyun.core.annotation.Validation(required = true)
         private String loadbalance;
 
+        @com.aliyun.core.annotation.NameInMap("MaxBodySize")
+        @com.aliyun.core.annotation.Validation(maximum = 10, minimum = 2)
+        private Integer maxBodySize;
+
         @com.aliyun.core.annotation.NameInMap("ReadTimeout")
         @com.aliyun.core.annotation.Validation(maximum = 3600, minimum = 1)
         private Integer readTimeout;
@@ -986,6 +990,7 @@ public class ModifyDomainRequest extends Request {
             this.keepaliveRequests = builder.keepaliveRequests;
             this.keepaliveTimeout = builder.keepaliveTimeout;
             this.loadbalance = builder.loadbalance;
+            this.maxBodySize = builder.maxBodySize;
             this.readTimeout = builder.readTimeout;
             this.requestHeaders = builder.requestHeaders;
             this.retry = builder.retry;
@@ -1076,6 +1081,13 @@ public class ModifyDomainRequest extends Request {
          */
         public String getLoadbalance() {
             return this.loadbalance;
+        }
+
+        /**
+         * @return maxBodySize
+         */
+        public Integer getMaxBodySize() {
+            return this.maxBodySize;
         }
 
         /**
@@ -1173,6 +1185,7 @@ public class ModifyDomainRequest extends Request {
             private Integer keepaliveRequests; 
             private Integer keepaliveTimeout; 
             private String loadbalance; 
+            private Integer maxBodySize; 
             private Integer readTimeout; 
             private java.util.List<RequestHeaders> requestHeaders; 
             private Boolean retry; 
@@ -1200,6 +1213,7 @@ public class ModifyDomainRequest extends Request {
                 this.keepaliveRequests = model.keepaliveRequests;
                 this.keepaliveTimeout = model.keepaliveTimeout;
                 this.loadbalance = model.loadbalance;
+                this.maxBodySize = model.maxBodySize;
                 this.readTimeout = model.readTimeout;
                 this.requestHeaders = model.requestHeaders;
                 this.retry = model.retry;
@@ -1340,6 +1354,14 @@ public class ModifyDomainRequest extends Request {
              */
             public Builder loadbalance(String loadbalance) {
                 this.loadbalance = loadbalance;
+                return this;
+            }
+
+            /**
+             * MaxBodySize.
+             */
+            public Builder maxBodySize(Integer maxBodySize) {
+                this.maxBodySize = maxBodySize;
                 return this;
             }
 

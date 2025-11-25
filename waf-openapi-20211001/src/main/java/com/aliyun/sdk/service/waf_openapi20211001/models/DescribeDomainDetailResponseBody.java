@@ -1264,6 +1264,10 @@ public class DescribeDomainDetailResponseBody extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Loadbalance")
         private String loadbalance;
 
+        @com.aliyun.core.annotation.NameInMap("MaxBodySize")
+        @com.aliyun.core.annotation.Validation(maximum = 10, minimum = 2)
+        private Integer maxBodySize;
+
         @com.aliyun.core.annotation.NameInMap("ReadTimeout")
         private Integer readTimeout;
 
@@ -1309,6 +1313,7 @@ public class DescribeDomainDetailResponseBody extends TeaModel {
             this.keepaliveRequests = builder.keepaliveRequests;
             this.keepaliveTimeout = builder.keepaliveTimeout;
             this.loadbalance = builder.loadbalance;
+            this.maxBodySize = builder.maxBodySize;
             this.readTimeout = builder.readTimeout;
             this.requestHeaders = builder.requestHeaders;
             this.retry = builder.retry;
@@ -1408,6 +1413,13 @@ public class DescribeDomainDetailResponseBody extends TeaModel {
         }
 
         /**
+         * @return maxBodySize
+         */
+        public Integer getMaxBodySize() {
+            return this.maxBodySize;
+        }
+
+        /**
          * @return readTimeout
          */
         public Integer getReadTimeout() {
@@ -1496,6 +1508,7 @@ public class DescribeDomainDetailResponseBody extends TeaModel {
             private Integer keepaliveRequests; 
             private Integer keepaliveTimeout; 
             private String loadbalance; 
+            private Integer maxBodySize; 
             private Integer readTimeout; 
             private java.util.List<RequestHeaders> requestHeaders; 
             private Boolean retry; 
@@ -1523,6 +1536,7 @@ public class DescribeDomainDetailResponseBody extends TeaModel {
                 this.keepaliveRequests = model.keepaliveRequests;
                 this.keepaliveTimeout = model.keepaliveTimeout;
                 this.loadbalance = model.loadbalance;
+                this.maxBodySize = model.maxBodySize;
                 this.readTimeout = model.readTimeout;
                 this.requestHeaders = model.requestHeaders;
                 this.retry = model.retry;
@@ -1658,6 +1672,14 @@ public class DescribeDomainDetailResponseBody extends TeaModel {
              */
             public Builder loadbalance(String loadbalance) {
                 this.loadbalance = loadbalance;
+                return this;
+            }
+
+            /**
+             * MaxBodySize.
+             */
+            public Builder maxBodySize(Integer maxBodySize) {
+                this.maxBodySize = maxBodySize;
                 return this;
             }
 

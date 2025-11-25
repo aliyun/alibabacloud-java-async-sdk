@@ -697,6 +697,10 @@ public class ModifyCloudResourceRequest extends Request {
         @com.aliyun.core.annotation.Validation(maximum = 3600, minimum = 10)
         private Integer keepaliveTimeout;
 
+        @com.aliyun.core.annotation.NameInMap("MaxBodySize")
+        @com.aliyun.core.annotation.Validation(maximum = 10, minimum = 2)
+        private Integer maxBodySize;
+
         @com.aliyun.core.annotation.NameInMap("ReadTimeout")
         @com.aliyun.core.annotation.Validation(maximum = 3600, minimum = 1)
         private Integer readTimeout;
@@ -721,6 +725,7 @@ public class ModifyCloudResourceRequest extends Request {
             this.keepalive = builder.keepalive;
             this.keepaliveRequests = builder.keepaliveRequests;
             this.keepaliveTimeout = builder.keepaliveTimeout;
+            this.maxBodySize = builder.maxBodySize;
             this.readTimeout = builder.readTimeout;
             this.requestHeaders = builder.requestHeaders;
             this.writeTimeout = builder.writeTimeout;
@@ -756,6 +761,13 @@ public class ModifyCloudResourceRequest extends Request {
          */
         public Integer getKeepaliveTimeout() {
             return this.keepaliveTimeout;
+        }
+
+        /**
+         * @return maxBodySize
+         */
+        public Integer getMaxBodySize() {
+            return this.maxBodySize;
         }
 
         /**
@@ -804,6 +816,7 @@ public class ModifyCloudResourceRequest extends Request {
             private Boolean keepalive; 
             private Integer keepaliveRequests; 
             private Integer keepaliveTimeout; 
+            private Integer maxBodySize; 
             private Integer readTimeout; 
             private java.util.List<RequestHeaders> requestHeaders; 
             private Integer writeTimeout; 
@@ -818,6 +831,7 @@ public class ModifyCloudResourceRequest extends Request {
                 this.keepalive = model.keepalive;
                 this.keepaliveRequests = model.keepaliveRequests;
                 this.keepaliveTimeout = model.keepaliveTimeout;
+                this.maxBodySize = model.maxBodySize;
                 this.readTimeout = model.readTimeout;
                 this.requestHeaders = model.requestHeaders;
                 this.writeTimeout = model.writeTimeout;
@@ -866,6 +880,14 @@ public class ModifyCloudResourceRequest extends Request {
              */
             public Builder keepaliveTimeout(Integer keepaliveTimeout) {
                 this.keepaliveTimeout = keepaliveTimeout;
+                return this;
+            }
+
+            /**
+             * MaxBodySize.
+             */
+            public Builder maxBodySize(Integer maxBodySize) {
+                this.maxBodySize = maxBodySize;
                 return this;
             }
 

@@ -571,6 +571,9 @@ public class DescribeCloudResourceAccessPortDetailsResponseBody extends TeaModel
         @com.aliyun.core.annotation.NameInMap("LogHeaders")
         private java.util.List<LogHeaders> logHeaders;
 
+        @com.aliyun.core.annotation.NameInMap("MaxBodySize")
+        private Integer maxBodySize;
+
         @com.aliyun.core.annotation.NameInMap("OwnerUserId")
         private String ownerUserId;
 
@@ -618,6 +621,7 @@ public class DescribeCloudResourceAccessPortDetailsResponseBody extends TeaModel
             this.keepaliveRequests = builder.keepaliveRequests;
             this.keepaliveTimeout = builder.keepaliveTimeout;
             this.logHeaders = builder.logHeaders;
+            this.maxBodySize = builder.maxBodySize;
             this.ownerUserId = builder.ownerUserId;
             this.port = builder.port;
             this.protocol = builder.protocol;
@@ -708,6 +712,13 @@ public class DescribeCloudResourceAccessPortDetailsResponseBody extends TeaModel
          */
         public java.util.List<LogHeaders> getLogHeaders() {
             return this.logHeaders;
+        }
+
+        /**
+         * @return maxBodySize
+         */
+        public Integer getMaxBodySize() {
+            return this.maxBodySize;
         }
 
         /**
@@ -805,6 +816,7 @@ public class DescribeCloudResourceAccessPortDetailsResponseBody extends TeaModel
             private Integer keepaliveRequests; 
             private Integer keepaliveTimeout; 
             private java.util.List<LogHeaders> logHeaders; 
+            private Integer maxBodySize; 
             private String ownerUserId; 
             private Integer port; 
             private String protocol; 
@@ -832,6 +844,7 @@ public class DescribeCloudResourceAccessPortDetailsResponseBody extends TeaModel
                 this.keepaliveRequests = model.keepaliveRequests;
                 this.keepaliveTimeout = model.keepaliveTimeout;
                 this.logHeaders = model.logHeaders;
+                this.maxBodySize = model.maxBodySize;
                 this.ownerUserId = model.ownerUserId;
                 this.port = model.port;
                 this.protocol = model.protocol;
@@ -967,6 +980,14 @@ public class DescribeCloudResourceAccessPortDetailsResponseBody extends TeaModel
              */
             public Builder logHeaders(java.util.List<LogHeaders> logHeaders) {
                 this.logHeaders = logHeaders;
+                return this;
+            }
+
+            /**
+             * MaxBodySize.
+             */
+            public Builder maxBodySize(Integer maxBodySize) {
+                this.maxBodySize = maxBodySize;
                 return this;
             }
 
