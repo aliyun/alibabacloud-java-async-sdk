@@ -43,6 +43,24 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
+     * @param request the request parameters of AddAclBackupData  AddAclBackupDataRequest
+     * @return AddAclBackupDataResponse
+     */
+    @Override
+    public CompletableFuture<AddAclBackupDataResponse> addAclBackupData(AddAclBackupDataRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RPC).setAction("AddAclBackupData").setMethod(HttpMethod.POST).setPathRegex("/").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(AddAclBackupDataResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<AddAclBackupDataResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
      * <b>description</b> :
      * <p>You can call the AddAddressBook operation to create an address book for access control. The address book can be an IP address book, an ECS tag-based address book, a port address book, or a domain address book.</p>
      * <h2><a href="#qps"></a>Limits</h2>
@@ -107,6 +125,24 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
+     * @param request the request parameters of AddDomainResolveRealtimeTask  AddDomainResolveRealtimeTaskRequest
+     * @return AddDomainResolveRealtimeTaskResponse
+     */
+    @Override
+    public CompletableFuture<AddDomainResolveRealtimeTaskResponse> addDomainResolveRealtimeTask(AddDomainResolveRealtimeTaskRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RPC).setAction("AddDomainResolveRealtimeTask").setMethod(HttpMethod.POST).setPathRegex("/").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(AddDomainResolveRealtimeTaskResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<AddDomainResolveRealtimeTaskResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
      * <b>description</b> :
      * <p>You can call this operation to add members to Cloud Firewall.</p>
      * <h2><a href="#qps-"></a>Limits</h2>
@@ -148,14 +184,17 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
-     * <b>description</b> :
-     * <p>You can call the BatchCopyVpcFirewallControlPolicy operation to copy all access control policies from a policy group of a source VPC firewall to a policy group of a destination VPC firewall.<br>Before you call this operation, we recommend that you back up access control policies. For more information about how to back up an access control policy, see <a href="https://www.alibabacloud.com/help/en/cloud-firewall/latest/back-up-and-roll-back-an-access-control-policy">Back up an access control policy</a>.<br>After you call this operation, all the access control policies in the policy group of the destination VPC firewall are replaced.<br>The policy groups of the source VPC firewall and the destination VPC firewall must belong to the same Alibaba Cloud account.  </p>
-     * <h2>Limits</h2>
-     * <p>You can call this operation up to 10 times per second per account. When the number of calls to this operation per second exceeds the limit, throttling is triggered. Throttling may affect your business. We recommend that you take note of the limit on this operation.</p>
+     * @deprecated OpenAPI BatchCopyVpcFirewallControlPolicy is deprecated  * @description You can call the BatchCopyVpcFirewallControlPolicy operation to copy all access control policies from a policy group of a source VPC firewall to a policy group of a destination VPC firewall.  
+     * Before you call this operation, we recommend that you back up access control policies. For more information about how to back up an access control policy, see [Back up an access control policy](https://www.alibabacloud.com/help/en/cloud-firewall/latest/back-up-and-roll-back-an-access-control-policy).  
+     * After you call this operation, all the access control policies in the policy group of the destination VPC firewall are replaced.  
+     * The policy groups of the source VPC firewall and the destination VPC firewall must belong to the same Alibaba Cloud account.  
+     * ## Limits
+     * You can call this operation up to 10 times per second per account. When the number of calls to this operation per second exceeds the limit, throttling is triggered. Throttling may affect your business. We recommend that you take note of the limit on this operation.
      * 
      * @param request the request parameters of BatchCopyVpcFirewallControlPolicy  BatchCopyVpcFirewallControlPolicyRequest
      * @return BatchCopyVpcFirewallControlPolicyResponse
      */
+    @Deprecated
     @Override
     public CompletableFuture<BatchCopyVpcFirewallControlPolicyResponse> batchCopyVpcFirewallControlPolicy(BatchCopyVpcFirewallControlPolicyRequest request) {
         try {
@@ -183,6 +222,24 @@ public final class DefaultAsyncClient implements AsyncClient {
             return this.handler.execute(params);
         } catch (Exception e) {
             CompletableFuture<BatchDeleteVpcFirewallControlPolicyResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
+     * @param request the request parameters of ClearLogStoreStorage  ClearLogStoreStorageRequest
+     * @return ClearLogStoreStorageResponse
+     */
+    @Override
+    public CompletableFuture<ClearLogStoreStorageResponse> clearLogStoreStorage(ClearLogStoreStorageRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RPC).setAction("ClearLogStoreStorage").setMethod(HttpMethod.POST).setPathRegex("/").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(ClearLogStoreStorageResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<ClearLogStoreStorageResponse> future = new CompletableFuture<>();
             future.completeExceptionally(e);
             return future;
         }
@@ -243,6 +300,42 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
+     * @param request the request parameters of CreateInstanceSyncTask  CreateInstanceSyncTaskRequest
+     * @return CreateInstanceSyncTaskResponse
+     */
+    @Override
+    public CompletableFuture<CreateInstanceSyncTaskResponse> createInstanceSyncTask(CreateInstanceSyncTaskRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RPC).setAction("CreateInstanceSyncTask").setMethod(HttpMethod.POST).setPathRegex("/").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(CreateInstanceSyncTaskResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<CreateInstanceSyncTaskResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
+     * @param request the request parameters of CreateIpsPrivateAssoc  CreateIpsPrivateAssocRequest
+     * @return CreateIpsPrivateAssocResponse
+     */
+    @Override
+    public CompletableFuture<CreateIpsPrivateAssocResponse> createIpsPrivateAssoc(CreateIpsPrivateAssocRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RPC).setAction("CreateIpsPrivateAssoc").setMethod(HttpMethod.POST).setPathRegex("/").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(CreateIpsPrivateAssocResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<CreateIpsPrivateAssocResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
      * <b>description</b> :
      * <p>You can call this operation to create a policy that allows, denies, or monitors the traffic that passes through the NAT firewall.</p>
      * 
@@ -276,6 +369,24 @@ public final class DefaultAsyncClient implements AsyncClient {
             return this.handler.execute(params);
         } catch (Exception e) {
             CompletableFuture<CreateNatFirewallPreCheckResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
+     * @param request the request parameters of CreateNatFirewallSyncTask  CreateNatFirewallSyncTaskRequest
+     * @return CreateNatFirewallSyncTaskResponse
+     */
+    @Override
+    public CompletableFuture<CreateNatFirewallSyncTaskResponse> createNatFirewallSyncTask(CreateNatFirewallSyncTaskRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RPC).setAction("CreateNatFirewallSyncTask").setMethod(HttpMethod.POST).setPathRegex("/").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(CreateNatFirewallSyncTaskResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<CreateNatFirewallSyncTaskResponse> future = new CompletableFuture<>();
             future.completeExceptionally(e);
             return future;
         }
@@ -395,9 +506,10 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
-     * @param request the request parameters of CreateVpcFirewallCenManualConfigure  CreateVpcFirewallCenManualConfigureRequest
+     * @deprecated OpenAPI CreateVpcFirewallCenManualConfigure is deprecated  * @param request  the request parameters of CreateVpcFirewallCenManualConfigure  CreateVpcFirewallCenManualConfigureRequest
      * @return CreateVpcFirewallCenManualConfigureResponse
      */
+    @Deprecated
     @Override
     public CompletableFuture<CreateVpcFirewallCenManualConfigureResponse> createVpcFirewallCenManualConfigure(CreateVpcFirewallCenManualConfigureRequest request) {
         try {
@@ -1127,6 +1239,24 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
+     * @param request the request parameters of DescribeAclBackupList  DescribeAclBackupListRequest
+     * @return DescribeAclBackupListResponse
+     */
+    @Override
+    public CompletableFuture<DescribeAclBackupListResponse> describeAclBackupList(DescribeAclBackupListRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RPC).setAction("DescribeAclBackupList").setMethod(HttpMethod.POST).setPathRegex("/").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(DescribeAclBackupListResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<DescribeAclBackupListResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
      * @param request the request parameters of DescribeAclCheck  DescribeAclCheckRequest
      * @return DescribeAclCheckResponse
      */
@@ -1299,9 +1429,46 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
-     * @param request the request parameters of DescribeCfwRiskLevelSummary  DescribeCfwRiskLevelSummaryRequest
+     * @param request the request parameters of DescribeAttackAppCategory  DescribeAttackAppCategoryRequest
+     * @return DescribeAttackAppCategoryResponse
+     */
+    @Override
+    public CompletableFuture<DescribeAttackAppCategoryResponse> describeAttackAppCategory(DescribeAttackAppCategoryRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RPC).setAction("DescribeAttackAppCategory").setMethod(HttpMethod.POST).setPathRegex("/").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(DescribeAttackAppCategoryResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<DescribeAttackAppCategoryResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
+     * @param request the request parameters of DescribeBatchSlsDispatchStatus  DescribeBatchSlsDispatchStatusRequest
+     * @return DescribeBatchSlsDispatchStatusResponse
+     */
+    @Override
+    public CompletableFuture<DescribeBatchSlsDispatchStatusResponse> describeBatchSlsDispatchStatus(DescribeBatchSlsDispatchStatusRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RPC).setAction("DescribeBatchSlsDispatchStatus").setMethod(HttpMethod.POST).setPathRegex("/").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(DescribeBatchSlsDispatchStatusResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<DescribeBatchSlsDispatchStatusResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
+     * @deprecated OpenAPI DescribeCfwRiskLevelSummary is deprecated  * @param request  the request parameters of DescribeCfwRiskLevelSummary  DescribeCfwRiskLevelSummaryRequest
      * @return DescribeCfwRiskLevelSummaryResponse
      */
+    @Deprecated
     @Override
     public CompletableFuture<DescribeCfwRiskLevelSummaryResponse> describeCfwRiskLevelSummary(DescribeCfwRiskLevelSummaryRequest request) {
         try {
@@ -1335,6 +1502,42 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
+     * @param request the request parameters of DescribeConfiguredDestinationIP  DescribeConfiguredDestinationIPRequest
+     * @return DescribeConfiguredDestinationIPResponse
+     */
+    @Override
+    public CompletableFuture<DescribeConfiguredDestinationIPResponse> describeConfiguredDestinationIP(DescribeConfiguredDestinationIPRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RPC).setAction("DescribeConfiguredDestinationIP").setMethod(HttpMethod.POST).setPathRegex("/").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(DescribeConfiguredDestinationIPResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<DescribeConfiguredDestinationIPResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
+     * @param request the request parameters of DescribeConfiguredDomainNames  DescribeConfiguredDomainNamesRequest
+     * @return DescribeConfiguredDomainNamesResponse
+     */
+    @Override
+    public CompletableFuture<DescribeConfiguredDomainNamesResponse> describeConfiguredDomainNames(DescribeConfiguredDomainNamesRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RPC).setAction("DescribeConfiguredDomainNames").setMethod(HttpMethod.POST).setPathRegex("/").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(DescribeConfiguredDomainNamesResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<DescribeConfiguredDomainNamesResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
      * <b>description</b> :
      * <p>You can call the DescribeControlPolicy operation to query the details about access control policies by page.</p>
      * <h2>Limits</h2>
@@ -1352,6 +1555,42 @@ public final class DefaultAsyncClient implements AsyncClient {
             return this.handler.execute(params);
         } catch (Exception e) {
             CompletableFuture<DescribeControlPolicyResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
+     * @param request the request parameters of DescribeControlPolicyDomainResolve  DescribeControlPolicyDomainResolveRequest
+     * @return DescribeControlPolicyDomainResolveResponse
+     */
+    @Override
+    public CompletableFuture<DescribeControlPolicyDomainResolveResponse> describeControlPolicyDomainResolve(DescribeControlPolicyDomainResolveRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RPC).setAction("DescribeControlPolicyDomainResolve").setMethod(HttpMethod.GET).setPathRegex("/").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(DescribeControlPolicyDomainResolveResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<DescribeControlPolicyDomainResolveResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
+     * @param request the request parameters of DescribeCreatedNatFirewall  DescribeCreatedNatFirewallRequest
+     * @return DescribeCreatedNatFirewallResponse
+     */
+    @Override
+    public CompletableFuture<DescribeCreatedNatFirewallResponse> describeCreatedNatFirewall(DescribeCreatedNatFirewallRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RPC).setAction("DescribeCreatedNatFirewall").setMethod(HttpMethod.GET).setPathRegex("/").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(DescribeCreatedNatFirewallResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<DescribeCreatedNatFirewallResponse> future = new CompletableFuture<>();
             future.completeExceptionally(e);
             return future;
         }
@@ -1471,9 +1710,10 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
-     * @param request the request parameters of DescribeFirewallDropStatistics  DescribeFirewallDropStatisticsRequest
+     * @deprecated OpenAPI DescribeFirewallDropStatistics is deprecated  * @param request  the request parameters of DescribeFirewallDropStatistics  DescribeFirewallDropStatisticsRequest
      * @return DescribeFirewallDropStatisticsResponse
      */
+    @Deprecated
     @Override
     public CompletableFuture<DescribeFirewallDropStatisticsResponse> describeFirewallDropStatistics(DescribeFirewallDropStatisticsRequest request) {
         try {
@@ -1525,6 +1765,24 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
+     * @param request the request parameters of DescribeFirewallVswitchResources  DescribeFirewallVswitchResourcesRequest
+     * @return DescribeFirewallVswitchResourcesResponse
+     */
+    @Override
+    public CompletableFuture<DescribeFirewallVswitchResourcesResponse> describeFirewallVswitchResources(DescribeFirewallVswitchResourcesRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RPC).setAction("DescribeFirewallVswitchResources").setMethod(HttpMethod.POST).setPathRegex("/").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(DescribeFirewallVswitchResourcesResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<DescribeFirewallVswitchResourcesResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
      * <b>description</b> :
      * <p>You can use this operation to query the information about members in Cloud Firewall.</p>
      * <h2>Limits</h2>
@@ -1542,6 +1800,24 @@ public final class DefaultAsyncClient implements AsyncClient {
             return this.handler.execute(params);
         } catch (Exception e) {
             CompletableFuture<DescribeInstanceMembersResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
+     * @param request the request parameters of DescribeInstanceRdAccounts  DescribeInstanceRdAccountsRequest
+     * @return DescribeInstanceRdAccountsResponse
+     */
+    @Override
+    public CompletableFuture<DescribeInstanceRdAccountsResponse> describeInstanceRdAccounts(DescribeInstanceRdAccountsRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RPC).setAction("DescribeInstanceRdAccounts").setMethod(HttpMethod.POST).setPathRegex("/").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(DescribeInstanceRdAccountsResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<DescribeInstanceRdAccountsResponse> future = new CompletableFuture<>();
             future.completeExceptionally(e);
             return future;
         }
@@ -1578,6 +1854,24 @@ public final class DefaultAsyncClient implements AsyncClient {
             return this.handler.execute(params);
         } catch (Exception e) {
             CompletableFuture<DescribeInternetDropTrafficTrendResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
+     * @param request the request parameters of DescribeInternetOpenDetail  DescribeInternetOpenDetailRequest
+     * @return DescribeInternetOpenDetailResponse
+     */
+    @Override
+    public CompletableFuture<DescribeInternetOpenDetailResponse> describeInternetOpenDetail(DescribeInternetOpenDetailRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RPC).setAction("DescribeInternetOpenDetail").setMethod(HttpMethod.POST).setPathRegex("/").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(DescribeInternetOpenDetailResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<DescribeInternetOpenDetailResponse> future = new CompletableFuture<>();
             future.completeExceptionally(e);
             return future;
         }
@@ -1638,6 +1932,96 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
+     * @param request the request parameters of DescribeInternetOpenStatistic  DescribeInternetOpenStatisticRequest
+     * @return DescribeInternetOpenStatisticResponse
+     */
+    @Override
+    public CompletableFuture<DescribeInternetOpenStatisticResponse> describeInternetOpenStatistic(DescribeInternetOpenStatisticRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RPC).setAction("DescribeInternetOpenStatistic").setMethod(HttpMethod.POST).setPathRegex("/").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(DescribeInternetOpenStatisticResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<DescribeInternetOpenStatisticResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
+     * @param request the request parameters of DescribeInternetServiceNameList  DescribeInternetServiceNameListRequest
+     * @return DescribeInternetServiceNameListResponse
+     */
+    @Override
+    public CompletableFuture<DescribeInternetServiceNameListResponse> describeInternetServiceNameList(DescribeInternetServiceNameListRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RPC).setAction("DescribeInternetServiceNameList").setMethod(HttpMethod.POST).setPathRegex("/").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(DescribeInternetServiceNameListResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<DescribeInternetServiceNameListResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
+     * @param request the request parameters of DescribeInternetSlb  DescribeInternetSlbRequest
+     * @return DescribeInternetSlbResponse
+     */
+    @Override
+    public CompletableFuture<DescribeInternetSlbResponse> describeInternetSlb(DescribeInternetSlbRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RPC).setAction("DescribeInternetSlb").setMethod(HttpMethod.POST).setPathRegex("/").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(DescribeInternetSlbResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<DescribeInternetSlbResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
+     * @param request the request parameters of DescribeInternetTimeTop  DescribeInternetTimeTopRequest
+     * @return DescribeInternetTimeTopResponse
+     */
+    @Override
+    public CompletableFuture<DescribeInternetTimeTopResponse> describeInternetTimeTop(DescribeInternetTimeTopRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RPC).setAction("DescribeInternetTimeTop").setMethod(HttpMethod.POST).setPathRegex("/").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(DescribeInternetTimeTopResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<DescribeInternetTimeTopResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
+     * @param request the request parameters of DescribeInternetTrafficTop  DescribeInternetTrafficTopRequest
+     * @return DescribeInternetTrafficTopResponse
+     */
+    @Override
+    public CompletableFuture<DescribeInternetTrafficTopResponse> describeInternetTrafficTop(DescribeInternetTrafficTopRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RPC).setAction("DescribeInternetTrafficTop").setMethod(HttpMethod.POST).setPathRegex("/").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(DescribeInternetTrafficTopResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<DescribeInternetTrafficTopResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
      * @param request the request parameters of DescribeInternetTrafficTrend  DescribeInternetTrafficTrendRequest
      * @return DescribeInternetTrafficTrendResponse
      */
@@ -1650,6 +2034,42 @@ public final class DefaultAsyncClient implements AsyncClient {
             return this.handler.execute(params);
         } catch (Exception e) {
             CompletableFuture<DescribeInternetTrafficTrendResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
+     * @param request the request parameters of DescribeInvadeEcsTrend  DescribeInvadeEcsTrendRequest
+     * @return DescribeInvadeEcsTrendResponse
+     */
+    @Override
+    public CompletableFuture<DescribeInvadeEcsTrendResponse> describeInvadeEcsTrend(DescribeInvadeEcsTrendRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RPC).setAction("DescribeInvadeEcsTrend").setMethod(HttpMethod.POST).setPathRegex("/").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(DescribeInvadeEcsTrendResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<DescribeInvadeEcsTrendResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
+     * @param request the request parameters of DescribeInvadeEventDetail  DescribeInvadeEventDetailRequest
+     * @return DescribeInvadeEventDetailResponse
+     */
+    @Override
+    public CompletableFuture<DescribeInvadeEventDetailResponse> describeInvadeEventDetail(DescribeInvadeEventDetailRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RPC).setAction("DescribeInvadeEventDetail").setMethod(HttpMethod.POST).setPathRegex("/").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(DescribeInvadeEventDetailResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<DescribeInvadeEventDetailResponse> future = new CompletableFuture<>();
             future.completeExceptionally(e);
             return future;
         }
@@ -1710,6 +2130,60 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
+     * @param request the request parameters of DescribeIpsPrivateAssoc  DescribeIpsPrivateAssocRequest
+     * @return DescribeIpsPrivateAssocResponse
+     */
+    @Override
+    public CompletableFuture<DescribeIpsPrivateAssocResponse> describeIpsPrivateAssoc(DescribeIpsPrivateAssocRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RPC).setAction("DescribeIpsPrivateAssoc").setMethod(HttpMethod.POST).setPathRegex("/").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(DescribeIpsPrivateAssocResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<DescribeIpsPrivateAssocResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
+     * @param request the request parameters of DescribeIspInfo  DescribeIspInfoRequest
+     * @return DescribeIspInfoResponse
+     */
+    @Override
+    public CompletableFuture<DescribeIspInfoResponse> describeIspInfo(DescribeIspInfoRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RPC).setAction("DescribeIspInfo").setMethod(HttpMethod.POST).setPathRegex("/").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(DescribeIspInfoResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<DescribeIspInfoResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
+     * @param request the request parameters of DescribeLocationInfo  DescribeLocationInfoRequest
+     * @return DescribeLocationInfoResponse
+     */
+    @Override
+    public CompletableFuture<DescribeLocationInfoResponse> describeLocationInfo(DescribeLocationInfoRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RPC).setAction("DescribeLocationInfo").setMethod(HttpMethod.POST).setPathRegex("/").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(DescribeLocationInfoResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<DescribeLocationInfoResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
      * @param request the request parameters of DescribeLogStoreInfo  DescribeLogStoreInfoRequest
      * @return DescribeLogStoreInfoResponse
      */
@@ -1728,6 +2202,24 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
+     * @param request the request parameters of DescribeMemberInfo  DescribeMemberInfoRequest
+     * @return DescribeMemberInfoResponse
+     */
+    @Override
+    public CompletableFuture<DescribeMemberInfoResponse> describeMemberInfo(DescribeMemberInfoRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RPC).setAction("DescribeMemberInfo").setMethod(HttpMethod.GET).setPathRegex("/").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(DescribeMemberInfoResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<DescribeMemberInfoResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
      * @param request the request parameters of DescribeNatAclPageStatus  DescribeNatAclPageStatusRequest
      * @return DescribeNatAclPageStatusResponse
      */
@@ -1740,6 +2232,24 @@ public final class DefaultAsyncClient implements AsyncClient {
             return this.handler.execute(params);
         } catch (Exception e) {
             CompletableFuture<DescribeNatAclPageStatusResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
+     * @param request the request parameters of DescribeNatFirewallAclGroupList  DescribeNatFirewallAclGroupListRequest
+     * @return DescribeNatFirewallAclGroupListResponse
+     */
+    @Override
+    public CompletableFuture<DescribeNatFirewallAclGroupListResponse> describeNatFirewallAclGroupList(DescribeNatFirewallAclGroupListRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RPC).setAction("DescribeNatFirewallAclGroupList").setMethod(HttpMethod.POST).setPathRegex("/").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(DescribeNatFirewallAclGroupListResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<DescribeNatFirewallAclGroupListResponse> future = new CompletableFuture<>();
             future.completeExceptionally(e);
             return future;
         }
@@ -1824,6 +2334,24 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
+     * @param request the request parameters of DescribeNatFirewallPrecheckDetail  DescribeNatFirewallPrecheckDetailRequest
+     * @return DescribeNatFirewallPrecheckDetailResponse
+     */
+    @Override
+    public CompletableFuture<DescribeNatFirewallPrecheckDetailResponse> describeNatFirewallPrecheckDetail(DescribeNatFirewallPrecheckDetailRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RPC).setAction("DescribeNatFirewallPrecheckDetail").setMethod(HttpMethod.GET).setPathRegex("/").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(DescribeNatFirewallPrecheckDetailResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<DescribeNatFirewallPrecheckDetailResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
      * @param request the request parameters of DescribeNatFirewallQuota  DescribeNatFirewallQuotaRequest
      * @return DescribeNatFirewallQuotaResponse
      */
@@ -1836,6 +2364,24 @@ public final class DefaultAsyncClient implements AsyncClient {
             return this.handler.execute(params);
         } catch (Exception e) {
             CompletableFuture<DescribeNatFirewallQuotaResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
+     * @param request the request parameters of DescribeNatFirewallTimeTop  DescribeNatFirewallTimeTopRequest
+     * @return DescribeNatFirewallTimeTopResponse
+     */
+    @Override
+    public CompletableFuture<DescribeNatFirewallTimeTopResponse> describeNatFirewallTimeTop(DescribeNatFirewallTimeTopRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RPC).setAction("DescribeNatFirewallTimeTop").setMethod(HttpMethod.GET).setPathRegex("/").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(DescribeNatFirewallTimeTopResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<DescribeNatFirewallTimeTopResponse> future = new CompletableFuture<>();
             future.completeExceptionally(e);
             return future;
         }
@@ -1950,6 +2496,42 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
+     * @param request the request parameters of DescribeOutgoingDestination  DescribeOutgoingDestinationRequest
+     * @return DescribeOutgoingDestinationResponse
+     */
+    @Override
+    public CompletableFuture<DescribeOutgoingDestinationResponse> describeOutgoingDestination(DescribeOutgoingDestinationRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RPC).setAction("DescribeOutgoingDestination").setMethod(HttpMethod.POST).setPathRegex("/").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(DescribeOutgoingDestinationResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<DescribeOutgoingDestinationResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
+     * @param request the request parameters of DescribeOutgoingDestinationCategory  DescribeOutgoingDestinationCategoryRequest
+     * @return DescribeOutgoingDestinationCategoryResponse
+     */
+    @Override
+    public CompletableFuture<DescribeOutgoingDestinationCategoryResponse> describeOutgoingDestinationCategory(DescribeOutgoingDestinationCategoryRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RPC).setAction("DescribeOutgoingDestinationCategory").setMethod(HttpMethod.POST).setPathRegex("/").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(DescribeOutgoingDestinationCategoryResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<DescribeOutgoingDestinationCategoryResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
      * @param request the request parameters of DescribeOutgoingDestinationIP  DescribeOutgoingDestinationIPRequest
      * @return DescribeOutgoingDestinationIPResponse
      */
@@ -1962,6 +2544,24 @@ public final class DefaultAsyncClient implements AsyncClient {
             return this.handler.execute(params);
         } catch (Exception e) {
             CompletableFuture<DescribeOutgoingDestinationIPResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
+     * @param request the request parameters of DescribeOutgoingDestinationIPDetail  DescribeOutgoingDestinationIPDetailRequest
+     * @return DescribeOutgoingDestinationIPDetailResponse
+     */
+    @Override
+    public CompletableFuture<DescribeOutgoingDestinationIPDetailResponse> describeOutgoingDestinationIPDetail(DescribeOutgoingDestinationIPDetailRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RPC).setAction("DescribeOutgoingDestinationIPDetail").setMethod(HttpMethod.POST).setPathRegex("/").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(DescribeOutgoingDestinationIPDetailResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<DescribeOutgoingDestinationIPDetailResponse> future = new CompletableFuture<>();
             future.completeExceptionally(e);
             return future;
         }
@@ -2004,6 +2604,42 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
+     * @param request the request parameters of DescribeOutgoingRiskDomainAndIpCount  DescribeOutgoingRiskDomainAndIpCountRequest
+     * @return DescribeOutgoingRiskDomainAndIpCountResponse
+     */
+    @Override
+    public CompletableFuture<DescribeOutgoingRiskDomainAndIpCountResponse> describeOutgoingRiskDomainAndIpCount(DescribeOutgoingRiskDomainAndIpCountRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RPC).setAction("DescribeOutgoingRiskDomainAndIpCount").setMethod(HttpMethod.GET).setPathRegex("/").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(DescribeOutgoingRiskDomainAndIpCountResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<DescribeOutgoingRiskDomainAndIpCountResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
+     * @param request the request parameters of DescribeOutgoingRiskTrend  DescribeOutgoingRiskTrendRequest
+     * @return DescribeOutgoingRiskTrendResponse
+     */
+    @Override
+    public CompletableFuture<DescribeOutgoingRiskTrendResponse> describeOutgoingRiskTrend(DescribeOutgoingRiskTrendRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RPC).setAction("DescribeOutgoingRiskTrend").setMethod(HttpMethod.POST).setPathRegex("/").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(DescribeOutgoingRiskTrendResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<DescribeOutgoingRiskTrendResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
      * @param request the request parameters of DescribeOutgoingStatistic  DescribeOutgoingStatisticRequest
      * @return DescribeOutgoingStatisticResponse
      */
@@ -2040,9 +2676,10 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
-     * @param request the request parameters of DescribePageDocuments  DescribePageDocumentsRequest
+     * @deprecated OpenAPI DescribePageDocuments is deprecated  * @param request  the request parameters of DescribePageDocuments  DescribePageDocumentsRequest
      * @return DescribePageDocumentsResponse
      */
+    @Deprecated
     @Override
     public CompletableFuture<DescribePageDocumentsResponse> describePageDocuments(DescribePageDocumentsRequest request) {
         try {
@@ -2098,6 +2735,24 @@ public final class DefaultAsyncClient implements AsyncClient {
             return this.handler.execute(params);
         } catch (Exception e) {
             CompletableFuture<DescribePolicyPriorUsedResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
+     * @param request the request parameters of DescribePostpayEnabledProtection  DescribePostpayEnabledProtectionRequest
+     * @return DescribePostpayEnabledProtectionResponse
+     */
+    @Override
+    public CompletableFuture<DescribePostpayEnabledProtectionResponse> describePostpayEnabledProtection(DescribePostpayEnabledProtectionRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RPC).setAction("DescribePostpayEnabledProtection").setMethod(HttpMethod.GET).setPathRegex("/").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(DescribePostpayEnabledProtectionResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<DescribePostpayEnabledProtectionResponse> future = new CompletableFuture<>();
             future.completeExceptionally(e);
             return future;
         }
@@ -2272,6 +2927,24 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
+     * @param request the request parameters of DescribePrivateDnsStatistics  DescribePrivateDnsStatisticsRequest
+     * @return DescribePrivateDnsStatisticsResponse
+     */
+    @Override
+    public CompletableFuture<DescribePrivateDnsStatisticsResponse> describePrivateDnsStatistics(DescribePrivateDnsStatisticsRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RPC).setAction("DescribePrivateDnsStatistics").setMethod(HttpMethod.POST).setPathRegex("/").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(DescribePrivateDnsStatisticsResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<DescribePrivateDnsStatisticsResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
      * @param request the request parameters of DescribeRegionInfo  DescribeRegionInfoRequest
      * @return DescribeRegionInfoResponse
      */
@@ -2349,6 +3022,42 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
+     * @param request the request parameters of DescribeRiskEventStatistic  DescribeRiskEventStatisticRequest
+     * @return DescribeRiskEventStatisticResponse
+     */
+    @Override
+    public CompletableFuture<DescribeRiskEventStatisticResponse> describeRiskEventStatistic(DescribeRiskEventStatisticRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RPC).setAction("DescribeRiskEventStatistic").setMethod(HttpMethod.POST).setPathRegex("/").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(DescribeRiskEventStatisticResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<DescribeRiskEventStatisticResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
+     * @param request the request parameters of DescribeRiskEventTopAttackApp  DescribeRiskEventTopAttackAppRequest
+     * @return DescribeRiskEventTopAttackAppResponse
+     */
+    @Override
+    public CompletableFuture<DescribeRiskEventTopAttackAppResponse> describeRiskEventTopAttackApp(DescribeRiskEventTopAttackAppRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RPC).setAction("DescribeRiskEventTopAttackApp").setMethod(HttpMethod.POST).setPathRegex("/").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(DescribeRiskEventTopAttackAppResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<DescribeRiskEventTopAttackAppResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
      * @param request the request parameters of DescribeRiskEventTopAttackAsset  DescribeRiskEventTopAttackAssetRequest
      * @return DescribeRiskEventTopAttackAssetResponse
      */
@@ -2367,9 +3076,28 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
-     * @param request the request parameters of DescribeRiskSecurityGroupDetail  DescribeRiskSecurityGroupDetailRequest
+     * @param request the request parameters of DescribeRiskEventTopAttackType  DescribeRiskEventTopAttackTypeRequest
+     * @return DescribeRiskEventTopAttackTypeResponse
+     */
+    @Override
+    public CompletableFuture<DescribeRiskEventTopAttackTypeResponse> describeRiskEventTopAttackType(DescribeRiskEventTopAttackTypeRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RPC).setAction("DescribeRiskEventTopAttackType").setMethod(HttpMethod.POST).setPathRegex("/").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(DescribeRiskEventTopAttackTypeResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<DescribeRiskEventTopAttackTypeResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
+     * @deprecated OpenAPI DescribeRiskSecurityGroupDetail is deprecated  * @param request  the request parameters of DescribeRiskSecurityGroupDetail  DescribeRiskSecurityGroupDetailRequest
      * @return DescribeRiskSecurityGroupDetailResponse
      */
+    @Deprecated
     @Override
     public CompletableFuture<DescribeRiskSecurityGroupDetailResponse> describeRiskSecurityGroupDetail(DescribeRiskSecurityGroupDetailRequest request) {
         try {
@@ -2379,6 +3107,96 @@ public final class DefaultAsyncClient implements AsyncClient {
             return this.handler.execute(params);
         } catch (Exception e) {
             CompletableFuture<DescribeRiskSecurityGroupDetailResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
+     * @param request the request parameters of DescribeSdlEventDetail  DescribeSdlEventDetailRequest
+     * @return DescribeSdlEventDetailResponse
+     */
+    @Override
+    public CompletableFuture<DescribeSdlEventDetailResponse> describeSdlEventDetail(DescribeSdlEventDetailRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RPC).setAction("DescribeSdlEventDetail").setMethod(HttpMethod.POST).setPathRegex("/").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(DescribeSdlEventDetailResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<DescribeSdlEventDetailResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
+     * @param request the request parameters of DescribeSdlEventList  DescribeSdlEventListRequest
+     * @return DescribeSdlEventListResponse
+     */
+    @Override
+    public CompletableFuture<DescribeSdlEventListResponse> describeSdlEventList(DescribeSdlEventListRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RPC).setAction("DescribeSdlEventList").setMethod(HttpMethod.POST).setPathRegex("/").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(DescribeSdlEventListResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<DescribeSdlEventListResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
+     * @param request the request parameters of DescribeSdlEventSdList  DescribeSdlEventSdListRequest
+     * @return DescribeSdlEventSdListResponse
+     */
+    @Override
+    public CompletableFuture<DescribeSdlEventSdListResponse> describeSdlEventSdList(DescribeSdlEventSdListRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RPC).setAction("DescribeSdlEventSdList").setMethod(HttpMethod.POST).setPathRegex("/").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(DescribeSdlEventSdListResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<DescribeSdlEventSdListResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
+     * @param request the request parameters of DescribeSdlEventStatistic  DescribeSdlEventStatisticRequest
+     * @return DescribeSdlEventStatisticResponse
+     */
+    @Override
+    public CompletableFuture<DescribeSdlEventStatisticResponse> describeSdlEventStatistic(DescribeSdlEventStatisticRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RPC).setAction("DescribeSdlEventStatistic").setMethod(HttpMethod.POST).setPathRegex("/").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(DescribeSdlEventStatisticResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<DescribeSdlEventStatisticResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
+     * @param request the request parameters of DescribeSdlStatistic  DescribeSdlStatisticRequest
+     * @return DescribeSdlStatisticResponse
+     */
+    @Override
+    public CompletableFuture<DescribeSdlStatisticResponse> describeSdlStatistic(DescribeSdlStatisticRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RPC).setAction("DescribeSdlStatistic").setMethod(HttpMethod.POST).setPathRegex("/").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(DescribeSdlStatisticResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<DescribeSdlStatisticResponse> future = new CompletableFuture<>();
             future.completeExceptionally(e);
             return future;
         }
@@ -2403,9 +3221,10 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
-     * @param request the request parameters of DescribeSecurityProxy  DescribeSecurityProxyRequest
+     * @deprecated OpenAPI DescribeSecurityProxy is deprecated, please use Cloudfw::2017-12-07::DescribeNatFirewallList instead.  * @param request  the request parameters of DescribeSecurityProxy  DescribeSecurityProxyRequest
      * @return DescribeSecurityProxyResponse
      */
+    @Deprecated
     @Override
     public CompletableFuture<DescribeSecurityProxyResponse> describeSecurityProxy(DescribeSecurityProxyRequest request) {
         try {
@@ -2415,6 +3234,42 @@ public final class DefaultAsyncClient implements AsyncClient {
             return this.handler.execute(params);
         } catch (Exception e) {
             CompletableFuture<DescribeSecurityProxyResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
+     * @param request the request parameters of DescribeSecurityProxyResources  DescribeSecurityProxyResourcesRequest
+     * @return DescribeSecurityProxyResourcesResponse
+     */
+    @Override
+    public CompletableFuture<DescribeSecurityProxyResourcesResponse> describeSecurityProxyResources(DescribeSecurityProxyResourcesRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RPC).setAction("DescribeSecurityProxyResources").setMethod(HttpMethod.POST).setPathRegex("/").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(DescribeSecurityProxyResourcesResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<DescribeSecurityProxyResourcesResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
+     * @param request the request parameters of DescribeSensitiveSwitch  DescribeSensitiveSwitchRequest
+     * @return DescribeSensitiveSwitchResponse
+     */
+    @Override
+    public CompletableFuture<DescribeSensitiveSwitchResponse> describeSensitiveSwitch(DescribeSensitiveSwitchRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RPC).setAction("DescribeSensitiveSwitch").setMethod(HttpMethod.POST).setPathRegex("/").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(DescribeSensitiveSwitchResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<DescribeSensitiveSwitchResponse> future = new CompletableFuture<>();
             future.completeExceptionally(e);
             return future;
         }
@@ -2433,6 +3288,24 @@ public final class DefaultAsyncClient implements AsyncClient {
             return this.handler.execute(params);
         } catch (Exception e) {
             CompletableFuture<DescribeSignatureLibVersionResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
+     * @param request the request parameters of DescribeSlrGrant  DescribeSlrGrantRequest
+     * @return DescribeSlrGrantResponse
+     */
+    @Override
+    public CompletableFuture<DescribeSlrGrantResponse> describeSlrGrant(DescribeSlrGrantRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RPC).setAction("DescribeSlrGrant").setMethod(HttpMethod.POST).setPathRegex("/").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(DescribeSlrGrantResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<DescribeSlrGrantResponse> future = new CompletableFuture<>();
             future.completeExceptionally(e);
             return future;
         }
@@ -2565,6 +3438,60 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
+     * @param request the request parameters of DescribeTrafficLog  DescribeTrafficLogRequest
+     * @return DescribeTrafficLogResponse
+     */
+    @Override
+    public CompletableFuture<DescribeTrafficLogResponse> describeTrafficLog(DescribeTrafficLogRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RPC).setAction("DescribeTrafficLog").setMethod(HttpMethod.POST).setPathRegex("/").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(DescribeTrafficLogResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<DescribeTrafficLogResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
+     * @param request the request parameters of DescribeTransitRouterResourcesList  DescribeTransitRouterResourcesListRequest
+     * @return DescribeTransitRouterResourcesListResponse
+     */
+    @Override
+    public CompletableFuture<DescribeTransitRouterResourcesListResponse> describeTransitRouterResourcesList(DescribeTransitRouterResourcesListRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RPC).setAction("DescribeTransitRouterResourcesList").setMethod(HttpMethod.POST).setPathRegex("/").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(DescribeTransitRouterResourcesListResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<DescribeTransitRouterResourcesListResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
+     * @param request the request parameters of DescribeUnprotectedPortTrend  DescribeUnprotectedPortTrendRequest
+     * @return DescribeUnprotectedPortTrendResponse
+     */
+    @Override
+    public CompletableFuture<DescribeUnprotectedPortTrendResponse> describeUnprotectedPortTrend(DescribeUnprotectedPortTrendRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RPC).setAction("DescribeUnprotectedPortTrend").setMethod(HttpMethod.POST).setPathRegex("/").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(DescribeUnprotectedPortTrendResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<DescribeUnprotectedPortTrendResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
      * @param request the request parameters of DescribeUnprotectedVulnTrend  DescribeUnprotectedVulnTrendRequest
      * @return DescribeUnprotectedVulnTrendResponse
      */
@@ -2601,9 +3528,10 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
-     * @param request the request parameters of DescribeUserAssetIPTrafficInfo  DescribeUserAssetIPTrafficInfoRequest
+     * @deprecated OpenAPI DescribeUserAssetIPTrafficInfo is deprecated  * @param request  the request parameters of DescribeUserAssetIPTrafficInfo  DescribeUserAssetIPTrafficInfoRequest
      * @return DescribeUserAssetIPTrafficInfoResponse
      */
+    @Deprecated
     @Override
     public CompletableFuture<DescribeUserAssetIPTrafficInfoResponse> describeUserAssetIPTrafficInfo(DescribeUserAssetIPTrafficInfoRequest request) {
         try {
@@ -2660,6 +3588,24 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
+     * @param request the request parameters of DescribeVfwIPSConfigList  DescribeVfwIPSConfigListRequest
+     * @return DescribeVfwIPSConfigListResponse
+     */
+    @Override
+    public CompletableFuture<DescribeVfwIPSConfigListResponse> describeVfwIPSConfigList(DescribeVfwIPSConfigListRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RPC).setAction("DescribeVfwIPSConfigList").setMethod(HttpMethod.GET).setPathRegex("/").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(DescribeVfwIPSConfigListResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<DescribeVfwIPSConfigListResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
      * @param request the request parameters of DescribeVpcFirewallAccessDetail  DescribeVpcFirewallAccessDetailRequest
      * @return DescribeVpcFirewallAccessDetailResponse
      */
@@ -2695,6 +3641,42 @@ public final class DefaultAsyncClient implements AsyncClient {
             return this.handler.execute(params);
         } catch (Exception e) {
             CompletableFuture<DescribeVpcFirewallAclGroupListResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
+     * @param request the request parameters of DescribeVpcFirewallAssetList  DescribeVpcFirewallAssetListRequest
+     * @return DescribeVpcFirewallAssetListResponse
+     */
+    @Override
+    public CompletableFuture<DescribeVpcFirewallAssetListResponse> describeVpcFirewallAssetList(DescribeVpcFirewallAssetListRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RPC).setAction("DescribeVpcFirewallAssetList").setMethod(HttpMethod.POST).setPathRegex("/").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(DescribeVpcFirewallAssetListResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<DescribeVpcFirewallAssetListResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
+     * @param request the request parameters of DescribeVpcFirewallAssetRegionList  DescribeVpcFirewallAssetRegionListRequest
+     * @return DescribeVpcFirewallAssetRegionListResponse
+     */
+    @Override
+    public CompletableFuture<DescribeVpcFirewallAssetRegionListResponse> describeVpcFirewallAssetRegionList(DescribeVpcFirewallAssetRegionListRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RPC).setAction("DescribeVpcFirewallAssetRegionList").setMethod(HttpMethod.GET).setPathRegex("/").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(DescribeVpcFirewallAssetRegionListResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<DescribeVpcFirewallAssetRegionListResponse> future = new CompletableFuture<>();
             future.completeExceptionally(e);
             return future;
         }
@@ -2834,6 +3816,24 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
+     * @param request the request parameters of DescribeVpcFirewallDropTrafficTrend  DescribeVpcFirewallDropTrafficTrendRequest
+     * @return DescribeVpcFirewallDropTrafficTrendResponse
+     */
+    @Override
+    public CompletableFuture<DescribeVpcFirewallDropTrafficTrendResponse> describeVpcFirewallDropTrafficTrend(DescribeVpcFirewallDropTrafficTrendRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RPC).setAction("DescribeVpcFirewallDropTrafficTrend").setMethod(HttpMethod.GET).setPathRegex("/").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(DescribeVpcFirewallDropTrafficTrendResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<DescribeVpcFirewallDropTrafficTrendResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
      * @param request the request parameters of DescribeVpcFirewallIPSWhitelist  DescribeVpcFirewallIPSWhitelistRequest
      * @return DescribeVpcFirewallIPSWhitelistResponse
      */
@@ -2875,6 +3875,24 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
+     * @param request the request parameters of DescribeVpcFirewallManualVSwitchList  DescribeVpcFirewallManualVSwitchListRequest
+     * @return DescribeVpcFirewallManualVSwitchListResponse
+     */
+    @Override
+    public CompletableFuture<DescribeVpcFirewallManualVSwitchListResponse> describeVpcFirewallManualVSwitchList(DescribeVpcFirewallManualVSwitchListRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RPC).setAction("DescribeVpcFirewallManualVSwitchList").setMethod(HttpMethod.POST).setPathRegex("/").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(DescribeVpcFirewallManualVSwitchListResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<DescribeVpcFirewallManualVSwitchListResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
      * <b>description</b> :
      * <p>You can call this operation to query the priority range of access control policies that are created for a VPC firewall in a specific policy group.</p>
      * <h2><a href="#qps-"></a>Limits</h2>
@@ -2898,6 +3916,24 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
+     * @param request the request parameters of DescribeVpcFirewallPrecheckDetail  DescribeVpcFirewallPrecheckDetailRequest
+     * @return DescribeVpcFirewallPrecheckDetailResponse
+     */
+    @Override
+    public CompletableFuture<DescribeVpcFirewallPrecheckDetailResponse> describeVpcFirewallPrecheckDetail(DescribeVpcFirewallPrecheckDetailRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RPC).setAction("DescribeVpcFirewallPrecheckDetail").setMethod(HttpMethod.POST).setPathRegex("/").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(DescribeVpcFirewallPrecheckDetailResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<DescribeVpcFirewallPrecheckDetailResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
      * @param request the request parameters of DescribeVpcFirewallSummaryInfo  DescribeVpcFirewallSummaryInfoRequest
      * @return DescribeVpcFirewallSummaryInfoResponse
      */
@@ -2910,6 +3946,24 @@ public final class DefaultAsyncClient implements AsyncClient {
             return this.handler.execute(params);
         } catch (Exception e) {
             CompletableFuture<DescribeVpcFirewallSummaryInfoResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
+     * @param request the request parameters of DescribeVpcFirewallZone  DescribeVpcFirewallZoneRequest
+     * @return DescribeVpcFirewallZoneResponse
+     */
+    @Override
+    public CompletableFuture<DescribeVpcFirewallZoneResponse> describeVpcFirewallZone(DescribeVpcFirewallZoneRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RPC).setAction("DescribeVpcFirewallZone").setMethod(HttpMethod.POST).setPathRegex("/").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(DescribeVpcFirewallZoneResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<DescribeVpcFirewallZoneResponse> future = new CompletableFuture<>();
             future.completeExceptionally(e);
             return future;
         }
@@ -2964,6 +4018,24 @@ public final class DefaultAsyncClient implements AsyncClient {
             return this.handler.execute(params);
         } catch (Exception e) {
             CompletableFuture<DescribeVulnerabilityProtectedListResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
+     * @param request the request parameters of DisableSdlProtectedAsset  DisableSdlProtectedAssetRequest
+     * @return DisableSdlProtectedAssetResponse
+     */
+    @Override
+    public CompletableFuture<DisableSdlProtectedAssetResponse> disableSdlProtectedAsset(DisableSdlProtectedAssetRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RPC).setAction("DisableSdlProtectedAsset").setMethod(HttpMethod.POST).setPathRegex("/").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(DisableSdlProtectedAssetResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<DisableSdlProtectedAssetResponse> future = new CompletableFuture<>();
             future.completeExceptionally(e);
             return future;
         }
@@ -3070,14 +4142,14 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
-     * <b>description</b> :
-     * <p>You can use this operation to modify the priority of an IPv4 access control policy for the Internet firewall. No API operations are provided for you to modify the priority of an IPv6 access control policy for the Internet firewall.</p>
-     * <h2><a href="#qps"></a>Limits</h2>
-     * <p>You can call this operation up to 10 times per second per account. If the number of the calls per second exceeds the limit, throttling is triggered. As a result, your business may be affected. We recommend that you take note of the limit when you call this operation.</p>
+     * @deprecated OpenAPI ModifyControlPolicyPosition is deprecated, please use Cloudfw::2017-12-07::ModifyControlPolicyPriority instead.  * @description You can use this operation to modify the priority of an IPv4 access control policy for the Internet firewall. No API operations are provided for you to modify the priority of an IPv6 access control policy for the Internet firewall.
+     * ## [](#qps)Limits
+     * You can call this operation up to 10 times per second per account. If the number of the calls per second exceeds the limit, throttling is triggered. As a result, your business may be affected. We recommend that you take note of the limit when you call this operation.
      * 
      * @param request the request parameters of ModifyControlPolicyPosition  ModifyControlPolicyPositionRequest
      * @return ModifyControlPolicyPositionResponse
      */
+    @Deprecated
     @Override
     public CompletableFuture<ModifyControlPolicyPositionResponse> modifyControlPolicyPosition(ModifyControlPolicyPositionRequest request) {
         try {
@@ -3182,6 +4254,24 @@ public final class DefaultAsyncClient implements AsyncClient {
             return this.handler.execute(params);
         } catch (Exception e) {
             CompletableFuture<ModifyInstanceMemberAttributesResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
+     * @param request the request parameters of ModifyIpsRules  ModifyIpsRulesRequest
+     * @return ModifyIpsRulesResponse
+     */
+    @Override
+    public CompletableFuture<ModifyIpsRulesResponse> modifyIpsRules(ModifyIpsRulesRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RPC).setAction("ModifyIpsRules").setMethod(HttpMethod.POST).setPathRegex("/").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(ModifyIpsRulesResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<ModifyIpsRulesResponse> future = new CompletableFuture<>();
             future.completeExceptionally(e);
             return future;
         }
@@ -3304,6 +4394,24 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
+     * @param request the request parameters of ModifyResourceTypeAutoEnable  ModifyResourceTypeAutoEnableRequest
+     * @return ModifyResourceTypeAutoEnableResponse
+     */
+    @Override
+    public CompletableFuture<ModifyResourceTypeAutoEnableResponse> modifyResourceTypeAutoEnable(ModifyResourceTypeAutoEnableRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RPC).setAction("ModifyResourceTypeAutoEnable").setMethod(HttpMethod.POST).setPathRegex("/").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(ModifyResourceTypeAutoEnableResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<ModifyResourceTypeAutoEnableResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
      * @param request the request parameters of ModifySensitiveSwitch  ModifySensitiveSwitchRequest
      * @return ModifySensitiveSwitchResponse
      */
@@ -3388,6 +4496,24 @@ public final class DefaultAsyncClient implements AsyncClient {
             return this.handler.execute(params);
         } catch (Exception e) {
             CompletableFuture<ModifyTrFirewallV2RoutePolicyScopeResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
+     * @param request the request parameters of ModifyUserAlarmConfig  ModifyUserAlarmConfigRequest
+     * @return ModifyUserAlarmConfigResponse
+     */
+    @Override
+    public CompletableFuture<ModifyUserAlarmConfigResponse> modifyUserAlarmConfig(ModifyUserAlarmConfigRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RPC).setAction("ModifyUserAlarmConfig").setMethod(HttpMethod.POST).setPathRegex("/").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(ModifyUserAlarmConfigResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<ModifyUserAlarmConfigResponse> future = new CompletableFuture<>();
             future.completeExceptionally(e);
             return future;
         }
@@ -3954,6 +5080,24 @@ public final class DefaultAsyncClient implements AsyncClient {
             return this.handler.execute(params);
         } catch (Exception e) {
             CompletableFuture<UpdateSecurityProxyResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
+     * @param request the request parameters of UseAclBackupData  UseAclBackupDataRequest
+     * @return UseAclBackupDataResponse
+     */
+    @Override
+    public CompletableFuture<UseAclBackupDataResponse> useAclBackupData(UseAclBackupDataRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RPC).setAction("UseAclBackupData").setMethod(HttpMethod.POST).setPathRegex("/").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(UseAclBackupDataResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<UseAclBackupDataResponse> future = new CompletableFuture<>();
             future.completeExceptionally(e);
             return future;
         }

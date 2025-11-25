@@ -20,6 +20,12 @@ public interface AsyncClient extends SdkAutoCloseable {
     }
 
     /**
+     * @param request the request parameters of AddAclBackupData  AddAclBackupDataRequest
+     * @return AddAclBackupDataResponse
+     */
+    CompletableFuture<AddAclBackupDataResponse> addAclBackupData(AddAclBackupDataRequest request);
+
+    /**
      * <b>description</b> :
      * <p>You can call the AddAddressBook operation to create an address book for access control. The address book can be an IP address book, an ECS tag-based address book, a port address book, or a domain address book.</p>
      * <h2><a href="#qps"></a>Limits</h2>
@@ -48,6 +54,12 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<AddDnsFirewallPolicyResponse> addDnsFirewallPolicy(AddDnsFirewallPolicyRequest request);
 
     /**
+     * @param request the request parameters of AddDomainResolveRealtimeTask  AddDomainResolveRealtimeTaskRequest
+     * @return AddDomainResolveRealtimeTaskResponse
+     */
+    CompletableFuture<AddDomainResolveRealtimeTaskResponse> addDomainResolveRealtimeTask(AddDomainResolveRealtimeTaskRequest request);
+
+    /**
      * <b>description</b> :
      * <p>You can call this operation to add members to Cloud Firewall.</p>
      * <h2><a href="#qps-"></a>Limits</h2>
@@ -65,14 +77,17 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<AddPrivateDnsDomainNameResponse> addPrivateDnsDomainName(AddPrivateDnsDomainNameRequest request);
 
     /**
-     * <b>description</b> :
-     * <p>You can call the BatchCopyVpcFirewallControlPolicy operation to copy all access control policies from a policy group of a source VPC firewall to a policy group of a destination VPC firewall.<br>Before you call this operation, we recommend that you back up access control policies. For more information about how to back up an access control policy, see <a href="https://www.alibabacloud.com/help/en/cloud-firewall/latest/back-up-and-roll-back-an-access-control-policy">Back up an access control policy</a>.<br>After you call this operation, all the access control policies in the policy group of the destination VPC firewall are replaced.<br>The policy groups of the source VPC firewall and the destination VPC firewall must belong to the same Alibaba Cloud account.  </p>
-     * <h2>Limits</h2>
-     * <p>You can call this operation up to 10 times per second per account. When the number of calls to this operation per second exceeds the limit, throttling is triggered. Throttling may affect your business. We recommend that you take note of the limit on this operation.</p>
+     * @deprecated OpenAPI BatchCopyVpcFirewallControlPolicy is deprecated  * @description You can call the BatchCopyVpcFirewallControlPolicy operation to copy all access control policies from a policy group of a source VPC firewall to a policy group of a destination VPC firewall.  
+     * Before you call this operation, we recommend that you back up access control policies. For more information about how to back up an access control policy, see [Back up an access control policy](https://www.alibabacloud.com/help/en/cloud-firewall/latest/back-up-and-roll-back-an-access-control-policy).  
+     * After you call this operation, all the access control policies in the policy group of the destination VPC firewall are replaced.  
+     * The policy groups of the source VPC firewall and the destination VPC firewall must belong to the same Alibaba Cloud account.  
+     * ## Limits
+     * You can call this operation up to 10 times per second per account. When the number of calls to this operation per second exceeds the limit, throttling is triggered. Throttling may affect your business. We recommend that you take note of the limit on this operation.
      * 
      * @param request the request parameters of BatchCopyVpcFirewallControlPolicy  BatchCopyVpcFirewallControlPolicyRequest
      * @return BatchCopyVpcFirewallControlPolicyResponse
      */
+    @Deprecated
     CompletableFuture<BatchCopyVpcFirewallControlPolicyResponse> batchCopyVpcFirewallControlPolicy(BatchCopyVpcFirewallControlPolicyRequest request);
 
     /**
@@ -80,6 +95,12 @@ public interface AsyncClient extends SdkAutoCloseable {
      * @return BatchDeleteVpcFirewallControlPolicyResponse
      */
     CompletableFuture<BatchDeleteVpcFirewallControlPolicyResponse> batchDeleteVpcFirewallControlPolicy(BatchDeleteVpcFirewallControlPolicyRequest request);
+
+    /**
+     * @param request the request parameters of ClearLogStoreStorage  ClearLogStoreStorageRequest
+     * @return ClearLogStoreStorageResponse
+     */
+    CompletableFuture<ClearLogStoreStorageResponse> clearLogStoreStorage(ClearLogStoreStorageRequest request);
 
     /**
      * @param request the request parameters of CreateAckClusterConnector  CreateAckClusterConnectorRequest
@@ -100,6 +121,18 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<CreateDownloadTaskResponse> createDownloadTask(CreateDownloadTaskRequest request);
 
     /**
+     * @param request the request parameters of CreateInstanceSyncTask  CreateInstanceSyncTaskRequest
+     * @return CreateInstanceSyncTaskResponse
+     */
+    CompletableFuture<CreateInstanceSyncTaskResponse> createInstanceSyncTask(CreateInstanceSyncTaskRequest request);
+
+    /**
+     * @param request the request parameters of CreateIpsPrivateAssoc  CreateIpsPrivateAssocRequest
+     * @return CreateIpsPrivateAssocResponse
+     */
+    CompletableFuture<CreateIpsPrivateAssocResponse> createIpsPrivateAssoc(CreateIpsPrivateAssocRequest request);
+
+    /**
      * <b>description</b> :
      * <p>You can call this operation to create a policy that allows, denies, or monitors the traffic that passes through the NAT firewall.</p>
      * 
@@ -113,6 +146,12 @@ public interface AsyncClient extends SdkAutoCloseable {
      * @return CreateNatFirewallPreCheckResponse
      */
     CompletableFuture<CreateNatFirewallPreCheckResponse> createNatFirewallPreCheck(CreateNatFirewallPreCheckRequest request);
+
+    /**
+     * @param request the request parameters of CreateNatFirewallSyncTask  CreateNatFirewallSyncTaskRequest
+     * @return CreateNatFirewallSyncTaskResponse
+     */
+    CompletableFuture<CreateNatFirewallSyncTaskResponse> createNatFirewallSyncTask(CreateNatFirewallSyncTaskRequest request);
 
     /**
      * @param request the request parameters of CreatePrivateDnsEndpoint  CreatePrivateDnsEndpointRequest
@@ -156,9 +195,10 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<CreateVpcFirewallCenConfigureResponse> createVpcFirewallCenConfigure(CreateVpcFirewallCenConfigureRequest request);
 
     /**
-     * @param request the request parameters of CreateVpcFirewallCenManualConfigure  CreateVpcFirewallCenManualConfigureRequest
+     * @deprecated OpenAPI CreateVpcFirewallCenManualConfigure is deprecated  * @param request  the request parameters of CreateVpcFirewallCenManualConfigure  CreateVpcFirewallCenManualConfigureRequest
      * @return CreateVpcFirewallCenManualConfigureResponse
      */
+    @Deprecated
     CompletableFuture<CreateVpcFirewallCenManualConfigureResponse> createVpcFirewallCenManualConfigure(CreateVpcFirewallCenManualConfigureRequest request);
 
     /**
@@ -432,6 +472,12 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<DescribeAclAppsResponse> describeAclApps(DescribeAclAppsRequest request);
 
     /**
+     * @param request the request parameters of DescribeAclBackupList  DescribeAclBackupListRequest
+     * @return DescribeAclBackupListResponse
+     */
+    CompletableFuture<DescribeAclBackupListResponse> describeAclBackupList(DescribeAclBackupListRequest request);
+
+    /**
      * @param request the request parameters of DescribeAclCheck  DescribeAclCheckRequest
      * @return DescribeAclCheckResponse
      */
@@ -496,9 +542,22 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<DescribeAssetStatisticResponse> describeAssetStatistic(DescribeAssetStatisticRequest request);
 
     /**
-     * @param request the request parameters of DescribeCfwRiskLevelSummary  DescribeCfwRiskLevelSummaryRequest
+     * @param request the request parameters of DescribeAttackAppCategory  DescribeAttackAppCategoryRequest
+     * @return DescribeAttackAppCategoryResponse
+     */
+    CompletableFuture<DescribeAttackAppCategoryResponse> describeAttackAppCategory(DescribeAttackAppCategoryRequest request);
+
+    /**
+     * @param request the request parameters of DescribeBatchSlsDispatchStatus  DescribeBatchSlsDispatchStatusRequest
+     * @return DescribeBatchSlsDispatchStatusResponse
+     */
+    CompletableFuture<DescribeBatchSlsDispatchStatusResponse> describeBatchSlsDispatchStatus(DescribeBatchSlsDispatchStatusRequest request);
+
+    /**
+     * @deprecated OpenAPI DescribeCfwRiskLevelSummary is deprecated  * @param request  the request parameters of DescribeCfwRiskLevelSummary  DescribeCfwRiskLevelSummaryRequest
      * @return DescribeCfwRiskLevelSummaryResponse
      */
+    @Deprecated
     CompletableFuture<DescribeCfwRiskLevelSummaryResponse> describeCfwRiskLevelSummary(DescribeCfwRiskLevelSummaryRequest request);
 
     /**
@@ -506,6 +565,18 @@ public interface AsyncClient extends SdkAutoCloseable {
      * @return DescribeClearAuthInfoResponse
      */
     CompletableFuture<DescribeClearAuthInfoResponse> describeClearAuthInfo(DescribeClearAuthInfoRequest request);
+
+    /**
+     * @param request the request parameters of DescribeConfiguredDestinationIP  DescribeConfiguredDestinationIPRequest
+     * @return DescribeConfiguredDestinationIPResponse
+     */
+    CompletableFuture<DescribeConfiguredDestinationIPResponse> describeConfiguredDestinationIP(DescribeConfiguredDestinationIPRequest request);
+
+    /**
+     * @param request the request parameters of DescribeConfiguredDomainNames  DescribeConfiguredDomainNamesRequest
+     * @return DescribeConfiguredDomainNamesResponse
+     */
+    CompletableFuture<DescribeConfiguredDomainNamesResponse> describeConfiguredDomainNames(DescribeConfiguredDomainNamesRequest request);
 
     /**
      * <b>description</b> :
@@ -517,6 +588,18 @@ public interface AsyncClient extends SdkAutoCloseable {
      * @return DescribeControlPolicyResponse
      */
     CompletableFuture<DescribeControlPolicyResponse> describeControlPolicy(DescribeControlPolicyRequest request);
+
+    /**
+     * @param request the request parameters of DescribeControlPolicyDomainResolve  DescribeControlPolicyDomainResolveRequest
+     * @return DescribeControlPolicyDomainResolveResponse
+     */
+    CompletableFuture<DescribeControlPolicyDomainResolveResponse> describeControlPolicyDomainResolve(DescribeControlPolicyDomainResolveRequest request);
+
+    /**
+     * @param request the request parameters of DescribeCreatedNatFirewall  DescribeCreatedNatFirewallRequest
+     * @return DescribeCreatedNatFirewallResponse
+     */
+    CompletableFuture<DescribeCreatedNatFirewallResponse> describeCreatedNatFirewall(DescribeCreatedNatFirewallRequest request);
 
     /**
      * @param request the request parameters of DescribeCtrlInstanceMemberAccounts  DescribeCtrlInstanceMemberAccountsRequest
@@ -560,9 +643,10 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<DescribeDownloadTaskTypeResponse> describeDownloadTaskType(DescribeDownloadTaskTypeRequest request);
 
     /**
-     * @param request the request parameters of DescribeFirewallDropStatistics  DescribeFirewallDropStatisticsRequest
+     * @deprecated OpenAPI DescribeFirewallDropStatistics is deprecated  * @param request  the request parameters of DescribeFirewallDropStatistics  DescribeFirewallDropStatisticsRequest
      * @return DescribeFirewallDropStatisticsResponse
      */
+    @Deprecated
     CompletableFuture<DescribeFirewallDropStatisticsResponse> describeFirewallDropStatistics(DescribeFirewallDropStatisticsRequest request);
 
     /**
@@ -578,6 +662,12 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<DescribeFirewallVSwitchResponse> describeFirewallVSwitch(DescribeFirewallVSwitchRequest request);
 
     /**
+     * @param request the request parameters of DescribeFirewallVswitchResources  DescribeFirewallVswitchResourcesRequest
+     * @return DescribeFirewallVswitchResourcesResponse
+     */
+    CompletableFuture<DescribeFirewallVswitchResourcesResponse> describeFirewallVswitchResources(DescribeFirewallVswitchResourcesRequest request);
+
+    /**
      * <b>description</b> :
      * <p>You can use this operation to query the information about members in Cloud Firewall.</p>
      * <h2>Limits</h2>
@@ -587,6 +677,12 @@ public interface AsyncClient extends SdkAutoCloseable {
      * @return DescribeInstanceMembersResponse
      */
     CompletableFuture<DescribeInstanceMembersResponse> describeInstanceMembers(DescribeInstanceMembersRequest request);
+
+    /**
+     * @param request the request parameters of DescribeInstanceRdAccounts  DescribeInstanceRdAccountsRequest
+     * @return DescribeInstanceRdAccountsResponse
+     */
+    CompletableFuture<DescribeInstanceRdAccountsResponse> describeInstanceRdAccounts(DescribeInstanceRdAccountsRequest request);
 
     /**
      * @param request the request parameters of DescribeInstanceRiskLevels  DescribeInstanceRiskLevelsRequest
@@ -599,6 +695,12 @@ public interface AsyncClient extends SdkAutoCloseable {
      * @return DescribeInternetDropTrafficTrendResponse
      */
     CompletableFuture<DescribeInternetDropTrafficTrendResponse> describeInternetDropTrafficTrend(DescribeInternetDropTrafficTrendRequest request);
+
+    /**
+     * @param request the request parameters of DescribeInternetOpenDetail  DescribeInternetOpenDetailRequest
+     * @return DescribeInternetOpenDetailResponse
+     */
+    CompletableFuture<DescribeInternetOpenDetailResponse> describeInternetOpenDetail(DescribeInternetOpenDetailRequest request);
 
     /**
      * @param request the request parameters of DescribeInternetOpenIp  DescribeInternetOpenIpRequest
@@ -619,10 +721,52 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<DescribeInternetOpenServiceResponse> describeInternetOpenService(DescribeInternetOpenServiceRequest request);
 
     /**
+     * @param request the request parameters of DescribeInternetOpenStatistic  DescribeInternetOpenStatisticRequest
+     * @return DescribeInternetOpenStatisticResponse
+     */
+    CompletableFuture<DescribeInternetOpenStatisticResponse> describeInternetOpenStatistic(DescribeInternetOpenStatisticRequest request);
+
+    /**
+     * @param request the request parameters of DescribeInternetServiceNameList  DescribeInternetServiceNameListRequest
+     * @return DescribeInternetServiceNameListResponse
+     */
+    CompletableFuture<DescribeInternetServiceNameListResponse> describeInternetServiceNameList(DescribeInternetServiceNameListRequest request);
+
+    /**
+     * @param request the request parameters of DescribeInternetSlb  DescribeInternetSlbRequest
+     * @return DescribeInternetSlbResponse
+     */
+    CompletableFuture<DescribeInternetSlbResponse> describeInternetSlb(DescribeInternetSlbRequest request);
+
+    /**
+     * @param request the request parameters of DescribeInternetTimeTop  DescribeInternetTimeTopRequest
+     * @return DescribeInternetTimeTopResponse
+     */
+    CompletableFuture<DescribeInternetTimeTopResponse> describeInternetTimeTop(DescribeInternetTimeTopRequest request);
+
+    /**
+     * @param request the request parameters of DescribeInternetTrafficTop  DescribeInternetTrafficTopRequest
+     * @return DescribeInternetTrafficTopResponse
+     */
+    CompletableFuture<DescribeInternetTrafficTopResponse> describeInternetTrafficTop(DescribeInternetTrafficTopRequest request);
+
+    /**
      * @param request the request parameters of DescribeInternetTrafficTrend  DescribeInternetTrafficTrendRequest
      * @return DescribeInternetTrafficTrendResponse
      */
     CompletableFuture<DescribeInternetTrafficTrendResponse> describeInternetTrafficTrend(DescribeInternetTrafficTrendRequest request);
+
+    /**
+     * @param request the request parameters of DescribeInvadeEcsTrend  DescribeInvadeEcsTrendRequest
+     * @return DescribeInvadeEcsTrendResponse
+     */
+    CompletableFuture<DescribeInvadeEcsTrendResponse> describeInvadeEcsTrend(DescribeInvadeEcsTrendRequest request);
+
+    /**
+     * @param request the request parameters of DescribeInvadeEventDetail  DescribeInvadeEventDetailRequest
+     * @return DescribeInvadeEventDetailResponse
+     */
+    CompletableFuture<DescribeInvadeEventDetailResponse> describeInvadeEventDetail(DescribeInvadeEventDetailRequest request);
 
     /**
      * @param request the request parameters of DescribeInvadeEventList  DescribeInvadeEventListRequest
@@ -643,16 +787,46 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<DescribeInvadeEventStatisticResponse> describeInvadeEventStatistic(DescribeInvadeEventStatisticRequest request);
 
     /**
+     * @param request the request parameters of DescribeIpsPrivateAssoc  DescribeIpsPrivateAssocRequest
+     * @return DescribeIpsPrivateAssocResponse
+     */
+    CompletableFuture<DescribeIpsPrivateAssocResponse> describeIpsPrivateAssoc(DescribeIpsPrivateAssocRequest request);
+
+    /**
+     * @param request the request parameters of DescribeIspInfo  DescribeIspInfoRequest
+     * @return DescribeIspInfoResponse
+     */
+    CompletableFuture<DescribeIspInfoResponse> describeIspInfo(DescribeIspInfoRequest request);
+
+    /**
+     * @param request the request parameters of DescribeLocationInfo  DescribeLocationInfoRequest
+     * @return DescribeLocationInfoResponse
+     */
+    CompletableFuture<DescribeLocationInfoResponse> describeLocationInfo(DescribeLocationInfoRequest request);
+
+    /**
      * @param request the request parameters of DescribeLogStoreInfo  DescribeLogStoreInfoRequest
      * @return DescribeLogStoreInfoResponse
      */
     CompletableFuture<DescribeLogStoreInfoResponse> describeLogStoreInfo(DescribeLogStoreInfoRequest request);
 
     /**
+     * @param request the request parameters of DescribeMemberInfo  DescribeMemberInfoRequest
+     * @return DescribeMemberInfoResponse
+     */
+    CompletableFuture<DescribeMemberInfoResponse> describeMemberInfo(DescribeMemberInfoRequest request);
+
+    /**
      * @param request the request parameters of DescribeNatAclPageStatus  DescribeNatAclPageStatusRequest
      * @return DescribeNatAclPageStatusResponse
      */
     CompletableFuture<DescribeNatAclPageStatusResponse> describeNatAclPageStatus(DescribeNatAclPageStatusRequest request);
+
+    /**
+     * @param request the request parameters of DescribeNatFirewallAclGroupList  DescribeNatFirewallAclGroupListRequest
+     * @return DescribeNatFirewallAclGroupListResponse
+     */
+    CompletableFuture<DescribeNatFirewallAclGroupListResponse> describeNatFirewallAclGroupList(DescribeNatFirewallAclGroupListRequest request);
 
     /**
      * <b>description</b> :
@@ -685,10 +859,22 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<DescribeNatFirewallPolicyPriorUsedResponse> describeNatFirewallPolicyPriorUsed(DescribeNatFirewallPolicyPriorUsedRequest request);
 
     /**
+     * @param request the request parameters of DescribeNatFirewallPrecheckDetail  DescribeNatFirewallPrecheckDetailRequest
+     * @return DescribeNatFirewallPrecheckDetailResponse
+     */
+    CompletableFuture<DescribeNatFirewallPrecheckDetailResponse> describeNatFirewallPrecheckDetail(DescribeNatFirewallPrecheckDetailRequest request);
+
+    /**
      * @param request the request parameters of DescribeNatFirewallQuota  DescribeNatFirewallQuotaRequest
      * @return DescribeNatFirewallQuotaResponse
      */
     CompletableFuture<DescribeNatFirewallQuotaResponse> describeNatFirewallQuota(DescribeNatFirewallQuotaRequest request);
+
+    /**
+     * @param request the request parameters of DescribeNatFirewallTimeTop  DescribeNatFirewallTimeTopRequest
+     * @return DescribeNatFirewallTimeTopResponse
+     */
+    CompletableFuture<DescribeNatFirewallTimeTopResponse> describeNatFirewallTimeTop(DescribeNatFirewallTimeTopRequest request);
 
     /**
      * @param request the request parameters of DescribeNatFirewallTrafficTrend  DescribeNatFirewallTrafficTrendRequest
@@ -727,10 +913,28 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<DescribeOutgoingAssetListResponse> describeOutgoingAssetList(DescribeOutgoingAssetListRequest request);
 
     /**
+     * @param request the request parameters of DescribeOutgoingDestination  DescribeOutgoingDestinationRequest
+     * @return DescribeOutgoingDestinationResponse
+     */
+    CompletableFuture<DescribeOutgoingDestinationResponse> describeOutgoingDestination(DescribeOutgoingDestinationRequest request);
+
+    /**
+     * @param request the request parameters of DescribeOutgoingDestinationCategory  DescribeOutgoingDestinationCategoryRequest
+     * @return DescribeOutgoingDestinationCategoryResponse
+     */
+    CompletableFuture<DescribeOutgoingDestinationCategoryResponse> describeOutgoingDestinationCategory(DescribeOutgoingDestinationCategoryRequest request);
+
+    /**
      * @param request the request parameters of DescribeOutgoingDestinationIP  DescribeOutgoingDestinationIPRequest
      * @return DescribeOutgoingDestinationIPResponse
      */
     CompletableFuture<DescribeOutgoingDestinationIPResponse> describeOutgoingDestinationIP(DescribeOutgoingDestinationIPRequest request);
+
+    /**
+     * @param request the request parameters of DescribeOutgoingDestinationIPDetail  DescribeOutgoingDestinationIPDetailRequest
+     * @return DescribeOutgoingDestinationIPDetailResponse
+     */
+    CompletableFuture<DescribeOutgoingDestinationIPDetailResponse> describeOutgoingDestinationIPDetail(DescribeOutgoingDestinationIPDetailRequest request);
 
     /**
      * @param request the request parameters of DescribeOutgoingDomain  DescribeOutgoingDomainRequest
@@ -745,6 +949,18 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<DescribeOutgoingDomainDetailResponse> describeOutgoingDomainDetail(DescribeOutgoingDomainDetailRequest request);
 
     /**
+     * @param request the request parameters of DescribeOutgoingRiskDomainAndIpCount  DescribeOutgoingRiskDomainAndIpCountRequest
+     * @return DescribeOutgoingRiskDomainAndIpCountResponse
+     */
+    CompletableFuture<DescribeOutgoingRiskDomainAndIpCountResponse> describeOutgoingRiskDomainAndIpCount(DescribeOutgoingRiskDomainAndIpCountRequest request);
+
+    /**
+     * @param request the request parameters of DescribeOutgoingRiskTrend  DescribeOutgoingRiskTrendRequest
+     * @return DescribeOutgoingRiskTrendResponse
+     */
+    CompletableFuture<DescribeOutgoingRiskTrendResponse> describeOutgoingRiskTrend(DescribeOutgoingRiskTrendRequest request);
+
+    /**
      * @param request the request parameters of DescribeOutgoingStatistic  DescribeOutgoingStatisticRequest
      * @return DescribeOutgoingStatisticResponse
      */
@@ -757,9 +973,10 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<DescribeOutgoingTagResponse> describeOutgoingTag(DescribeOutgoingTagRequest request);
 
     /**
-     * @param request the request parameters of DescribePageDocuments  DescribePageDocumentsRequest
+     * @deprecated OpenAPI DescribePageDocuments is deprecated  * @param request  the request parameters of DescribePageDocuments  DescribePageDocumentsRequest
      * @return DescribePageDocumentsResponse
      */
+    @Deprecated
     CompletableFuture<DescribePageDocumentsResponse> describePageDocuments(DescribePageDocumentsRequest request);
 
     /**
@@ -783,6 +1000,12 @@ public interface AsyncClient extends SdkAutoCloseable {
      * @return DescribePolicyPriorUsedResponse
      */
     CompletableFuture<DescribePolicyPriorUsedResponse> describePolicyPriorUsed(DescribePolicyPriorUsedRequest request);
+
+    /**
+     * @param request the request parameters of DescribePostpayEnabledProtection  DescribePostpayEnabledProtectionRequest
+     * @return DescribePostpayEnabledProtectionResponse
+     */
+    CompletableFuture<DescribePostpayEnabledProtectionResponse> describePostpayEnabledProtection(DescribePostpayEnabledProtectionRequest request);
 
     /**
      * <b>description</b> :
@@ -845,6 +1068,12 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<DescribePrivateDnsEndpointListResponse> describePrivateDnsEndpointList(DescribePrivateDnsEndpointListRequest request);
 
     /**
+     * @param request the request parameters of DescribePrivateDnsStatistics  DescribePrivateDnsStatisticsRequest
+     * @return DescribePrivateDnsStatisticsResponse
+     */
+    CompletableFuture<DescribePrivateDnsStatisticsResponse> describePrivateDnsStatistics(DescribePrivateDnsStatisticsRequest request);
+
+    /**
      * @param request the request parameters of DescribeRegionInfo  DescribeRegionInfoRequest
      * @return DescribeRegionInfoResponse
      */
@@ -874,16 +1103,65 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<DescribeRiskEventPayloadResponse> describeRiskEventPayload(DescribeRiskEventPayloadRequest request);
 
     /**
+     * @param request the request parameters of DescribeRiskEventStatistic  DescribeRiskEventStatisticRequest
+     * @return DescribeRiskEventStatisticResponse
+     */
+    CompletableFuture<DescribeRiskEventStatisticResponse> describeRiskEventStatistic(DescribeRiskEventStatisticRequest request);
+
+    /**
+     * @param request the request parameters of DescribeRiskEventTopAttackApp  DescribeRiskEventTopAttackAppRequest
+     * @return DescribeRiskEventTopAttackAppResponse
+     */
+    CompletableFuture<DescribeRiskEventTopAttackAppResponse> describeRiskEventTopAttackApp(DescribeRiskEventTopAttackAppRequest request);
+
+    /**
      * @param request the request parameters of DescribeRiskEventTopAttackAsset  DescribeRiskEventTopAttackAssetRequest
      * @return DescribeRiskEventTopAttackAssetResponse
      */
     CompletableFuture<DescribeRiskEventTopAttackAssetResponse> describeRiskEventTopAttackAsset(DescribeRiskEventTopAttackAssetRequest request);
 
     /**
-     * @param request the request parameters of DescribeRiskSecurityGroupDetail  DescribeRiskSecurityGroupDetailRequest
+     * @param request the request parameters of DescribeRiskEventTopAttackType  DescribeRiskEventTopAttackTypeRequest
+     * @return DescribeRiskEventTopAttackTypeResponse
+     */
+    CompletableFuture<DescribeRiskEventTopAttackTypeResponse> describeRiskEventTopAttackType(DescribeRiskEventTopAttackTypeRequest request);
+
+    /**
+     * @deprecated OpenAPI DescribeRiskSecurityGroupDetail is deprecated  * @param request  the request parameters of DescribeRiskSecurityGroupDetail  DescribeRiskSecurityGroupDetailRequest
      * @return DescribeRiskSecurityGroupDetailResponse
      */
+    @Deprecated
     CompletableFuture<DescribeRiskSecurityGroupDetailResponse> describeRiskSecurityGroupDetail(DescribeRiskSecurityGroupDetailRequest request);
+
+    /**
+     * @param request the request parameters of DescribeSdlEventDetail  DescribeSdlEventDetailRequest
+     * @return DescribeSdlEventDetailResponse
+     */
+    CompletableFuture<DescribeSdlEventDetailResponse> describeSdlEventDetail(DescribeSdlEventDetailRequest request);
+
+    /**
+     * @param request the request parameters of DescribeSdlEventList  DescribeSdlEventListRequest
+     * @return DescribeSdlEventListResponse
+     */
+    CompletableFuture<DescribeSdlEventListResponse> describeSdlEventList(DescribeSdlEventListRequest request);
+
+    /**
+     * @param request the request parameters of DescribeSdlEventSdList  DescribeSdlEventSdListRequest
+     * @return DescribeSdlEventSdListResponse
+     */
+    CompletableFuture<DescribeSdlEventSdListResponse> describeSdlEventSdList(DescribeSdlEventSdListRequest request);
+
+    /**
+     * @param request the request parameters of DescribeSdlEventStatistic  DescribeSdlEventStatisticRequest
+     * @return DescribeSdlEventStatisticResponse
+     */
+    CompletableFuture<DescribeSdlEventStatisticResponse> describeSdlEventStatistic(DescribeSdlEventStatisticRequest request);
+
+    /**
+     * @param request the request parameters of DescribeSdlStatistic  DescribeSdlStatisticRequest
+     * @return DescribeSdlStatisticResponse
+     */
+    CompletableFuture<DescribeSdlStatisticResponse> describeSdlStatistic(DescribeSdlStatisticRequest request);
 
     /**
      * @param request the request parameters of DescribeSecurityMode  DescribeSecurityModeRequest
@@ -892,16 +1170,35 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<DescribeSecurityModeResponse> describeSecurityMode(DescribeSecurityModeRequest request);
 
     /**
-     * @param request the request parameters of DescribeSecurityProxy  DescribeSecurityProxyRequest
+     * @deprecated OpenAPI DescribeSecurityProxy is deprecated, please use Cloudfw::2017-12-07::DescribeNatFirewallList instead.  * @param request  the request parameters of DescribeSecurityProxy  DescribeSecurityProxyRequest
      * @return DescribeSecurityProxyResponse
      */
+    @Deprecated
     CompletableFuture<DescribeSecurityProxyResponse> describeSecurityProxy(DescribeSecurityProxyRequest request);
+
+    /**
+     * @param request the request parameters of DescribeSecurityProxyResources  DescribeSecurityProxyResourcesRequest
+     * @return DescribeSecurityProxyResourcesResponse
+     */
+    CompletableFuture<DescribeSecurityProxyResourcesResponse> describeSecurityProxyResources(DescribeSecurityProxyResourcesRequest request);
+
+    /**
+     * @param request the request parameters of DescribeSensitiveSwitch  DescribeSensitiveSwitchRequest
+     * @return DescribeSensitiveSwitchResponse
+     */
+    CompletableFuture<DescribeSensitiveSwitchResponse> describeSensitiveSwitch(DescribeSensitiveSwitchRequest request);
 
     /**
      * @param request the request parameters of DescribeSignatureLibVersion  DescribeSignatureLibVersionRequest
      * @return DescribeSignatureLibVersionResponse
      */
     CompletableFuture<DescribeSignatureLibVersionResponse> describeSignatureLibVersion(DescribeSignatureLibVersionRequest request);
+
+    /**
+     * @param request the request parameters of DescribeSlrGrant  DescribeSlrGrantRequest
+     * @return DescribeSlrGrantResponse
+     */
+    CompletableFuture<DescribeSlrGrantResponse> describeSlrGrant(DescribeSlrGrantRequest request);
 
     /**
      * @param request the request parameters of DescribeSlsAnalyzeOpenStatus  DescribeSlsAnalyzeOpenStatusRequest
@@ -946,6 +1243,24 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<DescribeTrFirewallsV2RouteListResponse> describeTrFirewallsV2RouteList(DescribeTrFirewallsV2RouteListRequest request);
 
     /**
+     * @param request the request parameters of DescribeTrafficLog  DescribeTrafficLogRequest
+     * @return DescribeTrafficLogResponse
+     */
+    CompletableFuture<DescribeTrafficLogResponse> describeTrafficLog(DescribeTrafficLogRequest request);
+
+    /**
+     * @param request the request parameters of DescribeTransitRouterResourcesList  DescribeTransitRouterResourcesListRequest
+     * @return DescribeTransitRouterResourcesListResponse
+     */
+    CompletableFuture<DescribeTransitRouterResourcesListResponse> describeTransitRouterResourcesList(DescribeTransitRouterResourcesListRequest request);
+
+    /**
+     * @param request the request parameters of DescribeUnprotectedPortTrend  DescribeUnprotectedPortTrendRequest
+     * @return DescribeUnprotectedPortTrendResponse
+     */
+    CompletableFuture<DescribeUnprotectedPortTrendResponse> describeUnprotectedPortTrend(DescribeUnprotectedPortTrendRequest request);
+
+    /**
      * @param request the request parameters of DescribeUnprotectedVulnTrend  DescribeUnprotectedVulnTrendRequest
      * @return DescribeUnprotectedVulnTrendResponse
      */
@@ -958,9 +1273,10 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<DescribeUserAlarmConfigResponse> describeUserAlarmConfig(DescribeUserAlarmConfigRequest request);
 
     /**
-     * @param request the request parameters of DescribeUserAssetIPTrafficInfo  DescribeUserAssetIPTrafficInfoRequest
+     * @deprecated OpenAPI DescribeUserAssetIPTrafficInfo is deprecated  * @param request  the request parameters of DescribeUserAssetIPTrafficInfo  DescribeUserAssetIPTrafficInfoRequest
      * @return DescribeUserAssetIPTrafficInfoResponse
      */
+    @Deprecated
     CompletableFuture<DescribeUserAssetIPTrafficInfoResponse> describeUserAssetIPTrafficInfo(DescribeUserAssetIPTrafficInfoRequest request);
 
     /**
@@ -981,6 +1297,12 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<DescribeUserIPSWhitelistResponse> describeUserIPSWhitelist(DescribeUserIPSWhitelistRequest request);
 
     /**
+     * @param request the request parameters of DescribeVfwIPSConfigList  DescribeVfwIPSConfigListRequest
+     * @return DescribeVfwIPSConfigListResponse
+     */
+    CompletableFuture<DescribeVfwIPSConfigListResponse> describeVfwIPSConfigList(DescribeVfwIPSConfigListRequest request);
+
+    /**
      * @param request the request parameters of DescribeVpcFirewallAccessDetail  DescribeVpcFirewallAccessDetailRequest
      * @return DescribeVpcFirewallAccessDetailResponse
      */
@@ -996,6 +1318,18 @@ public interface AsyncClient extends SdkAutoCloseable {
      * @return DescribeVpcFirewallAclGroupListResponse
      */
     CompletableFuture<DescribeVpcFirewallAclGroupListResponse> describeVpcFirewallAclGroupList(DescribeVpcFirewallAclGroupListRequest request);
+
+    /**
+     * @param request the request parameters of DescribeVpcFirewallAssetList  DescribeVpcFirewallAssetListRequest
+     * @return DescribeVpcFirewallAssetListResponse
+     */
+    CompletableFuture<DescribeVpcFirewallAssetListResponse> describeVpcFirewallAssetList(DescribeVpcFirewallAssetListRequest request);
+
+    /**
+     * @param request the request parameters of DescribeVpcFirewallAssetRegionList  DescribeVpcFirewallAssetRegionListRequest
+     * @return DescribeVpcFirewallAssetRegionListResponse
+     */
+    CompletableFuture<DescribeVpcFirewallAssetRegionListResponse> describeVpcFirewallAssetRegionList(DescribeVpcFirewallAssetRegionListRequest request);
 
     /**
      * <b>description</b> :
@@ -1059,6 +1393,12 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<DescribeVpcFirewallDetailResponse> describeVpcFirewallDetail(DescribeVpcFirewallDetailRequest request);
 
     /**
+     * @param request the request parameters of DescribeVpcFirewallDropTrafficTrend  DescribeVpcFirewallDropTrafficTrendRequest
+     * @return DescribeVpcFirewallDropTrafficTrendResponse
+     */
+    CompletableFuture<DescribeVpcFirewallDropTrafficTrendResponse> describeVpcFirewallDropTrafficTrend(DescribeVpcFirewallDropTrafficTrendRequest request);
+
+    /**
      * @param request the request parameters of DescribeVpcFirewallIPSWhitelist  DescribeVpcFirewallIPSWhitelistRequest
      * @return DescribeVpcFirewallIPSWhitelistResponse
      */
@@ -1076,6 +1416,12 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<DescribeVpcFirewallListResponse> describeVpcFirewallList(DescribeVpcFirewallListRequest request);
 
     /**
+     * @param request the request parameters of DescribeVpcFirewallManualVSwitchList  DescribeVpcFirewallManualVSwitchListRequest
+     * @return DescribeVpcFirewallManualVSwitchListResponse
+     */
+    CompletableFuture<DescribeVpcFirewallManualVSwitchListResponse> describeVpcFirewallManualVSwitchList(DescribeVpcFirewallManualVSwitchListRequest request);
+
+    /**
      * <b>description</b> :
      * <p>You can call this operation to query the priority range of access control policies that are created for a VPC firewall in a specific policy group.</p>
      * <h2><a href="#qps-"></a>Limits</h2>
@@ -1087,10 +1433,22 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<DescribeVpcFirewallPolicyPriorUsedResponse> describeVpcFirewallPolicyPriorUsed(DescribeVpcFirewallPolicyPriorUsedRequest request);
 
     /**
+     * @param request the request parameters of DescribeVpcFirewallPrecheckDetail  DescribeVpcFirewallPrecheckDetailRequest
+     * @return DescribeVpcFirewallPrecheckDetailResponse
+     */
+    CompletableFuture<DescribeVpcFirewallPrecheckDetailResponse> describeVpcFirewallPrecheckDetail(DescribeVpcFirewallPrecheckDetailRequest request);
+
+    /**
      * @param request the request parameters of DescribeVpcFirewallSummaryInfo  DescribeVpcFirewallSummaryInfoRequest
      * @return DescribeVpcFirewallSummaryInfoResponse
      */
     CompletableFuture<DescribeVpcFirewallSummaryInfoResponse> describeVpcFirewallSummaryInfo(DescribeVpcFirewallSummaryInfoRequest request);
+
+    /**
+     * @param request the request parameters of DescribeVpcFirewallZone  DescribeVpcFirewallZoneRequest
+     * @return DescribeVpcFirewallZoneResponse
+     */
+    CompletableFuture<DescribeVpcFirewallZoneResponse> describeVpcFirewallZone(DescribeVpcFirewallZoneRequest request);
 
     /**
      * @param request the request parameters of DescribeVpcListLite  DescribeVpcListLiteRequest
@@ -1109,6 +1467,12 @@ public interface AsyncClient extends SdkAutoCloseable {
      * @return DescribeVulnerabilityProtectedListResponse
      */
     CompletableFuture<DescribeVulnerabilityProtectedListResponse> describeVulnerabilityProtectedList(DescribeVulnerabilityProtectedListRequest request);
+
+    /**
+     * @param request the request parameters of DisableSdlProtectedAsset  DisableSdlProtectedAssetRequest
+     * @return DisableSdlProtectedAssetResponse
+     */
+    CompletableFuture<DisableSdlProtectedAssetResponse> disableSdlProtectedAsset(DisableSdlProtectedAssetRequest request);
 
     /**
      * @param request the request parameters of EnableSdlProtectedAsset  EnableSdlProtectedAssetRequest
@@ -1151,14 +1515,14 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<ModifyControlPolicyResponse> modifyControlPolicy(ModifyControlPolicyRequest request);
 
     /**
-     * <b>description</b> :
-     * <p>You can use this operation to modify the priority of an IPv4 access control policy for the Internet firewall. No API operations are provided for you to modify the priority of an IPv6 access control policy for the Internet firewall.</p>
-     * <h2><a href="#qps"></a>Limits</h2>
-     * <p>You can call this operation up to 10 times per second per account. If the number of the calls per second exceeds the limit, throttling is triggered. As a result, your business may be affected. We recommend that you take note of the limit when you call this operation.</p>
+     * @deprecated OpenAPI ModifyControlPolicyPosition is deprecated, please use Cloudfw::2017-12-07::ModifyControlPolicyPriority instead.  * @description You can use this operation to modify the priority of an IPv4 access control policy for the Internet firewall. No API operations are provided for you to modify the priority of an IPv6 access control policy for the Internet firewall.
+     * ## [](#qps)Limits
+     * You can call this operation up to 10 times per second per account. If the number of the calls per second exceeds the limit, throttling is triggered. As a result, your business may be affected. We recommend that you take note of the limit when you call this operation.
      * 
      * @param request the request parameters of ModifyControlPolicyPosition  ModifyControlPolicyPositionRequest
      * @return ModifyControlPolicyPositionResponse
      */
+    @Deprecated
     CompletableFuture<ModifyControlPolicyPositionResponse> modifyControlPolicyPosition(ModifyControlPolicyPositionRequest request);
 
     /**
@@ -1195,6 +1559,12 @@ public interface AsyncClient extends SdkAutoCloseable {
      * @return ModifyInstanceMemberAttributesResponse
      */
     CompletableFuture<ModifyInstanceMemberAttributesResponse> modifyInstanceMemberAttributes(ModifyInstanceMemberAttributesRequest request);
+
+    /**
+     * @param request the request parameters of ModifyIpsRules  ModifyIpsRulesRequest
+     * @return ModifyIpsRulesResponse
+     */
+    CompletableFuture<ModifyIpsRulesResponse> modifyIpsRules(ModifyIpsRulesRequest request);
 
     /**
      * @param request the request parameters of ModifyIpsRulesToDefault  ModifyIpsRulesToDefaultRequest
@@ -1241,6 +1611,12 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<ModifyPrivateDnsEndpointResponse> modifyPrivateDnsEndpoint(ModifyPrivateDnsEndpointRequest request);
 
     /**
+     * @param request the request parameters of ModifyResourceTypeAutoEnable  ModifyResourceTypeAutoEnableRequest
+     * @return ModifyResourceTypeAutoEnableResponse
+     */
+    CompletableFuture<ModifyResourceTypeAutoEnableResponse> modifyResourceTypeAutoEnable(ModifyResourceTypeAutoEnableRequest request);
+
+    /**
      * @param request the request parameters of ModifySensitiveSwitch  ModifySensitiveSwitchRequest
      * @return ModifySensitiveSwitchResponse
      */
@@ -1269,6 +1645,12 @@ public interface AsyncClient extends SdkAutoCloseable {
      * @return ModifyTrFirewallV2RoutePolicyScopeResponse
      */
     CompletableFuture<ModifyTrFirewallV2RoutePolicyScopeResponse> modifyTrFirewallV2RoutePolicyScope(ModifyTrFirewallV2RoutePolicyScopeRequest request);
+
+    /**
+     * @param request the request parameters of ModifyUserAlarmConfig  ModifyUserAlarmConfigRequest
+     * @return ModifyUserAlarmConfigResponse
+     */
+    CompletableFuture<ModifyUserAlarmConfigResponse> modifyUserAlarmConfig(ModifyUserAlarmConfigRequest request);
 
     /**
      * @param request the request parameters of ModifyUserIPSWhitelist  ModifyUserIPSWhitelistRequest
@@ -1499,5 +1881,11 @@ public interface AsyncClient extends SdkAutoCloseable {
      * @return UpdateSecurityProxyResponse
      */
     CompletableFuture<UpdateSecurityProxyResponse> updateSecurityProxy(UpdateSecurityProxyRequest request);
+
+    /**
+     * @param request the request parameters of UseAclBackupData  UseAclBackupDataRequest
+     * @return UseAclBackupDataResponse
+     */
+    CompletableFuture<UseAclBackupDataResponse> useAclBackupData(UseAclBackupDataRequest request);
 
 }
