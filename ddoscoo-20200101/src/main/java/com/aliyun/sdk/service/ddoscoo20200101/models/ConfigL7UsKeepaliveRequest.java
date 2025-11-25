@@ -22,6 +22,10 @@ public class ConfigL7UsKeepaliveRequest extends Request {
     private String domain;
 
     @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("DownstreamKeepalive")
+    private String downstreamKeepalive;
+
+    @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("UpstreamKeepalive")
     @com.aliyun.core.annotation.Validation(required = true)
     private String upstreamKeepalive;
@@ -29,6 +33,7 @@ public class ConfigL7UsKeepaliveRequest extends Request {
     private ConfigL7UsKeepaliveRequest(Builder builder) {
         super(builder);
         this.domain = builder.domain;
+        this.downstreamKeepalive = builder.downstreamKeepalive;
         this.upstreamKeepalive = builder.upstreamKeepalive;
     }
 
@@ -53,6 +58,13 @@ public class ConfigL7UsKeepaliveRequest extends Request {
     }
 
     /**
+     * @return downstreamKeepalive
+     */
+    public String getDownstreamKeepalive() {
+        return this.downstreamKeepalive;
+    }
+
+    /**
      * @return upstreamKeepalive
      */
     public String getUpstreamKeepalive() {
@@ -61,6 +73,7 @@ public class ConfigL7UsKeepaliveRequest extends Request {
 
     public static final class Builder extends Request.Builder<ConfigL7UsKeepaliveRequest, Builder> {
         private String domain; 
+        private String downstreamKeepalive; 
         private String upstreamKeepalive; 
 
         private Builder() {
@@ -70,6 +83,7 @@ public class ConfigL7UsKeepaliveRequest extends Request {
         private Builder(ConfigL7UsKeepaliveRequest request) {
             super(request);
             this.domain = request.domain;
+            this.downstreamKeepalive = request.downstreamKeepalive;
             this.upstreamKeepalive = request.upstreamKeepalive;
         } 
 
@@ -85,6 +99,15 @@ public class ConfigL7UsKeepaliveRequest extends Request {
         public Builder domain(String domain) {
             this.putQueryParameter("Domain", domain);
             this.domain = domain;
+            return this;
+        }
+
+        /**
+         * DownstreamKeepalive.
+         */
+        public Builder downstreamKeepalive(String downstreamKeepalive) {
+            this.putQueryParameter("DownstreamKeepalive", downstreamKeepalive);
+            this.downstreamKeepalive = downstreamKeepalive;
             return this;
         }
 

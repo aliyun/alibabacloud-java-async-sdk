@@ -370,6 +370,12 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<DescribeBlockStatusResponse> describeBlockStatus(DescribeBlockStatusRequest request);
 
     /**
+     * @param request the request parameters of DescribeCdnLinkageRules  DescribeCdnLinkageRulesRequest
+     * @return DescribeCdnLinkageRulesResponse
+     */
+    CompletableFuture<DescribeCdnLinkageRulesResponse> describeCdnLinkageRules(DescribeCdnLinkageRulesRequest request);
+
+    /**
      * <b>description</b> :
      * <p>This operation is used to query all applicable certificates of a domain name that you want to add to Anti-DDoS Proxy. Multiple certificates may be queried for a domain name. You can use an exact domain name to query exact-domain certificates or wildcard-domain certificates.</p>
      * <blockquote>

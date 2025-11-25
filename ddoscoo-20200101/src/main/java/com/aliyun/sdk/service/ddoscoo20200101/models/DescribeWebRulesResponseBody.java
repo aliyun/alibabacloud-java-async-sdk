@@ -416,6 +416,9 @@ public class DescribeWebRulesResponseBody extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("CcTemplate")
         private String ccTemplate;
 
+        @com.aliyun.core.annotation.NameInMap("CertExpireTime")
+        private Long certExpireTime;
+
         @com.aliyun.core.annotation.NameInMap("CertName")
         private String certName;
 
@@ -473,6 +476,9 @@ public class DescribeWebRulesResponseBody extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("SslProtocols")
         private String sslProtocols;
 
+        @com.aliyun.core.annotation.NameInMap("Tls13CustomCiphers")
+        private java.util.List<String> tls13CustomCiphers;
+
         @com.aliyun.core.annotation.NameInMap("UserCertName")
         private String userCertName;
 
@@ -484,6 +490,7 @@ public class DescribeWebRulesResponseBody extends TeaModel {
             this.ccEnabled = builder.ccEnabled;
             this.ccRuleEnabled = builder.ccRuleEnabled;
             this.ccTemplate = builder.ccTemplate;
+            this.certExpireTime = builder.certExpireTime;
             this.certName = builder.certName;
             this.certRegion = builder.certRegion;
             this.cname = builder.cname;
@@ -503,6 +510,7 @@ public class DescribeWebRulesResponseBody extends TeaModel {
             this.ssl13Enabled = builder.ssl13Enabled;
             this.sslCiphers = builder.sslCiphers;
             this.sslProtocols = builder.sslProtocols;
+            this.tls13CustomCiphers = builder.tls13CustomCiphers;
             this.userCertName = builder.userCertName;
             this.whiteList = builder.whiteList;
         }
@@ -541,6 +549,13 @@ public class DescribeWebRulesResponseBody extends TeaModel {
          */
         public String getCcTemplate() {
             return this.ccTemplate;
+        }
+
+        /**
+         * @return certExpireTime
+         */
+        public Long getCertExpireTime() {
+            return this.certExpireTime;
         }
 
         /**
@@ -677,6 +692,13 @@ public class DescribeWebRulesResponseBody extends TeaModel {
         }
 
         /**
+         * @return tls13CustomCiphers
+         */
+        public java.util.List<String> getTls13CustomCiphers() {
+            return this.tls13CustomCiphers;
+        }
+
+        /**
          * @return userCertName
          */
         public String getUserCertName() {
@@ -695,6 +717,7 @@ public class DescribeWebRulesResponseBody extends TeaModel {
             private Boolean ccEnabled; 
             private Boolean ccRuleEnabled; 
             private String ccTemplate; 
+            private Long certExpireTime; 
             private String certName; 
             private String certRegion; 
             private String cname; 
@@ -714,6 +737,7 @@ public class DescribeWebRulesResponseBody extends TeaModel {
             private Boolean ssl13Enabled; 
             private String sslCiphers; 
             private String sslProtocols; 
+            private java.util.List<String> tls13CustomCiphers; 
             private String userCertName; 
             private java.util.List<String> whiteList; 
 
@@ -725,6 +749,7 @@ public class DescribeWebRulesResponseBody extends TeaModel {
                 this.ccEnabled = model.ccEnabled;
                 this.ccRuleEnabled = model.ccRuleEnabled;
                 this.ccTemplate = model.ccTemplate;
+                this.certExpireTime = model.certExpireTime;
                 this.certName = model.certName;
                 this.certRegion = model.certRegion;
                 this.cname = model.cname;
@@ -744,6 +769,7 @@ public class DescribeWebRulesResponseBody extends TeaModel {
                 this.ssl13Enabled = model.ssl13Enabled;
                 this.sslCiphers = model.sslCiphers;
                 this.sslProtocols = model.sslProtocols;
+                this.tls13CustomCiphers = model.tls13CustomCiphers;
                 this.userCertName = model.userCertName;
                 this.whiteList = model.whiteList;
             } 
@@ -800,6 +826,14 @@ public class DescribeWebRulesResponseBody extends TeaModel {
              */
             public Builder ccTemplate(String ccTemplate) {
                 this.ccTemplate = ccTemplate;
+                return this;
+            }
+
+            /**
+             * CertExpireTime.
+             */
+            public Builder certExpireTime(Long certExpireTime) {
+                this.certExpireTime = certExpireTime;
                 return this;
             }
 
@@ -1049,6 +1083,14 @@ public class DescribeWebRulesResponseBody extends TeaModel {
              */
             public Builder sslProtocols(String sslProtocols) {
                 this.sslProtocols = sslProtocols;
+                return this;
+            }
+
+            /**
+             * Tls13CustomCiphers.
+             */
+            public Builder tls13CustomCiphers(java.util.List<String> tls13CustomCiphers) {
+                this.tls13CustomCiphers = tls13CustomCiphers;
                 return this;
             }
 

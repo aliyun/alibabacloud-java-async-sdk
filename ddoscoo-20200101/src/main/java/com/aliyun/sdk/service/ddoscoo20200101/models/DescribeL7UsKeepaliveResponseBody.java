@@ -98,6 +98,9 @@ public class DescribeL7UsKeepaliveResponseBody extends TeaModel {
      * <p>DescribeL7UsKeepaliveResponseBody</p>
      */
     public static class RsKeepalive extends TeaModel {
+        @com.aliyun.core.annotation.NameInMap("DsKeepaliveTimeout")
+        private Long dsKeepaliveTimeout;
+
         @com.aliyun.core.annotation.NameInMap("Enabled")
         private Boolean enabled;
 
@@ -108,6 +111,7 @@ public class DescribeL7UsKeepaliveResponseBody extends TeaModel {
         private Long keepaliveTimeout;
 
         private RsKeepalive(Builder builder) {
+            this.dsKeepaliveTimeout = builder.dsKeepaliveTimeout;
             this.enabled = builder.enabled;
             this.keepaliveRequests = builder.keepaliveRequests;
             this.keepaliveTimeout = builder.keepaliveTimeout;
@@ -119,6 +123,13 @@ public class DescribeL7UsKeepaliveResponseBody extends TeaModel {
 
         public static RsKeepalive create() {
             return builder().build();
+        }
+
+        /**
+         * @return dsKeepaliveTimeout
+         */
+        public Long getDsKeepaliveTimeout() {
+            return this.dsKeepaliveTimeout;
         }
 
         /**
@@ -143,6 +154,7 @@ public class DescribeL7UsKeepaliveResponseBody extends TeaModel {
         }
 
         public static final class Builder {
+            private Long dsKeepaliveTimeout; 
             private Boolean enabled; 
             private Long keepaliveRequests; 
             private Long keepaliveTimeout; 
@@ -151,10 +163,19 @@ public class DescribeL7UsKeepaliveResponseBody extends TeaModel {
             } 
 
             private Builder(RsKeepalive model) {
+                this.dsKeepaliveTimeout = model.dsKeepaliveTimeout;
                 this.enabled = model.enabled;
                 this.keepaliveRequests = model.keepaliveRequests;
                 this.keepaliveTimeout = model.keepaliveTimeout;
             } 
+
+            /**
+             * DsKeepaliveTimeout.
+             */
+            public Builder dsKeepaliveTimeout(Long dsKeepaliveTimeout) {
+                this.dsKeepaliveTimeout = dsKeepaliveTimeout;
+                return this;
+            }
 
             /**
              * <p>Indicates whether Back-to-origin Persistent Connections is turned on. Valid values:</p>
