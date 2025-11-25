@@ -80,7 +80,7 @@ public class ListResourceGroupMetricDataResponseBody extends TeaModel {
         } 
 
         /**
-         * MetricData.
+         * <p>Monitoring metric data.</p>
          */
         public Builder metricData(MetricData metricData) {
             this.metricData = metricData;
@@ -271,7 +271,29 @@ public class ListResourceGroupMetricDataResponseBody extends TeaModel {
             }
 
             /**
-             * MetricName.
+             * <p>The metric name. Available metrics include:</p>
+             * <ul>
+             * <li>CUSpec: Maximum CU capacity of the resource group, in CUs.</li>
+             * <li>CUUsage: CU usage of the resource group, in CUs.</li>
+             * <li>CUUtilization: CU utilization of the resource group, in %.</li>
+             * <li>SlotSpec: Maximum concurrency for resource group scheduling, in slots.</li>
+             * <li>SlotUsage: Used concurrency for resource group scheduling, in slots.</li>
+             * <li>SchedulerCUMaxSpec: Maximum CU quota for data computing, in CUs.</li>
+             * <li>SchedulerCUUsage: CU usage for data computing, in CUs.</li>
+             * <li>SchedulerCUMinSpec: Minimum guaranteed CUs for data computing, in CUs.</li>
+             * <li>DataIntegrationCUMaxSpec: Maximum CU quota for Data Integration, in CUs.</li>
+             * <li>DataIntegrationCUUsage: CU usage for Data Integration, in CUs.</li>
+             * <li>DataIntegrationCUMinSpec: Minimum guaranteed CUs for Data Integration, in CUs.</li>
+             * <li>DataServiceCUMaxSpec: Maximum CU quota for DataService Studio, in CUs.</li>
+             * <li>DataServiceCUUsage: CU usage for DataService Studio, in CUs.</li>
+             * <li>DataServiceCUMinSpec: Minimum guaranteed CUs for DataService Studio, in CUs.</li>
+             * <li>ServerIdeCUMaxSpec: Maximum CU quota for personal development environment, in CUs.</li>
+             * <li>ServerIdeCUUsage: CU usage for personal development environment, in CUs.</li>
+             * <li>ServerIdeCUMinSpec: Minimum guaranteed CUs for personal development environment, in CUs.</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>CUSpec</p>
              */
             public Builder metricName(String metricName) {
                 this.metricName = metricName;

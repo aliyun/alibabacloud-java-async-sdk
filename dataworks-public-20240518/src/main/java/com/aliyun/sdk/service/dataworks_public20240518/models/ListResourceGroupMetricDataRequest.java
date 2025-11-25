@@ -169,7 +169,16 @@ public class ListResourceGroupMetricDataRequest extends Request {
         }
 
         /**
-         * BeginTime.
+         * <p>Start Time</p>
+         * <p>Supported format:</p>
+         * <ul>
+         * <li>Unix timestamp, representing the number of milliseconds that have elapsed since January 1, 1970.</li>
+         * </ul>
+         * <p>The interval between BeginTime and EndTime must be 31 days or less.</p>
+         * <p>Default: The current time minus 2 hours, expressed as a millisecond Unix timestamp.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1593950832000</p>
          */
         public Builder beginTime(Long beginTime) {
             this.putBodyParameter("BeginTime", beginTime);
@@ -178,7 +187,16 @@ public class ListResourceGroupMetricDataRequest extends Request {
         }
 
         /**
-         * EndTime.
+         * <p>End Time</p>
+         * <p>Supported format:</p>
+         * <ul>
+         * <li>Unix timestamp, representing the number of milliseconds that have elapsed since January 1, 1970.</li>
+         * </ul>
+         * <p>The interval between BeginTime and EndTime must be 31 days or less.</p>
+         * <p>Default: The current time, expressed as a millisecond Unix timestamp.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1750176000000</p>
          */
         public Builder endTime(Long endTime) {
             this.putBodyParameter("EndTime", endTime);
@@ -196,6 +214,26 @@ public class ListResourceGroupMetricDataRequest extends Request {
         }
 
         /**
+         * <p>The metric name. Available metrics include:</p>
+         * <ul>
+         * <li>CUSpec: Maximum CU capacity of the resource group, in CUs.</li>
+         * <li>CUUsage: CU usage of the resource group, in CUs.</li>
+         * <li>CUUtilization: CU utilization of the resource group, in %.</li>
+         * <li>SlotSpec: Maximum concurrency for resource group scheduling, in slots.</li>
+         * <li>SlotUsage: Used concurrency for resource group scheduling, in slots.</li>
+         * <li>SchedulerCUMaxSpec: Maximum CU quota for data computing, in CUs.</li>
+         * <li>SchedulerCUUsage: CU usage for data computing, in CUs.</li>
+         * <li>SchedulerCUMinSpec: Minimum guaranteed CUs for data computing, in CUs.</li>
+         * <li>DataIntegrationCUMaxSpec: Maximum CU quota for Data Integration, in CUs.</li>
+         * <li>DataIntegrationCUUsage: CU usage for Data Integration, in CUs.</li>
+         * <li>DataIntegrationCUMinSpec: Minimum guaranteed CUs for Data Integration, in CUs.</li>
+         * <li>DataServiceCUMaxSpec: Maximum CU quota for dataservice, in CUs.</li>
+         * <li>DataServiceCUUsage: CU usage for DataService Studio, in CUs.</li>
+         * <li>DataServiceCUMinSpec: Minimum guaranteed CUs for DataService Studio, in CUs.</li>
+         * <li>ServerIdeCUMaxSpec: Maximum CU quota for personal development environment, in CUs.</li>
+         * <li>ServerIdeCUUsage: CU usage for personal development environment, in CUs.</li>
+         * <li>ServerIdeCUMinSpec: Minimum guaranteed CUs for personal development environment, in CUs.</li>
+         * </ul>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -217,7 +255,13 @@ public class ListResourceGroupMetricDataRequest extends Request {
         }
 
         /**
-         * Period.
+         * <p>The statistical period for monitoring data.</p>
+         * <p>Value: A multiple of 60.</p>
+         * <p>Unit: Seconds.</p>
+         * <p>Default: 60</p>
+         * 
+         * <strong>example:</strong>
+         * <p>60</p>
          */
         public Builder period(String period) {
             this.putBodyParameter("Period", period);

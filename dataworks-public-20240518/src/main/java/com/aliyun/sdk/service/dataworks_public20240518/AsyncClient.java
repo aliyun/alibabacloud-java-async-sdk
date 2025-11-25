@@ -95,6 +95,12 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<CreateComponentResponse> createComponent(CreateComponentRequest request);
 
     /**
+     * @param request the request parameters of CreateComputeResource  CreateComputeResourceRequest
+     * @return CreateComputeResourceResponse
+     */
+    CompletableFuture<CreateComputeResourceResponse> createComputeResource(CreateComputeResourceRequest request);
+
+    /**
      * @param request the request parameters of CreateDIAlarmRule  CreateDIAlarmRuleRequest
      * @return CreateDIAlarmRuleResponse
      */
@@ -373,6 +379,12 @@ public interface AsyncClient extends SdkAutoCloseable {
      * @return DeleteComponentResponse
      */
     CompletableFuture<DeleteComponentResponse> deleteComponent(DeleteComponentRequest request);
+
+    /**
+     * @param request the request parameters of DeleteComputeResource  DeleteComputeResourceRequest
+     * @return DeleteComputeResourceResponse
+     */
+    CompletableFuture<DeleteComputeResourceResponse> deleteComputeResource(DeleteComputeResourceRequest request);
 
     /**
      * @param request the request parameters of DeleteDIAlarmRule  DeleteDIAlarmRuleRequest
@@ -712,6 +724,12 @@ public interface AsyncClient extends SdkAutoCloseable {
      * @return GetComponentResponse
      */
     CompletableFuture<GetComponentResponse> getComponent(GetComponentRequest request);
+
+    /**
+     * @param request the request parameters of GetComputeResource  GetComputeResourceRequest
+     * @return GetComputeResourceResponse
+     */
+    CompletableFuture<GetComputeResourceResponse> getComputeResource(GetComputeResourceRequest request);
 
     /**
      * <b>description</b> :
@@ -1113,6 +1131,12 @@ public interface AsyncClient extends SdkAutoCloseable {
      * @return ListComponentsResponse
      */
     CompletableFuture<ListComponentsResponse> listComponents(ListComponentsRequest request);
+
+    /**
+     * @param request the request parameters of ListComputeResources  ListComputeResourcesRequest
+     * @return ListComputeResourcesResponse
+     */
+    CompletableFuture<ListComputeResourcesResponse> listComputeResources(ListComputeResourcesRequest request);
 
     /**
      * @param request the request parameters of ListCrawlerTypes  ListCrawlerTypesRequest
@@ -1787,6 +1811,12 @@ public interface AsyncClient extends SdkAutoCloseable {
      * @return UpdateComponentResponse
      */
     CompletableFuture<UpdateComponentResponse> updateComponent(UpdateComponentRequest request);
+
+    /**
+     * @param request the request parameters of UpdateComputeResource  UpdateComputeResourceRequest
+     * @return UpdateComputeResourceResponse
+     */
+    CompletableFuture<UpdateComputeResourceResponse> updateComputeResource(UpdateComputeResourceRequest request);
 
     /**
      * @param request the request parameters of UpdateDIAlarmRule  UpdateDIAlarmRuleRequest
