@@ -54,6 +54,10 @@ public class CreateAppInstanceRequest extends Request {
     private String instanceClass;
 
     @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("PublicEndpointEnabled")
+    private Boolean publicEndpointEnabled;
+
+    @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("PublicNetworkAccessEnabled")
     private Boolean publicNetworkAccessEnabled;
 
@@ -80,6 +84,7 @@ public class CreateAppInstanceRequest extends Request {
         this.dashboardUsername = builder.dashboardUsername;
         this.databasePassword = builder.databasePassword;
         this.instanceClass = builder.instanceClass;
+        this.publicEndpointEnabled = builder.publicEndpointEnabled;
         this.publicNetworkAccessEnabled = builder.publicNetworkAccessEnabled;
         this.RAGEnabled = builder.RAGEnabled;
         this.regionId = builder.regionId;
@@ -163,6 +168,13 @@ public class CreateAppInstanceRequest extends Request {
     }
 
     /**
+     * @return publicEndpointEnabled
+     */
+    public Boolean getPublicEndpointEnabled() {
+        return this.publicEndpointEnabled;
+    }
+
+    /**
      * @return publicNetworkAccessEnabled
      */
     public Boolean getPublicNetworkAccessEnabled() {
@@ -200,6 +212,7 @@ public class CreateAppInstanceRequest extends Request {
         private String dashboardUsername; 
         private String databasePassword; 
         private String instanceClass; 
+        private Boolean publicEndpointEnabled; 
         private Boolean publicNetworkAccessEnabled; 
         private Boolean RAGEnabled; 
         private String regionId; 
@@ -220,6 +233,7 @@ public class CreateAppInstanceRequest extends Request {
             this.dashboardUsername = request.dashboardUsername;
             this.databasePassword = request.databasePassword;
             this.instanceClass = request.instanceClass;
+            this.publicEndpointEnabled = request.publicEndpointEnabled;
             this.publicNetworkAccessEnabled = request.publicNetworkAccessEnabled;
             this.RAGEnabled = request.RAGEnabled;
             this.regionId = request.regionId;
@@ -305,6 +319,15 @@ public class CreateAppInstanceRequest extends Request {
         public Builder instanceClass(String instanceClass) {
             this.putQueryParameter("InstanceClass", instanceClass);
             this.instanceClass = instanceClass;
+            return this;
+        }
+
+        /**
+         * PublicEndpointEnabled.
+         */
+        public Builder publicEndpointEnabled(Boolean publicEndpointEnabled) {
+            this.putQueryParameter("PublicEndpointEnabled", publicEndpointEnabled);
+            this.publicEndpointEnabled = publicEndpointEnabled;
             return this;
         }
 

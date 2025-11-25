@@ -1,3 +1,6 @@
+2025-11-25 Version: 1.0.7
+- Generated java-async 2025-05-07 for RdsAi.
+
 2025-11-18 Version: 1.0.6
 - Generated java-async 2025-05-07 for RdsAi.
 

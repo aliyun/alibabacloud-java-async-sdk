@@ -19,8 +19,11 @@ import com.aliyun.sdk.gateway.pop.models.*;
 public class ResetInstancePasswordRequest extends Request {
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("DashboardPassword")
-    @com.aliyun.core.annotation.Validation(required = true)
     private String dashboardPassword;
+
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("DatabasePassword")
+    private String databasePassword;
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("InstanceName")
@@ -34,6 +37,7 @@ public class ResetInstancePasswordRequest extends Request {
     private ResetInstancePasswordRequest(Builder builder) {
         super(builder);
         this.dashboardPassword = builder.dashboardPassword;
+        this.databasePassword = builder.databasePassword;
         this.instanceName = builder.instanceName;
         this.regionId = builder.regionId;
     }
@@ -59,6 +63,13 @@ public class ResetInstancePasswordRequest extends Request {
     }
 
     /**
+     * @return databasePassword
+     */
+    public String getDatabasePassword() {
+        return this.databasePassword;
+    }
+
+    /**
      * @return instanceName
      */
     public String getInstanceName() {
@@ -74,6 +85,7 @@ public class ResetInstancePasswordRequest extends Request {
 
     public static final class Builder extends Request.Builder<ResetInstancePasswordRequest, Builder> {
         private String dashboardPassword; 
+        private String databasePassword; 
         private String instanceName; 
         private String regionId; 
 
@@ -84,19 +96,26 @@ public class ResetInstancePasswordRequest extends Request {
         private Builder(ResetInstancePasswordRequest request) {
             super(request);
             this.dashboardPassword = request.dashboardPassword;
+            this.databasePassword = request.databasePassword;
             this.instanceName = request.instanceName;
             this.regionId = request.regionId;
         } 
 
         /**
-         * <p>This parameter is required.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>test_Password</p>
+         * DashboardPassword.
          */
         public Builder dashboardPassword(String dashboardPassword) {
             this.putQueryParameter("DashboardPassword", dashboardPassword);
             this.dashboardPassword = dashboardPassword;
+            return this;
+        }
+
+        /**
+         * DatabasePassword.
+         */
+        public Builder databasePassword(String databasePassword) {
+            this.putQueryParameter("DatabasePassword", databasePassword);
+            this.databasePassword = databasePassword;
             return this;
         }
 
