@@ -235,6 +235,15 @@ public class MassPushRequest extends Request {
         @com.aliyun.core.annotation.NameInMap("AndroidOpenUrl")
         private String androidOpenUrl;
 
+        @com.aliyun.core.annotation.NameInMap("AndroidOppoDeleteIntentData")
+        private String androidOppoDeleteIntentData;
+
+        @com.aliyun.core.annotation.NameInMap("AndroidOppoIntelligentIntent")
+        private String androidOppoIntelligentIntent;
+
+        @com.aliyun.core.annotation.NameInMap("AndroidOppoIntentEnv")
+        private Integer androidOppoIntentEnv;
+
         @com.aliyun.core.annotation.NameInMap("AndroidOppoPrivateContentParameters")
         private java.util.Map<String, String> androidOppoPrivateContentParameters;
 
@@ -493,6 +502,9 @@ public class MassPushRequest extends Request {
             this.androidNotifyType = builder.androidNotifyType;
             this.androidOpenType = builder.androidOpenType;
             this.androidOpenUrl = builder.androidOpenUrl;
+            this.androidOppoDeleteIntentData = builder.androidOppoDeleteIntentData;
+            this.androidOppoIntelligentIntent = builder.androidOppoIntelligentIntent;
+            this.androidOppoIntentEnv = builder.androidOppoIntentEnv;
             this.androidOppoPrivateContentParameters = builder.androidOppoPrivateContentParameters;
             this.androidOppoPrivateMsgTemplateId = builder.androidOppoPrivateMsgTemplateId;
             this.androidOppoPrivateTitleParameters = builder.androidOppoPrivateTitleParameters;
@@ -810,6 +822,27 @@ public class MassPushRequest extends Request {
          */
         public String getAndroidOpenUrl() {
             return this.androidOpenUrl;
+        }
+
+        /**
+         * @return androidOppoDeleteIntentData
+         */
+        public String getAndroidOppoDeleteIntentData() {
+            return this.androidOppoDeleteIntentData;
+        }
+
+        /**
+         * @return androidOppoIntelligentIntent
+         */
+        public String getAndroidOppoIntelligentIntent() {
+            return this.androidOppoIntelligentIntent;
+        }
+
+        /**
+         * @return androidOppoIntentEnv
+         */
+        public Integer getAndroidOppoIntentEnv() {
+            return this.androidOppoIntentEnv;
         }
 
         /**
@@ -1344,6 +1377,9 @@ public class MassPushRequest extends Request {
             private String androidNotifyType; 
             private String androidOpenType; 
             private String androidOpenUrl; 
+            private String androidOppoDeleteIntentData; 
+            private String androidOppoIntelligentIntent; 
+            private Integer androidOppoIntentEnv; 
             private java.util.Map<String, String> androidOppoPrivateContentParameters; 
             private String androidOppoPrivateMsgTemplateId; 
             private java.util.Map<String, String> androidOppoPrivateTitleParameters; 
@@ -1454,6 +1490,9 @@ public class MassPushRequest extends Request {
                 this.androidNotifyType = model.androidNotifyType;
                 this.androidOpenType = model.androidOpenType;
                 this.androidOpenUrl = model.androidOpenUrl;
+                this.androidOppoDeleteIntentData = model.androidOppoDeleteIntentData;
+                this.androidOppoIntelligentIntent = model.androidOppoIntelligentIntent;
+                this.androidOppoIntentEnv = model.androidOppoIntentEnv;
                 this.androidOppoPrivateContentParameters = model.androidOppoPrivateContentParameters;
                 this.androidOppoPrivateMsgTemplateId = model.androidOppoPrivateMsgTemplateId;
                 this.androidOppoPrivateTitleParameters = model.androidOppoPrivateTitleParameters;
@@ -1796,6 +1835,30 @@ public class MassPushRequest extends Request {
              */
             public Builder androidOpenUrl(String androidOpenUrl) {
                 this.androidOpenUrl = androidOpenUrl;
+                return this;
+            }
+
+            /**
+             * AndroidOppoDeleteIntentData.
+             */
+            public Builder androidOppoDeleteIntentData(String androidOppoDeleteIntentData) {
+                this.androidOppoDeleteIntentData = androidOppoDeleteIntentData;
+                return this;
+            }
+
+            /**
+             * AndroidOppoIntelligentIntent.
+             */
+            public Builder androidOppoIntelligentIntent(String androidOppoIntelligentIntent) {
+                this.androidOppoIntelligentIntent = androidOppoIntelligentIntent;
+                return this;
+            }
+
+            /**
+             * AndroidOppoIntentEnv.
+             */
+            public Builder androidOppoIntentEnv(Integer androidOppoIntentEnv) {
+                this.androidOppoIntentEnv = androidOppoIntentEnv;
                 return this;
             }
 

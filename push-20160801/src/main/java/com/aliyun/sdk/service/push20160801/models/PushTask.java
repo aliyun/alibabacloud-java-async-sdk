@@ -662,6 +662,12 @@ public class PushTask extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Category")
         private String category;
 
+        @com.aliyun.core.annotation.NameInMap("DeleteIntentData")
+        private String deleteIntentData;
+
+        @com.aliyun.core.annotation.NameInMap("IntelligentIntent")
+        private String intelligentIntent;
+
         @com.aliyun.core.annotation.NameInMap("NotifyLevel")
         private Long notifyLevel;
 
@@ -676,6 +682,8 @@ public class PushTask extends TeaModel {
 
         private Oppo(Builder builder) {
             this.category = builder.category;
+            this.deleteIntentData = builder.deleteIntentData;
+            this.intelligentIntent = builder.intelligentIntent;
             this.notifyLevel = builder.notifyLevel;
             this.privateContentParameters = builder.privateContentParameters;
             this.privateMsgTemplateId = builder.privateMsgTemplateId;
@@ -695,6 +703,20 @@ public class PushTask extends TeaModel {
          */
         public String getCategory() {
             return this.category;
+        }
+
+        /**
+         * @return deleteIntentData
+         */
+        public String getDeleteIntentData() {
+            return this.deleteIntentData;
+        }
+
+        /**
+         * @return intelligentIntent
+         */
+        public String getIntelligentIntent() {
+            return this.intelligentIntent;
         }
 
         /**
@@ -727,6 +749,8 @@ public class PushTask extends TeaModel {
 
         public static final class Builder {
             private String category; 
+            private String deleteIntentData; 
+            private String intelligentIntent; 
             private Long notifyLevel; 
             private String privateContentParameters; 
             private String privateMsgTemplateId; 
@@ -737,6 +761,8 @@ public class PushTask extends TeaModel {
 
             private Builder(Oppo model) {
                 this.category = model.category;
+                this.deleteIntentData = model.deleteIntentData;
+                this.intelligentIntent = model.intelligentIntent;
                 this.notifyLevel = model.notifyLevel;
                 this.privateContentParameters = model.privateContentParameters;
                 this.privateMsgTemplateId = model.privateMsgTemplateId;
@@ -748,6 +774,22 @@ public class PushTask extends TeaModel {
              */
             public Builder category(String category) {
                 this.category = category;
+                return this;
+            }
+
+            /**
+             * DeleteIntentData.
+             */
+            public Builder deleteIntentData(String deleteIntentData) {
+                this.deleteIntentData = deleteIntentData;
+                return this;
+            }
+
+            /**
+             * IntelligentIntent.
+             */
+            public Builder intelligentIntent(String intelligentIntent) {
+                this.intelligentIntent = intelligentIntent;
                 return this;
             }
 
