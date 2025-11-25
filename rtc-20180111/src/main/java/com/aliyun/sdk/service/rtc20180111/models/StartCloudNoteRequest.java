@@ -786,6 +786,9 @@ public class StartCloudNoteRequest extends Request {
      * <p>StartCloudNoteRequest</p>
      */
     public static class RealtimeSubtitle extends TeaModel {
+        @com.aliyun.core.annotation.NameInMap("AsrCallback")
+        private Boolean asrCallback;
+
         @com.aliyun.core.annotation.NameInMap("Enabled")
         private Boolean enabled;
 
@@ -793,6 +796,7 @@ public class StartCloudNoteRequest extends Request {
         private Translation translation;
 
         private RealtimeSubtitle(Builder builder) {
+            this.asrCallback = builder.asrCallback;
             this.enabled = builder.enabled;
             this.translation = builder.translation;
         }
@@ -803,6 +807,13 @@ public class StartCloudNoteRequest extends Request {
 
         public static RealtimeSubtitle create() {
             return builder().build();
+        }
+
+        /**
+         * @return asrCallback
+         */
+        public Boolean getAsrCallback() {
+            return this.asrCallback;
         }
 
         /**
@@ -820,6 +831,7 @@ public class StartCloudNoteRequest extends Request {
         }
 
         public static final class Builder {
+            private Boolean asrCallback; 
             private Boolean enabled; 
             private Translation translation; 
 
@@ -827,9 +839,18 @@ public class StartCloudNoteRequest extends Request {
             } 
 
             private Builder(RealtimeSubtitle model) {
+                this.asrCallback = model.asrCallback;
                 this.enabled = model.enabled;
                 this.translation = model.translation;
             } 
+
+            /**
+             * AsrCallback.
+             */
+            public Builder asrCallback(Boolean asrCallback) {
+                this.asrCallback = asrCallback;
+                return this;
+            }
 
             /**
              * Enabled.
