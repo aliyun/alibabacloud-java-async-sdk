@@ -242,6 +242,12 @@ public class DescribeAttacksResponseBody extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Data")
         private String data;
 
+        @com.aliyun.core.annotation.NameInMap("HandleStatus")
+        private Integer handleStatus;
+
+        @com.aliyun.core.annotation.NameInMap("HandleTimestamp")
+        private Long handleTimestamp;
+
         @com.aliyun.core.annotation.NameInMap("Headers")
         private String headers;
 
@@ -352,6 +358,8 @@ public class DescribeAttacksResponseBody extends TeaModel {
             this.contentLength = builder.contentLength;
             this.count = builder.count;
             this.data = builder.data;
+            this.handleStatus = builder.handleStatus;
+            this.handleTimestamp = builder.handleTimestamp;
             this.headers = builder.headers;
             this.hostId = builder.hostId;
             this.hostname = builder.hostname;
@@ -463,6 +471,20 @@ public class DescribeAttacksResponseBody extends TeaModel {
          */
         public String getData() {
             return this.data;
+        }
+
+        /**
+         * @return handleStatus
+         */
+        public Integer getHandleStatus() {
+            return this.handleStatus;
+        }
+
+        /**
+         * @return handleTimestamp
+         */
+        public Long getHandleTimestamp() {
+            return this.handleTimestamp;
         }
 
         /**
@@ -707,6 +729,8 @@ public class DescribeAttacksResponseBody extends TeaModel {
             private Long contentLength; 
             private Long count; 
             private String data; 
+            private Integer handleStatus; 
+            private Long handleTimestamp; 
             private String headers; 
             private String hostId; 
             private String hostname; 
@@ -755,6 +779,8 @@ public class DescribeAttacksResponseBody extends TeaModel {
                 this.contentLength = model.contentLength;
                 this.count = model.count;
                 this.data = model.data;
+                this.handleStatus = model.handleStatus;
+                this.handleTimestamp = model.handleTimestamp;
                 this.headers = model.headers;
                 this.hostId = model.hostId;
                 this.hostname = model.hostname;
@@ -867,6 +893,22 @@ public class DescribeAttacksResponseBody extends TeaModel {
              */
             public Builder data(String data) {
                 this.data = data;
+                return this;
+            }
+
+            /**
+             * HandleStatus.
+             */
+            public Builder handleStatus(Integer handleStatus) {
+                this.handleStatus = handleStatus;
+                return this;
+            }
+
+            /**
+             * HandleTimestamp.
+             */
+            public Builder handleTimestamp(Long handleTimestamp) {
+                this.handleTimestamp = handleTimestamp;
                 return this;
             }
 
