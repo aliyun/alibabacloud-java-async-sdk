@@ -1214,6 +1214,9 @@ public class ListTrainingJobsResponseBody extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("AlgorithmVersion")
         private String algorithmVersion;
 
+        @com.aliyun.core.annotation.NameInMap("AssignNodeSpec")
+        private AssignNodeSpec assignNodeSpec;
+
         @com.aliyun.core.annotation.NameInMap("ComputeResource")
         private ComputeResource computeResource;
 
@@ -1290,6 +1293,7 @@ public class ListTrainingJobsResponseBody extends TeaModel {
             this.algorithmName = builder.algorithmName;
             this.algorithmProvider = builder.algorithmProvider;
             this.algorithmVersion = builder.algorithmVersion;
+            this.assignNodeSpec = builder.assignNodeSpec;
             this.computeResource = builder.computeResource;
             this.dlcJobId = builder.dlcJobId;
             this.environments = builder.environments;
@@ -1343,6 +1347,13 @@ public class ListTrainingJobsResponseBody extends TeaModel {
          */
         public String getAlgorithmVersion() {
             return this.algorithmVersion;
+        }
+
+        /**
+         * @return assignNodeSpec
+         */
+        public AssignNodeSpec getAssignNodeSpec() {
+            return this.assignNodeSpec;
         }
 
         /**
@@ -1517,6 +1528,7 @@ public class ListTrainingJobsResponseBody extends TeaModel {
             private String algorithmName; 
             private String algorithmProvider; 
             private String algorithmVersion; 
+            private AssignNodeSpec assignNodeSpec; 
             private ComputeResource computeResource; 
             private String dlcJobId; 
             private java.util.Map<String, String> environments; 
@@ -1549,6 +1561,7 @@ public class ListTrainingJobsResponseBody extends TeaModel {
                 this.algorithmName = model.algorithmName;
                 this.algorithmProvider = model.algorithmProvider;
                 this.algorithmVersion = model.algorithmVersion;
+                this.assignNodeSpec = model.assignNodeSpec;
                 this.computeResource = model.computeResource;
                 this.dlcJobId = model.dlcJobId;
                 this.environments = model.environments;
@@ -1596,6 +1609,14 @@ public class ListTrainingJobsResponseBody extends TeaModel {
              */
             public Builder algorithmVersion(String algorithmVersion) {
                 this.algorithmVersion = algorithmVersion;
+                return this;
+            }
+
+            /**
+             * AssignNodeSpec.
+             */
+            public Builder assignNodeSpec(AssignNodeSpec assignNodeSpec) {
+                this.assignNodeSpec = assignNodeSpec;
                 return this;
             }
 

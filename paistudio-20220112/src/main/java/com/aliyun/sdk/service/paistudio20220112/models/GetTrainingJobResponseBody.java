@@ -32,6 +32,9 @@ public class GetTrainingJobResponseBody extends TeaModel {
     @com.aliyun.core.annotation.NameInMap("AlgorithmVersion")
     private String algorithmVersion;
 
+    @com.aliyun.core.annotation.NameInMap("AssignNodeSpec")
+    private AssignNodeSpec assignNodeSpec;
+
     @com.aliyun.core.annotation.NameInMap("ComputeResource")
     private ComputeResource computeResource;
 
@@ -134,6 +137,7 @@ public class GetTrainingJobResponseBody extends TeaModel {
         this.algorithmProvider = builder.algorithmProvider;
         this.algorithmSpec = builder.algorithmSpec;
         this.algorithmVersion = builder.algorithmVersion;
+        this.assignNodeSpec = builder.assignNodeSpec;
         this.computeResource = builder.computeResource;
         this.duration = builder.duration;
         this.environments = builder.environments;
@@ -213,6 +217,13 @@ public class GetTrainingJobResponseBody extends TeaModel {
      */
     public String getAlgorithmVersion() {
         return this.algorithmVersion;
+    }
+
+    /**
+     * @return assignNodeSpec
+     */
+    public AssignNodeSpec getAssignNodeSpec() {
+        return this.assignNodeSpec;
     }
 
     /**
@@ -445,6 +456,7 @@ public class GetTrainingJobResponseBody extends TeaModel {
         private String algorithmProvider; 
         private AlgorithmSpec algorithmSpec; 
         private String algorithmVersion; 
+        private AssignNodeSpec assignNodeSpec; 
         private ComputeResource computeResource; 
         private Long duration; 
         private java.util.Map<String, String> environments; 
@@ -487,6 +499,7 @@ public class GetTrainingJobResponseBody extends TeaModel {
             this.algorithmProvider = model.algorithmProvider;
             this.algorithmSpec = model.algorithmSpec;
             this.algorithmVersion = model.algorithmVersion;
+            this.assignNodeSpec = model.assignNodeSpec;
             this.computeResource = model.computeResource;
             this.duration = model.duration;
             this.environments = model.environments;
@@ -558,6 +571,14 @@ public class GetTrainingJobResponseBody extends TeaModel {
          */
         public Builder algorithmVersion(String algorithmVersion) {
             this.algorithmVersion = algorithmVersion;
+            return this;
+        }
+
+        /**
+         * AssignNodeSpec.
+         */
+        public Builder assignNodeSpec(AssignNodeSpec assignNodeSpec) {
+            this.assignNodeSpec = assignNodeSpec;
             return this;
         }
 

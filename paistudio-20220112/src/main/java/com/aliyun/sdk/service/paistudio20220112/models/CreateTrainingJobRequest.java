@@ -34,6 +34,10 @@ public class CreateTrainingJobRequest extends Request {
     private String algorithmVersion;
 
     @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("AssignNodeSpec")
+    private AssignNodeSpec assignNodeSpec;
+
+    @com.aliyun.core.annotation.Body
     @com.aliyun.core.annotation.NameInMap("CodeDir")
     private Location codeDir;
 
@@ -109,6 +113,7 @@ public class CreateTrainingJobRequest extends Request {
         this.algorithmProvider = builder.algorithmProvider;
         this.algorithmSpec = builder.algorithmSpec;
         this.algorithmVersion = builder.algorithmVersion;
+        this.assignNodeSpec = builder.assignNodeSpec;
         this.codeDir = builder.codeDir;
         this.computeResource = builder.computeResource;
         this.environments = builder.environments;
@@ -167,6 +172,13 @@ public class CreateTrainingJobRequest extends Request {
      */
     public String getAlgorithmVersion() {
         return this.algorithmVersion;
+    }
+
+    /**
+     * @return assignNodeSpec
+     */
+    public AssignNodeSpec getAssignNodeSpec() {
+        return this.assignNodeSpec;
     }
 
     /**
@@ -293,6 +305,7 @@ public class CreateTrainingJobRequest extends Request {
         private String algorithmProvider; 
         private AlgorithmSpec algorithmSpec; 
         private String algorithmVersion; 
+        private AssignNodeSpec assignNodeSpec; 
         private Location codeDir; 
         private ComputeResource computeResource; 
         private java.util.Map<String, String> environments; 
@@ -321,6 +334,7 @@ public class CreateTrainingJobRequest extends Request {
             this.algorithmProvider = request.algorithmProvider;
             this.algorithmSpec = request.algorithmSpec;
             this.algorithmVersion = request.algorithmVersion;
+            this.assignNodeSpec = request.assignNodeSpec;
             this.codeDir = request.codeDir;
             this.computeResource = request.computeResource;
             this.environments = request.environments;
@@ -373,6 +387,15 @@ public class CreateTrainingJobRequest extends Request {
         public Builder algorithmVersion(String algorithmVersion) {
             this.putBodyParameter("AlgorithmVersion", algorithmVersion);
             this.algorithmVersion = algorithmVersion;
+            return this;
+        }
+
+        /**
+         * AssignNodeSpec.
+         */
+        public Builder assignNodeSpec(AssignNodeSpec assignNodeSpec) {
+            this.putBodyParameter("AssignNodeSpec", assignNodeSpec);
+            this.assignNodeSpec = assignNodeSpec;
             return this;
         }
 
