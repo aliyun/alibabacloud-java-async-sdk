@@ -32,11 +32,16 @@ public class DescribeComponentPropetiesRequest extends Request {
     @com.aliyun.core.annotation.Validation(required = true)
     private String regionId;
 
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("StorageType")
+    private String storageType;
+
     private DescribeComponentPropetiesRequest(Builder builder) {
         super(builder);
         this.commodityCode = builder.commodityCode;
         this.componentName = builder.componentName;
         this.regionId = builder.regionId;
+        this.storageType = builder.storageType;
     }
 
     public static Builder builder() {
@@ -73,10 +78,18 @@ public class DescribeComponentPropetiesRequest extends Request {
         return this.regionId;
     }
 
+    /**
+     * @return storageType
+     */
+    public String getStorageType() {
+        return this.storageType;
+    }
+
     public static final class Builder extends Request.Builder<DescribeComponentPropetiesRequest, Builder> {
         private String commodityCode; 
         private String componentName; 
         private String regionId; 
+        private String storageType; 
 
         private Builder() {
             super();
@@ -87,6 +100,7 @@ public class DescribeComponentPropetiesRequest extends Request {
             this.commodityCode = request.commodityCode;
             this.componentName = request.componentName;
             this.regionId = request.regionId;
+            this.storageType = request.storageType;
         } 
 
         /**
@@ -122,6 +136,15 @@ public class DescribeComponentPropetiesRequest extends Request {
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);
             this.regionId = regionId;
+            return this;
+        }
+
+        /**
+         * StorageType.
+         */
+        public Builder storageType(String storageType) {
+            this.putQueryParameter("StorageType", storageType);
+            this.storageType = storageType;
             return this;
         }
 
