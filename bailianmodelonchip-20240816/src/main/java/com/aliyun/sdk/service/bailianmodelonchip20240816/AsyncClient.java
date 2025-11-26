@@ -26,6 +26,12 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<ActiveInteractionCreateResponse> activeInteractionCreate(ActiveInteractionCreateRequest request);
 
     /**
+     * @param request the request parameters of ActiveInteractionEuCreate  ActiveInteractionEuCreateRequest
+     * @return ActiveInteractionEuCreateResponse
+     */
+    CompletableFuture<ActiveInteractionEuCreateResponse> activeInteractionEuCreate(ActiveInteractionEuCreateRequest request);
+
+    /**
      * @param request the request parameters of DeviceRegister  DeviceRegisterRequest
      * @return DeviceRegisterResponse
      */
@@ -42,5 +48,11 @@ public interface AsyncClient extends SdkAutoCloseable {
      * @return ModelTypeDetermineResponse
      */
     CompletableFuture<ModelTypeDetermineResponse> modelTypeDetermine(ModelTypeDetermineRequest request);
+
+    /**
+     * @param request the request parameters of OmniRealtimeConversationEU  OmniRealtimeConversationEURequest
+     * @return OmniRealtimeConversationEUResponse
+     */
+    CompletableFuture<OmniRealtimeConversationEUResponse> omniRealtimeConversationEU(OmniRealtimeConversationEURequest request);
 
 }

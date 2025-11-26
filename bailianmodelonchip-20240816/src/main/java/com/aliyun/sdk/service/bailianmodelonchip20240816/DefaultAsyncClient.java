@@ -58,6 +58,24 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
+     * @param request the request parameters of ActiveInteractionEuCreate  ActiveInteractionEuCreateRequest
+     * @return ActiveInteractionEuCreateResponse
+     */
+    @Override
+    public CompletableFuture<ActiveInteractionEuCreateResponse> activeInteractionEuCreate(ActiveInteractionEuCreateRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RESTFUL).setAction("ActiveInteractionEuCreate").setMethod(HttpMethod.POST).setPathRegex("/open/api/eu/active/interaction/create").setBodyType(BodyType.JSON).setBodyIsForm(true).setReqBodyType(BodyType.FORM).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(ActiveInteractionEuCreateResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<ActiveInteractionEuCreateResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
      * @param request the request parameters of DeviceRegister  DeviceRegisterRequest
      * @return DeviceRegisterResponse
      */
@@ -106,6 +124,24 @@ public final class DefaultAsyncClient implements AsyncClient {
             return this.handler.execute(params);
         } catch (Exception e) {
             CompletableFuture<ModelTypeDetermineResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
+     * @param request the request parameters of OmniRealtimeConversationEU  OmniRealtimeConversationEURequest
+     * @return OmniRealtimeConversationEUResponse
+     */
+    @Override
+    public CompletableFuture<OmniRealtimeConversationEUResponse> omniRealtimeConversationEU(OmniRealtimeConversationEURequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RESTFUL).setAction("OmniRealtimeConversationEU").setMethod(HttpMethod.POST).setPathRegex("/open/api/eu/active/interaction/audio").setBodyType(BodyType.JSON).setBodyIsForm(true).setReqBodyType(BodyType.FORM).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(OmniRealtimeConversationEUResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<OmniRealtimeConversationEUResponse> future = new CompletableFuture<>();
             future.completeExceptionally(e);
             return future;
         }
