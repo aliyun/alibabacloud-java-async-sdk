@@ -333,7 +333,7 @@ public class GetTaskByUuidResponseBody extends TeaModel {
         private java.util.List<Conversations> conversations;
 
         @com.aliyun.core.annotation.NameInMap("EndReason")
-        private Integer endReason;
+        private String endReason;
 
         @com.aliyun.core.annotation.NameInMap("EndTime")
         private Long endTime;
@@ -414,7 +414,7 @@ public class GetTaskByUuidResponseBody extends TeaModel {
         /**
          * @return endReason
          */
-        public Integer getEndReason() {
+        public String getEndReason() {
             return this.endReason;
         }
 
@@ -466,7 +466,7 @@ public class GetTaskByUuidResponseBody extends TeaModel {
             private String calledNumber; 
             private String callingNumber; 
             private java.util.List<Conversations> conversations; 
-            private Integer endReason; 
+            private String endReason; 
             private Long endTime; 
             private String id; 
             private String instanceId; 
@@ -535,7 +535,7 @@ public class GetTaskByUuidResponseBody extends TeaModel {
             /**
              * EndReason.
              */
-            public Builder endReason(Integer endReason) {
+            public Builder endReason(String endReason) {
                 this.endReason = endReason;
                 return this;
             }

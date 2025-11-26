@@ -20,16 +20,16 @@ public interface AsyncClient extends SdkAutoCloseable {
     }
 
     /**
-     * @param request the request parameters of ApplyNumberDistrictInfoParsingResult  ApplyNumberDistrictInfoParsingResultRequest
-     * @return ApplyNumberDistrictInfoParsingResultResponse
-     */
-    CompletableFuture<ApplyNumberDistrictInfoParsingResultResponse> applyNumberDistrictInfoParsingResult(ApplyNumberDistrictInfoParsingResultRequest request);
-
-    /**
      * @param request the request parameters of AssignJobs  AssignJobsRequest
      * @return AssignJobsResponse
      */
     CompletableFuture<AssignJobsResponse> assignJobs(AssignJobsRequest request);
+
+    /**
+     * @param request the request parameters of AssignJobsAsync  AssignJobsAsyncRequest
+     * @return AssignJobsAsyncResponse
+     */
+    CompletableFuture<AssignJobsAsyncResponse> assignJobsAsync(AssignJobsAsyncRequest request);
 
     /**
      * @param request the request parameters of CancelJobs  CancelJobsRequest
@@ -138,24 +138,6 @@ public interface AsyncClient extends SdkAutoCloseable {
      * @return CreateJobGroupExportTaskResponse
      */
     CompletableFuture<CreateJobGroupExportTaskResponse> createJobGroupExportTask(CreateJobGroupExportTaskRequest request);
-
-    /**
-     * @param request the request parameters of CreateNumberDistrictInfoDownloadUrl  CreateNumberDistrictInfoDownloadUrlRequest
-     * @return CreateNumberDistrictInfoDownloadUrlResponse
-     */
-    CompletableFuture<CreateNumberDistrictInfoDownloadUrlResponse> createNumberDistrictInfoDownloadUrl(CreateNumberDistrictInfoDownloadUrlRequest request);
-
-    /**
-     * @param request the request parameters of CreateNumberDistrictInfoParsingTask  CreateNumberDistrictInfoParsingTaskRequest
-     * @return CreateNumberDistrictInfoParsingTaskResponse
-     */
-    CompletableFuture<CreateNumberDistrictInfoParsingTaskResponse> createNumberDistrictInfoParsingTask(CreateNumberDistrictInfoParsingTaskRequest request);
-
-    /**
-     * @param request the request parameters of CreateOutboundCallNumber  CreateOutboundCallNumberRequest
-     * @return CreateOutboundCallNumberResponse
-     */
-    CompletableFuture<CreateOutboundCallNumberResponse> createOutboundCallNumber(CreateOutboundCallNumberRequest request);
 
     /**
      * @param request the request parameters of CreateScript  CreateScriptRequest
@@ -353,12 +335,6 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<DescribeJobGroupExportTaskProgressResponse> describeJobGroupExportTaskProgress(DescribeJobGroupExportTaskProgressRequest request);
 
     /**
-     * @param request the request parameters of DescribeNumberDistrictInfoStatus  DescribeNumberDistrictInfoStatusRequest
-     * @return DescribeNumberDistrictInfoStatusResponse
-     */
-    CompletableFuture<DescribeNumberDistrictInfoStatusResponse> describeNumberDistrictInfoStatus(DescribeNumberDistrictInfoStatusRequest request);
-
-    /**
      * @param request the request parameters of DescribeScript  DescribeScriptRequest
      * @return DescribeScriptResponse
      */
@@ -399,12 +375,6 @@ public interface AsyncClient extends SdkAutoCloseable {
      * @return DialogueResponse
      */
     CompletableFuture<DialogueResponse> dialogue(DialogueRequest request);
-
-    /**
-     * @param request the request parameters of DismissNumberDistrictInfoParsingResult  DismissNumberDistrictInfoParsingResultRequest
-     * @return DismissNumberDistrictInfoParsingResultResponse
-     */
-    CompletableFuture<DismissNumberDistrictInfoParsingResultResponse> dismissNumberDistrictInfoParsingResult(DismissNumberDistrictInfoParsingResultRequest request);
 
     /**
      * @param request the request parameters of DownloadRecording  DownloadRecordingRequest
@@ -473,6 +443,12 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<GetAsrServerInfoResponse> getAsrServerInfo(GetAsrServerInfoRequest request);
 
     /**
+     * @param request the request parameters of GetAssignJobsAsyncResult  GetAssignJobsAsyncResultRequest
+     * @return GetAssignJobsAsyncResultResponse
+     */
+    CompletableFuture<GetAssignJobsAsyncResultResponse> getAssignJobsAsyncResult(GetAssignJobsAsyncResultRequest request);
+
+    /**
      * @param request the request parameters of GetBaseStrategyPeriod  GetBaseStrategyPeriodRequest
      * @return GetBaseStrategyPeriodResponse
      */
@@ -501,12 +477,6 @@ public interface AsyncClient extends SdkAutoCloseable {
      * @return GetCurrentConcurrencyResponse
      */
     CompletableFuture<GetCurrentConcurrencyResponse> getCurrentConcurrency(GetCurrentConcurrencyRequest request);
-
-    /**
-     * @param request the request parameters of GetEffectiveDays  GetEffectiveDaysRequest
-     * @return GetEffectiveDaysResponse
-     */
-    CompletableFuture<GetEffectiveDaysResponse> getEffectiveDays(GetEffectiveDaysRequest request);
 
     /**
      * @param request the request parameters of GetEmptyNumberNoMoreCallsInfo  GetEmptyNumberNoMoreCallsInfoRequest
@@ -699,12 +669,6 @@ public interface AsyncClient extends SdkAutoCloseable {
      * @return ListResourceTagsResponse
      */
     CompletableFuture<ListResourceTagsResponse> listResourceTags(ListResourceTagsRequest request);
-
-    /**
-     * @param request the request parameters of ListSchedulerInstances  ListSchedulerInstancesRequest
-     * @return ListSchedulerInstancesResponse
-     */
-    CompletableFuture<ListSchedulerInstancesResponse> listSchedulerInstances(ListSchedulerInstancesRequest request);
 
     /**
      * @param request the request parameters of ListScriptPublishHistories  ListScriptPublishHistoriesRequest

@@ -12,19 +12,22 @@ import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
  * 
- * {@link GetEffectiveDaysResponseBody} extends {@link TeaModel}
+ * {@link GetAssignJobsAsyncResultResponseBody} extends {@link TeaModel}
  *
- * <p>GetEffectiveDaysResponseBody</p>
+ * <p>GetAssignJobsAsyncResultResponseBody</p>
  */
-public class GetEffectiveDaysResponseBody extends TeaModel {
+public class GetAssignJobsAsyncResultResponseBody extends TeaModel {
     @com.aliyun.core.annotation.NameInMap("Code")
     private String code;
 
-    @com.aliyun.core.annotation.NameInMap("EffectiveDays")
-    private Integer effectiveDays;
-
     @com.aliyun.core.annotation.NameInMap("HttpStatusCode")
     private Integer httpStatusCode;
+
+    @com.aliyun.core.annotation.NameInMap("JobGroupId")
+    private String jobGroupId;
+
+    @com.aliyun.core.annotation.NameInMap("JobsId")
+    private java.util.List<String> jobsId;
 
     @com.aliyun.core.annotation.NameInMap("Message")
     private String message;
@@ -35,20 +38,29 @@ public class GetEffectiveDaysResponseBody extends TeaModel {
     @com.aliyun.core.annotation.NameInMap("Success")
     private Boolean success;
 
-    private GetEffectiveDaysResponseBody(Builder builder) {
+    @com.aliyun.core.annotation.NameInMap("Timeout")
+    private Boolean timeout;
+
+    @com.aliyun.core.annotation.NameInMap("Valid")
+    private Boolean valid;
+
+    private GetAssignJobsAsyncResultResponseBody(Builder builder) {
         this.code = builder.code;
-        this.effectiveDays = builder.effectiveDays;
         this.httpStatusCode = builder.httpStatusCode;
+        this.jobGroupId = builder.jobGroupId;
+        this.jobsId = builder.jobsId;
         this.message = builder.message;
         this.requestId = builder.requestId;
         this.success = builder.success;
+        this.timeout = builder.timeout;
+        this.valid = builder.valid;
     }
 
     public static Builder builder() {
         return new Builder();
     }
 
-    public static GetEffectiveDaysResponseBody create() {
+    public static GetAssignJobsAsyncResultResponseBody create() {
         return builder().build();
     }
 
@@ -64,17 +76,24 @@ public class GetEffectiveDaysResponseBody extends TeaModel {
     }
 
     /**
-     * @return effectiveDays
-     */
-    public Integer getEffectiveDays() {
-        return this.effectiveDays;
-    }
-
-    /**
      * @return httpStatusCode
      */
     public Integer getHttpStatusCode() {
         return this.httpStatusCode;
+    }
+
+    /**
+     * @return jobGroupId
+     */
+    public String getJobGroupId() {
+        return this.jobGroupId;
+    }
+
+    /**
+     * @return jobsId
+     */
+    public java.util.List<String> getJobsId() {
+        return this.jobsId;
     }
 
     /**
@@ -98,24 +117,44 @@ public class GetEffectiveDaysResponseBody extends TeaModel {
         return this.success;
     }
 
+    /**
+     * @return timeout
+     */
+    public Boolean getTimeout() {
+        return this.timeout;
+    }
+
+    /**
+     * @return valid
+     */
+    public Boolean getValid() {
+        return this.valid;
+    }
+
     public static final class Builder {
         private String code; 
-        private Integer effectiveDays; 
         private Integer httpStatusCode; 
+        private String jobGroupId; 
+        private java.util.List<String> jobsId; 
         private String message; 
         private String requestId; 
         private Boolean success; 
+        private Boolean timeout; 
+        private Boolean valid; 
 
         private Builder() {
         } 
 
-        private Builder(GetEffectiveDaysResponseBody model) {
+        private Builder(GetAssignJobsAsyncResultResponseBody model) {
             this.code = model.code;
-            this.effectiveDays = model.effectiveDays;
             this.httpStatusCode = model.httpStatusCode;
+            this.jobGroupId = model.jobGroupId;
+            this.jobsId = model.jobsId;
             this.message = model.message;
             this.requestId = model.requestId;
             this.success = model.success;
+            this.timeout = model.timeout;
+            this.valid = model.valid;
         } 
 
         /**
@@ -127,18 +166,26 @@ public class GetEffectiveDaysResponseBody extends TeaModel {
         }
 
         /**
-         * EffectiveDays.
-         */
-        public Builder effectiveDays(Integer effectiveDays) {
-            this.effectiveDays = effectiveDays;
-            return this;
-        }
-
-        /**
          * HttpStatusCode.
          */
         public Builder httpStatusCode(Integer httpStatusCode) {
             this.httpStatusCode = httpStatusCode;
+            return this;
+        }
+
+        /**
+         * JobGroupId.
+         */
+        public Builder jobGroupId(String jobGroupId) {
+            this.jobGroupId = jobGroupId;
+            return this;
+        }
+
+        /**
+         * JobsId.
+         */
+        public Builder jobsId(java.util.List<String> jobsId) {
+            this.jobsId = jobsId;
             return this;
         }
 
@@ -166,8 +213,24 @@ public class GetEffectiveDaysResponseBody extends TeaModel {
             return this;
         }
 
-        public GetEffectiveDaysResponseBody build() {
-            return new GetEffectiveDaysResponseBody(this);
+        /**
+         * Timeout.
+         */
+        public Builder timeout(Boolean timeout) {
+            this.timeout = timeout;
+            return this;
+        }
+
+        /**
+         * Valid.
+         */
+        public Builder valid(Boolean valid) {
+            this.valid = valid;
+            return this;
+        }
+
+        public GetAssignJobsAsyncResultResponseBody build() {
+            return new GetAssignJobsAsyncResultResponseBody(this);
         } 
 
     } 

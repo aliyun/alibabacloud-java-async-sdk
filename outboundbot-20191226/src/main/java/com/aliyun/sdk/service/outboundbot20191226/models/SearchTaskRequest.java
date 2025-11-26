@@ -38,6 +38,10 @@ public class SearchTaskRequest extends Request {
     private String calledNumber;
 
     @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("CallingNumber")
+    private String callingNumber;
+
+    @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("InstanceId")
     @com.aliyun.core.annotation.Validation(required = true)
     private String instanceId;
@@ -57,6 +61,10 @@ public class SearchTaskRequest extends Request {
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("JobStatusStringList")
     private String jobStatusStringList;
+
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("LabelsJson")
+    private java.util.List<String> labelsJson;
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("OtherId")
@@ -117,11 +125,13 @@ public class SearchTaskRequest extends Request {
         this.callDurationGte = builder.callDurationGte;
         this.callDurationLte = builder.callDurationLte;
         this.calledNumber = builder.calledNumber;
+        this.callingNumber = builder.callingNumber;
         this.instanceId = builder.instanceId;
         this.jobGroupId = builder.jobGroupId;
         this.jobGroupNameQuery = builder.jobGroupNameQuery;
         this.jobId = builder.jobId;
         this.jobStatusStringList = builder.jobStatusStringList;
+        this.labelsJson = builder.labelsJson;
         this.otherId = builder.otherId;
         this.pageIndex = builder.pageIndex;
         this.pageSize = builder.pageSize;
@@ -186,6 +196,13 @@ public class SearchTaskRequest extends Request {
     }
 
     /**
+     * @return callingNumber
+     */
+    public String getCallingNumber() {
+        return this.callingNumber;
+    }
+
+    /**
      * @return instanceId
      */
     public String getInstanceId() {
@@ -218,6 +235,13 @@ public class SearchTaskRequest extends Request {
      */
     public String getJobStatusStringList() {
         return this.jobStatusStringList;
+    }
+
+    /**
+     * @return labelsJson
+     */
+    public java.util.List<String> getLabelsJson() {
+        return this.labelsJson;
     }
 
     /**
@@ -317,11 +341,13 @@ public class SearchTaskRequest extends Request {
         private Long callDurationGte; 
         private Long callDurationLte; 
         private String calledNumber; 
+        private String callingNumber; 
         private String instanceId; 
         private String jobGroupId; 
         private String jobGroupNameQuery; 
         private String jobId; 
         private String jobStatusStringList; 
+        private java.util.List<String> labelsJson; 
         private String otherId; 
         private Integer pageIndex; 
         private Integer pageSize; 
@@ -347,11 +373,13 @@ public class SearchTaskRequest extends Request {
             this.callDurationGte = request.callDurationGte;
             this.callDurationLte = request.callDurationLte;
             this.calledNumber = request.calledNumber;
+            this.callingNumber = request.callingNumber;
             this.instanceId = request.instanceId;
             this.jobGroupId = request.jobGroupId;
             this.jobGroupNameQuery = request.jobGroupNameQuery;
             this.jobId = request.jobId;
             this.jobStatusStringList = request.jobStatusStringList;
+            this.labelsJson = request.labelsJson;
             this.otherId = request.otherId;
             this.pageIndex = request.pageIndex;
             this.pageSize = request.pageSize;
@@ -413,6 +441,15 @@ public class SearchTaskRequest extends Request {
         }
 
         /**
+         * CallingNumber.
+         */
+        public Builder callingNumber(String callingNumber) {
+            this.putQueryParameter("CallingNumber", callingNumber);
+            this.callingNumber = callingNumber;
+            return this;
+        }
+
+        /**
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -457,6 +494,15 @@ public class SearchTaskRequest extends Request {
         public Builder jobStatusStringList(String jobStatusStringList) {
             this.putQueryParameter("JobStatusStringList", jobStatusStringList);
             this.jobStatusStringList = jobStatusStringList;
+            return this;
+        }
+
+        /**
+         * LabelsJson.
+         */
+        public Builder labelsJson(java.util.List<String> labelsJson) {
+            this.putQueryParameter("LabelsJson", labelsJson);
+            this.labelsJson = labelsJson;
             return this;
         }
 

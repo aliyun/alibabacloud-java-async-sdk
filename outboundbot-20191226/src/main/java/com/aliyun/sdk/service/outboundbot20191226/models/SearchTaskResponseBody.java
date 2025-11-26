@@ -23,6 +23,9 @@ public class SearchTaskResponseBody extends TeaModel {
     @com.aliyun.core.annotation.NameInMap("HttpStatusCode")
     private Integer httpStatusCode;
 
+    @com.aliyun.core.annotation.NameInMap("Labels")
+    private java.util.List<Labels> labels;
+
     @com.aliyun.core.annotation.NameInMap("Message")
     private String message;
 
@@ -44,9 +47,13 @@ public class SearchTaskResponseBody extends TeaModel {
     @com.aliyun.core.annotation.NameInMap("Total")
     private Long total;
 
+    @com.aliyun.core.annotation.NameInMap("VariableNames")
+    private java.util.List<String> variableNames;
+
     private SearchTaskResponseBody(Builder builder) {
         this.code = builder.code;
         this.httpStatusCode = builder.httpStatusCode;
+        this.labels = builder.labels;
         this.message = builder.message;
         this.pageIndex = builder.pageIndex;
         this.pageSize = builder.pageSize;
@@ -54,6 +61,7 @@ public class SearchTaskResponseBody extends TeaModel {
         this.searchTaskInfoList = builder.searchTaskInfoList;
         this.success = builder.success;
         this.total = builder.total;
+        this.variableNames = builder.variableNames;
     }
 
     public static Builder builder() {
@@ -80,6 +88,13 @@ public class SearchTaskResponseBody extends TeaModel {
      */
     public Integer getHttpStatusCode() {
         return this.httpStatusCode;
+    }
+
+    /**
+     * @return labels
+     */
+    public java.util.List<Labels> getLabels() {
+        return this.labels;
     }
 
     /**
@@ -131,9 +146,17 @@ public class SearchTaskResponseBody extends TeaModel {
         return this.total;
     }
 
+    /**
+     * @return variableNames
+     */
+    public java.util.List<String> getVariableNames() {
+        return this.variableNames;
+    }
+
     public static final class Builder {
         private String code; 
         private Integer httpStatusCode; 
+        private java.util.List<Labels> labels; 
         private String message; 
         private Integer pageIndex; 
         private Integer pageSize; 
@@ -141,6 +164,7 @@ public class SearchTaskResponseBody extends TeaModel {
         private java.util.List<SearchTaskInfoList> searchTaskInfoList; 
         private Boolean success; 
         private Long total; 
+        private java.util.List<String> variableNames; 
 
         private Builder() {
         } 
@@ -148,6 +172,7 @@ public class SearchTaskResponseBody extends TeaModel {
         private Builder(SearchTaskResponseBody model) {
             this.code = model.code;
             this.httpStatusCode = model.httpStatusCode;
+            this.labels = model.labels;
             this.message = model.message;
             this.pageIndex = model.pageIndex;
             this.pageSize = model.pageSize;
@@ -155,6 +180,7 @@ public class SearchTaskResponseBody extends TeaModel {
             this.searchTaskInfoList = model.searchTaskInfoList;
             this.success = model.success;
             this.total = model.total;
+            this.variableNames = model.variableNames;
         } 
 
         /**
@@ -170,6 +196,14 @@ public class SearchTaskResponseBody extends TeaModel {
          */
         public Builder httpStatusCode(Integer httpStatusCode) {
             this.httpStatusCode = httpStatusCode;
+            return this;
+        }
+
+        /**
+         * Labels.
+         */
+        public Builder labels(java.util.List<Labels> labels) {
+            this.labels = labels;
             return this;
         }
 
@@ -229,12 +263,170 @@ public class SearchTaskResponseBody extends TeaModel {
             return this;
         }
 
+        /**
+         * VariableNames.
+         */
+        public Builder variableNames(java.util.List<String> variableNames) {
+            this.variableNames = variableNames;
+            return this;
+        }
+
         public SearchTaskResponseBody build() {
             return new SearchTaskResponseBody(this);
         } 
 
     } 
 
+    /**
+     * 
+     * {@link SearchTaskResponseBody} extends {@link TeaModel}
+     *
+     * <p>SearchTaskResponseBody</p>
+     */
+    public static class Labels extends TeaModel {
+        @com.aliyun.core.annotation.NameInMap("Name")
+        private String name;
+
+        @com.aliyun.core.annotation.NameInMap("ValueList")
+        private java.util.List<String> valueList;
+
+        private Labels(Builder builder) {
+            this.name = builder.name;
+            this.valueList = builder.valueList;
+        }
+
+        public static Builder builder() {
+            return new Builder();
+        }
+
+        public static Labels create() {
+            return builder().build();
+        }
+
+        /**
+         * @return name
+         */
+        public String getName() {
+            return this.name;
+        }
+
+        /**
+         * @return valueList
+         */
+        public java.util.List<String> getValueList() {
+            return this.valueList;
+        }
+
+        public static final class Builder {
+            private String name; 
+            private java.util.List<String> valueList; 
+
+            private Builder() {
+            } 
+
+            private Builder(Labels model) {
+                this.name = model.name;
+                this.valueList = model.valueList;
+            } 
+
+            /**
+             * Name.
+             */
+            public Builder name(String name) {
+                this.name = name;
+                return this;
+            }
+
+            /**
+             * ValueList.
+             */
+            public Builder valueList(java.util.List<String> valueList) {
+                this.valueList = valueList;
+                return this;
+            }
+
+            public Labels build() {
+                return new Labels(this);
+            } 
+
+        } 
+
+    }
+    /**
+     * 
+     * {@link SearchTaskResponseBody} extends {@link TeaModel}
+     *
+     * <p>SearchTaskResponseBody</p>
+     */
+    public static class SearchTaskInfoListLabels extends TeaModel {
+        @com.aliyun.core.annotation.NameInMap("K")
+        private String k;
+
+        @com.aliyun.core.annotation.NameInMap("V")
+        private String v;
+
+        private SearchTaskInfoListLabels(Builder builder) {
+            this.k = builder.k;
+            this.v = builder.v;
+        }
+
+        public static Builder builder() {
+            return new Builder();
+        }
+
+        public static SearchTaskInfoListLabels create() {
+            return builder().build();
+        }
+
+        /**
+         * @return k
+         */
+        public String getK() {
+            return this.k;
+        }
+
+        /**
+         * @return v
+         */
+        public String getV() {
+            return this.v;
+        }
+
+        public static final class Builder {
+            private String k; 
+            private String v; 
+
+            private Builder() {
+            } 
+
+            private Builder(SearchTaskInfoListLabels model) {
+                this.k = model.k;
+                this.v = model.v;
+            } 
+
+            /**
+             * K.
+             */
+            public Builder k(String k) {
+                this.k = k;
+                return this;
+            }
+
+            /**
+             * V.
+             */
+            public Builder v(String v) {
+                this.v = v;
+                return this;
+            }
+
+            public SearchTaskInfoListLabels build() {
+                return new SearchTaskInfoListLabels(this);
+            } 
+
+        } 
+
+    }
     /**
      * 
      * {@link SearchTaskResponseBody} extends {@link TeaModel}
@@ -253,6 +445,9 @@ public class SearchTaskResponseBody extends TeaModel {
 
         @com.aliyun.core.annotation.NameInMap("CalledNumber")
         private String calledNumber;
+
+        @com.aliyun.core.annotation.NameInMap("CallingNumber")
+        private String callingNumber;
 
         @com.aliyun.core.annotation.NameInMap("DialException")
         private String dialException;
@@ -296,6 +491,9 @@ public class SearchTaskResponseBody extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("JobStatusString")
         private String jobStatusString;
 
+        @com.aliyun.core.annotation.NameInMap("Labels")
+        private java.util.List<SearchTaskInfoListLabels> labels;
+
         @com.aliyun.core.annotation.NameInMap("RecordingDuration")
         private Integer recordingDuration;
 
@@ -331,6 +529,7 @@ public class SearchTaskResponseBody extends TeaModel {
             this.callDuration = builder.callDuration;
             this.callDurationDisplay = builder.callDurationDisplay;
             this.calledNumber = builder.calledNumber;
+            this.callingNumber = builder.callingNumber;
             this.dialException = builder.dialException;
             this.dialExceptionCodes = builder.dialExceptionCodes;
             this.dialExceptionOld = builder.dialExceptionOld;
@@ -345,6 +544,7 @@ public class SearchTaskResponseBody extends TeaModel {
             this.jobStatus = builder.jobStatus;
             this.jobStatusName = builder.jobStatusName;
             this.jobStatusString = builder.jobStatusString;
+            this.labels = builder.labels;
             this.recordingDuration = builder.recordingDuration;
             this.scriptName = builder.scriptName;
             this.taskCreateTime = builder.taskCreateTime;
@@ -391,6 +591,13 @@ public class SearchTaskResponseBody extends TeaModel {
          */
         public String getCalledNumber() {
             return this.calledNumber;
+        }
+
+        /**
+         * @return callingNumber
+         */
+        public String getCallingNumber() {
+            return this.callingNumber;
         }
 
         /**
@@ -492,6 +699,13 @@ public class SearchTaskResponseBody extends TeaModel {
         }
 
         /**
+         * @return labels
+         */
+        public java.util.List<SearchTaskInfoListLabels> getLabels() {
+            return this.labels;
+        }
+
+        /**
          * @return recordingDuration
          */
         public Integer getRecordingDuration() {
@@ -566,6 +780,7 @@ public class SearchTaskResponseBody extends TeaModel {
             private Integer callDuration; 
             private String callDurationDisplay; 
             private String calledNumber; 
+            private String callingNumber; 
             private String dialException; 
             private java.util.List<String> dialExceptionCodes; 
             private String dialExceptionOld; 
@@ -580,6 +795,7 @@ public class SearchTaskResponseBody extends TeaModel {
             private Integer jobStatus; 
             private String jobStatusName; 
             private String jobStatusString; 
+            private java.util.List<SearchTaskInfoListLabels> labels; 
             private Integer recordingDuration; 
             private String scriptName; 
             private Long taskCreateTime; 
@@ -599,6 +815,7 @@ public class SearchTaskResponseBody extends TeaModel {
                 this.callDuration = model.callDuration;
                 this.callDurationDisplay = model.callDurationDisplay;
                 this.calledNumber = model.calledNumber;
+                this.callingNumber = model.callingNumber;
                 this.dialException = model.dialException;
                 this.dialExceptionCodes = model.dialExceptionCodes;
                 this.dialExceptionOld = model.dialExceptionOld;
@@ -613,6 +830,7 @@ public class SearchTaskResponseBody extends TeaModel {
                 this.jobStatus = model.jobStatus;
                 this.jobStatusName = model.jobStatusName;
                 this.jobStatusString = model.jobStatusString;
+                this.labels = model.labels;
                 this.recordingDuration = model.recordingDuration;
                 this.scriptName = model.scriptName;
                 this.taskCreateTime = model.taskCreateTime;
@@ -654,6 +872,14 @@ public class SearchTaskResponseBody extends TeaModel {
              */
             public Builder calledNumber(String calledNumber) {
                 this.calledNumber = calledNumber;
+                return this;
+            }
+
+            /**
+             * CallingNumber.
+             */
+            public Builder callingNumber(String callingNumber) {
+                this.callingNumber = callingNumber;
                 return this;
             }
 
@@ -766,6 +992,14 @@ public class SearchTaskResponseBody extends TeaModel {
              */
             public Builder jobStatusString(String jobStatusString) {
                 this.jobStatusString = jobStatusString;
+                return this;
+            }
+
+            /**
+             * Labels.
+             */
+            public Builder labels(java.util.List<SearchTaskInfoListLabels> labels) {
+                this.labels = labels;
                 return this;
             }
 

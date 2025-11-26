@@ -52,6 +52,10 @@ public class QueryJobsWithResultRequest extends Request {
     private String jobStatusFilter;
 
     @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("LabelsJson")
+    private java.util.List<String> labelsJson;
+
+    @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("PageNumber")
     private Integer pageNumber;
 
@@ -81,6 +85,7 @@ public class QueryJobsWithResultRequest extends Request {
         this.jobFailureReasonsFilter = builder.jobFailureReasonsFilter;
         this.jobGroupId = builder.jobGroupId;
         this.jobStatusFilter = builder.jobStatusFilter;
+        this.labelsJson = builder.labelsJson;
         this.pageNumber = builder.pageNumber;
         this.pageSize = builder.pageSize;
         this.queryText = builder.queryText;
@@ -158,6 +163,13 @@ public class QueryJobsWithResultRequest extends Request {
     }
 
     /**
+     * @return labelsJson
+     */
+    public java.util.List<String> getLabelsJson() {
+        return this.labelsJson;
+    }
+
+    /**
      * @return pageNumber
      */
     public Integer getPageNumber() {
@@ -201,6 +213,7 @@ public class QueryJobsWithResultRequest extends Request {
         private String jobFailureReasonsFilter; 
         private String jobGroupId; 
         private String jobStatusFilter; 
+        private java.util.List<String> labelsJson; 
         private Integer pageNumber; 
         private Integer pageSize; 
         private String queryText; 
@@ -221,6 +234,7 @@ public class QueryJobsWithResultRequest extends Request {
             this.jobFailureReasonsFilter = request.jobFailureReasonsFilter;
             this.jobGroupId = request.jobGroupId;
             this.jobStatusFilter = request.jobStatusFilter;
+            this.labelsJson = request.labelsJson;
             this.pageNumber = request.pageNumber;
             this.pageSize = request.pageSize;
             this.queryText = request.queryText;
@@ -303,6 +317,15 @@ public class QueryJobsWithResultRequest extends Request {
         public Builder jobStatusFilter(String jobStatusFilter) {
             this.putQueryParameter("JobStatusFilter", jobStatusFilter);
             this.jobStatusFilter = jobStatusFilter;
+            return this;
+        }
+
+        /**
+         * LabelsJson.
+         */
+        public Builder labelsJson(java.util.List<String> labelsJson) {
+            this.putQueryParameter("LabelsJson", labelsJson);
+            this.labelsJson = labelsJson;
             return this;
         }
 

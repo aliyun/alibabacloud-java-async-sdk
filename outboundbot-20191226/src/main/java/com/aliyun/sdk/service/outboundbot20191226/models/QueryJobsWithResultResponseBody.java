@@ -26,6 +26,9 @@ public class QueryJobsWithResultResponseBody extends TeaModel {
     @com.aliyun.core.annotation.NameInMap("Jobs")
     private Jobs jobs;
 
+    @com.aliyun.core.annotation.NameInMap("Labels")
+    private java.util.List<Labels> labels;
+
     @com.aliyun.core.annotation.NameInMap("Message")
     private String message;
 
@@ -42,6 +45,7 @@ public class QueryJobsWithResultResponseBody extends TeaModel {
         this.code = builder.code;
         this.httpStatusCode = builder.httpStatusCode;
         this.jobs = builder.jobs;
+        this.labels = builder.labels;
         this.message = builder.message;
         this.requestId = builder.requestId;
         this.success = builder.success;
@@ -82,6 +86,13 @@ public class QueryJobsWithResultResponseBody extends TeaModel {
     }
 
     /**
+     * @return labels
+     */
+    public java.util.List<Labels> getLabels() {
+        return this.labels;
+    }
+
+    /**
      * @return message
      */
     public String getMessage() {
@@ -113,6 +124,7 @@ public class QueryJobsWithResultResponseBody extends TeaModel {
         private String code; 
         private Integer httpStatusCode; 
         private Jobs jobs; 
+        private java.util.List<Labels> labels; 
         private String message; 
         private String requestId; 
         private Boolean success; 
@@ -125,6 +137,7 @@ public class QueryJobsWithResultResponseBody extends TeaModel {
             this.code = model.code;
             this.httpStatusCode = model.httpStatusCode;
             this.jobs = model.jobs;
+            this.labels = model.labels;
             this.message = model.message;
             this.requestId = model.requestId;
             this.success = model.success;
@@ -155,6 +168,14 @@ public class QueryJobsWithResultResponseBody extends TeaModel {
          */
         public Builder jobs(Jobs jobs) {
             this.jobs = jobs;
+            return this;
+        }
+
+        /**
+         * Labels.
+         */
+        public Builder labels(java.util.List<Labels> labels) {
+            this.labels = labels;
             return this;
         }
 
@@ -1265,6 +1286,81 @@ public class QueryJobsWithResultResponseBody extends TeaModel {
 
             public Jobs build() {
                 return new Jobs(this);
+            } 
+
+        } 
+
+    }
+    /**
+     * 
+     * {@link QueryJobsWithResultResponseBody} extends {@link TeaModel}
+     *
+     * <p>QueryJobsWithResultResponseBody</p>
+     */
+    public static class Labels extends TeaModel {
+        @com.aliyun.core.annotation.NameInMap("Name")
+        private String name;
+
+        @com.aliyun.core.annotation.NameInMap("ValueList")
+        private java.util.List<String> valueList;
+
+        private Labels(Builder builder) {
+            this.name = builder.name;
+            this.valueList = builder.valueList;
+        }
+
+        public static Builder builder() {
+            return new Builder();
+        }
+
+        public static Labels create() {
+            return builder().build();
+        }
+
+        /**
+         * @return name
+         */
+        public String getName() {
+            return this.name;
+        }
+
+        /**
+         * @return valueList
+         */
+        public java.util.List<String> getValueList() {
+            return this.valueList;
+        }
+
+        public static final class Builder {
+            private String name; 
+            private java.util.List<String> valueList; 
+
+            private Builder() {
+            } 
+
+            private Builder(Labels model) {
+                this.name = model.name;
+                this.valueList = model.valueList;
+            } 
+
+            /**
+             * Name.
+             */
+            public Builder name(String name) {
+                this.name = name;
+                return this;
+            }
+
+            /**
+             * ValueList.
+             */
+            public Builder valueList(java.util.List<String> valueList) {
+                this.valueList = valueList;
+                return this;
+            }
+
+            public Labels build() {
+                return new Labels(this);
             } 
 
         } 

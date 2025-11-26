@@ -209,10 +209,14 @@ public class DescribeScriptResponseBody extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("FcRegion")
         private String fcRegion;
 
+        @com.aliyun.core.annotation.NameInMap("SupportBeebotPrompts")
+        private Boolean supportBeebotPrompts;
+
         private NluProfile(Builder builder) {
             this.fcFunction = builder.fcFunction;
             this.fcHttpTriggerUrl = builder.fcHttpTriggerUrl;
             this.fcRegion = builder.fcRegion;
+            this.supportBeebotPrompts = builder.supportBeebotPrompts;
         }
 
         public static Builder builder() {
@@ -244,10 +248,18 @@ public class DescribeScriptResponseBody extends TeaModel {
             return this.fcRegion;
         }
 
+        /**
+         * @return supportBeebotPrompts
+         */
+        public Boolean getSupportBeebotPrompts() {
+            return this.supportBeebotPrompts;
+        }
+
         public static final class Builder {
             private String fcFunction; 
             private String fcHttpTriggerUrl; 
             private String fcRegion; 
+            private Boolean supportBeebotPrompts; 
 
             private Builder() {
             } 
@@ -256,6 +268,7 @@ public class DescribeScriptResponseBody extends TeaModel {
                 this.fcFunction = model.fcFunction;
                 this.fcHttpTriggerUrl = model.fcHttpTriggerUrl;
                 this.fcRegion = model.fcRegion;
+                this.supportBeebotPrompts = model.supportBeebotPrompts;
             } 
 
             /**
@@ -279,6 +292,14 @@ public class DescribeScriptResponseBody extends TeaModel {
              */
             public Builder fcRegion(String fcRegion) {
                 this.fcRegion = fcRegion;
+                return this;
+            }
+
+            /**
+             * SupportBeebotPrompts.
+             */
+            public Builder supportBeebotPrompts(Boolean supportBeebotPrompts) {
+                this.supportBeebotPrompts = supportBeebotPrompts;
                 return this;
             }
 

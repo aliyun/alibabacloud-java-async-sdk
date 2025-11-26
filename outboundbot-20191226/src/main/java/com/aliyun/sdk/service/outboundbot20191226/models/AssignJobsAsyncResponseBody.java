@@ -12,11 +12,14 @@ import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
  * 
- * {@link DismissNumberDistrictInfoParsingResultResponseBody} extends {@link TeaModel}
+ * {@link AssignJobsAsyncResponseBody} extends {@link TeaModel}
  *
- * <p>DismissNumberDistrictInfoParsingResultResponseBody</p>
+ * <p>AssignJobsAsyncResponseBody</p>
  */
-public class DismissNumberDistrictInfoParsingResultResponseBody extends TeaModel {
+public class AssignJobsAsyncResponseBody extends TeaModel {
+    @com.aliyun.core.annotation.NameInMap("AsyncTaskId")
+    private String asyncTaskId;
+
     @com.aliyun.core.annotation.NameInMap("Code")
     private String code;
 
@@ -32,7 +35,8 @@ public class DismissNumberDistrictInfoParsingResultResponseBody extends TeaModel
     @com.aliyun.core.annotation.NameInMap("Success")
     private Boolean success;
 
-    private DismissNumberDistrictInfoParsingResultResponseBody(Builder builder) {
+    private AssignJobsAsyncResponseBody(Builder builder) {
+        this.asyncTaskId = builder.asyncTaskId;
         this.code = builder.code;
         this.httpStatusCode = builder.httpStatusCode;
         this.message = builder.message;
@@ -44,12 +48,19 @@ public class DismissNumberDistrictInfoParsingResultResponseBody extends TeaModel
         return new Builder();
     }
 
-    public static DismissNumberDistrictInfoParsingResultResponseBody create() {
+    public static AssignJobsAsyncResponseBody create() {
         return builder().build();
     }
 
     public Builder toBuilder() {
         return new Builder(this);
+    }
+
+    /**
+     * @return asyncTaskId
+     */
+    public String getAsyncTaskId() {
+        return this.asyncTaskId;
     }
 
     /**
@@ -88,6 +99,7 @@ public class DismissNumberDistrictInfoParsingResultResponseBody extends TeaModel
     }
 
     public static final class Builder {
+        private String asyncTaskId; 
         private String code; 
         private Integer httpStatusCode; 
         private String message; 
@@ -97,13 +109,22 @@ public class DismissNumberDistrictInfoParsingResultResponseBody extends TeaModel
         private Builder() {
         } 
 
-        private Builder(DismissNumberDistrictInfoParsingResultResponseBody model) {
+        private Builder(AssignJobsAsyncResponseBody model) {
+            this.asyncTaskId = model.asyncTaskId;
             this.code = model.code;
             this.httpStatusCode = model.httpStatusCode;
             this.message = model.message;
             this.requestId = model.requestId;
             this.success = model.success;
         } 
+
+        /**
+         * AsyncTaskId.
+         */
+        public Builder asyncTaskId(String asyncTaskId) {
+            this.asyncTaskId = asyncTaskId;
+            return this;
+        }
 
         /**
          * Code.
@@ -145,8 +166,8 @@ public class DismissNumberDistrictInfoParsingResultResponseBody extends TeaModel
             return this;
         }
 
-        public DismissNumberDistrictInfoParsingResultResponseBody build() {
-            return new DismissNumberDistrictInfoParsingResultResponseBody(this);
+        public AssignJobsAsyncResponseBody build() {
+            return new AssignJobsAsyncResponseBody(this);
         } 
 
     } 

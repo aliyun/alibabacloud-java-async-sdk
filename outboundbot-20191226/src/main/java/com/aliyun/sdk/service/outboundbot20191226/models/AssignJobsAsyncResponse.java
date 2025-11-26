@@ -12,11 +12,11 @@ import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
  * 
- * {@link DescribeNumberDistrictInfoStatusResponse} extends {@link TeaModel}
+ * {@link AssignJobsAsyncResponse} extends {@link TeaModel}
  *
- * <p>DescribeNumberDistrictInfoStatusResponse</p>
+ * <p>AssignJobsAsyncResponse</p>
  */
-public class DescribeNumberDistrictInfoStatusResponse extends Response {
+public class AssignJobsAsyncResponse extends Response {
     @com.aliyun.core.annotation.NameInMap("headers")
     private java.util.Map<String, String> headers;
 
@@ -24,16 +24,16 @@ public class DescribeNumberDistrictInfoStatusResponse extends Response {
     private Integer statusCode;
 
     @com.aliyun.core.annotation.NameInMap("body")
-    private DescribeNumberDistrictInfoStatusResponseBody body;
+    private AssignJobsAsyncResponseBody body;
 
-    private DescribeNumberDistrictInfoStatusResponse(BuilderImpl builder) {
+    private AssignJobsAsyncResponse(BuilderImpl builder) {
         super(builder);
         this.headers = builder.headers;
         this.statusCode = builder.statusCode;
         this.body = builder.body;
     }
 
-    public static DescribeNumberDistrictInfoStatusResponse create() {
+    public static AssignJobsAsyncResponse create() {
         return new BuilderImpl().build();
     }
 
@@ -59,35 +59,35 @@ public class DescribeNumberDistrictInfoStatusResponse extends Response {
     /**
      * @return body
      */
-    public DescribeNumberDistrictInfoStatusResponseBody getBody() {
+    public AssignJobsAsyncResponseBody getBody() {
         return this.body;
     }
 
-    public interface Builder extends Response.Builder<DescribeNumberDistrictInfoStatusResponse, Builder> {
+    public interface Builder extends Response.Builder<AssignJobsAsyncResponse, Builder> {
 
         Builder headers(java.util.Map<String, String> headers);
 
         Builder statusCode(Integer statusCode);
 
-        Builder body(DescribeNumberDistrictInfoStatusResponseBody body);
+        Builder body(AssignJobsAsyncResponseBody body);
 
         @Override
-        DescribeNumberDistrictInfoStatusResponse build();
+        AssignJobsAsyncResponse build();
 
     } 
 
     private static final class BuilderImpl
-            extends Response.BuilderImpl<DescribeNumberDistrictInfoStatusResponse, Builder>
+            extends Response.BuilderImpl<AssignJobsAsyncResponse, Builder>
             implements Builder {
         private java.util.Map<String, String> headers; 
         private Integer statusCode; 
-        private DescribeNumberDistrictInfoStatusResponseBody body; 
+        private AssignJobsAsyncResponseBody body; 
 
         private BuilderImpl() {
             super();
         } 
 
-        private BuilderImpl(DescribeNumberDistrictInfoStatusResponse response) {
+        private BuilderImpl(AssignJobsAsyncResponse response) {
             super(response);
             this.headers = response.headers;
             this.statusCode = response.statusCode;
@@ -116,14 +116,14 @@ public class DescribeNumberDistrictInfoStatusResponse extends Response {
          * body.
          */
         @Override
-        public Builder body(DescribeNumberDistrictInfoStatusResponseBody body) {
+        public Builder body(AssignJobsAsyncResponseBody body) {
             this.body = body;
             return this;
         }
 
         @Override
-        public DescribeNumberDistrictInfoStatusResponse build() {
-            return new DescribeNumberDistrictInfoStatusResponse(this);
+        public AssignJobsAsyncResponse build() {
+            return new AssignJobsAsyncResponse(this);
         } 
 
     } 

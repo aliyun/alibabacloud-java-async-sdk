@@ -38,6 +38,10 @@ public class CreateTaskExportTaskRequest extends Request {
     private String calledNumber;
 
     @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("CallingNumber")
+    private String callingNumber;
+
+    @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("HasAnswered")
     private Boolean hasAnswered;
 
@@ -129,6 +133,7 @@ public class CreateTaskExportTaskRequest extends Request {
         this.callDurationGte = builder.callDurationGte;
         this.callDurationLte = builder.callDurationLte;
         this.calledNumber = builder.calledNumber;
+        this.callingNumber = builder.callingNumber;
         this.hasAnswered = builder.hasAnswered;
         this.hasHangUpByRejection = builder.hasHangUpByRejection;
         this.hasReachedEndOfFlow = builder.hasReachedEndOfFlow;
@@ -198,6 +203,13 @@ public class CreateTaskExportTaskRequest extends Request {
      */
     public String getCalledNumber() {
         return this.calledNumber;
+    }
+
+    /**
+     * @return callingNumber
+     */
+    public String getCallingNumber() {
+        return this.callingNumber;
     }
 
     /**
@@ -353,6 +365,7 @@ public class CreateTaskExportTaskRequest extends Request {
         private Long callDurationGte; 
         private Long callDurationLte; 
         private String calledNumber; 
+        private String callingNumber; 
         private Boolean hasAnswered; 
         private Boolean hasHangUpByRejection; 
         private Boolean hasReachedEndOfFlow; 
@@ -386,6 +399,7 @@ public class CreateTaskExportTaskRequest extends Request {
             this.callDurationGte = request.callDurationGte;
             this.callDurationLte = request.callDurationLte;
             this.calledNumber = request.calledNumber;
+            this.callingNumber = request.callingNumber;
             this.hasAnswered = request.hasAnswered;
             this.hasHangUpByRejection = request.hasHangUpByRejection;
             this.hasReachedEndOfFlow = request.hasReachedEndOfFlow;
@@ -451,6 +465,15 @@ public class CreateTaskExportTaskRequest extends Request {
         public Builder calledNumber(String calledNumber) {
             this.putQueryParameter("CalledNumber", calledNumber);
             this.calledNumber = calledNumber;
+            return this;
+        }
+
+        /**
+         * CallingNumber.
+         */
+        public Builder callingNumber(String callingNumber) {
+            this.putQueryParameter("CallingNumber", callingNumber);
+            this.callingNumber = callingNumber;
             return this;
         }
 
