@@ -42,6 +42,9 @@ public class SubscriptionForView extends TeaModel {
     @com.aliyun.core.annotation.Validation(required = true)
     private String subscriptionName;
 
+    @com.aliyun.core.annotation.NameInMap("syncFromType")
+    private String syncFromType;
+
     @com.aliyun.core.annotation.NameInMap("updateTime")
     private String updateTime;
 
@@ -60,6 +63,7 @@ public class SubscriptionForView extends TeaModel {
         this.pushingSetting = builder.pushingSetting;
         this.subscriptionId = builder.subscriptionId;
         this.subscriptionName = builder.subscriptionName;
+        this.syncFromType = builder.syncFromType;
         this.updateTime = builder.updateTime;
         this.userId = builder.userId;
         this.workspace = builder.workspace;
@@ -134,6 +138,13 @@ public class SubscriptionForView extends TeaModel {
     }
 
     /**
+     * @return syncFromType
+     */
+    public String getSyncFromType() {
+        return this.syncFromType;
+    }
+
+    /**
      * @return updateTime
      */
     public String getUpdateTime() {
@@ -163,6 +174,7 @@ public class SubscriptionForView extends TeaModel {
         private PushingSetting pushingSetting; 
         private String subscriptionId; 
         private String subscriptionName; 
+        private String syncFromType; 
         private String updateTime; 
         private String userId; 
         private String workspace; 
@@ -179,6 +191,7 @@ public class SubscriptionForView extends TeaModel {
             this.pushingSetting = model.pushingSetting;
             this.subscriptionId = model.subscriptionId;
             this.subscriptionName = model.subscriptionName;
+            this.syncFromType = model.syncFromType;
             this.updateTime = model.updateTime;
             this.userId = model.userId;
             this.workspace = model.workspace;
@@ -245,6 +258,14 @@ public class SubscriptionForView extends TeaModel {
          */
         public Builder subscriptionName(String subscriptionName) {
             this.subscriptionName = subscriptionName;
+            return this;
+        }
+
+        /**
+         * syncFromType.
+         */
+        public Builder syncFromType(String syncFromType) {
+            this.syncFromType = syncFromType;
             return this;
         }
 

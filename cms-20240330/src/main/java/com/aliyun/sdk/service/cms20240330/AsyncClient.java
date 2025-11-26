@@ -35,6 +35,12 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<CreateAggTaskGroupResponse> createAggTaskGroup(CreateAggTaskGroupRequest request);
 
     /**
+     * @param request the request parameters of CreateCloudResource  CreateCloudResourceRequest
+     * @return CreateCloudResourceResponse
+     */
+    CompletableFuture<CreateCloudResourceResponse> createCloudResource(CreateCloudResourceRequest request);
+
+    /**
      * @param request the request parameters of CreateEntityStore  CreateEntityStoreRequest
      * @return CreateEntityStoreResponse
      */
@@ -107,6 +113,12 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<DeleteAggTaskGroupResponse> deleteAggTaskGroup(DeleteAggTaskGroupRequest request);
 
     /**
+     * @param request the request parameters of DeleteCloudResource  DeleteCloudResourceRequest
+     * @return DeleteCloudResourceResponse
+     */
+    CompletableFuture<DeleteCloudResourceResponse> deleteCloudResource(DeleteCloudResourceRequest request);
+
+    /**
      * @param request the request parameters of DeleteEntityStore  DeleteEntityStoreRequest
      * @return DeleteEntityStoreResponse
      */
@@ -173,6 +185,12 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<DeleteWorkspaceResponse> deleteWorkspace(DeleteWorkspaceRequest request);
 
     /**
+     * @param request the request parameters of DescribeRegions  DescribeRegionsRequest
+     * @return DescribeRegionsResponse
+     */
+    CompletableFuture<DescribeRegionsResponse> describeRegions(DescribeRegionsRequest request);
+
+    /**
      * @param request the request parameters of GetAddonRelease  GetAddonReleaseRequest
      * @return GetAddonReleaseResponse
      */
@@ -183,6 +201,24 @@ public interface AsyncClient extends SdkAutoCloseable {
      * @return GetAggTaskGroupResponse
      */
     CompletableFuture<GetAggTaskGroupResponse> getAggTaskGroup(GetAggTaskGroupRequest request);
+
+    /**
+     * @param request the request parameters of GetCloudResource  GetCloudResourceRequest
+     * @return GetCloudResourceResponse
+     */
+    CompletableFuture<GetCloudResourceResponse> getCloudResource(GetCloudResourceRequest request);
+
+    /**
+     * @param request the request parameters of GetCloudResourceData  GetCloudResourceDataRequest
+     * @return GetCloudResourceDataResponse
+     */
+    CompletableFuture<GetCloudResourceDataResponse> getCloudResourceData(GetCloudResourceDataRequest request);
+
+    /**
+     * @param request the request parameters of GetCmsService  GetCmsServiceRequest
+     * @return GetCmsServiceResponse
+     */
+    CompletableFuture<GetCmsServiceResponse> getCmsService(GetCmsServiceRequest request);
 
     /**
      * @param request the request parameters of GetEntityStore  GetEntityStoreRequest
@@ -210,6 +246,12 @@ public interface AsyncClient extends SdkAutoCloseable {
      * @return GetPrometheusInstanceResponse
      */
     CompletableFuture<GetPrometheusInstanceResponse> getPrometheusInstance(GetPrometheusInstanceRequest request);
+
+    /**
+     * @param request the request parameters of GetPrometheusUserSetting  GetPrometheusUserSettingRequest
+     * @return GetPrometheusUserSettingResponse
+     */
+    CompletableFuture<GetPrometheusUserSettingResponse> getPrometheusUserSetting(GetPrometheusUserSettingRequest request);
 
     /**
      * <b>description</b> :
@@ -317,6 +359,12 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<ListIntegrationPolicyPodMonitorsResponse> listIntegrationPolicyPodMonitors(ListIntegrationPolicyPodMonitorsRequest request);
 
     /**
+     * @param request the request parameters of ListIntegrationPolicyServiceMonitors  ListIntegrationPolicyServiceMonitorsRequest
+     * @return ListIntegrationPolicyServiceMonitorsResponse
+     */
+    CompletableFuture<ListIntegrationPolicyServiceMonitorsResponse> listIntegrationPolicyServiceMonitors(ListIntegrationPolicyServiceMonitorsRequest request);
+
+    /**
      * <b>description</b> :
      * <p>During the effective period of the policy, all alarms within the application group will no longer send notifications.</p>
      * <p>This article provides an example of creating a pause alarm notification policy <code>PauseNotify</code> for the application group <code>7301****</code>. This application group will pause alarms from <code>1622949300000</code> to <code>1623208500000</code> (Beijing Time <code>2021-06-06 11:15:00</code> to <code>2021-06-09 11:15:00</code>).</p>
@@ -418,6 +466,12 @@ public interface AsyncClient extends SdkAutoCloseable {
      * @return UpdatePrometheusInstanceResponse
      */
     CompletableFuture<UpdatePrometheusInstanceResponse> updatePrometheusInstance(UpdatePrometheusInstanceRequest request);
+
+    /**
+     * @param request the request parameters of UpdatePrometheusUserSetting  UpdatePrometheusUserSettingRequest
+     * @return UpdatePrometheusUserSettingResponse
+     */
+    CompletableFuture<UpdatePrometheusUserSettingResponse> updatePrometheusUserSetting(UpdatePrometheusUserSettingRequest request);
 
     /**
      * <b>description</b> :

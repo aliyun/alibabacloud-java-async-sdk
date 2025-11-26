@@ -23,12 +23,16 @@ public class AlertRuleSend extends TeaModel {
     @com.aliyun.core.annotation.NameInMap("notification")
     private AlertRuleNotification notification;
 
+    @com.aliyun.core.annotation.NameInMap("notifyStrategies")
+    private java.util.List<String> notifyStrategies;
+
     @com.aliyun.core.annotation.NameInMap("sendToArms")
     private Boolean sendToArms;
 
     private AlertRuleSend(Builder builder) {
         this.action = builder.action;
         this.notification = builder.notification;
+        this.notifyStrategies = builder.notifyStrategies;
         this.sendToArms = builder.sendToArms;
     }
 
@@ -59,6 +63,13 @@ public class AlertRuleSend extends TeaModel {
     }
 
     /**
+     * @return notifyStrategies
+     */
+    public java.util.List<String> getNotifyStrategies() {
+        return this.notifyStrategies;
+    }
+
+    /**
      * @return sendToArms
      */
     public Boolean getSendToArms() {
@@ -68,6 +79,7 @@ public class AlertRuleSend extends TeaModel {
     public static final class Builder {
         private AlertRuleAction action; 
         private AlertRuleNotification notification; 
+        private java.util.List<String> notifyStrategies; 
         private Boolean sendToArms; 
 
         private Builder() {
@@ -76,6 +88,7 @@ public class AlertRuleSend extends TeaModel {
         private Builder(AlertRuleSend model) {
             this.action = model.action;
             this.notification = model.notification;
+            this.notifyStrategies = model.notifyStrategies;
             this.sendToArms = model.sendToArms;
         } 
 
@@ -92,6 +105,14 @@ public class AlertRuleSend extends TeaModel {
          */
         public Builder notification(AlertRuleNotification notification) {
             this.notification = notification;
+            return this;
+        }
+
+        /**
+         * notifyStrategies.
+         */
+        public Builder notifyStrategies(java.util.List<String> notifyStrategies) {
+            this.notifyStrategies = notifyStrategies;
             return this;
         }
 
