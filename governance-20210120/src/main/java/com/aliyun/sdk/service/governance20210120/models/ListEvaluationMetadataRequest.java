@@ -29,11 +29,16 @@ public class ListEvaluationMetadataRequest extends Request {
     @com.aliyun.core.annotation.NameInMap("RegionId")
     private String regionId;
 
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("TopicCode")
+    private String topicCode;
+
     private ListEvaluationMetadataRequest(Builder builder) {
         super(builder);
         this.language = builder.language;
         this.lensCode = builder.lensCode;
         this.regionId = builder.regionId;
+        this.topicCode = builder.topicCode;
     }
 
     public static Builder builder() {
@@ -70,10 +75,18 @@ public class ListEvaluationMetadataRequest extends Request {
         return this.regionId;
     }
 
+    /**
+     * @return topicCode
+     */
+    public String getTopicCode() {
+        return this.topicCode;
+    }
+
     public static final class Builder extends Request.Builder<ListEvaluationMetadataRequest, Builder> {
         private String language; 
         private String lensCode; 
         private String regionId; 
+        private String topicCode; 
 
         private Builder() {
             super();
@@ -84,6 +97,7 @@ public class ListEvaluationMetadataRequest extends Request {
             this.language = request.language;
             this.lensCode = request.lensCode;
             this.regionId = request.regionId;
+            this.topicCode = request.topicCode;
         } 
 
         /**
@@ -120,6 +134,15 @@ public class ListEvaluationMetadataRequest extends Request {
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);
             this.regionId = regionId;
+            return this;
+        }
+
+        /**
+         * TopicCode.
+         */
+        public Builder topicCode(String topicCode) {
+            this.putQueryParameter("TopicCode", topicCode);
+            this.topicCode = topicCode;
             return this;
         }
 

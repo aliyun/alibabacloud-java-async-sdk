@@ -733,6 +733,9 @@ public class ListEvaluationMetadataResponseBody extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Stage")
         private String stage;
 
+        @com.aliyun.core.annotation.NameInMap("TopicCode")
+        private String topicCode;
+
         private Metadata(Builder builder) {
             this.category = builder.category;
             this.description = builder.description;
@@ -743,6 +746,7 @@ public class ListEvaluationMetadataResponseBody extends TeaModel {
             this.resourceMetadata = builder.resourceMetadata;
             this.scope = builder.scope;
             this.stage = builder.stage;
+            this.topicCode = builder.topicCode;
         }
 
         public static Builder builder() {
@@ -816,6 +820,13 @@ public class ListEvaluationMetadataResponseBody extends TeaModel {
             return this.stage;
         }
 
+        /**
+         * @return topicCode
+         */
+        public String getTopicCode() {
+            return this.topicCode;
+        }
+
         public static final class Builder {
             private String category; 
             private String description; 
@@ -826,6 +837,7 @@ public class ListEvaluationMetadataResponseBody extends TeaModel {
             private ResourceMetadata resourceMetadata; 
             private String scope; 
             private String stage; 
+            private String topicCode; 
 
             private Builder() {
             } 
@@ -840,6 +852,7 @@ public class ListEvaluationMetadataResponseBody extends TeaModel {
                 this.resourceMetadata = model.resourceMetadata;
                 this.scope = model.scope;
                 this.stage = model.stage;
+                this.topicCode = model.topicCode;
             } 
 
             /**
@@ -940,6 +953,14 @@ public class ListEvaluationMetadataResponseBody extends TeaModel {
              */
             public Builder stage(String stage) {
                 this.stage = stage;
+                return this;
+            }
+
+            /**
+             * TopicCode.
+             */
+            public Builder topicCode(String topicCode) {
+                this.topicCode = topicCode;
                 return this;
             }
 

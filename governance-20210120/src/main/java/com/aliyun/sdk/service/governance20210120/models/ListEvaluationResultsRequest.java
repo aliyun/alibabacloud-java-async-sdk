@@ -41,6 +41,10 @@ public class ListEvaluationResultsRequest extends Request {
     @com.aliyun.core.annotation.NameInMap("SnapshotId")
     private String snapshotId;
 
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("TopicCode")
+    private String topicCode;
+
     private ListEvaluationResultsRequest(Builder builder) {
         super(builder);
         this.accountId = builder.accountId;
@@ -49,6 +53,7 @@ public class ListEvaluationResultsRequest extends Request {
         this.regionId = builder.regionId;
         this.scope = builder.scope;
         this.snapshotId = builder.snapshotId;
+        this.topicCode = builder.topicCode;
     }
 
     public static Builder builder() {
@@ -106,6 +111,13 @@ public class ListEvaluationResultsRequest extends Request {
         return this.snapshotId;
     }
 
+    /**
+     * @return topicCode
+     */
+    public String getTopicCode() {
+        return this.topicCode;
+    }
+
     public static final class Builder extends Request.Builder<ListEvaluationResultsRequest, Builder> {
         private Long accountId; 
         private java.util.List<Filters> filters; 
@@ -113,6 +125,7 @@ public class ListEvaluationResultsRequest extends Request {
         private String regionId; 
         private String scope; 
         private String snapshotId; 
+        private String topicCode; 
 
         private Builder() {
             super();
@@ -126,6 +139,7 @@ public class ListEvaluationResultsRequest extends Request {
             this.regionId = request.regionId;
             this.scope = request.scope;
             this.snapshotId = request.snapshotId;
+            this.topicCode = request.topicCode;
         } 
 
         /**
@@ -185,6 +199,15 @@ public class ListEvaluationResultsRequest extends Request {
         public Builder snapshotId(String snapshotId) {
             this.putQueryParameter("SnapshotId", snapshotId);
             this.snapshotId = snapshotId;
+            return this;
+        }
+
+        /**
+         * TopicCode.
+         */
+        public Builder topicCode(String topicCode) {
+            this.putQueryParameter("TopicCode", topicCode);
+            this.topicCode = topicCode;
             return this;
         }
 

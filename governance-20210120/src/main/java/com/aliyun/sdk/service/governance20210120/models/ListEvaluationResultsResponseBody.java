@@ -175,6 +175,60 @@ public class ListEvaluationResultsResponseBody extends TeaModel {
      *
      * <p>ListEvaluationResultsResponseBody</p>
      */
+    public static class AvailableRemediation extends TeaModel {
+        @com.aliyun.core.annotation.NameInMap("RemediationTemplateId")
+        private String remediationTemplateId;
+
+        private AvailableRemediation(Builder builder) {
+            this.remediationTemplateId = builder.remediationTemplateId;
+        }
+
+        public static Builder builder() {
+            return new Builder();
+        }
+
+        public static AvailableRemediation create() {
+            return builder().build();
+        }
+
+        /**
+         * @return remediationTemplateId
+         */
+        public String getRemediationTemplateId() {
+            return this.remediationTemplateId;
+        }
+
+        public static final class Builder {
+            private String remediationTemplateId; 
+
+            private Builder() {
+            } 
+
+            private Builder(AvailableRemediation model) {
+                this.remediationTemplateId = model.remediationTemplateId;
+            } 
+
+            /**
+             * RemediationTemplateId.
+             */
+            public Builder remediationTemplateId(String remediationTemplateId) {
+                this.remediationTemplateId = remediationTemplateId;
+                return this;
+            }
+
+            public AvailableRemediation build() {
+                return new AvailableRemediation(this);
+            } 
+
+        } 
+
+    }
+    /**
+     * 
+     * {@link ListEvaluationResultsResponseBody} extends {@link TeaModel}
+     *
+     * <p>ListEvaluationResultsResponseBody</p>
+     */
     public static class ErrorInfo extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Code")
         private String code;
@@ -317,6 +371,9 @@ public class ListEvaluationResultsResponseBody extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("AccountSummary")
         private AccountSummary accountSummary;
 
+        @com.aliyun.core.annotation.NameInMap("AvailableRemediation")
+        private java.util.List<AvailableRemediation> availableRemediation;
+
         @com.aliyun.core.annotation.NameInMap("ErrorInfo")
         private ErrorInfo errorInfo;
 
@@ -325,6 +382,9 @@ public class ListEvaluationResultsResponseBody extends TeaModel {
 
         @com.aliyun.core.annotation.NameInMap("Id")
         private String id;
+
+        @com.aliyun.core.annotation.NameInMap("PotentialScoreIncrease")
+        private Double potentialScoreIncrease;
 
         @com.aliyun.core.annotation.NameInMap("ResourcesSummary")
         private ResourcesSummary resourcesSummary;
@@ -340,9 +400,11 @@ public class ListEvaluationResultsResponseBody extends TeaModel {
 
         private MetricResults(Builder builder) {
             this.accountSummary = builder.accountSummary;
+            this.availableRemediation = builder.availableRemediation;
             this.errorInfo = builder.errorInfo;
             this.evaluationTime = builder.evaluationTime;
             this.id = builder.id;
+            this.potentialScoreIncrease = builder.potentialScoreIncrease;
             this.resourcesSummary = builder.resourcesSummary;
             this.result = builder.result;
             this.risk = builder.risk;
@@ -365,6 +427,13 @@ public class ListEvaluationResultsResponseBody extends TeaModel {
         }
 
         /**
+         * @return availableRemediation
+         */
+        public java.util.List<AvailableRemediation> getAvailableRemediation() {
+            return this.availableRemediation;
+        }
+
+        /**
          * @return errorInfo
          */
         public ErrorInfo getErrorInfo() {
@@ -383,6 +452,13 @@ public class ListEvaluationResultsResponseBody extends TeaModel {
          */
         public String getId() {
             return this.id;
+        }
+
+        /**
+         * @return potentialScoreIncrease
+         */
+        public Double getPotentialScoreIncrease() {
+            return this.potentialScoreIncrease;
         }
 
         /**
@@ -415,9 +491,11 @@ public class ListEvaluationResultsResponseBody extends TeaModel {
 
         public static final class Builder {
             private AccountSummary accountSummary; 
+            private java.util.List<AvailableRemediation> availableRemediation; 
             private ErrorInfo errorInfo; 
             private String evaluationTime; 
             private String id; 
+            private Double potentialScoreIncrease; 
             private ResourcesSummary resourcesSummary; 
             private Double result; 
             private String risk; 
@@ -428,9 +506,11 @@ public class ListEvaluationResultsResponseBody extends TeaModel {
 
             private Builder(MetricResults model) {
                 this.accountSummary = model.accountSummary;
+                this.availableRemediation = model.availableRemediation;
                 this.errorInfo = model.errorInfo;
                 this.evaluationTime = model.evaluationTime;
                 this.id = model.id;
+                this.potentialScoreIncrease = model.potentialScoreIncrease;
                 this.resourcesSummary = model.resourcesSummary;
                 this.result = model.result;
                 this.risk = model.risk;
@@ -442,6 +522,14 @@ public class ListEvaluationResultsResponseBody extends TeaModel {
              */
             public Builder accountSummary(AccountSummary accountSummary) {
                 this.accountSummary = accountSummary;
+                return this;
+            }
+
+            /**
+             * AvailableRemediation.
+             */
+            public Builder availableRemediation(java.util.List<AvailableRemediation> availableRemediation) {
+                this.availableRemediation = availableRemediation;
                 return this;
             }
 
@@ -475,6 +563,14 @@ public class ListEvaluationResultsResponseBody extends TeaModel {
              */
             public Builder id(String id) {
                 this.id = id;
+                return this;
+            }
+
+            /**
+             * PotentialScoreIncrease.
+             */
+            public Builder potentialScoreIncrease(Double potentialScoreIncrease) {
+                this.potentialScoreIncrease = potentialScoreIncrease;
                 return this;
             }
 
@@ -626,7 +722,7 @@ public class ListEvaluationResultsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The check results.</p>
+             * <p>The check result.</p>
              */
             public Builder metricResults(java.util.List<MetricResults> metricResults) {
                 this.metricResults = metricResults;
