@@ -23,6 +23,10 @@ public class UpdateApplicationVswitchesRequest extends Request {
     private String appId;
 
     @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Deploy")
+    private Boolean deploy;
+
+    @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("VSwitchId")
     @com.aliyun.core.annotation.Validation(required = true)
     private String vSwitchId;
@@ -30,6 +34,7 @@ public class UpdateApplicationVswitchesRequest extends Request {
     private UpdateApplicationVswitchesRequest(Builder builder) {
         super(builder);
         this.appId = builder.appId;
+        this.deploy = builder.deploy;
         this.vSwitchId = builder.vSwitchId;
     }
 
@@ -54,6 +59,13 @@ public class UpdateApplicationVswitchesRequest extends Request {
     }
 
     /**
+     * @return deploy
+     */
+    public Boolean getDeploy() {
+        return this.deploy;
+    }
+
+    /**
      * @return vSwitchId
      */
     public String getVSwitchId() {
@@ -62,6 +74,7 @@ public class UpdateApplicationVswitchesRequest extends Request {
 
     public static final class Builder extends Request.Builder<UpdateApplicationVswitchesRequest, Builder> {
         private String appId; 
+        private Boolean deploy; 
         private String vSwitchId; 
 
         private Builder() {
@@ -71,6 +84,7 @@ public class UpdateApplicationVswitchesRequest extends Request {
         private Builder(UpdateApplicationVswitchesRequest request) {
             super(request);
             this.appId = request.appId;
+            this.deploy = request.deploy;
             this.vSwitchId = request.vSwitchId;
         } 
 
@@ -84,6 +98,15 @@ public class UpdateApplicationVswitchesRequest extends Request {
         public Builder appId(String appId) {
             this.putQueryParameter("AppId", appId);
             this.appId = appId;
+            return this;
+        }
+
+        /**
+         * Deploy.
+         */
+        public Builder deploy(Boolean deploy) {
+            this.putQueryParameter("Deploy", deploy);
+            this.deploy = deploy;
             return this;
         }
 

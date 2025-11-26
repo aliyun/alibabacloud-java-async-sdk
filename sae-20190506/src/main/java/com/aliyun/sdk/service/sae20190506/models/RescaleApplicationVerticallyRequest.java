@@ -28,6 +28,10 @@ public class RescaleApplicationVerticallyRequest extends Request {
     private String cpu;
 
     @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Deploy")
+    private Boolean deploy;
+
+    @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("DiskSize")
     private String diskSize;
 
@@ -60,6 +64,7 @@ public class RescaleApplicationVerticallyRequest extends Request {
         super(builder);
         this.appId = builder.appId;
         this.cpu = builder.cpu;
+        this.deploy = builder.deploy;
         this.diskSize = builder.diskSize;
         this.memory = builder.memory;
         this.resourceType = builder.resourceType;
@@ -94,6 +99,13 @@ public class RescaleApplicationVerticallyRequest extends Request {
      */
     public String getCpu() {
         return this.cpu;
+    }
+
+    /**
+     * @return deploy
+     */
+    public Boolean getDeploy() {
+        return this.deploy;
     }
 
     /**
@@ -148,6 +160,7 @@ public class RescaleApplicationVerticallyRequest extends Request {
     public static final class Builder extends Request.Builder<RescaleApplicationVerticallyRequest, Builder> {
         private String appId; 
         private String cpu; 
+        private Boolean deploy; 
         private String diskSize; 
         private String memory; 
         private String resourceType; 
@@ -164,6 +177,7 @@ public class RescaleApplicationVerticallyRequest extends Request {
             super(request);
             this.appId = request.appId;
             this.cpu = request.cpu;
+            this.deploy = request.deploy;
             this.diskSize = request.diskSize;
             this.memory = request.memory;
             this.resourceType = request.resourceType;
@@ -196,6 +210,15 @@ public class RescaleApplicationVerticallyRequest extends Request {
         public Builder cpu(String cpu) {
             this.putQueryParameter("Cpu", cpu);
             this.cpu = cpu;
+            return this;
+        }
+
+        /**
+         * Deploy.
+         */
+        public Builder deploy(Boolean deploy) {
+            this.putQueryParameter("Deploy", deploy);
+            this.deploy = deploy;
             return this;
         }
 
