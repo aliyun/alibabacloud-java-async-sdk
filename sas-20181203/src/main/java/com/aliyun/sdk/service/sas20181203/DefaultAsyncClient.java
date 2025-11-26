@@ -12681,6 +12681,9 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
+     * <b>description</b> :
+     * <p>You can search for assets by conditions such as the instance ID, instance name, VPC ID, region, and public IP address of the asset. You can also search for assets that meet multiple search conditions by setting the logical relationship between different search conditions.</p>
+     * 
      * @param request the request parameters of ListMultiUserInstances  ListMultiUserInstancesRequest
      * @return ListMultiUserInstancesResponse
      */

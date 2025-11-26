@@ -58,6 +58,10 @@ public class ChangeCheckConfigRequest extends Request {
     private java.util.List<RemovedCheck> removedCheck;
 
     @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ResourceDirectoryAccountId")
+    private Long resourceDirectoryAccountId;
+
+    @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("StandardIds")
     private java.util.List<Long> standardIds;
 
@@ -85,6 +89,7 @@ public class ChangeCheckConfigRequest extends Request {
         this.endTime = builder.endTime;
         this.regionId = builder.regionId;
         this.removedCheck = builder.removedCheck;
+        this.resourceDirectoryAccountId = builder.resourceDirectoryAccountId;
         this.standardIds = builder.standardIds;
         this.startTime = builder.startTime;
         this.systemConfig = builder.systemConfig;
@@ -175,6 +180,13 @@ public class ChangeCheckConfigRequest extends Request {
     }
 
     /**
+     * @return resourceDirectoryAccountId
+     */
+    public Long getResourceDirectoryAccountId() {
+        return this.resourceDirectoryAccountId;
+    }
+
+    /**
      * @return standardIds
      */
     public java.util.List<Long> getStandardIds() {
@@ -213,6 +225,7 @@ public class ChangeCheckConfigRequest extends Request {
         private Integer endTime; 
         private String regionId; 
         private java.util.List<RemovedCheck> removedCheck; 
+        private Long resourceDirectoryAccountId; 
         private java.util.List<Long> standardIds; 
         private Integer startTime; 
         private Boolean systemConfig; 
@@ -234,6 +247,7 @@ public class ChangeCheckConfigRequest extends Request {
             this.endTime = request.endTime;
             this.regionId = request.regionId;
             this.removedCheck = request.removedCheck;
+            this.resourceDirectoryAccountId = request.resourceDirectoryAccountId;
             this.standardIds = request.standardIds;
             this.startTime = request.startTime;
             this.systemConfig = request.systemConfig;
@@ -376,6 +390,21 @@ public class ChangeCheckConfigRequest extends Request {
         public Builder removedCheck(java.util.List<RemovedCheck> removedCheck) {
             this.putQueryParameter("RemovedCheck", removedCheck);
             this.removedCheck = removedCheck;
+            return this;
+        }
+
+        /**
+         * <p>The Alibaba Cloud account ID of the member in the resource directory.</p>
+         * <blockquote>
+         * <p> You can call the <a href="~~DescribeMonitorAccounts~~">DescribeMonitorAccounts</a> operation to obtain the IDs.</p>
+         * </blockquote>
+         * 
+         * <strong>example:</strong>
+         * <p>1232428423234****</p>
+         */
+        public Builder resourceDirectoryAccountId(Long resourceDirectoryAccountId) {
+            this.putQueryParameter("ResourceDirectoryAccountId", resourceDirectoryAccountId);
+            this.resourceDirectoryAccountId = resourceDirectoryAccountId;
             return this;
         }
 

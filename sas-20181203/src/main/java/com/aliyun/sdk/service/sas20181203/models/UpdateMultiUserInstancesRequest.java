@@ -59,7 +59,7 @@ public class UpdateMultiUserInstancesRequest extends Request {
         } 
 
         /**
-         * MemberInstances.
+         * <p>Member instances.</p>
          */
         public Builder memberInstances(java.util.List<MemberInstances> memberInstances) {
             this.putQueryParameter("MemberInstances", memberInstances);
@@ -140,7 +140,10 @@ public class UpdateMultiUserInstancesRequest extends Request {
             } 
 
             /**
-             * CoreCount.
+             * <p>Number of cores authorized for the member.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>6</p>
              */
             public Builder coreCount(Long coreCount) {
                 this.coreCount = coreCount;
@@ -148,7 +151,10 @@ public class UpdateMultiUserInstancesRequest extends Request {
             }
 
             /**
-             * EcsCount.
+             * <p>Number of authorizations allocated to the member.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>3</p>
              */
             public Builder ecsCount(Long ecsCount) {
                 this.ecsCount = ecsCount;
@@ -156,7 +162,19 @@ public class UpdateMultiUserInstancesRequest extends Request {
             }
 
             /**
-             * Version.
+             * <p>Version of the Cloud Security Center for the member account. Values:  </p>
+             * <ul>
+             * <li><strong>1</strong>: Free Edition </li>
+             * <li><strong>3</strong>: Enterprise Edition</li>
+             * <li><strong>5</strong>: Advanced Edition</li>
+             * <li><strong>6</strong>: Antivirus Edition    </li>
+             * <li><strong>7</strong>: Flagship Edition   </li>
+             * <li><strong>8</strong>: Multiple Versions   </li>
+             * <li><strong>10</strong>: Only Purchase Value-Added Services</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>5</p>
              */
             public Builder version(Integer version) {
                 this.version = version;
@@ -418,7 +436,10 @@ public class UpdateMultiUserInstancesRequest extends Request {
             } 
 
             /**
-             * AliUid.
+             * <p>The Alibaba Cloud account UID of the member.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1766185894104675</p>
              */
             public Builder aliUid(Long aliUid) {
                 this.aliUid = aliUid;
@@ -426,7 +447,10 @@ public class UpdateMultiUserInstancesRequest extends Request {
             }
 
             /**
-             * AntiRansomwareCapacity.
+             * <p>Anti-ransomware capacity allocated to the member, in GB.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>10</p>
              */
             public Builder antiRansomwareCapacity(Long antiRansomwareCapacity) {
                 this.antiRansomwareCapacity = antiRansomwareCapacity;
@@ -434,7 +458,14 @@ public class UpdateMultiUserInstancesRequest extends Request {
             }
 
             /**
-             * ChargeType.
+             * <p>Charge type, values:</p>
+             * <ul>
+             * <li><strong>PREPAID</strong>: Prepaid.</li>
+             * <li><strong>POSTPAID</strong> (default): Postpaid.</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>PREPAID</p>
              */
             public Builder chargeType(String chargeType) {
                 this.chargeType = chargeType;
@@ -442,7 +473,10 @@ public class UpdateMultiUserInstancesRequest extends Request {
             }
 
             /**
-             * CspmCapacity.
+             * <p>Cloud platform configuration check scan count allocated to the member. Unit: times per month.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>0</p>
              */
             public Builder cspmCapacity(Long cspmCapacity) {
                 this.cspmCapacity = cspmCapacity;
@@ -450,7 +484,10 @@ public class UpdateMultiUserInstancesRequest extends Request {
             }
 
             /**
-             * HoneypotCapacity.
+             * <p>Honeypot authorization count allocated to the member.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>0</p>
              */
             public Builder honeypotCapacity(Long honeypotCapacity) {
                 this.honeypotCapacity = honeypotCapacity;
@@ -458,7 +495,10 @@ public class UpdateMultiUserInstancesRequest extends Request {
             }
 
             /**
-             * ImageScanCapacity.
+             * <p>Image scan authorization count allocated to the member.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder imageScanCapacity(Long imageScanCapacity) {
                 this.imageScanCapacity = imageScanCapacity;
@@ -466,7 +506,10 @@ public class UpdateMultiUserInstancesRequest extends Request {
             }
 
             /**
-             * InstanceId.
+             * <p>The Cloud Security Center instance ID purchased by the member account.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>sas-p0anpb26my69</p>
              */
             public Builder instanceId(String instanceId) {
                 this.instanceId = instanceId;
@@ -474,7 +517,15 @@ public class UpdateMultiUserInstancesRequest extends Request {
             }
 
             /**
-             * OptType.
+             * <p>Operation type. Values:  </p>
+             * <ul>
+             * <li><strong>ADD</strong>: Add </li>
+             * <li><strong>CHANGE</strong>: Change</li>
+             * <li><strong>DEL</strong>: Delete</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>CHANGE</p>
              */
             public Builder optType(String optType) {
                 this.optType = optType;
@@ -482,7 +533,10 @@ public class UpdateMultiUserInstancesRequest extends Request {
             }
 
             /**
-             * RaspCapacity.
+             * <p>Application protection count allocated to the member. Unit: per month.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>0</p>
              */
             public Builder raspCapacity(Long raspCapacity) {
                 this.raspCapacity = raspCapacity;
@@ -490,7 +544,10 @@ public class UpdateMultiUserInstancesRequest extends Request {
             }
 
             /**
-             * SdkCapacity.
+             * <p>Malicious file detection SDK authorization count allocated to the member.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>10</p>
              */
             public Builder sdkCapacity(Long sdkCapacity) {
                 this.sdkCapacity = sdkCapacity;
@@ -498,7 +555,10 @@ public class UpdateMultiUserInstancesRequest extends Request {
             }
 
             /**
-             * SlsCapacity.
+             * <p>Log storage capacity allocated to the member, in GB.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>10</p>
              */
             public Builder slsCapacity(Long slsCapacity) {
                 this.slsCapacity = slsCapacity;
@@ -506,7 +566,14 @@ public class UpdateMultiUserInstancesRequest extends Request {
             }
 
             /**
-             * Status.
+             * <p>Status of the member account instance. Values: </p>
+             * <ul>
+             * <li><strong>1</strong>: Valid. </li>
+             * <li><strong>2</strong>: Invalid.</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder status(Integer status) {
                 this.status = status;
@@ -514,7 +581,10 @@ public class UpdateMultiUserInstancesRequest extends Request {
             }
 
             /**
-             * ThreatAnalysisCapacity.
+             * <p>Threat analysis capacity allocated to the member. Unit: GB.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>10</p>
              */
             public Builder threatAnalysisCapacity(Long threatAnalysisCapacity) {
                 this.threatAnalysisCapacity = threatAnalysisCapacity;
@@ -522,7 +592,10 @@ public class UpdateMultiUserInstancesRequest extends Request {
             }
 
             /**
-             * ThreatAnalysisFlow.
+             * <p>Threat analysis and response log access traffic allocated to the member. Unit: GB/day.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>0</p>
              */
             public Builder threatAnalysisFlow(Long threatAnalysisFlow) {
                 this.threatAnalysisFlow = threatAnalysisFlow;
@@ -530,7 +603,17 @@ public class UpdateMultiUserInstancesRequest extends Request {
             }
 
             /**
-             * Version.
+             * <p>The version of Cloud Security Center protection to be bound. Values:  </p>
+             * <ul>
+             * <li><strong>1</strong>: Free Edition </li>
+             * <li><strong>3</strong>: Enterprise Edition</li>
+             * <li><strong>5</strong>: Advanced Edition</li>
+             * <li><strong>6</strong>: Antivirus Edition    </li>
+             * <li><strong>7</strong>: Flagship Edition</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>7</p>
              */
             public Builder version(String version) {
                 this.version = version;
@@ -538,7 +621,7 @@ public class UpdateMultiUserInstancesRequest extends Request {
             }
 
             /**
-             * VersionSummary.
+             * <p>Member account authorization usage information.</p>
              */
             public Builder versionSummary(java.util.List<VersionSummary> versionSummary) {
                 this.versionSummary = versionSummary;
@@ -546,7 +629,10 @@ public class UpdateMultiUserInstancesRequest extends Request {
             }
 
             /**
-             * WebLockCapacity.
+             * <p>Web tamper-proof authorization count allocated to the member.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>0</p>
              */
             public Builder webLockCapacity(Long webLockCapacity) {
                 this.webLockCapacity = webLockCapacity;
