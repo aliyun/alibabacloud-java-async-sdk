@@ -169,6 +169,102 @@ public class ListAutoScalingActivitiesResponseBody extends TeaModel {
      *
      * <p>ListAutoScalingActivitiesResponseBody</p>
      */
+    public static class InstanceTypeDetails extends TeaModel {
+        @com.aliyun.core.annotation.NameInMap("InstanceType")
+        private String instanceType;
+
+        @com.aliyun.core.annotation.NameInMap("OnDemandInstanceIds")
+        private java.util.List<String> onDemandInstanceIds;
+
+        @com.aliyun.core.annotation.NameInMap("SpotInstanceIds")
+        private java.util.List<String> spotInstanceIds;
+
+        private InstanceTypeDetails(Builder builder) {
+            this.instanceType = builder.instanceType;
+            this.onDemandInstanceIds = builder.onDemandInstanceIds;
+            this.spotInstanceIds = builder.spotInstanceIds;
+        }
+
+        public static Builder builder() {
+            return new Builder();
+        }
+
+        public static InstanceTypeDetails create() {
+            return builder().build();
+        }
+
+        /**
+         * @return instanceType
+         */
+        public String getInstanceType() {
+            return this.instanceType;
+        }
+
+        /**
+         * @return onDemandInstanceIds
+         */
+        public java.util.List<String> getOnDemandInstanceIds() {
+            return this.onDemandInstanceIds;
+        }
+
+        /**
+         * @return spotInstanceIds
+         */
+        public java.util.List<String> getSpotInstanceIds() {
+            return this.spotInstanceIds;
+        }
+
+        public static final class Builder {
+            private String instanceType; 
+            private java.util.List<String> onDemandInstanceIds; 
+            private java.util.List<String> spotInstanceIds; 
+
+            private Builder() {
+            } 
+
+            private Builder(InstanceTypeDetails model) {
+                this.instanceType = model.instanceType;
+                this.onDemandInstanceIds = model.onDemandInstanceIds;
+                this.spotInstanceIds = model.spotInstanceIds;
+            } 
+
+            /**
+             * InstanceType.
+             */
+            public Builder instanceType(String instanceType) {
+                this.instanceType = instanceType;
+                return this;
+            }
+
+            /**
+             * OnDemandInstanceIds.
+             */
+            public Builder onDemandInstanceIds(java.util.List<String> onDemandInstanceIds) {
+                this.onDemandInstanceIds = onDemandInstanceIds;
+                return this;
+            }
+
+            /**
+             * SpotInstanceIds.
+             */
+            public Builder spotInstanceIds(java.util.List<String> spotInstanceIds) {
+                this.spotInstanceIds = spotInstanceIds;
+                return this;
+            }
+
+            public InstanceTypeDetails build() {
+                return new InstanceTypeDetails(this);
+            } 
+
+        } 
+
+    }
+    /**
+     * 
+     * {@link ListAutoScalingActivitiesResponseBody} extends {@link TeaModel}
+     *
+     * <p>ListAutoScalingActivitiesResponseBody</p>
+     */
     public static class ScalingActivities extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("ActivityId")
         private String activityId;
@@ -190,6 +286,9 @@ public class ListAutoScalingActivitiesResponseBody extends TeaModel {
 
         @com.aliyun.core.annotation.NameInMap("ExpectNum")
         private Integer expectNum;
+
+        @com.aliyun.core.annotation.NameInMap("InstanceTypeDetails")
+        private java.util.List<InstanceTypeDetails> instanceTypeDetails;
 
         @com.aliyun.core.annotation.NameInMap("InstanceTypeToNum")
         private java.util.Map<String, Integer> instanceTypeToNum;
@@ -220,6 +319,7 @@ public class ListAutoScalingActivitiesResponseBody extends TeaModel {
             this.description = builder.description;
             this.endTime = builder.endTime;
             this.expectNum = builder.expectNum;
+            this.instanceTypeDetails = builder.instanceTypeDetails;
             this.instanceTypeToNum = builder.instanceTypeToNum;
             this.nodeGroupId = builder.nodeGroupId;
             this.nodeGroupName = builder.nodeGroupName;
@@ -287,6 +387,13 @@ public class ListAutoScalingActivitiesResponseBody extends TeaModel {
         }
 
         /**
+         * @return instanceTypeDetails
+         */
+        public java.util.List<InstanceTypeDetails> getInstanceTypeDetails() {
+            return this.instanceTypeDetails;
+        }
+
+        /**
          * @return instanceTypeToNum
          */
         public java.util.Map<String, Integer> getInstanceTypeToNum() {
@@ -343,6 +450,7 @@ public class ListAutoScalingActivitiesResponseBody extends TeaModel {
             private String description; 
             private Long endTime; 
             private Integer expectNum; 
+            private java.util.List<InstanceTypeDetails> instanceTypeDetails; 
             private java.util.Map<String, Integer> instanceTypeToNum; 
             private String nodeGroupId; 
             private String nodeGroupName; 
@@ -362,6 +470,7 @@ public class ListAutoScalingActivitiesResponseBody extends TeaModel {
                 this.description = model.description;
                 this.endTime = model.endTime;
                 this.expectNum = model.expectNum;
+                this.instanceTypeDetails = model.instanceTypeDetails;
                 this.instanceTypeToNum = model.instanceTypeToNum;
                 this.nodeGroupId = model.nodeGroupId;
                 this.nodeGroupName = model.nodeGroupName;
@@ -455,6 +564,14 @@ public class ListAutoScalingActivitiesResponseBody extends TeaModel {
              */
             public Builder expectNum(Integer expectNum) {
                 this.expectNum = expectNum;
+                return this;
+            }
+
+            /**
+             * InstanceTypeDetails.
+             */
+            public Builder instanceTypeDetails(java.util.List<InstanceTypeDetails> instanceTypeDetails) {
+                this.instanceTypeDetails = instanceTypeDetails;
                 return this;
             }
 

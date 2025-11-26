@@ -27,6 +27,10 @@ public class ListAutoScalingActivitiesRequest extends Request {
     private Long endTime;
 
     @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("InstanceChargeTypes")
+    private java.util.List<String> instanceChargeTypes;
+
+    @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("MaxResults")
     private Integer maxResults;
 
@@ -67,6 +71,7 @@ public class ListAutoScalingActivitiesRequest extends Request {
         super(builder);
         this.clusterId = builder.clusterId;
         this.endTime = builder.endTime;
+        this.instanceChargeTypes = builder.instanceChargeTypes;
         this.maxResults = builder.maxResults;
         this.nextToken = builder.nextToken;
         this.nodeGroupId = builder.nodeGroupId;
@@ -103,6 +108,13 @@ public class ListAutoScalingActivitiesRequest extends Request {
      */
     public Long getEndTime() {
         return this.endTime;
+    }
+
+    /**
+     * @return instanceChargeTypes
+     */
+    public java.util.List<String> getInstanceChargeTypes() {
+        return this.instanceChargeTypes;
     }
 
     /**
@@ -171,6 +183,7 @@ public class ListAutoScalingActivitiesRequest extends Request {
     public static final class Builder extends Request.Builder<ListAutoScalingActivitiesRequest, Builder> {
         private String clusterId; 
         private Long endTime; 
+        private java.util.List<String> instanceChargeTypes; 
         private Integer maxResults; 
         private String nextToken; 
         private String nodeGroupId; 
@@ -189,6 +202,7 @@ public class ListAutoScalingActivitiesRequest extends Request {
             super(request);
             this.clusterId = request.clusterId;
             this.endTime = request.endTime;
+            this.instanceChargeTypes = request.instanceChargeTypes;
             this.maxResults = request.maxResults;
             this.nextToken = request.nextToken;
             this.nodeGroupId = request.nodeGroupId;
@@ -222,6 +236,24 @@ public class ListAutoScalingActivitiesRequest extends Request {
         public Builder endTime(Long endTime) {
             this.putQueryParameter("EndTime", endTime);
             this.endTime = endTime;
+            return this;
+        }
+
+        /**
+         * <p>实例付费类型枚举值：</p>
+         * <ul>
+         * <li>ONDEMAND: 按量付费实例</li>
+         * <li>SPOT: 竞价实例
+         * 默认为null代表全选
+         * 举例: [&quot;ONDEMAND&quot;, &quot;SPOT&quot;]</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>ONDEMAND</p>
+         */
+        public Builder instanceChargeTypes(java.util.List<String> instanceChargeTypes) {
+            this.putQueryParameter("InstanceChargeTypes", instanceChargeTypes);
+            this.instanceChargeTypes = instanceChargeTypes;
             return this;
         }
 

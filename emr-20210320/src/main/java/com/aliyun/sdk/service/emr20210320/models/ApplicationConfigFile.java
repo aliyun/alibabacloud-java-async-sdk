@@ -22,7 +22,6 @@ public class ApplicationConfigFile extends TeaModel {
     private String applicationName;
 
     @com.aliyun.core.annotation.NameInMap("ConfigFileName")
-    @com.aliyun.core.annotation.Validation(required = true)
     private String configFileName;
 
     private ApplicationConfigFile(Builder builder) {
@@ -82,7 +81,6 @@ public class ApplicationConfigFile extends TeaModel {
 
         /**
          * <p>配置文件名称。</p>
-         * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
          * <p>core-site.xml</p>

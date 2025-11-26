@@ -106,7 +106,7 @@ public class ListComponentInstancesResponseBody extends TeaModel {
         } 
 
         /**
-         * ComponentInstances.
+         * <p>The list of instance component installation information.</p>
          */
         public Builder componentInstances(java.util.List<ComponentInstances> componentInstances) {
             this.componentInstances = componentInstances;
@@ -114,7 +114,7 @@ public class ListComponentInstancesResponseBody extends TeaModel {
         }
 
         /**
-         * <p>本次请求所返回的最大记录条数。</p>
+         * <p>The maximum number of entries returned.</p>
          * 
          * <strong>example:</strong>
          * <p>2</p>
@@ -125,7 +125,7 @@ public class ListComponentInstancesResponseBody extends TeaModel {
         }
 
         /**
-         * <p>返回读取到的数据位置，空代表数据已经读取完毕。</p>
+         * <p>The pagination token that is used in the next request to retrieve a new page of results. If you leave this parameter empty, the query starts from the beginning.</p>
          * 
          * <strong>example:</strong>
          * <p>“”</p>
@@ -136,7 +136,7 @@ public class ListComponentInstancesResponseBody extends TeaModel {
         }
 
         /**
-         * <p>请求ID。</p>
+         * <p>The request ID.</p>
          * 
          * <strong>example:</strong>
          * <p>7345241A-014C-17D2-A3AC-C72771188F46</p>
@@ -147,7 +147,7 @@ public class ListComponentInstancesResponseBody extends TeaModel {
         }
 
         /**
-         * <p>本次请求条件下的数据总量。</p>
+         * <p>The total number of entries returned.</p>
          * 
          * <strong>example:</strong>
          * <p>2</p>
@@ -320,7 +320,7 @@ public class ListComponentInstancesResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>应用名称。</p>
+             * <p>The application name.</p>
              * 
              * <strong>example:</strong>
              * <p>KNOX</p>
@@ -331,10 +331,10 @@ public class ListComponentInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>组件服务状态，取值如下：</p>
+             * <p>The status of the component service. Valid values:</p>
              * <ul>
-             * <li>active：主服务</li>
-             * <li>standby：备用服务。</li>
+             * <li>active: the primary service.</li>
+             * <li>standby: the standby service.</li>
              * </ul>
              * 
              * <strong>example:</strong>
@@ -346,15 +346,15 @@ public class ListComponentInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>Commission状态，取值如下：</p>
+             * <p>The status of the Commission. Valid values:</p>
              * <ul>
-             * <li>COMMISSIONED：已上线</li>
-             * <li>COMMISSIONING：上线中</li>
-             * <li>DECOMMISSIONED：已下线</li>
-             * <li>DECOMMISSIONINPROGRESS：下线进程中</li>
-             * <li>DECOMMISSIONFAILED：下线失败</li>
-             * <li>INSERVICE：服务中</li>
-             * <li>UNKNOWN：未知状态。<p></li>
+             * <li>COMMISSIONED</li>
+             * <li>COMMISSIONING</li>
+             * <li>DECOMMISSIONED</li>
+             * <li>DECOMMISSIONINPROGRESS</li>
+             * <li>DECOMMISSIONFAILED</li>
+             * <li>INSERVICE</li>
+             * <li>UNKNOWN</li>
              * </ul>
              * 
              * <strong>example:</strong>
@@ -366,18 +366,18 @@ public class ListComponentInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>组件实例操作状态，取值如下：</p>
+             * <p>The status of the component. Valid values:</p>
              * <ul>
-             * <li>WAITING：等待中</li>
-             * <li>INSTALLING：安装中</li>
-             * <li>INSTALLED：已安装</li>
-             * <li>INSTALL_FAILED：安装失败</li>
-             * <li>STARTING：启动中</li>
-             * <li>STARTED：已启动</li>
-             * <li>START_FAILED：启动失败</li>
-             * <li>STOPPING：停止中</li>
-             * <li>STOPPED：已停止</li>
-             * <li>STOP_FAILED：停止失败</li>
+             * <li>WAITING</li>
+             * <li>INSTALLING</li>
+             * <li>INSTALLED</li>
+             * <li>INSTALL_FAILED</li>
+             * <li>STARTING</li>
+             * <li>STARTED</li>
+             * <li>START_FAILED</li>
+             * <li>STOPPING</li>
+             * <li>STOPPED</li>
+             * <li>STOP_FAILED</li>
              * </ul>
              * 
              * <strong>example:</strong>
@@ -389,7 +389,7 @@ public class ListComponentInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>组件名称。</p>
+             * <p>The component name.</p>
              * 
              * <strong>example:</strong>
              * <p>KNOX</p>
@@ -400,7 +400,7 @@ public class ListComponentInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>安装时间戳。</p>
+             * <p>The timestamp of the installation.</p>
              * 
              * <strong>example:</strong>
              * <p>1628248947000</p>
@@ -411,18 +411,18 @@ public class ListComponentInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>期望状态，取值如下：</p>
+             * <p>Valid values:</p>
              * <ul>
-             * <li>WAITING：等待中</li>
-             * <li>INSTALLING：安装中</li>
-             * <li>INSTALLED：已安装</li>
-             * <li>INSTALL_FAILED：安装失败</li>
-             * <li>STARTING：启动中</li>
-             * <li>STARTED：已启动</li>
-             * <li>START_FAILED：启动失败</li>
-             * <li>STOPPING：停止中</li>
-             * <li>STOPPED：已停止</li>
-             * <li>STOP_FAILED：停止失败。</li>
+             * <li>WAITING</li>
+             * <li>INSTALLING</li>
+             * <li>INSTALLED</li>
+             * <li>INSTALL_FAILED</li>
+             * <li>STARTING</li>
+             * <li>STARTED</li>
+             * <li>START_FAILED</li>
+             * <li>STOPPING</li>
+             * <li>STOPPED</li>
+             * <li>STOP_FAILED</li>
              * </ul>
              * 
              * <strong>example:</strong>
@@ -434,7 +434,7 @@ public class ListComponentInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>节点ID。</p>
+             * <p>The instance ID.</p>
              * 
              * <strong>example:</strong>
              * <p>i-bp17yy050pxo01m2****</p>
@@ -445,7 +445,7 @@ public class ListComponentInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>节点名称。</p>
+             * <p>The instance name.</p>
              * 
              * <strong>example:</strong>
              * <p>emr-worker-1</p>
@@ -456,7 +456,10 @@ public class ListComponentInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * ZoneId.
+             * <p>The zone ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>cn-hangzhou-i</p>
              */
             public Builder zoneId(String zoneId) {
                 this.zoneId = zoneId;

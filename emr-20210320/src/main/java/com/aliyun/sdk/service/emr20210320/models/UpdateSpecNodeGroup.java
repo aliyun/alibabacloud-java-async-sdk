@@ -17,6 +17,9 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>UpdateSpecNodeGroup</p>
  */
 public class UpdateSpecNodeGroup extends TeaModel {
+    @com.aliyun.core.annotation.NameInMap("ModifyType")
+    private String modifyType;
+
     @com.aliyun.core.annotation.NameInMap("NewInstanceType")
     @com.aliyun.core.annotation.Validation(required = true)
     private String newInstanceType;
@@ -26,6 +29,7 @@ public class UpdateSpecNodeGroup extends TeaModel {
     private String nodeGroupId;
 
     private UpdateSpecNodeGroup(Builder builder) {
+        this.modifyType = builder.modifyType;
         this.newInstanceType = builder.newInstanceType;
         this.nodeGroupId = builder.nodeGroupId;
     }
@@ -43,6 +47,13 @@ public class UpdateSpecNodeGroup extends TeaModel {
     }
 
     /**
+     * @return modifyType
+     */
+    public String getModifyType() {
+        return this.modifyType;
+    }
+
+    /**
      * @return newInstanceType
      */
     public String getNewInstanceType() {
@@ -57,6 +68,7 @@ public class UpdateSpecNodeGroup extends TeaModel {
     }
 
     public static final class Builder {
+        private String modifyType; 
         private String newInstanceType; 
         private String nodeGroupId; 
 
@@ -64,9 +76,18 @@ public class UpdateSpecNodeGroup extends TeaModel {
         } 
 
         private Builder(UpdateSpecNodeGroup model) {
+            this.modifyType = model.modifyType;
             this.newInstanceType = model.newInstanceType;
             this.nodeGroupId = model.nodeGroupId;
         } 
+
+        /**
+         * ModifyType.
+         */
+        public Builder modifyType(String modifyType) {
+            this.modifyType = modifyType;
+            return this;
+        }
 
         /**
          * <p>新实例类型。</p>

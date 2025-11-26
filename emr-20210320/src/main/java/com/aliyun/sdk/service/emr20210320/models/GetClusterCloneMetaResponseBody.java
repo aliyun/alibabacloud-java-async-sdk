@@ -595,6 +595,9 @@ public class GetClusterCloneMetaResponseBody extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("ClusterType")
         private String clusterType;
 
+        @com.aliyun.core.annotation.NameInMap("CollationTimeZone")
+        private CollationTimeZone collationTimeZone;
+
         @com.aliyun.core.annotation.NameInMap("DeletionProtection")
         private Boolean deletionProtection;
 
@@ -645,6 +648,7 @@ public class GetClusterCloneMetaResponseBody extends TeaModel {
             this.clusterName = builder.clusterName;
             this.clusterState = builder.clusterState;
             this.clusterType = builder.clusterType;
+            this.collationTimeZone = builder.collationTimeZone;
             this.deletionProtection = builder.deletionProtection;
             this.deployMode = builder.deployMode;
             this.emrDefaultRole = builder.emrDefaultRole;
@@ -716,6 +720,13 @@ public class GetClusterCloneMetaResponseBody extends TeaModel {
          */
         public String getClusterType() {
             return this.clusterType;
+        }
+
+        /**
+         * @return collationTimeZone
+         */
+        public CollationTimeZone getCollationTimeZone() {
+            return this.collationTimeZone;
         }
 
         /**
@@ -824,6 +835,7 @@ public class GetClusterCloneMetaResponseBody extends TeaModel {
             private String clusterName; 
             private String clusterState; 
             private String clusterType; 
+            private CollationTimeZone collationTimeZone; 
             private Boolean deletionProtection; 
             private String deployMode; 
             private String emrDefaultRole; 
@@ -850,6 +862,7 @@ public class GetClusterCloneMetaResponseBody extends TeaModel {
                 this.clusterName = model.clusterName;
                 this.clusterState = model.clusterState;
                 this.clusterType = model.clusterType;
+                this.collationTimeZone = model.collationTimeZone;
                 this.deletionProtection = model.deletionProtection;
                 this.deployMode = model.deployMode;
                 this.emrDefaultRole = model.emrDefaultRole;
@@ -949,6 +962,14 @@ public class GetClusterCloneMetaResponseBody extends TeaModel {
              */
             public Builder clusterType(String clusterType) {
                 this.clusterType = clusterType;
+                return this;
+            }
+
+            /**
+             * CollationTimeZone.
+             */
+            public Builder collationTimeZone(CollationTimeZone collationTimeZone) {
+                this.collationTimeZone = collationTimeZone;
                 return this;
             }
 

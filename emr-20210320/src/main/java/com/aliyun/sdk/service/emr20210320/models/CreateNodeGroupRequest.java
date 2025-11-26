@@ -24,7 +24,6 @@ public class CreateNodeGroupRequest extends Request {
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("NodeGroup")
-    @com.aliyun.core.annotation.Validation(required = true)
     private NodeGroupConfig nodeGroup;
 
     @com.aliyun.core.annotation.Query
@@ -104,7 +103,6 @@ public class CreateNodeGroupRequest extends Request {
 
         /**
          * <p>The information about the node group.</p>
-         * <p>This parameter is required.</p>
          */
         public Builder nodeGroup(NodeGroupConfig nodeGroup) {
             this.putQueryParameter("NodeGroup", nodeGroup);

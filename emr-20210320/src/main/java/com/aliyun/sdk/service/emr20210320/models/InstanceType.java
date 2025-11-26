@@ -38,6 +38,9 @@ public class InstanceType extends TeaModel {
     @com.aliyun.core.annotation.NameInMap("LocalStorageCapacity")
     private Long localStorageCapacity;
 
+    @com.aliyun.core.annotation.NameInMap("ModifyType")
+    private String modifyType;
+
     @com.aliyun.core.annotation.NameInMap("Optimized")
     private Boolean optimized;
 
@@ -49,6 +52,7 @@ public class InstanceType extends TeaModel {
         this.instanceTypeFamily = builder.instanceTypeFamily;
         this.localStorageAmount = builder.localStorageAmount;
         this.localStorageCapacity = builder.localStorageCapacity;
+        this.modifyType = builder.modifyType;
         this.optimized = builder.optimized;
     }
 
@@ -114,6 +118,13 @@ public class InstanceType extends TeaModel {
     }
 
     /**
+     * @return modifyType
+     */
+    public String getModifyType() {
+        return this.modifyType;
+    }
+
+    /**
      * @return optimized
      */
     public Boolean getOptimized() {
@@ -128,6 +139,7 @@ public class InstanceType extends TeaModel {
         private String instanceTypeFamily; 
         private Integer localStorageAmount; 
         private Long localStorageCapacity; 
+        private String modifyType; 
         private Boolean optimized; 
 
         private Builder() {
@@ -141,6 +153,7 @@ public class InstanceType extends TeaModel {
             this.instanceTypeFamily = model.instanceTypeFamily;
             this.localStorageAmount = model.localStorageAmount;
             this.localStorageCapacity = model.localStorageCapacity;
+            this.modifyType = model.modifyType;
             this.optimized = model.optimized;
         } 
 
@@ -235,6 +248,14 @@ public class InstanceType extends TeaModel {
          */
         public Builder localStorageCapacity(Long localStorageCapacity) {
             this.localStorageCapacity = localStorageCapacity;
+            return this;
+        }
+
+        /**
+         * ModifyType.
+         */
+        public Builder modifyType(String modifyType) {
+            this.modifyType = modifyType;
             return this;
         }
 

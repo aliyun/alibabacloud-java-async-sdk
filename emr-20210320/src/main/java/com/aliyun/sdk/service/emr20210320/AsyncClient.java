@@ -89,6 +89,12 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<DeleteUsersResponse> deleteUsers(DeleteUsersRequest request);
 
     /**
+     * @param request the request parameters of ExportApplicationConfigs  ExportApplicationConfigsRequest
+     * @return ExportApplicationConfigsResponse
+     */
+    CompletableFuture<ExportApplicationConfigsResponse> exportApplicationConfigs(ExportApplicationConfigsRequest request);
+
+    /**
      * @param request the request parameters of GetApiTemplate  GetApiTemplateRequest
      * @return GetApiTemplateResponse
      */
@@ -543,6 +549,12 @@ public interface AsyncClient extends SdkAutoCloseable {
      * @return UpdateClusterAttributeResponse
      */
     CompletableFuture<UpdateClusterAttributeResponse> updateClusterAttribute(UpdateClusterAttributeRequest request);
+
+    /**
+     * @param request the request parameters of UpdateClusterAutoRenew  UpdateClusterAutoRenewRequest
+     * @return UpdateClusterAutoRenewResponse
+     */
+    CompletableFuture<UpdateClusterAutoRenewResponse> updateClusterAutoRenew(UpdateClusterAutoRenewRequest request);
 
     /**
      * @param request the request parameters of UpdateScript  UpdateScriptRequest

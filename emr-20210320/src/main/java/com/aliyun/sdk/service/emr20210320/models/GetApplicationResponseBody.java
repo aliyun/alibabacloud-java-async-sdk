@@ -67,7 +67,7 @@ public class GetApplicationResponseBody extends TeaModel {
         } 
 
         /**
-         * Application.
+         * <p>The application.</p>
          */
         public Builder application(Application application) {
             this.application = application;
@@ -75,7 +75,7 @@ public class GetApplicationResponseBody extends TeaModel {
         }
 
         /**
-         * <p>请求ID。</p>
+         * <p>The request ID.</p>
          * 
          * <strong>example:</strong>
          * <p>9E3A7161-EB7B-172B-8D18-FFB06BA3****</p>
@@ -196,7 +196,7 @@ public class GetApplicationResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>值表述。</p>
+             * <p>Value description.</p>
              * 
              * <strong>example:</strong>
              * <p>描述</p>
@@ -207,7 +207,7 @@ public class GetApplicationResponseBody extends TeaModel {
             }
 
             /**
-             * <p>值步长。</p>
+             * <p>The size of the value increment.</p>
              * 
              * <strong>example:</strong>
              * <p>1</p>
@@ -218,7 +218,7 @@ public class GetApplicationResponseBody extends TeaModel {
             }
 
             /**
-             * <p>最大值。</p>
+             * <p>The maximum range of values.</p>
              * 
              * <strong>example:</strong>
              * <p>100</p>
@@ -229,7 +229,7 @@ public class GetApplicationResponseBody extends TeaModel {
             }
 
             /**
-             * <p>最小值。</p>
+             * <p>The minimum range of values.</p>
              * 
              * <strong>example:</strong>
              * <p>1</p>
@@ -240,7 +240,7 @@ public class GetApplicationResponseBody extends TeaModel {
             }
 
             /**
-             * <p>属性值类型。</p>
+             * <p>The value type of the column.</p>
              * 
              * <strong>example:</strong>
              * <p>int</p>
@@ -251,7 +251,7 @@ public class GetApplicationResponseBody extends TeaModel {
             }
 
             /**
-             * <p>值单位。</p>
+             * <p>The unit of the value.</p>
              * 
              * <strong>example:</strong>
              * <p>number</p>
@@ -334,7 +334,7 @@ public class GetApplicationResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>动作参数描述。</p>
+             * <p>Description</p>
              * 
              * <strong>example:</strong>
              * <p>start</p>
@@ -345,7 +345,7 @@ public class GetApplicationResponseBody extends TeaModel {
             }
 
             /**
-             * <p>动作参数KEY。</p>
+             * <p>The parameter name.</p>
              * 
              * <strong>example:</strong>
              * <p>timeout</p>
@@ -356,7 +356,7 @@ public class GetApplicationResponseBody extends TeaModel {
             }
 
             /**
-             * <p>动作参数属性。</p>
+             * <p>The parameter value attribute.</p>
              */
             public Builder valueAttribute(ValueAttribute valueAttribute) {
                 this.valueAttribute = valueAttribute;
@@ -475,7 +475,7 @@ public class GetApplicationResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>操作名称。</p>
+             * <p>The action name.</p>
              * 
              * <strong>example:</strong>
              * <p>decommission</p>
@@ -486,7 +486,7 @@ public class GetApplicationResponseBody extends TeaModel {
             }
 
             /**
-             * <p>操作参数。</p>
+             * <p>The list of action parameters.</p>
              */
             public Builder actionParams(java.util.List<ActionParams> actionParams) {
                 this.actionParams = actionParams;
@@ -494,7 +494,7 @@ public class GetApplicationResponseBody extends TeaModel {
             }
 
             /**
-             * <p>命令。</p>
+             * <p>The action command.</p>
              * 
              * <strong>example:</strong>
              * <p>decommission</p>
@@ -505,7 +505,7 @@ public class GetApplicationResponseBody extends TeaModel {
             }
 
             /**
-             * <p>组件名称。</p>
+             * <p>The component name.</p>
              * 
              * <strong>example:</strong>
              * <p>DataNode</p>
@@ -516,7 +516,7 @@ public class GetApplicationResponseBody extends TeaModel {
             }
 
             /**
-             * <p>操作描述。</p>
+             * <p>The description of the action.</p>
              * 
              * <strong>example:</strong>
              * <p>描述</p>
@@ -527,7 +527,12 @@ public class GetApplicationResponseBody extends TeaModel {
             }
 
             /**
-             * <p>执行范围。</p>
+             * <p>The execution scope. Valid values:</p>
+             * <ul>
+             * <li>APPLICATION: the application scope.</li>
+             * <li>COMPONENT: the component scope.</li>
+             * <li>COMPONENT_INSTANCE: the component instance scope.</li>
+             * </ul>
              * 
              * <strong>example:</strong>
              * <p>COMPONENT_INSTANCE</p>
@@ -636,7 +641,7 @@ public class GetApplicationResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>操作列表。</p>
+             * <p>The list of actions supported by the application.</p>
              */
             public Builder actions(java.util.List<Actions> actions) {
                 this.actions = actions;
@@ -644,7 +649,7 @@ public class GetApplicationResponseBody extends TeaModel {
             }
 
             /**
-             * <p>应用名称。</p>
+             * <p>The application name.</p>
              * 
              * <strong>example:</strong>
              * <p>HDFS</p>
@@ -655,7 +660,7 @@ public class GetApplicationResponseBody extends TeaModel {
             }
 
             /**
-             * <p>应用操作状态。</p>
+             * <p>The status of the application.</p>
              * 
              * <strong>example:</strong>
              * <p>RUNNING</p>
@@ -666,7 +671,7 @@ public class GetApplicationResponseBody extends TeaModel {
             }
 
             /**
-             * <p>应用版本。</p>
+             * <p>The application version.</p>
              * 
              * <strong>example:</strong>
              * <p>2.8.1</p>
@@ -677,7 +682,7 @@ public class GetApplicationResponseBody extends TeaModel {
             }
 
             /**
-             * <p>社区版本。</p>
+             * <p>The community version.</p>
              * 
              * <strong>example:</strong>
              * <p>2.8.1</p>

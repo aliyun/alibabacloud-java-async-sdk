@@ -187,7 +187,7 @@ public class ListComponentInstancesRequest extends Request {
         } 
 
         /**
-         * <p>应用名称列表。</p>
+         * <p>The list of component names.</p>
          * 
          * <strong>example:</strong>
          * <p>c-b933c5aac8fe****</p>
@@ -199,7 +199,7 @@ public class ListComponentInstancesRequest extends Request {
         }
 
         /**
-         * <p>集群ID。</p>
+         * <p>The cluster ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -212,7 +212,7 @@ public class ListComponentInstancesRequest extends Request {
         }
 
         /**
-         * <p>组件名称列表。</p>
+         * <p>The list of component names.</p>
          * 
          * <strong>example:</strong>
          * <p>[&quot;HDFS&quot;]</p>
@@ -224,7 +224,10 @@ public class ListComponentInstancesRequest extends Request {
         }
 
         /**
-         * ComponentStates.
+         * <p>The list of component status.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>null</p>
          */
         public Builder componentStates(java.util.List<String> componentStates) {
             this.putQueryParameter("ComponentStates", componentStates);
@@ -233,7 +236,7 @@ public class ListComponentInstancesRequest extends Request {
         }
 
         /**
-         * <p>一次获取的最大记录数。取值范围：1~100。</p>
+         * <p>The maximum number of entries returned.</p>
          * 
          * <strong>example:</strong>
          * <p>10</p>
@@ -245,7 +248,7 @@ public class ListComponentInstancesRequest extends Request {
         }
 
         /**
-         * <p>标记当前开始读取的位置，置空表示从头开始。</p>
+         * <p>The pagination token that is used in the next request to retrieve a new page of results. If you leave this parameter empty, the query starts from the beginning.</p>
          * 
          * <strong>example:</strong>
          * <p>“”</p>
@@ -257,7 +260,7 @@ public class ListComponentInstancesRequest extends Request {
         }
 
         /**
-         * <p>节点ID列表。</p>
+         * <p>The list of instance IDs.</p>
          * 
          * <strong>example:</strong>
          * <p>DD6B1B2A-5837-5237-ABE4-FF0C89568980</p>
@@ -269,7 +272,7 @@ public class ListComponentInstancesRequest extends Request {
         }
 
         /**
-         * <p>节点名称列表。</p>
+         * <p>The instance IDs.</p>
          * 
          * <strong>example:</strong>
          * <p>20</p>
@@ -281,7 +284,7 @@ public class ListComponentInstancesRequest extends Request {
         }
 
         /**
-         * <p>地域ID。</p>
+         * <p>The region ID. You can call the <a href="url">ListRegions</a> view.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -294,7 +297,10 @@ public class ListComponentInstancesRequest extends Request {
         }
 
         /**
-         * ZoneId.
+         * <p>The zone ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-hangzhou-i</p>
          */
         public Builder zoneId(String zoneId) {
             this.putQueryParameter("ZoneId", zoneId);

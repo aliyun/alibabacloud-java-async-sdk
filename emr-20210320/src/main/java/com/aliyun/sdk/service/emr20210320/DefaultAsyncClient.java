@@ -272,6 +272,24 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
+     * @param request the request parameters of ExportApplicationConfigs  ExportApplicationConfigsRequest
+     * @return ExportApplicationConfigsResponse
+     */
+    @Override
+    public CompletableFuture<ExportApplicationConfigsResponse> exportApplicationConfigs(ExportApplicationConfigsRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RPC).setAction("ExportApplicationConfigs").setMethod(HttpMethod.POST).setPathRegex("/").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(ExportApplicationConfigsResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<ExportApplicationConfigsResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
      * @param request the request parameters of GetApiTemplate  GetApiTemplateRequest
      * @return GetApiTemplateResponse
      */
@@ -1442,6 +1460,24 @@ public final class DefaultAsyncClient implements AsyncClient {
             return this.handler.execute(params);
         } catch (Exception e) {
             CompletableFuture<UpdateClusterAttributeResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
+     * @param request the request parameters of UpdateClusterAutoRenew  UpdateClusterAutoRenewRequest
+     * @return UpdateClusterAutoRenewResponse
+     */
+    @Override
+    public CompletableFuture<UpdateClusterAutoRenewResponse> updateClusterAutoRenew(UpdateClusterAutoRenewRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RPC).setAction("UpdateClusterAutoRenew").setMethod(HttpMethod.POST).setPathRegex("/").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(UpdateClusterAutoRenewResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<UpdateClusterAutoRenewResponse> future = new CompletableFuture<>();
             future.completeExceptionally(e);
             return future;
         }

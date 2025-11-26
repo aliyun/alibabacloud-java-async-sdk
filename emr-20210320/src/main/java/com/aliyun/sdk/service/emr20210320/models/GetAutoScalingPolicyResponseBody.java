@@ -188,6 +188,9 @@ public class GetAutoScalingPolicyResponseBody extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("AdjustmentValue")
         private Integer adjustmentValue;
 
+        @com.aliyun.core.annotation.NameInMap("CollationTimeZone")
+        private CollationTimeZone collationTimeZone;
+
         @com.aliyun.core.annotation.NameInMap("MetricsTrigger")
         private MetricsTrigger metricsTrigger;
 
@@ -204,6 +207,7 @@ public class GetAutoScalingPolicyResponseBody extends TeaModel {
             this.activityType = builder.activityType;
             this.adjustmentType = builder.adjustmentType;
             this.adjustmentValue = builder.adjustmentValue;
+            this.collationTimeZone = builder.collationTimeZone;
             this.metricsTrigger = builder.metricsTrigger;
             this.ruleName = builder.ruleName;
             this.timeTrigger = builder.timeTrigger;
@@ -240,6 +244,13 @@ public class GetAutoScalingPolicyResponseBody extends TeaModel {
         }
 
         /**
+         * @return collationTimeZone
+         */
+        public CollationTimeZone getCollationTimeZone() {
+            return this.collationTimeZone;
+        }
+
+        /**
          * @return metricsTrigger
          */
         public MetricsTrigger getMetricsTrigger() {
@@ -271,6 +282,7 @@ public class GetAutoScalingPolicyResponseBody extends TeaModel {
             private String activityType; 
             private String adjustmentType; 
             private Integer adjustmentValue; 
+            private CollationTimeZone collationTimeZone; 
             private MetricsTrigger metricsTrigger; 
             private String ruleName; 
             private TimeTrigger timeTrigger; 
@@ -283,6 +295,7 @@ public class GetAutoScalingPolicyResponseBody extends TeaModel {
                 this.activityType = model.activityType;
                 this.adjustmentType = model.adjustmentType;
                 this.adjustmentValue = model.adjustmentValue;
+                this.collationTimeZone = model.collationTimeZone;
                 this.metricsTrigger = model.metricsTrigger;
                 this.ruleName = model.ruleName;
                 this.timeTrigger = model.timeTrigger;
@@ -323,6 +336,14 @@ public class GetAutoScalingPolicyResponseBody extends TeaModel {
              */
             public Builder adjustmentValue(Integer adjustmentValue) {
                 this.adjustmentValue = adjustmentValue;
+                return this;
+            }
+
+            /**
+             * CollationTimeZone.
+             */
+            public Builder collationTimeZone(CollationTimeZone collationTimeZone) {
+                this.collationTimeZone = collationTimeZone;
                 return this;
             }
 
