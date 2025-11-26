@@ -3517,6 +3517,24 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
+     * @param request the request parameters of QueryNacosGrayConfig  QueryNacosGrayConfigRequest
+     * @return QueryNacosGrayConfigResponse
+     */
+    @Override
+    public CompletableFuture<QueryNacosGrayConfigResponse> queryNacosGrayConfig(QueryNacosGrayConfigRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RPC).setAction("QueryNacosGrayConfig").setMethod(HttpMethod.POST).setPathRegex("/").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(QueryNacosGrayConfigResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<QueryNacosGrayConfigResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
      * @param request the request parameters of QueryNamespace  QueryNamespaceRequest
      * @return QueryNamespaceResponse
      */

@@ -1265,6 +1265,12 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<QueryMonitorResponse> queryMonitor(QueryMonitorRequest request);
 
     /**
+     * @param request the request parameters of QueryNacosGrayConfig  QueryNacosGrayConfigRequest
+     * @return QueryNacosGrayConfigResponse
+     */
+    CompletableFuture<QueryNacosGrayConfigResponse> queryNacosGrayConfig(QueryNacosGrayConfigRequest request);
+
+    /**
      * @param request the request parameters of QueryNamespace  QueryNamespaceRequest
      * @return QueryNamespaceResponse
      */

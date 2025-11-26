@@ -560,6 +560,9 @@ public class GetNacosMcpServerResponseBody extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("SpecificationType")
         private String specificationType;
 
+        @com.aliyun.core.annotation.NameInMap("ToolDecryptStatus")
+        private String toolDecryptStatus;
+
         @com.aliyun.core.annotation.NameInMap("Tools")
         private java.util.List<Tools> tools;
 
@@ -569,6 +572,7 @@ public class GetNacosMcpServerResponseBody extends TeaModel {
         private ToolSpec(Builder builder) {
             this.securitySchemes = builder.securitySchemes;
             this.specificationType = builder.specificationType;
+            this.toolDecryptStatus = builder.toolDecryptStatus;
             this.tools = builder.tools;
             this.toolsMeta = builder.toolsMeta;
         }
@@ -596,6 +600,13 @@ public class GetNacosMcpServerResponseBody extends TeaModel {
         }
 
         /**
+         * @return toolDecryptStatus
+         */
+        public String getToolDecryptStatus() {
+            return this.toolDecryptStatus;
+        }
+
+        /**
          * @return tools
          */
         public java.util.List<Tools> getTools() {
@@ -612,6 +623,7 @@ public class GetNacosMcpServerResponseBody extends TeaModel {
         public static final class Builder {
             private Object securitySchemes; 
             private String specificationType; 
+            private String toolDecryptStatus; 
             private java.util.List<Tools> tools; 
             private java.util.Map<String, DataToolSpecToolsMetaValue> toolsMeta; 
 
@@ -621,6 +633,7 @@ public class GetNacosMcpServerResponseBody extends TeaModel {
             private Builder(ToolSpec model) {
                 this.securitySchemes = model.securitySchemes;
                 this.specificationType = model.specificationType;
+                this.toolDecryptStatus = model.toolDecryptStatus;
                 this.tools = model.tools;
                 this.toolsMeta = model.toolsMeta;
             } 
@@ -638,6 +651,14 @@ public class GetNacosMcpServerResponseBody extends TeaModel {
              */
             public Builder specificationType(String specificationType) {
                 this.specificationType = specificationType;
+                return this;
+            }
+
+            /**
+             * ToolDecryptStatus.
+             */
+            public Builder toolDecryptStatus(String toolDecryptStatus) {
+                this.toolDecryptStatus = toolDecryptStatus;
                 return this;
             }
 
