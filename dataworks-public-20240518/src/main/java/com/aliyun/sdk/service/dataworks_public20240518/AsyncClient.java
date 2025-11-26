@@ -244,6 +244,12 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<CreateFunctionResponse> createFunction(CreateFunctionRequest request);
 
     /**
+     * @param request the request parameters of CreateIdentifyCredential  CreateIdentifyCredentialRequest
+     * @return CreateIdentifyCredentialResponse
+     */
+    CompletableFuture<CreateIdentifyCredentialResponse> createIdentifyCredential(CreateIdentifyCredentialRequest request);
+
+    /**
      * @param request the request parameters of CreateLineageRelationship  CreateLineageRelationshipRequest
      * @return CreateLineageRelationshipResponse
      */
