@@ -245,6 +245,9 @@ public class CreateExtensionsRequest extends Request {
 
         /**
          * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>testuser</p>
          */
         public Builder accountName(String accountName) {
             this.putQueryParameter("AccountName", accountName);
@@ -263,6 +266,9 @@ public class CreateExtensionsRequest extends Request {
 
         /**
          * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>pc-****************</p>
          */
         public Builder DBClusterId(String DBClusterId) {
             this.putQueryParameter("DBClusterId", DBClusterId);
@@ -272,6 +278,9 @@ public class CreateExtensionsRequest extends Request {
 
         /**
          * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>testdb1,testdb2</p>
          */
         public Builder DBNames(String DBNames) {
             this.putQueryParameter("DBNames", DBNames);

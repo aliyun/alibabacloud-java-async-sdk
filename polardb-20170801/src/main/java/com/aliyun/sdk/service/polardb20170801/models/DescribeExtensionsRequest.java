@@ -28,6 +28,10 @@ public class DescribeExtensionsRequest extends Request {
     private String DBName;
 
     @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ExtensionName")
+    private String extensionName;
+
+    @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("OwnerAccount")
     private String ownerAccount;
 
@@ -47,6 +51,7 @@ public class DescribeExtensionsRequest extends Request {
         super(builder);
         this.DBClusterId = builder.DBClusterId;
         this.DBName = builder.DBName;
+        this.extensionName = builder.extensionName;
         this.ownerAccount = builder.ownerAccount;
         this.ownerId = builder.ownerId;
         this.resourceOwnerAccount = builder.resourceOwnerAccount;
@@ -81,6 +86,13 @@ public class DescribeExtensionsRequest extends Request {
     }
 
     /**
+     * @return extensionName
+     */
+    public String getExtensionName() {
+        return this.extensionName;
+    }
+
+    /**
      * @return ownerAccount
      */
     public String getOwnerAccount() {
@@ -111,6 +123,7 @@ public class DescribeExtensionsRequest extends Request {
     public static final class Builder extends Request.Builder<DescribeExtensionsRequest, Builder> {
         private String DBClusterId; 
         private String DBName; 
+        private String extensionName; 
         private String ownerAccount; 
         private Long ownerId; 
         private String resourceOwnerAccount; 
@@ -124,6 +137,7 @@ public class DescribeExtensionsRequest extends Request {
             super(request);
             this.DBClusterId = request.DBClusterId;
             this.DBName = request.DBName;
+            this.extensionName = request.extensionName;
             this.ownerAccount = request.ownerAccount;
             this.ownerId = request.ownerId;
             this.resourceOwnerAccount = request.resourceOwnerAccount;
@@ -151,6 +165,15 @@ public class DescribeExtensionsRequest extends Request {
         public Builder DBName(String DBName) {
             this.putQueryParameter("DBName", DBName);
             this.DBName = DBName;
+            return this;
+        }
+
+        /**
+         * ExtensionName.
+         */
+        public Builder extensionName(String extensionName) {
+            this.putQueryParameter("ExtensionName", extensionName);
+            this.extensionName = extensionName;
             return this;
         }
 
