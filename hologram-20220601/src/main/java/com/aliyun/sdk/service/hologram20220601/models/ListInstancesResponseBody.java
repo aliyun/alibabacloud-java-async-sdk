@@ -521,6 +521,9 @@ public class ListInstancesResponseBody extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("EnableHiveAccess")
         private String enableHiveAccess;
 
+        @com.aliyun.core.annotation.NameInMap("EnableSSL")
+        private String enableSSL;
+
         @com.aliyun.core.annotation.NameInMap("Endpoints")
         private java.util.List<Endpoints> endpoints;
 
@@ -570,6 +573,7 @@ public class ListInstancesResponseBody extends TeaModel {
             this.commodityCode = builder.commodityCode;
             this.creationTime = builder.creationTime;
             this.enableHiveAccess = builder.enableHiveAccess;
+            this.enableSSL = builder.enableSSL;
             this.endpoints = builder.endpoints;
             this.expirationTime = builder.expirationTime;
             this.instanceChargeType = builder.instanceChargeType;
@@ -614,6 +618,13 @@ public class ListInstancesResponseBody extends TeaModel {
          */
         public String getEnableHiveAccess() {
             return this.enableHiveAccess;
+        }
+
+        /**
+         * @return enableSSL
+         */
+        public String getEnableSSL() {
+            return this.enableSSL;
         }
 
         /**
@@ -725,6 +736,7 @@ public class ListInstancesResponseBody extends TeaModel {
             private String commodityCode; 
             private String creationTime; 
             private String enableHiveAccess; 
+            private String enableSSL; 
             private java.util.List<Endpoints> endpoints; 
             private String expirationTime; 
             private String instanceChargeType; 
@@ -748,6 +760,7 @@ public class ListInstancesResponseBody extends TeaModel {
                 this.commodityCode = model.commodityCode;
                 this.creationTime = model.creationTime;
                 this.enableHiveAccess = model.enableHiveAccess;
+                this.enableSSL = model.enableSSL;
                 this.endpoints = model.endpoints;
                 this.expirationTime = model.expirationTime;
                 this.instanceChargeType = model.instanceChargeType;
@@ -811,6 +824,14 @@ public class ListInstancesResponseBody extends TeaModel {
              */
             public Builder enableHiveAccess(String enableHiveAccess) {
                 this.enableHiveAccess = enableHiveAccess;
+                return this;
+            }
+
+            /**
+             * EnableSSL.
+             */
+            public Builder enableSSL(String enableSSL) {
+                this.enableSSL = enableSSL;
                 return this;
             }
 

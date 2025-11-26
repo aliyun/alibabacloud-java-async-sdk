@@ -561,6 +561,9 @@ public class GetInstanceResponseBody extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("EnableHiveAccess")
         private String enableHiveAccess;
 
+        @com.aliyun.core.annotation.NameInMap("EnableSSL")
+        private Boolean enableSSL;
+
         @com.aliyun.core.annotation.NameInMap("EnableServerless")
         private Boolean enableServerless;
 
@@ -636,6 +639,7 @@ public class GetInstanceResponseBody extends TeaModel {
             this.creationTime = builder.creationTime;
             this.disk = builder.disk;
             this.enableHiveAccess = builder.enableHiveAccess;
+            this.enableSSL = builder.enableSSL;
             this.enableServerless = builder.enableServerless;
             this.endpoints = builder.endpoints;
             this.expirationTime = builder.expirationTime;
@@ -722,6 +726,13 @@ public class GetInstanceResponseBody extends TeaModel {
          */
         public String getEnableHiveAccess() {
             return this.enableHiveAccess;
+        }
+
+        /**
+         * @return enableSSL
+         */
+        public Boolean getEnableSSL() {
+            return this.enableSSL;
         }
 
         /**
@@ -887,6 +898,7 @@ public class GetInstanceResponseBody extends TeaModel {
             private String creationTime; 
             private String disk; 
             private String enableHiveAccess; 
+            private Boolean enableSSL; 
             private Boolean enableServerless; 
             private java.util.List<Endpoints> endpoints; 
             private String expirationTime; 
@@ -922,6 +934,7 @@ public class GetInstanceResponseBody extends TeaModel {
                 this.creationTime = model.creationTime;
                 this.disk = model.disk;
                 this.enableHiveAccess = model.enableHiveAccess;
+                this.enableSSL = model.enableSSL;
                 this.enableServerless = model.enableServerless;
                 this.endpoints = model.endpoints;
                 this.expirationTime = model.expirationTime;
@@ -1133,6 +1146,14 @@ public class GetInstanceResponseBody extends TeaModel {
              */
             public Builder enableHiveAccess(String enableHiveAccess) {
                 this.enableHiveAccess = enableHiveAccess;
+                return this;
+            }
+
+            /**
+             * EnableSSL.
+             */
+            public Builder enableSSL(Boolean enableSSL) {
+                this.enableSSL = enableSSL;
                 return this;
             }
 
