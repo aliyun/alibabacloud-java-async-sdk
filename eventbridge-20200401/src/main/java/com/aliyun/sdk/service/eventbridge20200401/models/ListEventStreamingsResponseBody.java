@@ -12451,6 +12451,9 @@ public class ListEventStreamingsResponseBody extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("SinkMNSParameters")
         private SinkMNSParameters sinkMNSParameters;
 
+        @com.aliyun.core.annotation.NameInMap("SinkOSSParameters")
+        private SinkOSSParameters sinkOSSParameters;
+
         @com.aliyun.core.annotation.NameInMap("SinkOpenSourceRabbitMQParameters")
         private SinkOpenSourceRabbitMQParameters sinkOpenSourceRabbitMQParameters;
 
@@ -12480,6 +12483,7 @@ public class ListEventStreamingsResponseBody extends TeaModel {
             this.sinkHttpsParameters = builder.sinkHttpsParameters;
             this.sinkKafkaParameters = builder.sinkKafkaParameters;
             this.sinkMNSParameters = builder.sinkMNSParameters;
+            this.sinkOSSParameters = builder.sinkOSSParameters;
             this.sinkOpenSourceRabbitMQParameters = builder.sinkOpenSourceRabbitMQParameters;
             this.sinkRabbitMQParameters = builder.sinkRabbitMQParameters;
             this.sinkRocketMQCheckpointParameters = builder.sinkRocketMQCheckpointParameters;
@@ -12587,6 +12591,13 @@ public class ListEventStreamingsResponseBody extends TeaModel {
         }
 
         /**
+         * @return sinkOSSParameters
+         */
+        public SinkOSSParameters getSinkOSSParameters() {
+            return this.sinkOSSParameters;
+        }
+
+        /**
          * @return sinkOpenSourceRabbitMQParameters
          */
         public SinkOpenSourceRabbitMQParameters getSinkOpenSourceRabbitMQParameters() {
@@ -12635,6 +12646,7 @@ public class ListEventStreamingsResponseBody extends TeaModel {
             private SinkHttpsParameters sinkHttpsParameters; 
             private SinkKafkaParameters sinkKafkaParameters; 
             private SinkMNSParameters sinkMNSParameters; 
+            private SinkOSSParameters sinkOSSParameters; 
             private SinkOpenSourceRabbitMQParameters sinkOpenSourceRabbitMQParameters; 
             private SinkRabbitMQParameters sinkRabbitMQParameters; 
             private SinkRocketMQCheckpointParameters sinkRocketMQCheckpointParameters; 
@@ -12658,6 +12670,7 @@ public class ListEventStreamingsResponseBody extends TeaModel {
                 this.sinkHttpsParameters = model.sinkHttpsParameters;
                 this.sinkKafkaParameters = model.sinkKafkaParameters;
                 this.sinkMNSParameters = model.sinkMNSParameters;
+                this.sinkOSSParameters = model.sinkOSSParameters;
                 this.sinkOpenSourceRabbitMQParameters = model.sinkOpenSourceRabbitMQParameters;
                 this.sinkRabbitMQParameters = model.sinkRabbitMQParameters;
                 this.sinkRocketMQCheckpointParameters = model.sinkRocketMQCheckpointParameters;
@@ -12766,6 +12779,14 @@ public class ListEventStreamingsResponseBody extends TeaModel {
              */
             public Builder sinkMNSParameters(SinkMNSParameters sinkMNSParameters) {
                 this.sinkMNSParameters = sinkMNSParameters;
+                return this;
+            }
+
+            /**
+             * SinkOSSParameters.
+             */
+            public Builder sinkOSSParameters(SinkOSSParameters sinkOSSParameters) {
+                this.sinkOSSParameters = sinkOSSParameters;
                 return this;
             }
 
@@ -15668,6 +15689,9 @@ public class ListEventStreamingsResponseBody extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("SourceOpenSourceRabbitMQParameters")
         private SourceOpenSourceRabbitMQParameters sourceOpenSourceRabbitMQParameters;
 
+        @com.aliyun.core.annotation.NameInMap("SourcePostgreSQLParameters")
+        private SourcePostgreSQLParameters sourcePostgreSQLParameters;
+
         @com.aliyun.core.annotation.NameInMap("SourcePrometheusParameters")
         private SourcePrometheusParameters sourcePrometheusParameters;
 
@@ -15695,6 +15719,7 @@ public class ListEventStreamingsResponseBody extends TeaModel {
             this.sourceMySQLParameters = builder.sourceMySQLParameters;
             this.sourceOSSParameters = builder.sourceOSSParameters;
             this.sourceOpenSourceRabbitMQParameters = builder.sourceOpenSourceRabbitMQParameters;
+            this.sourcePostgreSQLParameters = builder.sourcePostgreSQLParameters;
             this.sourcePrometheusParameters = builder.sourcePrometheusParameters;
             this.sourceRabbitMQParameters = builder.sourceRabbitMQParameters;
             this.sourceRocketMQCheckpointParameters = builder.sourceRocketMQCheckpointParameters;
@@ -15788,6 +15813,13 @@ public class ListEventStreamingsResponseBody extends TeaModel {
         }
 
         /**
+         * @return sourcePostgreSQLParameters
+         */
+        public SourcePostgreSQLParameters getSourcePostgreSQLParameters() {
+            return this.sourcePostgreSQLParameters;
+        }
+
+        /**
          * @return sourcePrometheusParameters
          */
         public SourcePrometheusParameters getSourcePrometheusParameters() {
@@ -15834,6 +15866,7 @@ public class ListEventStreamingsResponseBody extends TeaModel {
             private SourceMySQLParameters sourceMySQLParameters; 
             private SourceOSSParameters sourceOSSParameters; 
             private SourceOpenSourceRabbitMQParameters sourceOpenSourceRabbitMQParameters; 
+            private SourcePostgreSQLParameters sourcePostgreSQLParameters; 
             private SourcePrometheusParameters sourcePrometheusParameters; 
             private SourceRabbitMQParameters sourceRabbitMQParameters; 
             private SourceRocketMQCheckpointParameters sourceRocketMQCheckpointParameters; 
@@ -15855,6 +15888,7 @@ public class ListEventStreamingsResponseBody extends TeaModel {
                 this.sourceMySQLParameters = model.sourceMySQLParameters;
                 this.sourceOSSParameters = model.sourceOSSParameters;
                 this.sourceOpenSourceRabbitMQParameters = model.sourceOpenSourceRabbitMQParameters;
+                this.sourcePostgreSQLParameters = model.sourcePostgreSQLParameters;
                 this.sourcePrometheusParameters = model.sourcePrometheusParameters;
                 this.sourceRabbitMQParameters = model.sourceRabbitMQParameters;
                 this.sourceRocketMQCheckpointParameters = model.sourceRocketMQCheckpointParameters;
@@ -15947,6 +15981,14 @@ public class ListEventStreamingsResponseBody extends TeaModel {
              */
             public Builder sourceOpenSourceRabbitMQParameters(SourceOpenSourceRabbitMQParameters sourceOpenSourceRabbitMQParameters) {
                 this.sourceOpenSourceRabbitMQParameters = sourceOpenSourceRabbitMQParameters;
+                return this;
+            }
+
+            /**
+             * SourcePostgreSQLParameters.
+             */
+            public Builder sourcePostgreSQLParameters(SourcePostgreSQLParameters sourcePostgreSQLParameters) {
+                this.sourcePostgreSQLParameters = sourcePostgreSQLParameters;
                 return this;
             }
 
