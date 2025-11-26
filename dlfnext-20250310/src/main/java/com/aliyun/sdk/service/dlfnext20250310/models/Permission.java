@@ -26,6 +26,9 @@ public class Permission extends TeaModel {
     @com.aliyun.core.annotation.NameInMap("database")
     private String database;
 
+    @com.aliyun.core.annotation.NameInMap("expireTime")
+    private String expireTime;
+
     @com.aliyun.core.annotation.NameInMap("function")
     private String function;
 
@@ -45,6 +48,7 @@ public class Permission extends TeaModel {
         this.access = builder.access;
         this.columns = builder.columns;
         this.database = builder.database;
+        this.expireTime = builder.expireTime;
         this.function = builder.function;
         this.principal = builder.principal;
         this.resourceType = builder.resourceType;
@@ -86,6 +90,13 @@ public class Permission extends TeaModel {
     }
 
     /**
+     * @return expireTime
+     */
+    public String getExpireTime() {
+        return this.expireTime;
+    }
+
+    /**
      * @return function
      */
     public String getFunction() {
@@ -124,6 +135,7 @@ public class Permission extends TeaModel {
         private String access; 
         private Columns columns; 
         private String database; 
+        private String expireTime; 
         private String function; 
         private String principal; 
         private String resourceType; 
@@ -137,6 +149,7 @@ public class Permission extends TeaModel {
             this.access = model.access;
             this.columns = model.columns;
             this.database = model.database;
+            this.expireTime = model.expireTime;
             this.function = model.function;
             this.principal = model.principal;
             this.resourceType = model.resourceType;
@@ -165,6 +178,14 @@ public class Permission extends TeaModel {
          */
         public Builder database(String database) {
             this.database = database;
+            return this;
+        }
+
+        /**
+         * expireTime.
+         */
+        public Builder expireTime(String expireTime) {
+            this.expireTime = expireTime;
             return this;
         }
 

@@ -23,9 +23,13 @@ public class ListCatalogsResponseBody extends TeaModel {
     @com.aliyun.core.annotation.NameInMap("nextPageToken")
     private String nextPageToken;
 
+    @com.aliyun.core.annotation.NameInMap("prepayResource")
+    private java.util.List<PrepayResource> prepayResource;
+
     private ListCatalogsResponseBody(Builder builder) {
         this.catalogs = builder.catalogs;
         this.nextPageToken = builder.nextPageToken;
+        this.prepayResource = builder.prepayResource;
     }
 
     public static Builder builder() {
@@ -54,9 +58,17 @@ public class ListCatalogsResponseBody extends TeaModel {
         return this.nextPageToken;
     }
 
+    /**
+     * @return prepayResource
+     */
+    public java.util.List<PrepayResource> getPrepayResource() {
+        return this.prepayResource;
+    }
+
     public static final class Builder {
         private java.util.List<Catalog> catalogs; 
         private String nextPageToken; 
+        private java.util.List<PrepayResource> prepayResource; 
 
         private Builder() {
         } 
@@ -64,6 +76,7 @@ public class ListCatalogsResponseBody extends TeaModel {
         private Builder(ListCatalogsResponseBody model) {
             this.catalogs = model.catalogs;
             this.nextPageToken = model.nextPageToken;
+            this.prepayResource = model.prepayResource;
         } 
 
         /**
@@ -79,6 +92,14 @@ public class ListCatalogsResponseBody extends TeaModel {
          */
         public Builder nextPageToken(String nextPageToken) {
             this.nextPageToken = nextPageToken;
+            return this;
+        }
+
+        /**
+         * prepayResource.
+         */
+        public Builder prepayResource(java.util.List<PrepayResource> prepayResource) {
+            this.prepayResource = prepayResource;
             return this;
         }
 
