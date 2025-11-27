@@ -1145,6 +1145,9 @@ public class GetInstanceListResponseBody extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("SaslEndPoint")
         private String saslEndPoint;
 
+        @com.aliyun.core.annotation.NameInMap("ScheduledRetirement")
+        private Boolean scheduledRetirement;
+
         @com.aliyun.core.annotation.NameInMap("SecurityGroup")
         private String securityGroup;
 
@@ -1237,6 +1240,7 @@ public class GetInstanceListResponseBody extends TeaModel {
             this.resourceGroupId = builder.resourceGroupId;
             this.saslDomainEndpoint = builder.saslDomainEndpoint;
             this.saslEndPoint = builder.saslEndPoint;
+            this.scheduledRetirement = builder.scheduledRetirement;
             this.securityGroup = builder.securityGroup;
             this.series = builder.series;
             this.serviceStatus = builder.serviceStatus;
@@ -1485,6 +1489,13 @@ public class GetInstanceListResponseBody extends TeaModel {
         }
 
         /**
+         * @return scheduledRetirement
+         */
+        public Boolean getScheduledRetirement() {
+            return this.scheduledRetirement;
+        }
+
+        /**
          * @return securityGroup
          */
         public String getSecurityGroup() {
@@ -1656,6 +1667,7 @@ public class GetInstanceListResponseBody extends TeaModel {
             private String resourceGroupId; 
             private String saslDomainEndpoint; 
             private String saslEndPoint; 
+            private Boolean scheduledRetirement; 
             private String securityGroup; 
             private String series; 
             private Integer serviceStatus; 
@@ -1712,6 +1724,7 @@ public class GetInstanceListResponseBody extends TeaModel {
                 this.resourceGroupId = model.resourceGroupId;
                 this.saslDomainEndpoint = model.saslDomainEndpoint;
                 this.saslEndPoint = model.saslEndPoint;
+                this.scheduledRetirement = model.scheduledRetirement;
                 this.securityGroup = model.securityGroup;
                 this.series = model.series;
                 this.serviceStatus = model.serviceStatus;
@@ -2099,6 +2112,14 @@ public class GetInstanceListResponseBody extends TeaModel {
              */
             public Builder saslEndPoint(String saslEndPoint) {
                 this.saslEndPoint = saslEndPoint;
+                return this;
+            }
+
+            /**
+             * ScheduledRetirement.
+             */
+            public Builder scheduledRetirement(Boolean scheduledRetirement) {
+                this.scheduledRetirement = scheduledRetirement;
                 return this;
             }
 

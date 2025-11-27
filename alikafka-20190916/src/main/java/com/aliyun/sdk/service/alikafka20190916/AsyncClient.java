@@ -161,6 +161,18 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<DescribeSaslUsersResponse> describeSaslUsers(DescribeSaslUsersRequest request);
 
     /**
+     * @param request the request parameters of DowngradePostPayOrder  DowngradePostPayOrderRequest
+     * @return DowngradePostPayOrderResponse
+     */
+    CompletableFuture<DowngradePostPayOrderResponse> downgradePostPayOrder(DowngradePostPayOrderRequest request);
+
+    /**
+     * @param request the request parameters of DowngradePrePayOrder  DowngradePrePayOrderRequest
+     * @return DowngradePrePayOrderResponse
+     */
+    CompletableFuture<DowngradePrePayOrderResponse> downgradePrePayOrder(DowngradePrePayOrderRequest request);
+
+    /**
      * @param request the request parameters of EnableAutoGroupCreation  EnableAutoGroupCreationRequest
      * @return EnableAutoGroupCreationResponse
      */
