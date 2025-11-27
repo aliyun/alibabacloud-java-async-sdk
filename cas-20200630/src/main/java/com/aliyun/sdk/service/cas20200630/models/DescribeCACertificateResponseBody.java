@@ -221,6 +221,9 @@ public class DescribeCACertificateResponseBody extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("CertificateType")
         private String certificateType;
 
+        @com.aliyun.core.annotation.NameInMap("ClusterId")
+        private String clusterId;
+
         @com.aliyun.core.annotation.NameInMap("CommonName")
         private String commonName;
 
@@ -244,6 +247,9 @@ public class DescribeCACertificateResponseBody extends TeaModel {
 
         @com.aliyun.core.annotation.NameInMap("IssuerType")
         private String issuerType;
+
+        @com.aliyun.core.annotation.NameInMap("KeyIndex")
+        private Integer keyIndex;
 
         @com.aliyun.core.annotation.NameInMap("KeySize")
         private Integer keySize;
@@ -305,6 +311,7 @@ public class DescribeCACertificateResponseBody extends TeaModel {
             this.certRemainingCount = builder.certRemainingCount;
             this.certTotalCount = builder.certTotalCount;
             this.certificateType = builder.certificateType;
+            this.clusterId = builder.clusterId;
             this.commonName = builder.commonName;
             this.countryCode = builder.countryCode;
             this.crlDay = builder.crlDay;
@@ -313,6 +320,7 @@ public class DescribeCACertificateResponseBody extends TeaModel {
             this.fullAlgorithm = builder.fullAlgorithm;
             this.identifier = builder.identifier;
             this.issuerType = builder.issuerType;
+            this.keyIndex = builder.keyIndex;
             this.keySize = builder.keySize;
             this.locality = builder.locality;
             this.md5 = builder.md5;
@@ -397,6 +405,13 @@ public class DescribeCACertificateResponseBody extends TeaModel {
         }
 
         /**
+         * @return clusterId
+         */
+        public String getClusterId() {
+            return this.clusterId;
+        }
+
+        /**
          * @return commonName
          */
         public String getCommonName() {
@@ -450,6 +465,13 @@ public class DescribeCACertificateResponseBody extends TeaModel {
          */
         public String getIssuerType() {
             return this.issuerType;
+        }
+
+        /**
+         * @return keyIndex
+         */
+        public Integer getKeyIndex() {
+            return this.keyIndex;
         }
 
         /**
@@ -580,6 +602,7 @@ public class DescribeCACertificateResponseBody extends TeaModel {
             private Long certRemainingCount; 
             private Long certTotalCount; 
             private String certificateType; 
+            private String clusterId; 
             private String commonName; 
             private String countryCode; 
             private Integer crlDay; 
@@ -588,6 +611,7 @@ public class DescribeCACertificateResponseBody extends TeaModel {
             private String fullAlgorithm; 
             private String identifier; 
             private String issuerType; 
+            private Integer keyIndex; 
             private Integer keySize; 
             private String locality; 
             private String md5; 
@@ -618,6 +642,7 @@ public class DescribeCACertificateResponseBody extends TeaModel {
                 this.certRemainingCount = model.certRemainingCount;
                 this.certTotalCount = model.certTotalCount;
                 this.certificateType = model.certificateType;
+                this.clusterId = model.clusterId;
                 this.commonName = model.commonName;
                 this.countryCode = model.countryCode;
                 this.crlDay = model.crlDay;
@@ -626,6 +651,7 @@ public class DescribeCACertificateResponseBody extends TeaModel {
                 this.fullAlgorithm = model.fullAlgorithm;
                 this.identifier = model.identifier;
                 this.issuerType = model.issuerType;
+                this.keyIndex = model.keyIndex;
                 this.keySize = model.keySize;
                 this.locality = model.locality;
                 this.md5 = model.md5;
@@ -751,6 +777,14 @@ public class DescribeCACertificateResponseBody extends TeaModel {
             }
 
             /**
+             * ClusterId.
+             */
+            public Builder clusterId(String clusterId) {
+                this.clusterId = clusterId;
+                return this;
+            }
+
+            /**
              * <p>The common name or abbreviation of the organization that is associated with the CA certificate.</p>
              * 
              * <strong>example:</strong>
@@ -830,6 +864,14 @@ public class DescribeCACertificateResponseBody extends TeaModel {
              */
             public Builder issuerType(String issuerType) {
                 this.issuerType = issuerType;
+                return this;
+            }
+
+            /**
+             * KeyIndex.
+             */
+            public Builder keyIndex(Integer keyIndex) {
+                this.keyIndex = keyIndex;
                 return this;
             }
 
