@@ -3,6 +3,7 @@ package com.aliyun.sdk.service.dms_enterprise20181101;
 
 import com.aliyun.core.http.*;
 import com.aliyun.sdk.service.dms_enterprise20181101.models.*;
+import darabonba.core.sse.SSEHttpResponseHandler;
 import darabonba.core.utils.*;
 import com.aliyun.sdk.gateway.pop.*;
 import darabonba.core.*;
@@ -421,6 +422,37 @@ public final class DefaultAsyncClient implements AsyncClient {
             future.completeExceptionally(e);
             return future;
         }
+    }
+
+    /**
+     * <b>description</b> :
+     * <p>带有DMS脱敏能力的聊天SSE API接口</p>
+     * 
+     * @param request the request parameters of ChatWithDesensitizeSSE  ChatWithDesensitizeSSERequest
+     * @return ChatWithDesensitizeSSEResponse
+     */
+    @Override
+    public CompletableFuture<ChatWithDesensitizeSSEResponse> chatWithDesensitizeSSE(ChatWithDesensitizeSSERequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RPC).setAction("ChatWithDesensitizeSSE").setMethod(HttpMethod.POST).setPathRegex("/worknode/innerapi/services").setBodyType(BodyType.JSON).setBodyIsForm(true).setReqBodyType(BodyType.FORM).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(ChatWithDesensitizeSSEResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<ChatWithDesensitizeSSEResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    @Override
+    public ResponseIterable<ChatWithDesensitizeSSEResponseBody> chatWithDesensitizeSSEWithResponseIterable(ChatWithDesensitizeSSERequest request) {
+        this.handler.validateRequestModel(request);
+        TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.SSE).setAction("ChatWithDesensitizeSSE").setMethod(HttpMethod.POST).setPathRegex("/worknode/innerapi/services").setBodyType(BodyType.JSON).setBodyIsForm(true).setReqBodyType(BodyType.FORM).formModel(request);
+        ChatWithDesensitizeSSEResponseBodyIterator iterator = ChatWithDesensitizeSSEResponseBodyIterator.create();
+        ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withHttpResponseHandler(new SSEHttpResponseHandler(iterator));
+        this.handler.execute(params);
+        return new ResponseIterable<>(iterator);
     }
 
     /**

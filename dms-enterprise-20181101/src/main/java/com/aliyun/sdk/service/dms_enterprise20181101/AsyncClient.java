@@ -176,6 +176,17 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<ChatWithDesensitizeResponse> chatWithDesensitize(ChatWithDesensitizeRequest request);
 
     /**
+     * <b>description</b> :
+     * <p>带有DMS脱敏能力的聊天SSE API接口</p>
+     * 
+     * @param request the request parameters of ChatWithDesensitizeSSE  ChatWithDesensitizeSSERequest
+     * @return ChatWithDesensitizeSSEResponse
+     */
+    CompletableFuture<ChatWithDesensitizeSSEResponse> chatWithDesensitizeSSE(ChatWithDesensitizeSSERequest request);
+
+    ResponseIterable<ChatWithDesensitizeSSEResponseBody> chatWithDesensitizeSSEWithResponseIterable(ChatWithDesensitizeSSERequest request);
+
+    /**
      * @param request the request parameters of CheckBatchTableAccessPermission  CheckBatchTableAccessPermissionRequest
      * @return CheckBatchTableAccessPermissionResponse
      */
