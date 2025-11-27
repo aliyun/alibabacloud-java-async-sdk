@@ -80,7 +80,10 @@ public class DescribeGroupsResponseBody extends TeaModel {
         } 
 
         /**
-         * Count.
+         * <p>The number of the entries returned.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder count(Integer count) {
             this.count = count;
@@ -88,7 +91,7 @@ public class DescribeGroupsResponseBody extends TeaModel {
         }
 
         /**
-         * Groups.
+         * <p>The user groups.</p>
          */
         public Builder groups(java.util.List<Groups> groups) {
             this.groups = groups;
@@ -323,7 +326,7 @@ public class DescribeGroupsResponseBody extends TeaModel {
             }
 
             /**
-             * AuthedResources.
+             * <p>The type of the resource assigned to the user group.</p>
              */
             public Builder authedResources(java.util.Map<String, String> authedResources) {
                 this.authedResources = authedResources;
@@ -331,7 +334,10 @@ public class DescribeGroupsResponseBody extends TeaModel {
             }
 
             /**
-             * CreateTime.
+             * <p>The time when the user group is created.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2025-08-07T13:40:40+08:00</p>
              */
             public Builder createTime(String createTime) {
                 this.createTime = createTime;
@@ -339,7 +345,10 @@ public class DescribeGroupsResponseBody extends TeaModel {
             }
 
             /**
-             * Description.
+             * <p>The description of the user group.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>A test group.</p>
              */
             public Builder description(String description) {
                 this.description = description;
@@ -355,7 +364,10 @@ public class DescribeGroupsResponseBody extends TeaModel {
             }
 
             /**
-             * GroupName.
+             * <p>The name of the user group.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>TestGroup</p>
              */
             public Builder groupName(String groupName) {
                 this.groupName = groupName;
@@ -363,7 +375,10 @@ public class DescribeGroupsResponseBody extends TeaModel {
             }
 
             /**
-             * TransferFileNeedApproval.
+             * <p>Indicates whether the file approval feature is enabled.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>false</p>
              */
             public Builder transferFileNeedApproval(Boolean transferFileNeedApproval) {
                 this.transferFileNeedApproval = transferFileNeedApproval;
@@ -371,7 +386,10 @@ public class DescribeGroupsResponseBody extends TeaModel {
             }
 
             /**
-             * UserCount.
+             * <p>The number of users in the user group.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>20</p>
              */
             public Builder userCount(Integer userCount) {
                 this.userCount = userCount;

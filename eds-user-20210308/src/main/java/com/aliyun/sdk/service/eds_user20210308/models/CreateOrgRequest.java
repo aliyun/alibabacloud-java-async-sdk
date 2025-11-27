@@ -75,6 +75,7 @@ public class CreateOrgRequest extends Request {
         } 
 
         /**
+         * <p>The name of the organization.</p>
          * <p>This parameter is required.</p>
          */
         public Builder orgName(String orgName) {
@@ -84,6 +85,7 @@ public class CreateOrgRequest extends Request {
         }
 
         /**
+         * <p>The ID of the parent organization.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>

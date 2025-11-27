@@ -124,7 +124,10 @@ public class CreateGroupRequest extends Request {
         }
 
         /**
-         * Description.
+         * <p>The description of the user group.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>TestGroup</p>
          */
         public Builder description(String description) {
             this.putQueryParameter("Description", description);
@@ -142,7 +145,12 @@ public class CreateGroupRequest extends Request {
         }
 
         /**
-         * ParentGroupId.
+         * <blockquote>
+         * <p>This parameter is not publicly available.</p>
+         * </blockquote>
+         * 
+         * <strong>example:</strong>
+         * <p>root</p>
          */
         public Builder parentGroupId(String parentGroupId) {
             this.putQueryParameter("ParentGroupId", parentGroupId);
@@ -151,7 +159,12 @@ public class CreateGroupRequest extends Request {
         }
 
         /**
-         * SolutionId.
+         * <blockquote>
+         * <p>This parameter is not publicly available.</p>
+         * </blockquote>
+         * 
+         * <strong>example:</strong>
+         * <p>co-0esnf80jab***</p>
          */
         public Builder solutionId(String solutionId) {
             this.putQueryParameter("SolutionId", solutionId);

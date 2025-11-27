@@ -102,7 +102,7 @@ public class DescribeUsersResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The convenience accounts.</p>
+         * <p>The information about the convenience accounts.</p>
          */
         public Builder users(java.util.List<Users> users) {
             this.users = users;
@@ -479,6 +479,12 @@ public class DescribeUsersResponseBody extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("OwnerType")
         private String ownerType;
 
+        @com.aliyun.core.annotation.NameInMap("PasswordExpireDays")
+        private Integer passwordExpireDays;
+
+        @com.aliyun.core.annotation.NameInMap("PasswordExpireRestDays")
+        private Integer passwordExpireRestDays;
+
         @com.aliyun.core.annotation.NameInMap("Phone")
         private String phone;
 
@@ -513,6 +519,8 @@ public class DescribeUsersResponseBody extends TeaModel {
             this.orgId = builder.orgId;
             this.orgs = builder.orgs;
             this.ownerType = builder.ownerType;
+            this.passwordExpireDays = builder.passwordExpireDays;
+            this.passwordExpireRestDays = builder.passwordExpireRestDays;
             this.phone = builder.phone;
             this.properties = builder.properties;
             this.realNickName = builder.realNickName;
@@ -635,6 +643,20 @@ public class DescribeUsersResponseBody extends TeaModel {
         }
 
         /**
+         * @return passwordExpireDays
+         */
+        public Integer getPasswordExpireDays() {
+            return this.passwordExpireDays;
+        }
+
+        /**
+         * @return passwordExpireRestDays
+         */
+        public Integer getPasswordExpireRestDays() {
+            return this.passwordExpireRestDays;
+        }
+
+        /**
          * @return phone
          */
         public String getPhone() {
@@ -692,6 +714,8 @@ public class DescribeUsersResponseBody extends TeaModel {
             private String orgId; 
             private java.util.List<Orgs> orgs; 
             private String ownerType; 
+            private Integer passwordExpireDays; 
+            private Integer passwordExpireRestDays; 
             private String phone; 
             private java.util.List<Properties> properties; 
             private String realNickName; 
@@ -718,6 +742,8 @@ public class DescribeUsersResponseBody extends TeaModel {
                 this.orgId = model.orgId;
                 this.orgs = model.orgs;
                 this.ownerType = model.ownerType;
+                this.passwordExpireDays = model.passwordExpireDays;
+                this.passwordExpireRestDays = model.passwordExpireRestDays;
                 this.phone = model.phone;
                 this.properties = model.properties;
                 this.realNickName = model.realNickName;
@@ -760,7 +786,7 @@ public class DescribeUsersResponseBody extends TeaModel {
             }
 
             /**
-             * EnableAdminAccess.
+             * <p>Enables the administrator permissions.</p>
              */
             public Builder enableAdminAccess(Boolean enableAdminAccess) {
                 this.enableAdminAccess = enableAdminAccess;
@@ -900,6 +926,22 @@ public class DescribeUsersResponseBody extends TeaModel {
              */
             public Builder ownerType(String ownerType) {
                 this.ownerType = ownerType;
+                return this;
+            }
+
+            /**
+             * PasswordExpireDays.
+             */
+            public Builder passwordExpireDays(Integer passwordExpireDays) {
+                this.passwordExpireDays = passwordExpireDays;
+                return this;
+            }
+
+            /**
+             * PasswordExpireRestDays.
+             */
+            public Builder passwordExpireRestDays(Integer passwordExpireRestDays) {
+                this.passwordExpireRestDays = passwordExpireRestDays;
                 return this;
             }
 

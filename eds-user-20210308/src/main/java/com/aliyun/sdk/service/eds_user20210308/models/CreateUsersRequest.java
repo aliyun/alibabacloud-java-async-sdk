@@ -192,6 +192,9 @@ public class CreateUsersRequest extends Request {
         @com.aliyun.core.annotation.Validation(required = true)
         private String endUserId;
 
+        @com.aliyun.core.annotation.NameInMap("GroupIdList")
+        private java.util.List<String> groupIdList;
+
         @com.aliyun.core.annotation.NameInMap("OrgId")
         private String orgId;
 
@@ -213,6 +216,7 @@ public class CreateUsersRequest extends Request {
         private Users(Builder builder) {
             this.email = builder.email;
             this.endUserId = builder.endUserId;
+            this.groupIdList = builder.groupIdList;
             this.orgId = builder.orgId;
             this.ownerType = builder.ownerType;
             this.password = builder.password;
@@ -241,6 +245,13 @@ public class CreateUsersRequest extends Request {
          */
         public String getEndUserId() {
             return this.endUserId;
+        }
+
+        /**
+         * @return groupIdList
+         */
+        public java.util.List<String> getGroupIdList() {
+            return this.groupIdList;
         }
 
         /**
@@ -288,6 +299,7 @@ public class CreateUsersRequest extends Request {
         public static final class Builder {
             private String email; 
             private String endUserId; 
+            private java.util.List<String> groupIdList; 
             private String orgId; 
             private String ownerType; 
             private String password; 
@@ -301,6 +313,7 @@ public class CreateUsersRequest extends Request {
             private Builder(Users model) {
                 this.email = model.email;
                 this.endUserId = model.endUserId;
+                this.groupIdList = model.groupIdList;
                 this.orgId = model.orgId;
                 this.ownerType = model.ownerType;
                 this.password = model.password;
@@ -329,6 +342,14 @@ public class CreateUsersRequest extends Request {
              */
             public Builder endUserId(String endUserId) {
                 this.endUserId = endUserId;
+                return this;
+            }
+
+            /**
+             * GroupIdList.
+             */
+            public Builder groupIdList(java.util.List<String> groupIdList) {
+                this.groupIdList = groupIdList;
                 return this;
             }
 

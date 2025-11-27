@@ -73,7 +73,7 @@ public class UserBatchQuitGroupRequest extends Request {
         } 
 
         /**
-         * EndUserIds.
+         * <p>The user IDs.</p>
          */
         public Builder endUserIds(java.util.List<String> endUserIds) {
             this.putBodyParameter("EndUserIds", endUserIds);
@@ -82,7 +82,10 @@ public class UserBatchQuitGroupRequest extends Request {
         }
 
         /**
-         * GroupId.
+         * <p>The ID of the user group.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>ug-lkuvalovhnlxvv****</p>
          */
         public Builder groupId(String groupId) {
             this.putBodyParameter("GroupId", groupId);

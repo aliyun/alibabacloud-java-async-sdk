@@ -67,7 +67,10 @@ public class CreateOrgResponseBody extends TeaModel {
         } 
 
         /**
-         * OrgId.
+         * <p>The organization ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>org-evk12ozjvmlxl****</p>
          */
         public Builder orgId(String orgId) {
             this.orgId = orgId;
@@ -75,7 +78,10 @@ public class CreateOrgResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>7A2C3803-C975-5871-A232-80A91009****</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;

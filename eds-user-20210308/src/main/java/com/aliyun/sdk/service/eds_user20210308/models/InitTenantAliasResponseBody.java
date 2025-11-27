@@ -80,7 +80,7 @@ public class InitTenantAliasResponseBody extends TeaModel {
         } 
 
         /**
-         * AliasInfo.
+         * <p>The data returned.</p>
          */
         public Builder aliasInfo(AliasInfo aliasInfo) {
             this.aliasInfo = aliasInfo;
@@ -88,7 +88,10 @@ public class InitTenantAliasResponseBody extends TeaModel {
         }
 
         /**
-         * Data.
+         * <p>The generated ID of the organization.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>WY23***</p>
          */
         public Builder data(String data) {
             this.data = data;
@@ -96,7 +99,10 @@ public class InitTenantAliasResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1CBAFFAB-B697-4049-A9B1-67E1FC5F****</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -188,7 +194,10 @@ public class InitTenantAliasResponseBody extends TeaModel {
             } 
 
             /**
-             * AliasEditDisabledReason.
+             * <p>The reason why modification is not allowed.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>FrequencyExceedsLimit</p>
              */
             public Builder aliasEditDisabledReason(String aliasEditDisabledReason) {
                 this.aliasEditDisabledReason = aliasEditDisabledReason;
@@ -196,7 +205,10 @@ public class InitTenantAliasResponseBody extends TeaModel {
             }
 
             /**
-             * AliasEditable.
+             * <p>Indicates whether modification is allowed.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>False</p>
              */
             public Builder aliasEditable(Boolean aliasEditable) {
                 this.aliasEditable = aliasEditable;
@@ -204,7 +216,15 @@ public class InitTenantAliasResponseBody extends TeaModel {
             }
 
             /**
-             * AliasSourceType.
+             * <p>The source of the organization ID.</p>
+             * <p>Valid values:</p>
+             * <ul>
+             * <li>Generated: auto-generated.</li>
+             * <li>Customized: user-defined.</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>Customized</p>
              */
             public Builder aliasSourceType(String aliasSourceType) {
                 this.aliasSourceType = aliasSourceType;
@@ -212,7 +232,10 @@ public class InitTenantAliasResponseBody extends TeaModel {
             }
 
             /**
-             * NextModifyTime.
+             * <p>The time window during which modification is allowed.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2025-04-17 20:31:48</p>
              */
             public Builder nextModifyTime(String nextModifyTime) {
                 this.nextModifyTime = nextModifyTime;

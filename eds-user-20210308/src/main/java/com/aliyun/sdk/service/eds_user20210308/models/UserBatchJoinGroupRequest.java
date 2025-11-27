@@ -74,7 +74,7 @@ public class UserBatchJoinGroupRequest extends Request {
         } 
 
         /**
-         * EndUserIds.
+         * <p>The list of user IDs.</p>
          */
         public Builder endUserIds(java.util.List<String> endUserIds) {
             this.putBodyParameter("EndUserIds", endUserIds);
@@ -83,6 +83,7 @@ public class UserBatchJoinGroupRequest extends Request {
         }
 
         /**
+         * <p>The ID of the user group.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>

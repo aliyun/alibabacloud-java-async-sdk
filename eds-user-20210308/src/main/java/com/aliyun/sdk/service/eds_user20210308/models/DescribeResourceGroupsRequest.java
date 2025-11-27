@@ -129,7 +129,12 @@ public class DescribeResourceGroupsRequest extends Request {
         } 
 
         /**
-         * NeedContainResourceGroupWithOfficeSite.
+         * <blockquote>
+         * <p> This parameter is not publicly available.</p>
+         * </blockquote>
+         * 
+         * <strong>example:</strong>
+         * <p>0</p>
          */
         public Builder needContainResourceGroupWithOfficeSite(Long needContainResourceGroupWithOfficeSite) {
             this.putQueryParameter("NeedContainResourceGroupWithOfficeSite", needContainResourceGroupWithOfficeSite);
@@ -138,7 +143,10 @@ public class DescribeResourceGroupsRequest extends Request {
         }
 
         /**
-         * PageNumber.
+         * <p>The page number. Pages start from page 1.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder pageNumber(Integer pageNumber) {
             this.putQueryParameter("PageNumber", pageNumber);
@@ -147,7 +155,10 @@ public class DescribeResourceGroupsRequest extends Request {
         }
 
         /**
-         * PageSize.
+         * <p>The number of entries per page.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>20</p>
          */
         public Builder pageSize(Integer pageSize) {
             this.putQueryParameter("PageSize", pageSize);
@@ -156,7 +167,15 @@ public class DescribeResourceGroupsRequest extends Request {
         }
 
         /**
-         * Platform.
+         * <blockquote>
+         * <p> Set the value to AliyunConsole.</p>
+         * </blockquote>
+         * <ul>
+         * <li>This parameter is not publicly available on other platforms.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>AliyunConsole</p>
          */
         public Builder platform(String platform) {
             this.putQueryParameter("Platform", platform);
@@ -165,7 +184,7 @@ public class DescribeResourceGroupsRequest extends Request {
         }
 
         /**
-         * ResourceGroupIds.
+         * <p>The IDs of the resource groups that you want to query.</p>
          */
         public Builder resourceGroupIds(java.util.List<String> resourceGroupIds) {
             this.putQueryParameter("ResourceGroupIds", resourceGroupIds);
@@ -174,7 +193,7 @@ public class DescribeResourceGroupsRequest extends Request {
         }
 
         /**
-         * ResourceGroupName.
+         * <p>The name of the resource group.</p>
          */
         public Builder resourceGroupName(String resourceGroupName) {
             this.putQueryParameter("ResourceGroupName", resourceGroupName);

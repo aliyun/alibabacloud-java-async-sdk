@@ -89,7 +89,10 @@ public class ModifyGroupRequest extends Request {
         } 
 
         /**
-         * Description.
+         * <p>The new description of the user group.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>TestGroup</p>
          */
         public Builder description(String description) {
             this.putQueryParameter("Description", description);
@@ -98,6 +101,7 @@ public class ModifyGroupRequest extends Request {
         }
 
         /**
+         * <p>The ID of the user group.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -110,6 +114,7 @@ public class ModifyGroupRequest extends Request {
         }
 
         /**
+         * <p>The name of the new user group.</p>
          * <p>This parameter is required.</p>
          */
         public Builder newGroupName(String newGroupName) {

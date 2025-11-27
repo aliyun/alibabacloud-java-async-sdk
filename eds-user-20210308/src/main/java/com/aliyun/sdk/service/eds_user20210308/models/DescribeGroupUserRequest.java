@@ -129,7 +129,12 @@ public class DescribeGroupUserRequest extends Request {
         } 
 
         /**
-         * BizType.
+         * <blockquote>
+         * <p> This parameter is not available for public use.</p>
+         * </blockquote>
+         * 
+         * <strong>example:</strong>
+         * <p>ENTERPRISE</p>
          */
         public Builder bizType(String bizType) {
             this.putQueryParameter("BizType", bizType);
@@ -138,7 +143,10 @@ public class DescribeGroupUserRequest extends Request {
         }
 
         /**
-         * Filter.
+         * <p>The fuzzy search string that matches the username (EndUserId) and email address (Email) of the regular user.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>user</p>
          */
         public Builder filter(String filter) {
             this.putQueryParameter("Filter", filter);
@@ -147,7 +155,10 @@ public class DescribeGroupUserRequest extends Request {
         }
 
         /**
-         * GroupId.
+         * <p>The ID of the user group.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>ug-12341234****</p>
          */
         public Builder groupId(String groupId) {
             this.putQueryParameter("GroupId", groupId);
@@ -156,7 +167,10 @@ public class DescribeGroupUserRequest extends Request {
         }
 
         /**
-         * MaxResults.
+         * <p>The number of entries to return on each page.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10</p>
          */
         public Builder maxResults(Integer maxResults) {
             this.putQueryParameter("MaxResults", maxResults);
@@ -165,7 +179,10 @@ public class DescribeGroupUserRequest extends Request {
         }
 
         /**
-         * NextToken.
+         * <p>The token for the next query. You can obtain this parameter from the response parameters of the last call to this operation.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>AAAAAV3MpHK****</p>
          */
         public Builder nextToken(String nextToken) {
             this.putQueryParameter("NextToken", nextToken);
@@ -174,7 +191,12 @@ public class DescribeGroupUserRequest extends Request {
         }
 
         /**
-         * SolutionId.
+         * <blockquote>
+         * <p> This parameter is not available for public use.</p>
+         * </blockquote>
+         * 
+         * <strong>example:</strong>
+         * <p>co-0esnf80jab***</p>
          */
         public Builder solutionId(String solutionId) {
             this.putQueryParameter("SolutionId", solutionId);

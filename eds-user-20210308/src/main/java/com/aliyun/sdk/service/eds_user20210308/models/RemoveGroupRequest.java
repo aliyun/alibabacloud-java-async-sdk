@@ -73,7 +73,10 @@ public class RemoveGroupRequest extends Request {
         } 
 
         /**
-         * GroupId.
+         * <p>The ID of the user group to be deleted.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>ug-12341234****</p>
          */
         public Builder groupId(String groupId) {
             this.putQueryParameter("GroupId", groupId);
@@ -82,7 +85,7 @@ public class RemoveGroupRequest extends Request {
         }
 
         /**
-         * GroupIds.
+         * <p>The IDs of the user groups to be deleted.</p>
          */
         public Builder groupIds(java.util.List<String> groupIds) {
             this.putQueryParameter("GroupIds", groupIds);

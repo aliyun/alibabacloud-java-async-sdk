@@ -408,7 +408,7 @@ public class DescribeMfaDevicesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The type of the virtual MFA device. The value can only be TOTP_VIRTUAL. This value indicates that the virtual MFA device follows the Time-based One-time Password (TOTP) algorithm.</p>
+             * <p>The type of the virtual MFA device. The value can only be <code>TOTP_VIRTUAL</code>. This value indicates that the virtual MFA device follows the Time-based One-time Password (TOTP) algorithm.</p>
              * 
              * <strong>example:</strong>
              * <p>TOTP_VIRTUAL</p>
@@ -432,7 +432,7 @@ public class DescribeMfaDevicesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The username of the convenience user that uses the virtual MFA device.</p>
+             * <p>The username of the convenience account that uses the virtual MFA device.</p>
              * 
              * <strong>example:</strong>
              * <p>test</p>
@@ -443,7 +443,7 @@ public class DescribeMfaDevicesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The time when the virtual MFA device was enabled. The time follows the ISO 8601 standard in the yyyy-MM-ddTHH:mm:ssZ format. The time is displayed in UTC.</p>
+             * <p>The time when the virtual MFA device was enabled. The time follows the ISO 8601 standard in the <code>yyyy-MM-ddTHH:mm:ssZ</code> format. The time is displayed in UTC.</p>
              * 
              * <strong>example:</strong>
              * <p>2021-06-22T06:20:49Z</p>
@@ -454,7 +454,7 @@ public class DescribeMfaDevicesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The time when the locked virtual MFA device was automatically unlocked. The time follows the ISO 8601 standard in the yyyy-MM-ddTHH:mm:ssZ format. The time is displayed in UTC.</p>
+             * <p>The time when the locked virtual MFA device was automatically unlocked. The time follows the ISO 8601 standard in the <code>yyyy-MM-ddTHH:mm:ssZ</code> format. The time is displayed in UTC.</p>
              * 
              * <strong>example:</strong>
              * <p>2021-06-23T06:20:49Z</p>
@@ -465,9 +465,7 @@ public class DescribeMfaDevicesResponseBody extends TeaModel {
             }
 
             /**
-             * <blockquote>
-             * <p> This parameter is not publicly available.</p>
-             * </blockquote>
+             * <p>The ID of the virtual MFA device.</p>
              * 
              * <strong>example:</strong>
              * <p>36</p>
@@ -478,7 +476,7 @@ public class DescribeMfaDevicesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The serial number of the virtual MFA device. The serial number is unique for each device.</p>
+             * <p>The serial number of the virtual MFA device.</p>
              * 
              * <strong>example:</strong>
              * <p>dc856334-446b-4035-bfbc-18af261e****</p>

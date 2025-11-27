@@ -87,7 +87,12 @@ public class CreateResourceGroupRequest extends Request {
         } 
 
         /**
-         * IsResourceGroupWithOfficeSite.
+         * <blockquote>
+         * <p> This parameter is not publicly available.</p>
+         * </blockquote>
+         * 
+         * <strong>example:</strong>
+         * <p>0</p>
          */
         public Builder isResourceGroupWithOfficeSite(Long isResourceGroupWithOfficeSite) {
             this.putQueryParameter("IsResourceGroupWithOfficeSite", isResourceGroupWithOfficeSite);
@@ -96,7 +101,15 @@ public class CreateResourceGroupRequest extends Request {
         }
 
         /**
-         * Platform.
+         * <blockquote>
+         * <p> Set the value to AliyunConsole.</p>
+         * </blockquote>
+         * <ul>
+         * <li>This parameter is not publicly available in other platforms.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>AliyunConsole</p>
          */
         public Builder platform(String platform) {
             this.putQueryParameter("Platform", platform);
@@ -105,7 +118,7 @@ public class CreateResourceGroupRequest extends Request {
         }
 
         /**
-         * ResourceGroupName.
+         * <p>The name of the resource group.</p>
          */
         public Builder resourceGroupName(String resourceGroupName) {
             this.putQueryParameter("ResourceGroupName", resourceGroupName);

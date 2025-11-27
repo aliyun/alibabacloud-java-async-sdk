@@ -34,6 +34,10 @@ public class DescribeGroupsRequest extends Request {
     private String groupName;
 
     @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("IdpId")
+    private String idpId;
+
+    @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("LoginPolicyId")
     private String loginPolicyId;
 
@@ -60,6 +64,7 @@ public class DescribeGroupsRequest extends Request {
         this.excludeAttachedLoginPolicyGroups = builder.excludeAttachedLoginPolicyGroups;
         this.groupId = builder.groupId;
         this.groupName = builder.groupName;
+        this.idpId = builder.idpId;
         this.loginPolicyId = builder.loginPolicyId;
         this.pageNumber = builder.pageNumber;
         this.pageSize = builder.pageSize;
@@ -109,6 +114,13 @@ public class DescribeGroupsRequest extends Request {
     }
 
     /**
+     * @return idpId
+     */
+    public String getIdpId() {
+        return this.idpId;
+    }
+
+    /**
      * @return loginPolicyId
      */
     public String getLoginPolicyId() {
@@ -148,6 +160,7 @@ public class DescribeGroupsRequest extends Request {
         private Boolean excludeAttachedLoginPolicyGroups; 
         private String groupId; 
         private String groupName; 
+        private String idpId; 
         private String loginPolicyId; 
         private Integer pageNumber; 
         private Integer pageSize; 
@@ -164,6 +177,7 @@ public class DescribeGroupsRequest extends Request {
             this.excludeAttachedLoginPolicyGroups = request.excludeAttachedLoginPolicyGroups;
             this.groupId = request.groupId;
             this.groupName = request.groupName;
+            this.idpId = request.idpId;
             this.loginPolicyId = request.loginPolicyId;
             this.pageNumber = request.pageNumber;
             this.pageSize = request.pageSize;
@@ -172,7 +186,12 @@ public class DescribeGroupsRequest extends Request {
         } 
 
         /**
-         * BizType.
+         * <blockquote>
+         * <p>This parameter is not publicly available.</p>
+         * </blockquote>
+         * 
+         * <strong>example:</strong>
+         * <p>ENTERPRISE</p>
          */
         public Builder bizType(String bizType) {
             this.putQueryParameter("BizType", bizType);
@@ -181,7 +200,7 @@ public class DescribeGroupsRequest extends Request {
         }
 
         /**
-         * ExcludeAttachedLoginPolicyGroups.
+         * <p>是否排除已关联登录策略的用户组。</p>
          */
         public Builder excludeAttachedLoginPolicyGroups(Boolean excludeAttachedLoginPolicyGroups) {
             this.putQueryParameter("ExcludeAttachedLoginPolicyGroups", excludeAttachedLoginPolicyGroups);
@@ -190,7 +209,10 @@ public class DescribeGroupsRequest extends Request {
         }
 
         /**
-         * GroupId.
+         * <p>The ID of the user group.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>ug-12341234****</p>
          */
         public Builder groupId(String groupId) {
             this.putQueryParameter("GroupId", groupId);
@@ -199,7 +221,10 @@ public class DescribeGroupsRequest extends Request {
         }
 
         /**
-         * GroupName.
+         * <p>The name of the user group.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>TestGroup</p>
          */
         public Builder groupName(String groupName) {
             this.putQueryParameter("GroupName", groupName);
@@ -208,7 +233,16 @@ public class DescribeGroupsRequest extends Request {
         }
 
         /**
-         * LoginPolicyId.
+         * IdpId.
+         */
+        public Builder idpId(String idpId) {
+            this.putQueryParameter("IdpId", idpId);
+            this.idpId = idpId;
+            return this;
+        }
+
+        /**
+         * <p>指定关联的登录策略筛选。</p>
          */
         public Builder loginPolicyId(String loginPolicyId) {
             this.putQueryParameter("LoginPolicyId", loginPolicyId);
@@ -217,7 +251,10 @@ public class DescribeGroupsRequest extends Request {
         }
 
         /**
-         * PageNumber.
+         * <p>The number of the page to return.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder pageNumber(Integer pageNumber) {
             this.putQueryParameter("PageNumber", pageNumber);
@@ -226,7 +263,10 @@ public class DescribeGroupsRequest extends Request {
         }
 
         /**
-         * PageSize.
+         * <p>The number of entries to return on each page. Valid values: 1 to 100. Default value: 10.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10</p>
          */
         public Builder pageSize(Integer pageSize) {
             this.putQueryParameter("PageSize", pageSize);
@@ -235,7 +275,12 @@ public class DescribeGroupsRequest extends Request {
         }
 
         /**
-         * SolutionId.
+         * <blockquote>
+         * <p>This parameter is not publicly available.</p>
+         * </blockquote>
+         * 
+         * <strong>example:</strong>
+         * <p>co-0esnf80jab***</p>
          */
         public Builder solutionId(String solutionId) {
             this.putQueryParameter("SolutionId", solutionId);
@@ -244,7 +289,10 @@ public class DescribeGroupsRequest extends Request {
         }
 
         /**
-         * TransferFileNeedApproval.
+         * <p>Indicates whether the file approval feature is enabled.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>false</p>
          */
         public Builder transferFileNeedApproval(Boolean transferFileNeedApproval) {
             this.putQueryParameter("TransferFileNeedApproval", transferFileNeedApproval);

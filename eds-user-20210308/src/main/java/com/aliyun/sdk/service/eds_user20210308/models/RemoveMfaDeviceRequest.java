@@ -74,7 +74,7 @@ public class RemoveMfaDeviceRequest extends Request {
         } 
 
         /**
-         * <p>The domain of the Active Directory (AD) workspace.</p>
+         * <p>The address of the AD office network.</p>
          * 
          * <strong>example:</strong>
          * <p>alpha.lftltd.net</p>
@@ -86,7 +86,7 @@ public class RemoveMfaDeviceRequest extends Request {
         }
 
         /**
-         * <p>The serial number of the virtual MFA device. The serial number is unique for each device.</p>
+         * <p>The serial number of the virtual MFA device. You can call the <a href="~~DescribeMfaDevices~~">DescribeMfaDevices</a> operation to get this information.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>

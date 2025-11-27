@@ -80,7 +80,10 @@ public class DescribeResourceGroupsResponseBody extends TeaModel {
         } 
 
         /**
-         * RequestId.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>68BA1DF7-8814-5AED-B844-F8F7F7****</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -88,7 +91,7 @@ public class DescribeResourceGroupsResponseBody extends TeaModel {
         }
 
         /**
-         * ResourceGroup.
+         * <p>The resource groups.</p>
          */
         public Builder resourceGroup(java.util.List<ResourceGroup> resourceGroup) {
             this.resourceGroup = resourceGroup;
@@ -96,7 +99,10 @@ public class DescribeResourceGroupsResponseBody extends TeaModel {
         }
 
         /**
-         * TotalCount.
+         * <p>The total number of resource groups.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>7</p>
          */
         public Builder totalCount(String totalCount) {
             this.totalCount = totalCount;
@@ -271,7 +277,10 @@ public class DescribeResourceGroupsResponseBody extends TeaModel {
             } 
 
             /**
-             * Id.
+             * <p>The policy ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>pl-a8jnatl8kjasb***</p>
              */
             public Builder id(String id) {
                 this.id = id;
@@ -279,7 +288,10 @@ public class DescribeResourceGroupsResponseBody extends TeaModel {
             }
 
             /**
-             * IsDefault.
+             * <p>Specifies whether to use the default policy.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>False</p>
              */
             public Builder isDefault(Boolean isDefault) {
                 this.isDefault = isDefault;
@@ -287,7 +299,7 @@ public class DescribeResourceGroupsResponseBody extends TeaModel {
             }
 
             /**
-             * Name.
+             * <p>The policy name.</p>
              */
             public Builder name(String name) {
                 this.name = name;
@@ -388,7 +400,10 @@ public class DescribeResourceGroupsResponseBody extends TeaModel {
             }
 
             /**
-             * Id.
+             * <p>The ID of the scheduled task.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>t-asdzx0mbjhg***</p>
              */
             public Builder id(String id) {
                 this.id = id;
@@ -396,7 +411,7 @@ public class DescribeResourceGroupsResponseBody extends TeaModel {
             }
 
             /**
-             * Name.
+             * <p>The name of the scheduled task.</p>
              */
             public Builder name(String name) {
                 this.name = name;
@@ -557,7 +572,10 @@ public class DescribeResourceGroupsResponseBody extends TeaModel {
             }
 
             /**
-             * AuthCount.
+             * <p>The number of administrators that are authorized to access the resource group.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>3</p>
              */
             public Builder authCount(String authCount) {
                 this.authCount = authCount;
@@ -565,7 +583,10 @@ public class DescribeResourceGroupsResponseBody extends TeaModel {
             }
 
             /**
-             * CreateTime.
+             * <p>The time when the resource group was created.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2022-11-29T17:25:40.000000000Z</p>
              */
             public Builder createTime(String createTime) {
                 this.createTime = createTime;
@@ -573,7 +594,15 @@ public class DescribeResourceGroupsResponseBody extends TeaModel {
             }
 
             /**
-             * Policies.
+             * <blockquote>
+             * <p> The policy that is associated with the resource group.</p>
+             * </blockquote>
+             * <ul>
+             * <li><p>The policy applies to cloud computers in the resource group. If multiple policies exist, they are enforced in order of priority.</p>
+             * </li>
+             * <li><p>If any of these cloud computers are already associated with other policies, the resource group&quot;s policy takes precedence.</p>
+             * </li>
+             * </ul>
              */
             public Builder policies(java.util.List<Policies> policies) {
                 this.policies = policies;
@@ -581,7 +610,10 @@ public class DescribeResourceGroupsResponseBody extends TeaModel {
             }
 
             /**
-             * ResourceCount.
+             * <p>The number of resources in the resource group.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>119</p>
              */
             public Builder resourceCount(String resourceCount) {
                 this.resourceCount = resourceCount;
@@ -589,7 +621,10 @@ public class DescribeResourceGroupsResponseBody extends TeaModel {
             }
 
             /**
-             * ResourceGroupId.
+             * <p>The ID of the resource group.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>rg-cyo0il2pzge1***</p>
              */
             public Builder resourceGroupId(String resourceGroupId) {
                 this.resourceGroupId = resourceGroupId;
@@ -597,7 +632,7 @@ public class DescribeResourceGroupsResponseBody extends TeaModel {
             }
 
             /**
-             * ResourceGroupName.
+             * <p>The name of the resource group.</p>
              */
             public Builder resourceGroupName(String resourceGroupName) {
                 this.resourceGroupName = resourceGroupName;
@@ -605,7 +640,12 @@ public class DescribeResourceGroupsResponseBody extends TeaModel {
             }
 
             /**
-             * Timers.
+             * <blockquote>
+             * <p> The associated scheduled task.</p>
+             * </blockquote>
+             * <ul>
+             * <li>The scheduled task applies to all cloud computers in the resource group. If any of these cloud computers are already associated with other scheduled tasks, the resource group&quot;s scheduled task takes precedence.</li>
+             * </ul>
              */
             public Builder timers(java.util.List<Timers> timers) {
                 this.timers = timers;

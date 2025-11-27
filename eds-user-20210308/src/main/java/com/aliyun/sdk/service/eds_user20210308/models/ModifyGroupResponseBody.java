@@ -54,7 +54,10 @@ public class ModifyGroupResponseBody extends TeaModel {
         } 
 
         /**
-         * RequestId.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>868B8926-2E7A-5BE7-9897-E811E994****</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;

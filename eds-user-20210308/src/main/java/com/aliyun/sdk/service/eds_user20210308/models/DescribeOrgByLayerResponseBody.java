@@ -67,7 +67,7 @@ public class DescribeOrgByLayerResponseBody extends TeaModel {
         } 
 
         /**
-         * Orgs.
+         * <p>The organizations.</p>
          */
         public Builder orgs(java.util.List<Orgs> orgs) {
             this.orgs = orgs;
@@ -75,7 +75,10 @@ public class DescribeOrgByLayerResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1CBAFFAB-B697-4049-A9B1-67E1FC5F****</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -154,7 +157,10 @@ public class DescribeOrgByLayerResponseBody extends TeaModel {
             } 
 
             /**
-             * OrgId.
+             * <p>The ID of the organization.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>org-1mox****</p>
              */
             public Builder orgId(String orgId) {
                 this.orgId = orgId;
@@ -162,7 +168,7 @@ public class DescribeOrgByLayerResponseBody extends TeaModel {
             }
 
             /**
-             * OrgName.
+             * <p>The name of the organization.</p>
              */
             public Builder orgName(String orgName) {
                 this.orgName = orgName;
@@ -170,7 +176,10 @@ public class DescribeOrgByLayerResponseBody extends TeaModel {
             }
 
             /**
-             * ParentOrgId.
+             * <p>The ID of the parent organization.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>org-ezqr****</p>
              */
             public Builder parentOrgId(String parentOrgId) {
                 this.parentOrgId = parentOrgId;

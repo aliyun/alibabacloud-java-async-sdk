@@ -333,7 +333,7 @@ public class FilterUsersRequest extends Request {
         }
 
         /**
-         * IncludeOrgInfo.
+         * <p>Specifies whether to return the organization information.</p>
          */
         public Builder includeOrgInfo(Boolean includeOrgInfo) {
             this.putQueryParameter("IncludeOrgInfo", includeOrgInfo);
@@ -342,7 +342,7 @@ public class FilterUsersRequest extends Request {
         }
 
         /**
-         * IncludeSupportIdps.
+         * <p>Specifies whether to return the supported logon types.</p>
          */
         public Builder includeSupportIdps(Boolean includeSupportIdps) {
             this.putQueryParameter("IncludeSupportIdps", includeSupportIdps);
@@ -351,7 +351,7 @@ public class FilterUsersRequest extends Request {
         }
 
         /**
-         * IsQueryAllSubOrgs.
+         * <p>Specifies whether to query all sub-organizations.</p>
          */
         public Builder isQueryAllSubOrgs(Boolean isQueryAllSubOrgs) {
             this.putQueryParameter("IsQueryAllSubOrgs", isQueryAllSubOrgs);
@@ -441,7 +441,10 @@ public class FilterUsersRequest extends Request {
         }
 
         /**
-         * Status.
+         * <p>The status.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>0</p>
          */
         public Builder status(Integer status) {
             this.putQueryParameter("Status", status);

@@ -73,7 +73,7 @@ public class DescribeOrgByLayerRequest extends Request {
         } 
 
         /**
-         * OrgName.
+         * <p>The name of the organization.</p>
          */
         public Builder orgName(String orgName) {
             this.putBodyParameter("OrgName", orgName);
@@ -82,7 +82,10 @@ public class DescribeOrgByLayerRequest extends Request {
         }
 
         /**
-         * ParentOrgId.
+         * <p>The ID of the parent organization.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>org-11fs****</p>
          */
         public Builder parentOrgId(String parentOrgId) {
             this.putBodyParameter("ParentOrgId", parentOrgId);

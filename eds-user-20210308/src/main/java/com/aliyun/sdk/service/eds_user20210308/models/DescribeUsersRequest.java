@@ -404,7 +404,7 @@ public class DescribeUsersRequest extends Request {
         }
 
         /**
-         * Status.
+         * <p>The status.</p>
          */
         public Builder status(Integer status) {
             this.putBodyParameter("Status", status);

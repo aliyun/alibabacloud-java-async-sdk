@@ -75,6 +75,7 @@ public class MoveUserOrgRequest extends Request {
         } 
 
         /**
+         * <p>The user IDs.</p>
          * <p>This parameter is required.</p>
          */
         public Builder endUserIds(java.util.List<String> endUserIds) {
@@ -84,6 +85,7 @@ public class MoveUserOrgRequest extends Request {
         }
 
         /**
+         * <p>The organization ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>

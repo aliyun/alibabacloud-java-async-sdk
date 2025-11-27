@@ -102,7 +102,7 @@ public class FilterUsersResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The convenience accounts.</p>
+         * <p>The information about the convenience accounts.</p>
          */
         public Builder users(java.util.List<Users> users) {
             this.users = users;
@@ -202,6 +202,81 @@ public class FilterUsersResponseBody extends TeaModel {
      *
      * <p>FilterUsersResponseBody</p>
      */
+    public static class Groups extends TeaModel {
+        @com.aliyun.core.annotation.NameInMap("GroupId")
+        private String groupId;
+
+        @com.aliyun.core.annotation.NameInMap("GroupName")
+        private String groupName;
+
+        private Groups(Builder builder) {
+            this.groupId = builder.groupId;
+            this.groupName = builder.groupName;
+        }
+
+        public static Builder builder() {
+            return new Builder();
+        }
+
+        public static Groups create() {
+            return builder().build();
+        }
+
+        /**
+         * @return groupId
+         */
+        public String getGroupId() {
+            return this.groupId;
+        }
+
+        /**
+         * @return groupName
+         */
+        public String getGroupName() {
+            return this.groupName;
+        }
+
+        public static final class Builder {
+            private String groupId; 
+            private String groupName; 
+
+            private Builder() {
+            } 
+
+            private Builder(Groups model) {
+                this.groupId = model.groupId;
+                this.groupName = model.groupName;
+            } 
+
+            /**
+             * GroupId.
+             */
+            public Builder groupId(String groupId) {
+                this.groupId = groupId;
+                return this;
+            }
+
+            /**
+             * GroupName.
+             */
+            public Builder groupName(String groupName) {
+                this.groupName = groupName;
+                return this;
+            }
+
+            public Groups build() {
+                return new Groups(this);
+            } 
+
+        } 
+
+    }
+    /**
+     * 
+     * {@link FilterUsersResponseBody} extends {@link TeaModel}
+     *
+     * <p>FilterUsersResponseBody</p>
+     */
     public static class OrgList extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("OrgId")
         private String orgId;
@@ -262,7 +337,7 @@ public class FilterUsersResponseBody extends TeaModel {
             } 
 
             /**
-             * OrgId.
+             * <p>The organization ID.</p>
              */
             public Builder orgId(String orgId) {
                 this.orgId = orgId;
@@ -270,7 +345,7 @@ public class FilterUsersResponseBody extends TeaModel {
             }
 
             /**
-             * OrgName.
+             * <p>The organization name.</p>
              */
             public Builder orgName(String orgName) {
                 this.orgName = orgName;
@@ -278,7 +353,7 @@ public class FilterUsersResponseBody extends TeaModel {
             }
 
             /**
-             * OrgNamePath.
+             * <p>The organization name path.</p>
              */
             public Builder orgNamePath(String orgNamePath) {
                 this.orgNamePath = orgNamePath;
@@ -345,7 +420,7 @@ public class FilterUsersResponseBody extends TeaModel {
             } 
 
             /**
-             * IdpId.
+             * <p>The enterprise identity provider ID.</p>
              */
             public Builder idpId(String idpId) {
                 this.idpId = idpId;
@@ -353,7 +428,7 @@ public class FilterUsersResponseBody extends TeaModel {
             }
 
             /**
-             * IdpName.
+             * <p>The enterprise identity provider name.</p>
              */
             public Builder idpName(String idpName) {
                 this.idpName = idpName;
@@ -650,6 +725,9 @@ public class FilterUsersResponseBody extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("ExternalInfo")
         private ExternalInfo externalInfo;
 
+        @com.aliyun.core.annotation.NameInMap("Groups")
+        private java.util.List<Groups> groups;
+
         @com.aliyun.core.annotation.NameInMap("Id")
         private Long id;
 
@@ -694,6 +772,7 @@ public class FilterUsersResponseBody extends TeaModel {
             this.enableAdminAccess = builder.enableAdminAccess;
             this.endUserId = builder.endUserId;
             this.externalInfo = builder.externalInfo;
+            this.groups = builder.groups;
             this.id = builder.id;
             this.isTenantManager = builder.isTenantManager;
             this.orgList = builder.orgList;
@@ -763,6 +842,13 @@ public class FilterUsersResponseBody extends TeaModel {
          */
         public ExternalInfo getExternalInfo() {
             return this.externalInfo;
+        }
+
+        /**
+         * @return groups
+         */
+        public java.util.List<Groups> getGroups() {
+            return this.groups;
         }
 
         /**
@@ -857,6 +943,7 @@ public class FilterUsersResponseBody extends TeaModel {
             private Boolean enableAdminAccess; 
             private String endUserId; 
             private ExternalInfo externalInfo; 
+            private java.util.List<Groups> groups; 
             private Long id; 
             private Boolean isTenantManager; 
             private java.util.List<OrgList> orgList; 
@@ -881,6 +968,7 @@ public class FilterUsersResponseBody extends TeaModel {
                 this.enableAdminAccess = model.enableAdminAccess;
                 this.endUserId = model.endUserId;
                 this.externalInfo = model.externalInfo;
+                this.groups = model.groups;
                 this.id = model.id;
                 this.isTenantManager = model.isTenantManager;
                 this.orgList = model.orgList;
@@ -986,6 +1074,14 @@ public class FilterUsersResponseBody extends TeaModel {
             }
 
             /**
+             * Groups.
+             */
+            public Builder groups(java.util.List<Groups> groups) {
+                this.groups = groups;
+                return this;
+            }
+
+            /**
              * <p>The ID of the convenience user.</p>
              * 
              * <strong>example:</strong>
@@ -1024,7 +1120,7 @@ public class FilterUsersResponseBody extends TeaModel {
             }
 
             /**
-             * OrgList.
+             * <p>The organizations to which the user belongs.</p>
              */
             public Builder orgList(java.util.List<OrgList> orgList) {
                 this.orgList = orgList;
@@ -1122,7 +1218,7 @@ public class FilterUsersResponseBody extends TeaModel {
             }
 
             /**
-             * SupportLoginIdps.
+             * <p>The supported identity provider logon methods.</p>
              */
             public Builder supportLoginIdps(java.util.List<SupportLoginIdps> supportLoginIdps) {
                 this.supportLoginIdps = supportLoginIdps;

@@ -74,7 +74,15 @@ public class BatchSetDesktopManagerRequest extends Request {
         } 
 
         /**
-         * IsDesktopManager.
+         * <p>Whether the convenience account has the local administrator permissions on cloud computers.</p>
+         * <p>Valid values:</p>
+         * <ul>
+         * <li>0: no</li>
+         * <li>1 (default): yes</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder isDesktopManager(String isDesktopManager) {
             this.putBodyParameter("IsDesktopManager", isDesktopManager);
@@ -83,6 +91,7 @@ public class BatchSetDesktopManagerRequest extends Request {
         }
 
         /**
+         * <p>The convenience accounts.</p>
          * <p>This parameter is required.</p>
          */
         public Builder users(java.util.List<String> users) {

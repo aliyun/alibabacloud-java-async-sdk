@@ -20,6 +20,9 @@ public interface AsyncClient extends SdkAutoCloseable {
     }
 
     /**
+     * <b>description</b> :
+     * <p>Convenience accounts with the local administrator permissions on cloud computers can install software and modify system settings on cloud computers.</p>
+     * 
      * @param request the request parameters of BatchSetDesktopManager  BatchSetDesktopManagerRequest
      * @return BatchSetDesktopManagerResponse
      */
@@ -228,7 +231,7 @@ public interface AsyncClient extends SdkAutoCloseable {
 
     /**
      * <b>description</b> :
-     * <p>If you remove a virtual MFA device that is bound to a convenience user, the convenience user can no longer use the virtual MFA device to log on to cloud desktops. Before the convenience user can log on to cloud desktops again, a new virtual MFA device must be bound to the convenience user.</p>
+     * <p>If you remove a virtual MFA device that is bound to a convenience account, the convenience account can no longer use the virtual MFA device to log on to cloud computers. Before the convenience account can log on to Alibaba Cloud Workspace terminals again, a new virtual MFA device must be bound to the convenience account.</p>
      * 
      * @param request the request parameters of RemoveMfaDevice  RemoveMfaDeviceRequest
      * @return RemoveMfaDeviceResponse
