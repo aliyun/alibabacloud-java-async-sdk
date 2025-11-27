@@ -18,8 +18,16 @@ import com.aliyun.sdk.gateway.pop.models.*;
  */
 public class DescribeRCInstancesRequest extends Request {
     @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Description")
+    private String description;
+
+    @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("HostIp")
     private String hostIp;
+
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ImageId")
+    private String imageId;
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("InstanceId")
@@ -28,6 +36,10 @@ public class DescribeRCInstancesRequest extends Request {
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("InstanceIds")
     private String instanceIds;
+
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("InstanceName")
+    private String instanceName;
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("PageNumber")
@@ -59,9 +71,12 @@ public class DescribeRCInstancesRequest extends Request {
 
     private DescribeRCInstancesRequest(Builder builder) {
         super(builder);
+        this.description = builder.description;
         this.hostIp = builder.hostIp;
+        this.imageId = builder.imageId;
         this.instanceId = builder.instanceId;
         this.instanceIds = builder.instanceIds;
+        this.instanceName = builder.instanceName;
         this.pageNumber = builder.pageNumber;
         this.pageSize = builder.pageSize;
         this.publicIp = builder.publicIp;
@@ -85,10 +100,24 @@ public class DescribeRCInstancesRequest extends Request {
     }
 
     /**
+     * @return description
+     */
+    public String getDescription() {
+        return this.description;
+    }
+
+    /**
      * @return hostIp
      */
     public String getHostIp() {
         return this.hostIp;
+    }
+
+    /**
+     * @return imageId
+     */
+    public String getImageId() {
+        return this.imageId;
     }
 
     /**
@@ -103,6 +132,13 @@ public class DescribeRCInstancesRequest extends Request {
      */
     public String getInstanceIds() {
         return this.instanceIds;
+    }
+
+    /**
+     * @return instanceName
+     */
+    public String getInstanceName() {
+        return this.instanceName;
     }
 
     /**
@@ -155,9 +191,12 @@ public class DescribeRCInstancesRequest extends Request {
     }
 
     public static final class Builder extends Request.Builder<DescribeRCInstancesRequest, Builder> {
+        private String description; 
         private String hostIp; 
+        private String imageId; 
         private String instanceId; 
         private String instanceIds; 
+        private String instanceName; 
         private Integer pageNumber; 
         private Integer pageSize; 
         private String publicIp; 
@@ -172,9 +211,12 @@ public class DescribeRCInstancesRequest extends Request {
 
         private Builder(DescribeRCInstancesRequest request) {
             super(request);
+            this.description = request.description;
             this.hostIp = request.hostIp;
+            this.imageId = request.imageId;
             this.instanceId = request.instanceId;
             this.instanceIds = request.instanceIds;
+            this.instanceName = request.instanceName;
             this.pageNumber = request.pageNumber;
             this.pageSize = request.pageSize;
             this.publicIp = request.publicIp;
@@ -185,11 +227,29 @@ public class DescribeRCInstancesRequest extends Request {
         } 
 
         /**
+         * Description.
+         */
+        public Builder description(String description) {
+            this.putQueryParameter("Description", description);
+            this.description = description;
+            return this;
+        }
+
+        /**
          * HostIp.
          */
         public Builder hostIp(String hostIp) {
             this.putQueryParameter("HostIp", hostIp);
             this.hostIp = hostIp;
+            return this;
+        }
+
+        /**
+         * ImageId.
+         */
+        public Builder imageId(String imageId) {
+            this.putQueryParameter("ImageId", imageId);
+            this.imageId = imageId;
             return this;
         }
 
@@ -211,6 +271,15 @@ public class DescribeRCInstancesRequest extends Request {
         public Builder instanceIds(String instanceIds) {
             this.putQueryParameter("InstanceIds", instanceIds);
             this.instanceIds = instanceIds;
+            return this;
+        }
+
+        /**
+         * InstanceName.
+         */
+        public Builder instanceName(String instanceName) {
+            this.putQueryParameter("InstanceName", instanceName);
+            this.instanceName = instanceName;
             return this;
         }
 

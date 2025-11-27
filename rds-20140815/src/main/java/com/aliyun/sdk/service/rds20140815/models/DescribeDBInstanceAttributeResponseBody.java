@@ -198,6 +198,9 @@ public class DescribeDBInstanceAttributeResponseBody extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Cpu")
         private String cpu;
 
+        @com.aliyun.core.annotation.NameInMap("DisasterRecoveryNode")
+        private Boolean disasterRecoveryNode;
+
         @com.aliyun.core.annotation.NameInMap("Memory")
         private String memory;
 
@@ -220,6 +223,7 @@ public class DescribeDBInstanceAttributeResponseBody extends TeaModel {
             this.classCode = builder.classCode;
             this.classType = builder.classType;
             this.cpu = builder.cpu;
+            this.disasterRecoveryNode = builder.disasterRecoveryNode;
             this.memory = builder.memory;
             this.nodeId = builder.nodeId;
             this.nodeRegionId = builder.nodeRegionId;
@@ -255,6 +259,13 @@ public class DescribeDBInstanceAttributeResponseBody extends TeaModel {
          */
         public String getCpu() {
             return this.cpu;
+        }
+
+        /**
+         * @return disasterRecoveryNode
+         */
+        public Boolean getDisasterRecoveryNode() {
+            return this.disasterRecoveryNode;
         }
 
         /**
@@ -303,6 +314,7 @@ public class DescribeDBInstanceAttributeResponseBody extends TeaModel {
             private String classCode; 
             private String classType; 
             private String cpu; 
+            private Boolean disasterRecoveryNode; 
             private String memory; 
             private String nodeId; 
             private String nodeRegionId; 
@@ -317,6 +329,7 @@ public class DescribeDBInstanceAttributeResponseBody extends TeaModel {
                 this.classCode = model.classCode;
                 this.classType = model.classType;
                 this.cpu = model.cpu;
+                this.disasterRecoveryNode = model.disasterRecoveryNode;
                 this.memory = model.memory;
                 this.nodeId = model.nodeId;
                 this.nodeRegionId = model.nodeRegionId;
@@ -359,6 +372,14 @@ public class DescribeDBInstanceAttributeResponseBody extends TeaModel {
              */
             public Builder cpu(String cpu) {
                 this.cpu = cpu;
+                return this;
+            }
+
+            /**
+             * DisasterRecoveryNode.
+             */
+            public Builder disasterRecoveryNode(Boolean disasterRecoveryNode) {
+                this.disasterRecoveryNode = disasterRecoveryNode;
                 return this;
             }
 
@@ -1185,6 +1206,12 @@ public class DescribeDBInstanceAttributeResponseBody extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("IoAccelerationEnabled")
         private String ioAccelerationEnabled;
 
+        @com.aliyun.core.annotation.NameInMap("IsAnalyticIns")
+        private Boolean isAnalyticIns;
+
+        @com.aliyun.core.annotation.NameInMap("IsAnalyticReadOnlyIns")
+        private Boolean isAnalyticReadOnlyIns;
+
         @com.aliyun.core.annotation.NameInMap("LatestKernelVersion")
         private String latestKernelVersion;
 
@@ -1284,6 +1311,9 @@ public class DescribeDBInstanceAttributeResponseBody extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("VSwitchId")
         private String vSwitchId;
 
+        @com.aliyun.core.annotation.NameInMap("VectorSupportStatus")
+        private String vectorSupportStatus;
+
         @com.aliyun.core.annotation.NameInMap("VpcCloudInstanceId")
         private String vpcCloudInstanceId;
 
@@ -1348,6 +1378,8 @@ public class DescribeDBInstanceAttributeResponseBody extends TeaModel {
             this.instanceNetworkType = builder.instanceNetworkType;
             this.instructionSetArch = builder.instructionSetArch;
             this.ioAccelerationEnabled = builder.ioAccelerationEnabled;
+            this.isAnalyticIns = builder.isAnalyticIns;
+            this.isAnalyticReadOnlyIns = builder.isAnalyticReadOnlyIns;
             this.latestKernelVersion = builder.latestKernelVersion;
             this.lockMode = builder.lockMode;
             this.lockReason = builder.lockReason;
@@ -1381,6 +1413,7 @@ public class DescribeDBInstanceAttributeResponseBody extends TeaModel {
             this.tips = builder.tips;
             this.tipsLevel = builder.tipsLevel;
             this.vSwitchId = builder.vSwitchId;
+            this.vectorSupportStatus = builder.vectorSupportStatus;
             this.vpcCloudInstanceId = builder.vpcCloudInstanceId;
             this.vpcId = builder.vpcId;
             this.zoneId = builder.zoneId;
@@ -1753,6 +1786,20 @@ public class DescribeDBInstanceAttributeResponseBody extends TeaModel {
         }
 
         /**
+         * @return isAnalyticIns
+         */
+        public Boolean getIsAnalyticIns() {
+            return this.isAnalyticIns;
+        }
+
+        /**
+         * @return isAnalyticReadOnlyIns
+         */
+        public Boolean getIsAnalyticReadOnlyIns() {
+            return this.isAnalyticReadOnlyIns;
+        }
+
+        /**
          * @return latestKernelVersion
          */
         public String getLatestKernelVersion() {
@@ -1984,6 +2031,13 @@ public class DescribeDBInstanceAttributeResponseBody extends TeaModel {
         }
 
         /**
+         * @return vectorSupportStatus
+         */
+        public String getVectorSupportStatus() {
+            return this.vectorSupportStatus;
+        }
+
+        /**
          * @return vpcCloudInstanceId
          */
         public String getVpcCloudInstanceId() {
@@ -2063,6 +2117,8 @@ public class DescribeDBInstanceAttributeResponseBody extends TeaModel {
             private String instanceNetworkType; 
             private String instructionSetArch; 
             private String ioAccelerationEnabled; 
+            private Boolean isAnalyticIns; 
+            private Boolean isAnalyticReadOnlyIns; 
             private String latestKernelVersion; 
             private String lockMode; 
             private String lockReason; 
@@ -2096,6 +2152,7 @@ public class DescribeDBInstanceAttributeResponseBody extends TeaModel {
             private String tips; 
             private Integer tipsLevel; 
             private String vSwitchId; 
+            private String vectorSupportStatus; 
             private String vpcCloudInstanceId; 
             private String vpcId; 
             private String zoneId; 
@@ -2156,6 +2213,8 @@ public class DescribeDBInstanceAttributeResponseBody extends TeaModel {
                 this.instanceNetworkType = model.instanceNetworkType;
                 this.instructionSetArch = model.instructionSetArch;
                 this.ioAccelerationEnabled = model.ioAccelerationEnabled;
+                this.isAnalyticIns = model.isAnalyticIns;
+                this.isAnalyticReadOnlyIns = model.isAnalyticReadOnlyIns;
                 this.latestKernelVersion = model.latestKernelVersion;
                 this.lockMode = model.lockMode;
                 this.lockReason = model.lockReason;
@@ -2189,6 +2248,7 @@ public class DescribeDBInstanceAttributeResponseBody extends TeaModel {
                 this.tips = model.tips;
                 this.tipsLevel = model.tipsLevel;
                 this.vSwitchId = model.vSwitchId;
+                this.vectorSupportStatus = model.vectorSupportStatus;
                 this.vpcCloudInstanceId = model.vpcCloudInstanceId;
                 this.vpcId = model.vpcId;
                 this.zoneId = model.zoneId;
@@ -2843,6 +2903,22 @@ public class DescribeDBInstanceAttributeResponseBody extends TeaModel {
             }
 
             /**
+             * IsAnalyticIns.
+             */
+            public Builder isAnalyticIns(Boolean isAnalyticIns) {
+                this.isAnalyticIns = isAnalyticIns;
+                return this;
+            }
+
+            /**
+             * IsAnalyticReadOnlyIns.
+             */
+            public Builder isAnalyticReadOnlyIns(Boolean isAnalyticReadOnlyIns) {
+                this.isAnalyticReadOnlyIns = isAnalyticReadOnlyIns;
+                return this;
+            }
+
+            /**
              * <p>The latest minor engine version that is supported by the instance.</p>
              * 
              * <strong>example:</strong>
@@ -3239,6 +3315,14 @@ public class DescribeDBInstanceAttributeResponseBody extends TeaModel {
              */
             public Builder vSwitchId(String vSwitchId) {
                 this.vSwitchId = vSwitchId;
+                return this;
+            }
+
+            /**
+             * VectorSupportStatus.
+             */
+            public Builder vectorSupportStatus(String vectorSupportStatus) {
+                this.vectorSupportStatus = vectorSupportStatus;
                 return this;
             }
 

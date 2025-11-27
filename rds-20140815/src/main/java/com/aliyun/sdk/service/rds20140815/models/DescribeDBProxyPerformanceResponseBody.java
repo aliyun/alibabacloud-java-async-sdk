@@ -335,6 +335,9 @@ public class DescribeDBProxyPerformanceResponseBody extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Node")
         private String node;
 
+        @com.aliyun.core.annotation.NameInMap("Server")
+        private String server;
+
         @com.aliyun.core.annotation.NameInMap("Service")
         private String service;
 
@@ -347,6 +350,7 @@ public class DescribeDBProxyPerformanceResponseBody extends TeaModel {
         private PerformanceKey(Builder builder) {
             this.key = builder.key;
             this.node = builder.node;
+            this.server = builder.server;
             this.service = builder.service;
             this.valueFormat = builder.valueFormat;
             this.values = builder.values;
@@ -375,6 +379,13 @@ public class DescribeDBProxyPerformanceResponseBody extends TeaModel {
         }
 
         /**
+         * @return server
+         */
+        public String getServer() {
+            return this.server;
+        }
+
+        /**
          * @return service
          */
         public String getService() {
@@ -398,6 +409,7 @@ public class DescribeDBProxyPerformanceResponseBody extends TeaModel {
         public static final class Builder {
             private String key; 
             private String node; 
+            private String server; 
             private String service; 
             private String valueFormat; 
             private Values values; 
@@ -408,6 +420,7 @@ public class DescribeDBProxyPerformanceResponseBody extends TeaModel {
             private Builder(PerformanceKey model) {
                 this.key = model.key;
                 this.node = model.node;
+                this.server = model.server;
                 this.service = model.service;
                 this.valueFormat = model.valueFormat;
                 this.values = model.values;
@@ -429,6 +442,14 @@ public class DescribeDBProxyPerformanceResponseBody extends TeaModel {
              */
             public Builder node(String node) {
                 this.node = node;
+                return this;
+            }
+
+            /**
+             * Server.
+             */
+            public Builder server(String server) {
+                this.server = server;
                 return this;
             }
 

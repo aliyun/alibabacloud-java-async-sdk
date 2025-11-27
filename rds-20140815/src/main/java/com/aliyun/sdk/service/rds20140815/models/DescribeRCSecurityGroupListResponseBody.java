@@ -67,7 +67,7 @@ public class DescribeRCSecurityGroupListResponseBody extends TeaModel {
         } 
 
         /**
-         * RCSecurityGroups.
+         * <p>The basic information about the security groups.</p>
          */
         public Builder RCSecurityGroups(java.util.List<RCSecurityGroups> RCSecurityGroups) {
             this.RCSecurityGroups = RCSecurityGroups;
@@ -75,7 +75,10 @@ public class DescribeRCSecurityGroupListResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * <p>The ID of the request.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>7A41C147-C8D0-4DAE-A1A2-17EBCD60DFA1</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -207,7 +210,10 @@ public class DescribeRCSecurityGroupListResponseBody extends TeaModel {
             } 
 
             /**
-             * AvailableInstanceAmount.
+             * <p>The number of instances that can be added to the security group.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>48</p>
              */
             public Builder availableInstanceAmount(Integer availableInstanceAmount) {
                 this.availableInstanceAmount = availableInstanceAmount;
@@ -215,7 +221,10 @@ public class DescribeRCSecurityGroupListResponseBody extends TeaModel {
             }
 
             /**
-             * CreationTime.
+             * <p>The time when the security group was created. The time follows the ISO 8601 standard and is in the <code>yyyy-MM-ddThh:mmZ</code> format. The time is displayed in UTC.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2025-05-31T03:12:29Z</p>
              */
             public Builder creationTime(String creationTime) {
                 this.creationTime = creationTime;
@@ -223,7 +232,10 @@ public class DescribeRCSecurityGroupListResponseBody extends TeaModel {
             }
 
             /**
-             * Description.
+             * <p>The description of the security group.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>TestDescription</p>
              */
             public Builder description(String description) {
                 this.description = description;
@@ -231,7 +243,11 @@ public class DescribeRCSecurityGroupListResponseBody extends TeaModel {
             }
 
             /**
+             * <p>The number of instances that are added to the security group.</p>
              * <p>This parameter is required.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2</p>
              */
             public Builder instanceCount(Integer instanceCount) {
                 this.instanceCount = instanceCount;
@@ -239,7 +255,10 @@ public class DescribeRCSecurityGroupListResponseBody extends TeaModel {
             }
 
             /**
-             * SecurityGroupId.
+             * <p>The ID of the security group.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>sg-2ze27hs990o2hn9****</p>
              */
             public Builder securityGroupId(String securityGroupId) {
                 this.securityGroupId = securityGroupId;
@@ -247,7 +266,14 @@ public class DescribeRCSecurityGroupListResponseBody extends TeaModel {
             }
 
             /**
-             * SecurityGroupType.
+             * <p>The type of the security group. Valid values:</p>
+             * <ul>
+             * <li><strong>normal</strong>: a normal security group.</li>
+             * <li><strong>enterprise</strong>: an advanced security group.</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>normal</p>
              */
             public Builder securityGroupType(String securityGroupType) {
                 this.securityGroupType = securityGroupType;
@@ -255,7 +281,10 @@ public class DescribeRCSecurityGroupListResponseBody extends TeaModel {
             }
 
             /**
-             * VpcId.
+             * <p>The ID of the VPC to which the security group belongs.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>vpc-bp1opxu1zkhn****</p>
              */
             public Builder vpcId(String vpcId) {
                 this.vpcId = vpcId;

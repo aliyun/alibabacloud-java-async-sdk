@@ -101,6 +101,9 @@ public class DescribeRCInstanceTypesResponseBody extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("CpuCoreCount")
         private Integer cpuCoreCount;
 
+        @com.aliyun.core.annotation.NameInMap("DiskQuantity")
+        private Long diskQuantity;
+
         @com.aliyun.core.annotation.NameInMap("InstanceTypeFamily")
         private String instanceTypeFamily;
 
@@ -112,6 +115,7 @@ public class DescribeRCInstanceTypesResponseBody extends TeaModel {
 
         private InstanceType(Builder builder) {
             this.cpuCoreCount = builder.cpuCoreCount;
+            this.diskQuantity = builder.diskQuantity;
             this.instanceTypeFamily = builder.instanceTypeFamily;
             this.instanceTypeId = builder.instanceTypeId;
             this.memorySize = builder.memorySize;
@@ -130,6 +134,13 @@ public class DescribeRCInstanceTypesResponseBody extends TeaModel {
          */
         public Integer getCpuCoreCount() {
             return this.cpuCoreCount;
+        }
+
+        /**
+         * @return diskQuantity
+         */
+        public Long getDiskQuantity() {
+            return this.diskQuantity;
         }
 
         /**
@@ -155,6 +166,7 @@ public class DescribeRCInstanceTypesResponseBody extends TeaModel {
 
         public static final class Builder {
             private Integer cpuCoreCount; 
+            private Long diskQuantity; 
             private String instanceTypeFamily; 
             private String instanceTypeId; 
             private Integer memorySize; 
@@ -164,6 +176,7 @@ public class DescribeRCInstanceTypesResponseBody extends TeaModel {
 
             private Builder(InstanceType model) {
                 this.cpuCoreCount = model.cpuCoreCount;
+                this.diskQuantity = model.diskQuantity;
                 this.instanceTypeFamily = model.instanceTypeFamily;
                 this.instanceTypeId = model.instanceTypeId;
                 this.memorySize = model.memorySize;
@@ -177,6 +190,14 @@ public class DescribeRCInstanceTypesResponseBody extends TeaModel {
              */
             public Builder cpuCoreCount(Integer cpuCoreCount) {
                 this.cpuCoreCount = cpuCoreCount;
+                return this;
+            }
+
+            /**
+             * DiskQuantity.
+             */
+            public Builder diskQuantity(Long diskQuantity) {
+                this.diskQuantity = diskQuantity;
                 return this;
             }
 

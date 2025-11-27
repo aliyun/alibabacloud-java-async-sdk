@@ -301,6 +301,12 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<CheckInstanceExistResponse> checkInstanceExist(CheckInstanceExistRequest request);
 
     /**
+     * @param request the request parameters of CheckRdsCustomInit  CheckRdsCustomInitRequest
+     * @return CheckRdsCustomInitResponse
+     */
+    CompletableFuture<CheckRdsCustomInitResponse> checkRdsCustomInit(CheckRdsCustomInitRequest request);
+
+    /**
      * <b>description</b> :
      * <h3><a href="#"></a>Supported database engines</h3>
      * <ul>
@@ -671,18 +677,6 @@ public interface AsyncClient extends SdkAutoCloseable {
      * @return CreateDdrInstanceResponse
      */
     CompletableFuture<CreateDdrInstanceResponse> createDdrInstance(CreateDdrInstanceRequest request);
-
-    /**
-     * <b>description</b> :
-     * <blockquote>
-     * <p> This operation is no longer maintained. You can call the CreateDiagnosticReport operation of Database Autonomy Service (DAS) to create a diagnostic report.
-     * After you call this operation to create a diagnostic report, you can call the DescribeDiagnosticReportList operation to download the diagnostic report.</p>
-     * </blockquote>
-     * 
-     * @param request the request parameters of CreateDiagnosticReport  CreateDiagnosticReportRequest
-     * @return CreateDiagnosticReportResponse
-     */
-    CompletableFuture<CreateDiagnosticReportResponse> createDiagnosticReport(CreateDiagnosticReportRequest request);
 
     /**
      * <b>description</b> :
@@ -1271,6 +1265,12 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<DeleteRCSnapshotResponse> deleteRCSnapshot(DeleteRCSnapshotRequest request);
 
     /**
+     * @param request the request parameters of DeleteRCVCluster  DeleteRCVClusterRequest
+     * @return DeleteRCVClusterResponse
+     */
+    CompletableFuture<DeleteRCVClusterResponse> deleteRCVCluster(DeleteRCVClusterRequest request);
+
+    /**
      * <b>description</b> :
      * <h3><a href="#"></a>Supported database engines</h3>
      * <ul>
@@ -1414,7 +1414,7 @@ public interface AsyncClient extends SdkAutoCloseable {
      * <h3><a href="#"></a>Supported database engines</h3>
      * <p>MySQL</p>
      * <h3><a href="#"></a>References</h3>
-     * <p><a href="https://help.aliyun.com/document_detail/155180.html">Create and view an analytic instance</a></p>
+     * <p><a href="https://help.aliyun.com/document_detail/2950002.html">Create and view an analytic instance</a></p>
      * 
      * @param request the request parameters of DescribeAnalyticdbByPrimaryDBInstance  DescribeAnalyticdbByPrimaryDBInstanceRequest
      * @return DescribeAnalyticdbByPrimaryDBInstanceResponse
@@ -2244,15 +2244,6 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<DescribeDetachedBackupsResponse> describeDetachedBackups(DescribeDetachedBackupsRequest request);
 
     /**
-     * @deprecated OpenAPI DescribeDiagnosticReportList is deprecated  * @description >  This operation is phased out.
-     * 
-     * @param request the request parameters of DescribeDiagnosticReportList  DescribeDiagnosticReportListRequest
-     * @return DescribeDiagnosticReportListResponse
-     */
-    @Deprecated
-    CompletableFuture<DescribeDiagnosticReportListResponse> describeDiagnosticReportList(DescribeDiagnosticReportListRequest request);
-
-    /**
      * <b>description</b> :
      * <h3><a href="#"></a>Supported database engines</h3>
      * <ul>
@@ -2736,6 +2727,18 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<DescribeQuickSaleConfigResponse> describeQuickSaleConfig(DescribeQuickSaleConfigRequest request);
 
     /**
+     * @param request the request parameters of DescribeRCAvailableResource  DescribeRCAvailableResourceRequest
+     * @return DescribeRCAvailableResourceResponse
+     */
+    CompletableFuture<DescribeRCAvailableResourceResponse> describeRCAvailableResource(DescribeRCAvailableResourceRequest request);
+
+    /**
+     * <b>description</b> :
+     * <p>  Before you run commands on or send files to instances, especially new instances, we recommend that you query the status of Cloud Assistant on the instances by calling this operation and checking the return value of <code>CloudAssistantStatus</code>. Run commands on or send files to the instances only when the return value is <code>true</code>.</p>
+     * <ul>
+     * <li>During a paged query, when you retrieve the first page of results, set <code>MaxResults</code> to specify the maximum number of entries to return in the call. The return value of <code>NextToken</code> is a pagination token that can be used in the next call to retrieve a new page of results. When you retrieve a new page of results, set <code>NextToken</code> to the <code>NextToken</code> value returned in the previous call and set <code>MaxResults</code> to specify the maximum number of entries to return in this call.</li>
+     * </ul>
+     * 
      * @param request the request parameters of DescribeRCCloudAssistantStatus  DescribeRCCloudAssistantStatusRequest
      * @return DescribeRCCloudAssistantStatusResponse
      */
@@ -2773,6 +2776,12 @@ public interface AsyncClient extends SdkAutoCloseable {
      * @return DescribeRCDisksResponse
      */
     CompletableFuture<DescribeRCDisksResponse> describeRCDisks(DescribeRCDisksRequest request);
+
+    /**
+     * @param request the request parameters of DescribeRCElasticScaling  DescribeRCElasticScalingRequest
+     * @return DescribeRCElasticScalingResponse
+     */
+    CompletableFuture<DescribeRCElasticScalingResponse> describeRCElasticScaling(DescribeRCElasticScalingRequest request);
 
     /**
      * @param request the request parameters of DescribeRCImageList  DescribeRCImageListRequest
@@ -2872,6 +2881,12 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<DescribeRCNodePoolResponse> describeRCNodePool(DescribeRCNodePoolRequest request);
 
     /**
+     * @param request the request parameters of DescribeRCResourcesModification  DescribeRCResourcesModificationRequest
+     * @return DescribeRCResourcesModificationResponse
+     */
+    CompletableFuture<DescribeRCResourcesModificationResponse> describeRCResourcesModification(DescribeRCResourcesModificationRequest request);
+
+    /**
      * @param request the request parameters of DescribeRCSecurityGroupList  DescribeRCSecurityGroupListRequest
      * @return DescribeRCSecurityGroupListResponse
      */
@@ -2896,7 +2911,9 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<DescribeRCVClusterResponse> describeRCVCluster(DescribeRCVClusterRequest request);
 
     /**
-     * @deprecated OpenAPI DescribeRdsResourceSettings is deprecated  * @param request  the request parameters of DescribeRdsResourceSettings  DescribeRdsResourceSettingsRequest
+     * @deprecated OpenAPI DescribeRdsResourceSettings is deprecated  * @description This operation can still be called but is no longer maintained.
+     * 
+     * @param request the request parameters of DescribeRdsResourceSettings  DescribeRdsResourceSettingsRequest
      * @return DescribeRdsResourceSettingsResponse
      */
     @Deprecated
@@ -3437,6 +3454,12 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<ListClassesResponse> listClasses(ListClassesRequest request);
 
     /**
+     * @param request the request parameters of ListRCVClusters  ListRCVClustersRequest
+     * @return ListRCVClustersResponse
+     */
+    CompletableFuture<ListRCVClustersResponse> listRCVClusters(ListRCVClustersRequest request);
+
+    /**
      * <b>description</b> :
      * <h3><a href="#"></a>Supported database engines</h3>
      * <ul>
@@ -3711,12 +3734,11 @@ public interface AsyncClient extends SdkAutoCloseable {
     /**
      * <b>description</b> :
      * <h3><a href="#"></a>Supported database engines</h3>
-     * <ul>
-     * <li>RDS SQL Server</li>
-     * </ul>
+     * <p>RDS SQL Server</p>
      * <h3><a href="#"></a>References</h3>
      * <blockquote>
-     * <p> Before you call this operation, read the following topics and make sure that you fully understand the prerequisites and impacts of this operation.</p>
+     * <p> Before you call this operation, read the following topics and make sure that you fully understand the prerequisites and impacts of this operation.
+     * <a href="https://help.aliyun.com/document_detail/95717.html">Manually back up the data of an RDS for SQL Server instance</a></p>
      * </blockquote>
      * 
      * @param request the request parameters of ModifyBackupSetExpireTime  ModifyBackupSetExpireTimeRequest
@@ -3740,6 +3762,12 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<ModifyCollationTimeZoneResponse> modifyCollationTimeZone(ModifyCollationTimeZoneRequest request);
 
     /**
+     * <b>description</b> :
+     * <h3><a href="#"></a>Supported database engine</h3>
+     * <p>RDS PostgreSQL</p>
+     * <h3><a href="#"></a>References</h3>
+     * <p><a href="https://help.aliyun.com/document_detail/2928780.html">Assured serverless</a></p>
+     * 
      * @param request the request parameters of ModifyComputeBurstConfig  ModifyComputeBurstConfigRequest
      * @return ModifyComputeBurstConfigResponse
      */
@@ -4493,6 +4521,12 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<ModifyRCDiskSpecResponse> modifyRCDiskSpec(ModifyRCDiskSpecRequest request);
 
     /**
+     * @param request the request parameters of ModifyRCElasticScaling  ModifyRCElasticScalingRequest
+     * @return ModifyRCElasticScalingResponse
+     */
+    CompletableFuture<ModifyRCElasticScalingResponse> modifyRCElasticScaling(ModifyRCElasticScalingRequest request);
+
+    /**
      * <b>description</b> :
      * <p>Before you call this operation, make sure that you are familiar with the billing methods, pricing, and refund rules of RDS Custom.
      * Before you call this operation, take note of the following items:</p>
@@ -4561,10 +4595,22 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<ModifyRCInstanceNetworkSpecResponse> modifyRCInstanceNetworkSpec(ModifyRCInstanceNetworkSpecRequest request);
 
     /**
+     * @param request the request parameters of ModifyRCInstanceVpcAttribute  ModifyRCInstanceVpcAttributeRequest
+     * @return ModifyRCInstanceVpcAttributeResponse
+     */
+    CompletableFuture<ModifyRCInstanceVpcAttributeResponse> modifyRCInstanceVpcAttribute(ModifyRCInstanceVpcAttributeRequest request);
+
+    /**
      * @param request the request parameters of ModifyRCSecurityGroupPermission  ModifyRCSecurityGroupPermissionRequest
      * @return ModifyRCSecurityGroupPermissionResponse
      */
     CompletableFuture<ModifyRCSecurityGroupPermissionResponse> modifyRCSecurityGroupPermission(ModifyRCSecurityGroupPermissionRequest request);
+
+    /**
+     * @param request the request parameters of ModifyRCVCluster  ModifyRCVClusterRequest
+     * @return ModifyRCVClusterResponse
+     */
+    CompletableFuture<ModifyRCVClusterResponse> modifyRCVCluster(ModifyRCVClusterRequest request);
 
     /**
      * <b>description</b> :
@@ -4728,6 +4774,18 @@ public interface AsyncClient extends SdkAutoCloseable {
 
     /**
      * <b>description</b> :
+     * <h3><a href="#"></a>Supported database engine</h3>
+     * <p>RDS PostgreSQL</p>
+     * <h3><a href="#"></a>References</h3>
+     * <p><a href="https://help.aliyun.com/document_detail/2977241.html">DuckDB-based analytical instance</a></p>
+     * 
+     * @param request the request parameters of PrecheckDuckDBDependency  PrecheckDuckDBDependencyRequest
+     * @return PrecheckDuckDBDependencyResponse
+     */
+    CompletableFuture<PrecheckDuckDBDependencyResponse> precheckDuckDBDependency(PrecheckDuckDBDependencyRequest request);
+
+    /**
+     * <b>description</b> :
      * <h3>Supported database engines</h3>
      * <ul>
      * <li>MySQL</li>
@@ -4770,6 +4828,12 @@ public interface AsyncClient extends SdkAutoCloseable {
      * @return QueryRecommendByCodeResponse
      */
     CompletableFuture<QueryRecommendByCodeResponse> queryRecommendByCode(QueryRecommendByCodeRequest request);
+
+    /**
+     * @param request the request parameters of RdsCustomInit  RdsCustomInitRequest
+     * @return RdsCustomInitResponse
+     */
+    CompletableFuture<RdsCustomInitResponse> rdsCustomInit(RdsCustomInitRequest request);
 
     /**
      * @param request the request parameters of RebootRCInstance  RebootRCInstanceRequest
@@ -5239,8 +5303,16 @@ public interface AsyncClient extends SdkAutoCloseable {
 
     /**
      * <b>description</b> :
-     * <h3><a href="#"></a>Supported database engine</h3>
-     * <p>SQL Server</p>
+     * <h3><a href="#"></a>Supported database engines</h3>
+     * <ul>
+     * <li>RDS MySQL</li>
+     * <li>RDS SQL Server</li>
+     * </ul>
+     * <h3><a href="#"></a>References</h3>
+     * <ul>
+     * <li><a href="https://help.aliyun.com/document_detail/2844223.html">Introduction to RDS Custom for MySQL</a></li>
+     * <li><a href="https://help.aliyun.com/document_detail/2864363.html">Introduction to RDS Custom for SQL Server</a></li>
+     * </ul>
      * 
      * @param request the request parameters of StopRCInstances  StopRCInstancesRequest
      * @return StopRCInstancesResponse

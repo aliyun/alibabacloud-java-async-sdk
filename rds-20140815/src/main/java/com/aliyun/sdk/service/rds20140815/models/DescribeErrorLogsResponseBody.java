@@ -173,12 +173,24 @@ public class DescribeErrorLogsResponseBody extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("CreateTime")
         private String createTime;
 
+        @com.aliyun.core.annotation.NameInMap("Database")
+        private String database;
+
         @com.aliyun.core.annotation.NameInMap("ErrorInfo")
         private String errorInfo;
 
+        @com.aliyun.core.annotation.NameInMap("User")
+        private String user;
+
+        @com.aliyun.core.annotation.NameInMap("UserIp")
+        private String userIp;
+
         private ErrorLog(Builder builder) {
             this.createTime = builder.createTime;
+            this.database = builder.database;
             this.errorInfo = builder.errorInfo;
+            this.user = builder.user;
+            this.userIp = builder.userIp;
         }
 
         public static Builder builder() {
@@ -197,22 +209,49 @@ public class DescribeErrorLogsResponseBody extends TeaModel {
         }
 
         /**
+         * @return database
+         */
+        public String getDatabase() {
+            return this.database;
+        }
+
+        /**
          * @return errorInfo
          */
         public String getErrorInfo() {
             return this.errorInfo;
         }
 
+        /**
+         * @return user
+         */
+        public String getUser() {
+            return this.user;
+        }
+
+        /**
+         * @return userIp
+         */
+        public String getUserIp() {
+            return this.userIp;
+        }
+
         public static final class Builder {
             private String createTime; 
+            private String database; 
             private String errorInfo; 
+            private String user; 
+            private String userIp; 
 
             private Builder() {
             } 
 
             private Builder(ErrorLog model) {
                 this.createTime = model.createTime;
+                this.database = model.database;
                 this.errorInfo = model.errorInfo;
+                this.user = model.user;
+                this.userIp = model.userIp;
             } 
 
             /**
@@ -227,6 +266,14 @@ public class DescribeErrorLogsResponseBody extends TeaModel {
             }
 
             /**
+             * Database.
+             */
+            public Builder database(String database) {
+                this.database = database;
+                return this;
+            }
+
+            /**
              * <p>The error log information.</p>
              * 
              * <strong>example:</strong>
@@ -234,6 +281,22 @@ public class DescribeErrorLogsResponseBody extends TeaModel {
              */
             public Builder errorInfo(String errorInfo) {
                 this.errorInfo = errorInfo;
+                return this;
+            }
+
+            /**
+             * User.
+             */
+            public Builder user(String user) {
+                this.user = user;
+                return this;
+            }
+
+            /**
+             * UserIp.
+             */
+            public Builder userIp(String userIp) {
+                this.userIp = userIp;
                 return this;
             }
 

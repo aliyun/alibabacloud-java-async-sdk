@@ -18,8 +18,16 @@ import com.aliyun.sdk.gateway.pop.models.*;
  */
 public class UpgradeDBInstanceMajorVersionRequest extends Request {
     @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("AllowDDL")
+    private Boolean allowDDL;
+
+    @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("CollectStatMode")
     private String collectStatMode;
+
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("CustomExtraInfo")
+    private String customExtraInfo;
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("DBInstanceClass")
@@ -104,7 +112,9 @@ public class UpgradeDBInstanceMajorVersionRequest extends Request {
 
     private UpgradeDBInstanceMajorVersionRequest(Builder builder) {
         super(builder);
+        this.allowDDL = builder.allowDDL;
         this.collectStatMode = builder.collectStatMode;
+        this.customExtraInfo = builder.customExtraInfo;
         this.DBInstanceClass = builder.DBInstanceClass;
         this.DBInstanceId = builder.DBInstanceId;
         this.DBInstanceStorage = builder.DBInstanceStorage;
@@ -141,10 +151,24 @@ public class UpgradeDBInstanceMajorVersionRequest extends Request {
     }
 
     /**
+     * @return allowDDL
+     */
+    public Boolean getAllowDDL() {
+        return this.allowDDL;
+    }
+
+    /**
      * @return collectStatMode
      */
     public String getCollectStatMode() {
         return this.collectStatMode;
+    }
+
+    /**
+     * @return customExtraInfo
+     */
+    public String getCustomExtraInfo() {
+        return this.customExtraInfo;
     }
 
     /**
@@ -288,7 +312,9 @@ public class UpgradeDBInstanceMajorVersionRequest extends Request {
     }
 
     public static final class Builder extends Request.Builder<UpgradeDBInstanceMajorVersionRequest, Builder> {
+        private Boolean allowDDL; 
         private String collectStatMode; 
+        private String customExtraInfo; 
         private String DBInstanceClass; 
         private String DBInstanceId; 
         private Integer DBInstanceStorage; 
@@ -316,7 +342,9 @@ public class UpgradeDBInstanceMajorVersionRequest extends Request {
 
         private Builder(UpgradeDBInstanceMajorVersionRequest request) {
             super(request);
+            this.allowDDL = request.allowDDL;
             this.collectStatMode = request.collectStatMode;
+            this.customExtraInfo = request.customExtraInfo;
             this.DBInstanceClass = request.DBInstanceClass;
             this.DBInstanceId = request.DBInstanceId;
             this.DBInstanceStorage = request.DBInstanceStorage;
@@ -340,6 +368,15 @@ public class UpgradeDBInstanceMajorVersionRequest extends Request {
         } 
 
         /**
+         * AllowDDL.
+         */
+        public Builder allowDDL(Boolean allowDDL) {
+            this.putQueryParameter("AllowDDL", allowDDL);
+            this.allowDDL = allowDDL;
+            return this;
+        }
+
+        /**
          * <p>Specify the point in time at which the system collects the statistics of the instance.</p>
          * <ul>
          * <li><strong>Before</strong>: The system collects the statistics of the instance before the switchover to ensure service stability. If the instance contains a large amount of data, the upgrade may require a long period of time.</li>
@@ -355,6 +392,15 @@ public class UpgradeDBInstanceMajorVersionRequest extends Request {
         public Builder collectStatMode(String collectStatMode) {
             this.putQueryParameter("CollectStatMode", collectStatMode);
             this.collectStatMode = collectStatMode;
+            return this;
+        }
+
+        /**
+         * CustomExtraInfo.
+         */
+        public Builder customExtraInfo(String customExtraInfo) {
+            this.putQueryParameter("CustomExtraInfo", customExtraInfo);
+            this.customExtraInfo = customExtraInfo;
             return this;
         }
 

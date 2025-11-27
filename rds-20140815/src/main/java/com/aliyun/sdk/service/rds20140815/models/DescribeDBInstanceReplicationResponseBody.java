@@ -26,6 +26,12 @@ public class DescribeDBInstanceReplicationResponseBody extends TeaModel {
     @com.aliyun.core.annotation.NameInMap("ReplicationErrorMessage")
     private String replicationErrorMessage;
 
+    @com.aliyun.core.annotation.NameInMap("ReplicationIp")
+    private String replicationIp;
+
+    @com.aliyun.core.annotation.NameInMap("ReplicationPort")
+    private String replicationPort;
+
     @com.aliyun.core.annotation.NameInMap("ReplicationSource")
     private String replicationSource;
 
@@ -39,6 +45,8 @@ public class DescribeDBInstanceReplicationResponseBody extends TeaModel {
         this.externalReplication = builder.externalReplication;
         this.replicationDelay = builder.replicationDelay;
         this.replicationErrorMessage = builder.replicationErrorMessage;
+        this.replicationIp = builder.replicationIp;
+        this.replicationPort = builder.replicationPort;
         this.replicationSource = builder.replicationSource;
         this.replicationState = builder.replicationState;
         this.requestId = builder.requestId;
@@ -78,6 +86,20 @@ public class DescribeDBInstanceReplicationResponseBody extends TeaModel {
     }
 
     /**
+     * @return replicationIp
+     */
+    public String getReplicationIp() {
+        return this.replicationIp;
+    }
+
+    /**
+     * @return replicationPort
+     */
+    public String getReplicationPort() {
+        return this.replicationPort;
+    }
+
+    /**
      * @return replicationSource
      */
     public String getReplicationSource() {
@@ -102,6 +124,8 @@ public class DescribeDBInstanceReplicationResponseBody extends TeaModel {
         private String externalReplication; 
         private String replicationDelay; 
         private String replicationErrorMessage; 
+        private String replicationIp; 
+        private String replicationPort; 
         private String replicationSource; 
         private String replicationState; 
         private String requestId; 
@@ -113,6 +137,8 @@ public class DescribeDBInstanceReplicationResponseBody extends TeaModel {
             this.externalReplication = model.externalReplication;
             this.replicationDelay = model.replicationDelay;
             this.replicationErrorMessage = model.replicationErrorMessage;
+            this.replicationIp = model.replicationIp;
+            this.replicationPort = model.replicationPort;
             this.replicationSource = model.replicationSource;
             this.replicationState = model.replicationState;
             this.requestId = model.requestId;
@@ -152,6 +178,22 @@ public class DescribeDBInstanceReplicationResponseBody extends TeaModel {
          */
         public Builder replicationErrorMessage(String replicationErrorMessage) {
             this.replicationErrorMessage = replicationErrorMessage;
+            return this;
+        }
+
+        /**
+         * ReplicationIp.
+         */
+        public Builder replicationIp(String replicationIp) {
+            this.replicationIp = replicationIp;
+            return this;
+        }
+
+        /**
+         * ReplicationPort.
+         */
+        public Builder replicationPort(String replicationPort) {
+            this.replicationPort = replicationPort;
             return this;
         }
 

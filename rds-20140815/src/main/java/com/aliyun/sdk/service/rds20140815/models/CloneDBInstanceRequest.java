@@ -46,6 +46,10 @@ public class CloneDBInstanceRequest extends Request {
     private String clientToken;
 
     @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("CustomExtraInfo")
+    private String customExtraInfo;
+
+    @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("DBInstanceClass")
     private String DBInstanceClass;
 
@@ -156,6 +160,7 @@ public class CloneDBInstanceRequest extends Request {
         this.burstingEnabled = builder.burstingEnabled;
         this.category = builder.category;
         this.clientToken = builder.clientToken;
+        this.customExtraInfo = builder.customExtraInfo;
         this.DBInstanceClass = builder.DBInstanceClass;
         this.DBInstanceDescription = builder.DBInstanceDescription;
         this.DBInstanceId = builder.DBInstanceId;
@@ -243,6 +248,13 @@ public class CloneDBInstanceRequest extends Request {
      */
     public String getClientToken() {
         return this.clientToken;
+    }
+
+    /**
+     * @return customExtraInfo
+     */
+    public String getCustomExtraInfo() {
+        return this.customExtraInfo;
     }
 
     /**
@@ -428,6 +440,7 @@ public class CloneDBInstanceRequest extends Request {
         private Boolean burstingEnabled; 
         private String category; 
         private String clientToken; 
+        private String customExtraInfo; 
         private String DBInstanceClass; 
         private String DBInstanceDescription; 
         private String DBInstanceId; 
@@ -467,6 +480,7 @@ public class CloneDBInstanceRequest extends Request {
             this.burstingEnabled = request.burstingEnabled;
             this.category = request.category;
             this.clientToken = request.clientToken;
+            this.customExtraInfo = request.customExtraInfo;
             this.DBInstanceClass = request.DBInstanceClass;
             this.DBInstanceDescription = request.DBInstanceDescription;
             this.DBInstanceId = request.DBInstanceId;
@@ -606,6 +620,15 @@ public class CloneDBInstanceRequest extends Request {
         public Builder clientToken(String clientToken) {
             this.putQueryParameter("ClientToken", clientToken);
             this.clientToken = clientToken;
+            return this;
+        }
+
+        /**
+         * CustomExtraInfo.
+         */
+        public Builder customExtraInfo(String customExtraInfo) {
+            this.putQueryParameter("CustomExtraInfo", customExtraInfo);
+            this.customExtraInfo = customExtraInfo;
             return this;
         }
 

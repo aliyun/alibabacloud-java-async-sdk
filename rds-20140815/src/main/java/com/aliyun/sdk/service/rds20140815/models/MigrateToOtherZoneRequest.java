@@ -22,6 +22,10 @@ public class MigrateToOtherZoneRequest extends Request {
     private String category;
 
     @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("CustomExtraInfo")
+    private String customExtraInfo;
+
+    @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("DBInstanceClass")
     private String DBInstanceClass;
 
@@ -94,6 +98,7 @@ public class MigrateToOtherZoneRequest extends Request {
     private MigrateToOtherZoneRequest(Builder builder) {
         super(builder);
         this.category = builder.category;
+        this.customExtraInfo = builder.customExtraInfo;
         this.DBInstanceClass = builder.DBInstanceClass;
         this.DBInstanceId = builder.DBInstanceId;
         this.DBInstanceStorage = builder.DBInstanceStorage;
@@ -131,6 +136,13 @@ public class MigrateToOtherZoneRequest extends Request {
      */
     public String getCategory() {
         return this.category;
+    }
+
+    /**
+     * @return customExtraInfo
+     */
+    public String getCustomExtraInfo() {
+        return this.customExtraInfo;
     }
 
     /**
@@ -254,6 +266,7 @@ public class MigrateToOtherZoneRequest extends Request {
 
     public static final class Builder extends Request.Builder<MigrateToOtherZoneRequest, Builder> {
         private String category; 
+        private String customExtraInfo; 
         private String DBInstanceClass; 
         private String DBInstanceId; 
         private Long DBInstanceStorage; 
@@ -279,6 +292,7 @@ public class MigrateToOtherZoneRequest extends Request {
         private Builder(MigrateToOtherZoneRequest request) {
             super(request);
             this.category = request.category;
+            this.customExtraInfo = request.customExtraInfo;
             this.DBInstanceClass = request.DBInstanceClass;
             this.DBInstanceId = request.DBInstanceId;
             this.DBInstanceStorage = request.DBInstanceStorage;
@@ -314,6 +328,15 @@ public class MigrateToOtherZoneRequest extends Request {
         public Builder category(String category) {
             this.putQueryParameter("Category", category);
             this.category = category;
+            return this;
+        }
+
+        /**
+         * CustomExtraInfo.
+         */
+        public Builder customExtraInfo(String customExtraInfo) {
+            this.putQueryParameter("CustomExtraInfo", customExtraInfo);
+            this.customExtraInfo = customExtraInfo;
             return this;
         }
 

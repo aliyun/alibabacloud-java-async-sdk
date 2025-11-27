@@ -67,7 +67,7 @@ public class DescribeRdsResourceSettingsResponseBody extends TeaModel {
         } 
 
         /**
-         * RdsInstanceResourceSettings.
+         * <p>The details about notification settings for an instance.</p>
          */
         public Builder rdsInstanceResourceSettings(RdsInstanceResourceSettings rdsInstanceResourceSettings) {
             this.rdsInstanceResourceSettings = rdsInstanceResourceSettings;
@@ -75,7 +75,10 @@ public class DescribeRdsResourceSettingsResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>76364A52-E0AB-5CC8-xxxx-CF1DC482C092</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -232,7 +235,10 @@ public class DescribeRdsResourceSettingsResponseBody extends TeaModel {
             } 
 
             /**
-             * EndDate.
+             * <p>The end date.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2024-04-25</p>
              */
             public Builder endDate(String endDate) {
                 this.endDate = endDate;
@@ -240,7 +246,14 @@ public class DescribeRdsResourceSettingsResponseBody extends TeaModel {
             }
 
             /**
-             * IsTop.
+             * <p>Specifies whether to pin the notification at the top.</p>
+             * <ul>
+             * <li>true</li>
+             * <li>false</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>true</p>
              */
             public Builder isTop(String isTop) {
                 this.isTop = isTop;
@@ -248,7 +261,7 @@ public class DescribeRdsResourceSettingsResponseBody extends TeaModel {
             }
 
             /**
-             * NoticeBarContent.
+             * <p>The notification text.</p>
              */
             public Builder noticeBarContent(String noticeBarContent) {
                 this.noticeBarContent = noticeBarContent;
@@ -256,7 +269,7 @@ public class DescribeRdsResourceSettingsResponseBody extends TeaModel {
             }
 
             /**
-             * PoppedUpButtonText.
+             * <p>The text of the popup button.</p>
              */
             public Builder poppedUpButtonText(String poppedUpButtonText) {
                 this.poppedUpButtonText = poppedUpButtonText;
@@ -264,7 +277,12 @@ public class DescribeRdsResourceSettingsResponseBody extends TeaModel {
             }
 
             /**
-             * PoppedUpButtonType.
+             * <p>The type of the popup button.</p>
+             * <ul>
+             * <li>BUY</li>
+             * <li>RENEW</li>
+             * <li>UPGRADE</li>
+             * </ul>
              */
             public Builder poppedUpButtonType(String poppedUpButtonType) {
                 this.poppedUpButtonType = poppedUpButtonType;
@@ -272,7 +290,10 @@ public class DescribeRdsResourceSettingsResponseBody extends TeaModel {
             }
 
             /**
-             * PoppedUpButtonUrl.
+             * <p>The link of the popup button.</p>
+             * 
+             * <strong>example:</strong>
+             * <p><a href="https://www.example.com/subscribe">https://www.example.com/subscribe</a></p>
              */
             public Builder poppedUpButtonUrl(String poppedUpButtonUrl) {
                 this.poppedUpButtonUrl = poppedUpButtonUrl;
@@ -280,7 +301,7 @@ public class DescribeRdsResourceSettingsResponseBody extends TeaModel {
             }
 
             /**
-             * PoppedUpContent.
+             * <p>The text of the popup.</p>
              */
             public Builder poppedUpContent(String poppedUpContent) {
                 this.poppedUpContent = poppedUpContent;
@@ -288,7 +309,7 @@ public class DescribeRdsResourceSettingsResponseBody extends TeaModel {
             }
 
             /**
-             * ResourceNiche.
+             * <p>The location of the notification.</p>
              */
             public Builder resourceNiche(String resourceNiche) {
                 this.resourceNiche = resourceNiche;
@@ -296,7 +317,10 @@ public class DescribeRdsResourceSettingsResponseBody extends TeaModel {
             }
 
             /**
-             * StartDate.
+             * <p>The effective date.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2024-04-21</p>
              */
             public Builder startDate(String startDate) {
                 this.startDate = startDate;

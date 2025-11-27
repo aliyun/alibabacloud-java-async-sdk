@@ -43,6 +43,10 @@ public class UpgradeDBProxyInstanceKernelVersionRequest extends Request {
     private String switchTime;
 
     @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("TargetMinorVersion")
+    private String targetMinorVersion;
+
+    @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("UpgradeTime")
     private String upgradeTime;
 
@@ -54,6 +58,7 @@ public class UpgradeDBProxyInstanceKernelVersionRequest extends Request {
         this.resourceOwnerAccount = builder.resourceOwnerAccount;
         this.resourceOwnerId = builder.resourceOwnerId;
         this.switchTime = builder.switchTime;
+        this.targetMinorVersion = builder.targetMinorVersion;
         this.upgradeTime = builder.upgradeTime;
     }
 
@@ -113,6 +118,13 @@ public class UpgradeDBProxyInstanceKernelVersionRequest extends Request {
     }
 
     /**
+     * @return targetMinorVersion
+     */
+    public String getTargetMinorVersion() {
+        return this.targetMinorVersion;
+    }
+
+    /**
      * @return upgradeTime
      */
     public String getUpgradeTime() {
@@ -126,6 +138,7 @@ public class UpgradeDBProxyInstanceKernelVersionRequest extends Request {
         private String resourceOwnerAccount; 
         private Long resourceOwnerId; 
         private String switchTime; 
+        private String targetMinorVersion; 
         private String upgradeTime; 
 
         private Builder() {
@@ -140,6 +153,7 @@ public class UpgradeDBProxyInstanceKernelVersionRequest extends Request {
             this.resourceOwnerAccount = request.resourceOwnerAccount;
             this.resourceOwnerId = request.resourceOwnerId;
             this.switchTime = request.switchTime;
+            this.targetMinorVersion = request.targetMinorVersion;
             this.upgradeTime = request.upgradeTime;
         } 
 
@@ -207,6 +221,15 @@ public class UpgradeDBProxyInstanceKernelVersionRequest extends Request {
         public Builder switchTime(String switchTime) {
             this.putQueryParameter("SwitchTime", switchTime);
             this.switchTime = switchTime;
+            return this;
+        }
+
+        /**
+         * TargetMinorVersion.
+         */
+        public Builder targetMinorVersion(String targetMinorVersion) {
+            this.putQueryParameter("TargetMinorVersion", targetMinorVersion);
+            this.targetMinorVersion = targetMinorVersion;
             return this;
         }
 

@@ -50,6 +50,10 @@ public class CreateReadOnlyDBInstanceRequest extends Request {
     private String clientToken;
 
     @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("CustomExtraInfo")
+    private String customExtraInfo;
+
+    @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("DBInstanceClass")
     @com.aliyun.core.annotation.Validation(required = true)
     private String DBInstanceClass;
@@ -100,6 +104,10 @@ public class CreateReadOnlyDBInstanceRequest extends Request {
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("IoAccelerationEnabled")
     private String ioAccelerationEnabled;
+
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("IsAnalyticReadOnlyIns")
+    private Boolean isAnalyticReadOnlyIns;
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("OwnerAccount")
@@ -186,6 +194,7 @@ public class CreateReadOnlyDBInstanceRequest extends Request {
         this.burstingEnabled = builder.burstingEnabled;
         this.category = builder.category;
         this.clientToken = builder.clientToken;
+        this.customExtraInfo = builder.customExtraInfo;
         this.DBInstanceClass = builder.DBInstanceClass;
         this.DBInstanceDescription = builder.DBInstanceDescription;
         this.DBInstanceId = builder.DBInstanceId;
@@ -198,6 +207,7 @@ public class CreateReadOnlyDBInstanceRequest extends Request {
         this.instanceNetworkType = builder.instanceNetworkType;
         this.instructionSetArch = builder.instructionSetArch;
         this.ioAccelerationEnabled = builder.ioAccelerationEnabled;
+        this.isAnalyticReadOnlyIns = builder.isAnalyticReadOnlyIns;
         this.ownerAccount = builder.ownerAccount;
         this.ownerId = builder.ownerId;
         this.payType = builder.payType;
@@ -288,6 +298,13 @@ public class CreateReadOnlyDBInstanceRequest extends Request {
     }
 
     /**
+     * @return customExtraInfo
+     */
+    public String getCustomExtraInfo() {
+        return this.customExtraInfo;
+    }
+
+    /**
      * @return DBInstanceClass
      */
     public String getDBInstanceClass() {
@@ -369,6 +386,13 @@ public class CreateReadOnlyDBInstanceRequest extends Request {
      */
     public String getIoAccelerationEnabled() {
         return this.ioAccelerationEnabled;
+    }
+
+    /**
+     * @return isAnalyticReadOnlyIns
+     */
+    public Boolean getIsAnalyticReadOnlyIns() {
+        return this.isAnalyticReadOnlyIns;
     }
 
     /**
@@ -506,6 +530,7 @@ public class CreateReadOnlyDBInstanceRequest extends Request {
         private Boolean burstingEnabled; 
         private String category; 
         private String clientToken; 
+        private String customExtraInfo; 
         private String DBInstanceClass; 
         private String DBInstanceDescription; 
         private String DBInstanceId; 
@@ -518,6 +543,7 @@ public class CreateReadOnlyDBInstanceRequest extends Request {
         private String instanceNetworkType; 
         private String instructionSetArch; 
         private String ioAccelerationEnabled; 
+        private Boolean isAnalyticReadOnlyIns; 
         private String ownerAccount; 
         private Long ownerId; 
         private String payType; 
@@ -551,6 +577,7 @@ public class CreateReadOnlyDBInstanceRequest extends Request {
             this.burstingEnabled = request.burstingEnabled;
             this.category = request.category;
             this.clientToken = request.clientToken;
+            this.customExtraInfo = request.customExtraInfo;
             this.DBInstanceClass = request.DBInstanceClass;
             this.DBInstanceDescription = request.DBInstanceDescription;
             this.DBInstanceId = request.DBInstanceId;
@@ -563,6 +590,7 @@ public class CreateReadOnlyDBInstanceRequest extends Request {
             this.instanceNetworkType = request.instanceNetworkType;
             this.instructionSetArch = request.instructionSetArch;
             this.ioAccelerationEnabled = request.ioAccelerationEnabled;
+            this.isAnalyticReadOnlyIns = request.isAnalyticReadOnlyIns;
             this.ownerAccount = request.ownerAccount;
             this.ownerId = request.ownerId;
             this.payType = request.payType;
@@ -709,6 +737,15 @@ public class CreateReadOnlyDBInstanceRequest extends Request {
         public Builder clientToken(String clientToken) {
             this.putQueryParameter("ClientToken", clientToken);
             this.clientToken = clientToken;
+            return this;
+        }
+
+        /**
+         * CustomExtraInfo.
+         */
+        public Builder customExtraInfo(String customExtraInfo) {
+            this.putQueryParameter("CustomExtraInfo", customExtraInfo);
+            this.customExtraInfo = customExtraInfo;
             return this;
         }
 
@@ -893,6 +930,15 @@ public class CreateReadOnlyDBInstanceRequest extends Request {
         public Builder ioAccelerationEnabled(String ioAccelerationEnabled) {
             this.putQueryParameter("IoAccelerationEnabled", ioAccelerationEnabled);
             this.ioAccelerationEnabled = ioAccelerationEnabled;
+            return this;
+        }
+
+        /**
+         * IsAnalyticReadOnlyIns.
+         */
+        public Builder isAnalyticReadOnlyIns(Boolean isAnalyticReadOnlyIns) {
+            this.putQueryParameter("IsAnalyticReadOnlyIns", isAnalyticReadOnlyIns);
+            this.isAnalyticReadOnlyIns = isAnalyticReadOnlyIns;
             return this;
         }
 

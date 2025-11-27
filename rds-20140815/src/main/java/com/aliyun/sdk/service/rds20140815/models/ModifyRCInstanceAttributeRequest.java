@@ -34,6 +34,10 @@ public class ModifyRCInstanceAttributeRequest extends Request {
     private java.util.List<String> instanceIds;
 
     @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("InstanceName")
+    private String instanceName;
+
+    @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("Password")
     private String password;
 
@@ -59,6 +63,7 @@ public class ModifyRCInstanceAttributeRequest extends Request {
         this.hostName = builder.hostName;
         this.instanceId = builder.instanceId;
         this.instanceIds = builder.instanceIds;
+        this.instanceName = builder.instanceName;
         this.password = builder.password;
         this.reboot = builder.reboot;
         this.regionId = builder.regionId;
@@ -108,6 +113,13 @@ public class ModifyRCInstanceAttributeRequest extends Request {
     }
 
     /**
+     * @return instanceName
+     */
+    public String getInstanceName() {
+        return this.instanceName;
+    }
+
+    /**
      * @return password
      */
     public String getPassword() {
@@ -147,6 +159,7 @@ public class ModifyRCInstanceAttributeRequest extends Request {
         private String hostName; 
         private String instanceId; 
         private java.util.List<String> instanceIds; 
+        private String instanceName; 
         private String password; 
         private Boolean reboot; 
         private String regionId; 
@@ -163,6 +176,7 @@ public class ModifyRCInstanceAttributeRequest extends Request {
             this.hostName = request.hostName;
             this.instanceId = request.instanceId;
             this.instanceIds = request.instanceIds;
+            this.instanceName = request.instanceName;
             this.password = request.password;
             this.reboot = request.reboot;
             this.regionId = request.regionId;
@@ -217,6 +231,15 @@ public class ModifyRCInstanceAttributeRequest extends Request {
             String instanceIdsShrink = shrink(instanceIds, "InstanceIds", "json");
             this.putQueryParameter("InstanceIds", instanceIdsShrink);
             this.instanceIds = instanceIds;
+            return this;
+        }
+
+        /**
+         * InstanceName.
+         */
+        public Builder instanceName(String instanceName) {
+            this.putQueryParameter("InstanceName", instanceName);
+            this.instanceName = instanceName;
             return this;
         }
 

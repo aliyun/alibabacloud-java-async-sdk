@@ -18,6 +18,10 @@ import com.aliyun.sdk.gateway.pop.models.*;
  */
 public class RunRCInstancesRequest extends Request {
     @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("AcuType")
+    private String acuType;
+
+    @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("Amount")
     @com.aliyun.core.annotation.Validation(maximum = 30, minimum = 1)
     private Integer amount;
@@ -112,6 +116,10 @@ public class RunRCInstancesRequest extends Request {
     private String password;
 
     @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("PasswordInherit")
+    private Boolean passwordInherit;
+
+    @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("Period")
     private Integer period;
 
@@ -131,6 +139,10 @@ public class RunRCInstancesRequest extends Request {
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("ResourceGroupId")
     private String resourceGroupId;
+
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ScheduledRule")
+    private String scheduledRule;
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("SecurityEnhancementStrategy")
@@ -175,6 +187,7 @@ public class RunRCInstancesRequest extends Request {
 
     private RunRCInstancesRequest(Builder builder) {
         super(builder);
+        this.acuType = builder.acuType;
         this.amount = builder.amount;
         this.autoPay = builder.autoPay;
         this.autoRenew = builder.autoRenew;
@@ -198,11 +211,13 @@ public class RunRCInstancesRequest extends Request {
         this.ioOptimized = builder.ioOptimized;
         this.keyPairName = builder.keyPairName;
         this.password = builder.password;
+        this.passwordInherit = builder.passwordInherit;
         this.period = builder.period;
         this.periodUnit = builder.periodUnit;
         this.promotionCode = builder.promotionCode;
         this.regionId = builder.regionId;
         this.resourceGroupId = builder.resourceGroupId;
+        this.scheduledRule = builder.scheduledRule;
         this.securityEnhancementStrategy = builder.securityEnhancementStrategy;
         this.securityGroupId = builder.securityGroupId;
         this.spotStrategy = builder.spotStrategy;
@@ -226,6 +241,13 @@ public class RunRCInstancesRequest extends Request {
 @Override
     public Builder toBuilder() {
         return new Builder(this);
+    }
+
+    /**
+     * @return acuType
+     */
+    public String getAcuType() {
+        return this.acuType;
     }
 
     /**
@@ -390,6 +412,13 @@ public class RunRCInstancesRequest extends Request {
     }
 
     /**
+     * @return passwordInherit
+     */
+    public Boolean getPasswordInherit() {
+        return this.passwordInherit;
+    }
+
+    /**
      * @return period
      */
     public Integer getPeriod() {
@@ -422,6 +451,13 @@ public class RunRCInstancesRequest extends Request {
      */
     public String getResourceGroupId() {
         return this.resourceGroupId;
+    }
+
+    /**
+     * @return scheduledRule
+     */
+    public String getScheduledRule() {
+        return this.scheduledRule;
     }
 
     /**
@@ -495,6 +531,7 @@ public class RunRCInstancesRequest extends Request {
     }
 
     public static final class Builder extends Request.Builder<RunRCInstancesRequest, Builder> {
+        private String acuType; 
         private Integer amount; 
         private Boolean autoPay; 
         private Boolean autoRenew; 
@@ -518,11 +555,13 @@ public class RunRCInstancesRequest extends Request {
         private String ioOptimized; 
         private String keyPairName; 
         private String password; 
+        private Boolean passwordInherit; 
         private Integer period; 
         private String periodUnit; 
         private String promotionCode; 
         private String regionId; 
         private String resourceGroupId; 
+        private String scheduledRule; 
         private String securityEnhancementStrategy; 
         private String securityGroupId; 
         private String spotStrategy; 
@@ -540,6 +579,7 @@ public class RunRCInstancesRequest extends Request {
 
         private Builder(RunRCInstancesRequest request) {
             super(request);
+            this.acuType = request.acuType;
             this.amount = request.amount;
             this.autoPay = request.autoPay;
             this.autoRenew = request.autoRenew;
@@ -563,11 +603,13 @@ public class RunRCInstancesRequest extends Request {
             this.ioOptimized = request.ioOptimized;
             this.keyPairName = request.keyPairName;
             this.password = request.password;
+            this.passwordInherit = request.passwordInherit;
             this.period = request.period;
             this.periodUnit = request.periodUnit;
             this.promotionCode = request.promotionCode;
             this.regionId = request.regionId;
             this.resourceGroupId = request.resourceGroupId;
+            this.scheduledRule = request.scheduledRule;
             this.securityEnhancementStrategy = request.securityEnhancementStrategy;
             this.securityGroupId = request.securityGroupId;
             this.spotStrategy = request.spotStrategy;
@@ -579,6 +621,15 @@ public class RunRCInstancesRequest extends Request {
             this.vSwitchId = request.vSwitchId;
             this.zoneId = request.zoneId;
         } 
+
+        /**
+         * AcuType.
+         */
+        public Builder acuType(String acuType) {
+            this.putQueryParameter("AcuType", acuType);
+            this.acuType = acuType;
+            return this;
+        }
 
         /**
          * <p>The number of RDS Custom instances that you want to create. The parameter is available if you want to create multiple RDS Custom instances at a time.</p>
@@ -855,6 +906,15 @@ public class RunRCInstancesRequest extends Request {
         }
 
         /**
+         * PasswordInherit.
+         */
+        public Builder passwordInherit(Boolean passwordInherit) {
+            this.putQueryParameter("PasswordInherit", passwordInherit);
+            this.passwordInherit = passwordInherit;
+            return this;
+        }
+
+        /**
          * <p>The subscription duration of the instance. Default value: <strong>1</strong>.</p>
          * 
          * <strong>example:</strong>
@@ -910,6 +970,15 @@ public class RunRCInstancesRequest extends Request {
         public Builder resourceGroupId(String resourceGroupId) {
             this.putQueryParameter("ResourceGroupId", resourceGroupId);
             this.resourceGroupId = resourceGroupId;
+            return this;
+        }
+
+        /**
+         * ScheduledRule.
+         */
+        public Builder scheduledRule(String scheduledRule) {
+            this.putQueryParameter("ScheduledRule", scheduledRule);
+            this.scheduledRule = scheduledRule;
             return this;
         }
 

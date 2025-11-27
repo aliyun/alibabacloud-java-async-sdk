@@ -458,6 +458,9 @@ public class DescribeDatabasesResponseBody extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("DBStatus")
         private String DBStatus;
 
+        @com.aliyun.core.annotation.NameInMap("DuckDBEnabled")
+        private Boolean duckDBEnabled;
+
         @com.aliyun.core.annotation.NameInMap("Engine")
         private String engine;
 
@@ -488,6 +491,7 @@ public class DescribeDatabasesResponseBody extends TeaModel {
             this.DBInstanceId = builder.DBInstanceId;
             this.DBName = builder.DBName;
             this.DBStatus = builder.DBStatus;
+            this.duckDBEnabled = builder.duckDBEnabled;
             this.engine = builder.engine;
             this.pageNumber = builder.pageNumber;
             this.pageSize = builder.pageSize;
@@ -582,6 +586,13 @@ public class DescribeDatabasesResponseBody extends TeaModel {
         }
 
         /**
+         * @return duckDBEnabled
+         */
+        public Boolean getDuckDBEnabled() {
+            return this.duckDBEnabled;
+        }
+
+        /**
          * @return engine
          */
         public String getEngine() {
@@ -635,6 +646,7 @@ public class DescribeDatabasesResponseBody extends TeaModel {
             private String DBInstanceId; 
             private String DBName; 
             private String DBStatus; 
+            private Boolean duckDBEnabled; 
             private String engine; 
             private Integer pageNumber; 
             private Integer pageSize; 
@@ -657,6 +669,7 @@ public class DescribeDatabasesResponseBody extends TeaModel {
                 this.DBInstanceId = model.DBInstanceId;
                 this.DBName = model.DBName;
                 this.DBStatus = model.DBStatus;
+                this.duckDBEnabled = model.duckDBEnabled;
                 this.engine = model.engine;
                 this.pageNumber = model.pageNumber;
                 this.pageSize = model.pageSize;
@@ -795,6 +808,14 @@ public class DescribeDatabasesResponseBody extends TeaModel {
              */
             public Builder DBStatus(String DBStatus) {
                 this.DBStatus = DBStatus;
+                return this;
+            }
+
+            /**
+             * DuckDBEnabled.
+             */
+            public Builder duckDBEnabled(Boolean duckDBEnabled) {
+                this.duckDBEnabled = duckDBEnabled;
                 return this;
             }
 

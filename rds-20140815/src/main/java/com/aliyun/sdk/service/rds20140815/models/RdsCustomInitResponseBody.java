@@ -12,19 +12,19 @@ import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
  * 
- * {@link CreateDiagnosticReportResponseBody} extends {@link TeaModel}
+ * {@link RdsCustomInitResponseBody} extends {@link TeaModel}
  *
- * <p>CreateDiagnosticReportResponseBody</p>
+ * <p>RdsCustomInitResponseBody</p>
  */
-public class CreateDiagnosticReportResponseBody extends TeaModel {
-    @com.aliyun.core.annotation.NameInMap("ReportId")
-    private String reportId;
+public class RdsCustomInitResponseBody extends TeaModel {
+    @com.aliyun.core.annotation.NameInMap("RegisterUidSuccess")
+    private Boolean registerUidSuccess;
 
     @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    private CreateDiagnosticReportResponseBody(Builder builder) {
-        this.reportId = builder.reportId;
+    private RdsCustomInitResponseBody(Builder builder) {
+        this.registerUidSuccess = builder.registerUidSuccess;
         this.requestId = builder.requestId;
     }
 
@@ -32,7 +32,7 @@ public class CreateDiagnosticReportResponseBody extends TeaModel {
         return new Builder();
     }
 
-    public static CreateDiagnosticReportResponseBody create() {
+    public static RdsCustomInitResponseBody create() {
         return builder().build();
     }
 
@@ -41,10 +41,10 @@ public class CreateDiagnosticReportResponseBody extends TeaModel {
     }
 
     /**
-     * @return reportId
+     * @return registerUidSuccess
      */
-    public String getReportId() {
-        return this.reportId;
+    public Boolean getRegisterUidSuccess() {
+        return this.registerUidSuccess;
     }
 
     /**
@@ -55,41 +55,35 @@ public class CreateDiagnosticReportResponseBody extends TeaModel {
     }
 
     public static final class Builder {
-        private String reportId; 
+        private Boolean registerUidSuccess; 
         private String requestId; 
 
         private Builder() {
         } 
 
-        private Builder(CreateDiagnosticReportResponseBody model) {
-            this.reportId = model.reportId;
+        private Builder(RdsCustomInitResponseBody model) {
+            this.registerUidSuccess = model.registerUidSuccess;
             this.requestId = model.requestId;
         } 
 
         /**
-         * <p>The ID of the diagnostic report.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>10166270</p>
+         * RegisterUidSuccess.
          */
-        public Builder reportId(String reportId) {
-            this.reportId = reportId;
+        public Builder registerUidSuccess(Boolean registerUidSuccess) {
+            this.registerUidSuccess = registerUidSuccess;
             return this;
         }
 
         /**
-         * <p>The ID of the request.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>8DA8956A-53DA-423E-9540-387428ED37FF-5711</p>
+         * RequestId.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
             return this;
         }
 
-        public CreateDiagnosticReportResponseBody build() {
-            return new CreateDiagnosticReportResponseBody(this);
+        public RdsCustomInitResponseBody build() {
+            return new RdsCustomInitResponseBody(this);
         } 
 
     } 

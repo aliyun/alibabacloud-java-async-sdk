@@ -104,7 +104,14 @@ public class ModifyBackupSetExpireTimeRequest extends Request {
         } 
 
         /**
-         * <p>The backup set ID.</p>
+         * <p>The backup set ID. You can call the DescribeBackups operation to query the backup set ID. The backup set must meet the following requirements:</p>
+         * <ul>
+         * <li>The Engine parameter is SQLServer</li>
+         * <li>The BackupMode parameter is set to Manual.</li>
+         * <li>The BackupMethod parameter is set to Physical.</li>
+         * <li>The BackupType parameter is set to FullBackup.</li>
+         * <li>The BackupStatus parameter is set to Success.</li>
+         * </ul>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -117,7 +124,7 @@ public class ModifyBackupSetExpireTimeRequest extends Request {
         }
 
         /**
-         * <p>The ID of the instance. You can call the DescribeDBInstances operation to query the instance ID.</p>
+         * <p>The instance ID. You can call the DescribeDBInstances operation to query the instance ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -130,7 +137,8 @@ public class ModifyBackupSetExpireTimeRequest extends Request {
         }
 
         /**
-         * <p>The point in time to which you want to extend the expiration time. Specify the time in the yyyy-MM-ddTHH:mmZ format. The time must be in UTC. The time cannot be earlier than the current expiration time.</p>
+         * <p>The point in time to which you want to extend the expiration time of the backup set. Specify the time in the yyyy-MM-ddTHH:mmZ format. The time must be in UTC.</p>
+         * <p>The time cannot be earlier than the current expiration time. You can call the DescribeBackups operation to view the current expiration time of the backup set.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>

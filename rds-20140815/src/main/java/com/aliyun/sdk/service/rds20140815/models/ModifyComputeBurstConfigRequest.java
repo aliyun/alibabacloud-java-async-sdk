@@ -284,7 +284,10 @@ public class ModifyComputeBurstConfigRequest extends Request {
         } 
 
         /**
-         * BurstStatus.
+         * <p>This parameter is set to <strong>disabled</strong> if the assured serverless feature is disabled.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>disabled</p>
          */
         public Builder burstStatus(String burstStatus) {
             this.putQueryParameter("BurstStatus", burstStatus);
@@ -293,7 +296,10 @@ public class ModifyComputeBurstConfigRequest extends Request {
         }
 
         /**
-         * ClientToken.
+         * <p>The client token that is used to ensure the idempotence of requests and prevent repeated requests from being submitted. You can use the client to generate the value, but you must make sure that the token is unique among different requests. The token can contain only ASCII characters and cannot exceed 64 characters in length.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>ETnLKlblzczshOTUbOCziJZNwH****</p>
          */
         public Builder clientToken(String clientToken) {
             this.putQueryParameter("ClientToken", clientToken);
@@ -302,7 +308,10 @@ public class ModifyComputeBurstConfigRequest extends Request {
         }
 
         /**
-         * CpuEnlargeThreshold.
+         * <p>The CPU utilization threshold for <strong>scale-out</strong>. Valid values: 60 to 90. Unit: %.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>80</p>
          */
         public Builder cpuEnlargeThreshold(String cpuEnlargeThreshold) {
             this.putQueryParameter("CpuEnlargeThreshold", cpuEnlargeThreshold);
@@ -311,7 +320,10 @@ public class ModifyComputeBurstConfigRequest extends Request {
         }
 
         /**
-         * CpuShrinkThreshold.
+         * <p>The CPU utilization threshold for <strong>scale-in</strong>. Valid values: 30 to 55. Unit: %.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>50</p>
          */
         public Builder cpuShrinkThreshold(String cpuShrinkThreshold) {
             this.putQueryParameter("CpuShrinkThreshold", cpuShrinkThreshold);
@@ -320,7 +332,10 @@ public class ModifyComputeBurstConfigRequest extends Request {
         }
 
         /**
-         * CrontabJobId.
+         * <p>The reserved parameter. This parameter is not supported.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>None</p>
          */
         public Builder crontabJobId(String crontabJobId) {
             this.putQueryParameter("CrontabJobId", crontabJobId);
@@ -329,6 +344,7 @@ public class ModifyComputeBurstConfigRequest extends Request {
         }
 
         /**
+         * <p>The instance ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -341,7 +357,10 @@ public class ModifyComputeBurstConfigRequest extends Request {
         }
 
         /**
-         * MemoryEnlargeThreshold.
+         * <p>The memory usage threshold for <strong>scale-out</strong>. Valid values: 60 to 90. Unit: %.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>80</p>
          */
         public Builder memoryEnlargeThreshold(String memoryEnlargeThreshold) {
             this.putQueryParameter("MemoryEnlargeThreshold", memoryEnlargeThreshold);
@@ -350,7 +369,10 @@ public class ModifyComputeBurstConfigRequest extends Request {
         }
 
         /**
-         * MemoryShrinkThreshold.
+         * <p>The memory usage threshold for <strong>scale-in</strong>. Valid values: 30 to 55. Unit: %.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>50</p>
          */
         public Builder memoryShrinkThreshold(String memoryShrinkThreshold) {
             this.putQueryParameter("MemoryShrinkThreshold", memoryShrinkThreshold);
@@ -377,7 +399,10 @@ public class ModifyComputeBurstConfigRequest extends Request {
         }
 
         /**
-         * ResourceGroupId.
+         * <p>The resource group ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>rg-acfmy****</p>
          */
         public Builder resourceGroupId(String resourceGroupId) {
             this.putQueryParameter("ResourceGroupId", resourceGroupId);
@@ -395,7 +420,10 @@ public class ModifyComputeBurstConfigRequest extends Request {
         }
 
         /**
-         * ScaleMaxCpus.
+         * <p>The maximum number of CPU cores for elastic scaling. The maximum value cannot exceed twice the initial CPU configuration.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2</p>
          */
         public Builder scaleMaxCpus(String scaleMaxCpus) {
             this.putQueryParameter("ScaleMaxCpus", scaleMaxCpus);
@@ -404,7 +432,10 @@ public class ModifyComputeBurstConfigRequest extends Request {
         }
 
         /**
-         * ScaleMaxMemory.
+         * <p>The maximum memory for elastic scaling. The value cannot exceed twice the instance&quot;s initial memory size. Unit: GB. Step size: 2 GB.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>4</p>
          */
         public Builder scaleMaxMemory(String scaleMaxMemory) {
             this.putQueryParameter("ScaleMaxMemory", scaleMaxMemory);
@@ -413,7 +444,13 @@ public class ModifyComputeBurstConfigRequest extends Request {
         }
 
         /**
-         * SwitchTime.
+         * <p>The time when the specified entry takes effect. The time follows the ISO 8601 standard in the <code>yyyy-MM-ddTHH:mm:ssZ</code> format. The time is displayed in UTC.</p>
+         * <blockquote>
+         * <p> This parameter is required only if <strong>SwitchTimeMode</strong> is set to <strong>2</strong>.</p>
+         * </blockquote>
+         * 
+         * <strong>example:</strong>
+         * <p>2025-05-06T09:24:00Z</p>
          */
         public Builder switchTime(String switchTime) {
             this.putQueryParameter("SwitchTime", switchTime);
@@ -422,7 +459,15 @@ public class ModifyComputeBurstConfigRequest extends Request {
         }
 
         /**
-         * SwitchTimeMode.
+         * <p>The effective policy. Valid values:</p>
+         * <ul>
+         * <li><strong>0</strong>: Immediately takes effect.</li>
+         * <li><strong>1</strong>: Takes effect within the maintenance window. You can call the <strong>ModifyDBInstanceMaintainTime</strong> operation to change the maintenance window of an instance.</li>
+         * <li><strong>2</strong>: Takes effect at a specified point in time.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>Immediate</p>
          */
         public Builder switchTimeMode(String switchTimeMode) {
             this.putQueryParameter("SwitchTimeMode", switchTimeMode);
@@ -431,7 +476,10 @@ public class ModifyComputeBurstConfigRequest extends Request {
         }
 
         /**
-         * TaskId.
+         * <p>The reserved parameter. This parameter is not supported.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>None</p>
          */
         public Builder taskId(String taskId) {
             this.putQueryParameter("TaskId", taskId);

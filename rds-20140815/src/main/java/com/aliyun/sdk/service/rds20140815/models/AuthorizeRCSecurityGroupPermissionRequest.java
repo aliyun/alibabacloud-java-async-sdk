@@ -101,7 +101,14 @@ public class AuthorizeRCSecurityGroupPermissionRequest extends Request {
         } 
 
         /**
-         * Direction.
+         * <p>The direction of the rule. Valid values:</p>
+         * <ul>
+         * <li><strong>ingress</strong>: the inbound security group rule.</li>
+         * <li><strong>egress</strong>: the outbound security group rule.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>ingress</p>
          */
         public Builder direction(String direction) {
             this.putQueryParameter("Direction", direction);
@@ -110,7 +117,10 @@ public class AuthorizeRCSecurityGroupPermissionRequest extends Request {
         }
 
         /**
-         * RegionId.
+         * <p>The region ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-hangzhou</p>
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);
@@ -119,7 +129,10 @@ public class AuthorizeRCSecurityGroupPermissionRequest extends Request {
         }
 
         /**
-         * SecurityGroupId.
+         * <p>The ID of the security group.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>sg-2ze27hs990o2hn9****</p>
          */
         public Builder securityGroupId(String securityGroupId) {
             this.putQueryParameter("SecurityGroupId", securityGroupId);
@@ -128,7 +141,7 @@ public class AuthorizeRCSecurityGroupPermissionRequest extends Request {
         }
 
         /**
-         * SecurityGroupPermissions.
+         * <p>The information about the security group.</p>
          */
         public Builder securityGroupPermissions(java.util.List<SecurityGroupPermissions> securityGroupPermissions) {
             String securityGroupPermissionsShrink = shrink(securityGroupPermissions, "SecurityGroupPermissions", "json");
@@ -262,7 +275,10 @@ public class AuthorizeRCSecurityGroupPermissionRequest extends Request {
             } 
 
             /**
-             * DestCidrIp.
+             * <p>The destination CIDR block for outbound access control. CIDR blocks and IPv4 addresses are supported.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>192.168.0.1/12</p>
              */
             public Builder destCidrIp(String destCidrIp) {
                 this.destCidrIp = destCidrIp;
@@ -270,7 +286,17 @@ public class AuthorizeRCSecurityGroupPermissionRequest extends Request {
             }
 
             /**
-             * IpProtocol.
+             * <p>The protocol type supported by the rule. The value is not case-sensitive. Valid values:</p>
+             * <ul>
+             * <li><strong>ICMP</strong></li>
+             * <li><strong>GRE</strong></li>
+             * <li><strong>TCP</strong></li>
+             * <li><strong>UDP</strong></li>
+             * <li><strong>ALL</strong>: All protocols are supported.</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>TCP</p>
              */
             public Builder ipProtocol(String ipProtocol) {
                 this.ipProtocol = ipProtocol;
@@ -278,7 +304,10 @@ public class AuthorizeRCSecurityGroupPermissionRequest extends Request {
             }
 
             /**
-             * Policy.
+             * <p>The action that you want to specify in the rule.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Accept</p>
              */
             public Builder policy(String policy) {
                 this.policy = policy;
@@ -286,7 +315,16 @@ public class AuthorizeRCSecurityGroupPermissionRequest extends Request {
             }
 
             /**
-             * PortRange.
+             * <p>The range of destination ports that correspond to the transport layer protocol of the destination security group. Valid values:</p>
+             * <ul>
+             * <li>The value is in the X/Y format when IpProtocol is set to TCP or UDP. X specifies the start port number and Y specifies the end port number. X and Y range from <strong>1</strong> to <strong>65535</strong>. The start port number and the end port number are separated by a forward slash (/). Correct example: <strong>1/200</strong>. Incorrect example: <strong>200/1</strong>.</li>
+             * <li>Valid value when IpProtocol is set to ICMP: <strong>-1/-1</strong>.</li>
+             * <li>Valid value when IpProtocol is set to GRE: <strong>-1/-1</strong>.</li>
+             * <li>Valid value when IpProtocol is set to ALL: <strong>-1/-1</strong>.</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>80/80</p>
              */
             public Builder portRange(String portRange) {
                 this.portRange = portRange;
@@ -294,7 +332,10 @@ public class AuthorizeRCSecurityGroupPermissionRequest extends Request {
             }
 
             /**
-             * Priority.
+             * <p>The priority of the rule. Valid values: 1 to 100. A smaller value indicates a higher priority. When multiple security group rules have the same priority, drop rules take precedence.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder priority(Integer priority) {
                 this.priority = priority;
@@ -302,7 +343,10 @@ public class AuthorizeRCSecurityGroupPermissionRequest extends Request {
             }
 
             /**
-             * SourceCidrIp.
+             * <p>The source CIDR block for inbound access control. CIDR blocks and IPv4 addresses are supported.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>192.168.0.1/12</p>
              */
             public Builder sourceCidrIp(String sourceCidrIp) {
                 this.sourceCidrIp = sourceCidrIp;
@@ -310,7 +354,16 @@ public class AuthorizeRCSecurityGroupPermissionRequest extends Request {
             }
 
             /**
-             * SourcePortRange.
+             * <p>The range of port numbers that correspond to the transport layer protocol for the source security group. Valid values:</p>
+             * <ul>
+             * <li>The value is in the X/Y format when IpProtocol is set to TCP or UDP. X specifies the start port number and Y specifies the end port number. X and Y range from <strong>1</strong> to <strong>65535</strong>. The start port number and the end port number are separated by a forward slash (/). Correct example: <strong>1/200</strong>. Incorrect example: <strong>200/1</strong>.</li>
+             * <li>Valid value when IpProtocol is set to ICMP: <strong>-1/-1</strong>.</li>
+             * <li>Valid value when IpProtocol is set to GRE: <strong>-1/-1</strong>.</li>
+             * <li>Valid value when IpProtocol is set to ALL: <strong>-1/-1</strong>.</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>80/80</p>
              */
             public Builder sourcePortRange(String sourcePortRange) {
                 this.sourcePortRange = sourcePortRange;

@@ -78,6 +78,10 @@ public class CreateDBInstanceRequest extends Request {
     private String createStrategy;
 
     @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("CustomExtraInfo")
+    private String customExtraInfo;
+
+    @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("DBInstanceClass")
     @com.aliyun.core.annotation.Validation(required = true)
     private String DBInstanceClass;
@@ -286,6 +290,7 @@ public class CreateDBInstanceRequest extends Request {
         this.connectionMode = builder.connectionMode;
         this.connectionString = builder.connectionString;
         this.createStrategy = builder.createStrategy;
+        this.customExtraInfo = builder.customExtraInfo;
         this.DBInstanceClass = builder.DBInstanceClass;
         this.DBInstanceDescription = builder.DBInstanceDescription;
         this.DBInstanceNetType = builder.DBInstanceNetType;
@@ -450,6 +455,13 @@ public class CreateDBInstanceRequest extends Request {
      */
     public String getCreateStrategy() {
         return this.createStrategy;
+    }
+
+    /**
+     * @return customExtraInfo
+     */
+    public String getCustomExtraInfo() {
+        return this.customExtraInfo;
     }
 
     /**
@@ -790,6 +802,7 @@ public class CreateDBInstanceRequest extends Request {
         private String connectionMode; 
         private String connectionString; 
         private String createStrategy; 
+        private String customExtraInfo; 
         private String DBInstanceClass; 
         private String DBInstanceDescription; 
         private String DBInstanceNetType; 
@@ -858,6 +871,7 @@ public class CreateDBInstanceRequest extends Request {
             this.connectionMode = request.connectionMode;
             this.connectionString = request.connectionString;
             this.createStrategy = request.createStrategy;
+            this.customExtraInfo = request.customExtraInfo;
             this.DBInstanceClass = request.DBInstanceClass;
             this.DBInstanceDescription = request.DBInstanceDescription;
             this.DBInstanceNetType = request.DBInstanceNetType;
@@ -927,7 +941,7 @@ public class CreateDBInstanceRequest extends Request {
         }
 
         /**
-         * <p>Specifies whether to automatically create a database proxy. Valid values:</p>
+         * <p>Specifies whether to automatically create a proxy. Valid values:</p>
          * <ul>
          * <li><strong>true</strong>: automatically creates a database proxy. By default, a general-purpose database proxy is created.</li>
          * <li><strong>false</strong>: does not automatically create a database proxy.</li>
@@ -1181,6 +1195,15 @@ public class CreateDBInstanceRequest extends Request {
         }
 
         /**
+         * CustomExtraInfo.
+         */
+        public Builder customExtraInfo(String customExtraInfo) {
+            this.putQueryParameter("CustomExtraInfo", customExtraInfo);
+            this.customExtraInfo = customExtraInfo;
+            return this;
+        }
+
+        /**
          * <p>The instance type of the instance. You can specify an instance type of the standard or YiTian product type. For more information, see <a href="https://help.aliyun.com/document_detail/26312.html">Primary ApsaraDB RDS instance types</a>.</p>
          * <p>To create a serverless instance, set this parameter to one of the following values:</p>
          * <ul>
@@ -1202,9 +1225,9 @@ public class CreateDBInstanceRequest extends Request {
         }
 
         /**
-         * <p>The instance name. The name must be 2 to 255 characters in length and can contain letters, digits, underscores (_), and hyphens (-). The name must start with a letter.</p>
+         * <p>The instance name. The value must be 2 to 255 characters in length The name can contain letters, digits, and hyphens (-) and must start with a letter.</p>
          * <blockquote>
-         * <p>The name cannot start with http:// or https://.</p>
+         * <p> The value cannot start with http:// or https://.</p>
          * </blockquote>
          * 
          * <strong>example:</strong>
@@ -1353,8 +1376,8 @@ public class CreateDBInstanceRequest extends Request {
         /**
          * <p>Specifies whether to enable the release protection feature for the instance. This feature is available only for pay-as-you-go instances. Valid values:</p>
          * <ul>
-         * <li><strong>true</strong></li>
-         * <li><strong>false</strong> (default)</li>
+         * <li><strong>true</strong>: enables the feature.</li>
+         * <li><strong>false</strong> (default): disables the feature.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -1477,16 +1500,19 @@ public class CreateDBInstanceRequest extends Request {
         /**
          * <p>The network type of the instance. Valid values:</p>
          * <ul>
-         * <li><strong>VPC</strong>: a virtual private cloud (VPC)</li>
-         * <li><strong>Classic</strong>: the classic network</li>
+         * <li><strong>VPC</strong>: virtual private cloud (VPC)</li>
+         * <li><strong>Classic</strong>: classic network</li>
          * </ul>
          * <blockquote>
-         * <ul>
-         * <li>If the instance runs MySQL and uses cloud disks, you must set this parameter to <strong>VPC</strong>.</li>
-         * <li>If the instance runs PostgreSQL or MariaDB, you must set this parameter to <strong>VPC</strong>.</li>
-         * <li>If the instance runs SQL Server Basic or SQL Server Web, you can set this parameter to VPC or Classic. If the instance runs other database engine, you must set this parameter to <strong>VPC</strong>.</li>
-         * </ul>
          * </blockquote>
+         * <ul>
+         * <li><p>If the instance runs MySQL and uses cloud disks, you must set this parameter to <strong>VPC</strong>.</p>
+         * </li>
+         * <li><p>If the instance runs PostgreSQL or MariaDB, you must set this parameter to <strong>VPC</strong>.</p>
+         * </li>
+         * <li><p>If the instance runs SQL Server Basic or SQL Server Web, you can set this parameter to VPC or Classic. If the instance runs other database engines, you must set this parameter to <strong>VPC</strong>.</p>
+         * </li>
+         * </ul>
          * 
          * <strong>example:</strong>
          * <p>Classic</p>
@@ -1563,7 +1589,7 @@ public class CreateDBInstanceRequest extends Request {
          * <li><strong>Month</strong></li>
          * </ul>
          * <blockquote>
-         * <p> If you set the PayType parameter to <strong>Prepaid</strong>, you must also specify this parameter.</p>
+         * <p> If you set the PayType parameter to <strong>Prepaid</strong>, you must specify this parameter.</p>
          * </blockquote>
          * 
          * <strong>example:</strong>
@@ -1695,10 +1721,10 @@ public class CreateDBInstanceRequest extends Request {
         }
 
         /**
-         * <p>Specifies whether to enable the automatic storage expansion feature for the instance. If the instance runs MySQL or PostgreSQL, this feature is supported. Valid values:</p>
+         * <p>Specifies whether to enable the automatic storage expansion feature for the instance. This feature is supported if the instance runs MySQL or PostgreSQL. Valid values:</p>
          * <ul>
-         * <li><strong>Enable</strong></li>
-         * <li><strong>Disable</strong> (default)</li>
+         * <li><strong>Enable</strong>: enables the feature.</li>
+         * <li><strong>Disable</strong> (default): disables the feature.</li>
          * </ul>
          * <blockquote>
          * <p> After the instance is created, you can call the ModifyDasInstanceConfig operation to adjust the settings. For more information, see <a href="https://help.aliyun.com/document_detail/173826.html">Configure automatic storage expansion</a>.</p>
@@ -1714,7 +1740,7 @@ public class CreateDBInstanceRequest extends Request {
         }
 
         /**
-         * <p>The threshold in percentage based on which automatic storage expansion is triggered. Valid values:</p>
+         * <p>The threshold in percentage based on which automatic storage expansion is triggered.</p>
          * <ul>
          * <li><strong>10</strong></li>
          * <li><strong>20</strong></li>
@@ -1723,7 +1749,7 @@ public class CreateDBInstanceRequest extends Request {
          * <li><strong>50</strong></li>
          * </ul>
          * <blockquote>
-         * <p> If you set the <strong>StorageAutoScale</strong> parameter to <strong>Enable</strong>, you must also specify this parameter.</p>
+         * <p> If you set the <strong>StorageAutoScale</strong> parameter to <strong>Enable</strong>, you must specify this parameter.</p>
          * </blockquote>
          * 
          * <strong>example:</strong>
@@ -2076,8 +2102,8 @@ public class CreateDBInstanceRequest extends Request {
             /**
              * <p>Specifies whether to enable the automatic startup and stop feature for the serverless instance. Valid values:</p>
              * <ul>
-             * <li><strong>true</strong></li>
-             * <li><strong>false</strong> (default)</li>
+             * <li><strong>true</strong>: enables the feature.</li>
+             * <li><strong>false</strong> (default): disables the feature.</li>
              * </ul>
              * <blockquote>
              * <p> This parameter is required only for serverless instances that run MySQL and PostgreSQL. After the automatic start and stop feature is enabled, if no connections to the instance are established within 10 minutes, the instance is suspended. After a connection to the instance is established, the instance is resumed.</p>
@@ -2132,15 +2158,17 @@ public class CreateDBInstanceRequest extends Request {
             /**
              * <p>Specifies whether to enable the forced scaling feature for the serverless instance. Valid values:</p>
              * <ul>
-             * <li><strong>true</strong></li>
-             * <li><strong>false</strong> (default)</li>
+             * <li><strong>true</strong>: enables the feature.</li>
+             * <li><strong>false</strong> (default): disables the feature.</li>
              * </ul>
              * <blockquote>
-             * <ul>
-             * <li>This parameter is required only for serverless instances that run MySQL and PostgreSQL. If you set this parameter to true, a service interruption that lasts approximately 30 to 120 seconds occurs during forced scaling. Process with caution.</li>
-             * <li>The RCU scaling for a serverless instance immediately takes effect. In some cases, such as the execution of large transactions, the scaling does not immediately take effect. In this case, you can enable this feature to forcefully scale the RCUs of the instance.</li>
-             * </ul>
              * </blockquote>
+             * <ul>
+             * <li><p>This parameter is required only for serverless instances that run MySQL and PostgreSQL. If you set this parameter to true, a service interruption that lasts approximately 30 to 120 seconds occurs during forced scaling. Process with caution.</p>
+             * </li>
+             * <li><p>The RCU scaling for a serverless instance immediately takes effect. In some cases, such as the execution of large transactions, the scaling does not immediately take effect. In this case, you can enable this feature to forcefully scale the RCUs of the instance.</p>
+             * </li>
+             * </ul>
              * 
              * <strong>example:</strong>
              * <p>false</p>

@@ -1261,6 +1261,9 @@ public class DescribeRCInstanceAttributeResponseBody extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("DeleteWithInstance")
         private Boolean deleteWithInstance;
 
+        @com.aliyun.core.annotation.NameInMap("Device")
+        private String device;
+
         @com.aliyun.core.annotation.NameInMap("Encrypted")
         private String encrypted;
 
@@ -1270,12 +1273,17 @@ public class DescribeRCInstanceAttributeResponseBody extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Size")
         private Long size;
 
+        @com.aliyun.core.annotation.NameInMap("SnapshotId")
+        private String snapshotId;
+
         private DataDisk(Builder builder) {
             this.category = builder.category;
             this.deleteWithInstance = builder.deleteWithInstance;
+            this.device = builder.device;
             this.encrypted = builder.encrypted;
             this.performanceLevel = builder.performanceLevel;
             this.size = builder.size;
+            this.snapshotId = builder.snapshotId;
         }
 
         public static Builder builder() {
@@ -1301,6 +1309,13 @@ public class DescribeRCInstanceAttributeResponseBody extends TeaModel {
         }
 
         /**
+         * @return device
+         */
+        public String getDevice() {
+            return this.device;
+        }
+
+        /**
          * @return encrypted
          */
         public String getEncrypted() {
@@ -1321,12 +1336,21 @@ public class DescribeRCInstanceAttributeResponseBody extends TeaModel {
             return this.size;
         }
 
+        /**
+         * @return snapshotId
+         */
+        public String getSnapshotId() {
+            return this.snapshotId;
+        }
+
         public static final class Builder {
             private String category; 
             private Boolean deleteWithInstance; 
+            private String device; 
             private String encrypted; 
             private String performanceLevel; 
             private Long size; 
+            private String snapshotId; 
 
             private Builder() {
             } 
@@ -1334,9 +1358,11 @@ public class DescribeRCInstanceAttributeResponseBody extends TeaModel {
             private Builder(DataDisk model) {
                 this.category = model.category;
                 this.deleteWithInstance = model.deleteWithInstance;
+                this.device = model.device;
                 this.encrypted = model.encrypted;
                 this.performanceLevel = model.performanceLevel;
                 this.size = model.size;
+                this.snapshotId = model.snapshotId;
             } 
 
             /**
@@ -1362,6 +1388,14 @@ public class DescribeRCInstanceAttributeResponseBody extends TeaModel {
              */
             public Builder deleteWithInstance(Boolean deleteWithInstance) {
                 this.deleteWithInstance = deleteWithInstance;
+                return this;
+            }
+
+            /**
+             * Device.
+             */
+            public Builder device(String device) {
+                this.device = device;
                 return this;
             }
 
@@ -1399,6 +1433,14 @@ public class DescribeRCInstanceAttributeResponseBody extends TeaModel {
              */
             public Builder size(Long size) {
                 this.size = size;
+                return this;
+            }
+
+            /**
+             * SnapshotId.
+             */
+            public Builder snapshotId(String snapshotId) {
+                this.snapshotId = snapshotId;
                 return this;
             }
 

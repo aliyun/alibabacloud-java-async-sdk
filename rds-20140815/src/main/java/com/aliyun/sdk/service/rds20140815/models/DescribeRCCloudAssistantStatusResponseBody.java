@@ -120,7 +120,7 @@ public class DescribeRCCloudAssistantStatusResponseBody extends TeaModel {
         } 
 
         /**
-         * InstanceCloudAssistantStatusSet.
+         * <p>Details about the installation status of Cloud Assistant on the instances.</p>
          */
         public Builder instanceCloudAssistantStatusSet(java.util.List<InstanceCloudAssistantStatusSet> instanceCloudAssistantStatusSet) {
             this.instanceCloudAssistantStatusSet = instanceCloudAssistantStatusSet;
@@ -128,6 +128,7 @@ public class DescribeRCCloudAssistantStatusResponseBody extends TeaModel {
         }
 
         /**
+         * <p>The token that marks the end of the current returned page. If this parameter is empty, all data is retrieved.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -139,7 +140,10 @@ public class DescribeRCCloudAssistantStatusResponseBody extends TeaModel {
         }
 
         /**
-         * PageNumber.
+         * <p>The page number.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder pageNumber(String pageNumber) {
             this.pageNumber = pageNumber;
@@ -147,7 +151,10 @@ public class DescribeRCCloudAssistantStatusResponseBody extends TeaModel {
         }
 
         /**
-         * PageSize.
+         * <p>The number of entries returned per page.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10</p>
          */
         public Builder pageSize(String pageSize) {
             this.pageSize = pageSize;
@@ -155,7 +162,10 @@ public class DescribeRCCloudAssistantStatusResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * <p>The ID of the request.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>0688F1D2-CDA8-5617-A43C-ADAC61D80D43</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -163,7 +173,10 @@ public class DescribeRCCloudAssistantStatusResponseBody extends TeaModel {
         }
 
         /**
-         * TotalCount.
+         * <p>The total number of instances.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder totalCount(Integer totalCount) {
             this.totalCount = totalCount;
@@ -320,7 +333,10 @@ public class DescribeRCCloudAssistantStatusResponseBody extends TeaModel {
             } 
 
             /**
-             * ActiveTaskCount.
+             * <p>The number of tasks that Cloud Assistant was running on the instance.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>0</p>
              */
             public Builder activeTaskCount(Integer activeTaskCount) {
                 this.activeTaskCount = activeTaskCount;
@@ -328,7 +344,14 @@ public class DescribeRCCloudAssistantStatusResponseBody extends TeaModel {
             }
 
             /**
-             * CloudAssistantStatus.
+             * <p>Indicates whether Cloud Assistant is running on the instance. Valid values:</p>
+             * <ul>
+             * <li><strong>true</strong>: Heartbeats are detected in the last 2 minutes.</li>
+             * <li><strong>false</strong>: No heartbeat is detected in the last 2 minutes.</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>true</p>
              */
             public Builder cloudAssistantStatus(String cloudAssistantStatus) {
                 this.cloudAssistantStatus = cloudAssistantStatus;
@@ -336,7 +359,10 @@ public class DescribeRCCloudAssistantStatusResponseBody extends TeaModel {
             }
 
             /**
-             * CloudAssistantVersion.
+             * <p>The version number of Cloud Assistant Agent. This parameter is empty if Cloud Assistant Agent is not installed or is not running on the instance.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2.2.0.106</p>
              */
             public Builder cloudAssistantVersion(String cloudAssistantVersion) {
                 this.cloudAssistantVersion = cloudAssistantVersion;
@@ -344,7 +370,10 @@ public class DescribeRCCloudAssistantStatusResponseBody extends TeaModel {
             }
 
             /**
-             * InstanceId.
+             * <p>The instance ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>rc-e2g521l55k038cr8****</p>
              */
             public Builder instanceId(String instanceId) {
                 this.instanceId = instanceId;
@@ -352,7 +381,10 @@ public class DescribeRCCloudAssistantStatusResponseBody extends TeaModel {
             }
 
             /**
-             * InvocationCount.
+             * <p>The number of tasks that Cloud Assistant completed on the instance.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2</p>
              */
             public Builder invocationCount(Integer invocationCount) {
                 this.invocationCount = invocationCount;
@@ -360,7 +392,10 @@ public class DescribeRCCloudAssistantStatusResponseBody extends TeaModel {
             }
 
             /**
-             * LastHeartbeatTime.
+             * <p>The last heartbeat time of Cloud Assistant. The value is updated every minute on average. The interval can be 55, 60, or 65 seconds.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2025-03-15T09:00:00Z</p>
              */
             public Builder lastHeartbeatTime(String lastHeartbeatTime) {
                 this.lastHeartbeatTime = lastHeartbeatTime;
@@ -368,7 +403,10 @@ public class DescribeRCCloudAssistantStatusResponseBody extends TeaModel {
             }
 
             /**
-             * LastInvokedTime.
+             * <p>The time when commands were last run.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2025-03-15T09:00:00Z</p>
              */
             public Builder lastInvokedTime(String lastInvokedTime) {
                 this.lastInvokedTime = lastInvokedTime;
@@ -376,7 +414,10 @@ public class DescribeRCCloudAssistantStatusResponseBody extends TeaModel {
             }
 
             /**
-             * OSType.
+             * <p>The operating system type of the instance.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Linux</p>
              */
             public Builder OSType(String OSType) {
                 this.OSType = OSType;
@@ -384,7 +425,11 @@ public class DescribeRCCloudAssistantStatusResponseBody extends TeaModel {
             }
 
             /**
-             * SupportSessionManager.
+             * <p>Indicates whether Cloud Assistant supports Session Manager on the instance. If Session Manager is not supported, the version of Cloud Assistant Agent is outdated. Update Cloud Assistant Agent to the latest version.</p>
+             * <p>To support Session Manager, the version of Cloud Assistant Agent cannot be earlier than 2.2.3.189.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>true</p>
              */
             public Builder supportSessionManager(Boolean supportSessionManager) {
                 this.supportSessionManager = supportSessionManager;

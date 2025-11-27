@@ -80,7 +80,17 @@ public class DescribeComputeBurstConfigResponseBody extends TeaModel {
         } 
 
         /**
-         * ComputeBurstConfig.
+         * <p>The detailed configurations of the assured serverless feature.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>{
+         *     &quot;cpuEnlargeThreshold&quot;: &quot;60&quot;,
+         *     &quot;memoryEnlargeThreshold&quot;: &quot;60&quot;,
+         *     &quot;scaleMaxMemory&quot;: &quot;4&quot;,
+         *     &quot;memoryShrinkThreshold&quot;: &quot;50&quot;,
+         *     &quot;scaleMaxCpus&quot;: &quot;2&quot;,
+         *     &quot;cpuShrinkThreshold&quot;: &quot;30&quot;
+         *   }</p>
          */
         public Builder computeBurstConfig(java.util.Map<String, ?> computeBurstConfig) {
             this.computeBurstConfig = computeBurstConfig;
@@ -88,7 +98,14 @@ public class DescribeComputeBurstConfigResponseBody extends TeaModel {
         }
 
         /**
-         * ComputeBurstEnabled.
+         * <p>Indicates whether the assured serverless feature is enabled. Valid values:</p>
+         * <ul>
+         * <li><strong>true</strong></li>
+         * <li><strong>false</strong></li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder computeBurstEnabled(Boolean computeBurstEnabled) {
             this.computeBurstEnabled = computeBurstEnabled;
@@ -96,7 +113,10 @@ public class DescribeComputeBurstConfigResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>847BA085-B377-4BFA-8267-F82345ECE1D2</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;

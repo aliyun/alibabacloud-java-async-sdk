@@ -111,7 +111,15 @@ public class DescribeRdsResourceSettingsRequest extends Request {
         }
 
         /**
+         * <p>The location of the notification.</p>
+         * <ul>
+         * <li>noticeBar: notification bar</li>
+         * <li>popUp: popup</li>
+         * </ul>
          * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>noticeBar</p>
          */
         public Builder resourceNiche(String resourceNiche) {
             this.putQueryParameter("ResourceNiche", resourceNiche);

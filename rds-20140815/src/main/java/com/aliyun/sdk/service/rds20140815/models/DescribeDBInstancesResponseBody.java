@@ -431,6 +431,12 @@ public class DescribeDBInstancesResponseBody extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("IoAccelerationEnabled")
         private String ioAccelerationEnabled;
 
+        @com.aliyun.core.annotation.NameInMap("IsAnalyticIns")
+        private String isAnalyticIns;
+
+        @com.aliyun.core.annotation.NameInMap("IsAnalyticReadOnlyIns")
+        private Boolean isAnalyticReadOnlyIns;
+
         @com.aliyun.core.annotation.NameInMap("LockMode")
         private String lockMode;
 
@@ -523,6 +529,8 @@ public class DescribeDBInstancesResponseBody extends TeaModel {
             this.guardDBInstanceId = builder.guardDBInstanceId;
             this.instanceNetworkType = builder.instanceNetworkType;
             this.ioAccelerationEnabled = builder.ioAccelerationEnabled;
+            this.isAnalyticIns = builder.isAnalyticIns;
+            this.isAnalyticReadOnlyIns = builder.isAnalyticReadOnlyIns;
             this.lockMode = builder.lockMode;
             this.lockReason = builder.lockReason;
             this.masterInstanceId = builder.masterInstanceId;
@@ -831,6 +839,20 @@ public class DescribeDBInstancesResponseBody extends TeaModel {
         }
 
         /**
+         * @return isAnalyticIns
+         */
+        public String getIsAnalyticIns() {
+            return this.isAnalyticIns;
+        }
+
+        /**
+         * @return isAnalyticReadOnlyIns
+         */
+        public Boolean getIsAnalyticReadOnlyIns() {
+            return this.isAnalyticReadOnlyIns;
+        }
+
+        /**
          * @return lockMode
          */
         public String getLockMode() {
@@ -990,6 +1012,8 @@ public class DescribeDBInstancesResponseBody extends TeaModel {
             private String guardDBInstanceId; 
             private String instanceNetworkType; 
             private String ioAccelerationEnabled; 
+            private String isAnalyticIns; 
+            private Boolean isAnalyticReadOnlyIns; 
             private String lockMode; 
             private String lockReason; 
             private String masterInstanceId; 
@@ -1052,6 +1076,8 @@ public class DescribeDBInstancesResponseBody extends TeaModel {
                 this.guardDBInstanceId = model.guardDBInstanceId;
                 this.instanceNetworkType = model.instanceNetworkType;
                 this.ioAccelerationEnabled = model.ioAccelerationEnabled;
+                this.isAnalyticIns = model.isAnalyticIns;
+                this.isAnalyticReadOnlyIns = model.isAnalyticReadOnlyIns;
                 this.lockMode = model.lockMode;
                 this.lockReason = model.lockReason;
                 this.masterInstanceId = model.masterInstanceId;
@@ -1539,6 +1565,22 @@ public class DescribeDBInstancesResponseBody extends TeaModel {
              */
             public Builder ioAccelerationEnabled(String ioAccelerationEnabled) {
                 this.ioAccelerationEnabled = ioAccelerationEnabled;
+                return this;
+            }
+
+            /**
+             * IsAnalyticIns.
+             */
+            public Builder isAnalyticIns(String isAnalyticIns) {
+                this.isAnalyticIns = isAnalyticIns;
+                return this;
+            }
+
+            /**
+             * IsAnalyticReadOnlyIns.
+             */
+            public Builder isAnalyticReadOnlyIns(Boolean isAnalyticReadOnlyIns) {
+                this.isAnalyticReadOnlyIns = isAnalyticReadOnlyIns;
                 return this;
             }
 

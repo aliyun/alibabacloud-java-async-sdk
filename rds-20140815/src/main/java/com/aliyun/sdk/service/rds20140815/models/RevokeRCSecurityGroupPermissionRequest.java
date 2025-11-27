@@ -101,7 +101,17 @@ public class RevokeRCSecurityGroupPermissionRequest extends Request {
         } 
 
         /**
-         * Direction.
+         * <p>The direction of the security group rules that you want to delete. Valid values:</p>
+         * <ul>
+         * <li><strong>ingress</strong>: inbound security group rules.</li>
+         * <li><strong>egress</strong>: outbound security group rules.</li>
+         * </ul>
+         * <blockquote>
+         * <p> You can specify security group rules only in the same direction in a request.</p>
+         * </blockquote>
+         * 
+         * <strong>example:</strong>
+         * <p>ingress</p>
          */
         public Builder direction(String direction) {
             this.putQueryParameter("Direction", direction);
@@ -110,7 +120,10 @@ public class RevokeRCSecurityGroupPermissionRequest extends Request {
         }
 
         /**
-         * RegionId.
+         * <p>The region ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-hangzhou</p>
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);
@@ -119,7 +132,10 @@ public class RevokeRCSecurityGroupPermissionRequest extends Request {
         }
 
         /**
-         * SecurityGroupId.
+         * <p>The ID of the security group.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>sg-2ze27hs990o2hn9****</p>
          */
         public Builder securityGroupId(String securityGroupId) {
             this.putQueryParameter("SecurityGroupId", securityGroupId);
@@ -128,7 +144,7 @@ public class RevokeRCSecurityGroupPermissionRequest extends Request {
         }
 
         /**
-         * SecurityGroupRuleIdList.
+         * <p>The IDs of the security group rules that you want to delete.</p>
          */
         public Builder securityGroupRuleIdList(java.util.List<String> securityGroupRuleIdList) {
             String securityGroupRuleIdListShrink = shrink(securityGroupRuleIdList, "SecurityGroupRuleIdList", "json");

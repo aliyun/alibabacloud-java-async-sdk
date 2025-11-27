@@ -52,7 +52,6 @@ public class ModifyDBInstanceSpecRequest extends Request {
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("DBInstanceStorage")
-    @com.aliyun.core.annotation.Validation(maximum = 64000, minimum = 5)
     private Integer DBInstanceStorage;
 
     @com.aliyun.core.annotation.Query

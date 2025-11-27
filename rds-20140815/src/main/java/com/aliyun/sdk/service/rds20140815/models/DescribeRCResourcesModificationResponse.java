@@ -12,11 +12,11 @@ import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
  * 
- * {@link CreateDiagnosticReportResponse} extends {@link TeaModel}
+ * {@link DescribeRCResourcesModificationResponse} extends {@link TeaModel}
  *
- * <p>CreateDiagnosticReportResponse</p>
+ * <p>DescribeRCResourcesModificationResponse</p>
  */
-public class CreateDiagnosticReportResponse extends Response {
+public class DescribeRCResourcesModificationResponse extends Response {
     @com.aliyun.core.annotation.NameInMap("headers")
     private java.util.Map<String, String> headers;
 
@@ -24,16 +24,16 @@ public class CreateDiagnosticReportResponse extends Response {
     private Integer statusCode;
 
     @com.aliyun.core.annotation.NameInMap("body")
-    private CreateDiagnosticReportResponseBody body;
+    private DescribeRCResourcesModificationResponseBody body;
 
-    private CreateDiagnosticReportResponse(BuilderImpl builder) {
+    private DescribeRCResourcesModificationResponse(BuilderImpl builder) {
         super(builder);
         this.headers = builder.headers;
         this.statusCode = builder.statusCode;
         this.body = builder.body;
     }
 
-    public static CreateDiagnosticReportResponse create() {
+    public static DescribeRCResourcesModificationResponse create() {
         return new BuilderImpl().build();
     }
 
@@ -59,35 +59,35 @@ public class CreateDiagnosticReportResponse extends Response {
     /**
      * @return body
      */
-    public CreateDiagnosticReportResponseBody getBody() {
+    public DescribeRCResourcesModificationResponseBody getBody() {
         return this.body;
     }
 
-    public interface Builder extends Response.Builder<CreateDiagnosticReportResponse, Builder> {
+    public interface Builder extends Response.Builder<DescribeRCResourcesModificationResponse, Builder> {
 
         Builder headers(java.util.Map<String, String> headers);
 
         Builder statusCode(Integer statusCode);
 
-        Builder body(CreateDiagnosticReportResponseBody body);
+        Builder body(DescribeRCResourcesModificationResponseBody body);
 
         @Override
-        CreateDiagnosticReportResponse build();
+        DescribeRCResourcesModificationResponse build();
 
     } 
 
     private static final class BuilderImpl
-            extends Response.BuilderImpl<CreateDiagnosticReportResponse, Builder>
+            extends Response.BuilderImpl<DescribeRCResourcesModificationResponse, Builder>
             implements Builder {
         private java.util.Map<String, String> headers; 
         private Integer statusCode; 
-        private CreateDiagnosticReportResponseBody body; 
+        private DescribeRCResourcesModificationResponseBody body; 
 
         private BuilderImpl() {
             super();
         } 
 
-        private BuilderImpl(CreateDiagnosticReportResponse response) {
+        private BuilderImpl(DescribeRCResourcesModificationResponse response) {
             super(response);
             this.headers = response.headers;
             this.statusCode = response.statusCode;
@@ -116,14 +116,14 @@ public class CreateDiagnosticReportResponse extends Response {
          * body.
          */
         @Override
-        public Builder body(CreateDiagnosticReportResponseBody body) {
+        public Builder body(DescribeRCResourcesModificationResponseBody body) {
             this.body = body;
             return this;
         }
 
         @Override
-        public CreateDiagnosticReportResponse build() {
-            return new CreateDiagnosticReportResponse(this);
+        public DescribeRCResourcesModificationResponse build() {
+            return new DescribeRCResourcesModificationResponse(this);
         } 
 
     } 

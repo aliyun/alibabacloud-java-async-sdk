@@ -560,6 +560,9 @@ public class DescribeRCInstancesResponseBody extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("InstanceId")
         private String instanceId;
 
+        @com.aliyun.core.annotation.NameInMap("InstanceName")
+        private String instanceName;
+
         @com.aliyun.core.annotation.NameInMap("InstanceType")
         private String instanceType;
 
@@ -616,6 +619,7 @@ public class DescribeRCInstancesResponseBody extends TeaModel {
             this.imageId = builder.imageId;
             this.instanceChargeType = builder.instanceChargeType;
             this.instanceId = builder.instanceId;
+            this.instanceName = builder.instanceName;
             this.instanceType = builder.instanceType;
             this.instanceTypeFamily = builder.instanceTypeFamily;
             this.memory = builder.memory;
@@ -732,6 +736,13 @@ public class DescribeRCInstancesResponseBody extends TeaModel {
         }
 
         /**
+         * @return instanceName
+         */
+        public String getInstanceName() {
+            return this.instanceName;
+        }
+
+        /**
          * @return instanceType
          */
         public String getInstanceType() {
@@ -843,6 +854,7 @@ public class DescribeRCInstancesResponseBody extends TeaModel {
             private String imageId; 
             private String instanceChargeType; 
             private String instanceId; 
+            private String instanceName; 
             private String instanceType; 
             private String instanceTypeFamily; 
             private Integer memory; 
@@ -875,6 +887,7 @@ public class DescribeRCInstancesResponseBody extends TeaModel {
                 this.imageId = model.imageId;
                 this.instanceChargeType = model.instanceChargeType;
                 this.instanceId = model.instanceId;
+                this.instanceName = model.instanceName;
                 this.instanceType = model.instanceType;
                 this.instanceTypeFamily = model.instanceTypeFamily;
                 this.memory = model.memory;
@@ -1013,6 +1026,14 @@ public class DescribeRCInstancesResponseBody extends TeaModel {
              */
             public Builder instanceId(String instanceId) {
                 this.instanceId = instanceId;
+                return this;
+            }
+
+            /**
+             * InstanceName.
+             */
+            public Builder instanceName(String instanceName) {
+                this.instanceName = instanceName;
                 return this;
             }
 

@@ -65,6 +65,14 @@ public class ModifyDBInstanceConnectionStringRequest extends Request {
     @com.aliyun.core.annotation.NameInMap("ResourceOwnerId")
     private Long resourceOwnerId;
 
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("RetainVip")
+    private Boolean retainVip;
+
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("TargetDBInstanceId")
+    private String targetDBInstanceId;
+
     private ModifyDBInstanceConnectionStringRequest(Builder builder) {
         super(builder);
         this.babelfishPort = builder.babelfishPort;
@@ -78,6 +86,8 @@ public class ModifyDBInstanceConnectionStringRequest extends Request {
         this.port = builder.port;
         this.resourceOwnerAccount = builder.resourceOwnerAccount;
         this.resourceOwnerId = builder.resourceOwnerId;
+        this.retainVip = builder.retainVip;
+        this.targetDBInstanceId = builder.targetDBInstanceId;
     }
 
     public static Builder builder() {
@@ -170,6 +180,20 @@ public class ModifyDBInstanceConnectionStringRequest extends Request {
         return this.resourceOwnerId;
     }
 
+    /**
+     * @return retainVip
+     */
+    public Boolean getRetainVip() {
+        return this.retainVip;
+    }
+
+    /**
+     * @return targetDBInstanceId
+     */
+    public String getTargetDBInstanceId() {
+        return this.targetDBInstanceId;
+    }
+
     public static final class Builder extends Request.Builder<ModifyDBInstanceConnectionStringRequest, Builder> {
         private String babelfishPort; 
         private String connectionStringPrefix; 
@@ -182,6 +206,8 @@ public class ModifyDBInstanceConnectionStringRequest extends Request {
         private String port; 
         private String resourceOwnerAccount; 
         private Long resourceOwnerId; 
+        private Boolean retainVip; 
+        private String targetDBInstanceId; 
 
         private Builder() {
             super();
@@ -200,6 +226,8 @@ public class ModifyDBInstanceConnectionStringRequest extends Request {
             this.port = request.port;
             this.resourceOwnerAccount = request.resourceOwnerAccount;
             this.resourceOwnerId = request.resourceOwnerId;
+            this.retainVip = request.retainVip;
+            this.targetDBInstanceId = request.targetDBInstanceId;
         } 
 
         /**
@@ -335,6 +363,24 @@ public class ModifyDBInstanceConnectionStringRequest extends Request {
         public Builder resourceOwnerId(Long resourceOwnerId) {
             this.putQueryParameter("ResourceOwnerId", resourceOwnerId);
             this.resourceOwnerId = resourceOwnerId;
+            return this;
+        }
+
+        /**
+         * RetainVip.
+         */
+        public Builder retainVip(Boolean retainVip) {
+            this.putQueryParameter("RetainVip", retainVip);
+            this.retainVip = retainVip;
+            return this;
+        }
+
+        /**
+         * TargetDBInstanceId.
+         */
+        public Builder targetDBInstanceId(String targetDBInstanceId) {
+            this.putQueryParameter("TargetDBInstanceId", targetDBInstanceId);
+            this.targetDBInstanceId = targetDBInstanceId;
             return this;
         }
 

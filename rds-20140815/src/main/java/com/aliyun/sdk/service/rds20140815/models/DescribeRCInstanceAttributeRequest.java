@@ -22,6 +22,10 @@ public class DescribeRCInstanceAttributeRequest extends Request {
     private String instanceId;
 
     @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("InstanceName")
+    private String instanceName;
+
+    @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("MaxDisksResults")
     private Long maxDisksResults;
 
@@ -36,6 +40,7 @@ public class DescribeRCInstanceAttributeRequest extends Request {
     private DescribeRCInstanceAttributeRequest(Builder builder) {
         super(builder);
         this.instanceId = builder.instanceId;
+        this.instanceName = builder.instanceName;
         this.maxDisksResults = builder.maxDisksResults;
         this.privateIpAddress = builder.privateIpAddress;
         this.regionId = builder.regionId;
@@ -62,6 +67,13 @@ public class DescribeRCInstanceAttributeRequest extends Request {
     }
 
     /**
+     * @return instanceName
+     */
+    public String getInstanceName() {
+        return this.instanceName;
+    }
+
+    /**
      * @return maxDisksResults
      */
     public Long getMaxDisksResults() {
@@ -84,6 +96,7 @@ public class DescribeRCInstanceAttributeRequest extends Request {
 
     public static final class Builder extends Request.Builder<DescribeRCInstanceAttributeRequest, Builder> {
         private String instanceId; 
+        private String instanceName; 
         private Long maxDisksResults; 
         private String privateIpAddress; 
         private String regionId; 
@@ -95,6 +108,7 @@ public class DescribeRCInstanceAttributeRequest extends Request {
         private Builder(DescribeRCInstanceAttributeRequest request) {
             super(request);
             this.instanceId = request.instanceId;
+            this.instanceName = request.instanceName;
             this.maxDisksResults = request.maxDisksResults;
             this.privateIpAddress = request.privateIpAddress;
             this.regionId = request.regionId;
@@ -109,6 +123,15 @@ public class DescribeRCInstanceAttributeRequest extends Request {
         public Builder instanceId(String instanceId) {
             this.putQueryParameter("InstanceId", instanceId);
             this.instanceId = instanceId;
+            return this;
+        }
+
+        /**
+         * InstanceName.
+         */
+        public Builder instanceName(String instanceName) {
+            this.putQueryParameter("InstanceName", instanceName);
+            this.instanceName = instanceName;
             return this;
         }
 

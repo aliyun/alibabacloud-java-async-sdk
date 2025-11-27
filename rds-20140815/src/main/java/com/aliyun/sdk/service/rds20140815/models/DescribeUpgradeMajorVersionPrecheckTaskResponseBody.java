@@ -106,7 +106,7 @@ public class DescribeUpgradeMajorVersionPrecheckTaskResponseBody extends TeaMode
         } 
 
         /**
-         * <p>The information about the upgrade check report.</p>
+         * <p>The information about the upgrade check reports.</p>
          */
         public Builder items(java.util.List<Items> items) {
             this.items = items;
@@ -368,9 +368,9 @@ public class DescribeUpgradeMajorVersionPrecheckTaskResponseBody extends TeaMode
             }
 
             /**
-             * <p>The minimum recommended disk capacity for upgrading. Unit: GB.</p>
+             * <p>The minimum recommended disk capacity during the upgrade. Unit: GB.</p>
              * <blockquote>
-             * <p>This parameter is returned only for RDS PostgreSQL instances.</p>
+             * <p> This parameter is returned only for RDS for PostgreSQL instances.</p>
              * </blockquote>
              * 
              * <strong>example:</strong>
@@ -382,9 +382,9 @@ public class DescribeUpgradeMajorVersionPrecheckTaskResponseBody extends TeaMode
             }
 
             /**
-             * <p>The minimum recommended memory for upgrading. Unit: GB.</p>
+             * <p>The minimum recommended memory size during the upgrade. Unit: GB.</p>
              * <blockquote>
-             * <p>This parameter is returned only for RDS PostgreSQL instances.</p>
+             * <p> This parameter is returned only for RDS for PostgreSQL instances.</p>
              * </blockquote>
              * 
              * <strong>example:</strong>
@@ -396,10 +396,10 @@ public class DescribeUpgradeMajorVersionPrecheckTaskResponseBody extends TeaMode
             }
 
             /**
-             * <p>Recommended memory when upgrading. Unit: GB.</p>
-             * <p>When the memory of the instance is greater than or equal to the recommended memory, it will be upgraded at the fastest speed to minimize the read-only time of the instance.</p>
+             * <p>The recommended memory size during the upgrade. Unit: GB.</p>
+             * <p>If the memory size of an RDS instance is greater than or equal to the recommended memory size, the RDS instance is immediately upgraded to reduce the read-only time of the instance.</p>
              * <blockquote>
-             * <p>This parameter is returned only for RDS PostgreSQL instances.</p>
+             * <p> This parameter is returned only for RDS for PostgreSQL instances.</p>
              * </blockquote>
              * 
              * <strong>example:</strong>

@@ -32,6 +32,9 @@ public class DescribeDBProxyResponseBody extends TeaModel {
     @com.aliyun.core.annotation.NameInMap("DBProxyInstanceLatestMinorVersion")
     private String DBProxyInstanceLatestMinorVersion;
 
+    @com.aliyun.core.annotation.NameInMap("DBProxyInstanceMinorVersions")
+    private DBProxyInstanceMinorVersions DBProxyInstanceMinorVersions;
+
     @com.aliyun.core.annotation.NameInMap("DBProxyInstanceName")
     private String DBProxyInstanceName;
 
@@ -74,6 +77,7 @@ public class DescribeDBProxyResponseBody extends TeaModel {
         this.DBProxyEngineType = builder.DBProxyEngineType;
         this.DBProxyInstanceCurrentMinorVersion = builder.DBProxyInstanceCurrentMinorVersion;
         this.DBProxyInstanceLatestMinorVersion = builder.DBProxyInstanceLatestMinorVersion;
+        this.DBProxyInstanceMinorVersions = builder.DBProxyInstanceMinorVersions;
         this.DBProxyInstanceName = builder.DBProxyInstanceName;
         this.DBProxyInstanceNum = builder.DBProxyInstanceNum;
         this.DBProxyInstanceSize = builder.DBProxyInstanceSize;
@@ -133,6 +137,13 @@ public class DescribeDBProxyResponseBody extends TeaModel {
      */
     public String getDBProxyInstanceLatestMinorVersion() {
         return this.DBProxyInstanceLatestMinorVersion;
+    }
+
+    /**
+     * @return DBProxyInstanceMinorVersions
+     */
+    public DBProxyInstanceMinorVersions getDBProxyInstanceMinorVersions() {
+        return this.DBProxyInstanceMinorVersions;
     }
 
     /**
@@ -225,6 +236,7 @@ public class DescribeDBProxyResponseBody extends TeaModel {
         private String DBProxyEngineType; 
         private String DBProxyInstanceCurrentMinorVersion; 
         private String DBProxyInstanceLatestMinorVersion; 
+        private DBProxyInstanceMinorVersions DBProxyInstanceMinorVersions; 
         private String DBProxyInstanceName; 
         private Integer DBProxyInstanceNum; 
         private String DBProxyInstanceSize; 
@@ -247,6 +259,7 @@ public class DescribeDBProxyResponseBody extends TeaModel {
             this.DBProxyEngineType = model.DBProxyEngineType;
             this.DBProxyInstanceCurrentMinorVersion = model.DBProxyInstanceCurrentMinorVersion;
             this.DBProxyInstanceLatestMinorVersion = model.DBProxyInstanceLatestMinorVersion;
+            this.DBProxyInstanceMinorVersions = model.DBProxyInstanceMinorVersions;
             this.DBProxyInstanceName = model.DBProxyInstanceName;
             this.DBProxyInstanceNum = model.DBProxyInstanceNum;
             this.DBProxyInstanceSize = model.DBProxyInstanceSize;
@@ -307,6 +320,14 @@ public class DescribeDBProxyResponseBody extends TeaModel {
          */
         public Builder DBProxyInstanceLatestMinorVersion(String DBProxyInstanceLatestMinorVersion) {
             this.DBProxyInstanceLatestMinorVersion = DBProxyInstanceLatestMinorVersion;
+            return this;
+        }
+
+        /**
+         * DBProxyInstanceMinorVersions.
+         */
+        public Builder DBProxyInstanceMinorVersions(DBProxyInstanceMinorVersions DBProxyInstanceMinorVersions) {
+            this.DBProxyInstanceMinorVersions = DBProxyInstanceMinorVersions;
             return this;
         }
 
@@ -828,6 +849,60 @@ public class DescribeDBProxyResponseBody extends TeaModel {
 
             public DBProxyConnectStringItems build() {
                 return new DBProxyConnectStringItems(this);
+            } 
+
+        } 
+
+    }
+    /**
+     * 
+     * {@link DescribeDBProxyResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeDBProxyResponseBody</p>
+     */
+    public static class DBProxyInstanceMinorVersions extends TeaModel {
+        @com.aliyun.core.annotation.NameInMap("DBProxyInstanceMinorVersions")
+        private java.util.List<String> DBProxyInstanceMinorVersions;
+
+        private DBProxyInstanceMinorVersions(Builder builder) {
+            this.DBProxyInstanceMinorVersions = builder.DBProxyInstanceMinorVersions;
+        }
+
+        public static Builder builder() {
+            return new Builder();
+        }
+
+        public static DBProxyInstanceMinorVersions create() {
+            return builder().build();
+        }
+
+        /**
+         * @return DBProxyInstanceMinorVersions
+         */
+        public java.util.List<String> getDBProxyInstanceMinorVersions() {
+            return this.DBProxyInstanceMinorVersions;
+        }
+
+        public static final class Builder {
+            private java.util.List<String> DBProxyInstanceMinorVersions; 
+
+            private Builder() {
+            } 
+
+            private Builder(DBProxyInstanceMinorVersions model) {
+                this.DBProxyInstanceMinorVersions = model.DBProxyInstanceMinorVersions;
+            } 
+
+            /**
+             * DBProxyInstanceMinorVersions.
+             */
+            public Builder DBProxyInstanceMinorVersions(java.util.List<String> DBProxyInstanceMinorVersions) {
+                this.DBProxyInstanceMinorVersions = DBProxyInstanceMinorVersions;
+                return this;
+            }
+
+            public DBProxyInstanceMinorVersions build() {
+                return new DBProxyInstanceMinorVersions(this);
             } 
 
         } 

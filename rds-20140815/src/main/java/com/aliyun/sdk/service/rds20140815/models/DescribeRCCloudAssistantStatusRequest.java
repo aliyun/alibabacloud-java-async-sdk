@@ -146,7 +146,7 @@ public class DescribeRCCloudAssistantStatusRequest extends Request {
         } 
 
         /**
-         * InstanceIds.
+         * <p>The list of instance IDs.</p>
          */
         public Builder instanceIds(java.util.List<String> instanceIds) {
             String instanceIdsShrink = shrink(instanceIds, "InstanceIds", "json");
@@ -156,7 +156,12 @@ public class DescribeRCCloudAssistantStatusRequest extends Request {
         }
 
         /**
-         * MaxResults.
+         * <p>The maximum number of entries per page. If you specify <code>InstanceId</code>, this parameter does not take effect.</p>
+         * <p>Maximum value: 50.</p>
+         * <p>Default value: 10.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10</p>
          */
         public Builder maxResults(Integer maxResults) {
             this.putQueryParameter("MaxResults", maxResults);
@@ -165,7 +170,10 @@ public class DescribeRCCloudAssistantStatusRequest extends Request {
         }
 
         /**
-         * NextToken.
+         * <p>The token that marks the end of the current returned page. If this parameter is empty, the data is queried from the first entry.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>AAAAAdDWBF2</p>
          */
         public Builder nextToken(String nextToken) {
             this.putQueryParameter("NextToken", nextToken);
@@ -174,7 +182,16 @@ public class DescribeRCCloudAssistantStatusRequest extends Request {
         }
 
         /**
-         * OSType.
+         * <p>The operating system type of the instance. Only <strong>Linux</strong> is supported.</p>
+         * <p>Valid values:</p>
+         * <ul>
+         * <li>Windows</li>
+         * <li>Linux</li>
+         * <li>FreeBSD</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>Linux</p>
          */
         public Builder OSType(String OSType) {
             this.putQueryParameter("OSType", OSType);
@@ -183,7 +200,12 @@ public class DescribeRCCloudAssistantStatusRequest extends Request {
         }
 
         /**
-         * PageNumber.
+         * <blockquote>
+         * <p> This parameter will be removed in the future. We recommend that you use <code>NextToken</code> and <code>MaxResults</code> for a paged query.</p>
+         * </blockquote>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder pageNumber(Integer pageNumber) {
             this.putQueryParameter("PageNumber", pageNumber);
@@ -192,7 +214,12 @@ public class DescribeRCCloudAssistantStatusRequest extends Request {
         }
 
         /**
-         * PageSize.
+         * <blockquote>
+         * <p> This parameter will be removed in the future. We recommend that you use <code>NextToken</code> and <code>MaxResults</code> for a paged query.</p>
+         * </blockquote>
+         * 
+         * <strong>example:</strong>
+         * <p>10</p>
          */
         public Builder pageSize(Integer pageSize) {
             this.putQueryParameter("PageSize", pageSize);
@@ -201,6 +228,7 @@ public class DescribeRCCloudAssistantStatusRequest extends Request {
         }
 
         /**
+         * <p>The ID of the region where the instance resides.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
