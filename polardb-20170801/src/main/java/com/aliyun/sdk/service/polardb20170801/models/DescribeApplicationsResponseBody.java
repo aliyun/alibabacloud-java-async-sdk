@@ -317,6 +317,9 @@ public class DescribeApplicationsResponseBody extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("CreationTime")
         private String creationTime;
 
+        @com.aliyun.core.annotation.NameInMap("DBClusterId")
+        private String DBClusterId;
+
         @com.aliyun.core.annotation.NameInMap("Description")
         private String description;
 
@@ -351,6 +354,7 @@ public class DescribeApplicationsResponseBody extends TeaModel {
             this.applicationId = builder.applicationId;
             this.applicationType = builder.applicationType;
             this.creationTime = builder.creationTime;
+            this.DBClusterId = builder.DBClusterId;
             this.description = builder.description;
             this.endpoints = builder.endpoints;
             this.engineVersion = builder.engineVersion;
@@ -390,6 +394,13 @@ public class DescribeApplicationsResponseBody extends TeaModel {
          */
         public String getCreationTime() {
             return this.creationTime;
+        }
+
+        /**
+         * @return DBClusterId
+         */
+        public String getDBClusterId() {
+            return this.DBClusterId;
         }
 
         /**
@@ -466,6 +477,7 @@ public class DescribeApplicationsResponseBody extends TeaModel {
             private String applicationId; 
             private String applicationType; 
             private String creationTime; 
+            private String DBClusterId; 
             private String description; 
             private Endpoints endpoints; 
             private String engineVersion; 
@@ -484,6 +496,7 @@ public class DescribeApplicationsResponseBody extends TeaModel {
                 this.applicationId = model.applicationId;
                 this.applicationType = model.applicationType;
                 this.creationTime = model.creationTime;
+                this.DBClusterId = model.DBClusterId;
                 this.description = model.description;
                 this.endpoints = model.endpoints;
                 this.engineVersion = model.engineVersion;
@@ -517,6 +530,14 @@ public class DescribeApplicationsResponseBody extends TeaModel {
              */
             public Builder creationTime(String creationTime) {
                 this.creationTime = creationTime;
+                return this;
+            }
+
+            /**
+             * DBClusterId.
+             */
+            public Builder DBClusterId(String DBClusterId) {
+                this.DBClusterId = DBClusterId;
                 return this;
             }
 
