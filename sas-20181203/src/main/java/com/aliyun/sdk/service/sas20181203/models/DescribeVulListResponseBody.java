@@ -1117,6 +1117,9 @@ public class DescribeVulListResponseBody extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Bind")
         private Boolean bind;
 
+        @com.aliyun.core.annotation.NameInMap("ContainerId")
+        private String containerId;
+
         @com.aliyun.core.annotation.NameInMap("ExtendContentJson")
         private ExtendContentJson extendContentJson;
 
@@ -1229,6 +1232,7 @@ public class DescribeVulListResponseBody extends TeaModel {
             this.aliasName = builder.aliasName;
             this.authVersion = builder.authVersion;
             this.bind = builder.bind;
+            this.containerId = builder.containerId;
             this.extendContentJson = builder.extendContentJson;
             this.firstTs = builder.firstTs;
             this.groupId = builder.groupId;
@@ -1294,6 +1298,13 @@ public class DescribeVulListResponseBody extends TeaModel {
          */
         public Boolean getBind() {
             return this.bind;
+        }
+
+        /**
+         * @return containerId
+         */
+        public String getContainerId() {
+            return this.containerId;
         }
 
         /**
@@ -1552,6 +1563,7 @@ public class DescribeVulListResponseBody extends TeaModel {
             private String aliasName; 
             private String authVersion; 
             private Boolean bind; 
+            private String containerId; 
             private ExtendContentJson extendContentJson; 
             private Long firstTs; 
             private Long groupId; 
@@ -1596,6 +1608,7 @@ public class DescribeVulListResponseBody extends TeaModel {
                 this.aliasName = model.aliasName;
                 this.authVersion = model.authVersion;
                 this.bind = model.bind;
+                this.containerId = model.containerId;
                 this.extendContentJson = model.extendContentJson;
                 this.firstTs = model.firstTs;
                 this.groupId = model.groupId;
@@ -1676,6 +1689,14 @@ public class DescribeVulListResponseBody extends TeaModel {
              */
             public Builder bind(Boolean bind) {
                 this.bind = bind;
+                return this;
+            }
+
+            /**
+             * ContainerId.
+             */
+            public Builder containerId(String containerId) {
+                this.containerId = containerId;
                 return this;
             }
 
