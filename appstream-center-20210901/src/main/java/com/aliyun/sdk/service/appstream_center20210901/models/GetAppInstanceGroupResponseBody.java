@@ -75,7 +75,10 @@ public class GetAppInstanceGroupResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1CBAFFAB-B697-4049-A9B1-67E1FC5F****</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -180,7 +183,10 @@ public class GetAppInstanceGroupResponseBody extends TeaModel {
             } 
 
             /**
-             * AppIcon.
+             * <p>The application icon.</p>
+             * 
+             * <strong>example:</strong>
+             * <p><a href="https://app-center-icon-****.png">https://app-center-icon-****.png</a></p>
              */
             public Builder appIcon(String appIcon) {
                 this.appIcon = appIcon;
@@ -188,7 +194,10 @@ public class GetAppInstanceGroupResponseBody extends TeaModel {
             }
 
             /**
-             * AppId.
+             * <p>The application ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>ca-i87mycyn419nu****</p>
              */
             public Builder appId(String appId) {
                 this.appId = appId;
@@ -196,7 +205,7 @@ public class GetAppInstanceGroupResponseBody extends TeaModel {
             }
 
             /**
-             * AppName.
+             * <p>The application name.</p>
              */
             public Builder appName(String appName) {
                 this.appName = appName;
@@ -204,7 +213,10 @@ public class GetAppInstanceGroupResponseBody extends TeaModel {
             }
 
             /**
-             * AppVersion.
+             * <p>The application version.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1.0.0</p>
              */
             public Builder appVersion(String appVersion) {
                 this.appVersion = appVersion;
@@ -212,7 +224,7 @@ public class GetAppInstanceGroupResponseBody extends TeaModel {
             }
 
             /**
-             * AppVersionName.
+             * <p>The name of the application version.</p>
              */
             public Builder appVersionName(String appVersionName) {
                 this.appVersionName = appVersionName;
@@ -292,7 +304,10 @@ public class GetAppInstanceGroupResponseBody extends TeaModel {
             } 
 
             /**
-             * Amount.
+             * <p>The number of destination resources.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>5</p>
              */
             public Builder amount(Integer amount) {
                 this.amount = amount;
@@ -300,7 +315,10 @@ public class GetAppInstanceGroupResponseBody extends TeaModel {
             }
 
             /**
-             * EndTime.
+             * <p>The end time of the scaling policy. Format: HH:mm.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>11:00</p>
              */
             public Builder endTime(String endTime) {
                 this.endTime = endTime;
@@ -308,7 +326,10 @@ public class GetAppInstanceGroupResponseBody extends TeaModel {
             }
 
             /**
-             * StartTime.
+             * <p>The start time of the scaling policy. Format: HH:mm.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>09:30</p>
              */
             public Builder startTime(String startTime) {
                 this.startTime = startTime;
@@ -388,7 +409,10 @@ public class GetAppInstanceGroupResponseBody extends TeaModel {
             } 
 
             /**
-             * RecurrenceType.
+             * <p>The schedule type of the scaling policy. This parameter must be configured together with <code>RecurrenceValues</code>.``</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Weekly</p>
              */
             public Builder recurrenceType(String recurrenceType) {
                 this.recurrenceType = recurrenceType;
@@ -396,7 +420,7 @@ public class GetAppInstanceGroupResponseBody extends TeaModel {
             }
 
             /**
-             * RecurrenceValues.
+             * <p>The days of each week on which the scaling policy is executed.</p>
              */
             public Builder recurrenceValues(java.util.List<Integer> recurrenceValues) {
                 this.recurrenceValues = recurrenceValues;
@@ -404,7 +428,7 @@ public class GetAppInstanceGroupResponseBody extends TeaModel {
             }
 
             /**
-             * TimerPeriods.
+             * <p>The time periods during which the scaling policy can be executed.</p>
              */
             public Builder timerPeriods(java.util.List<TimerPeriods> timerPeriods) {
                 this.timerPeriods = timerPeriods;
@@ -692,7 +716,10 @@ public class GetAppInstanceGroupResponseBody extends TeaModel {
             } 
 
             /**
-             * Amount.
+             * <p>The number of resources purchased when the delivery group was created.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2</p>
              */
             public Builder amount(Integer amount) {
                 this.amount = amount;
@@ -700,7 +727,10 @@ public class GetAppInstanceGroupResponseBody extends TeaModel {
             }
 
             /**
-             * MaxIdleAppInstanceAmount.
+             * <p>空闲会话数上限。指定该值时，当会话使用率超过<code>ScalingUsageThreshold</code>且当前交付组空闲会话数小于<code>MaxIdleAppInstanceAmount</code>时，才会触发自动扩容，否则认为交付组空闲会话已足够使用，不自动扩容。该参数可用于灵活控制弹性扩容行为和降低使用成本。</p>
+             * 
+             * <strong>example:</strong>
+             * <p>3</p>
              */
             public Builder maxIdleAppInstanceAmount(Integer maxIdleAppInstanceAmount) {
                 this.maxIdleAppInstanceAmount = maxIdleAppInstanceAmount;
@@ -708,7 +738,10 @@ public class GetAppInstanceGroupResponseBody extends TeaModel {
             }
 
             /**
-             * MaxScalingAmount.
+             * <p>The maximum number of resources that can be created for scale-out.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>8</p>
              */
             public Builder maxScalingAmount(Integer maxScalingAmount) {
                 this.maxScalingAmount = maxScalingAmount;
@@ -716,7 +749,10 @@ public class GetAppInstanceGroupResponseBody extends TeaModel {
             }
 
             /**
-             * NodeAmount.
+             * <p>The total number of subscription resources.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder nodeAmount(Integer nodeAmount) {
                 this.nodeAmount = nodeAmount;
@@ -724,7 +760,17 @@ public class GetAppInstanceGroupResponseBody extends TeaModel {
             }
 
             /**
-             * NodeCapacity.
+             * <p>The maximum number of sessions to which a resource can connect at the same time. If a resource connects to a large number of sessions at the same time, user experience can be compromised. The value range varies based on the resource type. The following items describe the value ranges of different resource types:</p>
+             * <ul>
+             * <li>appstreaming.general.4c8g: 1 to 2</li>
+             * <li>appstreaming.general.8c16g: 1 to 4</li>
+             * <li>appstreaming.vgpu.8c16g.4g: 1 to 4</li>
+             * <li>appstreaming.vgpu.8c31g.16g: 1 to 4</li>
+             * <li>appstreaming.vgpu.14c93g.12g: 1 to 6</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>2</p>
              */
             public Builder nodeCapacity(Integer nodeCapacity) {
                 this.nodeCapacity = nodeCapacity;
@@ -732,7 +778,10 @@ public class GetAppInstanceGroupResponseBody extends TeaModel {
             }
 
             /**
-             * NodeInstanceType.
+             * <p>The ID of the resource type that you purchase.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>appstreaming.vgpu.4c8g.2g</p>
              */
             public Builder nodeInstanceType(String nodeInstanceType) {
                 this.nodeInstanceType = nodeInstanceType;
@@ -740,7 +789,10 @@ public class GetAppInstanceGroupResponseBody extends TeaModel {
             }
 
             /**
-             * NodePoolId.
+             * <p>The ID of the resource group.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>rg-g6922kced36hx****</p>
              */
             public Builder nodePoolId(String nodePoolId) {
                 this.nodePoolId = nodePoolId;
@@ -748,7 +800,7 @@ public class GetAppInstanceGroupResponseBody extends TeaModel {
             }
 
             /**
-             * NodeTypeName.
+             * <p>The name of the resource type.</p>
              */
             public Builder nodeTypeName(String nodeTypeName) {
                 this.nodeTypeName = nodeTypeName;
@@ -756,7 +808,10 @@ public class GetAppInstanceGroupResponseBody extends TeaModel {
             }
 
             /**
-             * NodeUsed.
+             * <p>The number of subscription resources that are in use.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder nodeUsed(Integer nodeUsed) {
                 this.nodeUsed = nodeUsed;
@@ -764,7 +819,7 @@ public class GetAppInstanceGroupResponseBody extends TeaModel {
             }
 
             /**
-             * RecurrenceSchedules.
+             * <p>The schedules of the scaling policy.</p>
              */
             public Builder recurrenceSchedules(java.util.List<RecurrenceSchedules> recurrenceSchedules) {
                 this.recurrenceSchedules = recurrenceSchedules;
@@ -772,7 +827,10 @@ public class GetAppInstanceGroupResponseBody extends TeaModel {
             }
 
             /**
-             * ScalingDownAfterIdleMinutes.
+             * <p>The duration for which no session is connected. Unit: minutes. If no session is connected in the resources after the specified duration elapses, automatic scale-in is triggered. Default value: 5.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>5</p>
              */
             public Builder scalingDownAfterIdleMinutes(Integer scalingDownAfterIdleMinutes) {
                 this.scalingDownAfterIdleMinutes = scalingDownAfterIdleMinutes;
@@ -780,7 +838,10 @@ public class GetAppInstanceGroupResponseBody extends TeaModel {
             }
 
             /**
-             * ScalingNodeAmount.
+             * <p>The total number of scalable resources.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>8</p>
              */
             public Builder scalingNodeAmount(Integer scalingNodeAmount) {
                 this.scalingNodeAmount = scalingNodeAmount;
@@ -788,7 +849,10 @@ public class GetAppInstanceGroupResponseBody extends TeaModel {
             }
 
             /**
-             * ScalingNodeUsed.
+             * <p>The number of scalable resources that are in use.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>4</p>
              */
             public Builder scalingNodeUsed(Integer scalingNodeUsed) {
                 this.scalingNodeUsed = scalingNodeUsed;
@@ -796,7 +860,10 @@ public class GetAppInstanceGroupResponseBody extends TeaModel {
             }
 
             /**
-             * ScalingStep.
+             * <p>The number of resources that are created each time resources are scaled out. Valid values: 1 to 10.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2</p>
              */
             public Builder scalingStep(Integer scalingStep) {
                 this.scalingStep = scalingStep;
@@ -804,7 +871,10 @@ public class GetAppInstanceGroupResponseBody extends TeaModel {
             }
 
             /**
-             * ScalingUsageThreshold.
+             * <p>The upper limit of session usage. If the session usage exceeds the specified upper limit, auto scaling is automatically triggered. The session usage is calculated by using the following formula: <code>Session usage = Number of current sessions/(Total number of resources × Number of concurrent sessions) × 100%</code>.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>85</p>
              */
             public Builder scalingUsageThreshold(String scalingUsageThreshold) {
                 this.scalingUsageThreshold = scalingUsageThreshold;
@@ -812,7 +882,10 @@ public class GetAppInstanceGroupResponseBody extends TeaModel {
             }
 
             /**
-             * StrategyDisableDate.
+             * <p>The expiration date of the scaling policy. Format: yyyy-MM-dd.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2022-09-08</p>
              */
             public Builder strategyDisableDate(String strategyDisableDate) {
                 this.strategyDisableDate = strategyDisableDate;
@@ -820,7 +893,10 @@ public class GetAppInstanceGroupResponseBody extends TeaModel {
             }
 
             /**
-             * StrategyEnableDate.
+             * <p>The effective date of the scaling policy. Format: yyyy-MM-dd.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2022-08-01</p>
              */
             public Builder strategyEnableDate(String strategyEnableDate) {
                 this.strategyEnableDate = strategyEnableDate;
@@ -828,7 +904,19 @@ public class GetAppInstanceGroupResponseBody extends TeaModel {
             }
 
             /**
-             * StrategyType.
+             * <p>The type of the scaling policy.</p>
+             * <blockquote>
+             * <p> <code>NODE_SCALING_BY_USAGE</code> is returned for this parameter only if ChargeType is set to <code>PrePaid</code>. <code>NODE_SCALING_BY_SCHEDULE</code> is returned for this parameter only if ChargeType is set to <code>PostPaid</code>.</p>
+             * </blockquote>
+             * <p>Valid values:</p>
+             * <ul>
+             * <li>NODE_FIXED: No scalable resources are used.</li>
+             * <li>NODE_SCALING_BY_SCHEDULE: Scheduled scaling is used.</li>
+             * <li>NODE_SCALING_BY_USAGE: Resources are scaled based on usage.</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>NODE_FIXED</p>
              */
             public Builder strategyType(String strategyType) {
                 this.strategyType = strategyType;
@@ -836,7 +924,10 @@ public class GetAppInstanceGroupResponseBody extends TeaModel {
             }
 
             /**
-             * WarmUp.
+             * <p>Indicates whether the warmup policy is enabled for resources.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>false</p>
              */
             public Builder warmUp(Boolean warmUp) {
                 this.warmUp = warmUp;
@@ -916,7 +1007,10 @@ public class GetAppInstanceGroupResponseBody extends TeaModel {
             } 
 
             /**
-             * NewOtaVersion.
+             * <p>The new OTA version. A null value indicates that no new version is available.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>0.0.1-D-20220630.11****</p>
              */
             public Builder newOtaVersion(String newOtaVersion) {
                 this.newOtaVersion = newOtaVersion;
@@ -924,7 +1018,10 @@ public class GetAppInstanceGroupResponseBody extends TeaModel {
             }
 
             /**
-             * OtaVersion.
+             * <p>The current OTA version.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>0.0.1-D-20220615.11****</p>
              */
             public Builder otaVersion(String otaVersion) {
                 this.otaVersion = otaVersion;
@@ -932,7 +1029,10 @@ public class GetAppInstanceGroupResponseBody extends TeaModel {
             }
 
             /**
-             * TaskId.
+             * <p>The ID of the OTA update task.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>ota-e49929gv8acz5****</p>
              */
             public Builder taskId(String taskId) {
                 this.taskId = taskId;
@@ -1012,7 +1112,10 @@ public class GetAppInstanceGroupResponseBody extends TeaModel {
             } 
 
             /**
-             * Key.
+             * <p>标签键。</p>
+             * 
+             * <strong>example:</strong>
+             * <p>department</p>
              */
             public Builder key(String key) {
                 this.key = key;
@@ -1020,7 +1123,10 @@ public class GetAppInstanceGroupResponseBody extends TeaModel {
             }
 
             /**
-             * Scope.
+             * <p>标签类型。</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Custom</p>
              */
             public Builder scope(String scope) {
                 this.scope = scope;
@@ -1028,7 +1134,10 @@ public class GetAppInstanceGroupResponseBody extends TeaModel {
             }
 
             /**
-             * Value.
+             * <p>标签值。</p>
+             * 
+             * <strong>example:</strong>
+             * <p>design</p>
              */
             public Builder value(String value) {
                 this.value = value;
@@ -1154,8 +1263,14 @@ public class GetAppInstanceGroupResponseBody extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Status")
         private String status;
 
+        @com.aliyun.core.annotation.NameInMap("SupportUserGroupMixedAuth")
+        private Boolean supportUserGroupMixedAuth;
+
         @com.aliyun.core.annotation.NameInMap("Tags")
         private java.util.List<Tags> tags;
+
+        @com.aliyun.core.annotation.NameInMap("UserGroupAuthMode")
+        private String userGroupAuthMode;
 
         private AppInstanceGroupModels(Builder builder) {
             this.accessType = builder.accessType;
@@ -1193,7 +1308,9 @@ public class GetAppInstanceGroupResponseBody extends TeaModel {
             this.skipUserAuthCheck = builder.skipUserAuthCheck;
             this.specId = builder.specId;
             this.status = builder.status;
+            this.supportUserGroupMixedAuth = builder.supportUserGroupMixedAuth;
             this.tags = builder.tags;
+            this.userGroupAuthMode = builder.userGroupAuthMode;
         }
 
         public static Builder builder() {
@@ -1450,10 +1567,24 @@ public class GetAppInstanceGroupResponseBody extends TeaModel {
         }
 
         /**
+         * @return supportUserGroupMixedAuth
+         */
+        public Boolean getSupportUserGroupMixedAuth() {
+            return this.supportUserGroupMixedAuth;
+        }
+
+        /**
          * @return tags
          */
         public java.util.List<Tags> getTags() {
             return this.tags;
+        }
+
+        /**
+         * @return userGroupAuthMode
+         */
+        public String getUserGroupAuthMode() {
+            return this.userGroupAuthMode;
         }
 
         public static final class Builder {
@@ -1492,7 +1623,9 @@ public class GetAppInstanceGroupResponseBody extends TeaModel {
             private Boolean skipUserAuthCheck; 
             private String specId; 
             private String status; 
+            private Boolean supportUserGroupMixedAuth; 
             private java.util.List<Tags> tags; 
+            private String userGroupAuthMode; 
 
             private Builder() {
             } 
@@ -1533,11 +1666,16 @@ public class GetAppInstanceGroupResponseBody extends TeaModel {
                 this.skipUserAuthCheck = model.skipUserAuthCheck;
                 this.specId = model.specId;
                 this.status = model.status;
+                this.supportUserGroupMixedAuth = model.supportUserGroupMixedAuth;
                 this.tags = model.tags;
+                this.userGroupAuthMode = model.userGroupAuthMode;
             } 
 
             /**
-             * AccessType.
+             * <p>接入类型。</p>
+             * 
+             * <strong>example:</strong>
+             * <p>INTERNET</p>
              */
             public Builder accessType(String accessType) {
                 this.accessType = accessType;
@@ -1545,7 +1683,10 @@ public class GetAppInstanceGroupResponseBody extends TeaModel {
             }
 
             /**
-             * Amount.
+             * <p>The number of subscription resources. Minimum value: 1.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder amount(Integer amount) {
                 this.amount = amount;
@@ -1553,7 +1694,10 @@ public class GetAppInstanceGroupResponseBody extends TeaModel {
             }
 
             /**
-             * AppCenterImageId.
+             * <p>The image ID of the application.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>img-8z4nztpaqvay4****</p>
              */
             public Builder appCenterImageId(String appCenterImageId) {
                 this.appCenterImageId = appCenterImageId;
@@ -1561,7 +1705,10 @@ public class GetAppInstanceGroupResponseBody extends TeaModel {
             }
 
             /**
-             * AppCenterImageName.
+             * <p>The image name of the application.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>OfficeApps</p>
              */
             public Builder appCenterImageName(String appCenterImageName) {
                 this.appCenterImageName = appCenterImageName;
@@ -1569,7 +1716,10 @@ public class GetAppInstanceGroupResponseBody extends TeaModel {
             }
 
             /**
-             * AppInstanceGroupId.
+             * <p>The ID of the delivery group.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>aig-9ciijz60n4xsv****</p>
              */
             public Builder appInstanceGroupId(String appInstanceGroupId) {
                 this.appInstanceGroupId = appInstanceGroupId;
@@ -1577,7 +1727,7 @@ public class GetAppInstanceGroupResponseBody extends TeaModel {
             }
 
             /**
-             * AppInstanceGroupName.
+             * <p>The name of the delivery group.</p>
              */
             public Builder appInstanceGroupName(String appInstanceGroupName) {
                 this.appInstanceGroupName = appInstanceGroupName;
@@ -1585,7 +1735,10 @@ public class GetAppInstanceGroupResponseBody extends TeaModel {
             }
 
             /**
-             * AppInstanceType.
+             * <p>The resource type of the delivery group.</p>
+             * 
+             * <strong>example:</strong>
+             * <p><strong>dynamic</strong></p>
              */
             public Builder appInstanceType(String appInstanceType) {
                 this.appInstanceType = appInstanceType;
@@ -1593,7 +1746,10 @@ public class GetAppInstanceGroupResponseBody extends TeaModel {
             }
 
             /**
-             * AppInstanceTypeName.
+             * <p>The name of the resource type of the delivery group.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>test001</p>
              */
             public Builder appInstanceTypeName(String appInstanceTypeName) {
                 this.appInstanceTypeName = appInstanceTypeName;
@@ -1601,7 +1757,10 @@ public class GetAppInstanceGroupResponseBody extends TeaModel {
             }
 
             /**
-             * AppPolicyId.
+             * <p>The policy ID of the application.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>pg-g3k5wa2ms2****</p>
              */
             public Builder appPolicyId(String appPolicyId) {
                 this.appPolicyId = appPolicyId;
@@ -1609,7 +1768,7 @@ public class GetAppInstanceGroupResponseBody extends TeaModel {
             }
 
             /**
-             * Apps.
+             * <p>The applications.</p>
              */
             public Builder apps(java.util.List<Apps> apps) {
                 this.apps = apps;
@@ -1617,7 +1776,10 @@ public class GetAppInstanceGroupResponseBody extends TeaModel {
             }
 
             /**
-             * AuthMode.
+             * <p>授权模式。</p>
+             * 
+             * <strong>example:</strong>
+             * <p>App</p>
              */
             public Builder authMode(String authMode) {
                 this.authMode = authMode;
@@ -1625,7 +1787,15 @@ public class GetAppInstanceGroupResponseBody extends TeaModel {
             }
 
             /**
-             * ChargeResourceMode.
+             * <p>The sales mode.</p>
+             * <p>Valid values:</p>
+             * <ul>
+             * <li>AppInstance: by session</li>
+             * <li>Node: by resource</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>Node</p>
              */
             public Builder chargeResourceMode(String chargeResourceMode) {
                 this.chargeResourceMode = chargeResourceMode;
@@ -1633,7 +1803,15 @@ public class GetAppInstanceGroupResponseBody extends TeaModel {
             }
 
             /**
-             * ChargeType.
+             * <p>The billing method.</p>
+             * <p>Valid values:</p>
+             * <ul>
+             * <li>PostPaid: pay-as-you-go</li>
+             * <li>PrePaid: subscription</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>PrePaid</p>
              */
             public Builder chargeType(String chargeType) {
                 this.chargeType = chargeType;
@@ -1641,7 +1819,10 @@ public class GetAppInstanceGroupResponseBody extends TeaModel {
             }
 
             /**
-             * ExpiredTime.
+             * <p>The time when the delivery group expires.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2022-04-27T16:00:00.000+00:00</p>
              */
             public Builder expiredTime(String expiredTime) {
                 this.expiredTime = expiredTime;
@@ -1649,7 +1830,10 @@ public class GetAppInstanceGroupResponseBody extends TeaModel {
             }
 
             /**
-             * GmtCreate.
+             * <p>The time when the delivery group was created.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2022-04-26T15:06:16.000+00:00</p>
              */
             public Builder gmtCreate(String gmtCreate) {
                 this.gmtCreate = gmtCreate;
@@ -1657,7 +1841,10 @@ public class GetAppInstanceGroupResponseBody extends TeaModel {
             }
 
             /**
-             * MaxAmount.
+             * <p>The maximum number of instances. Minimum value: 1.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>10</p>
              */
             public Builder maxAmount(Integer maxAmount) {
                 this.maxAmount = maxAmount;
@@ -1665,7 +1852,10 @@ public class GetAppInstanceGroupResponseBody extends TeaModel {
             }
 
             /**
-             * MinAmount.
+             * <p>The minimum number of instances. Minimum value: 1.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder minAmount(Integer minAmount) {
                 this.minAmount = minAmount;
@@ -1673,7 +1863,7 @@ public class GetAppInstanceGroupResponseBody extends TeaModel {
             }
 
             /**
-             * NodePool.
+             * <p>The information about the resource group.</p>
              */
             public Builder nodePool(java.util.List<NodePool> nodePool) {
                 this.nodePool = nodePool;
@@ -1681,7 +1871,10 @@ public class GetAppInstanceGroupResponseBody extends TeaModel {
             }
 
             /**
-             * OfficeSiteId.
+             * <p>办公网络ID。</p>
+             * 
+             * <strong>example:</strong>
+             * <p>cn-beijing+dir-172301****</p>
              */
             public Builder officeSiteId(String officeSiteId) {
                 this.officeSiteId = officeSiteId;
@@ -1689,7 +1882,10 @@ public class GetAppInstanceGroupResponseBody extends TeaModel {
             }
 
             /**
-             * OsType.
+             * <p>The type of the operating system.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Windows</p>
              */
             public Builder osType(String osType) {
                 this.osType = osType;
@@ -1697,7 +1893,7 @@ public class GetAppInstanceGroupResponseBody extends TeaModel {
             }
 
             /**
-             * OtaInfo.
+             * <p>The information about the over-the-air (OTA) update task.</p>
              */
             public Builder otaInfo(OtaInfo otaInfo) {
                 this.otaInfo = otaInfo;
@@ -1705,7 +1901,10 @@ public class GetAppInstanceGroupResponseBody extends TeaModel {
             }
 
             /**
-             * ProductType.
+             * <p>The product type.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>CloudApp</p>
              */
             public Builder productType(String productType) {
                 this.productType = productType;
@@ -1713,7 +1912,10 @@ public class GetAppInstanceGroupResponseBody extends TeaModel {
             }
 
             /**
-             * RegionId.
+             * <p>The ID of the region where the delivery group resides. For information about the supported regions, see <a href="https://help.aliyun.com/document_detail/426036.html">Limits</a>.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>cn-hangzhou</p>
              */
             public Builder regionId(String regionId) {
                 this.regionId = regionId;
@@ -1721,7 +1923,10 @@ public class GetAppInstanceGroupResponseBody extends TeaModel {
             }
 
             /**
-             * ReserveAmountRatio.
+             * <p>The percentage of reserved instances. The value indicates the percentage of unused sessions in the delivery group. Valid values: 0 to 99.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>20</p>
              */
             public Builder reserveAmountRatio(String reserveAmountRatio) {
                 this.reserveAmountRatio = reserveAmountRatio;
@@ -1729,7 +1934,10 @@ public class GetAppInstanceGroupResponseBody extends TeaModel {
             }
 
             /**
-             * ReserveMaxAmount.
+             * <p>The maximum number of reserved instances. The value indicates the maximum number of unused sessions in the delivery group. Minimum value: 1.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>5</p>
              */
             public Builder reserveMaxAmount(Integer reserveMaxAmount) {
                 this.reserveMaxAmount = reserveMaxAmount;
@@ -1737,7 +1945,10 @@ public class GetAppInstanceGroupResponseBody extends TeaModel {
             }
 
             /**
-             * ReserveMinAmount.
+             * <p>The minimum number of reserved instances. The value indicates the minimum number of unused sessions in the delivery group. Minimum value: 1.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder reserveMinAmount(Integer reserveMinAmount) {
                 this.reserveMinAmount = reserveMinAmount;
@@ -1745,7 +1956,10 @@ public class GetAppInstanceGroupResponseBody extends TeaModel {
             }
 
             /**
-             * ResourceStatus.
+             * <p>The resource status.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>AVAILABLE</p>
              */
             public Builder resourceStatus(String resourceStatus) {
                 this.resourceStatus = resourceStatus;
@@ -1753,7 +1967,10 @@ public class GetAppInstanceGroupResponseBody extends TeaModel {
             }
 
             /**
-             * ScalingDownAfterIdleMinutes.
+             * <p>The duration for which no session is connected. Unit: minutes. If no session is connected in the resources after the specified duration elapses, automatic scale-in is triggered. Minimum value: 0.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>5</p>
              */
             public Builder scalingDownAfterIdleMinutes(Integer scalingDownAfterIdleMinutes) {
                 this.scalingDownAfterIdleMinutes = scalingDownAfterIdleMinutes;
@@ -1761,7 +1978,10 @@ public class GetAppInstanceGroupResponseBody extends TeaModel {
             }
 
             /**
-             * ScalingStep.
+             * <p>The number of sessions that are created each time the delivery group is scaled out. Minimum value: 1.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>10</p>
              */
             public Builder scalingStep(Integer scalingStep) {
                 this.scalingStep = scalingStep;
@@ -1769,7 +1989,10 @@ public class GetAppInstanceGroupResponseBody extends TeaModel {
             }
 
             /**
-             * ScalingUsageThreshold.
+             * <p>The upper limit of session usage. If the session usage exceeds the specified upper limit, auto scaling is automatically triggered. The session usage rate is calculated by using the following formula: Session usage rate = Number of sessions in use/Total number of sessions × 100%. Valid values: 0 to 99.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>85</p>
              */
             public Builder scalingUsageThreshold(String scalingUsageThreshold) {
                 this.scalingUsageThreshold = scalingUsageThreshold;
@@ -1777,7 +2000,10 @@ public class GetAppInstanceGroupResponseBody extends TeaModel {
             }
 
             /**
-             * SessionTimeout.
+             * <p>The duration for which sessions are retained after disconnection. Unit: minutes. After an end user disconnects from a session, the session is closed only after the specified duration elapses. If you want to permanently retain sessions, set this parameter to <code>-1</code>. Valid values:-1 and 3 to 300. Default value: <code>15</code>.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>15</p>
              */
             public Builder sessionTimeout(String sessionTimeout) {
                 this.sessionTimeout = sessionTimeout;
@@ -1785,7 +2011,10 @@ public class GetAppInstanceGroupResponseBody extends TeaModel {
             }
 
             /**
-             * SessionType.
+             * <p>会话类型。</p>
+             * 
+             * <strong>example:</strong>
+             * <p>NORMAL</p>
              */
             public Builder sessionType(String sessionType) {
                 this.sessionType = sessionType;
@@ -1793,7 +2022,15 @@ public class GetAppInstanceGroupResponseBody extends TeaModel {
             }
 
             /**
-             * SkipUserAuthCheck.
+             * <p>Indicates whether user permission verification is skipped.</p>
+             * <p>Valid values:</p>
+             * <ul>
+             * <li>true</li>
+             * <li>false: This is the default value.</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>false</p>
              */
             public Builder skipUserAuthCheck(Boolean skipUserAuthCheck) {
                 this.skipUserAuthCheck = skipUserAuthCheck;
@@ -1801,7 +2038,10 @@ public class GetAppInstanceGroupResponseBody extends TeaModel {
             }
 
             /**
-             * SpecId.
+             * <p>The specification ID that uniquely corresponds to the ID of the delivery group.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>spec-8o18t8uc31qib0****</p>
              */
             public Builder specId(String specId) {
                 this.specId = specId;
@@ -1809,7 +2049,21 @@ public class GetAppInstanceGroupResponseBody extends TeaModel {
             }
 
             /**
-             * Status.
+             * <p>The status of the delivery group.</p>
+             * <p>Valid values:</p>
+             * <ul>
+             * <li>PUBLISHED: The delivery group is published.</li>
+             * <li>FAILED: The delivery group failed to be published.</li>
+             * <li>MAINTAIN_FAILED: The delivery group failed to be updated.</li>
+             * <li>EXPIRED: The delivery group is expired.</li>
+             * <li>MAINTAINING: The delivery group is being updated.</li>
+             * <li>CEASED: The delivery group has overdue payments.</li>
+             * <li>EXPIRED_RECYCLING: The delivery group is expired and being recycled.</li>
+             * <li>DEPLOYING: The delivery group is being published.</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>PUBLISHED</p>
              */
             public Builder status(String status) {
                 this.status = status;
@@ -1817,10 +2071,26 @@ public class GetAppInstanceGroupResponseBody extends TeaModel {
             }
 
             /**
-             * Tags.
+             * SupportUserGroupMixedAuth.
+             */
+            public Builder supportUserGroupMixedAuth(Boolean supportUserGroupMixedAuth) {
+                this.supportUserGroupMixedAuth = supportUserGroupMixedAuth;
+                return this;
+            }
+
+            /**
+             * <p>资源标签列表。</p>
              */
             public Builder tags(java.util.List<Tags> tags) {
                 this.tags = tags;
+                return this;
+            }
+
+            /**
+             * UserGroupAuthMode.
+             */
+            public Builder userGroupAuthMode(String userGroupAuthMode) {
+                this.userGroupAuthMode = userGroupAuthMode;
                 return this;
             }
 

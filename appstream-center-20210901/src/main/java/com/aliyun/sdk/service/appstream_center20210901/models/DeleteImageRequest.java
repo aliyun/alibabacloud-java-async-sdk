@@ -82,7 +82,10 @@ public class DeleteImageRequest extends Request {
         }
 
         /**
-         * ImageId.
+         * <p>The ID of the RDS image.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>img-bp13mu****</p>
          */
         public Builder imageId(String imageId) {
             this.putBodyParameter("ImageId", imageId);

@@ -144,7 +144,10 @@ public class ListBindInfoRequest extends Request {
         } 
 
         /**
-         * AppIdList.
+         * <p>The app IDs. You can specify 1 to 100 IDs.</p>
+         * <blockquote>
+         * <p> If you specify this parameter, only the bindings of the specified apps are returned.</p>
+         * </blockquote>
          */
         public Builder appIdList(java.util.List<String> appIdList) {
             this.putBodyParameter("AppIdList", appIdList);
@@ -153,7 +156,10 @@ public class ListBindInfoRequest extends Request {
         }
 
         /**
-         * AppInstanceGroupIdList.
+         * <p>The IDs of the delivery groups. You can specify 1 to 100 IDs.</p>
+         * <blockquote>
+         * <p> If you specify this parameter, only the bindings of the specified delivery groups are returned.</p>
+         * </blockquote>
          */
         public Builder appInstanceGroupIdList(java.util.List<String> appInstanceGroupIdList) {
             this.putBodyParameter("AppInstanceGroupIdList", appInstanceGroupIdList);
@@ -162,7 +168,10 @@ public class ListBindInfoRequest extends Request {
         }
 
         /**
-         * AppInstanceIdList.
+         * <p>The IDs of app instances. You can specify 1 to 100 IDs.</p>
+         * <blockquote>
+         * <p> If you specify this parameter, only the bindings of the specified app instances are returned.</p>
+         * </blockquote>
          */
         public Builder appInstanceIdList(java.util.List<String> appInstanceIdList) {
             this.putBodyParameter("AppInstanceIdList", appInstanceIdList);
@@ -171,7 +180,10 @@ public class ListBindInfoRequest extends Request {
         }
 
         /**
-         * PageNumber.
+         * <p>The page number. Default value: <code>1</code>. We recommend that you specify this parameter.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder pageNumber(Integer pageNumber) {
             this.putBodyParameter("PageNumber", pageNumber);
@@ -180,7 +192,10 @@ public class ListBindInfoRequest extends Request {
         }
 
         /**
-         * PageSize.
+         * <p>The number of entries per page. The value cannot be greater than <code>100</code>. Default value: <code>20</code>. We recommend that you specify this parameter.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10</p>
          */
         public Builder pageSize(Integer pageSize) {
             this.putBodyParameter("PageSize", pageSize);
@@ -189,7 +204,10 @@ public class ListBindInfoRequest extends Request {
         }
 
         /**
-         * UserIdList.
+         * <p>The user IDs. You can specify 1 to 100 IDs.</p>
+         * <blockquote>
+         * <p> If you specify this parameter, only the bindings of the specified users are returned.</p>
+         * </blockquote>
          */
         public Builder userIdList(java.util.List<String> userIdList) {
             this.putBodyParameter("UserIdList", userIdList);
@@ -198,7 +216,10 @@ public class ListBindInfoRequest extends Request {
         }
 
         /**
-         * WyIdList.
+         * <p>The IDs of the Alibaba Cloud Workspace users. You can specify 1 to 100 IDs.</p>
+         * <blockquote>
+         * <p> If you specify this parameter, only the bindings of the specified Alibaba Cloud Workspace users are returned.</p>
+         * </blockquote>
          */
         public Builder wyIdList(java.util.List<String> wyIdList) {
             this.putBodyParameter("WyIdList", wyIdList);

@@ -130,7 +130,7 @@ public class ModifyBrowserInstanceGroupRequest extends Request {
         } 
 
         /**
-         * BrowserConfig.
+         * <p>The browser settings.</p>
          */
         public Builder browserConfig(BrowserConfig browserConfig) {
             String browserConfigShrink = shrink(browserConfig, "BrowserConfig", "json");
@@ -140,6 +140,7 @@ public class ModifyBrowserInstanceGroupRequest extends Request {
         }
 
         /**
+         * <p>The ID of the cloud browser to be modified.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -152,7 +153,10 @@ public class ModifyBrowserInstanceGroupRequest extends Request {
         }
 
         /**
-         * CloudBrowserName.
+         * <p>The name of the cloud browser.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>BrowserTest</p>
          */
         public Builder cloudBrowserName(String cloudBrowserName) {
             this.putBodyParameter("CloudBrowserName", cloudBrowserName);
@@ -161,7 +165,7 @@ public class ModifyBrowserInstanceGroupRequest extends Request {
         }
 
         /**
-         * Network.
+         * <p>The network configurations.</p>
          */
         public Builder network(Network network) {
             String networkShrink = shrink(network, "Network", "json");
@@ -171,7 +175,7 @@ public class ModifyBrowserInstanceGroupRequest extends Request {
         }
 
         /**
-         * Policy.
+         * <p>The access policy.</p>
          */
         public Builder policy(Policy policy) {
             String policyShrink = shrink(policy, "Policy", "json");
@@ -181,7 +185,7 @@ public class ModifyBrowserInstanceGroupRequest extends Request {
         }
 
         /**
-         * Timers.
+         * <p>The timer.</p>
          */
         public Builder timers(java.util.List<Timers> timers) {
             String timersShrink = shrink(timers, "Timers", "json");
@@ -278,7 +282,10 @@ public class ModifyBrowserInstanceGroupRequest extends Request {
             } 
 
             /**
-             * BookmarkFolder.
+             * <p>The folder where the bookmark is located.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>test</p>
              */
             public Builder bookmarkFolder(String bookmarkFolder) {
                 this.bookmarkFolder = bookmarkFolder;
@@ -286,7 +293,10 @@ public class ModifyBrowserInstanceGroupRequest extends Request {
             }
 
             /**
-             * BookmarkId.
+             * <p>The ID of the bookmark. This parameter needs to be specified only to modify the bookmark.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>bm-12345</p>
              */
             public Builder bookmarkId(String bookmarkId) {
                 this.bookmarkId = bookmarkId;
@@ -294,6 +304,7 @@ public class ModifyBrowserInstanceGroupRequest extends Request {
             }
 
             /**
+             * <p>The name of the bookmark.</p>
              * <p>This parameter is required.</p>
              * 
              * <strong>example:</strong>
@@ -305,6 +316,7 @@ public class ModifyBrowserInstanceGroupRequest extends Request {
             }
 
             /**
+             * <p>The URL of the bookmark.</p>
              * <p>This parameter is required.</p>
              * 
              * <strong>example:</strong>
@@ -401,7 +413,7 @@ public class ModifyBrowserInstanceGroupRequest extends Request {
             } 
 
             /**
-             * Bookmarks.
+             * <p>The bookmark.</p>
              */
             public Builder bookmarks(java.util.List<Bookmarks> bookmarks) {
                 this.bookmarks = bookmarks;
@@ -409,7 +421,10 @@ public class ModifyBrowserInstanceGroupRequest extends Request {
             }
 
             /**
-             * BrowserParam.
+             * <p>The startup parameter.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>--incognito</p>
              */
             public Builder browserParam(String browserParam) {
                 this.browserParam = browserParam;
@@ -417,7 +432,10 @@ public class ModifyBrowserInstanceGroupRequest extends Request {
             }
 
             /**
-             * Homepage.
+             * <p>The home page.</p>
+             * 
+             * <strong>example:</strong>
+             * <p><a href="https://www.aliyun.com">https://www.aliyun.com</a></p>
              */
             public Builder homepage(String homepage) {
                 this.homepage = homepage;
@@ -425,7 +443,7 @@ public class ModifyBrowserInstanceGroupRequest extends Request {
             }
 
             /**
-             * RemoveBookmarks.
+             * <p>The removed bookmarks.</p>
              */
             public Builder removeBookmarks(java.util.List<String> removeBookmarks) {
                 this.removeBookmarks = removeBookmarks;
@@ -492,7 +510,10 @@ public class ModifyBrowserInstanceGroupRequest extends Request {
             } 
 
             /**
-             * RestrictedURLId.
+             * <p>The ID of the domain name. This parameter is required only when you want to modify the domain restriction configuration.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>ru-12345</p>
              */
             public Builder restrictedURLId(String restrictedURLId) {
                 this.restrictedURLId = restrictedURLId;
@@ -500,7 +521,10 @@ public class ModifyBrowserInstanceGroupRequest extends Request {
             }
 
             /**
-             * URL.
+             * <p>The restricted domain name.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>aliyun.com</p>
              */
             public Builder URL(String URL) {
                 this.URL = URL;
@@ -580,7 +604,14 @@ public class ModifyBrowserInstanceGroupRequest extends Request {
             } 
 
             /**
-             * AccessRestriction.
+             * <p>The type of the access control list.</p>
+             * <p>Valid value:</p>
+             * <ul>
+             * <li>ALLOW_LIST: The whitelist.</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>ALLOW_LIST</p>
              */
             public Builder accessRestriction(String accessRestriction) {
                 this.accessRestriction = accessRestriction;
@@ -588,7 +619,7 @@ public class ModifyBrowserInstanceGroupRequest extends Request {
             }
 
             /**
-             * RemoveRestrictedURLIds.
+             * <p>The domain names to be removed.</p>
              */
             public Builder removeRestrictedURLIds(java.util.List<String> removeRestrictedURLIds) {
                 this.removeRestrictedURLIds = removeRestrictedURLIds;
@@ -596,7 +627,7 @@ public class ModifyBrowserInstanceGroupRequest extends Request {
             }
 
             /**
-             * RestrictedURLs.
+             * <p>The domain restriction configurations.</p>
              */
             public Builder restrictedURLs(java.util.List<RestrictedURLs> restrictedURLs) {
                 this.restrictedURLs = restrictedURLs;
@@ -728,7 +759,17 @@ public class ModifyBrowserInstanceGroupRequest extends Request {
             } 
 
             /**
-             * Clipboard.
+             * <p>The clipboard policy.</p>
+             * <p>Valid values:</p>
+             * <ul>
+             * <li>read: Allows copying from the local device to the cloud browser.</li>
+             * <li>readwrite: Allows copying in both directions.</li>
+             * <li>write: Allows copying from the cloud browser to the local device.</li>
+             * <li>off: Blocks copying in both directions.</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>off</p>
              */
             public Builder clipboard(String clipboard) {
                 this.clipboard = clipboard;
@@ -736,7 +777,10 @@ public class ModifyBrowserInstanceGroupRequest extends Request {
             }
 
             /**
-             * ClipboardReadLimit.
+             * <p>The maximum number of characters allowed when copying from the clipboard.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1000</p>
              */
             public Builder clipboardReadLimit(Integer clipboardReadLimit) {
                 this.clipboardReadLimit = clipboardReadLimit;
@@ -744,7 +788,15 @@ public class ModifyBrowserInstanceGroupRequest extends Request {
             }
 
             /**
-             * ClipboardScope.
+             * <p>The clipboard control scope.</p>
+             * <p>Valid values:</p>
+             * <ul>
+             * <li>grained: fine-grained control</li>
+             * <li>global: global control</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>global</p>
              */
             public Builder clipboardScope(String clipboardScope) {
                 this.clipboardScope = clipboardScope;
@@ -752,7 +804,10 @@ public class ModifyBrowserInstanceGroupRequest extends Request {
             }
 
             /**
-             * ClipboardWriteLimit.
+             * <p>The maximum number of characters allowed when copying to the clipboard.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1000</p>
              */
             public Builder clipboardWriteLimit(Integer clipboardWriteLimit) {
                 this.clipboardWriteLimit = clipboardWriteLimit;
@@ -760,7 +815,17 @@ public class ModifyBrowserInstanceGroupRequest extends Request {
             }
 
             /**
-             * FileClipboard.
+             * <p>The file clipboard policy.</p>
+             * <p>Valid values:</p>
+             * <ul>
+             * <li>read: Allows copying from the local device to the cloud browser.</li>
+             * <li>readwrite: Allows copying in both directions.</li>
+             * <li>write: Allows copying from the cloud browser to the local device.</li>
+             * <li>off: Blocks copying in both directions.</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>off</p>
              */
             public Builder fileClipboard(String fileClipboard) {
                 this.fileClipboard = fileClipboard;
@@ -768,7 +833,17 @@ public class ModifyBrowserInstanceGroupRequest extends Request {
             }
 
             /**
-             * RichTextClipboard.
+             * <p>The rich text clipboard policy.</p>
+             * <p>Valid values:</p>
+             * <ul>
+             * <li>read: Allows copying from the local device to the cloud browser.</li>
+             * <li>readwrite: Allows copying in both directions.</li>
+             * <li>write: Allows copying from the cloud browser to the local device.</li>
+             * <li>off: Blocks copying in both directions.</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>off</p>
              */
             public Builder richTextClipboard(String richTextClipboard) {
                 this.richTextClipboard = richTextClipboard;
@@ -776,7 +851,17 @@ public class ModifyBrowserInstanceGroupRequest extends Request {
             }
 
             /**
-             * TextClipboard.
+             * <p>The text clipboard policy.</p>
+             * <p>Valid values:</p>
+             * <ul>
+             * <li>read: Allows copying from the local device to the cloud browser.</li>
+             * <li>readwrite: Allows copying in both directions.</li>
+             * <li>write: Allows copying from the cloud browser to the local device.</li>
+             * <li>off: Blocks copying in both directions.</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>off</p>
              */
             public Builder textClipboard(String textClipboard) {
                 this.textClipboard = textClipboard;
@@ -830,7 +915,10 @@ public class ModifyBrowserInstanceGroupRequest extends Request {
             } 
 
             /**
-             * FrameRate.
+             * <p>The frame rate.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>60</p>
              */
             public Builder frameRate(Integer frameRate) {
                 this.frameRate = frameRate;
@@ -897,7 +985,15 @@ public class ModifyBrowserInstanceGroupRequest extends Request {
             } 
 
             /**
-             * WatermarkSwitch.
+             * <p>Specifies whether to enable the watermark.</p>
+             * <p>Valid values:</p>
+             * <ul>
+             * <li>off</li>
+             * <li>on</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>off</p>
              */
             public Builder watermarkSwitch(String watermarkSwitch) {
                 this.watermarkSwitch = watermarkSwitch;
@@ -905,7 +1001,7 @@ public class ModifyBrowserInstanceGroupRequest extends Request {
             }
 
             /**
-             * WatermarkTypes.
+             * <p>The watermark types.</p>
              */
             public Builder watermarkTypes(java.util.List<String> watermarkTypes) {
                 this.watermarkTypes = watermarkTypes;
@@ -938,6 +1034,12 @@ public class ModifyBrowserInstanceGroupRequest extends Request {
         @com.aliyun.core.annotation.NameInMap("Html5FileTransfer")
         private String html5FileTransfer;
 
+        @com.aliyun.core.annotation.NameInMap("NoOperationDisconnect")
+        private String noOperationDisconnect;
+
+        @com.aliyun.core.annotation.NameInMap("NoOperationDisconnectTime")
+        private Integer noOperationDisconnectTime;
+
         @com.aliyun.core.annotation.NameInMap("PolicyId")
         private String policyId;
 
@@ -955,6 +1057,8 @@ public class ModifyBrowserInstanceGroupRequest extends Request {
             this.disconnectKeepSession = builder.disconnectKeepSession;
             this.disconnectKeepSessionTime = builder.disconnectKeepSessionTime;
             this.html5FileTransfer = builder.html5FileTransfer;
+            this.noOperationDisconnect = builder.noOperationDisconnect;
+            this.noOperationDisconnectTime = builder.noOperationDisconnectTime;
             this.policyId = builder.policyId;
             this.policyVersion = builder.policyVersion;
             this.videoPolicy = builder.videoPolicy;
@@ -998,6 +1102,20 @@ public class ModifyBrowserInstanceGroupRequest extends Request {
         }
 
         /**
+         * @return noOperationDisconnect
+         */
+        public String getNoOperationDisconnect() {
+            return this.noOperationDisconnect;
+        }
+
+        /**
+         * @return noOperationDisconnectTime
+         */
+        public Integer getNoOperationDisconnectTime() {
+            return this.noOperationDisconnectTime;
+        }
+
+        /**
          * @return policyId
          */
         public String getPolicyId() {
@@ -1030,6 +1148,8 @@ public class ModifyBrowserInstanceGroupRequest extends Request {
             private String disconnectKeepSession; 
             private Integer disconnectKeepSessionTime; 
             private String html5FileTransfer; 
+            private String noOperationDisconnect; 
+            private Integer noOperationDisconnectTime; 
             private String policyId; 
             private String policyVersion; 
             private VideoPolicy videoPolicy; 
@@ -1043,6 +1163,8 @@ public class ModifyBrowserInstanceGroupRequest extends Request {
                 this.disconnectKeepSession = model.disconnectKeepSession;
                 this.disconnectKeepSessionTime = model.disconnectKeepSessionTime;
                 this.html5FileTransfer = model.html5FileTransfer;
+                this.noOperationDisconnect = model.noOperationDisconnect;
+                this.noOperationDisconnectTime = model.noOperationDisconnectTime;
                 this.policyId = model.policyId;
                 this.policyVersion = model.policyVersion;
                 this.videoPolicy = model.videoPolicy;
@@ -1050,7 +1172,7 @@ public class ModifyBrowserInstanceGroupRequest extends Request {
             } 
 
             /**
-             * ClipboardPolicy.
+             * <p>The settings related to clipboard control.</p>
              */
             public Builder clipboardPolicy(ClipboardPolicy clipboardPolicy) {
                 this.clipboardPolicy = clipboardPolicy;
@@ -1058,7 +1180,15 @@ public class ModifyBrowserInstanceGroupRequest extends Request {
             }
 
             /**
-             * DisconnectKeepSession.
+             * <p>Defines what happens to a session when a user disconnects.</p>
+             * <p>Valid values:</p>
+             * <ul>
+             * <li>customTime: The session will be terminated after a custom-defined timeout.</li>
+             * <li>persistent: The session will never be automatically terminated..</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>customTime</p>
              */
             public Builder disconnectKeepSession(String disconnectKeepSession) {
                 this.disconnectKeepSession = disconnectKeepSession;
@@ -1066,7 +1196,10 @@ public class ModifyBrowserInstanceGroupRequest extends Request {
             }
 
             /**
-             * DisconnectKeepSessionTime.
+             * <p>The session persistence duration.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>15</p>
              */
             public Builder disconnectKeepSessionTime(Integer disconnectKeepSessionTime) {
                 this.disconnectKeepSessionTime = disconnectKeepSessionTime;
@@ -1074,7 +1207,10 @@ public class ModifyBrowserInstanceGroupRequest extends Request {
             }
 
             /**
-             * Html5FileTransfer.
+             * <p>The file transfer policy on the web client.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>off</p>
              */
             public Builder html5FileTransfer(String html5FileTransfer) {
                 this.html5FileTransfer = html5FileTransfer;
@@ -1082,7 +1218,26 @@ public class ModifyBrowserInstanceGroupRequest extends Request {
             }
 
             /**
-             * PolicyId.
+             * NoOperationDisconnect.
+             */
+            public Builder noOperationDisconnect(String noOperationDisconnect) {
+                this.noOperationDisconnect = noOperationDisconnect;
+                return this;
+            }
+
+            /**
+             * NoOperationDisconnectTime.
+             */
+            public Builder noOperationDisconnectTime(Integer noOperationDisconnectTime) {
+                this.noOperationDisconnectTime = noOperationDisconnectTime;
+                return this;
+            }
+
+            /**
+             * <p>The ID of the policy.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>pg-12345</p>
              */
             public Builder policyId(String policyId) {
                 this.policyId = policyId;
@@ -1090,7 +1245,14 @@ public class ModifyBrowserInstanceGroupRequest extends Request {
             }
 
             /**
-             * PolicyVersion.
+             * <p>The policy version.</p>
+             * <p>Valid value:</p>
+             * <ul>
+             * <li>Center: center policy</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>Center</p>
              */
             public Builder policyVersion(String policyVersion) {
                 this.policyVersion = policyVersion;
@@ -1098,7 +1260,7 @@ public class ModifyBrowserInstanceGroupRequest extends Request {
             }
 
             /**
-             * VideoPolicy.
+             * <p>The display policy.</p>
              */
             public Builder videoPolicy(VideoPolicy videoPolicy) {
                 this.videoPolicy = videoPolicy;
@@ -1106,7 +1268,7 @@ public class ModifyBrowserInstanceGroupRequest extends Request {
             }
 
             /**
-             * WatermarkPolicy.
+             * <p>The watermark configuration.</p>
              */
             public Builder watermarkPolicy(WatermarkPolicy watermarkPolicy) {
                 this.watermarkPolicy = watermarkPolicy;
@@ -1173,7 +1335,10 @@ public class ModifyBrowserInstanceGroupRequest extends Request {
             } 
 
             /**
-             * Interval.
+             * <p>The interval.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>15</p>
              */
             public Builder interval(Integer interval) {
                 this.interval = interval;
@@ -1181,7 +1346,14 @@ public class ModifyBrowserInstanceGroupRequest extends Request {
             }
 
             /**
-             * TimerType.
+             * <p>The timer type:</p>
+             * <p>Valid value:</p>
+             * <ul>
+             * <li>SESSION_TIMEOUT: Defines the timeout period before a disconnected session is terminated.</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>SESSION_TIMEOUT</p>
              */
             public Builder timerType(String timerType) {
                 this.timerType = timerType;

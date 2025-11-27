@@ -106,7 +106,10 @@ public class CreateImageByInstanceResponseBody extends TeaModel {
         } 
 
         /**
-         * Code.
+         * <p>The error code.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>200</p>
          */
         public Builder code(String code) {
             this.code = code;
@@ -114,7 +117,7 @@ public class CreateImageByInstanceResponseBody extends TeaModel {
         }
 
         /**
-         * Data.
+         * <p>The returned data.</p>
          */
         public Builder data(Data data) {
             this.data = data;
@@ -122,7 +125,10 @@ public class CreateImageByInstanceResponseBody extends TeaModel {
         }
 
         /**
-         * Message.
+         * <p>The error message.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>NULL</p>
          */
         public Builder message(String message) {
             this.message = message;
@@ -130,7 +136,10 @@ public class CreateImageByInstanceResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1CBAFFAB-B697-4049-A9B1-67E1FC5F****</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -138,7 +147,10 @@ public class CreateImageByInstanceResponseBody extends TeaModel {
         }
 
         /**
-         * Success.
+         * <p>Indicates whether the request was successful. Valid values: true and false.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder success(Boolean success) {
             this.success = success;
@@ -217,7 +229,10 @@ public class CreateImageByInstanceResponseBody extends TeaModel {
             } 
 
             /**
-             * ImageId.
+             * <p>The ID of the RDS image.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>imgc-07hnjj5fp****</p>
              */
             public Builder imageId(String imageId) {
                 this.imageId = imageId;
@@ -225,7 +240,10 @@ public class CreateImageByInstanceResponseBody extends TeaModel {
             }
 
             /**
-             * TaskId.
+             * <p>The ID of the image creation task.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>tid-0abxi0lbih******</p>
              */
             public Builder taskId(String taskId) {
                 this.taskId = taskId;
@@ -233,7 +251,10 @@ public class CreateImageByInstanceResponseBody extends TeaModel {
             }
 
             /**
-             * VersionId.
+             * <p>The version of the image.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>iv-0abxi0lbi*****</p>
              */
             public Builder versionId(String versionId) {
                 this.versionId = versionId;

@@ -67,7 +67,7 @@ public class TagCloudResourcesResponseBody extends TeaModel {
         } 
 
         /**
-         * FailedResources.
+         * <p>The cloud resources on which the operation failed and the corresponding tags.</p>
          */
         public Builder failedResources(java.util.List<FailedResources> failedResources) {
             this.failedResources = failedResources;
@@ -300,7 +300,18 @@ public class TagCloudResourcesResponseBody extends TeaModel {
             }
 
             /**
-             * ResourceType.
+             * <p>The type of the cloud resource.</p>
+             * <p>Valid values:</p>
+             * <ul>
+             * <li>CenterImageId: center image ID.</li>
+             * <li>AppId: app ID.</li>
+             * <li>WyId: Alibaba Cloud Workspace user ID.</li>
+             * <li>AppInstanceGroupId: delivery group ID.</li>
+             * <li>AliUid: tenant ID.</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>AppInstanceGroupId</p>
              */
             public Builder resourceType(String resourceType) {
                 this.resourceType = resourceType;

@@ -33,6 +33,10 @@ public class ListAppInstanceGroupRequest extends Request {
     @com.aliyun.core.annotation.NameInMap("BizRegionId")
     private String bizRegionId;
 
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("ExcludedUserGroupIds")
+    private java.util.List<String> excludedUserGroupIds;
+
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("NodeInstanceType")
     private String nodeInstanceType;
@@ -68,12 +72,17 @@ public class ListAppInstanceGroupRequest extends Request {
     @com.aliyun.core.annotation.NameInMap("Tag")
     private java.util.List<Tag> tag;
 
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("UserGroupIds")
+    private java.util.List<String> userGroupIds;
+
     private ListAppInstanceGroupRequest(Builder builder) {
         super(builder);
         this.appCenterImageId = builder.appCenterImageId;
         this.appInstanceGroupId = builder.appInstanceGroupId;
         this.appInstanceGroupName = builder.appInstanceGroupName;
         this.bizRegionId = builder.bizRegionId;
+        this.excludedUserGroupIds = builder.excludedUserGroupIds;
         this.nodeInstanceType = builder.nodeInstanceType;
         this.officeSiteId = builder.officeSiteId;
         this.pageNumber = builder.pageNumber;
@@ -82,6 +91,7 @@ public class ListAppInstanceGroupRequest extends Request {
         this.regionId = builder.regionId;
         this.status = builder.status;
         this.tag = builder.tag;
+        this.userGroupIds = builder.userGroupIds;
     }
 
     public static Builder builder() {
@@ -123,6 +133,13 @@ public class ListAppInstanceGroupRequest extends Request {
      */
     public String getBizRegionId() {
         return this.bizRegionId;
+    }
+
+    /**
+     * @return excludedUserGroupIds
+     */
+    public java.util.List<String> getExcludedUserGroupIds() {
+        return this.excludedUserGroupIds;
     }
 
     /**
@@ -181,11 +198,19 @@ public class ListAppInstanceGroupRequest extends Request {
         return this.tag;
     }
 
+    /**
+     * @return userGroupIds
+     */
+    public java.util.List<String> getUserGroupIds() {
+        return this.userGroupIds;
+    }
+
     public static final class Builder extends Request.Builder<ListAppInstanceGroupRequest, Builder> {
         private String appCenterImageId; 
         private String appInstanceGroupId; 
         private String appInstanceGroupName; 
         private String bizRegionId; 
+        private java.util.List<String> excludedUserGroupIds; 
         private String nodeInstanceType; 
         private String officeSiteId; 
         private Integer pageNumber; 
@@ -194,6 +219,7 @@ public class ListAppInstanceGroupRequest extends Request {
         private String regionId; 
         private java.util.List<String> status; 
         private java.util.List<Tag> tag; 
+        private java.util.List<String> userGroupIds; 
 
         private Builder() {
             super();
@@ -205,6 +231,7 @@ public class ListAppInstanceGroupRequest extends Request {
             this.appInstanceGroupId = request.appInstanceGroupId;
             this.appInstanceGroupName = request.appInstanceGroupName;
             this.bizRegionId = request.bizRegionId;
+            this.excludedUserGroupIds = request.excludedUserGroupIds;
             this.nodeInstanceType = request.nodeInstanceType;
             this.officeSiteId = request.officeSiteId;
             this.pageNumber = request.pageNumber;
@@ -213,6 +240,7 @@ public class ListAppInstanceGroupRequest extends Request {
             this.regionId = request.regionId;
             this.status = request.status;
             this.tag = request.tag;
+            this.userGroupIds = request.userGroupIds;
         } 
 
         /**
@@ -262,6 +290,15 @@ public class ListAppInstanceGroupRequest extends Request {
         public Builder bizRegionId(String bizRegionId) {
             this.putQueryParameter("BizRegionId", bizRegionId);
             this.bizRegionId = bizRegionId;
+            return this;
+        }
+
+        /**
+         * ExcludedUserGroupIds.
+         */
+        public Builder excludedUserGroupIds(java.util.List<String> excludedUserGroupIds) {
+            this.putBodyParameter("ExcludedUserGroupIds", excludedUserGroupIds);
+            this.excludedUserGroupIds = excludedUserGroupIds;
             return this;
         }
 
@@ -354,6 +391,15 @@ public class ListAppInstanceGroupRequest extends Request {
         public Builder tag(java.util.List<Tag> tag) {
             this.putQueryParameter("Tag", tag);
             this.tag = tag;
+            return this;
+        }
+
+        /**
+         * UserGroupIds.
+         */
+        public Builder userGroupIds(java.util.List<String> userGroupIds) {
+            this.putBodyParameter("UserGroupIds", userGroupIds);
+            this.userGroupIds = userGroupIds;
             return this;
         }
 

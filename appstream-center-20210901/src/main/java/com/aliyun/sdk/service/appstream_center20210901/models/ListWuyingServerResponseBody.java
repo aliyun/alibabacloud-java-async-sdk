@@ -106,7 +106,10 @@ public class ListWuyingServerResponseBody extends TeaModel {
         } 
 
         /**
-         * PageNumber.
+         * <p>The page number.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder pageNumber(Integer pageNumber) {
             this.pageNumber = pageNumber;
@@ -114,7 +117,10 @@ public class ListWuyingServerResponseBody extends TeaModel {
         }
 
         /**
-         * PageSize.
+         * <p>The number of entries per page.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10</p>
          */
         public Builder pageSize(Integer pageSize) {
             this.pageSize = pageSize;
@@ -122,7 +128,10 @@ public class ListWuyingServerResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1CBAFFAB-B697-4049-A9B1-67E1FC5F****</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -130,7 +139,10 @@ public class ListWuyingServerResponseBody extends TeaModel {
         }
 
         /**
-         * TotalCount.
+         * <p>The total number of entries returned.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>15</p>
          */
         public Builder totalCount(Integer totalCount) {
             this.totalCount = totalCount;
@@ -138,7 +150,7 @@ public class ListWuyingServerResponseBody extends TeaModel {
         }
 
         /**
-         * WuyingServerList.
+         * <p>The list of workstation information.</p>
          */
         public Builder wuyingServerList(java.util.List<WuyingServerList> wuyingServerList) {
             this.wuyingServerList = wuyingServerList;
@@ -217,7 +229,10 @@ public class ListWuyingServerResponseBody extends TeaModel {
             } 
 
             /**
-             * DataDiskCategory.
+             * <p>The category of data disk.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>cloud_auto</p>
              */
             public Builder dataDiskCategory(String dataDiskCategory) {
                 this.dataDiskCategory = dataDiskCategory;
@@ -225,7 +240,10 @@ public class ListWuyingServerResponseBody extends TeaModel {
             }
 
             /**
-             * DataDiskPerformanceLevel.
+             * <p>The PL of the data disk.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>PL0</p>
              */
             public Builder dataDiskPerformanceLevel(String dataDiskPerformanceLevel) {
                 this.dataDiskPerformanceLevel = dataDiskPerformanceLevel;
@@ -233,7 +251,10 @@ public class ListWuyingServerResponseBody extends TeaModel {
             }
 
             /**
-             * DataDiskSize.
+             * <p>The size of the data disk. Unit: GB.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>200</p>
              */
             public Builder dataDiskSize(Integer dataDiskSize) {
                 this.dataDiskSize = dataDiskSize;
@@ -300,7 +321,10 @@ public class ListWuyingServerResponseBody extends TeaModel {
             } 
 
             /**
-             * InstanceId.
+             * <p>The ID of the instance.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>p-0ceitx****c5</p>
              */
             public Builder instanceId(String instanceId) {
                 this.instanceId = instanceId;
@@ -308,7 +332,10 @@ public class ListWuyingServerResponseBody extends TeaModel {
             }
 
             /**
-             * NetworkInterfaceId.
+             * <p>The ID of the ENI.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>eni-uf65b****dfnt3wb</p>
              */
             public Builder networkInterfaceId(String networkInterfaceId) {
                 this.networkInterfaceId = networkInterfaceId;
@@ -414,7 +441,10 @@ public class ListWuyingServerResponseBody extends TeaModel {
             } 
 
             /**
-             * Cpu.
+             * <p>The number of vCPUs.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>96</p>
              */
             public Builder cpu(String cpu) {
                 this.cpu = cpu;
@@ -422,7 +452,10 @@ public class ListWuyingServerResponseBody extends TeaModel {
             }
 
             /**
-             * Gpu.
+             * <p>The number of GPUs.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>4</p>
              */
             public Builder gpu(String gpu) {
                 this.gpu = gpu;
@@ -430,7 +463,10 @@ public class ListWuyingServerResponseBody extends TeaModel {
             }
 
             /**
-             * GpuMemory.
+             * <p>The memory size. Unit: MB.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>196,608</p>
              */
             public Builder gpuMemory(Integer gpuMemory) {
                 this.gpuMemory = gpuMemory;
@@ -438,7 +474,10 @@ public class ListWuyingServerResponseBody extends TeaModel {
             }
 
             /**
-             * Memory.
+             * <p>The memory size. Unit: MB.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>393,216</p>
              */
             public Builder memory(Integer memory) {
                 this.memory = memory;
@@ -446,7 +485,10 @@ public class ListWuyingServerResponseBody extends TeaModel {
             }
 
             /**
-             * ServerInstanceType.
+             * <p>Workstation specifications.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>eds.proworkstation_flagship_elite_ne.96c384g.192g4x</p>
              */
             public Builder serverInstanceType(String serverInstanceType) {
                 this.serverInstanceType = serverInstanceType;
@@ -794,7 +836,10 @@ public class ListWuyingServerResponseBody extends TeaModel {
             }
 
             /**
-             * BizRegionId.
+             * <p>Region.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>cn-hangzhou</p>
              */
             public Builder bizRegionId(String bizRegionId) {
                 this.bizRegionId = bizRegionId;
@@ -802,7 +847,10 @@ public class ListWuyingServerResponseBody extends TeaModel {
             }
 
             /**
-             * ChargeType.
+             * <p>The billing method.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>PrePaid</p>
              */
             public Builder chargeType(String chargeType) {
                 this.chargeType = chargeType;
@@ -810,7 +858,10 @@ public class ListWuyingServerResponseBody extends TeaModel {
             }
 
             /**
-             * CreateTime.
+             * <p>The time when the storage resource was created.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2025-08-02T16:52:11.000+00:00</p>
              */
             public Builder createTime(String createTime) {
                 this.createTime = createTime;
@@ -818,7 +869,7 @@ public class ListWuyingServerResponseBody extends TeaModel {
             }
 
             /**
-             * DataDisk.
+             * <p>The data disks.</p>
              */
             public Builder dataDisk(java.util.List<DataDisk> dataDisk) {
                 this.dataDisk = dataDisk;
@@ -826,7 +877,10 @@ public class ListWuyingServerResponseBody extends TeaModel {
             }
 
             /**
-             * ExpiredTime.
+             * <p>The time when the subscription instance expires.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2025-09-03T16:00:00.000+00:00</p>
              */
             public Builder expiredTime(String expiredTime) {
                 this.expiredTime = expiredTime;
@@ -834,7 +888,10 @@ public class ListWuyingServerResponseBody extends TeaModel {
             }
 
             /**
-             * ImageId.
+             * <p>The ID of the custom image.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>imgc-06****oagaev</p>
              */
             public Builder imageId(String imageId) {
                 this.imageId = imageId;
@@ -842,7 +899,7 @@ public class ListWuyingServerResponseBody extends TeaModel {
             }
 
             /**
-             * ImageName.
+             * <p>The image name.</p>
              */
             public Builder imageName(String imageName) {
                 this.imageName = imageName;
@@ -850,7 +907,7 @@ public class ListWuyingServerResponseBody extends TeaModel {
             }
 
             /**
-             * InstanceInfoList.
+             * <p>The list of information about the workstation instance.</p>
              */
             public Builder instanceInfoList(java.util.List<InstanceInfoList> instanceInfoList) {
                 this.instanceInfoList = instanceInfoList;
@@ -858,7 +915,10 @@ public class ListWuyingServerResponseBody extends TeaModel {
             }
 
             /**
-             * NetworkInterfaceIp.
+             * <p>The private IP address.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>10.80.21.149</p>
              */
             public Builder networkInterfaceIp(String networkInterfaceIp) {
                 this.networkInterfaceIp = networkInterfaceIp;
@@ -866,7 +926,10 @@ public class ListWuyingServerResponseBody extends TeaModel {
             }
 
             /**
-             * OfficeSiteId.
+             * <p>The ID of the office network.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>cn-hangzhou+dir-1b****ayv2</p>
              */
             public Builder officeSiteId(String officeSiteId) {
                 this.officeSiteId = officeSiteId;
@@ -874,7 +937,10 @@ public class ListWuyingServerResponseBody extends TeaModel {
             }
 
             /**
-             * OfficeSiteName.
+             * <p>The office network name.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>exampleOfficeSite</p>
              */
             public Builder officeSiteName(String officeSiteName) {
                 this.officeSiteName = officeSiteName;
@@ -882,7 +948,10 @@ public class ListWuyingServerResponseBody extends TeaModel {
             }
 
             /**
-             * OfficeSiteType.
+             * <p>The type of the office network.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>SIMPLE</p>
              */
             public Builder officeSiteType(String officeSiteType) {
                 this.officeSiteType = officeSiteType;
@@ -890,7 +959,10 @@ public class ListWuyingServerResponseBody extends TeaModel {
             }
 
             /**
-             * OsType.
+             * <p>The OS type.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Linux</p>
              */
             public Builder osType(String osType) {
                 this.osType = osType;
@@ -906,7 +978,7 @@ public class ListWuyingServerResponseBody extends TeaModel {
             }
 
             /**
-             * ServerInstanceTypeInfo.
+             * <p>The specifications.</p>
              */
             public Builder serverInstanceTypeInfo(ServerInstanceTypeInfo serverInstanceTypeInfo) {
                 this.serverInstanceTypeInfo = serverInstanceTypeInfo;
@@ -914,7 +986,10 @@ public class ListWuyingServerResponseBody extends TeaModel {
             }
 
             /**
-             * Status.
+             * <p>The status of the workstation.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>RUNNING</p>
              */
             public Builder status(String status) {
                 this.status = status;
@@ -922,7 +997,10 @@ public class ListWuyingServerResponseBody extends TeaModel {
             }
 
             /**
-             * SystemDiskCategory.
+             * <p>The type of the system disk.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>cloud_auto</p>
              */
             public Builder systemDiskCategory(String systemDiskCategory) {
                 this.systemDiskCategory = systemDiskCategory;
@@ -930,7 +1008,10 @@ public class ListWuyingServerResponseBody extends TeaModel {
             }
 
             /**
-             * SystemDiskPerformanceLevel.
+             * <p>The performance level (PL) of the system disk.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>PL0</p>
              */
             public Builder systemDiskPerformanceLevel(String systemDiskPerformanceLevel) {
                 this.systemDiskPerformanceLevel = systemDiskPerformanceLevel;
@@ -938,7 +1019,10 @@ public class ListWuyingServerResponseBody extends TeaModel {
             }
 
             /**
-             * SystemDiskSize.
+             * <p>The size of the system disk. Unit: GiB.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>100</p>
              */
             public Builder systemDiskSize(Integer systemDiskSize) {
                 this.systemDiskSize = systemDiskSize;
@@ -954,7 +1038,10 @@ public class ListWuyingServerResponseBody extends TeaModel {
             }
 
             /**
-             * WuyingServerId.
+             * <p>The ID of the workstation.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>ws-0byd****8wn2lwi</p>
              */
             public Builder wuyingServerId(String wuyingServerId) {
                 this.wuyingServerId = wuyingServerId;
@@ -962,7 +1049,10 @@ public class ListWuyingServerResponseBody extends TeaModel {
             }
 
             /**
-             * WuyingServerName.
+             * <p>The name of the workstation.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>exampleServerName</p>
              */
             public Builder wuyingServerName(String wuyingServerName) {
                 this.wuyingServerName = wuyingServerName;

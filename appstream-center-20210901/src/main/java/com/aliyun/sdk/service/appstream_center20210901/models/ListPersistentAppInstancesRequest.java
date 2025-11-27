@@ -118,6 +118,7 @@ public class ListPersistentAppInstancesRequest extends Request {
         } 
 
         /**
+         * <p>The ID of the delivery group.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -130,7 +131,7 @@ public class ListPersistentAppInstancesRequest extends Request {
         }
 
         /**
-         * AppInstancePersistentIds.
+         * <p>The IDs of the persistent sessions.</p>
          */
         public Builder appInstancePersistentIds(java.util.List<String> appInstancePersistentIds) {
             this.putQueryParameter("AppInstancePersistentIds", appInstancePersistentIds);
@@ -139,7 +140,10 @@ public class ListPersistentAppInstancesRequest extends Request {
         }
 
         /**
-         * PageNumber.
+         * <p>The page number. Pages start from page <strong>1</strong>. Default value: <strong>1</strong>.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder pageNumber(Integer pageNumber) {
             this.putQueryParameter("PageNumber", pageNumber);
@@ -148,7 +152,10 @@ public class ListPersistentAppInstancesRequest extends Request {
         }
 
         /**
-         * PageSize.
+         * <p>The number of entries per page. The value cannot be greater than <strong>100</strong>. Default value: <strong>20</strong>.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>20</p>
          */
         public Builder pageSize(Integer pageSize) {
             this.putQueryParameter("PageSize", pageSize);
@@ -157,6 +164,13 @@ public class ListPersistentAppInstancesRequest extends Request {
         }
 
         /**
+         * <p>The product type.</p>
+         * <p>Valid values:</p>
+         * <ul>
+         * <li>CloudApp: App Streaming</li>
+         * <li>CloudBrowser: Cloud-based Browser</li>
+         * <li>AndroidCloud: Cloud Phone</li>
+         * </ul>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>

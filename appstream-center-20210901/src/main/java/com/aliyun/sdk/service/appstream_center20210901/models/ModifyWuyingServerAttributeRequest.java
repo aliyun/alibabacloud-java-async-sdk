@@ -87,7 +87,10 @@ public class ModifyWuyingServerAttributeRequest extends Request {
         } 
 
         /**
-         * Password.
+         * <p>Workstation login password.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>yourPassword</p>
          */
         public Builder password(String password) {
             this.putBodyParameter("Password", password);
@@ -96,7 +99,10 @@ public class ModifyWuyingServerAttributeRequest extends Request {
         }
 
         /**
-         * WuyingServerId.
+         * <p>The ID of the workstation.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>ws-0bw2f11****dial</p>
          */
         public Builder wuyingServerId(String wuyingServerId) {
             this.putBodyParameter("WuyingServerId", wuyingServerId);
@@ -105,7 +111,10 @@ public class ModifyWuyingServerAttributeRequest extends Request {
         }
 
         /**
-         * WuyingServerName.
+         * <p>The name.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>exampleServerName</p>
          */
         public Builder wuyingServerName(String wuyingServerName) {
             this.putBodyParameter("WuyingServerName", wuyingServerName);

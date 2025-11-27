@@ -194,7 +194,15 @@ public class CreateImageByInstanceRequest extends Request {
         }
 
         /**
-         * AutoCleanUserdata.
+         * <p>This parameter is applicable only to scenarios in which the instance type is Cloud Desktop. Specifies whether to clear private data of users. If this parameter is set to true, the created image clears data in directories other than Administrator and Public in the C:\Users directory.</p>
+         * <p>Valid values:</p>
+         * <ul>
+         * <li>true: cleanup.</li>
+         * <li>false: does not clear.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>false</p>
          */
         public Builder autoCleanUserdata(Boolean autoCleanUserdata) {
             this.putBodyParameter("AutoCleanUserdata", autoCleanUserdata);
@@ -203,7 +211,10 @@ public class CreateImageByInstanceRequest extends Request {
         }
 
         /**
-         * BizType.
+         * <p>This parameter is not publicly available.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder bizType(Integer bizType) {
             this.putBodyParameter("BizType", bizType);
@@ -212,7 +223,10 @@ public class CreateImageByInstanceRequest extends Request {
         }
 
         /**
-         * Description.
+         * <p>The description of the image.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>my test image v1.0</p>
          */
         public Builder description(String description) {
             this.putBodyParameter("Description", description);
@@ -221,7 +235,15 @@ public class CreateImageByInstanceRequest extends Request {
         }
 
         /**
-         * DiskType.
+         * <p>The type of disk data contained in the image. By default, the system disk and data disk of the instance are included.</p>
+         * <p>Valid values:</p>
+         * <ul>
+         * <li>SYSTEM: only system disk.</li>
+         * <li>ALL: system disk + data disk</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>ALL</p>
          */
         public Builder diskType(String diskType) {
             this.putBodyParameter("DiskType", diskType);
@@ -230,7 +252,10 @@ public class CreateImageByInstanceRequest extends Request {
         }
 
         /**
-         * ImageName.
+         * <p>The name of the image.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>test</p>
          */
         public Builder imageName(String imageName) {
             this.putBodyParameter("ImageName", imageName);
@@ -239,7 +264,10 @@ public class CreateImageByInstanceRequest extends Request {
         }
 
         /**
-         * InstanceId.
+         * <p>The ID of the RDS instance. The instance can be a CloudDesktop instance, a workstation instance. To ensure data consistency in the image, we recommend that you shut down the instance before you create an image.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>ws-0buj1s9gm******</p>
          */
         public Builder instanceId(String instanceId) {
             this.putBodyParameter("InstanceId", instanceId);
@@ -248,7 +276,15 @@ public class CreateImageByInstanceRequest extends Request {
         }
 
         /**
-         * InstanceType.
+         * <p>The instance type.</p>
+         * <p>Valid values:</p>
+         * <ul>
+         * <li>CloudDesktop: Cloud Desktop.</li>
+         * <li>WuyingServer: Workstation</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>WuyingServer</p>
          */
         public Builder instanceType(String instanceType) {
             this.putBodyParameter("InstanceType", instanceType);
@@ -257,7 +293,10 @@ public class CreateImageByInstanceRequest extends Request {
         }
 
         /**
-         * ProductType.
+         * <p>This parameter is not publicly available.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>WuyingServer</p>
          */
         public Builder productType(String productType) {
             this.putBodyParameter("ProductType", productType);
@@ -266,7 +305,10 @@ public class CreateImageByInstanceRequest extends Request {
         }
 
         /**
-         * SubInstanceId.
+         * <p>The ID of the child instance. This parameter is not used in cloud computing scenarios. Workstation scenarios, you need to specify a persistent session ID to ensure that a specific instance is located.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>p-0cc7s3n1l*****</p>
          */
         public Builder subInstanceId(String subInstanceId) {
             this.putBodyParameter("SubInstanceId", subInstanceId);

@@ -50,6 +50,16 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<CreateImageFromAppInstanceGroupResponse> createImageFromAppInstanceGroup(CreateImageFromAppInstanceGroupRequest request);
 
     /**
+     * <b>description</b> :
+     * <ol>
+     * <li>Project is equivalent to the Resource Configuration module of the Cloud Flow console</li>
+     * <li>If there are multiple versions behind the input parameter ContentId:
+     * **
+     * <strong>Note</strong> The default version is used.
+     * Bind simultaneously</li>
+     * <li>You can call the current interface only if the default version of Content is available.</li>
+     * </ol>
+     * 
      * @param request the request parameters of CreateWuyingServer  CreateWuyingServerRequest
      * @return CreateWuyingServerResponse
      */
@@ -76,12 +86,23 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<DeleteAppInstancesResponse> deleteAppInstances(DeleteAppInstancesRequest request);
 
     /**
+     * <b>description</b> :
+     * <p>  You can only delete custom images to which a user belongs.</p>
+     * <ul>
+     * <li>If the product line is an image of the RDS cloud computer pool, RDS cloud application, and RDS workstation, make sure that no RDS instances use the image before you delete it.</li>
+     * <li>The RDS CloudDesktop template references an image. When you delete an image, the template is also deleted.</li>
+     * <li>If the image contains multiple regions, the images in all regions are deleted when the image is deleted.</li>
+     * </ul>
+     * 
      * @param request the request parameters of DeleteImage  DeleteImageRequest
      * @return DeleteImageResponse
      */
     CompletableFuture<DeleteImageResponse> deleteImage(DeleteImageRequest request);
 
     /**
+     * <b>description</b> :
+     * <p>Deletes a workstation.</p>
+     * 
      * @param request the request parameters of DeleteWuyingServer  DeleteWuyingServerRequest
      * @return DeleteWuyingServerResponse
      */
@@ -241,6 +262,9 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<ModifyAppPolicyResponse> modifyAppPolicy(ModifyAppPolicyRequest request);
 
     /**
+     * <b>description</b> :
+     * <p>Modifies the properties of the cloud browser.</p>
+     * 
      * @param request the request parameters of ModifyBrowserInstanceGroup  ModifyBrowserInstanceGroupRequest
      * @return ModifyBrowserInstanceGroupResponse
      */

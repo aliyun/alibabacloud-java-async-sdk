@@ -133,6 +133,7 @@ public class ListAuthorizedUserGroupsRequest extends Request {
         } 
 
         /**
+         * <p>The ID of the delivery group.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -145,7 +146,10 @@ public class ListAuthorizedUserGroupsRequest extends Request {
         }
 
         /**
-         * GroupId.
+         * <p>The ID of the user group (exact match).</p>
+         * 
+         * <strong>example:</strong>
+         * <p>ug-00001</p>
          */
         public Builder groupId(String groupId) {
             this.putBodyParameter("GroupId", groupId);
@@ -154,7 +158,7 @@ public class ListAuthorizedUserGroupsRequest extends Request {
         }
 
         /**
-         * GroupName.
+         * <p>The name of the user group (fuzzy match).</p>
          */
         public Builder groupName(String groupName) {
             this.putBodyParameter("GroupName", groupName);
@@ -163,6 +167,7 @@ public class ListAuthorizedUserGroupsRequest extends Request {
         }
 
         /**
+         * <p>The page number. Pages start from page 1.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -175,6 +180,7 @@ public class ListAuthorizedUserGroupsRequest extends Request {
         }
 
         /**
+         * <p>The maximum number of entries returned per page.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -187,6 +193,11 @@ public class ListAuthorizedUserGroupsRequest extends Request {
         }
 
         /**
+         * <p>The product type.</p>
+         * <p>Valid values:</p>
+         * <ul>
+         * <li>CloudApp: App Streaming</li>
+         * </ul>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>

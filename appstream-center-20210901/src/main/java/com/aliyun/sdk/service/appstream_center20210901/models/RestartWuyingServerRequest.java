@@ -59,7 +59,7 @@ public class RestartWuyingServerRequest extends Request {
         } 
 
         /**
-         * WuyingServerIdList.
+         * <p>The list of workstation IDs.</p>
          */
         public Builder wuyingServerIdList(java.util.List<String> wuyingServerIdList) {
             this.putBodyParameter("WuyingServerIdList", wuyingServerIdList);

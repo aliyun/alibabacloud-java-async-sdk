@@ -74,7 +74,15 @@ public class DescribeWuyingServerEipInfoRequest extends Request {
         } 
 
         /**
-         * Isp.
+         * <p>The Internet service provider (ISP). Valid values:</p>
+         * <ul>
+         * <li>ChinaMobile: China Mobile</li>
+         * <li>ChinaTelecom: China Telecom</li>
+         * <li>ChinaUnicom: China Unicom</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>ChinaTelecom</p>
          */
         public Builder isp(String isp) {
             this.putBodyParameter("Isp", isp);
@@ -83,6 +91,7 @@ public class DescribeWuyingServerEipInfoRequest extends Request {
         }
 
         /**
+         * <p>The ID of the workstation.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>

@@ -60,6 +60,10 @@ public class GetConnectionTicketRequest extends Request {
     private String endUserId;
 
     @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("EnvironmentConfig")
+    private String environmentConfig;
+
+    @com.aliyun.core.annotation.Body
     @com.aliyun.core.annotation.NameInMap("ProductType")
     @com.aliyun.core.annotation.Validation(required = true)
     private String productType;
@@ -80,6 +84,7 @@ public class GetConnectionTicketRequest extends Request {
         this.appVersion = builder.appVersion;
         this.bizRegionId = builder.bizRegionId;
         this.endUserId = builder.endUserId;
+        this.environmentConfig = builder.environmentConfig;
         this.productType = builder.productType;
         this.taskId = builder.taskId;
     }
@@ -168,6 +173,13 @@ public class GetConnectionTicketRequest extends Request {
     }
 
     /**
+     * @return environmentConfig
+     */
+    public String getEnvironmentConfig() {
+        return this.environmentConfig;
+    }
+
+    /**
      * @return productType
      */
     public String getProductType() {
@@ -192,6 +204,7 @@ public class GetConnectionTicketRequest extends Request {
         private String appVersion; 
         private String bizRegionId; 
         private String endUserId; 
+        private String environmentConfig; 
         private String productType; 
         private String taskId; 
 
@@ -211,6 +224,7 @@ public class GetConnectionTicketRequest extends Request {
             this.appVersion = request.appVersion;
             this.bizRegionId = request.bizRegionId;
             this.endUserId = request.endUserId;
+            this.environmentConfig = request.environmentConfig;
             this.productType = request.productType;
             this.taskId = request.taskId;
         } 
@@ -342,6 +356,15 @@ public class GetConnectionTicketRequest extends Request {
         public Builder endUserId(String endUserId) {
             this.putBodyParameter("EndUserId", endUserId);
             this.endUserId = endUserId;
+            return this;
+        }
+
+        /**
+         * <p>The environment configuration.</p>
+         */
+        public Builder environmentConfig(String environmentConfig) {
+            this.putBodyParameter("EnvironmentConfig", environmentConfig);
+            this.environmentConfig = environmentConfig;
             return this;
         }
 

@@ -67,7 +67,7 @@ public class DescribeWuyingServerEipInfoResponseBody extends TeaModel {
         } 
 
         /**
-         * EipInfoModel.
+         * <p>The information about the associated EIP.</p>
          */
         public Builder eipInfoModel(EipInfoModel eipInfoModel) {
             this.eipInfoModel = eipInfoModel;
@@ -157,7 +157,10 @@ public class DescribeWuyingServerEipInfoResponseBody extends TeaModel {
             } 
 
             /**
-             * IpAddress.
+             * <p>The public IP address.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>171.xxx.xxx.221</p>
              */
             public Builder ipAddress(String ipAddress) {
                 this.ipAddress = ipAddress;
@@ -165,7 +168,10 @@ public class DescribeWuyingServerEipInfoResponseBody extends TeaModel {
             }
 
             /**
-             * NetworkInterfaceId.
+             * <p>The ID of the elastic network interface (ENI).</p>
+             * 
+             * <strong>example:</strong>
+             * <p>eni-bp174p2xxxxxbyh02ix</p>
              */
             public Builder networkInterfaceId(String networkInterfaceId) {
                 this.networkInterfaceId = networkInterfaceId;
@@ -173,7 +179,10 @@ public class DescribeWuyingServerEipInfoResponseBody extends TeaModel {
             }
 
             /**
-             * ServerPortRange.
+             * <p>The port range.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>6606/6607</p>
              */
             public Builder serverPortRange(String serverPortRange) {
                 this.serverPortRange = serverPortRange;

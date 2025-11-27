@@ -217,7 +217,7 @@ public class GetConnectionTicketResponseBody extends TeaModel {
         }
 
         /**
-         * AvatarId.
+         * <p>The avatar ID.</p>
          */
         public Builder avatarId(String avatarId) {
             this.avatarId = avatarId;

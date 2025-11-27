@@ -382,7 +382,10 @@ public class CreateWuyingServerRequest extends Request {
         } 
 
         /**
-         * Amount.
+         * <p>Quantity.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder amount(Integer amount) {
             this.putBodyParameter("Amount", amount);
@@ -391,7 +394,10 @@ public class CreateWuyingServerRequest extends Request {
         }
 
         /**
-         * AutoPay.
+         * <p>Auto payment.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>false</p>
          */
         public Builder autoPay(Boolean autoPay) {
             this.putBodyParameter("AutoPay", autoPay);
@@ -400,7 +406,10 @@ public class CreateWuyingServerRequest extends Request {
         }
 
         /**
-         * AutoRenew.
+         * <p>Auto-renewal.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>false</p>
          */
         public Builder autoRenew(Boolean autoRenew) {
             this.putBodyParameter("AutoRenew", autoRenew);
@@ -409,7 +418,10 @@ public class CreateWuyingServerRequest extends Request {
         }
 
         /**
-         * Bandwidth.
+         * <p>bandwidth value, the NetworkStrategyType is valid for DirectIp. Unit: Mbps, range 2~100</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10</p>
          */
         public Builder bandwidth(Integer bandwidth) {
             this.putBodyParameter("Bandwidth", bandwidth);
@@ -418,7 +430,10 @@ public class CreateWuyingServerRequest extends Request {
         }
 
         /**
-         * BizRegionId.
+         * <p>Region.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-hangzhou</p>
          */
         public Builder bizRegionId(String bizRegionId) {
             this.putBodyParameter("BizRegionId", bizRegionId);
@@ -427,7 +442,14 @@ public class CreateWuyingServerRequest extends Request {
         }
 
         /**
-         * ChargeType.
+         * <p>The billing method.</p>
+         * <p>Valid values:</p>
+         * <ul>
+         * <li>PrePaid: subscription</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>PrePaid</p>
          */
         public Builder chargeType(String chargeType) {
             this.putBodyParameter("ChargeType", chargeType);
@@ -436,7 +458,7 @@ public class CreateWuyingServerRequest extends Request {
         }
 
         /**
-         * DataDisk.
+         * <p>The list of data disks.</p>
          */
         public Builder dataDisk(java.util.List<DataDisk> dataDisk) {
             this.putBodyParameter("DataDisk", dataDisk);
@@ -445,7 +467,10 @@ public class CreateWuyingServerRequest extends Request {
         }
 
         /**
-         * IdempotenceToken.
+         * <p>Idempotence token to ensure operation uniqueness</p>
+         * 
+         * <strong>example:</strong>
+         * <p>6a1b8c3d</p>
          */
         public Builder idempotenceToken(String idempotenceToken) {
             this.putBodyParameter("IdempotenceToken", idempotenceToken);
@@ -454,7 +479,10 @@ public class CreateWuyingServerRequest extends Request {
         }
 
         /**
-         * ImageId.
+         * <p>The ID of the image.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>img-bp13mu****</p>
          */
         public Builder imageId(String imageId) {
             this.putBodyParameter("ImageId", imageId);
@@ -463,7 +491,10 @@ public class CreateWuyingServerRequest extends Request {
         }
 
         /**
-         * NetworkStrategyType.
+         * <p>The type of the network policy (in invitational preview).</p>
+         * 
+         * <strong>example:</strong>
+         * <p>DirectIp</p>
          */
         public Builder networkStrategyType(String networkStrategyType) {
             this.putBodyParameter("NetworkStrategyType", networkStrategyType);
@@ -472,7 +503,10 @@ public class CreateWuyingServerRequest extends Request {
         }
 
         /**
-         * OfficeSiteId.
+         * <p>The office network IDs.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-hangzhou+dir-643067****</p>
          */
         public Builder officeSiteId(String officeSiteId) {
             this.putBodyParameter("OfficeSiteId", officeSiteId);
@@ -481,7 +515,10 @@ public class CreateWuyingServerRequest extends Request {
         }
 
         /**
-         * Password.
+         * <p>Workstation login password.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>YourPassword123</p>
          */
         public Builder password(String password) {
             this.putBodyParameter("Password", password);
@@ -490,7 +527,10 @@ public class CreateWuyingServerRequest extends Request {
         }
 
         /**
-         * Period.
+         * <p>The subscription period.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder period(Integer period) {
             this.putBodyParameter("Period", period);
@@ -499,7 +539,15 @@ public class CreateWuyingServerRequest extends Request {
         }
 
         /**
-         * PeriodUnit.
+         * <p>The time unit.</p>
+         * <p>Valid values:</p>
+         * <ul>
+         * <li>Month</li>
+         * <li>Year</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>Month</p>
          */
         public Builder periodUnit(String periodUnit) {
             this.putBodyParameter("PeriodUnit", periodUnit);
@@ -508,7 +556,13 @@ public class CreateWuyingServerRequest extends Request {
         }
 
         /**
-         * PromotionId.
+         * <p>The ID of the discount.</p>
+         * <blockquote>
+         * <p> If PromotionId is set, it will try to apply the corresponding discount.</p>
+         * </blockquote>
+         * 
+         * <strong>example:</strong>
+         * <p>17440009****</p>
          */
         public Builder promotionId(String promotionId) {
             this.putBodyParameter("PromotionId", promotionId);
@@ -526,7 +580,10 @@ public class CreateWuyingServerRequest extends Request {
         }
 
         /**
-         * ServerInstanceType.
+         * <p>Workstation specifications.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>eds.proworkstation_flagship_elite_ne.96c384g.192g4x</p>
          */
         public Builder serverInstanceType(String serverInstanceType) {
             this.putBodyParameter("ServerInstanceType", serverInstanceType);
@@ -544,7 +601,14 @@ public class CreateWuyingServerRequest extends Request {
         }
 
         /**
-         * SystemDiskCategory.
+         * <p>The system disk category.</p>
+         * <p>Valid values:</p>
+         * <ul>
+         * <li>cloud_auto.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>cloud_auto</p>
          */
         public Builder systemDiskCategory(String systemDiskCategory) {
             this.putBodyParameter("SystemDiskCategory", systemDiskCategory);
@@ -553,7 +617,10 @@ public class CreateWuyingServerRequest extends Request {
         }
 
         /**
-         * SystemDiskPerformanceLevel.
+         * <p>The performance level (PL) of the system disk.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>PL0</p>
          */
         public Builder systemDiskPerformanceLevel(String systemDiskPerformanceLevel) {
             this.putBodyParameter("SystemDiskPerformanceLevel", systemDiskPerformanceLevel);
@@ -562,7 +629,10 @@ public class CreateWuyingServerRequest extends Request {
         }
 
         /**
-         * SystemDiskSize.
+         * <p>The size of the system disk. Unit: GB.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>100</p>
          */
         public Builder systemDiskSize(Integer systemDiskSize) {
             this.putBodyParameter("SystemDiskSize", systemDiskSize);
@@ -571,7 +641,7 @@ public class CreateWuyingServerRequest extends Request {
         }
 
         /**
-         * VSwitchIds.
+         * <p>The list of office network vSwitches.</p>
          */
         public Builder vSwitchIds(java.util.List<String> vSwitchIds) {
             this.putBodyParameter("VSwitchIds", vSwitchIds);
@@ -589,7 +659,10 @@ public class CreateWuyingServerRequest extends Request {
         }
 
         /**
-         * WuyingServerName.
+         * <p>The name of the workstation. The numeric suffix is automatically added when multiple workstations are created.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>exampleServerName</p>
          */
         public Builder wuyingServerName(String wuyingServerName) {
             this.putBodyParameter("WuyingServerName", wuyingServerName);
@@ -670,7 +743,14 @@ public class CreateWuyingServerRequest extends Request {
             } 
 
             /**
-             * DataDiskCategory.
+             * <p>The data disk category.</p>
+             * <p>Valid values:</p>
+             * <ul>
+             * <li>cloud_auto.</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>cloud_auto</p>
              */
             public Builder dataDiskCategory(String dataDiskCategory) {
                 this.dataDiskCategory = dataDiskCategory;
@@ -678,7 +758,10 @@ public class CreateWuyingServerRequest extends Request {
             }
 
             /**
-             * DataDiskPerformanceLevel.
+             * <p>The PL of the data disk.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>PL0</p>
              */
             public Builder dataDiskPerformanceLevel(String dataDiskPerformanceLevel) {
                 this.dataDiskPerformanceLevel = dataDiskPerformanceLevel;
@@ -686,7 +769,10 @@ public class CreateWuyingServerRequest extends Request {
             }
 
             /**
-             * DataDiskSize.
+             * <p>The data disk size.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>100</p>
              */
             public Builder dataDiskSize(Integer dataDiskSize) {
                 this.dataDiskSize = dataDiskSize;

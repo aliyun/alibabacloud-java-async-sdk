@@ -106,7 +106,14 @@ public class DeleteImageResponseBody extends TeaModel {
         } 
 
         /**
-         * Code.
+         * <p>Status code:</p>
+         * <ul>
+         * <li><code>200</code>: Success.</li>
+         * <li><code>400</code>: An error occurred.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>200</p>
          */
         public Builder code(String code) {
             this.code = code;
@@ -114,7 +121,15 @@ public class DeleteImageResponseBody extends TeaModel {
         }
 
         /**
-         * Data.
+         * <p>Whether the deletion is successful.</p>
+         * <p>Enumerated values:</p>
+         * <ul>
+         * <li>true:Deleted successfully.</li>
+         * <li>false:Deletion failure.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder data(Boolean data) {
             this.data = data;
@@ -122,7 +137,10 @@ public class DeleteImageResponseBody extends TeaModel {
         }
 
         /**
-         * Message.
+         * <p>The error message.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>successful</p>
          */
         public Builder message(String message) {
             this.message = message;
@@ -130,7 +148,10 @@ public class DeleteImageResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1CBAFFAB-B697-4049-A9B1-67E1FC5F****</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -138,7 +159,10 @@ public class DeleteImageResponseBody extends TeaModel {
         }
 
         /**
-         * Success.
+         * <p>Indicates whether the request was successful.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder success(Boolean success) {
             this.success = success;

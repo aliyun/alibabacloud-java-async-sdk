@@ -73,7 +73,15 @@ public class StopWuyingServerRequest extends Request {
         } 
 
         /**
-         * Force.
+         * <p>Force restart.</p>
+         * <p>Valid values:</p>
+         * <ul>
+         * <li>True.</li>
+         * <li>False</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>True</p>
          */
         public Builder force(Boolean force) {
             this.putBodyParameter("Force", force);
@@ -82,7 +90,7 @@ public class StopWuyingServerRequest extends Request {
         }
 
         /**
-         * WuyingServerIdList.
+         * <p>The list of workstation IDs.</p>
          */
         public Builder wuyingServerIdList(java.util.List<String> wuyingServerIdList) {
             this.putBodyParameter("WuyingServerIdList", wuyingServerIdList);

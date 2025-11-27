@@ -106,7 +106,7 @@ public class ListBindInfoResponseBody extends TeaModel {
         } 
 
         /**
-         * BindInfoModels.
+         * <p>The bindings.</p>
          */
         public Builder bindInfoModels(java.util.List<BindInfoModels> bindInfoModels) {
             this.bindInfoModels = bindInfoModels;
@@ -114,7 +114,10 @@ public class ListBindInfoResponseBody extends TeaModel {
         }
 
         /**
-         * PageNumber.
+         * <p>The page number.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder pageNumber(Integer pageNumber) {
             this.pageNumber = pageNumber;
@@ -122,7 +125,10 @@ public class ListBindInfoResponseBody extends TeaModel {
         }
 
         /**
-         * PageSize.
+         * <p>The number of entries per page.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10</p>
          */
         public Builder pageSize(Integer pageSize) {
             this.pageSize = pageSize;
@@ -130,7 +136,10 @@ public class ListBindInfoResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>AD2D0761-1FE5-549D-B169-D3F8D19C****</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -138,7 +147,10 @@ public class ListBindInfoResponseBody extends TeaModel {
         }
 
         /**
-         * TotalCount.
+         * <p>The total number of entries returned.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>15</p>
          */
         public Builder totalCount(Integer totalCount) {
             this.totalCount = totalCount;
@@ -295,7 +307,15 @@ public class ListBindInfoResponseBody extends TeaModel {
             } 
 
             /**
-             * AccountType.
+             * <p>The account type.</p>
+             * <p>Valid values:</p>
+             * <ul>
+             * <li>ad: Active Directory (AD) account</li>
+             * <li>simple: convenience account</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>simple</p>
              */
             public Builder accountType(String accountType) {
                 this.accountType = accountType;
@@ -303,7 +323,10 @@ public class ListBindInfoResponseBody extends TeaModel {
             }
 
             /**
-             * AppId.
+             * <p>The app ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>ca-fq738or6vd854****</p>
              */
             public Builder appId(String appId) {
                 this.appId = appId;
@@ -311,7 +334,10 @@ public class ListBindInfoResponseBody extends TeaModel {
             }
 
             /**
-             * AppInstanceGroupId.
+             * <p>The ID of the delivery group.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>aig-0abxhr6ce35w8****</p>
              */
             public Builder appInstanceGroupId(String appInstanceGroupId) {
                 this.appInstanceGroupId = appInstanceGroupId;
@@ -319,7 +345,10 @@ public class ListBindInfoResponseBody extends TeaModel {
             }
 
             /**
-             * AppInstanceId.
+             * <p>The ID of the app instance.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>ai-83oe276fre4l3****</p>
              */
             public Builder appInstanceId(String appInstanceId) {
                 this.appInstanceId = appInstanceId;
@@ -327,7 +356,10 @@ public class ListBindInfoResponseBody extends TeaModel {
             }
 
             /**
-             * AppVersion.
+             * <p>The app version.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1.0</p>
              */
             public Builder appVersion(String appVersion) {
                 this.appVersion = appVersion;
@@ -335,7 +367,16 @@ public class ListBindInfoResponseBody extends TeaModel {
             }
 
             /**
-             * ProductType.
+             * <p>The product type.</p>
+             * <p>Valid values:</p>
+             * <ul>
+             * <li>CloudApp: App Streaming</li>
+             * <li>CloudBrowser: Cloud-based Browser</li>
+             * <li>AndroidCloud: Cloud Phone</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>CloudApp</p>
              */
             public Builder productType(String productType) {
                 this.productType = productType;
@@ -343,7 +384,10 @@ public class ListBindInfoResponseBody extends TeaModel {
             }
 
             /**
-             * RegionId.
+             * <p>The region ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>cn-shanghai</p>
              */
             public Builder regionId(String regionId) {
                 this.regionId = regionId;
@@ -351,7 +395,10 @@ public class ListBindInfoResponseBody extends TeaModel {
             }
 
             /**
-             * UserId.
+             * <p>The user ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Alice</p>
              */
             public Builder userId(String userId) {
                 this.userId = userId;
@@ -359,7 +406,10 @@ public class ListBindInfoResponseBody extends TeaModel {
             }
 
             /**
-             * WyId.
+             * <p>The ID of the Alibaba Cloud Workspace user.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2ca6f5a93536****</p>
              */
             public Builder wyId(String wyId) {
                 this.wyId = wyId;

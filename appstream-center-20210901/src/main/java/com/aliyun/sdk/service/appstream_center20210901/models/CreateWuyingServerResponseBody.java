@@ -67,7 +67,7 @@ public class CreateWuyingServerResponseBody extends TeaModel {
         } 
 
         /**
-         * Data.
+         * <p>The response data.</p>
          */
         public Builder data(Data data) {
             this.data = data;
@@ -75,7 +75,10 @@ public class CreateWuyingServerResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1CBAFFAB-B697-4049-A9B1-67E1FC5F****</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -141,7 +144,10 @@ public class CreateWuyingServerResponseBody extends TeaModel {
             } 
 
             /**
-             * OrderId.
+             * <p>The order ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>23429322113****</p>
              */
             public Builder orderId(String orderId) {
                 this.orderId = orderId;
@@ -149,7 +155,7 @@ public class CreateWuyingServerResponseBody extends TeaModel {
             }
 
             /**
-             * WuyingServerIdList.
+             * <p>The list of workstation IDs.</p>
              */
             public Builder wuyingServerIdList(java.util.List<String> wuyingServerIdList) {
                 this.wuyingServerIdList = wuyingServerIdList;

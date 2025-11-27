@@ -106,7 +106,10 @@ public class ListPersistentAppInstancesResponseBody extends TeaModel {
         } 
 
         /**
-         * PageNumber.
+         * <p>The page number.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder pageNumber(Integer pageNumber) {
             this.pageNumber = pageNumber;
@@ -114,7 +117,10 @@ public class ListPersistentAppInstancesResponseBody extends TeaModel {
         }
 
         /**
-         * PageSize.
+         * <p>The number of entries per page.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>20</p>
          */
         public Builder pageSize(Integer pageSize) {
             this.pageSize = pageSize;
@@ -122,7 +128,7 @@ public class ListPersistentAppInstancesResponseBody extends TeaModel {
         }
 
         /**
-         * PersistentAppInstanceModels.
+         * <p>The app instances of the persistent session type.</p>
          */
         public Builder persistentAppInstanceModels(java.util.List<PersistentAppInstanceModels> persistentAppInstanceModels) {
             this.persistentAppInstanceModels = persistentAppInstanceModels;
@@ -130,7 +136,10 @@ public class ListPersistentAppInstancesResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1CBAFFAB-B697-4049-A9B1-67E1FC5F****</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -138,7 +147,10 @@ public class ListPersistentAppInstancesResponseBody extends TeaModel {
         }
 
         /**
-         * TotalCount.
+         * <p>The total number of entries returned.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>15</p>
          */
         public Builder totalCount(Integer totalCount) {
             this.totalCount = totalCount;
@@ -282,7 +294,10 @@ public class ListPersistentAppInstancesResponseBody extends TeaModel {
             } 
 
             /**
-             * AppInstanceGroupId.
+             * <p>The ID of the delivery group.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>aig-0bxls9m9arax6****</p>
              */
             public Builder appInstanceGroupId(String appInstanceGroupId) {
                 this.appInstanceGroupId = appInstanceGroupId;
@@ -290,7 +305,10 @@ public class ListPersistentAppInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * AppInstanceId.
+             * <p>The ID of the app instance.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>ai-azn3kmwruh1vl****</p>
              */
             public Builder appInstanceId(String appInstanceId) {
                 this.appInstanceId = appInstanceId;
@@ -298,7 +316,10 @@ public class ListPersistentAppInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * AppInstancePersistentId.
+             * <p>The ID of the app instance of the persistent session type.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>p-0cc7s3mw2fg4j****</p>
              */
             public Builder appInstancePersistentId(String appInstancePersistentId) {
                 this.appInstancePersistentId = appInstancePersistentId;
@@ -306,7 +327,10 @@ public class ListPersistentAppInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * AppInstancePersistentName.
+             * <p>The name of the app instance of the persistent session type.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>test-persistent-name</p>
              */
             public Builder appInstancePersistentName(String appInstancePersistentName) {
                 this.appInstancePersistentName = appInstancePersistentName;
@@ -314,7 +338,22 @@ public class ListPersistentAppInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * AppInstancePersistentStatus.
+             * <p>The status of the app instance of the persistent session type.</p>
+             * <p>Valid values:</p>
+             * <ul>
+             * <li>STARTING</li>
+             * <li>RUNNING</li>
+             * <li>STOPPED</li>
+             * <li>UNAVAILABLE</li>
+             * <li>DELETING</li>
+             * <li>PENDING</li>
+             * <li>STOPPING</li>
+             * <li>DELETED</li>
+             * <li>REBUILDING</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>RUNNING</p>
              */
             public Builder appInstancePersistentStatus(String appInstancePersistentStatus) {
                 this.appInstancePersistentStatus = appInstancePersistentStatus;
@@ -322,7 +361,22 @@ public class ListPersistentAppInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * AppInstanceStatus.
+             * <p>The status of the app instance.</p>
+             * <p>Valid values:</p>
+             * <ul>
+             * <li>INIT: The app instance is being initialized.</li>
+             * <li>STARTING: The app instance is being started.</li>
+             * <li>CLOSING: The app instance is being stopped.</li>
+             * <li>CLOSED: The app instance is closed.</li>
+             * <li>RUNNING: The app instance is running.</li>
+             * <li>idle: The app instance is idle.</li>
+             * <li>BOUND: The app instance is bound to an app instance group.</li>
+             * <li>UNAVAILABLE: The app instance is unavailable.</li>
+             * <li>DELETED: The app instance is deleted.</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>RUNNING</p>
              */
             public Builder appInstanceStatus(String appInstanceStatus) {
                 this.appInstanceStatus = appInstanceStatus;
@@ -330,7 +384,7 @@ public class ListPersistentAppInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * AuthorizedUsers.
+             * <p>The authorized users.</p>
              */
             public Builder authorizedUsers(java.util.List<String> authorizedUsers) {
                 this.authorizedUsers = authorizedUsers;
@@ -338,7 +392,10 @@ public class ListPersistentAppInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * GmtCreate.
+             * <p>The time when the app instance was created.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2025-03-13T03:22:18.000+00:00</p>
              */
             public Builder gmtCreate(String gmtCreate) {
                 this.gmtCreate = gmtCreate;

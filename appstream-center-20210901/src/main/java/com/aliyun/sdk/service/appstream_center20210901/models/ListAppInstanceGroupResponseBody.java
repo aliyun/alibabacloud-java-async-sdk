@@ -1444,8 +1444,14 @@ public class ListAppInstanceGroupResponseBody extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Status")
         private String status;
 
+        @com.aliyun.core.annotation.NameInMap("SupportUserGroupMixedAuth")
+        private Boolean supportUserGroupMixedAuth;
+
         @com.aliyun.core.annotation.NameInMap("Tags")
         private java.util.List<Tags> tags;
+
+        @com.aliyun.core.annotation.NameInMap("UserGroupAuthMode")
+        private String userGroupAuthMode;
 
         private AppInstanceGroupModels(Builder builder) {
             this.accessType = builder.accessType;
@@ -1483,7 +1489,9 @@ public class ListAppInstanceGroupResponseBody extends TeaModel {
             this.skipUserAuthCheck = builder.skipUserAuthCheck;
             this.specId = builder.specId;
             this.status = builder.status;
+            this.supportUserGroupMixedAuth = builder.supportUserGroupMixedAuth;
             this.tags = builder.tags;
+            this.userGroupAuthMode = builder.userGroupAuthMode;
         }
 
         public static Builder builder() {
@@ -1740,10 +1748,24 @@ public class ListAppInstanceGroupResponseBody extends TeaModel {
         }
 
         /**
+         * @return supportUserGroupMixedAuth
+         */
+        public Boolean getSupportUserGroupMixedAuth() {
+            return this.supportUserGroupMixedAuth;
+        }
+
+        /**
          * @return tags
          */
         public java.util.List<Tags> getTags() {
             return this.tags;
+        }
+
+        /**
+         * @return userGroupAuthMode
+         */
+        public String getUserGroupAuthMode() {
+            return this.userGroupAuthMode;
         }
 
         public static final class Builder {
@@ -1782,7 +1804,9 @@ public class ListAppInstanceGroupResponseBody extends TeaModel {
             private Boolean skipUserAuthCheck; 
             private String specId; 
             private String status; 
+            private Boolean supportUserGroupMixedAuth; 
             private java.util.List<Tags> tags; 
+            private String userGroupAuthMode; 
 
             private Builder() {
             } 
@@ -1823,7 +1847,9 @@ public class ListAppInstanceGroupResponseBody extends TeaModel {
                 this.skipUserAuthCheck = model.skipUserAuthCheck;
                 this.specId = model.specId;
                 this.status = model.status;
+                this.supportUserGroupMixedAuth = model.supportUserGroupMixedAuth;
                 this.tags = model.tags;
+                this.userGroupAuthMode = model.userGroupAuthMode;
             } 
 
             /**
@@ -2225,10 +2251,26 @@ public class ListAppInstanceGroupResponseBody extends TeaModel {
             }
 
             /**
+             * SupportUserGroupMixedAuth.
+             */
+            public Builder supportUserGroupMixedAuth(Boolean supportUserGroupMixedAuth) {
+                this.supportUserGroupMixedAuth = supportUserGroupMixedAuth;
+                return this;
+            }
+
+            /**
              * Tags.
              */
             public Builder tags(java.util.List<Tags> tags) {
                 this.tags = tags;
+                return this;
+            }
+
+            /**
+             * UserGroupAuthMode.
+             */
+            public Builder userGroupAuthMode(String userGroupAuthMode) {
+                this.userGroupAuthMode = userGroupAuthMode;
                 return this;
             }
 

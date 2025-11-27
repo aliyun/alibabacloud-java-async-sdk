@@ -106,7 +106,10 @@ public class StartTaskForDistributeImageResponseBody extends TeaModel {
         } 
 
         /**
-         * Code.
+         * <p>The error code if an error occurred.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>200</p>
          */
         public Builder code(String code) {
             this.code = code;
@@ -114,7 +117,10 @@ public class StartTaskForDistributeImageResponseBody extends TeaModel {
         }
 
         /**
-         * Data.
+         * <p>The ID of the image replication task.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>tid-06xnr5lyp77e7****</p>
          */
         public Builder data(String data) {
             this.data = data;
@@ -122,7 +128,10 @@ public class StartTaskForDistributeImageResponseBody extends TeaModel {
         }
 
         /**
-         * Message.
+         * <p>The error message if an error occurred.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>success</p>
          */
         public Builder message(String message) {
             this.message = message;
@@ -130,7 +139,10 @@ public class StartTaskForDistributeImageResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * <p>The ID of the request.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>419F31B9-1FDF-5644-ABA3-D00026FA****</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -138,7 +150,10 @@ public class StartTaskForDistributeImageResponseBody extends TeaModel {
         }
 
         /**
-         * Success.
+         * <p>Indicates whether the task is successful.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder success(Boolean success) {
             this.success = success;

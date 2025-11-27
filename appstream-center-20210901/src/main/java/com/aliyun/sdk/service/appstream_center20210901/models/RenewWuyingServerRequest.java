@@ -115,7 +115,10 @@ public class RenewWuyingServerRequest extends Request {
         } 
 
         /**
-         * AutoPay.
+         * <p>Automatic payment.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>false</p>
          */
         public Builder autoPay(Boolean autoPay) {
             this.putBodyParameter("AutoPay", autoPay);
@@ -124,7 +127,10 @@ public class RenewWuyingServerRequest extends Request {
         }
 
         /**
-         * Period.
+         * <p>The renewal duration.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder period(Integer period) {
             this.putBodyParameter("Period", period);
@@ -133,7 +139,15 @@ public class RenewWuyingServerRequest extends Request {
         }
 
         /**
-         * PeriodUnit.
+         * <p>The unit of the renewal time.</p>
+         * <p>Valid values:</p>
+         * <ul>
+         * <li>Month: month.</li>
+         * <li>Year: year.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>Month</p>
          */
         public Builder periodUnit(String periodUnit) {
             this.putBodyParameter("PeriodUnit", periodUnit);
@@ -142,7 +156,10 @@ public class RenewWuyingServerRequest extends Request {
         }
 
         /**
-         * PromotionId.
+         * <p>The discount ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>17440009****</p>
          */
         public Builder promotionId(String promotionId) {
             this.putBodyParameter("PromotionId", promotionId);
@@ -151,7 +168,10 @@ public class RenewWuyingServerRequest extends Request {
         }
 
         /**
-         * WuyingServerId.
+         * <p>The ID of the workstation.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>ws-0bw2f11****dial</p>
          */
         public Builder wuyingServerId(String wuyingServerId) {
             this.putBodyParameter("WuyingServerId", wuyingServerId);

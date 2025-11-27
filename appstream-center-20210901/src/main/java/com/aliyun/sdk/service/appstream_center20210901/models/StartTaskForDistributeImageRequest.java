@@ -153,7 +153,7 @@ public class StartTaskForDistributeImageRequest extends Request {
         }
 
         /**
-         * DestinationRegionList.
+         * <p>The regions to which you want to replicate the image.</p>
          */
         public Builder destinationRegionList(java.util.List<String> destinationRegionList) {
             this.putBodyParameter("DestinationRegionList", destinationRegionList);
@@ -162,6 +162,7 @@ public class StartTaskForDistributeImageRequest extends Request {
         }
 
         /**
+         * <p>The image ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -174,7 +175,16 @@ public class StartTaskForDistributeImageRequest extends Request {
         }
 
         /**
-         * ProductType.
+         * <p>The product type.</p>
+         * <p>Valid values:</p>
+         * <ul>
+         * <li>CloudDesktop: Elastic Desktop Service</li>
+         * <li>CloudApp: App Streaming</li>
+         * <li>WuyingServer: Workstation</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>CloudApp</p>
          */
         public Builder productType(String productType) {
             this.putBodyParameter("ProductType", productType);
@@ -183,7 +193,10 @@ public class StartTaskForDistributeImageRequest extends Request {
         }
 
         /**
-         * RetryType.
+         * <p>This parameter is not publicly available.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>RETRY</p>
          */
         public Builder retryType(String retryType) {
             this.putBodyParameter("RetryType", retryType);
@@ -192,7 +205,10 @@ public class StartTaskForDistributeImageRequest extends Request {
         }
 
         /**
-         * SourceRegion.
+         * <p>The region where the source image is located. If you leave this parameter empty, a random region is selected.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-shanghai</p>
          */
         public Builder sourceRegion(String sourceRegion) {
             this.putBodyParameter("SourceRegion", sourceRegion);
@@ -201,7 +217,10 @@ public class StartTaskForDistributeImageRequest extends Request {
         }
 
         /**
-         * VersionId.
+         * <p>The ID of the image version. If you do not specify this parameter, the latest image version is used by default.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>iv-07jyldnd9i****</p>
          */
         public Builder versionId(String versionId) {
             this.putBodyParameter("VersionId", versionId);

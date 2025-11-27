@@ -362,7 +362,7 @@ public class ListImageRequest extends Request {
         }
 
         /**
-         * BizRegionIdList.
+         * <p>The regions that are supported. The EDS images are centralized. Use this parameter to query the regions where the image is deployed.</p>
          */
         public Builder bizRegionIdList(java.util.List<String> bizRegionIdList) {
             this.putBodyParameter("BizRegionIdList", bizRegionIdList);
@@ -371,7 +371,14 @@ public class ListImageRequest extends Request {
         }
 
         /**
-         * BizType.
+         * <p>The service type. This parameter is not available publicly.</p>
+         * <p>Valid value:</p>
+         * <ul>
+         * <li>1 (default)</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder bizType(Integer bizType) {
             this.putBodyParameter("BizType", bizType);
@@ -380,7 +387,7 @@ public class ListImageRequest extends Request {
         }
 
         /**
-         * BizTypeList.
+         * <p>The list of all service types. It is not available publicly.</p>
          */
         public Builder bizTypeList(java.util.List<Integer> bizTypeList) {
             this.putBodyParameter("BizTypeList", bizTypeList);
@@ -389,7 +396,7 @@ public class ListImageRequest extends Request {
         }
 
         /**
-         * FeatureList.
+         * <p>The features supported by the image.</p>
          */
         public Builder featureList(java.util.List<String> featureList) {
             this.putBodyParameter("FeatureList", featureList);
@@ -398,7 +405,10 @@ public class ListImageRequest extends Request {
         }
 
         /**
-         * FotaVersion.
+         * <p>The image version.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2.0.3-xxxx</p>
          */
         public Builder fotaVersion(String fotaVersion) {
             this.putBodyParameter("FotaVersion", fotaVersion);
@@ -407,7 +417,10 @@ public class ListImageRequest extends Request {
         }
 
         /**
-         * ImageId.
+         * <p>The image ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>img-bp13mu****</p>
          */
         public Builder imageId(String imageId) {
             this.putBodyParameter("ImageId", imageId);
@@ -416,7 +429,10 @@ public class ListImageRequest extends Request {
         }
 
         /**
-         * ImageName.
+         * <p>The image name. Fuzzy match is supported.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>DemoImage</p>
          */
         public Builder imageName(String imageName) {
             this.putBodyParameter("ImageName", imageName);
@@ -425,7 +441,17 @@ public class ListImageRequest extends Request {
         }
 
         /**
-         * ImageType.
+         * <p>The type of the images.</p>
+         * <p>Valid values:</p>
+         * <ul>
+         * <li>User: a custom image.</li>
+         * <li>Shared: a shared image.</li>
+         * <li>System: a system image.</li>
+         * <li>Community: a community image.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>User</p>
          */
         public Builder imageType(String imageType) {
             this.putBodyParameter("ImageType", imageType);
@@ -434,7 +460,17 @@ public class ListImageRequest extends Request {
         }
 
         /**
-         * LanguageType.
+         * <p>The language.</p>
+         * <p>Valid values:</p>
+         * <ul>
+         * <li>en-US: English.</li>
+         * <li>zh-HK: Chinese, Traditional (Hong Kong, China).</li>
+         * <li>zh-CN: Simplified Chinese.</li>
+         * <li>ja-JP: Japanese.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>zh-CN</p>
          */
         public Builder languageType(String languageType) {
             this.putBodyParameter("LanguageType", languageType);
@@ -443,7 +479,17 @@ public class ListImageRequest extends Request {
         }
 
         /**
-         * OsType.
+         * <p>The OS type of the image.</p>
+         * <p>Valid values:</p>
+         * <ul>
+         * <li>Linux</li>
+         * <li>Unknown</li>
+         * <li>Windows</li>
+         * <li>Android</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>Windows</p>
          */
         public Builder osType(String osType) {
             this.putBodyParameter("OsType", osType);
@@ -452,7 +498,15 @@ public class ListImageRequest extends Request {
         }
 
         /**
-         * PackageType.
+         * <p>The image encapsulation type.</p>
+         * <p>Valid values:</p>
+         * <ul>
+         * <li>Ecs_Container: ECS and Docker image</li>
+         * <li>Ecs: ECS image</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>Ecs</p>
          */
         public Builder packageType(String packageType) {
             this.putBodyParameter("PackageType", packageType);
@@ -461,7 +515,10 @@ public class ListImageRequest extends Request {
         }
 
         /**
-         * PageNumber.
+         * <p>The current page number.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder pageNumber(Integer pageNumber) {
             this.putBodyParameter("PageNumber", pageNumber);
@@ -470,7 +527,10 @@ public class ListImageRequest extends Request {
         }
 
         /**
-         * PageSize.
+         * <p>The number of entries per page. Maximum value: 100. Default value: 10.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10</p>
          */
         public Builder pageSize(Integer pageSize) {
             this.putBodyParameter("PageSize", pageSize);
@@ -479,7 +539,20 @@ public class ListImageRequest extends Request {
         }
 
         /**
-         * PlatformName.
+         * <p>The name of the operating system platform.</p>
+         * <p>Valid values:</p>
+         * <ul>
+         * <li>Ubuntu</li>
+         * <li>Debian</li>
+         * <li>Windows Server 2022</li>
+         * <li>Windows Server 2019</li>
+         * <li>Windows Server 2016</li>
+         * <li>Windows 11</li>
+         * <li>Windows 10</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>Windows Server 2019</p>
          */
         public Builder platformName(String platformName) {
             this.putBodyParameter("PlatformName", platformName);
@@ -488,7 +561,7 @@ public class ListImageRequest extends Request {
         }
 
         /**
-         * PlatformNameList.
+         * <p>The list of supported platform types. For valid values, refer to PlatformName above.</p>
          */
         public Builder platformNameList(java.util.List<String> platformNameList) {
             this.putBodyParameter("PlatformNameList", platformNameList);
@@ -497,7 +570,16 @@ public class ListImageRequest extends Request {
         }
 
         /**
-         * ProductType.
+         * <p>The product type.</p>
+         * <p>Valid values:</p>
+         * <ul>
+         * <li>CloudDesktop: Elastic Desktop Service</li>
+         * <li>CloudApp: App Streaming</li>
+         * <li>WuyingServer: Workstation</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>CloudApp</p>
          */
         public Builder productType(String productType) {
             this.putBodyParameter("ProductType", productType);
@@ -506,7 +588,7 @@ public class ListImageRequest extends Request {
         }
 
         /**
-         * ProductTypeList.
+         * <p>The list of products that are supported when the image supports multiple products.</p>
          */
         public Builder productTypeList(java.util.List<String> productTypeList) {
             this.putBodyParameter("ProductTypeList", productTypeList);
@@ -515,7 +597,15 @@ public class ListImageRequest extends Request {
         }
 
         /**
-         * ProtocolType.
+         * <p>The protocol type of the image.</p>
+         * <p>Valid values:</p>
+         * <ul>
+         * <li>HDX: the High-definition Experience (HDX) protocol</li>
+         * <li>ASP: the Alibaba Cloud-developed ASP protocol</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>ASP</p>
          */
         public Builder protocolType(String protocolType) {
             this.putBodyParameter("ProtocolType", protocolType);
@@ -524,7 +614,10 @@ public class ListImageRequest extends Request {
         }
 
         /**
-         * ResourceInstanceType.
+         * <p>Find images with certain fixed specifications.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>eds.enterprise_office.2c4g</p>
          */
         public Builder resourceInstanceType(String resourceInstanceType) {
             this.putBodyParameter("ResourceInstanceType", resourceInstanceType);
@@ -533,7 +626,17 @@ public class ListImageRequest extends Request {
         }
 
         /**
-         * Status.
+         * <p>The status of the image. You can query images in the specified status. By default, all images in the Not Deleted state are queried.</p>
+         * <p>Valid values:</p>
+         * <ul>
+         * <li>AVAILABLE: The image is available.</li>
+         * <li>INIT: The image is being initialized.</li>
+         * <li>CREATE_FAILED: The image failed to be created.</li>
+         * <li>CREATING: The image is being created.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>INIT</p>
          */
         public Builder status(String status) {
             this.putBodyParameter("Status", status);
@@ -542,7 +645,7 @@ public class ListImageRequest extends Request {
         }
 
         /**
-         * TagList.
+         * <p>The tags to query.</p>
          */
         public Builder tagList(java.util.List<TagList> tagList) {
             this.putQueryParameter("TagList", tagList);
@@ -610,7 +713,10 @@ public class ListImageRequest extends Request {
             } 
 
             /**
-             * Key.
+             * <p>The key of the custom tag.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>env</p>
              */
             public Builder key(String key) {
                 this.key = key;
@@ -618,7 +724,10 @@ public class ListImageRequest extends Request {
             }
 
             /**
-             * Value.
+             * <p>The value of the custom tag.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>test</p>
              */
             public Builder value(String value) {
                 this.value = value;

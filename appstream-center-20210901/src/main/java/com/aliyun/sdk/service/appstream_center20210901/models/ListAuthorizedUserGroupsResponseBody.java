@@ -106,7 +106,10 @@ public class ListAuthorizedUserGroupsResponseBody extends TeaModel {
         } 
 
         /**
-         * PageNumber.
+         * <p>The page number.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder pageNumber(Integer pageNumber) {
             this.pageNumber = pageNumber;
@@ -114,7 +117,10 @@ public class ListAuthorizedUserGroupsResponseBody extends TeaModel {
         }
 
         /**
-         * PageSize.
+         * <p>The maximum number of entries returned on each page.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10</p>
          */
         public Builder pageSize(Integer pageSize) {
             this.pageSize = pageSize;
@@ -122,7 +128,10 @@ public class ListAuthorizedUserGroupsResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1CBAFFAB-B697-4049-A9B1-67E1FC5F****</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -130,7 +139,10 @@ public class ListAuthorizedUserGroupsResponseBody extends TeaModel {
         }
 
         /**
-         * TotalCount.
+         * <p>The total number of entries returned.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>6</p>
          */
         public Builder totalCount(Integer totalCount) {
             this.totalCount = totalCount;
@@ -138,7 +150,7 @@ public class ListAuthorizedUserGroupsResponseBody extends TeaModel {
         }
 
         /**
-         * UserGroups.
+         * <p>The information about the user groups.</p>
          */
         public Builder userGroups(java.util.List<UserGroups> userGroups) {
             this.userGroups = userGroups;
@@ -230,7 +242,10 @@ public class ListAuthorizedUserGroupsResponseBody extends TeaModel {
             } 
 
             /**
-             * AppInstanceGroupId.
+             * <p>The ID of the delivery group.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>aig-9ciijz60n4xsv****</p>
              */
             public Builder appInstanceGroupId(String appInstanceGroupId) {
                 this.appInstanceGroupId = appInstanceGroupId;
@@ -238,7 +253,16 @@ public class ListAuthorizedUserGroupsResponseBody extends TeaModel {
             }
 
             /**
-             * AuthMode.
+             * <p>The authorization mode.</p>
+             * <p>Valid values:</p>
+             * <ul>
+             * <li>App: authorizes access to apps.</li>
+             * <li>AppInstanceGroup: authorizes access to delivery groups.</li>
+             * <li>Session: authorizes access to sessions.</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>App</p>
              */
             public Builder authMode(String authMode) {
                 this.authMode = authMode;
@@ -246,7 +270,10 @@ public class ListAuthorizedUserGroupsResponseBody extends TeaModel {
             }
 
             /**
-             * GroupId.
+             * <p>The ID of the user group.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>ug-00001</p>
              */
             public Builder groupId(String groupId) {
                 this.groupId = groupId;
@@ -254,7 +281,7 @@ public class ListAuthorizedUserGroupsResponseBody extends TeaModel {
             }
 
             /**
-             * GroupName.
+             * <p>The name of the user group.</p>
              */
             public Builder groupName(String groupName) {
                 this.groupName = groupName;

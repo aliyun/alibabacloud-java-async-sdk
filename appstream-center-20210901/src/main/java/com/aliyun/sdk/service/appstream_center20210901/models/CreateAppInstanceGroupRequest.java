@@ -122,6 +122,10 @@ public class CreateAppInstanceGroupRequest extends Request {
     private UserDefinePolicy userDefinePolicy;
 
     @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("UserGroupIds")
+    private java.util.List<String> userGroupIds;
+
+    @com.aliyun.core.annotation.Body
     @com.aliyun.core.annotation.NameInMap("UserInfo")
     private UserInfo userInfo;
 
@@ -159,6 +163,7 @@ public class CreateAppInstanceGroupRequest extends Request {
         this.storagePolicy = builder.storagePolicy;
         this.subPayType = builder.subPayType;
         this.userDefinePolicy = builder.userDefinePolicy;
+        this.userGroupIds = builder.userGroupIds;
         this.userInfo = builder.userInfo;
         this.users = builder.users;
         this.videoPolicy = builder.videoPolicy;
@@ -346,6 +351,13 @@ public class CreateAppInstanceGroupRequest extends Request {
     }
 
     /**
+     * @return userGroupIds
+     */
+    public java.util.List<String> getUserGroupIds() {
+        return this.userGroupIds;
+    }
+
+    /**
      * @return userInfo
      */
     public UserInfo getUserInfo() {
@@ -391,6 +403,7 @@ public class CreateAppInstanceGroupRequest extends Request {
         private StoragePolicy storagePolicy; 
         private String subPayType; 
         private UserDefinePolicy userDefinePolicy; 
+        private java.util.List<String> userGroupIds; 
         private UserInfo userInfo; 
         private java.util.List<String> users; 
         private VideoPolicy videoPolicy; 
@@ -425,6 +438,7 @@ public class CreateAppInstanceGroupRequest extends Request {
             this.storagePolicy = request.storagePolicy;
             this.subPayType = request.subPayType;
             this.userDefinePolicy = request.userDefinePolicy;
+            this.userGroupIds = request.userGroupIds;
             this.userInfo = request.userInfo;
             this.users = request.users;
             this.videoPolicy = request.videoPolicy;
@@ -470,7 +484,10 @@ public class CreateAppInstanceGroupRequest extends Request {
         }
 
         /**
-         * AuthMode.
+         * <p>The authentication mode of the delivery group.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>App</p>
          */
         public Builder authMode(String authMode) {
             this.putBodyParameter("AuthMode", authMode);
@@ -575,6 +592,9 @@ public class CreateAppInstanceGroupRequest extends Request {
 
         /**
          * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Week</p>
          */
         public Builder periodUnit(String periodUnit) {
             this.putBodyParameter("PeriodUnit", periodUnit);
@@ -613,7 +633,7 @@ public class CreateAppInstanceGroupRequest extends Request {
         }
 
         /**
-         * RuntimePolicy.
+         * <p>The runtime policy.</p>
          */
         public Builder runtimePolicy(RuntimePolicy runtimePolicy) {
             String runtimePolicyShrink = shrink(runtimePolicy, "RuntimePolicy", "json");
@@ -670,6 +690,15 @@ public class CreateAppInstanceGroupRequest extends Request {
             String userDefinePolicyShrink = shrink(userDefinePolicy, "UserDefinePolicy", "json");
             this.putQueryParameter("UserDefinePolicy", userDefinePolicyShrink);
             this.userDefinePolicy = userDefinePolicy;
+            return this;
+        }
+
+        /**
+         * UserGroupIds.
+         */
+        public Builder userGroupIds(java.util.List<String> userGroupIds) {
+            this.putBodyParameter("UserGroupIds", userGroupIds);
+            this.userGroupIds = userGroupIds;
             return this;
         }
 
@@ -1621,7 +1650,15 @@ public class CreateAppInstanceGroupRequest extends Request {
             } 
 
             /**
-             * DebugMode.
+             * <p>Specifies whether to enable the debugging mode. If you want to call the <code>GetDebugAppInstance</code> and <code>CreateImageFromAppInstanceGroup</code> operations, you must set this parameter to <code>ON</code>.</p>
+             * <p>Valid values:</p>
+             * <ul>
+             * <li>OFF</li>
+             * <li>ON</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>OFF</p>
              */
             public Builder debugMode(String debugMode) {
                 this.debugMode = debugMode;
@@ -1629,7 +1666,18 @@ public class CreateAppInstanceGroupRequest extends Request {
             }
 
             /**
-             * PerSessionPerApp.
+             * <p>Specifies whether only one app can be opened in a session.</p>
+             * <ul>
+             * <li>After you enable this feature, the system assigns a session to each app if you open multiple apps in a delivery group. This consumes a larger number of sessions.</li>
+             * </ul>
+             * <p>Valid values:</p>
+             * <ul>
+             * <li>true</li>
+             * <li>false</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>false</p>
              */
             public Builder perSessionPerApp(Boolean perSessionPerApp) {
                 this.perSessionPerApp = perSessionPerApp;
@@ -1645,7 +1693,18 @@ public class CreateAppInstanceGroupRequest extends Request {
             }
 
             /**
-             * SessionPreOpen.
+             * <p>Specifies whether to enable pre-open for sessions.</p>
+             * <ul>
+             * <li>Default value: true</li>
+             * </ul>
+             * <p>Valid values:</p>
+             * <ul>
+             * <li>true</li>
+             * <li>false</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>false</p>
              */
             public Builder sessionPreOpen(String sessionPreOpen) {
                 this.sessionPreOpen = sessionPreOpen;
@@ -1653,7 +1712,12 @@ public class CreateAppInstanceGroupRequest extends Request {
             }
 
             /**
-             * <p>会话类型。</p>
+             * <p>The session type.</p>
+             * <p>Valid values:</p>
+             * <ul>
+             * <li>CONSOLE: console session</li>
+             * <li>NORMAL: Remote Desktop Protocol (RDP)-based O&amp;M session</li>
+             * </ul>
              * 
              * <strong>example:</strong>
              * <p>NORMAL</p>
@@ -1664,7 +1728,13 @@ public class CreateAppInstanceGroupRequest extends Request {
             }
 
             /**
-             * SessionUserGenerationMode.
+             * <p>The generation mode of the session users. Valid value:</p>
+             * <ul>
+             * <li>wyid. In this case, you must set sessionPreOpen to false.</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>wyid</p>
              */
             public Builder sessionUserGenerationMode(String sessionUserGenerationMode) {
                 this.sessionUserGenerationMode = sessionUserGenerationMode;

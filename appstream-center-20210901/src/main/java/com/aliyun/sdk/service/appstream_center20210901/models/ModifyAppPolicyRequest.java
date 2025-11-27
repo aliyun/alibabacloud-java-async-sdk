@@ -89,6 +89,7 @@ public class ModifyAppPolicyRequest extends Request {
         } 
 
         /**
+         * <p>The policy ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -101,6 +102,11 @@ public class ModifyAppPolicyRequest extends Request {
         }
 
         /**
+         * <p>The product type.</p>
+         * <p>Enumerated values:</p>
+         * <ul>
+         * <li>CloudApp: RDS Cloud App</li>
+         * </ul>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -113,7 +119,7 @@ public class ModifyAppPolicyRequest extends Request {
         }
 
         /**
-         * VideoPolicy.
+         * <p>Displays the policy.</p>
          */
         public Builder videoPolicy(VideoPolicy videoPolicy) {
             String videoPolicyShrink = shrink(videoPolicy, "VideoPolicy", "json");
@@ -247,7 +253,15 @@ public class ModifyAppPolicyRequest extends Request {
             } 
 
             /**
-             * FrameRate.
+             * <p>The frame rate (FPS).</p>
+             * <p>Enumerated values:</p>
+             * <ul>
+             * <li>30: 30 FPS</li>
+             * <li>60: 60 FPS</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>60</p>
              */
             public Builder frameRate(Integer frameRate) {
                 this.frameRate = frameRate;
@@ -255,7 +269,10 @@ public class ModifyAppPolicyRequest extends Request {
             }
 
             /**
-             * SessionResolutionHeight.
+             * <p>The height of the resolution, in pixels.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1080</p>
              */
             public Builder sessionResolutionHeight(Integer sessionResolutionHeight) {
                 this.sessionResolutionHeight = sessionResolutionHeight;
@@ -263,7 +280,10 @@ public class ModifyAppPolicyRequest extends Request {
             }
 
             /**
-             * SessionResolutionWidth.
+             * <p>The width of the resolution, in pixels.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1920</p>
              */
             public Builder sessionResolutionWidth(Integer sessionResolutionWidth) {
                 this.sessionResolutionWidth = sessionResolutionWidth;
@@ -271,7 +291,15 @@ public class ModifyAppPolicyRequest extends Request {
             }
 
             /**
-             * StreamingMode.
+             * <p>The stream mode. This parameter is used together with <code>Webrtc</code> to specify the protocol type.</p>
+             * <ul>
+             * <li>If you set <code>Webrtc</code> to <code>true</code> and <code>StreamingMode</code> to <code>video</code>, Web Real-Time Communications (WebRTC) streams are used.</li>
+             * <li>If you set <code>Webrtc</code> to <code>false</code> and <code>StreamingMode</code> to <code>video</code>, video streams are used.</li>
+             * <li>If you set <code>Webrtc</code> to <code>false</code> and <code>StreamingMode</code> to <code>mix</code>, mixed streams are used.</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>video</p>
              */
             public Builder streamingMode(String streamingMode) {
                 this.streamingMode = streamingMode;
@@ -279,7 +307,14 @@ public class ModifyAppPolicyRequest extends Request {
             }
 
             /**
-             * TerminalResolutionAdaptive.
+             * <p>Whether to use adaptive resolution.</p>
+             * <ul>
+             * <li><code>true</code>: The session resolution changes with the display area of the terminal. In this case, <code>SessionResolutionWidth</code> indicates the maximum resolution width and <code>SessionResolutionHeight</code> indicates the maximum resolution height.</li>
+             * <li><code>false</code>: The session resolution does not change with the display area of the terminal. In this case, <code>SessionResolutionWidth</code> specifies the fixed resolution width and <code>SessionResolutionHeight</code> specifies the fixed resolution height.</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>false</p>
              */
             public Builder terminalResolutionAdaptive(Boolean terminalResolutionAdaptive) {
                 this.terminalResolutionAdaptive = terminalResolutionAdaptive;
@@ -287,7 +322,16 @@ public class ModifyAppPolicyRequest extends Request {
             }
 
             /**
-             * VisualQualityStrategy.
+             * <p>The image quality policy.</p>
+             * <p>Enumerated values:</p>
+             * <ul>
+             * <li>adaptive: adaptive.</li>
+             * <li>smooth: smooth first.</li>
+             * <li>quality: quality first.</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>smooth</p>
              */
             public Builder visualQualityStrategy(String visualQualityStrategy) {
                 this.visualQualityStrategy = visualQualityStrategy;
@@ -295,7 +339,15 @@ public class ModifyAppPolicyRequest extends Request {
             }
 
             /**
-             * Webrtc.
+             * <p>Specifies whether to enable WebRTC. This parameter is used together with <code>StreamingMode</code> to specify the protocol type.</p>
+             * <ul>
+             * <li>If you set <code>Webrtc</code> to <code>true</code> and <code>StreamingMode</code> to <code>video</code>, WebRTC streams are used.</li>
+             * <li>If you set <code>Webrtc</code> to <code>false</code> and <code>StreamingMode</code> to <code>video</code>, video streams are used.</li>
+             * <li>If you set <code>Webrtc</code> to <code>false</code> and <code>StreamingMode</code> to <code>mix</code>, mixed streams are used.</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>true</p>
              */
             public Builder webrtc(Boolean webrtc) {
                 this.webrtc = webrtc;

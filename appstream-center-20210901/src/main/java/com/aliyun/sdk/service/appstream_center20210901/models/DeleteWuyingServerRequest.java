@@ -60,6 +60,7 @@ public class DeleteWuyingServerRequest extends Request {
         } 
 
         /**
+         * <p>The ID of the workstation.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>

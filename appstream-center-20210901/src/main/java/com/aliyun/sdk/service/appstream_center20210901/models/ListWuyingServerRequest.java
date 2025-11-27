@@ -223,7 +223,10 @@ public class ListWuyingServerRequest extends Request {
         }
 
         /**
-         * BizRegionId.
+         * <p>The region ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-hangzhou</p>
          */
         public Builder bizRegionId(String bizRegionId) {
             this.putBodyParameter("BizRegionId", bizRegionId);
@@ -232,7 +235,10 @@ public class ListWuyingServerRequest extends Request {
         }
 
         /**
-         * ChargeType.
+         * <p>The billing method of the Internet access package.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>PrePaid</p>
          */
         public Builder chargeType(String chargeType) {
             this.putBodyParameter("ChargeType", chargeType);
@@ -241,7 +247,10 @@ public class ListWuyingServerRequest extends Request {
         }
 
         /**
-         * ImageId.
+         * <p>The image ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>img-bp13mu****</p>
          */
         public Builder imageId(String imageId) {
             this.putBodyParameter("ImageId", imageId);
@@ -250,7 +259,10 @@ public class ListWuyingServerRequest extends Request {
         }
 
         /**
-         * OfficeSiteId.
+         * <p>The office network IDs.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-hangzhou+dir-172301****</p>
          */
         public Builder officeSiteId(String officeSiteId) {
             this.putBodyParameter("OfficeSiteId", officeSiteId);
@@ -259,7 +271,10 @@ public class ListWuyingServerRequest extends Request {
         }
 
         /**
-         * PageNumber.
+         * <p>The page number.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder pageNumber(Integer pageNumber) {
             this.putBodyParameter("PageNumber", pageNumber);
@@ -268,7 +283,10 @@ public class ListWuyingServerRequest extends Request {
         }
 
         /**
-         * PageSize.
+         * <p>The number of records per page.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>100</p>
          */
         public Builder pageSize(Integer pageSize) {
             this.putBodyParameter("PageSize", pageSize);
@@ -277,7 +295,10 @@ public class ListWuyingServerRequest extends Request {
         }
 
         /**
-         * ServerInstanceType.
+         * <p>Workstation specifications.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>eds.proworkstation_flagship_elite.32c64g.48g1x</p>
          */
         public Builder serverInstanceType(String serverInstanceType) {
             this.putBodyParameter("ServerInstanceType", serverInstanceType);
@@ -286,7 +307,10 @@ public class ListWuyingServerRequest extends Request {
         }
 
         /**
-         * Status.
+         * <p>The status of the workstation.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>RUNNING</p>
          */
         public Builder status(String status) {
             this.putBodyParameter("Status", status);
@@ -304,7 +328,7 @@ public class ListWuyingServerRequest extends Request {
         }
 
         /**
-         * WuyingServerIdList.
+         * <p>The list of workstation IDs.</p>
          */
         public Builder wuyingServerIdList(java.util.List<String> wuyingServerIdList) {
             this.putBodyParameter("WuyingServerIdList", wuyingServerIdList);
@@ -313,7 +337,10 @@ public class ListWuyingServerRequest extends Request {
         }
 
         /**
-         * WuyingServerNameOrId.
+         * <p>The workstation name or workstation ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>exampleServerName</p>
          */
         public Builder wuyingServerNameOrId(String wuyingServerNameOrId) {
             this.putBodyParameter("WuyingServerNameOrId", wuyingServerNameOrId);
