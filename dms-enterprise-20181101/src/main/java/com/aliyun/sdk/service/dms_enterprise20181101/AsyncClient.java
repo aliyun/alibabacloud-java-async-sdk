@@ -176,6 +176,12 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<ChatWithDesensitizeResponse> chatWithDesensitize(ChatWithDesensitizeRequest request);
 
     /**
+     * @param request the request parameters of CheckBatchTableAccessPermission  CheckBatchTableAccessPermissionRequest
+     * @return CheckBatchTableAccessPermissionResponse
+     */
+    CompletableFuture<CheckBatchTableAccessPermissionResponse> checkBatchTableAccessPermission(CheckBatchTableAccessPermissionRequest request);
+
+    /**
      * @param request the request parameters of CloseOrder  CloseOrderRequest
      * @return CloseOrderResponse
      */

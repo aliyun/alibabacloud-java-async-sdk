@@ -130,7 +130,10 @@ public class ChatWithDesensitizeResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * <p>Id of the request</p>
+         * 
+         * <strong>example:</strong>
+         * <p>0C1CB646-1DE4-4AD0-B4A4-7D47DD52E931</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -257,11 +260,15 @@ public class ChatWithDesensitizeResponseBody extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("FinishReason")
         private String finishReason;
 
+        @com.aliyun.core.annotation.NameInMap("Logprobs")
+        private java.util.Map<String, ?> logprobs;
+
         @com.aliyun.core.annotation.NameInMap("Message")
         private Message message;
 
         private Choices(Builder builder) {
             this.finishReason = builder.finishReason;
+            this.logprobs = builder.logprobs;
             this.message = builder.message;
         }
 
@@ -281,6 +288,13 @@ public class ChatWithDesensitizeResponseBody extends TeaModel {
         }
 
         /**
+         * @return logprobs
+         */
+        public java.util.Map<String, ?> getLogprobs() {
+            return this.logprobs;
+        }
+
+        /**
          * @return message
          */
         public Message getMessage() {
@@ -289,6 +303,7 @@ public class ChatWithDesensitizeResponseBody extends TeaModel {
 
         public static final class Builder {
             private String finishReason; 
+            private java.util.Map<String, ?> logprobs; 
             private Message message; 
 
             private Builder() {
@@ -296,6 +311,7 @@ public class ChatWithDesensitizeResponseBody extends TeaModel {
 
             private Builder(Choices model) {
                 this.finishReason = model.finishReason;
+                this.logprobs = model.logprobs;
                 this.message = model.message;
             } 
 
@@ -304,6 +320,14 @@ public class ChatWithDesensitizeResponseBody extends TeaModel {
              */
             public Builder finishReason(String finishReason) {
                 this.finishReason = finishReason;
+                return this;
+            }
+
+            /**
+             * Logprobs.
+             */
+            public Builder logprobs(java.util.Map<String, ?> logprobs) {
+                this.logprobs = logprobs;
                 return this;
             }
 
@@ -332,15 +356,23 @@ public class ChatWithDesensitizeResponseBody extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("CompletionTokens")
         private String completionTokens;
 
+        @com.aliyun.core.annotation.NameInMap("CompletionTokensDetails")
+        private java.util.Map<String, String> completionTokensDetails;
+
         @com.aliyun.core.annotation.NameInMap("PromptTokens")
         private String promptTokens;
+
+        @com.aliyun.core.annotation.NameInMap("PromptTokensDetails")
+        private java.util.Map<String, String> promptTokensDetails;
 
         @com.aliyun.core.annotation.NameInMap("TotalTokens")
         private String totalTokens;
 
         private Usage(Builder builder) {
             this.completionTokens = builder.completionTokens;
+            this.completionTokensDetails = builder.completionTokensDetails;
             this.promptTokens = builder.promptTokens;
+            this.promptTokensDetails = builder.promptTokensDetails;
             this.totalTokens = builder.totalTokens;
         }
 
@@ -360,10 +392,24 @@ public class ChatWithDesensitizeResponseBody extends TeaModel {
         }
 
         /**
+         * @return completionTokensDetails
+         */
+        public java.util.Map<String, String> getCompletionTokensDetails() {
+            return this.completionTokensDetails;
+        }
+
+        /**
          * @return promptTokens
          */
         public String getPromptTokens() {
             return this.promptTokens;
+        }
+
+        /**
+         * @return promptTokensDetails
+         */
+        public java.util.Map<String, String> getPromptTokensDetails() {
+            return this.promptTokensDetails;
         }
 
         /**
@@ -375,7 +421,9 @@ public class ChatWithDesensitizeResponseBody extends TeaModel {
 
         public static final class Builder {
             private String completionTokens; 
+            private java.util.Map<String, String> completionTokensDetails; 
             private String promptTokens; 
+            private java.util.Map<String, String> promptTokensDetails; 
             private String totalTokens; 
 
             private Builder() {
@@ -383,7 +431,9 @@ public class ChatWithDesensitizeResponseBody extends TeaModel {
 
             private Builder(Usage model) {
                 this.completionTokens = model.completionTokens;
+                this.completionTokensDetails = model.completionTokensDetails;
                 this.promptTokens = model.promptTokens;
+                this.promptTokensDetails = model.promptTokensDetails;
                 this.totalTokens = model.totalTokens;
             } 
 
@@ -396,10 +446,26 @@ public class ChatWithDesensitizeResponseBody extends TeaModel {
             }
 
             /**
+             * CompletionTokensDetails.
+             */
+            public Builder completionTokensDetails(java.util.Map<String, String> completionTokensDetails) {
+                this.completionTokensDetails = completionTokensDetails;
+                return this;
+            }
+
+            /**
              * PromptTokens.
              */
             public Builder promptTokens(String promptTokens) {
                 this.promptTokens = promptTokens;
+                return this;
+            }
+
+            /**
+             * PromptTokensDetails.
+             */
+            public Builder promptTokensDetails(java.util.Map<String, String> promptTokensDetails) {
+                this.promptTokensDetails = promptTokensDetails;
                 return this;
             }
 
@@ -431,8 +497,17 @@ public class ChatWithDesensitizeResponseBody extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Created")
         private String created;
 
+        @com.aliyun.core.annotation.NameInMap("Message")
+        private String message;
+
         @com.aliyun.core.annotation.NameInMap("Model")
         private String model;
+
+        @com.aliyun.core.annotation.NameInMap("StatusCode")
+        private String statusCode;
+
+        @com.aliyun.core.annotation.NameInMap("Type")
+        private String type;
 
         @com.aliyun.core.annotation.NameInMap("Usage")
         private Usage usage;
@@ -440,7 +515,10 @@ public class ChatWithDesensitizeResponseBody extends TeaModel {
         private Data(Builder builder) {
             this.choices = builder.choices;
             this.created = builder.created;
+            this.message = builder.message;
             this.model = builder.model;
+            this.statusCode = builder.statusCode;
+            this.type = builder.type;
             this.usage = builder.usage;
         }
 
@@ -467,10 +545,31 @@ public class ChatWithDesensitizeResponseBody extends TeaModel {
         }
 
         /**
+         * @return message
+         */
+        public String getMessage() {
+            return this.message;
+        }
+
+        /**
          * @return model
          */
         public String getModel() {
             return this.model;
+        }
+
+        /**
+         * @return statusCode
+         */
+        public String getStatusCode() {
+            return this.statusCode;
+        }
+
+        /**
+         * @return type
+         */
+        public String getType() {
+            return this.type;
         }
 
         /**
@@ -483,7 +582,10 @@ public class ChatWithDesensitizeResponseBody extends TeaModel {
         public static final class Builder {
             private java.util.List<Choices> choices; 
             private String created; 
+            private String message; 
             private String model; 
+            private String statusCode; 
+            private String type; 
             private Usage usage; 
 
             private Builder() {
@@ -492,7 +594,10 @@ public class ChatWithDesensitizeResponseBody extends TeaModel {
             private Builder(Data model) {
                 this.choices = model.choices;
                 this.created = model.created;
+                this.message = model.message;
                 this.model = model.model;
+                this.statusCode = model.statusCode;
+                this.type = model.type;
                 this.usage = model.usage;
             } 
 
@@ -513,10 +618,34 @@ public class ChatWithDesensitizeResponseBody extends TeaModel {
             }
 
             /**
+             * Message.
+             */
+            public Builder message(String message) {
+                this.message = message;
+                return this;
+            }
+
+            /**
              * Model.
              */
             public Builder model(String model) {
                 this.model = model;
+                return this;
+            }
+
+            /**
+             * StatusCode.
+             */
+            public Builder statusCode(String statusCode) {
+                this.statusCode = statusCode;
+                return this;
+            }
+
+            /**
+             * Type.
+             */
+            public Builder type(String type) {
+                this.type = type;
                 return this;
             }
 

@@ -22,8 +22,20 @@ public class ChatWithDesensitizeRequest extends Request {
     private String regionId;
 
     @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("AudioJson")
+    private String audioJson;
+
+    @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("DesensitizationRule")
     private String desensitizationRule;
+
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("EnableCodeInterpreter")
+    private Boolean enableCodeInterpreter;
+
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("EnableSearch")
+    private Boolean enableSearch;
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("EnableThinking")
@@ -35,13 +47,20 @@ public class ChatWithDesensitizeRequest extends Request {
     private Long instanceId;
 
     @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Logprobs")
+    private Boolean logprobs;
+
+    @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("MaxTokens")
     private Integer maxTokens;
 
     @com.aliyun.core.annotation.Body
     @com.aliyun.core.annotation.NameInMap("Messages")
-    @com.aliyun.core.annotation.Validation(required = true)
-    private java.util.List<java.util.Map<String, ?>> messages;
+    private java.util.List<?> messages;
+
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ModalitiesList")
+    private java.util.List<String> modalitiesList;
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("Model")
@@ -53,11 +72,15 @@ public class ChatWithDesensitizeRequest extends Request {
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("PresencePenalty")
-    private Float presencePenalty;
+    private String presencePenalty;
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("ResponseFormat")
     private String responseFormat;
+
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("SearchOptions")
+    private java.util.Map<String, String> searchOptions;
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("Seed")
@@ -69,7 +92,7 @@ public class ChatWithDesensitizeRequest extends Request {
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("Temperature")
-    private Float temperature;
+    private String temperature;
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("ThinkingBudget")
@@ -85,20 +108,34 @@ public class ChatWithDesensitizeRequest extends Request {
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("TopP")
-    private Float topP;
+    private String topP;
+
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("VlHighResolutionImages")
+    private Boolean vlHighResolutionImages;
+
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("XDashScopeDataInspection")
+    private String xDashScopeDataInspection;
 
     private ChatWithDesensitizeRequest(Builder builder) {
         super(builder);
         this.regionId = builder.regionId;
+        this.audioJson = builder.audioJson;
         this.desensitizationRule = builder.desensitizationRule;
+        this.enableCodeInterpreter = builder.enableCodeInterpreter;
+        this.enableSearch = builder.enableSearch;
         this.enableThinking = builder.enableThinking;
         this.instanceId = builder.instanceId;
+        this.logprobs = builder.logprobs;
         this.maxTokens = builder.maxTokens;
         this.messages = builder.messages;
+        this.modalitiesList = builder.modalitiesList;
         this.model = builder.model;
         this.needDesensitization = builder.needDesensitization;
         this.presencePenalty = builder.presencePenalty;
         this.responseFormat = builder.responseFormat;
+        this.searchOptions = builder.searchOptions;
         this.seed = builder.seed;
         this.stop = builder.stop;
         this.temperature = builder.temperature;
@@ -106,6 +143,8 @@ public class ChatWithDesensitizeRequest extends Request {
         this.topK = builder.topK;
         this.topLogprobs = builder.topLogprobs;
         this.topP = builder.topP;
+        this.vlHighResolutionImages = builder.vlHighResolutionImages;
+        this.xDashScopeDataInspection = builder.xDashScopeDataInspection;
     }
 
     public static Builder builder() {
@@ -129,10 +168,31 @@ public class ChatWithDesensitizeRequest extends Request {
     }
 
     /**
+     * @return audioJson
+     */
+    public String getAudioJson() {
+        return this.audioJson;
+    }
+
+    /**
      * @return desensitizationRule
      */
     public String getDesensitizationRule() {
         return this.desensitizationRule;
+    }
+
+    /**
+     * @return enableCodeInterpreter
+     */
+    public Boolean getEnableCodeInterpreter() {
+        return this.enableCodeInterpreter;
+    }
+
+    /**
+     * @return enableSearch
+     */
+    public Boolean getEnableSearch() {
+        return this.enableSearch;
     }
 
     /**
@@ -150,6 +210,13 @@ public class ChatWithDesensitizeRequest extends Request {
     }
 
     /**
+     * @return logprobs
+     */
+    public Boolean getLogprobs() {
+        return this.logprobs;
+    }
+
+    /**
      * @return maxTokens
      */
     public Integer getMaxTokens() {
@@ -159,8 +226,15 @@ public class ChatWithDesensitizeRequest extends Request {
     /**
      * @return messages
      */
-    public java.util.List<java.util.Map<String, ?>> getMessages() {
+    public java.util.List<?> getMessages() {
         return this.messages;
+    }
+
+    /**
+     * @return modalitiesList
+     */
+    public java.util.List<String> getModalitiesList() {
+        return this.modalitiesList;
     }
 
     /**
@@ -180,7 +254,7 @@ public class ChatWithDesensitizeRequest extends Request {
     /**
      * @return presencePenalty
      */
-    public Float getPresencePenalty() {
+    public String getPresencePenalty() {
         return this.presencePenalty;
     }
 
@@ -189,6 +263,13 @@ public class ChatWithDesensitizeRequest extends Request {
      */
     public String getResponseFormat() {
         return this.responseFormat;
+    }
+
+    /**
+     * @return searchOptions
+     */
+    public java.util.Map<String, String> getSearchOptions() {
+        return this.searchOptions;
     }
 
     /**
@@ -208,7 +289,7 @@ public class ChatWithDesensitizeRequest extends Request {
     /**
      * @return temperature
      */
-    public Float getTemperature() {
+    public String getTemperature() {
         return this.temperature;
     }
 
@@ -236,28 +317,50 @@ public class ChatWithDesensitizeRequest extends Request {
     /**
      * @return topP
      */
-    public Float getTopP() {
+    public String getTopP() {
         return this.topP;
+    }
+
+    /**
+     * @return vlHighResolutionImages
+     */
+    public Boolean getVlHighResolutionImages() {
+        return this.vlHighResolutionImages;
+    }
+
+    /**
+     * @return xDashScopeDataInspection
+     */
+    public String getXDashScopeDataInspection() {
+        return this.xDashScopeDataInspection;
     }
 
     public static final class Builder extends Request.Builder<ChatWithDesensitizeRequest, Builder> {
         private String regionId; 
+        private String audioJson; 
         private String desensitizationRule; 
+        private Boolean enableCodeInterpreter; 
+        private Boolean enableSearch; 
         private Boolean enableThinking; 
         private Long instanceId; 
+        private Boolean logprobs; 
         private Integer maxTokens; 
-        private java.util.List<java.util.Map<String, ?>> messages; 
+        private java.util.List<?> messages; 
+        private java.util.List<String> modalitiesList; 
         private String model; 
         private Boolean needDesensitization; 
-        private Float presencePenalty; 
+        private String presencePenalty; 
         private String responseFormat; 
+        private java.util.Map<String, String> searchOptions; 
         private Integer seed; 
         private java.util.List<String> stop; 
-        private Float temperature; 
+        private String temperature; 
         private Integer thinkingBudget; 
         private Integer topK; 
         private Integer topLogprobs; 
-        private Float topP; 
+        private String topP; 
+        private Boolean vlHighResolutionImages; 
+        private String xDashScopeDataInspection; 
 
         private Builder() {
             super();
@@ -266,15 +369,21 @@ public class ChatWithDesensitizeRequest extends Request {
         private Builder(ChatWithDesensitizeRequest request) {
             super(request);
             this.regionId = request.regionId;
+            this.audioJson = request.audioJson;
             this.desensitizationRule = request.desensitizationRule;
+            this.enableCodeInterpreter = request.enableCodeInterpreter;
+            this.enableSearch = request.enableSearch;
             this.enableThinking = request.enableThinking;
             this.instanceId = request.instanceId;
+            this.logprobs = request.logprobs;
             this.maxTokens = request.maxTokens;
             this.messages = request.messages;
+            this.modalitiesList = request.modalitiesList;
             this.model = request.model;
             this.needDesensitization = request.needDesensitization;
             this.presencePenalty = request.presencePenalty;
             this.responseFormat = request.responseFormat;
+            this.searchOptions = request.searchOptions;
             this.seed = request.seed;
             this.stop = request.stop;
             this.temperature = request.temperature;
@@ -282,6 +391,8 @@ public class ChatWithDesensitizeRequest extends Request {
             this.topK = request.topK;
             this.topLogprobs = request.topLogprobs;
             this.topP = request.topP;
+            this.vlHighResolutionImages = request.vlHighResolutionImages;
+            this.xDashScopeDataInspection = request.xDashScopeDataInspection;
         } 
 
         /**
@@ -294,11 +405,38 @@ public class ChatWithDesensitizeRequest extends Request {
         }
 
         /**
+         * AudioJson.
+         */
+        public Builder audioJson(String audioJson) {
+            this.putQueryParameter("AudioJson", audioJson);
+            this.audioJson = audioJson;
+            return this;
+        }
+
+        /**
          * DesensitizationRule.
          */
         public Builder desensitizationRule(String desensitizationRule) {
             this.putQueryParameter("DesensitizationRule", desensitizationRule);
             this.desensitizationRule = desensitizationRule;
+            return this;
+        }
+
+        /**
+         * EnableCodeInterpreter.
+         */
+        public Builder enableCodeInterpreter(Boolean enableCodeInterpreter) {
+            this.putQueryParameter("EnableCodeInterpreter", enableCodeInterpreter);
+            this.enableCodeInterpreter = enableCodeInterpreter;
+            return this;
+        }
+
+        /**
+         * EnableSearch.
+         */
+        public Builder enableSearch(Boolean enableSearch) {
+            this.putQueryParameter("EnableSearch", enableSearch);
+            this.enableSearch = enableSearch;
             return this;
         }
 
@@ -324,6 +462,15 @@ public class ChatWithDesensitizeRequest extends Request {
         }
 
         /**
+         * Logprobs.
+         */
+        public Builder logprobs(Boolean logprobs) {
+            this.putQueryParameter("Logprobs", logprobs);
+            this.logprobs = logprobs;
+            return this;
+        }
+
+        /**
          * MaxTokens.
          */
         public Builder maxTokens(Integer maxTokens) {
@@ -333,20 +480,22 @@ public class ChatWithDesensitizeRequest extends Request {
         }
 
         /**
-         * <p>This parameter is required.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>[
-         *     {
-         *         &quot;content&quot;: &quot;你好&quot;,
-         *         &quot;role&quot;: &quot;user&quot;
-         *     }
-         * ]</p>
+         * Messages.
          */
-        public Builder messages(java.util.List<java.util.Map<String, ?>> messages) {
+        public Builder messages(java.util.List<?> messages) {
             String messagesShrink = shrink(messages, "Messages", "json");
             this.putBodyParameter("Messages", messagesShrink);
             this.messages = messages;
+            return this;
+        }
+
+        /**
+         * ModalitiesList.
+         */
+        public Builder modalitiesList(java.util.List<String> modalitiesList) {
+            String modalitiesListShrink = shrink(modalitiesList, "ModalitiesList", "json");
+            this.putQueryParameter("ModalitiesList", modalitiesListShrink);
+            this.modalitiesList = modalitiesList;
             return this;
         }
 
@@ -371,7 +520,7 @@ public class ChatWithDesensitizeRequest extends Request {
         /**
          * PresencePenalty.
          */
-        public Builder presencePenalty(Float presencePenalty) {
+        public Builder presencePenalty(String presencePenalty) {
             this.putQueryParameter("PresencePenalty", presencePenalty);
             this.presencePenalty = presencePenalty;
             return this;
@@ -383,6 +532,16 @@ public class ChatWithDesensitizeRequest extends Request {
         public Builder responseFormat(String responseFormat) {
             this.putQueryParameter("ResponseFormat", responseFormat);
             this.responseFormat = responseFormat;
+            return this;
+        }
+
+        /**
+         * SearchOptions.
+         */
+        public Builder searchOptions(java.util.Map<String, String> searchOptions) {
+            String searchOptionsShrink = shrink(searchOptions, "SearchOptions", "json");
+            this.putQueryParameter("SearchOptions", searchOptionsShrink);
+            this.searchOptions = searchOptions;
             return this;
         }
 
@@ -408,7 +567,7 @@ public class ChatWithDesensitizeRequest extends Request {
         /**
          * Temperature.
          */
-        public Builder temperature(Float temperature) {
+        public Builder temperature(String temperature) {
             this.putQueryParameter("Temperature", temperature);
             this.temperature = temperature;
             return this;
@@ -444,9 +603,27 @@ public class ChatWithDesensitizeRequest extends Request {
         /**
          * TopP.
          */
-        public Builder topP(Float topP) {
+        public Builder topP(String topP) {
             this.putQueryParameter("TopP", topP);
             this.topP = topP;
+            return this;
+        }
+
+        /**
+         * VlHighResolutionImages.
+         */
+        public Builder vlHighResolutionImages(Boolean vlHighResolutionImages) {
+            this.putQueryParameter("VlHighResolutionImages", vlHighResolutionImages);
+            this.vlHighResolutionImages = vlHighResolutionImages;
+            return this;
+        }
+
+        /**
+         * XDashScopeDataInspection.
+         */
+        public Builder xDashScopeDataInspection(String xDashScopeDataInspection) {
+            this.putQueryParameter("XDashScopeDataInspection", xDashScopeDataInspection);
+            this.xDashScopeDataInspection = xDashScopeDataInspection;
             return this;
         }
 
