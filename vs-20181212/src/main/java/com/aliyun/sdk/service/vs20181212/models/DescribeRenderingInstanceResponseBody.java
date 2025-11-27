@@ -53,6 +53,9 @@ public class DescribeRenderingInstanceResponseBody extends TeaModel {
     @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
+    @com.aliyun.core.annotation.NameInMap("ResourceAttributes")
+    private ResourceAttributes resourceAttributes;
+
     @com.aliyun.core.annotation.NameInMap("StorageSize")
     private Integer storageSize;
 
@@ -72,6 +75,7 @@ public class DescribeRenderingInstanceResponseBody extends TeaModel {
         this.renderingSpec = builder.renderingSpec;
         this.renderingStatus = builder.renderingStatus;
         this.requestId = builder.requestId;
+        this.resourceAttributes = builder.resourceAttributes;
         this.storageSize = builder.storageSize;
         this.systemInfo = builder.systemInfo;
     }
@@ -173,6 +177,13 @@ public class DescribeRenderingInstanceResponseBody extends TeaModel {
     }
 
     /**
+     * @return resourceAttributes
+     */
+    public ResourceAttributes getResourceAttributes() {
+        return this.resourceAttributes;
+    }
+
+    /**
      * @return storageSize
      */
     public Integer getStorageSize() {
@@ -199,6 +210,7 @@ public class DescribeRenderingInstanceResponseBody extends TeaModel {
         private String renderingSpec; 
         private RenderingStatus renderingStatus; 
         private String requestId; 
+        private ResourceAttributes resourceAttributes; 
         private Integer storageSize; 
         private SystemInfo systemInfo; 
 
@@ -218,6 +230,7 @@ public class DescribeRenderingInstanceResponseBody extends TeaModel {
             this.renderingSpec = model.renderingSpec;
             this.renderingStatus = model.renderingStatus;
             this.requestId = model.requestId;
+            this.resourceAttributes = model.resourceAttributes;
             this.storageSize = model.storageSize;
             this.systemInfo = model.systemInfo;
         } 
@@ -315,6 +328,14 @@ public class DescribeRenderingInstanceResponseBody extends TeaModel {
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
+            return this;
+        }
+
+        /**
+         * ResourceAttributes.
+         */
+        public Builder resourceAttributes(ResourceAttributes resourceAttributes) {
+            this.resourceAttributes = resourceAttributes;
             return this;
         }
 
@@ -1019,6 +1040,123 @@ public class DescribeRenderingInstanceResponseBody extends TeaModel {
 
             public RenderingStatus build() {
                 return new RenderingStatus(this);
+            } 
+
+        } 
+
+    }
+    /**
+     * 
+     * {@link DescribeRenderingInstanceResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeRenderingInstanceResponseBody</p>
+     */
+    public static class ResourceAttributes extends TeaModel {
+        @com.aliyun.core.annotation.NameInMap("EdgeMediaService")
+        private String edgeMediaService;
+
+        @com.aliyun.core.annotation.NameInMap("InAccess")
+        private String inAccess;
+
+        @com.aliyun.core.annotation.NameInMap("OutAccess")
+        private String outAccess;
+
+        @com.aliyun.core.annotation.NameInMap("Zone")
+        private String zone;
+
+        private ResourceAttributes(Builder builder) {
+            this.edgeMediaService = builder.edgeMediaService;
+            this.inAccess = builder.inAccess;
+            this.outAccess = builder.outAccess;
+            this.zone = builder.zone;
+        }
+
+        public static Builder builder() {
+            return new Builder();
+        }
+
+        public static ResourceAttributes create() {
+            return builder().build();
+        }
+
+        /**
+         * @return edgeMediaService
+         */
+        public String getEdgeMediaService() {
+            return this.edgeMediaService;
+        }
+
+        /**
+         * @return inAccess
+         */
+        public String getInAccess() {
+            return this.inAccess;
+        }
+
+        /**
+         * @return outAccess
+         */
+        public String getOutAccess() {
+            return this.outAccess;
+        }
+
+        /**
+         * @return zone
+         */
+        public String getZone() {
+            return this.zone;
+        }
+
+        public static final class Builder {
+            private String edgeMediaService; 
+            private String inAccess; 
+            private String outAccess; 
+            private String zone; 
+
+            private Builder() {
+            } 
+
+            private Builder(ResourceAttributes model) {
+                this.edgeMediaService = model.edgeMediaService;
+                this.inAccess = model.inAccess;
+                this.outAccess = model.outAccess;
+                this.zone = model.zone;
+            } 
+
+            /**
+             * EdgeMediaService.
+             */
+            public Builder edgeMediaService(String edgeMediaService) {
+                this.edgeMediaService = edgeMediaService;
+                return this;
+            }
+
+            /**
+             * InAccess.
+             */
+            public Builder inAccess(String inAccess) {
+                this.inAccess = inAccess;
+                return this;
+            }
+
+            /**
+             * OutAccess.
+             */
+            public Builder outAccess(String outAccess) {
+                this.outAccess = outAccess;
+                return this;
+            }
+
+            /**
+             * Zone.
+             */
+            public Builder zone(String zone) {
+                this.zone = zone;
+                return this;
+            }
+
+            public ResourceAttributes build() {
+                return new ResourceAttributes(this);
             } 
 
         } 
