@@ -18,6 +18,10 @@ import com.aliyun.sdk.gateway.pop.models.*;
  */
 public class SubmitConvertImageToExcelJobRequest extends Request {
     @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("EnableEventCallback")
+    private Boolean enableEventCallback;
+
+    @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("ForceMergeExcel")
     private Boolean forceMergeExcel;
 
@@ -43,6 +47,7 @@ public class SubmitConvertImageToExcelJobRequest extends Request {
 
     private SubmitConvertImageToExcelJobRequest(Builder builder) {
         super(builder);
+        this.enableEventCallback = builder.enableEventCallback;
         this.forceMergeExcel = builder.forceMergeExcel;
         this.imageNameExtension = builder.imageNameExtension;
         this.imageNames = builder.imageNames;
@@ -62,6 +67,13 @@ public class SubmitConvertImageToExcelJobRequest extends Request {
 @Override
     public Builder toBuilder() {
         return new Builder(this);
+    }
+
+    /**
+     * @return enableEventCallback
+     */
+    public Boolean getEnableEventCallback() {
+        return this.enableEventCallback;
     }
 
     /**
@@ -107,6 +119,7 @@ public class SubmitConvertImageToExcelJobRequest extends Request {
     }
 
     public static final class Builder extends Request.Builder<SubmitConvertImageToExcelJobRequest, Builder> {
+        private Boolean enableEventCallback; 
         private Boolean forceMergeExcel; 
         private String imageNameExtension; 
         private java.util.List<String> imageNames; 
@@ -120,6 +133,7 @@ public class SubmitConvertImageToExcelJobRequest extends Request {
 
         private Builder(SubmitConvertImageToExcelJobRequest request) {
             super(request);
+            this.enableEventCallback = request.enableEventCallback;
             this.forceMergeExcel = request.forceMergeExcel;
             this.imageNameExtension = request.imageNameExtension;
             this.imageNames = request.imageNames;
@@ -127,6 +141,15 @@ public class SubmitConvertImageToExcelJobRequest extends Request {
             this.ossBucket = request.ossBucket;
             this.ossEndpoint = request.ossEndpoint;
         } 
+
+        /**
+         * EnableEventCallback.
+         */
+        public Builder enableEventCallback(Boolean enableEventCallback) {
+            this.putQueryParameter("EnableEventCallback", enableEventCallback);
+            this.enableEventCallback = enableEventCallback;
+            return this;
+        }
 
         /**
          * ForceMergeExcel.

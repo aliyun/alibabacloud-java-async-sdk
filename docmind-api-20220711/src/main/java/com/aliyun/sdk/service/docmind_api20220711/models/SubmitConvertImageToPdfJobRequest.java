@@ -18,6 +18,10 @@ import com.aliyun.sdk.gateway.pop.models.*;
  */
 public class SubmitConvertImageToPdfJobRequest extends Request {
     @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("EnableEventCallback")
+    private Boolean enableEventCallback;
+
+    @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("ImageNameExtension")
     private String imageNameExtension;
 
@@ -39,6 +43,7 @@ public class SubmitConvertImageToPdfJobRequest extends Request {
 
     private SubmitConvertImageToPdfJobRequest(Builder builder) {
         super(builder);
+        this.enableEventCallback = builder.enableEventCallback;
         this.imageNameExtension = builder.imageNameExtension;
         this.imageNames = builder.imageNames;
         this.imageUrls = builder.imageUrls;
@@ -57,6 +62,13 @@ public class SubmitConvertImageToPdfJobRequest extends Request {
 @Override
     public Builder toBuilder() {
         return new Builder(this);
+    }
+
+    /**
+     * @return enableEventCallback
+     */
+    public Boolean getEnableEventCallback() {
+        return this.enableEventCallback;
     }
 
     /**
@@ -95,6 +107,7 @@ public class SubmitConvertImageToPdfJobRequest extends Request {
     }
 
     public static final class Builder extends Request.Builder<SubmitConvertImageToPdfJobRequest, Builder> {
+        private Boolean enableEventCallback; 
         private String imageNameExtension; 
         private java.util.List<String> imageNames; 
         private java.util.List<String> imageUrls; 
@@ -107,12 +120,22 @@ public class SubmitConvertImageToPdfJobRequest extends Request {
 
         private Builder(SubmitConvertImageToPdfJobRequest request) {
             super(request);
+            this.enableEventCallback = request.enableEventCallback;
             this.imageNameExtension = request.imageNameExtension;
             this.imageNames = request.imageNames;
             this.imageUrls = request.imageUrls;
             this.ossBucket = request.ossBucket;
             this.ossEndpoint = request.ossEndpoint;
         } 
+
+        /**
+         * EnableEventCallback.
+         */
+        public Builder enableEventCallback(Boolean enableEventCallback) {
+            this.putQueryParameter("EnableEventCallback", enableEventCallback);
+            this.enableEventCallback = enableEventCallback;
+            return this;
+        }
 
         /**
          * ImageNameExtension.
