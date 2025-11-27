@@ -93,7 +93,7 @@ public class ContextualAnswerResponseBody extends TeaModel {
         } 
 
         /**
-         * Answer.
+         * <p>Content of the response from the large model.</p>
          */
         public Builder answer(Answer answer) {
             this.answer = answer;
@@ -101,7 +101,10 @@ public class ContextualAnswerResponseBody extends TeaModel {
         }
 
         /**
-         * Code.
+         * <p>Error code.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>ResourceNotFound</p>
          */
         public Builder code(String code) {
             this.code = code;
@@ -109,7 +112,10 @@ public class ContextualAnswerResponseBody extends TeaModel {
         }
 
         /**
-         * Message.
+         * <p>Error message.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>The specified resource project is not found.</p>
          */
         public Builder message(String message) {
             this.message = message;
@@ -117,7 +123,10 @@ public class ContextualAnswerResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * <p>Request ID of the current request.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>22F081FB-90D7-525A-BFE4-D28DC906A28F</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;

@@ -80,7 +80,7 @@ public class ListDatasetsResponseBody extends TeaModel {
         } 
 
         /**
-         * <p>The list of datasets.</p>
+         * <p>The datasets.</p>
          */
         public Builder datasets(java.util.List<Dataset> datasets) {
             this.datasets = datasets;

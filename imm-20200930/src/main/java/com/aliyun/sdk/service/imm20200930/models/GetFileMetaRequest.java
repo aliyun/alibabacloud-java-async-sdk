@@ -168,7 +168,8 @@ public class GetFileMetaRequest extends Request {
         }
 
         /**
-         * WithFields.
+         * <p>The metadata fields that you want to include in the response. You can use this parameter to reduce the size of the response.</p>
+         * <p>If you do not specify this parameter or leave this parameter empty, the operation returns all metadata fields of the file.</p>
          */
         public Builder withFields(java.util.List<String> withFields) {
             String withFieldsShrink = shrink(withFields, "WithFields", "json");

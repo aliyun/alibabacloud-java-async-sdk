@@ -280,6 +280,9 @@ public class CreateCompressPointCloudTaskRequest extends Request {
 
         /**
          * <p>The notification settings. For information about the asynchronous notification format, see <a href="https://help.aliyun.com/document_detail/2743997.html">Asynchronous message examples</a>.</p>
+         * <blockquote>
+         * <p> The IMM operation does not support a callback URL. We recommend that you use Simple Message Queue (SMQ) to receive notifications.</p>
+         * </blockquote>
          */
         public Builder notification(Notification notification) {
             String notificationShrink = shrink(notification, "Notification", "json");

@@ -67,7 +67,10 @@ public class ExtractDocumentTextResponseBody extends TeaModel {
         } 
 
         /**
-         * DocumentText.
+         * <p>The text content of the document.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>测试内容。</p>
          */
         public Builder documentText(String documentText) {
             this.documentText = documentText;
@@ -75,7 +78,10 @@ public class ExtractDocumentTextResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * <p>Request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>94D6F994-E298-037E-8E8B-0090F27*****</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;

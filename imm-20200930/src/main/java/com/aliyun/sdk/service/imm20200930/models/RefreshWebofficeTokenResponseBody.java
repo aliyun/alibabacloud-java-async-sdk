@@ -106,7 +106,10 @@ public class RefreshWebofficeTokenResponseBody extends TeaModel {
         } 
 
         /**
-         * AccessToken.
+         * <p>Weboffice access token.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>4996466c690a4902846ce00f96********</p>
          */
         public Builder accessToken(String accessToken) {
             this.accessToken = accessToken;
@@ -114,7 +117,10 @@ public class RefreshWebofficeTokenResponseBody extends TeaModel {
         }
 
         /**
-         * AccessTokenExpiredTime.
+         * <p>Expiration time of the access token. The expiration period is 30 minutes.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2021-08-31T13:07:28.950065359Z</p>
          */
         public Builder accessTokenExpiredTime(String accessTokenExpiredTime) {
             this.accessTokenExpiredTime = accessTokenExpiredTime;
@@ -122,7 +128,10 @@ public class RefreshWebofficeTokenResponseBody extends TeaModel {
         }
 
         /**
-         * RefreshToken.
+         * <p>Weboffice refresh token.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>72a52ab3702a4123ab5594671a********</p>
          */
         public Builder refreshToken(String refreshToken) {
             this.refreshToken = refreshToken;
@@ -130,7 +139,10 @@ public class RefreshWebofficeTokenResponseBody extends TeaModel {
         }
 
         /**
-         * RefreshTokenExpiredTime.
+         * <p>Expiration time of the refresh token. The expiration period is 1 day.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2021-09-01T12:37:28.950065359Z</p>
          */
         public Builder refreshTokenExpiredTime(String refreshTokenExpiredTime) {
             this.refreshTokenExpiredTime = refreshTokenExpiredTime;
@@ -138,7 +150,10 @@ public class RefreshWebofficeTokenResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * <p>Request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>501339F9-4B70-0CE2-AB8C-866C********</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;

@@ -239,7 +239,7 @@ public class GenerateVideoPlaylistRequest extends Request {
         }
 
         /**
-         * <p><strong>If you do not have special requirements, leave this parameter empty.</strong></p>
+         * <p><strong>If you have no special requirements, leave this parameter empty.</strong></p>
          * <p>The authorization chain settings. For more information, see <a href="https://help.aliyun.com/document_detail/465340.html">Use authorization chains to access resources of other entities</a>.</p>
          */
         public Builder credentialConfig(CredentialConfig credentialConfig) {
@@ -266,7 +266,7 @@ public class GenerateVideoPlaylistRequest extends Request {
         }
 
         /**
-         * <p>The notification settings. To view details, click Notification. For information about the asynchronous notification format, see <a href="https://help.aliyun.com/document_detail/2743997.html">Asynchronous message examples</a>.</p>
+         * <p>The notification settings. For information about the asynchronous notification format, see <a href="https://help.aliyun.com/document_detail/2743997.html">Asynchronous message examples</a>.</p>
          */
         public Builder notification(Notification notification) {
             String notificationShrink = shrink(notification, "Notification", "json");
@@ -383,9 +383,9 @@ public class GenerateVideoPlaylistRequest extends Request {
         }
 
         /**
-         * <p>The live transcoding playlists. Up to 6 playlists are supported. Each output corresponds to at most one video media playlist and one or more subtitle media playlists.</p>
+         * <p>The array of live transcoding playlists. The maximum length of the array is 6. Each element corresponds to at most one video media playlist and one or more subtitle media playlists.</p>
          * <blockquote>
-         * <p> If more than one output is configured, the <strong>MasterURI</strong> parameter is required.</p>
+         * <p> If the array contains more than one element, the <strong>MasterURI</strong> parameter cannot be left empty.</p>
          * </blockquote>
          * <p>This parameter is required.</p>
          */
@@ -648,7 +648,7 @@ public class GenerateVideoPlaylistRequest extends Request {
             /**
              * <p>The audio processing configuration. If you set this parameter to null (default), audio processing is disabled. The generated TS files do not contain audio streams.</p>
              * <blockquote>
-             * <p> The Audio and Subtitle parameters in the same output are mutually exclusive. If the Audio parameter is configured, the Subtitle parameter is ignored. The Audio and Video parameters can be configured at the same time. You can also configure only the Audio parameter to generate only audio information.</p>
+             * <p> The Audio and Subtitle parameters in the same element are mutually exclusive. If the Audio parameter is configured, the Subtitle parameter is ignored. The Audio and Video parameters can be configured at the same time. You can also configure only the Audio parameter to generate only audio.</p>
              * </blockquote>
              */
             public Builder audio(TargetAudio audio) {
@@ -668,7 +668,7 @@ public class GenerateVideoPlaylistRequest extends Request {
             }
 
             /**
-             * <p>The array of the durations of the pre-transcoded TS files. The array can contain the durations of up to six pre-transcoded TS files. By default, this parameter is left empty. This parameter is independent of the <strong>Duration</strong> parameter.</p>
+             * <p>The array of the durations of the pre-transcoded TS files. The maximum length of the array is 6. By default, this parameter is left empty. This parameter is independent of the <strong>Duration</strong> parameter.</p>
              */
             public Builder initialSegments(java.util.List<Float> initialSegments) {
                 this.initialSegments = initialSegments;
@@ -683,7 +683,7 @@ public class GenerateVideoPlaylistRequest extends Request {
              * <li>If you set this parameter to a value that is within the middle of the playback duration of a TS file, the transcoding continues until the end of the playback duration.</li>
              * </ul>
              * <blockquote>
-             * <p> This parameter is used to reduce the time spent in waiting for the initial playback of a video and improve the playback experience. If you want to replace the traditional video on demand (VOD) business scenario, you can try to pre-transcode the entire video.</p>
+             * <p> This parameter reduces the time required to start the first playback, which enhances the viewing experience. If you want to use live transcoding in traditional video-on-demand scenarios, you can pre-transcode entire videos.</p>
              * </blockquote>
              * 
              * <strong>example:</strong>
@@ -697,7 +697,7 @@ public class GenerateVideoPlaylistRequest extends Request {
             /**
              * <p>The subtitle processing configuration.</p>
              * <blockquote>
-             * <p> The Subtitle and Video or Audio parameters in the same output are mutually exclusive. You must configure the Subtitle parameter independently to generate subtitles.</p>
+             * <p> The Subtitle and Video or Audio parameters in the same element are mutually exclusive. You must configure the Subtitle parameter independently to generate subtitles.</p>
              * </blockquote>
              */
             public Builder subtitle(TargetSubtitle subtitle) {
@@ -708,7 +708,7 @@ public class GenerateVideoPlaylistRequest extends Request {
             /**
              * <p>The <a href="https://help.aliyun.com/document_detail/106678.html">tags</a> that you want to add to a TS file in OSS. You can use tags to manage the lifecycles of TS files in OSS.</p>
              * <blockquote>
-             * <p> The combination of the value of the Tags parameter and the value of the Tags parameter in the upper level is used as the tag value of the current output. If the value of the Tags parameter in the current level is the same as the value of the Tags parameter in the upper level, use the value of the Tags parameter in the current level.</p>
+             * <p> The combination of the value of the Tags parameter and the value of the Tags parameter in the upper level is used as the tag value of the current output. If the value of the Tags parameter in the current level is the same as the value of the Tags parameter in the upper level, the value of the Tags parameter in the current level is used.</p>
              * </blockquote>
              */
             public Builder tags(java.util.Map<String, String> tags) {
@@ -719,7 +719,7 @@ public class GenerateVideoPlaylistRequest extends Request {
             /**
              * <p>The number of TS files that are pre-transcoded when the live transcoding is triggered. By default, a 2-minute video is pre-transcoded.</p>
              * <ul>
-             * <li>Example: If you set the <strong>Duration</strong> parameter to 10, the value of the <strong>TranscodeAhead</strong> parameter is 12 by default. You can configure this parameter to manage the number of pre-transcoded files in an asynchronous manner. Valid values: 10 to 30.</li>
+             * <li>Example: If you set the <strong>Duration</strong> parameter to 10, the value of the <strong>TranscodeAhead</strong> parameter is 12 by default. You can configure this parameter to manage the number of pre-transcoded files. Valid values: 10 to 30.</li>
              * </ul>
              * 
              * <strong>example:</strong>
@@ -732,12 +732,12 @@ public class GenerateVideoPlaylistRequest extends Request {
 
             /**
              * <p>The prefix of the OSS path that is used to store the live transcoding files. The live transcoding files include a M3U8 file and multiple TS files.</p>
-             * <p>The OSS path must be in the oss://${Bucket}/${Object} format. ${Bucket} specifies the name of the OSS bucket that is in the same region as the current project. ${Object} specifies the prefix of the full path of the file that does not contain the file name extension.</p>
+             * <p>The OSS path must be in the oss://${Bucket}/${Object} format. ${Bucket} specifies the name of the OSS bucket that is in the same region as the current project. ${Object} specifies the prefix of the full path that does not contain the file name extension.</p>
              * <ul>
              * <li>Example: If the URI is oss://test-bucket/test-object/output-video, the output-video.m3u8 file and multiple output-video-${token}-${index}.ts files are generated in the oss://test-bucket/test-object/ directory. ${token} is a unique string generated based on the transcoding parameters. The ${token} parameter is included in the response of the operation. ${index} is the serial number of the generated TS files that are numbered starting from 0.</li>
              * </ul>
              * <blockquote>
-             * <p> If the <strong>MasterURI</strong> parameter is not left empty, the URI specified by this parameter must be in the directory specified by the <strong>MasterURI</strong> parameter or its subdirectory.</p>
+             * <p> If the <strong>MasterURI</strong> parameter is not left empty, the path specified by this parameter must be in the directory specified by the <strong>MasterURI</strong> parameter or its subdirectory.</p>
              * </blockquote>
              * 
              * <strong>example:</strong>
@@ -751,7 +751,7 @@ public class GenerateVideoPlaylistRequest extends Request {
             /**
              * <p>The video processing configuration. If you set this parameter to null (default), video processing is disabled. The generated TS files do not contain video streams.</p>
              * <blockquote>
-             * <p> The Video and Subtitle parameters in the same output are mutually exclusive. If the Video parameter is configured, the Subtitle parameter is ignored.</p>
+             * <p> The Video and Subtitle parameters in the same element are mutually exclusive. If the Video parameter is configured, the Subtitle parameter is ignored.</p>
              * </blockquote>
              */
             public Builder video(TargetVideo video) {

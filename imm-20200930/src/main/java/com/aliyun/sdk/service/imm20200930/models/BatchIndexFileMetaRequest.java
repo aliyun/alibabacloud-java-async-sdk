@@ -188,7 +188,13 @@ public class BatchIndexFileMetaRequest extends Request {
         }
 
         /**
-         * UserData.
+         * <p>The user-defined data that you want to return in asynchronous messages. This parameter takes effect only when you specify the MNS settings in the Notification parameter. The maximum information length is 2,048 bytes.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>{
+         *       &quot;id&quot;: &quot;test-id&quot;,
+         *       &quot;name&quot;: &quot;test-name&quot;
+         * }</p>
          */
         public Builder userData(String userData) {
             this.putQueryParameter("UserData", userData);

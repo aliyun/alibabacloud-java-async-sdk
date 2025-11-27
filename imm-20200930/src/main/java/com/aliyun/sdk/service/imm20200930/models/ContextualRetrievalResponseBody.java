@@ -67,7 +67,10 @@ public class ContextualRetrievalResponseBody extends TeaModel {
         } 
 
         /**
-         * RequestId.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>6E93D6C9-5AC0-49F9-914D-E02678D3****</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -75,7 +78,7 @@ public class ContextualRetrievalResponseBody extends TeaModel {
         }
 
         /**
-         * Results.
+         * <p>The list of files retrieved. The document structure and content are contained in File.Elements.</p>
          */
         public Builder results(java.util.List<File> results) {
             this.results = results;

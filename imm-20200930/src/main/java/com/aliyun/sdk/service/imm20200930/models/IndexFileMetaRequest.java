@@ -165,7 +165,7 @@ public class IndexFileMetaRequest extends Request {
         }
 
         /**
-         * <p>The notification settings. For more information, see the &quot;Metadata indexing&quot; section of the <a href="https://help.aliyun.com/document_detail/2743997.html">Asynchronous message examples</a> topic.</p>
+         * <p>The notification settings. For information about the asynchronous notification format, see <a href="https://help.aliyun.com/document_detail/2743997.html">Asynchronous message examples</a>.</p>
          */
         public Builder notification(Notification notification) {
             String notificationShrink = shrink(notification, "Notification", "json");
@@ -188,7 +188,10 @@ public class IndexFileMetaRequest extends Request {
         }
 
         /**
-         * UserData.
+         * <p>The custom user information, which is returned in an asynchronous notification. The maximum length of a notification is 2048 bytes.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>{&quot;ID&quot;: &quot;user1&quot;,&quot;Name&quot;: &quot;test-user1&quot;,&quot;Avatar&quot;: &quot;<a href="http://example.com?id=user1%22%7D">http://example.com?id=user1&quot;}</a></p>
          */
         public Builder userData(String userData) {
             this.putQueryParameter("UserData", userData);

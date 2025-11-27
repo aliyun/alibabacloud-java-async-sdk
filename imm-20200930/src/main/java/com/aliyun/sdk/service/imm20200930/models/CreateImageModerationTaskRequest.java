@@ -196,7 +196,7 @@ public class CreateImageModerationTaskRequest extends Request {
         }
 
         /**
-         * <p>The authorization chain. For more information, see <a href="https://help.aliyun.com/document_detail/465340.html">Use authorization chains to access resources of other entities</a>.</p>
+         * <p>The authorization chain settings. For more information, see <a href="https://help.aliyun.com/document_detail/465340.html">Use authorization chains to access resources of other entities</a>.</p>
          */
         public Builder credentialConfig(CredentialConfig credentialConfig) {
             String credentialConfigShrink = shrink(credentialConfig, "CredentialConfig", "json");
@@ -230,7 +230,7 @@ public class CreateImageModerationTaskRequest extends Request {
         }
 
         /**
-         * <p>The notification settings. For more information, click Notification. For information about the asynchronous notification format, see <a href="https://help.aliyun.com/document_detail/2743997.html">Asynchronous notification format</a>.</p>
+         * <p>The notification settings. For information about the asynchronous notification format, see <a href="https://help.aliyun.com/document_detail/2743997.html">Asynchronous message examples</a>.</p>
          */
         public Builder notification(Notification notification) {
             String notificationShrink = shrink(notification, "Notification", "json");

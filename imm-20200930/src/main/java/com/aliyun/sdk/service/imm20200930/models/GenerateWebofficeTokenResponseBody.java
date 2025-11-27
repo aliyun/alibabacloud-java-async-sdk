@@ -119,7 +119,10 @@ public class GenerateWebofficeTokenResponseBody extends TeaModel {
         } 
 
         /**
-         * AccessToken.
+         * <p>Weboffice access token.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2d73dd5d87524c5e8a194c3eb5********</p>
          */
         public Builder accessToken(String accessToken) {
             this.accessToken = accessToken;
@@ -127,7 +130,10 @@ public class GenerateWebofficeTokenResponseBody extends TeaModel {
         }
 
         /**
-         * AccessTokenExpiredTime.
+         * <p>Expiration time of the access token. The expiration time is 30 minutes.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2021-08-30T13:13:11.347146982Z</p>
          */
         public Builder accessTokenExpiredTime(String accessTokenExpiredTime) {
             this.accessTokenExpiredTime = accessTokenExpiredTime;
@@ -135,7 +141,10 @@ public class GenerateWebofficeTokenResponseBody extends TeaModel {
         }
 
         /**
-         * RefreshToken.
+         * <p>Weboffice refresh token.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>e374995ec532432bb678074d36********</p>
          */
         public Builder refreshToken(String refreshToken) {
             this.refreshToken = refreshToken;
@@ -143,7 +152,10 @@ public class GenerateWebofficeTokenResponseBody extends TeaModel {
         }
 
         /**
-         * RefreshTokenExpiredTime.
+         * <p>Expiration time of the refresh token. The expiration time is 1 day.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2021-08-31T12:43:11.347146982Z</p>
          */
         public Builder refreshTokenExpiredTime(String refreshTokenExpiredTime) {
             this.refreshTokenExpiredTime = refreshTokenExpiredTime;
@@ -151,7 +163,10 @@ public class GenerateWebofficeTokenResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * <p>Request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1759315A-CB33-0A75-A72B-62D7********</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -159,7 +174,13 @@ public class GenerateWebofficeTokenResponseBody extends TeaModel {
         }
 
         /**
-         * WebofficeURL.
+         * <p>Weboffice entry URL. Used for online preview or editing of documents.</p>
+         * <blockquote>
+         * <p>Cannot be opened directly in a browser; it needs to be used with the Weboffice JS-SDK and access token (AccessToken) to preview or edit documents. For more information, see <a href="https://help.aliyun.com/document_detail/468066.html">Getting Started</a>.</p>
+         * </blockquote>
+         * 
+         * <strong>example:</strong>
+         * <p><a href="https://office-cn-shanghai.imm.aliyuncs.com/office/s/dd221b2cdb44fb66e9070d1d70a8b9bbb6d6fff7?_w_tokentype=1">https://office-cn-shanghai.imm.aliyuncs.com/office/s/dd221b2cdb44fb66e9070d1d70a8b9bbb6d6fff7?_w_tokentype=1</a></p>
          */
         public Builder webofficeURL(String webofficeURL) {
             this.webofficeURL = webofficeURL;

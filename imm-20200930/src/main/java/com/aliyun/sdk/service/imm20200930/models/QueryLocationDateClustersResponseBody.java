@@ -88,7 +88,7 @@ public class QueryLocationDateClustersResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The pagination token.</p>
+         * <p>A pagination token. It can be used in the next request to retrieve a new page of results.</p>
          * 
          * <strong>example:</strong>
          * <p>MzQNjmY2MzYxNhNjk2ZNjEu****</p>

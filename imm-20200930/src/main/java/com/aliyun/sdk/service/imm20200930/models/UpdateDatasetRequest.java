@@ -210,7 +210,10 @@ public class UpdateDatasetRequest extends Request {
         }
 
         /**
-         * DatasetMaxBindCount.
+         * <p>The maximum number of bindings per dataset. The value range is from 1 to 10.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10</p>
          */
         public Builder datasetMaxBindCount(Long datasetMaxBindCount) {
             this.putQueryParameter("DatasetMaxBindCount", datasetMaxBindCount);
@@ -219,7 +222,13 @@ public class UpdateDatasetRequest extends Request {
         }
 
         /**
-         * DatasetMaxEntityCount.
+         * <p>The maximum number of metadata entities (including data files, file relationships, clustering groups, etc.) per dataset, with a maximum value of 2^63-1.</p>
+         * <blockquote>
+         * <p>Reserved parameter, no actual restriction in use.</p>
+         * </blockquote>
+         * 
+         * <strong>example:</strong>
+         * <p>10000000000</p>
          */
         public Builder datasetMaxEntityCount(Long datasetMaxEntityCount) {
             this.putQueryParameter("DatasetMaxEntityCount", datasetMaxEntityCount);
@@ -228,7 +237,10 @@ public class UpdateDatasetRequest extends Request {
         }
 
         /**
-         * DatasetMaxFileCount.
+         * <p>The maximum number of files per dataset. The value range is from 1 to 100000000.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>100000000</p>
          */
         public Builder datasetMaxFileCount(Long datasetMaxFileCount) {
             this.putQueryParameter("DatasetMaxFileCount", datasetMaxFileCount);
@@ -237,7 +249,13 @@ public class UpdateDatasetRequest extends Request {
         }
 
         /**
-         * DatasetMaxRelationCount.
+         * <p>The maximum number of metadata relationships per dataset, with a maximum value of 2^63-1.</p>
+         * <blockquote>
+         * <p>Reserved parameter, no actual restriction in use.</p>
+         * </blockquote>
+         * 
+         * <strong>example:</strong>
+         * <p>100000000000</p>
          */
         public Builder datasetMaxRelationCount(Long datasetMaxRelationCount) {
             this.putQueryParameter("DatasetMaxRelationCount", datasetMaxRelationCount);
@@ -246,7 +264,10 @@ public class UpdateDatasetRequest extends Request {
         }
 
         /**
-         * DatasetMaxTotalFileSize.
+         * <p>The maximum total size of files in each dataset. Once the limit is exceeded, no more indexes can be added. The maximum value is 2^63-1, measured in bytes.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>90000000000000000</p>
          */
         public Builder datasetMaxTotalFileSize(Long datasetMaxTotalFileSize) {
             this.putQueryParameter("DatasetMaxTotalFileSize", datasetMaxTotalFileSize);
@@ -255,6 +276,7 @@ public class UpdateDatasetRequest extends Request {
         }
 
         /**
+         * <p>Dataset name, for how to obtain it, please refer to <a href="https://help.aliyun.com/document_detail/478160.html">Create Dataset</a>.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -267,7 +289,10 @@ public class UpdateDatasetRequest extends Request {
         }
 
         /**
-         * Description.
+         * <p>Description of the dataset.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>immtest</p>
          */
         public Builder description(String description) {
             this.putQueryParameter("Description", description);
@@ -276,6 +301,7 @@ public class UpdateDatasetRequest extends Request {
         }
 
         /**
+         * <p>Project name, for how to obtain it, please refer to <a href="https://help.aliyun.com/document_detail/478153.html">Create Project</a>.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -288,7 +314,10 @@ public class UpdateDatasetRequest extends Request {
         }
 
         /**
-         * TemplateId.
+         * <p>Workflow template ID. For more information, please refer to <a href="https://help.aliyun.com/document_detail/466304.html">Workflow Templates and Operators</a>.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Official:ImageManagement</p>
          */
         public Builder templateId(String templateId) {
             this.putQueryParameter("TemplateId", templateId);
@@ -297,7 +326,7 @@ public class UpdateDatasetRequest extends Request {
         }
 
         /**
-         * WorkflowParameters.
+         * <p>Invalid parameter.</p>
          */
         public Builder workflowParameters(java.util.List<WorkflowParameter> workflowParameters) {
             String workflowParametersShrink = shrink(workflowParameters, "WorkflowParameters", "json");

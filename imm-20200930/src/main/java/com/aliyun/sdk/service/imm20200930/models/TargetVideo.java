@@ -1079,6 +1079,9 @@ public class TargetVideo extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("ScaleType")
         private String scaleType;
 
+        @com.aliyun.core.annotation.NameInMap("VideoSlim")
+        private Integer videoSlim;
+
         private TranscodeVideo(Builder builder) {
             this.adaptiveResolutionDirection = builder.adaptiveResolutionDirection;
             this.bFrames = builder.bFrames;
@@ -1097,6 +1100,7 @@ public class TargetVideo extends TeaModel {
             this.resolutionOption = builder.resolutionOption;
             this.rotation = builder.rotation;
             this.scaleType = builder.scaleType;
+            this.videoSlim = builder.videoSlim;
         }
 
         public static Builder builder() {
@@ -1226,6 +1230,13 @@ public class TargetVideo extends TeaModel {
             return this.scaleType;
         }
 
+        /**
+         * @return videoSlim
+         */
+        public Integer getVideoSlim() {
+            return this.videoSlim;
+        }
+
         public static final class Builder {
             private Boolean adaptiveResolutionDirection; 
             private Integer bFrames; 
@@ -1244,6 +1255,7 @@ public class TargetVideo extends TeaModel {
             private String resolutionOption; 
             private Integer rotation; 
             private String scaleType; 
+            private Integer videoSlim; 
 
             private Builder() {
             } 
@@ -1266,6 +1278,7 @@ public class TargetVideo extends TeaModel {
                 this.resolutionOption = model.resolutionOption;
                 this.rotation = model.rotation;
                 this.scaleType = model.scaleType;
+                this.videoSlim = model.videoSlim;
             } 
 
             /**
@@ -1401,6 +1414,14 @@ public class TargetVideo extends TeaModel {
              */
             public Builder scaleType(String scaleType) {
                 this.scaleType = scaleType;
+                return this;
+            }
+
+            /**
+             * VideoSlim.
+             */
+            public Builder videoSlim(Integer videoSlim) {
+                this.videoSlim = videoSlim;
                 return this;
             }
 

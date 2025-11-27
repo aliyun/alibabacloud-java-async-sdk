@@ -67,7 +67,7 @@ public class UpdateDatasetResponseBody extends TeaModel {
         } 
 
         /**
-         * <p>The dataset.</p>
+         * <p>数据集。</p>
          */
         public Builder dataset(Dataset dataset) {
             this.dataset = dataset;
@@ -75,7 +75,10 @@ public class UpdateDatasetResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * <p>请求ID。</p>
+         * 
+         * <strong>example:</strong>
+         * <p>45234D4A-A3E3-4B23-AACA-8D897514****</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;

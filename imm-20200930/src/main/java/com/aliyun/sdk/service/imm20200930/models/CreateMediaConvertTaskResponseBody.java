@@ -80,7 +80,7 @@ public class CreateMediaConvertTaskResponseBody extends TeaModel {
         } 
 
         /**
-         * <p>The event ID.</p>
+         * <p>Event ID.</p>
          * 
          * <strong>example:</strong>
          * <p>0ED-1Bz8z71k5TtsUejT4UJ16Es****</p>
@@ -91,7 +91,7 @@ public class CreateMediaConvertTaskResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The request ID.</p>
+         * <p>Request ID.</p>
          * 
          * <strong>example:</strong>
          * <p>CA995EFD-083D-4F40-BE8A-BDF75FFFE0B6</p>
@@ -102,7 +102,7 @@ public class CreateMediaConvertTaskResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The task ID.</p>
+         * <p>Task ID.</p>
          * 
          * <strong>example:</strong>
          * <p>MediaConvert-adb1ee28-c4c9-42a7-9f54-3b8eadcb****</p>

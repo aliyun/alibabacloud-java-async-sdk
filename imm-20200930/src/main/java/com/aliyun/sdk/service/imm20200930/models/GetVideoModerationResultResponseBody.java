@@ -197,7 +197,10 @@ public class GetVideoModerationResultResponseBody extends TeaModel {
         } 
 
         /**
-         * Code.
+         * <p>The error code of the task.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>ResourceNotFound</p>
          */
         public Builder code(String code) {
             this.code = code;
@@ -205,7 +208,10 @@ public class GetVideoModerationResultResponseBody extends TeaModel {
         }
 
         /**
-         * EndTime.
+         * <p>The end time of the task.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2023-04-03T10:20:56.87Z</p>
          */
         public Builder endTime(String endTime) {
             this.endTime = endTime;
@@ -213,7 +219,10 @@ public class GetVideoModerationResultResponseBody extends TeaModel {
         }
 
         /**
-         * EventId.
+         * <p>The event ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>05C-1XBQvsG2Tn5kBx2dUWo43******</p>
          */
         public Builder eventId(String eventId) {
             this.eventId = eventId;
@@ -221,7 +230,10 @@ public class GetVideoModerationResultResponseBody extends TeaModel {
         }
 
         /**
-         * Message.
+         * <p>The error message of the task.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>The specified resource TaskId is not found.</p>
          */
         public Builder message(String message) {
             this.message = message;
@@ -229,7 +241,7 @@ public class GetVideoModerationResultResponseBody extends TeaModel {
         }
 
         /**
-         * ModerationResult.
+         * <p>The result of the image compliance detection task.</p>
          */
         public Builder moderationResult(ModerationResult moderationResult) {
             this.moderationResult = moderationResult;
@@ -237,7 +249,10 @@ public class GetVideoModerationResultResponseBody extends TeaModel {
         }
 
         /**
-         * ProjectName.
+         * <p>The project name.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>test-project</p>
          */
         public Builder projectName(String projectName) {
             this.projectName = projectName;
@@ -245,7 +260,10 @@ public class GetVideoModerationResultResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>VideoModeration-d0f0df1d-531d-4ab4-b353-e7f475******</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -253,7 +271,10 @@ public class GetVideoModerationResultResponseBody extends TeaModel {
         }
 
         /**
-         * StartTime.
+         * <p>The start time of the task.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2023-04-03T10:20:41.432Z</p>
          */
         public Builder startTime(String startTime) {
             this.startTime = startTime;
@@ -261,7 +282,15 @@ public class GetVideoModerationResultResponseBody extends TeaModel {
         }
 
         /**
-         * Status.
+         * <p>The task status. Valid values:</p>
+         * <ul>
+         * <li>Running: The task is running.</li>
+         * <li>Succeeded: The task is successful.</li>
+         * <li>Failed: The task failed.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>Succeeded</p>
          */
         public Builder status(String status) {
             this.status = status;
@@ -269,7 +298,10 @@ public class GetVideoModerationResultResponseBody extends TeaModel {
         }
 
         /**
-         * TaskId.
+         * <p>The task ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>VideoModeration-d0f0df1d-531d-4ab4-b353-e7f4750******</p>
          */
         public Builder taskId(String taskId) {
             this.taskId = taskId;
@@ -277,7 +309,10 @@ public class GetVideoModerationResultResponseBody extends TeaModel {
         }
 
         /**
-         * TaskType.
+         * <p>The type of the task.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>VideoModeration</p>
          */
         public Builder taskType(String taskType) {
             this.taskType = taskType;
@@ -285,7 +320,13 @@ public class GetVideoModerationResultResponseBody extends TeaModel {
         }
 
         /**
-         * UserData.
+         * <p>The user-defined data.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>{
+         *       &quot;id&quot;: &quot;test-id&quot;,
+         *       &quot;name&quot;: &quot;test-name&quot;
+         * }</p>
          */
         public Builder userData(String userData) {
             this.userData = userData;
@@ -364,7 +405,10 @@ public class GetVideoModerationResultResponseBody extends TeaModel {
             } 
 
             /**
-             * Label.
+             * <p>The label of the violation.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>{&quot;teat&quot;:&quot;val&quot;}</p>
              */
             public Builder label(String label) {
                 this.label = label;
@@ -372,7 +416,10 @@ public class GetVideoModerationResultResponseBody extends TeaModel {
             }
 
             /**
-             * Offset.
+             * <p>The offset of the frame.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder offset(Integer offset) {
                 this.offset = offset;
@@ -380,7 +427,10 @@ public class GetVideoModerationResultResponseBody extends TeaModel {
             }
 
             /**
-             * Rate.
+             * <p>The confidence level of the violation.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>10</p>
              */
             public Builder rate(Double rate) {
                 this.rate = rate;
@@ -447,7 +497,7 @@ public class GetVideoModerationResultResponseBody extends TeaModel {
             } 
 
             /**
-             * BlockFrames.
+             * <p>The information about violated frames.</p>
              */
             public Builder blockFrames(java.util.List<BlockFrames> blockFrames) {
                 this.blockFrames = blockFrames;
@@ -455,7 +505,10 @@ public class GetVideoModerationResultResponseBody extends TeaModel {
             }
 
             /**
-             * TotalCount.
+             * <p>The total number of detected frames.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>12</p>
              */
             public Builder totalCount(Integer totalCount) {
                 this.totalCount = totalCount;
@@ -548,7 +601,7 @@ public class GetVideoModerationResultResponseBody extends TeaModel {
             } 
 
             /**
-             * Categories.
+             * <p>The category list.</p>
              */
             public Builder categories(java.util.List<String> categories) {
                 this.categories = categories;
@@ -556,7 +609,7 @@ public class GetVideoModerationResultResponseBody extends TeaModel {
             }
 
             /**
-             * Frames.
+             * <p>The information about video and motion detection frames.</p>
              */
             public Builder frames(Frames frames) {
                 this.frames = frames;
@@ -564,7 +617,15 @@ public class GetVideoModerationResultResponseBody extends TeaModel {
             }
 
             /**
-             * Suggestion.
+             * <p>The recommended operation. Valid values:</p>
+             * <ul>
+             * <li>pass: The image has passed the check. No action is required.</li>
+             * <li>review: The image contains suspected violations and requires human review.</li>
+             * <li>block: The image contains violations. Further actions, such as deleting or blocking the image, are recommended.</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>block</p>
              */
             public Builder suggestion(String suggestion) {
                 this.suggestion = suggestion;
@@ -572,7 +633,10 @@ public class GetVideoModerationResultResponseBody extends TeaModel {
             }
 
             /**
-             * URI.
+             * <p>The OSS URI of the file. The URI follows the oss://${bucketname}/${objectname} format. bucketname indicates the name of an OSS bucket that is in the same region as the current project, and objectname is the file path.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>oss://test-bucket/test-object</p>
              */
             public Builder URI(String URI) {
                 this.URI = URI;

@@ -294,20 +294,17 @@ public class GenerateWebofficeTokenRequest extends Request {
         }
 
         /**
-         * <p>Specifies whether to enable cache preview.</p>
+         * <p>Cache preview flag: </p>
          * <ul>
-         * <li>true: enables cache preview. The document can be previewed only and cannot be collaboratively edited.</li>
-         * <li>false: does not enable cache preview. The document can be collaboratively edited when it is being previewed.</li>
+         * <li>true: When enabled, the document preview will no longer update collaborative editing content, suitable for scenarios where only preview is needed. </li>
+         * <li>false: When disabled, it defaults to collaborative preview, allowing the preview to synchronously update collaborative editing content.<blockquote>
+         * <p>Notice: The price for cache preview and non-cache preview differs. Please refer to the billing item description for more details.</notice> &gt;Notice: Search and print functions are not supported during cache preview.</notice> <notice>Updating cached content is currently not supported in cache preview mode.</notice></p>
+         * </blockquote>
+         * </li>
          * </ul>
-         * <blockquote>
-         * <p> The pricing for document previews varies based on whether cache preview is enabled or disabled.</p>
-         * </blockquote>
-         * <blockquote>
-         * <p> During a cache preview, document content search and printing are not supported.</p>
-         * </blockquote>
          * 
          * <strong>example:</strong>
-         * <p>false</p>
+         * <p>true、false</p>
          */
         public Builder cachePreview(Boolean cachePreview) {
             this.putQueryParameter("CachePreview", cachePreview);
@@ -316,8 +313,8 @@ public class GenerateWebofficeTokenRequest extends Request {
         }
 
         /**
-         * <p><strong>If you have no special requirements, leave this parameter empty.</strong></p>
-         * <p>The configurations of authorization chains. For more information, see <a href="https://help.aliyun.com/document_detail/465340.html">Use authorization chains to access resources of other entities</a>.</p>
+         * <p><strong>If there are no special requirements, leave this blank.</strong></p>
+         * <p>Chained authorization configuration, not required. For more information, see <a href="https://help.aliyun.com/document_detail/465340.html">Using Chained Authorization to Access Other Entity Resources</a>.</p>
          */
         public Builder credentialConfig(CredentialConfig credentialConfig) {
             String credentialConfigShrink = shrink(credentialConfig, "CredentialConfig", "json");
@@ -327,10 +324,10 @@ public class GenerateWebofficeTokenRequest extends Request {
         }
 
         /**
-         * <p>Specifies whether to allow an upload of a document to the Object Storage Service (OSS) bucket. Valid values:</p>
+         * <p>Indicates whether uploading a file with the same name to OSS is an expected behavior. Possible values are as follows:</p>
          * <ul>
-         * <li>true: Documents can be directly uploaded to OSS. The uploaded document overwrites the existing document and a new version is generated for the document. Before you upload a new document, close the existing document if it is being edited. After the document is uploaded, wait for approximately 5 minutes before you open the document again so that the new version can successfully load. Upload a new document only when the existing is closed. Otherwise, the uploaded document is overwritten when the existing document is saved.</li>
-         * <li>false: Documents cannot be directly uploaded to OSS. If you try to upload a document, an error is returned. This is the default value.</li>
+         * <li>true: Uploading a file with the same name to OSS is an expected behavior. The uploaded document will overwrite the original document and generate a new version. After setting it to true, you still need to close the currently editing document and wait for about 5 minutes before reopening it to load the new document. The upload is only effective when the document is closed; if the document is open, the new save will overwrite the uploaded file.</li>
+         * <li>false (default): Uploading a file with the same name to OSS is not an expected behavior, and the interface will return an error.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -343,17 +340,16 @@ public class GenerateWebofficeTokenRequest extends Request {
         }
 
         /**
-         * <p>The name of the file. The extension must be included in the file name. By default, this parameter is set to the last depth level of the <strong>SourceURI</strong> parameter value.</p>
-         * <p>Supported extensions (only preview supported for .pdf):</p>
+         * <p>Filename, which must include the file extension. By default, it is the last segment of the <strong>SourceURI</strong> parameter.
+         * Supported file extensions (PDF is only supported for preview):</p>
          * <ul>
-         * <li>Word documents: .doc, .docx, .txt, .dot, .wps, .wpt, .dotx, .docm, .dotm, and .rtf</li>
-         * <li>Presentation documents: .ppt, .pptx, .pptm, .ppsx, .ppsm, .pps, .potx, .potm, .dpt, and .dps</li>
-         * <li>Table documents: .et, .xls, .xlt, .xlsx, .xlsm, .xltx, .xltm, and .csv</li>
-         * <li>PDF documents: .pdf</li>
+         * <li>Text documents (Word): doc, docx, txt, dot, wps, wpt, dotx, docm, dotm, rtf </li>
+         * <li>Presentation documents (PPT): ppt, pptx, pptm, ppsx, ppsm, pps, potx, potm, dpt, dps - Spreadsheet documents (Excel): et, xls, xlt, xlsx, xlsm, xltx, xltm, csv </li>
+         * <li>PDF documents: pdf</li>
          * </ul>
          * 
          * <strong>example:</strong>
-         * <p>test.pptx</p>
+         * <p>test-Object.pptx</p>
          */
         public Builder filename(String filename) {
             this.putQueryParameter("Filename", filename);
@@ -362,7 +358,14 @@ public class GenerateWebofficeTokenRequest extends Request {
         }
 
         /**
-         * Hidecmb.
+         * <p>Whether to hide the toolbar. This parameter can be set in document preview mode. Possible values are as follows:</p>
+         * <ul>
+         * <li>false (default): Do not hide the toolbar.</li>
+         * <li>true: Hide the toolbar.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>false</p>
          */
         public Builder hidecmb(Boolean hidecmb) {
             this.putQueryParameter("Hidecmb", hidecmb);
@@ -371,9 +374,9 @@ public class GenerateWebofficeTokenRequest extends Request {
         }
 
         /**
-         * <p>The notification settings. Only SMQ messages are supported. For more information, see <a href="https://help.aliyun.com/document_detail/2743999.html">WebOffice message example</a>.</p>
+         * <p>Notification message configuration, currently supporting only MNS. For the asynchronous notification message format, refer to <a href="https://help.aliyun.com/document_detail/2743999.html">WebOffice Message Notification Format</a>.</p>
          * <blockquote>
-         * <p> A notification is sent after the document is saved or renamed.</p>
+         * <p>There will be message notifications when the file is saved or renamed.</p>
          * </blockquote>
          */
         public Builder notification(Notification notification) {
@@ -384,7 +387,10 @@ public class GenerateWebofficeTokenRequest extends Request {
         }
 
         /**
-         * NotifyTopicName.
+         * <p>Supports notifying some events to customers via MNS messages. This parameter is the topic for MNS asynchronous message notifications.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>test-topic</p>
          */
         public Builder notifyTopicName(String notifyTopicName) {
             this.putQueryParameter("NotifyTopicName", notifyTopicName);
@@ -393,7 +399,13 @@ public class GenerateWebofficeTokenRequest extends Request {
         }
 
         /**
-         * Password.
+         * <p>The password to open the document.</p>
+         * <blockquote>
+         * <p>If you need to preview or edit a password-protected document, set this parameter.</p>
+         * </blockquote>
+         * 
+         * <strong>example:</strong>
+         * <p>123456</p>
          */
         public Builder password(String password) {
             this.putQueryParameter("Password", password);
@@ -402,25 +414,23 @@ public class GenerateWebofficeTokenRequest extends Request {
         }
 
         /**
-         * <p>The user permission settings in the JSON format.</p>
-         * <p>The parameter supports the following permission fields:</p>
-         * <p>Each field is of type Boolean and can have a value of true and false (the default value):</p>
+         * <p>User permission information, represented in JSON format.</p>
+         * <p>User permissions include the following options:</p>
+         * <p>Each option is of type Boolean, with a default value of false, and can be set to true or false.</p>
          * <ul>
-         * <li>Readonly: grants the permission to preview the document. This field is optional.</li>
-         * <li>Rename: grants the permission to rename the document. Notification messages of a rename event can be sent only by using SMQ. This field is optional.</li>
-         * <li>History: grants the permission to view historical versions. This field is optional.</li>
-         * <li>Copy: grants the permission to copy the document. This field is optional.</li>
-         * <li>Export: grants the permission to export the document as a PDF file. This field is optional.</li>
-         * <li>Print: grants the permission to print the document. This field is optional.</li>
+         * <li>Readonly (optional): Preview mode.</li>
+         * <li>Rename (optional): File renaming permission, which only provides message notification functionality. The renaming event will be sent to MNS.</li>
+         * <li>History (optional): Permission to view historical versions.</li>
+         * <li>Copy (optional): Copy permission.</li>
+         * <li>Export (optional): PDF export permission.</li>
+         * <li>Print (optional): Print permission.</li>
          * </ul>
          * <blockquote>
-         * <p> Only online preview is supported for PDF documents. When you call the operation on a PDF document, you can set Readonly only to true.</p>
-         * </blockquote>
-         * <blockquote>
-         * <p> To manage multiple versions of the document, you must enable versioning for the bucket that stores the document and set the History parameter to true.</p>
-         * </blockquote>
-         * <blockquote>
-         * <p> Printing is not supported during cache preview.</p>
+         * <p>PDF only supports preview functionality, so the &quot;Readonly&quot; parameter must be set to true.</p>
+         * <p>PDF files do not support exporting.</p>
+         * <p>To use the multi-version feature, you must first enable the multi-version feature in OSS and then set the &quot;History&quot; parameter to true.</p>
+         * <p>Notice: Printing is not supported in cached preview.
+         * Notice: Historical versions can be viewed in edit mode but not in preview mode.</p>
          * </blockquote>
          */
         public Builder permission(WebofficePermission permission) {
@@ -431,7 +441,10 @@ public class GenerateWebofficeTokenRequest extends Request {
         }
 
         /**
-         * PreviewPages.
+         * <p>Limits the number of pages that can be previewed. By default, there is no limit. The maximum cannot exceed 5000.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>5</p>
          */
         public Builder previewPages(Long previewPages) {
             this.putQueryParameter("PreviewPages", previewPages);
@@ -440,10 +453,11 @@ public class GenerateWebofficeTokenRequest extends Request {
         }
 
         /**
+         * <p>Project name, for how to obtain it, please refer to <a href="https://help.aliyun.com/document_detail/478153.html">Create Project</a>.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
-         * <p>immtest</p>
+         * <p>test-project</p>
          */
         public Builder projectName(String projectName) {
             this.putQueryParameter("ProjectName", projectName);
@@ -452,7 +466,15 @@ public class GenerateWebofficeTokenRequest extends Request {
         }
 
         /**
-         * Referer.
+         * <p>OSS anti-leeching. IMM needs to obtain the source file from OSS. If OSS has set up anti-leeching, IMM must pass the corresponding header to OSS to get the source file.</p>
+         * <blockquote>
+         * <p>If the Bucket where the document is located has Referer set, please configure this parameter.</p>
+         * </blockquote>
+         * 
+         * <strong>example:</strong>
+         * <ul>
+         * <li></li>
+         * </ul>
          */
         public Builder referer(String referer) {
             this.putQueryParameter("Referer", referer);
@@ -461,10 +483,11 @@ public class GenerateWebofficeTokenRequest extends Request {
         }
 
         /**
+         * <p>OSS address of the document to be previewed or edited. The OSS address follows the rule <code>oss://${Bucket}/${Object}</code>, where <code>Bucket</code> is the name of the OSS Bucket in the same region as the current project, and <code>Object</code> is the full path of the file including the file extension.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
-         * <p>oss://imm-test/test.pptx</p>
+         * <p>oss://test-bucket/test-object.docx</p>
          */
         public Builder sourceURI(String sourceURI) {
             this.putQueryParameter("SourceURI", sourceURI);
@@ -473,7 +496,9 @@ public class GenerateWebofficeTokenRequest extends Request {
         }
 
         /**
-         * <p>The user information. The user information that you want to display on the WebOffice page. If you do not specify this parameter, the user name displayed is Unknown.</p>
+         * <p>User information. You can pass in user information from the business side, which will be displayed on the WebOffice page.</p>
+         * <p>The system distinguishes different users by User.Id, and User.Name is used only for front-end display. If User.Id is not provided, the backend will generate a random ID. Users with different IDs are considered different entities and cannot modify or delete each other&quot;s comments.</p>
+         * <p>The default format is: Unknown_random string. If User.Id is not provided, the user information will default to &quot;Unknown&quot;.</p>
          */
         public Builder user(WebofficeUser user) {
             String userShrink = shrink(user, "User", "json");
@@ -483,10 +508,13 @@ public class GenerateWebofficeTokenRequest extends Request {
         }
 
         /**
-         * <p>The user-defined data that you want to return in asynchronous messages. This parameter takes effect only when you specify the MNS settings in the Notification parameter. The maximum length of the value is 2,048 bytes.</p>
+         * <p>User-defined information. It only takes effect when Notification parameters are filled in for MNS configuration. It will be returned in asynchronous message notifications, which can help you correlate and process messages within your system. The maximum length is 2048 bytes.</p>
          * 
          * <strong>example:</strong>
-         * <p>{&quot;file_id&quot;: &quot;abc&quot;}</p>
+         * <p>{
+         *       &quot;id&quot;: &quot;test-id&quot;,
+         *       &quot;name&quot;: &quot;test-name&quot;
+         * }</p>
          */
         public Builder userData(String userData) {
             this.putQueryParameter("UserData", userData);
@@ -495,7 +523,7 @@ public class GenerateWebofficeTokenRequest extends Request {
         }
 
         /**
-         * Watermark.
+         * <p>Watermark information. The watermark is generated on the front end and is not written into the source document. The same document with different parameters will result in different watermarks.</p>
          */
         public Builder watermark(WebofficeWatermark watermark) {
             String watermarkShrink = shrink(watermark, "Watermark", "json");

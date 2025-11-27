@@ -300,7 +300,7 @@ public class QueryLocationDateClustersRequest extends Request {
         }
 
         /**
-         * <p>The custom labels, which can be used as query conditions.</p>
+         * <p>The custom labels.</p>
          * 
          * <strong>example:</strong>
          * <p>key=value</p>
@@ -312,7 +312,7 @@ public class QueryLocationDateClustersRequest extends Request {
         }
 
         /**
-         * <p>The name of the dataset. For more information, see <a href="https://help.aliyun.com/document_detail/478160.html">Create a dataset</a>.</p>
+         * <p>The name of the dataset. For information about how to create a dataset, see <a href="https://help.aliyun.com/document_detail/478160.html">CreateDataset</a>.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -335,7 +335,7 @@ public class QueryLocationDateClustersRequest extends Request {
         }
 
         /**
-         * <p>The administrative level of the spatiotemporal clustering groups to be queried.</p>
+         * <p>The container for the administrative division level of the spatiotemporal clusters to be queried.</p>
          */
         public Builder locationDateClusterLevels(java.util.List<String> locationDateClusterLevels) {
             String locationDateClusterLevelsShrink = shrink(locationDateClusterLevels, "LocationDateClusterLevels", "json");
@@ -379,7 +379,7 @@ public class QueryLocationDateClustersRequest extends Request {
         }
 
         /**
-         * <p>The ID of the group that you want to query. Specify this parameter if you want to obtain the information about a specific spatiotemporal clustering group. Otherwise, leave this parameter empty and use other parameters to query the groups that meet the matching conditions.</p>
+         * <p>The ID of the cluster that you want to query. Specify this parameter if you want to query a specific spatiotemporal cluster. Otherwise, leave this parameter empty to query spatiotemporal clusters that meet the specified conditions.</p>
          * 
          * <strong>example:</strong>
          * <p>location-date-cluster-71dd4f32-9597-4085-a2ab-3a7b0fd0aff9</p>
@@ -391,10 +391,10 @@ public class QueryLocationDateClustersRequest extends Request {
         }
 
         /**
-         * <p>The sorting order.</p>
-         * <p>Default value: asc. Valid values:</p>
+         * <p>The order that you use to sort the query results.</p>
+         * <p>Valid values:</p>
          * <ul>
-         * <li>asc: ascending order.</li>
+         * <li>asc: ascending order. This is the default value.</li>
          * <li>desc: descending order.</li>
          * </ul>
          * 
@@ -408,7 +408,7 @@ public class QueryLocationDateClustersRequest extends Request {
         }
 
         /**
-         * <p>The name of the project. For more information, see <a href="https://help.aliyun.com/document_detail/478153.html">CreateProject</a>.</p>
+         * <p>The name of the project. You can obtain the name of the project from the response of the <a href="https://help.aliyun.com/document_detail/478153.html">CreateProject</a> operation.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -421,13 +421,13 @@ public class QueryLocationDateClustersRequest extends Request {
         }
 
         /**
-         * <p>The condition by which the results are sorted.</p>
+         * <p>The field that you use to sort the query results.</p>
          * <p>Valid values:</p>
          * <ul>
-         * <li>LocationDateClusterEndTime: by the end time of the spatiotemporal clustering groups.</li>
-         * <li>CreateTime: by the creation time of the spatiotemporal clustering groups.</li>
-         * <li>UpdateTime: by the update time of the spatiotemporal clustering groups.</li>
-         * <li>LocationDateClusterStartTime: by the start time of the spatiotemporal clustering groups. This is the default value.</li>
+         * <li>LocationDateClusterEndTime: by the time at which the latest photo in a cluster was taken.</li>
+         * <li>CreateTime: by the creation time of a spatiotemporal cluster.</li>
+         * <li>UpdateTime: by the update time of a spatiotemporal cluster.</li>
+         * <li>LocationDateClusterStartTime: by the time at which the earliest photo in a cluster was taken. This is the default value.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -440,7 +440,7 @@ public class QueryLocationDateClustersRequest extends Request {
         }
 
         /**
-         * <p>The title of spatiotemporal clustering. Fuzzy matching is performed.</p>
+         * <p>The characters that are included in the titles of spatiotemporal clusters to be queried. Matches are found by using fuzzy matching.</p>
          */
         public Builder title(String title) {
             this.putQueryParameter("Title", title);

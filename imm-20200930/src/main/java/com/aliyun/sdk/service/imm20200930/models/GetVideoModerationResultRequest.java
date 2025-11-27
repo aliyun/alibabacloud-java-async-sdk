@@ -113,6 +113,7 @@ public class GetVideoModerationResultRequest extends Request {
         }
 
         /**
+         * <p>The project name.<a href="~~478153~~"></a></p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -125,6 +126,7 @@ public class GetVideoModerationResultRequest extends Request {
         }
 
         /**
+         * <p>The task ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -137,6 +139,7 @@ public class GetVideoModerationResultRequest extends Request {
         }
 
         /**
+         * <p>The task type.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
