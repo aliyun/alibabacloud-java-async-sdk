@@ -30,6 +30,9 @@ public class Template extends TeaModel {
     @com.aliyun.core.annotation.NameInMap("credentialConfiguration")
     private CredentialConfiguration credentialConfiguration;
 
+    @com.aliyun.core.annotation.NameInMap("description")
+    private String description;
+
     @com.aliyun.core.annotation.NameInMap("diskSize")
     private Integer diskSize;
 
@@ -101,6 +104,7 @@ public class Template extends TeaModel {
         this.cpu = builder.cpu;
         this.createdAt = builder.createdAt;
         this.credentialConfiguration = builder.credentialConfiguration;
+        this.description = builder.description;
         this.diskSize = builder.diskSize;
         this.environmentVariables = builder.environmentVariables;
         this.executionRoleArn = builder.executionRoleArn;
@@ -162,6 +166,13 @@ public class Template extends TeaModel {
      */
     public CredentialConfiguration getCredentialConfiguration() {
         return this.credentialConfiguration;
+    }
+
+    /**
+     * @return description
+     */
+    public String getDescription() {
+        return this.description;
     }
 
     /**
@@ -316,6 +327,7 @@ public class Template extends TeaModel {
         private Float cpu; 
         private String createdAt; 
         private CredentialConfiguration credentialConfiguration; 
+        private String description; 
         private Integer diskSize; 
         private String environmentVariables; 
         private String executionRoleArn; 
@@ -346,6 +358,7 @@ public class Template extends TeaModel {
             this.cpu = model.cpu;
             this.createdAt = model.createdAt;
             this.credentialConfiguration = model.credentialConfiguration;
+            this.description = model.description;
             this.diskSize = model.diskSize;
             this.environmentVariables = model.environmentVariables;
             this.executionRoleArn = model.executionRoleArn;
@@ -398,6 +411,14 @@ public class Template extends TeaModel {
          */
         public Builder credentialConfiguration(CredentialConfiguration credentialConfiguration) {
             this.credentialConfiguration = credentialConfiguration;
+            return this;
+        }
+
+        /**
+         * description.
+         */
+        public Builder description(String description) {
+            this.description = description;
             return this;
         }
 

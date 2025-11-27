@@ -32,11 +32,15 @@ public class OssConfiguration extends TeaModel {
     @com.aliyun.core.annotation.Validation(required = true)
     private String prefix;
 
+    @com.aliyun.core.annotation.NameInMap("region")
+    private String region;
+
     private OssConfiguration(Builder builder) {
         this.bucketName = builder.bucketName;
         this.mountPoint = builder.mountPoint;
         this.permission = builder.permission;
         this.prefix = builder.prefix;
+        this.region = builder.region;
     }
 
     public static Builder builder() {
@@ -79,11 +83,19 @@ public class OssConfiguration extends TeaModel {
         return this.prefix;
     }
 
+    /**
+     * @return region
+     */
+    public String getRegion() {
+        return this.region;
+    }
+
     public static final class Builder {
         private String bucketName; 
         private String mountPoint; 
         private String permission; 
         private String prefix; 
+        private String region; 
 
         private Builder() {
         } 
@@ -93,6 +105,7 @@ public class OssConfiguration extends TeaModel {
             this.mountPoint = model.mountPoint;
             this.permission = model.permission;
             this.prefix = model.prefix;
+            this.region = model.region;
         } 
 
         /**
@@ -124,6 +137,14 @@ public class OssConfiguration extends TeaModel {
          */
         public Builder prefix(String prefix) {
             this.prefix = prefix;
+            return this;
+        }
+
+        /**
+         * region.
+         */
+        public Builder region(String region) {
+            this.region = region;
             return this;
         }
 

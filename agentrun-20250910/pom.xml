@@ -3,7 +3,7 @@
   <modelVersion>4.0.0</modelVersion>
   <groupId>com.aliyun</groupId>
   <artifactId>alibabacloud-agentrun20250910</artifactId>
-  <version>4.0.0</version>
+  <version>4.0.1</version>
   <packaging>jar</packaging>
   <name>alibabacloud-agentrun20250910</name>
   <description>Alibaba Cloud AgentRun (20250910) Async SDK for Java

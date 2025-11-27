@@ -33,12 +33,17 @@ public class ListAgentRuntimesRequest extends Request {
     @com.aliyun.core.annotation.NameInMap("searchMode")
     private String searchMode;
 
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("status")
+    private String status;
+
     private ListAgentRuntimesRequest(Builder builder) {
         super(builder);
         this.agentRuntimeName = builder.agentRuntimeName;
         this.pageNumber = builder.pageNumber;
         this.pageSize = builder.pageSize;
         this.searchMode = builder.searchMode;
+        this.status = builder.status;
     }
 
     public static Builder builder() {
@@ -82,11 +87,19 @@ public class ListAgentRuntimesRequest extends Request {
         return this.searchMode;
     }
 
+    /**
+     * @return status
+     */
+    public String getStatus() {
+        return this.status;
+    }
+
     public static final class Builder extends Request.Builder<ListAgentRuntimesRequest, Builder> {
         private String agentRuntimeName; 
         private Integer pageNumber; 
         private Integer pageSize; 
         private String searchMode; 
+        private String status; 
 
         private Builder() {
             super();
@@ -98,6 +111,7 @@ public class ListAgentRuntimesRequest extends Request {
             this.pageNumber = request.pageNumber;
             this.pageSize = request.pageSize;
             this.searchMode = request.searchMode;
+            this.status = request.status;
         } 
 
         /**
@@ -145,6 +159,18 @@ public class ListAgentRuntimesRequest extends Request {
         public Builder searchMode(String searchMode) {
             this.putQueryParameter("searchMode", searchMode);
             this.searchMode = searchMode;
+            return this;
+        }
+
+        /**
+         * <p>根据状态进行过滤，多个状态用逗号分隔，支持精确匹配</p>
+         * 
+         * <strong>example:</strong>
+         * <p>READY,CREATING</p>
+         */
+        public Builder status(String status) {
+            this.putQueryParameter("status", status);
+            this.status = status;
             return this;
         }
 
