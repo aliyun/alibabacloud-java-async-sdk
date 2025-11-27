@@ -67,7 +67,7 @@ public class DescribeJobMetricLastResponseBody extends TeaModel {
         } 
 
         /**
-         * Metrics.
+         * <p>The list of the JobMetric details.</p>
          */
         public Builder metrics(java.util.List<Metrics> metrics) {
             this.metrics = metrics;
@@ -75,7 +75,10 @@ public class DescribeJobMetricLastResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>04F0F334-1335-436C-A1D7-6C044FE7****</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -141,7 +144,10 @@ public class DescribeJobMetricLastResponseBody extends TeaModel {
             } 
 
             /**
-             * ArrayIndex.
+             * <p>The index of the array job.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder arrayIndex(Integer arrayIndex) {
                 this.arrayIndex = arrayIndex;
@@ -149,7 +155,10 @@ public class DescribeJobMetricLastResponseBody extends TeaModel {
             }
 
             /**
-             * Metric.
+             * <p>The monitoring item information corresponding to the array job index.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>{&quot;memory_utilization&quot;: 37.42,&quot;cpu_utilization&quot;: 1.008, &quot;disk_utilization&quot;: 3.562}</p>
              */
             public Builder metric(String metric) {
                 this.metric = metric;

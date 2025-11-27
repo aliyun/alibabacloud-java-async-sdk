@@ -119,7 +119,7 @@ public class ListImagesResponseBody extends TeaModel {
         } 
 
         /**
-         * Images.
+         * <p>The list of image information.</p>
          */
         public Builder images(java.util.List<Images> images) {
             this.images = images;
@@ -127,7 +127,10 @@ public class ListImagesResponseBody extends TeaModel {
         }
 
         /**
-         * PageNumber.
+         * <p>The page number.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder pageNumber(Long pageNumber) {
             this.pageNumber = pageNumber;
@@ -135,7 +138,10 @@ public class ListImagesResponseBody extends TeaModel {
         }
 
         /**
-         * PageSize.
+         * <p>The number of entries returned per page.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>20</p>
          */
         public Builder pageSize(Long pageSize) {
             this.pageSize = pageSize;
@@ -143,7 +149,10 @@ public class ListImagesResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>896D338C-E4F4-41EC-A154-D605E5DE****</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -151,7 +160,14 @@ public class ListImagesResponseBody extends TeaModel {
         }
 
         /**
-         * Success.
+         * <p>Indicates whether the request was successful. Valid values:</p>
+         * <ul>
+         * <li>true</li>
+         * <li>false</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder success(Boolean success) {
             this.success = success;
@@ -159,7 +175,10 @@ public class ListImagesResponseBody extends TeaModel {
         }
 
         /**
-         * TotalCount.
+         * <p>The total number of entries returned.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder totalCount(Integer totalCount) {
             this.totalCount = totalCount;
@@ -345,7 +364,11 @@ public class ListImagesResponseBody extends TeaModel {
             } 
 
             /**
+             * <p>The application ID.</p>
              * <p>This parameter is required.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>ci-vm-kHLPzEWun6zz****</p>
              */
             public Builder appId(String appId) {
                 this.appId = appId;
@@ -353,7 +376,10 @@ public class ListImagesResponseBody extends TeaModel {
             }
 
             /**
-             * CreateTime.
+             * <p>The time when the storage resource was created.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2022-12-09T07:06:34Z</p>
              */
             public Builder createTime(String createTime) {
                 this.createTime = createTime;
@@ -361,7 +387,7 @@ public class ListImagesResponseBody extends TeaModel {
             }
 
             /**
-             * Description.
+             * <p>The description of the image.</p>
              */
             public Builder description(String description) {
                 this.description = description;
@@ -369,7 +395,10 @@ public class ListImagesResponseBody extends TeaModel {
             }
 
             /**
-             * DocumentId.
+             * <p>The document ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>30</p>
              */
             public Builder documentId(Integer documentId) {
                 this.documentId = documentId;
@@ -377,6 +406,7 @@ public class ListImagesResponseBody extends TeaModel {
             }
 
             /**
+             * <p>The image ID.</p>
              * <p>This parameter is required.</p>
              * 
              * <strong>example:</strong>
@@ -388,6 +418,7 @@ public class ListImagesResponseBody extends TeaModel {
             }
 
             /**
+             * <p>The type of the image.</p>
              * <p>This parameter is required.</p>
              * 
              * <strong>example:</strong>
@@ -399,7 +430,10 @@ public class ListImagesResponseBody extends TeaModel {
             }
 
             /**
-             * Name.
+             * <p>The name of the image.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>app-image</p>
              */
             public Builder name(String name) {
                 this.name = name;
@@ -407,7 +441,10 @@ public class ListImagesResponseBody extends TeaModel {
             }
 
             /**
-             * OsTag.
+             * <p>The ID of the specific OS version.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Ubuntu  22.04 64 bit</p>
              */
             public Builder osTag(String osTag) {
                 this.osTag = osTag;
@@ -415,7 +452,10 @@ public class ListImagesResponseBody extends TeaModel {
             }
 
             /**
-             * UpdateTime.
+             * <p>The time when the image was updated.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2024-09-25 14:15:28</p>
              */
             public Builder updateTime(String updateTime) {
                 this.updateTime = updateTime;
@@ -423,7 +463,10 @@ public class ListImagesResponseBody extends TeaModel {
             }
 
             /**
-             * Version.
+             * <p>The version of the image.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>v1.0</p>
              */
             public Builder version(String version) {
                 this.version = version;
@@ -431,7 +474,10 @@ public class ListImagesResponseBody extends TeaModel {
             }
 
             /**
-             * Weight.
+             * <p>The weight.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>70</p>
              */
             public Builder weight(Integer weight) {
                 this.weight = weight;

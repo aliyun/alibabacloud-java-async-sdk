@@ -101,7 +101,7 @@ public class ListJobsRequest extends Request {
         } 
 
         /**
-         * Filter.
+         * <p>Queries job filter conditions.</p>
          */
         public Builder filter(Filter filter) {
             String filterShrink = shrink(filter, "Filter", "json");
@@ -111,7 +111,12 @@ public class ListJobsRequest extends Request {
         }
 
         /**
-         * PageNumber.
+         * <p>The page number.</p>
+         * <p>Pages start from page 1.</p>
+         * <p>Default value: 1.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder pageNumber(Integer pageNumber) {
             this.putQueryParameter("PageNumber", pageNumber);
@@ -120,7 +125,10 @@ public class ListJobsRequest extends Request {
         }
 
         /**
-         * PageSize.
+         * <p>The number of entries on the current page. Default value: 50. Maximum value: 100.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>50</p>
          */
         public Builder pageSize(Integer pageSize) {
             this.putQueryParameter("PageSize", pageSize);
@@ -129,7 +137,7 @@ public class ListJobsRequest extends Request {
         }
 
         /**
-         * SortBy.
+         * <p>The sorting method.</p>
          */
         public Builder sortBy(SortBy sortBy) {
             String sortByShrink = shrink(sortBy, "SortBy", "json");
@@ -237,7 +245,10 @@ public class ListJobsRequest extends Request {
             } 
 
             /**
-             * JobId.
+             * <p>The ID of the job.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>job-xxxx</p>
              */
             public Builder jobId(String jobId) {
                 this.jobId = jobId;
@@ -245,7 +256,10 @@ public class ListJobsRequest extends Request {
             }
 
             /**
-             * JobName.
+             * <p>The job name. Fuzzy search is supported.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>testJob</p>
              */
             public Builder jobName(String jobName) {
                 this.jobName = jobName;
@@ -253,7 +267,23 @@ public class ListJobsRequest extends Request {
             }
 
             /**
-             * Status.
+             * <p>The job status. Valid values:</p>
+             * <ul>
+             * <li>Pending</li>
+             * <li>initing</li>
+             * <li>Succeed</li>
+             * <li>Failed</li>
+             * <li>Running</li>
+             * <li>Exception</li>
+             * <li>Retrying</li>
+             * <li>Expired</li>
+             * <li>Suspended</li>
+             * <li>Restarting</li>
+             * <li>Deleted</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>Running</p>
              */
             public Builder status(String status) {
                 this.status = status;
@@ -261,7 +291,10 @@ public class ListJobsRequest extends Request {
             }
 
             /**
-             * TimeCreatedAfter.
+             * <p>For jobs submitted after this time, the time in the region is converted into a UNIX timestamp (UI8).</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1703819914</p>
              */
             public Builder timeCreatedAfter(Integer timeCreatedAfter) {
                 this.timeCreatedAfter = timeCreatedAfter;
@@ -269,7 +302,10 @@ public class ListJobsRequest extends Request {
             }
 
             /**
-             * TimeCreatedBefore.
+             * <p>For jobs submitted before this time, the time in the region is converted into a Unix timestamp (for domestic sites, the UI8 region).</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1703820113</p>
              */
             public Builder timeCreatedBefore(Integer timeCreatedBefore) {
                 this.timeCreatedBefore = timeCreatedBefore;
@@ -336,7 +372,14 @@ public class ListJobsRequest extends Request {
             } 
 
             /**
-             * Label.
+             * <p>The sorting label. Valid values:</p>
+             * <ul>
+             * <li>time_start</li>
+             * <li>job_name</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>time_start</p>
              */
             public Builder label(String label) {
                 this.label = label;
@@ -344,7 +387,14 @@ public class ListJobsRequest extends Request {
             }
 
             /**
-             * Order.
+             * <p>The sorting order. Valid values:</p>
+             * <ul>
+             * <li>ASC (default): ascending order</li>
+             * <li>DESC: descending order</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>ASC</p>
              */
             public Builder order(String order) {
                 this.order = order;

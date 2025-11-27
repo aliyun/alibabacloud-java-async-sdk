@@ -106,7 +106,7 @@ public class ListJobsResponseBody extends TeaModel {
         } 
 
         /**
-         * JobList.
+         * <p>The list of jobs.</p>
          */
         public Builder jobList(java.util.List<JobList> jobList) {
             this.jobList = jobList;
@@ -114,7 +114,10 @@ public class ListJobsResponseBody extends TeaModel {
         }
 
         /**
-         * PageNumber.
+         * <p>The current page number.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder pageNumber(Integer pageNumber) {
             this.pageNumber = pageNumber;
@@ -122,7 +125,10 @@ public class ListJobsResponseBody extends TeaModel {
         }
 
         /**
-         * PageSize.
+         * <p>The number of entries returned per page.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10</p>
          */
         public Builder pageSize(Integer pageSize) {
             this.pageSize = pageSize;
@@ -130,7 +136,10 @@ public class ListJobsResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>896D338C-E4F4-41EC-A154-D605E5DE****</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -138,7 +147,10 @@ public class ListJobsResponseBody extends TeaModel {
         }
 
         /**
-         * TotalCount.
+         * <p>The total number of entries returned. This parameter is optional and is not returned by default.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder totalCount(Integer totalCount) {
             this.totalCount = totalCount;
@@ -204,7 +216,10 @@ public class ListJobsResponseBody extends TeaModel {
             } 
 
             /**
-             * TagKey.
+             * <p>The key of the job tag.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>TestKey</p>
              */
             public Builder tagKey(String tagKey) {
                 this.tagKey = tagKey;
@@ -212,7 +227,10 @@ public class ListJobsResponseBody extends TeaModel {
             }
 
             /**
-             * TagValue.
+             * <p>The value of the job tag.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>TestValue</p>
              */
             public Builder tagValue(String tagValue) {
                 this.tagValue = tagValue;
@@ -435,7 +453,10 @@ public class ListJobsResponseBody extends TeaModel {
             } 
 
             /**
-             * AppExtraInfo.
+             * <p>The additional information about the application.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>{&quot;xxx&quot;: &quot;xxxxx&quot;}</p>
              */
             public Builder appExtraInfo(String appExtraInfo) {
                 this.appExtraInfo = appExtraInfo;
@@ -451,7 +472,10 @@ public class ListJobsResponseBody extends TeaModel {
             }
 
             /**
-             * CreateTime.
+             * <p>The time when the job was submitted.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2024-01-25 12:29:21</p>
              */
             public Builder createTime(String createTime) {
                 this.createTime = createTime;
@@ -459,7 +483,10 @@ public class ListJobsResponseBody extends TeaModel {
             }
 
             /**
-             * EndTime.
+             * <p>The end time of the job.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2024-01-25 12:35:23</p>
              */
             public Builder endTime(String endTime) {
                 this.endTime = endTime;
@@ -467,7 +494,10 @@ public class ListJobsResponseBody extends TeaModel {
             }
 
             /**
-             * ExecutorCount.
+             * <p>The number of running nodes.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder executorCount(Integer executorCount) {
                 this.executorCount = executorCount;
@@ -475,7 +505,10 @@ public class ListJobsResponseBody extends TeaModel {
             }
 
             /**
-             * JobDescription.
+             * <p>The description of the job.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Demo</p>
              */
             public Builder jobDescription(String jobDescription) {
                 this.jobDescription = jobDescription;
@@ -483,7 +516,10 @@ public class ListJobsResponseBody extends TeaModel {
             }
 
             /**
-             * JobId.
+             * <p>The ID of the job.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>job-xxx</p>
              */
             public Builder jobId(String jobId) {
                 this.jobId = jobId;
@@ -491,7 +527,10 @@ public class ListJobsResponseBody extends TeaModel {
             }
 
             /**
-             * JobName.
+             * <p>The job name.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>testJob</p>
              */
             public Builder jobName(String jobName) {
                 this.jobName = jobName;
@@ -499,7 +538,10 @@ public class ListJobsResponseBody extends TeaModel {
             }
 
             /**
-             * OwnerUid.
+             * <p>The UID of the creator.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>129**********</p>
              */
             public Builder ownerUid(String ownerUid) {
                 this.ownerUid = ownerUid;
@@ -507,7 +549,10 @@ public class ListJobsResponseBody extends TeaModel {
             }
 
             /**
-             * StartTime.
+             * <p>The start time of the job.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2024-01-25 12:29:23</p>
              */
             public Builder startTime(String startTime) {
                 this.startTime = startTime;
@@ -515,7 +560,22 @@ public class ListJobsResponseBody extends TeaModel {
             }
 
             /**
-             * Status.
+             * <p>The status of the job. Valid values:</p>
+             * <ul>
+             * <li>Pending</li>
+             * <li>Initing</li>
+             * <li>Succeed</li>
+             * <li>Failed</li>
+             * <li>Running</li>
+             * <li>Exception</li>
+             * <li>Retrying</li>
+             * <li>Expired</li>
+             * <li>Deleting</li>
+             * <li>Deleted</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>Running</p>
              */
             public Builder status(String status) {
                 this.status = status;
@@ -523,7 +583,7 @@ public class ListJobsResponseBody extends TeaModel {
             }
 
             /**
-             * Tags.
+             * <p>The list of job tags.</p>
              */
             public Builder tags(java.util.List<Tags> tags) {
                 this.tags = tags;
@@ -531,7 +591,10 @@ public class ListJobsResponseBody extends TeaModel {
             }
 
             /**
-             * TaskCount.
+             * <p>The number of tasks.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder taskCount(Integer taskCount) {
                 this.taskCount = taskCount;
@@ -539,7 +602,10 @@ public class ListJobsResponseBody extends TeaModel {
             }
 
             /**
-             * TaskSustainable.
+             * <p>Indicate whether the job is a long-running job.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>true</p>
              */
             public Builder taskSustainable(Boolean taskSustainable) {
                 this.taskSustainable = taskSustainable;

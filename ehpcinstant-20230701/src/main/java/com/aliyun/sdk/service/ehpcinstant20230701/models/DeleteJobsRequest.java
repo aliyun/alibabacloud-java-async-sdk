@@ -87,7 +87,7 @@ public class DeleteJobsRequest extends Request {
         } 
 
         /**
-         * ExecutorIds.
+         * <p>The list of executor IDs. A maximum of 100 IDs are supported.</p>
          */
         public Builder executorIds(java.util.List<String> executorIds) {
             String executorIdsShrink = shrink(executorIds, "ExecutorIds", "json");
@@ -97,7 +97,15 @@ public class DeleteJobsRequest extends Request {
         }
 
         /**
-         * JobScheduler.
+         * <p>The type of the job scheduler.</p>
+         * <ul>
+         * <li>HPC</li>
+         * <li>K8S</li>
+         * </ul>
+         * <p>Default value: HPC</p>
+         * 
+         * <strong>example:</strong>
+         * <p>HPC</p>
          */
         public Builder jobScheduler(String jobScheduler) {
             this.putQueryParameter("JobScheduler", jobScheduler);
@@ -106,7 +114,7 @@ public class DeleteJobsRequest extends Request {
         }
 
         /**
-         * JobSpec.
+         * <p>The information about the job to be deleted.</p>
          */
         public Builder jobSpec(java.util.List<JobSpec> jobSpec) {
             String jobSpecShrink = shrink(jobSpec, "JobSpec", "json");
@@ -175,7 +183,7 @@ public class DeleteJobsRequest extends Request {
             } 
 
             /**
-             * ArrayIndex.
+             * <p>The list of array job indexes to be deleted.</p>
              */
             public Builder arrayIndex(java.util.List<Integer> arrayIndex) {
                 this.arrayIndex = arrayIndex;
@@ -183,7 +191,10 @@ public class DeleteJobsRequest extends Request {
             }
 
             /**
-             * TaskName.
+             * <p>The name of the task to be deleted.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>task0</p>
              */
             public Builder taskName(String taskName) {
                 this.taskName = taskName;
@@ -250,7 +261,10 @@ public class DeleteJobsRequest extends Request {
             } 
 
             /**
-             * JobId.
+             * <p>The ID of the job to be deleted.<br>You can call the ListJobs operation to query job IDs.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>job-xxxx</p>
              */
             public Builder jobId(String jobId) {
                 this.jobId = jobId;
@@ -258,7 +272,7 @@ public class DeleteJobsRequest extends Request {
             }
 
             /**
-             * TaskSpec.
+             * <p>The task details of the job to be deleted.</p>
              */
             public Builder taskSpec(java.util.List<TaskSpec> taskSpec) {
                 this.taskSpec = taskSpec;

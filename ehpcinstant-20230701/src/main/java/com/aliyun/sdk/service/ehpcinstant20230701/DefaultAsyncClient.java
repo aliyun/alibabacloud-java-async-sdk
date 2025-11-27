@@ -58,6 +58,9 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
+     * <b>description</b> :
+     * <p>*Make sure that you fully understand E-HPC Instnat billing methods and <a href="https://help.aliyun.com/zh/e-hpc/e-hpc-instant/product-overview/billing-overview?spm=a2c4g.11186623.help-menu-57664.d_0_2_0.5fdd28422y6UvO">prices</a>.</p>
+     * 
      * @param request the request parameters of CreateActionPlan  CreateActionPlanRequest
      * @return CreateActionPlanResponse
      */
@@ -112,6 +115,10 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
+     * <b>description</b> :
+     * <p><em>Make sure that you fully understand E-HPC Instnat billing methods and <a href="https://help.aliyun.com/zh/e-hpc/e-hpc-instant/product-overview/billing-overview?spm=a2c4g.11186623.help-menu-57664.d_0_2_0.5fdd28422y6UvO">prices</a>.</em>*
+     * This operation stops all Instant jobs that are managed by ActionPlanId.</p>
+     * 
      * @param request the request parameters of DeleteActionPlan  DeleteActionPlanRequest
      * @return DeleteActionPlanResponse
      */
@@ -124,6 +131,24 @@ public final class DefaultAsyncClient implements AsyncClient {
             return this.handler.execute(params);
         } catch (Exception e) {
             CompletableFuture<DeleteActionPlanResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
+     * @param request the request parameters of DeleteJobRecords  DeleteJobRecordsRequest
+     * @return DeleteJobRecordsResponse
+     */
+    @Override
+    public CompletableFuture<DeleteJobRecordsResponse> deleteJobRecords(DeleteJobRecordsRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RPC).setAction("DeleteJobRecords").setMethod(HttpMethod.POST).setPathRegex("/").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(DeleteJobRecordsResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<DeleteJobRecordsResponse> future = new CompletableFuture<>();
             future.completeExceptionally(e);
             return future;
         }
@@ -364,6 +389,9 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
+     * <b>description</b> :
+     * <p>Queries job executor information.</p>
+     * 
      * @param request the request parameters of ListJobExecutors  ListJobExecutorsRequest
      * @return ListJobExecutorsResponse
      */

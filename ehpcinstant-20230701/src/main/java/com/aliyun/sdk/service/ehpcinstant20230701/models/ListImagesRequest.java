@@ -143,7 +143,14 @@ public class ListImagesRequest extends Request {
         } 
 
         /**
-         * ImageCategory.
+         * <p>The source of the image. Valid values:</p>
+         * <ul>
+         * <li>Public: public images provided by Alibaba Cloud.</li>
+         * <li>Custom: the custom image that you added.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>Custom</p>
          */
         public Builder imageCategory(String imageCategory) {
             this.putQueryParameter("ImageCategory", imageCategory);
@@ -152,7 +159,7 @@ public class ListImagesRequest extends Request {
         }
 
         /**
-         * ImageIds.
+         * <p>The array of image IDs.</p>
          */
         public Builder imageIds(java.util.List<String> imageIds) {
             String imageIdsShrink = shrink(imageIds, "ImageIds", "json");
@@ -162,7 +169,7 @@ public class ListImagesRequest extends Request {
         }
 
         /**
-         * ImageNames.
+         * <p>The array of image names.</p>
          */
         public Builder imageNames(java.util.List<String> imageNames) {
             String imageNamesShrink = shrink(imageNames, "ImageNames", "json");
@@ -172,7 +179,15 @@ public class ListImagesRequest extends Request {
         }
 
         /**
-         * ImageType.
+         * <p>The type of the images. Valid values:</p>
+         * <ul>
+         * <li>VM: virtual machine image.</li>
+         * <li>Container: the container image.</li>
+         * </ul>
+         * <p>Default value: VM</p>
+         * 
+         * <strong>example:</strong>
+         * <p>VM</p>
          */
         public Builder imageType(String imageType) {
             this.putQueryParameter("ImageType", imageType);
@@ -181,7 +196,14 @@ public class ListImagesRequest extends Request {
         }
 
         /**
-         * Mode.
+         * <p>The query mode. Valid values:</p>
+         * <ul>
+         * <li>List: queries the list of all corresponding image versions.</li>
+         * <li>Merge: merges images to query the latest version list.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>Merge</p>
          */
         public Builder mode(String mode) {
             this.putQueryParameter("Mode", mode);
@@ -190,7 +212,10 @@ public class ListImagesRequest extends Request {
         }
 
         /**
-         * PageNumber.
+         * <p>The number of the page to return.<br>Default value: 1.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder pageNumber(Long pageNumber) {
             this.putQueryParameter("PageNumber", pageNumber);
@@ -199,7 +224,10 @@ public class ListImagesRequest extends Request {
         }
 
         /**
-         * PageSize.
+         * <p>The number of pieces per page.<br>Default value: 20.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10</p>
          */
         public Builder pageSize(Long pageSize) {
             this.putQueryParameter("PageSize", pageSize);

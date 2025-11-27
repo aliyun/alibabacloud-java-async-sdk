@@ -59,7 +59,10 @@ public class DeleteActionPlanRequest extends Request {
         } 
 
         /**
-         * ActionPlanId.
+         * <p>The ID of the execution plan.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>ap-hz036ubmx2qmw93k****</p>
          */
         public Builder actionPlanId(String actionPlanId) {
             this.putQueryParameter("ActionPlanId", actionPlanId);

@@ -103,7 +103,10 @@ public class UnTagResourcesRequest extends Request {
         } 
 
         /**
-         * All.
+         * <p>Whether to delete all tags of the target resource. This field takes effect only when TagKey.N is left empty. Default False</p>
+         * 
+         * <strong>example:</strong>
+         * <p>False</p>
          */
         public Builder all(Boolean all) {
             this.putQueryParameter("All", all);
@@ -112,6 +115,7 @@ public class UnTagResourcesRequest extends Request {
         }
 
         /**
+         * <p>The list of resource IDs. Valid values of N: 1 to 50.</p>
          * <p>This parameter is required.</p>
          */
         public Builder resourceId(java.util.List<String> resourceId) {
@@ -121,6 +125,11 @@ public class UnTagResourcesRequest extends Request {
         }
 
         /**
+         * <p>The type of the resource. Valid values:</p>
+         * <ul>
+         * <li>Job</li>
+         * <li>Executor</li>
+         * </ul>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -133,7 +142,7 @@ public class UnTagResourcesRequest extends Request {
         }
 
         /**
-         * TagKey.
+         * <p>The list of tag keys, which can contain a maximum of 20 child items.</p>
          */
         public Builder tagKey(java.util.List<String> tagKey) {
             this.putQueryParameter("TagKey", tagKey);

@@ -67,7 +67,7 @@ public class GetPoolResponseBody extends TeaModel {
         } 
 
         /**
-         * PoolInfo.
+         * <p>The information about the resource pool.</p>
          */
         public Builder poolInfo(PoolInfo poolInfo) {
             this.poolInfo = poolInfo;
@@ -235,7 +235,10 @@ public class GetPoolResponseBody extends TeaModel {
             } 
 
             /**
-             * CreateTime.
+             * <p>The time when the resource pool is created.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2024-12-01 20:00:00</p>
              */
             public Builder createTime(String createTime) {
                 this.createTime = createTime;
@@ -243,7 +246,10 @@ public class GetPoolResponseBody extends TeaModel {
             }
 
             /**
-             * ExectorUsage.
+             * <p>The usage of execution nodes that are running in a resource pool.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder exectorUsage(Integer exectorUsage) {
                 this.exectorUsage = exectorUsage;
@@ -251,7 +257,14 @@ public class GetPoolResponseBody extends TeaModel {
             }
 
             /**
-             * IsDefault.
+             * <p>Indices whether the resource pool is the default resource pool. Valid values:</p>
+             * <ul>
+             * <li><strong>true</strong></li>
+             * <li><strong>false</strong></li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>true</p>
              */
             public Builder isDefault(Boolean isDefault) {
                 this.isDefault = isDefault;
@@ -259,7 +272,10 @@ public class GetPoolResponseBody extends TeaModel {
             }
 
             /**
-             * MaxExectorNum.
+             * <p>The maximum number of execution nodes that can run concurrently in a resource pool.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2000</p>
              */
             public Builder maxExectorNum(Integer maxExectorNum) {
                 this.maxExectorNum = maxExectorNum;
@@ -267,7 +283,14 @@ public class GetPoolResponseBody extends TeaModel {
             }
 
             /**
-             * PoolName.
+             * <p>The name of the resource group.</p>
+             * <ul>
+             * <li>The value can be up to 15 characters in length.</li>
+             * <li>It can contain digits, uppercase letters, lowercase letters, underscores (_), and dots (.).</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>PoolTest</p>
              */
             public Builder poolName(String poolName) {
                 this.poolName = poolName;
@@ -275,7 +298,14 @@ public class GetPoolResponseBody extends TeaModel {
             }
 
             /**
-             * Priority.
+             * <p>The priority of the resource pool.</p>
+             * <ul>
+             * <li>You can set a priority in the range of 1 to 99. The default value is 1, which is the lowest priority.</li>
+             * <li>Jobs submitted to a resource pool with a higher priority level value will be scheduled before pending jobs in a resource pool with a lower priority level value, and the priority level of the resource pool takes precedence over the priority of the job.</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder priority(Integer priority) {
                 this.priority = priority;
@@ -283,7 +313,10 @@ public class GetPoolResponseBody extends TeaModel {
             }
 
             /**
-             * Reason.
+             * <p>The cause of the error.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Fails to *** pool: ***.</p>
              */
             public Builder reason(String reason) {
                 this.reason = reason;
@@ -291,7 +324,17 @@ public class GetPoolResponseBody extends TeaModel {
             }
 
             /**
-             * Status.
+             * <p>The status of the resource pool. Valid values:</p>
+             * <ul>
+             * <li>Creating: The resource pool is being created.</li>
+             * <li>Updating: The resource pool is being updated.</li>
+             * <li>Deleting: The resource pool is being deleted.</li>
+             * <li>Working: The resource pool is working.</li>
+             * <li>Deleted: The resource pool is deleted.</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>Working</p>
              */
             public Builder status(String status) {
                 this.status = status;
@@ -299,7 +342,10 @@ public class GetPoolResponseBody extends TeaModel {
             }
 
             /**
-             * UpdateTime.
+             * <p>The time when the resource pool was updated.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2024-12-01 20:00:00</p>
              */
             public Builder updateTime(String updateTime) {
                 this.updateTime = updateTime;

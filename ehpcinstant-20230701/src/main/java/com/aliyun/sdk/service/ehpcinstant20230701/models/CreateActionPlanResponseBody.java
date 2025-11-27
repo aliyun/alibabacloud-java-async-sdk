@@ -67,7 +67,10 @@ public class CreateActionPlanResponseBody extends TeaModel {
         } 
 
         /**
-         * ActionPlanId.
+         * <p>The ID of the execution plan.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>ap-hz036ubmx2qmw93k****</p>
          */
         public Builder actionPlanId(String actionPlanId) {
             this.actionPlanId = actionPlanId;
@@ -75,7 +78,10 @@ public class CreateActionPlanResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>896D338C-E4F4-41EC-A154-D605E5DE****</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;

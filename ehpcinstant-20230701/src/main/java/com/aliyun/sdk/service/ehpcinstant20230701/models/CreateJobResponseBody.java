@@ -80,7 +80,10 @@ public class CreateJobResponseBody extends TeaModel {
         } 
 
         /**
-         * JobId.
+         * <p>The job ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>job-xxxx</p>
          */
         public Builder jobId(String jobId) {
             this.jobId = jobId;
@@ -88,7 +91,10 @@ public class CreateJobResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>896D338C-E4F4-41EC-A154-D605E5DE****</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -96,7 +102,7 @@ public class CreateJobResponseBody extends TeaModel {
         }
 
         /**
-         * Tasks.
+         * <p>The list of tasks.</p>
          */
         public Builder tasks(java.util.List<Tasks> tasks) {
             this.tasks = tasks;
@@ -162,7 +168,7 @@ public class CreateJobResponseBody extends TeaModel {
             } 
 
             /**
-             * ExecutorIds.
+             * <p>The list of executor IDs contained in the task.</p>
              */
             public Builder executorIds(java.util.List<String> executorIds) {
                 this.executorIds = executorIds;
@@ -170,7 +176,10 @@ public class CreateJobResponseBody extends TeaModel {
             }
 
             /**
-             * TaskName.
+             * <p>The name of the task.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>task0</p>
              */
             public Builder taskName(String taskName) {
                 this.taskName = taskName;

@@ -87,7 +87,7 @@ public class ListExecutorsRequest extends Request {
         } 
 
         /**
-         * Filter.
+         * <p>Queries the Executor filter conditions.</p>
          */
         public Builder filter(Filter filter) {
             String filterShrink = shrink(filter, "Filter", "json");
@@ -97,7 +97,10 @@ public class ListExecutorsRequest extends Request {
         }
 
         /**
-         * PageNumber.
+         * <p>The current page number.<br>Starting value: 1<br>Default value: 1</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder pageNumber(Integer pageNumber) {
             this.putQueryParameter("PageNumber", pageNumber);
@@ -106,7 +109,10 @@ public class ListExecutorsRequest extends Request {
         }
 
         /**
-         * PageSize.
+         * <p>The number of entries per page. The number of entries returned per page. Default value: 50. Maximum value: 100.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>50</p>
          */
         public Builder pageSize(Integer pageSize) {
             this.putQueryParameter("PageSize", pageSize);
@@ -149,6 +155,9 @@ public class ListExecutorsRequest extends Request {
         @com.aliyun.core.annotation.NameInMap("TimeCreatedBefore")
         private Integer timeCreatedBefore;
 
+        @com.aliyun.core.annotation.NameInMap("VpcId")
+        private String vpcId;
+
         @com.aliyun.core.annotation.NameInMap("VswitchId")
         private String vswitchId;
 
@@ -160,6 +169,7 @@ public class ListExecutorsRequest extends Request {
             this.status = builder.status;
             this.timeCreatedAfter = builder.timeCreatedAfter;
             this.timeCreatedBefore = builder.timeCreatedBefore;
+            this.vpcId = builder.vpcId;
             this.vswitchId = builder.vswitchId;
         }
 
@@ -221,6 +231,13 @@ public class ListExecutorsRequest extends Request {
         }
 
         /**
+         * @return vpcId
+         */
+        public String getVpcId() {
+            return this.vpcId;
+        }
+
+        /**
          * @return vswitchId
          */
         public String getVswitchId() {
@@ -235,6 +252,7 @@ public class ListExecutorsRequest extends Request {
             private java.util.List<String> status; 
             private Integer timeCreatedAfter; 
             private Integer timeCreatedBefore; 
+            private String vpcId; 
             private String vswitchId; 
 
             private Builder() {
@@ -248,11 +266,12 @@ public class ListExecutorsRequest extends Request {
                 this.status = model.status;
                 this.timeCreatedAfter = model.timeCreatedAfter;
                 this.timeCreatedBefore = model.timeCreatedBefore;
+                this.vpcId = model.vpcId;
                 this.vswitchId = model.vswitchId;
             } 
 
             /**
-             * ExecutorIds.
+             * <p>The list of executor IDs. A maximum of 100 IDs are supported.</p>
              */
             public Builder executorIds(java.util.List<String> executorIds) {
                 this.executorIds = executorIds;
@@ -260,7 +279,10 @@ public class ListExecutorsRequest extends Request {
             }
 
             /**
-             * Image.
+             * <p>Executor image.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>m-f8z0dfa96luxxxxx</p>
              */
             public Builder image(String image) {
                 this.image = image;
@@ -268,7 +290,7 @@ public class ListExecutorsRequest extends Request {
             }
 
             /**
-             * IpAddresses.
+             * <p>The list of internal IP addresses. A maximum of 100 IP addresses are supported.</p>
              */
             public Builder ipAddresses(java.util.List<String> ipAddresses) {
                 this.ipAddresses = ipAddresses;
@@ -276,7 +298,10 @@ public class ListExecutorsRequest extends Request {
             }
 
             /**
-             * JobName.
+             * <p>The job name. Exact filtering. Fuzzy query is not supported.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>testJob</p>
              */
             public Builder jobName(String jobName) {
                 this.jobName = jobName;
@@ -284,7 +309,7 @@ public class ListExecutorsRequest extends Request {
             }
 
             /**
-             * Status.
+             * <p>Executor status list.</p>
              */
             public Builder status(java.util.List<String> status) {
                 this.status = status;
@@ -292,7 +317,10 @@ public class ListExecutorsRequest extends Request {
             }
 
             /**
-             * TimeCreatedAfter.
+             * <p>For jobs submitted after this time, the time in the region is converted into a UNIX timestamp (UI8).</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1703819914</p>
              */
             public Builder timeCreatedAfter(Integer timeCreatedAfter) {
                 this.timeCreatedAfter = timeCreatedAfter;
@@ -300,7 +328,10 @@ public class ListExecutorsRequest extends Request {
             }
 
             /**
-             * TimeCreatedBefore.
+             * <p>For jobs submitted before this time, the time in the region is converted into a Unix timestamp (for domestic sites, the UI8 region).</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1703820113</p>
              */
             public Builder timeCreatedBefore(Integer timeCreatedBefore) {
                 this.timeCreatedBefore = timeCreatedBefore;
@@ -308,7 +339,18 @@ public class ListExecutorsRequest extends Request {
             }
 
             /**
-             * VswitchId.
+             * VpcId.
+             */
+            public Builder vpcId(String vpcId) {
+                this.vpcId = vpcId;
+                return this;
+            }
+
+            /**
+             * <p>The ID of the vSwitch.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>vsw-xxx</p>
              */
             public Builder vswitchId(String vswitchId) {
                 this.vswitchId = vswitchId;

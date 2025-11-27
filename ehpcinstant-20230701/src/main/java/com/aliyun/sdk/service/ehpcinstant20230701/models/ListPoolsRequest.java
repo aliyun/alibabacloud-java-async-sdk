@@ -87,7 +87,7 @@ public class ListPoolsRequest extends Request {
         } 
 
         /**
-         * Filter.
+         * <p>Queries the filter conditions of a resource pool.</p>
          */
         public Builder filter(Filter filter) {
             String filterShrink = shrink(filter, "Filter", "json");
@@ -97,7 +97,10 @@ public class ListPoolsRequest extends Request {
         }
 
         /**
-         * PageNumber.
+         * <p>The page number. Default value: 1.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder pageNumber(Integer pageNumber) {
             this.putQueryParameter("PageNumber", pageNumber);
@@ -106,7 +109,10 @@ public class ListPoolsRequest extends Request {
         }
 
         /**
-         * PageSize.
+         * <p>The number of entries on each page. Maximum value: 50. Default value: 10.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10</p>
          */
         public Builder pageSize(Integer pageSize) {
             this.putQueryParameter("PageSize", pageSize);
@@ -200,7 +206,7 @@ public class ListPoolsRequest extends Request {
             } 
 
             /**
-             * PoolName.
+             * <p>Queries the list of resource pool names.</p>
              */
             public Builder poolName(java.util.List<String> poolName) {
                 this.poolName = poolName;
@@ -208,7 +214,7 @@ public class ListPoolsRequest extends Request {
             }
 
             /**
-             * Status.
+             * <p>Queries resource pool status list.</p>
              */
             public Builder status(java.util.List<String> status) {
                 this.status = status;
@@ -216,7 +222,10 @@ public class ListPoolsRequest extends Request {
             }
 
             /**
-             * TimeCreatedAfter.
+             * <p>For node pools created after this time, the time in the region is converted into a UNIX timestamp.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1703819914</p>
              */
             public Builder timeCreatedAfter(Integer timeCreatedAfter) {
                 this.timeCreatedAfter = timeCreatedAfter;
@@ -224,7 +233,10 @@ public class ListPoolsRequest extends Request {
             }
 
             /**
-             * TimeCreatedBefore.
+             * <p>For node pools created before this time, the time in the region is converted into a UNIX timestamp.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1703820113</p>
              */
             public Builder timeCreatedBefore(Integer timeCreatedBefore) {
                 this.timeCreatedBefore = timeCreatedBefore;

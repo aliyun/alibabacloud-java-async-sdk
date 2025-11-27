@@ -90,6 +90,7 @@ public class TagResourcesRequest extends Request {
         } 
 
         /**
+         * <p>The list of resource IDs. Valid values of N: 1 to 50.</p>
          * <p>This parameter is required.</p>
          */
         public Builder resourceId(java.util.List<String> resourceId) {
@@ -99,6 +100,11 @@ public class TagResourcesRequest extends Request {
         }
 
         /**
+         * <p>The type of the resource. Valid values:</p>
+         * <ul>
+         * <li>Job</li>
+         * <li>Executor</li>
+         * </ul>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -111,6 +117,7 @@ public class TagResourcesRequest extends Request {
         }
 
         /**
+         * <p>The tags to add to the replication pair-consistent group. You can specify up to 20 tags.</p>
          * <p>This parameter is required.</p>
          */
         public Builder tag(java.util.List<Tag> tag) {
@@ -180,6 +187,7 @@ public class TagResourcesRequest extends Request {
             } 
 
             /**
+             * <p>The key of the tag. The tag key cannot be an empty string. The tag key can be up to 128 characters in length and cannot contain http:// or https://. The tag key cannot start with acs: or aliyun.</p>
              * <p>This parameter is required.</p>
              * 
              * <strong>example:</strong>
@@ -191,7 +199,10 @@ public class TagResourcesRequest extends Request {
             }
 
             /**
-             * Value.
+             * <p>The value of the tag. You can specify empty strings as tag values. The tag value can be up to 128 characters in length and cannot contain http:// or https://.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>TestValue</p>
              */
             public Builder value(String value) {
                 this.value = value;

@@ -12,15 +12,15 @@ import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
  * 
- * {@link SynchronizeAppResponseBody} extends {@link TeaModel}
+ * {@link DeleteJobRecordsResponseBody} extends {@link TeaModel}
  *
- * <p>SynchronizeAppResponseBody</p>
+ * <p>DeleteJobRecordsResponseBody</p>
  */
-public class SynchronizeAppResponseBody extends TeaModel {
+public class DeleteJobRecordsResponseBody extends TeaModel {
     @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    private SynchronizeAppResponseBody(Builder builder) {
+    private DeleteJobRecordsResponseBody(Builder builder) {
         this.requestId = builder.requestId;
     }
 
@@ -28,7 +28,7 @@ public class SynchronizeAppResponseBody extends TeaModel {
         return new Builder();
     }
 
-    public static SynchronizeAppResponseBody create() {
+    public static DeleteJobRecordsResponseBody create() {
         return builder().build();
     }
 
@@ -49,12 +49,12 @@ public class SynchronizeAppResponseBody extends TeaModel {
         private Builder() {
         } 
 
-        private Builder(SynchronizeAppResponseBody model) {
+        private Builder(DeleteJobRecordsResponseBody model) {
             this.requestId = model.requestId;
         } 
 
         /**
-         * <p>Request ID.</p>
+         * <p>The request ID.</p>
          * 
          * <strong>example:</strong>
          * <p>896D338C-E4F4-41EC-A154-D605E5DE****</p>
@@ -64,8 +64,8 @@ public class SynchronizeAppResponseBody extends TeaModel {
             return this;
         }
 
-        public SynchronizeAppResponseBody build() {
-            return new SynchronizeAppResponseBody(this);
+        public DeleteJobRecordsResponseBody build() {
+            return new DeleteJobRecordsResponseBody(this);
         } 
 
     } 

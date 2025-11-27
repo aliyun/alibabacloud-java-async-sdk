@@ -116,6 +116,7 @@ public class GetAppVersionsRequest extends Request {
         } 
 
         /**
+         * <p>The application name.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -128,7 +129,12 @@ public class GetAppVersionsRequest extends Request {
         }
 
         /**
-         * ImageCategory.
+         * <p>The source of the image. Valid values:</p>
+         * <p>Public: public images provided by Alibaba Cloud.</p>
+         * <p>Custom: the custom image that you added.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Public</p>
          */
         public Builder imageCategory(String imageCategory) {
             this.putQueryParameter("ImageCategory", imageCategory);
@@ -137,7 +143,12 @@ public class GetAppVersionsRequest extends Request {
         }
 
         /**
-         * ImageType.
+         * <p>The type of the images. Valid values:</p>
+         * <p>VM: Virtual Machine Image</p>
+         * <p>Container: container image</p>
+         * 
+         * <strong>example:</strong>
+         * <p>VM</p>
          */
         public Builder imageType(String imageType) {
             this.putQueryParameter("ImageType", imageType);
@@ -146,7 +157,10 @@ public class GetAppVersionsRequest extends Request {
         }
 
         /**
-         * PageNumber.
+         * <p>The page number. Default value: 1.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder pageNumber(Long pageNumber) {
             this.putQueryParameter("PageNumber", pageNumber);
@@ -155,7 +169,10 @@ public class GetAppVersionsRequest extends Request {
         }
 
         /**
-         * PageSize.
+         * <p>The number of entries to return on each page. Default value: 20.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10</p>
          */
         public Builder pageSize(Long pageSize) {
             this.putQueryParameter("PageSize", pageSize);

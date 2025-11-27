@@ -101,7 +101,7 @@ public class DescribeJobMetricDataRequest extends Request {
         } 
 
         /**
-         * ArrayIndex.
+         * <p>The list of array job indexes.</p>
          */
         public Builder arrayIndex(java.util.List<Integer> arrayIndex) {
             String arrayIndexShrink = shrink(arrayIndex, "ArrayIndex", "json");
@@ -111,7 +111,10 @@ public class DescribeJobMetricDataRequest extends Request {
         }
 
         /**
-         * JobId.
+         * <p>The job ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>job-xxxxx</p>
          */
         public Builder jobId(String jobId) {
             this.putQueryParameter("JobId", jobId);
@@ -120,7 +123,10 @@ public class DescribeJobMetricDataRequest extends Request {
         }
 
         /**
-         * MetricName.
+         * <p>The metrics of the job.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cpu_utilization</p>
          */
         public Builder metricName(String metricName) {
             this.putQueryParameter("MetricName", metricName);
@@ -129,7 +135,10 @@ public class DescribeJobMetricDataRequest extends Request {
         }
 
         /**
-         * TaskName.
+         * <p>The name of the task.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Task0</p>
          */
         public Builder taskName(String taskName) {
             this.putQueryParameter("TaskName", taskName);

@@ -107,7 +107,7 @@ public class ListActionPlansResponseBody extends TeaModel {
         } 
 
         /**
-         * ActionPlans.
+         * <p>The list of execution plan results.</p>
          */
         public Builder actionPlans(java.util.List<ActionPlans> actionPlans) {
             this.actionPlans = actionPlans;
@@ -115,7 +115,10 @@ public class ListActionPlansResponseBody extends TeaModel {
         }
 
         /**
-         * MaxResults.
+         * <p>The maximum number of records returned in this request.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>20</p>
          */
         public Builder maxResults(Integer maxResults) {
             this.maxResults = maxResults;
@@ -123,6 +126,7 @@ public class ListActionPlansResponseBody extends TeaModel {
         }
 
         /**
+         * <p>Indicates the read position returned by the current call. An empty value means all data has been read.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -134,7 +138,10 @@ public class ListActionPlansResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>04F0F334-1335-436C-A1D7-6C044FE7****</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -142,7 +149,10 @@ public class ListActionPlansResponseBody extends TeaModel {
         }
 
         /**
-         * TotalCount.
+         * <p>Total data count under the current request conditions (optional; not returned by default).</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10</p>
          */
         public Builder totalCount(Integer totalCount) {
             this.totalCount = totalCount;
@@ -247,7 +257,10 @@ public class ListActionPlansResponseBody extends TeaModel {
             } 
 
             /**
-             * ActionPlanId.
+             * <p>The ID of the execution plan.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>ap-hz036ubmx2qmw93k****</p>
              */
             public Builder actionPlanId(String actionPlanId) {
                 this.actionPlanId = actionPlanId;
@@ -255,7 +268,10 @@ public class ListActionPlansResponseBody extends TeaModel {
             }
 
             /**
-             * ActionPlanName.
+             * <p>The name of the execution plan.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>TestActionPlan</p>
              */
             public Builder actionPlanName(String actionPlanName) {
                 this.actionPlanName = actionPlanName;
@@ -263,7 +279,10 @@ public class ListActionPlansResponseBody extends TeaModel {
             }
 
             /**
-             * CreateTime.
+             * <p>The time when the execution plan was created.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2025-08-10 17:58:24</p>
              */
             public Builder createTime(String createTime) {
                 this.createTime = createTime;
@@ -271,7 +290,15 @@ public class ListActionPlansResponseBody extends TeaModel {
             }
 
             /**
-             * Status.
+             * <p>The status of the execution plan. The possible values are as follows:</p>
+             * <ul>
+             * <li>Active Instant tasks are dynamically managed only when the execution plan is in the Active state.</li>
+             * <li>Inactive Instant tasks are no longer managed by execution plans in the Inactive state.</li>
+             * <li>Deleting: The execution plan is being deleted. You cannot modify the parameters of an execution plan in this state.</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>Active</p>
              */
             public Builder status(String status) {
                 this.status = status;
@@ -279,7 +306,10 @@ public class ListActionPlansResponseBody extends TeaModel {
             }
 
             /**
-             * UpdateTime.
+             * <p>The time when the execution plan was last modified. The time follows the ISO 8601 standard and UTC +0. The format is yyyy-MM-ddTHH:mmZ.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2025-08-10 17:58:24</p>
              */
             public Builder updateTime(String updateTime) {
                 this.updateTime = updateTime;

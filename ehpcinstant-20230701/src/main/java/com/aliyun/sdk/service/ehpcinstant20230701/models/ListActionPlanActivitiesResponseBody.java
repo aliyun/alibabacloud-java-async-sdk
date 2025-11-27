@@ -107,7 +107,7 @@ public class ListActionPlanActivitiesResponseBody extends TeaModel {
         } 
 
         /**
-         * ActionPlanActivities.
+         * <p>The list of execution details of the execution plan.</p>
          */
         public Builder actionPlanActivities(java.util.List<ActionPlanActivities> actionPlanActivities) {
             this.actionPlanActivities = actionPlanActivities;
@@ -115,7 +115,10 @@ public class ListActionPlanActivitiesResponseBody extends TeaModel {
         }
 
         /**
-         * MaxResults.
+         * <p>The maximum number of records returned in this request.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>100</p>
          */
         public Builder maxResults(Integer maxResults) {
             this.maxResults = maxResults;
@@ -123,6 +126,7 @@ public class ListActionPlanActivitiesResponseBody extends TeaModel {
         }
 
         /**
+         * <p>Indicates the read position returned by the current call. An empty value means all data has been read.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -134,7 +138,10 @@ public class ListActionPlanActivitiesResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>896D338C-E4F4-41EC-A154-D605E5DE****</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -142,7 +149,10 @@ public class ListActionPlanActivitiesResponseBody extends TeaModel {
         }
 
         /**
-         * TotalCount.
+         * <p>Total data count under the current request conditions (optional; not returned by default).</p>
+         * 
+         * <strong>example:</strong>
+         * <p>40</p>
          */
         public Builder totalCount(Integer totalCount) {
             this.totalCount = totalCount;
@@ -221,7 +231,10 @@ public class ListActionPlanActivitiesResponseBody extends TeaModel {
             } 
 
             /**
-             * JobId.
+             * <p>The ID of the job.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>job-hz12dqq8y3ormo1hz49h</p>
              */
             public Builder jobId(String jobId) {
                 this.jobId = jobId;
@@ -229,7 +242,14 @@ public class ListActionPlanActivitiesResponseBody extends TeaModel {
             }
 
             /**
-             * JobOperationType.
+             * <p>The operation type of the execution plan activity on the job. Possible values are as follows:</p>
+             * <ul>
+             * <li>Create</li>
+             * <li>Delete</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>Create</p>
              */
             public Builder jobOperationType(String jobOperationType) {
                 this.jobOperationType = jobOperationType;
@@ -237,7 +257,10 @@ public class ListActionPlanActivitiesResponseBody extends TeaModel {
             }
 
             /**
-             * RegionId.
+             * <p>The region ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>cn-hangzhou</p>
              */
             public Builder regionId(String regionId) {
                 this.regionId = regionId;
@@ -369,7 +392,10 @@ public class ListActionPlanActivitiesResponseBody extends TeaModel {
             } 
 
             /**
-             * ActionPlanActivityId.
+             * <p>The activity ID of the execution plan.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>et-4119e3f60eb34fc4</p>
              */
             public Builder actionPlanActivityId(String actionPlanActivityId) {
                 this.actionPlanActivityId = actionPlanActivityId;
@@ -377,7 +403,10 @@ public class ListActionPlanActivitiesResponseBody extends TeaModel {
             }
 
             /**
-             * CreatedCapacity.
+             * <p>The increased capacity of this execution plan activity.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>100</p>
              */
             public Builder createdCapacity(Float createdCapacity) {
                 this.createdCapacity = createdCapacity;
@@ -385,7 +414,10 @@ public class ListActionPlanActivitiesResponseBody extends TeaModel {
             }
 
             /**
-             * DestroyCapacity.
+             * <p>The capacity released by this execution plan activity.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>0</p>
              */
             public Builder destroyCapacity(Float destroyCapacity) {
                 this.destroyCapacity = destroyCapacity;
@@ -393,7 +425,10 @@ public class ListActionPlanActivitiesResponseBody extends TeaModel {
             }
 
             /**
-             * EndTime.
+             * <p>The end time of the execution plan activity.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2025-08-10 18:28:05</p>
              */
             public Builder endTime(String endTime) {
                 this.endTime = endTime;
@@ -401,7 +436,7 @@ public class ListActionPlanActivitiesResponseBody extends TeaModel {
             }
 
             /**
-             * Jobs.
+             * <p>The list of Instant jobs involved in the execution plan.</p>
              */
             public Builder jobs(java.util.List<Jobs> jobs) {
                 this.jobs = jobs;
@@ -409,7 +444,10 @@ public class ListActionPlanActivitiesResponseBody extends TeaModel {
             }
 
             /**
-             * StartTime.
+             * <p>The start time of the implementation of the planned activity.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2025-08-10 18:28:05</p>
              */
             public Builder startTime(String startTime) {
                 this.startTime = startTime;
@@ -417,7 +455,15 @@ public class ListActionPlanActivitiesResponseBody extends TeaModel {
             }
 
             /**
-             * Status.
+             * <p>The implementation status of the execution plan activity. Valid values:</p>
+             * <ul>
+             * <li>InProcess</li>
+             * <li>Completed</li>
+             * <li>Failed</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>InProcess</p>
              */
             public Builder status(String status) {
                 this.status = status;

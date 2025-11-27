@@ -88,6 +88,11 @@ public class UpdatePoolRequest extends Request {
         } 
 
         /**
+         * <p>The name of the resource pool.</p>
+         * <ul>
+         * <li>The value can be up to 15 characters in length.</li>
+         * <li>It can contain digits, uppercase letters, lowercase letters, underscores (_), and dots (.).</li>
+         * </ul>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -100,7 +105,14 @@ public class UpdatePoolRequest extends Request {
         }
 
         /**
-         * Priority.
+         * <p>The priority of the resource pool.</p>
+         * <ul>
+         * <li>You can set a priority in the range of 1 to 99. The default value is 1, which is the lowest priority.</li>
+         * <li>Jobs submitted to a resource pool with a higher priority level value will be scheduled before pending jobs in a resource pool with a lower priority level value, and the priority level of the resource pool takes precedence over the priority of the job.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder priority(Integer priority) {
             this.putQueryParameter("Priority", priority);
@@ -109,7 +121,7 @@ public class UpdatePoolRequest extends Request {
         }
 
         /**
-         * ResourceLimits.
+         * <p>The quota of resources that users are allowed to concurrently use in a resource pool.</p>
          */
         public Builder resourceLimits(ResourceLimits resourceLimits) {
             String resourceLimitsShrink = shrink(resourceLimits, "ResourceLimits", "json");
@@ -165,7 +177,10 @@ public class UpdatePoolRequest extends Request {
             } 
 
             /**
-             * MaxExectorNum.
+             * <p>The maximum number of concurrent execution nodes in a resource pool.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2000</p>
              */
             public Builder maxExectorNum(Integer maxExectorNum) {
                 this.maxExectorNum = maxExectorNum;

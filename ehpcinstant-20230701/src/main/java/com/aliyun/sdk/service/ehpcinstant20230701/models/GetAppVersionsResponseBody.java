@@ -119,7 +119,7 @@ public class GetAppVersionsResponseBody extends TeaModel {
         } 
 
         /**
-         * AppVersions.
+         * <p>The list of application versions.</p>
          */
         public Builder appVersions(java.util.List<AppVersions> appVersions) {
             this.appVersions = appVersions;
@@ -127,7 +127,10 @@ public class GetAppVersionsResponseBody extends TeaModel {
         }
 
         /**
-         * PageNumber.
+         * <p>The page number.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder pageNumber(Long pageNumber) {
             this.pageNumber = pageNumber;
@@ -135,7 +138,10 @@ public class GetAppVersionsResponseBody extends TeaModel {
         }
 
         /**
-         * PageSize.
+         * <p>The number of entries returned per page.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>20</p>
          */
         public Builder pageSize(Long pageSize) {
             this.pageSize = pageSize;
@@ -143,7 +149,10 @@ public class GetAppVersionsResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>04F0F334-1335-436C-A1D7-6C044FE7****</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -151,7 +160,12 @@ public class GetAppVersionsResponseBody extends TeaModel {
         }
 
         /**
-         * Success.
+         * <p>Indicates whether the request was successful. Valid values:</p>
+         * <p>true</p>
+         * <p>false</p>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder success(Boolean success) {
             this.success = success;
@@ -159,7 +173,10 @@ public class GetAppVersionsResponseBody extends TeaModel {
         }
 
         /**
-         * TotalCount.
+         * <p>The total number of entries returned.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder totalCount(Integer totalCount) {
             this.totalCount = totalCount;
@@ -239,6 +256,7 @@ public class GetAppVersionsResponseBody extends TeaModel {
             } 
 
             /**
+             * <p>The image ID of the application.</p>
              * <p>This parameter is required.</p>
              * 
              * <strong>example:</strong>
@@ -250,7 +268,10 @@ public class GetAppVersionsResponseBody extends TeaModel {
             }
 
             /**
-             * Name.
+             * <p>The application name.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>V-Ray</p>
              */
             public Builder name(String name) {
                 this.name = name;
@@ -258,7 +279,10 @@ public class GetAppVersionsResponseBody extends TeaModel {
             }
 
             /**
-             * Version.
+             * <p>The application version.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>v1.0</p>
              */
             public Builder version(String version) {
                 this.version = version;

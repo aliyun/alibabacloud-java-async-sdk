@@ -87,7 +87,7 @@ public class ListActionPlansRequest extends Request {
         } 
 
         /**
-         * ActionPlanIds.
+         * <p>The IDs of the execution plans to be queried.</p>
          */
         public Builder actionPlanIds(java.util.List<String> actionPlanIds) {
             String actionPlanIdsShrink = shrink(actionPlanIds, "ActionPlanIds", "json");
@@ -97,7 +97,12 @@ public class ListActionPlansRequest extends Request {
         }
 
         /**
-         * MaxResults.
+         * <p>The maximum number of entries per page.</p>
+         * <p>Valid values: 1 to 100.</p>
+         * <p>Default value: 20.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>20</p>
          */
         public Builder maxResults(Integer maxResults) {
             this.putQueryParameter("MaxResults", maxResults);
@@ -106,7 +111,10 @@ public class ListActionPlansRequest extends Request {
         }
 
         /**
-         * NextToken.
+         * <p>A pagination token.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1d2db86scXXXXXXXXXX</p>
          */
         public Builder nextToken(String nextToken) {
             this.putQueryParameter("NextToken", nextToken);

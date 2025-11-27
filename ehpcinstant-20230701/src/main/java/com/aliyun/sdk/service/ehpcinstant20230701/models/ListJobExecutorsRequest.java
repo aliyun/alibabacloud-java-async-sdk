@@ -101,7 +101,10 @@ public class ListJobExecutorsRequest extends Request {
         } 
 
         /**
-         * JobId.
+         * <p>The ID of the job.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>job-xxx</p>
          */
         public Builder jobId(String jobId) {
             this.putQueryParameter("JobId", jobId);
@@ -110,7 +113,10 @@ public class ListJobExecutorsRequest extends Request {
         }
 
         /**
-         * PageNumber.
+         * <p>The page number of the page to return.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder pageNumber(Integer pageNumber) {
             this.putQueryParameter("PageNumber", pageNumber);
@@ -119,7 +125,10 @@ public class ListJobExecutorsRequest extends Request {
         }
 
         /**
-         * PageSize.
+         * <p>The number of entries per page.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10</p>
          */
         public Builder pageSize(Integer pageSize) {
             this.putQueryParameter("PageSize", pageSize);
@@ -128,7 +137,10 @@ public class ListJobExecutorsRequest extends Request {
         }
 
         /**
-         * TaskName.
+         * <p>The job name.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>task0</p>
          */
         public Builder taskName(String taskName) {
             this.putQueryParameter("TaskName", taskName);

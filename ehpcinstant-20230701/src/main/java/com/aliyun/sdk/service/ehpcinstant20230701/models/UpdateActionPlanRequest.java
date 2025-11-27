@@ -87,7 +87,10 @@ public class UpdateActionPlanRequest extends Request {
         } 
 
         /**
-         * ActionPlanId.
+         * <p>The ID of the execution plan.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>ap-hz036ubmx2qmw93k****</p>
          */
         public Builder actionPlanId(String actionPlanId) {
             this.putQueryParameter("ActionPlanId", actionPlanId);
@@ -96,7 +99,10 @@ public class UpdateActionPlanRequest extends Request {
         }
 
         /**
-         * DesiredCapacity.
+         * <p>The expected scale of resources for the execution plan. If the ResourceType parameter is set to VcpuCapacity, the execution plan is expected to have 10000 vCPUs.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1000</p>
          */
         public Builder desiredCapacity(Float desiredCapacity) {
             this.putQueryParameter("DesiredCapacity", desiredCapacity);
@@ -105,7 +111,18 @@ public class UpdateActionPlanRequest extends Request {
         }
 
         /**
-         * Enabled.
+         * <p>Whether to enable the execution plan. Valid values:</p>
+         * <ul>
+         * <li><p>true: enables the execution plan.</p>
+         * </li>
+         * <li><p>false: The execution plan is disabled.</p>
+         * <p>**</p>
+         * <p><strong>Note:</strong> After an execution plan is disabled, the created Instant jobs are not automatically managed by the execution plan.</p>
+         * </li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder enabled(String enabled) {
             this.putQueryParameter("Enabled", enabled);

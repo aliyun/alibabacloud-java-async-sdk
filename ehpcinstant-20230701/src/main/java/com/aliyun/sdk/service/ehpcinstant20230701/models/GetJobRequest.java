@@ -59,7 +59,10 @@ public class GetJobRequest extends Request {
         } 
 
         /**
-         * JobId.
+         * <p>The ID of the job.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>job-xxxx</p>
          */
         public Builder jobId(String jobId) {
             this.putQueryParameter("JobId", jobId);

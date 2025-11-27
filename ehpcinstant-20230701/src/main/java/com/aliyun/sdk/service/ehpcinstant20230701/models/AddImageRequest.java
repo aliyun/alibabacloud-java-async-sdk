@@ -130,7 +130,7 @@ public class AddImageRequest extends Request {
         } 
 
         /**
-         * ContainerImageSpec.
+         * <p>The configurations of the container image.</p>
          */
         public Builder containerImageSpec(ContainerImageSpec containerImageSpec) {
             String containerImageSpecShrink = shrink(containerImageSpec, "ContainerImageSpec", "json");
@@ -140,7 +140,10 @@ public class AddImageRequest extends Request {
         }
 
         /**
-         * Description.
+         * <p>The description of the image.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Test image</p>
          */
         public Builder description(String description) {
             this.putQueryParameter("Description", description);
@@ -149,7 +152,14 @@ public class AddImageRequest extends Request {
         }
 
         /**
-         * ImageType.
+         * <p>The type of the images. Valid values:</p>
+         * <ul>
+         * <li>VM: virtual machine image.</li>
+         * <li>Container: the container image.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>VM</p>
          */
         public Builder imageType(String imageType) {
             this.putQueryParameter("ImageType", imageType);
@@ -158,7 +168,10 @@ public class AddImageRequest extends Request {
         }
 
         /**
-         * ImageVersion.
+         * <p>The version of the image.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>V1.0</p>
          */
         public Builder imageVersion(String imageVersion) {
             this.putQueryParameter("ImageVersion", imageVersion);
@@ -167,6 +180,7 @@ public class AddImageRequest extends Request {
         }
 
         /**
+         * <p>The name of the custom image.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -179,7 +193,7 @@ public class AddImageRequest extends Request {
         }
 
         /**
-         * VMImageSpec.
+         * <p>The image configuration of the virtual machine.</p>
          */
         public Builder VMImageSpec(VMImageSpec VMImageSpec) {
             String VMImageSpecShrink = shrink(VMImageSpec, "VMImageSpec", "json");
@@ -261,7 +275,10 @@ public class AddImageRequest extends Request {
             } 
 
             /**
-             * Password.
+             * <p>The password of the logon user.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>userpassword</p>
              */
             public Builder password(String password) {
                 this.password = password;
@@ -269,7 +286,10 @@ public class AddImageRequest extends Request {
             }
 
             /**
-             * Server.
+             * <p>The registered address of the image repository.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>registry-vpc.cn-hangzhou.aliyuncs.com</p>
              */
             public Builder server(String server) {
                 this.server = server;
@@ -277,7 +297,10 @@ public class AddImageRequest extends Request {
             }
 
             /**
-             * UserName.
+             * <p>The username of the logon user.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>username</p>
              */
             public Builder userName(String userName) {
                 this.userName = userName;
@@ -383,7 +406,14 @@ public class AddImageRequest extends Request {
             } 
 
             /**
-             * IsACREnterprise.
+             * <p>Whether the instance is an Alibaba Cloud image repository Enterprise Edition.</p>
+             * <ul>
+             * <li>True</li>
+             * <li>False</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>True</p>
              */
             public Builder isACREnterprise(Boolean isACREnterprise) {
                 this.isACREnterprise = isACREnterprise;
@@ -391,7 +421,14 @@ public class AddImageRequest extends Request {
             }
 
             /**
-             * IsACRRegistry.
+             * <p>Whether it is an Alibaba Cloud image repository.</p>
+             * <ul>
+             * <li>True</li>
+             * <li>False</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>True</p>
              */
             public Builder isACRRegistry(Boolean isACRRegistry) {
                 this.isACRRegistry = isACRRegistry;
@@ -399,7 +436,7 @@ public class AddImageRequest extends Request {
             }
 
             /**
-             * RegistryCredential.
+             * <p>The authentication of the private image repository.</p>
              */
             public Builder registryCredential(RegistryCredential registryCredential) {
                 this.registryCredential = registryCredential;
@@ -407,7 +444,10 @@ public class AddImageRequest extends Request {
             }
 
             /**
-             * RegistryCriId.
+             * <p>The ID of the Container Registry Enterprise Edition image repository.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>cri-xyz795ygf8k9****</p>
              */
             public Builder registryCriId(String registryCriId) {
                 this.registryCriId = registryCriId;
@@ -415,7 +455,10 @@ public class AddImageRequest extends Request {
             }
 
             /**
-             * RegistryUrl.
+             * <p>The endpoint of the container image.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>registry-vpc.cn-hangzhou.aliyuncs.com/ehpc_open/nginx:latest</p>
              */
             public Builder registryUrl(String registryUrl) {
                 this.registryUrl = registryUrl;
@@ -469,7 +512,10 @@ public class AddImageRequest extends Request {
             } 
 
             /**
-             * ImageId.
+             * <p>The image ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>m-bp1akkkr1rkxtb******</p>
              */
             public Builder imageId(String imageId) {
                 this.imageId = imageId;

@@ -80,7 +80,10 @@ public class DescribeJobMetricDataResponseBody extends TeaModel {
         } 
 
         /**
-         * DataPoints.
+         * <p>Monitoring statistics points.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>[{&quot;timestamp&quot;:1709540685000,&quot;Minimum&quot;:28.45,&quot;Maximum&quot;:28.45,&quot;Average&quot;:28.45}]</p>
          */
         public Builder dataPoints(String dataPoints) {
             this.dataPoints = dataPoints;
@@ -88,7 +91,10 @@ public class DescribeJobMetricDataResponseBody extends TeaModel {
         }
 
         /**
-         * Period.
+         * <p>The statistical period of the monitoring data. Valid values: 15, 60, 900, and 3600. Unit: seconds.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>15</p>
          */
         public Builder period(Integer period) {
             this.period = period;
@@ -96,7 +102,10 @@ public class DescribeJobMetricDataResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>04F0F334-1335-436C-A1D7-6C044FE7****</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;

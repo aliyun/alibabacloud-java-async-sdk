@@ -236,7 +236,10 @@ public class GetActionPlanResponseBody extends TeaModel {
         } 
 
         /**
-         * ActionPlanId.
+         * <p>The ID of the execution plan.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>ap-hz036ubmx2qmw93k****</p>
          */
         public Builder actionPlanId(String actionPlanId) {
             this.actionPlanId = actionPlanId;
@@ -244,7 +247,10 @@ public class GetActionPlanResponseBody extends TeaModel {
         }
 
         /**
-         * ActionPlanName.
+         * <p>The name of the execution plan.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>TestActionPlan</p>
          */
         public Builder actionPlanName(String actionPlanName) {
             this.actionPlanName = actionPlanName;
@@ -252,7 +258,10 @@ public class GetActionPlanResponseBody extends TeaModel {
         }
 
         /**
-         * AllocationSpec.
+         * <p>The type of the resource.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Standard</p>
          */
         public Builder allocationSpec(String allocationSpec) {
             this.allocationSpec = allocationSpec;
@@ -260,7 +269,10 @@ public class GetActionPlanResponseBody extends TeaModel {
         }
 
         /**
-         * AppId.
+         * <p>The ID of the application.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>ci-vm-rYfypJKwlN9Y</p>
          */
         public Builder appId(String appId) {
             this.appId = appId;
@@ -268,7 +280,10 @@ public class GetActionPlanResponseBody extends TeaModel {
         }
 
         /**
-         * CreateTime.
+         * <p>The time when the execution plan was created.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2025-08-10 18:28:05</p>
          */
         public Builder createTime(String createTime) {
             this.createTime = createTime;
@@ -276,7 +291,10 @@ public class GetActionPlanResponseBody extends TeaModel {
         }
 
         /**
-         * DesiredCapacity.
+         * <p>The expected scale of resources for the execution plan. If the ResourceType parameter is set to VcpuCapacity, the execution plan is expected to have 10000 vCPUs.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1000</p>
          */
         public Builder desiredCapacity(Float desiredCapacity) {
             this.desiredCapacity = desiredCapacity;
@@ -284,7 +302,10 @@ public class GetActionPlanResponseBody extends TeaModel {
         }
 
         /**
-         * Level.
+         * <p>The computing power level.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>General</p>
          */
         public Builder level(String level) {
             this.level = level;
@@ -292,7 +313,10 @@ public class GetActionPlanResponseBody extends TeaModel {
         }
 
         /**
-         * PrologScript.
+         * <p>The pre-processing script. Base64 encoding is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>bHMgLWFsCmxzIC1hbGggfCB3YyAtbA==</p>
          */
         public Builder prologScript(String prologScript) {
             this.prologScript = prologScript;
@@ -300,7 +324,7 @@ public class GetActionPlanResponseBody extends TeaModel {
         }
 
         /**
-         * Regions.
+         * <p>The list of resource configurations in the region where the execution plan runs.</p>
          */
         public Builder regions(java.util.List<Regions> regions) {
             this.regions = regions;
@@ -308,7 +332,10 @@ public class GetActionPlanResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>896D338C-E4F4-41EC-A154-D605E5DE****</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -316,7 +343,14 @@ public class GetActionPlanResponseBody extends TeaModel {
         }
 
         /**
-         * ResourceType.
+         * <p>Target resource type: the capacity of vCPUs or the number of execution nodes. Valid values:</p>
+         * <ul>
+         * <li>VCpuCapacity</li>
+         * <li>ExecutorCapacity</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>VCpuCapacity</p>
          */
         public Builder resourceType(String resourceType) {
             this.resourceType = resourceType;
@@ -324,7 +358,7 @@ public class GetActionPlanResponseBody extends TeaModel {
         }
 
         /**
-         * Resources.
+         * <p>The list of resource configurations of the execution plan runtime environment.</p>
          */
         public Builder resources(java.util.List<Resources> resources) {
             this.resources = resources;
@@ -332,7 +366,15 @@ public class GetActionPlanResponseBody extends TeaModel {
         }
 
         /**
-         * Status.
+         * <p>The status of the execution plan. The possible values are as follows:</p>
+         * <ul>
+         * <li>Active Instant tasks are dynamically managed only when the execution plan is in the Active state.</li>
+         * <li>Inactive Instant tasks are no longer managed by execution plans in the Inactive state.</li>
+         * <li>Deleting You cannot modify the parameters of an execution plan in this state.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>Active</p>
          */
         public Builder status(String status) {
             this.status = status;
@@ -340,7 +382,10 @@ public class GetActionPlanResponseBody extends TeaModel {
         }
 
         /**
-         * TotalCapacity.
+         * <p>The size of the resources currently managed by the execution plan.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1000</p>
          */
         public Builder totalCapacity(Float totalCapacity) {
             this.totalCapacity = totalCapacity;
@@ -348,7 +393,10 @@ public class GetActionPlanResponseBody extends TeaModel {
         }
 
         /**
-         * UpdateTime.
+         * <p>The time when the execution plan was last modified.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2025-08-10 18:28:05</p>
          */
         public Builder updateTime(String updateTime) {
             this.updateTime = updateTime;
@@ -427,7 +475,10 @@ public class GetActionPlanResponseBody extends TeaModel {
             } 
 
             /**
-             * RegionId.
+             * <p>The region ID of the instance.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>cn-hangzhou</p>
              */
             public Builder regionId(String regionId) {
                 this.regionId = regionId;
@@ -435,7 +486,7 @@ public class GetActionPlanResponseBody extends TeaModel {
             }
 
             /**
-             * SecurityGroupIds.
+             * <p>The list of security groups available for the execution plan in the region.</p>
              */
             public Builder securityGroupIds(java.util.List<String> securityGroupIds) {
                 this.securityGroupIds = securityGroupIds;
@@ -443,7 +494,7 @@ public class GetActionPlanResponseBody extends TeaModel {
             }
 
             /**
-             * VSwitchIds.
+             * <p>The list of VSwitches available for the execution plan in the region.</p>
              */
             public Builder vSwitchIds(java.util.List<String> vSwitchIds) {
                 this.vSwitchIds = vSwitchIds;
@@ -510,7 +561,10 @@ public class GetActionPlanResponseBody extends TeaModel {
             } 
 
             /**
-             * Cores.
+             * <p>The number of CPUs in the running environment.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>64</p>
              */
             public Builder cores(Float cores) {
                 this.cores = cores;
@@ -518,7 +572,10 @@ public class GetActionPlanResponseBody extends TeaModel {
             }
 
             /**
-             * Memory.
+             * <p>The memory size of the running environment. Unit: GiB.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>128</p>
              */
             public Builder memory(Float memory) {
                 this.memory = memory;

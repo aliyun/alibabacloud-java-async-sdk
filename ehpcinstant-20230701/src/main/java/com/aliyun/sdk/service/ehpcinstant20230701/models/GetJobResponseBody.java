@@ -67,7 +67,7 @@ public class GetJobResponseBody extends TeaModel {
         } 
 
         /**
-         * JobInfo.
+         * <p>The job details.</p>
          */
         public Builder jobInfo(JobInfo jobInfo) {
             this.jobInfo = jobInfo;
@@ -75,7 +75,10 @@ public class GetJobResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>896D338C-E4F4-41EC-A154-D605E5DE****</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -283,7 +286,14 @@ public class GetJobResponseBody extends TeaModel {
             } 
 
             /**
-             * EnableENIMapping.
+             * <p>Whether the resource is created in the zone corresponding to the passed-in VSwitch parameter.</p>
+             * <ul>
+             * <li>true: The resource is created in the zone corresponding to the passed-in VSwitch parameter.</li>
+             * <li>false: The resource is created in any zone that has resources.</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>false</p>
              */
             public Builder enableENIMapping(Boolean enableENIMapping) {
                 this.enableENIMapping = enableENIMapping;
@@ -291,7 +301,15 @@ public class GetJobResponseBody extends TeaModel {
             }
 
             /**
-             * EnableExternalIpAddress.
+             * <p>Whether to create a public IP address.</p>
+             * <p>Valid values:</p>
+             * <ul>
+             * <li>false: false.</li>
+             * <li>true: true.</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>false</p>
              */
             public Builder enableExternalIpAddress(Boolean enableExternalIpAddress) {
                 this.enableExternalIpAddress = enableExternalIpAddress;
@@ -299,7 +317,7 @@ public class GetJobResponseBody extends TeaModel {
             }
 
             /**
-             * Vswitch.
+             * <p>The VSwitch array.</p>
              */
             public Builder vswitch(java.util.List<String> vswitch) {
                 this.vswitch = vswitch;
@@ -366,7 +384,10 @@ public class GetJobResponseBody extends TeaModel {
             } 
 
             /**
-             * TagKey.
+             * <p>The key of the job tag.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>TestKey</p>
              */
             public Builder tagKey(String tagKey) {
                 this.tagKey = tagKey;
@@ -374,7 +395,10 @@ public class GetJobResponseBody extends TeaModel {
             }
 
             /**
-             * TagValue.
+             * <p>The value of the job tag.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>TestValue</p>
              */
             public Builder tagValue(String tagValue) {
                 this.tagValue = tagValue;
@@ -467,7 +491,10 @@ public class GetJobResponseBody extends TeaModel {
             } 
 
             /**
-             * AllocationSpec.
+             * <p>The type of the resource. Only Dedicated is supported. You must enable a whitelist.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Dedicated</p>
              */
             public Builder allocationSpec(String allocationSpec) {
                 this.allocationSpec = allocationSpec;
@@ -475,7 +502,15 @@ public class GetJobResponseBody extends TeaModel {
             }
 
             /**
-             * Level.
+             * <p>The computing power level. The following disk categories are supported:</p>
+             * <ul>
+             * <li>General</li>
+             * <li>Performance</li>
+             * </ul>
+             * <p>Default value: General</p>
+             * 
+             * <strong>example:</strong>
+             * <p>General</p>
              */
             public Builder level(String level) {
                 this.level = level;
@@ -483,7 +518,7 @@ public class GetJobResponseBody extends TeaModel {
             }
 
             /**
-             * Network.
+             * <p>The network configuration information.</p>
              */
             public Builder network(Network network) {
                 this.network = network;
@@ -491,7 +526,7 @@ public class GetJobResponseBody extends TeaModel {
             }
 
             /**
-             * Tags.
+             * <p>The list of job tags.</p>
              */
             public Builder tags(java.util.List<Tags> tags) {
                 this.tags = tags;
@@ -571,7 +606,10 @@ public class GetJobResponseBody extends TeaModel {
             } 
 
             /**
-             * IndexEnd.
+             * <p>The end value of the array job index. Valid values: 0 to 4999. The value must be greater than or equal to the value of IndexStart.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>9</p>
              */
             public Builder indexEnd(Integer indexEnd) {
                 this.indexEnd = indexEnd;
@@ -579,7 +617,10 @@ public class GetJobResponseBody extends TeaModel {
             }
 
             /**
-             * IndexStart.
+             * <p>The starting value of the array job index. Valid values: 0 to 4999.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>0</p>
              */
             public Builder indexStart(Integer indexStart) {
                 this.indexStart = indexStart;
@@ -587,7 +628,13 @@ public class GetJobResponseBody extends TeaModel {
             }
 
             /**
-             * IndexStep.
+             * <p>The interval of the array job index.</p>
+             * <blockquote>
+             * <p>If the array job property is IndexStart=1,IndexEnd=5, and IndexStep=2, the array job contains three subtasks. The values of the subtask indexes are 1,3, and 5.</p>
+             * </blockquote>
+             * 
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder indexStep(Integer indexStep) {
                 this.indexStep = indexStep;
@@ -654,7 +701,7 @@ public class GetJobResponseBody extends TeaModel {
             } 
 
             /**
-             * ArraySpec.
+             * <p>The details of the array job.</p>
              */
             public Builder arraySpec(ArraySpec arraySpec) {
                 this.arraySpec = arraySpec;
@@ -662,7 +709,10 @@ public class GetJobResponseBody extends TeaModel {
             }
 
             /**
-             * MaxCount.
+             * <p>The maximum number of nodes to run the job.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>10</p>
              */
             public Builder maxCount(Integer maxCount) {
                 this.maxCount = maxCount;
@@ -781,7 +831,10 @@ public class GetJobResponseBody extends TeaModel {
             } 
 
             /**
-             * ArrayId.
+             * <p>Sub-job ID</p>
+             * 
+             * <strong>example:</strong>
+             * <p>0</p>
              */
             public Builder arrayId(Integer arrayId) {
                 this.arrayId = arrayId;
@@ -789,7 +842,10 @@ public class GetJobResponseBody extends TeaModel {
             }
 
             /**
-             * CreateTime.
+             * <p>The time when the job was created.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2024-02-04 13:54:10</p>
              */
             public Builder createTime(String createTime) {
                 this.createTime = createTime;
@@ -797,7 +853,10 @@ public class GetJobResponseBody extends TeaModel {
             }
 
             /**
-             * EndTime.
+             * <p>The end time of the scaling plan job.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2024-02-04 13:54:10</p>
              */
             public Builder endTime(String endTime) {
                 this.endTime = endTime;
@@ -805,7 +864,10 @@ public class GetJobResponseBody extends TeaModel {
             }
 
             /**
-             * StartTime.
+             * <p>The start time of the scaling plan job.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2024-02-04 13:54:10</p>
              */
             public Builder startTime(String startTime) {
                 this.startTime = startTime;
@@ -813,7 +875,10 @@ public class GetJobResponseBody extends TeaModel {
             }
 
             /**
-             * Status.
+             * <p>The status of the job.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Running</p>
              */
             public Builder status(String status) {
                 this.status = status;
@@ -821,7 +886,10 @@ public class GetJobResponseBody extends TeaModel {
             }
 
             /**
-             * StatusReason.
+             * <p>The reason why the stack instance is in the OUTDATED state.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Creating executor</p>
              */
             public Builder statusReason(String statusReason) {
                 this.statusReason = statusReason;
@@ -888,7 +956,10 @@ public class GetJobResponseBody extends TeaModel {
             } 
 
             /**
-             * Size.
+             * <p>The size of the disk.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>100</p>
              */
             public Builder size(Integer size) {
                 this.size = size;
@@ -896,7 +967,14 @@ public class GetJobResponseBody extends TeaModel {
             }
 
             /**
-             * Type.
+             * <p>The type of the disk. The following disk categories are supported:</p>
+             * <ul>
+             * <li>System: system disk.</li>
+             * <li>Data: data disk.</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>System</p>
              */
             public Builder type(String type) {
                 this.type = type;
@@ -1015,7 +1093,10 @@ public class GetJobResponseBody extends TeaModel {
             } 
 
             /**
-             * Cores.
+             * <p>The number of CPUs on which the job is run.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder cores(Float cores) {
                 this.cores = cores;
@@ -1023,7 +1104,7 @@ public class GetJobResponseBody extends TeaModel {
             }
 
             /**
-             * Disks.
+             * <p>The array of the disks.</p>
              */
             public Builder disks(java.util.List<Disks> disks) {
                 this.disks = disks;
@@ -1055,7 +1136,10 @@ public class GetJobResponseBody extends TeaModel {
             }
 
             /**
-             * Memory.
+             * <p>The memory capacity. Unit: GiB.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>4</p>
              */
             public Builder memory(Integer memory) {
                 this.memory = memory;
@@ -1285,7 +1369,10 @@ public class GetJobResponseBody extends TeaModel {
             } 
 
             /**
-             * Image.
+             * <p>The image ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>m-xxxx</p>
              */
             public Builder image(String image) {
                 this.image = image;
@@ -1293,7 +1380,10 @@ public class GetJobResponseBody extends TeaModel {
             }
 
             /**
-             * PrologScript.
+             * <p>The pre-processing script. Base64 encoding is required.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>ZWNobyAiMTIzNCIgPiBgZGF0ZSArJXNg</p>
              */
             public Builder prologScript(String prologScript) {
                 this.prologScript = prologScript;
@@ -1301,7 +1391,10 @@ public class GetJobResponseBody extends TeaModel {
             }
 
             /**
-             * Script.
+             * <p>The running-job script. Base64 encoding is required.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>ZWNobyAiMTIzNCIgPiBgZGF0ZSArJXNg</p>
              */
             public Builder script(String script) {
                 this.script = script;
@@ -1355,7 +1448,7 @@ public class GetJobResponseBody extends TeaModel {
             } 
 
             /**
-             * VM.
+             * <p>Use ECS instances.</p>
              */
             public Builder vm(Vm vm) {
                 this.vm = vm;
@@ -1435,7 +1528,7 @@ public class GetJobResponseBody extends TeaModel {
             } 
 
             /**
-             * Resource.
+             * <p>The resource information.</p>
              */
             public Builder resource(Resource resource) {
                 this.resource = resource;
@@ -1451,7 +1544,7 @@ public class GetJobResponseBody extends TeaModel {
             }
 
             /**
-             * TaskExecutor.
+             * <p>The task execution configurations.</p>
              */
             public Builder taskExecutor(java.util.List<TaskExecutor> taskExecutor) {
                 this.taskExecutor = taskExecutor;
@@ -1557,7 +1650,7 @@ public class GetJobResponseBody extends TeaModel {
             } 
 
             /**
-             * ExecutorPolicy.
+             * <p>The task execution policy.</p>
              */
             public Builder executorPolicy(ExecutorPolicy executorPolicy) {
                 this.executorPolicy = executorPolicy;
@@ -1565,7 +1658,7 @@ public class GetJobResponseBody extends TeaModel {
             }
 
             /**
-             * ExecutorStatus.
+             * <p>The execution status of the task.</p>
              */
             public Builder executorStatus(java.util.List<ExecutorStatus> executorStatus) {
                 this.executorStatus = executorStatus;
@@ -1573,7 +1666,10 @@ public class GetJobResponseBody extends TeaModel {
             }
 
             /**
-             * TaskName.
+             * <p>The name of the task.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>task0</p>
              */
             public Builder taskName(String taskName) {
                 this.taskName = taskName;
@@ -1581,7 +1677,7 @@ public class GetJobResponseBody extends TeaModel {
             }
 
             /**
-             * TaskSpec.
+             * <p>The details of the task specification.</p>
              */
             public Builder taskSpec(TaskSpec taskSpec) {
                 this.taskSpec = taskSpec;
@@ -1589,7 +1685,10 @@ public class GetJobResponseBody extends TeaModel {
             }
 
             /**
-             * TaskSustainable.
+             * <p>Indicate whether the job is a long-running job.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>true</p>
              */
             public Builder taskSustainable(Boolean taskSustainable) {
                 this.taskSustainable = taskSustainable;
@@ -1786,7 +1885,10 @@ public class GetJobResponseBody extends TeaModel {
             } 
 
             /**
-             * AppExtraInfo.
+             * <p>The additional information about the application.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>{&quot;xxx&quot;: &quot;xxxxx&quot;}</p>
              */
             public Builder appExtraInfo(String appExtraInfo) {
                 this.appExtraInfo = appExtraInfo;
@@ -1794,7 +1896,10 @@ public class GetJobResponseBody extends TeaModel {
             }
 
             /**
-             * CreateTime.
+             * <p>The time when the job was submitted.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2024-03-05 20:00:46</p>
              */
             public Builder createTime(String createTime) {
                 this.createTime = createTime;
@@ -1810,7 +1915,7 @@ public class GetJobResponseBody extends TeaModel {
             }
 
             /**
-             * DeploymentPolicy.
+             * <p>The resource deployment policy.</p>
              */
             public Builder deploymentPolicy(DeploymentPolicy deploymentPolicy) {
                 this.deploymentPolicy = deploymentPolicy;
@@ -1818,7 +1923,10 @@ public class GetJobResponseBody extends TeaModel {
             }
 
             /**
-             * EndTime.
+             * <p>The time when the job is complete.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2024-03-05 20:01:48</p>
              */
             public Builder endTime(String endTime) {
                 this.endTime = endTime;
@@ -1826,7 +1934,10 @@ public class GetJobResponseBody extends TeaModel {
             }
 
             /**
-             * JobDescription.
+             * <p>The description of the job.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Demo</p>
              */
             public Builder jobDescription(String jobDescription) {
                 this.jobDescription = jobDescription;
@@ -1834,7 +1945,10 @@ public class GetJobResponseBody extends TeaModel {
             }
 
             /**
-             * JobId.
+             * <p>The ID of the job.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>job-xxxx</p>
              */
             public Builder jobId(String jobId) {
                 this.jobId = jobId;
@@ -1842,7 +1956,10 @@ public class GetJobResponseBody extends TeaModel {
             }
 
             /**
-             * JobName.
+             * <p>The job name.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>testJob</p>
              */
             public Builder jobName(String jobName) {
                 this.jobName = jobName;
@@ -1850,7 +1967,10 @@ public class GetJobResponseBody extends TeaModel {
             }
 
             /**
-             * JobScheduler.
+             * <p>The type of the job scheduler.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>HPC</p>
              */
             public Builder jobScheduler(String jobScheduler) {
                 this.jobScheduler = jobScheduler;
@@ -1858,7 +1978,10 @@ public class GetJobResponseBody extends TeaModel {
             }
 
             /**
-             * StartTime.
+             * <p>The time when the job started.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2024-03-05 20:00:48</p>
              */
             public Builder startTime(String startTime) {
                 this.startTime = startTime;
@@ -1866,7 +1989,23 @@ public class GetJobResponseBody extends TeaModel {
             }
 
             /**
-             * Status.
+             * <p>The job status. Valid values:</p>
+             * <ul>
+             * <li>Pending: The job is being queued.</li>
+             * <li>Initing: The job is being initialized.</li>
+             * <li>Succeed: The job is successfully run.</li>
+             * <li>Failed: The job failed to run.</li>
+             * <li>Running: The job is running.</li>
+             * <li>Exception: scheduling exception</li>
+             * <li>Retrying: The job is being retried.</li>
+             * <li>Expired: The job timed out.</li>
+             * <li>Deleted: The job is deleted.</li>
+             * <li>Suspended: job hibernation</li>
+             * <li>Restarting: The job is being restarted.</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>Succeed</p>
              */
             public Builder status(String status) {
                 this.status = status;
@@ -1874,7 +2013,7 @@ public class GetJobResponseBody extends TeaModel {
             }
 
             /**
-             * Tasks.
+             * <p>The list of tasks. Only one task is supported.</p>
              */
             public Builder tasks(java.util.List<Tasks> tasks) {
                 this.tasks = tasks;

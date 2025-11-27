@@ -74,6 +74,7 @@ public class RemoveImageRequest extends Request {
         } 
 
         /**
+         * <p>The image ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -86,7 +87,14 @@ public class RemoveImageRequest extends Request {
         }
 
         /**
-         * ImageType.
+         * <p>The type of the images. Valid values:</p>
+         * <ul>
+         * <li>VM: Virtual Machine Image</li>
+         * <li>Container: container image</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>VM</p>
          */
         public Builder imageType(String imageType) {
             this.putQueryParameter("ImageType", imageType);

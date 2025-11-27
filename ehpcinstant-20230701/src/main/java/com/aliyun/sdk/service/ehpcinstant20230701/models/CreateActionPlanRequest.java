@@ -185,7 +185,10 @@ public class CreateActionPlanRequest extends Request {
         } 
 
         /**
-         * ActionPlanName.
+         * <p>The name of the execution plan.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>TestActionPlan</p>
          */
         public Builder actionPlanName(String actionPlanName) {
             this.putQueryParameter("ActionPlanName", actionPlanName);
@@ -194,7 +197,15 @@ public class CreateActionPlanRequest extends Request {
         }
 
         /**
-         * AllocationSpec.
+         * <p>The type of the resource.</p>
+         * <ul>
+         * <li>Standard</li>
+         * <li>Dedicated: You must enable a whitelist for use.</li>
+         * <li>Economic: You must enable a whitelist for use.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>Standard</p>
          */
         public Builder allocationSpec(String allocationSpec) {
             this.putQueryParameter("AllocationSpec", allocationSpec);
@@ -203,7 +214,10 @@ public class CreateActionPlanRequest extends Request {
         }
 
         /**
-         * AppId.
+         * <p>The ID of the application.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>ci-vm-rYfypJKwlN9Y</p>
          */
         public Builder appId(String appId) {
             this.putQueryParameter("AppId", appId);
@@ -212,7 +226,10 @@ public class CreateActionPlanRequest extends Request {
         }
 
         /**
-         * DesiredCapacity.
+         * <p>The expected scale of resources for the execution plan. If the ResourceType parameter is set to VcpuCapacity, the execution plan is expected to have 10000 vCPUs.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1000</p>
          */
         public Builder desiredCapacity(Double desiredCapacity) {
             this.putQueryParameter("DesiredCapacity", desiredCapacity);
@@ -221,7 +238,15 @@ public class CreateActionPlanRequest extends Request {
         }
 
         /**
-         * Level.
+         * <p>The computing power level. This value is valid only when the resource type is Economic. The following disk categories are supported:</p>
+         * <ul>
+         * <li>General</li>
+         * <li>Performance</li>
+         * </ul>
+         * <p>Default value: General</p>
+         * 
+         * <strong>example:</strong>
+         * <p>General</p>
          */
         public Builder level(String level) {
             this.putQueryParameter("Level", level);
@@ -230,7 +255,10 @@ public class CreateActionPlanRequest extends Request {
         }
 
         /**
-         * PrologScript.
+         * <p>The pre-processing script. Base64 encoding is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>bHMgLWFsCmxzIC1hbGggfCB3YyAtbA==</p>
          */
         public Builder prologScript(String prologScript) {
             this.putQueryParameter("PrologScript", prologScript);
@@ -239,7 +267,7 @@ public class CreateActionPlanRequest extends Request {
         }
 
         /**
-         * Regions.
+         * <p>The list of resource configurations in the region where the execution plan runs.</p>
          */
         public Builder regions(java.util.List<Regions> regions) {
             String regionsShrink = shrink(regions, "Regions", "json");
@@ -249,7 +277,14 @@ public class CreateActionPlanRequest extends Request {
         }
 
         /**
-         * ResourceType.
+         * <p>Target resource type: the capacity of vCPUs or the number of execution nodes. Valid values:</p>
+         * <ul>
+         * <li>VCpuCapacity</li>
+         * <li>ExecutorCapacity</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>VCpuCapacity</p>
          */
         public Builder resourceType(String resourceType) {
             this.putQueryParameter("ResourceType", resourceType);
@@ -258,7 +293,10 @@ public class CreateActionPlanRequest extends Request {
         }
 
         /**
-         * Resources.
+         * <p>The list of resource configurations of the execution plan runtime environment. You can configure 1 to 10 resources.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1000</p>
          */
         public Builder resources(java.util.List<Resources> resources) {
             String resourcesShrink = shrink(resources, "Resources", "json");
@@ -268,7 +306,10 @@ public class CreateActionPlanRequest extends Request {
         }
 
         /**
-         * Script.
+         * <p>The running-job script. Base64 encoding is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>bHMgLWFsCmxzIC1hbGggfCB3YyAtbA==</p>
          */
         public Builder script(String script) {
             this.putQueryParameter("Script", script);
@@ -362,7 +403,10 @@ public class CreateActionPlanRequest extends Request {
             } 
 
             /**
-             * RegionId.
+             * <p>The region ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>cn-hangzhou</p>
              */
             public Builder regionId(String regionId) {
                 this.regionId = regionId;
@@ -370,7 +414,7 @@ public class CreateActionPlanRequest extends Request {
             }
 
             /**
-             * SecurityGroupId.
+             * <p>The list of security groups available for the execution plan in the region. You can have 0 to 5 security groups.</p>
              */
             public Builder securityGroupId(java.util.List<String> securityGroupId) {
                 this.securityGroupId = securityGroupId;
@@ -386,7 +430,7 @@ public class CreateActionPlanRequest extends Request {
             }
 
             /**
-             * VSwitchIds.
+             * <p>The list of VSwitches available for the execution plan in the region. Supports 0 to 5 VSwitches.</p>
              */
             public Builder vSwitchIds(java.util.List<String> vSwitchIds) {
                 this.vSwitchIds = vSwitchIds;
@@ -453,7 +497,10 @@ public class CreateActionPlanRequest extends Request {
             } 
 
             /**
-             * Cores.
+             * <p>The number of CPUs in the running environment.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2</p>
              */
             public Builder cores(Double cores) {
                 this.cores = cores;
@@ -461,7 +508,10 @@ public class CreateActionPlanRequest extends Request {
             }
 
             /**
-             * Memory.
+             * <p>The memory size of the running environment. Unit: GiB.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>4</p>
              */
             public Builder memory(Double memory) {
                 this.memory = memory;

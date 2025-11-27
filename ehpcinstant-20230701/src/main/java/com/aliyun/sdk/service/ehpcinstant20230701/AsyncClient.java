@@ -26,6 +26,9 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<AddImageResponse> addImage(AddImageRequest request);
 
     /**
+     * <b>description</b> :
+     * <p>*Make sure that you fully understand E-HPC Instnat billing methods and <a href="https://help.aliyun.com/zh/e-hpc/e-hpc-instant/product-overview/billing-overview?spm=a2c4g.11186623.help-menu-57664.d_0_2_0.5fdd28422y6UvO">prices</a>.</p>
+     * 
      * @param request the request parameters of CreateActionPlan  CreateActionPlanRequest
      * @return CreateActionPlanResponse
      */
@@ -44,10 +47,20 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<CreatePoolResponse> createPool(CreatePoolRequest request);
 
     /**
+     * <b>description</b> :
+     * <p><em>Make sure that you fully understand E-HPC Instnat billing methods and <a href="https://help.aliyun.com/zh/e-hpc/e-hpc-instant/product-overview/billing-overview?spm=a2c4g.11186623.help-menu-57664.d_0_2_0.5fdd28422y6UvO">prices</a>.</em>*
+     * This operation stops all Instant jobs that are managed by ActionPlanId.</p>
+     * 
      * @param request the request parameters of DeleteActionPlan  DeleteActionPlanRequest
      * @return DeleteActionPlanResponse
      */
     CompletableFuture<DeleteActionPlanResponse> deleteActionPlan(DeleteActionPlanRequest request);
+
+    /**
+     * @param request the request parameters of DeleteJobRecords  DeleteJobRecordsRequest
+     * @return DeleteJobRecordsResponse
+     */
+    CompletableFuture<DeleteJobRecordsResponse> deleteJobRecords(DeleteJobRecordsRequest request);
 
     /**
      * @param request the request parameters of DeleteJobs  DeleteJobsRequest
@@ -128,6 +141,9 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<ListImagesResponse> listImages(ListImagesRequest request);
 
     /**
+     * <b>description</b> :
+     * <p>Queries job executor information.</p>
+     * 
      * @param request the request parameters of ListJobExecutors  ListJobExecutorsRequest
      * @return ListJobExecutorsResponse
      */

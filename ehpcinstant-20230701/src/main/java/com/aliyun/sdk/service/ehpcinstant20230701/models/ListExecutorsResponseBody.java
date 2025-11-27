@@ -106,7 +106,7 @@ public class ListExecutorsResponseBody extends TeaModel {
         } 
 
         /**
-         * Executors.
+         * <p>Executor list.</p>
          */
         public Builder executors(java.util.List<Executors> executors) {
             this.executors = executors;
@@ -114,7 +114,10 @@ public class ListExecutorsResponseBody extends TeaModel {
         }
 
         /**
-         * PageNumber.
+         * <p>The current page number.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder pageNumber(Integer pageNumber) {
             this.pageNumber = pageNumber;
@@ -122,7 +125,10 @@ public class ListExecutorsResponseBody extends TeaModel {
         }
 
         /**
-         * PageSize.
+         * <p>The number of entries returned per page.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>50</p>
          */
         public Builder pageSize(Integer pageSize) {
             this.pageSize = pageSize;
@@ -130,7 +136,10 @@ public class ListExecutorsResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>896D338C-E4F4-41EC-A154-D605E5DE****</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -138,7 +147,10 @@ public class ListExecutorsResponseBody extends TeaModel {
         }
 
         /**
-         * TotalCount.
+         * <p>The total number of entries returned.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>40</p>
          */
         public Builder totalCount(String totalCount) {
             this.totalCount = totalCount;
@@ -204,7 +216,10 @@ public class ListExecutorsResponseBody extends TeaModel {
             } 
 
             /**
-             * Size.
+             * <p>The size of the disk.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>10</p>
              */
             public Builder size(Integer size) {
                 this.size = size;
@@ -212,7 +227,14 @@ public class ListExecutorsResponseBody extends TeaModel {
             }
 
             /**
-             * Type.
+             * <p>The category of the disk. The following disk categories are supported:</p>
+             * <ul>
+             * <li>System: system disk.</li>
+             * <li>Data: data disk.</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>System</p>
              */
             public Builder type(String type) {
                 this.type = type;
@@ -305,7 +327,10 @@ public class ListExecutorsResponseBody extends TeaModel {
             } 
 
             /**
-             * Cores.
+             * <p>The number of running CPUs.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder cores(Float cores) {
                 this.cores = cores;
@@ -313,7 +338,7 @@ public class ListExecutorsResponseBody extends TeaModel {
             }
 
             /**
-             * Disks.
+             * <p>The array of the disks.</p>
              */
             public Builder disks(java.util.List<Disks> disks) {
                 this.disks = disks;
@@ -329,7 +354,10 @@ public class ListExecutorsResponseBody extends TeaModel {
             }
 
             /**
-             * Memory.
+             * <p>The total amount of memory resources. Unit: GiB.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>4</p>
              */
             public Builder memory(Float memory) {
                 this.memory = memory;
@@ -396,7 +424,10 @@ public class ListExecutorsResponseBody extends TeaModel {
             } 
 
             /**
-             * TagKey.
+             * <p>The key of the executor tag.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>TestKey</p>
              */
             public Builder tagKey(String tagKey) {
                 this.tagKey = tagKey;
@@ -404,7 +435,10 @@ public class ListExecutorsResponseBody extends TeaModel {
             }
 
             /**
-             * TagValue.
+             * <p>The value of the executor tag.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>TestValue</p>
              */
             public Builder tagValue(String tagValue) {
                 this.tagValue = tagValue;
@@ -494,6 +528,9 @@ public class ListExecutorsResponseBody extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("TaskSustainable")
         private Boolean taskSustainable;
 
+        @com.aliyun.core.annotation.NameInMap("VpcId")
+        private String vpcId;
+
         @com.aliyun.core.annotation.NameInMap("VswitchId")
         private String vswitchId;
 
@@ -521,6 +558,7 @@ public class ListExecutorsResponseBody extends TeaModel {
             this.tags = builder.tags;
             this.taskName = builder.taskName;
             this.taskSustainable = builder.taskSustainable;
+            this.vpcId = builder.vpcId;
             this.vswitchId = builder.vswitchId;
         }
 
@@ -694,6 +732,13 @@ public class ListExecutorsResponseBody extends TeaModel {
         }
 
         /**
+         * @return vpcId
+         */
+        public String getVpcId() {
+            return this.vpcId;
+        }
+
+        /**
          * @return vswitchId
          */
         public String getVswitchId() {
@@ -724,6 +769,7 @@ public class ListExecutorsResponseBody extends TeaModel {
             private java.util.List<Tags> tags; 
             private String taskName; 
             private Boolean taskSustainable; 
+            private String vpcId; 
             private String vswitchId; 
 
             private Builder() {
@@ -753,6 +799,7 @@ public class ListExecutorsResponseBody extends TeaModel {
                 this.tags = model.tags;
                 this.taskName = model.taskName;
                 this.taskSustainable = model.taskSustainable;
+                this.vpcId = model.vpcId;
                 this.vswitchId = model.vswitchId;
             } 
 
@@ -773,7 +820,10 @@ public class ListExecutorsResponseBody extends TeaModel {
             }
 
             /**
-             * ArrayIndex.
+             * <p>The executor number.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>0</p>
              */
             public Builder arrayIndex(Integer arrayIndex) {
                 this.arrayIndex = arrayIndex;
@@ -789,7 +839,10 @@ public class ListExecutorsResponseBody extends TeaModel {
             }
 
             /**
-             * CreateTime.
+             * <p>The time when the instance was created.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2024-02-20 10:04:10</p>
              */
             public Builder createTime(String createTime) {
                 this.createTime = createTime;
@@ -797,7 +850,10 @@ public class ListExecutorsResponseBody extends TeaModel {
             }
 
             /**
-             * EndTime.
+             * <p>The end time.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2024-02-20 10:04:18</p>
              */
             public Builder endTime(String endTime) {
                 this.endTime = endTime;
@@ -805,7 +861,10 @@ public class ListExecutorsResponseBody extends TeaModel {
             }
 
             /**
-             * ExecutorId.
+             * <p>The executor ID. The format is JobId-TaskName-ArrayIndex.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>job-xxxx-task0-1</p>
              */
             public Builder executorId(String executorId) {
                 this.executorId = executorId;
@@ -821,7 +880,7 @@ public class ListExecutorsResponseBody extends TeaModel {
             }
 
             /**
-             * ExternalIpAddress.
+             * <p>The list of public IP addresses of the nodes.</p>
              */
             public Builder externalIpAddress(java.util.List<String> externalIpAddress) {
                 this.externalIpAddress = externalIpAddress;
@@ -829,7 +888,7 @@ public class ListExecutorsResponseBody extends TeaModel {
             }
 
             /**
-             * HostName.
+             * <p>The list of hostnames.</p>
              */
             public Builder hostName(java.util.List<String> hostName) {
                 this.hostName = hostName;
@@ -837,7 +896,10 @@ public class ListExecutorsResponseBody extends TeaModel {
             }
 
             /**
-             * Image.
+             * <p>Executor image.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>m-f8z0dfa96luxxxxx</p>
              */
             public Builder image(String image) {
                 this.image = image;
@@ -845,7 +907,7 @@ public class ListExecutorsResponseBody extends TeaModel {
             }
 
             /**
-             * IpAddress.
+             * <p>The list of internal IP addresses.</p>
              */
             public Builder ipAddress(java.util.List<String> ipAddress) {
                 this.ipAddress = ipAddress;
@@ -853,7 +915,10 @@ public class ListExecutorsResponseBody extends TeaModel {
             }
 
             /**
-             * JobId.
+             * <p>The job ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>job-hy1nggvyukuvkr******</p>
              */
             public Builder jobId(String jobId) {
                 this.jobId = jobId;
@@ -861,7 +926,10 @@ public class ListExecutorsResponseBody extends TeaModel {
             }
 
             /**
-             * JobName.
+             * <p>The job name.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>testJob</p>
              */
             public Builder jobName(String jobName) {
                 this.jobName = jobName;
@@ -877,7 +945,7 @@ public class ListExecutorsResponseBody extends TeaModel {
             }
 
             /**
-             * Resource.
+             * <p>The resource information.</p>
              */
             public Builder resource(Resource resource) {
                 this.resource = resource;
@@ -885,7 +953,10 @@ public class ListExecutorsResponseBody extends TeaModel {
             }
 
             /**
-             * ResourceType.
+             * <p>The type of the resource.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>ECI</p>
              */
             public Builder resourceType(String resourceType) {
                 this.resourceType = resourceType;
@@ -893,7 +964,10 @@ public class ListExecutorsResponseBody extends TeaModel {
             }
 
             /**
-             * StartTime.
+             * <p>The start time.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2024-02-20 10:04:13</p>
              */
             public Builder startTime(String startTime) {
                 this.startTime = startTime;
@@ -901,7 +975,22 @@ public class ListExecutorsResponseBody extends TeaModel {
             }
 
             /**
-             * Status.
+             * <p>The status of the executor. Valid values:</p>
+             * <ul>
+             * <li>Pending</li>
+             * <li>Initing</li>
+             * <li>Succeed</li>
+             * <li>Failed</li>
+             * <li>Running</li>
+             * <li>Unknown</li>
+             * <li>Exception</li>
+             * <li>Retrying</li>
+             * <li>Expired</li>
+             * <li>Deleted</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>Running</p>
              */
             public Builder status(String status) {
                 this.status = status;
@@ -909,7 +998,10 @@ public class ListExecutorsResponseBody extends TeaModel {
             }
 
             /**
-             * StatusReason.
+             * <p>The description of the status reason.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Succeeded to release executor resource</p>
              */
             public Builder statusReason(String statusReason) {
                 this.statusReason = statusReason;
@@ -917,7 +1009,7 @@ public class ListExecutorsResponseBody extends TeaModel {
             }
 
             /**
-             * Tags.
+             * <p>The list of executor tags.</p>
              */
             public Builder tags(java.util.List<Tags> tags) {
                 this.tags = tags;
@@ -925,7 +1017,10 @@ public class ListExecutorsResponseBody extends TeaModel {
             }
 
             /**
-             * TaskName.
+             * <p>The name of the task.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>task0</p>
              */
             public Builder taskName(String taskName) {
                 this.taskName = taskName;
@@ -933,7 +1028,10 @@ public class ListExecutorsResponseBody extends TeaModel {
             }
 
             /**
-             * TaskSustainable.
+             * <p>Indicate whether the job is a long-running job.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>true</p>
              */
             public Builder taskSustainable(Boolean taskSustainable) {
                 this.taskSustainable = taskSustainable;
@@ -941,7 +1039,18 @@ public class ListExecutorsResponseBody extends TeaModel {
             }
 
             /**
-             * VswitchId.
+             * VpcId.
+             */
+            public Builder vpcId(String vpcId) {
+                this.vpcId = vpcId;
+                return this;
+            }
+
+            /**
+             * <p>The ID of the vSwitch.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>vsw-xxx</p>
              */
             public Builder vswitchId(String vswitchId) {
                 this.vswitchId = vswitchId;

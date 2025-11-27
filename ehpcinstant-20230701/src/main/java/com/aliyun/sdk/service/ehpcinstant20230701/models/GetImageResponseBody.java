@@ -93,7 +93,7 @@ public class GetImageResponseBody extends TeaModel {
         } 
 
         /**
-         * Image.
+         * <p>The details of the image.</p>
          */
         public Builder image(Image image) {
             this.image = image;
@@ -101,7 +101,10 @@ public class GetImageResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>04F0F334-1335-436C-A1D7-6C044FE73368</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -109,7 +112,14 @@ public class GetImageResponseBody extends TeaModel {
         }
 
         /**
-         * Success.
+         * <p>Indicates whether the request was successful. Valid values:</p>
+         * <ul>
+         * <li>true: The task is successful.</li>
+         * <li>false: The error occurred.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder success(Boolean success) {
             this.success = success;
@@ -117,7 +127,10 @@ public class GetImageResponseBody extends TeaModel {
         }
 
         /**
-         * TotalCount.
+         * <p>The total amount of data in this request.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10</p>
          */
         public Builder totalCount(Integer totalCount) {
             this.totalCount = totalCount;
@@ -292,7 +305,10 @@ public class GetImageResponseBody extends TeaModel {
             } 
 
             /**
-             * Password.
+             * <p>The password of the logon user.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>userpassword</p>
              */
             public Builder password(String password) {
                 this.password = password;
@@ -300,7 +316,10 @@ public class GetImageResponseBody extends TeaModel {
             }
 
             /**
-             * Server.
+             * <p>The registered address of the image repository.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>registry-vpc.cn-hangzhou.aliyuncs.com</p>
              */
             public Builder server(String server) {
                 this.server = server;
@@ -308,7 +327,10 @@ public class GetImageResponseBody extends TeaModel {
             }
 
             /**
-             * UserName.
+             * <p>The username of the logon user.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>username</p>
              */
             public Builder userName(String userName) {
                 this.userName = userName;
@@ -461,7 +483,14 @@ public class GetImageResponseBody extends TeaModel {
             }
 
             /**
-             * IsACREnterprise.
+             * <p>Whether the instance is an Alibaba Cloud image repository Enterprise Edition.</p>
+             * <ul>
+             * <li>True</li>
+             * <li>False</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>True</p>
              */
             public Builder isACREnterprise(Boolean isACREnterprise) {
                 this.isACREnterprise = isACREnterprise;
@@ -469,7 +498,14 @@ public class GetImageResponseBody extends TeaModel {
             }
 
             /**
-             * IsACRRegistry.
+             * <p>Whether it is an Alibaba Cloud image repository.</p>
+             * <ul>
+             * <li>True</li>
+             * <li>False</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>True</p>
              */
             public Builder isACRRegistry(Boolean isACRRegistry) {
                 this.isACRRegistry = isACRRegistry;
@@ -493,7 +529,7 @@ public class GetImageResponseBody extends TeaModel {
             }
 
             /**
-             * RegistryCredential.
+             * <p>The authentication of the private image repository.</p>
              */
             public Builder registryCredential(RegistryCredential registryCredential) {
                 this.registryCredential = registryCredential;
@@ -501,7 +537,10 @@ public class GetImageResponseBody extends TeaModel {
             }
 
             /**
-             * RegistryCriId.
+             * <p>The ID of the Container Registry Enterprise Edition image repository.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>cri-xyz795ygf8k9****</p>
              */
             public Builder registryCriId(String registryCriId) {
                 this.registryCriId = registryCriId;
@@ -509,7 +548,10 @@ public class GetImageResponseBody extends TeaModel {
             }
 
             /**
-             * RegistryUrl.
+             * <p>The endpoint of the container image.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>registry-vpc.cn-hangzhou.aliyuncs.com/ehpc_open/nginx:latest</p>
              */
             public Builder registryUrl(String registryUrl) {
                 this.registryUrl = registryUrl;
@@ -698,7 +740,10 @@ public class GetImageResponseBody extends TeaModel {
             } 
 
             /**
-             * Architecture.
+             * <p>The type of the architecture.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>x86_64</p>
              */
             public Builder architecture(String architecture) {
                 this.architecture = architecture;
@@ -706,7 +751,10 @@ public class GetImageResponseBody extends TeaModel {
             }
 
             /**
-             * ImageId.
+             * <p>The image ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>m-uf60twafjtaart******</p>
              */
             public Builder imageId(String imageId) {
                 this.imageId = imageId;
@@ -714,7 +762,10 @@ public class GetImageResponseBody extends TeaModel {
             }
 
             /**
-             * OsTag.
+             * <p>The ID of the specific OS version.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>CentOS  7.6 64 bit</p>
              */
             public Builder osTag(String osTag) {
                 this.osTag = osTag;
@@ -722,7 +773,10 @@ public class GetImageResponseBody extends TeaModel {
             }
 
             /**
-             * Platform.
+             * <p>The type of the platform.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>CentOS</p>
              */
             public Builder platform(String platform) {
                 this.platform = platform;
@@ -936,7 +990,7 @@ public class GetImageResponseBody extends TeaModel {
             }
 
             /**
-             * ContainerImageSpec.
+             * <p>The configuration details of the container image.</p>
              */
             public Builder containerImageSpec(ContainerImageSpec containerImageSpec) {
                 this.containerImageSpec = containerImageSpec;
@@ -944,7 +998,10 @@ public class GetImageResponseBody extends TeaModel {
             }
 
             /**
-             * CreateTime.
+             * <p>The time when the image was created.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2022-12-23T09:51:39Z</p>
              */
             public Builder createTime(String createTime) {
                 this.createTime = createTime;
@@ -952,7 +1009,7 @@ public class GetImageResponseBody extends TeaModel {
             }
 
             /**
-             * Description.
+             * <p>The description of the image.</p>
              */
             public Builder description(String description) {
                 this.description = description;
@@ -968,6 +1025,7 @@ public class GetImageResponseBody extends TeaModel {
             }
 
             /**
+             * <p>The type of the image.</p>
              * <p>This parameter is required.</p>
              * 
              * <strong>example:</strong>
@@ -979,7 +1037,10 @@ public class GetImageResponseBody extends TeaModel {
             }
 
             /**
-             * Name.
+             * <p>The name of the image.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>app-image</p>
              */
             public Builder name(String name) {
                 this.name = name;
@@ -987,7 +1048,10 @@ public class GetImageResponseBody extends TeaModel {
             }
 
             /**
-             * Size.
+             * <p>The size of the image. Unit: GiB.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>40 GiB</p>
              */
             public Builder size(String size) {
                 this.size = size;
@@ -1003,7 +1067,7 @@ public class GetImageResponseBody extends TeaModel {
             }
 
             /**
-             * VMImageSpec.
+             * <p>The configuration details of the virtual machine image.</p>
              */
             public Builder VMImageSpec(VMImageSpec VMImageSpec) {
                 this.VMImageSpec = VMImageSpec;
@@ -1011,7 +1075,10 @@ public class GetImageResponseBody extends TeaModel {
             }
 
             /**
-             * Version.
+             * <p>The version.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>v1.0</p>
              */
             public Builder version(String version) {
                 this.version = version;

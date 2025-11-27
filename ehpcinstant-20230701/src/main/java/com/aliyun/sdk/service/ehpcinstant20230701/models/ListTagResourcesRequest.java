@@ -116,7 +116,10 @@ public class ListTagResourcesRequest extends Request {
         } 
 
         /**
-         * MaxResult.
+         * <p>The number of records per page.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>20</p>
          */
         public Builder maxResult(Integer maxResult) {
             this.putQueryParameter("MaxResult", maxResult);
@@ -125,7 +128,10 @@ public class ListTagResourcesRequest extends Request {
         }
 
         /**
-         * NextToken.
+         * <p>A pagination token.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1d2db86scXXXXXXXXXX</p>
          */
         public Builder nextToken(String nextToken) {
             this.putQueryParameter("NextToken", nextToken);
@@ -134,7 +140,7 @@ public class ListTagResourcesRequest extends Request {
         }
 
         /**
-         * ResourceId.
+         * <p>The list of resource IDs. Valid values of N: 1 to 50.</p>
          */
         public Builder resourceId(java.util.List<String> resourceId) {
             this.putQueryParameter("ResourceId", resourceId);
@@ -143,6 +149,11 @@ public class ListTagResourcesRequest extends Request {
         }
 
         /**
+         * <p>The type of the resource. Valid values:</p>
+         * <ul>
+         * <li>Job</li>
+         * <li>Executor</li>
+         * </ul>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -155,7 +166,7 @@ public class ListTagResourcesRequest extends Request {
         }
 
         /**
-         * Tag.
+         * <p>The tags to add to the replication pair-consistent group. You can specify up to 20 tags.</p>
          */
         public Builder tag(java.util.List<Tag> tag) {
             this.putQueryParameter("Tag", tag);
@@ -223,7 +234,10 @@ public class ListTagResourcesRequest extends Request {
             } 
 
             /**
-             * Key.
+             * <p>The key of the tag.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>TestKey</p>
              */
             public Builder key(String key) {
                 this.key = key;
@@ -231,7 +245,10 @@ public class ListTagResourcesRequest extends Request {
             }
 
             /**
-             * Value.
+             * <p>The value of the tag.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>TestValue</p>
              */
             public Builder value(String value) {
                 this.value = value;

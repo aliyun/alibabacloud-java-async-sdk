@@ -111,7 +111,14 @@ public class GetImageRequest extends Request {
         }
 
         /**
-         * ImageCategory.
+         * <p>The source of the image. Valid values:</p>
+         * <ul>
+         * <li>Public: public images provided by Alibaba Cloud.</li>
+         * <li>Custom: the custom image that you added.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>Custom</p>
          */
         public Builder imageCategory(String imageCategory) {
             this.putQueryParameter("ImageCategory", imageCategory);
@@ -120,7 +127,10 @@ public class GetImageRequest extends Request {
         }
 
         /**
-         * ImageId.
+         * <p>The image ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>m-2ze74g5mvy4pjg*****</p>
          */
         public Builder imageId(String imageId) {
             this.putQueryParameter("ImageId", imageId);
@@ -129,7 +139,15 @@ public class GetImageRequest extends Request {
         }
 
         /**
-         * ImageType.
+         * <p>The type of the images. Valid values:</p>
+         * <ul>
+         * <li>VM: virtual machine image.</li>
+         * <li>Container: the container image.</li>
+         * </ul>
+         * <p>Default value: VM</p>
+         * 
+         * <strong>example:</strong>
+         * <p>VM</p>
          */
         public Builder imageType(String imageType) {
             this.putQueryParameter("ImageType", imageType);
