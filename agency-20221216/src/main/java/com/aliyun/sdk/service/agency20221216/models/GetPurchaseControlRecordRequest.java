@@ -12,18 +12,19 @@ import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
  * 
- * {@link ListExportTasksRequest} extends {@link RequestModel}
+ * {@link GetPurchaseControlRecordRequest} extends {@link RequestModel}
  *
- * <p>ListExportTasksRequest</p>
+ * <p>GetPurchaseControlRecordRequest</p>
  */
-public class ListExportTasksRequest extends Request {
+public class GetPurchaseControlRecordRequest extends Request {
     @com.aliyun.core.annotation.Query
-    @com.aliyun.core.annotation.NameInMap("Id")
-    private Long id;
+    @com.aliyun.core.annotation.NameInMap("CustomerUID")
+    @com.aliyun.core.annotation.Validation(required = true)
+    private Long customerUID;
 
     @com.aliyun.core.annotation.Query
-    @com.aliyun.core.annotation.NameInMap("Language")
-    private String language;
+    @com.aliyun.core.annotation.NameInMap("OperationTime")
+    private String operationTime;
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("PageNo")
@@ -32,28 +33,22 @@ public class ListExportTasksRequest extends Request {
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("PageSize")
-    @com.aliyun.core.annotation.Validation(required = true)
+    @com.aliyun.core.annotation.Validation(required = true, maximum = 100)
     private Integer pageSize;
 
-    @com.aliyun.core.annotation.Query
-    @com.aliyun.core.annotation.NameInMap("SceneCode")
-    @com.aliyun.core.annotation.Validation(required = true)
-    private String sceneCode;
-
-    private ListExportTasksRequest(Builder builder) {
+    private GetPurchaseControlRecordRequest(Builder builder) {
         super(builder);
-        this.id = builder.id;
-        this.language = builder.language;
+        this.customerUID = builder.customerUID;
+        this.operationTime = builder.operationTime;
         this.pageNo = builder.pageNo;
         this.pageSize = builder.pageSize;
-        this.sceneCode = builder.sceneCode;
     }
 
     public static Builder builder() {
         return new Builder();
     }
 
-    public static ListExportTasksRequest create() {
+    public static GetPurchaseControlRecordRequest create() {
         return builder().build();
     }
 
@@ -63,17 +58,17 @@ public class ListExportTasksRequest extends Request {
     }
 
     /**
-     * @return id
+     * @return customerUID
      */
-    public Long getId() {
-        return this.id;
+    public Long getCustomerUID() {
+        return this.customerUID;
     }
 
     /**
-     * @return language
+     * @return operationTime
      */
-    public String getLanguage() {
-        return this.language;
+    public String getOperationTime() {
+        return this.operationTime;
     }
 
     /**
@@ -90,48 +85,42 @@ public class ListExportTasksRequest extends Request {
         return this.pageSize;
     }
 
-    /**
-     * @return sceneCode
-     */
-    public String getSceneCode() {
-        return this.sceneCode;
-    }
-
-    public static final class Builder extends Request.Builder<ListExportTasksRequest, Builder> {
-        private Long id; 
-        private String language; 
+    public static final class Builder extends Request.Builder<GetPurchaseControlRecordRequest, Builder> {
+        private Long customerUID; 
+        private String operationTime; 
         private Integer pageNo; 
         private Integer pageSize; 
-        private String sceneCode; 
 
         private Builder() {
             super();
         } 
 
-        private Builder(ListExportTasksRequest request) {
+        private Builder(GetPurchaseControlRecordRequest request) {
             super(request);
-            this.id = request.id;
-            this.language = request.language;
+            this.customerUID = request.customerUID;
+            this.operationTime = request.operationTime;
             this.pageNo = request.pageNo;
             this.pageSize = request.pageSize;
-            this.sceneCode = request.sceneCode;
         } 
 
         /**
-         * Id.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>292828565558721922</p>
          */
-        public Builder id(Long id) {
-            this.putQueryParameter("Id", id);
-            this.id = id;
+        public Builder customerUID(Long customerUID) {
+            this.putQueryParameter("CustomerUID", customerUID);
+            this.customerUID = customerUID;
             return this;
         }
 
         /**
-         * Language.
+         * OperationTime.
          */
-        public Builder language(String language) {
-            this.putQueryParameter("Language", language);
-            this.language = language;
+        public Builder operationTime(String operationTime) {
+            this.putQueryParameter("OperationTime", operationTime);
+            this.operationTime = operationTime;
             return this;
         }
 
@@ -159,21 +148,9 @@ public class ListExportTasksRequest extends Request {
             return this;
         }
 
-        /**
-         * <p>This parameter is required.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>intlExportUsageDeductHistory</p>
-         */
-        public Builder sceneCode(String sceneCode) {
-            this.putQueryParameter("SceneCode", sceneCode);
-            this.sceneCode = sceneCode;
-            return this;
-        }
-
         @Override
-        public ListExportTasksRequest build() {
-            return new ListExportTasksRequest(this);
+        public GetPurchaseControlRecordRequest build() {
+            return new GetPurchaseControlRecordRequest(this);
         } 
 
     } 

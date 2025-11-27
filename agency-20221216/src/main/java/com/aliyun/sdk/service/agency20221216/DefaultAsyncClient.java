@@ -518,6 +518,42 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
+     * @param request the request parameters of GetPurchaseControlRecord  GetPurchaseControlRecordRequest
+     * @return GetPurchaseControlRecordResponse
+     */
+    @Override
+    public CompletableFuture<GetPurchaseControlRecordResponse> getPurchaseControlRecord(GetPurchaseControlRecordRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RPC).setAction("GetPurchaseControlRecord").setMethod(HttpMethod.POST).setPathRegex("/").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(GetPurchaseControlRecordResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<GetPurchaseControlRecordResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
+     * @param request the request parameters of GetShutdownPolicyRecord  GetShutdownPolicyRecordRequest
+     * @return GetShutdownPolicyRecordResponse
+     */
+    @Override
+    public CompletableFuture<GetShutdownPolicyRecordResponse> getShutdownPolicyRecord(GetShutdownPolicyRecordRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RPC).setAction("GetShutdownPolicyRecord").setMethod(HttpMethod.POST).setPathRegex("/").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(GetShutdownPolicyRecordResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<GetShutdownPolicyRecordResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
      * @param request the request parameters of GetUnassociatedCustomer  GetUnassociatedCustomerRequest
      * @return GetUnassociatedCustomerResponse
      */

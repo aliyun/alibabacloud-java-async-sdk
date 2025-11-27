@@ -177,6 +177,18 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<GetMonthlyBillResponse> getMonthlyBill(GetMonthlyBillRequest request);
 
     /**
+     * @param request the request parameters of GetPurchaseControlRecord  GetPurchaseControlRecordRequest
+     * @return GetPurchaseControlRecordResponse
+     */
+    CompletableFuture<GetPurchaseControlRecordResponse> getPurchaseControlRecord(GetPurchaseControlRecordRequest request);
+
+    /**
+     * @param request the request parameters of GetShutdownPolicyRecord  GetShutdownPolicyRecordRequest
+     * @return GetShutdownPolicyRecordResponse
+     */
+    CompletableFuture<GetShutdownPolicyRecordResponse> getShutdownPolicyRecord(GetShutdownPolicyRecordRequest request);
+
+    /**
      * @param request the request parameters of GetUnassociatedCustomer  GetUnassociatedCustomerRequest
      * @return GetUnassociatedCustomerResponse
      */
