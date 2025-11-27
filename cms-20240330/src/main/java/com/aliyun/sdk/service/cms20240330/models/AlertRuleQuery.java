@@ -29,6 +29,9 @@ public class AlertRuleQuery extends TeaModel {
     @com.aliyun.core.annotation.NameInMap("duration")
     private Long duration;
 
+    @com.aliyun.core.annotation.NameInMap("entityFields")
+    private java.util.List<EntityFields> entityFields;
+
     @com.aliyun.core.annotation.NameInMap("entityFilter")
     private EntityFilter entityFilter;
 
@@ -46,6 +49,9 @@ public class AlertRuleQuery extends TeaModel {
 
     @com.aliyun.core.annotation.NameInMap("groupType")
     private String groupType;
+
+    @com.aliyun.core.annotation.NameInMap("labelFilters")
+    private java.util.List<LabelFilters> labelFilters;
 
     @com.aliyun.core.annotation.NameInMap("metric")
     private String metric;
@@ -77,12 +83,14 @@ public class AlertRuleQuery extends TeaModel {
         this.dimensions = builder.dimensions;
         this.domain = builder.domain;
         this.duration = builder.duration;
+        this.entityFields = builder.entityFields;
         this.entityFilter = builder.entityFilter;
         this.expr = builder.expr;
         this.firstJoin = builder.firstJoin;
         this.groupFieldList = builder.groupFieldList;
         this.groupId = builder.groupId;
         this.groupType = builder.groupType;
+        this.labelFilters = builder.labelFilters;
         this.metric = builder.metric;
         this.metricSet = builder.metricSet;
         this.namespace = builder.namespace;
@@ -134,6 +142,13 @@ public class AlertRuleQuery extends TeaModel {
     }
 
     /**
+     * @return entityFields
+     */
+    public java.util.List<EntityFields> getEntityFields() {
+        return this.entityFields;
+    }
+
+    /**
      * @return entityFilter
      */
     public EntityFilter getEntityFilter() {
@@ -173,6 +188,13 @@ public class AlertRuleQuery extends TeaModel {
      */
     public String getGroupType() {
         return this.groupType;
+    }
+
+    /**
+     * @return labelFilters
+     */
+    public java.util.List<LabelFilters> getLabelFilters() {
+        return this.labelFilters;
     }
 
     /**
@@ -236,12 +258,14 @@ public class AlertRuleQuery extends TeaModel {
         private java.util.List<java.util.Map<String, String>> dimensions; 
         private String domain; 
         private Long duration; 
+        private java.util.List<EntityFields> entityFields; 
         private EntityFilter entityFilter; 
         private String expr; 
         private AlertRuleSlsQueryJoin firstJoin; 
         private java.util.List<String> groupFieldList; 
         private String groupId; 
         private String groupType; 
+        private java.util.List<LabelFilters> labelFilters; 
         private String metric; 
         private String metricSet; 
         private String namespace; 
@@ -259,12 +283,14 @@ public class AlertRuleQuery extends TeaModel {
             this.dimensions = model.dimensions;
             this.domain = model.domain;
             this.duration = model.duration;
+            this.entityFields = model.entityFields;
             this.entityFilter = model.entityFilter;
             this.expr = model.expr;
             this.firstJoin = model.firstJoin;
             this.groupFieldList = model.groupFieldList;
             this.groupId = model.groupId;
             this.groupType = model.groupType;
+            this.labelFilters = model.labelFilters;
             this.metric = model.metric;
             this.metricSet = model.metricSet;
             this.namespace = model.namespace;
@@ -304,6 +330,14 @@ public class AlertRuleQuery extends TeaModel {
          */
         public Builder duration(Long duration) {
             this.duration = duration;
+            return this;
+        }
+
+        /**
+         * entityFields.
+         */
+        public Builder entityFields(java.util.List<EntityFields> entityFields) {
+            this.entityFields = entityFields;
             return this;
         }
 
@@ -352,6 +386,14 @@ public class AlertRuleQuery extends TeaModel {
          */
         public Builder groupType(String groupType) {
             this.groupType = groupType;
+            return this;
+        }
+
+        /**
+         * labelFilters.
+         */
+        public Builder labelFilters(java.util.List<LabelFilters> labelFilters) {
+            this.labelFilters = labelFilters;
             return this;
         }
 
@@ -426,6 +468,81 @@ public class AlertRuleQuery extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link AlertRuleQuery} extends {@link TeaModel}
+     *
+     * <p>AlertRuleQuery</p>
+     */
+    public static class EntityFields extends TeaModel {
+        @com.aliyun.core.annotation.NameInMap("field")
+        private String field;
+
+        @com.aliyun.core.annotation.NameInMap("value")
+        private String value;
+
+        private EntityFields(Builder builder) {
+            this.field = builder.field;
+            this.value = builder.value;
+        }
+
+        public static Builder builder() {
+            return new Builder();
+        }
+
+        public static EntityFields create() {
+            return builder().build();
+        }
+
+        /**
+         * @return field
+         */
+        public String getField() {
+            return this.field;
+        }
+
+        /**
+         * @return value
+         */
+        public String getValue() {
+            return this.value;
+        }
+
+        public static final class Builder {
+            private String field; 
+            private String value; 
+
+            private Builder() {
+            } 
+
+            private Builder(EntityFields model) {
+                this.field = model.field;
+                this.value = model.value;
+            } 
+
+            /**
+             * field.
+             */
+            public Builder field(String field) {
+                this.field = field;
+                return this;
+            }
+
+            /**
+             * value.
+             */
+            public Builder value(String value) {
+                this.value = value;
+                return this;
+            }
+
+            public EntityFields build() {
+                return new EntityFields(this);
+            } 
+
+        } 
+
+    }
     /**
      * 
      * {@link AlertRuleQuery} extends {@link TeaModel}
@@ -614,6 +731,102 @@ public class AlertRuleQuery extends TeaModel {
 
             public EntityFilter build() {
                 return new EntityFilter(this);
+            } 
+
+        } 
+
+    }
+    /**
+     * 
+     * {@link AlertRuleQuery} extends {@link TeaModel}
+     *
+     * <p>AlertRuleQuery</p>
+     */
+    public static class LabelFilters extends TeaModel {
+        @com.aliyun.core.annotation.NameInMap("name")
+        private String name;
+
+        @com.aliyun.core.annotation.NameInMap("operator")
+        private String operator;
+
+        @com.aliyun.core.annotation.NameInMap("value")
+        private String value;
+
+        private LabelFilters(Builder builder) {
+            this.name = builder.name;
+            this.operator = builder.operator;
+            this.value = builder.value;
+        }
+
+        public static Builder builder() {
+            return new Builder();
+        }
+
+        public static LabelFilters create() {
+            return builder().build();
+        }
+
+        /**
+         * @return name
+         */
+        public String getName() {
+            return this.name;
+        }
+
+        /**
+         * @return operator
+         */
+        public String getOperator() {
+            return this.operator;
+        }
+
+        /**
+         * @return value
+         */
+        public String getValue() {
+            return this.value;
+        }
+
+        public static final class Builder {
+            private String name; 
+            private String operator; 
+            private String value; 
+
+            private Builder() {
+            } 
+
+            private Builder(LabelFilters model) {
+                this.name = model.name;
+                this.operator = model.operator;
+                this.value = model.value;
+            } 
+
+            /**
+             * name.
+             */
+            public Builder name(String name) {
+                this.name = name;
+                return this;
+            }
+
+            /**
+             * operator.
+             */
+            public Builder operator(String operator) {
+                this.operator = operator;
+                return this;
+            }
+
+            /**
+             * value.
+             */
+            public Builder value(String value) {
+                this.value = value;
+                return this;
+            }
+
+            public LabelFilters build() {
+                return new LabelFilters(this);
             } 
 
         } 

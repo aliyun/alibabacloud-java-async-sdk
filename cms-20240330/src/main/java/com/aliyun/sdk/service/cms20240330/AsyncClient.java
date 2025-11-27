@@ -35,6 +35,12 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<CreateAggTaskGroupResponse> createAggTaskGroup(CreateAggTaskGroupRequest request);
 
     /**
+     * @param request the request parameters of CreateBizTrace  CreateBizTraceRequest
+     * @return CreateBizTraceResponse
+     */
+    CompletableFuture<CreateBizTraceResponse> createBizTrace(CreateBizTraceRequest request);
+
+    /**
      * @param request the request parameters of CreateCloudResource  CreateCloudResourceRequest
      * @return CreateCloudResourceResponse
      */
@@ -111,6 +117,12 @@ public interface AsyncClient extends SdkAutoCloseable {
      * @return DeleteAggTaskGroupResponse
      */
     CompletableFuture<DeleteAggTaskGroupResponse> deleteAggTaskGroup(DeleteAggTaskGroupRequest request);
+
+    /**
+     * @param request the request parameters of DeleteBizTrace  DeleteBizTraceRequest
+     * @return DeleteBizTraceResponse
+     */
+    CompletableFuture<DeleteBizTraceResponse> deleteBizTrace(DeleteBizTraceRequest request);
 
     /**
      * @param request the request parameters of DeleteCloudResource  DeleteCloudResourceRequest
@@ -191,16 +203,40 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<DescribeRegionsResponse> describeRegions(DescribeRegionsRequest request);
 
     /**
+     * @param request the request parameters of GetAddon  GetAddonRequest
+     * @return GetAddonResponse
+     */
+    CompletableFuture<GetAddonResponse> getAddon(GetAddonRequest request);
+
+    /**
+     * @param request the request parameters of GetAddonCodeTemplate  GetAddonCodeTemplateRequest
+     * @return GetAddonCodeTemplateResponse
+     */
+    CompletableFuture<GetAddonCodeTemplateResponse> getAddonCodeTemplate(GetAddonCodeTemplateRequest request);
+
+    /**
      * @param request the request parameters of GetAddonRelease  GetAddonReleaseRequest
      * @return GetAddonReleaseResponse
      */
     CompletableFuture<GetAddonReleaseResponse> getAddonRelease(GetAddonReleaseRequest request);
 
     /**
+     * @param request the request parameters of GetAddonSchema  GetAddonSchemaRequest
+     * @return GetAddonSchemaResponse
+     */
+    CompletableFuture<GetAddonSchemaResponse> getAddonSchema(GetAddonSchemaRequest request);
+
+    /**
      * @param request the request parameters of GetAggTaskGroup  GetAggTaskGroupRequest
      * @return GetAggTaskGroupResponse
      */
     CompletableFuture<GetAggTaskGroupResponse> getAggTaskGroup(GetAggTaskGroupRequest request);
+
+    /**
+     * @param request the request parameters of GetBizTrace  GetBizTraceRequest
+     * @return GetBizTraceResponse
+     */
+    CompletableFuture<GetBizTraceResponse> getBizTrace(GetBizTraceRequest request);
 
     /**
      * @param request the request parameters of GetCloudResource  GetCloudResourceRequest
@@ -237,6 +273,12 @@ public interface AsyncClient extends SdkAutoCloseable {
      * @return GetIntegrationPolicyResponse
      */
     CompletableFuture<GetIntegrationPolicyResponse> getIntegrationPolicy(GetIntegrationPolicyRequest request);
+
+    /**
+     * @param request the request parameters of GetIntegrationVersionForCS  GetIntegrationVersionForCSRequest
+     * @return GetIntegrationVersionForCSResponse
+     */
+    CompletableFuture<GetIntegrationVersionForCSResponse> getIntegrationVersionForCS(GetIntegrationVersionForCSRequest request);
 
     /**
      * <b>description</b> :
@@ -314,6 +356,12 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<ListAddonReleasesResponse> listAddonReleases(ListAddonReleasesRequest request);
 
     /**
+     * @param request the request parameters of ListAddons  ListAddonsRequest
+     * @return ListAddonsResponse
+     */
+    CompletableFuture<ListAddonsResponse> listAddons(ListAddonsRequest request);
+
+    /**
      * @param request the request parameters of ListAggTaskGroups  ListAggTaskGroupsRequest
      * @return ListAggTaskGroupsResponse
      */
@@ -326,6 +374,12 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<ListAlertActionsResponse> listAlertActions(ListAlertActionsRequest request);
 
     /**
+     * @param request the request parameters of ListBizTraces  ListBizTracesRequest
+     * @return ListBizTracesResponse
+     */
+    CompletableFuture<ListBizTracesResponse> listBizTraces(ListBizTracesRequest request);
+
+    /**
      * <b>description</b> :
      * <p>Query integration list</p>
      * 
@@ -333,6 +387,18 @@ public interface AsyncClient extends SdkAutoCloseable {
      * @return ListIntegrationPoliciesResponse
      */
     CompletableFuture<ListIntegrationPoliciesResponse> listIntegrationPolicies(ListIntegrationPoliciesRequest request);
+
+    /**
+     * @param request the request parameters of ListIntegrationPolicyAddons  ListIntegrationPolicyAddonsRequest
+     * @return ListIntegrationPolicyAddonsResponse
+     */
+    CompletableFuture<ListIntegrationPolicyAddonsResponse> listIntegrationPolicyAddons(ListIntegrationPolicyAddonsRequest request);
+
+    /**
+     * @param request the request parameters of ListIntegrationPolicyCollectors  ListIntegrationPolicyCollectorsRequest
+     * @return ListIntegrationPolicyCollectorsResponse
+     */
+    CompletableFuture<ListIntegrationPolicyCollectorsResponse> listIntegrationPolicyCollectors(ListIntegrationPolicyCollectorsRequest request);
 
     /**
      * @param request the request parameters of ListIntegrationPolicyCustomScrapeJobRules  ListIntegrationPolicyCustomScrapeJobRulesRequest
@@ -445,6 +511,12 @@ public interface AsyncClient extends SdkAutoCloseable {
      * @return UpdateAggTaskGroupStatusResponse
      */
     CompletableFuture<UpdateAggTaskGroupStatusResponse> updateAggTaskGroupStatus(UpdateAggTaskGroupStatusRequest request);
+
+    /**
+     * @param request the request parameters of UpdateBizTrace  UpdateBizTraceRequest
+     * @return UpdateBizTraceResponse
+     */
+    CompletableFuture<UpdateBizTraceResponse> updateBizTrace(UpdateBizTraceRequest request);
 
     /**
      * @param request the request parameters of UpdateIntegrationPolicy  UpdateIntegrationPolicyRequest
