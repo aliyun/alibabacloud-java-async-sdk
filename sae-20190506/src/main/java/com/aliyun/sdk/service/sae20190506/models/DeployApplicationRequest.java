@@ -311,6 +311,10 @@ public class DeployApplicationRequest extends Request {
     private String slsConfigs;
 
     @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("SlsLogEnvTags")
+    private String slsLogEnvTags;
+
+    @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("StartupProbe")
     private String startupProbe;
 
@@ -422,6 +426,7 @@ public class DeployApplicationRequest extends Request {
         this.serviceTags = builder.serviceTags;
         this.sidecarContainersConfig = builder.sidecarContainersConfig;
         this.slsConfigs = builder.slsConfigs;
+        this.slsLogEnvTags = builder.slsLogEnvTags;
         this.startupProbe = builder.startupProbe;
         this.swimlanePvtzDiscoverySvc = builder.swimlanePvtzDiscoverySvc;
         this.terminationGracePeriodSeconds = builder.terminationGracePeriodSeconds;
@@ -958,6 +963,13 @@ public class DeployApplicationRequest extends Request {
     }
 
     /**
+     * @return slsLogEnvTags
+     */
+    public String getSlsLogEnvTags() {
+        return this.slsLogEnvTags;
+    }
+
+    /**
      * @return startupProbe
      */
     public String getStartupProbe() {
@@ -1094,6 +1106,7 @@ public class DeployApplicationRequest extends Request {
         private String serviceTags; 
         private java.util.List<SidecarContainerConfig> sidecarContainersConfig; 
         private String slsConfigs; 
+        private String slsLogEnvTags; 
         private String startupProbe; 
         private String swimlanePvtzDiscoverySvc; 
         private Integer terminationGracePeriodSeconds; 
@@ -1183,6 +1196,7 @@ public class DeployApplicationRequest extends Request {
             this.serviceTags = request.serviceTags;
             this.sidecarContainersConfig = request.sidecarContainersConfig;
             this.slsConfigs = request.slsConfigs;
+            this.slsLogEnvTags = request.slsLogEnvTags;
             this.startupProbe = request.startupProbe;
             this.swimlanePvtzDiscoverySvc = request.swimlanePvtzDiscoverySvc;
             this.terminationGracePeriodSeconds = request.terminationGracePeriodSeconds;
@@ -2318,6 +2332,15 @@ public class DeployApplicationRequest extends Request {
         public Builder slsConfigs(String slsConfigs) {
             this.putQueryParameter("SlsConfigs", slsConfigs);
             this.slsConfigs = slsConfigs;
+            return this;
+        }
+
+        /**
+         * SlsLogEnvTags.
+         */
+        public Builder slsLogEnvTags(String slsLogEnvTags) {
+            this.putQueryParameter("SlsLogEnvTags", slsLogEnvTags);
+            this.slsLogEnvTags = slsLogEnvTags;
             return this;
         }
 

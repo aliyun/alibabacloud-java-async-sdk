@@ -325,6 +325,10 @@ public class CreateApplicationRequest extends Request {
     private String slsConfigs;
 
     @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("SlsLogEnvTags")
+    private String slsLogEnvTags;
+
+    @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("StartupProbe")
     private String startupProbe;
 
@@ -435,6 +439,7 @@ public class CreateApplicationRequest extends Request {
         this.serviceTags = builder.serviceTags;
         this.sidecarContainersConfig = builder.sidecarContainersConfig;
         this.slsConfigs = builder.slsConfigs;
+        this.slsLogEnvTags = builder.slsLogEnvTags;
         this.startupProbe = builder.startupProbe;
         this.terminationGracePeriodSeconds = builder.terminationGracePeriodSeconds;
         this.timezone = builder.timezone;
@@ -991,6 +996,13 @@ public class CreateApplicationRequest extends Request {
     }
 
     /**
+     * @return slsLogEnvTags
+     */
+    public String getSlsLogEnvTags() {
+        return this.slsLogEnvTags;
+    }
+
+    /**
      * @return startupProbe
      */
     public String getStartupProbe() {
@@ -1123,6 +1135,7 @@ public class CreateApplicationRequest extends Request {
         private String serviceTags; 
         private java.util.List<SidecarContainerConfig> sidecarContainersConfig; 
         private String slsConfigs; 
+        private String slsLogEnvTags; 
         private String startupProbe; 
         private Integer terminationGracePeriodSeconds; 
         private String timezone; 
@@ -1214,6 +1227,7 @@ public class CreateApplicationRequest extends Request {
             this.serviceTags = request.serviceTags;
             this.sidecarContainersConfig = request.sidecarContainersConfig;
             this.slsConfigs = request.slsConfigs;
+            this.slsLogEnvTags = request.slsLogEnvTags;
             this.startupProbe = request.startupProbe;
             this.terminationGracePeriodSeconds = request.terminationGracePeriodSeconds;
             this.timezone = request.timezone;
@@ -2357,6 +2371,15 @@ public class CreateApplicationRequest extends Request {
         public Builder slsConfigs(String slsConfigs) {
             this.putQueryParameter("SlsConfigs", slsConfigs);
             this.slsConfigs = slsConfigs;
+            return this;
+        }
+
+        /**
+         * SlsLogEnvTags.
+         */
+        public Builder slsLogEnvTags(String slsLogEnvTags) {
+            this.putQueryParameter("SlsLogEnvTags", slsLogEnvTags);
+            this.slsLogEnvTags = slsLogEnvTags;
             return this;
         }
 

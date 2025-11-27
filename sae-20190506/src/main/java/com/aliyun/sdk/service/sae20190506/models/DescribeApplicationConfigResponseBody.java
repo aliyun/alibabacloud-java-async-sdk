@@ -2063,6 +2063,9 @@ public class DescribeApplicationConfigResponseBody extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("SlsConfigs")
         private String slsConfigs;
 
+        @com.aliyun.core.annotation.NameInMap("SlsLogEnvTags")
+        private String slsLogEnvTags;
+
         @com.aliyun.core.annotation.NameInMap("StartupProbe")
         private String startupProbe;
 
@@ -2184,6 +2187,7 @@ public class DescribeApplicationConfigResponseBody extends TeaModel {
             this.serviceTags = builder.serviceTags;
             this.sidecarContainersConfig = builder.sidecarContainersConfig;
             this.slsConfigs = builder.slsConfigs;
+            this.slsLogEnvTags = builder.slsLogEnvTags;
             this.startupProbe = builder.startupProbe;
             this.swimlanePvtzDiscovery = builder.swimlanePvtzDiscovery;
             this.tags = builder.tags;
@@ -2815,6 +2819,13 @@ public class DescribeApplicationConfigResponseBody extends TeaModel {
         }
 
         /**
+         * @return slsLogEnvTags
+         */
+        public String getSlsLogEnvTags() {
+            return this.slsLogEnvTags;
+        }
+
+        /**
          * @return startupProbe
          */
         public String getStartupProbe() {
@@ -2979,6 +2990,7 @@ public class DescribeApplicationConfigResponseBody extends TeaModel {
             private java.util.Map<String, String> serviceTags; 
             private java.util.List<SidecarContainersConfig> sidecarContainersConfig; 
             private String slsConfigs; 
+            private String slsLogEnvTags; 
             private String startupProbe; 
             private String swimlanePvtzDiscovery; 
             private java.util.List<Tags> tags; 
@@ -3082,6 +3094,7 @@ public class DescribeApplicationConfigResponseBody extends TeaModel {
                 this.serviceTags = model.serviceTags;
                 this.sidecarContainersConfig = model.sidecarContainersConfig;
                 this.slsConfigs = model.slsConfigs;
+                this.slsLogEnvTags = model.slsLogEnvTags;
                 this.startupProbe = model.startupProbe;
                 this.swimlanePvtzDiscovery = model.swimlanePvtzDiscovery;
                 this.tags = model.tags;
@@ -4202,6 +4215,14 @@ public class DescribeApplicationConfigResponseBody extends TeaModel {
              */
             public Builder slsConfigs(String slsConfigs) {
                 this.slsConfigs = slsConfigs;
+                return this;
+            }
+
+            /**
+             * SlsLogEnvTags.
+             */
+            public Builder slsLogEnvTags(String slsLogEnvTags) {
+                this.slsLogEnvTags = slsLogEnvTags;
                 return this;
             }
 
