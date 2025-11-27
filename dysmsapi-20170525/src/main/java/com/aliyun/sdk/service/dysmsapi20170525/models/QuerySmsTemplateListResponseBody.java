@@ -357,6 +357,9 @@ public class QuerySmsTemplateListResponseBody extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("TemplateType")
         private Integer templateType;
 
+        @com.aliyun.core.annotation.NameInMap("TrafficDriving")
+        private String trafficDriving;
+
         private SmsTemplateList(Builder builder) {
             this.auditStatus = builder.auditStatus;
             this.createDate = builder.createDate;
@@ -368,6 +371,7 @@ public class QuerySmsTemplateListResponseBody extends TeaModel {
             this.templateContent = builder.templateContent;
             this.templateName = builder.templateName;
             this.templateType = builder.templateType;
+            this.trafficDriving = builder.trafficDriving;
         }
 
         public static Builder builder() {
@@ -448,6 +452,13 @@ public class QuerySmsTemplateListResponseBody extends TeaModel {
             return this.templateType;
         }
 
+        /**
+         * @return trafficDriving
+         */
+        public String getTrafficDriving() {
+            return this.trafficDriving;
+        }
+
         public static final class Builder {
             private String auditStatus; 
             private String createDate; 
@@ -459,6 +470,7 @@ public class QuerySmsTemplateListResponseBody extends TeaModel {
             private String templateContent; 
             private String templateName; 
             private Integer templateType; 
+            private String trafficDriving; 
 
             private Builder() {
             } 
@@ -474,6 +486,7 @@ public class QuerySmsTemplateListResponseBody extends TeaModel {
                 this.templateContent = model.templateContent;
                 this.templateName = model.templateName;
                 this.templateType = model.templateType;
+                this.trafficDriving = model.trafficDriving;
             } 
 
             /**
@@ -605,6 +618,14 @@ public class QuerySmsTemplateListResponseBody extends TeaModel {
              */
             public Builder templateType(Integer templateType) {
                 this.templateType = templateType;
+                return this;
+            }
+
+            /**
+             * TrafficDriving.
+             */
+            public Builder trafficDriving(String trafficDriving) {
+                this.trafficDriving = trafficDriving;
                 return this;
             }
 

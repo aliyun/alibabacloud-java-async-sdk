@@ -263,6 +263,12 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<GetQualificationOssInfoResponse> getQualificationOssInfo(GetQualificationOssInfoRequest request);
 
     /**
+     * @param request the request parameters of GetSmsOcrOssInfo  GetSmsOcrOssInfoRequest
+     * @return GetSmsOcrOssInfoResponse
+     */
+    CompletableFuture<GetSmsOcrOssInfoResponse> getSmsOcrOssInfo(GetSmsOcrOssInfoRequest request);
+
+    /**
      * <b>description</b> :
      * <ul>
      * <li>For details about the changes of this new interface and the original one, please refer to <a href="https://help.aliyun.com/zh/sms/product-overview/announcement-on-sms-service-update-signature-template-interface">Announcement on the Update of SMS Signature &amp; Template Interfaces</a>.</li>
