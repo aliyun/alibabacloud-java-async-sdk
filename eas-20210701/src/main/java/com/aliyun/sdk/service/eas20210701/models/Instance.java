@@ -20,6 +20,9 @@ public class Instance extends TeaModel {
     @com.aliyun.core.annotation.NameInMap("CurrentAmount")
     private Float currentAmount;
 
+    @com.aliyun.core.annotation.NameInMap("Detached")
+    private Boolean detached;
+
     @com.aliyun.core.annotation.NameInMap("ExternalIP")
     private String externalIP;
 
@@ -47,6 +50,9 @@ public class Instance extends TeaModel {
     @com.aliyun.core.annotation.NameInMap("IsLatest")
     private Boolean isLatest;
 
+    @com.aliyun.core.annotation.NameInMap("IsReplica")
+    private Boolean isReplica;
+
     @com.aliyun.core.annotation.NameInMap("IsSpot")
     private Boolean isSpot;
 
@@ -67,6 +73,9 @@ public class Instance extends TeaModel {
 
     @com.aliyun.core.annotation.NameInMap("Reason")
     private String reason;
+
+    @com.aliyun.core.annotation.NameInMap("ReplicaName")
+    private String replicaName;
 
     @com.aliyun.core.annotation.NameInMap("ResourceType")
     private String resourceType;
@@ -101,6 +110,7 @@ public class Instance extends TeaModel {
 
     private Instance(Builder builder) {
         this.currentAmount = builder.currentAmount;
+        this.detached = builder.detached;
         this.externalIP = builder.externalIP;
         this.externalInstancePort = builder.externalInstancePort;
         this.hostIP = builder.hostIP;
@@ -110,6 +120,7 @@ public class Instance extends TeaModel {
         this.instancePort = builder.instancePort;
         this.instanceType = builder.instanceType;
         this.isLatest = builder.isLatest;
+        this.isReplica = builder.isReplica;
         this.isSpot = builder.isSpot;
         this.isolated = builder.isolated;
         this.lastState = builder.lastState;
@@ -117,6 +128,7 @@ public class Instance extends TeaModel {
         this.originalAmount = builder.originalAmount;
         this.readyProcesses = builder.readyProcesses;
         this.reason = builder.reason;
+        this.replicaName = builder.replicaName;
         this.resourceType = builder.resourceType;
         this.restartCount = builder.restartCount;
         this.role = builder.role;
@@ -146,6 +158,13 @@ public class Instance extends TeaModel {
      */
     public Float getCurrentAmount() {
         return this.currentAmount;
+    }
+
+    /**
+     * @return detached
+     */
+    public Boolean getDetached() {
+        return this.detached;
     }
 
     /**
@@ -212,6 +231,13 @@ public class Instance extends TeaModel {
     }
 
     /**
+     * @return isReplica
+     */
+    public Boolean getIsReplica() {
+        return this.isReplica;
+    }
+
+    /**
      * @return isSpot
      */
     public Boolean getIsSpot() {
@@ -258,6 +284,13 @@ public class Instance extends TeaModel {
      */
     public String getReason() {
         return this.reason;
+    }
+
+    /**
+     * @return replicaName
+     */
+    public String getReplicaName() {
+        return this.replicaName;
     }
 
     /**
@@ -332,6 +365,7 @@ public class Instance extends TeaModel {
 
     public static final class Builder {
         private Float currentAmount; 
+        private Boolean detached; 
         private String externalIP; 
         private Integer externalInstancePort; 
         private String hostIP; 
@@ -341,6 +375,7 @@ public class Instance extends TeaModel {
         private Integer instancePort; 
         private String instanceType; 
         private Boolean isLatest; 
+        private Boolean isReplica; 
         private Boolean isSpot; 
         private Boolean isolated; 
         private java.util.List<java.util.Map<String, ?>> lastState; 
@@ -348,6 +383,7 @@ public class Instance extends TeaModel {
         private Float originalAmount; 
         private Integer readyProcesses; 
         private String reason; 
+        private String replicaName; 
         private String resourceType; 
         private Integer restartCount; 
         private String role; 
@@ -364,6 +400,7 @@ public class Instance extends TeaModel {
 
         private Builder(Instance model) {
             this.currentAmount = model.currentAmount;
+            this.detached = model.detached;
             this.externalIP = model.externalIP;
             this.externalInstancePort = model.externalInstancePort;
             this.hostIP = model.hostIP;
@@ -373,6 +410,7 @@ public class Instance extends TeaModel {
             this.instancePort = model.instancePort;
             this.instanceType = model.instanceType;
             this.isLatest = model.isLatest;
+            this.isReplica = model.isReplica;
             this.isSpot = model.isSpot;
             this.isolated = model.isolated;
             this.lastState = model.lastState;
@@ -380,6 +418,7 @@ public class Instance extends TeaModel {
             this.originalAmount = model.originalAmount;
             this.readyProcesses = model.readyProcesses;
             this.reason = model.reason;
+            this.replicaName = model.replicaName;
             this.resourceType = model.resourceType;
             this.restartCount = model.restartCount;
             this.role = model.role;
@@ -397,6 +436,14 @@ public class Instance extends TeaModel {
          */
         public Builder currentAmount(Float currentAmount) {
             this.currentAmount = currentAmount;
+            return this;
+        }
+
+        /**
+         * Detached.
+         */
+        public Builder detached(Boolean detached) {
+            this.detached = detached;
             return this;
         }
 
@@ -473,6 +520,14 @@ public class Instance extends TeaModel {
         }
 
         /**
+         * IsReplica.
+         */
+        public Builder isReplica(Boolean isReplica) {
+            this.isReplica = isReplica;
+            return this;
+        }
+
+        /**
          * IsSpot.
          */
         public Builder isSpot(Boolean isSpot) {
@@ -525,6 +580,14 @@ public class Instance extends TeaModel {
          */
         public Builder reason(String reason) {
             this.reason = reason;
+            return this;
+        }
+
+        /**
+         * ReplicaName.
+         */
+        public Builder replicaName(String replicaName) {
+            this.replicaName = replicaName;
             return this;
         }
 

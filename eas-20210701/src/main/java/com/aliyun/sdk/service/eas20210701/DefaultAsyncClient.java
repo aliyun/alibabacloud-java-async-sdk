@@ -164,6 +164,24 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
+     * @param request the request parameters of CreateFaultInjection  CreateFaultInjectionRequest
+     * @return CreateFaultInjectionResponse
+     */
+    @Override
+    public CompletableFuture<CreateFaultInjectionResponse> createFaultInjection(CreateFaultInjectionRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RESTFUL).setAction("CreateFaultInjection").setMethod(HttpMethod.POST).setPathRegex("/api/v2/services/{ClusterId}/{ServiceName}/instances/{InstanceName}/faults").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(CreateFaultInjectionResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<CreateFaultInjectionResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
      * @param request the request parameters of CreateGateway  CreateGatewayRequest
      * @return CreateGatewayResponse
      */
@@ -398,6 +416,24 @@ public final class DefaultAsyncClient implements AsyncClient {
             return this.handler.execute(params);
         } catch (Exception e) {
             CompletableFuture<DeleteBenchmarkTaskResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
+     * @param request the request parameters of DeleteFaultInjection  DeleteFaultInjectionRequest
+     * @return DeleteFaultInjectionResponse
+     */
+    @Override
+    public CompletableFuture<DeleteFaultInjectionResponse> deleteFaultInjection(DeleteFaultInjectionRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RESTFUL).setAction("DeleteFaultInjection").setMethod(HttpMethod.DELETE).setPathRegex("/api/v2/services/{ClusterId}/{ServiceName}/instances/{InstanceName}/faults/{FaultType}").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(DeleteFaultInjectionResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<DeleteFaultInjectionResponse> future = new CompletableFuture<>();
             future.completeExceptionally(e);
             return future;
         }
@@ -1341,6 +1377,24 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
+     * @param request the request parameters of ListServiceInstanceFaultInjectionInfo  ListServiceInstanceFaultInjectionInfoRequest
+     * @return ListServiceInstanceFaultInjectionInfoResponse
+     */
+    @Override
+    public CompletableFuture<ListServiceInstanceFaultInjectionInfoResponse> listServiceInstanceFaultInjectionInfo(ListServiceInstanceFaultInjectionInfoRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RESTFUL).setAction("ListServiceInstanceFaultInjectionInfo").setMethod(HttpMethod.GET).setPathRegex("/api/v2/services/{ClusterId}/{ServiceName}/instances/{InstanceName}/faults").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(ListServiceInstanceFaultInjectionInfoResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<ListServiceInstanceFaultInjectionInfoResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
      * @param request the request parameters of ListServiceInstances  ListServiceInstancesRequest
      * @return ListServiceInstancesResponse
      */
@@ -1425,6 +1479,24 @@ public final class DefaultAsyncClient implements AsyncClient {
             return this.handler.execute(params);
         } catch (Exception e) {
             CompletableFuture<ListVirtualResourceResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
+     * @param request the request parameters of MigrateResourceInstance  MigrateResourceInstanceRequest
+     * @return MigrateResourceInstanceResponse
+     */
+    @Override
+    public CompletableFuture<MigrateResourceInstanceResponse> migrateResourceInstance(MigrateResourceInstanceRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RESTFUL).setAction("MigrateResourceInstance").setMethod(HttpMethod.POST).setPathRegex("/api/v2/resources/{ClusterId}/{ResourceId}/instances/migrate").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(MigrateResourceInstanceResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<MigrateResourceInstanceResponse> future = new CompletableFuture<>();
             future.completeExceptionally(e);
             return future;
         }

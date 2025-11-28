@@ -33,8 +33,11 @@ public class DeleteServiceInstancesRequest extends Request {
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("InstanceList")
-    @com.aliyun.core.annotation.Validation(required = true)
     private String instanceList;
+
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("IsReplica")
+    private Boolean isReplica;
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("SoftRestart")
@@ -46,6 +49,7 @@ public class DeleteServiceInstancesRequest extends Request {
         this.serviceName = builder.serviceName;
         this.container = builder.container;
         this.instanceList = builder.instanceList;
+        this.isReplica = builder.isReplica;
         this.softRestart = builder.softRestart;
     }
 
@@ -91,6 +95,13 @@ public class DeleteServiceInstancesRequest extends Request {
     }
 
     /**
+     * @return isReplica
+     */
+    public Boolean getIsReplica() {
+        return this.isReplica;
+    }
+
+    /**
      * @return softRestart
      */
     public Boolean getSoftRestart() {
@@ -102,6 +113,7 @@ public class DeleteServiceInstancesRequest extends Request {
         private String serviceName; 
         private String container; 
         private String instanceList; 
+        private Boolean isReplica; 
         private Boolean softRestart; 
 
         private Builder() {
@@ -114,6 +126,7 @@ public class DeleteServiceInstancesRequest extends Request {
             this.serviceName = request.serviceName;
             this.container = request.container;
             this.instanceList = request.instanceList;
+            this.isReplica = request.isReplica;
             this.softRestart = request.softRestart;
         } 
 
@@ -157,7 +170,6 @@ public class DeleteServiceInstancesRequest extends Request {
 
         /**
          * <p>The instances that you want to restart. Separate multiple instance names with commas (,). For more information about how to query the instance name, see <a href="https://help.aliyun.com/document_detail/412108.html">ListServiceInstances</a>.</p>
-         * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
          * <p>foo-rdsbxxxx,foo-rdsaxxxx</p>
@@ -165,6 +177,15 @@ public class DeleteServiceInstancesRequest extends Request {
         public Builder instanceList(String instanceList) {
             this.putQueryParameter("InstanceList", instanceList);
             this.instanceList = instanceList;
+            return this;
+        }
+
+        /**
+         * IsReplica.
+         */
+        public Builder isReplica(Boolean isReplica) {
+            this.putQueryParameter("IsReplica", isReplica);
+            this.isReplica = isReplica;
             return this;
         }
 

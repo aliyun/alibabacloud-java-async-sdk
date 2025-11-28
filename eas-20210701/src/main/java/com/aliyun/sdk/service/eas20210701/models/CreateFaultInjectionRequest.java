@@ -12,11 +12,11 @@ import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
  * 
- * {@link UpdateServiceInstanceRequest} extends {@link RequestModel}
+ * {@link CreateFaultInjectionRequest} extends {@link RequestModel}
  *
- * <p>UpdateServiceInstanceRequest</p>
+ * <p>CreateFaultInjectionRequest</p>
  */
-public class UpdateServiceInstanceRequest extends Request {
+public class CreateFaultInjectionRequest extends Request {
     @com.aliyun.core.annotation.Path
     @com.aliyun.core.annotation.NameInMap("ClusterId")
     @com.aliyun.core.annotation.Validation(required = true)
@@ -32,38 +32,28 @@ public class UpdateServiceInstanceRequest extends Request {
     @com.aliyun.core.annotation.Validation(required = true)
     private String instanceName;
 
-    @com.aliyun.core.annotation.Query
-    @com.aliyun.core.annotation.NameInMap("IsReplica")
-    private Boolean isReplica;
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("FaultArgs")
+    private Object faultArgs;
 
     @com.aliyun.core.annotation.Body
-    @com.aliyun.core.annotation.NameInMap("Detach")
-    private Boolean detach;
+    @com.aliyun.core.annotation.NameInMap("FaultType")
+    private String faultType;
 
-    @com.aliyun.core.annotation.Body
-    @com.aliyun.core.annotation.NameInMap("Hibernate")
-    private Boolean hibernate;
-
-    @com.aliyun.core.annotation.Body
-    @com.aliyun.core.annotation.NameInMap("Isolate")
-    private Boolean isolate;
-
-    private UpdateServiceInstanceRequest(Builder builder) {
+    private CreateFaultInjectionRequest(Builder builder) {
         super(builder);
         this.clusterId = builder.clusterId;
         this.serviceName = builder.serviceName;
         this.instanceName = builder.instanceName;
-        this.isReplica = builder.isReplica;
-        this.detach = builder.detach;
-        this.hibernate = builder.hibernate;
-        this.isolate = builder.isolate;
+        this.faultArgs = builder.faultArgs;
+        this.faultType = builder.faultType;
     }
 
     public static Builder builder() {
         return new Builder();
     }
 
-    public static UpdateServiceInstanceRequest create() {
+    public static CreateFaultInjectionRequest create() {
         return builder().build();
     }
 
@@ -94,59 +84,40 @@ public class UpdateServiceInstanceRequest extends Request {
     }
 
     /**
-     * @return isReplica
+     * @return faultArgs
      */
-    public Boolean getIsReplica() {
-        return this.isReplica;
+    public Object getFaultArgs() {
+        return this.faultArgs;
     }
 
     /**
-     * @return detach
+     * @return faultType
      */
-    public Boolean getDetach() {
-        return this.detach;
+    public String getFaultType() {
+        return this.faultType;
     }
 
-    /**
-     * @return hibernate
-     */
-    public Boolean getHibernate() {
-        return this.hibernate;
-    }
-
-    /**
-     * @return isolate
-     */
-    public Boolean getIsolate() {
-        return this.isolate;
-    }
-
-    public static final class Builder extends Request.Builder<UpdateServiceInstanceRequest, Builder> {
+    public static final class Builder extends Request.Builder<CreateFaultInjectionRequest, Builder> {
         private String clusterId; 
         private String serviceName; 
         private String instanceName; 
-        private Boolean isReplica; 
-        private Boolean detach; 
-        private Boolean hibernate; 
-        private Boolean isolate; 
+        private Object faultArgs; 
+        private String faultType; 
 
         private Builder() {
             super();
         } 
 
-        private Builder(UpdateServiceInstanceRequest request) {
+        private Builder(CreateFaultInjectionRequest request) {
             super(request);
             this.clusterId = request.clusterId;
             this.serviceName = request.serviceName;
             this.instanceName = request.instanceName;
-            this.isReplica = request.isReplica;
-            this.detach = request.detach;
-            this.hibernate = request.hibernate;
-            this.isolate = request.isolate;
+            this.faultArgs = request.faultArgs;
+            this.faultType = request.faultType;
         } 
 
         /**
-         * <p>The region ID of the service.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -159,7 +130,6 @@ public class UpdateServiceInstanceRequest extends Request {
         }
 
         /**
-         * <p>The service name. For more information about how to query the service name, see <a href="https://help.aliyun.com/document_detail/412109.html">ListServices</a>.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -172,7 +142,6 @@ public class UpdateServiceInstanceRequest extends Request {
         }
 
         /**
-         * <p>The instance name. For more information about how to query the instance name, see <a href="https://help.aliyun.com/document_detail/412108.html">ListServiceInstances</a>.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -185,51 +154,26 @@ public class UpdateServiceInstanceRequest extends Request {
         }
 
         /**
-         * IsReplica.
+         * FaultArgs.
          */
-        public Builder isReplica(Boolean isReplica) {
-            this.putQueryParameter("IsReplica", isReplica);
-            this.isReplica = isReplica;
+        public Builder faultArgs(Object faultArgs) {
+            this.putBodyParameter("FaultArgs", faultArgs);
+            this.faultArgs = faultArgs;
             return this;
         }
 
         /**
-         * Detach.
+         * FaultType.
          */
-        public Builder detach(Boolean detach) {
-            this.putBodyParameter("Detach", detach);
-            this.detach = detach;
-            return this;
-        }
-
-        /**
-         * Hibernate.
-         */
-        public Builder hibernate(Boolean hibernate) {
-            this.putBodyParameter("Hibernate", hibernate);
-            this.hibernate = hibernate;
-            return this;
-        }
-
-        /**
-         * <p>Specifies whether to isolate the service instance. Valid values:</p>
-         * <ul>
-         * <li>true</li>
-         * <li>false</li>
-         * </ul>
-         * 
-         * <strong>example:</strong>
-         * <p>true</p>
-         */
-        public Builder isolate(Boolean isolate) {
-            this.putBodyParameter("Isolate", isolate);
-            this.isolate = isolate;
+        public Builder faultType(String faultType) {
+            this.putBodyParameter("FaultType", faultType);
+            this.faultType = faultType;
             return this;
         }
 
         @Override
-        public UpdateServiceInstanceRequest build() {
-            return new UpdateServiceInstanceRequest(this);
+        public CreateFaultInjectionRequest build() {
+            return new CreateFaultInjectionRequest(this);
         } 
 
     } 

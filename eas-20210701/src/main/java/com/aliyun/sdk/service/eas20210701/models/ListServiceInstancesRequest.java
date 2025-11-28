@@ -56,6 +56,10 @@ public class ListServiceInstancesRequest extends Request {
     private Boolean isSpot;
 
     @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ListReplica")
+    private Boolean listReplica;
+
+    @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("MemberType")
     private String memberType;
 
@@ -70,6 +74,10 @@ public class ListServiceInstancesRequest extends Request {
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("PageSize")
     private Integer pageSize;
+
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ReplicaName")
+    private String replicaName;
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("ResourceType")
@@ -94,10 +102,12 @@ public class ListServiceInstancesRequest extends Request {
         this.instanceStatus = builder.instanceStatus;
         this.instanceType = builder.instanceType;
         this.isSpot = builder.isSpot;
+        this.listReplica = builder.listReplica;
         this.memberType = builder.memberType;
         this.order = builder.order;
         this.pageNumber = builder.pageNumber;
         this.pageSize = builder.pageSize;
+        this.replicaName = builder.replicaName;
         this.resourceType = builder.resourceType;
         this.role = builder.role;
         this.sort = builder.sort;
@@ -180,6 +190,13 @@ public class ListServiceInstancesRequest extends Request {
     }
 
     /**
+     * @return listReplica
+     */
+    public Boolean getListReplica() {
+        return this.listReplica;
+    }
+
+    /**
      * @return memberType
      */
     public String getMemberType() {
@@ -205,6 +222,13 @@ public class ListServiceInstancesRequest extends Request {
      */
     public Integer getPageSize() {
         return this.pageSize;
+    }
+
+    /**
+     * @return replicaName
+     */
+    public String getReplicaName() {
+        return this.replicaName;
     }
 
     /**
@@ -238,10 +262,12 @@ public class ListServiceInstancesRequest extends Request {
         private String instanceStatus; 
         private String instanceType; 
         private Boolean isSpot; 
+        private Boolean listReplica; 
         private String memberType; 
         private String order; 
         private Integer pageNumber; 
         private Integer pageSize; 
+        private String replicaName; 
         private String resourceType; 
         private String role; 
         private String sort; 
@@ -261,10 +287,12 @@ public class ListServiceInstancesRequest extends Request {
             this.instanceStatus = request.instanceStatus;
             this.instanceType = request.instanceType;
             this.isSpot = request.isSpot;
+            this.listReplica = request.listReplica;
             this.memberType = request.memberType;
             this.order = request.order;
             this.pageNumber = request.pageNumber;
             this.pageSize = request.pageSize;
+            this.replicaName = request.replicaName;
             this.resourceType = request.resourceType;
             this.role = request.role;
             this.sort = request.sort;
@@ -381,6 +409,15 @@ public class ListServiceInstancesRequest extends Request {
         }
 
         /**
+         * ListReplica.
+         */
+        public Builder listReplica(Boolean listReplica) {
+            this.putQueryParameter("ListReplica", listReplica);
+            this.listReplica = listReplica;
+            return this;
+        }
+
+        /**
          * MemberType.
          */
         public Builder memberType(String memberType) {
@@ -445,6 +482,15 @@ public class ListServiceInstancesRequest extends Request {
         public Builder pageSize(Integer pageSize) {
             this.putQueryParameter("PageSize", pageSize);
             this.pageSize = pageSize;
+            return this;
+        }
+
+        /**
+         * ReplicaName.
+         */
+        public Builder replicaName(String replicaName) {
+            this.putQueryParameter("ReplicaName", replicaName);
+            this.replicaName = replicaName;
             return this;
         }
 

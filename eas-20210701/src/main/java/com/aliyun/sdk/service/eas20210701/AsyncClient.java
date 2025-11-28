@@ -56,6 +56,12 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<CreateBenchmarkTaskResponse> createBenchmarkTask(CreateBenchmarkTaskRequest request);
 
     /**
+     * @param request the request parameters of CreateFaultInjection  CreateFaultInjectionRequest
+     * @return CreateFaultInjectionResponse
+     */
+    CompletableFuture<CreateFaultInjectionResponse> createFaultInjection(CreateFaultInjectionRequest request);
+
+    /**
      * @param request the request parameters of CreateGateway  CreateGatewayRequest
      * @return CreateGatewayResponse
      */
@@ -138,6 +144,12 @@ public interface AsyncClient extends SdkAutoCloseable {
      * @return DeleteBenchmarkTaskResponse
      */
     CompletableFuture<DeleteBenchmarkTaskResponse> deleteBenchmarkTask(DeleteBenchmarkTaskRequest request);
+
+    /**
+     * @param request the request parameters of DeleteFaultInjection  DeleteFaultInjectionRequest
+     * @return DeleteFaultInjectionResponse
+     */
+    CompletableFuture<DeleteFaultInjectionResponse> deleteFaultInjection(DeleteFaultInjectionRequest request);
 
     /**
      * @param request the request parameters of DeleteGateway  DeleteGatewayRequest
@@ -453,6 +465,12 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<ListServiceContainersResponse> listServiceContainers(ListServiceContainersRequest request);
 
     /**
+     * @param request the request parameters of ListServiceInstanceFaultInjectionInfo  ListServiceInstanceFaultInjectionInfoRequest
+     * @return ListServiceInstanceFaultInjectionInfoResponse
+     */
+    CompletableFuture<ListServiceInstanceFaultInjectionInfoResponse> listServiceInstanceFaultInjectionInfo(ListServiceInstanceFaultInjectionInfoRequest request);
+
+    /**
      * @param request the request parameters of ListServiceInstances  ListServiceInstancesRequest
      * @return ListServiceInstancesResponse
      */
@@ -481,6 +499,12 @@ public interface AsyncClient extends SdkAutoCloseable {
      * @return ListVirtualResourceResponse
      */
     CompletableFuture<ListVirtualResourceResponse> listVirtualResource(ListVirtualResourceRequest request);
+
+    /**
+     * @param request the request parameters of MigrateResourceInstance  MigrateResourceInstanceRequest
+     * @return MigrateResourceInstanceResponse
+     */
+    CompletableFuture<MigrateResourceInstanceResponse> migrateResourceInstance(MigrateResourceInstanceRequest request);
 
     /**
      * @param request the request parameters of ReinstallTenantAddon  ReinstallTenantAddonRequest
