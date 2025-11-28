@@ -115,6 +115,10 @@ public class CreateAndroidInstanceGroupRequest extends Request {
     private String promotionId;
 
     @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("StreamMode")
+    private Integer streamMode;
+
+    @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("Tag")
     private java.util.List<Tag> tag;
 
@@ -147,6 +151,7 @@ public class CreateAndroidInstanceGroupRequest extends Request {
         this.periodUnit = builder.periodUnit;
         this.policyGroupId = builder.policyGroupId;
         this.promotionId = builder.promotionId;
+        this.streamMode = builder.streamMode;
         this.tag = builder.tag;
         this.vSwitchId = builder.vSwitchId;
     }
@@ -326,6 +331,13 @@ public class CreateAndroidInstanceGroupRequest extends Request {
     }
 
     /**
+     * @return streamMode
+     */
+    public Integer getStreamMode() {
+        return this.streamMode;
+    }
+
+    /**
      * @return tag
      */
     public java.util.List<Tag> getTag() {
@@ -363,6 +375,7 @@ public class CreateAndroidInstanceGroupRequest extends Request {
         private String periodUnit; 
         private String policyGroupId; 
         private String promotionId; 
+        private Integer streamMode; 
         private java.util.List<Tag> tag; 
         private String vSwitchId; 
 
@@ -395,6 +408,7 @@ public class CreateAndroidInstanceGroupRequest extends Request {
             this.periodUnit = request.periodUnit;
             this.policyGroupId = request.policyGroupId;
             this.promotionId = request.promotionId;
+            this.streamMode = request.streamMode;
             this.tag = request.tag;
             this.vSwitchId = request.vSwitchId;
         } 
@@ -716,6 +730,15 @@ public class CreateAndroidInstanceGroupRequest extends Request {
         public Builder promotionId(String promotionId) {
             this.putQueryParameter("PromotionId", promotionId);
             this.promotionId = promotionId;
+            return this;
+        }
+
+        /**
+         * StreamMode.
+         */
+        public Builder streamMode(Integer streamMode) {
+            this.putQueryParameter("StreamMode", streamMode);
+            this.streamMode = streamMode;
             return this;
         }
 

@@ -29,11 +29,16 @@ public class ModifyAndroidInstanceGroupRequest extends Request {
     @com.aliyun.core.annotation.NameInMap("PolicyGroupId")
     private String policyGroupId;
 
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("StreamMode")
+    private Integer streamMode;
+
     private ModifyAndroidInstanceGroupRequest(Builder builder) {
         super(builder);
         this.instanceGroupId = builder.instanceGroupId;
         this.newInstanceGroupName = builder.newInstanceGroupName;
         this.policyGroupId = builder.policyGroupId;
+        this.streamMode = builder.streamMode;
     }
 
     public static Builder builder() {
@@ -70,10 +75,18 @@ public class ModifyAndroidInstanceGroupRequest extends Request {
         return this.policyGroupId;
     }
 
+    /**
+     * @return streamMode
+     */
+    public Integer getStreamMode() {
+        return this.streamMode;
+    }
+
     public static final class Builder extends Request.Builder<ModifyAndroidInstanceGroupRequest, Builder> {
         private String instanceGroupId; 
         private String newInstanceGroupName; 
         private String policyGroupId; 
+        private Integer streamMode; 
 
         private Builder() {
             super();
@@ -84,6 +97,7 @@ public class ModifyAndroidInstanceGroupRequest extends Request {
             this.instanceGroupId = request.instanceGroupId;
             this.newInstanceGroupName = request.newInstanceGroupName;
             this.policyGroupId = request.policyGroupId;
+            this.streamMode = request.streamMode;
         } 
 
         /**
@@ -124,6 +138,15 @@ public class ModifyAndroidInstanceGroupRequest extends Request {
         public Builder policyGroupId(String policyGroupId) {
             this.putQueryParameter("PolicyGroupId", policyGroupId);
             this.policyGroupId = policyGroupId;
+            return this;
+        }
+
+        /**
+         * StreamMode.
+         */
+        public Builder streamMode(Integer streamMode) {
+            this.putQueryParameter("StreamMode", streamMode);
+            this.streamMode = streamMode;
             return this;
         }
 
