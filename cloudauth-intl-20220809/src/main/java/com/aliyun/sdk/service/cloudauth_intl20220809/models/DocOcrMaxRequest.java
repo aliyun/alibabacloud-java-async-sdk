@@ -18,6 +18,10 @@ import com.aliyun.sdk.gateway.pop.models.*;
  */
 public class DocOcrMaxRequest extends Request {
     @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("Authorize")
+    private String authorize;
+
+    @com.aliyun.core.annotation.Body
     @com.aliyun.core.annotation.NameInMap("DocPage")
     private String docPage;
 
@@ -75,6 +79,7 @@ public class DocOcrMaxRequest extends Request {
 
     private DocOcrMaxRequest(Builder builder) {
         super(builder);
+        this.authorize = builder.authorize;
         this.docPage = builder.docPage;
         this.docType = builder.docType;
         this.idOcrPictureBase64 = builder.idOcrPictureBase64;
@@ -102,6 +107,13 @@ public class DocOcrMaxRequest extends Request {
 @Override
     public Builder toBuilder() {
         return new Builder(this);
+    }
+
+    /**
+     * @return authorize
+     */
+    public String getAuthorize() {
+        return this.authorize;
     }
 
     /**
@@ -203,6 +215,7 @@ public class DocOcrMaxRequest extends Request {
     }
 
     public static final class Builder extends Request.Builder<DocOcrMaxRequest, Builder> {
+        private String authorize; 
         private String docPage; 
         private String docType; 
         private String idOcrPictureBase64; 
@@ -224,6 +237,7 @@ public class DocOcrMaxRequest extends Request {
 
         private Builder(DocOcrMaxRequest request) {
             super(request);
+            this.authorize = request.authorize;
             this.docPage = request.docPage;
             this.docType = request.docType;
             this.idOcrPictureBase64 = request.idOcrPictureBase64;
@@ -239,6 +253,15 @@ public class DocOcrMaxRequest extends Request {
             this.sceneCode = request.sceneCode;
             this.spoof = request.spoof;
         } 
+
+        /**
+         * Authorize.
+         */
+        public Builder authorize(String authorize) {
+            this.putBodyParameter("Authorize", authorize);
+            this.authorize = authorize;
+            return this;
+        }
 
         /**
          * <p>Page expected to be recognized</p>
