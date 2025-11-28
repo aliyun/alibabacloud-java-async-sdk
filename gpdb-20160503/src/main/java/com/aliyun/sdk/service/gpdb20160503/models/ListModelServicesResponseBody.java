@@ -106,7 +106,7 @@ public class ListModelServicesResponseBody extends TeaModel {
         } 
 
         /**
-         * ModelServices.
+         * <p>Model services.</p>
          */
         public Builder modelServices(java.util.List<ModelServices> modelServices) {
             this.modelServices = modelServices;
@@ -114,7 +114,10 @@ public class ListModelServicesResponseBody extends TeaModel {
         }
 
         /**
-         * PageNumber.
+         * <p>The page number of the returned page.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder pageNumber(Integer pageNumber) {
             this.pageNumber = pageNumber;
@@ -122,7 +125,10 @@ public class ListModelServicesResponseBody extends TeaModel {
         }
 
         /**
-         * PageRecordCount.
+         * <p>The number of entries per page.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder pageRecordCount(Integer pageRecordCount) {
             this.pageRecordCount = pageRecordCount;
@@ -130,7 +136,10 @@ public class ListModelServicesResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * <p>Request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>ABB39CC3-4488-4857-905D-2E4A051D0521</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -138,7 +147,10 @@ public class ListModelServicesResponseBody extends TeaModel {
         }
 
         /**
-         * TotalRecordCount.
+         * <p>The total number of entries returned.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2</p>
          */
         public Builder totalRecordCount(Integer totalRecordCount) {
             this.totalRecordCount = totalRecordCount;
@@ -321,7 +333,7 @@ public class ListModelServicesResponseBody extends TeaModel {
             } 
 
             /**
-             * AiNodes.
+             * <p>A list of AI nodes for model deployment.</p>
              */
             public Builder aiNodes(java.util.List<String> aiNodes) {
                 this.aiNodes = aiNodes;
@@ -329,7 +341,10 @@ public class ListModelServicesResponseBody extends TeaModel {
             }
 
             /**
-             * ApiKey.
+             * <p>The API key.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>mI3F7B18vgfqJjUtWmgITw==</p>
              */
             public Builder apiKey(String apiKey) {
                 this.apiKey = apiKey;
@@ -337,7 +352,10 @@ public class ListModelServicesResponseBody extends TeaModel {
             }
 
             /**
-             * CreateTime.
+             * <p>The creation time.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2024-09-28T02:18:39Z</p>
              */
             public Builder createTime(String createTime) {
                 this.createTime = createTime;
@@ -345,7 +363,10 @@ public class ListModelServicesResponseBody extends TeaModel {
             }
 
             /**
-             * Description.
+             * <p>The description.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>test description</p>
              */
             public Builder description(String description) {
                 this.description = description;
@@ -353,7 +374,10 @@ public class ListModelServicesResponseBody extends TeaModel {
             }
 
             /**
-             * ModelName.
+             * <p>The model name.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>sambert-zhiying-v1</p>
              */
             public Builder modelName(String modelName) {
                 this.modelName = modelName;
@@ -361,7 +385,7 @@ public class ListModelServicesResponseBody extends TeaModel {
             }
 
             /**
-             * ModelParams.
+             * <p>Model service parameters (not available).</p>
              */
             public Builder modelParams(java.util.Map<String, String> modelParams) {
                 this.modelParams = modelParams;
@@ -369,7 +393,10 @@ public class ListModelServicesResponseBody extends TeaModel {
             }
 
             /**
-             * ModelServiceId.
+             * <p>Model service ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>mx-xxxxxxxxx</p>
              */
             public Builder modelServiceId(String modelServiceId) {
                 this.modelServiceId = modelServiceId;
@@ -377,7 +404,10 @@ public class ListModelServicesResponseBody extends TeaModel {
             }
 
             /**
-             * PrivateConnUrl.
+             * <p>Private Endpoint.</p>
+             * 
+             * <strong>example:</strong>
+             * <p><a href="http://ms-xxxxxxx.xxxx.rds.aliyuncs.com">http://ms-xxxxxxx.xxxx.rds.aliyuncs.com</a></p>
              */
             public Builder privateConnUrl(String privateConnUrl) {
                 this.privateConnUrl = privateConnUrl;
@@ -385,7 +415,10 @@ public class ListModelServicesResponseBody extends TeaModel {
             }
 
             /**
-             * PublicConnUrl.
+             * <p>Public endpoint.</p>
+             * 
+             * <strong>example:</strong>
+             * <p><a href="http://ms-xxxxxxx-o.xxxx.rds.aliyuncs.com">http://ms-xxxxxxx-o.xxxx.rds.aliyuncs.com</a></p>
              */
             public Builder publicConnUrl(String publicConnUrl) {
                 this.publicConnUrl = publicConnUrl;
@@ -393,7 +426,15 @@ public class ListModelServicesResponseBody extends TeaModel {
             }
 
             /**
-             * SecurityIPList.
+             * <p>The IP addresses listed in the whitelist. Up to 1,000 IP addresses are contained in a whitelist and separated by commas (,). The IP addresses must use one of the following formats:</p>
+             * <ul>
+             * <li>0.0.0.0/0</li>
+             * <li>10.23.12.24(IP)</li>
+             * <li>10.23.12.24/24 (This is a CIDR block. The value<code>/24</code>indicates the network prefix length, which must be an integer and in the range of <code>[1,32]</code>.)</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>0.0.0.0/0</p>
              */
             public Builder securityIPList(String securityIPList) {
                 this.securityIPList = securityIPList;
@@ -401,7 +442,14 @@ public class ListModelServicesResponseBody extends TeaModel {
             }
 
             /**
-             * Status.
+             * <p>The status of the operation. Valid values:</p>
+             * <ul>
+             * <li><strong>success</strong></li>
+             * <li><strong>fail</strong></li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>success</p>
              */
             public Builder status(String status) {
                 this.status = status;

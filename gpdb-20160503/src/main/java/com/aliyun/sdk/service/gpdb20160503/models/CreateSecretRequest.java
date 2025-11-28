@@ -273,7 +273,10 @@ public class CreateSecretRequest extends Request {
         }
 
         /**
-         * WorkspaceId.
+         * <p>The ID of the workspace that consists of multiple AnalyticDB for PostgreSQL instances. You must specify one of the WorkspaceId and DBInstanceId parameters. If you specify both parameters, the WorkspaceId parameter takes precedence.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>gp-ws-*****</p>
          */
         public Builder workspaceId(String workspaceId) {
             this.putQueryParameter("WorkspaceId", workspaceId);

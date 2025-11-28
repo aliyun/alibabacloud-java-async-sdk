@@ -87,7 +87,10 @@ public class ListSupabaseProjectsRequest extends Request {
         } 
 
         /**
-         * MaxResults.
+         * <p>The maximum number of instances to return per page. Default value: 10.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>20</p>
          */
         public Builder maxResults(Integer maxResults) {
             this.putQueryParameter("MaxResults", maxResults);
@@ -96,7 +99,10 @@ public class ListSupabaseProjectsRequest extends Request {
         }
 
         /**
-         * NextToken.
+         * <p>A pagination token returned from a previous call. Use it to retrieve the next page of results.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>caeba0bbb2be03f84eb48b699f0a****</p>
          */
         public Builder nextToken(String nextToken) {
             this.putQueryParameter("NextToken", nextToken);
@@ -105,7 +111,13 @@ public class ListSupabaseProjectsRequest extends Request {
         }
 
         /**
-         * RegionId.
+         * <p>The region ID of the cluster.</p>
+         * <blockquote>
+         * <p>You can call the <a href="https://help.aliyun.com/document_detail/86912.html">DescribeRegions</a> operation get a list of available region IDs.</p>
+         * </blockquote>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-hangzhou</p>
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);

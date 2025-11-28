@@ -106,7 +106,7 @@ public class GetGraphRAGJobResponseBody extends TeaModel {
         } 
 
         /**
-         * Job.
+         * <p>The details of the task for building a knowledge graph.</p>
          */
         public Builder job(Job job) {
             this.job = job;
@@ -114,7 +114,10 @@ public class GetGraphRAGJobResponseBody extends TeaModel {
         }
 
         /**
-         * Message.
+         * <p>The additional information that is returned.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>success</p>
          */
         public Builder message(String message) {
             this.message = message;
@@ -122,7 +125,10 @@ public class GetGraphRAGJobResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * <p>The unique ID of the request.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>ABB39CC3-4488-4857-905D-2E4A051D0521</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -130,7 +136,14 @@ public class GetGraphRAGJobResponseBody extends TeaModel {
         }
 
         /**
-         * Status.
+         * <p>The status of the operation. Valid values:</p>
+         * <ul>
+         * <li><strong>success</strong></li>
+         * <li><strong>fail</strong></li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>success</p>
          */
         public Builder status(String status) {
             this.status = status;
@@ -138,7 +151,7 @@ public class GetGraphRAGJobResponseBody extends TeaModel {
         }
 
         /**
-         * Usage.
+         * <p>The number of tokens that are consumed by document understanding or embedding.</p>
          */
         public Builder usage(Usage usage) {
             this.usage = usage;
@@ -269,7 +282,10 @@ public class GetGraphRAGJobResponseBody extends TeaModel {
             } 
 
             /**
-             * Completed.
+             * <p>Indicates whether the operation is complete.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>false</p>
              */
             public Builder completed(Boolean completed) {
                 this.completed = completed;
@@ -277,7 +293,10 @@ public class GetGraphRAGJobResponseBody extends TeaModel {
             }
 
             /**
-             * CreateTime.
+             * <p>The job creation time.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2024-01-08 16:52:04.864664</p>
              */
             public Builder createTime(String createTime) {
                 this.createTime = createTime;
@@ -285,7 +304,10 @@ public class GetGraphRAGJobResponseBody extends TeaModel {
             }
 
             /**
-             * Error.
+             * <p>The error message that is returned when the current operation is abnormal or fails.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Failed to connect database.</p>
              */
             public Builder error(String error) {
                 this.error = error;
@@ -293,7 +315,10 @@ public class GetGraphRAGJobResponseBody extends TeaModel {
             }
 
             /**
-             * Id.
+             * <p>The job ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>231460f8-75dc-405e-a669-0c5204887e91</p>
              */
             public Builder id(String id) {
                 this.id = id;
@@ -301,7 +326,10 @@ public class GetGraphRAGJobResponseBody extends TeaModel {
             }
 
             /**
-             * Progress.
+             * <p>The progress of the document upload job. Unit: %. A value of 100 indicates that the job is complete.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>20</p>
              */
             public Builder progress(Integer progress) {
                 this.progress = progress;
@@ -309,7 +337,16 @@ public class GetGraphRAGJobResponseBody extends TeaModel {
             }
 
             /**
-             * Status.
+             * <p>The state of the job. Valid values:</p>
+             * <ul>
+             * <li><strong>Success</strong></li>
+             * <li><strong>Failed</strong> (See the Error parameter for failure reasons.)</li>
+             * <li><strong>Running</strong></li>
+             * <li><strong>Pending</strong></li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>Running</p>
              */
             public Builder status(String status) {
                 this.status = status;
@@ -317,7 +354,10 @@ public class GetGraphRAGJobResponseBody extends TeaModel {
             }
 
             /**
-             * UpdateTime.
+             * <p>The job last updated time.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2024-01-08 16:53:04.864664</p>
              */
             public Builder updateTime(String updateTime) {
                 this.updateTime = updateTime;
@@ -397,7 +437,13 @@ public class GetGraphRAGJobResponseBody extends TeaModel {
             } 
 
             /**
-             * EmbeddingTokens.
+             * <p>The number of tokens that are consumed during vectorization.</p>
+             * <blockquote>
+             * <p>A token is the minimum unit for splitting text. A token can be a word, phrase, punctuation, or character.</p>
+             * </blockquote>
+             * 
+             * <strong>example:</strong>
+             * <p>475</p>
              */
             public Builder embeddingTokens(Integer embeddingTokens) {
                 this.embeddingTokens = embeddingTokens;
@@ -405,7 +451,10 @@ public class GetGraphRAGJobResponseBody extends TeaModel {
             }
 
             /**
-             * LLMInputTokens.
+             * <p>The number of tokens used by the large model input.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>600</p>
              */
             public Builder LLMInputTokens(Integer LLMInputTokens) {
                 this.LLMInputTokens = LLMInputTokens;
@@ -413,7 +462,10 @@ public class GetGraphRAGJobResponseBody extends TeaModel {
             }
 
             /**
-             * LLMOutputTokens.
+             * <p>The number of tokens used for large model output.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>125</p>
              */
             public Builder LLMOutputTokens(Integer LLMOutputTokens) {
                 this.LLMOutputTokens = LLMOutputTokens;

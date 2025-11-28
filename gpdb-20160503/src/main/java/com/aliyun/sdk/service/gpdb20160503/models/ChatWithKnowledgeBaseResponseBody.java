@@ -106,7 +106,7 @@ public class ChatWithKnowledgeBaseResponseBody extends TeaModel {
         } 
 
         /**
-         * ChatCompletion.
+         * <p>model response.</p>
          */
         public Builder chatCompletion(ChatCompletion chatCompletion) {
             this.chatCompletion = chatCompletion;
@@ -114,7 +114,10 @@ public class ChatWithKnowledgeBaseResponseBody extends TeaModel {
         }
 
         /**
-         * Message.
+         * <p>The returned information.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Successful</p>
          */
         public Builder message(String message) {
             this.message = message;
@@ -122,7 +125,7 @@ public class ChatWithKnowledgeBaseResponseBody extends TeaModel {
         }
 
         /**
-         * MultiCollectionRecallResult.
+         * <p>Retrieve information from multiple knowledge bases.</p>
          */
         public Builder multiCollectionRecallResult(MultiCollectionRecallResult multiCollectionRecallResult) {
             this.multiCollectionRecallResult = multiCollectionRecallResult;
@@ -130,7 +133,10 @@ public class ChatWithKnowledgeBaseResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * <p>The unique ID of the request.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>ABB39CC3-4488-4857-905D-2E4A051D0521</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -138,7 +144,14 @@ public class ChatWithKnowledgeBaseResponseBody extends TeaModel {
         }
 
         /**
-         * Status.
+         * <p>The status of the operation. Valid values:</p>
+         * <ul>
+         * <li><strong>success</strong></li>
+         * <li><strong>fail</strong></li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>success</p>
          */
         public Builder status(String status) {
             this.status = status;
@@ -204,7 +217,10 @@ public class ChatWithKnowledgeBaseResponseBody extends TeaModel {
             } 
 
             /**
-             * Arguments.
+             * <p>Arguments of the called function.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>{&quot;city&quot;:&quot;hangzhou&quot;}</p>
              */
             public Builder arguments(String arguments) {
                 this.arguments = arguments;
@@ -212,7 +228,10 @@ public class ChatWithKnowledgeBaseResponseBody extends TeaModel {
             }
 
             /**
-             * Name.
+             * <p>The name of the called function.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>&quot;get_weather&quot;</p>
              */
             public Builder name(String name) {
                 this.name = name;
@@ -292,7 +311,7 @@ public class ChatWithKnowledgeBaseResponseBody extends TeaModel {
             } 
 
             /**
-             * Function.
+             * <p>Function call information.</p>
              */
             public Builder function(Function function) {
                 this.function = function;
@@ -311,7 +330,10 @@ public class ChatWithKnowledgeBaseResponseBody extends TeaModel {
             }
 
             /**
-             * Index.
+             * <p>The position of this tool in the &quot;input&quot; request parameter.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder index(Long index) {
                 this.index = index;
@@ -335,6 +357,9 @@ public class ChatWithKnowledgeBaseResponseBody extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Content")
         private String content;
 
+        @com.aliyun.core.annotation.NameInMap("ReasoningContent")
+        private String reasoningContent;
+
         @com.aliyun.core.annotation.NameInMap("Role")
         private String role;
 
@@ -343,6 +368,7 @@ public class ChatWithKnowledgeBaseResponseBody extends TeaModel {
 
         private Message(Builder builder) {
             this.content = builder.content;
+            this.reasoningContent = builder.reasoningContent;
             this.role = builder.role;
             this.toolCalls = builder.toolCalls;
         }
@@ -363,6 +389,13 @@ public class ChatWithKnowledgeBaseResponseBody extends TeaModel {
         }
 
         /**
+         * @return reasoningContent
+         */
+        public String getReasoningContent() {
+            return this.reasoningContent;
+        }
+
+        /**
          * @return role
          */
         public String getRole() {
@@ -378,6 +411,7 @@ public class ChatWithKnowledgeBaseResponseBody extends TeaModel {
 
         public static final class Builder {
             private String content; 
+            private String reasoningContent; 
             private String role; 
             private java.util.List<ToolCalls> toolCalls; 
 
@@ -386,12 +420,13 @@ public class ChatWithKnowledgeBaseResponseBody extends TeaModel {
 
             private Builder(Message model) {
                 this.content = model.content;
+                this.reasoningContent = model.reasoningContent;
                 this.role = model.role;
                 this.toolCalls = model.toolCalls;
             } 
 
             /**
-             * Content.
+             * <p>The content of the document.</p>
              */
             public Builder content(String content) {
                 this.content = content;
@@ -399,7 +434,26 @@ public class ChatWithKnowledgeBaseResponseBody extends TeaModel {
             }
 
             /**
-             * Role.
+             * <p>模型思维内容</p>
+             * 
+             * <strong>example:</strong>
+             * <p>逻辑推理过程</p>
+             */
+            public Builder reasoningContent(String reasoningContent) {
+                this.reasoningContent = reasoningContent;
+                return this;
+            }
+
+            /**
+             * <p>Message role:</p>
+             * <ul>
+             * <li>system</li>
+             * <li>user</li>
+             * <li>assistant</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>user</p>
              */
             public Builder role(String role) {
                 this.role = role;
@@ -407,7 +461,7 @@ public class ChatWithKnowledgeBaseResponseBody extends TeaModel {
             }
 
             /**
-             * ToolCalls.
+             * <p>Tool call response.</p>
              */
             public Builder toolCalls(java.util.List<ToolCalls> toolCalls) {
                 this.toolCalls = toolCalls;
@@ -487,7 +541,10 @@ public class ChatWithKnowledgeBaseResponseBody extends TeaModel {
             } 
 
             /**
-             * FinishReason.
+             * <p>Finish reason.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>finish</p>
              */
             public Builder finishReason(String finishReason) {
                 this.finishReason = finishReason;
@@ -495,7 +552,10 @@ public class ChatWithKnowledgeBaseResponseBody extends TeaModel {
             }
 
             /**
-             * Index.
+             * <p>The sequence number of the reply.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>0</p>
              */
             public Builder index(Long index) {
                 this.index = index;
@@ -503,7 +563,7 @@ public class ChatWithKnowledgeBaseResponseBody extends TeaModel {
             }
 
             /**
-             * Message.
+             * <p>LLM response.</p>
              */
             public Builder message(Message message) {
                 this.message = message;
@@ -557,7 +617,10 @@ public class ChatWithKnowledgeBaseResponseBody extends TeaModel {
             } 
 
             /**
-             * CachedTokens.
+             * <p>The number of tokens from cache hits.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>24</p>
              */
             public Builder cachedTokens(Long cachedTokens) {
                 this.cachedTokens = cachedTokens;
@@ -650,7 +713,10 @@ public class ChatWithKnowledgeBaseResponseBody extends TeaModel {
             } 
 
             /**
-             * CompletionTokens.
+             * <p>The number of tokens consumed by the generated content.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>42</p>
              */
             public Builder completionTokens(Long completionTokens) {
                 this.completionTokens = completionTokens;
@@ -658,7 +724,10 @@ public class ChatWithKnowledgeBaseResponseBody extends TeaModel {
             }
 
             /**
-             * PromptTokens.
+             * <p>The number of tokens consumed by the prompt.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>42</p>
              */
             public Builder promptTokens(Long promptTokens) {
                 this.promptTokens = promptTokens;
@@ -666,7 +735,7 @@ public class ChatWithKnowledgeBaseResponseBody extends TeaModel {
             }
 
             /**
-             * PromptTokensDetails.
+             * <p>The details about the prompt token.</p>
              */
             public Builder promptTokensDetails(PromptTokensDetails promptTokensDetails) {
                 this.promptTokensDetails = promptTokensDetails;
@@ -674,7 +743,10 @@ public class ChatWithKnowledgeBaseResponseBody extends TeaModel {
             }
 
             /**
-             * TotalTokens.
+             * <p>The total number of tokens.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>42</p>
              */
             public Builder totalTokens(Long totalTokens) {
                 this.totalTokens = totalTokens;
@@ -780,7 +852,7 @@ public class ChatWithKnowledgeBaseResponseBody extends TeaModel {
             } 
 
             /**
-             * Choices.
+             * <p>Text content generated in real time.</p>
              */
             public Builder choices(java.util.List<Choices> choices) {
                 this.choices = choices;
@@ -788,7 +860,10 @@ public class ChatWithKnowledgeBaseResponseBody extends TeaModel {
             }
 
             /**
-             * Created.
+             * <p>The creation time.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1758529748</p>
              */
             public Builder created(Long created) {
                 this.created = created;
@@ -796,10 +871,10 @@ public class ChatWithKnowledgeBaseResponseBody extends TeaModel {
             }
 
             /**
-             * <p>ID</p>
+             * <p>The ID of the response.</p>
              * 
              * <strong>example:</strong>
-             * <p>&quot;chatcmpl-c1bebafa-cc48-44e2-88c6-1a3572952f8e&quot;</p>
+             * <p>273e3fc7-8f56-4167-a1bb-d35d2f3b9043</p>
              */
             public Builder id(String id) {
                 this.id = id;
@@ -807,7 +882,10 @@ public class ChatWithKnowledgeBaseResponseBody extends TeaModel {
             }
 
             /**
-             * Model.
+             * <p>The name of the model.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>qwen-plus</p>
              */
             public Builder model(String model) {
                 this.model = model;
@@ -815,7 +893,7 @@ public class ChatWithKnowledgeBaseResponseBody extends TeaModel {
             }
 
             /**
-             * Usage.
+             * <p>The number of tokens used in LLM output.</p>
              */
             public Builder usage(Usage usage) {
                 this.usage = usage;
@@ -869,7 +947,10 @@ public class ChatWithKnowledgeBaseResponseBody extends TeaModel {
             } 
 
             /**
-             * Source.
+             * <p>The source of the document.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder source(Long source) {
                 this.source = source;
@@ -1040,7 +1121,7 @@ public class ChatWithKnowledgeBaseResponseBody extends TeaModel {
             } 
 
             /**
-             * Content.
+             * <p>The content of the document.</p>
              */
             public Builder content(String content) {
                 this.content = content;
@@ -1048,7 +1129,10 @@ public class ChatWithKnowledgeBaseResponseBody extends TeaModel {
             }
 
             /**
-             * FileName.
+             * <p>The file name.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>process_info_19b9df4dc9ad4bf2b30eb2faa4a9a987.txt</p>
              */
             public Builder fileName(String fileName) {
                 this.fileName = fileName;
@@ -1056,7 +1140,11 @@ public class ChatWithKnowledgeBaseResponseBody extends TeaModel {
             }
 
             /**
-             * FileURL.
+             * <p>The URL of the image result. By default, the URL is valid for 2 hours.</p>
+             * <p>You can use the UrlExpiration parameter to specify a validity period.</p>
+             * 
+             * <strong>example:</strong>
+             * <p><a href="http://viapi-customer-pop.oss-cn-shanghai.aliyuncs.com/b4d8_207196811002111319_570c0e199f03428f812ab21fcc00dd6a">http://viapi-customer-pop.oss-cn-shanghai.aliyuncs.com/b4d8_207196811002111319_570c0e199f03428f812ab21fcc00dd6a</a></p>
              */
             public Builder fileURL(String fileURL) {
                 this.fileURL = fileURL;
@@ -1064,10 +1152,10 @@ public class ChatWithKnowledgeBaseResponseBody extends TeaModel {
             }
 
             /**
-             * <p>ID</p>
+             * <p>The unique ID of the vector data.</p>
              * 
              * <strong>example:</strong>
-             * <p>&quot;chatcmpl-c1bebafa-cc48-44e2-88c6-1a3572952f8e&quot;</p>
+             * <p>273e3fc7-8f56-4167-a1bb-d35d2f3b9043</p>
              */
             public Builder id(String id) {
                 this.id = id;
@@ -1075,7 +1163,10 @@ public class ChatWithKnowledgeBaseResponseBody extends TeaModel {
             }
 
             /**
-             * LoaderMetadata.
+             * <p>Document loader metadata.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>{&quot;page&quot;:1}</p>
              */
             public Builder loaderMetadata(Object loaderMetadata) {
                 this.loaderMetadata = loaderMetadata;
@@ -1083,7 +1174,7 @@ public class ChatWithKnowledgeBaseResponseBody extends TeaModel {
             }
 
             /**
-             * Metadata.
+             * <p>The metadata.</p>
              */
             public Builder metadata(Metadata metadata) {
                 this.metadata = metadata;
@@ -1091,7 +1182,10 @@ public class ChatWithKnowledgeBaseResponseBody extends TeaModel {
             }
 
             /**
-             * RerankScore.
+             * <p>The rerank score.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>0.1</p>
              */
             public Builder rerankScore(Double rerankScore) {
                 this.rerankScore = rerankScore;
@@ -1099,7 +1193,10 @@ public class ChatWithKnowledgeBaseResponseBody extends TeaModel {
             }
 
             /**
-             * RetrievalSource.
+             * <p>The source of the retrieved results. 1 indicates vector retrieval, 2 indicates full-text retrieval, and 3 indicates dual-path retrieval.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>3</p>
              */
             public Builder retrievalSource(Long retrievalSource) {
                 this.retrievalSource = retrievalSource;
@@ -1107,7 +1204,10 @@ public class ChatWithKnowledgeBaseResponseBody extends TeaModel {
             }
 
             /**
-             * Score.
+             * <p>The similarity score of the data. It is related to the <code>l2, ip, or cosine</code> algorithm that is specified when you create an index.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>12</p>
              */
             public Builder score(Double score) {
                 this.score = score;
@@ -1115,7 +1215,7 @@ public class ChatWithKnowledgeBaseResponseBody extends TeaModel {
             }
 
             /**
-             * Vector.
+             * <p>The vector data.</p>
              */
             public Builder vector(java.util.List<Double> vector) {
                 this.vector = vector;
@@ -1169,7 +1269,13 @@ public class ChatWithKnowledgeBaseResponseBody extends TeaModel {
             } 
 
             /**
-             * EmbeddingTokens.
+             * <p>The number of tokens that are used during vectorization.</p>
+             * <blockquote>
+             * <p> A token is the minimum unit for splitting text. A token can be a word, phrase, punctuation, or character.</p>
+             * </blockquote>
+             * 
+             * <strong>example:</strong>
+             * <p>21</p>
              */
             public Builder embeddingTokens(Long embeddingTokens) {
                 this.embeddingTokens = embeddingTokens;
@@ -1301,7 +1407,7 @@ public class ChatWithKnowledgeBaseResponseBody extends TeaModel {
             } 
 
             /**
-             * Entities.
+             * <p>The details of the entity.</p>
              */
             public Builder entities(java.util.List<String> entities) {
                 this.entities = entities;
@@ -1309,7 +1415,7 @@ public class ChatWithKnowledgeBaseResponseBody extends TeaModel {
             }
 
             /**
-             * Matches.
+             * <p>The retrieved items.</p>
              */
             public Builder matches(java.util.List<Matches> matches) {
                 this.matches = matches;
@@ -1317,7 +1423,7 @@ public class ChatWithKnowledgeBaseResponseBody extends TeaModel {
             }
 
             /**
-             * Relations.
+             * <p>The name of the file.</p>
              */
             public Builder relations(java.util.List<String> relations) {
                 this.relations = relations;
@@ -1325,7 +1431,10 @@ public class ChatWithKnowledgeBaseResponseBody extends TeaModel {
             }
 
             /**
-             * RequestId.
+             * <p>Request ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>6B9E3255-4543-5B3B-9E00-6490CA64742B</p>
              */
             public Builder requestId(String requestId) {
                 this.requestId = requestId;
@@ -1333,7 +1442,14 @@ public class ChatWithKnowledgeBaseResponseBody extends TeaModel {
             }
 
             /**
-             * Status.
+             * <p>The status of the operation. Valid values:</p>
+             * <ul>
+             * <li><strong>success</strong></li>
+             * <li><strong>fail</strong></li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>success</p>
              */
             public Builder status(String status) {
                 this.status = status;
@@ -1341,7 +1457,10 @@ public class ChatWithKnowledgeBaseResponseBody extends TeaModel {
             }
 
             /**
-             * Tokens.
+             * <p>The number of tokens that are consumed.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>42</p>
              */
             public Builder tokens(Long tokens) {
                 this.tokens = tokens;
@@ -1349,7 +1468,7 @@ public class ChatWithKnowledgeBaseResponseBody extends TeaModel {
             }
 
             /**
-             * Usage.
+             * <p>The number of tokens that are consumed during document understanding or embedding.</p>
              */
             public Builder usage(MultiCollectionRecallResultUsage usage) {
                 this.usage = usage;

@@ -67,7 +67,10 @@ public class CreateModelServiceResponseBody extends TeaModel {
         } 
 
         /**
-         * ModelServiceId.
+         * <p>The model service ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>ms-xxxxxxxxx</p>
          */
         public Builder modelServiceId(String modelServiceId) {
             this.modelServiceId = modelServiceId;
@@ -75,7 +78,10 @@ public class CreateModelServiceResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * <p>The unique ID of the request.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>ABB39CC3-4488-4857-905D-2E4A051D0521</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;

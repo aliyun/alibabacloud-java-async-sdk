@@ -55,6 +55,12 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
+     * <b>description</b> :
+     * <h2><a href="#"></a>Usage notes</h2>
+     * <p>This operation is used to add an AINode node.</p>
+     * <h2><a href="#qps-"></a>QPS limit</h2>
+     * <p>You can call this operation up to 1,000 times per second per account. Exceeding the limit will trigger API rate limiting, which may impact your business. Please call the API responsibly.</p>
+     * 
      * @param request the request parameters of AddAINode  AddAINodeRequest
      * @return AddAINodeResponse
      */
@@ -181,7 +187,13 @@ public final class DefaultAsyncClient implements AsyncClient {
 
     /**
      * <b>description</b> :
-     * <p>通过结合知识库和大模型，提供智能问答服务。</p>
+     * <p>This API enables users to query a large language model with answers grounded in a specified knowledge base collection. You can configure multiple parameters to customize requests, including but not limited to database instance IDs, knowledge retrieval parameters, and model inference parameters. In addition, a default system prompt template is provided and users are allowed to customize the system prompt.</p>
+     * <ul>
+     * <li><strong>DBInstanceId</strong>: Required. This parameter specifies the ID of the database instance.</li>
+     * <li><strong>KnowledgeParams</strong>: optional. It contains parameters related to knowledge retrieval, such as retrieval content and merge policy.</li>
+     * <li><strong>ModelParams</strong>: required. It contains parameters related to model inference, such as the message list and the name of the model.</li>
+     * <li><strong>PromptTemplate</strong>: optional. It is used to customize the system prompt template.</li>
+     * </ul>
      * 
      * @param request the request parameters of ChatWithKnowledgeBase  ChatWithKnowledgeBaseRequest
      * @return ChatWithKnowledgeBaseResponse
@@ -202,7 +214,13 @@ public final class DefaultAsyncClient implements AsyncClient {
 
     /**
      * <b>description</b> :
-     * <p>通过结合知识库和大模型，提供智能问答服务。</p>
+     * <p>This API enables users to query a large language model with answers grounded in a specified knowledge base collection. You can configure multiple parameters to customize requests, including but not limited to database instance IDs, knowledge retrieval parameters, and model inference parameters. In addition, a default system prompt template is provided and users are allowed to customize the system prompt.</p>
+     * <ul>
+     * <li>DBInstanceId: required. This parameter specifies the ID of the database instance.</li>
+     * <li>KnowledgeParams: optional. It contains parameters related to knowledge retrieval, such as retrieval content and merge policy.</li>
+     * <li>ModelParams: required. It contains parameters related to model inference, such as the message list and the name of the model.</li>
+     * <li>PromptTemplate: optional. It is used to customize a system prompt template.</li>
+     * </ul>
      * 
      * @param request the request parameters of ChatWithKnowledgeBaseStream  ChatWithKnowledgeBaseStreamRequest
      * @return ChatWithKnowledgeBaseStreamResponse
@@ -405,6 +423,24 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
+     * @param request the request parameters of CreateDBInstanceIPArray  CreateDBInstanceIPArrayRequest
+     * @return CreateDBInstanceIPArrayResponse
+     */
+    @Override
+    public CompletableFuture<CreateDBInstanceIPArrayResponse> createDBInstanceIPArray(CreateDBInstanceIPArrayRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RPC).setAction("CreateDBInstanceIPArray").setMethod(HttpMethod.POST).setPathRegex("/").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(CreateDBInstanceIPArrayResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<CreateDBInstanceIPArrayResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
      * <b>description</b> :
      * <p>  The plan management feature is supported only for pay-as-you-go instances.</p>
      * <ul>
@@ -442,6 +478,24 @@ public final class DefaultAsyncClient implements AsyncClient {
             return this.handler.execute(params);
         } catch (Exception e) {
             CompletableFuture<CreateDBResourceGroupResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
+     * @param request the request parameters of CreateDatabase  CreateDatabaseRequest
+     * @return CreateDatabaseResponse
+     */
+    @Override
+    public CompletableFuture<CreateDatabaseResponse> createDatabase(CreateDatabaseRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RPC).setAction("CreateDatabase").setMethod(HttpMethod.POST).setPathRegex("/").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(CreateDatabaseResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<CreateDatabaseResponse> future = new CompletableFuture<>();
             future.completeExceptionally(e);
             return future;
         }
@@ -556,6 +610,9 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
+     * <b>description</b> :
+     * <p>Before you call this operation, make sure that you fully understand the <a href="https://help.aliyun.com/document_detail/35406.html">billing methods</a> and <a href="https://www.alibabacloud.com/zh/product/hybriddb-postgresql/pricing">pricing</a> of AnalyticDB for PostgreSQL.</p>
+     * 
      * @param request the request parameters of CreateModelService  CreateModelServiceRequest
      * @return CreateModelServiceResponse
      */
@@ -725,6 +782,9 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
+     * <b>description</b> :
+     * <p>  You can call this operation to create a Supabase project.</p>
+     * 
      * @param request the request parameters of CreateSupabaseProject  CreateSupabaseProjectRequest
      * @return CreateSupabaseProjectResponse
      */
@@ -761,6 +821,12 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
+     * <b>description</b> :
+     * <p>  Subscription instances cannot be manually released. They are automatically released when they expire.</p>
+     * <ul>
+     * <li>You can call this operation to release pay-as-you-go instances only when they are in the <strong>Running</strong> state.</li>
+     * </ul>
+     * 
      * @param request the request parameters of DeleteAINode  DeleteAINodeRequest
      * @return DeleteAINodeResponse
      */
@@ -877,6 +943,24 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
+     * @param request the request parameters of DeleteDBInstanceIPArray  DeleteDBInstanceIPArrayRequest
+     * @return DeleteDBInstanceIPArrayResponse
+     */
+    @Override
+    public CompletableFuture<DeleteDBInstanceIPArrayResponse> deleteDBInstanceIPArray(DeleteDBInstanceIPArrayRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RPC).setAction("DeleteDBInstanceIPArray").setMethod(HttpMethod.POST).setPathRegex("/").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(DeleteDBInstanceIPArrayResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<DeleteDBInstanceIPArrayResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
      * <b>description</b> :
      * <p>If you no longer need a plan, you can call this operation to delete the plan. The plan management feature is supported only for AnalyticDB for PostgreSQL instances in Serverless mode.</p>
      * <h2>Limits</h2>
@@ -912,6 +996,24 @@ public final class DefaultAsyncClient implements AsyncClient {
             return this.handler.execute(params);
         } catch (Exception e) {
             CompletableFuture<DeleteDBResourceGroupResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
+     * @param request the request parameters of DeleteDatabase  DeleteDatabaseRequest
+     * @return DeleteDatabaseResponse
+     */
+    @Override
+    public CompletableFuture<DeleteDatabaseResponse> deleteDatabase(DeleteDatabaseRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RPC).setAction("DeleteDatabase").setMethod(HttpMethod.POST).setPathRegex("/").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(DeleteDatabaseResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<DeleteDatabaseResponse> future = new CompletableFuture<>();
             future.completeExceptionally(e);
             return future;
         }
@@ -1044,6 +1146,9 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
+     * <b>description</b> :
+     * <p>Deletes a model service.</p>
+     * 
      * @param request the request parameters of DeleteModelService  DeleteModelServiceRequest
      * @return DeleteModelServiceResponse
      */
@@ -1074,6 +1179,24 @@ public final class DefaultAsyncClient implements AsyncClient {
             return this.handler.execute(params);
         } catch (Exception e) {
             CompletableFuture<DeleteNamespaceResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
+     * @param request the request parameters of DeletePrivateRAGService  DeletePrivateRAGServiceRequest
+     * @return DeletePrivateRAGServiceResponse
+     */
+    @Override
+    public CompletableFuture<DeletePrivateRAGServiceResponse> deletePrivateRAGService(DeletePrivateRAGServiceRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RPC).setAction("DeletePrivateRAGService").setMethod(HttpMethod.POST).setPathRegex("/").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(DeletePrivateRAGServiceResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<DeletePrivateRAGServiceResponse> future = new CompletableFuture<>();
             future.completeExceptionally(e);
             return future;
         }
@@ -1170,6 +1293,9 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
+     * <b>description</b> :
+     * <p>  You can call this operation to delete a Supabase project.</p>
+     * 
      * @param request the request parameters of DeleteSupabaseProject  DeleteSupabaseProjectRequest
      * @return DeleteSupabaseProjectResponse
      */
@@ -1200,6 +1326,24 @@ public final class DefaultAsyncClient implements AsyncClient {
             return this.handler.execute(params);
         } catch (Exception e) {
             CompletableFuture<DeleteVectorIndexResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
+     * @param request the request parameters of DeployPrivateRAGService  DeployPrivateRAGServiceRequest
+     * @return DeployPrivateRAGServiceResponse
+     */
+    @Override
+    public CompletableFuture<DeployPrivateRAGServiceResponse> deployPrivateRAGService(DeployPrivateRAGServiceRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RPC).setAction("DeployPrivateRAGService").setMethod(HttpMethod.POST).setPathRegex("/").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(DeployPrivateRAGServiceResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<DeployPrivateRAGServiceResponse> future = new CompletableFuture<>();
             future.completeExceptionally(e);
             return future;
         }
@@ -1806,6 +1950,24 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
+     * @param request the request parameters of DescribeDatabase  DescribeDatabaseRequest
+     * @return DescribeDatabaseResponse
+     */
+    @Override
+    public CompletableFuture<DescribeDatabaseResponse> describeDatabase(DescribeDatabaseRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RPC).setAction("DescribeDatabase").setMethod(HttpMethod.POST).setPathRegex("/").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(DescribeDatabaseResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<DescribeDatabaseResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
      * <b>description</b> :
      * <p>To facilitate management, you can call this operation to query all databases and database accounts on an AnalyticDB for PostgreSQL instance.</p>
      * <h2>Limits</h2>
@@ -1949,6 +2111,24 @@ public final class DefaultAsyncClient implements AsyncClient {
             return this.handler.execute(params);
         } catch (Exception e) {
             CompletableFuture<DescribeDownloadSQLLogsResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
+     * @param request the request parameters of DescribeExtension  DescribeExtensionRequest
+     * @return DescribeExtensionResponse
+     */
+    @Override
+    public CompletableFuture<DescribeExtensionResponse> describeExtension(DescribeExtensionRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RPC).setAction("DescribeExtension").setMethod(HttpMethod.POST).setPathRegex("/").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(DescribeExtensionResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<DescribeExtensionResponse> future = new CompletableFuture<>();
             future.completeExceptionally(e);
             return future;
         }
@@ -2122,6 +2302,12 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
+     * <b>description</b> :
+     * <h2><a href="#"></a>Usage notes</h2>
+     * <p>This interface is used to view the details of a model service.</p>
+     * <h2><a href="#qps-"></a>QPS limit</h2>
+     * <p>You can call this operation up to 1,000 times per second per account. Requests that exceed this limit are dropped and you will experience service interruptions.We recommend that you take note of this limit when you call this operation.</p>
+     * 
      * @param request the request parameters of DescribeModelService  DescribeModelServiceRequest
      * @return DescribeModelServiceResponse
      */
@@ -2199,6 +2385,24 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
+     * @param request the request parameters of DescribePrivateRAGService  DescribePrivateRAGServiceRequest
+     * @return DescribePrivateRAGServiceResponse
+     */
+    @Override
+    public CompletableFuture<DescribePrivateRAGServiceResponse> describePrivateRAGService(DescribePrivateRAGServiceRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RPC).setAction("DescribePrivateRAGService").setMethod(HttpMethod.POST).setPathRegex("/").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(DescribePrivateRAGServiceResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<DescribePrivateRAGServiceResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
      * <b>description</b> :
      * <p>When you create AnalyticDB for PostgreSQL instances, you can call this operation to query the details of vSwitches within a specified region or zone.</p>
      * <h2>Limits</h2>
@@ -2239,6 +2443,24 @@ public final class DefaultAsyncClient implements AsyncClient {
             return this.handler.execute(params);
         } catch (Exception e) {
             CompletableFuture<DescribeRdsVpcsResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
+     * @param request the request parameters of DescribeRebalanceStatus  DescribeRebalanceStatusRequest
+     * @return DescribeRebalanceStatusResponse
+     */
+    @Override
+    public CompletableFuture<DescribeRebalanceStatusResponse> describeRebalanceStatus(DescribeRebalanceStatusRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RPC).setAction("DescribeRebalanceStatus").setMethod(HttpMethod.POST).setPathRegex("/").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(DescribeRebalanceStatusResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<DescribeRebalanceStatusResponse> future = new CompletableFuture<>();
             future.completeExceptionally(e);
             return future;
         }
@@ -2546,6 +2768,24 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
+     * @param request the request parameters of DescribeZonesPrivateRAGService  DescribeZonesPrivateRAGServiceRequest
+     * @return DescribeZonesPrivateRAGServiceResponse
+     */
+    @Override
+    public CompletableFuture<DescribeZonesPrivateRAGServiceResponse> describeZonesPrivateRAGService(DescribeZonesPrivateRAGServiceRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RPC).setAction("DescribeZonesPrivateRAGService").setMethod(HttpMethod.POST).setPathRegex("/").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(DescribeZonesPrivateRAGServiceResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<DescribeZonesPrivateRAGServiceResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
      * <b>description</b> :
      * <p>  You can call this operation only for AnalyticDB for PostgreSQL V6.0 instances in elastic storage mode whose minor version is V6.6.1.0 or later.</p>
      * <ul>
@@ -2607,6 +2847,24 @@ public final class DefaultAsyncClient implements AsyncClient {
             return this.handler.execute(params);
         } catch (Exception e) {
             CompletableFuture<DownloadSQLLogsRecordsResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
+     * @param request the request parameters of DownloadSlowSQLRecords  DownloadSlowSQLRecordsRequest
+     * @return DownloadSlowSQLRecordsResponse
+     */
+    @Override
+    public CompletableFuture<DownloadSlowSQLRecordsResponse> downloadSlowSQLRecords(DownloadSlowSQLRecordsRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RPC).setAction("DownloadSlowSQLRecords").setMethod(HttpMethod.POST).setPathRegex("/").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(DownloadSlowSQLRecordsResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<DownloadSlowSQLRecordsResponse> future = new CompletableFuture<>();
             future.completeExceptionally(e);
             return future;
         }
@@ -2746,6 +3004,9 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
+     * <b>description</b> :
+     * <p>This interface is used to query the details of a Supabase instance.</p>
+     * 
      * @param request the request parameters of GetSupabaseProject  GetSupabaseProjectRequest
      * @return GetSupabaseProjectResponse
      */
@@ -2764,6 +3025,9 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
+     * <b>description</b> :
+     * <p>You can call this operation to query a list of API keys for a Supabase project.</p>
+     * 
      * @param request the request parameters of GetSupabaseProjectApiKeys  GetSupabaseProjectApiKeysRequest
      * @return GetSupabaseProjectApiKeysResponse
      */
@@ -2782,6 +3046,9 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
+     * <b>description</b> :
+     * <p>Query Supabase Project Dashboard Account Information</p>
+     * 
      * @param request the request parameters of GetSupabaseProjectDashboardAccount  GetSupabaseProjectDashboardAccountRequest
      * @return GetSupabaseProjectDashboardAccountResponse
      */
@@ -2801,12 +3068,12 @@ public final class DefaultAsyncClient implements AsyncClient {
 
     /**
      * <b>description</b> :
-     * <p>This operation is related to the UploadDocumentAsync operation. You can call the UploadDocumentAsync operation to create an upload job and obtain the job ID, and then call the GetUploadDocumentJob operation to query the execution information of the job.</p>
+     * <p>This operation is related to the UploadDocumentAsync operation. You can call the UploadDocumentAsync operation to create an upload job and get the job ID, and then call the GetUploadDocumentJob operation to query the execution information of the job.</p>
      * <blockquote>
-     * <p> Suggestions:</p>
+     * <p>Suggestions</p>
      * </blockquote>
      * <ul>
-     * <li>Determine whether the document upload job times out based on the document complexity and the number of tokens after chunking. In most cases, a job that lasts more than 2 hours is considered timeout.</li>
+     * <li>Based on document complexity and the number of resulting vector chunks, the timeout is estimated and typically does not exceed 2 hours.</li>
      * </ul>
      * 
      * @param request the request parameters of GetUploadDocumentJob  GetUploadDocumentJobRequest
@@ -2905,6 +3172,9 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
+     * <b>description</b> :
+     * <p>  This operation queries a list of AI nodes.</p>
+     * 
      * @param request the request parameters of ListAINodePools  ListAINodePoolsRequest
      * @return ListAINodePoolsResponse
      */
@@ -2953,6 +3223,24 @@ public final class DefaultAsyncClient implements AsyncClient {
             return this.handler.execute(params);
         } catch (Exception e) {
             CompletableFuture<ListCollectionsResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
+     * @param request the request parameters of ListDatabaseExtensions  ListDatabaseExtensionsRequest
+     * @return ListDatabaseExtensionsResponse
+     */
+    @Override
+    public CompletableFuture<ListDatabaseExtensionsResponse> listDatabaseExtensions(ListDatabaseExtensionsRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RPC).setAction("ListDatabaseExtensions").setMethod(HttpMethod.POST).setPathRegex("/").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(ListDatabaseExtensionsResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<ListDatabaseExtensionsResponse> future = new CompletableFuture<>();
             future.completeExceptionally(e);
             return future;
         }
@@ -3067,6 +3355,24 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
+     * @param request the request parameters of ListInstanceDatabases  ListInstanceDatabasesRequest
+     * @return ListInstanceDatabasesResponse
+     */
+    @Override
+    public CompletableFuture<ListInstanceDatabasesResponse> listInstanceDatabases(ListInstanceDatabasesRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RPC).setAction("ListInstanceDatabases").setMethod(HttpMethod.POST).setPathRegex("/").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(ListInstanceDatabasesResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<ListInstanceDatabasesResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
      * @param request the request parameters of ListInstanceExtensions  ListInstanceExtensionsRequest
      * @return ListInstanceExtensionsResponse
      */
@@ -3085,6 +3391,12 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
+     * <b>description</b> :
+     * <h2><a href="#"></a>Usage notes</h2>
+     * <p>This interface is used to view all model service information.</p>
+     * <h2><a href="#qps-"></a>QPS limit</h2>
+     * <p>You can call this operation up to 1,000 times per second per account. Exceeding the limit will trigger API rate limiting, which may impact your business. Please call the API responsibly.</p>
+     * 
      * @param request the request parameters of ListModelServices  ListModelServicesRequest
      * @return ListModelServicesResponse
      */
@@ -3175,6 +3487,24 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
+     * @param request the request parameters of ListSlowSQLRecords  ListSlowSQLRecordsRequest
+     * @return ListSlowSQLRecordsResponse
+     */
+    @Override
+    public CompletableFuture<ListSlowSQLRecordsResponse> listSlowSQLRecords(ListSlowSQLRecordsRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RPC).setAction("ListSlowSQLRecords").setMethod(HttpMethod.POST).setPathRegex("/").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(ListSlowSQLRecordsResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<ListSlowSQLRecordsResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
      * @param request the request parameters of ListStreamingDataServices  ListStreamingDataServicesRequest
      * @return ListStreamingDataServicesResponse
      */
@@ -3229,6 +3559,9 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
+     * <b>description</b> :
+     * <p>  You can call this operation to query Supabase instances.</p>
+     * 
      * @param request the request parameters of ListSupabaseProjects  ListSupabaseProjectsRequest
      * @return ListSupabaseProjectsResponse
      */
@@ -3247,6 +3580,9 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
+     * <b>description</b> :
+     * <p>  This API is used to query the list of supported models.</p>
+     * 
      * @param request the request parameters of ListSupportModels  ListSupportModelsRequest
      * @return ListSupportModelsResponse
      */
@@ -3772,6 +4108,9 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
+     * <b>description</b> :
+     * <p>Before you can connect to a Supabase project, you must add your client\&quot;s IP address or CIDR block to the project\&quot;s whitelist.</p>
+     * 
      * @param request the request parameters of ModifySupabaseProjectSecurityIps  ModifySupabaseProjectSecurityIpsRequest
      * @return ModifySupabaseProjectSecurityIpsResponse
      */
@@ -3871,6 +4210,24 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
+     * @param request the request parameters of QueryKnowledgeBasesContent  QueryKnowledgeBasesContentRequest
+     * @return QueryKnowledgeBasesContentResponse
+     */
+    @Override
+    public CompletableFuture<QueryKnowledgeBasesContentResponse> queryKnowledgeBasesContent(QueryKnowledgeBasesContentRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RPC).setAction("QueryKnowledgeBasesContent").setMethod(HttpMethod.POST).setPathRegex("/").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(QueryKnowledgeBasesContentResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<QueryKnowledgeBasesContentResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
      * @param request the request parameters of RebalanceDBInstance  RebalanceDBInstanceRequest
      * @return RebalanceDBInstanceResponse
      */
@@ -3961,6 +4318,9 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
+     * <b>description</b> :
+     * <p>Call this API to reset the password of the Supabase database.</p>
+     * 
      * @param request the request parameters of ResetSupabaseProjectPassword  ResetSupabaseProjectPasswordRequest
      * @return ResetSupabaseProjectPasswordResponse
      */
@@ -4309,7 +4669,7 @@ public final class DefaultAsyncClient implements AsyncClient {
 
     /**
      * <b>description</b> :
-     * <p>The vectorization algorithm for the document is specified by the CreateDocumentCollection API.</p>
+     * <p>The vector algorithm that is used for the document is specified when you call the CreateDocumentCollection operation.</p>
      * 
      * @param request the request parameters of UpsertChunks  UpsertChunksRequest
      * @return UpsertChunksResponse

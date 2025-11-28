@@ -43,6 +43,10 @@ public class ChatWithKnowledgeBaseRequest extends Request {
     @com.aliyun.core.annotation.NameInMap("PromptParams")
     private String promptParams;
 
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("RegionId")
+    private String regionId;
+
     private ChatWithKnowledgeBaseRequest(Builder builder) {
         super(builder);
         this.DBInstanceId = builder.DBInstanceId;
@@ -51,6 +55,7 @@ public class ChatWithKnowledgeBaseRequest extends Request {
         this.modelParams = builder.modelParams;
         this.ownerId = builder.ownerId;
         this.promptParams = builder.promptParams;
+        this.regionId = builder.regionId;
     }
 
     public static Builder builder() {
@@ -108,6 +113,13 @@ public class ChatWithKnowledgeBaseRequest extends Request {
         return this.promptParams;
     }
 
+    /**
+     * @return regionId
+     */
+    public String getRegionId() {
+        return this.regionId;
+    }
+
     public static final class Builder extends Request.Builder<ChatWithKnowledgeBaseRequest, Builder> {
         private String DBInstanceId; 
         private Boolean includeKnowledgeBaseResults; 
@@ -115,6 +127,7 @@ public class ChatWithKnowledgeBaseRequest extends Request {
         private ModelParams modelParams; 
         private Long ownerId; 
         private String promptParams; 
+        private String regionId; 
 
         private Builder() {
             super();
@@ -128,9 +141,14 @@ public class ChatWithKnowledgeBaseRequest extends Request {
             this.modelParams = request.modelParams;
             this.ownerId = request.ownerId;
             this.promptParams = request.promptParams;
+            this.regionId = request.regionId;
         } 
 
         /**
+         * <p>The cluster ID.</p>
+         * <blockquote>
+         * <p> You can call the <a href="https://help.aliyun.com/document_detail/196830.html">DescribeDBInstances</a> operation to query the information about all AnalyticDB for PostgreSQL instances within a region, including instance IDs.</p>
+         * </blockquote>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -143,7 +161,10 @@ public class ChatWithKnowledgeBaseRequest extends Request {
         }
 
         /**
-         * IncludeKnowledgeBaseResults.
+         * <p>Whether to return the retrieved result. Default value: false.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>false</p>
          */
         public Builder includeKnowledgeBaseResults(Boolean includeKnowledgeBaseResults) {
             this.putQueryParameter("IncludeKnowledgeBaseResults", includeKnowledgeBaseResults);
@@ -152,7 +173,7 @@ public class ChatWithKnowledgeBaseRequest extends Request {
         }
 
         /**
-         * KnowledgeParams.
+         * <p>The knowledge retrieval parameter object. If you do not specify this parameter, only chat mode is enabled.</p>
          */
         public Builder knowledgeParams(KnowledgeParams knowledgeParams) {
             String knowledgeParamsShrink = shrink(knowledgeParams, "KnowledgeParams", "json");
@@ -162,6 +183,7 @@ public class ChatWithKnowledgeBaseRequest extends Request {
         }
 
         /**
+         * <p>The Large Language Model (LLM) invocation parameter object.</p>
          * <p>This parameter is required.</p>
          */
         public Builder modelParams(ModelParams modelParams) {
@@ -181,11 +203,23 @@ public class ChatWithKnowledgeBaseRequest extends Request {
         }
 
         /**
-         * PromptParams.
+         * <p>The system prompt template, which should include {{ text_chunks }},{{ user_system_prompt }},{{ graph_entities },{{ graph_relations }}. If any of these placeholders are not specified, the corresponding section should have no effect.</p>
          */
         public Builder promptParams(String promptParams) {
             this.putQueryParameter("PromptParams", promptParams);
             this.promptParams = promptParams;
+            return this;
+        }
+
+        /**
+         * <p>实例所在的地域ID</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-hangzhou</p>
+         */
+        public Builder regionId(String regionId) {
+            this.putQueryParameter("RegionId", regionId);
+            this.regionId = regionId;
             return this;
         }
 
@@ -236,7 +270,10 @@ public class ChatWithKnowledgeBaseRequest extends Request {
             } 
 
             /**
-             * K.
+             * <p>The smoothing constant k in the formula to calculate the score: 1/(k + rank_i). It must be a positive integer greater than 1.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>60</p>
              */
             public Builder k(Long k) {
                 this.k = k;
@@ -290,7 +327,7 @@ public class ChatWithKnowledgeBaseRequest extends Request {
             } 
 
             /**
-             * Weights.
+             * <p>An array of weights for each SourceCollection.</p>
              */
             public Builder weights(java.util.List<Double> weights) {
                 this.weights = weights;
@@ -357,7 +394,7 @@ public class ChatWithKnowledgeBaseRequest extends Request {
             } 
 
             /**
-             * Rrf.
+             * <p>The parameter that can be configured when the MergeMethod parameter is set to RRF.</p>
              */
             public Builder rrf(Rrf rrf) {
                 this.rrf = rrf;
@@ -365,7 +402,7 @@ public class ChatWithKnowledgeBaseRequest extends Request {
             }
 
             /**
-             * Weight.
+             * <p>The parameter that you can configure when you set the MergeMethod parameter to Weight.</p>
              */
             public Builder weight(Weight weight) {
                 this.weight = weight;
@@ -419,7 +456,10 @@ public class ChatWithKnowledgeBaseRequest extends Request {
             } 
 
             /**
-             * GraphTopK.
+             * <p>Returns the top number of entities and relationship edges. Default value: 60.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>60</p>
              */
             public Builder graphTopK(Long graphTopK) {
                 this.graphTopK = graphTopK;
@@ -590,7 +630,10 @@ public class ChatWithKnowledgeBaseRequest extends Request {
             } 
 
             /**
-             * Filter.
+             * <p>The condition that is used to filter the data to be updated. Specify this parameter in a format that is the same as the WHERE clause.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>id = &quot;llm-t87l87fxuhn56woc_8anu8j2d3f_file_e74635e2cc314e838543e724f6b3b1f2_10658020&quot;</p>
              */
             public Builder filter(String filter) {
                 this.filter = filter;
@@ -598,7 +641,10 @@ public class ChatWithKnowledgeBaseRequest extends Request {
             }
 
             /**
-             * GraphEnhance.
+             * <p>Whether to enable knowledge graph enhancement. Default value: false.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>false</p>
              */
             public Builder graphEnhance(Boolean graphEnhance) {
                 this.graphEnhance = graphEnhance;
@@ -606,7 +652,7 @@ public class ChatWithKnowledgeBaseRequest extends Request {
             }
 
             /**
-             * GraphSearchArgs.
+             * <p>Returns the top number of entities and relationship edges. Default value: 60.</p>
              */
             public Builder graphSearchArgs(GraphSearchArgs graphSearchArgs) {
                 this.graphSearchArgs = graphSearchArgs;
@@ -614,7 +660,16 @@ public class ChatWithKnowledgeBaseRequest extends Request {
             }
 
             /**
-             * HybridSearch.
+             * <p>The dual-path retrieval algorithm. This parameter is empty by default, which specifies that scores of vector retrieval and full-text retrieval are directly compared and sorted together.</p>
+             * <p>Valid values:</p>
+             * <ul>
+             * <li>RRF: The reciprocal rank fusion (RRF) algorithm uses a constant k to control the fusion effect. For more information, see the description of the HybridSearchArgs parameter.</li>
+             * <li>Weight: This algorithm uses the alpha parameter to specify the proportion of the vector search score and the full-text search score and then sorts by weight. For more information, see the description of the HybridSearchArgs parameter.</li>
+             * <li>Cascaded: This algorithm performs first full-text retrieval and then vector retrieval.</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>RRF</p>
              */
             public Builder hybridSearch(String hybridSearch) {
                 this.hybridSearch = hybridSearch;
@@ -622,7 +677,29 @@ public class ChatWithKnowledgeBaseRequest extends Request {
             }
 
             /**
-             * HybridSearchArgs.
+             * <p>The parameters of the dual-path retrieval algorithm. RRF and Weight are supported at this time:</p>
+             * <ul>
+             * <li>RRF: Specifies the smoothing constant k in the formula to calculate the score: <code>1/(k + rank_i)</code>. The k constant must be a positive integer greater than 1. The format:</li>
+             * </ul>
+             * <!---->
+             * 
+             * <pre><code>{ 
+             *    &quot;RRF&quot;: {
+             *     &quot;k&quot;: 60
+             *    }
+             * }
+             * </code></pre>
+             * <ul>
+             * <li>Weight: The score is computed as <code>alpha * vector_score + (1 - alpha) * text_score</code>. The parameter alpha controls the weighting between vector search and full-text search scores, with a valid range of [0, 1]. 0 specifies only full-text search score. 1 specifies only vector search score.</li>
+             * </ul>
+             * <!---->
+             * 
+             * <pre><code>{ 
+             *    &quot;Weight&quot;: {
+             *     &quot;alpha&quot;: 0.5
+             *    }
+             * }
+             * </code></pre>
              */
             public Builder hybridSearchArgs(java.util.Map<String, ?> hybridSearchArgs) {
                 this.hybridSearchArgs = hybridSearchArgs;
@@ -630,7 +707,15 @@ public class ChatWithKnowledgeBaseRequest extends Request {
             }
 
             /**
-             * Metrics.
+             * <p>The method that is used to create vector indexes. Valid values:</p>
+             * <ul>
+             * <li>l2: Euclidean distance.</li>
+             * <li>ip: Inner product distance.</li>
+             * <li>cosine: Cosine similarity.</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>cosine</p>
              */
             public Builder metrics(String metrics) {
                 this.metrics = metrics;
@@ -638,7 +723,15 @@ public class ChatWithKnowledgeBaseRequest extends Request {
             }
 
             /**
-             * RecallWindow.
+             * <p>The retrieval window. If you specify this parameter, the context of the retrieved result is added in the output. Format: List&lt;A, B&gt;. Valid values: -10&lt;=A&lt;=0 and 0&lt;=B&lt;=10.</p>
+             * <blockquote>
+             * </blockquote>
+             * <ul>
+             * <li><p>We recommend that you specify this parameter if the source document is segmented into large numbers of pieces, which may result in loss of contextual information during retrieval.</p>
+             * </li>
+             * <li><p>Perform re-ranking before windowing.</p>
+             * </li>
+             * </ul>
              */
             public Builder recallWindow(java.util.List<Long> recallWindow) {
                 this.recallWindow = recallWindow;
@@ -646,7 +739,18 @@ public class ChatWithKnowledgeBaseRequest extends Request {
             }
 
             /**
-             * RerankFactor.
+             * <p>The rerank factor. If you specify this parameter, the search result is reranked once again. Valid values: 1&lt;RerankFactor&lt;=5.</p>
+             * <blockquote>
+             * </blockquote>
+             * <ul>
+             * <li><p>If the document is segmented into sparse parts, reranking is inefficient.</p>
+             * </li>
+             * <li><p>We recommend that the number of reranked results (the ceiling of TopK × RerankFactor) not exceed 50.</p>
+             * </li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>1.5</p>
              */
             public Builder rerankFactor(Double rerankFactor) {
                 this.rerankFactor = rerankFactor;
@@ -654,7 +758,10 @@ public class ChatWithKnowledgeBaseRequest extends Request {
             }
 
             /**
-             * TopK.
+             * <p>The number of top results.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>10</p>
              */
             public Builder topK(Long topK) {
                 this.topK = topK;
@@ -662,7 +769,10 @@ public class ChatWithKnowledgeBaseRequest extends Request {
             }
 
             /**
-             * UseFullTextRetrieval.
+             * <p>Specifies whether to use full-text retrieval (dual-path retrieval). The default value is false, which means only vector retrieval is used.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>true</p>
              */
             public Builder useFullTextRetrieval(Boolean useFullTextRetrieval) {
                 this.useFullTextRetrieval = useFullTextRetrieval;
@@ -757,6 +867,7 @@ public class ChatWithKnowledgeBaseRequest extends Request {
             } 
 
             /**
+             * <p>The name of the collection to be recalled.</p>
              * <p>This parameter is required.</p>
              * 
              * <strong>example:</strong>
@@ -768,7 +879,13 @@ public class ChatWithKnowledgeBaseRequest extends Request {
             }
 
             /**
-             * Namespace.
+             * <p>The name of the namespace. Default value: public.</p>
+             * <blockquote>
+             * <p> You can call the <a href="https://help.aliyun.com/document_detail/2401495.html">CreateNamespace</a> operation to create a namespace and call the <a href="https://help.aliyun.com/document_detail/2401502.html">ListNamespaces</a> operation to query a list of namespaces.</p>
+             * </blockquote>
+             * 
+             * <strong>example:</strong>
+             * <p>dukang</p>
              */
             public Builder namespace(String namespace) {
                 this.namespace = namespace;
@@ -776,6 +893,10 @@ public class ChatWithKnowledgeBaseRequest extends Request {
             }
 
             /**
+             * <p>The password of the namespace.</p>
+             * <blockquote>
+             * <p> The value of this parameter is specified when you call the CreateNamespace operation.</p>
+             * </blockquote>
              * <p>This parameter is required.</p>
              * 
              * <strong>example:</strong>
@@ -787,7 +908,7 @@ public class ChatWithKnowledgeBaseRequest extends Request {
             }
 
             /**
-             * QueryParams.
+             * <p>Parameters related to the knowledge base retrieval.</p>
              */
             public Builder queryParams(QueryParams queryParams) {
                 this.queryParams = queryParams;
@@ -894,7 +1015,14 @@ public class ChatWithKnowledgeBaseRequest extends Request {
             } 
 
             /**
-             * MergeMethod.
+             * <p>The method used to merge multiple knowledge bases. Default value: RRF. Optional:</p>
+             * <ul>
+             * <li>RRF</li>
+             * <li>Weight</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>&quot;RRF&quot;</p>
              */
             public Builder mergeMethod(String mergeMethod) {
                 this.mergeMethod = mergeMethod;
@@ -902,7 +1030,7 @@ public class ChatWithKnowledgeBaseRequest extends Request {
             }
 
             /**
-             * MergeMethodArgs.
+             * <p>Parameters for multi-knowledge-base fusion.</p>
              */
             public Builder mergeMethodArgs(MergeMethodArgs mergeMethodArgs) {
                 this.mergeMethodArgs = mergeMethodArgs;
@@ -910,7 +1038,18 @@ public class ChatWithKnowledgeBaseRequest extends Request {
             }
 
             /**
-             * RerankFactor.
+             * <p>The rerank factor. If you specify this parameter, the search result is reranked once again. Valid values: 1&lt;RerankFactor&lt;=5.</p>
+             * <blockquote>
+             * </blockquote>
+             * <ul>
+             * <li><p>If the document is segmented into sparse parts, reranking is inefficient.</p>
+             * </li>
+             * <li><p>We recommend that the number of reranked results (the ceiling of TopK × RerankFactor) not exceed 50.</p>
+             * </li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>1.0001</p>
              */
             public Builder rerankFactor(Double rerankFactor) {
                 this.rerankFactor = rerankFactor;
@@ -918,6 +1057,7 @@ public class ChatWithKnowledgeBaseRequest extends Request {
             }
 
             /**
+             * <p>Knowledge base.</p>
              * <p>This parameter is required.</p>
              */
             public Builder sourceCollection(java.util.List<SourceCollection> sourceCollection) {
@@ -926,7 +1066,10 @@ public class ChatWithKnowledgeBaseRequest extends Request {
             }
 
             /**
-             * TopK.
+             * <p>Specifies the number of top results to return after merging retrieved results from multiple vector collections.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>10</p>
              */
             public Builder topK(Long topK) {
                 this.topK = topK;
@@ -993,7 +1136,7 @@ public class ChatWithKnowledgeBaseRequest extends Request {
             } 
 
             /**
-             * Content.
+             * <p>The message content.</p>
              */
             public Builder content(String content) {
                 this.content = content;
@@ -1001,7 +1144,15 @@ public class ChatWithKnowledgeBaseRequest extends Request {
             }
 
             /**
-             * Role.
+             * <p>The message role. Valid values:</p>
+             * <ul>
+             * <li>system</li>
+             * <li>user</li>
+             * <li>assistant</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>user</p>
              */
             public Builder role(String role) {
                 this.role = role;
@@ -1081,7 +1232,7 @@ public class ChatWithKnowledgeBaseRequest extends Request {
             } 
 
             /**
-             * Description.
+             * <p>The description of the function.</p>
              */
             public Builder description(String description) {
                 this.description = description;
@@ -1089,7 +1240,10 @@ public class ChatWithKnowledgeBaseRequest extends Request {
             }
 
             /**
-             * Name.
+             * <p>The name of the function.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>get_weather</p>
              */
             public Builder name(String name) {
                 this.name = name;
@@ -1097,7 +1251,10 @@ public class ChatWithKnowledgeBaseRequest extends Request {
             }
 
             /**
-             * Parameters.
+             * <p>JSON Schema for function parameters.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>{&quot;type&quot;: &quot;object&quot;, ...}</p>
              */
             public Builder parameters(Object parameters) {
                 this.parameters = parameters;
@@ -1151,7 +1308,7 @@ public class ChatWithKnowledgeBaseRequest extends Request {
             } 
 
             /**
-             * Function.
+             * <p>The information about a function.</p>
              */
             public Builder function(Function function) {
                 this.function = function;
@@ -1324,7 +1481,10 @@ public class ChatWithKnowledgeBaseRequest extends Request {
             } 
 
             /**
-             * MaxTokens.
+             * <p>Maximum number of tokens to generate.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>8192</p>
              */
             public Builder maxTokens(Long maxTokens) {
                 this.maxTokens = maxTokens;
@@ -1332,6 +1492,7 @@ public class ChatWithKnowledgeBaseRequest extends Request {
             }
 
             /**
+             * <p>Message list.</p>
              * <p>This parameter is required.</p>
              */
             public Builder messages(java.util.List<Messages> messages) {
@@ -1340,6 +1501,7 @@ public class ChatWithKnowledgeBaseRequest extends Request {
             }
 
             /**
+             * <p>The model name. See <a href="https://help.aliyun.com/zh/model-studio/compatibility-of-openai-with-dashscope?spm=a2c4g.11186623.help-menu-2400256.d_2_10_0.45b5516eZIciC8&scm=20140722.H_2833609._.OR_help-T_cn~zh-V_1#eadfc13038jd5">Model Studio Document</a> for the available models.</p>
              * <p>This parameter is required.</p>
              * 
              * <strong>example:</strong>
@@ -1351,7 +1513,10 @@ public class ChatWithKnowledgeBaseRequest extends Request {
             }
 
             /**
-             * N.
+             * <p>The number of candidate responses to generate.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder n(Long n) {
                 this.n = n;
@@ -1359,7 +1524,10 @@ public class ChatWithKnowledgeBaseRequest extends Request {
             }
 
             /**
-             * PresencePenalty.
+             * <p>Presence penalty coefficient (-2.0 to 2.0).</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1.0</p>
              */
             public Builder presencePenalty(Double presencePenalty) {
                 this.presencePenalty = presencePenalty;
@@ -1367,7 +1535,10 @@ public class ChatWithKnowledgeBaseRequest extends Request {
             }
 
             /**
-             * Seed.
+             * <p>The random seed.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>42</p>
              */
             public Builder seed(Long seed) {
                 this.seed = seed;
@@ -1375,7 +1546,7 @@ public class ChatWithKnowledgeBaseRequest extends Request {
             }
 
             /**
-             * Stop.
+             * <p>Stop words.</p>
              */
             public Builder stop(java.util.List<String> stop) {
                 this.stop = stop;
@@ -1383,7 +1554,10 @@ public class ChatWithKnowledgeBaseRequest extends Request {
             }
 
             /**
-             * Temperature.
+             * <p>Sampling temperature (0~2).</p>
+             * 
+             * <strong>example:</strong>
+             * <p>0.6</p>
              */
             public Builder temperature(Double temperature) {
                 this.temperature = temperature;
@@ -1391,7 +1565,7 @@ public class ChatWithKnowledgeBaseRequest extends Request {
             }
 
             /**
-             * Tools.
+             * <p>Tools</p>
              */
             public Builder tools(java.util.List<Tools> tools) {
                 this.tools = tools;
@@ -1399,7 +1573,10 @@ public class ChatWithKnowledgeBaseRequest extends Request {
             }
 
             /**
-             * TopP.
+             * <p>Top-p (nucleus) sampling threshold (0–1).</p>
+             * 
+             * <strong>example:</strong>
+             * <p>0.9</p>
              */
             public Builder topP(Double topP) {
                 this.topP = topP;

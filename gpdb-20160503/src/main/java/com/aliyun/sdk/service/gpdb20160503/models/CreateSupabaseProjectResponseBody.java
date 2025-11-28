@@ -67,7 +67,10 @@ public class CreateSupabaseProjectResponseBody extends TeaModel {
         } 
 
         /**
-         * ProjectId.
+         * <p>The Supabase project ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>sbp-180****</p>
          */
         public Builder projectId(String projectId) {
             this.projectId = projectId;
@@ -75,7 +78,10 @@ public class CreateSupabaseProjectResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>ABB39CC3-4488-4857-905D-2E4A051D****</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;

@@ -132,7 +132,10 @@ public class DescribeIndexResponseBody extends TeaModel {
         } 
 
         /**
-         * Collection.
+         * <p>The name of the collection.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>testcollection</p>
          */
         public Builder collection(String collection) {
             this.collection = collection;
@@ -140,7 +143,10 @@ public class DescribeIndexResponseBody extends TeaModel {
         }
 
         /**
-         * IndexDef.
+         * <p>The definition of the index.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>CREATE INDEX testindex ON mynamespace. testcollection</p>
          */
         public Builder indexDef(String indexDef) {
             this.indexDef = indexDef;
@@ -148,7 +154,10 @@ public class DescribeIndexResponseBody extends TeaModel {
         }
 
         /**
-         * IndexName.
+         * <p>The name of the index.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>testindex</p>
          */
         public Builder indexName(String indexName) {
             this.indexName = indexName;
@@ -156,7 +165,10 @@ public class DescribeIndexResponseBody extends TeaModel {
         }
 
         /**
-         * Message.
+         * <p>The returned message.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>success</p>
          */
         public Builder message(String message) {
             this.message = message;
@@ -164,7 +176,10 @@ public class DescribeIndexResponseBody extends TeaModel {
         }
 
         /**
-         * Namespace.
+         * <p>The namespace.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>mynamespace</p>
          */
         public Builder namespace(String namespace) {
             this.namespace = namespace;
@@ -172,7 +187,10 @@ public class DescribeIndexResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * <p>The unique ID of the request.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>ABB39CC3-4488-4857-905D-2E4A051D0521</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -180,7 +198,14 @@ public class DescribeIndexResponseBody extends TeaModel {
         }
 
         /**
-         * Status.
+         * <p>Indicates whether the request was successful. Valid values:</p>
+         * <ul>
+         * <li><strong>false</strong>: The operation fails.</li>
+         * <li><strong>true</strong>: The operation is successful.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>success</p>
          */
         public Builder status(String status) {
             this.status = status;

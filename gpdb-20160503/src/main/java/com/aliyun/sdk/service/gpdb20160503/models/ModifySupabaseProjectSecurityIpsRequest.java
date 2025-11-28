@@ -89,6 +89,7 @@ public class ModifySupabaseProjectSecurityIpsRequest extends Request {
         } 
 
         /**
+         * <p>The Supabase project ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -101,7 +102,13 @@ public class ModifySupabaseProjectSecurityIpsRequest extends Request {
         }
 
         /**
-         * RegionId.
+         * <p>The region ID of the cluster.</p>
+         * <blockquote>
+         * <p>You can call the <a href="https://help.aliyun.com/document_detail/86912.html">DescribeRegions</a> operation to query the most recent region list.</p>
+         * </blockquote>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-hangzhou</p>
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);
@@ -110,6 +117,11 @@ public class ModifySupabaseProjectSecurityIpsRequest extends Request {
         }
 
         /**
+         * <p>A comma-separated list of IP addresses and CIDR blocks to set as the whitelist. You can specify up to 1,000 entries. Supported formats:</p>
+         * <ul>
+         * <li>Single IP: 10.23.12.24</li>
+         * <li>CIDR Block: 10.23.12.0/24 (the prefix<code>/24</code> indicates the length must be between 1 and 32)``</li>
+         * </ul>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>

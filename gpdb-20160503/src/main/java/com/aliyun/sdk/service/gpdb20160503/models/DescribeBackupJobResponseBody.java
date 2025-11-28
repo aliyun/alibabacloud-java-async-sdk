@@ -132,7 +132,13 @@ public class DescribeBackupJobResponseBody extends TeaModel {
         } 
 
         /**
-         * BackupId.
+         * <p>The backup set ID.</p>
+         * <blockquote>
+         * <p> You can call the <a href="https://help.aliyun.com/document_detail/210093.html">DescribeDataBackups</a> operation to query the IDs of all backup sets in the instance.</p>
+         * </blockquote>
+         * 
+         * <strong>example:</strong>
+         * <p>1111111111</p>
          */
         public Builder backupId(String backupId) {
             this.backupId = backupId;
@@ -140,7 +146,10 @@ public class DescribeBackupJobResponseBody extends TeaModel {
         }
 
         /**
-         * BackupJobId.
+         * <p>The backup job ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>123</p>
          */
         public Builder backupJobId(String backupJobId) {
             this.backupJobId = backupJobId;
@@ -148,7 +157,14 @@ public class DescribeBackupJobResponseBody extends TeaModel {
         }
 
         /**
-         * BackupMode.
+         * <p>The backup mode. Valid values:</p>
+         * <ul>
+         * <li><strong>Automated</strong></li>
+         * <li><strong>Manual</strong></li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>Automated</p>
          */
         public Builder backupMode(String backupMode) {
             this.backupMode = backupMode;
@@ -156,7 +172,16 @@ public class DescribeBackupJobResponseBody extends TeaModel {
         }
 
         /**
-         * BackupStatus.
+         * <p>The backup status. Valid values:</p>
+         * <ul>
+         * <li><strong>schedule</strong></li>
+         * <li><strong>check</strong></li>
+         * <li><strong>backup</strong></li>
+         * <li><strong>finish</strong></li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>backup</p>
          */
         public Builder backupStatus(String backupStatus) {
             this.backupStatus = backupStatus;
@@ -164,7 +189,10 @@ public class DescribeBackupJobResponseBody extends TeaModel {
         }
 
         /**
-         * Process.
+         * <p>The progress of the backup job.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>50%</p>
          */
         public Builder process(String process) {
             this.process = process;
@@ -172,7 +200,10 @@ public class DescribeBackupJobResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>ABB39CC3-4488-4857-905D-2E4A051D0521</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -180,7 +211,10 @@ public class DescribeBackupJobResponseBody extends TeaModel {
         }
 
         /**
-         * StartTime.
+         * <p>The time when the backup job started. The time follows the ISO 8601 standard in the YYYY-MM-DDThh:mm:ssZ format. The time is displayed in UTC.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2023-01-03T16:00:00Z</p>
          */
         public Builder startTime(String startTime) {
             this.startTime = startTime;

@@ -67,7 +67,7 @@ public class ListAINodePoolsResponseBody extends TeaModel {
         } 
 
         /**
-         * AINodePoolInfos.
+         * <p>Details of the AI node resource pool.</p>
          */
         public Builder AINodePoolInfos(java.util.List<AINodePoolInfos> AINodePoolInfos) {
             this.AINodePoolInfos = AINodePoolInfos;
@@ -75,7 +75,10 @@ public class ListAINodePoolsResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>ABB39CC3-4488-4857-905D-2E4A051D0521</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -206,7 +209,10 @@ public class ListAINodePoolsResponseBody extends TeaModel {
             } 
 
             /**
-             * BindObject.
+             * <p>The binding type of the AI node.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>model_serving</p>
              */
             public Builder bindObject(String bindObject) {
                 this.bindObject = bindObject;
@@ -214,7 +220,11 @@ public class ListAINodePoolsResponseBody extends TeaModel {
             }
 
             /**
-             * BindStatus.
+             * <p>The status of the AI node.</p>
+             * <ul>
+             * <li>unbound: The node is not bound.</li>
+             * <li>bound: The node is bound.</li>
+             * </ul>
              */
             public Builder bindStatus(String bindStatus) {
                 this.bindStatus = bindStatus;
@@ -222,7 +232,10 @@ public class ListAINodePoolsResponseBody extends TeaModel {
             }
 
             /**
-             * CreateTime.
+             * <p>The creation time.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2024-10-09T02:07:15Z</p>
              */
             public Builder createTime(String createTime) {
                 this.createTime = createTime;
@@ -230,7 +243,10 @@ public class ListAINodePoolsResponseBody extends TeaModel {
             }
 
             /**
-             * Namespace.
+             * <p>The namespace.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>adbpg-ainode</p>
              */
             public Builder namespace(String namespace) {
                 this.namespace = namespace;
@@ -238,7 +254,10 @@ public class ListAINodePoolsResponseBody extends TeaModel {
             }
 
             /**
-             * NodeName.
+             * <p>The name of the AI node.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>ai-xxxxxxxxx</p>
              */
             public Builder nodeName(String nodeName) {
                 this.nodeName = nodeName;
@@ -246,7 +265,38 @@ public class ListAINodePoolsResponseBody extends TeaModel {
             }
 
             /**
-             * NodeSpec.
+             * <p>The AI node specifications. The list of supported specifications is shown below.</p>
+             * <pre><code>ADB.AIMedium.1
+             * ADB.AILarge.1
+             * ADB.AIStandard.2
+             * ADB.AIMedium.2
+             * ADB.AILarge.2
+             * ADB.AIXLarge.2
+             * ADB.AIStandard.6
+             * ADB.AIMedium.6
+             * ADB.AILarge.6
+             * ADB.AIXLarge.6
+             * ADB.AIStandard.3
+             * ADB.AIMedium.3
+             * ADB.AILarge.3
+             * ADB.AIXLarge.3
+             * ADB.AIStandard.4
+             * ADB.AIMedium.4
+             * ADB.AILarge.4
+             * ADB.AIXLarge.4
+             * ADB.AIStandard.5
+             * ADB.AIMedium.5
+             * ADB.AILarge.5
+             * ADB.AIXLarge.5
+             * ADB.AIStandard.8
+             * ADB.AIMedium.8
+             * ADB.AILarge.8
+             * ADB.AIXLarge.8
+             * ADB.AI2XLarge.8
+             * </code></pre>
+             * 
+             * <strong>example:</strong>
+             * <p>ADB.AIStandard.1</p>
              */
             public Builder nodeSpec(String nodeSpec) {
                 this.nodeSpec = nodeSpec;
@@ -254,7 +304,10 @@ public class ListAINodePoolsResponseBody extends TeaModel {
             }
 
             /**
-             * UpdateTime.
+             * <p>The update time.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2025-06-16T02:04:42Z</p>
              */
             public Builder updateTime(String updateTime) {
                 this.updateTime = updateTime;
@@ -334,7 +387,7 @@ public class ListAINodePoolsResponseBody extends TeaModel {
             } 
 
             /**
-             * AINodeInfos.
+             * <p>AI node details.</p>
              */
             public Builder AINodeInfos(java.util.List<AINodeInfos> AINodeInfos) {
                 this.AINodeInfos = AINodeInfos;
@@ -342,7 +395,10 @@ public class ListAINodePoolsResponseBody extends TeaModel {
             }
 
             /**
-             * AINodePoolId.
+             * <p>The ID of the resource pool to which the AI node belongs.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>aipool-xxxxxxxxx</p>
              */
             public Builder AINodePoolId(String AINodePoolId) {
                 this.AINodePoolId = AINodePoolId;
@@ -350,7 +406,10 @@ public class ListAINodePoolsResponseBody extends TeaModel {
             }
 
             /**
-             * NodeNum.
+             * <p>The number of nodes.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2</p>
              */
             public Builder nodeNum(String nodeNum) {
                 this.nodeNum = nodeNum;

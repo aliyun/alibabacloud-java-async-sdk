@@ -132,7 +132,7 @@ public class ListSupabaseProjectsResponseBody extends TeaModel {
         } 
 
         /**
-         * Items.
+         * <p>A list of objects, where each object represents a Supabase instance.</p>
          */
         public Builder items(java.util.List<Items> items) {
             this.items = items;
@@ -140,7 +140,10 @@ public class ListSupabaseProjectsResponseBody extends TeaModel {
         }
 
         /**
-         * MaxResults.
+         * <p>The maximum amount of data to read this time. Default value: 10.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>50</p>
          */
         public Builder maxResults(Integer maxResults) {
             this.maxResults = maxResults;
@@ -148,7 +151,10 @@ public class ListSupabaseProjectsResponseBody extends TeaModel {
         }
 
         /**
-         * NextToken.
+         * <p>The pagination token to use in the next request to get the next page. If this field is empty, there are no more results.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>caeba0bbb2be03f84eb48b699f0a****</p>
          */
         public Builder nextToken(String nextToken) {
             this.nextToken = nextToken;
@@ -156,7 +162,10 @@ public class ListSupabaseProjectsResponseBody extends TeaModel {
         }
 
         /**
-         * PageNumber.
+         * <p>The page number of the returned page.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder pageNumber(Integer pageNumber) {
             this.pageNumber = pageNumber;
@@ -164,7 +173,10 @@ public class ListSupabaseProjectsResponseBody extends TeaModel {
         }
 
         /**
-         * PageRecordCount.
+         * <p>The number of entries per page.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>20</p>
          */
         public Builder pageRecordCount(Integer pageRecordCount) {
             this.pageRecordCount = pageRecordCount;
@@ -172,7 +184,10 @@ public class ListSupabaseProjectsResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * <p>The unique ID of the request.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>ABB39CC3-4488-4857-905D-2E4A051D****</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -180,7 +195,10 @@ public class ListSupabaseProjectsResponseBody extends TeaModel {
         }
 
         /**
-         * TotalRecordCount.
+         * <p>The total number of log entries returned.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2</p>
          */
         public Builder totalRecordCount(Integer totalRecordCount) {
             this.totalRecordCount = totalRecordCount;
@@ -467,7 +485,10 @@ public class ListSupabaseProjectsResponseBody extends TeaModel {
             } 
 
             /**
-             * CreateTime.
+             * <p>The creation time.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2021-10-09T04:54:08Z</p>
              */
             public Builder createTime(String createTime) {
                 this.createTime = createTime;
@@ -475,7 +496,10 @@ public class ListSupabaseProjectsResponseBody extends TeaModel {
             }
 
             /**
-             * DashboardPassword.
+             * <p>Supabase Dashboard password (not used).</p>
+             * 
+             * <strong>example:</strong>
+             * <p>xxpassword</p>
              */
             public Builder dashboardPassword(String dashboardPassword) {
                 this.dashboardPassword = dashboardPassword;
@@ -483,7 +507,10 @@ public class ListSupabaseProjectsResponseBody extends TeaModel {
             }
 
             /**
-             * DashboardUserName.
+             * <p>Supabase Dashboard user name (not used).</p>
+             * 
+             * <strong>example:</strong>
+             * <p>null</p>
              */
             public Builder dashboardUserName(String dashboardUserName) {
                 this.dashboardUserName = dashboardUserName;
@@ -491,7 +518,10 @@ public class ListSupabaseProjectsResponseBody extends TeaModel {
             }
 
             /**
-             * DiskPerformanceLevel.
+             * <p>The ESSD performance level.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>PL0</p>
              */
             public Builder diskPerformanceLevel(String diskPerformanceLevel) {
                 this.diskPerformanceLevel = diskPerformanceLevel;
@@ -499,7 +529,10 @@ public class ListSupabaseProjectsResponseBody extends TeaModel {
             }
 
             /**
-             * Engine.
+             * <p>The database engine type.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>gpdb</p>
              */
             public Builder engine(String engine) {
                 this.engine = engine;
@@ -507,7 +540,10 @@ public class ListSupabaseProjectsResponseBody extends TeaModel {
             }
 
             /**
-             * EngineVersion.
+             * <p>The database engine version.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>6.0</p>
              */
             public Builder engineVersion(String engineVersion) {
                 this.engineVersion = engineVersion;
@@ -515,7 +551,15 @@ public class ListSupabaseProjectsResponseBody extends TeaModel {
             }
 
             /**
-             * PayType.
+             * <p>The billing method of the instance. Valid values:</p>
+             * <ul>
+             * <li><strong>Postpaid</strong>: pay-as-you-go</li>
+             * <li><strong>Prepaid</strong>: subscription.</li>
+             * <li><strong>Free</strong>: Free.</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>Postpaid</p>
              */
             public Builder payType(String payType) {
                 this.payType = payType;
@@ -523,7 +567,10 @@ public class ListSupabaseProjectsResponseBody extends TeaModel {
             }
 
             /**
-             * PrivateConnectUrl.
+             * <p>The private (VPC) connection URL for the Supabase Dashboard.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>192.168.0.1</p>
              */
             public Builder privateConnectUrl(String privateConnectUrl) {
                 this.privateConnectUrl = privateConnectUrl;
@@ -531,7 +578,10 @@ public class ListSupabaseProjectsResponseBody extends TeaModel {
             }
 
             /**
-             * ProjectId.
+             * <p>The Supabase project ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>sbp-12***</p>
              */
             public Builder projectId(String projectId) {
                 this.projectId = projectId;
@@ -539,7 +589,10 @@ public class ListSupabaseProjectsResponseBody extends TeaModel {
             }
 
             /**
-             * ProjectName.
+             * <p>The name of the Supabase project.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>supabase_project</p>
              */
             public Builder projectName(String projectName) {
                 this.projectName = projectName;
@@ -547,7 +600,10 @@ public class ListSupabaseProjectsResponseBody extends TeaModel {
             }
 
             /**
-             * ProjectSpec.
+             * <p>The type of the Supabase instance.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1C1G</p>
              */
             public Builder projectSpec(String projectSpec) {
                 this.projectSpec = projectSpec;
@@ -555,7 +611,10 @@ public class ListSupabaseProjectsResponseBody extends TeaModel {
             }
 
             /**
-             * PublicConnectUrl.
+             * <p>The public connection URL for the Supabase Dashboard.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>10.154.11.10</p>
              */
             public Builder publicConnectUrl(String publicConnectUrl) {
                 this.publicConnectUrl = publicConnectUrl;
@@ -563,7 +622,10 @@ public class ListSupabaseProjectsResponseBody extends TeaModel {
             }
 
             /**
-             * RegionId.
+             * <p>The region ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>cn-hangzhou</p>
              */
             public Builder regionId(String regionId) {
                 this.regionId = regionId;
@@ -571,7 +633,15 @@ public class ListSupabaseProjectsResponseBody extends TeaModel {
             }
 
             /**
-             * SecurityIPList.
+             * <p>A comma-separated list of IP addresses and CIDR blocks allowed to connect. Valid values:</p>
+             * <ul>
+             * <li>0.0.0.0/0</li>
+             * <li>10.23.12.24(IP)</li>
+             * <li>10.23.12.24/24. This is a CIDR block. The value<code>/24</code>indicates that the prefix of the CIDR block is 24-bit long. You can replace 24 with a value in the range of<code>[1,32]</code>.</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>127.0.0.1</p>
              */
             public Builder securityIPList(String securityIPList) {
                 this.securityIPList = securityIPList;
@@ -579,7 +649,10 @@ public class ListSupabaseProjectsResponseBody extends TeaModel {
             }
 
             /**
-             * Status.
+             * <p>The status of the Supabase instance.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>running</p>
              */
             public Builder status(String status) {
                 this.status = status;
@@ -587,7 +660,10 @@ public class ListSupabaseProjectsResponseBody extends TeaModel {
             }
 
             /**
-             * StorageSize.
+             * <p>The storage capacity of the instance. Unit: GB.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2</p>
              */
             public Builder storageSize(Long storageSize) {
                 this.storageSize = storageSize;
@@ -595,7 +671,7 @@ public class ListSupabaseProjectsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>vSwitch ID。</p>
+             * <p>The vSwitch ID of the instance.</p>
              * 
              * <strong>example:</strong>
              * <p>vsw-bp1cpq8mr64paltkb****</p>
@@ -606,7 +682,7 @@ public class ListSupabaseProjectsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>VPC ID。</p>
+             * <p>The VPC ID.</p>
              * 
              * <strong>example:</strong>
              * <p>vpc-bp19ame5m1r3oejns****</p>
@@ -617,7 +693,10 @@ public class ListSupabaseProjectsResponseBody extends TeaModel {
             }
 
             /**
-             * ZoneId.
+             * <p>The zone ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>cn-hangzhou-h</p>
              */
             public Builder zoneId(String zoneId) {
                 this.zoneId = zoneId;

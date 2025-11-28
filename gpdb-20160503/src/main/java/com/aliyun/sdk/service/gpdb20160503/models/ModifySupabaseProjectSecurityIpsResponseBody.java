@@ -54,7 +54,10 @@ public class ModifySupabaseProjectSecurityIpsResponseBody extends TeaModel {
         } 
 
         /**
-         * RequestId.
+         * <p>The unique ID of the request.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>ABB39CC3-4488-4857-905D-2E4A051D****</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;

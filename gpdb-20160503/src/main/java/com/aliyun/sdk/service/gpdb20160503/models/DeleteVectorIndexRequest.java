@@ -260,7 +260,14 @@ public class DeleteVectorIndexRequest extends Request {
         }
 
         /**
-         * Type.
+         * <p>The vector type. Valid values:</p>
+         * <ul>
+         * <li>Dense (default)</li>
+         * <li>Sparse</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>Dense</p>
          */
         public Builder type(String type) {
             this.putQueryParameter("Type", type);

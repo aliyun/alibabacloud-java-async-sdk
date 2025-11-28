@@ -93,7 +93,7 @@ public class DescribeCreateIndexJobResponseBody extends TeaModel {
         } 
 
         /**
-         * Job.
+         * <p>The details of the index creation job.</p>
          */
         public Builder job(Job job) {
             this.job = job;
@@ -101,7 +101,10 @@ public class DescribeCreateIndexJobResponseBody extends TeaModel {
         }
 
         /**
-         * Message.
+         * <p>The returned message.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>success</p>
          */
         public Builder message(String message) {
             this.message = message;
@@ -109,7 +112,10 @@ public class DescribeCreateIndexJobResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * <p>The unique ID of the request.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>ABB39CC3-4488-4857-905D-2E4A051D0521</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -117,7 +123,14 @@ public class DescribeCreateIndexJobResponseBody extends TeaModel {
         }
 
         /**
-         * Status.
+         * <p>The status of the operation. Valid values:</p>
+         * <ul>
+         * <li><strong>success</strong>.</li>
+         * <li><strong>fail</strong>.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>success</p>
          */
         public Builder status(String status) {
             this.status = status;
@@ -248,7 +261,10 @@ public class DescribeCreateIndexJobResponseBody extends TeaModel {
             } 
 
             /**
-             * Completed.
+             * <p>Indicates whether the operation is complete.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>false</p>
              */
             public Builder completed(Boolean completed) {
                 this.completed = completed;
@@ -256,7 +272,10 @@ public class DescribeCreateIndexJobResponseBody extends TeaModel {
             }
 
             /**
-             * CreateTime.
+             * <p>The job creation time.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2024-01-08 16:52:04.864664</p>
              */
             public Builder createTime(String createTime) {
                 this.createTime = createTime;
@@ -264,7 +283,10 @@ public class DescribeCreateIndexJobResponseBody extends TeaModel {
             }
 
             /**
-             * Error.
+             * <p>The error message that is returned when the current operation is abnormal or fails.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Failed to connect database.</p>
              */
             public Builder error(String error) {
                 this.error = error;
@@ -272,7 +294,7 @@ public class DescribeCreateIndexJobResponseBody extends TeaModel {
             }
 
             /**
-             * <p>Job ID。</p>
+             * <p>The job ID.</p>
              * 
              * <strong>example:</strong>
              * <p>231460f8-75dc-405e-a669-0c5204887e91</p>
@@ -283,7 +305,15 @@ public class DescribeCreateIndexJobResponseBody extends TeaModel {
             }
 
             /**
-             * Progress.
+             * <p>The progress of the index creation job. Unit: %. A value of 100 indicates that the job is complete.</p>
+             * <blockquote>
+             * </blockquote>
+             * <ul>
+             * <li>Only AnalyticDB for PostgreSQL V7.0 supports the Progress parameter.</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>20</p>
              */
             public Builder progress(Integer progress) {
                 this.progress = progress;
@@ -291,7 +321,16 @@ public class DescribeCreateIndexJobResponseBody extends TeaModel {
             }
 
             /**
-             * Status.
+             * <p>The status of the job. Valid values:</p>
+             * <ul>
+             * <li><strong>Success.</strong></li>
+             * <li><strong>Failed</strong> (See the Error parameter for failure reasons).</li>
+             * <li><strong>Cancelled.</strong></li>
+             * <li>**Running.</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>Running</p>
              */
             public Builder status(String status) {
                 this.status = status;
@@ -299,7 +338,10 @@ public class DescribeCreateIndexJobResponseBody extends TeaModel {
             }
 
             /**
-             * UpdateTime.
+             * <p>The job last updated time.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2024-01-08 16:53:04.864664</p>
              */
             public Builder updateTime(String updateTime) {
                 this.updateTime = updateTime;

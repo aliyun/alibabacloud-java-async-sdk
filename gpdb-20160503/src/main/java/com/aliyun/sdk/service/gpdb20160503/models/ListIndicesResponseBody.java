@@ -93,7 +93,7 @@ public class ListIndicesResponseBody extends TeaModel {
         } 
 
         /**
-         * Indices.
+         * <p>The queried indexes.</p>
          */
         public Builder indices(Indices indices) {
             this.indices = indices;
@@ -101,7 +101,10 @@ public class ListIndicesResponseBody extends TeaModel {
         }
 
         /**
-         * Message.
+         * <p>The returned message.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>success</p>
          */
         public Builder message(String message) {
             this.message = message;
@@ -120,7 +123,14 @@ public class ListIndicesResponseBody extends TeaModel {
         }
 
         /**
-         * Status.
+         * <p>The status of the operation. Valid values:</p>
+         * <ul>
+         * <li><strong>success</strong>.</li>
+         * <li><strong>fail</strong>.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>success</p>
          */
         public Builder status(String status) {
             this.status = status;
@@ -212,7 +222,10 @@ public class ListIndicesResponseBody extends TeaModel {
             } 
 
             /**
-             * Collection.
+             * <p>The name of the collection.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>testcollection</p>
              */
             public Builder collection(String collection) {
                 this.collection = collection;
@@ -220,7 +233,10 @@ public class ListIndicesResponseBody extends TeaModel {
             }
 
             /**
-             * IndexDef.
+             * <p>The definition of the index.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>CREATE INDEX testindex ON mynamespace. testcollection</p>
              */
             public Builder indexDef(String indexDef) {
                 this.indexDef = indexDef;
@@ -228,7 +244,10 @@ public class ListIndicesResponseBody extends TeaModel {
             }
 
             /**
-             * IndexName.
+             * <p>The name of the index.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>testindex</p>
              */
             public Builder indexName(String indexName) {
                 this.indexName = indexName;
@@ -236,7 +255,10 @@ public class ListIndicesResponseBody extends TeaModel {
             }
 
             /**
-             * Namespace.
+             * <p>The namespace to which the pod belongs.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>mynamespace</p>
              */
             public Builder namespace(String namespace) {
                 this.namespace = namespace;
@@ -290,7 +312,7 @@ public class ListIndicesResponseBody extends TeaModel {
             } 
 
             /**
-             * Indices.
+             * <p>The queried indexes.</p>
              */
             public Builder indices(java.util.List<IndicesIndices> indices) {
                 this.indices = indices;

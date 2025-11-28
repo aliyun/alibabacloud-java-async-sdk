@@ -319,7 +319,10 @@ public class DescribeCollectionResponseBody extends TeaModel {
         }
 
         /**
-         * SparseVectorMetrics.
+         * <p>The method that is used to create sparse vector indexes.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>ip</p>
          */
         public Builder sparseVectorMetrics(String sparseVectorMetrics) {
             this.sparseVectorMetrics = sparseVectorMetrics;
@@ -342,7 +345,10 @@ public class DescribeCollectionResponseBody extends TeaModel {
         }
 
         /**
-         * SupportSparse.
+         * <p>Indicates whether sparse vectors are supported.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder supportSparse(Boolean supportSparse) {
             this.supportSparse = supportSparse;

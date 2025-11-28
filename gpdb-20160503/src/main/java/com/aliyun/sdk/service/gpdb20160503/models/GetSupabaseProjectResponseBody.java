@@ -288,7 +288,10 @@ public class GetSupabaseProjectResponseBody extends TeaModel {
         } 
 
         /**
-         * CreateTime.
+         * <p>The creation time.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2019-09-08T16:00:00Z</p>
          */
         public Builder createTime(String createTime) {
             this.createTime = createTime;
@@ -296,7 +299,10 @@ public class GetSupabaseProjectResponseBody extends TeaModel {
         }
 
         /**
-         * DashboardPassword.
+         * <p>The Supabase Dashboard password (Not Used)</p>
+         * 
+         * <strong>example:</strong>
+         * <p>xxpassword</p>
          */
         public Builder dashboardPassword(String dashboardPassword) {
             this.dashboardPassword = dashboardPassword;
@@ -304,7 +310,10 @@ public class GetSupabaseProjectResponseBody extends TeaModel {
         }
 
         /**
-         * DashboardUserName.
+         * <p>The Supabase Dashboard user name (Not Used)</p>
+         * 
+         * <strong>example:</strong>
+         * <p>username</p>
          */
         public Builder dashboardUserName(String dashboardUserName) {
             this.dashboardUserName = dashboardUserName;
@@ -312,7 +321,14 @@ public class GetSupabaseProjectResponseBody extends TeaModel {
         }
 
         /**
-         * DiskPerformanceLevel.
+         * <p>The Enterprise SSD (ESSD) performance level of the cluster. Valid values:</p>
+         * <ul>
+         * <li>PL0</li>
+         * <li>PL1</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>PL0</p>
          */
         public Builder diskPerformanceLevel(String diskPerformanceLevel) {
             this.diskPerformanceLevel = diskPerformanceLevel;
@@ -320,7 +336,10 @@ public class GetSupabaseProjectResponseBody extends TeaModel {
         }
 
         /**
-         * Engine.
+         * <p>The type of the database engine.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>postgres</p>
          */
         public Builder engine(String engine) {
             this.engine = engine;
@@ -328,7 +347,10 @@ public class GetSupabaseProjectResponseBody extends TeaModel {
         }
 
         /**
-         * EngineVersion.
+         * <p>The version of the database engine.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>15</p>
          */
         public Builder engineVersion(String engineVersion) {
             this.engineVersion = engineVersion;
@@ -336,7 +358,10 @@ public class GetSupabaseProjectResponseBody extends TeaModel {
         }
 
         /**
-         * PrivateConnectUrl.
+         * <p>The private (VPC) connection URL for the Supabase Dashboard.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>192.168.0.11</p>
          */
         public Builder privateConnectUrl(String privateConnectUrl) {
             this.privateConnectUrl = privateConnectUrl;
@@ -344,7 +369,10 @@ public class GetSupabaseProjectResponseBody extends TeaModel {
         }
 
         /**
-         * ProjectId.
+         * <p>The Supabase instance ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>sbp-545434</p>
          */
         public Builder projectId(String projectId) {
             this.projectId = projectId;
@@ -352,7 +380,10 @@ public class GetSupabaseProjectResponseBody extends TeaModel {
         }
 
         /**
-         * ProjectName.
+         * <p>The name of the Supabase project.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>supabase_project</p>
          */
         public Builder projectName(String projectName) {
             this.projectName = projectName;
@@ -360,7 +391,10 @@ public class GetSupabaseProjectResponseBody extends TeaModel {
         }
 
         /**
-         * ProjectSpec.
+         * <p>The performance level of the Supabase instance.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1C1G</p>
          */
         public Builder projectSpec(String projectSpec) {
             this.projectSpec = projectSpec;
@@ -368,7 +402,10 @@ public class GetSupabaseProjectResponseBody extends TeaModel {
         }
 
         /**
-         * PublicConnectUrl.
+         * <p>The public connection URL for the Supabase Dashboard.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10.154.11.10</p>
          */
         public Builder publicConnectUrl(String publicConnectUrl) {
             this.publicConnectUrl = publicConnectUrl;
@@ -376,7 +413,13 @@ public class GetSupabaseProjectResponseBody extends TeaModel {
         }
 
         /**
-         * RegionId.
+         * <p>The region ID of the cluster.</p>
+         * <blockquote>
+         * <p>You can call the <a href="https://help.aliyun.com/document_detail/86912.html">DescribeRegions</a> operation to query the most recent region list.</p>
+         * </blockquote>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-hangzhou</p>
          */
         public Builder regionId(String regionId) {
             this.regionId = regionId;
@@ -384,7 +427,10 @@ public class GetSupabaseProjectResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * <p>The unique ID of the request.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>ABB39CC3-4488-4857-905D-2E4A051D****</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -392,7 +438,10 @@ public class GetSupabaseProjectResponseBody extends TeaModel {
         }
 
         /**
-         * SecurityIpList.
+         * <p>A comma-separated list of IP addresses and CIDR blocks allowed to connect.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>127.0.0.1</p>
          */
         public Builder securityIpList(String securityIpList) {
             this.securityIpList = securityIpList;
@@ -400,7 +449,10 @@ public class GetSupabaseProjectResponseBody extends TeaModel {
         }
 
         /**
-         * Status.
+         * <p>The status of the Supabase instance.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>running</p>
          */
         public Builder status(String status) {
             this.status = status;
@@ -408,7 +460,10 @@ public class GetSupabaseProjectResponseBody extends TeaModel {
         }
 
         /**
-         * StorageSize.
+         * <p>The storage capacity of the instance. Unit: GB.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2</p>
          */
         public Builder storageSize(Long storageSize) {
             this.storageSize = storageSize;
@@ -416,7 +471,10 @@ public class GetSupabaseProjectResponseBody extends TeaModel {
         }
 
         /**
-         * VSwitchId.
+         * <p>The vSwitch ID of the instance. This parameter must be specified when VPCId is specified.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>vsw-bp1cpq8mr64paltkb****</p>
          */
         public Builder vSwitchId(String vSwitchId) {
             this.vSwitchId = vSwitchId;
@@ -424,7 +482,18 @@ public class GetSupabaseProjectResponseBody extends TeaModel {
         }
 
         /**
-         * VpcId.
+         * <p>The VPC ID.</p>
+         * <blockquote>
+         * </blockquote>
+         * <ul>
+         * <li><p>You can call the <a href="https://help.aliyun.com/document_detail/208327.html">DescribeRdsVpcs</a> operation to query the available VPC IDs.</p>
+         * </li>
+         * <li><p>This parameter is required.</p>
+         * </li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>vpc-bp*******************</p>
          */
         public Builder vpcId(String vpcId) {
             this.vpcId = vpcId;
@@ -432,7 +501,13 @@ public class GetSupabaseProjectResponseBody extends TeaModel {
         }
 
         /**
-         * ZoneId.
+         * <p>The zone ID.</p>
+         * <blockquote>
+         * <p>You can call the <a href="https://help.aliyun.com/document_detail/86912.html">DescribeRegions</a> operation to query the most recent region list and zone list.</p>
+         * </blockquote>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-hangzhou-i</p>
          */
         public Builder zoneId(String zoneId) {
             this.zoneId = zoneId;

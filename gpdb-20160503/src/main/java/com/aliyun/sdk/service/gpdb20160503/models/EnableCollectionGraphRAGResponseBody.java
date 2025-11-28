@@ -93,7 +93,10 @@ public class EnableCollectionGraphRAGResponseBody extends TeaModel {
         } 
 
         /**
-         * JobId.
+         * <p>The ID of the job. You can use the <code>GetGraphRAGJob</code> to view the job status.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>231460f8-75dc-405e-a669-0c5204887e91</p>
          */
         public Builder jobId(String jobId) {
             this.jobId = jobId;
@@ -101,7 +104,10 @@ public class EnableCollectionGraphRAGResponseBody extends TeaModel {
         }
 
         /**
-         * Message.
+         * <p>The response message.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>success</p>
          */
         public Builder message(String message) {
             this.message = message;
@@ -109,7 +115,10 @@ public class EnableCollectionGraphRAGResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * <p>The unique ID of the request.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>ABB39CC3-4488-4857-905D-2E4A051D0521</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -117,7 +126,14 @@ public class EnableCollectionGraphRAGResponseBody extends TeaModel {
         }
 
         /**
-         * Status.
+         * <p>The status of the operation. Valid values:</p>
+         * <ul>
+         * <li><strong>success</strong></li>
+         * <li><strong>fail</strong></li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>success</p>
          */
         public Builder status(String status) {
             this.status = status;

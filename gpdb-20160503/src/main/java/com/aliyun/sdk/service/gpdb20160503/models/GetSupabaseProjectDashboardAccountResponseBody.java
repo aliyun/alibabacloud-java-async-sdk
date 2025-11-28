@@ -106,7 +106,10 @@ public class GetSupabaseProjectDashboardAccountResponseBody extends TeaModel {
         } 
 
         /**
-         * DashboardPassword.
+         * <p>The username for accessing the project&quot;s dashboard.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>xxpassword</p>
          */
         public Builder dashboardPassword(String dashboardPassword) {
             this.dashboardPassword = dashboardPassword;
@@ -114,7 +117,10 @@ public class GetSupabaseProjectDashboardAccountResponseBody extends TeaModel {
         }
 
         /**
-         * DashboardUsername.
+         * <p>The password associated with the dashboard username.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>xxuser</p>
          */
         public Builder dashboardUsername(String dashboardUsername) {
             this.dashboardUsername = dashboardUsername;
@@ -122,7 +128,10 @@ public class GetSupabaseProjectDashboardAccountResponseBody extends TeaModel {
         }
 
         /**
-         * ProjectId.
+         * <p>The ID of the Supabase project.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>sbp-twmoe9bakow</p>
          */
         public Builder projectId(String projectId) {
             this.projectId = projectId;
@@ -130,7 +139,10 @@ public class GetSupabaseProjectDashboardAccountResponseBody extends TeaModel {
         }
 
         /**
-         * ProjectName.
+         * <p>The name of the Supabase project.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>supabase_prod</p>
          */
         public Builder projectName(String projectName) {
             this.projectName = projectName;
@@ -138,7 +150,10 @@ public class GetSupabaseProjectDashboardAccountResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * <p>The unique ID of the request.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>ABB39CC3-4488-4857-905D-2E4A051D****</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;

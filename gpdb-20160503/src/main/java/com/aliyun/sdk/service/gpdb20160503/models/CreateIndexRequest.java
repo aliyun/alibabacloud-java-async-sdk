@@ -189,6 +189,10 @@ public class CreateIndexRequest extends Request {
         } 
 
         /**
+         * <p>The name of the collection.</p>
+         * <blockquote>
+         * <p>You can call the <a href="https://help.aliyun.com/document_detail/2401503.html">ListCollections</a> operation to query a list of collections.</p>
+         * </blockquote>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -201,7 +205,13 @@ public class CreateIndexRequest extends Request {
         }
 
         /**
-         * DBInstanceId.
+         * <p>The cluster ID.</p>
+         * <blockquote>
+         * <p>You can call the <a href="https://help.aliyun.com/document_detail/86911.html">DescribeDBInstances</a> operation to query the IDs of all AnalyticDB for PostgreSQL instances in the specified region.</p>
+         * </blockquote>
+         * 
+         * <strong>example:</strong>
+         * <p>gp-xxxxxxxxx</p>
          */
         public Builder DBInstanceId(String DBInstanceId) {
             this.putQueryParameter("DBInstanceId", DBInstanceId);
@@ -210,7 +220,15 @@ public class CreateIndexRequest extends Request {
         }
 
         /**
-         * IndexConfig.
+         * <p>The index parameter. If you do not specify this parameter, a B-tree index is created.</p>
+         * <blockquote>
+         * </blockquote>
+         * <ul>
+         * <li><p>b-tree: To create a B-tree index, set the fillFactor parameter to a value between 10 and 100. Default value: 90.</p>
+         * </li>
+         * <li><p>gin: To create a GIN index, set the fastUpdate parameter to true or false. Default value: true.</p>
+         * </li>
+         * </ul>
          */
         public Builder indexConfig(String indexConfig) {
             this.putQueryParameter("IndexConfig", indexConfig);
@@ -219,7 +237,10 @@ public class CreateIndexRequest extends Request {
         }
 
         /**
-         * IndexField.
+         * <p>The index field. Only a single field is supported, and it must be a key defined in metadata.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>title</p>
          */
         public Builder indexField(String indexField) {
             this.putQueryParameter("IndexField", indexField);
@@ -228,7 +249,10 @@ public class CreateIndexRequest extends Request {
         }
 
         /**
-         * IndexName.
+         * <p>The name of the index.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>testindex</p>
          */
         public Builder indexName(String indexName) {
             this.putQueryParameter("IndexName", indexName);
@@ -237,6 +261,10 @@ public class CreateIndexRequest extends Request {
         }
 
         /**
+         * <p>The namespace name.</p>
+         * <blockquote>
+         * <p>You can call the <a href="https://help.aliyun.com/document_detail/2401502.html">ListNamespaces</a> operation to query a list of namespaces.</p>
+         * </blockquote>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -249,6 +277,10 @@ public class CreateIndexRequest extends Request {
         }
 
         /**
+         * <p>The password of the namespace.</p>
+         * <blockquote>
+         * <p>The value of this parameter is specified by the CreateNamespace operation.</p>
+         * </blockquote>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -270,6 +302,7 @@ public class CreateIndexRequest extends Request {
         }
 
         /**
+         * <p>The region ID of the instance.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -282,7 +315,16 @@ public class CreateIndexRequest extends Request {
         }
 
         /**
-         * WorkspaceId.
+         * <p>The ID of the workspace that consists of multiple AnalyticDB for PostgreSQL instances. This parameter and DBInstanceId cannot both be empty. If both parameters are specified, this value takes precedence.</p>
+         * <p>Valid values:</p>
+         * <ul>
+         * <li>ip</li>
+         * <li>l2</li>
+         * <li>cosine</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>gp-ws-*****</p>
          */
         public Builder workspaceId(String workspaceId) {
             this.putQueryParameter("WorkspaceId", workspaceId);

@@ -103,6 +103,7 @@ public class DeleteAINodeRequest extends Request {
         } 
 
         /**
+         * <p>The number of AINodes to be deleted.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -115,7 +116,10 @@ public class DeleteAINodeRequest extends Request {
         }
 
         /**
-         * AINodePoolId.
+         * <p>The ID of the AINode resource pool.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>aipool-xxxx</p>
          */
         public Builder AINodePoolId(String AINodePoolId) {
             this.putQueryParameter("AINodePoolId", AINodePoolId);
@@ -124,6 +128,10 @@ public class DeleteAINodeRequest extends Request {
         }
 
         /**
+         * <p>The ID of the instance.</p>
+         * <blockquote>
+         * <p>You can call the <a href="https://help.aliyun.com/document_detail/86911.html">DescribeDBInstances</a> operation to query the information about all AnalyticDB for PostgreSQL instances within a region, including instance IDs.</p>
+         * </blockquote>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -136,7 +144,7 @@ public class DeleteAINodeRequest extends Request {
         }
 
         /**
-         * NodeNames.
+         * <p>The list of AINodes to be deleted.</p>
          */
         public Builder nodeNames(java.util.List<String> nodeNames) {
             this.putQueryParameter("NodeNames", nodeNames);

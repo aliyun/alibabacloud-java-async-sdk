@@ -197,7 +197,7 @@ public class DescribeModelServiceResponseBody extends TeaModel {
         } 
 
         /**
-         * AiNodes.
+         * <p>The list of AI nodes.</p>
          */
         public Builder aiNodes(java.util.List<String> aiNodes) {
             this.aiNodes = aiNodes;
@@ -205,7 +205,10 @@ public class DescribeModelServiceResponseBody extends TeaModel {
         }
 
         /**
-         * ApiKey.
+         * <p>The API key.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cx/Y57lTNf*********</p>
          */
         public Builder apiKey(String apiKey) {
             this.apiKey = apiKey;
@@ -213,7 +216,10 @@ public class DescribeModelServiceResponseBody extends TeaModel {
         }
 
         /**
-         * CreateTime.
+         * <p>The creation time.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2019-09-08T16:00:00Z</p>
          */
         public Builder createTime(String createTime) {
             this.createTime = createTime;
@@ -221,7 +227,10 @@ public class DescribeModelServiceResponseBody extends TeaModel {
         }
 
         /**
-         * Description.
+         * <p>The description.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>test</p>
          */
         public Builder description(String description) {
             this.description = description;
@@ -229,7 +238,10 @@ public class DescribeModelServiceResponseBody extends TeaModel {
         }
 
         /**
-         * ModelName.
+         * <p>The model name.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Qwen3-Embedding-8B</p>
          */
         public Builder modelName(String modelName) {
             this.modelName = modelName;
@@ -237,7 +249,7 @@ public class DescribeModelServiceResponseBody extends TeaModel {
         }
 
         /**
-         * ModelParams.
+         * <p>Model parameters.</p>
          */
         public Builder modelParams(java.util.Map<String, ?> modelParams) {
             this.modelParams = modelParams;
@@ -245,7 +257,10 @@ public class DescribeModelServiceResponseBody extends TeaModel {
         }
 
         /**
-         * ModelServiceId.
+         * <p>The model service ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>ms-xxxxxxxxx</p>
          */
         public Builder modelServiceId(String modelServiceId) {
             this.modelServiceId = modelServiceId;
@@ -253,7 +268,10 @@ public class DescribeModelServiceResponseBody extends TeaModel {
         }
 
         /**
-         * PrivateConnectUrl.
+         * <p>The internal endpoint.</p>
+         * 
+         * <strong>example:</strong>
+         * <p><a href="http://ms-xxxxxxx.xxxx.rds.aliyuncs.com">http://ms-xxxxxxx.xxxx.rds.aliyuncs.com</a></p>
          */
         public Builder privateConnectUrl(String privateConnectUrl) {
             this.privateConnectUrl = privateConnectUrl;
@@ -261,7 +279,10 @@ public class DescribeModelServiceResponseBody extends TeaModel {
         }
 
         /**
-         * PublicConnectUrl.
+         * <p>The public endpoint.</p>
+         * 
+         * <strong>example:</strong>
+         * <p><a href="http://ms-xxxxxxx-o.xxxx.rds.aliyuncs.com">http://ms-xxxxxxx-o.xxxx.rds.aliyuncs.com</a></p>
          */
         public Builder publicConnectUrl(String publicConnectUrl) {
             this.publicConnectUrl = publicConnectUrl;
@@ -269,7 +290,10 @@ public class DescribeModelServiceResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * <p>Request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>ABB39CC3-4488-4857-905D-2E4A051D0521</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -277,7 +301,10 @@ public class DescribeModelServiceResponseBody extends TeaModel {
         }
 
         /**
-         * SecurityIpList.
+         * <p>A comma-separated list of IP addresses and CIDR blocks allowed to connect.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>127.0.0.1</p>
          */
         public Builder securityIpList(String securityIpList) {
             this.securityIpList = securityIpList;
@@ -285,7 +312,13 @@ public class DescribeModelServiceResponseBody extends TeaModel {
         }
 
         /**
-         * Status.
+         * <p>The status of the model service.</p>
+         * 
+         * <strong>example:</strong>
+         * <ul>
+         * <li>deployming</li>
+         * <li>active</li>
+         * </ul>
          */
         public Builder status(String status) {
             this.status = status;

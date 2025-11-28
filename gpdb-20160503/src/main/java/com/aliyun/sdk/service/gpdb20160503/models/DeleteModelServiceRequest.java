@@ -75,6 +75,7 @@ public class DeleteModelServiceRequest extends Request {
         } 
 
         /**
+         * <p>The cluster ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -87,6 +88,7 @@ public class DeleteModelServiceRequest extends Request {
         }
 
         /**
+         * <p>The ID of the model service to be deleted.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>

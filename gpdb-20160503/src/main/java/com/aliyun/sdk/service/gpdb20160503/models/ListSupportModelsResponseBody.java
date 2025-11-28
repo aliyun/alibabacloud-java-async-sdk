@@ -67,7 +67,7 @@ public class ListSupportModelsResponseBody extends TeaModel {
         } 
 
         /**
-         * ModelNames.
+         * <p>The list of supported model names.</p>
          */
         public Builder modelNames(ModelNames modelNames) {
             this.modelNames = modelNames;
@@ -75,7 +75,10 @@ public class ListSupportModelsResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * <p>The unique ID of the request.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>ABB39CC3-4488-4857-905D-2E4A051D0521</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;

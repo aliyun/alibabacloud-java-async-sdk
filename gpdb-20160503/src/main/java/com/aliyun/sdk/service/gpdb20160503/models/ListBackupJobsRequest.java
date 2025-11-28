@@ -74,7 +74,15 @@ public class ListBackupJobsRequest extends Request {
         } 
 
         /**
-         * BackupMode.
+         * <p>The backup mode. Valid values:</p>
+         * <ul>
+         * <li>Automated</li>
+         * <li>Manual</li>
+         * </ul>
+         * <p>If you do not specify this parameter, all backup sets are returned.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Automated</p>
          */
         public Builder backupMode(String backupMode) {
             this.putQueryParameter("BackupMode", backupMode);
@@ -83,6 +91,10 @@ public class ListBackupJobsRequest extends Request {
         }
 
         /**
+         * <p>The instance ID.</p>
+         * <blockquote>
+         * <p> You can call the <a href="https://help.aliyun.com/document_detail/86911.html">DescribeDBInstances</a> operation to query the information about all AnalyticDB for PostgreSQL instances within a region, including instance IDs.</p>
+         * </blockquote>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>

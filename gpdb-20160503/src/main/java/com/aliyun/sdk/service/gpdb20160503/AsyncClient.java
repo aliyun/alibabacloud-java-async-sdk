@@ -20,6 +20,12 @@ public interface AsyncClient extends SdkAutoCloseable {
     }
 
     /**
+     * <b>description</b> :
+     * <h2><a href="#"></a>Usage notes</h2>
+     * <p>This operation is used to add an AINode node.</p>
+     * <h2><a href="#qps-"></a>QPS limit</h2>
+     * <p>You can call this operation up to 1,000 times per second per account. Exceeding the limit will trigger API rate limiting, which may impact your business. Please call the API responsibly.</p>
+     * 
      * @param request the request parameters of AddAINode  AddAINodeRequest
      * @return AddAINodeResponse
      */
@@ -74,7 +80,13 @@ public interface AsyncClient extends SdkAutoCloseable {
 
     /**
      * <b>description</b> :
-     * <p>通过结合知识库和大模型，提供智能问答服务。</p>
+     * <p>This API enables users to query a large language model with answers grounded in a specified knowledge base collection. You can configure multiple parameters to customize requests, including but not limited to database instance IDs, knowledge retrieval parameters, and model inference parameters. In addition, a default system prompt template is provided and users are allowed to customize the system prompt.</p>
+     * <ul>
+     * <li><strong>DBInstanceId</strong>: Required. This parameter specifies the ID of the database instance.</li>
+     * <li><strong>KnowledgeParams</strong>: optional. It contains parameters related to knowledge retrieval, such as retrieval content and merge policy.</li>
+     * <li><strong>ModelParams</strong>: required. It contains parameters related to model inference, such as the message list and the name of the model.</li>
+     * <li><strong>PromptTemplate</strong>: optional. It is used to customize the system prompt template.</li>
+     * </ul>
      * 
      * @param request the request parameters of ChatWithKnowledgeBase  ChatWithKnowledgeBaseRequest
      * @return ChatWithKnowledgeBaseResponse
@@ -83,7 +95,13 @@ public interface AsyncClient extends SdkAutoCloseable {
 
     /**
      * <b>description</b> :
-     * <p>通过结合知识库和大模型，提供智能问答服务。</p>
+     * <p>This API enables users to query a large language model with answers grounded in a specified knowledge base collection. You can configure multiple parameters to customize requests, including but not limited to database instance IDs, knowledge retrieval parameters, and model inference parameters. In addition, a default system prompt template is provided and users are allowed to customize the system prompt.</p>
+     * <ul>
+     * <li>DBInstanceId: required. This parameter specifies the ID of the database instance.</li>
+     * <li>KnowledgeParams: optional. It contains parameters related to knowledge retrieval, such as retrieval content and merge policy.</li>
+     * <li>ModelParams: required. It contains parameters related to model inference, such as the message list and the name of the model.</li>
+     * <li>PromptTemplate: optional. It is used to customize a system prompt template.</li>
+     * </ul>
      * 
      * @param request the request parameters of ChatWithKnowledgeBaseStream  ChatWithKnowledgeBaseStreamRequest
      * @return ChatWithKnowledgeBaseStreamResponse
@@ -158,6 +176,12 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<CreateDBInstanceResponse> createDBInstance(CreateDBInstanceRequest request);
 
     /**
+     * @param request the request parameters of CreateDBInstanceIPArray  CreateDBInstanceIPArrayRequest
+     * @return CreateDBInstanceIPArrayResponse
+     */
+    CompletableFuture<CreateDBInstanceIPArrayResponse> createDBInstanceIPArray(CreateDBInstanceIPArrayRequest request);
+
+    /**
      * <b>description</b> :
      * <p>  The plan management feature is supported only for pay-as-you-go instances.</p>
      * <ul>
@@ -175,6 +199,12 @@ public interface AsyncClient extends SdkAutoCloseable {
      * @return CreateDBResourceGroupResponse
      */
     CompletableFuture<CreateDBResourceGroupResponse> createDBResourceGroup(CreateDBResourceGroupRequest request);
+
+    /**
+     * @param request the request parameters of CreateDatabase  CreateDatabaseRequest
+     * @return CreateDatabaseResponse
+     */
+    CompletableFuture<CreateDatabaseResponse> createDatabase(CreateDatabaseRequest request);
 
     /**
      * @param request the request parameters of CreateDocumentCollection  CreateDocumentCollectionRequest
@@ -213,6 +243,9 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<CreateJDBCDataSourceResponse> createJDBCDataSource(CreateJDBCDataSourceRequest request);
 
     /**
+     * <b>description</b> :
+     * <p>Before you call this operation, make sure that you fully understand the <a href="https://help.aliyun.com/document_detail/35406.html">billing methods</a> and <a href="https://www.alibabacloud.com/zh/product/hybriddb-postgresql/pricing">pricing</a> of AnalyticDB for PostgreSQL.</p>
+     * 
      * @param request the request parameters of CreateModelService  CreateModelServiceRequest
      * @return CreateModelServiceResponse
      */
@@ -274,6 +307,9 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<CreateStreamingJobResponse> createStreamingJob(CreateStreamingJobRequest request);
 
     /**
+     * <b>description</b> :
+     * <p>  You can call this operation to create a Supabase project.</p>
+     * 
      * @param request the request parameters of CreateSupabaseProject  CreateSupabaseProjectRequest
      * @return CreateSupabaseProjectResponse
      */
@@ -286,6 +322,12 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<CreateVectorIndexResponse> createVectorIndex(CreateVectorIndexRequest request);
 
     /**
+     * <b>description</b> :
+     * <p>  Subscription instances cannot be manually released. They are automatically released when they expire.</p>
+     * <ul>
+     * <li>You can call this operation to release pay-as-you-go instances only when they are in the <strong>Running</strong> state.</li>
+     * </ul>
+     * 
      * @param request the request parameters of DeleteAINode  DeleteAINodeRequest
      * @return DeleteAINodeResponse
      */
@@ -330,6 +372,12 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<DeleteDBInstanceResponse> deleteDBInstance(DeleteDBInstanceRequest request);
 
     /**
+     * @param request the request parameters of DeleteDBInstanceIPArray  DeleteDBInstanceIPArrayRequest
+     * @return DeleteDBInstanceIPArrayResponse
+     */
+    CompletableFuture<DeleteDBInstanceIPArrayResponse> deleteDBInstanceIPArray(DeleteDBInstanceIPArrayRequest request);
+
+    /**
      * <b>description</b> :
      * <p>If you no longer need a plan, you can call this operation to delete the plan. The plan management feature is supported only for AnalyticDB for PostgreSQL instances in Serverless mode.</p>
      * <h2>Limits</h2>
@@ -345,6 +393,12 @@ public interface AsyncClient extends SdkAutoCloseable {
      * @return DeleteDBResourceGroupResponse
      */
     CompletableFuture<DeleteDBResourceGroupResponse> deleteDBResourceGroup(DeleteDBResourceGroupRequest request);
+
+    /**
+     * @param request the request parameters of DeleteDatabase  DeleteDatabaseRequest
+     * @return DeleteDatabaseResponse
+     */
+    CompletableFuture<DeleteDatabaseResponse> deleteDatabase(DeleteDatabaseRequest request);
 
     /**
      * @param request the request parameters of DeleteDocument  DeleteDocumentRequest
@@ -389,6 +443,9 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<DeleteJDBCDataSourceResponse> deleteJDBCDataSource(DeleteJDBCDataSourceRequest request);
 
     /**
+     * <b>description</b> :
+     * <p>Deletes a model service.</p>
+     * 
      * @param request the request parameters of DeleteModelService  DeleteModelServiceRequest
      * @return DeleteModelServiceResponse
      */
@@ -399,6 +456,12 @@ public interface AsyncClient extends SdkAutoCloseable {
      * @return DeleteNamespaceResponse
      */
     CompletableFuture<DeleteNamespaceResponse> deleteNamespace(DeleteNamespaceRequest request);
+
+    /**
+     * @param request the request parameters of DeletePrivateRAGService  DeletePrivateRAGServiceRequest
+     * @return DeletePrivateRAGServiceResponse
+     */
+    CompletableFuture<DeletePrivateRAGServiceResponse> deletePrivateRAGService(DeletePrivateRAGServiceRequest request);
 
     /**
      * @param request the request parameters of DeleteRemoteADBDataSource  DeleteRemoteADBDataSourceRequest
@@ -431,6 +494,9 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<DeleteStreamingJobResponse> deleteStreamingJob(DeleteStreamingJobRequest request);
 
     /**
+     * <b>description</b> :
+     * <p>  You can call this operation to delete a Supabase project.</p>
+     * 
      * @param request the request parameters of DeleteSupabaseProject  DeleteSupabaseProjectRequest
      * @return DeleteSupabaseProjectResponse
      */
@@ -441,6 +507,12 @@ public interface AsyncClient extends SdkAutoCloseable {
      * @return DeleteVectorIndexResponse
      */
     CompletableFuture<DeleteVectorIndexResponse> deleteVectorIndex(DeleteVectorIndexRequest request);
+
+    /**
+     * @param request the request parameters of DeployPrivateRAGService  DeployPrivateRAGServiceRequest
+     * @return DeployPrivateRAGServiceResponse
+     */
+    CompletableFuture<DeployPrivateRAGServiceResponse> deployPrivateRAGService(DeployPrivateRAGServiceRequest request);
 
     /**
      * <b>description</b> :
@@ -695,6 +767,12 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<DescribeDataSharePerformanceResponse> describeDataSharePerformance(DescribeDataSharePerformanceRequest request);
 
     /**
+     * @param request the request parameters of DescribeDatabase  DescribeDatabaseRequest
+     * @return DescribeDatabaseResponse
+     */
+    CompletableFuture<DescribeDatabaseResponse> describeDatabase(DescribeDatabaseRequest request);
+
+    /**
      * <b>description</b> :
      * <p>To facilitate management, you can call this operation to query all databases and database accounts on an AnalyticDB for PostgreSQL instance.</p>
      * <h2>Limits</h2>
@@ -760,6 +838,12 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<DescribeDownloadSQLLogsResponse> describeDownloadSQLLogs(DescribeDownloadSQLLogsRequest request);
 
     /**
+     * @param request the request parameters of DescribeExtension  DescribeExtensionRequest
+     * @return DescribeExtensionResponse
+     */
+    CompletableFuture<DescribeExtensionResponse> describeExtension(DescribeExtensionRequest request);
+
+    /**
      * @param request the request parameters of DescribeExternalDataService  DescribeExternalDataServiceRequest
      * @return DescribeExternalDataServiceResponse
      */
@@ -819,6 +903,12 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<DescribeLogBackupsResponse> describeLogBackups(DescribeLogBackupsRequest request);
 
     /**
+     * <b>description</b> :
+     * <h2><a href="#"></a>Usage notes</h2>
+     * <p>This interface is used to view the details of a model service.</p>
+     * <h2><a href="#qps-"></a>QPS limit</h2>
+     * <p>You can call this operation up to 1,000 times per second per account. Requests that exceed this limit are dropped and you will experience service interruptions.We recommend that you take note of this limit when you call this operation.</p>
+     * 
      * @param request the request parameters of DescribeModelService  DescribeModelServiceRequest
      * @return DescribeModelServiceResponse
      */
@@ -848,6 +938,12 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<DescribeParametersResponse> describeParameters(DescribeParametersRequest request);
 
     /**
+     * @param request the request parameters of DescribePrivateRAGService  DescribePrivateRAGServiceRequest
+     * @return DescribePrivateRAGServiceResponse
+     */
+    CompletableFuture<DescribePrivateRAGServiceResponse> describePrivateRAGService(DescribePrivateRAGServiceRequest request);
+
+    /**
      * <b>description</b> :
      * <p>When you create AnalyticDB for PostgreSQL instances, you can call this operation to query the details of vSwitches within a specified region or zone.</p>
      * <h2>Limits</h2>
@@ -868,6 +964,12 @@ public interface AsyncClient extends SdkAutoCloseable {
      * @return DescribeRdsVpcsResponse
      */
     CompletableFuture<DescribeRdsVpcsResponse> describeRdsVpcs(DescribeRdsVpcsRequest request);
+
+    /**
+     * @param request the request parameters of DescribeRebalanceStatus  DescribeRebalanceStatusRequest
+     * @return DescribeRebalanceStatusResponse
+     */
+    CompletableFuture<DescribeRebalanceStatusResponse> describeRebalanceStatus(DescribeRebalanceStatusRequest request);
 
     /**
      * <b>description</b> :
@@ -991,6 +1093,12 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<DescribeWaitingSQLRecordsResponse> describeWaitingSQLRecords(DescribeWaitingSQLRecordsRequest request);
 
     /**
+     * @param request the request parameters of DescribeZonesPrivateRAGService  DescribeZonesPrivateRAGServiceRequest
+     * @return DescribeZonesPrivateRAGServiceResponse
+     */
+    CompletableFuture<DescribeZonesPrivateRAGServiceResponse> describeZonesPrivateRAGService(DescribeZonesPrivateRAGServiceRequest request);
+
+    /**
      * <b>description</b> :
      * <p>  You can call this operation only for AnalyticDB for PostgreSQL V6.0 instances in elastic storage mode whose minor version is V6.6.1.0 or later.</p>
      * <ul>
@@ -1020,6 +1128,12 @@ public interface AsyncClient extends SdkAutoCloseable {
      * @return DownloadSQLLogsRecordsResponse
      */
     CompletableFuture<DownloadSQLLogsRecordsResponse> downloadSQLLogsRecords(DownloadSQLLogsRecordsRequest request);
+
+    /**
+     * @param request the request parameters of DownloadSlowSQLRecords  DownloadSlowSQLRecordsRequest
+     * @return DownloadSlowSQLRecordsResponse
+     */
+    CompletableFuture<DownloadSlowSQLRecordsResponse> downloadSlowSQLRecords(DownloadSlowSQLRecordsRequest request);
 
     /**
      * @param request the request parameters of EnableCollectionGraphRAG  EnableCollectionGraphRAGRequest
@@ -1071,18 +1185,27 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<GetStatementResultResponse> getStatementResult(GetStatementResultRequest request);
 
     /**
+     * <b>description</b> :
+     * <p>This interface is used to query the details of a Supabase instance.</p>
+     * 
      * @param request the request parameters of GetSupabaseProject  GetSupabaseProjectRequest
      * @return GetSupabaseProjectResponse
      */
     CompletableFuture<GetSupabaseProjectResponse> getSupabaseProject(GetSupabaseProjectRequest request);
 
     /**
+     * <b>description</b> :
+     * <p>You can call this operation to query a list of API keys for a Supabase project.</p>
+     * 
      * @param request the request parameters of GetSupabaseProjectApiKeys  GetSupabaseProjectApiKeysRequest
      * @return GetSupabaseProjectApiKeysResponse
      */
     CompletableFuture<GetSupabaseProjectApiKeysResponse> getSupabaseProjectApiKeys(GetSupabaseProjectApiKeysRequest request);
 
     /**
+     * <b>description</b> :
+     * <p>Query Supabase Project Dashboard Account Information</p>
+     * 
      * @param request the request parameters of GetSupabaseProjectDashboardAccount  GetSupabaseProjectDashboardAccountRequest
      * @return GetSupabaseProjectDashboardAccountResponse
      */
@@ -1090,12 +1213,12 @@ public interface AsyncClient extends SdkAutoCloseable {
 
     /**
      * <b>description</b> :
-     * <p>This operation is related to the UploadDocumentAsync operation. You can call the UploadDocumentAsync operation to create an upload job and obtain the job ID, and then call the GetUploadDocumentJob operation to query the execution information of the job.</p>
+     * <p>This operation is related to the UploadDocumentAsync operation. You can call the UploadDocumentAsync operation to create an upload job and get the job ID, and then call the GetUploadDocumentJob operation to query the execution information of the job.</p>
      * <blockquote>
-     * <p> Suggestions:</p>
+     * <p>Suggestions</p>
      * </blockquote>
      * <ul>
-     * <li>Determine whether the document upload job times out based on the document complexity and the number of tokens after chunking. In most cases, a job that lasts more than 2 hours is considered timeout.</li>
+     * <li>Based on document complexity and the number of resulting vector chunks, the timeout is estimated and typically does not exceed 2 hours.</li>
      * </ul>
      * 
      * @param request the request parameters of GetUploadDocumentJob  GetUploadDocumentJobRequest
@@ -1134,6 +1257,9 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<InitVectorDatabaseResponse> initVectorDatabase(InitVectorDatabaseRequest request);
 
     /**
+     * <b>description</b> :
+     * <p>  This operation queries a list of AI nodes.</p>
+     * 
      * @param request the request parameters of ListAINodePools  ListAINodePoolsRequest
      * @return ListAINodePoolsResponse
      */
@@ -1150,6 +1276,12 @@ public interface AsyncClient extends SdkAutoCloseable {
      * @return ListCollectionsResponse
      */
     CompletableFuture<ListCollectionsResponse> listCollections(ListCollectionsRequest request);
+
+    /**
+     * @param request the request parameters of ListDatabaseExtensions  ListDatabaseExtensionsRequest
+     * @return ListDatabaseExtensionsResponse
+     */
+    CompletableFuture<ListDatabaseExtensionsResponse> listDatabaseExtensions(ListDatabaseExtensionsRequest request);
 
     /**
      * @param request the request parameters of ListDatabases  ListDatabasesRequest
@@ -1188,12 +1320,24 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<ListIndicesResponse> listIndices(ListIndicesRequest request);
 
     /**
+     * @param request the request parameters of ListInstanceDatabases  ListInstanceDatabasesRequest
+     * @return ListInstanceDatabasesResponse
+     */
+    CompletableFuture<ListInstanceDatabasesResponse> listInstanceDatabases(ListInstanceDatabasesRequest request);
+
+    /**
      * @param request the request parameters of ListInstanceExtensions  ListInstanceExtensionsRequest
      * @return ListInstanceExtensionsResponse
      */
     CompletableFuture<ListInstanceExtensionsResponse> listInstanceExtensions(ListInstanceExtensionsRequest request);
 
     /**
+     * <b>description</b> :
+     * <h2><a href="#"></a>Usage notes</h2>
+     * <p>This interface is used to view all model service information.</p>
+     * <h2><a href="#qps-"></a>QPS limit</h2>
+     * <p>You can call this operation up to 1,000 times per second per account. Exceeding the limit will trigger API rate limiting, which may impact your business. Please call the API responsibly.</p>
+     * 
      * @param request the request parameters of ListModelServices  ListModelServicesRequest
      * @return ListModelServicesResponse
      */
@@ -1224,6 +1368,12 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<ListSecretsResponse> listSecrets(ListSecretsRequest request);
 
     /**
+     * @param request the request parameters of ListSlowSQLRecords  ListSlowSQLRecordsRequest
+     * @return ListSlowSQLRecordsResponse
+     */
+    CompletableFuture<ListSlowSQLRecordsResponse> listSlowSQLRecords(ListSlowSQLRecordsRequest request);
+
+    /**
      * @param request the request parameters of ListStreamingDataServices  ListStreamingDataServicesRequest
      * @return ListStreamingDataServicesResponse
      */
@@ -1242,12 +1392,18 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<ListStreamingJobsResponse> listStreamingJobs(ListStreamingJobsRequest request);
 
     /**
+     * <b>description</b> :
+     * <p>  You can call this operation to query Supabase instances.</p>
+     * 
      * @param request the request parameters of ListSupabaseProjects  ListSupabaseProjectsRequest
      * @return ListSupabaseProjectsResponse
      */
     CompletableFuture<ListSupabaseProjectsResponse> listSupabaseProjects(ListSupabaseProjectsRequest request);
 
     /**
+     * <b>description</b> :
+     * <p>  This API is used to query the list of supported models.</p>
+     * 
      * @param request the request parameters of ListSupportModels  ListSupportModelsRequest
      * @return ListSupportModelsResponse
      */
@@ -1449,6 +1605,9 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<ModifyStreamingJobResponse> modifyStreamingJob(ModifyStreamingJobRequest request);
 
     /**
+     * <b>description</b> :
+     * <p>Before you can connect to a Supabase project, you must add your client\&quot;s IP address or CIDR block to the project\&quot;s whitelist.</p>
+     * 
      * @param request the request parameters of ModifySupabaseProjectSecurityIps  ModifySupabaseProjectSecurityIpsRequest
      * @return ModifySupabaseProjectSecurityIpsResponse
      */
@@ -1488,6 +1647,12 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<QueryCollectionDataResponse> queryCollectionData(QueryCollectionDataRequest request);
 
     /**
+     * @param request the request parameters of QueryKnowledgeBasesContent  QueryKnowledgeBasesContentRequest
+     * @return QueryKnowledgeBasesContentResponse
+     */
+    CompletableFuture<QueryKnowledgeBasesContentResponse> queryKnowledgeBasesContent(QueryKnowledgeBasesContentRequest request);
+
+    /**
      * @param request the request parameters of RebalanceDBInstance  RebalanceDBInstanceRequest
      * @return RebalanceDBInstanceResponse
      */
@@ -1518,6 +1683,9 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<ResetIMVMonitorDataResponse> resetIMVMonitorData(ResetIMVMonitorDataRequest request);
 
     /**
+     * <b>description</b> :
+     * <p>Call this API to reset the password of the Supabase database.</p>
+     * 
      * @param request the request parameters of ResetSupabaseProjectPassword  ResetSupabaseProjectPasswordRequest
      * @return ResetSupabaseProjectPasswordResponse
      */
@@ -1662,7 +1830,7 @@ public interface AsyncClient extends SdkAutoCloseable {
 
     /**
      * <b>description</b> :
-     * <p>The vectorization algorithm for the document is specified by the CreateDocumentCollection API.</p>
+     * <p>The vector algorithm that is used for the document is specified when you call the CreateDocumentCollection operation.</p>
      * 
      * @param request the request parameters of UpsertChunks  UpsertChunksRequest
      * @return UpsertChunksResponse

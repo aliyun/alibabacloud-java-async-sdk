@@ -106,7 +106,10 @@ public class TextEmbeddingResponseBody extends TeaModel {
         } 
 
         /**
-         * Message.
+         * <p>The returned message.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Successful</p>
          */
         public Builder message(String message) {
             this.message = message;
@@ -114,7 +117,10 @@ public class TextEmbeddingResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * <p>The unique ID of the request.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>ABB39CC3-4488-4857-905D-2E4A051D0521</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -122,7 +128,7 @@ public class TextEmbeddingResponseBody extends TeaModel {
         }
 
         /**
-         * Results.
+         * <p>The embedding results.</p>
          */
         public Builder results(Results results) {
             this.results = results;
@@ -130,7 +136,14 @@ public class TextEmbeddingResponseBody extends TeaModel {
         }
 
         /**
-         * Status.
+         * <p>The status of the operation. Valid values:</p>
+         * <ul>
+         * <li><strong>success</strong></li>
+         * <li><strong>fail</strong></li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>success</p>
          */
         public Builder status(String status) {
             this.status = status;
@@ -138,7 +151,10 @@ public class TextEmbeddingResponseBody extends TeaModel {
         }
 
         /**
-         * TextTokens.
+         * <p>The total number of tokens consumed.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1000</p>
          */
         public Builder textTokens(Integer textTokens) {
             this.textTokens = textTokens;
@@ -258,7 +274,7 @@ public class TextEmbeddingResponseBody extends TeaModel {
             } 
 
             /**
-             * Embedding.
+             * <p>The embedding values.</p>
              */
             public Builder embedding(Embedding embedding) {
                 this.embedding = embedding;
@@ -266,7 +282,10 @@ public class TextEmbeddingResponseBody extends TeaModel {
             }
 
             /**
-             * Index.
+             * <p>The number of the embedding in the Input request parameter, which starts from 0.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>0</p>
              */
             public Builder index(Integer index) {
                 this.index = index;
@@ -320,7 +339,7 @@ public class TextEmbeddingResponseBody extends TeaModel {
             } 
 
             /**
-             * Results.
+             * <p>The embedding results.</p>
              */
             public Builder results(java.util.List<ResultsResults> results) {
                 this.results = results;

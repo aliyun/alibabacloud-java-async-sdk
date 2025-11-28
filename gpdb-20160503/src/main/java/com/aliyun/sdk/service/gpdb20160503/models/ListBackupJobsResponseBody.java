@@ -67,7 +67,7 @@ public class ListBackupJobsResponseBody extends TeaModel {
         } 
 
         /**
-         * Items.
+         * <p>The queried backup jobs.</p>
          */
         public Builder items(Items items) {
             this.items = items;
@@ -75,7 +75,10 @@ public class ListBackupJobsResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>ABB39CC3-4488-4857-905D-2E4A051D0521</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -180,7 +183,10 @@ public class ListBackupJobsResponseBody extends TeaModel {
             } 
 
             /**
-             * BackupJobId.
+             * <p>The backup job ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>123</p>
              */
             public Builder backupJobId(String backupJobId) {
                 this.backupJobId = backupJobId;
@@ -188,7 +194,14 @@ public class ListBackupJobsResponseBody extends TeaModel {
             }
 
             /**
-             * BackupMode.
+             * <p>The backup mode. Valid values:</p>
+             * <ul>
+             * <li><strong>Automated</strong></li>
+             * <li><strong>Manual</strong></li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>Automated</p>
              */
             public Builder backupMode(String backupMode) {
                 this.backupMode = backupMode;
@@ -196,7 +209,14 @@ public class ListBackupJobsResponseBody extends TeaModel {
             }
 
             /**
-             * BackupStatus.
+             * <p>The backup status. Valid values:</p>
+             * <ul>
+             * <li><strong>Success</strong></li>
+             * <li><strong>Failure</strong></li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>Success</p>
              */
             public Builder backupStatus(String backupStatus) {
                 this.backupStatus = backupStatus;
@@ -204,7 +224,10 @@ public class ListBackupJobsResponseBody extends TeaModel {
             }
 
             /**
-             * Process.
+             * <p>The progress of the backup job.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>50%</p>
              */
             public Builder process(String process) {
                 this.process = process;
@@ -212,7 +235,10 @@ public class ListBackupJobsResponseBody extends TeaModel {
             }
 
             /**
-             * StartTime.
+             * <p>The time when the backup job started. The time follows the ISO 8601 standard in the YYYY-MM-DDThh:mm:ssZ format. The time is displayed in UTC.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2022-08-11T09:26:43Z</p>
              */
             public Builder startTime(String startTime) {
                 this.startTime = startTime;
