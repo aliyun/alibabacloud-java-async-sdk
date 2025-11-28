@@ -38,6 +38,18 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<CreateBackgroundPicResponse> createBackgroundPic(CreateBackgroundPicRequest request);
 
     /**
+     * @param request the request parameters of CreateBroadcastSticker  CreateBroadcastStickerRequest
+     * @return CreateBroadcastStickerResponse
+     */
+    CompletableFuture<CreateBroadcastStickerResponse> createBroadcastSticker(CreateBroadcastStickerRequest request);
+
+    /**
+     * @param request the request parameters of CreateBroadcastVideoFromTemplate  CreateBroadcastVideoFromTemplateRequest
+     * @return CreateBroadcastVideoFromTemplateResponse
+     */
+    CompletableFuture<CreateBroadcastVideoFromTemplateResponse> createBroadcastVideoFromTemplate(CreateBroadcastVideoFromTemplateRequest request);
+
+    /**
      * @param request the request parameters of CreateChatConfig  CreateChatConfigRequest
      * @return CreateChatConfigResponse
      */
@@ -68,6 +80,12 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<CreateTrainPicAvatarResponse> createTrainPicAvatar(CreateTrainPicAvatarRequest request);
 
     /**
+     * @param request the request parameters of GetBroadcastTemplate  GetBroadcastTemplateRequest
+     * @return GetBroadcastTemplateResponse
+     */
+    CompletableFuture<GetBroadcastTemplateResponse> getBroadcastTemplate(GetBroadcastTemplateRequest request);
+
+    /**
      * @param request the request parameters of GetTrainPicAvatarStatus  GetTrainPicAvatarStatusRequest
      * @return GetTrainPicAvatarStatusResponse
      */
@@ -78,6 +96,18 @@ public interface AsyncClient extends SdkAutoCloseable {
      * @return GetUploadPolicyResponse
      */
     CompletableFuture<GetUploadPolicyResponse> getUploadPolicy(GetUploadPolicyRequest request);
+
+    /**
+     * @param request the request parameters of ListBroadcastTemplates  ListBroadcastTemplatesRequest
+     * @return ListBroadcastTemplatesResponse
+     */
+    CompletableFuture<ListBroadcastTemplatesResponse> listBroadcastTemplates(ListBroadcastTemplatesRequest request);
+
+    /**
+     * @param request the request parameters of ListBroadcastVideosById  ListBroadcastVideosByIdRequest
+     * @return ListBroadcastVideosByIdResponse
+     */
+    CompletableFuture<ListBroadcastVideosByIdResponse> listBroadcastVideosById(ListBroadcastVideosByIdRequest request);
 
     /**
      * @param request the request parameters of ListPrivateTTSVoicesCustom  ListPrivateTTSVoicesCustomRequest

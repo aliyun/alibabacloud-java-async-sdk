@@ -94,6 +94,42 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
+     * @param request the request parameters of CreateBroadcastSticker  CreateBroadcastStickerRequest
+     * @return CreateBroadcastStickerResponse
+     */
+    @Override
+    public CompletableFuture<CreateBroadcastStickerResponse> createBroadcastSticker(CreateBroadcastStickerRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RESTFUL).setAction("CreateBroadcastSticker").setMethod(HttpMethod.POST).setPathRegex("/openapi/customer/broadcast/material/sticker/create").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(CreateBroadcastStickerResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<CreateBroadcastStickerResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
+     * @param request the request parameters of CreateBroadcastVideoFromTemplate  CreateBroadcastVideoFromTemplateRequest
+     * @return CreateBroadcastVideoFromTemplateResponse
+     */
+    @Override
+    public CompletableFuture<CreateBroadcastVideoFromTemplateResponse> createBroadcastVideoFromTemplate(CreateBroadcastVideoFromTemplateRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RESTFUL).setAction("CreateBroadcastVideoFromTemplate").setMethod(HttpMethod.POST).setPathRegex("/api/v1/amp/customer/broadcast/video/createFromTemplate").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(CreateBroadcastVideoFromTemplateResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<CreateBroadcastVideoFromTemplateResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
      * @param request the request parameters of CreateChatConfig  CreateChatConfigRequest
      * @return CreateChatConfigResponse
      */
@@ -184,6 +220,24 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
+     * @param request the request parameters of GetBroadcastTemplate  GetBroadcastTemplateRequest
+     * @return GetBroadcastTemplateResponse
+     */
+    @Override
+    public CompletableFuture<GetBroadcastTemplateResponse> getBroadcastTemplate(GetBroadcastTemplateRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RESTFUL).setAction("GetBroadcastTemplate").setMethod(HttpMethod.GET).setPathRegex("/openapi/customer/broadcast/template/detail").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(GetBroadcastTemplateResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<GetBroadcastTemplateResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
      * @param request the request parameters of GetTrainPicAvatarStatus  GetTrainPicAvatarStatusRequest
      * @return GetTrainPicAvatarStatusResponse
      */
@@ -214,6 +268,42 @@ public final class DefaultAsyncClient implements AsyncClient {
             return this.handler.execute(params);
         } catch (Exception e) {
             CompletableFuture<GetUploadPolicyResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
+     * @param request the request parameters of ListBroadcastTemplates  ListBroadcastTemplatesRequest
+     * @return ListBroadcastTemplatesResponse
+     */
+    @Override
+    public CompletableFuture<ListBroadcastTemplatesResponse> listBroadcastTemplates(ListBroadcastTemplatesRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RESTFUL).setAction("ListBroadcastTemplates").setMethod(HttpMethod.GET).setPathRegex("/openapi/customer/broadcast/template/list").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(ListBroadcastTemplatesResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<ListBroadcastTemplatesResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
+     * @param request the request parameters of ListBroadcastVideosById  ListBroadcastVideosByIdRequest
+     * @return ListBroadcastVideosByIdResponse
+     */
+    @Override
+    public CompletableFuture<ListBroadcastVideosByIdResponse> listBroadcastVideosById(ListBroadcastVideosByIdRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RESTFUL).setAction("ListBroadcastVideosById").setMethod(HttpMethod.GET).setPathRegex("/api/v1/amp/customer/broadcast/video/batchQuery").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(ListBroadcastVideosByIdResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<ListBroadcastVideosByIdResponse> future = new CompletableFuture<>();
             future.completeExceptionally(e);
             return future;
         }
