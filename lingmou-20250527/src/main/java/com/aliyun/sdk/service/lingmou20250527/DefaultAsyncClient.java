@@ -58,6 +58,24 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
+     * @param request the request parameters of ConfirmTrainPicAvatar  ConfirmTrainPicAvatarRequest
+     * @return ConfirmTrainPicAvatarResponse
+     */
+    @Override
+    public CompletableFuture<ConfirmTrainPicAvatarResponse> confirmTrainPicAvatar(ConfirmTrainPicAvatarRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RESTFUL).setAction("ConfirmTrainPicAvatar").setMethod(HttpMethod.PUT).setPathRegex("/openapi/train/confirmTrainPicAvatar").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(ConfirmTrainPicAvatarResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<ConfirmTrainPicAvatarResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
      * @param request the request parameters of CreateBackgroundPic  CreateBackgroundPicRequest
      * @return CreateBackgroundPicResponse
      */
@@ -130,6 +148,60 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
+     * @param request the request parameters of CreateTTSVoiceCustom  CreateTTSVoiceCustomRequest
+     * @return CreateTTSVoiceCustomResponse
+     */
+    @Override
+    public CompletableFuture<CreateTTSVoiceCustomResponse> createTTSVoiceCustom(CreateTTSVoiceCustomRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RESTFUL).setAction("CreateTTSVoiceCustom").setMethod(HttpMethod.POST).setPathRegex("/openapi/voice/createTTSVoiceCustom").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(CreateTTSVoiceCustomResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<CreateTTSVoiceCustomResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
+     * @param request the request parameters of CreateTrainPicAvatar  CreateTrainPicAvatarRequest
+     * @return CreateTrainPicAvatarResponse
+     */
+    @Override
+    public CompletableFuture<CreateTrainPicAvatarResponse> createTrainPicAvatar(CreateTrainPicAvatarRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RESTFUL).setAction("CreateTrainPicAvatar").setMethod(HttpMethod.POST).setPathRegex("/openapi/train/createTrainPicAvatar").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(CreateTrainPicAvatarResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<CreateTrainPicAvatarResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
+     * @param request the request parameters of GetTrainPicAvatarStatus  GetTrainPicAvatarStatusRequest
+     * @return GetTrainPicAvatarStatusResponse
+     */
+    @Override
+    public CompletableFuture<GetTrainPicAvatarStatusResponse> getTrainPicAvatarStatus(GetTrainPicAvatarStatusRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RESTFUL).setAction("GetTrainPicAvatarStatus").setMethod(HttpMethod.GET).setPathRegex("/openapi/train/getTrainPicAvatarStatus").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(GetTrainPicAvatarStatusResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<GetTrainPicAvatarStatusResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
      * @param request the request parameters of GetUploadPolicy  GetUploadPolicyRequest
      * @return GetUploadPolicyResponse
      */
@@ -142,6 +214,42 @@ public final class DefaultAsyncClient implements AsyncClient {
             return this.handler.execute(params);
         } catch (Exception e) {
             CompletableFuture<GetUploadPolicyResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
+     * @param request the request parameters of ListPrivateTTSVoicesCustom  ListPrivateTTSVoicesCustomRequest
+     * @return ListPrivateTTSVoicesCustomResponse
+     */
+    @Override
+    public CompletableFuture<ListPrivateTTSVoicesCustomResponse> listPrivateTTSVoicesCustom(ListPrivateTTSVoicesCustomRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RESTFUL).setAction("ListPrivateTTSVoicesCustom").setMethod(HttpMethod.GET).setPathRegex("/openapi/voice/listPrivateTTSVoicesCustom").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(ListPrivateTTSVoicesCustomResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<ListPrivateTTSVoicesCustomResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
+     * @param request the request parameters of ListTemplateMaterial  ListTemplateMaterialRequest
+     * @return ListTemplateMaterialResponse
+     */
+    @Override
+    public CompletableFuture<ListTemplateMaterialResponse> listTemplateMaterial(ListTemplateMaterialRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RESTFUL).setAction("ListTemplateMaterial").setMethod(HttpMethod.GET).setPathRegex("/openapi/train/listTemplateMaterial").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(ListTemplateMaterialResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<ListTemplateMaterialResponse> future = new CompletableFuture<>();
             future.completeExceptionally(e);
             return future;
         }

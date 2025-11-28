@@ -1,0 +1,81 @@
+// This file is auto-generated, don't edit it. Thanks.
+package com.aliyun.sdk.service.lingmou20250527.models;
+
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
+import darabonba.core.RequestModel;
+import darabonba.core.TeaModel;
+import com.aliyun.sdk.gateway.pop.models.*;
+
+/**
+ * 
+ * {@link GetTrainPicAvatarStatusRequest} extends {@link RequestModel}
+ *
+ * <p>GetTrainPicAvatarStatusRequest</p>
+ */
+public class GetTrainPicAvatarStatusRequest extends Request {
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("avatarId")
+    @com.aliyun.core.annotation.Validation(required = true)
+    private String avatarId;
+
+    private GetTrainPicAvatarStatusRequest(Builder builder) {
+        super(builder);
+        this.avatarId = builder.avatarId;
+    }
+
+    public static Builder builder() {
+        return new Builder();
+    }
+
+    public static GetTrainPicAvatarStatusRequest create() {
+        return builder().build();
+    }
+
+@Override
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
+    /**
+     * @return avatarId
+     */
+    public String getAvatarId() {
+        return this.avatarId;
+    }
+
+    public static final class Builder extends Request.Builder<GetTrainPicAvatarStatusRequest, Builder> {
+        private String avatarId; 
+
+        private Builder() {
+            super();
+        } 
+
+        private Builder(GetTrainPicAvatarStatusRequest request) {
+            super(request);
+            this.avatarId = request.avatarId;
+        } 
+
+        /**
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>M1YJTNTH2yoLmLnzKdYHeGBg</p>
+         */
+        public Builder avatarId(String avatarId) {
+            this.putQueryParameter("avatarId", avatarId);
+            this.avatarId = avatarId;
+            return this;
+        }
+
+        @Override
+        public GetTrainPicAvatarStatusRequest build() {
+            return new GetTrainPicAvatarStatusRequest(this);
+        } 
+
+    } 
+
+}

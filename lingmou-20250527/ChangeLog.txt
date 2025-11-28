@@ -1,3 +1,6 @@
+2025-11-28 Version: 1.0.4
+- Generated java-async 2025-05-27 for LingMou.
+
 2025-11-28 Version: 1.0.3
 - Generated java-async 2025-05-27 for LingMou.
 

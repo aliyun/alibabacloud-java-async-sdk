@@ -26,6 +26,12 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<CloseChatInstanceSessionsResponse> closeChatInstanceSessions(CloseChatInstanceSessionsRequest request);
 
     /**
+     * @param request the request parameters of ConfirmTrainPicAvatar  ConfirmTrainPicAvatarRequest
+     * @return ConfirmTrainPicAvatarResponse
+     */
+    CompletableFuture<ConfirmTrainPicAvatarResponse> confirmTrainPicAvatar(ConfirmTrainPicAvatarRequest request);
+
+    /**
      * @param request the request parameters of CreateBackgroundPic  CreateBackgroundPicRequest
      * @return CreateBackgroundPicResponse
      */
@@ -50,10 +56,40 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<CreateNoTrainPicAvatarResponse> createNoTrainPicAvatar(CreateNoTrainPicAvatarRequest request);
 
     /**
+     * @param request the request parameters of CreateTTSVoiceCustom  CreateTTSVoiceCustomRequest
+     * @return CreateTTSVoiceCustomResponse
+     */
+    CompletableFuture<CreateTTSVoiceCustomResponse> createTTSVoiceCustom(CreateTTSVoiceCustomRequest request);
+
+    /**
+     * @param request the request parameters of CreateTrainPicAvatar  CreateTrainPicAvatarRequest
+     * @return CreateTrainPicAvatarResponse
+     */
+    CompletableFuture<CreateTrainPicAvatarResponse> createTrainPicAvatar(CreateTrainPicAvatarRequest request);
+
+    /**
+     * @param request the request parameters of GetTrainPicAvatarStatus  GetTrainPicAvatarStatusRequest
+     * @return GetTrainPicAvatarStatusResponse
+     */
+    CompletableFuture<GetTrainPicAvatarStatusResponse> getTrainPicAvatarStatus(GetTrainPicAvatarStatusRequest request);
+
+    /**
      * @param request the request parameters of GetUploadPolicy  GetUploadPolicyRequest
      * @return GetUploadPolicyResponse
      */
     CompletableFuture<GetUploadPolicyResponse> getUploadPolicy(GetUploadPolicyRequest request);
+
+    /**
+     * @param request the request parameters of ListPrivateTTSVoicesCustom  ListPrivateTTSVoicesCustomRequest
+     * @return ListPrivateTTSVoicesCustomResponse
+     */
+    CompletableFuture<ListPrivateTTSVoicesCustomResponse> listPrivateTTSVoicesCustom(ListPrivateTTSVoicesCustomRequest request);
+
+    /**
+     * @param request the request parameters of ListTemplateMaterial  ListTemplateMaterialRequest
+     * @return ListTemplateMaterialResponse
+     */
+    CompletableFuture<ListTemplateMaterialResponse> listTemplateMaterial(ListTemplateMaterialRequest request);
 
     /**
      * @param request the request parameters of QueryChatInstanceSessions  QueryChatInstanceSessionsRequest
