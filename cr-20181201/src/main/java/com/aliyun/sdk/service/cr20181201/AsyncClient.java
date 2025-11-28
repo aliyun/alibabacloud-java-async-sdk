@@ -177,6 +177,18 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<CreateRepositoryResponse> createRepository(CreateRepositoryRequest request);
 
     /**
+     * @param request the request parameters of CreateScanRule  CreateScanRuleRequest
+     * @return CreateScanRuleResponse
+     */
+    CompletableFuture<CreateScanRuleResponse> createScanRule(CreateScanRuleRequest request);
+
+    /**
+     * @param request the request parameters of CreateStorageDomainRoutingRule  CreateStorageDomainRoutingRuleRequest
+     * @return CreateStorageDomainRoutingRuleResponse
+     */
+    CompletableFuture<CreateStorageDomainRoutingRuleResponse> createStorageDomainRoutingRule(CreateStorageDomainRoutingRuleRequest request);
+
+    /**
      * @param request the request parameters of DeleteArtifactLifecycleRule  DeleteArtifactLifecycleRuleRequest
      * @return DeleteArtifactLifecycleRuleResponse
      */
@@ -278,6 +290,18 @@ public interface AsyncClient extends SdkAutoCloseable {
      * @return DeleteRepositoryResponse
      */
     CompletableFuture<DeleteRepositoryResponse> deleteRepository(DeleteRepositoryRequest request);
+
+    /**
+     * @param request the request parameters of DeleteScanRule  DeleteScanRuleRequest
+     * @return DeleteScanRuleResponse
+     */
+    CompletableFuture<DeleteScanRuleResponse> deleteScanRule(DeleteScanRuleRequest request);
+
+    /**
+     * @param request the request parameters of DeleteStorageDomainRoutingRule  DeleteStorageDomainRoutingRuleRequest
+     * @return DeleteStorageDomainRoutingRuleResponse
+     */
+    CompletableFuture<DeleteStorageDomainRoutingRuleResponse> deleteStorageDomainRoutingRule(DeleteStorageDomainRoutingRuleRequest request);
 
     /**
      * @param request the request parameters of GetArtifactBuildRule  GetArtifactBuildRuleRequest
@@ -428,6 +452,18 @@ public interface AsyncClient extends SdkAutoCloseable {
      * @return GetRepositoryResponse
      */
     CompletableFuture<GetRepositoryResponse> getRepository(GetRepositoryRequest request);
+
+    /**
+     * @param request the request parameters of GetScanRule  GetScanRuleRequest
+     * @return GetScanRuleResponse
+     */
+    CompletableFuture<GetScanRuleResponse> getScanRule(GetScanRuleRequest request);
+
+    /**
+     * @param request the request parameters of GetStorageDomainRoutingRule  GetStorageDomainRoutingRuleRequest
+     * @return GetStorageDomainRoutingRuleResponse
+     */
+    CompletableFuture<GetStorageDomainRoutingRuleResponse> getStorageDomainRoutingRule(GetStorageDomainRoutingRuleRequest request);
 
     /**
      * @param request the request parameters of ListArtifactBuildTaskLog  ListArtifactBuildTaskLogRequest
@@ -592,6 +628,12 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<ListScanMaliciousFileByTaskResponse> listScanMaliciousFileByTask(ListScanMaliciousFileByTaskRequest request);
 
     /**
+     * @param request the request parameters of ListScanRule  ListScanRuleRequest
+     * @return ListScanRuleResponse
+     */
+    CompletableFuture<ListScanRuleResponse> listScanRule(ListScanRuleRequest request);
+
+    /**
      * @param request the request parameters of ListTagResources  ListTagResourcesRequest
      * @return ListTagResourcesResponse
      */
@@ -686,5 +728,17 @@ public interface AsyncClient extends SdkAutoCloseable {
      * @return UpdateRepositoryResponse
      */
     CompletableFuture<UpdateRepositoryResponse> updateRepository(UpdateRepositoryRequest request);
+
+    /**
+     * @param request the request parameters of UpdateScanRule  UpdateScanRuleRequest
+     * @return UpdateScanRuleResponse
+     */
+    CompletableFuture<UpdateScanRuleResponse> updateScanRule(UpdateScanRuleRequest request);
+
+    /**
+     * @param request the request parameters of UpdateStorageDomainRoutingRule  UpdateStorageDomainRoutingRuleRequest
+     * @return UpdateStorageDomainRoutingRuleResponse
+     */
+    CompletableFuture<UpdateStorageDomainRoutingRuleResponse> updateStorageDomainRoutingRule(UpdateStorageDomainRoutingRuleRequest request);
 
 }
