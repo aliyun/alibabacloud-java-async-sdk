@@ -1574,6 +1574,9 @@ public class GetEventStreamingResponseBody extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Bootstraps")
         private String bootstraps;
 
+        @com.aliyun.core.annotation.NameInMap("CompressionType")
+        private String compressionType;
+
         @com.aliyun.core.annotation.NameInMap("Headers")
         private Headers headers;
 
@@ -1598,6 +1601,9 @@ public class GetEventStreamingResponseBody extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("SecurityProtocol")
         private String securityProtocol;
 
+        @com.aliyun.core.annotation.NameInMap("SslTruststoreCertificates")
+        private String sslTruststoreCertificates;
+
         @com.aliyun.core.annotation.NameInMap("Topic")
         private String topic;
 
@@ -1613,6 +1619,7 @@ public class GetEventStreamingResponseBody extends TeaModel {
         private SinkApacheKafkaParameters(Builder builder) {
             this.acks = builder.acks;
             this.bootstraps = builder.bootstraps;
+            this.compressionType = builder.compressionType;
             this.headers = builder.headers;
             this.key = builder.key;
             this.networkType = builder.networkType;
@@ -1621,6 +1628,7 @@ public class GetEventStreamingResponseBody extends TeaModel {
             this.saslUser = builder.saslUser;
             this.securityGroupId = builder.securityGroupId;
             this.securityProtocol = builder.securityProtocol;
+            this.sslTruststoreCertificates = builder.sslTruststoreCertificates;
             this.topic = builder.topic;
             this.vSwitchIds = builder.vSwitchIds;
             this.value = builder.value;
@@ -1647,6 +1655,13 @@ public class GetEventStreamingResponseBody extends TeaModel {
          */
         public String getBootstraps() {
             return this.bootstraps;
+        }
+
+        /**
+         * @return compressionType
+         */
+        public String getCompressionType() {
+            return this.compressionType;
         }
 
         /**
@@ -1706,6 +1721,13 @@ public class GetEventStreamingResponseBody extends TeaModel {
         }
 
         /**
+         * @return sslTruststoreCertificates
+         */
+        public String getSslTruststoreCertificates() {
+            return this.sslTruststoreCertificates;
+        }
+
+        /**
          * @return topic
          */
         public String getTopic() {
@@ -1736,6 +1758,7 @@ public class GetEventStreamingResponseBody extends TeaModel {
         public static final class Builder {
             private String acks; 
             private String bootstraps; 
+            private String compressionType; 
             private Headers headers; 
             private Key key; 
             private NetworkType networkType; 
@@ -1744,6 +1767,7 @@ public class GetEventStreamingResponseBody extends TeaModel {
             private String saslUser; 
             private SecurityGroupId securityGroupId; 
             private String securityProtocol; 
+            private String sslTruststoreCertificates; 
             private String topic; 
             private VSwitchIds vSwitchIds; 
             private Value value; 
@@ -1755,6 +1779,7 @@ public class GetEventStreamingResponseBody extends TeaModel {
             private Builder(SinkApacheKafkaParameters model) {
                 this.acks = model.acks;
                 this.bootstraps = model.bootstraps;
+                this.compressionType = model.compressionType;
                 this.headers = model.headers;
                 this.key = model.key;
                 this.networkType = model.networkType;
@@ -1763,6 +1788,7 @@ public class GetEventStreamingResponseBody extends TeaModel {
                 this.saslUser = model.saslUser;
                 this.securityGroupId = model.securityGroupId;
                 this.securityProtocol = model.securityProtocol;
+                this.sslTruststoreCertificates = model.sslTruststoreCertificates;
                 this.topic = model.topic;
                 this.vSwitchIds = model.vSwitchIds;
                 this.value = model.value;
@@ -1782,6 +1808,14 @@ public class GetEventStreamingResponseBody extends TeaModel {
              */
             public Builder bootstraps(String bootstraps) {
                 this.bootstraps = bootstraps;
+                return this;
+            }
+
+            /**
+             * CompressionType.
+             */
+            public Builder compressionType(String compressionType) {
+                this.compressionType = compressionType;
                 return this;
             }
 
@@ -1846,6 +1880,14 @@ public class GetEventStreamingResponseBody extends TeaModel {
              */
             public Builder securityProtocol(String securityProtocol) {
                 this.securityProtocol = securityProtocol;
+                return this;
+            }
+
+            /**
+             * SslTruststoreCertificates.
+             */
+            public Builder sslTruststoreCertificates(String sslTruststoreCertificates) {
+                this.sslTruststoreCertificates = sslTruststoreCertificates;
                 return this;
             }
 
@@ -7887,6 +7929,9 @@ public class GetEventStreamingResponseBody extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Acks")
         private Acks acks;
 
+        @com.aliyun.core.annotation.NameInMap("CompressionType")
+        private String compressionType;
+
         @com.aliyun.core.annotation.NameInMap("Headers")
         private SinkKafkaParametersHeaders headers;
 
@@ -7904,6 +7949,7 @@ public class GetEventStreamingResponseBody extends TeaModel {
 
         private SinkKafkaParameters(Builder builder) {
             this.acks = builder.acks;
+            this.compressionType = builder.compressionType;
             this.headers = builder.headers;
             this.instanceId = builder.instanceId;
             this.key = builder.key;
@@ -7924,6 +7970,13 @@ public class GetEventStreamingResponseBody extends TeaModel {
          */
         public Acks getAcks() {
             return this.acks;
+        }
+
+        /**
+         * @return compressionType
+         */
+        public String getCompressionType() {
+            return this.compressionType;
         }
 
         /**
@@ -7963,6 +8016,7 @@ public class GetEventStreamingResponseBody extends TeaModel {
 
         public static final class Builder {
             private Acks acks; 
+            private String compressionType; 
             private SinkKafkaParametersHeaders headers; 
             private InstanceId instanceId; 
             private SinkKafkaParametersKey key; 
@@ -7974,6 +8028,7 @@ public class GetEventStreamingResponseBody extends TeaModel {
 
             private Builder(SinkKafkaParameters model) {
                 this.acks = model.acks;
+                this.compressionType = model.compressionType;
                 this.headers = model.headers;
                 this.instanceId = model.instanceId;
                 this.key = model.key;
@@ -7986,6 +8041,14 @@ public class GetEventStreamingResponseBody extends TeaModel {
              */
             public Builder acks(Acks acks) {
                 this.acks = acks;
+                return this;
+            }
+
+            /**
+             * CompressionType.
+             */
+            public Builder compressionType(String compressionType) {
+                this.compressionType = compressionType;
                 return this;
             }
 
@@ -13868,6 +13931,12 @@ public class GetEventStreamingResponseBody extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("SinkOpenSourceRabbitMQParameters")
         private SinkOpenSourceRabbitMQParameters sinkOpenSourceRabbitMQParameters;
 
+        @com.aliyun.core.annotation.NameInMap("SinkRabbitMQMetaParameters")
+        private SinkRabbitMQMetaParameters sinkRabbitMQMetaParameters;
+
+        @com.aliyun.core.annotation.NameInMap("SinkRabbitMQMsgSyncParameters")
+        private SinkRabbitMQMsgSyncParameters sinkRabbitMQMsgSyncParameters;
+
         @com.aliyun.core.annotation.NameInMap("SinkRabbitMQParameters")
         private SinkRabbitMQParameters sinkRabbitMQParameters;
 
@@ -13898,6 +13967,8 @@ public class GetEventStreamingResponseBody extends TeaModel {
             this.sinkMNSParameters = builder.sinkMNSParameters;
             this.sinkOSSParameters = builder.sinkOSSParameters;
             this.sinkOpenSourceRabbitMQParameters = builder.sinkOpenSourceRabbitMQParameters;
+            this.sinkRabbitMQMetaParameters = builder.sinkRabbitMQMetaParameters;
+            this.sinkRabbitMQMsgSyncParameters = builder.sinkRabbitMQMsgSyncParameters;
             this.sinkRabbitMQParameters = builder.sinkRabbitMQParameters;
             this.sinkRocketMQCheckpointParameters = builder.sinkRocketMQCheckpointParameters;
             this.sinkRocketMQParameters = builder.sinkRocketMQParameters;
@@ -14032,6 +14103,20 @@ public class GetEventStreamingResponseBody extends TeaModel {
         }
 
         /**
+         * @return sinkRabbitMQMetaParameters
+         */
+        public SinkRabbitMQMetaParameters getSinkRabbitMQMetaParameters() {
+            return this.sinkRabbitMQMetaParameters;
+        }
+
+        /**
+         * @return sinkRabbitMQMsgSyncParameters
+         */
+        public SinkRabbitMQMsgSyncParameters getSinkRabbitMQMsgSyncParameters() {
+            return this.sinkRabbitMQMsgSyncParameters;
+        }
+
+        /**
          * @return sinkRabbitMQParameters
          */
         public SinkRabbitMQParameters getSinkRabbitMQParameters() {
@@ -14077,6 +14162,8 @@ public class GetEventStreamingResponseBody extends TeaModel {
             private SinkMNSParameters sinkMNSParameters; 
             private SinkOSSParameters sinkOSSParameters; 
             private SinkOpenSourceRabbitMQParameters sinkOpenSourceRabbitMQParameters; 
+            private SinkRabbitMQMetaParameters sinkRabbitMQMetaParameters; 
+            private SinkRabbitMQMsgSyncParameters sinkRabbitMQMsgSyncParameters; 
             private SinkRabbitMQParameters sinkRabbitMQParameters; 
             private SinkRocketMQCheckpointParameters sinkRocketMQCheckpointParameters; 
             private SinkRocketMQParameters sinkRocketMQParameters; 
@@ -14103,6 +14190,8 @@ public class GetEventStreamingResponseBody extends TeaModel {
                 this.sinkMNSParameters = model.sinkMNSParameters;
                 this.sinkOSSParameters = model.sinkOSSParameters;
                 this.sinkOpenSourceRabbitMQParameters = model.sinkOpenSourceRabbitMQParameters;
+                this.sinkRabbitMQMetaParameters = model.sinkRabbitMQMetaParameters;
+                this.sinkRabbitMQMsgSyncParameters = model.sinkRabbitMQMsgSyncParameters;
                 this.sinkRabbitMQParameters = model.sinkRabbitMQParameters;
                 this.sinkRocketMQCheckpointParameters = model.sinkRocketMQCheckpointParameters;
                 this.sinkRocketMQParameters = model.sinkRocketMQParameters;
@@ -14246,6 +14335,22 @@ public class GetEventStreamingResponseBody extends TeaModel {
             }
 
             /**
+             * SinkRabbitMQMetaParameters.
+             */
+            public Builder sinkRabbitMQMetaParameters(SinkRabbitMQMetaParameters sinkRabbitMQMetaParameters) {
+                this.sinkRabbitMQMetaParameters = sinkRabbitMQMetaParameters;
+                return this;
+            }
+
+            /**
+             * SinkRabbitMQMsgSyncParameters.
+             */
+            public Builder sinkRabbitMQMsgSyncParameters(SinkRabbitMQMsgSyncParameters sinkRabbitMQMsgSyncParameters) {
+                this.sinkRabbitMQMsgSyncParameters = sinkRabbitMQMsgSyncParameters;
+                return this;
+            }
+
+            /**
              * <p>The parameters that are returned if the event target is Message Queue for RabbitMQ.</p>
              */
             public Builder sinkRabbitMQParameters(SinkRabbitMQParameters sinkRabbitMQParameters) {
@@ -14318,6 +14423,9 @@ public class GetEventStreamingResponseBody extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("SecurityProtocol")
         private String securityProtocol;
 
+        @com.aliyun.core.annotation.NameInMap("SslTruststoreCertificates")
+        private String sslTruststoreCertificates;
+
         @com.aliyun.core.annotation.NameInMap("Topic")
         private String topic;
 
@@ -14340,6 +14448,7 @@ public class GetEventStreamingResponseBody extends TeaModel {
             this.saslUser = builder.saslUser;
             this.securityGroupId = builder.securityGroupId;
             this.securityProtocol = builder.securityProtocol;
+            this.sslTruststoreCertificates = builder.sslTruststoreCertificates;
             this.topic = builder.topic;
             this.vSwitchIds = builder.vSwitchIds;
             this.valueDataType = builder.valueDataType;
@@ -14418,6 +14527,13 @@ public class GetEventStreamingResponseBody extends TeaModel {
         }
 
         /**
+         * @return sslTruststoreCertificates
+         */
+        public String getSslTruststoreCertificates() {
+            return this.sslTruststoreCertificates;
+        }
+
+        /**
          * @return topic
          */
         public String getTopic() {
@@ -14455,6 +14571,7 @@ public class GetEventStreamingResponseBody extends TeaModel {
             private String saslUser; 
             private String securityGroupId; 
             private String securityProtocol; 
+            private String sslTruststoreCertificates; 
             private String topic; 
             private String vSwitchIds; 
             private String valueDataType; 
@@ -14473,6 +14590,7 @@ public class GetEventStreamingResponseBody extends TeaModel {
                 this.saslUser = model.saslUser;
                 this.securityGroupId = model.securityGroupId;
                 this.securityProtocol = model.securityProtocol;
+                this.sslTruststoreCertificates = model.sslTruststoreCertificates;
                 this.topic = model.topic;
                 this.vSwitchIds = model.vSwitchIds;
                 this.valueDataType = model.valueDataType;
@@ -14548,6 +14666,14 @@ public class GetEventStreamingResponseBody extends TeaModel {
              */
             public Builder securityProtocol(String securityProtocol) {
                 this.securityProtocol = securityProtocol;
+                return this;
+            }
+
+            /**
+             * SslTruststoreCertificates.
+             */
+            public Builder sslTruststoreCertificates(String sslTruststoreCertificates) {
+                this.sslTruststoreCertificates = sslTruststoreCertificates;
                 return this;
             }
 
@@ -17447,6 +17573,12 @@ public class GetEventStreamingResponseBody extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("SourcePrometheusParameters")
         private SourcePrometheusParameters sourcePrometheusParameters;
 
+        @com.aliyun.core.annotation.NameInMap("SourceRabbitMQMetaParameters")
+        private SourceRabbitMQMetaParameters sourceRabbitMQMetaParameters;
+
+        @com.aliyun.core.annotation.NameInMap("SourceRabbitMQMsgSyncParameters")
+        private SourceRabbitMQMsgSyncParameters sourceRabbitMQMsgSyncParameters;
+
         @com.aliyun.core.annotation.NameInMap("SourceRabbitMQParameters")
         private SourceRabbitMQParameters sourceRabbitMQParameters;
 
@@ -17474,6 +17606,8 @@ public class GetEventStreamingResponseBody extends TeaModel {
             this.sourceOpenSourceRabbitMQParameters = builder.sourceOpenSourceRabbitMQParameters;
             this.sourcePostgreSQLParameters = builder.sourcePostgreSQLParameters;
             this.sourcePrometheusParameters = builder.sourcePrometheusParameters;
+            this.sourceRabbitMQMetaParameters = builder.sourceRabbitMQMetaParameters;
+            this.sourceRabbitMQMsgSyncParameters = builder.sourceRabbitMQMsgSyncParameters;
             this.sourceRabbitMQParameters = builder.sourceRabbitMQParameters;
             this.sourceRocketMQCheckpointParameters = builder.sourceRocketMQCheckpointParameters;
             this.sourceRocketMQParameters = builder.sourceRocketMQParameters;
@@ -17587,6 +17721,20 @@ public class GetEventStreamingResponseBody extends TeaModel {
         }
 
         /**
+         * @return sourceRabbitMQMetaParameters
+         */
+        public SourceRabbitMQMetaParameters getSourceRabbitMQMetaParameters() {
+            return this.sourceRabbitMQMetaParameters;
+        }
+
+        /**
+         * @return sourceRabbitMQMsgSyncParameters
+         */
+        public SourceRabbitMQMsgSyncParameters getSourceRabbitMQMsgSyncParameters() {
+            return this.sourceRabbitMQMsgSyncParameters;
+        }
+
+        /**
          * @return sourceRabbitMQParameters
          */
         public SourceRabbitMQParameters getSourceRabbitMQParameters() {
@@ -17629,6 +17777,8 @@ public class GetEventStreamingResponseBody extends TeaModel {
             private SourceOpenSourceRabbitMQParameters sourceOpenSourceRabbitMQParameters; 
             private SourcePostgreSQLParameters sourcePostgreSQLParameters; 
             private SourcePrometheusParameters sourcePrometheusParameters; 
+            private SourceRabbitMQMetaParameters sourceRabbitMQMetaParameters; 
+            private SourceRabbitMQMsgSyncParameters sourceRabbitMQMsgSyncParameters; 
             private SourceRabbitMQParameters sourceRabbitMQParameters; 
             private SourceRocketMQCheckpointParameters sourceRocketMQCheckpointParameters; 
             private SourceRocketMQParameters sourceRocketMQParameters; 
@@ -17652,6 +17802,8 @@ public class GetEventStreamingResponseBody extends TeaModel {
                 this.sourceOpenSourceRabbitMQParameters = model.sourceOpenSourceRabbitMQParameters;
                 this.sourcePostgreSQLParameters = model.sourcePostgreSQLParameters;
                 this.sourcePrometheusParameters = model.sourcePrometheusParameters;
+                this.sourceRabbitMQMetaParameters = model.sourceRabbitMQMetaParameters;
+                this.sourceRabbitMQMsgSyncParameters = model.sourceRabbitMQMsgSyncParameters;
                 this.sourceRabbitMQParameters = model.sourceRabbitMQParameters;
                 this.sourceRocketMQCheckpointParameters = model.sourceRocketMQCheckpointParameters;
                 this.sourceRocketMQParameters = model.sourceRocketMQParameters;
@@ -17767,6 +17919,22 @@ public class GetEventStreamingResponseBody extends TeaModel {
              */
             public Builder sourcePrometheusParameters(SourcePrometheusParameters sourcePrometheusParameters) {
                 this.sourcePrometheusParameters = sourcePrometheusParameters;
+                return this;
+            }
+
+            /**
+             * SourceRabbitMQMetaParameters.
+             */
+            public Builder sourceRabbitMQMetaParameters(SourceRabbitMQMetaParameters sourceRabbitMQMetaParameters) {
+                this.sourceRabbitMQMetaParameters = sourceRabbitMQMetaParameters;
+                return this;
+            }
+
+            /**
+             * SourceRabbitMQMsgSyncParameters.
+             */
+            public Builder sourceRabbitMQMsgSyncParameters(SourceRabbitMQMsgSyncParameters sourceRabbitMQMsgSyncParameters) {
+                this.sourceRabbitMQMsgSyncParameters = sourceRabbitMQMsgSyncParameters;
                 return this;
             }
 
