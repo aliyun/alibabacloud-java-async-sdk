@@ -17,6 +17,9 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>BatchGetMediaInfosResponseBody</p>
  */
 public class BatchGetMediaInfosResponseBody extends TeaModel {
+    @com.aliyun.core.annotation.NameInMap("IgnoredList")
+    private java.util.List<String> ignoredList;
+
     @com.aliyun.core.annotation.NameInMap("MediaInfos")
     private java.util.List<MediaInfos> mediaInfos;
 
@@ -24,6 +27,7 @@ public class BatchGetMediaInfosResponseBody extends TeaModel {
     private String requestId;
 
     private BatchGetMediaInfosResponseBody(Builder builder) {
+        this.ignoredList = builder.ignoredList;
         this.mediaInfos = builder.mediaInfos;
         this.requestId = builder.requestId;
     }
@@ -41,6 +45,13 @@ public class BatchGetMediaInfosResponseBody extends TeaModel {
     }
 
     /**
+     * @return ignoredList
+     */
+    public java.util.List<String> getIgnoredList() {
+        return this.ignoredList;
+    }
+
+    /**
      * @return mediaInfos
      */
     public java.util.List<MediaInfos> getMediaInfos() {
@@ -55,6 +66,7 @@ public class BatchGetMediaInfosResponseBody extends TeaModel {
     }
 
     public static final class Builder {
+        private java.util.List<String> ignoredList; 
         private java.util.List<MediaInfos> mediaInfos; 
         private String requestId; 
 
@@ -62,9 +74,18 @@ public class BatchGetMediaInfosResponseBody extends TeaModel {
         } 
 
         private Builder(BatchGetMediaInfosResponseBody model) {
+            this.ignoredList = model.ignoredList;
             this.mediaInfos = model.mediaInfos;
             this.requestId = model.requestId;
         } 
+
+        /**
+         * IgnoredList.
+         */
+        public Builder ignoredList(java.util.List<String> ignoredList) {
+            this.ignoredList = ignoredList;
+            return this;
+        }
 
         /**
          * <p>The queried media assets.</p>
@@ -928,6 +949,114 @@ public class BatchGetMediaInfosResponseBody extends TeaModel {
      *
      * <p>BatchGetMediaInfosResponseBody</p>
      */
+    public static class DynamicMetaData extends TeaModel {
+        @com.aliyun.core.annotation.NameInMap("Data")
+        private String data;
+
+        private DynamicMetaData(Builder builder) {
+            this.data = builder.data;
+        }
+
+        public static Builder builder() {
+            return new Builder();
+        }
+
+        public static DynamicMetaData create() {
+            return builder().build();
+        }
+
+        /**
+         * @return data
+         */
+        public String getData() {
+            return this.data;
+        }
+
+        public static final class Builder {
+            private String data; 
+
+            private Builder() {
+            } 
+
+            private Builder(DynamicMetaData model) {
+                this.data = model.data;
+            } 
+
+            /**
+             * Data.
+             */
+            public Builder data(String data) {
+                this.data = data;
+                return this;
+            }
+
+            public DynamicMetaData build() {
+                return new DynamicMetaData(this);
+            } 
+
+        } 
+
+    }
+    /**
+     * 
+     * {@link BatchGetMediaInfosResponseBody} extends {@link TeaModel}
+     *
+     * <p>BatchGetMediaInfosResponseBody</p>
+     */
+    public static class MediaDynamicInfo extends TeaModel {
+        @com.aliyun.core.annotation.NameInMap("DynamicMetaData")
+        private DynamicMetaData dynamicMetaData;
+
+        private MediaDynamicInfo(Builder builder) {
+            this.dynamicMetaData = builder.dynamicMetaData;
+        }
+
+        public static Builder builder() {
+            return new Builder();
+        }
+
+        public static MediaDynamicInfo create() {
+            return builder().build();
+        }
+
+        /**
+         * @return dynamicMetaData
+         */
+        public DynamicMetaData getDynamicMetaData() {
+            return this.dynamicMetaData;
+        }
+
+        public static final class Builder {
+            private DynamicMetaData dynamicMetaData; 
+
+            private Builder() {
+            } 
+
+            private Builder(MediaDynamicInfo model) {
+                this.dynamicMetaData = model.dynamicMetaData;
+            } 
+
+            /**
+             * DynamicMetaData.
+             */
+            public Builder dynamicMetaData(DynamicMetaData dynamicMetaData) {
+                this.dynamicMetaData = dynamicMetaData;
+                return this;
+            }
+
+            public MediaDynamicInfo build() {
+                return new MediaDynamicInfo(this);
+            } 
+
+        } 
+
+    }
+    /**
+     * 
+     * {@link BatchGetMediaInfosResponseBody} extends {@link TeaModel}
+     *
+     * <p>BatchGetMediaInfosResponseBody</p>
+     */
     public static class MediaInfos extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("FileInfoList")
         private java.util.List<FileInfoList> fileInfoList;
@@ -935,12 +1064,16 @@ public class BatchGetMediaInfosResponseBody extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("MediaBasicInfo")
         private MediaBasicInfo mediaBasicInfo;
 
+        @com.aliyun.core.annotation.NameInMap("MediaDynamicInfo")
+        private MediaDynamicInfo mediaDynamicInfo;
+
         @com.aliyun.core.annotation.NameInMap("MediaId")
         private String mediaId;
 
         private MediaInfos(Builder builder) {
             this.fileInfoList = builder.fileInfoList;
             this.mediaBasicInfo = builder.mediaBasicInfo;
+            this.mediaDynamicInfo = builder.mediaDynamicInfo;
             this.mediaId = builder.mediaId;
         }
 
@@ -967,6 +1100,13 @@ public class BatchGetMediaInfosResponseBody extends TeaModel {
         }
 
         /**
+         * @return mediaDynamicInfo
+         */
+        public MediaDynamicInfo getMediaDynamicInfo() {
+            return this.mediaDynamicInfo;
+        }
+
+        /**
          * @return mediaId
          */
         public String getMediaId() {
@@ -976,6 +1116,7 @@ public class BatchGetMediaInfosResponseBody extends TeaModel {
         public static final class Builder {
             private java.util.List<FileInfoList> fileInfoList; 
             private MediaBasicInfo mediaBasicInfo; 
+            private MediaDynamicInfo mediaDynamicInfo; 
             private String mediaId; 
 
             private Builder() {
@@ -984,6 +1125,7 @@ public class BatchGetMediaInfosResponseBody extends TeaModel {
             private Builder(MediaInfos model) {
                 this.fileInfoList = model.fileInfoList;
                 this.mediaBasicInfo = model.mediaBasicInfo;
+                this.mediaDynamicInfo = model.mediaDynamicInfo;
                 this.mediaId = model.mediaId;
             } 
 
@@ -1000,6 +1142,14 @@ public class BatchGetMediaInfosResponseBody extends TeaModel {
              */
             public Builder mediaBasicInfo(MediaBasicInfo mediaBasicInfo) {
                 this.mediaBasicInfo = mediaBasicInfo;
+                return this;
+            }
+
+            /**
+             * MediaDynamicInfo.
+             */
+            public Builder mediaDynamicInfo(MediaDynamicInfo mediaDynamicInfo) {
+                this.mediaDynamicInfo = mediaDynamicInfo;
                 return this;
             }
 

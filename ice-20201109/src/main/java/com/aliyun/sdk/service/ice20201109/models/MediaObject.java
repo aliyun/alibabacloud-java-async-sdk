@@ -23,13 +23,9 @@ public class MediaObject extends TeaModel {
     @com.aliyun.core.annotation.NameInMap("Type")
     private String type;
 
-    @com.aliyun.core.annotation.NameInMap("Url")
-    private String url;
-
     private MediaObject(Builder builder) {
         this.media = builder.media;
         this.type = builder.type;
-        this.url = builder.url;
     }
 
     public static Builder builder() {
@@ -58,17 +54,9 @@ public class MediaObject extends TeaModel {
         return this.type;
     }
 
-    /**
-     * @return url
-     */
-    public String getUrl() {
-        return this.url;
-    }
-
     public static final class Builder {
         private String media; 
         private String type; 
-        private String url; 
 
         private Builder() {
         } 
@@ -76,7 +64,6 @@ public class MediaObject extends TeaModel {
         private Builder(MediaObject model) {
             this.media = model.media;
             this.type = model.type;
-            this.url = model.url;
         } 
 
         /**
@@ -92,14 +79,6 @@ public class MediaObject extends TeaModel {
          */
         public Builder type(String type) {
             this.type = type;
-            return this;
-        }
-
-        /**
-         * Url.
-         */
-        public Builder url(String url) {
-            this.url = url;
             return this;
         }
 

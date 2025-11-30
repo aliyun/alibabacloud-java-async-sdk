@@ -24,7 +24,7 @@ public class MediaConvertJob extends TeaModel {
     private String code;
 
     @com.aliyun.core.annotation.NameInMap("Config")
-    private Config config;
+    private MediaConvertJobConfig config;
 
     @com.aliyun.core.annotation.NameInMap("CreateTime")
     private String createTime;
@@ -105,7 +105,7 @@ public class MediaConvertJob extends TeaModel {
     /**
      * @return config
      */
-    public Config getConfig() {
+    public MediaConvertJobConfig getConfig() {
         return this.config;
     }
 
@@ -189,7 +189,7 @@ public class MediaConvertJob extends TeaModel {
     public static final class Builder {
         private String clientToken; 
         private String code; 
-        private Config config; 
+        private MediaConvertJobConfig config; 
         private String createTime; 
         private String finishTime; 
         private String jobId; 
@@ -241,7 +241,7 @@ public class MediaConvertJob extends TeaModel {
         /**
          * Config.
          */
-        public Builder config(Config config) {
+        public Builder config(MediaConvertJobConfig config) {
             this.config = config;
             return this;
         }
@@ -340,121 +340,4 @@ public class MediaConvertJob extends TeaModel {
 
     } 
 
-    /**
-     * 
-     * {@link MediaConvertJob} extends {@link TeaModel}
-     *
-     * <p>MediaConvertJob</p>
-     */
-    public static class Config extends TeaModel {
-        @com.aliyun.core.annotation.NameInMap("Inputs")
-        private java.util.List<MediaConvertInput> inputs;
-
-        @com.aliyun.core.annotation.NameInMap("JobName")
-        private String jobName;
-
-        @com.aliyun.core.annotation.NameInMap("OutputGroups")
-        private java.util.List<MediaConvertOutputGroup> outputGroups;
-
-        @com.aliyun.core.annotation.NameInMap("Outputs")
-        private java.util.List<MediaConvertOutput> outputs;
-
-        private Config(Builder builder) {
-            this.inputs = builder.inputs;
-            this.jobName = builder.jobName;
-            this.outputGroups = builder.outputGroups;
-            this.outputs = builder.outputs;
-        }
-
-        public static Builder builder() {
-            return new Builder();
-        }
-
-        public static Config create() {
-            return builder().build();
-        }
-
-        /**
-         * @return inputs
-         */
-        public java.util.List<MediaConvertInput> getInputs() {
-            return this.inputs;
-        }
-
-        /**
-         * @return jobName
-         */
-        public String getJobName() {
-            return this.jobName;
-        }
-
-        /**
-         * @return outputGroups
-         */
-        public java.util.List<MediaConvertOutputGroup> getOutputGroups() {
-            return this.outputGroups;
-        }
-
-        /**
-         * @return outputs
-         */
-        public java.util.List<MediaConvertOutput> getOutputs() {
-            return this.outputs;
-        }
-
-        public static final class Builder {
-            private java.util.List<MediaConvertInput> inputs; 
-            private String jobName; 
-            private java.util.List<MediaConvertOutputGroup> outputGroups; 
-            private java.util.List<MediaConvertOutput> outputs; 
-
-            private Builder() {
-            } 
-
-            private Builder(Config model) {
-                this.inputs = model.inputs;
-                this.jobName = model.jobName;
-                this.outputGroups = model.outputGroups;
-                this.outputs = model.outputs;
-            } 
-
-            /**
-             * Inputs.
-             */
-            public Builder inputs(java.util.List<MediaConvertInput> inputs) {
-                this.inputs = inputs;
-                return this;
-            }
-
-            /**
-             * JobName.
-             */
-            public Builder jobName(String jobName) {
-                this.jobName = jobName;
-                return this;
-            }
-
-            /**
-             * OutputGroups.
-             */
-            public Builder outputGroups(java.util.List<MediaConvertOutputGroup> outputGroups) {
-                this.outputGroups = outputGroups;
-                return this;
-            }
-
-            /**
-             * Outputs.
-             */
-            public Builder outputs(java.util.List<MediaConvertOutput> outputs) {
-                this.outputs = outputs;
-                return this;
-            }
-
-            public Config build() {
-                return new Config(this);
-            } 
-
-        } 
-
-    }
 }
