@@ -215,6 +215,9 @@ public class DescribeAuditLogsResponseBody extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("InWhiteList")
         private Boolean inWhiteList;
 
+        @com.aliyun.core.annotation.NameInMap("InstanceAuditStatus")
+        private String instanceAuditStatus;
+
         @com.aliyun.core.annotation.NameInMap("InstanceDescription")
         private String instanceDescription;
 
@@ -223,6 +226,9 @@ public class DescribeAuditLogsResponseBody extends TeaModel {
 
         @com.aliyun.core.annotation.NameInMap("IpType")
         private String ipType;
+
+        @com.aliyun.core.annotation.NameInMap("LogSource")
+        private String logSource;
 
         @com.aliyun.core.annotation.NameInMap("LogTime")
         private Long logTime;
@@ -291,9 +297,11 @@ public class DescribeAuditLogsResponseBody extends TeaModel {
             this.executeStatus = builder.executeStatus;
             this.executeTime = builder.executeTime;
             this.inWhiteList = builder.inWhiteList;
+            this.instanceAuditStatus = builder.instanceAuditStatus;
             this.instanceDescription = builder.instanceDescription;
             this.instanceName = builder.instanceName;
             this.ipType = builder.ipType;
+            this.logSource = builder.logSource;
             this.logTime = builder.logTime;
             this.memberAccount = builder.memberAccount;
             this.message = builder.message;
@@ -407,6 +415,13 @@ public class DescribeAuditLogsResponseBody extends TeaModel {
         }
 
         /**
+         * @return instanceAuditStatus
+         */
+        public String getInstanceAuditStatus() {
+            return this.instanceAuditStatus;
+        }
+
+        /**
          * @return instanceDescription
          */
         public String getInstanceDescription() {
@@ -425,6 +440,13 @@ public class DescribeAuditLogsResponseBody extends TeaModel {
          */
         public String getIpType() {
             return this.ipType;
+        }
+
+        /**
+         * @return logSource
+         */
+        public String getLogSource() {
+            return this.logSource;
         }
 
         /**
@@ -566,9 +588,11 @@ public class DescribeAuditLogsResponseBody extends TeaModel {
             private Integer executeStatus; 
             private Long executeTime; 
             private Boolean inWhiteList; 
+            private String instanceAuditStatus; 
             private String instanceDescription; 
             private String instanceName; 
             private String ipType; 
+            private String logSource; 
             private Long logTime; 
             private String memberAccount; 
             private String message; 
@@ -604,9 +628,11 @@ public class DescribeAuditLogsResponseBody extends TeaModel {
                 this.executeStatus = model.executeStatus;
                 this.executeTime = model.executeTime;
                 this.inWhiteList = model.inWhiteList;
+                this.instanceAuditStatus = model.instanceAuditStatus;
                 this.instanceDescription = model.instanceDescription;
                 this.instanceName = model.instanceName;
                 this.ipType = model.ipType;
+                this.logSource = model.logSource;
                 this.logTime = model.logTime;
                 this.memberAccount = model.memberAccount;
                 this.message = model.message;
@@ -724,6 +750,14 @@ public class DescribeAuditLogsResponseBody extends TeaModel {
             }
 
             /**
+             * InstanceAuditStatus.
+             */
+            public Builder instanceAuditStatus(String instanceAuditStatus) {
+                this.instanceAuditStatus = instanceAuditStatus;
+                return this;
+            }
+
+            /**
              * InstanceDescription.
              */
             public Builder instanceDescription(String instanceDescription) {
@@ -744,6 +778,14 @@ public class DescribeAuditLogsResponseBody extends TeaModel {
              */
             public Builder ipType(String ipType) {
                 this.ipType = ipType;
+                return this;
+            }
+
+            /**
+             * LogSource.
+             */
+            public Builder logSource(String logSource) {
+                this.logSource = logSource;
                 return this;
             }
 

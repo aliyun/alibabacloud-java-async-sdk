@@ -379,6 +379,12 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<ManualTriggerMaskingProcessResponse> manualTriggerMaskingProcess(ManualTriggerMaskingProcessRequest request);
 
     /**
+     * @param request the request parameters of MaskOssImage  MaskOssImageRequest
+     * @return MaskOssImageResponse
+     */
+    CompletableFuture<MaskOssImageResponse> maskOssImage(MaskOssImageRequest request);
+
+    /**
      * @param request the request parameters of ModifyDataLimit  ModifyDataLimitRequest
      * @return ModifyDataLimitResponse
      */
@@ -439,6 +445,12 @@ public interface AsyncClient extends SdkAutoCloseable {
      * @return ModifyRuleStatusResponse
      */
     CompletableFuture<ModifyRuleStatusResponse> modifyRuleStatus(ModifyRuleStatusRequest request);
+
+    /**
+     * @param request the request parameters of RestoreOssImage  RestoreOssImageRequest
+     * @return RestoreOssImageResponse
+     */
+    CompletableFuture<RestoreOssImageResponse> restoreOssImage(RestoreOssImageRequest request);
 
     /**
      * <b>description</b> :

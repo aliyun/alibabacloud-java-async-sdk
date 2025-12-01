@@ -66,6 +66,10 @@ public class DescribeAuditLogsRequest extends Request {
     private Boolean loadWhiteList;
 
     @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("LogSource")
+    private String logSource;
+
+    @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("MemberAccount")
     private String memberAccount;
 
@@ -92,6 +96,10 @@ public class DescribeAuditLogsRequest extends Request {
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("ProductId")
     private Long productId;
+
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("RuleAggQuery")
+    private Boolean ruleAggQuery;
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("RuleCategory")
@@ -131,6 +139,7 @@ public class DescribeAuditLogsRequest extends Request {
         this.ipType = builder.ipType;
         this.lang = builder.lang;
         this.loadWhiteList = builder.loadWhiteList;
+        this.logSource = builder.logSource;
         this.memberAccount = builder.memberAccount;
         this.message = builder.message;
         this.operateType = builder.operateType;
@@ -138,6 +147,7 @@ public class DescribeAuditLogsRequest extends Request {
         this.pageSize = builder.pageSize;
         this.productCode = builder.productCode;
         this.productId = builder.productId;
+        this.ruleAggQuery = builder.ruleAggQuery;
         this.ruleCategory = builder.ruleCategory;
         this.ruleID = builder.ruleID;
         this.ruleName = builder.ruleName;
@@ -244,6 +254,13 @@ public class DescribeAuditLogsRequest extends Request {
     }
 
     /**
+     * @return logSource
+     */
+    public String getLogSource() {
+        return this.logSource;
+    }
+
+    /**
      * @return memberAccount
      */
     public String getMemberAccount() {
@@ -290,6 +307,13 @@ public class DescribeAuditLogsRequest extends Request {
      */
     public Long getProductId() {
         return this.productId;
+    }
+
+    /**
+     * @return ruleAggQuery
+     */
+    public Boolean getRuleAggQuery() {
+        return this.ruleAggQuery;
     }
 
     /**
@@ -347,6 +371,7 @@ public class DescribeAuditLogsRequest extends Request {
         private String ipType; 
         private String lang; 
         private Boolean loadWhiteList; 
+        private String logSource; 
         private String memberAccount; 
         private String message; 
         private String operateType; 
@@ -354,6 +379,7 @@ public class DescribeAuditLogsRequest extends Request {
         private Integer pageSize; 
         private String productCode; 
         private Long productId; 
+        private Boolean ruleAggQuery; 
         private String ruleCategory; 
         private String ruleID; 
         private String ruleName; 
@@ -379,6 +405,7 @@ public class DescribeAuditLogsRequest extends Request {
             this.ipType = request.ipType;
             this.lang = request.lang;
             this.loadWhiteList = request.loadWhiteList;
+            this.logSource = request.logSource;
             this.memberAccount = request.memberAccount;
             this.message = request.message;
             this.operateType = request.operateType;
@@ -386,6 +413,7 @@ public class DescribeAuditLogsRequest extends Request {
             this.pageSize = request.pageSize;
             this.productCode = request.productCode;
             this.productId = request.productId;
+            this.ruleAggQuery = request.ruleAggQuery;
             this.ruleCategory = request.ruleCategory;
             this.ruleID = request.ruleID;
             this.ruleName = request.ruleName;
@@ -503,6 +531,15 @@ public class DescribeAuditLogsRequest extends Request {
         }
 
         /**
+         * LogSource.
+         */
+        public Builder logSource(String logSource) {
+            this.putQueryParameter("LogSource", logSource);
+            this.logSource = logSource;
+            return this;
+        }
+
+        /**
          * MemberAccount.
          */
         public Builder memberAccount(String memberAccount) {
@@ -562,6 +599,15 @@ public class DescribeAuditLogsRequest extends Request {
         public Builder productId(Long productId) {
             this.putQueryParameter("ProductId", productId);
             this.productId = productId;
+            return this;
+        }
+
+        /**
+         * RuleAggQuery.
+         */
+        public Builder ruleAggQuery(Boolean ruleAggQuery) {
+            this.putQueryParameter("RuleAggQuery", ruleAggQuery);
+            this.ruleAggQuery = ruleAggQuery;
             return this;
         }
 
