@@ -43,6 +43,10 @@ public class DescribeClusterAttachScriptsRequest extends Request {
     private String nodepoolId;
 
     @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("one_time_token")
+    private Boolean oneTimeToken;
+
+    @com.aliyun.core.annotation.Body
     @com.aliyun.core.annotation.NameInMap("options")
     private String options;
 
@@ -58,6 +62,7 @@ public class DescribeClusterAttachScriptsRequest extends Request {
         this.formatDisk = builder.formatDisk;
         this.keepInstanceName = builder.keepInstanceName;
         this.nodepoolId = builder.nodepoolId;
+        this.oneTimeToken = builder.oneTimeToken;
         this.options = builder.options;
         this.rdsInstances = builder.rdsInstances;
     }
@@ -118,6 +123,13 @@ public class DescribeClusterAttachScriptsRequest extends Request {
     }
 
     /**
+     * @return oneTimeToken
+     */
+    public Boolean getOneTimeToken() {
+        return this.oneTimeToken;
+    }
+
+    /**
      * @return options
      */
     public String getOptions() {
@@ -138,6 +150,7 @@ public class DescribeClusterAttachScriptsRequest extends Request {
         private Boolean formatDisk; 
         private Boolean keepInstanceName; 
         private String nodepoolId; 
+        private Boolean oneTimeToken; 
         private String options; 
         private java.util.List<String> rdsInstances; 
 
@@ -153,6 +166,7 @@ public class DescribeClusterAttachScriptsRequest extends Request {
             this.formatDisk = request.formatDisk;
             this.keepInstanceName = request.keepInstanceName;
             this.nodepoolId = request.nodepoolId;
+            this.oneTimeToken = request.oneTimeToken;
             this.options = request.options;
             this.rdsInstances = request.rdsInstances;
         } 
@@ -249,6 +263,15 @@ public class DescribeClusterAttachScriptsRequest extends Request {
         public Builder nodepoolId(String nodepoolId) {
             this.putBodyParameter("nodepool_id", nodepoolId);
             this.nodepoolId = nodepoolId;
+            return this;
+        }
+
+        /**
+         * one_time_token.
+         */
+        public Builder oneTimeToken(Boolean oneTimeToken) {
+            this.putBodyParameter("one_time_token", oneTimeToken);
+            this.oneTimeToken = oneTimeToken;
             return this;
         }
 
