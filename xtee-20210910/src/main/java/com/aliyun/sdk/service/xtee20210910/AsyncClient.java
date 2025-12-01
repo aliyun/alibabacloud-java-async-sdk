@@ -80,6 +80,12 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<CompareCopyRuleVariableResponse> compareCopyRuleVariable(CompareCopyRuleVariableRequest request);
 
     /**
+     * @param request the request parameters of CompareRule  CompareRuleRequest
+     * @return CompareRuleResponse
+     */
+    CompletableFuture<CompareRuleResponse> compareRule(CompareRuleRequest request);
+
+    /**
      * @param request the request parameters of CreateAnalysisConditionFavorite  CreateAnalysisConditionFavoriteRequest
      * @return CreateAnalysisConditionFavoriteResponse
      */
@@ -648,6 +654,12 @@ public interface AsyncClient extends SdkAutoCloseable {
      * @return DescribeExpressionVariablePageResponse
      */
     CompletableFuture<DescribeExpressionVariablePageResponse> describeExpressionVariablePage(DescribeExpressionVariablePageRequest request);
+
+    /**
+     * @param request the request parameters of DescribeExpressionVariableVersionDetail  DescribeExpressionVariableVersionDetailRequest
+     * @return DescribeExpressionVariableVersionDetailResponse
+     */
+    CompletableFuture<DescribeExpressionVariableVersionDetailResponse> describeExpressionVariableVersionDetail(DescribeExpressionVariableVersionDetailRequest request);
 
     /**
      * @param request the request parameters of DescribeFieldById  DescribeFieldByIdRequest
@@ -1365,6 +1377,12 @@ public interface AsyncClient extends SdkAutoCloseable {
      * @return DescribeVariableSceneListResponse
      */
     CompletableFuture<DescribeVariableSceneListResponse> describeVariableSceneList(DescribeVariableSceneListRequest request);
+
+    /**
+     * @param request the request parameters of DescribeVariableVersionDetail  DescribeVariableVersionDetailRequest
+     * @return DescribeVariableVersionDetailResponse
+     */
+    CompletableFuture<DescribeVariableVersionDetailResponse> describeVariableVersionDetail(DescribeVariableVersionDetailRequest request);
 
     /**
      * @param request the request parameters of DescribeVersionPageList  DescribeVersionPageListRequest

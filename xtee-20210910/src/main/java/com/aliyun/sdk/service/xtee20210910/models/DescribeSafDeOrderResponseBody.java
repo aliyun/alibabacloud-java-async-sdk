@@ -157,7 +157,10 @@ public class DescribeSafDeOrderResponseBody extends TeaModel {
             } 
 
             /**
-             * expirationDate.
+             * <p>Expiration date (timestamp).</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2117750400000</p>
              */
             public Builder expirationDate(Long expirationDate) {
                 this.expirationDate = expirationDate;
@@ -165,7 +168,10 @@ public class DescribeSafDeOrderResponseBody extends TeaModel {
             }
 
             /**
-             * region.
+             * <p>Region ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>cn-shanghai</p>
              */
             public Builder region(String region) {
                 this.region = region;
@@ -173,7 +179,14 @@ public class DescribeSafDeOrderResponseBody extends TeaModel {
             }
 
             /**
-             * specification.
+             * <p>Specification model:</p>
+             * <p>1: Basic Edition 
+             * 2: Advanced Edition 
+             * 3: Premium Edition 
+             * 4: Flagship Edition</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder specification(Integer specification) {
                 this.specification = specification;
@@ -279,7 +292,7 @@ public class DescribeSafDeOrderResponseBody extends TeaModel {
             }
 
             /**
-             * regions.
+             * <p>Activated region permission addresses.</p>
              */
             public Builder regions(java.util.List<Regions> regions) {
                 this.regions = regions;
