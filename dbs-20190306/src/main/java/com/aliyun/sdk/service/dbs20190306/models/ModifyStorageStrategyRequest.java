@@ -1,58 +1,63 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.dbs20190306.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ModifyStorageStrategyRequest} extends {@link RequestModel}
  *
  * <p>ModifyStorageStrategyRequest</p>
  */
 public class ModifyStorageStrategyRequest extends Request {
-    @Query
-    @NameInMap("BackupPlanId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Host
+    @com.aliyun.core.annotation.NameInMap("RegionId")
+    private String regionId;
+
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("BackupPlanId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String backupPlanId;
 
-    @Query
-    @NameInMap("BackupRetentionPeriod")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("BackupRetentionPeriod")
+    @com.aliyun.core.annotation.Validation(required = true)
     private Integer backupRetentionPeriod;
 
-    @Query
-    @NameInMap("ClientToken")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ClientToken")
     private String clientToken;
 
-    @Query
-    @NameInMap("DuplicationArchivePeriod")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("DuplicationArchivePeriod")
+    @com.aliyun.core.annotation.Validation(required = true)
     private Integer duplicationArchivePeriod;
 
-    @Query
-    @NameInMap("DuplicationInfrequentAccessPeriod")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("DuplicationInfrequentAccessPeriod")
+    @com.aliyun.core.annotation.Validation(required = true)
     private Integer duplicationInfrequentAccessPeriod;
 
-    @Query
-    @NameInMap("OwnerId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("OwnerId")
     private String ownerId;
-
-    @Host
-    @NameInMap("RegionId")
-    private String regionId;
 
     private ModifyStorageStrategyRequest(Builder builder) {
         super(builder);
+        this.regionId = builder.regionId;
         this.backupPlanId = builder.backupPlanId;
         this.backupRetentionPeriod = builder.backupRetentionPeriod;
         this.clientToken = builder.clientToken;
         this.duplicationArchivePeriod = builder.duplicationArchivePeriod;
         this.duplicationInfrequentAccessPeriod = builder.duplicationInfrequentAccessPeriod;
         this.ownerId = builder.ownerId;
-        this.regionId = builder.regionId;
     }
 
     public static Builder builder() {
@@ -63,9 +68,16 @@ public class ModifyStorageStrategyRequest extends Request {
         return builder().build();
     }
 
-    @Override
+@Override
     public Builder toBuilder() {
         return new Builder(this);
+    }
+
+    /**
+     * @return regionId
+     */
+    public String getRegionId() {
+        return this.regionId;
     }
 
     /**
@@ -110,21 +122,14 @@ public class ModifyStorageStrategyRequest extends Request {
         return this.ownerId;
     }
 
-    /**
-     * @return regionId
-     */
-    public String getRegionId() {
-        return this.regionId;
-    }
-
     public static final class Builder extends Request.Builder<ModifyStorageStrategyRequest, Builder> {
+        private String regionId; 
         private String backupPlanId; 
         private Integer backupRetentionPeriod; 
         private String clientToken; 
         private Integer duplicationArchivePeriod; 
         private Integer duplicationInfrequentAccessPeriod; 
         private String ownerId; 
-        private String regionId; 
 
         private Builder() {
             super();
@@ -132,17 +137,30 @@ public class ModifyStorageStrategyRequest extends Request {
 
         private Builder(ModifyStorageStrategyRequest request) {
             super(request);
+            this.regionId = request.regionId;
             this.backupPlanId = request.backupPlanId;
             this.backupRetentionPeriod = request.backupRetentionPeriod;
             this.clientToken = request.clientToken;
             this.duplicationArchivePeriod = request.duplicationArchivePeriod;
             this.duplicationInfrequentAccessPeriod = request.duplicationInfrequentAccessPeriod;
             this.ownerId = request.ownerId;
-            this.regionId = request.regionId;
         } 
 
         /**
-         * BackupPlanId.
+         * RegionId.
+         */
+        public Builder regionId(String regionId) {
+            this.putHostParameter("RegionId", regionId);
+            this.regionId = regionId;
+            return this;
+        }
+
+        /**
+         * <p>The ID of the backup schedule. You can call the <a href="https://help.aliyun.com/document_detail/2869825.html">DescribeBackupPlanList</a> operation to obtain the ID.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>dbsqdss5tmh****</p>
          */
         public Builder backupPlanId(String backupPlanId) {
             this.putQueryParameter("BackupPlanId", backupPlanId);
@@ -151,7 +169,14 @@ public class ModifyStorageStrategyRequest extends Request {
         }
 
         /**
-         * BackupRetentionPeriod.
+         * <p>The number of days for which the backup data is retained. Valid values: 0 to 1825.</p>
+         * <blockquote>
+         * <p>Default value: 730.</p>
+         * </blockquote>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>730</p>
          */
         public Builder backupRetentionPeriod(Integer backupRetentionPeriod) {
             this.putQueryParameter("BackupRetentionPeriod", backupRetentionPeriod);
@@ -160,7 +185,10 @@ public class ModifyStorageStrategyRequest extends Request {
         }
 
         /**
-         * ClientToken.
+         * <p>The client token that is used to ensure the idempotence of the request.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>dbstest</p>
          */
         public Builder clientToken(String clientToken) {
             this.putQueryParameter("ClientToken", clientToken);
@@ -169,7 +197,14 @@ public class ModifyStorageStrategyRequest extends Request {
         }
 
         /**
-         * DuplicationArchivePeriod.
+         * <p>The number of days after which the storage class of the backup data is changed to Archive. The value of this parameter must be smaller than the value of the BackupRetentionPeriod parameter. For more information about the Archive storage class, see <a href="https://help.aliyun.com/document_detail/51374.html">Storage class overview</a>.</p>
+         * <blockquote>
+         * <p>Default value: 365.</p>
+         * </blockquote>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>366</p>
          */
         public Builder duplicationArchivePeriod(Integer duplicationArchivePeriod) {
             this.putQueryParameter("DuplicationArchivePeriod", duplicationArchivePeriod);
@@ -178,7 +213,14 @@ public class ModifyStorageStrategyRequest extends Request {
         }
 
         /**
-         * DuplicationInfrequentAccessPeriod.
+         * <p>The number of days after which the storage class of the backup data is changed to Infrequent Access (IA). The value of this parameter must be smaller than the value of the DuplicationArchivePeriod parameter. For more information about the IA storage class, see <a href="https://help.aliyun.com/document_detail/51374.html">Storage class overview</a>.</p>
+         * <blockquote>
+         * <p>Default value: 180.</p>
+         * </blockquote>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>190</p>
          */
         public Builder duplicationInfrequentAccessPeriod(Integer duplicationInfrequentAccessPeriod) {
             this.putQueryParameter("DuplicationInfrequentAccessPeriod", duplicationInfrequentAccessPeriod);
@@ -192,15 +234,6 @@ public class ModifyStorageStrategyRequest extends Request {
         public Builder ownerId(String ownerId) {
             this.putQueryParameter("OwnerId", ownerId);
             this.ownerId = ownerId;
-            return this;
-        }
-
-        /**
-         * RegionId.
-         */
-        public Builder regionId(String regionId) {
-            this.putHostParameter("RegionId", regionId);
-            this.regionId = regionId;
             return this;
         }
 

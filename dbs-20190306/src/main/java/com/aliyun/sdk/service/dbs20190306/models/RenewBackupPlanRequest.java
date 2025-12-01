@@ -1,51 +1,56 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.dbs20190306.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link RenewBackupPlanRequest} extends {@link RequestModel}
  *
  * <p>RenewBackupPlanRequest</p>
  */
 public class RenewBackupPlanRequest extends Request {
-    @Query
-    @NameInMap("BackupPlanId")
-    @Validation(required = true)
-    private String backupPlanId;
-
-    @Query
-    @NameInMap("ClientToken")
-    private String clientToken;
-
-    @Query
-    @NameInMap("OwnerId")
-    private String ownerId;
-
-    @Query
-    @NameInMap("Period")
-    @Validation(required = true)
-    private String period;
-
-    @Host
-    @NameInMap("RegionId")
+    @com.aliyun.core.annotation.Host
+    @com.aliyun.core.annotation.NameInMap("RegionId")
     private String regionId;
 
-    @Query
-    @NameInMap("UsedTime")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("BackupPlanId")
+    @com.aliyun.core.annotation.Validation(required = true)
+    private String backupPlanId;
+
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ClientToken")
+    private String clientToken;
+
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("OwnerId")
+    private String ownerId;
+
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Period")
+    @com.aliyun.core.annotation.Validation(required = true)
+    private String period;
+
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("UsedTime")
+    @com.aliyun.core.annotation.Validation(required = true)
     private Integer usedTime;
 
     private RenewBackupPlanRequest(Builder builder) {
         super(builder);
+        this.regionId = builder.regionId;
         this.backupPlanId = builder.backupPlanId;
         this.clientToken = builder.clientToken;
         this.ownerId = builder.ownerId;
         this.period = builder.period;
-        this.regionId = builder.regionId;
         this.usedTime = builder.usedTime;
     }
 
@@ -57,9 +62,16 @@ public class RenewBackupPlanRequest extends Request {
         return builder().build();
     }
 
-    @Override
+@Override
     public Builder toBuilder() {
         return new Builder(this);
+    }
+
+    /**
+     * @return regionId
+     */
+    public String getRegionId() {
+        return this.regionId;
     }
 
     /**
@@ -91,13 +103,6 @@ public class RenewBackupPlanRequest extends Request {
     }
 
     /**
-     * @return regionId
-     */
-    public String getRegionId() {
-        return this.regionId;
-    }
-
-    /**
      * @return usedTime
      */
     public Integer getUsedTime() {
@@ -105,11 +110,11 @@ public class RenewBackupPlanRequest extends Request {
     }
 
     public static final class Builder extends Request.Builder<RenewBackupPlanRequest, Builder> {
+        private String regionId; 
         private String backupPlanId; 
         private String clientToken; 
         private String ownerId; 
         private String period; 
-        private String regionId; 
         private Integer usedTime; 
 
         private Builder() {
@@ -118,16 +123,29 @@ public class RenewBackupPlanRequest extends Request {
 
         private Builder(RenewBackupPlanRequest request) {
             super(request);
+            this.regionId = request.regionId;
             this.backupPlanId = request.backupPlanId;
             this.clientToken = request.clientToken;
             this.ownerId = request.ownerId;
             this.period = request.period;
-            this.regionId = request.regionId;
             this.usedTime = request.usedTime;
         } 
 
         /**
-         * BackupPlanId.
+         * RegionId.
+         */
+        public Builder regionId(String regionId) {
+            this.putHostParameter("RegionId", regionId);
+            this.regionId = regionId;
+            return this;
+        }
+
+        /**
+         * <p>The ID of the backup schedule.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>dbstooi01e****</p>
          */
         public Builder backupPlanId(String backupPlanId) {
             this.putQueryParameter("BackupPlanId", backupPlanId);
@@ -136,7 +154,10 @@ public class RenewBackupPlanRequest extends Request {
         }
 
         /**
-         * ClientToken.
+         * <p>The client token that is used to ensure the idempotence of the request.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>HKAJHFIUEQWBFIJSNFO****</p>
          */
         public Builder clientToken(String clientToken) {
             this.putQueryParameter("ClientToken", clientToken);
@@ -154,7 +175,15 @@ public class RenewBackupPlanRequest extends Request {
         }
 
         /**
-         * Period.
+         * <p>Specifies whether to use yearly subscription or monthly subscription for the instance. Valid values:</p>
+         * <ul>
+         * <li>Year</li>
+         * <li>Month</li>
+         * </ul>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Month</p>
          */
         public Builder period(String period) {
             this.putQueryParameter("Period", period);
@@ -163,16 +192,15 @@ public class RenewBackupPlanRequest extends Request {
         }
 
         /**
-         * RegionId.
-         */
-        public Builder regionId(String regionId) {
-            this.putHostParameter("RegionId", regionId);
-            this.regionId = regionId;
-            return this;
-        }
-
-        /**
-         * UsedTime.
+         * <p>The subscription duration of the instance. Valid values:</p>
+         * <ul>
+         * <li>If the Period parameter is set to Year, the value of the UsedTime parameter ranges from 1 to 9.</li>
+         * <li>If the Period parameter is set to Month, the value of the UsedTime parameter ranges from 1 to 11.</li>
+         * </ul>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder usedTime(Integer usedTime) {
             this.putQueryParameter("UsedTime", usedTime);

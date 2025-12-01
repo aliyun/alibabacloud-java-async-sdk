@@ -1,33 +1,38 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.dbs20190306.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeBackupPlanBillingResponseBody} extends {@link TeaModel}
  *
  * <p>DescribeBackupPlanBillingResponseBody</p>
  */
 public class DescribeBackupPlanBillingResponseBody extends TeaModel {
-    @NameInMap("ErrCode")
+    @com.aliyun.core.annotation.NameInMap("ErrCode")
     private String errCode;
 
-    @NameInMap("ErrMessage")
+    @com.aliyun.core.annotation.NameInMap("ErrMessage")
     private String errMessage;
 
-    @NameInMap("HttpStatusCode")
+    @com.aliyun.core.annotation.NameInMap("HttpStatusCode")
     private Integer httpStatusCode;
 
-    @NameInMap("Item")
+    @com.aliyun.core.annotation.NameInMap("Item")
     private Item item;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("Success")
+    @com.aliyun.core.annotation.NameInMap("Success")
     private Boolean success;
 
     private DescribeBackupPlanBillingResponseBody(Builder builder) {
@@ -45,6 +50,10 @@ public class DescribeBackupPlanBillingResponseBody extends TeaModel {
 
     public static DescribeBackupPlanBillingResponseBody create() {
         return builder().build();
+    }
+
+    public Builder toBuilder() {
+        return new Builder(this);
     }
 
     /**
@@ -97,8 +106,23 @@ public class DescribeBackupPlanBillingResponseBody extends TeaModel {
         private String requestId; 
         private Boolean success; 
 
+        private Builder() {
+        } 
+
+        private Builder(DescribeBackupPlanBillingResponseBody model) {
+            this.errCode = model.errCode;
+            this.errMessage = model.errMessage;
+            this.httpStatusCode = model.httpStatusCode;
+            this.item = model.item;
+            this.requestId = model.requestId;
+            this.success = model.success;
+        } 
+
         /**
-         * ErrCode.
+         * <p>The error code.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>InvalidParameter</p>
          */
         public Builder errCode(String errCode) {
             this.errCode = errCode;
@@ -106,7 +130,10 @@ public class DescribeBackupPlanBillingResponseBody extends TeaModel {
         }
 
         /**
-         * ErrMessage.
+         * <p>The error message.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>This backupPlan can&quot;t support this action</p>
          */
         public Builder errMessage(String errMessage) {
             this.errMessage = errMessage;
@@ -114,7 +141,10 @@ public class DescribeBackupPlanBillingResponseBody extends TeaModel {
         }
 
         /**
-         * HttpStatusCode.
+         * <p>The HTTP status code.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>400</p>
          */
         public Builder httpStatusCode(Integer httpStatusCode) {
             this.httpStatusCode = httpStatusCode;
@@ -122,7 +152,7 @@ public class DescribeBackupPlanBillingResponseBody extends TeaModel {
         }
 
         /**
-         * Item.
+         * <p>The billing information of the backup schedule.</p>
          */
         public Builder item(Item item) {
             this.item = item;
@@ -130,7 +160,10 @@ public class DescribeBackupPlanBillingResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * <p>The ID of the request.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>EB4DFD5E-3618-498D-BE35-4DBEA0072122</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -138,7 +171,10 @@ public class DescribeBackupPlanBillingResponseBody extends TeaModel {
         }
 
         /**
-         * Success.
+         * <p>Indicates whether the request is successful.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder success(Boolean success) {
             this.success = success;
@@ -151,50 +187,53 @@ public class DescribeBackupPlanBillingResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link DescribeBackupPlanBillingResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeBackupPlanBillingResponseBody</p>
+     */
     public static class Item extends TeaModel {
-        @NameInMap("BuyChargeType")
+        @com.aliyun.core.annotation.NameInMap("BuyChargeType")
         private String buyChargeType;
 
-        @NameInMap("BuyCreateTimestamp")
+        @com.aliyun.core.annotation.NameInMap("BuyCreateTimestamp")
         private Long buyCreateTimestamp;
 
-        @NameInMap("BuyExpiredTimestamp")
+        @com.aliyun.core.annotation.NameInMap("BuyExpiredTimestamp")
         private Long buyExpiredTimestamp;
 
-        @NameInMap("BuySpec")
+        @com.aliyun.core.annotation.NameInMap("BuySpec")
         private String buySpec;
 
-        @NameInMap("ContStorageSize")
+        @com.aliyun.core.annotation.NameInMap("ContStorageSize")
         private Long contStorageSize;
 
-        @NameInMap("FullStorageSize")
+        @com.aliyun.core.annotation.NameInMap("FullStorageSize")
         private Long fullStorageSize;
 
-        @NameInMap("IsExpired")
+        @com.aliyun.core.annotation.NameInMap("IsExpired")
         private Boolean isExpired;
 
-        @NameInMap("IsFreeBytesUnlimited")
+        @com.aliyun.core.annotation.NameInMap("IsFreeBytesUnlimited")
         private Boolean isFreeBytesUnlimited;
 
-        @NameInMap("PaiedBytes")
+        @com.aliyun.core.annotation.NameInMap("PaiedBytes")
         private Long paiedBytes;
 
-        @NameInMap("QuotaEndTimestamp")
+        @com.aliyun.core.annotation.NameInMap("QuotaEndTimestamp")
         private Long quotaEndTimestamp;
 
-        @NameInMap("QuotaStartTimestamp")
+        @com.aliyun.core.annotation.NameInMap("QuotaStartTimestamp")
         private Long quotaStartTimestamp;
 
-        @NameInMap("ResourceGroupId")
-        private String resourceGroupId;
-
-        @NameInMap("TotalFreeBytes")
+        @com.aliyun.core.annotation.NameInMap("TotalFreeBytes")
         private Long totalFreeBytes;
 
-        @NameInMap("UsedFullBytes")
+        @com.aliyun.core.annotation.NameInMap("UsedFullBytes")
         private Long usedFullBytes;
 
-        @NameInMap("UsedIncrementBytes")
+        @com.aliyun.core.annotation.NameInMap("UsedIncrementBytes")
         private Long usedIncrementBytes;
 
         private Item(Builder builder) {
@@ -209,7 +248,6 @@ public class DescribeBackupPlanBillingResponseBody extends TeaModel {
             this.paiedBytes = builder.paiedBytes;
             this.quotaEndTimestamp = builder.quotaEndTimestamp;
             this.quotaStartTimestamp = builder.quotaStartTimestamp;
-            this.resourceGroupId = builder.resourceGroupId;
             this.totalFreeBytes = builder.totalFreeBytes;
             this.usedFullBytes = builder.usedFullBytes;
             this.usedIncrementBytes = builder.usedIncrementBytes;
@@ -301,13 +339,6 @@ public class DescribeBackupPlanBillingResponseBody extends TeaModel {
         }
 
         /**
-         * @return resourceGroupId
-         */
-        public String getResourceGroupId() {
-            return this.resourceGroupId;
-        }
-
-        /**
          * @return totalFreeBytes
          */
         public Long getTotalFreeBytes() {
@@ -340,13 +371,39 @@ public class DescribeBackupPlanBillingResponseBody extends TeaModel {
             private Long paiedBytes; 
             private Long quotaEndTimestamp; 
             private Long quotaStartTimestamp; 
-            private String resourceGroupId; 
             private Long totalFreeBytes; 
             private Long usedFullBytes; 
             private Long usedIncrementBytes; 
 
+            private Builder() {
+            } 
+
+            private Builder(Item model) {
+                this.buyChargeType = model.buyChargeType;
+                this.buyCreateTimestamp = model.buyCreateTimestamp;
+                this.buyExpiredTimestamp = model.buyExpiredTimestamp;
+                this.buySpec = model.buySpec;
+                this.contStorageSize = model.contStorageSize;
+                this.fullStorageSize = model.fullStorageSize;
+                this.isExpired = model.isExpired;
+                this.isFreeBytesUnlimited = model.isFreeBytesUnlimited;
+                this.paiedBytes = model.paiedBytes;
+                this.quotaEndTimestamp = model.quotaEndTimestamp;
+                this.quotaStartTimestamp = model.quotaStartTimestamp;
+                this.totalFreeBytes = model.totalFreeBytes;
+                this.usedFullBytes = model.usedFullBytes;
+                this.usedIncrementBytes = model.usedIncrementBytes;
+            } 
+
             /**
-             * BuyChargeType.
+             * <p>The billing method. Valid values:</p>
+             * <ul>
+             * <li>PREPAY</li>
+             * <li>POSTPAY</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>PREPAY</p>
              */
             public Builder buyChargeType(String buyChargeType) {
                 this.buyChargeType = buyChargeType;
@@ -354,7 +411,10 @@ public class DescribeBackupPlanBillingResponseBody extends TeaModel {
             }
 
             /**
-             * BuyCreateTimestamp.
+             * <p>The timestamp that indicates when the instance was purchased.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1554560477000</p>
              */
             public Builder buyCreateTimestamp(Long buyCreateTimestamp) {
                 this.buyCreateTimestamp = buyCreateTimestamp;
@@ -362,7 +422,13 @@ public class DescribeBackupPlanBillingResponseBody extends TeaModel {
             }
 
             /**
-             * BuyExpiredTimestamp.
+             * <p>The timestamp that indicates when the instance expires.</p>
+             * <blockquote>
+             * <p>This parameter is available only if the value of the BuyChargeType parameter is PREPAY.</p>
+             * </blockquote>
+             * 
+             * <strong>example:</strong>
+             * <p>1554560477000</p>
              */
             public Builder buyExpiredTimestamp(Long buyExpiredTimestamp) {
                 this.buyExpiredTimestamp = buyExpiredTimestamp;
@@ -370,7 +436,10 @@ public class DescribeBackupPlanBillingResponseBody extends TeaModel {
             }
 
             /**
-             * BuySpec.
+             * <p>The specifications of the instance.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>micro</p>
              */
             public Builder buySpec(String buySpec) {
                 this.buySpec = buySpec;
@@ -378,7 +447,10 @@ public class DescribeBackupPlanBillingResponseBody extends TeaModel {
             }
 
             /**
-             * ContStorageSize.
+             * <p>The size of the built-in storage for storing incremental backup data.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>12134</p>
              */
             public Builder contStorageSize(Long contStorageSize) {
                 this.contStorageSize = contStorageSize;
@@ -386,7 +458,10 @@ public class DescribeBackupPlanBillingResponseBody extends TeaModel {
             }
 
             /**
-             * FullStorageSize.
+             * <p>The size of the built-in storage for storing full backup data.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>13123</p>
              */
             public Builder fullStorageSize(Long fullStorageSize) {
                 this.fullStorageSize = fullStorageSize;
@@ -394,7 +469,13 @@ public class DescribeBackupPlanBillingResponseBody extends TeaModel {
             }
 
             /**
-             * IsExpired.
+             * <p>Indicates whether the instance expired.</p>
+             * <blockquote>
+             * <p>This parameter is available only if the value of the BuyChargeType parameter is PREPAY.</p>
+             * </blockquote>
+             * 
+             * <strong>example:</strong>
+             * <p>true</p>
              */
             public Builder isExpired(Boolean isExpired) {
                 this.isExpired = isExpired;
@@ -402,7 +483,10 @@ public class DescribeBackupPlanBillingResponseBody extends TeaModel {
             }
 
             /**
-             * IsFreeBytesUnlimited.
+             * <p>Indicates whether the instance has no backup traffic limit.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>true</p>
              */
             public Builder isFreeBytesUnlimited(Boolean isFreeBytesUnlimited) {
                 this.isFreeBytesUnlimited = isFreeBytesUnlimited;
@@ -410,7 +494,10 @@ public class DescribeBackupPlanBillingResponseBody extends TeaModel {
             }
 
             /**
-             * PaiedBytes.
+             * <p>The total paid backup traffic in the current month.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>213213</p>
              */
             public Builder paiedBytes(Long paiedBytes) {
                 this.paiedBytes = paiedBytes;
@@ -418,7 +505,10 @@ public class DescribeBackupPlanBillingResponseBody extends TeaModel {
             }
 
             /**
-             * QuotaEndTimestamp.
+             * <p>The timestamp that indicates when the billing cycle of free backup traffic ends.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1554560477000</p>
              */
             public Builder quotaEndTimestamp(Long quotaEndTimestamp) {
                 this.quotaEndTimestamp = quotaEndTimestamp;
@@ -426,7 +516,10 @@ public class DescribeBackupPlanBillingResponseBody extends TeaModel {
             }
 
             /**
-             * QuotaStartTimestamp.
+             * <p>The timestamp that indicates when the billing cycle of free backup traffic starts.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1554560477000</p>
              */
             public Builder quotaStartTimestamp(Long quotaStartTimestamp) {
                 this.quotaStartTimestamp = quotaStartTimestamp;
@@ -434,15 +527,13 @@ public class DescribeBackupPlanBillingResponseBody extends TeaModel {
             }
 
             /**
-             * ResourceGroupId.
-             */
-            public Builder resourceGroupId(String resourceGroupId) {
-                this.resourceGroupId = resourceGroupId;
-                return this;
-            }
-
-            /**
-             * TotalFreeBytes.
+             * <p>The total free backup traffic in the current month.</p>
+             * <blockquote>
+             * <p>This parameter is available only if the value of the BuyChargeType parameter is PREPAY and the value of the IsFreeBytesUnlimited parameter is false.</p>
+             * </blockquote>
+             * 
+             * <strong>example:</strong>
+             * <p>13123</p>
              */
             public Builder totalFreeBytes(Long totalFreeBytes) {
                 this.totalFreeBytes = totalFreeBytes;
@@ -450,7 +541,10 @@ public class DescribeBackupPlanBillingResponseBody extends TeaModel {
             }
 
             /**
-             * UsedFullBytes.
+             * <p>The paid full backup traffic in the current month.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1312313</p>
              */
             public Builder usedFullBytes(Long usedFullBytes) {
                 this.usedFullBytes = usedFullBytes;
@@ -458,7 +552,10 @@ public class DescribeBackupPlanBillingResponseBody extends TeaModel {
             }
 
             /**
-             * UsedIncrementBytes.
+             * <p>The paid incremental backup traffic in the current month.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>131231</p>
              */
             public Builder usedIncrementBytes(Long usedIncrementBytes) {
                 this.usedIncrementBytes = usedIncrementBytes;

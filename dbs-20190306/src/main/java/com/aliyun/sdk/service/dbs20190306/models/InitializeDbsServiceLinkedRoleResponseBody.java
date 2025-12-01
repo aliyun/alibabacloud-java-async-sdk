@@ -1,30 +1,35 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.dbs20190306.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link InitializeDbsServiceLinkedRoleResponseBody} extends {@link TeaModel}
  *
  * <p>InitializeDbsServiceLinkedRoleResponseBody</p>
  */
 public class InitializeDbsServiceLinkedRoleResponseBody extends TeaModel {
-    @NameInMap("Data")
+    @com.aliyun.core.annotation.NameInMap("Data")
     private String data;
 
-    @NameInMap("ErrMessage")
+    @com.aliyun.core.annotation.NameInMap("ErrMessage")
     private String errMessage;
 
-    @NameInMap("ErrorCode")
+    @com.aliyun.core.annotation.NameInMap("ErrorCode")
     private String errorCode;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("Success")
+    @com.aliyun.core.annotation.NameInMap("Success")
     private String success;
 
     private InitializeDbsServiceLinkedRoleResponseBody(Builder builder) {
@@ -41,6 +46,10 @@ public class InitializeDbsServiceLinkedRoleResponseBody extends TeaModel {
 
     public static InitializeDbsServiceLinkedRoleResponseBody create() {
         return builder().build();
+    }
+
+    public Builder toBuilder() {
+        return new Builder(this);
     }
 
     /**
@@ -85,8 +94,22 @@ public class InitializeDbsServiceLinkedRoleResponseBody extends TeaModel {
         private String requestId; 
         private String success; 
 
+        private Builder() {
+        } 
+
+        private Builder(InitializeDbsServiceLinkedRoleResponseBody model) {
+            this.data = model.data;
+            this.errMessage = model.errMessage;
+            this.errorCode = model.errorCode;
+            this.requestId = model.requestId;
+            this.success = model.success;
+        } 
+
         /**
-         * Data.
+         * <p>The value is null.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>null</p>
          */
         public Builder data(String data) {
             this.data = data;
@@ -94,7 +117,10 @@ public class InitializeDbsServiceLinkedRoleResponseBody extends TeaModel {
         }
 
         /**
-         * ErrMessage.
+         * <p>The error message returned if the request failed.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>EntityAlreadyExists.Role : The role already exists:AliyunServiceRoleForDBS\r\nRequestId : 73******-3B4D-501A-9505-FA8B9******</p>
          */
         public Builder errMessage(String errMessage) {
             this.errMessage = errMessage;
@@ -102,7 +128,10 @@ public class InitializeDbsServiceLinkedRoleResponseBody extends TeaModel {
         }
 
         /**
-         * ErrorCode.
+         * <p>The error code returned.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>EntityAlreadyExists.Role</p>
          */
         public Builder errorCode(String errorCode) {
             this.errorCode = errorCode;
@@ -110,7 +139,10 @@ public class InitializeDbsServiceLinkedRoleResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>4F1888AC-1138-4995-B9FE-D2734F61C058</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -118,7 +150,14 @@ public class InitializeDbsServiceLinkedRoleResponseBody extends TeaModel {
         }
 
         /**
-         * Success.
+         * <p>Indicates whether the request was successful. Valid values:</p>
+         * <ul>
+         * <li><strong>true</strong></li>
+         * <li><strong>false</strong></li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder success(String success) {
             this.success = success;

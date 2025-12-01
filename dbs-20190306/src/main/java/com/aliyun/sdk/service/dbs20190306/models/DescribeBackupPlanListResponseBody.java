@@ -1,45 +1,50 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.dbs20190306.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeBackupPlanListResponseBody} extends {@link TeaModel}
  *
  * <p>DescribeBackupPlanListResponseBody</p>
  */
 public class DescribeBackupPlanListResponseBody extends TeaModel {
-    @NameInMap("ErrCode")
+    @com.aliyun.core.annotation.NameInMap("ErrCode")
     private String errCode;
 
-    @NameInMap("ErrMessage")
+    @com.aliyun.core.annotation.NameInMap("ErrMessage")
     private String errMessage;
 
-    @NameInMap("HttpStatusCode")
+    @com.aliyun.core.annotation.NameInMap("HttpStatusCode")
     private Integer httpStatusCode;
 
-    @NameInMap("Items")
+    @com.aliyun.core.annotation.NameInMap("Items")
     private Items items;
 
-    @NameInMap("PageNum")
+    @com.aliyun.core.annotation.NameInMap("PageNum")
     private Integer pageNum;
 
-    @NameInMap("PageSize")
+    @com.aliyun.core.annotation.NameInMap("PageSize")
     private Integer pageSize;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("Success")
+    @com.aliyun.core.annotation.NameInMap("Success")
     private Boolean success;
 
-    @NameInMap("TotalElements")
+    @com.aliyun.core.annotation.NameInMap("TotalElements")
     private Integer totalElements;
 
-    @NameInMap("TotalPages")
+    @com.aliyun.core.annotation.NameInMap("TotalPages")
     private Integer totalPages;
 
     private DescribeBackupPlanListResponseBody(Builder builder) {
@@ -61,6 +66,10 @@ public class DescribeBackupPlanListResponseBody extends TeaModel {
 
     public static DescribeBackupPlanListResponseBody create() {
         return builder().build();
+    }
+
+    public Builder toBuilder() {
+        return new Builder(this);
     }
 
     /**
@@ -145,8 +154,27 @@ public class DescribeBackupPlanListResponseBody extends TeaModel {
         private Integer totalElements; 
         private Integer totalPages; 
 
+        private Builder() {
+        } 
+
+        private Builder(DescribeBackupPlanListResponseBody model) {
+            this.errCode = model.errCode;
+            this.errMessage = model.errMessage;
+            this.httpStatusCode = model.httpStatusCode;
+            this.items = model.items;
+            this.pageNum = model.pageNum;
+            this.pageSize = model.pageSize;
+            this.requestId = model.requestId;
+            this.success = model.success;
+            this.totalElements = model.totalElements;
+            this.totalPages = model.totalPages;
+        } 
+
         /**
-         * ErrCode.
+         * <p>Error code.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>InvalidParameterValid</p>
          */
         public Builder errCode(String errCode) {
             this.errCode = errCode;
@@ -154,7 +182,10 @@ public class DescribeBackupPlanListResponseBody extends TeaModel {
         }
 
         /**
-         * ErrMessage.
+         * <p>Error message.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>The specified parameter %s value is not valid.</p>
          */
         public Builder errMessage(String errMessage) {
             this.errMessage = errMessage;
@@ -162,7 +193,10 @@ public class DescribeBackupPlanListResponseBody extends TeaModel {
         }
 
         /**
-         * HttpStatusCode.
+         * <p>HTTP status code.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>200</p>
          */
         public Builder httpStatusCode(Integer httpStatusCode) {
             this.httpStatusCode = httpStatusCode;
@@ -170,7 +204,7 @@ public class DescribeBackupPlanListResponseBody extends TeaModel {
         }
 
         /**
-         * Items.
+         * <p>Details of the backup plans.</p>
          */
         public Builder items(Items items) {
             this.items = items;
@@ -178,7 +212,10 @@ public class DescribeBackupPlanListResponseBody extends TeaModel {
         }
 
         /**
-         * PageNum.
+         * <p>Page number.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder pageNum(Integer pageNum) {
             this.pageNum = pageNum;
@@ -186,7 +223,10 @@ public class DescribeBackupPlanListResponseBody extends TeaModel {
         }
 
         /**
-         * PageSize.
+         * <p>Number of records per page.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>30</p>
          */
         public Builder pageSize(Integer pageSize) {
             this.pageSize = pageSize;
@@ -194,7 +234,10 @@ public class DescribeBackupPlanListResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * <p>Request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>4F1888AC-1138-4995-B9FE-D2734F61C058</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -202,7 +245,10 @@ public class DescribeBackupPlanListResponseBody extends TeaModel {
         }
 
         /**
-         * Success.
+         * <p>Whether the operation was successful.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder success(Boolean success) {
             this.success = success;
@@ -210,7 +256,10 @@ public class DescribeBackupPlanListResponseBody extends TeaModel {
         }
 
         /**
-         * TotalElements.
+         * <p>Total number of backup plans.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>100</p>
          */
         public Builder totalElements(Integer totalElements) {
             this.totalElements = totalElements;
@@ -218,7 +267,10 @@ public class DescribeBackupPlanListResponseBody extends TeaModel {
         }
 
         /**
-         * TotalPages.
+         * <p>Total number of pages.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>4</p>
          */
         public Builder totalPages(Integer totalPages) {
             this.totalPages = totalPages;
@@ -231,113 +283,122 @@ public class DescribeBackupPlanListResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link DescribeBackupPlanListResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeBackupPlanListResponseBody</p>
+     */
     public static class BackupPlanDetail extends TeaModel {
-        @NameInMap("BackupGatewayId")
+        @com.aliyun.core.annotation.NameInMap("BackupGatewayId")
         private Long backupGatewayId;
 
-        @NameInMap("BackupMethod")
+        @com.aliyun.core.annotation.NameInMap("BackupMethod")
         private String backupMethod;
 
-        @NameInMap("BackupObjects")
+        @com.aliyun.core.annotation.NameInMap("BackupObjects")
         private String backupObjects;
 
-        @NameInMap("BackupPeriod")
+        @com.aliyun.core.annotation.NameInMap("BackupPeriod")
         private String backupPeriod;
 
-        @NameInMap("BackupPlanCreateTime")
+        @com.aliyun.core.annotation.NameInMap("BackupPlanCreateTime")
         private Long backupPlanCreateTime;
 
-        @NameInMap("BackupPlanId")
+        @com.aliyun.core.annotation.NameInMap("BackupPlanId")
         private String backupPlanId;
 
-        @NameInMap("BackupPlanName")
+        @com.aliyun.core.annotation.NameInMap("BackupPlanName")
         private String backupPlanName;
 
-        @NameInMap("BackupPlanStatus")
+        @com.aliyun.core.annotation.NameInMap("BackupPlanStatus")
         private String backupPlanStatus;
 
-        @NameInMap("BackupRetentionPeriod")
+        @com.aliyun.core.annotation.NameInMap("BackupRetentionPeriod")
         private Integer backupRetentionPeriod;
 
-        @NameInMap("BackupSetDownloadDir")
+        @com.aliyun.core.annotation.NameInMap("BackupSetDownloadDir")
         private String backupSetDownloadDir;
 
-        @NameInMap("BackupSetDownloadFullDataFormat")
+        @com.aliyun.core.annotation.NameInMap("BackupSetDownloadFullDataFormat")
         private String backupSetDownloadFullDataFormat;
 
-        @NameInMap("BackupSetDownloadGatewayId")
+        @com.aliyun.core.annotation.NameInMap("BackupSetDownloadGatewayId")
         private Long backupSetDownloadGatewayId;
 
-        @NameInMap("BackupSetDownloadIncrementDataFormat")
+        @com.aliyun.core.annotation.NameInMap("BackupSetDownloadIncrementDataFormat")
         private String backupSetDownloadIncrementDataFormat;
 
-        @NameInMap("BackupSetDownloadTargetType")
+        @com.aliyun.core.annotation.NameInMap("BackupSetDownloadTargetType")
         private String backupSetDownloadTargetType;
 
-        @NameInMap("BackupStartTime")
+        @com.aliyun.core.annotation.NameInMap("BackupStartTime")
         private String backupStartTime;
 
-        @NameInMap("BackupStorageType")
+        @com.aliyun.core.annotation.NameInMap("BackupStorageType")
         private String backupStorageType;
 
-        @NameInMap("BeginTimestampForRestore")
+        @com.aliyun.core.annotation.NameInMap("BeginTimestampForRestore")
         private Long beginTimestampForRestore;
 
-        @NameInMap("CrossAliyunId")
+        @com.aliyun.core.annotation.NameInMap("CrossAliyunId")
         private String crossAliyunId;
 
-        @NameInMap("CrossRoleName")
+        @com.aliyun.core.annotation.NameInMap("CrossRoleName")
         private String crossRoleName;
 
-        @NameInMap("DuplicationArchivePeriod")
+        @com.aliyun.core.annotation.NameInMap("DatabaseType")
+        private String databaseType;
+
+        @com.aliyun.core.annotation.NameInMap("DuplicationArchivePeriod")
         private Integer duplicationArchivePeriod;
 
-        @NameInMap("DuplicationInfrequentAccessPeriod")
+        @com.aliyun.core.annotation.NameInMap("DuplicationInfrequentAccessPeriod")
         private Integer duplicationInfrequentAccessPeriod;
 
-        @NameInMap("EnableBackupLog")
+        @com.aliyun.core.annotation.NameInMap("EnableBackupLog")
         private Boolean enableBackupLog;
 
-        @NameInMap("EndTimestampForRestore")
+        @com.aliyun.core.annotation.NameInMap("EndTimestampForRestore")
         private Long endTimestampForRestore;
 
-        @NameInMap("ErrMessage")
+        @com.aliyun.core.annotation.NameInMap("ErrMessage")
         private String errMessage;
 
-        @NameInMap("InstanceClass")
+        @com.aliyun.core.annotation.NameInMap("InstanceClass")
         private String instanceClass;
 
-        @NameInMap("OSSBucketName")
+        @com.aliyun.core.annotation.NameInMap("OSSBucketName")
         private String OSSBucketName;
 
-        @NameInMap("OSSBucketRegion")
+        @com.aliyun.core.annotation.NameInMap("OSSBucketRegion")
         private String OSSBucketRegion;
 
-        @NameInMap("OpenBackupSetAutoDownload")
+        @com.aliyun.core.annotation.NameInMap("OpenBackupSetAutoDownload")
         private Boolean openBackupSetAutoDownload;
 
-        @NameInMap("ResourceGroupId")
+        @com.aliyun.core.annotation.NameInMap("ResourceGroupId")
         private String resourceGroupId;
 
-        @NameInMap("SourceEndpointDatabaseName")
+        @com.aliyun.core.annotation.NameInMap("SourceEndpointDatabaseName")
         private String sourceEndpointDatabaseName;
 
-        @NameInMap("SourceEndpointInstanceID")
+        @com.aliyun.core.annotation.NameInMap("SourceEndpointInstanceID")
         private String sourceEndpointInstanceID;
 
-        @NameInMap("SourceEndpointInstanceType")
+        @com.aliyun.core.annotation.NameInMap("SourceEndpointInstanceType")
         private String sourceEndpointInstanceType;
 
-        @NameInMap("SourceEndpointIpPort")
+        @com.aliyun.core.annotation.NameInMap("SourceEndpointIpPort")
         private String sourceEndpointIpPort;
 
-        @NameInMap("SourceEndpointOracleSID")
+        @com.aliyun.core.annotation.NameInMap("SourceEndpointOracleSID")
         private String sourceEndpointOracleSID;
 
-        @NameInMap("SourceEndpointRegion")
+        @com.aliyun.core.annotation.NameInMap("SourceEndpointRegion")
         private String sourceEndpointRegion;
 
-        @NameInMap("SourceEndpointUserName")
+        @com.aliyun.core.annotation.NameInMap("SourceEndpointUserName")
         private String sourceEndpointUserName;
 
         private BackupPlanDetail(Builder builder) {
@@ -360,6 +421,7 @@ public class DescribeBackupPlanListResponseBody extends TeaModel {
             this.beginTimestampForRestore = builder.beginTimestampForRestore;
             this.crossAliyunId = builder.crossAliyunId;
             this.crossRoleName = builder.crossRoleName;
+            this.databaseType = builder.databaseType;
             this.duplicationArchivePeriod = builder.duplicationArchivePeriod;
             this.duplicationInfrequentAccessPeriod = builder.duplicationInfrequentAccessPeriod;
             this.enableBackupLog = builder.enableBackupLog;
@@ -521,6 +583,13 @@ public class DescribeBackupPlanListResponseBody extends TeaModel {
         }
 
         /**
+         * @return databaseType
+         */
+        public String getDatabaseType() {
+            return this.databaseType;
+        }
+
+        /**
          * @return duplicationArchivePeriod
          */
         public Integer getDuplicationArchivePeriod() {
@@ -659,6 +728,7 @@ public class DescribeBackupPlanListResponseBody extends TeaModel {
             private Long beginTimestampForRestore; 
             private String crossAliyunId; 
             private String crossRoleName; 
+            private String databaseType; 
             private Integer duplicationArchivePeriod; 
             private Integer duplicationInfrequentAccessPeriod; 
             private Boolean enableBackupLog; 
@@ -677,8 +747,54 @@ public class DescribeBackupPlanListResponseBody extends TeaModel {
             private String sourceEndpointRegion; 
             private String sourceEndpointUserName; 
 
+            private Builder() {
+            } 
+
+            private Builder(BackupPlanDetail model) {
+                this.backupGatewayId = model.backupGatewayId;
+                this.backupMethod = model.backupMethod;
+                this.backupObjects = model.backupObjects;
+                this.backupPeriod = model.backupPeriod;
+                this.backupPlanCreateTime = model.backupPlanCreateTime;
+                this.backupPlanId = model.backupPlanId;
+                this.backupPlanName = model.backupPlanName;
+                this.backupPlanStatus = model.backupPlanStatus;
+                this.backupRetentionPeriod = model.backupRetentionPeriod;
+                this.backupSetDownloadDir = model.backupSetDownloadDir;
+                this.backupSetDownloadFullDataFormat = model.backupSetDownloadFullDataFormat;
+                this.backupSetDownloadGatewayId = model.backupSetDownloadGatewayId;
+                this.backupSetDownloadIncrementDataFormat = model.backupSetDownloadIncrementDataFormat;
+                this.backupSetDownloadTargetType = model.backupSetDownloadTargetType;
+                this.backupStartTime = model.backupStartTime;
+                this.backupStorageType = model.backupStorageType;
+                this.beginTimestampForRestore = model.beginTimestampForRestore;
+                this.crossAliyunId = model.crossAliyunId;
+                this.crossRoleName = model.crossRoleName;
+                this.databaseType = model.databaseType;
+                this.duplicationArchivePeriod = model.duplicationArchivePeriod;
+                this.duplicationInfrequentAccessPeriod = model.duplicationInfrequentAccessPeriod;
+                this.enableBackupLog = model.enableBackupLog;
+                this.endTimestampForRestore = model.endTimestampForRestore;
+                this.errMessage = model.errMessage;
+                this.instanceClass = model.instanceClass;
+                this.OSSBucketName = model.OSSBucketName;
+                this.OSSBucketRegion = model.OSSBucketRegion;
+                this.openBackupSetAutoDownload = model.openBackupSetAutoDownload;
+                this.resourceGroupId = model.resourceGroupId;
+                this.sourceEndpointDatabaseName = model.sourceEndpointDatabaseName;
+                this.sourceEndpointInstanceID = model.sourceEndpointInstanceID;
+                this.sourceEndpointInstanceType = model.sourceEndpointInstanceType;
+                this.sourceEndpointIpPort = model.sourceEndpointIpPort;
+                this.sourceEndpointOracleSID = model.sourceEndpointOracleSID;
+                this.sourceEndpointRegion = model.sourceEndpointRegion;
+                this.sourceEndpointUserName = model.sourceEndpointUserName;
+            } 
+
             /**
-             * BackupGatewayId.
+             * <p>Backup gateway ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>827362187368736</p>
              */
             public Builder backupGatewayId(Long backupGatewayId) {
                 this.backupGatewayId = backupGatewayId;
@@ -686,7 +802,15 @@ public class DescribeBackupPlanListResponseBody extends TeaModel {
             }
 
             /**
-             * BackupMethod.
+             * <p>Backup method. The return values are as follows:</p>
+             * <ul>
+             * <li><strong>logical</strong>: Logical backup</li>
+             * <li><strong>physical</strong>: Physical backup</li>
+             * <li><strong>duplication</strong>: Replication backup</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>logical</p>
              */
             public Builder backupMethod(String backupMethod) {
                 this.backupMethod = backupMethod;
@@ -694,7 +818,7 @@ public class DescribeBackupPlanListResponseBody extends TeaModel {
             }
 
             /**
-             * BackupObjects.
+             * <p>Backup objects.</p>
              */
             public Builder backupObjects(String backupObjects) {
                 this.backupObjects = backupObjects;
@@ -702,7 +826,19 @@ public class DescribeBackupPlanListResponseBody extends TeaModel {
             }
 
             /**
-             * BackupPeriod.
+             * <p>Full backup cycle. The return values are as follows:</p>
+             * <ul>
+             * <li><strong>Monday</strong>: Monday</li>
+             * <li><strong>Tuesday</strong>: Tuesday</li>
+             * <li><strong>Wednesday</strong>: Wednesday</li>
+             * <li><strong>Thursday</strong>: Thursday</li>
+             * <li><strong>Friday</strong>: Friday</li>
+             * <li><strong>Saturday</strong>: Saturday</li>
+             * <li><strong>Sunday</strong>: Sunday</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>Monday</p>
              */
             public Builder backupPeriod(String backupPeriod) {
                 this.backupPeriod = backupPeriod;
@@ -710,7 +846,10 @@ public class DescribeBackupPlanListResponseBody extends TeaModel {
             }
 
             /**
-             * BackupPlanCreateTime.
+             * <p>Timestamp of the backup plan creation.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1582527713000</p>
              */
             public Builder backupPlanCreateTime(Long backupPlanCreateTime) {
                 this.backupPlanCreateTime = backupPlanCreateTime;
@@ -718,7 +857,10 @@ public class DescribeBackupPlanListResponseBody extends TeaModel {
             }
 
             /**
-             * BackupPlanId.
+             * <p>Backup plan ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>dbstooi01eXXXX</p>
              */
             public Builder backupPlanId(String backupPlanId) {
                 this.backupPlanId = backupPlanId;
@@ -726,7 +868,10 @@ public class DescribeBackupPlanListResponseBody extends TeaModel {
             }
 
             /**
-             * BackupPlanName.
+             * <p>Backup plan name.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>dbstooi01e****</p>
              */
             public Builder backupPlanName(String backupPlanName) {
                 this.backupPlanName = backupPlanName;
@@ -734,7 +879,19 @@ public class DescribeBackupPlanListResponseBody extends TeaModel {
             }
 
             /**
-             * BackupPlanStatus.
+             * <p>Backup plan status. The return values are as follows:</p>
+             * <ul>
+             * <li><strong>wait</strong>: Not configured</li>
+             * <li><strong>init</strong>: Not started (pre-check failed)</li>
+             * <li><strong>running</strong>: Running</li>
+             * <li><strong>stop</strong>: Failed</li>
+             * <li><strong>pause</strong>: Paused</li>
+             * <li><strong>locked</strong>: Locked</li>
+             * <li><strong>check_pass</strong>: Pre-check passed</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>init</p>
              */
             public Builder backupPlanStatus(String backupPlanStatus) {
                 this.backupPlanStatus = backupPlanStatus;
@@ -742,7 +899,10 @@ public class DescribeBackupPlanListResponseBody extends TeaModel {
             }
 
             /**
-             * BackupRetentionPeriod.
+             * <p>Backup data retention period, with a value range of 0 to 1825 days.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>365</p>
              */
             public Builder backupRetentionPeriod(Integer backupRetentionPeriod) {
                 this.backupRetentionPeriod = backupRetentionPeriod;
@@ -750,7 +910,7 @@ public class DescribeBackupPlanListResponseBody extends TeaModel {
             }
 
             /**
-             * BackupSetDownloadDir.
+             * <p>Download server directory of the backup set</p>
              */
             public Builder backupSetDownloadDir(String backupSetDownloadDir) {
                 this.backupSetDownloadDir = backupSetDownloadDir;
@@ -758,7 +918,16 @@ public class DescribeBackupPlanListResponseBody extends TeaModel {
             }
 
             /**
-             * BackupSetDownloadFullDataFormat.
+             * <p>Full data format for backup set download:</p>
+             * <ul>
+             * <li><strong>Native</strong></li>
+             * <li><strong>SQL</strong></li>
+             * <li><strong>CSV</strong></li>
+             * <li><strong>JSON</strong></li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>SQL</p>
              */
             public Builder backupSetDownloadFullDataFormat(String backupSetDownloadFullDataFormat) {
                 this.backupSetDownloadFullDataFormat = backupSetDownloadFullDataFormat;
@@ -766,7 +935,10 @@ public class DescribeBackupPlanListResponseBody extends TeaModel {
             }
 
             /**
-             * BackupSetDownloadGatewayId.
+             * <p>Backup set download backup gateway ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>123123</p>
              */
             public Builder backupSetDownloadGatewayId(Long backupSetDownloadGatewayId) {
                 this.backupSetDownloadGatewayId = backupSetDownloadGatewayId;
@@ -774,7 +946,16 @@ public class DescribeBackupPlanListResponseBody extends TeaModel {
             }
 
             /**
-             * BackupSetDownloadIncrementDataFormat.
+             * <p>Backup set download full data format:</p>
+             * <ul>
+             * <li><strong>Native</strong></li>
+             * <li><strong>SQL</strong></li>
+             * <li><strong>CSV</strong></li>
+             * <li><strong>JSON</strong></li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>SQL</p>
              */
             public Builder backupSetDownloadIncrementDataFormat(String backupSetDownloadIncrementDataFormat) {
                 this.backupSetDownloadIncrementDataFormat = backupSetDownloadIncrementDataFormat;
@@ -782,7 +963,13 @@ public class DescribeBackupPlanListResponseBody extends TeaModel {
             }
 
             /**
-             * BackupSetDownloadTargetType.
+             * <p>Backup set download target type.</p>
+             * <blockquote>
+             * <p>The only value is: agent, indicating that the backup gateway is installed.</p>
+             * </blockquote>
+             * 
+             * <strong>example:</strong>
+             * <p>agent</p>
              */
             public Builder backupSetDownloadTargetType(String backupSetDownloadTargetType) {
                 this.backupSetDownloadTargetType = backupSetDownloadTargetType;
@@ -790,7 +977,10 @@ public class DescribeBackupPlanListResponseBody extends TeaModel {
             }
 
             /**
-             * BackupStartTime.
+             * <p>Full backup start time, in the format HH:mm.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>14:22</p>
              */
             public Builder backupStartTime(String backupStartTime) {
                 this.backupStartTime = backupStartTime;
@@ -798,7 +988,14 @@ public class DescribeBackupPlanListResponseBody extends TeaModel {
             }
 
             /**
-             * BackupStorageType.
+             * <p>Built-in storage type. The return values are as follows:</p>
+             * <ul>
+             * <li>Empty (default): Backup data is stored on the user&quot;s OSS.</li>
+             * <li>system: Backup data is stored on the built-in OSS of DBS.</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>system</p>
              */
             public Builder backupStorageType(String backupStorageType) {
                 this.backupStorageType = backupStorageType;
@@ -806,7 +1003,10 @@ public class DescribeBackupPlanListResponseBody extends TeaModel {
             }
 
             /**
-             * BeginTimestampForRestore.
+             * <p>Start time for the database restore period, with a return value of 1554560477000.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1554560477000</p>
              */
             public Builder beginTimestampForRestore(Long beginTimestampForRestore) {
                 this.beginTimestampForRestore = beginTimestampForRestore;
@@ -814,7 +1014,10 @@ public class DescribeBackupPlanListResponseBody extends TeaModel {
             }
 
             /**
-             * CrossAliyunId.
+             * <p>UID for cross-Aliyun account backup.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2xxx7778xxxxxxxxxx</p>
              */
             public Builder crossAliyunId(String crossAliyunId) {
                 this.crossAliyunId = crossAliyunId;
@@ -822,7 +1025,10 @@ public class DescribeBackupPlanListResponseBody extends TeaModel {
             }
 
             /**
-             * CrossRoleName.
+             * <p>RAM role name for cross-Aliyun account backup.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>test123</p>
              */
             public Builder crossRoleName(String crossRoleName) {
                 this.crossRoleName = crossRoleName;
@@ -830,7 +1036,21 @@ public class DescribeBackupPlanListResponseBody extends TeaModel {
             }
 
             /**
-             * DuplicationArchivePeriod.
+             * <p>Database type.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>MySQL</p>
+             */
+            public Builder databaseType(String databaseType) {
+                this.databaseType = databaseType;
+                return this;
+            }
+
+            /**
+             * <p>Time (in days) to convert to archive cold backup storage.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>365</p>
              */
             public Builder duplicationArchivePeriod(Integer duplicationArchivePeriod) {
                 this.duplicationArchivePeriod = duplicationArchivePeriod;
@@ -838,7 +1058,10 @@ public class DescribeBackupPlanListResponseBody extends TeaModel {
             }
 
             /**
-             * DuplicationInfrequentAccessPeriod.
+             * <p>Time (in days) to convert to infrequent access storage.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>180</p>
              */
             public Builder duplicationInfrequentAccessPeriod(Integer duplicationInfrequentAccessPeriod) {
                 this.duplicationInfrequentAccessPeriod = duplicationInfrequentAccessPeriod;
@@ -846,7 +1069,14 @@ public class DescribeBackupPlanListResponseBody extends TeaModel {
             }
 
             /**
-             * EnableBackupLog.
+             * <p>Indicates whether incremental log backup is enabled, with return values as follows:</p>
+             * <ul>
+             * <li><strong>true</strong>: Enabled</li>
+             * <li><strong>false</strong>: Disabled</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>true</p>
              */
             public Builder enableBackupLog(Boolean enableBackupLog) {
                 this.enableBackupLog = enableBackupLog;
@@ -854,7 +1084,10 @@ public class DescribeBackupPlanListResponseBody extends TeaModel {
             }
 
             /**
-             * EndTimestampForRestore.
+             * <p>End time of the database restorable period, in timestamp format.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1554560477000</p>
              */
             public Builder endTimestampForRestore(Long endTimestampForRestore) {
                 this.endTimestampForRestore = endTimestampForRestore;
@@ -862,7 +1095,10 @@ public class DescribeBackupPlanListResponseBody extends TeaModel {
             }
 
             /**
-             * ErrMessage.
+             * <p>Pre-check task error message.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>can not connect to oracle instance orcl with user dbs</p>
              */
             public Builder errMessage(String errMessage) {
                 this.errMessage = errMessage;
@@ -870,7 +1106,17 @@ public class DescribeBackupPlanListResponseBody extends TeaModel {
             }
 
             /**
-             * InstanceClass.
+             * <p>Instance class, with return values as follows:</p>
+             * <ul>
+             * <li><strong>micro</strong>: Entry-level</li>
+             * <li><strong>small</strong>: Low-spec</li>
+             * <li><strong>medium</strong>: Medium-spec</li>
+             * <li><strong>large</strong>: High-spec</li>
+             * <li><strong>xlarge</strong>: High-spec (no traffic limit)</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>micro</p>
              */
             public Builder instanceClass(String instanceClass) {
                 this.instanceClass = instanceClass;
@@ -878,7 +1124,10 @@ public class DescribeBackupPlanListResponseBody extends TeaModel {
             }
 
             /**
-             * OSSBucketName.
+             * <p>OSS Bucket name.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>dbs-backup-1857XXXXX489</p>
              */
             public Builder OSSBucketName(String OSSBucketName) {
                 this.OSSBucketName = OSSBucketName;
@@ -886,7 +1135,10 @@ public class DescribeBackupPlanListResponseBody extends TeaModel {
             }
 
             /**
-             * OSSBucketRegion.
+             * <p>OSS Bucket region.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>cn-hangzhou</p>
              */
             public Builder OSSBucketRegion(String OSSBucketRegion) {
                 this.OSSBucketRegion = OSSBucketRegion;
@@ -894,7 +1146,10 @@ public class DescribeBackupPlanListResponseBody extends TeaModel {
             }
 
             /**
-             * OpenBackupSetAutoDownload.
+             * <p>Indicates whether the automatic backup set download feature is enabled.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>true</p>
              */
             public Builder openBackupSetAutoDownload(Boolean openBackupSetAutoDownload) {
                 this.openBackupSetAutoDownload = openBackupSetAutoDownload;
@@ -902,7 +1157,10 @@ public class DescribeBackupPlanListResponseBody extends TeaModel {
             }
 
             /**
-             * ResourceGroupId.
+             * <p>Resource group ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>rg-aekzecovzti****</p>
              */
             public Builder resourceGroupId(String resourceGroupId) {
                 this.resourceGroupId = resourceGroupId;
@@ -910,7 +1168,10 @@ public class DescribeBackupPlanListResponseBody extends TeaModel {
             }
 
             /**
-             * SourceEndpointDatabaseName.
+             * <p>Database name.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>test</p>
              */
             public Builder sourceEndpointDatabaseName(String sourceEndpointDatabaseName) {
                 this.sourceEndpointDatabaseName = sourceEndpointDatabaseName;
@@ -918,7 +1179,10 @@ public class DescribeBackupPlanListResponseBody extends TeaModel {
             }
 
             /**
-             * SourceEndpointInstanceID.
+             * <p>Database instance ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>test</p>
              */
             public Builder sourceEndpointInstanceID(String sourceEndpointInstanceID) {
                 this.sourceEndpointInstanceID = sourceEndpointInstanceID;
@@ -926,7 +1190,18 @@ public class DescribeBackupPlanListResponseBody extends TeaModel {
             }
 
             /**
-             * SourceEndpointInstanceType.
+             * <p>Location of the database, the return values are as follows:</p>
+             * <ul>
+             * <li><strong>rds</strong></li>
+             * <li><strong>ecs</strong></li>
+             * <li><strong>express</strong>: Database connected via dedicated line/VPN gateway/smart gateway</li>
+             * <li><strong>agent</strong>: Database connected via backup gateway</li>
+             * <li><strong>dds</strong>: Cloud MongoDB</li>
+             * <li><strong>other</strong>: Database connected directly via IP:Port</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>rds</p>
              */
             public Builder sourceEndpointInstanceType(String sourceEndpointInstanceType) {
                 this.sourceEndpointInstanceType = sourceEndpointInstanceType;
@@ -934,7 +1209,10 @@ public class DescribeBackupPlanListResponseBody extends TeaModel {
             }
 
             /**
-             * SourceEndpointIpPort.
+             * <p>Database connection address.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>100.<em>.</em>.10:33204</p>
              */
             public Builder sourceEndpointIpPort(String sourceEndpointIpPort) {
                 this.sourceEndpointIpPort = sourceEndpointIpPort;
@@ -942,7 +1220,10 @@ public class DescribeBackupPlanListResponseBody extends TeaModel {
             }
 
             /**
-             * SourceEndpointOracleSID.
+             * <p>Oracle SID name.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>test</p>
              */
             public Builder sourceEndpointOracleSID(String sourceEndpointOracleSID) {
                 this.sourceEndpointOracleSID = sourceEndpointOracleSID;
@@ -950,7 +1231,10 @@ public class DescribeBackupPlanListResponseBody extends TeaModel {
             }
 
             /**
-             * SourceEndpointRegion.
+             * <p>Database region.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>cn-hangzhou</p>
              */
             public Builder sourceEndpointRegion(String sourceEndpointRegion) {
                 this.sourceEndpointRegion = sourceEndpointRegion;
@@ -958,7 +1242,10 @@ public class DescribeBackupPlanListResponseBody extends TeaModel {
             }
 
             /**
-             * SourceEndpointUserName.
+             * <p>Database username.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>test</p>
              */
             public Builder sourceEndpointUserName(String sourceEndpointUserName) {
                 this.sourceEndpointUserName = sourceEndpointUserName;
@@ -972,9 +1259,15 @@ public class DescribeBackupPlanListResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link DescribeBackupPlanListResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeBackupPlanListResponseBody</p>
+     */
     public static class Items extends TeaModel {
-        @NameInMap("BackupPlanDetail")
-        private java.util.List < BackupPlanDetail> backupPlanDetail;
+        @com.aliyun.core.annotation.NameInMap("BackupPlanDetail")
+        private java.util.List<BackupPlanDetail> backupPlanDetail;
 
         private Items(Builder builder) {
             this.backupPlanDetail = builder.backupPlanDetail;
@@ -991,17 +1284,24 @@ public class DescribeBackupPlanListResponseBody extends TeaModel {
         /**
          * @return backupPlanDetail
          */
-        public java.util.List < BackupPlanDetail> getBackupPlanDetail() {
+        public java.util.List<BackupPlanDetail> getBackupPlanDetail() {
             return this.backupPlanDetail;
         }
 
         public static final class Builder {
-            private java.util.List < BackupPlanDetail> backupPlanDetail; 
+            private java.util.List<BackupPlanDetail> backupPlanDetail; 
+
+            private Builder() {
+            } 
+
+            private Builder(Items model) {
+                this.backupPlanDetail = model.backupPlanDetail;
+            } 
 
             /**
              * BackupPlanDetail.
              */
-            public Builder backupPlanDetail(java.util.List < BackupPlanDetail> backupPlanDetail) {
+            public Builder backupPlanDetail(java.util.List<BackupPlanDetail> backupPlanDetail) {
                 this.backupPlanDetail = backupPlanDetail;
                 return this;
             }

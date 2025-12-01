@@ -1,45 +1,50 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.dbs20190306.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeBackupSetDownloadTaskListResponseBody} extends {@link TeaModel}
  *
  * <p>DescribeBackupSetDownloadTaskListResponseBody</p>
  */
 public class DescribeBackupSetDownloadTaskListResponseBody extends TeaModel {
-    @NameInMap("ErrCode")
+    @com.aliyun.core.annotation.NameInMap("ErrCode")
     private String errCode;
 
-    @NameInMap("ErrMessage")
+    @com.aliyun.core.annotation.NameInMap("ErrMessage")
     private String errMessage;
 
-    @NameInMap("HttpStatusCode")
+    @com.aliyun.core.annotation.NameInMap("HttpStatusCode")
     private Integer httpStatusCode;
 
-    @NameInMap("Items")
+    @com.aliyun.core.annotation.NameInMap("Items")
     private Items items;
 
-    @NameInMap("PageNum")
+    @com.aliyun.core.annotation.NameInMap("PageNum")
     private Integer pageNum;
 
-    @NameInMap("PageSize")
+    @com.aliyun.core.annotation.NameInMap("PageSize")
     private Integer pageSize;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("Success")
+    @com.aliyun.core.annotation.NameInMap("Success")
     private Boolean success;
 
-    @NameInMap("TotalElements")
+    @com.aliyun.core.annotation.NameInMap("TotalElements")
     private Integer totalElements;
 
-    @NameInMap("TotalPages")
+    @com.aliyun.core.annotation.NameInMap("TotalPages")
     private Integer totalPages;
 
     private DescribeBackupSetDownloadTaskListResponseBody(Builder builder) {
@@ -61,6 +66,10 @@ public class DescribeBackupSetDownloadTaskListResponseBody extends TeaModel {
 
     public static DescribeBackupSetDownloadTaskListResponseBody create() {
         return builder().build();
+    }
+
+    public Builder toBuilder() {
+        return new Builder(this);
     }
 
     /**
@@ -145,8 +154,27 @@ public class DescribeBackupSetDownloadTaskListResponseBody extends TeaModel {
         private Integer totalElements; 
         private Integer totalPages; 
 
+        private Builder() {
+        } 
+
+        private Builder(DescribeBackupSetDownloadTaskListResponseBody model) {
+            this.errCode = model.errCode;
+            this.errMessage = model.errMessage;
+            this.httpStatusCode = model.httpStatusCode;
+            this.items = model.items;
+            this.pageNum = model.pageNum;
+            this.pageSize = model.pageSize;
+            this.requestId = model.requestId;
+            this.success = model.success;
+            this.totalElements = model.totalElements;
+            this.totalPages = model.totalPages;
+        } 
+
         /**
-         * ErrCode.
+         * <p>The error code.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Param.NotFound</p>
          */
         public Builder errCode(String errCode) {
             this.errCode = errCode;
@@ -154,7 +182,10 @@ public class DescribeBackupSetDownloadTaskListResponseBody extends TeaModel {
         }
 
         /**
-         * ErrMessage.
+         * <p>The error message.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>The specified parameter %s value is not valid.</p>
          */
         public Builder errMessage(String errMessage) {
             this.errMessage = errMessage;
@@ -162,7 +193,10 @@ public class DescribeBackupSetDownloadTaskListResponseBody extends TeaModel {
         }
 
         /**
-         * HttpStatusCode.
+         * <p>The HTTP status code.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>200</p>
          */
         public Builder httpStatusCode(Integer httpStatusCode) {
             this.httpStatusCode = httpStatusCode;
@@ -170,7 +204,7 @@ public class DescribeBackupSetDownloadTaskListResponseBody extends TeaModel {
         }
 
         /**
-         * Items.
+         * <p>The details of the backup schedules.</p>
          */
         public Builder items(Items items) {
             this.items = items;
@@ -178,7 +212,10 @@ public class DescribeBackupSetDownloadTaskListResponseBody extends TeaModel {
         }
 
         /**
-         * PageNum.
+         * <p>The page number of the returned page.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>0</p>
          */
         public Builder pageNum(Integer pageNum) {
             this.pageNum = pageNum;
@@ -186,7 +223,10 @@ public class DescribeBackupSetDownloadTaskListResponseBody extends TeaModel {
         }
 
         /**
-         * PageSize.
+         * <p>The number of entries returned on each page.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>30</p>
          */
         public Builder pageSize(Integer pageSize) {
             this.pageSize = pageSize;
@@ -194,7 +234,10 @@ public class DescribeBackupSetDownloadTaskListResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * <p>The ID of the request.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>6DC3D286-E0E6-5988-A558-2184984B****</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -202,7 +245,14 @@ public class DescribeBackupSetDownloadTaskListResponseBody extends TeaModel {
         }
 
         /**
-         * Success.
+         * <p>Indicates whether the request is successful. Valid values:</p>
+         * <ul>
+         * <li><strong>true</strong>: The request is successful.</li>
+         * <li><strong>false</strong>: The request fails.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder success(Boolean success) {
             this.success = success;
@@ -210,7 +260,10 @@ public class DescribeBackupSetDownloadTaskListResponseBody extends TeaModel {
         }
 
         /**
-         * TotalElements.
+         * <p>The total number of backup set download tasks.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder totalElements(Integer totalElements) {
             this.totalElements = totalElements;
@@ -218,7 +271,10 @@ public class DescribeBackupSetDownloadTaskListResponseBody extends TeaModel {
         }
 
         /**
-         * TotalPages.
+         * <p>The total number of returned pages.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder totalPages(Integer totalPages) {
             this.totalPages = totalPages;
@@ -231,62 +287,68 @@ public class DescribeBackupSetDownloadTaskListResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link DescribeBackupSetDownloadTaskListResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeBackupSetDownloadTaskListResponseBody</p>
+     */
     public static class BackupSetDownloadTaskDetail extends TeaModel {
-        @NameInMap("BackupGatewayId")
+        @com.aliyun.core.annotation.NameInMap("BackupGatewayId")
         private Long backupGatewayId;
 
-        @NameInMap("BackupPlanId")
+        @com.aliyun.core.annotation.NameInMap("BackupPlanId")
         private String backupPlanId;
 
-        @NameInMap("BackupSetCode")
+        @com.aliyun.core.annotation.NameInMap("BackupSetCode")
         private String backupSetCode;
 
-        @NameInMap("BackupSetDataFormat")
+        @com.aliyun.core.annotation.NameInMap("BackupSetDataFormat")
         private String backupSetDataFormat;
 
-        @NameInMap("BackupSetDataSize")
+        @com.aliyun.core.annotation.NameInMap("BackupSetDataSize")
         private Long backupSetDataSize;
 
-        @NameInMap("BackupSetDbType")
+        @com.aliyun.core.annotation.NameInMap("BackupSetDbType")
         private String backupSetDbType;
 
-        @NameInMap("BackupSetDownloadCreateTime")
+        @com.aliyun.core.annotation.NameInMap("BackupSetDownloadCreateTime")
         private Long backupSetDownloadCreateTime;
 
-        @NameInMap("BackupSetDownloadDir")
+        @com.aliyun.core.annotation.NameInMap("BackupSetDownloadDir")
         private String backupSetDownloadDir;
 
-        @NameInMap("BackupSetDownloadFinishTime")
+        @com.aliyun.core.annotation.NameInMap("BackupSetDownloadFinishTime")
         private Long backupSetDownloadFinishTime;
 
-        @NameInMap("BackupSetDownloadInternetUrl")
+        @com.aliyun.core.annotation.NameInMap("BackupSetDownloadInternetUrl")
         private String backupSetDownloadInternetUrl;
 
-        @NameInMap("BackupSetDownloadIntranetUrl")
+        @com.aliyun.core.annotation.NameInMap("BackupSetDownloadIntranetUrl")
         private String backupSetDownloadIntranetUrl;
 
-        @NameInMap("BackupSetDownloadStatus")
+        @com.aliyun.core.annotation.NameInMap("BackupSetDownloadStatus")
         private String backupSetDownloadStatus;
 
-        @NameInMap("BackupSetDownloadTargetType")
+        @com.aliyun.core.annotation.NameInMap("BackupSetDownloadTargetType")
         private String backupSetDownloadTargetType;
 
-        @NameInMap("BackupSetDownloadTaskId")
+        @com.aliyun.core.annotation.NameInMap("BackupSetDownloadTaskId")
         private String backupSetDownloadTaskId;
 
-        @NameInMap("BackupSetDownloadTaskName")
+        @com.aliyun.core.annotation.NameInMap("BackupSetDownloadTaskName")
         private String backupSetDownloadTaskName;
 
-        @NameInMap("BackupSetDownloadWay")
+        @com.aliyun.core.annotation.NameInMap("BackupSetDownloadWay")
         private String backupSetDownloadWay;
 
-        @NameInMap("BackupSetId")
+        @com.aliyun.core.annotation.NameInMap("BackupSetId")
         private String backupSetId;
 
-        @NameInMap("BackupSetJobType")
+        @com.aliyun.core.annotation.NameInMap("BackupSetJobType")
         private String backupSetJobType;
 
-        @NameInMap("ErrMessage")
+        @com.aliyun.core.annotation.NameInMap("ErrMessage")
         private String errMessage;
 
         private BackupSetDownloadTaskDetail(Builder builder) {
@@ -473,8 +535,36 @@ public class DescribeBackupSetDownloadTaskListResponseBody extends TeaModel {
             private String backupSetJobType; 
             private String errMessage; 
 
+            private Builder() {
+            } 
+
+            private Builder(BackupSetDownloadTaskDetail model) {
+                this.backupGatewayId = model.backupGatewayId;
+                this.backupPlanId = model.backupPlanId;
+                this.backupSetCode = model.backupSetCode;
+                this.backupSetDataFormat = model.backupSetDataFormat;
+                this.backupSetDataSize = model.backupSetDataSize;
+                this.backupSetDbType = model.backupSetDbType;
+                this.backupSetDownloadCreateTime = model.backupSetDownloadCreateTime;
+                this.backupSetDownloadDir = model.backupSetDownloadDir;
+                this.backupSetDownloadFinishTime = model.backupSetDownloadFinishTime;
+                this.backupSetDownloadInternetUrl = model.backupSetDownloadInternetUrl;
+                this.backupSetDownloadIntranetUrl = model.backupSetDownloadIntranetUrl;
+                this.backupSetDownloadStatus = model.backupSetDownloadStatus;
+                this.backupSetDownloadTargetType = model.backupSetDownloadTargetType;
+                this.backupSetDownloadTaskId = model.backupSetDownloadTaskId;
+                this.backupSetDownloadTaskName = model.backupSetDownloadTaskName;
+                this.backupSetDownloadWay = model.backupSetDownloadWay;
+                this.backupSetId = model.backupSetId;
+                this.backupSetJobType = model.backupSetJobType;
+                this.errMessage = model.errMessage;
+            } 
+
             /**
-             * BackupGatewayId.
+             * <p>The backup gateway that is used to download the backup set. This parameter is available only if the value of the BackupSetDownloadWay parameter is auto.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>N/A</p>
              */
             public Builder backupGatewayId(Long backupGatewayId) {
                 this.backupGatewayId = backupGatewayId;
@@ -482,7 +572,10 @@ public class DescribeBackupSetDownloadTaskListResponseBody extends TeaModel {
             }
 
             /**
-             * BackupPlanId.
+             * <p>The ID of the backup schedule.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>qhnuhyw3****</p>
              */
             public Builder backupPlanId(String backupPlanId) {
                 this.backupPlanId = backupPlanId;
@@ -490,7 +583,10 @@ public class DescribeBackupSetDownloadTaskListResponseBody extends TeaModel {
             }
 
             /**
-             * BackupSetCode.
+             * <p>The code of the backup set.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>mysql-bin.00XXXX</p>
              */
             public Builder backupSetCode(String backupSetCode) {
                 this.backupSetCode = backupSetCode;
@@ -498,7 +594,16 @@ public class DescribeBackupSetDownloadTaskListResponseBody extends TeaModel {
             }
 
             /**
-             * BackupSetDataFormat.
+             * <p>The format in which the backup set is downloaded. Valid values:</p>
+             * <ul>
+             * <li><strong>Native</strong></li>
+             * <li><strong>SQL</strong></li>
+             * <li><strong>CSV</strong></li>
+             * <li><strong>JSON</strong></li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>Native</p>
              */
             public Builder backupSetDataFormat(String backupSetDataFormat) {
                 this.backupSetDataFormat = backupSetDataFormat;
@@ -506,7 +611,10 @@ public class DescribeBackupSetDownloadTaskListResponseBody extends TeaModel {
             }
 
             /**
-             * BackupSetDataSize.
+             * <p>The size of the data in the backup set.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>237837</p>
              */
             public Builder backupSetDataSize(Long backupSetDataSize) {
                 this.backupSetDataSize = backupSetDataSize;
@@ -514,7 +622,10 @@ public class DescribeBackupSetDownloadTaskListResponseBody extends TeaModel {
             }
 
             /**
-             * BackupSetDbType.
+             * <p>The type of the database.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>MySQL</p>
              */
             public Builder backupSetDbType(String backupSetDbType) {
                 this.backupSetDbType = backupSetDbType;
@@ -522,7 +633,10 @@ public class DescribeBackupSetDownloadTaskListResponseBody extends TeaModel {
             }
 
             /**
-             * BackupSetDownloadCreateTime.
+             * <p>The timestamp that indicates when the backup set download task was created.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1642044001000</p>
              */
             public Builder backupSetDownloadCreateTime(Long backupSetDownloadCreateTime) {
                 this.backupSetDownloadCreateTime = backupSetDownloadCreateTime;
@@ -530,7 +644,13 @@ public class DescribeBackupSetDownloadTaskListResponseBody extends TeaModel {
             }
 
             /**
-             * BackupSetDownloadDir.
+             * <p>The server directory to which the backup set is downloaded.</p>
+             * <blockquote>
+             * <p>This parameter is available only if the value of the BackupSetDownloadWay parameter is auto.</p>
+             * </blockquote>
+             * 
+             * <strong>example:</strong>
+             * <p>N/A</p>
              */
             public Builder backupSetDownloadDir(String backupSetDownloadDir) {
                 this.backupSetDownloadDir = backupSetDownloadDir;
@@ -538,7 +658,10 @@ public class DescribeBackupSetDownloadTaskListResponseBody extends TeaModel {
             }
 
             /**
-             * BackupSetDownloadFinishTime.
+             * <p>The timestamp that indicates when the backup set download task is complete.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1642044013000</p>
              */
             public Builder backupSetDownloadFinishTime(Long backupSetDownloadFinishTime) {
                 this.backupSetDownloadFinishTime = backupSetDownloadFinishTime;
@@ -546,7 +669,13 @@ public class DescribeBackupSetDownloadTaskListResponseBody extends TeaModel {
             }
 
             /**
-             * BackupSetDownloadInternetUrl.
+             * <p>The public download URL of the backup set.</p>
+             * <blockquote>
+             * <p>This parameter is available only if the value of the BackupSetDownloadWay parameter is manual and the conversion is complete.</p>
+             * </blockquote>
+             * 
+             * <strong>example:</strong>
+             * <p>&quot;//dbs-137XXXX-cn-hangzhou-1hr5cpbtmXXXX.oss-cn-hangzhou.example&quot;</p>
              */
             public Builder backupSetDownloadInternetUrl(String backupSetDownloadInternetUrl) {
                 this.backupSetDownloadInternetUrl = backupSetDownloadInternetUrl;
@@ -554,7 +683,13 @@ public class DescribeBackupSetDownloadTaskListResponseBody extends TeaModel {
             }
 
             /**
-             * BackupSetDownloadIntranetUrl.
+             * <p>The internal download URL of the backup set.</p>
+             * <blockquote>
+             * <p>This parameter is available only if the value of the BackupSetDownloadWay parameter is manual and the conversion is complete.</p>
+             * </blockquote>
+             * 
+             * <strong>example:</strong>
+             * <p>&quot;//dbs-13XXXX-cn-hangzhou-1hr5cpbtmXXXX.oss-cn-hangzhou-internal.example&quot;</p>
              */
             public Builder backupSetDownloadIntranetUrl(String backupSetDownloadIntranetUrl) {
                 this.backupSetDownloadIntranetUrl = backupSetDownloadIntranetUrl;
@@ -562,7 +697,20 @@ public class DescribeBackupSetDownloadTaskListResponseBody extends TeaModel {
             }
 
             /**
-             * BackupSetDownloadStatus.
+             * <p>The status of the backup set download task. Valid values:</p>
+             * <ul>
+             * <li><strong>checking</strong>: The backup set download task is being prechecked.</li>
+             * <li><strong>init</strong>: The backup set download task is not started and fails to pass the precheck.</li>
+             * <li><strong>check_pass</strong>: The backup set download task passes the precheck.</li>
+             * <li><strong>pause</strong>: The backup set download task is paused.</li>
+             * <li><strong>schedule</strong>: The backup set download task is waiting to be scheduled</li>
+             * <li><strong>running</strong>: The backup set download task is running.</li>
+             * <li><strong>stop</strong>: The backup set download task fails.</li>
+             * <li><strong>finish</strong>: The backup set download task is complete.</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>finish</p>
              */
             public Builder backupSetDownloadStatus(String backupSetDownloadStatus) {
                 this.backupSetDownloadStatus = backupSetDownloadStatus;
@@ -570,7 +718,13 @@ public class DescribeBackupSetDownloadTaskListResponseBody extends TeaModel {
             }
 
             /**
-             * BackupSetDownloadTargetType.
+             * <p>The type of the destination server to which the backup set is downloaded.</p>
+             * <blockquote>
+             * <p>This parameter is available only if the value of the BackupSetDownloadWay parameter is auto. A value of agent indicates a server on which a backup gateway is installed.</p>
+             * </blockquote>
+             * 
+             * <strong>example:</strong>
+             * <p>N/A</p>
              */
             public Builder backupSetDownloadTargetType(String backupSetDownloadTargetType) {
                 this.backupSetDownloadTargetType = backupSetDownloadTargetType;
@@ -578,7 +732,10 @@ public class DescribeBackupSetDownloadTaskListResponseBody extends TeaModel {
             }
 
             /**
-             * BackupSetDownloadTaskId.
+             * <p>The ID of the backup set download task.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>urxgrxt7****</p>
              */
             public Builder backupSetDownloadTaskId(String backupSetDownloadTaskId) {
                 this.backupSetDownloadTaskId = backupSetDownloadTaskId;
@@ -586,7 +743,10 @@ public class DescribeBackupSetDownloadTaskListResponseBody extends TeaModel {
             }
 
             /**
-             * BackupSetDownloadTaskName.
+             * <p>The name of the backup set download task.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1h7za2yws****-ManualCont</p>
              */
             public Builder backupSetDownloadTaskName(String backupSetDownloadTaskName) {
                 this.backupSetDownloadTaskName = backupSetDownloadTaskName;
@@ -594,7 +754,14 @@ public class DescribeBackupSetDownloadTaskListResponseBody extends TeaModel {
             }
 
             /**
-             * BackupSetDownloadWay.
+             * <p>The method in which the backup set is downloaded. Valid values:</p>
+             * <ul>
+             * <li><strong>manual</strong>: The backup set is manually downloaded.</li>
+             * <li><strong>auto</strong>: The backup set is automatically downloaded.</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>manual</p>
              */
             public Builder backupSetDownloadWay(String backupSetDownloadWay) {
                 this.backupSetDownloadWay = backupSetDownloadWay;
@@ -602,7 +769,10 @@ public class DescribeBackupSetDownloadTaskListResponseBody extends TeaModel {
             }
 
             /**
-             * BackupSetId.
+             * <p>The ID of the backup set.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1h7za2yws****</p>
              */
             public Builder backupSetId(String backupSetId) {
                 this.backupSetId = backupSetId;
@@ -610,7 +780,14 @@ public class DescribeBackupSetDownloadTaskListResponseBody extends TeaModel {
             }
 
             /**
-             * BackupSetJobType.
+             * <p>The type of the backup set task. Valid values:</p>
+             * <ul>
+             * <li><strong>cbs_backup_sub_full</strong>: logical full backup set download task</li>
+             * <li><strong>cbs_backup_sub_cont</strong>: logical incremental backup set download task</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>cbs_backup_sub_cont</p>
              */
             public Builder backupSetJobType(String backupSetJobType) {
                 this.backupSetJobType = backupSetJobType;
@@ -618,7 +795,10 @@ public class DescribeBackupSetDownloadTaskListResponseBody extends TeaModel {
             }
 
             /**
-             * ErrMessage.
+             * <p>The error message.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>java.lang.IndexOutOfBoundsException.</p>
              */
             public Builder errMessage(String errMessage) {
                 this.errMessage = errMessage;
@@ -632,9 +812,15 @@ public class DescribeBackupSetDownloadTaskListResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link DescribeBackupSetDownloadTaskListResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeBackupSetDownloadTaskListResponseBody</p>
+     */
     public static class Items extends TeaModel {
-        @NameInMap("BackupSetDownloadTaskDetail")
-        private java.util.List < BackupSetDownloadTaskDetail> backupSetDownloadTaskDetail;
+        @com.aliyun.core.annotation.NameInMap("BackupSetDownloadTaskDetail")
+        private java.util.List<BackupSetDownloadTaskDetail> backupSetDownloadTaskDetail;
 
         private Items(Builder builder) {
             this.backupSetDownloadTaskDetail = builder.backupSetDownloadTaskDetail;
@@ -651,17 +837,24 @@ public class DescribeBackupSetDownloadTaskListResponseBody extends TeaModel {
         /**
          * @return backupSetDownloadTaskDetail
          */
-        public java.util.List < BackupSetDownloadTaskDetail> getBackupSetDownloadTaskDetail() {
+        public java.util.List<BackupSetDownloadTaskDetail> getBackupSetDownloadTaskDetail() {
             return this.backupSetDownloadTaskDetail;
         }
 
         public static final class Builder {
-            private java.util.List < BackupSetDownloadTaskDetail> backupSetDownloadTaskDetail; 
+            private java.util.List<BackupSetDownloadTaskDetail> backupSetDownloadTaskDetail; 
+
+            private Builder() {
+            } 
+
+            private Builder(Items model) {
+                this.backupSetDownloadTaskDetail = model.backupSetDownloadTaskDetail;
+            } 
 
             /**
              * BackupSetDownloadTaskDetail.
              */
-            public Builder backupSetDownloadTaskDetail(java.util.List < BackupSetDownloadTaskDetail> backupSetDownloadTaskDetail) {
+            public Builder backupSetDownloadTaskDetail(java.util.List<BackupSetDownloadTaskDetail> backupSetDownloadTaskDetail) {
                 this.backupSetDownloadTaskDetail = backupSetDownloadTaskDetail;
                 return this;
             }

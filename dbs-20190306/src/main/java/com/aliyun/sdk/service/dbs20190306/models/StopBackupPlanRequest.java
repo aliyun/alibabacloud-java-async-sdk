@@ -1,45 +1,50 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.dbs20190306.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link StopBackupPlanRequest} extends {@link RequestModel}
  *
  * <p>StopBackupPlanRequest</p>
  */
 public class StopBackupPlanRequest extends Request {
-    @Query
-    @NameInMap("BackupPlanId")
-    @Validation(required = true)
-    private String backupPlanId;
-
-    @Query
-    @NameInMap("ClientToken")
-    private String clientToken;
-
-    @Query
-    @NameInMap("OwnerId")
-    private String ownerId;
-
-    @Host
-    @NameInMap("RegionId")
+    @com.aliyun.core.annotation.Host
+    @com.aliyun.core.annotation.NameInMap("RegionId")
     private String regionId;
 
-    @Query
-    @NameInMap("StopMethod")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("BackupPlanId")
+    @com.aliyun.core.annotation.Validation(required = true)
+    private String backupPlanId;
+
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ClientToken")
+    private String clientToken;
+
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("OwnerId")
+    private String ownerId;
+
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("StopMethod")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String stopMethod;
 
     private StopBackupPlanRequest(Builder builder) {
         super(builder);
+        this.regionId = builder.regionId;
         this.backupPlanId = builder.backupPlanId;
         this.clientToken = builder.clientToken;
         this.ownerId = builder.ownerId;
-        this.regionId = builder.regionId;
         this.stopMethod = builder.stopMethod;
     }
 
@@ -51,9 +56,16 @@ public class StopBackupPlanRequest extends Request {
         return builder().build();
     }
 
-    @Override
+@Override
     public Builder toBuilder() {
         return new Builder(this);
+    }
+
+    /**
+     * @return regionId
+     */
+    public String getRegionId() {
+        return this.regionId;
     }
 
     /**
@@ -78,13 +90,6 @@ public class StopBackupPlanRequest extends Request {
     }
 
     /**
-     * @return regionId
-     */
-    public String getRegionId() {
-        return this.regionId;
-    }
-
-    /**
      * @return stopMethod
      */
     public String getStopMethod() {
@@ -92,10 +97,10 @@ public class StopBackupPlanRequest extends Request {
     }
 
     public static final class Builder extends Request.Builder<StopBackupPlanRequest, Builder> {
+        private String regionId; 
         private String backupPlanId; 
         private String clientToken; 
         private String ownerId; 
-        private String regionId; 
         private String stopMethod; 
 
         private Builder() {
@@ -104,15 +109,28 @@ public class StopBackupPlanRequest extends Request {
 
         private Builder(StopBackupPlanRequest request) {
             super(request);
+            this.regionId = request.regionId;
             this.backupPlanId = request.backupPlanId;
             this.clientToken = request.clientToken;
             this.ownerId = request.ownerId;
-            this.regionId = request.regionId;
             this.stopMethod = request.stopMethod;
         } 
 
         /**
-         * BackupPlanId.
+         * RegionId.
+         */
+        public Builder regionId(String regionId) {
+            this.putHostParameter("RegionId", regionId);
+            this.regionId = regionId;
+            return this;
+        }
+
+        /**
+         * <p>The ID of the backup schedule.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>dbstooi01****</p>
          */
         public Builder backupPlanId(String backupPlanId) {
             this.putQueryParameter("BackupPlanId", backupPlanId);
@@ -121,7 +139,10 @@ public class StopBackupPlanRequest extends Request {
         }
 
         /**
-         * ClientToken.
+         * <p>The client token that is used to ensure the idempotence of the request.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>ETnLKlblzczshOTUbOCz****</p>
          */
         public Builder clientToken(String clientToken) {
             this.putQueryParameter("ClientToken", clientToken);
@@ -139,16 +160,15 @@ public class StopBackupPlanRequest extends Request {
         }
 
         /**
-         * RegionId.
-         */
-        public Builder regionId(String regionId) {
-            this.putHostParameter("RegionId", regionId);
-            this.regionId = regionId;
-            return this;
-        }
-
-        /**
-         * StopMethod.
+         * <p>The method that is used to stop the backup schedule. Valid values:</p>
+         * <ul>
+         * <li>ALL: stops the backup schedule, full data backup tasks, incremental log backup tasks, and restore tasks</li>
+         * <li>PLAN: stops only the backup schedule.</li>
+         * </ul>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>ALL</p>
          */
         public Builder stopMethod(String stopMethod) {
             this.putQueryParameter("StopMethod", stopMethod);

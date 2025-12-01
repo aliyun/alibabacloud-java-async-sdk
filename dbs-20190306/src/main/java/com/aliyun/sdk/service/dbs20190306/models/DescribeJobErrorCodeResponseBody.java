@@ -1,33 +1,38 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.dbs20190306.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeJobErrorCodeResponseBody} extends {@link TeaModel}
  *
  * <p>DescribeJobErrorCodeResponseBody</p>
  */
 public class DescribeJobErrorCodeResponseBody extends TeaModel {
-    @NameInMap("ErrCode")
+    @com.aliyun.core.annotation.NameInMap("ErrCode")
     private String errCode;
 
-    @NameInMap("ErrMessage")
+    @com.aliyun.core.annotation.NameInMap("ErrMessage")
     private String errMessage;
 
-    @NameInMap("HttpStatusCode")
+    @com.aliyun.core.annotation.NameInMap("HttpStatusCode")
     private Integer httpStatusCode;
 
-    @NameInMap("Item")
+    @com.aliyun.core.annotation.NameInMap("Item")
     private Item item;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("Success")
+    @com.aliyun.core.annotation.NameInMap("Success")
     private Boolean success;
 
     private DescribeJobErrorCodeResponseBody(Builder builder) {
@@ -45,6 +50,10 @@ public class DescribeJobErrorCodeResponseBody extends TeaModel {
 
     public static DescribeJobErrorCodeResponseBody create() {
         return builder().build();
+    }
+
+    public Builder toBuilder() {
+        return new Builder(this);
     }
 
     /**
@@ -97,8 +106,23 @@ public class DescribeJobErrorCodeResponseBody extends TeaModel {
         private String requestId; 
         private Boolean success; 
 
+        private Builder() {
+        } 
+
+        private Builder(DescribeJobErrorCodeResponseBody model) {
+            this.errCode = model.errCode;
+            this.errMessage = model.errMessage;
+            this.httpStatusCode = model.httpStatusCode;
+            this.item = model.item;
+            this.requestId = model.requestId;
+            this.success = model.success;
+        } 
+
         /**
-         * ErrCode.
+         * <p>The error code.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Param.NotFound</p>
          */
         public Builder errCode(String errCode) {
             this.errCode = errCode;
@@ -106,7 +130,10 @@ public class DescribeJobErrorCodeResponseBody extends TeaModel {
         }
 
         /**
-         * ErrMessage.
+         * <p>The error message.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>The specified parameter %s value is not valid.</p>
          */
         public Builder errMessage(String errMessage) {
             this.errMessage = errMessage;
@@ -114,7 +141,10 @@ public class DescribeJobErrorCodeResponseBody extends TeaModel {
         }
 
         /**
-         * HttpStatusCode.
+         * <p>The HTTP status code.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>200</p>
          */
         public Builder httpStatusCode(Integer httpStatusCode) {
             this.httpStatusCode = httpStatusCode;
@@ -122,7 +152,7 @@ public class DescribeJobErrorCodeResponseBody extends TeaModel {
         }
 
         /**
-         * Item.
+         * <p>The error information.</p>
          */
         public Builder item(Item item) {
             this.item = item;
@@ -130,7 +160,10 @@ public class DescribeJobErrorCodeResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * <p>The ID of the request.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1FC2F86D-AFF4-4ED9-BB25-ADDE196CB2B5</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -138,7 +171,10 @@ public class DescribeJobErrorCodeResponseBody extends TeaModel {
         }
 
         /**
-         * Success.
+         * <p>Indicates whether the request is successful.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder success(Boolean success) {
             this.success = success;
@@ -151,23 +187,29 @@ public class DescribeJobErrorCodeResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link DescribeJobErrorCodeResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeJobErrorCodeResponseBody</p>
+     */
     public static class Item extends TeaModel {
-        @NameInMap("ErrorCode")
+        @com.aliyun.core.annotation.NameInMap("ErrorCode")
         private String errorCode;
 
-        @NameInMap("ErrorMessage")
+        @com.aliyun.core.annotation.NameInMap("ErrorMessage")
         private String errorMessage;
 
-        @NameInMap("JobId")
+        @com.aliyun.core.annotation.NameInMap("JobId")
         private String jobId;
 
-        @NameInMap("JobState")
+        @com.aliyun.core.annotation.NameInMap("JobState")
         private String jobState;
 
-        @NameInMap("JobType")
+        @com.aliyun.core.annotation.NameInMap("JobType")
         private String jobType;
 
-        @NameInMap("Language")
+        @com.aliyun.core.annotation.NameInMap("Language")
         private String language;
 
         private Item(Builder builder) {
@@ -237,8 +279,23 @@ public class DescribeJobErrorCodeResponseBody extends TeaModel {
             private String jobType; 
             private String language; 
 
+            private Builder() {
+            } 
+
+            private Builder(Item model) {
+                this.errorCode = model.errorCode;
+                this.errorMessage = model.errorMessage;
+                this.jobId = model.jobId;
+                this.jobState = model.jobState;
+                this.jobType = model.jobType;
+                this.language = model.language;
+            } 
+
             /**
-             * ErrorCode.
+             * <p>The error code.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>failed</p>
              */
             public Builder errorCode(String errorCode) {
                 this.errorCode = errorCode;
@@ -246,7 +303,10 @@ public class DescribeJobErrorCodeResponseBody extends TeaModel {
             }
 
             /**
-             * ErrorMessage.
+             * <p>The standard error message.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Describe preCheck progress failed.</p>
              */
             public Builder errorMessage(String errorMessage) {
                 this.errorMessage = errorMessage;
@@ -254,7 +314,10 @@ public class DescribeJobErrorCodeResponseBody extends TeaModel {
             }
 
             /**
-             * JobId.
+             * <p>The ID of the full backup or restore task.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>tooi0****</p>
              */
             public Builder jobId(String jobId) {
                 this.jobId = jobId;
@@ -262,7 +325,10 @@ public class DescribeJobErrorCodeResponseBody extends TeaModel {
             }
 
             /**
-             * JobState.
+             * <p>The status of the task.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>init</p>
              */
             public Builder jobState(String jobState) {
                 this.jobState = jobState;
@@ -270,7 +336,10 @@ public class DescribeJobErrorCodeResponseBody extends TeaModel {
             }
 
             /**
-             * JobType.
+             * <p>The internal ID of the DBS task type.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>testId</p>
              */
             public Builder jobType(String jobType) {
                 this.jobType = jobType;
@@ -278,7 +347,10 @@ public class DescribeJobErrorCodeResponseBody extends TeaModel {
             }
 
             /**
-             * Language.
+             * <p>The language of the error message.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>en</p>
              */
             public Builder language(String language) {
                 this.language = language;

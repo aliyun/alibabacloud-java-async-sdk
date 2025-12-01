@@ -1,45 +1,50 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.dbs20190306.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeBackupGatewayListResponseBody} extends {@link TeaModel}
  *
  * <p>DescribeBackupGatewayListResponseBody</p>
  */
 public class DescribeBackupGatewayListResponseBody extends TeaModel {
-    @NameInMap("ErrCode")
+    @com.aliyun.core.annotation.NameInMap("ErrCode")
     private String errCode;
 
-    @NameInMap("ErrMessage")
+    @com.aliyun.core.annotation.NameInMap("ErrMessage")
     private String errMessage;
 
-    @NameInMap("HttpStatusCode")
+    @com.aliyun.core.annotation.NameInMap("HttpStatusCode")
     private Integer httpStatusCode;
 
-    @NameInMap("Items")
+    @com.aliyun.core.annotation.NameInMap("Items")
     private Items items;
 
-    @NameInMap("PageNum")
+    @com.aliyun.core.annotation.NameInMap("PageNum")
     private Integer pageNum;
 
-    @NameInMap("PageSize")
+    @com.aliyun.core.annotation.NameInMap("PageSize")
     private Integer pageSize;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("Success")
+    @com.aliyun.core.annotation.NameInMap("Success")
     private Boolean success;
 
-    @NameInMap("TotalElements")
+    @com.aliyun.core.annotation.NameInMap("TotalElements")
     private Integer totalElements;
 
-    @NameInMap("TotalPages")
+    @com.aliyun.core.annotation.NameInMap("TotalPages")
     private Integer totalPages;
 
     private DescribeBackupGatewayListResponseBody(Builder builder) {
@@ -61,6 +66,10 @@ public class DescribeBackupGatewayListResponseBody extends TeaModel {
 
     public static DescribeBackupGatewayListResponseBody create() {
         return builder().build();
+    }
+
+    public Builder toBuilder() {
+        return new Builder(this);
     }
 
     /**
@@ -145,8 +154,27 @@ public class DescribeBackupGatewayListResponseBody extends TeaModel {
         private Integer totalElements; 
         private Integer totalPages; 
 
+        private Builder() {
+        } 
+
+        private Builder(DescribeBackupGatewayListResponseBody model) {
+            this.errCode = model.errCode;
+            this.errMessage = model.errMessage;
+            this.httpStatusCode = model.httpStatusCode;
+            this.items = model.items;
+            this.pageNum = model.pageNum;
+            this.pageSize = model.pageSize;
+            this.requestId = model.requestId;
+            this.success = model.success;
+            this.totalElements = model.totalElements;
+            this.totalPages = model.totalPages;
+        } 
+
         /**
-         * ErrCode.
+         * <p>The error code.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Param.NotFound</p>
          */
         public Builder errCode(String errCode) {
             this.errCode = errCode;
@@ -154,7 +182,10 @@ public class DescribeBackupGatewayListResponseBody extends TeaModel {
         }
 
         /**
-         * ErrMessage.
+         * <p>The error message.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>The specified parameter %s value is not valid.</p>
          */
         public Builder errMessage(String errMessage) {
             this.errMessage = errMessage;
@@ -162,7 +193,10 @@ public class DescribeBackupGatewayListResponseBody extends TeaModel {
         }
 
         /**
-         * HttpStatusCode.
+         * <p>The HTTP status code.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>200</p>
          */
         public Builder httpStatusCode(Integer httpStatusCode) {
             this.httpStatusCode = httpStatusCode;
@@ -170,7 +204,7 @@ public class DescribeBackupGatewayListResponseBody extends TeaModel {
         }
 
         /**
-         * Items.
+         * <p>The details of backup gateways.</p>
          */
         public Builder items(Items items) {
             this.items = items;
@@ -178,7 +212,10 @@ public class DescribeBackupGatewayListResponseBody extends TeaModel {
         }
 
         /**
-         * PageNum.
+         * <p>The page number of the returned page.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder pageNum(Integer pageNum) {
             this.pageNum = pageNum;
@@ -186,7 +223,10 @@ public class DescribeBackupGatewayListResponseBody extends TeaModel {
         }
 
         /**
-         * PageSize.
+         * <p>The number of entries returned on each page.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>30</p>
          */
         public Builder pageSize(Integer pageSize) {
             this.pageSize = pageSize;
@@ -194,7 +234,10 @@ public class DescribeBackupGatewayListResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * <p>The ID of the request.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>46361705-8531-492F-807E-A97E482DD4A1</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -202,7 +245,10 @@ public class DescribeBackupGatewayListResponseBody extends TeaModel {
         }
 
         /**
-         * Success.
+         * <p>Indicates whether the request is successful.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder success(Boolean success) {
             this.success = success;
@@ -210,7 +256,10 @@ public class DescribeBackupGatewayListResponseBody extends TeaModel {
         }
 
         /**
-         * TotalElements.
+         * <p>The total number of backup gateways.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>0</p>
          */
         public Builder totalElements(Integer totalElements) {
             this.totalElements = totalElements;
@@ -218,7 +267,10 @@ public class DescribeBackupGatewayListResponseBody extends TeaModel {
         }
 
         /**
-         * TotalPages.
+         * <p>The total number of returned pages.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder totalPages(Integer totalPages) {
             this.totalPages = totalPages;
@@ -231,35 +283,41 @@ public class DescribeBackupGatewayListResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link DescribeBackupGatewayListResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeBackupGatewayListResponseBody</p>
+     */
     public static class BackupGateway extends TeaModel {
-        @NameInMap("BackupGatewayCreateTime")
+        @com.aliyun.core.annotation.NameInMap("BackupGatewayCreateTime")
         private Long backupGatewayCreateTime;
 
-        @NameInMap("BackupGatewayId")
+        @com.aliyun.core.annotation.NameInMap("BackupGatewayId")
         private String backupGatewayId;
 
-        @NameInMap("BackupGatewayStatus")
+        @com.aliyun.core.annotation.NameInMap("BackupGatewayStatus")
         private String backupGatewayStatus;
 
-        @NameInMap("DisplayName")
+        @com.aliyun.core.annotation.NameInMap("DisplayName")
         private String displayName;
 
-        @NameInMap("Identifier")
+        @com.aliyun.core.annotation.NameInMap("Identifier")
         private String identifier;
 
-        @NameInMap("LastHeartbeatTime")
+        @com.aliyun.core.annotation.NameInMap("LastHeartbeatTime")
         private Long lastHeartbeatTime;
 
-        @NameInMap("Region")
+        @com.aliyun.core.annotation.NameInMap("Region")
         private String region;
 
-        @NameInMap("SourceEndpointHostname")
+        @com.aliyun.core.annotation.NameInMap("SourceEndpointHostname")
         private String sourceEndpointHostname;
 
-        @NameInMap("SourceEndpointInternetIP")
+        @com.aliyun.core.annotation.NameInMap("SourceEndpointInternetIP")
         private String sourceEndpointInternetIP;
 
-        @NameInMap("SourceEndpointIntranetIP")
+        @com.aliyun.core.annotation.NameInMap("SourceEndpointIntranetIP")
         private String sourceEndpointIntranetIP;
 
         private BackupGateway(Builder builder) {
@@ -365,8 +423,27 @@ public class DescribeBackupGatewayListResponseBody extends TeaModel {
             private String sourceEndpointInternetIP; 
             private String sourceEndpointIntranetIP; 
 
+            private Builder() {
+            } 
+
+            private Builder(BackupGateway model) {
+                this.backupGatewayCreateTime = model.backupGatewayCreateTime;
+                this.backupGatewayId = model.backupGatewayId;
+                this.backupGatewayStatus = model.backupGatewayStatus;
+                this.displayName = model.displayName;
+                this.identifier = model.identifier;
+                this.lastHeartbeatTime = model.lastHeartbeatTime;
+                this.region = model.region;
+                this.sourceEndpointHostname = model.sourceEndpointHostname;
+                this.sourceEndpointInternetIP = model.sourceEndpointInternetIP;
+                this.sourceEndpointIntranetIP = model.sourceEndpointIntranetIP;
+            } 
+
             /**
-             * BackupGatewayCreateTime.
+             * <p>The time when the backup gateway was created, such as 1554560477000.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1554560477000</p>
              */
             public Builder backupGatewayCreateTime(Long backupGatewayCreateTime) {
                 this.backupGatewayCreateTime = backupGatewayCreateTime;
@@ -374,7 +451,10 @@ public class DescribeBackupGatewayListResponseBody extends TeaModel {
             }
 
             /**
-             * BackupGatewayId.
+             * <p>The ID of the backup gateway.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2321313123</p>
              */
             public Builder backupGatewayId(String backupGatewayId) {
                 this.backupGatewayId = backupGatewayId;
@@ -382,7 +462,16 @@ public class DescribeBackupGatewayListResponseBody extends TeaModel {
             }
 
             /**
-             * BackupGatewayStatus.
+             * <p>The status of the backup gateway. Valid values:</p>
+             * <ul>
+             * <li>ONLINE: The backup gateway is online.</li>
+             * <li>OFFLINE: The backup gateway is offline.</li>
+             * <li>STOPPED: The backup gateway is stopped.</li>
+             * <li>UPGRADING: The backup gateway is being upgraded.</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>ONLINE</p>
              */
             public Builder backupGatewayStatus(String backupGatewayStatus) {
                 this.backupGatewayStatus = backupGatewayStatus;
@@ -390,7 +479,10 @@ public class DescribeBackupGatewayListResponseBody extends TeaModel {
             }
 
             /**
-             * DisplayName.
+             * <p>The display name of the backup gateway.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>test</p>
              */
             public Builder displayName(String displayName) {
                 this.displayName = displayName;
@@ -398,7 +490,10 @@ public class DescribeBackupGatewayListResponseBody extends TeaModel {
             }
 
             /**
-             * Identifier.
+             * <p>The unique identifier of the backup gateway.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>sgdsajhdgu</p>
              */
             public Builder identifier(String identifier) {
                 this.identifier = identifier;
@@ -406,7 +501,10 @@ public class DescribeBackupGatewayListResponseBody extends TeaModel {
             }
 
             /**
-             * LastHeartbeatTime.
+             * <p>The last time when a heartbeat message was sent, such as 1554560477000.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1554560477000</p>
              */
             public Builder lastHeartbeatTime(Long lastHeartbeatTime) {
                 this.lastHeartbeatTime = lastHeartbeatTime;
@@ -414,7 +512,10 @@ public class DescribeBackupGatewayListResponseBody extends TeaModel {
             }
 
             /**
-             * Region.
+             * <p>The ID of the region.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>cn-hangzhou</p>
              */
             public Builder region(String region) {
                 this.region = region;
@@ -422,7 +523,10 @@ public class DescribeBackupGatewayListResponseBody extends TeaModel {
             }
 
             /**
-             * SourceEndpointHostname.
+             * <p>The name of the host on which the backup gateway is installed.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>test</p>
              */
             public Builder sourceEndpointHostname(String sourceEndpointHostname) {
                 this.sourceEndpointHostname = sourceEndpointHostname;
@@ -430,7 +534,10 @@ public class DescribeBackupGatewayListResponseBody extends TeaModel {
             }
 
             /**
-             * SourceEndpointInternetIP.
+             * <p>The public IP address of the host on which the backup gateway is installed.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>XX.XX.XX.XX</p>
              */
             public Builder sourceEndpointInternetIP(String sourceEndpointInternetIP) {
                 this.sourceEndpointInternetIP = sourceEndpointInternetIP;
@@ -438,7 +545,10 @@ public class DescribeBackupGatewayListResponseBody extends TeaModel {
             }
 
             /**
-             * SourceEndpointIntranetIP.
+             * <p>The private IP address of the host on which the backup gateway is installed.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>XX.XX.XX.XX</p>
              */
             public Builder sourceEndpointIntranetIP(String sourceEndpointIntranetIP) {
                 this.sourceEndpointIntranetIP = sourceEndpointIntranetIP;
@@ -452,9 +562,15 @@ public class DescribeBackupGatewayListResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link DescribeBackupGatewayListResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeBackupGatewayListResponseBody</p>
+     */
     public static class Items extends TeaModel {
-        @NameInMap("BackupGateway")
-        private java.util.List < BackupGateway> backupGateway;
+        @com.aliyun.core.annotation.NameInMap("BackupGateway")
+        private java.util.List<BackupGateway> backupGateway;
 
         private Items(Builder builder) {
             this.backupGateway = builder.backupGateway;
@@ -471,17 +587,24 @@ public class DescribeBackupGatewayListResponseBody extends TeaModel {
         /**
          * @return backupGateway
          */
-        public java.util.List < BackupGateway> getBackupGateway() {
+        public java.util.List<BackupGateway> getBackupGateway() {
             return this.backupGateway;
         }
 
         public static final class Builder {
-            private java.util.List < BackupGateway> backupGateway; 
+            private java.util.List<BackupGateway> backupGateway; 
+
+            private Builder() {
+            } 
+
+            private Builder(Items model) {
+                this.backupGateway = model.backupGateway;
+            } 
 
             /**
              * BackupGateway.
              */
-            public Builder backupGateway(java.util.List < BackupGateway> backupGateway) {
+            public Builder backupGateway(java.util.List<BackupGateway> backupGateway) {
                 this.backupGateway = backupGateway;
                 return this;
             }

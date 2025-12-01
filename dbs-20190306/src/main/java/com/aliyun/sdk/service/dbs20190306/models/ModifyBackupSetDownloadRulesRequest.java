@@ -1,64 +1,70 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.dbs20190306.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ModifyBackupSetDownloadRulesRequest} extends {@link RequestModel}
  *
  * <p>ModifyBackupSetDownloadRulesRequest</p>
  */
 public class ModifyBackupSetDownloadRulesRequest extends Request {
-    @Query
-    @NameInMap("BackupGatewayId")
+    @com.aliyun.core.annotation.Host
+    @com.aliyun.core.annotation.NameInMap("RegionId")
+    private String regionId;
+
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("BackupGatewayId")
     private Long backupGatewayId;
 
-    @Query
-    @NameInMap("BackupPlanId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("BackupPlanId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String backupPlanId;
 
-    @Query
-    @NameInMap("BackupSetDownloadDir")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("BackupSetDownloadDir")
     private String backupSetDownloadDir;
 
-    @Query
-    @NameInMap("BackupSetDownloadTargetType")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("BackupSetDownloadTargetType")
     private String backupSetDownloadTargetType;
 
-    @Query
-    @NameInMap("BackupSetDownloadTargetTypeLocation")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("BackupSetDownloadTargetTypeLocation")
     private String backupSetDownloadTargetTypeLocation;
 
-    @Query
-    @NameInMap("ClientToken")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ClientToken")
     private String clientToken;
 
-    @Query
-    @NameInMap("FullDataFormat")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("FullDataFormat")
     private String fullDataFormat;
 
-    @Query
-    @NameInMap("IncrementDataFormat")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("IncrementDataFormat")
     private String incrementDataFormat;
 
-    @Query
-    @NameInMap("OpenAutoDownload")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("OpenAutoDownload")
     private Boolean openAutoDownload;
 
-    @Query
-    @NameInMap("OwnerId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("OwnerId")
     private String ownerId;
-
-    @Host
-    @NameInMap("RegionId")
-    private String regionId;
 
     private ModifyBackupSetDownloadRulesRequest(Builder builder) {
         super(builder);
+        this.regionId = builder.regionId;
         this.backupGatewayId = builder.backupGatewayId;
         this.backupPlanId = builder.backupPlanId;
         this.backupSetDownloadDir = builder.backupSetDownloadDir;
@@ -69,7 +75,6 @@ public class ModifyBackupSetDownloadRulesRequest extends Request {
         this.incrementDataFormat = builder.incrementDataFormat;
         this.openAutoDownload = builder.openAutoDownload;
         this.ownerId = builder.ownerId;
-        this.regionId = builder.regionId;
     }
 
     public static Builder builder() {
@@ -80,9 +85,16 @@ public class ModifyBackupSetDownloadRulesRequest extends Request {
         return builder().build();
     }
 
-    @Override
+@Override
     public Builder toBuilder() {
         return new Builder(this);
+    }
+
+    /**
+     * @return regionId
+     */
+    public String getRegionId() {
+        return this.regionId;
     }
 
     /**
@@ -155,14 +167,8 @@ public class ModifyBackupSetDownloadRulesRequest extends Request {
         return this.ownerId;
     }
 
-    /**
-     * @return regionId
-     */
-    public String getRegionId() {
-        return this.regionId;
-    }
-
     public static final class Builder extends Request.Builder<ModifyBackupSetDownloadRulesRequest, Builder> {
+        private String regionId; 
         private Long backupGatewayId; 
         private String backupPlanId; 
         private String backupSetDownloadDir; 
@@ -173,7 +179,6 @@ public class ModifyBackupSetDownloadRulesRequest extends Request {
         private String incrementDataFormat; 
         private Boolean openAutoDownload; 
         private String ownerId; 
-        private String regionId; 
 
         private Builder() {
             super();
@@ -181,6 +186,7 @@ public class ModifyBackupSetDownloadRulesRequest extends Request {
 
         private Builder(ModifyBackupSetDownloadRulesRequest request) {
             super(request);
+            this.regionId = request.regionId;
             this.backupGatewayId = request.backupGatewayId;
             this.backupPlanId = request.backupPlanId;
             this.backupSetDownloadDir = request.backupSetDownloadDir;
@@ -191,11 +197,22 @@ public class ModifyBackupSetDownloadRulesRequest extends Request {
             this.incrementDataFormat = request.incrementDataFormat;
             this.openAutoDownload = request.openAutoDownload;
             this.ownerId = request.ownerId;
-            this.regionId = request.regionId;
         } 
 
         /**
-         * BackupGatewayId.
+         * RegionId.
+         */
+        public Builder regionId(String regionId) {
+            this.putHostParameter("RegionId", regionId);
+            this.regionId = regionId;
+            return this;
+        }
+
+        /**
+         * <p>The ID of the backup gateway that is used to download the backup set.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2331****</p>
          */
         public Builder backupGatewayId(Long backupGatewayId) {
             this.putQueryParameter("BackupGatewayId", backupGatewayId);
@@ -204,7 +221,11 @@ public class ModifyBackupSetDownloadRulesRequest extends Request {
         }
 
         /**
-         * BackupPlanId.
+         * <p>The ID of the backup schedule.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>dbstooi01****</p>
          */
         public Builder backupPlanId(String backupPlanId) {
             this.putQueryParameter("BackupPlanId", backupPlanId);
@@ -213,7 +234,10 @@ public class ModifyBackupSetDownloadRulesRequest extends Request {
         }
 
         /**
-         * BackupSetDownloadDir.
+         * <p>The server directory to which the backup set is downloaded.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>test</p>
          */
         public Builder backupSetDownloadDir(String backupSetDownloadDir) {
             this.putQueryParameter("BackupSetDownloadDir", backupSetDownloadDir);
@@ -222,7 +246,13 @@ public class ModifyBackupSetDownloadRulesRequest extends Request {
         }
 
         /**
-         * BackupSetDownloadTargetType.
+         * <p>The type of the destination server to which the backup set is downloaded.</p>
+         * <blockquote>
+         * <p>Set the value to agent, which indicates a server on which a backup gateway is installed.</p>
+         * </blockquote>
+         * 
+         * <strong>example:</strong>
+         * <p>agent</p>
          */
         public Builder backupSetDownloadTargetType(String backupSetDownloadTargetType) {
             this.putQueryParameter("BackupSetDownloadTargetType", backupSetDownloadTargetType);
@@ -231,7 +261,19 @@ public class ModifyBackupSetDownloadRulesRequest extends Request {
         }
 
         /**
-         * BackupSetDownloadTargetTypeLocation.
+         * <p>The type of the destination directory to which the backup set is downloaded. This parameter is required if the automatic download feature is enabled. Valid values:</p>
+         * <ul>
+         * <li>local</li>
+         * <li>nas</li>
+         * <li>ftp</li>
+         * <li>minio</li>
+         * </ul>
+         * <blockquote>
+         * <p>Default value: local.</p>
+         * </blockquote>
+         * 
+         * <strong>example:</strong>
+         * <p>local</p>
          */
         public Builder backupSetDownloadTargetTypeLocation(String backupSetDownloadTargetTypeLocation) {
             this.putQueryParameter("BackupSetDownloadTargetTypeLocation", backupSetDownloadTargetTypeLocation);
@@ -240,7 +282,10 @@ public class ModifyBackupSetDownloadRulesRequest extends Request {
         }
 
         /**
-         * ClientToken.
+         * <p>The client token that is used to ensure the idempotence of the request.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>ETnLKlblzczshOTUbOCzx****</p>
          */
         public Builder clientToken(String clientToken) {
             this.putQueryParameter("ClientToken", clientToken);
@@ -249,7 +294,19 @@ public class ModifyBackupSetDownloadRulesRequest extends Request {
         }
 
         /**
-         * FullDataFormat.
+         * <p>The format in which the full backup set is downloaded. Valid values:</p>
+         * <ul>
+         * <li>Native</li>
+         * <li>SQL</li>
+         * <li>CSV</li>
+         * <li>JSON</li>
+         * </ul>
+         * <blockquote>
+         * <p>Default value: CSV.</p>
+         * </blockquote>
+         * 
+         * <strong>example:</strong>
+         * <p>CSV</p>
          */
         public Builder fullDataFormat(String fullDataFormat) {
             this.putQueryParameter("FullDataFormat", fullDataFormat);
@@ -258,7 +315,19 @@ public class ModifyBackupSetDownloadRulesRequest extends Request {
         }
 
         /**
-         * IncrementDataFormat.
+         * <p>The format in which the incremental backup set is downloaded. Valid values:</p>
+         * <ul>
+         * <li>Native</li>
+         * <li>SQL</li>
+         * <li>CSV</li>
+         * <li>JSON</li>
+         * </ul>
+         * <blockquote>
+         * <p>Default value: Native.</p>
+         * </blockquote>
+         * 
+         * <strong>example:</strong>
+         * <p>Native</p>
          */
         public Builder incrementDataFormat(String incrementDataFormat) {
             this.putQueryParameter("IncrementDataFormat", incrementDataFormat);
@@ -267,7 +336,10 @@ public class ModifyBackupSetDownloadRulesRequest extends Request {
         }
 
         /**
-         * OpenAutoDownload.
+         * <p>Specifies whether to enable the automatic download feature. Default value: false.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>false</p>
          */
         public Builder openAutoDownload(Boolean openAutoDownload) {
             this.putQueryParameter("OpenAutoDownload", openAutoDownload);
@@ -281,15 +353,6 @@ public class ModifyBackupSetDownloadRulesRequest extends Request {
         public Builder ownerId(String ownerId) {
             this.putQueryParameter("OwnerId", ownerId);
             this.ownerId = ownerId;
-            return this;
-        }
-
-        /**
-         * RegionId.
-         */
-        public Builder regionId(String regionId) {
-            this.putHostParameter("RegionId", regionId);
-            this.regionId = regionId;
             return this;
         }
 

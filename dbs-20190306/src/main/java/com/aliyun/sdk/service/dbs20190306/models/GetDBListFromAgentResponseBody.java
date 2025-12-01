@@ -1,33 +1,38 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.dbs20190306.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link GetDBListFromAgentResponseBody} extends {@link TeaModel}
  *
  * <p>GetDBListFromAgentResponseBody</p>
  */
 public class GetDBListFromAgentResponseBody extends TeaModel {
-    @NameInMap("DbList")
+    @com.aliyun.core.annotation.NameInMap("DbList")
     private DbList dbList;
 
-    @NameInMap("ErrCode")
+    @com.aliyun.core.annotation.NameInMap("ErrCode")
     private String errCode;
 
-    @NameInMap("ErrMessage")
+    @com.aliyun.core.annotation.NameInMap("ErrMessage")
     private String errMessage;
 
-    @NameInMap("HttpStatusCode")
+    @com.aliyun.core.annotation.NameInMap("HttpStatusCode")
     private Integer httpStatusCode;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("Success")
+    @com.aliyun.core.annotation.NameInMap("Success")
     private Boolean success;
 
     private GetDBListFromAgentResponseBody(Builder builder) {
@@ -45,6 +50,10 @@ public class GetDBListFromAgentResponseBody extends TeaModel {
 
     public static GetDBListFromAgentResponseBody create() {
         return builder().build();
+    }
+
+    public Builder toBuilder() {
+        return new Builder(this);
     }
 
     /**
@@ -97,8 +106,20 @@ public class GetDBListFromAgentResponseBody extends TeaModel {
         private String requestId; 
         private Boolean success; 
 
+        private Builder() {
+        } 
+
+        private Builder(GetDBListFromAgentResponseBody model) {
+            this.dbList = model.dbList;
+            this.errCode = model.errCode;
+            this.errMessage = model.errMessage;
+            this.httpStatusCode = model.httpStatusCode;
+            this.requestId = model.requestId;
+            this.success = model.success;
+        } 
+
         /**
-         * DbList.
+         * <p>The details of the databases.</p>
          */
         public Builder dbList(DbList dbList) {
             this.dbList = dbList;
@@ -106,7 +127,10 @@ public class GetDBListFromAgentResponseBody extends TeaModel {
         }
 
         /**
-         * ErrCode.
+         * <p>The error code.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>InvalidParameter</p>
          */
         public Builder errCode(String errCode) {
             this.errCode = errCode;
@@ -114,7 +138,10 @@ public class GetDBListFromAgentResponseBody extends TeaModel {
         }
 
         /**
-         * ErrMessage.
+         * <p>The error message.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>This backupPlan can&quot;t support this action</p>
          */
         public Builder errMessage(String errMessage) {
             this.errMessage = errMessage;
@@ -122,7 +149,10 @@ public class GetDBListFromAgentResponseBody extends TeaModel {
         }
 
         /**
-         * HttpStatusCode.
+         * <p>The HTTP status code.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>400</p>
          */
         public Builder httpStatusCode(Integer httpStatusCode) {
             this.httpStatusCode = httpStatusCode;
@@ -130,7 +160,10 @@ public class GetDBListFromAgentResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * <p>The ID of the request.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>EB4DFD5E-3618-498D-BE35-4DBEA0072122</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -138,7 +171,10 @@ public class GetDBListFromAgentResponseBody extends TeaModel {
         }
 
         /**
-         * Success.
+         * <p>Indicates whether the request is successful.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder success(Boolean success) {
             this.success = success;
@@ -151,9 +187,15 @@ public class GetDBListFromAgentResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link GetDBListFromAgentResponseBody} extends {@link TeaModel}
+     *
+     * <p>GetDBListFromAgentResponseBody</p>
+     */
     public static class DbList extends TeaModel {
-        @NameInMap("dbName")
-        private java.util.List < String > dbName;
+        @com.aliyun.core.annotation.NameInMap("dbName")
+        private java.util.List<String> dbName;
 
         private DbList(Builder builder) {
             this.dbName = builder.dbName;
@@ -170,17 +212,24 @@ public class GetDBListFromAgentResponseBody extends TeaModel {
         /**
          * @return dbName
          */
-        public java.util.List < String > getDbName() {
+        public java.util.List<String> getDbName() {
             return this.dbName;
         }
 
         public static final class Builder {
-            private java.util.List < String > dbName; 
+            private java.util.List<String> dbName; 
+
+            private Builder() {
+            } 
+
+            private Builder(DbList model) {
+                this.dbName = model.dbName;
+            } 
 
             /**
              * dbName.
              */
-            public Builder dbName(java.util.List < String > dbName) {
+            public Builder dbName(java.util.List<String> dbName) {
                 this.dbName = dbName;
                 return this;
             }

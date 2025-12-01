@@ -1,45 +1,50 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.dbs20190306.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeIncrementBackupListResponseBody} extends {@link TeaModel}
  *
  * <p>DescribeIncrementBackupListResponseBody</p>
  */
 public class DescribeIncrementBackupListResponseBody extends TeaModel {
-    @NameInMap("ErrCode")
+    @com.aliyun.core.annotation.NameInMap("ErrCode")
     private String errCode;
 
-    @NameInMap("ErrMessage")
+    @com.aliyun.core.annotation.NameInMap("ErrMessage")
     private String errMessage;
 
-    @NameInMap("HttpStatusCode")
+    @com.aliyun.core.annotation.NameInMap("HttpStatusCode")
     private Integer httpStatusCode;
 
-    @NameInMap("Items")
+    @com.aliyun.core.annotation.NameInMap("Items")
     private Items items;
 
-    @NameInMap("PageNum")
+    @com.aliyun.core.annotation.NameInMap("PageNum")
     private Integer pageNum;
 
-    @NameInMap("PageSize")
+    @com.aliyun.core.annotation.NameInMap("PageSize")
     private Integer pageSize;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("Success")
+    @com.aliyun.core.annotation.NameInMap("Success")
     private Boolean success;
 
-    @NameInMap("TotalElements")
+    @com.aliyun.core.annotation.NameInMap("TotalElements")
     private Integer totalElements;
 
-    @NameInMap("TotalPages")
+    @com.aliyun.core.annotation.NameInMap("TotalPages")
     private Integer totalPages;
 
     private DescribeIncrementBackupListResponseBody(Builder builder) {
@@ -61,6 +66,10 @@ public class DescribeIncrementBackupListResponseBody extends TeaModel {
 
     public static DescribeIncrementBackupListResponseBody create() {
         return builder().build();
+    }
+
+    public Builder toBuilder() {
+        return new Builder(this);
     }
 
     /**
@@ -145,8 +154,27 @@ public class DescribeIncrementBackupListResponseBody extends TeaModel {
         private Integer totalElements; 
         private Integer totalPages; 
 
+        private Builder() {
+        } 
+
+        private Builder(DescribeIncrementBackupListResponseBody model) {
+            this.errCode = model.errCode;
+            this.errMessage = model.errMessage;
+            this.httpStatusCode = model.httpStatusCode;
+            this.items = model.items;
+            this.pageNum = model.pageNum;
+            this.pageSize = model.pageSize;
+            this.requestId = model.requestId;
+            this.success = model.success;
+            this.totalElements = model.totalElements;
+            this.totalPages = model.totalPages;
+        } 
+
         /**
-         * ErrCode.
+         * <p>The error code.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Param.NotFound</p>
          */
         public Builder errCode(String errCode) {
             this.errCode = errCode;
@@ -154,7 +182,10 @@ public class DescribeIncrementBackupListResponseBody extends TeaModel {
         }
 
         /**
-         * ErrMessage.
+         * <p>The error message.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>The specified parameter %s value is not valid.</p>
          */
         public Builder errMessage(String errMessage) {
             this.errMessage = errMessage;
@@ -162,7 +193,10 @@ public class DescribeIncrementBackupListResponseBody extends TeaModel {
         }
 
         /**
-         * HttpStatusCode.
+         * <p>The HTTP status code.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>200</p>
          */
         public Builder httpStatusCode(Integer httpStatusCode) {
             this.httpStatusCode = httpStatusCode;
@@ -170,7 +204,7 @@ public class DescribeIncrementBackupListResponseBody extends TeaModel {
         }
 
         /**
-         * Items.
+         * <p>The details of incremental backup tasks.</p>
          */
         public Builder items(Items items) {
             this.items = items;
@@ -178,7 +212,10 @@ public class DescribeIncrementBackupListResponseBody extends TeaModel {
         }
 
         /**
-         * PageNum.
+         * <p>The page number of the returned page.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>0</p>
          */
         public Builder pageNum(Integer pageNum) {
             this.pageNum = pageNum;
@@ -186,7 +223,10 @@ public class DescribeIncrementBackupListResponseBody extends TeaModel {
         }
 
         /**
-         * PageSize.
+         * <p>The number of entries returned on each page.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>30</p>
          */
         public Builder pageSize(Integer pageSize) {
             this.pageSize = pageSize;
@@ -194,7 +234,10 @@ public class DescribeIncrementBackupListResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * <p>The ID of the request.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>A5D52069-E8AA-5056-8C5C-654C3610****</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -202,7 +245,14 @@ public class DescribeIncrementBackupListResponseBody extends TeaModel {
         }
 
         /**
-         * Success.
+         * <p>Indicates whether the request is successful. Valid values:</p>
+         * <ul>
+         * <li><strong>true</strong>: The request is successful.</li>
+         * <li><strong>false</strong>: The request fails.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder success(Boolean success) {
             this.success = success;
@@ -210,7 +260,10 @@ public class DescribeIncrementBackupListResponseBody extends TeaModel {
         }
 
         /**
-         * TotalElements.
+         * <p>The total number of incremental backup tasks.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder totalElements(Integer totalElements) {
             this.totalElements = totalElements;
@@ -218,7 +271,10 @@ public class DescribeIncrementBackupListResponseBody extends TeaModel {
         }
 
         /**
-         * TotalPages.
+         * <p>The total number of returned pages.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder totalPages(Integer totalPages) {
             this.totalPages = totalPages;
@@ -231,32 +287,38 @@ public class DescribeIncrementBackupListResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link DescribeIncrementBackupListResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeIncrementBackupListResponseBody</p>
+     */
     public static class IncrementBackupFile extends TeaModel {
-        @NameInMap("BackupSetExpiredTime")
+        @com.aliyun.core.annotation.NameInMap("BackupSetExpiredTime")
         private Long backupSetExpiredTime;
 
-        @NameInMap("BackupSetId")
+        @com.aliyun.core.annotation.NameInMap("BackupSetId")
         private String backupSetId;
 
-        @NameInMap("BackupSetJobId")
+        @com.aliyun.core.annotation.NameInMap("BackupSetJobId")
         private String backupSetJobId;
 
-        @NameInMap("BackupSize")
+        @com.aliyun.core.annotation.NameInMap("BackupSize")
         private Long backupSize;
 
-        @NameInMap("BackupStatus")
+        @com.aliyun.core.annotation.NameInMap("BackupStatus")
         private String backupStatus;
 
-        @NameInMap("EndTime")
+        @com.aliyun.core.annotation.NameInMap("EndTime")
         private Long endTime;
 
-        @NameInMap("SourceEndpointIpPort")
+        @com.aliyun.core.annotation.NameInMap("SourceEndpointIpPort")
         private String sourceEndpointIpPort;
 
-        @NameInMap("StartTime")
+        @com.aliyun.core.annotation.NameInMap("StartTime")
         private Long startTime;
 
-        @NameInMap("StorageMethod")
+        @com.aliyun.core.annotation.NameInMap("StorageMethod")
         private String storageMethod;
 
         private IncrementBackupFile(Builder builder) {
@@ -353,8 +415,26 @@ public class DescribeIncrementBackupListResponseBody extends TeaModel {
             private Long startTime; 
             private String storageMethod; 
 
+            private Builder() {
+            } 
+
+            private Builder(IncrementBackupFile model) {
+                this.backupSetExpiredTime = model.backupSetExpiredTime;
+                this.backupSetId = model.backupSetId;
+                this.backupSetJobId = model.backupSetJobId;
+                this.backupSize = model.backupSize;
+                this.backupStatus = model.backupStatus;
+                this.endTime = model.endTime;
+                this.sourceEndpointIpPort = model.sourceEndpointIpPort;
+                this.startTime = model.startTime;
+                this.storageMethod = model.storageMethod;
+            } 
+
             /**
-             * BackupSetExpiredTime.
+             * <p>The point in time when the backup set expires.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1711506719000</p>
              */
             public Builder backupSetExpiredTime(Long backupSetExpiredTime) {
                 this.backupSetExpiredTime = backupSetExpiredTime;
@@ -362,7 +442,10 @@ public class DescribeIncrementBackupListResponseBody extends TeaModel {
             }
 
             /**
-             * BackupSetId.
+             * <p>The ID of the backup set.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>mysql-bin.00****</p>
              */
             public Builder backupSetId(String backupSetId) {
                 this.backupSetId = backupSetId;
@@ -370,7 +453,10 @@ public class DescribeIncrementBackupListResponseBody extends TeaModel {
             }
 
             /**
-             * BackupSetJobId.
+             * <p>The ID of the incremental backup task.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1hv5g9wk4****</p>
              */
             public Builder backupSetJobId(String backupSetJobId) {
                 this.backupSetJobId = backupSetJobId;
@@ -378,7 +464,10 @@ public class DescribeIncrementBackupListResponseBody extends TeaModel {
             }
 
             /**
-             * BackupSize.
+             * <p>The size of the backup set.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>18535</p>
              */
             public Builder backupSize(Long backupSize) {
                 this.backupSize = backupSize;
@@ -386,7 +475,16 @@ public class DescribeIncrementBackupListResponseBody extends TeaModel {
             }
 
             /**
-             * BackupStatus.
+             * <p>The status of the incremental backup task. Valid values:</p>
+             * <ul>
+             * <li><strong>INIT</strong>: The incremental backup task is not started.</li>
+             * <li><strong>FILLING</strong>: The incremental backup task is in progress.</li>
+             * <li><strong>COMPLETED</strong>: The incremental backup task is complete.</li>
+             * <li><strong>UNCOMPLETED</strong>: The incremental backup task is not complete.</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>FILLING</p>
              */
             public Builder backupStatus(String backupStatus) {
                 this.backupStatus = backupStatus;
@@ -394,7 +492,10 @@ public class DescribeIncrementBackupListResponseBody extends TeaModel {
             }
 
             /**
-             * EndTime.
+             * <p>The end time of the incremental backup task.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1648434713000</p>
              */
             public Builder endTime(Long endTime) {
                 this.endTime = endTime;
@@ -402,7 +503,10 @@ public class DescribeIncrementBackupListResponseBody extends TeaModel {
             }
 
             /**
-             * SourceEndpointIpPort.
+             * <p>The endpoint that is used to connect to the database.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>172.1XX.103.1:4XXX</p>
              */
             public Builder sourceEndpointIpPort(String sourceEndpointIpPort) {
                 this.sourceEndpointIpPort = sourceEndpointIpPort;
@@ -410,7 +514,10 @@ public class DescribeIncrementBackupListResponseBody extends TeaModel {
             }
 
             /**
-             * StartTime.
+             * <p>The start time of the incremental backup task.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1648433764000</p>
              */
             public Builder startTime(Long startTime) {
                 this.startTime = startTime;
@@ -418,7 +525,16 @@ public class DescribeIncrementBackupListResponseBody extends TeaModel {
             }
 
             /**
-             * StorageMethod.
+             * <p>The storage class of the backup data. Valid values:</p>
+             * <ul>
+             * <li><strong>Standard</strong>: The storage class is Standard.</li>
+             * <li><strong>IA</strong>: The storage class is Infrequent Access (IA).</li>
+             * <li><strong>Archive</strong>: The storage class is Archive.</li>
+             * <li><strong>UNKNOWN</strong>: The storage class is unknown. This value is returned because the task is not complete.</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>Standard</p>
              */
             public Builder storageMethod(String storageMethod) {
                 this.storageMethod = storageMethod;
@@ -432,9 +548,15 @@ public class DescribeIncrementBackupListResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link DescribeIncrementBackupListResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeIncrementBackupListResponseBody</p>
+     */
     public static class Items extends TeaModel {
-        @NameInMap("IncrementBackupFile")
-        private java.util.List < IncrementBackupFile> incrementBackupFile;
+        @com.aliyun.core.annotation.NameInMap("IncrementBackupFile")
+        private java.util.List<IncrementBackupFile> incrementBackupFile;
 
         private Items(Builder builder) {
             this.incrementBackupFile = builder.incrementBackupFile;
@@ -451,17 +573,24 @@ public class DescribeIncrementBackupListResponseBody extends TeaModel {
         /**
          * @return incrementBackupFile
          */
-        public java.util.List < IncrementBackupFile> getIncrementBackupFile() {
+        public java.util.List<IncrementBackupFile> getIncrementBackupFile() {
             return this.incrementBackupFile;
         }
 
         public static final class Builder {
-            private java.util.List < IncrementBackupFile> incrementBackupFile; 
+            private java.util.List<IncrementBackupFile> incrementBackupFile; 
+
+            private Builder() {
+            } 
+
+            private Builder(Items model) {
+                this.incrementBackupFile = model.incrementBackupFile;
+            } 
 
             /**
              * IncrementBackupFile.
              */
-            public Builder incrementBackupFile(java.util.List < IncrementBackupFile> incrementBackupFile) {
+            public Builder incrementBackupFile(java.util.List<IncrementBackupFile> incrementBackupFile) {
                 this.incrementBackupFile = incrementBackupFile;
                 return this;
             }

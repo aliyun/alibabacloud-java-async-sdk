@@ -1,59 +1,65 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.dbs20190306.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeBackupPlanListRequest} extends {@link RequestModel}
  *
  * <p>DescribeBackupPlanListRequest</p>
  */
 public class DescribeBackupPlanListRequest extends Request {
-    @Query
-    @NameInMap("BackupPlanId")
-    private String backupPlanId;
-
-    @Query
-    @NameInMap("BackupPlanName")
-    private String backupPlanName;
-
-    @Query
-    @NameInMap("BackupPlanStatus")
-    private String backupPlanStatus;
-
-    @Query
-    @NameInMap("ClientToken")
-    private String clientToken;
-
-    @Query
-    @NameInMap("OwnerId")
-    private String ownerId;
-
-    @Query
-    @NameInMap("PageNum")
-    private Integer pageNum;
-
-    @Query
-    @NameInMap("PageSize")
-    private Integer pageSize;
-
-    @Query
-    @NameInMap("Region")
-    private String region;
-
-    @Host
-    @NameInMap("RegionId")
+    @com.aliyun.core.annotation.Host
+    @com.aliyun.core.annotation.NameInMap("RegionId")
     private String regionId;
 
-    @Query
-    @NameInMap("ResourceGroupId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("BackupPlanId")
+    private String backupPlanId;
+
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("BackupPlanName")
+    private String backupPlanName;
+
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("BackupPlanStatus")
+    private String backupPlanStatus;
+
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ClientToken")
+    private String clientToken;
+
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("OwnerId")
+    private String ownerId;
+
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("PageNum")
+    private Integer pageNum;
+
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("PageSize")
+    private Integer pageSize;
+
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Region")
+    private String region;
+
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ResourceGroupId")
     private String resourceGroupId;
 
     private DescribeBackupPlanListRequest(Builder builder) {
         super(builder);
+        this.regionId = builder.regionId;
         this.backupPlanId = builder.backupPlanId;
         this.backupPlanName = builder.backupPlanName;
         this.backupPlanStatus = builder.backupPlanStatus;
@@ -62,7 +68,6 @@ public class DescribeBackupPlanListRequest extends Request {
         this.pageNum = builder.pageNum;
         this.pageSize = builder.pageSize;
         this.region = builder.region;
-        this.regionId = builder.regionId;
         this.resourceGroupId = builder.resourceGroupId;
     }
 
@@ -74,9 +79,16 @@ public class DescribeBackupPlanListRequest extends Request {
         return builder().build();
     }
 
-    @Override
+@Override
     public Builder toBuilder() {
         return new Builder(this);
+    }
+
+    /**
+     * @return regionId
+     */
+    public String getRegionId() {
+        return this.regionId;
     }
 
     /**
@@ -136,13 +148,6 @@ public class DescribeBackupPlanListRequest extends Request {
     }
 
     /**
-     * @return regionId
-     */
-    public String getRegionId() {
-        return this.regionId;
-    }
-
-    /**
      * @return resourceGroupId
      */
     public String getResourceGroupId() {
@@ -150,6 +155,7 @@ public class DescribeBackupPlanListRequest extends Request {
     }
 
     public static final class Builder extends Request.Builder<DescribeBackupPlanListRequest, Builder> {
+        private String regionId; 
         private String backupPlanId; 
         private String backupPlanName; 
         private String backupPlanStatus; 
@@ -158,7 +164,6 @@ public class DescribeBackupPlanListRequest extends Request {
         private Integer pageNum; 
         private Integer pageSize; 
         private String region; 
-        private String regionId; 
         private String resourceGroupId; 
 
         private Builder() {
@@ -167,6 +172,7 @@ public class DescribeBackupPlanListRequest extends Request {
 
         private Builder(DescribeBackupPlanListRequest request) {
             super(request);
+            this.regionId = request.regionId;
             this.backupPlanId = request.backupPlanId;
             this.backupPlanName = request.backupPlanName;
             this.backupPlanStatus = request.backupPlanStatus;
@@ -175,12 +181,23 @@ public class DescribeBackupPlanListRequest extends Request {
             this.pageNum = request.pageNum;
             this.pageSize = request.pageSize;
             this.region = request.region;
-            this.regionId = request.regionId;
             this.resourceGroupId = request.resourceGroupId;
         } 
 
         /**
-         * BackupPlanId.
+         * RegionId.
+         */
+        public Builder regionId(String regionId) {
+            this.putHostParameter("RegionId", regionId);
+            this.regionId = regionId;
+            return this;
+        }
+
+        /**
+         * <p>The ID of the backup schedule. You can query multiple backup schedule IDs. Separate multiple IDs with commas (,).</p>
+         * 
+         * <strong>example:</strong>
+         * <p>dbstooi01exXXXX</p>
          */
         public Builder backupPlanId(String backupPlanId) {
             this.putQueryParameter("BackupPlanId", backupPlanId);
@@ -189,7 +206,10 @@ public class DescribeBackupPlanListRequest extends Request {
         }
 
         /**
-         * BackupPlanName.
+         * <p>Backup plan name.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>test123</p>
          */
         public Builder backupPlanName(String backupPlanName) {
             this.putQueryParameter("BackupPlanName", backupPlanName);
@@ -198,7 +218,19 @@ public class DescribeBackupPlanListRequest extends Request {
         }
 
         /**
-         * BackupPlanStatus.
+         * <p>Backup plan status, the values are as follows:</p>
+         * <ul>
+         * <li><strong>wait</strong>: Not configured</li>
+         * <li><strong>init</strong>: Not started (pre-check failed)</li>
+         * <li><strong>running</strong>: Running</li>
+         * <li><strong>stop</strong>: Failed</li>
+         * <li><strong>pause</strong>: Paused</li>
+         * <li><strong>locked</strong>: Locked</li>
+         * <li><strong>check_pass</strong>: Pre-check passed</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>wait</p>
          */
         public Builder backupPlanStatus(String backupPlanStatus) {
             this.putQueryParameter("BackupPlanStatus", backupPlanStatus);
@@ -207,7 +239,10 @@ public class DescribeBackupPlanListRequest extends Request {
         }
 
         /**
-         * ClientToken.
+         * <p>Used to ensure the idempotence of the request, preventing duplicate submissions.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>ASDASDASDSADASFCZXVZ</p>
          */
         public Builder clientToken(String clientToken) {
             this.putQueryParameter("ClientToken", clientToken);
@@ -225,7 +260,10 @@ public class DescribeBackupPlanListRequest extends Request {
         }
 
         /**
-         * PageNum.
+         * <p>Page number, must be greater than or equal to 0 and not exceed the maximum value of Integer. The default value is 0.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder pageNum(Integer pageNum) {
             this.putQueryParameter("PageNum", pageNum);
@@ -234,7 +272,13 @@ public class DescribeBackupPlanListRequest extends Request {
         }
 
         /**
-         * PageSize.
+         * <p>Number of records per page, the value should be between 1 and 100.</p>
+         * <blockquote>
+         * <p>The default is <strong>30</strong>.</p>
+         * </blockquote>
+         * 
+         * <strong>example:</strong>
+         * <p>30</p>
          */
         public Builder pageSize(Integer pageSize) {
             this.putQueryParameter("PageSize", pageSize);
@@ -243,7 +287,10 @@ public class DescribeBackupPlanListRequest extends Request {
         }
 
         /**
-         * Region.
+         * <p>DBS region, you can view the supported DBS regions by calling the <a href="https://help.aliyun.com/document_detail/2869853.html">DescribeRegions</a> interface.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-hangzhou</p>
          */
         public Builder region(String region) {
             this.putQueryParameter("Region", region);
@@ -252,16 +299,10 @@ public class DescribeBackupPlanListRequest extends Request {
         }
 
         /**
-         * RegionId.
-         */
-        public Builder regionId(String regionId) {
-            this.putHostParameter("RegionId", regionId);
-            this.regionId = regionId;
-            return this;
-        }
-
-        /**
-         * ResourceGroupId.
+         * <p>Resource group ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>rg-aekzecovzti****</p>
          */
         public Builder resourceGroupId(String resourceGroupId) {
             this.putQueryParameter("ResourceGroupId", resourceGroupId);

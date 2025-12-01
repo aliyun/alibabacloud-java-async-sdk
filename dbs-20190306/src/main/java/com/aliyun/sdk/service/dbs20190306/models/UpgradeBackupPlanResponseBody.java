@@ -1,36 +1,41 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.dbs20190306.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link UpgradeBackupPlanResponseBody} extends {@link TeaModel}
  *
  * <p>UpgradeBackupPlanResponseBody</p>
  */
 public class UpgradeBackupPlanResponseBody extends TeaModel {
-    @NameInMap("BackupPlanId")
+    @com.aliyun.core.annotation.NameInMap("BackupPlanId")
     private String backupPlanId;
 
-    @NameInMap("ErrCode")
+    @com.aliyun.core.annotation.NameInMap("ErrCode")
     private String errCode;
 
-    @NameInMap("ErrMessage")
+    @com.aliyun.core.annotation.NameInMap("ErrMessage")
     private String errMessage;
 
-    @NameInMap("HttpStatusCode")
+    @com.aliyun.core.annotation.NameInMap("HttpStatusCode")
     private Integer httpStatusCode;
 
-    @NameInMap("OrderId")
+    @com.aliyun.core.annotation.NameInMap("OrderId")
     private String orderId;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("Success")
+    @com.aliyun.core.annotation.NameInMap("Success")
     private Boolean success;
 
     private UpgradeBackupPlanResponseBody(Builder builder) {
@@ -49,6 +54,10 @@ public class UpgradeBackupPlanResponseBody extends TeaModel {
 
     public static UpgradeBackupPlanResponseBody create() {
         return builder().build();
+    }
+
+    public Builder toBuilder() {
+        return new Builder(this);
     }
 
     /**
@@ -109,8 +118,24 @@ public class UpgradeBackupPlanResponseBody extends TeaModel {
         private String requestId; 
         private Boolean success; 
 
+        private Builder() {
+        } 
+
+        private Builder(UpgradeBackupPlanResponseBody model) {
+            this.backupPlanId = model.backupPlanId;
+            this.errCode = model.errCode;
+            this.errMessage = model.errMessage;
+            this.httpStatusCode = model.httpStatusCode;
+            this.orderId = model.orderId;
+            this.requestId = model.requestId;
+            this.success = model.success;
+        } 
+
         /**
-         * BackupPlanId.
+         * <p>The ID of the backup schedule.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>dbstooi01****</p>
          */
         public Builder backupPlanId(String backupPlanId) {
             this.backupPlanId = backupPlanId;
@@ -118,7 +143,10 @@ public class UpgradeBackupPlanResponseBody extends TeaModel {
         }
 
         /**
-         * ErrCode.
+         * <p>The error code.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Param.NotFound</p>
          */
         public Builder errCode(String errCode) {
             this.errCode = errCode;
@@ -126,7 +154,10 @@ public class UpgradeBackupPlanResponseBody extends TeaModel {
         }
 
         /**
-         * ErrMessage.
+         * <p>The error message.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>The specified parameter %s value is not valid.</p>
          */
         public Builder errMessage(String errMessage) {
             this.errMessage = errMessage;
@@ -134,7 +165,10 @@ public class UpgradeBackupPlanResponseBody extends TeaModel {
         }
 
         /**
-         * HttpStatusCode.
+         * <p>The HTTP status code.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>200</p>
          */
         public Builder httpStatusCode(Integer httpStatusCode) {
             this.httpStatusCode = httpStatusCode;
@@ -142,7 +176,10 @@ public class UpgradeBackupPlanResponseBody extends TeaModel {
         }
 
         /**
-         * OrderId.
+         * <p>The ID of the order.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2056157****</p>
          */
         public Builder orderId(String orderId) {
             this.orderId = orderId;
@@ -150,7 +187,10 @@ public class UpgradeBackupPlanResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * <p>The ID of the request.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>D6E068C3-25BC-455A-85FE-45F0B22ECB1F</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -158,7 +198,10 @@ public class UpgradeBackupPlanResponseBody extends TeaModel {
         }
 
         /**
-         * Success.
+         * <p>Indicates whether the request is successful.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder success(Boolean success) {
             this.success = success;

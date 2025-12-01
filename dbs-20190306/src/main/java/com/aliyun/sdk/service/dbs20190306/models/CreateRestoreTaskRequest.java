@@ -1,114 +1,120 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.dbs20190306.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link CreateRestoreTaskRequest} extends {@link RequestModel}
  *
  * <p>CreateRestoreTaskRequest</p>
  */
 public class CreateRestoreTaskRequest extends Request {
-    @Query
-    @NameInMap("BackupGatewayId")
-    private Long backupGatewayId;
-
-    @Query
-    @NameInMap("BackupPlanId")
-    @Validation(required = true)
-    private String backupPlanId;
-
-    @Query
-    @NameInMap("BackupSetId")
-    private String backupSetId;
-
-    @Query
-    @NameInMap("ClientToken")
-    private String clientToken;
-
-    @Query
-    @NameInMap("CrossAliyunId")
-    private String crossAliyunId;
-
-    @Query
-    @NameInMap("CrossRoleName")
-    private String crossRoleName;
-
-    @Query
-    @NameInMap("DestinationEndpointDatabaseName")
-    private String destinationEndpointDatabaseName;
-
-    @Query
-    @NameInMap("DestinationEndpointIP")
-    private String destinationEndpointIP;
-
-    @Query
-    @NameInMap("DestinationEndpointInstanceID")
-    private String destinationEndpointInstanceID;
-
-    @Query
-    @NameInMap("DestinationEndpointInstanceType")
-    @Validation(required = true)
-    private String destinationEndpointInstanceType;
-
-    @Query
-    @NameInMap("DestinationEndpointOracleSID")
-    private String destinationEndpointOracleSID;
-
-    @Query
-    @NameInMap("DestinationEndpointPassword")
-    private String destinationEndpointPassword;
-
-    @Query
-    @NameInMap("DestinationEndpointPort")
-    private Integer destinationEndpointPort;
-
-    @Query
-    @NameInMap("DestinationEndpointRegion")
-    private String destinationEndpointRegion;
-
-    @Query
-    @NameInMap("DestinationEndpointUserName")
-    private String destinationEndpointUserName;
-
-    @Query
-    @NameInMap("DuplicateConflict")
-    private String duplicateConflict;
-
-    @Query
-    @NameInMap("OwnerId")
-    private String ownerId;
-
-    @Host
-    @NameInMap("RegionId")
+    @com.aliyun.core.annotation.Host
+    @com.aliyun.core.annotation.NameInMap("RegionId")
     private String regionId;
 
-    @Query
-    @NameInMap("RestoreDir")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("BackupGatewayId")
+    private Long backupGatewayId;
+
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("BackupPlanId")
+    @com.aliyun.core.annotation.Validation(required = true)
+    private String backupPlanId;
+
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("BackupSetId")
+    private String backupSetId;
+
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ClientToken")
+    private String clientToken;
+
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("CrossAliyunId")
+    private String crossAliyunId;
+
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("CrossRoleName")
+    private String crossRoleName;
+
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("DestinationEndpointDatabaseName")
+    private String destinationEndpointDatabaseName;
+
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("DestinationEndpointIP")
+    private String destinationEndpointIP;
+
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("DestinationEndpointInstanceID")
+    private String destinationEndpointInstanceID;
+
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("DestinationEndpointInstanceType")
+    @com.aliyun.core.annotation.Validation(required = true)
+    private String destinationEndpointInstanceType;
+
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("DestinationEndpointOracleSID")
+    private String destinationEndpointOracleSID;
+
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("DestinationEndpointPassword")
+    private String destinationEndpointPassword;
+
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("DestinationEndpointPort")
+    private Integer destinationEndpointPort;
+
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("DestinationEndpointRegion")
+    private String destinationEndpointRegion;
+
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("DestinationEndpointUserName")
+    private String destinationEndpointUserName;
+
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("DuplicateConflict")
+    private String duplicateConflict;
+
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("OwnerId")
+    private String ownerId;
+
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("RestoreDir")
     private String restoreDir;
 
-    @Query
-    @NameInMap("RestoreHome")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("RestoreHome")
     private String restoreHome;
 
-    @Query
-    @NameInMap("RestoreObjects")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("RestoreObjects")
     private String restoreObjects;
 
-    @Query
-    @NameInMap("RestoreTaskName")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("RestoreTaskName")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String restoreTaskName;
 
-    @Query
-    @NameInMap("RestoreTime")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("RestoreTime")
     private Long restoreTime;
 
     private CreateRestoreTaskRequest(Builder builder) {
         super(builder);
+        this.regionId = builder.regionId;
         this.backupGatewayId = builder.backupGatewayId;
         this.backupPlanId = builder.backupPlanId;
         this.backupSetId = builder.backupSetId;
@@ -126,7 +132,6 @@ public class CreateRestoreTaskRequest extends Request {
         this.destinationEndpointUserName = builder.destinationEndpointUserName;
         this.duplicateConflict = builder.duplicateConflict;
         this.ownerId = builder.ownerId;
-        this.regionId = builder.regionId;
         this.restoreDir = builder.restoreDir;
         this.restoreHome = builder.restoreHome;
         this.restoreObjects = builder.restoreObjects;
@@ -142,9 +147,16 @@ public class CreateRestoreTaskRequest extends Request {
         return builder().build();
     }
 
-    @Override
+@Override
     public Builder toBuilder() {
         return new Builder(this);
+    }
+
+    /**
+     * @return regionId
+     */
+    public String getRegionId() {
+        return this.regionId;
     }
 
     /**
@@ -267,13 +279,6 @@ public class CreateRestoreTaskRequest extends Request {
     }
 
     /**
-     * @return regionId
-     */
-    public String getRegionId() {
-        return this.regionId;
-    }
-
-    /**
      * @return restoreDir
      */
     public String getRestoreDir() {
@@ -309,6 +314,7 @@ public class CreateRestoreTaskRequest extends Request {
     }
 
     public static final class Builder extends Request.Builder<CreateRestoreTaskRequest, Builder> {
+        private String regionId; 
         private Long backupGatewayId; 
         private String backupPlanId; 
         private String backupSetId; 
@@ -326,7 +332,6 @@ public class CreateRestoreTaskRequest extends Request {
         private String destinationEndpointUserName; 
         private String duplicateConflict; 
         private String ownerId; 
-        private String regionId; 
         private String restoreDir; 
         private String restoreHome; 
         private String restoreObjects; 
@@ -339,6 +344,7 @@ public class CreateRestoreTaskRequest extends Request {
 
         private Builder(CreateRestoreTaskRequest request) {
             super(request);
+            this.regionId = request.regionId;
             this.backupGatewayId = request.backupGatewayId;
             this.backupPlanId = request.backupPlanId;
             this.backupSetId = request.backupSetId;
@@ -356,7 +362,6 @@ public class CreateRestoreTaskRequest extends Request {
             this.destinationEndpointUserName = request.destinationEndpointUserName;
             this.duplicateConflict = request.duplicateConflict;
             this.ownerId = request.ownerId;
-            this.regionId = request.regionId;
             this.restoreDir = request.restoreDir;
             this.restoreHome = request.restoreHome;
             this.restoreObjects = request.restoreObjects;
@@ -365,7 +370,22 @@ public class CreateRestoreTaskRequest extends Request {
         } 
 
         /**
-         * BackupGatewayId.
+         * RegionId.
+         */
+        public Builder regionId(String regionId) {
+            this.putHostParameter("RegionId", regionId);
+            this.regionId = regionId;
+            return this;
+        }
+
+        /**
+         * <p>The ID of the backup gateway.</p>
+         * <blockquote>
+         * <p>This parameter is required if the DestinationEndpointInstanceType parameter is set to Agent.</p>
+         * </blockquote>
+         * 
+         * <strong>example:</strong>
+         * <p>4312****</p>
          */
         public Builder backupGatewayId(Long backupGatewayId) {
             this.putQueryParameter("BackupGatewayId", backupGatewayId);
@@ -374,7 +394,11 @@ public class CreateRestoreTaskRequest extends Request {
         }
 
         /**
-         * BackupPlanId.
+         * <p>The ID of the backup schedule.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>dbs1hvb0ww****</p>
          */
         public Builder backupPlanId(String backupPlanId) {
             this.putQueryParameter("BackupPlanId", backupPlanId);
@@ -383,7 +407,10 @@ public class CreateRestoreTaskRequest extends Request {
         }
 
         /**
-         * BackupSetId.
+         * <p>The ID of the full backup set.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>dbs1hvb0w*****</p>
          */
         public Builder backupSetId(String backupSetId) {
             this.putQueryParameter("BackupSetId", backupSetId);
@@ -392,7 +419,10 @@ public class CreateRestoreTaskRequest extends Request {
         }
 
         /**
-         * ClientToken.
+         * <p>The client token that is used to ensure the idempotence of the request.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>ETnLKlblzczshOTUbOC********</p>
          */
         public Builder clientToken(String clientToken) {
             this.putQueryParameter("ClientToken", clientToken);
@@ -401,7 +431,10 @@ public class CreateRestoreTaskRequest extends Request {
         }
 
         /**
-         * CrossAliyunId.
+         * <p>The unique ID (UID) of the Alibaba Cloud account to which the source database belongs.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2749528728********</p>
          */
         public Builder crossAliyunId(String crossAliyunId) {
             this.putQueryParameter("CrossAliyunId", crossAliyunId);
@@ -410,7 +443,10 @@ public class CreateRestoreTaskRequest extends Request {
         }
 
         /**
-         * CrossRoleName.
+         * <p>The name of the RAM role that is used to perform backups across Alibaba Cloud accounts.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>test123</p>
          */
         public Builder crossRoleName(String crossRoleName) {
             this.putQueryParameter("CrossRoleName", crossRoleName);
@@ -419,7 +455,13 @@ public class CreateRestoreTaskRequest extends Request {
         }
 
         /**
-         * DestinationEndpointDatabaseName.
+         * <p>The name of the database.</p>
+         * <blockquote>
+         * <p>This parameter is required if the database is a PostgreSQL database or a MongoDB database.</p>
+         * </blockquote>
+         * 
+         * <strong>example:</strong>
+         * <p>test</p>
          */
         public Builder destinationEndpointDatabaseName(String destinationEndpointDatabaseName) {
             this.putQueryParameter("DestinationEndpointDatabaseName", destinationEndpointDatabaseName);
@@ -428,7 +470,13 @@ public class CreateRestoreTaskRequest extends Request {
         }
 
         /**
-         * DestinationEndpointIP.
+         * <p>The endpoint that is used to connect to the database.</p>
+         * <blockquote>
+         * <p>This parameter is required if the DestinationEndpointInstanceType parameter is set to Express, Agent, or Other.</p>
+         * </blockquote>
+         * 
+         * <strong>example:</strong>
+         * <p>rm-bp*****9jv8pxero.mysql.rds.aliyuncs.com</p>
          */
         public Builder destinationEndpointIP(String destinationEndpointIP) {
             this.putQueryParameter("DestinationEndpointIP", destinationEndpointIP);
@@ -437,7 +485,13 @@ public class CreateRestoreTaskRequest extends Request {
         }
 
         /**
-         * DestinationEndpointInstanceID.
+         * <p>The ID of the database instance.</p>
+         * <blockquote>
+         * <p>This parameter is required if the DestinationEndpointInstanceType parameter is set to RDS, ECS, DDS, or Express.</p>
+         * </blockquote>
+         * 
+         * <strong>example:</strong>
+         * <p>rm-bp1p8c29*****</p>
          */
         public Builder destinationEndpointInstanceID(String destinationEndpointInstanceID) {
             this.putQueryParameter("DestinationEndpointInstanceID", destinationEndpointInstanceID);
@@ -446,7 +500,20 @@ public class CreateRestoreTaskRequest extends Request {
         }
 
         /**
-         * DestinationEndpointInstanceType.
+         * <p>The location of the database. Valid values:</p>
+         * <ul>
+         * <li><strong>RDS</strong>: The database is deployed on an ApsaraDB RDS instance.</li>
+         * <li><strong>ECS</strong>: The database is deployed on an Elastic Compute Service (ECS) instance.</li>
+         * <li><strong>Express</strong>: The database is connected to Database Backup (DBS) by using Express Connect, VPN Gateway, or Smart Access Gateway.</li>
+         * <li><strong>Agent</strong>: The database is connected over a DBS backup gateway.</li>
+         * <li><strong>DDS</strong>: The database is an ApsaraDB for MongoDB database.</li>
+         * <li><strong>Other</strong>: The database is connected to DBS by using the IP address and port of the database.</li>
+         * <li><strong>dg</strong>: The database is a self-managed database that does not have public IP addresses or port numbers and is connected to DBS over Database Gateway.</li>
+         * </ul>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>RDS</p>
          */
         public Builder destinationEndpointInstanceType(String destinationEndpointInstanceType) {
             this.putQueryParameter("DestinationEndpointInstanceType", destinationEndpointInstanceType);
@@ -455,7 +522,13 @@ public class CreateRestoreTaskRequest extends Request {
         }
 
         /**
-         * DestinationEndpointOracleSID.
+         * <p>The system ID (SID) of the Oracle database.</p>
+         * <blockquote>
+         * <p>This parameter is required if the source database is an Oracle database.</p>
+         * </blockquote>
+         * 
+         * <strong>example:</strong>
+         * <p>test</p>
          */
         public Builder destinationEndpointOracleSID(String destinationEndpointOracleSID) {
             this.putQueryParameter("DestinationEndpointOracleSID", destinationEndpointOracleSID);
@@ -464,7 +537,13 @@ public class CreateRestoreTaskRequest extends Request {
         }
 
         /**
-         * DestinationEndpointPassword.
+         * <p>The password of the account that is used to connect to the source database.</p>
+         * <blockquote>
+         * <p>This parameter is required except that the database is an SQL Server database that is connected to DBS over a DBS backup gateway or a Redis database.</p>
+         * </blockquote>
+         * 
+         * <strong>example:</strong>
+         * <p>Test</p>
          */
         public Builder destinationEndpointPassword(String destinationEndpointPassword) {
             this.putQueryParameter("DestinationEndpointPassword", destinationEndpointPassword);
@@ -473,7 +552,13 @@ public class CreateRestoreTaskRequest extends Request {
         }
 
         /**
-         * DestinationEndpointPort.
+         * <p>The port of the database.</p>
+         * <blockquote>
+         * <p>This parameter is required if the DestinationEndpointInstanceType parameter is set to Express, Agent, Other, or ECS.</p>
+         * </blockquote>
+         * 
+         * <strong>example:</strong>
+         * <p>3306</p>
          */
         public Builder destinationEndpointPort(Integer destinationEndpointPort) {
             this.putQueryParameter("DestinationEndpointPort", destinationEndpointPort);
@@ -482,7 +567,13 @@ public class CreateRestoreTaskRequest extends Request {
         }
 
         /**
-         * DestinationEndpointRegion.
+         * <p>The region ID of the destination database instance.</p>
+         * <blockquote>
+         * <p> You must specify this parameter if <strong>DestinationEndpointInstanceType</strong> is set to RDS, ECS, DDS, Express, or Agent.</p>
+         * </blockquote>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-hangzhou</p>
          */
         public Builder destinationEndpointRegion(String destinationEndpointRegion) {
             this.putQueryParameter("DestinationEndpointRegion", destinationEndpointRegion);
@@ -491,7 +582,13 @@ public class CreateRestoreTaskRequest extends Request {
         }
 
         /**
-         * DestinationEndpointUserName.
+         * <p>The username of the account that is used to connect to the database.</p>
+         * <blockquote>
+         * <p>This parameter is required except that the database is an SQL Server database that is connected to DBS over a DBS backup gateway or a Redis database.</p>
+         * </blockquote>
+         * 
+         * <strong>example:</strong>
+         * <p>test</p>
          */
         public Builder destinationEndpointUserName(String destinationEndpointUserName) {
             this.putQueryParameter("DestinationEndpointUserName", destinationEndpointUserName);
@@ -500,7 +597,14 @@ public class CreateRestoreTaskRequest extends Request {
         }
 
         /**
-         * DuplicateConflict.
+         * <p>The method of processing objects with the same name. Valid values:</p>
+         * <ul>
+         * <li>failure: The restore task fails if the system detects objects with the same name. This is the default value.</li>
+         * <li>renamenew: The restore task renames objects with the same name starting from the second occurrence.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>renamenew</p>
          */
         public Builder duplicateConflict(String duplicateConflict) {
             this.putQueryParameter("DuplicateConflict", duplicateConflict);
@@ -518,16 +622,10 @@ public class CreateRestoreTaskRequest extends Request {
         }
 
         /**
-         * RegionId.
-         */
-        public Builder regionId(String regionId) {
-            this.putHostParameter("RegionId", regionId);
-            this.regionId = regionId;
-            return this;
-        }
-
-        /**
-         * RestoreDir.
+         * <p>This parameter is required if the DestinationEndpointInstanceType parameter is set to Agent and the backup object of the backup schedule is a MySQL database.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>test</p>
          */
         public Builder restoreDir(String restoreDir) {
             this.putQueryParameter("RestoreDir", restoreDir);
@@ -536,7 +634,10 @@ public class CreateRestoreTaskRequest extends Request {
         }
 
         /**
-         * RestoreHome.
+         * <p>The program directory of the database.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>test</p>
          */
         public Builder restoreHome(String restoreHome) {
             this.putQueryParameter("RestoreHome", restoreHome);
@@ -545,7 +646,13 @@ public class CreateRestoreTaskRequest extends Request {
         }
 
         /**
-         * RestoreObjects.
+         * <p>The objects to be restored.</p>
+         * <blockquote>
+         * <p>This parameter is required except that the DestinationEndpointInstanceType parameter is set to Agent. For information about the parameter definition, see RestoreObjects.</p>
+         * </blockquote>
+         * 
+         * <strong>example:</strong>
+         * <p>[ { &quot;DBName&quot;:&quot;Name of the database to be restored&quot;, &quot;NewDBName&quot;:&quot;Name of the database to which the objects will be restored&quot;, &quot;SchemaName&quot;:&quot;Schema name of the database to be restored&quot;, &quot;NewSchemaName&quot;:&quot;Schema name of the destination database to which the objects will be restored&quot;}]</p>
          */
         public Builder restoreObjects(String restoreObjects) {
             this.putQueryParameter("RestoreObjects", restoreObjects);
@@ -554,7 +661,11 @@ public class CreateRestoreTaskRequest extends Request {
         }
 
         /**
-         * RestoreTaskName.
+         * <p>The name of the restore task.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>test</p>
          */
         public Builder restoreTaskName(String restoreTaskName) {
             this.putQueryParameter("RestoreTaskName", restoreTaskName);
@@ -563,7 +674,10 @@ public class CreateRestoreTaskRequest extends Request {
         }
 
         /**
-         * RestoreTime.
+         * <p>The time to run the restore task, such as 1554560477000.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1554560477000</p>
          */
         public Builder restoreTime(Long restoreTime) {
             this.putQueryParameter("RestoreTime", restoreTime);

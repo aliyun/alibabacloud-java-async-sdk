@@ -1,39 +1,44 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.dbs20190306.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribePreCheckProgressListResponseBody} extends {@link TeaModel}
  *
  * <p>DescribePreCheckProgressListResponseBody</p>
  */
 public class DescribePreCheckProgressListResponseBody extends TeaModel {
-    @NameInMap("ErrCode")
+    @com.aliyun.core.annotation.NameInMap("ErrCode")
     private String errCode;
 
-    @NameInMap("ErrMessage")
+    @com.aliyun.core.annotation.NameInMap("ErrMessage")
     private String errMessage;
 
-    @NameInMap("HttpStatusCode")
+    @com.aliyun.core.annotation.NameInMap("HttpStatusCode")
     private Integer httpStatusCode;
 
-    @NameInMap("Items")
+    @com.aliyun.core.annotation.NameInMap("Items")
     private Items items;
 
-    @NameInMap("Progress")
+    @com.aliyun.core.annotation.NameInMap("Progress")
     private Integer progress;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("Status")
+    @com.aliyun.core.annotation.NameInMap("Status")
     private String status;
 
-    @NameInMap("Success")
+    @com.aliyun.core.annotation.NameInMap("Success")
     private Boolean success;
 
     private DescribePreCheckProgressListResponseBody(Builder builder) {
@@ -53,6 +58,10 @@ public class DescribePreCheckProgressListResponseBody extends TeaModel {
 
     public static DescribePreCheckProgressListResponseBody create() {
         return builder().build();
+    }
+
+    public Builder toBuilder() {
+        return new Builder(this);
     }
 
     /**
@@ -121,8 +130,25 @@ public class DescribePreCheckProgressListResponseBody extends TeaModel {
         private String status; 
         private Boolean success; 
 
+        private Builder() {
+        } 
+
+        private Builder(DescribePreCheckProgressListResponseBody model) {
+            this.errCode = model.errCode;
+            this.errMessage = model.errMessage;
+            this.httpStatusCode = model.httpStatusCode;
+            this.items = model.items;
+            this.progress = model.progress;
+            this.requestId = model.requestId;
+            this.status = model.status;
+            this.success = model.success;
+        } 
+
         /**
-         * ErrCode.
+         * <p>The error code.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Param.NotFound</p>
          */
         public Builder errCode(String errCode) {
             this.errCode = errCode;
@@ -130,7 +156,10 @@ public class DescribePreCheckProgressListResponseBody extends TeaModel {
         }
 
         /**
-         * ErrMessage.
+         * <p>The error message.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>The specified parameter %s value is not valid.</p>
          */
         public Builder errMessage(String errMessage) {
             this.errMessage = errMessage;
@@ -138,7 +167,10 @@ public class DescribePreCheckProgressListResponseBody extends TeaModel {
         }
 
         /**
-         * HttpStatusCode.
+         * <p>The HTTP status code.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>200</p>
          */
         public Builder httpStatusCode(Integer httpStatusCode) {
             this.httpStatusCode = httpStatusCode;
@@ -146,7 +178,7 @@ public class DescribePreCheckProgressListResponseBody extends TeaModel {
         }
 
         /**
-         * Items.
+         * <p>The details of check items.</p>
          */
         public Builder items(Items items) {
             this.items = items;
@@ -154,7 +186,10 @@ public class DescribePreCheckProgressListResponseBody extends TeaModel {
         }
 
         /**
-         * Progress.
+         * <p>The precheck progress. Valid values: 0 to 100.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>100</p>
          */
         public Builder progress(Integer progress) {
             this.progress = progress;
@@ -162,7 +197,10 @@ public class DescribePreCheckProgressListResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * <p>The ID of the request.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>C4A45FE1-A903-470D-B113-F12A4DF942AB</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -170,7 +208,15 @@ public class DescribePreCheckProgressListResponseBody extends TeaModel {
         }
 
         /**
-         * Status.
+         * <p>The status of the precheck. Valid values:</p>
+         * <ul>
+         * <li><strong>running</strong>: The precheck is in progress.</li>
+         * <li><strong>failed</strong>: The precheck failed.</li>
+         * <li><strong>finish</strong>: The precheck is complete.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>failed</p>
          */
         public Builder status(String status) {
             this.status = status;
@@ -178,7 +224,14 @@ public class DescribePreCheckProgressListResponseBody extends TeaModel {
         }
 
         /**
-         * Success.
+         * <p>Indicates whether the request was successful. Valid values:</p>
+         * <ul>
+         * <li><strong>true</strong></li>
+         * <li><strong>false</strong></li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder success(Boolean success) {
             this.success = success;
@@ -191,29 +244,35 @@ public class DescribePreCheckProgressListResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link DescribePreCheckProgressListResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribePreCheckProgressListResponseBody</p>
+     */
     public static class PreCheckProgressDetail extends TeaModel {
-        @NameInMap("BootTime")
+        @com.aliyun.core.annotation.NameInMap("BootTime")
         private Long bootTime;
 
-        @NameInMap("ErrMsg")
+        @com.aliyun.core.annotation.NameInMap("ErrMsg")
         private String errMsg;
 
-        @NameInMap("FinishTime")
+        @com.aliyun.core.annotation.NameInMap("FinishTime")
         private Long finishTime;
 
-        @NameInMap("Item")
+        @com.aliyun.core.annotation.NameInMap("Item")
         private String item;
 
-        @NameInMap("JobId")
+        @com.aliyun.core.annotation.NameInMap("JobId")
         private String jobId;
 
-        @NameInMap("Names")
+        @com.aliyun.core.annotation.NameInMap("Names")
         private String names;
 
-        @NameInMap("OrderNum")
+        @com.aliyun.core.annotation.NameInMap("OrderNum")
         private String orderNum;
 
-        @NameInMap("State")
+        @com.aliyun.core.annotation.NameInMap("State")
         private String state;
 
         private PreCheckProgressDetail(Builder builder) {
@@ -301,8 +360,25 @@ public class DescribePreCheckProgressListResponseBody extends TeaModel {
             private String orderNum; 
             private String state; 
 
+            private Builder() {
+            } 
+
+            private Builder(PreCheckProgressDetail model) {
+                this.bootTime = model.bootTime;
+                this.errMsg = model.errMsg;
+                this.finishTime = model.finishTime;
+                this.item = model.item;
+                this.jobId = model.jobId;
+                this.names = model.names;
+                this.orderNum = model.orderNum;
+                this.state = model.state;
+            } 
+
             /**
-             * BootTime.
+             * <p>The time when the check for the item started. This value is a UNIX timestamp representing the number of milliseconds that have elapsed since January 1, 1970, 00:00:00 UTC.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1583734969000</p>
              */
             public Builder bootTime(Long bootTime) {
                 this.bootTime = bootTime;
@@ -310,7 +386,10 @@ public class DescribePreCheckProgressListResponseBody extends TeaModel {
             }
 
             /**
-             * ErrMsg.
+             * <p>The error message.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>java.lang.RuntimeException: Could not find any schema ......</p>
              */
             public Builder errMsg(String errMsg) {
                 this.errMsg = errMsg;
@@ -318,7 +397,10 @@ public class DescribePreCheckProgressListResponseBody extends TeaModel {
             }
 
             /**
-             * FinishTime.
+             * <p>The time when the check for the item was complete. This value is a UNIX timestamp representing the number of milliseconds that have elapsed since January 1, 1970, 00:00:00 UTC.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1583734969000</p>
              */
             public Builder finishTime(Long finishTime) {
                 this.finishTime = finishTime;
@@ -326,7 +408,10 @@ public class DescribePreCheckProgressListResponseBody extends TeaModel {
             }
 
             /**
-             * Item.
+             * <p>The name of the check item.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>CHECK_OTHER</p>
              */
             public Builder item(String item) {
                 this.item = item;
@@ -334,7 +419,10 @@ public class DescribePreCheckProgressListResponseBody extends TeaModel {
             }
 
             /**
-             * JobId.
+             * <p>The ID of the job for the check item.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>uvk8f6fxnq5s</p>
              */
             public Builder jobId(String jobId) {
                 this.jobId = jobId;
@@ -342,7 +430,10 @@ public class DescribePreCheckProgressListResponseBody extends TeaModel {
             }
 
             /**
-             * Names.
+             * <p>The name of the group to which the check item belongs.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>CHECK_OTHER</p>
              */
             public Builder names(String names) {
                 this.names = names;
@@ -350,7 +441,10 @@ public class DescribePreCheckProgressListResponseBody extends TeaModel {
             }
 
             /**
-             * OrderNum.
+             * <p>The sequence number of the check item.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>10</p>
              */
             public Builder orderNum(String orderNum) {
                 this.orderNum = orderNum;
@@ -358,7 +452,18 @@ public class DescribePreCheckProgressListResponseBody extends TeaModel {
             }
 
             /**
-             * State.
+             * <p>The state of the check for the item. Valid values:</p>
+             * <ul>
+             * <li><strong>init</strong>: The check for the item is being initialized.</li>
+             * <li><strong>warning</strong>: A warning is reported.</li>
+             * <li><strong>catched</strong>: An exception occurs.</li>
+             * <li><strong>running</strong>: The check for the item is in progress.</li>
+             * <li><strong>failed</strong>: The check for the item fails.</li>
+             * <li><strong>finish</strong>: The check for the item is completed.</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>warning</p>
              */
             public Builder state(String state) {
                 this.state = state;
@@ -372,9 +477,15 @@ public class DescribePreCheckProgressListResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link DescribePreCheckProgressListResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribePreCheckProgressListResponseBody</p>
+     */
     public static class Items extends TeaModel {
-        @NameInMap("PreCheckProgressDetail")
-        private java.util.List < PreCheckProgressDetail> preCheckProgressDetail;
+        @com.aliyun.core.annotation.NameInMap("PreCheckProgressDetail")
+        private java.util.List<PreCheckProgressDetail> preCheckProgressDetail;
 
         private Items(Builder builder) {
             this.preCheckProgressDetail = builder.preCheckProgressDetail;
@@ -391,17 +502,24 @@ public class DescribePreCheckProgressListResponseBody extends TeaModel {
         /**
          * @return preCheckProgressDetail
          */
-        public java.util.List < PreCheckProgressDetail> getPreCheckProgressDetail() {
+        public java.util.List<PreCheckProgressDetail> getPreCheckProgressDetail() {
             return this.preCheckProgressDetail;
         }
 
         public static final class Builder {
-            private java.util.List < PreCheckProgressDetail> preCheckProgressDetail; 
+            private java.util.List<PreCheckProgressDetail> preCheckProgressDetail; 
+
+            private Builder() {
+            } 
+
+            private Builder(Items model) {
+                this.preCheckProgressDetail = model.preCheckProgressDetail;
+            } 
 
             /**
              * PreCheckProgressDetail.
              */
-            public Builder preCheckProgressDetail(java.util.List < PreCheckProgressDetail> preCheckProgressDetail) {
+            public Builder preCheckProgressDetail(java.util.List<PreCheckProgressDetail> preCheckProgressDetail) {
                 this.preCheckProgressDetail = preCheckProgressDetail;
                 return this;
             }

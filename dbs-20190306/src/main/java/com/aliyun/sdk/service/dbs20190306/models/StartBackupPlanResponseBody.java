@@ -1,36 +1,41 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.dbs20190306.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link StartBackupPlanResponseBody} extends {@link TeaModel}
  *
  * <p>StartBackupPlanResponseBody</p>
  */
 public class StartBackupPlanResponseBody extends TeaModel {
-    @NameInMap("BackupPlanId")
+    @com.aliyun.core.annotation.NameInMap("BackupPlanId")
     private String backupPlanId;
 
-    @NameInMap("CreatedFullBackupsetId")
+    @com.aliyun.core.annotation.NameInMap("CreatedFullBackupsetId")
     private String createdFullBackupsetId;
 
-    @NameInMap("ErrCode")
+    @com.aliyun.core.annotation.NameInMap("ErrCode")
     private String errCode;
 
-    @NameInMap("ErrMessage")
+    @com.aliyun.core.annotation.NameInMap("ErrMessage")
     private String errMessage;
 
-    @NameInMap("HttpStatusCode")
+    @com.aliyun.core.annotation.NameInMap("HttpStatusCode")
     private Integer httpStatusCode;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("Success")
+    @com.aliyun.core.annotation.NameInMap("Success")
     private Boolean success;
 
     private StartBackupPlanResponseBody(Builder builder) {
@@ -49,6 +54,10 @@ public class StartBackupPlanResponseBody extends TeaModel {
 
     public static StartBackupPlanResponseBody create() {
         return builder().build();
+    }
+
+    public Builder toBuilder() {
+        return new Builder(this);
     }
 
     /**
@@ -109,8 +118,24 @@ public class StartBackupPlanResponseBody extends TeaModel {
         private String requestId; 
         private Boolean success; 
 
+        private Builder() {
+        } 
+
+        private Builder(StartBackupPlanResponseBody model) {
+            this.backupPlanId = model.backupPlanId;
+            this.createdFullBackupsetId = model.createdFullBackupsetId;
+            this.errCode = model.errCode;
+            this.errMessage = model.errMessage;
+            this.httpStatusCode = model.httpStatusCode;
+            this.requestId = model.requestId;
+            this.success = model.success;
+        } 
+
         /**
-         * BackupPlanId.
+         * <p>The ID of the backup schedule.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>dbsqdss5tm****</p>
          */
         public Builder backupPlanId(String backupPlanId) {
             this.backupPlanId = backupPlanId;
@@ -118,7 +143,10 @@ public class StartBackupPlanResponseBody extends TeaModel {
         }
 
         /**
-         * CreatedFullBackupsetId.
+         * <p>The ID of the full backup set.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1h7toien3****</p>
          */
         public Builder createdFullBackupsetId(String createdFullBackupsetId) {
             this.createdFullBackupsetId = createdFullBackupsetId;
@@ -126,7 +154,10 @@ public class StartBackupPlanResponseBody extends TeaModel {
         }
 
         /**
-         * ErrCode.
+         * <p>The error code.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Param.NotFound</p>
          */
         public Builder errCode(String errCode) {
             this.errCode = errCode;
@@ -134,7 +165,10 @@ public class StartBackupPlanResponseBody extends TeaModel {
         }
 
         /**
-         * ErrMessage.
+         * <p>The error message.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>The specified parameter %s value is not valid.</p>
          */
         public Builder errMessage(String errMessage) {
             this.errMessage = errMessage;
@@ -142,7 +176,10 @@ public class StartBackupPlanResponseBody extends TeaModel {
         }
 
         /**
-         * HttpStatusCode.
+         * <p>The HTTP status code.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>200</p>
          */
         public Builder httpStatusCode(Integer httpStatusCode) {
             this.httpStatusCode = httpStatusCode;
@@ -150,7 +187,10 @@ public class StartBackupPlanResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * <p>The ID of the request.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>D13761C3-9971-5C02-B789-3F3CD159****</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -158,7 +198,14 @@ public class StartBackupPlanResponseBody extends TeaModel {
         }
 
         /**
-         * Success.
+         * <p>Indicates whether the request is successful. Valid values:</p>
+         * <ul>
+         * <li><strong>true</strong>: The request is successful.</li>
+         * <li><strong>false</strong>: The request fails.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder success(Boolean success) {
             this.success = success;

@@ -1,54 +1,59 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.dbs20190306.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeBackupSetDownloadTaskListRequest} extends {@link RequestModel}
  *
  * <p>DescribeBackupSetDownloadTaskListRequest</p>
  */
 public class DescribeBackupSetDownloadTaskListRequest extends Request {
-    @Query
-    @NameInMap("BackupPlanId")
+    @com.aliyun.core.annotation.Host
+    @com.aliyun.core.annotation.NameInMap("RegionId")
+    private String regionId;
+
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("BackupPlanId")
     private String backupPlanId;
 
-    @Query
-    @NameInMap("BackupSetDownloadTaskId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("BackupSetDownloadTaskId")
     private String backupSetDownloadTaskId;
 
-    @Query
-    @NameInMap("ClientToken")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ClientToken")
     private String clientToken;
 
-    @Query
-    @NameInMap("OwnerId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("OwnerId")
     private String ownerId;
 
-    @Query
-    @NameInMap("PageNum")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("PageNum")
     private Integer pageNum;
 
-    @Query
-    @NameInMap("PageSize")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("PageSize")
     private Integer pageSize;
-
-    @Host
-    @NameInMap("RegionId")
-    private String regionId;
 
     private DescribeBackupSetDownloadTaskListRequest(Builder builder) {
         super(builder);
+        this.regionId = builder.regionId;
         this.backupPlanId = builder.backupPlanId;
         this.backupSetDownloadTaskId = builder.backupSetDownloadTaskId;
         this.clientToken = builder.clientToken;
         this.ownerId = builder.ownerId;
         this.pageNum = builder.pageNum;
         this.pageSize = builder.pageSize;
-        this.regionId = builder.regionId;
     }
 
     public static Builder builder() {
@@ -59,9 +64,16 @@ public class DescribeBackupSetDownloadTaskListRequest extends Request {
         return builder().build();
     }
 
-    @Override
+@Override
     public Builder toBuilder() {
         return new Builder(this);
+    }
+
+    /**
+     * @return regionId
+     */
+    public String getRegionId() {
+        return this.regionId;
     }
 
     /**
@@ -106,21 +118,14 @@ public class DescribeBackupSetDownloadTaskListRequest extends Request {
         return this.pageSize;
     }
 
-    /**
-     * @return regionId
-     */
-    public String getRegionId() {
-        return this.regionId;
-    }
-
     public static final class Builder extends Request.Builder<DescribeBackupSetDownloadTaskListRequest, Builder> {
+        private String regionId; 
         private String backupPlanId; 
         private String backupSetDownloadTaskId; 
         private String clientToken; 
         private String ownerId; 
         private Integer pageNum; 
         private Integer pageSize; 
-        private String regionId; 
 
         private Builder() {
             super();
@@ -128,17 +133,32 @@ public class DescribeBackupSetDownloadTaskListRequest extends Request {
 
         private Builder(DescribeBackupSetDownloadTaskListRequest request) {
             super(request);
+            this.regionId = request.regionId;
             this.backupPlanId = request.backupPlanId;
             this.backupSetDownloadTaskId = request.backupSetDownloadTaskId;
             this.clientToken = request.clientToken;
             this.ownerId = request.ownerId;
             this.pageNum = request.pageNum;
             this.pageSize = request.pageSize;
-            this.regionId = request.regionId;
         } 
 
         /**
-         * BackupPlanId.
+         * RegionId.
+         */
+        public Builder regionId(String regionId) {
+            this.putHostParameter("RegionId", regionId);
+            this.regionId = regionId;
+            return this;
+        }
+
+        /**
+         * <p>The backup schedule ID. You can call the <a href="https://help.aliyun.com/document_detail/2869825.html">DescribeBackupPlanList</a> operation to obtain the ID.</p>
+         * <blockquote>
+         * <p> You must configure the <strong>BackupPlanId</strong> or <strong>BackupSetDownloadTaskId</strong> parameter.</p>
+         * </blockquote>
+         * 
+         * <strong>example:</strong>
+         * <p>dbsqhnuhyw3****</p>
          */
         public Builder backupPlanId(String backupPlanId) {
             this.putQueryParameter("BackupPlanId", backupPlanId);
@@ -147,7 +167,14 @@ public class DescribeBackupSetDownloadTaskListRequest extends Request {
         }
 
         /**
-         * BackupSetDownloadTaskId.
+         * <p>The ID of the backup set download task.</p>
+         * <ul>
+         * <li>Full backup set download task: You can call the <a href="https://help.aliyun.com/document_detail/2869842.html">CreateFullBackupSetDownload</a> operation to create a full backup set download task and obtain the task ID.</li>
+         * <li>Incremental backup set download task: You can call the <a href="https://help.aliyun.com/document_detail/2869843.html">CreateIncrementBackupSetDownload</a> operation to create an incremental backup set download task and obtain the task ID.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>urxgrxt7****</p>
          */
         public Builder backupSetDownloadTaskId(String backupSetDownloadTaskId) {
             this.putQueryParameter("BackupSetDownloadTaskId", backupSetDownloadTaskId);
@@ -156,7 +183,10 @@ public class DescribeBackupSetDownloadTaskListRequest extends Request {
         }
 
         /**
-         * ClientToken.
+         * <p>The client token that is used to ensure the idempotence of the request.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>ETnLKlblzczshOTUbOCzXXXXXX</p>
          */
         public Builder clientToken(String clientToken) {
             this.putQueryParameter("ClientToken", clientToken);
@@ -174,7 +204,10 @@ public class DescribeBackupSetDownloadTaskListRequest extends Request {
         }
 
         /**
-         * PageNum.
+         * <p>The number of the page to return. The value must be a positive integer. Default value: 0.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder pageNum(Integer pageNum) {
             this.putQueryParameter("PageNum", pageNum);
@@ -183,20 +216,17 @@ public class DescribeBackupSetDownloadTaskListRequest extends Request {
         }
 
         /**
-         * PageSize.
+         * <p>The number of entries to return on each page. Valid values: 30, 50, and 100.</p>
+         * <blockquote>
+         * <p>Default value: 30.</p>
+         * </blockquote>
+         * 
+         * <strong>example:</strong>
+         * <p>30</p>
          */
         public Builder pageSize(Integer pageSize) {
             this.putQueryParameter("PageSize", pageSize);
             this.pageSize = pageSize;
-            return this;
-        }
-
-        /**
-         * RegionId.
-         */
-        public Builder regionId(String regionId) {
-            this.putHostParameter("RegionId", regionId);
-            this.regionId = regionId;
             return this;
         }
 

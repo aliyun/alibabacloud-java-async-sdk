@@ -1,33 +1,38 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.dbs20190306.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link StartRestoreTaskResponseBody} extends {@link TeaModel}
  *
  * <p>StartRestoreTaskResponseBody</p>
  */
 public class StartRestoreTaskResponseBody extends TeaModel {
-    @NameInMap("ErrCode")
+    @com.aliyun.core.annotation.NameInMap("ErrCode")
     private String errCode;
 
-    @NameInMap("ErrMessage")
+    @com.aliyun.core.annotation.NameInMap("ErrMessage")
     private String errMessage;
 
-    @NameInMap("HttpStatusCode")
+    @com.aliyun.core.annotation.NameInMap("HttpStatusCode")
     private Integer httpStatusCode;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("RestoreTaskId")
+    @com.aliyun.core.annotation.NameInMap("RestoreTaskId")
     private String restoreTaskId;
 
-    @NameInMap("Success")
+    @com.aliyun.core.annotation.NameInMap("Success")
     private Boolean success;
 
     private StartRestoreTaskResponseBody(Builder builder) {
@@ -45,6 +50,10 @@ public class StartRestoreTaskResponseBody extends TeaModel {
 
     public static StartRestoreTaskResponseBody create() {
         return builder().build();
+    }
+
+    public Builder toBuilder() {
+        return new Builder(this);
     }
 
     /**
@@ -97,8 +106,23 @@ public class StartRestoreTaskResponseBody extends TeaModel {
         private String restoreTaskId; 
         private Boolean success; 
 
+        private Builder() {
+        } 
+
+        private Builder(StartRestoreTaskResponseBody model) {
+            this.errCode = model.errCode;
+            this.errMessage = model.errMessage;
+            this.httpStatusCode = model.httpStatusCode;
+            this.requestId = model.requestId;
+            this.restoreTaskId = model.restoreTaskId;
+            this.success = model.success;
+        } 
+
         /**
-         * ErrCode.
+         * <p>The error code.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Param.NotFound</p>
          */
         public Builder errCode(String errCode) {
             this.errCode = errCode;
@@ -106,7 +130,10 @@ public class StartRestoreTaskResponseBody extends TeaModel {
         }
 
         /**
-         * ErrMessage.
+         * <p>The error message.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>The specified parameter %s value is not valid.</p>
          */
         public Builder errMessage(String errMessage) {
             this.errMessage = errMessage;
@@ -114,7 +141,10 @@ public class StartRestoreTaskResponseBody extends TeaModel {
         }
 
         /**
-         * HttpStatusCode.
+         * <p>The HTTP status code.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>200</p>
          */
         public Builder httpStatusCode(Integer httpStatusCode) {
             this.httpStatusCode = httpStatusCode;
@@ -122,7 +152,10 @@ public class StartRestoreTaskResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * <p>The ID of the request.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>60AF7C5D-EF4D-4D48-8FD5-C0823FDF28AC</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -130,7 +163,10 @@ public class StartRestoreTaskResponseBody extends TeaModel {
         }
 
         /**
-         * RestoreTaskId.
+         * <p>The ID of the restore task.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>s102h7rfXXXX</p>
          */
         public Builder restoreTaskId(String restoreTaskId) {
             this.restoreTaskId = restoreTaskId;
@@ -138,7 +174,10 @@ public class StartRestoreTaskResponseBody extends TeaModel {
         }
 
         /**
-         * Success.
+         * <p>Indicates whether the request is successful.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder success(Boolean success) {
             this.success = success;

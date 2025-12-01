@@ -1,196 +1,202 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.dbs20190306.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link CreateAndStartBackupPlanRequest} extends {@link RequestModel}
  *
  * <p>CreateAndStartBackupPlanRequest</p>
  */
 public class CreateAndStartBackupPlanRequest extends Request {
-    @Query
-    @NameInMap("BackupGatewayId")
-    private Long backupGatewayId;
-
-    @Query
-    @NameInMap("BackupLogIntervalSeconds")
-    private Integer backupLogIntervalSeconds;
-
-    @Query
-    @NameInMap("BackupMethod")
-    @Validation(required = true)
-    private String backupMethod;
-
-    @Query
-    @NameInMap("BackupObjects")
-    private String backupObjects;
-
-    @Query
-    @NameInMap("BackupPeriod")
-    private String backupPeriod;
-
-    @Query
-    @NameInMap("BackupPlanId")
-    private String backupPlanId;
-
-    @Query
-    @NameInMap("BackupPlanName")
-    @Validation(required = true)
-    private String backupPlanName;
-
-    @Query
-    @NameInMap("BackupRateLimit")
-    private Long backupRateLimit;
-
-    @Query
-    @NameInMap("BackupRetentionPeriod")
-    private Integer backupRetentionPeriod;
-
-    @Query
-    @NameInMap("BackupSpeedLimit")
-    private Long backupSpeedLimit;
-
-    @Query
-    @NameInMap("BackupStartTime")
-    private String backupStartTime;
-
-    @Query
-    @NameInMap("BackupStorageType")
-    private String backupStorageType;
-
-    @Query
-    @NameInMap("BackupStrategyType")
-    private String backupStrategyType;
-
-    @Query
-    @NameInMap("ClientToken")
-    private String clientToken;
-
-    @Query
-    @NameInMap("CrossAliyunId")
-    private String crossAliyunId;
-
-    @Query
-    @NameInMap("CrossRoleName")
-    private String crossRoleName;
-
-    @Query
-    @NameInMap("DatabaseRegion")
-    private String databaseRegion;
-
-    @Query
-    @NameInMap("DatabaseType")
-    @Validation(required = true)
-    private String databaseType;
-
-    @Query
-    @NameInMap("DuplicationArchivePeriod")
-    private Integer duplicationArchivePeriod;
-
-    @Query
-    @NameInMap("DuplicationInfrequentAccessPeriod")
-    private Integer duplicationInfrequentAccessPeriod;
-
-    @Query
-    @NameInMap("EnableBackupLog")
-    private Boolean enableBackupLog;
-
-    @Query
-    @NameInMap("FromApp")
-    private String fromApp;
-
-    @Query
-    @NameInMap("InstanceClass")
-    @Validation(required = true)
-    private String instanceClass;
-
-    @Query
-    @NameInMap("InstanceType")
-    private String instanceType;
-
-    @Query
-    @NameInMap("OSSBucketName")
-    private String OSSBucketName;
-
-    @Query
-    @NameInMap("OwnerId")
-    private String ownerId;
-
-    @Query
-    @NameInMap("PayType")
-    private String payType;
-
-    @Query
-    @NameInMap("Period")
-    private String period;
-
-    @Query
-    @NameInMap("Region")
-    private String region;
-
-    @Host
-    @NameInMap("RegionId")
+    @com.aliyun.core.annotation.Host
+    @com.aliyun.core.annotation.NameInMap("RegionId")
     private String regionId;
 
-    @Query
-    @NameInMap("ResourceGroupId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("BackupGatewayId")
+    private Long backupGatewayId;
+
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("BackupLogIntervalSeconds")
+    private Integer backupLogIntervalSeconds;
+
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("BackupMethod")
+    @com.aliyun.core.annotation.Validation(required = true)
+    private String backupMethod;
+
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("BackupObjects")
+    private String backupObjects;
+
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("BackupPeriod")
+    private String backupPeriod;
+
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("BackupPlanId")
+    private String backupPlanId;
+
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("BackupPlanName")
+    @com.aliyun.core.annotation.Validation(required = true)
+    private String backupPlanName;
+
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("BackupRateLimit")
+    private Long backupRateLimit;
+
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("BackupRetentionPeriod")
+    private Integer backupRetentionPeriod;
+
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("BackupSpeedLimit")
+    private Long backupSpeedLimit;
+
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("BackupStartTime")
+    private String backupStartTime;
+
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("BackupStorageType")
+    private String backupStorageType;
+
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("BackupStrategyType")
+    private String backupStrategyType;
+
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ClientToken")
+    private String clientToken;
+
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("CrossAliyunId")
+    private String crossAliyunId;
+
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("CrossRoleName")
+    private String crossRoleName;
+
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("DatabaseRegion")
+    private String databaseRegion;
+
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("DatabaseType")
+    @com.aliyun.core.annotation.Validation(required = true)
+    private String databaseType;
+
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("DuplicationArchivePeriod")
+    private Integer duplicationArchivePeriod;
+
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("DuplicationInfrequentAccessPeriod")
+    private Integer duplicationInfrequentAccessPeriod;
+
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("EnableBackupLog")
+    private Boolean enableBackupLog;
+
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("FromApp")
+    private String fromApp;
+
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("InstanceClass")
+    @com.aliyun.core.annotation.Validation(required = true)
+    private String instanceClass;
+
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("InstanceType")
+    private String instanceType;
+
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("OSSBucketName")
+    private String OSSBucketName;
+
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("OwnerId")
+    private String ownerId;
+
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("PayType")
+    private String payType;
+
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Period")
+    private String period;
+
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Region")
+    private String region;
+
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ResourceGroupId")
     private String resourceGroupId;
 
-    @Query
-    @NameInMap("SourceEndpointDatabaseName")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("SourceEndpointDatabaseName")
     private String sourceEndpointDatabaseName;
 
-    @Query
-    @NameInMap("SourceEndpointIP")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("SourceEndpointIP")
     private String sourceEndpointIP;
 
-    @Query
-    @NameInMap("SourceEndpointInstanceID")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("SourceEndpointInstanceID")
     private String sourceEndpointInstanceID;
 
-    @Query
-    @NameInMap("SourceEndpointInstanceType")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("SourceEndpointInstanceType")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String sourceEndpointInstanceType;
 
-    @Query
-    @NameInMap("SourceEndpointOracleSID")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("SourceEndpointOracleSID")
     private String sourceEndpointOracleSID;
 
-    @Query
-    @NameInMap("SourceEndpointPassword")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("SourceEndpointPassword")
     private String sourceEndpointPassword;
 
-    @Query
-    @NameInMap("SourceEndpointPort")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("SourceEndpointPort")
     private Integer sourceEndpointPort;
 
-    @Query
-    @NameInMap("SourceEndpointRegion")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("SourceEndpointRegion")
     private String sourceEndpointRegion;
 
-    @Query
-    @NameInMap("SourceEndpointUserName")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("SourceEndpointUserName")
     private String sourceEndpointUserName;
 
-    @Query
-    @NameInMap("StorageRegion")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("StorageRegion")
     private String storageRegion;
 
-    @Query
-    @NameInMap("StorageType")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("StorageType")
     private String storageType;
 
-    @Query
-    @NameInMap("UsedTime")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("UsedTime")
     private Integer usedTime;
 
     private CreateAndStartBackupPlanRequest(Builder builder) {
         super(builder);
+        this.regionId = builder.regionId;
         this.backupGatewayId = builder.backupGatewayId;
         this.backupLogIntervalSeconds = builder.backupLogIntervalSeconds;
         this.backupMethod = builder.backupMethod;
@@ -220,7 +226,6 @@ public class CreateAndStartBackupPlanRequest extends Request {
         this.payType = builder.payType;
         this.period = builder.period;
         this.region = builder.region;
-        this.regionId = builder.regionId;
         this.resourceGroupId = builder.resourceGroupId;
         this.sourceEndpointDatabaseName = builder.sourceEndpointDatabaseName;
         this.sourceEndpointIP = builder.sourceEndpointIP;
@@ -244,9 +249,16 @@ public class CreateAndStartBackupPlanRequest extends Request {
         return builder().build();
     }
 
-    @Override
+@Override
     public Builder toBuilder() {
         return new Builder(this);
+    }
+
+    /**
+     * @return regionId
+     */
+    public String getRegionId() {
+        return this.regionId;
     }
 
     /**
@@ -453,13 +465,6 @@ public class CreateAndStartBackupPlanRequest extends Request {
     }
 
     /**
-     * @return regionId
-     */
-    public String getRegionId() {
-        return this.regionId;
-    }
-
-    /**
      * @return resourceGroupId
      */
     public String getResourceGroupId() {
@@ -551,6 +556,7 @@ public class CreateAndStartBackupPlanRequest extends Request {
     }
 
     public static final class Builder extends Request.Builder<CreateAndStartBackupPlanRequest, Builder> {
+        private String regionId; 
         private Long backupGatewayId; 
         private Integer backupLogIntervalSeconds; 
         private String backupMethod; 
@@ -580,7 +586,6 @@ public class CreateAndStartBackupPlanRequest extends Request {
         private String payType; 
         private String period; 
         private String region; 
-        private String regionId; 
         private String resourceGroupId; 
         private String sourceEndpointDatabaseName; 
         private String sourceEndpointIP; 
@@ -601,6 +606,7 @@ public class CreateAndStartBackupPlanRequest extends Request {
 
         private Builder(CreateAndStartBackupPlanRequest request) {
             super(request);
+            this.regionId = request.regionId;
             this.backupGatewayId = request.backupGatewayId;
             this.backupLogIntervalSeconds = request.backupLogIntervalSeconds;
             this.backupMethod = request.backupMethod;
@@ -630,7 +636,6 @@ public class CreateAndStartBackupPlanRequest extends Request {
             this.payType = request.payType;
             this.period = request.period;
             this.region = request.region;
-            this.regionId = request.regionId;
             this.resourceGroupId = request.resourceGroupId;
             this.sourceEndpointDatabaseName = request.sourceEndpointDatabaseName;
             this.sourceEndpointIP = request.sourceEndpointIP;
@@ -647,7 +652,29 @@ public class CreateAndStartBackupPlanRequest extends Request {
         } 
 
         /**
-         * BackupGatewayId.
+         * RegionId.
+         */
+        public Builder regionId(String regionId) {
+            this.putHostParameter("RegionId", regionId);
+            this.regionId = regionId;
+            return this;
+        }
+
+        /**
+         * <p>The backup gateway ID.</p>
+         * <blockquote>
+         * </blockquote>
+         * <ul>
+         * <li><p>If <strong>SourceEndpointInstanceType</strong> is set to <strong>Agent</strong>, this parameter is required.****</p>
+         * </li>
+         * <li><p>For more information about how to install a backup gateway, see <a href="https://help.aliyun.com/document_detail/93250.html">Install a backup gateway</a>.</p>
+         * </li>
+         * <li><p>You can query a list of existing backup gateways by calling the <a href="https://help.aliyun.com/document_detail/2869840.html">DescribeBackupGatewayList</a> operation.</p>
+         * </li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>23313123312</p>
          */
         public Builder backupGatewayId(Long backupGatewayId) {
             this.putQueryParameter("BackupGatewayId", backupGatewayId);
@@ -656,7 +683,13 @@ public class CreateAndStartBackupPlanRequest extends Request {
         }
 
         /**
-         * BackupLogIntervalSeconds.
+         * <p>The interval at which you want to perform incremental log backups. Unit: seconds.</p>
+         * <blockquote>
+         * <p> This parameter is required only if you set BackupMethod to <strong>physical</strong>.</p>
+         * </blockquote>
+         * 
+         * <strong>example:</strong>
+         * <p>1000</p>
          */
         public Builder backupLogIntervalSeconds(Integer backupLogIntervalSeconds) {
             this.putQueryParameter("BackupLogIntervalSeconds", backupLogIntervalSeconds);
@@ -665,7 +698,16 @@ public class CreateAndStartBackupPlanRequest extends Request {
         }
 
         /**
-         * BackupMethod.
+         * <p>The method that is used to generate the backup file. Valid values:</p>
+         * <ul>
+         * <li><strong>logical</strong>: logical backup</li>
+         * <li><strong>physical</strong>: physical backup</li>
+         * <li><strong>duplication</strong>: dump backup</li>
+         * </ul>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>logical</p>
          */
         public Builder backupMethod(String backupMethod) {
             this.putQueryParameter("BackupMethod", backupMethod);
@@ -674,7 +716,10 @@ public class CreateAndStartBackupPlanRequest extends Request {
         }
 
         /**
-         * BackupObjects.
+         * <p>The object to be backed up.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>[ { &quot;DBName&quot;:&quot;Name of the database to be backed up&quot;, &quot;SchemaName&quot;:&quot;Name of the schema to be backed up&quot;, &quot;TableIncludes&quot;:[{ &quot;TableName&quot;:&quot;Name of the table to be backed up&quot; }], &quot;TableExcludes&quot;:[{ &quot;TableName&quot;:&quot;Name of the table that you do not want to back up&quot; }] } ]</p>
          */
         public Builder backupObjects(String backupObjects) {
             this.putQueryParameter("BackupObjects", backupObjects);
@@ -683,7 +728,22 @@ public class CreateAndStartBackupPlanRequest extends Request {
         }
 
         /**
-         * BackupPeriod.
+         * <p>The day of the week on which you want to perform full backup. Valid values:</p>
+         * <ul>
+         * <li><strong>Monday</strong></li>
+         * <li><strong>Tuesday</strong></li>
+         * <li><strong>Wednesday</strong></li>
+         * <li><strong>Thursday</strong></li>
+         * <li><strong>Friday</strong></li>
+         * <li><strong>Saturday</strong></li>
+         * <li><strong>Sunday</strong></li>
+         * </ul>
+         * <blockquote>
+         * <p> You can specify multiple values. Separate multiple values with commas (,).</p>
+         * </blockquote>
+         * 
+         * <strong>example:</strong>
+         * <p>Monday</p>
          */
         public Builder backupPeriod(String backupPeriod) {
             this.putQueryParameter("BackupPeriod", backupPeriod);
@@ -692,7 +752,10 @@ public class CreateAndStartBackupPlanRequest extends Request {
         }
 
         /**
-         * BackupPlanId.
+         * <p>The ID of the backup schedule.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>dbstooi0*******</p>
          */
         public Builder backupPlanId(String backupPlanId) {
             this.putQueryParameter("BackupPlanId", backupPlanId);
@@ -701,7 +764,11 @@ public class CreateAndStartBackupPlanRequest extends Request {
         }
 
         /**
-         * BackupPlanName.
+         * <p>The name of the backup schedule.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>dbstooi0*******</p>
          */
         public Builder backupPlanName(String backupPlanName) {
             this.putQueryParameter("BackupPlanName", backupPlanName);
@@ -710,7 +777,13 @@ public class CreateAndStartBackupPlanRequest extends Request {
         }
 
         /**
-         * BackupRateLimit.
+         * <p>The network bandwidth throttling. Unit: KB/s. DBS allows a maximum bandwidth of 10 GB/s.</p>
+         * <blockquote>
+         * <p> This parameter takes effect only when physical backups for MySQL databases are performed.</p>
+         * </blockquote>
+         * 
+         * <strong>example:</strong>
+         * <p>262144</p>
          */
         public Builder backupRateLimit(Long backupRateLimit) {
             this.putQueryParameter("BackupRateLimit", backupRateLimit);
@@ -719,7 +792,10 @@ public class CreateAndStartBackupPlanRequest extends Request {
         }
 
         /**
-         * BackupRetentionPeriod.
+         * <p>The number of days for which the backup data is retained. Valid values: 0 to 1825. Default value: 730.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>730</p>
          */
         public Builder backupRetentionPeriod(Integer backupRetentionPeriod) {
             this.putQueryParameter("BackupRetentionPeriod", backupRetentionPeriod);
@@ -728,7 +804,13 @@ public class CreateAndStartBackupPlanRequest extends Request {
         }
 
         /**
-         * BackupSpeedLimit.
+         * <p>The I/O limit for the disk. Unit: KB/s.</p>
+         * <blockquote>
+         * <p> This parameter takes effect only when physical backups for MySQL databases are performed.</p>
+         * </blockquote>
+         * 
+         * <strong>example:</strong>
+         * <p>262144</p>
          */
         public Builder backupSpeedLimit(Long backupSpeedLimit) {
             this.putQueryParameter("BackupSpeedLimit", backupSpeedLimit);
@@ -737,7 +819,10 @@ public class CreateAndStartBackupPlanRequest extends Request {
         }
 
         /**
-         * BackupStartTime.
+         * <p>The start time of full backup tasks. Specify the value in the <em>HH:mm</em> format. The time must be in UTC.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>14:22</p>
          */
         public Builder backupStartTime(String backupStartTime) {
             this.putQueryParameter("BackupStartTime", backupStartTime);
@@ -746,7 +831,14 @@ public class CreateAndStartBackupPlanRequest extends Request {
         }
 
         /**
-         * BackupStorageType.
+         * <p>The storage type. Valid values:</p>
+         * <ul>
+         * <li>Empty: If you do not specify this parameter, the system stores backup data in your OSS bucket.</li>
+         * <li>system : The system stores backup data in the built-in OSS bucket of DBS.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>N/A</p>
          */
         public Builder backupStorageType(String backupStorageType) {
             this.putQueryParameter("BackupStorageType", backupStorageType);
@@ -755,7 +847,17 @@ public class CreateAndStartBackupPlanRequest extends Request {
         }
 
         /**
-         * BackupStrategyType.
+         * <p>The backup method that you want to use for full backups. Valid values:</p>
+         * <ul>
+         * <li><strong>simple</strong>: scheduled backup. If you specify this value for the BackupStrategyType parameter, you must also specify the BackupPeriod and BackupStartTime parameters.</li>
+         * <li><strong>Manual</strong>: manual backup.</li>
+         * </ul>
+         * <blockquote>
+         * <p>Default value: <strong>simple</strong>.</p>
+         * </blockquote>
+         * 
+         * <strong>example:</strong>
+         * <p>simple</p>
          */
         public Builder backupStrategyType(String backupStrategyType) {
             this.putQueryParameter("BackupStrategyType", backupStrategyType);
@@ -764,7 +866,10 @@ public class CreateAndStartBackupPlanRequest extends Request {
         }
 
         /**
-         * ClientToken.
+         * <p>The client token that is used to ensure the idempotence of the request.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>DBS</p>
          */
         public Builder clientToken(String clientToken) {
             this.putQueryParameter("ClientToken", clientToken);
@@ -773,7 +878,10 @@ public class CreateAndStartBackupPlanRequest extends Request {
         }
 
         /**
-         * CrossAliyunId.
+         * <p>The unique ID (UID) of the Alibaba Cloud account to which the source database belongs.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2xxx7778xxxxxxxxxx</p>
          */
         public Builder crossAliyunId(String crossAliyunId) {
             this.putQueryParameter("CrossAliyunId", crossAliyunId);
@@ -782,7 +890,10 @@ public class CreateAndStartBackupPlanRequest extends Request {
         }
 
         /**
-         * CrossRoleName.
+         * <p>The name of the RAM role that is used to perform backups across Alibaba Cloud accounts.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>test123</p>
          */
         public Builder crossRoleName(String crossRoleName) {
             this.putQueryParameter("CrossRoleName", crossRoleName);
@@ -791,7 +902,13 @@ public class CreateAndStartBackupPlanRequest extends Request {
         }
 
         /**
-         * DatabaseRegion.
+         * <p>The region in which the database that you want to back up resides.</p>
+         * <blockquote>
+         * <p>This parameter is required if the <strong>PayType</strong> parameter is set to <strong>postpay</strong>.</p>
+         * </blockquote>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-hangzhou</p>
          */
         public Builder databaseRegion(String databaseRegion) {
             this.putQueryParameter("DatabaseRegion", databaseRegion);
@@ -800,7 +917,21 @@ public class CreateAndStartBackupPlanRequest extends Request {
         }
 
         /**
-         * DatabaseType.
+         * <p>The type of the source database. Valid values:</p>
+         * <ul>
+         * <li><strong>MySQL</strong></li>
+         * <li><strong>MSSQL</strong></li>
+         * <li><strong>Oracle</strong></li>
+         * <li><strong>MariaDB</strong></li>
+         * <li><strong>PostgreSQL</strong></li>
+         * <li><strong>DRDS</strong></li>
+         * <li><strong>MongoDB</strong></li>
+         * <li><strong>Redis</strong></li>
+         * </ul>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>MySQL</p>
          */
         public Builder databaseType(String databaseType) {
             this.putQueryParameter("DatabaseType", databaseType);
@@ -809,7 +940,10 @@ public class CreateAndStartBackupPlanRequest extends Request {
         }
 
         /**
-         * DuplicationArchivePeriod.
+         * <p>The number of days after which the storage class of the backup data is changed to Archive. Default value: 365.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>365</p>
          */
         public Builder duplicationArchivePeriod(Integer duplicationArchivePeriod) {
             this.putQueryParameter("DuplicationArchivePeriod", duplicationArchivePeriod);
@@ -818,7 +952,10 @@ public class CreateAndStartBackupPlanRequest extends Request {
         }
 
         /**
-         * DuplicationInfrequentAccessPeriod.
+         * <p>The number of days after which the storage class of the backup data is changed to Infrequent Access (IA). Default value: 180.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>180</p>
          */
         public Builder duplicationInfrequentAccessPeriod(Integer duplicationInfrequentAccessPeriod) {
             this.putQueryParameter("DuplicationInfrequentAccessPeriod", duplicationInfrequentAccessPeriod);
@@ -827,7 +964,14 @@ public class CreateAndStartBackupPlanRequest extends Request {
         }
 
         /**
-         * EnableBackupLog.
+         * <p>Specifies whether to enable the incremental log backup feature. Valid values:</p>
+         * <ul>
+         * <li><strong>true</strong>: enables the incremental log backup feature.</li>
+         * <li><strong>false</strong>: disables the incremental log backup feature.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder enableBackupLog(Boolean enableBackupLog) {
             this.putQueryParameter("EnableBackupLog", enableBackupLog);
@@ -836,7 +980,10 @@ public class CreateAndStartBackupPlanRequest extends Request {
         }
 
         /**
-         * FromApp.
+         * <p>The request source. Default value: OpenApi. You do not need to set this parameter.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>OpenApi</p>
          */
         public Builder fromApp(String fromApp) {
             this.putQueryParameter("FromApp", fromApp);
@@ -845,7 +992,21 @@ public class CreateAndStartBackupPlanRequest extends Request {
         }
 
         /**
-         * InstanceClass.
+         * <p>The type of the backup schedule. Valid values:</p>
+         * <ul>
+         * <li><strong>micro</strong></li>
+         * <li><strong>small</strong></li>
+         * <li><strong>medium</strong></li>
+         * <li><strong>large</strong></li>
+         * <li><strong>xlarge</strong></li>
+         * </ul>
+         * <blockquote>
+         * <p> A backup schedule type with higher specifications offers higher backup and restoration performance. For more information, see <a href="https://help.aliyun.com/document_detail/84372.html">Select a backup schedule type</a>.</p>
+         * </blockquote>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>micro</p>
          */
         public Builder instanceClass(String instanceClass) {
             this.putQueryParameter("InstanceClass", instanceClass);
@@ -854,7 +1015,21 @@ public class CreateAndStartBackupPlanRequest extends Request {
         }
 
         /**
-         * InstanceType.
+         * <p>The type of the source database instance. Valid values:</p>
+         * <ul>
+         * <li><strong>RDS</strong>: ApsaraDB RDS.</li>
+         * <li><strong>PolarDB</strong>: PolarDB.</li>
+         * <li><strong>DDS</strong>: ApsaraDB for MongoDB.</li>
+         * <li><strong>Kvstore</strong>: ApsaraDB for Redis.</li>
+         * <li><strong>Other</strong>: Database connected by using an IP address and a port number.</li>
+         * <li><strong>dg</strong>: Self-managed database that has no public IP address or port number and is connected over Database Gateway.</li>
+         * </ul>
+         * <blockquote>
+         * <p> If <strong>PayType</strong> is set to <strong>postpay</strong>, this parameter is required.</p>
+         * </blockquote>
+         * 
+         * <strong>example:</strong>
+         * <p>RDS</p>
          */
         public Builder instanceType(String instanceType) {
             this.putQueryParameter("InstanceType", instanceType);
@@ -863,7 +1038,10 @@ public class CreateAndStartBackupPlanRequest extends Request {
         }
 
         /**
-         * OSSBucketName.
+         * <p>The name of the Object Storage Service (OSS) bucket used to store backup files. By default, the system automatically generates a name for the OSS bucket.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>TestOssBucket</p>
          */
         public Builder OSSBucketName(String OSSBucketName) {
             this.putQueryParameter("OSSBucketName", OSSBucketName);
@@ -881,7 +1059,17 @@ public class CreateAndStartBackupPlanRequest extends Request {
         }
 
         /**
-         * PayType.
+         * <p>The billing method. Valid values:</p>
+         * <ul>
+         * <li><strong>postpay</strong>: pay-as-you-go.</li>
+         * <li><strong>prepay</strong>: subscription.</li>
+         * </ul>
+         * <blockquote>
+         * <p> The default value is <strong>prepay</strong>. You can set this parameter to <strong>postpay</strong> only if you set <strong>BackupMethod</strong> to <strong>duplication</strong>.</p>
+         * </blockquote>
+         * 
+         * <strong>example:</strong>
+         * <p>Postpaid</p>
          */
         public Builder payType(String payType) {
             this.putQueryParameter("PayType", payType);
@@ -890,7 +1078,14 @@ public class CreateAndStartBackupPlanRequest extends Request {
         }
 
         /**
-         * Period.
+         * <p>Specifies whether to use yearly subscription or monthly subscription for the instance. Valid values:</p>
+         * <ul>
+         * <li><strong>Year</strong>: yearly subscription</li>
+         * <li><strong>Month</strong>: monthly subscription</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>Year</p>
          */
         public Builder period(String period) {
             this.putQueryParameter("Period", period);
@@ -899,7 +1094,10 @@ public class CreateAndStartBackupPlanRequest extends Request {
         }
 
         /**
-         * Region.
+         * <p>The ID of the region in which you want to store the backup data. You can query the supported regions of DBS by calling the <a href="https://help.aliyun.com/document_detail/2869853.html">DescribeRegions</a> operation.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-hangzhou</p>
          */
         public Builder region(String region) {
             this.putQueryParameter("Region", region);
@@ -908,16 +1106,10 @@ public class CreateAndStartBackupPlanRequest extends Request {
         }
 
         /**
-         * RegionId.
-         */
-        public Builder regionId(String regionId) {
-            this.putHostParameter("RegionId", regionId);
-            this.regionId = regionId;
-            return this;
-        }
-
-        /**
-         * ResourceGroupId.
+         * <p>The ID of the resource group.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>rg-aekzecovzti****</p>
          */
         public Builder resourceGroupId(String resourceGroupId) {
             this.putQueryParameter("ResourceGroupId", resourceGroupId);
@@ -926,7 +1118,13 @@ public class CreateAndStartBackupPlanRequest extends Request {
         }
 
         /**
-         * SourceEndpointDatabaseName.
+         * <p>The name of the database.</p>
+         * <blockquote>
+         * <p>This parameter is required if the DatabaseType parameter is set to <strong>PostgreSQL</strong> or <strong>MongoDB</strong>.</p>
+         * </blockquote>
+         * 
+         * <strong>example:</strong>
+         * <p>testRDS</p>
          */
         public Builder sourceEndpointDatabaseName(String sourceEndpointDatabaseName) {
             this.putQueryParameter("SourceEndpointDatabaseName", sourceEndpointDatabaseName);
@@ -935,7 +1133,13 @@ public class CreateAndStartBackupPlanRequest extends Request {
         }
 
         /**
-         * SourceEndpointIP.
+         * <p>The endpoint of the database.</p>
+         * <blockquote>
+         * <p>This parameter is required if the <strong>SourceEndpointInstanceType</strong> parameter is set to <strong>Express</strong>, <strong>Agent</strong>, or <strong>Other</strong>.</p>
+         * </blockquote>
+         * 
+         * <strong>example:</strong>
+         * <p>rm-uf6wjk5xxxxxxx.mysql.rds.aliyuncs.com</p>
          */
         public Builder sourceEndpointIP(String sourceEndpointIP) {
             this.putQueryParameter("SourceEndpointIP", sourceEndpointIP);
@@ -944,7 +1148,13 @@ public class CreateAndStartBackupPlanRequest extends Request {
         }
 
         /**
-         * SourceEndpointInstanceID.
+         * <p>The ID of the database instance.</p>
+         * <blockquote>
+         * <p>This parameter is required if the <strong>SourceEndpointInstanceType</strong> parameter is set to <strong>RDS</strong>, <strong>ECS</strong>, <strong>DDS</strong>, or <strong>Express</strong>.</p>
+         * </blockquote>
+         * 
+         * <strong>example:</strong>
+         * <p>rm-uf6wjk5xxxxxxxxxx</p>
          */
         public Builder sourceEndpointInstanceID(String sourceEndpointInstanceID) {
             this.putQueryParameter("SourceEndpointInstanceID", sourceEndpointInstanceID);
@@ -953,7 +1163,20 @@ public class CreateAndStartBackupPlanRequest extends Request {
         }
 
         /**
-         * SourceEndpointInstanceType.
+         * <p>The location of the source database. Valid values:</p>
+         * <ul>
+         * <li><strong>RDS</strong>: The database is on an ApsaraDB RDS instance.</li>
+         * <li><strong>ECS</strong>: The database is on an Elastic Compute Service (ECS) instance.</li>
+         * <li><strong>Express</strong>: The database is connected to DBS by using Express Connect, VPN Gateway, or Smart Access Gateway.</li>
+         * <li><strong>Agent</strong>: The database is connected to DBS over a DBS backup gateway.</li>
+         * <li><strong>DDS</strong>: The database is on an ApsaraDB for MongoDB instance.</li>
+         * <li><strong>Other</strong>: The database is connected to DBS by using an IP address and a port number.</li>
+         * <li><strong>dg</strong>: The database is a self-managed database that has no public IP address or port number and is connected to DBS over Database Gateway.</li>
+         * </ul>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>RDS</p>
          */
         public Builder sourceEndpointInstanceType(String sourceEndpointInstanceType) {
             this.putQueryParameter("SourceEndpointInstanceType", sourceEndpointInstanceType);
@@ -962,7 +1185,10 @@ public class CreateAndStartBackupPlanRequest extends Request {
         }
 
         /**
-         * SourceEndpointOracleSID.
+         * <p>The system ID (SID) of the Oracle database. This parameter is required if the source database is an Oracle database.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>test</p>
          */
         public Builder sourceEndpointOracleSID(String sourceEndpointOracleSID) {
             this.putQueryParameter("SourceEndpointOracleSID", sourceEndpointOracleSID);
@@ -971,7 +1197,13 @@ public class CreateAndStartBackupPlanRequest extends Request {
         }
 
         /**
-         * SourceEndpointPassword.
+         * <p>The password of the account that is used to connect to the database.</p>
+         * <blockquote>
+         * <p>This parameter is required except that the database is an SQL Server database that is connected to DBS over a DBS backup gateway or a Redis database.</p>
+         * </blockquote>
+         * 
+         * <strong>example:</strong>
+         * <p>testPassword</p>
          */
         public Builder sourceEndpointPassword(String sourceEndpointPassword) {
             this.putQueryParameter("SourceEndpointPassword", sourceEndpointPassword);
@@ -980,7 +1212,13 @@ public class CreateAndStartBackupPlanRequest extends Request {
         }
 
         /**
-         * SourceEndpointPort.
+         * <p>The port of the database.</p>
+         * <blockquote>
+         * <p>This parameter is required if the <strong>SourceEndpointInstanceType</strong> parameter is set to <strong>Express</strong>, <strong>Agent</strong>, <strong>Other</strong>, or <strong>ECS</strong>.</p>
+         * </blockquote>
+         * 
+         * <strong>example:</strong>
+         * <p>3306</p>
          */
         public Builder sourceEndpointPort(Integer sourceEndpointPort) {
             this.putQueryParameter("SourceEndpointPort", sourceEndpointPort);
@@ -989,7 +1227,13 @@ public class CreateAndStartBackupPlanRequest extends Request {
         }
 
         /**
-         * SourceEndpointRegion.
+         * <p>The region in which the database that you want to back up resides.</p>
+         * <blockquote>
+         * <p>This parameter is required if the <strong>SourceEndpointInstanceType</strong> parameter is set to <strong>RDS</strong>, <strong>ECS</strong>, <strong>DDS</strong>, <strong>Express</strong>, or <strong>Agent</strong>.</p>
+         * </blockquote>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-hangzhou</p>
          */
         public Builder sourceEndpointRegion(String sourceEndpointRegion) {
             this.putQueryParameter("SourceEndpointRegion", sourceEndpointRegion);
@@ -998,7 +1242,13 @@ public class CreateAndStartBackupPlanRequest extends Request {
         }
 
         /**
-         * SourceEndpointUserName.
+         * <p>The username of the account that is used to connect to the database.</p>
+         * <blockquote>
+         * <p>This parameter is required except that the database is an SQL Server database that is connected to DBS over a DBS backup gateway or a Redis database.</p>
+         * </blockquote>
+         * 
+         * <strong>example:</strong>
+         * <p>testRDS</p>
          */
         public Builder sourceEndpointUserName(String sourceEndpointUserName) {
             this.putQueryParameter("SourceEndpointUserName", sourceEndpointUserName);
@@ -1007,7 +1257,13 @@ public class CreateAndStartBackupPlanRequest extends Request {
         }
 
         /**
-         * StorageRegion.
+         * <p>The region in which you want to store the backup data.</p>
+         * <blockquote>
+         * <p>This parameter is required if the <strong>PayType</strong> parameter is set to <strong>postpay</strong>.</p>
+         * </blockquote>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-hangzhou</p>
          */
         public Builder storageRegion(String storageRegion) {
             this.putQueryParameter("StorageRegion", storageRegion);
@@ -1016,7 +1272,10 @@ public class CreateAndStartBackupPlanRequest extends Request {
         }
 
         /**
-         * StorageType.
+         * <p>This parameter is unavailable.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>N/A</p>
          */
         public Builder storageType(String storageType) {
             this.putQueryParameter("StorageType", storageType);
@@ -1025,7 +1284,14 @@ public class CreateAndStartBackupPlanRequest extends Request {
         }
 
         /**
-         * UsedTime.
+         * <p>The subscription duration. Valid values:</p>
+         * <ul>
+         * <li>If <strong>Period</strong> is set to <strong>Year</strong>, the valid values of <strong>UsedTime</strong> range from 1 to 5.</li>
+         * <li>If <strong>Period</strong> is set to <strong>Month</strong>, the valid values of <strong>UsedTime</strong> range from 1 to 11.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder usedTime(Integer usedTime) {
             this.putQueryParameter("UsedTime", usedTime);

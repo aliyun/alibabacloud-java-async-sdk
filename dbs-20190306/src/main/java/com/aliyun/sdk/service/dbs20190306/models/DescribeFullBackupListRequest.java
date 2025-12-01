@@ -1,60 +1,66 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.dbs20190306.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeFullBackupListRequest} extends {@link RequestModel}
  *
  * <p>DescribeFullBackupListRequest</p>
  */
 public class DescribeFullBackupListRequest extends Request {
-    @Query
-    @NameInMap("BackupPlanId")
-    @Validation(required = true)
-    private String backupPlanId;
-
-    @Query
-    @NameInMap("BackupSetId")
-    private String backupSetId;
-
-    @Query
-    @NameInMap("ClientToken")
-    private String clientToken;
-
-    @Query
-    @NameInMap("EndTimestamp")
-    private Long endTimestamp;
-
-    @Query
-    @NameInMap("OwnerId")
-    private String ownerId;
-
-    @Query
-    @NameInMap("PageNum")
-    private Integer pageNum;
-
-    @Query
-    @NameInMap("PageSize")
-    private Integer pageSize;
-
-    @Host
-    @NameInMap("RegionId")
+    @com.aliyun.core.annotation.Host
+    @com.aliyun.core.annotation.NameInMap("RegionId")
     private String regionId;
 
-    @Query
-    @NameInMap("ShowStorageType")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("BackupPlanId")
+    @com.aliyun.core.annotation.Validation(required = true)
+    private String backupPlanId;
+
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("BackupSetId")
+    private String backupSetId;
+
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ClientToken")
+    private String clientToken;
+
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("EndTimestamp")
+    private Long endTimestamp;
+
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("OwnerId")
+    private String ownerId;
+
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("PageNum")
+    private Integer pageNum;
+
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("PageSize")
+    private Integer pageSize;
+
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ShowStorageType")
     private Boolean showStorageType;
 
-    @Query
-    @NameInMap("StartTimestamp")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("StartTimestamp")
     private Long startTimestamp;
 
     private DescribeFullBackupListRequest(Builder builder) {
         super(builder);
+        this.regionId = builder.regionId;
         this.backupPlanId = builder.backupPlanId;
         this.backupSetId = builder.backupSetId;
         this.clientToken = builder.clientToken;
@@ -62,7 +68,6 @@ public class DescribeFullBackupListRequest extends Request {
         this.ownerId = builder.ownerId;
         this.pageNum = builder.pageNum;
         this.pageSize = builder.pageSize;
-        this.regionId = builder.regionId;
         this.showStorageType = builder.showStorageType;
         this.startTimestamp = builder.startTimestamp;
     }
@@ -75,9 +80,16 @@ public class DescribeFullBackupListRequest extends Request {
         return builder().build();
     }
 
-    @Override
+@Override
     public Builder toBuilder() {
         return new Builder(this);
+    }
+
+    /**
+     * @return regionId
+     */
+    public String getRegionId() {
+        return this.regionId;
     }
 
     /**
@@ -130,13 +142,6 @@ public class DescribeFullBackupListRequest extends Request {
     }
 
     /**
-     * @return regionId
-     */
-    public String getRegionId() {
-        return this.regionId;
-    }
-
-    /**
      * @return showStorageType
      */
     public Boolean getShowStorageType() {
@@ -151,6 +156,7 @@ public class DescribeFullBackupListRequest extends Request {
     }
 
     public static final class Builder extends Request.Builder<DescribeFullBackupListRequest, Builder> {
+        private String regionId; 
         private String backupPlanId; 
         private String backupSetId; 
         private String clientToken; 
@@ -158,7 +164,6 @@ public class DescribeFullBackupListRequest extends Request {
         private String ownerId; 
         private Integer pageNum; 
         private Integer pageSize; 
-        private String regionId; 
         private Boolean showStorageType; 
         private Long startTimestamp; 
 
@@ -168,6 +173,7 @@ public class DescribeFullBackupListRequest extends Request {
 
         private Builder(DescribeFullBackupListRequest request) {
             super(request);
+            this.regionId = request.regionId;
             this.backupPlanId = request.backupPlanId;
             this.backupSetId = request.backupSetId;
             this.clientToken = request.clientToken;
@@ -175,13 +181,25 @@ public class DescribeFullBackupListRequest extends Request {
             this.ownerId = request.ownerId;
             this.pageNum = request.pageNum;
             this.pageSize = request.pageSize;
-            this.regionId = request.regionId;
             this.showStorageType = request.showStorageType;
             this.startTimestamp = request.startTimestamp;
         } 
 
         /**
-         * BackupPlanId.
+         * RegionId.
+         */
+        public Builder regionId(String regionId) {
+            this.putHostParameter("RegionId", regionId);
+            this.regionId = regionId;
+            return this;
+        }
+
+        /**
+         * <p>The error code.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>The total number of full backup tasks.</p>
          */
         public Builder backupPlanId(String backupPlanId) {
             this.putQueryParameter("BackupPlanId", backupPlanId);
@@ -190,7 +208,10 @@ public class DescribeFullBackupListRequest extends Request {
         }
 
         /**
-         * BackupSetId.
+         * <p>The end time of the backup task, such as 1554560477000.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>The point in time when the backup set expires, such as 1554560477000.</p>
          */
         public Builder backupSetId(String backupSetId) {
             this.putQueryParameter("BackupSetId", backupSetId);
@@ -199,7 +220,10 @@ public class DescribeFullBackupListRequest extends Request {
         }
 
         /**
-         * ClientToken.
+         * <p>The number of entries returned on each page.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>ETnLKlblzczshOTUbOCzxxxxxxx</p>
          */
         public Builder clientToken(String clientToken) {
             this.putQueryParameter("ClientToken", clientToken);
@@ -226,7 +250,10 @@ public class DescribeFullBackupListRequest extends Request {
         }
 
         /**
-         * PageNum.
+         * <p>The client token that is used to ensure the idempotence of the request.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder pageNum(Integer pageNum) {
             this.putQueryParameter("PageNum", pageNum);
@@ -235,7 +262,10 @@ public class DescribeFullBackupListRequest extends Request {
         }
 
         /**
-         * PageSize.
+         * <p>The error message.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>30</p>
          */
         public Builder pageSize(Integer pageSize) {
             this.putQueryParameter("PageSize", pageSize);
@@ -244,16 +274,10 @@ public class DescribeFullBackupListRequest extends Request {
         }
 
         /**
-         * RegionId.
-         */
-        public Builder regionId(String regionId) {
-            this.putHostParameter("RegionId", regionId);
-            this.regionId = regionId;
-            return this;
-        }
-
-        /**
-         * ShowStorageType.
+         * <p>The ID of the request.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder showStorageType(Boolean showStorageType) {
             this.putQueryParameter("ShowStorageType", showStorageType);
@@ -262,7 +286,7 @@ public class DescribeFullBackupListRequest extends Request {
         }
 
         /**
-         * StartTimestamp.
+         * <p>Queries full backup tasks.</p>
          */
         public Builder startTimestamp(Long startTimestamp) {
             this.putQueryParameter("StartTimestamp", startTimestamp);

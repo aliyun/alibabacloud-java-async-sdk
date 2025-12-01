@@ -63,6 +63,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         this.handler.close();
     }
 
+    /**
+     * @param request the request parameters of ConfigureBackupPlan  ConfigureBackupPlanRequest
+     * @return ConfigureBackupPlanResponse
+     */
     @Override
     public CompletableFuture<ConfigureBackupPlanResponse> configureBackupPlan(ConfigureBackupPlanRequest request) {
         try {
@@ -77,6 +81,13 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * <b>description</b> :
+     * <p>Before you call this operation, make sure that you fully understand the billing methods and <a href="https://help.aliyun.com/document_detail/70005.html">pricing</a> of Database Backup (DBS).</p>
+     * 
+     * @param request the request parameters of CreateAndStartBackupPlan  CreateAndStartBackupPlanRequest
+     * @return CreateAndStartBackupPlanResponse
+     */
     @Override
     public CompletableFuture<CreateAndStartBackupPlanResponse> createAndStartBackupPlan(CreateAndStartBackupPlanRequest request) {
         try {
@@ -91,6 +102,13 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * <b>description</b> :
+     * <p>For more information about how to create a backup schedule in the Database Backup (DBS) console, see <a href="https://help.aliyun.com/document_detail/65909.html">Purchase a backup schedule</a>.</p>
+     * 
+     * @param request the request parameters of CreateBackupPlan  CreateBackupPlanRequest
+     * @return CreateBackupPlanResponse
+     */
     @Override
     public CompletableFuture<CreateBackupPlanResponse> createBackupPlan(CreateBackupPlanRequest request) {
         try {
@@ -105,6 +123,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of CreateFullBackupSetDownload  CreateFullBackupSetDownloadRequest
+     * @return CreateFullBackupSetDownloadResponse
+     */
     @Override
     public CompletableFuture<CreateFullBackupSetDownloadResponse> createFullBackupSetDownload(CreateFullBackupSetDownloadRequest request) {
         try {
@@ -119,6 +141,13 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * <b>description</b> :
+     * <p>This API operation returns a task ID. You can call the <a href="https://help.aliyun.com/document_detail/2869852.html">GetDBListFromAgent</a> operation to query the task result based on the task ID.</p>
+     * 
+     * @param request the request parameters of CreateGetDBListFromAgentTask  CreateGetDBListFromAgentTaskRequest
+     * @return CreateGetDBListFromAgentTaskResponse
+     */
     @Override
     public CompletableFuture<CreateGetDBListFromAgentTaskResponse> createGetDBListFromAgentTask(CreateGetDBListFromAgentTaskRequest request) {
         try {
@@ -133,6 +162,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of CreateIncrementBackupSetDownload  CreateIncrementBackupSetDownloadRequest
+     * @return CreateIncrementBackupSetDownloadResponse
+     */
     @Override
     public CompletableFuture<CreateIncrementBackupSetDownloadResponse> createIncrementBackupSetDownload(CreateIncrementBackupSetDownloadRequest request) {
         try {
@@ -147,6 +180,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of CreateRestoreTask  CreateRestoreTaskRequest
+     * @return CreateRestoreTaskResponse
+     */
     @Override
     public CompletableFuture<CreateRestoreTaskResponse> createRestoreTask(CreateRestoreTaskRequest request) {
         try {
@@ -161,6 +198,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of DescribeBackupGatewayList  DescribeBackupGatewayListRequest
+     * @return DescribeBackupGatewayListResponse
+     */
     @Override
     public CompletableFuture<DescribeBackupGatewayListResponse> describeBackupGatewayList(DescribeBackupGatewayListRequest request) {
         try {
@@ -175,6 +216,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of DescribeBackupPlanBilling  DescribeBackupPlanBillingRequest
+     * @return DescribeBackupPlanBillingResponse
+     */
     @Override
     public CompletableFuture<DescribeBackupPlanBillingResponse> describeBackupPlanBilling(DescribeBackupPlanBillingRequest request) {
         try {
@@ -189,6 +234,13 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * <b>description</b> :
+     * <p>Before using this interface, please activate the OSS service in advance. For more information, see <a href="https://help.aliyun.com/document_detail/31817.html">Object Storage Service (OSS)</a>.</p>
+     * 
+     * @param request the request parameters of DescribeBackupPlanList  DescribeBackupPlanListRequest
+     * @return DescribeBackupPlanListResponse
+     */
     @Override
     public CompletableFuture<DescribeBackupPlanListResponse> describeBackupPlanList(DescribeBackupPlanListRequest request) {
         try {
@@ -203,6 +255,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of DescribeBackupSetDownloadTaskList  DescribeBackupSetDownloadTaskListRequest
+     * @return DescribeBackupSetDownloadTaskListResponse
+     */
     @Override
     public CompletableFuture<DescribeBackupSetDownloadTaskListResponse> describeBackupSetDownloadTaskList(DescribeBackupSetDownloadTaskListRequest request) {
         try {
@@ -217,6 +273,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of DescribeDLAService  DescribeDLAServiceRequest
+     * @return DescribeDLAServiceResponse
+     */
     @Override
     public CompletableFuture<DescribeDLAServiceResponse> describeDLAService(DescribeDLAServiceRequest request) {
         try {
@@ -231,6 +291,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of DescribeFullBackupList  DescribeFullBackupListRequest
+     * @return DescribeFullBackupListResponse
+     */
     @Override
     public CompletableFuture<DescribeFullBackupListResponse> describeFullBackupList(DescribeFullBackupListRequest request) {
         try {
@@ -245,6 +309,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of DescribeIncrementBackupList  DescribeIncrementBackupListRequest
+     * @return DescribeIncrementBackupListResponse
+     */
     @Override
     public CompletableFuture<DescribeIncrementBackupListResponse> describeIncrementBackupList(DescribeIncrementBackupListRequest request) {
         try {
@@ -259,6 +327,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of DescribeJobErrorCode  DescribeJobErrorCodeRequest
+     * @return DescribeJobErrorCodeResponse
+     */
     @Override
     public CompletableFuture<DescribeJobErrorCodeResponse> describeJobErrorCode(DescribeJobErrorCodeRequest request) {
         try {
@@ -273,6 +345,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of DescribeNodeCidrList  DescribeNodeCidrListRequest
+     * @return DescribeNodeCidrListResponse
+     */
     @Override
     public CompletableFuture<DescribeNodeCidrListResponse> describeNodeCidrList(DescribeNodeCidrListRequest request) {
         try {
@@ -287,6 +363,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of DescribePreCheckProgressList  DescribePreCheckProgressListRequest
+     * @return DescribePreCheckProgressListResponse
+     */
     @Override
     public CompletableFuture<DescribePreCheckProgressListResponse> describePreCheckProgressList(DescribePreCheckProgressListRequest request) {
         try {
@@ -301,6 +381,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of DescribeRegions  DescribeRegionsRequest
+     * @return DescribeRegionsResponse
+     */
     @Override
     public CompletableFuture<DescribeRegionsResponse> describeRegions(DescribeRegionsRequest request) {
         try {
@@ -315,6 +399,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of DescribeRestoreRangeInfo  DescribeRestoreRangeInfoRequest
+     * @return DescribeRestoreRangeInfoResponse
+     */
     @Override
     public CompletableFuture<DescribeRestoreRangeInfoResponse> describeRestoreRangeInfo(DescribeRestoreRangeInfoRequest request) {
         try {
@@ -329,6 +417,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of DescribeRestoreTaskList  DescribeRestoreTaskListRequest
+     * @return DescribeRestoreTaskListResponse
+     */
     @Override
     public CompletableFuture<DescribeRestoreTaskListResponse> describeRestoreTaskList(DescribeRestoreTaskListRequest request) {
         try {
@@ -343,6 +435,14 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * <b>description</b> :
+     * <h3>Impact</h3>
+     * <p>After you disable the incremental log backup feature, your backup schedule no longer performs incremental log backups.</p>
+     * 
+     * @param request the request parameters of DisableBackupLog  DisableBackupLogRequest
+     * @return DisableBackupLogResponse
+     */
     @Override
     public CompletableFuture<DisableBackupLogResponse> disableBackupLog(DisableBackupLogRequest request) {
         try {
@@ -357,6 +457,14 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * <b>description</b> :
+     * <h2>Impact</h2>
+     * <p>It is free to enable the incremental log backup feature. However, the backup traffic and storage capacity generated by the feature are billed in the same way as the full backup feature, and can be offset by the free quota of backup schedules or storage plans.</p>
+     * 
+     * @param request the request parameters of EnableBackupLog  EnableBackupLogRequest
+     * @return EnableBackupLogResponse
+     */
     @Override
     public CompletableFuture<EnableBackupLogResponse> enableBackupLog(EnableBackupLogRequest request) {
         try {
@@ -371,6 +479,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of GetDBListFromAgent  GetDBListFromAgentRequest
+     * @return GetDBListFromAgentResponse
+     */
     @Override
     public CompletableFuture<GetDBListFromAgentResponse> getDBListFromAgent(GetDBListFromAgentRequest request) {
         try {
@@ -385,6 +497,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of InitializeDbsServiceLinkedRole  InitializeDbsServiceLinkedRoleRequest
+     * @return InitializeDbsServiceLinkedRoleResponse
+     */
     @Override
     public CompletableFuture<InitializeDbsServiceLinkedRoleResponse> initializeDbsServiceLinkedRole(InitializeDbsServiceLinkedRoleRequest request) {
         try {
@@ -399,6 +515,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of ModifyBackupObjects  ModifyBackupObjectsRequest
+     * @return ModifyBackupObjectsResponse
+     */
     @Override
     public CompletableFuture<ModifyBackupObjectsResponse> modifyBackupObjects(ModifyBackupObjectsRequest request) {
         try {
@@ -413,6 +533,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of ModifyBackupPlanName  ModifyBackupPlanNameRequest
+     * @return ModifyBackupPlanNameResponse
+     */
     @Override
     public CompletableFuture<ModifyBackupPlanNameResponse> modifyBackupPlanName(ModifyBackupPlanNameRequest request) {
         try {
@@ -427,6 +551,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of ModifyBackupSetDownloadRules  ModifyBackupSetDownloadRulesRequest
+     * @return ModifyBackupSetDownloadRulesResponse
+     */
     @Override
     public CompletableFuture<ModifyBackupSetDownloadRulesResponse> modifyBackupSetDownloadRules(ModifyBackupSetDownloadRulesRequest request) {
         try {
@@ -441,6 +569,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of ModifyBackupSourceEndpoint  ModifyBackupSourceEndpointRequest
+     * @return ModifyBackupSourceEndpointResponse
+     */
     @Override
     public CompletableFuture<ModifyBackupSourceEndpointResponse> modifyBackupSourceEndpoint(ModifyBackupSourceEndpointRequest request) {
         try {
@@ -455,6 +587,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of ModifyBackupStrategy  ModifyBackupStrategyRequest
+     * @return ModifyBackupStrategyResponse
+     */
     @Override
     public CompletableFuture<ModifyBackupStrategyResponse> modifyBackupStrategy(ModifyBackupStrategyRequest request) {
         try {
@@ -469,6 +605,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of ModifyStorageStrategy  ModifyStorageStrategyRequest
+     * @return ModifyStorageStrategyResponse
+     */
     @Override
     public CompletableFuture<ModifyStorageStrategyResponse> modifyStorageStrategy(ModifyStorageStrategyRequest request) {
         try {
@@ -483,6 +623,14 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * <b>description</b> :
+     * <h2>Impacts</h2>
+     * <p>After a pay-as-you-go backup schedule is released, it stops providing services. Database Backup (DBS) no longer charges you fees for this backup schedule.</p>
+     * 
+     * @param request the request parameters of ReleaseBackupPlan  ReleaseBackupPlanRequest
+     * @return ReleaseBackupPlanResponse
+     */
     @Override
     public CompletableFuture<ReleaseBackupPlanResponse> releaseBackupPlan(ReleaseBackupPlanRequest request) {
         try {
@@ -497,6 +645,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of RenewBackupPlan  RenewBackupPlanRequest
+     * @return RenewBackupPlanResponse
+     */
     @Override
     public CompletableFuture<RenewBackupPlanResponse> renewBackupPlan(RenewBackupPlanRequest request) {
         try {
@@ -511,6 +663,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of StartBackupPlan  StartBackupPlanRequest
+     * @return StartBackupPlanResponse
+     */
     @Override
     public CompletableFuture<StartBackupPlanResponse> startBackupPlan(StartBackupPlanRequest request) {
         try {
@@ -525,6 +681,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of StartRestoreTask  StartRestoreTaskRequest
+     * @return StartRestoreTaskResponse
+     */
     @Override
     public CompletableFuture<StartRestoreTaskResponse> startRestoreTask(StartRestoreTaskRequest request) {
         try {
@@ -539,6 +699,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of StopBackupPlan  StopBackupPlanRequest
+     * @return StopBackupPlanResponse
+     */
     @Override
     public CompletableFuture<StopBackupPlanResponse> stopBackupPlan(StopBackupPlanRequest request) {
         try {
@@ -553,6 +717,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of UpgradeBackupPlan  UpgradeBackupPlanRequest
+     * @return UpgradeBackupPlanResponse
+     */
     @Override
     public CompletableFuture<UpgradeBackupPlanResponse> upgradeBackupPlan(UpgradeBackupPlanRequest request) {
         try {

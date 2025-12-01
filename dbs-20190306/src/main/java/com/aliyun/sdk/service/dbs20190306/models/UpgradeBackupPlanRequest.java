@@ -1,46 +1,51 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.dbs20190306.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link UpgradeBackupPlanRequest} extends {@link RequestModel}
  *
  * <p>UpgradeBackupPlanRequest</p>
  */
 public class UpgradeBackupPlanRequest extends Request {
-    @Query
-    @NameInMap("BackupPlanId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Host
+    @com.aliyun.core.annotation.NameInMap("RegionId")
+    private String regionId;
+
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("BackupPlanId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String backupPlanId;
 
-    @Query
-    @NameInMap("ClientToken")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ClientToken")
     private String clientToken;
 
-    @Query
-    @NameInMap("InstanceClass")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("InstanceClass")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String instanceClass;
 
-    @Query
-    @NameInMap("OwnerId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("OwnerId")
     private String ownerId;
-
-    @Host
-    @NameInMap("RegionId")
-    private String regionId;
 
     private UpgradeBackupPlanRequest(Builder builder) {
         super(builder);
+        this.regionId = builder.regionId;
         this.backupPlanId = builder.backupPlanId;
         this.clientToken = builder.clientToken;
         this.instanceClass = builder.instanceClass;
         this.ownerId = builder.ownerId;
-        this.regionId = builder.regionId;
     }
 
     public static Builder builder() {
@@ -51,9 +56,16 @@ public class UpgradeBackupPlanRequest extends Request {
         return builder().build();
     }
 
-    @Override
+@Override
     public Builder toBuilder() {
         return new Builder(this);
+    }
+
+    /**
+     * @return regionId
+     */
+    public String getRegionId() {
+        return this.regionId;
     }
 
     /**
@@ -84,19 +96,12 @@ public class UpgradeBackupPlanRequest extends Request {
         return this.ownerId;
     }
 
-    /**
-     * @return regionId
-     */
-    public String getRegionId() {
-        return this.regionId;
-    }
-
     public static final class Builder extends Request.Builder<UpgradeBackupPlanRequest, Builder> {
+        private String regionId; 
         private String backupPlanId; 
         private String clientToken; 
         private String instanceClass; 
         private String ownerId; 
-        private String regionId; 
 
         private Builder() {
             super();
@@ -104,15 +109,28 @@ public class UpgradeBackupPlanRequest extends Request {
 
         private Builder(UpgradeBackupPlanRequest request) {
             super(request);
+            this.regionId = request.regionId;
             this.backupPlanId = request.backupPlanId;
             this.clientToken = request.clientToken;
             this.instanceClass = request.instanceClass;
             this.ownerId = request.ownerId;
-            this.regionId = request.regionId;
         } 
 
         /**
-         * BackupPlanId.
+         * RegionId.
+         */
+        public Builder regionId(String regionId) {
+            this.putHostParameter("RegionId", regionId);
+            this.regionId = regionId;
+            return this;
+        }
+
+        /**
+         * <p>The ID of the backup schedule.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>dbstooi01e****</p>
          */
         public Builder backupPlanId(String backupPlanId) {
             this.putQueryParameter("BackupPlanId", backupPlanId);
@@ -121,7 +139,10 @@ public class UpgradeBackupPlanRequest extends Request {
         }
 
         /**
-         * ClientToken.
+         * <p>The client token that is used to ensure the idempotence of the request.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>ETnLKlblzczshOTUbOCz****</p>
          */
         public Builder clientToken(String clientToken) {
             this.putQueryParameter("ClientToken", clientToken);
@@ -130,7 +151,18 @@ public class UpgradeBackupPlanRequest extends Request {
         }
 
         /**
-         * InstanceClass.
+         * <p>The specifications of the instance. Valid values:</p>
+         * <ul>
+         * <li>micro</li>
+         * <li>small</li>
+         * <li>medium</li>
+         * <li>large</li>
+         * <li>xlarge</li>
+         * </ul>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>micro</p>
          */
         public Builder instanceClass(String instanceClass) {
             this.putQueryParameter("InstanceClass", instanceClass);
@@ -144,15 +176,6 @@ public class UpgradeBackupPlanRequest extends Request {
         public Builder ownerId(String ownerId) {
             this.putQueryParameter("OwnerId", ownerId);
             this.ownerId = ownerId;
-            return this;
-        }
-
-        /**
-         * RegionId.
-         */
-        public Builder regionId(String regionId) {
-            this.putHostParameter("RegionId", regionId);
-            this.regionId = regionId;
             return this;
         }
 

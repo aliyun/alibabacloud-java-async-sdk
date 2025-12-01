@@ -1,3 +1,6 @@
+2025-12-01 Version: 1.0.2
+- Generated java-async 2019-03-06 for Dbs.
+
 2022-07-28 Version: 1.0.1
 - Automatically generate sdk tasks.
 

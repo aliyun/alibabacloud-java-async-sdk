@@ -1,36 +1,41 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.dbs20190306.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeNodeCidrListResponseBody} extends {@link TeaModel}
  *
  * <p>DescribeNodeCidrListResponseBody</p>
  */
 public class DescribeNodeCidrListResponseBody extends TeaModel {
-    @NameInMap("ErrCode")
+    @com.aliyun.core.annotation.NameInMap("ErrCode")
     private String errCode;
 
-    @NameInMap("ErrMessage")
+    @com.aliyun.core.annotation.NameInMap("ErrMessage")
     private String errMessage;
 
-    @NameInMap("HttpStatusCode")
+    @com.aliyun.core.annotation.NameInMap("HttpStatusCode")
     private Integer httpStatusCode;
 
-    @NameInMap("InternetIPs")
+    @com.aliyun.core.annotation.NameInMap("InternetIPs")
     private InternetIPs internetIPs;
 
-    @NameInMap("IntranetIPs")
+    @com.aliyun.core.annotation.NameInMap("IntranetIPs")
     private IntranetIPs intranetIPs;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("Success")
+    @com.aliyun.core.annotation.NameInMap("Success")
     private Boolean success;
 
     private DescribeNodeCidrListResponseBody(Builder builder) {
@@ -49,6 +54,10 @@ public class DescribeNodeCidrListResponseBody extends TeaModel {
 
     public static DescribeNodeCidrListResponseBody create() {
         return builder().build();
+    }
+
+    public Builder toBuilder() {
+        return new Builder(this);
     }
 
     /**
@@ -109,8 +118,24 @@ public class DescribeNodeCidrListResponseBody extends TeaModel {
         private String requestId; 
         private Boolean success; 
 
+        private Builder() {
+        } 
+
+        private Builder(DescribeNodeCidrListResponseBody model) {
+            this.errCode = model.errCode;
+            this.errMessage = model.errMessage;
+            this.httpStatusCode = model.httpStatusCode;
+            this.internetIPs = model.internetIPs;
+            this.intranetIPs = model.intranetIPs;
+            this.requestId = model.requestId;
+            this.success = model.success;
+        } 
+
         /**
-         * ErrCode.
+         * <p>The error code.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Param.NotFound</p>
          */
         public Builder errCode(String errCode) {
             this.errCode = errCode;
@@ -118,7 +143,10 @@ public class DescribeNodeCidrListResponseBody extends TeaModel {
         }
 
         /**
-         * ErrMessage.
+         * <p>The error message.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>The specified parameter %s value is not valid.</p>
          */
         public Builder errMessage(String errMessage) {
             this.errMessage = errMessage;
@@ -126,7 +154,10 @@ public class DescribeNodeCidrListResponseBody extends TeaModel {
         }
 
         /**
-         * HttpStatusCode.
+         * <p>The HTTP status code.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>200</p>
          */
         public Builder httpStatusCode(Integer httpStatusCode) {
             this.httpStatusCode = httpStatusCode;
@@ -134,7 +165,7 @@ public class DescribeNodeCidrListResponseBody extends TeaModel {
         }
 
         /**
-         * InternetIPs.
+         * <p>The public CIDR blocks.</p>
          */
         public Builder internetIPs(InternetIPs internetIPs) {
             this.internetIPs = internetIPs;
@@ -142,7 +173,7 @@ public class DescribeNodeCidrListResponseBody extends TeaModel {
         }
 
         /**
-         * IntranetIPs.
+         * <p>The internal CIDR blocks.</p>
          */
         public Builder intranetIPs(IntranetIPs intranetIPs) {
             this.intranetIPs = intranetIPs;
@@ -150,7 +181,10 @@ public class DescribeNodeCidrListResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * <p>The ID of the request.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>5B352E69-E7B1-4EA7-BB8E-29FFE969C791</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -158,7 +192,10 @@ public class DescribeNodeCidrListResponseBody extends TeaModel {
         }
 
         /**
-         * Success.
+         * <p>Indicates whether the request is successful.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder success(Boolean success) {
             this.success = success;
@@ -171,9 +208,15 @@ public class DescribeNodeCidrListResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link DescribeNodeCidrListResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeNodeCidrListResponseBody</p>
+     */
     public static class InternetIPs extends TeaModel {
-        @NameInMap("InternetIP")
-        private java.util.List < String > internetIP;
+        @com.aliyun.core.annotation.NameInMap("InternetIP")
+        private java.util.List<String> internetIP;
 
         private InternetIPs(Builder builder) {
             this.internetIP = builder.internetIP;
@@ -190,17 +233,24 @@ public class DescribeNodeCidrListResponseBody extends TeaModel {
         /**
          * @return internetIP
          */
-        public java.util.List < String > getInternetIP() {
+        public java.util.List<String> getInternetIP() {
             return this.internetIP;
         }
 
         public static final class Builder {
-            private java.util.List < String > internetIP; 
+            private java.util.List<String> internetIP; 
+
+            private Builder() {
+            } 
+
+            private Builder(InternetIPs model) {
+                this.internetIP = model.internetIP;
+            } 
 
             /**
              * InternetIP.
              */
-            public Builder internetIP(java.util.List < String > internetIP) {
+            public Builder internetIP(java.util.List<String> internetIP) {
                 this.internetIP = internetIP;
                 return this;
             }
@@ -212,9 +262,15 @@ public class DescribeNodeCidrListResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link DescribeNodeCidrListResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeNodeCidrListResponseBody</p>
+     */
     public static class IntranetIPs extends TeaModel {
-        @NameInMap("IntranetIP")
-        private java.util.List < String > intranetIP;
+        @com.aliyun.core.annotation.NameInMap("IntranetIP")
+        private java.util.List<String> intranetIP;
 
         private IntranetIPs(Builder builder) {
             this.intranetIP = builder.intranetIP;
@@ -231,17 +287,24 @@ public class DescribeNodeCidrListResponseBody extends TeaModel {
         /**
          * @return intranetIP
          */
-        public java.util.List < String > getIntranetIP() {
+        public java.util.List<String> getIntranetIP() {
             return this.intranetIP;
         }
 
         public static final class Builder {
-            private java.util.List < String > intranetIP; 
+            private java.util.List<String> intranetIP; 
+
+            private Builder() {
+            } 
+
+            private Builder(IntranetIPs model) {
+                this.intranetIP = model.intranetIP;
+            } 
 
             /**
              * IntranetIP.
              */
-            public Builder intranetIP(java.util.List < String > intranetIP) {
+            public Builder intranetIP(java.util.List<String> intranetIP) {
                 this.intranetIP = intranetIP;
                 return this;
             }

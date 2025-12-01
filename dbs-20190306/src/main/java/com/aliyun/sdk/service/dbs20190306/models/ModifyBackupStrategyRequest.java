@@ -1,53 +1,59 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.dbs20190306.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ModifyBackupStrategyRequest} extends {@link RequestModel}
  *
  * <p>ModifyBackupStrategyRequest</p>
  */
 public class ModifyBackupStrategyRequest extends Request {
-    @Query
-    @NameInMap("BackupLogIntervalSeconds")
+    @com.aliyun.core.annotation.Host
+    @com.aliyun.core.annotation.NameInMap("RegionId")
+    private String regionId;
+
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("BackupLogIntervalSeconds")
     private Integer backupLogIntervalSeconds;
 
-    @Query
-    @NameInMap("BackupPeriod")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("BackupPeriod")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String backupPeriod;
 
-    @Query
-    @NameInMap("BackupPlanId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("BackupPlanId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String backupPlanId;
 
-    @Query
-    @NameInMap("BackupStartTime")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("BackupStartTime")
     private String backupStartTime;
 
-    @Query
-    @NameInMap("BackupStrategyType")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("BackupStrategyType")
     private String backupStrategyType;
 
-    @Query
-    @NameInMap("ClientToken")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ClientToken")
     private String clientToken;
 
-    @Query
-    @NameInMap("OwnerId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("OwnerId")
     private String ownerId;
-
-    @Host
-    @NameInMap("RegionId")
-    private String regionId;
 
     private ModifyBackupStrategyRequest(Builder builder) {
         super(builder);
+        this.regionId = builder.regionId;
         this.backupLogIntervalSeconds = builder.backupLogIntervalSeconds;
         this.backupPeriod = builder.backupPeriod;
         this.backupPlanId = builder.backupPlanId;
@@ -55,7 +61,6 @@ public class ModifyBackupStrategyRequest extends Request {
         this.backupStrategyType = builder.backupStrategyType;
         this.clientToken = builder.clientToken;
         this.ownerId = builder.ownerId;
-        this.regionId = builder.regionId;
     }
 
     public static Builder builder() {
@@ -66,9 +71,16 @@ public class ModifyBackupStrategyRequest extends Request {
         return builder().build();
     }
 
-    @Override
+@Override
     public Builder toBuilder() {
         return new Builder(this);
+    }
+
+    /**
+     * @return regionId
+     */
+    public String getRegionId() {
+        return this.regionId;
     }
 
     /**
@@ -120,14 +132,8 @@ public class ModifyBackupStrategyRequest extends Request {
         return this.ownerId;
     }
 
-    /**
-     * @return regionId
-     */
-    public String getRegionId() {
-        return this.regionId;
-    }
-
     public static final class Builder extends Request.Builder<ModifyBackupStrategyRequest, Builder> {
+        private String regionId; 
         private Integer backupLogIntervalSeconds; 
         private String backupPeriod; 
         private String backupPlanId; 
@@ -135,7 +141,6 @@ public class ModifyBackupStrategyRequest extends Request {
         private String backupStrategyType; 
         private String clientToken; 
         private String ownerId; 
-        private String regionId; 
 
         private Builder() {
             super();
@@ -143,6 +148,7 @@ public class ModifyBackupStrategyRequest extends Request {
 
         private Builder(ModifyBackupStrategyRequest request) {
             super(request);
+            this.regionId = request.regionId;
             this.backupLogIntervalSeconds = request.backupLogIntervalSeconds;
             this.backupPeriod = request.backupPeriod;
             this.backupPlanId = request.backupPlanId;
@@ -150,11 +156,25 @@ public class ModifyBackupStrategyRequest extends Request {
             this.backupStrategyType = request.backupStrategyType;
             this.clientToken = request.clientToken;
             this.ownerId = request.ownerId;
-            this.regionId = request.regionId;
         } 
 
         /**
-         * BackupLogIntervalSeconds.
+         * RegionId.
+         */
+        public Builder regionId(String regionId) {
+            this.putHostParameter("RegionId", regionId);
+            this.regionId = regionId;
+            return this;
+        }
+
+        /**
+         * <p>The interval at which you want to perform incremental log backups. Unit: seconds.</p>
+         * <blockquote>
+         * <p>This parameter takes effect only when physical backups are performed.</p>
+         * </blockquote>
+         * 
+         * <strong>example:</strong>
+         * <p>1000</p>
          */
         public Builder backupLogIntervalSeconds(Integer backupLogIntervalSeconds) {
             this.putQueryParameter("BackupLogIntervalSeconds", backupLogIntervalSeconds);
@@ -163,7 +183,20 @@ public class ModifyBackupStrategyRequest extends Request {
         }
 
         /**
-         * BackupPeriod.
+         * <p>The day of each week when the full backup task runs. Valid values:</p>
+         * <ul>
+         * <li>Monday</li>
+         * <li>Tuesday</li>
+         * <li>Wednesday</li>
+         * <li>Thursday</li>
+         * <li>Friday</li>
+         * <li>Saturday</li>
+         * <li>Sunday</li>
+         * </ul>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Monday</p>
          */
         public Builder backupPeriod(String backupPeriod) {
             this.putQueryParameter("BackupPeriod", backupPeriod);
@@ -172,7 +205,11 @@ public class ModifyBackupStrategyRequest extends Request {
         }
 
         /**
-         * BackupPlanId.
+         * <p>The ID of the backup schedule.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>dbstooi01XXXX</p>
          */
         public Builder backupPlanId(String backupPlanId) {
             this.putQueryParameter("BackupPlanId", backupPlanId);
@@ -181,7 +218,10 @@ public class ModifyBackupStrategyRequest extends Request {
         }
 
         /**
-         * BackupStartTime.
+         * <p>The start time of the full backup task. Specify the time in the HH:mm format.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>14:22</p>
          */
         public Builder backupStartTime(String backupStartTime) {
             this.putQueryParameter("BackupStartTime", backupStartTime);
@@ -190,7 +230,17 @@ public class ModifyBackupStrategyRequest extends Request {
         }
 
         /**
-         * BackupStrategyType.
+         * <p>The backup method that you want to use for full backups. Valid values:</p>
+         * <ul>
+         * <li><strong>simple</strong>: scheduled backup. If you specify this value for the BackupStrategyType parameter, you must also specify the BackupPeriod and BackupStartTime parameters.</li>
+         * <li><strong>Manual</strong>: manual backup.</li>
+         * </ul>
+         * <blockquote>
+         * <p>Default value: <strong>simple</strong>.</p>
+         * </blockquote>
+         * 
+         * <strong>example:</strong>
+         * <p>simple</p>
          */
         public Builder backupStrategyType(String backupStrategyType) {
             this.putQueryParameter("BackupStrategyType", backupStrategyType);
@@ -199,7 +249,10 @@ public class ModifyBackupStrategyRequest extends Request {
         }
 
         /**
-         * ClientToken.
+         * <p>The client token that is used to ensure the idempotence of the request.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>ETnLKlblzczshOTUbOCzxxxxxxx</p>
          */
         public Builder clientToken(String clientToken) {
             this.putQueryParameter("ClientToken", clientToken);
@@ -213,15 +266,6 @@ public class ModifyBackupStrategyRequest extends Request {
         public Builder ownerId(String ownerId) {
             this.putQueryParameter("OwnerId", ownerId);
             this.ownerId = ownerId;
-            return this;
-        }
-
-        /**
-         * RegionId.
-         */
-        public Builder regionId(String regionId) {
-            this.putHostParameter("RegionId", regionId);
-            this.regionId = regionId;
             return this;
         }
 

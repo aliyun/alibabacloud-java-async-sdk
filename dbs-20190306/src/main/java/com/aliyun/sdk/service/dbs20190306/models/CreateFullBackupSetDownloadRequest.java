@@ -1,45 +1,50 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.dbs20190306.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link CreateFullBackupSetDownloadRequest} extends {@link RequestModel}
  *
  * <p>CreateFullBackupSetDownloadRequest</p>
  */
 public class CreateFullBackupSetDownloadRequest extends Request {
-    @Query
-    @NameInMap("BackupSetDataFormat")
+    @com.aliyun.core.annotation.Host
+    @com.aliyun.core.annotation.NameInMap("RegionId")
+    private String regionId;
+
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("BackupSetDataFormat")
     private String backupSetDataFormat;
 
-    @Query
-    @NameInMap("BackupSetId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("BackupSetId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String backupSetId;
 
-    @Query
-    @NameInMap("ClientToken")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ClientToken")
     private String clientToken;
 
-    @Query
-    @NameInMap("OwnerId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("OwnerId")
     private String ownerId;
-
-    @Host
-    @NameInMap("RegionId")
-    private String regionId;
 
     private CreateFullBackupSetDownloadRequest(Builder builder) {
         super(builder);
+        this.regionId = builder.regionId;
         this.backupSetDataFormat = builder.backupSetDataFormat;
         this.backupSetId = builder.backupSetId;
         this.clientToken = builder.clientToken;
         this.ownerId = builder.ownerId;
-        this.regionId = builder.regionId;
     }
 
     public static Builder builder() {
@@ -50,9 +55,16 @@ public class CreateFullBackupSetDownloadRequest extends Request {
         return builder().build();
     }
 
-    @Override
+@Override
     public Builder toBuilder() {
         return new Builder(this);
+    }
+
+    /**
+     * @return regionId
+     */
+    public String getRegionId() {
+        return this.regionId;
     }
 
     /**
@@ -83,19 +95,12 @@ public class CreateFullBackupSetDownloadRequest extends Request {
         return this.ownerId;
     }
 
-    /**
-     * @return regionId
-     */
-    public String getRegionId() {
-        return this.regionId;
-    }
-
     public static final class Builder extends Request.Builder<CreateFullBackupSetDownloadRequest, Builder> {
+        private String regionId; 
         private String backupSetDataFormat; 
         private String backupSetId; 
         private String clientToken; 
         private String ownerId; 
-        private String regionId; 
 
         private Builder() {
             super();
@@ -103,15 +108,33 @@ public class CreateFullBackupSetDownloadRequest extends Request {
 
         private Builder(CreateFullBackupSetDownloadRequest request) {
             super(request);
+            this.regionId = request.regionId;
             this.backupSetDataFormat = request.backupSetDataFormat;
             this.backupSetId = request.backupSetId;
             this.clientToken = request.clientToken;
             this.ownerId = request.ownerId;
-            this.regionId = request.regionId;
         } 
 
         /**
-         * BackupSetDataFormat.
+         * RegionId.
+         */
+        public Builder regionId(String regionId) {
+            this.putHostParameter("RegionId", regionId);
+            this.regionId = regionId;
+            return this;
+        }
+
+        /**
+         * <p>The format in which the full backup set is downloaded. Valid values:</p>
+         * <ul>
+         * <li><strong>Native</strong></li>
+         * <li><strong>SQL</strong></li>
+         * <li><strong>CSV</strong>(Default value)</li>
+         * <li><strong>JSON</strong></li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>SQL</p>
          */
         public Builder backupSetDataFormat(String backupSetDataFormat) {
             this.putQueryParameter("BackupSetDataFormat", backupSetDataFormat);
@@ -120,7 +143,11 @@ public class CreateFullBackupSetDownloadRequest extends Request {
         }
 
         /**
-         * BackupSetId.
+         * <p>The ID of the full backup set.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>dbs1hv****</p>
          */
         public Builder backupSetId(String backupSetId) {
             this.putQueryParameter("BackupSetId", backupSetId);
@@ -129,7 +156,10 @@ public class CreateFullBackupSetDownloadRequest extends Request {
         }
 
         /**
-         * ClientToken.
+         * <p>The client token that is used to ensure the idempotence of the request.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>ETnLKlblzczshOTUbOCz****</p>
          */
         public Builder clientToken(String clientToken) {
             this.putQueryParameter("ClientToken", clientToken);
@@ -143,15 +173,6 @@ public class CreateFullBackupSetDownloadRequest extends Request {
         public Builder ownerId(String ownerId) {
             this.putQueryParameter("OwnerId", ownerId);
             this.ownerId = ownerId;
-            return this;
-        }
-
-        /**
-         * RegionId.
-         */
-        public Builder regionId(String regionId) {
-            this.putHostParameter("RegionId", regionId);
-            this.regionId = regionId;
             return this;
         }
 

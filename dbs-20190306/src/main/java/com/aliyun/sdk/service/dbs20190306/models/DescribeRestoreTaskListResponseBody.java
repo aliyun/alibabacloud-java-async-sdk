@@ -1,45 +1,50 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.dbs20190306.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeRestoreTaskListResponseBody} extends {@link TeaModel}
  *
  * <p>DescribeRestoreTaskListResponseBody</p>
  */
 public class DescribeRestoreTaskListResponseBody extends TeaModel {
-    @NameInMap("ErrCode")
+    @com.aliyun.core.annotation.NameInMap("ErrCode")
     private String errCode;
 
-    @NameInMap("ErrMessage")
+    @com.aliyun.core.annotation.NameInMap("ErrMessage")
     private String errMessage;
 
-    @NameInMap("HttpStatusCode")
+    @com.aliyun.core.annotation.NameInMap("HttpStatusCode")
     private Integer httpStatusCode;
 
-    @NameInMap("Items")
+    @com.aliyun.core.annotation.NameInMap("Items")
     private Items items;
 
-    @NameInMap("PageNum")
+    @com.aliyun.core.annotation.NameInMap("PageNum")
     private Integer pageNum;
 
-    @NameInMap("PageSize")
+    @com.aliyun.core.annotation.NameInMap("PageSize")
     private Integer pageSize;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("Success")
+    @com.aliyun.core.annotation.NameInMap("Success")
     private Boolean success;
 
-    @NameInMap("TotalElements")
+    @com.aliyun.core.annotation.NameInMap("TotalElements")
     private Integer totalElements;
 
-    @NameInMap("TotalPages")
+    @com.aliyun.core.annotation.NameInMap("TotalPages")
     private Integer totalPages;
 
     private DescribeRestoreTaskListResponseBody(Builder builder) {
@@ -61,6 +66,10 @@ public class DescribeRestoreTaskListResponseBody extends TeaModel {
 
     public static DescribeRestoreTaskListResponseBody create() {
         return builder().build();
+    }
+
+    public Builder toBuilder() {
+        return new Builder(this);
     }
 
     /**
@@ -145,8 +154,27 @@ public class DescribeRestoreTaskListResponseBody extends TeaModel {
         private Integer totalElements; 
         private Integer totalPages; 
 
+        private Builder() {
+        } 
+
+        private Builder(DescribeRestoreTaskListResponseBody model) {
+            this.errCode = model.errCode;
+            this.errMessage = model.errMessage;
+            this.httpStatusCode = model.httpStatusCode;
+            this.items = model.items;
+            this.pageNum = model.pageNum;
+            this.pageSize = model.pageSize;
+            this.requestId = model.requestId;
+            this.success = model.success;
+            this.totalElements = model.totalElements;
+            this.totalPages = model.totalPages;
+        } 
+
         /**
-         * ErrCode.
+         * <p>The error code.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Param.NotFound</p>
          */
         public Builder errCode(String errCode) {
             this.errCode = errCode;
@@ -154,7 +182,10 @@ public class DescribeRestoreTaskListResponseBody extends TeaModel {
         }
 
         /**
-         * ErrMessage.
+         * <p>The error message.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>The specified parameter %s value is not valid.</p>
          */
         public Builder errMessage(String errMessage) {
             this.errMessage = errMessage;
@@ -162,7 +193,10 @@ public class DescribeRestoreTaskListResponseBody extends TeaModel {
         }
 
         /**
-         * HttpStatusCode.
+         * <p>The HTTP status code.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>200</p>
          */
         public Builder httpStatusCode(Integer httpStatusCode) {
             this.httpStatusCode = httpStatusCode;
@@ -170,7 +204,7 @@ public class DescribeRestoreTaskListResponseBody extends TeaModel {
         }
 
         /**
-         * Items.
+         * <p>The details of the backup schedule.</p>
          */
         public Builder items(Items items) {
             this.items = items;
@@ -178,7 +212,10 @@ public class DescribeRestoreTaskListResponseBody extends TeaModel {
         }
 
         /**
-         * PageNum.
+         * <p>The page number of the returned page.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder pageNum(Integer pageNum) {
             this.pageNum = pageNum;
@@ -186,7 +223,10 @@ public class DescribeRestoreTaskListResponseBody extends TeaModel {
         }
 
         /**
-         * PageSize.
+         * <p>The number of entries returned on each page.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>30</p>
          */
         public Builder pageSize(Integer pageSize) {
             this.pageSize = pageSize;
@@ -194,7 +234,10 @@ public class DescribeRestoreTaskListResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * <p>The ID of the request.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>9C397502-B4F2-4E22-AD97-C81F0049F3F3</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -202,7 +245,10 @@ public class DescribeRestoreTaskListResponseBody extends TeaModel {
         }
 
         /**
-         * Success.
+         * <p>Indicates whether the request is successful.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder success(Boolean success) {
             this.success = success;
@@ -210,7 +256,10 @@ public class DescribeRestoreTaskListResponseBody extends TeaModel {
         }
 
         /**
-         * TotalElements.
+         * <p>The total number of restore tasks.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder totalElements(Integer totalElements) {
             this.totalElements = totalElements;
@@ -218,7 +267,10 @@ public class DescribeRestoreTaskListResponseBody extends TeaModel {
         }
 
         /**
-         * TotalPages.
+         * <p>The total number of returned pages.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder totalPages(Integer totalPages) {
             this.totalPages = totalPages;
@@ -231,80 +283,86 @@ public class DescribeRestoreTaskListResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link DescribeRestoreTaskListResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeRestoreTaskListResponseBody</p>
+     */
     public static class RestoreTaskDetail extends TeaModel {
-        @NameInMap("BackupGatewayId")
+        @com.aliyun.core.annotation.NameInMap("BackupGatewayId")
         private Long backupGatewayId;
 
-        @NameInMap("BackupPlanId")
+        @com.aliyun.core.annotation.NameInMap("BackupPlanId")
         private String backupPlanId;
 
-        @NameInMap("BackupSetId")
+        @com.aliyun.core.annotation.NameInMap("BackupSetId")
         private String backupSetId;
 
-        @NameInMap("ContinuousRestoreProgress")
+        @com.aliyun.core.annotation.NameInMap("ContinuousRestoreProgress")
         private Integer continuousRestoreProgress;
 
-        @NameInMap("CrossAliyunId")
+        @com.aliyun.core.annotation.NameInMap("CrossAliyunId")
         private String crossAliyunId;
 
-        @NameInMap("CrossRoleName")
+        @com.aliyun.core.annotation.NameInMap("CrossRoleName")
         private String crossRoleName;
 
-        @NameInMap("DestinationEndpointDatabaseName")
+        @com.aliyun.core.annotation.NameInMap("DestinationEndpointDatabaseName")
         private String destinationEndpointDatabaseName;
 
-        @NameInMap("DestinationEndpointInstanceID")
+        @com.aliyun.core.annotation.NameInMap("DestinationEndpointInstanceID")
         private String destinationEndpointInstanceID;
 
-        @NameInMap("DestinationEndpointInstanceType")
+        @com.aliyun.core.annotation.NameInMap("DestinationEndpointInstanceType")
         private String destinationEndpointInstanceType;
 
-        @NameInMap("DestinationEndpointIpPort")
+        @com.aliyun.core.annotation.NameInMap("DestinationEndpointIpPort")
         private String destinationEndpointIpPort;
 
-        @NameInMap("DestinationEndpointOracleSID")
+        @com.aliyun.core.annotation.NameInMap("DestinationEndpointOracleSID")
         private String destinationEndpointOracleSID;
 
-        @NameInMap("DestinationEndpointRegion")
+        @com.aliyun.core.annotation.NameInMap("DestinationEndpointRegion")
         private String destinationEndpointRegion;
 
-        @NameInMap("DestinationEndpointUserName")
+        @com.aliyun.core.annotation.NameInMap("DestinationEndpointUserName")
         private String destinationEndpointUserName;
 
-        @NameInMap("ErrMessage")
+        @com.aliyun.core.annotation.NameInMap("ErrMessage")
         private String errMessage;
 
-        @NameInMap("FullDataRestoreProgress")
+        @com.aliyun.core.annotation.NameInMap("FullDataRestoreProgress")
         private Integer fullDataRestoreProgress;
 
-        @NameInMap("FullStruAfterRestoreProgress")
+        @com.aliyun.core.annotation.NameInMap("FullStruAfterRestoreProgress")
         private Integer fullStruAfterRestoreProgress;
 
-        @NameInMap("FullStruforeRestoreProgress")
+        @com.aliyun.core.annotation.NameInMap("FullStruforeRestoreProgress")
         private Integer fullStruforeRestoreProgress;
 
-        @NameInMap("RestoreDir")
+        @com.aliyun.core.annotation.NameInMap("RestoreDir")
         private String restoreDir;
 
-        @NameInMap("RestoreObjects")
+        @com.aliyun.core.annotation.NameInMap("RestoreObjects")
         private String restoreObjects;
 
-        @NameInMap("RestoreStatus")
+        @com.aliyun.core.annotation.NameInMap("RestoreStatus")
         private String restoreStatus;
 
-        @NameInMap("RestoreTaskCreateTime")
+        @com.aliyun.core.annotation.NameInMap("RestoreTaskCreateTime")
         private Long restoreTaskCreateTime;
 
-        @NameInMap("RestoreTaskFinishTime")
+        @com.aliyun.core.annotation.NameInMap("RestoreTaskFinishTime")
         private Long restoreTaskFinishTime;
 
-        @NameInMap("RestoreTaskId")
+        @com.aliyun.core.annotation.NameInMap("RestoreTaskId")
         private String restoreTaskId;
 
-        @NameInMap("RestoreTaskName")
+        @com.aliyun.core.annotation.NameInMap("RestoreTaskName")
         private String restoreTaskName;
 
-        @NameInMap("RestoreTime")
+        @com.aliyun.core.annotation.NameInMap("RestoreTime")
         private Long restoreTime;
 
         private RestoreTaskDetail(Builder builder) {
@@ -545,8 +603,42 @@ public class DescribeRestoreTaskListResponseBody extends TeaModel {
             private String restoreTaskName; 
             private Long restoreTime; 
 
+            private Builder() {
+            } 
+
+            private Builder(RestoreTaskDetail model) {
+                this.backupGatewayId = model.backupGatewayId;
+                this.backupPlanId = model.backupPlanId;
+                this.backupSetId = model.backupSetId;
+                this.continuousRestoreProgress = model.continuousRestoreProgress;
+                this.crossAliyunId = model.crossAliyunId;
+                this.crossRoleName = model.crossRoleName;
+                this.destinationEndpointDatabaseName = model.destinationEndpointDatabaseName;
+                this.destinationEndpointInstanceID = model.destinationEndpointInstanceID;
+                this.destinationEndpointInstanceType = model.destinationEndpointInstanceType;
+                this.destinationEndpointIpPort = model.destinationEndpointIpPort;
+                this.destinationEndpointOracleSID = model.destinationEndpointOracleSID;
+                this.destinationEndpointRegion = model.destinationEndpointRegion;
+                this.destinationEndpointUserName = model.destinationEndpointUserName;
+                this.errMessage = model.errMessage;
+                this.fullDataRestoreProgress = model.fullDataRestoreProgress;
+                this.fullStruAfterRestoreProgress = model.fullStruAfterRestoreProgress;
+                this.fullStruforeRestoreProgress = model.fullStruforeRestoreProgress;
+                this.restoreDir = model.restoreDir;
+                this.restoreObjects = model.restoreObjects;
+                this.restoreStatus = model.restoreStatus;
+                this.restoreTaskCreateTime = model.restoreTaskCreateTime;
+                this.restoreTaskFinishTime = model.restoreTaskFinishTime;
+                this.restoreTaskId = model.restoreTaskId;
+                this.restoreTaskName = model.restoreTaskName;
+                this.restoreTime = model.restoreTime;
+            } 
+
             /**
-             * BackupGatewayId.
+             * <p>The ID of the backup gateway.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>324234332</p>
              */
             public Builder backupGatewayId(Long backupGatewayId) {
                 this.backupGatewayId = backupGatewayId;
@@ -554,7 +646,10 @@ public class DescribeRestoreTaskListResponseBody extends TeaModel {
             }
 
             /**
-             * BackupPlanId.
+             * <p>The ID of the backup schedule.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>dbs1hvb0wXXXX</p>
              */
             public Builder backupPlanId(String backupPlanId) {
                 this.backupPlanId = backupPlanId;
@@ -562,7 +657,10 @@ public class DescribeRestoreTaskListResponseBody extends TeaModel {
             }
 
             /**
-             * BackupSetId.
+             * <p>The ID of the full backup set that is used in the restore task.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1ibh2f5uXXX</p>
              */
             public Builder backupSetId(String backupSetId) {
                 this.backupSetId = backupSetId;
@@ -570,7 +668,10 @@ public class DescribeRestoreTaskListResponseBody extends TeaModel {
             }
 
             /**
-             * ContinuousRestoreProgress.
+             * <p>The restore progress of the incremental log files.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>100</p>
              */
             public Builder continuousRestoreProgress(Integer continuousRestoreProgress) {
                 this.continuousRestoreProgress = continuousRestoreProgress;
@@ -578,7 +679,10 @@ public class DescribeRestoreTaskListResponseBody extends TeaModel {
             }
 
             /**
-             * CrossAliyunId.
+             * <p>The unique ID (UID) of the Alibaba Cloud account to which the backup schedule belongs.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2xxx7778xxxxxxxxxx</p>
              */
             public Builder crossAliyunId(String crossAliyunId) {
                 this.crossAliyunId = crossAliyunId;
@@ -586,7 +690,10 @@ public class DescribeRestoreTaskListResponseBody extends TeaModel {
             }
 
             /**
-             * CrossRoleName.
+             * <p>The name of the RAM role that can be used to perform backups across Alibaba Cloud accounts.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>test123</p>
              */
             public Builder crossRoleName(String crossRoleName) {
                 this.crossRoleName = crossRoleName;
@@ -594,7 +701,10 @@ public class DescribeRestoreTaskListResponseBody extends TeaModel {
             }
 
             /**
-             * DestinationEndpointDatabaseName.
+             * <p>The name of the database.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>test</p>
              */
             public Builder destinationEndpointDatabaseName(String destinationEndpointDatabaseName) {
                 this.destinationEndpointDatabaseName = destinationEndpointDatabaseName;
@@ -602,7 +712,10 @@ public class DescribeRestoreTaskListResponseBody extends TeaModel {
             }
 
             /**
-             * DestinationEndpointInstanceID.
+             * <p>The ID of the database instance.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>rm-bp1p8c2947XXX</p>
              */
             public Builder destinationEndpointInstanceID(String destinationEndpointInstanceID) {
                 this.destinationEndpointInstanceID = destinationEndpointInstanceID;
@@ -610,7 +723,18 @@ public class DescribeRestoreTaskListResponseBody extends TeaModel {
             }
 
             /**
-             * DestinationEndpointInstanceType.
+             * <p>The location of the database. Valid values:</p>
+             * <ul>
+             * <li>RDS</li>
+             * <li>ECS</li>
+             * <li>Express: The database is connected to DBS by using Express Connect, VPN Gateway, or Smart Access Gateway.</li>
+             * <li>Agent: The database is connected to DBS over a DBS backup gateway.</li>
+             * <li>DDS: The database is an ApsaraDB for MongoDB database.</li>
+             * <li>Other: The database is connected to DBS by using the IP address and port of the database.</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>RDS</p>
              */
             public Builder destinationEndpointInstanceType(String destinationEndpointInstanceType) {
                 this.destinationEndpointInstanceType = destinationEndpointInstanceType;
@@ -618,7 +742,10 @@ public class DescribeRestoreTaskListResponseBody extends TeaModel {
             }
 
             /**
-             * DestinationEndpointIpPort.
+             * <p>The endpoint that is used to connect to the database.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>100.X.X.10:33204</p>
              */
             public Builder destinationEndpointIpPort(String destinationEndpointIpPort) {
                 this.destinationEndpointIpPort = destinationEndpointIpPort;
@@ -626,7 +753,10 @@ public class DescribeRestoreTaskListResponseBody extends TeaModel {
             }
 
             /**
-             * DestinationEndpointOracleSID.
+             * <p>The SID of the Oracle database.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>test</p>
              */
             public Builder destinationEndpointOracleSID(String destinationEndpointOracleSID) {
                 this.destinationEndpointOracleSID = destinationEndpointOracleSID;
@@ -634,7 +764,10 @@ public class DescribeRestoreTaskListResponseBody extends TeaModel {
             }
 
             /**
-             * DestinationEndpointRegion.
+             * <p>The region in which the database is deployed.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>cn-hangzhou</p>
              */
             public Builder destinationEndpointRegion(String destinationEndpointRegion) {
                 this.destinationEndpointRegion = destinationEndpointRegion;
@@ -642,7 +775,10 @@ public class DescribeRestoreTaskListResponseBody extends TeaModel {
             }
 
             /**
-             * DestinationEndpointUserName.
+             * <p>The username of the account that is used to connect to the database.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>test</p>
              */
             public Builder destinationEndpointUserName(String destinationEndpointUserName) {
                 this.destinationEndpointUserName = destinationEndpointUserName;
@@ -650,7 +786,10 @@ public class DescribeRestoreTaskListResponseBody extends TeaModel {
             }
 
             /**
-             * ErrMessage.
+             * <p>The error message.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>NULL</p>
              */
             public Builder errMessage(String errMessage) {
                 this.errMessage = errMessage;
@@ -658,7 +797,10 @@ public class DescribeRestoreTaskListResponseBody extends TeaModel {
             }
 
             /**
-             * FullDataRestoreProgress.
+             * <p>The restore progress of the full backup data.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>100</p>
              */
             public Builder fullDataRestoreProgress(Integer fullDataRestoreProgress) {
                 this.fullDataRestoreProgress = fullDataRestoreProgress;
@@ -666,7 +808,10 @@ public class DescribeRestoreTaskListResponseBody extends TeaModel {
             }
 
             /**
-             * FullStruAfterRestoreProgress.
+             * <p>The progress of schema restore after full data restore.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>100</p>
              */
             public Builder fullStruAfterRestoreProgress(Integer fullStruAfterRestoreProgress) {
                 this.fullStruAfterRestoreProgress = fullStruAfterRestoreProgress;
@@ -674,7 +819,10 @@ public class DescribeRestoreTaskListResponseBody extends TeaModel {
             }
 
             /**
-             * FullStruforeRestoreProgress.
+             * <p>The progress of schema restore before full data restore.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>0</p>
              */
             public Builder fullStruforeRestoreProgress(Integer fullStruforeRestoreProgress) {
                 this.fullStruforeRestoreProgress = fullStruforeRestoreProgress;
@@ -682,7 +830,10 @@ public class DescribeRestoreTaskListResponseBody extends TeaModel {
             }
 
             /**
-             * RestoreDir.
+             * <p>The directory of the destination database to which the objects were restored.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>100.X.X.10:33204</p>
              */
             public Builder restoreDir(String restoreDir) {
                 this.restoreDir = restoreDir;
@@ -690,7 +841,10 @@ public class DescribeRestoreTaskListResponseBody extends TeaModel {
             }
 
             /**
-             * RestoreObjects.
+             * <p>The objects to be restored.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>[     {         &quot;DBName&quot;:&quot;test&quot;       } ]</p>
              */
             public Builder restoreObjects(String restoreObjects) {
                 this.restoreObjects = restoreObjects;
@@ -698,7 +852,17 @@ public class DescribeRestoreTaskListResponseBody extends TeaModel {
             }
 
             /**
-             * RestoreStatus.
+             * <p>The status of the restore task. Valid values:</p>
+             * <ul>
+             * <li>init: The restore task is not started or does not pass the precheck.</li>
+             * <li>running: The restore task is running.</li>
+             * <li>stop: The restore task failed.</li>
+             * <li>pause: The restore task is stopped.</li>
+             * <li>check_pass: The restore task passed the precheck.</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>running</p>
              */
             public Builder restoreStatus(String restoreStatus) {
                 this.restoreStatus = restoreStatus;
@@ -706,7 +870,10 @@ public class DescribeRestoreTaskListResponseBody extends TeaModel {
             }
 
             /**
-             * RestoreTaskCreateTime.
+             * <p>The time when the restore task was created, such as 1554560477000.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1554560477000</p>
              */
             public Builder restoreTaskCreateTime(Long restoreTaskCreateTime) {
                 this.restoreTaskCreateTime = restoreTaskCreateTime;
@@ -714,7 +881,10 @@ public class DescribeRestoreTaskListResponseBody extends TeaModel {
             }
 
             /**
-             * RestoreTaskFinishTime.
+             * <p>The time when the restore task was complete, such as 1554560477000.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1554560477000</p>
              */
             public Builder restoreTaskFinishTime(Long restoreTaskFinishTime) {
                 this.restoreTaskFinishTime = restoreTaskFinishTime;
@@ -722,7 +892,10 @@ public class DescribeRestoreTaskListResponseBody extends TeaModel {
             }
 
             /**
-             * RestoreTaskId.
+             * <p>The ID of the restore task.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>s1XXXXXX</p>
              */
             public Builder restoreTaskId(String restoreTaskId) {
                 this.restoreTaskId = restoreTaskId;
@@ -730,7 +903,10 @@ public class DescribeRestoreTaskListResponseBody extends TeaModel {
             }
 
             /**
-             * RestoreTaskName.
+             * <p>The name of the restore task.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>test</p>
              */
             public Builder restoreTaskName(String restoreTaskName) {
                 this.restoreTaskName = restoreTaskName;
@@ -738,7 +914,10 @@ public class DescribeRestoreTaskListResponseBody extends TeaModel {
             }
 
             /**
-             * RestoreTime.
+             * <p>The time to run the restore task, such as 1554560477000.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1554560477000</p>
              */
             public Builder restoreTime(Long restoreTime) {
                 this.restoreTime = restoreTime;
@@ -752,9 +931,15 @@ public class DescribeRestoreTaskListResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link DescribeRestoreTaskListResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeRestoreTaskListResponseBody</p>
+     */
     public static class Items extends TeaModel {
-        @NameInMap("RestoreTaskDetail")
-        private java.util.List < RestoreTaskDetail> restoreTaskDetail;
+        @com.aliyun.core.annotation.NameInMap("RestoreTaskDetail")
+        private java.util.List<RestoreTaskDetail> restoreTaskDetail;
 
         private Items(Builder builder) {
             this.restoreTaskDetail = builder.restoreTaskDetail;
@@ -771,17 +956,24 @@ public class DescribeRestoreTaskListResponseBody extends TeaModel {
         /**
          * @return restoreTaskDetail
          */
-        public java.util.List < RestoreTaskDetail> getRestoreTaskDetail() {
+        public java.util.List<RestoreTaskDetail> getRestoreTaskDetail() {
             return this.restoreTaskDetail;
         }
 
         public static final class Builder {
-            private java.util.List < RestoreTaskDetail> restoreTaskDetail; 
+            private java.util.List<RestoreTaskDetail> restoreTaskDetail; 
+
+            private Builder() {
+            } 
+
+            private Builder(Items model) {
+                this.restoreTaskDetail = model.restoreTaskDetail;
+            } 
 
             /**
              * RestoreTaskDetail.
              */
-            public Builder restoreTaskDetail(java.util.List < RestoreTaskDetail> restoreTaskDetail) {
+            public Builder restoreTaskDetail(java.util.List<RestoreTaskDetail> restoreTaskDetail) {
                 this.restoreTaskDetail = restoreTaskDetail;
                 return this;
             }

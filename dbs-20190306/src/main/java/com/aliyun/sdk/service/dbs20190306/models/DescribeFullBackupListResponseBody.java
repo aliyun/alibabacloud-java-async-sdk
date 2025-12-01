@@ -1,45 +1,50 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.dbs20190306.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeFullBackupListResponseBody} extends {@link TeaModel}
  *
  * <p>DescribeFullBackupListResponseBody</p>
  */
 public class DescribeFullBackupListResponseBody extends TeaModel {
-    @NameInMap("ErrCode")
+    @com.aliyun.core.annotation.NameInMap("ErrCode")
     private String errCode;
 
-    @NameInMap("ErrMessage")
+    @com.aliyun.core.annotation.NameInMap("ErrMessage")
     private String errMessage;
 
-    @NameInMap("HttpStatusCode")
+    @com.aliyun.core.annotation.NameInMap("HttpStatusCode")
     private Integer httpStatusCode;
 
-    @NameInMap("Items")
+    @com.aliyun.core.annotation.NameInMap("Items")
     private Items items;
 
-    @NameInMap("PageNum")
+    @com.aliyun.core.annotation.NameInMap("PageNum")
     private Integer pageNum;
 
-    @NameInMap("PageSize")
+    @com.aliyun.core.annotation.NameInMap("PageSize")
     private Integer pageSize;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("Success")
+    @com.aliyun.core.annotation.NameInMap("Success")
     private Boolean success;
 
-    @NameInMap("TotalElements")
+    @com.aliyun.core.annotation.NameInMap("TotalElements")
     private Integer totalElements;
 
-    @NameInMap("TotalPages")
+    @com.aliyun.core.annotation.NameInMap("TotalPages")
     private Integer totalPages;
 
     private DescribeFullBackupListResponseBody(Builder builder) {
@@ -61,6 +66,10 @@ public class DescribeFullBackupListResponseBody extends TeaModel {
 
     public static DescribeFullBackupListResponseBody create() {
         return builder().build();
+    }
+
+    public Builder toBuilder() {
+        return new Builder(this);
     }
 
     /**
@@ -144,6 +153,22 @@ public class DescribeFullBackupListResponseBody extends TeaModel {
         private Boolean success; 
         private Integer totalElements; 
         private Integer totalPages; 
+
+        private Builder() {
+        } 
+
+        private Builder(DescribeFullBackupListResponseBody model) {
+            this.errCode = model.errCode;
+            this.errMessage = model.errMessage;
+            this.httpStatusCode = model.httpStatusCode;
+            this.items = model.items;
+            this.pageNum = model.pageNum;
+            this.pageSize = model.pageSize;
+            this.requestId = model.requestId;
+            this.success = model.success;
+            this.totalElements = model.totalElements;
+            this.totalPages = model.totalPages;
+        } 
 
         /**
          * ErrCode.
@@ -231,41 +256,47 @@ public class DescribeFullBackupListResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link DescribeFullBackupListResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeFullBackupListResponseBody</p>
+     */
     public static class FullBackupFile extends TeaModel {
-        @NameInMap("BackupObjects")
+        @com.aliyun.core.annotation.NameInMap("BackupObjects")
         private String backupObjects;
 
-        @NameInMap("BackupSetExpiredTime")
+        @com.aliyun.core.annotation.NameInMap("BackupSetExpiredTime")
         private Long backupSetExpiredTime;
 
-        @NameInMap("BackupSetId")
+        @com.aliyun.core.annotation.NameInMap("BackupSetId")
         private String backupSetId;
 
-        @NameInMap("BackupSize")
+        @com.aliyun.core.annotation.NameInMap("BackupSize")
         private Long backupSize;
 
-        @NameInMap("BackupStatus")
+        @com.aliyun.core.annotation.NameInMap("BackupStatus")
         private String backupStatus;
 
-        @NameInMap("CreateTime")
+        @com.aliyun.core.annotation.NameInMap("CreateTime")
         private Long createTime;
 
-        @NameInMap("EndTime")
+        @com.aliyun.core.annotation.NameInMap("EndTime")
         private Long endTime;
 
-        @NameInMap("ErrMessage")
+        @com.aliyun.core.annotation.NameInMap("ErrMessage")
         private String errMessage;
 
-        @NameInMap("FinishTime")
+        @com.aliyun.core.annotation.NameInMap("FinishTime")
         private Long finishTime;
 
-        @NameInMap("SourceEndpointIpPort")
+        @com.aliyun.core.annotation.NameInMap("SourceEndpointIpPort")
         private String sourceEndpointIpPort;
 
-        @NameInMap("StartTime")
+        @com.aliyun.core.annotation.NameInMap("StartTime")
         private Long startTime;
 
-        @NameInMap("StorageMethod")
+        @com.aliyun.core.annotation.NameInMap("StorageMethod")
         private String storageMethod;
 
         private FullBackupFile(Builder builder) {
@@ -389,6 +420,24 @@ public class DescribeFullBackupListResponseBody extends TeaModel {
             private Long startTime; 
             private String storageMethod; 
 
+            private Builder() {
+            } 
+
+            private Builder(FullBackupFile model) {
+                this.backupObjects = model.backupObjects;
+                this.backupSetExpiredTime = model.backupSetExpiredTime;
+                this.backupSetId = model.backupSetId;
+                this.backupSize = model.backupSize;
+                this.backupStatus = model.backupStatus;
+                this.createTime = model.createTime;
+                this.endTime = model.endTime;
+                this.errMessage = model.errMessage;
+                this.finishTime = model.finishTime;
+                this.sourceEndpointIpPort = model.sourceEndpointIpPort;
+                this.startTime = model.startTime;
+                this.storageMethod = model.storageMethod;
+            } 
+
             /**
              * BackupObjects.
              */
@@ -492,9 +541,15 @@ public class DescribeFullBackupListResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link DescribeFullBackupListResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeFullBackupListResponseBody</p>
+     */
     public static class Items extends TeaModel {
-        @NameInMap("FullBackupFile")
-        private java.util.List < FullBackupFile> fullBackupFile;
+        @com.aliyun.core.annotation.NameInMap("FullBackupFile")
+        private java.util.List<FullBackupFile> fullBackupFile;
 
         private Items(Builder builder) {
             this.fullBackupFile = builder.fullBackupFile;
@@ -511,17 +566,24 @@ public class DescribeFullBackupListResponseBody extends TeaModel {
         /**
          * @return fullBackupFile
          */
-        public java.util.List < FullBackupFile> getFullBackupFile() {
+        public java.util.List<FullBackupFile> getFullBackupFile() {
             return this.fullBackupFile;
         }
 
         public static final class Builder {
-            private java.util.List < FullBackupFile> fullBackupFile; 
+            private java.util.List<FullBackupFile> fullBackupFile; 
+
+            private Builder() {
+            } 
+
+            private Builder(Items model) {
+                this.fullBackupFile = model.fullBackupFile;
+            } 
 
             /**
              * FullBackupFile.
              */
-            public Builder fullBackupFile(java.util.List < FullBackupFile> fullBackupFile) {
+            public Builder fullBackupFile(java.util.List<FullBackupFile> fullBackupFile) {
                 this.fullBackupFile = fullBackupFile;
                 return this;
             }

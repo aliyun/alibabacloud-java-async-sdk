@@ -1,36 +1,41 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.dbs20190306.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link EnableBackupLogResponseBody} extends {@link TeaModel}
  *
  * <p>EnableBackupLogResponseBody</p>
  */
 public class EnableBackupLogResponseBody extends TeaModel {
-    @NameInMap("BackupPlanId")
+    @com.aliyun.core.annotation.NameInMap("BackupPlanId")
     private String backupPlanId;
 
-    @NameInMap("ErrCode")
+    @com.aliyun.core.annotation.NameInMap("ErrCode")
     private String errCode;
 
-    @NameInMap("ErrMessage")
+    @com.aliyun.core.annotation.NameInMap("ErrMessage")
     private String errMessage;
 
-    @NameInMap("HttpStatusCode")
+    @com.aliyun.core.annotation.NameInMap("HttpStatusCode")
     private Integer httpStatusCode;
 
-    @NameInMap("NeedPrecheck")
+    @com.aliyun.core.annotation.NameInMap("NeedPrecheck")
     private Boolean needPrecheck;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("Success")
+    @com.aliyun.core.annotation.NameInMap("Success")
     private Boolean success;
 
     private EnableBackupLogResponseBody(Builder builder) {
@@ -49,6 +54,10 @@ public class EnableBackupLogResponseBody extends TeaModel {
 
     public static EnableBackupLogResponseBody create() {
         return builder().build();
+    }
+
+    public Builder toBuilder() {
+        return new Builder(this);
     }
 
     /**
@@ -109,8 +118,24 @@ public class EnableBackupLogResponseBody extends TeaModel {
         private String requestId; 
         private Boolean success; 
 
+        private Builder() {
+        } 
+
+        private Builder(EnableBackupLogResponseBody model) {
+            this.backupPlanId = model.backupPlanId;
+            this.errCode = model.errCode;
+            this.errMessage = model.errMessage;
+            this.httpStatusCode = model.httpStatusCode;
+            this.needPrecheck = model.needPrecheck;
+            this.requestId = model.requestId;
+            this.success = model.success;
+        } 
+
         /**
-         * BackupPlanId.
+         * <p>The backup schedule ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>dbstooi01xxxx</p>
          */
         public Builder backupPlanId(String backupPlanId) {
             this.backupPlanId = backupPlanId;
@@ -118,7 +143,10 @@ public class EnableBackupLogResponseBody extends TeaModel {
         }
 
         /**
-         * ErrCode.
+         * <p>The error code.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Param.NotFound</p>
          */
         public Builder errCode(String errCode) {
             this.errCode = errCode;
@@ -126,7 +154,10 @@ public class EnableBackupLogResponseBody extends TeaModel {
         }
 
         /**
-         * ErrMessage.
+         * <p>The error message.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>findValidDBSJob error</p>
          */
         public Builder errMessage(String errMessage) {
             this.errMessage = errMessage;
@@ -134,7 +165,10 @@ public class EnableBackupLogResponseBody extends TeaModel {
         }
 
         /**
-         * HttpStatusCode.
+         * <p>The HTTP status code.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>200</p>
          */
         public Builder httpStatusCode(Integer httpStatusCode) {
             this.httpStatusCode = httpStatusCode;
@@ -142,7 +176,14 @@ public class EnableBackupLogResponseBody extends TeaModel {
         }
 
         /**
-         * NeedPrecheck.
+         * <p>Indicates whether a precheck is triggered. Valid values:</p>
+         * <ul>
+         * <li>true: A precheck is triggered. You must call the <a href="https://help.aliyun.com/document_detail/2869816.html">StartBackupPlan</a> operation to start the backup schedule.</li>
+         * <li>false: No precheck is triggered.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>false</p>
          */
         public Builder needPrecheck(Boolean needPrecheck) {
             this.needPrecheck = needPrecheck;
@@ -150,7 +191,10 @@ public class EnableBackupLogResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * <p>The ID of the request.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>D6E068C3-25BC-455A-85FE-45F0B22ECB1F</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -158,7 +202,14 @@ public class EnableBackupLogResponseBody extends TeaModel {
         }
 
         /**
-         * Success.
+         * <p>Indicates whether the request is successful. Valid values:</p>
+         * <ul>
+         * <li>true: The request is successful.</li>
+         * <li>false: The request fails.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder success(Boolean success) {
             this.success = success;

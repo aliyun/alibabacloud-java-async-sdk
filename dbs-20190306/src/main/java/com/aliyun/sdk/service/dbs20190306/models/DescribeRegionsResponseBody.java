@@ -1,33 +1,38 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.dbs20190306.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeRegionsResponseBody} extends {@link TeaModel}
  *
  * <p>DescribeRegionsResponseBody</p>
  */
 public class DescribeRegionsResponseBody extends TeaModel {
-    @NameInMap("ErrCode")
+    @com.aliyun.core.annotation.NameInMap("ErrCode")
     private String errCode;
 
-    @NameInMap("ErrMessage")
+    @com.aliyun.core.annotation.NameInMap("ErrMessage")
     private String errMessage;
 
-    @NameInMap("HttpStatusCode")
+    @com.aliyun.core.annotation.NameInMap("HttpStatusCode")
     private Integer httpStatusCode;
 
-    @NameInMap("Regions")
+    @com.aliyun.core.annotation.NameInMap("Regions")
     private Regions regions;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("Success")
+    @com.aliyun.core.annotation.NameInMap("Success")
     private Boolean success;
 
     private DescribeRegionsResponseBody(Builder builder) {
@@ -45,6 +50,10 @@ public class DescribeRegionsResponseBody extends TeaModel {
 
     public static DescribeRegionsResponseBody create() {
         return builder().build();
+    }
+
+    public Builder toBuilder() {
+        return new Builder(this);
     }
 
     /**
@@ -97,8 +106,23 @@ public class DescribeRegionsResponseBody extends TeaModel {
         private String requestId; 
         private Boolean success; 
 
+        private Builder() {
+        } 
+
+        private Builder(DescribeRegionsResponseBody model) {
+            this.errCode = model.errCode;
+            this.errMessage = model.errMessage;
+            this.httpStatusCode = model.httpStatusCode;
+            this.regions = model.regions;
+            this.requestId = model.requestId;
+            this.success = model.success;
+        } 
+
         /**
-         * ErrCode.
+         * <p>The error code.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>InvalidParameter</p>
          */
         public Builder errCode(String errCode) {
             this.errCode = errCode;
@@ -106,7 +130,10 @@ public class DescribeRegionsResponseBody extends TeaModel {
         }
 
         /**
-         * ErrMessage.
+         * <p>The error message returned if the request failed.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>This backupPlan can&quot;t support this action</p>
          */
         public Builder errMessage(String errMessage) {
             this.errMessage = errMessage;
@@ -114,7 +141,10 @@ public class DescribeRegionsResponseBody extends TeaModel {
         }
 
         /**
-         * HttpStatusCode.
+         * <p>The HTTP status code returned.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>400</p>
          */
         public Builder httpStatusCode(Integer httpStatusCode) {
             this.httpStatusCode = httpStatusCode;
@@ -122,7 +152,7 @@ public class DescribeRegionsResponseBody extends TeaModel {
         }
 
         /**
-         * Regions.
+         * <p>The regions that DBS supports.</p>
          */
         public Builder regions(Regions regions) {
             this.regions = regions;
@@ -130,7 +160,10 @@ public class DescribeRegionsResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>EB4DFD5E-3618-498D-BE35-4DBEA0072122</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -138,7 +171,10 @@ public class DescribeRegionsResponseBody extends TeaModel {
         }
 
         /**
-         * Success.
+         * <p>The status of the request.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder success(Boolean success) {
             this.success = success;
@@ -151,9 +187,15 @@ public class DescribeRegionsResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link DescribeRegionsResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeRegionsResponseBody</p>
+     */
     public static class Regions extends TeaModel {
-        @NameInMap("RegionCode")
-        private java.util.List < String > regionCode;
+        @com.aliyun.core.annotation.NameInMap("RegionCode")
+        private java.util.List<String> regionCode;
 
         private Regions(Builder builder) {
             this.regionCode = builder.regionCode;
@@ -170,17 +212,24 @@ public class DescribeRegionsResponseBody extends TeaModel {
         /**
          * @return regionCode
          */
-        public java.util.List < String > getRegionCode() {
+        public java.util.List<String> getRegionCode() {
             return this.regionCode;
         }
 
         public static final class Builder {
-            private java.util.List < String > regionCode; 
+            private java.util.List<String> regionCode; 
+
+            private Builder() {
+            } 
+
+            private Builder(Regions model) {
+                this.regionCode = model.regionCode;
+            } 
 
             /**
              * RegionCode.
              */
-            public Builder regionCode(java.util.List < String > regionCode) {
+            public Builder regionCode(java.util.List<String> regionCode) {
                 this.regionCode = regionCode;
                 return this;
             }

@@ -1,33 +1,38 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.dbs20190306.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link CreateGetDBListFromAgentTaskResponseBody} extends {@link TeaModel}
  *
  * <p>CreateGetDBListFromAgentTaskResponseBody</p>
  */
 public class CreateGetDBListFromAgentTaskResponseBody extends TeaModel {
-    @NameInMap("ErrCode")
+    @com.aliyun.core.annotation.NameInMap("ErrCode")
     private String errCode;
 
-    @NameInMap("ErrMessage")
+    @com.aliyun.core.annotation.NameInMap("ErrMessage")
     private String errMessage;
 
-    @NameInMap("HttpStatusCode")
+    @com.aliyun.core.annotation.NameInMap("HttpStatusCode")
     private Integer httpStatusCode;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("Success")
+    @com.aliyun.core.annotation.NameInMap("Success")
     private Boolean success;
 
-    @NameInMap("TaskId")
+    @com.aliyun.core.annotation.NameInMap("TaskId")
     private Long taskId;
 
     private CreateGetDBListFromAgentTaskResponseBody(Builder builder) {
@@ -45,6 +50,10 @@ public class CreateGetDBListFromAgentTaskResponseBody extends TeaModel {
 
     public static CreateGetDBListFromAgentTaskResponseBody create() {
         return builder().build();
+    }
+
+    public Builder toBuilder() {
+        return new Builder(this);
     }
 
     /**
@@ -97,8 +106,23 @@ public class CreateGetDBListFromAgentTaskResponseBody extends TeaModel {
         private Boolean success; 
         private Long taskId; 
 
+        private Builder() {
+        } 
+
+        private Builder(CreateGetDBListFromAgentTaskResponseBody model) {
+            this.errCode = model.errCode;
+            this.errMessage = model.errMessage;
+            this.httpStatusCode = model.httpStatusCode;
+            this.requestId = model.requestId;
+            this.success = model.success;
+            this.taskId = model.taskId;
+        } 
+
         /**
-         * ErrCode.
+         * <p>The error code.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>InvalidParameter</p>
          */
         public Builder errCode(String errCode) {
             this.errCode = errCode;
@@ -106,7 +130,10 @@ public class CreateGetDBListFromAgentTaskResponseBody extends TeaModel {
         }
 
         /**
-         * ErrMessage.
+         * <p>The error message.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>This backupPlan can&quot;t support this action</p>
          */
         public Builder errMessage(String errMessage) {
             this.errMessage = errMessage;
@@ -114,7 +141,10 @@ public class CreateGetDBListFromAgentTaskResponseBody extends TeaModel {
         }
 
         /**
-         * HttpStatusCode.
+         * <p>The HTTP status code returned.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>400</p>
          */
         public Builder httpStatusCode(Integer httpStatusCode) {
             this.httpStatusCode = httpStatusCode;
@@ -122,7 +152,10 @@ public class CreateGetDBListFromAgentTaskResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>EB4DFD5E-3618-498D-BE35-4DBEA0072122</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -130,7 +163,10 @@ public class CreateGetDBListFromAgentTaskResponseBody extends TeaModel {
         }
 
         /**
-         * Success.
+         * <p>Indicates whether the request was successful.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder success(Boolean success) {
             this.success = success;
@@ -138,7 +174,10 @@ public class CreateGetDBListFromAgentTaskResponseBody extends TeaModel {
         }
 
         /**
-         * TaskId.
+         * <p>The ID of the asynchronous task.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>123456</p>
          */
         public Builder taskId(Long taskId) {
             this.taskId = taskId;

@@ -1,39 +1,44 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.dbs20190306.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeDLAServiceResponseBody} extends {@link TeaModel}
  *
  * <p>DescribeDLAServiceResponseBody</p>
  */
 public class DescribeDLAServiceResponseBody extends TeaModel {
-    @NameInMap("AutoAdd")
+    @com.aliyun.core.annotation.NameInMap("AutoAdd")
     private Boolean autoAdd;
 
-    @NameInMap("ErrCode")
+    @com.aliyun.core.annotation.NameInMap("ErrCode")
     private String errCode;
 
-    @NameInMap("ErrMessage")
+    @com.aliyun.core.annotation.NameInMap("ErrMessage")
     private String errMessage;
 
-    @NameInMap("HaveJobFailed")
+    @com.aliyun.core.annotation.NameInMap("HaveJobFailed")
     private Boolean haveJobFailed;
 
-    @NameInMap("HttpStatusCode")
+    @com.aliyun.core.annotation.NameInMap("HttpStatusCode")
     private Integer httpStatusCode;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("State")
+    @com.aliyun.core.annotation.NameInMap("State")
     private String state;
 
-    @NameInMap("Success")
+    @com.aliyun.core.annotation.NameInMap("Success")
     private Boolean success;
 
     private DescribeDLAServiceResponseBody(Builder builder) {
@@ -53,6 +58,10 @@ public class DescribeDLAServiceResponseBody extends TeaModel {
 
     public static DescribeDLAServiceResponseBody create() {
         return builder().build();
+    }
+
+    public Builder toBuilder() {
+        return new Builder(this);
     }
 
     /**
@@ -121,8 +130,29 @@ public class DescribeDLAServiceResponseBody extends TeaModel {
         private String state; 
         private Boolean success; 
 
+        private Builder() {
+        } 
+
+        private Builder(DescribeDLAServiceResponseBody model) {
+            this.autoAdd = model.autoAdd;
+            this.errCode = model.errCode;
+            this.errMessage = model.errMessage;
+            this.haveJobFailed = model.haveJobFailed;
+            this.httpStatusCode = model.httpStatusCode;
+            this.requestId = model.requestId;
+            this.state = model.state;
+            this.success = model.success;
+        } 
+
         /**
-         * AutoAdd.
+         * <p>Specifies whether to enable the feature of automatically adding incremental data to a data lake. If this feature is enabled, DBS adds the backup sets that are newly generated to the data lake that is created for the backup schedule. Valid values:</p>
+         * <ul>
+         * <li><strong>true</strong>: enables the feature.</li>
+         * <li><strong>false</strong>: disables the feature.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder autoAdd(Boolean autoAdd) {
             this.autoAdd = autoAdd;
@@ -130,7 +160,10 @@ public class DescribeDLAServiceResponseBody extends TeaModel {
         }
 
         /**
-         * ErrCode.
+         * <p>The error code.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Param.NotFound</p>
          */
         public Builder errCode(String errCode) {
             this.errCode = errCode;
@@ -138,7 +171,10 @@ public class DescribeDLAServiceResponseBody extends TeaModel {
         }
 
         /**
-         * ErrMessage.
+         * <p>The error message.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>The specified parameter %s value is not valid.</p>
          */
         public Builder errMessage(String errMessage) {
             this.errMessage = errMessage;
@@ -146,7 +182,14 @@ public class DescribeDLAServiceResponseBody extends TeaModel {
         }
 
         /**
-         * HaveJobFailed.
+         * <p>Indicates whether a failed DLA task exists in the return result. Valid values:</p>
+         * <ul>
+         * <li><strong>true</strong>: A failed DLA task exists.</li>
+         * <li><strong>false</strong>: No failed DLA task exists.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>false</p>
          */
         public Builder haveJobFailed(Boolean haveJobFailed) {
             this.haveJobFailed = haveJobFailed;
@@ -154,7 +197,10 @@ public class DescribeDLAServiceResponseBody extends TeaModel {
         }
 
         /**
-         * HttpStatusCode.
+         * <p>The HTTP status code.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>200</p>
          */
         public Builder httpStatusCode(Integer httpStatusCode) {
             this.httpStatusCode = httpStatusCode;
@@ -162,7 +208,10 @@ public class DescribeDLAServiceResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * <p>The ID of the request.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>4F1888AC-1138-4995-B9FE-D2734F61C058</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -170,7 +219,15 @@ public class DescribeDLAServiceResponseBody extends TeaModel {
         }
 
         /**
-         * State.
+         * <p>The status of the DLA service for the backup schedule. Valid values:</p>
+         * <ul>
+         * <li><strong>Running</strong>: DLA is running.</li>
+         * <li><strong>Closing</strong>: DLA is being disabled.</li>
+         * <li><strong>Closed</strong>: DLA is disabled.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>Running</p>
          */
         public Builder state(String state) {
             this.state = state;
@@ -178,7 +235,10 @@ public class DescribeDLAServiceResponseBody extends TeaModel {
         }
 
         /**
-         * Success.
+         * <p>Indicates whether the request is successful.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder success(Boolean success) {
             this.success = success;

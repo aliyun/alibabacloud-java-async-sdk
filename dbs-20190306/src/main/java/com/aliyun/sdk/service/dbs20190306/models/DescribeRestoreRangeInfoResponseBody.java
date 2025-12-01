@@ -1,33 +1,38 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.dbs20190306.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeRestoreRangeInfoResponseBody} extends {@link TeaModel}
  *
  * <p>DescribeRestoreRangeInfoResponseBody</p>
  */
 public class DescribeRestoreRangeInfoResponseBody extends TeaModel {
-    @NameInMap("ErrCode")
+    @com.aliyun.core.annotation.NameInMap("ErrCode")
     private String errCode;
 
-    @NameInMap("ErrMessage")
+    @com.aliyun.core.annotation.NameInMap("ErrMessage")
     private String errMessage;
 
-    @NameInMap("HttpStatusCode")
+    @com.aliyun.core.annotation.NameInMap("HttpStatusCode")
     private Integer httpStatusCode;
 
-    @NameInMap("Items")
+    @com.aliyun.core.annotation.NameInMap("Items")
     private Items items;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("Success")
+    @com.aliyun.core.annotation.NameInMap("Success")
     private Boolean success;
 
     private DescribeRestoreRangeInfoResponseBody(Builder builder) {
@@ -45,6 +50,10 @@ public class DescribeRestoreRangeInfoResponseBody extends TeaModel {
 
     public static DescribeRestoreRangeInfoResponseBody create() {
         return builder().build();
+    }
+
+    public Builder toBuilder() {
+        return new Builder(this);
     }
 
     /**
@@ -97,8 +106,23 @@ public class DescribeRestoreRangeInfoResponseBody extends TeaModel {
         private String requestId; 
         private Boolean success; 
 
+        private Builder() {
+        } 
+
+        private Builder(DescribeRestoreRangeInfoResponseBody model) {
+            this.errCode = model.errCode;
+            this.errMessage = model.errMessage;
+            this.httpStatusCode = model.httpStatusCode;
+            this.items = model.items;
+            this.requestId = model.requestId;
+            this.success = model.success;
+        } 
+
         /**
-         * ErrCode.
+         * <p>The error code.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Param.NotFound</p>
          */
         public Builder errCode(String errCode) {
             this.errCode = errCode;
@@ -106,7 +130,10 @@ public class DescribeRestoreRangeInfoResponseBody extends TeaModel {
         }
 
         /**
-         * ErrMessage.
+         * <p>The error message.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>The specified parameter %s value is not valid.</p>
          */
         public Builder errMessage(String errMessage) {
             this.errMessage = errMessage;
@@ -114,7 +141,10 @@ public class DescribeRestoreRangeInfoResponseBody extends TeaModel {
         }
 
         /**
-         * HttpStatusCode.
+         * <p>The HTTP status code.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>200</p>
          */
         public Builder httpStatusCode(Integer httpStatusCode) {
             this.httpStatusCode = httpStatusCode;
@@ -122,7 +152,7 @@ public class DescribeRestoreRangeInfoResponseBody extends TeaModel {
         }
 
         /**
-         * Items.
+         * <p>The information about the time ranges to which you can restore data.</p>
          */
         public Builder items(Items items) {
             this.items = items;
@@ -130,7 +160,10 @@ public class DescribeRestoreRangeInfoResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * <p>The ID of the request.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>E2BD9DFC-6760-5F49-97C5-DA739E29****</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -138,7 +171,14 @@ public class DescribeRestoreRangeInfoResponseBody extends TeaModel {
         }
 
         /**
-         * Success.
+         * <p>Indicates whether the request is successful. Valid values:</p>
+         * <ul>
+         * <li><strong>true</strong>: The request is successful.</li>
+         * <li><strong>false</strong>: The request fails.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder success(Boolean success) {
             this.success = success;
@@ -151,14 +191,20 @@ public class DescribeRestoreRangeInfoResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link DescribeRestoreRangeInfoResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeRestoreRangeInfoResponseBody</p>
+     */
     public static class FullBackupDetail extends TeaModel {
-        @NameInMap("BackupSetId")
+        @com.aliyun.core.annotation.NameInMap("BackupSetId")
         private String backupSetId;
 
-        @NameInMap("EndTime")
+        @com.aliyun.core.annotation.NameInMap("EndTime")
         private Long endTime;
 
-        @NameInMap("StartTime")
+        @com.aliyun.core.annotation.NameInMap("StartTime")
         private Long startTime;
 
         private FullBackupDetail(Builder builder) {
@@ -201,8 +247,20 @@ public class DescribeRestoreRangeInfoResponseBody extends TeaModel {
             private Long endTime; 
             private Long startTime; 
 
+            private Builder() {
+            } 
+
+            private Builder(FullBackupDetail model) {
+                this.backupSetId = model.backupSetId;
+                this.endTime = model.endTime;
+                this.startTime = model.startTime;
+            } 
+
             /**
-             * BackupSetId.
+             * <p>The ID of the backup set.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>qecnsxkd****</p>
              */
             public Builder backupSetId(String backupSetId) {
                 this.backupSetId = backupSetId;
@@ -210,7 +268,10 @@ public class DescribeRestoreRangeInfoResponseBody extends TeaModel {
             }
 
             /**
-             * EndTime.
+             * <p>The end time of the full backup task. Example: 1646760308000.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1646760308000</p>
              */
             public Builder endTime(Long endTime) {
                 this.endTime = endTime;
@@ -218,7 +279,10 @@ public class DescribeRestoreRangeInfoResponseBody extends TeaModel {
             }
 
             /**
-             * StartTime.
+             * <p>The start time of the full backup task. Example: 1646760282000.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1646760282000</p>
              */
             public Builder startTime(Long startTime) {
                 this.startTime = startTime;
@@ -232,9 +296,15 @@ public class DescribeRestoreRangeInfoResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link DescribeRestoreRangeInfoResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeRestoreRangeInfoResponseBody</p>
+     */
     public static class FullBackupList extends TeaModel {
-        @NameInMap("FullBackupDetail")
-        private java.util.List < FullBackupDetail> fullBackupDetail;
+        @com.aliyun.core.annotation.NameInMap("FullBackupDetail")
+        private java.util.List<FullBackupDetail> fullBackupDetail;
 
         private FullBackupList(Builder builder) {
             this.fullBackupDetail = builder.fullBackupDetail;
@@ -251,17 +321,24 @@ public class DescribeRestoreRangeInfoResponseBody extends TeaModel {
         /**
          * @return fullBackupDetail
          */
-        public java.util.List < FullBackupDetail> getFullBackupDetail() {
+        public java.util.List<FullBackupDetail> getFullBackupDetail() {
             return this.fullBackupDetail;
         }
 
         public static final class Builder {
-            private java.util.List < FullBackupDetail> fullBackupDetail; 
+            private java.util.List<FullBackupDetail> fullBackupDetail; 
+
+            private Builder() {
+            } 
+
+            private Builder(FullBackupList model) {
+                this.fullBackupDetail = model.fullBackupDetail;
+            } 
 
             /**
              * FullBackupDetail.
              */
-            public Builder fullBackupDetail(java.util.List < FullBackupDetail> fullBackupDetail) {
+            public Builder fullBackupDetail(java.util.List<FullBackupDetail> fullBackupDetail) {
                 this.fullBackupDetail = fullBackupDetail;
                 return this;
             }
@@ -273,23 +350,29 @@ public class DescribeRestoreRangeInfoResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link DescribeRestoreRangeInfoResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeRestoreRangeInfoResponseBody</p>
+     */
     public static class DBSRecoverRange extends TeaModel {
-        @NameInMap("BeginTimestampForRestore")
+        @com.aliyun.core.annotation.NameInMap("BeginTimestampForRestore")
         private Long beginTimestampForRestore;
 
-        @NameInMap("EndTimestampForRestore")
+        @com.aliyun.core.annotation.NameInMap("EndTimestampForRestore")
         private Long endTimestampForRestore;
 
-        @NameInMap("FullBackupList")
+        @com.aliyun.core.annotation.NameInMap("FullBackupList")
         private FullBackupList fullBackupList;
 
-        @NameInMap("RangeType")
+        @com.aliyun.core.annotation.NameInMap("RangeType")
         private String rangeType;
 
-        @NameInMap("SourceEndpointInstanceID")
+        @com.aliyun.core.annotation.NameInMap("SourceEndpointInstanceID")
         private String sourceEndpointInstanceID;
 
-        @NameInMap("SourceEndpointInstanceType")
+        @com.aliyun.core.annotation.NameInMap("SourceEndpointInstanceType")
         private String sourceEndpointInstanceType;
 
         private DBSRecoverRange(Builder builder) {
@@ -359,8 +442,23 @@ public class DescribeRestoreRangeInfoResponseBody extends TeaModel {
             private String sourceEndpointInstanceID; 
             private String sourceEndpointInstanceType; 
 
+            private Builder() {
+            } 
+
+            private Builder(DBSRecoverRange model) {
+                this.beginTimestampForRestore = model.beginTimestampForRestore;
+                this.endTimestampForRestore = model.endTimestampForRestore;
+                this.fullBackupList = model.fullBackupList;
+                this.rangeType = model.rangeType;
+                this.sourceEndpointInstanceID = model.sourceEndpointInstanceID;
+                this.sourceEndpointInstanceType = model.sourceEndpointInstanceType;
+            } 
+
             /**
-             * BeginTimestampForRestore.
+             * <p>The beginning of the time range to which you can restore data.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1646760282000</p>
              */
             public Builder beginTimestampForRestore(Long beginTimestampForRestore) {
                 this.beginTimestampForRestore = beginTimestampForRestore;
@@ -368,7 +466,10 @@ public class DescribeRestoreRangeInfoResponseBody extends TeaModel {
             }
 
             /**
-             * EndTimestampForRestore.
+             * <p>The end of the time range to which you can restore data.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1646760308000</p>
              */
             public Builder endTimestampForRestore(Long endTimestampForRestore) {
                 this.endTimestampForRestore = endTimestampForRestore;
@@ -376,7 +477,7 @@ public class DescribeRestoreRangeInfoResponseBody extends TeaModel {
             }
 
             /**
-             * FullBackupList.
+             * <p>If the value of the RangeType parameter is point, this parameter is returned. The value of this parameter describes information about all backup points in the time range.</p>
              */
             public Builder fullBackupList(FullBackupList fullBackupList) {
                 this.fullBackupList = fullBackupList;
@@ -384,7 +485,14 @@ public class DescribeRestoreRangeInfoResponseBody extends TeaModel {
             }
 
             /**
-             * RangeType.
+             * <p>The type of the time range to which you can restore data.</p>
+             * <ul>
+             * <li><strong>point</strong>: The time range contains discrete points in time at which full backups were performed.</li>
+             * <li><strong>range</strong>: The time range is a period of time for which continuous backup is performed. You can specify a random point in time in the time range to restore data.</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>point</p>
              */
             public Builder rangeType(String rangeType) {
                 this.rangeType = rangeType;
@@ -392,7 +500,10 @@ public class DescribeRestoreRangeInfoResponseBody extends TeaModel {
             }
 
             /**
-             * SourceEndpointInstanceID.
+             * <p>The ID of the database instance.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>rm-bp106x9tk2c91****</p>
              */
             public Builder sourceEndpointInstanceID(String sourceEndpointInstanceID) {
                 this.sourceEndpointInstanceID = sourceEndpointInstanceID;
@@ -400,7 +511,10 @@ public class DescribeRestoreRangeInfoResponseBody extends TeaModel {
             }
 
             /**
-             * SourceEndpointInstanceType.
+             * <p>The location of the database.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>rds</p>
              */
             public Builder sourceEndpointInstanceType(String sourceEndpointInstanceType) {
                 this.sourceEndpointInstanceType = sourceEndpointInstanceType;
@@ -414,9 +528,15 @@ public class DescribeRestoreRangeInfoResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link DescribeRestoreRangeInfoResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeRestoreRangeInfoResponseBody</p>
+     */
     public static class Items extends TeaModel {
-        @NameInMap("DBSRecoverRange")
-        private java.util.List < DBSRecoverRange> DBSRecoverRange;
+        @com.aliyun.core.annotation.NameInMap("DBSRecoverRange")
+        private java.util.List<DBSRecoverRange> DBSRecoverRange;
 
         private Items(Builder builder) {
             this.DBSRecoverRange = builder.DBSRecoverRange;
@@ -433,17 +553,24 @@ public class DescribeRestoreRangeInfoResponseBody extends TeaModel {
         /**
          * @return DBSRecoverRange
          */
-        public java.util.List < DBSRecoverRange> getDBSRecoverRange() {
+        public java.util.List<DBSRecoverRange> getDBSRecoverRange() {
             return this.DBSRecoverRange;
         }
 
         public static final class Builder {
-            private java.util.List < DBSRecoverRange> DBSRecoverRange; 
+            private java.util.List<DBSRecoverRange> DBSRecoverRange; 
+
+            private Builder() {
+            } 
+
+            private Builder(Items model) {
+                this.DBSRecoverRange = model.DBSRecoverRange;
+            } 
 
             /**
              * DBSRecoverRange.
              */
-            public Builder DBSRecoverRange(java.util.List < DBSRecoverRange> DBSRecoverRange) {
+            public Builder DBSRecoverRange(java.util.List<DBSRecoverRange> DBSRecoverRange) {
                 this.DBSRecoverRange = DBSRecoverRange;
                 return this;
             }
