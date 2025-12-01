@@ -26,6 +26,10 @@ public class RemoveCheckResultWhiteListRequest extends Request {
     private java.util.List<Long> checkIds;
 
     @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("InstanceIds")
+    private java.util.List<String> instanceIds;
+
+    @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("RuleId")
     private Long ruleId;
 
@@ -37,6 +41,7 @@ public class RemoveCheckResultWhiteListRequest extends Request {
         super(builder);
         this.checkGroupId = builder.checkGroupId;
         this.checkIds = builder.checkIds;
+        this.instanceIds = builder.instanceIds;
         this.ruleId = builder.ruleId;
         this.type = builder.type;
     }
@@ -69,6 +74,13 @@ public class RemoveCheckResultWhiteListRequest extends Request {
     }
 
     /**
+     * @return instanceIds
+     */
+    public java.util.List<String> getInstanceIds() {
+        return this.instanceIds;
+    }
+
+    /**
      * @return ruleId
      */
     public Long getRuleId() {
@@ -85,6 +97,7 @@ public class RemoveCheckResultWhiteListRequest extends Request {
     public static final class Builder extends Request.Builder<RemoveCheckResultWhiteListRequest, Builder> {
         private String checkGroupId; 
         private java.util.List<Long> checkIds; 
+        private java.util.List<String> instanceIds; 
         private Long ruleId; 
         private String type; 
 
@@ -96,6 +109,7 @@ public class RemoveCheckResultWhiteListRequest extends Request {
             super(request);
             this.checkGroupId = request.checkGroupId;
             this.checkIds = request.checkIds;
+            this.instanceIds = request.instanceIds;
             this.ruleId = request.ruleId;
             this.type = request.type;
         } 
@@ -118,6 +132,15 @@ public class RemoveCheckResultWhiteListRequest extends Request {
         public Builder checkIds(java.util.List<Long> checkIds) {
             this.putQueryParameter("CheckIds", checkIds);
             this.checkIds = checkIds;
+            return this;
+        }
+
+        /**
+         * InstanceIds.
+         */
+        public Builder instanceIds(java.util.List<String> instanceIds) {
+            this.putQueryParameter("InstanceIds", instanceIds);
+            this.instanceIds = instanceIds;
             return this;
         }
 

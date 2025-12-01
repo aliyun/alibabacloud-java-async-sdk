@@ -22,6 +22,10 @@ public class VerifyCheckInstanceResultRequest extends Request {
     private Long checkId;
 
     @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("CheckIds")
+    private java.util.List<Long> checkIds;
+
+    @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("InstanceIds")
     private java.util.List<String> instanceIds;
 
@@ -32,6 +36,7 @@ public class VerifyCheckInstanceResultRequest extends Request {
     private VerifyCheckInstanceResultRequest(Builder builder) {
         super(builder);
         this.checkId = builder.checkId;
+        this.checkIds = builder.checkIds;
         this.instanceIds = builder.instanceIds;
         this.taskSource = builder.taskSource;
     }
@@ -57,6 +62,13 @@ public class VerifyCheckInstanceResultRequest extends Request {
     }
 
     /**
+     * @return checkIds
+     */
+    public java.util.List<Long> getCheckIds() {
+        return this.checkIds;
+    }
+
+    /**
      * @return instanceIds
      */
     public java.util.List<String> getInstanceIds() {
@@ -72,6 +84,7 @@ public class VerifyCheckInstanceResultRequest extends Request {
 
     public static final class Builder extends Request.Builder<VerifyCheckInstanceResultRequest, Builder> {
         private Long checkId; 
+        private java.util.List<Long> checkIds; 
         private java.util.List<String> instanceIds; 
         private String taskSource; 
 
@@ -82,6 +95,7 @@ public class VerifyCheckInstanceResultRequest extends Request {
         private Builder(VerifyCheckInstanceResultRequest request) {
             super(request);
             this.checkId = request.checkId;
+            this.checkIds = request.checkIds;
             this.instanceIds = request.instanceIds;
             this.taskSource = request.taskSource;
         } 
@@ -98,6 +112,15 @@ public class VerifyCheckInstanceResultRequest extends Request {
         public Builder checkId(Long checkId) {
             this.putQueryParameter("CheckId", checkId);
             this.checkId = checkId;
+            return this;
+        }
+
+        /**
+         * CheckIds.
+         */
+        public Builder checkIds(java.util.List<Long> checkIds) {
+            this.putQueryParameter("CheckIds", checkIds);
+            this.checkIds = checkIds;
             return this;
         }
 

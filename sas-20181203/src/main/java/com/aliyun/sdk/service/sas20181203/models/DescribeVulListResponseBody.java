@@ -1693,7 +1693,10 @@ public class DescribeVulListResponseBody extends TeaModel {
             }
 
             /**
-             * ContainerId.
+             * <p>The container ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>04d20e98c8e2c93b7b864372084320a15a58c8671e53c972ce3a71d9c163****</p>
              */
             public Builder containerId(String containerId) {
                 this.containerId = containerId;

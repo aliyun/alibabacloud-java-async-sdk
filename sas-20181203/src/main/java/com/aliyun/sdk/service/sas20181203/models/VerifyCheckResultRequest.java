@@ -22,12 +22,17 @@ public class VerifyCheckResultRequest extends Request {
     private java.util.List<Long> checkIds;
 
     @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("InstanceIds")
+    private java.util.List<String> instanceIds;
+
+    @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("TaskSource")
     private String taskSource;
 
     private VerifyCheckResultRequest(Builder builder) {
         super(builder);
         this.checkIds = builder.checkIds;
+        this.instanceIds = builder.instanceIds;
         this.taskSource = builder.taskSource;
     }
 
@@ -52,6 +57,13 @@ public class VerifyCheckResultRequest extends Request {
     }
 
     /**
+     * @return instanceIds
+     */
+    public java.util.List<String> getInstanceIds() {
+        return this.instanceIds;
+    }
+
+    /**
      * @return taskSource
      */
     public String getTaskSource() {
@@ -60,6 +72,7 @@ public class VerifyCheckResultRequest extends Request {
 
     public static final class Builder extends Request.Builder<VerifyCheckResultRequest, Builder> {
         private java.util.List<Long> checkIds; 
+        private java.util.List<String> instanceIds; 
         private String taskSource; 
 
         private Builder() {
@@ -69,6 +82,7 @@ public class VerifyCheckResultRequest extends Request {
         private Builder(VerifyCheckResultRequest request) {
             super(request);
             this.checkIds = request.checkIds;
+            this.instanceIds = request.instanceIds;
             this.taskSource = request.taskSource;
         } 
 
@@ -78,6 +92,15 @@ public class VerifyCheckResultRequest extends Request {
         public Builder checkIds(java.util.List<Long> checkIds) {
             this.putQueryParameter("CheckIds", checkIds);
             this.checkIds = checkIds;
+            return this;
+        }
+
+        /**
+         * InstanceIds.
+         */
+        public Builder instanceIds(java.util.List<String> instanceIds) {
+            this.putQueryParameter("InstanceIds", instanceIds);
+            this.instanceIds = instanceIds;
             return this;
         }
 
