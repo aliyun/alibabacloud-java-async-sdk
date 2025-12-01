@@ -22,6 +22,10 @@ public class ForwardAIAgentCallRequest extends Request {
     private String calledNumber;
 
     @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("CallerNumber")
+    private String callerNumber;
+
+    @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("ErrorPrompt")
     private String errorPrompt;
 
@@ -36,6 +40,7 @@ public class ForwardAIAgentCallRequest extends Request {
     private ForwardAIAgentCallRequest(Builder builder) {
         super(builder);
         this.calledNumber = builder.calledNumber;
+        this.callerNumber = builder.callerNumber;
         this.errorPrompt = builder.errorPrompt;
         this.instanceId = builder.instanceId;
         this.transferPrompt = builder.transferPrompt;
@@ -62,6 +67,13 @@ public class ForwardAIAgentCallRequest extends Request {
     }
 
     /**
+     * @return callerNumber
+     */
+    public String getCallerNumber() {
+        return this.callerNumber;
+    }
+
+    /**
      * @return errorPrompt
      */
     public String getErrorPrompt() {
@@ -84,6 +96,7 @@ public class ForwardAIAgentCallRequest extends Request {
 
     public static final class Builder extends Request.Builder<ForwardAIAgentCallRequest, Builder> {
         private String calledNumber; 
+        private String callerNumber; 
         private String errorPrompt; 
         private String instanceId; 
         private String transferPrompt; 
@@ -95,6 +108,7 @@ public class ForwardAIAgentCallRequest extends Request {
         private Builder(ForwardAIAgentCallRequest request) {
             super(request);
             this.calledNumber = request.calledNumber;
+            this.callerNumber = request.callerNumber;
             this.errorPrompt = request.errorPrompt;
             this.instanceId = request.instanceId;
             this.transferPrompt = request.transferPrompt;
@@ -106,6 +120,15 @@ public class ForwardAIAgentCallRequest extends Request {
         public Builder calledNumber(String calledNumber) {
             this.putQueryParameter("CalledNumber", calledNumber);
             this.calledNumber = calledNumber;
+            return this;
+        }
+
+        /**
+         * CallerNumber.
+         */
+        public Builder callerNumber(String callerNumber) {
+            this.putQueryParameter("CallerNumber", callerNumber);
+            this.callerNumber = callerNumber;
             return this;
         }
 

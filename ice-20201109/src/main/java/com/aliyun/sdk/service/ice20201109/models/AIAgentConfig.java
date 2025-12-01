@@ -23,6 +23,9 @@ public class AIAgentConfig extends TeaModel {
     @com.aliyun.core.annotation.NameInMap("AsrConfig")
     private AsrConfig asrConfig;
 
+    @com.aliyun.core.annotation.NameInMap("AutoSpeechConfig")
+    private AutoSpeechConfig autoSpeechConfig;
+
     @com.aliyun.core.annotation.NameInMap("AvatarConfig")
     private AvatarConfig avatarConfig;
 
@@ -86,6 +89,7 @@ public class AIAgentConfig extends TeaModel {
     private AIAgentConfig(Builder builder) {
         this.ambientSoundConfig = builder.ambientSoundConfig;
         this.asrConfig = builder.asrConfig;
+        this.autoSpeechConfig = builder.autoSpeechConfig;
         this.avatarConfig = builder.avatarConfig;
         this.avatarUrl = builder.avatarUrl;
         this.avatarUrlType = builder.avatarUrlType;
@@ -132,6 +136,13 @@ public class AIAgentConfig extends TeaModel {
      */
     public AsrConfig getAsrConfig() {
         return this.asrConfig;
+    }
+
+    /**
+     * @return autoSpeechConfig
+     */
+    public AutoSpeechConfig getAutoSpeechConfig() {
+        return this.autoSpeechConfig;
     }
 
     /**
@@ -277,6 +288,7 @@ public class AIAgentConfig extends TeaModel {
     public static final class Builder {
         private AmbientSoundConfig ambientSoundConfig; 
         private AsrConfig asrConfig; 
+        private AutoSpeechConfig autoSpeechConfig; 
         private AvatarConfig avatarConfig; 
         private String avatarUrl; 
         private String avatarUrlType; 
@@ -304,6 +316,7 @@ public class AIAgentConfig extends TeaModel {
         private Builder(AIAgentConfig model) {
             this.ambientSoundConfig = model.ambientSoundConfig;
             this.asrConfig = model.asrConfig;
+            this.autoSpeechConfig = model.autoSpeechConfig;
             this.avatarConfig = model.avatarConfig;
             this.avatarUrl = model.avatarUrl;
             this.avatarUrlType = model.avatarUrlType;
@@ -339,6 +352,14 @@ public class AIAgentConfig extends TeaModel {
          */
         public Builder asrConfig(AsrConfig asrConfig) {
             this.asrConfig = asrConfig;
+            return this;
+        }
+
+        /**
+         * AutoSpeechConfig.
+         */
+        public Builder autoSpeechConfig(AutoSpeechConfig autoSpeechConfig) {
+            this.autoSpeechConfig = autoSpeechConfig;
             return this;
         }
 
@@ -748,6 +769,402 @@ public class AIAgentConfig extends TeaModel {
      *
      * <p>AIAgentConfig</p>
      */
+    public static class Messages extends TeaModel {
+        @com.aliyun.core.annotation.NameInMap("Probability")
+        private Double probability;
+
+        @com.aliyun.core.annotation.NameInMap("Text")
+        private String text;
+
+        private Messages(Builder builder) {
+            this.probability = builder.probability;
+            this.text = builder.text;
+        }
+
+        public static Builder builder() {
+            return new Builder();
+        }
+
+        public static Messages create() {
+            return builder().build();
+        }
+
+        /**
+         * @return probability
+         */
+        public Double getProbability() {
+            return this.probability;
+        }
+
+        /**
+         * @return text
+         */
+        public String getText() {
+            return this.text;
+        }
+
+        public static final class Builder {
+            private Double probability; 
+            private String text; 
+
+            private Builder() {
+            } 
+
+            private Builder(Messages model) {
+                this.probability = model.probability;
+                this.text = model.text;
+            } 
+
+            /**
+             * Probability.
+             */
+            public Builder probability(Double probability) {
+                this.probability = probability;
+                return this;
+            }
+
+            /**
+             * Text.
+             */
+            public Builder text(String text) {
+                this.text = text;
+                return this;
+            }
+
+            public Messages build() {
+                return new Messages(this);
+            } 
+
+        } 
+
+    }
+    /**
+     * 
+     * {@link AIAgentConfig} extends {@link TeaModel}
+     *
+     * <p>AIAgentConfig</p>
+     */
+    public static class LlmPending extends TeaModel {
+        @com.aliyun.core.annotation.NameInMap("Messages")
+        private java.util.List<Messages> messages;
+
+        @com.aliyun.core.annotation.NameInMap("WaitTime")
+        private Integer waitTime;
+
+        private LlmPending(Builder builder) {
+            this.messages = builder.messages;
+            this.waitTime = builder.waitTime;
+        }
+
+        public static Builder builder() {
+            return new Builder();
+        }
+
+        public static LlmPending create() {
+            return builder().build();
+        }
+
+        /**
+         * @return messages
+         */
+        public java.util.List<Messages> getMessages() {
+            return this.messages;
+        }
+
+        /**
+         * @return waitTime
+         */
+        public Integer getWaitTime() {
+            return this.waitTime;
+        }
+
+        public static final class Builder {
+            private java.util.List<Messages> messages; 
+            private Integer waitTime; 
+
+            private Builder() {
+            } 
+
+            private Builder(LlmPending model) {
+                this.messages = model.messages;
+                this.waitTime = model.waitTime;
+            } 
+
+            /**
+             * Messages.
+             */
+            public Builder messages(java.util.List<Messages> messages) {
+                this.messages = messages;
+                return this;
+            }
+
+            /**
+             * WaitTime.
+             */
+            public Builder waitTime(Integer waitTime) {
+                this.waitTime = waitTime;
+                return this;
+            }
+
+            public LlmPending build() {
+                return new LlmPending(this);
+            } 
+
+        } 
+
+    }
+    /**
+     * 
+     * {@link AIAgentConfig} extends {@link TeaModel}
+     *
+     * <p>AIAgentConfig</p>
+     */
+    public static class UserIdleMessages extends TeaModel {
+        @com.aliyun.core.annotation.NameInMap("Probability")
+        private Double probability;
+
+        @com.aliyun.core.annotation.NameInMap("Text")
+        private String text;
+
+        private UserIdleMessages(Builder builder) {
+            this.probability = builder.probability;
+            this.text = builder.text;
+        }
+
+        public static Builder builder() {
+            return new Builder();
+        }
+
+        public static UserIdleMessages create() {
+            return builder().build();
+        }
+
+        /**
+         * @return probability
+         */
+        public Double getProbability() {
+            return this.probability;
+        }
+
+        /**
+         * @return text
+         */
+        public String getText() {
+            return this.text;
+        }
+
+        public static final class Builder {
+            private Double probability; 
+            private String text; 
+
+            private Builder() {
+            } 
+
+            private Builder(UserIdleMessages model) {
+                this.probability = model.probability;
+                this.text = model.text;
+            } 
+
+            /**
+             * Probability.
+             */
+            public Builder probability(Double probability) {
+                this.probability = probability;
+                return this;
+            }
+
+            /**
+             * Text.
+             */
+            public Builder text(String text) {
+                this.text = text;
+                return this;
+            }
+
+            public UserIdleMessages build() {
+                return new UserIdleMessages(this);
+            } 
+
+        } 
+
+    }
+    /**
+     * 
+     * {@link AIAgentConfig} extends {@link TeaModel}
+     *
+     * <p>AIAgentConfig</p>
+     */
+    public static class UserIdle extends TeaModel {
+        @com.aliyun.core.annotation.NameInMap("MaxRepeats")
+        private Integer maxRepeats;
+
+        @com.aliyun.core.annotation.NameInMap("Messages")
+        private java.util.List<UserIdleMessages> messages;
+
+        @com.aliyun.core.annotation.NameInMap("WaitTime")
+        private Integer waitTime;
+
+        private UserIdle(Builder builder) {
+            this.maxRepeats = builder.maxRepeats;
+            this.messages = builder.messages;
+            this.waitTime = builder.waitTime;
+        }
+
+        public static Builder builder() {
+            return new Builder();
+        }
+
+        public static UserIdle create() {
+            return builder().build();
+        }
+
+        /**
+         * @return maxRepeats
+         */
+        public Integer getMaxRepeats() {
+            return this.maxRepeats;
+        }
+
+        /**
+         * @return messages
+         */
+        public java.util.List<UserIdleMessages> getMessages() {
+            return this.messages;
+        }
+
+        /**
+         * @return waitTime
+         */
+        public Integer getWaitTime() {
+            return this.waitTime;
+        }
+
+        public static final class Builder {
+            private Integer maxRepeats; 
+            private java.util.List<UserIdleMessages> messages; 
+            private Integer waitTime; 
+
+            private Builder() {
+            } 
+
+            private Builder(UserIdle model) {
+                this.maxRepeats = model.maxRepeats;
+                this.messages = model.messages;
+                this.waitTime = model.waitTime;
+            } 
+
+            /**
+             * MaxRepeats.
+             */
+            public Builder maxRepeats(Integer maxRepeats) {
+                this.maxRepeats = maxRepeats;
+                return this;
+            }
+
+            /**
+             * Messages.
+             */
+            public Builder messages(java.util.List<UserIdleMessages> messages) {
+                this.messages = messages;
+                return this;
+            }
+
+            /**
+             * WaitTime.
+             */
+            public Builder waitTime(Integer waitTime) {
+                this.waitTime = waitTime;
+                return this;
+            }
+
+            public UserIdle build() {
+                return new UserIdle(this);
+            } 
+
+        } 
+
+    }
+    /**
+     * 
+     * {@link AIAgentConfig} extends {@link TeaModel}
+     *
+     * <p>AIAgentConfig</p>
+     */
+    public static class AutoSpeechConfig extends TeaModel {
+        @com.aliyun.core.annotation.NameInMap("LlmPending")
+        private LlmPending llmPending;
+
+        @com.aliyun.core.annotation.NameInMap("UserIdle")
+        private UserIdle userIdle;
+
+        private AutoSpeechConfig(Builder builder) {
+            this.llmPending = builder.llmPending;
+            this.userIdle = builder.userIdle;
+        }
+
+        public static Builder builder() {
+            return new Builder();
+        }
+
+        public static AutoSpeechConfig create() {
+            return builder().build();
+        }
+
+        /**
+         * @return llmPending
+         */
+        public LlmPending getLlmPending() {
+            return this.llmPending;
+        }
+
+        /**
+         * @return userIdle
+         */
+        public UserIdle getUserIdle() {
+            return this.userIdle;
+        }
+
+        public static final class Builder {
+            private LlmPending llmPending; 
+            private UserIdle userIdle; 
+
+            private Builder() {
+            } 
+
+            private Builder(AutoSpeechConfig model) {
+                this.llmPending = model.llmPending;
+                this.userIdle = model.userIdle;
+            } 
+
+            /**
+             * LlmPending.
+             */
+            public Builder llmPending(LlmPending llmPending) {
+                this.llmPending = llmPending;
+                return this;
+            }
+
+            /**
+             * UserIdle.
+             */
+            public Builder userIdle(UserIdle userIdle) {
+                this.userIdle = userIdle;
+                return this;
+            }
+
+            public AutoSpeechConfig build() {
+                return new AutoSpeechConfig(this);
+            } 
+
+        } 
+
+    }
+    /**
+     * 
+     * {@link AIAgentConfig} extends {@link TeaModel}
+     *
+     * <p>AIAgentConfig</p>
+     */
     public static class AvatarConfig extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("AvatarId")
         private String avatarId;
@@ -1034,6 +1451,9 @@ public class AIAgentConfig extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("FunctionMap")
         private java.util.List<FunctionMap> functionMap;
 
+        @com.aliyun.core.annotation.NameInMap("HistorySyncWithTTS")
+        private Boolean historySyncWithTTS;
+
         @com.aliyun.core.annotation.NameInMap("LlmCompleteReply")
         private Boolean llmCompleteReply;
 
@@ -1058,6 +1478,7 @@ public class AIAgentConfig extends TeaModel {
         private LlmConfig(Builder builder) {
             this.bailianAppParams = builder.bailianAppParams;
             this.functionMap = builder.functionMap;
+            this.historySyncWithTTS = builder.historySyncWithTTS;
             this.llmCompleteReply = builder.llmCompleteReply;
             this.llmHistory = builder.llmHistory;
             this.llmHistoryLimit = builder.llmHistoryLimit;
@@ -1087,6 +1508,13 @@ public class AIAgentConfig extends TeaModel {
          */
         public java.util.List<FunctionMap> getFunctionMap() {
             return this.functionMap;
+        }
+
+        /**
+         * @return historySyncWithTTS
+         */
+        public Boolean getHistorySyncWithTTS() {
+            return this.historySyncWithTTS;
         }
 
         /**
@@ -1141,6 +1569,7 @@ public class AIAgentConfig extends TeaModel {
         public static final class Builder {
             private String bailianAppParams; 
             private java.util.List<FunctionMap> functionMap; 
+            private Boolean historySyncWithTTS; 
             private Boolean llmCompleteReply; 
             private java.util.List<LlmHistory> llmHistory; 
             private Integer llmHistoryLimit; 
@@ -1155,6 +1584,7 @@ public class AIAgentConfig extends TeaModel {
             private Builder(LlmConfig model) {
                 this.bailianAppParams = model.bailianAppParams;
                 this.functionMap = model.functionMap;
+                this.historySyncWithTTS = model.historySyncWithTTS;
                 this.llmCompleteReply = model.llmCompleteReply;
                 this.llmHistory = model.llmHistory;
                 this.llmHistoryLimit = model.llmHistoryLimit;
@@ -1177,6 +1607,14 @@ public class AIAgentConfig extends TeaModel {
              */
             public Builder functionMap(java.util.List<FunctionMap> functionMap) {
                 this.functionMap = functionMap;
+                return this;
+            }
+
+            /**
+             * HistorySyncWithTTS.
+             */
+            public Builder historySyncWithTTS(Boolean historySyncWithTTS) {
+                this.historySyncWithTTS = historySyncWithTTS;
                 return this;
             }
 
