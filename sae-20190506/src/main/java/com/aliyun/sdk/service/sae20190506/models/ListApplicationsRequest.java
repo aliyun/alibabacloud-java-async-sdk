@@ -46,6 +46,10 @@ public class ListApplicationsRequest extends Request {
     private String namespaceId;
 
     @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("NewSaeVersion")
+    private String newSaeVersion;
+
+    @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("OrderBy")
     private String orderBy;
 
@@ -70,6 +74,7 @@ public class ListApplicationsRequest extends Request {
         this.fieldValue = builder.fieldValue;
         this.isStateful = builder.isStateful;
         this.namespaceId = builder.namespaceId;
+        this.newSaeVersion = builder.newSaeVersion;
         this.orderBy = builder.orderBy;
         this.pageSize = builder.pageSize;
         this.reverse = builder.reverse;
@@ -139,6 +144,13 @@ public class ListApplicationsRequest extends Request {
     }
 
     /**
+     * @return newSaeVersion
+     */
+    public String getNewSaeVersion() {
+        return this.newSaeVersion;
+    }
+
+    /**
      * @return orderBy
      */
     public String getOrderBy() {
@@ -174,6 +186,7 @@ public class ListApplicationsRequest extends Request {
         private String fieldValue; 
         private String isStateful; 
         private String namespaceId; 
+        private String newSaeVersion; 
         private String orderBy; 
         private Integer pageSize; 
         private Boolean reverse; 
@@ -192,6 +205,7 @@ public class ListApplicationsRequest extends Request {
             this.fieldValue = request.fieldValue;
             this.isStateful = request.isStateful;
             this.namespaceId = request.namespaceId;
+            this.newSaeVersion = request.newSaeVersion;
             this.orderBy = request.orderBy;
             this.pageSize = request.pageSize;
             this.reverse = request.reverse;
@@ -287,6 +301,15 @@ public class ListApplicationsRequest extends Request {
         public Builder namespaceId(String namespaceId) {
             this.putQueryParameter("NamespaceId", namespaceId);
             this.namespaceId = namespaceId;
+            return this;
+        }
+
+        /**
+         * NewSaeVersion.
+         */
+        public Builder newSaeVersion(String newSaeVersion) {
+            this.putQueryParameter("NewSaeVersion", newSaeVersion);
+            this.newSaeVersion = newSaeVersion;
             return this;
         }
 
