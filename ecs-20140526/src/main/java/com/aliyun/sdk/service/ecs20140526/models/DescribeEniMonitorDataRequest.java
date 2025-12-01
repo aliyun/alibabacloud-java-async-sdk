@@ -268,13 +268,13 @@ public class DescribeEniMonitorDataRequest extends Request {
         }
 
         /**
-         * <p>The interval at which to retrieve the monitoring data. Unit: seconds. Valid values:</p>
+         * <p>The interval at which to retrieve the monitoring data. Unit: seconds. Default value: Month. Valid values:</p>
          * <ul>
          * <li>60</li>
          * <li>600</li>
          * <li>3600</li>
          * </ul>
-         * <p>Default value: 60.</p>
+         * <p>Default: 60.</p>
          * 
          * <strong>example:</strong>
          * <p>60</p>

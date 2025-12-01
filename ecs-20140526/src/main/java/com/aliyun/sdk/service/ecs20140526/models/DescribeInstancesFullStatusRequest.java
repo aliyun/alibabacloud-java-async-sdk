@@ -332,8 +332,9 @@ public class DescribeInstancesFullStatusRequest extends Request {
         /**
          * <p>The health status of the instance. Valid values:</p>
          * <ul>
-         * <li>OK</li>
          * <li>Impaired</li>
+         * <li>Warning: The instance performance may be degraded due to maintenance or technical issues.</li>
+         * <li>Maintaining</li>
          * <li>Initializing</li>
          * <li>InsufficientData</li>
          * <li>NotApplicable</li>

@@ -1310,7 +1310,7 @@ public class CreateImagePipelineRequest extends Request {
              * <p>You can use this parameter to specify the sizes of the system disk and data disks in the custom image. When you specify the size of the system disk, make sure that the specified size is greater than or equal to the size of the source image file. Unit: GiB. Valid values:</p>
              * <ul>
              * <li>When the N value is 1, this parameter specifies the size of the system disk in the custom image. Valid values: 1 to 2048.</li>
-             * <li>When the N value is an integer in the range of 2 to 17, this parameter specifies the size of a data disk in the custom image. Valid values: 1 to 2048.</li>
+             * <li>When the N value is an integer in the range of 2 to 17, this parameter creates a custom image from a data disk. Valid values: 1 to 2048.</li>
              * </ul>
              * <p>After the image file is uploaded to an OSS bucket, you can view the size of the image file in the OSS bucket.</p>
              * 
@@ -1323,7 +1323,7 @@ public class CreateImagePipelineRequest extends Request {
             }
 
             /**
-             * <p>The format of the image. Valid values:</p>
+             * <p>The format of the source image. Valid values:</p>
              * <ul>
              * <li>RAW</li>
              * <li>VHD</li>
@@ -1340,7 +1340,7 @@ public class CreateImagePipelineRequest extends Request {
             }
 
             /**
-             * <p>The OSS bucket where the image file is stored.</p>
+             * <p>The Object Storage Service (OSS) bucket where the image file is stored.</p>
              * 
              * <strong>example:</strong>
              * <p>ecsimageos</p>
@@ -1351,7 +1351,7 @@ public class CreateImagePipelineRequest extends Request {
             }
 
             /**
-             * <p>The name (key) of the object that the uploaded image is stored as in the OSS bucket.</p>
+             * <p>The name (key) of the object that the image file is stored as in the OSS bucket.</p>
              * 
              * <strong>example:</strong>
              * <p>CentOS_5.4_32.raw</p>
@@ -1429,10 +1429,10 @@ public class CreateImagePipelineRequest extends Request {
             }
 
             /**
-             * <p>Specifies whether the imported source image supports the Non-Volatile Memory Express (NVMe) protocol. Valid values:</p>
+             * <p>Specifies whether the imported source image supports the Non-Volatile Memory Express (NVMe) protocol. Valid value:</p>
              * <ul>
-             * <li>supported: The image supports the NVMe protocol. Instances created from the image also support the NVMe protocol.</li>
-             * <li>unsupported: The image does not support the NVMe protocol. Instances created from the image do not support the NVMe protocol.</li>
+             * <li>supported Instances created from the image also support the NVMe protocol.</li>
+             * <li>unsupported Instances created from the image do not support the NVMe protocol.</li>
              * </ul>
              * <p>Default value: unsupported.</p>
              * 
@@ -1744,7 +1744,7 @@ public class CreateImagePipelineRequest extends Request {
             }
 
             /**
-             * <p>The boot mode of the image. Valid values:</p>
+             * <p>The new boot mode of the image. Valid values:</p>
              * <ul>
              * <li>BIOS: BIOS mode</li>
              * <li>UEFI: Unified Extensible Firmware Interface (UEFI) mode</li>
@@ -1831,7 +1831,7 @@ public class CreateImagePipelineRequest extends Request {
             }
 
             /**
-             * <p>The operating system type. Valid values:</p>
+             * <p>The operating system type. Valid value:</p>
              * <ul>
              * <li>windows</li>
              * <li>linux</li>

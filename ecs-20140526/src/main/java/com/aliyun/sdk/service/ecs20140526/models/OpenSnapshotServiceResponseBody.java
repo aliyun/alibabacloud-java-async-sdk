@@ -12,15 +12,15 @@ import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
  * 
- * {@link AcceptInquiredSystemEventResponseBody} extends {@link TeaModel}
+ * {@link OpenSnapshotServiceResponseBody} extends {@link TeaModel}
  *
- * <p>AcceptInquiredSystemEventResponseBody</p>
+ * <p>OpenSnapshotServiceResponseBody</p>
  */
-public class AcceptInquiredSystemEventResponseBody extends TeaModel {
+public class OpenSnapshotServiceResponseBody extends TeaModel {
     @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    private AcceptInquiredSystemEventResponseBody(Builder builder) {
+    private OpenSnapshotServiceResponseBody(Builder builder) {
         this.requestId = builder.requestId;
     }
 
@@ -28,7 +28,7 @@ public class AcceptInquiredSystemEventResponseBody extends TeaModel {
         return new Builder();
     }
 
-    public static AcceptInquiredSystemEventResponseBody create() {
+    public static OpenSnapshotServiceResponseBody create() {
         return builder().build();
     }
 
@@ -49,20 +49,23 @@ public class AcceptInquiredSystemEventResponseBody extends TeaModel {
         private Builder() {
         } 
 
-        private Builder(AcceptInquiredSystemEventResponseBody model) {
+        private Builder(OpenSnapshotServiceResponseBody model) {
             this.requestId = model.requestId;
         } 
 
         /**
-         * RequestId.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>C36234E8-4C67-5F6C-8C07-F51B2EE2C560</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
             return this;
         }
 
-        public AcceptInquiredSystemEventResponseBody build() {
-            return new AcceptInquiredSystemEventResponseBody(this);
+        public OpenSnapshotServiceResponseBody build() {
+            return new OpenSnapshotServiceResponseBody(this);
         } 
 
     } 

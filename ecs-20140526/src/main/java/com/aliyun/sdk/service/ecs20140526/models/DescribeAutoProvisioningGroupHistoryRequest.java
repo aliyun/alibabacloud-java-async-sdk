@@ -245,7 +245,7 @@ public class DescribeAutoProvisioningGroupHistoryRequest extends Request {
 
         /**
          * <p>The number of entries per page. Valid values: 1 to 100.</p>
-         * <p>Default value: 10.</p>
+         * <p>and the default value is 10.</p>
          * 
          * <strong>example:</strong>
          * <p>5</p>

@@ -47,6 +47,10 @@ public class ReleaseDedicatedHostRequest extends Request {
     @com.aliyun.core.annotation.NameInMap("ResourceOwnerId")
     private Long resourceOwnerId;
 
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("TerminateSubscription")
+    private Boolean terminateSubscription;
+
     private ReleaseDedicatedHostRequest(Builder builder) {
         super(builder);
         this.sourceRegionId = builder.sourceRegionId;
@@ -56,6 +60,7 @@ public class ReleaseDedicatedHostRequest extends Request {
         this.regionId = builder.regionId;
         this.resourceOwnerAccount = builder.resourceOwnerAccount;
         this.resourceOwnerId = builder.resourceOwnerId;
+        this.terminateSubscription = builder.terminateSubscription;
     }
 
     public static Builder builder() {
@@ -120,6 +125,13 @@ public class ReleaseDedicatedHostRequest extends Request {
         return this.resourceOwnerId;
     }
 
+    /**
+     * @return terminateSubscription
+     */
+    public Boolean getTerminateSubscription() {
+        return this.terminateSubscription;
+    }
+
     public static final class Builder extends Request.Builder<ReleaseDedicatedHostRequest, Builder> {
         private String sourceRegionId; 
         private String dedicatedHostId; 
@@ -128,6 +140,7 @@ public class ReleaseDedicatedHostRequest extends Request {
         private String regionId; 
         private String resourceOwnerAccount; 
         private Long resourceOwnerId; 
+        private Boolean terminateSubscription; 
 
         private Builder() {
             super();
@@ -142,6 +155,7 @@ public class ReleaseDedicatedHostRequest extends Request {
             this.regionId = request.regionId;
             this.resourceOwnerAccount = request.resourceOwnerAccount;
             this.resourceOwnerId = request.resourceOwnerId;
+            this.terminateSubscription = request.terminateSubscription;
         } 
 
         /**
@@ -212,6 +226,23 @@ public class ReleaseDedicatedHostRequest extends Request {
         public Builder resourceOwnerId(Long resourceOwnerId) {
             this.putQueryParameter("ResourceOwnerId", resourceOwnerId);
             this.resourceOwnerId = resourceOwnerId;
+            return this;
+        }
+
+        /**
+         * <p>The expiration time of the subscription dedicated host.</p>
+         * <ul>
+         * <li>true</li>
+         * <li>false</li>
+         * </ul>
+         * <p>Default value: false.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>false</p>
+         */
+        public Builder terminateSubscription(Boolean terminateSubscription) {
+            this.putQueryParameter("TerminateSubscription", terminateSubscription);
+            this.terminateSubscription = terminateSubscription;
             return this;
         }
 

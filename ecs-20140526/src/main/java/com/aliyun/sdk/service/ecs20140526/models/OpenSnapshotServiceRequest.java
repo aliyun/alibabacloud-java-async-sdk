@@ -12,28 +12,11 @@ import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
  * 
- * {@link AcceptInquiredSystemEventRequest} extends {@link RequestModel}
+ * {@link OpenSnapshotServiceRequest} extends {@link RequestModel}
  *
- * <p>AcceptInquiredSystemEventRequest</p>
+ * <p>OpenSnapshotServiceRequest</p>
  */
-public class AcceptInquiredSystemEventRequest extends Request {
-    @com.aliyun.core.annotation.Host
-    @com.aliyun.core.annotation.NameInMap("SourceRegionId")
-    private String sourceRegionId;
-
-    @com.aliyun.core.annotation.Query
-    @com.aliyun.core.annotation.NameInMap("Choice")
-    private String choice;
-
-    @com.aliyun.core.annotation.Query
-    @com.aliyun.core.annotation.NameInMap("EventId")
-    @com.aliyun.core.annotation.Validation(required = true)
-    private String eventId;
-
-    @com.aliyun.core.annotation.Query
-    @com.aliyun.core.annotation.NameInMap("OwnerAccount")
-    private String ownerAccount;
-
+public class OpenSnapshotServiceRequest extends Request {
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("OwnerId")
     private Long ownerId;
@@ -51,12 +34,8 @@ public class AcceptInquiredSystemEventRequest extends Request {
     @com.aliyun.core.annotation.NameInMap("ResourceOwnerId")
     private Long resourceOwnerId;
 
-    private AcceptInquiredSystemEventRequest(Builder builder) {
+    private OpenSnapshotServiceRequest(Builder builder) {
         super(builder);
-        this.sourceRegionId = builder.sourceRegionId;
-        this.choice = builder.choice;
-        this.eventId = builder.eventId;
-        this.ownerAccount = builder.ownerAccount;
         this.ownerId = builder.ownerId;
         this.regionId = builder.regionId;
         this.resourceOwnerAccount = builder.resourceOwnerAccount;
@@ -67,41 +46,13 @@ public class AcceptInquiredSystemEventRequest extends Request {
         return new Builder();
     }
 
-    public static AcceptInquiredSystemEventRequest create() {
+    public static OpenSnapshotServiceRequest create() {
         return builder().build();
     }
 
 @Override
     public Builder toBuilder() {
         return new Builder(this);
-    }
-
-    /**
-     * @return sourceRegionId
-     */
-    public String getSourceRegionId() {
-        return this.sourceRegionId;
-    }
-
-    /**
-     * @return choice
-     */
-    public String getChoice() {
-        return this.choice;
-    }
-
-    /**
-     * @return eventId
-     */
-    public String getEventId() {
-        return this.eventId;
-    }
-
-    /**
-     * @return ownerAccount
-     */
-    public String getOwnerAccount() {
-        return this.ownerAccount;
     }
 
     /**
@@ -132,11 +83,7 @@ public class AcceptInquiredSystemEventRequest extends Request {
         return this.resourceOwnerId;
     }
 
-    public static final class Builder extends Request.Builder<AcceptInquiredSystemEventRequest, Builder> {
-        private String sourceRegionId; 
-        private String choice; 
-        private String eventId; 
-        private String ownerAccount; 
+    public static final class Builder extends Request.Builder<OpenSnapshotServiceRequest, Builder> {
         private Long ownerId; 
         private String regionId; 
         private String resourceOwnerAccount; 
@@ -146,56 +93,13 @@ public class AcceptInquiredSystemEventRequest extends Request {
             super();
         } 
 
-        private Builder(AcceptInquiredSystemEventRequest request) {
+        private Builder(OpenSnapshotServiceRequest request) {
             super(request);
-            this.sourceRegionId = request.sourceRegionId;
-            this.choice = request.choice;
-            this.eventId = request.eventId;
-            this.ownerAccount = request.ownerAccount;
             this.ownerId = request.ownerId;
             this.regionId = request.regionId;
             this.resourceOwnerAccount = request.resourceOwnerAccount;
             this.resourceOwnerId = request.resourceOwnerId;
         } 
-
-        /**
-         * SourceRegionId.
-         */
-        public Builder sourceRegionId(String sourceRegionId) {
-            this.putHostParameter("SourceRegionId", sourceRegionId);
-            this.sourceRegionId = sourceRegionId;
-            return this;
-        }
-
-        /**
-         * Choice.
-         */
-        public Builder choice(String choice) {
-            this.putQueryParameter("Choice", choice);
-            this.choice = choice;
-            return this;
-        }
-
-        /**
-         * <p>This parameter is required.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>e-2zeielxl1qzq8slb****</p>
-         */
-        public Builder eventId(String eventId) {
-            this.putQueryParameter("EventId", eventId);
-            this.eventId = eventId;
-            return this;
-        }
-
-        /**
-         * OwnerAccount.
-         */
-        public Builder ownerAccount(String ownerAccount) {
-            this.putQueryParameter("OwnerAccount", ownerAccount);
-            this.ownerAccount = ownerAccount;
-            return this;
-        }
 
         /**
          * OwnerId.
@@ -207,10 +111,11 @@ public class AcceptInquiredSystemEventRequest extends Request {
         }
 
         /**
+         * <p>The region ID of the port list. You can call the <a href="https://help.aliyun.com/document_detail/25609.html">DescribeRegions</a> operation to query the most recent region list.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
-         * <p>cn-hangzhou</p>
+         * <p>cn-beijing</p>
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);
@@ -237,8 +142,8 @@ public class AcceptInquiredSystemEventRequest extends Request {
         }
 
         @Override
-        public AcceptInquiredSystemEventRequest build() {
-            return new AcceptInquiredSystemEventRequest(this);
+        public OpenSnapshotServiceRequest build() {
+            return new OpenSnapshotServiceRequest(this);
         } 
 
     } 

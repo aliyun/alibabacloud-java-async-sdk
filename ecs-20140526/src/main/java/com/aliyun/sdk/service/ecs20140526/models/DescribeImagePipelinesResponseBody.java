@@ -106,7 +106,7 @@ public class DescribeImagePipelinesResponseBody extends TeaModel {
         } 
 
         /**
-         * <p>Details about the image templates.</p>
+         * <p>Details of the image templates.</p>
          */
         public Builder imagePipeline(ImagePipeline imagePipeline) {
             this.imagePipeline = imagePipeline;
@@ -1306,7 +1306,7 @@ public class DescribeImagePipelinesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The feature attributes of the image.</p>
+             * <p>The attributes of the custom image.</p>
              */
             public Builder features(Features features) {
                 this.features = features;

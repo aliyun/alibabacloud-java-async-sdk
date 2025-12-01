@@ -187,7 +187,7 @@ public class DescribeSnapshotPackageRequest extends Request {
 
         /**
          * <p>The page number. Pages start from page 1.</p>
-         * <p>Default value: 1.</p>
+         * <p>Default value: 1</p>
          * 
          * <strong>example:</strong>
          * <p>1</p>
@@ -199,8 +199,8 @@ public class DescribeSnapshotPackageRequest extends Request {
         }
 
         /**
-         * <p>The number of entries per page. Valid values: 1 to 100.</p>
-         * <p>Default value: 10.</p>
+         * <p>The number of entries per page. Maximum value: 1 to 100.</p>
+         * <p>Default value: 10</p>
          * 
          * <strong>example:</strong>
          * <p>10</p>

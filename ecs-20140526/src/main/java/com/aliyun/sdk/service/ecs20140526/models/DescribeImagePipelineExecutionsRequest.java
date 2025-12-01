@@ -224,7 +224,7 @@ public class DescribeImagePipelineExecutionsRequest extends Request {
         }
 
         /**
-         * <p>The ID of the image creation task.</p>
+         * <p>null</p>
          * 
          * <strong>example:</strong>
          * <p>exec-5fb8facb8ed7427c****</p>
@@ -236,7 +236,7 @@ public class DescribeImagePipelineExecutionsRequest extends Request {
         }
 
         /**
-         * <p>The ID of the image template.</p>
+         * <p>The value of tag N of the image creation task. Valid values of N: 1 to 20.</p>
          * 
          * <strong>example:</strong>
          * <p>ip-2ze5tsl5bp6nf2b3****</p>
@@ -248,8 +248,24 @@ public class DescribeImagePipelineExecutionsRequest extends Request {
         }
 
         /**
-         * <p>The maximum number of entries per page. Valid values: 1 to 500.</p>
-         * <p>Default value: 50.</p>
+         * <p>The status of the image creation task. You can specify multiple values. Separate the values with commas (,). Example: <code>BUILDING,DISTRIBUTING</code>. Valid values:</p>
+         * <ul>
+         * <li>PREPARING: Resources, such as the intermediate instance, are being created.</li>
+         * <li>REPAIRING: The source image is being repaired.</li>
+         * <li>BUILDING: The user-defined commands are being run and an image is being created.</li>
+         * <li>TESTING: The user-defined test commands are being run.</li>
+         * <li>DISTRIBUTING: The created image is being copied and shared.</li>
+         * <li>RELEASING: The temporary resources generated during the image creation process are being released.</li>
+         * <li>SUCCESS: The image creation task is completed.</li>
+         * <li>PARTITION_SUCCESS: The image creation task is partially completed. The image is created, but exceptions may occur when the image was copied or shared or when temporary resources were released.</li>
+         * <li>FAILED: The image creation task fails.</li>
+         * <li>TEST_FAILED: The image is created, but the test fails.</li>
+         * <li>CANCELLING: The image creation task is being canceled.</li>
+         * <li>CANCELLED: The image creation task is canceled.</li>
+         * </ul>
+         * <blockquote>
+         * <p> If you leave this parameter empty, all image creation tasks are queried regardless of task status.</p>
+         * </blockquote>
          * 
          * <strong>example:</strong>
          * <p>50</p>
@@ -261,7 +277,7 @@ public class DescribeImagePipelineExecutionsRequest extends Request {
         }
 
         /**
-         * <p>The pagination token that is used in the request to retrieve a new page of results. You do not need to specify this parameter for the first request. You must specify the token that is obtained from the previous query as the value of <code>NextToken</code>.</p>
+         * <p>The ID of the image creation task.</p>
          * 
          * <strong>example:</strong>
          * <p>AAAAAdDWBF2****</p>
@@ -322,24 +338,7 @@ public class DescribeImagePipelineExecutionsRequest extends Request {
         }
 
         /**
-         * <p>The status of the image creation task. You can specify multiple values. Separate the values with commas (,). Example: <code>BUILDING,DISTRIBUTING</code>. Valid values:</p>
-         * <ul>
-         * <li>PREPARING: Resources, such as the intermediate instance, are being created.</li>
-         * <li>REPAIRING: The source image is being repaired.</li>
-         * <li>BUILDING: The user-defined commands are being run and an image is being created.</li>
-         * <li>TESTING: The user-defined test commands are being run.</li>
-         * <li>DISTRIBUTING: The created image is being copied and shared.</li>
-         * <li>RELEASING: The temporary resources generated during the image creation process are being released.</li>
-         * <li>SUCCESS: The image creation task is completed.</li>
-         * <li>PARTITION_SUCCESS: The image creation task is partially completed. The image is created, but exceptions may occur when the image was copied or shared or when temporary resources were released.</li>
-         * <li>FAILED: The image creation task fails.</li>
-         * <li>TEST_FAILED: The image is created, but the test fails.</li>
-         * <li>CANCELLING: The image creation task is being canceled.</li>
-         * <li>CANCELLED: The image creation task is canceled.</li>
-         * </ul>
-         * <blockquote>
-         * <p> If you leave this parameter empty, all image creation tasks are queried regardless of task status.</p>
-         * </blockquote>
+         * <p>The ID of the image template.</p>
          * 
          * <strong>example:</strong>
          * <p>BUILDING</p>
@@ -422,7 +421,7 @@ public class DescribeImagePipelineExecutionsRequest extends Request {
              * <p>The key of tag N of the image creation task. Valid values of N: 1 to 20.</p>
              * 
              * <strong>example:</strong>
-             * <p>null</p>
+             * <p>TestKey</p>
              */
             public Builder key(String key) {
                 this.key = key;
@@ -430,10 +429,10 @@ public class DescribeImagePipelineExecutionsRequest extends Request {
             }
 
             /**
-             * <p>The value of tag N of the image creation task. Valid values of N: 1 to 20.</p>
+             * <p>null</p>
              * 
              * <strong>example:</strong>
-             * <p>null</p>
+             * <p>TestValue</p>
              */
             public Builder value(String value) {
                 this.value = value;

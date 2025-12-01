@@ -106,7 +106,7 @@ public class DescribeImagePipelineExecutionsResponseBody extends TeaModel {
         } 
 
         /**
-         * <p>Details of the image creation tasks.</p>
+         * <p>The total number of returned image components.</p>
          */
         public Builder imagePipelineExecution(ImagePipelineExecution imagePipelineExecution) {
             this.imagePipelineExecution = imagePipelineExecution;
@@ -114,7 +114,7 @@ public class DescribeImagePipelineExecutionsResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The maximum number of entries per page.</p>
+         * <p>The request ID.</p>
          * 
          * <strong>example:</strong>
          * <p>50</p>
@@ -125,7 +125,7 @@ public class DescribeImagePipelineExecutionsResponseBody extends TeaModel {
         }
 
         /**
-         * <p>A pagination token. It can be used in the next request to retrieve a new page of results. If NextToken is empty, no next page exists. For information about how to use the returned value, see the &quot;Usage notes&quot; section in this topic.</p>
+         * <p>The pagination token that is used in the request to retrieve a new page of results. You do not need to specify this parameter for the first request. You must specify the token that is obtained from the previous query as the value of <code>NextToken</code>.</p>
          * 
          * <strong>example:</strong>
          * <p>AAAAAdDWBF2****</p>
@@ -136,7 +136,8 @@ public class DescribeImagePipelineExecutionsResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The request ID.</p>
+         * <p>The maximum number of entries per page. Valid values: 1 to 500</p>
+         * <p>Default value: 50.</p>
          * 
          * <strong>example:</strong>
          * <p>473469C7-AA6F-4DC5-B3DB-A3DC0DE3C83E</p>
@@ -147,7 +148,7 @@ public class DescribeImagePipelineExecutionsResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The total number of returned image components.</p>
+         * <p>A pagination token. It can be used in the next request to retrieve a new page of results. If NextToken is empty, no next page exists. For information about how to use the returned value, see the &quot;Usage notes&quot; section in this topic.</p>
          * 
          * <strong>example:</strong>
          * <p>1</p>
@@ -216,10 +217,10 @@ public class DescribeImagePipelineExecutionsResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The tag key of the image creation task.</p>
+             * <p>The tag of the image creation task.</p>
              * 
              * <strong>example:</strong>
-             * <p>null</p>
+             * <p>TestValue</p>
              */
             public Builder tagKey(String tagKey) {
                 this.tagKey = tagKey;
@@ -227,10 +228,10 @@ public class DescribeImagePipelineExecutionsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The tag value of the image creation task.</p>
+             * <p>The tags of the image creation task.</p>
              * 
              * <strong>example:</strong>
-             * <p>null</p>
+             * <p>TestKey</p>
              */
             public Builder tagValue(String tagValue) {
                 this.tagValue = tagValue;
@@ -442,7 +443,7 @@ public class DescribeImagePipelineExecutionsResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The time when the image creation task was created.</p>
+             * <p>Details of the image creation tasks.</p>
              * 
              * <strong>example:</strong>
              * <p>2020-11-24T06:00:00Z</p>
@@ -453,7 +454,7 @@ public class DescribeImagePipelineExecutionsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The ID of the image creation task.</p>
+             * <p>The data returned.</p>
              * 
              * <strong>example:</strong>
              * <p>exec-5fb8facb8ed7427c****</p>
@@ -464,7 +465,7 @@ public class DescribeImagePipelineExecutionsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The ID of the image.</p>
+             * <p>The ID of the resource group.</p>
              * 
              * <strong>example:</strong>
              * <p>m-bp67acfmxazb4p****</p>
@@ -475,7 +476,7 @@ public class DescribeImagePipelineExecutionsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The ID of the image template.</p>
+             * <p>Details of the image creation task.</p>
              * 
              * <strong>example:</strong>
              * <p>ip-2ze5tsl5bp6nf2b3****</p>
@@ -486,7 +487,7 @@ public class DescribeImagePipelineExecutionsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The data returned.</p>
+             * <p>The last modification time of the image creation task.</p>
              * 
              * <strong>example:</strong>
              * <p>Create transition vpc &quot;vpc-2ze70rc7093j9idu6****&quot; success!</p>
@@ -497,24 +498,13 @@ public class DescribeImagePipelineExecutionsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The last modification time of the image creation task.</p>
+             * <p>The ID of the image template.</p>
              * 
              * <strong>example:</strong>
              * <p>2020-11-25T06:00:00Z</p>
              */
             public Builder modifiedTime(String modifiedTime) {
                 this.modifiedTime = modifiedTime;
-                return this;
-            }
-
-            /**
-             * <p>The ID of the resource group.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>rg-bp67acfmxazb4p****</p>
-             */
-            public Builder resourceGroupId(String resourceGroupId) {
-                this.resourceGroupId = resourceGroupId;
                 return this;
             }
 
@@ -536,6 +526,17 @@ public class DescribeImagePipelineExecutionsResponseBody extends TeaModel {
              * </ul>
              * 
              * <strong>example:</strong>
+             * <p>rg-bp67acfmxazb4p****</p>
+             */
+            public Builder resourceGroupId(String resourceGroupId) {
+                this.resourceGroupId = resourceGroupId;
+                return this;
+            }
+
+            /**
+             * <p>The time when the image creation task was created.</p>
+             * 
+             * <strong>example:</strong>
              * <p>BUILDING</p>
              */
             public Builder status(String status) {
@@ -544,7 +545,7 @@ public class DescribeImagePipelineExecutionsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The tags of the image creation task.</p>
+             * <p>The ID of the image.</p>
              */
             public Builder tags(Tags tags) {
                 this.tags = tags;

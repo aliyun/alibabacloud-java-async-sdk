@@ -2051,6 +2051,60 @@ public class CreateAutoProvisioningGroupRequest extends Request {
      *
      * <p>CreateAutoProvisioningGroupRequest</p>
      */
+    public static class SecurityOptions extends TeaModel {
+        @com.aliyun.core.annotation.NameInMap("TrustedSystemMode")
+        private String trustedSystemMode;
+
+        private SecurityOptions(Builder builder) {
+            this.trustedSystemMode = builder.trustedSystemMode;
+        }
+
+        public static Builder builder() {
+            return new Builder();
+        }
+
+        public static SecurityOptions create() {
+            return builder().build();
+        }
+
+        /**
+         * @return trustedSystemMode
+         */
+        public String getTrustedSystemMode() {
+            return this.trustedSystemMode;
+        }
+
+        public static final class Builder {
+            private String trustedSystemMode; 
+
+            private Builder() {
+            } 
+
+            private Builder(SecurityOptions model) {
+                this.trustedSystemMode = model.trustedSystemMode;
+            } 
+
+            /**
+             * TrustedSystemMode.
+             */
+            public Builder trustedSystemMode(String trustedSystemMode) {
+                this.trustedSystemMode = trustedSystemMode;
+                return this;
+            }
+
+            public SecurityOptions build() {
+                return new SecurityOptions(this);
+            } 
+
+        } 
+
+    }
+    /**
+     * 
+     * {@link CreateAutoProvisioningGroupRequest} extends {@link TeaModel}
+     *
+     * <p>CreateAutoProvisioningGroupRequest</p>
+     */
     public static class LaunchConfiguration extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Arn")
         private java.util.List<Arn> arn;
@@ -2166,6 +2220,9 @@ public class CreateAutoProvisioningGroupRequest extends Request {
         @com.aliyun.core.annotation.NameInMap("SchedulerOptions")
         private SchedulerOptions schedulerOptions;
 
+        @com.aliyun.core.annotation.NameInMap("SecurityOptions")
+        private SecurityOptions securityOptions;
+
         @com.aliyun.core.annotation.NameInMap("SpotDuration")
         private Integer spotDuration;
 
@@ -2211,6 +2268,7 @@ public class CreateAutoProvisioningGroupRequest extends Request {
             this.period = builder.period;
             this.periodUnit = builder.periodUnit;
             this.schedulerOptions = builder.schedulerOptions;
+            this.securityOptions = builder.securityOptions;
             this.spotDuration = builder.spotDuration;
             this.spotInterruptionBehavior = builder.spotInterruptionBehavior;
         }
@@ -2490,6 +2548,13 @@ public class CreateAutoProvisioningGroupRequest extends Request {
         }
 
         /**
+         * @return securityOptions
+         */
+        public SecurityOptions getSecurityOptions() {
+            return this.securityOptions;
+        }
+
+        /**
          * @return spotDuration
          */
         public Integer getSpotDuration() {
@@ -2542,6 +2607,7 @@ public class CreateAutoProvisioningGroupRequest extends Request {
             private Integer period; 
             private String periodUnit; 
             private SchedulerOptions schedulerOptions; 
+            private SecurityOptions securityOptions; 
             private Integer spotDuration; 
             private String spotInterruptionBehavior; 
 
@@ -2587,6 +2653,7 @@ public class CreateAutoProvisioningGroupRequest extends Request {
                 this.period = model.period;
                 this.periodUnit = model.periodUnit;
                 this.schedulerOptions = model.schedulerOptions;
+                this.securityOptions = model.securityOptions;
                 this.spotDuration = model.spotDuration;
                 this.spotInterruptionBehavior = model.spotInterruptionBehavior;
             } 
@@ -3084,6 +3151,14 @@ public class CreateAutoProvisioningGroupRequest extends Request {
              */
             public Builder schedulerOptions(SchedulerOptions schedulerOptions) {
                 this.schedulerOptions = schedulerOptions;
+                return this;
+            }
+
+            /**
+             * SecurityOptions.
+             */
+            public Builder securityOptions(SecurityOptions securityOptions) {
+                this.securityOptions = securityOptions;
                 return this;
             }
 
