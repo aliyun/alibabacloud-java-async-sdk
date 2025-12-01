@@ -38,6 +38,12 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<BeginSessionResponse> beginSession(BeginSessionRequest request);
 
     /**
+     * @param request the request parameters of CancelChat  CancelChatRequest
+     * @return CancelChatResponse
+     */
+    CompletableFuture<CancelChatResponse> cancelChat(CancelChatRequest request);
+
+    /**
      * @param request the request parameters of CancelInstancePublishTask  CancelInstancePublishTaskRequest
      * @return CancelInstancePublishTaskResponse
      */
