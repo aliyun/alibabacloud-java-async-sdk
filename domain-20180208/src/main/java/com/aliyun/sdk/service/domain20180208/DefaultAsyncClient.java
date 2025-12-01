@@ -454,6 +454,24 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
+     * @param request the request parameters of QueryBuyerDomainTradeRecords  QueryBuyerDomainTradeRecordsRequest
+     * @return QueryBuyerDomainTradeRecordsResponse
+     */
+    @Override
+    public CompletableFuture<QueryBuyerDomainTradeRecordsResponse> queryBuyerDomainTradeRecords(QueryBuyerDomainTradeRecordsRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RPC).setAction("QueryBuyerDomainTradeRecords").setMethod(HttpMethod.POST).setPathRegex("/").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(QueryBuyerDomainTradeRecordsResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<QueryBuyerDomainTradeRecordsResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
      * @param request the request parameters of QueryDomainTransferStatus  QueryDomainTransferStatusRequest
      * @return QueryDomainTransferStatusResponse
      */

@@ -158,6 +158,12 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<QueryBrokerDemandRecordResponse> queryBrokerDemandRecord(QueryBrokerDemandRecordRequest request);
 
     /**
+     * @param request the request parameters of QueryBuyerDomainTradeRecords  QueryBuyerDomainTradeRecordsRequest
+     * @return QueryBuyerDomainTradeRecordsResponse
+     */
+    CompletableFuture<QueryBuyerDomainTradeRecordsResponse> queryBuyerDomainTradeRecords(QueryBuyerDomainTradeRecordsRequest request);
+
+    /**
      * @param request the request parameters of QueryDomainTransferStatus  QueryDomainTransferStatusRequest
      * @return QueryDomainTransferStatusResponse
      */

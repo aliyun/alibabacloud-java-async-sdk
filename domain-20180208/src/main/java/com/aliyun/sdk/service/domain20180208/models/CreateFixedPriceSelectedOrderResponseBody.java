@@ -158,6 +158,9 @@ public class CreateFixedPriceSelectedOrderResponseBody extends TeaModel {
      * <p>CreateFixedPriceSelectedOrderResponseBody</p>
      */
     public static class Module extends TeaModel {
+        @com.aliyun.core.annotation.NameInMap("BizIds")
+        private java.util.Map<String, String> bizIds;
+
         @com.aliyun.core.annotation.NameInMap("Domain")
         private String domain;
 
@@ -171,6 +174,7 @@ public class CreateFixedPriceSelectedOrderResponseBody extends TeaModel {
         private Long price;
 
         private Module(Builder builder) {
+            this.bizIds = builder.bizIds;
             this.domain = builder.domain;
             this.domainBlockTrade = builder.domainBlockTrade;
             this.orderNo = builder.orderNo;
@@ -183,6 +187,13 @@ public class CreateFixedPriceSelectedOrderResponseBody extends TeaModel {
 
         public static Module create() {
             return builder().build();
+        }
+
+        /**
+         * @return bizIds
+         */
+        public java.util.Map<String, String> getBizIds() {
+            return this.bizIds;
         }
 
         /**
@@ -214,6 +225,7 @@ public class CreateFixedPriceSelectedOrderResponseBody extends TeaModel {
         }
 
         public static final class Builder {
+            private java.util.Map<String, String> bizIds; 
             private String domain; 
             private java.util.List<String> domainBlockTrade; 
             private String orderNo; 
@@ -223,11 +235,20 @@ public class CreateFixedPriceSelectedOrderResponseBody extends TeaModel {
             } 
 
             private Builder(Module model) {
+                this.bizIds = model.bizIds;
                 this.domain = model.domain;
                 this.domainBlockTrade = model.domainBlockTrade;
                 this.orderNo = model.orderNo;
                 this.price = model.price;
             } 
+
+            /**
+             * BizIds.
+             */
+            public Builder bizIds(java.util.Map<String, String> bizIds) {
+                this.bizIds = bizIds;
+                return this;
+            }
 
             /**
              * Domain.
