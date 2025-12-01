@@ -75,6 +75,10 @@ public class CreateServiceWorkOrderRequest extends Request {
     private String ownerId;
 
     @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("Priority")
+    private Integer priority;
+
+    @com.aliyun.core.annotation.Body
     @com.aliyun.core.annotation.NameInMap("StartTime")
     @com.aliyun.core.annotation.Validation(required = true)
     private Long startTime;
@@ -118,6 +122,7 @@ public class CreateServiceWorkOrderRequest extends Request {
         this.operateType = builder.operateType;
         this.operator = builder.operator;
         this.ownerId = builder.ownerId;
+        this.priority = builder.priority;
         this.startTime = builder.startTime;
         this.workOrderDetail = builder.workOrderDetail;
         this.workOrderName = builder.workOrderName;
@@ -224,6 +229,13 @@ public class CreateServiceWorkOrderRequest extends Request {
     }
 
     /**
+     * @return priority
+     */
+    public Integer getPriority() {
+        return this.priority;
+    }
+
+    /**
      * @return startTime
      */
     public Long getStartTime() {
@@ -278,6 +290,7 @@ public class CreateServiceWorkOrderRequest extends Request {
         private String operateType; 
         private String operator; 
         private String ownerId; 
+        private Integer priority; 
         private Long startTime; 
         private String workOrderDetail; 
         private String workOrderName; 
@@ -303,6 +316,7 @@ public class CreateServiceWorkOrderRequest extends Request {
             this.operateType = request.operateType;
             this.operator = request.operator;
             this.ownerId = request.ownerId;
+            this.priority = request.priority;
             this.startTime = request.startTime;
             this.workOrderDetail = request.workOrderDetail;
             this.workOrderName = request.workOrderName;
@@ -457,6 +471,15 @@ public class CreateServiceWorkOrderRequest extends Request {
         public Builder ownerId(String ownerId) {
             this.putBodyParameter("OwnerId", ownerId);
             this.ownerId = ownerId;
+            return this;
+        }
+
+        /**
+         * Priority.
+         */
+        public Builder priority(Integer priority) {
+            this.putBodyParameter("Priority", priority);
+            this.priority = priority;
             return this;
         }
 
