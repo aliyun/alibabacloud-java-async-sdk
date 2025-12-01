@@ -94,6 +94,11 @@ public class DescribeKmsKeysResponseBody extends TeaModel {
 
         /**
          * <p>The authorization status.</p>
+         * <p>Valid value:</p>
+         * <ul>
+         * <li>not_authorized</li>
+         * <li>authorized</li>
+         * </ul>
          * 
          * <strong>example:</strong>
          * <p>authorized</p>
@@ -104,7 +109,7 @@ public class DescribeKmsKeysResponseBody extends TeaModel {
         }
 
         /**
-         * <p>Details about the customer master keys (CMKs).</p>
+         * <p>Customer master key (CMK)</p>
          */
         public Builder keys(java.util.List<Keys> keys) {
             this.keys = keys;
@@ -113,6 +118,11 @@ public class DescribeKmsKeysResponseBody extends TeaModel {
 
         /**
          * <p>Indicates whether KMS is activated.</p>
+         * <p>Valid value:</p>
+         * <ul>
+         * <li>disabled</li>
+         * <li>enabled</li>
+         * </ul>
          * 
          * <strong>example:</strong>
          * <p>enabled</p>

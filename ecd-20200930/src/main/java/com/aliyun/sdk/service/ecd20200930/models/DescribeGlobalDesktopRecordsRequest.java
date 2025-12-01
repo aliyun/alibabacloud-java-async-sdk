@@ -256,7 +256,7 @@ public class DescribeGlobalDesktopRecordsRequest extends Request {
         } 
 
         /**
-         * DesktopId.
+         * <p>The cloud computer IDs. You can specify 1 to 100 office network IDs.</p>
          */
         public Builder desktopId(java.util.List<String> desktopId) {
             this.putQueryParameter("DesktopId", desktopId);
@@ -265,7 +265,10 @@ public class DescribeGlobalDesktopRecordsRequest extends Request {
         }
 
         /**
-         * DesktopName.
+         * <p>The name of the cloud computer.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>DemoComputer</p>
          */
         public Builder desktopName(String desktopName) {
             this.putQueryParameter("DesktopName", desktopName);
@@ -274,7 +277,10 @@ public class DescribeGlobalDesktopRecordsRequest extends Request {
         }
 
         /**
-         * DesktopType.
+         * <p>The cloud computer type. You can call the <a href="https://help.aliyun.com/document_detail/188882.html">DescribeDesktopTypes</a> operation to query the IDs of the specifications supported by the cloud computer.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>eds.enterprise_office.2c4g</p>
          */
         public Builder desktopType(String desktopType) {
             this.putQueryParameter("DesktopType", desktopType);
@@ -283,7 +289,13 @@ public class DescribeGlobalDesktopRecordsRequest extends Request {
         }
 
         /**
-         * EndTime.
+         * <p>The end time. The interval between the start time and end time can be up to 30 days. Supported formats:</p>
+         * <ul>
+         * <li>Format: YYYY-MM-DDThh:mm:ssZ.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>2022-08-31T06:56:45Z</p>
          */
         public Builder endTime(String endTime) {
             this.putQueryParameter("EndTime", endTime);
@@ -292,7 +304,10 @@ public class DescribeGlobalDesktopRecordsRequest extends Request {
         }
 
         /**
-         * EndUserId.
+         * <p>The end user ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>TestUser</p>
          */
         public Builder endUserId(String endUserId) {
             this.putQueryParameter("EndUserId", endUserId);
@@ -301,7 +316,10 @@ public class DescribeGlobalDesktopRecordsRequest extends Request {
         }
 
         /**
-         * OfficeSiteId.
+         * <p>The office network IDs.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-hangzhou+dir-363353****</p>
          */
         public Builder officeSiteId(String officeSiteId) {
             this.putQueryParameter("OfficeSiteId", officeSiteId);
@@ -310,7 +328,13 @@ public class DescribeGlobalDesktopRecordsRequest extends Request {
         }
 
         /**
-         * OrderBy.
+         * <p>The sorting field. If this parameter is not provided, results are sorted by creation time in descending order. Valid values:</p>
+         * <ul>
+         * <li>uptime: indicates that the cloud computers are sorted by startup duration.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>uptime</p>
          */
         public Builder orderBy(String orderBy) {
             this.putQueryParameter("OrderBy", orderBy);
@@ -319,7 +343,10 @@ public class DescribeGlobalDesktopRecordsRequest extends Request {
         }
 
         /**
-         * PageNumber.
+         * <p>The page number of the current page.<br>Default value: 1</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder pageNumber(Integer pageNumber) {
             this.putQueryParameter("PageNumber", pageNumber);
@@ -328,7 +355,10 @@ public class DescribeGlobalDesktopRecordsRequest extends Request {
         }
 
         /**
-         * PageSize.
+         * <p>The number of entries to return on each page. Valid values: 1 to 100.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>20</p>
          */
         public Builder pageSize(Integer pageSize) {
             this.putQueryParameter("PageSize", pageSize);
@@ -337,6 +367,11 @@ public class DescribeGlobalDesktopRecordsRequest extends Request {
         }
 
         /**
+         * <p>The region ID.</p>
+         * <ul>
+         * <li>China (Shanghai)</li>
+         * <li>Singapore</li>
+         * </ul>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -349,7 +384,10 @@ public class DescribeGlobalDesktopRecordsRequest extends Request {
         }
 
         /**
-         * ResourceGroupId.
+         * <p>The ID of the resource group.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>rg-3mtuc28rx95lx****</p>
          */
         public Builder resourceGroupId(String resourceGroupId) {
             this.putQueryParameter("ResourceGroupId", resourceGroupId);
@@ -358,7 +396,13 @@ public class DescribeGlobalDesktopRecordsRequest extends Request {
         }
 
         /**
-         * Scope.
+         * <p>The query range. This parameter is empty by default. Optional values are:</p>
+         * <ul>
+         * <li>ADVANCED: indicates that statistics such as the connection duration are queried.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>ADVANCED</p>
          */
         public Builder scope(String scope) {
             this.putQueryParameter("Scope", scope);
@@ -367,7 +411,14 @@ public class DescribeGlobalDesktopRecordsRequest extends Request {
         }
 
         /**
-         * SortType.
+         * <p>The sorting method. Default value: ascending. Valid value:</p>
+         * <ul>
+         * <li>Asc: ascending order</li>
+         * <li>Desc: descending.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>Asc</p>
          */
         public Builder sortType(String sortType) {
             this.putQueryParameter("SortType", sortType);
@@ -376,7 +427,13 @@ public class DescribeGlobalDesktopRecordsRequest extends Request {
         }
 
         /**
-         * StartTime.
+         * <p>The start time. Supported formats:</p>
+         * <ul>
+         * <li>Format: YYYY-MM-DDThh:mm:ssZ.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>2022-03-23T04:10:21Z</p>
          */
         public Builder startTime(String startTime) {
             this.putQueryParameter("StartTime", startTime);
@@ -385,7 +442,15 @@ public class DescribeGlobalDesktopRecordsRequest extends Request {
         }
 
         /**
-         * SubPayType.
+         * <p>The way to purchase cloud computers. Valid values:</p>
+         * <ul>
+         * <li>prePaid: The monthly purchase is unlimited.</li>
+         * <li>postPaid: pay-as-you-go</li>
+         * <li>monthPackage: monthly duration.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>monthPackage</p>
          */
         public Builder subPayType(String subPayType) {
             this.putQueryParameter("SubPayType", subPayType);

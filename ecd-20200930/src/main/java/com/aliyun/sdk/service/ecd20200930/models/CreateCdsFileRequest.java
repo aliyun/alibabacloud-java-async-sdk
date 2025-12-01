@@ -55,7 +55,6 @@ public class CreateCdsFileRequest extends Request {
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("ParentFileId")
-    @com.aliyun.core.annotation.Validation(required = true)
     private String parentFileId;
 
     @com.aliyun.core.annotation.Query
@@ -352,7 +351,6 @@ public class CreateCdsFileRequest extends Request {
 
         /**
          * <p>The ID of the parent folder.</p>
-         * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
          * <p>637c9163b453b1a384874264ba79f3f9eab9****</p>

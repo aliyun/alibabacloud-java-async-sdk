@@ -185,7 +185,10 @@ public class CreateDriveRequest extends Request {
         } 
 
         /**
-         * AliUid.
+         * <p>The ID of your Alibaba Cloud account.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1202****</p>
          */
         public Builder aliUid(Long aliUid) {
             this.putQueryParameter("AliUid", aliUid);
@@ -194,7 +197,10 @@ public class CreateDriveRequest extends Request {
         }
 
         /**
-         * Description.
+         * <p>The description of the user-level storage resource.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>test01</p>
          */
         public Builder description(String description) {
             this.putQueryParameter("Description", description);
@@ -203,7 +209,13 @@ public class CreateDriveRequest extends Request {
         }
 
         /**
-         * DomainId.
+         * <p>The ID of the storage resource.</p>
+         * <blockquote>
+         * <p> Call the DescribeDrives operation to retrieve the storage resource ID.</p>
+         * </blockquote>
+         * 
+         * <strong>example:</strong>
+         * <p>dom-aaaa****</p>
          */
         public Builder domainId(String domainId) {
             this.putQueryParameter("DomainId", domainId);
@@ -212,7 +224,10 @@ public class CreateDriveRequest extends Request {
         }
 
         /**
-         * DriveName.
+         * <p>The name of the user-level storage resource.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>test01</p>
          */
         public Builder driveName(String driveName) {
             this.putQueryParameter("DriveName", driveName);
@@ -221,7 +236,13 @@ public class CreateDriveRequest extends Request {
         }
 
         /**
-         * ExternalDomainId.
+         * <p>The ID of the external storage resource.</p>
+         * <blockquote>
+         * <p> Call the DescribeDrives operation to retrieve the external storage resource ID.</p>
+         * </blockquote>
+         * 
+         * <strong>example:</strong>
+         * <p>1234****</p>
          */
         public Builder externalDomainId(String externalDomainId) {
             this.putQueryParameter("ExternalDomainId", externalDomainId);
@@ -230,7 +251,14 @@ public class CreateDriveRequest extends Request {
         }
 
         /**
-         * ProfileRoaming.
+         * <blockquote>
+         * <p> This parameter is deprecated.</p>
+         * </blockquote>
+         * 
+         * <strong>example:</strong>
+         * <ul>
+         * <li></li>
+         * </ul>
          */
         public Builder profileRoaming(Boolean profileRoaming) {
             this.putQueryParameter("ProfileRoaming", profileRoaming);
@@ -239,7 +267,10 @@ public class CreateDriveRequest extends Request {
         }
 
         /**
-         * RegionId.
+         * <p>The region ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-hangzhou</p>
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);
@@ -248,7 +279,15 @@ public class CreateDriveRequest extends Request {
         }
 
         /**
-         * ResourceType.
+         * <p>The type of the storage resource.</p>
+         * <p>Valid values:</p>
+         * <ul>
+         * <li>NAS: File Storage NAS</li>
+         * <li>PDS: Drive and Photo Service</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>NAS</p>
          */
         public Builder resourceType(String resourceType) {
             this.putQueryParameter("ResourceType", resourceType);
@@ -257,7 +296,15 @@ public class CreateDriveRequest extends Request {
         }
 
         /**
-         * Type.
+         * <p>The usage of the storage resource.</p>
+         * <p>Valid values:</p>
+         * <ul>
+         * <li>DESKTOP: data disk space</li>
+         * <li>USER_PROFILE: space for personal data of the user</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>USER_PROFILE</p>
          */
         public Builder type(String type) {
             this.putQueryParameter("Type", type);
@@ -266,7 +313,10 @@ public class CreateDriveRequest extends Request {
         }
 
         /**
-         * UserId.
+         * <p>The user ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>user01</p>
          */
         public Builder userId(String userId) {
             this.putQueryParameter("UserId", userId);

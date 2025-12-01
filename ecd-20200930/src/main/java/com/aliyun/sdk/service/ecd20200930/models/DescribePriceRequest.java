@@ -24,7 +24,7 @@ public class DescribePriceRequest extends Request {
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("Bandwidth")
-    @com.aliyun.core.annotation.Validation(maximum = 2048, minimum = 1)
+    @com.aliyun.core.annotation.Validation(maximum = 3072, minimum = 1)
     private Integer bandwidth;
 
     @com.aliyun.core.annotation.Query

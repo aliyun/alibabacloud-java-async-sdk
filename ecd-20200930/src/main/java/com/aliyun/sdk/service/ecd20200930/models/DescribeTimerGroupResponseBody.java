@@ -67,7 +67,7 @@ public class DescribeTimerGroupResponseBody extends TeaModel {
         } 
 
         /**
-         * <p>The information about the scheduled task group.</p>
+         * <p>The configuration group.</p>
          */
         public Builder data(Data data) {
             this.data = data;
@@ -834,7 +834,7 @@ public class DescribeTimerGroupResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The scheduled task configurations.</p>
+             * <p>The scheduled tasks.</p>
              */
             public Builder configTimers(java.util.List<ConfigTimers> configTimers) {
                 this.configTimers = configTimers;

@@ -80,7 +80,7 @@ public class DescribeEcdReportTasksResponseBody extends TeaModel {
         } 
 
         /**
-         * ExportTaskList.
+         * <p>The report export tasks.</p>
          */
         public Builder exportTaskList(java.util.List<ExportTaskList> exportTaskList) {
             this.exportTaskList = exportTaskList;
@@ -88,7 +88,10 @@ public class DescribeEcdReportTasksResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1CBAFFAB-B697-4049-A9B1-67E1FC5F****</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -96,7 +99,10 @@ public class DescribeEcdReportTasksResponseBody extends TeaModel {
         }
 
         /**
-         * TotalCount.
+         * <p>The total number of entries returned.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>20</p>
          */
         public Builder totalCount(Long totalCount) {
             this.totalCount = totalCount;
@@ -279,7 +285,7 @@ public class DescribeEcdReportTasksResponseBody extends TeaModel {
             } 
 
             /**
-             * DownloadUrl.
+             * <p>The download URL of the report file.</p>
              */
             public Builder downloadUrl(String downloadUrl) {
                 this.downloadUrl = downloadUrl;
@@ -287,7 +293,10 @@ public class DescribeEcdReportTasksResponseBody extends TeaModel {
             }
 
             /**
-             * ErrorCode.
+             * <p>The error code returned.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Success</p>
              */
             public Builder errorCode(String errorCode) {
                 this.errorCode = errorCode;
@@ -295,7 +304,10 @@ public class DescribeEcdReportTasksResponseBody extends TeaModel {
             }
 
             /**
-             * ErrorMsg.
+             * <p>The error message.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>No Data.</p>
              */
             public Builder errorMsg(String errorMsg) {
                 this.errorMsg = errorMsg;
@@ -303,7 +315,10 @@ public class DescribeEcdReportTasksResponseBody extends TeaModel {
             }
 
             /**
-             * GmtCreate.
+             * <p>The time when the task was created.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2025-07-14T07:46:49.000+00:00</p>
              */
             public Builder gmtCreate(String gmtCreate) {
                 this.gmtCreate = gmtCreate;
@@ -311,7 +326,10 @@ public class DescribeEcdReportTasksResponseBody extends TeaModel {
             }
 
             /**
-             * GmtModified.
+             * <p>The time when the task was last modified.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2025-07-14T07:46:49.000+00:00</p>
              */
             public Builder gmtModified(String gmtModified) {
                 this.gmtModified = gmtModified;
@@ -319,7 +337,10 @@ public class DescribeEcdReportTasksResponseBody extends TeaModel {
             }
 
             /**
-             * Progress.
+             * <p>The progress of the report export task. Unit: %.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>80</p>
              */
             public Builder progress(Float progress) {
                 this.progress = progress;
@@ -327,7 +348,10 @@ public class DescribeEcdReportTasksResponseBody extends TeaModel {
             }
 
             /**
-             * ReportFileName.
+             * <p>The name of the report file.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>TestFileName</p>
              */
             public Builder reportFileName(String reportFileName) {
                 this.reportFileName = reportFileName;
@@ -335,7 +359,10 @@ public class DescribeEcdReportTasksResponseBody extends TeaModel {
             }
 
             /**
-             * Status.
+             * <p>The task status.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Running</p>
              */
             public Builder status(String status) {
                 this.status = status;
@@ -343,7 +370,14 @@ public class DescribeEcdReportTasksResponseBody extends TeaModel {
             }
 
             /**
-             * SubType.
+             * <p>The sub-type of the report export task.</p>
+             * <p>Valid value:</p>
+             * <ul>
+             * <li>DESKTOP: cloud computer</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>DESKTOP</p>
              */
             public Builder subType(String subType) {
                 this.subType = subType;
@@ -351,7 +385,10 @@ public class DescribeEcdReportTasksResponseBody extends TeaModel {
             }
 
             /**
-             * TaskId.
+             * <p>The ID of the report export task.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>ret-asdfkjg*****</p>
              */
             public Builder taskId(String taskId) {
                 this.taskId = taskId;
@@ -359,7 +396,14 @@ public class DescribeEcdReportTasksResponseBody extends TeaModel {
             }
 
             /**
-             * TaskType.
+             * <p>The type of the report.</p>
+             * <p>Valid value:</p>
+             * <ul>
+             * <li>RESOURCE_REPORT</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>RESOURCE_REPORT</p>
              */
             public Builder taskType(String taskType) {
                 this.taskType = taskType;

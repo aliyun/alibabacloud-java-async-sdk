@@ -132,7 +132,10 @@ public class DescribeDrivesResponseBody extends TeaModel {
         } 
 
         /**
-         * Code.
+         * <p>The response code. The value 200 indicates that the request was successful.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>200</p>
          */
         public Builder code(String code) {
             this.code = code;
@@ -140,7 +143,10 @@ public class DescribeDrivesResponseBody extends TeaModel {
         }
 
         /**
-         * Count.
+         * <p>The total number of storage resources.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2</p>
          */
         public Builder count(Integer count) {
             this.count = count;
@@ -148,7 +154,7 @@ public class DescribeDrivesResponseBody extends TeaModel {
         }
 
         /**
-         * Drives.
+         * <p>The user-level storage resources.</p>
          */
         public Builder drives(java.util.List<Drives> drives) {
             this.drives = drives;
@@ -156,7 +162,10 @@ public class DescribeDrivesResponseBody extends TeaModel {
         }
 
         /**
-         * Message.
+         * <p>The returned message.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>successful</p>
          */
         public Builder message(String message) {
             this.message = message;
@@ -164,7 +173,10 @@ public class DescribeDrivesResponseBody extends TeaModel {
         }
 
         /**
-         * NextToken.
+         * <p>A pagination token. It can be used in the next request to retrieve a new page of results. If NextToken is empty, no next page exists.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>AAAA****</p>
          */
         public Builder nextToken(String nextToken) {
             this.nextToken = nextToken;
@@ -172,7 +184,10 @@ public class DescribeDrivesResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>B7AA****</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -180,7 +195,10 @@ public class DescribeDrivesResponseBody extends TeaModel {
         }
 
         /**
-         * Success.
+         * <p>Indicates whether the request was successful.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder success(Boolean success) {
             this.success = success;
@@ -246,7 +264,10 @@ public class DescribeDrivesResponseBody extends TeaModel {
             } 
 
             /**
-             * DesktopGroupId.
+             * <p>The ID of the cloud computer pool.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>dg-aaaa****</p>
              */
             public Builder desktopGroupId(String desktopGroupId) {
                 this.desktopGroupId = desktopGroupId;
@@ -254,7 +275,10 @@ public class DescribeDrivesResponseBody extends TeaModel {
             }
 
             /**
-             * DesktopGroupName.
+             * <p>The name of the cloud computer pool.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>group01</p>
              */
             public Builder desktopGroupName(String desktopGroupName) {
                 this.desktopGroupName = desktopGroupName;
@@ -555,7 +579,10 @@ public class DescribeDrivesResponseBody extends TeaModel {
             } 
 
             /**
-             * AliUid.
+             * <p>The ID of the Alibaba Cloud account.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1202****</p>
              */
             public Builder aliUid(Long aliUid) {
                 this.aliUid = aliUid;
@@ -563,7 +590,10 @@ public class DescribeDrivesResponseBody extends TeaModel {
             }
 
             /**
-             * Description.
+             * <p>The introduction to the storage resource.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>test****</p>
              */
             public Builder description(String description) {
                 this.description = description;
@@ -571,7 +601,13 @@ public class DescribeDrivesResponseBody extends TeaModel {
             }
 
             /**
-             * DesktopGroupCount.
+             * <p>The number of associated cloud computer pools.</p>
+             * <blockquote>
+             * <p> This parameter is returned only if ResourceType is set to NAS and Type is set to USER_PROFILE.</p>
+             * </blockquote>
+             * 
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder desktopGroupCount(Integer desktopGroupCount) {
                 this.desktopGroupCount = desktopGroupCount;
@@ -579,7 +615,10 @@ public class DescribeDrivesResponseBody extends TeaModel {
             }
 
             /**
-             * DesktopGroups.
+             * <p>The details of the associated cloud computers.</p>
+             * <blockquote>
+             * <p> This parameter is returned only if ResourceType is set to NAS and Type is set to USER_PROFILE.</p>
+             * </blockquote>
              */
             public Builder desktopGroups(java.util.List<DesktopGroups> desktopGroups) {
                 this.desktopGroups = desktopGroups;
@@ -587,7 +626,10 @@ public class DescribeDrivesResponseBody extends TeaModel {
             }
 
             /**
-             * DomainId.
+             * <p>The ID of the storage resource.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>dom-aaaa****</p>
              */
             public Builder domainId(String domainId) {
                 this.domainId = domainId;
@@ -595,7 +637,10 @@ public class DescribeDrivesResponseBody extends TeaModel {
             }
 
             /**
-             * DriveId.
+             * <p>The ID of the user-level storage resource.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>dri-aaaa****</p>
              */
             public Builder driveId(String driveId) {
                 this.driveId = driveId;
@@ -603,7 +648,10 @@ public class DescribeDrivesResponseBody extends TeaModel {
             }
 
             /**
-             * EnableProfileManagement.
+             * <p>Indicates whether the UPM feature is enabled.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>true</p>
              */
             public Builder enableProfileManagement(Boolean enableProfileManagement) {
                 this.enableProfileManagement = enableProfileManagement;
@@ -611,7 +659,14 @@ public class DescribeDrivesResponseBody extends TeaModel {
             }
 
             /**
-             * ExternalDomainId.
+             * <p>The ID of the external storage resource.</p>
+             * <ul>
+             * <li>If ResourceType is set to NAS, the NAS ID is returned for this parameter.</li>
+             * <li>If ResourceType is set to PDS, the PDS ID is returned for this parameter.</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>0976****</p>
              */
             public Builder externalDomainId(String externalDomainId) {
                 this.externalDomainId = externalDomainId;
@@ -619,7 +674,13 @@ public class DescribeDrivesResponseBody extends TeaModel {
             }
 
             /**
-             * ExternalDriveId.
+             * <p>The ID of the storage resource at the external user level.</p>
+             * <blockquote>
+             * <p> This parameter is returned only if ResourceType is set to PDS.</p>
+             * </blockquote>
+             * 
+             * <strong>example:</strong>
+             * <p>1100****</p>
              */
             public Builder externalDriveId(String externalDriveId) {
                 this.externalDriveId = externalDriveId;
@@ -627,7 +688,13 @@ public class DescribeDrivesResponseBody extends TeaModel {
             }
 
             /**
-             * ExternalUserId.
+             * <p>The ID of the external user.</p>
+             * <blockquote>
+             * <p> This parameter is returned only if ResourceType is set to PDS.</p>
+             * </blockquote>
+             * 
+             * <strong>example:</strong>
+             * <p><a href="mailto:user01@cn-hangzhou.120">user01@cn-hangzhou.120</a>****</p>
              */
             public Builder externalUserId(String externalUserId) {
                 this.externalUserId = externalUserId;
@@ -635,7 +702,10 @@ public class DescribeDrivesResponseBody extends TeaModel {
             }
 
             /**
-             * GmtCreate.
+             * <p>The time when the storage resource was created.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2025-07-02T08:42:26.000+00:00</p>
              */
             public Builder gmtCreate(String gmtCreate) {
                 this.gmtCreate = gmtCreate;
@@ -643,7 +713,10 @@ public class DescribeDrivesResponseBody extends TeaModel {
             }
 
             /**
-             * GmtModified.
+             * <p>The time when the storage resource was modified.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2025-07-07T02:46:04.000+00:00</p>
              */
             public Builder gmtModified(String gmtModified) {
                 this.gmtModified = gmtModified;
@@ -651,7 +724,13 @@ public class DescribeDrivesResponseBody extends TeaModel {
             }
 
             /**
-             * Id.
+             * <p>The user ID.</p>
+             * <blockquote>
+             * <p> You can ignore this parameter.</p>
+             * </blockquote>
+             * 
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder id(String id) {
                 this.id = id;
@@ -659,7 +738,10 @@ public class DescribeDrivesResponseBody extends TeaModel {
             }
 
             /**
-             * Name.
+             * <p>The name of the storage resource.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>test****</p>
              */
             public Builder name(String name) {
                 this.name = name;
@@ -667,7 +749,14 @@ public class DescribeDrivesResponseBody extends TeaModel {
             }
 
             /**
-             * ProfileRoaming.
+             * <blockquote>
+             * <p> This parameter is deprecated.</p>
+             * </blockquote>
+             * 
+             * <strong>example:</strong>
+             * <ul>
+             * <li></li>
+             * </ul>
              */
             public Builder profileRoaming(Boolean profileRoaming) {
                 this.profileRoaming = profileRoaming;
@@ -675,7 +764,19 @@ public class DescribeDrivesResponseBody extends TeaModel {
             }
 
             /**
-             * Status.
+             * <p>The status of the user-level storage resource.</p>
+             * <p>Valid values:</p>
+             * <ul>
+             * <li>INIT: initializing</li>
+             * <li>MAINTAIN: maintaining</li>
+             * <li>DELETING: deleting</li>
+             * <li>INVALID: invalid</li>
+             * <li>NORMAL: normal</li>
+             * <li>FAIL: failed</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>NORMAL</p>
              */
             public Builder status(String status) {
                 this.status = status;
@@ -683,7 +784,10 @@ public class DescribeDrivesResponseBody extends TeaModel {
             }
 
             /**
-             * TotalSize.
+             * <p>The total amount of user-level storage capacity.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>536870912000</p>
              */
             public Builder totalSize(Long totalSize) {
                 this.totalSize = totalSize;
@@ -691,7 +795,15 @@ public class DescribeDrivesResponseBody extends TeaModel {
             }
 
             /**
-             * Type.
+             * <p>The usage of the storage resource.</p>
+             * <p>Valid values:</p>
+             * <ul>
+             * <li>DESKTOP: data disk space</li>
+             * <li>USER_PROFILE: personal data space</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>USER_PROFILE</p>
              */
             public Builder type(String type) {
                 this.type = type;
@@ -699,7 +811,10 @@ public class DescribeDrivesResponseBody extends TeaModel {
             }
 
             /**
-             * UsedSize.
+             * <p>The amount of user-level storage capacity used.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>243175936</p>
              */
             public Builder usedSize(Long usedSize) {
                 this.usedSize = usedSize;
@@ -707,7 +822,10 @@ public class DescribeDrivesResponseBody extends TeaModel {
             }
 
             /**
-             * UserId.
+             * <p>The user ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>user01</p>
              */
             public Builder userId(String userId) {
                 this.userId = userId;

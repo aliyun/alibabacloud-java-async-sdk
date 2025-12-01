@@ -129,7 +129,10 @@ public class DescribeEcdReportTasksRequest extends Request {
         } 
 
         /**
-         * PageNum.
+         * <p>The number of the page to return. Pages start from page 1. Default value: 1.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder pageNum(Integer pageNum) {
             this.putQueryParameter("PageNum", pageNum);
@@ -138,7 +141,10 @@ public class DescribeEcdReportTasksRequest extends Request {
         }
 
         /**
-         * PageSize.
+         * <p>The number of entries returned per page. Maximum value: 200.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>20。</p>
          */
         public Builder pageSize(Integer pageSize) {
             this.putQueryParameter("PageSize", pageSize);
@@ -147,7 +153,15 @@ public class DescribeEcdReportTasksRequest extends Request {
         }
 
         /**
-         * Status.
+         * <p>The task status.</p>
+         * <p>Valid values:</p>
+         * <ul>
+         * <li>INIT: initializing</li>
+         * <li>FAILED</li>
+         * <li>RUNNING</li>
+         * <li>EXPIRED</li>
+         * <li>FINISHED</li>
+         * </ul>
          */
         public Builder status(java.util.List<String> status) {
             this.putQueryParameter("Status", status);
@@ -156,7 +170,14 @@ public class DescribeEcdReportTasksRequest extends Request {
         }
 
         /**
-         * SubType.
+         * <p>The sub-type of the report export task.</p>
+         * <p>Valid value:</p>
+         * <ul>
+         * <li>DESKTOP: cloud computer</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>DESKTOP</p>
          */
         public Builder subType(String subType) {
             this.putQueryParameter("SubType", subType);
@@ -165,7 +186,10 @@ public class DescribeEcdReportTasksRequest extends Request {
         }
 
         /**
-         * TaskId.
+         * <p>The ID of the report export task.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>ret-sfkdsjfi*****</p>
          */
         public Builder taskId(String taskId) {
             this.putQueryParameter("TaskId", taskId);
@@ -174,7 +198,14 @@ public class DescribeEcdReportTasksRequest extends Request {
         }
 
         /**
-         * TaskType.
+         * <p>The type of the report.</p>
+         * <p>Valid value:</p>
+         * <ul>
+         * <li>RESOURCE_REPORT</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>RESOURCE_REPORT</p>
          */
         public Builder taskType(String taskType) {
             this.putQueryParameter("TaskType", taskType);

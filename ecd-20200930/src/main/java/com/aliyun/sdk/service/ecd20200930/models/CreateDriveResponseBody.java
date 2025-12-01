@@ -106,7 +106,10 @@ public class CreateDriveResponseBody extends TeaModel {
         } 
 
         /**
-         * Code.
+         * <p>The response code. The value 200 indicates that the request was successful.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>200</p>
          */
         public Builder code(String code) {
             this.code = code;
@@ -114,7 +117,7 @@ public class CreateDriveResponseBody extends TeaModel {
         }
 
         /**
-         * Drive.
+         * <p>The user-level storage resource.</p>
          */
         public Builder drive(Drive drive) {
             this.drive = drive;
@@ -122,7 +125,10 @@ public class CreateDriveResponseBody extends TeaModel {
         }
 
         /**
-         * Message.
+         * <p>The response message.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>successful</p>
          */
         public Builder message(String message) {
             this.message = message;
@@ -130,7 +136,10 @@ public class CreateDriveResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * <p>The ID of the request.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>B7AA****</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -138,7 +147,10 @@ public class CreateDriveResponseBody extends TeaModel {
         }
 
         /**
-         * Success.
+         * <p>Indicates whether the request was successful.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder success(Boolean success) {
             this.success = success;
@@ -386,7 +398,10 @@ public class CreateDriveResponseBody extends TeaModel {
             } 
 
             /**
-             * AliUid.
+             * <p>The ID of the Alibaba Cloud account.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1202****</p>
              */
             public Builder aliUid(String aliUid) {
                 this.aliUid = aliUid;
@@ -394,7 +409,10 @@ public class CreateDriveResponseBody extends TeaModel {
             }
 
             /**
-             * Description.
+             * <p>The description of the storage resource.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>test****</p>
              */
             public Builder description(String description) {
                 this.description = description;
@@ -402,7 +420,10 @@ public class CreateDriveResponseBody extends TeaModel {
             }
 
             /**
-             * DomainId.
+             * <p>The ID of the storage resource.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>dom-aaaa****</p>
              */
             public Builder domainId(String domainId) {
                 this.domainId = domainId;
@@ -410,7 +431,10 @@ public class CreateDriveResponseBody extends TeaModel {
             }
 
             /**
-             * DriveId.
+             * <p>The ID of the user-level storage resource.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>dri-aaaa****</p>
              */
             public Builder driveId(String driveId) {
                 this.driveId = driveId;
@@ -418,7 +442,13 @@ public class CreateDriveResponseBody extends TeaModel {
             }
 
             /**
-             * ExternalDriveId.
+             * <p>The ID of the external user-level storage resource.</p>
+             * <blockquote>
+             * <p> A value is returned for this parameter only if ResourceType is set to PDS.</p>
+             * </blockquote>
+             * 
+             * <strong>example:</strong>
+             * <p>1100****</p>
              */
             public Builder externalDriveId(String externalDriveId) {
                 this.externalDriveId = externalDriveId;
@@ -426,7 +456,10 @@ public class CreateDriveResponseBody extends TeaModel {
             }
 
             /**
-             * ExternalUserId.
+             * <p>The ID of the external user.</p>
+             * 
+             * <strong>example:</strong>
+             * <p><a href="mailto:user01@cn-hangzhou.120">user01@cn-hangzhou.120</a>****</p>
              */
             public Builder externalUserId(String externalUserId) {
                 this.externalUserId = externalUserId;
@@ -434,7 +467,10 @@ public class CreateDriveResponseBody extends TeaModel {
             }
 
             /**
-             * GmtCreate.
+             * <p>The time when the storage resource was created.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2025-07-02T08:42:26.000+00:00</p>
              */
             public Builder gmtCreate(String gmtCreate) {
                 this.gmtCreate = gmtCreate;
@@ -442,7 +478,10 @@ public class CreateDriveResponseBody extends TeaModel {
             }
 
             /**
-             * GmtModified.
+             * <p>The time when the storage resource was last modified.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2025-07-07T02:46:04.000+00:00</p>
              */
             public Builder gmtModified(String gmtModified) {
                 this.gmtModified = gmtModified;
@@ -450,7 +489,7 @@ public class CreateDriveResponseBody extends TeaModel {
             }
 
             /**
-             * <p>ID。</p>
+             * <p>The ID.</p>
              * 
              * <strong>example:</strong>
              * <p>1</p>
@@ -461,7 +500,10 @@ public class CreateDriveResponseBody extends TeaModel {
             }
 
             /**
-             * Name.
+             * <p>The name of the storage resource.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>test****</p>
              */
             public Builder name(String name) {
                 this.name = name;
@@ -469,7 +511,14 @@ public class CreateDriveResponseBody extends TeaModel {
             }
 
             /**
-             * ProfileRoaming.
+             * <blockquote>
+             * <p> This parameter is deprecated.</p>
+             * </blockquote>
+             * 
+             * <strong>example:</strong>
+             * <ul>
+             * <li></li>
+             * </ul>
              */
             public Builder profileRoaming(Boolean profileRoaming) {
                 this.profileRoaming = profileRoaming;
@@ -477,7 +526,19 @@ public class CreateDriveResponseBody extends TeaModel {
             }
 
             /**
-             * Status.
+             * <p>The status of the user-level storage resource.</p>
+             * <p>Valid values:</p>
+             * <ul>
+             * <li>INIT: initializing</li>
+             * <li>MAINTAIN: maintaining</li>
+             * <li>DELETING</li>
+             * <li>INVALID</li>
+             * <li>NORMAL</li>
+             * <li>FAIL: failed</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>NORMAL</p>
              */
             public Builder status(String status) {
                 this.status = status;
@@ -485,7 +546,13 @@ public class CreateDriveResponseBody extends TeaModel {
             }
 
             /**
-             * TotalSize.
+             * <p>The total amount of the user-level storage resource capacity.</p>
+             * <blockquote>
+             * <p> Unit: bytes.</p>
+             * </blockquote>
+             * 
+             * <strong>example:</strong>
+             * <p>536870912000</p>
              */
             public Builder totalSize(Long totalSize) {
                 this.totalSize = totalSize;
@@ -493,7 +560,15 @@ public class CreateDriveResponseBody extends TeaModel {
             }
 
             /**
-             * Type.
+             * <p>The usage of the storage resource.</p>
+             * <p>Valid values:</p>
+             * <ul>
+             * <li>DESKTOP: data disk space</li>
+             * <li>USER_PROFILE: space for personal data of the user</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>USER_PROFILE</p>
              */
             public Builder type(String type) {
                 this.type = type;
@@ -501,7 +576,13 @@ public class CreateDriveResponseBody extends TeaModel {
             }
 
             /**
-             * UsedSize.
+             * <p>The amount of user-level storage resource capacity used.</p>
+             * <blockquote>
+             * <p> Unit: bytes.</p>
+             * </blockquote>
+             * 
+             * <strong>example:</strong>
+             * <p>243175936</p>
              */
             public Builder usedSize(Long usedSize) {
                 this.usedSize = usedSize;
@@ -509,7 +590,10 @@ public class CreateDriveResponseBody extends TeaModel {
             }
 
             /**
-             * UserId.
+             * <p>The user ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>user01</p>
              */
             public Builder userId(String userId) {
                 this.userId = userId;

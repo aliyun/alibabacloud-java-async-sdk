@@ -213,7 +213,7 @@ public class DescribeDesktopGroupSessionsRequest extends Request {
         } 
 
         /**
-         * DesktopGroupIds.
+         * <p>The IDs of shared desktop groups.</p>
          */
         public Builder desktopGroupIds(java.util.List<String> desktopGroupIds) {
             this.putQueryParameter("DesktopGroupIds", desktopGroupIds);
@@ -222,7 +222,10 @@ public class DescribeDesktopGroupSessionsRequest extends Request {
         }
 
         /**
-         * DesktopGroupName.
+         * <p>The name of the shared desktop.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>ecd-4oyi32wmrctgx****</p>
          */
         public Builder desktopGroupName(String desktopGroupName) {
             this.putQueryParameter("DesktopGroupName", desktopGroupName);
@@ -243,7 +246,7 @@ public class DescribeDesktopGroupSessionsRequest extends Request {
         }
 
         /**
-         * <p>The ID of the end user.</p>
+         * <p>The user ID of the terminal that connects to the session.</p>
          * 
          * <strong>example:</strong>
          * <p>xianqiu</p>
@@ -255,7 +258,7 @@ public class DescribeDesktopGroupSessionsRequest extends Request {
         }
 
         /**
-         * FillTerminalInfo.
+         * <p>Whether to supplement terminal information.</p>
          */
         public Builder fillTerminalInfo(Boolean fillTerminalInfo) {
             this.putQueryParameter("FillTerminalInfo", fillTerminalInfo);
@@ -264,7 +267,10 @@ public class DescribeDesktopGroupSessionsRequest extends Request {
         }
 
         /**
-         * Language.
+         * <p>The language of the response.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>zh-CN</p>
          */
         public Builder language(String language) {
             this.putQueryParameter("Language", language);
@@ -285,7 +291,7 @@ public class DescribeDesktopGroupSessionsRequest extends Request {
         }
 
         /**
-         * <p>The pagination token that is used in the next request to retrieve a new page of results.</p>
+         * <p>A pagination token. It can be used in the next request to retrieve a new page of results.</p>
          * 
          * <strong>example:</strong>
          * <p>&quot;asdfdfsdfsdfds&quot;</p>
@@ -314,7 +320,7 @@ public class DescribeDesktopGroupSessionsRequest extends Request {
         }
 
         /**
-         * <p>The region ID.</p>
+         * <p>The ID of the region. You can call the <a href="~~DescribeRegions~~">DescribeRegions</a> operation to query the list of regions where Elastic Desktop Service (EDS) Enterprise is available.</p>
          * 
          * <strong>example:</strong>
          * <p>cn-hangzhou</p>

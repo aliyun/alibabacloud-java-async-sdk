@@ -218,7 +218,10 @@ public class DescribeDesktopGroupSessionsResponseBody extends TeaModel {
             } 
 
             /**
-             * Model.
+             * <p>The type of the terminal.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>wuying_mac_x86_64</p>
              */
             public Builder model(String model) {
                 this.model = model;
@@ -226,7 +229,10 @@ public class DescribeDesktopGroupSessionsResponseBody extends TeaModel {
             }
 
             /**
-             * ProductName.
+             * <p>The terminal type.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Mac</p>
              */
             public Builder productName(String productName) {
                 this.productName = productName;
@@ -234,7 +240,10 @@ public class DescribeDesktopGroupSessionsResponseBody extends TeaModel {
             }
 
             /**
-             * SerialNumber.
+             * <p>Terminal Serial Number</p>
+             * 
+             * <strong>example:</strong>
+             * <p>96c530bc-6095-4014-8bbc-d461b8ac****</p>
              */
             public Builder serialNumber(String serialNumber) {
                 this.serialNumber = serialNumber;
@@ -242,7 +251,10 @@ public class DescribeDesktopGroupSessionsResponseBody extends TeaModel {
             }
 
             /**
-             * Uuid.
+             * <p>The terminal UUID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>EBFDC7773BEBAD418A9F89429652****</p>
              */
             public Builder uuid(String uuid) {
                 this.uuid = uuid;
@@ -569,7 +581,10 @@ public class DescribeDesktopGroupSessionsResponseBody extends TeaModel {
             } 
 
             /**
-             * AccountType.
+             * <p>账号类型</p>
+             * 
+             * <strong>example:</strong>
+             * <p>SIMPLE</p>
              */
             public Builder accountType(String accountType) {
                 this.accountType = accountType;
@@ -588,7 +603,7 @@ public class DescribeDesktopGroupSessionsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The OS that the client runs.</p>
+             * <p>The operating system of the client.</p>
              * 
              * <strong>example:</strong>
              * <p>windows_&quot;Windows10Enterprise&quot;10.0(Build22000)</p>
@@ -610,7 +625,7 @@ public class DescribeDesktopGroupSessionsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The ID of the desktop group.</p>
+             * <p>The ID of the shared cloud computer.</p>
              * 
              * <strong>example:</strong>
              * <p>dg-iaqu3bi2xtie****</p>
@@ -621,7 +636,7 @@ public class DescribeDesktopGroupSessionsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The name of the desktop group.</p>
+             * <p>The name of the cloud computer share.</p>
              * 
              * <strong>example:</strong>
              * <p>Test</p>
@@ -632,7 +647,7 @@ public class DescribeDesktopGroupSessionsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>If the session is being established, the value of this parameter indicates the ID of the current cloud desktop. If the session is disconnected, the value of this parameter indicates the ID of the cloud desktop that was most recently connected.</p>
+             * <p>If the session status is Connected, it indicates the ID of the cloud computer that is currently connected. If the session status is Disconnected, it indicates the ID of the cloud computer that was last connected.</p>
              * 
              * <strong>example:</strong>
              * <p>ecd-g6t1ukbaea****</p>
@@ -643,7 +658,10 @@ public class DescribeDesktopGroupSessionsResponseBody extends TeaModel {
             }
 
             /**
-             * DirectoryType.
+             * <p>办公网络类型</p>
+             * 
+             * <strong>example:</strong>
+             * <p>SIMPLE</p>
              */
             public Builder directoryType(String directoryType) {
                 this.directoryType = directoryType;
@@ -662,7 +680,7 @@ public class DescribeDesktopGroupSessionsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The ID of the end user.</p>
+             * <p>The user ID of the terminal that connects to the session.</p>
              * 
              * <strong>example:</strong>
              * <p>xianqiu</p>
@@ -695,7 +713,7 @@ public class DescribeDesktopGroupSessionsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The duration of the most recent session.</p>
+             * <p>The duration of the most recent session. Unit: seconds.</p>
              * 
              * <strong>example:</strong>
              * <p>120</p>
@@ -706,7 +724,7 @@ public class DescribeDesktopGroupSessionsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The ID of the workspace.</p>
+             * <p>The office network ID.</p>
              * 
              * <strong>example:</strong>
              * <p>cn-hangzhou+dir-8904****</p>
@@ -717,7 +735,7 @@ public class DescribeDesktopGroupSessionsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The name of the workspace.</p>
+             * <p>The office network name.</p>
              * 
              * <strong>example:</strong>
              * <p>Test</p>
@@ -728,10 +746,11 @@ public class DescribeDesktopGroupSessionsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The OS. Valid values:</p>
+             * <p>The operating system type of the cloud computer.</p>
+             * <p>Valid values:</p>
              * <ul>
-             * <li>Windows</li>
-             * <li>Linux</li>
+             * <li>linux.</li>
+             * <li>Windows.</li>
              * </ul>
              * 
              * <strong>example:</strong>
@@ -759,7 +778,12 @@ public class DescribeDesktopGroupSessionsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The type of the protocol.</p>
+             * <p>The protocol type supported by the rule.</p>
+             * <p>Valid value:</p>
+             * <ul>
+             * <li>High-definition Experience (HDX).</li>
+             * <li>ASP.</li>
+             * </ul>
              * 
              * <strong>example:</strong>
              * <p>ASP</p>
@@ -770,7 +794,7 @@ public class DescribeDesktopGroupSessionsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The duration during which the cloud desktop stays in the Idle state.</p>
+             * <p>The idle duration of the cloud computer. Unit: seconds.</p>
              * 
              * <strong>example:</strong>
              * <p>120</p>
@@ -808,7 +832,7 @@ public class DescribeDesktopGroupSessionsResponseBody extends TeaModel {
             }
 
             /**
-             * TerminalInfo.
+             * <p>Terminal Info</p>
              */
             public Builder terminalInfo(TerminalInfo terminalInfo) {
                 this.terminalInfo = terminalInfo;
@@ -816,7 +840,7 @@ public class DescribeDesktopGroupSessionsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The total duration of the sessions.</p>
+             * <p>The total duration of the sessions. Unit: seconds.</p>
              * 
              * <strong>example:</strong>
              * <p>120</p>

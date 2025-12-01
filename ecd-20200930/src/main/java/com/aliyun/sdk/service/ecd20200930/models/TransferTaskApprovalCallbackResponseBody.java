@@ -54,7 +54,10 @@ public class TransferTaskApprovalCallbackResponseBody extends TeaModel {
         } 
 
         /**
-         * RequestId.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>AE7B699F-625C-587E-BC5F-1395CA****</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;

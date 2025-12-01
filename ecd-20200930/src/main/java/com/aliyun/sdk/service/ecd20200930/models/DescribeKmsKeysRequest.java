@@ -59,7 +59,7 @@ public class DescribeKmsKeysRequest extends Request {
         } 
 
         /**
-         * <p>The ID of the region. You can call the <a href="~~DescribeRegions~~">DescribeRegions</a> operation to query the most recent region list.</p>
+         * <p>The region ID. You can call the <a href="~~DescribeRegions~~">DescribeRegions</a> operation to query the list of regions where Elastic Desktop Service (EDS) Enterprise is available.</p>
          * 
          * <strong>example:</strong>
          * <p>cn-hangzhou</p>

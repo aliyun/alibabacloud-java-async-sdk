@@ -354,6 +354,24 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
+     * @param request the request parameters of BatchModifyEntitlement  BatchModifyEntitlementRequest
+     * @return BatchModifyEntitlementResponse
+     */
+    @Override
+    public CompletableFuture<BatchModifyEntitlementResponse> batchModifyEntitlement(BatchModifyEntitlementRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RPC).setAction("BatchModifyEntitlement").setMethod(HttpMethod.POST).setPathRegex("/").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(BatchModifyEntitlementResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<BatchModifyEntitlementResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
      * @param request the request parameters of BindConfigGroup  BindConfigGroupRequest
      * @return BindConfigGroupResponse
      */
@@ -1223,6 +1241,13 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
+     * <b>description</b> :
+     * <p>When you call this operation, take note of the following item:</p>
+     * <ul>
+     * <li>Most parameters in templates are optional. When you create a template, Elastic Desktop Service (EDS) does not validate the existence or correctness of the parameter values you specify. The parameter values in the template are only verified when you use the template to create cloud computers.</li>
+     * <li>For parameters that include the region attribute in the template, it\&quot;s important to note that if the specified region doesn’t match the region where the template is used to create a cloud computer, those parameters will not take effect.</li>
+     * </ul>
+     * 
      * @param request the request parameters of CreateTemplate  CreateTemplateRequest
      * @return CreateTemplateResponse
      */
@@ -1909,6 +1934,42 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
+     * @param request the request parameters of DescribeCloudDiskGroupDrives  DescribeCloudDiskGroupDrivesRequest
+     * @return DescribeCloudDiskGroupDrivesResponse
+     */
+    @Override
+    public CompletableFuture<DescribeCloudDiskGroupDrivesResponse> describeCloudDiskGroupDrives(DescribeCloudDiskGroupDrivesRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RPC).setAction("DescribeCloudDiskGroupDrives").setMethod(HttpMethod.POST).setPathRegex("/").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(DescribeCloudDiskGroupDrivesResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<DescribeCloudDiskGroupDrivesResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
+     * @param request the request parameters of DescribeCloudDiskGroups  DescribeCloudDiskGroupsRequest
+     * @return DescribeCloudDiskGroupsResponse
+     */
+    @Override
+    public CompletableFuture<DescribeCloudDiskGroupsResponse> describeCloudDiskGroups(DescribeCloudDiskGroupsRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RPC).setAction("DescribeCloudDiskGroups").setMethod(HttpMethod.POST).setPathRegex("/").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(DescribeCloudDiskGroupsResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<DescribeCloudDiskGroupsResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
      * @param request the request parameters of DescribeCloudDriveGroups  DescribeCloudDriveGroupsRequest
      * @return DescribeCloudDriveGroupsResponse
      */
@@ -2352,6 +2413,14 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
+     * <b>description</b> :
+     * <p>  Domestic site users query site selection Shanghai, international site users choose Singapore.</p>
+     * <ul>
+     * <li>By default, you can query all cloud computers that are deleted or not deleted.</li>
+     * <li>Deleted cloud computers can be queried only if the deletion time is less than three months.</li>
+     * <li>Sort criteria cannot be shared with other criteria.</li>
+     * </ul>
+     * 
      * @param request the request parameters of DescribeGlobalDesktopRecords  DescribeGlobalDesktopRecordsRequest
      * @return DescribeGlobalDesktopRecordsResponse
      */
@@ -3473,6 +3542,24 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
+     * @param request the request parameters of ListInstalledApps  ListInstalledAppsRequest
+     * @return ListInstalledAppsResponse
+     */
+    @Override
+    public CompletableFuture<ListInstalledAppsResponse> listInstalledApps(ListInstalledAppsRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RPC).setAction("ListInstalledApps").setMethod(HttpMethod.POST).setPathRegex("/").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(ListInstalledAppsResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<ListInstalledAppsResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
      * @param request the request parameters of ListOfficeSiteOverview  ListOfficeSiteOverviewRequest
      * @return ListOfficeSiteOverviewResponse
      */
@@ -4395,7 +4482,7 @@ public final class DefaultAsyncClient implements AsyncClient {
 
     /**
      * <b>description</b> :
-     * <p>You can use this operation to modify only the name and description of a custom cloud computer template. To change other parameters of the template, use the <a href="https://help.aliyun.com/document_detail/2925841.html">ModifyTemplate</a> operation.</p>
+     * <p>This operation allows you to modify only the name and description of a custom cloud computer template. To change other parameters of the template, call the <a href="https://help.aliyun.com/document_detail/2925841.html">ModifyTemplate</a> operation.</p>
      * 
      * @param request the request parameters of ModifyTemplateBaseInfo  ModifyTemplateBaseInfoRequest
      * @return ModifyTemplateBaseInfoResponse
@@ -4869,6 +4956,9 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
+     * <b>description</b> :
+     * <p>If you need to perform some maintenance operations on the cloud computer and want to prohibit end user from connecting and using the cloud computer during this period, you can switch it to maintenance mode.</p>
+     * 
      * @param request the request parameters of SetDesktopMaintenance  SetDesktopMaintenanceRequest
      * @return SetDesktopMaintenanceResponse
      */

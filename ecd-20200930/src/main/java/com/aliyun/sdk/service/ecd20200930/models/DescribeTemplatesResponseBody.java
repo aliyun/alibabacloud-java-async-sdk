@@ -158,7 +158,10 @@ public class DescribeTemplatesResponseBody extends TeaModel {
         } 
 
         /**
-         * Code.
+         * <p>The modification result. If the request was successful, <code>success</code> is returned. If the request failed, an error message is returned.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>success</p>
          */
         public Builder code(String code) {
             this.code = code;
@@ -166,7 +169,7 @@ public class DescribeTemplatesResponseBody extends TeaModel {
         }
 
         /**
-         * Data.
+         * <p>The templates.</p>
          */
         public Builder data(java.util.List<Data> data) {
             this.data = data;
@@ -174,7 +177,10 @@ public class DescribeTemplatesResponseBody extends TeaModel {
         }
 
         /**
-         * HttpStatusCode.
+         * <p>The HTTP status code returned.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>200</p>
          */
         public Builder httpStatusCode(Integer httpStatusCode) {
             this.httpStatusCode = httpStatusCode;
@@ -182,7 +188,10 @@ public class DescribeTemplatesResponseBody extends TeaModel {
         }
 
         /**
-         * Message.
+         * <p>The error message returned. This parameter is not returned if the value of Code is <code>success</code>.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>success</p>
          */
         public Builder message(String message) {
             this.message = message;
@@ -190,7 +199,10 @@ public class DescribeTemplatesResponseBody extends TeaModel {
         }
 
         /**
-         * PageNumber.
+         * <p>The page number.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder pageNumber(Integer pageNumber) {
             this.pageNumber = pageNumber;
@@ -198,7 +210,10 @@ public class DescribeTemplatesResponseBody extends TeaModel {
         }
 
         /**
-         * PageSize.
+         * <p>The number of entries per page.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>20</p>
          */
         public Builder pageSize(Integer pageSize) {
             this.pageSize = pageSize;
@@ -206,7 +221,10 @@ public class DescribeTemplatesResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1871984F-51F6-5588-BAF6-*******</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -214,7 +232,10 @@ public class DescribeTemplatesResponseBody extends TeaModel {
         }
 
         /**
-         * Success.
+         * <p>Indicates whether the request was successful.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>True</p>
          */
         public Builder success(Boolean success) {
             this.success = success;
@@ -222,7 +243,10 @@ public class DescribeTemplatesResponseBody extends TeaModel {
         }
 
         /**
-         * TotalCount.
+         * <p>The total number of templates.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>94</p>
          */
         public Builder totalCount(Integer totalCount) {
             this.totalCount = totalCount;
@@ -288,7 +312,16 @@ public class DescribeTemplatesResponseBody extends TeaModel {
             } 
 
             /**
-             * PerformanceLevel.
+             * <p>The PL of the data disk.</p>
+             * <p>Valid values:</p>
+             * <ul>
+             * <li>PL1: a PL1 ESSD.</li>
+             * <li>PL0: a PL0 ESSD.</li>
+             * <li>AutoPL: an AutoPL SSD.</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>AutoPL</p>
              */
             public Builder performanceLevel(String performanceLevel) {
                 this.performanceLevel = performanceLevel;
@@ -296,7 +329,10 @@ public class DescribeTemplatesResponseBody extends TeaModel {
             }
 
             /**
-             * Size.
+             * <p>The size of the data disk. Unit: GiB.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>100</p>
              */
             public Builder size(String size) {
                 this.size = size;
@@ -467,7 +503,10 @@ public class DescribeTemplatesResponseBody extends TeaModel {
             } 
 
             /**
-             * CpuCount.
+             * <p>The number of vCPUs.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>4</p>
              */
             public Builder cpuCount(Integer cpuCount) {
                 this.cpuCount = cpuCount;
@@ -475,7 +514,10 @@ public class DescribeTemplatesResponseBody extends TeaModel {
             }
 
             /**
-             * GpuSpec.
+             * <p>The GPU memory information. This parameter is supported only by Graphics cloud computer types.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>4GiB</p>
              */
             public Builder gpuSpec(String gpuSpec) {
                 this.gpuSpec = gpuSpec;
@@ -483,7 +525,10 @@ public class DescribeTemplatesResponseBody extends TeaModel {
             }
 
             /**
-             * MemorySize.
+             * <p>The memory size. Unit: MiB.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>8192</p>
              */
             public Builder memorySize(Long memorySize) {
                 this.memorySize = memorySize;
@@ -491,7 +536,10 @@ public class DescribeTemplatesResponseBody extends TeaModel {
             }
 
             /**
-             * OfficeSiteId.
+             * <p>The office network ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>cn-beijing+dir-3040*****</p>
              */
             public Builder officeSiteId(String officeSiteId) {
                 this.officeSiteId = officeSiteId;
@@ -499,7 +547,10 @@ public class DescribeTemplatesResponseBody extends TeaModel {
             }
 
             /**
-             * RegionId.
+             * <p>The region ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>cn-shenzhen</p>
              */
             public Builder regionId(String regionId) {
                 this.regionId = regionId;
@@ -507,7 +558,10 @@ public class DescribeTemplatesResponseBody extends TeaModel {
             }
 
             /**
-             * ResourceInstanceType.
+             * <p>The ID of the cloud computer type.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>eds.enterprise_office.4c8g</p>
              */
             public Builder resourceInstanceType(String resourceInstanceType) {
                 this.resourceInstanceType = resourceInstanceType;
@@ -515,7 +569,10 @@ public class DescribeTemplatesResponseBody extends TeaModel {
             }
 
             /**
-             * SnapshotPolicyId.
+             * <p>The snapshot policy ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>sp-b9fasjuu0*****</p>
              */
             public Builder snapshotPolicyId(String snapshotPolicyId) {
                 this.snapshotPolicyId = snapshotPolicyId;
@@ -523,7 +580,10 @@ public class DescribeTemplatesResponseBody extends TeaModel {
             }
 
             /**
-             * SubnetId.
+             * <p>The subnet ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>vsw-dgea1*****</p>
              */
             public Builder subnetId(String subnetId) {
                 this.subnetId = subnetId;
@@ -531,7 +591,10 @@ public class DescribeTemplatesResponseBody extends TeaModel {
             }
 
             /**
-             * VolumeEncryptionEnable.
+             * <p>Indicates whether disk encryption is enabled.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>false</p>
              */
             public Builder volumeEncryptionEnable(Boolean volumeEncryptionEnable) {
                 this.volumeEncryptionEnable = volumeEncryptionEnable;
@@ -539,7 +602,10 @@ public class DescribeTemplatesResponseBody extends TeaModel {
             }
 
             /**
-             * VolumeEncryptionKey.
+             * <p>The ID of the Key Management Service (KMS) key that is used to encrypt the disk.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>3bc77be0-cbce-4a29-b07b-13f16394****</p>
              */
             public Builder volumeEncryptionKey(String volumeEncryptionKey) {
                 this.volumeEncryptionKey = volumeEncryptionKey;
@@ -606,7 +672,10 @@ public class DescribeTemplatesResponseBody extends TeaModel {
             } 
 
             /**
-             * Key.
+             * <p>The tag key.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>env</p>
              */
             public Builder key(String key) {
                 this.key = key;
@@ -614,7 +683,10 @@ public class DescribeTemplatesResponseBody extends TeaModel {
             }
 
             /**
-             * Value.
+             * <p>The property value.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>test</p>
              */
             public Builder value(String value) {
                 this.value = value;
@@ -681,7 +753,10 @@ public class DescribeTemplatesResponseBody extends TeaModel {
             } 
 
             /**
-             * AppRuleId.
+             * <p>应用管控策略ID</p>
+             * 
+             * <strong>example:</strong>
+             * <p>bwr-5a5371e0*******</p>
              */
             public Builder appRuleId(String appRuleId) {
                 this.appRuleId = appRuleId;
@@ -689,7 +764,10 @@ public class DescribeTemplatesResponseBody extends TeaModel {
             }
 
             /**
-             * SiteId.
+             * <p>站点名称。</p>
+             * 
+             * <strong>example:</strong>
+             * <p>mainland</p>
              */
             public Builder siteId(String siteId) {
                 this.siteId = siteId;
@@ -1105,7 +1183,7 @@ public class DescribeTemplatesResponseBody extends TeaModel {
             }
 
             /**
-             * DataDiskList.
+             * <p>The sizes of the data disks.</p>
              */
             public Builder dataDiskList(java.util.List<DataDiskList> dataDiskList) {
                 this.dataDiskList = dataDiskList;
@@ -1113,7 +1191,17 @@ public class DescribeTemplatesResponseBody extends TeaModel {
             }
 
             /**
-             * DefaultLanguage.
+             * <p>The default language of the template.</p>
+             * <p>Valid values:</p>
+             * <ul>
+             * <li>en-US: English.</li>
+             * <li>zh-HK: Chinese, Traditional (Hong Kong, China).</li>
+             * <li>zh-CN: Simplified Chinese.</li>
+             * <li>ja-JP: Japanese.</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>zh-CN</p>
              */
             public Builder defaultLanguage(String defaultLanguage) {
                 this.defaultLanguage = defaultLanguage;
@@ -1121,7 +1209,7 @@ public class DescribeTemplatesResponseBody extends TeaModel {
             }
 
             /**
-             * Description.
+             * <p>The template description.</p>
              */
             public Builder description(String description) {
                 this.description = description;
@@ -1129,7 +1217,10 @@ public class DescribeTemplatesResponseBody extends TeaModel {
             }
 
             /**
-             * GmtCreate.
+             * <p>The time when the template was created. The time follows the ISO 8601 standard in the yyyy-MM-ddThh:mm:ssZ format. The time is displayed in Coordinated Universal Time (UTC).</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2025-04-25T05:18:46.000+00:00</p>
              */
             public Builder gmtCreate(String gmtCreate) {
                 this.gmtCreate = gmtCreate;
@@ -1137,7 +1228,10 @@ public class DescribeTemplatesResponseBody extends TeaModel {
             }
 
             /**
-             * GmtModified.
+             * <p>The time when the template was updated. The time follows the ISO 8601 standard in the yyyy-MM-ddThh:mm:ssZ format. The time is displayed in UTC.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2025-04-25T05:18:46.000+00:00</p>
              */
             public Builder gmtModified(String gmtModified) {
                 this.gmtModified = gmtModified;
@@ -1145,7 +1239,10 @@ public class DescribeTemplatesResponseBody extends TeaModel {
             }
 
             /**
-             * ImageId.
+             * <p>The image ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>m-5q8ehbihx*****</p>
              */
             public Builder imageId(String imageId) {
                 this.imageId = imageId;
@@ -1153,7 +1250,17 @@ public class DescribeTemplatesResponseBody extends TeaModel {
             }
 
             /**
-             * ImageType.
+             * <p>The image type.</p>
+             * <p>Valid values:</p>
+             * <ul>
+             * <li>User: a custom image.</li>
+             * <li>Shared: a shared image.</li>
+             * <li>System: a system image.</li>
+             * <li>Community: a community image.</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>User</p>
              */
             public Builder imageType(String imageType) {
                 this.imageType = imageType;
@@ -1177,7 +1284,10 @@ public class DescribeTemplatesResponseBody extends TeaModel {
             }
 
             /**
-             * PolicyGroupId.
+             * <p>The policy ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>pg-0caoeogkhz*****</p>
              */
             public Builder policyGroupId(String policyGroupId) {
                 this.policyGroupId = policyGroupId;
@@ -1193,7 +1303,14 @@ public class DescribeTemplatesResponseBody extends TeaModel {
             }
 
             /**
-             * ProductType.
+             * <p>The service type.</p>
+             * <p>Valid value:</p>
+             * <ul>
+             * <li>CloudDesktop: cloud computers.</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>CLOUD_DESKTOP</p>
              */
             public Builder productType(String productType) {
                 this.productType = productType;
@@ -1201,7 +1318,7 @@ public class DescribeTemplatesResponseBody extends TeaModel {
             }
 
             /**
-             * RegionConfigList.
+             * <p>The region-related settings.</p>
              */
             public Builder regionConfigList(java.util.List<RegionConfigList> regionConfigList) {
                 this.regionConfigList = regionConfigList;
@@ -1209,7 +1326,10 @@ public class DescribeTemplatesResponseBody extends TeaModel {
             }
 
             /**
-             * RequestId.
+             * <p>The request ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1871984F-51F6-5588-BAF6-******</p>
              */
             public Builder requestId(String requestId) {
                 this.requestId = requestId;
@@ -1217,7 +1337,10 @@ public class DescribeTemplatesResponseBody extends TeaModel {
             }
 
             /**
-             * ResourceGroupId.
+             * <p>The ID of the resource group.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>rg-a5fqjjqaejt***</p>
              */
             public Builder resourceGroupId(String resourceGroupId) {
                 this.resourceGroupId = resourceGroupId;
@@ -1225,7 +1348,7 @@ public class DescribeTemplatesResponseBody extends TeaModel {
             }
 
             /**
-             * ResourceTagList.
+             * <p>The tags added to cloud computers. A tag is a key-value pair.</p>
              */
             public Builder resourceTagList(java.util.List<ResourceTagList> resourceTagList) {
                 this.resourceTagList = resourceTagList;
@@ -1233,7 +1356,7 @@ public class DescribeTemplatesResponseBody extends TeaModel {
             }
 
             /**
-             * SiteConfigList.
+             * <p>区域配置管理</p>
              */
             public Builder siteConfigList(java.util.List<SiteConfigList> siteConfigList) {
                 this.siteConfigList = siteConfigList;
@@ -1241,7 +1364,16 @@ public class DescribeTemplatesResponseBody extends TeaModel {
             }
 
             /**
-             * SystemDiskPerformanceLevel.
+             * <p>The performance level (PL) of the system disk.</p>
+             * <p>Valid value:</p>
+             * <ul>
+             * <li>PL1: a PL1 Enterprise SSD (ESSD).</li>
+             * <li>PL0: a PL0 ESSD.</li>
+             * <li>AutoPL: an AutoPL SSD.</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>AutoPL</p>
              */
             public Builder systemDiskPerformanceLevel(String systemDiskPerformanceLevel) {
                 this.systemDiskPerformanceLevel = systemDiskPerformanceLevel;
@@ -1249,7 +1381,10 @@ public class DescribeTemplatesResponseBody extends TeaModel {
             }
 
             /**
-             * SystemDiskSize.
+             * <p>The size of the system disk. Unit: GiB.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>80</p>
              */
             public Builder systemDiskSize(Integer systemDiskSize) {
                 this.systemDiskSize = systemDiskSize;
@@ -1257,7 +1392,10 @@ public class DescribeTemplatesResponseBody extends TeaModel {
             }
 
             /**
-             * TemplateId.
+             * <p>The template ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>b-0caoeogs88y*****</p>
              */
             public Builder templateId(String templateId) {
                 this.templateId = templateId;
@@ -1265,7 +1403,7 @@ public class DescribeTemplatesResponseBody extends TeaModel {
             }
 
             /**
-             * TemplateName.
+             * <p>The template name.</p>
              */
             public Builder templateName(String templateName) {
                 this.templateName = templateName;
@@ -1273,7 +1411,15 @@ public class DescribeTemplatesResponseBody extends TeaModel {
             }
 
             /**
-             * TemplateType.
+             * <p>The template type.</p>
+             * <p>Valid values:</p>
+             * <ul>
+             * <li>USER_TEMPLATE: custom templates.</li>
+             * <li>SYSTEM_TEMPLATE: system templates.</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>USER_TEMPLATE</p>
              */
             public Builder templateType(String templateType) {
                 this.templateType = templateType;
@@ -1281,7 +1427,10 @@ public class DescribeTemplatesResponseBody extends TeaModel {
             }
 
             /**
-             * TimerGroupId.
+             * <p>The ID of the scheduled task group.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>bcc-dweha*****</p>
              */
             public Builder timerGroupId(String timerGroupId) {
                 this.timerGroupId = timerGroupId;

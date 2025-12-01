@@ -75,7 +75,7 @@ public class StartDesktopsRequest extends Request {
         } 
 
         /**
-         * <p>The IDs of the cloud computers. You can specify 1 to 20 IDs.</p>
+         * <p>The cloud computer IDs. You can specify the IDs of 1 to 100 cloud computers.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>

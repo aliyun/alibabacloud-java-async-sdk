@@ -116,7 +116,7 @@ public class ModifyTimerGroupRequest extends Request {
         } 
 
         /**
-         * <p>The scheduled task groups.</p>
+         * <p>The scheduled tasks.</p>
          */
         public Builder configTimers(java.util.List<ConfigTimers> configTimers) {
             this.putQueryParameter("ConfigTimers", configTimers);
@@ -608,7 +608,7 @@ public class ModifyTimerGroupRequest extends Request {
             } 
 
             /**
-             * <p>Specifies whether to allow end users to configure scheduled tasks.</p>
+             * <p>Specifies whether to allow end users to configure the scheduled task.</p>
              * 
              * <strong>example:</strong>
              * <p>true</p>
@@ -679,7 +679,7 @@ public class ModifyTimerGroupRequest extends Request {
             }
 
             /**
-             * <p>The process whitelist. If whitelisted processes are running, the scheduled task does not take effect upon inactivity.</p>
+             * <p>The process whitelist. If whitelisted processes are running, the scheduled task does not take effect.</p>
              */
             public Builder processWhitelist(java.util.List<String> processWhitelist) {
                 this.processWhitelist = processWhitelist;
@@ -688,7 +688,7 @@ public class ModifyTimerGroupRequest extends Request {
 
             /**
              * <p>The reset option.</p>
-             * <p>Valid values:</p>
+             * <p>Valid value:</p>
              * <ul>
              * <li>RESET_TYPE_SYSTEM: resets the system disk.</li>
              * <li>RESET_TYPE_USER_DISK: resets the data disk.</li>
@@ -712,7 +712,7 @@ public class ModifyTimerGroupRequest extends Request {
             }
 
             /**
-             * <p>The scheduled task type.</p>
+             * <p>The type of the scheduled task.</p>
              * <p>Valid value:</p>
              * <ul>
              * <li>NoOperationDisconnect: scheduled disconnection upon inactivity.</li>
@@ -723,7 +723,7 @@ public class ModifyTimerGroupRequest extends Request {
              * <li>NoOperationHibernate: scheduled hibernation upon inactivity.</li>
              * <li>TimerShutdown: scheduled shutdown.</li>
              * <li>NoOperationReboot: scheduled restart upon inactivity.</li>
-             * <li>TimerReboot: scheduled restart.</li>
+             * <li>TimerReboot: Restarts the cloud computers on schedule.</li>
              * </ul>
              * 
              * <strong>example:</strong>

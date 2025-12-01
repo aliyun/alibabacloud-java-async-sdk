@@ -129,7 +129,7 @@ public class DescribeDrivesRequest extends Request {
         } 
 
         /**
-         * DomainIds.
+         * <p>The IDs of the storage resources.</p>
          */
         public Builder domainIds(java.util.List<String> domainIds) {
             this.putQueryParameter("DomainIds", domainIds);
@@ -138,7 +138,14 @@ public class DescribeDrivesRequest extends Request {
         }
 
         /**
-         * MaxResults.
+         * <p>The number of entries per page.</p>
+         * <ul>
+         * <li>Maximum value: 500.</li>
+         * <li>Default value: 20.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>20</p>
          */
         public Builder maxResults(Integer maxResults) {
             this.putQueryParameter("MaxResults", maxResults);
@@ -147,7 +154,10 @@ public class DescribeDrivesRequest extends Request {
         }
 
         /**
-         * NextToken.
+         * <p>A pagination token. It can be used in the next request to retrieve a new page of results. If NextToken is empty, no next page exists.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>AAAA****</p>
          */
         public Builder nextToken(String nextToken) {
             this.putQueryParameter("NextToken", nextToken);
@@ -156,7 +166,10 @@ public class DescribeDrivesRequest extends Request {
         }
 
         /**
-         * RegionId.
+         * <p>The region ID. You can call the <a href="https://help.aliyun.com/document_detail/196646.html">DescribeRegions</a> operation to query the list of regions where Elastic Desktop Service (EDS) Enterprise is available.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-hangzhou</p>
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);
@@ -165,7 +178,15 @@ public class DescribeDrivesRequest extends Request {
         }
 
         /**
-         * ResourceType.
+         * <p>The type of the storage resource.</p>
+         * <p>Valid values:</p>
+         * <ul>
+         * <li>NAS: NAS storage</li>
+         * <li>PDS: PDS storage</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>NAS</p>
          */
         public Builder resourceType(String resourceType) {
             this.putQueryParameter("ResourceType", resourceType);
@@ -174,7 +195,10 @@ public class DescribeDrivesRequest extends Request {
         }
 
         /**
-         * UserId.
+         * <p>The user ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>user01</p>
          */
         public Builder userId(String userId) {
             this.putQueryParameter("UserId", userId);

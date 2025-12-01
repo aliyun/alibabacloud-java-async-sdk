@@ -51,6 +51,10 @@ public class CreateCenterPolicyRequest extends Request {
     private String clientControlMenu;
 
     @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ClientCreateSnapshot")
+    private String clientCreateSnapshot;
+
+    @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("ClientType")
     private java.util.List<ClientType> clientType;
 
@@ -474,6 +478,10 @@ public class CreateCenterPolicyRequest extends Request {
     private String watermarkSecurity;
 
     @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("WatermarkShadow")
+    private String watermarkShadow;
+
+    @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("WatermarkTransparencyValue")
     private Integer watermarkTransparencyValue;
 
@@ -499,6 +507,7 @@ public class CreateCenterPolicyRequest extends Request {
         this.businessType = builder.businessType;
         this.cameraRedirect = builder.cameraRedirect;
         this.clientControlMenu = builder.clientControlMenu;
+        this.clientCreateSnapshot = builder.clientCreateSnapshot;
         this.clientType = builder.clientType;
         this.clipboard = builder.clipboard;
         this.clipboardGraineds = builder.clipboardGraineds;
@@ -604,6 +613,7 @@ public class CreateCenterPolicyRequest extends Request {
         this.watermarkPower = builder.watermarkPower;
         this.watermarkRowAmount = builder.watermarkRowAmount;
         this.watermarkSecurity = builder.watermarkSecurity;
+        this.watermarkShadow = builder.watermarkShadow;
         this.watermarkTransparencyValue = builder.watermarkTransparencyValue;
         this.watermarkType = builder.watermarkType;
         this.wuyingKeeper = builder.wuyingKeeper;
@@ -677,6 +687,13 @@ public class CreateCenterPolicyRequest extends Request {
      */
     public String getClientControlMenu() {
         return this.clientControlMenu;
+    }
+
+    /**
+     * @return clientCreateSnapshot
+     */
+    public String getClientCreateSnapshot() {
+        return this.clientCreateSnapshot;
     }
 
     /**
@@ -1415,6 +1432,13 @@ public class CreateCenterPolicyRequest extends Request {
     }
 
     /**
+     * @return watermarkShadow
+     */
+    public String getWatermarkShadow() {
+        return this.watermarkShadow;
+    }
+
+    /**
      * @return watermarkTransparencyValue
      */
     public Integer getWatermarkTransparencyValue() {
@@ -1451,6 +1475,7 @@ public class CreateCenterPolicyRequest extends Request {
         private Integer businessType; 
         private String cameraRedirect; 
         private String clientControlMenu; 
+        private String clientCreateSnapshot; 
         private java.util.List<ClientType> clientType; 
         private String clipboard; 
         private java.util.List<ClipboardGraineds> clipboardGraineds; 
@@ -1556,6 +1581,7 @@ public class CreateCenterPolicyRequest extends Request {
         private String watermarkPower; 
         private Integer watermarkRowAmount; 
         private String watermarkSecurity; 
+        private String watermarkShadow; 
         private Integer watermarkTransparencyValue; 
         private String watermarkType; 
         private String wuyingKeeper; 
@@ -1575,6 +1601,7 @@ public class CreateCenterPolicyRequest extends Request {
             this.businessType = request.businessType;
             this.cameraRedirect = request.cameraRedirect;
             this.clientControlMenu = request.clientControlMenu;
+            this.clientCreateSnapshot = request.clientCreateSnapshot;
             this.clientType = request.clientType;
             this.clipboard = request.clipboard;
             this.clipboardGraineds = request.clipboardGraineds;
@@ -1680,6 +1707,7 @@ public class CreateCenterPolicyRequest extends Request {
             this.watermarkPower = request.watermarkPower;
             this.watermarkRowAmount = request.watermarkRowAmount;
             this.watermarkSecurity = request.watermarkSecurity;
+            this.watermarkShadow = request.watermarkShadow;
             this.watermarkTransparencyValue = request.watermarkTransparencyValue;
             this.watermarkType = request.watermarkType;
             this.wuyingKeeper = request.wuyingKeeper;
@@ -1792,6 +1820,15 @@ public class CreateCenterPolicyRequest extends Request {
         public Builder clientControlMenu(String clientControlMenu) {
             this.putQueryParameter("ClientControlMenu", clientControlMenu);
             this.clientControlMenu = clientControlMenu;
+            return this;
+        }
+
+        /**
+         * ClientCreateSnapshot.
+         */
+        public Builder clientCreateSnapshot(String clientCreateSnapshot) {
+            this.putQueryParameter("ClientCreateSnapshot", clientCreateSnapshot);
+            this.clientCreateSnapshot = clientCreateSnapshot;
             return this;
         }
 
@@ -3213,6 +3250,15 @@ public class CreateCenterPolicyRequest extends Request {
         public Builder watermarkSecurity(String watermarkSecurity) {
             this.putQueryParameter("WatermarkSecurity", watermarkSecurity);
             this.watermarkSecurity = watermarkSecurity;
+            return this;
+        }
+
+        /**
+         * WatermarkShadow.
+         */
+        public Builder watermarkShadow(String watermarkShadow) {
+            this.putQueryParameter("WatermarkShadow", watermarkShadow);
+            this.watermarkShadow = watermarkShadow;
             return this;
         }
 

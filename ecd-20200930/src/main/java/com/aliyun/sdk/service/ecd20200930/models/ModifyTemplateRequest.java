@@ -619,7 +619,13 @@ public class ModifyTemplateRequest extends Request {
             } 
 
             /**
-             * PerformanceLevel.
+             * <p>The PL of the data disk. Default value: <code>AutoPL</code>.</p>
+             * <p>Valid values:</p>
+             * <ul>
+             * <li>PL1: a PL1 ESSD</li>
+             * <li>PL0: a PL0 ESSD</li>
+             * <li>AutoPL: an AutoPL ESSD</li>
+             * </ul>
              */
             public Builder performanceLevel(String performanceLevel) {
                 this.performanceLevel = performanceLevel;
@@ -627,7 +633,10 @@ public class ModifyTemplateRequest extends Request {
             }
 
             /**
-             * Size.
+             * <p>The size of the data disk. Unit: GiB. Valid range: 40 to 2040 GiB with an increment of 10 GiB.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>40</p>
              */
             public Builder size(Integer size) {
                 this.size = size;

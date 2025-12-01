@@ -208,7 +208,13 @@ public class DescribeTemplatesRequest extends Request {
         }
 
         /**
-         * BizRegionId.
+         * <p>The region that you can use to filter templates.</p>
+         * <blockquote>
+         * <p> If you specify this parameter, only templates that are created in the specified region are returned.</p>
+         * </blockquote>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-beijing</p>
          */
         public Builder bizRegionId(String bizRegionId) {
             this.putBodyParameter("BizRegionId", bizRegionId);
@@ -217,7 +223,12 @@ public class DescribeTemplatesRequest extends Request {
         }
 
         /**
-         * BizType.
+         * <blockquote>
+         * <p> This parameter is not publicly available.</p>
+         * </blockquote>
+         * 
+         * <strong>example:</strong>
+         * <p>null</p>
          */
         public Builder bizType(String bizType) {
             this.putBodyParameter("BizType", bizType);
@@ -226,7 +237,10 @@ public class DescribeTemplatesRequest extends Request {
         }
 
         /**
-         * ImageId.
+         * <p>The ID of the cloud computer image. You can query image IDs on the Images page. System images and custom images are supported.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>m-dnz9xjgbm8*****</p>
          */
         public Builder imageId(String imageId) {
             this.putBodyParameter("ImageId", imageId);
@@ -235,7 +249,10 @@ public class DescribeTemplatesRequest extends Request {
         }
 
         /**
-         * Keyword.
+         * <p>The keyword that you can use to search for the template. It can be the template ID or the template name. Fuzzy search is supported.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>abc</p>
          */
         public Builder keyword(String keyword) {
             this.putBodyParameter("Keyword", keyword);
@@ -244,7 +261,10 @@ public class DescribeTemplatesRequest extends Request {
         }
 
         /**
-         * PageNumber.
+         * <p>The page number.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder pageNumber(Integer pageNumber) {
             this.putBodyParameter("PageNumber", pageNumber);
@@ -253,7 +273,10 @@ public class DescribeTemplatesRequest extends Request {
         }
 
         /**
-         * PageSize.
+         * <p>The number of entries per page.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>20</p>
          */
         public Builder pageSize(Integer pageSize) {
             this.putBodyParameter("PageSize", pageSize);
@@ -262,7 +285,13 @@ public class DescribeTemplatesRequest extends Request {
         }
 
         /**
-         * ProductType.
+         * <p>The service type. Set the value to <code>CloudDesktop</code>.</p>
+         * <ul>
+         * <li></li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>CloudDesktop</p>
          */
         public Builder productType(String productType) {
             this.putBodyParameter("ProductType", productType);
@@ -271,7 +300,7 @@ public class DescribeTemplatesRequest extends Request {
         }
 
         /**
-         * TemplateIds.
+         * <p>The IDs of the templates that you want to query.</p>
          */
         public Builder templateIds(java.util.List<String> templateIds) {
             this.putBodyParameter("TemplateIds", templateIds);
@@ -280,7 +309,7 @@ public class DescribeTemplatesRequest extends Request {
         }
 
         /**
-         * TemplateName.
+         * <p>The name of the template. You can search for template by name.</p>
          */
         public Builder templateName(String templateName) {
             this.putBodyParameter("TemplateName", templateName);
@@ -289,7 +318,15 @@ public class DescribeTemplatesRequest extends Request {
         }
 
         /**
-         * TemplateType.
+         * <p>The type of the template that you want to query. If you leave this parameter empty, all types of templates are queried.</p>
+         * <p>Valid values:</p>
+         * <ul>
+         * <li>USER_TEMPLATE: custom templates.</li>
+         * <li>SYSTEM_TEMPLATE: system templates provided by Alibaba Cloud.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>USER_TEMPLATE</p>
          */
         public Builder templateType(String templateType) {
             this.putBodyParameter("TemplateType", templateType);

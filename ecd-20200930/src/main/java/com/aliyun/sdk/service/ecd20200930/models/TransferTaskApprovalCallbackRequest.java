@@ -101,7 +101,10 @@ public class TransferTaskApprovalCallbackRequest extends Request {
         } 
 
         /**
-         * OssBucketName.
+         * <p>The name of the OSS bucket where the file resides.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>ed****-17337752804***</p>
          */
         public Builder ossBucketName(String ossBucketName) {
             this.putQueryParameter("OssBucketName", ossBucketName);
@@ -110,7 +113,10 @@ public class TransferTaskApprovalCallbackRequest extends Request {
         }
 
         /**
-         * OssBucketRegionId.
+         * <p>The region where the OSS bucket storing the file resides.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-hangzhou</p>
          */
         public Builder ossBucketRegionId(String ossBucketRegionId) {
             this.putQueryParameter("OssBucketRegionId", ossBucketRegionId);
@@ -119,7 +125,15 @@ public class TransferTaskApprovalCallbackRequest extends Request {
         }
 
         /**
-         * Result.
+         * <p>The approval result.</p>
+         * <p>Valid values:</p>
+         * <ul>
+         * <li>Approved</li>
+         * <li>Rejected</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>Approved</p>
          */
         public Builder result(String result) {
             this.putQueryParameter("Result", result);
@@ -128,7 +142,10 @@ public class TransferTaskApprovalCallbackRequest extends Request {
         }
 
         /**
-         * TaskId.
+         * <p>The ID of the transmission task.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>trt-msndfksm18fs****</p>
          */
         public Builder taskId(String taskId) {
             this.putQueryParameter("TaskId", taskId);

@@ -80,7 +80,7 @@ public class DescribeCenterPolicyListResponseBody extends TeaModel {
         } 
 
         /**
-         * <p>The cloud computer policies.</p>
+         * <p>The details about the cloud computer policies.</p>
          */
         public Builder describePolicyGroups(java.util.List<DescribePolicyGroups> describePolicyGroups) {
             this.describePolicyGroups = describePolicyGroups;
@@ -3086,7 +3086,7 @@ public class DescribeCenterPolicyListResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The policy type.</p>
+             * <p>The type of the policy.</p>
              * 
              * <strong>example:</strong>
              * <p>SYSTEM</p>

@@ -142,6 +142,12 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<AttachEndUserResponse> attachEndUser(AttachEndUserRequest request);
 
     /**
+     * @param request the request parameters of BatchModifyEntitlement  BatchModifyEntitlementRequest
+     * @return BatchModifyEntitlementResponse
+     */
+    CompletableFuture<BatchModifyEntitlementResponse> batchModifyEntitlement(BatchModifyEntitlementRequest request);
+
+    /**
      * @param request the request parameters of BindConfigGroup  BindConfigGroupRequest
      * @return BindConfigGroupResponse
      */
@@ -483,6 +489,13 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<CreateSubnetResponse> createSubnet(CreateSubnetRequest request);
 
     /**
+     * <b>description</b> :
+     * <p>When you call this operation, take note of the following item:</p>
+     * <ul>
+     * <li>Most parameters in templates are optional. When you create a template, Elastic Desktop Service (EDS) does not validate the existence or correctness of the parameter values you specify. The parameter values in the template are only verified when you use the template to create cloud computers.</li>
+     * <li>For parameters that include the region attribute in the template, it\&quot;s important to note that if the specified region doesn’t match the region where the template is used to create a cloud computer, those parameters will not take effect.</li>
+     * </ul>
+     * 
      * @param request the request parameters of CreateTemplate  CreateTemplateRequest
      * @return CreateTemplateResponse
      */
@@ -749,6 +762,18 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<DescribeClientEventsResponse> describeClientEvents(DescribeClientEventsRequest request);
 
     /**
+     * @param request the request parameters of DescribeCloudDiskGroupDrives  DescribeCloudDiskGroupDrivesRequest
+     * @return DescribeCloudDiskGroupDrivesResponse
+     */
+    CompletableFuture<DescribeCloudDiskGroupDrivesResponse> describeCloudDiskGroupDrives(DescribeCloudDiskGroupDrivesRequest request);
+
+    /**
+     * @param request the request parameters of DescribeCloudDiskGroups  DescribeCloudDiskGroupsRequest
+     * @return DescribeCloudDiskGroupsResponse
+     */
+    CompletableFuture<DescribeCloudDiskGroupsResponse> describeCloudDiskGroups(DescribeCloudDiskGroupsRequest request);
+
+    /**
      * @param request the request parameters of DescribeCloudDriveGroups  DescribeCloudDriveGroupsRequest
      * @return DescribeCloudDriveGroupsResponse
      */
@@ -904,6 +929,14 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<DescribeFotaTasksResponse> describeFotaTasks(DescribeFotaTasksRequest request);
 
     /**
+     * <b>description</b> :
+     * <p>  Domestic site users query site selection Shanghai, international site users choose Singapore.</p>
+     * <ul>
+     * <li>By default, you can query all cloud computers that are deleted or not deleted.</li>
+     * <li>Deleted cloud computers can be queried only if the deletion time is less than three months.</li>
+     * <li>Sort criteria cannot be shared with other criteria.</li>
+     * </ul>
+     * 
      * @param request the request parameters of DescribeGlobalDesktopRecords  DescribeGlobalDesktopRecordsRequest
      * @return DescribeGlobalDesktopRecordsResponse
      */
@@ -1317,6 +1350,12 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<ListFilePermissionResponse> listFilePermission(ListFilePermissionRequest request);
 
     /**
+     * @param request the request parameters of ListInstalledApps  ListInstalledAppsRequest
+     * @return ListInstalledAppsResponse
+     */
+    CompletableFuture<ListInstalledAppsResponse> listInstalledApps(ListInstalledAppsRequest request);
+
+    /**
      * @param request the request parameters of ListOfficeSiteOverview  ListOfficeSiteOverviewRequest
      * @return ListOfficeSiteOverviewResponse
      */
@@ -1687,7 +1726,7 @@ public interface AsyncClient extends SdkAutoCloseable {
 
     /**
      * <b>description</b> :
-     * <p>You can use this operation to modify only the name and description of a custom cloud computer template. To change other parameters of the template, use the <a href="https://help.aliyun.com/document_detail/2925841.html">ModifyTemplate</a> operation.</p>
+     * <p>This operation allows you to modify only the name and description of a custom cloud computer template. To change other parameters of the template, call the <a href="https://help.aliyun.com/document_detail/2925841.html">ModifyTemplate</a> operation.</p>
      * 
      * @param request the request parameters of ModifyTemplateBaseInfo  ModifyTemplateBaseInfoRequest
      * @return ModifyTemplateBaseInfoResponse
@@ -1873,6 +1912,9 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<SetDesktopGroupTimerStatusResponse> setDesktopGroupTimerStatus(SetDesktopGroupTimerStatusRequest request);
 
     /**
+     * <b>description</b> :
+     * <p>If you need to perform some maintenance operations on the cloud computer and want to prohibit end user from connecting and using the cloud computer during this period, you can switch it to maintenance mode.</p>
+     * 
      * @param request the request parameters of SetDesktopMaintenance  SetDesktopMaintenanceRequest
      * @return SetDesktopMaintenanceResponse
      */

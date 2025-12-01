@@ -117,7 +117,7 @@ public class CreateEcdReportTaskRequest extends Request {
         } 
 
         /**
-         * FilterList.
+         * <p>The filter conditions for filtering query results. The logical relationship between each filter condition is &quot;and&quot; (&amp;). Each filter condition contains FilterKey and FilterValues, which indicate the key and value for the filter condition.</p>
          */
         public Builder filterList(java.util.List<FilterList> filterList) {
             this.putQueryParameter("FilterList", filterList);
@@ -126,7 +126,15 @@ public class CreateEcdReportTaskRequest extends Request {
         }
 
         /**
-         * LangType.
+         * <p>The language of the report. An enumerated type.</p>
+         * <p>Valid values:</p>
+         * <ul>
+         * <li>zh-CN (default): Chinese</li>
+         * <li>en-GB: English</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>zh-CN</p>
          */
         public Builder langType(String langType) {
             this.putQueryParameter("LangType", langType);
@@ -135,7 +143,7 @@ public class CreateEcdReportTaskRequest extends Request {
         }
 
         /**
-         * ReportFileName.
+         * <p>The name of the report file.</p>
          */
         public Builder reportFileName(String reportFileName) {
             this.putQueryParameter("ReportFileName", reportFileName);
@@ -144,6 +152,11 @@ public class CreateEcdReportTaskRequest extends Request {
         }
 
         /**
+         * <p>The sub-type of the report export task.</p>
+         * <p>Valid value:</p>
+         * <ul>
+         * <li>DESKTOP: cloud computer</li>
+         * </ul>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -156,6 +169,11 @@ public class CreateEcdReportTaskRequest extends Request {
         }
 
         /**
+         * <p>The type of the report task.</p>
+         * <p>Valid value:</p>
+         * <ul>
+         * <li>RESOURCE_REPORT</li>
+         * </ul>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -227,7 +245,31 @@ public class CreateEcdReportTaskRequest extends Request {
             } 
 
             /**
-             * FilterKey.
+             * <p>The key of the filter condition for filtering query results. When SubType is set to:</p>
+             * <ol>
+             * <li>DESKTOP (indicating a cloud computer report), the following filter conditions are available:</li>
+             * </ol>
+             * <ul>
+             * <li>KeyWord: cloud computer keyword (supports automatic recognition)</li>
+             * <li>RegionId: region ID</li>
+             * <li>DesktopId: cloud computer ID</li>
+             * <li>DesktopName: cloud computer name (supports fuzzy matching)</li>
+             * <li>OfficeSiteId: office network ID</li>
+             * <li>OfficeSiteName: office network name (supports fuzzy matching)</li>
+             * <li>Status: cloud computer status</li>
+             * <li>DesktopType: desktop type</li>
+             * <li>DesktopIP: cloud computer IP address</li>
+             * <li>SubPayType: billing method</li>
+             * <li>EndUserId: user name (supports fuzzy matching)</li>
+             * <li>ExpireTime: expiration date and time, in the yyyy-MM-dd&quot;T&quot;HH:mm:ss&quot;Z&quot; format</li>
+             * <li>IncludeAssignedUser: indicates whether the cloud computer is assigned to users or not</li>
+             * <li>ResourceGroupId: resource group ID</li>
+             * <li>PolicyId: policy ID</li>
+             * <li>Tag:{Tag Key value}: cloud computer tag (To filter data using multiple tags, specify multiple filter condition objects.)</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>Tag:TestKey</p>
              */
             public Builder filterKey(String filterKey) {
                 this.filterKey = filterKey;
@@ -235,7 +277,16 @@ public class CreateEcdReportTaskRequest extends Request {
             }
 
             /**
-             * FilterValues.
+             * <p>The value of the filter condition. Only the first value of the FilterValues parameter is used, if FilterKey is set to one of the following values:</p>
+             * <ul>
+             * <li>KeyWord</li>
+             * <li>DesktopName</li>
+             * <li>OfficeSiteName</li>
+             * <li>DesktopIP</li>
+             * <li>EndUserId</li>
+             * <li>ExpireTime</li>
+             * <li>IncludeAssignedUser</li>
+             * </ul>
              */
             public Builder filterValues(java.util.List<String> filterValues) {
                 this.filterValues = filterValues;

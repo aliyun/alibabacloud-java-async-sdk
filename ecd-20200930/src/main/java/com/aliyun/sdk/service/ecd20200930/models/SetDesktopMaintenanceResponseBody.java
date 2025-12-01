@@ -54,7 +54,10 @@ public class SetDesktopMaintenanceResponseBody extends TeaModel {
         } 
 
         /**
-         * RequestId.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>BA6A1853-3EA9-5EEB-86C8-3D14A3E01905</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;

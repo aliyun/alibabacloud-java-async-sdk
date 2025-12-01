@@ -93,7 +93,7 @@ public class ListTransferFilesResponseBody extends TeaModel {
         } 
 
         /**
-         * Files.
+         * <p>The files.</p>
          */
         public Builder files(java.util.List<Files> files) {
             this.files = files;
@@ -101,7 +101,12 @@ public class ListTransferFilesResponseBody extends TeaModel {
         }
 
         /**
-         * MaxResults.
+         * <p>The number of entries to return on each page.</p>
+         * <p>Maximum value: 100.</p>
+         * <p>Default value: 20.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>20</p>
          */
         public Builder maxResults(Integer maxResults) {
             this.maxResults = maxResults;
@@ -109,7 +114,10 @@ public class ListTransferFilesResponseBody extends TeaModel {
         }
 
         /**
-         * NextToken.
+         * <p>The returned value of <code>NextToken</code> is a pagination token, which can be used in the next request to retrieve a new page of results. If NextToken is empty, no next page exists.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>caeba0bbb2be03f84eb48b699f0a****</p>
          */
         public Builder nextToken(String nextToken) {
             this.nextToken = nextToken;
@@ -117,7 +125,10 @@ public class ListTransferFilesResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * <p>The ID of the request.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1CBAFFAB-B697-4049-A9B1-67E1FC5F****</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -261,7 +272,18 @@ public class ListTransferFilesResponseBody extends TeaModel {
             } 
 
             /**
-             * IconUrl.
+             * <p>The URL of the file icon.</p>
+             * <blockquote>
+             * </blockquote>
+             * <ul>
+             * <li><p>For image file types (.png, .jpg, .jpeg, .gif, .webp, and .svg), the URL of the specific image is returned.</p>
+             * </li>
+             * <li><p>For other file types, the URL of the default image is returned.</p>
+             * </li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p><a href="https://app-center-icon-pre-hangzhou.oss-cn-hangzhou.aliyuncs.com/tenant">https://app-center-icon-pre-hangzhou.oss-cn-hangzhou.aliyuncs.com/tenant</a>****</p>
              */
             public Builder iconUrl(String iconUrl) {
                 this.iconUrl = iconUrl;
@@ -269,7 +291,10 @@ public class ListTransferFilesResponseBody extends TeaModel {
             }
 
             /**
-             * Id.
+             * <p>The file ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>trf-a213msf****</p>
              */
             public Builder id(String id) {
                 this.id = id;
@@ -277,7 +302,7 @@ public class ListTransferFilesResponseBody extends TeaModel {
             }
 
             /**
-             * Name.
+             * <p>The file name.</p>
              */
             public Builder name(String name) {
                 this.name = name;
@@ -285,7 +310,12 @@ public class ListTransferFilesResponseBody extends TeaModel {
             }
 
             /**
-             * OssFileName.
+             * <p>The name of the object stored in OSS.</p>
+             * <blockquote>
+             * </blockquote>
+             * <ul>
+             * <li>A value is returned for this parameter only when the object is stored in a custom OSS bucket.</li>
+             * </ul>
              */
             public Builder ossFileName(String ossFileName) {
                 this.ossFileName = ossFileName;
@@ -293,7 +323,15 @@ public class ListTransferFilesResponseBody extends TeaModel {
             }
 
             /**
-             * OssFilePath.
+             * <p>The path of the object in the OSS bucket.</p>
+             * <blockquote>
+             * </blockquote>
+             * <ul>
+             * <li>A value is returned for this parameter only when the object is stored in a custom OSS bucket.</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>transfer/1244234/****</p>
              */
             public Builder ossFilePath(String ossFilePath) {
                 this.ossFilePath = ossFilePath;
@@ -301,7 +339,10 @@ public class ListTransferFilesResponseBody extends TeaModel {
             }
 
             /**
-             * Size.
+             * <p>The file size.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>10853079</p>
              */
             public Builder size(String size) {
                 this.size = size;
@@ -309,7 +350,16 @@ public class ListTransferFilesResponseBody extends TeaModel {
             }
 
             /**
-             * Status.
+             * <p>The file status.</p>
+             * <p>Valid values:</p>
+             * <ul>
+             * <li>DELETING</li>
+             * <li>DELETED</li>
+             * <li>UPLOADED</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>DELETED</p>
              */
             public Builder status(String status) {
                 this.status = status;
@@ -317,7 +367,10 @@ public class ListTransferFilesResponseBody extends TeaModel {
             }
 
             /**
-             * Type.
+             * <p>The file type.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>txt</p>
              */
             public Builder type(String type) {
                 this.type = type;

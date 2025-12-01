@@ -87,7 +87,12 @@ public class ListTransferFilesRequest extends Request {
         } 
 
         /**
-         * MaxResults.
+         * <p>The number of entries to return on each page.</p>
+         * <p>Maximum value: 100.</p>
+         * <p>Default value: 20.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>20</p>
          */
         public Builder maxResults(Integer maxResults) {
             this.putQueryParameter("MaxResults", maxResults);
@@ -96,7 +101,10 @@ public class ListTransferFilesRequest extends Request {
         }
 
         /**
-         * NextToken.
+         * <p>A pagination token. It can be used in the next request to retrieve a new page of results. If NextToken is empty, no next page exists.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>caeba0bbb2be03f84eb48b699f0****</p>
          */
         public Builder nextToken(String nextToken) {
             this.putQueryParameter("NextToken", nextToken);
@@ -105,7 +113,10 @@ public class ListTransferFilesRequest extends Request {
         }
 
         /**
-         * TaskId.
+         * <p>The ID of the transmission task.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>trt-03tdwg4tcuwdzv****</p>
          */
         public Builder taskId(String taskId) {
             this.putQueryParameter("TaskId", taskId);

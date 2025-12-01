@@ -80,7 +80,10 @@ public class DescribeGlobalDesktopRecordsResponseBody extends TeaModel {
         } 
 
         /**
-         * RequestId.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1CBAFFAB-B697-4049-A9B1-67E1FC5F****</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -88,7 +91,7 @@ public class DescribeGlobalDesktopRecordsResponseBody extends TeaModel {
         }
 
         /**
-         * Sessions.
+         * <p>The session details.</p>
          */
         public Builder sessions(java.util.List<Sessions> sessions) {
             this.sessions = sessions;
@@ -96,7 +99,10 @@ public class DescribeGlobalDesktopRecordsResponseBody extends TeaModel {
         }
 
         /**
-         * TotalCount.
+         * <p>The total number of entries returned.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder totalCount(Integer totalCount) {
             this.totalCount = totalCount;
@@ -162,7 +168,10 @@ public class DescribeGlobalDesktopRecordsResponseBody extends TeaModel {
             } 
 
             /**
-             * ResourceGroupId.
+             * <p>The ID of the enterprise resource group.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>rg-f3s3dgt8dtb0vlqc8</p>
              */
             public Builder resourceGroupId(String resourceGroupId) {
                 this.resourceGroupId = resourceGroupId;
@@ -170,7 +179,10 @@ public class DescribeGlobalDesktopRecordsResponseBody extends TeaModel {
             }
 
             /**
-             * ResourceGroupName.
+             * <p>The queried resource group name.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>dms_test</p>
              */
             public Builder resourceGroupName(String resourceGroupName) {
                 this.resourceGroupName = resourceGroupName;
@@ -237,7 +249,10 @@ public class DescribeGlobalDesktopRecordsResponseBody extends TeaModel {
             } 
 
             /**
-             * EndUserId.
+             * <p>The end user ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>TestUser</p>
              */
             public Builder endUserId(String endUserId) {
                 this.endUserId = endUserId;
@@ -245,7 +260,10 @@ public class DescribeGlobalDesktopRecordsResponseBody extends TeaModel {
             }
 
             /**
-             * EstablishmentTime.
+             * <p>The time when the session was created.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2022-08-31T06:56:45Z</p>
              */
             public Builder establishmentTime(String establishmentTime) {
                 this.establishmentTime = establishmentTime;
@@ -308,6 +326,9 @@ public class DescribeGlobalDesktopRecordsResponseBody extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("OfficeSiteName")
         private String officeSiteName;
 
+        @com.aliyun.core.annotation.NameInMap("OfficeSiteType")
+        private String officeSiteType;
+
         @com.aliyun.core.annotation.NameInMap("OsType")
         private String osType;
 
@@ -356,6 +377,7 @@ public class DescribeGlobalDesktopRecordsResponseBody extends TeaModel {
             this.memory = builder.memory;
             this.officeSiteId = builder.officeSiteId;
             this.officeSiteName = builder.officeSiteName;
+            this.officeSiteType = builder.officeSiteType;
             this.osType = builder.osType;
             this.platform = builder.platform;
             this.protocolType = builder.protocolType;
@@ -476,6 +498,13 @@ public class DescribeGlobalDesktopRecordsResponseBody extends TeaModel {
         }
 
         /**
+         * @return officeSiteType
+         */
+        public String getOfficeSiteType() {
+            return this.officeSiteType;
+        }
+
+        /**
          * @return osType
          */
         public String getOsType() {
@@ -567,6 +596,7 @@ public class DescribeGlobalDesktopRecordsResponseBody extends TeaModel {
             private Long memory; 
             private String officeSiteId; 
             private String officeSiteName; 
+            private String officeSiteType; 
             private String osType; 
             private String platform; 
             private String protocolType; 
@@ -597,6 +627,7 @@ public class DescribeGlobalDesktopRecordsResponseBody extends TeaModel {
                 this.memory = model.memory;
                 this.officeSiteId = model.officeSiteId;
                 this.officeSiteName = model.officeSiteName;
+                this.officeSiteType = model.officeSiteType;
                 this.osType = model.osType;
                 this.platform = model.platform;
                 this.protocolType = model.protocolType;
@@ -611,7 +642,10 @@ public class DescribeGlobalDesktopRecordsResponseBody extends TeaModel {
             } 
 
             /**
-             * ConnectionStatus.
+             * <p>The connection status of the cloud desktop.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Connected</p>
              */
             public Builder connectionStatus(String connectionStatus) {
                 this.connectionStatus = connectionStatus;
@@ -619,7 +653,10 @@ public class DescribeGlobalDesktopRecordsResponseBody extends TeaModel {
             }
 
             /**
-             * Cpu.
+             * <p>The number of vCPUs.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2</p>
              */
             public Builder cpu(Integer cpu) {
                 this.cpu = cpu;
@@ -627,7 +664,10 @@ public class DescribeGlobalDesktopRecordsResponseBody extends TeaModel {
             }
 
             /**
-             * DesktopGroupId.
+             * <p>The ID of the cloud computer share.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>dg-iaqu3bi2xtie****</p>
              */
             public Builder desktopGroupId(String desktopGroupId) {
                 this.desktopGroupId = desktopGroupId;
@@ -635,7 +675,10 @@ public class DescribeGlobalDesktopRecordsResponseBody extends TeaModel {
             }
 
             /**
-             * DesktopGroupName.
+             * <p>The name of the cloud computer share.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>DemoCCGroup</p>
              */
             public Builder desktopGroupName(String desktopGroupName) {
                 this.desktopGroupName = desktopGroupName;
@@ -643,7 +686,10 @@ public class DescribeGlobalDesktopRecordsResponseBody extends TeaModel {
             }
 
             /**
-             * DesktopId.
+             * <p>The cloud computer IDs.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>ecd-g6t1ukbaea****</p>
              */
             public Builder desktopId(String desktopId) {
                 this.desktopId = desktopId;
@@ -651,7 +697,10 @@ public class DescribeGlobalDesktopRecordsResponseBody extends TeaModel {
             }
 
             /**
-             * DesktopName.
+             * <p>The cloud computer name.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>DemoComputer</p>
              */
             public Builder desktopName(String desktopName) {
                 this.desktopName = desktopName;
@@ -659,7 +708,10 @@ public class DescribeGlobalDesktopRecordsResponseBody extends TeaModel {
             }
 
             /**
-             * DesktopStatus.
+             * <p>桌面状态</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Running</p>
              */
             public Builder desktopStatus(String desktopStatus) {
                 this.desktopStatus = desktopStatus;
@@ -667,7 +719,10 @@ public class DescribeGlobalDesktopRecordsResponseBody extends TeaModel {
             }
 
             /**
-             * EndUserId.
+             * <p>The end user ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>TestUser</p>
              */
             public Builder endUserId(String endUserId) {
                 this.endUserId = endUserId;
@@ -675,7 +730,7 @@ public class DescribeGlobalDesktopRecordsResponseBody extends TeaModel {
             }
 
             /**
-             * EndUserIds.
+             * <p>The list of assigned terminal user IDs.</p>
              */
             public Builder endUserIds(java.util.List<String> endUserIds) {
                 this.endUserIds = endUserIds;
@@ -683,7 +738,10 @@ public class DescribeGlobalDesktopRecordsResponseBody extends TeaModel {
             }
 
             /**
-             * GpuSpec.
+             * <p>The size of the GPU memory.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>8GiB</p>
              */
             public Builder gpuSpec(String gpuSpec) {
                 this.gpuSpec = gpuSpec;
@@ -691,7 +749,10 @@ public class DescribeGlobalDesktopRecordsResponseBody extends TeaModel {
             }
 
             /**
-             * LatestConnectionTime.
+             * <p>The duration of the last connection to the cloud computer. Unit: seconds</p>
+             * 
+             * <strong>example:</strong>
+             * <p>120</p>
              */
             public Builder latestConnectionTime(Long latestConnectionTime) {
                 this.latestConnectionTime = latestConnectionTime;
@@ -699,7 +760,10 @@ public class DescribeGlobalDesktopRecordsResponseBody extends TeaModel {
             }
 
             /**
-             * Memory.
+             * <p>The memory of the cloud computer. Unit: MiB.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>4096</p>
              */
             public Builder memory(Long memory) {
                 this.memory = memory;
@@ -707,7 +771,10 @@ public class DescribeGlobalDesktopRecordsResponseBody extends TeaModel {
             }
 
             /**
-             * OfficeSiteId.
+             * <p>The office network ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>cn-hangzhou+dir-8904****</p>
              */
             public Builder officeSiteId(String officeSiteId) {
                 this.officeSiteId = officeSiteId;
@@ -715,7 +782,10 @@ public class DescribeGlobalDesktopRecordsResponseBody extends TeaModel {
             }
 
             /**
-             * OfficeSiteName.
+             * <p>The office network name.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>TestOfficeSite</p>
              */
             public Builder officeSiteName(String officeSiteName) {
                 this.officeSiteName = officeSiteName;
@@ -723,7 +793,22 @@ public class DescribeGlobalDesktopRecordsResponseBody extends TeaModel {
             }
 
             /**
-             * OsType.
+             * OfficeSiteType.
+             */
+            public Builder officeSiteType(String officeSiteType) {
+                this.officeSiteType = officeSiteType;
+                return this;
+            }
+
+            /**
+             * <p>The OS type. Valid values:</p>
+             * <ul>
+             * <li>Windows</li>
+             * <li>Linux</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>Linux</p>
              */
             public Builder osType(String osType) {
                 this.osType = osType;
@@ -731,7 +816,10 @@ public class DescribeGlobalDesktopRecordsResponseBody extends TeaModel {
             }
 
             /**
-             * Platform.
+             * <p>The specific model of the operating system.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Windows 10</p>
              */
             public Builder platform(String platform) {
                 this.platform = platform;
@@ -739,7 +827,14 @@ public class DescribeGlobalDesktopRecordsResponseBody extends TeaModel {
             }
 
             /**
-             * ProtocolType.
+             * <p>Protocol type.</p>
+             * <ul>
+             * <li>HDX</li>
+             * <li>ASP</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>ASP</p>
              */
             public Builder protocolType(String protocolType) {
                 this.protocolType = protocolType;
@@ -747,7 +842,10 @@ public class DescribeGlobalDesktopRecordsResponseBody extends TeaModel {
             }
 
             /**
-             * RegionId.
+             * <p>The ID of the region where the instance resides.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>cn-beijing</p>
              */
             public Builder regionId(String regionId) {
                 this.regionId = regionId;
@@ -755,7 +853,7 @@ public class DescribeGlobalDesktopRecordsResponseBody extends TeaModel {
             }
 
             /**
-             * ResourceGroups.
+             * <p>The name of the enterprise resource group.</p>
              */
             public Builder resourceGroups(java.util.List<ResourceGroups> resourceGroups) {
                 this.resourceGroups = resourceGroups;
@@ -763,7 +861,10 @@ public class DescribeGlobalDesktopRecordsResponseBody extends TeaModel {
             }
 
             /**
-             * SessionIdleTime.
+             * <p>The idle duration of the session. Unit: minutes.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>120</p>
              */
             public Builder sessionIdleTime(Long sessionIdleTime) {
                 this.sessionIdleTime = sessionIdleTime;
@@ -771,7 +872,7 @@ public class DescribeGlobalDesktopRecordsResponseBody extends TeaModel {
             }
 
             /**
-             * Sessions.
+             * <p>The session details.</p>
              */
             public Builder sessions(java.util.List<SessionsSessions> sessions) {
                 this.sessions = sessions;
@@ -779,7 +880,10 @@ public class DescribeGlobalDesktopRecordsResponseBody extends TeaModel {
             }
 
             /**
-             * StatusChangeTime.
+             * <p>The time when the status of the cloud computer was changed.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1760583xxxx</p>
              */
             public Builder statusChangeTime(Long statusChangeTime) {
                 this.statusChangeTime = statusChangeTime;
@@ -787,7 +891,15 @@ public class DescribeGlobalDesktopRecordsResponseBody extends TeaModel {
             }
 
             /**
-             * SubPayType.
+             * <p>The billing method of the cloud computer. Valid values:</p>
+             * <ul>
+             * <li>prePaid: The monthly purchase is unlimited.</li>
+             * <li>postPaid: pay-as-you-go</li>
+             * <li>monthPackage: monthly duration.</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>monthPackage</p>
              */
             public Builder subPayType(String subPayType) {
                 this.subPayType = subPayType;
@@ -795,7 +907,10 @@ public class DescribeGlobalDesktopRecordsResponseBody extends TeaModel {
             }
 
             /**
-             * TotalConnectionTime.
+             * <p>The total connection duration. Unit: seconds</p>
+             * 
+             * <strong>example:</strong>
+             * <p>240</p>
              */
             public Builder totalConnectionTime(Long totalConnectionTime) {
                 this.totalConnectionTime = totalConnectionTime;
@@ -803,7 +918,10 @@ public class DescribeGlobalDesktopRecordsResponseBody extends TeaModel {
             }
 
             /**
-             * UpTime.
+             * <p>The startup duration of the cloud computer. Unit: seconds</p>
+             * 
+             * <strong>example:</strong>
+             * <p>86400</p>
              */
             public Builder upTime(Long upTime) {
                 this.upTime = upTime;

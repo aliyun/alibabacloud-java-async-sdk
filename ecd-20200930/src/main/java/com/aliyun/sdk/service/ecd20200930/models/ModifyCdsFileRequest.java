@@ -147,7 +147,7 @@ public class ModifyCdsFileRequest extends Request {
         } 
 
         /**
-         * <p>The cloud disk ID.</p>
+         * <p>The enterprise drive ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -160,35 +160,13 @@ public class ModifyCdsFileRequest extends Request {
         }
 
         /**
-         * <p>The processing mode of files that have the same name.</p>
+         * <p>The processing policy when a file with the same name appears.</p>
          * <p>Valid values:</p>
          * <ul>
-         * <li><p>refuse</p>
-         * <!-- -->
-         * 
-         * <p>:</p>
-         * <!-- -->
-         * 
-         * <p>refuses to create a file that has the same name as the file in the cloud.</p>
-         * <!-- -->
-         * </li>
-         * <li><p>auto_rename</p>
-         * <!-- -->
-         * 
-         * <p>:</p>
-         * <!-- -->
-         * 
-         * <p>automatically renames a file if the file has the same name as another file. By default, the current point in time is appended. Example: xxx20060102_150405.</p>
-         * <!-- -->
-         * </li>
-         * <li><p>ignore</p>
-         * <!-- -->
-         * 
-         * <p>:</p>
-         * <!-- -->
-         * 
-         * <p>allows files with the same name.</p>
-         * <!-- --></li>
+         * <li>refuse: If you want to create a file that uses the same name as an existing file in the cloud, the system denies your request and returns the details of the existing file.</li>
+         * <li>auto_rename: automatically renames a file if the file has the same name as an existing file in the cloud. By default, the current point in time is appended to the end of the original file name. Example: xxx20240102_150405.</li>
+         * <li>ignore: allows the file to be with the same name.</li>
+         * <li>over_write: After you create a file that uses the same name as an existing file in the cloud, the new file overwrites the existing file.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -201,7 +179,7 @@ public class ModifyCdsFileRequest extends Request {
         }
 
         /**
-         * <p>The ID of the end user who uses the cloud disk.</p>
+         * <p>The ID of the user who uses the network disk.</p>
          * 
          * <strong>example:</strong>
          * <p>user01</p>
@@ -213,7 +191,7 @@ public class ModifyCdsFileRequest extends Request {
         }
 
         /**
-         * <p>The file ID.</p>
+         * <p>The ID of the file. You can call the <a href="https://help.aliyun.com/document_detail/2247622.html">ListCdsFiles</a> operation to query the ID of the file.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -226,7 +204,7 @@ public class ModifyCdsFileRequest extends Request {
         }
 
         /**
-         * <p>The file name.</p>
+         * <p>The name of the file.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -239,7 +217,7 @@ public class ModifyCdsFileRequest extends Request {
         }
 
         /**
-         * <p>The group ID.</p>
+         * <p>The ID of the team space.</p>
          * 
          * <strong>example:</strong>
          * <p>cg-i1ruuudp92qpj****</p>
@@ -251,7 +229,7 @@ public class ModifyCdsFileRequest extends Request {
         }
 
         /**
-         * <p>The region ID. You can call the <a href="https://help.aliyun.com/document_detail/196646.html">DescribeRegions</a> operation to query the most recent region list.</p>
+         * <p>The ID of the region. You can call the <a href="https://help.aliyun.com/document_detail/196646.html">DescribeRegions</a> operation to query the list of regions where Elastic Desktop Service (EDS) Enterprise is available.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>

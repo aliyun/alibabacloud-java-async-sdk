@@ -54,7 +54,10 @@ public class ModifyOfficeSiteDnsInfoResponseBody extends TeaModel {
         } 
 
         /**
-         * RequestId.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>F7E4322D-D679-5ACB-A909-490D2F0E****</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;

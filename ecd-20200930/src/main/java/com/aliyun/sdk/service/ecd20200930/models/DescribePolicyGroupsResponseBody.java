@@ -127,7 +127,7 @@ public class DescribePolicyGroupsResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The cloud computer policies.</p>
+         * <p>The details of the cloud computer policies.</p>
          */
         public Builder describePolicyGroups(java.util.List<DescribePolicyGroups> describePolicyGroups) {
             this.describePolicyGroups = describePolicyGroups;
@@ -1160,7 +1160,7 @@ public class DescribePolicyGroupsResponseBody extends TeaModel {
             } 
 
             /**
-             * EventLevel.
+             * <p>The event severity.</p>
              */
             public Builder eventLevel(String eventLevel) {
                 this.eventLevel = eventLevel;
@@ -1168,7 +1168,7 @@ public class DescribePolicyGroupsResponseBody extends TeaModel {
             }
 
             /**
-             * EventType.
+             * <p>The event type.</p>
              */
             public Builder eventType(String eventType) {
                 this.eventType = eventType;
@@ -1420,6 +1420,9 @@ public class DescribePolicyGroupsResponseBody extends TeaModel {
 
         @com.aliyun.core.annotation.NameInMap("ClientControlMenu")
         private String clientControlMenu;
+
+        @com.aliyun.core.annotation.NameInMap("ClientCreateSnapshot")
+        private String clientCreateSnapshot;
 
         @com.aliyun.core.annotation.NameInMap("ClientTypes")
         private java.util.List<ClientTypes> clientTypes;
@@ -1742,6 +1745,9 @@ public class DescribePolicyGroupsResponseBody extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("WatermarkSecurity")
         private String watermarkSecurity;
 
+        @com.aliyun.core.annotation.NameInMap("WatermarkShadow")
+        private String watermarkShadow;
+
         @com.aliyun.core.annotation.NameInMap("WatermarkTransparency")
         private String watermarkTransparency;
 
@@ -1765,6 +1771,7 @@ public class DescribePolicyGroupsResponseBody extends TeaModel {
             this.autoReconnect = builder.autoReconnect;
             this.cameraRedirect = builder.cameraRedirect;
             this.clientControlMenu = builder.clientControlMenu;
+            this.clientCreateSnapshot = builder.clientCreateSnapshot;
             this.clientTypes = builder.clientTypes;
             this.clipboard = builder.clipboard;
             this.colorEnhancement = builder.colorEnhancement;
@@ -1872,6 +1879,7 @@ public class DescribePolicyGroupsResponseBody extends TeaModel {
             this.watermarkPower = builder.watermarkPower;
             this.watermarkRowAmount = builder.watermarkRowAmount;
             this.watermarkSecurity = builder.watermarkSecurity;
+            this.watermarkShadow = builder.watermarkShadow;
             this.watermarkTransparency = builder.watermarkTransparency;
             this.watermarkTransparencyValue = builder.watermarkTransparencyValue;
             this.watermarkType = builder.watermarkType;
@@ -1934,6 +1942,13 @@ public class DescribePolicyGroupsResponseBody extends TeaModel {
          */
         public String getClientControlMenu() {
             return this.clientControlMenu;
+        }
+
+        /**
+         * @return clientCreateSnapshot
+         */
+        public String getClientCreateSnapshot() {
+            return this.clientCreateSnapshot;
         }
 
         /**
@@ -2686,6 +2701,13 @@ public class DescribePolicyGroupsResponseBody extends TeaModel {
         }
 
         /**
+         * @return watermarkShadow
+         */
+        public String getWatermarkShadow() {
+            return this.watermarkShadow;
+        }
+
+        /**
          * @return watermarkTransparency
          */
         public String getWatermarkTransparency() {
@@ -2728,6 +2750,7 @@ public class DescribePolicyGroupsResponseBody extends TeaModel {
             private String autoReconnect; 
             private String cameraRedirect; 
             private String clientControlMenu; 
+            private String clientCreateSnapshot; 
             private java.util.List<ClientTypes> clientTypes; 
             private String clipboard; 
             private String colorEnhancement; 
@@ -2835,6 +2858,7 @@ public class DescribePolicyGroupsResponseBody extends TeaModel {
             private String watermarkPower; 
             private Integer watermarkRowAmount; 
             private String watermarkSecurity; 
+            private String watermarkShadow; 
             private String watermarkTransparency; 
             private Integer watermarkTransparencyValue; 
             private String watermarkType; 
@@ -2852,6 +2876,7 @@ public class DescribePolicyGroupsResponseBody extends TeaModel {
                 this.autoReconnect = model.autoReconnect;
                 this.cameraRedirect = model.cameraRedirect;
                 this.clientControlMenu = model.clientControlMenu;
+                this.clientCreateSnapshot = model.clientCreateSnapshot;
                 this.clientTypes = model.clientTypes;
                 this.clipboard = model.clipboard;
                 this.colorEnhancement = model.colorEnhancement;
@@ -2959,6 +2984,7 @@ public class DescribePolicyGroupsResponseBody extends TeaModel {
                 this.watermarkPower = model.watermarkPower;
                 this.watermarkRowAmount = model.watermarkRowAmount;
                 this.watermarkSecurity = model.watermarkSecurity;
+                this.watermarkShadow = model.watermarkShadow;
                 this.watermarkTransparency = model.watermarkTransparency;
                 this.watermarkTransparencyValue = model.watermarkTransparencyValue;
                 this.watermarkType = model.watermarkType;
@@ -3013,7 +3039,10 @@ public class DescribePolicyGroupsResponseBody extends TeaModel {
             }
 
             /**
-             * AutoReconnect.
+             * <p>The automatic client connection recovery configurations.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>off</p>
              */
             public Builder autoReconnect(String autoReconnect) {
                 this.autoReconnect = autoReconnect;
@@ -3041,6 +3070,14 @@ public class DescribePolicyGroupsResponseBody extends TeaModel {
              */
             public Builder clientControlMenu(String clientControlMenu) {
                 this.clientControlMenu = clientControlMenu;
+                return this;
+            }
+
+            /**
+             * ClientCreateSnapshot.
+             */
+            public Builder clientCreateSnapshot(String clientCreateSnapshot) {
+                this.clientCreateSnapshot = clientCreateSnapshot;
                 return this;
             }
 
@@ -3550,7 +3587,10 @@ public class DescribePolicyGroupsResponseBody extends TeaModel {
             }
 
             /**
-             * MobileSafeMenu.
+             * <p>Indicates whether the Windows security control is enabled for mobile clients.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>off</p>
              */
             public Builder mobileSafeMenu(String mobileSafeMenu) {
                 this.mobileSafeMenu = mobileSafeMenu;
@@ -3577,7 +3617,10 @@ public class DescribePolicyGroupsResponseBody extends TeaModel {
             }
 
             /**
-             * MobileWuyingKeeper.
+             * <p>Indicates whether the Cloud Computer Manager is enabled for mobile clients.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>off</p>
              */
             public Builder mobileWuyingKeeper(String mobileWuyingKeeper) {
                 this.mobileWuyingKeeper = mobileWuyingKeeper;
@@ -3585,7 +3628,10 @@ public class DescribePolicyGroupsResponseBody extends TeaModel {
             }
 
             /**
-             * MobileWyAssistant.
+             * <p>Indicates whether the Xiaoying AI Assistant is enabled for mobile clients.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>off</p>
              */
             public Builder mobileWyAssistant(String mobileWyAssistant) {
                 this.mobileWyAssistant = mobileWyAssistant;
@@ -3773,7 +3819,7 @@ public class DescribePolicyGroupsResponseBody extends TeaModel {
             }
 
             /**
-             * RecordEventFileExts.
+             * <p>The screen recording file suffix.</p>
              */
             public Builder recordEventFileExts(java.util.List<String> recordEventFileExts) {
                 this.recordEventFileExts = recordEventFileExts;
@@ -3789,7 +3835,7 @@ public class DescribePolicyGroupsResponseBody extends TeaModel {
             }
 
             /**
-             * RecordEventLevels.
+             * <p>Indicates whether the screen recording event severity is enabled.</p>
              */
             public Builder recordEventLevels(java.util.List<RecordEventLevels> recordEventLevels) {
                 this.recordEventLevels = recordEventLevels;
@@ -4374,6 +4420,14 @@ public class DescribePolicyGroupsResponseBody extends TeaModel {
              */
             public Builder watermarkSecurity(String watermarkSecurity) {
                 this.watermarkSecurity = watermarkSecurity;
+                return this;
+            }
+
+            /**
+             * WatermarkShadow.
+             */
+            public Builder watermarkShadow(String watermarkShadow) {
+                this.watermarkShadow = watermarkShadow;
                 return this;
             }
 
