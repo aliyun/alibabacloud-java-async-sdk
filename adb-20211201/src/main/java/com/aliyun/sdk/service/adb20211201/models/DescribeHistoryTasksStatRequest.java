@@ -244,7 +244,10 @@ public class DescribeHistoryTasksStatRequest extends Request {
         } 
 
         /**
-         * FromExecTime.
+         * <p>Minimum task execution time, used to filter tasks with execution time greater than this value, in seconds. Default 0, meaning no limit</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder fromExecTime(Integer fromExecTime) {
             this.putQueryParameter("FromExecTime", fromExecTime);
@@ -253,6 +256,7 @@ public class DescribeHistoryTasksStatRequest extends Request {
         }
 
         /**
+         * <p>Query start time.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -265,7 +269,10 @@ public class DescribeHistoryTasksStatRequest extends Request {
         }
 
         /**
-         * InstanceId.
+         * <p>Cluster ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>amv-********</p>
          */
         public Builder instanceId(String instanceId) {
             this.putQueryParameter("InstanceId", instanceId);
@@ -283,6 +290,7 @@ public class DescribeHistoryTasksStatRequest extends Request {
         }
 
         /**
+         * <p>The ID of the region where the instance resides.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -295,7 +303,10 @@ public class DescribeHistoryTasksStatRequest extends Request {
         }
 
         /**
-         * ResourceGroupId.
+         * <p>Resource group ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>rg-acfmy*****</p>
          */
         public Builder resourceGroupId(String resourceGroupId) {
             this.putQueryParameter("ResourceGroupId", resourceGroupId);
@@ -331,7 +342,20 @@ public class DescribeHistoryTasksStatRequest extends Request {
         }
 
         /**
-         * Status.
+         * <p>The state of the task. Valid values:</p>
+         * <ul>
+         * <li><strong>Scheduled</strong></li>
+         * <li><strong>Running</strong></li>
+         * <li><strong>Succeed</strong></li>
+         * <li><strong>Failed</strong>: The task failed.</li>
+         * <li><strong>Cancelling</strong></li>
+         * <li><strong>Canceled</strong></li>
+         * <li><strong>Waiting</strong></li>
+         * </ul>
+         * <p>Separate multiple states with commas (,). This parameter is empty by default, which indicates that tasks in all states are queried.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Scheduled</p>
          */
         public Builder status(String status) {
             this.putQueryParameter("Status", status);
@@ -340,7 +364,10 @@ public class DescribeHistoryTasksStatRequest extends Request {
         }
 
         /**
-         * TaskId.
+         * <p>Task ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1564657730</p>
          */
         public Builder taskId(String taskId) {
             this.putQueryParameter("TaskId", taskId);
@@ -349,7 +376,10 @@ public class DescribeHistoryTasksStatRequest extends Request {
         }
 
         /**
-         * TaskType.
+         * <p>Task type.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>all</p>
          */
         public Builder taskType(String taskType) {
             this.putQueryParameter("TaskType", taskType);
@@ -358,7 +388,10 @@ public class DescribeHistoryTasksStatRequest extends Request {
         }
 
         /**
-         * ToExecTime.
+         * <p>Maximum task execution time, used to filter tasks with execution time not less than this value, in seconds. Default 0, meaning no limit</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10</p>
          */
         public Builder toExecTime(Integer toExecTime) {
             this.putQueryParameter("ToExecTime", toExecTime);
@@ -367,6 +400,7 @@ public class DescribeHistoryTasksStatRequest extends Request {
         }
 
         /**
+         * <p>Represents tasks whose start time is before this time.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>

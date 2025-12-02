@@ -119,7 +119,10 @@ public class CreateApsKafkaHudiJobResponseBody extends TeaModel {
         } 
 
         /**
-         * Code.
+         * <p>Same as HTTP status code.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>200</p>
          */
         public Builder code(String code) {
             this.code = code;
@@ -127,7 +130,10 @@ public class CreateApsKafkaHudiJobResponseBody extends TeaModel {
         }
 
         /**
-         * Data.
+         * <p>Returns the ID of the created task.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>xxx</p>
          */
         public Builder data(String data) {
             this.data = data;
@@ -135,7 +141,10 @@ public class CreateApsKafkaHudiJobResponseBody extends TeaModel {
         }
 
         /**
-         * HttpStatusCode.
+         * <p>The HTTP status code returned.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>200</p>
          */
         public Builder httpStatusCode(Integer httpStatusCode) {
             this.httpStatusCode = httpStatusCode;
@@ -143,7 +152,10 @@ public class CreateApsKafkaHudiJobResponseBody extends TeaModel {
         }
 
         /**
-         * Message.
+         * <p>The returned message.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>ok</p>
          */
         public Builder message(String message) {
             this.message = message;
@@ -151,7 +163,10 @@ public class CreateApsKafkaHudiJobResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * <p>The ID of the request.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1A943417-5B0E-1DB9-A8**-A566****C3</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -159,7 +174,10 @@ public class CreateApsKafkaHudiJobResponseBody extends TeaModel {
         }
 
         /**
-         * Success.
+         * <p>Indicates whether the request was successful. true: The request is successful. false: The message group failed to be unmuted.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder success(Boolean success) {
             this.success = success;

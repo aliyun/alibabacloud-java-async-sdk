@@ -117,6 +117,10 @@ public class ConfigureResultExportRequest extends Request {
         } 
 
         /**
+         * <p>The cluster ID.</p>
+         * <blockquote>
+         * <p> You can call the <a href="https://help.aliyun.com/document_detail/129857.html">DescribeDBClusters</a> operation to query the information about all AnalyticDB for MySQL clusters within a region, including cluster IDs.</p>
+         * </blockquote>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -129,7 +133,14 @@ public class ConfigureResultExportRequest extends Request {
         }
 
         /**
-         * ExportType.
+         * <p>The export type. Valid values:</p>
+         * <ul>
+         * <li>SLS: Specifies that the export destination is SLS.</li>
+         * <li>OSS: Specifies that the export destination is OSS.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>SLS</p>
          */
         public Builder exportType(String exportType) {
             this.putBodyParameter("ExportType", exportType);
@@ -138,7 +149,7 @@ public class ConfigureResultExportRequest extends Request {
         }
 
         /**
-         * OssInfo.
+         * <p>The OSS configuration details if the destination is of the OSS type.</p>
          */
         public Builder ossInfo(OssInfo ossInfo) {
             String ossInfoShrink = shrink(ossInfo, "OssInfo", "json");
@@ -148,6 +159,7 @@ public class ConfigureResultExportRequest extends Request {
         }
 
         /**
+         * <p>The ID of the region where the instance resides.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -160,7 +172,7 @@ public class ConfigureResultExportRequest extends Request {
         }
 
         /**
-         * SlsInfo.
+         * <p>The SLS configuration details if the destination is of the SLS type.</p>
          */
         public Builder slsInfo(SlsInfo slsInfo) {
             String slsInfoShrink = shrink(slsInfo, "SlsInfo", "json");
@@ -242,7 +254,10 @@ public class ConfigureResultExportRequest extends Request {
             } 
 
             /**
-             * ExportBasePath.
+             * <p>The OSS path where the result sets are stored.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>oss://testBucketName/data_result</p>
              */
             public Builder exportBasePath(String exportBasePath) {
                 this.exportBasePath = exportBasePath;
@@ -250,7 +265,10 @@ public class ConfigureResultExportRequest extends Request {
             }
 
             /**
-             * ResourceGroup.
+             * <p>The name of the resource group that runs the job.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>aps</p>
              */
             public Builder resourceGroup(String resourceGroup) {
                 this.resourceGroup = resourceGroup;
@@ -258,7 +276,10 @@ public class ConfigureResultExportRequest extends Request {
             }
 
             /**
-             * ResultFileTtl.
+             * <p>The expiration time of the OSS file. Unit: days. Minimum: 1 day, maximum: 30 days. Values outside this range will result in an error.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>10</p>
              */
             public Builder resultFileTtl(Integer resultFileTtl) {
                 this.resultFileTtl = resultFileTtl;
@@ -338,7 +359,10 @@ public class ConfigureResultExportRequest extends Request {
             } 
 
             /**
-             * LogstoreTtl.
+             * <p>The expiration time of the Logstore temporarily generated during the result set export. Unit: days. The Logstore is automatically deleted after it expires. Minimum value: 1 day, maximum: 30 days. Values outside this range will result in an error.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>10</p>
              */
             public Builder logstoreTtl(Integer logstoreTtl) {
                 this.logstoreTtl = logstoreTtl;
@@ -346,7 +370,10 @@ public class ConfigureResultExportRequest extends Request {
             }
 
             /**
-             * ResourceGroup.
+             * <p>The name of the resource group that runs the job.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>aps</p>
              */
             public Builder resourceGroup(String resourceGroup) {
                 this.resourceGroup = resourceGroup;
@@ -354,7 +381,10 @@ public class ConfigureResultExportRequest extends Request {
             }
 
             /**
-             * SlsProject.
+             * <p>The name of the SLS project.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>test-project</p>
              */
             public Builder slsProject(String slsProject) {
                 this.slsProject = slsProject;

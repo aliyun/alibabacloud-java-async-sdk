@@ -41,6 +41,12 @@ public class TableModel extends TeaModel {
     @com.aliyun.core.annotation.NameInMap("CreateTime")
     private String createTime;
 
+    @com.aliyun.core.annotation.NameInMap("CreatedBySource")
+    private String createdBySource;
+
+    @com.aliyun.core.annotation.NameInMap("CreatedByUser")
+    private String createdByUser;
+
     @com.aliyun.core.annotation.NameInMap("CurrentVersion")
     private Long currentVersion;
 
@@ -170,6 +176,8 @@ public class TableModel extends TeaModel {
         this.comment = builder.comment;
         this.compression = builder.compression;
         this.createTime = builder.createTime;
+        this.createdBySource = builder.createdBySource;
+        this.createdByUser = builder.createdByUser;
         this.currentVersion = builder.currentVersion;
         this.dbName = builder.dbName;
         this.dictEncode = builder.dictEncode;
@@ -278,6 +286,20 @@ public class TableModel extends TeaModel {
      */
     public String getCreateTime() {
         return this.createTime;
+    }
+
+    /**
+     * @return createdBySource
+     */
+    public String getCreatedBySource() {
+        return this.createdBySource;
+    }
+
+    /**
+     * @return createdByUser
+     */
+    public String getCreatedByUser() {
+        return this.createdByUser;
     }
 
     /**
@@ -569,6 +591,8 @@ public class TableModel extends TeaModel {
         private String comment; 
         private String compression; 
         private String createTime; 
+        private String createdBySource; 
+        private String createdByUser; 
         private Long currentVersion; 
         private String dbName; 
         private Boolean dictEncode; 
@@ -622,6 +646,8 @@ public class TableModel extends TeaModel {
             this.comment = model.comment;
             this.compression = model.compression;
             this.createTime = model.createTime;
+            this.createdBySource = model.createdBySource;
+            this.createdByUser = model.createdByUser;
             this.currentVersion = model.currentVersion;
             this.dbName = model.dbName;
             this.dictEncode = model.dictEncode;
@@ -725,6 +751,22 @@ public class TableModel extends TeaModel {
          */
         public Builder createTime(String createTime) {
             this.createTime = createTime;
+            return this;
+        }
+
+        /**
+         * CreatedBySource.
+         */
+        public Builder createdBySource(String createdBySource) {
+            this.createdBySource = createdBySource;
+            return this;
+        }
+
+        /**
+         * CreatedByUser.
+         */
+        public Builder createdByUser(String createdByUser) {
+            this.createdByUser = createdByUser;
             return this;
         }
 

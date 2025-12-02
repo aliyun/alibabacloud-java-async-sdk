@@ -93,7 +93,10 @@ public class DescribeDBClusterSSLResponseBody extends TeaModel {
         } 
 
         /**
-         * ConnectionString.
+         * <p>The endpoint that is protected by SSL encryption.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>amv-*********.ads.aliyuncs.com</p>
          */
         public Builder connectionString(String connectionString) {
             this.connectionString = connectionString;
@@ -101,7 +104,10 @@ public class DescribeDBClusterSSLResponseBody extends TeaModel {
         }
 
         /**
-         * ExpireTime.
+         * <p>The validity period of the SSL certificate. Format: yyyy-MM-ddTHH:mm:ssZ(UTC time).</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2022-10-11T08:16:43Z</p>
          */
         public Builder expireTime(String expireTime) {
             this.expireTime = expireTime;
@@ -109,7 +115,10 @@ public class DescribeDBClusterSSLResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * <p>The unique ID of the request.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>348303D8-6F42-5141-9B00-A6EECA1E37B6</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -117,7 +126,14 @@ public class DescribeDBClusterSSLResponseBody extends TeaModel {
         }
 
         /**
-         * SSLEnabled.
+         * <p>Indicates whether SSL encryption is enabled. Default value: true. Valid values:</p>
+         * <ul>
+         * <li>true: enabled</li>
+         * <li>false: disabled</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder SSLEnabled(Boolean SSLEnabled) {
             this.SSLEnabled = SSLEnabled;

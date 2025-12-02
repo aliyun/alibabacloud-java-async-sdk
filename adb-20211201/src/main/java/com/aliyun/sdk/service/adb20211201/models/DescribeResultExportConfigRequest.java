@@ -89,6 +89,10 @@ public class DescribeResultExportConfigRequest extends Request {
         } 
 
         /**
+         * <p>The cluster ID.</p>
+         * <blockquote>
+         * <p> You can call the <a href="https://help.aliyun.com/document_detail/129857.html">DescribeDBClusters</a> operation to query the information about all AnalyticDB for MySQL clusters within a region, including cluster IDs.</p>
+         * </blockquote>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -101,7 +105,14 @@ public class DescribeResultExportConfigRequest extends Request {
         }
 
         /**
-         * ExportType.
+         * <p>The export type. Valid values:</p>
+         * <ul>
+         * <li>SLS: Indicates that the export destination is SLS.</li>
+         * <li>OSS: Indicates that the export destination is OSS.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>SLS</p>
          */
         public Builder exportType(String exportType) {
             this.putQueryParameter("ExportType", exportType);
@@ -110,6 +121,7 @@ public class DescribeResultExportConfigRequest extends Request {
         }
 
         /**
+         * <p>The region ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>

@@ -97,6 +97,156 @@ public class DescribeDBResourceGroupResponseBody extends TeaModel {
      *
      * <p>DescribeDBResourceGroupResponseBody</p>
      */
+    public static class Rules extends TeaModel {
+        @com.aliyun.core.annotation.NameInMap("EndCronExpression")
+        private String endCronExpression;
+
+        @com.aliyun.core.annotation.NameInMap("StartCronExpression")
+        private String startCronExpression;
+
+        private Rules(Builder builder) {
+            this.endCronExpression = builder.endCronExpression;
+            this.startCronExpression = builder.startCronExpression;
+        }
+
+        public static Builder builder() {
+            return new Builder();
+        }
+
+        public static Rules create() {
+            return builder().build();
+        }
+
+        /**
+         * @return endCronExpression
+         */
+        public String getEndCronExpression() {
+            return this.endCronExpression;
+        }
+
+        /**
+         * @return startCronExpression
+         */
+        public String getStartCronExpression() {
+            return this.startCronExpression;
+        }
+
+        public static final class Builder {
+            private String endCronExpression; 
+            private String startCronExpression; 
+
+            private Builder() {
+            } 
+
+            private Builder(Rules model) {
+                this.endCronExpression = model.endCronExpression;
+                this.startCronExpression = model.startCronExpression;
+            } 
+
+            /**
+             * EndCronExpression.
+             */
+            public Builder endCronExpression(String endCronExpression) {
+                this.endCronExpression = endCronExpression;
+                return this;
+            }
+
+            /**
+             * StartCronExpression.
+             */
+            public Builder startCronExpression(String startCronExpression) {
+                this.startCronExpression = startCronExpression;
+                return this;
+            }
+
+            public Rules build() {
+                return new Rules(this);
+            } 
+
+        } 
+
+    }
+    /**
+     * 
+     * {@link DescribeDBResourceGroupResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeDBResourceGroupResponseBody</p>
+     */
+    public static class GpuElasticPlan extends TeaModel {
+        @com.aliyun.core.annotation.NameInMap("Enabled")
+        private Boolean enabled;
+
+        @com.aliyun.core.annotation.NameInMap("Rules")
+        private java.util.List<Rules> rules;
+
+        private GpuElasticPlan(Builder builder) {
+            this.enabled = builder.enabled;
+            this.rules = builder.rules;
+        }
+
+        public static Builder builder() {
+            return new Builder();
+        }
+
+        public static GpuElasticPlan create() {
+            return builder().build();
+        }
+
+        /**
+         * @return enabled
+         */
+        public Boolean getEnabled() {
+            return this.enabled;
+        }
+
+        /**
+         * @return rules
+         */
+        public java.util.List<Rules> getRules() {
+            return this.rules;
+        }
+
+        public static final class Builder {
+            private Boolean enabled; 
+            private java.util.List<Rules> rules; 
+
+            private Builder() {
+            } 
+
+            private Builder(GpuElasticPlan model) {
+                this.enabled = model.enabled;
+                this.rules = model.rules;
+            } 
+
+            /**
+             * Enabled.
+             */
+            public Builder enabled(Boolean enabled) {
+                this.enabled = enabled;
+                return this;
+            }
+
+            /**
+             * Rules.
+             */
+            public Builder rules(java.util.List<Rules> rules) {
+                this.rules = rules;
+                return this;
+            }
+
+            public GpuElasticPlan build() {
+                return new GpuElasticPlan(this);
+            } 
+
+        } 
+
+    }
+    /**
+     * 
+     * {@link DescribeDBResourceGroupResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeDBResourceGroupResponseBody</p>
+     */
     public static class ImageSelector extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Image")
         private String image;
@@ -829,7 +979,7 @@ public class DescribeDBResourceGroupResponseBody extends TeaModel {
      *
      * <p>DescribeDBResourceGroupResponseBody</p>
      */
-    public static class Rules extends TeaModel {
+    public static class GroupsInfoRules extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("GroupName")
         private String groupName;
 
@@ -839,7 +989,7 @@ public class DescribeDBResourceGroupResponseBody extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("TargetGroupName")
         private String targetGroupName;
 
-        private Rules(Builder builder) {
+        private GroupsInfoRules(Builder builder) {
             this.groupName = builder.groupName;
             this.queryTime = builder.queryTime;
             this.targetGroupName = builder.targetGroupName;
@@ -849,7 +999,7 @@ public class DescribeDBResourceGroupResponseBody extends TeaModel {
             return new Builder();
         }
 
-        public static Rules create() {
+        public static GroupsInfoRules create() {
             return builder().build();
         }
 
@@ -882,7 +1032,7 @@ public class DescribeDBResourceGroupResponseBody extends TeaModel {
             private Builder() {
             } 
 
-            private Builder(Rules model) {
+            private Builder(GroupsInfoRules model) {
                 this.groupName = model.groupName;
                 this.queryTime = model.queryTime;
                 this.targetGroupName = model.targetGroupName;
@@ -921,8 +1071,8 @@ public class DescribeDBResourceGroupResponseBody extends TeaModel {
                 return this;
             }
 
-            public Rules build() {
-                return new Rules(this);
+            public GroupsInfoRules build() {
+                return new GroupsInfoRules(this);
             } 
 
         } 
@@ -959,6 +1109,9 @@ public class DescribeDBResourceGroupResponseBody extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("EngineParams")
         private java.util.Map<String, ?> engineParams;
 
+        @com.aliyun.core.annotation.NameInMap("GpuElasticPlan")
+        private GpuElasticPlan gpuElasticPlan;
+
         @com.aliyun.core.annotation.NameInMap("GroupName")
         private String groupName;
 
@@ -994,7 +1147,7 @@ public class DescribeDBResourceGroupResponseBody extends TeaModel {
         private RayConfig rayConfig;
 
         @com.aliyun.core.annotation.NameInMap("Rules")
-        private java.util.List<Rules> rules;
+        private java.util.List<GroupsInfoRules> rules;
 
         @com.aliyun.core.annotation.NameInMap("RunningClusterCount")
         private Integer runningClusterCount;
@@ -1020,6 +1173,7 @@ public class DescribeDBResourceGroupResponseBody extends TeaModel {
             this.enableSpot = builder.enableSpot;
             this.engine = builder.engine;
             this.engineParams = builder.engineParams;
+            this.gpuElasticPlan = builder.gpuElasticPlan;
             this.groupName = builder.groupName;
             this.groupType = builder.groupType;
             this.groupUsers = builder.groupUsers;
@@ -1104,6 +1258,13 @@ public class DescribeDBResourceGroupResponseBody extends TeaModel {
         }
 
         /**
+         * @return gpuElasticPlan
+         */
+        public GpuElasticPlan getGpuElasticPlan() {
+            return this.gpuElasticPlan;
+        }
+
+        /**
          * @return groupName
          */
         public String getGroupName() {
@@ -1183,7 +1344,7 @@ public class DescribeDBResourceGroupResponseBody extends TeaModel {
         /**
          * @return rules
          */
-        public java.util.List<Rules> getRules() {
+        public java.util.List<GroupsInfoRules> getRules() {
             return this.rules;
         }
 
@@ -1231,6 +1392,7 @@ public class DescribeDBResourceGroupResponseBody extends TeaModel {
             private String enableSpot; 
             private String engine; 
             private java.util.Map<String, ?> engineParams; 
+            private GpuElasticPlan gpuElasticPlan; 
             private String groupName; 
             private String groupType; 
             private String groupUsers; 
@@ -1242,7 +1404,7 @@ public class DescribeDBResourceGroupResponseBody extends TeaModel {
             private String minComputeResource; 
             private Integer minGpuQuantity; 
             private RayConfig rayConfig; 
-            private java.util.List<Rules> rules; 
+            private java.util.List<GroupsInfoRules> rules; 
             private Integer runningClusterCount; 
             private String specName; 
             private String status; 
@@ -1261,6 +1423,7 @@ public class DescribeDBResourceGroupResponseBody extends TeaModel {
                 this.enableSpot = model.enableSpot;
                 this.engine = model.engine;
                 this.engineParams = model.engineParams;
+                this.gpuElasticPlan = model.gpuElasticPlan;
                 this.groupName = model.groupName;
                 this.groupType = model.groupType;
                 this.groupUsers = model.groupUsers;
@@ -1361,6 +1524,14 @@ public class DescribeDBResourceGroupResponseBody extends TeaModel {
              */
             public Builder engineParams(java.util.Map<String, ?> engineParams) {
                 this.engineParams = engineParams;
+                return this;
+            }
+
+            /**
+             * GpuElasticPlan.
+             */
+            public Builder gpuElasticPlan(GpuElasticPlan gpuElasticPlan) {
+                this.gpuElasticPlan = gpuElasticPlan;
                 return this;
             }
 
@@ -1483,7 +1654,7 @@ public class DescribeDBResourceGroupResponseBody extends TeaModel {
             /**
              * <p>The job resubmission rules.</p>
              */
-            public Builder rules(java.util.List<Rules> rules) {
+            public Builder rules(java.util.List<GroupsInfoRules> rules) {
                 this.rules = rules;
                 return this;
             }

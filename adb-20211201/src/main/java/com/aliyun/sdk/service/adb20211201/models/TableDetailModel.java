@@ -26,11 +26,23 @@ public class TableDetailModel extends TeaModel {
     @com.aliyun.core.annotation.NameInMap("CreateTime")
     private String createTime;
 
+    @com.aliyun.core.annotation.NameInMap("CreatedBySource")
+    private String createdBySource;
+
+    @com.aliyun.core.annotation.NameInMap("CreatedByUser")
+    private String createdByUser;
+
     @com.aliyun.core.annotation.NameInMap("Description")
     private String description;
 
+    @com.aliyun.core.annotation.NameInMap("Location")
+    private String location;
+
     @com.aliyun.core.annotation.NameInMap("Owner")
     private String owner;
+
+    @com.aliyun.core.annotation.NameInMap("Parameters")
+    private java.util.Map<String, String> parameters;
 
     @com.aliyun.core.annotation.NameInMap("SchemaName")
     private String schemaName;
@@ -48,8 +60,12 @@ public class TableDetailModel extends TeaModel {
         this.catalog = builder.catalog;
         this.columns = builder.columns;
         this.createTime = builder.createTime;
+        this.createdBySource = builder.createdBySource;
+        this.createdByUser = builder.createdByUser;
         this.description = builder.description;
+        this.location = builder.location;
         this.owner = builder.owner;
+        this.parameters = builder.parameters;
         this.schemaName = builder.schemaName;
         this.tableName = builder.tableName;
         this.tableType = builder.tableType;
@@ -90,6 +106,20 @@ public class TableDetailModel extends TeaModel {
     }
 
     /**
+     * @return createdBySource
+     */
+    public String getCreatedBySource() {
+        return this.createdBySource;
+    }
+
+    /**
+     * @return createdByUser
+     */
+    public String getCreatedByUser() {
+        return this.createdByUser;
+    }
+
+    /**
      * @return description
      */
     public String getDescription() {
@@ -97,10 +127,24 @@ public class TableDetailModel extends TeaModel {
     }
 
     /**
+     * @return location
+     */
+    public String getLocation() {
+        return this.location;
+    }
+
+    /**
      * @return owner
      */
     public String getOwner() {
         return this.owner;
+    }
+
+    /**
+     * @return parameters
+     */
+    public java.util.Map<String, String> getParameters() {
+        return this.parameters;
     }
 
     /**
@@ -135,8 +179,12 @@ public class TableDetailModel extends TeaModel {
         private String catalog; 
         private java.util.List<ColDetailModel> columns; 
         private String createTime; 
+        private String createdBySource; 
+        private String createdByUser; 
         private String description; 
+        private String location; 
         private String owner; 
+        private java.util.Map<String, String> parameters; 
         private String schemaName; 
         private String tableName; 
         private String tableType; 
@@ -149,8 +197,12 @@ public class TableDetailModel extends TeaModel {
             this.catalog = model.catalog;
             this.columns = model.columns;
             this.createTime = model.createTime;
+            this.createdBySource = model.createdBySource;
+            this.createdByUser = model.createdByUser;
             this.description = model.description;
+            this.location = model.location;
             this.owner = model.owner;
+            this.parameters = model.parameters;
             this.schemaName = model.schemaName;
             this.tableName = model.tableName;
             this.tableType = model.tableType;
@@ -182,6 +234,22 @@ public class TableDetailModel extends TeaModel {
         }
 
         /**
+         * CreatedBySource.
+         */
+        public Builder createdBySource(String createdBySource) {
+            this.createdBySource = createdBySource;
+            return this;
+        }
+
+        /**
+         * CreatedByUser.
+         */
+        public Builder createdByUser(String createdByUser) {
+            this.createdByUser = createdByUser;
+            return this;
+        }
+
+        /**
          * Description.
          */
         public Builder description(String description) {
@@ -190,10 +258,26 @@ public class TableDetailModel extends TeaModel {
         }
 
         /**
+         * Location.
+         */
+        public Builder location(String location) {
+            this.location = location;
+            return this;
+        }
+
+        /**
          * Owner.
          */
         public Builder owner(String owner) {
             this.owner = owner;
+            return this;
+        }
+
+        /**
+         * Parameters.
+         */
+        public Builder parameters(java.util.Map<String, String> parameters) {
+            this.parameters = parameters;
             return this;
         }
 

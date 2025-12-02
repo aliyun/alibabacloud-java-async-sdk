@@ -12,11 +12,11 @@ import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
  * 
- * {@link CreateBackupRequest} extends {@link RequestModel}
+ * {@link DeleteMaterializedViewRecommendRequest} extends {@link RequestModel}
  *
- * <p>CreateBackupRequest</p>
+ * <p>DeleteMaterializedViewRecommendRequest</p>
  */
-public class CreateBackupRequest extends Request {
+public class DeleteMaterializedViewRecommendRequest extends Request {
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("DBClusterId")
     @com.aliyun.core.annotation.Validation(required = true)
@@ -42,7 +42,12 @@ public class CreateBackupRequest extends Request {
     @com.aliyun.core.annotation.NameInMap("ResourceOwnerId")
     private Long resourceOwnerId;
 
-    private CreateBackupRequest(Builder builder) {
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("TaskName")
+    @com.aliyun.core.annotation.Validation(required = true)
+    private String taskName;
+
+    private DeleteMaterializedViewRecommendRequest(Builder builder) {
         super(builder);
         this.DBClusterId = builder.DBClusterId;
         this.ownerAccount = builder.ownerAccount;
@@ -50,13 +55,14 @@ public class CreateBackupRequest extends Request {
         this.regionId = builder.regionId;
         this.resourceOwnerAccount = builder.resourceOwnerAccount;
         this.resourceOwnerId = builder.resourceOwnerId;
+        this.taskName = builder.taskName;
     }
 
     public static Builder builder() {
         return new Builder();
     }
 
-    public static CreateBackupRequest create() {
+    public static DeleteMaterializedViewRecommendRequest create() {
         return builder().build();
     }
 
@@ -107,19 +113,27 @@ public class CreateBackupRequest extends Request {
         return this.resourceOwnerId;
     }
 
-    public static final class Builder extends Request.Builder<CreateBackupRequest, Builder> {
+    /**
+     * @return taskName
+     */
+    public String getTaskName() {
+        return this.taskName;
+    }
+
+    public static final class Builder extends Request.Builder<DeleteMaterializedViewRecommendRequest, Builder> {
         private String DBClusterId; 
         private String ownerAccount; 
         private Long ownerId; 
         private String regionId; 
         private String resourceOwnerAccount; 
         private Long resourceOwnerId; 
+        private String taskName; 
 
         private Builder() {
             super();
         } 
 
-        private Builder(CreateBackupRequest request) {
+        private Builder(DeleteMaterializedViewRecommendRequest request) {
             super(request);
             this.DBClusterId = request.DBClusterId;
             this.ownerAccount = request.ownerAccount;
@@ -127,6 +141,7 @@ public class CreateBackupRequest extends Request {
             this.regionId = request.regionId;
             this.resourceOwnerAccount = request.resourceOwnerAccount;
             this.resourceOwnerId = request.resourceOwnerId;
+            this.taskName = request.taskName;
         } 
 
         /**
@@ -134,7 +149,7 @@ public class CreateBackupRequest extends Request {
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
-         * <p>amv-wz9or2xawpnc****</p>
+         * <p>amv-uf66*****</p>
          */
         public Builder DBClusterId(String DBClusterId) {
             this.putQueryParameter("DBClusterId", DBClusterId);
@@ -161,10 +176,10 @@ public class CreateBackupRequest extends Request {
         }
 
         /**
-         * <p>The region ID of the instance.</p>
+         * <p>The region ID.</p>
          * 
          * <strong>example:</strong>
-         * <p>cn-hangzhou</p>
+         * <p>cn-beijing</p>
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);
@@ -190,9 +205,22 @@ public class CreateBackupRequest extends Request {
             return this;
         }
 
+        /**
+         * <p>The name of the recommendation task.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>my_task_1</p>
+         */
+        public Builder taskName(String taskName) {
+            this.putQueryParameter("TaskName", taskName);
+            this.taskName = taskName;
+            return this;
+        }
+
         @Override
-        public CreateBackupRequest build() {
-            return new CreateBackupRequest(this);
+        public DeleteMaterializedViewRecommendRequest build() {
+            return new DeleteMaterializedViewRecommendRequest(this);
         } 
 
     } 

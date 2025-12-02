@@ -89,6 +89,7 @@ public class UpdateApsWebhookRequest extends Request {
         } 
 
         /**
+         * <p>The cluster ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -101,6 +102,7 @@ public class UpdateApsWebhookRequest extends Request {
         }
 
         /**
+         * <p>The region ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -113,7 +115,7 @@ public class UpdateApsWebhookRequest extends Request {
         }
 
         /**
-         * Webhook.
+         * <p>The array of webhooks.</p>
          */
         public Builder webhook(java.util.List<Webhook> webhook) {
             String webhookShrink = shrink(webhook, "Webhook", "json");
@@ -222,7 +224,10 @@ public class UpdateApsWebhookRequest extends Request {
             } 
 
             /**
-             * Key.
+             * <p>Signed key.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>ABC**</p>
              */
             public Builder key(String key) {
                 this.key = key;
@@ -230,7 +235,10 @@ public class UpdateApsWebhookRequest extends Request {
             }
 
             /**
-             * Name.
+             * <p>The name of the webhook.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>exampleWebhookName</p>
              */
             public Builder name(String name) {
                 this.name = name;
@@ -238,7 +246,10 @@ public class UpdateApsWebhookRequest extends Request {
             }
 
             /**
-             * Url.
+             * <p>The URL of the request.</p>
+             * 
+             * <strong>example:</strong>
+             * <p><a href="https://example.com/webhook">https://example.com/webhook</a></p>
              */
             public Builder url(String url) {
                 this.url = url;
@@ -246,7 +257,7 @@ public class UpdateApsWebhookRequest extends Request {
             }
 
             /**
-             * <p>Webhook ID。</p>
+             * <p>The ID of the webhook.</p>
              * <p>This parameter is required.</p>
              * 
              * <strong>example:</strong>
@@ -258,7 +269,10 @@ public class UpdateApsWebhookRequest extends Request {
             }
 
             /**
-             * WebhookType.
+             * <p>The notification method. Valid values: dingtalk. lark.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>dingtalk</p>
              */
             public Builder webhookType(String webhookType) {
                 this.webhookType = webhookType;

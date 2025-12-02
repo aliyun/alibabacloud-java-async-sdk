@@ -132,7 +132,10 @@ public class DeleteApsWebhookResponseBody extends TeaModel {
         } 
 
         /**
-         * Code.
+         * <p>API status or POP error code.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>200</p>
          */
         public Builder code(String code) {
             this.code = code;
@@ -140,7 +143,10 @@ public class DeleteApsWebhookResponseBody extends TeaModel {
         }
 
         /**
-         * DBClusterId.
+         * <p>The cluster ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>amv-uf63i4ij56b***</p>
          */
         public Builder DBClusterId(String DBClusterId) {
             this.DBClusterId = DBClusterId;
@@ -148,7 +154,10 @@ public class DeleteApsWebhookResponseBody extends TeaModel {
         }
 
         /**
-         * Data.
+         * <p>The returned data.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>[]</p>
          */
         public Builder data(String data) {
             this.data = data;
@@ -156,7 +165,10 @@ public class DeleteApsWebhookResponseBody extends TeaModel {
         }
 
         /**
-         * HttpStatusCode.
+         * <p>The HTTP status code.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>200</p>
          */
         public Builder httpStatusCode(Integer httpStatusCode) {
             this.httpStatusCode = httpStatusCode;
@@ -164,7 +176,7 @@ public class DeleteApsWebhookResponseBody extends TeaModel {
         }
 
         /**
-         * Message.
+         * <p>The returned message.</p>
          */
         public Builder message(String message) {
             this.message = message;
@@ -172,7 +184,10 @@ public class DeleteApsWebhookResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * <p>The unique ID of the request.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>exampleRequestId</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -180,7 +195,10 @@ public class DeleteApsWebhookResponseBody extends TeaModel {
         }
 
         /**
-         * Success.
+         * <p>Indicates whether the request was successful.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder success(Boolean success) {
             this.success = success;

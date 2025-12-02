@@ -132,7 +132,18 @@ public class DescribeSparkAuditLogRecordsResponseBody extends TeaModel {
         } 
 
         /**
-         * AccessDeniedDetail.
+         * <p>The details about the access denial. This parameter is returned only if Resource Access Management (RAM) permission verification failed.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>{
+         *     &quot;PolicyType&quot;: &quot;AccountLevelIdentityBasedPolicy&quot;,
+         *     &quot;AuthPrincipalOwnerId&quot;: &quot;1**<em><strong><strong><strong><strong><strong><strong><strong>7&quot;,
+         *     &quot;EncodedDiagnosticMessage&quot;: &quot;AQIBIAAAAOPdwKY2QLOvgMEc7SkkoJfj1kvZwsaRqNYMh10Tv0wTe0fCzaCdrvgazfNb0EnJKETgXyhR+3BIQjx9WAqZryejBsp1Bl4qI5En/D9dEhcXAtKCxCmE2kZCiEzpy8BoEUt+bs0DmlaGWO5xkEpttypLIB4rUhDvZd+zwPg4EXk4KSSWSWsurxtqDkKEMshKlQFBTKvJcKwyhk62IeYly4hQ+5IpXjkh1GQXuDRCQ==&quot;,
+         *     &quot;AuthPrincipalType&quot;: &quot;SubUser&quot;,
+         *     &quot;AuthPrincipalDisplayName&quot;: &quot;2</strong></strong></strong></strong></strong></strong></strong></em>9&quot;,
+         *     &quot;NoPermissionType&quot;: &quot;ImplicitDeny&quot;,
+         *     &quot;AuthAction&quot;: &quot;adb:DescribeExcessivePrimaryKeys&quot;
+         * }</p>
          */
         public Builder accessDeniedDetail(String accessDeniedDetail) {
             this.accessDeniedDetail = accessDeniedDetail;
@@ -140,7 +151,10 @@ public class DescribeSparkAuditLogRecordsResponseBody extends TeaModel {
         }
 
         /**
-         * DBClusterId.
+         * <p>The cluster ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>amv-bp1j7******78j8i</p>
          */
         public Builder DBClusterId(String DBClusterId) {
             this.DBClusterId = DBClusterId;
@@ -148,7 +162,7 @@ public class DescribeSparkAuditLogRecordsResponseBody extends TeaModel {
         }
 
         /**
-         * Items.
+         * <p>The list of SQL audit logs.</p>
          */
         public Builder items(java.util.List<Items> items) {
             this.items = items;
@@ -156,7 +170,10 @@ public class DescribeSparkAuditLogRecordsResponseBody extends TeaModel {
         }
 
         /**
-         * PageNumber.
+         * <p>The page number.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder pageNumber(String pageNumber) {
             this.pageNumber = pageNumber;
@@ -164,7 +181,10 @@ public class DescribeSparkAuditLogRecordsResponseBody extends TeaModel {
         }
 
         /**
-         * PageSize.
+         * <p>The number of entries to return per page.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>30</p>
          */
         public Builder pageSize(String pageSize) {
             this.pageSize = pageSize;
@@ -172,7 +192,10 @@ public class DescribeSparkAuditLogRecordsResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2D5867CF-423F-559F-BBB1-199A289E****</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -180,7 +203,10 @@ public class DescribeSparkAuditLogRecordsResponseBody extends TeaModel {
         }
 
         /**
-         * TotalCount.
+         * <p>The total number of entries.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>100</p>
          */
         public Builder totalCount(String totalCount) {
             this.totalCount = totalCount;
@@ -415,7 +441,10 @@ public class DescribeSparkAuditLogRecordsResponseBody extends TeaModel {
             } 
 
             /**
-             * AppId.
+             * <p>The Spark application ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>s202411061011hzc5d6476000****</p>
              */
             public Builder appId(String appId) {
                 this.appId = appId;
@@ -423,7 +452,10 @@ public class DescribeSparkAuditLogRecordsResponseBody extends TeaModel {
             }
 
             /**
-             * ClientIp.
+             * <p>The source IP address.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>192.168.XX.XX</p>
              */
             public Builder clientIp(String clientIp) {
                 this.clientIp = clientIp;
@@ -431,7 +463,10 @@ public class DescribeSparkAuditLogRecordsResponseBody extends TeaModel {
             }
 
             /**
-             * ErrorMsg.
+             * <p>The SQL execution error message.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>notFoundIp</p>
              */
             public Builder errorMsg(String errorMsg) {
                 this.errorMsg = errorMsg;
@@ -439,7 +474,10 @@ public class DescribeSparkAuditLogRecordsResponseBody extends TeaModel {
             }
 
             /**
-             * ErrorTrace.
+             * <p>The SQL execution error stack trace.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>notFoundIpException</p>
              */
             public Builder errorTrace(String errorTrace) {
                 this.errorTrace = errorTrace;
@@ -447,7 +485,10 @@ public class DescribeSparkAuditLogRecordsResponseBody extends TeaModel {
             }
 
             /**
-             * ExecuteTime.
+             * <p>The start time of the SQL statement. The time is in the yyyy-MM-ddTHH:mm:ssZ format. The time is in UTC.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2022-01-23T16:05:08Z</p>
              */
             public Builder executeTime(String executeTime) {
                 this.executeTime = executeTime;
@@ -455,7 +496,10 @@ public class DescribeSparkAuditLogRecordsResponseBody extends TeaModel {
             }
 
             /**
-             * InnerQueryId.
+             * <p>The ID of the query executed within the Spark application.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder innerQueryId(String innerQueryId) {
                 this.innerQueryId = innerQueryId;
@@ -463,7 +507,10 @@ public class DescribeSparkAuditLogRecordsResponseBody extends TeaModel {
             }
 
             /**
-             * IsDiagnosable.
+             * <p>Whether it can be diagnosed.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>true</p>
              */
             public Builder isDiagnosable(Boolean isDiagnosable) {
                 this.isDiagnosable = isDiagnosable;
@@ -471,7 +518,10 @@ public class DescribeSparkAuditLogRecordsResponseBody extends TeaModel {
             }
 
             /**
-             * ProcessId.
+             * <p>The query ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>999f2439-6b10-xxxx-a5d3-daf3b35c****</p>
              */
             public Builder processId(String processId) {
                 this.processId = processId;
@@ -479,7 +529,10 @@ public class DescribeSparkAuditLogRecordsResponseBody extends TeaModel {
             }
 
             /**
-             * ResourceGroupName.
+             * <p>The resource group name.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>test_job</p>
              */
             public Builder resourceGroupName(String resourceGroupName) {
                 this.resourceGroupName = resourceGroupName;
@@ -487,7 +540,10 @@ public class DescribeSparkAuditLogRecordsResponseBody extends TeaModel {
             }
 
             /**
-             * SQLText.
+             * <p>The SQL statement.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>SELECT * FROM adb_hdfs_import_source</p>
              */
             public Builder SQLText(String SQLText) {
                 this.SQLText = SQLText;
@@ -495,7 +551,7 @@ public class DescribeSparkAuditLogRecordsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>Statement ID。</p>
+             * <p>The ID of the statement.</p>
              * 
              * <strong>example:</strong>
              * <p>fbd22066-1c03-xxxx-aa16-6ae28288****</p>
@@ -506,7 +562,15 @@ public class DescribeSparkAuditLogRecordsResponseBody extends TeaModel {
             }
 
             /**
-             * StatementSource.
+             * <p>The source from which the query was initiated.</p>
+             * <p>Valid values:</p>
+             * <ul>
+             * <li>SQL_EDITOR: SQL_EDITOR.</li>
+             * <li>JDBC: JDBC.</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>SQL_EDITOR</p>
              */
             public Builder statementSource(String statementSource) {
                 this.statementSource = statementSource;
@@ -514,7 +578,17 @@ public class DescribeSparkAuditLogRecordsResponseBody extends TeaModel {
             }
 
             /**
-             * Status.
+             * <p>The execution status of the SQL statement.</p>
+             * <p>Valid values:</p>
+             * <ul>
+             * <li>cancel: The task is canceled .</li>
+             * <li>finished: The execution succeeds .</li>
+             * <li>error: The execution fails .</li>
+             * <li>timeout: The execution of the command timed out.</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>finish</p>
              */
             public Builder status(String status) {
                 this.status = status;
@@ -522,7 +596,10 @@ public class DescribeSparkAuditLogRecordsResponseBody extends TeaModel {
             }
 
             /**
-             * TotalTime.
+             * <p>The duration of the SQL statement. Unit: milliseconds.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>40000</p>
              */
             public Builder totalTime(Long totalTime) {
                 this.totalTime = totalTime;
@@ -530,7 +607,10 @@ public class DescribeSparkAuditLogRecordsResponseBody extends TeaModel {
             }
 
             /**
-             * User.
+             * <p>The username that is used to execute SQL statements.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>test_user</p>
              */
             public Builder user(String user) {
                 this.user = user;

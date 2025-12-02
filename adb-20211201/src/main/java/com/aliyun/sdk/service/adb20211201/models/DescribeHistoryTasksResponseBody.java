@@ -171,7 +171,7 @@ public class DescribeHistoryTasksResponseBody extends TeaModel {
         } 
 
         /**
-         * AccessDeniedDetail.
+         * <p>null</p>
          */
         public Builder accessDeniedDetail(AccessDeniedDetail accessDeniedDetail) {
             this.accessDeniedDetail = accessDeniedDetail;
@@ -179,7 +179,10 @@ public class DescribeHistoryTasksResponseBody extends TeaModel {
         }
 
         /**
-         * Code.
+         * <p>The HTTP status code that is returned.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>200</p>
          */
         public Builder code(String code) {
             this.code = code;
@@ -187,7 +190,10 @@ public class DescribeHistoryTasksResponseBody extends TeaModel {
         }
 
         /**
-         * HttpStatusCode.
+         * <p>The HTTP status code returned.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>200</p>
          */
         public Builder httpStatusCode(Integer httpStatusCode) {
             this.httpStatusCode = httpStatusCode;
@@ -195,7 +201,7 @@ public class DescribeHistoryTasksResponseBody extends TeaModel {
         }
 
         /**
-         * Items.
+         * <p>The task list.</p>
          */
         public Builder items(java.util.List<Items> items) {
             this.items = items;
@@ -203,7 +209,14 @@ public class DescribeHistoryTasksResponseBody extends TeaModel {
         }
 
         /**
-         * Message.
+         * <p>The returned message. null</p>
+         * <ul>
+         * <li>null****</li>
+         * <li>null</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>Success</p>
          */
         public Builder message(String message) {
             this.message = message;
@@ -211,7 +224,10 @@ public class DescribeHistoryTasksResponseBody extends TeaModel {
         }
 
         /**
-         * PageNumber.
+         * <p>The page number of the returned page.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder pageNumber(Integer pageNumber) {
             this.pageNumber = pageNumber;
@@ -219,7 +235,10 @@ public class DescribeHistoryTasksResponseBody extends TeaModel {
         }
 
         /**
-         * PageSize.
+         * <p>The number of entries returned per page.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10</p>
          */
         public Builder pageSize(Integer pageSize) {
             this.pageSize = pageSize;
@@ -227,7 +246,10 @@ public class DescribeHistoryTasksResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * <p>Request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>E51713A3-BB45-5616-AB15-170B704F8F01</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -235,7 +257,14 @@ public class DescribeHistoryTasksResponseBody extends TeaModel {
         }
 
         /**
-         * Success.
+         * <p>Indicates whether the request was successful. Valid values:</p>
+         * <ul>
+         * <li><strong>true</strong></li>
+         * <li><strong>false</strong></li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder success(Boolean success) {
             this.success = success;
@@ -243,7 +272,10 @@ public class DescribeHistoryTasksResponseBody extends TeaModel {
         }
 
         /**
-         * TotalCount.
+         * <p>Total record count.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>100</p>
          */
         public Builder totalCount(Integer totalCount) {
             this.totalCount = totalCount;
@@ -374,7 +406,10 @@ public class DescribeHistoryTasksResponseBody extends TeaModel {
             } 
 
             /**
-             * AuthAction.
+             * <p>null</p>
+             * 
+             * <strong>example:</strong>
+             * <p>test</p>
              */
             public Builder authAction(String authAction) {
                 this.authAction = authAction;
@@ -382,7 +417,10 @@ public class DescribeHistoryTasksResponseBody extends TeaModel {
             }
 
             /**
-             * AuthPrincipalDisplayName.
+             * <p>null</p>
+             * 
+             * <strong>example:</strong>
+             * <p>test</p>
              */
             public Builder authPrincipalDisplayName(String authPrincipalDisplayName) {
                 this.authPrincipalDisplayName = authPrincipalDisplayName;
@@ -390,7 +428,10 @@ public class DescribeHistoryTasksResponseBody extends TeaModel {
             }
 
             /**
-             * AuthPrincipalOwnerId.
+             * <p>null</p>
+             * 
+             * <strong>example:</strong>
+             * <p>141345906006****</p>
              */
             public Builder authPrincipalOwnerId(String authPrincipalOwnerId) {
                 this.authPrincipalOwnerId = authPrincipalOwnerId;
@@ -398,7 +439,10 @@ public class DescribeHistoryTasksResponseBody extends TeaModel {
             }
 
             /**
-             * AuthPrincipalType.
+             * <p>null</p>
+             * 
+             * <strong>example:</strong>
+             * <p>test</p>
              */
             public Builder authPrincipalType(String authPrincipalType) {
                 this.authPrincipalType = authPrincipalType;
@@ -406,7 +450,10 @@ public class DescribeHistoryTasksResponseBody extends TeaModel {
             }
 
             /**
-             * EncodedDiagnosticMessage.
+             * <p>null</p>
+             * 
+             * <strong>example:</strong>
+             * <p>AQFmy+hZZsvoWTQ2NTJFQUFBLUIyNjktMzk5NS05MEZCLUMxMzgwNDUwMDA2Ng==</p>
              */
             public Builder encodedDiagnosticMessage(String encodedDiagnosticMessage) {
                 this.encodedDiagnosticMessage = encodedDiagnosticMessage;
@@ -414,7 +461,14 @@ public class DescribeHistoryTasksResponseBody extends TeaModel {
             }
 
             /**
-             * NoPermissionType.
+             * <p>null</p>
+             * <ul>
+             * <li><strong>null</strong></li>
+             * <li><strong>null</strong></li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>ImplicitDeny</p>
              */
             public Builder noPermissionType(String noPermissionType) {
                 this.noPermissionType = noPermissionType;
@@ -422,7 +476,17 @@ public class DescribeHistoryTasksResponseBody extends TeaModel {
             }
 
             /**
-             * PolicyType.
+             * <p>null</p>
+             * <ul>
+             * <li><strong>null</strong></li>
+             * <li><strong>null</strong></li>
+             * <li><strong>null</strong></li>
+             * <li><strong>null</strong></li>
+             * <li><strong>null</strong></li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>ControlPolicy</p>
              */
             public Builder policyType(String policyType) {
                 this.policyType = policyType;
@@ -723,7 +787,10 @@ public class DescribeHistoryTasksResponseBody extends TeaModel {
             } 
 
             /**
-             * ActionInfo.
+             * <p>Allowed operation information. When used specifically, matches operation Action based on currentStepName+status in this information. If no Action is matched, represents task current status does not support operations.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>{&quot;steps&quot;:[{&quot;action_info&quot;:{&quot;Waiting&quot;:[&quot;modifySwitchTime&quot;]},&quot;step_name&quot;:&quot;exec_task&quot;}]}</p>
              */
             public Builder actionInfo(String actionInfo) {
                 this.actionInfo = actionInfo;
@@ -731,7 +798,10 @@ public class DescribeHistoryTasksResponseBody extends TeaModel {
             }
 
             /**
-             * CallerSource.
+             * <p>null</p>
+             * 
+             * <strong>example:</strong>
+             * <p>141345906006****</p>
              */
             public Builder callerSource(String callerSource) {
                 this.callerSource = callerSource;
@@ -739,7 +809,14 @@ public class DescribeHistoryTasksResponseBody extends TeaModel {
             }
 
             /**
-             * CallerUid.
+             * <p>null</p>
+             * <ul>
+             * <li><strong>null</strong></li>
+             * <li><strong>null</strong></li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>User</p>
              */
             public Builder callerUid(String callerUid) {
                 this.callerUid = callerUid;
@@ -747,7 +824,10 @@ public class DescribeHistoryTasksResponseBody extends TeaModel {
             }
 
             /**
-             * CurrentStepName.
+             * <p>Current executing step name. If empty, represents task has not started.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>exec_task</p>
              */
             public Builder currentStepName(String currentStepName) {
                 this.currentStepName = currentStepName;
@@ -755,7 +835,10 @@ public class DescribeHistoryTasksResponseBody extends TeaModel {
             }
 
             /**
-             * DbType.
+             * <p>The database engine type.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>analyticdb</p>
              */
             public Builder dbType(String dbType) {
                 this.dbType = dbType;
@@ -763,7 +846,10 @@ public class DescribeHistoryTasksResponseBody extends TeaModel {
             }
 
             /**
-             * EndTime.
+             * <p>Task end time.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2022-02-03T12:06:17Z</p>
              */
             public Builder endTime(String endTime) {
                 this.endTime = endTime;
@@ -771,7 +857,10 @@ public class DescribeHistoryTasksResponseBody extends TeaModel {
             }
 
             /**
-             * InstanceId.
+             * <p>Cluster ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>amv-********</p>
              */
             public Builder instanceId(String instanceId) {
                 this.instanceId = instanceId;
@@ -779,7 +868,10 @@ public class DescribeHistoryTasksResponseBody extends TeaModel {
             }
 
             /**
-             * InstanceName.
+             * <p>The instance ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>test</p>
              */
             public Builder instanceName(String instanceName) {
                 this.instanceName = instanceName;
@@ -787,7 +879,10 @@ public class DescribeHistoryTasksResponseBody extends TeaModel {
             }
 
             /**
-             * InstanceType.
+             * <p>Instance type.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Instance</p>
              */
             public Builder instanceType(String instanceType) {
                 this.instanceType = instanceType;
@@ -795,7 +890,10 @@ public class DescribeHistoryTasksResponseBody extends TeaModel {
             }
 
             /**
-             * Product.
+             * <p>The service name.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>ads</p>
              */
             public Builder product(String product) {
                 this.product = product;
@@ -803,7 +901,10 @@ public class DescribeHistoryTasksResponseBody extends TeaModel {
             }
 
             /**
-             * Progress.
+             * <p>Indicates the task progress.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>79.0</p>
              */
             public Builder progress(Float progress) {
                 this.progress = progress;
@@ -811,7 +912,10 @@ public class DescribeHistoryTasksResponseBody extends TeaModel {
             }
 
             /**
-             * ReasonCode.
+             * <p>The reason why the current task was initiated.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>test</p>
              */
             public Builder reasonCode(String reasonCode) {
                 this.reasonCode = reasonCode;
@@ -819,7 +923,10 @@ public class DescribeHistoryTasksResponseBody extends TeaModel {
             }
 
             /**
-             * RegionId.
+             * <p>The region ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>cn-hangzhou</p>
              */
             public Builder regionId(String regionId) {
                 this.regionId = regionId;
@@ -827,7 +934,10 @@ public class DescribeHistoryTasksResponseBody extends TeaModel {
             }
 
             /**
-             * RemainTime.
+             * <p>Estimated remaining execution time, in seconds.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1000</p>
              */
             public Builder remainTime(Integer remainTime) {
                 this.remainTime = remainTime;
@@ -835,7 +945,10 @@ public class DescribeHistoryTasksResponseBody extends TeaModel {
             }
 
             /**
-             * StartTime.
+             * <p>Task start time.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2022-02-03T11:31:03Z</p>
              */
             public Builder startTime(String startTime) {
                 this.startTime = startTime;
@@ -843,7 +956,19 @@ public class DescribeHistoryTasksResponseBody extends TeaModel {
             }
 
             /**
-             * Status.
+             * <p>Task status. Valid values:</p>
+             * <ul>
+             * <li><strong>Scheduled</strong></li>
+             * <li><strong>Running</strong></li>
+             * <li><strong>Succeed</strong></li>
+             * <li><strong>Failed</strong>: The task failed.</li>
+             * <li><strong>Cancelling</strong></li>
+             * <li><strong>Canceled</strong></li>
+             * <li><strong>Waiting</strong></li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>Running</p>
              */
             public Builder status(String status) {
                 this.status = status;
@@ -851,7 +976,10 @@ public class DescribeHistoryTasksResponseBody extends TeaModel {
             }
 
             /**
-             * TaskDetail.
+             * <p>The task details.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>{&quot;callerUid&quot;:&quot;test&quot;}</p>
              */
             public Builder taskDetail(String taskDetail) {
                 this.taskDetail = taskDetail;
@@ -859,7 +987,10 @@ public class DescribeHistoryTasksResponseBody extends TeaModel {
             }
 
             /**
-             * TaskId.
+             * <p>Task ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>t-83br18hloy3faf****</p>
              */
             public Builder taskId(String taskId) {
                 this.taskId = taskId;
@@ -867,7 +998,10 @@ public class DescribeHistoryTasksResponseBody extends TeaModel {
             }
 
             /**
-             * TaskType.
+             * <p>Task type.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>autotest_dispatch_cases</p>
              */
             public Builder taskType(String taskType) {
                 this.taskType = taskType;
@@ -875,7 +1009,10 @@ public class DescribeHistoryTasksResponseBody extends TeaModel {
             }
 
             /**
-             * Uid.
+             * <p>null</p>
+             * 
+             * <strong>example:</strong>
+             * <p>141345906006****</p>
              */
             public Builder uid(String uid) {
                 this.uid = uid;

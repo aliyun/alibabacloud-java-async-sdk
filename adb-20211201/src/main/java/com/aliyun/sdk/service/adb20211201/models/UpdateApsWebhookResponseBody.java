@@ -132,7 +132,10 @@ public class UpdateApsWebhookResponseBody extends TeaModel {
         } 
 
         /**
-         * Code.
+         * <p>The code of the returned result.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>200</p>
          */
         public Builder code(String code) {
             this.code = code;
@@ -140,7 +143,10 @@ public class UpdateApsWebhookResponseBody extends TeaModel {
         }
 
         /**
-         * DBClusterId.
+         * <p>The cluster ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>amv-bp11q28kvl688****</p>
          */
         public Builder DBClusterId(String DBClusterId) {
             this.DBClusterId = DBClusterId;
@@ -148,7 +154,12 @@ public class UpdateApsWebhookResponseBody extends TeaModel {
         }
 
         /**
-         * Data.
+         * <p>The returned data.</p>
+         * 
+         * <strong>example:</strong>
+         * <ul>
+         * <li></li>
+         * </ul>
          */
         public Builder data(String data) {
             this.data = data;
@@ -156,7 +167,10 @@ public class UpdateApsWebhookResponseBody extends TeaModel {
         }
 
         /**
-         * HttpStatusCode.
+         * <p>The HTTP status code.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>200</p>
          */
         public Builder httpStatusCode(Integer httpStatusCode) {
             this.httpStatusCode = httpStatusCode;
@@ -164,7 +178,7 @@ public class UpdateApsWebhookResponseBody extends TeaModel {
         }
 
         /**
-         * Message.
+         * <p>The returned message.</p>
          */
         public Builder message(String message) {
             this.message = message;
@@ -172,7 +186,10 @@ public class UpdateApsWebhookResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * <p>The unique ID of the request.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>exampleRequestId</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -180,7 +197,10 @@ public class UpdateApsWebhookResponseBody extends TeaModel {
         }
 
         /**
-         * Success.
+         * <p>Indicates whether the request was successful.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder success(Boolean success) {
             this.success = success;

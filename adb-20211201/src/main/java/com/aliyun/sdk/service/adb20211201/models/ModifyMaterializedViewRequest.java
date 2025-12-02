@@ -230,6 +230,7 @@ public class ModifyMaterializedViewRequest extends Request {
         } 
 
         /**
+         * <p>The cluster ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -242,6 +243,7 @@ public class ModifyMaterializedViewRequest extends Request {
         }
 
         /**
+         * <p>The name of the database where the materialized view resides.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -254,7 +256,14 @@ public class ModifyMaterializedViewRequest extends Request {
         }
 
         /**
-         * EnableDelayAlert.
+         * <p>Enable the refresh delay alert. Valid values:</p>
+         * <ul>
+         * <li>true: Enables alert.</li>
+         * <li>false: Disables alert.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>false</p>
          */
         public Builder enableDelayAlert(Boolean enableDelayAlert) {
             this.putQueryParameter("EnableDelayAlert", enableDelayAlert);
@@ -263,7 +272,14 @@ public class ModifyMaterializedViewRequest extends Request {
         }
 
         /**
-         * EnableFailureAlert.
+         * <p>Specifies whether to send alerts when the refresh task fails. Valid values:</p>
+         * <ul>
+         * <li>true: Send alerts.</li>
+         * <li>false: Alerts disabled.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>false</p>
          */
         public Builder enableFailureAlert(Boolean enableFailureAlert) {
             this.putQueryParameter("EnableFailureAlert", enableFailureAlert);
@@ -272,7 +288,10 @@ public class ModifyMaterializedViewRequest extends Request {
         }
 
         /**
-         * GroupName.
+         * <p>The name of the resource group to which the materialized view is bound.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>res_1</p>
          */
         public Builder groupName(String groupName) {
             this.putQueryParameter("GroupName", groupName);
@@ -281,7 +300,10 @@ public class ModifyMaterializedViewRequest extends Request {
         }
 
         /**
-         * LatencyTolerance.
+         * <p>Refresh delay tolerance (in minutes).</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2</p>
          */
         public Builder latencyTolerance(Integer latencyTolerance) {
             this.putQueryParameter("LatencyTolerance", latencyTolerance);
@@ -308,7 +330,14 @@ public class ModifyMaterializedViewRequest extends Request {
         }
 
         /**
-         * QueryWrite.
+         * <p>Specifies whether to enable query rewrite. Valid values:</p>
+         * <ul>
+         * <li>true: Enables query rewrite.</li>
+         * <li>false: Disables query rewrite.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder queryWrite(Boolean queryWrite) {
             this.putQueryParameter("QueryWrite", queryWrite);
@@ -317,7 +346,10 @@ public class ModifyMaterializedViewRequest extends Request {
         }
 
         /**
-         * RegionId.
+         * <p>The region ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-beijing</p>
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);
@@ -344,6 +376,7 @@ public class ModifyMaterializedViewRequest extends Request {
         }
 
         /**
+         * <p>The name of the materialized view.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>

@@ -259,6 +259,7 @@ public class CreateMaterializedViewRecommendRequest extends Request {
         } 
 
         /**
+         * <p>The cluster ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -271,7 +272,10 @@ public class CreateMaterializedViewRecommendRequest extends Request {
         }
 
         /**
-         * Description.
+         * <p>The description of the recommendation task.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>task desc</p>
          */
         public Builder description(String description) {
             this.putQueryParameter("Description", description);
@@ -280,7 +284,10 @@ public class CreateMaterializedViewRecommendRequest extends Request {
         }
 
         /**
-         * MinRewriteQueryCount.
+         * <p>Pattern匹配的最少慢查询个数</p>
+         * 
+         * <strong>example:</strong>
+         * <p>3</p>
          */
         public Builder minRewriteQueryCount(Integer minRewriteQueryCount) {
             this.putQueryParameter("MinRewriteQueryCount", minRewriteQueryCount);
@@ -289,7 +296,10 @@ public class CreateMaterializedViewRecommendRequest extends Request {
         }
 
         /**
-         * MinRewriteQueryPattern.
+         * <p>最小可加速的Pattern数量</p>
+         * 
+         * <strong>example:</strong>
+         * <p>5</p>
          */
         public Builder minRewriteQueryPattern(Integer minRewriteQueryPattern) {
             this.putQueryParameter("MinRewriteQueryPattern", minRewriteQueryPattern);
@@ -316,7 +326,10 @@ public class CreateMaterializedViewRecommendRequest extends Request {
         }
 
         /**
-         * RegionId.
+         * <p>The region ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-hangzhou</p>
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);
@@ -343,7 +356,10 @@ public class CreateMaterializedViewRecommendRequest extends Request {
         }
 
         /**
-         * ScanQueriesRange.
+         * <p>The time range for scanning data. Unit: days. Default value: 3.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>3</p>
          */
         public Builder scanQueriesRange(Integer scanQueriesRange) {
             this.putQueryParameter("ScanQueriesRange", scanQueriesRange);
@@ -352,7 +368,20 @@ public class CreateMaterializedViewRecommendRequest extends Request {
         }
 
         /**
-         * SchedulingDay.
+         * <p>This parameter is valid only when SchedulingPolicy is set to weekly. Valid values:</p>
+         * <ul>
+         * <li>Monday</li>
+         * <li>Tuesday</li>
+         * <li>Wednesday</li>
+         * <li>Thursday</li>
+         * <li>Friday</li>
+         * <li>Saturday</li>
+         * <li>Sunday</li>
+         * </ul>
+         * <p>Separate multiple days with commas (,).</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Monday;Wednesday</p>
          */
         public Builder schedulingDay(String schedulingDay) {
             this.putQueryParameter("SchedulingDay", schedulingDay);
@@ -361,6 +390,9 @@ public class CreateMaterializedViewRecommendRequest extends Request {
         }
 
         /**
+         * <p>The scheduling policy of the recommendation task. Valid values:</p>
+         * <p>daily</p>
+         * <p>weekly</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -373,7 +405,10 @@ public class CreateMaterializedViewRecommendRequest extends Request {
         }
 
         /**
-         * SlowQueryThreshold.
+         * <p>慢查询阈值</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2</p>
          */
         public Builder slowQueryThreshold(Integer slowQueryThreshold) {
             this.putQueryParameter("SlowQueryThreshold", slowQueryThreshold);
@@ -382,6 +417,7 @@ public class CreateMaterializedViewRecommendRequest extends Request {
         }
 
         /**
+         * <p>The execution time of the recommendation task. Specify the time in the HH:MM:SS format.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -394,6 +430,7 @@ public class CreateMaterializedViewRecommendRequest extends Request {
         }
 
         /**
+         * <p>The name of the recommendation task.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>

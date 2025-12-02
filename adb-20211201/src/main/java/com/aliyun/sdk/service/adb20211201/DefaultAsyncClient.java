@@ -461,6 +461,9 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
+     * <b>description</b> :
+     * <p><em>Before you call this operation, make sure that you fully understand the billing method and <a href="https://www.aliyun.com/price/product#/ads/detail/ads_pre">pricing</a> of AnalyticDB for MySQL.</em>* Temporary backups are the same as regular backups in terms of price and retention period of backup sets.</p>
+     * 
      * @param request the request parameters of CreateBackup  CreateBackupRequest
      * @return CreateBackupResponse
      */
@@ -715,6 +718,9 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
+     * <b>description</b> :
+     * <p>This API allows users to delete an existing webhook configuration by providing <code>RegionId</code>, <code>DBClusterId</code>, and <code>WebhookId</code>. Make sure that the provided parameter values are accurate to avoid deleting important settings by mistake.</p>
+     * 
      * @param request the request parameters of DeleteApsWebhook  DeleteApsWebhookRequest
      * @return DeleteApsWebhookResponse
      */
@@ -840,6 +846,24 @@ public final class DefaultAsyncClient implements AsyncClient {
             return this.handler.execute(params);
         } catch (Exception e) {
             CompletableFuture<DeleteLakeStorageResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
+     * @param request the request parameters of DeleteMaterializedViewRecommend  DeleteMaterializedViewRecommendRequest
+     * @return DeleteMaterializedViewRecommendResponse
+     */
+    @Override
+    public CompletableFuture<DeleteMaterializedViewRecommendResponse> deleteMaterializedViewRecommend(DeleteMaterializedViewRecommendRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RPC).setAction("DeleteMaterializedViewRecommend").setMethod(HttpMethod.POST).setPathRegex("/").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(DeleteMaterializedViewRecommendResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<DeleteMaterializedViewRecommendResponse> future = new CompletableFuture<>();
             future.completeExceptionally(e);
             return future;
         }
@@ -2056,6 +2080,9 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
+     * <b>description</b> :
+     * <p>Only supports viewing tasks within the last 30 days.</p>
+     * 
      * @param request the request parameters of DescribeHistoryTasks  DescribeHistoryTasksRequest
      * @return DescribeHistoryTasksResponse
      */
@@ -2228,6 +2255,63 @@ public final class DefaultAsyncClient implements AsyncClient {
             return this.handler.execute(params);
         } catch (Exception e) {
             CompletableFuture<DescribeLakeCacheSizeResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
+     * <b>description</b> :
+     * <p>For information about the endpoints of AnalyticDB for MySQL, see <a href="https://help.aliyun.com/document_detail/612373.html">Endpoints</a>.</p>
+     * 
+     * @param request the request parameters of DescribeMVRecommendResults  DescribeMVRecommendResultsRequest
+     * @return DescribeMVRecommendResultsResponse
+     */
+    @Override
+    public CompletableFuture<DescribeMVRecommendResultsResponse> describeMVRecommendResults(DescribeMVRecommendResultsRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RPC).setAction("DescribeMVRecommendResults").setMethod(HttpMethod.POST).setPathRegex("/").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(DescribeMVRecommendResultsResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<DescribeMVRecommendResultsResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
+     * @param request the request parameters of DescribeMvRecommendSubTasks  DescribeMvRecommendSubTasksRequest
+     * @return DescribeMvRecommendSubTasksResponse
+     */
+    @Override
+    public CompletableFuture<DescribeMvRecommendSubTasksResponse> describeMvRecommendSubTasks(DescribeMvRecommendSubTasksRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RPC).setAction("DescribeMvRecommendSubTasks").setMethod(HttpMethod.POST).setPathRegex("/").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(DescribeMvRecommendSubTasksResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<DescribeMvRecommendSubTasksResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
+     * @param request the request parameters of DescribeMvRecommendTasks  DescribeMvRecommendTasksRequest
+     * @return DescribeMvRecommendTasksResponse
+     */
+    @Override
+    public CompletableFuture<DescribeMvRecommendTasksResponse> describeMvRecommendTasks(DescribeMvRecommendTasksRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RPC).setAction("DescribeMvRecommendTasks").setMethod(HttpMethod.POST).setPathRegex("/").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(DescribeMvRecommendTasksResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<DescribeMvRecommendTasksResponse> future = new CompletableFuture<>();
             future.completeExceptionally(e);
             return future;
         }
@@ -2495,6 +2579,12 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
+     * <b>description</b> :
+     * <p>SQL audit logs can be queried only when SQL audit is enabled. Only SQL audit logs within the last 30 days can be queried. If SQL auditing is turned off midway, when it is re-enabled, you can only query the SQL audit logs generated after it was turned back on.</p>
+     * <blockquote>
+     * <p> You can query only SQL audit logs that are executed by using Spark Interactive Resource Group.</p>
+     * </blockquote>
+     * 
      * @param request the request parameters of DescribeSparkAuditLogRecords  DescribeSparkAuditLogRecordsRequest
      * @return DescribeSparkAuditLogRecordsResponse
      */
@@ -2783,6 +2873,24 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
+     * @param request the request parameters of DescribeViewJobs  DescribeViewJobsRequest
+     * @return DescribeViewJobsResponse
+     */
+    @Override
+    public CompletableFuture<DescribeViewJobsResponse> describeViewJobs(DescribeViewJobsRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RPC).setAction("DescribeViewJobs").setMethod(HttpMethod.POST).setPathRegex("/").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(DescribeViewJobsResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<DescribeViewJobsResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
      * @param request the request parameters of DescribeWorkerDetection  DescribeWorkerDetectionRequest
      * @return DescribeWorkerDetectionResponse
      */
@@ -2998,6 +3106,9 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
+     * <b>description</b> :
+     * <p>The API diagnosis report contains whether the current user has all permissions required by the AnalyticDB for Spark related features. The scope of the permissions may exceed the minimum requirements of the business. The diagnostic report of the current API is used to quickly initialize the environment of AnalyticDB for Spark. If fine-grained permission configuration is needed, see <a href="https://www.alibabacloud.com/help/zh/analyticdb/analyticdb-for-mysql/user-guide/create-the-aliyunadbsparkprocessingdatarole-role-for-a-ram-user-and-grant-permissions-to-the-role?spm=a2c63.p38356.help-menu-92664.d_2_5_0.48362a487dMzm9#section-y2z-ucd-1ko">Configure fine-grained permissions in AnalyDB for Spark.</a></p>
+     * 
      * @param request the request parameters of GetADBSparkNecessaryRAMPermissions  GetADBSparkNecessaryRAMPermissionsRequest
      * @return GetADBSparkNecessaryRAMPermissionsResponse
      */
@@ -3769,6 +3880,10 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
+     * <b>description</b> :
+     * <p>This API allows you to obtain a list of configured webhooks based on <code>RegionId</code>, <code>DBClusterId</code>, and optional <code>JobType</code>. The <code>JobType</code> parameter specifies the task type, such as SLS/OSS export task. If the parameter is provided, webhooks related to the task type are returned. If the parameter is not provided, all types of webhooks are returned.
+     * Note: Make sure that the <code>RegionId</code> and <code>DBClusterId</code> you provided are correct. Otherwise, the webhook information may not be obtained correctly.</p>
+     * 
      * @param request the request parameters of ListApsWebhook  ListApsWebhookRequest
      * @return ListApsWebhookResponse
      */
@@ -4483,6 +4598,9 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
+     * <b>description</b> :
+     * <p>For information about the endpoints of AnalyticDB for MySQL, see <a href="https://help.aliyun.com/document_detail/612373.html">Endpoints</a>.</p>
+     * 
      * @param request the request parameters of ModifySqlTemplatePosition  ModifySqlTemplatePositionRequest
      * @return ModifySqlTemplatePositionResponse
      */

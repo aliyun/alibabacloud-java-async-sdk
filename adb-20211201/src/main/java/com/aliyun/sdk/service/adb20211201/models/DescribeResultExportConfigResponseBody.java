@@ -119,7 +119,10 @@ public class DescribeResultExportConfigResponseBody extends TeaModel {
         } 
 
         /**
-         * Code.
+         * <p>API status or POP error code.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>InvalidInput</p>
          */
         public Builder code(String code) {
             this.code = code;
@@ -127,7 +130,7 @@ public class DescribeResultExportConfigResponseBody extends TeaModel {
         }
 
         /**
-         * Data.
+         * <p>The data returned.</p>
          */
         public Builder data(Data data) {
             this.data = data;
@@ -135,7 +138,10 @@ public class DescribeResultExportConfigResponseBody extends TeaModel {
         }
 
         /**
-         * HttpStatusCode.
+         * <p>The HTTP response status code. A value of 200 indicates that the request was successful.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>200</p>
          */
         public Builder httpStatusCode(Integer httpStatusCode) {
             this.httpStatusCode = httpStatusCode;
@@ -143,7 +149,14 @@ public class DescribeResultExportConfigResponseBody extends TeaModel {
         }
 
         /**
-         * Message.
+         * <p>The returned message. Valid values:</p>
+         * <ul>
+         * <li>The request succeeded, and the server returns <strong>OK</strong>.</li>
+         * <li>The request failed, and the server returns an error message.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>OK</p>
          */
         public Builder message(String message) {
             this.message = message;
@@ -151,7 +164,10 @@ public class DescribeResultExportConfigResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * <p>Request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1AD222E9-E606-4A42-BF6D-8A4442913CEF</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -159,7 +175,14 @@ public class DescribeResultExportConfigResponseBody extends TeaModel {
         }
 
         /**
-         * Success.
+         * <p>Indicates whether the call was successful. Valid values: Valid values:</p>
+         * <ul>
+         * <li><strong>True: Succeeded.</strong></li>
+         * <li>**False: Failed.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder success(Boolean success) {
             this.success = success;
@@ -238,7 +261,10 @@ public class DescribeResultExportConfigResponseBody extends TeaModel {
             } 
 
             /**
-             * ExportBasePath.
+             * <p>The path of the OSS bucket to which the result sets are exported.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>oss://testBucketName/data_result</p>
              */
             public Builder exportBasePath(String exportBasePath) {
                 this.exportBasePath = exportBasePath;
@@ -246,7 +272,10 @@ public class DescribeResultExportConfigResponseBody extends TeaModel {
             }
 
             /**
-             * ResourceGroup.
+             * <p>The name of the resource group that runs the export SQL.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>aps</p>
              */
             public Builder resourceGroup(String resourceGroup) {
                 this.resourceGroup = resourceGroup;
@@ -254,7 +283,10 @@ public class DescribeResultExportConfigResponseBody extends TeaModel {
             }
 
             /**
-             * ResultFileTtl.
+             * <p>The expiration period (in days) for the OSS file. The returned value is between 1 and 30 days (inclusive).</p>
+             * 
+             * <strong>example:</strong>
+             * <p>10</p>
              */
             public Builder resultFileTtl(Integer resultFileTtl) {
                 this.resultFileTtl = resultFileTtl;
@@ -334,7 +366,10 @@ public class DescribeResultExportConfigResponseBody extends TeaModel {
             } 
 
             /**
-             * LogstoreTtl.
+             * <p>The expiration period (in days) for the temporary Logstore automatically created during result set export. The Logstore is automatically deleted after expiration. The returned value is between 1 and 30 days (inclusive).</p>
+             * 
+             * <strong>example:</strong>
+             * <p>10</p>
              */
             public Builder logstoreTtl(Integer logstoreTtl) {
                 this.logstoreTtl = logstoreTtl;
@@ -342,7 +377,10 @@ public class DescribeResultExportConfigResponseBody extends TeaModel {
             }
 
             /**
-             * ResourceGroup.
+             * <p>The name of the resource group that runs the export SQL.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>aps</p>
              */
             public Builder resourceGroup(String resourceGroup) {
                 this.resourceGroup = resourceGroup;
@@ -350,7 +388,10 @@ public class DescribeResultExportConfigResponseBody extends TeaModel {
             }
 
             /**
-             * SlsProject.
+             * <p>The name of the SLS project.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>test-project</p>
              */
             public Builder slsProject(String slsProject) {
                 this.slsProject = slsProject;
@@ -430,7 +471,14 @@ public class DescribeResultExportConfigResponseBody extends TeaModel {
             } 
 
             /**
-             * ExportType.
+             * <p>The export type. Valid values:</p>
+             * <ul>
+             * <li>SLS: Indicates that the export destination is SLS.</li>
+             * <li>OSS: Indicates that the export destination is OSS.</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>OSS</p>
              */
             public Builder exportType(String exportType) {
                 this.exportType = exportType;
@@ -438,7 +486,7 @@ public class DescribeResultExportConfigResponseBody extends TeaModel {
             }
 
             /**
-             * OssInfo.
+             * <p>The configured OSS export settings, returned when the export destination is OSS.</p>
              */
             public Builder ossInfo(OssInfo ossInfo) {
                 this.ossInfo = ossInfo;
@@ -446,7 +494,7 @@ public class DescribeResultExportConfigResponseBody extends TeaModel {
             }
 
             /**
-             * SlsInfo.
+             * <p>The configured SLS export settings, returned when the export destination is SLS.</p>
              */
             public Builder slsInfo(SlsInfo slsInfo) {
                 this.slsInfo = slsInfo;

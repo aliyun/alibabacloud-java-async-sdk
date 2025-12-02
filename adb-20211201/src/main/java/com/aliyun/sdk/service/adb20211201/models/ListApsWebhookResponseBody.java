@@ -119,7 +119,10 @@ public class ListApsWebhookResponseBody extends TeaModel {
         } 
 
         /**
-         * Code.
+         * <p>API status or POP error code.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>200</p>
          */
         public Builder code(String code) {
             this.code = code;
@@ -127,7 +130,10 @@ public class ListApsWebhookResponseBody extends TeaModel {
         }
 
         /**
-         * HttpStatusCode.
+         * <p>The HTTP status code.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>200</p>
          */
         public Builder httpStatusCode(Integer httpStatusCode) {
             this.httpStatusCode = httpStatusCode;
@@ -135,7 +141,10 @@ public class ListApsWebhookResponseBody extends TeaModel {
         }
 
         /**
-         * Message.
+         * <p>The returned message.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>OK</p>
          */
         public Builder message(String message) {
             this.message = message;
@@ -143,7 +152,10 @@ public class ListApsWebhookResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * <p>The unique ID of the request.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>exampleRequestId</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -151,7 +163,10 @@ public class ListApsWebhookResponseBody extends TeaModel {
         }
 
         /**
-         * Success.
+         * <p>Indicates whether the request was successful.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>True</p>
          */
         public Builder success(Boolean success) {
             this.success = success;
@@ -159,7 +174,7 @@ public class ListApsWebhookResponseBody extends TeaModel {
         }
 
         /**
-         * Webhook.
+         * <p>The array of webhooks.</p>
          */
         public Builder webhook(java.util.List<Webhook> webhook) {
             this.webhook = webhook;
@@ -264,7 +279,10 @@ public class ListApsWebhookResponseBody extends TeaModel {
             } 
 
             /**
-             * Key.
+             * <p>Signing key</p>
+             * 
+             * <strong>example:</strong>
+             * <p>your_secret_key</p>
              */
             public Builder key(String key) {
                 this.key = key;
@@ -272,7 +290,10 @@ public class ListApsWebhookResponseBody extends TeaModel {
             }
 
             /**
-             * Name.
+             * <p>The name of the webhook.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>webhook_name</p>
              */
             public Builder name(String name) {
                 this.name = name;
@@ -280,7 +301,10 @@ public class ListApsWebhookResponseBody extends TeaModel {
             }
 
             /**
-             * Url.
+             * <p>The request URL.</p>
+             * 
+             * <strong>example:</strong>
+             * <p><a href="https://example.com/webhook">https://example.com/webhook</a></p>
              */
             public Builder url(String url) {
                 this.url = url;
@@ -288,7 +312,10 @@ public class ListApsWebhookResponseBody extends TeaModel {
             }
 
             /**
-             * WebhookId.
+             * <p>The ID of the webhook that you want to delete.</p>
+             * 
+             * <strong>example:</strong>
+             * <p><strong>35</strong>*</p>
              */
             public Builder webhookId(String webhookId) {
                 this.webhookId = webhookId;
@@ -296,7 +323,10 @@ public class ListApsWebhookResponseBody extends TeaModel {
             }
 
             /**
-             * WebhookType.
+             * <p>Webhook type.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>dingtalk</p>
              */
             public Builder webhookType(String webhookType) {
                 this.webhookType = webhookType;

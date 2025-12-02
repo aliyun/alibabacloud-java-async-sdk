@@ -103,7 +103,10 @@ public class ModifyDBClusterSSLRequest extends Request {
         } 
 
         /**
-         * ConnectionString.
+         * <p>The private or public endpoint for which the server certificate needs to be created or updated.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>amv-***********.ads.aliyuncs.com</p>
          */
         public Builder connectionString(String connectionString) {
             this.putQueryParameter("ConnectionString", connectionString);
@@ -112,6 +115,7 @@ public class ModifyDBClusterSSLRequest extends Request {
         }
 
         /**
+         * <p>The cluster ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -124,6 +128,11 @@ public class ModifyDBClusterSSLRequest extends Request {
         }
 
         /**
+         * <p>Specifies whether to enable SSL encryption. Valid values:</p>
+         * <ul>
+         * <li><strong>true</strong>: enabled</li>
+         * <li><strong>false</strong>: disabled</li>
+         * </ul>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -136,7 +145,10 @@ public class ModifyDBClusterSSLRequest extends Request {
         }
 
         /**
-         * RegionId.
+         * <p>The region ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-hangzhou</p>
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);

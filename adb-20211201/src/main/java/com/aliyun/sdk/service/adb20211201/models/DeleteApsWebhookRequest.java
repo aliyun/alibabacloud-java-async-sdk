@@ -90,6 +90,7 @@ public class DeleteApsWebhookRequest extends Request {
         } 
 
         /**
+         * <p>The cluster ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -102,6 +103,7 @@ public class DeleteApsWebhookRequest extends Request {
         }
 
         /**
+         * <p>The region ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -114,6 +116,7 @@ public class DeleteApsWebhookRequest extends Request {
         }
 
         /**
+         * <p>The ID of the webhook to be deleted.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>

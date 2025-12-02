@@ -167,6 +167,9 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<CreateApsWebhookResponse> createApsWebhook(CreateApsWebhookRequest request);
 
     /**
+     * <b>description</b> :
+     * <p><em>Before you call this operation, make sure that you fully understand the billing method and <a href="https://www.aliyun.com/price/product#/ads/detail/ads_pre">pricing</a> of AnalyticDB for MySQL.</em>* Temporary backups are the same as regular backups in terms of price and retention period of backup sets.</p>
+     * 
      * @param request the request parameters of CreateBackup  CreateBackupRequest
      * @return CreateBackupResponse
      */
@@ -277,6 +280,9 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<DeleteApsJobResponse> deleteApsJob(DeleteApsJobRequest request);
 
     /**
+     * <b>description</b> :
+     * <p>This API allows users to delete an existing webhook configuration by providing <code>RegionId</code>, <code>DBClusterId</code>, and <code>WebhookId</code>. Make sure that the provided parameter values are accurate to avoid deleting important settings by mistake.</p>
+     * 
      * @param request the request parameters of DeleteApsWebhook  DeleteApsWebhookRequest
      * @return DeleteApsWebhookResponse
      */
@@ -334,6 +340,12 @@ public interface AsyncClient extends SdkAutoCloseable {
      * @return DeleteLakeStorageResponse
      */
     CompletableFuture<DeleteLakeStorageResponse> deleteLakeStorage(DeleteLakeStorageRequest request);
+
+    /**
+     * @param request the request parameters of DeleteMaterializedViewRecommend  DeleteMaterializedViewRecommendRequest
+     * @return DeleteMaterializedViewRecommendResponse
+     */
+    CompletableFuture<DeleteMaterializedViewRecommendResponse> deleteMaterializedViewRecommend(DeleteMaterializedViewRecommendRequest request);
 
     /**
      * @param request the request parameters of DeletePerformanceView  DeletePerformanceViewRequest
@@ -838,6 +850,9 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<DescribeExecutorDetectionResponse> describeExecutorDetection(DescribeExecutorDetectionRequest request);
 
     /**
+     * <b>description</b> :
+     * <p>Only supports viewing tasks within the last 30 days.</p>
+     * 
      * @param request the request parameters of DescribeHistoryTasks  DescribeHistoryTasksRequest
      * @return DescribeHistoryTasksResponse
      */
@@ -898,6 +913,27 @@ public interface AsyncClient extends SdkAutoCloseable {
      * @return DescribeLakeCacheSizeResponse
      */
     CompletableFuture<DescribeLakeCacheSizeResponse> describeLakeCacheSize(DescribeLakeCacheSizeRequest request);
+
+    /**
+     * <b>description</b> :
+     * <p>For information about the endpoints of AnalyticDB for MySQL, see <a href="https://help.aliyun.com/document_detail/612373.html">Endpoints</a>.</p>
+     * 
+     * @param request the request parameters of DescribeMVRecommendResults  DescribeMVRecommendResultsRequest
+     * @return DescribeMVRecommendResultsResponse
+     */
+    CompletableFuture<DescribeMVRecommendResultsResponse> describeMVRecommendResults(DescribeMVRecommendResultsRequest request);
+
+    /**
+     * @param request the request parameters of DescribeMvRecommendSubTasks  DescribeMvRecommendSubTasksRequest
+     * @return DescribeMvRecommendSubTasksResponse
+     */
+    CompletableFuture<DescribeMvRecommendSubTasksResponse> describeMvRecommendSubTasks(DescribeMvRecommendSubTasksRequest request);
+
+    /**
+     * @param request the request parameters of DescribeMvRecommendTasks  DescribeMvRecommendTasksRequest
+     * @return DescribeMvRecommendTasksResponse
+     */
+    CompletableFuture<DescribeMvRecommendTasksResponse> describeMvRecommendTasks(DescribeMvRecommendTasksRequest request);
 
     /**
      * @param request the request parameters of DescribeOperatorPermission  DescribeOperatorPermissionRequest
@@ -1005,6 +1041,12 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<DescribeSparkAppTypeResponse> describeSparkAppType(DescribeSparkAppTypeRequest request);
 
     /**
+     * <b>description</b> :
+     * <p>SQL audit logs can be queried only when SQL audit is enabled. Only SQL audit logs within the last 30 days can be queried. If SQL auditing is turned off midway, when it is re-enabled, you can only query the SQL audit logs generated after it was turned back on.</p>
+     * <blockquote>
+     * <p> You can query only SQL audit logs that are executed by using Spark Interactive Resource Group.</p>
+     * </blockquote>
+     * 
      * @param request the request parameters of DescribeSparkAuditLogRecords  DescribeSparkAuditLogRecordsRequest
      * @return DescribeSparkAuditLogRecordsResponse
      */
@@ -1125,6 +1167,12 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<DescribeUserQuotaResponse> describeUserQuota(DescribeUserQuotaRequest request);
 
     /**
+     * @param request the request parameters of DescribeViewJobs  DescribeViewJobsRequest
+     * @return DescribeViewJobsResponse
+     */
+    CompletableFuture<DescribeViewJobsResponse> describeViewJobs(DescribeViewJobsRequest request);
+
+    /**
      * @param request the request parameters of DescribeWorkerDetection  DescribeWorkerDetectionRequest
      * @return DescribeWorkerDetectionResponse
      */
@@ -1208,6 +1256,9 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<ExistRunningSQLEngineResponse> existRunningSQLEngine(ExistRunningSQLEngineRequest request);
 
     /**
+     * <b>description</b> :
+     * <p>The API diagnosis report contains whether the current user has all permissions required by the AnalyticDB for Spark related features. The scope of the permissions may exceed the minimum requirements of the business. The diagnostic report of the current API is used to quickly initialize the environment of AnalyticDB for Spark. If fine-grained permission configuration is needed, see <a href="https://www.alibabacloud.com/help/zh/analyticdb/analyticdb-for-mysql/user-guide/create-the-aliyunadbsparkprocessingdatarole-role-for-a-ram-user-and-grant-permissions-to-the-role?spm=a2c63.p38356.help-menu-92664.d_2_5_0.48362a487dMzm9#section-y2z-ucd-1ko">Configure fine-grained permissions in AnalyDB for Spark.</a></p>
+     * 
      * @param request the request parameters of GetADBSparkNecessaryRAMPermissions  GetADBSparkNecessaryRAMPermissionsRequest
      * @return GetADBSparkNecessaryRAMPermissionsResponse
      */
@@ -1571,6 +1622,10 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<ListApsOptimizationTasksResponse> listApsOptimizationTasks(ListApsOptimizationTasksRequest request);
 
     /**
+     * <b>description</b> :
+     * <p>This API allows you to obtain a list of configured webhooks based on <code>RegionId</code>, <code>DBClusterId</code>, and optional <code>JobType</code>. The <code>JobType</code> parameter specifies the task type, such as SLS/OSS export task. If the parameter is provided, webhooks related to the task type are returned. If the parameter is not provided, all types of webhooks are returned.
+     * Note: Make sure that the <code>RegionId</code> and <code>DBClusterId</code> you provided are correct. Otherwise, the webhook information may not be obtained correctly.</p>
+     * 
      * @param request the request parameters of ListApsWebhook  ListApsWebhookRequest
      * @return ListApsWebhookResponse
      */
@@ -1865,6 +1920,9 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<ModifyPerformanceViewResponse> modifyPerformanceView(ModifyPerformanceViewRequest request);
 
     /**
+     * <b>description</b> :
+     * <p>For information about the endpoints of AnalyticDB for MySQL, see <a href="https://help.aliyun.com/document_detail/612373.html">Endpoints</a>.</p>
+     * 
      * @param request the request parameters of ModifySqlTemplatePosition  ModifySqlTemplatePositionRequest
      * @return ModifySqlTemplatePositionResponse
      */

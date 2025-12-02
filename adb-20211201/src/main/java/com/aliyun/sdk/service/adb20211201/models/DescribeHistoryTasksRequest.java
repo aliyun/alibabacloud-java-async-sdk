@@ -259,7 +259,10 @@ public class DescribeHistoryTasksRequest extends Request {
         } 
 
         /**
-         * FromExecTime.
+         * <p>Minimum task execution time. Used to filter tasks with execution time greater than this value, in seconds. Default 0, meaning no limit.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>0</p>
          */
         public Builder fromExecTime(Integer fromExecTime) {
             this.putQueryParameter("FromExecTime", fromExecTime);
@@ -268,6 +271,7 @@ public class DescribeHistoryTasksRequest extends Request {
         }
 
         /**
+         * <p>Start time of task start time, indicating querying tasks whose start time is after this time. Expressed according to ISO8601 standard, and must use UTC +0 time, format: yyyy-MM-ddTHH:mm:ssZ. Earliest supports 30 days ago, automatically converts to 30 days ago if more than 30 days from current time.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -280,7 +284,10 @@ public class DescribeHistoryTasksRequest extends Request {
         }
 
         /**
-         * InstanceId.
+         * <p>The cluster ID. Separate multiple cluster IDs with commas (,). Maximum 30 cluster IDs. If not filled, defaults to querying historical tasks of all clusters in that region.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>amv-********</p>
          */
         public Builder instanceId(String instanceId) {
             this.putQueryParameter("InstanceId", instanceId);
@@ -289,7 +296,10 @@ public class DescribeHistoryTasksRequest extends Request {
         }
 
         /**
-         * InstanceType.
+         * <p>The instance type. The value is fixed to Instance.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Instance</p>
          */
         public Builder instanceType(String instanceType) {
             this.putQueryParameter("InstanceType", instanceType);
@@ -307,7 +317,10 @@ public class DescribeHistoryTasksRequest extends Request {
         }
 
         /**
-         * PageNumber.
+         * <p>The number of the page to return. Valid range: positive integers. Default value: 1</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder pageNumber(Integer pageNumber) {
             this.putQueryParameter("PageNumber", pageNumber);
@@ -316,7 +329,10 @@ public class DescribeHistoryTasksRequest extends Request {
         }
 
         /**
-         * PageSize.
+         * <p>The number of entries per page. Valid values: 10 to 100. Default value: 10.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10</p>
          */
         public Builder pageSize(Integer pageSize) {
             this.putQueryParameter("PageSize", pageSize);
@@ -325,7 +341,10 @@ public class DescribeHistoryTasksRequest extends Request {
         }
 
         /**
-         * RegionId.
+         * <p>The region ID</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-beijing</p>
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);
@@ -334,7 +353,10 @@ public class DescribeHistoryTasksRequest extends Request {
         }
 
         /**
-         * ResourceGroupId.
+         * <p>Resource group ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>rg-ae****</p>
          */
         public Builder resourceGroupId(String resourceGroupId) {
             this.putQueryParameter("ResourceGroupId", resourceGroupId);
@@ -352,7 +374,20 @@ public class DescribeHistoryTasksRequest extends Request {
         }
 
         /**
-         * Status.
+         * <p>The state of the task. Valid values:</p>
+         * <ul>
+         * <li><strong>Scheduled</strong></li>
+         * <li><strong>Running</strong></li>
+         * <li><strong>Succeed</strong></li>
+         * <li><strong>Failed</strong>: The task failed.</li>
+         * <li><strong>Cancelling</strong></li>
+         * <li><strong>Canceled</strong></li>
+         * <li><strong>Waiting</strong></li>
+         * </ul>
+         * <p>If querying multiple statuses, separate them with English commas. Default is empty, meaning select all.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Scheduled</p>
          */
         public Builder status(String status) {
             this.putQueryParameter("Status", status);
@@ -361,7 +396,10 @@ public class DescribeHistoryTasksRequest extends Request {
         }
 
         /**
-         * TaskId.
+         * <p>The job IDs. Separate multiple task IDs with commas (,). Maximum 30 task IDs. If not filled, defaults to querying historical tasks of all clusters.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>t-83br18hloy3faf****</p>
          */
         public Builder taskId(String taskId) {
             this.putQueryParameter("TaskId", taskId);
@@ -370,7 +408,10 @@ public class DescribeHistoryTasksRequest extends Request {
         }
 
         /**
-         * TaskType.
+         * <p>Task type, used to query specific type task situations. If multiple, separate with English commas (,), maximum 30 supported. Default is empty, meaning no restriction.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>autotest_dispatch_cases</p>
          */
         public Builder taskType(String taskType) {
             this.putQueryParameter("TaskType", taskType);
@@ -379,7 +420,10 @@ public class DescribeHistoryTasksRequest extends Request {
         }
 
         /**
-         * ToExecTime.
+         * <p>Maximum task execution time. Used to filter tasks with execution time not less than this value, in seconds. Default 0, meaning no limit.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>0</p>
          */
         public Builder toExecTime(Integer toExecTime) {
             this.putQueryParameter("ToExecTime", toExecTime);
@@ -388,6 +432,7 @@ public class DescribeHistoryTasksRequest extends Request {
         }
 
         /**
+         * <p>End time of task start time, indicating querying tasks whose start time is before this time. Expressed according to ISO8601 standard, and must use UTC +0 time, format: yyyy-MM-ddTHH:mm:ssZ.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>

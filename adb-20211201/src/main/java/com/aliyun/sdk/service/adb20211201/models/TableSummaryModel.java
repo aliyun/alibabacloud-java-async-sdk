@@ -20,6 +20,12 @@ public class TableSummaryModel extends TeaModel {
     @com.aliyun.core.annotation.NameInMap("CreateTime")
     private String createTime;
 
+    @com.aliyun.core.annotation.NameInMap("CreatedBySource")
+    private String createdBySource;
+
+    @com.aliyun.core.annotation.NameInMap("CreatedByUser")
+    private String createdByUser;
+
     @com.aliyun.core.annotation.NameInMap("Description")
     private String description;
 
@@ -49,6 +55,8 @@ public class TableSummaryModel extends TeaModel {
 
     private TableSummaryModel(Builder builder) {
         this.createTime = builder.createTime;
+        this.createdBySource = builder.createdBySource;
+        this.createdByUser = builder.createdByUser;
         this.description = builder.description;
         this.mvDetailModel = builder.mvDetailModel;
         this.owner = builder.owner;
@@ -77,6 +85,20 @@ public class TableSummaryModel extends TeaModel {
      */
     public String getCreateTime() {
         return this.createTime;
+    }
+
+    /**
+     * @return createdBySource
+     */
+    public String getCreatedBySource() {
+        return this.createdBySource;
+    }
+
+    /**
+     * @return createdByUser
+     */
+    public String getCreatedByUser() {
+        return this.createdByUser;
     }
 
     /**
@@ -144,6 +166,8 @@ public class TableSummaryModel extends TeaModel {
 
     public static final class Builder {
         private String createTime; 
+        private String createdBySource; 
+        private String createdByUser; 
         private String description; 
         private OpenStructMvDetailModel mvDetailModel; 
         private String owner; 
@@ -159,6 +183,8 @@ public class TableSummaryModel extends TeaModel {
 
         private Builder(TableSummaryModel model) {
             this.createTime = model.createTime;
+            this.createdBySource = model.createdBySource;
+            this.createdByUser = model.createdByUser;
             this.description = model.description;
             this.mvDetailModel = model.mvDetailModel;
             this.owner = model.owner;
@@ -175,6 +201,22 @@ public class TableSummaryModel extends TeaModel {
          */
         public Builder createTime(String createTime) {
             this.createTime = createTime;
+            return this;
+        }
+
+        /**
+         * CreatedBySource.
+         */
+        public Builder createdBySource(String createdBySource) {
+            this.createdBySource = createdBySource;
+            return this;
+        }
+
+        /**
+         * CreatedByUser.
+         */
+        public Builder createdByUser(String createdByUser) {
+            this.createdByUser = createdByUser;
             return this;
         }
 

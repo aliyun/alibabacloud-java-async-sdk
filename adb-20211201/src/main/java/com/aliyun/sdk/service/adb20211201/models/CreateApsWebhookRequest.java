@@ -104,6 +104,7 @@ public class CreateApsWebhookRequest extends Request {
         } 
 
         /**
+         * <p>The cluster ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -116,6 +117,7 @@ public class CreateApsWebhookRequest extends Request {
         }
 
         /**
+         * <p>The type of the task. Valid value: Task type. SLS or OSS Export Task: ResultExport.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -128,6 +130,7 @@ public class CreateApsWebhookRequest extends Request {
         }
 
         /**
+         * <p>The ID of the region in which to create the dedicated block storage cluster.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -140,7 +143,7 @@ public class CreateApsWebhookRequest extends Request {
         }
 
         /**
-         * Webhook.
+         * <p>The array of webhooks.</p>
          */
         public Builder webhook(java.util.List<Webhook> webhook) {
             String webhookShrink = shrink(webhook, "Webhook", "json");
@@ -237,7 +240,10 @@ public class CreateApsWebhookRequest extends Request {
             } 
 
             /**
-             * Key.
+             * <p>Signed key.</p>
+             * 
+             * <strong>example:</strong>
+             * <hr>
              */
             public Builder key(String key) {
                 this.key = key;
@@ -245,7 +251,10 @@ public class CreateApsWebhookRequest extends Request {
             }
 
             /**
-             * Name.
+             * <p>The name of the webhook.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>MyWebhookName</p>
              */
             public Builder name(String name) {
                 this.name = name;
@@ -253,6 +262,7 @@ public class CreateApsWebhookRequest extends Request {
             }
 
             /**
+             * <p>The request path.</p>
              * <p>This parameter is required.</p>
              * 
              * <strong>example:</strong>
@@ -264,6 +274,7 @@ public class CreateApsWebhookRequest extends Request {
             }
 
             /**
+             * <p>The notification method. Valid values: dingtalk. lark.</p>
              * <p>This parameter is required.</p>
              * 
              * <strong>example:</strong>

@@ -12,15 +12,15 @@ import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
  * 
- * {@link ModifyDBClusterSSLResponseBody} extends {@link TeaModel}
+ * {@link DeleteMaterializedViewRecommendResponseBody} extends {@link TeaModel}
  *
- * <p>ModifyDBClusterSSLResponseBody</p>
+ * <p>DeleteMaterializedViewRecommendResponseBody</p>
  */
-public class ModifyDBClusterSSLResponseBody extends TeaModel {
+public class DeleteMaterializedViewRecommendResponseBody extends TeaModel {
     @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    private ModifyDBClusterSSLResponseBody(Builder builder) {
+    private DeleteMaterializedViewRecommendResponseBody(Builder builder) {
         this.requestId = builder.requestId;
     }
 
@@ -28,7 +28,7 @@ public class ModifyDBClusterSSLResponseBody extends TeaModel {
         return new Builder();
     }
 
-    public static ModifyDBClusterSSLResponseBody create() {
+    public static DeleteMaterializedViewRecommendResponseBody create() {
         return builder().build();
     }
 
@@ -49,23 +49,23 @@ public class ModifyDBClusterSSLResponseBody extends TeaModel {
         private Builder() {
         } 
 
-        private Builder(ModifyDBClusterSSLResponseBody model) {
+        private Builder(DeleteMaterializedViewRecommendResponseBody model) {
             this.requestId = model.requestId;
         } 
 
         /**
-         * <p>The unique ID of the request.</p>
+         * <p>Id of the request</p>
          * 
          * <strong>example:</strong>
-         * <p>1AD222E9-E606-4A42-BF6D-8A4442913CEF</p>
+         * <p>7B081A85-0568-5E54-82EF-6958C4A3D4B4</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
             return this;
         }
 
-        public ModifyDBClusterSSLResponseBody build() {
-            return new ModifyDBClusterSSLResponseBody(this);
+        public DeleteMaterializedViewRecommendResponseBody build() {
+            return new DeleteMaterializedViewRecommendResponseBody(this);
         } 
 
     } 

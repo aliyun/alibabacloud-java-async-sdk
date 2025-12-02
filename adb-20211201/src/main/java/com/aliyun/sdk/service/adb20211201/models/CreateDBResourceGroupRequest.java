@@ -47,6 +47,10 @@ public class CreateDBResourceGroupRequest extends Request {
     private java.util.Map<String, ?> engineParams;
 
     @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("GpuElasticPlan")
+    private GpuElasticPlan gpuElasticPlan;
+
+    @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("GroupName")
     @com.aliyun.core.annotation.Validation(required = true)
     private String groupName;
@@ -109,6 +113,7 @@ public class CreateDBResourceGroupRequest extends Request {
         this.enableSpot = builder.enableSpot;
         this.engine = builder.engine;
         this.engineParams = builder.engineParams;
+        this.gpuElasticPlan = builder.gpuElasticPlan;
         this.groupName = builder.groupName;
         this.groupType = builder.groupType;
         this.maxClusterCount = builder.maxClusterCount;
@@ -184,6 +189,13 @@ public class CreateDBResourceGroupRequest extends Request {
      */
     public java.util.Map<String, ?> getEngineParams() {
         return this.engineParams;
+    }
+
+    /**
+     * @return gpuElasticPlan
+     */
+    public GpuElasticPlan getGpuElasticPlan() {
+        return this.gpuElasticPlan;
     }
 
     /**
@@ -285,6 +297,7 @@ public class CreateDBResourceGroupRequest extends Request {
         private Boolean enableSpot; 
         private String engine; 
         private java.util.Map<String, ?> engineParams; 
+        private GpuElasticPlan gpuElasticPlan; 
         private String groupName; 
         private String groupType; 
         private Integer maxClusterCount; 
@@ -312,6 +325,7 @@ public class CreateDBResourceGroupRequest extends Request {
             this.enableSpot = request.enableSpot;
             this.engine = request.engine;
             this.engineParams = request.engineParams;
+            this.gpuElasticPlan = request.gpuElasticPlan;
             this.groupName = request.groupName;
             this.groupType = request.groupType;
             this.maxClusterCount = request.maxClusterCount;
@@ -405,6 +419,16 @@ public class CreateDBResourceGroupRequest extends Request {
             String engineParamsShrink = shrink(engineParams, "EngineParams", "json");
             this.putQueryParameter("EngineParams", engineParamsShrink);
             this.engineParams = engineParams;
+            return this;
+        }
+
+        /**
+         * GpuElasticPlan.
+         */
+        public Builder gpuElasticPlan(GpuElasticPlan gpuElasticPlan) {
+            String gpuElasticPlanShrink = shrink(gpuElasticPlan, "GpuElasticPlan", "json");
+            this.putQueryParameter("GpuElasticPlan", gpuElasticPlanShrink);
+            this.gpuElasticPlan = gpuElasticPlan;
             return this;
         }
 
@@ -580,6 +604,156 @@ public class CreateDBResourceGroupRequest extends Request {
 
     } 
 
+    /**
+     * 
+     * {@link CreateDBResourceGroupRequest} extends {@link TeaModel}
+     *
+     * <p>CreateDBResourceGroupRequest</p>
+     */
+    public static class GpuElasticPlanRules extends TeaModel {
+        @com.aliyun.core.annotation.NameInMap("EndCronExpression")
+        private String endCronExpression;
+
+        @com.aliyun.core.annotation.NameInMap("StartCronExpression")
+        private String startCronExpression;
+
+        private GpuElasticPlanRules(Builder builder) {
+            this.endCronExpression = builder.endCronExpression;
+            this.startCronExpression = builder.startCronExpression;
+        }
+
+        public static Builder builder() {
+            return new Builder();
+        }
+
+        public static GpuElasticPlanRules create() {
+            return builder().build();
+        }
+
+        /**
+         * @return endCronExpression
+         */
+        public String getEndCronExpression() {
+            return this.endCronExpression;
+        }
+
+        /**
+         * @return startCronExpression
+         */
+        public String getStartCronExpression() {
+            return this.startCronExpression;
+        }
+
+        public static final class Builder {
+            private String endCronExpression; 
+            private String startCronExpression; 
+
+            private Builder() {
+            } 
+
+            private Builder(GpuElasticPlanRules model) {
+                this.endCronExpression = model.endCronExpression;
+                this.startCronExpression = model.startCronExpression;
+            } 
+
+            /**
+             * EndCronExpression.
+             */
+            public Builder endCronExpression(String endCronExpression) {
+                this.endCronExpression = endCronExpression;
+                return this;
+            }
+
+            /**
+             * StartCronExpression.
+             */
+            public Builder startCronExpression(String startCronExpression) {
+                this.startCronExpression = startCronExpression;
+                return this;
+            }
+
+            public GpuElasticPlanRules build() {
+                return new GpuElasticPlanRules(this);
+            } 
+
+        } 
+
+    }
+    /**
+     * 
+     * {@link CreateDBResourceGroupRequest} extends {@link TeaModel}
+     *
+     * <p>CreateDBResourceGroupRequest</p>
+     */
+    public static class GpuElasticPlan extends TeaModel {
+        @com.aliyun.core.annotation.NameInMap("Enabled")
+        private Boolean enabled;
+
+        @com.aliyun.core.annotation.NameInMap("Rules")
+        private java.util.List<GpuElasticPlanRules> rules;
+
+        private GpuElasticPlan(Builder builder) {
+            this.enabled = builder.enabled;
+            this.rules = builder.rules;
+        }
+
+        public static Builder builder() {
+            return new Builder();
+        }
+
+        public static GpuElasticPlan create() {
+            return builder().build();
+        }
+
+        /**
+         * @return enabled
+         */
+        public Boolean getEnabled() {
+            return this.enabled;
+        }
+
+        /**
+         * @return rules
+         */
+        public java.util.List<GpuElasticPlanRules> getRules() {
+            return this.rules;
+        }
+
+        public static final class Builder {
+            private Boolean enabled; 
+            private java.util.List<GpuElasticPlanRules> rules; 
+
+            private Builder() {
+            } 
+
+            private Builder(GpuElasticPlan model) {
+                this.enabled = model.enabled;
+                this.rules = model.rules;
+            } 
+
+            /**
+             * Enabled.
+             */
+            public Builder enabled(Boolean enabled) {
+                this.enabled = enabled;
+                return this;
+            }
+
+            /**
+             * <p>The job resubmission rules.</p>
+             */
+            public Builder rules(java.util.List<GpuElasticPlanRules> rules) {
+                this.rules = rules;
+                return this;
+            }
+
+            public GpuElasticPlan build() {
+                return new GpuElasticPlan(this);
+            } 
+
+        } 
+
+    }
     /**
      * 
      * {@link CreateDBResourceGroupRequest} extends {@link TeaModel}

@@ -74,6 +74,10 @@ public class DescribeDBClusterSSLRequest extends Request {
         } 
 
         /**
+         * <p>The cluster ID.</p>
+         * <blockquote>
+         * <p> You can call the <a href="https://help.aliyun.com/document_detail/454250.html">DescribeDBClusters</a> operation to query the information about all AnalyticDB for MySQL clusters within a region, including cluster IDs.</p>
+         * </blockquote>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -86,7 +90,13 @@ public class DescribeDBClusterSSLRequest extends Request {
         }
 
         /**
-         * RegionId.
+         * <p>The region ID.</p>
+         * <blockquote>
+         * <p> You can call the <a href="https://help.aliyun.com/document_detail/612393.html">DescribeRegions</a> operation to query the most recent region list.</p>
+         * </blockquote>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-hangzhou</p>
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);
