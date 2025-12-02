@@ -241,7 +241,10 @@ public class CreatePreCheckRequest extends Request {
         } 
 
         /**
-         * Buckets.
+         * <p>Buckets.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>[{&quot;Bucket&quot;:&quot;bucket01-test&quot;,&quot;Region&quot;:&quot;cn-beijing&quot;}]</p>
          */
         public Builder buckets(String buckets) {
             this.putBodyParameter("Buckets", buckets);
@@ -250,7 +253,10 @@ public class CreatePreCheckRequest extends Request {
         }
 
         /**
-         * DistinctHistoryTasks.
+         * <p>Whether to deduplicate historical detected tasks.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder distinctHistoryTasks(Boolean distinctHistoryTasks) {
             this.putBodyParameter("DistinctHistoryTasks", distinctHistoryTasks);
@@ -259,7 +265,10 @@ public class CreatePreCheckRequest extends Request {
         }
 
         /**
-         * EndTime.
+         * <p>Task end time.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2023-12-18 10:08:00</p>
          */
         public Builder endTime(String endTime) {
             this.putBodyParameter("EndTime", endTime);
@@ -268,7 +277,10 @@ public class CreatePreCheckRequest extends Request {
         }
 
         /**
-         * IsInc.
+         * <p>Whether it is a scheduled scan task.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>false</p>
          */
         public Builder isInc(Boolean isInc) {
             this.putBodyParameter("IsInc", isInc);
@@ -277,7 +289,10 @@ public class CreatePreCheckRequest extends Request {
         }
 
         /**
-         * MediaType.
+         * <p>Media type.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder mediaType(Integer mediaType) {
             this.putBodyParameter("MediaType", mediaType);
@@ -286,7 +301,10 @@ public class CreatePreCheckRequest extends Request {
         }
 
         /**
-         * PrefixFilterType.
+         * <p>Prefix filter type.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>all</p>
          */
         public Builder prefixFilterType(String prefixFilterType) {
             this.putBodyParameter("PrefixFilterType", prefixFilterType);
@@ -295,7 +313,10 @@ public class CreatePreCheckRequest extends Request {
         }
 
         /**
-         * PrefixFilters.
+         * <p>Prefixes.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>dir1,dir2</p>
          */
         public Builder prefixFilters(String prefixFilters) {
             this.putBodyParameter("PrefixFilters", prefixFilters);
@@ -304,7 +325,10 @@ public class CreatePreCheckRequest extends Request {
         }
 
         /**
-         * Priority.
+         * <p>Priority.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>0</p>
          */
         public Builder priority(Integer priority) {
             this.putBodyParameter("Priority", priority);
@@ -313,7 +337,10 @@ public class CreatePreCheckRequest extends Request {
         }
 
         /**
-         * RegionId.
+         * <p>Region ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-shanghai</p>
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);
@@ -322,7 +349,10 @@ public class CreatePreCheckRequest extends Request {
         }
 
         /**
-         * ScanLimit.
+         * <p>Scan limit count.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10</p>
          */
         public Builder scanLimit(Long scanLimit) {
             this.putBodyParameter("ScanLimit", scanLimit);
@@ -331,7 +361,10 @@ public class CreatePreCheckRequest extends Request {
         }
 
         /**
-         * ScanNoFileType.
+         * <p>Whether to scan images without file extensions.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder scanNoFileType(Boolean scanNoFileType) {
             this.putBodyParameter("ScanNoFileType", scanNoFileType);
@@ -340,7 +373,10 @@ public class CreatePreCheckRequest extends Request {
         }
 
         /**
-         * ScanService.
+         * <p>Scan service code.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>baselineCheck</p>
          */
         public Builder scanService(String scanService) {
             this.putBodyParameter("ScanService", scanService);
@@ -349,7 +385,10 @@ public class CreatePreCheckRequest extends Request {
         }
 
         /**
-         * StartTime.
+         * <p>Task start time.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2023-12-17 10:08:00</p>
          */
         public Builder startTime(String startTime) {
             this.putBodyParameter("StartTime", startTime);
@@ -358,7 +397,10 @@ public class CreatePreCheckRequest extends Request {
         }
 
         /**
-         * TaskName.
+         * <p>Task name.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>图片任务 20240709101602004</p>
          */
         public Builder taskName(String taskName) {
             this.putBodyParameter("TaskName", taskName);

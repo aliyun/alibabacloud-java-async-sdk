@@ -106,7 +106,10 @@ public class UpdateKeywordLibResponseBody extends TeaModel {
         } 
 
         /**
-         * Code.
+         * <p>Error code.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>200</p>
          */
         public Builder code(Integer code) {
             this.code = code;
@@ -114,7 +117,10 @@ public class UpdateKeywordLibResponseBody extends TeaModel {
         }
 
         /**
-         * Data.
+         * <p>Returned data.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>True</p>
          */
         public Builder data(Boolean data) {
             this.data = data;
@@ -122,7 +128,10 @@ public class UpdateKeywordLibResponseBody extends TeaModel {
         }
 
         /**
-         * Msg.
+         * <p>Further description of the error code.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>OK</p>
          */
         public Builder msg(String msg) {
             this.msg = msg;
@@ -130,7 +139,10 @@ public class UpdateKeywordLibResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * <p>ID assigned by the backend, used to uniquely identify a request. Can be used for troubleshooting.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>AAAAAA-BBBB-CCCCC-DDDD-EEEEEEEE****</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -138,7 +150,10 @@ public class UpdateKeywordLibResponseBody extends TeaModel {
         }
 
         /**
-         * Success.
+         * <p>Success indicator.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>True</p>
          */
         public Builder success(Boolean success) {
             this.success = success;

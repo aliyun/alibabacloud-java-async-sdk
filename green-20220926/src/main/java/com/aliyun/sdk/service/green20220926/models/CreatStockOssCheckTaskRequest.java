@@ -437,7 +437,10 @@ public class CreatStockOssCheckTaskRequest extends Request {
         } 
 
         /**
-         * Buckets.
+         * <p>OSS buckets</p>
+         * 
+         * <strong>example:</strong>
+         * <p>[{&quot;Bucket&quot;:&quot;bucket01-test&quot;,&quot;Region&quot;:&quot;cn-beijing&quot;}]</p>
          */
         public Builder buckets(String buckets) {
             this.putQueryParameter("Buckets", buckets);
@@ -446,7 +449,10 @@ public class CreatStockOssCheckTaskRequest extends Request {
         }
 
         /**
-         * CallbackId.
+         * <p>Callback ID</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1751</p>
          */
         public Builder callbackId(String callbackId) {
             this.putQueryParameter("CallbackId", callbackId);
@@ -455,7 +461,10 @@ public class CreatStockOssCheckTaskRequest extends Request {
         }
 
         /**
-         * DistinctHistoryTasks.
+         * <p>Flag for deduplicating against previously detected tasks.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder distinctHistoryTasks(Boolean distinctHistoryTasks) {
             this.putQueryParameter("DistinctHistoryTasks", distinctHistoryTasks);
@@ -464,7 +473,10 @@ public class CreatStockOssCheckTaskRequest extends Request {
         }
 
         /**
-         * EndTime.
+         * <p>The end time of the task.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2023-12-18 10:08:00</p>
          */
         public Builder endTime(String endTime) {
             this.putQueryParameter("EndTime", endTime);
@@ -473,7 +485,10 @@ public class CreatStockOssCheckTaskRequest extends Request {
         }
 
         /**
-         * ExecuteDate.
+         * <p>Execute date of scheduled task.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder executeDate(Integer executeDate) {
             this.putQueryParameter("ExecuteDate", executeDate);
@@ -482,7 +497,10 @@ public class CreatStockOssCheckTaskRequest extends Request {
         }
 
         /**
-         * ExecuteTime.
+         * <p>Execute time of scheduled task.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>01:09:30-01:19:30</p>
          */
         public Builder executeTime(String executeTime) {
             this.putQueryParameter("ExecuteTime", executeTime);
@@ -491,7 +509,10 @@ public class CreatStockOssCheckTaskRequest extends Request {
         }
 
         /**
-         * Freeze.
+         * <p>Freeze indicator</p>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder freeze(Boolean freeze) {
             this.putQueryParameter("Freeze", freeze);
@@ -500,7 +521,10 @@ public class CreatStockOssCheckTaskRequest extends Request {
         }
 
         /**
-         * FreezeHighRisk1.
+         * <p>Freeze High-Risk Images</p>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder freezeHighRisk1(Boolean freezeHighRisk1) {
             this.putQueryParameter("FreezeHighRisk1", freezeHighRisk1);
@@ -509,7 +533,10 @@ public class CreatStockOssCheckTaskRequest extends Request {
         }
 
         /**
-         * FreezeHighRisk2.
+         * <p>Freeze High-Risk Audio and Text</p>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder freezeHighRisk2(Boolean freezeHighRisk2) {
             this.putQueryParameter("FreezeHighRisk2", freezeHighRisk2);
@@ -518,7 +545,10 @@ public class CreatStockOssCheckTaskRequest extends Request {
         }
 
         /**
-         * FreezeMediumRisk1.
+         * <p>Freeze Medium-Risk Images</p>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder freezeMediumRisk1(Boolean freezeMediumRisk1) {
             this.putQueryParameter("FreezeMediumRisk1", freezeMediumRisk1);
@@ -527,7 +557,10 @@ public class CreatStockOssCheckTaskRequest extends Request {
         }
 
         /**
-         * FreezeMediumRisk2.
+         * <p>Freeze Medium-Risk Audio and Text</p>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder freezeMediumRisk2(Boolean freezeMediumRisk2) {
             this.putQueryParameter("FreezeMediumRisk2", freezeMediumRisk2);
@@ -536,7 +569,10 @@ public class CreatStockOssCheckTaskRequest extends Request {
         }
 
         /**
-         * FreezeRestorePath.
+         * <p>Freeze Restore Path</p>
+         * 
+         * <strong>example:</strong>
+         * <p>test</p>
          */
         public Builder freezeRestorePath(String freezeRestorePath) {
             this.putQueryParameter("FreezeRestorePath", freezeRestorePath);
@@ -545,7 +581,10 @@ public class CreatStockOssCheckTaskRequest extends Request {
         }
 
         /**
-         * FreezeType.
+         * <p>Freeze type</p>
+         * 
+         * <strong>example:</strong>
+         * <p>ACL</p>
          */
         public Builder freezeType(String freezeType) {
             this.putQueryParameter("FreezeType", freezeType);
@@ -554,7 +593,10 @@ public class CreatStockOssCheckTaskRequest extends Request {
         }
 
         /**
-         * IsInc.
+         * <p>Indicator for scheduled task.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>false</p>
          */
         public Builder isInc(Boolean isInc) {
             this.putQueryParameter("IsInc", isInc);
@@ -563,7 +605,10 @@ public class CreatStockOssCheckTaskRequest extends Request {
         }
 
         /**
-         * MediaType.
+         * <p>Media type.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder mediaType(Integer mediaType) {
             this.putQueryParameter("MediaType", mediaType);
@@ -572,7 +617,10 @@ public class CreatStockOssCheckTaskRequest extends Request {
         }
 
         /**
-         * PrefixFilterType.
+         * <p>Prefix filter type.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>all</p>
          */
         public Builder prefixFilterType(String prefixFilterType) {
             this.putQueryParameter("PrefixFilterType", prefixFilterType);
@@ -581,7 +629,10 @@ public class CreatStockOssCheckTaskRequest extends Request {
         }
 
         /**
-         * PrefixFilters.
+         * <p>Prefix filters</p>
+         * 
+         * <strong>example:</strong>
+         * <p>dir1,dir2</p>
          */
         public Builder prefixFilters(String prefixFilters) {
             this.putQueryParameter("PrefixFilters", prefixFilters);
@@ -590,7 +641,10 @@ public class CreatStockOssCheckTaskRequest extends Request {
         }
 
         /**
-         * Priority.
+         * <p>The priority of the task.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>0</p>
          */
         public Builder priority(Integer priority) {
             this.putQueryParameter("Priority", priority);
@@ -599,7 +653,10 @@ public class CreatStockOssCheckTaskRequest extends Request {
         }
 
         /**
-         * Referer.
+         * <p>Referer.</p>
+         * 
+         * <strong>example:</strong>
+         * <p><a href="https://www.aliyun.com">https://www.aliyun.com</a></p>
          */
         public Builder referer(String referer) {
             this.putQueryParameter("Referer", referer);
@@ -608,7 +665,10 @@ public class CreatStockOssCheckTaskRequest extends Request {
         }
 
         /**
-         * RegionId.
+         * <p>Region ID</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-shanghai</p>
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);
@@ -617,7 +677,10 @@ public class CreatStockOssCheckTaskRequest extends Request {
         }
 
         /**
-         * ScanLimit.
+         * <p>The scan limit of the task.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10</p>
          */
         public Builder scanLimit(Long scanLimit) {
             this.putQueryParameter("ScanLimit", scanLimit);
@@ -626,7 +689,10 @@ public class CreatStockOssCheckTaskRequest extends Request {
         }
 
         /**
-         * ScanNoFileType.
+         * <p>Indicator for scanning files without file type.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder scanNoFileType(Boolean scanNoFileType) {
             this.putQueryParameter("ScanNoFileType", scanNoFileType);
@@ -635,7 +701,10 @@ public class CreatStockOssCheckTaskRequest extends Request {
         }
 
         /**
-         * ScanResourceType.
+         * <p>Scan resource type.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>0</p>
          */
         public Builder scanResourceType(String scanResourceType) {
             this.putQueryParameter("ScanResourceType", scanResourceType);
@@ -644,7 +713,10 @@ public class CreatStockOssCheckTaskRequest extends Request {
         }
 
         /**
-         * ScanService.
+         * <p>The code of scan service.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>baselineCheck</p>
          */
         public Builder scanService(String scanService) {
             this.putQueryParameter("ScanService", scanService);
@@ -653,7 +725,10 @@ public class CreatStockOssCheckTaskRequest extends Request {
         }
 
         /**
-         * StartTime.
+         * <p>The start time of the task.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2023-12-17 10:08:00</p>
          */
         public Builder startTime(String startTime) {
             this.putQueryParameter("StartTime", startTime);
@@ -662,7 +737,10 @@ public class CreatStockOssCheckTaskRequest extends Request {
         }
 
         /**
-         * TaskCycle.
+         * <p>Task Cycle</p>
+         * 
+         * <strong>example:</strong>
+         * <p>0</p>
          */
         public Builder taskCycle(Integer taskCycle) {
             this.putQueryParameter("TaskCycle", taskCycle);
@@ -671,7 +749,10 @@ public class CreatStockOssCheckTaskRequest extends Request {
         }
 
         /**
-         * TaskName.
+         * <p>The name of the task.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>image task 20240709101602004</p>
          */
         public Builder taskName(String taskName) {
             this.putQueryParameter("TaskName", taskName);
@@ -680,7 +761,10 @@ public class CreatStockOssCheckTaskRequest extends Request {
         }
 
         /**
-         * TaskType.
+         * <p>Task type.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>batch</p>
          */
         public Builder taskType(String taskType) {
             this.putQueryParameter("TaskType", taskType);

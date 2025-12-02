@@ -67,7 +67,7 @@ public class GetOssCheckStatResponseBody extends TeaModel {
         } 
 
         /**
-         * BarChart.
+         * <p>Bar chart</p>
          */
         public Builder barChart(BarChart barChart) {
             this.barChart = barChart;
@@ -75,7 +75,10 @@ public class GetOssCheckStatResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * <p>ID assigned by the backend, used to uniquely identify a request. Can be used for troubleshooting.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>AAAAAA-BBBB-CCCCC-DDDD-EEEEEEEE****</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -141,7 +144,7 @@ public class GetOssCheckStatResponseBody extends TeaModel {
             } 
 
             /**
-             * Data.
+             * <p>Data.</p>
              */
             public Builder data(java.util.List<Long> data) {
                 this.data = data;
@@ -149,7 +152,10 @@ public class GetOssCheckStatResponseBody extends TeaModel {
             }
 
             /**
-             * Name.
+             * <p>Name.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>document_detection</p>
              */
             public Builder name(String name) {
                 this.name = name;
@@ -216,7 +222,7 @@ public class GetOssCheckStatResponseBody extends TeaModel {
             } 
 
             /**
-             * X.
+             * <p>X values of the coordinates.</p>
              */
             public Builder x(java.util.List<String> x) {
                 this.x = x;
@@ -224,7 +230,7 @@ public class GetOssCheckStatResponseBody extends TeaModel {
             }
 
             /**
-             * Y.
+             * <p>Y values of the coordinates.</p>
              */
             public Builder y(java.util.List<Y> y) {
                 this.y = y;

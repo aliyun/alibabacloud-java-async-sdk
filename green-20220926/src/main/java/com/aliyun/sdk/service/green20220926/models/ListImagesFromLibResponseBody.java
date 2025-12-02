@@ -158,7 +158,10 @@ public class ListImagesFromLibResponseBody extends TeaModel {
         } 
 
         /**
-         * Code.
+         * <p>Error code, consistent with HTTP status.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>200</p>
          */
         public Builder code(Integer code) {
             this.code = code;
@@ -166,7 +169,10 @@ public class ListImagesFromLibResponseBody extends TeaModel {
         }
 
         /**
-         * CurrentPage.
+         * <p>Current page.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder currentPage(Integer currentPage) {
             this.currentPage = currentPage;
@@ -174,7 +180,10 @@ public class ListImagesFromLibResponseBody extends TeaModel {
         }
 
         /**
-         * HttpStatusCode.
+         * <p>HTTP status code.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>200</p>
          */
         public Builder httpStatusCode(Integer httpStatusCode) {
             this.httpStatusCode = httpStatusCode;
@@ -182,7 +191,7 @@ public class ListImagesFromLibResponseBody extends TeaModel {
         }
 
         /**
-         * Items.
+         * <p>Data of the current page.</p>
          */
         public Builder items(java.util.List<Items> items) {
             this.items = items;
@@ -190,7 +199,10 @@ public class ListImagesFromLibResponseBody extends TeaModel {
         }
 
         /**
-         * Msg.
+         * <p>Further description of the error code.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>OK</p>
          */
         public Builder msg(String msg) {
             this.msg = msg;
@@ -198,7 +210,10 @@ public class ListImagesFromLibResponseBody extends TeaModel {
         }
 
         /**
-         * PageSize.
+         * <p>Page size.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10</p>
          */
         public Builder pageSize(Integer pageSize) {
             this.pageSize = pageSize;
@@ -206,7 +221,10 @@ public class ListImagesFromLibResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * <p>ID assigned by the backend to uniquely identify a request. Can be used for troubleshooting.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>AAAAAA-BBBB-CCCCC-DDDD-EEEEEEEE****</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -214,7 +232,10 @@ public class ListImagesFromLibResponseBody extends TeaModel {
         }
 
         /**
-         * Success.
+         * <p>Success indicator.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>True</p>
          */
         public Builder success(Boolean success) {
             this.success = success;
@@ -222,7 +243,10 @@ public class ListImagesFromLibResponseBody extends TeaModel {
         }
 
         /**
-         * TotalCount.
+         * <p>Total number of images.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10</p>
          */
         public Builder totalCount(Integer totalCount) {
             this.totalCount = totalCount;
@@ -314,7 +338,10 @@ public class ListImagesFromLibResponseBody extends TeaModel {
             } 
 
             /**
-             * GmtCreate.
+             * <p>Creation time.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2022-11-30 16:30:29</p>
              */
             public Builder gmtCreate(String gmtCreate) {
                 this.gmtCreate = gmtCreate;
@@ -322,7 +349,10 @@ public class ListImagesFromLibResponseBody extends TeaModel {
             }
 
             /**
-             * ImageId.
+             * <p>Image ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>112</p>
              */
             public Builder imageId(String imageId) {
                 this.imageId = imageId;
@@ -330,7 +360,10 @@ public class ListImagesFromLibResponseBody extends TeaModel {
             }
 
             /**
-             * ImageUrl.
+             * <p>Image URL.</p>
+             * 
+             * <strong>example:</strong>
+             * <p><a href="https://oss-cip-shanghai.oss-cn-shanghai.aliyuncs.com/image/upload/IMG_2123.jpg">https://oss-cip-shanghai.oss-cn-shanghai.aliyuncs.com/image/upload/IMG_2123.jpg</a></p>
              */
             public Builder imageUrl(String imageUrl) {
                 this.imageUrl = imageUrl;
@@ -338,7 +371,10 @@ public class ListImagesFromLibResponseBody extends TeaModel {
             }
 
             /**
-             * ThumbnailUrl.
+             * <p>Thumbnail URL.</p>
+             * 
+             * <strong>example:</strong>
+             * <p><a href="https://oss-cip-shanghai.oss-cn-shanghai.aliyuncs.com/image/upload/IMG_2123.jpg">https://oss-cip-shanghai.oss-cn-shanghai.aliyuncs.com/image/upload/IMG_2123.jpg</a></p>
              */
             public Builder thumbnailUrl(String thumbnailUrl) {
                 this.thumbnailUrl = thumbnailUrl;

@@ -87,7 +87,10 @@ public class GetServiceConfigRequest extends Request {
         } 
 
         /**
-         * RegionId.
+         * <p>Region ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-shanghai</p>
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);
@@ -96,7 +99,10 @@ public class GetServiceConfigRequest extends Request {
         }
 
         /**
-         * ResourceType.
+         * <p>Resource type.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>text</p>
          */
         public Builder resourceType(String resourceType) {
             this.putBodyParameter("ResourceType", resourceType);
@@ -105,7 +111,10 @@ public class GetServiceConfigRequest extends Request {
         }
 
         /**
-         * ServiceCode.
+         * <p>Service code.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>nickname_detection</p>
          */
         public Builder serviceCode(String serviceCode) {
             this.putBodyParameter("ServiceCode", serviceCode);

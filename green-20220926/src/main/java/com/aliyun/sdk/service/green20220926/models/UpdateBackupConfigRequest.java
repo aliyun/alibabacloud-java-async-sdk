@@ -101,7 +101,10 @@ public class UpdateBackupConfigRequest extends Request {
         } 
 
         /**
-         * BackupConfig.
+         * <p>Evidence backup configuration.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>{}</p>
          */
         public Builder backupConfig(String backupConfig) {
             this.putQueryParameter("BackupConfig", backupConfig);
@@ -110,7 +113,10 @@ public class UpdateBackupConfigRequest extends Request {
         }
 
         /**
-         * RegionId.
+         * <p>Region ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-shanghai</p>
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);
@@ -119,7 +125,10 @@ public class UpdateBackupConfigRequest extends Request {
         }
 
         /**
-         * ResourceType.
+         * <p>Resource type.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>video</p>
          */
         public Builder resourceType(String resourceType) {
             this.putQueryParameter("ResourceType", resourceType);
@@ -128,7 +137,10 @@ public class UpdateBackupConfigRequest extends Request {
         }
 
         /**
-         * ServiceCode.
+         * <p>Service code.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>videoDetection</p>
          */
         public Builder serviceCode(String serviceCode) {
             this.putQueryParameter("ServiceCode", serviceCode);

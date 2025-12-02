@@ -115,7 +115,10 @@ public class GetFeatureConfigRequest extends Request {
         } 
 
         /**
-         * Query.
+         * <p>Query conditions.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>{&quot;Lang&quot;:&quot;zh&quot;,&quot;CategoryType&quot;:1,&quot;Default&quot;:false,&quot;ParentCategoryId&quot;:1720}</p>
          */
         public Builder query(String query) {
             this.putBodyParameter("Query", query);

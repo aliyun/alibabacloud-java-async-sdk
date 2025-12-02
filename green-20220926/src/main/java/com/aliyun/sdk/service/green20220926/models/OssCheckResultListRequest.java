@@ -171,7 +171,10 @@ public class OssCheckResultListRequest extends Request {
         } 
 
         /**
-         * CurrentPage.
+         * <p>Page size.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder currentPage(Integer currentPage) {
             this.putQueryParameter("CurrentPage", currentPage);
@@ -180,7 +183,10 @@ public class OssCheckResultListRequest extends Request {
         }
 
         /**
-         * EndDate.
+         * <p>Start date.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2023-10-21 16:08:38</p>
          */
         public Builder endDate(String endDate) {
             this.putQueryParameter("EndDate", endDate);
@@ -189,7 +195,10 @@ public class OssCheckResultListRequest extends Request {
         }
 
         /**
-         * FinishNum.
+         * <p>Region ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>55</p>
          */
         public Builder finishNum(Long finishNum) {
             this.putQueryParameter("FinishNum", finishNum);
@@ -198,7 +207,10 @@ public class OssCheckResultListRequest extends Request {
         }
 
         /**
-         * PageSize.
+         * <p>Query condition.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10</p>
          */
         public Builder pageSize(Integer pageSize) {
             this.putQueryParameter("PageSize", pageSize);
@@ -207,7 +219,10 @@ public class OssCheckResultListRequest extends Request {
         }
 
         /**
-         * Query.
+         * <p>End date.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>{}</p>
          */
         public Builder query(String query) {
             this.putQueryParameter("Query", query);
@@ -216,7 +231,10 @@ public class OssCheckResultListRequest extends Request {
         }
 
         /**
-         * RegionId.
+         * <p>Sort field.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-shanghai</p>
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);
@@ -225,7 +243,7 @@ public class OssCheckResultListRequest extends Request {
         }
 
         /**
-         * Sort.
+         * <p>Current page number.</p>
          */
         public Builder sort(java.util.Map<String, String> sort) {
             String sortShrink = shrink(sort, "Sort", "json");
@@ -235,7 +253,10 @@ public class OssCheckResultListRequest extends Request {
         }
 
         /**
-         * StartDate.
+         * <p>System-defined parameter. Value: <strong>OssCheckResultList</strong>.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2023-08-21 16:08:38</p>
          */
         public Builder startDate(String startDate) {
             this.putQueryParameter("StartDate", startDate);
@@ -244,7 +265,10 @@ public class OssCheckResultListRequest extends Request {
         }
 
         /**
-         * Status.
+         * <p>Number of completed items.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder status(Integer status) {
             this.putQueryParameter("Status", status);

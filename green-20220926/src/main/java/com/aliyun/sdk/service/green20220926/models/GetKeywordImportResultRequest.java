@@ -73,7 +73,10 @@ public class GetKeywordImportResultRequest extends Request {
         } 
 
         /**
-         * RegionId.
+         * <p>Region ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-shanghai</p>
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);
@@ -82,7 +85,10 @@ public class GetKeywordImportResultRequest extends Request {
         }
 
         /**
-         * TaskId.
+         * <p>Task ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>xxx-xxx</p>
          */
         public Builder taskId(String taskId) {
             this.putBodyParameter("TaskId", taskId);

@@ -119,7 +119,10 @@ public class GetScanResultResponseBody extends TeaModel {
         } 
 
         /**
-         * Code.
+         * <p>Error code, consistent with HTTP status.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>200</p>
          */
         public Builder code(Integer code) {
             this.code = code;
@@ -127,7 +130,7 @@ public class GetScanResultResponseBody extends TeaModel {
         }
 
         /**
-         * Data.
+         * <p>Returned data.</p>
          */
         public Builder data(Data data) {
             this.data = data;
@@ -135,7 +138,10 @@ public class GetScanResultResponseBody extends TeaModel {
         }
 
         /**
-         * HttpStatusCode.
+         * <p>HTTP status code</p>
+         * 
+         * <strong>example:</strong>
+         * <p>200</p>
          */
         public Builder httpStatusCode(Integer httpStatusCode) {
             this.httpStatusCode = httpStatusCode;
@@ -143,7 +149,10 @@ public class GetScanResultResponseBody extends TeaModel {
         }
 
         /**
-         * Msg.
+         * <p>Further description of the error code.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>OK</p>
          */
         public Builder msg(String msg) {
             this.msg = msg;
@@ -151,7 +160,10 @@ public class GetScanResultResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * <p>ID assigned by the backend to uniquely identify a request. Can be used for troubleshooting.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>AAAAAA-BBBB-CCCCC-DDDD-EEEEEEEE****</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -159,7 +171,10 @@ public class GetScanResultResponseBody extends TeaModel {
         }
 
         /**
-         * Success.
+         * <p>Success indicator</p>
+         * 
+         * <strong>example:</strong>
+         * <p>True</p>
          */
         public Builder success(Boolean success) {
             this.success = success;
@@ -238,7 +253,10 @@ public class GetScanResultResponseBody extends TeaModel {
             } 
 
             /**
-             * Confidence.
+             * <p>Confidence score, ranging from 0 to 100, with two decimal places.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>50.0</p>
              */
             public Builder confidence(String confidence) {
                 this.confidence = confidence;
@@ -246,7 +264,10 @@ public class GetScanResultResponseBody extends TeaModel {
             }
 
             /**
-             * Description.
+             * <p>Description of the Label field.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>疑似色情内容</p>
              */
             public Builder description(String description) {
                 this.description = description;
@@ -254,7 +275,10 @@ public class GetScanResultResponseBody extends TeaModel {
             }
 
             /**
-             * Label.
+             * <p>Label.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>politics</p>
              */
             public Builder label(String label) {
                 this.label = label;
@@ -971,7 +995,10 @@ public class GetScanResultResponseBody extends TeaModel {
             } 
 
             /**
-             * ApiLabels.
+             * <p>Automated review labels.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>porn</p>
              */
             public Builder apiLabels(String apiLabels) {
                 this.apiLabels = apiLabels;
@@ -979,7 +1006,10 @@ public class GetScanResultResponseBody extends TeaModel {
             }
 
             /**
-             * ApiRequestTime.
+             * <p>Machine review time.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1755501226</p>
              */
             public Builder apiRequestTime(String apiRequestTime) {
                 this.apiRequestTime = apiRequestTime;
@@ -987,7 +1017,10 @@ public class GetScanResultResponseBody extends TeaModel {
             }
 
             /**
-             * ApiRiskLevel.
+             * <p>Automated review risk level.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>high</p>
              */
             public Builder apiRiskLevel(String apiRiskLevel) {
                 this.apiRiskLevel = apiRiskLevel;
@@ -995,7 +1028,10 @@ public class GetScanResultResponseBody extends TeaModel {
             }
 
             /**
-             * ApiService.
+             * <p>Automated review service</p>
+             * 
+             * <strong>example:</strong>
+             * <p>basecheckLine</p>
              */
             public Builder apiService(String apiService) {
                 this.apiService = apiService;
@@ -1003,7 +1039,10 @@ public class GetScanResultResponseBody extends TeaModel {
             }
 
             /**
-             * ApiTaskId.
+             * <p>Automated review task ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>xxx</p>
              */
             public Builder apiTaskId(String apiTaskId) {
                 this.apiTaskId = apiTaskId;
@@ -1011,7 +1050,20 @@ public class GetScanResultResponseBody extends TeaModel {
             }
 
             /**
-             * AttackLevel.
+             * <p>Attack level, returned based on the set high and low risk scores. The return values include:</p>
+             * <ul>
+             * <li><p>high: High risk</p>
+             * </li>
+             * <li><p>medium: Medium risk</p>
+             * </li>
+             * <li><p>low: Low risk</p>
+             * </li>
+             * <li><p>none: No risk detected</p>
+             * </li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>none</p>
              */
             public Builder attackLevel(String attackLevel) {
                 this.attackLevel = attackLevel;
@@ -1019,7 +1071,10 @@ public class GetScanResultResponseBody extends TeaModel {
             }
 
             /**
-             * Content.
+             * <p>Content.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>xxx</p>
              */
             public Builder content(String content) {
                 this.content = content;
@@ -1027,7 +1082,7 @@ public class GetScanResultResponseBody extends TeaModel {
             }
 
             /**
-             * <p>dataId</p>
+             * <p>Data Id</p>
              * 
              * <strong>example:</strong>
              * <p>4f27b8cc7c4544cb90b41882a5b36326</p>
@@ -1038,7 +1093,10 @@ public class GetScanResultResponseBody extends TeaModel {
             }
 
             /**
-             * EndTime.
+             * <p>Segment end time (in seconds).</p>
+             * 
+             * <strong>example:</strong>
+             * <p>22</p>
              */
             public Builder endTime(String endTime) {
                 this.endTime = endTime;
@@ -1046,7 +1104,10 @@ public class GetScanResultResponseBody extends TeaModel {
             }
 
             /**
-             * ExtFeedback.
+             * <p>Feedback information.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>xxx</p>
              */
             public Builder extFeedback(String extFeedback) {
                 this.extFeedback = extFeedback;
@@ -1054,7 +1115,10 @@ public class GetScanResultResponseBody extends TeaModel {
             }
 
             /**
-             * Extra.
+             * <p>Additional parameters.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>{}</p>
              */
             public Builder extra(java.util.Map<String, ?> extra) {
                 this.extra = extra;
@@ -1062,7 +1126,10 @@ public class GetScanResultResponseBody extends TeaModel {
             }
 
             /**
-             * FrameCount.
+             * <p>Frame count.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>20</p>
              */
             public Builder frameCount(Long frameCount) {
                 this.frameCount = frameCount;
@@ -1070,7 +1137,10 @@ public class GetScanResultResponseBody extends TeaModel {
             }
 
             /**
-             * GmtCreate.
+             * <p>Creation time.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2023-08-11 09:00:19</p>
              */
             public Builder gmtCreate(String gmtCreate) {
                 this.gmtCreate = gmtCreate;
@@ -1078,7 +1148,7 @@ public class GetScanResultResponseBody extends TeaModel {
             }
 
             /**
-             * GuardFileUrls.
+             * <p>Multimodal file URLs.</p>
              */
             public Builder guardFileUrls(java.util.List<String> guardFileUrls) {
                 this.guardFileUrls = guardFileUrls;
@@ -1086,7 +1156,7 @@ public class GetScanResultResponseBody extends TeaModel {
             }
 
             /**
-             * GuardImageUrls.
+             * <p>Multimodal image URLs.</p>
              */
             public Builder guardImageUrls(java.util.List<String> guardImageUrls) {
                 this.guardImageUrls = guardImageUrls;
@@ -1094,7 +1164,7 @@ public class GetScanResultResponseBody extends TeaModel {
             }
 
             /**
-             * ImageLabels.
+             * <p>Image labels.</p>
              */
             public Builder imageLabels(java.util.List<java.util.Map<String, ?>> imageLabels) {
                 this.imageLabels = imageLabels;
@@ -1102,7 +1172,10 @@ public class GetScanResultResponseBody extends TeaModel {
             }
 
             /**
-             * ImageService.
+             * <p>Image service.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>baselineCheck</p>
              */
             public Builder imageService(String imageService) {
                 this.imageService = imageService;
@@ -1110,7 +1183,7 @@ public class GetScanResultResponseBody extends TeaModel {
             }
 
             /**
-             * <p>url</p>
+             * <p>URL</p>
              * 
              * <strong>example:</strong>
              * <p><a href="https://www.aliyuncs.com/xxx.png">https://www.aliyuncs.com/xxx.png</a></p>
@@ -1121,7 +1194,10 @@ public class GetScanResultResponseBody extends TeaModel {
             }
 
             /**
-             * Labels.
+             * <p>Labels.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>nonLabel</p>
              */
             public Builder labels(String labels) {
                 this.labels = labels;
@@ -1129,7 +1205,10 @@ public class GetScanResultResponseBody extends TeaModel {
             }
 
             /**
-             * MaliciousFileLevel.
+             * <p>Malicious file risk level.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>high</p>
              */
             public Builder maliciousFileLevel(String maliciousFileLevel) {
                 this.maliciousFileLevel = maliciousFileLevel;
@@ -1137,7 +1216,10 @@ public class GetScanResultResponseBody extends TeaModel {
             }
 
             /**
-             * MaliciousUrlLevel.
+             * <p>Malicious URL risk level.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>high</p>
              */
             public Builder maliciousUrlLevel(String maliciousUrlLevel) {
                 this.maliciousUrlLevel = maliciousUrlLevel;
@@ -1145,7 +1227,10 @@ public class GetScanResultResponseBody extends TeaModel {
             }
 
             /**
-             * ManualOnly.
+             * <p>Whether it is a pure manual review.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>false</p>
              */
             public Builder manualOnly(Boolean manualOnly) {
                 this.manualOnly = manualOnly;
@@ -1153,7 +1238,7 @@ public class GetScanResultResponseBody extends TeaModel {
             }
 
             /**
-             * NoLabels.
+             * <p>No labels</p>
              */
             public Builder noLabels(java.util.List<String> noLabels) {
                 this.noLabels = noLabels;
@@ -1161,7 +1246,10 @@ public class GetScanResultResponseBody extends TeaModel {
             }
 
             /**
-             * Offset.
+             * <p>Frame offset value.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder offset(Long offset) {
                 this.offset = offset;
@@ -1169,7 +1257,10 @@ public class GetScanResultResponseBody extends TeaModel {
             }
 
             /**
-             * PageNum.
+             * <p>Page number.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder pageNum(Long pageNum) {
                 this.pageNum = pageNum;
@@ -1177,7 +1268,10 @@ public class GetScanResultResponseBody extends TeaModel {
             }
 
             /**
-             * RequestFrom.
+             * <p>Request source.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>online_test</p>
              */
             public Builder requestFrom(String requestFrom) {
                 this.requestFrom = requestFrom;
@@ -1185,7 +1279,10 @@ public class GetScanResultResponseBody extends TeaModel {
             }
 
             /**
-             * RequestId.
+             * <p>Request ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>AAAAAA-BBBB-CCCCC-DDDD-EEEEEEEE****</p>
              */
             public Builder requestId(String requestId) {
                 this.requestId = requestId;
@@ -1193,7 +1290,10 @@ public class GetScanResultResponseBody extends TeaModel {
             }
 
             /**
-             * RequestTime.
+             * <p>Request time.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2023-08-11 09:00:19</p>
              */
             public Builder requestTime(String requestTime) {
                 this.requestTime = requestTime;
@@ -1201,7 +1301,10 @@ public class GetScanResultResponseBody extends TeaModel {
             }
 
             /**
-             * ResourceType.
+             * <p>Resource type.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>text</p>
              */
             public Builder resourceType(String resourceType) {
                 this.resourceType = resourceType;
@@ -1209,7 +1312,7 @@ public class GetScanResultResponseBody extends TeaModel {
             }
 
             /**
-             * Result.
+             * <p>Return collection.</p>
              */
             public Builder result(java.util.List<Result> result) {
                 this.result = result;
@@ -1217,7 +1320,10 @@ public class GetScanResultResponseBody extends TeaModel {
             }
 
             /**
-             * ReviewLabels.
+             * <p>Review labels.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>porn</p>
              */
             public Builder reviewLabels(String reviewLabels) {
                 this.reviewLabels = reviewLabels;
@@ -1225,7 +1331,10 @@ public class GetScanResultResponseBody extends TeaModel {
             }
 
             /**
-             * ReviewRiskLevel.
+             * <p>Review status.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>high</p>
              */
             public Builder reviewRiskLevel(String reviewRiskLevel) {
                 this.reviewRiskLevel = reviewRiskLevel;
@@ -1233,7 +1342,10 @@ public class GetScanResultResponseBody extends TeaModel {
             }
 
             /**
-             * ReviewTime.
+             * <p>Review time.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1755501226</p>
              */
             public Builder reviewTime(String reviewTime) {
                 this.reviewTime = reviewTime;
@@ -1241,7 +1353,10 @@ public class GetScanResultResponseBody extends TeaModel {
             }
 
             /**
-             * ReviewUid.
+             * <p>Reviewer.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>xx</p>
              */
             public Builder reviewUid(String reviewUid) {
                 this.reviewUid = reviewUid;
@@ -1249,7 +1364,10 @@ public class GetScanResultResponseBody extends TeaModel {
             }
 
             /**
-             * Reviewed.
+             * <p>Whether it has been reviewed.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>false</p>
              */
             public Builder reviewed(Boolean reviewed) {
                 this.reviewed = reviewed;
@@ -1257,7 +1375,20 @@ public class GetScanResultResponseBody extends TeaModel {
             }
 
             /**
-             * RiskLevel.
+             * <p>Risk level, returned based on the set high and low risk scores. The return values include:</p>
+             * <ul>
+             * <li><p>high: High risk</p>
+             * </li>
+             * <li><p>medium: Medium risk</p>
+             * </li>
+             * <li><p>low: Low risk</p>
+             * </li>
+             * <li><p>none: No risk detected</p>
+             * </li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>none</p>
              */
             public Builder riskLevel(String riskLevel) {
                 this.riskLevel = riskLevel;
@@ -1265,7 +1396,10 @@ public class GetScanResultResponseBody extends TeaModel {
             }
 
             /**
-             * RiskTips.
+             * <p>Details of the detected risk.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>色情服务</p>
              */
             public Builder riskTips(String riskTips) {
                 this.riskTips = riskTips;
@@ -1273,7 +1407,10 @@ public class GetScanResultResponseBody extends TeaModel {
             }
 
             /**
-             * RiskWords.
+             * <p>Keywords of the detected risk.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>色情_低俗词</p>
              */
             public Builder riskWords(String riskWords) {
                 this.riskWords = riskWords;
@@ -1281,7 +1418,10 @@ public class GetScanResultResponseBody extends TeaModel {
             }
 
             /**
-             * ScanResult.
+             * <p>Details of the result.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>{}</p>
              */
             public Builder scanResult(String scanResult) {
                 this.scanResult = scanResult;
@@ -1289,7 +1429,10 @@ public class GetScanResultResponseBody extends TeaModel {
             }
 
             /**
-             * Score.
+             * <p>Score.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>25</p>
              */
             public Builder score(Float score) {
                 this.score = score;
@@ -1297,7 +1440,17 @@ public class GetScanResultResponseBody extends TeaModel {
             }
 
             /**
-             * SensitiveLevel.
+             * <p>Sensitive level, returned based on the set high and low risk scores. The return values include:</p>
+             * <ul>
+             * <li><strong>S1</strong>: Indicates low sensitivity.</li>
+             * <li><strong>S2</strong>: Indicates medium sensitivity.</li>
+             * <li><strong>S3</strong>: Indicates high sensitivity.</li>
+             * <li><strong>S4</strong>: Indicates very high sensitivity.</li>
+             * <li><strong>S0</strong>: Indicates no sensitivity.</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>S0</p>
              */
             public Builder sensitiveLevel(String sensitiveLevel) {
                 this.sensitiveLevel = sensitiveLevel;
@@ -1305,7 +1458,10 @@ public class GetScanResultResponseBody extends TeaModel {
             }
 
             /**
-             * ServiceCode.
+             * <p>Service code.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>baselineCheck</p>
              */
             public Builder serviceCode(String serviceCode) {
                 this.serviceCode = serviceCode;
@@ -1313,7 +1469,10 @@ public class GetScanResultResponseBody extends TeaModel {
             }
 
             /**
-             * StartTime.
+             * <p>Segment start time (in seconds).</p>
+             * 
+             * <strong>example:</strong>
+             * <p>11</p>
              */
             public Builder startTime(String startTime) {
                 this.startTime = startTime;
@@ -1321,7 +1480,10 @@ public class GetScanResultResponseBody extends TeaModel {
             }
 
             /**
-             * Suggestion.
+             * <p>Suggestion.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>review</p>
              */
             public Builder suggestion(String suggestion) {
                 this.suggestion = suggestion;
@@ -1329,7 +1491,10 @@ public class GetScanResultResponseBody extends TeaModel {
             }
 
             /**
-             * TaskId.
+             * <p>Task ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>vi_s_EbrXb716LyBpkfwxyX5xyh-1A6RY9</p>
              */
             public Builder taskId(String taskId) {
                 this.taskId = taskId;
@@ -1337,7 +1502,7 @@ public class GetScanResultResponseBody extends TeaModel {
             }
 
             /**
-             * TextLabels.
+             * <p>Text labels.</p>
              */
             public Builder textLabels(java.util.List<java.util.Map<String, ?>> textLabels) {
                 this.textLabels = textLabels;
@@ -1345,7 +1510,10 @@ public class GetScanResultResponseBody extends TeaModel {
             }
 
             /**
-             * Thumbnail.
+             * <p>Thumbnail URL.</p>
+             * 
+             * <strong>example:</strong>
+             * <p><a href="https://www.aliyuncs.com/xxx.png">https://www.aliyuncs.com/xxx.png</a></p>
              */
             public Builder thumbnail(String thumbnail) {
                 this.thumbnail = thumbnail;
@@ -1353,7 +1521,10 @@ public class GetScanResultResponseBody extends TeaModel {
             }
 
             /**
-             * TimeStamp.
+             * <p>Timestamp.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>00:00:40-00:00:42</p>
              */
             public Builder timeStamp(String timeStamp) {
                 this.timeStamp = timeStamp;
@@ -1361,7 +1532,10 @@ public class GetScanResultResponseBody extends TeaModel {
             }
 
             /**
-             * Url.
+             * <p>Task URL</p>
+             * 
+             * <strong>example:</strong>
+             * <p><a href="https://www.aliyuncs.com/xxx.png">https://www.aliyuncs.com/xxx.png</a></p>
              */
             public Builder url(String url) {
                 this.url = url;
@@ -1369,7 +1543,7 @@ public class GetScanResultResponseBody extends TeaModel {
             }
 
             /**
-             * VoiceLabels.
+             * <p>Voice labels.</p>
              */
             public Builder voiceLabels(java.util.List<java.util.Map<String, ?>> voiceLabels) {
                 this.voiceLabels = voiceLabels;
@@ -1377,7 +1551,10 @@ public class GetScanResultResponseBody extends TeaModel {
             }
 
             /**
-             * VoiceScanOpened.
+             * <p>Whether audio detection is enabled.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>True</p>
              */
             public Builder voiceScanOpened(Boolean voiceScanOpened) {
                 this.voiceScanOpened = voiceScanOpened;
@@ -1385,7 +1562,10 @@ public class GetScanResultResponseBody extends TeaModel {
             }
 
             /**
-             * VoiceService.
+             * <p>Voice service.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>live_stream_detection</p>
              */
             public Builder voiceService(String voiceService) {
                 this.voiceService = voiceService;
@@ -1478,7 +1658,10 @@ public class GetScanResultResponseBody extends TeaModel {
             } 
 
             /**
-             * CurrentPage.
+             * <p>Current page.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder currentPage(Integer currentPage) {
                 this.currentPage = currentPage;
@@ -1486,7 +1669,7 @@ public class GetScanResultResponseBody extends TeaModel {
             }
 
             /**
-             * Items.
+             * <p>Data for the current page.</p>
              */
             public Builder items(java.util.List<Items> items) {
                 this.items = items;
@@ -1494,7 +1677,10 @@ public class GetScanResultResponseBody extends TeaModel {
             }
 
             /**
-             * PageSize.
+             * <p>Number of items per page.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>10</p>
              */
             public Builder pageSize(Integer pageSize) {
                 this.pageSize = pageSize;
@@ -1502,7 +1688,10 @@ public class GetScanResultResponseBody extends TeaModel {
             }
 
             /**
-             * TotalCount.
+             * <p>Total number of records.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder totalCount(Long totalCount) {
                 this.totalCount = totalCount;

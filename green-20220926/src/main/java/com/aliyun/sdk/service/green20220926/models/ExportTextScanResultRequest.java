@@ -101,7 +101,10 @@ public class ExportTextScanResultRequest extends Request {
         } 
 
         /**
-         * EndDate.
+         * <p>End time of the query, in the format yyyy-MM-dd HH:mm:ss.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2024-03-11 10:00:00</p>
          */
         public Builder endDate(String endDate) {
             this.putBodyParameter("EndDate", endDate);
@@ -110,7 +113,7 @@ public class ExportTextScanResultRequest extends Request {
         }
 
         /**
-         * Query.
+         * <p>Query conditions.</p>
          */
         public Builder query(java.util.Map<String, String> query) {
             String queryShrink = shrink(query, "Query", "json");
@@ -120,7 +123,10 @@ public class ExportTextScanResultRequest extends Request {
         }
 
         /**
-         * RegionId.
+         * <p>Region ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-shanghai</p>
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);
@@ -129,7 +135,10 @@ public class ExportTextScanResultRequest extends Request {
         }
 
         /**
-         * StartDate.
+         * <p>Start time of the query, in the format yyyy-MM-dd HH:mm:ss.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2024-03-10 10:00:00</p>
          */
         public Builder startDate(String startDate) {
             this.putBodyParameter("StartDate", startDate);

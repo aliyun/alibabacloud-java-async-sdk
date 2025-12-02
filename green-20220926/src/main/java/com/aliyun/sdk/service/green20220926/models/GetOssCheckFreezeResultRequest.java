@@ -171,7 +171,10 @@ public class GetOssCheckFreezeResultRequest extends Request {
         } 
 
         /**
-         * CurrentPage.
+         * <p>Current page number.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder currentPage(Integer currentPage) {
             this.putQueryParameter("CurrentPage", currentPage);
@@ -180,7 +183,10 @@ public class GetOssCheckFreezeResultRequest extends Request {
         }
 
         /**
-         * EndDate.
+         * <p>End time.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2025-05-19 10:05:11</p>
          */
         public Builder endDate(String endDate) {
             this.putQueryParameter("EndDate", endDate);
@@ -189,7 +195,10 @@ public class GetOssCheckFreezeResultRequest extends Request {
         }
 
         /**
-         * FinishNum.
+         * <p>Number of completed tasks.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>0</p>
          */
         public Builder finishNum(Long finishNum) {
             this.putQueryParameter("FinishNum", finishNum);
@@ -198,7 +207,10 @@ public class GetOssCheckFreezeResultRequest extends Request {
         }
 
         /**
-         * PageSize.
+         * <p>Page size.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10</p>
          */
         public Builder pageSize(Integer pageSize) {
             this.putQueryParameter("PageSize", pageSize);
@@ -207,7 +219,10 @@ public class GetOssCheckFreezeResultRequest extends Request {
         }
 
         /**
-         * Query.
+         * <p>Query condition.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>{&quot;TaskId&quot;:&quot;P_O3SI0I&quot;}</p>
          */
         public Builder query(String query) {
             this.putQueryParameter("Query", query);
@@ -216,7 +231,10 @@ public class GetOssCheckFreezeResultRequest extends Request {
         }
 
         /**
-         * RegionId.
+         * <p>Region ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-shanghai</p>
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);
@@ -225,7 +243,7 @@ public class GetOssCheckFreezeResultRequest extends Request {
         }
 
         /**
-         * Sort.
+         * <p>Sort field.</p>
          */
         public Builder sort(java.util.Map<String, String> sort) {
             String sortShrink = shrink(sort, "Sort", "json");
@@ -235,7 +253,10 @@ public class GetOssCheckFreezeResultRequest extends Request {
         }
 
         /**
-         * StartDate.
+         * <p>Start time.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2025-01-09 10:28:54</p>
          */
         public Builder startDate(String startDate) {
             this.putQueryParameter("StartDate", startDate);
@@ -244,7 +265,10 @@ public class GetOssCheckFreezeResultRequest extends Request {
         }
 
         /**
-         * Status.
+         * <p>Task status.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder status(Integer status) {
             this.putQueryParameter("Status", status);

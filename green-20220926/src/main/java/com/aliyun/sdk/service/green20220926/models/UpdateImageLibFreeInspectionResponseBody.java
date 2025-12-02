@@ -119,7 +119,10 @@ public class UpdateImageLibFreeInspectionResponseBody extends TeaModel {
         } 
 
         /**
-         * Code.
+         * <p>Error code, consistent with the HTTP status.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>200</p>
          */
         public Builder code(Integer code) {
             this.code = code;
@@ -127,7 +130,10 @@ public class UpdateImageLibFreeInspectionResponseBody extends TeaModel {
         }
 
         /**
-         * Data.
+         * <p>Return result.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>True</p>
          */
         public Builder data(Boolean data) {
             this.data = data;
@@ -135,7 +141,10 @@ public class UpdateImageLibFreeInspectionResponseBody extends TeaModel {
         }
 
         /**
-         * HttpStatusCode.
+         * <p>HTTP status code.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>200</p>
          */
         public Builder httpStatusCode(Integer httpStatusCode) {
             this.httpStatusCode = httpStatusCode;
@@ -143,7 +152,10 @@ public class UpdateImageLibFreeInspectionResponseBody extends TeaModel {
         }
 
         /**
-         * Msg.
+         * <p>Further description of the error code.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>OK</p>
          */
         public Builder msg(String msg) {
             this.msg = msg;
@@ -151,7 +163,10 @@ public class UpdateImageLibFreeInspectionResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * <p>ID assigned by the backend to uniquely identify a request. Can be used for troubleshooting.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>AAAAAA-BBBB-CCCCC-DDDD-EEEEEEEE****</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -159,7 +174,10 @@ public class UpdateImageLibFreeInspectionResponseBody extends TeaModel {
         }
 
         /**
-         * Success.
+         * <p>Success indicator.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>True</p>
          */
         public Builder success(Boolean success) {
             this.success = success;

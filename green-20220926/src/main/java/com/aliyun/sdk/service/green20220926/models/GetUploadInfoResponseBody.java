@@ -210,7 +210,10 @@ public class GetUploadInfoResponseBody extends TeaModel {
         } 
 
         /**
-         * AccessId.
+         * <p>Upload authorization ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>LTAI5t9HM*****EXQmw3DVH</p>
          */
         public Builder accessId(String accessId) {
             this.accessId = accessId;
@@ -218,7 +221,10 @@ public class GetUploadInfoResponseBody extends TeaModel {
         }
 
         /**
-         * Code.
+         * <p>Error code, consistent with HTTP status.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>200</p>
          */
         public Builder code(Integer code) {
             this.code = code;
@@ -226,7 +232,10 @@ public class GetUploadInfoResponseBody extends TeaModel {
         }
 
         /**
-         * Expire.
+         * <p>In seconds.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>900</p>
          */
         public Builder expire(Long expire) {
             this.expire = expire;
@@ -234,7 +243,10 @@ public class GetUploadInfoResponseBody extends TeaModel {
         }
 
         /**
-         * Folder.
+         * <p>Folder name.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>image/upload/xxx</p>
          */
         public Builder folder(String folder) {
             this.folder = folder;
@@ -242,7 +254,10 @@ public class GetUploadInfoResponseBody extends TeaModel {
         }
 
         /**
-         * Host.
+         * <p>Upload host.</p>
+         * 
+         * <strong>example:</strong>
+         * <p><a href="https://oss-cip-shanghai.oss-cn-shanghai.aliyuncs.com">https://oss-cip-shanghai.oss-cn-shanghai.aliyuncs.com</a></p>
          */
         public Builder host(String host) {
             this.host = host;
@@ -250,7 +265,10 @@ public class GetUploadInfoResponseBody extends TeaModel {
         }
 
         /**
-         * HttpStatusCode.
+         * <p>HTTP status code.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>200</p>
          */
         public Builder httpStatusCode(Integer httpStatusCode) {
             this.httpStatusCode = httpStatusCode;
@@ -258,7 +276,10 @@ public class GetUploadInfoResponseBody extends TeaModel {
         }
 
         /**
-         * Key.
+         * <p>Key used for uploading files.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>image/upload/xxx</p>
          */
         public Builder key(String key) {
             this.key = key;
@@ -266,7 +287,10 @@ public class GetUploadInfoResponseBody extends TeaModel {
         }
 
         /**
-         * Msg.
+         * <p>Further description of the error code.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>OK</p>
          */
         public Builder msg(String msg) {
             this.msg = msg;
@@ -274,7 +298,10 @@ public class GetUploadInfoResponseBody extends TeaModel {
         }
 
         /**
-         * Name.
+         * <p>Used for front-end image upload.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>测试</p>
          */
         public Builder name(String name) {
             this.name = name;
@@ -282,7 +309,10 @@ public class GetUploadInfoResponseBody extends TeaModel {
         }
 
         /**
-         * Policy.
+         * <p>OSS upload file Policy.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>xxxx</p>
          */
         public Builder policy(String policy) {
             this.policy = policy;
@@ -290,7 +320,10 @@ public class GetUploadInfoResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * <p>ID assigned by the backend to uniquely identify a request. Can be used for troubleshooting.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>AAAAAA-BBBB-CCCCC-DDDD-EEEEEEEE****</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -298,7 +331,10 @@ public class GetUploadInfoResponseBody extends TeaModel {
         }
 
         /**
-         * Signature.
+         * <p>Upload signature information.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>iyu7VHblYj+mEF9p46cdGOlNPAw=</p>
          */
         public Builder signature(String signature) {
             this.signature = signature;
@@ -306,7 +342,10 @@ public class GetUploadInfoResponseBody extends TeaModel {
         }
 
         /**
-         * Success.
+         * <p>Success indicator.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>True</p>
          */
         public Builder success(Boolean success) {
             this.success = success;

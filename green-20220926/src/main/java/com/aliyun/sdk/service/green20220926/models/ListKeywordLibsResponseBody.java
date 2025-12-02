@@ -106,7 +106,10 @@ public class ListKeywordLibsResponseBody extends TeaModel {
         } 
 
         /**
-         * Code.
+         * <p>Error code.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>200</p>
          */
         public Builder code(Integer code) {
             this.code = code;
@@ -114,7 +117,7 @@ public class ListKeywordLibsResponseBody extends TeaModel {
         }
 
         /**
-         * Data.
+         * <p>Returned data.</p>
          */
         public Builder data(java.util.List<Data> data) {
             this.data = data;
@@ -122,7 +125,10 @@ public class ListKeywordLibsResponseBody extends TeaModel {
         }
 
         /**
-         * Msg.
+         * <p>Further description of the error code.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>OK</p>
          */
         public Builder msg(String msg) {
             this.msg = msg;
@@ -130,7 +136,10 @@ public class ListKeywordLibsResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * <p>ID assigned by the backend to uniquely identify a request. Can be used for troubleshooting.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>AAAAAA-BBBB-CCCCC-DDDD-EEEEEEEE****</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -138,7 +147,10 @@ public class ListKeywordLibsResponseBody extends TeaModel {
         }
 
         /**
-         * Success.
+         * <p>Success indicator.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>True</p>
          */
         public Builder success(Boolean success) {
             this.success = success;
@@ -256,7 +268,10 @@ public class ListKeywordLibsResponseBody extends TeaModel {
             } 
 
             /**
-             * GmtModified.
+             * <p>Modification time.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2022-11-30 16:30:29</p>
              */
             public Builder gmtModified(String gmtModified) {
                 this.gmtModified = gmtModified;
@@ -264,7 +279,10 @@ public class ListKeywordLibsResponseBody extends TeaModel {
             }
 
             /**
-             * KeywordCount.
+             * <p>Number of keywords.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>10</p>
              */
             public Builder keywordCount(String keywordCount) {
                 this.keywordCount = keywordCount;
@@ -272,7 +290,10 @@ public class ListKeywordLibsResponseBody extends TeaModel {
             }
 
             /**
-             * LibId.
+             * <p>Library ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>custom_xxxxx</p>
              */
             public Builder libId(String libId) {
                 this.libId = libId;
@@ -280,7 +301,10 @@ public class ListKeywordLibsResponseBody extends TeaModel {
             }
 
             /**
-             * LibName.
+             * <p>Library name.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>测试</p>
              */
             public Builder libName(String libName) {
                 this.libName = libName;
@@ -288,7 +312,10 @@ public class ListKeywordLibsResponseBody extends TeaModel {
             }
 
             /**
-             * ServiceCodes.
+             * <p>Service codes.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>service1,service2</p>
              */
             public Builder serviceCodes(String serviceCodes) {
                 this.serviceCodes = serviceCodes;
@@ -296,7 +323,7 @@ public class ListKeywordLibsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>UID。</p>
+             * <p>UID.</p>
              * 
              * <strong>example:</strong>
              * <p>19964*****086772</p>

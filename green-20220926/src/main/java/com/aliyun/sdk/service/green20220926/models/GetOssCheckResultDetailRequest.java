@@ -143,7 +143,10 @@ public class GetOssCheckResultDetailRequest extends Request {
         } 
 
         /**
-         * Bucket.
+         * <p>Bucket name.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>oss-tmp</p>
          */
         public Builder bucket(String bucket) {
             this.putQueryParameter("Bucket", bucket);
@@ -152,7 +155,10 @@ public class GetOssCheckResultDetailRequest extends Request {
         }
 
         /**
-         * MediaType.
+         * <p>Media type.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder mediaType(Integer mediaType) {
             this.putQueryParameter("MediaType", mediaType);
@@ -161,7 +167,10 @@ public class GetOssCheckResultDetailRequest extends Request {
         }
 
         /**
-         * Object.
+         * <p>Object name.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1748396909030.jpg</p>
          */
         public Builder object(String object) {
             this.putQueryParameter("Object", object);
@@ -170,7 +179,10 @@ public class GetOssCheckResultDetailRequest extends Request {
         }
 
         /**
-         * ParentTaskId.
+         * <p>Parent task ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>P_RZQ66T</p>
          */
         public Builder parentTaskId(String parentTaskId) {
             this.putQueryParameter("ParentTaskId", parentTaskId);
@@ -179,7 +191,10 @@ public class GetOssCheckResultDetailRequest extends Request {
         }
 
         /**
-         * QueryRequestId.
+         * <p>Query request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>62E97001-1255-50A9-8E1E-4FD05473D952</p>
          */
         public Builder queryRequestId(String queryRequestId) {
             this.putQueryParameter("QueryRequestId", queryRequestId);
@@ -188,7 +203,10 @@ public class GetOssCheckResultDetailRequest extends Request {
         }
 
         /**
-         * RegionId.
+         * <p>Region ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-shanghai</p>
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);
@@ -197,7 +215,10 @@ public class GetOssCheckResultDetailRequest extends Request {
         }
 
         /**
-         * ServiceCode.
+         * <p>Service code.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>audio_media_detection_01</p>
          */
         public Builder serviceCode(String serviceCode) {
             this.putQueryParameter("ServiceCode", serviceCode);

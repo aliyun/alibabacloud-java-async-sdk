@@ -143,7 +143,10 @@ public class GetTextScanResultRequest extends Request {
         } 
 
         /**
-         * CurrentPage.
+         * <p>Current page number.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder currentPage(Integer currentPage) {
             this.putBodyParameter("CurrentPage", currentPage);
@@ -152,7 +155,10 @@ public class GetTextScanResultRequest extends Request {
         }
 
         /**
-         * EndDate.
+         * <p>End date and time.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2023-08-24 10:01:55</p>
          */
         public Builder endDate(String endDate) {
             this.putBodyParameter("EndDate", endDate);
@@ -161,7 +167,10 @@ public class GetTextScanResultRequest extends Request {
         }
 
         /**
-         * PageSize.
+         * <p>Page size.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10</p>
          */
         public Builder pageSize(Integer pageSize) {
             this.putBodyParameter("PageSize", pageSize);
@@ -170,7 +179,7 @@ public class GetTextScanResultRequest extends Request {
         }
 
         /**
-         * Query.
+         * <p>Search criteria.</p>
          */
         public Builder query(java.util.Map<String, String> query) {
             String queryShrink = shrink(query, "Query", "json");
@@ -180,7 +189,10 @@ public class GetTextScanResultRequest extends Request {
         }
 
         /**
-         * RegionId.
+         * <p>Region ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-shanghai</p>
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);
@@ -189,7 +201,7 @@ public class GetTextScanResultRequest extends Request {
         }
 
         /**
-         * Sort.
+         * <p>Sort fields.</p>
          */
         public Builder sort(java.util.Map<String, String> sort) {
             String sortShrink = shrink(sort, "Sort", "json");
@@ -199,7 +211,10 @@ public class GetTextScanResultRequest extends Request {
         }
 
         /**
-         * StartDate.
+         * <p>Start date and time.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2023-08-11 09:00:19</p>
          */
         public Builder startDate(String startDate) {
             this.putBodyParameter("StartDate", startDate);

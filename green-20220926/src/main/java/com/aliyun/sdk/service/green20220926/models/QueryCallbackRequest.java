@@ -88,7 +88,10 @@ public class QueryCallbackRequest extends Request {
         } 
 
         /**
-         * CheckForOss.
+         * <p>Query data under the OSS detection task.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder checkForOss(Boolean checkForOss) {
             this.putBodyParameter("CheckForOss", checkForOss);
@@ -97,6 +100,7 @@ public class QueryCallbackRequest extends Request {
         }
 
         /**
+         * <p>Primary key ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -109,7 +113,10 @@ public class QueryCallbackRequest extends Request {
         }
 
         /**
-         * RegionId.
+         * <p>Region ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-shanghai</p>
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);

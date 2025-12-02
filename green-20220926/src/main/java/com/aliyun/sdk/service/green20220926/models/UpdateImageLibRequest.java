@@ -115,7 +115,10 @@ public class UpdateImageLibRequest extends Request {
         } 
 
         /**
-         * Comment.
+         * <p>Comment information for the library.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>备注</p>
          */
         public Builder comment(String comment) {
             this.putBodyParameter("Comment", comment);
@@ -124,7 +127,10 @@ public class UpdateImageLibRequest extends Request {
         }
 
         /**
-         * FreeInspection.
+         * <p>Exemption from review configuration.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>0</p>
          */
         public Builder freeInspection(Integer freeInspection) {
             this.putBodyParameter("FreeInspection", freeInspection);
@@ -133,7 +139,10 @@ public class UpdateImageLibRequest extends Request {
         }
 
         /**
-         * LibId.
+         * <p>Library ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>custom_xxxx</p>
          */
         public Builder libId(String libId) {
             this.putBodyParameter("LibId", libId);
@@ -142,7 +151,10 @@ public class UpdateImageLibRequest extends Request {
         }
 
         /**
-         * LibName.
+         * <p>Library name.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>测试图库</p>
          */
         public Builder libName(String libName) {
             this.putBodyParameter("LibName", libName);
@@ -151,7 +163,10 @@ public class UpdateImageLibRequest extends Request {
         }
 
         /**
-         * RegionId.
+         * <p>Region ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-shanghai</p>
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);

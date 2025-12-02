@@ -73,7 +73,10 @@ public class DeleteOnlineTestRequest extends Request {
         } 
 
         /**
-         * RegionId.
+         * <p>Region ID</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-shanghai</p>
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);
@@ -82,7 +85,10 @@ public class DeleteOnlineTestRequest extends Request {
         }
 
         /**
-         * ResourceType.
+         * <p>Resource type.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>image</p>
          */
         public Builder resourceType(String resourceType) {
             this.putQueryParameter("ResourceType", resourceType);

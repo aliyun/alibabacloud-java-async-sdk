@@ -101,7 +101,10 @@ public class DeleteKeywordRequest extends Request {
         } 
 
         /**
-         * KeywordIdList.
+         * <p>The ids&quot; list of keywords.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>[6715465]</p>
          */
         public Builder keywordIdList(String keywordIdList) {
             this.putBodyParameter("KeywordIdList", keywordIdList);
@@ -110,7 +113,10 @@ public class DeleteKeywordRequest extends Request {
         }
 
         /**
-         * KeywordIds.
+         * <p>The ids of keywords.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>[16754493]</p>
          */
         public Builder keywordIds(String keywordIds) {
             this.putBodyParameter("KeywordIds", keywordIds);
@@ -119,7 +125,10 @@ public class DeleteKeywordRequest extends Request {
         }
 
         /**
-         * LibId.
+         * <p>Library id</p>
+         * 
+         * <strong>example:</strong>
+         * <p>customxx_xxxx</p>
          */
         public Builder libId(String libId) {
             this.putBodyParameter("LibId", libId);
@@ -128,7 +137,10 @@ public class DeleteKeywordRequest extends Request {
         }
 
         /**
-         * RegionId.
+         * <p>Region ID</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-shanghai</p>
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);

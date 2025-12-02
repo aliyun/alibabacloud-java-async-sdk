@@ -106,7 +106,10 @@ public class ListOssCheckResultResponseBody extends TeaModel {
         } 
 
         /**
-         * CurrentPage.
+         * <p>Current page number.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder currentPage(Integer currentPage) {
             this.currentPage = currentPage;
@@ -114,7 +117,7 @@ public class ListOssCheckResultResponseBody extends TeaModel {
         }
 
         /**
-         * Items.
+         * <p>Data of the current page.</p>
          */
         public Builder items(java.util.List<Items> items) {
             this.items = items;
@@ -122,7 +125,10 @@ public class ListOssCheckResultResponseBody extends TeaModel {
         }
 
         /**
-         * PageSize.
+         * <p>Page size.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10</p>
          */
         public Builder pageSize(Integer pageSize) {
             this.pageSize = pageSize;
@@ -130,7 +136,10 @@ public class ListOssCheckResultResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * <p>ID assigned by the backend, used to uniquely identify a request. Can be used for troubleshooting.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>AAAAAA-BBBB-CCCCC-DDDD-EEEEEEEE****</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -138,7 +147,10 @@ public class ListOssCheckResultResponseBody extends TeaModel {
         }
 
         /**
-         * TotalCount.
+         * <p>Total number of records.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>13</p>
          */
         public Builder totalCount(Long totalCount) {
             this.totalCount = totalCount;
@@ -464,7 +476,10 @@ public class ListOssCheckResultResponseBody extends TeaModel {
             } 
 
             /**
-             * Bucket.
+             * <p>Storage space.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>tmp</p>
              */
             public Builder bucket(String bucket) {
                 this.bucket = bucket;
@@ -472,7 +487,10 @@ public class ListOssCheckResultResponseBody extends TeaModel {
             }
 
             /**
-             * Code.
+             * <p>Error code, consistent with HTTP status.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>200</p>
              */
             public Builder code(String code) {
                 this.code = code;
@@ -480,7 +498,10 @@ public class ListOssCheckResultResponseBody extends TeaModel {
             }
 
             /**
-             * ContentType.
+             * <p>Audio and video detection type.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>audio</p>
              */
             public Builder contentType(String contentType) {
                 this.contentType = contentType;
@@ -488,7 +509,10 @@ public class ListOssCheckResultResponseBody extends TeaModel {
             }
 
             /**
-             * CopyFrom.
+             * <p>Primary service.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>audio_media_detection</p>
              */
             public Builder copyFrom(String copyFrom) {
                 this.copyFrom = copyFrom;
@@ -496,7 +520,10 @@ public class ListOssCheckResultResponseBody extends TeaModel {
             }
 
             /**
-             * FreezeStatus.
+             * <p>Freeze status.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>FREEZED</p>
              */
             public Builder freezeStatus(String freezeStatus) {
                 this.freezeStatus = freezeStatus;
@@ -504,7 +531,10 @@ public class ListOssCheckResultResponseBody extends TeaModel {
             }
 
             /**
-             * FreezeType.
+             * <p>Freeze type.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>ACL</p>
              */
             public Builder freezeType(String freezeType) {
                 this.freezeType = freezeType;
@@ -512,7 +542,10 @@ public class ListOssCheckResultResponseBody extends TeaModel {
             }
 
             /**
-             * ImageUrl.
+             * <p>Image URL address.</p>
+             * 
+             * <strong>example:</strong>
+             * <p><a href="http://www.aliyuncs.com/test.jpg">http://www.aliyuncs.com/test.jpg</a></p>
              */
             public Builder imageUrl(String imageUrl) {
                 this.imageUrl = imageUrl;
@@ -520,7 +553,10 @@ public class ListOssCheckResultResponseBody extends TeaModel {
             }
 
             /**
-             * IsCopy.
+             * <p>Whether to copy.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>true</p>
              */
             public Builder isCopy(Boolean isCopy) {
                 this.isCopy = isCopy;
@@ -528,7 +564,10 @@ public class ListOssCheckResultResponseBody extends TeaModel {
             }
 
             /**
-             * JobName.
+             * <p>Job name.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>dhT20X2310</p>
              */
             public Builder jobName(String jobName) {
                 this.jobName = jobName;
@@ -536,7 +575,7 @@ public class ListOssCheckResultResponseBody extends TeaModel {
             }
 
             /**
-             * Labels.
+             * <p>Image labels.</p>
              */
             public Builder labels(java.util.List<String> labels) {
                 this.labels = labels;
@@ -544,7 +583,7 @@ public class ListOssCheckResultResponseBody extends TeaModel {
             }
 
             /**
-             * Labels2.
+             * <p>Text labels.</p>
              */
             public Builder labels2(java.util.List<String> labels2) {
                 this.labels2 = labels2;
@@ -552,7 +591,10 @@ public class ListOssCheckResultResponseBody extends TeaModel {
             }
 
             /**
-             * Md5.
+             * <p>File MD5.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>54416c9b159df4a60ae03c04ccb94cb5</p>
              */
             public Builder md5(String md5) {
                 this.md5 = md5;
@@ -560,7 +602,10 @@ public class ListOssCheckResultResponseBody extends TeaModel {
             }
 
             /**
-             * Msg.
+             * <p>Further description of the error code.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>OK</p>
              */
             public Builder msg(String msg) {
                 this.msg = msg;
@@ -568,7 +613,10 @@ public class ListOssCheckResultResponseBody extends TeaModel {
             }
 
             /**
-             * Object.
+             * <p>Object name.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1713014531569_958.png.jpeg</p>
              */
             public Builder object(String object) {
                 this.object = object;
@@ -576,7 +624,10 @@ public class ListOssCheckResultResponseBody extends TeaModel {
             }
 
             /**
-             * RiskLevel.
+             * <p>Image risk level</p>
+             * 
+             * <strong>example:</strong>
+             * <p>high</p>
              */
             public Builder riskLevel(String riskLevel) {
                 this.riskLevel = riskLevel;
@@ -584,7 +635,10 @@ public class ListOssCheckResultResponseBody extends TeaModel {
             }
 
             /**
-             * RiskLevel0.
+             * <p>Overall risk level</p>
+             * 
+             * <strong>example:</strong>
+             * <p>low</p>
              */
             public Builder riskLevel0(String riskLevel0) {
                 this.riskLevel0 = riskLevel0;
@@ -592,7 +646,10 @@ public class ListOssCheckResultResponseBody extends TeaModel {
             }
 
             /**
-             * RiskLevel2.
+             * <p>Text risk level</p>
+             * 
+             * <strong>example:</strong>
+             * <p>none</p>
              */
             public Builder riskLevel2(String riskLevel2) {
                 this.riskLevel2 = riskLevel2;
@@ -600,7 +657,10 @@ public class ListOssCheckResultResponseBody extends TeaModel {
             }
 
             /**
-             * ScanResult.
+             * <p>Details of the result.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>{}</p>
              */
             public Builder scanResult(String scanResult) {
                 this.scanResult = scanResult;
@@ -608,7 +668,10 @@ public class ListOssCheckResultResponseBody extends TeaModel {
             }
 
             /**
-             * ServiceCode.
+             * <p>Service code.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>audio_media_detection_01</p>
              */
             public Builder serviceCode(String serviceCode) {
                 this.serviceCode = serviceCode;
@@ -616,7 +679,10 @@ public class ListOssCheckResultResponseBody extends TeaModel {
             }
 
             /**
-             * ServiceName.
+             * <p>Service name.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>服务名称</p>
              */
             public Builder serviceName(String serviceName) {
                 this.serviceName = serviceName;
@@ -624,7 +690,10 @@ public class ListOssCheckResultResponseBody extends TeaModel {
             }
 
             /**
-             * TaskId.
+             * <p>Task ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>EP6TI7_au_Zo25ITvCbkocNuF801QOQX</p>
              */
             public Builder taskId(String taskId) {
                 this.taskId = taskId;
@@ -632,7 +701,10 @@ public class ListOssCheckResultResponseBody extends TeaModel {
             }
 
             /**
-             * Url.
+             * <p>Task URL.</p>
+             * 
+             * <strong>example:</strong>
+             * <p><a href="http://www.aliyuncs.com/test.mp3">http://www.aliyuncs.com/test.mp3</a></p>
              */
             public Builder url(String url) {
                 this.url = url;

@@ -106,7 +106,10 @@ public class QueryCallbackByPageResponseBody extends TeaModel {
         } 
 
         /**
-         * CurrentPage.
+         * <p>Current page number.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder currentPage(Integer currentPage) {
             this.currentPage = currentPage;
@@ -114,7 +117,7 @@ public class QueryCallbackByPageResponseBody extends TeaModel {
         }
 
         /**
-         * Items.
+         * <p>Data of the current page.</p>
          */
         public Builder items(java.util.List<Items> items) {
             this.items = items;
@@ -122,7 +125,10 @@ public class QueryCallbackByPageResponseBody extends TeaModel {
         }
 
         /**
-         * PageSize.
+         * <p>Page size.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10</p>
          */
         public Builder pageSize(Integer pageSize) {
             this.pageSize = pageSize;
@@ -130,7 +136,10 @@ public class QueryCallbackByPageResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * <p>ID assigned by the backend, used to uniquely identify a request. Can be used for troubleshooting.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>AAAAAA-BBBB-CCCCC-DDDD-EEEEEEEE****</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -138,7 +147,10 @@ public class QueryCallbackByPageResponseBody extends TeaModel {
         }
 
         /**
-         * TotalCount.
+         * <p>Total number of records.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10</p>
          */
         public Builder totalCount(Long totalCount) {
             this.totalCount = totalCount;
@@ -295,7 +307,10 @@ public class QueryCallbackByPageResponseBody extends TeaModel {
             } 
 
             /**
-             * CryptType.
+             * <p>Encryption algorithm.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>SHA256</p>
              */
             public Builder cryptType(String cryptType) {
                 this.cryptType = cryptType;
@@ -303,7 +318,10 @@ public class QueryCallbackByPageResponseBody extends TeaModel {
             }
 
             /**
-             * GmtCreate.
+             * <p>Creation time.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2024-06-03 15:20:14</p>
              */
             public Builder gmtCreate(String gmtCreate) {
                 this.gmtCreate = gmtCreate;
@@ -311,7 +329,10 @@ public class QueryCallbackByPageResponseBody extends TeaModel {
             }
 
             /**
-             * GmtModified.
+             * <p>Modification time.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2024-06-03 15:20:14</p>
              */
             public Builder gmtModified(String gmtModified) {
                 this.gmtModified = gmtModified;
@@ -319,7 +340,10 @@ public class QueryCallbackByPageResponseBody extends TeaModel {
             }
 
             /**
-             * Id.
+             * <p>Primary key ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1697</p>
              */
             public Builder id(Long id) {
                 this.id = id;
@@ -327,7 +351,10 @@ public class QueryCallbackByPageResponseBody extends TeaModel {
             }
 
             /**
-             * Name.
+             * <p>Name.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>消息通知</p>
              */
             public Builder name(String name) {
                 this.name = name;
@@ -335,7 +362,10 @@ public class QueryCallbackByPageResponseBody extends TeaModel {
             }
 
             /**
-             * Scope.
+             * <p>Result scope.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>all</p>
              */
             public Builder scope(String scope) {
                 this.scope = scope;
@@ -343,7 +373,7 @@ public class QueryCallbackByPageResponseBody extends TeaModel {
             }
 
             /**
-             * <p>Seed。</p>
+             * <p>Seed.</p>
              * 
              * <strong>example:</strong>
              * <p>cb6gYS8GXj4Vn4Y4FN0Y8R5M-1x46Mq</p>
@@ -354,7 +384,7 @@ public class QueryCallbackByPageResponseBody extends TeaModel {
             }
 
             /**
-             * <p>UID。</p>
+             * <p>UID.</p>
              * 
              * <strong>example:</strong>
              * <p>12161*****398900</p>
@@ -365,7 +395,10 @@ public class QueryCallbackByPageResponseBody extends TeaModel {
             }
 
             /**
-             * Url.
+             * <p>Callback URL.</p>
+             * 
+             * <strong>example:</strong>
+             * <p><a href="https://console.aliyun.com/">https://console.aliyun.com/</a></p>
              */
             public Builder url(String url) {
                 this.url = url;

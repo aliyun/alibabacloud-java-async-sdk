@@ -87,7 +87,10 @@ public class DeleteImagesFromLibRequest extends Request {
         } 
 
         /**
-         * ImageIds.
+         * <p>The IDs of the images.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>[158794]</p>
          */
         public Builder imageIds(String imageIds) {
             this.putBodyParameter("ImageIds", imageIds);
@@ -96,7 +99,10 @@ public class DeleteImagesFromLibRequest extends Request {
         }
 
         /**
-         * LibId.
+         * <p>Library ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>customxx_xxxx</p>
          */
         public Builder libId(String libId) {
             this.putBodyParameter("LibId", libId);
@@ -105,7 +111,10 @@ public class DeleteImagesFromLibRequest extends Request {
         }
 
         /**
-         * RegionId.
+         * <p>Region ID</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-shanghai</p>
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);

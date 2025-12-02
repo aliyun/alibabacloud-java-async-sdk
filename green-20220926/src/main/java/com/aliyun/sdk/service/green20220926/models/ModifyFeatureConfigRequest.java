@@ -143,7 +143,7 @@ public class ModifyFeatureConfigRequest extends Request {
         } 
 
         /**
-         * <p>Configuration, in JSON format</p>
+         * <p>query</p>
          * 
          * <strong>example:</strong>
          * <p>{}</p>
@@ -155,7 +155,7 @@ public class ModifyFeatureConfigRequest extends Request {
         }
 
         /**
-         * <p>Label meaning</p>
+         * <p>query</p>
          * 
          * <strong>example:</strong>
          * <p>标签2</p>
@@ -167,7 +167,7 @@ public class ModifyFeatureConfigRequest extends Request {
         }
 
         /**
-         * <p>Label value, customer-defined</p>
+         * <p>query</p>
          * 
          * <strong>example:</strong>
          * <p><strong>config</strong></p>
@@ -179,7 +179,7 @@ public class ModifyFeatureConfigRequest extends Request {
         }
 
         /**
-         * <p>Region</p>
+         * <p>query</p>
          * 
          * <strong>example:</strong>
          * <p>cn-shanghai</p>
@@ -191,7 +191,7 @@ public class ModifyFeatureConfigRequest extends Request {
         }
 
         /**
-         * <p>Resource type.</p>
+         * <p>query</p>
          * 
          * <strong>example:</strong>
          * <p>text</p>
@@ -203,7 +203,7 @@ public class ModifyFeatureConfigRequest extends Request {
         }
 
         /**
-         * <p>Service code.</p>
+         * <p>System-defined parameter. Value: <strong>ModifyFeatureConfig</strong>.</p>
          * 
          * <strong>example:</strong>
          * <p>llm_query_moderation</p>
@@ -215,7 +215,7 @@ public class ModifyFeatureConfigRequest extends Request {
         }
 
         /**
-         * <p>Type</p>
+         * <p>query</p>
          * 
          * <strong>example:</strong>
          * <p>custom_llm_template</p>

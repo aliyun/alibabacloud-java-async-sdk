@@ -129,7 +129,10 @@ public class ListKeywordsRequest extends Request {
         } 
 
         /**
-         * CurrentPage.
+         * <p>Current page number.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder currentPage(Integer currentPage) {
             this.putBodyParameter("CurrentPage", currentPage);
@@ -138,7 +141,10 @@ public class ListKeywordsRequest extends Request {
         }
 
         /**
-         * LibId.
+         * <p>Library ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>custom_xxxx</p>
          */
         public Builder libId(String libId) {
             this.putBodyParameter("LibId", libId);
@@ -147,7 +153,10 @@ public class ListKeywordsRequest extends Request {
         }
 
         /**
-         * PageSize.
+         * <p>Page size.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10</p>
          */
         public Builder pageSize(Integer pageSize) {
             this.putBodyParameter("PageSize", pageSize);
@@ -156,7 +165,10 @@ public class ListKeywordsRequest extends Request {
         }
 
         /**
-         * RegionId.
+         * <p>Region ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-shanghai</p>
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);
@@ -165,7 +177,7 @@ public class ListKeywordsRequest extends Request {
         }
 
         /**
-         * Sort.
+         * <p>Sort field.</p>
          */
         public Builder sort(java.util.Map<String, String> sort) {
             String sortShrink = shrink(sort, "Sort", "json");
@@ -175,7 +187,10 @@ public class ListKeywordsRequest extends Request {
         }
 
         /**
-         * Word.
+         * <p>Keyword.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>测试词</p>
          */
         public Builder word(String word) {
             this.putBodyParameter("Word", word);

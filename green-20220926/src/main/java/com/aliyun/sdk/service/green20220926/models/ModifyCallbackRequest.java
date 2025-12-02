@@ -130,7 +130,10 @@ public class ModifyCallbackRequest extends Request {
         } 
 
         /**
-         * CryptType.
+         * <p>Encryption algorithm.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>SHA256</p>
          */
         public Builder cryptType(String cryptType) {
             this.putBodyParameter("CryptType", cryptType);
@@ -139,6 +142,7 @@ public class ModifyCallbackRequest extends Request {
         }
 
         /**
+         * <p>Primary key ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -151,7 +155,10 @@ public class ModifyCallbackRequest extends Request {
         }
 
         /**
-         * Name.
+         * <p>Name.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>回调通知</p>
          */
         public Builder name(String name) {
             this.putBodyParameter("Name", name);
@@ -160,7 +167,10 @@ public class ModifyCallbackRequest extends Request {
         }
 
         /**
-         * RegionId.
+         * <p>Region ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-shanghai</p>
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);
@@ -169,7 +179,10 @@ public class ModifyCallbackRequest extends Request {
         }
 
         /**
-         * Scope.
+         * <p>Result scope.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>all</p>
          */
         public Builder scope(String scope) {
             this.putBodyParameter("Scope", scope);
@@ -178,7 +191,10 @@ public class ModifyCallbackRequest extends Request {
         }
 
         /**
-         * Url.
+         * <p>Callback URL.</p>
+         * 
+         * <strong>example:</strong>
+         * <p><a href="https://www.aliyuncs.com">https://www.aliyuncs.com</a></p>
          */
         public Builder url(String url) {
             this.putBodyParameter("Url", url);

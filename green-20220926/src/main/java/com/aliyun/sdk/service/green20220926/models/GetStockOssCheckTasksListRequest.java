@@ -171,7 +171,10 @@ public class GetStockOssCheckTasksListRequest extends Request {
         } 
 
         /**
-         * CurrentPage.
+         * <p>Current page number.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder currentPage(Integer currentPage) {
             this.putBodyParameter("CurrentPage", currentPage);
@@ -180,7 +183,10 @@ public class GetStockOssCheckTasksListRequest extends Request {
         }
 
         /**
-         * EndTime.
+         * <p>End time.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2023-06-18 02:08:00</p>
          */
         public Builder endTime(String endTime) {
             this.putBodyParameter("EndTime", endTime);
@@ -189,7 +195,10 @@ public class GetStockOssCheckTasksListRequest extends Request {
         }
 
         /**
-         * IsInc.
+         * <p>Whether it is a scheduled scan task.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>false</p>
          */
         public Builder isInc(Boolean isInc) {
             this.putQueryParameter("IsInc", isInc);
@@ -198,7 +207,10 @@ public class GetStockOssCheckTasksListRequest extends Request {
         }
 
         /**
-         * MediaType.
+         * <p>Media type.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>image</p>
          */
         public Builder mediaType(Integer mediaType) {
             this.putBodyParameter("MediaType", mediaType);
@@ -207,7 +219,10 @@ public class GetStockOssCheckTasksListRequest extends Request {
         }
 
         /**
-         * PageSize.
+         * <p>Page size.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10</p>
          */
         public Builder pageSize(Integer pageSize) {
             this.putBodyParameter("PageSize", pageSize);
@@ -216,7 +231,10 @@ public class GetStockOssCheckTasksListRequest extends Request {
         }
 
         /**
-         * RegionId.
+         * <p>Region ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-shanghai</p>
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);
@@ -225,7 +243,7 @@ public class GetStockOssCheckTasksListRequest extends Request {
         }
 
         /**
-         * Sort.
+         * <p>Sort field.</p>
          */
         public Builder sort(java.util.Map<String, String> sort) {
             String sortShrink = shrink(sort, "Sort", "json");
@@ -235,7 +253,10 @@ public class GetStockOssCheckTasksListRequest extends Request {
         }
 
         /**
-         * StartTime.
+         * <p>Start time.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2023-06-17 02:08:00</p>
          */
         public Builder startTime(String startTime) {
             this.putBodyParameter("StartTime", startTime);
@@ -244,7 +265,10 @@ public class GetStockOssCheckTasksListRequest extends Request {
         }
 
         /**
-         * TaskType.
+         * <p>Task type.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>batch</p>
          */
         public Builder taskType(String taskType) {
             this.putQueryParameter("TaskType", taskType);

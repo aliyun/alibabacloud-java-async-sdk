@@ -73,7 +73,10 @@ public class GetUserBuyStatusRequest extends Request {
         } 
 
         /**
-         * CommodityCode.
+         * <p>Commodity code.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>lvwang_public_cn</p>
          */
         public Builder commodityCode(String commodityCode) {
             this.putBodyParameter("CommodityCode", commodityCode);
@@ -82,7 +85,10 @@ public class GetUserBuyStatusRequest extends Request {
         }
 
         /**
-         * RegionId.
+         * <p>Region ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-shanghai</p>
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);

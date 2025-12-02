@@ -157,7 +157,10 @@ public class ExportScanResultRequest extends Request {
         } 
 
         /**
-         * CurrentPage.
+         * <p>Current page number.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder currentPage(Integer currentPage) {
             this.putBodyParameter("CurrentPage", currentPage);
@@ -166,7 +169,10 @@ public class ExportScanResultRequest extends Request {
         }
 
         /**
-         * EndDate.
+         * <p>End time of the query, in the format yyyy-MM-dd HH:mm:ss.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2024-03-11 10:00:00</p>
          */
         public Builder endDate(String endDate) {
             this.putBodyParameter("EndDate", endDate);
@@ -175,7 +181,10 @@ public class ExportScanResultRequest extends Request {
         }
 
         /**
-         * PageSize.
+         * <p>Page size.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>20</p>
          */
         public Builder pageSize(Integer pageSize) {
             this.putBodyParameter("PageSize", pageSize);
@@ -184,7 +193,7 @@ public class ExportScanResultRequest extends Request {
         }
 
         /**
-         * Query.
+         * <p>Query content.</p>
          */
         public Builder query(java.util.Map<String, String> query) {
             String queryShrink = shrink(query, "Query", "json");
@@ -194,7 +203,10 @@ public class ExportScanResultRequest extends Request {
         }
 
         /**
-         * RegionId.
+         * <p>Region ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-shanghai</p>
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);
@@ -203,7 +215,10 @@ public class ExportScanResultRequest extends Request {
         }
 
         /**
-         * ResourceType.
+         * <p>Resource type.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>text</p>
          */
         public Builder resourceType(String resourceType) {
             this.putBodyParameter("ResourceType", resourceType);
@@ -212,7 +227,7 @@ public class ExportScanResultRequest extends Request {
         }
 
         /**
-         * Sort.
+         * <p>Sort fields.</p>
          */
         public Builder sort(java.util.Map<String, String> sort) {
             String sortShrink = shrink(sort, "Sort", "json");
@@ -222,7 +237,10 @@ public class ExportScanResultRequest extends Request {
         }
 
         /**
-         * StartDate.
+         * <p>Start time of the query, in the format yyyy-MM-dd HH:mm:ss.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2024-03-10 10:00:00</p>
          */
         public Builder startDate(String startDate) {
             this.putBodyParameter("StartDate", startDate);

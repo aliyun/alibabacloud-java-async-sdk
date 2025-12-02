@@ -74,6 +74,7 @@ public class DeleteCallbackRequest extends Request {
         } 
 
         /**
+         * <p>callback id.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -86,7 +87,10 @@ public class DeleteCallbackRequest extends Request {
         }
 
         /**
-         * RegionId.
+         * <p>Region ID</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-shanghai</p>
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);

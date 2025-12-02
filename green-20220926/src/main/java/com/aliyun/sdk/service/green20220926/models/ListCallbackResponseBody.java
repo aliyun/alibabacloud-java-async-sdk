@@ -67,7 +67,7 @@ public class ListCallbackResponseBody extends TeaModel {
         } 
 
         /**
-         * Data.
+         * <p>Returned data.</p>
          */
         public Builder data(java.util.List<Data> data) {
             this.data = data;
@@ -75,7 +75,10 @@ public class ListCallbackResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * <p>Backend-assigned ID, used to uniquely identify a request. Can be used for troubleshooting.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>AAAAAA-BBBB-CCCCC-DDDD-EEEEEEEE****</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -232,7 +235,10 @@ public class ListCallbackResponseBody extends TeaModel {
             } 
 
             /**
-             * CryptType.
+             * <p>Encryption algorithm.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>SHA256</p>
              */
             public Builder cryptType(String cryptType) {
                 this.cryptType = cryptType;
@@ -240,7 +246,10 @@ public class ListCallbackResponseBody extends TeaModel {
             }
 
             /**
-             * GmtCreate.
+             * <p>Creation time.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2024-06-03 15:20:14</p>
              */
             public Builder gmtCreate(String gmtCreate) {
                 this.gmtCreate = gmtCreate;
@@ -248,7 +257,10 @@ public class ListCallbackResponseBody extends TeaModel {
             }
 
             /**
-             * GmtModified.
+             * <p>Modification time.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2024-06-03 15:20:14</p>
              */
             public Builder gmtModified(String gmtModified) {
                 this.gmtModified = gmtModified;
@@ -256,7 +268,10 @@ public class ListCallbackResponseBody extends TeaModel {
             }
 
             /**
-             * Id.
+             * <p>Primary key ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>11234</p>
              */
             public Builder id(Long id) {
                 this.id = id;
@@ -264,7 +279,10 @@ public class ListCallbackResponseBody extends TeaModel {
             }
 
             /**
-             * Name.
+             * <p>Name.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>回调通知</p>
              */
             public Builder name(String name) {
                 this.name = name;
@@ -272,7 +290,10 @@ public class ListCallbackResponseBody extends TeaModel {
             }
 
             /**
-             * Scope.
+             * <p>Result scope.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>all</p>
              */
             public Builder scope(String scope) {
                 this.scope = scope;
@@ -280,7 +301,7 @@ public class ListCallbackResponseBody extends TeaModel {
             }
 
             /**
-             * <p>Seed。</p>
+             * <p>Seed.</p>
              * 
              * <strong>example:</strong>
              * <p>cbupVnpBjkgjFxfINMHKkrHS-1zZPUm</p>
@@ -291,7 +312,7 @@ public class ListCallbackResponseBody extends TeaModel {
             }
 
             /**
-             * <p>UID。</p>
+             * <p>UID.</p>
              * 
              * <strong>example:</strong>
              * <p>16537*****831937</p>
@@ -302,7 +323,10 @@ public class ListCallbackResponseBody extends TeaModel {
             }
 
             /**
-             * Url.
+             * <p>Callback URL.</p>
+             * 
+             * <strong>example:</strong>
+             * <p><a href="https://console.aliyun.com/">https://console.aliyun.com/</a></p>
              */
             public Builder url(String url) {
                 this.url = url;

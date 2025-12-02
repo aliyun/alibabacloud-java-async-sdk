@@ -157,7 +157,10 @@ public class ListImagesFromLibRequest extends Request {
         } 
 
         /**
-         * CurrentPage.
+         * <p>Current page number.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder currentPage(Integer currentPage) {
             this.putBodyParameter("CurrentPage", currentPage);
@@ -166,7 +169,10 @@ public class ListImagesFromLibRequest extends Request {
         }
 
         /**
-         * EndDate.
+         * <p>End date.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2023-08-24 10:01:55</p>
          */
         public Builder endDate(String endDate) {
             this.putBodyParameter("EndDate", endDate);
@@ -175,7 +181,10 @@ public class ListImagesFromLibRequest extends Request {
         }
 
         /**
-         * ImgId.
+         * <p>Image ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>112</p>
          */
         public Builder imgId(String imgId) {
             this.putBodyParameter("ImgId", imgId);
@@ -184,7 +193,10 @@ public class ListImagesFromLibRequest extends Request {
         }
 
         /**
-         * LibId.
+         * <p>Gallery ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>custom_xxxx</p>
          */
         public Builder libId(String libId) {
             this.putBodyParameter("LibId", libId);
@@ -193,7 +205,10 @@ public class ListImagesFromLibRequest extends Request {
         }
 
         /**
-         * PageSize.
+         * <p>Page size.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10</p>
          */
         public Builder pageSize(Integer pageSize) {
             this.putBodyParameter("PageSize", pageSize);
@@ -202,7 +217,10 @@ public class ListImagesFromLibRequest extends Request {
         }
 
         /**
-         * RegionId.
+         * <p>Region ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-shanghai</p>
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);
@@ -211,7 +229,7 @@ public class ListImagesFromLibRequest extends Request {
         }
 
         /**
-         * Sort.
+         * <p>Sort field.</p>
          */
         public Builder sort(java.util.Map<String, String> sort) {
             String sortShrink = shrink(sort, "Sort", "json");
@@ -221,7 +239,10 @@ public class ListImagesFromLibRequest extends Request {
         }
 
         /**
-         * StartDate.
+         * <p>Start date.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2023-08-11 09:00:19</p>
          */
         public Builder startDate(String startDate) {
             this.putBodyParameter("StartDate", startDate);

@@ -101,7 +101,10 @@ public class CreateOnlineTestRequest extends Request {
         } 
 
         /**
-         * DataId.
+         * <p>Data ID</p>
+         * 
+         * <strong>example:</strong>
+         * <p>xxxxxxx</p>
          */
         public Builder dataId(String dataId) {
             this.putQueryParameter("DataId", dataId);
@@ -110,7 +113,10 @@ public class CreateOnlineTestRequest extends Request {
         }
 
         /**
-         * ResourceType.
+         * <p>Resource Type</p>
+         * 
+         * <strong>example:</strong>
+         * <p>video</p>
          */
         public Builder resourceType(String resourceType) {
             this.putQueryParameter("ResourceType", resourceType);
@@ -119,7 +125,10 @@ public class CreateOnlineTestRequest extends Request {
         }
 
         /**
-         * ServiceCode.
+         * <p>Service Code</p>
+         * 
+         * <strong>example:</strong>
+         * <p>VideoModeration</p>
          */
         public Builder serviceCode(String serviceCode) {
             this.putQueryParameter("ServiceCode", serviceCode);
@@ -128,7 +137,10 @@ public class CreateOnlineTestRequest extends Request {
         }
 
         /**
-         * Url.
+         * <p>Detection URL</p>
+         * 
+         * <strong>example:</strong>
+         * <p><a href="https://xxxxxxxxxx.com/data/data.png">https://xxxxxxxxxx.com/data/data.png</a></p>
          */
         public Builder url(String url) {
             this.putQueryParameter("Url", url);

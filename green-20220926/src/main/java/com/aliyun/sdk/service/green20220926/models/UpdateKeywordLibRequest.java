@@ -87,7 +87,10 @@ public class UpdateKeywordLibRequest extends Request {
         } 
 
         /**
-         * LibId.
+         * <p>Library ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>custom_xxxx</p>
          */
         public Builder libId(String libId) {
             this.putBodyParameter("LibId", libId);
@@ -96,7 +99,10 @@ public class UpdateKeywordLibRequest extends Request {
         }
 
         /**
-         * LibName.
+         * <p>Keyword library name.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>测试库</p>
          */
         public Builder libName(String libName) {
             this.putBodyParameter("LibName", libName);
@@ -105,7 +111,10 @@ public class UpdateKeywordLibRequest extends Request {
         }
 
         /**
-         * RegionId.
+         * <p>Region ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-shanghai</p>
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);

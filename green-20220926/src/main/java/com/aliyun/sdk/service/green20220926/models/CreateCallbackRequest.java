@@ -115,7 +115,10 @@ public class CreateCallbackRequest extends Request {
         } 
 
         /**
-         * CryptType.
+         * <p>Encryption algorithm.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>SHA256</p>
          */
         public Builder cryptType(String cryptType) {
             this.putBodyParameter("CryptType", cryptType);
@@ -124,7 +127,10 @@ public class CreateCallbackRequest extends Request {
         }
 
         /**
-         * Name.
+         * <p>Plan name.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>消息通知1</p>
          */
         public Builder name(String name) {
             this.putBodyParameter("Name", name);
@@ -133,7 +139,10 @@ public class CreateCallbackRequest extends Request {
         }
 
         /**
-         * RegionId.
+         * <p>Region ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-shanghai</p>
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);
@@ -142,7 +151,10 @@ public class CreateCallbackRequest extends Request {
         }
 
         /**
-         * Scope.
+         * <p>Review result.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>all</p>
          */
         public Builder scope(String scope) {
             this.putBodyParameter("Scope", scope);
@@ -151,7 +163,10 @@ public class CreateCallbackRequest extends Request {
         }
 
         /**
-         * Url.
+         * <p>Callback URL.</p>
+         * 
+         * <strong>example:</strong>
+         * <p><a href="https://console.aliyun.com">https://console.aliyun.com</a></p>
          */
         public Builder url(String url) {
             this.putBodyParameter("Url", url);

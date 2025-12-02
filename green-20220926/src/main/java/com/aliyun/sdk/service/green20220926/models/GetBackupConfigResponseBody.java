@@ -223,7 +223,10 @@ public class GetBackupConfigResponseBody extends TeaModel {
         } 
 
         /**
-         * BackupMode.
+         * <p>Backup scope.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>0</p>
          */
         public Builder backupMode(Integer backupMode) {
             this.backupMode = backupMode;
@@ -231,7 +234,10 @@ public class GetBackupConfigResponseBody extends TeaModel {
         }
 
         /**
-         * Bucket.
+         * <p>File server OSS Bucket.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>buckect_test</p>
          */
         public Builder bucket(String bucket) {
             this.bucket = bucket;
@@ -239,7 +245,14 @@ public class GetBackupConfigResponseBody extends TeaModel {
         }
 
         /**
-         * Enable.
+         * <p>Whether it is enabled. Values:</p>
+         * <ul>
+         * <li><strong>true</strong>: Enabled</li>
+         * <li><strong>false</strong>: Disabled</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder enable(Boolean enable) {
             this.enable = enable;
@@ -247,7 +260,10 @@ public class GetBackupConfigResponseBody extends TeaModel {
         }
 
         /**
-         * EnableBackup.
+         * <p>Whether to enable backup.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>True</p>
          */
         public Builder enableBackup(Boolean enableBackup) {
             this.enableBackup = enableBackup;
@@ -255,7 +271,10 @@ public class GetBackupConfigResponseBody extends TeaModel {
         }
 
         /**
-         * EnableBackupVoice.
+         * <p>Whether to enable audio backup.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>True</p>
          */
         public Builder enableBackupVoice(Boolean enableBackupVoice) {
             this.enableBackupVoice = enableBackupVoice;
@@ -263,7 +282,10 @@ public class GetBackupConfigResponseBody extends TeaModel {
         }
 
         /**
-         * ExpireSeconds.
+         * <p>Expiration time in seconds.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>300</p>
          */
         public Builder expireSeconds(Integer expireSeconds) {
             this.expireSeconds = expireSeconds;
@@ -271,7 +293,10 @@ public class GetBackupConfigResponseBody extends TeaModel {
         }
 
         /**
-         * GmtModified.
+         * <p>Modification time.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2023-01-17 12:29:56</p>
          */
         public Builder gmtModified(String gmtModified) {
             this.gmtModified = gmtModified;
@@ -279,7 +304,10 @@ public class GetBackupConfigResponseBody extends TeaModel {
         }
 
         /**
-         * Path.
+         * <p>Path.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>aliyun/template/</p>
          */
         public Builder path(String path) {
             this.path = path;
@@ -287,7 +315,10 @@ public class GetBackupConfigResponseBody extends TeaModel {
         }
 
         /**
-         * PathVoice.
+         * <p>Audio backup path.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>/back</p>
          */
         public Builder pathVoice(String pathVoice) {
             this.pathVoice = pathVoice;
@@ -295,7 +326,10 @@ public class GetBackupConfigResponseBody extends TeaModel {
         }
 
         /**
-         * Region.
+         * <p>Region ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-hangzhou</p>
          */
         public Builder region(String region) {
             this.region = region;
@@ -303,7 +337,10 @@ public class GetBackupConfigResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * <p>ID assigned by the backend, used to uniquely identify a request. Can be used for troubleshooting.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>AAAAAA-BBBB-CCCCC-DDDD-EEEEEEEE****</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -311,7 +348,10 @@ public class GetBackupConfigResponseBody extends TeaModel {
         }
 
         /**
-         * ResourceType.
+         * <p>Resource type.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>image</p>
          */
         public Builder resourceType(String resourceType) {
             this.resourceType = resourceType;
@@ -319,7 +359,10 @@ public class GetBackupConfigResponseBody extends TeaModel {
         }
 
         /**
-         * ServiceCode.
+         * <p>Service code.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>baselineCheck</p>
          */
         public Builder serviceCode(String serviceCode) {
             this.serviceCode = serviceCode;
@@ -327,7 +370,7 @@ public class GetBackupConfigResponseBody extends TeaModel {
         }
 
         /**
-         * <p>UID。</p>
+         * <p>UID.</p>
          * 
          * <strong>example:</strong>
          * <p>1772612608370735</p>

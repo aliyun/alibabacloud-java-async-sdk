@@ -101,7 +101,10 @@ public class AddKeywordLibRequest extends Request {
         } 
 
         /**
-         * Keywords.
+         * <p>Keywords, with multiple keywords separated by \n.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>keywords1\nkeywords2</p>
          */
         public Builder keywords(String keywords) {
             this.putBodyParameter("Keywords", keywords);
@@ -110,7 +113,10 @@ public class AddKeywordLibRequest extends Request {
         }
 
         /**
-         * KeywordsObject.
+         * <p>The name of the keywords file.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>upload/1e5353c0-0d91-40ba-9d41-ae7abd3fe561.txt</p>
          */
         public Builder keywordsObject(String keywordsObject) {
             this.putBodyParameter("KeywordsObject", keywordsObject);
@@ -119,7 +125,10 @@ public class AddKeywordLibRequest extends Request {
         }
 
         /**
-         * LibName.
+         * <p>The name of the keyword library.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>test_keyword_lib</p>
          */
         public Builder libName(String libName) {
             this.putBodyParameter("LibName", libName);
@@ -128,7 +137,10 @@ public class AddKeywordLibRequest extends Request {
         }
 
         /**
-         * RegionId.
+         * <p>Region ID</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-shanghai</p>
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);

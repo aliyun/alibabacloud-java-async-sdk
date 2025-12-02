@@ -106,7 +106,10 @@ public class GetTextScanResultResponseBody extends TeaModel {
         } 
 
         /**
-         * Code.
+         * <p>Error code.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>200</p>
          */
         public Builder code(Integer code) {
             this.code = code;
@@ -114,7 +117,7 @@ public class GetTextScanResultResponseBody extends TeaModel {
         }
 
         /**
-         * Data.
+         * <p>Returned data.</p>
          */
         public Builder data(Data data) {
             this.data = data;
@@ -122,7 +125,10 @@ public class GetTextScanResultResponseBody extends TeaModel {
         }
 
         /**
-         * Msg.
+         * <p>Further description of the error code.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>OK</p>
          */
         public Builder msg(String msg) {
             this.msg = msg;
@@ -130,7 +136,10 @@ public class GetTextScanResultResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * <p>ID assigned by the backend to uniquely identify a request. It can be used for troubleshooting.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>AAAAAA-BBBB-CCCCC-DDDD-EEEEEEEE****</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -138,7 +147,10 @@ public class GetTextScanResultResponseBody extends TeaModel {
         }
 
         /**
-         * Success.
+         * <p>Success indicator.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>True</p>
          */
         public Builder success(Boolean success) {
             this.success = success;
@@ -217,7 +229,10 @@ public class GetTextScanResultResponseBody extends TeaModel {
             } 
 
             /**
-             * Confidence.
+             * <p>Confidence score, ranging from 0 to 100, with two decimal places retained.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>25.0</p>
              */
             public Builder confidence(Float confidence) {
                 this.confidence = confidence;
@@ -225,7 +240,10 @@ public class GetTextScanResultResponseBody extends TeaModel {
             }
 
             /**
-             * Description.
+             * <p>Description.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>疑似色情内容</p>
              */
             public Builder description(String description) {
                 this.description = description;
@@ -233,7 +251,10 @@ public class GetTextScanResultResponseBody extends TeaModel {
             }
 
             /**
-             * Label.
+             * <p>Label.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>political_n</p>
              */
             public Builder label(String label) {
                 this.label = label;
@@ -469,7 +490,10 @@ public class GetTextScanResultResponseBody extends TeaModel {
             } 
 
             /**
-             * BailianRequestId.
+             * <p>Bailian Request ID</p>
+             * 
+             * <strong>example:</strong>
+             * <p>xxx</p>
              */
             public Builder bailianRequestId(String bailianRequestId) {
                 this.bailianRequestId = bailianRequestId;
@@ -477,7 +501,10 @@ public class GetTextScanResultResponseBody extends TeaModel {
             }
 
             /**
-             * Content.
+             * <p>Content.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>测试内容</p>
              */
             public Builder content(String content) {
                 this.content = content;
@@ -485,7 +512,10 @@ public class GetTextScanResultResponseBody extends TeaModel {
             }
 
             /**
-             * ExtFeedback.
+             * <p>Feedback information.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>miss</p>
              */
             public Builder extFeedback(String extFeedback) {
                 this.extFeedback = extFeedback;
@@ -493,7 +523,10 @@ public class GetTextScanResultResponseBody extends TeaModel {
             }
 
             /**
-             * Extra.
+             * <p>Spare parameters.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>{}</p>
              */
             public Builder extra(java.util.Map<String, ?> extra) {
                 this.extra = extra;
@@ -501,7 +534,10 @@ public class GetTextScanResultResponseBody extends TeaModel {
             }
 
             /**
-             * GmtCreate.
+             * <p>Creation time.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2023-07-11 14:21:36</p>
              */
             public Builder gmtCreate(String gmtCreate) {
                 this.gmtCreate = gmtCreate;
@@ -509,7 +545,10 @@ public class GetTextScanResultResponseBody extends TeaModel {
             }
 
             /**
-             * Labels.
+             * <p>Labels.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>nonLabel</p>
              */
             public Builder labels(String labels) {
                 this.labels = labels;
@@ -517,7 +556,10 @@ public class GetTextScanResultResponseBody extends TeaModel {
             }
 
             /**
-             * RequestId.
+             * <p>Request ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>AAAAAA-BBBB-CCCCC-DDDD-EEEEEEEE****</p>
              */
             public Builder requestId(String requestId) {
                 this.requestId = requestId;
@@ -525,7 +567,10 @@ public class GetTextScanResultResponseBody extends TeaModel {
             }
 
             /**
-             * RequestTime.
+             * <p>Request time.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2023-07-11 14:21:36</p>
              */
             public Builder requestTime(String requestTime) {
                 this.requestTime = requestTime;
@@ -533,7 +578,7 @@ public class GetTextScanResultResponseBody extends TeaModel {
             }
 
             /**
-             * Result.
+             * <p>Detection results.</p>
              */
             public Builder result(java.util.List<Result> result) {
                 this.result = result;
@@ -541,7 +586,20 @@ public class GetTextScanResultResponseBody extends TeaModel {
             }
 
             /**
-             * RiskLevel.
+             * <p>Risk level, returned based on the set high and low risk scores. The return values include:</p>
+             * <ul>
+             * <li><p>high: High risk</p>
+             * </li>
+             * <li><p>medium: Medium risk</p>
+             * </li>
+             * <li><p>low: Low risk</p>
+             * </li>
+             * <li><p>none: No risk detected</p>
+             * </li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>none</p>
              */
             public Builder riskLevel(String riskLevel) {
                 this.riskLevel = riskLevel;
@@ -549,7 +607,10 @@ public class GetTextScanResultResponseBody extends TeaModel {
             }
 
             /**
-             * ScanResult.
+             * <p>Details of the result.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>{}</p>
              */
             public Builder scanResult(String scanResult) {
                 this.scanResult = scanResult;
@@ -557,7 +618,10 @@ public class GetTextScanResultResponseBody extends TeaModel {
             }
 
             /**
-             * Score.
+             * <p>Score.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>20</p>
              */
             public Builder score(Float score) {
                 this.score = score;
@@ -565,7 +629,10 @@ public class GetTextScanResultResponseBody extends TeaModel {
             }
 
             /**
-             * ServiceCode.
+             * <p>Service code.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>nickname_detection</p>
              */
             public Builder serviceCode(String serviceCode) {
                 this.serviceCode = serviceCode;
@@ -573,7 +640,10 @@ public class GetTextScanResultResponseBody extends TeaModel {
             }
 
             /**
-             * Suggestion.
+             * <p>Suggestion for handling.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>review</p>
              */
             public Builder suggestion(String suggestion) {
                 this.suggestion = suggestion;
@@ -581,7 +651,10 @@ public class GetTextScanResultResponseBody extends TeaModel {
             }
 
             /**
-             * TaskId.
+             * <p>Task ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>txtwkgb******AsYNXoJswy-1Aa1Qk</p>
              */
             public Builder taskId(String taskId) {
                 this.taskId = taskId;
@@ -674,7 +747,10 @@ public class GetTextScanResultResponseBody extends TeaModel {
             } 
 
             /**
-             * CurrentPage.
+             * <p>Current page number.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder currentPage(Integer currentPage) {
                 this.currentPage = currentPage;
@@ -682,7 +758,7 @@ public class GetTextScanResultResponseBody extends TeaModel {
             }
 
             /**
-             * Items.
+             * <p>Data for the current page.</p>
              */
             public Builder items(java.util.List<Items> items) {
                 this.items = items;
@@ -690,7 +766,10 @@ public class GetTextScanResultResponseBody extends TeaModel {
             }
 
             /**
-             * PageSize.
+             * <p>Page size.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>20</p>
              */
             public Builder pageSize(Integer pageSize) {
                 this.pageSize = pageSize;
@@ -698,7 +777,10 @@ public class GetTextScanResultResponseBody extends TeaModel {
             }
 
             /**
-             * TotalCount.
+             * <p>Total number of records.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>5</p>
              */
             public Builder totalCount(Long totalCount) {
                 this.totalCount = totalCount;

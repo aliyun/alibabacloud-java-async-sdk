@@ -115,7 +115,10 @@ public class GetServiceConfRequest extends Request {
         } 
 
         /**
-         * ByDefault.
+         * <p>Query default configuration</p>
+         * 
+         * <strong>example:</strong>
+         * <p>False</p>
          */
         public Builder byDefault(Boolean byDefault) {
             this.putBodyParameter("ByDefault", byDefault);
@@ -124,7 +127,10 @@ public class GetServiceConfRequest extends Request {
         }
 
         /**
-         * RegionId.
+         * <p>Region ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-shanghai</p>
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);
@@ -133,7 +139,10 @@ public class GetServiceConfRequest extends Request {
         }
 
         /**
-         * ResourceType.
+         * <p>Resource type.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>image</p>
          */
         public Builder resourceType(String resourceType) {
             this.putBodyParameter("ResourceType", resourceType);
@@ -142,7 +151,10 @@ public class GetServiceConfRequest extends Request {
         }
 
         /**
-         * Scene.
+         * <p>Audit scenario.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>pornographic</p>
          */
         public Builder scene(String scene) {
             this.putBodyParameter("Scene", scene);
@@ -151,7 +163,10 @@ public class GetServiceConfRequest extends Request {
         }
 
         /**
-         * ServiceCode.
+         * <p>Service code.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>baselineCheck</p>
          */
         public Builder serviceCode(String serviceCode) {
             this.putBodyParameter("ServiceCode", serviceCode);

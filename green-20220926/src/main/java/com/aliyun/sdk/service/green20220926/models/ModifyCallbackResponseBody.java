@@ -67,7 +67,10 @@ public class ModifyCallbackResponseBody extends TeaModel {
         } 
 
         /**
-         * Data.
+         * <p>Return result.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>True</p>
          */
         public Builder data(Boolean data) {
             this.data = data;
@@ -75,7 +78,10 @@ public class ModifyCallbackResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * <p>Backend-assigned ID, used to uniquely identify a request. Can be used for troubleshooting.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>AAAAAA-BBBB-CCCCC-DDDD-EEEEEEEE****</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;

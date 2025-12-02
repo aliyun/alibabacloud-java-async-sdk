@@ -67,7 +67,7 @@ public class GetImageSceneLabelListConfResponseBody extends TeaModel {
         } 
 
         /**
-         * Data.
+         * <p>Returned data.</p>
          */
         public Builder data(java.util.List<?> data) {
             this.data = data;
@@ -75,7 +75,10 @@ public class GetImageSceneLabelListConfResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * <p>ID assigned by the backend, used to uniquely identify a request. Can be used for troubleshooting.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>AAAAAA-BBBB-CCCCC-DDDD-EEEEEEEE****</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;

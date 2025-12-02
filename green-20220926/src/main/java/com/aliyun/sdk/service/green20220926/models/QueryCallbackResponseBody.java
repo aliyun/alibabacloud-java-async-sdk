@@ -184,7 +184,10 @@ public class QueryCallbackResponseBody extends TeaModel {
         } 
 
         /**
-         * CryptType.
+         * <p>Encryption algorithm.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>SHA256</p>
          */
         public Builder cryptType(String cryptType) {
             this.cryptType = cryptType;
@@ -192,7 +195,10 @@ public class QueryCallbackResponseBody extends TeaModel {
         }
 
         /**
-         * ExistsOssCheckTask.
+         * <p>Whether there is an OSS detection task.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>false</p>
          */
         public Builder existsOssCheckTask(Boolean existsOssCheckTask) {
             this.existsOssCheckTask = existsOssCheckTask;
@@ -200,7 +206,10 @@ public class QueryCallbackResponseBody extends TeaModel {
         }
 
         /**
-         * GmtCreate.
+         * <p>Creation time.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2022-11-30 16:30:29</p>
          */
         public Builder gmtCreate(String gmtCreate) {
             this.gmtCreate = gmtCreate;
@@ -208,7 +217,10 @@ public class QueryCallbackResponseBody extends TeaModel {
         }
 
         /**
-         * GmtModified.
+         * <p>Modification time.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2024-06-03 15:20:14</p>
          */
         public Builder gmtModified(String gmtModified) {
             this.gmtModified = gmtModified;
@@ -216,7 +228,10 @@ public class QueryCallbackResponseBody extends TeaModel {
         }
 
         /**
-         * Id.
+         * <p>Primary key ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>11234</p>
          */
         public Builder id(Long id) {
             this.id = id;
@@ -224,7 +239,10 @@ public class QueryCallbackResponseBody extends TeaModel {
         }
 
         /**
-         * Name.
+         * <p>Name.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>回调通知</p>
          */
         public Builder name(String name) {
             this.name = name;
@@ -232,7 +250,10 @@ public class QueryCallbackResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * <p>ID assigned by the backend, used to uniquely identify a request. Can be used for troubleshooting.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>AAAAAA-BBBB-CCCCC-DDDD-EEEEEEEE****</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -240,7 +261,10 @@ public class QueryCallbackResponseBody extends TeaModel {
         }
 
         /**
-         * Scope.
+         * <p>Result scope.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>all</p>
          */
         public Builder scope(String scope) {
             this.scope = scope;
@@ -248,7 +272,7 @@ public class QueryCallbackResponseBody extends TeaModel {
         }
 
         /**
-         * <p>Seed。</p>
+         * <p>Seed.</p>
          * 
          * <strong>example:</strong>
          * <p>cb2MysbJTAAIf6gB3u4vpIEU-1ySnnf</p>
@@ -259,7 +283,7 @@ public class QueryCallbackResponseBody extends TeaModel {
         }
 
         /**
-         * <p>UID。</p>
+         * <p>UID.</p>
          * 
          * <strong>example:</strong>
          * <p>19964*****086772</p>
@@ -270,7 +294,10 @@ public class QueryCallbackResponseBody extends TeaModel {
         }
 
         /**
-         * Url.
+         * <p>Callback URL.</p>
+         * 
+         * <strong>example:</strong>
+         * <p><a href="https://www.aliyuncs.com">https://www.aliyuncs.com</a></p>
          */
         public Builder url(String url) {
             this.url = url;

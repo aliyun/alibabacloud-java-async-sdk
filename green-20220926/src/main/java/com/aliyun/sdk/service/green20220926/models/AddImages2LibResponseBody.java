@@ -119,7 +119,10 @@ public class AddImages2LibResponseBody extends TeaModel {
         } 
 
         /**
-         * Code.
+         * <p>Status code</p>
+         * 
+         * <strong>example:</strong>
+         * <p>200</p>
          */
         public Builder code(Integer code) {
             this.code = code;
@@ -127,7 +130,7 @@ public class AddImages2LibResponseBody extends TeaModel {
         }
 
         /**
-         * Data.
+         * <p>The data returned.</p>
          */
         public Builder data(Data data) {
             this.data = data;
@@ -135,7 +138,10 @@ public class AddImages2LibResponseBody extends TeaModel {
         }
 
         /**
-         * HttpStatusCode.
+         * <p>HTTP status code.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>200</p>
          */
         public Builder httpStatusCode(Integer httpStatusCode) {
             this.httpStatusCode = httpStatusCode;
@@ -143,7 +149,10 @@ public class AddImages2LibResponseBody extends TeaModel {
         }
 
         /**
-         * Msg.
+         * <p>The message that is returned in response to the request.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>OK</p>
          */
         public Builder msg(String msg) {
             this.msg = msg;
@@ -151,7 +160,10 @@ public class AddImages2LibResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * <p>The request ID, which is used to locate and troubleshoot issues.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>AAAAAA-BBBB-CCCCC-DDDD-EEEEEEEE****</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -159,7 +171,10 @@ public class AddImages2LibResponseBody extends TeaModel {
         }
 
         /**
-         * Success.
+         * <p>Success indicator.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>True</p>
          */
         public Builder success(Boolean success) {
             this.success = success;
@@ -212,7 +227,10 @@ public class AddImages2LibResponseBody extends TeaModel {
             } 
 
             /**
-             * ImgId.
+             * <p>The id of the uploaded image.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>100001</p>
              */
             public Builder imgId(String imgId) {
                 this.imgId = imgId;

@@ -73,7 +73,10 @@ public class GetImageSceneLabelListConfRequest extends Request {
         } 
 
         /**
-         * ImageServiceCode.
+         * <p>Service code.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>baselineCheck</p>
          */
         public Builder imageServiceCode(String imageServiceCode) {
             this.putQueryParameter("ImageServiceCode", imageServiceCode);
@@ -82,7 +85,10 @@ public class GetImageSceneLabelListConfRequest extends Request {
         }
 
         /**
-         * RegionId.
+         * <p>Region ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-shanghai</p>
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);

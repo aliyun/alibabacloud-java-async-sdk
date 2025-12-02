@@ -106,7 +106,10 @@ public class GetKeywordImportResultResponseBody extends TeaModel {
         } 
 
         /**
-         * Code.
+         * <p>Error code.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>200</p>
          */
         public Builder code(Integer code) {
             this.code = code;
@@ -114,7 +117,7 @@ public class GetKeywordImportResultResponseBody extends TeaModel {
         }
 
         /**
-         * Data.
+         * <p>Returned data.</p>
          */
         public Builder data(Data data) {
             this.data = data;
@@ -122,7 +125,10 @@ public class GetKeywordImportResultResponseBody extends TeaModel {
         }
 
         /**
-         * Msg.
+         * <p>Further description of the error code.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>OK</p>
          */
         public Builder msg(String msg) {
             this.msg = msg;
@@ -130,7 +136,10 @@ public class GetKeywordImportResultResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * <p>ID assigned by the backend to uniquely identify a request, which can be used for troubleshooting.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>AAAAAA-BBBB-CCCCC-DDDD-EEEEEEEE****</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -138,7 +147,10 @@ public class GetKeywordImportResultResponseBody extends TeaModel {
         }
 
         /**
-         * Success.
+         * <p>Success indicator.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>True</p>
          */
         public Builder success(Boolean success) {
             this.success = success;
@@ -321,7 +333,10 @@ public class GetKeywordImportResultResponseBody extends TeaModel {
             } 
 
             /**
-             * I18nKey.
+             * <p>Internationalization key.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>xxx</p>
              */
             public Builder i18nKey(String i18nKey) {
                 this.i18nKey = i18nKey;
@@ -329,7 +344,7 @@ public class GetKeywordImportResultResponseBody extends TeaModel {
             }
 
             /**
-             * IllegalLengthKeywords.
+             * <p>List of keywords with illegal length (too long or too short).</p>
              */
             public Builder illegalLengthKeywords(java.util.List<String> illegalLengthKeywords) {
                 this.illegalLengthKeywords = illegalLengthKeywords;
@@ -337,7 +352,10 @@ public class GetKeywordImportResultResponseBody extends TeaModel {
             }
 
             /**
-             * InvalidCount.
+             * <p>Invalid count.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder invalidCount(Integer invalidCount) {
                 this.invalidCount = invalidCount;
@@ -345,7 +363,7 @@ public class GetKeywordImportResultResponseBody extends TeaModel {
             }
 
             /**
-             * InvalidKeywords.
+             * <p>List of invalid keywords.</p>
              */
             public Builder invalidKeywords(java.util.List<String> invalidKeywords) {
                 this.invalidKeywords = invalidKeywords;
@@ -353,7 +371,10 @@ public class GetKeywordImportResultResponseBody extends TeaModel {
             }
 
             /**
-             * LibId.
+             * <p>Keyword library ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>customxx_xxx</p>
              */
             public Builder libId(String libId) {
                 this.libId = libId;
@@ -361,7 +382,10 @@ public class GetKeywordImportResultResponseBody extends TeaModel {
             }
 
             /**
-             * Progress.
+             * <p>Task progress percentage.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>100</p>
              */
             public Builder progress(Integer progress) {
                 this.progress = progress;
@@ -369,7 +393,10 @@ public class GetKeywordImportResultResponseBody extends TeaModel {
             }
 
             /**
-             * RepeatCount.
+             * <p>Repeat count.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder repeatCount(Integer repeatCount) {
                 this.repeatCount = repeatCount;
@@ -377,7 +404,7 @@ public class GetKeywordImportResultResponseBody extends TeaModel {
             }
 
             /**
-             * RepeatKeywords.
+             * <p>List of repeated keywords.</p>
              */
             public Builder repeatKeywords(java.util.List<String> repeatKeywords) {
                 this.repeatKeywords = repeatKeywords;
@@ -385,7 +412,10 @@ public class GetKeywordImportResultResponseBody extends TeaModel {
             }
 
             /**
-             * SuccessCount.
+             * <p>Success count.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>8</p>
              */
             public Builder successCount(Integer successCount) {
                 this.successCount = successCount;
@@ -393,7 +423,10 @@ public class GetKeywordImportResultResponseBody extends TeaModel {
             }
 
             /**
-             * Tips.
+             * <p>Tips message.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>xxx</p>
              */
             public Builder tips(String tips) {
                 this.tips = tips;
@@ -401,7 +434,10 @@ public class GetKeywordImportResultResponseBody extends TeaModel {
             }
 
             /**
-             * TotalCount.
+             * <p>Total count.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>10</p>
              */
             public Builder totalCount(Integer totalCount) {
                 this.totalCount = totalCount;

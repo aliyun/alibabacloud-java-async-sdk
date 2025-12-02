@@ -87,7 +87,10 @@ public class GetScanNumRequest extends Request {
         } 
 
         /**
-         * Buckets.
+         * <p>Storage space.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>tmpsample</p>
          */
         public Builder buckets(String buckets) {
             this.putQueryParameter("Buckets", buckets);
@@ -96,7 +99,10 @@ public class GetScanNumRequest extends Request {
         }
 
         /**
-         * MediaType.
+         * <p>Media type.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>image</p>
          */
         public Builder mediaType(Integer mediaType) {
             this.putQueryParameter("MediaType", mediaType);
@@ -105,7 +111,10 @@ public class GetScanNumRequest extends Request {
         }
 
         /**
-         * RegionId.
+         * <p>Region ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-shanghai</p>
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);

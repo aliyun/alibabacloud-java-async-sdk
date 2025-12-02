@@ -87,7 +87,10 @@ public class AddImages2LibRequest extends Request {
         } 
 
         /**
-         * ImgUrl.
+         * <p>URL of the image to be uploaded.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>upload/ea7a98f9-f8bd-4905-a79b-963c9da419c5.jpg</p>
          */
         public Builder imgUrl(String imgUrl) {
             this.putBodyParameter("ImgUrl", imgUrl);
@@ -96,7 +99,10 @@ public class AddImages2LibRequest extends Request {
         }
 
         /**
-         * LibId.
+         * <p>The ID of image library.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>xxx</p>
          */
         public Builder libId(String libId) {
             this.putBodyParameter("LibId", libId);
@@ -105,7 +111,10 @@ public class AddImages2LibRequest extends Request {
         }
 
         /**
-         * RegionId.
+         * <p>Region ID</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-shanghai</p>
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);

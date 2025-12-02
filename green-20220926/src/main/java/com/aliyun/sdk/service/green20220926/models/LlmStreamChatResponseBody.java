@@ -158,7 +158,7 @@ public class LlmStreamChatResponseBody extends TeaModel {
         } 
 
         /**
-         * Choices.
+         * <p>List of model generation results</p>
          */
         public Builder choices(java.util.List<Choices> choices) {
             this.choices = choices;
@@ -166,7 +166,10 @@ public class LlmStreamChatResponseBody extends TeaModel {
         }
 
         /**
-         * Created.
+         * <p>Timestamp of session creation</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1750990728</p>
          */
         public Builder created(Long created) {
             this.created = created;
@@ -174,7 +177,7 @@ public class LlmStreamChatResponseBody extends TeaModel {
         }
 
         /**
-         * Error.
+         * <p>Streaming response error information content</p>
          */
         public Builder error(Error error) {
             this.error = error;
@@ -182,7 +185,10 @@ public class LlmStreamChatResponseBody extends TeaModel {
         }
 
         /**
-         * Id.
+         * <p>Unique ID for this session</p>
+         * 
+         * <strong>example:</strong>
+         * <p>chatcmpl-777bce52-93d3-9f8c-89c3-e99884f4f57f</p>
          */
         public Builder id(String id) {
             this.id = id;
@@ -190,7 +196,10 @@ public class LlmStreamChatResponseBody extends TeaModel {
         }
 
         /**
-         * Model.
+         * <p>Model identifier</p>
+         * 
+         * <strong>example:</strong>
+         * <p>deepseek-v3</p>
          */
         public Builder model(String model) {
             this.model = model;
@@ -198,7 +207,10 @@ public class LlmStreamChatResponseBody extends TeaModel {
         }
 
         /**
-         * Object.
+         * <p>Response type</p>
+         * 
+         * <strong>example:</strong>
+         * <p>chat.completion.chunk</p>
          */
         public Builder object(String object) {
             this.object = object;
@@ -206,7 +218,10 @@ public class LlmStreamChatResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * <p>Unique request ID</p>
+         * 
+         * <strong>example:</strong>
+         * <p>21d296d6-594e-97de-812f-925ec6e05673</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -214,7 +229,10 @@ public class LlmStreamChatResponseBody extends TeaModel {
         }
 
         /**
-         * SystemFingerprint.
+         * <p>System fingerprint</p>
+         * 
+         * <strong>example:</strong>
+         * <p>null</p>
          */
         public Builder systemFingerprint(String systemFingerprint) {
             this.systemFingerprint = systemFingerprint;
@@ -222,7 +240,10 @@ public class LlmStreamChatResponseBody extends TeaModel {
         }
 
         /**
-         * Usage.
+         * <p>Token usage</p>
+         * 
+         * <strong>example:</strong>
+         * <p>null</p>
          */
         public Builder usage(String usage) {
             this.usage = usage;
@@ -288,7 +309,10 @@ public class LlmStreamChatResponseBody extends TeaModel {
             } 
 
             /**
-             * Content.
+             * <p>Real-time generated text content</p>
+             * 
+             * <strong>example:</strong>
+             * <p>我是Deepseek-V3，有什么可以帮你</p>
              */
             public Builder content(String content) {
                 this.content = content;
@@ -296,7 +320,10 @@ public class LlmStreamChatResponseBody extends TeaModel {
             }
 
             /**
-             * Role.
+             * <p>Role identifier</p>
+             * 
+             * <strong>example:</strong>
+             * <p>assistant</p>
              */
             public Builder role(String role) {
                 this.role = role;
@@ -389,7 +416,7 @@ public class LlmStreamChatResponseBody extends TeaModel {
             } 
 
             /**
-             * Delta.
+             * <p>Incremental content object</p>
              */
             public Builder delta(Delta delta) {
                 this.delta = delta;
@@ -397,7 +424,10 @@ public class LlmStreamChatResponseBody extends TeaModel {
             }
 
             /**
-             * FinishReason.
+             * <p>For streaming output, it is null while generating and becomes &quot;stop&quot; if the generation ends due to a stop token.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>stop</p>
              */
             public Builder finishReason(String finishReason) {
                 this.finishReason = finishReason;
@@ -405,7 +435,10 @@ public class LlmStreamChatResponseBody extends TeaModel {
             }
 
             /**
-             * Index.
+             * <p>Stream sequence number</p>
+             * 
+             * <strong>example:</strong>
+             * <p>0</p>
              */
             public Builder index(Long index) {
                 this.index = index;
@@ -413,7 +446,10 @@ public class LlmStreamChatResponseBody extends TeaModel {
             }
 
             /**
-             * Logprobs.
+             * <p>Token probability information</p>
+             * 
+             * <strong>example:</strong>
+             * <p>null</p>
              */
             public Builder logprobs(String logprobs) {
                 this.logprobs = logprobs;
@@ -506,7 +542,10 @@ public class LlmStreamChatResponseBody extends TeaModel {
             } 
 
             /**
-             * Code.
+             * <p>Error code</p>
+             * 
+             * <strong>example:</strong>
+             * <p>data_inspection_failed</p>
              */
             public Builder code(String code) {
                 this.code = code;
@@ -514,7 +553,10 @@ public class LlmStreamChatResponseBody extends TeaModel {
             }
 
             /**
-             * Message.
+             * <p>Error message</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Input data may contain inappropriate content.</p>
              */
             public Builder message(String message) {
                 this.message = message;
@@ -522,7 +564,10 @@ public class LlmStreamChatResponseBody extends TeaModel {
             }
 
             /**
-             * Param.
+             * <p>Parameter that caused the error</p>
+             * 
+             * <strong>example:</strong>
+             * <p>null</p>
              */
             public Builder param(String param) {
                 this.param = param;
@@ -530,7 +575,10 @@ public class LlmStreamChatResponseBody extends TeaModel {
             }
 
             /**
-             * Type.
+             * <p>Error type</p>
+             * 
+             * <strong>example:</strong>
+             * <p>data_inspection_failed</p>
              */
             public Builder type(String type) {
                 this.type = type;

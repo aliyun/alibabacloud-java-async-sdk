@@ -115,7 +115,10 @@ public class CopyServiceConfigRequest extends Request {
         } 
 
         /**
-         * RegionId.
+         * <p>Region ID</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-shanghai</p>
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);
@@ -124,7 +127,10 @@ public class CopyServiceConfigRequest extends Request {
         }
 
         /**
-         * ResourceType.
+         * <p>Resource type.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>text</p>
          */
         public Builder resourceType(String resourceType) {
             this.putBodyParameter("ResourceType", resourceType);
@@ -133,7 +139,10 @@ public class CopyServiceConfigRequest extends Request {
         }
 
         /**
-         * ServiceCode.
+         * <p>Service code.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>nickname_detection</p>
          */
         public Builder serviceCode(String serviceCode) {
             this.putBodyParameter("ServiceCode", serviceCode);
@@ -142,7 +151,10 @@ public class CopyServiceConfigRequest extends Request {
         }
 
         /**
-         * ServiceDesc.
+         * <p>Service description</p>
+         * 
+         * <strong>example:</strong>
+         * <p>test</p>
          */
         public Builder serviceDesc(String serviceDesc) {
             this.putBodyParameter("ServiceDesc", serviceDesc);
@@ -151,7 +163,10 @@ public class CopyServiceConfigRequest extends Request {
         }
 
         /**
-         * ServiceName.
+         * <p>The service name.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>test_name</p>
          */
         public Builder serviceName(String serviceName) {
             this.putBodyParameter("ServiceName", serviceName);

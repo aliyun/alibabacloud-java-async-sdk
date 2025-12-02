@@ -73,7 +73,10 @@ public class DeleteKeywordLibRequest extends Request {
         } 
 
         /**
-         * LibId.
+         * <p>Keyword library ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>customxx_xxxx</p>
          */
         public Builder libId(String libId) {
             this.putBodyParameter("LibId", libId);
@@ -82,7 +85,10 @@ public class DeleteKeywordLibRequest extends Request {
         }
 
         /**
-         * RegionId.
+         * <p>Region ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-shanghai</p>
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);

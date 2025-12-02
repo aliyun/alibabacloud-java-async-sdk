@@ -185,7 +185,10 @@ public class ExportCipStatsRequest extends Request {
         } 
 
         /**
-         * ByMonth.
+         * <p>Whether to support monthly indexing. Values: -<strong>true</strong>: Supported. -<strong>false</strong>: Not supported.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder byMonth(Boolean byMonth) {
             this.putBodyParameter("ByMonth", byMonth);
@@ -194,7 +197,10 @@ public class ExportCipStatsRequest extends Request {
         }
 
         /**
-         * EndDate.
+         * <p>The end time of the query, in the format yyyy-MM-dd HH:mm:ss.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2024-04-16 09:00:00</p>
          */
         public Builder endDate(String endDate) {
             this.putBodyParameter("EndDate", endDate);
@@ -203,7 +209,10 @@ public class ExportCipStatsRequest extends Request {
         }
 
         /**
-         * ExportType.
+         * <p>Export type. Values: -<strong>level</strong>: Export by risk level. -<strong>label</strong>: Export by label.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>label</p>
          */
         public Builder exportType(String exportType) {
             this.putBodyParameter("ExportType", exportType);
@@ -212,7 +221,10 @@ public class ExportCipStatsRequest extends Request {
         }
 
         /**
-         * Label.
+         * <p>The label of the task to be exported.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>xx</p>
          */
         public Builder label(String label) {
             this.putBodyParameter("Label", label);
@@ -221,7 +233,10 @@ public class ExportCipStatsRequest extends Request {
         }
 
         /**
-         * RegionId.
+         * <p>Region ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-shanghai</p>
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);
@@ -230,7 +245,10 @@ public class ExportCipStatsRequest extends Request {
         }
 
         /**
-         * ResourceType.
+         * <p>Resource type.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>text</p>
          */
         public Builder resourceType(String resourceType) {
             this.putBodyParameter("ResourceType", resourceType);
@@ -239,7 +257,10 @@ public class ExportCipStatsRequest extends Request {
         }
 
         /**
-         * ServiceCode.
+         * <p>Service code.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>baselineCheck</p>
          */
         public Builder serviceCode(String serviceCode) {
             this.putBodyParameter("ServiceCode", serviceCode);
@@ -248,7 +269,10 @@ public class ExportCipStatsRequest extends Request {
         }
 
         /**
-         * StartDate.
+         * <p>The start time of the query, in the format yyyy-MM-dd HH:mm:ss.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2024-04-15 09:00:00</p>
          */
         public Builder startDate(String startDate) {
             this.putBodyParameter("StartDate", startDate);
@@ -257,7 +281,10 @@ public class ExportCipStatsRequest extends Request {
         }
 
         /**
-         * SubUid.
+         * <p>Sub-account UID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>268220485413130979</p>
          */
         public Builder subUid(String subUid) {
             this.putBodyParameter("SubUid", subUid);
@@ -266,7 +293,10 @@ public class ExportCipStatsRequest extends Request {
         }
 
         /**
-         * Type.
+         * <p>Type, values: -<strong>cip</strong>: Content Security Invocation Count Statistics. -<strong>risk_level</strong>: Content Security Risk Level Statistics. -<strong>content_moderation</strong>: AI Safety Guardrail Content Compliance Risk Level and Label Statistics. -<strong>sensitive_data</strong>: AI Safety Guardrail Sensitive Data Risk Level and Label Statistics. -<strong>prompt_attack</strong>: AI Safety Guardrail Prompt Word Risk Level and Label Statistics.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>risk_level</p>
          */
         public Builder type(String type) {
             this.putBodyParameter("Type", type);

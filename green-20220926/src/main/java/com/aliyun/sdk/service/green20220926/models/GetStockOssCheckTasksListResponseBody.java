@@ -106,7 +106,10 @@ public class GetStockOssCheckTasksListResponseBody extends TeaModel {
         } 
 
         /**
-         * CurrentPage.
+         * <p>Current page number.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder currentPage(Integer currentPage) {
             this.currentPage = currentPage;
@@ -114,7 +117,7 @@ public class GetStockOssCheckTasksListResponseBody extends TeaModel {
         }
 
         /**
-         * Items.
+         * <p>Data of the current page.</p>
          */
         public Builder items(java.util.List<Items> items) {
             this.items = items;
@@ -122,7 +125,10 @@ public class GetStockOssCheckTasksListResponseBody extends TeaModel {
         }
 
         /**
-         * PageSize.
+         * <p>Page size.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10</p>
          */
         public Builder pageSize(Integer pageSize) {
             this.pageSize = pageSize;
@@ -130,7 +136,10 @@ public class GetStockOssCheckTasksListResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * <p>Backend-assigned ID used to uniquely identify a request. Can be used for troubleshooting.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>AAAAAA-BBBB-CCCCC-DDDD-EEEEEEEE****</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -138,7 +147,10 @@ public class GetStockOssCheckTasksListResponseBody extends TeaModel {
         }
 
         /**
-         * TotalCount.
+         * <p>Total number of records.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10</p>
          */
         public Builder totalCount(Long totalCount) {
             this.totalCount = totalCount;
@@ -230,7 +242,10 @@ public class GetStockOssCheckTasksListResponseBody extends TeaModel {
             } 
 
             /**
-             * CopyFrom.
+             * <p>Primary service.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>baselineCheck</p>
              */
             public Builder copyFrom(String copyFrom) {
                 this.copyFrom = copyFrom;
@@ -238,7 +253,10 @@ public class GetStockOssCheckTasksListResponseBody extends TeaModel {
             }
 
             /**
-             * IsCopy.
+             * <p>Whether to copy.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>false</p>
              */
             public Builder isCopy(Boolean isCopy) {
                 this.isCopy = isCopy;
@@ -246,7 +264,10 @@ public class GetStockOssCheckTasksListResponseBody extends TeaModel {
             }
 
             /**
-             * ServiceCode.
+             * <p>Service code.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>baselineCheck_01</p>
              */
             public Builder serviceCode(String serviceCode) {
                 this.serviceCode = serviceCode;
@@ -254,7 +275,10 @@ public class GetStockOssCheckTasksListResponseBody extends TeaModel {
             }
 
             /**
-             * ServiceName.
+             * <p>Service name.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>通用基线检测</p>
              */
             public Builder serviceName(String serviceName) {
                 this.serviceName = serviceName;
@@ -321,7 +345,10 @@ public class GetStockOssCheckTasksListResponseBody extends TeaModel {
             } 
 
             /**
-             * FreezeRestorePath.
+             * <p>Storage path for transfer</p>
+             * 
+             * <strong>example:</strong>
+             * <p>/backup</p>
              */
             public Builder freezeRestorePath(String freezeRestorePath) {
                 this.freezeRestorePath = freezeRestorePath;
@@ -329,7 +356,10 @@ public class GetStockOssCheckTasksListResponseBody extends TeaModel {
             }
 
             /**
-             * FreezeType.
+             * <p>Freeze type</p>
+             * 
+             * <strong>example:</strong>
+             * <p>ACL</p>
              */
             public Builder freezeType(String freezeType) {
                 this.freezeType = freezeType;
@@ -682,7 +712,10 @@ public class GetStockOssCheckTasksListResponseBody extends TeaModel {
             } 
 
             /**
-             * CallbackId.
+             * <p>Callback notification ID</p>
+             * 
+             * <strong>example:</strong>
+             * <p>3942</p>
              */
             public Builder callbackId(Long callbackId) {
                 this.callbackId = callbackId;
@@ -690,7 +723,10 @@ public class GetStockOssCheckTasksListResponseBody extends TeaModel {
             }
 
             /**
-             * DistinctHistoryTasks.
+             * <p>Whether to deduplicate historical detected tasks.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>false</p>
              */
             public Builder distinctHistoryTasks(Boolean distinctHistoryTasks) {
                 this.distinctHistoryTasks = distinctHistoryTasks;
@@ -698,7 +734,10 @@ public class GetStockOssCheckTasksListResponseBody extends TeaModel {
             }
 
             /**
-             * EndTime.
+             * <p>End time.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2024-01-10 11:42:31</p>
              */
             public Builder endTime(String endTime) {
                 this.endTime = endTime;
@@ -706,7 +745,10 @@ public class GetStockOssCheckTasksListResponseBody extends TeaModel {
             }
 
             /**
-             * ExecuteDate.
+             * <p>Scheduled task execution date.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder executeDate(Integer executeDate) {
                 this.executeDate = executeDate;
@@ -714,7 +756,10 @@ public class GetStockOssCheckTasksListResponseBody extends TeaModel {
             }
 
             /**
-             * ExecuteTime.
+             * <p>Scheduled task expected execution time.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>02:00:00</p>
              */
             public Builder executeTime(String executeTime) {
                 this.executeTime = executeTime;
@@ -722,7 +767,10 @@ public class GetStockOssCheckTasksListResponseBody extends TeaModel {
             }
 
             /**
-             * Freeze.
+             * <p>Whether to freeze</p>
+             * 
+             * <strong>example:</strong>
+             * <p>false</p>
              */
             public Builder freeze(Boolean freeze) {
                 this.freeze = freeze;
@@ -730,7 +778,10 @@ public class GetStockOssCheckTasksListResponseBody extends TeaModel {
             }
 
             /**
-             * FreezeHighRisk1.
+             * <p>Freeze high-risk images</p>
+             * 
+             * <strong>example:</strong>
+             * <p>true</p>
              */
             public Builder freezeHighRisk1(Boolean freezeHighRisk1) {
                 this.freezeHighRisk1 = freezeHighRisk1;
@@ -738,7 +789,10 @@ public class GetStockOssCheckTasksListResponseBody extends TeaModel {
             }
 
             /**
-             * FreezeHighRisk2.
+             * <p>Freeze high-risk audio and text</p>
+             * 
+             * <strong>example:</strong>
+             * <p>true</p>
              */
             public Builder freezeHighRisk2(Boolean freezeHighRisk2) {
                 this.freezeHighRisk2 = freezeHighRisk2;
@@ -746,7 +800,10 @@ public class GetStockOssCheckTasksListResponseBody extends TeaModel {
             }
 
             /**
-             * FreezeMediumRisk1.
+             * <p>Freeze medium-risk images</p>
+             * 
+             * <strong>example:</strong>
+             * <p>true</p>
              */
             public Builder freezeMediumRisk1(Boolean freezeMediumRisk1) {
                 this.freezeMediumRisk1 = freezeMediumRisk1;
@@ -754,7 +811,10 @@ public class GetStockOssCheckTasksListResponseBody extends TeaModel {
             }
 
             /**
-             * FreezeMediumRisk2.
+             * <p>Freeze medium-risk audio and text</p>
+             * 
+             * <strong>example:</strong>
+             * <p>true</p>
              */
             public Builder freezeMediumRisk2(Boolean freezeMediumRisk2) {
                 this.freezeMediumRisk2 = freezeMediumRisk2;
@@ -762,7 +822,10 @@ public class GetStockOssCheckTasksListResponseBody extends TeaModel {
             }
 
             /**
-             * FreezeRestorePath.
+             * <p>Storage path for transfer</p>
+             * 
+             * <strong>example:</strong>
+             * <p>/backup</p>
              */
             public Builder freezeRestorePath(String freezeRestorePath) {
                 this.freezeRestorePath = freezeRestorePath;
@@ -770,7 +833,10 @@ public class GetStockOssCheckTasksListResponseBody extends TeaModel {
             }
 
             /**
-             * FreezeType.
+             * <p>Freeze type</p>
+             * 
+             * <strong>example:</strong>
+             * <p>ACL</p>
              */
             public Builder freezeType(String freezeType) {
                 this.freezeType = freezeType;
@@ -778,7 +844,10 @@ public class GetStockOssCheckTasksListResponseBody extends TeaModel {
             }
 
             /**
-             * PrefixFilterType.
+             * <p>Prefix filter type.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>all</p>
              */
             public Builder prefixFilterType(String prefixFilterType) {
                 this.prefixFilterType = prefixFilterType;
@@ -786,7 +855,7 @@ public class GetStockOssCheckTasksListResponseBody extends TeaModel {
             }
 
             /**
-             * PrefixFilters.
+             * <p>Prefixes.</p>
              */
             public Builder prefixFilters(java.util.List<String> prefixFilters) {
                 this.prefixFilters = prefixFilters;
@@ -794,7 +863,10 @@ public class GetStockOssCheckTasksListResponseBody extends TeaModel {
             }
 
             /**
-             * Priority.
+             * <p>Priority.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder priority(Integer priority) {
                 this.priority = priority;
@@ -802,7 +874,12 @@ public class GetStockOssCheckTasksListResponseBody extends TeaModel {
             }
 
             /**
-             * Referer.
+             * <p>Referer</p>
+             * 
+             * <strong>example:</strong>
+             * <ul>
+             * <li></li>
+             * </ul>
              */
             public Builder referer(String referer) {
                 this.referer = referer;
@@ -810,7 +887,10 @@ public class GetStockOssCheckTasksListResponseBody extends TeaModel {
             }
 
             /**
-             * ScanLimit.
+             * <p>Scan limit quantity.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>10</p>
              */
             public Builder scanLimit(Long scanLimit) {
                 this.scanLimit = scanLimit;
@@ -818,7 +898,10 @@ public class GetStockOssCheckTasksListResponseBody extends TeaModel {
             }
 
             /**
-             * ScanNoFileType.
+             * <p>Whether to scan images without file extensions.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>true</p>
              */
             public Builder scanNoFileType(Boolean scanNoFileType) {
                 this.scanNoFileType = scanNoFileType;
@@ -826,7 +909,10 @@ public class GetStockOssCheckTasksListResponseBody extends TeaModel {
             }
 
             /**
-             * ScanResourceType.
+             * <p>Scanned file type.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>0</p>
              */
             public Builder scanResourceType(Integer scanResourceType) {
                 this.scanResourceType = scanResourceType;
@@ -834,7 +920,7 @@ public class GetStockOssCheckTasksListResponseBody extends TeaModel {
             }
 
             /**
-             * ScanService.
+             * <p>Scan service code</p>
              */
             public Builder scanService(java.util.List<String> scanService) {
                 this.scanService = scanService;
@@ -842,7 +928,7 @@ public class GetStockOssCheckTasksListResponseBody extends TeaModel {
             }
 
             /**
-             * ScanServiceInfos.
+             * <p>Scan service information</p>
              */
             public Builder scanServiceInfos(java.util.List<ScanServiceInfos> scanServiceInfos) {
                 this.scanServiceInfos = scanServiceInfos;
@@ -850,7 +936,10 @@ public class GetStockOssCheckTasksListResponseBody extends TeaModel {
             }
 
             /**
-             * StartTime.
+             * <p>Start time.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2023-12-21 15:30:19</p>
              */
             public Builder startTime(String startTime) {
                 this.startTime = startTime;
@@ -858,7 +947,10 @@ public class GetStockOssCheckTasksListResponseBody extends TeaModel {
             }
 
             /**
-             * TaskCycle.
+             * <p>Scheduling date.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>0</p>
              */
             public Builder taskCycle(Integer taskCycle) {
                 this.taskCycle = taskCycle;
@@ -866,7 +958,7 @@ public class GetStockOssCheckTasksListResponseBody extends TeaModel {
             }
 
             /**
-             * UserFreezeConfig.
+             * <p>Manual freeze configuration</p>
              */
             public Builder userFreezeConfig(UserFreezeConfig userFreezeConfig) {
                 this.userFreezeConfig = userFreezeConfig;
@@ -1102,7 +1194,10 @@ public class GetStockOssCheckTasksListResponseBody extends TeaModel {
             } 
 
             /**
-             * Buckets.
+             * <p>Storage space.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>tmp</p>
              */
             public Builder buckets(String buckets) {
                 this.buckets = buckets;
@@ -1110,7 +1205,7 @@ public class GetStockOssCheckTasksListResponseBody extends TeaModel {
             }
 
             /**
-             * Config.
+             * <p>Configuration items.</p>
              */
             public Builder config(Config config) {
                 this.config = config;
@@ -1118,7 +1213,10 @@ public class GetStockOssCheckTasksListResponseBody extends TeaModel {
             }
 
             /**
-             * EndTime.
+             * <p>End time.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2024-01-10 11:42:31</p>
              */
             public Builder endTime(String endTime) {
                 this.endTime = endTime;
@@ -1126,7 +1224,10 @@ public class GetStockOssCheckTasksListResponseBody extends TeaModel {
             }
 
             /**
-             * FinishNum.
+             * <p>Number of completed tasks.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2</p>
              */
             public Builder finishNum(Long finishNum) {
                 this.finishNum = finishNum;
@@ -1134,7 +1235,10 @@ public class GetStockOssCheckTasksListResponseBody extends TeaModel {
             }
 
             /**
-             * IsInc.
+             * <p>Whether it is a scheduled scan task</p>
+             * 
+             * <strong>example:</strong>
+             * <p>false</p>
              */
             public Builder isInc(Boolean isInc) {
                 this.isInc = isInc;
@@ -1142,7 +1246,10 @@ public class GetStockOssCheckTasksListResponseBody extends TeaModel {
             }
 
             /**
-             * LastExecuteDate.
+             * <p>Next execution time of the scheduled task</p>
+             * 
+             * <strong>example:</strong>
+             * <p>02:00:00</p>
              */
             public Builder lastExecuteDate(String lastExecuteDate) {
                 this.lastExecuteDate = lastExecuteDate;
@@ -1150,7 +1257,10 @@ public class GetStockOssCheckTasksListResponseBody extends TeaModel {
             }
 
             /**
-             * MediaType.
+             * <p>Media type.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>video</p>
              */
             public Builder mediaType(Integer mediaType) {
                 this.mediaType = mediaType;
@@ -1158,7 +1268,10 @@ public class GetStockOssCheckTasksListResponseBody extends TeaModel {
             }
 
             /**
-             * NextExecuteDate.
+             * <p>Last execution time of the scheduled task</p>
+             * 
+             * <strong>example:</strong>
+             * <p>02:00:00</p>
              */
             public Builder nextExecuteDate(String nextExecuteDate) {
                 this.nextExecuteDate = nextExecuteDate;
@@ -1166,7 +1279,10 @@ public class GetStockOssCheckTasksListResponseBody extends TeaModel {
             }
 
             /**
-             * ObjectNum.
+             * <p>Total number of files in the bucket</p>
+             * 
+             * <strong>example:</strong>
+             * <p>10</p>
              */
             public Builder objectNum(Long objectNum) {
                 this.objectNum = objectNum;
@@ -1174,7 +1290,10 @@ public class GetStockOssCheckTasksListResponseBody extends TeaModel {
             }
 
             /**
-             * SearchNum.
+             * <p>Number of scan tasks.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>10</p>
              */
             public Builder searchNum(Long searchNum) {
                 this.searchNum = searchNum;
@@ -1182,7 +1301,10 @@ public class GetStockOssCheckTasksListResponseBody extends TeaModel {
             }
 
             /**
-             * StartTime.
+             * <p>Start time.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2023-12-21 15:30:19</p>
              */
             public Builder startTime(String startTime) {
                 this.startTime = startTime;
@@ -1190,7 +1312,10 @@ public class GetStockOssCheckTasksListResponseBody extends TeaModel {
             }
 
             /**
-             * Status.
+             * <p>Task status.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>4</p>
              */
             public Builder status(Integer status) {
                 this.status = status;
@@ -1198,7 +1323,10 @@ public class GetStockOssCheckTasksListResponseBody extends TeaModel {
             }
 
             /**
-             * TaskId.
+             * <p>Task ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>P_XHDUS</p>
              */
             public Builder taskId(String taskId) {
                 this.taskId = taskId;
@@ -1206,7 +1334,10 @@ public class GetStockOssCheckTasksListResponseBody extends TeaModel {
             }
 
             /**
-             * TaskName.
+             * <p>Task name.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>图片定时任务20231205135716797</p>
              */
             public Builder taskName(String taskName) {
                 this.taskName = taskName;
@@ -1214,7 +1345,10 @@ public class GetStockOssCheckTasksListResponseBody extends TeaModel {
             }
 
             /**
-             * TaskType.
+             * <p>Task type</p>
+             * 
+             * <strong>example:</strong>
+             * <p>batch</p>
              */
             public Builder taskType(String taskType) {
                 this.taskType = taskType;

@@ -101,7 +101,10 @@ public class LlmStreamChatRequest extends Request {
         } 
 
         /**
-         * Messages.
+         * <p>Conversation information</p>
+         * 
+         * <strong>example:</strong>
+         * <p>[{&quot;content&quot;:&quot;你好&quot;,&quot;role&quot;:&quot;user&quot;}]</p>
          */
         public Builder messages(Object messages) {
             this.putBodyParameter("Messages", messages);
@@ -110,7 +113,10 @@ public class LlmStreamChatRequest extends Request {
         }
 
         /**
-         * Temperature.
+         * <p>Temperature value for the large model</p>
+         * 
+         * <strong>example:</strong>
+         * <p>0.5</p>
          */
         public Builder temperature(Float temperature) {
             this.putBodyParameter("Temperature", temperature);
@@ -119,7 +125,10 @@ public class LlmStreamChatRequest extends Request {
         }
 
         /**
-         * TopP.
+         * <p>Top p parameter controlling the randomness of the large model&quot;s output.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>0.5</p>
          */
         public Builder topP(Float topP) {
             this.putBodyParameter("TopP", topP);
@@ -128,7 +137,10 @@ public class LlmStreamChatRequest extends Request {
         }
 
         /**
-         * Type.
+         * <p>Type of conversation</p>
+         * 
+         * <strong>example:</strong>
+         * <p>image</p>
          */
         public Builder type(String type) {
             this.putBodyParameter("Type", type);

@@ -129,7 +129,10 @@ public class UpdateScanResultFeedbackRequest extends Request {
         } 
 
         /**
-         * Feedback.
+         * <p>Feedback</p>
+         * 
+         * <strong>example:</strong>
+         * <p>missOut</p>
          */
         public Builder feedback(String feedback) {
             this.putBodyParameter("Feedback", feedback);
@@ -138,7 +141,10 @@ public class UpdateScanResultFeedbackRequest extends Request {
         }
 
         /**
-         * Labels.
+         * <p>Labels.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>abuse</p>
          */
         public Builder labels(String labels) {
             this.putBodyParameter("Labels", labels);
@@ -147,7 +153,10 @@ public class UpdateScanResultFeedbackRequest extends Request {
         }
 
         /**
-         * QueryRequestId.
+         * <p>Request ID</p>
+         * 
+         * <strong>example:</strong>
+         * <p>46232656-984E-****-A648-B1D0667B6C3E</p>
          */
         public Builder queryRequestId(String queryRequestId) {
             this.putBodyParameter("QueryRequestId", queryRequestId);
@@ -156,7 +165,10 @@ public class UpdateScanResultFeedbackRequest extends Request {
         }
 
         /**
-         * RegionId.
+         * <p>Region ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-shanghai</p>
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);
@@ -165,7 +177,10 @@ public class UpdateScanResultFeedbackRequest extends Request {
         }
 
         /**
-         * ResourceType.
+         * <p>Resource Type</p>
+         * 
+         * <strong>example:</strong>
+         * <p>text</p>
          */
         public Builder resourceType(String resourceType) {
             this.putBodyParameter("ResourceType", resourceType);
@@ -174,7 +189,10 @@ public class UpdateScanResultFeedbackRequest extends Request {
         }
 
         /**
-         * RiskLevel.
+         * <p>Risk Level</p>
+         * 
+         * <strong>example:</strong>
+         * <p>high</p>
          */
         public Builder riskLevel(String riskLevel) {
             this.putBodyParameter("RiskLevel", riskLevel);

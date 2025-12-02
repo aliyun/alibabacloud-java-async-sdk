@@ -115,7 +115,10 @@ public class GetOssCheckStatRequest extends Request {
         } 
 
         /**
-         * ByMonth.
+         * <p>Whether to query by month.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder byMonth(Boolean byMonth) {
             this.putBodyParameter("ByMonth", byMonth);
@@ -124,7 +127,10 @@ public class GetOssCheckStatRequest extends Request {
         }
 
         /**
-         * EndDate.
+         * <p>End date.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2023-08-24 10:01:55</p>
          */
         public Builder endDate(String endDate) {
             this.putBodyParameter("EndDate", endDate);
@@ -133,7 +139,10 @@ public class GetOssCheckStatRequest extends Request {
         }
 
         /**
-         * ParentTaskId.
+         * <p>Parent task ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>P_UNHBH</p>
          */
         public Builder parentTaskId(String parentTaskId) {
             this.putBodyParameter("ParentTaskId", parentTaskId);
@@ -142,7 +151,10 @@ public class GetOssCheckStatRequest extends Request {
         }
 
         /**
-         * RegionId.
+         * <p>Region ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-shanghai</p>
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);
@@ -151,7 +163,10 @@ public class GetOssCheckStatRequest extends Request {
         }
 
         /**
-         * StartDate.
+         * <p>Start date.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2023-08-11 09:00:19</p>
          */
         public Builder startDate(String startDate) {
             this.putBodyParameter("StartDate", startDate);

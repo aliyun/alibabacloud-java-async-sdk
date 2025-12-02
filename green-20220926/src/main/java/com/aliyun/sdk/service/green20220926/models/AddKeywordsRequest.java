@@ -101,7 +101,10 @@ public class AddKeywordsRequest extends Request {
         } 
 
         /**
-         * Keywords.
+         * <p>The keywords to be added.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>keywords</p>
          */
         public Builder keywords(String keywords) {
             this.putBodyParameter("Keywords", keywords);
@@ -110,7 +113,10 @@ public class AddKeywordsRequest extends Request {
         }
 
         /**
-         * KeywordsObject.
+         * <p>The name of the keyword file.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>upload/1e5353c0-0d91-40ba-9d41-ae7abd3fe561.txt</p>
          */
         public Builder keywordsObject(String keywordsObject) {
             this.putBodyParameter("KeywordsObject", keywordsObject);
@@ -119,7 +125,10 @@ public class AddKeywordsRequest extends Request {
         }
 
         /**
-         * LibId.
+         * <p>The id of keyword library.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>customxx_xxxx</p>
          */
         public Builder libId(String libId) {
             this.putBodyParameter("LibId", libId);
@@ -128,7 +137,10 @@ public class AddKeywordsRequest extends Request {
         }
 
         /**
-         * RegionId.
+         * <p>Region ID</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-shanghai</p>
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);

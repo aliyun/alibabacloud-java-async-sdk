@@ -106,7 +106,10 @@ public class CreateOnlineTestResponseBody extends TeaModel {
         } 
 
         /**
-         * RequestId.
+         * <p>ID assigned by the backend, used to uniquely identify a request. Can be used for troubleshooting.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>AAAAAA-BBBB-CCCCC-DDDD-EEEEEEEE****</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -114,7 +117,10 @@ public class CreateOnlineTestResponseBody extends TeaModel {
         }
 
         /**
-         * ServiceCode.
+         * <p>Service Code</p>
+         * 
+         * <strong>example:</strong>
+         * <p>VideoModeration</p>
          */
         public Builder serviceCode(String serviceCode) {
             this.serviceCode = serviceCode;
@@ -122,7 +128,10 @@ public class CreateOnlineTestResponseBody extends TeaModel {
         }
 
         /**
-         * TaskId.
+         * <p>Detection Task ID</p>
+         * 
+         * <strong>example:</strong>
+         * <p>xxxxx-xxxxx</p>
          */
         public Builder taskId(String taskId) {
             this.taskId = taskId;
@@ -130,7 +139,10 @@ public class CreateOnlineTestResponseBody extends TeaModel {
         }
 
         /**
-         * TaskStatus.
+         * <p>Detection Status</p>
+         * 
+         * <strong>example:</strong>
+         * <p>SUCCESS</p>
          */
         public Builder taskStatus(String taskStatus) {
             this.taskStatus = taskStatus;
@@ -138,7 +150,10 @@ public class CreateOnlineTestResponseBody extends TeaModel {
         }
 
         /**
-         * Url.
+         * <p>Detection URL</p>
+         * 
+         * <strong>example:</strong>
+         * <p><a href="https://xxxxxxxxxx.com/data/data.png">https://xxxxxxxxxx.com/data/data.png</a></p>
          */
         public Builder url(String url) {
             this.url = url;

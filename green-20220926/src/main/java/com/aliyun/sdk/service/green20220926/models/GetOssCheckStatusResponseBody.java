@@ -132,7 +132,7 @@ public class GetOssCheckStatusResponseBody extends TeaModel {
         } 
 
         /**
-         * <p>Bid。</p>
+         * <p>Bid.</p>
          * 
          * <strong>example:</strong>
          * <p>26842</p>
@@ -143,7 +143,10 @@ public class GetOssCheckStatusResponseBody extends TeaModel {
         }
 
         /**
-         * Buy.
+         * <p>Whether a product has been activated on Alibaba Cloud.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>True</p>
          */
         public Builder buy(Boolean buy) {
             this.buy = buy;
@@ -151,7 +154,10 @@ public class GetOssCheckStatusResponseBody extends TeaModel {
         }
 
         /**
-         * CommodityCode.
+         * <p>Commodity code.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>xxx</p>
          */
         public Builder commodityCode(String commodityCode) {
             this.commodityCode = commodityCode;
@@ -159,7 +165,10 @@ public class GetOssCheckStatusResponseBody extends TeaModel {
         }
 
         /**
-         * Indebt.
+         * <p>Whether there is an outstanding payment.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>False</p>
          */
         public Builder indebt(Boolean indebt) {
             this.indebt = indebt;
@@ -167,7 +176,10 @@ public class GetOssCheckStatusResponseBody extends TeaModel {
         }
 
         /**
-         * RamStatus.
+         * <p>Whether internal security is authorized.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>True</p>
          */
         public Builder ramStatus(String ramStatus) {
             this.ramStatus = ramStatus;
@@ -175,7 +187,10 @@ public class GetOssCheckStatusResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * <p>ID assigned by the backend, used to uniquely identify a request. Can be used for troubleshooting.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>AAAAAA-BBBB-CCCCC-DDDD-EEEEEEEE****</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -183,7 +198,10 @@ public class GetOssCheckStatusResponseBody extends TeaModel {
         }
 
         /**
-         * SlsStatus.
+         * <p>Whether log analysis function is authorized.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>True</p>
          */
         public Builder slsStatus(String slsStatus) {
             this.slsStatus = slsStatus;

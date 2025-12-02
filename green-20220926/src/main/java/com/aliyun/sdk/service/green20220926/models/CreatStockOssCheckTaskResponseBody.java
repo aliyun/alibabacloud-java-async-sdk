@@ -67,7 +67,10 @@ public class CreatStockOssCheckTaskResponseBody extends TeaModel {
         } 
 
         /**
-         * Data.
+         * <p>Returned data</p>
+         * 
+         * <strong>example:</strong>
+         * <p>True</p>
          */
         public Builder data(Boolean data) {
             this.data = data;
@@ -75,7 +78,10 @@ public class CreatStockOssCheckTaskResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>AAAAAA-BBBB-CCCCC-DDDD-EEEEEEEE****</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;

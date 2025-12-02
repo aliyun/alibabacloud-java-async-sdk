@@ -67,7 +67,7 @@ public class GetBucketsListResponseBody extends TeaModel {
         } 
 
         /**
-         * Data.
+         * <p>Returned data.</p>
          */
         public Builder data(java.util.List<Data> data) {
             this.data = data;
@@ -75,7 +75,10 @@ public class GetBucketsListResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * <p>Backend-assigned ID, used to uniquely identify a request. Can be used for troubleshooting.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>AAAAAA-BBBB-CCCCC-DDDD-EEEEEEEE****</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -141,7 +144,10 @@ public class GetBucketsListResponseBody extends TeaModel {
             } 
 
             /**
-             * Bucket.
+             * <p>OSS file storage bucket name.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>bucket_test</p>
              */
             public Builder bucket(String bucket) {
                 this.bucket = bucket;
@@ -149,7 +155,10 @@ public class GetBucketsListResponseBody extends TeaModel {
             }
 
             /**
-             * Region.
+             * <p>Region ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>cn-hangzhou</p>
              */
             public Builder region(String region) {
                 this.region = region;

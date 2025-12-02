@@ -73,7 +73,10 @@ public class CancelStockOssCheckTaskRequest extends Request {
         } 
 
         /**
-         * RegionId.
+         * <p>Region ID</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-shanghai</p>
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);
@@ -82,7 +85,10 @@ public class CancelStockOssCheckTaskRequest extends Request {
         }
 
         /**
-         * TaskId.
+         * <p>The task ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>P_UNYVB</p>
          */
         public Builder taskId(String taskId) {
             this.putQueryParameter("TaskId", taskId);

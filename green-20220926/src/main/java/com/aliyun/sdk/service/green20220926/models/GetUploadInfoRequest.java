@@ -87,7 +87,10 @@ public class GetUploadInfoRequest extends Request {
         } 
 
         /**
-         * Name.
+         * <p>Upload name.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>测试</p>
          */
         public Builder name(String name) {
             this.putBodyParameter("Name", name);
@@ -96,7 +99,10 @@ public class GetUploadInfoRequest extends Request {
         }
 
         /**
-         * RegionId.
+         * <p>Region ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-shanghai</p>
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);
@@ -105,7 +111,10 @@ public class GetUploadInfoRequest extends Request {
         }
 
         /**
-         * ResourceType.
+         * <p>Resource type.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>image</p>
          */
         public Builder resourceType(String resourceType) {
             this.putBodyParameter("ResourceType", resourceType);

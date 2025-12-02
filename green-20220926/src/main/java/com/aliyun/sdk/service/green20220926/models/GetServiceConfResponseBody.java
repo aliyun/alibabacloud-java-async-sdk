@@ -197,7 +197,10 @@ public class GetServiceConfResponseBody extends TeaModel {
         } 
 
         /**
-         * Classify.
+         * <p>Classification.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>guard-scene</p>
          */
         public Builder classify(String classify) {
             this.classify = classify;
@@ -205,7 +208,10 @@ public class GetServiceConfResponseBody extends TeaModel {
         }
 
         /**
-         * Code.
+         * <p>Error code, consistent with HTTP status.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>200</p>
          */
         public Builder code(Integer code) {
             this.code = code;
@@ -213,7 +219,10 @@ public class GetServiceConfResponseBody extends TeaModel {
         }
 
         /**
-         * CustomServiceConf.
+         * <p>Service details</p>
+         * 
+         * <strong>example:</strong>
+         * <p>{}</p>
          */
         public Builder customServiceConf(java.util.Map<String, ?> customServiceConf) {
             this.customServiceConf = customServiceConf;
@@ -221,7 +230,10 @@ public class GetServiceConfResponseBody extends TeaModel {
         }
 
         /**
-         * GmtModified.
+         * <p>Modification time.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2023-01-17 12:29:56</p>
          */
         public Builder gmtModified(String gmtModified) {
             this.gmtModified = gmtModified;
@@ -229,7 +241,10 @@ public class GetServiceConfResponseBody extends TeaModel {
         }
 
         /**
-         * Msg.
+         * <p>Further description of the error code.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>OK</p>
          */
         public Builder msg(String msg) {
             this.msg = msg;
@@ -237,7 +252,10 @@ public class GetServiceConfResponseBody extends TeaModel {
         }
 
         /**
-         * Option.
+         * <p>Options.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>{}</p>
          */
         public Builder option(java.util.Map<String, ?> option) {
             this.option = option;
@@ -245,7 +263,10 @@ public class GetServiceConfResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * <p>ID assigned by the backend to uniquely identify a request. Can be used for troubleshooting.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>6CF2815C-<strong><strong>-</strong></strong>-B52E-FF6E2****492</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -253,7 +274,10 @@ public class GetServiceConfResponseBody extends TeaModel {
         }
 
         /**
-         * ResourceType.
+         * <p>Resource type.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>image</p>
          */
         public Builder resourceType(String resourceType) {
             this.resourceType = resourceType;
@@ -261,7 +285,10 @@ public class GetServiceConfResponseBody extends TeaModel {
         }
 
         /**
-         * ServiceCode.
+         * <p>Service code.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>baselineCheck</p>
          */
         public Builder serviceCode(String serviceCode) {
             this.serviceCode = serviceCode;
@@ -269,7 +296,10 @@ public class GetServiceConfResponseBody extends TeaModel {
         }
 
         /**
-         * ServiceType.
+         * <p>Service type.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>plus</p>
          */
         public Builder serviceType(String serviceType) {
             this.serviceType = serviceType;
@@ -277,7 +307,10 @@ public class GetServiceConfResponseBody extends TeaModel {
         }
 
         /**
-         * Success.
+         * <p>Success indicator</p>
+         * 
+         * <strong>example:</strong>
+         * <p>True</p>
          */
         public Builder success(Boolean success) {
             this.success = success;
@@ -285,7 +318,7 @@ public class GetServiceConfResponseBody extends TeaModel {
         }
 
         /**
-         * <p>UID。</p>
+         * <p>UID.</p>
          * 
          * <strong>example:</strong>
          * <p>17726*****370735</p>

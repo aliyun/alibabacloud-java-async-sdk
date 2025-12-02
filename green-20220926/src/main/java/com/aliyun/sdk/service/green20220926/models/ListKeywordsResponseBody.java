@@ -106,7 +106,10 @@ public class ListKeywordsResponseBody extends TeaModel {
         } 
 
         /**
-         * Code.
+         * <p>Error code.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>200</p>
          */
         public Builder code(Integer code) {
             this.code = code;
@@ -114,7 +117,7 @@ public class ListKeywordsResponseBody extends TeaModel {
         }
 
         /**
-         * Data.
+         * <p>Returned data.</p>
          */
         public Builder data(Data data) {
             this.data = data;
@@ -122,7 +125,10 @@ public class ListKeywordsResponseBody extends TeaModel {
         }
 
         /**
-         * Msg.
+         * <p>Further description of the error code.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>OK</p>
          */
         public Builder msg(String msg) {
             this.msg = msg;
@@ -130,7 +136,10 @@ public class ListKeywordsResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * <p>ID assigned by the backend to uniquely identify a request. Can be used for troubleshooting.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>AAAAAA-BBBB-CCCCC-DDDD-EEEEEEEE****</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -138,7 +147,10 @@ public class ListKeywordsResponseBody extends TeaModel {
         }
 
         /**
-         * Success.
+         * <p>Success flag.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>True</p>
          */
         public Builder success(Boolean success) {
             this.success = success;
@@ -256,7 +268,10 @@ public class ListKeywordsResponseBody extends TeaModel {
             } 
 
             /**
-             * GmtCreate.
+             * <p>Creation time.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2023-06-03 14:43:03</p>
              */
             public Builder gmtCreate(String gmtCreate) {
                 this.gmtCreate = gmtCreate;
@@ -264,7 +279,10 @@ public class ListKeywordsResponseBody extends TeaModel {
             }
 
             /**
-             * GmtModified.
+             * <p>Modification time.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2023-06-03 14:43:03</p>
              */
             public Builder gmtModified(String gmtModified) {
                 this.gmtModified = gmtModified;
@@ -272,7 +290,10 @@ public class ListKeywordsResponseBody extends TeaModel {
             }
 
             /**
-             * Id.
+             * <p>Primary key ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>112</p>
              */
             public Builder id(Long id) {
                 this.id = id;
@@ -280,7 +301,10 @@ public class ListKeywordsResponseBody extends TeaModel {
             }
 
             /**
-             * KeywordLibId.
+             * <p>Keyword library ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>custom_xxxx</p>
              */
             public Builder keywordLibId(String keywordLibId) {
                 this.keywordLibId = keywordLibId;
@@ -288,7 +312,10 @@ public class ListKeywordsResponseBody extends TeaModel {
             }
 
             /**
-             * KeywordMd5Id.
+             * <p>Keyword data ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>4205334</p>
              */
             public Builder keywordMd5Id(Long keywordMd5Id) {
                 this.keywordMd5Id = keywordMd5Id;
@@ -296,7 +323,10 @@ public class ListKeywordsResponseBody extends TeaModel {
             }
 
             /**
-             * Word.
+             * <p>Keyword.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>测试词</p>
              */
             public Builder word(String word) {
                 this.word = word;
@@ -389,7 +419,10 @@ public class ListKeywordsResponseBody extends TeaModel {
             } 
 
             /**
-             * CurrentPage.
+             * <p>Current page number.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder currentPage(Integer currentPage) {
                 this.currentPage = currentPage;
@@ -397,7 +430,7 @@ public class ListKeywordsResponseBody extends TeaModel {
             }
 
             /**
-             * Items.
+             * <p>Data of the current page.</p>
              */
             public Builder items(java.util.List<Items> items) {
                 this.items = items;
@@ -405,7 +438,10 @@ public class ListKeywordsResponseBody extends TeaModel {
             }
 
             /**
-             * PageSize.
+             * <p>Page size.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>20</p>
              */
             public Builder pageSize(Integer pageSize) {
                 this.pageSize = pageSize;
@@ -413,7 +449,10 @@ public class ListKeywordsResponseBody extends TeaModel {
             }
 
             /**
-             * TotalCount.
+             * <p>Total count.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>23</p>
              */
             public Builder totalCount(Integer totalCount) {
                 this.totalCount = totalCount;

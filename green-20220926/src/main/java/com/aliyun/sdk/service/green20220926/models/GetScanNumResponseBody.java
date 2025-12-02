@@ -106,7 +106,10 @@ public class GetScanNumResponseBody extends TeaModel {
         } 
 
         /**
-         * LimitNumber.
+         * <p>Upper limit of the quantity.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10</p>
          */
         public Builder limitNumber(Long limitNumber) {
             this.limitNumber = limitNumber;
@@ -114,7 +117,10 @@ public class GetScanNumResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * <p>ID assigned by the backend, used to uniquely identify a request. Can be used for troubleshooting.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>AAAAAA-BBBB-CCCCC-DDDD-EEEEEEEE****</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -122,7 +128,10 @@ public class GetScanNumResponseBody extends TeaModel {
         }
 
         /**
-         * ScanNumber.
+         * <p>Total number of files pending inspection.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10</p>
          */
         public Builder scanNumber(Long scanNumber) {
             this.scanNumber = scanNumber;
@@ -130,7 +139,10 @@ public class GetScanNumResponseBody extends TeaModel {
         }
 
         /**
-         * SumNumber.
+         * <p>Total number of files.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10</p>
          */
         public Builder sumNumber(Long sumNumber) {
             this.sumNumber = sumNumber;
@@ -138,7 +150,10 @@ public class GetScanNumResponseBody extends TeaModel {
         }
 
         /**
-         * Tag.
+         * <p>Whether it is a whitelist user.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>True</p>
          */
         public Builder tag(Boolean tag) {
             this.tag = tag;

@@ -115,7 +115,10 @@ public class ExportOssCheckStatRequest extends Request {
         } 
 
         /**
-         * ByMonth.
+         * <p>Whether to support monthly indexing. Values: -true: supported. -false: not supported.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder byMonth(Boolean byMonth) {
             this.putBodyParameter("ByMonth", byMonth);
@@ -124,7 +127,10 @@ public class ExportOssCheckStatRequest extends Request {
         }
 
         /**
-         * EndDate.
+         * <p>End time of the query, in the format yyyy-MM-dd HH:mm:ss.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2024-03-11 10:00:00</p>
          */
         public Builder endDate(String endDate) {
             this.putBodyParameter("EndDate", endDate);
@@ -133,7 +139,10 @@ public class ExportOssCheckStatRequest extends Request {
         }
 
         /**
-         * ParentTaskId.
+         * <p>OSS detection task ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>P_UX0K5X</p>
          */
         public Builder parentTaskId(String parentTaskId) {
             this.putBodyParameter("ParentTaskId", parentTaskId);
@@ -142,7 +151,10 @@ public class ExportOssCheckStatRequest extends Request {
         }
 
         /**
-         * RegionId.
+         * <p>Region ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-shanghai</p>
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);
@@ -151,7 +163,10 @@ public class ExportOssCheckStatRequest extends Request {
         }
 
         /**
-         * StartDate.
+         * <p>Start time of the query, in the format yyyy-MM-dd HH:mm:ss.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2024-03-10 10:00:00</p>
          */
         public Builder startDate(String startDate) {
             this.putBodyParameter("StartDate", startDate);

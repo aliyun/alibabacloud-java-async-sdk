@@ -157,7 +157,10 @@ public class ExportResultRequest extends Request {
         } 
 
         /**
-         * CurrentPage.
+         * <p>Page number of the query result. Default is 1.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder currentPage(Integer currentPage) {
             this.putBodyParameter("CurrentPage", currentPage);
@@ -166,7 +169,10 @@ public class ExportResultRequest extends Request {
         }
 
         /**
-         * EndDate.
+         * <p>End date.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2023-08-24 10:01:55</p>
          */
         public Builder endDate(String endDate) {
             this.putBodyParameter("EndDate", endDate);
@@ -175,7 +181,10 @@ public class ExportResultRequest extends Request {
         }
 
         /**
-         * PageSize.
+         * <p>Number of items per page in the query result.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>20</p>
          */
         public Builder pageSize(Integer pageSize) {
             this.putBodyParameter("PageSize", pageSize);
@@ -184,7 +193,10 @@ public class ExportResultRequest extends Request {
         }
 
         /**
-         * Query.
+         * <p>Query condition.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>{&quot;TaskId&quot;:&quot;P_11TL5T&quot;}</p>
          */
         public Builder query(String query) {
             this.putBodyParameter("Query", query);
@@ -193,7 +205,10 @@ public class ExportResultRequest extends Request {
         }
 
         /**
-         * RegionId.
+         * <p>Region ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-shanghai</p>
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);
@@ -202,7 +217,7 @@ public class ExportResultRequest extends Request {
         }
 
         /**
-         * Sort.
+         * <p>Sort field.</p>
          */
         public Builder sort(java.util.Map<String, String> sort) {
             String sortShrink = shrink(sort, "Sort", "json");
@@ -212,7 +227,10 @@ public class ExportResultRequest extends Request {
         }
 
         /**
-         * Source.
+         * <p>Operation source.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>disposal</p>
          */
         public Builder source(String source) {
             this.putBodyParameter("Source", source);
@@ -221,7 +239,10 @@ public class ExportResultRequest extends Request {
         }
 
         /**
-         * StartDate.
+         * <p>Start date.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2023-08-11 09:00:19</p>
          */
         public Builder startDate(String startDate) {
             this.putBodyParameter("StartDate", startDate);

@@ -87,7 +87,10 @@ public class AddImageLibRequest extends Request {
         } 
 
         /**
-         * Comment.
+         * <p>The remarks of the image library.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Explicit_Content_Blacklist_Image_lib</p>
          */
         public Builder comment(String comment) {
             this.putBodyParameter("Comment", comment);
@@ -96,7 +99,10 @@ public class AddImageLibRequest extends Request {
         }
 
         /**
-         * LibName.
+         * <p>The name of image library</p>
+         * 
+         * <strong>example:</strong>
+         * <p>test_image_lib</p>
          */
         public Builder libName(String libName) {
             this.putBodyParameter("LibName", libName);
@@ -105,7 +111,10 @@ public class AddImageLibRequest extends Request {
         }
 
         /**
-         * RegionId.
+         * <p>The region ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-shanghai</p>
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);

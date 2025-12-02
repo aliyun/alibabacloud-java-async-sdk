@@ -106,7 +106,10 @@ public class ListServiceConfigsResponseBody extends TeaModel {
         } 
 
         /**
-         * Code.
+         * <p>Error code.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>400</p>
          */
         public Builder code(Integer code) {
             this.code = code;
@@ -114,7 +117,7 @@ public class ListServiceConfigsResponseBody extends TeaModel {
         }
 
         /**
-         * Data.
+         * <p>Returned data.</p>
          */
         public Builder data(java.util.List<Data> data) {
             this.data = data;
@@ -122,7 +125,10 @@ public class ListServiceConfigsResponseBody extends TeaModel {
         }
 
         /**
-         * Msg.
+         * <p>Further description of the error code.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>OK</p>
          */
         public Builder msg(String msg) {
             this.msg = msg;
@@ -130,7 +136,10 @@ public class ListServiceConfigsResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * <p>ID assigned by the backend to uniquely identify a request. Can be used for troubleshooting.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>AAAAAA-BBBB-CCCCC-DDDD-EEEEEEEE****</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -138,7 +147,10 @@ public class ListServiceConfigsResponseBody extends TeaModel {
         }
 
         /**
-         * Success.
+         * <p>Success indicator.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>True</p>
          */
         public Builder success(Boolean success) {
             this.success = success;
@@ -191,7 +203,7 @@ public class ListServiceConfigsResponseBody extends TeaModel {
             } 
 
             /**
-             * Services.
+             * <p>Image services.</p>
              */
             public Builder services(java.util.List<String> services) {
                 this.services = services;
@@ -245,7 +257,7 @@ public class ListServiceConfigsResponseBody extends TeaModel {
             } 
 
             /**
-             * Services.
+             * <p>Text services.</p>
              */
             public Builder services(java.util.List<String> services) {
                 this.services = services;
@@ -325,7 +337,7 @@ public class ListServiceConfigsResponseBody extends TeaModel {
             } 
 
             /**
-             * ImageScanRule.
+             * <p>Image review rule.</p>
              */
             public Builder imageScanRule(ImageScanRule imageScanRule) {
                 this.imageScanRule = imageScanRule;
@@ -333,7 +345,10 @@ public class ListServiceConfigsResponseBody extends TeaModel {
             }
 
             /**
-             * Index.
+             * <p>Index.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder index(Integer index) {
                 this.index = index;
@@ -341,7 +356,7 @@ public class ListServiceConfigsResponseBody extends TeaModel {
             }
 
             /**
-             * TextScanRule.
+             * <p>Text review rule.</p>
              */
             public Builder textScanRule(TextScanRule textScanRule) {
                 this.textScanRule = textScanRule;
@@ -460,7 +475,10 @@ public class ListServiceConfigsResponseBody extends TeaModel {
             } 
 
             /**
-             * AudioService.
+             * <p>Audio service.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>audio_media_detection</p>
              */
             public Builder audioService(String audioService) {
                 this.audioService = audioService;
@@ -468,7 +486,7 @@ public class ListServiceConfigsResponseBody extends TeaModel {
             }
 
             /**
-             * ImageService.
+             * <p>Image services.</p>
              */
             public Builder imageService(java.util.List<String> imageService) {
                 this.imageService = imageService;
@@ -476,7 +494,7 @@ public class ListServiceConfigsResponseBody extends TeaModel {
             }
 
             /**
-             * KeywordFilterLibs.
+             * <p>Ignored word libraries.</p>
              */
             public Builder keywordFilterLibs(java.util.List<String> keywordFilterLibs) {
                 this.keywordFilterLibs = keywordFilterLibs;
@@ -484,7 +502,7 @@ public class ListServiceConfigsResponseBody extends TeaModel {
             }
 
             /**
-             * KeywordHitLibs.
+             * <p>Hit word libraries.</p>
              */
             public Builder keywordHitLibs(java.util.List<String> keywordHitLibs) {
                 this.keywordHitLibs = keywordHitLibs;
@@ -492,7 +510,7 @@ public class ListServiceConfigsResponseBody extends TeaModel {
             }
 
             /**
-             * Rules.
+             * <p>Service rules</p>
              */
             public Builder rules(java.util.List<Rules> rules) {
                 this.rules = rules;
@@ -500,7 +518,7 @@ public class ListServiceConfigsResponseBody extends TeaModel {
             }
 
             /**
-             * SimilarTextHitLibs.
+             * <p>Hit similar text libraries.</p>
              */
             public Builder similarTextHitLibs(java.util.List<String> similarTextHitLibs) {
                 this.similarTextHitLibs = similarTextHitLibs;
@@ -697,7 +715,10 @@ public class ListServiceConfigsResponseBody extends TeaModel {
             } 
 
             /**
-             * Classify.
+             * <p>Category.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>guard-scene</p>
              */
             public Builder classify(String classify) {
                 this.classify = classify;
@@ -705,7 +726,10 @@ public class ListServiceConfigsResponseBody extends TeaModel {
             }
 
             /**
-             * CopyFrom.
+             * <p>Main service.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>nickname_detection</p>
              */
             public Builder copyFrom(String copyFrom) {
                 this.copyFrom = copyFrom;
@@ -713,7 +737,7 @@ public class ListServiceConfigsResponseBody extends TeaModel {
             }
 
             /**
-             * CustomServiceConf.
+             * <p>Service configuration.</p>
              */
             public Builder customServiceConf(CustomServiceConf customServiceConf) {
                 this.customServiceConf = customServiceConf;
@@ -721,7 +745,10 @@ public class ListServiceConfigsResponseBody extends TeaModel {
             }
 
             /**
-             * GmtModified.
+             * <p>Modification time.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2023-07-11 15:40:04</p>
              */
             public Builder gmtModified(String gmtModified) {
                 this.gmtModified = gmtModified;
@@ -729,7 +756,10 @@ public class ListServiceConfigsResponseBody extends TeaModel {
             }
 
             /**
-             * Option.
+             * <p>Options.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>{}</p>
              */
             public Builder option(java.util.Map<String, ?> option) {
                 this.option = option;
@@ -737,7 +767,10 @@ public class ListServiceConfigsResponseBody extends TeaModel {
             }
 
             /**
-             * ResourceType.
+             * <p>Resource type.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>text</p>
              */
             public Builder resourceType(String resourceType) {
                 this.resourceType = resourceType;
@@ -745,7 +778,10 @@ public class ListServiceConfigsResponseBody extends TeaModel {
             }
 
             /**
-             * ServiceCode.
+             * <p>Service code.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>nickname_detection</p>
              */
             public Builder serviceCode(String serviceCode) {
                 this.serviceCode = serviceCode;
@@ -753,7 +789,10 @@ public class ListServiceConfigsResponseBody extends TeaModel {
             }
 
             /**
-             * ServiceDesc.
+             * <p>Service description.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>服务描述</p>
              */
             public Builder serviceDesc(String serviceDesc) {
                 this.serviceDesc = serviceDesc;
@@ -761,7 +800,10 @@ public class ListServiceConfigsResponseBody extends TeaModel {
             }
 
             /**
-             * ServiceName.
+             * <p>Service name.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>服务名称</p>
              */
             public Builder serviceName(String serviceName) {
                 this.serviceName = serviceName;
@@ -769,7 +811,10 @@ public class ListServiceConfigsResponseBody extends TeaModel {
             }
 
             /**
-             * ServiceType.
+             * <p>Service type.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>plus</p>
              */
             public Builder serviceType(String serviceType) {
                 this.serviceType = serviceType;
@@ -777,7 +822,7 @@ public class ListServiceConfigsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>UID。</p>
+             * <p>UID.</p>
              * 
              * <strong>example:</strong>
              * <p>1674*****0071291</p>
@@ -788,7 +833,10 @@ public class ListServiceConfigsResponseBody extends TeaModel {
             }
 
             /**
-             * UseStatus.
+             * <p>Usage status</p>
+             * 
+             * <strong>example:</strong>
+             * <p>in</p>
              */
             public Builder useStatus(String useStatus) {
                 this.useStatus = useStatus;
