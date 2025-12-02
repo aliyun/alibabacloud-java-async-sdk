@@ -143,6 +143,10 @@ public class CreateDifyInstanceRequest extends Request {
     private String natGatewayOption;
 
     @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("OnlyIntranet")
+    private Boolean onlyIntranet;
+
+    @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("OssPath")
     private String ossPath;
 
@@ -292,6 +296,7 @@ public class CreateDifyInstanceRequest extends Request {
         this.modelId = builder.modelId;
         this.modelOption = builder.modelOption;
         this.natGatewayOption = builder.natGatewayOption;
+        this.onlyIntranet = builder.onlyIntranet;
         this.ossPath = builder.ossPath;
         this.ossResourceId = builder.ossResourceId;
         this.payPeriod = builder.payPeriod;
@@ -553,6 +558,13 @@ public class CreateDifyInstanceRequest extends Request {
     }
 
     /**
+     * @return onlyIntranet
+     */
+    public Boolean getOnlyIntranet() {
+        return this.onlyIntranet;
+    }
+
+    /**
      * @return ossPath
      */
     public String getOssPath() {
@@ -780,6 +792,7 @@ public class CreateDifyInstanceRequest extends Request {
         private String modelId; 
         private String modelOption; 
         private String natGatewayOption; 
+        private Boolean onlyIntranet; 
         private String ossPath; 
         private Integer ossResourceId; 
         private Integer payPeriod; 
@@ -846,6 +859,7 @@ public class CreateDifyInstanceRequest extends Request {
             this.modelId = request.modelId;
             this.modelOption = request.modelOption;
             this.natGatewayOption = request.natGatewayOption;
+            this.onlyIntranet = request.onlyIntranet;
             this.ossPath = request.ossPath;
             this.ossResourceId = request.ossResourceId;
             this.payPeriod = request.payPeriod;
@@ -1152,6 +1166,15 @@ public class CreateDifyInstanceRequest extends Request {
         public Builder natGatewayOption(String natGatewayOption) {
             this.putQueryParameter("NatGatewayOption", natGatewayOption);
             this.natGatewayOption = natGatewayOption;
+            return this;
+        }
+
+        /**
+         * OnlyIntranet.
+         */
+        public Builder onlyIntranet(Boolean onlyIntranet) {
+            this.putQueryParameter("OnlyIntranet", onlyIntranet);
+            this.onlyIntranet = onlyIntranet;
             return this;
         }
 

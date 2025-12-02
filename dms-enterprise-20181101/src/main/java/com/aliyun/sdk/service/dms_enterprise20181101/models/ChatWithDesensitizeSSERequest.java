@@ -30,6 +30,10 @@ public class ChatWithDesensitizeSSERequest extends Request {
     private String desensitizationRule;
 
     @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Dimensions")
+    private Integer dimensions;
+
+    @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("EnableCodeInterpreter")
     private Boolean enableCodeInterpreter;
 
@@ -44,6 +48,10 @@ public class ChatWithDesensitizeSSERequest extends Request {
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("IncludeUsage")
     private Boolean includeUsage;
+
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Input")
+    private String input;
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("InstanceId")
@@ -131,10 +139,12 @@ public class ChatWithDesensitizeSSERequest extends Request {
         this.regionId = builder.regionId;
         this.audioJson = builder.audioJson;
         this.desensitizationRule = builder.desensitizationRule;
+        this.dimensions = builder.dimensions;
         this.enableCodeInterpreter = builder.enableCodeInterpreter;
         this.enableSearch = builder.enableSearch;
         this.enableThinking = builder.enableThinking;
         this.includeUsage = builder.includeUsage;
+        this.input = builder.input;
         this.instanceId = builder.instanceId;
         this.logprobs = builder.logprobs;
         this.maxTokens = builder.maxTokens;
@@ -192,6 +202,13 @@ public class ChatWithDesensitizeSSERequest extends Request {
     }
 
     /**
+     * @return dimensions
+     */
+    public Integer getDimensions() {
+        return this.dimensions;
+    }
+
+    /**
      * @return enableCodeInterpreter
      */
     public Boolean getEnableCodeInterpreter() {
@@ -217,6 +234,13 @@ public class ChatWithDesensitizeSSERequest extends Request {
      */
     public Boolean getIncludeUsage() {
         return this.includeUsage;
+    }
+
+    /**
+     * @return input
+     */
+    public String getInput() {
+        return this.input;
     }
 
     /**
@@ -363,10 +387,12 @@ public class ChatWithDesensitizeSSERequest extends Request {
         private String regionId; 
         private String audioJson; 
         private String desensitizationRule; 
+        private Integer dimensions; 
         private Boolean enableCodeInterpreter; 
         private Boolean enableSearch; 
         private Boolean enableThinking; 
         private Boolean includeUsage; 
+        private String input; 
         private Long instanceId; 
         private Boolean logprobs; 
         private Integer maxTokens; 
@@ -397,10 +423,12 @@ public class ChatWithDesensitizeSSERequest extends Request {
             this.regionId = request.regionId;
             this.audioJson = request.audioJson;
             this.desensitizationRule = request.desensitizationRule;
+            this.dimensions = request.dimensions;
             this.enableCodeInterpreter = request.enableCodeInterpreter;
             this.enableSearch = request.enableSearch;
             this.enableThinking = request.enableThinking;
             this.includeUsage = request.includeUsage;
+            this.input = request.input;
             this.instanceId = request.instanceId;
             this.logprobs = request.logprobs;
             this.maxTokens = request.maxTokens;
@@ -451,6 +479,15 @@ public class ChatWithDesensitizeSSERequest extends Request {
         }
 
         /**
+         * Dimensions.
+         */
+        public Builder dimensions(Integer dimensions) {
+            this.putQueryParameter("Dimensions", dimensions);
+            this.dimensions = dimensions;
+            return this;
+        }
+
+        /**
          * EnableCodeInterpreter.
          */
         public Builder enableCodeInterpreter(Boolean enableCodeInterpreter) {
@@ -483,6 +520,15 @@ public class ChatWithDesensitizeSSERequest extends Request {
         public Builder includeUsage(Boolean includeUsage) {
             this.putQueryParameter("IncludeUsage", includeUsage);
             this.includeUsage = includeUsage;
+            return this;
+        }
+
+        /**
+         * Input.
+         */
+        public Builder input(String input) {
+            this.putQueryParameter("Input", input);
+            this.input = input;
             return this;
         }
 
