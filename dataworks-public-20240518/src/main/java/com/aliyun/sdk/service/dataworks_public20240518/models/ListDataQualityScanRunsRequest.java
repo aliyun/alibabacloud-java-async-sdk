@@ -34,6 +34,10 @@ public class ListDataQualityScanRunsRequest extends Request {
     private Long dataQualityScanId;
 
     @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Filter")
+    private java.util.Map<String, ?> filter;
+
+    @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("PageNumber")
     private Integer pageNumber;
 
@@ -60,6 +64,7 @@ public class ListDataQualityScanRunsRequest extends Request {
         this.createTimeFrom = builder.createTimeFrom;
         this.createTimeTo = builder.createTimeTo;
         this.dataQualityScanId = builder.dataQualityScanId;
+        this.filter = builder.filter;
         this.pageNumber = builder.pageNumber;
         this.pageSize = builder.pageSize;
         this.projectId = builder.projectId;
@@ -109,6 +114,13 @@ public class ListDataQualityScanRunsRequest extends Request {
     }
 
     /**
+     * @return filter
+     */
+    public java.util.Map<String, ?> getFilter() {
+        return this.filter;
+    }
+
+    /**
      * @return pageNumber
      */
     public Integer getPageNumber() {
@@ -148,6 +160,7 @@ public class ListDataQualityScanRunsRequest extends Request {
         private Long createTimeFrom; 
         private Long createTimeTo; 
         private Long dataQualityScanId; 
+        private java.util.Map<String, ?> filter; 
         private Integer pageNumber; 
         private Integer pageSize; 
         private Long projectId; 
@@ -164,6 +177,7 @@ public class ListDataQualityScanRunsRequest extends Request {
             this.createTimeFrom = request.createTimeFrom;
             this.createTimeTo = request.createTimeTo;
             this.dataQualityScanId = request.dataQualityScanId;
+            this.filter = request.filter;
             this.pageNumber = request.pageNumber;
             this.pageSize = request.pageSize;
             this.projectId = request.projectId;
@@ -213,6 +227,16 @@ public class ListDataQualityScanRunsRequest extends Request {
         public Builder dataQualityScanId(Long dataQualityScanId) {
             this.putQueryParameter("DataQualityScanId", dataQualityScanId);
             this.dataQualityScanId = dataQualityScanId;
+            return this;
+        }
+
+        /**
+         * Filter.
+         */
+        public Builder filter(java.util.Map<String, ?> filter) {
+            String filterShrink = shrink(filter, "Filter", "json");
+            this.putQueryParameter("Filter", filterShrink);
+            this.filter = filter;
             return this;
         }
 
