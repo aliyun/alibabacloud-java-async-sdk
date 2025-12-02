@@ -1,0 +1,525 @@
+// This file is auto-generated, don't edit it. Thanks.
+package com.aliyun.sdk.service.sophonsoar20250903.models;
+
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
+import darabonba.core.RequestModel;
+import darabonba.core.TeaModel;
+import com.aliyun.sdk.gateway.pop.models.*;
+
+/**
+ * 
+ * {@link ListPlaybooksResponseBody} extends {@link TeaModel}
+ *
+ * <p>ListPlaybooksResponseBody</p>
+ */
+public class ListPlaybooksResponseBody extends TeaModel {
+    @com.aliyun.core.annotation.NameInMap("MaxResults")
+    private Integer maxResults;
+
+    @com.aliyun.core.annotation.NameInMap("NextToken")
+    private String nextToken;
+
+    @com.aliyun.core.annotation.NameInMap("PageNumber")
+    private Integer pageNumber;
+
+    @com.aliyun.core.annotation.NameInMap("PageSize")
+    private Integer pageSize;
+
+    @com.aliyun.core.annotation.NameInMap("Playbooks")
+    private java.util.List<Playbooks> playbooks;
+
+    @com.aliyun.core.annotation.NameInMap("RequestId")
+    private String requestId;
+
+    @com.aliyun.core.annotation.NameInMap("TotalCount")
+    private Integer totalCount;
+
+    private ListPlaybooksResponseBody(Builder builder) {
+        this.maxResults = builder.maxResults;
+        this.nextToken = builder.nextToken;
+        this.pageNumber = builder.pageNumber;
+        this.pageSize = builder.pageSize;
+        this.playbooks = builder.playbooks;
+        this.requestId = builder.requestId;
+        this.totalCount = builder.totalCount;
+    }
+
+    public static Builder builder() {
+        return new Builder();
+    }
+
+    public static ListPlaybooksResponseBody create() {
+        return builder().build();
+    }
+
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
+    /**
+     * @return maxResults
+     */
+    public Integer getMaxResults() {
+        return this.maxResults;
+    }
+
+    /**
+     * @return nextToken
+     */
+    public String getNextToken() {
+        return this.nextToken;
+    }
+
+    /**
+     * @return pageNumber
+     */
+    public Integer getPageNumber() {
+        return this.pageNumber;
+    }
+
+    /**
+     * @return pageSize
+     */
+    public Integer getPageSize() {
+        return this.pageSize;
+    }
+
+    /**
+     * @return playbooks
+     */
+    public java.util.List<Playbooks> getPlaybooks() {
+        return this.playbooks;
+    }
+
+    /**
+     * @return requestId
+     */
+    public String getRequestId() {
+        return this.requestId;
+    }
+
+    /**
+     * @return totalCount
+     */
+    public Integer getTotalCount() {
+        return this.totalCount;
+    }
+
+    public static final class Builder {
+        private Integer maxResults; 
+        private String nextToken; 
+        private Integer pageNumber; 
+        private Integer pageSize; 
+        private java.util.List<Playbooks> playbooks; 
+        private String requestId; 
+        private Integer totalCount; 
+
+        private Builder() {
+        } 
+
+        private Builder(ListPlaybooksResponseBody model) {
+            this.maxResults = model.maxResults;
+            this.nextToken = model.nextToken;
+            this.pageNumber = model.pageNumber;
+            this.pageSize = model.pageSize;
+            this.playbooks = model.playbooks;
+            this.requestId = model.requestId;
+            this.totalCount = model.totalCount;
+        } 
+
+        /**
+         * <p>Maximum number of results allowed to be returned. Range: 0~100.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>50</p>
+         */
+        public Builder maxResults(Integer maxResults) {
+            this.maxResults = maxResults;
+            return this;
+        }
+
+        /**
+         * <p>Token for the start of the next page query.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>7fbb1c****07c1f79a740f039a8dcfda</p>
+         */
+        public Builder nextToken(String nextToken) {
+            this.nextToken = nextToken;
+            return this;
+        }
+
+        /**
+         * <p>Current page number. The default value is 1.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
+         */
+        public Builder pageNumber(Integer pageNumber) {
+            this.pageNumber = pageNumber;
+            return this;
+        }
+
+        /**
+         * <p>Number of items per page in a paginated query.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10</p>
+         */
+        public Builder pageSize(Integer pageSize) {
+            this.pageSize = pageSize;
+            return this;
+        }
+
+        /**
+         * <p>List of playbooks.</p>
+         */
+        public Builder playbooks(java.util.List<Playbooks> playbooks) {
+            this.playbooks = playbooks;
+            return this;
+        }
+
+        /**
+         * <p>The unique identifier generated by Alibaba Cloud for this request, which can be used for troubleshooting and problem localization.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>567D3D0B-2153-5860-BF9A-F9DEED55FB73</p>
+         */
+        public Builder requestId(String requestId) {
+            this.requestId = requestId;
+            return this;
+        }
+
+        /**
+         * <p>Total number of items found.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>100</p>
+         */
+        public Builder totalCount(Integer totalCount) {
+            this.totalCount = totalCount;
+            return this;
+        }
+
+        public ListPlaybooksResponseBody build() {
+            return new ListPlaybooksResponseBody(this);
+        } 
+
+    } 
+
+    /**
+     * 
+     * {@link ListPlaybooksResponseBody} extends {@link TeaModel}
+     *
+     * <p>ListPlaybooksResponseBody</p>
+     */
+    public static class Playbooks extends TeaModel {
+        @com.aliyun.core.annotation.NameInMap("CreateTime")
+        private Long createTime;
+
+        @com.aliyun.core.annotation.NameInMap("PlaybookDescription")
+        private String playbookDescription;
+
+        @com.aliyun.core.annotation.NameInMap("PlaybookExtension")
+        private String playbookExtension;
+
+        @com.aliyun.core.annotation.NameInMap("PlaybookInputConfigs")
+        private java.util.List<FieldInputConfig> playbookInputConfigs;
+
+        @com.aliyun.core.annotation.NameInMap("PlaybookName")
+        private String playbookName;
+
+        @com.aliyun.core.annotation.NameInMap("PlaybookOutputConfigs")
+        private java.util.List<FieldOutputConfig> playbookOutputConfigs;
+
+        @com.aliyun.core.annotation.NameInMap("PlaybookParamType")
+        private String playbookParamType;
+
+        @com.aliyun.core.annotation.NameInMap("PlaybookStatus")
+        private Integer playbookStatus;
+
+        @com.aliyun.core.annotation.NameInMap("PlaybookType")
+        private String playbookType;
+
+        @com.aliyun.core.annotation.NameInMap("PlaybookUuid")
+        private String playbookUuid;
+
+        @com.aliyun.core.annotation.NameInMap("UpdateTime")
+        private Long updateTime;
+
+        private Playbooks(Builder builder) {
+            this.createTime = builder.createTime;
+            this.playbookDescription = builder.playbookDescription;
+            this.playbookExtension = builder.playbookExtension;
+            this.playbookInputConfigs = builder.playbookInputConfigs;
+            this.playbookName = builder.playbookName;
+            this.playbookOutputConfigs = builder.playbookOutputConfigs;
+            this.playbookParamType = builder.playbookParamType;
+            this.playbookStatus = builder.playbookStatus;
+            this.playbookType = builder.playbookType;
+            this.playbookUuid = builder.playbookUuid;
+            this.updateTime = builder.updateTime;
+        }
+
+        public static Builder builder() {
+            return new Builder();
+        }
+
+        public static Playbooks create() {
+            return builder().build();
+        }
+
+        /**
+         * @return createTime
+         */
+        public Long getCreateTime() {
+            return this.createTime;
+        }
+
+        /**
+         * @return playbookDescription
+         */
+        public String getPlaybookDescription() {
+            return this.playbookDescription;
+        }
+
+        /**
+         * @return playbookExtension
+         */
+        public String getPlaybookExtension() {
+            return this.playbookExtension;
+        }
+
+        /**
+         * @return playbookInputConfigs
+         */
+        public java.util.List<FieldInputConfig> getPlaybookInputConfigs() {
+            return this.playbookInputConfigs;
+        }
+
+        /**
+         * @return playbookName
+         */
+        public String getPlaybookName() {
+            return this.playbookName;
+        }
+
+        /**
+         * @return playbookOutputConfigs
+         */
+        public java.util.List<FieldOutputConfig> getPlaybookOutputConfigs() {
+            return this.playbookOutputConfigs;
+        }
+
+        /**
+         * @return playbookParamType
+         */
+        public String getPlaybookParamType() {
+            return this.playbookParamType;
+        }
+
+        /**
+         * @return playbookStatus
+         */
+        public Integer getPlaybookStatus() {
+            return this.playbookStatus;
+        }
+
+        /**
+         * @return playbookType
+         */
+        public String getPlaybookType() {
+            return this.playbookType;
+        }
+
+        /**
+         * @return playbookUuid
+         */
+        public String getPlaybookUuid() {
+            return this.playbookUuid;
+        }
+
+        /**
+         * @return updateTime
+         */
+        public Long getUpdateTime() {
+            return this.updateTime;
+        }
+
+        public static final class Builder {
+            private Long createTime; 
+            private String playbookDescription; 
+            private String playbookExtension; 
+            private java.util.List<FieldInputConfig> playbookInputConfigs; 
+            private String playbookName; 
+            private java.util.List<FieldOutputConfig> playbookOutputConfigs; 
+            private String playbookParamType; 
+            private Integer playbookStatus; 
+            private String playbookType; 
+            private String playbookUuid; 
+            private Long updateTime; 
+
+            private Builder() {
+            } 
+
+            private Builder(Playbooks model) {
+                this.createTime = model.createTime;
+                this.playbookDescription = model.playbookDescription;
+                this.playbookExtension = model.playbookExtension;
+                this.playbookInputConfigs = model.playbookInputConfigs;
+                this.playbookName = model.playbookName;
+                this.playbookOutputConfigs = model.playbookOutputConfigs;
+                this.playbookParamType = model.playbookParamType;
+                this.playbookStatus = model.playbookStatus;
+                this.playbookType = model.playbookType;
+                this.playbookUuid = model.playbookUuid;
+                this.updateTime = model.updateTime;
+            } 
+
+            /**
+             * <p>Creation time (in milliseconds).</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1667792399000</p>
+             */
+            public Builder createTime(Long createTime) {
+                this.createTime = createTime;
+                return this;
+            }
+
+            /**
+             * <p>Description of the playbook.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>alb block</p>
+             */
+            public Builder playbookDescription(String playbookDescription) {
+                this.playbookDescription = playbookDescription;
+                return this;
+            }
+
+            /**
+             * <p>Extended information of the playbook.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>{}</p>
+             */
+            public Builder playbookExtension(String playbookExtension) {
+                this.playbookExtension = playbookExtension;
+                return this;
+            }
+
+            /**
+             * <p>List of input parameter configurations for the playbook.</p>
+             */
+            public Builder playbookInputConfigs(java.util.List<FieldInputConfig> playbookInputConfigs) {
+                this.playbookInputConfigs = playbookInputConfigs;
+                return this;
+            }
+
+            /**
+             * <p>Name of the playbook.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>system_aliyun_alb_process_book</p>
+             */
+            public Builder playbookName(String playbookName) {
+                this.playbookName = playbookName;
+                return this;
+            }
+
+            /**
+             * <p>List of output parameter configurations for the playbook.</p>
+             */
+            public Builder playbookOutputConfigs(java.util.List<FieldOutputConfig> playbookOutputConfigs) {
+                this.playbookOutputConfigs = playbookOutputConfigs;
+                return this;
+            }
+
+            /**
+             * <p>The parameter type of the playbook, with values as follows:</p>
+             * <ul>
+             * <li><strong>template-ip</strong>: IP entity.</li>
+             * <li><strong>template-file</strong>: File entity.</li>
+             * <li><strong>template-process</strong>: Process entity.</li>
+             * <li><strong>template-host</strong>: Host entity.</li>
+             * <li><strong>template-domain</strong>: Domain entity.</li>
+             * <li><strong>template-container</strong>: Container entity.</li>
+             * <li><strong>template-incident</strong>: Security incident.</li>
+             * <li><strong>template-alert</strong>: Security alert.</li>
+             * <li><strong>custom</strong>: Custom.</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>template-ip</p>
+             */
+            public Builder playbookParamType(String playbookParamType) {
+                this.playbookParamType = playbookParamType;
+                return this;
+            }
+
+            /**
+             * <p>The publication status of the playbook, with values as follows:</p>
+             * <ul>
+             * <li><strong>0</strong>: Unpublished.</li>
+             * <li><strong>1</strong>: Published.</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>1</p>
+             */
+            public Builder playbookStatus(Integer playbookStatus) {
+                this.playbookStatus = playbookStatus;
+                return this;
+            }
+
+            /**
+             * <p>Type of the playbook, with values as follows:</p>
+             * <ul>
+             * <li><strong>preset</strong>: Predefined playbook.</li>
+             * <li><strong>user</strong>: Custom playbook.</li>
+             * <li><strong>component</strong>: Security response component.</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>user</p>
+             */
+            public Builder playbookType(String playbookType) {
+                this.playbookType = playbookType;
+                return this;
+            }
+
+            /**
+             * <p>UUID of the playbook.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>bb5a8640-a14f-44ef-8376-cxxxxx</p>
+             */
+            public Builder playbookUuid(String playbookUuid) {
+                this.playbookUuid = playbookUuid;
+                return this;
+            }
+
+            /**
+             * <p>Update time (in milliseconds).</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1731378251000</p>
+             */
+            public Builder updateTime(Long updateTime) {
+                this.updateTime = updateTime;
+                return this;
+            }
+
+            public Playbooks build() {
+                return new Playbooks(this);
+            } 
+
+        } 
+
+    }
+}

@@ -1,0 +1,1057 @@
+// This file is auto-generated, don't edit it. Thanks.
+package com.aliyun.sdk.service.sophonsoar20250903.models;
+
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
+import darabonba.core.RequestModel;
+import darabonba.core.TeaModel;
+import com.aliyun.sdk.gateway.pop.models.*;
+
+/**
+ * 
+ * {@link ListComponentsResponseBody} extends {@link TeaModel}
+ *
+ * <p>ListComponentsResponseBody</p>
+ */
+public class ListComponentsResponseBody extends TeaModel {
+    @com.aliyun.core.annotation.NameInMap("Components")
+    private java.util.List<Components> components;
+
+    @com.aliyun.core.annotation.NameInMap("MaxResults")
+    private Integer maxResults;
+
+    @com.aliyun.core.annotation.NameInMap("NextToken")
+    private String nextToken;
+
+    @com.aliyun.core.annotation.NameInMap("PageNumber")
+    private Integer pageNumber;
+
+    @com.aliyun.core.annotation.NameInMap("PageSize")
+    private Integer pageSize;
+
+    @com.aliyun.core.annotation.NameInMap("RequestId")
+    private String requestId;
+
+    @com.aliyun.core.annotation.NameInMap("TotalCount")
+    private Integer totalCount;
+
+    private ListComponentsResponseBody(Builder builder) {
+        this.components = builder.components;
+        this.maxResults = builder.maxResults;
+        this.nextToken = builder.nextToken;
+        this.pageNumber = builder.pageNumber;
+        this.pageSize = builder.pageSize;
+        this.requestId = builder.requestId;
+        this.totalCount = builder.totalCount;
+    }
+
+    public static Builder builder() {
+        return new Builder();
+    }
+
+    public static ListComponentsResponseBody create() {
+        return builder().build();
+    }
+
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
+    /**
+     * @return components
+     */
+    public java.util.List<Components> getComponents() {
+        return this.components;
+    }
+
+    /**
+     * @return maxResults
+     */
+    public Integer getMaxResults() {
+        return this.maxResults;
+    }
+
+    /**
+     * @return nextToken
+     */
+    public String getNextToken() {
+        return this.nextToken;
+    }
+
+    /**
+     * @return pageNumber
+     */
+    public Integer getPageNumber() {
+        return this.pageNumber;
+    }
+
+    /**
+     * @return pageSize
+     */
+    public Integer getPageSize() {
+        return this.pageSize;
+    }
+
+    /**
+     * @return requestId
+     */
+    public String getRequestId() {
+        return this.requestId;
+    }
+
+    /**
+     * @return totalCount
+     */
+    public Integer getTotalCount() {
+        return this.totalCount;
+    }
+
+    public static final class Builder {
+        private java.util.List<Components> components; 
+        private Integer maxResults; 
+        private String nextToken; 
+        private Integer pageNumber; 
+        private Integer pageSize; 
+        private String requestId; 
+        private Integer totalCount; 
+
+        private Builder() {
+        } 
+
+        private Builder(ListComponentsResponseBody model) {
+            this.components = model.components;
+            this.maxResults = model.maxResults;
+            this.nextToken = model.nextToken;
+            this.pageNumber = model.pageNumber;
+            this.pageSize = model.pageSize;
+            this.requestId = model.requestId;
+            this.totalCount = model.totalCount;
+        } 
+
+        /**
+         * <p>List of components.</p>
+         */
+        public Builder components(java.util.List<Components> components) {
+            this.components = components;
+            return this;
+        }
+
+        /**
+         * <p>Maximum number of results returned in a single request. Range: 1~100.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10</p>
+         */
+        public Builder maxResults(Integer maxResults) {
+            this.maxResults = maxResults;
+            return this;
+        }
+
+        /**
+         * <p>Token for the start of the next query.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>7fbb1c66d607c1f79a740f039a8dcfda</p>
+         */
+        public Builder nextToken(String nextToken) {
+            this.nextToken = nextToken;
+            return this;
+        }
+
+        /**
+         * <p>Page number for pagination, with a default value of 1.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
+         */
+        public Builder pageNumber(Integer pageNumber) {
+            this.pageNumber = pageNumber;
+            return this;
+        }
+
+        /**
+         * <p>Number of items per page for pagination. Range: 1~100.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10</p>
+         */
+        public Builder pageSize(Integer pageSize) {
+            this.pageSize = pageSize;
+            return this;
+        }
+
+        /**
+         * <p>The unique identifier generated by Alibaba Cloud for this request, which can be used for troubleshooting and problem localization.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>0727DAC8-<strong><strong>-51EC-</strong></strong>-14999C62B502</p>
+         */
+        public Builder requestId(String requestId) {
+            this.requestId = requestId;
+            return this;
+        }
+
+        /**
+         * <p>The total number of items found.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>52</p>
+         */
+        public Builder totalCount(Integer totalCount) {
+            this.totalCount = totalCount;
+            return this;
+        }
+
+        public ListComponentsResponseBody build() {
+            return new ListComponentsResponseBody(this);
+        } 
+
+    } 
+
+    /**
+     * 
+     * {@link ListComponentsResponseBody} extends {@link TeaModel}
+     *
+     * <p>ListComponentsResponseBody</p>
+     */
+    public static class InputConfigs extends TeaModel {
+        @com.aliyun.core.annotation.NameInMap("DefaultValue")
+        private String defaultValue;
+
+        @com.aliyun.core.annotation.NameInMap("FieldDescription")
+        private String fieldDescription;
+
+        @com.aliyun.core.annotation.NameInMap("FieldDisplayConfig")
+        private String fieldDisplayConfig;
+
+        @com.aliyun.core.annotation.NameInMap("FieldName")
+        private String fieldName;
+
+        @com.aliyun.core.annotation.NameInMap("FieldType")
+        private String fieldType;
+
+        @com.aliyun.core.annotation.NameInMap("Required")
+        private Boolean required;
+
+        private InputConfigs(Builder builder) {
+            this.defaultValue = builder.defaultValue;
+            this.fieldDescription = builder.fieldDescription;
+            this.fieldDisplayConfig = builder.fieldDisplayConfig;
+            this.fieldName = builder.fieldName;
+            this.fieldType = builder.fieldType;
+            this.required = builder.required;
+        }
+
+        public static Builder builder() {
+            return new Builder();
+        }
+
+        public static InputConfigs create() {
+            return builder().build();
+        }
+
+        /**
+         * @return defaultValue
+         */
+        public String getDefaultValue() {
+            return this.defaultValue;
+        }
+
+        /**
+         * @return fieldDescription
+         */
+        public String getFieldDescription() {
+            return this.fieldDescription;
+        }
+
+        /**
+         * @return fieldDisplayConfig
+         */
+        public String getFieldDisplayConfig() {
+            return this.fieldDisplayConfig;
+        }
+
+        /**
+         * @return fieldName
+         */
+        public String getFieldName() {
+            return this.fieldName;
+        }
+
+        /**
+         * @return fieldType
+         */
+        public String getFieldType() {
+            return this.fieldType;
+        }
+
+        /**
+         * @return required
+         */
+        public Boolean getRequired() {
+            return this.required;
+        }
+
+        public static final class Builder {
+            private String defaultValue; 
+            private String fieldDescription; 
+            private String fieldDisplayConfig; 
+            private String fieldName; 
+            private String fieldType; 
+            private Boolean required; 
+
+            private Builder() {
+            } 
+
+            private Builder(InputConfigs model) {
+                this.defaultValue = model.defaultValue;
+                this.fieldDescription = model.fieldDescription;
+                this.fieldDisplayConfig = model.fieldDisplayConfig;
+                this.fieldName = model.fieldName;
+                this.fieldType = model.fieldType;
+                this.required = model.required;
+            } 
+
+            /**
+             * <p>Default value.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1</p>
+             */
+            public Builder defaultValue(String defaultValue) {
+                this.defaultValue = defaultValue;
+                return this;
+            }
+
+            /**
+             * <p>Field description information.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Project Name</p>
+             */
+            public Builder fieldDescription(String fieldDescription) {
+                this.fieldDescription = fieldDescription;
+                return this;
+            }
+
+            /**
+             * <p>Field display configuration.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>{
+             *     &quot;height&quot;: 200,
+             *     &quot;theme&quot;: &quot;vs-light&quot;,
+             *     &quot;language&quot;: &quot;markdown&quot;,
+             *     &quot;editorOptions&quot;: {}
+             * }</p>
+             */
+            public Builder fieldDisplayConfig(String fieldDisplayConfig) {
+                this.fieldDisplayConfig = fieldDisplayConfig;
+                return this;
+            }
+
+            /**
+             * <p>Field name.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Project</p>
+             */
+            public Builder fieldName(String fieldName) {
+                this.fieldName = fieldName;
+                return this;
+            }
+
+            /**
+             * <p>Field type, with the following values:</p>
+             * <ul>
+             * <li><strong>String</strong>: String.</li>
+             * <li><strong>Long</strong>: Long integer.</li>
+             * <li><strong>Integer</strong>: Integer.</li>
+             * <li><strong>Double</strong>: Double.</li>
+             * <li><strong>Boolean</strong>: Boolean.</li>
+             * <li><strong>Complex</strong>: Key-value pair.</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>String</p>
+             */
+            public Builder fieldType(String fieldType) {
+                this.fieldType = fieldType;
+                return this;
+            }
+
+            /**
+             * <p>Whether this parameter is required.</p>
+             * <ul>
+             * <li><strong>true</strong>: Required.</li>
+             * <li><strong>false</strong>: Not required.</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>false</p>
+             */
+            public Builder required(Boolean required) {
+                this.required = required;
+                return this;
+            }
+
+            public InputConfigs build() {
+                return new InputConfigs(this);
+            } 
+
+        } 
+
+    }
+    /**
+     * 
+     * {@link ListComponentsResponseBody} extends {@link TeaModel}
+     *
+     * <p>ListComponentsResponseBody</p>
+     */
+    public static class OutputConfigs extends TeaModel {
+        @com.aliyun.core.annotation.NameInMap("FieldName")
+        private String fieldName;
+
+        @com.aliyun.core.annotation.NameInMap("FieldType")
+        private String fieldType;
+
+        private OutputConfigs(Builder builder) {
+            this.fieldName = builder.fieldName;
+            this.fieldType = builder.fieldType;
+        }
+
+        public static Builder builder() {
+            return new Builder();
+        }
+
+        public static OutputConfigs create() {
+            return builder().build();
+        }
+
+        /**
+         * @return fieldName
+         */
+        public String getFieldName() {
+            return this.fieldName;
+        }
+
+        /**
+         * @return fieldType
+         */
+        public String getFieldType() {
+            return this.fieldType;
+        }
+
+        public static final class Builder {
+            private String fieldName; 
+            private String fieldType; 
+
+            private Builder() {
+            } 
+
+            private Builder(OutputConfigs model) {
+                this.fieldName = model.fieldName;
+                this.fieldType = model.fieldType;
+            } 
+
+            /**
+             * <p>Field name.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>lh_source</p>
+             */
+            public Builder fieldName(String fieldName) {
+                this.fieldName = fieldName;
+                return this;
+            }
+
+            /**
+             * <p>Field type, with the following values:</p>
+             * <ul>
+             * <li><strong>String</strong>: String.</li>
+             * <li><strong>Long</strong>: Long integer.</li>
+             * <li><strong>Integer</strong>: Integer.</li>
+             * <li><strong>Double</strong>: Double.</li>
+             * <li><strong>Boolean</strong>: Boolean.</li>
+             * <li><strong>Complex</strong>: Key-value pair.</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>String</p>
+             */
+            public Builder fieldType(String fieldType) {
+                this.fieldType = fieldType;
+                return this;
+            }
+
+            public OutputConfigs build() {
+                return new OutputConfigs(this);
+            } 
+
+        } 
+
+    }
+    /**
+     * 
+     * {@link ListComponentsResponseBody} extends {@link TeaModel}
+     *
+     * <p>ListComponentsResponseBody</p>
+     */
+    public static class ComponentActions extends TeaModel {
+        @com.aliyun.core.annotation.NameInMap("ComponentActionDescription")
+        private String componentActionDescription;
+
+        @com.aliyun.core.annotation.NameInMap("ComponentActionName")
+        private String componentActionName;
+
+        @com.aliyun.core.annotation.NameInMap("InputConfigs")
+        private java.util.List<InputConfigs> inputConfigs;
+
+        @com.aliyun.core.annotation.NameInMap("OutputConfigs")
+        private java.util.List<OutputConfigs> outputConfigs;
+
+        private ComponentActions(Builder builder) {
+            this.componentActionDescription = builder.componentActionDescription;
+            this.componentActionName = builder.componentActionName;
+            this.inputConfigs = builder.inputConfigs;
+            this.outputConfigs = builder.outputConfigs;
+        }
+
+        public static Builder builder() {
+            return new Builder();
+        }
+
+        public static ComponentActions create() {
+            return builder().build();
+        }
+
+        /**
+         * @return componentActionDescription
+         */
+        public String getComponentActionDescription() {
+            return this.componentActionDescription;
+        }
+
+        /**
+         * @return componentActionName
+         */
+        public String getComponentActionName() {
+            return this.componentActionName;
+        }
+
+        /**
+         * @return inputConfigs
+         */
+        public java.util.List<InputConfigs> getInputConfigs() {
+            return this.inputConfigs;
+        }
+
+        /**
+         * @return outputConfigs
+         */
+        public java.util.List<OutputConfigs> getOutputConfigs() {
+            return this.outputConfigs;
+        }
+
+        public static final class Builder {
+            private String componentActionDescription; 
+            private String componentActionName; 
+            private java.util.List<InputConfigs> inputConfigs; 
+            private java.util.List<OutputConfigs> outputConfigs; 
+
+            private Builder() {
+            } 
+
+            private Builder(ComponentActions model) {
+                this.componentActionDescription = model.componentActionDescription;
+                this.componentActionName = model.componentActionName;
+                this.inputConfigs = model.inputConfigs;
+                this.outputConfigs = model.outputConfigs;
+            } 
+
+            /**
+             * <p>The description of the component action name.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Query logs from SLS</p>
+             */
+            public Builder componentActionDescription(String componentActionDescription) {
+                this.componentActionDescription = componentActionDescription;
+                return this;
+            }
+
+            /**
+             * <p>The name of the component action.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>QueryLogs</p>
+             */
+            public Builder componentActionName(String componentActionName) {
+                this.componentActionName = componentActionName;
+                return this;
+            }
+
+            /**
+             * <p>Configuration of input parameters for the action.</p>
+             */
+            public Builder inputConfigs(java.util.List<InputConfigs> inputConfigs) {
+                this.inputConfigs = inputConfigs;
+                return this;
+            }
+
+            /**
+             * <p>Action output parameter configuration.</p>
+             */
+            public Builder outputConfigs(java.util.List<OutputConfigs> outputConfigs) {
+                this.outputConfigs = outputConfigs;
+                return this;
+            }
+
+            public ComponentActions build() {
+                return new ComponentActions(this);
+            } 
+
+        } 
+
+    }
+    /**
+     * 
+     * {@link ListComponentsResponseBody} extends {@link TeaModel}
+     *
+     * <p>ListComponentsResponseBody</p>
+     */
+    public static class ComponentAssetConfigs extends TeaModel {
+        @com.aliyun.core.annotation.NameInMap("DefaultValue")
+        private String defaultValue;
+
+        @com.aliyun.core.annotation.NameInMap("Encrypted")
+        private Boolean encrypted;
+
+        @com.aliyun.core.annotation.NameInMap("FieldDescription")
+        private String fieldDescription;
+
+        @com.aliyun.core.annotation.NameInMap("FieldName")
+        private String fieldName;
+
+        @com.aliyun.core.annotation.NameInMap("FieldType")
+        private String fieldType;
+
+        @com.aliyun.core.annotation.NameInMap("Required")
+        private Boolean required;
+
+        private ComponentAssetConfigs(Builder builder) {
+            this.defaultValue = builder.defaultValue;
+            this.encrypted = builder.encrypted;
+            this.fieldDescription = builder.fieldDescription;
+            this.fieldName = builder.fieldName;
+            this.fieldType = builder.fieldType;
+            this.required = builder.required;
+        }
+
+        public static Builder builder() {
+            return new Builder();
+        }
+
+        public static ComponentAssetConfigs create() {
+            return builder().build();
+        }
+
+        /**
+         * @return defaultValue
+         */
+        public String getDefaultValue() {
+            return this.defaultValue;
+        }
+
+        /**
+         * @return encrypted
+         */
+        public Boolean getEncrypted() {
+            return this.encrypted;
+        }
+
+        /**
+         * @return fieldDescription
+         */
+        public String getFieldDescription() {
+            return this.fieldDescription;
+        }
+
+        /**
+         * @return fieldName
+         */
+        public String getFieldName() {
+            return this.fieldName;
+        }
+
+        /**
+         * @return fieldType
+         */
+        public String getFieldType() {
+            return this.fieldType;
+        }
+
+        /**
+         * @return required
+         */
+        public Boolean getRequired() {
+            return this.required;
+        }
+
+        public static final class Builder {
+            private String defaultValue; 
+            private Boolean encrypted; 
+            private String fieldDescription; 
+            private String fieldName; 
+            private String fieldType; 
+            private Boolean required; 
+
+            private Builder() {
+            } 
+
+            private Builder(ComponentAssetConfigs model) {
+                this.defaultValue = model.defaultValue;
+                this.encrypted = model.encrypted;
+                this.fieldDescription = model.fieldDescription;
+                this.fieldName = model.fieldName;
+                this.fieldType = model.fieldType;
+                this.required = model.required;
+            } 
+
+            /**
+             * <p>Default value.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1</p>
+             */
+            public Builder defaultValue(String defaultValue) {
+                this.defaultValue = defaultValue;
+                return this;
+            }
+
+            /**
+             * <p>Whether the field value needs to be encrypted. The range of values is as follows:</p>
+             * <ul>
+             * <li>true: Encrypted.</li>
+             * <li>false: Not encrypted.</li>
+             * </ul>
+             * <p>Default value: false.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>false</p>
+             */
+            public Builder encrypted(Boolean encrypted) {
+                this.encrypted = encrypted;
+                return this;
+            }
+
+            /**
+             * <p>Description of the field.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>project name</p>
+             */
+            public Builder fieldDescription(String fieldDescription) {
+                this.fieldDescription = fieldDescription;
+                return this;
+            }
+
+            /**
+             * <p>Field name.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>project</p>
+             */
+            public Builder fieldName(String fieldName) {
+                this.fieldName = fieldName;
+                return this;
+            }
+
+            /**
+             * <p>Field type, with the following values:</p>
+             * <ul>
+             * <li><strong>String</strong>: String.</li>
+             * <li><strong>Long</strong>: Long integer.</li>
+             * <li><strong>Integer</strong>: Integer.</li>
+             * <li><strong>Double</strong>: Double.</li>
+             * <li><strong>Boolean</strong>: Boolean.</li>
+             * <li><strong>Complex</strong>: Key-value pair.</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>String</p>
+             */
+            public Builder fieldType(String fieldType) {
+                this.fieldType = fieldType;
+                return this;
+            }
+
+            /**
+             * <p>Whether this parameter is required.</p>
+             * <ul>
+             * <li><strong>true</strong>: Required.</li>
+             * <li><strong>false</strong>: Not required.</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>false</p>
+             */
+            public Builder required(Boolean required) {
+                this.required = required;
+                return this;
+            }
+
+            public ComponentAssetConfigs build() {
+                return new ComponentAssetConfigs(this);
+            } 
+
+        } 
+
+    }
+    /**
+     * 
+     * {@link ListComponentsResponseBody} extends {@link TeaModel}
+     *
+     * <p>ListComponentsResponseBody</p>
+     */
+    public static class Components extends TeaModel {
+        @com.aliyun.core.annotation.NameInMap("ComponentActions")
+        private java.util.List<ComponentActions> componentActions;
+
+        @com.aliyun.core.annotation.NameInMap("ComponentAlias")
+        private String componentAlias;
+
+        @com.aliyun.core.annotation.NameInMap("ComponentAssetConfigs")
+        private java.util.List<ComponentAssetConfigs> componentAssetConfigs;
+
+        @com.aliyun.core.annotation.NameInMap("ComponentDescription")
+        private String componentDescription;
+
+        @com.aliyun.core.annotation.NameInMap("ComponentExtension")
+        private String componentExtension;
+
+        @com.aliyun.core.annotation.NameInMap("ComponentLogo")
+        private String componentLogo;
+
+        @com.aliyun.core.annotation.NameInMap("ComponentName")
+        private String componentName;
+
+        @com.aliyun.core.annotation.NameInMap("CreateTime")
+        private Long createTime;
+
+        @com.aliyun.core.annotation.NameInMap("UpdateTime")
+        private Long updateTime;
+
+        private Components(Builder builder) {
+            this.componentActions = builder.componentActions;
+            this.componentAlias = builder.componentAlias;
+            this.componentAssetConfigs = builder.componentAssetConfigs;
+            this.componentDescription = builder.componentDescription;
+            this.componentExtension = builder.componentExtension;
+            this.componentLogo = builder.componentLogo;
+            this.componentName = builder.componentName;
+            this.createTime = builder.createTime;
+            this.updateTime = builder.updateTime;
+        }
+
+        public static Builder builder() {
+            return new Builder();
+        }
+
+        public static Components create() {
+            return builder().build();
+        }
+
+        /**
+         * @return componentActions
+         */
+        public java.util.List<ComponentActions> getComponentActions() {
+            return this.componentActions;
+        }
+
+        /**
+         * @return componentAlias
+         */
+        public String getComponentAlias() {
+            return this.componentAlias;
+        }
+
+        /**
+         * @return componentAssetConfigs
+         */
+        public java.util.List<ComponentAssetConfigs> getComponentAssetConfigs() {
+            return this.componentAssetConfigs;
+        }
+
+        /**
+         * @return componentDescription
+         */
+        public String getComponentDescription() {
+            return this.componentDescription;
+        }
+
+        /**
+         * @return componentExtension
+         */
+        public String getComponentExtension() {
+            return this.componentExtension;
+        }
+
+        /**
+         * @return componentLogo
+         */
+        public String getComponentLogo() {
+            return this.componentLogo;
+        }
+
+        /**
+         * @return componentName
+         */
+        public String getComponentName() {
+            return this.componentName;
+        }
+
+        /**
+         * @return createTime
+         */
+        public Long getCreateTime() {
+            return this.createTime;
+        }
+
+        /**
+         * @return updateTime
+         */
+        public Long getUpdateTime() {
+            return this.updateTime;
+        }
+
+        public static final class Builder {
+            private java.util.List<ComponentActions> componentActions; 
+            private String componentAlias; 
+            private java.util.List<ComponentAssetConfigs> componentAssetConfigs; 
+            private String componentDescription; 
+            private String componentExtension; 
+            private String componentLogo; 
+            private String componentName; 
+            private Long createTime; 
+            private Long updateTime; 
+
+            private Builder() {
+            } 
+
+            private Builder(Components model) {
+                this.componentActions = model.componentActions;
+                this.componentAlias = model.componentAlias;
+                this.componentAssetConfigs = model.componentAssetConfigs;
+                this.componentDescription = model.componentDescription;
+                this.componentExtension = model.componentExtension;
+                this.componentLogo = model.componentLogo;
+                this.componentName = model.componentName;
+                this.createTime = model.createTime;
+                this.updateTime = model.updateTime;
+            } 
+
+            /**
+             * <p>List of component actions.</p>
+             */
+            public Builder componentActions(java.util.List<ComponentActions> componentActions) {
+                this.componentActions = componentActions;
+                return this;
+            }
+
+            /**
+             * <p>The alias of the component.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Log</p>
+             */
+            public Builder componentAlias(String componentAlias) {
+                this.componentAlias = componentAlias;
+                return this;
+            }
+
+            /**
+             * <p>List of asset field configurations.</p>
+             */
+            public Builder componentAssetConfigs(java.util.List<ComponentAssetConfigs> componentAssetConfigs) {
+                this.componentAssetConfigs = componentAssetConfigs;
+                return this;
+            }
+
+            /**
+             * <p>The description of the component.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Log query</p>
+             */
+            public Builder componentDescription(String componentDescription) {
+                this.componentDescription = componentDescription;
+                return this;
+            }
+
+            /**
+             * <p>Extended information of the component.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>{&quot;type&quot;:&quot;common&quot;}</p>
+             */
+            public Builder componentExtension(String componentExtension) {
+                this.componentExtension = componentExtension;
+                return this;
+            }
+
+            /**
+             * <p>The icon URL of the component.</p>
+             * 
+             * <strong>example:</strong>
+             * <p><a href="https://img.alicdn.com/imgextra/i1/O1CN01qBUIqk22YyEBQDsha_!!6000000007133-55-tps-200-200.svg">https://img.alicdn.com/imgextra/i1/O1CN01qBUIqk22YyEBQDsha_!!6000000007133-55-tps-200-200.svg</a></p>
+             */
+            public Builder componentLogo(String componentLogo) {
+                this.componentLogo = componentLogo;
+                return this;
+            }
+
+            /**
+             * <p>The name of the component.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>SLS</p>
+             */
+            public Builder componentName(String componentName) {
+                this.componentName = componentName;
+                return this;
+            }
+
+            /**
+             * <p>Creation time.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1757902337000</p>
+             */
+            public Builder createTime(Long createTime) {
+                this.createTime = createTime;
+                return this;
+            }
+
+            /**
+             * <p>Update time.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1757902337000</p>
+             */
+            public Builder updateTime(Long updateTime) {
+                this.updateTime = updateTime;
+                return this;
+            }
+
+            public Components build() {
+                return new Components(this);
+            } 
+
+        } 
+
+    }
+}
