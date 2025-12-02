@@ -45,6 +45,10 @@ public class StartRtcCloudRecordingRequest extends Request {
     private String notifyAuthKey;
 
     @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("NotifyFileUploadedFormat")
+    private java.util.List<String> notifyFileUploadedFormat;
+
+    @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("NotifyUrl")
     private String notifyUrl;
 
@@ -71,6 +75,7 @@ public class StartRtcCloudRecordingRequest extends Request {
         this.mixLayoutParams = builder.mixLayoutParams;
         this.mixTranscodeParams = builder.mixTranscodeParams;
         this.notifyAuthKey = builder.notifyAuthKey;
+        this.notifyFileUploadedFormat = builder.notifyFileUploadedFormat;
         this.notifyUrl = builder.notifyUrl;
         this.recordParams = builder.recordParams;
         this.storageParams = builder.storageParams;
@@ -133,6 +138,13 @@ public class StartRtcCloudRecordingRequest extends Request {
     }
 
     /**
+     * @return notifyFileUploadedFormat
+     */
+    public java.util.List<String> getNotifyFileUploadedFormat() {
+        return this.notifyFileUploadedFormat;
+    }
+
+    /**
      * @return notifyUrl
      */
     public String getNotifyUrl() {
@@ -167,6 +179,7 @@ public class StartRtcCloudRecordingRequest extends Request {
         private MixLayoutParams mixLayoutParams; 
         private MixTranscodeParams mixTranscodeParams; 
         private String notifyAuthKey; 
+        private java.util.List<String> notifyFileUploadedFormat; 
         private String notifyUrl; 
         private RecordParams recordParams; 
         private StorageParams storageParams; 
@@ -184,6 +197,7 @@ public class StartRtcCloudRecordingRequest extends Request {
             this.mixLayoutParams = request.mixLayoutParams;
             this.mixTranscodeParams = request.mixTranscodeParams;
             this.notifyAuthKey = request.notifyAuthKey;
+            this.notifyFileUploadedFormat = request.notifyFileUploadedFormat;
             this.notifyUrl = request.notifyUrl;
             this.recordParams = request.recordParams;
             this.storageParams = request.storageParams;
@@ -249,6 +263,15 @@ public class StartRtcCloudRecordingRequest extends Request {
         public Builder notifyAuthKey(String notifyAuthKey) {
             this.putQueryParameter("NotifyAuthKey", notifyAuthKey);
             this.notifyAuthKey = notifyAuthKey;
+            return this;
+        }
+
+        /**
+         * NotifyFileUploadedFormat.
+         */
+        public Builder notifyFileUploadedFormat(java.util.List<String> notifyFileUploadedFormat) {
+            this.putQueryParameter("NotifyFileUploadedFormat", notifyFileUploadedFormat);
+            this.notifyFileUploadedFormat = notifyFileUploadedFormat;
             return this;
         }
 
