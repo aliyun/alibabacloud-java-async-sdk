@@ -3105,6 +3105,9 @@ public class DescribeSiteMonitorAttributeResponseBody extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("empty_message")
         private Boolean emptyMessage;
 
+        @com.aliyun.core.annotation.NameInMap("enable_packet_capture")
+        private Boolean enablePacketCapture;
+
         @com.aliyun.core.annotation.NameInMap("expect_exist_string")
         private ExpectExistString expectExistString;
 
@@ -3244,6 +3247,7 @@ public class DescribeSiteMonitorAttributeResponseBody extends TeaModel {
             this.dnsServer = builder.dnsServer;
             this.dnsType = builder.dnsType;
             this.emptyMessage = builder.emptyMessage;
+            this.enablePacketCapture = builder.enablePacketCapture;
             this.expectExistString = builder.expectExistString;
             this.expectNonExistString = builder.expectNonExistString;
             this.expectValue = builder.expectValue;
@@ -3418,6 +3422,13 @@ public class DescribeSiteMonitorAttributeResponseBody extends TeaModel {
          */
         public Boolean getEmptyMessage() {
             return this.emptyMessage;
+        }
+
+        /**
+         * @return enablePacketCapture
+         */
+        public Boolean getEnablePacketCapture() {
+            return this.enablePacketCapture;
         }
 
         /**
@@ -3719,6 +3730,7 @@ public class DescribeSiteMonitorAttributeResponseBody extends TeaModel {
             private String dnsServer; 
             private String dnsType; 
             private Boolean emptyMessage; 
+            private Boolean enablePacketCapture; 
             private ExpectExistString expectExistString; 
             private ExpectNonExistString expectNonExistString; 
             private String expectValue; 
@@ -3782,6 +3794,7 @@ public class DescribeSiteMonitorAttributeResponseBody extends TeaModel {
                 this.dnsServer = model.dnsServer;
                 this.dnsType = model.dnsType;
                 this.emptyMessage = model.emptyMessage;
+                this.enablePacketCapture = model.enablePacketCapture;
                 this.expectExistString = model.expectExistString;
                 this.expectNonExistString = model.expectNonExistString;
                 this.expectValue = model.expectValue;
@@ -4030,6 +4043,14 @@ public class DescribeSiteMonitorAttributeResponseBody extends TeaModel {
              */
             public Builder emptyMessage(Boolean emptyMessage) {
                 this.emptyMessage = emptyMessage;
+                return this;
+            }
+
+            /**
+             * enable_packet_capture.
+             */
+            public Builder enablePacketCapture(Boolean enablePacketCapture) {
+                this.enablePacketCapture = enablePacketCapture;
                 return this;
             }
 
