@@ -22,6 +22,10 @@ public class CreateDBInstanceRequest extends Request {
     private String backupSetId;
 
     @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Category")
+    private String category;
+
+    @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("ClientToken")
     private String clientToken;
 
@@ -108,6 +112,7 @@ public class CreateDBInstanceRequest extends Request {
     private CreateDBInstanceRequest(Builder builder) {
         super(builder);
         this.backupSetId = builder.backupSetId;
+        this.category = builder.category;
         this.clientToken = builder.clientToken;
         this.DBInstanceDescription = builder.DBInstanceDescription;
         this.DBTimeZone = builder.DBTimeZone;
@@ -148,6 +153,13 @@ public class CreateDBInstanceRequest extends Request {
      */
     public String getBackupSetId() {
         return this.backupSetId;
+    }
+
+    /**
+     * @return category
+     */
+    public String getCategory() {
+        return this.category;
     }
 
     /**
@@ -292,6 +304,7 @@ public class CreateDBInstanceRequest extends Request {
 
     public static final class Builder extends Request.Builder<CreateDBInstanceRequest, Builder> {
         private String backupSetId; 
+        private String category; 
         private String clientToken; 
         private String DBInstanceDescription; 
         private String DBTimeZone; 
@@ -320,6 +333,7 @@ public class CreateDBInstanceRequest extends Request {
         private Builder(CreateDBInstanceRequest request) {
             super(request);
             this.backupSetId = request.backupSetId;
+            this.category = request.category;
             this.clientToken = request.clientToken;
             this.DBInstanceDescription = request.DBInstanceDescription;
             this.DBTimeZone = request.DBTimeZone;
@@ -351,6 +365,15 @@ public class CreateDBInstanceRequest extends Request {
         public Builder backupSetId(String backupSetId) {
             this.putQueryParameter("BackupSetId", backupSetId);
             this.backupSetId = backupSetId;
+            return this;
+        }
+
+        /**
+         * Category.
+         */
+        public Builder category(String category) {
+            this.putQueryParameter("Category", category);
+            this.category = category;
             return this;
         }
 
