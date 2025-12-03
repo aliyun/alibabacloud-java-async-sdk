@@ -26,10 +26,14 @@ public class JobStatusDetailValue extends TeaModel {
     @com.aliyun.core.annotation.NameInMap("timeStamps")
     private String timeStamps;
 
+    @com.aliyun.core.annotation.NameInMap("errorMessage")
+    private String errorMessage;
+
     private JobStatusDetailValue(Builder builder) {
         this.comment = builder.comment;
         this.jobResult = builder.jobResult;
         this.timeStamps = builder.timeStamps;
+        this.errorMessage = builder.errorMessage;
     }
 
     public static Builder builder() {
@@ -65,10 +69,18 @@ public class JobStatusDetailValue extends TeaModel {
         return this.timeStamps;
     }
 
+    /**
+     * @return errorMessage
+     */
+    public String getErrorMessage() {
+        return this.errorMessage;
+    }
+
     public static final class Builder {
         private String comment; 
         private String jobResult; 
         private String timeStamps; 
+        private String errorMessage; 
 
         private Builder() {
         } 
@@ -77,6 +89,7 @@ public class JobStatusDetailValue extends TeaModel {
             this.comment = model.comment;
             this.jobResult = model.jobResult;
             this.timeStamps = model.timeStamps;
+            this.errorMessage = model.errorMessage;
         } 
 
         /**
@@ -100,6 +113,14 @@ public class JobStatusDetailValue extends TeaModel {
          */
         public Builder timeStamps(String timeStamps) {
             this.timeStamps = timeStamps;
+            return this;
+        }
+
+        /**
+         * errorMessage.
+         */
+        public Builder errorMessage(String errorMessage) {
+            this.errorMessage = errorMessage;
             return this;
         }
 
