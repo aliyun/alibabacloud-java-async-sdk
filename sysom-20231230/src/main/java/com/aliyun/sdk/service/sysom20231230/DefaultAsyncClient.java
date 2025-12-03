@@ -95,6 +95,24 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
+     * @param request the request parameters of CreateVmcoreDiagnosisTask  CreateVmcoreDiagnosisTaskRequest
+     * @return CreateVmcoreDiagnosisTaskResponse
+     */
+    @Override
+    public CompletableFuture<CreateVmcoreDiagnosisTaskResponse> createVmcoreDiagnosisTask(CreateVmcoreDiagnosisTaskRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RESTFUL).setAction("CreateVmcoreDiagnosisTask").setMethod(HttpMethod.POST).setPathRegex("/api/v1/crashAgent/diagnosis/createDiagnosisTask").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(CreateVmcoreDiagnosisTaskResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<CreateVmcoreDiagnosisTaskResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
      * @param request the request parameters of DeleteAlertStrategy  DeleteAlertStrategyRequest
      * @return DeleteAlertStrategyResponse
      */
@@ -555,6 +573,24 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
+     * @param request the request parameters of GetVmcoreDiagnosisTask  GetVmcoreDiagnosisTaskRequest
+     * @return GetVmcoreDiagnosisTaskResponse
+     */
+    @Override
+    public CompletableFuture<GetVmcoreDiagnosisTaskResponse> getVmcoreDiagnosisTask(GetVmcoreDiagnosisTaskRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RESTFUL).setAction("GetVmcoreDiagnosisTask").setMethod(HttpMethod.GET).setPathRegex("/api/v1/crashAgent/diagnosis/queryTask").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(GetVmcoreDiagnosisTaskResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<GetVmcoreDiagnosisTaskResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
      * @param request the request parameters of InitialSysom  InitialSysomRequest
      * @return InitialSysomResponse
      */
@@ -945,6 +981,24 @@ public final class DefaultAsyncClient implements AsyncClient {
             return this.handler.execute(params);
         } catch (Exception e) {
             CompletableFuture<ListRegionsResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
+     * @param request the request parameters of ListVmcoreDiagnosisTask  ListVmcoreDiagnosisTaskRequest
+     * @return ListVmcoreDiagnosisTaskResponse
+     */
+    @Override
+    public CompletableFuture<ListVmcoreDiagnosisTaskResponse> listVmcoreDiagnosisTask(ListVmcoreDiagnosisTaskRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RESTFUL).setAction("ListVmcoreDiagnosisTask").setMethod(HttpMethod.GET).setPathRegex("/api/v1/crashAgent/diagnosis/queryTaskList").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(ListVmcoreDiagnosisTaskResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<ListVmcoreDiagnosisTaskResponse> future = new CompletableFuture<>();
             future.completeExceptionally(e);
             return future;
         }

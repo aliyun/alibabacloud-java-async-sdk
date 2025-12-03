@@ -38,6 +38,12 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<CreateAlertStrategyResponse> createAlertStrategy(CreateAlertStrategyRequest request);
 
     /**
+     * @param request the request parameters of CreateVmcoreDiagnosisTask  CreateVmcoreDiagnosisTaskRequest
+     * @return CreateVmcoreDiagnosisTaskResponse
+     */
+    CompletableFuture<CreateVmcoreDiagnosisTaskResponse> createVmcoreDiagnosisTask(CreateVmcoreDiagnosisTaskRequest request);
+
+    /**
      * @param request the request parameters of DeleteAlertStrategy  DeleteAlertStrategyRequest
      * @return DeleteAlertStrategyResponse
      */
@@ -190,6 +196,12 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<GetServiceFuncStatusResponse> getServiceFuncStatus(GetServiceFuncStatusRequest request);
 
     /**
+     * @param request the request parameters of GetVmcoreDiagnosisTask  GetVmcoreDiagnosisTaskRequest
+     * @return GetVmcoreDiagnosisTaskResponse
+     */
+    CompletableFuture<GetVmcoreDiagnosisTaskResponse> getVmcoreDiagnosisTask(GetVmcoreDiagnosisTaskRequest request);
+
+    /**
      * @param request the request parameters of InitialSysom  InitialSysomRequest
      * @return InitialSysomResponse
      */
@@ -320,6 +332,12 @@ public interface AsyncClient extends SdkAutoCloseable {
      * @return ListRegionsResponse
      */
     CompletableFuture<ListRegionsResponse> listRegions(ListRegionsRequest request);
+
+    /**
+     * @param request the request parameters of ListVmcoreDiagnosisTask  ListVmcoreDiagnosisTaskRequest
+     * @return ListVmcoreDiagnosisTaskResponse
+     */
+    CompletableFuture<ListVmcoreDiagnosisTaskResponse> listVmcoreDiagnosisTask(ListVmcoreDiagnosisTaskRequest request);
 
     /**
      * @param request the request parameters of StartAIAnalysis  StartAIAnalysisRequest
