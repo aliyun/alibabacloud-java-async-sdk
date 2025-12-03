@@ -59,6 +59,9 @@ public class OpenStructSaseUser extends TeaModel {
     @com.aliyun.core.annotation.NameInMap("UpdateTimeUnix")
     private Long updateTimeUnix;
 
+    @com.aliyun.core.annotation.NameInMap("UserTags")
+    private java.util.List<UserTags> userTags;
+
     @com.aliyun.core.annotation.NameInMap("Username")
     private String username;
 
@@ -80,6 +83,7 @@ public class OpenStructSaseUser extends TeaModel {
         this.telephone = builder.telephone;
         this.title = builder.title;
         this.updateTimeUnix = builder.updateTimeUnix;
+        this.userTags = builder.userTags;
         this.username = builder.username;
         this.workStatus = builder.workStatus;
     }
@@ -195,6 +199,13 @@ public class OpenStructSaseUser extends TeaModel {
     }
 
     /**
+     * @return userTags
+     */
+    public java.util.List<UserTags> getUserTags() {
+        return this.userTags;
+    }
+
+    /**
      * @return username
      */
     public String getUsername() {
@@ -223,6 +234,7 @@ public class OpenStructSaseUser extends TeaModel {
         private String telephone; 
         private String title; 
         private Long updateTimeUnix; 
+        private java.util.List<UserTags> userTags; 
         private String username; 
         private String workStatus; 
 
@@ -244,6 +256,7 @@ public class OpenStructSaseUser extends TeaModel {
             this.telephone = model.telephone;
             this.title = model.title;
             this.updateTimeUnix = model.updateTimeUnix;
+            this.userTags = model.userTags;
             this.username = model.username;
             this.workStatus = model.workStatus;
         } 
@@ -361,6 +374,14 @@ public class OpenStructSaseUser extends TeaModel {
         }
 
         /**
+         * UserTags.
+         */
+        public Builder userTags(java.util.List<UserTags> userTags) {
+            this.userTags = userTags;
+            return this;
+        }
+
+        /**
          * Username.
          */
         public Builder username(String username) {
@@ -382,4 +403,142 @@ public class OpenStructSaseUser extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link OpenStructSaseUser} extends {@link TeaModel}
+     *
+     * <p>OpenStructSaseUser</p>
+     */
+    public static class UserTags extends TeaModel {
+        @com.aliyun.core.annotation.NameInMap("Aliuid")
+        private String aliuid;
+
+        @com.aliyun.core.annotation.NameInMap("Description")
+        private String description;
+
+        @com.aliyun.core.annotation.NameInMap("Name")
+        private String name;
+
+        @com.aliyun.core.annotation.NameInMap("SaseUserId")
+        private String saseUserId;
+
+        @com.aliyun.core.annotation.NameInMap("TagId")
+        private String tagId;
+
+        private UserTags(Builder builder) {
+            this.aliuid = builder.aliuid;
+            this.description = builder.description;
+            this.name = builder.name;
+            this.saseUserId = builder.saseUserId;
+            this.tagId = builder.tagId;
+        }
+
+        public static Builder builder() {
+            return new Builder();
+        }
+
+        public static UserTags create() {
+            return builder().build();
+        }
+
+        /**
+         * @return aliuid
+         */
+        public String getAliuid() {
+            return this.aliuid;
+        }
+
+        /**
+         * @return description
+         */
+        public String getDescription() {
+            return this.description;
+        }
+
+        /**
+         * @return name
+         */
+        public String getName() {
+            return this.name;
+        }
+
+        /**
+         * @return saseUserId
+         */
+        public String getSaseUserId() {
+            return this.saseUserId;
+        }
+
+        /**
+         * @return tagId
+         */
+        public String getTagId() {
+            return this.tagId;
+        }
+
+        public static final class Builder {
+            private String aliuid; 
+            private String description; 
+            private String name; 
+            private String saseUserId; 
+            private String tagId; 
+
+            private Builder() {
+            } 
+
+            private Builder(UserTags model) {
+                this.aliuid = model.aliuid;
+                this.description = model.description;
+                this.name = model.name;
+                this.saseUserId = model.saseUserId;
+                this.tagId = model.tagId;
+            } 
+
+            /**
+             * Aliuid.
+             */
+            public Builder aliuid(String aliuid) {
+                this.aliuid = aliuid;
+                return this;
+            }
+
+            /**
+             * Description.
+             */
+            public Builder description(String description) {
+                this.description = description;
+                return this;
+            }
+
+            /**
+             * Name.
+             */
+            public Builder name(String name) {
+                this.name = name;
+                return this;
+            }
+
+            /**
+             * SaseUserId.
+             */
+            public Builder saseUserId(String saseUserId) {
+                this.saseUserId = saseUserId;
+                return this;
+            }
+
+            /**
+             * TagId.
+             */
+            public Builder tagId(String tagId) {
+                this.tagId = tagId;
+                return this;
+            }
+
+            public UserTags build() {
+                return new UserTags(this);
+            } 
+
+        } 
+
+    }
 }

@@ -50,6 +50,9 @@ public class IdpConfig extends TeaModel {
     @com.aliyun.core.annotation.NameInMap("LoginConfig")
     private IdpLoginConfig loginConfig;
 
+    @com.aliyun.core.annotation.NameInMap("LogoDirectory")
+    private String logoDirectory;
+
     @com.aliyun.core.annotation.NameInMap("Name")
     private String name;
 
@@ -80,6 +83,7 @@ public class IdpConfig extends TeaModel {
         this.lastSyncTimeUnix = builder.lastSyncTimeUnix;
         this.ldapConfig = builder.ldapConfig;
         this.loginConfig = builder.loginConfig;
+        this.logoDirectory = builder.logoDirectory;
         this.name = builder.name;
         this.syncConfig = builder.syncConfig;
         this.syncStatus = builder.syncStatus;
@@ -178,6 +182,13 @@ public class IdpConfig extends TeaModel {
     }
 
     /**
+     * @return logoDirectory
+     */
+    public String getLogoDirectory() {
+        return this.logoDirectory;
+    }
+
+    /**
      * @return name
      */
     public String getName() {
@@ -231,6 +242,7 @@ public class IdpConfig extends TeaModel {
         private Long lastSyncTimeUnix; 
         private IdpLdapSubConfig ldapConfig; 
         private IdpLoginConfig loginConfig; 
+        private String logoDirectory; 
         private String name; 
         private IdpSyncConfig syncConfig; 
         private String syncStatus; 
@@ -253,6 +265,7 @@ public class IdpConfig extends TeaModel {
             this.lastSyncTimeUnix = model.lastSyncTimeUnix;
             this.ldapConfig = model.ldapConfig;
             this.loginConfig = model.loginConfig;
+            this.logoDirectory = model.logoDirectory;
             this.name = model.name;
             this.syncConfig = model.syncConfig;
             this.syncStatus = model.syncStatus;
@@ -346,6 +359,14 @@ public class IdpConfig extends TeaModel {
          */
         public Builder loginConfig(IdpLoginConfig loginConfig) {
             this.loginConfig = loginConfig;
+            return this;
+        }
+
+        /**
+         * LogoDirectory.
+         */
+        public Builder logoDirectory(String logoDirectory) {
+            this.logoDirectory = logoDirectory;
             return this;
         }
 

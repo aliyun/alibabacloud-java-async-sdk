@@ -296,6 +296,15 @@ public class GetPrivateAccessPolicyResponseBody extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("UserGroupMode")
         private String userGroupMode;
 
+        @com.aliyun.core.annotation.NameInMap("ValidFrom")
+        private Long validFrom;
+
+        @com.aliyun.core.annotation.NameInMap("ValidTimeStatus")
+        private String validTimeStatus;
+
+        @com.aliyun.core.annotation.NameInMap("ValidUntil")
+        private Long validUntil;
+
         private Policy(Builder builder) {
             this.applicationIds = builder.applicationIds;
             this.applicationType = builder.applicationType;
@@ -316,6 +325,9 @@ public class GetPrivateAccessPolicyResponseBody extends TeaModel {
             this.trustedSoftwareIds = builder.trustedSoftwareIds;
             this.userGroupIds = builder.userGroupIds;
             this.userGroupMode = builder.userGroupMode;
+            this.validFrom = builder.validFrom;
+            this.validTimeStatus = builder.validTimeStatus;
+            this.validUntil = builder.validUntil;
         }
 
         public static Builder builder() {
@@ -459,6 +471,27 @@ public class GetPrivateAccessPolicyResponseBody extends TeaModel {
             return this.userGroupMode;
         }
 
+        /**
+         * @return validFrom
+         */
+        public Long getValidFrom() {
+            return this.validFrom;
+        }
+
+        /**
+         * @return validTimeStatus
+         */
+        public String getValidTimeStatus() {
+            return this.validTimeStatus;
+        }
+
+        /**
+         * @return validUntil
+         */
+        public Long getValidUntil() {
+            return this.validUntil;
+        }
+
         public static final class Builder {
             private java.util.List<String> applicationIds; 
             private String applicationType; 
@@ -479,6 +512,9 @@ public class GetPrivateAccessPolicyResponseBody extends TeaModel {
             private java.util.List<String> trustedSoftwareIds; 
             private java.util.List<String> userGroupIds; 
             private String userGroupMode; 
+            private Long validFrom; 
+            private String validTimeStatus; 
+            private Long validUntil; 
 
             private Builder() {
             } 
@@ -503,6 +539,9 @@ public class GetPrivateAccessPolicyResponseBody extends TeaModel {
                 this.trustedSoftwareIds = model.trustedSoftwareIds;
                 this.userGroupIds = model.userGroupIds;
                 this.userGroupMode = model.userGroupMode;
+                this.validFrom = model.validFrom;
+                this.validTimeStatus = model.validTimeStatus;
+                this.validUntil = model.validUntil;
             } 
 
             /**
@@ -717,6 +756,39 @@ public class GetPrivateAccessPolicyResponseBody extends TeaModel {
              */
             public Builder userGroupMode(String userGroupMode) {
                 this.userGroupMode = userGroupMode;
+                return this;
+            }
+
+            /**
+             * <p>The start time when the zero trust policy takes effect, represented as a timestamp in seconds.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>0</p>
+             */
+            public Builder validFrom(Long validFrom) {
+                this.validFrom = validFrom;
+                return this;
+            }
+
+            /**
+             * <p>Switch status for effective time. Values: - <strong>Enabled</strong>: On. - <strong>Disabled</strong>: Off.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Enabled</p>
+             */
+            public Builder validTimeStatus(String validTimeStatus) {
+                this.validTimeStatus = validTimeStatus;
+                return this;
+            }
+
+            /**
+             * <p>The expiration time of the zero trust policy, in seconds timestamp.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1764727544</p>
+             */
+            public Builder validUntil(Long validUntil) {
+                this.validUntil = validUntil;
                 return this;
             }
 

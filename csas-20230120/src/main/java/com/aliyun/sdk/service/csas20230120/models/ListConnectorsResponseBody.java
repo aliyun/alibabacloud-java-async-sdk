@@ -88,7 +88,7 @@ public class ListConnectorsResponseBody extends TeaModel {
         }
 
         /**
-         * <p>ID of the current request.</p>
+         * <p>The ID of the current request.</p>
          * 
          * <strong>example:</strong>
          * <p>58D6B23E-E5DA-5418-8F61-51A3B5A30049</p>
@@ -275,7 +275,7 @@ public class ListConnectorsResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>Connection status between ConnectorClient and ConnectorServer.</p>
+             * <p>Connection status between the ConnectorClient and ConnectorServer.</p>
              * 
              * <strong>example:</strong>
              * <p>Disconnected</p>
@@ -589,7 +589,14 @@ public class ListConnectorsResponseBody extends TeaModel {
             } 
 
             /**
-             * AccelerateStatus.
+             * <p>Whether to enable global acceleration. Values: </p>
+             * <ul>
+             * <li><strong>Enabled</strong>: Turn on. </li>
+             * <li><strong>Disabled</strong>: Turn off.</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>Enabled</p>
              */
             public Builder accelerateStatus(String accelerateStatus) {
                 this.accelerateStatus = accelerateStatus;
@@ -635,7 +642,7 @@ public class ListConnectorsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>Connector ID.</p>
+             * <p>ConnectorID.</p>
              * 
              * <strong>example:</strong>
              * <p>connector-94db94e06b98****</p>
@@ -646,7 +653,7 @@ public class ListConnectorsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>Creation time of the Connector.</p>
+             * <p>Connector creation time.</p>
              * 
              * <strong>example:</strong>
              * <p>2022-09-27 18:10:25</p>
@@ -709,7 +716,7 @@ public class ListConnectorsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>Connector upgrade time.</p>
+             * <p>Connector升级时间。</p>
              */
             public Builder upgradeTime(UpgradeTime upgradeTime) {
                 this.upgradeTime = upgradeTime;
