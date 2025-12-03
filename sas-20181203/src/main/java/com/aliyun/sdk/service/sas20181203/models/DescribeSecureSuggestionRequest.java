@@ -26,6 +26,10 @@ public class DescribeSecureSuggestionRequest extends Request {
     private String lang;
 
     @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ResourceDirectoryAccountId")
+    private Long resourceDirectoryAccountId;
+
+    @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("Source")
     private Integer source;
 
@@ -37,6 +41,7 @@ public class DescribeSecureSuggestionRequest extends Request {
         super(builder);
         this.calType = builder.calType;
         this.lang = builder.lang;
+        this.resourceDirectoryAccountId = builder.resourceDirectoryAccountId;
         this.source = builder.source;
         this.sourceIp = builder.sourceIp;
     }
@@ -69,6 +74,13 @@ public class DescribeSecureSuggestionRequest extends Request {
     }
 
     /**
+     * @return resourceDirectoryAccountId
+     */
+    public Long getResourceDirectoryAccountId() {
+        return this.resourceDirectoryAccountId;
+    }
+
+    /**
      * @return source
      */
     public Integer getSource() {
@@ -85,6 +97,7 @@ public class DescribeSecureSuggestionRequest extends Request {
     public static final class Builder extends Request.Builder<DescribeSecureSuggestionRequest, Builder> {
         private String calType; 
         private String lang; 
+        private Long resourceDirectoryAccountId; 
         private Integer source; 
         private String sourceIp; 
 
@@ -96,15 +109,13 @@ public class DescribeSecureSuggestionRequest extends Request {
             super(request);
             this.calType = request.calType;
             this.lang = request.lang;
+            this.resourceDirectoryAccountId = request.resourceDirectoryAccountId;
             this.source = request.source;
             this.sourceIp = request.sourceIp;
         } 
 
         /**
-         * <p>The old or new version of the security score rule. If you set this parameter to <strong>home_security_score</strong>, the new version of the security score rule is returned. Otherwise, the old version of the security score rule is returned.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>home_security_score</p>
+         * CalType.
          */
         public Builder calType(String calType) {
             this.putQueryParameter("CalType", calType);
@@ -113,14 +124,7 @@ public class DescribeSecureSuggestionRequest extends Request {
         }
 
         /**
-         * <p>The language of the content within the request and response. Default value: <strong>zh</strong>. Valid values:</p>
-         * <ul>
-         * <li><strong>zh</strong>: Chinese</li>
-         * <li><strong>en</strong>: English</li>
-         * </ul>
-         * 
-         * <strong>example:</strong>
-         * <p>zh</p>
+         * Lang.
          */
         public Builder lang(String lang) {
             this.putQueryParameter("Lang", lang);
@@ -129,16 +133,22 @@ public class DescribeSecureSuggestionRequest extends Request {
         }
 
         /**
-         * <p>Source of security score, default is Cloud Security Center if left empty. Enum values: </p>
-         * <ul>
-         * <li><p>0:Cloud Security Center. </p>
-         * </li>
-         * <li><p>1:Yaochi Console.</p>
-         * </li>
-         * </ul>
+         * <p>The Alibaba Cloud account ID of the member in the resource directory.</p>
+         * <blockquote>
+         * <p> You can call the <a href="~~DescribeMonitorAccounts~~">DescribeMonitorAccounts</a> operation to obtain the IDs.</p>
+         * </blockquote>
          * 
          * <strong>example:</strong>
-         * <p>0</p>
+         * <p>1232428423234****</p>
+         */
+        public Builder resourceDirectoryAccountId(Long resourceDirectoryAccountId) {
+            this.putQueryParameter("ResourceDirectoryAccountId", resourceDirectoryAccountId);
+            this.resourceDirectoryAccountId = resourceDirectoryAccountId;
+            return this;
+        }
+
+        /**
+         * Source.
          */
         public Builder source(Integer source) {
             this.putQueryParameter("Source", source);
@@ -147,10 +157,7 @@ public class DescribeSecureSuggestionRequest extends Request {
         }
 
         /**
-         * <p>The source IP address of the request.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>192.168.XX.XX</p>
+         * SourceIp.
          */
         public Builder sourceIp(String sourceIp) {
             this.putQueryParameter("SourceIp", sourceIp);

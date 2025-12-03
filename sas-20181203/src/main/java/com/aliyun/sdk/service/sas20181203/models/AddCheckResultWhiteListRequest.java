@@ -113,7 +113,7 @@ public class AddCheckResultWhiteListRequest extends Request {
         }
 
         /**
-         * InstanceIds.
+         * <p>IDs of the cloud product instances that need to be whitelisted. Separate multiple IDs with a comma (,).</p>
          */
         public Builder instanceIds(java.util.List<String> instanceIds) {
             this.putQueryParameter("InstanceIds", instanceIds);

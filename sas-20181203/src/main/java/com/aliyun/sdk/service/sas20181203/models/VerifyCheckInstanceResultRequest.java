@@ -116,7 +116,7 @@ public class VerifyCheckInstanceResultRequest extends Request {
         }
 
         /**
-         * CheckIds.
+         * <p>List of item IDs to be checked.</p>
          */
         public Builder checkIds(java.util.List<Long> checkIds) {
             this.putQueryParameter("CheckIds", checkIds);

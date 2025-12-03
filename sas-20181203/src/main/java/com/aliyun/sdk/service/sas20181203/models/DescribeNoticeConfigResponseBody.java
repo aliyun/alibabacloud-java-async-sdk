@@ -101,6 +101,9 @@ public class DescribeNoticeConfigResponseBody extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("AliUid")
         private Long aliUid;
 
+        @com.aliyun.core.annotation.NameInMap("Category")
+        private String category;
+
         @com.aliyun.core.annotation.NameInMap("CurrentPage")
         private Integer currentPage;
 
@@ -115,6 +118,7 @@ public class DescribeNoticeConfigResponseBody extends TeaModel {
 
         private NoticeConfigList(Builder builder) {
             this.aliUid = builder.aliUid;
+            this.category = builder.category;
             this.currentPage = builder.currentPage;
             this.project = builder.project;
             this.route = builder.route;
@@ -134,6 +138,13 @@ public class DescribeNoticeConfigResponseBody extends TeaModel {
          */
         public Long getAliUid() {
             return this.aliUid;
+        }
+
+        /**
+         * @return category
+         */
+        public String getCategory() {
+            return this.category;
         }
 
         /**
@@ -166,6 +177,7 @@ public class DescribeNoticeConfigResponseBody extends TeaModel {
 
         public static final class Builder {
             private Long aliUid; 
+            private String category; 
             private Integer currentPage; 
             private String project; 
             private Integer route; 
@@ -176,6 +188,7 @@ public class DescribeNoticeConfigResponseBody extends TeaModel {
 
             private Builder(NoticeConfigList model) {
                 this.aliUid = model.aliUid;
+                this.category = model.category;
                 this.currentPage = model.currentPage;
                 this.project = model.project;
                 this.route = model.route;
@@ -190,6 +203,14 @@ public class DescribeNoticeConfigResponseBody extends TeaModel {
              */
             public Builder aliUid(Long aliUid) {
                 this.aliUid = aliUid;
+                return this;
+            }
+
+            /**
+             * Category.
+             */
+            public Builder category(String category) {
+                this.category = category;
                 return this;
             }
 

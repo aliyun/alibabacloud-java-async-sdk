@@ -136,7 +136,7 @@ public class RemoveCheckResultWhiteListRequest extends Request {
         }
 
         /**
-         * InstanceIds.
+         * <p>A set of cloud product instance IDs that require validation.</p>
          */
         public Builder instanceIds(java.util.List<String> instanceIds) {
             this.putQueryParameter("InstanceIds", instanceIds);

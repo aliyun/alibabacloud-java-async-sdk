@@ -210,7 +210,10 @@ public class DescribeExposedStatisticsDetailRequest extends Request {
         }
 
         /**
-         * ExposureIp.
+         * <p>The public IP address of the server or the cloud asset.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>116.12.XX.XX</p>
          */
         public Builder exposureIp(String exposureIp) {
             this.putQueryParameter("ExposureIp", exposureIp);
@@ -219,7 +222,10 @@ public class DescribeExposedStatisticsDetailRequest extends Request {
         }
 
         /**
-         * InstanceId.
+         * <p>The instance ID of the asset.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>s-bp1g6wxdwps7s9dz****</p>
          */
         public Builder instanceId(String instanceId) {
             this.putQueryParameter("InstanceId", instanceId);

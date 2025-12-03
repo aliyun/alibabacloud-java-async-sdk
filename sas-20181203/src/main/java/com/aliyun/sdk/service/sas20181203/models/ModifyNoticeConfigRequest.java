@@ -18,6 +18,10 @@ import com.aliyun.sdk.gateway.pop.models.*;
  */
 public class ModifyNoticeConfigRequest extends Request {
     @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("BizType")
+    private String bizType;
+
+    @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("Project")
     private String project;
 
@@ -35,6 +39,7 @@ public class ModifyNoticeConfigRequest extends Request {
 
     private ModifyNoticeConfigRequest(Builder builder) {
         super(builder);
+        this.bizType = builder.bizType;
         this.project = builder.project;
         this.route = builder.route;
         this.sourceIp = builder.sourceIp;
@@ -52,6 +57,13 @@ public class ModifyNoticeConfigRequest extends Request {
 @Override
     public Builder toBuilder() {
         return new Builder(this);
+    }
+
+    /**
+     * @return bizType
+     */
+    public String getBizType() {
+        return this.bizType;
     }
 
     /**
@@ -83,6 +95,7 @@ public class ModifyNoticeConfigRequest extends Request {
     }
 
     public static final class Builder extends Request.Builder<ModifyNoticeConfigRequest, Builder> {
+        private String bizType; 
         private String project; 
         private Integer route; 
         private String sourceIp; 
@@ -94,11 +107,21 @@ public class ModifyNoticeConfigRequest extends Request {
 
         private Builder(ModifyNoticeConfigRequest request) {
             super(request);
+            this.bizType = request.bizType;
             this.project = request.project;
             this.route = request.route;
             this.sourceIp = request.sourceIp;
             this.timeLimit = request.timeLimit;
         } 
+
+        /**
+         * BizType.
+         */
+        public Builder bizType(String bizType) {
+            this.putQueryParameter("BizType", bizType);
+            this.bizType = bizType;
+            return this;
+        }
 
         /**
          * <p>The identifier of the notification item. Valid values:</p>

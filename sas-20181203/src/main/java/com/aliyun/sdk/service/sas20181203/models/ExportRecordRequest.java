@@ -34,12 +34,17 @@ public class ExportRecordRequest extends Request {
     @com.aliyun.core.annotation.NameInMap("Params")
     private String params;
 
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ResourceDirectoryAccountId")
+    private Long resourceDirectoryAccountId;
+
     private ExportRecordRequest(Builder builder) {
         super(builder);
         this.exportFileType = builder.exportFileType;
         this.exportType = builder.exportType;
         this.lang = builder.lang;
         this.params = builder.params;
+        this.resourceDirectoryAccountId = builder.resourceDirectoryAccountId;
     }
 
     public static Builder builder() {
@@ -83,11 +88,19 @@ public class ExportRecordRequest extends Request {
         return this.params;
     }
 
+    /**
+     * @return resourceDirectoryAccountId
+     */
+    public Long getResourceDirectoryAccountId() {
+        return this.resourceDirectoryAccountId;
+    }
+
     public static final class Builder extends Request.Builder<ExportRecordRequest, Builder> {
         private String exportFileType; 
         private String exportType; 
         private String lang; 
         private String params; 
+        private Long resourceDirectoryAccountId; 
 
         private Builder() {
             super();
@@ -99,6 +112,7 @@ public class ExportRecordRequest extends Request {
             this.exportType = request.exportType;
             this.lang = request.lang;
             this.params = request.params;
+            this.resourceDirectoryAccountId = request.resourceDirectoryAccountId;
         } 
 
         /**
@@ -187,6 +201,15 @@ public class ExportRecordRequest extends Request {
         public Builder params(String params) {
             this.putQueryParameter("Params", params);
             this.params = params;
+            return this;
+        }
+
+        /**
+         * ResourceDirectoryAccountId.
+         */
+        public Builder resourceDirectoryAccountId(Long resourceDirectoryAccountId) {
+            this.putQueryParameter("ResourceDirectoryAccountId", resourceDirectoryAccountId);
+            this.resourceDirectoryAccountId = resourceDirectoryAccountId;
             return this;
         }
 
