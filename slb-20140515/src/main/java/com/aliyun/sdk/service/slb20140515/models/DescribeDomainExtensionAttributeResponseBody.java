@@ -52,6 +52,10 @@ public class DescribeDomainExtensionAttributeResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return domain
      */
@@ -101,6 +105,18 @@ public class DescribeDomainExtensionAttributeResponseBody extends TeaModel {
         private String loadBalancerId; 
         private String requestId; 
         private String serverCertificateId; 
+
+        private Builder() {
+        } 
+
+        private Builder(DescribeDomainExtensionAttributeResponseBody model) {
+            this.domain = model.domain;
+            this.domainExtensionId = model.domainExtensionId;
+            this.listenerPort = model.listenerPort;
+            this.loadBalancerId = model.loadBalancerId;
+            this.requestId = model.requestId;
+            this.serverCertificateId = model.serverCertificateId;
+        } 
 
         /**
          * <p>The domain name.</p>

@@ -129,7 +129,7 @@ public interface AsyncClient extends SdkAutoCloseable {
     /**
      * <b>description</b> :
      * <blockquote>
-     * <p> A newly created listener is in the <strong>stopped</strong> state. After a listener is created, you can call the <a href="https://help.aliyun.com/document_detail/27597.html">StartLoadBalancerListener</a> operation to enable the listener to forward traffic to backend servers.</p>
+     * <p> Newly created listeners are in the <strong>stopped</strong> state. After a listener is created, call the <a href="https://help.aliyun.com/document_detail/2401757.html">StartLoadBalancerListener</a> operation to enable the listener to forward network traffic.</p>
      * </blockquote>
      * 
      * @param request the request parameters of CreateLoadBalancerTCPListener  CreateLoadBalancerTCPListenerRequest
@@ -233,8 +233,7 @@ public interface AsyncClient extends SdkAutoCloseable {
 
     /**
      * <b>description</b> :
-     * <h2>Limits</h2>
-     * <p>The RuleIds parameter is required. You can specify up to 10 forwarding rules in each request.</p>
+     * <p>You must specify at least one forwarding rule that you want to delete. You can specify at most 10 forwarding rules in each call.</p>
      * 
      * @param request the request parameters of DeleteRules  DeleteRulesRequest
      * @return DeleteRulesResponse
@@ -775,7 +774,7 @@ public interface AsyncClient extends SdkAutoCloseable {
      * <p>Before you make this API call, note the following:</p>
      * <ul>
      * <li>After the API call is successfully made, the listener enters the stopped state.</li>
-     * <li>If the Server Load Balancer (SLB) instance to which the listener to be stopped belongs is in the locked state, this API call cannot be made.<blockquote>
+     * <li>If the Classic Load Balancer (CLB) instance to which the listener to be stopped belongs is in the locked state, this API call cannot be made.<blockquote>
      * <p> If you stop the listener, your services will be disrupted. Exercise caution when you perform this action.</p>
      * </blockquote>
      * </li>

@@ -66,7 +66,7 @@ public class SetLoadBalancerNameRequest extends Request {
         return builder().build();
     }
 
-    @Override
+@Override
     public Builder toBuilder() {
         return new Builder(this);
     }
@@ -145,7 +145,7 @@ public class SetLoadBalancerNameRequest extends Request {
         } 
 
         /**
-         * <p>The ID of the CLB instance.</p>
+         * <p>The region ID of the CLB instance.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -159,7 +159,7 @@ public class SetLoadBalancerNameRequest extends Request {
 
         /**
          * <p>The new name of the CLB instance.</p>
-         * <p>The name must be 1 to 80 characters in length, and can contain letters, digits, periods (.), underscores (_), and hyphens (-). It must start with a letter.</p>
+         * <p>The name must be 1 to 80 characters in length, and can contain letters, digits, periods (.), underscores (_), and hyphens (-).</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -190,7 +190,7 @@ public class SetLoadBalancerNameRequest extends Request {
         }
 
         /**
-         * <p>The ID of the region where the CLB instance is deployed.</p>
+         * <p>The region ID of the CLB instance.</p>
          * <p>You can call the <a href="https://help.aliyun.com/document_detail/25609.html">DescribeRegions</a> operation to query the most recent region list.</p>
          * 
          * <strong>example:</strong>

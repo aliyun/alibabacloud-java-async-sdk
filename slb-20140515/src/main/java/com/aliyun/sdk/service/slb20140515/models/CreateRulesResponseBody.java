@@ -36,6 +36,10 @@ public class CreateRulesResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return requestId
      */
@@ -53,6 +57,14 @@ public class CreateRulesResponseBody extends TeaModel {
     public static final class Builder {
         private String requestId; 
         private Rules rules; 
+
+        private Builder() {
+        } 
+
+        private Builder(CreateRulesResponseBody model) {
+            this.requestId = model.requestId;
+            this.rules = model.rules;
+        } 
 
         /**
          * <p>The request ID.</p>
@@ -123,6 +135,14 @@ public class CreateRulesResponseBody extends TeaModel {
             private String ruleId; 
             private String ruleName; 
 
+            private Builder() {
+            } 
+
+            private Builder(Rule model) {
+                this.ruleId = model.ruleId;
+                this.ruleName = model.ruleName;
+            } 
+
             /**
              * <p>The forwarding rule ID.</p>
              * 
@@ -183,6 +203,13 @@ public class CreateRulesResponseBody extends TeaModel {
 
         public static final class Builder {
             private java.util.List<Rule> rule; 
+
+            private Builder() {
+            } 
+
+            private Builder(Rules model) {
+                this.rule = model.rule;
+            } 
 
             /**
              * Rule.

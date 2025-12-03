@@ -68,6 +68,10 @@ public class UploadCACertificateResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return CACertificateId
      */
@@ -149,6 +153,22 @@ public class UploadCACertificateResponseBody extends TeaModel {
         private String fingerprint; 
         private String requestId; 
         private String resourceGroupId; 
+
+        private Builder() {
+        } 
+
+        private Builder(UploadCACertificateResponseBody model) {
+            this.CACertificateId = model.CACertificateId;
+            this.CACertificateName = model.CACertificateName;
+            this.commonName = model.commonName;
+            this.createTime = model.createTime;
+            this.createTimeStamp = model.createTimeStamp;
+            this.expireTime = model.expireTime;
+            this.expireTimeStamp = model.expireTimeStamp;
+            this.fingerprint = model.fingerprint;
+            this.requestId = model.requestId;
+            this.resourceGroupId = model.resourceGroupId;
+        } 
 
         /**
          * <p>The ID of the CA certificate.</p>

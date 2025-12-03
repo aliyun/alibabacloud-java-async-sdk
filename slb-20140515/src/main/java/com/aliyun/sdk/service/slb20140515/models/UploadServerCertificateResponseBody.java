@@ -88,6 +88,10 @@ public class UploadServerCertificateResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return aliCloudCertificateId
      */
@@ -209,6 +213,27 @@ public class UploadServerCertificateResponseBody extends TeaModel {
         private String serverCertificateId; 
         private String serverCertificateName; 
         private SubjectAlternativeNames subjectAlternativeNames; 
+
+        private Builder() {
+        } 
+
+        private Builder(UploadServerCertificateResponseBody model) {
+            this.aliCloudCertificateId = model.aliCloudCertificateId;
+            this.aliCloudCertificateName = model.aliCloudCertificateName;
+            this.commonName = model.commonName;
+            this.createTime = model.createTime;
+            this.createTimeStamp = model.createTimeStamp;
+            this.expireTime = model.expireTime;
+            this.expireTimeStamp = model.expireTimeStamp;
+            this.fingerprint = model.fingerprint;
+            this.isAliCloudCertificate = model.isAliCloudCertificate;
+            this.regionId = model.regionId;
+            this.requestId = model.requestId;
+            this.resourceGroupId = model.resourceGroupId;
+            this.serverCertificateId = model.serverCertificateId;
+            this.serverCertificateName = model.serverCertificateName;
+            this.subjectAlternativeNames = model.subjectAlternativeNames;
+        } 
 
         /**
          * <p>The AliCloud certificate ID.</p>
@@ -416,6 +441,13 @@ public class UploadServerCertificateResponseBody extends TeaModel {
 
         public static final class Builder {
             private java.util.List<String> subjectAlternativeName; 
+
+            private Builder() {
+            } 
+
+            private Builder(SubjectAlternativeNames model) {
+                this.subjectAlternativeName = model.subjectAlternativeName;
+            } 
 
             /**
              * SubjectAlternativeName.

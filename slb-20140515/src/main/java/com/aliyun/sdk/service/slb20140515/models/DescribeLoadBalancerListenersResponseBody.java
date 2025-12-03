@@ -48,6 +48,10 @@ public class DescribeLoadBalancerListenersResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return listeners
      */
@@ -89,6 +93,17 @@ public class DescribeLoadBalancerListenersResponseBody extends TeaModel {
         private String nextToken; 
         private String requestId; 
         private Integer totalCount; 
+
+        private Builder() {
+        } 
+
+        private Builder(DescribeLoadBalancerListenersResponseBody model) {
+            this.listeners = model.listeners;
+            this.maxResults = model.maxResults;
+            this.nextToken = model.nextToken;
+            this.requestId = model.requestId;
+            this.totalCount = model.totalCount;
+        } 
 
         /**
          * <p>A list of listeners of the CLB instance.</p>
@@ -498,6 +513,39 @@ public class DescribeLoadBalancerListenersResponseBody extends TeaModel {
             private String xForwardedForSLBIP; 
             private String xForwardedForSLBPORT; 
             private String xForwardedForProto; 
+
+            private Builder() {
+            } 
+
+            private Builder(HTTPListenerConfig model) {
+                this.cookie = model.cookie;
+                this.cookieTimeout = model.cookieTimeout;
+                this.forwardPort = model.forwardPort;
+                this.gzip = model.gzip;
+                this.healthCheck = model.healthCheck;
+                this.healthCheckConnectPort = model.healthCheckConnectPort;
+                this.healthCheckDomain = model.healthCheckDomain;
+                this.healthCheckHttpCode = model.healthCheckHttpCode;
+                this.healthCheckHttpVersion = model.healthCheckHttpVersion;
+                this.healthCheckInterval = model.healthCheckInterval;
+                this.healthCheckMethod = model.healthCheckMethod;
+                this.healthCheckTimeout = model.healthCheckTimeout;
+                this.healthCheckType = model.healthCheckType;
+                this.healthCheckURI = model.healthCheckURI;
+                this.healthyThreshold = model.healthyThreshold;
+                this.idleTimeout = model.idleTimeout;
+                this.listenerForward = model.listenerForward;
+                this.requestTimeout = model.requestTimeout;
+                this.stickySession = model.stickySession;
+                this.stickySessionType = model.stickySessionType;
+                this.unhealthyThreshold = model.unhealthyThreshold;
+                this.xForwardedFor = model.xForwardedFor;
+                this.xForwardedForClientSrcPort = model.xForwardedForClientSrcPort;
+                this.xForwardedForSLBID = model.xForwardedForSLBID;
+                this.xForwardedForSLBIP = model.xForwardedForSLBIP;
+                this.xForwardedForSLBPORT = model.xForwardedForSLBPORT;
+                this.xForwardedForProto = model.xForwardedForProto;
+            } 
 
             /**
              * <p>The cookie configures for the server.</p>
@@ -1274,6 +1322,45 @@ public class DescribeLoadBalancerListenersResponseBody extends TeaModel {
             private String xForwardedForSLBPORT; 
             private String xForwardedForProto; 
 
+            private Builder() {
+            } 
+
+            private Builder(HTTPSListenerConfig model) {
+                this.CACertificateId = model.CACertificateId;
+                this.cookie = model.cookie;
+                this.cookieTimeout = model.cookieTimeout;
+                this.enableHttp2 = model.enableHttp2;
+                this.gzip = model.gzip;
+                this.healthCheck = model.healthCheck;
+                this.healthCheckConnectPort = model.healthCheckConnectPort;
+                this.healthCheckDomain = model.healthCheckDomain;
+                this.healthCheckHttpCode = model.healthCheckHttpCode;
+                this.healthCheckHttpVersion = model.healthCheckHttpVersion;
+                this.healthCheckInterval = model.healthCheckInterval;
+                this.healthCheckMethod = model.healthCheckMethod;
+                this.healthCheckTimeout = model.healthCheckTimeout;
+                this.healthCheckType = model.healthCheckType;
+                this.healthCheckURI = model.healthCheckURI;
+                this.healthyThreshold = model.healthyThreshold;
+                this.idleTimeout = model.idleTimeout;
+                this.requestTimeout = model.requestTimeout;
+                this.serverCertificateId = model.serverCertificateId;
+                this.stickySession = model.stickySession;
+                this.stickySessionType = model.stickySessionType;
+                this.TLSCipherPolicy = model.TLSCipherPolicy;
+                this.unhealthyThreshold = model.unhealthyThreshold;
+                this.xForwardedFor = model.xForwardedFor;
+                this.xForwardedForClientCertClientVerify = model.xForwardedForClientCertClientVerify;
+                this.xForwardedForClientCertFingerprint = model.xForwardedForClientCertFingerprint;
+                this.xForwardedForClientCertIssuerDN = model.xForwardedForClientCertIssuerDN;
+                this.xForwardedForClientCertSubjectDN = model.xForwardedForClientCertSubjectDN;
+                this.xForwardedForClientSrcPort = model.xForwardedForClientSrcPort;
+                this.xForwardedForSLBID = model.xForwardedForSLBID;
+                this.xForwardedForSLBIP = model.xForwardedForSLBIP;
+                this.xForwardedForSLBPORT = model.xForwardedForSLBPORT;
+                this.xForwardedForProto = model.xForwardedForProto;
+            } 
+
             /**
              * <p>The ID of the CA certificate.</p>
              * 
@@ -1955,6 +2042,29 @@ public class DescribeLoadBalancerListenersResponseBody extends TeaModel {
             private String proxyProtocolV2Enabled; 
             private Integer unhealthyThreshold; 
 
+            private Builder() {
+            } 
+
+            private Builder(TCPListenerConfig model) {
+                this.connectionDrain = model.connectionDrain;
+                this.connectionDrainTimeout = model.connectionDrainTimeout;
+                this.establishedTimeout = model.establishedTimeout;
+                this.healthCheck = model.healthCheck;
+                this.healthCheckConnectPort = model.healthCheckConnectPort;
+                this.healthCheckConnectTimeout = model.healthCheckConnectTimeout;
+                this.healthCheckDomain = model.healthCheckDomain;
+                this.healthCheckHttpCode = model.healthCheckHttpCode;
+                this.healthCheckInterval = model.healthCheckInterval;
+                this.healthCheckMethod = model.healthCheckMethod;
+                this.healthCheckType = model.healthCheckType;
+                this.healthCheckURI = model.healthCheckURI;
+                this.healthyThreshold = model.healthyThreshold;
+                this.masterSlaveServerGroupId = model.masterSlaveServerGroupId;
+                this.persistenceTimeout = model.persistenceTimeout;
+                this.proxyProtocolV2Enabled = model.proxyProtocolV2Enabled;
+                this.unhealthyThreshold = model.unhealthyThreshold;
+            } 
+
             /**
              * <p>Indicates whether connection draining is enabled. Valid values:</p>
              * <ul>
@@ -2211,6 +2321,14 @@ public class DescribeLoadBalancerListenersResponseBody extends TeaModel {
             private String tagKey; 
             private String tagValue; 
 
+            private Builder() {
+            } 
+
+            private Builder(Tags model) {
+                this.tagKey = model.tagKey;
+                this.tagValue = model.tagValue;
+            } 
+
             /**
              * <p>The tag key.</p>
              * 
@@ -2403,6 +2521,24 @@ public class DescribeLoadBalancerListenersResponseBody extends TeaModel {
             private String masterSlaveServerGroupId; 
             private String proxyProtocolV2Enabled; 
             private Integer unhealthyThreshold; 
+
+            private Builder() {
+            } 
+
+            private Builder(UDPListenerConfig model) {
+                this.connectionDrain = model.connectionDrain;
+                this.connectionDrainTimeout = model.connectionDrainTimeout;
+                this.healthCheck = model.healthCheck;
+                this.healthCheckConnectPort = model.healthCheckConnectPort;
+                this.healthCheckConnectTimeout = model.healthCheckConnectTimeout;
+                this.healthCheckExp = model.healthCheckExp;
+                this.healthCheckInterval = model.healthCheckInterval;
+                this.healthCheckReq = model.healthCheckReq;
+                this.healthyThreshold = model.healthyThreshold;
+                this.masterSlaveServerGroupId = model.masterSlaveServerGroupId;
+                this.proxyProtocolV2Enabled = model.proxyProtocolV2Enabled;
+                this.unhealthyThreshold = model.unhealthyThreshold;
+            } 
 
             /**
              * <p>Indicates whether connection draining is enabled. Valid values:</p>
@@ -2791,6 +2927,30 @@ public class DescribeLoadBalancerListenersResponseBody extends TeaModel {
             private java.util.List<Tags> tags; 
             private UDPListenerConfig UDPListenerConfig; 
             private String vServerGroupId; 
+
+            private Builder() {
+            } 
+
+            private Builder(Listeners model) {
+                this.aclId = model.aclId;
+                this.aclIds = model.aclIds;
+                this.aclStatus = model.aclStatus;
+                this.aclType = model.aclType;
+                this.backendServerPort = model.backendServerPort;
+                this.bandwidth = model.bandwidth;
+                this.description = model.description;
+                this.HTTPListenerConfig = model.HTTPListenerConfig;
+                this.HTTPSListenerConfig = model.HTTPSListenerConfig;
+                this.listenerPort = model.listenerPort;
+                this.listenerProtocol = model.listenerProtocol;
+                this.loadBalancerId = model.loadBalancerId;
+                this.scheduler = model.scheduler;
+                this.status = model.status;
+                this.TCPListenerConfig = model.TCPListenerConfig;
+                this.tags = model.tags;
+                this.UDPListenerConfig = model.UDPListenerConfig;
+                this.vServerGroupId = model.vServerGroupId;
+            } 
 
             /**
              * <p>The ID of the access control list (ACL).</p>

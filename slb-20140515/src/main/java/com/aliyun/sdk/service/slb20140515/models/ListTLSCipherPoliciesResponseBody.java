@@ -48,6 +48,10 @@ public class ListTLSCipherPoliciesResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return isTruncated
      */
@@ -89,6 +93,17 @@ public class ListTLSCipherPoliciesResponseBody extends TeaModel {
         private String requestId; 
         private java.util.List<TLSCipherPolicies> TLSCipherPolicies; 
         private Integer totalCount; 
+
+        private Builder() {
+        } 
+
+        private Builder(ListTLSCipherPoliciesResponseBody model) {
+            this.isTruncated = model.isTruncated;
+            this.nextToken = model.nextToken;
+            this.requestId = model.requestId;
+            this.TLSCipherPolicies = model.TLSCipherPolicies;
+            this.totalCount = model.totalCount;
+        } 
 
         /**
          * <p>Indicates whether the current page is the last page. Valid values:</p>
@@ -211,6 +226,15 @@ public class ListTLSCipherPoliciesResponseBody extends TeaModel {
             private String loadBalancerId; 
             private Integer port; 
             private String protocol; 
+
+            private Builder() {
+            } 
+
+            private Builder(RelateListeners model) {
+                this.loadBalancerId = model.loadBalancerId;
+                this.port = model.port;
+                this.protocol = model.protocol;
+            } 
 
             /**
              * <p>The ID of the CLB instance.</p>
@@ -361,6 +385,19 @@ public class ListTLSCipherPoliciesResponseBody extends TeaModel {
             private java.util.List<RelateListeners> relateListeners; 
             private String status; 
             private java.util.List<String> TLSVersions; 
+
+            private Builder() {
+            } 
+
+            private Builder(TLSCipherPolicies model) {
+                this.ciphers = model.ciphers;
+                this.createTime = model.createTime;
+                this.instanceId = model.instanceId;
+                this.name = model.name;
+                this.relateListeners = model.relateListeners;
+                this.status = model.status;
+                this.TLSVersions = model.TLSVersions;
+            } 
 
             /**
              * <p>The cipher suites supported by the TLS version.</p>

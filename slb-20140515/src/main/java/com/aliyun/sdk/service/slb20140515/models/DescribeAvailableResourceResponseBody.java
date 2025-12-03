@@ -36,6 +36,10 @@ public class DescribeAvailableResourceResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return availableResources
      */
@@ -53,6 +57,14 @@ public class DescribeAvailableResourceResponseBody extends TeaModel {
     public static final class Builder {
         private AvailableResources availableResources; 
         private String requestId; 
+
+        private Builder() {
+        } 
+
+        private Builder(DescribeAvailableResourceResponseBody model) {
+            this.availableResources = model.availableResources;
+            this.requestId = model.requestId;
+        } 
 
         /**
          * <p>The zones and the supported resources.</p>
@@ -123,6 +135,14 @@ public class DescribeAvailableResourceResponseBody extends TeaModel {
             private String addressIPVersion; 
             private String addressType; 
 
+            private Builder() {
+            } 
+
+            private Builder(SupportResource model) {
+                this.addressIPVersion = model.addressIPVersion;
+                this.addressType = model.addressType;
+            } 
+
             /**
              * <p>The type of the IP address.</p>
              * <p>Valid values: <strong>ipv4 and ipv6</strong>.</p>
@@ -185,6 +205,13 @@ public class DescribeAvailableResourceResponseBody extends TeaModel {
 
         public static final class Builder {
             private java.util.List<SupportResource> supportResource; 
+
+            private Builder() {
+            } 
+
+            private Builder(SupportResources model) {
+                this.supportResource = model.supportResource;
+            } 
 
             /**
              * SupportResource.
@@ -257,6 +284,15 @@ public class DescribeAvailableResourceResponseBody extends TeaModel {
             private String slaveZoneId; 
             private SupportResources supportResources; 
 
+            private Builder() {
+            } 
+
+            private Builder(AvailableResource model) {
+                this.masterZoneId = model.masterZoneId;
+                this.slaveZoneId = model.slaveZoneId;
+                this.supportResources = model.supportResources;
+            } 
+
             /**
              * <p>The primary zone.</p>
              * 
@@ -325,6 +361,13 @@ public class DescribeAvailableResourceResponseBody extends TeaModel {
 
         public static final class Builder {
             private java.util.List<AvailableResource> availableResource; 
+
+            private Builder() {
+            } 
+
+            private Builder(AvailableResources model) {
+                this.availableResource = model.availableResource;
+            } 
 
             /**
              * AvailableResource.

@@ -36,6 +36,10 @@ public class DescribeServerCertificatesResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return requestId
      */
@@ -53,6 +57,14 @@ public class DescribeServerCertificatesResponseBody extends TeaModel {
     public static final class Builder {
         private String requestId; 
         private ServerCertificates serverCertificates; 
+
+        private Builder() {
+        } 
+
+        private Builder(DescribeServerCertificatesResponseBody model) {
+            this.requestId = model.requestId;
+            this.serverCertificates = model.serverCertificates;
+        } 
 
         /**
          * <p>The request ID.</p>
@@ -110,6 +122,13 @@ public class DescribeServerCertificatesResponseBody extends TeaModel {
 
         public static final class Builder {
             private java.util.List<String> subjectAlternativeName; 
+
+            private Builder() {
+            } 
+
+            private Builder(SubjectAlternativeNames model) {
+                this.subjectAlternativeName = model.subjectAlternativeName;
+            } 
 
             /**
              * SubjectAlternativeName.
@@ -169,6 +188,14 @@ public class DescribeServerCertificatesResponseBody extends TeaModel {
         public static final class Builder {
             private String tagKey; 
             private String tagValue; 
+
+            private Builder() {
+            } 
+
+            private Builder(Tag model) {
+                this.tagKey = model.tagKey;
+                this.tagValue = model.tagValue;
+            } 
 
             /**
              * <p>The tag keys of the resource.</p>
@@ -230,6 +257,13 @@ public class DescribeServerCertificatesResponseBody extends TeaModel {
 
         public static final class Builder {
             private java.util.List<Tag> tag; 
+
+            private Builder() {
+            } 
+
+            private Builder(Tags model) {
+                this.tag = model.tag;
+            } 
 
             /**
              * Tag.
@@ -446,6 +480,27 @@ public class DescribeServerCertificatesResponseBody extends TeaModel {
             private SubjectAlternativeNames subjectAlternativeNames; 
             private Tags tags; 
 
+            private Builder() {
+            } 
+
+            private Builder(ServerCertificate model) {
+                this.aliCloudCertificateId = model.aliCloudCertificateId;
+                this.aliCloudCertificateName = model.aliCloudCertificateName;
+                this.commonName = model.commonName;
+                this.createTime = model.createTime;
+                this.createTimeStamp = model.createTimeStamp;
+                this.expireTime = model.expireTime;
+                this.expireTimeStamp = model.expireTimeStamp;
+                this.fingerprint = model.fingerprint;
+                this.isAliCloudCertificate = model.isAliCloudCertificate;
+                this.regionId = model.regionId;
+                this.resourceGroupId = model.resourceGroupId;
+                this.serverCertificateId = model.serverCertificateId;
+                this.serverCertificateName = model.serverCertificateName;
+                this.subjectAlternativeNames = model.subjectAlternativeNames;
+                this.tags = model.tags;
+            } 
+
             /**
              * <p>The ID of the server certificate from Alibaba Cloud Certificate Management Service.</p>
              * 
@@ -647,6 +702,13 @@ public class DescribeServerCertificatesResponseBody extends TeaModel {
 
         public static final class Builder {
             private java.util.List<ServerCertificate> serverCertificate; 
+
+            private Builder() {
+            } 
+
+            private Builder(ServerCertificates model) {
+                this.serverCertificate = model.serverCertificate;
+            } 
 
             /**
              * ServerCertificate.

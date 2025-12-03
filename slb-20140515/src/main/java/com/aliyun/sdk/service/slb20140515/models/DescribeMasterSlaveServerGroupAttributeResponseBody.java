@@ -56,6 +56,10 @@ public class DescribeMasterSlaveServerGroupAttributeResponseBody extends TeaMode
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return createTime
      */
@@ -114,6 +118,19 @@ public class DescribeMasterSlaveServerGroupAttributeResponseBody extends TeaMode
         private String requestId; 
         private Tags tags; 
 
+        private Builder() {
+        } 
+
+        private Builder(DescribeMasterSlaveServerGroupAttributeResponseBody model) {
+            this.createTime = model.createTime;
+            this.loadBalancerId = model.loadBalancerId;
+            this.masterSlaveBackendServers = model.masterSlaveBackendServers;
+            this.masterSlaveServerGroupId = model.masterSlaveServerGroupId;
+            this.masterSlaveServerGroupName = model.masterSlaveServerGroupName;
+            this.requestId = model.requestId;
+            this.tags = model.tags;
+        } 
+
         /**
          * <p>The time when the CLB instance was created. The time follows the <code>YYYY-MM-DDThh:mm:ssZ</code> format.</p>
          * 
@@ -170,7 +187,7 @@ public class DescribeMasterSlaveServerGroupAttributeResponseBody extends TeaMode
          * <p>The request ID.</p>
          * 
          * <strong>example:</strong>
-         * <p>9DEC9C28-AB05-4DDF-9A78-6B08EC9CE18C</p>
+         * <p>9DEC9C28-AB05-4DDF-9A78-6B0******</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -283,6 +300,18 @@ public class DescribeMasterSlaveServerGroupAttributeResponseBody extends TeaMode
             private String type; 
             private Integer weight; 
 
+            private Builder() {
+            } 
+
+            private Builder(MasterSlaveBackendServer model) {
+                this.description = model.description;
+                this.port = model.port;
+                this.serverId = model.serverId;
+                this.serverType = model.serverType;
+                this.type = model.type;
+                this.weight = model.weight;
+            } 
+
             /**
              * <p>The description of the primary/secondary server group.</p>
              * 
@@ -309,7 +338,7 @@ public class DescribeMasterSlaveServerGroupAttributeResponseBody extends TeaMode
              * <p>The ID of the backend server.</p>
              * 
              * <strong>example:</strong>
-             * <p>vm-hrf******</p>
+             * <p>eni-hhshhs****</p>
              */
             public Builder serverId(String serverId) {
                 this.serverId = serverId;
@@ -336,7 +365,7 @@ public class DescribeMasterSlaveServerGroupAttributeResponseBody extends TeaMode
              * </ul>
              * 
              * <strong>example:</strong>
-             * <p>ecs</p>
+             * <p>eni</p>
              */
             public Builder type(String type) {
                 this.type = type;
@@ -392,6 +421,13 @@ public class DescribeMasterSlaveServerGroupAttributeResponseBody extends TeaMode
 
         public static final class Builder {
             private java.util.List<MasterSlaveBackendServer> masterSlaveBackendServer; 
+
+            private Builder() {
+            } 
+
+            private Builder(MasterSlaveBackendServers model) {
+                this.masterSlaveBackendServer = model.masterSlaveBackendServer;
+            } 
 
             /**
              * MasterSlaveBackendServer.
@@ -452,12 +488,20 @@ public class DescribeMasterSlaveServerGroupAttributeResponseBody extends TeaMode
             private String tagKey; 
             private String tagValue; 
 
+            private Builder() {
+            } 
+
+            private Builder(Tag model) {
+                this.tagKey = model.tagKey;
+                this.tagValue = model.tagValue;
+            } 
+
             /**
              * <p>The tag key. Valid values of N: <strong>1</strong> to <strong>20</strong>. The tag key cannot be an empty string.</p>
              * <p>The tag key can be up to 64 characters in length, and cannot contain <code>http://</code> or <code>https://</code>. The tag key cannot start with <code>aliyun</code> or <code>acs:</code>.</p>
              * 
              * <strong>example:</strong>
-             * <p>test</p>
+             * <p>TestKey</p>
              */
             public Builder tagKey(String tagKey) {
                 this.tagKey = tagKey;
@@ -469,7 +513,7 @@ public class DescribeMasterSlaveServerGroupAttributeResponseBody extends TeaMode
              * <p>The tag value can be up to 128 characters in length, and cannot contain <code>http://</code> or <code>https://</code>. The tag value cannot start with <code>acs:</code> or <code>aliyun</code>.</p>
              * 
              * <strong>example:</strong>
-             * <p>value</p>
+             * <p>TestValue</p>
              */
             public Builder tagValue(String tagValue) {
                 this.tagValue = tagValue;
@@ -514,6 +558,13 @@ public class DescribeMasterSlaveServerGroupAttributeResponseBody extends TeaMode
 
         public static final class Builder {
             private java.util.List<Tag> tag; 
+
+            private Builder() {
+            } 
+
+            private Builder(Tags model) {
+                this.tag = model.tag;
+            } 
 
             /**
              * Tag.

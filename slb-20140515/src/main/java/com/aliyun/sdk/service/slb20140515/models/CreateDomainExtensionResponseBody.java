@@ -40,6 +40,10 @@ public class CreateDomainExtensionResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return domainExtensionId
      */
@@ -65,6 +69,15 @@ public class CreateDomainExtensionResponseBody extends TeaModel {
         private String domainExtensionId; 
         private Integer listenerPort; 
         private String requestId; 
+
+        private Builder() {
+        } 
+
+        private Builder(CreateDomainExtensionResponseBody model) {
+            this.domainExtensionId = model.domainExtensionId;
+            this.listenerPort = model.listenerPort;
+            this.requestId = model.requestId;
+        } 
 
         /**
          * <p>The ID of the additional domain name.</p>

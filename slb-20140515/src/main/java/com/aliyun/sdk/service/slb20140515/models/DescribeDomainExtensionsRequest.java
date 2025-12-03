@@ -72,7 +72,7 @@ public class DescribeDomainExtensionsRequest extends Request {
         return builder().build();
     }
 
-    @Override
+@Override
     public Builder toBuilder() {
         return new Builder(this);
     }
@@ -172,7 +172,7 @@ public class DescribeDomainExtensionsRequest extends Request {
         }
 
         /**
-         * <p>The frontend port of the HTTPS listener that is configured for the Classic Load Balancer (CLB) instance. Valid values: <strong>1 to 65535</strong>.</p>
+         * <p>The frontend port of the HTTPS listener that is configured for the SLB instance. Valid values: <strong>1 to 65535</strong>.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -185,7 +185,7 @@ public class DescribeDomainExtensionsRequest extends Request {
         }
 
         /**
-         * <p>The ID of the CLB instance.</p>
+         * <p>The SLB instance ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -216,7 +216,7 @@ public class DescribeDomainExtensionsRequest extends Request {
         }
 
         /**
-         * <p>The ID of the region where the CLB instance is deployed.</p>
+         * <p>The region ID of the Server Load Balancer (SLB) instance.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>

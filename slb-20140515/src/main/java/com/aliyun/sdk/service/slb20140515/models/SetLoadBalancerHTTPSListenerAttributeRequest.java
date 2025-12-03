@@ -250,7 +250,7 @@ public class SetLoadBalancerHTTPSListenerAttributeRequest extends Request {
         return builder().build();
     }
 
-    @Override
+@Override
     public Builder toBuilder() {
         return new Builder(this);
     }
@@ -735,7 +735,7 @@ public class SetLoadBalancerHTTPSListenerAttributeRequest extends Request {
          * </blockquote>
          * 
          * <strong>example:</strong>
-         * <p>B490B5EBF6F3CD4****</p>
+         * <p>testCookie</p>
          */
         public Builder cookie(String cookie) {
             this.putQueryParameter("Cookie", cookie);
@@ -764,7 +764,7 @@ public class SetLoadBalancerHTTPSListenerAttributeRequest extends Request {
          * The name must be 1 to 256 characters in length and can contain letters, digits, hyphens (-), forward slashes (/), periods (.), and underscores (_).</p>
          * 
          * <strong>example:</strong>
-         * <p>Listener1</p>
+         * <p>https_80</p>
          */
         public Builder description(String description) {
             this.putQueryParameter("Description", description);

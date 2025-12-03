@@ -36,6 +36,10 @@ public class DescribeRulesResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return requestId
      */
@@ -53,6 +57,14 @@ public class DescribeRulesResponseBody extends TeaModel {
     public static final class Builder {
         private String requestId; 
         private Rules rules; 
+
+        private Builder() {
+        } 
+
+        private Builder(DescribeRulesResponseBody model) {
+            this.requestId = model.requestId;
+            this.rules = model.rules;
+        } 
 
         /**
          * <p>The ID of the request.</p>
@@ -338,6 +350,32 @@ public class DescribeRulesResponseBody extends TeaModel {
             private Integer unhealthyThreshold; 
             private String url; 
             private String vServerGroupId; 
+
+            private Builder() {
+            } 
+
+            private Builder(Rule model) {
+                this.cookie = model.cookie;
+                this.cookieTimeout = model.cookieTimeout;
+                this.domain = model.domain;
+                this.healthCheck = model.healthCheck;
+                this.healthCheckConnectPort = model.healthCheckConnectPort;
+                this.healthCheckDomain = model.healthCheckDomain;
+                this.healthCheckHttpCode = model.healthCheckHttpCode;
+                this.healthCheckInterval = model.healthCheckInterval;
+                this.healthCheckTimeout = model.healthCheckTimeout;
+                this.healthCheckURI = model.healthCheckURI;
+                this.healthyThreshold = model.healthyThreshold;
+                this.listenerSync = model.listenerSync;
+                this.ruleId = model.ruleId;
+                this.ruleName = model.ruleName;
+                this.scheduler = model.scheduler;
+                this.stickySession = model.stickySession;
+                this.stickySessionType = model.stickySessionType;
+                this.unhealthyThreshold = model.unhealthyThreshold;
+                this.url = model.url;
+                this.vServerGroupId = model.vServerGroupId;
+            } 
 
             /**
              * <p>The cookie that is configured on the backend server.</p>
@@ -671,6 +709,13 @@ public class DescribeRulesResponseBody extends TeaModel {
 
         public static final class Builder {
             private java.util.List<Rule> rule; 
+
+            private Builder() {
+            } 
+
+            private Builder(Rules model) {
+                this.rule = model.rule;
+            } 
 
             /**
              * Rule.

@@ -172,6 +172,10 @@ public class DescribeLoadBalancerAttributeResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return address
      */
@@ -461,6 +465,48 @@ public class DescribeLoadBalancerAttributeResponseBody extends TeaModel {
         private Tags tags; 
         private String vSwitchId; 
         private String vpcId; 
+
+        private Builder() {
+        } 
+
+        private Builder(DescribeLoadBalancerAttributeResponseBody model) {
+            this.address = model.address;
+            this.addressIPVersion = model.addressIPVersion;
+            this.addressType = model.addressType;
+            this.autoReleaseTime = model.autoReleaseTime;
+            this.backendServers = model.backendServers;
+            this.bandwidth = model.bandwidth;
+            this.createTime = model.createTime;
+            this.createTimeStamp = model.createTimeStamp;
+            this.deleteProtection = model.deleteProtection;
+            this.endTime = model.endTime;
+            this.endTimeStamp = model.endTimeStamp;
+            this.instanceChargeType = model.instanceChargeType;
+            this.internetChargeType = model.internetChargeType;
+            this.listenerPorts = model.listenerPorts;
+            this.listenerPortsAndProtocal = model.listenerPortsAndProtocal;
+            this.listenerPortsAndProtocol = model.listenerPortsAndProtocol;
+            this.loadBalancerId = model.loadBalancerId;
+            this.loadBalancerName = model.loadBalancerName;
+            this.loadBalancerSpec = model.loadBalancerSpec;
+            this.loadBalancerStatus = model.loadBalancerStatus;
+            this.masterZoneId = model.masterZoneId;
+            this.modificationProtectionReason = model.modificationProtectionReason;
+            this.modificationProtectionStatus = model.modificationProtectionStatus;
+            this.networkType = model.networkType;
+            this.payType = model.payType;
+            this.regionId = model.regionId;
+            this.regionIdAlias = model.regionIdAlias;
+            this.renewalCycUnit = model.renewalCycUnit;
+            this.renewalDuration = model.renewalDuration;
+            this.renewalStatus = model.renewalStatus;
+            this.requestId = model.requestId;
+            this.resourceGroupId = model.resourceGroupId;
+            this.slaveZoneId = model.slaveZoneId;
+            this.tags = model.tags;
+            this.vSwitchId = model.vSwitchId;
+            this.vpcId = model.vpcId;
+        } 
 
         /**
          * <p>The service IP address of the CLB instance.</p>
@@ -984,6 +1030,17 @@ public class DescribeLoadBalancerAttributeResponseBody extends TeaModel {
             private String type; 
             private Integer weight; 
 
+            private Builder() {
+            } 
+
+            private Builder(BackendServer model) {
+                this.description = model.description;
+                this.serverId = model.serverId;
+                this.serverIp = model.serverIp;
+                this.type = model.type;
+                this.weight = model.weight;
+            } 
+
             /**
              * <p>The description of the backend server.</p>
              * <blockquote>
@@ -1081,6 +1138,13 @@ public class DescribeLoadBalancerAttributeResponseBody extends TeaModel {
         public static final class Builder {
             private java.util.List<BackendServer> backendServer; 
 
+            private Builder() {
+            } 
+
+            private Builder(BackendServers model) {
+                this.backendServer = model.backendServer;
+            } 
+
             /**
              * BackendServer.
              */
@@ -1127,6 +1191,13 @@ public class DescribeLoadBalancerAttributeResponseBody extends TeaModel {
 
         public static final class Builder {
             private java.util.List<Integer> listenerPort; 
+
+            private Builder() {
+            } 
+
+            private Builder(ListenerPorts model) {
+                this.listenerPort = model.listenerPort;
+            } 
 
             /**
              * ListenerPort.
@@ -1186,6 +1257,14 @@ public class DescribeLoadBalancerAttributeResponseBody extends TeaModel {
         public static final class Builder {
             private Integer listenerPort; 
             private String listenerProtocal; 
+
+            private Builder() {
+            } 
+
+            private Builder(ListenerPortAndProtocal model) {
+                this.listenerPort = model.listenerPort;
+                this.listenerProtocal = model.listenerProtocal;
+            } 
 
             /**
              * <p>The frontend port that is used by the CLB instance.</p>
@@ -1247,6 +1326,13 @@ public class DescribeLoadBalancerAttributeResponseBody extends TeaModel {
 
         public static final class Builder {
             private java.util.List<ListenerPortAndProtocal> listenerPortAndProtocal; 
+
+            private Builder() {
+            } 
+
+            private Builder(ListenerPortsAndProtocal model) {
+                this.listenerPortAndProtocal = model.listenerPortAndProtocal;
+            } 
 
             /**
              * ListenerPortAndProtocal.
@@ -1343,6 +1429,17 @@ public class DescribeLoadBalancerAttributeResponseBody extends TeaModel {
             private Integer listenerPort; 
             private String listenerProtocol; 
 
+            private Builder() {
+            } 
+
+            private Builder(ListenerPortAndProtocol model) {
+                this.description = model.description;
+                this.forwardPort = model.forwardPort;
+                this.listenerForward = model.listenerForward;
+                this.listenerPort = model.listenerPort;
+                this.listenerProtocol = model.listenerProtocol;
+            } 
+
             /**
              * <p>Indicates whether the listener is enabled.</p>
              * 
@@ -1437,6 +1534,13 @@ public class DescribeLoadBalancerAttributeResponseBody extends TeaModel {
         public static final class Builder {
             private java.util.List<ListenerPortAndProtocol> listenerPortAndProtocol; 
 
+            private Builder() {
+            } 
+
+            private Builder(ListenerPortsAndProtocol model) {
+                this.listenerPortAndProtocol = model.listenerPortAndProtocol;
+            } 
+
             /**
              * ListenerPortAndProtocol.
              */
@@ -1495,6 +1599,14 @@ public class DescribeLoadBalancerAttributeResponseBody extends TeaModel {
         public static final class Builder {
             private String tagKey; 
             private String tagValue; 
+
+            private Builder() {
+            } 
+
+            private Builder(Tag model) {
+                this.tagKey = model.tagKey;
+                this.tagValue = model.tagValue;
+            } 
 
             /**
              * <p>The tag key. Valid values of N: <strong>1</strong> to <strong>20</strong>. The tag key cannot be an empty string.</p>
@@ -1558,6 +1670,13 @@ public class DescribeLoadBalancerAttributeResponseBody extends TeaModel {
 
         public static final class Builder {
             private java.util.List<Tag> tag; 
+
+            private Builder() {
+            } 
+
+            private Builder(Tags model) {
+                this.tag = model.tag;
+            } 
 
             /**
              * Tag.

@@ -83,7 +83,7 @@ public class MoveResourceGroupRequest extends Request {
         return builder().build();
     }
 
-    @Override
+@Override
     public Builder toBuilder() {
         return new Builder(this);
     }
@@ -245,7 +245,7 @@ public class MoveResourceGroupRequest extends Request {
         }
 
         /**
-         * <p>The resource ID.</p>
+         * <p>The ID of the resource for which you want to modify the resource group.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -294,10 +294,10 @@ public class MoveResourceGroupRequest extends Request {
         }
 
         /**
-         * <p>The AccessKey ID provided by Alibaba Cloud.</p>
+         * <p>The AccessKey ID provided to you by Alibaba Cloud for accessing the service.</p>
          * 
          * <strong>example:</strong>
-         * <p>LTAI5tPmFGUpmyWwD8gp****</p>
+         * <p>yourAccessKeyID</p>
          */
         public Builder accessKeyId(String accessKeyId) {
             this.putQueryParameter("access_key_id", accessKeyId);

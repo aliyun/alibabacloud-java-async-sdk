@@ -192,6 +192,10 @@ public class DescribeLoadBalancerHTTPListenerAttributeResponseBody extends TeaMo
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return aclId
      */
@@ -522,6 +526,53 @@ public class DescribeLoadBalancerHTTPListenerAttributeResponseBody extends TeaMo
         private String xForwardedForSLBPORT; 
         private String xForwardedForProto; 
 
+        private Builder() {
+        } 
+
+        private Builder(DescribeLoadBalancerHTTPListenerAttributeResponseBody model) {
+            this.aclId = model.aclId;
+            this.aclIds = model.aclIds;
+            this.aclStatus = model.aclStatus;
+            this.aclType = model.aclType;
+            this.backendServerPort = model.backendServerPort;
+            this.bandwidth = model.bandwidth;
+            this.cookie = model.cookie;
+            this.cookieTimeout = model.cookieTimeout;
+            this.description = model.description;
+            this.forwardPort = model.forwardPort;
+            this.gzip = model.gzip;
+            this.healthCheck = model.healthCheck;
+            this.healthCheckConnectPort = model.healthCheckConnectPort;
+            this.healthCheckDomain = model.healthCheckDomain;
+            this.healthCheckHttpCode = model.healthCheckHttpCode;
+            this.healthCheckInterval = model.healthCheckInterval;
+            this.healthCheckMethod = model.healthCheckMethod;
+            this.healthCheckTimeout = model.healthCheckTimeout;
+            this.healthCheckURI = model.healthCheckURI;
+            this.healthyThreshold = model.healthyThreshold;
+            this.idleTimeout = model.idleTimeout;
+            this.listenerForward = model.listenerForward;
+            this.listenerPort = model.listenerPort;
+            this.loadBalancerId = model.loadBalancerId;
+            this.requestId = model.requestId;
+            this.requestTimeout = model.requestTimeout;
+            this.rules = model.rules;
+            this.scheduler = model.scheduler;
+            this.securityStatus = model.securityStatus;
+            this.status = model.status;
+            this.stickySession = model.stickySession;
+            this.stickySessionType = model.stickySessionType;
+            this.tags = model.tags;
+            this.unhealthyThreshold = model.unhealthyThreshold;
+            this.vServerGroupId = model.vServerGroupId;
+            this.xForwardedFor = model.xForwardedFor;
+            this.xForwardedForClientSrcPort = model.xForwardedForClientSrcPort;
+            this.xForwardedForSLBID = model.xForwardedForSLBID;
+            this.xForwardedForSLBIP = model.xForwardedForSLBIP;
+            this.xForwardedForSLBPORT = model.xForwardedForSLBPORT;
+            this.xForwardedForProto = model.xForwardedForProto;
+        } 
+
         /**
          * <p>The ID of the network ACL that is associated with a listener.</p>
          * <blockquote>
@@ -529,7 +580,7 @@ public class DescribeLoadBalancerHTTPListenerAttributeResponseBody extends TeaMo
          * </blockquote>
          * 
          * <strong>example:</strong>
-         * <p>on</p>
+         * <p>acl-uf60jw******</p>
          */
         public Builder aclId(String aclId) {
             this.aclId = aclId;
@@ -537,7 +588,7 @@ public class DescribeLoadBalancerHTTPListenerAttributeResponseBody extends TeaMo
         }
 
         /**
-         * AclIds.
+         * <p>The ID of the access control list (ACL).</p>
          */
         public Builder aclIds(AclIds aclIds) {
             this.aclIds = aclIds;
@@ -611,7 +662,7 @@ public class DescribeLoadBalancerHTTPListenerAttributeResponseBody extends TeaMo
          * <p>The cookie that is configured on the server.</p>
          * 
          * <strong>example:</strong>
-         * <p>B490B5EBF6F3CD402E515D22BCDA1598</p>
+         * <p>testCookie</p>
          */
         public Builder cookie(String cookie) {
             this.cookie = cookie;
@@ -633,7 +684,7 @@ public class DescribeLoadBalancerHTTPListenerAttributeResponseBody extends TeaMo
          * <p>The name of the listener.</p>
          * 
          * <strong>example:</strong>
-         * <p>test</p>
+         * <p>HTTP_80</p>
          */
         public Builder description(String description) {
             this.description = description;
@@ -1102,6 +1153,13 @@ public class DescribeLoadBalancerHTTPListenerAttributeResponseBody extends TeaMo
         public static final class Builder {
             private java.util.List<String> aclId; 
 
+            private Builder() {
+            } 
+
+            private Builder(AclIds model) {
+                this.aclId = model.aclId;
+            } 
+
             /**
              * <p>The ID of the network ACL that is associated with a listener.</p>
              * <blockquote>
@@ -1109,7 +1167,7 @@ public class DescribeLoadBalancerHTTPListenerAttributeResponseBody extends TeaMo
              * </blockquote>
              * 
              * <strong>example:</strong>
-             * <p>on</p>
+             * <p>acl-uf60jw******</p>
              */
             public Builder aclId(java.util.List<String> aclId) {
                 this.aclId = aclId;
@@ -1203,6 +1261,17 @@ public class DescribeLoadBalancerHTTPListenerAttributeResponseBody extends TeaMo
             private String url; 
             private String vServerGroupId; 
 
+            private Builder() {
+            } 
+
+            private Builder(Rule model) {
+                this.domain = model.domain;
+                this.ruleId = model.ruleId;
+                this.ruleName = model.ruleName;
+                this.url = model.url;
+                this.vServerGroupId = model.vServerGroupId;
+            } 
+
             /**
              * <p>The domain name.</p>
              * 
@@ -1251,7 +1320,7 @@ public class DescribeLoadBalancerHTTPListenerAttributeResponseBody extends TeaMo
              * <p>The ID of the server group specified in the forwarding rule.</p>
              * 
              * <strong>example:</strong>
-             * <p>123</p>
+             * <p>rsp-uf6w******</p>
              */
             public Builder vServerGroupId(String vServerGroupId) {
                 this.vServerGroupId = vServerGroupId;
@@ -1296,6 +1365,13 @@ public class DescribeLoadBalancerHTTPListenerAttributeResponseBody extends TeaMo
 
         public static final class Builder {
             private java.util.List<Rule> rule; 
+
+            private Builder() {
+            } 
+
+            private Builder(Rules model) {
+                this.rule = model.rule;
+            } 
 
             /**
              * Rule.
@@ -1356,8 +1432,16 @@ public class DescribeLoadBalancerHTTPListenerAttributeResponseBody extends TeaMo
             private String tagKey; 
             private String tagValue; 
 
+            private Builder() {
+            } 
+
+            private Builder(Tag model) {
+                this.tagKey = model.tagKey;
+                this.tagValue = model.tagValue;
+            } 
+
             /**
-             * <p>The key of tag N. Valid values of N: <strong>1</strong> to <strong>20</strong>. The tag key cannot be an empty string. The tag key can be up to 64 characters in length. The key cannot start with <code>acs:</code> or <code>aliyun</code> or contain <code>http://</code> or <code>https://</code>.</p>
+             * <p>The key of tag N. Valid values of N: <strong>1</strong> to <strong>20</strong>. The tag value cannot be an empty string. The tag key can be up to 64 characters in length. The key cannot start with <code>acs:</code> or <code>aliyun</code> or contain <code>http://</code> or <code>https://</code>.</p>
              * 
              * <strong>example:</strong>
              * <p>TestKey</p>
@@ -1368,7 +1452,7 @@ public class DescribeLoadBalancerHTTPListenerAttributeResponseBody extends TeaMo
             }
 
             /**
-             * <p>The value of tag N. Valid values of N: <strong>1</strong> to <strong>20</strong>. The tag value can be an empty string. The tag value must be 0 to 128 characters in length, and cannot start with <code>acs:</code>. It cannot contain <code>http://</code> or <code>https://</code>.</p>
+             * <p>The value of tag N. Valid values of N: <strong>1</strong> to <strong>20</strong>. The tag value can be an empty string. The tag value can be up to 128 characters in length, and cannot start with <code>acs:</code>. It cannot contain <code>http://</code> or <code>https://</code>.</p>
              * 
              * <strong>example:</strong>
              * <p>TestValue</p>
@@ -1416,6 +1500,13 @@ public class DescribeLoadBalancerHTTPListenerAttributeResponseBody extends TeaMo
 
         public static final class Builder {
             private java.util.List<Tag> tag; 
+
+            private Builder() {
+            } 
+
+            private Builder(Tags model) {
+                this.tag = model.tag;
+            } 
 
             /**
              * Tag.

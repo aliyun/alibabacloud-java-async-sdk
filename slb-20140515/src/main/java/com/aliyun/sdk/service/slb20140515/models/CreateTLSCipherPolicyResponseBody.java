@@ -36,6 +36,10 @@ public class CreateTLSCipherPolicyResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return requestId
      */
@@ -53,6 +57,14 @@ public class CreateTLSCipherPolicyResponseBody extends TeaModel {
     public static final class Builder {
         private String requestId; 
         private String TLSCipherPolicyId; 
+
+        private Builder() {
+        } 
+
+        private Builder(CreateTLSCipherPolicyResponseBody model) {
+            this.requestId = model.requestId;
+            this.TLSCipherPolicyId = model.TLSCipherPolicyId;
+        } 
 
         /**
          * <p>The ID of the request.</p>

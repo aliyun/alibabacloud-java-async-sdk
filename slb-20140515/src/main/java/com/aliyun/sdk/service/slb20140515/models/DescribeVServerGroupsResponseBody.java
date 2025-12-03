@@ -36,6 +36,10 @@ public class DescribeVServerGroupsResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return requestId
      */
@@ -53,6 +57,14 @@ public class DescribeVServerGroupsResponseBody extends TeaModel {
     public static final class Builder {
         private String requestId; 
         private VServerGroups vServerGroups; 
+
+        private Builder() {
+        } 
+
+        private Builder(DescribeVServerGroupsResponseBody model) {
+            this.requestId = model.requestId;
+            this.vServerGroups = model.vServerGroups;
+        } 
 
         /**
          * <p>The request ID.</p>
@@ -123,6 +135,14 @@ public class DescribeVServerGroupsResponseBody extends TeaModel {
             private Integer port; 
             private String protocol; 
 
+            private Builder() {
+            } 
+
+            private Builder(Listener model) {
+                this.port = model.port;
+                this.protocol = model.protocol;
+            } 
+
             /**
              * <p>The listener port.</p>
              * 
@@ -183,6 +203,13 @@ public class DescribeVServerGroupsResponseBody extends TeaModel {
 
         public static final class Builder {
             private java.util.List<Listener> listener; 
+
+            private Builder() {
+            } 
+
+            private Builder(Listeners model) {
+                this.listener = model.listener;
+            } 
 
             /**
              * Listener.
@@ -267,6 +294,16 @@ public class DescribeVServerGroupsResponseBody extends TeaModel {
             private String ruleName; 
             private String url; 
 
+            private Builder() {
+            } 
+
+            private Builder(Rule model) {
+                this.domain = model.domain;
+                this.ruleId = model.ruleId;
+                this.ruleName = model.ruleName;
+                this.url = model.url;
+            } 
+
             /**
              * <p>The requested domain name.</p>
              * 
@@ -350,6 +387,13 @@ public class DescribeVServerGroupsResponseBody extends TeaModel {
         public static final class Builder {
             private java.util.List<Rule> rule; 
 
+            private Builder() {
+            } 
+
+            private Builder(Rules model) {
+                this.rule = model.rule;
+            } 
+
             /**
              * Rule.
              */
@@ -408,6 +452,14 @@ public class DescribeVServerGroupsResponseBody extends TeaModel {
         public static final class Builder {
             private Listeners listeners; 
             private Rules rules; 
+
+            private Builder() {
+            } 
+
+            private Builder(AssociatedObjects model) {
+                this.listeners = model.listeners;
+                this.rules = model.rules;
+            } 
 
             /**
              * <p>The listeners.</p>
@@ -476,6 +528,14 @@ public class DescribeVServerGroupsResponseBody extends TeaModel {
             private String tagKey; 
             private String tagValue; 
 
+            private Builder() {
+            } 
+
+            private Builder(Tag model) {
+                this.tagKey = model.tagKey;
+                this.tagValue = model.tagValue;
+            } 
+
             /**
              * <p>The tag key.</p>
              * 
@@ -536,6 +596,13 @@ public class DescribeVServerGroupsResponseBody extends TeaModel {
 
         public static final class Builder {
             private java.util.List<Tag> tag; 
+
+            private Builder() {
+            } 
+
+            private Builder(Tags model) {
+                this.tag = model.tag;
+            } 
 
             /**
              * Tag.
@@ -644,6 +711,18 @@ public class DescribeVServerGroupsResponseBody extends TeaModel {
             private String vServerGroupId; 
             private String vServerGroupName; 
 
+            private Builder() {
+            } 
+
+            private Builder(VServerGroup model) {
+                this.associatedObjects = model.associatedObjects;
+                this.createTime = model.createTime;
+                this.serverCount = model.serverCount;
+                this.tags = model.tags;
+                this.vServerGroupId = model.vServerGroupId;
+                this.vServerGroupName = model.vServerGroupName;
+            } 
+
             /**
              * <p>The associated resources.</p>
              */
@@ -743,6 +822,13 @@ public class DescribeVServerGroupsResponseBody extends TeaModel {
 
         public static final class Builder {
             private java.util.List<VServerGroup> vServerGroup; 
+
+            private Builder() {
+            } 
+
+            private Builder(VServerGroups model) {
+                this.vServerGroup = model.vServerGroup;
+            } 
 
             /**
              * VServerGroup.

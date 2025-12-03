@@ -36,6 +36,10 @@ public class DescribeMasterSlaveServerGroupsResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return masterSlaveServerGroups
      */
@@ -53,6 +57,14 @@ public class DescribeMasterSlaveServerGroupsResponseBody extends TeaModel {
     public static final class Builder {
         private MasterSlaveServerGroups masterSlaveServerGroups; 
         private String requestId; 
+
+        private Builder() {
+        } 
+
+        private Builder(DescribeMasterSlaveServerGroupsResponseBody model) {
+            this.masterSlaveServerGroups = model.masterSlaveServerGroups;
+            this.requestId = model.requestId;
+        } 
 
         /**
          * <p>The primary/secondary server groups.</p>
@@ -123,6 +135,14 @@ public class DescribeMasterSlaveServerGroupsResponseBody extends TeaModel {
             private Integer port; 
             private String protocol; 
 
+            private Builder() {
+            } 
+
+            private Builder(Listener model) {
+                this.port = model.port;
+                this.protocol = model.protocol;
+            } 
+
             /**
              * <p>The listener port.</p>
              * 
@@ -184,6 +204,13 @@ public class DescribeMasterSlaveServerGroupsResponseBody extends TeaModel {
         public static final class Builder {
             private java.util.List<Listener> listener; 
 
+            private Builder() {
+            } 
+
+            private Builder(Listeners model) {
+                this.listener = model.listener;
+            } 
+
             /**
              * Listener.
              */
@@ -230,6 +257,13 @@ public class DescribeMasterSlaveServerGroupsResponseBody extends TeaModel {
 
         public static final class Builder {
             private Listeners listeners; 
+
+            private Builder() {
+            } 
+
+            private Builder(AssociatedObjects model) {
+                this.listeners = model.listeners;
+            } 
 
             /**
              * <p>The listeners.</p>
@@ -289,6 +323,14 @@ public class DescribeMasterSlaveServerGroupsResponseBody extends TeaModel {
         public static final class Builder {
             private String tagKey; 
             private String tagValue; 
+
+            private Builder() {
+            } 
+
+            private Builder(Tag model) {
+                this.tagKey = model.tagKey;
+                this.tagValue = model.tagValue;
+            } 
 
             /**
              * <p>The tag key.</p>
@@ -350,6 +392,13 @@ public class DescribeMasterSlaveServerGroupsResponseBody extends TeaModel {
 
         public static final class Builder {
             private java.util.List<Tag> tag; 
+
+            private Builder() {
+            } 
+
+            private Builder(Tags model) {
+                this.tag = model.tag;
+            } 
 
             /**
              * Tag.
@@ -446,6 +495,17 @@ public class DescribeMasterSlaveServerGroupsResponseBody extends TeaModel {
             private String masterSlaveServerGroupName; 
             private Tags tags; 
 
+            private Builder() {
+            } 
+
+            private Builder(MasterSlaveServerGroup model) {
+                this.associatedObjects = model.associatedObjects;
+                this.createTime = model.createTime;
+                this.masterSlaveServerGroupId = model.masterSlaveServerGroupId;
+                this.masterSlaveServerGroupName = model.masterSlaveServerGroupName;
+                this.tags = model.tags;
+            } 
+
             /**
              * <p>The associated resources.</p>
              */
@@ -533,6 +593,13 @@ public class DescribeMasterSlaveServerGroupsResponseBody extends TeaModel {
 
         public static final class Builder {
             private java.util.List<MasterSlaveServerGroup> masterSlaveServerGroup; 
+
+            private Builder() {
+            } 
+
+            private Builder(MasterSlaveServerGroups model) {
+                this.masterSlaveServerGroup = model.masterSlaveServerGroup;
+            } 
 
             /**
              * MasterSlaveServerGroup.

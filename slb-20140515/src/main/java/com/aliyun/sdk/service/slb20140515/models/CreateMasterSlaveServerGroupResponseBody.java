@@ -40,6 +40,10 @@ public class CreateMasterSlaveServerGroupResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return masterSlaveBackendServers
      */
@@ -65,6 +69,15 @@ public class CreateMasterSlaveServerGroupResponseBody extends TeaModel {
         private MasterSlaveBackendServers masterSlaveBackendServers; 
         private String masterSlaveServerGroupId; 
         private String requestId; 
+
+        private Builder() {
+        } 
+
+        private Builder(CreateMasterSlaveServerGroupResponseBody model) {
+            this.masterSlaveBackendServers = model.masterSlaveBackendServers;
+            this.masterSlaveServerGroupId = model.masterSlaveServerGroupId;
+            this.requestId = model.requestId;
+        } 
 
         /**
          * <p>The backend servers in the primary/secondary server group.</p>
@@ -194,6 +207,18 @@ public class CreateMasterSlaveServerGroupResponseBody extends TeaModel {
             private String type; 
             private Integer weight; 
 
+            private Builder() {
+            } 
+
+            private Builder(MasterSlaveBackendServer model) {
+                this.description = model.description;
+                this.port = model.port;
+                this.serverId = model.serverId;
+                this.serverType = model.serverType;
+                this.type = model.type;
+                this.weight = model.weight;
+            } 
+
             /**
              * <p>The description of the primary/secondary server group.</p>
              * 
@@ -304,6 +329,13 @@ public class CreateMasterSlaveServerGroupResponseBody extends TeaModel {
 
         public static final class Builder {
             private java.util.List<MasterSlaveBackendServer> masterSlaveBackendServer; 
+
+            private Builder() {
+            } 
+
+            private Builder(MasterSlaveBackendServers model) {
+                this.masterSlaveBackendServer = model.masterSlaveBackendServer;
+            } 
 
             /**
              * MasterSlaveBackendServer.

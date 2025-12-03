@@ -44,6 +44,10 @@ public class SetVServerGroupAttributeResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return backendServers
      */
@@ -77,6 +81,16 @@ public class SetVServerGroupAttributeResponseBody extends TeaModel {
         private String requestId; 
         private String vServerGroupId; 
         private String vServerGroupName; 
+
+        private Builder() {
+        } 
+
+        private Builder(SetVServerGroupAttributeResponseBody model) {
+            this.backendServers = model.backendServers;
+            this.requestId = model.requestId;
+            this.vServerGroupId = model.vServerGroupId;
+            this.vServerGroupName = model.vServerGroupName;
+        } 
 
         /**
          * <p>The backend servers.</p>
@@ -205,6 +219,17 @@ public class SetVServerGroupAttributeResponseBody extends TeaModel {
             private String type; 
             private Integer weight; 
 
+            private Builder() {
+            } 
+
+            private Builder(BackendServer model) {
+                this.description = model.description;
+                this.port = model.port;
+                this.serverId = model.serverId;
+                this.type = model.type;
+                this.weight = model.weight;
+            } 
+
             /**
              * <p>The description of the server group.</p>
              * 
@@ -303,6 +328,13 @@ public class SetVServerGroupAttributeResponseBody extends TeaModel {
 
         public static final class Builder {
             private java.util.List<BackendServer> backendServer; 
+
+            private Builder() {
+            } 
+
+            private Builder(BackendServers model) {
+                this.backendServer = model.backendServer;
+            } 
 
             /**
              * BackendServer.

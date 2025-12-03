@@ -157,7 +157,7 @@ public class DescribeLoadBalancersRequest extends Request {
         return builder().build();
     }
 
-    @Override
+@Override
     public Builder toBuilder() {
         return new Builder(this);
     }
@@ -512,8 +512,8 @@ public class DescribeLoadBalancersRequest extends Request {
         /**
          * <p>The network type of the internal-facing CLB instance. Valid values:</p>
          * <ul>
-         * <li><strong>vpc:</strong> VPC.</li>
-         * <li><strong>classic:</strong> classic network.</li>
+         * <li><strong>vpc</strong>: VPC</li>
+         * <li><strong>Classic</strong>: classic network</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -588,7 +588,7 @@ public class DescribeLoadBalancersRequest extends Request {
 
         /**
          * <p>The ID of the region where the CLB instance is deployed.</p>
-         * <p>You can call the <a href="https://help.aliyun.com/document_detail/27584.html">DescribeRegions</a> operation to query the most recent region list.</p>
+         * <p>You can call the <a href="https://help.aliyun.com/document_detail/2401682.html">DescribeRegions</a> operation to query the most recent region list.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -764,6 +764,14 @@ public class DescribeLoadBalancersRequest extends Request {
         public static final class Builder {
             private String key; 
             private String value; 
+
+            private Builder() {
+            } 
+
+            private Builder(Tag model) {
+                this.key = model.key;
+                this.value = model.value;
+            } 
 
             /**
              * <p>The key of the tag. You can specify up to 20 tag keys. The tag key cannot be an empty string.</p>

@@ -40,6 +40,10 @@ public class SetBackendServersResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return backendServers
      */
@@ -65,6 +69,15 @@ public class SetBackendServersResponseBody extends TeaModel {
         private BackendServers backendServers; 
         private String loadBalancerId; 
         private String requestId; 
+
+        private Builder() {
+        } 
+
+        private Builder(SetBackendServersResponseBody model) {
+            this.backendServers = model.backendServers;
+            this.loadBalancerId = model.loadBalancerId;
+            this.requestId = model.requestId;
+        } 
 
         /**
          * <p>The backend servers.</p>
@@ -170,6 +183,16 @@ public class SetBackendServersResponseBody extends TeaModel {
             private String type; 
             private String weight; 
 
+            private Builder() {
+            } 
+
+            private Builder(BackendServer model) {
+                this.description = model.description;
+                this.serverId = model.serverId;
+                this.type = model.type;
+                this.weight = model.weight;
+            } 
+
             /**
              * <p>The description of the backend server.</p>
              * 
@@ -257,6 +280,13 @@ public class SetBackendServersResponseBody extends TeaModel {
 
         public static final class Builder {
             private java.util.List<BackendServer> backendServer; 
+
+            private Builder() {
+            } 
+
+            private Builder(BackendServers model) {
+                this.backendServer = model.backendServer;
+            } 
 
             /**
              * BackendServer.

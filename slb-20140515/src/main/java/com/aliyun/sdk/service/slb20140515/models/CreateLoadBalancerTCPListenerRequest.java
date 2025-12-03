@@ -31,7 +31,7 @@ public class CreateLoadBalancerTCPListenerRequest extends Request {
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("BackendServerPort")
-    @com.aliyun.core.annotation.Validation(maximum = 65535, minimum = 1)
+    @com.aliyun.core.annotation.Validation(maximum = 65535)
     private Integer backendServerPort;
 
     @com.aliyun.core.annotation.Query
@@ -200,7 +200,7 @@ public class CreateLoadBalancerTCPListenerRequest extends Request {
         return builder().build();
     }
 
-    @Override
+@Override
     public Builder toBuilder() {
         return new Builder(this);
     }
@@ -510,7 +510,7 @@ public class CreateLoadBalancerTCPListenerRequest extends Request {
          * </blockquote>
          * 
          * <strong>example:</strong>
-         * <p>1323</p>
+         * <p>acl-uf60jwfiv6******</p>
          */
         public Builder aclId(String aclId) {
             this.putQueryParameter("AclId", aclId);
@@ -635,7 +635,7 @@ public class CreateLoadBalancerTCPListenerRequest extends Request {
         }
 
         /**
-         * <p>The timeout period of a connection. Unit: seconds.</p>
+         * <p>The timeout period of a connection. Unit: seconds</p>
          * <p>Valid values: <strong>10</strong> to <strong>900</strong>.</p>
          * 
          * <strong>example:</strong>
@@ -662,9 +662,9 @@ public class CreateLoadBalancerTCPListenerRequest extends Request {
         }
 
         /**
-         * <p>The maximum timeout period of a health check response. Unit: seconds.</p>
-         * <p>Valid values: <strong>1</strong> to <strong>300</strong>.</p>
-         * <p>Default value: <strong>5</strong>.</p>
+         * <p>The maximum timeout period of a health check response. Unit: seconds</p>
+         * <p>Valid values: <strong>1</strong> to <strong>300</strong></p>
+         * <p>Default value: <strong>5</strong></p>
          * 
          * <strong>example:</strong>
          * <p>100</p>
@@ -756,7 +756,7 @@ public class CreateLoadBalancerTCPListenerRequest extends Request {
 
         /**
          * <p>The number of times that an unhealthy backend server must consecutively pass health checks before it is declared healthy. In this case, the health status is changed from <strong>fail</strong> to <strong>success</strong>.</p>
-         * <p>Valid values: <strong>2</strong> to <strong>10</strong>.</p>
+         * <p>Valid values: <strong>2</strong> to <strong>10</strong></p>
          * 
          * <strong>example:</strong>
          * <p>4</p>
@@ -828,8 +828,8 @@ public class CreateLoadBalancerTCPListenerRequest extends Request {
         }
 
         /**
-         * <p>The timeout period of session persistence. Unit: seconds.</p>
-         * <p>Valid values: <strong>0 to 3600</strong>.</p>
+         * <p>The timeout period of session persistence. Unit: seconds</p>
+         * <p>Valid values: <strong>0 to 3600</strong></p>
          * <p>Default value: <strong>0</strong>. If the default value is used, the system disables session persistence.</p>
          * 
          * <strong>example:</strong>
@@ -859,7 +859,7 @@ public class CreateLoadBalancerTCPListenerRequest extends Request {
 
         /**
          * <p>The ID of the region where the Classic Load Balancer (CLB) instance is deployed.</p>
-         * <p>You can query the region ID from the <a href="https://help.aliyun.com/document_detail/40654.html">Regions and zones</a> list or by calling the <a href="https://help.aliyun.com/document_detail/25609.html">DescribeRegions</a> operation.</p>
+         * <p>For the most recent region list, refer to <a href="https://help.aliyun.com/document_detail/40654.html">Regions and zones</a> or call the <a href="https://help.aliyun.com/document_detail/2401682.html">DescribeRegions</a> operation the retrieve the information.</p>
          * 
          * <strong>example:</strong>
          * <p>cn-hangzhou</p>
@@ -889,9 +889,9 @@ public class CreateLoadBalancerTCPListenerRequest extends Request {
         }
 
         /**
-         * <p>The routing algorithm. Valid values:</p>
+         * <p>The scheduling algorithm. Valid values:</p>
          * <ul>
-         * <li><strong>wrr</strong> (default): Backend servers with higher weights receive more requests than backend servers with lower weights.</li>
+         * <li><strong>wrr</strong> (default): Backend servers with higher weights receive more requests than those with lower weights.</li>
          * <li><strong>rr</strong>: Requests are distributed to backend servers in sequence.</li>
          * <li><strong>sch</strong>: specifies consistent hashing that is based on source IP addresses. Requests from the same source IP address are distributed to the same backend server.</li>
          * <li><strong>tch</strong>: specifies consistent hashing that is based on four factors: source IP address, destination IP address, source port, and destination port. Requests that contain the same information based on the four factors are distributed to the same backend server.</li>
@@ -920,7 +920,7 @@ public class CreateLoadBalancerTCPListenerRequest extends Request {
 
         /**
          * <p>The number of times that a healthy backend server must consecutively fail health checks before it is declared unhealthy. In this case, the health status is changed from <strong>success</strong> to <strong>fail</strong>.</p>
-         * <p>Valid values: <strong>2</strong> to <strong>10</strong>.</p>
+         * <p>Valid values: <strong>2</strong> to <strong>10</strong></p>
          * 
          * <strong>example:</strong>
          * <p>4</p>
@@ -1006,6 +1006,14 @@ public class CreateLoadBalancerTCPListenerRequest extends Request {
         public static final class Builder {
             private String key; 
             private String value; 
+
+            private Builder() {
+            } 
+
+            private Builder(Tag model) {
+                this.key = model.key;
+                this.value = model.value;
+            } 
 
             /**
              * <p>The key of the tag. You can specify up to 20 tag keys. The tag key cannot be an empty string.</p>

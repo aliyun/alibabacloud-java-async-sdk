@@ -36,6 +36,10 @@ public class DescribeDomainExtensionsResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return domainExtensions
      */
@@ -54,8 +58,16 @@ public class DescribeDomainExtensionsResponseBody extends TeaModel {
         private DomainExtensions domainExtensions; 
         private String requestId; 
 
+        private Builder() {
+        } 
+
+        private Builder(DescribeDomainExtensionsResponseBody model) {
+            this.domainExtensions = model.domainExtensions;
+            this.requestId = model.requestId;
+        } 
+
         /**
-         * <p>The list of additional certificates.</p>
+         * <p>A list of additional certificates.</p>
          */
         public Builder domainExtensions(DomainExtensions domainExtensions) {
             this.domainExtensions = domainExtensions;
@@ -63,7 +75,7 @@ public class DescribeDomainExtensionsResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The ID of the request.</p>
+         * <p>The request ID.</p>
          * 
          * <strong>example:</strong>
          * <p>48C1B671-C6DB-4DDE-9B30-10557E36CDE0</p>
@@ -135,6 +147,15 @@ public class DescribeDomainExtensionsResponseBody extends TeaModel {
             private String domainExtensionId; 
             private String serverCertificateId; 
 
+            private Builder() {
+            } 
+
+            private Builder(DomainExtension model) {
+                this.domain = model.domain;
+                this.domainExtensionId = model.domainExtensionId;
+                this.serverCertificateId = model.serverCertificateId;
+            } 
+
             /**
              * <p>The domain name.</p>
              * 
@@ -158,7 +179,7 @@ public class DescribeDomainExtensionsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The ID of the server certificate that is used by the domain name.</p>
+             * <p>The ID of the certificate used by the domain name.</p>
              * 
              * <strong>example:</strong>
              * <p>1231579085529123_166f8204689_1714763408_70998****</p>
@@ -206,6 +227,13 @@ public class DescribeDomainExtensionsResponseBody extends TeaModel {
 
         public static final class Builder {
             private java.util.List<DomainExtension> domainExtension; 
+
+            private Builder() {
+            } 
+
+            private Builder(DomainExtensions model) {
+                this.domainExtension = model.domainExtension;
+            } 
 
             /**
              * DomainExtension.

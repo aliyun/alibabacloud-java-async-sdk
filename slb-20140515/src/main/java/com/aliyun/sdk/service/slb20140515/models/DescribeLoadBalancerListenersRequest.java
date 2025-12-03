@@ -91,7 +91,7 @@ public class DescribeLoadBalancerListenersRequest extends Request {
         return builder().build();
     }
 
-    @Override
+@Override
     public Builder toBuilder() {
         return new Builder(this);
     }
@@ -257,7 +257,10 @@ public class DescribeLoadBalancerListenersRequest extends Request {
         }
 
         /**
-         * <p>The ID of the CLB instance. You can specify at most 10 IDs.</p>
+         * <p>The IDs of the CLB instances. You can specify up to 10 instance IDs.</p>
+         * <blockquote>
+         * <p> If you do not use the SDK to call this operation, use the LoadBalancerId.N parameter.</p>
+         * </blockquote>
          * 
          * <strong>example:</strong>
          * <p>lb-123wrwer</p>
@@ -269,7 +272,7 @@ public class DescribeLoadBalancerListenersRequest extends Request {
         }
 
         /**
-         * <p>The number of entries per page.</p>
+         * <p>The number of entries to return in each call.</p>
          * <p>Valid values: <strong>1</strong> to <strong>100</strong>. If you do not specify this parameter, the default value <strong>20</strong> is used.</p>
          * 
          * <strong>example:</strong>
@@ -408,6 +411,14 @@ public class DescribeLoadBalancerListenersRequest extends Request {
         public static final class Builder {
             private String key; 
             private String value; 
+
+            private Builder() {
+            } 
+
+            private Builder(Tag model) {
+                this.key = model.key;
+                this.value = model.value;
+            } 
 
             /**
              * <p>The key of the tag. You can specify up to 20 tag keys. The tag key cannot be an empty string.</p>

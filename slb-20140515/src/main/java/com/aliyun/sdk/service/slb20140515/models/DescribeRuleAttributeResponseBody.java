@@ -120,6 +120,10 @@ public class DescribeRuleAttributeResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return cookie
      */
@@ -306,6 +310,35 @@ public class DescribeRuleAttributeResponseBody extends TeaModel {
         private String url; 
         private String vServerGroupId; 
 
+        private Builder() {
+        } 
+
+        private Builder(DescribeRuleAttributeResponseBody model) {
+            this.cookie = model.cookie;
+            this.cookieTimeout = model.cookieTimeout;
+            this.domain = model.domain;
+            this.healthCheck = model.healthCheck;
+            this.healthCheckConnectPort = model.healthCheckConnectPort;
+            this.healthCheckDomain = model.healthCheckDomain;
+            this.healthCheckHttpCode = model.healthCheckHttpCode;
+            this.healthCheckInterval = model.healthCheckInterval;
+            this.healthCheckTimeout = model.healthCheckTimeout;
+            this.healthCheckURI = model.healthCheckURI;
+            this.healthyThreshold = model.healthyThreshold;
+            this.listenerPort = model.listenerPort;
+            this.listenerSync = model.listenerSync;
+            this.loadBalancerId = model.loadBalancerId;
+            this.requestId = model.requestId;
+            this.ruleId = model.ruleId;
+            this.ruleName = model.ruleName;
+            this.scheduler = model.scheduler;
+            this.stickySession = model.stickySession;
+            this.stickySessionType = model.stickySessionType;
+            this.unhealthyThreshold = model.unhealthyThreshold;
+            this.url = model.url;
+            this.vServerGroupId = model.vServerGroupId;
+        } 
+
         /**
          * <p>The cookie to be configured on the backend server.</p>
          * <p>The cookie must be 1 to 200 characters in length and can contain ASCII letters and digits. It cannot contain commas (,), semicolons (;), or whitespace characters. It cannot start with a dollar sign ($).</p>
@@ -338,7 +371,7 @@ public class DescribeRuleAttributeResponseBody extends TeaModel {
          * <p>The domain name that is configured in the forwarding rule.</p>
          * 
          * <strong>example:</strong>
-         * <p>test.com</p>
+         * <p><a href="http://www.example.com">www.example.com</a></p>
          */
         public Builder domain(String domain) {
             this.domain = domain;
@@ -445,7 +478,7 @@ public class DescribeRuleAttributeResponseBody extends TeaModel {
          * </blockquote>
          * 
          * <strong>example:</strong>
-         * <p>10.21.22.1</p>
+         * <p>/rest</p>
          */
         public Builder healthCheckURI(String healthCheckURI) {
             this.healthCheckURI = healthCheckURI;

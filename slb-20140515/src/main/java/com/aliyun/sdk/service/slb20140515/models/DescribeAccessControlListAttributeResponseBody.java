@@ -68,6 +68,10 @@ public class DescribeAccessControlListAttributeResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return aclEntrys
      */
@@ -149,6 +153,22 @@ public class DescribeAccessControlListAttributeResponseBody extends TeaModel {
         private String resourceGroupId; 
         private Tags tags; 
         private Integer totalAclEntry; 
+
+        private Builder() {
+        } 
+
+        private Builder(DescribeAccessControlListAttributeResponseBody model) {
+            this.aclEntrys = model.aclEntrys;
+            this.aclId = model.aclId;
+            this.aclName = model.aclName;
+            this.addressIPVersion = model.addressIPVersion;
+            this.createTime = model.createTime;
+            this.relatedListeners = model.relatedListeners;
+            this.requestId = model.requestId;
+            this.resourceGroupId = model.resourceGroupId;
+            this.tags = model.tags;
+            this.totalAclEntry = model.totalAclEntry;
+        } 
 
         /**
          * <p>The information about the access control policy.</p>
@@ -301,6 +321,14 @@ public class DescribeAccessControlListAttributeResponseBody extends TeaModel {
             private String aclEntryComment; 
             private String aclEntryIP; 
 
+            private Builder() {
+            } 
+
+            private Builder(AclEntry model) {
+                this.aclEntryComment = model.aclEntryComment;
+                this.aclEntryIP = model.aclEntryIP;
+            } 
+
             /**
              * <p>The remarks of the ACL entry.</p>
              * 
@@ -361,6 +389,13 @@ public class DescribeAccessControlListAttributeResponseBody extends TeaModel {
 
         public static final class Builder {
             private java.util.List<AclEntry> aclEntry; 
+
+            private Builder() {
+            } 
+
+            private Builder(AclEntrys model) {
+                this.aclEntry = model.aclEntry;
+            } 
 
             /**
              * AclEntry.
@@ -444,6 +479,16 @@ public class DescribeAccessControlListAttributeResponseBody extends TeaModel {
             private Integer listenerPort; 
             private String loadBalancerId; 
             private String protocol; 
+
+            private Builder() {
+            } 
+
+            private Builder(RelatedListener model) {
+                this.aclType = model.aclType;
+                this.listenerPort = model.listenerPort;
+                this.loadBalancerId = model.loadBalancerId;
+                this.protocol = model.protocol;
+            } 
 
             /**
              * <p>The type of ACL. Valid values:</p>
@@ -532,6 +577,13 @@ public class DescribeAccessControlListAttributeResponseBody extends TeaModel {
         public static final class Builder {
             private java.util.List<RelatedListener> relatedListener; 
 
+            private Builder() {
+            } 
+
+            private Builder(RelatedListeners model) {
+                this.relatedListener = model.relatedListener;
+            } 
+
             /**
              * RelatedListener.
              */
@@ -590,6 +642,14 @@ public class DescribeAccessControlListAttributeResponseBody extends TeaModel {
         public static final class Builder {
             private String tagKey; 
             private String tagValue; 
+
+            private Builder() {
+            } 
+
+            private Builder(Tag model) {
+                this.tagKey = model.tagKey;
+                this.tagValue = model.tagValue;
+            } 
 
             /**
              * <p>The tag key.</p>
@@ -651,6 +711,13 @@ public class DescribeAccessControlListAttributeResponseBody extends TeaModel {
 
         public static final class Builder {
             private java.util.List<Tag> tag; 
+
+            private Builder() {
+            } 
+
+            private Builder(Tags model) {
+                this.tag = model.tag;
+            } 
 
             /**
              * Tag.

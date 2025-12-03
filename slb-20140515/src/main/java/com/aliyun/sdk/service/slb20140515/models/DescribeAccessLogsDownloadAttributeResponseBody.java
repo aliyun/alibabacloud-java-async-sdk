@@ -48,6 +48,10 @@ public class DescribeAccessLogsDownloadAttributeResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return logsDownloadAttributes
      */
@@ -89,6 +93,17 @@ public class DescribeAccessLogsDownloadAttributeResponseBody extends TeaModel {
         private Integer pageSize; 
         private String requestId; 
         private Integer totalCount; 
+
+        private Builder() {
+        } 
+
+        private Builder(DescribeAccessLogsDownloadAttributeResponseBody model) {
+            this.logsDownloadAttributes = model.logsDownloadAttributes;
+            this.pageNumber = model.pageNumber;
+            this.pageSize = model.pageSize;
+            this.requestId = model.requestId;
+            this.totalCount = model.totalCount;
+        } 
 
         /**
          * <p>The configuration of the access log.</p>
@@ -228,6 +243,17 @@ public class DescribeAccessLogsDownloadAttributeResponseBody extends TeaModel {
             private String logType; 
             private String region; 
 
+            private Builder() {
+            } 
+
+            private Builder(LogsDownloadAttribute model) {
+                this.loadBalancerId = model.loadBalancerId;
+                this.logProject = model.logProject;
+                this.logStore = model.logStore;
+                this.logType = model.logType;
+                this.region = model.region;
+            } 
+
             /**
              * <p>The CLB instance ID.</p>
              * 
@@ -321,6 +347,13 @@ public class DescribeAccessLogsDownloadAttributeResponseBody extends TeaModel {
 
         public static final class Builder {
             private java.util.List<LogsDownloadAttribute> logsDownloadAttribute; 
+
+            private Builder() {
+            } 
+
+            private Builder(LogsDownloadAttributes model) {
+                this.logsDownloadAttribute = model.logsDownloadAttribute;
+            } 
 
             /**
              * LogsDownloadAttribute.

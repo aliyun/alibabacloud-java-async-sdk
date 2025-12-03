@@ -68,6 +68,10 @@ public class CreateLoadBalancerResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return address
      */
@@ -150,6 +154,22 @@ public class CreateLoadBalancerResponseBody extends TeaModel {
         private String vSwitchId; 
         private String vpcId; 
 
+        private Builder() {
+        } 
+
+        private Builder(CreateLoadBalancerResponseBody model) {
+            this.address = model.address;
+            this.addressIPVersion = model.addressIPVersion;
+            this.loadBalancerId = model.loadBalancerId;
+            this.loadBalancerName = model.loadBalancerName;
+            this.networkType = model.networkType;
+            this.orderId = model.orderId;
+            this.requestId = model.requestId;
+            this.resourceGroupId = model.resourceGroupId;
+            this.vSwitchId = model.vSwitchId;
+            this.vpcId = model.vpcId;
+        } 
+
         /**
          * <p>The IP address that is allocated to the CLB instance.</p>
          * 
@@ -197,8 +217,8 @@ public class CreateLoadBalancerResponseBody extends TeaModel {
         /**
          * <p>The network type of the CLB instance. Valid values:</p>
          * <ul>
-         * <li><strong>vpc</strong></li>
-         * <li><strong>classic</strong></li>
+         * <li><strong>vpc</strong>: VPC</li>
+         * <li><strong>Classic</strong>: classic network</li>
          * </ul>
          * 
          * <strong>example:</strong>

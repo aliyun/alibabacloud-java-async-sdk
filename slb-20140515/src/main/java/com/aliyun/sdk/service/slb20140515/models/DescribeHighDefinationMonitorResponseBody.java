@@ -44,6 +44,10 @@ public class DescribeHighDefinationMonitorResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return logProject
      */
@@ -77,6 +81,16 @@ public class DescribeHighDefinationMonitorResponseBody extends TeaModel {
         private String logStore; 
         private String requestId; 
         private String success; 
+
+        private Builder() {
+        } 
+
+        private Builder(DescribeHighDefinationMonitorResponseBody model) {
+            this.logProject = model.logProject;
+            this.logStore = model.logStore;
+            this.requestId = model.requestId;
+            this.success = model.success;
+        } 
 
         /**
          * <p>The name of the Log Service project.</p>

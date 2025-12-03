@@ -67,7 +67,7 @@ public class SetServerCertificateNameRequest extends Request {
         return builder().build();
     }
 
-    @Override
+@Override
     public Builder toBuilder() {
         return new Builder(this);
     }
@@ -212,7 +212,7 @@ public class SetServerCertificateNameRequest extends Request {
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
-         * <p>abc</p>
+         * <p>mycert01</p>
          */
         public Builder serverCertificateName(String serverCertificateName) {
             this.putQueryParameter("ServerCertificateName", serverCertificateName);

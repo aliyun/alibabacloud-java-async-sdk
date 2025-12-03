@@ -230,7 +230,7 @@ public class SetLoadBalancerHTTPListenerAttributeRequest extends Request {
         return builder().build();
     }
 
-    @Override
+@Override
     public Builder toBuilder() {
         return new Builder(this);
     }
@@ -594,7 +594,7 @@ public class SetLoadBalancerHTTPListenerAttributeRequest extends Request {
          * </blockquote>
          * 
          * <strong>example:</strong>
-         * <p>123</p>
+         * <p>acl-uf60jw******</p>
          */
         public Builder aclId(String aclId) {
             this.putQueryParameter("AclId", aclId);
@@ -664,7 +664,7 @@ public class SetLoadBalancerHTTPListenerAttributeRequest extends Request {
          * </blockquote>
          * 
          * <strong>example:</strong>
-         * <p>B490B5EBF6F3CD402E515D22BCDA****</p>
+         * <p>testCookie</p>
          */
         public Builder cookie(String cookie) {
             this.putQueryParameter("Cookie", cookie);

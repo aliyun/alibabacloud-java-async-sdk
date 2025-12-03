@@ -48,6 +48,10 @@ public class DescribeLoadBalancersResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return loadBalancers
      */
@@ -89,6 +93,17 @@ public class DescribeLoadBalancersResponseBody extends TeaModel {
         private Integer pageSize; 
         private String requestId; 
         private Integer totalCount; 
+
+        private Builder() {
+        } 
+
+        private Builder(DescribeLoadBalancersResponseBody model) {
+            this.loadBalancers = model.loadBalancers;
+            this.pageNumber = model.pageNumber;
+            this.pageSize = model.pageSize;
+            this.requestId = model.requestId;
+            this.totalCount = model.totalCount;
+        } 
 
         /**
          * <p>An array of CLB instances.</p>
@@ -192,6 +207,14 @@ public class DescribeLoadBalancersResponseBody extends TeaModel {
             private String tagKey; 
             private String tagValue; 
 
+            private Builder() {
+            } 
+
+            private Builder(Tag model) {
+                this.tagKey = model.tagKey;
+                this.tagValue = model.tagValue;
+            } 
+
             /**
              * <p>The key of the tag.</p>
              * 
@@ -252,6 +275,13 @@ public class DescribeLoadBalancersResponseBody extends TeaModel {
 
         public static final class Builder {
             private java.util.List<Tag> tag; 
+
+            private Builder() {
+            } 
+
+            private Builder(Tags model) {
+                this.tag = model.tag;
+            } 
 
             /**
              * Tag.
@@ -600,6 +630,38 @@ public class DescribeLoadBalancersResponseBody extends TeaModel {
             private String vSwitchId; 
             private String vpcId; 
 
+            private Builder() {
+            } 
+
+            private Builder(LoadBalancer model) {
+                this.address = model.address;
+                this.addressIPVersion = model.addressIPVersion;
+                this.addressType = model.addressType;
+                this.bandwidth = model.bandwidth;
+                this.createTime = model.createTime;
+                this.createTimeStamp = model.createTimeStamp;
+                this.deleteProtection = model.deleteProtection;
+                this.instanceChargeType = model.instanceChargeType;
+                this.internetChargeType = model.internetChargeType;
+                this.internetChargeTypeAlias = model.internetChargeTypeAlias;
+                this.loadBalancerId = model.loadBalancerId;
+                this.loadBalancerName = model.loadBalancerName;
+                this.loadBalancerSpec = model.loadBalancerSpec;
+                this.loadBalancerStatus = model.loadBalancerStatus;
+                this.masterZoneId = model.masterZoneId;
+                this.modificationProtectionReason = model.modificationProtectionReason;
+                this.modificationProtectionStatus = model.modificationProtectionStatus;
+                this.networkType = model.networkType;
+                this.payType = model.payType;
+                this.regionId = model.regionId;
+                this.regionIdAlias = model.regionIdAlias;
+                this.resourceGroupId = model.resourceGroupId;
+                this.slaveZoneId = model.slaveZoneId;
+                this.tags = model.tags;
+                this.vSwitchId = model.vSwitchId;
+                this.vpcId = model.vpcId;
+            } 
+
             /**
              * <p>The endpoint of the CLB instance.</p>
              * 
@@ -831,8 +893,8 @@ public class DescribeLoadBalancersResponseBody extends TeaModel {
             /**
              * <p>The network type of the internal-facing CLB instance. Valid values:</p>
              * <ul>
-             * <li><strong>vpc:</strong> VPC.</li>
-             * <li><strong>classic:</strong> classic network.</li>
+             * <li><strong>vpc</strong>: VPC</li>
+             * <li><strong>Classic</strong>: classic network</li>
              * </ul>
              * 
              * <strong>example:</strong>
@@ -902,7 +964,7 @@ public class DescribeLoadBalancersResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The tags of the CLB instance.</p>
+             * <p>The tags.</p>
              */
             public Builder tags(Tags tags) {
                 this.tags = tags;
@@ -969,6 +1031,13 @@ public class DescribeLoadBalancersResponseBody extends TeaModel {
 
         public static final class Builder {
             private java.util.List<LoadBalancer> loadBalancer; 
+
+            private Builder() {
+            } 
+
+            private Builder(LoadBalancers model) {
+                this.loadBalancer = model.loadBalancer;
+            } 
 
             /**
              * LoadBalancer.

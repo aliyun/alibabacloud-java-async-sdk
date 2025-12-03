@@ -220,6 +220,10 @@ public class DescribeLoadBalancerHTTPSListenerAttributeResponseBody extends TeaM
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return aclId
      */
@@ -606,6 +610,60 @@ public class DescribeLoadBalancerHTTPSListenerAttributeResponseBody extends TeaM
         private String xForwardedForSLBPORT; 
         private String xForwardedForProto; 
 
+        private Builder() {
+        } 
+
+        private Builder(DescribeLoadBalancerHTTPSListenerAttributeResponseBody model) {
+            this.aclId = model.aclId;
+            this.aclIds = model.aclIds;
+            this.aclStatus = model.aclStatus;
+            this.aclType = model.aclType;
+            this.backendServerPort = model.backendServerPort;
+            this.bandwidth = model.bandwidth;
+            this.CACertificateId = model.CACertificateId;
+            this.cookie = model.cookie;
+            this.cookieTimeout = model.cookieTimeout;
+            this.description = model.description;
+            this.domainExtensions = model.domainExtensions;
+            this.enableHttp2 = model.enableHttp2;
+            this.gzip = model.gzip;
+            this.healthCheck = model.healthCheck;
+            this.healthCheckConnectPort = model.healthCheckConnectPort;
+            this.healthCheckDomain = model.healthCheckDomain;
+            this.healthCheckHttpCode = model.healthCheckHttpCode;
+            this.healthCheckInterval = model.healthCheckInterval;
+            this.healthCheckMethod = model.healthCheckMethod;
+            this.healthCheckTimeout = model.healthCheckTimeout;
+            this.healthCheckURI = model.healthCheckURI;
+            this.healthyThreshold = model.healthyThreshold;
+            this.idleTimeout = model.idleTimeout;
+            this.listenerPort = model.listenerPort;
+            this.loadBalancerId = model.loadBalancerId;
+            this.requestId = model.requestId;
+            this.requestTimeout = model.requestTimeout;
+            this.rules = model.rules;
+            this.scheduler = model.scheduler;
+            this.securityStatus = model.securityStatus;
+            this.serverCertificateId = model.serverCertificateId;
+            this.status = model.status;
+            this.stickySession = model.stickySession;
+            this.stickySessionType = model.stickySessionType;
+            this.TLSCipherPolicy = model.TLSCipherPolicy;
+            this.tags = model.tags;
+            this.unhealthyThreshold = model.unhealthyThreshold;
+            this.vServerGroupId = model.vServerGroupId;
+            this.xForwardedFor = model.xForwardedFor;
+            this.xForwardedForClientCertClientVerify = model.xForwardedForClientCertClientVerify;
+            this.xForwardedForClientCertFingerprint = model.xForwardedForClientCertFingerprint;
+            this.xForwardedForClientCertIssuerDN = model.xForwardedForClientCertIssuerDN;
+            this.xForwardedForClientCertSubjectDN = model.xForwardedForClientCertSubjectDN;
+            this.xForwardedForClientSrcPort = model.xForwardedForClientSrcPort;
+            this.xForwardedForSLBID = model.xForwardedForSLBID;
+            this.xForwardedForSLBIP = model.xForwardedForSLBIP;
+            this.xForwardedForSLBPORT = model.xForwardedForSLBPORT;
+            this.xForwardedForProto = model.xForwardedForProto;
+        } 
+
         /**
          * <p>The ID of the network ACL that is associated with a listener.</p>
          * <blockquote>
@@ -613,7 +671,7 @@ public class DescribeLoadBalancerHTTPSListenerAttributeResponseBody extends TeaM
          * </blockquote>
          * 
          * <strong>example:</strong>
-         * <p>nacl-a2do9e413e0spzasx****</p>
+         * <p>acl-a2do9e413e0spzasx****</p>
          */
         public Builder aclId(String aclId) {
             this.aclId = aclId;
@@ -621,7 +679,7 @@ public class DescribeLoadBalancerHTTPSListenerAttributeResponseBody extends TeaM
         }
 
         /**
-         * AclIds.
+         * <p>The ID of the network access control list (ACL) that is associated with the listener.</p>
          */
         public Builder aclIds(AclIds aclIds) {
             this.aclIds = aclIds;
@@ -680,7 +738,7 @@ public class DescribeLoadBalancerHTTPSListenerAttributeResponseBody extends TeaM
          * <p>The maximum bandwidth of the listener. Unit: Mbit/s.</p>
          * 
          * <strong>example:</strong>
-         * <p>-1</p>
+         * <p>10</p>
          */
         public Builder bandwidth(Integer bandwidth) {
             this.bandwidth = bandwidth;
@@ -702,7 +760,7 @@ public class DescribeLoadBalancerHTTPSListenerAttributeResponseBody extends TeaM
          * <p>The cookie that is configured on the server.</p>
          * 
          * <strong>example:</strong>
-         * <p>B490B5EBF6F3CD402E515D22BCDA1598</p>
+         * <p>testCookie</p>
          */
         public Builder cookie(String cookie) {
             this.cookie = cookie;
@@ -724,7 +782,7 @@ public class DescribeLoadBalancerHTTPSListenerAttributeResponseBody extends TeaM
          * <p>The name of the listener.</p>
          * 
          * <strong>example:</strong>
-         * <p>test</p>
+         * <p>HTTPS_443</p>
          */
         public Builder description(String description) {
             this.description = description;
@@ -1286,6 +1344,13 @@ public class DescribeLoadBalancerHTTPSListenerAttributeResponseBody extends TeaM
         public static final class Builder {
             private java.util.List<String> aclId; 
 
+            private Builder() {
+            } 
+
+            private Builder(AclIds model) {
+                this.aclId = model.aclId;
+            } 
+
             /**
              * <p>The ID of the network ACL that is associated with a listener.</p>
              * <blockquote>
@@ -1293,7 +1358,7 @@ public class DescribeLoadBalancerHTTPSListenerAttributeResponseBody extends TeaM
              * </blockquote>
              * 
              * <strong>example:</strong>
-             * <p>nacl-a2do9e413e0spzasx****</p>
+             * <p>acl-a2do9e413e0spzasx****</p>
              */
             public Builder aclId(java.util.List<String> aclId) {
                 this.aclId = aclId;
@@ -1363,8 +1428,17 @@ public class DescribeLoadBalancerHTTPSListenerAttributeResponseBody extends TeaM
             private String domainExtensionId; 
             private String serverCertificateId; 
 
+            private Builder() {
+            } 
+
+            private Builder(DomainExtension model) {
+                this.domain = model.domain;
+                this.domainExtensionId = model.domainExtensionId;
+                this.serverCertificateId = model.serverCertificateId;
+            } 
+
             /**
-             * <p>The endpoint.</p>
+             * <p>The domain name.</p>
              * 
              * <strong>example:</strong>
              * <p><a href="http://www.example.com">www.example.com</a></p>
@@ -1375,7 +1449,7 @@ public class DescribeLoadBalancerHTTPSListenerAttributeResponseBody extends TeaM
             }
 
             /**
-             * <p>The ID of the additional domain name.</p>
+             * <p>The ID of the additional certificate.</p>
              * 
              * <strong>example:</strong>
              * <p>12</p>
@@ -1386,7 +1460,7 @@ public class DescribeLoadBalancerHTTPSListenerAttributeResponseBody extends TeaM
             }
 
             /**
-             * <p>The ID of the server certificate that is associated with the domain name.</p>
+             * <p>The ID of the certificate used by the domain name.</p>
              * 
              * <strong>example:</strong>
              * <p>13344444****</p>
@@ -1434,6 +1508,13 @@ public class DescribeLoadBalancerHTTPSListenerAttributeResponseBody extends TeaM
 
         public static final class Builder {
             private java.util.List<DomainExtension> domainExtension; 
+
+            private Builder() {
+            } 
+
+            private Builder(DomainExtensions model) {
+                this.domainExtension = model.domainExtension;
+            } 
 
             /**
              * DomainExtension.
@@ -1530,8 +1611,19 @@ public class DescribeLoadBalancerHTTPSListenerAttributeResponseBody extends TeaM
             private String url; 
             private String vServerGroupId; 
 
+            private Builder() {
+            } 
+
+            private Builder(Rule model) {
+                this.domain = model.domain;
+                this.ruleId = model.ruleId;
+                this.ruleName = model.ruleName;
+                this.url = model.url;
+                this.vServerGroupId = model.vServerGroupId;
+            } 
+
             /**
-             * <p>The endpoint.</p>
+             * <p>The domain name.</p>
              * 
              * <strong>example:</strong>
              * <p><a href="http://www.example.com">www.example.com</a></p>
@@ -1564,7 +1656,7 @@ public class DescribeLoadBalancerHTTPSListenerAttributeResponseBody extends TeaM
             }
 
             /**
-             * <p>The request path.</p>
+             * <p>The request URL.</p>
              * 
              * <strong>example:</strong>
              * <p>/example</p>
@@ -1575,10 +1667,10 @@ public class DescribeLoadBalancerHTTPSListenerAttributeResponseBody extends TeaM
             }
 
             /**
-             * <p>The ID of the server group that is associated with the forwarding rule.</p>
+             * <p>The ID of the server group specified in the forwarding rule.</p>
              * 
              * <strong>example:</strong>
-             * <p>12</p>
+             * <p>rsp-cige6j5e********</p>
              */
             public Builder vServerGroupId(String vServerGroupId) {
                 this.vServerGroupId = vServerGroupId;
@@ -1623,6 +1715,13 @@ public class DescribeLoadBalancerHTTPSListenerAttributeResponseBody extends TeaM
 
         public static final class Builder {
             private java.util.List<Rule> rule; 
+
+            private Builder() {
+            } 
+
+            private Builder(Rules model) {
+                this.rule = model.rule;
+            } 
 
             /**
              * Rule.
@@ -1683,8 +1782,16 @@ public class DescribeLoadBalancerHTTPSListenerAttributeResponseBody extends TeaM
             private String tagKey; 
             private String tagValue; 
 
+            private Builder() {
+            } 
+
+            private Builder(Tag model) {
+                this.tagKey = model.tagKey;
+                this.tagValue = model.tagValue;
+            } 
+
             /**
-             * <p>The key of tag N. Valid values of N: <strong>1</strong> to <strong>20</strong>. The tag key cannot be an empty string. The tag key can be up to 64 characters in length, and cannot start with <code>aliyun</code> or <code>acs:</code>. The tag key cannot contain <code>http://</code> or <code>https://</code>.</p>
+             * <p>The key of tag N. Valid values of N: <strong>1</strong> to <strong>20</strong>. The tag value cannot be an empty string. The tag key can be up to 64 characters in length. The key cannot start with <code>acs:</code> or <code>aliyun</code> or contain <code>http://</code> or <code>https://</code>.</p>
              * 
              * <strong>example:</strong>
              * <p>TestKey</p>
@@ -1695,7 +1802,7 @@ public class DescribeLoadBalancerHTTPSListenerAttributeResponseBody extends TeaM
             }
 
             /**
-             * <p>The value of tag N. Valid values of N: <strong>1</strong> to <strong>20</strong>. The tag value can be an empty string. The tag value can be up to 128 characters in length, and cannot start with <code>acs:</code>. The tag value cannot contain <code>http://</code> or <code>https://</code>.</p>
+             * <p>The value of tag N. Valid values of N: <strong>1</strong> to <strong>20</strong>. The tag value can be an empty string. The tag value can be up to 128 characters in length, and cannot start with <code>acs:</code>. It cannot contain <code>http://</code> or <code>https://</code>.</p>
              * 
              * <strong>example:</strong>
              * <p>TestValue</p>
@@ -1743,6 +1850,13 @@ public class DescribeLoadBalancerHTTPSListenerAttributeResponseBody extends TeaM
 
         public static final class Builder {
             private java.util.List<Tag> tag; 
+
+            private Builder() {
+            } 
+
+            private Builder(Tags model) {
+                this.tag = model.tag;
+            } 
 
             /**
              * Tag.

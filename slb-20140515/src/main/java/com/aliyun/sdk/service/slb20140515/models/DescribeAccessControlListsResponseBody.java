@@ -52,6 +52,10 @@ public class DescribeAccessControlListsResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return acls
      */
@@ -101,6 +105,18 @@ public class DescribeAccessControlListsResponseBody extends TeaModel {
         private Integer pageSize; 
         private String requestId; 
         private Integer totalCount; 
+
+        private Builder() {
+        } 
+
+        private Builder(DescribeAccessControlListsResponseBody model) {
+            this.acls = model.acls;
+            this.count = model.count;
+            this.pageNumber = model.pageNumber;
+            this.pageSize = model.pageSize;
+            this.requestId = model.requestId;
+            this.totalCount = model.totalCount;
+        } 
 
         /**
          * <p>A list of ACLs.</p>
@@ -215,6 +231,14 @@ public class DescribeAccessControlListsResponseBody extends TeaModel {
             private String tagKey; 
             private String tagValue; 
 
+            private Builder() {
+            } 
+
+            private Builder(Tag model) {
+                this.tagKey = model.tagKey;
+                this.tagValue = model.tagValue;
+            } 
+
             /**
              * <p>The tag key.</p>
              * 
@@ -275,6 +299,13 @@ public class DescribeAccessControlListsResponseBody extends TeaModel {
 
         public static final class Builder {
             private java.util.List<Tag> tag; 
+
+            private Builder() {
+            } 
+
+            private Builder(Tags model) {
+                this.tag = model.tag;
+            } 
 
             /**
              * Tag.
@@ -383,6 +414,18 @@ public class DescribeAccessControlListsResponseBody extends TeaModel {
             private String resourceGroupId; 
             private Tags tags; 
 
+            private Builder() {
+            } 
+
+            private Builder(Acl model) {
+                this.aclId = model.aclId;
+                this.aclName = model.aclName;
+                this.addressIPVersion = model.addressIPVersion;
+                this.createTime = model.createTime;
+                this.resourceGroupId = model.resourceGroupId;
+                this.tags = model.tags;
+            } 
+
             /**
              * <p>The ACL ID.</p>
              * 
@@ -484,6 +527,13 @@ public class DescribeAccessControlListsResponseBody extends TeaModel {
 
         public static final class Builder {
             private java.util.List<Acl> acl; 
+
+            private Builder() {
+            } 
+
+            private Builder(Acls model) {
+                this.acl = model.acl;
+            } 
 
             /**
              * Acl.

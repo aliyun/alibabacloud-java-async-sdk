@@ -48,6 +48,10 @@ public class DescribeTagsResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return pageNumber
      */
@@ -89,6 +93,17 @@ public class DescribeTagsResponseBody extends TeaModel {
         private String requestId; 
         private TagSets tagSets; 
         private Integer totalCount; 
+
+        private Builder() {
+        } 
+
+        private Builder(DescribeTagsResponseBody model) {
+            this.pageNumber = model.pageNumber;
+            this.pageSize = model.pageSize;
+            this.requestId = model.requestId;
+            this.tagSets = model.tagSets;
+            this.totalCount = model.totalCount;
+        } 
 
         /**
          * <p>The number of the returned page. Minimum value: 1. Default value: 1.</p>
@@ -204,6 +219,15 @@ public class DescribeTagsResponseBody extends TeaModel {
             private String tagKey; 
             private String tagValue; 
 
+            private Builder() {
+            } 
+
+            private Builder(TagSet model) {
+                this.instanceCount = model.instanceCount;
+                this.tagKey = model.tagKey;
+                this.tagValue = model.tagValue;
+            } 
+
             /**
              * <p>The number of instances to which the tag is added.</p>
              * 
@@ -275,6 +299,13 @@ public class DescribeTagsResponseBody extends TeaModel {
 
         public static final class Builder {
             private java.util.List<TagSet> tagSet; 
+
+            private Builder() {
+            } 
+
+            private Builder(TagSets model) {
+                this.tagSet = model.tagSet;
+            } 
 
             /**
              * TagSet.

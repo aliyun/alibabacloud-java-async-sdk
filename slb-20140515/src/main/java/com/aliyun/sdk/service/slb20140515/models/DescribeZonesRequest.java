@@ -55,7 +55,7 @@ public class DescribeZonesRequest extends Request {
         return builder().build();
     }
 
-    @Override
+@Override
     public Builder toBuilder() {
         return new Builder(this);
     }
@@ -116,10 +116,7 @@ public class DescribeZonesRequest extends Request {
         } 
 
         /**
-         * <p>The logon name of the RAM user.</p>
-         * 
-         * <strong>example:</strong>
-         * <p><a href="mailto:testuser@aliyun.com">testuser@aliyun.com</a></p>
+         * OwnerAccount.
          */
         public Builder ownerAccount(String ownerAccount) {
             this.putQueryParameter("OwnerAccount", ownerAccount);
@@ -128,10 +125,7 @@ public class DescribeZonesRequest extends Request {
         }
 
         /**
-         * <p>The ID of the Alibaba Cloud account to which the VPC belongs.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>1171915672241348</p>
+         * OwnerId.
          */
         public Builder ownerId(Long ownerId) {
             this.putQueryParameter("OwnerId", ownerId);
@@ -153,10 +147,7 @@ public class DescribeZonesRequest extends Request {
         }
 
         /**
-         * <p>ResourceOwnerAccount</p>
-         * 
-         * <strong>example:</strong>
-         * <p><a href="mailto:cmdb@5397832129092425.onaliyun.com">cmdb@5397832129092425.onaliyun.com</a></p>
+         * ResourceOwnerAccount.
          */
         public Builder resourceOwnerAccount(String resourceOwnerAccount) {
             this.putQueryParameter("ResourceOwnerAccount", resourceOwnerAccount);
@@ -165,10 +156,7 @@ public class DescribeZonesRequest extends Request {
         }
 
         /**
-         * <p>The ID of the asset owner.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>1592622395492712</p>
+         * ResourceOwnerId.
          */
         public Builder resourceOwnerId(Long resourceOwnerId) {
             this.putQueryParameter("ResourceOwnerId", resourceOwnerId);

@@ -56,6 +56,10 @@ public class DescribeVServerGroupAttributeResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return backendServers
      */
@@ -113,6 +117,19 @@ public class DescribeVServerGroupAttributeResponseBody extends TeaModel {
         private Tags tags; 
         private String vServerGroupId; 
         private String vServerGroupName; 
+
+        private Builder() {
+        } 
+
+        private Builder(DescribeVServerGroupAttributeResponseBody model) {
+            this.backendServers = model.backendServers;
+            this.createTime = model.createTime;
+            this.loadBalancerId = model.loadBalancerId;
+            this.requestId = model.requestId;
+            this.tags = model.tags;
+            this.vServerGroupId = model.vServerGroupId;
+            this.vServerGroupName = model.vServerGroupName;
+        } 
 
         /**
          * <p>The backend servers.</p>
@@ -283,6 +300,18 @@ public class DescribeVServerGroupAttributeResponseBody extends TeaModel {
             private String type; 
             private Integer weight; 
 
+            private Builder() {
+            } 
+
+            private Builder(BackendServer model) {
+                this.description = model.description;
+                this.port = model.port;
+                this.serverId = model.serverId;
+                this.serverIp = model.serverIp;
+                this.type = model.type;
+                this.weight = model.weight;
+            } 
+
             /**
              * <p>The description of the server group.</p>
              * <blockquote>
@@ -396,6 +425,13 @@ public class DescribeVServerGroupAttributeResponseBody extends TeaModel {
         public static final class Builder {
             private java.util.List<BackendServer> backendServer; 
 
+            private Builder() {
+            } 
+
+            private Builder(BackendServers model) {
+                this.backendServer = model.backendServer;
+            } 
+
             /**
              * BackendServer.
              */
@@ -454,6 +490,14 @@ public class DescribeVServerGroupAttributeResponseBody extends TeaModel {
         public static final class Builder {
             private String tagKey; 
             private String tagValue; 
+
+            private Builder() {
+            } 
+
+            private Builder(Tag model) {
+                this.tagKey = model.tagKey;
+                this.tagValue = model.tagValue;
+            } 
 
             /**
              * <p>The tag key. Valid values of N: <strong>1</strong> to <strong>20</strong>. The tag key cannot be an empty string.</p>
@@ -517,6 +561,13 @@ public class DescribeVServerGroupAttributeResponseBody extends TeaModel {
 
         public static final class Builder {
             private java.util.List<Tag> tag; 
+
+            private Builder() {
+            } 
+
+            private Builder(Tags model) {
+                this.tag = model.tag;
+            } 
 
             /**
              * Tag.

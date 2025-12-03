@@ -40,6 +40,10 @@ public class DescribeListenerAccessControlAttributeResponseBody extends TeaModel
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return accessControlStatus
      */
@@ -65,6 +69,15 @@ public class DescribeListenerAccessControlAttributeResponseBody extends TeaModel
         private String accessControlStatus; 
         private String requestId; 
         private String sourceItems; 
+
+        private Builder() {
+        } 
+
+        private Builder(DescribeListenerAccessControlAttributeResponseBody model) {
+            this.accessControlStatus = model.accessControlStatus;
+            this.requestId = model.requestId;
+            this.sourceItems = model.sourceItems;
+        } 
 
         /**
          * <p>Indicates whether the whitelist is enabled. Valid values:</p>

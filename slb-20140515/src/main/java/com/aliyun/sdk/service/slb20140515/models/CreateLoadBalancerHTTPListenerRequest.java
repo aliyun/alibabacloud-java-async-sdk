@@ -248,7 +248,7 @@ public class CreateLoadBalancerHTTPListenerRequest extends Request {
         return builder().build();
     }
 
-    @Override
+@Override
     public Builder toBuilder() {
         return new Builder(this);
     }
@@ -639,7 +639,7 @@ public class CreateLoadBalancerHTTPListenerRequest extends Request {
          * </blockquote>
          * 
          * <strong>example:</strong>
-         * <p>123</p>
+         * <p>acl-uf60jw******</p>
          */
         public Builder aclId(String aclId) {
             this.putQueryParameter("AclId", aclId);
@@ -723,7 +723,7 @@ public class CreateLoadBalancerHTTPListenerRequest extends Request {
          * </blockquote>
          * 
          * <strong>example:</strong>
-         * <p>B490B5EBF6F3CD402E515D22BCDA1598</p>
+         * <p>testCookie</p>
          */
         public Builder cookie(String cookie) {
             this.putQueryParameter("Cookie", cookie);
@@ -1058,7 +1058,7 @@ public class CreateLoadBalancerHTTPListenerRequest extends Request {
         /**
          * <p>The scheduling algorithm. Valid values:</p>
          * <ul>
-         * <li><strong>wrr</strong> (default): Backend servers with higher weights receive more requests than backend servers with lower weights.</li>
+         * <li><strong>wrr</strong> (default): Backend servers with higher weights receive more requests than those with lower weights.</li>
          * <li><strong>rr</strong>: Requests are distributed to backend servers in sequence.</li>
          * </ul>
          * 
@@ -1074,8 +1074,8 @@ public class CreateLoadBalancerHTTPListenerRequest extends Request {
         /**
          * <p>Specifies whether to enable session persistence. Valid values:</p>
          * <ul>
-         * <li><strong>on</strong>: yes</li>
-         * <li><strong>off</strong> (default): no</li>
+         * <li><strong>on</strong></li>
+         * <li><strong>off</strong> (default)</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -1180,10 +1180,10 @@ public class CreateLoadBalancerHTTPListenerRequest extends Request {
         }
 
         /**
-         * <p>Indicates whether the <code>SLB-ID</code> header is used to retrieve the ID of the CLB instance. Valid values:</p>
+         * <p>Specifies whether to use the <code>SLB-ID</code> header to retrieve the ID of the CLB instance. Valid values:</p>
          * <ul>
          * <li><strong>on</strong></li>
-         * <li><strong>off</strong> (default): no</li>
+         * <li><strong>off</strong> (default)</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -1196,10 +1196,10 @@ public class CreateLoadBalancerHTTPListenerRequest extends Request {
         }
 
         /**
-         * <p>Indicates whether the <code>SLB-IP</code> header is used to retrieve the virtual IP address (VIP) requested by the client. Valid values:</p>
+         * <p>Specifies whether to use the <code>SLB-IP</code> header to retrieve the virtual IP address of the client. Valid values:</p>
          * <ul>
          * <li><strong>on</strong></li>
-         * <li><strong>off</strong> (default): no</li>
+         * <li><strong>off</strong> (default)</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -1231,7 +1231,7 @@ public class CreateLoadBalancerHTTPListenerRequest extends Request {
          * <p>Specifies whether to use the <code>X-Forwarded-Proto</code> header to retrieve the listener protocol. Valid values:</p>
          * <ul>
          * <li><strong>on</strong></li>
-         * <li><strong>off</strong> (default): no</li>
+         * <li><strong>off</strong> (default)</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -1293,6 +1293,14 @@ public class CreateLoadBalancerHTTPListenerRequest extends Request {
         public static final class Builder {
             private String key; 
             private String value; 
+
+            private Builder() {
+            } 
+
+            private Builder(Tag model) {
+                this.key = model.key;
+                this.value = model.value;
+            } 
 
             /**
              * <p>The tag key of the bastion host. Valid values of N: <strong>1 to 20</strong>. The tag key cannot be an empty string.</p>

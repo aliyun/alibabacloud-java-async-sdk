@@ -156,6 +156,10 @@ public class DescribeLoadBalancerTCPListenerAttributeResponseBody extends TeaMod
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return aclId
      */
@@ -414,6 +418,44 @@ public class DescribeLoadBalancerTCPListenerAttributeResponseBody extends TeaMod
         private Integer unhealthyThreshold; 
         private String vServerGroupId; 
 
+        private Builder() {
+        } 
+
+        private Builder(DescribeLoadBalancerTCPListenerAttributeResponseBody model) {
+            this.aclId = model.aclId;
+            this.aclIds = model.aclIds;
+            this.aclStatus = model.aclStatus;
+            this.aclType = model.aclType;
+            this.backendServerPort = model.backendServerPort;
+            this.bandwidth = model.bandwidth;
+            this.connectionDrain = model.connectionDrain;
+            this.connectionDrainTimeout = model.connectionDrainTimeout;
+            this.description = model.description;
+            this.establishedTimeout = model.establishedTimeout;
+            this.healthCheck = model.healthCheck;
+            this.healthCheckConnectPort = model.healthCheckConnectPort;
+            this.healthCheckConnectTimeout = model.healthCheckConnectTimeout;
+            this.healthCheckDomain = model.healthCheckDomain;
+            this.healthCheckHttpCode = model.healthCheckHttpCode;
+            this.healthCheckInterval = model.healthCheckInterval;
+            this.healthCheckMethod = model.healthCheckMethod;
+            this.healthCheckType = model.healthCheckType;
+            this.healthCheckURI = model.healthCheckURI;
+            this.healthyThreshold = model.healthyThreshold;
+            this.listenerPort = model.listenerPort;
+            this.loadBalancerId = model.loadBalancerId;
+            this.masterSlaveServerGroupId = model.masterSlaveServerGroupId;
+            this.persistenceTimeout = model.persistenceTimeout;
+            this.proxyProtocolV2Enabled = model.proxyProtocolV2Enabled;
+            this.requestId = model.requestId;
+            this.scheduler = model.scheduler;
+            this.status = model.status;
+            this.synProxy = model.synProxy;
+            this.tags = model.tags;
+            this.unhealthyThreshold = model.unhealthyThreshold;
+            this.vServerGroupId = model.vServerGroupId;
+        } 
+
         /**
          * <p>The ID of the network ACL that is associated with the listener.</p>
          * <p>If <strong>AclStatus</strong> is set to <strong>on</strong>, this parameter is returned.</p>
@@ -532,7 +574,7 @@ public class DescribeLoadBalancerTCPListenerAttributeResponseBody extends TeaMod
          * <p>The description of the listener.</p>
          * 
          * <strong>example:</strong>
-         * <p>TCP listener</p>
+         * <p>TCP_80</p>
          */
         public Builder description(String description) {
             this.description = description;
@@ -784,7 +826,7 @@ public class DescribeLoadBalancerTCPListenerAttributeResponseBody extends TeaMod
          * </ul>
          * 
          * <strong>example:</strong>
-         * <p>enable</p>
+         * <p>disable</p>
          */
         public Builder synProxy(String synProxy) {
             this.synProxy = synProxy;
@@ -859,6 +901,13 @@ public class DescribeLoadBalancerTCPListenerAttributeResponseBody extends TeaMod
         public static final class Builder {
             private java.util.List<String> aclId; 
 
+            private Builder() {
+            } 
+
+            private Builder(AclIds model) {
+                this.aclId = model.aclId;
+            } 
+
             /**
              * <p>The ID of the network ACL that is associated with the listener.</p>
              * <p>If <strong>AclStatus</strong> is set to <strong>on</strong>, this parameter is returned.</p>
@@ -922,6 +971,14 @@ public class DescribeLoadBalancerTCPListenerAttributeResponseBody extends TeaMod
             private String tagKey; 
             private String tagValue; 
 
+            private Builder() {
+            } 
+
+            private Builder(Tag model) {
+                this.tagKey = model.tagKey;
+                this.tagValue = model.tagValue;
+            } 
+
             /**
              * <p>The key of tag N. Valid values of N: <strong>1</strong> to <strong>20</strong>. The tag value cannot be an empty string. The tag key can be up to 128 characters in length, and cannot contain <code>http://</code> or <code>https://</code>. It cannot start with <code>acs:</code> or <code>aliyun</code>.</p>
              * 
@@ -982,6 +1039,13 @@ public class DescribeLoadBalancerTCPListenerAttributeResponseBody extends TeaMod
 
         public static final class Builder {
             private java.util.List<Tag> tag; 
+
+            private Builder() {
+            } 
+
+            private Builder(Tags model) {
+                this.tag = model.tag;
+            } 
 
             /**
              * Tag.
