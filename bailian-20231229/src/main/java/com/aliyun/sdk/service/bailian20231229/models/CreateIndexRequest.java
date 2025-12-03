@@ -117,6 +117,19 @@ public class CreateIndexRequest extends Request {
     @com.aliyun.core.annotation.NameInMap("metaExtractColumns")
     private java.util.List<MetaExtractColumns> metaExtractColumns;
 
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("pipelineCommercialCu")
+    @com.aliyun.core.annotation.Validation(maximum = 200, minimum = 1)
+    private Integer pipelineCommercialCu;
+
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("pipelineCommercialType")
+    private String pipelineCommercialType;
+
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("pipelineRetrieveRateLimitStrategy")
+    private String pipelineRetrieveRateLimitStrategy;
+
     private CreateIndexRequest(Builder builder) {
         super(builder);
         this.workspaceId = builder.workspaceId;
@@ -143,6 +156,9 @@ public class CreateIndexRequest extends Request {
         this.chunkMode = builder.chunkMode;
         this.enableHeaders = builder.enableHeaders;
         this.metaExtractColumns = builder.metaExtractColumns;
+        this.pipelineCommercialCu = builder.pipelineCommercialCu;
+        this.pipelineCommercialType = builder.pipelineCommercialType;
+        this.pipelineRetrieveRateLimitStrategy = builder.pipelineRetrieveRateLimitStrategy;
     }
 
     public static Builder builder() {
@@ -326,6 +342,27 @@ public class CreateIndexRequest extends Request {
         return this.metaExtractColumns;
     }
 
+    /**
+     * @return pipelineCommercialCu
+     */
+    public Integer getPipelineCommercialCu() {
+        return this.pipelineCommercialCu;
+    }
+
+    /**
+     * @return pipelineCommercialType
+     */
+    public String getPipelineCommercialType() {
+        return this.pipelineCommercialType;
+    }
+
+    /**
+     * @return pipelineRetrieveRateLimitStrategy
+     */
+    public String getPipelineRetrieveRateLimitStrategy() {
+        return this.pipelineRetrieveRateLimitStrategy;
+    }
+
     public static final class Builder extends Request.Builder<CreateIndexRequest, Builder> {
         private String workspaceId; 
         private java.util.List<String> categoryIds; 
@@ -351,6 +388,9 @@ public class CreateIndexRequest extends Request {
         private String chunkMode; 
         private Boolean enableHeaders; 
         private java.util.List<MetaExtractColumns> metaExtractColumns; 
+        private Integer pipelineCommercialCu; 
+        private String pipelineCommercialType; 
+        private String pipelineRetrieveRateLimitStrategy; 
 
         private Builder() {
             super();
@@ -382,6 +422,9 @@ public class CreateIndexRequest extends Request {
             this.chunkMode = request.chunkMode;
             this.enableHeaders = request.enableHeaders;
             this.metaExtractColumns = request.metaExtractColumns;
+            this.pipelineCommercialCu = request.pipelineCommercialCu;
+            this.pipelineCommercialType = request.pipelineCommercialType;
+            this.pipelineRetrieveRateLimitStrategy = request.pipelineRetrieveRateLimitStrategy;
         } 
 
         /**
@@ -723,6 +766,33 @@ public class CreateIndexRequest extends Request {
             String metaExtractColumnsShrink = shrink(metaExtractColumns, "metaExtractColumns", "json");
             this.putQueryParameter("metaExtractColumns", metaExtractColumnsShrink);
             this.metaExtractColumns = metaExtractColumns;
+            return this;
+        }
+
+        /**
+         * pipelineCommercialCu.
+         */
+        public Builder pipelineCommercialCu(Integer pipelineCommercialCu) {
+            this.putQueryParameter("pipelineCommercialCu", pipelineCommercialCu);
+            this.pipelineCommercialCu = pipelineCommercialCu;
+            return this;
+        }
+
+        /**
+         * pipelineCommercialType.
+         */
+        public Builder pipelineCommercialType(String pipelineCommercialType) {
+            this.putQueryParameter("pipelineCommercialType", pipelineCommercialType);
+            this.pipelineCommercialType = pipelineCommercialType;
+            return this;
+        }
+
+        /**
+         * pipelineRetrieveRateLimitStrategy.
+         */
+        public Builder pipelineRetrieveRateLimitStrategy(String pipelineRetrieveRateLimitStrategy) {
+            this.putQueryParameter("pipelineRetrieveRateLimitStrategy", pipelineRetrieveRateLimitStrategy);
+            this.pipelineRetrieveRateLimitStrategy = pipelineRetrieveRateLimitStrategy;
             return this;
         }
 
