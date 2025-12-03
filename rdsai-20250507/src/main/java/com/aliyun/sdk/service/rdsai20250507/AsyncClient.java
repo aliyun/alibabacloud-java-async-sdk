@@ -20,16 +20,42 @@ public interface AsyncClient extends SdkAutoCloseable {
     }
 
     /**
+     * @param request the request parameters of ChatMessages  ChatMessagesRequest
+     * @return ChatMessagesResponse
+     */
+    CompletableFuture<ChatMessagesResponse> chatMessages(ChatMessagesRequest request);
+
+    ResponseIterable<ChatMessagesResponseBody> chatMessagesWithResponseIterable(ChatMessagesRequest request);
+
+    /**
+     * @param request the request parameters of ChatMessagesTaskStop  ChatMessagesTaskStopRequest
+     * @return ChatMessagesTaskStopResponse
+     */
+    CompletableFuture<ChatMessagesTaskStopResponse> chatMessagesTaskStop(ChatMessagesTaskStopRequest request);
+
+    /**
      * @param request the request parameters of CreateAppInstance  CreateAppInstanceRequest
      * @return CreateAppInstanceResponse
      */
     CompletableFuture<CreateAppInstanceResponse> createAppInstance(CreateAppInstanceRequest request);
 
     /**
+     * @param request the request parameters of CreateCustomAgent  CreateCustomAgentRequest
+     * @return CreateCustomAgentResponse
+     */
+    CompletableFuture<CreateCustomAgentResponse> createCustomAgent(CreateCustomAgentRequest request);
+
+    /**
      * @param request the request parameters of DeleteAppInstance  DeleteAppInstanceRequest
      * @return DeleteAppInstanceResponse
      */
     CompletableFuture<DeleteAppInstanceResponse> deleteAppInstance(DeleteAppInstanceRequest request);
+
+    /**
+     * @param request the request parameters of DeleteCustomAgent  DeleteCustomAgentRequest
+     * @return DeleteCustomAgentResponse
+     */
+    CompletableFuture<DeleteCustomAgentResponse> deleteCustomAgent(DeleteCustomAgentRequest request);
 
     /**
      * @param request the request parameters of DescribeAppInstanceAttribute  DescribeAppInstanceAttributeRequest
@@ -42,6 +68,12 @@ public interface AsyncClient extends SdkAutoCloseable {
      * @return DescribeAppInstancesResponse
      */
     CompletableFuture<DescribeAppInstancesResponse> describeAppInstances(DescribeAppInstancesRequest request);
+
+    /**
+     * @param request the request parameters of DescribeEventsList  DescribeEventsListRequest
+     * @return DescribeEventsListResponse
+     */
+    CompletableFuture<DescribeEventsListResponse> describeEventsList(DescribeEventsListRequest request);
 
     /**
      * @param request the request parameters of DescribeInstanceAuthInfo  DescribeInstanceAuthInfoRequest
@@ -80,6 +112,36 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<DescribeInstanceStorageConfigResponse> describeInstanceStorageConfig(DescribeInstanceStorageConfigRequest request);
 
     /**
+     * @param request the request parameters of GetConversations  GetConversationsRequest
+     * @return GetConversationsResponse
+     */
+    CompletableFuture<GetConversationsResponse> getConversations(GetConversationsRequest request);
+
+    /**
+     * @param request the request parameters of GetCustomAgent  GetCustomAgentRequest
+     * @return GetCustomAgentResponse
+     */
+    CompletableFuture<GetCustomAgentResponse> getCustomAgent(GetCustomAgentRequest request);
+
+    /**
+     * @param request the request parameters of GetMessages  GetMessagesRequest
+     * @return GetMessagesResponse
+     */
+    CompletableFuture<GetMessagesResponse> getMessages(GetMessagesRequest request);
+
+    /**
+     * @param request the request parameters of ListCustomAgent  ListCustomAgentRequest
+     * @return ListCustomAgentResponse
+     */
+    CompletableFuture<ListCustomAgentResponse> listCustomAgent(ListCustomAgentRequest request);
+
+    /**
+     * @param request the request parameters of ListCustomAgentTools  ListCustomAgentToolsRequest
+     * @return ListCustomAgentToolsResponse
+     */
+    CompletableFuture<ListCustomAgentToolsResponse> listCustomAgentTools(ListCustomAgentToolsRequest request);
+
+    /**
      * @param request the request parameters of ModifyInstanceAuthConfig  ModifyInstanceAuthConfigRequest
      * @return ModifyInstanceAuthConfigResponse
      */
@@ -116,6 +178,12 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<ModifyInstanceStorageConfigResponse> modifyInstanceStorageConfig(ModifyInstanceStorageConfigRequest request);
 
     /**
+     * @param request the request parameters of ModifyMessagesFeedbacks  ModifyMessagesFeedbacksRequest
+     * @return ModifyMessagesFeedbacksResponse
+     */
+    CompletableFuture<ModifyMessagesFeedbacksResponse> modifyMessagesFeedbacks(ModifyMessagesFeedbacksRequest request);
+
+    /**
      * @param request the request parameters of ResetInstancePassword  ResetInstancePasswordRequest
      * @return ResetInstancePasswordResponse
      */
@@ -138,5 +206,11 @@ public interface AsyncClient extends SdkAutoCloseable {
      * @return StopInstanceResponse
      */
     CompletableFuture<StopInstanceResponse> stopInstance(StopInstanceRequest request);
+
+    /**
+     * @param request the request parameters of UpdateCustomAgent  UpdateCustomAgentRequest
+     * @return UpdateCustomAgentResponse
+     */
+    CompletableFuture<UpdateCustomAgentResponse> updateCustomAgent(UpdateCustomAgentRequest request);
 
 }
