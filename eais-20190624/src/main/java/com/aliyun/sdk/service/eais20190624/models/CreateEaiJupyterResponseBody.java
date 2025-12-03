@@ -36,6 +36,10 @@ public class CreateEaiJupyterResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return elasticAcceleratedInstanceId
      */
@@ -53,6 +57,14 @@ public class CreateEaiJupyterResponseBody extends TeaModel {
     public static final class Builder {
         private String elasticAcceleratedInstanceId; 
         private String requestId; 
+
+        private Builder() {
+        } 
+
+        private Builder(CreateEaiJupyterResponseBody model) {
+            this.elasticAcceleratedInstanceId = model.elasticAcceleratedInstanceId;
+            this.requestId = model.requestId;
+        } 
 
         /**
          * ElasticAcceleratedInstanceId.

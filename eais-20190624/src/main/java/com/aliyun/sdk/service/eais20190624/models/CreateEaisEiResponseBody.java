@@ -36,6 +36,10 @@ public class CreateEaisEiResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return eiInstanceId
      */
@@ -53,6 +57,14 @@ public class CreateEaisEiResponseBody extends TeaModel {
     public static final class Builder {
         private String eiInstanceId; 
         private String requestId; 
+
+        private Builder() {
+        } 
+
+        private Builder(CreateEaisEiResponseBody model) {
+            this.eiInstanceId = model.eiInstanceId;
+            this.requestId = model.requestId;
+        } 
 
         /**
          * EiInstanceId.

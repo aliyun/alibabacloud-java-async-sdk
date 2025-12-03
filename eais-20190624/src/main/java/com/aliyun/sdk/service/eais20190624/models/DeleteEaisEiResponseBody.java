@@ -32,6 +32,10 @@ public class DeleteEaisEiResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return requestId
      */
@@ -41,6 +45,13 @@ public class DeleteEaisEiResponseBody extends TeaModel {
 
     public static final class Builder {
         private String requestId; 
+
+        private Builder() {
+        } 
+
+        private Builder(DeleteEaisEiResponseBody model) {
+            this.requestId = model.requestId;
+        } 
 
         /**
          * RequestId.

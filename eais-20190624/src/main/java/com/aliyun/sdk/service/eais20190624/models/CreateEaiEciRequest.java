@@ -78,7 +78,7 @@ public class CreateEaiEciRequest extends Request {
         return builder().build();
     }
 
-    @Override
+@Override
     public Builder toBuilder() {
         return new Builder(this);
     }
@@ -355,6 +355,17 @@ public class CreateEaiEciRequest extends Request {
             private String name; 
             private String volumes; 
 
+            private Builder() {
+            } 
+
+            private Builder(Container model) {
+                this.arg = model.arg;
+                this.command = model.command;
+                this.image = model.image;
+                this.name = model.name;
+                this.volumes = model.volumes;
+            } 
+
             /**
              * Arg.
              */
@@ -482,6 +493,17 @@ public class CreateEaiEciRequest extends Request {
             private String type; 
             private String volume; 
 
+            private Builder() {
+            } 
+
+            private Builder(Eci model) {
+                this.container = model.container;
+                this.eipId = model.eipId;
+                this.name = model.name;
+                this.type = model.type;
+                this.volume = model.volume;
+            } 
+
             /**
              * Container.
              */
@@ -572,6 +594,14 @@ public class CreateEaiEciRequest extends Request {
         public static final class Builder {
             private String key; 
             private String value; 
+
+            private Builder() {
+            } 
+
+            private Builder(Tag model) {
+                this.key = model.key;
+                this.value = model.value;
+            } 
 
             /**
              * Key.

@@ -78,7 +78,7 @@ public class CreateEaiEcsRequest extends Request {
         return builder().build();
     }
 
-    @Override
+@Override
     public Builder toBuilder() {
         return new Builder(this);
     }
@@ -403,6 +403,21 @@ public class CreateEaiEcsRequest extends Request {
             private String type; 
             private String zoneId; 
 
+            private Builder() {
+            } 
+
+            private Builder(Ecs model) {
+                this.imageId = model.imageId;
+                this.internetMaxBandwidthIn = model.internetMaxBandwidthIn;
+                this.internetMaxBandwidthOut = model.internetMaxBandwidthOut;
+                this.name = model.name;
+                this.password = model.password;
+                this.systemDiskCategory = model.systemDiskCategory;
+                this.systemDiskSize = model.systemDiskSize;
+                this.type = model.type;
+                this.zoneId = model.zoneId;
+            } 
+
             /**
              * ImageId.
              */
@@ -525,6 +540,14 @@ public class CreateEaiEcsRequest extends Request {
         public static final class Builder {
             private String key; 
             private String value; 
+
+            private Builder() {
+            } 
+
+            private Builder(Tag model) {
+                this.key = model.key;
+                this.value = model.value;
+            } 
 
             /**
              * Key.

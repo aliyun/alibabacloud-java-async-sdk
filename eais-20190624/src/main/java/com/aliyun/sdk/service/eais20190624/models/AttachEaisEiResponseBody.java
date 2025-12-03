@@ -40,6 +40,10 @@ public class AttachEaisEiResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return clientInstanceId
      */
@@ -65,6 +69,15 @@ public class AttachEaisEiResponseBody extends TeaModel {
         private String clientInstanceId; 
         private String eiInstanceId; 
         private String requestId; 
+
+        private Builder() {
+        } 
+
+        private Builder(AttachEaisEiResponseBody model) {
+            this.clientInstanceId = model.clientInstanceId;
+            this.eiInstanceId = model.eiInstanceId;
+            this.requestId = model.requestId;
+        } 
 
         /**
          * ClientInstanceId.

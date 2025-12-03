@@ -40,6 +40,10 @@ public class CreateEaiEcsResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return clientInstanceId
      */
@@ -65,6 +69,15 @@ public class CreateEaiEcsResponseBody extends TeaModel {
         private String clientInstanceId; 
         private String elasticAcceleratedInstanceId; 
         private String requestId; 
+
+        private Builder() {
+        } 
+
+        private Builder(CreateEaiEcsResponseBody model) {
+            this.clientInstanceId = model.clientInstanceId;
+            this.elasticAcceleratedInstanceId = model.elasticAcceleratedInstanceId;
+            this.requestId = model.requestId;
+        } 
 
         /**
          * ClientInstanceId.

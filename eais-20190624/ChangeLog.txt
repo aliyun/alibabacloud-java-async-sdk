@@ -1,3 +1,6 @@
+2025-12-03 Version: 2.0.5
+- Update SDK.
+
 2025-03-07 Version: 2.0.4
 - Generated java-async 2019-06-24 for eais.
 

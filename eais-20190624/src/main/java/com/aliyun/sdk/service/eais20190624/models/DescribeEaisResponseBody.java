@@ -48,6 +48,10 @@ public class DescribeEaisResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return instances
      */
@@ -89,6 +93,17 @@ public class DescribeEaisResponseBody extends TeaModel {
         private Integer pageSize; 
         private String requestId; 
         private Integer totalCount; 
+
+        private Builder() {
+        } 
+
+        private Builder(DescribeEaisResponseBody model) {
+            this.instances = model.instances;
+            this.pageNumber = model.pageNumber;
+            this.pageSize = model.pageSize;
+            this.requestId = model.requestId;
+            this.totalCount = model.totalCount;
+        } 
 
         /**
          * Instances.
@@ -180,6 +195,14 @@ public class DescribeEaisResponseBody extends TeaModel {
             private String tagKey; 
             private String tagValue; 
 
+            private Builder() {
+            } 
+
+            private Builder(Tag model) {
+                this.tagKey = model.tagKey;
+                this.tagValue = model.tagValue;
+            } 
+
             /**
              * TagKey.
              */
@@ -234,6 +257,13 @@ public class DescribeEaisResponseBody extends TeaModel {
 
         public static final class Builder {
             private java.util.List<Tag> tag; 
+
+            private Builder() {
+            } 
+
+            private Builder(Tags model) {
+                this.tag = model.tag;
+            } 
 
             /**
              * Tag.
@@ -498,6 +528,31 @@ public class DescribeEaisResponseBody extends TeaModel {
             private String vSwitchId; 
             private String zoneId; 
 
+            private Builder() {
+            } 
+
+            private Builder(Instance model) {
+                this.category = model.category;
+                this.clientInstanceId = model.clientInstanceId;
+                this.clientInstanceName = model.clientInstanceName;
+                this.clientInstanceType = model.clientInstanceType;
+                this.creationTime = model.creationTime;
+                this.description = model.description;
+                this.elasticAcceleratedInstanceId = model.elasticAcceleratedInstanceId;
+                this.instanceName = model.instanceName;
+                this.instanceType = model.instanceType;
+                this.jupyterUrl = model.jupyterUrl;
+                this.paymentType = model.paymentType;
+                this.regionId = model.regionId;
+                this.resourceGroupId = model.resourceGroupId;
+                this.securityGroupId = model.securityGroupId;
+                this.startTime = model.startTime;
+                this.status = model.status;
+                this.tags = model.tags;
+                this.vSwitchId = model.vSwitchId;
+                this.zoneId = model.zoneId;
+            } 
+
             /**
              * Category.
              */
@@ -688,6 +743,13 @@ public class DescribeEaisResponseBody extends TeaModel {
 
         public static final class Builder {
             private java.util.List<Instance> instance; 
+
+            private Builder() {
+            } 
+
+            private Builder(Instances model) {
+                this.instance = model.instance;
+            } 
 
             /**
              * Instance.

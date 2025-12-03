@@ -40,6 +40,10 @@ public class GetInstanceMetricsResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return instanceId
      */
@@ -65,6 +69,15 @@ public class GetInstanceMetricsResponseBody extends TeaModel {
         private String instanceId; 
         private java.util.List<PodMetrics> podMetrics; 
         private String requestId; 
+
+        private Builder() {
+        } 
+
+        private Builder(GetInstanceMetricsResponseBody model) {
+            this.instanceId = model.instanceId;
+            this.podMetrics = model.podMetrics;
+            this.requestId = model.requestId;
+        } 
 
         /**
          * InstanceId.
@@ -140,6 +153,14 @@ public class GetInstanceMetricsResponseBody extends TeaModel {
             private String time; 
             private String value; 
 
+            private Builder() {
+            } 
+
+            private Builder(Metrics model) {
+                this.time = model.time;
+                this.value = model.value;
+            } 
+
             /**
              * Time.
              */
@@ -206,6 +227,14 @@ public class GetInstanceMetricsResponseBody extends TeaModel {
         public static final class Builder {
             private java.util.List<Metrics> metrics; 
             private String podId; 
+
+            private Builder() {
+            } 
+
+            private Builder(PodMetrics model) {
+                this.metrics = model.metrics;
+                this.podId = model.podId;
+            } 
 
             /**
              * Metrics.
