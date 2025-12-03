@@ -22,6 +22,10 @@ public class ListEvaluationMetricDetailsRequest extends Request {
     private Long accountId;
 
     @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Date")
+    private String date;
+
+    @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("Id")
     private String id;
 
@@ -48,6 +52,7 @@ public class ListEvaluationMetricDetailsRequest extends Request {
     private ListEvaluationMetricDetailsRequest(Builder builder) {
         super(builder);
         this.accountId = builder.accountId;
+        this.date = builder.date;
         this.id = builder.id;
         this.maxResults = builder.maxResults;
         this.nextToken = builder.nextToken;
@@ -74,6 +79,13 @@ public class ListEvaluationMetricDetailsRequest extends Request {
      */
     public Long getAccountId() {
         return this.accountId;
+    }
+
+    /**
+     * @return date
+     */
+    public String getDate() {
+        return this.date;
     }
 
     /**
@@ -120,6 +132,7 @@ public class ListEvaluationMetricDetailsRequest extends Request {
 
     public static final class Builder extends Request.Builder<ListEvaluationMetricDetailsRequest, Builder> {
         private Long accountId; 
+        private String date; 
         private String id; 
         private Integer maxResults; 
         private String nextToken; 
@@ -134,6 +147,7 @@ public class ListEvaluationMetricDetailsRequest extends Request {
         private Builder(ListEvaluationMetricDetailsRequest request) {
             super(request);
             this.accountId = request.accountId;
+            this.date = request.date;
             this.id = request.id;
             this.maxResults = request.maxResults;
             this.nextToken = request.nextToken;
@@ -151,6 +165,15 @@ public class ListEvaluationMetricDetailsRequest extends Request {
         public Builder accountId(Long accountId) {
             this.putQueryParameter("AccountId", accountId);
             this.accountId = accountId;
+            return this;
+        }
+
+        /**
+         * Date.
+         */
+        public Builder date(String date) {
+            this.putQueryParameter("Date", date);
+            this.date = date;
             return this;
         }
 

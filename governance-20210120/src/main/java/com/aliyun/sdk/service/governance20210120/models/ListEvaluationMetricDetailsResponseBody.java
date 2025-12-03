@@ -17,6 +17,9 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>ListEvaluationMetricDetailsResponseBody</p>
  */
 public class ListEvaluationMetricDetailsResponseBody extends TeaModel {
+    @com.aliyun.core.annotation.NameInMap("Date")
+    private String date;
+
     @com.aliyun.core.annotation.NameInMap("NextToken")
     private String nextToken;
 
@@ -27,6 +30,7 @@ public class ListEvaluationMetricDetailsResponseBody extends TeaModel {
     private java.util.List<Resources> resources;
 
     private ListEvaluationMetricDetailsResponseBody(Builder builder) {
+        this.date = builder.date;
         this.nextToken = builder.nextToken;
         this.requestId = builder.requestId;
         this.resources = builder.resources;
@@ -42,6 +46,13 @@ public class ListEvaluationMetricDetailsResponseBody extends TeaModel {
 
     public Builder toBuilder() {
         return new Builder(this);
+    }
+
+    /**
+     * @return date
+     */
+    public String getDate() {
+        return this.date;
     }
 
     /**
@@ -66,6 +77,7 @@ public class ListEvaluationMetricDetailsResponseBody extends TeaModel {
     }
 
     public static final class Builder {
+        private String date; 
         private String nextToken; 
         private String requestId; 
         private java.util.List<Resources> resources; 
@@ -74,10 +86,19 @@ public class ListEvaluationMetricDetailsResponseBody extends TeaModel {
         } 
 
         private Builder(ListEvaluationMetricDetailsResponseBody model) {
+            this.date = model.date;
             this.nextToken = model.nextToken;
             this.requestId = model.requestId;
             this.resources = model.resources;
         } 
+
+        /**
+         * Date.
+         */
+        public Builder date(String date) {
+            this.date = date;
+            return this;
+        }
 
         /**
          * <p>A pagination token. It can be used in the next request to retrieve a new page of results.</p>
