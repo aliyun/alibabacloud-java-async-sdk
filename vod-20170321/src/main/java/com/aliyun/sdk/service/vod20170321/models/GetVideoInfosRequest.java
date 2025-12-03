@@ -18,12 +18,16 @@ import com.aliyun.sdk.gateway.pop.models.*;
  */
 public class GetVideoInfosRequest extends Request {
     @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ReferenceIds")
+    private String referenceIds;
+
+    @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("VideoIds")
-    @com.aliyun.core.annotation.Validation(required = true)
     private String videoIds;
 
     private GetVideoInfosRequest(Builder builder) {
         super(builder);
+        this.referenceIds = builder.referenceIds;
         this.videoIds = builder.videoIds;
     }
 
@@ -41,6 +45,13 @@ public class GetVideoInfosRequest extends Request {
     }
 
     /**
+     * @return referenceIds
+     */
+    public String getReferenceIds() {
+        return this.referenceIds;
+    }
+
+    /**
      * @return videoIds
      */
     public String getVideoIds() {
@@ -48,6 +59,7 @@ public class GetVideoInfosRequest extends Request {
     }
 
     public static final class Builder extends Request.Builder<GetVideoInfosRequest, Builder> {
+        private String referenceIds; 
         private String videoIds; 
 
         private Builder() {
@@ -56,12 +68,21 @@ public class GetVideoInfosRequest extends Request {
 
         private Builder(GetVideoInfosRequest request) {
             super(request);
+            this.referenceIds = request.referenceIds;
             this.videoIds = request.videoIds;
         } 
 
         /**
+         * ReferenceIds.
+         */
+        public Builder referenceIds(String referenceIds) {
+            this.putQueryParameter("ReferenceIds", referenceIds);
+            this.referenceIds = referenceIds;
+            return this;
+        }
+
+        /**
          * <p>The list of video IDs. Separate multiple IDs with commas (,). A maximum of 20 IDs can be specified.</p>
-         * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
          * <p>7753d144efd8e649c6c45fe0579****,7753d144efd74d6c45fe0570****</p>

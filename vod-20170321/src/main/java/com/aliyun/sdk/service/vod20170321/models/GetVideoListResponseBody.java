@@ -200,6 +200,9 @@ public class GetVideoListResponseBody extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("ModificationTime")
         private String modificationTime;
 
+        @com.aliyun.core.annotation.NameInMap("ReferenceId")
+        private String referenceId;
+
         @com.aliyun.core.annotation.NameInMap("RestoreExpiration")
         private String restoreExpiration;
 
@@ -242,6 +245,7 @@ public class GetVideoListResponseBody extends TeaModel {
             this.description = builder.description;
             this.duration = builder.duration;
             this.modificationTime = builder.modificationTime;
+            this.referenceId = builder.referenceId;
             this.restoreExpiration = builder.restoreExpiration;
             this.restoreStatus = builder.restoreStatus;
             this.size = builder.size;
@@ -317,6 +321,13 @@ public class GetVideoListResponseBody extends TeaModel {
          */
         public String getModificationTime() {
             return this.modificationTime;
+        }
+
+        /**
+         * @return referenceId
+         */
+        public String getReferenceId() {
+            return this.referenceId;
         }
 
         /**
@@ -405,6 +416,7 @@ public class GetVideoListResponseBody extends TeaModel {
             private String description; 
             private Float duration; 
             private String modificationTime; 
+            private String referenceId; 
             private String restoreExpiration; 
             private String restoreStatus; 
             private Long size; 
@@ -429,6 +441,7 @@ public class GetVideoListResponseBody extends TeaModel {
                 this.description = model.description;
                 this.duration = model.duration;
                 this.modificationTime = model.modificationTime;
+                this.referenceId = model.referenceId;
                 this.restoreExpiration = model.restoreExpiration;
                 this.restoreStatus = model.restoreStatus;
                 this.size = model.size;
@@ -527,6 +540,14 @@ public class GetVideoListResponseBody extends TeaModel {
              */
             public Builder modificationTime(String modificationTime) {
                 this.modificationTime = modificationTime;
+                return this;
+            }
+
+            /**
+             * ReferenceId.
+             */
+            public Builder referenceId(String referenceId) {
+                this.referenceId = referenceId;
                 return this;
             }
 

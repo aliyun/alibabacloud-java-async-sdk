@@ -17,6 +17,9 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>GetVideoInfosResponseBody</p>
  */
 public class GetVideoInfosResponseBody extends TeaModel {
+    @com.aliyun.core.annotation.NameInMap("NonExistReferenceIds")
+    private java.util.List<String> nonExistReferenceIds;
+
     @com.aliyun.core.annotation.NameInMap("NonExistVideoIds")
     private java.util.List<String> nonExistVideoIds;
 
@@ -27,6 +30,7 @@ public class GetVideoInfosResponseBody extends TeaModel {
     private java.util.List<VideoList> videoList;
 
     private GetVideoInfosResponseBody(Builder builder) {
+        this.nonExistReferenceIds = builder.nonExistReferenceIds;
         this.nonExistVideoIds = builder.nonExistVideoIds;
         this.requestId = builder.requestId;
         this.videoList = builder.videoList;
@@ -42,6 +46,13 @@ public class GetVideoInfosResponseBody extends TeaModel {
 
     public Builder toBuilder() {
         return new Builder(this);
+    }
+
+    /**
+     * @return nonExistReferenceIds
+     */
+    public java.util.List<String> getNonExistReferenceIds() {
+        return this.nonExistReferenceIds;
     }
 
     /**
@@ -66,6 +77,7 @@ public class GetVideoInfosResponseBody extends TeaModel {
     }
 
     public static final class Builder {
+        private java.util.List<String> nonExistReferenceIds; 
         private java.util.List<String> nonExistVideoIds; 
         private String requestId; 
         private java.util.List<VideoList> videoList; 
@@ -74,10 +86,19 @@ public class GetVideoInfosResponseBody extends TeaModel {
         } 
 
         private Builder(GetVideoInfosResponseBody model) {
+            this.nonExistReferenceIds = model.nonExistReferenceIds;
             this.nonExistVideoIds = model.nonExistVideoIds;
             this.requestId = model.requestId;
             this.videoList = model.videoList;
         } 
+
+        /**
+         * NonExistReferenceIds.
+         */
+        public Builder nonExistReferenceIds(java.util.List<String> nonExistReferenceIds) {
+            this.nonExistReferenceIds = nonExistReferenceIds;
+            return this;
+        }
 
         /**
          * <p>The IDs of the videos that do not exist.</p>
@@ -146,6 +167,9 @@ public class GetVideoInfosResponseBody extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("ModificationTime")
         private String modificationTime;
 
+        @com.aliyun.core.annotation.NameInMap("ReferenceId")
+        private String referenceId;
+
         @com.aliyun.core.annotation.NameInMap("RestoreExpiration")
         private String restoreExpiration;
 
@@ -192,6 +216,7 @@ public class GetVideoInfosResponseBody extends TeaModel {
             this.downloadSwitch = builder.downloadSwitch;
             this.duration = builder.duration;
             this.modificationTime = builder.modificationTime;
+            this.referenceId = builder.referenceId;
             this.restoreExpiration = builder.restoreExpiration;
             this.restoreStatus = builder.restoreStatus;
             this.size = builder.size;
@@ -275,6 +300,13 @@ public class GetVideoInfosResponseBody extends TeaModel {
          */
         public String getModificationTime() {
             return this.modificationTime;
+        }
+
+        /**
+         * @return referenceId
+         */
+        public String getReferenceId() {
+            return this.referenceId;
         }
 
         /**
@@ -371,6 +403,7 @@ public class GetVideoInfosResponseBody extends TeaModel {
             private String downloadSwitch; 
             private Float duration; 
             private String modificationTime; 
+            private String referenceId; 
             private String restoreExpiration; 
             private String restoreStatus; 
             private Long size; 
@@ -397,6 +430,7 @@ public class GetVideoInfosResponseBody extends TeaModel {
                 this.downloadSwitch = model.downloadSwitch;
                 this.duration = model.duration;
                 this.modificationTime = model.modificationTime;
+                this.referenceId = model.referenceId;
                 this.restoreExpiration = model.restoreExpiration;
                 this.restoreStatus = model.restoreStatus;
                 this.size = model.size;
@@ -511,6 +545,14 @@ public class GetVideoInfosResponseBody extends TeaModel {
              */
             public Builder modificationTime(String modificationTime) {
                 this.modificationTime = modificationTime;
+                return this;
+            }
+
+            /**
+             * ReferenceId.
+             */
+            public Builder referenceId(String referenceId) {
+                this.referenceId = referenceId;
                 return this;
             }
 

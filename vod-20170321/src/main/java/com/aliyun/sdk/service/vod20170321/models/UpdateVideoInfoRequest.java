@@ -30,6 +30,10 @@ public class UpdateVideoInfoRequest extends Request {
     private String description;
 
     @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ReferenceId")
+    private String referenceId;
+
+    @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("Tags")
     private String tags;
 
@@ -43,7 +47,6 @@ public class UpdateVideoInfoRequest extends Request {
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("VideoId")
-    @com.aliyun.core.annotation.Validation(required = true)
     private String videoId;
 
     private UpdateVideoInfoRequest(Builder builder) {
@@ -51,6 +54,7 @@ public class UpdateVideoInfoRequest extends Request {
         this.cateId = builder.cateId;
         this.coverURL = builder.coverURL;
         this.description = builder.description;
+        this.referenceId = builder.referenceId;
         this.tags = builder.tags;
         this.title = builder.title;
         this.userData = builder.userData;
@@ -92,6 +96,13 @@ public class UpdateVideoInfoRequest extends Request {
     }
 
     /**
+     * @return referenceId
+     */
+    public String getReferenceId() {
+        return this.referenceId;
+    }
+
+    /**
      * @return tags
      */
     public String getTags() {
@@ -123,6 +134,7 @@ public class UpdateVideoInfoRequest extends Request {
         private Long cateId; 
         private String coverURL; 
         private String description; 
+        private String referenceId; 
         private String tags; 
         private String title; 
         private String userData; 
@@ -137,6 +149,7 @@ public class UpdateVideoInfoRequest extends Request {
             this.cateId = request.cateId;
             this.coverURL = request.coverURL;
             this.description = request.description;
+            this.referenceId = request.referenceId;
             this.tags = request.tags;
             this.title = request.title;
             this.userData = request.userData;
@@ -185,6 +198,15 @@ public class UpdateVideoInfoRequest extends Request {
         public Builder description(String description) {
             this.putQueryParameter("Description", description);
             this.description = description;
+            return this;
+        }
+
+        /**
+         * ReferenceId.
+         */
+        public Builder referenceId(String referenceId) {
+            this.putQueryParameter("ReferenceId", referenceId);
+            this.referenceId = referenceId;
             return this;
         }
 
@@ -240,7 +262,6 @@ public class UpdateVideoInfoRequest extends Request {
          * <li>Obtain the value of VideoId from the response to the <a href="https://help.aliyun.com/document_detail/55407.html">CreateUploadVideo</a> operation that you called to obtain the upload URL and credential.</li>
          * <li>View the value of the VideoId parameter returned by the <a href="https://help.aliyun.com/document_detail/86044.html">SearchMedia</a> operation that you called to query media information after the audio or video file is uploaded.</li>
          * </ul>
-         * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
          * <p>2deda93265312baf9b0ed810d****</p>

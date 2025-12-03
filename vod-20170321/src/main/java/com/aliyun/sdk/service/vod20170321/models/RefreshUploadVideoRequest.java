@@ -22,6 +22,10 @@ public class RefreshUploadVideoRequest extends Request {
     private Long ownerId;
 
     @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ReferenceId")
+    private String referenceId;
+
+    @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("ResourceOwnerAccount")
     private String resourceOwnerAccount;
 
@@ -31,12 +35,12 @@ public class RefreshUploadVideoRequest extends Request {
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("VideoId")
-    @com.aliyun.core.annotation.Validation(required = true)
     private String videoId;
 
     private RefreshUploadVideoRequest(Builder builder) {
         super(builder);
         this.ownerId = builder.ownerId;
+        this.referenceId = builder.referenceId;
         this.resourceOwnerAccount = builder.resourceOwnerAccount;
         this.resourceOwnerId = builder.resourceOwnerId;
         this.videoId = builder.videoId;
@@ -63,6 +67,13 @@ public class RefreshUploadVideoRequest extends Request {
     }
 
     /**
+     * @return referenceId
+     */
+    public String getReferenceId() {
+        return this.referenceId;
+    }
+
+    /**
      * @return resourceOwnerAccount
      */
     public String getResourceOwnerAccount() {
@@ -85,6 +96,7 @@ public class RefreshUploadVideoRequest extends Request {
 
     public static final class Builder extends Request.Builder<RefreshUploadVideoRequest, Builder> {
         private Long ownerId; 
+        private String referenceId; 
         private String resourceOwnerAccount; 
         private Long resourceOwnerId; 
         private String videoId; 
@@ -96,6 +108,7 @@ public class RefreshUploadVideoRequest extends Request {
         private Builder(RefreshUploadVideoRequest request) {
             super(request);
             this.ownerId = request.ownerId;
+            this.referenceId = request.referenceId;
             this.resourceOwnerAccount = request.resourceOwnerAccount;
             this.resourceOwnerId = request.resourceOwnerId;
             this.videoId = request.videoId;
@@ -107,6 +120,15 @@ public class RefreshUploadVideoRequest extends Request {
         public Builder ownerId(Long ownerId) {
             this.putQueryParameter("OwnerId", ownerId);
             this.ownerId = ownerId;
+            return this;
+        }
+
+        /**
+         * ReferenceId.
+         */
+        public Builder referenceId(String referenceId) {
+            this.putQueryParameter("ReferenceId", referenceId);
+            this.referenceId = referenceId;
             return this;
         }
 
@@ -135,7 +157,6 @@ public class RefreshUploadVideoRequest extends Request {
          * <li>View the value of the VideoId parameter returned by the <a href="https://help.aliyun.com/document_detail/55407.html">CreateUploadVideo</a> operation that you called to upload the audio or video file.</li>
          * <li>After an audio or video file is uploaded, obtain the value of VideoId from the response to the <a href="https://help.aliyun.com/document_detail/86044.html">SearchMedia</a> operation that you call to query the audio or video ID.</li>
          * </ul>
-         * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
          * <p>c6a23a870c8c4ffcd40cbd381333****</p>

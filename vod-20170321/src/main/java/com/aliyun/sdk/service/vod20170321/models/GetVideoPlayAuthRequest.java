@@ -26,14 +26,18 @@ public class GetVideoPlayAuthRequest extends Request {
     private Long authInfoTimeout;
 
     @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ReferenceId")
+    private String referenceId;
+
+    @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("VideoId")
-    @com.aliyun.core.annotation.Validation(required = true)
     private String videoId;
 
     private GetVideoPlayAuthRequest(Builder builder) {
         super(builder);
         this.apiVersion = builder.apiVersion;
         this.authInfoTimeout = builder.authInfoTimeout;
+        this.referenceId = builder.referenceId;
         this.videoId = builder.videoId;
     }
 
@@ -65,6 +69,13 @@ public class GetVideoPlayAuthRequest extends Request {
     }
 
     /**
+     * @return referenceId
+     */
+    public String getReferenceId() {
+        return this.referenceId;
+    }
+
+    /**
      * @return videoId
      */
     public String getVideoId() {
@@ -74,6 +85,7 @@ public class GetVideoPlayAuthRequest extends Request {
     public static final class Builder extends Request.Builder<GetVideoPlayAuthRequest, Builder> {
         private String apiVersion; 
         private Long authInfoTimeout; 
+        private String referenceId; 
         private String videoId; 
 
         private Builder() {
@@ -84,6 +96,7 @@ public class GetVideoPlayAuthRequest extends Request {
             super(request);
             this.apiVersion = request.apiVersion;
             this.authInfoTimeout = request.authInfoTimeout;
+            this.referenceId = request.referenceId;
             this.videoId = request.videoId;
         } 
 
@@ -116,13 +129,21 @@ public class GetVideoPlayAuthRequest extends Request {
         }
 
         /**
+         * ReferenceId.
+         */
+        public Builder referenceId(String referenceId) {
+            this.putQueryParameter("ReferenceId", referenceId);
+            this.referenceId = referenceId;
+            return this;
+        }
+
+        /**
          * <p>The ID of the media file. You can specify only one ID. You can use one of the following methods to obtain the ID of the file:</p>
          * <ul>
          * <li>Log on to the <a href="https://vod.console.aliyun.com">ApsaraVideo VOD</a> console. In the left-side navigation pane, choose <strong>Media Files</strong> &gt; <strong>Audio/Video</strong>. On the Video and Audio page, view the ID of the media file. This method is applicable to files that are uploaded by using the ApsaraVideo VOD console.</li>
          * <li>Obtain the value of the VideoId parameter from the response to the <a href="https://help.aliyun.com/document_detail/55407.html">CreateUploadVideo</a> operation.</li>
          * <li>Obtain the value of the VideoId parameter from the response to the <a href="https://help.aliyun.com/document_detail/86044.html">SearchMedia</a> operation. This method is applicable to files that have been uploaded.</li>
          * </ul>
-         * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
          * <p>dfde02284a5c46622a097adaf44a****</p>

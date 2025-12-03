@@ -18,12 +18,16 @@ import com.aliyun.sdk.gateway.pop.models.*;
  */
 public class GetVideoInfoRequest extends Request {
     @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ReferenceId")
+    private String referenceId;
+
+    @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("VideoId")
-    @com.aliyun.core.annotation.Validation(required = true)
     private String videoId;
 
     private GetVideoInfoRequest(Builder builder) {
         super(builder);
+        this.referenceId = builder.referenceId;
         this.videoId = builder.videoId;
     }
 
@@ -41,6 +45,13 @@ public class GetVideoInfoRequest extends Request {
     }
 
     /**
+     * @return referenceId
+     */
+    public String getReferenceId() {
+        return this.referenceId;
+    }
+
+    /**
      * @return videoId
      */
     public String getVideoId() {
@@ -48,6 +59,7 @@ public class GetVideoInfoRequest extends Request {
     }
 
     public static final class Builder extends Request.Builder<GetVideoInfoRequest, Builder> {
+        private String referenceId; 
         private String videoId; 
 
         private Builder() {
@@ -56,8 +68,18 @@ public class GetVideoInfoRequest extends Request {
 
         private Builder(GetVideoInfoRequest request) {
             super(request);
+            this.referenceId = request.referenceId;
             this.videoId = request.videoId;
         } 
+
+        /**
+         * ReferenceId.
+         */
+        public Builder referenceId(String referenceId) {
+            this.putQueryParameter("ReferenceId", referenceId);
+            this.referenceId = referenceId;
+            return this;
+        }
 
         /**
          * <p>The ID of the audio or video file. You can specify only one ID in each call. You can use one of the following methods to obtain the ID:</p>
@@ -66,7 +88,6 @@ public class GetVideoInfoRequest extends Request {
          * <li>Obtain the value of VideoId from the response to the <a href="https://help.aliyun.com/document_detail/55407.html">CreateUploadVideo</a> operation that you called to obtain the upload URL and credential.</li>
          * <li>Obtain the value of VideoId from the response to the <a href="https://help.aliyun.com/document_detail/86044.html">SearchMedia</a> operation that you called to query the media ID after the media file is uploaded.</li>
          * </ul>
-         * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
          * <p>9b73864d75f1d231e9001cd5f8****</p>

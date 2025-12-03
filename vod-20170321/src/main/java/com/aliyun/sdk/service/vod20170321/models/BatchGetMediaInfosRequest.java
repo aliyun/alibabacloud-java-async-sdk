@@ -22,9 +22,14 @@ public class BatchGetMediaInfosRequest extends Request {
     @com.aliyun.core.annotation.Validation(required = true)
     private String mediaIds;
 
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ReferenceIds")
+    private String referenceIds;
+
     private BatchGetMediaInfosRequest(Builder builder) {
         super(builder);
         this.mediaIds = builder.mediaIds;
+        this.referenceIds = builder.referenceIds;
     }
 
     public static Builder builder() {
@@ -47,8 +52,16 @@ public class BatchGetMediaInfosRequest extends Request {
         return this.mediaIds;
     }
 
+    /**
+     * @return referenceIds
+     */
+    public String getReferenceIds() {
+        return this.referenceIds;
+    }
+
     public static final class Builder extends Request.Builder<BatchGetMediaInfosRequest, Builder> {
         private String mediaIds; 
+        private String referenceIds; 
 
         private Builder() {
             super();
@@ -57,6 +70,7 @@ public class BatchGetMediaInfosRequest extends Request {
         private Builder(BatchGetMediaInfosRequest request) {
             super(request);
             this.mediaIds = request.mediaIds;
+            this.referenceIds = request.referenceIds;
         } 
 
         /**
@@ -74,6 +88,15 @@ public class BatchGetMediaInfosRequest extends Request {
         public Builder mediaIds(String mediaIds) {
             this.putQueryParameter("MediaIds", mediaIds);
             this.mediaIds = mediaIds;
+            return this;
+        }
+
+        /**
+         * ReferenceIds.
+         */
+        public Builder referenceIds(String referenceIds) {
+            this.putQueryParameter("ReferenceIds", referenceIds);
+            this.referenceIds = referenceIds;
             return this;
         }
 

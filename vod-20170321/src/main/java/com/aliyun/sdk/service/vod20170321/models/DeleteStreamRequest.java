@@ -23,13 +23,17 @@ public class DeleteStreamRequest extends Request {
     private String jobIds;
 
     @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ReferenceId")
+    private String referenceId;
+
+    @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("VideoId")
-    @com.aliyun.core.annotation.Validation(required = true)
     private String videoId;
 
     private DeleteStreamRequest(Builder builder) {
         super(builder);
         this.jobIds = builder.jobIds;
+        this.referenceId = builder.referenceId;
         this.videoId = builder.videoId;
     }
 
@@ -54,6 +58,13 @@ public class DeleteStreamRequest extends Request {
     }
 
     /**
+     * @return referenceId
+     */
+    public String getReferenceId() {
+        return this.referenceId;
+    }
+
+    /**
      * @return videoId
      */
     public String getVideoId() {
@@ -62,6 +73,7 @@ public class DeleteStreamRequest extends Request {
 
     public static final class Builder extends Request.Builder<DeleteStreamRequest, Builder> {
         private String jobIds; 
+        private String referenceId; 
         private String videoId; 
 
         private Builder() {
@@ -71,6 +83,7 @@ public class DeleteStreamRequest extends Request {
         private Builder(DeleteStreamRequest request) {
             super(request);
             this.jobIds = request.jobIds;
+            this.referenceId = request.referenceId;
             this.videoId = request.videoId;
         } 
 
@@ -92,8 +105,16 @@ public class DeleteStreamRequest extends Request {
         }
 
         /**
+         * ReferenceId.
+         */
+        public Builder referenceId(String referenceId) {
+            this.putQueryParameter("ReferenceId", referenceId);
+            this.referenceId = referenceId;
+            return this;
+        }
+
+        /**
          * <p>The ID of the video.</p>
-         * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
          * <p>95948ddba24446b6aed5db985e78****</p>

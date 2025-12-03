@@ -185,6 +185,9 @@ public class GetVideoInfoResponseBody extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("ModificationTime")
         private String modificationTime;
 
+        @com.aliyun.core.annotation.NameInMap("ReferenceId")
+        private String referenceId;
+
         @com.aliyun.core.annotation.NameInMap("RegionId")
         private String regionId;
 
@@ -236,6 +239,7 @@ public class GetVideoInfoResponseBody extends TeaModel {
             this.downloadSwitch = builder.downloadSwitch;
             this.duration = builder.duration;
             this.modificationTime = builder.modificationTime;
+            this.referenceId = builder.referenceId;
             this.regionId = builder.regionId;
             this.restoreExpiration = builder.restoreExpiration;
             this.restoreStatus = builder.restoreStatus;
@@ -334,6 +338,13 @@ public class GetVideoInfoResponseBody extends TeaModel {
          */
         public String getModificationTime() {
             return this.modificationTime;
+        }
+
+        /**
+         * @return referenceId
+         */
+        public String getReferenceId() {
+            return this.referenceId;
         }
 
         /**
@@ -439,6 +450,7 @@ public class GetVideoInfoResponseBody extends TeaModel {
             private String downloadSwitch; 
             private Float duration; 
             private String modificationTime; 
+            private String referenceId; 
             private String regionId; 
             private String restoreExpiration; 
             private String restoreStatus; 
@@ -468,6 +480,7 @@ public class GetVideoInfoResponseBody extends TeaModel {
                 this.downloadSwitch = model.downloadSwitch;
                 this.duration = model.duration;
                 this.modificationTime = model.modificationTime;
+                this.referenceId = model.referenceId;
                 this.regionId = model.regionId;
                 this.restoreExpiration = model.restoreExpiration;
                 this.restoreStatus = model.restoreStatus;
@@ -609,6 +622,14 @@ public class GetVideoInfoResponseBody extends TeaModel {
              */
             public Builder modificationTime(String modificationTime) {
                 this.modificationTime = modificationTime;
+                return this;
+            }
+
+            /**
+             * ReferenceId.
+             */
+            public Builder referenceId(String referenceId) {
+                this.referenceId = referenceId;
                 return this;
             }
 

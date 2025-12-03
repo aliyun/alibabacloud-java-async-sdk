@@ -30,6 +30,10 @@ public class SubmitSnapshotJobRequest extends Request {
     private Long interval;
 
     @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ReferenceId")
+    private String referenceId;
+
+    @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("SnapshotTemplateId")
     private String snapshotTemplateId;
 
@@ -62,6 +66,7 @@ public class SubmitSnapshotJobRequest extends Request {
         this.count = builder.count;
         this.height = builder.height;
         this.interval = builder.interval;
+        this.referenceId = builder.referenceId;
         this.snapshotTemplateId = builder.snapshotTemplateId;
         this.specifiedOffsetTime = builder.specifiedOffsetTime;
         this.specifiedOffsetTimes = builder.specifiedOffsetTimes;
@@ -103,6 +108,13 @@ public class SubmitSnapshotJobRequest extends Request {
      */
     public Long getInterval() {
         return this.interval;
+    }
+
+    /**
+     * @return referenceId
+     */
+    public String getReferenceId() {
+        return this.referenceId;
     }
 
     /**
@@ -158,6 +170,7 @@ public class SubmitSnapshotJobRequest extends Request {
         private Long count; 
         private String height; 
         private Long interval; 
+        private String referenceId; 
         private String snapshotTemplateId; 
         private Long specifiedOffsetTime; 
         private java.util.List<Long> specifiedOffsetTimes; 
@@ -175,6 +188,7 @@ public class SubmitSnapshotJobRequest extends Request {
             this.count = request.count;
             this.height = request.height;
             this.interval = request.interval;
+            this.referenceId = request.referenceId;
             this.snapshotTemplateId = request.snapshotTemplateId;
             this.specifiedOffsetTime = request.specifiedOffsetTime;
             this.specifiedOffsetTimes = request.specifiedOffsetTimes;
@@ -222,6 +236,15 @@ public class SubmitSnapshotJobRequest extends Request {
         public Builder interval(Long interval) {
             this.putQueryParameter("Interval", interval);
             this.interval = interval;
+            return this;
+        }
+
+        /**
+         * ReferenceId.
+         */
+        public Builder referenceId(String referenceId) {
+            this.putQueryParameter("ReferenceId", referenceId);
+            this.referenceId = referenceId;
             return this;
         }
 

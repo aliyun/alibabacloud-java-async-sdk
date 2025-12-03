@@ -34,6 +34,10 @@ public class SubmitTranscodeJobsRequest extends Request {
     private String priority;
 
     @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ReferenceId")
+    private String referenceId;
+
+    @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("SessionId")
     private String sessionId;
 
@@ -56,6 +60,7 @@ public class SubmitTranscodeJobsRequest extends Request {
         this.overrideParams = builder.overrideParams;
         this.pipelineId = builder.pipelineId;
         this.priority = builder.priority;
+        this.referenceId = builder.referenceId;
         this.sessionId = builder.sessionId;
         this.templateGroupId = builder.templateGroupId;
         this.userData = builder.userData;
@@ -104,6 +109,13 @@ public class SubmitTranscodeJobsRequest extends Request {
     }
 
     /**
+     * @return referenceId
+     */
+    public String getReferenceId() {
+        return this.referenceId;
+    }
+
+    /**
      * @return sessionId
      */
     public String getSessionId() {
@@ -136,6 +148,7 @@ public class SubmitTranscodeJobsRequest extends Request {
         private String overrideParams; 
         private String pipelineId; 
         private String priority; 
+        private String referenceId; 
         private String sessionId; 
         private String templateGroupId; 
         private String userData; 
@@ -151,6 +164,7 @@ public class SubmitTranscodeJobsRequest extends Request {
             this.overrideParams = request.overrideParams;
             this.pipelineId = request.pipelineId;
             this.priority = request.priority;
+            this.referenceId = request.referenceId;
             this.sessionId = request.sessionId;
             this.templateGroupId = request.templateGroupId;
             this.userData = request.userData;
@@ -218,6 +232,15 @@ public class SubmitTranscodeJobsRequest extends Request {
         public Builder priority(String priority) {
             this.putQueryParameter("Priority", priority);
             this.priority = priority;
+            return this;
+        }
+
+        /**
+         * ReferenceId.
+         */
+        public Builder referenceId(String referenceId) {
+            this.putQueryParameter("ReferenceId", referenceId);
+            this.referenceId = referenceId;
             return this;
         }
 

@@ -1179,6 +1179,9 @@ public class SearchMediaResponseBody extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("PreprocessStatus")
         private String preprocessStatus;
 
+        @com.aliyun.core.annotation.NameInMap("ReferenceId")
+        private String referenceId;
+
         @com.aliyun.core.annotation.NameInMap("RestoreExpiration")
         private String restoreExpiration;
 
@@ -1225,6 +1228,7 @@ public class SearchMediaResponseBody extends TeaModel {
             this.mediaSource = builder.mediaSource;
             this.modificationTime = builder.modificationTime;
             this.preprocessStatus = builder.preprocessStatus;
+            this.referenceId = builder.referenceId;
             this.restoreExpiration = builder.restoreExpiration;
             this.restoreStatus = builder.restoreStatus;
             this.size = builder.size;
@@ -1331,6 +1335,13 @@ public class SearchMediaResponseBody extends TeaModel {
         }
 
         /**
+         * @return referenceId
+         */
+        public String getReferenceId() {
+            return this.referenceId;
+        }
+
+        /**
          * @return restoreExpiration
          */
         public String getRestoreExpiration() {
@@ -1420,6 +1431,7 @@ public class SearchMediaResponseBody extends TeaModel {
             private String mediaSource; 
             private String modificationTime; 
             private String preprocessStatus; 
+            private String referenceId; 
             private String restoreExpiration; 
             private String restoreStatus; 
             private Long size; 
@@ -1448,6 +1460,7 @@ public class SearchMediaResponseBody extends TeaModel {
                 this.mediaSource = model.mediaSource;
                 this.modificationTime = model.modificationTime;
                 this.preprocessStatus = model.preprocessStatus;
+                this.referenceId = model.referenceId;
                 this.restoreExpiration = model.restoreExpiration;
                 this.restoreStatus = model.restoreStatus;
                 this.size = model.size;
@@ -1606,6 +1619,14 @@ public class SearchMediaResponseBody extends TeaModel {
              */
             public Builder preprocessStatus(String preprocessStatus) {
                 this.preprocessStatus = preprocessStatus;
+                return this;
+            }
+
+            /**
+             * ReferenceId.
+             */
+            public Builder referenceId(String referenceId) {
+                this.referenceId = referenceId;
                 return this;
             }
 
@@ -2123,6 +2144,9 @@ public class SearchMediaResponseBody extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("PreprocessStatus")
         private String preprocessStatus;
 
+        @com.aliyun.core.annotation.NameInMap("ReferenceId")
+        private String referenceId;
+
         @com.aliyun.core.annotation.NameInMap("RestoreExpiration")
         private String restoreExpiration;
 
@@ -2171,6 +2195,7 @@ public class SearchMediaResponseBody extends TeaModel {
             this.mediaSource = builder.mediaSource;
             this.modificationTime = builder.modificationTime;
             this.preprocessStatus = builder.preprocessStatus;
+            this.referenceId = builder.referenceId;
             this.restoreExpiration = builder.restoreExpiration;
             this.restoreStatus = builder.restoreStatus;
             this.size = builder.size;
@@ -2271,6 +2296,13 @@ public class SearchMediaResponseBody extends TeaModel {
         }
 
         /**
+         * @return referenceId
+         */
+        public String getReferenceId() {
+            return this.referenceId;
+        }
+
+        /**
          * @return restoreExpiration
          */
         public String getRestoreExpiration() {
@@ -2366,6 +2398,7 @@ public class SearchMediaResponseBody extends TeaModel {
             private String mediaSource; 
             private String modificationTime; 
             private String preprocessStatus; 
+            private String referenceId; 
             private String restoreExpiration; 
             private String restoreStatus; 
             private Long size; 
@@ -2394,6 +2427,7 @@ public class SearchMediaResponseBody extends TeaModel {
                 this.mediaSource = model.mediaSource;
                 this.modificationTime = model.modificationTime;
                 this.preprocessStatus = model.preprocessStatus;
+                this.referenceId = model.referenceId;
                 this.restoreExpiration = model.restoreExpiration;
                 this.restoreStatus = model.restoreStatus;
                 this.size = model.size;
@@ -2542,6 +2576,14 @@ public class SearchMediaResponseBody extends TeaModel {
              */
             public Builder preprocessStatus(String preprocessStatus) {
                 this.preprocessStatus = preprocessStatus;
+                return this;
+            }
+
+            /**
+             * ReferenceId.
+             */
+            public Builder referenceId(String referenceId) {
+                this.referenceId = referenceId;
                 return this;
             }
 

@@ -50,6 +50,10 @@ public class GetPlayInfoRequest extends Request {
     private String reAuthInfo;
 
     @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ReferenceId")
+    private String referenceId;
+
+    @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("ResultType")
     private String resultType;
 
@@ -63,7 +67,6 @@ public class GetPlayInfoRequest extends Request {
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("VideoId")
-    @com.aliyun.core.annotation.Validation(required = true)
     private String videoId;
 
     private GetPlayInfoRequest(Builder builder) {
@@ -76,6 +79,7 @@ public class GetPlayInfoRequest extends Request {
         this.outputType = builder.outputType;
         this.playConfig = builder.playConfig;
         this.reAuthInfo = builder.reAuthInfo;
+        this.referenceId = builder.referenceId;
         this.resultType = builder.resultType;
         this.streamType = builder.streamType;
         this.trace = builder.trace;
@@ -152,6 +156,13 @@ public class GetPlayInfoRequest extends Request {
     }
 
     /**
+     * @return referenceId
+     */
+    public String getReferenceId() {
+        return this.referenceId;
+    }
+
+    /**
      * @return resultType
      */
     public String getResultType() {
@@ -188,6 +199,7 @@ public class GetPlayInfoRequest extends Request {
         private String outputType; 
         private String playConfig; 
         private String reAuthInfo; 
+        private String referenceId; 
         private String resultType; 
         private String streamType; 
         private String trace; 
@@ -207,6 +219,7 @@ public class GetPlayInfoRequest extends Request {
             this.outputType = request.outputType;
             this.playConfig = request.playConfig;
             this.reAuthInfo = request.reAuthInfo;
+            this.referenceId = request.referenceId;
             this.resultType = request.resultType;
             this.streamType = request.streamType;
             this.trace = request.trace;
@@ -376,6 +389,15 @@ public class GetPlayInfoRequest extends Request {
         }
 
         /**
+         * ReferenceId.
+         */
+        public Builder referenceId(String referenceId) {
+            this.putQueryParameter("ReferenceId", referenceId);
+            this.referenceId = referenceId;
+            return this;
+        }
+
+        /**
          * <p>The type of the data to return. Default value: Single. Valid values:</p>
          * <ul>
          * <li><strong>Single</strong>: Only one latest transcoded stream is returned for each quality and format.</li>
@@ -431,7 +453,6 @@ public class GetPlayInfoRequest extends Request {
          * <li>Obtain the value of the VideoId parameter in the response to the <a href="https://help.aliyun.com/document_detail/55407.html">CreateUploadVideo</a> operation that you called to upload the audio or video file.</li>
          * <li>Obtain the value of VideoId by calling the <a href="https://help.aliyun.com/document_detail/86044.html">SearchMedia</a> operation. This method is applicable to files that have been uploaded.</li>
          * </ul>
-         * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
          * <p>93ab850b4f654b6e91d24d81d44****</p>

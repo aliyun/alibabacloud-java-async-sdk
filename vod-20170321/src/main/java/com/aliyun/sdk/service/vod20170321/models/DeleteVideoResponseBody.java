@@ -20,6 +20,9 @@ public class DeleteVideoResponseBody extends TeaModel {
     @com.aliyun.core.annotation.NameInMap("ForbiddenVideoIds")
     private java.util.List<String> forbiddenVideoIds;
 
+    @com.aliyun.core.annotation.NameInMap("NonExistReferenceIds")
+    private java.util.List<String> nonExistReferenceIds;
+
     @com.aliyun.core.annotation.NameInMap("NonExistVideoIds")
     private java.util.List<String> nonExistVideoIds;
 
@@ -28,6 +31,7 @@ public class DeleteVideoResponseBody extends TeaModel {
 
     private DeleteVideoResponseBody(Builder builder) {
         this.forbiddenVideoIds = builder.forbiddenVideoIds;
+        this.nonExistReferenceIds = builder.nonExistReferenceIds;
         this.nonExistVideoIds = builder.nonExistVideoIds;
         this.requestId = builder.requestId;
     }
@@ -52,6 +56,13 @@ public class DeleteVideoResponseBody extends TeaModel {
     }
 
     /**
+     * @return nonExistReferenceIds
+     */
+    public java.util.List<String> getNonExistReferenceIds() {
+        return this.nonExistReferenceIds;
+    }
+
+    /**
      * @return nonExistVideoIds
      */
     public java.util.List<String> getNonExistVideoIds() {
@@ -67,6 +78,7 @@ public class DeleteVideoResponseBody extends TeaModel {
 
     public static final class Builder {
         private java.util.List<String> forbiddenVideoIds; 
+        private java.util.List<String> nonExistReferenceIds; 
         private java.util.List<String> nonExistVideoIds; 
         private String requestId; 
 
@@ -75,6 +87,7 @@ public class DeleteVideoResponseBody extends TeaModel {
 
         private Builder(DeleteVideoResponseBody model) {
             this.forbiddenVideoIds = model.forbiddenVideoIds;
+            this.nonExistReferenceIds = model.nonExistReferenceIds;
             this.nonExistVideoIds = model.nonExistVideoIds;
             this.requestId = model.requestId;
         } 
@@ -87,6 +100,14 @@ public class DeleteVideoResponseBody extends TeaModel {
          */
         public Builder forbiddenVideoIds(java.util.List<String> forbiddenVideoIds) {
             this.forbiddenVideoIds = forbiddenVideoIds;
+            return this;
+        }
+
+        /**
+         * NonExistReferenceIds.
+         */
+        public Builder nonExistReferenceIds(java.util.List<String> nonExistReferenceIds) {
+            this.nonExistReferenceIds = nonExistReferenceIds;
             return this;
         }
 

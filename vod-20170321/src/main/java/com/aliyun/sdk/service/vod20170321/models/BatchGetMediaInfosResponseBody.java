@@ -26,6 +26,9 @@ public class BatchGetMediaInfosResponseBody extends TeaModel {
     @com.aliyun.core.annotation.NameInMap("NonExistMediaIds")
     private java.util.List<String> nonExistMediaIds;
 
+    @com.aliyun.core.annotation.NameInMap("NonExistReferenceIds")
+    private java.util.List<String> nonExistReferenceIds;
+
     @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
@@ -33,6 +36,7 @@ public class BatchGetMediaInfosResponseBody extends TeaModel {
         this.forbiddenMediaIds = builder.forbiddenMediaIds;
         this.mediaInfos = builder.mediaInfos;
         this.nonExistMediaIds = builder.nonExistMediaIds;
+        this.nonExistReferenceIds = builder.nonExistReferenceIds;
         this.requestId = builder.requestId;
     }
 
@@ -70,6 +74,13 @@ public class BatchGetMediaInfosResponseBody extends TeaModel {
     }
 
     /**
+     * @return nonExistReferenceIds
+     */
+    public java.util.List<String> getNonExistReferenceIds() {
+        return this.nonExistReferenceIds;
+    }
+
+    /**
      * @return requestId
      */
     public String getRequestId() {
@@ -80,6 +91,7 @@ public class BatchGetMediaInfosResponseBody extends TeaModel {
         private java.util.List<String> forbiddenMediaIds; 
         private java.util.List<MediaInfos> mediaInfos; 
         private java.util.List<String> nonExistMediaIds; 
+        private java.util.List<String> nonExistReferenceIds; 
         private String requestId; 
 
         private Builder() {
@@ -89,6 +101,7 @@ public class BatchGetMediaInfosResponseBody extends TeaModel {
             this.forbiddenMediaIds = model.forbiddenMediaIds;
             this.mediaInfos = model.mediaInfos;
             this.nonExistMediaIds = model.nonExistMediaIds;
+            this.nonExistReferenceIds = model.nonExistReferenceIds;
             this.requestId = model.requestId;
         } 
 
@@ -113,6 +126,14 @@ public class BatchGetMediaInfosResponseBody extends TeaModel {
          */
         public Builder nonExistMediaIds(java.util.List<String> nonExistMediaIds) {
             this.nonExistMediaIds = nonExistMediaIds;
+            return this;
+        }
+
+        /**
+         * NonExistReferenceIds.
+         */
+        public Builder nonExistReferenceIds(java.util.List<String> nonExistReferenceIds) {
+            this.nonExistReferenceIds = nonExistReferenceIds;
             return this;
         }
 
@@ -167,6 +188,9 @@ public class BatchGetMediaInfosResponseBody extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("ModificationTime")
         private String modificationTime;
 
+        @com.aliyun.core.annotation.NameInMap("ReferenceId")
+        private String referenceId;
+
         @com.aliyun.core.annotation.NameInMap("RestoreExpiration")
         private String restoreExpiration;
 
@@ -207,6 +231,7 @@ public class BatchGetMediaInfosResponseBody extends TeaModel {
             this.downloadSwitch = builder.downloadSwitch;
             this.mediaId = builder.mediaId;
             this.modificationTime = builder.modificationTime;
+            this.referenceId = builder.referenceId;
             this.restoreExpiration = builder.restoreExpiration;
             this.restoreStatus = builder.restoreStatus;
             this.snapshots = builder.snapshots;
@@ -291,6 +316,13 @@ public class BatchGetMediaInfosResponseBody extends TeaModel {
         }
 
         /**
+         * @return referenceId
+         */
+        public String getReferenceId() {
+            return this.referenceId;
+        }
+
+        /**
          * @return restoreExpiration
          */
         public String getRestoreExpiration() {
@@ -370,6 +402,7 @@ public class BatchGetMediaInfosResponseBody extends TeaModel {
             private String downloadSwitch; 
             private String mediaId; 
             private String modificationTime; 
+            private String referenceId; 
             private String restoreExpiration; 
             private String restoreStatus; 
             private java.util.List<String> snapshots; 
@@ -394,6 +427,7 @@ public class BatchGetMediaInfosResponseBody extends TeaModel {
                 this.downloadSwitch = model.downloadSwitch;
                 this.mediaId = model.mediaId;
                 this.modificationTime = model.modificationTime;
+                this.referenceId = model.referenceId;
                 this.restoreExpiration = model.restoreExpiration;
                 this.restoreStatus = model.restoreStatus;
                 this.snapshots = model.snapshots;
@@ -506,6 +540,14 @@ public class BatchGetMediaInfosResponseBody extends TeaModel {
              */
             public Builder modificationTime(String modificationTime) {
                 this.modificationTime = modificationTime;
+                return this;
+            }
+
+            /**
+             * ReferenceId.
+             */
+            public Builder referenceId(String referenceId) {
+                this.referenceId = referenceId;
                 return this;
             }
 

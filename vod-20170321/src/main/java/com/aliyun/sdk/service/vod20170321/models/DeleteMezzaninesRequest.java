@@ -22,13 +22,17 @@ public class DeleteMezzaninesRequest extends Request {
     private Boolean force;
 
     @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ReferenceIds")
+    private String referenceIds;
+
+    @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("VideoIds")
-    @com.aliyun.core.annotation.Validation(required = true)
     private String videoIds;
 
     private DeleteMezzaninesRequest(Builder builder) {
         super(builder);
         this.force = builder.force;
+        this.referenceIds = builder.referenceIds;
         this.videoIds = builder.videoIds;
     }
 
@@ -53,6 +57,13 @@ public class DeleteMezzaninesRequest extends Request {
     }
 
     /**
+     * @return referenceIds
+     */
+    public String getReferenceIds() {
+        return this.referenceIds;
+    }
+
+    /**
      * @return videoIds
      */
     public String getVideoIds() {
@@ -61,6 +72,7 @@ public class DeleteMezzaninesRequest extends Request {
 
     public static final class Builder extends Request.Builder<DeleteMezzaninesRequest, Builder> {
         private Boolean force; 
+        private String referenceIds; 
         private String videoIds; 
 
         private Builder() {
@@ -70,6 +82,7 @@ public class DeleteMezzaninesRequest extends Request {
         private Builder(DeleteMezzaninesRequest request) {
             super(request);
             this.force = request.force;
+            this.referenceIds = request.referenceIds;
             this.videoIds = request.videoIds;
         } 
 
@@ -93,13 +106,21 @@ public class DeleteMezzaninesRequest extends Request {
         }
 
         /**
+         * ReferenceIds.
+         */
+        public Builder referenceIds(String referenceIds) {
+            this.putQueryParameter("ReferenceIds", referenceIds);
+            this.referenceIds = referenceIds;
+            return this;
+        }
+
+        /**
          * <p>The IDs of audio or video files whose source files that you want to delete. You can specify up to 20 IDs. Separate multiple IDs with commas (,). You can use one of the following methods to obtain the ID:</p>
          * <ul>
          * <li>After you upload a video in the <a href="https://vod.console.aliyun.com">ApsaraVideo VOD console</a>, you can log on to the ApsaraVideo VOD console and choose <strong>Media Files</strong> &gt; <strong>Audio/Video</strong> to view the ID of the video.</li>
          * <li>Obtain the value of VideoId from the response to the <a href="https://help.aliyun.com/document_detail/55407.html">CreateUploadVideo</a> operation that you called to obtain the upload URL and credential.</li>
          * <li>Obtain the value of VideoId from the response to the <a href="https://help.aliyun.com/document_detail/86044.html">SearchMedia</a> operation that you called to query media information after the audio or video file is uploaded.</li>
          * </ul>
-         * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
          * <p>23ab850b4f654b6e91d24d8157****,93ab850b4f6f4b6e91d24d81d4****</p>

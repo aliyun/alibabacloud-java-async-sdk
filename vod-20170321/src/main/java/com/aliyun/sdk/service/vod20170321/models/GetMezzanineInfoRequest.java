@@ -30,8 +30,11 @@ public class GetMezzanineInfoRequest extends Request {
     private String outputType;
 
     @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ReferenceId")
+    private String referenceId;
+
+    @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("VideoId")
-    @com.aliyun.core.annotation.Validation(required = true)
     private String videoId;
 
     private GetMezzanineInfoRequest(Builder builder) {
@@ -39,6 +42,7 @@ public class GetMezzanineInfoRequest extends Request {
         this.additionType = builder.additionType;
         this.authTimeout = builder.authTimeout;
         this.outputType = builder.outputType;
+        this.referenceId = builder.referenceId;
         this.videoId = builder.videoId;
     }
 
@@ -77,6 +81,13 @@ public class GetMezzanineInfoRequest extends Request {
     }
 
     /**
+     * @return referenceId
+     */
+    public String getReferenceId() {
+        return this.referenceId;
+    }
+
+    /**
      * @return videoId
      */
     public String getVideoId() {
@@ -87,6 +98,7 @@ public class GetMezzanineInfoRequest extends Request {
         private String additionType; 
         private Long authTimeout; 
         private String outputType; 
+        private String referenceId; 
         private String videoId; 
 
         private Builder() {
@@ -98,6 +110,7 @@ public class GetMezzanineInfoRequest extends Request {
             this.additionType = request.additionType;
             this.authTimeout = request.authTimeout;
             this.outputType = request.outputType;
+            this.referenceId = request.referenceId;
             this.videoId = request.videoId;
         } 
 
@@ -171,8 +184,16 @@ public class GetMezzanineInfoRequest extends Request {
         }
 
         /**
+         * ReferenceId.
+         */
+        public Builder referenceId(String referenceId) {
+            this.putQueryParameter("ReferenceId", referenceId);
+            this.referenceId = referenceId;
+            return this;
+        }
+
+        /**
          * <p>The ID of the video.</p>
-         * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
          * <p>1f1a6fc03ca04814031b8a6559e****</p>

@@ -34,6 +34,10 @@ public class GetVideoListRequest extends Request {
     private Integer pageSize;
 
     @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ReferenceIds")
+    private String referenceIds;
+
+    @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("SortBy")
     private String sortBy;
 
@@ -55,6 +59,7 @@ public class GetVideoListRequest extends Request {
         this.endTime = builder.endTime;
         this.pageNo = builder.pageNo;
         this.pageSize = builder.pageSize;
+        this.referenceIds = builder.referenceIds;
         this.sortBy = builder.sortBy;
         this.startTime = builder.startTime;
         this.status = builder.status;
@@ -103,6 +108,13 @@ public class GetVideoListRequest extends Request {
     }
 
     /**
+     * @return referenceIds
+     */
+    public String getReferenceIds() {
+        return this.referenceIds;
+    }
+
+    /**
      * @return sortBy
      */
     public String getSortBy() {
@@ -135,6 +147,7 @@ public class GetVideoListRequest extends Request {
         private String endTime; 
         private Integer pageNo; 
         private Integer pageSize; 
+        private String referenceIds; 
         private String sortBy; 
         private String startTime; 
         private String status; 
@@ -150,6 +163,7 @@ public class GetVideoListRequest extends Request {
             this.endTime = request.endTime;
             this.pageNo = request.pageNo;
             this.pageSize = request.pageSize;
+            this.referenceIds = request.referenceIds;
             this.sortBy = request.sortBy;
             this.startTime = request.startTime;
             this.status = request.status;
@@ -206,6 +220,15 @@ public class GetVideoListRequest extends Request {
         public Builder pageSize(Integer pageSize) {
             this.putQueryParameter("PageSize", pageSize);
             this.pageSize = pageSize;
+            return this;
+        }
+
+        /**
+         * ReferenceIds.
+         */
+        public Builder referenceIds(String referenceIds) {
+            this.putQueryParameter("ReferenceIds", referenceIds);
+            this.referenceIds = referenceIds;
             return this;
         }
 

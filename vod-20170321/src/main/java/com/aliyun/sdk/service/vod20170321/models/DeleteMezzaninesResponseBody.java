@@ -17,6 +17,9 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>DeleteMezzaninesResponseBody</p>
  */
 public class DeleteMezzaninesResponseBody extends TeaModel {
+    @com.aliyun.core.annotation.NameInMap("NonExistReferenceIds")
+    private java.util.List<String> nonExistReferenceIds;
+
     @com.aliyun.core.annotation.NameInMap("NonExistVideoIds")
     private java.util.List<String> nonExistVideoIds;
 
@@ -27,6 +30,7 @@ public class DeleteMezzaninesResponseBody extends TeaModel {
     private java.util.List<String> unRemoveableVideoIds;
 
     private DeleteMezzaninesResponseBody(Builder builder) {
+        this.nonExistReferenceIds = builder.nonExistReferenceIds;
         this.nonExistVideoIds = builder.nonExistVideoIds;
         this.requestId = builder.requestId;
         this.unRemoveableVideoIds = builder.unRemoveableVideoIds;
@@ -42,6 +46,13 @@ public class DeleteMezzaninesResponseBody extends TeaModel {
 
     public Builder toBuilder() {
         return new Builder(this);
+    }
+
+    /**
+     * @return nonExistReferenceIds
+     */
+    public java.util.List<String> getNonExistReferenceIds() {
+        return this.nonExistReferenceIds;
     }
 
     /**
@@ -66,6 +77,7 @@ public class DeleteMezzaninesResponseBody extends TeaModel {
     }
 
     public static final class Builder {
+        private java.util.List<String> nonExistReferenceIds; 
         private java.util.List<String> nonExistVideoIds; 
         private String requestId; 
         private java.util.List<String> unRemoveableVideoIds; 
@@ -74,10 +86,19 @@ public class DeleteMezzaninesResponseBody extends TeaModel {
         } 
 
         private Builder(DeleteMezzaninesResponseBody model) {
+            this.nonExistReferenceIds = model.nonExistReferenceIds;
             this.nonExistVideoIds = model.nonExistVideoIds;
             this.requestId = model.requestId;
             this.unRemoveableVideoIds = model.unRemoveableVideoIds;
         } 
+
+        /**
+         * NonExistReferenceIds.
+         */
+        public Builder nonExistReferenceIds(java.util.List<String> nonExistReferenceIds) {
+            this.nonExistReferenceIds = nonExistReferenceIds;
+            return this;
+        }
 
         /**
          * <p>The IDs of the audio or video files that do not exist.</p>

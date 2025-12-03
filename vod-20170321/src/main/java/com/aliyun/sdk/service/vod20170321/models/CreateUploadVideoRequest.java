@@ -43,6 +43,10 @@ public class CreateUploadVideoRequest extends Request {
     private Long fileSize;
 
     @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ReferenceId")
+    private String referenceId;
+
+    @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("StorageLocation")
     private String storageLocation;
 
@@ -75,6 +79,7 @@ public class CreateUploadVideoRequest extends Request {
         this.description = builder.description;
         this.fileName = builder.fileName;
         this.fileSize = builder.fileSize;
+        this.referenceId = builder.referenceId;
         this.storageLocation = builder.storageLocation;
         this.tags = builder.tags;
         this.templateGroupId = builder.templateGroupId;
@@ -139,6 +144,13 @@ public class CreateUploadVideoRequest extends Request {
     }
 
     /**
+     * @return referenceId
+     */
+    public String getReferenceId() {
+        return this.referenceId;
+    }
+
+    /**
      * @return storageLocation
      */
     public String getStorageLocation() {
@@ -187,6 +199,7 @@ public class CreateUploadVideoRequest extends Request {
         private String description; 
         private String fileName; 
         private Long fileSize; 
+        private String referenceId; 
         private String storageLocation; 
         private String tags; 
         private String templateGroupId; 
@@ -206,6 +219,7 @@ public class CreateUploadVideoRequest extends Request {
             this.description = request.description;
             this.fileName = request.fileName;
             this.fileSize = request.fileSize;
+            this.referenceId = request.referenceId;
             this.storageLocation = request.storageLocation;
             this.tags = request.tags;
             this.templateGroupId = request.templateGroupId;
@@ -297,6 +311,15 @@ public class CreateUploadVideoRequest extends Request {
         public Builder fileSize(Long fileSize) {
             this.putQueryParameter("FileSize", fileSize);
             this.fileSize = fileSize;
+            return this;
+        }
+
+        /**
+         * ReferenceId.
+         */
+        public Builder referenceId(String referenceId) {
+            this.putQueryParameter("ReferenceId", referenceId);
+            this.referenceId = referenceId;
             return this;
         }
 
