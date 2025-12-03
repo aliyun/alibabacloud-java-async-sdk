@@ -77,6 +77,9 @@ public class DescribeNetworkInterfaceAttributeResponseBody extends TeaModel {
     @com.aliyun.core.annotation.NameInMap("PrivateIpSets")
     private PrivateIpSets privateIpSets;
 
+    @com.aliyun.core.annotation.NameInMap("QoSConfig")
+    private QoSConfig qoSConfig;
+
     @com.aliyun.core.annotation.NameInMap("QueueNumber")
     private Integer queueNumber;
 
@@ -146,6 +149,7 @@ public class DescribeNetworkInterfaceAttributeResponseBody extends TeaModel {
         this.ownerId = builder.ownerId;
         this.privateIpAddress = builder.privateIpAddress;
         this.privateIpSets = builder.privateIpSets;
+        this.qoSConfig = builder.qoSConfig;
         this.queueNumber = builder.queueNumber;
         this.queuePairNumber = builder.queuePairNumber;
         this.requestId = builder.requestId;
@@ -317,6 +321,13 @@ public class DescribeNetworkInterfaceAttributeResponseBody extends TeaModel {
     }
 
     /**
+     * @return qoSConfig
+     */
+    public QoSConfig getQoSConfig() {
+        return this.qoSConfig;
+    }
+
+    /**
      * @return queueNumber
      */
     public Integer getQueueNumber() {
@@ -449,6 +460,7 @@ public class DescribeNetworkInterfaceAttributeResponseBody extends TeaModel {
         private String ownerId; 
         private String privateIpAddress; 
         private PrivateIpSets privateIpSets; 
+        private QoSConfig qoSConfig; 
         private Integer queueNumber; 
         private Integer queuePairNumber; 
         private String requestId; 
@@ -490,6 +502,7 @@ public class DescribeNetworkInterfaceAttributeResponseBody extends TeaModel {
             this.ownerId = model.ownerId;
             this.privateIpAddress = model.privateIpAddress;
             this.privateIpSets = model.privateIpSets;
+            this.qoSConfig = model.qoSConfig;
             this.queueNumber = model.queueNumber;
             this.queuePairNumber = model.queuePairNumber;
             this.requestId = model.requestId;
@@ -717,6 +730,14 @@ public class DescribeNetworkInterfaceAttributeResponseBody extends TeaModel {
          */
         public Builder privateIpSets(PrivateIpSets privateIpSets) {
             this.privateIpSets = privateIpSets;
+            return this;
+        }
+
+        /**
+         * QoSConfig.
+         */
+        public Builder qoSConfig(QoSConfig qoSConfig) {
+            this.qoSConfig = qoSConfig;
             return this;
         }
 
@@ -2390,6 +2411,219 @@ public class DescribeNetworkInterfaceAttributeResponseBody extends TeaModel {
 
             public PrivateIpSets build() {
                 return new PrivateIpSets(this);
+            } 
+
+        } 
+
+    }
+    /**
+     * 
+     * {@link DescribeNetworkInterfaceAttributeResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeNetworkInterfaceAttributeResponseBody</p>
+     */
+    public static class QoS extends TeaModel {
+        @com.aliyun.core.annotation.NameInMap("BandwidthRx")
+        private Long bandwidthRx;
+
+        @com.aliyun.core.annotation.NameInMap("BandwidthTx")
+        private Long bandwidthTx;
+
+        @com.aliyun.core.annotation.NameInMap("ConcurrentConnections")
+        private Long concurrentConnections;
+
+        @com.aliyun.core.annotation.NameInMap("PpsRx")
+        private Long ppsRx;
+
+        @com.aliyun.core.annotation.NameInMap("PpsTx")
+        private Long ppsTx;
+
+        private QoS(Builder builder) {
+            this.bandwidthRx = builder.bandwidthRx;
+            this.bandwidthTx = builder.bandwidthTx;
+            this.concurrentConnections = builder.concurrentConnections;
+            this.ppsRx = builder.ppsRx;
+            this.ppsTx = builder.ppsTx;
+        }
+
+        public static Builder builder() {
+            return new Builder();
+        }
+
+        public static QoS create() {
+            return builder().build();
+        }
+
+        /**
+         * @return bandwidthRx
+         */
+        public Long getBandwidthRx() {
+            return this.bandwidthRx;
+        }
+
+        /**
+         * @return bandwidthTx
+         */
+        public Long getBandwidthTx() {
+            return this.bandwidthTx;
+        }
+
+        /**
+         * @return concurrentConnections
+         */
+        public Long getConcurrentConnections() {
+            return this.concurrentConnections;
+        }
+
+        /**
+         * @return ppsRx
+         */
+        public Long getPpsRx() {
+            return this.ppsRx;
+        }
+
+        /**
+         * @return ppsTx
+         */
+        public Long getPpsTx() {
+            return this.ppsTx;
+        }
+
+        public static final class Builder {
+            private Long bandwidthRx; 
+            private Long bandwidthTx; 
+            private Long concurrentConnections; 
+            private Long ppsRx; 
+            private Long ppsTx; 
+
+            private Builder() {
+            } 
+
+            private Builder(QoS model) {
+                this.bandwidthRx = model.bandwidthRx;
+                this.bandwidthTx = model.bandwidthTx;
+                this.concurrentConnections = model.concurrentConnections;
+                this.ppsRx = model.ppsRx;
+                this.ppsTx = model.ppsTx;
+            } 
+
+            /**
+             * BandwidthRx.
+             */
+            public Builder bandwidthRx(Long bandwidthRx) {
+                this.bandwidthRx = bandwidthRx;
+                return this;
+            }
+
+            /**
+             * BandwidthTx.
+             */
+            public Builder bandwidthTx(Long bandwidthTx) {
+                this.bandwidthTx = bandwidthTx;
+                return this;
+            }
+
+            /**
+             * ConcurrentConnections.
+             */
+            public Builder concurrentConnections(Long concurrentConnections) {
+                this.concurrentConnections = concurrentConnections;
+                return this;
+            }
+
+            /**
+             * PpsRx.
+             */
+            public Builder ppsRx(Long ppsRx) {
+                this.ppsRx = ppsRx;
+                return this;
+            }
+
+            /**
+             * PpsTx.
+             */
+            public Builder ppsTx(Long ppsTx) {
+                this.ppsTx = ppsTx;
+                return this;
+            }
+
+            public QoS build() {
+                return new QoS(this);
+            } 
+
+        } 
+
+    }
+    /**
+     * 
+     * {@link DescribeNetworkInterfaceAttributeResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeNetworkInterfaceAttributeResponseBody</p>
+     */
+    public static class QoSConfig extends TeaModel {
+        @com.aliyun.core.annotation.NameInMap("EnableQoS")
+        private Boolean enableQoS;
+
+        @com.aliyun.core.annotation.NameInMap("QoS")
+        private QoS qoS;
+
+        private QoSConfig(Builder builder) {
+            this.enableQoS = builder.enableQoS;
+            this.qoS = builder.qoS;
+        }
+
+        public static Builder builder() {
+            return new Builder();
+        }
+
+        public static QoSConfig create() {
+            return builder().build();
+        }
+
+        /**
+         * @return enableQoS
+         */
+        public Boolean getEnableQoS() {
+            return this.enableQoS;
+        }
+
+        /**
+         * @return qoS
+         */
+        public QoS getQoS() {
+            return this.qoS;
+        }
+
+        public static final class Builder {
+            private Boolean enableQoS; 
+            private QoS qoS; 
+
+            private Builder() {
+            } 
+
+            private Builder(QoSConfig model) {
+                this.enableQoS = model.enableQoS;
+                this.qoS = model.qoS;
+            } 
+
+            /**
+             * EnableQoS.
+             */
+            public Builder enableQoS(Boolean enableQoS) {
+                this.enableQoS = enableQoS;
+                return this;
+            }
+
+            /**
+             * QoS.
+             */
+            public Builder qoS(QoS qoS) {
+                this.qoS = qoS;
+                return this;
+            }
+
+            public QoSConfig build() {
+                return new QoSConfig(this);
             } 
 
         } 

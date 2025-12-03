@@ -2651,6 +2651,12 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<DisableDiskEncryptionByDefaultResponse> disableDiskEncryptionByDefault(DisableDiskEncryptionByDefaultRequest request);
 
     /**
+     * @param request the request parameters of DisableNetworkInterfaceQoS  DisableNetworkInterfaceQoSRequest
+     * @return DisableNetworkInterfaceQoSResponse
+     */
+    CompletableFuture<DisableNetworkInterfaceQoSResponse> disableNetworkInterfaceQoS(DisableNetworkInterfaceQoSRequest request);
+
+    /**
      * <b>description</b> :
      * <blockquote>
      * <p> The Account-level EBS Default Encryption feature is available only in specific regions and to specific users. To use the feature, <a href="https://smartservice.console.aliyun.com/service/create-ticket-intl">submit a ticket</a>.</p>
@@ -2679,6 +2685,12 @@ public interface AsyncClient extends SdkAutoCloseable {
      * @return EnableDiskEncryptionByDefaultResponse
      */
     CompletableFuture<EnableDiskEncryptionByDefaultResponse> enableDiskEncryptionByDefault(EnableDiskEncryptionByDefaultRequest request);
+
+    /**
+     * @param request the request parameters of EnableNetworkInterfaceQoS  EnableNetworkInterfaceQoSRequest
+     * @return EnableNetworkInterfaceQoSResponse
+     */
+    CompletableFuture<EnableNetworkInterfaceQoSResponse> enableNetworkInterfaceQoS(EnableNetworkInterfaceQoSRequest request);
 
     /**
      * @deprecated OpenAPI EnablePhysicalConnection is deprecated, please use Vpc::2016-04-28::EnablePhysicalConnection instead.  * @param request  the request parameters of EnablePhysicalConnection  EnablePhysicalConnectionRequest

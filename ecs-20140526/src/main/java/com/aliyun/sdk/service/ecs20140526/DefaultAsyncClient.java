@@ -5515,6 +5515,24 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
+     * @param request the request parameters of DisableNetworkInterfaceQoS  DisableNetworkInterfaceQoSRequest
+     * @return DisableNetworkInterfaceQoSResponse
+     */
+    @Override
+    public CompletableFuture<DisableNetworkInterfaceQoSResponse> disableNetworkInterfaceQoS(DisableNetworkInterfaceQoSRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RPC).setAction("DisableNetworkInterfaceQoS").setMethod(HttpMethod.POST).setPathRegex("/").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(DisableNetworkInterfaceQoSResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<DisableNetworkInterfaceQoSResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
      * <b>description</b> :
      * <blockquote>
      * <p> The Account-level EBS Default Encryption feature is available only in specific regions and to specific users. To use the feature, <a href="https://smartservice.console.aliyun.com/service/create-ticket-intl">submit a ticket</a>.</p>
@@ -5551,6 +5569,24 @@ public final class DefaultAsyncClient implements AsyncClient {
             return this.handler.execute(params);
         } catch (Exception e) {
             CompletableFuture<EnableDiskEncryptionByDefaultResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
+     * @param request the request parameters of EnableNetworkInterfaceQoS  EnableNetworkInterfaceQoSRequest
+     * @return EnableNetworkInterfaceQoSResponse
+     */
+    @Override
+    public CompletableFuture<EnableNetworkInterfaceQoSResponse> enableNetworkInterfaceQoS(EnableNetworkInterfaceQoSRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RPC).setAction("EnableNetworkInterfaceQoS").setMethod(HttpMethod.POST).setPathRegex("/").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(EnableNetworkInterfaceQoSResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<EnableNetworkInterfaceQoSResponse> future = new CompletableFuture<>();
             future.completeExceptionally(e);
             return future;
         }
