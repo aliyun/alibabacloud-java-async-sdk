@@ -239,6 +239,15 @@ public class ListCacheRulesResponseBody extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("IncludeHeader")
         private String includeHeader;
 
+        @com.aliyun.core.annotation.NameInMap("PostBodyCacheKey")
+        private String postBodyCacheKey;
+
+        @com.aliyun.core.annotation.NameInMap("PostBodySizeLimit")
+        private String postBodySizeLimit;
+
+        @com.aliyun.core.annotation.NameInMap("PostCache")
+        private String postCache;
+
         @com.aliyun.core.annotation.NameInMap("QueryString")
         private String queryString;
 
@@ -291,6 +300,9 @@ public class ListCacheRulesResponseBody extends TeaModel {
             this.edgeStatusCodeCacheTtl = builder.edgeStatusCodeCacheTtl;
             this.includeCookie = builder.includeCookie;
             this.includeHeader = builder.includeHeader;
+            this.postBodyCacheKey = builder.postBodyCacheKey;
+            this.postBodySizeLimit = builder.postBodySizeLimit;
+            this.postCache = builder.postCache;
             this.queryString = builder.queryString;
             this.queryStringMode = builder.queryStringMode;
             this.rule = builder.rule;
@@ -419,6 +431,27 @@ public class ListCacheRulesResponseBody extends TeaModel {
         }
 
         /**
+         * @return postBodyCacheKey
+         */
+        public String getPostBodyCacheKey() {
+            return this.postBodyCacheKey;
+        }
+
+        /**
+         * @return postBodySizeLimit
+         */
+        public String getPostBodySizeLimit() {
+            return this.postBodySizeLimit;
+        }
+
+        /**
+         * @return postCache
+         */
+        public String getPostCache() {
+            return this.postCache;
+        }
+
+        /**
          * @return queryString
          */
         public String getQueryString() {
@@ -518,6 +551,9 @@ public class ListCacheRulesResponseBody extends TeaModel {
             private String edgeStatusCodeCacheTtl; 
             private String includeCookie; 
             private String includeHeader; 
+            private String postBodyCacheKey; 
+            private String postBodySizeLimit; 
+            private String postCache; 
             private String queryString; 
             private String queryStringMode; 
             private String rule; 
@@ -550,6 +586,9 @@ public class ListCacheRulesResponseBody extends TeaModel {
                 this.edgeStatusCodeCacheTtl = model.edgeStatusCodeCacheTtl;
                 this.includeCookie = model.includeCookie;
                 this.includeHeader = model.includeHeader;
+                this.postBodyCacheKey = model.postBodyCacheKey;
+                this.postBodySizeLimit = model.postBodySizeLimit;
+                this.postCache = model.postCache;
                 this.queryString = model.queryString;
                 this.queryStringMode = model.queryStringMode;
                 this.rule = model.rule;
@@ -753,6 +792,30 @@ public class ListCacheRulesResponseBody extends TeaModel {
              */
             public Builder includeHeader(String includeHeader) {
                 this.includeHeader = includeHeader;
+                return this;
+            }
+
+            /**
+             * PostBodyCacheKey.
+             */
+            public Builder postBodyCacheKey(String postBodyCacheKey) {
+                this.postBodyCacheKey = postBodyCacheKey;
+                return this;
+            }
+
+            /**
+             * PostBodySizeLimit.
+             */
+            public Builder postBodySizeLimit(String postBodySizeLimit) {
+                this.postBodySizeLimit = postBodySizeLimit;
+                return this;
+            }
+
+            /**
+             * PostCache.
+             */
+            public Builder postCache(String postCache) {
+                this.postCache = postCache;
                 return this;
             }
 
