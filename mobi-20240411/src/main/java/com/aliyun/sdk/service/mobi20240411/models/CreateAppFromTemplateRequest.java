@@ -22,6 +22,10 @@ public class CreateAppFromTemplateRequest extends Request {
     private String actualParameters;
 
     @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("AgentId")
+    private String agentId;
+
+    @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("ConnectionsContent")
     private String connectionsContent;
 
@@ -68,6 +72,7 @@ public class CreateAppFromTemplateRequest extends Request {
     private CreateAppFromTemplateRequest(Builder builder) {
         super(builder);
         this.actualParameters = builder.actualParameters;
+        this.agentId = builder.agentId;
         this.connectionsContent = builder.connectionsContent;
         this.databasesContent = builder.databasesContent;
         this.description = builder.description;
@@ -98,6 +103,13 @@ public class CreateAppFromTemplateRequest extends Request {
      */
     public String getActualParameters() {
         return this.actualParameters;
+    }
+
+    /**
+     * @return agentId
+     */
+    public String getAgentId() {
+        return this.agentId;
     }
 
     /**
@@ -172,6 +184,7 @@ public class CreateAppFromTemplateRequest extends Request {
 
     public static final class Builder extends Request.Builder<CreateAppFromTemplateRequest, Builder> {
         private String actualParameters; 
+        private String agentId; 
         private String connectionsContent; 
         private String databasesContent; 
         private String description; 
@@ -190,6 +203,7 @@ public class CreateAppFromTemplateRequest extends Request {
         private Builder(CreateAppFromTemplateRequest request) {
             super(request);
             this.actualParameters = request.actualParameters;
+            this.agentId = request.agentId;
             this.connectionsContent = request.connectionsContent;
             this.databasesContent = request.databasesContent;
             this.description = request.description;
@@ -208,6 +222,15 @@ public class CreateAppFromTemplateRequest extends Request {
         public Builder actualParameters(String actualParameters) {
             this.putQueryParameter("ActualParameters", actualParameters);
             this.actualParameters = actualParameters;
+            return this;
+        }
+
+        /**
+         * AgentId.
+         */
+        public Builder agentId(String agentId) {
+            this.putQueryParameter("AgentId", agentId);
+            this.agentId = agentId;
             return this;
         }
 
