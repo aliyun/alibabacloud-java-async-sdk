@@ -22,13 +22,25 @@ public class CreateMetaCategoryRequest extends Request {
     private String regionId;
 
     @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Description")
+    private String description;
+
+    @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("Name")
     @com.aliyun.core.annotation.Validation(required = true)
     private String name;
 
     @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("OwnerIds")
+    private java.util.List<Long> ownerIds;
+
+    @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("ParentCategoryId")
     private Long parentCategoryId;
+
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Remark")
+    private String remark;
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("Tid")
@@ -38,8 +50,11 @@ public class CreateMetaCategoryRequest extends Request {
     private CreateMetaCategoryRequest(Builder builder) {
         super(builder);
         this.regionId = builder.regionId;
+        this.description = builder.description;
         this.name = builder.name;
+        this.ownerIds = builder.ownerIds;
         this.parentCategoryId = builder.parentCategoryId;
+        this.remark = builder.remark;
         this.tid = builder.tid;
     }
 
@@ -64,6 +79,13 @@ public class CreateMetaCategoryRequest extends Request {
     }
 
     /**
+     * @return description
+     */
+    public String getDescription() {
+        return this.description;
+    }
+
+    /**
      * @return name
      */
     public String getName() {
@@ -71,10 +93,24 @@ public class CreateMetaCategoryRequest extends Request {
     }
 
     /**
+     * @return ownerIds
+     */
+    public java.util.List<Long> getOwnerIds() {
+        return this.ownerIds;
+    }
+
+    /**
      * @return parentCategoryId
      */
     public Long getParentCategoryId() {
         return this.parentCategoryId;
+    }
+
+    /**
+     * @return remark
+     */
+    public String getRemark() {
+        return this.remark;
     }
 
     /**
@@ -86,8 +122,11 @@ public class CreateMetaCategoryRequest extends Request {
 
     public static final class Builder extends Request.Builder<CreateMetaCategoryRequest, Builder> {
         private String regionId; 
+        private String description; 
         private String name; 
+        private java.util.List<Long> ownerIds; 
         private Long parentCategoryId; 
+        private String remark; 
         private Long tid; 
 
         private Builder() {
@@ -97,8 +136,11 @@ public class CreateMetaCategoryRequest extends Request {
         private Builder(CreateMetaCategoryRequest request) {
             super(request);
             this.regionId = request.regionId;
+            this.description = request.description;
             this.name = request.name;
+            this.ownerIds = request.ownerIds;
             this.parentCategoryId = request.parentCategoryId;
+            this.remark = request.remark;
             this.tid = request.tid;
         } 
 
@@ -108,6 +150,15 @@ public class CreateMetaCategoryRequest extends Request {
         public Builder regionId(String regionId) {
             this.putHostParameter("RegionId", regionId);
             this.regionId = regionId;
+            return this;
+        }
+
+        /**
+         * Description.
+         */
+        public Builder description(String description) {
+            this.putQueryParameter("Description", description);
+            this.description = description;
             return this;
         }
 
@@ -125,6 +176,16 @@ public class CreateMetaCategoryRequest extends Request {
         }
 
         /**
+         * OwnerIds.
+         */
+        public Builder ownerIds(java.util.List<Long> ownerIds) {
+            String ownerIdsShrink = shrink(ownerIds, "OwnerIds", "json");
+            this.putQueryParameter("OwnerIds", ownerIdsShrink);
+            this.ownerIds = ownerIds;
+            return this;
+        }
+
+        /**
          * <p>The ID of the parent category. The new category is created under this parent category. If this value is left empty, the new category is of the first level.</p>
          * 
          * <strong>example:</strong>
@@ -133,6 +194,15 @@ public class CreateMetaCategoryRequest extends Request {
         public Builder parentCategoryId(Long parentCategoryId) {
             this.putQueryParameter("ParentCategoryId", parentCategoryId);
             this.parentCategoryId = parentCategoryId;
+            return this;
+        }
+
+        /**
+         * Remark.
+         */
+        public Builder remark(String remark) {
+            this.putQueryParameter("Remark", remark);
+            this.remark = remark;
             return this;
         }
 

@@ -27,8 +27,20 @@ public class UpdateMetaCategoryRequest extends Request {
     private Long categoryId;
 
     @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Description")
+    private String description;
+
+    @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("Name")
     private String name;
+
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("OwnerIds")
+    private java.util.List<Long> ownerIds;
+
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Remark")
+    private String remark;
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("Tid")
@@ -39,7 +51,10 @@ public class UpdateMetaCategoryRequest extends Request {
         super(builder);
         this.regionId = builder.regionId;
         this.categoryId = builder.categoryId;
+        this.description = builder.description;
         this.name = builder.name;
+        this.ownerIds = builder.ownerIds;
+        this.remark = builder.remark;
         this.tid = builder.tid;
     }
 
@@ -71,10 +86,31 @@ public class UpdateMetaCategoryRequest extends Request {
     }
 
     /**
+     * @return description
+     */
+    public String getDescription() {
+        return this.description;
+    }
+
+    /**
      * @return name
      */
     public String getName() {
         return this.name;
+    }
+
+    /**
+     * @return ownerIds
+     */
+    public java.util.List<Long> getOwnerIds() {
+        return this.ownerIds;
+    }
+
+    /**
+     * @return remark
+     */
+    public String getRemark() {
+        return this.remark;
     }
 
     /**
@@ -87,7 +123,10 @@ public class UpdateMetaCategoryRequest extends Request {
     public static final class Builder extends Request.Builder<UpdateMetaCategoryRequest, Builder> {
         private String regionId; 
         private Long categoryId; 
+        private String description; 
         private String name; 
+        private java.util.List<Long> ownerIds; 
+        private String remark; 
         private Long tid; 
 
         private Builder() {
@@ -98,7 +137,10 @@ public class UpdateMetaCategoryRequest extends Request {
             super(request);
             this.regionId = request.regionId;
             this.categoryId = request.categoryId;
+            this.description = request.description;
             this.name = request.name;
+            this.ownerIds = request.ownerIds;
+            this.remark = request.remark;
             this.tid = request.tid;
         } 
 
@@ -125,11 +167,39 @@ public class UpdateMetaCategoryRequest extends Request {
         }
 
         /**
+         * Description.
+         */
+        public Builder description(String description) {
+            this.putQueryParameter("Description", description);
+            this.description = description;
+            return this;
+        }
+
+        /**
          * <p>The updated name of the category.</p>
          */
         public Builder name(String name) {
             this.putQueryParameter("Name", name);
             this.name = name;
+            return this;
+        }
+
+        /**
+         * OwnerIds.
+         */
+        public Builder ownerIds(java.util.List<Long> ownerIds) {
+            String ownerIdsShrink = shrink(ownerIds, "OwnerIds", "json");
+            this.putQueryParameter("OwnerIds", ownerIdsShrink);
+            this.ownerIds = ownerIds;
+            return this;
+        }
+
+        /**
+         * Remark.
+         */
+        public Builder remark(String remark) {
+            this.putQueryParameter("Remark", remark);
+            this.remark = remark;
             return this;
         }
 

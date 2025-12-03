@@ -26,18 +26,34 @@ public class MetaCategory extends TeaModel {
     @com.aliyun.core.annotation.NameInMap("Depth")
     private Integer depth;
 
+    @com.aliyun.core.annotation.NameInMap("Description")
+    private String description;
+
     @com.aliyun.core.annotation.NameInMap("Name")
     private String name;
 
+    @com.aliyun.core.annotation.NameInMap("OwnerIds")
+    private java.util.List<Long> ownerIds;
+
+    @com.aliyun.core.annotation.NameInMap("OwnerNickNames")
+    private java.util.List<String> ownerNickNames;
+
     @com.aliyun.core.annotation.NameInMap("ParentCategoryId")
     private Long parentCategoryId;
+
+    @com.aliyun.core.annotation.NameInMap("Remark")
+    private String remark;
 
     private MetaCategory(Builder builder) {
         this.categoryId = builder.categoryId;
         this.createTime = builder.createTime;
         this.depth = builder.depth;
+        this.description = builder.description;
         this.name = builder.name;
+        this.ownerIds = builder.ownerIds;
+        this.ownerNickNames = builder.ownerNickNames;
         this.parentCategoryId = builder.parentCategoryId;
+        this.remark = builder.remark;
     }
 
     public static Builder builder() {
@@ -74,10 +90,31 @@ public class MetaCategory extends TeaModel {
     }
 
     /**
+     * @return description
+     */
+    public String getDescription() {
+        return this.description;
+    }
+
+    /**
      * @return name
      */
     public String getName() {
         return this.name;
+    }
+
+    /**
+     * @return ownerIds
+     */
+    public java.util.List<Long> getOwnerIds() {
+        return this.ownerIds;
+    }
+
+    /**
+     * @return ownerNickNames
+     */
+    public java.util.List<String> getOwnerNickNames() {
+        return this.ownerNickNames;
     }
 
     /**
@@ -87,12 +124,23 @@ public class MetaCategory extends TeaModel {
         return this.parentCategoryId;
     }
 
+    /**
+     * @return remark
+     */
+    public String getRemark() {
+        return this.remark;
+    }
+
     public static final class Builder {
         private Long categoryId; 
         private String createTime; 
         private Integer depth; 
+        private String description; 
         private String name; 
+        private java.util.List<Long> ownerIds; 
+        private java.util.List<String> ownerNickNames; 
         private Long parentCategoryId; 
+        private String remark; 
 
         private Builder() {
         } 
@@ -101,8 +149,12 @@ public class MetaCategory extends TeaModel {
             this.categoryId = model.categoryId;
             this.createTime = model.createTime;
             this.depth = model.depth;
+            this.description = model.description;
             this.name = model.name;
+            this.ownerIds = model.ownerIds;
+            this.ownerNickNames = model.ownerNickNames;
             this.parentCategoryId = model.parentCategoryId;
+            this.remark = model.remark;
         } 
 
         /**
@@ -130,6 +182,14 @@ public class MetaCategory extends TeaModel {
         }
 
         /**
+         * Description.
+         */
+        public Builder description(String description) {
+            this.description = description;
+            return this;
+        }
+
+        /**
          * Name.
          */
         public Builder name(String name) {
@@ -138,10 +198,34 @@ public class MetaCategory extends TeaModel {
         }
 
         /**
+         * OwnerIds.
+         */
+        public Builder ownerIds(java.util.List<Long> ownerIds) {
+            this.ownerIds = ownerIds;
+            return this;
+        }
+
+        /**
+         * OwnerNickNames.
+         */
+        public Builder ownerNickNames(java.util.List<String> ownerNickNames) {
+            this.ownerNickNames = ownerNickNames;
+            return this;
+        }
+
+        /**
          * ParentCategoryId.
          */
         public Builder parentCategoryId(Long parentCategoryId) {
             this.parentCategoryId = parentCategoryId;
+            return this;
+        }
+
+        /**
+         * Remark.
+         */
+        public Builder remark(String remark) {
+            this.remark = remark;
             return this;
         }
 
