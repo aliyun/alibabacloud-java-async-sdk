@@ -64,6 +64,10 @@ public class Message2ThirdChannel extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return setBadge
      */
@@ -137,6 +141,21 @@ public class Message2ThirdChannel extends TeaModel {
         private String sound; 
         private String text; 
         private String title; 
+
+        private Builder() {
+        } 
+
+        private Builder(Message2ThirdChannel model) {
+            this.setBadge = model.setBadge;
+            this.addBadge = model.addBadge;
+            this.bigBody = model.bigBody;
+            this.bigTitle = model.bigTitle;
+            this.expandImage = model.expandImage;
+            this.img = model.img;
+            this.sound = model.sound;
+            this.text = model.text;
+            this.title = model.title;
+        } 
 
         /**
          * SetBadge.

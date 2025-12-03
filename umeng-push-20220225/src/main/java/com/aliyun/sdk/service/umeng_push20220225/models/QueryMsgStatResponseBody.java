@@ -52,6 +52,10 @@ public class QueryMsgStatResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return code
      */
@@ -101,6 +105,18 @@ public class QueryMsgStatResponseBody extends TeaModel {
         private String message; 
         private String requestId; 
         private Boolean success; 
+
+        private Builder() {
+        } 
+
+        private Builder(QueryMsgStatResponseBody model) {
+            this.code = model.code;
+            this.data = model.data;
+            this.httpStatusCode = model.httpStatusCode;
+            this.message = model.message;
+            this.requestId = model.requestId;
+            this.success = model.success;
+        } 
 
         /**
          * Code.
@@ -271,6 +287,20 @@ public class QueryMsgStatResponseBody extends TeaModel {
             private Long open; 
             private Long sent; 
             private Integer status; 
+
+            private Builder() {
+            } 
+
+            private Builder(Data model) {
+                this.accept = model.accept;
+                this.arrive = model.arrive;
+                this.closePush = model.closePush;
+                this.dismiss = model.dismiss;
+                this.msgId = model.msgId;
+                this.open = model.open;
+                this.sent = model.sent;
+                this.status = model.status;
+            } 
 
             /**
              * Accept.

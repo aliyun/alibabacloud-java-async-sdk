@@ -101,6 +101,10 @@ public class Body extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return activity
      */
@@ -238,6 +242,29 @@ public class Body extends TeaModel {
         private String text; 
         private String title; 
         private String url; 
+
+        private Builder() {
+        } 
+
+        private Builder(Body model) {
+            this.activity = model.activity;
+            this.addBadge = model.addBadge;
+            this.afterOpen = model.afterOpen;
+            this.builderId = model.builderId;
+            this.custom = model.custom;
+            this.expandImage = model.expandImage;
+            this.icon = model.icon;
+            this.img = model.img;
+            this.playLights = model.playLights;
+            this.playSound = model.playSound;
+            this.playVibrate = model.playVibrate;
+            this.rePop = model.rePop;
+            this.setBadge = model.setBadge;
+            this.sound = model.sound;
+            this.text = model.text;
+            this.title = model.title;
+            this.url = model.url;
+        } 
 
         /**
          * activity.

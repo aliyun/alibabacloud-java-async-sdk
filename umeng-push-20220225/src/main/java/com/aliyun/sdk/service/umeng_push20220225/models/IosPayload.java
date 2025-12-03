@@ -36,6 +36,10 @@ public class IosPayload extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return aps
      */
@@ -53,6 +57,14 @@ public class IosPayload extends TeaModel {
     public static final class Builder {
         private Aps aps; 
         private java.util.Map<String, ?> extra; 
+
+        private Builder() {
+        } 
+
+        private Builder(IosPayload model) {
+            this.aps = model.aps;
+            this.extra = model.extra;
+        } 
 
         /**
          * aps.

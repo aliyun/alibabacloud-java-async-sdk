@@ -36,6 +36,10 @@ public class AndroidShortPayload extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return body
      */
@@ -53,6 +57,14 @@ public class AndroidShortPayload extends TeaModel {
     public static final class Builder {
         private AndroidShortPayloadBody body; 
         private java.util.Map<String, ?> extra; 
+
+        private Builder() {
+        } 
+
+        private Builder(AndroidShortPayload model) {
+            this.body = model.body;
+            this.extra = model.extra;
+        } 
 
         /**
          * body.
@@ -107,6 +119,13 @@ public class AndroidShortPayload extends TeaModel {
 
         public static final class Builder {
             private String custom; 
+
+            private Builder() {
+            } 
+
+            private Builder(AndroidShortPayloadBody model) {
+                this.custom = model.custom;
+            } 
 
             /**
              * custom.

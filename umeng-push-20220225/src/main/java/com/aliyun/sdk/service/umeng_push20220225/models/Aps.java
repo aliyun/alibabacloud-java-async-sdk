@@ -56,6 +56,10 @@ public class Aps extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return alert
      */
@@ -113,6 +117,19 @@ public class Aps extends TeaModel {
         private String interruptionLevel; 
         private String sound; 
         private String threadID; 
+
+        private Builder() {
+        } 
+
+        private Builder(Aps model) {
+            this.alert = model.alert;
+            this.badge = model.badge;
+            this.category = model.category;
+            this.contentAvailable = model.contentAvailable;
+            this.interruptionLevel = model.interruptionLevel;
+            this.sound = model.sound;
+            this.threadID = model.threadID;
+        } 
 
         /**
          * alert.

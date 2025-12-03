@@ -51,6 +51,10 @@ public class Policy extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return channelStrategy
      */
@@ -92,6 +96,17 @@ public class Policy extends TeaModel {
         private String outerBizNo; 
         private Integer speed; 
         private String startTime; 
+
+        private Builder() {
+        } 
+
+        private Builder(Policy model) {
+            this.channelStrategy = model.channelStrategy;
+            this.expireTime = model.expireTime;
+            this.outerBizNo = model.outerBizNo;
+            this.speed = model.speed;
+            this.startTime = model.startTime;
+        } 
 
         /**
          * channelStrategy.

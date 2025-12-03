@@ -96,6 +96,10 @@ public class ChannelProperties extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return channelActivity
      */
@@ -225,6 +229,28 @@ public class ChannelProperties extends TeaModel {
         private String vivoCategory; 
         private String vivoPushMode; 
         private String xiaomiChannelId; 
+
+        private Builder() {
+        } 
+
+        private Builder(ChannelProperties model) {
+            this.channelActivity = model.channelActivity;
+            this.channelFcm = model.channelFcm;
+            this.harmonyChannelCategory = model.harmonyChannelCategory;
+            this.huaweiChannelCategory = model.huaweiChannelCategory;
+            this.huaweiChannelImportance = model.huaweiChannelImportance;
+            this.huaweiMessageUrgency = model.huaweiMessageUrgency;
+            this.mainActivity = model.mainActivity;
+            this.oppoCategory = model.oppoCategory;
+            this.oppoChannelId = model.oppoChannelId;
+            this.oppoNotifyLevel = model.oppoNotifyLevel;
+            this.useHuaweiMessage = model.useHuaweiMessage;
+            this.useHuaweiPlainMessage = model.useHuaweiPlainMessage;
+            this.vivoAddBadge = model.vivoAddBadge;
+            this.vivoCategory = model.vivoCategory;
+            this.vivoPushMode = model.vivoPushMode;
+            this.xiaomiChannelId = model.xiaomiChannelId;
+        } 
 
         /**
          * channelActivity.

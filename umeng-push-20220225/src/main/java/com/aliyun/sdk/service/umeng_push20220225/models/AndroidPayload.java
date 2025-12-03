@@ -44,6 +44,10 @@ public class AndroidPayload extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return body
      */
@@ -77,6 +81,16 @@ public class AndroidPayload extends TeaModel {
         private String displayType; 
         private java.util.Map<String, ?> extra; 
         private Message2ThirdChannel message2ThirdChannel; 
+
+        private Builder() {
+        } 
+
+        private Builder(AndroidPayload model) {
+            this.body = model.body;
+            this.displayType = model.displayType;
+            this.extra = model.extra;
+            this.message2ThirdChannel = model.message2ThirdChannel;
+        } 
 
         /**
          * body.

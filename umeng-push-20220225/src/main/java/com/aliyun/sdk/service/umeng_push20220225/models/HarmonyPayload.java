@@ -41,6 +41,10 @@ public class HarmonyPayload extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return displayType
      */
@@ -66,6 +70,15 @@ public class HarmonyPayload extends TeaModel {
         private String displayType; 
         private java.util.Map<String, ?> extra; 
         private HarmonyBody harmonyBody; 
+
+        private Builder() {
+        } 
+
+        private Builder(HarmonyPayload model) {
+            this.displayType = model.displayType;
+            this.extra = model.extra;
+            this.harmonyBody = model.harmonyBody;
+        } 
 
         /**
          * <p>This parameter is required.</p>

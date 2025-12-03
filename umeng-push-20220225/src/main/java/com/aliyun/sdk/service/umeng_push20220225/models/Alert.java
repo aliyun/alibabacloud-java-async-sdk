@@ -40,6 +40,10 @@ public class Alert extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return body
      */
@@ -65,6 +69,15 @@ public class Alert extends TeaModel {
         private String body; 
         private String subtitle; 
         private String title; 
+
+        private Builder() {
+        } 
+
+        private Builder(Alert model) {
+            this.body = model.body;
+            this.subtitle = model.subtitle;
+            this.title = model.title;
+        } 
 
         /**
          * body.

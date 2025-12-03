@@ -68,6 +68,10 @@ public class HarmonyBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return action
      */
@@ -149,6 +153,22 @@ public class HarmonyBody extends TeaModel {
         private String text; 
         private String title; 
         private String uri; 
+
+        private Builder() {
+        } 
+
+        private Builder(HarmonyBody model) {
+            this.action = model.action;
+            this.addBadge = model.addBadge;
+            this.afterOpen = model.afterOpen;
+            this.bigBody = model.bigBody;
+            this.custom = model.custom;
+            this.img = model.img;
+            this.largeIcon = model.largeIcon;
+            this.text = model.text;
+            this.title = model.title;
+            this.uri = model.uri;
+        } 
 
         /**
          * action.
