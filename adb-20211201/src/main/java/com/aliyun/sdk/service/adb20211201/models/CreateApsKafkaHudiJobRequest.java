@@ -40,6 +40,10 @@ public class CreateApsKafkaHudiJobRequest extends Request {
     private String DBClusterId;
 
     @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("DataFormatType")
+    private String dataFormatType;
+
+    @com.aliyun.core.annotation.Body
     @com.aliyun.core.annotation.NameInMap("DataOutputFormat")
     private String dataOutputFormat;
 
@@ -145,6 +149,7 @@ public class CreateApsKafkaHudiJobRequest extends Request {
         this.advancedConfig = builder.advancedConfig;
         this.columns = builder.columns;
         this.DBClusterId = builder.DBClusterId;
+        this.dataFormatType = builder.dataFormatType;
         this.dataOutputFormat = builder.dataOutputFormat;
         this.datasourceId = builder.datasourceId;
         this.dbName = builder.dbName;
@@ -216,6 +221,13 @@ public class CreateApsKafkaHudiJobRequest extends Request {
      */
     public String getDBClusterId() {
         return this.DBClusterId;
+    }
+
+    /**
+     * @return dataFormatType
+     */
+    public String getDataFormatType() {
+        return this.dataFormatType;
     }
 
     /**
@@ -385,6 +397,7 @@ public class CreateApsKafkaHudiJobRequest extends Request {
         private String advancedConfig; 
         private java.util.List<Columns> columns; 
         private String DBClusterId; 
+        private String dataFormatType; 
         private String dataOutputFormat; 
         private Long datasourceId; 
         private String dbName; 
@@ -420,6 +433,7 @@ public class CreateApsKafkaHudiJobRequest extends Request {
             this.advancedConfig = request.advancedConfig;
             this.columns = request.columns;
             this.DBClusterId = request.DBClusterId;
+            this.dataFormatType = request.dataFormatType;
             this.dataOutputFormat = request.dataOutputFormat;
             this.datasourceId = request.datasourceId;
             this.dbName = request.dbName;
@@ -507,6 +521,15 @@ public class CreateApsKafkaHudiJobRequest extends Request {
         public Builder DBClusterId(String DBClusterId) {
             this.putBodyParameter("DBClusterId", DBClusterId);
             this.DBClusterId = DBClusterId;
+            return this;
+        }
+
+        /**
+         * DataFormatType.
+         */
+        public Builder dataFormatType(String dataFormatType) {
+            this.putBodyParameter("DataFormatType", dataFormatType);
+            this.dataFormatType = dataFormatType;
             return this;
         }
 
