@@ -36,6 +36,10 @@ public class DescribeCouponListResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return coupons
      */
@@ -53,6 +57,14 @@ public class DescribeCouponListResponseBody extends TeaModel {
     public static final class Builder {
         private Coupons coupons; 
         private String requestId; 
+
+        private Builder() {
+        } 
+
+        private Builder(DescribeCouponListResponseBody model) {
+            this.coupons = model.coupons;
+            this.requestId = model.requestId;
+        } 
 
         /**
          * Coupons.
@@ -108,6 +120,13 @@ public class DescribeCouponListResponseBody extends TeaModel {
         public static final class Builder {
             private java.util.List<String> productCode; 
 
+            private Builder() {
+            } 
+
+            private Builder(ProductCodes model) {
+                this.productCode = model.productCode;
+            } 
+
             /**
              * ProductCode.
              */
@@ -154,6 +173,13 @@ public class DescribeCouponListResponseBody extends TeaModel {
 
         public static final class Builder {
             private java.util.List<String> tradeType; 
+
+            private Builder() {
+            } 
+
+            private Builder(TradeTypes model) {
+                this.tradeType = model.tradeType;
+            } 
 
             /**
              * TradeType.
@@ -382,6 +408,28 @@ public class DescribeCouponListResponseBody extends TeaModel {
             private String totalAmount; 
             private TradeTypes tradeTypes; 
 
+            private Builder() {
+            } 
+
+            private Builder(Coupon model) {
+                this.application = model.application;
+                this.balanceAmount = model.balanceAmount;
+                this.couponNumber = model.couponNumber;
+                this.couponTemplateId = model.couponTemplateId;
+                this.creationTime = model.creationTime;
+                this.deliveryTime = model.deliveryTime;
+                this.description = model.description;
+                this.expiredAmount = model.expiredAmount;
+                this.expiredTime = model.expiredTime;
+                this.frozenAmount = model.frozenAmount;
+                this.modificationTime = model.modificationTime;
+                this.priceLimit = model.priceLimit;
+                this.productCodes = model.productCodes;
+                this.status = model.status;
+                this.totalAmount = model.totalAmount;
+                this.tradeTypes = model.tradeTypes;
+            } 
+
             /**
              * Application.
              */
@@ -548,6 +596,13 @@ public class DescribeCouponListResponseBody extends TeaModel {
 
         public static final class Builder {
             private java.util.List<Coupon> coupon; 
+
+            private Builder() {
+            } 
+
+            private Builder(Coupons model) {
+                this.coupon = model.coupon;
+            } 
 
             /**
              * Coupon.

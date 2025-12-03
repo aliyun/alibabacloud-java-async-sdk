@@ -68,6 +68,10 @@ public class DescribeCashDetailResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return amountOwed
      */
@@ -149,6 +153,22 @@ public class DescribeCashDetailResponseBody extends TeaModel {
         private Long miniAlertThreshold; 
         private String remmitanceAmount; 
         private String requestId; 
+
+        private Builder() {
+        } 
+
+        private Builder(DescribeCashDetailResponseBody model) {
+            this.amountOwed = model.amountOwed;
+            this.availableCredit = model.availableCredit;
+            this.balanceAmount = model.balanceAmount;
+            this.creditCardAmount = model.creditCardAmount;
+            this.creditLimit = model.creditLimit;
+            this.enableThresholdAlert = model.enableThresholdAlert;
+            this.frozenAmount = model.frozenAmount;
+            this.miniAlertThreshold = model.miniAlertThreshold;
+            this.remmitanceAmount = model.remmitanceAmount;
+            this.requestId = model.requestId;
+        } 
 
         /**
          * AmountOwed.
