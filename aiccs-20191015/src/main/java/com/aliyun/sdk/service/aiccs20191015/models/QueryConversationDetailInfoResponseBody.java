@@ -308,6 +308,9 @@ public class QueryConversationDetailInfoResponseBody extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Required")
         private Boolean required;
 
+        @com.aliyun.core.annotation.NameInMap("Source")
+        private String source;
+
         @com.aliyun.core.annotation.NameInMap("Value")
         private String value;
 
@@ -316,6 +319,7 @@ public class QueryConversationDetailInfoResponseBody extends TeaModel {
             this.key = builder.key;
             this.name = builder.name;
             this.required = builder.required;
+            this.source = builder.source;
             this.value = builder.value;
         }
 
@@ -356,6 +360,13 @@ public class QueryConversationDetailInfoResponseBody extends TeaModel {
         }
 
         /**
+         * @return source
+         */
+        public String getSource() {
+            return this.source;
+        }
+
+        /**
          * @return value
          */
         public String getValue() {
@@ -367,6 +378,7 @@ public class QueryConversationDetailInfoResponseBody extends TeaModel {
             private String key; 
             private String name; 
             private Boolean required; 
+            private String source; 
             private String value; 
 
             private Builder() {
@@ -377,6 +389,7 @@ public class QueryConversationDetailInfoResponseBody extends TeaModel {
                 this.key = model.key;
                 this.name = model.name;
                 this.required = model.required;
+                this.source = model.source;
                 this.value = model.value;
             } 
 
@@ -409,6 +422,14 @@ public class QueryConversationDetailInfoResponseBody extends TeaModel {
              */
             public Builder required(Boolean required) {
                 this.required = required;
+                return this;
+            }
+
+            /**
+             * Source.
+             */
+            public Builder source(String source) {
+                this.source = source;
                 return this;
             }
 

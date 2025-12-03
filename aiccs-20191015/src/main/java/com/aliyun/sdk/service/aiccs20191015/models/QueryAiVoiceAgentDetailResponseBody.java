@@ -338,6 +338,21 @@ public class QueryAiVoiceAgentDetailResponseBody extends TeaModel {
      * <p>QueryAiVoiceAgentDetailResponseBody</p>
      */
     public static class TtsConfig extends TeaModel {
+        @com.aliyun.core.annotation.NameInMap("BackgroundEnabled")
+        private Boolean backgroundEnabled;
+
+        @com.aliyun.core.annotation.NameInMap("BackgroundSound")
+        private Long backgroundSound;
+
+        @com.aliyun.core.annotation.NameInMap("BackgroundVolume")
+        private Long backgroundVolume;
+
+        @com.aliyun.core.annotation.NameInMap("MixingEnabled")
+        private Boolean mixingEnabled;
+
+        @com.aliyun.core.annotation.NameInMap("MixingTemplate")
+        private Long mixingTemplate;
+
         @com.aliyun.core.annotation.NameInMap("TtsSpeed")
         private Long ttsSpeed;
 
@@ -347,10 +362,23 @@ public class QueryAiVoiceAgentDetailResponseBody extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("TtsVolume")
         private Long ttsVolume;
 
+        @com.aliyun.core.annotation.NameInMap("VoiceCode")
+        private String voiceCode;
+
+        @com.aliyun.core.annotation.NameInMap("VoiceType")
+        private String voiceType;
+
         private TtsConfig(Builder builder) {
+            this.backgroundEnabled = builder.backgroundEnabled;
+            this.backgroundSound = builder.backgroundSound;
+            this.backgroundVolume = builder.backgroundVolume;
+            this.mixingEnabled = builder.mixingEnabled;
+            this.mixingTemplate = builder.mixingTemplate;
             this.ttsSpeed = builder.ttsSpeed;
             this.ttsStyle = builder.ttsStyle;
             this.ttsVolume = builder.ttsVolume;
+            this.voiceCode = builder.voiceCode;
+            this.voiceType = builder.voiceType;
         }
 
         public static Builder builder() {
@@ -359,6 +387,41 @@ public class QueryAiVoiceAgentDetailResponseBody extends TeaModel {
 
         public static TtsConfig create() {
             return builder().build();
+        }
+
+        /**
+         * @return backgroundEnabled
+         */
+        public Boolean getBackgroundEnabled() {
+            return this.backgroundEnabled;
+        }
+
+        /**
+         * @return backgroundSound
+         */
+        public Long getBackgroundSound() {
+            return this.backgroundSound;
+        }
+
+        /**
+         * @return backgroundVolume
+         */
+        public Long getBackgroundVolume() {
+            return this.backgroundVolume;
+        }
+
+        /**
+         * @return mixingEnabled
+         */
+        public Boolean getMixingEnabled() {
+            return this.mixingEnabled;
+        }
+
+        /**
+         * @return mixingTemplate
+         */
+        public Long getMixingTemplate() {
+            return this.mixingTemplate;
         }
 
         /**
@@ -382,19 +445,87 @@ public class QueryAiVoiceAgentDetailResponseBody extends TeaModel {
             return this.ttsVolume;
         }
 
+        /**
+         * @return voiceCode
+         */
+        public String getVoiceCode() {
+            return this.voiceCode;
+        }
+
+        /**
+         * @return voiceType
+         */
+        public String getVoiceType() {
+            return this.voiceType;
+        }
+
         public static final class Builder {
+            private Boolean backgroundEnabled; 
+            private Long backgroundSound; 
+            private Long backgroundVolume; 
+            private Boolean mixingEnabled; 
+            private Long mixingTemplate; 
             private Long ttsSpeed; 
             private String ttsStyle; 
             private Long ttsVolume; 
+            private String voiceCode; 
+            private String voiceType; 
 
             private Builder() {
             } 
 
             private Builder(TtsConfig model) {
+                this.backgroundEnabled = model.backgroundEnabled;
+                this.backgroundSound = model.backgroundSound;
+                this.backgroundVolume = model.backgroundVolume;
+                this.mixingEnabled = model.mixingEnabled;
+                this.mixingTemplate = model.mixingTemplate;
                 this.ttsSpeed = model.ttsSpeed;
                 this.ttsStyle = model.ttsStyle;
                 this.ttsVolume = model.ttsVolume;
+                this.voiceCode = model.voiceCode;
+                this.voiceType = model.voiceType;
             } 
+
+            /**
+             * BackgroundEnabled.
+             */
+            public Builder backgroundEnabled(Boolean backgroundEnabled) {
+                this.backgroundEnabled = backgroundEnabled;
+                return this;
+            }
+
+            /**
+             * BackgroundSound.
+             */
+            public Builder backgroundSound(Long backgroundSound) {
+                this.backgroundSound = backgroundSound;
+                return this;
+            }
+
+            /**
+             * BackgroundVolume.
+             */
+            public Builder backgroundVolume(Long backgroundVolume) {
+                this.backgroundVolume = backgroundVolume;
+                return this;
+            }
+
+            /**
+             * MixingEnabled.
+             */
+            public Builder mixingEnabled(Boolean mixingEnabled) {
+                this.mixingEnabled = mixingEnabled;
+                return this;
+            }
+
+            /**
+             * MixingTemplate.
+             */
+            public Builder mixingTemplate(Long mixingTemplate) {
+                this.mixingTemplate = mixingTemplate;
+                return this;
+            }
 
             /**
              * TtsSpeed.
@@ -417,6 +548,22 @@ public class QueryAiVoiceAgentDetailResponseBody extends TeaModel {
              */
             public Builder ttsVolume(Long ttsVolume) {
                 this.ttsVolume = ttsVolume;
+                return this;
+            }
+
+            /**
+             * VoiceCode.
+             */
+            public Builder voiceCode(String voiceCode) {
+                this.voiceCode = voiceCode;
+                return this;
+            }
+
+            /**
+             * VoiceType.
+             */
+            public Builder voiceType(String voiceType) {
+                this.voiceType = voiceType;
                 return this;
             }
 
@@ -1325,6 +1472,9 @@ public class QueryAiVoiceAgentDetailResponseBody extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("PhoneTagRequired")
         private Boolean phoneTagRequired;
 
+        @com.aliyun.core.annotation.NameInMap("PhoneTagSource")
+        private String phoneTagSource;
+
         @com.aliyun.core.annotation.NameInMap("PhoneTagType")
         private String phoneTagType;
 
@@ -1335,6 +1485,7 @@ public class QueryAiVoiceAgentDetailResponseBody extends TeaModel {
             this.phoneTagKey = builder.phoneTagKey;
             this.phoneTagName = builder.phoneTagName;
             this.phoneTagRequired = builder.phoneTagRequired;
+            this.phoneTagSource = builder.phoneTagSource;
             this.phoneTagType = builder.phoneTagType;
         }
 
@@ -1389,6 +1540,13 @@ public class QueryAiVoiceAgentDetailResponseBody extends TeaModel {
         }
 
         /**
+         * @return phoneTagSource
+         */
+        public String getPhoneTagSource() {
+            return this.phoneTagSource;
+        }
+
+        /**
          * @return phoneTagType
          */
         public String getPhoneTagType() {
@@ -1402,6 +1560,7 @@ public class QueryAiVoiceAgentDetailResponseBody extends TeaModel {
             private String phoneTagKey; 
             private String phoneTagName; 
             private Boolean phoneTagRequired; 
+            private String phoneTagSource; 
             private String phoneTagType; 
 
             private Builder() {
@@ -1414,6 +1573,7 @@ public class QueryAiVoiceAgentDetailResponseBody extends TeaModel {
                 this.phoneTagKey = model.phoneTagKey;
                 this.phoneTagName = model.phoneTagName;
                 this.phoneTagRequired = model.phoneTagRequired;
+                this.phoneTagSource = model.phoneTagSource;
                 this.phoneTagType = model.phoneTagType;
             } 
 
@@ -1462,6 +1622,14 @@ public class QueryAiVoiceAgentDetailResponseBody extends TeaModel {
              */
             public Builder phoneTagRequired(Boolean phoneTagRequired) {
                 this.phoneTagRequired = phoneTagRequired;
+                return this;
+            }
+
+            /**
+             * PhoneTagSource.
+             */
+            public Builder phoneTagSource(String phoneTagSource) {
+                this.phoneTagSource = phoneTagSource;
                 return this;
             }
 
@@ -1544,6 +1712,12 @@ public class QueryAiVoiceAgentDetailResponseBody extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Prologue")
         private String prologue;
 
+        @com.aliyun.core.annotation.NameInMap("RecordingFile")
+        private String recordingFile;
+
+        @com.aliyun.core.annotation.NameInMap("StartWordType")
+        private Long startWordType;
+
         @com.aliyun.core.annotation.NameInMap("SysRole")
         private String sysRole;
 
@@ -1573,6 +1747,8 @@ public class QueryAiVoiceAgentDetailResponseBody extends TeaModel {
             this.outputTagConfig = builder.outputTagConfig;
             this.phoneTagConfig = builder.phoneTagConfig;
             this.prologue = builder.prologue;
+            this.recordingFile = builder.recordingFile;
+            this.startWordType = builder.startWordType;
             this.sysRole = builder.sysRole;
             this.taskType = builder.taskType;
             this.userRole = builder.userRole;
@@ -1720,6 +1896,20 @@ public class QueryAiVoiceAgentDetailResponseBody extends TeaModel {
         }
 
         /**
+         * @return recordingFile
+         */
+        public String getRecordingFile() {
+            return this.recordingFile;
+        }
+
+        /**
+         * @return startWordType
+         */
+        public Long getStartWordType() {
+            return this.startWordType;
+        }
+
+        /**
          * @return sysRole
          */
         public String getSysRole() {
@@ -1760,6 +1950,8 @@ public class QueryAiVoiceAgentDetailResponseBody extends TeaModel {
             private java.util.List<OutputTagConfig> outputTagConfig; 
             private java.util.List<PhoneTagConfig> phoneTagConfig; 
             private String prologue; 
+            private String recordingFile; 
+            private Long startWordType; 
             private String sysRole; 
             private String taskType; 
             private String userRole; 
@@ -1787,6 +1979,8 @@ public class QueryAiVoiceAgentDetailResponseBody extends TeaModel {
                 this.outputTagConfig = model.outputTagConfig;
                 this.phoneTagConfig = model.phoneTagConfig;
                 this.prologue = model.prologue;
+                this.recordingFile = model.recordingFile;
+                this.startWordType = model.startWordType;
                 this.sysRole = model.sysRole;
                 this.taskType = model.taskType;
                 this.userRole = model.userRole;
@@ -1941,6 +2135,22 @@ public class QueryAiVoiceAgentDetailResponseBody extends TeaModel {
              */
             public Builder prologue(String prologue) {
                 this.prologue = prologue;
+                return this;
+            }
+
+            /**
+             * RecordingFile.
+             */
+            public Builder recordingFile(String recordingFile) {
+                this.recordingFile = recordingFile;
+                return this;
+            }
+
+            /**
+             * StartWordType.
+             */
+            public Builder startWordType(Long startWordType) {
+                this.startWordType = startWordType;
                 return this;
             }
 
