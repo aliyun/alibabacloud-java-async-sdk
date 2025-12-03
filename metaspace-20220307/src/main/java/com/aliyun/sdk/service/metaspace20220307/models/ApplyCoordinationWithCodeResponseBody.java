@@ -36,6 +36,10 @@ public class ApplyCoordinationWithCodeResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return data
      */
@@ -53,6 +57,14 @@ public class ApplyCoordinationWithCodeResponseBody extends TeaModel {
     public static final class Builder {
         private Data data; 
         private String requestId; 
+
+        private Builder() {
+        } 
+
+        private Builder(ApplyCoordinationWithCodeResponseBody model) {
+            this.data = model.data;
+            this.requestId = model.requestId;
+        } 
 
         /**
          * Data.
@@ -227,6 +239,23 @@ public class ApplyCoordinationWithCodeResponseBody extends TeaModel {
             private String resourceName; 
             private String resourceRegionId; 
             private String resourceType; 
+
+            private Builder() {
+            } 
+
+            private Builder(Data model) {
+                this.coId = model.coId;
+                this.coordinateStatus = model.coordinateStatus;
+                this.coordinateTicket = model.coordinateTicket;
+                this.coordinatorAliUid = model.coordinatorAliUid;
+                this.coordinatorUserId = model.coordinatorUserId;
+                this.ownerAliUid = model.ownerAliUid;
+                this.ownerUserId = model.ownerUserId;
+                this.resourceId = model.resourceId;
+                this.resourceName = model.resourceName;
+                this.resourceRegionId = model.resourceRegionId;
+                this.resourceType = model.resourceType;
+            } 
 
             /**
              * CoId.

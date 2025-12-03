@@ -36,6 +36,10 @@ public class GenerateCoordinationCodeResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return coordinationCode
      */
@@ -53,6 +57,14 @@ public class GenerateCoordinationCodeResponseBody extends TeaModel {
     public static final class Builder {
         private String coordinationCode; 
         private String requestId; 
+
+        private Builder() {
+        } 
+
+        private Builder(GenerateCoordinationCodeResponseBody model) {
+            this.coordinationCode = model.coordinationCode;
+            this.requestId = model.requestId;
+        } 
 
         /**
          * CoordinationCode.
