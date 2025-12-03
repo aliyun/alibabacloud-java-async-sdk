@@ -36,6 +36,10 @@ public class DescribeDiskWarningLineResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return requestId
      */
@@ -53,6 +57,14 @@ public class DescribeDiskWarningLineResponseBody extends TeaModel {
     public static final class Builder {
         private String requestId; 
         private String warningLine; 
+
+        private Builder() {
+        } 
+
+        private Builder(DescribeDiskWarningLineResponseBody model) {
+            this.requestId = model.requestId;
+            this.warningLine = model.warningLine;
+        } 
 
         /**
          * RequestId.

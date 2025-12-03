@@ -36,6 +36,10 @@ public class UpgradeMinorVersionResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return requestId
      */
@@ -53,6 +57,14 @@ public class UpgradeMinorVersionResponseBody extends TeaModel {
     public static final class Builder {
         private String requestId; 
         private String upgradingComponents; 
+
+        private Builder() {
+        } 
+
+        private Builder(UpgradeMinorVersionResponseBody model) {
+            this.requestId = model.requestId;
+            this.upgradingComponents = model.upgradingComponents;
+        } 
 
         /**
          * RequestId.

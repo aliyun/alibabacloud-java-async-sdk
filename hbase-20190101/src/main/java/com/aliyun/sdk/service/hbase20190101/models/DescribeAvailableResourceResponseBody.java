@@ -36,6 +36,10 @@ public class DescribeAvailableResourceResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return availableZones
      */
@@ -53,6 +57,14 @@ public class DescribeAvailableResourceResponseBody extends TeaModel {
     public static final class Builder {
         private AvailableZones availableZones; 
         private String requestId; 
+
+        private Builder() {
+        } 
+
+        private Builder(DescribeAvailableResourceResponseBody model) {
+            this.availableZones = model.availableZones;
+            this.requestId = model.requestId;
+        } 
 
         /**
          * AvailableZones.
@@ -119,6 +131,14 @@ public class DescribeAvailableResourceResponseBody extends TeaModel {
         public static final class Builder {
             private Integer cpu; 
             private Integer mem; 
+
+            private Builder() {
+            } 
+
+            private Builder(InstanceTypeDetail model) {
+                this.cpu = model.cpu;
+                this.mem = model.mem;
+            } 
 
             /**
              * Cpu.
@@ -187,6 +207,14 @@ public class DescribeAvailableResourceResponseBody extends TeaModel {
             private String instanceType; 
             private InstanceTypeDetail instanceTypeDetail; 
 
+            private Builder() {
+            } 
+
+            private Builder(MasterResource model) {
+                this.instanceType = model.instanceType;
+                this.instanceTypeDetail = model.instanceTypeDetail;
+            } 
+
             /**
              * InstanceType.
              */
@@ -241,6 +269,13 @@ public class DescribeAvailableResourceResponseBody extends TeaModel {
 
         public static final class Builder {
             private java.util.List<MasterResource> masterResource; 
+
+            private Builder() {
+            } 
+
+            private Builder(MasterResources model) {
+                this.masterResource = model.masterResource;
+            } 
 
             /**
              * MasterResource.
@@ -312,6 +347,15 @@ public class DescribeAvailableResourceResponseBody extends TeaModel {
             private Integer maxSize; 
             private Integer minSize; 
             private Integer stepSize; 
+
+            private Builder() {
+            } 
+
+            private Builder(DBInstanceStorageRange model) {
+                this.maxSize = model.maxSize;
+                this.minSize = model.minSize;
+                this.stepSize = model.stepSize;
+            } 
 
             /**
              * MaxSize.
@@ -387,6 +431,14 @@ public class DescribeAvailableResourceResponseBody extends TeaModel {
         public static final class Builder {
             private Integer cpu; 
             private Integer mem; 
+
+            private Builder() {
+            } 
+
+            private Builder(CoreResourceInstanceTypeDetail model) {
+                this.cpu = model.cpu;
+                this.mem = model.mem;
+            } 
 
             /**
              * Cpu.
@@ -479,6 +531,16 @@ public class DescribeAvailableResourceResponseBody extends TeaModel {
             private CoreResourceInstanceTypeDetail instanceTypeDetail; 
             private Integer maxCoreCount; 
 
+            private Builder() {
+            } 
+
+            private Builder(CoreResource model) {
+                this.DBInstanceStorageRange = model.DBInstanceStorageRange;
+                this.instanceType = model.instanceType;
+                this.instanceTypeDetail = model.instanceTypeDetail;
+                this.maxCoreCount = model.maxCoreCount;
+            } 
+
             /**
              * DBInstanceStorageRange.
              */
@@ -550,6 +612,13 @@ public class DescribeAvailableResourceResponseBody extends TeaModel {
         public static final class Builder {
             private java.util.List<CoreResource> coreResource; 
 
+            private Builder() {
+            } 
+
+            private Builder(CoreResources model) {
+                this.coreResource = model.coreResource;
+            } 
+
             /**
              * CoreResource.
              */
@@ -609,6 +678,14 @@ public class DescribeAvailableResourceResponseBody extends TeaModel {
             private CoreResources coreResources; 
             private String storageType; 
 
+            private Builder() {
+            } 
+
+            private Builder(SupportedStorageType model) {
+                this.coreResources = model.coreResources;
+                this.storageType = model.storageType;
+            } 
+
             /**
              * CoreResources.
              */
@@ -663,6 +740,13 @@ public class DescribeAvailableResourceResponseBody extends TeaModel {
 
         public static final class Builder {
             private java.util.List<SupportedStorageType> supportedStorageType; 
+
+            private Builder() {
+            } 
+
+            private Builder(SupportedStorageTypes model) {
+                this.supportedStorageType = model.supportedStorageType;
+            } 
 
             /**
              * SupportedStorageType.
@@ -723,6 +807,14 @@ public class DescribeAvailableResourceResponseBody extends TeaModel {
             private String category; 
             private SupportedStorageTypes supportedStorageTypes; 
 
+            private Builder() {
+            } 
+
+            private Builder(SupportedCategories model) {
+                this.category = model.category;
+                this.supportedStorageTypes = model.supportedStorageTypes;
+            } 
+
             /**
              * Category.
              */
@@ -777,6 +869,13 @@ public class DescribeAvailableResourceResponseBody extends TeaModel {
 
         public static final class Builder {
             private java.util.List<SupportedCategories> supportedCategories; 
+
+            private Builder() {
+            } 
+
+            private Builder(SupportedEngineVersionSupportedCategories model) {
+                this.supportedCategories = model.supportedCategories;
+            } 
 
             /**
              * SupportedCategories.
@@ -837,6 +936,14 @@ public class DescribeAvailableResourceResponseBody extends TeaModel {
             private SupportedEngineVersionSupportedCategories supportedCategories; 
             private String version; 
 
+            private Builder() {
+            } 
+
+            private Builder(SupportedEngineVersion model) {
+                this.supportedCategories = model.supportedCategories;
+                this.version = model.version;
+            } 
+
             /**
              * SupportedCategories.
              */
@@ -891,6 +998,13 @@ public class DescribeAvailableResourceResponseBody extends TeaModel {
 
         public static final class Builder {
             private java.util.List<SupportedEngineVersion> supportedEngineVersion; 
+
+            private Builder() {
+            } 
+
+            private Builder(SupportedEngineVersions model) {
+                this.supportedEngineVersion = model.supportedEngineVersion;
+            } 
 
             /**
              * SupportedEngineVersion.
@@ -951,6 +1065,14 @@ public class DescribeAvailableResourceResponseBody extends TeaModel {
             private String engine; 
             private SupportedEngineVersions supportedEngineVersions; 
 
+            private Builder() {
+            } 
+
+            private Builder(SupportedEngine model) {
+                this.engine = model.engine;
+                this.supportedEngineVersions = model.supportedEngineVersions;
+            } 
+
             /**
              * Engine.
              */
@@ -1005,6 +1127,13 @@ public class DescribeAvailableResourceResponseBody extends TeaModel {
 
         public static final class Builder {
             private java.util.List<SupportedEngine> supportedEngine; 
+
+            private Builder() {
+            } 
+
+            private Builder(SupportedEngines model) {
+                this.supportedEngine = model.supportedEngine;
+            } 
 
             /**
              * SupportedEngine.
@@ -1089,6 +1218,16 @@ public class DescribeAvailableResourceResponseBody extends TeaModel {
             private SupportedEngines supportedEngines; 
             private String zoneId; 
 
+            private Builder() {
+            } 
+
+            private Builder(AvailableZone model) {
+                this.masterResources = model.masterResources;
+                this.regionId = model.regionId;
+                this.supportedEngines = model.supportedEngines;
+                this.zoneId = model.zoneId;
+            } 
+
             /**
              * MasterResources.
              */
@@ -1159,6 +1298,13 @@ public class DescribeAvailableResourceResponseBody extends TeaModel {
 
         public static final class Builder {
             private java.util.List<AvailableZone> availableZone; 
+
+            private Builder() {
+            } 
+
+            private Builder(AvailableZones model) {
+                this.availableZone = model.availableZone;
+            } 
 
             /**
              * AvailableZone.

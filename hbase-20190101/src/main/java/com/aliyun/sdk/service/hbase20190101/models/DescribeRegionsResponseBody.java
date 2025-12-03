@@ -36,6 +36,10 @@ public class DescribeRegionsResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return regions
      */
@@ -53,6 +57,14 @@ public class DescribeRegionsResponseBody extends TeaModel {
     public static final class Builder {
         private Regions regions; 
         private String requestId; 
+
+        private Builder() {
+        } 
+
+        private Builder(DescribeRegionsResponseBody model) {
+            this.regions = model.regions;
+            this.requestId = model.requestId;
+        } 
 
         /**
          * Regions.
@@ -108,6 +120,13 @@ public class DescribeRegionsResponseBody extends TeaModel {
         public static final class Builder {
             private String id; 
 
+            private Builder() {
+            } 
+
+            private Builder(Zone model) {
+                this.id = model.id;
+            } 
+
             /**
              * Id.
              */
@@ -154,6 +173,13 @@ public class DescribeRegionsResponseBody extends TeaModel {
 
         public static final class Builder {
             private java.util.List<Zone> zone; 
+
+            private Builder() {
+            } 
+
+            private Builder(Zones model) {
+                this.zone = model.zone;
+            } 
 
             /**
              * Zone.
@@ -238,6 +264,16 @@ public class DescribeRegionsResponseBody extends TeaModel {
             private String regionId; 
             private Zones zones; 
 
+            private Builder() {
+            } 
+
+            private Builder(Region model) {
+                this.localName = model.localName;
+                this.regionEndpoint = model.regionEndpoint;
+                this.regionId = model.regionId;
+                this.zones = model.zones;
+            } 
+
             /**
              * LocalName.
              */
@@ -308,6 +344,13 @@ public class DescribeRegionsResponseBody extends TeaModel {
 
         public static final class Builder {
             private java.util.List<Region> region; 
+
+            private Builder() {
+            } 
+
+            private Builder(Regions model) {
+                this.region = model.region;
+            } 
 
             /**
              * Region.

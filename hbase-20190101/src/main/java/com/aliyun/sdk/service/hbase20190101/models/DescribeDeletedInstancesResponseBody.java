@@ -48,6 +48,10 @@ public class DescribeDeletedInstancesResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return instances
      */
@@ -89,6 +93,17 @@ public class DescribeDeletedInstancesResponseBody extends TeaModel {
         private Integer pageSize; 
         private String requestId; 
         private Long totalCount; 
+
+        private Builder() {
+        } 
+
+        private Builder(DescribeDeletedInstancesResponseBody model) {
+            this.instances = model.instances;
+            this.pageNumber = model.pageNumber;
+            this.pageSize = model.pageSize;
+            this.requestId = model.requestId;
+            this.totalCount = model.totalCount;
+        } 
 
         /**
          * Instances.
@@ -300,6 +315,24 @@ public class DescribeDeletedInstancesResponseBody extends TeaModel {
             private String status; 
             private String zoneId; 
 
+            private Builder() {
+            } 
+
+            private Builder(Instance model) {
+                this.clusterType = model.clusterType;
+                this.createdTime = model.createdTime;
+                this.deleteTime = model.deleteTime;
+                this.engine = model.engine;
+                this.instanceId = model.instanceId;
+                this.instanceName = model.instanceName;
+                this.majorVersion = model.majorVersion;
+                this.moduleStackVersion = model.moduleStackVersion;
+                this.parentId = model.parentId;
+                this.regionId = model.regionId;
+                this.status = model.status;
+                this.zoneId = model.zoneId;
+            } 
+
             /**
              * ClusterType.
              */
@@ -434,6 +467,13 @@ public class DescribeDeletedInstancesResponseBody extends TeaModel {
 
         public static final class Builder {
             private java.util.List<Instance> instance; 
+
+            private Builder() {
+            } 
+
+            private Builder(Instances model) {
+                this.instance = model.instance;
+            } 
 
             /**
              * Instance.

@@ -48,6 +48,10 @@ public class DescribeBackupPlanConfigResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return fullBackupCycle
      */
@@ -89,6 +93,17 @@ public class DescribeBackupPlanConfigResponseBody extends TeaModel {
         private String nextFullBackupDate; 
         private String requestId; 
         private Tables tables; 
+
+        private Builder() {
+        } 
+
+        private Builder(DescribeBackupPlanConfigResponseBody model) {
+            this.fullBackupCycle = model.fullBackupCycle;
+            this.minHFileBackupCount = model.minHFileBackupCount;
+            this.nextFullBackupDate = model.nextFullBackupDate;
+            this.requestId = model.requestId;
+            this.tables = model.tables;
+        } 
 
         /**
          * FullBackupCycle.
@@ -167,6 +182,13 @@ public class DescribeBackupPlanConfigResponseBody extends TeaModel {
 
         public static final class Builder {
             private java.util.List<String> table; 
+
+            private Builder() {
+            } 
+
+            private Builder(Tables model) {
+                this.table = model.table;
+            } 
 
             /**
              * Table.

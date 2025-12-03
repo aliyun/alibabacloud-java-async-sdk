@@ -36,6 +36,10 @@ public class DescribeInstanceTypeResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return instanceTypeSpecList
      */
@@ -53,6 +57,14 @@ public class DescribeInstanceTypeResponseBody extends TeaModel {
     public static final class Builder {
         private InstanceTypeSpecList instanceTypeSpecList; 
         private String requestId; 
+
+        private Builder() {
+        } 
+
+        private Builder(DescribeInstanceTypeResponseBody model) {
+            this.instanceTypeSpecList = model.instanceTypeSpecList;
+            this.requestId = model.requestId;
+        } 
 
         /**
          * InstanceTypeSpecList.
@@ -132,6 +144,15 @@ public class DescribeInstanceTypeResponseBody extends TeaModel {
             private String instanceType; 
             private Long memSize; 
 
+            private Builder() {
+            } 
+
+            private Builder(InstanceTypeSpec model) {
+                this.cpuSize = model.cpuSize;
+                this.instanceType = model.instanceType;
+                this.memSize = model.memSize;
+            } 
+
             /**
              * CpuSize.
              */
@@ -194,6 +215,13 @@ public class DescribeInstanceTypeResponseBody extends TeaModel {
 
         public static final class Builder {
             private java.util.List<InstanceTypeSpec> instanceTypeSpec; 
+
+            private Builder() {
+            } 
+
+            private Builder(InstanceTypeSpecList model) {
+                this.instanceTypeSpec = model.instanceTypeSpec;
+            } 
 
             /**
              * InstanceTypeSpec.

@@ -36,6 +36,10 @@ public class DescribeRestoreSchemaDetailsResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return requestId
      */
@@ -53,6 +57,14 @@ public class DescribeRestoreSchemaDetailsResponseBody extends TeaModel {
     public static final class Builder {
         private String requestId; 
         private RestoreSchema restoreSchema; 
+
+        private Builder() {
+        } 
+
+        private Builder(DescribeRestoreSchemaDetailsResponseBody model) {
+            this.requestId = model.requestId;
+            this.restoreSchema = model.restoreSchema;
+        } 
 
         /**
          * RequestId.
@@ -156,6 +168,17 @@ public class DescribeRestoreSchemaDetailsResponseBody extends TeaModel {
             private String state; 
             private String table; 
 
+            private Builder() {
+            } 
+
+            private Builder(RestoreSchemaDetail model) {
+                this.endTime = model.endTime;
+                this.message = model.message;
+                this.startTime = model.startTime;
+                this.state = model.state;
+                this.table = model.table;
+            } 
+
             /**
              * EndTime.
              */
@@ -234,6 +257,13 @@ public class DescribeRestoreSchemaDetailsResponseBody extends TeaModel {
 
         public static final class Builder {
             private java.util.List<RestoreSchemaDetail> restoreSchemaDetail; 
+
+            private Builder() {
+            } 
+
+            private Builder(RestoreSchemaDetails model) {
+                this.restoreSchemaDetail = model.restoreSchemaDetail;
+            } 
 
             /**
              * RestoreSchemaDetail.
@@ -341,6 +371,18 @@ public class DescribeRestoreSchemaDetailsResponseBody extends TeaModel {
             private RestoreSchemaDetails restoreSchemaDetails; 
             private Integer succeed; 
             private Long total; 
+
+            private Builder() {
+            } 
+
+            private Builder(RestoreSchema model) {
+                this.fail = model.fail;
+                this.pageNumber = model.pageNumber;
+                this.pageSize = model.pageSize;
+                this.restoreSchemaDetails = model.restoreSchemaDetails;
+                this.succeed = model.succeed;
+                this.total = model.total;
+            } 
 
             /**
              * Fail.

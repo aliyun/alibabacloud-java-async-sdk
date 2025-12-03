@@ -48,6 +48,10 @@ public class DescribeInstancesResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return instances
      */
@@ -89,6 +93,17 @@ public class DescribeInstancesResponseBody extends TeaModel {
         private Integer pageSize; 
         private String requestId; 
         private Long totalCount; 
+
+        private Builder() {
+        } 
+
+        private Builder(DescribeInstancesResponseBody model) {
+            this.instances = model.instances;
+            this.pageNumber = model.pageNumber;
+            this.pageSize = model.pageSize;
+            this.requestId = model.requestId;
+            this.totalCount = model.totalCount;
+        } 
 
         /**
          * Instances.
@@ -180,6 +195,14 @@ public class DescribeInstancesResponseBody extends TeaModel {
             private String key; 
             private String value; 
 
+            private Builder() {
+            } 
+
+            private Builder(Tag model) {
+                this.key = model.key;
+                this.value = model.value;
+            } 
+
             /**
              * Key.
              */
@@ -234,6 +257,13 @@ public class DescribeInstancesResponseBody extends TeaModel {
 
         public static final class Builder {
             private java.util.List<Tag> tag; 
+
+            private Builder() {
+            } 
+
+            private Builder(Tags model) {
+                this.tag = model.tag;
+            } 
 
             /**
              * Tag.
@@ -726,6 +756,50 @@ public class DescribeInstancesResponseBody extends TeaModel {
             private String vswitchId; 
             private String zoneId; 
 
+            private Builder() {
+            } 
+
+            private Builder(Instance model) {
+                this.autoRenewal = model.autoRenewal;
+                this.backupStatus = model.backupStatus;
+                this.clusterId = model.clusterId;
+                this.clusterName = model.clusterName;
+                this.clusterType = model.clusterType;
+                this.coldStorageStatus = model.coldStorageStatus;
+                this.coreDiskCount = model.coreDiskCount;
+                this.coreDiskSize = model.coreDiskSize;
+                this.coreDiskType = model.coreDiskType;
+                this.coreInstanceType = model.coreInstanceType;
+                this.coreNodeCount = model.coreNodeCount;
+                this.createdTime = model.createdTime;
+                this.createdTimeUTC = model.createdTimeUTC;
+                this.duration = model.duration;
+                this.engine = model.engine;
+                this.expireTime = model.expireTime;
+                this.expireTimeUTC = model.expireTimeUTC;
+                this.instanceId = model.instanceId;
+                this.instanceName = model.instanceName;
+                this.isDeletionProtection = model.isDeletionProtection;
+                this.isHa = model.isHa;
+                this.majorVersion = model.majorVersion;
+                this.masterDiskSize = model.masterDiskSize;
+                this.masterDiskType = model.masterDiskType;
+                this.masterInstanceType = model.masterInstanceType;
+                this.masterNodeCount = model.masterNodeCount;
+                this.moduleId = model.moduleId;
+                this.moduleStackVersion = model.moduleStackVersion;
+                this.networkType = model.networkType;
+                this.parentId = model.parentId;
+                this.payType = model.payType;
+                this.regionId = model.regionId;
+                this.resourceGroupId = model.resourceGroupId;
+                this.status = model.status;
+                this.tags = model.tags;
+                this.vpcId = model.vpcId;
+                this.vswitchId = model.vswitchId;
+                this.zoneId = model.zoneId;
+            } 
+
             /**
              * AutoRenewal.
              */
@@ -1068,6 +1142,13 @@ public class DescribeInstancesResponseBody extends TeaModel {
 
         public static final class Builder {
             private java.util.List<Instance> instance; 
+
+            private Builder() {
+            } 
+
+            private Builder(Instances model) {
+                this.instance = model.instance;
+            } 
 
             /**
              * Instance.

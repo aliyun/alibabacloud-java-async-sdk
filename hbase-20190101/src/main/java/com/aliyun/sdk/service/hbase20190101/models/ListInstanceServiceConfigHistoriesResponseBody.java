@@ -48,6 +48,10 @@ public class ListInstanceServiceConfigHistoriesResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return configureHistoryList
      */
@@ -89,6 +93,17 @@ public class ListInstanceServiceConfigHistoriesResponseBody extends TeaModel {
         private Integer pageRecordCount; 
         private String requestId; 
         private Long totalRecordCount; 
+
+        private Builder() {
+        } 
+
+        private Builder(ListInstanceServiceConfigHistoriesResponseBody model) {
+            this.configureHistoryList = model.configureHistoryList;
+            this.pageNumber = model.pageNumber;
+            this.pageRecordCount = model.pageRecordCount;
+            this.requestId = model.requestId;
+            this.totalRecordCount = model.totalRecordCount;
+        } 
 
         /**
          * ConfigureHistoryList.
@@ -216,6 +231,17 @@ public class ListInstanceServiceConfigHistoriesResponseBody extends TeaModel {
             private String newValue; 
             private String oldValue; 
 
+            private Builder() {
+            } 
+
+            private Builder(Config model) {
+                this.configureName = model.configureName;
+                this.createTime = model.createTime;
+                this.effective = model.effective;
+                this.newValue = model.newValue;
+                this.oldValue = model.oldValue;
+            } 
+
             /**
              * ConfigureName.
              */
@@ -294,6 +320,13 @@ public class ListInstanceServiceConfigHistoriesResponseBody extends TeaModel {
 
         public static final class Builder {
             private java.util.List<Config> config; 
+
+            private Builder() {
+            } 
+
+            private Builder(ConfigureHistoryList model) {
+                this.config = model.config;
+            } 
 
             /**
              * Config.

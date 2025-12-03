@@ -245,6 +245,10 @@ public class DescribeInstanceResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return autoRenewal
      */
@@ -678,6 +682,66 @@ public class DescribeInstanceResponseBody extends TeaModel {
         private String vpcId; 
         private String vswitchId; 
         private String zoneId; 
+
+        private Builder() {
+        } 
+
+        private Builder(DescribeInstanceResponseBody model) {
+            this.autoRenewal = model.autoRenewal;
+            this.backupStatus = model.backupStatus;
+            this.clusterId = model.clusterId;
+            this.clusterName = model.clusterName;
+            this.clusterType = model.clusterType;
+            this.coldStorageSize = model.coldStorageSize;
+            this.coldStorageStatus = model.coldStorageStatus;
+            this.confirmMaintainTime = model.confirmMaintainTime;
+            this.coreDiskCount = model.coreDiskCount;
+            this.coreDiskSize = model.coreDiskSize;
+            this.coreDiskType = model.coreDiskType;
+            this.coreInstanceType = model.coreInstanceType;
+            this.coreNodeCount = model.coreNodeCount;
+            this.createdTime = model.createdTime;
+            this.createdTimeUTC = model.createdTimeUTC;
+            this.duration = model.duration;
+            this.enableHbaseProxy = model.enableHbaseProxy;
+            this.encryptionKey = model.encryptionKey;
+            this.encryptionType = model.encryptionType;
+            this.engine = model.engine;
+            this.expireTime = model.expireTime;
+            this.expireTimeUTC = model.expireTimeUTC;
+            this.instanceId = model.instanceId;
+            this.instanceName = model.instanceName;
+            this.isDeletionProtection = model.isDeletionProtection;
+            this.isHa = model.isHa;
+            this.isLatestVersion = model.isLatestVersion;
+            this.isMultiModel = model.isMultiModel;
+            this.lproxyMinorVersion = model.lproxyMinorVersion;
+            this.maintainEndTime = model.maintainEndTime;
+            this.maintainStartTime = model.maintainStartTime;
+            this.majorVersion = model.majorVersion;
+            this.masterDiskSize = model.masterDiskSize;
+            this.masterDiskType = model.masterDiskType;
+            this.masterInstanceType = model.masterInstanceType;
+            this.masterNodeCount = model.masterNodeCount;
+            this.minorVersion = model.minorVersion;
+            this.moduleId = model.moduleId;
+            this.moduleStackVersion = model.moduleStackVersion;
+            this.needUpgrade = model.needUpgrade;
+            this.needUpgradeComps = model.needUpgradeComps;
+            this.networkType = model.networkType;
+            this.parentId = model.parentId;
+            this.payType = model.payType;
+            this.regionId = model.regionId;
+            this.requestId = model.requestId;
+            this.resourceGroupId = model.resourceGroupId;
+            this.status = model.status;
+            this.tags = model.tags;
+            this.taskProgress = model.taskProgress;
+            this.taskStatus = model.taskStatus;
+            this.vpcId = model.vpcId;
+            this.vswitchId = model.vswitchId;
+            this.zoneId = model.zoneId;
+        } 
 
         /**
          * AutoRenewal.
@@ -1152,6 +1216,13 @@ public class DescribeInstanceResponseBody extends TeaModel {
         public static final class Builder {
             private java.util.List<String> comps; 
 
+            private Builder() {
+            } 
+
+            private Builder(NeedUpgradeComps model) {
+                this.comps = model.comps;
+            } 
+
             /**
              * Comps.
              */
@@ -1211,6 +1282,14 @@ public class DescribeInstanceResponseBody extends TeaModel {
             private String key; 
             private String value; 
 
+            private Builder() {
+            } 
+
+            private Builder(Tag model) {
+                this.key = model.key;
+                this.value = model.value;
+            } 
+
             /**
              * Key.
              */
@@ -1265,6 +1344,13 @@ public class DescribeInstanceResponseBody extends TeaModel {
 
         public static final class Builder {
             private java.util.List<Tag> tag; 
+
+            private Builder() {
+            } 
+
+            private Builder(Tags model) {
+                this.tag = model.tag;
+            } 
 
             /**
              * Tag.

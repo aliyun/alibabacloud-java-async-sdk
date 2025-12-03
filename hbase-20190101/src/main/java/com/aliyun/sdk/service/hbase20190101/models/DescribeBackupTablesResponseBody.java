@@ -52,6 +52,10 @@ public class DescribeBackupTablesResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return backupRecords
      */
@@ -101,6 +105,18 @@ public class DescribeBackupTablesResponseBody extends TeaModel {
         private String requestId; 
         private Tables tables; 
         private Long total; 
+
+        private Builder() {
+        } 
+
+        private Builder(DescribeBackupTablesResponseBody model) {
+            this.backupRecords = model.backupRecords;
+            this.pageNumber = model.pageNumber;
+            this.pageSize = model.pageSize;
+            this.requestId = model.requestId;
+            this.tables = model.tables;
+            this.total = model.total;
+        } 
 
         /**
          * BackupRecords.
@@ -272,6 +288,20 @@ public class DescribeBackupTablesResponseBody extends TeaModel {
             private String state; 
             private String table; 
 
+            private Builder() {
+            } 
+
+            private Builder(BackupRecord model) {
+                this.dataSize = model.dataSize;
+                this.endTime = model.endTime;
+                this.message = model.message;
+                this.process = model.process;
+                this.speed = model.speed;
+                this.startTime = model.startTime;
+                this.state = model.state;
+                this.table = model.table;
+            } 
+
             /**
              * DataSize.
              */
@@ -375,6 +405,13 @@ public class DescribeBackupTablesResponseBody extends TeaModel {
         public static final class Builder {
             private java.util.List<BackupRecord> backupRecord; 
 
+            private Builder() {
+            } 
+
+            private Builder(BackupRecords model) {
+                this.backupRecord = model.backupRecord;
+            } 
+
             /**
              * BackupRecord.
              */
@@ -421,6 +458,13 @@ public class DescribeBackupTablesResponseBody extends TeaModel {
 
         public static final class Builder {
             private java.util.List<String> table; 
+
+            private Builder() {
+            } 
+
+            private Builder(Tables model) {
+                this.table = model.table;
+            } 
 
             /**
              * Table.

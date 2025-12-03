@@ -40,6 +40,10 @@ public class DescribeRecoverableTimeRangeResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return requestId
      */
@@ -65,6 +69,15 @@ public class DescribeRecoverableTimeRangeResponseBody extends TeaModel {
         private String requestId; 
         private String timeBegin; 
         private String timeEnd; 
+
+        private Builder() {
+        } 
+
+        private Builder(DescribeRecoverableTimeRangeResponseBody model) {
+            this.requestId = model.requestId;
+            this.timeBegin = model.timeBegin;
+            this.timeEnd = model.timeEnd;
+        } 
 
         /**
          * RequestId.

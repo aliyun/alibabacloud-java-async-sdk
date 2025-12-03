@@ -132,6 +132,10 @@ public class DescribeServerlessClusterResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return autoRenew
      */
@@ -341,6 +345,38 @@ public class DescribeServerlessClusterResponseBody extends TeaModel {
         private String vSwitchId; 
         private String vpcId; 
         private String zoneId; 
+
+        private Builder() {
+        } 
+
+        private Builder(DescribeServerlessClusterResponseBody model) {
+            this.autoRenew = model.autoRenew;
+            this.clusterType = model.clusterType;
+            this.createTime = model.createTime;
+            this.cuSize = model.cuSize;
+            this.diskSize = model.diskSize;
+            this.expireTime = model.expireTime;
+            this.haType = model.haType;
+            this.hasUser = model.hasUser;
+            this.innerEndpoint = model.innerEndpoint;
+            this.instanceId = model.instanceId;
+            this.instanceName = model.instanceName;
+            this.isDeletionProtection = model.isDeletionProtection;
+            this.lockMode = model.lockMode;
+            this.mainVersion = model.mainVersion;
+            this.outerEndpoint = model.outerEndpoint;
+            this.payType = model.payType;
+            this.regionId = model.regionId;
+            this.requestId = model.requestId;
+            this.reserverMaxQpsNum = model.reserverMaxQpsNum;
+            this.reserverMinQpsNum = model.reserverMinQpsNum;
+            this.resourceGroupId = model.resourceGroupId;
+            this.status = model.status;
+            this.updateStatus = model.updateStatus;
+            this.vSwitchId = model.vSwitchId;
+            this.vpcId = model.vpcId;
+            this.zoneId = model.zoneId;
+        } 
 
         /**
          * AutoRenew.

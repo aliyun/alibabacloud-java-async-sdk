@@ -40,6 +40,10 @@ public class CreateMultiZoneClusterResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return clusterId
      */
@@ -65,6 +69,15 @@ public class CreateMultiZoneClusterResponseBody extends TeaModel {
         private String clusterId; 
         private String orderId; 
         private String requestId; 
+
+        private Builder() {
+        } 
+
+        private Builder(CreateMultiZoneClusterResponseBody model) {
+            this.clusterId = model.clusterId;
+            this.orderId = model.orderId;
+            this.requestId = model.requestId;
+        } 
 
         /**
          * ClusterId.

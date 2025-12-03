@@ -72,6 +72,10 @@ public class DescribeClusterConnectionResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return dbType
      */
@@ -161,6 +165,23 @@ public class DescribeClusterConnectionResponseBody extends TeaModel {
         private String vSwitchId; 
         private String vpcId; 
         private ZkConnAddrs zkConnAddrs; 
+
+        private Builder() {
+        } 
+
+        private Builder(DescribeClusterConnectionResponseBody model) {
+            this.dbType = model.dbType;
+            this.isMultimod = model.isMultimod;
+            this.netType = model.netType;
+            this.requestId = model.requestId;
+            this.serviceConnAddrs = model.serviceConnAddrs;
+            this.slbConnAddrs = model.slbConnAddrs;
+            this.thriftConn = model.thriftConn;
+            this.uiProxyConnAddrInfo = model.uiProxyConnAddrInfo;
+            this.vSwitchId = model.vSwitchId;
+            this.vpcId = model.vpcId;
+            this.zkConnAddrs = model.zkConnAddrs;
+        } 
 
         /**
          * DbType.
@@ -312,6 +333,15 @@ public class DescribeClusterConnectionResponseBody extends TeaModel {
             private String connAddrPort; 
             private String netType; 
 
+            private Builder() {
+            } 
+
+            private Builder(ConnAddrInfo model) {
+                this.connAddr = model.connAddr;
+                this.connAddrPort = model.connAddrPort;
+                this.netType = model.netType;
+            } 
+
             /**
              * ConnAddr.
              */
@@ -387,6 +417,14 @@ public class DescribeClusterConnectionResponseBody extends TeaModel {
             private ConnAddrInfo connAddrInfo; 
             private String connType; 
 
+            private Builder() {
+            } 
+
+            private Builder(ServiceConnAddr model) {
+                this.connAddrInfo = model.connAddrInfo;
+                this.connType = model.connType;
+            } 
+
             /**
              * ConnAddrInfo.
              */
@@ -441,6 +479,13 @@ public class DescribeClusterConnectionResponseBody extends TeaModel {
 
         public static final class Builder {
             private java.util.List<ServiceConnAddr> serviceConnAddr; 
+
+            private Builder() {
+            } 
+
+            private Builder(ServiceConnAddrs model) {
+                this.serviceConnAddr = model.serviceConnAddr;
+            } 
 
             /**
              * ServiceConnAddr.
@@ -512,6 +557,15 @@ public class DescribeClusterConnectionResponseBody extends TeaModel {
             private String connAddr; 
             private String connAddrPort; 
             private String netType; 
+
+            private Builder() {
+            } 
+
+            private Builder(SlbConnAddrConnAddrInfo model) {
+                this.connAddr = model.connAddr;
+                this.connAddrPort = model.connAddrPort;
+                this.netType = model.netType;
+            } 
 
             /**
              * ConnAddr.
@@ -588,6 +642,14 @@ public class DescribeClusterConnectionResponseBody extends TeaModel {
             private SlbConnAddrConnAddrInfo connAddrInfo; 
             private String slbType; 
 
+            private Builder() {
+            } 
+
+            private Builder(SlbConnAddr model) {
+                this.connAddrInfo = model.connAddrInfo;
+                this.slbType = model.slbType;
+            } 
+
             /**
              * ConnAddrInfo.
              */
@@ -642,6 +704,13 @@ public class DescribeClusterConnectionResponseBody extends TeaModel {
 
         public static final class Builder {
             private java.util.List<SlbConnAddr> slbConnAddr; 
+
+            private Builder() {
+            } 
+
+            private Builder(SlbConnAddrs model) {
+                this.slbConnAddr = model.slbConnAddr;
+            } 
 
             /**
              * SlbConnAddr.
@@ -713,6 +782,15 @@ public class DescribeClusterConnectionResponseBody extends TeaModel {
             private String connAddr; 
             private String connAddrPort; 
             private String netType; 
+
+            private Builder() {
+            } 
+
+            private Builder(ThriftConn model) {
+                this.connAddr = model.connAddr;
+                this.connAddrPort = model.connAddrPort;
+                this.netType = model.netType;
+            } 
 
             /**
              * ConnAddr.
@@ -801,6 +879,15 @@ public class DescribeClusterConnectionResponseBody extends TeaModel {
             private String connAddrPort; 
             private String netType; 
 
+            private Builder() {
+            } 
+
+            private Builder(UiProxyConnAddrInfo model) {
+                this.connAddr = model.connAddr;
+                this.connAddrPort = model.connAddrPort;
+                this.netType = model.netType;
+            } 
+
             /**
              * ConnAddr.
              */
@@ -888,6 +975,15 @@ public class DescribeClusterConnectionResponseBody extends TeaModel {
             private String connAddrPort; 
             private String netType; 
 
+            private Builder() {
+            } 
+
+            private Builder(ZkConnAddr model) {
+                this.connAddr = model.connAddr;
+                this.connAddrPort = model.connAddrPort;
+                this.netType = model.netType;
+            } 
+
             /**
              * ConnAddr.
              */
@@ -950,6 +1046,13 @@ public class DescribeClusterConnectionResponseBody extends TeaModel {
 
         public static final class Builder {
             private java.util.List<ZkConnAddr> zkConnAddr; 
+
+            private Builder() {
+            } 
+
+            private Builder(ZkConnAddrs model) {
+                this.zkConnAddr = model.zkConnAddr;
+            } 
 
             /**
              * ZkConnAddr.

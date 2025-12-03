@@ -52,6 +52,10 @@ public class DescribeBackupPolicyResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return backupRetentionPeriod
      */
@@ -101,6 +105,18 @@ public class DescribeBackupPolicyResponseBody extends TeaModel {
         private String preferredBackupStartTimeUTC; 
         private String preferredBackupTime; 
         private String requestId; 
+
+        private Builder() {
+        } 
+
+        private Builder(DescribeBackupPolicyResponseBody model) {
+            this.backupRetentionPeriod = model.backupRetentionPeriod;
+            this.preferredBackupEndTimeUTC = model.preferredBackupEndTimeUTC;
+            this.preferredBackupPeriod = model.preferredBackupPeriod;
+            this.preferredBackupStartTimeUTC = model.preferredBackupStartTimeUTC;
+            this.preferredBackupTime = model.preferredBackupTime;
+            this.requestId = model.requestId;
+        } 
 
         /**
          * BackupRetentionPeriod.

@@ -52,6 +52,10 @@ public class DescribeRestoreSummaryResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return hasMoreRestoreRecord
      */
@@ -101,6 +105,18 @@ public class DescribeRestoreSummaryResponseBody extends TeaModel {
         private String requestId; 
         private Rescords rescords; 
         private Integer total; 
+
+        private Builder() {
+        } 
+
+        private Builder(DescribeRestoreSummaryResponseBody model) {
+            this.hasMoreRestoreRecord = model.hasMoreRestoreRecord;
+            this.pageNumber = model.pageNumber;
+            this.pageSize = model.pageSize;
+            this.requestId = model.requestId;
+            this.rescords = model.rescords;
+            this.total = model.total;
+        } 
 
         /**
          * HasMoreRestoreRecord.
@@ -272,6 +288,20 @@ public class DescribeRestoreSummaryResponseBody extends TeaModel {
             private String schemaProcess; 
             private String status; 
 
+            private Builder() {
+            } 
+
+            private Builder(Rescord model) {
+                this.bulkLoadProcess = model.bulkLoadProcess;
+                this.createTime = model.createTime;
+                this.finishTime = model.finishTime;
+                this.hfileRestoreProcess = model.hfileRestoreProcess;
+                this.logProcess = model.logProcess;
+                this.recordId = model.recordId;
+                this.schemaProcess = model.schemaProcess;
+                this.status = model.status;
+            } 
+
             /**
              * BulkLoadProcess.
              */
@@ -374,6 +404,13 @@ public class DescribeRestoreSummaryResponseBody extends TeaModel {
 
         public static final class Builder {
             private java.util.List<Rescord> rescord; 
+
+            private Builder() {
+            } 
+
+            private Builder(Rescords model) {
+                this.rescord = model.rescord;
+            } 
 
             /**
              * Rescord.

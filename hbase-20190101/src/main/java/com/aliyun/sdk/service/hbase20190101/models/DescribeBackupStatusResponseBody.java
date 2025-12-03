@@ -44,6 +44,10 @@ public class DescribeBackupStatusResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return backupStatus
      */
@@ -77,6 +81,16 @@ public class DescribeBackupStatusResponseBody extends TeaModel {
         private String bdsClusterId; 
         private String clusterId; 
         private String requestId; 
+
+        private Builder() {
+        } 
+
+        private Builder(DescribeBackupStatusResponseBody model) {
+            this.backupStatus = model.backupStatus;
+            this.bdsClusterId = model.bdsClusterId;
+            this.clusterId = model.clusterId;
+            this.requestId = model.requestId;
+        } 
 
         /**
          * BackupStatus.

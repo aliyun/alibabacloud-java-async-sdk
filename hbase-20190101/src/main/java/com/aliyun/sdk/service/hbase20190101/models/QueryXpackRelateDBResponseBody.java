@@ -36,6 +36,10 @@ public class QueryXpackRelateDBResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return clusterList
      */
@@ -53,6 +57,14 @@ public class QueryXpackRelateDBResponseBody extends TeaModel {
     public static final class Builder {
         private ClusterList clusterList; 
         private String requestId; 
+
+        private Builder() {
+        } 
+
+        private Builder(QueryXpackRelateDBResponseBody model) {
+            this.clusterList = model.clusterList;
+            this.requestId = model.requestId;
+        } 
 
         /**
          * ClusterList.
@@ -180,6 +192,19 @@ public class QueryXpackRelateDBResponseBody extends TeaModel {
             private String lockMode; 
             private String status; 
 
+            private Builder() {
+            } 
+
+            private Builder(Cluster model) {
+                this.clusterId = model.clusterId;
+                this.clusterName = model.clusterName;
+                this.DBType = model.DBType;
+                this.DBVersion = model.DBVersion;
+                this.isRelated = model.isRelated;
+                this.lockMode = model.lockMode;
+                this.status = model.status;
+            } 
+
             /**
              * ClusterId.
              */
@@ -274,6 +299,13 @@ public class QueryXpackRelateDBResponseBody extends TeaModel {
 
         public static final class Builder {
             private java.util.List<Cluster> cluster; 
+
+            private Builder() {
+            } 
+
+            private Builder(ClusterList model) {
+                this.cluster = model.cluster;
+            } 
 
             /**
              * Cluster.

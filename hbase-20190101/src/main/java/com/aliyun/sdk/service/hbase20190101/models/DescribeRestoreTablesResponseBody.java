@@ -52,6 +52,10 @@ public class DescribeRestoreTablesResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return requestId
      */
@@ -101,6 +105,18 @@ public class DescribeRestoreTablesResponseBody extends TeaModel {
         private RestoreSchema restoreSchema; 
         private RestoreSummary restoreSummary; 
         private Tables tables; 
+
+        private Builder() {
+        } 
+
+        private Builder(DescribeRestoreTablesResponseBody model) {
+            this.requestId = model.requestId;
+            this.restoreFull = model.restoreFull;
+            this.restoreIncrDetail = model.restoreIncrDetail;
+            this.restoreSchema = model.restoreSchema;
+            this.restoreSummary = model.restoreSummary;
+            this.tables = model.tables;
+        } 
 
         /**
          * RequestId.
@@ -272,6 +288,20 @@ public class DescribeRestoreTablesResponseBody extends TeaModel {
             private String state; 
             private String table; 
 
+            private Builder() {
+            } 
+
+            private Builder(RestoreFullDetail model) {
+                this.dataSize = model.dataSize;
+                this.endTime = model.endTime;
+                this.message = model.message;
+                this.process = model.process;
+                this.speed = model.speed;
+                this.startTime = model.startTime;
+                this.state = model.state;
+                this.table = model.table;
+            } 
+
             /**
              * DataSize.
              */
@@ -374,6 +404,13 @@ public class DescribeRestoreTablesResponseBody extends TeaModel {
 
         public static final class Builder {
             private java.util.List<RestoreFullDetail> restoreFullDetail; 
+
+            private Builder() {
+            } 
+
+            private Builder(RestoreFullDetails model) {
+                this.restoreFullDetail = model.restoreFullDetail;
+            } 
 
             /**
              * RestoreFullDetail.
@@ -505,6 +542,20 @@ public class DescribeRestoreTablesResponseBody extends TeaModel {
             private String speed; 
             private Integer succeed; 
             private Long total; 
+
+            private Builder() {
+            } 
+
+            private Builder(RestoreFull model) {
+                this.dataSize = model.dataSize;
+                this.fail = model.fail;
+                this.pageNumber = model.pageNumber;
+                this.pageSize = model.pageSize;
+                this.restoreFullDetails = model.restoreFullDetails;
+                this.speed = model.speed;
+                this.succeed = model.succeed;
+                this.total = model.total;
+            } 
 
             /**
              * DataSize.
@@ -681,6 +732,19 @@ public class DescribeRestoreTablesResponseBody extends TeaModel {
             private String startTime; 
             private String state; 
 
+            private Builder() {
+            } 
+
+            private Builder(RestoreIncrDetail model) {
+                this.endTime = model.endTime;
+                this.process = model.process;
+                this.restoreDelay = model.restoreDelay;
+                this.restoreStartTs = model.restoreStartTs;
+                this.restoredTs = model.restoredTs;
+                this.startTime = model.startTime;
+                this.state = model.state;
+            } 
+
             /**
              * EndTime.
              */
@@ -824,6 +888,17 @@ public class DescribeRestoreTablesResponseBody extends TeaModel {
             private String state; 
             private String table; 
 
+            private Builder() {
+            } 
+
+            private Builder(RestoreSchemaDetail model) {
+                this.endTime = model.endTime;
+                this.message = model.message;
+                this.startTime = model.startTime;
+                this.state = model.state;
+                this.table = model.table;
+            } 
+
             /**
              * EndTime.
              */
@@ -902,6 +977,13 @@ public class DescribeRestoreTablesResponseBody extends TeaModel {
 
         public static final class Builder {
             private java.util.List<RestoreSchemaDetail> restoreSchemaDetail; 
+
+            private Builder() {
+            } 
+
+            private Builder(RestoreSchemaDetails model) {
+                this.restoreSchemaDetail = model.restoreSchemaDetail;
+            } 
 
             /**
              * RestoreSchemaDetail.
@@ -1009,6 +1091,18 @@ public class DescribeRestoreTablesResponseBody extends TeaModel {
             private RestoreSchemaDetails restoreSchemaDetails; 
             private Integer succeed; 
             private Long total; 
+
+            private Builder() {
+            } 
+
+            private Builder(RestoreSchema model) {
+                this.fail = model.fail;
+                this.pageNumber = model.pageNumber;
+                this.pageSize = model.pageSize;
+                this.restoreSchemaDetails = model.restoreSchemaDetails;
+                this.succeed = model.succeed;
+                this.total = model.total;
+            } 
 
             /**
              * Fail.
@@ -1157,6 +1251,18 @@ public class DescribeRestoreTablesResponseBody extends TeaModel {
             private String state; 
             private String targetCluster; 
 
+            private Builder() {
+            } 
+
+            private Builder(RestoreSummary model) {
+                this.endTime = model.endTime;
+                this.recordId = model.recordId;
+                this.restoreToDate = model.restoreToDate;
+                this.startTime = model.startTime;
+                this.state = model.state;
+                this.targetCluster = model.targetCluster;
+            } 
+
             /**
              * EndTime.
              */
@@ -1243,6 +1349,13 @@ public class DescribeRestoreTablesResponseBody extends TeaModel {
 
         public static final class Builder {
             private java.util.List<String> table; 
+
+            private Builder() {
+            } 
+
+            private Builder(Tables model) {
+                this.table = model.table;
+            } 
 
             /**
              * Table.

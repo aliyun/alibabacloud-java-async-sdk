@@ -40,6 +40,10 @@ public class EnableHBaseueModuleResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return clusterId
      */
@@ -65,6 +69,15 @@ public class EnableHBaseueModuleResponseBody extends TeaModel {
         private String clusterId; 
         private String orderId; 
         private String requestId; 
+
+        private Builder() {
+        } 
+
+        private Builder(EnableHBaseueModuleResponseBody model) {
+            this.clusterId = model.clusterId;
+            this.orderId = model.orderId;
+            this.requestId = model.requestId;
+        } 
 
         /**
          * ClusterId.

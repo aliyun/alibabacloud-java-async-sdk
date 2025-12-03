@@ -48,6 +48,10 @@ public class ListInstanceServiceConfigurationsResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return configureList
      */
@@ -89,6 +93,17 @@ public class ListInstanceServiceConfigurationsResponseBody extends TeaModel {
         private Integer pageRecordCount; 
         private String requestId; 
         private Long totalRecordCount; 
+
+        private Builder() {
+        } 
+
+        private Builder(ListInstanceServiceConfigurationsResponseBody model) {
+            this.configureList = model.configureList;
+            this.pageNumber = model.pageNumber;
+            this.pageRecordCount = model.pageRecordCount;
+            this.requestId = model.requestId;
+            this.totalRecordCount = model.totalRecordCount;
+        } 
 
         /**
          * ConfigureList.
@@ -240,6 +255,19 @@ public class ListInstanceServiceConfigurationsResponseBody extends TeaModel {
             private String runningValue; 
             private String valueRange; 
 
+            private Builder() {
+            } 
+
+            private Builder(Config model) {
+                this.configureName = model.configureName;
+                this.configureUnit = model.configureUnit;
+                this.defaultValue = model.defaultValue;
+                this.description = model.description;
+                this.needRestart = model.needRestart;
+                this.runningValue = model.runningValue;
+                this.valueRange = model.valueRange;
+            } 
+
             /**
              * ConfigureName.
              */
@@ -334,6 +362,13 @@ public class ListInstanceServiceConfigurationsResponseBody extends TeaModel {
 
         public static final class Builder {
             private java.util.List<Config> config; 
+
+            private Builder() {
+            } 
+
+            private Builder(ConfigureList model) {
+                this.config = model.config;
+            } 
 
             /**
              * Config.

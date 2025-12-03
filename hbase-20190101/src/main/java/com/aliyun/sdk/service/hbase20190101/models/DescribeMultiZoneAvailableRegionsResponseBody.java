@@ -36,6 +36,10 @@ public class DescribeMultiZoneAvailableRegionsResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return regions
      */
@@ -53,6 +57,14 @@ public class DescribeMultiZoneAvailableRegionsResponseBody extends TeaModel {
     public static final class Builder {
         private Regions regions; 
         private String requestId; 
+
+        private Builder() {
+        } 
+
+        private Builder(DescribeMultiZoneAvailableRegionsResponseBody model) {
+            this.regions = model.regions;
+            this.requestId = model.requestId;
+        } 
 
         /**
          * Regions.
@@ -107,6 +119,13 @@ public class DescribeMultiZoneAvailableRegionsResponseBody extends TeaModel {
 
         public static final class Builder {
             private java.util.List<String> zone; 
+
+            private Builder() {
+            } 
+
+            private Builder(Zones model) {
+                this.zone = model.zone;
+            } 
 
             /**
              * Zone.
@@ -167,6 +186,14 @@ public class DescribeMultiZoneAvailableRegionsResponseBody extends TeaModel {
             private String id; 
             private Zones zones; 
 
+            private Builder() {
+            } 
+
+            private Builder(AvailableCombine model) {
+                this.id = model.id;
+                this.zones = model.zones;
+            } 
+
             /**
              * Id.
              */
@@ -221,6 +248,13 @@ public class DescribeMultiZoneAvailableRegionsResponseBody extends TeaModel {
 
         public static final class Builder {
             private java.util.List<AvailableCombine> availableCombine; 
+
+            private Builder() {
+            } 
+
+            private Builder(AvailableCombines model) {
+                this.availableCombine = model.availableCombine;
+            } 
 
             /**
              * AvailableCombine.
@@ -305,6 +339,16 @@ public class DescribeMultiZoneAvailableRegionsResponseBody extends TeaModel {
             private String regionEndpoint; 
             private String regionId; 
 
+            private Builder() {
+            } 
+
+            private Builder(Region model) {
+                this.availableCombines = model.availableCombines;
+                this.localName = model.localName;
+                this.regionEndpoint = model.regionEndpoint;
+                this.regionId = model.regionId;
+            } 
+
             /**
              * AvailableCombines.
              */
@@ -375,6 +419,13 @@ public class DescribeMultiZoneAvailableRegionsResponseBody extends TeaModel {
 
         public static final class Builder {
             private java.util.List<Region> region; 
+
+            private Builder() {
+            } 
+
+            private Builder(Regions model) {
+                this.region = model.region;
+            } 
 
             /**
              * Region.

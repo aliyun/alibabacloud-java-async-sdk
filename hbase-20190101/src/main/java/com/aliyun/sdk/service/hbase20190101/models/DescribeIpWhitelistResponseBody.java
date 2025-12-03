@@ -36,6 +36,10 @@ public class DescribeIpWhitelistResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return groups
      */
@@ -53,6 +57,14 @@ public class DescribeIpWhitelistResponseBody extends TeaModel {
     public static final class Builder {
         private Groups groups; 
         private String requestId; 
+
+        private Builder() {
+        } 
+
+        private Builder(DescribeIpWhitelistResponseBody model) {
+            this.groups = model.groups;
+            this.requestId = model.requestId;
+        } 
 
         /**
          * Groups.
@@ -107,6 +119,13 @@ public class DescribeIpWhitelistResponseBody extends TeaModel {
 
         public static final class Builder {
             private java.util.List<String> ip; 
+
+            private Builder() {
+            } 
+
+            private Builder(IpList model) {
+                this.ip = model.ip;
+            } 
 
             /**
              * Ip.
@@ -179,6 +198,15 @@ public class DescribeIpWhitelistResponseBody extends TeaModel {
             private IpList ipList; 
             private Integer ipVersion; 
 
+            private Builder() {
+            } 
+
+            private Builder(Group model) {
+                this.groupName = model.groupName;
+                this.ipList = model.ipList;
+                this.ipVersion = model.ipVersion;
+            } 
+
             /**
              * GroupName.
              */
@@ -241,6 +269,13 @@ public class DescribeIpWhitelistResponseBody extends TeaModel {
 
         public static final class Builder {
             private java.util.List<Group> group; 
+
+            private Builder() {
+            } 
+
+            private Builder(Groups model) {
+                this.group = model.group;
+            } 
 
             /**
              * Group.

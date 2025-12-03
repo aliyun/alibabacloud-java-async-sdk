@@ -36,6 +36,10 @@ public class DescribeRestoreFullDetailsResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return requestId
      */
@@ -53,6 +57,14 @@ public class DescribeRestoreFullDetailsResponseBody extends TeaModel {
     public static final class Builder {
         private String requestId; 
         private RestoreFull restoreFull; 
+
+        private Builder() {
+        } 
+
+        private Builder(DescribeRestoreFullDetailsResponseBody model) {
+            this.requestId = model.requestId;
+            this.restoreFull = model.restoreFull;
+        } 
 
         /**
          * RequestId.
@@ -192,6 +204,20 @@ public class DescribeRestoreFullDetailsResponseBody extends TeaModel {
             private String state; 
             private String table; 
 
+            private Builder() {
+            } 
+
+            private Builder(RestoreFullDetail model) {
+                this.dataSize = model.dataSize;
+                this.endTime = model.endTime;
+                this.message = model.message;
+                this.process = model.process;
+                this.speed = model.speed;
+                this.startTime = model.startTime;
+                this.state = model.state;
+                this.table = model.table;
+            } 
+
             /**
              * DataSize.
              */
@@ -294,6 +320,13 @@ public class DescribeRestoreFullDetailsResponseBody extends TeaModel {
 
         public static final class Builder {
             private java.util.List<RestoreFullDetail> restoreFullDetail; 
+
+            private Builder() {
+            } 
+
+            private Builder(RestoreFullDetails model) {
+                this.restoreFullDetail = model.restoreFullDetail;
+            } 
 
             /**
              * RestoreFullDetail.
@@ -425,6 +458,20 @@ public class DescribeRestoreFullDetailsResponseBody extends TeaModel {
             private String speed; 
             private Integer succeed; 
             private Long total; 
+
+            private Builder() {
+            } 
+
+            private Builder(RestoreFull model) {
+                this.dataSize = model.dataSize;
+                this.fail = model.fail;
+                this.pageNumber = model.pageNumber;
+                this.pageSize = model.pageSize;
+                this.restoreFullDetails = model.restoreFullDetails;
+                this.speed = model.speed;
+                this.succeed = model.succeed;
+                this.total = model.total;
+            } 
 
             /**
              * DataSize.

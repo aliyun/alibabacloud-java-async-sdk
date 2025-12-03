@@ -36,6 +36,10 @@ public class ListTagsResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return requestId
      */
@@ -53,6 +57,14 @@ public class ListTagsResponseBody extends TeaModel {
     public static final class Builder {
         private String requestId; 
         private Tags tags; 
+
+        private Builder() {
+        } 
+
+        private Builder(ListTagsResponseBody model) {
+            this.requestId = model.requestId;
+            this.tags = model.tags;
+        } 
 
         /**
          * RequestId.
@@ -120,6 +132,14 @@ public class ListTagsResponseBody extends TeaModel {
             private String tagKey; 
             private String tagValue; 
 
+            private Builder() {
+            } 
+
+            private Builder(Tag model) {
+                this.tagKey = model.tagKey;
+                this.tagValue = model.tagValue;
+            } 
+
             /**
              * TagKey.
              */
@@ -174,6 +194,13 @@ public class ListTagsResponseBody extends TeaModel {
 
         public static final class Builder {
             private java.util.List<Tag> tag; 
+
+            private Builder() {
+            } 
+
+            private Builder(Tags model) {
+                this.tag = model.tag;
+            } 
 
             /**
              * Tag.

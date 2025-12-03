@@ -36,6 +36,10 @@ public class DescribeRestoreIncrDetailResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return requestId
      */
@@ -53,6 +57,14 @@ public class DescribeRestoreIncrDetailResponseBody extends TeaModel {
     public static final class Builder {
         private String requestId; 
         private RestoreIncrDetail restoreIncrDetail; 
+
+        private Builder() {
+        } 
+
+        private Builder(DescribeRestoreIncrDetailResponseBody model) {
+            this.requestId = model.requestId;
+            this.restoreIncrDetail = model.restoreIncrDetail;
+        } 
 
         /**
          * RequestId.
@@ -179,6 +191,19 @@ public class DescribeRestoreIncrDetailResponseBody extends TeaModel {
             private String restoredTs; 
             private String startTime; 
             private String state; 
+
+            private Builder() {
+            } 
+
+            private Builder(RestoreIncrDetail model) {
+                this.endTime = model.endTime;
+                this.process = model.process;
+                this.restoreDelay = model.restoreDelay;
+                this.restoreStartTs = model.restoreStartTs;
+                this.restoredTs = model.restoredTs;
+                this.startTime = model.startTime;
+                this.state = model.state;
+            } 
 
             /**
              * EndTime.

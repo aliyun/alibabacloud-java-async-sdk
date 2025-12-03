@@ -36,6 +36,10 @@ public class CheckComponentsVersionResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return components
      */
@@ -53,6 +57,14 @@ public class CheckComponentsVersionResponseBody extends TeaModel {
     public static final class Builder {
         private Components components; 
         private String requestId; 
+
+        private Builder() {
+        } 
+
+        private Builder(CheckComponentsVersionResponseBody model) {
+            this.components = model.components;
+            this.requestId = model.requestId;
+        } 
 
         /**
          * Components.
@@ -120,6 +132,14 @@ public class CheckComponentsVersionResponseBody extends TeaModel {
             private String component; 
             private String isLatestVersion; 
 
+            private Builder() {
+            } 
+
+            private Builder(Component model) {
+                this.component = model.component;
+                this.isLatestVersion = model.isLatestVersion;
+            } 
+
             /**
              * Component.
              */
@@ -174,6 +194,13 @@ public class CheckComponentsVersionResponseBody extends TeaModel {
 
         public static final class Builder {
             private java.util.List<Component> component; 
+
+            private Builder() {
+            } 
+
+            private Builder(Components model) {
+                this.component = model.component;
+            } 
 
             /**
              * Component.

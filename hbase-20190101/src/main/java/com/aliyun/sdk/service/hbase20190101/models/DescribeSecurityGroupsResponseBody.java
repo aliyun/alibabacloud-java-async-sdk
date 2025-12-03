@@ -36,6 +36,10 @@ public class DescribeSecurityGroupsResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return requestId
      */
@@ -53,6 +57,14 @@ public class DescribeSecurityGroupsResponseBody extends TeaModel {
     public static final class Builder {
         private String requestId; 
         private SecurityGroupIds securityGroupIds; 
+
+        private Builder() {
+        } 
+
+        private Builder(DescribeSecurityGroupsResponseBody model) {
+            this.requestId = model.requestId;
+            this.securityGroupIds = model.securityGroupIds;
+        } 
 
         /**
          * RequestId.
@@ -107,6 +119,13 @@ public class DescribeSecurityGroupsResponseBody extends TeaModel {
 
         public static final class Builder {
             private java.util.List<String> securityGroupId; 
+
+            private Builder() {
+            } 
+
+            private Builder(SecurityGroupIds model) {
+                this.securityGroupId = model.securityGroupId;
+            } 
 
             /**
              * SecurityGroupId.

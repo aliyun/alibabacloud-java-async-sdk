@@ -52,6 +52,10 @@ public class DescribeEndpointsResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return connAddrs
      */
@@ -101,6 +105,18 @@ public class DescribeEndpointsResponseBody extends TeaModel {
         private String requestId; 
         private String vSwitchId; 
         private String vpcId; 
+
+        private Builder() {
+        } 
+
+        private Builder(DescribeEndpointsResponseBody model) {
+            this.connAddrs = model.connAddrs;
+            this.engine = model.engine;
+            this.netType = model.netType;
+            this.requestId = model.requestId;
+            this.vSwitchId = model.vSwitchId;
+            this.vpcId = model.vpcId;
+        } 
 
         /**
          * ConnAddrs.
@@ -224,6 +240,16 @@ public class DescribeEndpointsResponseBody extends TeaModel {
             private String connType; 
             private String netType; 
 
+            private Builder() {
+            } 
+
+            private Builder(ConnAddrInfo model) {
+                this.connAddr = model.connAddr;
+                this.connAddrPort = model.connAddrPort;
+                this.connType = model.connType;
+                this.netType = model.netType;
+            } 
+
             /**
              * ConnAddr.
              */
@@ -294,6 +320,13 @@ public class DescribeEndpointsResponseBody extends TeaModel {
 
         public static final class Builder {
             private java.util.List<ConnAddrInfo> connAddrInfo; 
+
+            private Builder() {
+            } 
+
+            private Builder(ConnAddrs model) {
+                this.connAddrInfo = model.connAddrInfo;
+            } 
 
             /**
              * ConnAddrInfo.

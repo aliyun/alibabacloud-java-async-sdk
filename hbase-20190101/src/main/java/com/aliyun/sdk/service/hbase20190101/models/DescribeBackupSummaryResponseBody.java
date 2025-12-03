@@ -40,6 +40,10 @@ public class DescribeBackupSummaryResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return full
      */
@@ -65,6 +69,15 @@ public class DescribeBackupSummaryResponseBody extends TeaModel {
         private Full full; 
         private Incr incr; 
         private String requestId; 
+
+        private Builder() {
+        } 
+
+        private Builder(DescribeBackupSummaryResponseBody model) {
+            this.full = model.full;
+            this.incr = model.incr;
+            this.requestId = model.requestId;
+        } 
 
         /**
          * Full.
@@ -200,6 +213,19 @@ public class DescribeBackupSummaryResponseBody extends TeaModel {
             private String speed; 
             private String status; 
 
+            private Builder() {
+            } 
+
+            private Builder(Record model) {
+                this.createTime = model.createTime;
+                this.dataSize = model.dataSize;
+                this.finishTime = model.finishTime;
+                this.process = model.process;
+                this.recordId = model.recordId;
+                this.speed = model.speed;
+                this.status = model.status;
+            } 
+
             /**
              * CreateTime.
              */
@@ -294,6 +320,13 @@ public class DescribeBackupSummaryResponseBody extends TeaModel {
 
         public static final class Builder {
             private java.util.List<Record> record; 
+
+            private Builder() {
+            } 
+
+            private Builder(Records model) {
+                this.record = model.record;
+            } 
 
             /**
              * Record.
@@ -401,6 +434,18 @@ public class DescribeBackupSummaryResponseBody extends TeaModel {
             private Integer pageSize; 
             private Records records; 
             private Integer total; 
+
+            private Builder() {
+            } 
+
+            private Builder(Full model) {
+                this.hasMore = model.hasMore;
+                this.nextFullBackupDate = model.nextFullBackupDate;
+                this.pageNumber = model.pageNumber;
+                this.pageSize = model.pageSize;
+                this.records = model.records;
+                this.total = model.total;
+            } 
 
             /**
              * HasMore.
@@ -548,6 +593,18 @@ public class DescribeBackupSummaryResponseBody extends TeaModel {
             private String runningLogNum; 
             private String speed; 
             private String status; 
+
+            private Builder() {
+            } 
+
+            private Builder(Incr model) {
+                this.backupLogSize = model.backupLogSize;
+                this.pos = model.pos;
+                this.queueLogNum = model.queueLogNum;
+                this.runningLogNum = model.runningLogNum;
+                this.speed = model.speed;
+                this.status = model.status;
+            } 
 
             /**
              * BackupLogSize.

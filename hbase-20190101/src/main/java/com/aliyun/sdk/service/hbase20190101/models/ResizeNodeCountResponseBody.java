@@ -36,6 +36,10 @@ public class ResizeNodeCountResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return orderId
      */
@@ -53,6 +57,14 @@ public class ResizeNodeCountResponseBody extends TeaModel {
     public static final class Builder {
         private String orderId; 
         private String requestId; 
+
+        private Builder() {
+        } 
+
+        private Builder(ResizeNodeCountResponseBody model) {
+            this.orderId = model.orderId;
+            this.requestId = model.requestId;
+        } 
 
         /**
          * OrderId.

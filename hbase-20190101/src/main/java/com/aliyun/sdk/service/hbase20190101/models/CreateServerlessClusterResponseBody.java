@@ -44,6 +44,10 @@ public class CreateServerlessClusterResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return clusterId
      */
@@ -77,6 +81,16 @@ public class CreateServerlessClusterResponseBody extends TeaModel {
         private String orderId; 
         private String passWord; 
         private String requestId; 
+
+        private Builder() {
+        } 
+
+        private Builder(CreateServerlessClusterResponseBody model) {
+            this.clusterId = model.clusterId;
+            this.orderId = model.orderId;
+            this.passWord = model.passWord;
+            this.requestId = model.requestId;
+        } 
 
         /**
          * ClusterId.

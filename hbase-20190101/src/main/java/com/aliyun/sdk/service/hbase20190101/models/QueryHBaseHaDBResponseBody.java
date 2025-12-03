@@ -48,6 +48,10 @@ public class QueryHBaseHaDBResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return clusterList
      */
@@ -89,6 +93,17 @@ public class QueryHBaseHaDBResponseBody extends TeaModel {
         private Integer pageSize; 
         private String requestId; 
         private Long totalCount; 
+
+        private Builder() {
+        } 
+
+        private Builder(QueryHBaseHaDBResponseBody model) {
+            this.clusterList = model.clusterList;
+            this.pageNumber = model.pageNumber;
+            this.pageSize = model.pageSize;
+            this.requestId = model.requestId;
+            this.totalCount = model.totalCount;
+        } 
 
         /**
          * ClusterList.
@@ -192,6 +207,15 @@ public class QueryHBaseHaDBResponseBody extends TeaModel {
             private String slbConnAddr; 
             private String slbType; 
 
+            private Builder() {
+            } 
+
+            private Builder(HaSlbConn model) {
+                this.hbaseType = model.hbaseType;
+                this.slbConnAddr = model.slbConnAddr;
+                this.slbType = model.slbType;
+            } 
+
             /**
              * HbaseType.
              */
@@ -254,6 +278,13 @@ public class QueryHBaseHaDBResponseBody extends TeaModel {
 
         public static final class Builder {
             private java.util.List<HaSlbConn> haSlbConn; 
+
+            private Builder() {
+            } 
+
+            private Builder(HaSlbConnList model) {
+                this.haSlbConn = model.haSlbConn;
+            } 
 
             /**
              * HaSlbConn.
@@ -350,6 +381,17 @@ public class QueryHBaseHaDBResponseBody extends TeaModel {
             private HaSlbConnList haSlbConnList; 
             private String standbyName; 
 
+            private Builder() {
+            } 
+
+            private Builder(Cluster model) {
+                this.activeName = model.activeName;
+                this.bdsName = model.bdsName;
+                this.haName = model.haName;
+                this.haSlbConnList = model.haSlbConnList;
+                this.standbyName = model.standbyName;
+            } 
+
             /**
              * ActiveName.
              */
@@ -431,6 +473,13 @@ public class QueryHBaseHaDBResponseBody extends TeaModel {
 
         public static final class Builder {
             private java.util.List<Cluster> cluster; 
+
+            private Builder() {
+            } 
+
+            private Builder(ClusterList model) {
+                this.cluster = model.cluster;
+            } 
 
             /**
              * Cluster.

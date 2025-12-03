@@ -240,6 +240,10 @@ public class DescribeMultiZoneClusterResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return arbiterVSwitchIds
      */
@@ -665,6 +669,65 @@ public class DescribeMultiZoneClusterResponseBody extends TeaModel {
         private String taskProgress; 
         private String taskStatus; 
         private String vpcId; 
+
+        private Builder() {
+        } 
+
+        private Builder(DescribeMultiZoneClusterResponseBody model) {
+            this.arbiterVSwitchIds = model.arbiterVSwitchIds;
+            this.arbiterZoneId = model.arbiterZoneId;
+            this.autoRenewal = model.autoRenewal;
+            this.clusterId = model.clusterId;
+            this.clusterName = model.clusterName;
+            this.coldStorageSize = model.coldStorageSize;
+            this.coreDiskCount = model.coreDiskCount;
+            this.coreDiskSize = model.coreDiskSize;
+            this.coreDiskType = model.coreDiskType;
+            this.coreInstanceType = model.coreInstanceType;
+            this.coreNodeCount = model.coreNodeCount;
+            this.createdTime = model.createdTime;
+            this.createdTimeUTC = model.createdTimeUTC;
+            this.duration = model.duration;
+            this.encryptionKey = model.encryptionKey;
+            this.encryptionType = model.encryptionType;
+            this.engine = model.engine;
+            this.expireTime = model.expireTime;
+            this.expireTimeUTC = model.expireTimeUTC;
+            this.instanceId = model.instanceId;
+            this.instanceName = model.instanceName;
+            this.isDeletionProtection = model.isDeletionProtection;
+            this.logDiskCount = model.logDiskCount;
+            this.logDiskSize = model.logDiskSize;
+            this.logDiskType = model.logDiskType;
+            this.logInstanceType = model.logInstanceType;
+            this.logNodeCount = model.logNodeCount;
+            this.maintainEndTime = model.maintainEndTime;
+            this.maintainStartTime = model.maintainStartTime;
+            this.majorVersion = model.majorVersion;
+            this.masterDiskSize = model.masterDiskSize;
+            this.masterDiskType = model.masterDiskType;
+            this.masterInstanceType = model.masterInstanceType;
+            this.masterNodeCount = model.masterNodeCount;
+            this.moduleId = model.moduleId;
+            this.moduleStackVersion = model.moduleStackVersion;
+            this.multiZoneCombination = model.multiZoneCombination;
+            this.multiZoneInstanceModels = model.multiZoneInstanceModels;
+            this.networkType = model.networkType;
+            this.parentId = model.parentId;
+            this.payType = model.payType;
+            this.primaryVSwitchIds = model.primaryVSwitchIds;
+            this.primaryZoneId = model.primaryZoneId;
+            this.regionId = model.regionId;
+            this.requestId = model.requestId;
+            this.resourceGroupId = model.resourceGroupId;
+            this.standbyVSwitchIds = model.standbyVSwitchIds;
+            this.standbyZoneId = model.standbyZoneId;
+            this.status = model.status;
+            this.tags = model.tags;
+            this.taskProgress = model.taskProgress;
+            this.taskStatus = model.taskStatus;
+            this.vpcId = model.vpcId;
+        } 
 
         /**
          * ArbiterVSwitchIds.
@@ -1224,6 +1287,21 @@ public class DescribeMultiZoneClusterResponseBody extends TeaModel {
             private String role; 
             private String status; 
 
+            private Builder() {
+            } 
+
+            private Builder(MultiZoneInstanceModel model) {
+                this.hdfsMinorVersion = model.hdfsMinorVersion;
+                this.insName = model.insName;
+                this.isHdfsLatestVersion = model.isHdfsLatestVersion;
+                this.isLatestVersion = model.isLatestVersion;
+                this.latestHdfsMinorVersion = model.latestHdfsMinorVersion;
+                this.latestMinorVersion = model.latestMinorVersion;
+                this.minorVersion = model.minorVersion;
+                this.role = model.role;
+                this.status = model.status;
+            } 
+
             /**
              * HdfsMinorVersion.
              */
@@ -1335,6 +1413,13 @@ public class DescribeMultiZoneClusterResponseBody extends TeaModel {
         public static final class Builder {
             private java.util.List<MultiZoneInstanceModel> multiZoneInstanceModel; 
 
+            private Builder() {
+            } 
+
+            private Builder(MultiZoneInstanceModels model) {
+                this.multiZoneInstanceModel = model.multiZoneInstanceModel;
+            } 
+
             /**
              * MultiZoneInstanceModel.
              */
@@ -1394,6 +1479,14 @@ public class DescribeMultiZoneClusterResponseBody extends TeaModel {
             private String key; 
             private String value; 
 
+            private Builder() {
+            } 
+
+            private Builder(Tag model) {
+                this.key = model.key;
+                this.value = model.value;
+            } 
+
             /**
              * Key.
              */
@@ -1448,6 +1541,13 @@ public class DescribeMultiZoneClusterResponseBody extends TeaModel {
 
         public static final class Builder {
             private java.util.List<Tag> tag; 
+
+            private Builder() {
+            } 
+
+            private Builder(Tags model) {
+                this.tag = model.tag;
+            } 
 
             /**
              * Tag.
