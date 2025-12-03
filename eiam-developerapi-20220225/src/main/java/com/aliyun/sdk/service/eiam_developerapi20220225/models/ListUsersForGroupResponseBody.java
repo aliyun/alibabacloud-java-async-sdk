@@ -93,7 +93,7 @@ public class ListUsersForGroupResponseBody extends TeaModel {
         } 
 
         /**
-         * data.
+         * <p>The returned data.</p>
          */
         public Builder data(java.util.List<Data> data) {
             this.data = data;
@@ -101,7 +101,10 @@ public class ListUsersForGroupResponseBody extends TeaModel {
         }
 
         /**
-         * maxResults.
+         * <p>The maximum number of entries returned.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>20</p>
          */
         public Builder maxResults(Integer maxResults) {
             this.maxResults = maxResults;
@@ -109,7 +112,10 @@ public class ListUsersForGroupResponseBody extends TeaModel {
         }
 
         /**
-         * nextToken.
+         * <p>A pagination token. If NextToken is empty, no next page exists.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>NTxxx</p>
          */
         public Builder nextToken(String nextToken) {
             this.nextToken = nextToken;
@@ -117,7 +123,10 @@ public class ListUsersForGroupResponseBody extends TeaModel {
         }
 
         /**
-         * totalCount.
+         * <p>The total number of entries returned.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1000</p>
          */
         public Builder totalCount(Long totalCount) {
             this.totalCount = totalCount;
@@ -183,7 +192,10 @@ public class ListUsersForGroupResponseBody extends TeaModel {
             } 
 
             /**
-             * instanceId.
+             * <p>The instance ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>idaas_ue2jvisn35ea5lmthk267xxxxx</p>
              */
             public Builder instanceId(String instanceId) {
                 this.instanceId = instanceId;
@@ -191,7 +203,10 @@ public class ListUsersForGroupResponseBody extends TeaModel {
             }
 
             /**
-             * userId.
+             * <p>The account ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>user_001</p>
              */
             public Builder userId(String userId) {
                 this.userId = userId;

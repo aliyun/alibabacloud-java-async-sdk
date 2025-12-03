@@ -463,10 +463,7 @@ public class ListUsersResponseBody extends TeaModel {
             }
 
             /**
-             * <p>密码是否已设置</p>
-             * 
-             * <strong>example:</strong>
-             * <p>true</p>
+             * passwordSet.
              */
             public Builder passwordSet(Boolean passwordSet) {
                 this.passwordSet = passwordSet;

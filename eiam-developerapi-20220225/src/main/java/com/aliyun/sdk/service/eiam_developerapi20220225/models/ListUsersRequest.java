@@ -181,7 +181,7 @@ public class ListUsersRequest extends Request {
         }
 
         /**
-         * <p>The authentication information. Format: Bearer ${access_token}. Example: Bearer ATxxxx.</p>
+         * <p>The authentication information. The value is in the Bearer ${access_token} format. Example: Bearer ATxxxx.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>

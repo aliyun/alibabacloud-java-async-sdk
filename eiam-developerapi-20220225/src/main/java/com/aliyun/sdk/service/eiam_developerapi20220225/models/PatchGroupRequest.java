@@ -142,6 +142,7 @@ public class PatchGroupRequest extends Request {
         }
 
         /**
+         * <p>The instance ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -154,6 +155,7 @@ public class PatchGroupRequest extends Request {
         }
 
         /**
+         * <p>The application ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -166,6 +168,7 @@ public class PatchGroupRequest extends Request {
         }
 
         /**
+         * <p>The group ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -178,6 +181,7 @@ public class PatchGroupRequest extends Request {
         }
 
         /**
+         * <p>The authentication information. The value is in the Bearer ${access_token} format. Example: Bearer ATxxxx.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -190,7 +194,10 @@ public class PatchGroupRequest extends Request {
         }
 
         /**
-         * groupName.
+         * <p>The group name.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>name001</p>
          */
         public Builder groupName(String groupName) {
             this.putBodyParameter("groupName", groupName);

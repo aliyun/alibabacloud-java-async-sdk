@@ -54,7 +54,10 @@ public class CreateGroupResponseBody extends TeaModel {
         } 
 
         /**
-         * groupId.
+         * <p>The group ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>group_wovwffm62xifdziem7an7xxxxx</p>
          */
         public Builder groupId(String groupId) {
             this.groupId = groupId;

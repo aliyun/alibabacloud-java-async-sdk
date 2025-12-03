@@ -93,7 +93,7 @@ public class ListGroupsResponseBody extends TeaModel {
         } 
 
         /**
-         * data.
+         * <p>The returned data.</p>
          */
         public Builder data(java.util.List<Data> data) {
             this.data = data;
@@ -101,7 +101,10 @@ public class ListGroupsResponseBody extends TeaModel {
         }
 
         /**
-         * maxResults.
+         * <p>The maximum number of entries returned.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>20</p>
          */
         public Builder maxResults(Integer maxResults) {
             this.maxResults = maxResults;
@@ -109,7 +112,10 @@ public class ListGroupsResponseBody extends TeaModel {
         }
 
         /**
-         * nextToken.
+         * <p>The start position of the query. If this parameter is left empty, the query starts from the beginning.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>NTxxx</p>
          */
         public Builder nextToken(String nextToken) {
             this.nextToken = nextToken;
@@ -117,7 +123,10 @@ public class ListGroupsResponseBody extends TeaModel {
         }
 
         /**
-         * totalCount.
+         * <p>The total number of entries returned.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1000</p>
          */
         public Builder totalCount(Long totalCount) {
             this.totalCount = totalCount;
@@ -274,7 +283,10 @@ public class ListGroupsResponseBody extends TeaModel {
             } 
 
             /**
-             * createTime.
+             * <p>The time when the group was created. The value is a UNIX timestamp. Unit: milliseconds.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1652085686179</p>
              */
             public Builder createTime(Long createTime) {
                 this.createTime = createTime;
@@ -282,7 +294,10 @@ public class ListGroupsResponseBody extends TeaModel {
             }
 
             /**
-             * description.
+             * <p>The group description.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>description_demo</p>
              */
             public Builder description(String description) {
                 this.description = description;
@@ -290,7 +305,10 @@ public class ListGroupsResponseBody extends TeaModel {
             }
 
             /**
-             * groupExternalId.
+             * <p>The external ID of the group.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>group_ufdsasn35ea5lmthk267xxxxx</p>
              */
             public Builder groupExternalId(String groupExternalId) {
                 this.groupExternalId = groupExternalId;
@@ -298,7 +316,10 @@ public class ListGroupsResponseBody extends TeaModel {
             }
 
             /**
-             * groupId.
+             * <p>The group ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>group_ufdsasn35ea5lmthk267xxxxx</p>
              */
             public Builder groupId(String groupId) {
                 this.groupId = groupId;
@@ -306,7 +327,10 @@ public class ListGroupsResponseBody extends TeaModel {
             }
 
             /**
-             * groupName.
+             * <p>The group name.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>name_test</p>
              */
             public Builder groupName(String groupName) {
                 this.groupName = groupName;
@@ -314,7 +338,10 @@ public class ListGroupsResponseBody extends TeaModel {
             }
 
             /**
-             * groupSourceId.
+             * <p>The source ID of the group.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>idaas_ue2jvisn35ea5lmthk267xxxxx</p>
              */
             public Builder groupSourceId(String groupSourceId) {
                 this.groupSourceId = groupSourceId;
@@ -322,7 +349,10 @@ public class ListGroupsResponseBody extends TeaModel {
             }
 
             /**
-             * groupSourceType.
+             * <p>The source type of the group. Valid values: build_in, ding_talk, ad, and ldap.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>build_in</p>
              */
             public Builder groupSourceType(String groupSourceType) {
                 this.groupSourceType = groupSourceType;
@@ -330,7 +360,10 @@ public class ListGroupsResponseBody extends TeaModel {
             }
 
             /**
-             * instanceId.
+             * <p>The instance ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>idaas_ue2jvisn35ea5lmthk267xxxxx</p>
              */
             public Builder instanceId(String instanceId) {
                 this.instanceId = instanceId;
@@ -338,7 +371,10 @@ public class ListGroupsResponseBody extends TeaModel {
             }
 
             /**
-             * updateTime.
+             * <p>The time when the group was last updated. The value is a UNIX timestamp. Unit: milliseconds.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1652085686179</p>
              */
             public Builder updateTime(Long updateTime) {
                 this.updateTime = updateTime;

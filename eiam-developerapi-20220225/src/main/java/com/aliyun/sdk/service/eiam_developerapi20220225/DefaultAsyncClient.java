@@ -239,11 +239,7 @@ public final class DefaultAsyncClient implements AsyncClient {
 
     /**
      * <b>description</b> :
-     * <blockquote>
-     * </blockquote>
-     * <ul>
-     * <li>The following authorization types are supported: authorization code, device code, refresh token, and client credentials.</li>
-     * </ul>
+     * <p>The following authorization types are supported: authorization code, device code, refresh token, and client credentials.</p>
      * 
      * @param request the request parameters of GenerateToken  GenerateTokenRequest
      * @return GenerateTokenResponse

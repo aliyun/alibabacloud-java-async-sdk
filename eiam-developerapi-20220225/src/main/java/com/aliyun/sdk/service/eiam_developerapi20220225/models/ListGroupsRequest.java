@@ -155,6 +155,7 @@ public class ListGroupsRequest extends Request {
         }
 
         /**
+         * <p>The instance ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -167,6 +168,7 @@ public class ListGroupsRequest extends Request {
         }
 
         /**
+         * <p>The application ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -179,6 +181,7 @@ public class ListGroupsRequest extends Request {
         }
 
         /**
+         * <p>The authentication information. The value is in the Bearer ${access_token} format. Example: Bearer ATxxxx.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -191,7 +194,10 @@ public class ListGroupsRequest extends Request {
         }
 
         /**
-         * groupNameStartWith.
+         * <p>The prefix of the group name.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>group_xxx</p>
          */
         public Builder groupNameStartWith(String groupNameStartWith) {
             this.putQueryParameter("groupNameStartWith", groupNameStartWith);
@@ -200,7 +206,10 @@ public class ListGroupsRequest extends Request {
         }
 
         /**
-         * maxResults.
+         * <p>The number of entries per page. Default value: 20.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>20</p>
          */
         public Builder maxResults(Integer maxResults) {
             this.putQueryParameter("maxResults", maxResults);

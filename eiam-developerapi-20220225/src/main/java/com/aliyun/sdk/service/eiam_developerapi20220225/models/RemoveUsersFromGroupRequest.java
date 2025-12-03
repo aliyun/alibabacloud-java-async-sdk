@@ -143,6 +143,7 @@ public class RemoveUsersFromGroupRequest extends Request {
         }
 
         /**
+         * <p>The instance ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -155,6 +156,7 @@ public class RemoveUsersFromGroupRequest extends Request {
         }
 
         /**
+         * <p>The application ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -167,6 +169,7 @@ public class RemoveUsersFromGroupRequest extends Request {
         }
 
         /**
+         * <p>The group ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -179,6 +182,7 @@ public class RemoveUsersFromGroupRequest extends Request {
         }
 
         /**
+         * <p>The authentication information. The value is in the Bearer ${access_token} format. Example: Bearer ATxxxx.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -191,6 +195,7 @@ public class RemoveUsersFromGroupRequest extends Request {
         }
 
         /**
+         * <p>The account IDs.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>

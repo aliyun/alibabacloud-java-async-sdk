@@ -427,7 +427,7 @@ public class GetUserResponseBody extends TeaModel {
         }
 
         /**
-         * <p>账户所属组列表。</p>
+         * <p>The groups to which the account belongs.</p>
          */
         public Builder groups(java.util.List<Groups> groups) {
             this.groups = groups;
@@ -768,7 +768,7 @@ public class GetUserResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>组描述。</p>
+             * <p>The group description.</p>
              * 
              * <strong>example:</strong>
              * <p>description_demo</p>
@@ -779,7 +779,7 @@ public class GetUserResponseBody extends TeaModel {
             }
 
             /**
-             * <p>组ID。</p>
+             * <p>The group ID.</p>
              * 
              * <strong>example:</strong>
              * <p>group_ufdsasn35ea5lmthk267xxxxx</p>
@@ -790,7 +790,7 @@ public class GetUserResponseBody extends TeaModel {
             }
 
             /**
-             * <p>组名称。</p>
+             * <p>The group name.</p>
              * 
              * <strong>example:</strong>
              * <p>name_test</p>
