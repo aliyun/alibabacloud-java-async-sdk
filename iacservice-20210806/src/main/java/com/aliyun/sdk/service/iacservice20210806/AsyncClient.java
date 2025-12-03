@@ -176,6 +176,12 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<ExecuteTerraformPlanResponse> executeTerraformPlan(ExecuteTerraformPlanRequest request);
 
     /**
+     * @param request the request parameters of GenerateModule  GenerateModuleRequest
+     * @return GenerateModuleResponse
+     */
+    CompletableFuture<GenerateModuleResponse> generateModule(GenerateModuleRequest request);
+
+    /**
      * @param request the request parameters of GetExecuteState  GetExecuteStateRequest
      * @return GetExecuteStateResponse
      */

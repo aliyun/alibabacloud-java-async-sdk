@@ -215,6 +215,9 @@ public class GetJobResponseBody extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("autoApply")
         private Boolean autoApply;
 
+        @com.aliyun.core.annotation.NameInMap("hasConfigProactive")
+        private String hasConfigProactive;
+
         @com.aliyun.core.annotation.NameInMap("isDestroy")
         private Boolean isDestroy;
 
@@ -229,6 +232,7 @@ public class GetJobResponseBody extends TeaModel {
 
         private Config(Builder builder) {
             this.autoApply = builder.autoApply;
+            this.hasConfigProactive = builder.hasConfigProactive;
             this.isDestroy = builder.isDestroy;
             this.moduleVersion = builder.moduleVersion;
             this.resourcesChanged = builder.resourcesChanged;
@@ -248,6 +252,13 @@ public class GetJobResponseBody extends TeaModel {
          */
         public Boolean getAutoApply() {
             return this.autoApply;
+        }
+
+        /**
+         * @return hasConfigProactive
+         */
+        public String getHasConfigProactive() {
+            return this.hasConfigProactive;
         }
 
         /**
@@ -280,6 +291,7 @@ public class GetJobResponseBody extends TeaModel {
 
         public static final class Builder {
             private Boolean autoApply; 
+            private String hasConfigProactive; 
             private Boolean isDestroy; 
             private String moduleVersion; 
             private String resourcesChanged; 
@@ -290,6 +302,7 @@ public class GetJobResponseBody extends TeaModel {
 
             private Builder(Config model) {
                 this.autoApply = model.autoApply;
+                this.hasConfigProactive = model.hasConfigProactive;
                 this.isDestroy = model.isDestroy;
                 this.moduleVersion = model.moduleVersion;
                 this.resourcesChanged = model.resourcesChanged;
@@ -301,6 +314,14 @@ public class GetJobResponseBody extends TeaModel {
              */
             public Builder autoApply(Boolean autoApply) {
                 this.autoApply = autoApply;
+                return this;
+            }
+
+            /**
+             * hasConfigProactive.
+             */
+            public Builder hasConfigProactive(String hasConfigProactive) {
+                this.hasConfigProactive = hasConfigProactive;
                 return this;
             }
 
