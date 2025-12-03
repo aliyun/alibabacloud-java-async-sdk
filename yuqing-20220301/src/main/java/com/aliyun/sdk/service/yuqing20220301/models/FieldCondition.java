@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.yuqing20220301.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -19,7 +24,7 @@ public class FieldCondition extends TeaModel {
     private String nestFieldPath;
 
     @com.aliyun.core.annotation.NameInMap("nestFieldValue")
-    private java.util.List < Long > nestFieldValue;
+    private java.util.List<Long> nestFieldValue;
 
     @com.aliyun.core.annotation.NameInMap("operateType")
     private String operateType;
@@ -43,6 +48,10 @@ public class FieldCondition extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return fieldName
      */
@@ -60,7 +69,7 @@ public class FieldCondition extends TeaModel {
     /**
      * @return nestFieldValue
      */
-    public java.util.List < Long > getNestFieldValue() {
+    public java.util.List<Long> getNestFieldValue() {
         return this.nestFieldValue;
     }
 
@@ -81,9 +90,20 @@ public class FieldCondition extends TeaModel {
     public static final class Builder {
         private String fieldName; 
         private String nestFieldPath; 
-        private java.util.List < Long > nestFieldValue; 
+        private java.util.List<Long> nestFieldValue; 
         private String operateType; 
         private String value; 
+
+        private Builder() {
+        } 
+
+        private Builder(FieldCondition model) {
+            this.fieldName = model.fieldName;
+            this.nestFieldPath = model.nestFieldPath;
+            this.nestFieldValue = model.nestFieldValue;
+            this.operateType = model.operateType;
+            this.value = model.value;
+        } 
 
         /**
          * fieldName.
@@ -104,7 +124,7 @@ public class FieldCondition extends TeaModel {
         /**
          * nestFieldValue.
          */
-        public Builder nestFieldValue(java.util.List < Long > nestFieldValue) {
+        public Builder nestFieldValue(java.util.List<Long> nestFieldValue) {
             this.nestFieldValue = nestFieldValue;
             return this;
         }

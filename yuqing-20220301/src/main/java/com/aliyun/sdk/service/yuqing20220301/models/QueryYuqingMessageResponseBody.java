@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.yuqing20220301.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -19,7 +24,7 @@ public class QueryYuqingMessageResponseBody extends TeaModel {
     private Long totalCount;
 
     @com.aliyun.core.annotation.NameInMap("yuqingMessages")
-    private java.util.List < YuqingMessage > yuqingMessages;
+    private java.util.List<YuqingMessage> yuqingMessages;
 
     private QueryYuqingMessageResponseBody(Builder builder) {
         this.requestId = builder.requestId;
@@ -33,6 +38,10 @@ public class QueryYuqingMessageResponseBody extends TeaModel {
 
     public static QueryYuqingMessageResponseBody create() {
         return builder().build();
+    }
+
+    public Builder toBuilder() {
+        return new Builder(this);
     }
 
     /**
@@ -52,14 +61,23 @@ public class QueryYuqingMessageResponseBody extends TeaModel {
     /**
      * @return yuqingMessages
      */
-    public java.util.List < YuqingMessage > getYuqingMessages() {
+    public java.util.List<YuqingMessage> getYuqingMessages() {
         return this.yuqingMessages;
     }
 
     public static final class Builder {
         private String requestId; 
         private Long totalCount; 
-        private java.util.List < YuqingMessage > yuqingMessages; 
+        private java.util.List<YuqingMessage> yuqingMessages; 
+
+        private Builder() {
+        } 
+
+        private Builder(QueryYuqingMessageResponseBody model) {
+            this.requestId = model.requestId;
+            this.totalCount = model.totalCount;
+            this.yuqingMessages = model.yuqingMessages;
+        } 
 
         /**
          * <p>Id of the request</p>
@@ -83,7 +101,7 @@ public class QueryYuqingMessageResponseBody extends TeaModel {
         /**
          * yuqingMessages.
          */
-        public Builder yuqingMessages(java.util.List < YuqingMessage > yuqingMessages) {
+        public Builder yuqingMessages(java.util.List<YuqingMessage> yuqingMessages) {
             this.yuqingMessages = yuqingMessages;
             return this;
         }

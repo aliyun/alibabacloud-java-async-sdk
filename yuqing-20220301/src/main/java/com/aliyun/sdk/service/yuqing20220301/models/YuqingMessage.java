@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.yuqing20220301.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -22,7 +27,7 @@ public class YuqingMessage extends TeaModel {
     private String appStoreName;
 
     @com.aliyun.core.annotation.NameInMap("atAuthorNames")
-    private java.util.List < String > atAuthorNames;
+    private java.util.List<String> atAuthorNames;
 
     @com.aliyun.core.annotation.NameInMap("audioCount")
     private Integer audioCount;
@@ -91,7 +96,7 @@ public class YuqingMessage extends TeaModel {
     private Long docAnswersCount;
 
     @com.aliyun.core.annotation.NameInMap("docAreas")
-    private java.util.List < String > docAreas;
+    private java.util.List<String> docAreas;
 
     @com.aliyun.core.annotation.NameInMap("docCoinCount")
     private Long docCoinCount;
@@ -145,16 +150,16 @@ public class YuqingMessage extends TeaModel {
     private Integer emotionType;
 
     @com.aliyun.core.annotation.NameInMap("extInfo")
-    private java.util.Map < String, String > extInfo;
+    private java.util.Map<String, String> extInfo;
 
     @com.aliyun.core.annotation.NameInMap("finEventCount")
     private Integer finEventCount;
 
     @com.aliyun.core.annotation.NameInMap("financeEventList")
-    private java.util.List < YuqingFinanceEvent > financeEventList;
+    private java.util.List<YuqingFinanceEvent> financeEventList;
 
     @com.aliyun.core.annotation.NameInMap("highlightKeywords")
-    private java.util.List < String > highlightKeywords;
+    private java.util.List<String> highlightKeywords;
 
     @com.aliyun.core.annotation.NameInMap("imageCount")
     private Integer imageCount;
@@ -163,7 +168,7 @@ public class YuqingMessage extends TeaModel {
     private Double influenceScore;
 
     @com.aliyun.core.annotation.NameInMap("mediaHosts")
-    private java.util.List < String > mediaHosts;
+    private java.util.List<String> mediaHosts;
 
     @com.aliyun.core.annotation.NameInMap("mediaInfluenceLevel")
     private Integer mediaInfluenceLevel;
@@ -193,16 +198,16 @@ public class YuqingMessage extends TeaModel {
     private Double relevanceScore;
 
     @com.aliyun.core.annotation.NameInMap("reportMaterialTags")
-    private java.util.List < String > reportMaterialTags;
+    private java.util.List<String> reportMaterialTags;
 
     @com.aliyun.core.annotation.NameInMap("repostList")
-    private java.util.List < String > repostList;
+    private java.util.List<String> repostList;
 
     @com.aliyun.core.annotation.NameInMap("similarNumber")
     private Integer similarNumber;
 
     @com.aliyun.core.annotation.NameInMap("topics")
-    private java.util.List < String > topics;
+    private java.util.List<String> topics;
 
     @com.aliyun.core.annotation.NameInMap("videoCount")
     private Integer videoCount;
@@ -291,6 +296,10 @@ public class YuqingMessage extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return appName
      */
@@ -315,7 +324,7 @@ public class YuqingMessage extends TeaModel {
     /**
      * @return atAuthorNames
      */
-    public java.util.List < String > getAtAuthorNames() {
+    public java.util.List<String> getAtAuthorNames() {
         return this.atAuthorNames;
     }
 
@@ -476,7 +485,7 @@ public class YuqingMessage extends TeaModel {
     /**
      * @return docAreas
      */
-    public java.util.List < String > getDocAreas() {
+    public java.util.List<String> getDocAreas() {
         return this.docAreas;
     }
 
@@ -602,7 +611,7 @@ public class YuqingMessage extends TeaModel {
     /**
      * @return extInfo
      */
-    public java.util.Map < String, String > getExtInfo() {
+    public java.util.Map<String, String> getExtInfo() {
         return this.extInfo;
     }
 
@@ -616,14 +625,14 @@ public class YuqingMessage extends TeaModel {
     /**
      * @return financeEventList
      */
-    public java.util.List < YuqingFinanceEvent > getFinanceEventList() {
+    public java.util.List<YuqingFinanceEvent> getFinanceEventList() {
         return this.financeEventList;
     }
 
     /**
      * @return highlightKeywords
      */
-    public java.util.List < String > getHighlightKeywords() {
+    public java.util.List<String> getHighlightKeywords() {
         return this.highlightKeywords;
     }
 
@@ -644,7 +653,7 @@ public class YuqingMessage extends TeaModel {
     /**
      * @return mediaHosts
      */
-    public java.util.List < String > getMediaHosts() {
+    public java.util.List<String> getMediaHosts() {
         return this.mediaHosts;
     }
 
@@ -714,14 +723,14 @@ public class YuqingMessage extends TeaModel {
     /**
      * @return reportMaterialTags
      */
-    public java.util.List < String > getReportMaterialTags() {
+    public java.util.List<String> getReportMaterialTags() {
         return this.reportMaterialTags;
     }
 
     /**
      * @return repostList
      */
-    public java.util.List < String > getRepostList() {
+    public java.util.List<String> getRepostList() {
         return this.repostList;
     }
 
@@ -735,7 +744,7 @@ public class YuqingMessage extends TeaModel {
     /**
      * @return topics
      */
-    public java.util.List < String > getTopics() {
+    public java.util.List<String> getTopics() {
         return this.topics;
     }
 
@@ -764,7 +773,7 @@ public class YuqingMessage extends TeaModel {
         private String appName; 
         private Long appScore; 
         private String appStoreName; 
-        private java.util.List < String > atAuthorNames; 
+        private java.util.List<String> atAuthorNames; 
         private Integer audioCount; 
         private String authorAvatarUrl; 
         private Long authorFollowersCount; 
@@ -787,7 +796,7 @@ public class YuqingMessage extends TeaModel {
         private String contentVideoUrls; 
         private Long createTime; 
         private Long docAnswersCount; 
-        private java.util.List < String > docAreas; 
+        private java.util.List<String> docAreas; 
         private Long docCoinCount; 
         private Long docCommentsCount; 
         private String docContent; 
@@ -805,13 +814,13 @@ public class YuqingMessage extends TeaModel {
         private String docUrl; 
         private Double emotionScore; 
         private Integer emotionType; 
-        private java.util.Map < String, String > extInfo; 
+        private java.util.Map<String, String> extInfo; 
         private Integer finEventCount; 
-        private java.util.List < YuqingFinanceEvent > financeEventList; 
-        private java.util.List < String > highlightKeywords; 
+        private java.util.List<YuqingFinanceEvent> financeEventList; 
+        private java.util.List<String> highlightKeywords; 
         private Integer imageCount; 
         private Double influenceScore; 
-        private java.util.List < String > mediaHosts; 
+        private java.util.List<String> mediaHosts; 
         private Integer mediaInfluenceLevel; 
         private String mediaName; 
         private Integer mediaPropagationLevel; 
@@ -821,13 +830,86 @@ public class YuqingMessage extends TeaModel {
         private Double propagationScore; 
         private Long publishTime; 
         private Double relevanceScore; 
-        private java.util.List < String > reportMaterialTags; 
-        private java.util.List < String > repostList; 
+        private java.util.List<String> reportMaterialTags; 
+        private java.util.List<String> repostList; 
         private Integer similarNumber; 
-        private java.util.List < String > topics; 
+        private java.util.List<String> topics; 
         private Integer videoCount; 
         private String weiboCommentId; 
         private String weiboMid; 
+
+        private Builder() {
+        } 
+
+        private Builder(YuqingMessage model) {
+            this.appName = model.appName;
+            this.appScore = model.appScore;
+            this.appStoreName = model.appStoreName;
+            this.atAuthorNames = model.atAuthorNames;
+            this.audioCount = model.audioCount;
+            this.authorAvatarUrl = model.authorAvatarUrl;
+            this.authorFollowersCount = model.authorFollowersCount;
+            this.authorFriendsCount = model.authorFriendsCount;
+            this.authorGender = model.authorGender;
+            this.authorId = model.authorId;
+            this.authorLikesCount = model.authorLikesCount;
+            this.authorName = model.authorName;
+            this.authorProfileUrl = model.authorProfileUrl;
+            this.authorStatusesCount = model.authorStatusesCount;
+            this.authorVerified = model.authorVerified;
+            this.authorVerifyType = model.authorVerifyType;
+            this.contentAudioText = model.contentAudioText;
+            this.contentAudioUrls = model.contentAudioUrls;
+            this.contentImageText = model.contentImageText;
+            this.contentImageUrls = model.contentImageUrls;
+            this.contentLang = model.contentLang;
+            this.contentLen = model.contentLen;
+            this.contentVideoText = model.contentVideoText;
+            this.contentVideoUrls = model.contentVideoUrls;
+            this.createTime = model.createTime;
+            this.docAnswersCount = model.docAnswersCount;
+            this.docAreas = model.docAreas;
+            this.docCoinCount = model.docCoinCount;
+            this.docCommentsCount = model.docCommentsCount;
+            this.docContent = model.docContent;
+            this.docContentBrief = model.docContentBrief;
+            this.docContentSign = model.docContentSign;
+            this.docId = model.docId;
+            this.docLikesCount = model.docLikesCount;
+            this.docPlayCount = model.docPlayCount;
+            this.docReadingCount = model.docReadingCount;
+            this.docReadsCount = model.docReadsCount;
+            this.docRepostsCount = model.docRepostsCount;
+            this.docReprintName = model.docReprintName;
+            this.docSelfContentSign = model.docSelfContentSign;
+            this.docTitle = model.docTitle;
+            this.docUrl = model.docUrl;
+            this.emotionScore = model.emotionScore;
+            this.emotionType = model.emotionType;
+            this.extInfo = model.extInfo;
+            this.finEventCount = model.finEventCount;
+            this.financeEventList = model.financeEventList;
+            this.highlightKeywords = model.highlightKeywords;
+            this.imageCount = model.imageCount;
+            this.influenceScore = model.influenceScore;
+            this.mediaHosts = model.mediaHosts;
+            this.mediaInfluenceLevel = model.mediaInfluenceLevel;
+            this.mediaName = model.mediaName;
+            this.mediaPropagationLevel = model.mediaPropagationLevel;
+            this.mediaType = model.mediaType;
+            this.messageType = model.messageType;
+            this.parentDocId = model.parentDocId;
+            this.propagationScore = model.propagationScore;
+            this.publishTime = model.publishTime;
+            this.relevanceScore = model.relevanceScore;
+            this.reportMaterialTags = model.reportMaterialTags;
+            this.repostList = model.repostList;
+            this.similarNumber = model.similarNumber;
+            this.topics = model.topics;
+            this.videoCount = model.videoCount;
+            this.weiboCommentId = model.weiboCommentId;
+            this.weiboMid = model.weiboMid;
+        } 
 
         /**
          * appName.
@@ -856,7 +938,7 @@ public class YuqingMessage extends TeaModel {
         /**
          * atAuthorNames.
          */
-        public Builder atAuthorNames(java.util.List < String > atAuthorNames) {
+        public Builder atAuthorNames(java.util.List<String> atAuthorNames) {
             this.atAuthorNames = atAuthorNames;
             return this;
         }
@@ -1040,7 +1122,7 @@ public class YuqingMessage extends TeaModel {
         /**
          * docAreas.
          */
-        public Builder docAreas(java.util.List < String > docAreas) {
+        public Builder docAreas(java.util.List<String> docAreas) {
             this.docAreas = docAreas;
             return this;
         }
@@ -1184,7 +1266,7 @@ public class YuqingMessage extends TeaModel {
         /**
          * extInfo.
          */
-        public Builder extInfo(java.util.Map < String, String > extInfo) {
+        public Builder extInfo(java.util.Map<String, String> extInfo) {
             this.extInfo = extInfo;
             return this;
         }
@@ -1200,7 +1282,7 @@ public class YuqingMessage extends TeaModel {
         /**
          * financeEventList.
          */
-        public Builder financeEventList(java.util.List < YuqingFinanceEvent > financeEventList) {
+        public Builder financeEventList(java.util.List<YuqingFinanceEvent> financeEventList) {
             this.financeEventList = financeEventList;
             return this;
         }
@@ -1208,7 +1290,7 @@ public class YuqingMessage extends TeaModel {
         /**
          * highlightKeywords.
          */
-        public Builder highlightKeywords(java.util.List < String > highlightKeywords) {
+        public Builder highlightKeywords(java.util.List<String> highlightKeywords) {
             this.highlightKeywords = highlightKeywords;
             return this;
         }
@@ -1232,7 +1314,7 @@ public class YuqingMessage extends TeaModel {
         /**
          * mediaHosts.
          */
-        public Builder mediaHosts(java.util.List < String > mediaHosts) {
+        public Builder mediaHosts(java.util.List<String> mediaHosts) {
             this.mediaHosts = mediaHosts;
             return this;
         }
@@ -1312,7 +1394,7 @@ public class YuqingMessage extends TeaModel {
         /**
          * reportMaterialTags.
          */
-        public Builder reportMaterialTags(java.util.List < String > reportMaterialTags) {
+        public Builder reportMaterialTags(java.util.List<String> reportMaterialTags) {
             this.reportMaterialTags = reportMaterialTags;
             return this;
         }
@@ -1320,7 +1402,7 @@ public class YuqingMessage extends TeaModel {
         /**
          * repostList.
          */
-        public Builder repostList(java.util.List < String > repostList) {
+        public Builder repostList(java.util.List<String> repostList) {
             this.repostList = repostList;
             return this;
         }
@@ -1336,7 +1418,7 @@ public class YuqingMessage extends TeaModel {
         /**
          * topics.
          */
-        public Builder topics(java.util.List < String > topics) {
+        public Builder topics(java.util.List<String> topics) {
             this.topics = topics;
             return this;
         }

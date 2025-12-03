@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.yuqing20220301.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -13,13 +18,13 @@ import com.aliyun.sdk.gateway.pop.models.*;
  */
 public class SearchCondition extends TeaModel {
     @com.aliyun.core.annotation.NameInMap("assKeywordList")
-    private java.util.List < String > assKeywordList;
+    private java.util.List<String> assKeywordList;
 
     @com.aliyun.core.annotation.NameInMap("atAuthorNameList")
-    private java.util.List < String > atAuthorNameList;
+    private java.util.List<String> atAuthorNameList;
 
     @com.aliyun.core.annotation.NameInMap("authorNameList")
-    private java.util.List < String > authorNameList;
+    private java.util.List<String> authorNameList;
 
     @com.aliyun.core.annotation.NameInMap("commentsLevel")
     private Integer commentsLevel;
@@ -37,7 +42,7 @@ public class SearchCondition extends TeaModel {
     private String docContentSign;
 
     @com.aliyun.core.annotation.NameInMap("docIdList")
-    private java.util.List < String > docIdList;
+    private java.util.List<String> docIdList;
 
     @com.aliyun.core.annotation.NameInMap("duplicateRemoval")
     private Boolean duplicateRemoval;
@@ -49,40 +54,40 @@ public class SearchCondition extends TeaModel {
     private Boolean enableKeywordHighlight;
 
     @com.aliyun.core.annotation.NameInMap("excludeAtAuthorNameList")
-    private java.util.List < String > excludeAtAuthorNameList;
+    private java.util.List<String> excludeAtAuthorNameList;
 
     @com.aliyun.core.annotation.NameInMap("excludeAuthorNameList")
-    private java.util.List < String > excludeAuthorNameList;
+    private java.util.List<String> excludeAuthorNameList;
 
     @com.aliyun.core.annotation.NameInMap("excludeHostNameList")
-    private java.util.List < String > excludeHostNameList;
+    private java.util.List<String> excludeHostNameList;
 
     @com.aliyun.core.annotation.NameInMap("excludeKeywordList")
-    private java.util.List < String > excludeKeywordList;
+    private java.util.List<String> excludeKeywordList;
 
     @com.aliyun.core.annotation.NameInMap("excludeKeywordListInTitle")
-    private java.util.List < String > excludeKeywordListInTitle;
+    private java.util.List<String> excludeKeywordListInTitle;
 
     @com.aliyun.core.annotation.NameInMap("excludeKeywordTagIds")
-    private java.util.List < Long > excludeKeywordTagIds;
+    private java.util.List<Long> excludeKeywordTagIds;
 
     @com.aliyun.core.annotation.NameInMap("excludeMaterialTagList")
-    private java.util.List < String > excludeMaterialTagList;
+    private java.util.List<String> excludeMaterialTagList;
 
     @com.aliyun.core.annotation.NameInMap("excludeMediaLibraryIdList")
-    private java.util.List < String > excludeMediaLibraryIdList;
+    private java.util.List<String> excludeMediaLibraryIdList;
 
     @com.aliyun.core.annotation.NameInMap("excludeMediaNameList")
-    private java.util.List < String > excludeMediaNameList;
+    private java.util.List<String> excludeMediaNameList;
 
     @com.aliyun.core.annotation.NameInMap("excludeMediaTypeList")
-    private java.util.List < String > excludeMediaTypeList;
+    private java.util.List<String> excludeMediaTypeList;
 
     @com.aliyun.core.annotation.NameInMap("excludeMessageTypeList")
-    private java.util.List < String > excludeMessageTypeList;
+    private java.util.List<String> excludeMessageTypeList;
 
     @com.aliyun.core.annotation.NameInMap("fieldConditions")
-    private java.util.List < FieldCondition > fieldConditions;
+    private java.util.List<FieldCondition> fieldConditions;
 
     @com.aliyun.core.annotation.NameInMap("filterId")
     private Long filterId;
@@ -100,31 +105,31 @@ public class SearchCondition extends TeaModel {
     private Boolean hasVideo;
 
     @com.aliyun.core.annotation.NameInMap("hostNameList")
-    private java.util.List < String > hostNameList;
+    private java.util.List<String> hostNameList;
 
     @com.aliyun.core.annotation.NameInMap("influenceLevel")
     private Long influenceLevel;
 
     @com.aliyun.core.annotation.NameInMap("keywordTagIds")
-    private java.util.List < Long > keywordTagIds;
+    private java.util.List<Long> keywordTagIds;
 
     @com.aliyun.core.annotation.NameInMap("likesLevel")
     private Integer likesLevel;
 
     @com.aliyun.core.annotation.NameInMap("materialTagList")
-    private java.util.List < String > materialTagList;
+    private java.util.List<String> materialTagList;
 
     @com.aliyun.core.annotation.NameInMap("mediaLibraryIdList")
-    private java.util.List < String > mediaLibraryIdList;
+    private java.util.List<String> mediaLibraryIdList;
 
     @com.aliyun.core.annotation.NameInMap("mediaNameList")
-    private java.util.List < String > mediaNameList;
+    private java.util.List<String> mediaNameList;
 
     @com.aliyun.core.annotation.NameInMap("mediaTypeList")
-    private java.util.List < String > mediaTypeList;
+    private java.util.List<String> mediaTypeList;
 
     @com.aliyun.core.annotation.NameInMap("messageTypeList")
-    private java.util.List < String > messageTypeList;
+    private java.util.List<String> messageTypeList;
 
     @com.aliyun.core.annotation.NameInMap("pageNow")
     private Integer pageNow;
@@ -136,10 +141,10 @@ public class SearchCondition extends TeaModel {
     private String parentDocId;
 
     @com.aliyun.core.annotation.NameInMap("posKeywordList")
-    private java.util.List < String > posKeywordList;
+    private java.util.List<String> posKeywordList;
 
     @com.aliyun.core.annotation.NameInMap("posKeywordListInTitle")
-    private java.util.List < String > posKeywordListInTitle;
+    private java.util.List<String> posKeywordListInTitle;
 
     @com.aliyun.core.annotation.NameInMap("projectId")
     private Long projectId;
@@ -169,7 +174,7 @@ public class SearchCondition extends TeaModel {
     private String sortByDirection;
 
     @com.aliyun.core.annotation.NameInMap("topicList")
-    private java.util.List < String > topicList;
+    private java.util.List<String> topicList;
 
     @com.aliyun.core.annotation.NameInMap("updateTimeEnd")
     private Long updateTimeEnd;
@@ -243,24 +248,28 @@ public class SearchCondition extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return assKeywordList
      */
-    public java.util.List < String > getAssKeywordList() {
+    public java.util.List<String> getAssKeywordList() {
         return this.assKeywordList;
     }
 
     /**
      * @return atAuthorNameList
      */
-    public java.util.List < String > getAtAuthorNameList() {
+    public java.util.List<String> getAtAuthorNameList() {
         return this.atAuthorNameList;
     }
 
     /**
      * @return authorNameList
      */
-    public java.util.List < String > getAuthorNameList() {
+    public java.util.List<String> getAuthorNameList() {
         return this.authorNameList;
     }
 
@@ -302,7 +311,7 @@ public class SearchCondition extends TeaModel {
     /**
      * @return docIdList
      */
-    public java.util.List < String > getDocIdList() {
+    public java.util.List<String> getDocIdList() {
         return this.docIdList;
     }
 
@@ -330,84 +339,84 @@ public class SearchCondition extends TeaModel {
     /**
      * @return excludeAtAuthorNameList
      */
-    public java.util.List < String > getExcludeAtAuthorNameList() {
+    public java.util.List<String> getExcludeAtAuthorNameList() {
         return this.excludeAtAuthorNameList;
     }
 
     /**
      * @return excludeAuthorNameList
      */
-    public java.util.List < String > getExcludeAuthorNameList() {
+    public java.util.List<String> getExcludeAuthorNameList() {
         return this.excludeAuthorNameList;
     }
 
     /**
      * @return excludeHostNameList
      */
-    public java.util.List < String > getExcludeHostNameList() {
+    public java.util.List<String> getExcludeHostNameList() {
         return this.excludeHostNameList;
     }
 
     /**
      * @return excludeKeywordList
      */
-    public java.util.List < String > getExcludeKeywordList() {
+    public java.util.List<String> getExcludeKeywordList() {
         return this.excludeKeywordList;
     }
 
     /**
      * @return excludeKeywordListInTitle
      */
-    public java.util.List < String > getExcludeKeywordListInTitle() {
+    public java.util.List<String> getExcludeKeywordListInTitle() {
         return this.excludeKeywordListInTitle;
     }
 
     /**
      * @return excludeKeywordTagIds
      */
-    public java.util.List < Long > getExcludeKeywordTagIds() {
+    public java.util.List<Long> getExcludeKeywordTagIds() {
         return this.excludeKeywordTagIds;
     }
 
     /**
      * @return excludeMaterialTagList
      */
-    public java.util.List < String > getExcludeMaterialTagList() {
+    public java.util.List<String> getExcludeMaterialTagList() {
         return this.excludeMaterialTagList;
     }
 
     /**
      * @return excludeMediaLibraryIdList
      */
-    public java.util.List < String > getExcludeMediaLibraryIdList() {
+    public java.util.List<String> getExcludeMediaLibraryIdList() {
         return this.excludeMediaLibraryIdList;
     }
 
     /**
      * @return excludeMediaNameList
      */
-    public java.util.List < String > getExcludeMediaNameList() {
+    public java.util.List<String> getExcludeMediaNameList() {
         return this.excludeMediaNameList;
     }
 
     /**
      * @return excludeMediaTypeList
      */
-    public java.util.List < String > getExcludeMediaTypeList() {
+    public java.util.List<String> getExcludeMediaTypeList() {
         return this.excludeMediaTypeList;
     }
 
     /**
      * @return excludeMessageTypeList
      */
-    public java.util.List < String > getExcludeMessageTypeList() {
+    public java.util.List<String> getExcludeMessageTypeList() {
         return this.excludeMessageTypeList;
     }
 
     /**
      * @return fieldConditions
      */
-    public java.util.List < FieldCondition > getFieldConditions() {
+    public java.util.List<FieldCondition> getFieldConditions() {
         return this.fieldConditions;
     }
 
@@ -449,7 +458,7 @@ public class SearchCondition extends TeaModel {
     /**
      * @return hostNameList
      */
-    public java.util.List < String > getHostNameList() {
+    public java.util.List<String> getHostNameList() {
         return this.hostNameList;
     }
 
@@ -463,7 +472,7 @@ public class SearchCondition extends TeaModel {
     /**
      * @return keywordTagIds
      */
-    public java.util.List < Long > getKeywordTagIds() {
+    public java.util.List<Long> getKeywordTagIds() {
         return this.keywordTagIds;
     }
 
@@ -477,35 +486,35 @@ public class SearchCondition extends TeaModel {
     /**
      * @return materialTagList
      */
-    public java.util.List < String > getMaterialTagList() {
+    public java.util.List<String> getMaterialTagList() {
         return this.materialTagList;
     }
 
     /**
      * @return mediaLibraryIdList
      */
-    public java.util.List < String > getMediaLibraryIdList() {
+    public java.util.List<String> getMediaLibraryIdList() {
         return this.mediaLibraryIdList;
     }
 
     /**
      * @return mediaNameList
      */
-    public java.util.List < String > getMediaNameList() {
+    public java.util.List<String> getMediaNameList() {
         return this.mediaNameList;
     }
 
     /**
      * @return mediaTypeList
      */
-    public java.util.List < String > getMediaTypeList() {
+    public java.util.List<String> getMediaTypeList() {
         return this.mediaTypeList;
     }
 
     /**
      * @return messageTypeList
      */
-    public java.util.List < String > getMessageTypeList() {
+    public java.util.List<String> getMessageTypeList() {
         return this.messageTypeList;
     }
 
@@ -533,14 +542,14 @@ public class SearchCondition extends TeaModel {
     /**
      * @return posKeywordList
      */
-    public java.util.List < String > getPosKeywordList() {
+    public java.util.List<String> getPosKeywordList() {
         return this.posKeywordList;
     }
 
     /**
      * @return posKeywordListInTitle
      */
-    public java.util.List < String > getPosKeywordListInTitle() {
+    public java.util.List<String> getPosKeywordListInTitle() {
         return this.posKeywordListInTitle;
     }
 
@@ -610,7 +619,7 @@ public class SearchCondition extends TeaModel {
     /**
      * @return topicList
      */
-    public java.util.List < String > getTopicList() {
+    public java.util.List<String> getTopicList() {
         return this.topicList;
     }
 
@@ -629,49 +638,49 @@ public class SearchCondition extends TeaModel {
     }
 
     public static final class Builder {
-        private java.util.List < String > assKeywordList; 
-        private java.util.List < String > atAuthorNameList; 
-        private java.util.List < String > authorNameList; 
+        private java.util.List<String> assKeywordList; 
+        private java.util.List<String> atAuthorNameList; 
+        private java.util.List<String> authorNameList; 
         private Integer commentsLevel; 
         private Integer contentLenLevel; 
         private Long createTimeEnd; 
         private Long createTimeStart; 
         private String docContentSign; 
-        private java.util.List < String > docIdList; 
+        private java.util.List<String> docIdList; 
         private Boolean duplicateRemoval; 
         private Integer emotionType; 
         private Boolean enableKeywordHighlight; 
-        private java.util.List < String > excludeAtAuthorNameList; 
-        private java.util.List < String > excludeAuthorNameList; 
-        private java.util.List < String > excludeHostNameList; 
-        private java.util.List < String > excludeKeywordList; 
-        private java.util.List < String > excludeKeywordListInTitle; 
-        private java.util.List < Long > excludeKeywordTagIds; 
-        private java.util.List < String > excludeMaterialTagList; 
-        private java.util.List < String > excludeMediaLibraryIdList; 
-        private java.util.List < String > excludeMediaNameList; 
-        private java.util.List < String > excludeMediaTypeList; 
-        private java.util.List < String > excludeMessageTypeList; 
-        private java.util.List < FieldCondition > fieldConditions; 
+        private java.util.List<String> excludeAtAuthorNameList; 
+        private java.util.List<String> excludeAuthorNameList; 
+        private java.util.List<String> excludeHostNameList; 
+        private java.util.List<String> excludeKeywordList; 
+        private java.util.List<String> excludeKeywordListInTitle; 
+        private java.util.List<Long> excludeKeywordTagIds; 
+        private java.util.List<String> excludeMaterialTagList; 
+        private java.util.List<String> excludeMediaLibraryIdList; 
+        private java.util.List<String> excludeMediaNameList; 
+        private java.util.List<String> excludeMediaTypeList; 
+        private java.util.List<String> excludeMessageTypeList; 
+        private java.util.List<FieldCondition> fieldConditions; 
         private Long filterId; 
         private Boolean hasAudio; 
         private Boolean hasImage; 
         private Boolean hasMultiModeContent; 
         private Boolean hasVideo; 
-        private java.util.List < String > hostNameList; 
+        private java.util.List<String> hostNameList; 
         private Long influenceLevel; 
-        private java.util.List < Long > keywordTagIds; 
+        private java.util.List<Long> keywordTagIds; 
         private Integer likesLevel; 
-        private java.util.List < String > materialTagList; 
-        private java.util.List < String > mediaLibraryIdList; 
-        private java.util.List < String > mediaNameList; 
-        private java.util.List < String > mediaTypeList; 
-        private java.util.List < String > messageTypeList; 
+        private java.util.List<String> materialTagList; 
+        private java.util.List<String> mediaLibraryIdList; 
+        private java.util.List<String> mediaNameList; 
+        private java.util.List<String> mediaTypeList; 
+        private java.util.List<String> messageTypeList; 
         private Integer pageNow; 
         private Integer pageSize; 
         private String parentDocId; 
-        private java.util.List < String > posKeywordList; 
-        private java.util.List < String > posKeywordListInTitle; 
+        private java.util.List<String> posKeywordList; 
+        private java.util.List<String> posKeywordListInTitle; 
         private Long projectId; 
         private Long propagationLevel; 
         private Long publishTimeEnd; 
@@ -681,14 +690,75 @@ public class SearchCondition extends TeaModel {
         private Integer repostLevel; 
         private String sortBy; 
         private String sortByDirection; 
-        private java.util.List < String > topicList; 
+        private java.util.List<String> topicList; 
         private Long updateTimeEnd; 
         private Long updateTimeStart; 
+
+        private Builder() {
+        } 
+
+        private Builder(SearchCondition model) {
+            this.assKeywordList = model.assKeywordList;
+            this.atAuthorNameList = model.atAuthorNameList;
+            this.authorNameList = model.authorNameList;
+            this.commentsLevel = model.commentsLevel;
+            this.contentLenLevel = model.contentLenLevel;
+            this.createTimeEnd = model.createTimeEnd;
+            this.createTimeStart = model.createTimeStart;
+            this.docContentSign = model.docContentSign;
+            this.docIdList = model.docIdList;
+            this.duplicateRemoval = model.duplicateRemoval;
+            this.emotionType = model.emotionType;
+            this.enableKeywordHighlight = model.enableKeywordHighlight;
+            this.excludeAtAuthorNameList = model.excludeAtAuthorNameList;
+            this.excludeAuthorNameList = model.excludeAuthorNameList;
+            this.excludeHostNameList = model.excludeHostNameList;
+            this.excludeKeywordList = model.excludeKeywordList;
+            this.excludeKeywordListInTitle = model.excludeKeywordListInTitle;
+            this.excludeKeywordTagIds = model.excludeKeywordTagIds;
+            this.excludeMaterialTagList = model.excludeMaterialTagList;
+            this.excludeMediaLibraryIdList = model.excludeMediaLibraryIdList;
+            this.excludeMediaNameList = model.excludeMediaNameList;
+            this.excludeMediaTypeList = model.excludeMediaTypeList;
+            this.excludeMessageTypeList = model.excludeMessageTypeList;
+            this.fieldConditions = model.fieldConditions;
+            this.filterId = model.filterId;
+            this.hasAudio = model.hasAudio;
+            this.hasImage = model.hasImage;
+            this.hasMultiModeContent = model.hasMultiModeContent;
+            this.hasVideo = model.hasVideo;
+            this.hostNameList = model.hostNameList;
+            this.influenceLevel = model.influenceLevel;
+            this.keywordTagIds = model.keywordTagIds;
+            this.likesLevel = model.likesLevel;
+            this.materialTagList = model.materialTagList;
+            this.mediaLibraryIdList = model.mediaLibraryIdList;
+            this.mediaNameList = model.mediaNameList;
+            this.mediaTypeList = model.mediaTypeList;
+            this.messageTypeList = model.messageTypeList;
+            this.pageNow = model.pageNow;
+            this.pageSize = model.pageSize;
+            this.parentDocId = model.parentDocId;
+            this.posKeywordList = model.posKeywordList;
+            this.posKeywordListInTitle = model.posKeywordListInTitle;
+            this.projectId = model.projectId;
+            this.propagationLevel = model.propagationLevel;
+            this.publishTimeEnd = model.publishTimeEnd;
+            this.publishTimeStart = model.publishTimeStart;
+            this.readsLevel = model.readsLevel;
+            this.relevanceLevel = model.relevanceLevel;
+            this.repostLevel = model.repostLevel;
+            this.sortBy = model.sortBy;
+            this.sortByDirection = model.sortByDirection;
+            this.topicList = model.topicList;
+            this.updateTimeEnd = model.updateTimeEnd;
+            this.updateTimeStart = model.updateTimeStart;
+        } 
 
         /**
          * assKeywordList.
          */
-        public Builder assKeywordList(java.util.List < String > assKeywordList) {
+        public Builder assKeywordList(java.util.List<String> assKeywordList) {
             this.assKeywordList = assKeywordList;
             return this;
         }
@@ -696,7 +766,7 @@ public class SearchCondition extends TeaModel {
         /**
          * atAuthorNameList.
          */
-        public Builder atAuthorNameList(java.util.List < String > atAuthorNameList) {
+        public Builder atAuthorNameList(java.util.List<String> atAuthorNameList) {
             this.atAuthorNameList = atAuthorNameList;
             return this;
         }
@@ -704,7 +774,7 @@ public class SearchCondition extends TeaModel {
         /**
          * authorNameList.
          */
-        public Builder authorNameList(java.util.List < String > authorNameList) {
+        public Builder authorNameList(java.util.List<String> authorNameList) {
             this.authorNameList = authorNameList;
             return this;
         }
@@ -752,7 +822,7 @@ public class SearchCondition extends TeaModel {
         /**
          * docIdList.
          */
-        public Builder docIdList(java.util.List < String > docIdList) {
+        public Builder docIdList(java.util.List<String> docIdList) {
             this.docIdList = docIdList;
             return this;
         }
@@ -784,7 +854,7 @@ public class SearchCondition extends TeaModel {
         /**
          * excludeAtAuthorNameList.
          */
-        public Builder excludeAtAuthorNameList(java.util.List < String > excludeAtAuthorNameList) {
+        public Builder excludeAtAuthorNameList(java.util.List<String> excludeAtAuthorNameList) {
             this.excludeAtAuthorNameList = excludeAtAuthorNameList;
             return this;
         }
@@ -792,7 +862,7 @@ public class SearchCondition extends TeaModel {
         /**
          * excludeAuthorNameList.
          */
-        public Builder excludeAuthorNameList(java.util.List < String > excludeAuthorNameList) {
+        public Builder excludeAuthorNameList(java.util.List<String> excludeAuthorNameList) {
             this.excludeAuthorNameList = excludeAuthorNameList;
             return this;
         }
@@ -800,7 +870,7 @@ public class SearchCondition extends TeaModel {
         /**
          * excludeHostNameList.
          */
-        public Builder excludeHostNameList(java.util.List < String > excludeHostNameList) {
+        public Builder excludeHostNameList(java.util.List<String> excludeHostNameList) {
             this.excludeHostNameList = excludeHostNameList;
             return this;
         }
@@ -808,7 +878,7 @@ public class SearchCondition extends TeaModel {
         /**
          * excludeKeywordList.
          */
-        public Builder excludeKeywordList(java.util.List < String > excludeKeywordList) {
+        public Builder excludeKeywordList(java.util.List<String> excludeKeywordList) {
             this.excludeKeywordList = excludeKeywordList;
             return this;
         }
@@ -816,7 +886,7 @@ public class SearchCondition extends TeaModel {
         /**
          * excludeKeywordListInTitle.
          */
-        public Builder excludeKeywordListInTitle(java.util.List < String > excludeKeywordListInTitle) {
+        public Builder excludeKeywordListInTitle(java.util.List<String> excludeKeywordListInTitle) {
             this.excludeKeywordListInTitle = excludeKeywordListInTitle;
             return this;
         }
@@ -824,7 +894,7 @@ public class SearchCondition extends TeaModel {
         /**
          * excludeKeywordTagIds.
          */
-        public Builder excludeKeywordTagIds(java.util.List < Long > excludeKeywordTagIds) {
+        public Builder excludeKeywordTagIds(java.util.List<Long> excludeKeywordTagIds) {
             this.excludeKeywordTagIds = excludeKeywordTagIds;
             return this;
         }
@@ -832,7 +902,7 @@ public class SearchCondition extends TeaModel {
         /**
          * excludeMaterialTagList.
          */
-        public Builder excludeMaterialTagList(java.util.List < String > excludeMaterialTagList) {
+        public Builder excludeMaterialTagList(java.util.List<String> excludeMaterialTagList) {
             this.excludeMaterialTagList = excludeMaterialTagList;
             return this;
         }
@@ -840,7 +910,7 @@ public class SearchCondition extends TeaModel {
         /**
          * excludeMediaLibraryIdList.
          */
-        public Builder excludeMediaLibraryIdList(java.util.List < String > excludeMediaLibraryIdList) {
+        public Builder excludeMediaLibraryIdList(java.util.List<String> excludeMediaLibraryIdList) {
             this.excludeMediaLibraryIdList = excludeMediaLibraryIdList;
             return this;
         }
@@ -848,7 +918,7 @@ public class SearchCondition extends TeaModel {
         /**
          * excludeMediaNameList.
          */
-        public Builder excludeMediaNameList(java.util.List < String > excludeMediaNameList) {
+        public Builder excludeMediaNameList(java.util.List<String> excludeMediaNameList) {
             this.excludeMediaNameList = excludeMediaNameList;
             return this;
         }
@@ -856,7 +926,7 @@ public class SearchCondition extends TeaModel {
         /**
          * excludeMediaTypeList.
          */
-        public Builder excludeMediaTypeList(java.util.List < String > excludeMediaTypeList) {
+        public Builder excludeMediaTypeList(java.util.List<String> excludeMediaTypeList) {
             this.excludeMediaTypeList = excludeMediaTypeList;
             return this;
         }
@@ -864,7 +934,7 @@ public class SearchCondition extends TeaModel {
         /**
          * excludeMessageTypeList.
          */
-        public Builder excludeMessageTypeList(java.util.List < String > excludeMessageTypeList) {
+        public Builder excludeMessageTypeList(java.util.List<String> excludeMessageTypeList) {
             this.excludeMessageTypeList = excludeMessageTypeList;
             return this;
         }
@@ -872,7 +942,7 @@ public class SearchCondition extends TeaModel {
         /**
          * fieldConditions.
          */
-        public Builder fieldConditions(java.util.List < FieldCondition > fieldConditions) {
+        public Builder fieldConditions(java.util.List<FieldCondition> fieldConditions) {
             this.fieldConditions = fieldConditions;
             return this;
         }
@@ -920,7 +990,7 @@ public class SearchCondition extends TeaModel {
         /**
          * hostNameList.
          */
-        public Builder hostNameList(java.util.List < String > hostNameList) {
+        public Builder hostNameList(java.util.List<String> hostNameList) {
             this.hostNameList = hostNameList;
             return this;
         }
@@ -936,7 +1006,7 @@ public class SearchCondition extends TeaModel {
         /**
          * keywordTagIds.
          */
-        public Builder keywordTagIds(java.util.List < Long > keywordTagIds) {
+        public Builder keywordTagIds(java.util.List<Long> keywordTagIds) {
             this.keywordTagIds = keywordTagIds;
             return this;
         }
@@ -952,7 +1022,7 @@ public class SearchCondition extends TeaModel {
         /**
          * materialTagList.
          */
-        public Builder materialTagList(java.util.List < String > materialTagList) {
+        public Builder materialTagList(java.util.List<String> materialTagList) {
             this.materialTagList = materialTagList;
             return this;
         }
@@ -960,7 +1030,7 @@ public class SearchCondition extends TeaModel {
         /**
          * mediaLibraryIdList.
          */
-        public Builder mediaLibraryIdList(java.util.List < String > mediaLibraryIdList) {
+        public Builder mediaLibraryIdList(java.util.List<String> mediaLibraryIdList) {
             this.mediaLibraryIdList = mediaLibraryIdList;
             return this;
         }
@@ -968,7 +1038,7 @@ public class SearchCondition extends TeaModel {
         /**
          * mediaNameList.
          */
-        public Builder mediaNameList(java.util.List < String > mediaNameList) {
+        public Builder mediaNameList(java.util.List<String> mediaNameList) {
             this.mediaNameList = mediaNameList;
             return this;
         }
@@ -976,7 +1046,7 @@ public class SearchCondition extends TeaModel {
         /**
          * mediaTypeList.
          */
-        public Builder mediaTypeList(java.util.List < String > mediaTypeList) {
+        public Builder mediaTypeList(java.util.List<String> mediaTypeList) {
             this.mediaTypeList = mediaTypeList;
             return this;
         }
@@ -984,7 +1054,7 @@ public class SearchCondition extends TeaModel {
         /**
          * messageTypeList.
          */
-        public Builder messageTypeList(java.util.List < String > messageTypeList) {
+        public Builder messageTypeList(java.util.List<String> messageTypeList) {
             this.messageTypeList = messageTypeList;
             return this;
         }
@@ -1016,7 +1086,7 @@ public class SearchCondition extends TeaModel {
         /**
          * posKeywordList.
          */
-        public Builder posKeywordList(java.util.List < String > posKeywordList) {
+        public Builder posKeywordList(java.util.List<String> posKeywordList) {
             this.posKeywordList = posKeywordList;
             return this;
         }
@@ -1024,7 +1094,7 @@ public class SearchCondition extends TeaModel {
         /**
          * posKeywordListInTitle.
          */
-        public Builder posKeywordListInTitle(java.util.List < String > posKeywordListInTitle) {
+        public Builder posKeywordListInTitle(java.util.List<String> posKeywordListInTitle) {
             this.posKeywordListInTitle = posKeywordListInTitle;
             return this;
         }
@@ -1104,7 +1174,7 @@ public class SearchCondition extends TeaModel {
         /**
          * topicList.
          */
-        public Builder topicList(java.util.List < String > topicList) {
+        public Builder topicList(java.util.List<String> topicList) {
             this.topicList = topicList;
             return this;
         }

@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.yuqing20220301.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -13,7 +18,7 @@ import com.aliyun.sdk.gateway.pop.models.*;
  */
 public class QueryProductInstanceListResponseBody extends TeaModel {
     @com.aliyun.core.annotation.NameInMap("instanceList")
-    private java.util.List < ProductInstance > instanceList;
+    private java.util.List<ProductInstance> instanceList;
 
     @com.aliyun.core.annotation.NameInMap("requestId")
     private String requestId;
@@ -31,10 +36,14 @@ public class QueryProductInstanceListResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return instanceList
      */
-    public java.util.List < ProductInstance > getInstanceList() {
+    public java.util.List<ProductInstance> getInstanceList() {
         return this.instanceList;
     }
 
@@ -46,13 +55,21 @@ public class QueryProductInstanceListResponseBody extends TeaModel {
     }
 
     public static final class Builder {
-        private java.util.List < ProductInstance > instanceList; 
+        private java.util.List<ProductInstance> instanceList; 
         private String requestId; 
+
+        private Builder() {
+        } 
+
+        private Builder(QueryProductInstanceListResponseBody model) {
+            this.instanceList = model.instanceList;
+            this.requestId = model.requestId;
+        } 
 
         /**
          * instanceList.
          */
-        public Builder instanceList(java.util.List < ProductInstance > instanceList) {
+        public Builder instanceList(java.util.List<ProductInstance> instanceList) {
             this.instanceList = instanceList;
             return this;
         }

@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.yuqing20220301.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -35,6 +40,10 @@ public class SubmitAnalysisTaskResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return analysisId
      */
@@ -60,6 +69,15 @@ public class SubmitAnalysisTaskResponseBody extends TeaModel {
         private Long analysisId; 
         private String requestId; 
         private String resultJson; 
+
+        private Builder() {
+        } 
+
+        private Builder(SubmitAnalysisTaskResponseBody model) {
+            this.analysisId = model.analysisId;
+            this.requestId = model.requestId;
+            this.resultJson = model.resultJson;
+        } 
 
         /**
          * analysisId.

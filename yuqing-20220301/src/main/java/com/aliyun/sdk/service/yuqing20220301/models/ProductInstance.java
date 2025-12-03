@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.yuqing20220301.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -81,6 +86,10 @@ public class ProductInstance extends TeaModel {
 
     public static ProductInstance create() {
         return builder().build();
+    }
+
+    public Builder toBuilder() {
+        return new Builder(this);
     }
 
     /**
@@ -188,6 +197,25 @@ public class ProductInstance extends TeaModel {
         private Long start; 
         private String tenantName; 
         private String tenantUid; 
+
+        private Builder() {
+        } 
+
+        private Builder(ProductInstance model) {
+            this.appCode = model.appCode;
+            this.buyerName = model.buyerName;
+            this.buyerUid = model.buyerUid;
+            this.channel = model.channel;
+            this.config = model.config;
+            this.end = model.end;
+            this.instanceId = model.instanceId;
+            this.orderNo = model.orderNo;
+            this.productCode = model.productCode;
+            this.productSpecCode = model.productSpecCode;
+            this.start = model.start;
+            this.tenantName = model.tenantName;
+            this.tenantUid = model.tenantUid;
+        } 
 
         /**
          * <p>This parameter is required.</p>

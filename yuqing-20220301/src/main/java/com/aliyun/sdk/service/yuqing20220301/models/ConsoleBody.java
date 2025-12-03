@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.yuqing20220301.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -41,6 +46,10 @@ public class ConsoleBody extends TeaModel {
 
     public static ConsoleBody create() {
         return builder().build();
+    }
+
+    public Builder toBuilder() {
+        return new Builder(this);
     }
 
     /**
@@ -84,6 +93,17 @@ public class ConsoleBody extends TeaModel {
         private String paramJson; 
         private String requestId; 
         private String teamHashId; 
+
+        private Builder() {
+        } 
+
+        private Builder(ConsoleBody model) {
+            this.appCode = model.appCode;
+            this.interfaceName = model.interfaceName;
+            this.paramJson = model.paramJson;
+            this.requestId = model.requestId;
+            this.teamHashId = model.teamHashId;
+        } 
 
         /**
          * appCode.

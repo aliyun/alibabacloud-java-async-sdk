@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.yuqing20220301.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -61,22 +66,22 @@ public class YuqingFinanceEvent extends TeaModel {
     private String securityAbbreviation;
 
     @com.aliyun.core.annotation.NameInMap("securityCategoryCodes")
-    private java.util.List < String > securityCategoryCodes;
+    private java.util.List<String> securityCategoryCodes;
 
     @com.aliyun.core.annotation.NameInMap("securityCodes")
-    private java.util.List < String > securityCodes;
+    private java.util.List<String> securityCodes;
 
     @com.aliyun.core.annotation.NameInMap("securityMarketsCodes")
-    private java.util.List < String > securityMarketsCodes;
+    private java.util.List<String> securityMarketsCodes;
 
     @com.aliyun.core.annotation.NameInMap("spamScore")
     private Double spamScore;
 
     @com.aliyun.core.annotation.NameInMap("userSubscribeEntityTags")
-    private java.util.List < String > userSubscribeEntityTags;
+    private java.util.List<String> userSubscribeEntityTags;
 
     @com.aliyun.core.annotation.NameInMap("userSubscribeEventTags")
-    private java.util.List < Long > userSubscribeEventTags;
+    private java.util.List<Long> userSubscribeEventTags;
 
     private YuqingFinanceEvent(Builder builder) {
         this.comprehensiveRisk = builder.comprehensiveRisk;
@@ -109,6 +114,10 @@ public class YuqingFinanceEvent extends TeaModel {
 
     public static YuqingFinanceEvent create() {
         return builder().build();
+    }
+
+    public Builder toBuilder() {
+        return new Builder(this);
     }
 
     /**
@@ -226,21 +235,21 @@ public class YuqingFinanceEvent extends TeaModel {
     /**
      * @return securityCategoryCodes
      */
-    public java.util.List < String > getSecurityCategoryCodes() {
+    public java.util.List<String> getSecurityCategoryCodes() {
         return this.securityCategoryCodes;
     }
 
     /**
      * @return securityCodes
      */
-    public java.util.List < String > getSecurityCodes() {
+    public java.util.List<String> getSecurityCodes() {
         return this.securityCodes;
     }
 
     /**
      * @return securityMarketsCodes
      */
-    public java.util.List < String > getSecurityMarketsCodes() {
+    public java.util.List<String> getSecurityMarketsCodes() {
         return this.securityMarketsCodes;
     }
 
@@ -254,14 +263,14 @@ public class YuqingFinanceEvent extends TeaModel {
     /**
      * @return userSubscribeEntityTags
      */
-    public java.util.List < String > getUserSubscribeEntityTags() {
+    public java.util.List<String> getUserSubscribeEntityTags() {
         return this.userSubscribeEntityTags;
     }
 
     /**
      * @return userSubscribeEventTags
      */
-    public java.util.List < Long > getUserSubscribeEventTags() {
+    public java.util.List<Long> getUserSubscribeEventTags() {
         return this.userSubscribeEventTags;
     }
 
@@ -282,12 +291,40 @@ public class YuqingFinanceEvent extends TeaModel {
         private String eventTags; 
         private Long eventTime; 
         private String securityAbbreviation; 
-        private java.util.List < String > securityCategoryCodes; 
-        private java.util.List < String > securityCodes; 
-        private java.util.List < String > securityMarketsCodes; 
+        private java.util.List<String> securityCategoryCodes; 
+        private java.util.List<String> securityCodes; 
+        private java.util.List<String> securityMarketsCodes; 
         private Double spamScore; 
-        private java.util.List < String > userSubscribeEntityTags; 
-        private java.util.List < Long > userSubscribeEventTags; 
+        private java.util.List<String> userSubscribeEntityTags; 
+        private java.util.List<Long> userSubscribeEventTags; 
+
+        private Builder() {
+        } 
+
+        private Builder(YuqingFinanceEvent model) {
+            this.comprehensiveRisk = model.comprehensiveRisk;
+            this.entityArea = model.entityArea;
+            this.entityCrn = model.entityCrn;
+            this.entityEmotionScore = model.entityEmotionScore;
+            this.entityId = model.entityId;
+            this.entityName = model.entityName;
+            this.entityRelevanceScore = model.entityRelevanceScore;
+            this.entityShowName = model.entityShowName;
+            this.entitySummary = model.entitySummary;
+            this.entityType = model.entityType;
+            this.eventId = model.eventId;
+            this.eventLevel3Code = model.eventLevel3Code;
+            this.eventLevel3Name = model.eventLevel3Name;
+            this.eventTags = model.eventTags;
+            this.eventTime = model.eventTime;
+            this.securityAbbreviation = model.securityAbbreviation;
+            this.securityCategoryCodes = model.securityCategoryCodes;
+            this.securityCodes = model.securityCodes;
+            this.securityMarketsCodes = model.securityMarketsCodes;
+            this.spamScore = model.spamScore;
+            this.userSubscribeEntityTags = model.userSubscribeEntityTags;
+            this.userSubscribeEventTags = model.userSubscribeEventTags;
+        } 
 
         /**
          * comprehensiveRisk.
@@ -420,7 +457,7 @@ public class YuqingFinanceEvent extends TeaModel {
         /**
          * securityCategoryCodes.
          */
-        public Builder securityCategoryCodes(java.util.List < String > securityCategoryCodes) {
+        public Builder securityCategoryCodes(java.util.List<String> securityCategoryCodes) {
             this.securityCategoryCodes = securityCategoryCodes;
             return this;
         }
@@ -428,7 +465,7 @@ public class YuqingFinanceEvent extends TeaModel {
         /**
          * securityCodes.
          */
-        public Builder securityCodes(java.util.List < String > securityCodes) {
+        public Builder securityCodes(java.util.List<String> securityCodes) {
             this.securityCodes = securityCodes;
             return this;
         }
@@ -436,7 +473,7 @@ public class YuqingFinanceEvent extends TeaModel {
         /**
          * securityMarketsCodes.
          */
-        public Builder securityMarketsCodes(java.util.List < String > securityMarketsCodes) {
+        public Builder securityMarketsCodes(java.util.List<String> securityMarketsCodes) {
             this.securityMarketsCodes = securityMarketsCodes;
             return this;
         }
@@ -452,7 +489,7 @@ public class YuqingFinanceEvent extends TeaModel {
         /**
          * userSubscribeEntityTags.
          */
-        public Builder userSubscribeEntityTags(java.util.List < String > userSubscribeEntityTags) {
+        public Builder userSubscribeEntityTags(java.util.List<String> userSubscribeEntityTags) {
             this.userSubscribeEntityTags = userSubscribeEntityTags;
             return this;
         }
@@ -460,7 +497,7 @@ public class YuqingFinanceEvent extends TeaModel {
         /**
          * userSubscribeEventTags.
          */
-        public Builder userSubscribeEventTags(java.util.List < Long > userSubscribeEventTags) {
+        public Builder userSubscribeEventTags(java.util.List<Long> userSubscribeEventTags) {
             this.userSubscribeEventTags = userSubscribeEventTags;
             return this;
         }
