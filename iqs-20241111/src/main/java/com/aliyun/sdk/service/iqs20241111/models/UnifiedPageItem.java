@@ -17,6 +17,9 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>UnifiedPageItem</p>
  */
 public class UnifiedPageItem extends TeaModel {
+    @com.aliyun.core.annotation.NameInMap("correlationTag")
+    private Integer correlationTag;
+
     @com.aliyun.core.annotation.NameInMap("hostAuthorityScore")
     private Double hostAuthorityScore;
 
@@ -60,6 +63,7 @@ public class UnifiedPageItem extends TeaModel {
     private Integer websiteAuthorityScore;
 
     private UnifiedPageItem(Builder builder) {
+        this.correlationTag = builder.correlationTag;
         this.hostAuthorityScore = builder.hostAuthorityScore;
         this.hostLogo = builder.hostLogo;
         this.hostname = builder.hostname;
@@ -86,6 +90,13 @@ public class UnifiedPageItem extends TeaModel {
 
     public Builder toBuilder() {
         return new Builder(this);
+    }
+
+    /**
+     * @return correlationTag
+     */
+    public Integer getCorrelationTag() {
+        return this.correlationTag;
     }
 
     /**
@@ -187,6 +198,7 @@ public class UnifiedPageItem extends TeaModel {
     }
 
     public static final class Builder {
+        private Integer correlationTag; 
         private Double hostAuthorityScore; 
         private String hostLogo; 
         private String hostname; 
@@ -206,6 +218,7 @@ public class UnifiedPageItem extends TeaModel {
         } 
 
         private Builder(UnifiedPageItem model) {
+            this.correlationTag = model.correlationTag;
             this.hostAuthorityScore = model.hostAuthorityScore;
             this.hostLogo = model.hostLogo;
             this.hostname = model.hostname;
@@ -221,6 +234,14 @@ public class UnifiedPageItem extends TeaModel {
             this.title = model.title;
             this.websiteAuthorityScore = model.websiteAuthorityScore;
         } 
+
+        /**
+         * correlationTag.
+         */
+        public Builder correlationTag(Integer correlationTag) {
+            this.correlationTag = correlationTag;
+            return this;
+        }
 
         /**
          * hostAuthorityScore.

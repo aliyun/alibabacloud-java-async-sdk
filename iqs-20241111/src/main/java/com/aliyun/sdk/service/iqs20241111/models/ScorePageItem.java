@@ -21,6 +21,9 @@ public class ScorePageItem extends TeaModel {
     @com.aliyun.core.annotation.Validation(required = true)
     private String cardType;
 
+    @com.aliyun.core.annotation.NameInMap("correlationTag")
+    private Integer correlationTag;
+
     @com.aliyun.core.annotation.NameInMap("displayLink")
     @com.aliyun.core.annotation.Validation(required = true)
     private String displayLink;
@@ -89,6 +92,7 @@ public class ScorePageItem extends TeaModel {
 
     private ScorePageItem(Builder builder) {
         this.cardType = builder.cardType;
+        this.correlationTag = builder.correlationTag;
         this.displayLink = builder.displayLink;
         this.hostAuthorityScore = builder.hostAuthorityScore;
         this.hostLogo = builder.hostLogo;
@@ -128,6 +132,13 @@ public class ScorePageItem extends TeaModel {
      */
     public String getCardType() {
         return this.cardType;
+    }
+
+    /**
+     * @return correlationTag
+     */
+    public Integer getCorrelationTag() {
+        return this.correlationTag;
     }
 
     /**
@@ -272,6 +283,7 @@ public class ScorePageItem extends TeaModel {
 
     public static final class Builder {
         private String cardType; 
+        private Integer correlationTag; 
         private String displayLink; 
         private Double hostAuthorityScore; 
         private String hostLogo; 
@@ -298,6 +310,7 @@ public class ScorePageItem extends TeaModel {
 
         private Builder(ScorePageItem model) {
             this.cardType = model.cardType;
+            this.correlationTag = model.correlationTag;
             this.displayLink = model.displayLink;
             this.hostAuthorityScore = model.hostAuthorityScore;
             this.hostLogo = model.hostLogo;
@@ -328,6 +341,14 @@ public class ScorePageItem extends TeaModel {
          */
         public Builder cardType(String cardType) {
             this.cardType = cardType;
+            return this;
+        }
+
+        /**
+         * correlationTag.
+         */
+        public Builder correlationTag(Integer correlationTag) {
+            this.correlationTag = correlationTag;
             return this;
         }
 
