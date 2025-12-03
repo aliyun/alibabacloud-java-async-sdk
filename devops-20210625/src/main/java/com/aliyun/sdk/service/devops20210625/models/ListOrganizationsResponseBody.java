@@ -52,6 +52,10 @@ public class ListOrganizationsResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return errorCode
      */
@@ -101,6 +105,18 @@ public class ListOrganizationsResponseBody extends TeaModel {
         private java.util.List<Result> result; 
         private Boolean success; 
         private Long total; 
+
+        private Builder() {
+        } 
+
+        private Builder(ListOrganizationsResponseBody model) {
+            this.errorCode = model.errorCode;
+            this.errorMessage = model.errorMessage;
+            this.requestId = model.requestId;
+            this.result = model.result;
+            this.success = model.success;
+            this.total = model.total;
+        } 
 
         /**
          * errorCode.
@@ -259,6 +275,19 @@ public class ListOrganizationsResponseBody extends TeaModel {
             private String organizationId; 
             private String organizationName; 
             private String organizationRole; 
+
+            private Builder() {
+            } 
+
+            private Builder(Result model) {
+                this.accessLevel = model.accessLevel;
+                this.id = model.id;
+                this.namespaceId = model.namespaceId;
+                this.organizationAlias = model.organizationAlias;
+                this.organizationId = model.organizationId;
+                this.organizationName = model.organizationName;
+                this.organizationRole = model.organizationRole;
+            } 
 
             /**
              * accessLevel.

@@ -48,6 +48,10 @@ public class GetFlowTagGroupResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return errorCode
      */
@@ -89,6 +93,17 @@ public class GetFlowTagGroupResponseBody extends TeaModel {
         private FlowTagGroup flowTagGroup; 
         private String requestId; 
         private Boolean success; 
+
+        private Builder() {
+        } 
+
+        private Builder(GetFlowTagGroupResponseBody model) {
+            this.errorCode = model.errorCode;
+            this.errorMessage = model.errorMessage;
+            this.flowTagGroup = model.flowTagGroup;
+            this.requestId = model.requestId;
+            this.success = model.success;
+        } 
 
         /**
          * errorCode.
@@ -216,6 +231,17 @@ public class GetFlowTagGroupResponseBody extends TeaModel {
             private String modiferAccountId; 
             private String name; 
 
+            private Builder() {
+            } 
+
+            private Builder(FlowTagList model) {
+                this.color = model.color;
+                this.creatorAccountId = model.creatorAccountId;
+                this.id = model.id;
+                this.modiferAccountId = model.modiferAccountId;
+                this.name = model.name;
+            } 
+
             /**
              * color.
              */
@@ -342,6 +368,17 @@ public class GetFlowTagGroupResponseBody extends TeaModel {
             private Long id; 
             private String modiferAccountId; 
             private String name; 
+
+            private Builder() {
+            } 
+
+            private Builder(FlowTagGroup model) {
+                this.creatorAccountId = model.creatorAccountId;
+                this.flowTagList = model.flowTagList;
+                this.id = model.id;
+                this.modiferAccountId = model.modiferAccountId;
+                this.name = model.name;
+            } 
 
             /**
              * creatorAccountId.

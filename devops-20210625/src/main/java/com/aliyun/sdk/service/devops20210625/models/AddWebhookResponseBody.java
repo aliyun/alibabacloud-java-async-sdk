@@ -48,6 +48,10 @@ public class AddWebhookResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return errorCode
      */
@@ -89,6 +93,17 @@ public class AddWebhookResponseBody extends TeaModel {
         private String requestId; 
         private Result result; 
         private Boolean success; 
+
+        private Builder() {
+        } 
+
+        private Builder(AddWebhookResponseBody model) {
+            this.errorCode = model.errorCode;
+            this.errorMessage = model.errorMessage;
+            this.requestId = model.requestId;
+            this.result = model.result;
+            this.success = model.success;
+        } 
 
         /**
          * errorCode.
@@ -299,6 +314,24 @@ public class AddWebhookResponseBody extends TeaModel {
             private String secretToken; 
             private Boolean tagPushEvents; 
             private String url; 
+
+            private Builder() {
+            } 
+
+            private Builder(Result model) {
+                this.createdAt = model.createdAt;
+                this.description = model.description;
+                this.enableSslVerification = model.enableSslVerification;
+                this.id = model.id;
+                this.lastTestResult = model.lastTestResult;
+                this.mergeRequestsEvents = model.mergeRequestsEvents;
+                this.noteEvents = model.noteEvents;
+                this.pushEvents = model.pushEvents;
+                this.repositoryId = model.repositoryId;
+                this.secretToken = model.secretToken;
+                this.tagPushEvents = model.tagPushEvents;
+                this.url = model.url;
+            } 
 
             /**
              * createdAt.

@@ -48,6 +48,10 @@ public class ListUserKeysResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return errorCode
      */
@@ -89,6 +93,17 @@ public class ListUserKeysResponseBody extends TeaModel {
         private String requestId; 
         private java.util.List<Result> result; 
         private Boolean success; 
+
+        private Builder() {
+        } 
+
+        private Builder(ListUserKeysResponseBody model) {
+            this.errorCode = model.errorCode;
+            this.errorMessage = model.errorMessage;
+            this.requestId = model.requestId;
+            this.result = model.result;
+            this.success = model.success;
+        } 
 
         /**
          * errorCode.
@@ -251,6 +266,20 @@ public class ListUserKeysResponseBody extends TeaModel {
             private String lastUsedTime; 
             private String publicKey; 
             private String title; 
+
+            private Builder() {
+            } 
+
+            private Builder(Result model) {
+                this.createdAt = model.createdAt;
+                this.expireTime = model.expireTime;
+                this.fingerPrint = model.fingerPrint;
+                this.id = model.id;
+                this.keyScope = model.keyScope;
+                this.lastUsedTime = model.lastUsedTime;
+                this.publicKey = model.publicKey;
+                this.title = model.title;
+            } 
 
             /**
              * createdAt.

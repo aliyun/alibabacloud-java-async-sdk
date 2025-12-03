@@ -48,6 +48,10 @@ public class ListMergeRequestPatchSetsResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return errorCode
      */
@@ -89,6 +93,17 @@ public class ListMergeRequestPatchSetsResponseBody extends TeaModel {
         private String requestId; 
         private java.util.List<Result> result; 
         private Boolean success; 
+
+        private Builder() {
+        } 
+
+        private Builder(ListMergeRequestPatchSetsResponseBody model) {
+            this.errorCode = model.errorCode;
+            this.errorMessage = model.errorMessage;
+            this.requestId = model.requestId;
+            this.result = model.result;
+            this.success = model.success;
+        } 
 
         /**
          * errorCode.
@@ -239,6 +254,19 @@ public class ListMergeRequestPatchSetsResponseBody extends TeaModel {
             private Long patchSetNo; 
             private String relatedMergeItemType; 
             private String shortCommitId; 
+
+            private Builder() {
+            } 
+
+            private Builder(Result model) {
+                this.commitId = model.commitId;
+                this.createdAt = model.createdAt;
+                this.patchSetBizId = model.patchSetBizId;
+                this.patchSetName = model.patchSetName;
+                this.patchSetNo = model.patchSetNo;
+                this.relatedMergeItemType = model.relatedMergeItemType;
+                this.shortCommitId = model.shortCommitId;
+            } 
 
             /**
              * commitId.

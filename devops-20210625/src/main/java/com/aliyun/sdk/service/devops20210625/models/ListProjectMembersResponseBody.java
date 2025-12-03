@@ -48,6 +48,10 @@ public class ListProjectMembersResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return errorCode
      */
@@ -89,6 +93,17 @@ public class ListProjectMembersResponseBody extends TeaModel {
         private java.util.List<Members> members; 
         private String requestId; 
         private Boolean success; 
+
+        private Builder() {
+        } 
+
+        private Builder(ListProjectMembersResponseBody model) {
+            this.errorCode = model.errorCode;
+            this.errorMsg = model.errorMsg;
+            this.members = model.members;
+            this.requestId = model.requestId;
+            this.success = model.success;
+        } 
 
         /**
          * errorCode.
@@ -168,6 +183,13 @@ public class ListProjectMembersResponseBody extends TeaModel {
         public static final class Builder {
             private String identifier; 
 
+            private Builder() {
+            } 
+
+            private Builder(Division model) {
+                this.identifier = model.identifier;
+            } 
+
             /**
              * identifier.
              */
@@ -214,6 +236,13 @@ public class ListProjectMembersResponseBody extends TeaModel {
 
         public static final class Builder {
             private String organizationIdentifier; 
+
+            private Builder() {
+            } 
+
+            private Builder(OrganizationUserInfo model) {
+                this.organizationIdentifier = model.organizationIdentifier;
+            } 
 
             /**
              * organizationIdentifier.
@@ -489,6 +518,32 @@ public class ListProjectMembersResponseBody extends TeaModel {
             private String roleName; 
             private String stamp; 
             private String tbRoleId; 
+
+            private Builder() {
+            } 
+
+            private Builder(Members model) {
+                this.account = model.account;
+                this.avatar = model.avatar;
+                this.dingTalkId = model.dingTalkId;
+                this.displayName = model.displayName;
+                this.displayNickName = model.displayNickName;
+                this.displayRealName = model.displayRealName;
+                this.division = model.division;
+                this.email = model.email;
+                this.gender = model.gender;
+                this.identifier = model.identifier;
+                this.mobile = model.mobile;
+                this.nameEn = model.nameEn;
+                this.nickName = model.nickName;
+                this.nickNamePinyin = model.nickNamePinyin;
+                this.organizationUserInfo = model.organizationUserInfo;
+                this.realName = model.realName;
+                this.realNamePinyin = model.realNamePinyin;
+                this.roleName = model.roleName;
+                this.stamp = model.stamp;
+                this.tbRoleId = model.tbRoleId;
+            } 
 
             /**
              * account.

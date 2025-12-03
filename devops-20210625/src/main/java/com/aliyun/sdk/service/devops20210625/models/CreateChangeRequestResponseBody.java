@@ -92,6 +92,10 @@ public class CreateChangeRequestResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return appCodeRepoSn
      */
@@ -221,6 +225,28 @@ public class CreateChangeRequestResponseBody extends TeaModel {
         private String sn; 
         private String state; 
         private String type; 
+
+        private Builder() {
+        } 
+
+        private Builder(CreateChangeRequestResponseBody model) {
+            this.appCodeRepoSn = model.appCodeRepoSn;
+            this.appName = model.appName;
+            this.autoDeleteBranchWhenEnd = model.autoDeleteBranchWhenEnd;
+            this.branch = model.branch;
+            this.creatorAccountId = model.creatorAccountId;
+            this.creatorId = model.creatorId;
+            this.gmtCreate = model.gmtCreate;
+            this.gmtModified = model.gmtModified;
+            this.name = model.name;
+            this.originBranch = model.originBranch;
+            this.originBranchRevisionSha = model.originBranchRevisionSha;
+            this.ownerAccountId = model.ownerAccountId;
+            this.ownerId = model.ownerId;
+            this.sn = model.sn;
+            this.state = model.state;
+            this.type = model.type;
+        } 
 
         /**
          * appCodeRepoSn.

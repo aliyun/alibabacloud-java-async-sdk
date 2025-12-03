@@ -52,6 +52,10 @@ public class ListGroupRepositoriesResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return errorCode
      */
@@ -101,6 +105,18 @@ public class ListGroupRepositoriesResponseBody extends TeaModel {
         private java.util.List<Result> result; 
         private Boolean success; 
         private Long total; 
+
+        private Builder() {
+        } 
+
+        private Builder(ListGroupRepositoriesResponseBody model) {
+            this.errorCode = model.errorCode;
+            this.errorMessage = model.errorMessage;
+            this.requestId = model.requestId;
+            this.result = model.result;
+            this.success = model.success;
+            this.total = model.total;
+        } 
 
         /**
          * errorCode.
@@ -475,6 +491,37 @@ public class ListGroupRepositoriesResponseBody extends TeaModel {
             private Integer visibilityLevel; 
             private String webUrl; 
             private Boolean wikiEnabled; 
+
+            private Builder() {
+            } 
+
+            private Builder(Result model) {
+                this.archived = model.archived;
+                this.commitCount = model.commitCount;
+                this.createdAt = model.createdAt;
+                this.creatorId = model.creatorId;
+                this.description = model.description;
+                this.httpUrl = model.httpUrl;
+                this.id = model.id;
+                this.importUrl = model.importUrl;
+                this.isStared = model.isStared;
+                this.issuesEnabled = model.issuesEnabled;
+                this.lastActivityAt = model.lastActivityAt;
+                this.mergeRequestsEnabled = model.mergeRequestsEnabled;
+                this.name = model.name;
+                this.nameWithNamespace = model.nameWithNamespace;
+                this.namespaceId = model.namespaceId;
+                this.path = model.path;
+                this.pathWithNamespace = model.pathWithNamespace;
+                this.privateFlag = model.privateFlag;
+                this.snippetsEnabled = model.snippetsEnabled;
+                this.sshUrl = model.sshUrl;
+                this.starCount = model.starCount;
+                this.updatedAt = model.updatedAt;
+                this.visibilityLevel = model.visibilityLevel;
+                this.webUrl = model.webUrl;
+                this.wikiEnabled = model.wikiEnabled;
+            } 
 
             /**
              * archived.

@@ -48,6 +48,10 @@ public class CreateProjectResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return errorCode
      */
@@ -89,6 +93,17 @@ public class CreateProjectResponseBody extends TeaModel {
         private Project project; 
         private String requestId; 
         private Boolean success; 
+
+        private Builder() {
+        } 
+
+        private Builder(CreateProjectResponseBody model) {
+            this.errorCode = model.errorCode;
+            this.errorMsg = model.errorMsg;
+            this.project = model.project;
+            this.requestId = model.requestId;
+            this.success = model.success;
+        } 
 
         /**
          * errorCode.
@@ -347,6 +362,28 @@ public class CreateProjectResponseBody extends TeaModel {
             private String statusIdentifier; 
             private String statusStageIdentifier; 
             private String typeIdentifier; 
+
+            private Builder() {
+            } 
+
+            private Builder(Project model) {
+                this.categoryIdentifier = model.categoryIdentifier;
+                this.creator = model.creator;
+                this.customCode = model.customCode;
+                this.description = model.description;
+                this.gmtCreate = model.gmtCreate;
+                this.gmtModified = model.gmtModified;
+                this.icon = model.icon;
+                this.identifier = model.identifier;
+                this.logicalStatus = model.logicalStatus;
+                this.modifier = model.modifier;
+                this.name = model.name;
+                this.organizationIdentifier = model.organizationIdentifier;
+                this.scope = model.scope;
+                this.statusIdentifier = model.statusIdentifier;
+                this.statusStageIdentifier = model.statusStageIdentifier;
+                this.typeIdentifier = model.typeIdentifier;
+            } 
 
             /**
              * categoryIdentifier.

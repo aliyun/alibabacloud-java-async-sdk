@@ -48,6 +48,10 @@ public class ListGroupMemberResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return errorCode
      */
@@ -89,6 +93,17 @@ public class ListGroupMemberResponseBody extends TeaModel {
         private String requestId; 
         private java.util.List<Result> result; 
         private Boolean success; 
+
+        private Builder() {
+        } 
+
+        private Builder(ListGroupMemberResponseBody model) {
+            this.errorCode = model.errorCode;
+            this.errorMessage = model.errorMessage;
+            this.requestId = model.requestId;
+            this.result = model.result;
+            this.success = model.success;
+        } 
 
         /**
          * errorCode.
@@ -263,6 +278,21 @@ public class ListGroupMemberResponseBody extends TeaModel {
             private Long sourceId; 
             private String state; 
             private String username; 
+
+            private Builder() {
+            } 
+
+            private Builder(Result model) {
+                this.accessLevel = model.accessLevel;
+                this.avatarUrl = model.avatarUrl;
+                this.email = model.email;
+                this.id = model.id;
+                this.memberType = model.memberType;
+                this.name = model.name;
+                this.sourceId = model.sourceId;
+                this.state = model.state;
+                this.username = model.username;
+            } 
 
             /**
              * accessLevel.

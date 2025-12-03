@@ -48,6 +48,10 @@ public class TransferRepositoryResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return errorCode
      */
@@ -89,6 +93,17 @@ public class TransferRepositoryResponseBody extends TeaModel {
         private String requestId; 
         private Result result; 
         private Boolean success; 
+
+        private Builder() {
+        } 
+
+        private Builder(TransferRepositoryResponseBody model) {
+            this.errorCode = model.errorCode;
+            this.errorMessage = model.errorMessage;
+            this.requestId = model.requestId;
+            this.result = model.result;
+            this.success = model.success;
+        } 
 
         /**
          * errorCode.
@@ -383,6 +398,31 @@ public class TransferRepositoryResponseBody extends TeaModel {
             private String updatedAt; 
             private Integer visibilityLevel; 
             private String webUrl; 
+
+            private Builder() {
+            } 
+
+            private Builder(Result model) {
+                this.accessLevel = model.accessLevel;
+                this.archived = model.archived;
+                this.createdAt = model.createdAt;
+                this.creatorId = model.creatorId;
+                this.demoProject = model.demoProject;
+                this.description = model.description;
+                this.encrypted = model.encrypted;
+                this.id = model.id;
+                this.lastActivityAt = model.lastActivityAt;
+                this.name = model.name;
+                this.nameWithNamespace = model.nameWithNamespace;
+                this.namespaceId = model.namespaceId;
+                this.path = model.path;
+                this.pathWithNamespace = model.pathWithNamespace;
+                this.starCount = model.starCount;
+                this.starred = model.starred;
+                this.updatedAt = model.updatedAt;
+                this.visibilityLevel = model.visibilityLevel;
+                this.webUrl = model.webUrl;
+            } 
 
             /**
              * accessLevel.

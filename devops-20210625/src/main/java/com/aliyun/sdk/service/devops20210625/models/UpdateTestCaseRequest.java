@@ -47,7 +47,7 @@ public class UpdateTestCaseRequest extends Request {
         return builder().build();
     }
 
-    @Override
+@Override
     public Builder toBuilder() {
         return new Builder(this);
     }
@@ -174,6 +174,14 @@ public class UpdateTestCaseRequest extends Request {
         public static final class Builder {
             private String fieldIdentifier; 
             private String fieldValue; 
+
+            private Builder() {
+            } 
+
+            private Builder(UpdateWorkitemPropertyRequest model) {
+                this.fieldIdentifier = model.fieldIdentifier;
+                this.fieldValue = model.fieldValue;
+            } 
 
             /**
              * <p>This parameter is required.</p>

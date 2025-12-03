@@ -48,6 +48,10 @@ public class UpdatePushRuleResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return errorCode
      */
@@ -89,6 +93,17 @@ public class UpdatePushRuleResponseBody extends TeaModel {
         private String requestId; 
         private Result result; 
         private Boolean success; 
+
+        private Builder() {
+        } 
+
+        private Builder(UpdatePushRuleResponseBody model) {
+            this.errorCode = model.errorCode;
+            this.errorMessage = model.errorMessage;
+            this.requestId = model.requestId;
+            this.result = model.result;
+            this.success = model.success;
+        } 
 
         /**
          * errorCode.
@@ -204,6 +219,16 @@ public class UpdatePushRuleResponseBody extends TeaModel {
             private String extraMessage; 
             private java.util.List<String> fileRuleRegexes; 
 
+            private Builder() {
+            } 
+
+            private Builder(RuleInfos model) {
+                this.checkerName = model.checkerName;
+                this.checkerType = model.checkerType;
+                this.extraMessage = model.extraMessage;
+                this.fileRuleRegexes = model.fileRuleRegexes;
+            } 
+
             /**
              * checkerName.
              */
@@ -310,6 +335,16 @@ public class UpdatePushRuleResponseBody extends TeaModel {
             private String gmtModified; 
             private Long id; 
             private java.util.List<RuleInfos> ruleInfos; 
+
+            private Builder() {
+            } 
+
+            private Builder(Result model) {
+                this.gmtCreate = model.gmtCreate;
+                this.gmtModified = model.gmtModified;
+                this.id = model.id;
+                this.ruleInfos = model.ruleInfos;
+            } 
 
             /**
              * gmtCreate.

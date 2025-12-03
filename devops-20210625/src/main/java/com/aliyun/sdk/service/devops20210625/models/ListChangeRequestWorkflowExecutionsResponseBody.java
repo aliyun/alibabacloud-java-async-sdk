@@ -48,6 +48,10 @@ public class ListChangeRequestWorkflowExecutionsResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return current
      */
@@ -89,6 +93,17 @@ public class ListChangeRequestWorkflowExecutionsResponseBody extends TeaModel {
         private Long pages; 
         private java.util.List<?> records; 
         private Long total; 
+
+        private Builder() {
+        } 
+
+        private Builder(ListChangeRequestWorkflowExecutionsResponseBody model) {
+            this.current = model.current;
+            this.pageSize = model.pageSize;
+            this.pages = model.pages;
+            this.records = model.records;
+            this.total = model.total;
+        } 
 
         /**
          * current.

@@ -48,6 +48,10 @@ public class CreateProjectLabelResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return errorCode
      */
@@ -89,6 +93,17 @@ public class CreateProjectLabelResponseBody extends TeaModel {
         private String requestId; 
         private Result result; 
         private Boolean success; 
+
+        private Builder() {
+        } 
+
+        private Builder(CreateProjectLabelResponseBody model) {
+            this.errorCode = model.errorCode;
+            this.errorMessage = model.errorMessage;
+            this.requestId = model.requestId;
+            this.result = model.result;
+            this.success = model.success;
+        } 
 
         /**
          * errorCode.
@@ -203,6 +218,16 @@ public class CreateProjectLabelResponseBody extends TeaModel {
             private String description; 
             private String id; 
             private String name; 
+
+            private Builder() {
+            } 
+
+            private Builder(Result model) {
+                this.color = model.color;
+                this.description = model.description;
+                this.id = model.id;
+                this.name = model.name;
+            } 
 
             /**
              * color.

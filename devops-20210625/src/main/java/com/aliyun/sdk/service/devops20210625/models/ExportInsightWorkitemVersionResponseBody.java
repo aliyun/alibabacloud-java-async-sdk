@@ -44,6 +44,10 @@ public class ExportInsightWorkitemVersionResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return maxResults
      */
@@ -77,6 +81,16 @@ public class ExportInsightWorkitemVersionResponseBody extends TeaModel {
         private String nextToken; 
         private java.util.List<Result> result; 
         private Long totalCount; 
+
+        private Builder() {
+        } 
+
+        private Builder(ExportInsightWorkitemVersionResponseBody model) {
+            this.maxResults = model.maxResults;
+            this.nextToken = model.nextToken;
+            this.result = model.result;
+            this.totalCount = model.totalCount;
+        } 
 
         /**
          * maxResults.
@@ -303,6 +317,26 @@ public class ExportInsightWorkitemVersionResponseBody extends TeaModel {
             private Integer status; 
             private String targetId; 
             private String targetType; 
+
+            private Builder() {
+            } 
+
+            private Builder(Result model) {
+                this.gmtCreate = model.gmtCreate;
+                this.gmtModified = model.gmtModified;
+                this.gmtPublish = model.gmtPublish;
+                this.gmtStart = model.gmtStart;
+                this.id = model.id;
+                this.identifier = model.identifier;
+                this.isDeleted = model.isDeleted;
+                this.lockStatus = model.lockStatus;
+                this.name = model.name;
+                this.organizationId = model.organizationId;
+                this.source = model.source;
+                this.status = model.status;
+                this.targetId = model.targetId;
+                this.targetType = model.targetType;
+            } 
 
             /**
              * gmtCreate.

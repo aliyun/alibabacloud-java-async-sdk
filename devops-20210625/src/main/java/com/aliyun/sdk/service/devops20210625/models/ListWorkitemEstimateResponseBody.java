@@ -52,6 +52,10 @@ public class ListWorkitemEstimateResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return code
      */
@@ -101,6 +105,18 @@ public class ListWorkitemEstimateResponseBody extends TeaModel {
         private String requestId; 
         private Boolean success; 
         private java.util.List<WorkitemTimeEstimate> workitemTimeEstimate; 
+
+        private Builder() {
+        } 
+
+        private Builder(ListWorkitemEstimateResponseBody model) {
+            this.code = model.code;
+            this.errorCode = model.errorCode;
+            this.errorMsg = model.errorMsg;
+            this.requestId = model.requestId;
+            this.success = model.success;
+            this.workitemTimeEstimate = model.workitemTimeEstimate;
+        } 
 
         /**
          * code.
@@ -199,6 +215,14 @@ public class ListWorkitemEstimateResponseBody extends TeaModel {
         public static final class Builder {
             private String identifier; 
             private String name; 
+
+            private Builder() {
+            } 
+
+            private Builder(RecordUser model) {
+                this.identifier = model.identifier;
+                this.name = model.name;
+            } 
 
             /**
              * identifier.
@@ -362,6 +386,22 @@ public class ListWorkitemEstimateResponseBody extends TeaModel {
             private Float spentTime; 
             private String type; 
             private String workitemIdentifier; 
+
+            private Builder() {
+            } 
+
+            private Builder(WorkitemTimeEstimate model) {
+                this.description = model.description;
+                this.gmtCreate = model.gmtCreate;
+                this.gmtEnd = model.gmtEnd;
+                this.gmtModified = model.gmtModified;
+                this.gmtStart = model.gmtStart;
+                this.identifier = model.identifier;
+                this.recordUser = model.recordUser;
+                this.spentTime = model.spentTime;
+                this.type = model.type;
+                this.workitemIdentifier = model.workitemIdentifier;
+            } 
 
             /**
              * description.

@@ -98,7 +98,7 @@ public class CreateCheckRunRequest extends Request {
         return builder().build();
     }
 
-    @Override
+@Override
     public Builder toBuilder() {
         return new Builder(this);
     }
@@ -496,6 +496,21 @@ public class CreateCheckRunRequest extends Request {
             private Long startLine; 
             private String title; 
 
+            private Builder() {
+            } 
+
+            private Builder(Annotations model) {
+                this.annotationLevel = model.annotationLevel;
+                this.endColumn = model.endColumn;
+                this.endLine = model.endLine;
+                this.message = model.message;
+                this.path = model.path;
+                this.rawDetails = model.rawDetails;
+                this.startColumn = model.startColumn;
+                this.startLine = model.startLine;
+                this.title = model.title;
+            } 
+
             /**
              * <p>This parameter is required.</p>
              * 
@@ -645,6 +660,15 @@ public class CreateCheckRunRequest extends Request {
             private String caption; 
             private String imageUrl; 
 
+            private Builder() {
+            } 
+
+            private Builder(Images model) {
+                this.alt = model.alt;
+                this.caption = model.caption;
+                this.imageUrl = model.imageUrl;
+            } 
+
             /**
              * <p>This parameter is required.</p>
              * 
@@ -751,6 +775,16 @@ public class CreateCheckRunRequest extends Request {
             private String summary; 
             private String text; 
             private String title; 
+
+            private Builder() {
+            } 
+
+            private Builder(Output model) {
+                this.images = model.images;
+                this.summary = model.summary;
+                this.text = model.text;
+                this.title = model.title;
+            } 
 
             /**
              * images.

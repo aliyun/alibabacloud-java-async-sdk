@@ -44,6 +44,10 @@ public class ExportInsightFieldResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return maxResults
      */
@@ -77,6 +81,16 @@ public class ExportInsightFieldResponseBody extends TeaModel {
         private String nextToken; 
         private java.util.List<Result> result; 
         private Long totalCount; 
+
+        private Builder() {
+        } 
+
+        private Builder(ExportInsightFieldResponseBody model) {
+            this.maxResults = model.maxResults;
+            this.nextToken = model.nextToken;
+            this.result = model.result;
+            this.totalCount = model.totalCount;
+        } 
 
         /**
          * maxResults.
@@ -327,6 +341,28 @@ public class ExportInsightFieldResponseBody extends TeaModel {
             private String targetId; 
             private String targetType; 
             private String type; 
+
+            private Builder() {
+            } 
+
+            private Builder(Result model) {
+                this.fieldId = model.fieldId;
+                this.fieldName = model.fieldName;
+                this.gmtCreate = model.gmtCreate;
+                this.gmtModified = model.gmtModified;
+                this.id = model.id;
+                this.identifier = model.identifier;
+                this.isDeleted = model.isDeleted;
+                this.isSystem = model.isSystem;
+                this.optionValue = model.optionValue;
+                this.organizationId = model.organizationId;
+                this.position = model.position;
+                this.scope = model.scope;
+                this.source = model.source;
+                this.targetId = model.targetId;
+                this.targetType = model.targetType;
+                this.type = model.type;
+            } 
 
             /**
              * fieldId.

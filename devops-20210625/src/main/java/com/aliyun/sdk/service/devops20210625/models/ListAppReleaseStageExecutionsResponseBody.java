@@ -52,6 +52,10 @@ public class ListAppReleaseStageExecutionsResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return current
      */
@@ -101,6 +105,18 @@ public class ListAppReleaseStageExecutionsResponseBody extends TeaModel {
         private Long pages; 
         private Long perPage; 
         private Long total; 
+
+        private Builder() {
+        } 
+
+        private Builder(ListAppReleaseStageExecutionsResponseBody model) {
+            this.current = model.current;
+            this.data = model.data;
+            this.nextToken = model.nextToken;
+            this.pages = model.pages;
+            this.perPage = model.perPage;
+            this.total = model.total;
+        } 
 
         /**
          * current.
@@ -235,6 +251,17 @@ public class ListAppReleaseStageExecutionsResponseBody extends TeaModel {
             private String startTime; 
             private String state; 
             private String triggerMode; 
+
+            private Builder() {
+            } 
+
+            private Builder(Data model) {
+                this.endTime = model.endTime;
+                this.number = model.number;
+                this.startTime = model.startTime;
+                this.state = model.state;
+                this.triggerMode = model.triggerMode;
+            } 
 
             /**
              * endTime.

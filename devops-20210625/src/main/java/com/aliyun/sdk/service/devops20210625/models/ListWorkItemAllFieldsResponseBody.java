@@ -48,6 +48,10 @@ public class ListWorkItemAllFieldsResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return errorCode
      */
@@ -89,6 +93,17 @@ public class ListWorkItemAllFieldsResponseBody extends TeaModel {
         private java.util.List<Fields> fields; 
         private String requestId; 
         private Boolean success; 
+
+        private Builder() {
+        } 
+
+        private Builder(ListWorkItemAllFieldsResponseBody model) {
+            this.errorCode = model.errorCode;
+            this.errorMsg = model.errorMsg;
+            this.fields = model.fields;
+            this.requestId = model.requestId;
+            this.success = model.success;
+        } 
 
         /**
          * errorCode.
@@ -239,6 +254,19 @@ public class ListWorkItemAllFieldsResponseBody extends TeaModel {
             private Long position; 
             private String value; 
             private String valueEn; 
+
+            private Builder() {
+            } 
+
+            private Builder(Options model) {
+                this.displayValue = model.displayValue;
+                this.fieldIdentifier = model.fieldIdentifier;
+                this.identifier = model.identifier;
+                this.level = model.level;
+                this.position = model.position;
+                this.value = model.value;
+                this.valueEn = model.valueEn;
+            } 
 
             /**
              * displayValue.
@@ -526,6 +554,29 @@ public class ListWorkItemAllFieldsResponseBody extends TeaModel {
             private java.util.List<Options> options; 
             private String resourceType; 
             private String type; 
+
+            private Builder() {
+            } 
+
+            private Builder(Fields model) {
+                this.className = model.className;
+                this.creator = model.creator;
+                this.defaultValue = model.defaultValue;
+                this.description = model.description;
+                this.format = model.format;
+                this.gmtCreate = model.gmtCreate;
+                this.gmtModified = model.gmtModified;
+                this.identifier = model.identifier;
+                this.isRequired = model.isRequired;
+                this.isShowWhenCreate = model.isShowWhenCreate;
+                this.isSystemRequired = model.isSystemRequired;
+                this.linkWithService = model.linkWithService;
+                this.modifier = model.modifier;
+                this.name = model.name;
+                this.options = model.options;
+                this.resourceType = model.resourceType;
+                this.type = model.type;
+            } 
 
             /**
              * className.

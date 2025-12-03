@@ -48,6 +48,10 @@ public class GetWorkitemFileResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return errorCode
      */
@@ -89,6 +93,17 @@ public class GetWorkitemFileResponseBody extends TeaModel {
         private String requestId; 
         private String success; 
         private WorkitemFile workitemFile; 
+
+        private Builder() {
+        } 
+
+        private Builder(GetWorkitemFileResponseBody model) {
+            this.errorCode = model.errorCode;
+            this.errorMsg = model.errorMsg;
+            this.requestId = model.requestId;
+            this.success = model.success;
+            this.workitemFile = model.workitemFile;
+        } 
 
         /**
          * errorCode.
@@ -218,6 +233,17 @@ public class GetWorkitemFileResponseBody extends TeaModel {
             private Integer size; 
             private String suffix; 
             private String url; 
+
+            private Builder() {
+            } 
+
+            private Builder(WorkitemFile model) {
+                this.id = model.id;
+                this.name = model.name;
+                this.size = model.size;
+                this.suffix = model.suffix;
+                this.url = model.url;
+            } 
 
             /**
              * id.

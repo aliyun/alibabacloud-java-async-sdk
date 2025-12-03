@@ -48,6 +48,10 @@ public class ListMergeRequestFilesReadsResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return errorCode
      */
@@ -89,6 +93,17 @@ public class ListMergeRequestFilesReadsResponseBody extends TeaModel {
         private String requestId; 
         private java.util.List<Result> result; 
         private Boolean success; 
+
+        private Builder() {
+        } 
+
+        private Builder(ListMergeRequestFilesReadsResponseBody model) {
+            this.errorCode = model.errorCode;
+            this.errorMessage = model.errorMessage;
+            this.requestId = model.requestId;
+            this.result = model.result;
+            this.success = model.success;
+        } 
 
         /**
          * errorCode.
@@ -227,6 +242,18 @@ public class ListMergeRequestFilesReadsResponseBody extends TeaModel {
             private String name; 
             private String state; 
             private String username; 
+
+            private Builder() {
+            } 
+
+            private Builder(ReadUsers model) {
+                this.aliyunPk = model.aliyunPk;
+                this.avatarUrl = model.avatarUrl;
+                this.email = model.email;
+                this.name = model.name;
+                this.state = model.state;
+                this.username = model.username;
+            } 
 
             /**
              * aliyunPk.
@@ -374,6 +401,18 @@ public class ListMergeRequestFilesReadsResponseBody extends TeaModel {
             private String oldFilePath; 
             private java.util.List<ReadUsers> readUsers; 
             private String renamedFile; 
+
+            private Builder() {
+            } 
+
+            private Builder(Result model) {
+                this.deletedFile = model.deletedFile;
+                this.newFile = model.newFile;
+                this.newFilePath = model.newFilePath;
+                this.oldFilePath = model.oldFilePath;
+                this.readUsers = model.readUsers;
+                this.renamedFile = model.renamedFile;
+            } 
 
             /**
              * deletedFile.

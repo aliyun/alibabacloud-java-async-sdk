@@ -52,6 +52,10 @@ public class ListWorkitemTimeResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return code
      */
@@ -101,6 +105,18 @@ public class ListWorkitemTimeResponseBody extends TeaModel {
         private String requestId; 
         private Boolean success; 
         private java.util.List<WorkitemTime> workitemTime; 
+
+        private Builder() {
+        } 
+
+        private Builder(ListWorkitemTimeResponseBody model) {
+            this.code = model.code;
+            this.errorCode = model.errorCode;
+            this.errorMsg = model.errorMsg;
+            this.requestId = model.requestId;
+            this.success = model.success;
+            this.workitemTime = model.workitemTime;
+        } 
 
         /**
          * code.
@@ -295,6 +311,22 @@ public class ListWorkitemTimeResponseBody extends TeaModel {
             private String recordUser; 
             private String type; 
             private String workitemIdentifier; 
+
+            private Builder() {
+            } 
+
+            private Builder(WorkitemTime model) {
+                this.actualTime = model.actualTime;
+                this.description = model.description;
+                this.gmtCreate = model.gmtCreate;
+                this.gmtEnd = model.gmtEnd;
+                this.gmtModified = model.gmtModified;
+                this.gmtStart = model.gmtStart;
+                this.identifier = model.identifier;
+                this.recordUser = model.recordUser;
+                this.type = model.type;
+                this.workitemIdentifier = model.workitemIdentifier;
+            } 
 
             /**
              * actualTime.

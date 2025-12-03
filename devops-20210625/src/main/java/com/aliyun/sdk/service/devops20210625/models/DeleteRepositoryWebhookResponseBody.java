@@ -48,6 +48,10 @@ public class DeleteRepositoryWebhookResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return errorCode
      */
@@ -89,6 +93,17 @@ public class DeleteRepositoryWebhookResponseBody extends TeaModel {
         private String requestId; 
         private Result result; 
         private Boolean success; 
+
+        private Builder() {
+        } 
+
+        private Builder(DeleteRepositoryWebhookResponseBody model) {
+            this.errorCode = model.errorCode;
+            this.errorMessage = model.errorMessage;
+            this.requestId = model.requestId;
+            this.result = model.result;
+            this.success = model.success;
+        } 
 
         /**
          * errorCode.
@@ -335,6 +350,27 @@ public class DeleteRepositoryWebhookResponseBody extends TeaModel {
             private Boolean tagPushEvents; 
             private String type; 
             private String url; 
+
+            private Builder() {
+            } 
+
+            private Builder(Result model) {
+                this.buildEvents = model.buildEvents;
+                this.createdAt = model.createdAt;
+                this.description = model.description;
+                this.enableSslVerification = model.enableSslVerification;
+                this.id = model.id;
+                this.issuesEvents = model.issuesEvents;
+                this.lastTestResult = model.lastTestResult;
+                this.mergeRequestsEvents = model.mergeRequestsEvents;
+                this.noteEvents = model.noteEvents;
+                this.projectId = model.projectId;
+                this.pushEvents = model.pushEvents;
+                this.secretToken = model.secretToken;
+                this.tagPushEvents = model.tagPushEvents;
+                this.type = model.type;
+                this.url = model.url;
+            } 
 
             /**
              * buildEvents.

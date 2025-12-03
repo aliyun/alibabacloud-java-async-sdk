@@ -56,6 +56,10 @@ public class ListHostGroupsResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return errorCode
      */
@@ -113,6 +117,19 @@ public class ListHostGroupsResponseBody extends TeaModel {
         private String requestId; 
         private Boolean success; 
         private Long totalCount; 
+
+        private Builder() {
+        } 
+
+        private Builder(ListHostGroupsResponseBody model) {
+            this.errorCode = model.errorCode;
+            this.errorMessage = model.errorMessage;
+            this.hostGroups = model.hostGroups;
+            this.nextToken = model.nextToken;
+            this.requestId = model.requestId;
+            this.success = model.success;
+            this.totalCount = model.totalCount;
+        } 
 
         /**
          * errorCode.
@@ -363,6 +380,26 @@ public class ListHostGroupsResponseBody extends TeaModel {
             private Long serviceConnectionId; 
             private String type; 
             private Long updateTime; 
+
+            private Builder() {
+            } 
+
+            private Builder(HostGroups model) {
+                this.aliyunRegion = model.aliyunRegion;
+                this.createTime = model.createTime;
+                this.creatorAccountId = model.creatorAccountId;
+                this.description = model.description;
+                this.ecsLabelKey = model.ecsLabelKey;
+                this.ecsLabelValue = model.ecsLabelValue;
+                this.ecsType = model.ecsType;
+                this.hostNum = model.hostNum;
+                this.id = model.id;
+                this.modifierAccountId = model.modifierAccountId;
+                this.name = model.name;
+                this.serviceConnectionId = model.serviceConnectionId;
+                this.type = model.type;
+                this.updateTime = model.updateTime;
+            } 
 
             /**
              * aliyunRegion.

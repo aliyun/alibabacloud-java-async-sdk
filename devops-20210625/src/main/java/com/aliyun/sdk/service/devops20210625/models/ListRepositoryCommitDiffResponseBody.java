@@ -48,6 +48,10 @@ public class ListRepositoryCommitDiffResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return errorCode
      */
@@ -89,6 +93,17 @@ public class ListRepositoryCommitDiffResponseBody extends TeaModel {
         private String requestId; 
         private java.util.List<Result> result; 
         private Boolean success; 
+
+        private Builder() {
+        } 
+
+        private Builder(ListRepositoryCommitDiffResponseBody model) {
+            this.errorCode = model.errorCode;
+            this.errorMessage = model.errorMessage;
+            this.requestId = model.requestId;
+            this.result = model.result;
+            this.success = model.success;
+        } 
 
         /**
          * errorCode.
@@ -314,6 +329,25 @@ public class ListRepositoryCommitDiffResponseBody extends TeaModel {
             private String oldId; 
             private String oldPath; 
             private Boolean renamedFile; 
+
+            private Builder() {
+            } 
+
+            private Builder(Result model) {
+                this.aMode = model.aMode;
+                this.bMode = model.bMode;
+                this.deletedFile = model.deletedFile;
+                this.diff = model.diff;
+                this.isBinary = model.isBinary;
+                this.isNewLfs = model.isNewLfs;
+                this.isOldLfs = model.isOldLfs;
+                this.newFile = model.newFile;
+                this.newId = model.newId;
+                this.newPath = model.newPath;
+                this.oldId = model.oldId;
+                this.oldPath = model.oldPath;
+                this.renamedFile = model.renamedFile;
+            } 
 
             /**
              * aMode.

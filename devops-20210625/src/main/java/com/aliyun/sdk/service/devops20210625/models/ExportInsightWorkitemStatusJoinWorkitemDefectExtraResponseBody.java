@@ -44,6 +44,10 @@ public class ExportInsightWorkitemStatusJoinWorkitemDefectExtraResponseBody exte
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return maxResults
      */
@@ -77,6 +81,16 @@ public class ExportInsightWorkitemStatusJoinWorkitemDefectExtraResponseBody exte
         private String nextToken; 
         private java.util.List<Result> result; 
         private Long totalCount; 
+
+        private Builder() {
+        } 
+
+        private Builder(ExportInsightWorkitemStatusJoinWorkitemDefectExtraResponseBody model) {
+            this.maxResults = model.maxResults;
+            this.nextToken = model.nextToken;
+            this.result = model.result;
+            this.totalCount = model.totalCount;
+        } 
 
         /**
          * maxResults.
@@ -651,6 +665,55 @@ public class ExportInsightWorkitemStatusJoinWorkitemDefectExtraResponseBody exte
             private String versions; 
             private Long workTime; 
             private String workitemId; 
+
+            private Builder() {
+            } 
+
+            private Builder(Result model) {
+                this.assignedToId = model.assignedToId;
+                this.creatorId = model.creatorId;
+                this.expectedWorkTime = model.expectedWorkTime;
+                this.extraId = model.extraId;
+                this.extraIsDeleted = model.extraIsDeleted;
+                this.foundPhase = model.foundPhase;
+                this.gmtClosed = model.gmtClosed;
+                this.gmtCreate = model.gmtCreate;
+                this.gmtDue = model.gmtDue;
+                this.gmtFixed = model.gmtFixed;
+                this.gmtModified = model.gmtModified;
+                this.gmtStart = model.gmtStart;
+                this.gmtTodo = model.gmtTodo;
+                this.id = model.id;
+                this.isArchived = model.isArchived;
+                this.isDeleted = model.isDeleted;
+                this.isDone = model.isDone;
+                this.isStupid = model.isStupid;
+                this.organizationId = model.organizationId;
+                this.parentId = model.parentId;
+                this.participantIds = model.participantIds;
+                this.phase = model.phase;
+                this.priority = model.priority;
+                this.productId = model.productId;
+                this.projectId = model.projectId;
+                this.reopenNum = model.reopenNum;
+                this.serialNumber = model.serialNumber;
+                this.seriousLevel = model.seriousLevel;
+                this.solution = model.solution;
+                this.source = model.source;
+                this.sprintId = model.sprintId;
+                this.stage = model.stage;
+                this.status = model.status;
+                this.statusId = model.statusId;
+                this.storyPoint = model.storyPoint;
+                this.subType = model.subType;
+                this.subject = model.subject;
+                this.type = model.type;
+                this.verifierId = model.verifierId;
+                this.versionId = model.versionId;
+                this.versions = model.versions;
+                this.workTime = model.workTime;
+                this.workitemId = model.workitemId;
+            } 
 
             /**
              * assignedToId.

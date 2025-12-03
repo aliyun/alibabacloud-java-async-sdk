@@ -48,6 +48,10 @@ public class ListFlowTagGroupsResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return errorCode
      */
@@ -89,6 +93,17 @@ public class ListFlowTagGroupsResponseBody extends TeaModel {
         private java.util.List<FlowTagGroups> flowTagGroups; 
         private String requestId; 
         private Boolean success; 
+
+        private Builder() {
+        } 
+
+        private Builder(ListFlowTagGroupsResponseBody model) {
+            this.errorCode = model.errorCode;
+            this.errorMessage = model.errorMessage;
+            this.flowTagGroups = model.flowTagGroups;
+            this.requestId = model.requestId;
+            this.success = model.success;
+        } 
 
         /**
          * errorCode.
@@ -203,6 +218,16 @@ public class ListFlowTagGroupsResponseBody extends TeaModel {
             private Long id; 
             private String modiferAccountId; 
             private String name; 
+
+            private Builder() {
+            } 
+
+            private Builder(FlowTagGroups model) {
+                this.creatorAccountId = model.creatorAccountId;
+                this.id = model.id;
+                this.modiferAccountId = model.modiferAccountId;
+                this.name = model.name;
+            } 
 
             /**
              * creatorAccountId.

@@ -131,7 +131,7 @@ public class UpdateRepositoryRequest extends Request {
         return builder().build();
     }
 
-    @Override
+@Override
     public Builder toBuilder() {
         return new Builder(this);
     }
@@ -563,6 +563,14 @@ public class UpdateRepositoryRequest extends Request {
             private Boolean allowed; 
             private String permissionCode; 
 
+            private Builder() {
+            } 
+
+            private Builder(ProjectCloneDownloadMethodList model) {
+                this.allowed = model.allowed;
+                this.permissionCode = model.permissionCode;
+            } 
+
             /**
              * allowed.
              */
@@ -629,6 +637,14 @@ public class UpdateRepositoryRequest extends Request {
         public static final class Builder {
             private Boolean allowed; 
             private Integer roleCode; 
+
+            private Builder() {
+            } 
+
+            private Builder(ProjectCloneDownloadRoleList model) {
+                this.allowed = model.allowed;
+                this.roleCode = model.roleCode;
+            } 
 
             /**
              * allowed.

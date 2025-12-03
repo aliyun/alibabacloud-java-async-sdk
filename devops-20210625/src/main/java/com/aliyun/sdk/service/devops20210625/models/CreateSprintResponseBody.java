@@ -48,6 +48,10 @@ public class CreateSprintResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return errorCode
      */
@@ -89,6 +93,17 @@ public class CreateSprintResponseBody extends TeaModel {
         private String requestId; 
         private Sprint sprint; 
         private Boolean success; 
+
+        private Builder() {
+        } 
+
+        private Builder(CreateSprintResponseBody model) {
+            this.errorCode = model.errorCode;
+            this.errorMsg = model.errorMsg;
+            this.requestId = model.requestId;
+            this.sprint = model.sprint;
+            this.success = model.success;
+        } 
 
         /**
          * errorCode.
@@ -299,6 +314,24 @@ public class CreateSprintResponseBody extends TeaModel {
             private String spaceIdentifier; 
             private Long startDate; 
             private String status; 
+
+            private Builder() {
+            } 
+
+            private Builder(Sprint model) {
+                this.creator = model.creator;
+                this.description = model.description;
+                this.endDate = model.endDate;
+                this.gmtCreate = model.gmtCreate;
+                this.gmtModified = model.gmtModified;
+                this.identifier = model.identifier;
+                this.modifier = model.modifier;
+                this.name = model.name;
+                this.scope = model.scope;
+                this.spaceIdentifier = model.spaceIdentifier;
+                this.startDate = model.startDate;
+                this.status = model.status;
+            } 
 
             /**
              * creator.

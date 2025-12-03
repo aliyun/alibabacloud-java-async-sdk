@@ -56,6 +56,10 @@ public class ListOrganizationMembersResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return errorCode
      */
@@ -113,6 +117,19 @@ public class ListOrganizationMembersResponseBody extends TeaModel {
         private String requestId; 
         private Boolean success; 
         private Long totalCount; 
+
+        private Builder() {
+        } 
+
+        private Builder(ListOrganizationMembersResponseBody model) {
+            this.errorCode = model.errorCode;
+            this.errorMessage = model.errorMessage;
+            this.members = model.members;
+            this.nextToken = model.nextToken;
+            this.requestId = model.requestId;
+            this.success = model.success;
+            this.totalCount = model.totalCount;
+        } 
 
         /**
          * errorCode.
@@ -219,6 +236,14 @@ public class ListOrganizationMembersResponseBody extends TeaModel {
         public static final class Builder {
             private String externUid; 
             private String provider; 
+
+            private Builder() {
+            } 
+
+            private Builder(Identities model) {
+                this.externUid = model.externUid;
+                this.provider = model.provider;
+            } 
 
             /**
              * externUid.
@@ -430,6 +455,26 @@ public class ListOrganizationMembersResponseBody extends TeaModel {
             private String organizationRoleId; 
             private String organizationRoleName; 
             private String state; 
+
+            private Builder() {
+            } 
+
+            private Builder(Members model) {
+                this.accountId = model.accountId;
+                this.birthday = model.birthday;
+                this.deptLists = model.deptLists;
+                this.email = model.email;
+                this.hiredDate = model.hiredDate;
+                this.identities = model.identities;
+                this.jobNumber = model.jobNumber;
+                this.joinTime = model.joinTime;
+                this.lastVisitTime = model.lastVisitTime;
+                this.mobile = model.mobile;
+                this.organizationMemberName = model.organizationMemberName;
+                this.organizationRoleId = model.organizationRoleId;
+                this.organizationRoleName = model.organizationRoleName;
+                this.state = model.state;
+            } 
 
             /**
              * accountId.

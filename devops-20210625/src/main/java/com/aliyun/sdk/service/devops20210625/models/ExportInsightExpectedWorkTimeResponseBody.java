@@ -44,6 +44,10 @@ public class ExportInsightExpectedWorkTimeResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return maxResults
      */
@@ -77,6 +81,16 @@ public class ExportInsightExpectedWorkTimeResponseBody extends TeaModel {
         private String nextToken; 
         private java.util.List<Result> result; 
         private Long totalCount; 
+
+        private Builder() {
+        } 
+
+        private Builder(ExportInsightExpectedWorkTimeResponseBody model) {
+            this.maxResults = model.maxResults;
+            this.nextToken = model.nextToken;
+            this.result = model.result;
+            this.totalCount = model.totalCount;
+        } 
 
         /**
          * maxResults.
@@ -279,6 +293,24 @@ public class ExportInsightExpectedWorkTimeResponseBody extends TeaModel {
             private String type; 
             private Double value; 
             private String workitemId; 
+
+            private Builder() {
+            } 
+
+            private Builder(Result model) {
+                this.gmtCreate = model.gmtCreate;
+                this.gmtModified = model.gmtModified;
+                this.id = model.id;
+                this.identifier = model.identifier;
+                this.isDeleted = model.isDeleted;
+                this.organizationId = model.organizationId;
+                this.projectId = model.projectId;
+                this.recorderId = model.recorderId;
+                this.source = model.source;
+                this.type = model.type;
+                this.value = model.value;
+                this.workitemId = model.workitemId;
+            } 
 
             /**
              * gmtCreate.

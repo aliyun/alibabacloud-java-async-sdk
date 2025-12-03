@@ -48,6 +48,10 @@ public class GetTestResultListResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return errorCode
      */
@@ -89,6 +93,17 @@ public class GetTestResultListResponseBody extends TeaModel {
         private String requestId; 
         private Boolean success; 
         private java.util.List<TestResult> testResult; 
+
+        private Builder() {
+        } 
+
+        private Builder(GetTestResultListResponseBody model) {
+            this.errorCode = model.errorCode;
+            this.errorMsg = model.errorMsg;
+            this.requestId = model.requestId;
+            this.success = model.success;
+            this.testResult = model.testResult;
+        } 
 
         /**
          * errorCode.
@@ -179,6 +194,14 @@ public class GetTestResultListResponseBody extends TeaModel {
         public static final class Builder {
             private String assignedToIdenttifier; 
             private String name; 
+
+            private Builder() {
+            } 
+
+            private Builder(AssignedTo model) {
+                this.assignedToIdenttifier = model.assignedToIdenttifier;
+                this.name = model.name;
+            } 
 
             /**
              * assignedToIdenttifier.
@@ -271,6 +294,16 @@ public class GetTestResultListResponseBody extends TeaModel {
             private String fieldIdentifier; 
             private String value; 
 
+            private Builder() {
+            } 
+
+            private Builder(CustomFields model) {
+                this.fieldClassName = model.fieldClassName;
+                this.fieldFormat = model.fieldFormat;
+                this.fieldIdentifier = model.fieldIdentifier;
+                this.value = model.value;
+            } 
+
             /**
              * fieldClassName.
              */
@@ -353,6 +386,14 @@ public class GetTestResultListResponseBody extends TeaModel {
         public static final class Builder {
             private String executorIdentifier; 
             private String name; 
+
+            private Builder() {
+            } 
+
+            private Builder(TestResultExecutor model) {
+                this.executorIdentifier = model.executorIdentifier;
+                this.name = model.name;
+            } 
 
             /**
              * executorIdentifier.
@@ -540,6 +581,24 @@ public class GetTestResultListResponseBody extends TeaModel {
             private String testResultIdentifier; 
             private String testResultStatus; 
             private String testcaseIdentifier; 
+
+            private Builder() {
+            } 
+
+            private Builder(TestResult model) {
+                this.assignedTo = model.assignedTo;
+                this.bugCount = model.bugCount;
+                this.categoryIdentifier = model.categoryIdentifier;
+                this.customFields = model.customFields;
+                this.gmtCreate = model.gmtCreate;
+                this.spaceIdentifier = model.spaceIdentifier;
+                this.subject = model.subject;
+                this.testResultExecutor = model.testResultExecutor;
+                this.testResultGmtCreate = model.testResultGmtCreate;
+                this.testResultIdentifier = model.testResultIdentifier;
+                this.testResultStatus = model.testResultStatus;
+                this.testcaseIdentifier = model.testcaseIdentifier;
+            } 
 
             /**
              * assignedTo.

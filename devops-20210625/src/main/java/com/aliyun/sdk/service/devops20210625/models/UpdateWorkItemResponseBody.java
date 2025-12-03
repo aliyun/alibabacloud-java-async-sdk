@@ -48,6 +48,10 @@ public class UpdateWorkItemResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return errorCode
      */
@@ -89,6 +93,17 @@ public class UpdateWorkItemResponseBody extends TeaModel {
         private String requestId; 
         private Boolean success; 
         private Workitem workitem; 
+
+        private Builder() {
+        } 
+
+        private Builder(UpdateWorkItemResponseBody model) {
+            this.errorCode = model.errorCode;
+            this.errorMessage = model.errorMessage;
+            this.requestId = model.requestId;
+            this.success = model.success;
+            this.workitem = model.workitem;
+        } 
 
         /**
          * errorCode.
@@ -419,6 +434,34 @@ public class UpdateWorkItemResponseBody extends TeaModel {
             private String subject; 
             private Long updateStatusAt; 
             private String workitemTypeIdentifier; 
+
+            private Builder() {
+            } 
+
+            private Builder(Workitem model) {
+                this.assignedTo = model.assignedTo;
+                this.categoryIdentifier = model.categoryIdentifier;
+                this.creator = model.creator;
+                this.document = model.document;
+                this.documentFormat = model.documentFormat;
+                this.gmtCreate = model.gmtCreate;
+                this.gmtModified = model.gmtModified;
+                this.identifier = model.identifier;
+                this.logicalStatus = model.logicalStatus;
+                this.modifier = model.modifier;
+                this.parentIdentifier = model.parentIdentifier;
+                this.serialNumber = model.serialNumber;
+                this.spaceIdentifier = model.spaceIdentifier;
+                this.spaceName = model.spaceName;
+                this.spaceType = model.spaceType;
+                this.sprintIdentifier = model.sprintIdentifier;
+                this.status = model.status;
+                this.statusIdentifier = model.statusIdentifier;
+                this.statusStageIdentifier = model.statusStageIdentifier;
+                this.subject = model.subject;
+                this.updateStatusAt = model.updateStatusAt;
+                this.workitemTypeIdentifier = model.workitemTypeIdentifier;
+            } 
 
             /**
              * assignedTo.

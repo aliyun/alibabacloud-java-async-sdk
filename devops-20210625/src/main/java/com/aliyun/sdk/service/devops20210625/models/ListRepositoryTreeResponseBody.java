@@ -48,6 +48,10 @@ public class ListRepositoryTreeResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return errorCode
      */
@@ -89,6 +93,17 @@ public class ListRepositoryTreeResponseBody extends TeaModel {
         private String requestId; 
         private java.util.List<Result> result; 
         private Boolean success; 
+
+        private Builder() {
+        } 
+
+        private Builder(ListRepositoryTreeResponseBody model) {
+            this.errorCode = model.errorCode;
+            this.errorMessage = model.errorMessage;
+            this.requestId = model.requestId;
+            this.result = model.result;
+            this.success = model.success;
+        } 
 
         /**
          * errorCode.
@@ -227,6 +242,18 @@ public class ListRepositoryTreeResponseBody extends TeaModel {
             private String name; 
             private String path; 
             private String type; 
+
+            private Builder() {
+            } 
+
+            private Builder(Result model) {
+                this.id = model.id;
+                this.isLFS = model.isLFS;
+                this.mode = model.mode;
+                this.name = model.name;
+                this.path = model.path;
+                this.type = model.type;
+            } 
 
             /**
              * id.

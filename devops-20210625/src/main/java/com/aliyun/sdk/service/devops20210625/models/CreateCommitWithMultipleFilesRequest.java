@@ -63,7 +63,7 @@ public class CreateCommitWithMultipleFilesRequest extends Request {
         return builder().build();
     }
 
-    @Override
+@Override
     public Builder toBuilder() {
         return new Builder(this);
     }
@@ -266,6 +266,16 @@ public class CreateCommitWithMultipleFilesRequest extends Request {
             private String content; 
             private String filePath; 
             private String previousPath; 
+
+            private Builder() {
+            } 
+
+            private Builder(Actions model) {
+                this.action = model.action;
+                this.content = model.content;
+                this.filePath = model.filePath;
+                this.previousPath = model.previousPath;
+            } 
 
             /**
              * action.

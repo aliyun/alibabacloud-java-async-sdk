@@ -48,6 +48,10 @@ public class CreateTagResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return errorCode
      */
@@ -89,6 +93,17 @@ public class CreateTagResponseBody extends TeaModel {
         private String requestId; 
         private Result result; 
         private Boolean success; 
+
+        private Builder() {
+        } 
+
+        private Builder(CreateTagResponseBody model) {
+            this.errorCode = model.errorCode;
+            this.errorMessage = model.errorMessage;
+            this.requestId = model.requestId;
+            this.result = model.result;
+            this.success = model.success;
+        } 
 
         /**
          * errorCode.
@@ -300,6 +315,24 @@ public class CreateTagResponseBody extends TeaModel {
             private String shortId; 
             private String title; 
 
+            private Builder() {
+            } 
+
+            private Builder(Commit model) {
+                this.authorEmail = model.authorEmail;
+                this.authorName = model.authorName;
+                this.authoredDate = model.authoredDate;
+                this.committedDate = model.committedDate;
+                this.committerEmail = model.committerEmail;
+                this.committerName = model.committerName;
+                this.createdAt = model.createdAt;
+                this.id = model.id;
+                this.message = model.message;
+                this.parentIds = model.parentIds;
+                this.shortId = model.shortId;
+                this.title = model.title;
+            } 
+
             /**
              * authorEmail.
              */
@@ -470,6 +503,16 @@ public class CreateTagResponseBody extends TeaModel {
             private String id; 
             private String message; 
             private String name; 
+
+            private Builder() {
+            } 
+
+            private Builder(Result model) {
+                this.commit = model.commit;
+                this.id = model.id;
+                this.message = model.message;
+                this.name = model.name;
+            } 
 
             /**
              * commit.

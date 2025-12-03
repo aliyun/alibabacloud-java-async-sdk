@@ -48,6 +48,10 @@ public class CreateCommitWithMultipleFilesResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return errorCode
      */
@@ -89,6 +93,17 @@ public class CreateCommitWithMultipleFilesResponseBody extends TeaModel {
         private String requestId; 
         private Result result; 
         private Boolean success; 
+
+        private Builder() {
+        } 
+
+        private Builder(CreateCommitWithMultipleFilesResponseBody model) {
+            this.errorCode = model.errorCode;
+            this.errorMsg = model.errorMsg;
+            this.requestId = model.requestId;
+            this.result = model.result;
+            this.success = model.success;
+        } 
 
         /**
          * errorCode.
@@ -251,6 +266,20 @@ public class CreateCommitWithMultipleFilesResponseBody extends TeaModel {
             private String state; 
             private String username; 
             private String websiteUrl; 
+
+            private Builder() {
+            } 
+
+            private Builder(Author model) {
+                this.aliyunPk = model.aliyunPk;
+                this.avatarUrl = model.avatarUrl;
+                this.email = model.email;
+                this.id = model.id;
+                this.name = model.name;
+                this.state = model.state;
+                this.username = model.username;
+                this.websiteUrl = model.websiteUrl;
+            } 
 
             /**
              * aliyunPk.
@@ -438,6 +467,20 @@ public class CreateCommitWithMultipleFilesResponseBody extends TeaModel {
             private String state; 
             private String username; 
             private String websiteUrl; 
+
+            private Builder() {
+            } 
+
+            private Builder(Committer model) {
+                this.aliyunPk = model.aliyunPk;
+                this.avatarUrl = model.avatarUrl;
+                this.email = model.email;
+                this.id = model.id;
+                this.name = model.name;
+                this.state = model.state;
+                this.username = model.username;
+                this.websiteUrl = model.websiteUrl;
+            } 
 
             /**
              * aliyunPk.
@@ -697,6 +740,26 @@ public class CreateCommitWithMultipleFilesResponseBody extends TeaModel {
             private java.util.List<String> parentIds; 
             private String shortId; 
             private String title; 
+
+            private Builder() {
+            } 
+
+            private Builder(Result model) {
+                this.author = model.author;
+                this.authorEmail = model.authorEmail;
+                this.authorName = model.authorName;
+                this.authoredDate = model.authoredDate;
+                this.committedDate = model.committedDate;
+                this.committer = model.committer;
+                this.committerEmail = model.committerEmail;
+                this.committerName = model.committerName;
+                this.createdAt = model.createdAt;
+                this.id = model.id;
+                this.message = model.message;
+                this.parentIds = model.parentIds;
+                this.shortId = model.shortId;
+                this.title = model.title;
+            } 
 
             /**
              * author.

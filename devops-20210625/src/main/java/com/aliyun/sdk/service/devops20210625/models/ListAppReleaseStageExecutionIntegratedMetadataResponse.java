@@ -37,7 +37,7 @@ public class ListAppReleaseStageExecutionIntegratedMetadataResponse extends Resp
         return new BuilderImpl().build();
     }
 
-    @Override
+@Override
     public Builder toBuilder() {
         return new BuilderImpl(this);
     }
@@ -208,6 +208,17 @@ public class ListAppReleaseStageExecutionIntegratedMetadataResponse extends Resp
             private String commitId; 
             private String ownerAccountId; 
 
+            private Builder() {
+            } 
+
+            private Builder(ChangeRequests model) {
+                this.sn = model.sn;
+                this.name = model.name;
+                this.branchName = model.branchName;
+                this.commitId = model.commitId;
+                this.ownerAccountId = model.ownerAccountId;
+            } 
+
             /**
              * sn.
              */
@@ -334,6 +345,17 @@ public class ListAppReleaseStageExecutionIntegratedMetadataResponse extends Resp
             private String repoUrl; 
             private String repoType; 
             private java.util.List<ChangeRequests> changeRequests; 
+
+            private Builder() {
+            } 
+
+            private Builder(ListAppReleaseStageExecutionIntegratedMetadataResponseBody model) {
+                this.releaseBranch = model.releaseBranch;
+                this.releaseRevision = model.releaseRevision;
+                this.repoUrl = model.repoUrl;
+                this.repoType = model.repoType;
+                this.changeRequests = model.changeRequests;
+            } 
 
             /**
              * releaseBranch.

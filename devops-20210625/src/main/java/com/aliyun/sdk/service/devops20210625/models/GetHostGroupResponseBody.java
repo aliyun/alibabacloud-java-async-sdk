@@ -48,6 +48,10 @@ public class GetHostGroupResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return errorCode
      */
@@ -89,6 +93,17 @@ public class GetHostGroupResponseBody extends TeaModel {
         private HostGroup hostGroup; 
         private String requestId; 
         private Boolean success; 
+
+        private Builder() {
+        } 
+
+        private Builder(GetHostGroupResponseBody model) {
+            this.errorCode = model.errorCode;
+            this.errorMessage = model.errorMessage;
+            this.hostGroup = model.hostGroup;
+            this.requestId = model.requestId;
+            this.success = model.success;
+        } 
 
         /**
          * errorCode.
@@ -263,6 +278,21 @@ public class GetHostGroupResponseBody extends TeaModel {
             private String modifierAccountId; 
             private String objectType; 
             private Long updateTime; 
+
+            private Builder() {
+            } 
+
+            private Builder(HostInfos model) {
+                this.aliyunRegionId = model.aliyunRegionId;
+                this.createTime = model.createTime;
+                this.creatorAccountId = model.creatorAccountId;
+                this.instanceName = model.instanceName;
+                this.ip = model.ip;
+                this.machineSn = model.machineSn;
+                this.modifierAccountId = model.modifierAccountId;
+                this.objectType = model.objectType;
+                this.updateTime = model.updateTime;
+            } 
 
             /**
              * aliyunRegionId.
@@ -542,6 +572,27 @@ public class GetHostGroupResponseBody extends TeaModel {
             private Long serviceConnectionId; 
             private String type; 
             private Long upateTIme; 
+
+            private Builder() {
+            } 
+
+            private Builder(HostGroup model) {
+                this.aliyunRegion = model.aliyunRegion;
+                this.createTime = model.createTime;
+                this.creatorAccountId = model.creatorAccountId;
+                this.description = model.description;
+                this.ecsLabelKey = model.ecsLabelKey;
+                this.ecsLabelValue = model.ecsLabelValue;
+                this.ecsType = model.ecsType;
+                this.hostInfos = model.hostInfos;
+                this.hostNum = model.hostNum;
+                this.id = model.id;
+                this.modifierAccountId = model.modifierAccountId;
+                this.name = model.name;
+                this.serviceConnectionId = model.serviceConnectionId;
+                this.type = model.type;
+                this.upateTIme = model.upateTIme;
+            } 
 
             /**
              * aliyunRegion.

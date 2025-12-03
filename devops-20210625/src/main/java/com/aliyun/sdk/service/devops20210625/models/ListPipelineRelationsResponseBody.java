@@ -48,6 +48,10 @@ public class ListPipelineRelationsResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return errorCode
      */
@@ -89,6 +93,17 @@ public class ListPipelineRelationsResponseBody extends TeaModel {
         private java.util.List<PipelineRelations> pipelineRelations; 
         private String requestId; 
         private Boolean success; 
+
+        private Builder() {
+        } 
+
+        private Builder(ListPipelineRelationsResponseBody model) {
+            this.errorCode = model.errorCode;
+            this.errorMessage = model.errorMessage;
+            this.pipelineRelations = model.pipelineRelations;
+            this.requestId = model.requestId;
+            this.success = model.success;
+        } 
 
         /**
          * errorCode.
@@ -167,6 +182,13 @@ public class ListPipelineRelationsResponseBody extends TeaModel {
 
         public static final class Builder {
             private Long refObjectId; 
+
+            private Builder() {
+            } 
+
+            private Builder(PipelineRelations model) {
+                this.refObjectId = model.refObjectId;
+            } 
 
             /**
              * refObjectId.

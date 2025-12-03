@@ -48,6 +48,10 @@ public class GetRepositoryCommitResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return errorCode
      */
@@ -89,6 +93,17 @@ public class GetRepositoryCommitResponseBody extends TeaModel {
         private String requestId; 
         private Result result; 
         private Boolean success; 
+
+        private Builder() {
+        } 
+
+        private Builder(GetRepositoryCommitResponseBody model) {
+            this.errorCode = model.errorCode;
+            this.errorMessage = model.errorMessage;
+            this.requestId = model.requestId;
+            this.result = model.result;
+            this.success = model.success;
+        } 
 
         /**
          * errorCode.
@@ -239,6 +254,19 @@ public class GetRepositoryCommitResponseBody extends TeaModel {
             private String state; 
             private String username; 
             private String websiteUrl; 
+
+            private Builder() {
+            } 
+
+            private Builder(Author model) {
+                this.avatarUrl = model.avatarUrl;
+                this.email = model.email;
+                this.id = model.id;
+                this.name = model.name;
+                this.state = model.state;
+                this.username = model.username;
+                this.websiteUrl = model.websiteUrl;
+            } 
 
             /**
              * avatarUrl.
@@ -407,6 +435,19 @@ public class GetRepositoryCommitResponseBody extends TeaModel {
             private String username; 
             private String websiteUrl; 
 
+            private Builder() {
+            } 
+
+            private Builder(Committer model) {
+                this.avatarUrl = model.avatarUrl;
+                this.email = model.email;
+                this.id = model.id;
+                this.name = model.name;
+                this.state = model.state;
+                this.username = model.username;
+                this.websiteUrl = model.websiteUrl;
+            } 
+
             /**
              * avatarUrl.
              */
@@ -513,6 +554,14 @@ public class GetRepositoryCommitResponseBody extends TeaModel {
         public static final class Builder {
             private String gpgKeyId; 
             private String verificationStatus; 
+
+            private Builder() {
+            } 
+
+            private Builder(Signature model) {
+                this.gpgKeyId = model.gpgKeyId;
+                this.verificationStatus = model.verificationStatus;
+            } 
 
             /**
              * gpgKeyId.
@@ -748,6 +797,28 @@ public class GetRepositoryCommitResponseBody extends TeaModel {
             private String shortId; 
             private Signature signature; 
             private String title; 
+
+            private Builder() {
+            } 
+
+            private Builder(Result model) {
+                this.author = model.author;
+                this.authorEmail = model.authorEmail;
+                this.authorName = model.authorName;
+                this.authoredDate = model.authoredDate;
+                this.commentsCount = model.commentsCount;
+                this.committedDate = model.committedDate;
+                this.committer = model.committer;
+                this.committerEmail = model.committerEmail;
+                this.committerName = model.committerName;
+                this.createdAt = model.createdAt;
+                this.id = model.id;
+                this.message = model.message;
+                this.parentIds = model.parentIds;
+                this.shortId = model.shortId;
+                this.signature = model.signature;
+                this.title = model.title;
+            } 
 
             /**
              * author.

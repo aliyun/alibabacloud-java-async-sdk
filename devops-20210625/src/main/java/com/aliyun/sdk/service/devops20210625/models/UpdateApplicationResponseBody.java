@@ -48,6 +48,10 @@ public class UpdateApplicationResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return creatorAccountId
      */
@@ -89,6 +93,17 @@ public class UpdateApplicationResponseBody extends TeaModel {
         private String gmtCreate; 
         private String name; 
         private String requestId; 
+
+        private Builder() {
+        } 
+
+        private Builder(UpdateApplicationResponseBody model) {
+            this.creatorAccountId = model.creatorAccountId;
+            this.description = model.description;
+            this.gmtCreate = model.gmtCreate;
+            this.name = model.name;
+            this.requestId = model.requestId;
+        } 
 
         /**
          * creatorAccountId.

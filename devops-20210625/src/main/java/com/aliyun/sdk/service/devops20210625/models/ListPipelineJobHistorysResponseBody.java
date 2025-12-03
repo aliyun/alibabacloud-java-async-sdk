@@ -56,6 +56,10 @@ public class ListPipelineJobHistorysResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return errorCode
      */
@@ -113,6 +117,19 @@ public class ListPipelineJobHistorysResponseBody extends TeaModel {
         private String requestId; 
         private Boolean success; 
         private Integer totalCount; 
+
+        private Builder() {
+        } 
+
+        private Builder(ListPipelineJobHistorysResponseBody model) {
+            this.errorCode = model.errorCode;
+            this.errorMessage = model.errorMessage;
+            this.jobs = model.jobs;
+            this.nextToken = model.nextToken;
+            this.requestId = model.requestId;
+            this.success = model.success;
+            this.totalCount = model.totalCount;
+        } 
 
         /**
          * errorCode.
@@ -303,6 +320,21 @@ public class ListPipelineJobHistorysResponseBody extends TeaModel {
             private Long pipelineRunId; 
             private String sources; 
             private String status; 
+
+            private Builder() {
+            } 
+
+            private Builder(Jobs model) {
+                this.executeNumber = model.executeNumber;
+                this.identifier = model.identifier;
+                this.jobId = model.jobId;
+                this.jobName = model.jobName;
+                this.operatorAccountId = model.operatorAccountId;
+                this.pipelineId = model.pipelineId;
+                this.pipelineRunId = model.pipelineRunId;
+                this.sources = model.sources;
+                this.status = model.status;
+            } 
 
             /**
              * executeNumber.

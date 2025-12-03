@@ -48,6 +48,10 @@ public class CreateMergeRequestResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return errorCode
      */
@@ -89,6 +93,17 @@ public class CreateMergeRequestResponseBody extends TeaModel {
         private String requestId; 
         private Result result; 
         private Boolean success; 
+
+        private Builder() {
+        } 
+
+        private Builder(CreateMergeRequestResponseBody model) {
+            this.errorCode = model.errorCode;
+            this.errorMessage = model.errorMessage;
+            this.requestId = model.requestId;
+            this.result = model.result;
+            this.success = model.success;
+        } 
 
         /**
          * errorCode.
@@ -227,6 +242,18 @@ public class CreateMergeRequestResponseBody extends TeaModel {
             private String name; 
             private String state; 
             private String username; 
+
+            private Builder() {
+            } 
+
+            private Builder(Author model) {
+                this.avatarUrl = model.avatarUrl;
+                this.email = model.email;
+                this.id = model.id;
+                this.name = model.name;
+                this.state = model.state;
+                this.username = model.username;
+            } 
 
             /**
              * avatarUrl.
@@ -399,6 +426,20 @@ public class CreateMergeRequestResponseBody extends TeaModel {
             private String state; 
             private String username; 
 
+            private Builder() {
+            } 
+
+            private Builder(Reviewers model) {
+                this.avatarUrl = model.avatarUrl;
+                this.email = model.email;
+                this.hasReviewed = model.hasReviewed;
+                this.id = model.id;
+                this.name = model.name;
+                this.reviewOpinionStatus = model.reviewOpinionStatus;
+                this.state = model.state;
+                this.username = model.username;
+            } 
+
             /**
              * avatarUrl.
              */
@@ -561,6 +602,18 @@ public class CreateMergeRequestResponseBody extends TeaModel {
             private String name; 
             private String state; 
             private String username; 
+
+            private Builder() {
+            } 
+
+            private Builder(Subscribers model) {
+                this.avatarUrl = model.avatarUrl;
+                this.email = model.email;
+                this.id = model.id;
+                this.name = model.name;
+                this.state = model.state;
+                this.username = model.username;
+            } 
 
             /**
              * avatarUrl.
@@ -912,6 +965,35 @@ public class CreateMergeRequestResponseBody extends TeaModel {
             private String title; 
             private String updateTime; 
             private String webUrl; 
+
+            private Builder() {
+            } 
+
+            private Builder(Result model) {
+                this.ahead = model.ahead;
+                this.allRequirementsPass = model.allRequirementsPass;
+                this.author = model.author;
+                this.behind = model.behind;
+                this.createFrom = model.createFrom;
+                this.createTime = model.createTime;
+                this.description = model.description;
+                this.detailUrl = model.detailUrl;
+                this.localId = model.localId;
+                this.mrBizId = model.mrBizId;
+                this.mrType = model.mrType;
+                this.projectId = model.projectId;
+                this.reviewers = model.reviewers;
+                this.sourceBranch = model.sourceBranch;
+                this.sourceProjectId = model.sourceProjectId;
+                this.status = model.status;
+                this.subscribers = model.subscribers;
+                this.supportMergeFastForwardOnly = model.supportMergeFastForwardOnly;
+                this.targetBranch = model.targetBranch;
+                this.targetProjectId = model.targetProjectId;
+                this.title = model.title;
+                this.updateTime = model.updateTime;
+                this.webUrl = model.webUrl;
+            } 
 
             /**
              * ahead.

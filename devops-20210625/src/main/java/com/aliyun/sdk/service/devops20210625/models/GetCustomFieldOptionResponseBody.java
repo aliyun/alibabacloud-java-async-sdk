@@ -48,6 +48,10 @@ public class GetCustomFieldOptionResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return errorCode
      */
@@ -89,6 +93,17 @@ public class GetCustomFieldOptionResponseBody extends TeaModel {
         private java.util.List<Fileds> fileds; 
         private String requestId; 
         private Boolean success; 
+
+        private Builder() {
+        } 
+
+        private Builder(GetCustomFieldOptionResponseBody model) {
+            this.errorCode = model.errorCode;
+            this.errorMsg = model.errorMsg;
+            this.fileds = model.fileds;
+            this.requestId = model.requestId;
+            this.success = model.success;
+        } 
 
         /**
          * errorCode.
@@ -239,6 +254,19 @@ public class GetCustomFieldOptionResponseBody extends TeaModel {
             private Long position; 
             private String value; 
             private String valueEn; 
+
+            private Builder() {
+            } 
+
+            private Builder(Fileds model) {
+                this.displayValue = model.displayValue;
+                this.fieldIdentifier = model.fieldIdentifier;
+                this.identifier = model.identifier;
+                this.level = model.level;
+                this.position = model.position;
+                this.value = model.value;
+                this.valueEn = model.valueEn;
+            } 
 
             /**
              * displayValue.

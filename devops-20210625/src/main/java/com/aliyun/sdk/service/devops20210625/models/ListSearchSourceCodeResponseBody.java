@@ -52,6 +52,10 @@ public class ListSearchSourceCodeResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return errorCode
      */
@@ -101,6 +105,18 @@ public class ListSearchSourceCodeResponseBody extends TeaModel {
         private java.util.List<Result> result; 
         private Boolean success; 
         private Long total; 
+
+        private Builder() {
+        } 
+
+        private Builder(ListSearchSourceCodeResponseBody model) {
+            this.errorCode = model.errorCode;
+            this.errorMessage = model.errorMessage;
+            this.requestId = model.requestId;
+            this.result = model.result;
+            this.success = model.success;
+            this.total = model.total;
+        } 
 
         /**
          * errorCode.
@@ -223,6 +239,16 @@ public class ListSearchSourceCodeResponseBody extends TeaModel {
             private String fileName; 
             private String language; 
             private String organizationId; 
+
+            private Builder() {
+            } 
+
+            private Builder(HighlightTextMap model) {
+                this.clob = model.clob;
+                this.fileName = model.fileName;
+                this.language = model.language;
+                this.organizationId = model.organizationId;
+            } 
 
             /**
              * clob.
@@ -367,6 +393,19 @@ public class ListSearchSourceCodeResponseBody extends TeaModel {
             private String organizationId; 
             private String repoPath; 
 
+            private Builder() {
+            } 
+
+            private Builder(Source model) {
+                this.branch = model.branch;
+                this.checkinDate = model.checkinDate;
+                this.fileName = model.fileName;
+                this.filePath = model.filePath;
+                this.language = model.language;
+                this.organizationId = model.organizationId;
+                this.repoPath = model.repoPath;
+            } 
+
             /**
              * branch.
              */
@@ -485,6 +524,15 @@ public class ListSearchSourceCodeResponseBody extends TeaModel {
             private String docId; 
             private HighlightTextMap highlightTextMap; 
             private Source source; 
+
+            private Builder() {
+            } 
+
+            private Builder(Result model) {
+                this.docId = model.docId;
+                this.highlightTextMap = model.highlightTextMap;
+                this.source = model.source;
+            } 
 
             /**
              * docId.

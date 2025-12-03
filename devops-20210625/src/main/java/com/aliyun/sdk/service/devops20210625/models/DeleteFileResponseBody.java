@@ -48,6 +48,10 @@ public class DeleteFileResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return errorCode
      */
@@ -89,6 +93,17 @@ public class DeleteFileResponseBody extends TeaModel {
         private String requestId; 
         private Result result; 
         private Boolean success; 
+
+        private Builder() {
+        } 
+
+        private Builder(DeleteFileResponseBody model) {
+            this.errorCode = model.errorCode;
+            this.errorMessage = model.errorMessage;
+            this.requestId = model.requestId;
+            this.result = model.result;
+            this.success = model.success;
+        } 
 
         /**
          * errorCode.
@@ -179,6 +194,14 @@ public class DeleteFileResponseBody extends TeaModel {
         public static final class Builder {
             private String branchName; 
             private String filePath; 
+
+            private Builder() {
+            } 
+
+            private Builder(Result model) {
+                this.branchName = model.branchName;
+                this.filePath = model.filePath;
+            } 
 
             /**
              * branchName.

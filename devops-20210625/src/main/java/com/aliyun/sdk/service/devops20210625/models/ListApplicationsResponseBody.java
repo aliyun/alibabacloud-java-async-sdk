@@ -40,6 +40,10 @@ public class ListApplicationsResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return data
      */
@@ -65,6 +69,15 @@ public class ListApplicationsResponseBody extends TeaModel {
         private java.util.List<Data> data; 
         private String nextToken; 
         private String requestId; 
+
+        private Builder() {
+        } 
+
+        private Builder(ListApplicationsResponseBody model) {
+            this.data = model.data;
+            this.nextToken = model.nextToken;
+            this.requestId = model.requestId;
+        } 
 
         /**
          * data.
@@ -163,6 +176,16 @@ public class ListApplicationsResponseBody extends TeaModel {
             private String description; 
             private String gmtCreate; 
             private String name; 
+
+            private Builder() {
+            } 
+
+            private Builder(Data model) {
+                this.creatorAccountId = model.creatorAccountId;
+                this.description = model.description;
+                this.gmtCreate = model.gmtCreate;
+                this.name = model.name;
+            } 
 
             /**
              * creatorAccountId.

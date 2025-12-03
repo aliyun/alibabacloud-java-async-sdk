@@ -79,7 +79,7 @@ public class CreateTestCaseRequest extends Request {
         return builder().build();
     }
 
-    @Override
+@Override
     public Builder toBuilder() {
         return new Builder(this);
     }
@@ -319,6 +319,14 @@ public class CreateTestCaseRequest extends Request {
             private String fieldIdentifier; 
             private String value; 
 
+            private Builder() {
+            } 
+
+            private Builder(FieldValueList model) {
+                this.fieldIdentifier = model.fieldIdentifier;
+                this.value = model.value;
+            } 
+
             /**
              * fieldIdentifier.
              */
@@ -385,6 +393,14 @@ public class CreateTestCaseRequest extends Request {
         public static final class Builder {
             private String expected; 
             private String step; 
+
+            private Builder() {
+            } 
+
+            private Builder(StepResultList model) {
+                this.expected = model.expected;
+                this.step = model.step;
+            } 
 
             /**
              * expected.
@@ -465,6 +481,15 @@ public class CreateTestCaseRequest extends Request {
             private String precondition; 
             private java.util.List<StepResultList> stepResultList; 
             private String stepType; 
+
+            private Builder() {
+            } 
+
+            private Builder(TestcaseStepContentInfo model) {
+                this.precondition = model.precondition;
+                this.stepResultList = model.stepResultList;
+                this.stepType = model.stepType;
+            } 
 
             /**
              * precondition.

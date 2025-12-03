@@ -56,6 +56,10 @@ public class GetApplicationResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return appTemplateDisplayName
      */
@@ -113,6 +117,19 @@ public class GetApplicationResponseBody extends TeaModel {
         private String gmtCreate; 
         private String name; 
         private String requestId; 
+
+        private Builder() {
+        } 
+
+        private Builder(GetApplicationResponseBody model) {
+            this.appTemplateDisplayName = model.appTemplateDisplayName;
+            this.appTemplateName = model.appTemplateName;
+            this.creatorAccountId = model.creatorAccountId;
+            this.description = model.description;
+            this.gmtCreate = model.gmtCreate;
+            this.name = model.name;
+            this.requestId = model.requestId;
+        } 
 
         /**
          * appTemplateDisplayName.

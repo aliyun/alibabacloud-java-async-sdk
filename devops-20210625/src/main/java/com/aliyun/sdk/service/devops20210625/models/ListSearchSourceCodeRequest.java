@@ -86,7 +86,7 @@ public class ListSearchSourceCodeRequest extends Request {
         return builder().build();
     }
 
-    @Override
+@Override
     public Builder toBuilder() {
         return new Builder(this);
     }
@@ -368,6 +368,15 @@ public class ListSearchSourceCodeRequest extends Request {
             private String operatorType; 
             private String value; 
 
+            private Builder() {
+            } 
+
+            private Builder(FilePath model) {
+                this.matchType = model.matchType;
+                this.operatorType = model.operatorType;
+                this.value = model.value;
+            } 
+
             /**
              * matchType.
              */
@@ -454,6 +463,15 @@ public class ListSearchSourceCodeRequest extends Request {
             private String matchType; 
             private String operatorType; 
             private String value; 
+
+            private Builder() {
+            } 
+
+            private Builder(RepoPath model) {
+                this.matchType = model.matchType;
+                this.operatorType = model.operatorType;
+                this.value = model.value;
+            } 
 
             /**
              * matchType.

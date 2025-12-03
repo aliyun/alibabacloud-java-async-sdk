@@ -56,7 +56,7 @@ public class UpdateProjectFieldRequest extends Request {
         return builder().build();
     }
 
-    @Override
+@Override
     public Builder toBuilder() {
         return new Builder(this);
     }
@@ -218,6 +218,14 @@ public class UpdateProjectFieldRequest extends Request {
             private String propertyKey; 
             private String propertyValue; 
 
+            private Builder() {
+            } 
+
+            private Builder(UpdateBasicFieldRequestList model) {
+                this.propertyKey = model.propertyKey;
+                this.propertyValue = model.propertyValue;
+            } 
+
             /**
              * propertyKey.
              */
@@ -284,6 +292,14 @@ public class UpdateProjectFieldRequest extends Request {
         public static final class Builder {
             private String fieldIdentifier; 
             private String value; 
+
+            private Builder() {
+            } 
+
+            private Builder(UpdateForOpenApiList model) {
+                this.fieldIdentifier = model.fieldIdentifier;
+                this.value = model.value;
+            } 
 
             /**
              * fieldIdentifier.

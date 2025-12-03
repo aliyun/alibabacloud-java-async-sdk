@@ -48,6 +48,10 @@ public class ListProtectedBranchesResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return errorCode
      */
@@ -89,6 +93,17 @@ public class ListProtectedBranchesResponseBody extends TeaModel {
         private String requestId; 
         private java.util.List<Result> result; 
         private Boolean success; 
+
+        private Builder() {
+        } 
+
+        private Builder(ListProtectedBranchesResponseBody model) {
+            this.errorCode = model.errorCode;
+            this.errorMessage = model.errorMessage;
+            this.requestId = model.requestId;
+            this.result = model.result;
+            this.success = model.success;
+        } 
 
         /**
          * errorCode.
@@ -215,6 +230,17 @@ public class ListProtectedBranchesResponseBody extends TeaModel {
             private Long id; 
             private String name; 
             private String username; 
+
+            private Builder() {
+            } 
+
+            private Builder(AllowMergeUsers model) {
+                this.avatar = model.avatar;
+                this.email = model.email;
+                this.id = model.id;
+                this.name = model.name;
+                this.username = model.username;
+            } 
 
             /**
              * avatar.
@@ -343,6 +369,17 @@ public class ListProtectedBranchesResponseBody extends TeaModel {
             private String name; 
             private String username; 
 
+            private Builder() {
+            } 
+
+            private Builder(AllowPushUsers model) {
+                this.avatar = model.avatar;
+                this.email = model.email;
+                this.id = model.id;
+                this.name = model.name;
+                this.username = model.username;
+            } 
+
             /**
              * avatar.
              */
@@ -469,6 +506,17 @@ public class ListProtectedBranchesResponseBody extends TeaModel {
             private Long id; 
             private String name; 
             private String username; 
+
+            private Builder() {
+            } 
+
+            private Builder(DefaultAssignees model) {
+                this.avatar = model.avatar;
+                this.email = model.email;
+                this.id = model.id;
+                this.name = model.name;
+                this.username = model.username;
+            } 
 
             /**
              * avatar.
@@ -645,6 +693,21 @@ public class ListProtectedBranchesResponseBody extends TeaModel {
             private String mrMode; 
             private String whiteList; 
 
+            private Builder() {
+            } 
+
+            private Builder(MergeRequestSetting model) {
+                this.allowMergeRequestRoles = model.allowMergeRequestRoles;
+                this.defaultAssignees = model.defaultAssignees;
+                this.isAllowSelfApproval = model.isAllowSelfApproval;
+                this.isRequireDiscussionProcessed = model.isRequireDiscussionProcessed;
+                this.isRequired = model.isRequired;
+                this.isResetApprovalWhenNewPush = model.isResetApprovalWhenNewPush;
+                this.minimumApproval = model.minimumApproval;
+                this.mrMode = model.mrMode;
+                this.whiteList = model.whiteList;
+            } 
+
             /**
              * allowMergeRequestRoles.
              */
@@ -768,6 +831,14 @@ public class ListProtectedBranchesResponseBody extends TeaModel {
             private Boolean isRequired; 
             private String name; 
 
+            private Builder() {
+            } 
+
+            private Builder(CheckItems model) {
+                this.isRequired = model.isRequired;
+                this.name = model.name;
+            } 
+
             /**
              * isRequired.
              */
@@ -822,6 +893,13 @@ public class ListProtectedBranchesResponseBody extends TeaModel {
 
         public static final class Builder {
             private java.util.List<CheckItems> checkItems; 
+
+            private Builder() {
+            } 
+
+            private Builder(CheckConfig model) {
+                this.checkItems = model.checkItems;
+            } 
 
             /**
              * checkItems.
@@ -906,6 +984,16 @@ public class ListProtectedBranchesResponseBody extends TeaModel {
             private String message; 
             private String taskName; 
 
+            private Builder() {
+            } 
+
+            private Builder(CheckTaskQualityConfig model) {
+                this.bizNo = model.bizNo;
+                this.enabled = model.enabled;
+                this.message = model.message;
+                this.taskName = model.taskName;
+            } 
+
             /**
              * bizNo.
              */
@@ -989,6 +1077,14 @@ public class ListProtectedBranchesResponseBody extends TeaModel {
             private Boolean enabled; 
             private String message; 
 
+            private Builder() {
+            } 
+
+            private Builder(CodeGuidelinesDetection model) {
+                this.enabled = model.enabled;
+                this.message = model.message;
+            } 
+
             /**
              * enabled.
              */
@@ -1055,6 +1151,14 @@ public class ListProtectedBranchesResponseBody extends TeaModel {
         public static final class Builder {
             private Boolean enabled; 
             private String message; 
+
+            private Builder() {
+            } 
+
+            private Builder(SensitiveInfoDetection model) {
+                this.enabled = model.enabled;
+                this.message = model.message;
+            } 
 
             /**
              * enabled.
@@ -1158,6 +1262,17 @@ public class ListProtectedBranchesResponseBody extends TeaModel {
             private CodeGuidelinesDetection codeGuidelinesDetection; 
             private Boolean isRequired; 
             private SensitiveInfoDetection sensitiveInfoDetection; 
+
+            private Builder() {
+            } 
+
+            private Builder(TestSettingDTO model) {
+                this.checkConfig = model.checkConfig;
+                this.checkTaskQualityConfig = model.checkTaskQualityConfig;
+                this.codeGuidelinesDetection = model.codeGuidelinesDetection;
+                this.isRequired = model.isRequired;
+                this.sensitiveInfoDetection = model.sensitiveInfoDetection;
+            } 
 
             /**
              * checkConfig.
@@ -1381,6 +1496,25 @@ public class ListProtectedBranchesResponseBody extends TeaModel {
             private MergeRequestSetting mergeRequestSetting; 
             private TestSettingDTO testSettingDTO; 
             private String updatedAt; 
+
+            private Builder() {
+            } 
+
+            private Builder(Result model) {
+                this.allowMergeRoles = model.allowMergeRoles;
+                this.allowMergeUserIds = model.allowMergeUserIds;
+                this.allowMergeUsers = model.allowMergeUsers;
+                this.allowPushRoles = model.allowPushRoles;
+                this.allowPushUserIds = model.allowPushUserIds;
+                this.allowPushUsers = model.allowPushUsers;
+                this.branch = model.branch;
+                this.createdAt = model.createdAt;
+                this.id = model.id;
+                this.matches = model.matches;
+                this.mergeRequestSetting = model.mergeRequestSetting;
+                this.testSettingDTO = model.testSettingDTO;
+                this.updatedAt = model.updatedAt;
+            } 
 
             /**
              * allowMergeRoles.

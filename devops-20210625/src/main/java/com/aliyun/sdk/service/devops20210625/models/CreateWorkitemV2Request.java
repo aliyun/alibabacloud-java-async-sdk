@@ -110,7 +110,7 @@ public class CreateWorkitemV2Request extends Request {
         return builder().build();
     }
 
-    @Override
+@Override
     public Builder toBuilder() {
         return new Builder(this);
     }
@@ -460,6 +460,14 @@ public class CreateWorkitemV2Request extends Request {
         public static final class Builder {
             private String fieldIdentifier; 
             private String value; 
+
+            private Builder() {
+            } 
+
+            private Builder(FieldValueList model) {
+                this.fieldIdentifier = model.fieldIdentifier;
+                this.value = model.value;
+            } 
 
             /**
              * fieldIdentifier.

@@ -44,6 +44,10 @@ public class ExportWorkitemActivityResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return maxResults
      */
@@ -77,6 +81,16 @@ public class ExportWorkitemActivityResponseBody extends TeaModel {
         private String nextToken; 
         private java.util.List<Result> result; 
         private Long totalCount; 
+
+        private Builder() {
+        } 
+
+        private Builder(ExportWorkitemActivityResponseBody model) {
+            this.maxResults = model.maxResults;
+            this.nextToken = model.nextToken;
+            this.result = model.result;
+            this.totalCount = model.totalCount;
+        } 
 
         /**
          * maxResults.
@@ -255,6 +269,22 @@ public class ExportWorkitemActivityResponseBody extends TeaModel {
             private String source; 
             private String type; 
             private String workitemId; 
+
+            private Builder() {
+            } 
+
+            private Builder(Result model) {
+                this.gmtEvent = model.gmtEvent;
+                this.id = model.id;
+                this.identifier = model.identifier;
+                this.newValue = model.newValue;
+                this.oldValue = model.oldValue;
+                this.organizationId = model.organizationId;
+                this.projectId = model.projectId;
+                this.source = model.source;
+                this.type = model.type;
+                this.workitemId = model.workitemId;
+            } 
 
             /**
              * gmtEvent.

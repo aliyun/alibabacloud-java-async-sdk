@@ -77,7 +77,7 @@ public class UpdateRepositoryMemberRequest extends Request {
         return builder().build();
     }
 
-    @Override
+@Override
     public Builder toBuilder() {
         return new Builder(this);
     }
@@ -325,6 +325,15 @@ public class UpdateRepositoryMemberRequest extends Request {
             private String relatedId; 
             private Long sourceId; 
             private String sourceType; 
+
+            private Builder() {
+            } 
+
+            private Builder(RelatedInfos model) {
+                this.relatedId = model.relatedId;
+                this.sourceId = model.sourceId;
+                this.sourceType = model.sourceType;
+            } 
 
             /**
              * relatedId.

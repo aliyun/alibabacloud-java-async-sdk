@@ -32,6 +32,10 @@ public class PassReleaseStagePipelineValidateResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return success
      */
@@ -41,6 +45,13 @@ public class PassReleaseStagePipelineValidateResponseBody extends TeaModel {
 
     public static final class Builder {
         private Boolean success; 
+
+        private Builder() {
+        } 
+
+        private Builder(PassReleaseStagePipelineValidateResponseBody model) {
+            this.success = model.success;
+        } 
 
         /**
          * success.

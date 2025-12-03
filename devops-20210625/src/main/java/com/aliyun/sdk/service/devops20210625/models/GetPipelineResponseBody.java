@@ -48,6 +48,10 @@ public class GetPipelineResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return errorCode
      */
@@ -89,6 +93,17 @@ public class GetPipelineResponseBody extends TeaModel {
         private Pipeline pipeline; 
         private String requestId; 
         private Boolean success; 
+
+        private Builder() {
+        } 
+
+        private Builder(GetPipelineResponseBody model) {
+            this.errorCode = model.errorCode;
+            this.errorMessage = model.errorMessage;
+            this.pipeline = model.pipeline;
+            this.requestId = model.requestId;
+            this.success = model.success;
+        } 
 
         /**
          * errorCode.
@@ -348,6 +363,28 @@ public class GetPipelineResponseBody extends TeaModel {
             private String triggerFilter; 
             private String webhook; 
 
+            private Builder() {
+            } 
+
+            private Builder(Data model) {
+                this.branch = model.branch;
+                this.cloneDepth = model.cloneDepth;
+                this.credentialId = model.credentialId;
+                this.credentialLabel = model.credentialLabel;
+                this.credentialType = model.credentialType;
+                this.events = model.events;
+                this.isBranchMode = model.isBranchMode;
+                this.isCloneDepth = model.isCloneDepth;
+                this.isSubmodule = model.isSubmodule;
+                this.isTrigger = model.isTrigger;
+                this.label = model.label;
+                this.namespace = model.namespace;
+                this.repo = model.repo;
+                this.serviceConnectionId = model.serviceConnectionId;
+                this.triggerFilter = model.triggerFilter;
+                this.webhook = model.webhook;
+            } 
+
             /**
              * branch.
              */
@@ -548,6 +585,15 @@ public class GetPipelineResponseBody extends TeaModel {
             private String sign; 
             private String type; 
 
+            private Builder() {
+            } 
+
+            private Builder(Sources model) {
+                this.data = model.data;
+                this.sign = model.sign;
+                this.type = model.type;
+            } 
+
             /**
              * data.
              */
@@ -635,6 +681,15 @@ public class GetPipelineResponseBody extends TeaModel {
             private String settings; 
             private java.util.List<Sources> sources; 
 
+            private Builder() {
+            } 
+
+            private Builder(PipelineConfig model) {
+                this.flow = model.flow;
+                this.settings = model.settings;
+                this.sources = model.sources;
+            } 
+
             /**
              * flow.
              */
@@ -709,6 +764,14 @@ public class GetPipelineResponseBody extends TeaModel {
         public static final class Builder {
             private Long id; 
             private String name; 
+
+            private Builder() {
+            } 
+
+            private Builder(TagList model) {
+                this.id = model.id;
+                this.name = model.name;
+            } 
 
             /**
              * id.
@@ -872,6 +935,22 @@ public class GetPipelineResponseBody extends TeaModel {
             private PipelineConfig pipelineConfig; 
             private java.util.List<TagList> tagList; 
             private Long updateTime; 
+
+            private Builder() {
+            } 
+
+            private Builder(Pipeline model) {
+                this.createTime = model.createTime;
+                this.creatorAccountId = model.creatorAccountId;
+                this.envId = model.envId;
+                this.envName = model.envName;
+                this.groupId = model.groupId;
+                this.modifierAccountId = model.modifierAccountId;
+                this.name = model.name;
+                this.pipelineConfig = model.pipelineConfig;
+                this.tagList = model.tagList;
+                this.updateTime = model.updateTime;
+            } 
 
             /**
              * createTime.

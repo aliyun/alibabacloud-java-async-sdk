@@ -48,6 +48,10 @@ public class GetWorkitemTimeTypeListResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return errorCode
      */
@@ -89,6 +93,17 @@ public class GetWorkitemTimeTypeListResponseBody extends TeaModel {
         private String requestId; 
         private String success; 
         private java.util.List<TimeType> timeType; 
+
+        private Builder() {
+        } 
+
+        private Builder(GetWorkitemTimeTypeListResponseBody model) {
+            this.errorCode = model.errorCode;
+            this.errorMsg = model.errorMsg;
+            this.requestId = model.requestId;
+            this.success = model.success;
+            this.timeType = model.timeType;
+        } 
 
         /**
          * errorCode.
@@ -218,6 +233,17 @@ public class GetWorkitemTimeTypeListResponseBody extends TeaModel {
             private String identifier; 
             private String name; 
             private Long position; 
+
+            private Builder() {
+            } 
+
+            private Builder(TimeType model) {
+                this.description = model.description;
+                this.displayName = model.displayName;
+                this.identifier = model.identifier;
+                this.name = model.name;
+                this.position = model.position;
+            } 
 
             /**
              * description.

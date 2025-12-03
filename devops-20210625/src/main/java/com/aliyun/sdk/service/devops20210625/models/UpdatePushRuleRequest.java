@@ -57,7 +57,7 @@ public class UpdatePushRuleRequest extends Request {
         return builder().build();
     }
 
-    @Override
+@Override
     public Builder toBuilder() {
         return new Builder(this);
     }
@@ -245,6 +245,16 @@ public class UpdatePushRuleRequest extends Request {
             private String checkerType; 
             private String extraMessage; 
             private java.util.List<String> fileRuleRegexes; 
+
+            private Builder() {
+            } 
+
+            private Builder(RuleInfos model) {
+                this.checkerName = model.checkerName;
+                this.checkerType = model.checkerType;
+                this.extraMessage = model.extraMessage;
+                this.fileRuleRegexes = model.fileRuleRegexes;
+            } 
 
             /**
              * checkerName.

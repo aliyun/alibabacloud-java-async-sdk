@@ -48,6 +48,10 @@ public class ListUserDrawRecordByPkResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return code
      */
@@ -89,6 +93,17 @@ public class ListUserDrawRecordByPkResponseBody extends TeaModel {
         private String message; 
         private String requestId; 
         private Boolean success; 
+
+        private Builder() {
+        } 
+
+        private Builder(ListUserDrawRecordByPkResponseBody model) {
+            this.code = model.code;
+            this.data = model.data;
+            this.message = model.message;
+            this.requestId = model.requestId;
+            this.success = model.success;
+        } 
 
         /**
          * code.
@@ -239,6 +254,19 @@ public class ListUserDrawRecordByPkResponseBody extends TeaModel {
             private String gmtCreate; 
             private String taskGroupId; 
             private String uccId; 
+
+            private Builder() {
+            } 
+
+            private Builder(Data model) {
+                this.aliyunPk = model.aliyunPk;
+                this.drawGroup = model.drawGroup;
+                this.drawPoolName = model.drawPoolName;
+                this.drawResult = model.drawResult;
+                this.gmtCreate = model.gmtCreate;
+                this.taskGroupId = model.taskGroupId;
+                this.uccId = model.uccId;
+            } 
 
             /**
              * aliyunPk.

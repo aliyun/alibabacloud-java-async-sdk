@@ -48,6 +48,10 @@ public class UpdateProjectFieldResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return errorCode
      */
@@ -89,6 +93,17 @@ public class UpdateProjectFieldResponseBody extends TeaModel {
         private Project project; 
         private String requestId; 
         private Boolean success; 
+
+        private Builder() {
+        } 
+
+        private Builder(UpdateProjectFieldResponseBody model) {
+            this.errorCode = model.errorCode;
+            this.errorMessage = model.errorMessage;
+            this.project = model.project;
+            this.requestId = model.requestId;
+            this.success = model.success;
+        } 
 
         /**
          * errorCode.
@@ -206,6 +221,16 @@ public class UpdateProjectFieldResponseBody extends TeaModel {
             private String identifier; 
             private String value; 
             private String valueType; 
+
+            private Builder() {
+            } 
+
+            private Builder(FieldList model) {
+                this.displayName = model.displayName;
+                this.identifier = model.identifier;
+                this.value = model.value;
+                this.valueType = model.valueType;
+            } 
 
             /**
              * displayName.
@@ -577,6 +602,38 @@ public class UpdateProjectFieldResponseBody extends TeaModel {
             private String statusStageIdentifier; 
             private String subType; 
             private String typeIdentifier; 
+
+            private Builder() {
+            } 
+
+            private Builder(Project model) {
+                this.category = model.category;
+                this.categoryIdentifier = model.categoryIdentifier;
+                this.creator = model.creator;
+                this.customCode = model.customCode;
+                this.description = model.description;
+                this.fieldList = model.fieldList;
+                this.gmtCreate = model.gmtCreate;
+                this.gmtModified = model.gmtModified;
+                this.icon = model.icon;
+                this.iconBig = model.iconBig;
+                this.iconGroup = model.iconGroup;
+                this.iconSmall = model.iconSmall;
+                this.id = model.id;
+                this.identifier = model.identifier;
+                this.identifierPath = model.identifierPath;
+                this.logicalStatus = model.logicalStatus;
+                this.modifier = model.modifier;
+                this.name = model.name;
+                this.organizationIdentifier = model.organizationIdentifier;
+                this.parentIdentifier = model.parentIdentifier;
+                this.scope = model.scope;
+                this.statusIdentifier = model.statusIdentifier;
+                this.statusName = model.statusName;
+                this.statusStageIdentifier = model.statusStageIdentifier;
+                this.subType = model.subType;
+                this.typeIdentifier = model.typeIdentifier;
+            } 
 
             /**
              * category.

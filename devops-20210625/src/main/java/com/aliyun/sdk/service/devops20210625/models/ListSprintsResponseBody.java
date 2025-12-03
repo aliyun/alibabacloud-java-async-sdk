@@ -60,6 +60,10 @@ public class ListSprintsResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return errorCode
      */
@@ -125,6 +129,20 @@ public class ListSprintsResponseBody extends TeaModel {
         private java.util.List<Sprints> sprints; 
         private Boolean success; 
         private Long totalCount; 
+
+        private Builder() {
+        } 
+
+        private Builder(ListSprintsResponseBody model) {
+            this.errorCode = model.errorCode;
+            this.errorMsg = model.errorMsg;
+            this.maxResults = model.maxResults;
+            this.nextToken = model.nextToken;
+            this.requestId = model.requestId;
+            this.sprints = model.sprints;
+            this.success = model.success;
+            this.totalCount = model.totalCount;
+        } 
 
         /**
          * errorCode.
@@ -359,6 +377,24 @@ public class ListSprintsResponseBody extends TeaModel {
             private String spaceIdentifier; 
             private Long startDate; 
             private String status; 
+
+            private Builder() {
+            } 
+
+            private Builder(Sprints model) {
+                this.creator = model.creator;
+                this.description = model.description;
+                this.endDate = model.endDate;
+                this.gmtCreate = model.gmtCreate;
+                this.gmtModified = model.gmtModified;
+                this.identifier = model.identifier;
+                this.modifier = model.modifier;
+                this.name = model.name;
+                this.scope = model.scope;
+                this.spaceIdentifier = model.spaceIdentifier;
+                this.startDate = model.startDate;
+                this.status = model.status;
+            } 
 
             /**
              * creator.

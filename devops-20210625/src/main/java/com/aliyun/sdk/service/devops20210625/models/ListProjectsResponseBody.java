@@ -60,6 +60,10 @@ public class ListProjectsResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return errorCode
      */
@@ -125,6 +129,20 @@ public class ListProjectsResponseBody extends TeaModel {
         private String requestId; 
         private Boolean success; 
         private Long totalCount; 
+
+        private Builder() {
+        } 
+
+        private Builder(ListProjectsResponseBody model) {
+            this.errorCode = model.errorCode;
+            this.errorMsg = model.errorMsg;
+            this.maxResults = model.maxResults;
+            this.nextToken = model.nextToken;
+            this.projects = model.projects;
+            this.requestId = model.requestId;
+            this.success = model.success;
+            this.totalCount = model.totalCount;
+        } 
 
         /**
          * errorCode.
@@ -371,6 +389,25 @@ public class ListProjectsResponseBody extends TeaModel {
             private String scope; 
             private String statusStageIdentifier; 
             private String typeIdentifier; 
+
+            private Builder() {
+            } 
+
+            private Builder(Projects model) {
+                this.categoryIdentifier = model.categoryIdentifier;
+                this.creator = model.creator;
+                this.customCode = model.customCode;
+                this.deleteTime = model.deleteTime;
+                this.description = model.description;
+                this.gmtCreate = model.gmtCreate;
+                this.icon = model.icon;
+                this.identifier = model.identifier;
+                this.logicalStatus = model.logicalStatus;
+                this.name = model.name;
+                this.scope = model.scope;
+                this.statusStageIdentifier = model.statusStageIdentifier;
+                this.typeIdentifier = model.typeIdentifier;
+            } 
 
             /**
              * categoryIdentifier.

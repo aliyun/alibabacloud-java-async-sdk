@@ -48,6 +48,10 @@ public class GetPipelineRunResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return errorCode
      */
@@ -89,6 +93,17 @@ public class GetPipelineRunResponseBody extends TeaModel {
         private PipelineRun pipelineRun; 
         private String requestId; 
         private Boolean success; 
+
+        private Builder() {
+        } 
+
+        private Builder(GetPipelineRunResponseBody model) {
+            this.errorCode = model.errorCode;
+            this.errorMessage = model.errorMessage;
+            this.pipelineRun = model.pipelineRun;
+            this.requestId = model.requestId;
+            this.success = model.success;
+        } 
 
         /**
          * errorCode.
@@ -192,6 +207,15 @@ public class GetPipelineRunResponseBody extends TeaModel {
             private String commint; 
             private String repo; 
 
+            private Builder() {
+            } 
+
+            private Builder(Data model) {
+                this.branch = model.branch;
+                this.commint = model.commint;
+                this.repo = model.repo;
+            } 
+
             /**
              * branch.
              */
@@ -279,6 +303,15 @@ public class GetPipelineRunResponseBody extends TeaModel {
             private String sign; 
             private String type; 
 
+            private Builder() {
+            } 
+
+            private Builder(Sources model) {
+                this.data = model.data;
+                this.sign = model.sign;
+                this.type = model.type;
+            } 
+
             /**
              * data.
              */
@@ -365,6 +398,15 @@ public class GetPipelineRunResponseBody extends TeaModel {
             private Boolean disable; 
             private java.util.Map<String, ?> params; 
             private String type; 
+
+            private Builder() {
+            } 
+
+            private Builder(Actions model) {
+                this.disable = model.disable;
+                this.params = model.params;
+                this.type = model.type;
+            } 
 
             /**
              * disable.
@@ -500,6 +542,19 @@ public class GetPipelineRunResponseBody extends TeaModel {
             private String params; 
             private Long startTime; 
             private String status; 
+
+            private Builder() {
+            } 
+
+            private Builder(Jobs model) {
+                this.actions = model.actions;
+                this.endTime = model.endTime;
+                this.id = model.id;
+                this.name = model.name;
+                this.params = model.params;
+                this.startTime = model.startTime;
+                this.status = model.status;
+            } 
 
             /**
              * actions.
@@ -644,6 +699,17 @@ public class GetPipelineRunResponseBody extends TeaModel {
             private Long startTime; 
             private String status; 
 
+            private Builder() {
+            } 
+
+            private Builder(StageInfo model) {
+                this.endTime = model.endTime;
+                this.jobs = model.jobs;
+                this.name = model.name;
+                this.startTime = model.startTime;
+                this.status = model.status;
+            } 
+
             /**
              * endTime.
              */
@@ -734,6 +800,14 @@ public class GetPipelineRunResponseBody extends TeaModel {
         public static final class Builder {
             private String name; 
             private StageInfo stageInfo; 
+
+            private Builder() {
+            } 
+
+            private Builder(Stages model) {
+                this.name = model.name;
+                this.stageInfo = model.stageInfo;
+            } 
 
             /**
              * name.
@@ -909,6 +983,23 @@ public class GetPipelineRunResponseBody extends TeaModel {
             private String status; 
             private Integer triggerMode; 
             private Long updateTime; 
+
+            private Builder() {
+            } 
+
+            private Builder(PipelineRun model) {
+                this.createTime = model.createTime;
+                this.creatorAccountId = model.creatorAccountId;
+                this.modifierAccountId = model.modifierAccountId;
+                this.pipelineId = model.pipelineId;
+                this.pipelineRunId = model.pipelineRunId;
+                this.sources = model.sources;
+                this.stageGroup = model.stageGroup;
+                this.stages = model.stages;
+                this.status = model.status;
+                this.triggerMode = model.triggerMode;
+                this.updateTime = model.updateTime;
+            } 
 
             /**
              * createTime.

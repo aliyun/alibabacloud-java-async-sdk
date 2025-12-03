@@ -48,6 +48,10 @@ public class ListWorkitemAttachmentsResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return attachments
      */
@@ -89,6 +93,17 @@ public class ListWorkitemAttachmentsResponseBody extends TeaModel {
         private String errorMsg; 
         private String requestId; 
         private Boolean success; 
+
+        private Builder() {
+        } 
+
+        private Builder(ListWorkitemAttachmentsResponseBody model) {
+            this.attachments = model.attachments;
+            this.errorCode = model.errorCode;
+            this.errorMsg = model.errorMsg;
+            this.requestId = model.requestId;
+            this.success = model.success;
+        } 
 
         /**
          * attachments.
@@ -242,6 +257,19 @@ public class ListWorkitemAttachmentsResponseBody extends TeaModel {
             private Long gmtCreate; 
             private String size; 
             private String url; 
+
+            private Builder() {
+            } 
+
+            private Builder(Attachments model) {
+                this.creator = model.creator;
+                this.fileIdentifier = model.fileIdentifier;
+                this.fileName = model.fileName;
+                this.fileSuffix = model.fileSuffix;
+                this.gmtCreate = model.gmtCreate;
+                this.size = model.size;
+                this.url = model.url;
+            } 
 
             /**
              * creator.

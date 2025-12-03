@@ -48,6 +48,10 @@ public class ResetSshKeyResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return errorCode
      */
@@ -89,6 +93,17 @@ public class ResetSshKeyResponseBody extends TeaModel {
         private String requestId; 
         private SshKey sshKey; 
         private Boolean success; 
+
+        private Builder() {
+        } 
+
+        private Builder(ResetSshKeyResponseBody model) {
+            this.errorCode = model.errorCode;
+            this.errorMessage = model.errorMessage;
+            this.requestId = model.requestId;
+            this.sshKey = model.sshKey;
+            this.success = model.success;
+        } 
 
         /**
          * errorCode.
@@ -179,6 +194,14 @@ public class ResetSshKeyResponseBody extends TeaModel {
         public static final class Builder {
             private Long id; 
             private String publicKey; 
+
+            private Builder() {
+            } 
+
+            private Builder(SshKey model) {
+                this.id = model.id;
+                this.publicKey = model.publicKey;
+            } 
 
             /**
              * id.

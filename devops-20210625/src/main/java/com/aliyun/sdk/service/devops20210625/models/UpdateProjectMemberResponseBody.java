@@ -48,6 +48,10 @@ public class UpdateProjectMemberResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return errorCode
      */
@@ -89,6 +93,17 @@ public class UpdateProjectMemberResponseBody extends TeaModel {
         private Member member; 
         private String requestId; 
         private Boolean success; 
+
+        private Builder() {
+        } 
+
+        private Builder(UpdateProjectMemberResponseBody model) {
+            this.errorCode = model.errorCode;
+            this.errorMsg = model.errorMsg;
+            this.member = model.member;
+            this.requestId = model.requestId;
+            this.success = model.success;
+        } 
 
         /**
          * errorCode.
@@ -251,6 +266,20 @@ public class UpdateProjectMemberResponseBody extends TeaModel {
             private String targetType; 
             private String userIdentifier; 
             private String userType; 
+
+            private Builder() {
+            } 
+
+            private Builder(Member model) {
+                this.gmtCreate = model.gmtCreate;
+                this.gmtModified = model.gmtModified;
+                this.id = model.id;
+                this.roleIdentifier = model.roleIdentifier;
+                this.targetIdentifier = model.targetIdentifier;
+                this.targetType = model.targetType;
+                this.userIdentifier = model.userIdentifier;
+                this.userType = model.userType;
+            } 
 
             /**
              * gmtCreate.

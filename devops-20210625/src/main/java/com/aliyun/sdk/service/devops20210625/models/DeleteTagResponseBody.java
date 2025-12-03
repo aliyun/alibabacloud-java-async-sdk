@@ -48,6 +48,10 @@ public class DeleteTagResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return errorCode
      */
@@ -89,6 +93,17 @@ public class DeleteTagResponseBody extends TeaModel {
         private String requestId; 
         private Result result; 
         private Boolean success; 
+
+        private Builder() {
+        } 
+
+        private Builder(DeleteTagResponseBody model) {
+            this.errorCode = model.errorCode;
+            this.errorMessage = model.errorMessage;
+            this.requestId = model.requestId;
+            this.result = model.result;
+            this.success = model.success;
+        } 
 
         /**
          * errorCode.
@@ -167,6 +182,13 @@ public class DeleteTagResponseBody extends TeaModel {
 
         public static final class Builder {
             private String tagName; 
+
+            private Builder() {
+            } 
+
+            private Builder(Result model) {
+                this.tagName = model.tagName;
+            } 
 
             /**
              * tagName.

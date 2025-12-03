@@ -48,6 +48,10 @@ public class GetFileBlobsResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return errorCode
      */
@@ -89,6 +93,17 @@ public class GetFileBlobsResponseBody extends TeaModel {
         private String requestId; 
         private Result result; 
         private Boolean success; 
+
+        private Builder() {
+        } 
+
+        private Builder(GetFileBlobsResponseBody model) {
+            this.errorCode = model.errorCode;
+            this.errorMessage = model.errorMessage;
+            this.requestId = model.requestId;
+            this.result = model.result;
+            this.success = model.success;
+        } 
 
         /**
          * errorCode.
@@ -191,6 +206,15 @@ public class GetFileBlobsResponseBody extends TeaModel {
             private String content; 
             private Long size; 
             private Integer totalLines; 
+
+            private Builder() {
+            } 
+
+            private Builder(Result model) {
+                this.content = model.content;
+                this.size = model.size;
+                this.totalLines = model.totalLines;
+            } 
 
             /**
              * content.

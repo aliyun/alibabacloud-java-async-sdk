@@ -52,6 +52,10 @@ public class ListRepositoryGroupsResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return errorCode
      */
@@ -101,6 +105,18 @@ public class ListRepositoryGroupsResponseBody extends TeaModel {
         private java.util.List<Result> result; 
         private Boolean success; 
         private Long total; 
+
+        private Builder() {
+        } 
+
+        private Builder(ListRepositoryGroupsResponseBody model) {
+            this.errorCode = model.errorCode;
+            this.errorMessage = model.errorMessage;
+            this.requestId = model.requestId;
+            this.result = model.result;
+            this.success = model.success;
+            this.total = model.total;
+        } 
 
         /**
          * errorCode.
@@ -379,6 +395,29 @@ public class ListRepositoryGroupsResponseBody extends TeaModel {
             private String updatedAt; 
             private Integer visibilityLevel; 
             private String webUrl; 
+
+            private Builder() {
+            } 
+
+            private Builder(Result model) {
+                this.accessLevel = model.accessLevel;
+                this.avatarUrl = model.avatarUrl;
+                this.createdAt = model.createdAt;
+                this.description = model.description;
+                this.groupCount = model.groupCount;
+                this.id = model.id;
+                this.name = model.name;
+                this.nameWithNamespace = model.nameWithNamespace;
+                this.ownerId = model.ownerId;
+                this.parentId = model.parentId;
+                this.path = model.path;
+                this.pathWithNamespace = model.pathWithNamespace;
+                this.projectCount = model.projectCount;
+                this.type = model.type;
+                this.updatedAt = model.updatedAt;
+                this.visibilityLevel = model.visibilityLevel;
+                this.webUrl = model.webUrl;
+            } 
 
             /**
              * accessLevel.

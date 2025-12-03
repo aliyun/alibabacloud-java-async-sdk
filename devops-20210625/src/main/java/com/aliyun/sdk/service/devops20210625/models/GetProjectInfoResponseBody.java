@@ -48,6 +48,10 @@ public class GetProjectInfoResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return errorCode
      */
@@ -89,6 +93,17 @@ public class GetProjectInfoResponseBody extends TeaModel {
         private Project project; 
         private String requestId; 
         private Boolean success; 
+
+        private Builder() {
+        } 
+
+        private Builder(GetProjectInfoResponseBody model) {
+            this.errorCode = model.errorCode;
+            this.errorMessage = model.errorMessage;
+            this.project = model.project;
+            this.requestId = model.requestId;
+            this.success = model.success;
+        } 
 
         /**
          * errorCode.
@@ -443,6 +458,36 @@ public class GetProjectInfoResponseBody extends TeaModel {
             private String statusStageIdentifier; 
             private String subType; 
             private String typeIdentifier; 
+
+            private Builder() {
+            } 
+
+            private Builder(Project model) {
+                this.category = model.category;
+                this.categoryIdentifier = model.categoryIdentifier;
+                this.creator = model.creator;
+                this.customCode = model.customCode;
+                this.description = model.description;
+                this.gmtCreate = model.gmtCreate;
+                this.gmtModified = model.gmtModified;
+                this.icon = model.icon;
+                this.iconBig = model.iconBig;
+                this.iconGroup = model.iconGroup;
+                this.iconSmall = model.iconSmall;
+                this.id = model.id;
+                this.identifier = model.identifier;
+                this.identifierPath = model.identifierPath;
+                this.logicalStatus = model.logicalStatus;
+                this.modifier = model.modifier;
+                this.name = model.name;
+                this.organizationIdentifier = model.organizationIdentifier;
+                this.parentIdentifier = model.parentIdentifier;
+                this.scope = model.scope;
+                this.statusIdentifier = model.statusIdentifier;
+                this.statusStageIdentifier = model.statusStageIdentifier;
+                this.subType = model.subType;
+                this.typeIdentifier = model.typeIdentifier;
+            } 
 
             /**
              * category.

@@ -48,6 +48,10 @@ public class GetWorkitemCommentListResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return commentList
      */
@@ -89,6 +93,17 @@ public class GetWorkitemCommentListResponseBody extends TeaModel {
         private String errorMsg; 
         private String requestId; 
         private String success; 
+
+        private Builder() {
+        } 
+
+        private Builder(GetWorkitemCommentListResponseBody model) {
+            this.commentList = model.commentList;
+            this.errorCode = model.errorCode;
+            this.errorMsg = model.errorMsg;
+            this.requestId = model.requestId;
+            this.success = model.success;
+        } 
 
         /**
          * commentList.
@@ -218,6 +233,17 @@ public class GetWorkitemCommentListResponseBody extends TeaModel {
             private String identifier; 
             private String nickName; 
             private String realName; 
+
+            private Builder() {
+            } 
+
+            private Builder(User model) {
+                this.account = model.account;
+                this.avatar = model.avatar;
+                this.identifier = model.identifier;
+                this.nickName = model.nickName;
+                this.realName = model.realName;
+            } 
 
             /**
              * account.
@@ -417,6 +443,23 @@ public class GetWorkitemCommentListResponseBody extends TeaModel {
             private String targetType; 
             private Long topTime; 
             private User user; 
+
+            private Builder() {
+            } 
+
+            private Builder(CommentList model) {
+                this.content = model.content;
+                this.createTime = model.createTime;
+                this.formatType = model.formatType;
+                this.id = model.id;
+                this.isTop = model.isTop;
+                this.modifiedTime = model.modifiedTime;
+                this.parentId = model.parentId;
+                this.targetIdentifier = model.targetIdentifier;
+                this.targetType = model.targetType;
+                this.topTime = model.topTime;
+                this.user = model.user;
+            } 
 
             /**
              * content.

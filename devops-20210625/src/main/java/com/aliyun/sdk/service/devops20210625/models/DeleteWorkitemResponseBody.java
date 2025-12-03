@@ -48,6 +48,10 @@ public class DeleteWorkitemResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return deleteFlag
      */
@@ -89,6 +93,17 @@ public class DeleteWorkitemResponseBody extends TeaModel {
         private String errorMsg; 
         private String requestId; 
         private Boolean success; 
+
+        private Builder() {
+        } 
+
+        private Builder(DeleteWorkitemResponseBody model) {
+            this.deleteFlag = model.deleteFlag;
+            this.errorCode = model.errorCode;
+            this.errorMsg = model.errorMsg;
+            this.requestId = model.requestId;
+            this.success = model.success;
+        } 
 
         /**
          * deleteFlag.

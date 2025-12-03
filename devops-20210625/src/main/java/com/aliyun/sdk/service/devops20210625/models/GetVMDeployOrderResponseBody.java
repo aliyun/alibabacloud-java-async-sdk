@@ -48,6 +48,10 @@ public class GetVMDeployOrderResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return deployOrder
      */
@@ -89,6 +93,17 @@ public class GetVMDeployOrderResponseBody extends TeaModel {
         private String errorMessage; 
         private String requestId; 
         private Boolean success; 
+
+        private Builder() {
+        } 
+
+        private Builder(GetVMDeployOrderResponseBody model) {
+            this.deployOrder = model.deployOrder;
+            this.errorCode = model.errorCode;
+            this.errorMessage = model.errorMessage;
+            this.requestId = model.requestId;
+            this.success = model.success;
+        } 
 
         /**
          * deployOrder.
@@ -192,6 +207,15 @@ public class GetVMDeployOrderResponseBody extends TeaModel {
             private Object params; 
             private String type; 
 
+            private Builder() {
+            } 
+
+            private Builder(Actions model) {
+                this.disable = model.disable;
+                this.params = model.params;
+                this.type = model.type;
+            } 
+
             /**
              * disable.
              */
@@ -278,6 +302,15 @@ public class GetVMDeployOrderResponseBody extends TeaModel {
             private Boolean disable; 
             private Object params; 
             private String type; 
+
+            private Builder() {
+            } 
+
+            private Builder(DeployMachinesActions model) {
+                this.disable = model.disable;
+                this.params = model.params;
+                this.type = model.type;
+            } 
 
             /**
              * disable.
@@ -426,6 +459,20 @@ public class GetVMDeployOrderResponseBody extends TeaModel {
             private String status; 
             private Long updateTime; 
 
+            private Builder() {
+            } 
+
+            private Builder(DeployMachines model) {
+                this.actions = model.actions;
+                this.batchNum = model.batchNum;
+                this.clientStatus = model.clientStatus;
+                this.createTime = model.createTime;
+                this.ip = model.ip;
+                this.machineSn = model.machineSn;
+                this.status = model.status;
+                this.updateTime = model.updateTime;
+            } 
+
             /**
              * actions.
              */
@@ -552,6 +599,15 @@ public class GetVMDeployOrderResponseBody extends TeaModel {
             private Integer batchNum; 
             private java.util.List<DeployMachines> deployMachines; 
             private Long hostGroupId; 
+
+            private Builder() {
+            } 
+
+            private Builder(DeployMachineInfo model) {
+                this.batchNum = model.batchNum;
+                this.deployMachines = model.deployMachines;
+                this.hostGroupId = model.hostGroupId;
+            } 
 
             /**
              * batchNum.
@@ -723,6 +779,22 @@ public class GetVMDeployOrderResponseBody extends TeaModel {
             private String status; 
             private Integer totalBatch; 
             private Long updateTime; 
+
+            private Builder() {
+            } 
+
+            private Builder(DeployOrder model) {
+                this.actions = model.actions;
+                this.createTime = model.createTime;
+                this.creator = model.creator;
+                this.currentBatch = model.currentBatch;
+                this.deployMachineInfo = model.deployMachineInfo;
+                this.deployOrderId = model.deployOrderId;
+                this.exceptionCode = model.exceptionCode;
+                this.status = model.status;
+                this.totalBatch = model.totalBatch;
+                this.updateTime = model.updateTime;
+            } 
 
             /**
              * actions.

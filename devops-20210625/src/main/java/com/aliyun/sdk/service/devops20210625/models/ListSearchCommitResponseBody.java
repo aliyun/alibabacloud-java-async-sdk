@@ -52,6 +52,10 @@ public class ListSearchCommitResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return errorCode
      */
@@ -101,6 +105,18 @@ public class ListSearchCommitResponseBody extends TeaModel {
         private java.util.List<Result> result; 
         private Boolean success; 
         private Long total; 
+
+        private Builder() {
+        } 
+
+        private Builder(ListSearchCommitResponseBody model) {
+            this.errorCode = model.errorCode;
+            this.errorMessage = model.errorMessage;
+            this.requestId = model.requestId;
+            this.result = model.result;
+            this.success = model.success;
+            this.total = model.total;
+        } 
 
         /**
          * errorCode.
@@ -224,6 +240,16 @@ public class ListSearchCommitResponseBody extends TeaModel {
             private String organizationId; 
             private String title; 
 
+            private Builder() {
+            } 
+
+            private Builder(HighlightTextMap model) {
+                this.commitId = model.commitId;
+                this.commitMessage = model.commitMessage;
+                this.organizationId = model.organizationId;
+                this.title = model.title;
+            } 
+
             /**
              * commitId.
              */
@@ -306,6 +332,14 @@ public class ListSearchCommitResponseBody extends TeaModel {
         public static final class Builder {
             private String email; 
             private String name; 
+
+            private Builder() {
+            } 
+
+            private Builder(Author model) {
+                this.email = model.email;
+                this.name = model.name;
+            } 
 
             /**
              * email.
@@ -434,6 +468,19 @@ public class ListSearchCommitResponseBody extends TeaModel {
             private String repoPath; 
             private String title; 
 
+            private Builder() {
+            } 
+
+            private Builder(Source model) {
+                this.author = model.author;
+                this.authorTime = model.authorTime;
+                this.commitId = model.commitId;
+                this.commitMessage = model.commitMessage;
+                this.organizationId = model.organizationId;
+                this.repoPath = model.repoPath;
+                this.title = model.title;
+            } 
+
             /**
              * author.
              */
@@ -552,6 +599,15 @@ public class ListSearchCommitResponseBody extends TeaModel {
             private String docId; 
             private HighlightTextMap highlightTextMap; 
             private Source source; 
+
+            private Builder() {
+            } 
+
+            private Builder(Result model) {
+                this.docId = model.docId;
+                this.highlightTextMap = model.highlightTextMap;
+                this.source = model.source;
+            } 
 
             /**
              * docId.

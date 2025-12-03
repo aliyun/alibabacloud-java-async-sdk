@@ -48,6 +48,10 @@ public class CreateCommitStatusResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return errorCode
      */
@@ -89,6 +93,17 @@ public class CreateCommitStatusResponseBody extends TeaModel {
         private String requestId; 
         private Result result; 
         private Boolean success; 
+
+        private Builder() {
+        } 
+
+        private Builder(CreateCommitStatusResponseBody model) {
+            this.errorCode = model.errorCode;
+            this.errorMessage = model.errorMessage;
+            this.requestId = model.requestId;
+            this.result = model.result;
+            this.success = model.success;
+        } 
 
         /**
          * errorCode.
@@ -203,6 +218,16 @@ public class CreateCommitStatusResponseBody extends TeaModel {
             private String avatarUrl; 
             private String login; 
             private String type; 
+
+            private Builder() {
+            } 
+
+            private Builder(Creator model) {
+                this.aliyunPk = model.aliyunPk;
+                this.avatarUrl = model.avatarUrl;
+                this.login = model.login;
+                this.type = model.type;
+            } 
 
             /**
              * aliyunPk.
@@ -346,6 +371,19 @@ public class CreateCommitStatusResponseBody extends TeaModel {
             private String sha; 
             private String state; 
             private String targetUrl; 
+
+            private Builder() {
+            } 
+
+            private Builder(Result model) {
+                this.context = model.context;
+                this.creator = model.creator;
+                this.description = model.description;
+                this.id = model.id;
+                this.sha = model.sha;
+                this.state = model.state;
+                this.targetUrl = model.targetUrl;
+            } 
 
             /**
              * context.

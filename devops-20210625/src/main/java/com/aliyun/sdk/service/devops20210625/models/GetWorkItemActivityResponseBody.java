@@ -48,6 +48,10 @@ public class GetWorkItemActivityResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return activities
      */
@@ -89,6 +93,17 @@ public class GetWorkItemActivityResponseBody extends TeaModel {
         private String errorMsg; 
         private String requestId; 
         private Boolean success; 
+
+        private Builder() {
+        } 
+
+        private Builder(GetWorkItemActivityResponseBody model) {
+            this.activities = model.activities;
+            this.errorCode = model.errorCode;
+            this.errorMsg = model.errorMsg;
+            this.requestId = model.requestId;
+            this.success = model.success;
+        } 
 
         /**
          * activities.
@@ -192,6 +207,15 @@ public class GetWorkItemActivityResponseBody extends TeaModel {
             private String plainValue; 
             private String resourceType; 
 
+            private Builder() {
+            } 
+
+            private Builder(NewValue model) {
+                this.displayValue = model.displayValue;
+                this.plainValue = model.plainValue;
+                this.resourceType = model.resourceType;
+            } 
+
             /**
              * displayValue.
              */
@@ -278,6 +302,15 @@ public class GetWorkItemActivityResponseBody extends TeaModel {
             private String displayValue; 
             private String plainValue; 
             private String resourceType; 
+
+            private Builder() {
+            } 
+
+            private Builder(OldValue model) {
+                this.displayValue = model.displayValue;
+                this.plainValue = model.plainValue;
+                this.resourceType = model.resourceType;
+            } 
 
             /**
              * displayValue.
@@ -377,6 +410,16 @@ public class GetWorkItemActivityResponseBody extends TeaModel {
             private String propertyIdentifier; 
             private String propertyName; 
             private String propertyType; 
+
+            private Builder() {
+            } 
+
+            private Builder(Property model) {
+                this.displayName = model.displayName;
+                this.propertyIdentifier = model.propertyIdentifier;
+                this.propertyName = model.propertyName;
+                this.propertyType = model.propertyType;
+            } 
 
             /**
              * displayName.
@@ -556,6 +599,22 @@ public class GetWorkItemActivityResponseBody extends TeaModel {
             private Long parentEventId; 
             private Property property; 
             private String resourceIdentifier; 
+
+            private Builder() {
+            } 
+
+            private Builder(Activities model) {
+                this.actionType = model.actionType;
+                this.eventId = model.eventId;
+                this.eventTime = model.eventTime;
+                this.eventType = model.eventType;
+                this.newValue = model.newValue;
+                this.oldValue = model.oldValue;
+                this.operator = model.operator;
+                this.parentEventId = model.parentEventId;
+                this.property = model.property;
+                this.resourceIdentifier = model.resourceIdentifier;
+            } 
 
             /**
              * actionType.

@@ -48,6 +48,10 @@ public class CreateWorkitemEstimateResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return workitemTimeEstimate
      */
@@ -89,6 +93,17 @@ public class CreateWorkitemEstimateResponseBody extends TeaModel {
         private String errorMsg; 
         private String requestId; 
         private Boolean success; 
+
+        private Builder() {
+        } 
+
+        private Builder(CreateWorkitemEstimateResponseBody model) {
+            this.workitemTimeEstimate = model.workitemTimeEstimate;
+            this.errorCode = model.errorCode;
+            this.errorMsg = model.errorMsg;
+            this.requestId = model.requestId;
+            this.success = model.success;
+        } 
 
         /**
          * WorkitemTimeEstimate.
@@ -375,6 +390,30 @@ public class CreateWorkitemEstimateResponseBody extends TeaModel {
             private String stamp; 
             private String tbRoleId; 
 
+            private Builder() {
+            } 
+
+            private Builder(RecordUser model) {
+                this.account = model.account;
+                this.avatar = model.avatar;
+                this.dingTalkId = model.dingTalkId;
+                this.displayName = model.displayName;
+                this.displayNickName = model.displayNickName;
+                this.displayRealName = model.displayRealName;
+                this.email = model.email;
+                this.gender = model.gender;
+                this.identifier = model.identifier;
+                this.isDisabled = model.isDisabled;
+                this.mobile = model.mobile;
+                this.nameEn = model.nameEn;
+                this.nickName = model.nickName;
+                this.nickNamePinyin = model.nickNamePinyin;
+                this.realName = model.realName;
+                this.realNamePinyin = model.realNamePinyin;
+                this.stamp = model.stamp;
+                this.tbRoleId = model.tbRoleId;
+            } 
+
             /**
              * account.
              */
@@ -617,6 +656,18 @@ public class CreateWorkitemEstimateResponseBody extends TeaModel {
             private Long spentTime; 
             private String type; 
             private String workitemIdentifier; 
+
+            private Builder() {
+            } 
+
+            private Builder(WorkitemTimeEstimate model) {
+                this.description = model.description;
+                this.identifier = model.identifier;
+                this.recordUser = model.recordUser;
+                this.spentTime = model.spentTime;
+                this.type = model.type;
+                this.workitemIdentifier = model.workitemIdentifier;
+            } 
 
             /**
              * description.

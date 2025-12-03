@@ -44,6 +44,10 @@ public class ExportInsightSpaceRefResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return maxResults
      */
@@ -77,6 +81,16 @@ public class ExportInsightSpaceRefResponseBody extends TeaModel {
         private String nextToken; 
         private java.util.List<Result> result; 
         private Long totalCount; 
+
+        private Builder() {
+        } 
+
+        private Builder(ExportInsightSpaceRefResponseBody model) {
+            this.maxResults = model.maxResults;
+            this.nextToken = model.nextToken;
+            this.result = model.result;
+            this.totalCount = model.totalCount;
+        } 
 
         /**
          * maxResults.
@@ -267,6 +281,23 @@ public class ExportInsightSpaceRefResponseBody extends TeaModel {
             private String organizationId; 
             private String toId; 
             private String type; 
+
+            private Builder() {
+            } 
+
+            private Builder(Result model) {
+                this.creatorId = model.creatorId;
+                this.fromId = model.fromId;
+                this.gmtCreate = model.gmtCreate;
+                this.gmtModified = model.gmtModified;
+                this.id = model.id;
+                this.identifier = model.identifier;
+                this.isDeleted = model.isDeleted;
+                this.modifierId = model.modifierId;
+                this.organizationId = model.organizationId;
+                this.toId = model.toId;
+                this.type = model.type;
+            } 
 
             /**
              * creatorId.

@@ -52,6 +52,10 @@ public class ListProjectLabelsResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return errorCode
      */
@@ -101,6 +105,18 @@ public class ListProjectLabelsResponseBody extends TeaModel {
         private java.util.List<Result> result; 
         private Boolean success; 
         private Long total; 
+
+        private Builder() {
+        } 
+
+        private Builder(ListProjectLabelsResponseBody model) {
+            this.errorCode = model.errorCode;
+            this.errorMessage = model.errorMessage;
+            this.requestId = model.requestId;
+            this.result = model.result;
+            this.success = model.success;
+            this.total = model.total;
+        } 
 
         /**
          * errorCode.
@@ -235,6 +251,17 @@ public class ListProjectLabelsResponseBody extends TeaModel {
             private String id; 
             private String name; 
             private Long openMergeRequestsCount; 
+
+            private Builder() {
+            } 
+
+            private Builder(Result model) {
+                this.color = model.color;
+                this.description = model.description;
+                this.id = model.id;
+                this.name = model.name;
+                this.openMergeRequestsCount = model.openMergeRequestsCount;
+            } 
 
             /**
              * color.

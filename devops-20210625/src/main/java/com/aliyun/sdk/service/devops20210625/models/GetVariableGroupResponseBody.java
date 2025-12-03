@@ -48,6 +48,10 @@ public class GetVariableGroupResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return errorCode
      */
@@ -89,6 +93,17 @@ public class GetVariableGroupResponseBody extends TeaModel {
         private String requestId; 
         private Boolean success; 
         private VariableGroup variableGroup; 
+
+        private Builder() {
+        } 
+
+        private Builder(GetVariableGroupResponseBody model) {
+            this.errorCode = model.errorCode;
+            this.errorMessage = model.errorMessage;
+            this.requestId = model.requestId;
+            this.success = model.success;
+            this.variableGroup = model.variableGroup;
+        } 
 
         /**
          * errorCode.
@@ -180,6 +195,14 @@ public class GetVariableGroupResponseBody extends TeaModel {
             private Long id; 
             private String name; 
 
+            private Builder() {
+            } 
+
+            private Builder(RelatedPipelines model) {
+                this.id = model.id;
+                this.name = model.name;
+            } 
+
             /**
              * id.
              */
@@ -258,6 +281,15 @@ public class GetVariableGroupResponseBody extends TeaModel {
             private Boolean isEncrypted; 
             private String name; 
             private String value; 
+
+            private Builder() {
+            } 
+
+            private Builder(Variables model) {
+                this.isEncrypted = model.isEncrypted;
+                this.name = model.name;
+                this.value = model.value;
+            } 
 
             /**
              * isEncrypted.
@@ -417,6 +449,21 @@ public class GetVariableGroupResponseBody extends TeaModel {
             private java.util.List<RelatedPipelines> relatedPipelines; 
             private Long updateTime; 
             private java.util.List<Variables> variables; 
+
+            private Builder() {
+            } 
+
+            private Builder(VariableGroup model) {
+                this.ccreatorAccountId = model.ccreatorAccountId;
+                this.createTime = model.createTime;
+                this.description = model.description;
+                this.id = model.id;
+                this.modifierAccountId = model.modifierAccountId;
+                this.name = model.name;
+                this.relatedPipelines = model.relatedPipelines;
+                this.updateTime = model.updateTime;
+                this.variables = model.variables;
+            } 
 
             /**
              * ccreatorAccountId.

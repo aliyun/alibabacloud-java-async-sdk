@@ -48,6 +48,10 @@ public class CreateVariableGroupResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return errorCode
      */
@@ -89,6 +93,17 @@ public class CreateVariableGroupResponseBody extends TeaModel {
         private String requestId; 
         private Boolean success; 
         private Long variableGroupId; 
+
+        private Builder() {
+        } 
+
+        private Builder(CreateVariableGroupResponseBody model) {
+            this.errorCode = model.errorCode;
+            this.errorMessage = model.errorMessage;
+            this.requestId = model.requestId;
+            this.success = model.success;
+            this.variableGroupId = model.variableGroupId;
+        } 
 
         /**
          * errorCode.

@@ -48,6 +48,10 @@ public class CreateDeployKeyResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return errorCode
      */
@@ -89,6 +93,17 @@ public class CreateDeployKeyResponseBody extends TeaModel {
         private String requestId; 
         private Result result; 
         private Boolean success; 
+
+        private Builder() {
+        } 
+
+        private Builder(CreateDeployKeyResponseBody model) {
+            this.errorCode = model.errorCode;
+            this.errorMessage = model.errorMessage;
+            this.requestId = model.requestId;
+            this.result = model.result;
+            this.success = model.success;
+        } 
 
         /**
          * errorCode.
@@ -215,6 +230,17 @@ public class CreateDeployKeyResponseBody extends TeaModel {
             private Long id; 
             private String key; 
             private String title; 
+
+            private Builder() {
+            } 
+
+            private Builder(Result model) {
+                this.createdAt = model.createdAt;
+                this.fingerprint = model.fingerprint;
+                this.id = model.id;
+                this.key = model.key;
+                this.title = model.title;
+            } 
 
             /**
              * createdAt.

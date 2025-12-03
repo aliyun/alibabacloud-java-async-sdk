@@ -52,6 +52,10 @@ public class ListChangeRequestsResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return current
      */
@@ -101,6 +105,18 @@ public class ListChangeRequestsResponseBody extends TeaModel {
         private Long pages; 
         private Long perPage; 
         private Long total; 
+
+        private Builder() {
+        } 
+
+        private Builder(ListChangeRequestsResponseBody model) {
+            this.current = model.current;
+            this.data = model.data;
+            this.nextToken = model.nextToken;
+            this.pages = model.pages;
+            this.perPage = model.perPage;
+            this.total = model.total;
+        } 
 
         /**
          * current.

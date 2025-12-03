@@ -48,6 +48,10 @@ public class UpdateGroupResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return errorCode
      */
@@ -89,6 +93,17 @@ public class UpdateGroupResponseBody extends TeaModel {
         private String requestId; 
         private Result result; 
         private Boolean success; 
+
+        private Builder() {
+        } 
+
+        private Builder(UpdateGroupResponseBody model) {
+            this.errorCode = model.errorCode;
+            this.errorMessage = model.errorMessage;
+            this.requestId = model.requestId;
+            this.result = model.result;
+            this.success = model.success;
+        } 
 
         /**
          * errorCode.
@@ -299,6 +314,24 @@ public class UpdateGroupResponseBody extends TeaModel {
             private String type; 
             private Integer visibilityLevel; 
             private String webUrl; 
+
+            private Builder() {
+            } 
+
+            private Builder(Result model) {
+                this.avatarUrl = model.avatarUrl;
+                this.description = model.description;
+                this.id = model.id;
+                this.name = model.name;
+                this.nameWithNamespace = model.nameWithNamespace;
+                this.ownerId = model.ownerId;
+                this.parentId = model.parentId;
+                this.path = model.path;
+                this.pathWithNamespace = model.pathWithNamespace;
+                this.type = model.type;
+                this.visibilityLevel = model.visibilityLevel;
+                this.webUrl = model.webUrl;
+            } 
 
             /**
              * avatarUrl.

@@ -56,6 +56,10 @@ public class ListPipelineGroupsResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return errorCode
      */
@@ -113,6 +117,19 @@ public class ListPipelineGroupsResponseBody extends TeaModel {
         private String requestId; 
         private Boolean success; 
         private Integer totalCount; 
+
+        private Builder() {
+        } 
+
+        private Builder(ListPipelineGroupsResponseBody model) {
+            this.errorCode = model.errorCode;
+            this.errorMessage = model.errorMessage;
+            this.nextToken = model.nextToken;
+            this.pipelineGroups = model.pipelineGroups;
+            this.requestId = model.requestId;
+            this.success = model.success;
+            this.totalCount = model.totalCount;
+        } 
 
         /**
          * errorCode.
@@ -231,6 +248,15 @@ public class ListPipelineGroupsResponseBody extends TeaModel {
             private Long createTime; 
             private Long id; 
             private String name; 
+
+            private Builder() {
+            } 
+
+            private Builder(PipelineGroups model) {
+                this.createTime = model.createTime;
+                this.id = model.id;
+                this.name = model.name;
+            } 
 
             /**
              * createTime.

@@ -48,6 +48,10 @@ public class GetWorkitemRelationsResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return errorCode
      */
@@ -89,6 +93,17 @@ public class GetWorkitemRelationsResponseBody extends TeaModel {
         private java.util.List<RelationList> relationList; 
         private String requestId; 
         private Boolean success; 
+
+        private Builder() {
+        } 
+
+        private Builder(GetWorkitemRelationsResponseBody model) {
+            this.errorCode = model.errorCode;
+            this.errorMsg = model.errorMsg;
+            this.relationList = model.relationList;
+            this.requestId = model.requestId;
+            this.success = model.success;
+        } 
 
         /**
          * errorCode.
@@ -254,6 +269,20 @@ public class GetWorkitemRelationsResponseBody extends TeaModel {
             private String spaceIdentifier; 
             private String subject; 
             private String workitemTypeIdentifier; 
+
+            private Builder() {
+            } 
+
+            private Builder(RelationList model) {
+                this.assignedTo = model.assignedTo;
+                this.categoryIdentifier = model.categoryIdentifier;
+                this.gmtCreate = model.gmtCreate;
+                this.gmtModified = model.gmtModified;
+                this.identifier = model.identifier;
+                this.spaceIdentifier = model.spaceIdentifier;
+                this.subject = model.subject;
+                this.workitemTypeIdentifier = model.workitemTypeIdentifier;
+            } 
 
             /**
              * assignedTo.

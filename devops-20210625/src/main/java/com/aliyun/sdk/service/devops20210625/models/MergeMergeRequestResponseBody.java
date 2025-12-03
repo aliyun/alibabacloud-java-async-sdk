@@ -48,6 +48,10 @@ public class MergeMergeRequestResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return errorCode
      */
@@ -89,6 +93,17 @@ public class MergeMergeRequestResponseBody extends TeaModel {
         private String requestId; 
         private Result result; 
         private Boolean success; 
+
+        private Builder() {
+        } 
+
+        private Builder(MergeMergeRequestResponseBody model) {
+            this.errorCode = model.errorCode;
+            this.errorMessage = model.errorMessage;
+            this.requestId = model.requestId;
+            this.result = model.result;
+            this.success = model.success;
+        } 
 
         /**
          * errorCode.
@@ -215,6 +230,17 @@ public class MergeMergeRequestResponseBody extends TeaModel {
             private String mergedRevision; 
             private Long projectId; 
             private Boolean result; 
+
+            private Builder() {
+            } 
+
+            private Builder(Result model) {
+                this.bizId = model.bizId;
+                this.localId = model.localId;
+                this.mergedRevision = model.mergedRevision;
+                this.projectId = model.projectId;
+                this.result = model.result;
+            } 
 
             /**
              * bizId.

@@ -48,6 +48,10 @@ public class ListPipelineJobsResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return errorCode
      */
@@ -89,6 +93,17 @@ public class ListPipelineJobsResponseBody extends TeaModel {
         private java.util.List<Jobs> jobs; 
         private String requestId; 
         private Boolean success; 
+
+        private Builder() {
+        } 
+
+        private Builder(ListPipelineJobsResponseBody model) {
+            this.errorCode = model.errorCode;
+            this.errorMessage = model.errorMessage;
+            this.jobs = model.jobs;
+            this.requestId = model.requestId;
+            this.success = model.success;
+        } 
 
         /**
          * errorCode.
@@ -203,6 +218,16 @@ public class ListPipelineJobsResponseBody extends TeaModel {
             private String jobName; 
             private Long lastJobId; 
             private String lastJobParams; 
+
+            private Builder() {
+            } 
+
+            private Builder(Jobs model) {
+                this.identifier = model.identifier;
+                this.jobName = model.jobName;
+                this.lastJobId = model.lastJobId;
+                this.lastJobParams = model.lastJobParams;
+            } 
 
             /**
              * identifier.

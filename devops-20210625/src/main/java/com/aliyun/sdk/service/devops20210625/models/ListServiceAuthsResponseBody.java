@@ -48,6 +48,10 @@ public class ListServiceAuthsResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return errorCode
      */
@@ -89,6 +93,17 @@ public class ListServiceAuthsResponseBody extends TeaModel {
         private String requestId; 
         private java.util.List<ServiceAuths> serviceAuths; 
         private Boolean success; 
+
+        private Builder() {
+        } 
+
+        private Builder(ListServiceAuthsResponseBody model) {
+            this.errorCode = model.errorCode;
+            this.errorMessage = model.errorMessage;
+            this.requestId = model.requestId;
+            this.serviceAuths = model.serviceAuths;
+            this.success = model.success;
+        } 
 
         /**
          * errorCode.
@@ -203,6 +218,16 @@ public class ListServiceAuthsResponseBody extends TeaModel {
             private String ownerName; 
             private String ownerStaffId; 
             private String type; 
+
+            private Builder() {
+            } 
+
+            private Builder(ServiceAuths model) {
+                this.id = model.id;
+                this.ownerName = model.ownerName;
+                this.ownerStaffId = model.ownerStaffId;
+                this.type = model.type;
+            } 
 
             /**
              * id.

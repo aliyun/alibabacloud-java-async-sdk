@@ -60,6 +60,10 @@ public class ListWorkitemsResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return errorCode
      */
@@ -125,6 +129,20 @@ public class ListWorkitemsResponseBody extends TeaModel {
         private Boolean success; 
         private Long totalCount; 
         private java.util.List<Workitems> workitems; 
+
+        private Builder() {
+        } 
+
+        private Builder(ListWorkitemsResponseBody model) {
+            this.errorCode = model.errorCode;
+            this.errorMsg = model.errorMsg;
+            this.maxResults = model.maxResults;
+            this.nextToken = model.nextToken;
+            this.requestId = model.requestId;
+            this.success = model.success;
+            this.totalCount = model.totalCount;
+            this.workitems = model.workitems;
+        } 
 
         /**
          * errorCode.
@@ -479,6 +497,34 @@ public class ListWorkitemsResponseBody extends TeaModel {
             private String subject; 
             private Long updateStatusAt; 
             private String workitemTypeIdentifier; 
+
+            private Builder() {
+            } 
+
+            private Builder(Workitems model) {
+                this.assignedTo = model.assignedTo;
+                this.categoryIdentifier = model.categoryIdentifier;
+                this.creator = model.creator;
+                this.document = model.document;
+                this.finishTime = model.finishTime;
+                this.gmtCreate = model.gmtCreate;
+                this.gmtModified = model.gmtModified;
+                this.identifier = model.identifier;
+                this.logicalStatus = model.logicalStatus;
+                this.modifier = model.modifier;
+                this.parentIdentifier = model.parentIdentifier;
+                this.serialNumber = model.serialNumber;
+                this.spaceIdentifier = model.spaceIdentifier;
+                this.spaceName = model.spaceName;
+                this.spaceType = model.spaceType;
+                this.sprintIdentifier = model.sprintIdentifier;
+                this.status = model.status;
+                this.statusIdentifier = model.statusIdentifier;
+                this.statusStageIdentifier = model.statusStageIdentifier;
+                this.subject = model.subject;
+                this.updateStatusAt = model.updateStatusAt;
+                this.workitemTypeIdentifier = model.workitemTypeIdentifier;
+            } 
 
             /**
              * assignedTo.

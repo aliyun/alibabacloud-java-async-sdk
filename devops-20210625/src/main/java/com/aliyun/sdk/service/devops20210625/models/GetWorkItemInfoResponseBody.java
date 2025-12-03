@@ -48,6 +48,10 @@ public class GetWorkItemInfoResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return errorCode
      */
@@ -89,6 +93,17 @@ public class GetWorkItemInfoResponseBody extends TeaModel {
         private String requestId; 
         private Boolean success; 
         private Workitem workitem; 
+
+        private Builder() {
+        } 
+
+        private Builder(GetWorkItemInfoResponseBody model) {
+            this.errorCode = model.errorCode;
+            this.errorMessage = model.errorMessage;
+            this.requestId = model.requestId;
+            this.success = model.success;
+            this.workitem = model.workitem;
+        } 
 
         /**
          * errorCode.
@@ -215,6 +230,17 @@ public class GetWorkItemInfoResponseBody extends TeaModel {
             private Long level; 
             private String value; 
             private String valueEn; 
+
+            private Builder() {
+            } 
+
+            private Builder(ValueList model) {
+                this.displayValue = model.displayValue;
+                this.identifier = model.identifier;
+                this.level = model.level;
+                this.value = model.value;
+                this.valueEn = model.valueEn;
+            } 
 
             /**
              * displayValue.
@@ -391,6 +417,21 @@ public class GetWorkItemInfoResponseBody extends TeaModel {
             private java.util.List<ValueList> valueList; 
             private String workitemIdentifier; 
 
+            private Builder() {
+            } 
+
+            private Builder(CustomFields model) {
+                this.fieldClassName = model.fieldClassName;
+                this.fieldFormat = model.fieldFormat;
+                this.fieldIdentifier = model.fieldIdentifier;
+                this.level = model.level;
+                this.objectValue = model.objectValue;
+                this.position = model.position;
+                this.value = model.value;
+                this.valueList = model.valueList;
+                this.workitemIdentifier = model.workitemIdentifier;
+            } 
+
             /**
              * fieldClassName.
              */
@@ -526,6 +567,15 @@ public class GetWorkItemInfoResponseBody extends TeaModel {
             private String identifier; 
             private String name; 
 
+            private Builder() {
+            } 
+
+            private Builder(TagDetails model) {
+                this.color = model.color;
+                this.identifier = model.identifier;
+                this.name = model.name;
+            } 
+
             /**
              * color.
              */
@@ -600,6 +650,14 @@ public class GetWorkItemInfoResponseBody extends TeaModel {
         public static final class Builder {
             private String identifier; 
             private String name; 
+
+            private Builder() {
+            } 
+
+            private Builder(Versions model) {
+                this.identifier = model.identifier;
+                this.name = model.name;
+            } 
 
             /**
              * identifier.
@@ -1003,6 +1061,42 @@ public class GetWorkItemInfoResponseBody extends TeaModel {
             private java.util.List<String> verifier; 
             private java.util.List<Versions> versions; 
             private String workitemTypeIdentifier; 
+
+            private Builder() {
+            } 
+
+            private Builder(Workitem model) {
+                this.assignedTo = model.assignedTo;
+                this.categoryIdentifier = model.categoryIdentifier;
+                this.creator = model.creator;
+                this.customFields = model.customFields;
+                this.document = model.document;
+                this.documentFormat = model.documentFormat;
+                this.finishTime = model.finishTime;
+                this.gmtCreate = model.gmtCreate;
+                this.gmtModified = model.gmtModified;
+                this.identifier = model.identifier;
+                this.logicalStatus = model.logicalStatus;
+                this.modifier = model.modifier;
+                this.parentIdentifier = model.parentIdentifier;
+                this.participant = model.participant;
+                this.serialNumber = model.serialNumber;
+                this.spaceIdentifier = model.spaceIdentifier;
+                this.spaceName = model.spaceName;
+                this.spaceType = model.spaceType;
+                this.sprint = model.sprint;
+                this.status = model.status;
+                this.statusIdentifier = model.statusIdentifier;
+                this.statusStageIdentifier = model.statusStageIdentifier;
+                this.subject = model.subject;
+                this.tag = model.tag;
+                this.tagDetails = model.tagDetails;
+                this.tracker = model.tracker;
+                this.updateStatusAt = model.updateStatusAt;
+                this.verifier = model.verifier;
+                this.versions = model.versions;
+                this.workitemTypeIdentifier = model.workitemTypeIdentifier;
+            } 
 
             /**
              * assignedTo.

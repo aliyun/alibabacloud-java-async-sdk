@@ -48,6 +48,10 @@ public class CreateRepositoryResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return errorCode
      */
@@ -89,6 +93,17 @@ public class CreateRepositoryResponseBody extends TeaModel {
         private String requestId; 
         private Result result; 
         private Boolean success; 
+
+        private Builder() {
+        } 
+
+        private Builder(CreateRepositoryResponseBody model) {
+            this.errorCode = model.errorCode;
+            this.errorMessage = model.errorMessage;
+            this.requestId = model.requestId;
+            this.result = model.result;
+            this.success = model.success;
+        } 
 
         /**
          * errorCode.
@@ -275,6 +290,22 @@ public class CreateRepositoryResponseBody extends TeaModel {
             private Boolean _public; 
             private String updatedAt; 
             private String visibilityLevel; 
+
+            private Builder() {
+            } 
+
+            private Builder(Namespace model) {
+                this.avatar = model.avatar;
+                this.createdAt = model.createdAt;
+                this.description = model.description;
+                this.id = model.id;
+                this.name = model.name;
+                this.ownerId = model.ownerId;
+                this.path = model.path;
+                this._public = model._public;
+                this.updatedAt = model.updatedAt;
+                this.visibilityLevel = model.visibilityLevel;
+            } 
 
             /**
              * avatar.
@@ -613,6 +644,31 @@ public class CreateRepositoryResponseBody extends TeaModel {
             private String sshUrlToRepo; 
             private String visibilityLevel; 
             private String webUrl; 
+
+            private Builder() {
+            } 
+
+            private Builder(Result model) {
+                this.importFromSvn = model.importFromSvn;
+                this.archived = model.archived;
+                this.avatarUrl = model.avatarUrl;
+                this.createdAt = model.createdAt;
+                this.creatorId = model.creatorId;
+                this.defaultBranch = model.defaultBranch;
+                this.demoProject = model.demoProject;
+                this.description = model.description;
+                this.httpUrlToRepo = model.httpUrlToRepo;
+                this.id = model.id;
+                this.lastActivityAt = model.lastActivityAt;
+                this.name = model.name;
+                this.nameWithNamespace = model.nameWithNamespace;
+                this.namespace = model.namespace;
+                this.path = model.path;
+                this.pathWithNamespace = model.pathWithNamespace;
+                this.sshUrlToRepo = model.sshUrlToRepo;
+                this.visibilityLevel = model.visibilityLevel;
+                this.webUrl = model.webUrl;
+            } 
 
             /**
              * Import_from_svn.

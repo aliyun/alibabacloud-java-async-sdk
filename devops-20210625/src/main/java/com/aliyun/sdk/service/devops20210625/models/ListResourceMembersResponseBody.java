@@ -48,6 +48,10 @@ public class ListResourceMembersResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return errorCode
      */
@@ -89,6 +93,17 @@ public class ListResourceMembersResponseBody extends TeaModel {
         private String requestId; 
         private java.util.List<ResourceMembers> resourceMembers; 
         private Boolean success; 
+
+        private Builder() {
+        } 
+
+        private Builder(ListResourceMembersResponseBody model) {
+            this.errorCode = model.errorCode;
+            this.errorMessage = model.errorMessage;
+            this.requestId = model.requestId;
+            this.resourceMembers = model.resourceMembers;
+            this.success = model.success;
+        } 
 
         /**
          * errorCode.
@@ -191,6 +206,15 @@ public class ListResourceMembersResponseBody extends TeaModel {
             private String accountId; 
             private String roleName; 
             private String username; 
+
+            private Builder() {
+            } 
+
+            private Builder(ResourceMembers model) {
+                this.accountId = model.accountId;
+                this.roleName = model.roleName;
+                this.username = model.username;
+            } 
 
             /**
              * accountId.

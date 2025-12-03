@@ -48,6 +48,10 @@ public class DeletePushRuleResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return errorCode
      */
@@ -89,6 +93,17 @@ public class DeletePushRuleResponseBody extends TeaModel {
         private String requestId; 
         private Result result; 
         private String success; 
+
+        private Builder() {
+        } 
+
+        private Builder(DeletePushRuleResponseBody model) {
+            this.errorCode = model.errorCode;
+            this.errorMessage = model.errorMessage;
+            this.requestId = model.requestId;
+            this.result = model.result;
+            this.success = model.success;
+        } 
 
         /**
          * errorCode.
@@ -167,6 +182,13 @@ public class DeletePushRuleResponseBody extends TeaModel {
 
         public static final class Builder {
             private Boolean result; 
+
+            private Builder() {
+            } 
+
+            private Builder(Result model) {
+                this.result = model.result;
+            } 
 
             /**
              * result.

@@ -48,6 +48,10 @@ public class ListRepositoryMemberWithInheritedResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return errorCode
      */
@@ -89,6 +93,17 @@ public class ListRepositoryMemberWithInheritedResponseBody extends TeaModel {
         private String requestId; 
         private java.util.List<Result> result; 
         private Boolean success; 
+
+        private Builder() {
+        } 
+
+        private Builder(ListRepositoryMemberWithInheritedResponseBody model) {
+            this.errorCode = model.errorCode;
+            this.errorMessage = model.errorMessage;
+            this.requestId = model.requestId;
+            this.result = model.result;
+            this.success = model.success;
+        } 
 
         /**
          * errorCode.
@@ -239,6 +254,19 @@ public class ListRepositoryMemberWithInheritedResponseBody extends TeaModel {
             private String pathWithNamespace; 
             private String type; 
             private String visibilityLevel; 
+
+            private Builder() {
+            } 
+
+            private Builder(Inherited model) {
+                this.id = model.id;
+                this.name = model.name;
+                this.nameWithNamespace = model.nameWithNamespace;
+                this.path = model.path;
+                this.pathWithNamespace = model.pathWithNamespace;
+                this.type = model.type;
+                this.visibilityLevel = model.visibilityLevel;
+            } 
 
             /**
              * <p>id</p>
@@ -418,6 +446,20 @@ public class ListRepositoryMemberWithInheritedResponseBody extends TeaModel {
             private String name; 
             private String state; 
             private String username; 
+
+            private Builder() {
+            } 
+
+            private Builder(Result model) {
+                this.accessLevel = model.accessLevel;
+                this.avatarUrl = model.avatarUrl;
+                this.email = model.email;
+                this.id = model.id;
+                this.inherited = model.inherited;
+                this.name = model.name;
+                this.state = model.state;
+                this.username = model.username;
+            } 
 
             /**
              * accessLevel.

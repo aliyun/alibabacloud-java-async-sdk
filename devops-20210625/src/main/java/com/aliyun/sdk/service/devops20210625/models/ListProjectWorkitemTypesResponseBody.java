@@ -48,6 +48,10 @@ public class ListProjectWorkitemTypesResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return errorCode
      */
@@ -89,6 +93,17 @@ public class ListProjectWorkitemTypesResponseBody extends TeaModel {
         private String requestId; 
         private Boolean success; 
         private java.util.List<WorkitemTypes> workitemTypes; 
+
+        private Builder() {
+        } 
+
+        private Builder(ListProjectWorkitemTypesResponseBody model) {
+            this.errorCode = model.errorCode;
+            this.errorMessage = model.errorMessage;
+            this.requestId = model.requestId;
+            this.success = model.success;
+            this.workitemTypes = model.workitemTypes;
+        } 
 
         /**
          * errorCode.
@@ -299,6 +314,24 @@ public class ListProjectWorkitemTypesResponseBody extends TeaModel {
             private String name; 
             private String nameEn; 
             private Boolean systemDefault; 
+
+            private Builder() {
+            } 
+
+            private Builder(WorkitemTypes model) {
+                this.addUser = model.addUser;
+                this.categoryIdentifier = model.categoryIdentifier;
+                this.creator = model.creator;
+                this.defaultType = model.defaultType;
+                this.description = model.description;
+                this.enable = model.enable;
+                this.gmtAdd = model.gmtAdd;
+                this.gmtCreate = model.gmtCreate;
+                this.identifier = model.identifier;
+                this.name = model.name;
+                this.nameEn = model.nameEn;
+                this.systemDefault = model.systemDefault;
+            } 
 
             /**
              * addUser.

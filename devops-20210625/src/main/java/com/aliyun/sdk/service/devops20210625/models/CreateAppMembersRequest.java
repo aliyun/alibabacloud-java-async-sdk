@@ -49,7 +49,7 @@ public class CreateAppMembersRequest extends Request {
         return builder().build();
     }
 
-    @Override
+@Override
     public Builder toBuilder() {
         return new Builder(this);
     }
@@ -186,6 +186,14 @@ public class CreateAppMembersRequest extends Request {
         public static final class Builder {
             private String id; 
             private String type; 
+
+            private Builder() {
+            } 
+
+            private Builder(PlayerList model) {
+                this.id = model.id;
+                this.type = model.type;
+            } 
 
             /**
              * id.

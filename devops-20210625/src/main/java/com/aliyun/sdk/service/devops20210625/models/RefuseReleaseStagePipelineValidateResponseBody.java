@@ -32,6 +32,10 @@ public class RefuseReleaseStagePipelineValidateResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return success
      */
@@ -41,6 +45,13 @@ public class RefuseReleaseStagePipelineValidateResponseBody extends TeaModel {
 
     public static final class Builder {
         private Boolean success; 
+
+        private Builder() {
+        } 
+
+        private Builder(RefuseReleaseStagePipelineValidateResponseBody model) {
+            this.success = model.success;
+        } 
 
         /**
          * success.

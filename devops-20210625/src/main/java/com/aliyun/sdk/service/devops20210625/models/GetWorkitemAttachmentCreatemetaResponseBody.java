@@ -48,6 +48,10 @@ public class GetWorkitemAttachmentCreatemetaResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return errorCode
      */
@@ -89,6 +93,17 @@ public class GetWorkitemAttachmentCreatemetaResponseBody extends TeaModel {
         private String requestId; 
         private String success; 
         private UploadInfo uploadInfo; 
+
+        private Builder() {
+        } 
+
+        private Builder(GetWorkitemAttachmentCreatemetaResponseBody model) {
+            this.errorCode = model.errorCode;
+            this.errorMessage = model.errorMessage;
+            this.requestId = model.requestId;
+            this.success = model.success;
+            this.uploadInfo = model.uploadInfo;
+        } 
 
         /**
          * errorCode.
@@ -215,6 +230,17 @@ public class GetWorkitemAttachmentCreatemetaResponseBody extends TeaModel {
             private String host; 
             private String policy; 
             private String signature; 
+
+            private Builder() {
+            } 
+
+            private Builder(UploadInfo model) {
+                this.accessid = model.accessid;
+                this.dir = model.dir;
+                this.host = model.host;
+                this.policy = model.policy;
+                this.signature = model.signature;
+            } 
 
             /**
              * accessid.

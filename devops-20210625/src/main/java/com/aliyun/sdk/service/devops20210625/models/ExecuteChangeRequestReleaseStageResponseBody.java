@@ -40,6 +40,10 @@ public class ExecuteChangeRequestReleaseStageResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return object
      */
@@ -65,6 +69,15 @@ public class ExecuteChangeRequestReleaseStageResponseBody extends TeaModel {
         private Long object; 
         private Long pipelineId; 
         private Long pipelineRunId; 
+
+        private Builder() {
+        } 
+
+        private Builder(ExecuteChangeRequestReleaseStageResponseBody model) {
+            this.object = model.object;
+            this.pipelineId = model.pipelineId;
+            this.pipelineRunId = model.pipelineRunId;
+        } 
 
         /**
          * object.

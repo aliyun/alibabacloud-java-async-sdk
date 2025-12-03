@@ -48,6 +48,10 @@ public class ListProjectTemplatesResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return errorCode
      */
@@ -89,6 +93,17 @@ public class ListProjectTemplatesResponseBody extends TeaModel {
         private String requestId; 
         private Boolean success; 
         private java.util.List<Templates> templates; 
+
+        private Builder() {
+        } 
+
+        private Builder(ListProjectTemplatesResponseBody model) {
+            this.errorCode = model.errorCode;
+            this.errorMsg = model.errorMsg;
+            this.requestId = model.requestId;
+            this.success = model.success;
+            this.templates = model.templates;
+        } 
 
         /**
          * errorCode.
@@ -335,6 +350,27 @@ public class ListProjectTemplatesResponseBody extends TeaModel {
             private String spaceIdentifier; 
             private String spaceType; 
             private Long type; 
+
+            private Builder() {
+            } 
+
+            private Builder(Templates model) {
+                this.copyFrom = model.copyFrom;
+                this.creator = model.creator;
+                this.description = model.description;
+                this.gmtCreate = model.gmtCreate;
+                this.gmtModified = model.gmtModified;
+                this.icon = model.icon;
+                this.identifier = model.identifier;
+                this.modifier = model.modifier;
+                this.name = model.name;
+                this.nameEn = model.nameEn;
+                this.resourceCategory = model.resourceCategory;
+                this.resourceType = model.resourceType;
+                this.spaceIdentifier = model.spaceIdentifier;
+                this.spaceType = model.spaceType;
+                this.type = model.type;
+            } 
 
             /**
              * copyFrom.

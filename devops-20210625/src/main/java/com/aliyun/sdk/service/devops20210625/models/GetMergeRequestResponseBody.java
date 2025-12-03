@@ -48,6 +48,10 @@ public class GetMergeRequestResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return errorCode
      */
@@ -89,6 +93,17 @@ public class GetMergeRequestResponseBody extends TeaModel {
         private String requestId; 
         private Result result; 
         private Boolean success; 
+
+        private Builder() {
+        } 
+
+        private Builder(GetMergeRequestResponseBody model) {
+            this.errorCode = model.errorCode;
+            this.errorMessage = model.errorMessage;
+            this.requestId = model.requestId;
+            this.result = model.result;
+            this.success = model.success;
+        } 
 
         /**
          * errorCode.
@@ -227,6 +242,18 @@ public class GetMergeRequestResponseBody extends TeaModel {
             private String name; 
             private String state; 
             private String username; 
+
+            private Builder() {
+            } 
+
+            private Builder(Author model) {
+                this.avatarUrl = model.avatarUrl;
+                this.email = model.email;
+                this.id = model.id;
+                this.name = model.name;
+                this.state = model.state;
+                this.username = model.username;
+            } 
 
             /**
              * avatarUrl.
@@ -423,6 +450,22 @@ public class GetMergeRequestResponseBody extends TeaModel {
             private String state; 
             private String username; 
 
+            private Builder() {
+            } 
+
+            private Builder(Reviewers model) {
+                this.avatarUrl = model.avatarUrl;
+                this.email = model.email;
+                this.hasCommented = model.hasCommented;
+                this.hasReviewed = model.hasReviewed;
+                this.id = model.id;
+                this.name = model.name;
+                this.reviewOpinionStatus = model.reviewOpinionStatus;
+                this.reviewTime = model.reviewTime;
+                this.state = model.state;
+                this.username = model.username;
+            } 
+
             /**
              * avatarUrl.
              */
@@ -602,6 +645,18 @@ public class GetMergeRequestResponseBody extends TeaModel {
             private String state; 
             private String username; 
 
+            private Builder() {
+            } 
+
+            private Builder(Subscribers model) {
+                this.avatarUrl = model.avatarUrl;
+                this.email = model.email;
+                this.id = model.id;
+                this.name = model.name;
+                this.state = model.state;
+                this.username = model.username;
+            } 
+
             /**
              * avatarUrl.
              */
@@ -701,6 +756,14 @@ public class GetMergeRequestResponseBody extends TeaModel {
             private String itemType; 
             private Boolean pass; 
 
+            private Builder() {
+            } 
+
+            private Builder(RequirementCheckItems model) {
+                this.itemType = model.itemType;
+                this.pass = model.pass;
+            } 
+
             /**
              * itemType.
              */
@@ -755,6 +818,13 @@ public class GetMergeRequestResponseBody extends TeaModel {
 
         public static final class Builder {
             private java.util.List<RequirementCheckItems> requirementCheckItems; 
+
+            private Builder() {
+            } 
+
+            private Builder(TodoList model) {
+                this.requirementCheckItems = model.requirementCheckItems;
+            } 
 
             /**
              * requirementCheckItems.
@@ -1114,6 +1184,39 @@ public class GetMergeRequestResponseBody extends TeaModel {
             private TodoList todoList; 
             private String updateTime; 
             private String webUrl; 
+
+            private Builder() {
+            } 
+
+            private Builder(Result model) {
+                this.ahead = model.ahead;
+                this.allRequirementsPass = model.allRequirementsPass;
+                this.author = model.author;
+                this.behind = model.behind;
+                this.createFrom = model.createFrom;
+                this.createTime = model.createTime;
+                this.description = model.description;
+                this.detailUrl = model.detailUrl;
+                this.localId = model.localId;
+                this.mergedRevision = model.mergedRevision;
+                this.mrBizId = model.mrBizId;
+                this.mrType = model.mrType;
+                this.projectId = model.projectId;
+                this.reviewers = model.reviewers;
+                this.sourceBranch = model.sourceBranch;
+                this.sourceProjectId = model.sourceProjectId;
+                this.status = model.status;
+                this.subscribers = model.subscribers;
+                this.supportMergeFastForwardOnly = model.supportMergeFastForwardOnly;
+                this.targetBranch = model.targetBranch;
+                this.targetProjectId = model.targetProjectId;
+                this.targetProjectNameWithNamespace = model.targetProjectNameWithNamespace;
+                this.targetProjectPathWithNamespace = model.targetProjectPathWithNamespace;
+                this.title = model.title;
+                this.todoList = model.todoList;
+                this.updateTime = model.updateTime;
+                this.webUrl = model.webUrl;
+            } 
 
             /**
              * ahead.

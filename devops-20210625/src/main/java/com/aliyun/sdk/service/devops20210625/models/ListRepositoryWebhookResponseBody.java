@@ -52,6 +52,10 @@ public class ListRepositoryWebhookResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return errorCode
      */
@@ -101,6 +105,18 @@ public class ListRepositoryWebhookResponseBody extends TeaModel {
         private java.util.List<Result> result; 
         private Boolean success; 
         private Long total; 
+
+        private Builder() {
+        } 
+
+        private Builder(ListRepositoryWebhookResponseBody model) {
+            this.errorCode = model.errorCode;
+            this.errorMessage = model.errorMessage;
+            this.requestId = model.requestId;
+            this.result = model.result;
+            this.success = model.success;
+            this.total = model.total;
+        } 
 
         /**
          * errorCode.
@@ -319,6 +335,24 @@ public class ListRepositoryWebhookResponseBody extends TeaModel {
             private String secretToken; 
             private Boolean tagPushEvents; 
             private String url; 
+
+            private Builder() {
+            } 
+
+            private Builder(Result model) {
+                this.createdAt = model.createdAt;
+                this.description = model.description;
+                this.enableSslVerification = model.enableSslVerification;
+                this.id = model.id;
+                this.lastTestResult = model.lastTestResult;
+                this.mergeRequestsEvents = model.mergeRequestsEvents;
+                this.noteEvents = model.noteEvents;
+                this.projectId = model.projectId;
+                this.pushEvents = model.pushEvents;
+                this.secretToken = model.secretToken;
+                this.tagPushEvents = model.tagPushEvents;
+                this.url = model.url;
+            } 
 
             /**
              * createdAt.

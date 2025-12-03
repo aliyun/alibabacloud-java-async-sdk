@@ -48,6 +48,10 @@ public class CreateWorkitemV2ResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return errorCode
      */
@@ -89,6 +93,17 @@ public class CreateWorkitemV2ResponseBody extends TeaModel {
         private String requestId; 
         private String success; 
         private String workitemIdentifier; 
+
+        private Builder() {
+        } 
+
+        private Builder(CreateWorkitemV2ResponseBody model) {
+            this.errorCode = model.errorCode;
+            this.errorMessage = model.errorMessage;
+            this.requestId = model.requestId;
+            this.success = model.success;
+            this.workitemIdentifier = model.workitemIdentifier;
+        } 
 
         /**
          * errorCode.

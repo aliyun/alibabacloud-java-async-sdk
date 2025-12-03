@@ -48,6 +48,10 @@ public class ListWorkItemWorkFlowStatusResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return errorCode
      */
@@ -89,6 +93,17 @@ public class ListWorkItemWorkFlowStatusResponseBody extends TeaModel {
         private String requestId; 
         private java.util.List<Statuses> statuses; 
         private Boolean success; 
+
+        private Builder() {
+        } 
+
+        private Builder(ListWorkItemWorkFlowStatusResponseBody model) {
+            this.errorCode = model.errorCode;
+            this.errorMessage = model.errorMessage;
+            this.requestId = model.requestId;
+            this.statuses = model.statuses;
+            this.success = model.success;
+        } 
 
         /**
          * errorCode.
@@ -287,6 +302,23 @@ public class ListWorkItemWorkFlowStatusResponseBody extends TeaModel {
             private String source; 
             private String workflowStageIdentifier; 
             private String workflowStageName; 
+
+            private Builder() {
+            } 
+
+            private Builder(Statuses model) {
+                this.creator = model.creator;
+                this.description = model.description;
+                this.gmtCreate = model.gmtCreate;
+                this.gmtModified = model.gmtModified;
+                this.identifier = model.identifier;
+                this.modifier = model.modifier;
+                this.name = model.name;
+                this.resourceType = model.resourceType;
+                this.source = model.source;
+                this.workflowStageIdentifier = model.workflowStageIdentifier;
+                this.workflowStageName = model.workflowStageName;
+            } 
 
             /**
              * creator.

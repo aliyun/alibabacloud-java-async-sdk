@@ -48,6 +48,10 @@ public class ListJoinedOrganizationsResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return errorCode
      */
@@ -89,6 +93,17 @@ public class ListJoinedOrganizationsResponseBody extends TeaModel {
         private java.util.List<Organizations> organizations; 
         private String requestId; 
         private Boolean success; 
+
+        private Builder() {
+        } 
+
+        private Builder(ListJoinedOrganizationsResponseBody model) {
+            this.errorCode = model.errorCode;
+            this.errorMessage = model.errorMessage;
+            this.organizations = model.organizations;
+            this.requestId = model.requestId;
+            this.success = model.success;
+        } 
 
         /**
          * errorCode.
@@ -191,6 +206,15 @@ public class ListJoinedOrganizationsResponseBody extends TeaModel {
             private String id; 
             private Boolean isOrgAdmin; 
             private String name; 
+
+            private Builder() {
+            } 
+
+            private Builder(Organizations model) {
+                this.id = model.id;
+                this.isOrgAdmin = model.isOrgAdmin;
+                this.name = model.name;
+            } 
 
             /**
              * id.

@@ -48,6 +48,10 @@ public class GetMergeRequestChangeTreeResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return errorCode
      */
@@ -89,6 +93,17 @@ public class GetMergeRequestChangeTreeResponseBody extends TeaModel {
         private String requestId; 
         private Result result; 
         private Boolean success; 
+
+        private Builder() {
+        } 
+
+        private Builder(GetMergeRequestChangeTreeResponseBody model) {
+            this.errorCode = model.errorCode;
+            this.errorMessage = model.errorMessage;
+            this.requestId = model.requestId;
+            this.result = model.result;
+            this.success = model.success;
+        } 
 
         /**
          * errorCode.
@@ -252,6 +267,20 @@ public class GetMergeRequestChangeTreeResponseBody extends TeaModel {
             private String oldPath; 
             private Boolean renamedFile; 
 
+            private Builder() {
+            } 
+
+            private Builder(ChangedFilesInfos model) {
+                this.addLines = model.addLines;
+                this.binaryFile = model.binaryFile;
+                this.delLines = model.delLines;
+                this.deletedFile = model.deletedFile;
+                this.newFile = model.newFile;
+                this.newPath = model.newPath;
+                this.oldPath = model.oldPath;
+                this.renamedFile = model.renamedFile;
+            } 
+
             /**
              * addLines.
              */
@@ -390,6 +419,16 @@ public class GetMergeRequestChangeTreeResponseBody extends TeaModel {
             private java.util.List<ChangedFilesInfos> changedFilesInfos; 
             private Long totalAddLines; 
             private Long totalDelLines; 
+
+            private Builder() {
+            } 
+
+            private Builder(Result model) {
+                this.changedFilesCount = model.changedFilesCount;
+                this.changedFilesInfos = model.changedFilesInfos;
+                this.totalAddLines = model.totalAddLines;
+                this.totalDelLines = model.totalDelLines;
+            } 
 
             /**
              * changedFilesCount.

@@ -56,6 +56,10 @@ public class ListVariableGroupsResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return errorCode
      */
@@ -113,6 +117,19 @@ public class ListVariableGroupsResponseBody extends TeaModel {
         private Boolean success; 
         private Long totalCount; 
         private java.util.List<VariableGroups> variableGroups; 
+
+        private Builder() {
+        } 
+
+        private Builder(ListVariableGroupsResponseBody model) {
+            this.errorCode = model.errorCode;
+            this.errorMessage = model.errorMessage;
+            this.nextToken = model.nextToken;
+            this.requestId = model.requestId;
+            this.success = model.success;
+            this.totalCount = model.totalCount;
+            this.variableGroups = model.variableGroups;
+        } 
 
         /**
          * errorCode.
@@ -220,6 +237,14 @@ public class ListVariableGroupsResponseBody extends TeaModel {
             private Long id; 
             private String name; 
 
+            private Builder() {
+            } 
+
+            private Builder(RelatedPipelines model) {
+                this.id = model.id;
+                this.name = model.name;
+            } 
+
             /**
              * id.
              */
@@ -298,6 +323,15 @@ public class ListVariableGroupsResponseBody extends TeaModel {
             private Boolean isEncrypted; 
             private String name; 
             private String value; 
+
+            private Builder() {
+            } 
+
+            private Builder(Variables model) {
+                this.isEncrypted = model.isEncrypted;
+                this.name = model.name;
+                this.value = model.value;
+            } 
 
             /**
              * isEncrypted.
@@ -457,6 +491,21 @@ public class ListVariableGroupsResponseBody extends TeaModel {
             private java.util.List<RelatedPipelines> relatedPipelines; 
             private Long updateTime; 
             private java.util.List<Variables> variables; 
+
+            private Builder() {
+            } 
+
+            private Builder(VariableGroups model) {
+                this.createTime = model.createTime;
+                this.creatorAccountId = model.creatorAccountId;
+                this.description = model.description;
+                this.id = model.id;
+                this.modifierAccountId = model.modifierAccountId;
+                this.name = model.name;
+                this.relatedPipelines = model.relatedPipelines;
+                this.updateTime = model.updateTime;
+                this.variables = model.variables;
+            } 
 
             /**
              * createTime.

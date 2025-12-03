@@ -48,6 +48,10 @@ public class UpdateTestCaseResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return testcase
      */
@@ -89,6 +93,17 @@ public class UpdateTestCaseResponseBody extends TeaModel {
         private String errorMsg; 
         private String requestId; 
         private Boolean success; 
+
+        private Builder() {
+        } 
+
+        private Builder(UpdateTestCaseResponseBody model) {
+            this.testcase = model.testcase;
+            this.errorCode = model.errorCode;
+            this.errorMsg = model.errorMsg;
+            this.requestId = model.requestId;
+            this.success = model.success;
+        } 
 
         /**
          * Testcase.
@@ -195,6 +210,15 @@ public class UpdateTestCaseResponseBody extends TeaModel {
             private String name; 
             private String tbRoleId; 
 
+            private Builder() {
+            } 
+
+            private Builder(AssignedTo model) {
+                this.assignIdentifier = model.assignIdentifier;
+                this.name = model.name;
+                this.tbRoleId = model.tbRoleId;
+            } 
+
             /**
              * assignIdentifier.
              */
@@ -269,6 +293,14 @@ public class UpdateTestCaseResponseBody extends TeaModel {
         public static final class Builder {
             private String createIdentifier; 
             private String name; 
+
+            private Builder() {
+            } 
+
+            private Builder(Creator model) {
+                this.createIdentifier = model.createIdentifier;
+                this.name = model.name;
+            } 
 
             /**
              * createIdentifier.
@@ -348,6 +380,15 @@ public class UpdateTestCaseResponseBody extends TeaModel {
             private String expectContent; 
             private String expectContentType; 
             private String expectIdentifier; 
+
+            private Builder() {
+            } 
+
+            private Builder(ExpectedResult model) {
+                this.expectContent = model.expectContent;
+                this.expectContentType = model.expectContentType;
+                this.expectIdentifier = model.expectIdentifier;
+            } 
 
             /**
              * expectContent.
@@ -436,6 +477,15 @@ public class UpdateTestCaseResponseBody extends TeaModel {
             private String preContentType; 
             private String preIdentifier; 
 
+            private Builder() {
+            } 
+
+            private Builder(Precondition model) {
+                this.preContent = model.preContent;
+                this.preContentType = model.preContentType;
+                this.preIdentifier = model.preIdentifier;
+            } 
+
             /**
              * preContent.
              */
@@ -522,6 +572,15 @@ public class UpdateTestCaseResponseBody extends TeaModel {
             private String stepContent; 
             private String stepContentType; 
             private String stepIdentifier; 
+
+            private Builder() {
+            } 
+
+            private Builder(StepContent model) {
+                this.stepContent = model.stepContent;
+                this.stepContentType = model.stepContentType;
+                this.stepIdentifier = model.stepIdentifier;
+            } 
 
             /**
              * stepContent.
@@ -621,6 +680,16 @@ public class UpdateTestCaseResponseBody extends TeaModel {
             private Precondition precondition; 
             private StepContent stepContent; 
             private String stepType; 
+
+            private Builder() {
+            } 
+
+            private Builder(DetailInfo model) {
+                this.expectedResult = model.expectedResult;
+                this.precondition = model.precondition;
+                this.stepContent = model.stepContent;
+                this.stepType = model.stepType;
+            } 
 
             /**
              * expectedResult.
@@ -729,6 +798,16 @@ public class UpdateTestCaseResponseBody extends TeaModel {
             private String name; 
             private java.util.List<String> pathName; 
 
+            private Builder() {
+            } 
+
+            private Builder(Directory model) {
+                this.childIdentifier = model.childIdentifier;
+                this.directoryIdentifier = model.directoryIdentifier;
+                this.name = model.name;
+                this.pathName = model.pathName;
+            } 
+
             /**
              * childIdentifier.
              */
@@ -811,6 +890,14 @@ public class UpdateTestCaseResponseBody extends TeaModel {
         public static final class Builder {
             private String modifyIdentifier; 
             private String name; 
+
+            private Builder() {
+            } 
+
+            private Builder(Modifier model) {
+                this.modifyIdentifier = model.modifyIdentifier;
+                this.name = model.name;
+            } 
 
             /**
              * modifyIdentifier.
@@ -974,6 +1061,22 @@ public class UpdateTestCaseResponseBody extends TeaModel {
             private String spaceIdentifier; 
             private String spaceType; 
             private String subject; 
+
+            private Builder() {
+            } 
+
+            private Builder(Testcase model) {
+                this.assignedTo = model.assignedTo;
+                this.categoryIdentifier = model.categoryIdentifier;
+                this.creator = model.creator;
+                this.detailInfo = model.detailInfo;
+                this.directory = model.directory;
+                this.identifier = model.identifier;
+                this.modifier = model.modifier;
+                this.spaceIdentifier = model.spaceIdentifier;
+                this.spaceType = model.spaceType;
+                this.subject = model.subject;
+            } 
 
             /**
              * assignedTo.

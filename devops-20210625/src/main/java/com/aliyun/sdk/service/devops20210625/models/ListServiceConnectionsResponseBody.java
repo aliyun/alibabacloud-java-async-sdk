@@ -48,6 +48,10 @@ public class ListServiceConnectionsResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return errorCode
      */
@@ -89,6 +93,17 @@ public class ListServiceConnectionsResponseBody extends TeaModel {
         private String requestId; 
         private java.util.List<ServiceConnections> serviceConnections; 
         private Boolean success; 
+
+        private Builder() {
+        } 
+
+        private Builder(ListServiceConnectionsResponseBody model) {
+            this.errorCode = model.errorCode;
+            this.errorMessage = model.errorMessage;
+            this.requestId = model.requestId;
+            this.serviceConnections = model.serviceConnections;
+            this.success = model.success;
+        } 
 
         /**
          * errorCode.
@@ -227,6 +242,18 @@ public class ListServiceConnectionsResponseBody extends TeaModel {
             private Long ownerAccountId; 
             private String type; 
             private String uuid; 
+
+            private Builder() {
+            } 
+
+            private Builder(ServiceConnections model) {
+                this.createTime = model.createTime;
+                this.id = model.id;
+                this.name = model.name;
+                this.ownerAccountId = model.ownerAccountId;
+                this.type = model.type;
+                this.uuid = model.uuid;
+            } 
 
             /**
              * createTime.

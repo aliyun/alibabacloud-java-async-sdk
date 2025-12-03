@@ -48,6 +48,10 @@ public class UpdateRepositoryMemberResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return errorCode
      */
@@ -89,6 +93,17 @@ public class UpdateRepositoryMemberResponseBody extends TeaModel {
         private String requestId; 
         private Result result; 
         private Boolean success; 
+
+        private Builder() {
+        } 
+
+        private Builder(UpdateRepositoryMemberResponseBody model) {
+            this.errorCode = model.errorCode;
+            this.errorMessage = model.errorMessage;
+            this.requestId = model.requestId;
+            this.result = model.result;
+            this.success = model.success;
+        } 
 
         /**
          * errorCode.
@@ -311,6 +326,25 @@ public class UpdateRepositoryMemberResponseBody extends TeaModel {
             private String state; 
             private String username; 
             private String webUrl; 
+
+            private Builder() {
+            } 
+
+            private Builder(Result model) {
+                this.accessLevel = model.accessLevel;
+                this.avatarUrl = model.avatarUrl;
+                this.email = model.email;
+                this.expireAt = model.expireAt;
+                this.id = model.id;
+                this.memberName = model.memberName;
+                this.memberType = model.memberType;
+                this.name = model.name;
+                this.sourceId = model.sourceId;
+                this.sourceType = model.sourceType;
+                this.state = model.state;
+                this.username = model.username;
+                this.webUrl = model.webUrl;
+            } 
 
             /**
              * accessLevel.

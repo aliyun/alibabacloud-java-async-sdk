@@ -44,6 +44,10 @@ public class ExportInsightWorkitemStatusResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return maxResults
      */
@@ -77,6 +81,16 @@ public class ExportInsightWorkitemStatusResponseBody extends TeaModel {
         private String nextToken; 
         private java.util.List<Result> result; 
         private Long totalCount; 
+
+        private Builder() {
+        } 
+
+        private Builder(ExportInsightWorkitemStatusResponseBody model) {
+            this.maxResults = model.maxResults;
+            this.nextToken = model.nextToken;
+            this.result = model.result;
+            this.totalCount = model.totalCount;
+        } 
 
         /**
          * maxResults.
@@ -543,6 +557,46 @@ public class ExportInsightWorkitemStatusResponseBody extends TeaModel {
             private String versions; 
             private Long workTime; 
             private String workitemId; 
+
+            private Builder() {
+            } 
+
+            private Builder(Result model) {
+                this.assignedToId = model.assignedToId;
+                this.creatorId = model.creatorId;
+                this.expectedWorkTime = model.expectedWorkTime;
+                this.gmtClosed = model.gmtClosed;
+                this.gmtCreate = model.gmtCreate;
+                this.gmtDue = model.gmtDue;
+                this.gmtModified = model.gmtModified;
+                this.gmtStart = model.gmtStart;
+                this.gmtTodo = model.gmtTodo;
+                this.id = model.id;
+                this.isArchived = model.isArchived;
+                this.isDeleted = model.isDeleted;
+                this.isDone = model.isDone;
+                this.organizationId = model.organizationId;
+                this.parentId = model.parentId;
+                this.participantIds = model.participantIds;
+                this.phase = model.phase;
+                this.priority = model.priority;
+                this.productId = model.productId;
+                this.projectId = model.projectId;
+                this.serialNumber = model.serialNumber;
+                this.source = model.source;
+                this.sprintId = model.sprintId;
+                this.stage = model.stage;
+                this.status = model.status;
+                this.statusId = model.statusId;
+                this.storyPoint = model.storyPoint;
+                this.subType = model.subType;
+                this.subject = model.subject;
+                this.type = model.type;
+                this.versionId = model.versionId;
+                this.versions = model.versions;
+                this.workTime = model.workTime;
+                this.workitemId = model.workitemId;
+            } 
 
             /**
              * assignedToId.

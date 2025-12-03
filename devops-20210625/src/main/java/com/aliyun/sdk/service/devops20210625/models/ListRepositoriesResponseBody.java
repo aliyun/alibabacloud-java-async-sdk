@@ -52,6 +52,10 @@ public class ListRepositoriesResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return errorCode
      */
@@ -101,6 +105,18 @@ public class ListRepositoriesResponseBody extends TeaModel {
         private java.util.List<Result> result; 
         private Boolean success; 
         private Long total; 
+
+        private Builder() {
+        } 
+
+        private Builder(ListRepositoriesResponseBody model) {
+            this.errorCode = model.errorCode;
+            this.errorMessage = model.errorMessage;
+            this.requestId = model.requestId;
+            this.result = model.result;
+            this.success = model.success;
+            this.total = model.total;
+        } 
 
         /**
          * errorCode.
@@ -391,6 +407,30 @@ public class ListRepositoriesResponseBody extends TeaModel {
             private String updatedAt; 
             private String visibilityLevel; 
             private String webUrl; 
+
+            private Builder() {
+            } 
+
+            private Builder(Result model) {
+                this.id = model.id;
+                this.accessLevel = model.accessLevel;
+                this.archive = model.archive;
+                this.avatarUrl = model.avatarUrl;
+                this.createdAt = model.createdAt;
+                this.description = model.description;
+                this.importStatus = model.importStatus;
+                this.lastActivityAt = model.lastActivityAt;
+                this.name = model.name;
+                this.nameWithNamespace = model.nameWithNamespace;
+                this.namespaceId = model.namespaceId;
+                this.path = model.path;
+                this.pathWithNamespace = model.pathWithNamespace;
+                this.star = model.star;
+                this.starCount = model.starCount;
+                this.updatedAt = model.updatedAt;
+                this.visibilityLevel = model.visibilityLevel;
+                this.webUrl = model.webUrl;
+            } 
 
             /**
              * Id.

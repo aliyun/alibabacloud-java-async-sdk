@@ -57,7 +57,7 @@ public class ExportInsightWorkitemStatusJoinWorkitemDefectExtraRequest extends R
         return builder().build();
     }
 
-    @Override
+@Override
     public Builder toBuilder() {
         return new Builder(this);
     }

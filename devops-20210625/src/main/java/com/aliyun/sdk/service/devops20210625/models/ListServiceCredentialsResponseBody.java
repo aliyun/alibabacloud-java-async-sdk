@@ -48,6 +48,10 @@ public class ListServiceCredentialsResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return errorCode
      */
@@ -89,6 +93,17 @@ public class ListServiceCredentialsResponseBody extends TeaModel {
         private String requestId; 
         private java.util.List<ServiceCredentials> serviceCredentials; 
         private Boolean success; 
+
+        private Builder() {
+        } 
+
+        private Builder(ListServiceCredentialsResponseBody model) {
+            this.errorCode = model.errorCode;
+            this.errorMessage = model.errorMessage;
+            this.requestId = model.requestId;
+            this.serviceCredentials = model.serviceCredentials;
+            this.success = model.success;
+        } 
 
         /**
          * errorCode.
@@ -203,6 +218,16 @@ public class ListServiceCredentialsResponseBody extends TeaModel {
             private String ownerName; 
             private String ownerStaffId; 
             private String type; 
+
+            private Builder() {
+            } 
+
+            private Builder(ServiceCredentials model) {
+                this.id = model.id;
+                this.ownerName = model.ownerName;
+                this.ownerStaffId = model.ownerStaffId;
+                this.type = model.type;
+            } 
 
             /**
              * id.

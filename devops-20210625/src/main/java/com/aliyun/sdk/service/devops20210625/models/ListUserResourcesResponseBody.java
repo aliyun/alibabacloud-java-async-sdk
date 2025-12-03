@@ -52,6 +52,10 @@ public class ListUserResourcesResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return errorCode
      */
@@ -101,6 +105,18 @@ public class ListUserResourcesResponseBody extends TeaModel {
         private java.util.List<Result> result; 
         private Boolean success; 
         private Long total; 
+
+        private Builder() {
+        } 
+
+        private Builder(ListUserResourcesResponseBody model) {
+            this.errorCode = model.errorCode;
+            this.errorMessage = model.errorMessage;
+            this.requestId = model.requestId;
+            this.result = model.result;
+            this.success = model.success;
+            this.total = model.total;
+        } 
 
         /**
          * errorCode.
@@ -308,6 +324,23 @@ public class ListUserResourcesResponseBody extends TeaModel {
             private String updatedAt; 
             private Integer visibilityLevel; 
 
+            private Builder() {
+            } 
+
+            private Builder(GroupInfo model) {
+                this.createdAt = model.createdAt;
+                this.description = model.description;
+                this.id = model.id;
+                this.name = model.name;
+                this.nameWithNamespace = model.nameWithNamespace;
+                this.ownerId = model.ownerId;
+                this.parentId = model.parentId;
+                this.path = model.path;
+                this.pathWithNamespace = model.pathWithNamespace;
+                this.updatedAt = model.updatedAt;
+                this.visibilityLevel = model.visibilityLevel;
+            } 
+
             /**
              * createdAt.
              */
@@ -483,6 +516,17 @@ public class ListUserResourcesResponseBody extends TeaModel {
             private Long sourceId; 
             private String sourceType; 
 
+            private Builder() {
+            } 
+
+            private Builder(GroupRole model) {
+                this.accessLevel = model.accessLevel;
+                this.cnRoleName = model.cnRoleName;
+                this.enRoleName = model.enRoleName;
+                this.sourceId = model.sourceId;
+                this.sourceType = model.sourceType;
+            } 
+
             /**
              * accessLevel.
              */
@@ -573,6 +617,14 @@ public class ListUserResourcesResponseBody extends TeaModel {
         public static final class Builder {
             private GroupInfo groupInfo; 
             private GroupRole groupRole; 
+
+            private Builder() {
+            } 
+
+            private Builder(GroupInfos model) {
+                this.groupInfo = model.groupInfo;
+                this.groupRole = model.groupRole;
+            } 
 
             /**
              * groupInfo.
@@ -797,6 +849,27 @@ public class ListUserResourcesResponseBody extends TeaModel {
             private String updatedAt; 
             private Integer visibilityLevel; 
 
+            private Builder() {
+            } 
+
+            private Builder(RepositoryInfo model) {
+                this.accessLevel = model.accessLevel;
+                this.archived = model.archived;
+                this.createdAt = model.createdAt;
+                this.creatorId = model.creatorId;
+                this.description = model.description;
+                this.encrypted = model.encrypted;
+                this.id = model.id;
+                this.lastActivityAt = model.lastActivityAt;
+                this.name = model.name;
+                this.nameWithNamespace = model.nameWithNamespace;
+                this.namespaceId = model.namespaceId;
+                this.path = model.path;
+                this.pathWithNamespace = model.pathWithNamespace;
+                this.updatedAt = model.updatedAt;
+                this.visibilityLevel = model.visibilityLevel;
+            } 
+
             /**
              * accessLevel.
              */
@@ -1004,6 +1077,17 @@ public class ListUserResourcesResponseBody extends TeaModel {
             private Long sourceId; 
             private String sourceType; 
 
+            private Builder() {
+            } 
+
+            private Builder(RepositoryRole model) {
+                this.accessLevel = model.accessLevel;
+                this.cnRoleName = model.cnRoleName;
+                this.enRoleName = model.enRoleName;
+                this.sourceId = model.sourceId;
+                this.sourceType = model.sourceType;
+            } 
+
             /**
              * accessLevel.
              */
@@ -1094,6 +1178,14 @@ public class ListUserResourcesResponseBody extends TeaModel {
         public static final class Builder {
             private RepositoryInfo repositoryInfo; 
             private RepositoryRole repositoryRole; 
+
+            private Builder() {
+            } 
+
+            private Builder(RepositoryInfos model) {
+                this.repositoryInfo = model.repositoryInfo;
+                this.repositoryRole = model.repositoryRole;
+            } 
 
             /**
              * repositoryInfo.
@@ -1210,6 +1302,18 @@ public class ListUserResourcesResponseBody extends TeaModel {
             private String state; 
             private String username; 
 
+            private Builder() {
+            } 
+
+            private Builder(UserInfo model) {
+                this.avatarUrl = model.avatarUrl;
+                this.email = model.email;
+                this.id = model.id;
+                this.name = model.name;
+                this.state = model.state;
+                this.username = model.username;
+            } 
+
             /**
              * avatarUrl.
              */
@@ -1320,6 +1424,15 @@ public class ListUserResourcesResponseBody extends TeaModel {
             private java.util.List<GroupInfos> groupInfos; 
             private java.util.List<RepositoryInfos> repositoryInfos; 
             private UserInfo userInfo; 
+
+            private Builder() {
+            } 
+
+            private Builder(Result model) {
+                this.groupInfos = model.groupInfos;
+                this.repositoryInfos = model.repositoryInfos;
+                this.userInfo = model.userInfo;
+            } 
 
             /**
              * groupInfos.

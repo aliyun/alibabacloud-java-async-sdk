@@ -37,7 +37,7 @@ public class ListAllReleaseWorkflowsResponse extends Response {
         return new BuilderImpl().build();
     }
 
-    @Override
+@Override
     public Builder toBuilder() {
         return new BuilderImpl(this);
     }
@@ -184,6 +184,15 @@ public class ListAllReleaseWorkflowsResponse extends Response {
             private String displayName; 
             private String type; 
 
+            private Builder() {
+            } 
+
+            private Builder(VariableGroups model) {
+                this.name = model.name;
+                this.displayName = model.displayName;
+                this.type = model.type;
+            } 
+
             /**
              * name.
              */
@@ -306,6 +315,18 @@ public class ListAllReleaseWorkflowsResponse extends Response {
             private String releaseWorkflowSn; 
             private String order; 
             private java.util.List<VariableGroups> variableGroups; 
+
+            private Builder() {
+            } 
+
+            private Builder(ReleaseStages model) {
+                this.appName = model.appName;
+                this.name = model.name;
+                this.sn = model.sn;
+                this.releaseWorkflowSn = model.releaseWorkflowSn;
+                this.order = model.order;
+                this.variableGroups = model.variableGroups;
+            } 
 
             /**
              * appName.
@@ -453,6 +474,18 @@ public class ListAllReleaseWorkflowsResponse extends Response {
             private String order; 
             private java.util.List<ReleaseStages> releaseStages; 
             private String note; 
+
+            private Builder() {
+            } 
+
+            private Builder(ListAllReleaseWorkflowsResponseBody model) {
+                this.appName = model.appName;
+                this.sn = model.sn;
+                this.name = model.name;
+                this.order = model.order;
+                this.releaseStages = model.releaseStages;
+                this.note = model.note;
+            } 
 
             /**
              * appName.

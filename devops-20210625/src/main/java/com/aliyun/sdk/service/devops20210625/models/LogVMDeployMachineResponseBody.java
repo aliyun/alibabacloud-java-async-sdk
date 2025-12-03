@@ -48,6 +48,10 @@ public class LogVMDeployMachineResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return deployMachineLog
      */
@@ -89,6 +93,17 @@ public class LogVMDeployMachineResponseBody extends TeaModel {
         private String errorMessage; 
         private String requestId; 
         private Boolean success; 
+
+        private Builder() {
+        } 
+
+        private Builder(LogVMDeployMachineResponseBody model) {
+            this.deployMachineLog = model.deployMachineLog;
+            this.errorCode = model.errorCode;
+            this.errorMessage = model.errorMessage;
+            this.requestId = model.requestId;
+            this.success = model.success;
+        } 
 
         /**
          * deployMachineLog.
@@ -215,6 +230,17 @@ public class LogVMDeployMachineResponseBody extends TeaModel {
             private Long deployEndTime; 
             private String deployLog; 
             private String deployLogPath; 
+
+            private Builder() {
+            } 
+
+            private Builder(DeployMachineLog model) {
+                this.aliyunRegion = model.aliyunRegion;
+                this.deployBeginTime = model.deployBeginTime;
+                this.deployEndTime = model.deployEndTime;
+                this.deployLog = model.deployLog;
+                this.deployLogPath = model.deployLogPath;
+            } 
 
             /**
              * aliyunRegion.

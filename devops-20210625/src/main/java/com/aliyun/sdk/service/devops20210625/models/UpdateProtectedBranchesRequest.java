@@ -87,7 +87,7 @@ public class UpdateProtectedBranchesRequest extends Request {
         return builder().build();
     }
 
-    @Override
+@Override
     public Builder toBuilder() {
         return new Builder(this);
     }
@@ -442,6 +442,21 @@ public class UpdateProtectedBranchesRequest extends Request {
             private String mrMode; 
             private String whiteList; 
 
+            private Builder() {
+            } 
+
+            private Builder(MergeRequestSetting model) {
+                this.allowMergeRequestRoles = model.allowMergeRequestRoles;
+                this.defaultAssignees = model.defaultAssignees;
+                this.isAllowSelfApproval = model.isAllowSelfApproval;
+                this.isRequireDiscussionProcessed = model.isRequireDiscussionProcessed;
+                this.isRequired = model.isRequired;
+                this.isResetApprovalWhenNewPush = model.isResetApprovalWhenNewPush;
+                this.minimumApproval = model.minimumApproval;
+                this.mrMode = model.mrMode;
+                this.whiteList = model.whiteList;
+            } 
+
             /**
              * allowMergeRequestRoles.
              */
@@ -565,6 +580,14 @@ public class UpdateProtectedBranchesRequest extends Request {
             private Boolean isRequired; 
             private String name; 
 
+            private Builder() {
+            } 
+
+            private Builder(CheckItems model) {
+                this.isRequired = model.isRequired;
+                this.name = model.name;
+            } 
+
             /**
              * isRequired.
              */
@@ -619,6 +642,13 @@ public class UpdateProtectedBranchesRequest extends Request {
 
         public static final class Builder {
             private java.util.List<CheckItems> checkItems; 
+
+            private Builder() {
+            } 
+
+            private Builder(CheckConfig model) {
+                this.checkItems = model.checkItems;
+            } 
 
             /**
              * checkItems.
@@ -703,6 +733,16 @@ public class UpdateProtectedBranchesRequest extends Request {
             private String message; 
             private String taskName; 
 
+            private Builder() {
+            } 
+
+            private Builder(CheckTaskQualityConfig model) {
+                this.bizNo = model.bizNo;
+                this.enabled = model.enabled;
+                this.message = model.message;
+                this.taskName = model.taskName;
+            } 
+
             /**
              * bizNo.
              */
@@ -786,6 +826,14 @@ public class UpdateProtectedBranchesRequest extends Request {
             private Boolean enabled; 
             private String message; 
 
+            private Builder() {
+            } 
+
+            private Builder(CodeGuidelinesDetection model) {
+                this.enabled = model.enabled;
+                this.message = model.message;
+            } 
+
             /**
              * enabled.
              */
@@ -852,6 +900,14 @@ public class UpdateProtectedBranchesRequest extends Request {
         public static final class Builder {
             private Boolean enabled; 
             private String message; 
+
+            private Builder() {
+            } 
+
+            private Builder(SensitiveInfoDetection model) {
+                this.enabled = model.enabled;
+                this.message = model.message;
+            } 
 
             /**
              * enabled.
@@ -955,6 +1011,17 @@ public class UpdateProtectedBranchesRequest extends Request {
             private CodeGuidelinesDetection codeGuidelinesDetection; 
             private Boolean isRequired; 
             private SensitiveInfoDetection sensitiveInfoDetection; 
+
+            private Builder() {
+            } 
+
+            private Builder(TestSettingDTO model) {
+                this.checkConfig = model.checkConfig;
+                this.checkTaskQualityConfig = model.checkTaskQualityConfig;
+                this.codeGuidelinesDetection = model.codeGuidelinesDetection;
+                this.isRequired = model.isRequired;
+                this.sensitiveInfoDetection = model.sensitiveInfoDetection;
+            } 
 
             /**
              * checkConfig.

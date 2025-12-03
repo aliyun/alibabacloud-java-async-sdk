@@ -48,6 +48,10 @@ public class ListMergeRequestCommentsResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return errorCode
      */
@@ -89,6 +93,17 @@ public class ListMergeRequestCommentsResponseBody extends TeaModel {
         private String requestId; 
         private java.util.List<Result> result; 
         private Boolean success; 
+
+        private Builder() {
+        } 
+
+        private Builder(ListMergeRequestCommentsResponseBody model) {
+            this.errorCode = model.errorCode;
+            this.errorMessage = model.errorMessage;
+            this.requestId = model.requestId;
+            this.result = model.result;
+            this.success = model.success;
+        } 
 
         /**
          * errorCode.
@@ -239,6 +254,19 @@ public class ListMergeRequestCommentsResponseBody extends TeaModel {
             private String name; 
             private String state; 
             private String username; 
+
+            private Builder() {
+            } 
+
+            private Builder(Author model) {
+                this.aliyunPk = model.aliyunPk;
+                this.avatarUrl = model.avatarUrl;
+                this.email = model.email;
+                this.id = model.id;
+                this.name = model.name;
+                this.state = model.state;
+                this.username = model.username;
+            } 
 
             /**
              * aliyunPk.
@@ -407,6 +435,19 @@ public class ListMergeRequestCommentsResponseBody extends TeaModel {
             private String state; 
             private String username; 
 
+            private Builder() {
+            } 
+
+            private Builder(ChildCommentsAuthor model) {
+                this.aliyunPk = model.aliyunPk;
+                this.avatarUrl = model.avatarUrl;
+                this.email = model.email;
+                this.id = model.id;
+                this.name = model.name;
+                this.state = model.state;
+                this.username = model.username;
+            } 
+
             /**
              * aliyunPk.
              */
@@ -574,6 +615,19 @@ public class ListMergeRequestCommentsResponseBody extends TeaModel {
             private String state; 
             private String username; 
 
+            private Builder() {
+            } 
+
+            private Builder(FinalChildCommentsAuthor model) {
+                this.aliyunPk = model.aliyunPk;
+                this.avatarUrl = model.avatarUrl;
+                this.email = model.email;
+                this.id = model.id;
+                this.name = model.name;
+                this.state = model.state;
+                this.username = model.username;
+            } 
+
             /**
              * aliyunPk.
              */
@@ -740,6 +794,19 @@ public class ListMergeRequestCommentsResponseBody extends TeaModel {
             private String patchSetNo; 
             private String relatedMergeItemType; 
             private String shortId; 
+
+            private Builder() {
+            } 
+
+            private Builder(RelatedPatchSet model) {
+                this.commitId = model.commitId;
+                this.createdAt = model.createdAt;
+                this.patchSetBizId = model.patchSetBizId;
+                this.patchSetName = model.patchSetName;
+                this.patchSetNo = model.patchSetNo;
+                this.relatedMergeItemType = model.relatedMergeItemType;
+                this.shortId = model.shortId;
+            } 
 
             /**
              * commitId.
@@ -992,6 +1059,26 @@ public class ListMergeRequestCommentsResponseBody extends TeaModel {
             private String rootCommentBizId; 
             private String state; 
 
+            private Builder() {
+            } 
+
+            private Builder(FinalChildComments model) {
+                this.author = model.author;
+                this.commentBizId = model.commentBizId;
+                this.commentTime = model.commentTime;
+                this.commentType = model.commentType;
+                this.content = model.content;
+                this.deleted = model.deleted;
+                this.filePath = model.filePath;
+                this.lastEditTime = model.lastEditTime;
+                this.lineNumber = model.lineNumber;
+                this.parentCommentBizId = model.parentCommentBizId;
+                this.relatedPatchSet = model.relatedPatchSet;
+                this.resolved = model.resolved;
+                this.rootCommentBizId = model.rootCommentBizId;
+                this.state = model.state;
+            } 
+
             /**
              * author.
              */
@@ -1214,6 +1301,19 @@ public class ListMergeRequestCommentsResponseBody extends TeaModel {
             private String patchSetNo; 
             private String relatedMergeItemType; 
             private String shortId; 
+
+            private Builder() {
+            } 
+
+            private Builder(ChildCommentsRelatedPatchSet model) {
+                this.commitId = model.commitId;
+                this.createdAt = model.createdAt;
+                this.patchSetBizId = model.patchSetBizId;
+                this.patchSetName = model.patchSetName;
+                this.patchSetNo = model.patchSetNo;
+                this.relatedMergeItemType = model.relatedMergeItemType;
+                this.shortId = model.shortId;
+            } 
 
             /**
              * commitId.
@@ -1478,6 +1578,27 @@ public class ListMergeRequestCommentsResponseBody extends TeaModel {
             private String rootCommentBizId; 
             private String state; 
 
+            private Builder() {
+            } 
+
+            private Builder(ChildComments model) {
+                this.author = model.author;
+                this.commentBizId = model.commentBizId;
+                this.commentTime = model.commentTime;
+                this.commentType = model.commentType;
+                this.content = model.content;
+                this.deleted = model.deleted;
+                this.filePath = model.filePath;
+                this.finalChildComments = model.finalChildComments;
+                this.lastEditTime = model.lastEditTime;
+                this.lineNumber = model.lineNumber;
+                this.parentCommentBizId = model.parentCommentBizId;
+                this.relatedPatchSet = model.relatedPatchSet;
+                this.resolved = model.resolved;
+                this.rootCommentBizId = model.rootCommentBizId;
+                this.state = model.state;
+            } 
+
             /**
              * author.
              */
@@ -1708,6 +1829,19 @@ public class ListMergeRequestCommentsResponseBody extends TeaModel {
             private String patchSetNo; 
             private String relatedMergeItemType; 
             private String shortId; 
+
+            private Builder() {
+            } 
+
+            private Builder(ResultRelatedPatchSet model) {
+                this.commitId = model.commitId;
+                this.createdAt = model.createdAt;
+                this.patchSetBizId = model.patchSetBizId;
+                this.patchSetName = model.patchSetName;
+                this.patchSetNo = model.patchSetNo;
+                this.relatedMergeItemType = model.relatedMergeItemType;
+                this.shortId = model.shortId;
+            } 
 
             /**
              * commitId.
@@ -1971,6 +2105,27 @@ public class ListMergeRequestCommentsResponseBody extends TeaModel {
             private Boolean resolved; 
             private String rootCommentBizId; 
             private String state; 
+
+            private Builder() {
+            } 
+
+            private Builder(Result model) {
+                this.author = model.author;
+                this.childComments = model.childComments;
+                this.commentBizId = model.commentBizId;
+                this.commentTime = model.commentTime;
+                this.commentType = model.commentType;
+                this.content = model.content;
+                this.deleted = model.deleted;
+                this.filePath = model.filePath;
+                this.lastEditTime = model.lastEditTime;
+                this.lineNumber = model.lineNumber;
+                this.parentCommentBizId = model.parentCommentBizId;
+                this.relatedPatchSet = model.relatedPatchSet;
+                this.resolved = model.resolved;
+                this.rootCommentBizId = model.rootCommentBizId;
+                this.state = model.state;
+            } 
 
             /**
              * author.

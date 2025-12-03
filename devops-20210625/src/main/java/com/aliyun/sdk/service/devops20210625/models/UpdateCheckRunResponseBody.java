@@ -48,6 +48,10 @@ public class UpdateCheckRunResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return errorCode
      */
@@ -89,6 +93,17 @@ public class UpdateCheckRunResponseBody extends TeaModel {
         private String requestId; 
         private Result result; 
         private Boolean success; 
+
+        private Builder() {
+        } 
+
+        private Builder(UpdateCheckRunResponseBody model) {
+            this.errorCode = model.errorCode;
+            this.errorMessage = model.errorMessage;
+            this.requestId = model.requestId;
+            this.result = model.result;
+            this.success = model.success;
+        } 
 
         /**
          * errorCode.
@@ -276,6 +291,22 @@ public class UpdateCheckRunResponseBody extends TeaModel {
             private Long startLine; 
             private String title; 
 
+            private Builder() {
+            } 
+
+            private Builder(Annotations model) {
+                this.annotationLevel = model.annotationLevel;
+                this.endColumn = model.endColumn;
+                this.endLine = model.endLine;
+                this.id = model.id;
+                this.message = model.message;
+                this.path = model.path;
+                this.rawDetails = model.rawDetails;
+                this.startColumn = model.startColumn;
+                this.startLine = model.startLine;
+                this.title = model.title;
+            } 
+
             /**
              * annotationLevel.
              */
@@ -395,6 +426,13 @@ public class UpdateCheckRunResponseBody extends TeaModel {
         public static final class Builder {
             private Long id; 
 
+            private Builder() {
+            } 
+
+            private Builder(CheckSuite model) {
+                this.id = model.id;
+            } 
+
             /**
              * id.
              */
@@ -465,6 +503,15 @@ public class UpdateCheckRunResponseBody extends TeaModel {
             private String alt; 
             private String caption; 
             private String imageUrl; 
+
+            private Builder() {
+            } 
+
+            private Builder(Images model) {
+                this.alt = model.alt;
+                this.caption = model.caption;
+                this.imageUrl = model.imageUrl;
+            } 
 
             /**
              * alt.
@@ -564,6 +611,16 @@ public class UpdateCheckRunResponseBody extends TeaModel {
             private String summary; 
             private String text; 
             private String title; 
+
+            private Builder() {
+            } 
+
+            private Builder(Output model) {
+                this.images = model.images;
+                this.summary = model.summary;
+                this.text = model.text;
+                this.title = model.title;
+            } 
 
             /**
              * images.
@@ -683,6 +740,17 @@ public class UpdateCheckRunResponseBody extends TeaModel {
             private String name; 
             private String slug; 
             private String type; 
+
+            private Builder() {
+            } 
+
+            private Builder(Writer model) {
+                this.id = model.id;
+                this.logoUrl = model.logoUrl;
+                this.name = model.name;
+                this.slug = model.slug;
+                this.type = model.type;
+            } 
 
             /**
              * id.
@@ -930,6 +998,27 @@ public class UpdateCheckRunResponseBody extends TeaModel {
             private String status; 
             private String updatedAt; 
             private Writer writer; 
+
+            private Builder() {
+            } 
+
+            private Builder(Result model) {
+                this.annotations = model.annotations;
+                this.checkSuite = model.checkSuite;
+                this.completedAt = model.completedAt;
+                this.conclusion = model.conclusion;
+                this.createdAt = model.createdAt;
+                this.detailsUrl = model.detailsUrl;
+                this.externalId = model.externalId;
+                this.headSha = model.headSha;
+                this.id = model.id;
+                this.name = model.name;
+                this.output = model.output;
+                this.startedAt = model.startedAt;
+                this.status = model.status;
+                this.updatedAt = model.updatedAt;
+                this.writer = model.writer;
+            } 
 
             /**
              * annotations.

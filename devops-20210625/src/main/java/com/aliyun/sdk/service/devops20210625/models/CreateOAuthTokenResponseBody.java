@@ -48,6 +48,10 @@ public class CreateOAuthTokenResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return errorCode
      */
@@ -89,6 +93,17 @@ public class CreateOAuthTokenResponseBody extends TeaModel {
         private String requestId; 
         private Result result; 
         private String success; 
+
+        private Builder() {
+        } 
+
+        private Builder(CreateOAuthTokenResponseBody model) {
+            this.errorCode = model.errorCode;
+            this.errorMessage = model.errorMessage;
+            this.requestId = model.requestId;
+            this.result = model.result;
+            this.success = model.success;
+        } 
 
         /**
          * errorCode.
@@ -203,6 +218,16 @@ public class CreateOAuthTokenResponseBody extends TeaModel {
             private String id; 
             private String scope; 
             private String tokenType; 
+
+            private Builder() {
+            } 
+
+            private Builder(Result model) {
+                this.accessToken = model.accessToken;
+                this.id = model.id;
+                this.scope = model.scope;
+                this.tokenType = model.tokenType;
+            } 
 
             /**
              * accessToken.

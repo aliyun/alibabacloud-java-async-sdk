@@ -48,6 +48,10 @@ public class UpdateRepositoryResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return errorCode
      */
@@ -89,6 +93,17 @@ public class UpdateRepositoryResponseBody extends TeaModel {
         private String requestId; 
         private Result result; 
         private Boolean success; 
+
+        private Builder() {
+        } 
+
+        private Builder(UpdateRepositoryResponseBody model) {
+            this.errorCode = model.errorCode;
+            this.errorMessage = model.errorMessage;
+            this.requestId = model.requestId;
+            this.result = model.result;
+            this.success = model.success;
+        } 
 
         /**
          * errorCode.
@@ -263,6 +278,21 @@ public class UpdateRepositoryResponseBody extends TeaModel {
             private String path; 
             private String updatedAt; 
             private Integer visibilityLevel; 
+
+            private Builder() {
+            } 
+
+            private Builder(Namespace model) {
+                this.avatar = model.avatar;
+                this.createdAt = model.createdAt;
+                this.description = model.description;
+                this.id = model.id;
+                this.name = model.name;
+                this.ownerId = model.ownerId;
+                this.path = model.path;
+                this.updatedAt = model.updatedAt;
+                this.visibilityLevel = model.visibilityLevel;
+            } 
 
             /**
              * avatar.
@@ -626,6 +656,34 @@ public class UpdateRepositoryResponseBody extends TeaModel {
             private Integer visibilityLevel; 
             private String webUrl; 
             private Boolean wikiEnabled; 
+
+            private Builder() {
+            } 
+
+            private Builder(Result model) {
+                this.archived = model.archived;
+                this.avatarUrl = model.avatarUrl;
+                this.buildsEnabled = model.buildsEnabled;
+                this.createdAt = model.createdAt;
+                this.creatorId = model.creatorId;
+                this.defaultBranch = model.defaultBranch;
+                this.description = model.description;
+                this.httpUrlToRepo = model.httpUrlToRepo;
+                this.id = model.id;
+                this.issuesEnabled = model.issuesEnabled;
+                this.lastActivityAt = model.lastActivityAt;
+                this.mergeRequestsEnabled = model.mergeRequestsEnabled;
+                this.name = model.name;
+                this.nameWithNamespace = model.nameWithNamespace;
+                this.namespace = model.namespace;
+                this.path = model.path;
+                this.pathWithNamespace = model.pathWithNamespace;
+                this.snippetsEnabled = model.snippetsEnabled;
+                this.sshUrlToRepo = model.sshUrlToRepo;
+                this.visibilityLevel = model.visibilityLevel;
+                this.webUrl = model.webUrl;
+                this.wikiEnabled = model.wikiEnabled;
+            } 
 
             /**
              * archived.

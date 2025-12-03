@@ -48,6 +48,10 @@ public class LogPipelineJobRunResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return errorCode
      */
@@ -89,6 +93,17 @@ public class LogPipelineJobRunResponseBody extends TeaModel {
         private Log log; 
         private String requestId; 
         private Boolean success; 
+
+        private Builder() {
+        } 
+
+        private Builder(LogPipelineJobRunResponseBody model) {
+            this.errorCode = model.errorCode;
+            this.errorMessage = model.errorMessage;
+            this.log = model.log;
+            this.requestId = model.requestId;
+            this.success = model.success;
+        } 
 
         /**
          * errorCode.
@@ -179,6 +194,14 @@ public class LogPipelineJobRunResponseBody extends TeaModel {
         public static final class Builder {
             private String content; 
             private Boolean more; 
+
+            private Builder() {
+            } 
+
+            private Builder(Log model) {
+                this.content = model.content;
+                this.more = model.more;
+            } 
 
             /**
              * content.

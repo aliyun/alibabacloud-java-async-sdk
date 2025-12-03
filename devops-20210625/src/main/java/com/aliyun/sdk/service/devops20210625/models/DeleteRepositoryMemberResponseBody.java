@@ -48,6 +48,10 @@ public class DeleteRepositoryMemberResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return errorCode
      */
@@ -89,6 +93,17 @@ public class DeleteRepositoryMemberResponseBody extends TeaModel {
         private String requestId; 
         private Result result; 
         private Boolean success; 
+
+        private Builder() {
+        } 
+
+        private Builder(DeleteRepositoryMemberResponseBody model) {
+            this.errorCode = model.errorCode;
+            this.errorMessage = model.errorMessage;
+            this.requestId = model.requestId;
+            this.result = model.result;
+            this.success = model.success;
+        } 
 
         /**
          * errorCode.
@@ -239,6 +254,19 @@ public class DeleteRepositoryMemberResponseBody extends TeaModel {
             private String sourceType; 
             private String updateAt; 
             private Long userId; 
+
+            private Builder() {
+            } 
+
+            private Builder(Result model) {
+                this.accessLevel = model.accessLevel;
+                this.createAt = model.createAt;
+                this.id = model.id;
+                this.sourceId = model.sourceId;
+                this.sourceType = model.sourceType;
+                this.updateAt = model.updateAt;
+                this.userId = model.userId;
+            } 
 
             /**
              * accessLevel.

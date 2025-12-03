@@ -60,6 +60,10 @@ public class GetTestcaseListResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return errorCode
      */
@@ -125,6 +129,20 @@ public class GetTestcaseListResponseBody extends TeaModel {
         private Boolean success; 
         private java.util.List<Testcase> testcase; 
         private Long totalCount; 
+
+        private Builder() {
+        } 
+
+        private Builder(GetTestcaseListResponseBody model) {
+            this.errorCode = model.errorCode;
+            this.errorMsg = model.errorMsg;
+            this.maxResults = model.maxResults;
+            this.nextToken = model.nextToken;
+            this.requestId = model.requestId;
+            this.success = model.success;
+            this.testcase = model.testcase;
+            this.totalCount = model.totalCount;
+        } 
 
         /**
          * errorCode.
@@ -240,6 +258,14 @@ public class GetTestcaseListResponseBody extends TeaModel {
             private String assignedToIdenttifier; 
             private String name; 
 
+            private Builder() {
+            } 
+
+            private Builder(AssignedTo model) {
+                this.assignedToIdenttifier = model.assignedToIdenttifier;
+                this.name = model.name;
+            } 
+
             /**
              * assignedToIdenttifier.
              */
@@ -331,6 +357,16 @@ public class GetTestcaseListResponseBody extends TeaModel {
             private String fieldIdentifier; 
             private String value; 
 
+            private Builder() {
+            } 
+
+            private Builder(CustomFields model) {
+                this.fieldClassName = model.fieldClassName;
+                this.fieldFormat = model.fieldFormat;
+                this.fieldIdentifier = model.fieldIdentifier;
+                this.value = model.value;
+            } 
+
             /**
              * fieldClassName.
              */
@@ -414,6 +450,14 @@ public class GetTestcaseListResponseBody extends TeaModel {
             private String spaceIdentifier; 
             private String type; 
 
+            private Builder() {
+            } 
+
+            private Builder(Space model) {
+                this.spaceIdentifier = model.spaceIdentifier;
+                this.type = model.type;
+            } 
+
             /**
              * spaceIdentifier.
              */
@@ -480,6 +524,14 @@ public class GetTestcaseListResponseBody extends TeaModel {
         public static final class Builder {
             private String name; 
             private String tagIdentifier; 
+
+            private Builder() {
+            } 
+
+            private Builder(Tags model) {
+                this.name = model.name;
+                this.tagIdentifier = model.tagIdentifier;
+            } 
 
             /**
              * name.
@@ -619,6 +671,20 @@ public class GetTestcaseListResponseBody extends TeaModel {
             private Space space; 
             private String subject; 
             private java.util.List<Tags> tags; 
+
+            private Builder() {
+            } 
+
+            private Builder(Testcase model) {
+                this.assignedTo = model.assignedTo;
+                this.categoryIdentifier = model.categoryIdentifier;
+                this.customFields = model.customFields;
+                this.gmtCreate = model.gmtCreate;
+                this.identifier = model.identifier;
+                this.space = model.space;
+                this.subject = model.subject;
+                this.tags = model.tags;
+            } 
 
             /**
              * assignedTo.

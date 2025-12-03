@@ -52,6 +52,10 @@ public class ListSearchRepositoryResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return errorCode
      */
@@ -101,6 +105,18 @@ public class ListSearchRepositoryResponseBody extends TeaModel {
         private java.util.List<Result> result; 
         private Boolean success; 
         private Long total; 
+
+        private Builder() {
+        } 
+
+        private Builder(ListSearchRepositoryResponseBody model) {
+            this.errorCode = model.errorCode;
+            this.errorMessage = model.errorMessage;
+            this.requestId = model.requestId;
+            this.result = model.result;
+            this.success = model.success;
+            this.total = model.total;
+        } 
 
         /**
          * errorCode.
@@ -247,6 +263,18 @@ public class ListSearchRepositoryResponseBody extends TeaModel {
             private String readMe; 
             private String repoNameWithNamespace; 
             private String repoPath; 
+
+            private Builder() {
+            } 
+
+            private Builder(HighlightTextMap model) {
+                this.creatorUserId = model.creatorUserId;
+                this.description = model.description;
+                this.organizationId = model.organizationId;
+                this.readMe = model.readMe;
+                this.repoNameWithNamespace = model.repoNameWithNamespace;
+                this.repoPath = model.repoPath;
+            } 
 
             /**
              * creatorUserId.
@@ -419,6 +447,20 @@ public class ListSearchRepositoryResponseBody extends TeaModel {
             private String repoPath; 
             private Integer visibilityLevel; 
 
+            private Builder() {
+            } 
+
+            private Builder(Source model) {
+                this.createTime = model.createTime;
+                this.description = model.description;
+                this.lastActivityTime = model.lastActivityTime;
+                this.organizationId = model.organizationId;
+                this.readMe = model.readMe;
+                this.repoName = model.repoName;
+                this.repoPath = model.repoPath;
+                this.visibilityLevel = model.visibilityLevel;
+            } 
+
             /**
              * createTime.
              */
@@ -545,6 +587,15 @@ public class ListSearchRepositoryResponseBody extends TeaModel {
             private String docId; 
             private HighlightTextMap highlightTextMap; 
             private Source source; 
+
+            private Builder() {
+            } 
+
+            private Builder(Result model) {
+                this.docId = model.docId;
+                this.highlightTextMap = model.highlightTextMap;
+                this.source = model.source;
+            } 
 
             /**
              * docId.

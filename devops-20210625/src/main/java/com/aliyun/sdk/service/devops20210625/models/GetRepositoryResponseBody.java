@@ -48,6 +48,10 @@ public class GetRepositoryResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return errorCode
      */
@@ -89,6 +93,17 @@ public class GetRepositoryResponseBody extends TeaModel {
         private Repository repository; 
         private String requestId; 
         private Boolean success; 
+
+        private Builder() {
+        } 
+
+        private Builder(GetRepositoryResponseBody model) {
+            this.errorCode = model.errorCode;
+            this.errorMessage = model.errorMessage;
+            this.repository = model.repository;
+            this.requestId = model.requestId;
+            this.success = model.success;
+        } 
 
         /**
          * errorCode.
@@ -263,6 +278,21 @@ public class GetRepositoryResponseBody extends TeaModel {
             private String path; 
             private String updatedAt; 
             private Integer visibilityLevel; 
+
+            private Builder() {
+            } 
+
+            private Builder(Namespace model) {
+                this.avatar = model.avatar;
+                this.createdAt = model.createdAt;
+                this.description = model.description;
+                this.id = model.id;
+                this.name = model.name;
+                this.ownerId = model.ownerId;
+                this.path = model.path;
+                this.updatedAt = model.updatedAt;
+                this.visibilityLevel = model.visibilityLevel;
+            } 
 
             /**
              * avatar.
@@ -581,6 +611,30 @@ public class GetRepositoryResponseBody extends TeaModel {
             private String sshUrlToRepository; 
             private Integer visibilityLevel; 
             private String webUrl; 
+
+            private Builder() {
+            } 
+
+            private Builder(Repository model) {
+                this.archive = model.archive;
+                this.avatarUrl = model.avatarUrl;
+                this.createdAt = model.createdAt;
+                this.creatorId = model.creatorId;
+                this.defaultBranch = model.defaultBranch;
+                this.demoProjectStatus = model.demoProjectStatus;
+                this.description = model.description;
+                this.httpUrlToRepository = model.httpUrlToRepository;
+                this.id = model.id;
+                this.lastActivityAt = model.lastActivityAt;
+                this.name = model.name;
+                this.nameWithNamespace = model.nameWithNamespace;
+                this.namespace = model.namespace;
+                this.path = model.path;
+                this.pathWithNamespace = model.pathWithNamespace;
+                this.sshUrlToRepository = model.sshUrlToRepository;
+                this.visibilityLevel = model.visibilityLevel;
+                this.webUrl = model.webUrl;
+            } 
 
             /**
              * archive.

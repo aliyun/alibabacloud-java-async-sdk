@@ -52,6 +52,10 @@ public class ListApplicationMembersResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return current
      */
@@ -101,6 +105,18 @@ public class ListApplicationMembersResponseBody extends TeaModel {
         private java.util.List<Records> records; 
         private String requestId; 
         private Long total; 
+
+        private Builder() {
+        } 
+
+        private Builder(ListApplicationMembersResponseBody model) {
+            this.current = model.current;
+            this.pageSize = model.pageSize;
+            this.pages = model.pages;
+            this.records = model.records;
+            this.requestId = model.requestId;
+            this.total = model.total;
+        } 
 
         /**
          * current.
@@ -199,6 +215,14 @@ public class ListApplicationMembersResponseBody extends TeaModel {
         public static final class Builder {
             private String displayName; 
             private String name; 
+
+            private Builder() {
+            } 
+
+            private Builder(RoleList model) {
+                this.displayName = model.displayName;
+                this.name = model.name;
+            } 
 
             /**
              * displayName.
@@ -314,6 +338,18 @@ public class ListApplicationMembersResponseBody extends TeaModel {
             private String id; 
             private java.util.List<RoleList> roleList; 
             private String type; 
+
+            private Builder() {
+            } 
+
+            private Builder(Records model) {
+                this.avatar = model.avatar;
+                this.description = model.description;
+                this.displayName = model.displayName;
+                this.id = model.id;
+                this.roleList = model.roleList;
+                this.type = model.type;
+            } 
 
             /**
              * avatar.

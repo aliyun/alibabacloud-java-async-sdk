@@ -48,6 +48,10 @@ public class GetWorkItemWorkFlowInfoResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return errorCode
      */
@@ -89,6 +93,17 @@ public class GetWorkItemWorkFlowInfoResponseBody extends TeaModel {
         private String requestId; 
         private Boolean success; 
         private Workflow workflow; 
+
+        private Builder() {
+        } 
+
+        private Builder(GetWorkItemWorkFlowInfoResponseBody model) {
+            this.errorCode = model.errorCode;
+            this.errorMessage = model.errorMessage;
+            this.requestId = model.requestId;
+            this.success = model.success;
+            this.workflow = model.workflow;
+        } 
 
         /**
          * errorCode.
@@ -288,6 +303,23 @@ public class GetWorkItemWorkFlowInfoResponseBody extends TeaModel {
             private String workflowStageIdentifier; 
             private String workflowStageName; 
 
+            private Builder() {
+            } 
+
+            private Builder(Statuses model) {
+                this.creator = model.creator;
+                this.description = model.description;
+                this.gmtCreate = model.gmtCreate;
+                this.gmtModified = model.gmtModified;
+                this.identifier = model.identifier;
+                this.modifier = model.modifier;
+                this.name = model.name;
+                this.resourceType = model.resourceType;
+                this.source = model.source;
+                this.workflowStageIdentifier = model.workflowStageIdentifier;
+                this.workflowStageName = model.workflowStageName;
+            } 
+
             /**
              * creator.
              */
@@ -462,6 +494,17 @@ public class GetWorkItemWorkFlowInfoResponseBody extends TeaModel {
             private String nextWorkflowStatusIdentifier; 
             private String workflowIdentifier; 
             private String workflowStatusIdentifier; 
+
+            private Builder() {
+            } 
+
+            private Builder(WorkflowActions model) {
+                this.id = model.id;
+                this.name = model.name;
+                this.nextWorkflowStatusIdentifier = model.nextWorkflowStatusIdentifier;
+                this.workflowIdentifier = model.workflowIdentifier;
+                this.workflowStatusIdentifier = model.workflowStatusIdentifier;
+            } 
 
             /**
              * id.
@@ -709,6 +752,27 @@ public class GetWorkItemWorkFlowInfoResponseBody extends TeaModel {
             private String statusOrder; 
             private java.util.List<Statuses> statuses; 
             private java.util.List<WorkflowActions> workflowActions; 
+
+            private Builder() {
+            } 
+
+            private Builder(Workflow model) {
+                this.creator = model.creator;
+                this.defaultStatusIdentifier = model.defaultStatusIdentifier;
+                this.description = model.description;
+                this.gmtCreate = model.gmtCreate;
+                this.gmtModified = model.gmtModified;
+                this.identifier = model.identifier;
+                this.modifier = model.modifier;
+                this.name = model.name;
+                this.ownerSpaceIdentifier = model.ownerSpaceIdentifier;
+                this.ownerSpaceType = model.ownerSpaceType;
+                this.resourceType = model.resourceType;
+                this.source = model.source;
+                this.statusOrder = model.statusOrder;
+                this.statuses = model.statuses;
+                this.workflowActions = model.workflowActions;
+            } 
 
             /**
              * creator.
