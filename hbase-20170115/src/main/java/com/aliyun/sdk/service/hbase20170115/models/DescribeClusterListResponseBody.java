@@ -48,6 +48,10 @@ public class DescribeClusterListResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return clusterList
      */
@@ -89,6 +93,17 @@ public class DescribeClusterListResponseBody extends TeaModel {
         private Integer pageRecordCount; 
         private String requestId; 
         private Integer totalRecordCount; 
+
+        private Builder() {
+        } 
+
+        private Builder(DescribeClusterListResponseBody model) {
+            this.clusterList = model.clusterList;
+            this.pageNumber = model.pageNumber;
+            this.pageRecordCount = model.pageRecordCount;
+            this.requestId = model.requestId;
+            this.totalRecordCount = model.totalRecordCount;
+        } 
 
         /**
          * ClusterList.
@@ -180,6 +195,14 @@ public class DescribeClusterListResponseBody extends TeaModel {
             private String key; 
             private String value; 
 
+            private Builder() {
+            } 
+
+            private Builder(Tag model) {
+                this.key = model.key;
+                this.value = model.value;
+            } 
+
             /**
              * Key.
              */
@@ -234,6 +257,13 @@ public class DescribeClusterListResponseBody extends TeaModel {
 
         public static final class Builder {
             private java.util.List<Tag> tag; 
+
+            private Builder() {
+            } 
+
+            private Builder(Tags model) {
+                this.tag = model.tag;
+            } 
 
             /**
              * Tag.
@@ -510,6 +540,32 @@ public class DescribeClusterListResponseBody extends TeaModel {
             private String vpcId; 
             private String zoneId; 
 
+            private Builder() {
+            } 
+
+            private Builder(Cluster model) {
+                this.clusterId = model.clusterId;
+                this.clusterName = model.clusterName;
+                this.clusterType = model.clusterType;
+                this.coreDiskSize = model.coreDiskSize;
+                this.coreDiskType = model.coreDiskType;
+                this.coreInstanceQuantity = model.coreInstanceQuantity;
+                this.createTime = model.createTime;
+                this.dbType = model.dbType;
+                this.expireTime = model.expireTime;
+                this.lockMode = model.lockMode;
+                this.mainVersion = model.mainVersion;
+                this.netType = model.netType;
+                this.payType = model.payType;
+                this.reason = model.reason;
+                this.regionId = model.regionId;
+                this.status = model.status;
+                this.tags = model.tags;
+                this.userId = model.userId;
+                this.vpcId = model.vpcId;
+                this.zoneId = model.zoneId;
+            } 
+
             /**
              * ClusterId.
              */
@@ -708,6 +764,13 @@ public class DescribeClusterListResponseBody extends TeaModel {
 
         public static final class Builder {
             private java.util.List<Cluster> cluster; 
+
+            private Builder() {
+            } 
+
+            private Builder(ClusterList model) {
+                this.cluster = model.cluster;
+            } 
 
             /**
              * Cluster.

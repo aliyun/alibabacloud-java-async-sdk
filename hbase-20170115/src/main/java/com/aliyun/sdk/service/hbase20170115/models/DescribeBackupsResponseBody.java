@@ -52,6 +52,10 @@ public class DescribeBackupsResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return backups
      */
@@ -101,6 +105,18 @@ public class DescribeBackupsResponseBody extends TeaModel {
         private Integer pageSize; 
         private String requestId; 
         private Integer totalCount; 
+
+        private Builder() {
+        } 
+
+        private Builder(DescribeBackupsResponseBody model) {
+            this.backups = model.backups;
+            this.enableStatus = model.enableStatus;
+            this.pageNumber = model.pageNumber;
+            this.pageSize = model.pageSize;
+            this.requestId = model.requestId;
+            this.totalCount = model.totalCount;
+        } 
 
         /**
          * Backups.
@@ -320,6 +336,24 @@ public class DescribeBackupsResponseBody extends TeaModel {
             private String backupStatus; 
             private String backupType; 
 
+            private Builder() {
+            } 
+
+            private Builder(Backup model) {
+                this.backupDBNames = model.backupDBNames;
+                this.backupDownloadURL = model.backupDownloadURL;
+                this.backupEndTime = model.backupEndTime;
+                this.backupEndTimeUTC = model.backupEndTimeUTC;
+                this.backupId = model.backupId;
+                this.backupMethod = model.backupMethod;
+                this.backupMode = model.backupMode;
+                this.backupSize = model.backupSize;
+                this.backupStartTime = model.backupStartTime;
+                this.backupStartTimeUTC = model.backupStartTimeUTC;
+                this.backupStatus = model.backupStatus;
+                this.backupType = model.backupType;
+            } 
+
             /**
              * BackupDBNames.
              */
@@ -454,6 +488,13 @@ public class DescribeBackupsResponseBody extends TeaModel {
 
         public static final class Builder {
             private java.util.List<Backup> backup; 
+
+            private Builder() {
+            } 
+
+            private Builder(Backups model) {
+                this.backup = model.backup;
+            } 
 
             /**
              * Backup.

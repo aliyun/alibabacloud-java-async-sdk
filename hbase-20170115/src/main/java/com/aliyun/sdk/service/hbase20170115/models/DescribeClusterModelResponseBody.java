@@ -148,6 +148,10 @@ public class DescribeClusterModelResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return autoRenew
      */
@@ -389,6 +393,42 @@ public class DescribeClusterModelResponseBody extends TeaModel {
         private Tags tags; 
         private String updateStatus; 
         private String zoneId; 
+
+        private Builder() {
+        } 
+
+        private Builder(DescribeClusterModelResponseBody model) {
+            this.autoRenew = model.autoRenew;
+            this.backupStatus = model.backupStatus;
+            this.clusterId = model.clusterId;
+            this.clusterName = model.clusterName;
+            this.clusterType = model.clusterType;
+            this.coldStorageStatus = model.coldStorageStatus;
+            this.coreDiskQuantity = model.coreDiskQuantity;
+            this.coreDiskSize = model.coreDiskSize;
+            this.coreDiskType = model.coreDiskType;
+            this.coreInstanceQuantity = model.coreInstanceQuantity;
+            this.coreInstanceType = model.coreInstanceType;
+            this.createTime = model.createTime;
+            this.dbType = model.dbType;
+            this.expireTime = model.expireTime;
+            this.haType = model.haType;
+            this.hasUser = model.hasUser;
+            this.isMultimod = model.isMultimod;
+            this.lockMode = model.lockMode;
+            this.mainVersion = model.mainVersion;
+            this.masterDiskSize = model.masterDiskSize;
+            this.masterDiskType = model.masterDiskType;
+            this.masterInstanceType = model.masterInstanceType;
+            this.minorVersion = model.minorVersion;
+            this.payType = model.payType;
+            this.regionId = model.regionId;
+            this.requestId = model.requestId;
+            this.status = model.status;
+            this.tags = model.tags;
+            this.updateStatus = model.updateStatus;
+            this.zoneId = model.zoneId;
+        } 
 
         /**
          * AutoRenew.
@@ -680,6 +720,14 @@ public class DescribeClusterModelResponseBody extends TeaModel {
             private String key; 
             private String value; 
 
+            private Builder() {
+            } 
+
+            private Builder(Tag model) {
+                this.key = model.key;
+                this.value = model.value;
+            } 
+
             /**
              * Key.
              */
@@ -734,6 +782,13 @@ public class DescribeClusterModelResponseBody extends TeaModel {
 
         public static final class Builder {
             private java.util.List<Tag> tag; 
+
+            private Builder() {
+            } 
+
+            private Builder(Tags model) {
+                this.tag = model.tag;
+            } 
 
             /**
              * Tag.

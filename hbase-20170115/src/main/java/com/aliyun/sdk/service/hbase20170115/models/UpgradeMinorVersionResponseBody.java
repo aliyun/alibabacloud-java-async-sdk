@@ -40,6 +40,10 @@ public class UpgradeMinorVersionResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return newVersion
      */
@@ -65,6 +69,15 @@ public class UpgradeMinorVersionResponseBody extends TeaModel {
         private String newVersion; 
         private String oldVersion; 
         private String requestId; 
+
+        private Builder() {
+        } 
+
+        private Builder(UpgradeMinorVersionResponseBody model) {
+            this.newVersion = model.newVersion;
+            this.oldVersion = model.oldVersion;
+            this.requestId = model.requestId;
+        } 
 
         /**
          * NewVersion.

@@ -36,6 +36,10 @@ public class DeleteUserHdfsInfoResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return clusterId
      */
@@ -53,6 +57,14 @@ public class DeleteUserHdfsInfoResponseBody extends TeaModel {
     public static final class Builder {
         private String clusterId; 
         private String requestId; 
+
+        private Builder() {
+        } 
+
+        private Builder(DeleteUserHdfsInfoResponseBody model) {
+            this.clusterId = model.clusterId;
+            this.requestId = model.requestId;
+        } 
 
         /**
          * ClusterId.

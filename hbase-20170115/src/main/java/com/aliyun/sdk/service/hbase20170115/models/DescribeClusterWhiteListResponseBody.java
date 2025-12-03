@@ -36,6 +36,10 @@ public class DescribeClusterWhiteListResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return groupItems
      */
@@ -53,6 +57,14 @@ public class DescribeClusterWhiteListResponseBody extends TeaModel {
     public static final class Builder {
         private GroupItems groupItems; 
         private String requestId; 
+
+        private Builder() {
+        } 
+
+        private Builder(DescribeClusterWhiteListResponseBody model) {
+            this.groupItems = model.groupItems;
+            this.requestId = model.requestId;
+        } 
 
         /**
          * GroupItems.
@@ -107,6 +119,13 @@ public class DescribeClusterWhiteListResponseBody extends TeaModel {
 
         public static final class Builder {
             private java.util.List<String> whiteIp; 
+
+            private Builder() {
+            } 
+
+            private Builder(GroupItems model) {
+                this.whiteIp = model.whiteIp;
+            } 
 
             /**
              * WhiteIp.

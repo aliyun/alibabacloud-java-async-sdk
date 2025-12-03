@@ -36,6 +36,10 @@ public class ListHbaseInstancesResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return instances
      */
@@ -53,6 +57,14 @@ public class ListHbaseInstancesResponseBody extends TeaModel {
     public static final class Builder {
         private Instances instances; 
         private String requestId; 
+
+        private Builder() {
+        } 
+
+        private Builder(ListHbaseInstancesResponseBody model) {
+            this.instances = model.instances;
+            this.requestId = model.requestId;
+        } 
 
         /**
          * Instances.
@@ -132,6 +144,15 @@ public class ListHbaseInstancesResponseBody extends TeaModel {
             private String instanceName; 
             private Boolean isDefault; 
 
+            private Builder() {
+            } 
+
+            private Builder(Instance model) {
+                this.instanceId = model.instanceId;
+                this.instanceName = model.instanceName;
+                this.isDefault = model.isDefault;
+            } 
+
             /**
              * InstanceId.
              */
@@ -194,6 +215,13 @@ public class ListHbaseInstancesResponseBody extends TeaModel {
 
         public static final class Builder {
             private java.util.List<Instance> instance; 
+
+            private Builder() {
+            } 
+
+            private Builder(Instances model) {
+                this.instance = model.instance;
+            } 
 
             /**
              * Instance.

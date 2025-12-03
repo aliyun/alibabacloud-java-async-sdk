@@ -36,6 +36,10 @@ public class DescribeRdsVSwitchsResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return requestId
      */
@@ -53,6 +57,14 @@ public class DescribeRdsVSwitchsResponseBody extends TeaModel {
     public static final class Builder {
         private String requestId; 
         private VSwitches vSwitches; 
+
+        private Builder() {
+        } 
+
+        private Builder(DescribeRdsVSwitchsResponseBody model) {
+            this.requestId = model.requestId;
+            this.vSwitches = model.vSwitches;
+        } 
 
         /**
          * RequestId.
@@ -228,6 +240,23 @@ public class DescribeRdsVSwitchsResponseBody extends TeaModel {
             private String vSwitchId; 
             private String vSwitchName; 
 
+            private Builder() {
+            } 
+
+            private Builder(VSwitch model) {
+                this.aliUid = model.aliUid;
+                this.bid = model.bid;
+                this.cidrBlock = model.cidrBlock;
+                this.gmtCreate = model.gmtCreate;
+                this.gmtModified = model.gmtModified;
+                this.isDefault = model.isDefault;
+                this.izNo = model.izNo;
+                this.regionNo = model.regionNo;
+                this.status = model.status;
+                this.vSwitchId = model.vSwitchId;
+                this.vSwitchName = model.vSwitchName;
+            } 
+
             /**
              * AliUid.
              */
@@ -354,6 +383,13 @@ public class DescribeRdsVSwitchsResponseBody extends TeaModel {
 
         public static final class Builder {
             private java.util.List<VSwitch> vSwitch; 
+
+            private Builder() {
+            } 
+
+            private Builder(VSwitches model) {
+                this.vSwitch = model.vSwitch;
+            } 
 
             /**
              * VSwitch.

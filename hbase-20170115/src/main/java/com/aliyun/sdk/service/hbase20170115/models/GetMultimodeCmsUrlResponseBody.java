@@ -40,6 +40,10 @@ public class GetMultimodeCmsUrlResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return clusterId
      */
@@ -65,6 +69,15 @@ public class GetMultimodeCmsUrlResponseBody extends TeaModel {
         private String clusterId; 
         private String multimodCmsUrl; 
         private String requestId; 
+
+        private Builder() {
+        } 
+
+        private Builder(GetMultimodeCmsUrlResponseBody model) {
+            this.clusterId = model.clusterId;
+            this.multimodCmsUrl = model.multimodCmsUrl;
+            this.requestId = model.requestId;
+        } 
 
         /**
          * ClusterId.

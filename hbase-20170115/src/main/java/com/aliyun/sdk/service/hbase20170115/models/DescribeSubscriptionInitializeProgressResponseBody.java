@@ -48,6 +48,10 @@ public class DescribeSubscriptionInitializeProgressResponseBody extends TeaModel
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return items
      */
@@ -89,6 +93,17 @@ public class DescribeSubscriptionInitializeProgressResponseBody extends TeaModel
         private Integer pageRecordCount; 
         private String requestId; 
         private Integer totalRecordCount; 
+
+        private Builder() {
+        } 
+
+        private Builder(DescribeSubscriptionInitializeProgressResponseBody model) {
+            this.items = model.items;
+            this.pageNumber = model.pageNumber;
+            this.pageRecordCount = model.pageRecordCount;
+            this.requestId = model.requestId;
+            this.totalRecordCount = model.totalRecordCount;
+        } 
 
         /**
          * Items.
@@ -203,6 +218,16 @@ public class DescribeSubscriptionInitializeProgressResponseBody extends TeaModel
             private String progress; 
             private String status; 
             private String subscriptionId; 
+
+            private Builder() {
+            } 
+
+            private Builder(Items model) {
+                this.finishTime = model.finishTime;
+                this.progress = model.progress;
+                this.status = model.status;
+                this.subscriptionId = model.subscriptionId;
+            } 
 
             /**
              * FinishTime.

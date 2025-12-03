@@ -144,6 +144,10 @@ public class DescribeClusterAttributeResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return autoRenew
      */
@@ -377,6 +381,41 @@ public class DescribeClusterAttributeResponseBody extends TeaModel {
         private String status; 
         private String updateStatus; 
         private String zoneId; 
+
+        private Builder() {
+        } 
+
+        private Builder(DescribeClusterAttributeResponseBody model) {
+            this.autoRenew = model.autoRenew;
+            this.clusterId = model.clusterId;
+            this.clusterName = model.clusterName;
+            this.clusterType = model.clusterType;
+            this.coldStorageStatus = model.coldStorageStatus;
+            this.connectionInfo = model.connectionInfo;
+            this.coreDiskQuantity = model.coreDiskQuantity;
+            this.coreDiskSize = model.coreDiskSize;
+            this.coreDiskType = model.coreDiskType;
+            this.coreInstanceQuantity = model.coreInstanceQuantity;
+            this.coreInstanceType = model.coreInstanceType;
+            this.createTime = model.createTime;
+            this.expireTime = model.expireTime;
+            this.haType = model.haType;
+            this.hasUser = model.hasUser;
+            this.lockMode = model.lockMode;
+            this.mainVersion = model.mainVersion;
+            this.masterDiskSize = model.masterDiskSize;
+            this.masterDiskType = model.masterDiskType;
+            this.masterInstanceType = model.masterInstanceType;
+            this.minorVersion = model.minorVersion;
+            this.netInfo = model.netInfo;
+            this.nodeList = model.nodeList;
+            this.payType = model.payType;
+            this.regionId = model.regionId;
+            this.requestId = model.requestId;
+            this.status = model.status;
+            this.updateStatus = model.updateStatus;
+            this.zoneId = model.zoneId;
+        } 
 
         /**
          * AutoRenew.
@@ -648,6 +687,13 @@ public class DescribeClusterAttributeResponseBody extends TeaModel {
         public static final class Builder {
             private java.util.List<String> string; 
 
+            private Builder() {
+            } 
+
+            private Builder(ZKClassicConnectionStringList model) {
+                this.string = model.string;
+            } 
+
             /**
              * String.
              */
@@ -694,6 +740,13 @@ public class DescribeClusterAttributeResponseBody extends TeaModel {
 
         public static final class Builder {
             private java.util.List<String> string; 
+
+            private Builder() {
+            } 
+
+            private Builder(ZKConnectionStringList model) {
+                this.string = model.string;
+            } 
 
             /**
              * String.
@@ -742,6 +795,13 @@ public class DescribeClusterAttributeResponseBody extends TeaModel {
         public static final class Builder {
             private java.util.List<String> string; 
 
+            private Builder() {
+            } 
+
+            private Builder(ZKInnerConnectionStringList model) {
+                this.string = model.string;
+            } 
+
             /**
              * String.
              */
@@ -788,6 +848,13 @@ public class DescribeClusterAttributeResponseBody extends TeaModel {
 
         public static final class Builder {
             private java.util.List<String> string; 
+
+            private Builder() {
+            } 
+
+            private Builder(ZKPublicConnectionStringList model) {
+                this.string = model.string;
+            } 
 
             /**
              * String.
@@ -967,6 +1034,24 @@ public class DescribeClusterAttributeResponseBody extends TeaModel {
             private ZKInnerConnectionStringList ZKInnerConnectionStringList; 
             private Integer ZKPort; 
             private ZKPublicConnectionStringList ZKPublicConnectionStringList; 
+
+            private Builder() {
+            } 
+
+            private Builder(ConnectionInfo model) {
+                this.haRestConnectionString = model.haRestConnectionString;
+                this.haRestPort = model.haRestPort;
+                this.haThriftConnectionString = model.haThriftConnectionString;
+                this.haThriftPort = model.haThriftPort;
+                this.thriftConnectionString = model.thriftConnectionString;
+                this.thriftPort = model.thriftPort;
+                this.UIProxyConnectionString = model.UIProxyConnectionString;
+                this.ZKClassicConnectionStringList = model.ZKClassicConnectionStringList;
+                this.ZKConnectionStringList = model.ZKConnectionStringList;
+                this.ZKInnerConnectionStringList = model.ZKInnerConnectionStringList;
+                this.ZKPort = model.ZKPort;
+                this.ZKPublicConnectionStringList = model.ZKPublicConnectionStringList;
+            } 
 
             /**
              * HaRestConnectionString.
@@ -1163,6 +1248,18 @@ public class DescribeClusterAttributeResponseBody extends TeaModel {
             private String vSwitchId; 
             private String vpcId; 
 
+            private Builder() {
+            } 
+
+            private Builder(NetInfo model) {
+                this.innerIpAddress = model.innerIpAddress;
+                this.netType = model.netType;
+                this.publicIpAddress = model.publicIpAddress;
+                this.securityIpList = model.securityIpList;
+                this.vSwitchId = model.vSwitchId;
+                this.vpcId = model.vpcId;
+            } 
+
             /**
              * InnerIpAddress.
              */
@@ -1262,6 +1359,14 @@ public class DescribeClusterAttributeResponseBody extends TeaModel {
             private String daemonName; 
             private String daemonStatus; 
 
+            private Builder() {
+            } 
+
+            private Builder(Daemon model) {
+                this.daemonName = model.daemonName;
+                this.daemonStatus = model.daemonStatus;
+            } 
+
             /**
              * DaemonName.
              */
@@ -1316,6 +1421,13 @@ public class DescribeClusterAttributeResponseBody extends TeaModel {
 
         public static final class Builder {
             private java.util.List<Daemon> daemon; 
+
+            private Builder() {
+            } 
+
+            private Builder(DaemonList model) {
+                this.daemon = model.daemon;
+            } 
 
             /**
              * Daemon.
@@ -1496,6 +1608,24 @@ public class DescribeClusterAttributeResponseBody extends TeaModel {
             private String serviceType; 
             private String storeFile; 
 
+            private Builder() {
+            } 
+
+            private Builder(Node model) {
+                this.daemonList = model.daemonList;
+                this.memStore = model.memStore;
+                this.nodeDiskQuantity = model.nodeDiskQuantity;
+                this.nodeDiskSize = model.nodeDiskSize;
+                this.nodeDiskType = model.nodeDiskType;
+                this.nodeId = model.nodeId;
+                this.nodeInstanceType = model.nodeInstanceType;
+                this.nodeStatus = model.nodeStatus;
+                this.nodeType = model.nodeType;
+                this.regionQuantity = model.regionQuantity;
+                this.serviceType = model.serviceType;
+                this.storeFile = model.storeFile;
+            } 
+
             /**
              * DaemonList.
              */
@@ -1630,6 +1760,13 @@ public class DescribeClusterAttributeResponseBody extends TeaModel {
 
         public static final class Builder {
             private java.util.List<Node> node; 
+
+            private Builder() {
+            } 
+
+            private Builder(NodeList model) {
+                this.node = model.node;
+            } 
 
             /**
              * Node.

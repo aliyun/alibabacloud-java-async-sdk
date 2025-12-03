@@ -36,6 +36,10 @@ public class DescribeSubscriptionsResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return requestId
      */
@@ -53,6 +57,14 @@ public class DescribeSubscriptionsResponseBody extends TeaModel {
     public static final class Builder {
         private String requestId; 
         private java.util.List<Subscriptions> subscriptions; 
+
+        private Builder() {
+        } 
+
+        private Builder(DescribeSubscriptionsResponseBody model) {
+            this.requestId = model.requestId;
+            this.subscriptions = model.subscriptions;
+        } 
 
         /**
          * RequestId.
@@ -131,6 +143,15 @@ public class DescribeSubscriptionsResponseBody extends TeaModel {
             private String DBInstanceId; 
             private String regionId; 
             private String role; 
+
+            private Builder() {
+            } 
+
+            private Builder(DBInstances model) {
+                this.DBInstanceId = model.DBInstanceId;
+                this.regionId = model.regionId;
+                this.role = model.role;
+            } 
 
             /**
              * DBInstanceId.
@@ -254,6 +275,18 @@ public class DescribeSubscriptionsResponseBody extends TeaModel {
             private String subscriptionId; 
             private String subscriptionStatus; 
             private String subscriptionType; 
+
+            private Builder() {
+            } 
+
+            private Builder(Subscriptions model) {
+                this.DBInstances = model.DBInstances;
+                this.mapping = model.mapping;
+                this.subscriptionDescription = model.subscriptionDescription;
+                this.subscriptionId = model.subscriptionId;
+                this.subscriptionStatus = model.subscriptionStatus;
+                this.subscriptionType = model.subscriptionType;
+            } 
 
             /**
              * DBInstances.

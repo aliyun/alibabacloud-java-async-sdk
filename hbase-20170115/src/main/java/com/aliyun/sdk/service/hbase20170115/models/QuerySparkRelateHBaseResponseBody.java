@@ -36,6 +36,10 @@ public class QuerySparkRelateHBaseResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return clusterList
      */
@@ -53,6 +57,14 @@ public class QuerySparkRelateHBaseResponseBody extends TeaModel {
     public static final class Builder {
         private ClusterList clusterList; 
         private String requestId; 
+
+        private Builder() {
+        } 
+
+        private Builder(QuerySparkRelateHBaseResponseBody model) {
+            this.clusterList = model.clusterList;
+            this.requestId = model.requestId;
+        } 
 
         /**
          * ClusterList.
@@ -312,6 +324,30 @@ public class QuerySparkRelateHBaseResponseBody extends TeaModel {
             private String userId; 
             private String zoneId; 
 
+            private Builder() {
+            } 
+
+            private Builder(Cluster model) {
+                this.clusterId = model.clusterId;
+                this.clusterName = model.clusterName;
+                this.clusterType = model.clusterType;
+                this.coreDiskType = model.coreDiskType;
+                this.coreInstanceQuantity = model.coreInstanceQuantity;
+                this.createTime = model.createTime;
+                this.dbType = model.dbType;
+                this.expireTime = model.expireTime;
+                this.isRelated = model.isRelated;
+                this.lockMode = model.lockMode;
+                this.mainVersion = model.mainVersion;
+                this.netType = model.netType;
+                this.payType = model.payType;
+                this.reason = model.reason;
+                this.regionId = model.regionId;
+                this.status = model.status;
+                this.userId = model.userId;
+                this.zoneId = model.zoneId;
+            } 
+
             /**
              * ClusterId.
              */
@@ -494,6 +530,13 @@ public class QuerySparkRelateHBaseResponseBody extends TeaModel {
 
         public static final class Builder {
             private java.util.List<Cluster> cluster; 
+
+            private Builder() {
+            } 
+
+            private Builder(ClusterList model) {
+                this.cluster = model.cluster;
+            } 
 
             /**
              * Cluster.

@@ -52,6 +52,10 @@ public class DescribeColdStorageResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return clusterId
      */
@@ -101,6 +105,18 @@ public class DescribeColdStorageResponseBody extends TeaModel {
         private String openStatus; 
         private String payType; 
         private String requestId; 
+
+        private Builder() {
+        } 
+
+        private Builder(DescribeColdStorageResponseBody model) {
+            this.clusterId = model.clusterId;
+            this.coldStorageSize = model.coldStorageSize;
+            this.coldStorageUsePercent = model.coldStorageUsePercent;
+            this.openStatus = model.openStatus;
+            this.payType = model.payType;
+            this.requestId = model.requestId;
+        } 
 
         /**
          * ClusterId.

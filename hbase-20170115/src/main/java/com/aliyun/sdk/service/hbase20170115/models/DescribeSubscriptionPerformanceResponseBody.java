@@ -48,6 +48,10 @@ public class DescribeSubscriptionPerformanceResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return endTime
      */
@@ -89,6 +93,17 @@ public class DescribeSubscriptionPerformanceResponseBody extends TeaModel {
         private String replicaId; 
         private String requestId; 
         private String startTime; 
+
+        private Builder() {
+        } 
+
+        private Builder(DescribeSubscriptionPerformanceResponseBody model) {
+            this.endTime = model.endTime;
+            this.performanceKeys = model.performanceKeys;
+            this.replicaId = model.replicaId;
+            this.requestId = model.requestId;
+            this.startTime = model.startTime;
+        } 
 
         /**
          * EndTime.
@@ -180,6 +195,14 @@ public class DescribeSubscriptionPerformanceResponseBody extends TeaModel {
             private String date; 
             private String value; 
 
+            private Builder() {
+            } 
+
+            private Builder(PerformanceValue model) {
+                this.date = model.date;
+                this.value = model.value;
+            } 
+
             /**
              * Date.
              */
@@ -234,6 +257,13 @@ public class DescribeSubscriptionPerformanceResponseBody extends TeaModel {
 
         public static final class Builder {
             private java.util.List<PerformanceValue> performanceValue; 
+
+            private Builder() {
+            } 
+
+            private Builder(PerformanceValues model) {
+                this.performanceValue = model.performanceValue;
+            } 
 
             /**
              * PerformanceValue.
@@ -318,6 +348,16 @@ public class DescribeSubscriptionPerformanceResponseBody extends TeaModel {
             private String unit; 
             private String valueFormat; 
 
+            private Builder() {
+            } 
+
+            private Builder(PerformanceKey model) {
+                this.key = model.key;
+                this.performanceValues = model.performanceValues;
+                this.unit = model.unit;
+                this.valueFormat = model.valueFormat;
+            } 
+
             /**
              * Key.
              */
@@ -388,6 +428,13 @@ public class DescribeSubscriptionPerformanceResponseBody extends TeaModel {
 
         public static final class Builder {
             private java.util.List<PerformanceKey> performanceKey; 
+
+            private Builder() {
+            } 
+
+            private Builder(PerformanceKeys model) {
+                this.performanceKey = model.performanceKey;
+            } 
 
             /**
              * PerformanceKey.

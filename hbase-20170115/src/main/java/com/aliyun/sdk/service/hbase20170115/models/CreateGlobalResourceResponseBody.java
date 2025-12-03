@@ -32,6 +32,10 @@ public class CreateGlobalResourceResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return requestId
      */
@@ -41,6 +45,13 @@ public class CreateGlobalResourceResponseBody extends TeaModel {
 
     public static final class Builder {
         private String requestId; 
+
+        private Builder() {
+        } 
+
+        private Builder(CreateGlobalResourceResponseBody model) {
+            this.requestId = model.requestId;
+        } 
 
         /**
          * RequestId.

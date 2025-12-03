@@ -48,6 +48,10 @@ public class QueryXpackRelatedDBResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return clusterList
      */
@@ -89,6 +93,17 @@ public class QueryXpackRelatedDBResponseBody extends TeaModel {
         private Integer pageSize; 
         private String requestId; 
         private Integer totalCount; 
+
+        private Builder() {
+        } 
+
+        private Builder(QueryXpackRelatedDBResponseBody model) {
+            this.clusterList = model.clusterList;
+            this.pageNumber = model.pageNumber;
+            this.pageSize = model.pageSize;
+            this.requestId = model.requestId;
+            this.totalCount = model.totalCount;
+        } 
 
         /**
          * ClusterList.
@@ -228,6 +243,18 @@ public class QueryXpackRelatedDBResponseBody extends TeaModel {
             private Boolean isRelated; 
             private String status; 
 
+            private Builder() {
+            } 
+
+            private Builder(Cluster model) {
+                this.clusterId = model.clusterId;
+                this.clusterName = model.clusterName;
+                this.DBType = model.DBType;
+                this.DBVersion = model.DBVersion;
+                this.isRelated = model.isRelated;
+                this.status = model.status;
+            } 
+
             /**
              * ClusterId.
              */
@@ -314,6 +341,13 @@ public class QueryXpackRelatedDBResponseBody extends TeaModel {
 
         public static final class Builder {
             private java.util.List<Cluster> cluster; 
+
+            private Builder() {
+            } 
+
+            private Builder(ClusterList model) {
+                this.cluster = model.cluster;
+            } 
 
             /**
              * Cluster.
