@@ -113,6 +113,10 @@ public class ListDatasetFileMetasRequest extends Request {
     private String startTagUpdateTime;
 
     @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Status")
+    private String status;
+
+    @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("ThumbnailMode")
     private String thumbnailMode;
 
@@ -151,6 +155,7 @@ public class ListDatasetFileMetasRequest extends Request {
         this.sortBy = builder.sortBy;
         this.startFileUpdateTime = builder.startFileUpdateTime;
         this.startTagUpdateTime = builder.startTagUpdateTime;
+        this.status = builder.status;
         this.thumbnailMode = builder.thumbnailMode;
         this.topK = builder.topK;
         this.workspaceId = builder.workspaceId;
@@ -331,6 +336,13 @@ public class ListDatasetFileMetasRequest extends Request {
     }
 
     /**
+     * @return status
+     */
+    public String getStatus() {
+        return this.status;
+    }
+
+    /**
      * @return thumbnailMode
      */
     public String getThumbnailMode() {
@@ -375,6 +387,7 @@ public class ListDatasetFileMetasRequest extends Request {
         private String sortBy; 
         private String startFileUpdateTime; 
         private String startTagUpdateTime; 
+        private String status; 
         private String thumbnailMode; 
         private Integer topK; 
         private String workspaceId; 
@@ -408,6 +421,7 @@ public class ListDatasetFileMetasRequest extends Request {
             this.sortBy = request.sortBy;
             this.startFileUpdateTime = request.startFileUpdateTime;
             this.startTagUpdateTime = request.startTagUpdateTime;
+            this.status = request.status;
             this.thumbnailMode = request.thumbnailMode;
             this.topK = request.topK;
             this.workspaceId = request.workspaceId;
@@ -677,6 +691,15 @@ public class ListDatasetFileMetasRequest extends Request {
         public Builder startTagUpdateTime(String startTagUpdateTime) {
             this.putQueryParameter("StartTagUpdateTime", startTagUpdateTime);
             this.startTagUpdateTime = startTagUpdateTime;
+            return this;
+        }
+
+        /**
+         * Status.
+         */
+        public Builder status(String status) {
+            this.putQueryParameter("Status", status);
+            this.status = status;
             return this;
         }
 

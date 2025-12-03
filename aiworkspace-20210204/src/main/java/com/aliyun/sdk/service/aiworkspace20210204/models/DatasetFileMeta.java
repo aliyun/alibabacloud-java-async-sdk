@@ -56,6 +56,9 @@ public class DatasetFileMeta extends TeaModel {
     @com.aliyun.core.annotation.NameInMap("SemanticIndexUpdateTime")
     private String semanticIndexUpdateTime;
 
+    @com.aliyun.core.annotation.NameInMap("Status")
+    private String status;
+
     @com.aliyun.core.annotation.NameInMap("Tags")
     private String tags;
 
@@ -79,6 +82,7 @@ public class DatasetFileMeta extends TeaModel {
         this.score = builder.score;
         this.semanticIndexJobId = builder.semanticIndexJobId;
         this.semanticIndexUpdateTime = builder.semanticIndexUpdateTime;
+        this.status = builder.status;
         this.tags = builder.tags;
         this.thumbnailUrl = builder.thumbnailUrl;
         this.uri = builder.uri;
@@ -188,6 +192,13 @@ public class DatasetFileMeta extends TeaModel {
     }
 
     /**
+     * @return status
+     */
+    public String getStatus() {
+        return this.status;
+    }
+
+    /**
      * @return tags
      */
     public String getTags() {
@@ -222,6 +233,7 @@ public class DatasetFileMeta extends TeaModel {
         private Float score; 
         private String semanticIndexJobId; 
         private String semanticIndexUpdateTime; 
+        private String status; 
         private String tags; 
         private String thumbnailUrl; 
         private String uri; 
@@ -243,6 +255,7 @@ public class DatasetFileMeta extends TeaModel {
             this.score = model.score;
             this.semanticIndexJobId = model.semanticIndexJobId;
             this.semanticIndexUpdateTime = model.semanticIndexUpdateTime;
+            this.status = model.status;
             this.tags = model.tags;
             this.thumbnailUrl = model.thumbnailUrl;
             this.uri = model.uri;
@@ -358,6 +371,14 @@ public class DatasetFileMeta extends TeaModel {
          */
         public Builder semanticIndexUpdateTime(String semanticIndexUpdateTime) {
             this.semanticIndexUpdateTime = semanticIndexUpdateTime;
+            return this;
+        }
+
+        /**
+         * Status.
+         */
+        public Builder status(String status) {
+            this.status = status;
             return this;
         }
 

@@ -23,6 +23,9 @@ public class DatasetShareRelationship extends TeaModel {
     @com.aliyun.core.annotation.NameInMap("ExpiresAt")
     private String expiresAt;
 
+    @com.aliyun.core.annotation.NameInMap("Extra")
+    private String extra;
+
     @com.aliyun.core.annotation.NameInMap("IsSecureMode")
     private Boolean isSecureMode;
 
@@ -47,6 +50,7 @@ public class DatasetShareRelationship extends TeaModel {
     private DatasetShareRelationship(Builder builder) {
         this.allowedMountAccessLevels = builder.allowedMountAccessLevels;
         this.expiresAt = builder.expiresAt;
+        this.extra = builder.extra;
         this.isSecureMode = builder.isSecureMode;
         this.sharedAt = builder.sharedAt;
         this.sourceTenantId = builder.sourceTenantId;
@@ -80,6 +84,13 @@ public class DatasetShareRelationship extends TeaModel {
      */
     public String getExpiresAt() {
         return this.expiresAt;
+    }
+
+    /**
+     * @return extra
+     */
+    public String getExtra() {
+        return this.extra;
     }
 
     /**
@@ -134,6 +145,7 @@ public class DatasetShareRelationship extends TeaModel {
     public static final class Builder {
         private java.util.List<String> allowedMountAccessLevels; 
         private String expiresAt; 
+        private String extra; 
         private Boolean isSecureMode; 
         private String sharedAt; 
         private String sourceTenantId; 
@@ -148,6 +160,7 @@ public class DatasetShareRelationship extends TeaModel {
         private Builder(DatasetShareRelationship model) {
             this.allowedMountAccessLevels = model.allowedMountAccessLevels;
             this.expiresAt = model.expiresAt;
+            this.extra = model.extra;
             this.isSecureMode = model.isSecureMode;
             this.sharedAt = model.sharedAt;
             this.sourceTenantId = model.sourceTenantId;
@@ -170,6 +183,14 @@ public class DatasetShareRelationship extends TeaModel {
          */
         public Builder expiresAt(String expiresAt) {
             this.expiresAt = expiresAt;
+            return this;
+        }
+
+        /**
+         * Extra.
+         */
+        public Builder extra(String extra) {
+            this.extra = extra;
             return this;
         }
 

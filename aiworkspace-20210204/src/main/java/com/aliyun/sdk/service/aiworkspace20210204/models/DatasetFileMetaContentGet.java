@@ -56,6 +56,9 @@ public class DatasetFileMetaContentGet extends TeaModel {
     @com.aliyun.core.annotation.NameInMap("SemanticIndexUpdateTime")
     private String semanticIndexUpdateTime;
 
+    @com.aliyun.core.annotation.NameInMap("Status")
+    private String status;
+
     @com.aliyun.core.annotation.NameInMap("TagUpdateTime")
     private String tagUpdateTime;
 
@@ -79,6 +82,7 @@ public class DatasetFileMetaContentGet extends TeaModel {
         this.metaAttributes = builder.metaAttributes;
         this.semanticIndexJobId = builder.semanticIndexJobId;
         this.semanticIndexUpdateTime = builder.semanticIndexUpdateTime;
+        this.status = builder.status;
         this.tagUpdateTime = builder.tagUpdateTime;
         this.tags = builder.tags;
         this.uri = builder.uri;
@@ -188,6 +192,13 @@ public class DatasetFileMetaContentGet extends TeaModel {
     }
 
     /**
+     * @return status
+     */
+    public String getStatus() {
+        return this.status;
+    }
+
+    /**
      * @return tagUpdateTime
      */
     public String getTagUpdateTime() {
@@ -222,6 +233,7 @@ public class DatasetFileMetaContentGet extends TeaModel {
         private String metaAttributes; 
         private String semanticIndexJobId; 
         private String semanticIndexUpdateTime; 
+        private String status; 
         private String tagUpdateTime; 
         private String tags; 
         private String uri; 
@@ -243,6 +255,7 @@ public class DatasetFileMetaContentGet extends TeaModel {
             this.metaAttributes = model.metaAttributes;
             this.semanticIndexJobId = model.semanticIndexJobId;
             this.semanticIndexUpdateTime = model.semanticIndexUpdateTime;
+            this.status = model.status;
             this.tagUpdateTime = model.tagUpdateTime;
             this.tags = model.tags;
             this.uri = model.uri;
@@ -358,6 +371,14 @@ public class DatasetFileMetaContentGet extends TeaModel {
          */
         public Builder semanticIndexUpdateTime(String semanticIndexUpdateTime) {
             this.semanticIndexUpdateTime = semanticIndexUpdateTime;
+            return this;
+        }
+
+        /**
+         * Status.
+         */
+        public Builder status(String status) {
+            this.status = status;
             return this;
         }
 
