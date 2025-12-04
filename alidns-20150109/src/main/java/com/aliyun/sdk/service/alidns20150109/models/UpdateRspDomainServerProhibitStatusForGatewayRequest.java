@@ -12,17 +12,18 @@ import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
  * 
- * {@link UpdateRspDomainStatusOteRequest} extends {@link RequestModel}
+ * {@link UpdateRspDomainServerProhibitStatusForGatewayRequest} extends {@link RequestModel}
  *
- * <p>UpdateRspDomainStatusOteRequest</p>
+ * <p>UpdateRspDomainServerProhibitStatusForGatewayRequest</p>
  */
-public class UpdateRspDomainStatusOteRequest extends Request {
+public class UpdateRspDomainServerProhibitStatusForGatewayRequest extends Request {
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("AddStatusList")
     private java.util.List<AddStatusList> addStatusList;
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("ClientToken")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String clientToken;
 
     @com.aliyun.core.annotation.Query
@@ -34,31 +35,19 @@ public class UpdateRspDomainStatusOteRequest extends Request {
     @com.aliyun.core.annotation.Validation(required = true)
     private String domainName;
 
-    @com.aliyun.core.annotation.Query
-    @com.aliyun.core.annotation.NameInMap("OperatorId")
-    @com.aliyun.core.annotation.Validation(required = true)
-    private String operatorId;
-
-    @com.aliyun.core.annotation.Query
-    @com.aliyun.core.annotation.NameInMap("OperatorType")
-    @com.aliyun.core.annotation.Validation(required = true)
-    private String operatorType;
-
-    private UpdateRspDomainStatusOteRequest(Builder builder) {
+    private UpdateRspDomainServerProhibitStatusForGatewayRequest(Builder builder) {
         super(builder);
         this.addStatusList = builder.addStatusList;
         this.clientToken = builder.clientToken;
         this.deleteStatusList = builder.deleteStatusList;
         this.domainName = builder.domainName;
-        this.operatorId = builder.operatorId;
-        this.operatorType = builder.operatorType;
     }
 
     public static Builder builder() {
         return new Builder();
     }
 
-    public static UpdateRspDomainStatusOteRequest create() {
+    public static UpdateRspDomainServerProhibitStatusForGatewayRequest create() {
         return builder().build();
     }
 
@@ -95,40 +84,22 @@ public class UpdateRspDomainStatusOteRequest extends Request {
         return this.domainName;
     }
 
-    /**
-     * @return operatorId
-     */
-    public String getOperatorId() {
-        return this.operatorId;
-    }
-
-    /**
-     * @return operatorType
-     */
-    public String getOperatorType() {
-        return this.operatorType;
-    }
-
-    public static final class Builder extends Request.Builder<UpdateRspDomainStatusOteRequest, Builder> {
+    public static final class Builder extends Request.Builder<UpdateRspDomainServerProhibitStatusForGatewayRequest, Builder> {
         private java.util.List<AddStatusList> addStatusList; 
         private String clientToken; 
         private java.util.List<DeleteStatusList> deleteStatusList; 
         private String domainName; 
-        private String operatorId; 
-        private String operatorType; 
 
         private Builder() {
             super();
         } 
 
-        private Builder(UpdateRspDomainStatusOteRequest request) {
+        private Builder(UpdateRspDomainServerProhibitStatusForGatewayRequest request) {
             super(request);
             this.addStatusList = request.addStatusList;
             this.clientToken = request.clientToken;
             this.deleteStatusList = request.deleteStatusList;
             this.domainName = request.domainName;
-            this.operatorId = request.operatorId;
-            this.operatorType = request.operatorType;
         } 
 
         /**
@@ -141,7 +112,10 @@ public class UpdateRspDomainStatusOteRequest extends Request {
         }
 
         /**
-         * ClientToken.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>asdf</p>
          */
         public Builder clientToken(String clientToken) {
             this.putQueryParameter("ClientToken", clientToken);
@@ -170,42 +144,18 @@ public class UpdateRspDomainStatusOteRequest extends Request {
             return this;
         }
 
-        /**
-         * <p>This parameter is required.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>gatewayId001</p>
-         */
-        public Builder operatorId(String operatorId) {
-            this.putQueryParameter("OperatorId", operatorId);
-            this.operatorId = operatorId;
-            return this;
-        }
-
-        /**
-         * <p>This parameter is required.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>registryGateway</p>
-         */
-        public Builder operatorType(String operatorType) {
-            this.putQueryParameter("OperatorType", operatorType);
-            this.operatorType = operatorType;
-            return this;
-        }
-
         @Override
-        public UpdateRspDomainStatusOteRequest build() {
-            return new UpdateRspDomainStatusOteRequest(this);
+        public UpdateRspDomainServerProhibitStatusForGatewayRequest build() {
+            return new UpdateRspDomainServerProhibitStatusForGatewayRequest(this);
         } 
 
     } 
 
     /**
      * 
-     * {@link UpdateRspDomainStatusOteRequest} extends {@link TeaModel}
+     * {@link UpdateRspDomainServerProhibitStatusForGatewayRequest} extends {@link TeaModel}
      *
-     * <p>UpdateRspDomainStatusOteRequest</p>
+     * <p>UpdateRspDomainServerProhibitStatusForGatewayRequest</p>
      */
     public static class AddStatusList extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Status")
@@ -278,9 +228,9 @@ public class UpdateRspDomainStatusOteRequest extends Request {
     }
     /**
      * 
-     * {@link UpdateRspDomainStatusOteRequest} extends {@link TeaModel}
+     * {@link UpdateRspDomainServerProhibitStatusForGatewayRequest} extends {@link TeaModel}
      *
-     * <p>UpdateRspDomainStatusOteRequest</p>
+     * <p>UpdateRspDomainServerProhibitStatusForGatewayRequest</p>
      */
     public static class DeleteStatusList extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Status")

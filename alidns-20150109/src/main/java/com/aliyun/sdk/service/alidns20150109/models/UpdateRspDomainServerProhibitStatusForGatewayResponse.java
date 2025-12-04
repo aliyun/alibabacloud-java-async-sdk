@@ -12,11 +12,11 @@ import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
  * 
- * {@link UpdateRspDomainStatusOteResponse} extends {@link TeaModel}
+ * {@link UpdateRspDomainServerProhibitStatusForGatewayResponse} extends {@link TeaModel}
  *
- * <p>UpdateRspDomainStatusOteResponse</p>
+ * <p>UpdateRspDomainServerProhibitStatusForGatewayResponse</p>
  */
-public class UpdateRspDomainStatusOteResponse extends Response {
+public class UpdateRspDomainServerProhibitStatusForGatewayResponse extends Response {
     @com.aliyun.core.annotation.NameInMap("headers")
     private java.util.Map<String, String> headers;
 
@@ -24,16 +24,16 @@ public class UpdateRspDomainStatusOteResponse extends Response {
     private Integer statusCode;
 
     @com.aliyun.core.annotation.NameInMap("body")
-    private UpdateRspDomainStatusOteResponseBody body;
+    private UpdateRspDomainServerProhibitStatusForGatewayResponseBody body;
 
-    private UpdateRspDomainStatusOteResponse(BuilderImpl builder) {
+    private UpdateRspDomainServerProhibitStatusForGatewayResponse(BuilderImpl builder) {
         super(builder);
         this.headers = builder.headers;
         this.statusCode = builder.statusCode;
         this.body = builder.body;
     }
 
-    public static UpdateRspDomainStatusOteResponse create() {
+    public static UpdateRspDomainServerProhibitStatusForGatewayResponse create() {
         return new BuilderImpl().build();
     }
 
@@ -59,35 +59,35 @@ public class UpdateRspDomainStatusOteResponse extends Response {
     /**
      * @return body
      */
-    public UpdateRspDomainStatusOteResponseBody getBody() {
+    public UpdateRspDomainServerProhibitStatusForGatewayResponseBody getBody() {
         return this.body;
     }
 
-    public interface Builder extends Response.Builder<UpdateRspDomainStatusOteResponse, Builder> {
+    public interface Builder extends Response.Builder<UpdateRspDomainServerProhibitStatusForGatewayResponse, Builder> {
 
         Builder headers(java.util.Map<String, String> headers);
 
         Builder statusCode(Integer statusCode);
 
-        Builder body(UpdateRspDomainStatusOteResponseBody body);
+        Builder body(UpdateRspDomainServerProhibitStatusForGatewayResponseBody body);
 
         @Override
-        UpdateRspDomainStatusOteResponse build();
+        UpdateRspDomainServerProhibitStatusForGatewayResponse build();
 
     } 
 
     private static final class BuilderImpl
-            extends Response.BuilderImpl<UpdateRspDomainStatusOteResponse, Builder>
+            extends Response.BuilderImpl<UpdateRspDomainServerProhibitStatusForGatewayResponse, Builder>
             implements Builder {
         private java.util.Map<String, String> headers; 
         private Integer statusCode; 
-        private UpdateRspDomainStatusOteResponseBody body; 
+        private UpdateRspDomainServerProhibitStatusForGatewayResponseBody body; 
 
         private BuilderImpl() {
             super();
         } 
 
-        private BuilderImpl(UpdateRspDomainStatusOteResponse response) {
+        private BuilderImpl(UpdateRspDomainServerProhibitStatusForGatewayResponse response) {
             super(response);
             this.headers = response.headers;
             this.statusCode = response.statusCode;
@@ -116,14 +116,14 @@ public class UpdateRspDomainStatusOteResponse extends Response {
          * body.
          */
         @Override
-        public Builder body(UpdateRspDomainStatusOteResponseBody body) {
+        public Builder body(UpdateRspDomainServerProhibitStatusForGatewayResponseBody body) {
             this.body = body;
             return this;
         }
 
         @Override
-        public UpdateRspDomainStatusOteResponse build() {
-            return new UpdateRspDomainStatusOteResponse(this);
+        public UpdateRspDomainServerProhibitStatusForGatewayResponse build() {
+            return new UpdateRspDomainServerProhibitStatusForGatewayResponse(this);
         } 
 
     } 

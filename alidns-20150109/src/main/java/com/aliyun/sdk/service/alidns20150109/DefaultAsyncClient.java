@@ -2961,6 +2961,34 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
+     * <b>description</b> :
+     * <h2>请求说明</h2>
+     * <ul>
+     * <li>本接口专为注册局用户设计，允许他们更新指定顶级域名（TLD）的各种属性。</li>
+     * <li>必须提供<code>RegistryId</code>和<code>Tld</code>参数以标识要修改的具体TLD。</li>
+     * <li>可选参数包括但不限于宽限期设置、DNS解析缓存时间、价格设定等，这些都可根据需要进行调整。</li>
+     * <li>环境(<code>Env</code>)参数指定了API调用的目标环境，默认值为“DAILY”表示日常测试环境；正式上线前，请确保已正确设置此参数。</li>
+     * <li>某些时间戳字段如<code>SunriseStartTimeStamp</code>要求输入Unix时间戳格式的数据。</li>
+     * </ul>
+     * 
+     * @param request the request parameters of RemoveRspDomainServerHoldStatusForGateway  RemoveRspDomainServerHoldStatusForGatewayRequest
+     * @return RemoveRspDomainServerHoldStatusForGatewayResponse
+     */
+    @Override
+    public CompletableFuture<RemoveRspDomainServerHoldStatusForGatewayResponse> removeRspDomainServerHoldStatusForGateway(RemoveRspDomainServerHoldStatusForGatewayRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RPC).setAction("RemoveRspDomainServerHoldStatusForGateway").setMethod(HttpMethod.POST).setPathRegex("/").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(RemoveRspDomainServerHoldStatusForGatewayResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<RemoveRspDomainServerHoldStatusForGatewayResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
      * @param request the request parameters of ReplaceCloudGtmAddressPoolAddress  ReplaceCloudGtmAddressPoolAddressRequest
      * @return ReplaceCloudGtmAddressPoolAddressResponse
      */
@@ -4248,46 +4276,18 @@ public final class DefaultAsyncClient implements AsyncClient {
      * <li>某些时间戳字段如<code>SunriseStartTimeStamp</code>要求输入Unix时间戳格式的数据。</li>
      * </ul>
      * 
-     * @param request the request parameters of UpdateRspDomainServerHoldStatusOte  UpdateRspDomainServerHoldStatusOteRequest
-     * @return UpdateRspDomainServerHoldStatusOteResponse
+     * @param request the request parameters of UpdateRspDomainServerProhibitStatusForGateway  UpdateRspDomainServerProhibitStatusForGatewayRequest
+     * @return UpdateRspDomainServerProhibitStatusForGatewayResponse
      */
     @Override
-    public CompletableFuture<UpdateRspDomainServerHoldStatusOteResponse> updateRspDomainServerHoldStatusOte(UpdateRspDomainServerHoldStatusOteRequest request) {
+    public CompletableFuture<UpdateRspDomainServerProhibitStatusForGatewayResponse> updateRspDomainServerProhibitStatusForGateway(UpdateRspDomainServerProhibitStatusForGatewayRequest request) {
         try {
             this.handler.validateRequestModel(request);
-            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RPC).setAction("UpdateRspDomainServerHoldStatusOte").setMethod(HttpMethod.POST).setPathRegex("/").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
-            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(UpdateRspDomainServerHoldStatusOteResponse.create());
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RPC).setAction("UpdateRspDomainServerProhibitStatusForGateway").setMethod(HttpMethod.POST).setPathRegex("/").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(UpdateRspDomainServerProhibitStatusForGatewayResponse.create());
             return this.handler.execute(params);
         } catch (Exception e) {
-            CompletableFuture<UpdateRspDomainServerHoldStatusOteResponse> future = new CompletableFuture<>();
-            future.completeExceptionally(e);
-            return future;
-        }
-    }
-
-    /**
-     * <b>description</b> :
-     * <h2>请求说明</h2>
-     * <ul>
-     * <li>本接口专为注册局用户设计，允许他们更新指定顶级域名（TLD）的各种属性。</li>
-     * <li>必须提供<code>RegistryId</code>和<code>Tld</code>参数以标识要修改的具体TLD。</li>
-     * <li>可选参数包括但不限于宽限期设置、DNS解析缓存时间、价格设定等，这些都可根据需要进行调整。</li>
-     * <li>环境(<code>Env</code>)参数指定了API调用的目标环境，默认值为“DAILY”表示日常测试环境；正式上线前，请确保已正确设置此参数。</li>
-     * <li>某些时间戳字段如<code>SunriseStartTimeStamp</code>要求输入Unix时间戳格式的数据。</li>
-     * </ul>
-     * 
-     * @param request the request parameters of UpdateRspDomainStatusOte  UpdateRspDomainStatusOteRequest
-     * @return UpdateRspDomainStatusOteResponse
-     */
-    @Override
-    public CompletableFuture<UpdateRspDomainStatusOteResponse> updateRspDomainStatusOte(UpdateRspDomainStatusOteRequest request) {
-        try {
-            this.handler.validateRequestModel(request);
-            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RPC).setAction("UpdateRspDomainStatusOte").setMethod(HttpMethod.POST).setPathRegex("/").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
-            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(UpdateRspDomainStatusOteResponse.create());
-            return this.handler.execute(params);
-        } catch (Exception e) {
-            CompletableFuture<UpdateRspDomainStatusOteResponse> future = new CompletableFuture<>();
+            CompletableFuture<UpdateRspDomainServerProhibitStatusForGatewayResponse> future = new CompletableFuture<>();
             future.completeExceptionally(e);
             return future;
         }

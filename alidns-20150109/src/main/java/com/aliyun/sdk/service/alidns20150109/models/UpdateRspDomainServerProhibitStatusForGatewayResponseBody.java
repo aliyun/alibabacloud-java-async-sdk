@@ -12,11 +12,11 @@ import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
  * 
- * {@link UpdateRspDomainStatusOteResponseBody} extends {@link TeaModel}
+ * {@link UpdateRspDomainServerProhibitStatusForGatewayResponseBody} extends {@link TeaModel}
  *
- * <p>UpdateRspDomainStatusOteResponseBody</p>
+ * <p>UpdateRspDomainServerProhibitStatusForGatewayResponseBody</p>
  */
-public class UpdateRspDomainStatusOteResponseBody extends TeaModel {
+public class UpdateRspDomainServerProhibitStatusForGatewayResponseBody extends TeaModel {
     @com.aliyun.core.annotation.NameInMap("AccessDeniedDetail")
     private AccessDeniedDetail accessDeniedDetail;
 
@@ -32,7 +32,7 @@ public class UpdateRspDomainStatusOteResponseBody extends TeaModel {
     @com.aliyun.core.annotation.NameInMap("Success")
     private Boolean success;
 
-    private UpdateRspDomainStatusOteResponseBody(Builder builder) {
+    private UpdateRspDomainServerProhibitStatusForGatewayResponseBody(Builder builder) {
         this.accessDeniedDetail = builder.accessDeniedDetail;
         this.data = builder.data;
         this.recoverableError = builder.recoverableError;
@@ -44,7 +44,7 @@ public class UpdateRspDomainStatusOteResponseBody extends TeaModel {
         return new Builder();
     }
 
-    public static UpdateRspDomainStatusOteResponseBody create() {
+    public static UpdateRspDomainServerProhibitStatusForGatewayResponseBody create() {
         return builder().build();
     }
 
@@ -97,7 +97,7 @@ public class UpdateRspDomainStatusOteResponseBody extends TeaModel {
         private Builder() {
         } 
 
-        private Builder(UpdateRspDomainStatusOteResponseBody model) {
+        private Builder(UpdateRspDomainServerProhibitStatusForGatewayResponseBody model) {
             this.accessDeniedDetail = model.accessDeniedDetail;
             this.data = model.data;
             this.recoverableError = model.recoverableError;
@@ -145,17 +145,17 @@ public class UpdateRspDomainStatusOteResponseBody extends TeaModel {
             return this;
         }
 
-        public UpdateRspDomainStatusOteResponseBody build() {
-            return new UpdateRspDomainStatusOteResponseBody(this);
+        public UpdateRspDomainServerProhibitStatusForGatewayResponseBody build() {
+            return new UpdateRspDomainServerProhibitStatusForGatewayResponseBody(this);
         } 
 
     } 
 
     /**
      * 
-     * {@link UpdateRspDomainStatusOteResponseBody} extends {@link TeaModel}
+     * {@link UpdateRspDomainServerProhibitStatusForGatewayResponseBody} extends {@link TeaModel}
      *
-     * <p>UpdateRspDomainStatusOteResponseBody</p>
+     * <p>UpdateRspDomainServerProhibitStatusForGatewayResponseBody</p>
      */
     public static class AccessDeniedDetail extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("AuthAction")
@@ -333,9 +333,9 @@ public class UpdateRspDomainStatusOteResponseBody extends TeaModel {
     }
     /**
      * 
-     * {@link UpdateRspDomainStatusOteResponseBody} extends {@link TeaModel}
+     * {@link UpdateRspDomainServerProhibitStatusForGatewayResponseBody} extends {@link TeaModel}
      *
-     * <p>UpdateRspDomainStatusOteResponseBody</p>
+     * <p>UpdateRspDomainServerProhibitStatusForGatewayResponseBody</p>
      */
     public static class StatusList extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("DomainName")
@@ -429,9 +429,9 @@ public class UpdateRspDomainStatusOteResponseBody extends TeaModel {
     }
     /**
      * 
-     * {@link UpdateRspDomainStatusOteResponseBody} extends {@link TeaModel}
+     * {@link UpdateRspDomainServerProhibitStatusForGatewayResponseBody} extends {@link TeaModel}
      *
-     * <p>UpdateRspDomainStatusOteResponseBody</p>
+     * <p>UpdateRspDomainServerProhibitStatusForGatewayResponseBody</p>
      */
     public static class Data extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("DomainName")

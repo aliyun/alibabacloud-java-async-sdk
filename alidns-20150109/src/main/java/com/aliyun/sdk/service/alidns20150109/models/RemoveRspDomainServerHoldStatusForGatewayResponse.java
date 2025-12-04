@@ -12,11 +12,11 @@ import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
  * 
- * {@link UpdateRspDomainServerHoldStatusOteResponse} extends {@link TeaModel}
+ * {@link RemoveRspDomainServerHoldStatusForGatewayResponse} extends {@link TeaModel}
  *
- * <p>UpdateRspDomainServerHoldStatusOteResponse</p>
+ * <p>RemoveRspDomainServerHoldStatusForGatewayResponse</p>
  */
-public class UpdateRspDomainServerHoldStatusOteResponse extends Response {
+public class RemoveRspDomainServerHoldStatusForGatewayResponse extends Response {
     @com.aliyun.core.annotation.NameInMap("headers")
     private java.util.Map<String, String> headers;
 
@@ -24,16 +24,16 @@ public class UpdateRspDomainServerHoldStatusOteResponse extends Response {
     private Integer statusCode;
 
     @com.aliyun.core.annotation.NameInMap("body")
-    private UpdateRspDomainServerHoldStatusOteResponseBody body;
+    private RemoveRspDomainServerHoldStatusForGatewayResponseBody body;
 
-    private UpdateRspDomainServerHoldStatusOteResponse(BuilderImpl builder) {
+    private RemoveRspDomainServerHoldStatusForGatewayResponse(BuilderImpl builder) {
         super(builder);
         this.headers = builder.headers;
         this.statusCode = builder.statusCode;
         this.body = builder.body;
     }
 
-    public static UpdateRspDomainServerHoldStatusOteResponse create() {
+    public static RemoveRspDomainServerHoldStatusForGatewayResponse create() {
         return new BuilderImpl().build();
     }
 
@@ -59,35 +59,35 @@ public class UpdateRspDomainServerHoldStatusOteResponse extends Response {
     /**
      * @return body
      */
-    public UpdateRspDomainServerHoldStatusOteResponseBody getBody() {
+    public RemoveRspDomainServerHoldStatusForGatewayResponseBody getBody() {
         return this.body;
     }
 
-    public interface Builder extends Response.Builder<UpdateRspDomainServerHoldStatusOteResponse, Builder> {
+    public interface Builder extends Response.Builder<RemoveRspDomainServerHoldStatusForGatewayResponse, Builder> {
 
         Builder headers(java.util.Map<String, String> headers);
 
         Builder statusCode(Integer statusCode);
 
-        Builder body(UpdateRspDomainServerHoldStatusOteResponseBody body);
+        Builder body(RemoveRspDomainServerHoldStatusForGatewayResponseBody body);
 
         @Override
-        UpdateRspDomainServerHoldStatusOteResponse build();
+        RemoveRspDomainServerHoldStatusForGatewayResponse build();
 
     } 
 
     private static final class BuilderImpl
-            extends Response.BuilderImpl<UpdateRspDomainServerHoldStatusOteResponse, Builder>
+            extends Response.BuilderImpl<RemoveRspDomainServerHoldStatusForGatewayResponse, Builder>
             implements Builder {
         private java.util.Map<String, String> headers; 
         private Integer statusCode; 
-        private UpdateRspDomainServerHoldStatusOteResponseBody body; 
+        private RemoveRspDomainServerHoldStatusForGatewayResponseBody body; 
 
         private BuilderImpl() {
             super();
         } 
 
-        private BuilderImpl(UpdateRspDomainServerHoldStatusOteResponse response) {
+        private BuilderImpl(RemoveRspDomainServerHoldStatusForGatewayResponse response) {
             super(response);
             this.headers = response.headers;
             this.statusCode = response.statusCode;
@@ -116,14 +116,14 @@ public class UpdateRspDomainServerHoldStatusOteResponse extends Response {
          * body.
          */
         @Override
-        public Builder body(UpdateRspDomainServerHoldStatusOteResponseBody body) {
+        public Builder body(RemoveRspDomainServerHoldStatusForGatewayResponseBody body) {
             this.body = body;
             return this;
         }
 
         @Override
-        public UpdateRspDomainServerHoldStatusOteResponse build() {
-            return new UpdateRspDomainServerHoldStatusOteResponse(this);
+        public RemoveRspDomainServerHoldStatusForGatewayResponse build() {
+            return new RemoveRspDomainServerHoldStatusForGatewayResponse(this);
         } 
 
     } 
