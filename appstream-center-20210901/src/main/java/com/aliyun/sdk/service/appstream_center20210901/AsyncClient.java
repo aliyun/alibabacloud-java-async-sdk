@@ -380,4 +380,10 @@ public interface AsyncClient extends SdkAutoCloseable {
      */
     CompletableFuture<UpdateAppInstanceGroupImageResponse> updateAppInstanceGroupImage(UpdateAppInstanceGroupImageRequest request);
 
+    /**
+     * @param request the request parameters of UpdateWuyingServerImage  UpdateWuyingServerImageRequest
+     * @return UpdateWuyingServerImageResponse
+     */
+    CompletableFuture<UpdateWuyingServerImageResponse> updateWuyingServerImage(UpdateWuyingServerImageRequest request);
+
 }

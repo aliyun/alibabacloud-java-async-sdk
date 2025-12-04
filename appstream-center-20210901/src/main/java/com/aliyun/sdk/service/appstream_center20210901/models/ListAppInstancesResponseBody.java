@@ -272,6 +272,9 @@ public class ListAppInstancesResponseBody extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("MainEthPublicIp")
         private String mainEthPublicIp;
 
+        @com.aliyun.core.annotation.NameInMap("NetworkInterfaceId")
+        private String networkInterfaceId;
+
         @com.aliyun.core.annotation.NameInMap("NetworkInterfaceIp")
         private String networkInterfaceIp;
 
@@ -292,6 +295,7 @@ public class ListAppInstancesResponseBody extends TeaModel {
             this.gmtCreate = builder.gmtCreate;
             this.gmtModified = builder.gmtModified;
             this.mainEthPublicIp = builder.mainEthPublicIp;
+            this.networkInterfaceId = builder.networkInterfaceId;
             this.networkInterfaceIp = builder.networkInterfaceIp;
             this.nodeId = builder.nodeId;
             this.sessionStatus = builder.sessionStatus;
@@ -356,6 +360,13 @@ public class ListAppInstancesResponseBody extends TeaModel {
         }
 
         /**
+         * @return networkInterfaceId
+         */
+        public String getNetworkInterfaceId() {
+            return this.networkInterfaceId;
+        }
+
+        /**
          * @return networkInterfaceIp
          */
         public String getNetworkInterfaceIp() {
@@ -391,6 +402,7 @@ public class ListAppInstancesResponseBody extends TeaModel {
             private String gmtCreate; 
             private String gmtModified; 
             private String mainEthPublicIp; 
+            private String networkInterfaceId; 
             private String networkInterfaceIp; 
             private String nodeId; 
             private String sessionStatus; 
@@ -407,6 +419,7 @@ public class ListAppInstancesResponseBody extends TeaModel {
                 this.gmtCreate = model.gmtCreate;
                 this.gmtModified = model.gmtModified;
                 this.mainEthPublicIp = model.mainEthPublicIp;
+                this.networkInterfaceId = model.networkInterfaceId;
                 this.networkInterfaceIp = model.networkInterfaceIp;
                 this.nodeId = model.nodeId;
                 this.sessionStatus = model.sessionStatus;
@@ -491,6 +504,14 @@ public class ListAppInstancesResponseBody extends TeaModel {
              */
             public Builder mainEthPublicIp(String mainEthPublicIp) {
                 this.mainEthPublicIp = mainEthPublicIp;
+                return this;
+            }
+
+            /**
+             * NetworkInterfaceId.
+             */
+            public Builder networkInterfaceId(String networkInterfaceId) {
+                this.networkInterfaceId = networkInterfaceId;
                 return this;
             }
 
