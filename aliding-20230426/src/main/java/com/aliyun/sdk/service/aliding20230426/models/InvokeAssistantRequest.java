@@ -27,6 +27,10 @@ public class InvokeAssistantRequest extends Request {
     private String assistantId;
 
     @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("extLoginUser")
+    private ExtLoginUser extLoginUser;
+
+    @com.aliyun.core.annotation.Body
     @com.aliyun.core.annotation.NameInMap("messages")
     @com.aliyun.core.annotation.Validation(required = true)
     private java.util.List<Messages> messages;
@@ -55,6 +59,7 @@ public class InvokeAssistantRequest extends Request {
         super(builder);
         this.accountId = builder.accountId;
         this.assistantId = builder.assistantId;
+        this.extLoginUser = builder.extLoginUser;
         this.messages = builder.messages;
         this.originalAssistantId = builder.originalAssistantId;
         this.sessionId = builder.sessionId;
@@ -88,6 +93,13 @@ public class InvokeAssistantRequest extends Request {
      */
     public String getAssistantId() {
         return this.assistantId;
+    }
+
+    /**
+     * @return extLoginUser
+     */
+    public ExtLoginUser getExtLoginUser() {
+        return this.extLoginUser;
     }
 
     /**
@@ -135,6 +147,7 @@ public class InvokeAssistantRequest extends Request {
     public static final class Builder extends Request.Builder<InvokeAssistantRequest, Builder> {
         private String accountId; 
         private String assistantId; 
+        private ExtLoginUser extLoginUser; 
         private java.util.List<Messages> messages; 
         private String originalAssistantId; 
         private String sessionId; 
@@ -150,6 +163,7 @@ public class InvokeAssistantRequest extends Request {
             super(request);
             this.accountId = request.accountId;
             this.assistantId = request.assistantId;
+            this.extLoginUser = request.extLoginUser;
             this.messages = request.messages;
             this.originalAssistantId = request.originalAssistantId;
             this.sessionId = request.sessionId;
@@ -176,6 +190,15 @@ public class InvokeAssistantRequest extends Request {
         public Builder assistantId(String assistantId) {
             this.putBodyParameter("assistantId", assistantId);
             this.assistantId = assistantId;
+            return this;
+        }
+
+        /**
+         * extLoginUser.
+         */
+        public Builder extLoginUser(ExtLoginUser extLoginUser) {
+            this.putBodyParameter("extLoginUser", extLoginUser);
+            this.extLoginUser = extLoginUser;
             return this;
         }
 
@@ -240,6 +263,102 @@ public class InvokeAssistantRequest extends Request {
 
     } 
 
+    /**
+     * 
+     * {@link InvokeAssistantRequest} extends {@link TeaModel}
+     *
+     * <p>InvokeAssistantRequest</p>
+     */
+    public static class ExtLoginUser extends TeaModel {
+        @com.aliyun.core.annotation.NameInMap("extLoginUserDomain")
+        private String extLoginUserDomain;
+
+        @com.aliyun.core.annotation.NameInMap("extLoginUserId")
+        private String extLoginUserId;
+
+        @com.aliyun.core.annotation.NameInMap("extLoginUserName")
+        private String extLoginUserName;
+
+        private ExtLoginUser(Builder builder) {
+            this.extLoginUserDomain = builder.extLoginUserDomain;
+            this.extLoginUserId = builder.extLoginUserId;
+            this.extLoginUserName = builder.extLoginUserName;
+        }
+
+        public static Builder builder() {
+            return new Builder();
+        }
+
+        public static ExtLoginUser create() {
+            return builder().build();
+        }
+
+        /**
+         * @return extLoginUserDomain
+         */
+        public String getExtLoginUserDomain() {
+            return this.extLoginUserDomain;
+        }
+
+        /**
+         * @return extLoginUserId
+         */
+        public String getExtLoginUserId() {
+            return this.extLoginUserId;
+        }
+
+        /**
+         * @return extLoginUserName
+         */
+        public String getExtLoginUserName() {
+            return this.extLoginUserName;
+        }
+
+        public static final class Builder {
+            private String extLoginUserDomain; 
+            private String extLoginUserId; 
+            private String extLoginUserName; 
+
+            private Builder() {
+            } 
+
+            private Builder(ExtLoginUser model) {
+                this.extLoginUserDomain = model.extLoginUserDomain;
+                this.extLoginUserId = model.extLoginUserId;
+                this.extLoginUserName = model.extLoginUserName;
+            } 
+
+            /**
+             * extLoginUserDomain.
+             */
+            public Builder extLoginUserDomain(String extLoginUserDomain) {
+                this.extLoginUserDomain = extLoginUserDomain;
+                return this;
+            }
+
+            /**
+             * extLoginUserId.
+             */
+            public Builder extLoginUserId(String extLoginUserId) {
+                this.extLoginUserId = extLoginUserId;
+                return this;
+            }
+
+            /**
+             * extLoginUserName.
+             */
+            public Builder extLoginUserName(String extLoginUserName) {
+                this.extLoginUserName = extLoginUserName;
+                return this;
+            }
+
+            public ExtLoginUser build() {
+                return new ExtLoginUser(this);
+            } 
+
+        } 
+
+    }
     /**
      * 
      * {@link InvokeAssistantRequest} extends {@link TeaModel}
