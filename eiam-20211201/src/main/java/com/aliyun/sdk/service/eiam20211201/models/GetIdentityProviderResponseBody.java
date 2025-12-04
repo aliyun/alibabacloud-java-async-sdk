@@ -107,6 +107,9 @@ public class GetIdentityProviderResponseBody extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("CorpId")
         private String corpId;
 
+        @com.aliyun.core.annotation.NameInMap("DingtalkLoginVersion")
+        private String dingtalkLoginVersion;
+
         @com.aliyun.core.annotation.NameInMap("DingtalkVersion")
         private String dingtalkVersion;
 
@@ -120,6 +123,7 @@ public class GetIdentityProviderResponseBody extends TeaModel {
             this.appKey = builder.appKey;
             this.appSecret = builder.appSecret;
             this.corpId = builder.corpId;
+            this.dingtalkLoginVersion = builder.dingtalkLoginVersion;
             this.dingtalkVersion = builder.dingtalkVersion;
             this.encryptKey = builder.encryptKey;
             this.verificationToken = builder.verificationToken;
@@ -155,6 +159,13 @@ public class GetIdentityProviderResponseBody extends TeaModel {
         }
 
         /**
+         * @return dingtalkLoginVersion
+         */
+        public String getDingtalkLoginVersion() {
+            return this.dingtalkLoginVersion;
+        }
+
+        /**
          * @return dingtalkVersion
          */
         public String getDingtalkVersion() {
@@ -179,6 +190,7 @@ public class GetIdentityProviderResponseBody extends TeaModel {
             private String appKey; 
             private String appSecret; 
             private String corpId; 
+            private String dingtalkLoginVersion; 
             private String dingtalkVersion; 
             private String encryptKey; 
             private String verificationToken; 
@@ -190,6 +202,7 @@ public class GetIdentityProviderResponseBody extends TeaModel {
                 this.appKey = model.appKey;
                 this.appSecret = model.appSecret;
                 this.corpId = model.corpId;
+                this.dingtalkLoginVersion = model.dingtalkLoginVersion;
                 this.dingtalkVersion = model.dingtalkVersion;
                 this.encryptKey = model.encryptKey;
                 this.verificationToken = model.verificationToken;
@@ -225,6 +238,14 @@ public class GetIdentityProviderResponseBody extends TeaModel {
              */
             public Builder corpId(String corpId) {
                 this.corpId = corpId;
+                return this;
+            }
+
+            /**
+             * <p>IDaaS EIAM 钉钉扫码登录版本</p>
+             */
+            public Builder dingtalkLoginVersion(String dingtalkLoginVersion) {
+                this.dingtalkLoginVersion = dingtalkLoginVersion;
                 return this;
             }
 

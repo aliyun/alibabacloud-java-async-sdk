@@ -356,6 +356,9 @@ public class UpdateIdentityProviderRequest extends Request {
         @com.aliyun.core.annotation.NameInMap("AppSecret")
         private String appSecret;
 
+        @com.aliyun.core.annotation.NameInMap("DingtalkLoginVersion")
+        private String dingtalkLoginVersion;
+
         @com.aliyun.core.annotation.NameInMap("EncryptKey")
         private String encryptKey;
 
@@ -365,6 +368,7 @@ public class UpdateIdentityProviderRequest extends Request {
         private DingtalkAppConfig(Builder builder) {
             this.appKey = builder.appKey;
             this.appSecret = builder.appSecret;
+            this.dingtalkLoginVersion = builder.dingtalkLoginVersion;
             this.encryptKey = builder.encryptKey;
             this.verificationToken = builder.verificationToken;
         }
@@ -392,6 +396,13 @@ public class UpdateIdentityProviderRequest extends Request {
         }
 
         /**
+         * @return dingtalkLoginVersion
+         */
+        public String getDingtalkLoginVersion() {
+            return this.dingtalkLoginVersion;
+        }
+
+        /**
          * @return encryptKey
          */
         public String getEncryptKey() {
@@ -408,6 +419,7 @@ public class UpdateIdentityProviderRequest extends Request {
         public static final class Builder {
             private String appKey; 
             private String appSecret; 
+            private String dingtalkLoginVersion; 
             private String encryptKey; 
             private String verificationToken; 
 
@@ -417,6 +429,7 @@ public class UpdateIdentityProviderRequest extends Request {
             private Builder(DingtalkAppConfig model) {
                 this.appKey = model.appKey;
                 this.appSecret = model.appSecret;
+                this.dingtalkLoginVersion = model.dingtalkLoginVersion;
                 this.encryptKey = model.encryptKey;
                 this.verificationToken = model.verificationToken;
             } 
@@ -440,6 +453,14 @@ public class UpdateIdentityProviderRequest extends Request {
              */
             public Builder appSecret(String appSecret) {
                 this.appSecret = appSecret;
+                return this;
+            }
+
+            /**
+             * DingtalkLoginVersion.
+             */
+            public Builder dingtalkLoginVersion(String dingtalkLoginVersion) {
+                this.dingtalkLoginVersion = dingtalkLoginVersion;
                 return this;
             }
 
