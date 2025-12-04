@@ -287,9 +287,13 @@ public class DescribeNetworkInterfacesResponseBody extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("PrivateIpAddress")
         private String privateIpAddress;
 
+        @com.aliyun.core.annotation.NameInMap("PrivateIpStatus")
+        private String privateIpStatus;
+
         private PrivateIpSet(Builder builder) {
             this.primary = builder.primary;
             this.privateIpAddress = builder.privateIpAddress;
+            this.privateIpStatus = builder.privateIpStatus;
         }
 
         public static Builder builder() {
@@ -314,9 +318,17 @@ public class DescribeNetworkInterfacesResponseBody extends TeaModel {
             return this.privateIpAddress;
         }
 
+        /**
+         * @return privateIpStatus
+         */
+        public String getPrivateIpStatus() {
+            return this.privateIpStatus;
+        }
+
         public static final class Builder {
             private Boolean primary; 
             private String privateIpAddress; 
+            private String privateIpStatus; 
 
             private Builder() {
             } 
@@ -324,6 +336,7 @@ public class DescribeNetworkInterfacesResponseBody extends TeaModel {
             private Builder(PrivateIpSet model) {
                 this.primary = model.primary;
                 this.privateIpAddress = model.privateIpAddress;
+                this.privateIpStatus = model.privateIpStatus;
             } 
 
             /**
@@ -349,6 +362,14 @@ public class DescribeNetworkInterfacesResponseBody extends TeaModel {
              */
             public Builder privateIpAddress(String privateIpAddress) {
                 this.privateIpAddress = privateIpAddress;
+                return this;
+            }
+
+            /**
+             * PrivateIpStatus.
+             */
+            public Builder privateIpStatus(String privateIpStatus) {
+                this.privateIpStatus = privateIpStatus;
                 return this;
             }
 
