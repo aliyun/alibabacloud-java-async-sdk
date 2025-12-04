@@ -48,6 +48,14 @@ public class CreateInstanceV1Request extends Request {
     private String clientToken;
 
     @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("DlfCatalogName")
+    private String dlfCatalogName;
+
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("DlfCatalogType")
+    private String dlfCatalogType;
+
+    @com.aliyun.core.annotation.Body
     @com.aliyun.core.annotation.NameInMap("Duration")
     private Integer duration;
 
@@ -73,6 +81,10 @@ public class CreateInstanceV1Request extends Request {
     private String kmsKeyId;
 
     @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("LinkedRamUserName")
+    private String linkedRamUserName;
+
+    @com.aliyun.core.annotation.Body
     @com.aliyun.core.annotation.NameInMap("ObserverNodeGroups")
     private java.util.List<ObserverNodeGroups> observerNodeGroups;
 
@@ -95,8 +107,16 @@ public class CreateInstanceV1Request extends Request {
     private String pricingCycle;
 
     @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("PrincipalType")
+    private String principalType;
+
+    @com.aliyun.core.annotation.Body
     @com.aliyun.core.annotation.NameInMap("PromotionOptionNo")
     private String promotionOptionNo;
+
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("RamUserId")
+    private String ramUserId;
 
     @com.aliyun.core.annotation.Body
     @com.aliyun.core.annotation.NameInMap("ResourceGroupId")
@@ -139,18 +159,23 @@ public class CreateInstanceV1Request extends Request {
         this.autoRenew = builder.autoRenew;
         this.backendNodeGroups = builder.backendNodeGroups;
         this.clientToken = builder.clientToken;
+        this.dlfCatalogName = builder.dlfCatalogName;
+        this.dlfCatalogType = builder.dlfCatalogType;
         this.duration = builder.duration;
         this.encrypted = builder.encrypted;
         this.frontendNodeGroups = builder.frontendNodeGroups;
         this.gatewayType = builder.gatewayType;
         this.instanceName = builder.instanceName;
         this.kmsKeyId = builder.kmsKeyId;
+        this.linkedRamUserName = builder.linkedRamUserName;
         this.observerNodeGroups = builder.observerNodeGroups;
         this.ossAccessingRoleName = builder.ossAccessingRoleName;
         this.packageType = builder.packageType;
         this.payType = builder.payType;
         this.pricingCycle = builder.pricingCycle;
+        this.principalType = builder.principalType;
         this.promotionOptionNo = builder.promotionOptionNo;
+        this.ramUserId = builder.ramUserId;
         this.resourceGroupId = builder.resourceGroupId;
         this.runMode = builder.runMode;
         this.tags = builder.tags;
@@ -223,6 +248,20 @@ public class CreateInstanceV1Request extends Request {
     }
 
     /**
+     * @return dlfCatalogName
+     */
+    public String getDlfCatalogName() {
+        return this.dlfCatalogName;
+    }
+
+    /**
+     * @return dlfCatalogType
+     */
+    public String getDlfCatalogType() {
+        return this.dlfCatalogType;
+    }
+
+    /**
      * @return duration
      */
     public Integer getDuration() {
@@ -265,6 +304,13 @@ public class CreateInstanceV1Request extends Request {
     }
 
     /**
+     * @return linkedRamUserName
+     */
+    public String getLinkedRamUserName() {
+        return this.linkedRamUserName;
+    }
+
+    /**
      * @return observerNodeGroups
      */
     public java.util.List<ObserverNodeGroups> getObserverNodeGroups() {
@@ -300,10 +346,24 @@ public class CreateInstanceV1Request extends Request {
     }
 
     /**
+     * @return principalType
+     */
+    public String getPrincipalType() {
+        return this.principalType;
+    }
+
+    /**
      * @return promotionOptionNo
      */
     public String getPromotionOptionNo() {
         return this.promotionOptionNo;
+    }
+
+    /**
+     * @return ramUserId
+     */
+    public String getRamUserId() {
+        return this.ramUserId;
     }
 
     /**
@@ -363,18 +423,23 @@ public class CreateInstanceV1Request extends Request {
         private Boolean autoRenew; 
         private java.util.List<BackendNodeGroups> backendNodeGroups; 
         private String clientToken; 
+        private String dlfCatalogName; 
+        private String dlfCatalogType; 
         private Integer duration; 
         private Boolean encrypted; 
         private java.util.List<FrontendNodeGroups> frontendNodeGroups; 
         private String gatewayType; 
         private String instanceName; 
         private String kmsKeyId; 
+        private String linkedRamUserName; 
         private java.util.List<ObserverNodeGroups> observerNodeGroups; 
         private String ossAccessingRoleName; 
         private String packageType; 
         private String payType; 
         private String pricingCycle; 
+        private String principalType; 
         private String promotionOptionNo; 
+        private String ramUserId; 
         private String resourceGroupId; 
         private String runMode; 
         private java.util.List<Tags> tags; 
@@ -396,18 +461,23 @@ public class CreateInstanceV1Request extends Request {
             this.autoRenew = request.autoRenew;
             this.backendNodeGroups = request.backendNodeGroups;
             this.clientToken = request.clientToken;
+            this.dlfCatalogName = request.dlfCatalogName;
+            this.dlfCatalogType = request.dlfCatalogType;
             this.duration = request.duration;
             this.encrypted = request.encrypted;
             this.frontendNodeGroups = request.frontendNodeGroups;
             this.gatewayType = request.gatewayType;
             this.instanceName = request.instanceName;
             this.kmsKeyId = request.kmsKeyId;
+            this.linkedRamUserName = request.linkedRamUserName;
             this.observerNodeGroups = request.observerNodeGroups;
             this.ossAccessingRoleName = request.ossAccessingRoleName;
             this.packageType = request.packageType;
             this.payType = request.payType;
             this.pricingCycle = request.pricingCycle;
+            this.principalType = request.principalType;
             this.promotionOptionNo = request.promotionOptionNo;
+            this.ramUserId = request.ramUserId;
             this.resourceGroupId = request.resourceGroupId;
             this.runMode = request.runMode;
             this.tags = request.tags;
@@ -485,6 +555,24 @@ public class CreateInstanceV1Request extends Request {
         }
 
         /**
+         * DlfCatalogName.
+         */
+        public Builder dlfCatalogName(String dlfCatalogName) {
+            this.putBodyParameter("DlfCatalogName", dlfCatalogName);
+            this.dlfCatalogName = dlfCatalogName;
+            return this;
+        }
+
+        /**
+         * DlfCatalogType.
+         */
+        public Builder dlfCatalogType(String dlfCatalogType) {
+            this.putBodyParameter("DlfCatalogType", dlfCatalogType);
+            this.dlfCatalogType = dlfCatalogType;
+            return this;
+        }
+
+        /**
          * Duration.
          */
         public Builder duration(Integer duration) {
@@ -542,6 +630,15 @@ public class CreateInstanceV1Request extends Request {
         }
 
         /**
+         * LinkedRamUserName.
+         */
+        public Builder linkedRamUserName(String linkedRamUserName) {
+            this.putBodyParameter("LinkedRamUserName", linkedRamUserName);
+            this.linkedRamUserName = linkedRamUserName;
+            return this;
+        }
+
+        /**
          * ObserverNodeGroups.
          */
         public Builder observerNodeGroups(java.util.List<ObserverNodeGroups> observerNodeGroups) {
@@ -593,11 +690,29 @@ public class CreateInstanceV1Request extends Request {
         }
 
         /**
+         * PrincipalType.
+         */
+        public Builder principalType(String principalType) {
+            this.putBodyParameter("PrincipalType", principalType);
+            this.principalType = principalType;
+            return this;
+        }
+
+        /**
          * PromotionOptionNo.
          */
         public Builder promotionOptionNo(String promotionOptionNo) {
             this.putBodyParameter("PromotionOptionNo", promotionOptionNo);
             this.promotionOptionNo = promotionOptionNo;
+            return this;
+        }
+
+        /**
+         * RamUserId.
+         */
+        public Builder ramUserId(String ramUserId) {
+            this.putBodyParameter("RamUserId", ramUserId);
+            this.ramUserId = ramUserId;
             return this;
         }
 

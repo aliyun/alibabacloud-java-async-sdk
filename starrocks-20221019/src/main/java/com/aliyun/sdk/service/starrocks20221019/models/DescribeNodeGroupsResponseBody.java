@@ -274,6 +274,81 @@ public class DescribeNodeGroupsResponseBody extends TeaModel {
      *
      * <p>DescribeNodeGroupsResponseBody</p>
      */
+    public static class Tags extends TeaModel {
+        @com.aliyun.core.annotation.NameInMap("Key")
+        private String key;
+
+        @com.aliyun.core.annotation.NameInMap("Value")
+        private String value;
+
+        private Tags(Builder builder) {
+            this.key = builder.key;
+            this.value = builder.value;
+        }
+
+        public static Builder builder() {
+            return new Builder();
+        }
+
+        public static Tags create() {
+            return builder().build();
+        }
+
+        /**
+         * @return key
+         */
+        public String getKey() {
+            return this.key;
+        }
+
+        /**
+         * @return value
+         */
+        public String getValue() {
+            return this.value;
+        }
+
+        public static final class Builder {
+            private String key; 
+            private String value; 
+
+            private Builder() {
+            } 
+
+            private Builder(Tags model) {
+                this.key = model.key;
+                this.value = model.value;
+            } 
+
+            /**
+             * Key.
+             */
+            public Builder key(String key) {
+                this.key = key;
+                return this;
+            }
+
+            /**
+             * Value.
+             */
+            public Builder value(String value) {
+                this.value = value;
+                return this;
+            }
+
+            public Tags build() {
+                return new Tags(this);
+            } 
+
+        } 
+
+    }
+    /**
+     * 
+     * {@link DescribeNodeGroupsResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeNodeGroupsResponseBody</p>
+     */
     public static class Data extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("AccountStatus")
         private String accountStatus;
@@ -365,6 +440,9 @@ public class DescribeNodeGroupsResponseBody extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("StorageSize")
         private Integer storageSize;
 
+        @com.aliyun.core.annotation.NameInMap("Tags")
+        private java.util.List<Tags> tags;
+
         @com.aliyun.core.annotation.NameInMap("TargetElasticNodeNumber")
         private Integer targetElasticNodeNumber;
 
@@ -402,6 +480,7 @@ public class DescribeNodeGroupsResponseBody extends TeaModel {
             this.status = builder.status;
             this.storagePerformanceLevel = builder.storagePerformanceLevel;
             this.storageSize = builder.storageSize;
+            this.tags = builder.tags;
             this.targetElasticNodeNumber = builder.targetElasticNodeNumber;
             this.zoneId = builder.zoneId;
         }
@@ -625,6 +704,13 @@ public class DescribeNodeGroupsResponseBody extends TeaModel {
         }
 
         /**
+         * @return tags
+         */
+        public java.util.List<Tags> getTags() {
+            return this.tags;
+        }
+
+        /**
          * @return targetElasticNodeNumber
          */
         public Integer getTargetElasticNodeNumber() {
@@ -669,6 +755,7 @@ public class DescribeNodeGroupsResponseBody extends TeaModel {
             private String status; 
             private String storagePerformanceLevel; 
             private Integer storageSize; 
+            private java.util.List<Tags> tags; 
             private Integer targetElasticNodeNumber; 
             private String zoneId; 
 
@@ -706,6 +793,7 @@ public class DescribeNodeGroupsResponseBody extends TeaModel {
                 this.status = model.status;
                 this.storagePerformanceLevel = model.storagePerformanceLevel;
                 this.storageSize = model.storageSize;
+                this.tags = model.tags;
                 this.targetElasticNodeNumber = model.targetElasticNodeNumber;
                 this.zoneId = model.zoneId;
             } 
@@ -947,6 +1035,14 @@ public class DescribeNodeGroupsResponseBody extends TeaModel {
              */
             public Builder storageSize(Integer storageSize) {
                 this.storageSize = storageSize;
+                return this;
+            }
+
+            /**
+             * Tags.
+             */
+            public Builder tags(java.util.List<Tags> tags) {
+                this.tags = tags;
                 return this;
             }
 
