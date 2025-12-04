@@ -221,6 +221,18 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<CreateDataSourceSharedRuleResponse> createDataSourceSharedRule(CreateDataSourceSharedRuleRequest request);
 
     /**
+     * @param request the request parameters of CreateDataset  CreateDatasetRequest
+     * @return CreateDatasetResponse
+     */
+    CompletableFuture<CreateDatasetResponse> createDataset(CreateDatasetRequest request);
+
+    /**
+     * @param request the request parameters of CreateDatasetVersion  CreateDatasetVersionRequest
+     * @return CreateDatasetVersionResponse
+     */
+    CompletableFuture<CreateDatasetVersionResponse> createDatasetVersion(CreateDatasetVersionRequest request);
+
+    /**
      * @param request the request parameters of CreateFile  CreateFileRequest
      * @return CreateFileResponse
      */
@@ -495,6 +507,18 @@ public interface AsyncClient extends SdkAutoCloseable {
      * @return DeleteDataSourceSharedRuleResponse
      */
     CompletableFuture<DeleteDataSourceSharedRuleResponse> deleteDataSourceSharedRule(DeleteDataSourceSharedRuleRequest request);
+
+    /**
+     * @param request the request parameters of DeleteDataset  DeleteDatasetRequest
+     * @return DeleteDatasetResponse
+     */
+    CompletableFuture<DeleteDatasetResponse> deleteDataset(DeleteDatasetRequest request);
+
+    /**
+     * @param request the request parameters of DeleteDatasetVersion  DeleteDatasetVersionRequest
+     * @return DeleteDatasetVersionResponse
+     */
+    CompletableFuture<DeleteDatasetVersionResponse> deleteDatasetVersion(DeleteDatasetVersionRequest request);
 
     /**
      * @param request the request parameters of DeleteFile  DeleteFileRequest
@@ -859,6 +883,18 @@ public interface AsyncClient extends SdkAutoCloseable {
      * @return GetDatabaseResponse
      */
     CompletableFuture<GetDatabaseResponse> getDatabase(GetDatabaseRequest request);
+
+    /**
+     * @param request the request parameters of GetDataset  GetDatasetRequest
+     * @return GetDatasetResponse
+     */
+    CompletableFuture<GetDatasetResponse> getDataset(GetDatasetRequest request);
+
+    /**
+     * @param request the request parameters of GetDatasetVersion  GetDatasetVersionRequest
+     * @return GetDatasetVersionResponse
+     */
+    CompletableFuture<GetDatasetVersionResponse> getDatasetVersion(GetDatasetVersionRequest request);
 
     /**
      * @param request the request parameters of GetDeploymentPackage  GetDeploymentPackageRequest
@@ -1325,6 +1361,18 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<ListDatabasesResponse> listDatabases(ListDatabasesRequest request);
 
     /**
+     * @param request the request parameters of ListDatasetVersions  ListDatasetVersionsRequest
+     * @return ListDatasetVersionsResponse
+     */
+    CompletableFuture<ListDatasetVersionsResponse> listDatasetVersions(ListDatasetVersionsRequest request);
+
+    /**
+     * @param request the request parameters of ListDatasets  ListDatasetsRequest
+     * @return ListDatasetsResponse
+     */
+    CompletableFuture<ListDatasetsResponse> listDatasets(ListDatasetsRequest request);
+
+    /**
      * @param request the request parameters of ListDeploymentPackageFiles  ListDeploymentPackageFilesRequest
      * @return ListDeploymentPackageFilesResponse
      */
@@ -1610,6 +1658,12 @@ public interface AsyncClient extends SdkAutoCloseable {
      * @return MoveWorkflowDefinitionResponse
      */
     CompletableFuture<MoveWorkflowDefinitionResponse> moveWorkflowDefinition(MoveWorkflowDefinitionRequest request);
+
+    /**
+     * @param request the request parameters of PreviewDatasetVersion  PreviewDatasetVersionRequest
+     * @return PreviewDatasetVersionResponse
+     */
+    CompletableFuture<PreviewDatasetVersionResponse> previewDatasetVersion(PreviewDatasetVersionRequest request);
 
     /**
      * @param request the request parameters of RemoveEntityFromMetaCollection  RemoveEntityFromMetaCollectionRequest
@@ -1910,6 +1964,18 @@ public interface AsyncClient extends SdkAutoCloseable {
      * @return UpdateDataSourceResponse
      */
     CompletableFuture<UpdateDataSourceResponse> updateDataSource(UpdateDataSourceRequest request);
+
+    /**
+     * @param request the request parameters of UpdateDataset  UpdateDatasetRequest
+     * @return UpdateDatasetResponse
+     */
+    CompletableFuture<UpdateDatasetResponse> updateDataset(UpdateDatasetRequest request);
+
+    /**
+     * @param request the request parameters of UpdateDatasetVersion  UpdateDatasetVersionRequest
+     * @return UpdateDatasetVersionResponse
+     */
+    CompletableFuture<UpdateDatasetVersionResponse> updateDatasetVersion(UpdateDatasetVersionRequest request);
 
     /**
      * @param request the request parameters of UpdateFile  UpdateFileRequest
