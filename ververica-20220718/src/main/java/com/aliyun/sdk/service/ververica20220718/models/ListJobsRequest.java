@@ -40,6 +40,10 @@ public class ListJobsRequest extends Request {
     @com.aliyun.core.annotation.NameInMap("sortName")
     private String sortName;
 
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("sortOrder")
+    private String sortOrder;
+
     @com.aliyun.core.annotation.Header
     @com.aliyun.core.annotation.NameInMap("workspace")
     @com.aliyun.core.annotation.Validation(required = true)
@@ -52,6 +56,7 @@ public class ListJobsRequest extends Request {
         this.pageIndex = builder.pageIndex;
         this.pageSize = builder.pageSize;
         this.sortName = builder.sortName;
+        this.sortOrder = builder.sortOrder;
         this.workspace = builder.workspace;
     }
 
@@ -104,6 +109,13 @@ public class ListJobsRequest extends Request {
     }
 
     /**
+     * @return sortOrder
+     */
+    public String getSortOrder() {
+        return this.sortOrder;
+    }
+
+    /**
      * @return workspace
      */
     public String getWorkspace() {
@@ -116,6 +128,7 @@ public class ListJobsRequest extends Request {
         private Integer pageIndex; 
         private Integer pageSize; 
         private String sortName; 
+        private String sortOrder; 
         private String workspace; 
 
         private Builder() {
@@ -129,6 +142,7 @@ public class ListJobsRequest extends Request {
             this.pageIndex = request.pageIndex;
             this.pageSize = request.pageSize;
             this.sortName = request.sortName;
+            this.sortOrder = request.sortOrder;
             this.workspace = request.workspace;
         } 
 
@@ -197,6 +211,15 @@ public class ListJobsRequest extends Request {
         public Builder sortName(String sortName) {
             this.putQueryParameter("sortName", sortName);
             this.sortName = sortName;
+            return this;
+        }
+
+        /**
+         * sortOrder.
+         */
+        public Builder sortOrder(String sortOrder) {
+            this.putQueryParameter("sortOrder", sortOrder);
+            this.sortOrder = sortOrder;
             return this;
         }
 
